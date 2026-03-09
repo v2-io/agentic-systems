@@ -126,9 +126,15 @@ The G_t symbol has been used for three different things: desired end-state,
 strategy graph, and committed intent. The O_t / Σ_t split (objective vs
 strategy) is a start. Codex suggests a four-way split: M_t (world model),
 D_t (desired end-state), S_t (strategy graph), I_t (committed intent).
-Whether the D_t/I_t distinction (BDI's Desire/Intention) bears formal
-weight in ACT is an open question — it matters when the agent has competing
-desires and must commit to a subset.
+The D_t/I_t distinction looks useful: Desire is the holistic model of what
+the agent wants (including hopes, aspirations, conditional preferences,
+opportunistic shortcuts); Committed Intent is the subset that focuses
+action (the actual plan being executed). Desires can persist as latent
+opportunities ("if this becomes feasible, grab it") without consuming
+action capacity. This distinction likely becomes load-bearing in
+multi-agent settings (shared desire vs shared commitment; what you tell
+allies you want vs what you're actually doing). Two paths to explore;
+defer pruning until multi-agent work reveals which bears more weight.
 
 ### Credibility leaks (medium, fixable)
 - sim2 prints "R -> infinity: exponent -> 2.0" but data shows ~1.06
