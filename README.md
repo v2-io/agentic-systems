@@ -34,27 +34,21 @@ dynamics, and revision mechanisms.
 > ("If a man knows not to which port he sails, no wind is favorable.")
 > — Seneca, *Epistulae Morales*, LXXI
 
-## Theoretical Architecture
+## Theoretical Landscape
 
-```
-ACT: Agentic Cycle Theory
-│
-├── Part I: Adaptive Systems (TFT core)
-│   Mismatch, gain, tempo, persistence.
-│   The survival space. The prerequisite.
-│
-├── Part II: Purposeful Agency (the extension)
-│   Intent as probabilistic causal DAG (AND/OR structure).
-│   Goal-reality mismatch. Goal revision.
-│   Orient as the M_t × G_t interaction point.
-│
-└── Domain Instantiations
-    ├── Software Development (TST)
-    ├── Military Strategy (Boyd, Clausewitz, Auftragstaktik)
-    ├── Organizational Adaptation
-    ├── AI Agent Design
-    └── ...
-```
+ACT covers a continuum from pure survival to deliberate purposeful agency:
+
+- **Adaptive systems** (TFT's contribution): Agents that track reality.
+  Mismatch, gain, tempo, persistence. The survival space.
+- **Purposeful agents**: Adaptive systems that also aim. Objectives (O_t),
+  strategy (Σ_t as probabilistic causal DAG), the Orient cascade where
+  reality-understanding and intent interact.
+- **Multi-agent dynamics**: Shared intent, intent decomposition across
+  agents, adversarial targeting of strategy structure.
+
+Domain instantiations (software, military, organizational, AI agents) apply
+this machinery to specific settings. How the theory is ultimately organized
+should emerge from the dependency structure of its claims.
 
 ## Key Results So Far
 

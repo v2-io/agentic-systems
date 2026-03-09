@@ -17,12 +17,16 @@ TFT formalizes how agents adapt to reality (mismatch signals, gain, tempo,
 persistence). But it has no treatment of goals — the agent's desired future
 state. ACT adds:
 
-- **G_t** (intent) alongside **M_t** (reality model)
-- Intent formalized as a **probabilistic causal DAG** (AND/OR nodes, edges
-  with confidence weights p, Bayesian update via TFT's uncertainty ratio)
-- The **Orient cascade**: observation -> M_t update -> G_t revision ->
-  feasibility check -> goal revision
+- **O_t** (objective — what the agent wants) and **Σ_t** (strategy — how
+  it plans to get there) alongside **M_t** (reality model)
+- Strategy formalized as a **probabilistic causal DAG** (AND/OR nodes,
+  edges with confidence weights p, Bayesian update via TFT's uncertainty
+  ratio). The objective is simpler — a target state or region in S.
+- The **Orient cascade**: observation -> M_t update -> Σ_t edge revision ->
+  feasibility check -> possible O_t revision
 - **Shared intent** as IB-compressed purpose for multi-agent coordination
+- The O_t / Σ_t distinction is recent (not yet reflected in all scratch
+  docs, which use "G_t" for both)
 
 ## Key Architectural Decisions
 
@@ -88,7 +92,8 @@ been fed back to the TFT documents.
 - `scratch/` — Working documents (numbered for chronological order)
 - `scratch/track-a-intent-dag/` — Intent DAG formalism variants
 - `scratch/track-b-nonlinear-sims/` — Simulation code and results
-- Future: formal document sequence (ACT-00, ACT-01, ...) will live at top level
+- Formal documents will live at top level once the theory stabilizes;
+  structure should emerge from content, not be prescribed
 
 ## How to Contribute
 

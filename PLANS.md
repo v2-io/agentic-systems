@@ -38,13 +38,17 @@ Options:
   result, with the continuous ODE as the approximation (inverting the current
   presentation)
 
-### 1.3 Write the Goal-Formalism Formally
-Promote scratch/03-goal-formalism-sketch.md into a formal treatment:
-- G_t definition, goal uncertainty U_G, goal update gain
-- Three mismatch signals (epistemic, goal-reality, feasibility)
-- Extended policy objective
-- Cold-start sequence
-- Separation principle
+### 1.3 Clarify the Objective / Strategy Distinction
+The current documents conflate two things:
+- **O_t** (objective): the target state — what the agent wants. Simple.
+  A point or region in S. The port.
+- **Σ_t** (strategy): the causal DAG from actions to the objective — how
+  the agent plans to get there. A function of O_t and M_t. Complex.
+
+Everyday "goal" conflates these. The PID has O_t but no Σ_t. The Kalman
+filter has neither. The commander has both. Determine how much of the
+existing formalism is about O_t (and should be simple) vs about Σ_t
+(and should be the DAG).
 
 ---
 
@@ -79,49 +83,29 @@ Why teams persist where individuals can't:
 
 ---
 
-## Phase 3: Formal Document Sequence
+## Phase 3: Formalization
 
-### 3.1 Draft ACT Document Sequence
-Modeled on TFT's structure (ACT-00 through ACT-NN):
-- ACT-00: Notation, conventions, dependency structure
-- ACT-01: Scope — Adaptive, Purposeful Agents Under Uncertainty
-- ACT-02: Causal Structure (inheriting TF-02, extending to intent DAGs)
-- ACT-03: The Dual Model (M_t and G_t)
-- ACT-04: The Three Mismatch Signals
-- ACT-05: The Orient Cascade
-- ACT-06: Intent DAG Structure and Operations
-- ACT-07: Goal Tempo and Goal Persistence
-- ACT-08: Multi-Agent Intent (decomposition, shared intent, adversarial)
-- Appendix: Simulation results (nonlinear dynamics, regime validity)
+Write up the theory properly. The structure should emerge from the content,
+not be prescribed in advance. What we know: it needs to cover adaptive
+systems (TFT's contribution), purposeful agency (objectives + strategy),
+the Orient cascade, and multi-agent dynamics. How it's organized should be
+determined by the dependency structure of the actual claims, not by analogy
+to TFT's numbering scheme.
 
-### 3.2 Revise TST-via-TFT as TST-via-ACT
-Update the software domain instantiation to use ACT's full machinery:
-- Developer's intent DAG (spec -> features -> tasks -> actions)
-- Goal-reality mismatch in software
-- Directed opportunism in software (recognizing better approaches)
-- Team dynamics for software teams
+TST should be revisited as a domain instantiation of ACT once the
+formalism stabilizes.
 
 ---
 
 ## Phase 4: Validation
 
-### 4.1 Additional Simulations
-- Sim 3: Developer-as-ACT-agent on real codebase (from TST-via-TFT proposals)
-- Sim 4: Multi-agent intent propagation simulation
-- Sim 5: Counterfactual architecture evaluation (git fork + replay)
-
-### 4.2 Empirical Testing of DAG Health Metrics
-- Collect OKR/project data from real organizations
-- Compute DAG health metrics (groundedness, redundancy, observability,
-  depth fragility)
-- Test prediction: DAG health predicts project outcomes better than
-  simpler metrics
-
-### 4.3 Regime Validity for Adversarial Dynamics
-- Extend simulations to find the parameter regime where exponent -> 2
-- Characterize the transition from linear to squared advantage
-- Determine whether the continuous-time squared law is ever practically
-  relevant or is purely a mathematical limit
+Possible simulation and empirical work — scope TBD based on what the
+theory actually claims:
+- Extend the nonlinear dynamics sims to characterize the squared-advantage
+  regime boundary
+- Developer-as-ACT-agent on a real codebase (the "software worked example")
+- Test DAG health metrics against real project outcome data
+- Multi-agent intent propagation simulation
 
 ---
 
