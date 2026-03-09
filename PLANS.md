@@ -51,162 +51,127 @@ Needs rewriting as TST-via-ACT once the formalism stabilizes.
 
 ---
 
-## Phase 1: Consolidation (immediate)
+## The Rewrite: ACT as a Single End-to-End Theory
 
-### 1.1 Consolidate Intent DAG Formalism
-Merge the three variants (00-intent-dag-formalism, 02-alt-clean-slate,
-03-alt-and-or-dag) into a single canonical treatment:
-- AND/OR nodes with single-parameter edges (converged)
-- **Drop WEIGHTED combination rule** — it reintroduces the two-parameter
-  estimation problem (α weights) that single-p was supposed to solve. If
-  k-of-n semantics are needed, model as nested AND/OR.
-- Bayesian edge update mirroring TF-06 (converged)
-- Orient cascade (converged)
-- Node taxonomy: resolve categorical vs continuous (open — pick one and
-  note the alternative)
-- Strategic tempo T_G from the clean-slate variant
-- Health metrics (keep the principled ones, flag scaffold ones)
-- **Add identifiability section**: edges claim interventional semantics
-  (p_ij = P(j | do(i), M_t)) but update from observational signals.
-  State the identifiability assumptions explicitly. Note that software
-  domains have genuine interventions (tests, deploys, git bisect); other
-  domains (military, organizational) face confounding, delay, and
-  correlation that make observational updates semantically weaker.
-- **Write the Σ_t update dynamics formally**: the Orient cascade is
-  described verbally but not yet given equations. This is the core novel
-  contribution and needs TF-06-level rigor.
+**Approach**: Not a ground-up rewrite, but a re-pass that gets framing and
+ordering right from the beginning. Purpose, the agent spectrum, multi-agent
+setup, and nonlinear foundations positioned correctly the first time. Much
+of TFT's content survives; what changes is framing and ordering in the
+early documents, and promotion of Appendix A / multi-agent from appendix
+to main theory.
 
-### 1.2 Adaptive-Systems Formal Rebalancing
-Simulation findings (now added to TF-06, TF-11) revealed that Appendix A
-is the correct general foundation, not the linear ODE. Remaining work:
-- Consider developing a stochastic companion to TF-11: AR(1) steady-state
-  as the primary discrete-time result, with continuous ODE as an
-  approximation valid when η << 1
-- Model observation quality as a factor in adversarial dynamics (T depends
-  on η* depends on U_o — propagate this through the mismatch dynamics)
-- Promote per-dimension persistence condition from "open question" to
-  "known correct formulation" for anisotropic systems
+**Principles**:
+- Monotonic concept introduction (no forward references)
+- Purpose baked in from the start (the spectrum, not bolted on later)
+- Sector-condition framework as primary (linear ODE as pedagogical example)
+- Multi-agent as setup for theorems, not appendix bookend
+- TST integrated naturally as software domain instantiation
+- Epistemic honesty throughout — every claim tagged
 
-### 1.3 Clarify the Object Model
-The current documents have a **type inconsistency**: δ_goal = G_t − M_t
-(point subtraction) coexists with G_t-as-DAG. These are mathematically
-incompatible. Earlier point-valued formulations are superseded.
+### Document Structure (IN PROGRESS)
 
-The working split:
-- **O_t** (objective): the target state — what the agent wants. Simple.
-  A point or region in S. The port.
-- **Σ_t** (strategy): the causal DAG from actions to the objective — how
-  the agent plans to get there. A function of O_t and M_t. Complex.
+| Doc | Title | Source | Changes |
+|-----|-------|--------|---------|
+| ACT-01 | Scope: Agents Under Uncertainty | Rewrites TF-01 | **Significant.** Agent spectrum: {±model} × {±objective}. Four quadrants from the start. |
+| ACT-02 | Causal Structure | Light revision of TF-02 | Add: two causal DAGs (reality + intent). Level 2 enables strategy. |
+| ACT-03 | The Agent's State | **New**, replaces TF-03 | M_t + O_t + Σ_t together. IB formulation for M_t carries over. Directed separation. |
+| ACT-04 | Event-Driven Dynamics | TF-04 ~unchanged | Events can update M_t, Σ_t, or both. |
+| ACT-05 | Mismatch Signals | Expands TF-05 | δ_epistemic (carries over, Prop 5.1). Add δ_objective, δ_strategic. |
+| ACT-06 | Update Gain and Tempo | Expands TF-06 | η* for M_t carries over. η_edge for Σ_t. Sector conditions primary. |
+| ACT-07 | Persistence and Stability | **Rewrite**, promotes App A | Sector-condition threshold primary. Adaptive reserve. Stochastic regimes. Linear ODE → appendix. |
+| ACT-08 | Strategy Structure | **New**, from consolidated doc | AND/OR, edge update, Orient cascade, depth fragility, observability dominance. |
+| ACT-09 | Action, Deliberation, Exploration | Merges TF-07/08/09 | Action couples M_t, O_t, Σ_t. Three-way explore-exploit-pursue. |
+| ACT-10 | Structural Adaptation | Revises TF-10 | Model class + strategy restructuring. Continuous spectrum. |
+| ACT-11 | Multi-Agent Dynamics | **Rewrite**, promotes App F | Setup for adversarial theorems. Shared intent. Intent decomposition. Appendix F caveat on correlation. |
+| ACT-12 | Adversarial Dynamics | Revises TF-11 adversarial + App A | Tempo advantage (sector form). Regime dependence. Observation gating. DAG targeting. |
 
-Everyday "goal" conflates these. The PID has O_t but no Σ_t. The Kalman
-filter has neither. The commander has both.
+**Appendices** (demoted / pedagogical):
+- A: Linear ODE Approximation (demoted from TF-11)
+- B: Worked Examples — Kalman (M_t only), PID (O_t only), RL (both)
+- C: Operationalization Procedures
+- D: Simulation Results Summary
 
-Three additional gaps (from review):
-- **Commitment state**: OR branches are options until committed; the
-  formalism doesn't distinguish "considering" from "executing." The
-  D_t (desire) / I_t (committed intent) split may help here — desire
-  is the holistic model of what the agent wants; committed intent is
-  the subset focusing action. Defer pruning until multi-agent work
-  reveals which distinction bears more weight.
-- **Resource budget**: costs are invoked in the scratch docs but not
-  modeled. Strategy evaluation requires knowing what paths cost.
-- **Temporal ordering**: the DAG encodes causal dependency but not "do A
-  before B." Can the intent DAG handle action sequencing, or does it
-  need a separate mechanism?
+**Software Domain Instantiation** (integrated, not separate):
+TST content woven into relevant sections. Strongest claims:
+- T-02 (specification bound): information-theoretic, genuinely strong
+- T-04 (Bayesian baseline): E[n_future | n_past] = n_past, solid
+- Code quality as observation infrastructure (novel insight from via-tft)
+- Six unique properties of software as ACT domain
+- Three-part tempo decomposition (T_obs + T_explore + T_probe)
+- Persistence condition as unmaintainability threshold
+Weaker claims (T-08 proportionality, T-09 exponential proximity) noted
+as hypotheses needing validation.
 
-Also: **TFT's "completeness for survival" holds only for reactive
-tracking.** Once survival requires multi-step strategy (evade, navigate,
-acquire), the persistence condition implicitly needs Σ_t. TFT is a
-necessary foundation, not a self-sufficient theory of agency even for
-the survival case. This should be stated explicitly.
+### Progress Tracking
 
-Mark all scratch docs still using point-valued G_t as superseded.
+- [x] Intent DAG consolidated (scratch/04-intent-dag-consolidated.md)
+- [ ] ACT-01: Scope (agent spectrum, four quadrants)
+- [ ] ACT-02: Causal Structure (two DAGs, Level 2 → strategy)
+- [ ] ACT-03: Agent State (M_t + O_t + Σ_t together)
+- [ ] ACT-04: Event-Driven Dynamics
+- [ ] ACT-05: Mismatch Signals (three types)
+- [ ] ACT-06: Update Gain and Tempo
+- [ ] ACT-07: Persistence and Stability
+- [ ] ACT-08: Strategy Structure
+- [ ] ACT-09: Action, Deliberation, Exploration
+- [ ] ACT-10: Structural Adaptation
+- [ ] ACT-11: Multi-Agent Dynamics
+- [ ] ACT-12: Adversarial Dynamics
+- [ ] Appendices
+- [ ] Software domain instantiation sections
 
----
+### Key Decisions Made
 
-## Phase 2: Multi-Agent Intent (highest-value next work)
+- ACT supersedes TFT (not "extends")
+- AND/OR + single-p edges (drop WEIGHTED)
+- Sector-condition framework primary (linear ODE pedagogical)
+- O_t / Σ_t split (not G_t); point-valued G_t superseded
+- Multi-agent is main content, not appendix
+- Correlated observations as default (independence as special case)
+- TST integrated as domain instantiation with epistemic regrading
 
-### 2.1 Intent Decomposition
-How does a high-level intent DAG decompose across agents? Formalize:
-- Graph partitioning by inter-agent edge uncertainty
-- Optimal cut minimizes uncertainty on spanning edges
-- Connection to organizational design (who owns which sub-DAG?)
+### Context for Future Agents
 
-### 2.2 Directed Opportunism
-Local grafting at OR-nodes within IB-compressed shared intent:
-- How much can a subordinate's local O_t/Σ_t diverge?
-- The Auftragstaktik IB: compress to constraints that keep inter-agent
-  edges viable while freeing intra-agent edges
-- When is local divergence beneficial vs. destructive?
+**If you're picking this up**: The rewrite absorbs TFT's mathematical
+content into ACT with better framing. Read scratch/04-intent-dag-
+consolidated.md for the purposeful-agency formalism. The key insight is
+that purpose (O_t, Σ_t) should be introduced alongside M_t from ACT-03
+onward, even though the math for M_t can be developed independently
+(directed separation). This way the reader never encounters a theory
+that "lacks goals" — the spectrum is visible from the start.
 
-### 2.3 Adversarial Dynamics on DAGs
-Targeting edges in the opponent's intent DAG:
-- High-centrality edges as priority targets
-- Inter-agent coordination edges as fragmentation points
-- Effects spiral as DAG pruning faster than grafting
-- Structural interpretation of tempo advantage
+**What carries over from TFT mostly unchanged**: TF-02 (causal structure),
+TF-04 (event dynamics), TF-05 (mismatch, Prop 5.1), TF-06 (gain
+principle), TF-10 (structural adaptation, Prop 10.1), Appendix A
+(Lyapunov — this gets promoted to main). The mathematical results are
+sound; what changes is framing and ordering.
 
-### 2.4 Team Persistence via DAG Redundancy
-Why teams persist where individuals can't:
-- Aggregate DAG has more paths (higher R_w)
-- More observation channels (higher observability coverage)
-- Re-routing around failed edges via sub-DAG reassignment
-- Collective grafting capacity
+**What needs real rewriting**: TF-01 (scope — add agent spectrum), TF-03
+(model — introduce M_t + O_t + Σ_t together), TF-11 (tempo/persistence —
+promote Appendix A, demote linear ODE), Appendix F (multi-agent — promote
+to main content, fix correlation assumption).
 
-**Caveat from Appendix F review**: The current multi-agent formulation
-treats communication as additive tempo and cooperation as negative
-disturbance. These are useful heuristics, but correlated reports don't
-linearly increase effective tempo, and communication typically improves
-estimation quality (reduces U_o) rather than literally canceling
-exogenous disturbance (reducing ρ). Appendix F acknowledges independence
-limits and raises correlation in trust transitivity, but these caveats
-don't propagate into the persistence formulas. The Phase 2 formalization
-should treat correlated observations as the realistic default and derive
-the independence case as a special case, not the other way around.
+**TST integration**: The strongest TST claims (T-02 specification bound,
+T-04 Bayesian baseline) are genuinely well-grounded. The "code quality as
+observation infrastructure" insight from via-tft/mapping.md is the single
+most valuable novel contribution. Weaker claims (T-08 proportionality,
+T-09 exponential proximity, T-06 circularity) need honest epistemic tags.
+
+**Agentic-tft corpus** (../agentic-tft/docs 00-14): Contains cognitive
+loop spec, evaluation framework, crèche concept, narrative circle, and
+bootstrap problem. Relevant to AI agent domain instantiation but not yet
+integrated into ACT formal documents.
 
 ---
 
-## Phase 3: Formalization
+## Validation (after rewrite stabilizes)
 
-Write up ACT as a single theory. The structure should emerge from the
-content, not be prescribed in advance. What we know: it needs to cover
-adaptive systems (the foundation, originally TFT), purposeful agency
-(objectives + strategy), the Orient cascade, and multi-agent dynamics.
-How it's organized should be determined by the dependency structure of
-the actual claims, not by preserving TFT's numbering scheme or treating
-"TFT + extension" as the permanent structure. ACT supersedes TFT.
-
-TST should be revisited as a domain instantiation of ACT once the
-formalism stabilizes.
-
-**Logozoetic domain instantiation**: The agentic-tft corpus
-(../agentic-tft/, docs 00-14) contains substantial prior architectural
-thinking for language-based AI agents that should inform this phase:
-- Cognitive loop spec (doc 11): four-phase loop with six input channels,
-  attention triage, temporal structure (CADENTIA)
-- Evaluation framework (doc 12): development-vs-drift diagnostics,
-  mismatch trajectory as core metric
-- Crèche concept (doc 06): experiential training as developmental
-  prerequisite; constitutive utterance insight
-- Narrative circle (doc 04): for logozoetic agents, TFT provides
-  architecture but implementation operates in natural language
-- Bootstrap problem (doc 14): grounding linguistic epistemic estimates
-  measurably without circularity — the practical barrier to
-  implementation
-These are not referenced from ACT's formal documents yet but directly
-relevant to any AI agent domain instantiation.
-
----
-
-## Phase 4: Validation
-
-Possible simulation and empirical work — scope TBD based on what the
-theory actually claims:
-- Extend the nonlinear dynamics sims to characterize the squared-advantage
-  regime boundary
-- Developer-as-ACT-agent on a real codebase (the "software worked example")
+- Extend nonlinear sims to characterize regime boundaries
+- Developer-as-ACT-agent on real codebase (software worked example)
 - Test DAG health metrics against real project outcome data
 - Multi-agent intent propagation simulation
+- TST testable predictions: temporal ordering in fine-tuning,
+  specification bound calibration, coherence-coupling measurement
 
 ---
 
