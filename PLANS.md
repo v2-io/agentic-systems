@@ -105,9 +105,12 @@ as hypotheses needing validation.
 ### Progress Tracking
 
 - [x] Intent DAG consolidated (scratch/04-intent-dag-consolidated.md)
-- [ ] ACT-01: Scope (agent spectrum, four quadrants)
-- [ ] ACT-02: Causal Structure (two DAGs, Level 2 → strategy)
-- [ ] ACT-03: Agent State (M_t + O_t + Σ_t together)
+- [x] ACT-01: Scope (agent spectrum, four quadrants) — WRITTEN
+- [ ] ACT-02: Causal Structure (two DAGs, Level 2 → strategy) — light
+      revision of TF-02; add two-DAG framing and Level 2 → strategy link
+- [x] ACT-03: Agent State (M_t + O_t + Σ_t together) — WRITTEN, includes
+      software domain (code quality as obs infrastructure, spec bound,
+      change baseline from TST)
 - [ ] ACT-04: Event-Driven Dynamics
 - [ ] ACT-05: Mismatch Signals (three types)
 - [ ] ACT-06: Update Gain and Tempo
