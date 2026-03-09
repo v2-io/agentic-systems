@@ -42,7 +42,7 @@ that ACT builds on or must position against.
 
 ## Direct Competitors / Adjacent Theories
 
-### [UNREAD — HIGH PRIORITY] Hafez et al., "A Mathematical Theory of Agency and Intelligence" (Feb 2026)
+### [READ — assessed in 02-prior-art-assessment.md] Hafez et al., "A Mathematical Theory of Agency and Intelligence" (Feb 2026)
 - **URL**: https://arxiv.org/abs/2602.22519
 - **What**: Information-theoretic formalization of agency and intelligence.
   Introduces "bipredictability" (P) — measures how much information a system
@@ -59,7 +59,7 @@ that ACT builds on or must position against.
   it seems focused on the observation-action-outcome loop (TFT territory) not
   the goal/intent layer.
 
-### [UNREAD — HIGH PRIORITY] "Agentic AI Needs a Systems Theory" (2025)
+### [READ — assessed in 02-prior-art-assessment.md] "Agentic AI Needs a Systems Theory" (2025)
 - **URL**: https://arxiv.org/html/2503.00237v1
 - **What**: Argues that agentic AI development requires a holistic,
   systems-theoretic perspective. A call for foundations.
@@ -68,13 +68,15 @@ that ACT builds on or must position against.
 - **Key question**: What specific gaps do they identify? Do they point toward
   the goal/intent layer or focus on different concerns?
 
-### [UNREAD — HIGH PRIORITY] IBM, "Foundations of Agentic Systems Theory" (AAAI 2026)
+### [READ — assessed in 02-prior-art-assessment.md] IBM, "Foundations of Agentic Systems Theory" / FAST Workshop (AAAI 2026)
 - **URL**: https://research.ibm.com/publications/foundations-of-agentic-systems-theory
-- **What**: IBM Research's attempt at foundational theory for agentic systems.
-  Submitted to AAAI 2026.
-- **Relationship to ACT**: Direct competitor for the "foundations" space. Need
-  to read to understand scope, depth, and whether it's truly foundational or
-  more architectural/taxonomic.
+- **Workshop**: https://fast-workshop.github.io/ (17 papers presented)
+- **What**: IBM-organized workshop at AAAI 2026. The IBM paper itself is a
+  position paper calling for a systems theory, not providing one. Workshop
+  papers are mostly narrow/applied.
+- **Relationship to ACT**: They articulate the void ACT fills. Not a competitor
+  — a call-to-arms. Two workshop papers worth reading: Mohan "From Agentic AI
+  to Autonomous Agents" and Bagiński & Jha "Leapsight."
 
 ### [UNREAD — MEDIUM PRIORITY] "Are Agents Just Automata?" (2025)
 - **URL**: https://arxiv.org/html/2510.23487v1

@@ -1,0 +1,982 @@
+\begin{thebibliography}{155}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abel et~al.(2025)Abel, Barreto, Bowling, Dabney, Dong, Hansen,
+  Harutyunyan, Khetarpal, Lyle, Pascanu, et~al.]{abel2025agency}
+Abel, D., Barreto, A., Bowling, M., Dabney, W., Dong, S., Hansen, S.,
+  Harutyunyan, A., Khetarpal, K., Lyle, C., Pascanu, R., et~al.
+\newblock Agency is frame-dependent.
+\newblock \emph{arXiv preprint arXiv:2502.04403}, 2025.
+
+\bibitem[Acharya et~al.(2025)Acharya, Kuppan, and Divya]{acharya2025agentic}
+Acharya, D.~B., Kuppan, K., and Divya, B.
+\newblock Agentic {AI}: Autonomous intelligence for complex goals--{A}
+  comprehensive survey.
+\newblock \emph{IEEE Access}, 2025.
+
+\bibitem[Ackerman \& Thompson(2017)Ackerman and Thompson]{ackerman2017meta}
+Ackerman, R. and Thompson, V.~A.
+\newblock Meta-reasoning: Monitoring and control of thinking and reasoning.
+\newblock \emph{Trends in Cognitive Sciences}, 21\penalty0 (8):\penalty0
+  607--617, 2017.
+
+\bibitem[Aghion \& Bolton(1992)Aghion and Bolton]{aghion1992incomplete}
+Aghion, P. and Bolton, P.
+\newblock An incomplete contracts approach to financial contracting.
+\newblock \emph{The Review of Economic Studies}, 59\penalty0 (3):\penalty0
+  473--494, 1992.
+
+\bibitem[Aghion \& Tirole(1997)Aghion and Tirole]{aghion1997formal}
+Aghion, P. and Tirole, J.
+\newblock Formal and real authority in organizations.
+\newblock \emph{Journal of Political Economy}, 105\penalty0 (1):\penalty0
+  1--29, 1997.
+
+\bibitem[Alayrac et~al.(2022)Alayrac, Donahue, Luc, Miech, Barr, Hasson, Lenc,
+  Mensch, Millican, Reynolds, et~al.]{alayrac2022flamingo}
+Alayrac, J.-B., Donahue, J., Luc, P., Miech, A., Barr, I., Hasson, Y., Lenc,
+  K., Mensch, A., Millican, K., Reynolds, M., et~al.
+\newblock Flamingo: A visual language model for few-shot learning.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  35:\penalty0 23716--23736, 2022.
+
+\bibitem[{Anthropic}(2024)]{anthropic_computer_2024}
+{Anthropic}.
+\newblock Computer use (beta) - build with {Claude}, 2024.
+\newblock URL
+  \url{https://docs.anthropic.com/en/docs/build-with-claude/computer-use}.
+\newblock Accessed: 2024-02-09.
+
+\bibitem[Anthropic(2025)]{anthropic_claude_code_2025}
+Anthropic.
+\newblock Claude code overview, 2025.
+\newblock URL
+  \url{https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview}.
+
+\bibitem[Ashby(1956)]{ashby1956introduction}
+Ashby, W.~R.
+\newblock \emph{An Introduction to Cybernetics}.
+\newblock Chapman \& Hall, London, 1956.
+
+\bibitem[{\AA}str\"om \& Murray(2008){\AA}str\"om and
+  Murray]{astrom2008feedback}
+{\AA}str\"om, K.~J. and Murray, R.~M.
+\newblock \emph{Feedback Systems: An Introduction for Scientists and
+  Engineers}.
+\newblock Princeton University Press, Princeton, NJ, 2008.
+
+\bibitem[Bahrami et~al.(2010)Bahrami, Olsen, Latham, Roepstorff, Rees, and
+  Frith]{bahrami2010optimally}
+Bahrami, B., Olsen, K., Latham, P.~E., Roepstorff, A., Rees, G., and Frith,
+  C.~D.
+\newblock Optimally interacting minds.
+\newblock \emph{Science}, 329\penalty0 (5995):\penalty0 1081--1085, 2010.
+
+\bibitem[Baker et~al.(2002)Baker, Gibbons, and Murphy]{baker2002relational}
+Baker, G., Gibbons, R., and Murphy, K.~J.
+\newblock Relational contracts and the theory of the firm.
+\newblock \emph{The Quarterly Journal of Economics}, 117\penalty0 (1):\penalty0
+  39--84, 2002.
+
+\bibitem[Balabanov \& Linander(2024)Balabanov and
+  Linander]{balabanov2024uncertainty}
+Balabanov, O. and Linander, H.
+\newblock Uncertainty quantification in fine-tuned {LLMs} using {LoRA}
+  ensembles.
+\newblock \emph{arXiv preprint arXiv:2402.12264}, 2024.
+
+\bibitem[Ballard et~al.(1997)Ballard, Hayhoe, Pook, and
+  Rao]{ballard1997deictic}
+Ballard, D.~H., Hayhoe, M.~M., Pook, P.~K., and Rao, R.~P.
+\newblock Deictic codes for the embodiment of cognition.
+\newblock \emph{Behavioral and Brain Sciences}, 20\penalty0 (4):\penalty0
+  723--742, 1997.
+
+\bibitem[Balleine \& Dickinson(1998)Balleine and Dickinson]{balleine1998goal}
+Balleine, B.~W. and Dickinson, A.
+\newblock Goal-directed instrumental action: Contingency and incentive learning
+  and their cortical substrates.
+\newblock \emph{Neuropharmacology}, 37\penalty0 (4-5):\penalty0 407--419, 1998.
+
+\bibitem[Bandura(1982)]{bandura1982self}
+Bandura, A.
+\newblock Self-efficacy mechanism in human agency.
+\newblock \emph{American Psychologist}, 37\penalty0 (2):\penalty0 122, 1982.
+
+\bibitem[Bandura(2001)]{bandura2001social}
+Bandura, A.
+\newblock Social cognitive theory: An agentic perspective.
+\newblock \emph{Annual Review of Psychology}, 52\penalty0 (1):\penalty0 1--26,
+  2001.
+
+\bibitem[Bang \& Fleming(2018)Bang and Fleming]{bang2018distinct}
+Bang, D. and Fleming, S.~M.
+\newblock Distinct encoding of decision confidence in human medial prefrontal
+  cortex.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 115\penalty0
+  (23):\penalty0 6082--6087, 2018.
+
+\bibitem[Bansal et~al.(2024)Bansal, Vaughan, Amershi, Horvitz, Fourney,
+  Mozannar, Dibia, and Weld]{bansal2024challenges}
+Bansal, G., Vaughan, J.~W., Amershi, S., Horvitz, E., Fourney, A., Mozannar,
+  H., Dibia, V., and Weld, D.~S.
+\newblock Challenges in human-agent communication.
+\newblock \emph{arXiv preprint arXiv:2412.10380}, 2024.
+
+\bibitem[Barandiaran \& Almendros(2024)Barandiaran and
+  Almendros]{barandiaran2024transforming}
+Barandiaran, X.~E. and Almendros, L.~S.
+\newblock Transforming agency: On the mode of existence of large language
+  models.
+\newblock \emph{arXiv preprint arXiv:2407.10735}, 2024.
+
+\bibitem[Barandiaran et~al.(2009)Barandiaran, Di~Paolo, and
+  Rohde]{barandiaran2009defining}
+Barandiaran, X.~E., Di~Paolo, E., and Rohde, M.
+\newblock Defining agency: Individuality, normativity, asymmetry, and
+  spatio-temporality in action.
+\newblock \emph{Adaptive Behavior}, 17\penalty0 (5):\penalty0 367--386, 2009.
+
+\bibitem[Barsalou(1999)]{barsalou1999perceptual}
+Barsalou, L.
+\newblock Perceptual symbol systems.
+\newblock \emph{The Behavioral and Brain Sciences}, 1999.
+
+\bibitem[Barto(2013)]{barto2013intrinsic}
+Barto, A.~G.
+\newblock Intrinsic motivation and reinforcement learning.
+\newblock \emph{Intrinsically Motivated Learning in Natural and Artificial
+  Systems}, pp.\  17--47, 2013.
+
+\bibitem[Bellman(1957)]{bellman1957dynamic}
+Bellman, R.
+\newblock \emph{Dynamic Programming}.
+\newblock Princeton University Press, 1957.
+
+\bibitem[Boulding(1953)]{boulding1953organizational}
+Boulding, K.~E.
+\newblock \emph{The Organizational Revolution: A Study in the Ethics of
+  Economic Organization}.
+\newblock Harper \& Brothers, New York, 1953.
+
+\bibitem[Bratman(1987)]{bratman1987intention}
+Bratman, M.
+\newblock \emph{Intention, Plans, and Practical Reason}.
+\newblock Harvard University Press, Cambridge, MA, 1987.
+
+\bibitem[Burton et~al.(2024)Burton, Lopez-Lopez, Hechtlinger, Rahwan,
+  Aeschbach, Bakker, Becker, Berditchevskaia, Berger, Brinkmann,
+  et~al.]{burton2024large}
+Burton, J.~W., Lopez-Lopez, E., Hechtlinger, S., Rahwan, Z., Aeschbach, S.,
+  Bakker, M.~A., Becker, J.~A., Berditchevskaia, A., Berger, J., Brinkmann, L.,
+  et~al.
+\newblock How large language models can reshape collective intelligence.
+\newblock \emph{Nature Human Behaviour}, 8\penalty0 (9):\penalty0 1643--1655,
+  2024.
+
+\bibitem[Bushnell(2013)]{bushnell2013dual}
+Bushnell, E.~W.
+\newblock A dual-processing approach to cross-modal matching: Implications for
+  development.
+\newblock In \emph{The Development of Intersensory Perception}, pp.\  19--38.
+  Psychology Press, 2013.
+
+\bibitem[Cangelosi \& Schlesinger(2015)Cangelosi and
+  Schlesinger]{cangelosi2015developmental}
+Cangelosi, A. and Schlesinger, M.
+\newblock \emph{Developmental Robotics: From Babies to Robots}.
+\newblock MIT Press, 2015.
+
+\bibitem[Chalmers(1997)]{chalmers1997conscious}
+Chalmers, D.~J.
+\newblock \emph{The Conscious Mind: In Search of a Fundamental Theory}.
+\newblock Oxford Paperbacks, 1997.
+
+\bibitem[Chan et~al.(2023)Chan, Salganik, Markelius, Pang, Rajkumar,
+  Krasheninnikov, Langosco, He, Duan, Carroll, et~al.]{chan2023harms}
+Chan, A., Salganik, R., Markelius, A., Pang, C., Rajkumar, N., Krasheninnikov,
+  D., Langosco, L., He, Z., Duan, Y., Carroll, M., et~al.
+\newblock Harms from increasingly agentic algorithmic systems.
+\newblock In \emph{Proceedings of the 2023 ACM Conference on Fairness,
+  Accountability, and Transparency}, pp.\  651--666, 2023.
+
+\bibitem[Chawla et~al.(2024)Chawla, Chatterjee, Gadadinni, Verma, and
+  Banerjee]{chawla2024agentic}
+Chawla, C., Chatterjee, S., Gadadinni, S.~S., Verma, P., and Banerjee, S.
+\newblock Agentic {AI}: The building blocks of sophisticated {AI} business
+  applications.
+\newblock \emph{Journal of AI, Robotics \& Workplace Automation}, 3\penalty0
+  (3):\penalty0 1--15, 2024.
+
+\bibitem[Clark(2013)]{clark2013whatever}
+Clark, A.
+\newblock Whatever next? predictive brains, situated agents, and the future of
+  cognitive science.
+\newblock \emph{Behavioral and Brain Sciences}, 36\penalty0 (3):\penalty0
+  181--204, 2013.
+
+\bibitem[Da~Costa et~al.(2024)Da~Costa, Tenka, Zhao, and Sajid]{da2024active}
+Da~Costa, L., Tenka, S., Zhao, D., and Sajid, N.
+\newblock Active inference as a model of agency.
+\newblock \emph{arXiv preprint arXiv:2401.12917}, 2024.
+
+\bibitem[Davidson \& Pollock(2001)Davidson and Pollock]{davidson2001essays}
+Davidson, D. and Pollock, F.
+\newblock Essays on actions and events.
+\newblock 2001.
+
+\bibitem[Dennett(1989)]{dennett1989intentional}
+Dennett, D.~C.
+\newblock \emph{The Intentional Stance}.
+\newblock MIT press, 1989.
+
+\bibitem[Denning(2022)]{denning2022digital}
+Denning, S.
+\newblock In the digital age, the combination of technology and radical
+  management practices drive competitive advantage.
+\newblock \emph{Strategy \& Leadership}, 50\penalty0 (2):\penalty0 9--14, 2022.
+
+\bibitem[Di~Paolo(2005)]{di2005autopoiesis}
+Di~Paolo, E.~A.
+\newblock Autopoiesis, adaptivity, teleology, agency.
+\newblock \emph{Phenomenology and the Cognitive Sciences}, 4\penalty0
+  (4):\penalty0 429--452, 2005.
+
+\bibitem[Dolan \& Dayan(2013)Dolan and Dayan]{dolan2013goals}
+Dolan, R.~J. and Dayan, P.
+\newblock Goals and habits in the brain.
+\newblock \emph{Neuron}, 80\penalty0 (2):\penalty0 312--325, 2013.
+
+\bibitem[Edelman(1987)]{edelman1987neural}
+Edelman, G.~M.
+\newblock \emph{Neural Darwinism}.
+\newblock Basic Books, New York, 1987.
+
+\bibitem[Ellis(2012)]{ellis2012top}
+Ellis, G.~F.
+\newblock Top-down causation and emergence: Some comments on mechanisms.
+\newblock \emph{Interface Focus}, 2\penalty0 (1):\penalty0 126--140, 2012.
+
+\bibitem[Emirbayer \& Mische(1998)Emirbayer and Mische]{emirbayer1998agency}
+Emirbayer, M. and Mische, A.
+\newblock What is agency?
+\newblock \emph{American Journal of Sociology}, 103\penalty0 (4):\penalty0
+  962--1023, 1998.
+
+\bibitem[Fields \& Levin(2022)Fields and Levin]{fields2022competency}
+Fields, C. and Levin, M.
+\newblock Competency in navigating arbitrary spaces as an invariant for
+  analyzing cognition in diverse embodiments.
+\newblock \emph{Entropy}, 24\penalty0 (6):\penalty0 819, 2022.
+
+\bibitem[Fleming \& Daw(2017)Fleming and Daw]{fleming2017self}
+Fleming, S.~M. and Daw, N.~D.
+\newblock Self-evaluation of decision-making: A general {B}ayesian framework
+  for metacognitive computation.
+\newblock \emph{Psychological Review}, 124\penalty0 (1):\penalty0 91, 2017.
+
+\bibitem[Franklin \& Graesser(1996)Franklin and Graesser]{franklin1996agent}
+Franklin, S. and Graesser, A.
+\newblock Is it an agent, or just a program? {A} taxonomy for autonomous
+  agents.
+\newblock In \emph{International Workshop on Agent Theories, Architectures, and
+  Languages}, pp.\  21--35. Springer, 1996.
+
+\bibitem[Friston(2003)]{friston2003learning}
+Friston, K.
+\newblock Learning and inference in the brain.
+\newblock \emph{Neural Networks}, 16\penalty0 (9):\penalty0 1325--1352, 2003.
+
+\bibitem[Friston(2010)]{friston2010free}
+Friston, K.
+\newblock The free-energy principle: a unified brain theory?
+\newblock \emph{Nature Reviews Neuroscience}, 11\penalty0 (2):\penalty0
+  127--138, 2010.
+
+\bibitem[Friston \& Stephan(2007)Friston and Stephan]{friston2007free}
+Friston, K.~J. and Stephan, K.~E.
+\newblock Free-energy and the brain.
+\newblock \emph{Synthese}, 159:\penalty0 417--458, 2007.
+
+\bibitem[Friston et~al.(2010)Friston, Daunizeau, Kilner, and
+  Kiebel]{friston2010action}
+Friston, K.~J., Daunizeau, J., Kilner, J., and Kiebel, S.~J.
+\newblock Action and behavior: a free-energy formulation.
+\newblock \emph{Biological Cybernetics}, 102:\penalty0 227--260, 2010.
+
+\bibitem[Frith \& Frith(2012)Frith and Frith]{frith2012mechanisms}
+Frith, C.~D. and Frith, U.
+\newblock Mechanisms of social cognition.
+\newblock \emph{Annual Review of Psychology}, 63\penalty0 (1):\penalty0
+  287--313, 2012.
+
+\bibitem[Giddens(1984)]{giddens1984constitution}
+Giddens, A.
+\newblock \emph{The Constitution of Society: Outline of the Theory of
+  Structuration}.
+\newblock University of California Press, 1984.
+
+\bibitem[Gollwitzer(1999)]{gollwitzer1999implementation}
+Gollwitzer, P.~M.
+\newblock Implementation intentions: Strong effects of simple plans.
+\newblock \emph{American Psychologist}, 54\penalty0 (7):\penalty0 493, 1999.
+
+\bibitem[Google(2025)]{deepmind2025mariner}
+Google.
+\newblock Project {Mariner}, 2025.
+\newblock URL \url{https://deepmind.google/technologies/project-mariner/}.
+
+\bibitem[Gopnik(2020)]{gopnik2020childhood}
+Gopnik, A.
+\newblock Childhood as a solution to explore--exploit tensions.
+\newblock \emph{Philosophical Transactions of the Royal Society B},
+  375\penalty0 (1803):\penalty0 20190502, 2020.
+
+\bibitem[Gopnik \& Wellman(2012)Gopnik and Wellman]{gopnik2012reconstructing}
+Gopnik, A. and Wellman, H.~M.
+\newblock Reconstructing constructivism: Causal models, bayesian learning
+  mechanisms, and the theory theory.
+\newblock \emph{Psychological Bulletin}, 138\penalty0 (6):\penalty0 1085, 2012.
+
+\bibitem[Gopnik et~al.(1999)Gopnik, Meltzoff, and Kuhl]{gopnik1999scientist}
+Gopnik, A., Meltzoff, A.~N., and Kuhl, P.~K.
+\newblock \emph{The Scientist in the Crib: Minds, Brains, and How Children
+  Learn}.
+\newblock William Morrow \& Co, 1999.
+
+\bibitem[Greenblatt et~al.(2024)Greenblatt, Denison, Wright, Roger, MacDiarmid,
+  Marks, Treutlein, Belonax, Chen, Duvenaud, et~al.]{greenblatt2024alignment}
+Greenblatt, R., Denison, C., Wright, B., Roger, F., MacDiarmid, M., Marks, S.,
+  Treutlein, J., Belonax, T., Chen, J., Duvenaud, D., et~al.
+\newblock Alignment faking in large language models.
+\newblock \emph{arXiv preprint arXiv:2412.14093}, 2024.
+
+\bibitem[Griot et~al.(2025)Griot, Hemptinne, Vanderdonckt, and
+  Yuksel]{griot2025large}
+Griot, M., Hemptinne, C., Vanderdonckt, J., and Yuksel, D.
+\newblock Large language models lack essential metacognition for reliable
+  medical reasoning.
+\newblock \emph{Nature Communications}, 16\penalty0 (1):\penalty0 642, 2025.
+
+\bibitem[Grossman \& Hart(1986)Grossman and Hart]{grossman1986costs}
+Grossman, S.~J. and Hart, O.~D.
+\newblock The costs and benefits of ownership: A theory of vertical and lateral
+  integration.
+\newblock \emph{Journal of Political Economy}, 94\penalty0 (4):\penalty0
+  691--719, 1986.
+
+\bibitem[Hart(1995)]{hart1995firms}
+Hart, O.
+\newblock \emph{Firms, Contracts, and Financial Structure}.
+\newblock Clarendon Press, 1995.
+
+\bibitem[Hart \& Moore(1990)Hart and Moore]{hart1990property}
+Hart, O. and Moore, J.
+\newblock Property rights and the nature of the firm.
+\newblock \emph{Journal of Political Economy}, 98\penalty0 (6):\penalty0
+  1119--1158, 1990.
+
+\bibitem[Hauskrecht(2000)]{hauskrecht2000value}
+Hauskrecht, M.
+\newblock Value-function approximations for partially observable {M}arkov
+  decision processes.
+\newblock \emph{Journal of Artificial Intelligence Research}, 13:\penalty0
+  33--94, 2000.
+
+\bibitem[Hoel et~al.(2013)Hoel, Albantakis, and Tononi]{hoel2013quantifying}
+Hoel, E.~P., Albantakis, L., and Tononi, G.
+\newblock Quantifying causal emergence shows that macro can beat micro.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 110\penalty0
+  (49):\penalty0 19790--19795, 2013.
+
+\bibitem[Hohwy(2013)]{hohwy2013predictive}
+Hohwy, J.
+\newblock \emph{The Predictive Mind}.
+\newblock Oxford University Press, 2013.
+
+\bibitem[Holland(1992)]{holland1992complex}
+Holland, J.~H.
+\newblock Complex adaptive systems.
+\newblock \emph{Daedalus}, 121\penalty0 (1):\penalty0 17--30, 1992.
+
+\bibitem[Hu et~al.(2024)Hu, Lu, and Clune]{hu2024automated}
+Hu, S., Lu, C., and Clune, J.
+\newblock Automated design of agentic systems.
+\newblock \emph{arXiv preprint arXiv:2408.08435}, 2024.
+
+\bibitem[Huang et~al.(2023{\natexlab{a}})Huang, Yong, Ma, Linghu, Li, Wang, Li,
+  Zhu, Jia, and Huang]{huang2023embodied}
+Huang, J., Yong, S., Ma, X., Linghu, X., Li, P., Wang, Y., Li, Q., Zhu, S.-C.,
+  Jia, B., and Huang, S.
+\newblock An embodied generalist agent in {3D} world.
+\newblock \emph{arXiv preprint arXiv:2311.12871}, 2023{\natexlab{a}}.
+
+\bibitem[Huang et~al.(2024{\natexlab{a}})Huang, Qu, Cousins, Johnson, Yin,
+  Shah, Zhou, Altman, Wang, and Cong]{huang2024crispr}
+Huang, K., Qu, Y., Cousins, H., Johnson, W.~A., Yin, D., Shah, M., Zhou, D.,
+  Altman, R., Wang, M., and Cong, L.
+\newblock Crispr-{GPT}: An {LLM} agent for automated design of gene-editing
+  experiments.
+\newblock \emph{arXiv preprint arXiv:2404.18021}, 2024{\natexlab{a}}.
+
+\bibitem[Huang et~al.(2024{\natexlab{b}})Huang, Wake, Sarkar, Durante, Gong,
+  Taori, Noda, Terzopoulos, Kuno, Famoti, et~al.]{huang2024position}
+Huang, Q., Wake, N., Sarkar, B., Durante, Z., Gong, R., Taori, R., Noda, Y.,
+  Terzopoulos, D., Kuno, N., Famoti, A., et~al.
+\newblock Position paper: Agent {AI} towards a holistic intelligence.
+\newblock \emph{arXiv preprint arXiv:2403.00833}, 2024{\natexlab{b}}.
+
+\bibitem[Huang et~al.(2023{\natexlab{b}})Huang, Dong, Wang, Hao, Singhal, Ma,
+  Lv, Cui, Mohammed, Patra, et~al.]{huang2023language}
+Huang, S., Dong, L., Wang, W., Hao, Y., Singhal, S., Ma, S., Lv, T., Cui, L.,
+  Mohammed, O.~K., Patra, B., et~al.
+\newblock Language is not all you need: Aligning perception with language
+  models.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  36:\penalty0 72096--72109, 2023{\natexlab{b}}.
+
+\bibitem[Hutchins(1995)]{hutchins1995cognition}
+Hutchins, E.
+\newblock \emph{Cognition in the Wild}.
+\newblock MIT press, 1995.
+
+\bibitem[Jin et~al.(2023)Jin, Liu, Lyu, Poff, Sachan, Mihalcea, Diab, and
+  Sch{\"o}lkopf]{jin2023can}
+Jin, Z., Liu, J., Lyu, Z., Poff, S., Sachan, M., Mihalcea, R., Diab, M., and
+  Sch{\"o}lkopf, B.
+\newblock Can large language models infer causation from correlation?
+\newblock \emph{arXiv preprint arXiv:2306.05836}, 2023.
+
+\bibitem[Johnson et~al.(2024)Johnson, Karimi, Bengio, Chater, Gerstenberg,
+  Larson, Levine, Mitchell, Rahwan, Sch{\"o}lkopf,
+  et~al.]{johnson2024imagining}
+Johnson, S.~G., Karimi, A.-H., Bengio, Y., Chater, N., Gerstenberg, T., Larson,
+  K., Levine, S., Mitchell, M., Rahwan, I., Sch{\"o}lkopf, B., et~al.
+\newblock Imagining and building wise machines: The centrality of {AI}
+  metacognition.
+\newblock \emph{arXiv preprint arXiv:2411.02478}, 2024.
+
+\bibitem[Kapki{\c{c}} et~al.(2024)Kapki{\c{c}}, Mandal, Wan, Sheth, Gorantla,
+  Choi, Liu, and Candan]{kapkicc2024introducing}
+Kapki{\c{c}}, A., Mandal, P., Wan, S., Sheth, P., Gorantla, A., Choi, Y., Liu,
+  H., and Candan, K.~S.
+\newblock Introducing causalbench: A flexible benchmark framework for causal
+  analysis and machine learning.
+\newblock In \emph{Proceedings of the 33rd ACM International Conference on
+  Information and Knowledge Management}, pp.\  5220--5224, 2024.
+
+\bibitem[Kenton et~al.(2023)Kenton, Kumar, Farquhar, Richens, MacDermott, and
+  Everitt]{kenton2023discovering}
+Kenton, Z., Kumar, R., Farquhar, S., Richens, J., MacDermott, M., and Everitt,
+  T.
+\newblock Discovering agents.
+\newblock \emph{Artificial Intelligence}, 322:\penalty0 103963, 2023.
+
+\bibitem[Kolt(2024)]{kolt2024governing}
+Kolt, N.
+\newblock Governing {AI} agents.
+\newblock \emph{Available at SSRN}, 2024.
+
+\bibitem[Kolt et~al.(2025)Kolt, Shur-Ofry, and Cohen]{kolt2025lessons}
+Kolt, N., Shur-Ofry, M., and Cohen, R.
+\newblock Lessons from complexity theory for {AI} governance.
+\newblock \emph{arXiv preprint arXiv:2502.00012}, 2025.
+
+\bibitem[Kuhn(1997)]{kuhn1997structure}
+Kuhn, T.~S.
+\newblock \emph{The Structure of Scientific Revolutions}.
+\newblock University of Chicago Press, 1997.
+
+\bibitem[Kumar \& Varaiya(1986)Kumar and Varaiya]{kumar1986stochastic}
+Kumar, P.~R. and Varaiya, P.
+\newblock \emph{Stochastic Systems: Estimation, Identification, and Adaptive
+  Control}.
+\newblock Prentice-Hall, 1986.
+
+\bibitem[Lai et~al.(2017)Lai, Lin, et~al.]{lai2017systems}
+Lai, C.-H., Lin, S.~H., et~al.
+\newblock Systems theory.
+\newblock \emph{The International Encyclopedia of Organizational
+  Communication}, 41:\penalty0 1--18, 2017.
+
+\bibitem[Lake et~al.(2017)Lake, Ullman, Tenenbaum, and
+  Gershman]{lake2017building}
+Lake, B.~M., Ullman, T.~D., Tenenbaum, J.~B., and Gershman, S.~J.
+\newblock Building machines that learn and think like people.
+\newblock \emph{Behavioral and Brain Sciences}, 40:\penalty0 e253, 2017.
+
+\bibitem[Levin(2019)]{levin2019computational}
+Levin, M.
+\newblock The computational boundary of a ``self'': development, cancer and the
+  continuum of embryonic regulatory networks.
+\newblock \emph{Philosophical Transactions of the Royal Society B: Biological
+  Sciences}, 374\penalty0 (1774):\penalty0 20180376, 2019.
+
+\bibitem[Li et~al.(2025)Li, Wang, Yang, Lu, and Dai]{li2025semgrasp}
+Li, K., Wang, J., Yang, L., Lu, C., and Dai, B.
+\newblock {SemGrasp}: Semantic grasp generation via language aligned
+  discretization.
+\newblock In \emph{European Conference on Computer Vision}, pp.\  109--127.
+  Springer, 2025.
+
+\bibitem[Li et~al.(2024{\natexlab{a}})Li, Wang, Zeng, Wu, and
+  Yang]{li2024survey}
+Li, X., Wang, S., Zeng, S., Wu, Y., and Yang, Y.
+\newblock A survey on {LLM}-based multi-agent systems: Workflow,
+  infrastructure, and challenges.
+\newblock \emph{Vicinagearth}, 1\penalty0 (1):\penalty0 9, 2024{\natexlab{a}}.
+
+\bibitem[Li et~al.(2024{\natexlab{b}})Li, Huang, Lin, Wu, Wan, and
+  Sun]{li2024think}
+Li, Y., Huang, Y., Lin, Y., Wu, S., Wan, Y., and Sun, L.
+\newblock I think, therefore {I} am: Awareness in large language models.
+\newblock \emph{arXiv preprint arXiv:2401.17882}, 2024{\natexlab{b}}.
+
+\bibitem[Lieder \& Griffiths(2020)Lieder and Griffiths]{lieder2020resource}
+Lieder, F. and Griffiths, T.~L.
+\newblock Resource-rational analysis: Understanding human cognition as the
+  optimal use of limited computational resources.
+\newblock \emph{Behavioral and Brain Sciences}, 43:\penalty0 1--60, 2020.
+
+\bibitem[Lin et~al.(2023)Lin, Trivedi, and Sun]{lin2023generating}
+Lin, Z., Trivedi, S., and Sun, J.
+\newblock Generating with confidence: Uncertainty quantification for black-box
+  large language models.
+\newblock \emph{arXiv preprint arXiv:2305.19187}, 2023.
+
+\bibitem[Lu et~al.(2024)Lu, Lu, Lange, Foerster, Clune, and Ha]{lu2024ai}
+Lu, C., Lu, C., Lange, R.~T., Foerster, J., Clune, J., and Ha, D.
+\newblock The {AI} scientist: Towards fully automated open-ended scientific
+  discovery.
+\newblock \emph{arXiv preprint arXiv:2408.06292}, 2024.
+
+\bibitem[Maes(1993)]{maes1993modeling}
+Maes, P.
+\newblock Modeling adaptive autonomous agents.
+\newblock \emph{Artificial Life}, 1\penalty0 (1\_2):\penalty0 135--162, 1993.
+
+\bibitem[Meinke et~al.(2024)Meinke, Schoen, Scheurer, Balesni, Shah, and
+  Hobbhahn]{meinke2024frontier}
+Meinke, A., Schoen, B., Scheurer, J., Balesni, M., Shah, R., and Hobbhahn, M.
+\newblock Frontier models are capable of in-context scheming.
+\newblock \emph{arXiv preprint arXiv:2412.04984}, 2024.
+
+\bibitem[Merleau-Ponty(1945)]{merleau1945phenomenology}
+Merleau-Ponty, M.
+\newblock \emph{Ph{\'e}nom{\'e}nologie de la perception}.
+\newblock Gallimard, Paris, 1945.
+
+\bibitem[Mitchell et~al.(2025{\natexlab{a}})Mitchell, Ghosh, Luccioni, and
+  Pistilli]{mitchell2025agents}
+Mitchell, M., Ghosh, A., Luccioni, A.~S., and Pistilli, G.
+\newblock {AI} agents are here. {What} now?, 1 2025{\natexlab{a}}.
+\newblock URL \url{https://huggingface.co/blog/ethics-soc-7}.
+
+\bibitem[Mitchell et~al.(2025{\natexlab{b}})Mitchell, Ghosh, Luccioni, and
+  Pistilli]{mitchell2025fully}
+Mitchell, M., Ghosh, A., Luccioni, A.~S., and Pistilli, G.
+\newblock Fully autonomous {AI} agents should not be developed.
+\newblock \emph{arXiv preprint arXiv:2502.02649}, 2025{\natexlab{b}}.
+
+\bibitem[Mitelut et~al.(2024)Mitelut, Smith, and Vamplew]{mitelutposition}
+Mitelut, C., Smith, B., and Vamplew, P.
+\newblock Position: Intent-aligned {AI} systems must optimize for agency
+  preservation.
+\newblock In \emph{Forty-first International Conference on Machine Learning},
+  2024.
+
+\bibitem[Narayanan et~al.(2024)Narayanan, Braza, Griffiths, Ponnapati, Bou,
+  Laurent, Kabeli, Wellawatte, Cox, Rodriques, et~al.]{narayanan2024aviary}
+Narayanan, S., Braza, J.~D., Griffiths, R.-R., Ponnapati, M., Bou, A., Laurent,
+  J., Kabeli, O., Wellawatte, G., Cox, S., Rodriques, S.~G., et~al.
+\newblock Aviary: Training language agents on challenging scientific tasks.
+\newblock \emph{arXiv preprint arXiv:2412.21154}, 2024.
+
+\bibitem[Nelson(1996)]{nelson1996consciousness}
+Nelson, T.~O.
+\newblock Consciousness and metacognition.
+\newblock \emph{American Psychologist}, 51\penalty0 (2):\penalty0 102, 1996.
+
+\bibitem[Niu et~al.(2023)Niu, Wu, Li, Li, Yang, Fan, and
+  Zhong]{niu2023influence}
+Niu, N., Wu, Y., Li, H., Li, M., Yang, D., Fan, W., and Zhong, Y.
+\newblock Influence of voluntary action and outcome valence on the sense of
+  agency.
+\newblock \emph{Frontiers in Human Neuroscience}, 17:\penalty0 1206858, 2023.
+
+\bibitem[{OpenAI}(2025)]{openai2025operator}
+{OpenAI}.
+\newblock Introducing {Operator}, 1 2025.
+\newblock URL \url{https://openai.com/index/introducing-operator/}.
+\newblock A research preview of an agent that can use its own browser to
+  perform tasks for you. Available to Pro users in the U.S.
+
+\bibitem[OpenAI et~al.(2018)OpenAI, Andrychowicz, Baker, Chociej, Józefowicz,
+  McGrew, Pachocki, Petron, Plappert, Powell, Ray, Schneider, Sidor, Tobin,
+  Welinder, Weng, and Zaremba]{openai2018learning}
+OpenAI, Andrychowicz, M., Baker, B., Chociej, M., Józefowicz, R., McGrew, B.,
+  Pachocki, J., Petron, A., Plappert, M., Powell, G., Ray, A., Schneider, J.,
+  Sidor, S., Tobin, J., Welinder, P., Weng, L., and Zaremba, W.
+\newblock Learning dexterous in-hand manipulation.
+\newblock \emph{CoRR}, 2018.
+\newblock URL \url{http://arxiv.org/abs/1808.00177}.
+
+\bibitem[Oudeyer et~al.(2007)Oudeyer, Kaplan, and Hafner]{oudeyer2007intrinsic}
+Oudeyer, P.-Y., Kaplan, F., and Hafner, V.~V.
+\newblock Intrinsic motivation systems for autonomous mental development.
+\newblock \emph{IEEE Transactions on Evolutionary Computation}, 11\penalty0
+  (2):\penalty0 265--286, 2007.
+
+\bibitem[Pearl(2009)]{pearl2009causality}
+Pearl, J.
+\newblock \emph{Causality}.
+\newblock Cambridge university press, 2009.
+
+\bibitem[Pedreschi et~al.(2024)Pedreschi, Pappalardo, Ferragina, Baeza-Yates,
+  Barab{\'a}si, Dignum, Dignum, Eliassi-Rad, Giannotti, Kert{\'e}sz,
+  et~al.]{pedreschi2024human}
+Pedreschi, D., Pappalardo, L., Ferragina, E., Baeza-Yates, R., Barab{\'a}si,
+  A.-L., Dignum, F., Dignum, V., Eliassi-Rad, T., Giannotti, F., Kert{\'e}sz,
+  J., et~al.
+\newblock Human-{AI} coevolution.
+\newblock \emph{Artificial Intelligence}, pp.\  104244, 2024.
+
+\bibitem[Piaget(1952)]{piaget1952origins}
+Piaget, J.
+\newblock \emph{The Origins of Intelligence in Children}.
+\newblock International University Press, Inc., New York, 1952.
+
+\bibitem[Qiu et~al.(2024)Qiu, Lam, Li, Acharya, Wong, Darzi, Yuan, and
+  Topol]{qiu2024llm}
+Qiu, J., Lam, K., Li, G., Acharya, A., Wong, T.~Y., Darzi, A., Yuan, W., and
+  Topol, E.~J.
+\newblock {LLM}-based agentic systems in medicine and healthcare.
+\newblock \emph{Nature Machine Intelligence}, 6\penalty0 (12):\penalty0
+  1418--1420, 2024.
+
+\bibitem[Rao et~al.(2023)Rao, Khandelwal, Tanmay, Agarwal, and
+  Choudhury]{rao2023ethical}
+Rao, A., Khandelwal, A., Tanmay, K., Agarwal, U., and Choudhury, M.
+\newblock Ethical reasoning over moral alignment: A case and framework for
+  in-context ethical policies in {LLM}s.
+\newblock \emph{arXiv preprint arXiv:2310.07251}, 2023.
+
+\bibitem[Reed et~al.(2022)Reed, Zolna, Parisotto, Colmenarejo, Novikov,
+  Barth-Maron, Gimenez, Sulsky, Kay, Springenberg, et~al.]{reed2022generalist}
+Reed, S., Zolna, K., Parisotto, E., Colmenarejo, S.~G., Novikov, A.,
+  Barth-Maron, G., Gimenez, M., Sulsky, Y., Kay, J., Springenberg, J.~T.,
+  et~al.
+\newblock A generalist agent.
+\newblock \emph{arXiv preprint arXiv:2205.06175}, 2022.
+
+\bibitem[Richens \& Everitt(2024)Richens and Everitt]{richens2024robust}
+Richens, J. and Everitt, T.
+\newblock Robust agents learn causal world models.
+\newblock \emph{arXiv preprint arXiv:2402.10877}, 2024.
+
+\bibitem[Romanou et~al.(2023)Romanou, Montariol, Paul, Laugier, Aberer, and
+  Bosselut]{romanou2023crab}
+Romanou, A., Montariol, S., Paul, D., Laugier, L., Aberer, K., and Bosselut, A.
+\newblock {CRAB}: Assessing the strength of causal relationships between
+  real-world events.
+\newblock \emph{arXiv preprint arXiv:2311.04284}, 2023.
+
+\bibitem[Rosenblueth et~al.(1943)Rosenblueth, Wiener, and
+  Bigelow]{rosenblueth1943behavior}
+Rosenblueth, A., Wiener, N., and Bigelow, J.
+\newblock Behavior, purpose and teleology.
+\newblock \emph{Philosophy of Science}, 10\penalty0 (1):\penalty0 18--24, 1943.
+
+\bibitem[Rouleau \& Levin(2024)Rouleau and Levin]{rouleau2024discussions}
+Rouleau, N. and Levin, M.
+\newblock Discussions of machine versus living intelligence need more clarity.
+\newblock \emph{Nature Machine Intelligence}, 6\penalty0 (12):\penalty0
+  1424--1426, 2024.
+
+\bibitem[Russell \& Norvig(1995)Russell and Norvig]{russell1995artificial}
+Russell, S.~J. and Norvig, P.
+\newblock \emph{Artificial Intelligence: A Modern Approach}.
+\newblock Prentice Hall, 1995.
+\newblock ISBN 9780131038059.
+
+\bibitem[Schlosser(2019)]{schlosser2019agency}
+Schlosser, M.
+\newblock Agency.
+\newblock \url{https://plato.stanford.edu/entries/agency/}, October 2019.
+\newblock Accessed: 2025-01-06.
+
+\bibitem[Scholten et~al.(2024)Scholten, Rebholz, and
+  H{\"u}tter]{scholten2024metacognitive}
+Scholten, F., Rebholz, T.~R., and H{\"u}tter, M.
+\newblock Metacognitive myopia in large language models.
+\newblock \emph{arXiv preprint arXiv:2408.05568}, 2024.
+
+\bibitem[Shavit et~al.(2023)Shavit, Agarwal, Brundage, Adler, O’Keefe,
+  Campbell, Lee, Mishkin, Eloundou, Hickey, et~al.]{shavit2023practices}
+Shavit, Y., Agarwal, S., Brundage, M., Adler, S., O’Keefe, C., Campbell, R.,
+  Lee, T., Mishkin, P., Eloundou, T., Hickey, A., et~al.
+\newblock Practices for governing agentic {AI} systems.
+\newblock \emph{Research Paper, OpenAI, December}, 2023.
+
+\bibitem[Shea et~al.(2014)Shea, Boldt, Bang, Yeung, Heyes, and
+  Frith]{shea2014supra}
+Shea, N., Boldt, A., Bang, D., Yeung, N., Heyes, C., and Frith, C.~D.
+\newblock Supra-personal cognitive control and metacognition.
+\newblock \emph{Trends in Cognitive Sciences}, 18\penalty0 (4):\penalty0
+  186--193, 2014.
+
+\bibitem[Shen et~al.(2024)Shen, Knearem, Ghosh, Alkiek, Krishna, Liu, Ma,
+  Petridis, Peng, Qiwei, et~al.]{shen2024towards}
+Shen, H., Knearem, T., Ghosh, R., Alkiek, K., Krishna, K., Liu, Y., Ma, Z.,
+  Petridis, S., Peng, Y.-H., Qiwei, L., et~al.
+\newblock Towards bidirectional human-{AI} alignment: A systematic review for
+  clarifications, framework, and future directions.
+\newblock \emph{arXiv preprint arXiv:2406.09264}, 2024.
+
+\bibitem[Shorinwa et~al.(2024)Shorinwa, Mei, Lidard, Ren, and
+  Majumdar]{shorinwa2024survey}
+Shorinwa, O., Mei, Z., Lidard, J., Ren, A.~Z., and Majumdar, A.
+\newblock A survey on uncertainty quantification of large language models:
+  Taxonomy, open research challenges, and future directions.
+\newblock \emph{arXiv preprint arXiv:2412.05563}, 2024.
+
+\bibitem[Silver et~al.(2016)Silver, Huang, Maddison, Guez, Sifre, Van
+  Den~Driessche, Schrittwieser, Antonoglou, Panneershelvam, Lanctot,
+  et~al.]{silver2016mastering}
+Silver, D., Huang, A., Maddison, C.~J., Guez, A., Sifre, L., Van Den~Driessche,
+  G., Schrittwieser, J., Antonoglou, I., Panneershelvam, V., Lanctot, M.,
+  et~al.
+\newblock Mastering the game of {Go} with deep neural networks and tree search.
+\newblock \emph{nature}, 529\penalty0 (7587):\penalty0 484--489, 2016.
+
+\bibitem[Silver et~al.(2017)Silver, Schrittwieser, Simonyan, Antonoglou, Huang,
+  Guez, Hubert, Baker, Lai, Bolton, et~al.]{silver2017mastering}
+Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A., Guez,
+  A., Hubert, T., Baker, L., Lai, M., Bolton, A., et~al.
+\newblock Mastering the game of {Go} without human knowledge.
+\newblock \emph{nature}, 550\penalty0 (7676):\penalty0 354--359, 2017.
+
+\bibitem[Simon(1957)]{simon_1957}
+Simon, H.~A.
+\newblock \emph{Models of Man: Social and Rational - Mathematical Essays on
+  Rational Human Behavior in a Social Setting}.
+\newblock John Wiley and Sons, New York, 1957.
+
+\bibitem[Simon(2012)]{simon2012architecture}
+Simon, H.~A.
+\newblock The architecture of complexity.
+\newblock In \emph{The Roots of Logistics}, pp.\  335--361. Springer, 2012.
+
+\bibitem[Singh et~al.(2010)Singh, Lewis, Barto, and
+  Sorg]{singh2010intrinsically}
+Singh, S., Lewis, R.~L., Barto, A.~G., and Sorg, J.
+\newblock Intrinsically motivated reinforcement learning: An evolutionary
+  perspective.
+\newblock \emph{IEEE Transactions on Autonomous Mental Development}, 2\penalty0
+  (2):\penalty0 70--82, 2010.
+
+\bibitem[Singh et~al.(1994)Singh, Jaakkola, and Jordan]{singh1994learning}
+Singh, S.~P., Jaakkola, T., and Jordan, M.~I.
+\newblock Learning without state-estimation in partially observable {M}arkovian
+  decision processes.
+\newblock In \emph{Machine Learning Proceedings 1994}, pp.\  284--292.
+  Elsevier, 1994.
+
+\bibitem[Smith \& Gasser(2005)Smith and Gasser]{smith2005development}
+Smith, L. and Gasser, M.
+\newblock The development of embodied cognition: Six lessons from babies.
+\newblock \emph{Artificial Life}, 11\penalty0 (1-2):\penalty0 13--29, 2005.
+
+\bibitem[Spelke \& Kinzler(2007)Spelke and Kinzler]{spelke2007core}
+Spelke, E.~S. and Kinzler, K.~D.
+\newblock Core knowledge.
+\newblock \emph{Developmental Science}, 10\penalty0 (1):\penalty0 89--96, 2007.
+
+\bibitem[Sun et~al.(2023)Sun, Yu, Cui, Zhang, Zhang, Wang, Gao, Liu, Huang, and
+  Wang]{sun2023generative}
+Sun, Q., Yu, Q., Cui, Y., Zhang, F., Zhang, X., Wang, Y., Gao, H., Liu, J.,
+  Huang, T., and Wang, X.
+\newblock Generative pretraining in multimodality.
+\newblock \emph{arXiv preprint arXiv:2307.05222}, 2023.
+
+\bibitem[Surowiecki(2004)]{surowiecki2004wisdom}
+Surowiecki, J.
+\newblock \emph{The Wisdom of Crowds: Why the Many Are Smarter Than the Few and
+  How Collective Wisdom Shapes Business, Economies, Societies and Nations}.
+\newblock Doubleday, 2004.
+
+\bibitem[Sutton \& Barto(1998)Sutton and Barto]{sutton1998reinforcement}
+Sutton, R.~S. and Barto, A.~G.
+\newblock \emph{Reinforcement Learning: An Introduction}.
+\newblock MIT Press, 1998.
+
+\bibitem[Tavafoghi et~al.(2018)Tavafoghi, Ouyang, and
+  Teneketzis]{tavafoghi2018sufficient}
+Tavafoghi, H., Ouyang, Y., and Teneketzis, D.
+\newblock A sufficient information approach to decentralized decision making.
+\newblock In \emph{2018 IEEE Conference on Decision and Control (CDC)}, pp.\
+  5069--5076. IEEE, 2018.
+
+\bibitem[Tavafoghi et~al.(2021)Tavafoghi, Ouyang, and
+  Teneketzis]{tavafoghi2021unified}
+Tavafoghi, H., Ouyang, Y., and Teneketzis, D.
+\newblock A unified approach to dynamic decision problems with asymmetric
+  information: Nonstrategic agents.
+\newblock \emph{IEEE Transactions on Automatic Control}, 67\penalty0
+  (3):\penalty0 1105--1119, 2021.
+
+\bibitem[Tenenbaum et~al.(2011)Tenenbaum, Kemp, Griffiths, and
+  Goodman]{tenenbaum2011grow}
+Tenenbaum, J.~B., Kemp, C., Griffiths, T.~L., and Goodman, N.~D.
+\newblock How to grow a mind: Statistics, structure, and abstraction.
+\newblock \emph{Science}, 331\penalty0 (6022):\penalty0 1279--1285, 2011.
+
+\bibitem[Thompson(2011)]{thompson2011living}
+Thompson, E.
+\newblock Living ways of sense making.
+\newblock \emph{Philosophy Today}, 55\penalty0 (Supplement):\penalty0 114--123,
+  2011.
+
+\bibitem[Thompson et~al.(2011)Thompson, Turner, and
+  Pennycook]{thompson2011intuition}
+Thompson, V.~A., Turner, J. A.~P., and Pennycook, G.
+\newblock Intuition, reason, and metacognition.
+\newblock \emph{Cognitive Psychology}, 63\penalty0 (3):\penalty0 107--140,
+  2011.
+
+\bibitem[Thorndike(1920)]{thorndike1920}
+Thorndike, E.~L.
+\newblock A constant error in psychological ratings.
+\newblock \emph{Journal of Applied Psychology}, 4\penalty0 (1):\penalty0
+  25--29, 1920.
+
+\bibitem[Tran et~al.(2025)Tran, Dao, Nguyen, Pham, O'Sullivan, and
+  Nguyen]{tran2025multi}
+Tran, K.-T., Dao, D., Nguyen, M.-D., Pham, Q.-V., O'Sullivan, B., and Nguyen,
+  H.~D.
+\newblock Multi-agent collaboration mechanisms: A survey of {LLM}s.
+\newblock \emph{arXiv preprint arXiv:2501.06322}, 2025.
+
+\bibitem[Vafa et~al.(2024)Vafa, Chen, Kleinberg, Mullainathan, and
+  Rambachan]{vafa2024evaluating}
+Vafa, K., Chen, J.~Y., Kleinberg, J., Mullainathan, S., and Rambachan, A.
+\newblock Evaluating the world model implicit in a generative model.
+\newblock \emph{arXiv preprint arXiv:2406.03689}, 2024.
+
+\bibitem[Varela(1984)]{varela1984living}
+Varela, F.~J.
+\newblock Living ways of sense-making: A middle path for neuroscience.
+\newblock In \emph{Order and Disorder: Proceedings of the Stanford
+  International Symposium}, pp.\  208--224. Anma Libri, 1984.
+
+\bibitem[Varela et~al.(1991)Varela, Thompson, and Rosch]{varela1991embodied}
+Varela, F.~J., Thompson, E., and Rosch, E.
+\newblock \emph{The Embodied Mind: Cognitive Science and Human Experience}.
+\newblock MIT Press, Cambridge, MA, 1991.
+
+\bibitem[Von~Bertalanffy(1968)]{bertalanffy1968general}
+Von~Bertalanffy, L.
+\newblock \emph{General System Theory: Foundations, Development, Applications}.
+\newblock George Braziller, New York, 1968.
+
+\bibitem[Von~Wright(2004)]{von2004explanation}
+Von~Wright, G.~H.
+\newblock \emph{Explanation and Understanding}.
+\newblock Cornell University Press, 2004.
+
+\bibitem[Wegner(1987)]{wegner1987transactive}
+Wegner, D.
+\newblock Transactive memory: A contemporary analysis of the group mind.
+\newblock \emph{Theories of group behavior/Springer-Verlag}, 1987.
+
+\bibitem[Wiener(1948)]{wiener1948cybernetics}
+Wiener, N.
+\newblock \emph{Cybernetics: Or Control and Communication in the Animal and the
+  Machine}.
+\newblock MIT Press, Cambridge, MA, 1948.
+
+\bibitem[Wiesinger et~al.(2025)Wiesinger, Marlow, and
+  Vuskovic]{wiesinger2025agents}
+Wiesinger, J., Marlow, P., and Vuskovic, V.
+\newblock Agents.
+\newblock Whitepaper, Google, 2025.
+
+\bibitem[Williamson(1975)]{williamson1975markets}
+Williamson, O.~E.
+\newblock \emph{Markets and Hierarchies: Analysis and Antitrust Implications}.
+\newblock Free Press, New York, 1975.
+
+\bibitem[Wolf \& Tomasello(2023)Wolf and Tomasello]{wolf2023shared}
+Wolf, W. and Tomasello, M.
+\newblock A shared intentionality account of uniquely human social bonding.
+\newblock \emph{Perspectives on Psychological Science}, pp.\
+  17456916231201795, 2023.
+
+\bibitem[Xu \& Rivera(2024)Xu and Rivera]{xu2024towards}
+Xu, D. and Rivera, J.-P.
+\newblock Towards measuring goal-directedness in {AI} systems.
+\newblock \emph{arXiv preprint arXiv:2410.04683}, 2024.
+
+\bibitem[Xu et~al.(2024)Xu, Song, Li, Tang, Jain, Bao, Wang, Zhou, Guo, Cao,
+  et~al.]{xu2024theagentcompany}
+Xu, F.~F., Song, Y., Li, B., Tang, Y., Jain, K., Bao, M., Wang, Z.~Z., Zhou,
+  X., Guo, Z., Cao, M., et~al.
+\newblock {TheAgentCompany}: Benchmarking {LLM} agents on consequential real
+  world tasks.
+\newblock \emph{arXiv preprint arXiv:2412.14161}, 2024.
+
+\bibitem[Xu et~al.(2021)Xu, Qi, Agrawal, and Song]{xu2021adagrasp}
+Xu, Z., Qi, B., Agrawal, S., and Song, S.
+\newblock {AdaGrasp}: Learning an adaptive gripper-aware grasping policy.
+\newblock In \emph{2021 IEEE International Conference on Robotics and
+  Automation (ICRA)}, pp.\  4620--4626. IEEE, 2021.
+
+\bibitem[Yang et~al.(2024)Yang, Shirvaikar, Clivio, and
+  Falck]{yang2024critical}
+Yang, L., Shirvaikar, V., Clivio, O., and Falck, F.
+\newblock A critical review of causal reasoning benchmarks for large language
+  models.
+\newblock In \emph{AAAI 2024 Workshop on''Are Large Language Models Simply
+  Causal Parrots?''}, 2024.
+
+\bibitem[Yeung et~al.(2004)Yeung, Botvinick, and Cohen]{yeung2004neural}
+Yeung, N., Botvinick, M.~M., and Cohen, J.~D.
+\newblock The neural basis of error detection: Conflict monitoring and the
+  error-related negativity.
+\newblock \emph{Psychological Review}, 111\penalty0 (4):\penalty0 931, 2004.
+
+\bibitem[Ze{\v{c}}evi{\'c} et~al.(2023)Ze{\v{c}}evi{\'c}, Willig, Dhami, and
+  Kersting]{zevcevic2023causal}
+Ze{\v{c}}evi{\'c}, M., Willig, M., Dhami, D.~S., and Kersting, K.
+\newblock Causal parrots: Large language models may talk causality but are not
+  causal.
+\newblock \emph{arXiv preprint arXiv:2308.13067}, 2023.
+
+\bibitem[Zhang \& Varshney(2025)Zhang and Varshney]{zhang2025conceptualizing}
+Zhang, A. and Varshney, L.~R.
+\newblock Conceptualizing agency: A framework for human-{AI} interaction.
+\newblock In \emph{HAI-GEN 2025: 6th Workshop on Human-AI Co-Creation with
+  Generative Models}, 2025.
+
+\bibitem[Zhang et~al.(2024)Zhang, Yu, Dong, Li, Su, Chu, and Yu]{zhang2024mm}
+Zhang, D., Yu, Y., Dong, J., Li, C., Su, D., Chu, C., and Yu, D.
+\newblock {MM-LLMs}: Recent advances in multimodal large language models.
+\newblock \emph{arXiv preprint arXiv:2401.13601}, 2024.
+
+\bibitem[Zhou et~al.(2024)Zhou, Wu, Huang, Wu, Feng, and
+  Tan]{zhou2024causalbench}
+Zhou, Y., Wu, X., Huang, B., Wu, J., Feng, L., and Tan, K.~C.
+\newblock Causalbench: A comprehensive benchmark for causal learning capability
+  of large language models.
+\newblock \emph{arXiv preprint arXiv:2404.06349}, 2024.
+
+\bibitem[Zhu et~al.(2024)Zhu, Dugan, and Callison-Burch]{zhu2024redel}
+Zhu, A., Dugan, L., and Callison-Burch, C.
+\newblock {ReDel}: A toolkit for {LLM}-powered recursive multi-agent systems.
+\newblock \emph{arXiv preprint arXiv:2408.02248}, 2024.
+
+\end{thebibliography}
