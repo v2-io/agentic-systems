@@ -3,8 +3,10 @@
 ## What This Project Is
 
 ACT (Agentic Cycle Theory) is a first-principles mathematical theory of
-adaptive, purposeful agents. It extends Temporal Feedback Theory (TFT, in
-priors/tft/) with a formal treatment of goals and intent.
+adaptive, purposeful agents. It supersedes and subsumes Temporal Feedback
+Theory (TFT, in priors/tft/), which provides the adaptive-systems
+foundation. TFT is prior work now absorbed into ACT, not a separate
+co-existing theory.
 
 This is theoretical research, not software engineering. The primary artifacts
 are mathematical formalisms, scratch documents developing ideas, and
@@ -13,30 +15,34 @@ epistemic status, and clarity for future readers — not code coverage.
 
 ## The Core Insight
 
-TFT formalizes how agents adapt to reality (mismatch signals, gain, tempo,
-persistence). But it has no treatment of goals — the agent's desired future
-state. ACT adds:
+The adaptive-systems foundation (from TFT) formalizes how agents adapt to
+reality (mismatch signals, gain, tempo, persistence). But it has no
+treatment of goals — the agent's desired future state. Even survival
+requires multi-step strategy in non-trivial environments, so "TFT is
+complete for survival" holds only for purely reactive tracking. ACT adds:
 
 - **O_t** (objective — what the agent wants) and **Σ_t** (strategy — how
   it plans to get there) alongside **M_t** (reality model)
 - Strategy formalized as a **probabilistic causal DAG** (AND/OR nodes,
-  edges with confidence weights p, Bayesian update via TFT's uncertainty
+  edges with confidence weights p, Bayesian update via the uncertainty
   ratio). The objective is simpler — a target state or region in S.
 - The **Orient cascade**: observation -> M_t update -> Σ_t edge revision ->
   feasibility check -> possible O_t revision
 - **Shared intent** as IB-compressed purpose for multi-agent coordination
 - The O_t / Σ_t distinction is recent (not yet reflected in all scratch
-  docs, which use "G_t" for both)
+  docs, which use "G_t" for both — those are superseded)
 
 ## Key Architectural Decisions
 
-1. **TFT is Part I of ACT.** It stands alone as a complete theory of adaptive
-   systems. Don't modify TFT documents; build on them.
+1. **ACT supersedes TFT.** TFT's adaptive-systems content is absorbed
+   into ACT as the foundation layer. The TFT submodule is prior work /
+   reference material — don't modify those documents, but don't treat
+   "TFT" as a separate co-existing theory either. ACT is the theory.
 
 2. **The directed separation principle.** M_t dynamics can be designed
-   independently of G_t. G_t depends on M_t. Action selection couples them.
-   This means TFT (Part I) is valid without Part II, but Part II requires
-   Part I.
+   independently of O_t/Σ_t. O_t/Σ_t depend on M_t. Action selection
+   couples them. This means the adaptive-systems layer is valid on its
+   own, but the purposeful-agency layer requires it.
 
 3. **AND/OR DAG with single-parameter edges.** Three independent formalism
    attempts converged on: AND/OR combination rules at nodes, single
@@ -74,7 +80,25 @@ Follow TFT's conventions (see priors/tft/TF-00.md):
 - Goal tempo formalization
 - Shared intent compression (IB for Auftragstaktik)
 - How the simulation findings (squared advantage regime caveat) should feed
-  back to TFT
+  back to the adaptive-systems documents
+
+### Known Fragilities in Purposeful Agency Layer
+- **Object model type error**: earlier docs define δ_goal = G_t − M_t
+  (point subtraction) but the converged formalism makes Σ_t a DAG. These
+  are type-incompatible. Docs using point-valued G_t are superseded.
+- **Edge semantics gap**: edges claim interventional semantics
+  (p_ij = P(j | do(i), M_t)) but update from observational signals
+  without identifiability assumptions. Real issue in confounded domains;
+  less severe in software (genuine interventions available).
+- **Missing commitment/resource/temporal structure**: the formalism lacks
+  commitment state (options vs. executing), resource budget, and action
+  sequencing. Gap between "strategy representation" and "intention theory."
+- **DAG acyclicity**: an assumption, not forced by Pearl. Real control
+  loops are cyclic; acyclicity holds after time-unrolling.
+- **Cognitive cost of Σ_t**: TF-03 has β for M_t compression cost; the
+  intent DAG has no analog. Matters especially for finite-context agents.
+- **WEIGHTED combination rule**: reintroduces two-parameter estimation
+  problem. Should be dropped; use nested AND/OR for k-of-n semantics.
 
 ## Important Simulation Finding
 
@@ -89,17 +113,20 @@ The nonlinear dynamics simulations (scratch/track-b-nonlinear-sims/) found:
 - The original sim2's ~1.05 was two effects: stochastic model + not
   coupling-dominant.
 
-TF-11 should note which disturbance model yields which exponent.
-Qualitative superlinearity is robust across all regimes. This has NOT
-yet been fed back to the TFT documents.
+The adaptive-systems documents should note which disturbance model yields
+which exponent. Qualitative superlinearity is robust across all regimes.
+This has NOT yet been fed back to the TFT-era documents.
 
 ## File Organization
 
-- `priors/` — TFT and TST as git submodules (read, don't modify)
+- `priors/` — TFT and TST as git submodules (prior work, read-only)
 - `refs/` — Reference papers
 - `scratch/` — Working documents (numbered for chronological order)
 - `scratch/track-a-intent-dag/` — Intent DAG formalism variants
 - `scratch/track-b-nonlinear-sims/` — Simulation code and results
+- `../agentic-tft/` — Prior bridge work: TFT → logozoetic AI agents.
+  Docs 10-14 (cognitive loop, evaluation, crèche, training design) are
+  directly relevant to ACT's AI agent domain instantiation.
 - Formal documents will live at top level once the theory stabilizes;
   structure should emerge from content, not be prescribed
 

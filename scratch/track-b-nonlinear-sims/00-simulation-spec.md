@@ -255,8 +255,8 @@ For each correction function at q/eta = 1.0:
   all trials
 
 Plot: Histogram / KDE of |delta| for each correction function. The linear case
-should be approximately exponential (reflecting the Ornstein-Uhlenbeck stationary
-distribution). The threshold case should show a concentration near epsilon. The
+should be approximately half-normal (the stationary law for |x| where x is
+Ornstein-Uhlenbeck; NOT exponential as previously stated). The threshold case should show a concentration near epsilon. The
 structural breakdown case should show bimodality near the critical rho.
 
 **M5. Phase portraits**
@@ -423,7 +423,8 @@ For the saturating correction function:
 - Fix T_A/T_B = 2.0, gamma_A = gamma_B = 0.5
 - Sweep R (saturation radius) from 0.1 to 10.0
 - Measure the effective exponent at each R
-- The exponent should approach 2 as R -> infinity (linear limit) and decrease as
+- The exponent should approach 1.5 as R -> infinity (stochastic coupling limit;
+  2.0 only under deterministic drift — see variant C/D results) and decrease as
   R -> 0 (strongly saturating limit)
 
 Plot: Effective exponent b vs R. This characterizes how "much" nonlinearity is needed

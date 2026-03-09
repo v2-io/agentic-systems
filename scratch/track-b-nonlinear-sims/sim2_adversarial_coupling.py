@@ -955,7 +955,7 @@ def main():
         print(f"  {name:<20} {b:>10.3f} {interp:>30}")
 
     print(f"\n  Saturation radius sweep (saturating correction):")
-    print(f"  R -> infinity: exponent -> 2.0 (linear limit)")
+    print(f"  R -> infinity: exponent -> 1.5 (stochastic coupling limit; 2.0 only under deterministic drift)")
     print(f"  R -> 0: exponent -> ? (strongly nonlinear limit)")
     for i, (R_val, exp_val) in enumerate(zip(R_values, R_exponents)):
         print(f"    R = {R_val:>6.2f}: exponent = {exp_val:.3f}")

@@ -2,9 +2,10 @@
 
 ## Current State (March 2026)
 
-**Part I (Adaptive Systems / TFT)**: Well-developed. TF-00 through TF-11 plus
-appendices A-G. Simulation battery (6 variants + Hafez bridge) has
-characterized the empirical landscape:
+**Adaptive systems foundation** (developed as TFT, now subsumed by ACT):
+Well-developed. TF-00 through TF-11 plus appendices A-G. Simulation
+battery (6 variants + Hafez bridge) has characterized the empirical
+landscape:
 
 - *Appendix A (Lyapunov/sector conditions)* is the strongest foundation —
   general, nonlinear, robust. Should be the formal backbone going forward.
@@ -33,16 +34,20 @@ to 0.27 with action), observation noise degrades P via H_f, P cannot
 detect adversarial dynamics (scale-invariant). The ΔH decomposition
 (forward/backward predictive uncertainty) is genuinely novel for TFT —
 H_b = strategic legibility/opacity to adversaries, no current analog.
-Potentially important for multi-agent adversarial work.
+Potentially important for multi-agent adversarial work. **Caveat**: the
+passive-vs-active comparison changes both state semantics (x_t → x̂_t)
+and adds an action channel, so the P drop is suggestive but doesn't
+cleanly isolate agency from representation choice. The architecture/
+performance split is the stronger and cleaner result.
 
-**Part II (Purposeful Agency)**: Exploratory sketch phase. Three convergence-
+**Purposeful agency** (ACT's novel contribution): Exploratory sketch phase. Three convergence-
 tested intent DAG formalism variants. Core structure identified (AND/OR nodes,
 single-parameter edges, Orient cascade). The O_t (objective) / Σ_t (strategy)
 distinction clarifies what was previously conflated under G_t. Not yet
 consolidated into formal documents.
 
 **Domain Instantiations**: TST-via-TFT mapping exists (priors/tst/via-tft/).
-Needs updating once ACT's formalism stabilizes.
+Needs rewriting as TST-via-ACT once the formalism stabilizes.
 
 ---
 
@@ -52,14 +57,26 @@ Needs updating once ACT's formalism stabilizes.
 Merge the three variants (00-intent-dag-formalism, 02-alt-clean-slate,
 03-alt-and-or-dag) into a single canonical treatment:
 - AND/OR nodes with single-parameter edges (converged)
+- **Drop WEIGHTED combination rule** — it reintroduces the two-parameter
+  estimation problem (α weights) that single-p was supposed to solve. If
+  k-of-n semantics are needed, model as nested AND/OR.
 - Bayesian edge update mirroring TF-06 (converged)
 - Orient cascade (converged)
 - Node taxonomy: resolve categorical vs continuous (open — pick one and
   note the alternative)
 - Strategic tempo T_G from the clean-slate variant
 - Health metrics (keep the principled ones, flag scaffold ones)
+- **Add identifiability section**: edges claim interventional semantics
+  (p_ij = P(j | do(i), M_t)) but update from observational signals.
+  State the identifiability assumptions explicitly. Note that software
+  domains have genuine interventions (tests, deploys, git bisect); other
+  domains (military, organizational) face confounding, delay, and
+  correlation that make observational updates semantically weaker.
+- **Write the Σ_t update dynamics formally**: the Orient cascade is
+  described verbally but not yet given equations. This is the core novel
+  contribution and needs TF-06-level rigor.
 
-### 1.2 TFT Formal Rebalancing
+### 1.2 Adaptive-Systems Formal Rebalancing
 Simulation findings (now added to TF-06, TF-11) revealed that Appendix A
 is the correct general foundation, not the linear ODE. Remaining work:
 - Consider developing a stochastic companion to TF-11: AR(1) steady-state
@@ -70,17 +87,40 @@ is the correct general foundation, not the linear ODE. Remaining work:
 - Promote per-dimension persistence condition from "open question" to
   "known correct formulation" for anisotropic systems
 
-### 1.3 Clarify the Objective / Strategy Distinction
-The current documents conflate two things:
+### 1.3 Clarify the Object Model
+The current documents have a **type inconsistency**: δ_goal = G_t − M_t
+(point subtraction) coexists with G_t-as-DAG. These are mathematically
+incompatible. Earlier point-valued formulations are superseded.
+
+The working split:
 - **O_t** (objective): the target state — what the agent wants. Simple.
   A point or region in S. The port.
 - **Σ_t** (strategy): the causal DAG from actions to the objective — how
   the agent plans to get there. A function of O_t and M_t. Complex.
 
 Everyday "goal" conflates these. The PID has O_t but no Σ_t. The Kalman
-filter has neither. The commander has both. Determine how much of the
-existing formalism is about O_t (and should be simple) vs about Σ_t
-(and should be the DAG).
+filter has neither. The commander has both.
+
+Three additional gaps (from review):
+- **Commitment state**: OR branches are options until committed; the
+  formalism doesn't distinguish "considering" from "executing." The
+  D_t (desire) / I_t (committed intent) split may help here — desire
+  is the holistic model of what the agent wants; committed intent is
+  the subset focusing action. Defer pruning until multi-agent work
+  reveals which distinction bears more weight.
+- **Resource budget**: costs are invoked in the scratch docs but not
+  modeled. Strategy evaluation requires knowing what paths cost.
+- **Temporal ordering**: the DAG encodes causal dependency but not "do A
+  before B." Can the intent DAG handle action sequencing, or does it
+  need a separate mechanism?
+
+Also: **TFT's "completeness for survival" holds only for reactive
+tracking.** Once survival requires multi-step strategy (evade, navigate,
+acquire), the persistence condition implicitly needs Σ_t. TFT is a
+necessary foundation, not a self-sufficient theory of agency even for
+the survival case. This should be stated explicitly.
+
+Mark all scratch docs still using point-valued G_t as superseded.
 
 ---
 
@@ -94,7 +134,7 @@ How does a high-level intent DAG decompose across agents? Formalize:
 
 ### 2.2 Directed Opportunism
 Local grafting at OR-nodes within IB-compressed shared intent:
-- How much can a subordinate's local G_t diverge?
+- How much can a subordinate's local O_t/Σ_t diverge?
 - The Auftragstaktik IB: compress to constraints that keep inter-agent
   edges viable while freeing intra-agent edges
 - When is local divergence beneficial vs. destructive?
@@ -113,19 +153,48 @@ Why teams persist where individuals can't:
 - Re-routing around failed edges via sub-DAG reassignment
 - Collective grafting capacity
 
+**Caveat from Appendix F review**: The current multi-agent formulation
+treats communication as additive tempo and cooperation as negative
+disturbance. These are useful heuristics, but correlated reports don't
+linearly increase effective tempo, and communication typically improves
+estimation quality (reduces U_o) rather than literally canceling
+exogenous disturbance (reducing ρ). Appendix F acknowledges independence
+limits and raises correlation in trust transitivity, but these caveats
+don't propagate into the persistence formulas. The Phase 2 formalization
+should treat correlated observations as the realistic default and derive
+the independence case as a special case, not the other way around.
+
 ---
 
 ## Phase 3: Formalization
 
-Write up the theory properly. The structure should emerge from the content,
-not be prescribed in advance. What we know: it needs to cover adaptive
-systems (TFT's contribution), purposeful agency (objectives + strategy),
-the Orient cascade, and multi-agent dynamics. How it's organized should be
-determined by the dependency structure of the actual claims, not by analogy
-to TFT's numbering scheme.
+Write up ACT as a single theory. The structure should emerge from the
+content, not be prescribed in advance. What we know: it needs to cover
+adaptive systems (the foundation, originally TFT), purposeful agency
+(objectives + strategy), the Orient cascade, and multi-agent dynamics.
+How it's organized should be determined by the dependency structure of
+the actual claims, not by preserving TFT's numbering scheme or treating
+"TFT + extension" as the permanent structure. ACT supersedes TFT.
 
 TST should be revisited as a domain instantiation of ACT once the
 formalism stabilizes.
+
+**Logozoetic domain instantiation**: The agentic-tft corpus
+(../agentic-tft/, docs 00-14) contains substantial prior architectural
+thinking for language-based AI agents that should inform this phase:
+- Cognitive loop spec (doc 11): four-phase loop with six input channels,
+  attention triage, temporal structure (CADENTIA)
+- Evaluation framework (doc 12): development-vs-drift diagnostics,
+  mismatch trajectory as core metric
+- Crèche concept (doc 06): experiential training as developmental
+  prerequisite; constitutive utterance insight
+- Narrative circle (doc 04): for logozoetic agents, TFT provides
+  architecture but implementation operates in natural language
+- Bootstrap problem (doc 14): grounding linguistic epistemic estimates
+  measurably without circularity — the practical barrier to
+  implementation
+These are not referenced from ACT's formal documents yet but directly
+relevant to any AI agent domain instantiation.
 
 ---
 
@@ -166,18 +235,34 @@ multi-agent settings (shared desire vs shared commitment; what you tell
 allies you want vs what you're actually doing). Two paths to explore;
 defer pruning until multi-agent work reveals which bears more weight.
 
-### Credibility leaks (medium, partially fixed)
+### Credibility leaks (medium, mostly fixed)
 - ~~Founding notes reference ~/src/ paths~~ — FIXED
-- sim2 prints "R -> infinity: exponent -> 2.0" but stochastic asymptote
-  is 1.5 — needs code fix
-- Simulation spec claims |δ| distribution is "approximately exponential"
-  but stationary law is half-normal — needs spec fix
+- ~~sim2 prints "R -> infinity: exponent -> 2.0" but stochastic asymptote
+  is 1.5~~ — FIXED (now prints 1.5 with note about deterministic drift)
+- ~~Simulation spec claims |δ| distribution is "approximately exponential"
+  but stationary law is half-normal~~ — FIXED (spec now says half-normal)
+- Simulation spec R-sweep prediction updated (1.5, not 2.0)
 
-### TST epistemic downgrade (medium, for when TST-via-ACT is written)
-TST claims "mathematical necessity" for things depending on undefined
-proxies (principled(C), n_future, change-set size as time surrogate).
+### TST reframing (medium-high, for when TST-via-ACT is written)
+TST's real content is a **temporal optimization target** (minimize expected
+comprehension + implementation time under repeated handoff), not a theorem
+of software engineering. This is a coherent and useful domain objective,
+but it does not subsume deadline asymmetry, safety-critical downside,
+optionality, or irreversible loss. The strong claims:
+- T-01 (temporal optimality) is tautological by construction
+- T-02 (specification bound) and T-04 (Bayesian baseline) are genuinely
+  well-grounded
+- T-08 (time ∝ |changeset|) and T-09 (exponential proximity) are
+  unvalidated proportionalities labeled as "empirical" without empirical
+  data
+- T-06 (change investment) has a circularity: architecture choice affects
+  future change patterns, which affects n_future, which justifies the
+  architecture choice
 When TST becomes a domain instantiation of ACT, every claim should be
-regraded with TFT-style epistemic tags.
+regraded with TFT-style epistemic tags. The older submodule language must
+not leak back into ACT as mathematics. The strongest novel insight from
+TST-via-TFT (code quality as observation-infrastructure investment that
+lowers future U_o) should be preserved and highlighted.
 
 ### Consolidate DAG variants (medium)
 Three competing formalism variants exist. The convergence testing identified
@@ -222,5 +307,26 @@ clearly demoted to reference material.
 8. **Should ΔH (Hafez's forward/backward asymmetry) become a formal
    quantity in ACT?** H_b = strategic legibility — how predictable your
    actions are from outcomes. Low H_b = transparent to adversaries.
-   High H_b = strategically opaque. This has no current TFT/ACT analog
+   High H_b = strategically opaque. This has no current ACT analog
    and could be load-bearing for adversarial multi-agent dynamics.
+
+9. **Cognitive cost of maintaining Σ_t.** TF-03 has β (compression cost
+   for M_t). The intent DAG has no analog. A commander with a 500-node
+   strategy DAG faces a qualitatively different cognitive load than one
+   with 12 nodes, even at identical path confidences. For AI agents with
+   finite context windows, this is not abstract — the DAG must fit in
+   working memory or be compressed. This connects to IB-compressed shared
+   intent, but for the self: how much of your own strategy can you hold?
+
+10. **DAG acyclicity scope.** The formalism assumes acyclicity (motivated
+    by Pearl), but real control loops are cyclic. Acyclicity holds after
+    time-unrolling or option-level abstraction. State the assumption and
+    its scope explicitly. Does the formalism break if we allow cycles
+    (e.g., monitor → adjust → monitor)?
+
+11. **δ_feasibility formalization.** Of the three proposed mismatch
+    signals (epistemic, goal, feasibility), feasibility mismatch is the
+    least crisp — it's a second-order inference ("trying hard with good
+    model, gap not closing, therefore goal may be infeasible"). Possible
+    formalization: likelihood ratio test on Σ_t's critical-path
+    confidence vs. observed progress rate.
