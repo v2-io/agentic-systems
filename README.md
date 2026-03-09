@@ -52,27 +52,53 @@ should emerge from the dependency structure of its claims.
 
 ## Key Results So Far
 
-### From TFT (Part I — solid)
-- Uncertainty ratio principle: eta* = U_M / (U_M + U_o)
-- Persistence condition: T > rho / ||delta_critical||
-- Adversarial tempo advantage (qualitatively superlinear; see caveat below)
-- Structural adaptation necessity (Prop 10.1)
+### From TFT (Part I)
+
+The formal backbone is Appendix A's Lyapunov/sector-condition analysis —
+general, nonlinear, robust. The linear ODE (TF-11) is a useful worked example,
+correct in its regime, not the general case.
+
+- Uncertainty ratio principle: eta* = U_M / (U_M + U_o) — validated
+  empirically (52% mismatch reduction with Riccati-optimal gain)
+- Persistence condition: T > rho / ||delta_critical|| — robust across all
+  correction functions tested
+- Adversarial tempo advantage: **superlinear in all regimes**, with the
+  specific exponent depending on the disturbance mechanism:
+  - Deterministic drift, coupling-dominant: exponent = 2 (confirmed at 1.999)
+  - Stochastic disturbances, coupling-dominant: exponent = 3/2
+  - Non-coupling-dominant: exponent ~ 1
+- **Observation quality gates tempo advantage** ("fog of war"): U_o collapses
+  adversarial exponent from ~1.0 to ~0.2 — formally grounding Boyd's emphasis
+  on Orient quality over raw OODA speed
+- Structural adaptation necessity (Prop 10.1) — catastrophic breakdown observed
+  at predicted threshold
 
 ### From ACT Part II (exploratory)
-- Intent DAG with AND/OR combination rules and single-parameter edges (p)
-- Orient cascade: observation -> M_t update -> G_t edge revision -> feasibility
-  check -> goal revision
+
+Objectives (O_t) and strategy (Σ_t) are distinct formal objects. O_t is the
+target state (simple). Σ_t is the probabilistic causal DAG from actions to
+objectives (complex, the novel contribution).
+
+- Intent DAG with AND/OR combination rules and single-parameter edges (p) —
+  converged across three independent formalism attempts
+- Orient cascade: observation -> M_t update -> Σ_t edge revision -> feasibility
+  check -> possible O_t revision
 - Compound probability decay: deep strategies are exponentially fragile (p^n)
 - Observability as strategy enablement (not just verification)
-- Directed separation: M_t dynamics independent; G_t depends on M_t
+- Directed separation: M_t dynamics independent; Σ_t depends on M_t
 
-### From Simulations (empirical)
-- **Corollary 11.2's squared tempo advantage (exponent = 2) does not hold at
-  realistic discrete-time parameters.** Actual exponent is ~1.0-1.3. The
-  squared law is a coupling-dominant, continuous-time limit. Qualitative
-  superlinearity is robust; the specific exponent requires regime specification.
-- Saturating nonlinearity slightly *increases* the effective exponent
-  (counterintuitive).
+### From the Hafez Bridge (empirical)
+
+Hafez's bi-predictability P and TFT's mismatch answer different questions:
+- **P measures coupling architecture** (how tightly agent and environment are
+  informationally coupled)
+- **Mismatch measures coupling performance** (how well the agent is actually
+  tracking reality)
+- Agency costs coherence: P drops from 0.44 (passive) to 0.27 (active)
+- P cannot detect adversarial dynamics (scale-invariant)
+- **ΔH (forward/backward predictive asymmetry) is genuinely novel**: H_b =
+  strategic legibility — how predictable your actions are from outcomes.
+  No current TFT analog. Potentially important for adversarial multi-agent.
 
 ## Status
 
@@ -107,7 +133,9 @@ act/
   has no dynamics. ACT provides the physiology.
 - **Active Inference** (Friston): Unifies perception and action under free
   energy. ACT uses causal feedback dynamics — more transparent and measurable.
-- **Hafez et al. 2026**: Bi-predictability metric. Complementary diagnostic,
-  not competing. Shares the goal/intent gap.
+- **Hafez et al. 2026**: Bi-predictability metric. Empirically confirmed as
+  complementary (P = architecture, mismatch = performance). The ΔH
+  decomposition (strategic legibility) is novel and potentially useful for
+  ACT's adversarial multi-agent work.
 - **IBM "Agentic AI Needs a Systems Theory" 2025**: Articulates the void ACT
   fills. Not a theory itself.

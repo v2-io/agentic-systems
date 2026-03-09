@@ -3,16 +3,46 @@
 ## Current State (March 2026)
 
 **Part I (Adaptive Systems / TFT)**: Well-developed. TF-00 through TF-11 plus
-appendices A-G. The foundation is solid, with one important empirical caveat
-from simulations (Cor. 11.2 regime validity).
+appendices A-G. Simulation battery (6 variants + Hafez bridge) has
+characterized the empirical landscape:
+
+- *Appendix A (Lyapunov/sector conditions)* is the strongest foundation —
+  general, nonlinear, robust. Should be the formal backbone going forward.
+- *The linear ODE* (TF-11) is a useful first approximation, correct for
+  deterministic drift in the continuous-time limit, but NOT a general-case
+  formulation. Under stochastic disturbances, E[|δ|] scales as ρ/√T (not
+  ρ/T), giving adversarial exponent 3/2 (not 2).
+- *Observation quality gates tempo advantage* — U_o collapses adversarial
+  exponent from ~1.0 to ~0.2. TF-11 doesn't model this; it treats T as
+  externally given rather than as a function of U_o via η*.
+- *Scalar tempo is a poor summary* for anisotropic systems (72% overestimate).
+  Per-dimension persistence condition is exact.
+- *TF-06's gain principle* validated empirically (52% mismatch reduction
+  with Riccati-optimal gain).
+
+The implication for ACT: lean on Appendix A's sector-condition framework as
+the general theory. The linear ODE is a worked example (correct in its
+regime, valuable for intuition, not the general case). The stochastic
+treatment (AR(1) steady-state, 3/2 exponent) should be developed as the
+more physically realistic companion.
+
+**Hafez Bridge**: Bi-predictability P is complementary to TFT, not
+redundant. P measures coupling *architecture*; mismatch measures coupling
+*performance*. Key findings: agency costs coherence (P drops from 0.44
+to 0.27 with action), observation noise degrades P via H_f, P cannot
+detect adversarial dynamics (scale-invariant). The ΔH decomposition
+(forward/backward predictive uncertainty) is genuinely novel for TFT —
+H_b = strategic legibility/opacity to adversaries, no current analog.
+Potentially important for multi-agent adversarial work.
 
 **Part II (Purposeful Agency)**: Exploratory sketch phase. Three convergence-
 tested intent DAG formalism variants. Core structure identified (AND/OR nodes,
-single-parameter edges, Orient cascade). Not yet consolidated into formal
-documents.
+single-parameter edges, Orient cascade). The O_t (objective) / Σ_t (strategy)
+distinction clarifies what was previously conflated under G_t. Not yet
+consolidated into formal documents.
 
 **Domain Instantiations**: TST-via-TFT mapping exists (priors/tst/via-tft/).
-Needs updating once ACT Part II is consolidated.
+Needs updating once ACT's formalism stabilizes.
 
 ---
 
@@ -29,14 +59,16 @@ Merge the three variants (00-intent-dag-formalism, 02-alt-clean-slate,
 - Strategic tempo T_G from the clean-slate variant
 - Health metrics (keep the principled ones, flag scaffold ones)
 
-### 1.2 Feed Simulation Results Back to TFT
-The squared tempo advantage (Cor. 11.2) needs a regime-validity caveat.
-Options:
-- Add a note to TF-11 specifying the coupling-dominant, continuous-time regime
-- Add a note to Appendix A referencing the simulation findings
-- Consider whether the discrete-time AR(1) formula should be the primary
-  result, with the continuous ODE as the approximation (inverting the current
-  presentation)
+### 1.2 TFT Formal Rebalancing
+Simulation findings (now added to TF-06, TF-11) revealed that Appendix A
+is the correct general foundation, not the linear ODE. Remaining work:
+- Consider developing a stochastic companion to TF-11: AR(1) steady-state
+  as the primary discrete-time result, with continuous ODE as an
+  approximation valid when η << 1
+- Model observation quality as a factor in adversarial dynamics (T depends
+  on η* depends on U_o — propagate this through the mismatch dynamics)
+- Promote per-dimension persistence condition from "open question" to
+  "known correct formulation" for anisotropic systems
 
 ### 1.3 Clarify the Objective / Strategy Distinction
 The current documents conflate two things:
@@ -111,15 +143,13 @@ theory actually claims:
 
 ## Issues to Resolve (from Codex review, March 2026)
 
-### Simulation model mismatch (high priority)
-TF-11's ODE uses deterministic disturbance ρ. The simulations use stochastic
-zero-mean Gaussian increments (AR(1)/OU process). These are related but not
-identical models, and the narrative incorrectly frames the sims as directly
-testing TF-11's ODE. Options:
-- Rewrite sims with a deterministic drift term to match TF-11's ρ
-- OR be explicit that the sims test the stochastic analog, with formal
-  justification of the ρ ↔ q mapping
-- Either way, the exponent finding (~1.05) may change and needs retesting
+### Simulation model mismatch — RESOLVED
+Both deterministic and stochastic models now tested (Variants A-D):
+- Deterministic drift: exponent = 2.0 confirmed (Cor 11.2 correct)
+- Stochastic: exponent = 1.5 (E[|δ|] ∝ 1/√T, not 1/T)
+- Original sim2's ~1.05 was non-coupling-dominant + stochastic
+TF-11 updated with regime-dependence note. The question is now: which
+physical domains correspond to which disturbance model?
 
 ### Central object model (high priority, in progress)
 The G_t symbol has been used for three different things: desired end-state,
@@ -136,11 +166,12 @@ multi-agent settings (shared desire vs shared commitment; what you tell
 allies you want vs what you're actually doing). Two paths to explore;
 defer pruning until multi-agent work reveals which bears more weight.
 
-### Credibility leaks (medium, fixable)
-- sim2 prints "R -> infinity: exponent -> 2.0" but data shows ~1.06
+### Credibility leaks (medium, partially fixed)
+- ~~Founding notes reference ~/src/ paths~~ — FIXED
+- sim2 prints "R -> infinity: exponent -> 2.0" but stochastic asymptote
+  is 1.5 — needs code fix
 - Simulation spec claims |δ| distribution is "approximately exponential"
-  but stationary law is half-normal
-- Founding notes reference ~/src/ paths instead of priors/ submodules
+  but stationary law is half-normal — needs spec fix
 
 ### TST epistemic downgrade (medium, for when TST-via-ACT is written)
 TST claims "mathematical necessity" for things depending on undefined
@@ -156,24 +187,40 @@ clearly demoted to reference material.
 
 ---
 
-## Open Questions (not yet assigned to phases)
+## Open Questions
 
 1. Does the information bottleneck principle for shared intent produce
    non-obvious predictions about organizational communication structure?
 
-2. Can the intent DAG formalism be extended to handle temporal dependencies
-   (action ordering) as well as causal dependencies?
+2. Can the intent DAG formalism handle temporal dependencies (action
+   ordering) as well as causal dependencies?
 
-3. How does the 100% context turnover problem interact with the intent DAG?
-   G_t may survive context death (via CLAUDE.md) even when M_t doesn't.
-   What does this mean for the cold-start protocol?
+3. How does 100% context turnover interact with the intent DAG? O_t and
+   Σ_t may survive context death (via CLAUDE.md) even when M_t doesn't.
 
-4. Is there a "goal-reality-model triangle" analog of the bias-variance
-   tradeoff? Too much focus on M_t accuracy delays goal-pursuit; too much
-   focus on goal-pursuit with a bad M_t wastes action on wrong paths.
+4. Is there a "comprehension vs action" optimal allocation derivable from
+   the dual-mismatch framework? Too much M_t focus delays goal-pursuit;
+   too much goal-pursuit with bad M_t wastes action on wrong paths.
 
-5. Can Hafez's bi-predictability P be derived from or mapped to ACT
-   quantities? If P = f(T, eta*, ...), that would be a strong connection.
+5. **Hafez bridge — PARTIALLY ANSWERED.** P correlates with T (monotonic,
+   modest in 1D). P cannot detect adversarial dynamics (scale-invariant).
+   The clean delineation: P = coupling architecture, mismatch = coupling
+   performance. Remaining: can P be *derived from* ACT quantities formally
+   (not just correlated)? Can ΔH (strategic legibility) be incorporated
+   into multi-agent adversarial dynamics?
 
 6. What is the relationship between ACT and active inference's prior
-   preferences? Is there a formal equivalence or are they genuinely different?
+   preferences? Is there a formal equivalence or are they genuinely
+   different?
+
+7. **Which physical domains have deterministic vs stochastic ρ?** This
+   determines whether the adversarial exponent is 2 or 3/2. Military
+   (persistent adversary action) may be closer to deterministic.
+   Software (sporadic requirement changes) may be closer to stochastic.
+   Biological (environmental fluctuations) likely stochastic.
+
+8. **Should ΔH (Hafez's forward/backward asymmetry) become a formal
+   quantity in ACT?** H_b = strategic legibility — how predictable your
+   actions are from outcomes. Low H_b = transparent to adversaries.
+   High H_b = strategically opaque. This has no current TFT/ACT analog
+   and could be load-bearing for adversarial multi-agent dynamics.
