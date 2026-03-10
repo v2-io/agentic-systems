@@ -91,7 +91,10 @@ with forward references explicitly marked.
 - TST cadence + TFT epistemic system as the combined standard
 - AND/OR + single-p edges (drop WEIGHTED)
 - Sector-condition framework primary (linear ODE pedagogical)
-- O_t / Σ_t split (not G_t); point-valued G_t superseded
+- O_t / Σ_t split (not G_t); point-valued G_t superseded — **under
+  reconsideration**: theoretical spike (March 2026) explores whether G_t
+  as a singular abstract purposeful state can be derived from first
+  principles, with O_t/Σ_t emerging when goal-model complexity demands it
 - Multi-agent is main content, not appendix
 - Correlated observations as default
 - TST gets full treatment in Section IV (not just domain table rows)
@@ -101,24 +104,73 @@ with forward references explicitly marked.
 
 ---
 
+## Governing Objectives (March 2026)
+
+The overarching goal is a unified theory — ACT — that:
+
+1. **Subsumes TFT as the adaptive-systems foundation.** TFT's formal
+   machinery (mismatch, gain, tempo, persistence, Lyapunov stability) is
+   the engine. The sector-condition/Lyapunov framework (current Appendix A)
+   becomes the *primary* formal path; the linear ODE becomes a pedagogical
+   appendix. TFT is not extended — it is *absorbed*.
+
+2. **Derives purposeful agency from first principles.** Start with the
+   simplest possible abstract purposeful object (like M_t for reality
+   models) and derive the need for richer structure (subgoals, DAGs,
+   strategy representation) from mathematical necessity — specifically,
+   from the causal hierarchy theorem's proof that interventional reasoning
+   requires causal structure beyond predictive models. The O_t/Σ_t split,
+   the AND/OR DAG, the three mismatch types should *emerge* from this
+   derivation, not be assumed.
+
+3. **Makes TST a rigorous software-domain instantiation of ACT.** TST's
+   practical insights are preserved but regrounded: every claim gets TFT's
+   epistemic tagging, every ungrounded assertion is either derived from ACT
+   primitives, retagged as hypothesis/empirical, or removed. Causal
+   modeling (Pearl's hierarchy, do-calculus, identifiability) is introduced
+   where software's unique epistemic properties permit.
+
+4. **Develops multi-agent dynamics to the degree needed for TST grounding.**
+   Cooperative, adversarial, and mixed coupling. Shared intent. Team
+   persistence. Not a complete multi-agent theory, but enough to ground
+   software teams, adversarial dynamics, and the trust meta-model.
+
+5. **Maintains the claim-segment structure throughout.** TST's cadence
+   (one claim per section, strictly incremental) combined with TFT's
+   epistemic conventions. Claims fill from both directions: general theory
+   pushing toward domain, and domain results pushing requirements back up.
+
 ## What's Next (Priority Order)
 
-1. **Write more Section I segments** — these map closely from TFT and
-   establish the foundation. Low risk, high leverage. Start with definitions
-   (020–050) and the mismatch/gain claims (140–160).
+1. **Derive purposeful agency from first principles (Section II)** —
+   this is the hardest, most novel, and most important work. Start with
+   an abstract purposeful state G_t, show where simple forms break, derive
+   the need for causal/DAG structure from the causal hierarchy theorem.
+   The three-mismatch-types, directed separation, and orient cascade
+   should follow from this derivation. Current theoretical spike in
+   `scratch/spike-purposeful-agent-derivation.md`.
 
-2. **Write Section IV segments** — TST content maps almost 1:1 but needs
-   regrounding. This surfaces which ACT claims the software domain depends
-   on, pushing requirements back up into Sections I–III.
+2. **Review and refine Gemini drafts (src/160, 170, 190)** — these are
+   uncommitted first drafts establishing three Section I claims. Need
+   review for: consistency with cadence, appropriate scope (190 may bundle
+   too much Section III material), and cross-reference accuracy. Break up
+   and update `src/000-contents.md` as needed.
 
-3. **Fill Section II gaps** — the purposeful agency layer. This is the
-   hardest and most novel work. The three-mismatch-types definition,
-   strategy tempo, action-deliberation-exploration tradeoff.
+3. **Write remaining Section I segments** — definitions (020–050) and
+   remaining mismatch/gain claims. These map closely from TFT. Low risk,
+   high leverage for establishing the foundation.
 
-4. **Consolidate simulation results into Appendix B** — the evidence base
-   supporting specific claims.
+4. **Write Section IV segments** — TST content regrounded in ACT. This
+   surfaces which ACT claims the software domain depends on, pushing
+   requirements back up into Sections I–III.
 
-5. **Section V** — agentic systems. Draw from agentic-tft corpus.
+5. **Develop Section III to the degree needed** — multi-agent dynamics
+   sufficient for TST grounding (team persistence, adversarial coupling,
+   shared intent basics).
+
+6. **Consolidate simulation results into Appendix B** — evidence base.
+
+7. **Section V** — agentic systems. Draw from agentic-tft corpus.
 
 ---
 
