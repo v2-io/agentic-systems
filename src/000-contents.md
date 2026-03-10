@@ -139,7 +139,8 @@ events, the model evolves autonomously: dM/dτ = g_M(M_τ). The agent cannot
 re-derive M_t from scratch at each event — this is computational necessity for
 finite agents, and architectural choice for others. *(From TF-04.)*
 
-**140 · mismatch-signal** — Definitionδ_t = o_t − ô_t: the discrepancy between observation and prediction. This is
+**140 · mismatch-signal** — Definition
+δ_t = o_t − ô_t: the discrepancy between observation and prediction. This is
 the fundamental error signal that drives all adaptation. Zero mismatch can mean
 accurate model, confirmation bias, or high observation noise masking
 miscomprehension. *(From TF-05.)*
@@ -201,7 +202,8 @@ O_t ∈ S or O_t ⊆ S: what the agent wants — a target state, region, or cond
 in environment state space. The port, the destination, the desired end-state.
 O_t specifies *what*, not *how*. *(From ACT-03.)*
 
-**230 · strategy-dag** — DefinitionΣ_t = (V, E, p, γ): a probabilistic causal DAG encoding the agent's theory of
+**230 · strategy-dag** — Definition
+Σ_t = (V, E, p, γ): a probabilistic causal DAG encoding the agent's theory of
 how its actions produce goal-achievement. Nodes are propositions; edges carry
 causal confidence weights p ∈ [0,1]; combination rules γ(v) ∈ {AND, OR}
 determine how parent evidence combines. *(From intent-dag-consolidated.
@@ -410,7 +412,8 @@ system, as perceived by those who requested, implement, or use it. Includes
 refactoring (alters future implementation time), excludes true no-ops. *(TST
 D-01.)*
 
-**530 · specification-bound** — Theoremtime_min(F) ≥ time_specify(F, context). You cannot implement what you cannot
+**530 · specification-bound** — Theorem
+time_min(F) ≥ time_specify(F, context). You cannot implement what you cannot
 specify. Information-theoretic necessity: Shannon entropy of the feature
 specification bounds implementation time below, modulated by shared context
 between specifier and implementer. As AI approaches instant implementation,
@@ -519,12 +522,15 @@ substantial differences across many discontinuities. Requires empirical
 validation — the actual relationship may be linear or sub-exponential.
 *(TST H-09.1.)*
 
-**650 · system-coupling** — Definitioncoupling(module_i, module_j) = P(change(module_j) | change(module_i)).
+**650 · system-coupling** — Definition
+coupling(module_i, module_j) = P(change(module_j) | change(module_i)).
 *(TST D-06.)*
 
-**655 · system-coherence** — Definitioncoherence(module) = E[proximity(changes within module)]. *(TST D-07.)*
+**655 · system-coherence** — Definition
+coherence(module) = E[proximity(changes within module)]. *(TST D-07.)*
 
-**660 · coherence-coupling-measurement** — Measurementquality = Σ coherence / Σ coupling. Computable from git history. Transforms
+**660 · coherence-coupling-measurement** — Measurement
+quality = Σ coherence / Σ coupling. Computable from git history. Transforms
 architectural discussions from opinion to empirical observation. Requires
 sufficient history, stable boundaries, representative feature distribution.
 *(TST T-10.)*
@@ -537,7 +543,8 @@ optimization is impossible (requires knowing all future features), but the
 framework structures the decision space and makes tradeoffs explicit. *(TST
 T-11.)*
 
-**680 · system-availability** — Definitionavailability = MTTF / (MTTF + MTTR). *(TST D-08.)*
+**680 · system-availability** — Definition
+availability = MTTF / (MTTF + MTTR). *(TST D-08.)*
 
 **685 · continuous-operation** — Scope Extension
 For operational systems: T_effective = T_implementation + P(failure) ×

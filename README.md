@@ -23,38 +23,30 @@ ACT unifies three aspects of agency that existing theories treat separately:
    action under uncertainty. Intent compression via the information bottleneck
    principle (the Auftragstaktik / directed opportunism insight).
 
-## Why ACT Exists
+The theory progresses from general adaptive systems through purposeful agency
+and multi-agent dynamics to domain instantiations — particularly software
+development and AI agents operating on code.
 
-TFT provides a rigorous theory of adaptive systems — how agents learn about
-and track reality. Its sole implicit goal is survival (the persistence
-condition T > rho). This is complete for systems where survival requires
-only reactive tracking, but once survival itself demands multi-step strategy
-(evade, navigate, acquire resources), even the persistence condition
-implicitly requires something like Σ_t. TFT is a necessary foundation, not
-a self-sufficient theory of agency. ACT adds the compass: goals as
-first-class objects with their own representation, update dynamics, and
-revision mechanisms.
+## Structure
 
-> *"Ignoranti quem portum petat nullus suus ventus est."*
-> ("If a man knows not to which port he sails, no wind is favorable.")
-> — Seneca, *Epistulae Morales*, LXXI
+**The theory lives in [`src/`](src/).** Each numbered file is one claim —
+an axiom, definition, theorem, or hypothesis — with a sentence summary, formal
+expression, and discussion. The claims build incrementally, like a proof.
 
-## Theoretical Landscape
+**[`src/000-contents.md`](src/000-contents.md)** is the master outline: the
+full argument in plain English with claim types and dependencies. Start there.
 
-ACT covers a continuum from pure survival to deliberate purposeful agency:
+The structure follows **TST's cadence** (one claim per section, strictly
+incremental) with **TFT's epistemic system** (equation-level tags, document-
+level epistemic status paragraphs, explicit claim tiers). See TF-00 for the
+full conventions.
 
-- **Adaptive systems**: Agents that track reality. Mismatch, gain, tempo,
-  persistence. The survival space. (Originally developed as TFT; now the
-  adaptive-systems layer of ACT.)
-- **Purposeful agents**: Adaptive systems that also aim. Objectives (O_t),
-  strategy (Σ_t as probabilistic causal DAG), the Orient cascade where
-  reality-understanding and intent interact.
-- **Multi-agent dynamics**: Shared intent, intent decomposition across
-  agents, adversarial targeting of strategy structure.
-
-Domain instantiations (software, military, organizational, AI agents) apply
-this machinery to specific settings. How the theory is ultimately organized
-should emerge from the dependency structure of its claims.
+Five sections scope progressively:
+1. **Adaptive Systems Under Uncertainty** — the general case (from TFT)
+2. **Purposeful Adaptive Systems** — adding objectives and strategy
+3. **Coordinated and Adversarial Systems** — multiple agents
+4. **Evolving Software Systems** — full TST arc regrounded in ACT
+5. **Software-Grounded Agentic Systems** — AI agents, the recursive completion
 
 ## Key Results So Far
 
@@ -64,18 +56,18 @@ The formal backbone is Appendix A's Lyapunov/sector-condition analysis —
 general, nonlinear, robust. The linear ODE (TF-11) is a useful worked example,
 correct in its regime, not the general case.
 
-- Uncertainty ratio principle: eta* = U_M / (U_M + U_o) — validated
+- Uncertainty ratio principle: η* = U_M / (U_M + U_o) — validated
   empirically (52% mismatch reduction with Riccati-optimal gain)
-- Persistence condition: T > rho / ||delta_critical|| — robust across all
+- Persistence condition: T > ρ / ||δ_critical|| — robust across all
   correction functions tested
-- Adversarial tempo advantage: **superlinear in all regimes**, with the
-  specific exponent depending on the disturbance mechanism:
-  - Deterministic drift, coupling-dominant: exponent = 2 (confirmed at 1.999)
-  - Stochastic disturbances, coupling-dominant: exponent = 3/2
-  - Non-coupling-dominant: exponent ~ 1
-- **Observation quality gates tempo advantage** ("fog of war"): U_o collapses
-  adversarial exponent from ~1.0 to ~0.2 — formally grounding Boyd's emphasis
-  on Orient quality over raw OODA speed
+- Adversarial tempo advantage: **superlinear in all coupling-dominant
+  regimes**, with the specific exponent depending on disturbance mechanism:
+  - Deterministic drift: exponent = 2 (confirmed at 1.999)
+  - Stochastic disturbances: exponent = 3/2
+  - Non-coupling-dominant: exponent ≈ 1
+- **Observation quality gates tempo advantage**: U_o collapses adversarial
+  exponent from ~1.0 to ~0.2 — formally grounding Boyd's emphasis on Orient
+  quality over raw OODA speed
 - Structural adaptation necessity (Prop 10.1) — catastrophic breakdown observed
   at predicted threshold
 
@@ -87,102 +79,72 @@ objectives (complex, the novel contribution).
 
 - Intent DAG with AND/OR combination rules and single-parameter edges (p) —
   converged across three independent formalism attempts
-- Orient cascade: observation -> M_t update -> Σ_t edge revision -> feasibility
-  check -> possible O_t revision
+- Orient cascade: observation → M_t update → Σ_t edge revision → feasibility
+  check → possible O_t revision
 - Compound probability decay: deep strategies are exponentially fragile (p^n)
 - Observability as strategy enablement (not just verification)
 - Directed separation: M_t dynamics independent; Σ_t depends on M_t
 
-### From the Hafez Bridge (empirical)
+### Known Fragilities in Purposeful Agency Layer
 
-Hafez's bi-predictability P and TFT's mismatch answer different questions:
-- **P measures coupling architecture** (how tightly agent and environment are
-  informationally coupled)
-- **Mismatch measures coupling performance** (how well the agent is actually
-  tracking reality)
-- Agency costs coherence: P drops from 0.44 (passive) to 0.27 (active).
-  Caveat: the passive baseline uses different state semantics (x_t vs x̂_t)
-  and no action channel, so the P drop is suggestive but doesn't cleanly
-  isolate agency from representation choice. The architecture/performance
-  split is the stronger result.
-- P cannot detect adversarial dynamics (scale-invariant)
-- **ΔH (forward/backward predictive asymmetry) is genuinely novel**: H_b =
-  strategic legibility — how predictable your actions are from outcomes.
-  No current TFT analog. Potentially important for adversarial multi-agent.
-
-## Known Fragilities in Purposeful Agency Layer
-
-The intent DAG formalism has structural issues that need resolution:
-
-- **Object model inconsistency.** Earlier scratch docs define δ_goal = G_t −
-  M_t (point subtraction), but the converged formalism makes Σ_t a DAG.
-  These are type-incompatible. Documents using point-valued G_t are
-  superseded by the O_t / Σ_t framework; some haven't been updated.
+- **Object model inconsistency.** Earlier docs use δ_goal = G_t − M_t (point
+  subtraction) but Σ_t is a DAG. These are type-incompatible. Documents using
+  point-valued G_t are superseded by the O_t / Σ_t framework.
 - **Edge semantics exceed the update rule.** Edges claim interventional
-  semantics (p_ij = P(j | do(i), M_t)), but update from observational
-  signals without identifiability assumptions. In confounded domains this
-  is a causal-identification problem, not just noise. Exception: software,
-  where genuine interventions (tests, deploys, git bisect) are available.
-- **Strategy ≠ intention.** The formalism lacks commitment state (which OR
-  branches are options vs. being executed), resource budget (costs invoked
-  but unmodeled), and temporal ordering (action sequencing beyond causal
-  dependency). This is the gap between "strategy representation" and
-  "intention theory."
-- **DAG acyclicity is an assumption, not forced by Pearl.** Real control
-  loops are cyclic; acyclicity holds only after time-unrolling or
-  option-level abstraction. Should be stated as a modeling assumption
-  with its scope.
+  semantics but update from observational signals without identifiability.
+  Exception: software, where genuine interventions are available.
+- **Strategy ≠ intention.** Lacks commitment state, resource budget, temporal
+  ordering. Gap between "strategy representation" and "intention theory."
+- **DAG acyclicity.** An assumption, not forced by Pearl. Real control loops
+  are cyclic; acyclicity holds only after time-unrolling.
 
 ## Status
 
-This is a theory under active development. The adaptive systems foundation
-(originally TFT) is well-structured and internally consistent. The
-purposeful agency layer is in exploratory sketch phase — the intent DAG formalism has been
-developed through three independent convergence-tested approaches, but has
-not been consolidated into a formal document sequence. See fragilities
-above for the known gaps.
+This is a theory under active development. The `src/` directory contains the
+current proof outline (~75 claims mapped, ~4 segment files written as examples
+establishing the cadence). The adaptive systems foundation is well-grounded.
+The purposeful agency layer has the most gaps. The software domain maps closely
+from TST but needs regrounding with proper epistemic tags.
 
-See [PLANS.md](PLANS.md) for the development roadmap.
+See [`src/000-contents.md`](src/000-contents.md) for the full outline.
+See [PLANS.md](PLANS.md) for development roadmap.
 
 ## Repository Structure
 
 ```
 act/
+├── src/           The theory — numbered claim segments
+│   ├── 000-contents.md   Master outline (start here)
+│   ├── 010-*.md           Individual claims (axiom, definition, theorem, ...)
+│   └── ...
+├── ACT-01.md      Working docs from earlier chapter-style approach
+├── ACT-03.md      (content being decomposed into src/ segments)
 ├── priors/
-│   ├── tft/    TFT as git submodule (adaptive systems foundation, subsumed by ACT)
-│   └── tst/    TST as git submodule (software domain instantiation)
-├── refs/       Reference papers (Hafez 2026, IBM 2025)
-└── scratch/    Working documents
+│   ├── tft/       TFT as git submodule (adaptive systems foundation)
+│   └── tst/       TST as git submodule (software domain, needs regrading)
+├── refs/          Reference papers (Hafez 2026, IBM 2025)
+└── scratch/       Working documents
     ├── 00-founding-notes.md           Origin, architecture, positioning
     ├── 01-reference-catalog.md        Prior art catalog
-    ├── 02-prior-art-assessment.md     Assessment of Hafez, IBM, FAST workshop
-    ├── 03-goal-formalism-sketch.md    Early goal formalism (superseded by O_t/Σ_t)
+    ├── 02-prior-art-assessment.md     Positioning vs Hafez, IBM, BDI, FEP
+    ├── 03-goal-formalism-sketch.md    Early goal formalism (superseded)
     ├── 04-intent-dag-consolidated.md  Canonical intent DAG reference
-    ├── track-a-intent-dag/            Intent DAG development history (3 variants)
-    └── track-b-nonlinear-sims/        Nonlinear dynamics simulations + results
+    ├── track-a-intent-dag/            Intent DAG development (3 variants)
+    └── track-b-nonlinear-sims/        Simulations + results (6 variants)
 ```
 
 ## Prior Art and Positioning
 
-- **BDI** (Rao & Georgeff): Named the parts (Belief, Desire, Intention) but
-  has no dynamics. ACT provides the physiology.
+- **BDI** (Rao & Georgeff): Named the parts but has no dynamics. ACT provides
+  the physiology.
 - **Active Inference** (Friston): Unifies perception and action under free
   energy. ACT uses causal feedback dynamics — more transparent and measurable.
-- **Hafez et al. 2026**: Bi-predictability metric. Empirically confirmed as
-  complementary (P = architecture, mismatch = performance). The ΔH
-  decomposition (strategic legibility) is novel and potentially useful for
-  ACT's adversarial multi-agent work.
+- **Hafez et al. 2026**: Bi-predictability metric. Complementary (P =
+  architecture, mismatch = performance). The ΔH decomposition is novel.
 - **IBM "Agentic AI Needs a Systems Theory" 2025**: Articulates the void ACT
   fills. Not a theory itself.
-- **TST** (priors/tst/): Software domain instantiation. Its real content is
-  a temporal optimization target (minimize expected comprehension +
-  implementation time under repeated handoff), not a theorem of software
-  engineering. Strong on the optimization objective; claims of "mathematical
-  necessity" for proportionalities (T-08, T-09) need regrading.
-- **agentic-tft** (../agentic-tft/): Prior architectural bridge from TFT to
-  logozoetic (language-based) AI agents. Contains substantial thinking on
-  the cognitive loop spec, evaluation framework, crèche (experiential
-  training), and the narrative circle principle (TFT provides architecture,
-  implementation operates in language). Not yet referenced from ACT's
-  formal documents but directly relevant to the AI agent domain
-  instantiation.
+- **TST** (priors/tst/): Software domain. Gets full treatment in Section IV
+  of the theory, regrounded in ACT's formal machinery.
+- **agentic-tft** (../agentic-tft/): Bridge from TFT to AI agents. Contains
+  cognitive loop spec, evaluation framework, crèche concept. Relevant to
+  Section V.

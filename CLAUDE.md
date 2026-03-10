@@ -9,135 +9,137 @@ foundation. TFT is prior work now absorbed into ACT, not a separate
 co-existing theory.
 
 This is theoretical research, not software engineering. The primary artifacts
-are mathematical formalisms, scratch documents developing ideas, and
-simulations testing theoretical claims. Quality means rigor, honesty about
-epistemic status, and clarity for future readers — not code coverage.
+are mathematical formalisms and claim segments. Quality means rigor, honesty
+about epistemic status, and clarity for future readers — not code coverage.
+
+## Where to Start
+
+**Read `src/000-contents.md` first.** This is the master outline — the whole
+argument in plain English. It maps ~75 claims across five sections, shows
+what's written, and marks gaps honestly.
+
+**Read `priors/tft/TF-00.md`** for the notation conventions and epistemic
+system that ACT adopts.
+
+## Theory Structure
+
+The theory lives in `src/` as numbered claim segments. Each file is one
+claim following **TST's cadence** (one claim per section, sentence summary,
+formal expression, discussion) with **TFT's epistemic system** (equation-
+level tags, document-level epistemic status paragraphs, claim tiers).
+
+- Numbered by 10s to allow insertion (010, 020, ..., 530, ...)
+- YAML frontmatter with `slug` field for stable cross-referencing
+- References use `#slug-name` tags, NOT file numbers
+- Five sections scope progressively: I. Adaptive Systems, II. Purposeful
+  Adaptive Systems, III. Coordinated/Adversarial, IV. Evolving Software,
+  V. Software-Grounded Agentic Systems
 
 ## The Core Insight
 
 The adaptive-systems foundation (from TFT) formalizes how agents adapt to
 reality (mismatch signals, gain, tempo, persistence). But it has no
-treatment of goals — the agent's desired future state. Even survival
-requires multi-step strategy in non-trivial environments, so "TFT is
-complete for survival" holds only for purely reactive tracking. ACT adds:
+treatment of goals. ACT adds:
 
 - **O_t** (objective — what the agent wants) and **Σ_t** (strategy — how
   it plans to get there) alongside **M_t** (reality model)
 - Strategy formalized as a **probabilistic causal DAG** (AND/OR nodes,
-  edges with confidence weights p, Bayesian update via the uncertainty
-  ratio). The objective is simpler — a target state or region in S.
-- The **Orient cascade**: observation -> M_t update -> Σ_t edge revision ->
-  feasibility check -> possible O_t revision
-- **Shared intent** as IB-compressed purpose for multi-agent coordination
-- The O_t / Σ_t distinction is recent (not yet reflected in all scratch
-  docs, which use "G_t" for both — those are superseded)
-
-## Key Architectural Decisions
-
-1. **ACT supersedes TFT.** TFT's adaptive-systems content is absorbed
-   into ACT as the foundation layer. The TFT submodule is prior work /
-   reference material — don't modify those documents, but don't treat
-   "TFT" as a separate co-existing theory either. ACT is the theory.
-
-2. **The directed separation principle.** M_t dynamics can be designed
-   independently of O_t/Σ_t. O_t/Σ_t depend on M_t. Action selection
-   couples them. This means the adaptive-systems layer is valid on its
-   own, but the purposeful-agency layer requires it.
-
-3. **AND/OR DAG with single-parameter edges.** Three independent formalism
-   attempts converged on: AND/OR combination rules at nodes, single
-   confidence weight p per edge (not the earlier two-parameter p,theta).
-   The noisy-OR assumption from the first attempt is systematically
-   over-optimistic for conjunctive structures.
-
-4. **Structural change IS extreme parametric update.** In the probabilistic
-   DAG, pruning (edge -> 0) and grafting (0 -> edge) are continuous
-   operations on edge weights, not discrete structural events. TF-10's
-   destruction-creation cycle is the rare limiting case.
+  edges with confidence weights p, update via the uncertainty ratio)
+- The **Orient cascade**: observation → M_t update → Σ_t edge revision →
+  feasibility check → possible O_t revision
+- **Directed separation**: M_t dynamics independent of O_t/Σ_t; Σ_t
+  depends on M_t; action couples all three
+- The O_t / Σ_t distinction supersedes earlier docs using "G_t" for both
 
 ## Epistemic Conventions
 
-Follow TFT's conventions (see priors/tft/TF-00.md):
-- **[Confident]**: Solid, multiple indicators converge
-- **[Plausible]**: Structurally motivated, needs validation
-- **[Speculative]**: Worth exploring, might not hold
-- Mark what's **first-principled** (derived from foundations) vs
-  **scaffold-engineering** (reasonable modeling choice, could be different)
+Follow TFT's conventions exactly (see priors/tft/TF-00.md):
+
+**Equation-level tags** (inline before equations):
+- `*[Definition]*`, `*[Derived]*`, `*[Derived (Conditional on ...)]*`
+- `*[Hypothesis]*`, `*[Empirical Claim]*`, `*[Formulation]*`
+- `*[Discussion]*`, `*[Assumption]*`
+
+**Document-level Epistemic Status paragraph** at the top of each segment,
+explaining what's derived vs hypothesized vs discussion-grade. Example:
+"The threshold's *existence* is *robust qualitative*. The quantitative form
+is *exact* under assumptions GA-2, GA-3."
+
+**Claim tiers** (from TF-00's Claim Registry):
+- **Exact**: Mathematically validated under stated assumptions
+- **Robust qualitative**: Survives across assumptions; specific form approximate
+- **Heuristic**: Useful approximation; quantitative form may not hold
+- **Conditional**: Depends on explicitly named local assumptions
+
+Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are
+not TFT terms.
+
+**Every claim must be grounded.** If stated as fact, it needs its own
+derivation or is explicitly tagged as hypothesis/empirical/discussion-grade.
+Do not let ungrounded assertions transfer from TST uncritically.
+
+## Key Architectural Decisions
+
+1. **ACT supersedes TFT.** Don't modify priors/tft/ documents. Don't treat
+   TFT as a separate co-existing theory.
+
+2. **Claim segments, not chapters.** New theory content goes in `src/` as
+   individual claim files, not in ACT-01/ACT-03 style chapter documents.
+
+3. **AND/OR DAG with single-parameter edges.** Three independent formalism
+   attempts converged on this. Noisy-OR and WEIGHTED are rejected.
+
+4. **Sector-condition framework primary.** The linear ODE is pedagogical.
+
+5. **TST gets full treatment in Section IV.** Not just domain table rows.
+   T-01 (temporal optimality) is generalized as ACT's first axiom (#010).
 
 ## What's Settled vs. Open
 
 ### Settled (from convergence testing)
-- Single-parameter edges with AND/OR nodes (not noisy-OR with p,theta)
+- Single-parameter edges with AND/OR nodes
 - Orient cascade structure
 - Compound probability decay (depth fragility)
 - Observability as strategy enablement
 - Directed separation
+- O_t / Σ_t split (not G_t)
 
-### Open
-- Node taxonomy: categorical types (O/K/A/X) vs continuous properties —
-  genuine design freedom, both valid
-- Multi-agent intent propagation — the highest-value next work
-- Goal tempo formalization
-- Shared intent compression (IB for Auftragstaktik)
-- How the simulation findings (squared advantage regime caveat) should feed
-  back to the adaptive-systems documents
+### Open (see Section II gaps in contents)
+- Three-mismatch-type interaction ordering
+- Action-deliberation-exploration tradeoff
+- Strategy tempo formalization
+- Cognitive cost of Σ_t (no β analog yet)
+- Edge identifiability conditions
+- Multi-agent intent propagation
 
-### Known Fragilities in Purposeful Agency Layer
-- **Object model type error**: earlier docs define δ_goal = G_t − M_t
-  (point subtraction) but the converged formalism makes Σ_t a DAG. These
-  are type-incompatible. Docs using point-valued G_t are superseded.
-- **Edge semantics gap**: edges claim interventional semantics
-  (p_ij = P(j | do(i), M_t)) but update from observational signals
-  without identifiability assumptions. Real issue in confounded domains;
-  less severe in software (genuine interventions available).
-- **Missing commitment/resource/temporal structure**: the formalism lacks
-  commitment state (options vs. executing), resource budget, and action
-  sequencing. Gap between "strategy representation" and "intention theory."
-- **DAG acyclicity**: an assumption, not forced by Pearl. Real control
-  loops are cyclic; acyclicity holds after time-unrolling.
-- **Cognitive cost of Σ_t**: TF-03 has β for M_t compression cost; the
-  intent DAG has no analog. Matters especially for finite-context agents.
-- **WEIGHTED combination rule**: reintroduces two-parameter estimation
-  problem. Should be dropped; use nested AND/OR for k-of-n semantics.
+### Known Fragilities
+- Object model type error (point δ_goal vs DAG Σ_t — superseded docs exist)
+- Edge semantics claim interventional but update from observational
+- Missing commitment/resource/temporal structure in the DAG
+- DAG acyclicity is an assumption, not forced
 
-## Important Simulation Finding
+## Simulation Findings
 
-The nonlinear dynamics simulations (scratch/track-b-nonlinear-sims/) found:
+The track-b simulations (scratch/track-b-nonlinear-sims/) validated and
+refined specific claims:
 
-- **Cor. 11.2's exponent = 2 IS correct** under deterministic drift when
-  coupling dominates base disturbance (confirmed: exponent = 1.999).
-- **Under stochastic disturbances, the asymptotic exponent is 1.5** (not
-  2.0) because E[|δ|] scales as 1/√T rather than 1/T.
-- **When coupling doesn't dominate base noise, the exponent drops to ~1.0**
-  regardless of disturbance model.
-- The original sim2's ~1.05 was two effects: stochastic model + not
-  coupling-dominant.
-
-The adaptive-systems documents should note which disturbance model yields
-which exponent. Qualitative superlinearity is robust across all regimes.
-This has NOT yet been fed back to the TFT-era documents.
+- Cor. 11.2's exponent = 2 under deterministic drift (confirmed: 1.999)
+- Under stochastic disturbances, exponent = 1.5 (not 2.0)
+- Observation noise collapses adversarial exponent from ~1.0 to ~0.2
+- Per-dimension persistence exact (scalar overestimates by 72%)
+- TF-06's gain principle empirically validated (52% reduction)
 
 ## File Organization
 
-- `priors/` — TFT and TST as git submodules (prior work, read-only)
+- `src/` — **The theory.** Numbered claim segments. Start here.
+- `ACT-01.md`, `ACT-03.md` — Earlier chapter-style working docs (being
+  decomposed into src/ segments; don't extend these)
+- `priors/tft/` — TFT submodule (read-only reference)
+- `priors/tst/` — TST submodule (read-only; content regrounded in src/)
 - `refs/` — Reference papers
-- `scratch/` — Working documents (numbered for chronological order)
-- `scratch/track-a-intent-dag/` — Intent DAG formalism variants
-- `scratch/track-b-nonlinear-sims/` — Simulation code and results
-- `../agentic-tft/` — Prior bridge work: TFT → logozoetic AI agents.
-  Docs 10-14 (cognitive loop, evaluation, crèche, training design) are
-  directly relevant to ACT's AI agent domain instantiation.
-- Formal documents will live at top level once the theory stabilizes;
-  structure should emerge from content, not be prescribed
-
-## How to Contribute
-
-1. Read `scratch/00-founding-notes.md` for origin and motivation
-2. Read `scratch/02-prior-art-assessment.md` for positioning
-3. **For intent DAG work**: read `scratch/04-intent-dag-consolidated.md` —
-   this is the canonical reference. The three variants in `track-a-intent-dag/`
-   are historical development artifacts.
-4. For simulation work: the code runs (`python3 sim1_nonlinear_mismatch.py`,
-   `python3 sim2_adversarial_coupling.py`); extend rather than rewrite
-5. Mark epistemic status on all claims
-6. Be honest about what you're uncertain about
+- `scratch/` — Working documents, historical artifacts
+  - `04-intent-dag-consolidated.md` — Canonical intent DAG reference
+  - `track-a-intent-dag/` — DAG formalism variants (historical)
+  - `track-b-nonlinear-sims/` — Simulation code and results
+- `../agentic-tft/` — Prior bridge work: TFT → AI agents. Docs 10-14
+  relevant to Section V.

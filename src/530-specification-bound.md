@@ -49,7 +49,7 @@ derived within ACT.
 As actual implementation time approaches $\text{time}_{\min}(F)$, communication
 speed and quality become the limiting factor.
 
-*[Confident]* This follows directly: if the bound is specification time, and
+This follows directly: if the bound is specification time, and
 implementation time approaches zero (e.g., via AI), then the remaining time is
 specification time — which is fundamentally a communication problem.
 
