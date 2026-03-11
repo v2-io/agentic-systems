@@ -21,8 +21,8 @@ what's written, and marks gaps honestly.
 **Read `FORMAT.md`** for segment file conventions (frontmatter, document
 cadence, math formatting, cross-references).
 
-**Read `priors/tft/TF-00.md`** for the notation conventions and epistemic
-system that ACT adopts.
+**Read `src/old-tf-00-notation-conventions.md`** for the notation
+conventions and epistemic system that ACT adopts from TFT.
 
 **See `WORKBENCH.md`** for theory development state: what's settled, what's
 open, spike status, and reorganization notes.
@@ -83,7 +83,7 @@ treatment of goals. ACT adds:
 
 ## Epistemic Conventions
 
-Follow TFT's conventions exactly (see priors/tft/TF-00.md):
+Follow TFT's conventions exactly (see src/old-tf-00-notation-conventions.md):
 
 **Equation-level tags** (inline before equations):
 - `*[Definition]*`, `*[Derived]*`, `*[Derived (Conditional on ...)]*`
@@ -110,8 +110,8 @@ Do not let ungrounded assertions transfer from TST uncritically.
 
 ## Key Architectural Decisions
 
-1. **ACT supersedes TFT.** Don't modify priors/tft/ documents. Don't treat
-   TFT as a separate co-existing theory.
+1. **ACT supersedes TFT.** TFT and TST are prior work, fully copied into
+   `src/old-*` files. Don't treat them as separate co-existing theories.
 
 2. **Claim segments, not chapters.** New theory content goes in `src/` as
    individual claim files, not in ACT-01/ACT-03 style chapter documents.
@@ -163,9 +163,10 @@ See `WORKBENCH.md` for the full development state. Summary:
 - `src/` — **The theory.** Claim segment files, named by slug
   (`src/{slug}.md`). No numbering.
 - `_archive/` — Superseded docs. Preserved for archaeology.
-- `priors/tft/` — TFT submodule (read-only reference for epistemic
-  conventions and adaptive-systems foundation)
-- `priors/tst/` — TST submodule (read-only; content regrounded in src/)
+- `priors/tft/` — TFT submodule (**historical only** — all content
+  copied to `src/old-tf-*` files; no need to read these)
+- `priors/tst/` — TST submodule (**historical only** — all content
+  copied to `src/old-tst-*` files; no need to read these)
 - `refs/` — Reference papers
 - `scratch/` — Working documents, spikes, historical artifacts
   - `spike-v3-purposeful-agent.md` — Definitive Section II derivation

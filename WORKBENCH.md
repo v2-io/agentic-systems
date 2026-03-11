@@ -178,6 +178,70 @@ refined specific claims:
 - TF-06's gain principle empirically validated (52% reduction)
 
 
+## Prior Work Migration Map
+
+All TFT and TST content has been copied into `src/old-*` files. The priors/ submodules are now purely historical. The `old-` prefix means the content is prior work that hasn't been fully ACTualized yet — it may not conform to ACT formatting standards.
+
+### TFT → ACT Mapping
+
+| Old file | Content | ACT status |
+|----------|---------|------------|
+| old-tf-readme | TFT overview, reading guide, epistemic legend | Superseded by CLAUDE.md, FORMAT.md |
+| old-tf-00-notation-conventions | Symbol tables, conventions, adaptive loop phases, global assumptions, units, dependency structure, claim registry | **Partially absorbed.** Notation referenced by FORMAT.md. Adaptive loop phases (Prolepsis→Aisthesis→Aporia→Epistrophe→Praxis) not yet in ACT. Global assumptions table, claim registry format — ACT should have its own. |
+| old-tf-01-scope | Agent, environment, observation, action definitions; scope condition | **Mostly absorbed** into #agent-environment, #observation-function, #action-transition, #scope-condition. Verify: coupling strength spectrum (strong/weak/nominal/zero) not explicitly in ACT. |
+| old-tf-02-causal-structure | Temporal arrow, chronica, Pearl's 3 levels, recursive update derivation + uniqueness, coupling-strength independence | **Outlined** as #causal-structure, #pearl-causal-hierarchy, #chronica, #recursive-update. Rich discussion of Level 2/3 access, availability vs exploitation distinction — check whether ACT segments capture this. |
+| old-tf-03-model | Model as compression, IB objective, model adequacy, model space examples | **Mostly absorbed** into #agent-model, #information-bottleneck, #model-sufficiency. Domain instantiation table not in ACT. |
+| old-tf-04-event-driven-dynamics | Event types, event stream, channel rates, event information content, effective adaptation rate | **Outlined** as #event-driven-dynamics (unwritten). Full content here. |
+| old-tf-05-mismatch-signal | Prediction error, score-function mismatch, Prop 5.1, zero-mismatch ambiguity, domain instantiations | **Outlined** as #mismatch-signal, #mismatch-decomposition (unwritten). Rich detail: score-function generalization, bridge from physical to surprise units, domain table. |
+| old-tf-06-update-gain | Uncertainty ratio, domain validation, gain dynamics, overfitting as miscalibration, CIY connection | **Mostly absorbed** into #update-gain. Domain validation detail (Kalman exact, Bayes exact, RL approximate, PID loose) and gain dynamics (convergence, reset) richer than ACT segment. |
+| old-tf-07-action-selection | Action as model function, implicit/explicit, action fluency, temporal advantage of implicit action, domain table | **Not in ACT.** No ACT slug for action selection, action fluency, or the implicit/explicit distinction. |
+| old-tf-08-exploration-exploitation | CIY definition + admissibility regimes, unified policy objective, query actions, adversarial mirror/deception, domain table | **Not in ACT** as explicit claims. CIY, unified policy objective, query actions, adversarial deception — all significant concepts without ACT slugs. Section II gaps reference this area. |
+| old-tf-09-deliberation-cost | Prop 9.1 deliberation threshold, diminishing returns, optimal duration, resource costs, domain table | **Not in ACT.** No ACT slug for deliberation cost. Connects to action-deliberation-exploration tradeoff gap in Section II. |
+| old-tf-10-structural-adaptation | Sufficiency/fitness definitions, Prop 10.1, symptoms, destruction-creation cycle, structural overfitting, temporal nesting, domain table | **Partially absorbed.** Prop 10.1 → #structural-adaptation-necessity. Sufficiency/fitness → #model-sufficiency, #model-class-fitness. Destruction-creation cycle, structural overfitting, temporal nesting of adaptation — not explicit ACT claims. |
+| old-tf-11-tempo-persistence | Temporal nesting table, mismatch ODE, Prop 11.1, Cor 11.2, adversarial dynamics, observation quality gating, per-dimension persistence | **Mostly absorbed** across #adaptive-tempo, #persistence-condition, #sector-condition-stability, #adversarial-tempo-advantage, etc. Mismatch ODE as named hypothesis, speed-quality substitutability, temporal nesting levels — not explicit ACT claims. |
+| old-tf-appendix-a-lyapunov | Props A.1–A.3, Cor A.3.1, Prop A.4 sketch, full proofs | **Mostly absorbed** into #sector-condition-stability, #adversarial-destabilization. Full proofs and Prop A.4 (multi-timescale stability sketch) not in ACT segments. |
+| old-tf-appendix-b-operationalization | Estimation procedures for U_M, U_o, ρ, α, R, δ_critical; decision procedures for λ, deliberation stopping, structural switching | **Not in ACT.** Practical reference for operationalizing ACT quantities. |
+| old-tf-appendix-c-kalman-example | Complete Kalman worked example mapping all TFT quantities | **Referenced** in ACT appendices outline. Full content here. |
+| old-tf-appendix-d-rl-example | Nonstationary bandit worked example, approximate mapping | **Referenced** in ACT appendices outline. Full content here. |
+| old-tf-appendix-e-tft-core | Condensed formal chain, dependency diagram, robustness summary | **Superseded** by CURRENT-FULL-THEORY.md. Robustness table may still be useful. |
+| old-tf-appendix-f-multi-agent | Communication gain, trust meta-model, trust transitivity, distributed tempo, team persistence, topology analysis, game-theoretic integration | **Partially absorbed** into Section III outline. Communication gain formula, trust transitivity/HILP-LIHP, topology analysis, game-theoretic integration points — much richer than ACT's current Section III. |
+| old-tf-appendix-g-agent-identity | Non-forkability of causal trajectories, clone problem | **Not in ACT.** Discussion-grade but relevant to Section V (AI agent identity across sessions). |
+| old-tf-recursive-update-proof | Full uniqueness proof for recursive update form | **Not in ACT.** Supporting material for #recursive-update. |
+| old-tf-goal-intent-gap | Analysis of what TFT lacked (goals/intent) — motivated ACT's Section II | **Historical.** The gap this identified is what ACT exists to fill. |
+| old-tf-citations-catalog | Reference catalog for TFT | **Reference material.** Useful for ACT paper writing. |
+| old-tf-novelty-analysis | Analysis of what's genuinely novel in TFT | **Reference material.** Useful for ACT positioning. |
+| old-tf-ooda-universal-pattern | OODA loop as universal adaptive pattern (v7) | **Historical.** Early framing that evolved into TFT/ACT. |
+| old-tf-appendix-f-draft-notes | Working notes for multi-agent appendix | **Historical.** Content digested into Appendix F. |
+
+### TST → ACT Mapping
+
+| Old file | Content | ACT status |
+|----------|---------|------------|
+| old-tst-readme | TST overview, synthesis, table of contents | **Superseded** by Section IV of CURRENT-FULL-THEORY.md. |
+| old-tst-01-temporal-optimality | T-01: temporal optimality as first principle | **Absorbed** into #temporal-optimality (generalized beyond software). |
+| old-tst-02-specification-bound | D-01 (feature def) + T-02 + C-02.1 | **Absorbed** into #specification-bound, #feature-definition, #communication-as-bottleneck. TST has richer discussion of LLM/AI implications. |
+| old-tst-03-evolving-scope | T-03: evolving systems scope, infinite velocity insight | **Absorbed** into #software-scope. "Infinite velocity" framing preserved. |
+| old-tst-04-change-expectation | T-04: Bayesian baseline, Jeffrey's prior, C-04.1, C-04.2, velocity inflection discussion | **Absorbed** into #change-expectation-baseline, #investment-scaling. Open question on velocity inflection not in ACT. |
+| old-tst-05-dual-optimization | D-02, D-03, T-05: comprehension + implementation, turnover multiplier, AI collaboration implications | **Absorbed** into #comprehension-time, #implementation-time, #dual-optimization. Rich AI-turnover discussion not fully in ACT. |
+| old-tst-06-change-investment | T-06: investment threshold, compound effects, near-zero cost reality, AI advantage | **Absorbed** into #change-investment. Detailed practical guidance not in ACT. |
+| old-tst-07-conceptual-alignment | T-07 + C-07.1: alignment hypothesis, dual comprehension, startup pivot principle | **Absorbed** into #conceptual-alignment, #realignment-as-feature. |
+| old-tst-08-changeset-size | D-04, T-08, C-08.1: atomic changeset, size principle, comprehension follows size | **Absorbed** into #atomic-changeset, #changeset-size-principle, #comprehension-follows-changeset. |
+| old-tst-09-change-proximity | D-05, T-09, H-09.1, Der-09.1: change distance, proximity principle, exponential cognitive load hypothesis | **Absorbed** into #change-distance, #change-proximity-principle, #exponential-cognitive-load. |
+| old-tst-10-coherence-coupling | D-06, D-07, T-10: coupling/coherence definitions, measurement from git | **Absorbed** into #system-coupling, #system-coherence, #coherence-coupling-measurement. |
+| old-tst-11-decision-integration | T-11: principled decision integration, expanded temporal terms | **Absorbed** into #principled-decision-integration. |
+| old-tst-12-continuous-operation | D-08, T-12: availability, fault-tolerant vs defensive, perturbation types | **Absorbed** into #system-availability, #continuous-operation. |
+
+### TST via-TFT Bridge Material → ACT Mapping
+
+| Old file | Content | ACT status |
+|----------|---------|------------|
+| old-tst-via-tft-readme | Why the bridge exists, software's 6 unique epistemic properties, key open questions | **Partially absorbed.** The 6 properties → #software-epistemic-properties (outlined). Open questions (observation channel under agent control, 100% turnover, counterfactual replay) feed Section IV/V. |
+| old-tst-via-tft-mapping | Detailed TFT→software mapping: environment decomposition, observation channels, action taxonomy, model, mismatch, gain, tempo, persistence, structural adaptation, multi-agent | **Richest single document for Section IV.** Action taxonomy (exploration/probe/query/modify/infrastructure-investment), three-part tempo decomposition, code-quality feedback loop, death spiral formalization — much not yet in ACT segments. |
+| old-tst-via-tft-causal-extensions | Explicit causal DAGs in software, interventional reasoning via tests, counterfactual evaluation via git, causal discovery from git, runtime causal models | **Partially absorbed** into #causal-discovery-from-git and #software-epistemic-properties. Detailed treatment of dependency DAG vs empirical DAG, Level 2 channel spectrum, counterfactual machine — largely not in ACT. |
+| old-tst-via-tft-reformulated-sketch | S-00 through S-14: complete outline of TST rebuilt on TFT/ACT foundations | **Valuable roadmap** for Section IV work. Shows how each TST claim maps to the ACT framework. The "what's new" and "what's removed" sections are useful for understanding the transformation. |
+| old-tst-via-tft-simulation-proposals | 6 simulation proposals ordered by value/effort | **Partially executed.** Sims 1-2 done (track-b). Sims 3-6 remain as future work. |
+
+
 ## Prior Art Positioning
 
 *Detailed cross-mapping in `scratch/02-prior-art-assessment.md`:*

@@ -8,8 +8,7 @@ linearization of the dependency DAG; it will change as the theory develops.
 Slugs are the stable identities. Treat this as a living proof sketch, not a
 specification.
 
-See `FORMAT.md` for segment file conventions. See `priors/tft/TF-00.md` for
-notation and the epistemic system ACT adopts.
+See `FORMAT.md` for segment file conventions. See `src/old-tf-00-notation-conventions.md` for notation and the epistemic system ACT adopts.
 
 
 ## Index

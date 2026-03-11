@@ -84,7 +84,7 @@ Definition, notation, and scope-narrowing files may use a simpler format than fu
 
 ## Equation-Level Tags
 
-Inline tags before equations mark their epistemic status. These follow TFT conventions (see `priors/tft/TF-00.md`):
+Inline tags before equations mark their epistemic status. These follow TFT conventions (see `src/old-tf-00-notation-conventions.md`):
 
 ```
 *[Definition (slug-name)]*
@@ -139,7 +139,7 @@ GitHub's math renderer is stricter than Obsidian's. To keep both working:
 
 ## Notation Conventions
 
-Follow TFT conventions. See `priors/tft/TF-00.md` for the complete symbol table, units, and conventions. Key points:
+Follow TFT conventions. See `src/old-tf-00-notation-conventions.md` for the complete symbol table, units, and conventions. Key points:
 
 - **Calligraphic** ($\mathcal{M}$, $\mathcal{O}$, $\mathcal{A}$, $\mathcal{C}$, $\mathcal{E}$) for sets and spaces
 - **$\mathcal{T}$** for adaptive tempo (calligraphic to distinguish from temperature)
