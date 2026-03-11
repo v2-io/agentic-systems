@@ -7,7 +7,7 @@ reference document. For the canonical theory structure, see
 
 ## Segment Status
 
-### Written
+### Written — Section I (28 segments, 27 written)
 | Slug | Type | Notes |
 |------|------|-------|
 | [temporal-optimality](src/temporal-optimality.md) | Axiom | Needs review |
@@ -19,25 +19,39 @@ reference document. For the canonical theory structure, see
 | [information-bottleneck](src/information-bottleneck.md) | Formulation | Needs review |
 | [model-sufficiency](src/model-sufficiency.md) | Definition | Needs review |
 | [model-class-fitness](src/model-class-fitness.md) | Definition | Needs review |
+| [causal-structure](src/causal-structure.md) | Axiom | Needs review |
+| [pearl-causal-hierarchy](src/pearl-causal-hierarchy.md) | Definition | Needs review |
+| [chronica](src/chronica.md) | Definition | Needs review |
+| [event-driven-dynamics](src/event-driven-dynamics.md) | Formulation | Needs review |
 | [recursive-update](src/recursive-update.md) | Derived | Needs review |
+| [action-selection](src/action-selection.md) | Derived | Needs review |
+| [mismatch-signal](src/mismatch-signal.md) | Definition | Needs review |
+| [mismatch-decomposition](src/mismatch-decomposition.md) | Theorem | Needs review |
 | [update-gain](src/update-gain.md) | Empirical | Needs review |
+| [causal-information-yield](src/causal-information-yield.md) | Definition | Needs review |
 | [adaptive-tempo](src/adaptive-tempo.md) | Definition | Needs review |
+| [mismatch-dynamics](src/mismatch-dynamics.md) | Hypothesis | Needs review |
+| [deliberation-cost](src/deliberation-cost.md) | Derived | Needs review |
 | [persistence-condition](src/persistence-condition.md) | Theorem | Needs review |
 | [sector-condition-stability](src/sector-condition-stability.md) | Theorem | Needs review |
-| [agent-spectrum](src/agent-spectrum.md) | Definition | Needs review |
-| [specification-bound](src/specification-bound.md) | Theorem | Needs review |
+| [structural-adaptation-necessity](src/structural-adaptation-necessity.md) | Theorem | Needs review |
+| [temporal-nesting](src/temporal-nesting.md) | Derived | Needs review |
+| [agent-identity](src/agent-identity.md) | Discussion | Needs review |
 
 ### Not Yet Written — Section I
 | Slug | Type | Source material |
 |------|------|-----------------|
 | composition-consistency | Axiom | `scratch/spike-agent-composition.md` |
-| causal-structure | Axiom | TF-02 |
-| pearl-causal-hierarchy | Definition | TF-02 |
-| chronica | Definition | TF-02 |
-| event-driven-dynamics | Formulation | TF-04 |
-| mismatch-signal | Definition | TF-05 |
-| mismatch-decomposition | Theorem | TF-05, Prop 5.1 |
-| structural-adaptation-necessity | Theorem | TF-10, Prop 10.1 |
+
+### Written — Section II (1 of 20 segments)
+| Slug | Type | Notes |
+|------|------|-------|
+| [agent-spectrum](src/agent-spectrum.md) | Definition | Needs review |
+
+### Written — Section IV (1 of 28 segments)
+| Slug | Type | Notes |
+|------|------|-------|
+| [specification-bound](src/specification-bound.md) | Theorem | Needs review |
 
 ### Not Yet Written — Section II
 | Slug | Type | Source material |
