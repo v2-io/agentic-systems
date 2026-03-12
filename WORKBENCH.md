@@ -95,9 +95,27 @@ reference document. For the canonical theory structure, see
 | structural-change-as-parametric-limit | Formulation | intent-dag-consolidated |
 | strategy-persistence-schema | Proposed schema | v3 spike §9 |
 
+### Written — Section III (2 of 13 segments)
+| Slug | Type | Notes |
+|------|------|-------|
+| [adversarial-destabilization](src/adversarial-destabilization.md) | Derived | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1. |
+| [communication-gain](src/communication-gain.md) | Hypothesis | Trust-weighted inter-agent gain. From TFT Appendix F, F.2. |
+
+### Written — Appendices (6 segments)
+| Slug | Type | Notes |
+|------|------|-------|
+| [sector-condition-proof](src/sector-condition-proof.md) | Proof | Full Lyapunov proofs (A.1, A.2). |
+| [recursive-update-proof](src/recursive-update-proof.md) | Proof | Uniqueness proof + 7 counterexample attacks. |
+| [multi-timescale-stability](src/multi-timescale-stability.md) | Sketch | N-timescale singular perturbation framework. |
+| [operationalization](src/operationalization.md) | Detail | Estimation procedures for ACT quantities. |
+| [worked-example-kalman](src/worked-example-kalman.md) | Worked example | End-to-end exact mapping. |
+| [worked-example-bandit](src/worked-example-bandit.md) | Worked example | End-to-end approximate mapping; persistence failure diagnostic. |
+
 ### Not Yet Written — Sections III–V
-All claims. Source material in TFT (TF-11, Appendix F, track-b sims),
-composition spike, TST, and agentic-tft docs 10-14.
+Remaining claims. Source material in TFT (TF-11, Appendix F track-b sims),
+composition spike, TST, and agentic-tft docs 10-14. Key near-term extraction:
+Appendix F → #team-persistence (F.3), topology analysis (F.4), game-theoretic
+integration (F.5). See Promotion Priorities item 3.
 
 
 ## Key Spikes
@@ -215,7 +233,17 @@ canonicalization, and scope-tightening:
    per-dimension-persistence are ready to exist as first-class segments
    rather than scratch conclusions.
 
-3. **Section V scope decision** — directed separation fails for
+3. **Section III — extract remaining Appendix F content** —
+   `old-tf-appendix-f-multi-agent.md` has load-bearing content not yet in
+   ACT segments: distributed tempo / team persistence (F.3 → #team-persistence),
+   cooperative-adversarial disturbance decomposition (F.3), topology analysis
+   (F.4 — peer, ensemble, hierarchical), game-theoretic integration points
+   (F.5), trust transitivity details and risk-adjusted trust (F.2 extensions),
+   falsification predictions (F.7). Extract as Section III segments get built.
+   The `#communication-gain` and `#adversarial-destabilization` segments already
+   absorb the core of F.2 and the A.3 Lyapunov coupling, respectively.
+
+4. **Section V scope decision** — directed separation fails for
    goal-conditioned LLMs (acknowledged). Section V is where the project
    wants to land. Need to decide: is Section V an approximate application
    of current ACT, or does it require a genuine coupled $M_t$/$G_t$
@@ -275,14 +303,14 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 | ~~old-tf-09-deliberation-cost~~ | ~~Prop 9.1, deliberation threshold~~ | **Archived.** → #deliberation-cost. |
 | ~~old-tf-10-structural-adaptation~~ | ~~Prop 10.1, destruction-creation, overfitting~~ | **Archived.** → #structural-adaptation-necessity + #model-sufficiency + #model-class-fitness. |
 | old-tf-11-tempo-persistence | Temporal nesting table, mismatch ODE, adversarial dynamics, observation quality, per-dimension | **Mostly absorbed** across #adaptive-tempo, #persistence-condition, #sector-condition-stability, etc. Mismatch ODE as named hypothesis, speed-quality substitutability — enrich then archive. |
-| old-tf-appendix-a-lyapunov | Props A.1–A.3, Cor A.3.1, full proofs, Prop A.4 sketch | **Mostly absorbed** into #sector-condition-stability. Full proofs and multi-timescale sketch worth preserving — enrich then archive. |
-| old-tf-appendix-b-operationalization | Estimation procedures for all TFT quantities | **Not yet in ACT.** Practical reference. Future agent can port as appendix. |
-| old-tf-appendix-c-kalman-example | Complete Kalman worked example | **Not yet in ACT.** Future agent can port as appendix. |
-| old-tf-appendix-d-rl-example | Nonstationary bandit worked example | **Not yet in ACT.** Future agent can port as appendix. |
+| ~~old-tf-appendix-a-lyapunov~~ | ~~Props A.1–A.3, Cor A.3.1, full proofs, Prop A.4 sketch~~ | **Absorbed.** → #sector-condition-proof (A.1–A.2), #adversarial-destabilization (A.3, A.3.1), #multi-timescale-stability (A.4). Ready to archive. |
+| ~~old-tf-appendix-b-operationalization~~ | ~~Estimation procedures for all TFT quantities~~ | **Absorbed.** → #operationalization. Ready to archive. |
+| ~~old-tf-appendix-c-kalman-example~~ | ~~Complete Kalman worked example~~ | **Absorbed.** → #worked-example-kalman. Ready to archive. |
+| ~~old-tf-appendix-d-rl-example~~ | ~~Nonstationary bandit worked example~~ | **Absorbed.** → #worked-example-bandit. Ready to archive. |
 | ~~old-tf-appendix-e-tft-core~~ | ~~Condensed formal chain~~ | **Archived.** Superseded by CURRENT-FULL-THEORY.md. |
-| old-tf-appendix-f-multi-agent | Communication gain, trust, distributed tempo, topology, game theory | **Partially absorbed** into Section III outline. Rich content — source material for Section III segments. |
+| old-tf-appendix-f-multi-agent | Communication gain, trust, distributed tempo, topology, game theory | **Partially absorbed.** → #communication-gain (F.2 core), #adversarial-destabilization (uses coupling model). **Still needed from F:** distributed tempo → #team-persistence (F.3), topology analysis (F.4), game-theoretic integration (F.5), trust transitivity details, falsification predictions (F.7). Extract as Section III segments get built. |
 | ~~old-tf-appendix-g-agent-identity~~ | ~~Non-forkability, clone problem~~ | **Archived.** → #agent-identity. |
-| old-tf-recursive-update-proof | Full uniqueness proof | Supporting material for #recursive-update. Future agent can port as appendix or fold into segment. |
+| ~~old-tf-recursive-update-proof~~ | ~~Full uniqueness proof~~ | **Absorbed.** → #recursive-update-proof. Ready to archive. |
 | old-tf-goal-intent-gap | What TFT lacked (goals/intent) | **Historical.** The gap ACT exists to fill. Can archive when comfortable. |
 | old-tf-citations-catalog | TFT reference catalog | **Reference material.** Useful for paper writing. |
 | old-tf-novelty-analysis | What's novel in TFT | **Reference material.** Useful for positioning. |

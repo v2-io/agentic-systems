@@ -49,6 +49,11 @@ depends:
 | `discussion` | Conceptual or normative claim used for interpretation |
 | `measurement` | Operationalization of a theoretical quantity |
 | `proposed-schema` | Mathematical shape identified, formal content pending |
+| `proof` | Complete formal proof backing a theorem or derived claim |
+| `worked-example` | End-to-end domain instantiation validating the theory chain |
+| `detail` | Extended operational or technical material supporting other claims |
+| `sketch` | Outlines an approach or framework; direction identified, rigor pending |
+| `aside` | Tangential observation or connection; informative but not load-bearing |
 
 ### `status` — epistemic strength
 

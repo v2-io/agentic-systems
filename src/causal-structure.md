@@ -42,6 +42,6 @@ The theory should not be understood as applying only to agents with strong envir
 - Action selection is **prospective** — using the current model to influence future events
 - The chronica ( #chronica) is **monotonically growing** — events are added but never removed
 
-**Implications for model updating.** The causal axiom constrains the update rule: the model should give more weight to observations that are *causally downstream* of the agent's actions than to observations that would have occurred regardless. Action-contingent observations carry interventional (Level 2) information; action-independent observations carry only associational (Level 1) information. The formal measure of this distinction — causal information yield (CIY) — is developed in the exploration-exploitation framework (see old-tf-08-exploration-exploitation).
+**Implications for model updating.** The causal axiom constrains the update rule: the model should give more weight to observations that are *causally downstream* of the agent's actions than to observations that would have occurred regardless. Action-contingent observations carry interventional (Level 2) information; action-independent observations carry only associational (Level 1) information. The formal measure of this distinction — causal information yield (CIY) — is developed in #causal-information-yield.
 
 **(Descended from TF-02.)**

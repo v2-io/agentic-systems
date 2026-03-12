@@ -62,13 +62,14 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous | Formulation | II | missing |
 | [#strategy-persistence-schema](src/strategy-persistence-schema.md) | Sector conditions for Σ_t | Proposed schema | II | missing |
 | [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | Scope | III | missing |
-| [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | Definition (sketch) | III | missing |
+| [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | Definition | III | missing |
 | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | Definition + Discussion | III | missing |
 | [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | Hypothesis | III | missing |
-| [#tempo-composition](src/tempo-composition.md) | How tempos compose | Derived (sketch) | III | missing |
-| [#team-persistence](src/team-persistence.md) | Composite persistence condition | Derived (sketch) | III | missing |
+| [#tempo-composition](src/tempo-composition.md) | How tempos compose | Derived | III | missing |
+| [#team-persistence](src/team-persistence.md) | Composite persistence condition | Derived | III | missing |
 | [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | Theorem | III | missing |
-| [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop | Derived | III | missing |
+| [#communication-gain](src/communication-gain.md) | Trust-weighted update gain for inter-agent channels | Hypothesis | III | draft |
+| [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop; includes effects spiral corollary | Derived | III | draft |
 | [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | α = 2, 3/2, or ~1 | Observation | III | missing |
 | [#observation-gates-advantage](src/observation-gates-advantage.md) | Obs noise gates advantage | Observation | III | missing |
 | [#per-dimension-persistence](src/per-dimension-persistence.md) | Weak dimension is bottleneck | Theorem | III | missing |
@@ -92,9 +93,9 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#system-coupling](src/system-coupling.md) | P(change j \| change i) | Definition | IV | draft |
 | [#system-coherence](src/system-coherence.md) | E[proximity within module] | Definition | IV | draft |
 | [#coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Coherence/coupling from git | Measurement | IV | draft |
-| [#principled-decision-integration](src/principled-decision-integration.md) | Optimal C minimizes E[T\|C] | Integration | IV | draft |
+| [#principled-decision-integration](src/principled-decision-integration.md) | Optimal C minimizes E[T\|C] | Derived | IV | draft |
 | [#system-availability](src/system-availability.md) | MTTF/(MTTF+MTTR) | Definition | IV | draft |
-| [#continuous-operation](src/continuous-operation.md) | Include P(fail)×T_recovery | Scope Extension | IV | draft |
+| [#continuous-operation](src/continuous-operation.md) | Include P(fail)×T_recovery | Scope | IV | draft |
 | [#causal-discovery-from-git](src/causal-discovery-from-git.md) | Git as interventional data | Hypothesis | IV | missing |
 | [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | Definition | V | missing |
 | [#context-turnover](src/context-turnover.md) | 100% M_t reset per session | Observation | V | missing |
@@ -186,12 +187,16 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 *Supporting material: detailed evidence, worked examples, historical development. Identified by slug, not by position.*
 
-| Slug | Description | Stage |
-|------|-------------|-------|
-| [#linear-ode-approximation](src/linear-ode-approximation.md) | Pedagogical linear mismatch ODE | missing |
-| [#simulation-results](src/simulation-results.md) | 6 variants validating claims | missing |
-| [#worked-examples](src/worked-examples.md) | Kalman, PID, LQG, RL, developer | missing |
-| [#operationalization](src/operationalization.md) | Estimation procedures | missing |
-| [#intent-dag-development](src/intent-dag-development.md) | Convergence on AND/OR + single-p | missing |
-| [#prior-art-positioning](src/prior-art-positioning.md) | Hafez, IBM, BDI, active inference | missing |
-| [#graph-structure-uniqueness](src/graph-structure-uniqueness.md) | 4 axioms → DAG structure | missing |
+| Slug | Description | Type | Stage |
+|------|-------------|------|-------|
+| [#sector-condition-proof](src/sector-condition-proof.md) | Lyapunov proofs for bounded mismatch and adaptive reserve | Proof | draft |
+| [#recursive-update-proof](src/recursive-update-proof.md) | Uniqueness proof via three constraints + counterexamples | Proof | draft |
+| [#multi-timescale-stability](src/multi-timescale-stability.md) | N-timescale singular perturbation sketch | Sketch | draft |
+| [#operationalization](src/operationalization.md) | Estimation procedures for ACT quantities | Detail | draft |
+| [#worked-example-kalman](src/worked-example-kalman.md) | End-to-end Kalman instantiation (exact) | Worked example | draft |
+| [#worked-example-bandit](src/worked-example-bandit.md) | End-to-end RL bandit instantiation (approximate) | Worked example | draft |
+| [#linear-ode-approximation](src/linear-ode-approximation.md) | Pedagogical linear mismatch ODE | Detail | missing |
+| [#simulation-results](src/simulation-results.md) | 6 variants validating claims | Detail | missing |
+| [#intent-dag-development](src/intent-dag-development.md) | Convergence on AND/OR + single-p | Aside | missing |
+| [#prior-art-positioning](src/prior-art-positioning.md) | Hafez, IBM, BDI, active inference | Detail | missing |
+| [#graph-structure-uniqueness](src/graph-structure-uniqueness.md) | 4 axioms → DAG structure | Proof | missing |

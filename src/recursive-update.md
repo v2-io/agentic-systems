@@ -5,6 +5,7 @@ status: exact
 depends:
   - agent-model
   - event-driven-dynamics
+  - recursive-update-proof
 ---
 
 # Recursive Update

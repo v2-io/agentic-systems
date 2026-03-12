@@ -5,6 +5,7 @@ status: exact
 depends:
   - adaptive-tempo
   - mismatch-signal
+  - sector-condition-proof
 ---
 
 # Sector Condition Stability
@@ -48,7 +49,7 @@ $$\Delta\rho^* = \alpha R - \rho$$
 3. $\dot{V} < 0$ when $\|\delta\| > \rho/\alpha$, giving ultimate bound $R^* = \rho/\alpha$.
 4. Persistence requires $R^* < R$, i.e., $\alpha > \rho/R$. $\square$
 
-Full proof in Appendix A (Prop A.1, A.2).
+Full proof in #sector-condition-proof (Props A.1, A.2).
 
 ## Epistemic Status
 

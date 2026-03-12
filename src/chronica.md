@@ -28,6 +28,6 @@ This is *definitional*. The chronica names an object that exists by construction
 
 ## Discussion
 
-**The chronica is singular and non-forkable.** Because the temporal ordering is irreversible, $\mathcal{C}_t$ represents a unique causal trajectory. Duplicating an agent's state and exposing the copies to different future events creates two agents with divergent chronica, neither of which is a sufficient statistic for the other's trajectory. See old-tf-appendix-g-agent-identity for the full development of this observation.
+**The chronica is singular and non-forkable.** Because the temporal ordering is irreversible, $\mathcal{C}_t$ represents a unique causal trajectory. Duplicating an agent's state and exposing the copies to different future events creates two agents with divergent chronica, neither of which is a sufficient statistic for the other's trajectory. See #agent-identity for the full development of this observation.
 
 **Relationship to the model.** The model $M_t = \phi(\mathcal{C}_t)$ ( #agent-model) is a compression of the chronica. How much of $\mathcal{C}_t$'s predictive information survives compression is measured by model sufficiency ( #model-sufficiency).

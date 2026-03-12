@@ -73,6 +73,6 @@ This quantity — identical to adaptive tempo $\mathcal{T}$ ( #adaptive-tempo) �
 | Bug reports | Sporadic (low) | High |
 | Code review feedback | Per-PR (low) | Medium-high |
 
-The three-part tempo decomposition for software — $\mathcal{T}_{\text{obs}}$ (compiler, tests) + $\mathcal{T}_{\text{explore}}$ (code reading) + $\mathcal{T}_{\text{probe}}$ (test runs, staging) — is a direct application of multi-channel tempo. See old-tst-via-tft-mapping for the full treatment.
+The three-part tempo decomposition for software — $\mathcal{T}_{\text{obs}}$ (compiler, tests) + $\mathcal{T}_{\text{explore}}$ (code reading) + $\mathcal{T}_{\text{probe}}$ (test runs, staging) — is a direct application of multi-channel tempo. This decomposition is a Section IV gap (see the three-part tempo decomposition gap in `CURRENT-FULL-THEORY.md`).
 
 **(Descended from TF-04.)**
