@@ -65,6 +65,20 @@ depends:
 
 Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not ACT terms.
 
+### `stage` — development process state
+
+Orthogonal to epistemic status. Tracks where the segment is in our working process, not how strong the claim is.
+
+| Stage | Meaning |
+|-------|---------|
+| `missing` | No segment file exists yet |
+| `old` | Content exists only as `old-*` source material, not yet converted |
+| `draft` | First ACT-formatted version written, not yet reviewed |
+| `in-progress-1`…`9` | Actively being refined; number indicates review passes |
+| `candidate` | Believed ready; can downgrade to `in-progress` if issues found |
+
+Stage appears in `CURRENT-FULL-THEORY.md`'s index table, not in segment frontmatter (it changes too often and is a property of the project, not the file).
+
 ### `depends` — prerequisite slugs
 
 List the slugs this claim directly depends on. The type of each dependency (definition import vs logical antecedent vs scope assumption) is derivable from the referenced file's own `type` field — no typed edges needed.
@@ -78,8 +92,13 @@ List the slugs this claim directly depends on. The type of each dependency (defi
 4. **Formal Expression** — `## Formal Expression`, with equation-level tags
 5. **Epistemic Status** — `## Epistemic Status`, what's derived vs hypothesized
 6. **Discussion** — `## Discussion`, interpretation, connections — brief
+7. **Working Notes** — `## Working Notes` *(optional)*, internal development notes
 
 Definition, notation, and scope-narrowing files may use a simpler format than full claims. Corollaries and alternate formulations can live with their parent claim (they reinforce its independence), but anything that could be referenced independently should be its own file.
+
+### Working Notes
+
+The `## Working Notes` section is for active development: open questions about the claim, sketches of how ACT machinery might strengthen or weaken it, unresolved issues, things to check. This is *our* working space — what we're thinking about, not what we're asserting. It should be removed or emptied when the segment reaches `candidate` stage. Unlike the Discussion section (which is part of the published theory), Working Notes are process artifacts.
 
 
 ## Equation-Level Tags
