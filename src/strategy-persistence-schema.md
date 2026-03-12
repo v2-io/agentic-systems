@@ -10,7 +10,7 @@ depends:
 
 # Strategy Persistence Schema
 
-The sector-condition mathematics ( #sector-condition-stability, #sector-condition-proof) proves bounded mismatch for any system with: a mismatch state, a correction function satisfying sector bounds, and bounded disturbance. This mathematics is domain-agnostic — it doesn't care whether the mismatch is epistemic or strategic. If the strategic update dynamics can be shown to satisfy the same structural conditions, strategy persistence follows by the same theorem.
+The sector-condition mathematics ( #sector-condition-stability, #sector-condition-derivation) proves bounded mismatch for any system with: a mismatch state, a correction function satisfying sector bounds, and bounded disturbance. This mathematics is domain-agnostic — it doesn't care whether the mismatch is epistemic or strategic. If the strategic update dynamics can be shown to satisfy the same structural conditions, strategy persistence follows by the same result.
 
 ## Formal Expression
 
@@ -29,11 +29,11 @@ where $\alpha_\Sigma$ is the strategic correction rate, $\rho_\Sigma$ is the str
 
 ## Epistemic Status
 
-*Sketch.* This is a **theorem schema**, not a theorem. The mathematical template (sector conditions → bounded mismatch) is proven ( #sector-condition-proof). What's missing is the instantiation — showing that specific strategic update dynamics satisfy the template's preconditions. The schema says: "if the shape fits, the conclusion follows." Whether the shape fits is genuine future work.
+*Sketch.* This is a **result schema**, not a proven result. The mathematical template (sector conditions → bounded mismatch) is derived ( #sector-condition-derivation). What's missing is the instantiation — showing that specific strategic update dynamics satisfy the template's preconditions. The schema says: "if the shape fits, the conclusion follows." Whether the shape fits is genuine future work.
 
 ## Discussion
 
-**What's needed to promote this from schema to theorem.**
+**What's needed to promote this from schema to result.**
 
 1. **Strategic mismatch state**: The candidate is $\delta_{\text{strategic}}$ from #strategic-calibration — the aggregated edge residual. This needs to be shown to satisfy the properties required by the sector-condition framework (well-defined zero, monotonicity, appropriate norm structure).
 
@@ -45,7 +45,7 @@ where $\alpha_\Sigma$ is the strategic correction rate, $\rho_\Sigma$ is the str
 
 **The structural parallel is genuine.** The persistence condition for $M_t$ ( #persistence-condition) says: adaptive tempo must exceed the ratio of disturbance to critical mismatch. If the same mathematics applies to $\Sigma_t$, then strategy persistence requires strategic tempo to exceed the ratio of strategic disturbance to critical strategic mismatch. The strategic analog of "the environment changes faster than the agent can learn" is "the world invalidates plans faster than the agent can revise them." Both lead to the same catastrophic outcome: the system cannot maintain bounded mismatch and begins to degrade.
 
-**What this would buy the theory.** If promoted to a theorem, strategy persistence would:
+**What this would buy the theory.** If promoted to a result, strategy persistence would:
 - Provide a formal criterion for "when does a strategy remain viable?"
 - Connect strategic failure modes to the same mathematical framework as epistemic failure modes
 - Enable quantitative comparison: is the bottleneck epistemic persistence (model can't keep up with reality changes) or strategic persistence (plans can't keep up with requirement changes)?

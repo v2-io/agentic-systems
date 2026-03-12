@@ -1,6 +1,6 @@
 ---
 slug: mismatch-decomposition
-type: theorem
+type: result
 status: exact
 depends:
   - mismatch-signal
@@ -22,7 +22,7 @@ $$\mathbb{E}[\|\delta_t\|^2] = \underbrace{\mathbb{E}[\|\hat{o}_t - \bar{o}_t\|^
 
 where $\bar{o}_t = \mathbb{E}[o_t \mid \Omega_t, a_{t-1}]$ is the true conditional mean.
 
-### Proof Sketch
+### Derivation
 
 1. By #scope-condition, $H(\Omega_t \mid \mathcal{C}_t) > 0$ — residual uncertainty persists.
 2. By #agent-model, the model generates predictions $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$.

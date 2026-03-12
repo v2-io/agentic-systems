@@ -1,7 +1,7 @@
 ---
 slug: system-availability
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - software-scope
 ---
@@ -24,6 +24,6 @@ Definitional. This is the standard reliability engineering definition. ACT does 
 
 ## Discussion
 
-Availability connects to ACT through #continuous-operation: a non-operational system has effectively infinite implementation time for any feature. From the user's perspective, downtime is lost time. The temporal optimality axiom therefore applies to operational time as well as development time.
+Availability connects to ACT through #continuous-operation: a non-operational system has effectively infinite implementation time for any feature. From the user's perspective, downtime is lost time. The temporal optimality postulate therefore applies to operational time as well as development time.
 
 *(Descended from TST D-08.)*

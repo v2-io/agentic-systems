@@ -2,7 +2,7 @@
 
 **Status**: Exploratory. This document explores what causal theory offers software
 development that goes beyond TFT's current treatment. TFT establishes causal structure
-as an axiom (TF-02) and builds Pearl's three-level hierarchy into the theory, but
+as a postulate (TF-02) and builds Pearl's three-level hierarchy into the theory, but
 doesn't develop the full machinery of structural causal models, DAG-based inference,
 or do-calculus. Software development is a domain where this full machinery might be
 unusually productive.

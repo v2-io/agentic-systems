@@ -75,7 +75,7 @@ sustainability equivalence from TST's T-01 conditions).
 
 ### S-02: Causal Structure of Software Development
 
-*[Axiom — inheriting TF-02]*
+*[Postulate — inheriting TF-02]*
 
 The interaction between developer and codebase has irreducible causal structure. The
 temporal ordering of events is constitutive: you cannot use information from code you

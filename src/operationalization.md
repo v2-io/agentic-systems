@@ -72,7 +72,7 @@ using windows where corrective action is suspended or effectively delayed.
 
 ### Estimating $\alpha$ (sector lower bound)
 
-#sector-condition-proof uses $\delta^T F(\mathcal{T}, \delta) \geq \alpha \|\delta\|^2$ for $\|\delta\| \leq R$. Operationally:
+#sector-condition-derivation uses $\delta^T F(\mathcal{T}, \delta) \geq \alpha \|\delta\|^2$ for $\|\delta\| \leq R$. Operationally:
 
 1. Estimate $\dot{\delta}_t$ (finite differences or filtered derivative).
 2. Compute $\widehat{F}_t = -\dot{\delta}_t + w_t$ where disturbance proxy $w_t$ is estimated from exogenous perturbation channels or residual balancing.
@@ -105,7 +105,7 @@ This anchors #persistence-condition to real task outcomes.
 2. Estimate $U_o$ from channel physics/calibration; estimate $U_M$ from model uncertainty.
 3. Validate gain behavior against #update-gain ($\hat{\eta}^*$ trend checks).
 4. Estimate $\rho_{\text{delib}}$ from pause windows ( #deliberation-cost) and $\rho(t)$ from full traces.
-5. Estimate $\alpha$ and $R$ from local correction dynamics ( #sector-condition-proof).
+5. Estimate $\alpha$ and $R$ from local correction dynamics ( #sector-condition-derivation).
 6. Estimate $\|\delta_{\text{critical}}\|$ from task-performance degradation.
 7. Compute derived diagnostics: tempo margin $\hat{\mathcal{T}} - \hat{\rho}/\|\hat{\delta}_{\text{critical}}\|$, reserve $\widehat{\Delta \rho^*} = \hat{\alpha}\hat{R} - \hat{\rho}$, and deliberation feasibility $\Delta\eta^*(\Delta\tau)\|\delta_{\text{post}}\| - \hat{\rho}_{\text{delib}}\Delta\tau$.
 

@@ -1,6 +1,6 @@
 ---
 slug: per-dimension-persistence
-type: theorem
+type: result
 status: exact
 depends:
   - persistence-condition
@@ -13,7 +13,7 @@ The scalar persistence condition $\mathcal{T} > \rho / \|\delta_{\text{critical}
 
 ## Formal Expression
 
-*[Theorem (per-dimension-persistence)]*
+*[Result (per-dimension-persistence)]*
 
 For an agent with $d$-dimensional mismatch $\delta_t \in \mathbb{R}^d$, diagonal correction gain $\eta = \text{diag}(\eta_1, \ldots, \eta_d)$, and per-dimension disturbance $\rho_k$:
 

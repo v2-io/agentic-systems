@@ -1,11 +1,11 @@
 ---
 slug: sector-condition-stability
-type: theorem
+type: result
 status: exact
 depends:
   - adaptive-tempo
   - mismatch-signal
-  - sector-condition-proof
+  - sector-condition-derivation
 ---
 
 # Sector Condition Stability
@@ -42,14 +42,14 @@ The agent's capacity to absorb additional disturbance before mismatch exceeds th
 
 $$\Delta\rho^* = \alpha R - \rho$$
 
-### Proof Sketch
+### Derivation
 
 1. Lyapunov function $V(\delta) = \frac{1}{2}\|\delta\|^2$.
 2. $\dot{V} = \delta^T(-F + w) \leq -\alpha\|\delta\|^2 + \rho\|\delta\|$.
 3. $\dot{V} < 0$ when $\|\delta\| > \rho/\alpha$, giving ultimate bound $R^* = \rho/\alpha$.
 4. Persistence requires $R^* < R$, i.e., $\alpha > \rho/R$. $\square$
 
-Full proof in #sector-condition-proof (Props A.1, A.2).
+Full derivation in #sector-condition-derivation (Props A.1, A.2).
 
 ## Epistemic Status
 

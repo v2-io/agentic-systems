@@ -1,7 +1,7 @@
 ---
 slug: model-class-fitness
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - model-sufficiency
 ---

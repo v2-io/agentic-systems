@@ -33,8 +33,8 @@ open, spike status, and reorganization notes.
 
 The theory lives in `src/` as claim segments. **Each file is like a
 high-level proof step** — one move per file. Given what came before, this
-one thing follows, or is defined, or restricts scope. An assumption and
-the theorem derived from it are two steps, not one. Corollaries and
+one thing follows, or is defined, or restricts scope. A postulate and
+the result derived from it are two steps, not one. Corollaries and
 alternate formulations can live with their parent claim (they reinforce
 its independence), but anything that could be referenced independently
 should be its own file.
@@ -125,7 +125,7 @@ Do not let ungrounded assertions transfer from TST uncritically.
 4. **Sector-condition framework primary.** The linear ODE is pedagogical.
 
 5. **TST gets full treatment in Section IV.** Not just domain table rows.
-   T-01 (temporal optimality) is generalized as ACT's first axiom
+   T-01 (temporal optimality) is generalized as ACT's first postulate
    (#temporal-optimality).
 
 ## What's Settled vs. Open

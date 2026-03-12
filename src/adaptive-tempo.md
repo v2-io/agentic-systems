@@ -1,7 +1,7 @@
 ---
 slug: adaptive-tempo
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - update-gain
   - event-driven-dynamics

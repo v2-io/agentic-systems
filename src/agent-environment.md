@@ -1,7 +1,7 @@
 ---
 slug: agent-environment
 type: definition
-status: first-principled
+status: axiomatic
 depends: []
 ---
 

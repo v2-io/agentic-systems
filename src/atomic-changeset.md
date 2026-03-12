@@ -1,7 +1,7 @@
 ---
 slug: atomic-changeset
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - feature-definition
 ---

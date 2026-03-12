@@ -1,7 +1,7 @@
 ---
 slug: multi-agent-scope
 type: scope
-status: first-principled
+status: axiomatic
 depends:
   - scope-condition
   - composition-consistency
@@ -26,7 +26,7 @@ The coupling is through the environment: agent $i$'s actions enter agent $j$'s o
 
 ## Epistemic Status
 
-*First-principled.* This is a scope definition — it describes the class of systems Section III addresses. The only substantive choice is that coupling goes through the shared environment rather than through direct state modification. This follows from the agent boundary assumption ( #agent-environment): agents affect each other by affecting the environment, not by directly altering each other's internal states.
+*Axiomatic.* This is a scope definition — it describes the class of systems Section III addresses. The only substantive choice is that coupling goes through the shared environment rather than through direct state modification. This follows from the agent boundary assumption ( #agent-environment): agents affect each other by affecting the environment, not by directly altering each other's internal states.
 
 ## Discussion
 

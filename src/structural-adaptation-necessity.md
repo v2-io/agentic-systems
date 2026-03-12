@@ -1,6 +1,6 @@
 ---
 slug: structural-adaptation-necessity
-type: theorem
+type: result
 status: exact
 depends:
   - model-sufficiency
@@ -19,7 +19,7 @@ When model class fitness is insufficient — when no model in the current class 
 
 If the model class fitness $\mathcal{F}(\mathcal{M}) < 1 - \varepsilon$ for some $\varepsilon > 0$, then no parametric adaptation within $\mathcal{M}$ can reduce the expected mismatch below a floor determined by $\varepsilon$.
 
-### Proof Sketch
+### Derivation
 
 1. By definition, $S(M^*) = \mathcal{F}(\mathcal{M}) < 1 - \varepsilon$ where $M^* = \arg\sup_{M \in \mathcal{M}} S(M)$.
 2. Therefore $I(\mathcal{C}_t; o_{t+1:\infty} \mid M^*, a_{t:\infty}) > 0$: the history contains predictive information that $M^*$ does not capture.

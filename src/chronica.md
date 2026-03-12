@@ -1,7 +1,7 @@
 ---
 slug: chronica
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - agent-environment
   - observation-function

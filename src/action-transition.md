@@ -1,7 +1,7 @@
 ---
 slug: action-transition
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - agent-environment
 ---

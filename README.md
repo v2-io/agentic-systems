@@ -18,7 +18,6 @@ Beneath all three is a single recurring pattern: **an agent persists when its in
 
 The theory progresses from general adaptive systems through actuated agency and multi-agent composition to domain instantiations — particularly software development and AI agents operating on code.
 
-
 ## Where to Start
 
 **[`CURRENT-FULL-THEORY.md`](CURRENT-FULL-THEORY.md)** — the canonical outline. The full argument claim by claim, with the current linearization, types, and development stage for each segment.
@@ -32,7 +31,7 @@ The theory progresses from general adaptive systems through actuated agency and 
 
 ## Structure
 
-**The theory lives in [`src/`](src/).** Each file is one claim — an axiom, definition, theorem, or hypothesis — named by slug (`src/{slug}.md`). Claims build incrementally, like a proof. One move per file: given what came before, this one thing follows, or is defined, or restricts scope.
+**The theory lives in [`src/`](src/).** Each file is one claim — a postulate, definition, result, or hypothesis — named by slug (`src/{slug}.md`). Claims build incrementally; each is one step in the argument. One move per file: given what came before, this one thing follows, or is defined, or restricts scope.
 
 Five sections scope progressively:
 
@@ -42,12 +41,12 @@ Five sections scope progressively:
 4. **Evolving Software Systems** — TST regrounded in ACT's formal machinery
 5. **Software-Grounded Agentic Systems** — AI agents, the recursive completion
 
-Canonical ordering lives in `CURRENT-FULL-THEORY.md`, not in filenames. Slugs are the stable identities; the linearization will change as the theory develops.
+Canonical ordering lives in `CURRENT-FULL-THEORY.md`, not in filenames. Tags (or slugs) are the stable identities; the linearization will change as the theory develops.
 
 
-## What ACT Contributes — Honest Calibration
+## Sampling of Contributions
 
-ACT's value is primarily **integration**: connecting established mathematical tools into a unified account of adaptive agency. The individual pieces (Lyapunov stability, Kalman filtering, IB, causal DAGs) are known. The specific contributions fall into five categories:
+ACT's value is primarily **integration**: using largely established mathematical tools to define a unified account of adaptive agency. The individual pieces (Lyapunov stability, Kalman filtering, IB, causal DAGs) are known. Current specific contributions generally fall into five categories:
 
 1. **Synthesis that produces new structure.** The uncertainty ratio $\eta^* = U_M/(U_M + U_o)$ unifies Kalman gain, Bayesian learning rates, and RL step sizes under one principle. The persistence condition $\mathcal{T} > \rho/\|\delta_{\text{critical}}\|$ connects Lyapunov stability to agent viability. These are known mathematics applied to a new domain — their value is the unified framework, not the individual results.
 

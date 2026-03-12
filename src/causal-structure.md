@@ -1,7 +1,7 @@
 ---
 slug: causal-structure
-type: axiom
-status: first-principled
+type: postulate
+status: axiomatic
 depends:
   - agent-environment
 ---
@@ -12,7 +12,7 @@ The agent-environment interaction has irreducible causal structure grounded in t
 
 ## Formal Expression
 
-*[Axiom (causal-structure)]*
+*[Postulate (causal-structure)]*
 
 The interaction history $\mathcal{C}_t$ ( #chronica) is not merely a set of observations and actions — it is an *ordered sequence* in which temporal position carries meaning. $a_{t-1}$ was selected before $o_t$ was received. The agent could not have used $o_t$ to select $a_{t-1}$. This asymmetry — the arrow of time — is the foundation of causal structure in the theory.
 
@@ -20,7 +20,7 @@ We adopt the most primitive notion of causality: **event $A$ can be a cause of e
 
 ## Epistemic Status
 
-This is an *axiom* — the temporal ordering of events is a physical fact about the universe that the theory takes as given. The second law of thermodynamics, the light-cone structure of relativity, and the arrow of psychological time all enforce it, but ACT does not derive it from any of these. It is simply noted as a precondition: the theory applies to agents embedded in a universe where time has a direction.
+This is a *postulate* — the temporal ordering of events is a physical fact about the universe that the theory takes as given. The second law of thermodynamics, the light-cone structure of relativity, and the arrow of psychological time all enforce it, but ACT does not derive it from any of these. It is simply noted as a precondition: the theory applies to agents embedded in a universe where time has a direction.
 
 ## Discussion
 
@@ -42,6 +42,6 @@ The theory should not be understood as applying only to agents with strong envir
 - Action selection is **prospective** — using the current model to influence future events
 - The chronica ( #chronica) is **monotonically growing** — events are added but never removed
 
-**Implications for model updating.** The causal axiom constrains the update rule: the model should give more weight to observations that are *causally downstream* of the agent's actions than to observations that would have occurred regardless. Action-contingent observations carry interventional (Level 2) information; action-independent observations carry only associational (Level 1) information. The formal measure of this distinction — causal information yield (CIY) — is developed in #causal-information-yield.
+**Implications for model updating.** The causal postulate constrains the update rule: the model should give more weight to observations that are *causally downstream* of the agent's actions than to observations that would have occurred regardless. Action-contingent observations carry interventional (Level 2) information; action-independent observations carry only associational (Level 1) information. The formal measure of this distinction — causal information yield (CIY) — is developed in #causal-information-yield.
 
 **(Descended from TF-02.)**

@@ -5,7 +5,7 @@ status: exact
 depends:
   - agent-model
   - event-driven-dynamics
-  - recursive-update-proof
+  - recursive-update-derivation
 ---
 
 # Recursive Update
@@ -15,7 +15,7 @@ For finite agents this is computational necessity; for agents with unlimited com
 
 ## Formal Expression
 
-*[Derived (recursive-update, from temporal axiom and M_t completeness)]*
+*[Derived (recursive-update, from temporal postulate and M_t completeness)]*
 
 **Event-driven update:**
 

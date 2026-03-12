@@ -1,7 +1,7 @@
 ---
 slug: change-distance
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - atomic-changeset
 ---

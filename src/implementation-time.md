@@ -1,7 +1,7 @@
 ---
 slug: implementation-time
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - feature-definition
   - comprehension-time

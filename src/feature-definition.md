@@ -1,7 +1,7 @@
 ---
 slug: feature-definition
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - software-scope
 ---

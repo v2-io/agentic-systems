@@ -23,7 +23,7 @@ Every segment file begins with:
 ```yaml
 ---
 slug: the-slug-name
-type: axiom
+type: postulate
 status: exact
 depends:
   - prerequisite-slug-1
@@ -35,12 +35,12 @@ depends:
 
 | Type | Meaning |
 |------|---------|
-| `axiom` | Tautological or foundational — cannot be derived, only accepted |
+| `postulate` | Tautological or foundational — cannot be derived, only accepted |
 | `definition` | Introduces a quantity, object, or notation |
 | `scope` | Restricts or broadens the domain under discussion |
 | `formulation` | Representational or modeling choice (could be different) |
 | `derived` | Logical consequence of prior claims under stated assumptions |
-| `theorem` | Formally stated and proved (or proof-sketched) |
+| `result` | Formally stated with a detailed derivation |
 | `corollary` | Follows directly from a theorem |
 | `hypothesis` | Structurally motivated, needs validation |
 | `normative` | Grounded in axioms but requiring a precondition that must be verified |
@@ -49,7 +49,7 @@ depends:
 | `discussion` | Conceptual or normative claim used for interpretation |
 | `measurement` | Operationalization of a theoretical quantity |
 | `proposed-schema` | Mathematical shape identified, formal content pending |
-| `proof` | Complete formal proof backing a theorem or derived claim |
+| `derivation` | Complete formal derivation backing a result or derived claim |
 | `worked-example` | End-to-end domain instantiation validating the theory chain |
 | `detail` | Extended operational or technical material supporting other claims |
 | `sketch` | Outlines an approach or framework; direction identified, rigor pending |
@@ -59,7 +59,7 @@ depends:
 
 | Status | Meaning |
 |--------|---------|
-| `first-principled` | Axiomatic or tautological |
+| `axiomatic` | Foundational or tautological |
 | `exact` | Mathematically validated under stated assumptions |
 | `robust-qualitative` | Survives across assumptions; specific form approximate |
 | `heuristic` | Useful approximation; quantitative form may not hold |
@@ -170,7 +170,7 @@ Inline tags before equations mark their epistemic status. These follow TFT conve
 *[Formulation]*
 *[Discussion]*
 *[Assumption]*
-*[Axiom (slug-name)]*
+*[Postulate (slug-name)]*
 ```
 
 

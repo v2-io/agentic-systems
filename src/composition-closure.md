@@ -53,7 +53,7 @@ This criterion replaces intuitive questions about "where the boundary of an agen
 
 Without admissibility constraints on $\mathcal{P}_{adm}$ and $\mathcal{M}_{adm}$, closure would be trivial (e.g., arbitrarily curve-fitting an open-loop model). By forcing the macro-components to retain the structure of an ACT agent, the minimal closure defect $\varepsilon^*$ quantifies the irreducible cost of being multiple. High qualitative unity (shared models, shared objectives) strongly predicts a low $\varepsilon^*$.
 
-**Relationship to #composition-consistency.** The Section I axiom requires that ACT's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." Other operationalizations are possible (e.g., behavioral equivalence, information-theoretic measures), making this a formulation choice rather than a derived consequence.
+**Relationship to #composition-consistency.** The Section I postulate requires that ACT's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." Other operationalizations are possible (e.g., behavioral equivalence, information-theoretic measures), making this a formulation choice rather than a derived consequence.
 
 ## Working Notes
 - The admissibility constraints are the hard part and currently serve as placeholders. What exactly must the macro-agent satisfy? Recursive update? Directed separation? The full scope condition? Specifying $\mathcal{M}_{adm}$ is where the real content will live.

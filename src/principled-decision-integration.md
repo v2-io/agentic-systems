@@ -36,7 +36,7 @@ where $\alpha, \beta$ are empirical proportionality constants, $h$ and $g$ encod
 
 ## Epistemic Status
 
-*Derived* from #temporal-optimality — the optimization is the direct application of the least-time axiom to the full cost structure. *Conditional* on the proportional relationships from #conceptual-alignment (hypothesis), #changeset-size-principle (empirical), and #change-proximity-principle (conditional). The expanded form inherits the weakest epistemic status of its inputs: the alignment term is discussion-grade, the proximity cost function is uncertain in form. The integration structure itself is exact; the terms being integrated are approximate.
+*Derived* from #temporal-optimality — the optimization is the direct application of the least-time postulate to the full cost structure. *Conditional* on the proportional relationships from #conceptual-alignment (hypothesis), #changeset-size-principle (empirical), and #change-proximity-principle (conditional). The expanded form inherits the weakest epistemic status of its inputs: the alignment term is discussion-grade, the proximity cost function is uncertain in form. The integration structure itself is exact; the terms being integrated are approximate.
 
 The full optimization is intractable in practice — it requires knowing the probability distribution of all future features and the exact impact of current decisions on future costs. The practical value is as a decision *framework* that structures the tradeoff space, not as a computable optimum.
 

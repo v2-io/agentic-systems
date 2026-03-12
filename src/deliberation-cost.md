@@ -35,7 +35,7 @@ $$\Delta\eta^*(\Delta\tau) \cdot \|\delta_{\text{post}}\| > \rho_{\text{delib}} 
 
 where $\Delta\eta^*(\Delta\tau)$ is the improvement in post-deliberation update gain and $\|\delta_{\text{post}}\|$ is the mismatch magnitude the agent will face when it resumes acting.
 
-### Proof Sketch
+### Derivation
 
 1. Without deliberation, the agent acts immediately at current tempo $\mathcal{T}_0 = \nu \cdot \eta^*_0$.
 2. With deliberation of duration $\Delta\tau$, the agent pauses, then acts with improved gain $\eta^*_0 + \Delta\eta^*$. But during the pause, mismatch has grown by $\rho_{\text{delib}} \cdot \Delta\tau$.

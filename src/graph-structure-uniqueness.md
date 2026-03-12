@@ -1,6 +1,6 @@
 ---
 slug: graph-structure-uniqueness
-type: proof
+type: derivation
 status: sketch
 depends:
   - strategy-dag
@@ -10,11 +10,11 @@ depends:
 
 # Graph Structure Uniqueness
 
-Four operational axioms — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — force the strategy representation to be a directed acyclic graph with the Markov property.
+Four operational postulates — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — force the strategy representation to be a directed acyclic graph with the Markov property.
 
 ## Formal Expression
 
-### The Axioms
+### The Postulates
 
 Four properties that a strategy representation must satisfy. Each is independently motivated from the adaptive-systems foundation.
 
@@ -24,7 +24,7 @@ Four properties that a strategy representation must satisfy. Each is independent
 
 If component $A$ of the strategy causally produces component $B$, then $A$ temporally precedes $B$. The strategy representation must respect this directionality — edges point from causes to effects, from actions to outcomes, from prerequisites to goals.
 
-This is a consequence of the temporal axiom ( #causal-structure): the arrow of time is constitutive, not incidental. Reversing a causal edge would mean effects precede causes, which is physically impossible.
+This is a consequence of the temporal postulate ( #causal-structure): the arrow of time is constitutive, not incidental. Reversing a causal edge would mean effects precede causes, which is physically impossible.
 
 #### P2: Probabilistic Uncertainty
 
@@ -72,7 +72,7 @@ Each edge carries uncertainty: $P(X_i \mid \text{Pa}(X_i))$. By P2 (Cox), this i
 
 $$X_i \perp \text{NonDesc}(X_i) \mid \text{Pa}(X_i)$$
 
-**Proof sketch.** Suppose the agent updates its belief about $X_i$ using only $\text{Pa}(X_i)$ — i.e., it computes $P(X_i \mid \text{Pa}(X_i))$ without considering other variables. For this to be correct (to match the full conditional $P(X_i \mid \text{Pa}(X_i), \text{other evidence})$), we need:
+**Derivation sketch.** Suppose the agent updates its belief about $X_i$ using only $\text{Pa}(X_i)$ — i.e., it computes $P(X_i \mid \text{Pa}(X_i))$ without considering other variables. For this to be correct (to match the full conditional $P(X_i \mid \text{Pa}(X_i), \text{other evidence})$), we need:
 
 $$P(X_i \mid \text{Pa}(X_i), \text{NonDesc}(X_i)) = P(X_i \mid \text{Pa}(X_i))$$
 
@@ -86,7 +86,7 @@ $$P(X_1, \ldots, X_n) = \prod_{i=1}^{n} P(X_i \mid \text{Pa}(X_i))$$
 
 This is the defining property of a Bayesian network. So P3 forces the strategy to be representable as a Bayesian network.
 
-**Gap.** The step from "local updates suffice" to "the Markov condition holds" is standard in the graphical models literature (Lauritzen 1996, Koller & Friedman 2009), but connecting it rigorously to ACT's specific axioms requires spelling out the full argument. In particular, other sparse factorizations (e.g., message-passing structures on factor graphs) may also support locality without requiring the parent-conditional Markov property specifically. The argument above shows that the Markov condition is *sufficient* for P3; the claim that it is *necessary* (or that only Markov-factored representations support correct local revision) needs tightening.
+**Gap.** The step from "local updates suffice" to "the Markov condition holds" is standard in the graphical models literature (Lauritzen 1996, Koller & Friedman 2009), but connecting it rigorously to ACT's specific postulates requires spelling out the full argument. In particular, other sparse factorizations (e.g., message-passing structures on factor graphs) may also support locality without requiring the parent-conditional Markov property specifically. The argument above shows that the Markov condition is *sufficient* for P3; the claim that it is *necessary* (or that only Markov-factored representations support correct local revision) needs tightening.
 
 #### Step 4: P1 + finite horizon implies acyclicity (proved)
 
@@ -104,9 +104,9 @@ P1 (directed edges) + P2 (probabilistic) + P3 (Markov condition) + P4 (internal 
 
 This resolves a former known fragility in the theory. Acyclicity of $\Sigma_t$ is derived, not assumed.
 
-**Theorem.** For a strategy representation over a finite future horizon, temporal ordering forces acyclicity.
+**Result.** For a strategy representation over a finite future horizon, temporal ordering forces acyclicity.
 
-**Proof.**
+**Derivation.**
 
 1. Each node $X_i$ in $\Sigma_t$ represents a future event or state with temporal position $\tau_i > t$ (the future time at which the step occurs or the state is evaluated).
 2. Each edge $X_i \to X_j$ requires $\tau_i \lt \tau_j$ (P1: causes temporally precede effects).
@@ -123,7 +123,7 @@ Formally: a finite set with a strict partial order (future events ordered by tim
 
 ### What Is Forced vs. What Is Chosen
 
-| Property | Forcing axiom | Strength |
+| Property | Forcing postulate | Strength |
 |---|---|---|
 | Directed edges | Temporal ordering (P1, #causal-structure) | Proved |
 | Probabilistic uncertainty | Cox's theorem (P2) | Proved |
@@ -135,7 +135,7 @@ Formally: a finite set with a strict partial order (future events ordered by tim
 | Single-parameter edges | Parsimony / IB | Formulation choice |
 | Specific node ontology | — | Formulation choice |
 
-The dividing line: the graph structure (DAG with Markov property) is forced by operational axioms. The parameterization (AND/OR, CPT form, edge semantics) is a formulation choice within the forced structure, motivated by parsimony and domain fit but not by mathematical necessity.
+The dividing line: the graph structure (DAG with Markov property) is forced by operational postulates. The parameterization (AND/OR, CPT form, edge semantics) is a formulation choice within the forced structure, motivated by parsimony and domain fit but not by mathematical necessity.
 
 ### Equivalence Class
 
@@ -154,13 +154,13 @@ The correct claim is narrow: for a given factorized distribution, DAG and factor
 
 ## Epistemic Status
 
-The acyclicity derivation is *exact* — it follows from temporal ordering over a finite horizon via standard order theory. The individual axioms P1, P2, and P4 are each well-grounded (temporal structure, Cox's theorem, and chain fragility respectively). The overall argument that graph structure is forced is well-motivated but rests on the P3 step, which is currently a *sketch*. The step from local revisability to the Markov condition is standard in the graphical models literature (Lauritzen 1996, Koller & Friedman 2009), but connecting it to ACT's specific axioms — and establishing that the Markov condition is *necessary* (not merely sufficient) for correct local revision — requires spelling out the full argument. Other sparse factorizations may also support locality.
+The acyclicity derivation is *exact* — it follows from temporal ordering over a finite horizon via standard order theory. The individual postulates P1, P2, and P4 are each well-grounded (temporal structure, Cox's theorem, and chain fragility respectively). The overall argument that graph structure is forced is well-motivated but rests on the P3 step, which is currently a *sketch*. The step from local revisability to the Markov condition is standard in the graphical models literature (Lauritzen 1996, Koller & Friedman 2009), but connecting it to ACT's specific postulates — and establishing that the Markov condition is *necessary* (not merely sufficient) for correct local revision — requires spelling out the full argument. Other sparse factorizations may also support locality.
 
 Max attainable: *exact* for the acyclicity result (already there). For the full graph-structure-is-forced claim: *exact* if P3 implies Markov can be tightened to a proof; otherwise the ceiling is *robust-qualitative* (the conclusion is right, the specific forcing path needs work).
 
 The AND/OR restriction is a *hypothesis* for binary outcomes, grounded in Boolean completeness and parsimony. For non-binary outcomes, it does not apply and richer parameterizations within the forced graphical structure are needed.
 
-The analogy to Cox's theorem — consistency axioms force probability; operational axioms force graphical structure — is suggestive but not established. Cox's theorem has a formal proof; this argument has a proof sketch with one step that needs tightening. The analogy is worth stating as motivation but should not be relied on as evidence.
+The analogy to Cox's theorem — consistency axioms force probability; operational postulates force graphical structure — is suggestive but not established. Cox's theorem has a formal proof; this argument has a derivation sketch with one step that needs tightening. The analogy is worth stating as motivation but should not be relied on as evidence.
 
 ## Discussion
 

@@ -10,32 +10,32 @@ reference document. For the canonical theory structure, see
 ### Written — Section I (28 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
-| [temporal-optimality](src/temporal-optimality.md) | Axiom | Needs review |
+| [temporal-optimality](src/temporal-optimality.md) | Postulate | Needs review |
 | [agent-environment](src/agent-environment.md) | Definition | Needs review |
 | [observation-function](src/observation-function.md) | Definition | Needs review |
 | [action-transition](src/action-transition.md) | Definition | Needs review |
 | [scope-condition](src/scope-condition.md) | Scope | Needs review |
-| [composition-consistency](src/composition-consistency.md) | Axiom | Scale invariance requirement. Source: spike-agent-composition.md §1, §9. |
+| [composition-consistency](src/composition-consistency.md) | Postulate | Scale invariance requirement. Source: spike-agent-composition.md §1, §9. |
 | [agent-model](src/agent-model.md) | Formulation | Needs review |
 | [information-bottleneck](src/information-bottleneck.md) | Formulation | Needs review |
 | [model-sufficiency](src/model-sufficiency.md) | Definition | Needs review |
 | [model-class-fitness](src/model-class-fitness.md) | Definition | Needs review |
-| [causal-structure](src/causal-structure.md) | Axiom | Needs review |
+| [causal-structure](src/causal-structure.md) | Postulate | Needs review |
 | [pearl-causal-hierarchy](src/pearl-causal-hierarchy.md) | Definition | Needs review |
 | [chronica](src/chronica.md) | Definition | Needs review |
 | [event-driven-dynamics](src/event-driven-dynamics.md) | Formulation | Needs review |
 | [recursive-update](src/recursive-update.md) | Derived | Needs review |
 | [action-selection](src/action-selection.md) | Derived | Needs review |
 | [mismatch-signal](src/mismatch-signal.md) | Definition | Needs review |
-| [mismatch-decomposition](src/mismatch-decomposition.md) | Theorem | Needs review |
+| [mismatch-decomposition](src/mismatch-decomposition.md) | Result | Needs review |
 | [update-gain](src/update-gain.md) | Empirical | Needs review |
 | [causal-information-yield](src/causal-information-yield.md) | Definition | Needs review |
 | [adaptive-tempo](src/adaptive-tempo.md) | Definition | Needs review |
 | [mismatch-dynamics](src/mismatch-dynamics.md) | Hypothesis | Needs review |
 | [deliberation-cost](src/deliberation-cost.md) | Derived | Needs review |
-| [persistence-condition](src/persistence-condition.md) | Theorem | Needs review |
-| [sector-condition-stability](src/sector-condition-stability.md) | Theorem | Needs review |
-| [structural-adaptation-necessity](src/structural-adaptation-necessity.md) | Theorem | Needs review |
+| [persistence-condition](src/persistence-condition.md) | Result | Needs review |
+| [sector-condition-stability](src/sector-condition-stability.md) | Result | Needs review |
+| [structural-adaptation-necessity](src/structural-adaptation-necessity.md) | Result | Needs review |
 | [temporal-nesting](src/temporal-nesting.md) | Derived | Needs review |
 | [agent-identity](src/agent-identity.md) | Discussion | Needs review |
 
@@ -61,14 +61,14 @@ reference document. For the canonical theory structure, see
 | [observability-dominance](src/observability-dominance.md) | Derived | Low σ → frozen edges → epistemically dead paths. |
 | [edge-update-via-gain](src/edge-update-via-gain.md) | Hypothesis | Gain principle extended to edge credences. Signal function open. |
 | [structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Formulation | Six operations from reweighting to full restructure. |
-| [strategy-persistence-schema](src/strategy-persistence-schema.md) | Proposed schema | Sector conditions for Σ_t. Schema, not theorem — needs instantiation. |
+| [strategy-persistence-schema](src/strategy-persistence-schema.md) | Proposed schema | Sector conditions for Σ_t. Schema, not result — needs instantiation. |
 
 ### Written — Section IV (20 segments; 4 missing, 0 old remain)
 | Slug | Type | Notes |
 |------|------|-------|
 | [software-scope](src/software-scope.md) | Scope | Needs review |
 | [feature-definition](src/feature-definition.md) | Definition | Needs review |
-| [specification-bound](src/specification-bound.md) | Theorem | Needs review; written by earlier agent with less context. Includes communication-as-bottleneck corollary. |
+| [specification-bound](src/specification-bound.md) | Result | Needs review; written by earlier agent with less context. Includes communication-as-bottleneck corollary. |
 | [change-expectation-baseline](src/change-expectation-baseline.md) | Derived | Median not expectation — key finding. Includes investment-scaling corollary. |
 | [comprehension-time](src/comprehension-time.md) | Definition | Needs review |
 | [implementation-time](src/implementation-time.md) | Definition | Needs review |
@@ -100,21 +100,21 @@ reference document. For the canonical theory structure, see
 | [communication-gain](src/communication-gain.md) | Hypothesis | Trust-weighted inter-agent gain. From TFT Appendix F, F.2. |
 | [adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | Observation | Three regimes: b=2 (det/coupled), b=1.5 (stoch/coupled), b→1 (non-coupled). From track-b sims. |
 | [observation-gates-advantage](src/observation-gates-advantage.md) | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E. |
-| [per-dimension-persistence](src/per-dimension-persistence.md) | Theorem | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F. |
+| [per-dimension-persistence](src/per-dimension-persistence.md) | Result | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F. |
 | [team-persistence](src/team-persistence.md) | Derived | Distributed tempo, cooperative-adversarial ρ decomposition, 3-lever persistence. From TFT F.3. |
-| [adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Theorem | Superlinear exponent b=2 (det/coupled). Analytical theorem + regime conditions. From TFT Cor 11.2. |
+| [adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Result | Superlinear exponent b=2 (det/coupled). Analytical result + regime conditions. From TFT Cor 11.2. |
 
 ### Written — Appendices (8 segments)
 | Slug | Type | Notes |
 |------|------|-------|
-| [sector-condition-proof](src/sector-condition-proof.md) | Proof | Full Lyapunov proofs (A.1, A.2). |
-| [recursive-update-proof](src/recursive-update-proof.md) | Proof | Uniqueness proof + 7 counterexample attacks. |
+| [sector-condition-derivation](src/sector-condition-derivation.md) | Derivation | Full Lyapunov derivations (A.1, A.2). |
+| [recursive-update-derivation](src/recursive-update-derivation.md) | Derivation | Uniqueness derivation + 7 counterexample attacks. |
 | [multi-timescale-stability](src/multi-timescale-stability.md) | Sketch | N-timescale singular perturbation framework. |
 | [operationalization](src/operationalization.md) | Detail | Estimation procedures for ACT quantities. |
 | [worked-example-kalman](src/worked-example-kalman.md) | Worked example | End-to-end exact mapping. |
 | [worked-example-bandit](src/worked-example-bandit.md) | Worked example | End-to-end approximate mapping; persistence failure diagnostic. |
 | [simulation-results](src/simulation-results.md) | Detail | 6 variants validating/refining Section I predictions. Track-b reference. |
-| [graph-structure-uniqueness](src/graph-structure-uniqueness.md) | Proof | 4 axioms → DAG structure. Acyclicity proved; P3→Markov sketch. |
+| [graph-structure-uniqueness](src/graph-structure-uniqueness.md) | Derivation | 4 postulates → DAG structure. Acyclicity proved; P3→Markov sketch. |
 
 ### Not Yet Written — 10 segments remaining
 
@@ -175,7 +175,7 @@ necessity is the goal and is plausibly achievable — surrounded by
 **canonical formulations** (good representational choices, not forced) and
 **empirical/heuristic enrichment** (testable claims, design guidance).
 Keeping these layers explicit prevents two failure modes: trying to prove
-inherently empirical claims, and settling for "formulation" when a theorem
+inherently empirical claims, and settling for "formulation" when a result
 is within reach.
 
 ### Inevitability core (~15 segments)
@@ -185,15 +185,15 @@ the *only* compatible form." Mathematical inevitability is the ceiling.
 
 | Segment | Why inevitability is plausible |
 |---------|-------------------------------|
-| #recursive-update + #recursive-update-proof | Three constraints → unique recursive form. Strongest result in the theory. |
+| #recursive-update + #recursive-update-derivation | Three constraints → unique recursive form. Strongest result in the theory. |
 | #mismatch-decomposition | Bias-variance decomposition: mathematical identity once mismatch is defined. |
 | #chain-confidence-decay | log(product) = sum(logs). Pure algebraic identity. |
 | #persistence-condition | Given sector conditions, the threshold follows by Lyapunov. |
-| #sector-condition-stability + #sector-condition-proof | Lyapunov stability theorem applied to the mismatch dynamics. |
+| #sector-condition-stability + #sector-condition-derivation | Lyapunov stability result applied to the mismatch dynamics. |
 | #structural-adaptation-necessity | Parametric update converges within model class; wrong class → structural change necessary. |
 | #orient-cascade | Resolution order forced by information dependency (M_t before Σ_t before O_t). |
 | #satisfaction-gap / #control-regret | Two gaps are arithmetic once V_ideal, A_O, V_current are defined. The diagnostic value is the insight. |
-| #causal-hierarchy-requirement | Application of Bareinboim et al.'s causal hierarchy theorem to Q_O evaluation. |
+| #causal-hierarchy-requirement | Application of Bareinboim et al.'s causal hierarchy result to Q_O evaluation. |
 | #loop-interventional-access | Feedback loop generates interventional data by construction — structural property. |
 | #directed-separation | f_M independence from G_t follows from the update structure, given scope condition. |
 | #deliberation-cost | Think-vs-act threshold from information-theoretic argument. |
@@ -256,7 +256,7 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 - Bridge lemma for composition closure: formally proving small expected
   component-wise errors guarantee bounded trajectory divergence under
   Lipschitz stability conditions.
-- Strategy persistence schema → theorem: requires formalizing strategic
+- Strategy persistence schema → result: requires formalizing strategic
   correction function, characterizing $\rho_\Sigma$ (rate of environmental
   causal drift), and verifying sector condition. Substantial Lyapunov work.
 - Meta-adaptation of $\Pi$ and $N_h$: can the agent structurally adapt its
@@ -329,7 +329,7 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
    #temporal-optimality load-bearing.
 7. **$p^n$ is the special case**: Robust result is additive log-confidence
    growth.
-8. **Strategy persistence is a theorem schema**: Need strategic error state,
+8. **Strategy persistence is a result schema**: Need strategic error state,
    correction operator, disturbance class.
 9. **Directed separation is conditional**: $f_M$ is $G_t$-independent, but
    closed-loop $M$ transition depends on $G_t$ through action. Precise claim
@@ -460,14 +460,14 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 | ~~old-tf-09-deliberation-cost~~ | ~~Prop 9.1, deliberation threshold~~ | **Archived.** → #deliberation-cost. |
 | ~~old-tf-10-structural-adaptation~~ | ~~Prop 10.1, destruction-creation, overfitting~~ | **Archived.** → #structural-adaptation-necessity + #model-sufficiency + #model-class-fitness. |
 | old-tf-11-tempo-persistence | Temporal nesting table, mismatch ODE, adversarial dynamics, observation quality, per-dimension | **Mostly absorbed** across #adaptive-tempo, #persistence-condition, #sector-condition-stability, etc. Mismatch ODE as named hypothesis, speed-quality substitutability — enrich then archive. |
-| ~~old-tf-appendix-a-lyapunov~~ | ~~Props A.1–A.3, Cor A.3.1, full proofs, Prop A.4 sketch~~ | **Absorbed.** → #sector-condition-proof (A.1–A.2), #adversarial-destabilization (A.3, A.3.1), #multi-timescale-stability (A.4). Ready to archive. |
+| ~~old-tf-appendix-a-lyapunov~~ | ~~Props A.1–A.3, Cor A.3.1, full proofs, Prop A.4 sketch~~ | **Absorbed.** → #sector-condition-derivation (A.1–A.2), #adversarial-destabilization (A.3, A.3.1), #multi-timescale-stability (A.4). Ready to archive. |
 | ~~old-tf-appendix-b-operationalization~~ | ~~Estimation procedures for all TFT quantities~~ | **Absorbed.** → #operationalization. Ready to archive. |
 | ~~old-tf-appendix-c-kalman-example~~ | ~~Complete Kalman worked example~~ | **Absorbed.** → #worked-example-kalman. Ready to archive. |
 | ~~old-tf-appendix-d-rl-example~~ | ~~Nonstationary bandit worked example~~ | **Absorbed.** → #worked-example-bandit. Ready to archive. |
 | ~~old-tf-appendix-e-tft-core~~ | ~~Condensed formal chain~~ | **Archived.** Superseded by CURRENT-FULL-THEORY.md. |
 | old-tf-appendix-f-multi-agent | Communication gain, trust, distributed tempo, topology, game theory | **Partially absorbed.** → #communication-gain (F.2 core), #adversarial-destabilization (uses coupling model). **Still needed from F:** distributed tempo → #team-persistence (F.3), topology analysis (F.4), game-theoretic integration (F.5), trust transitivity details, falsification predictions (F.7). Extract as Section III segments get built. |
 | ~~old-tf-appendix-g-agent-identity~~ | ~~Non-forkability, clone problem~~ | **Archived.** → #agent-identity. |
-| ~~old-tf-recursive-update-proof~~ | ~~Full uniqueness proof~~ | **Absorbed.** → #recursive-update-proof. Ready to archive. |
+| ~~old-tf-recursive-update-derivation~~ | ~~Full uniqueness proof~~ | **Absorbed.** → #recursive-update-derivation. Ready to archive. |
 | old-tf-goal-intent-gap | What TFT lacked (goals/intent) | **Historical.** The gap ACT exists to fill. Can archive when comfortable. |
 | old-tf-citations-catalog | TFT reference catalog | **Reference material.** Useful for paper writing. |
 | old-tf-novelty-analysis | What's novel in TFT | **Reference material.** Useful for positioning. |
@@ -588,7 +588,7 @@ on top. Presentation implications:
 ## Governing Objectives
 
 1. **Subsume TFT as the adaptive-systems foundation.** The sector-condition/Lyapunov framework is primary; the linear ODE is pedagogical. TFT is absorbed, not extended.
-2. **Derive purposeful agency from first principles.** Start with the simplest abstract purposeful object and derive the need for richer structure from mathematical necessity — specifically from the causal hierarchy theorem.
+2. **Derive purposeful agency from first principles.** Start with the simplest abstract purposeful object and derive the need for richer structure from mathematical necessity — specifically from the causal hierarchy result (Bareinboim et al.).
 3. **Make TST a rigorous software-domain instantiation of ACT.** Every claim gets epistemic tagging; ungrounded assertions are derived, retagged, or removed.
 4. **Develop multi-agent dynamics to the degree needed for TST grounding.** Cooperative, adversarial, mixed. Not a complete multi-agent theory, but enough for software teams and adversarial dynamics.
 5. **Maintain claim-segment structure throughout.** One claim per file, strictly incremental.

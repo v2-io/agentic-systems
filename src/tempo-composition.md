@@ -27,7 +27,7 @@ $$ C_{\text{coord}} := \Big( \sum_{i=1}^N \mathcal{T}_i \Big) - \mathcal{T}_c $$
 
 *Sketch.* Max attainable: exact (with a complete proof). The inequality is structurally motivated: composition cannot create corrective capacity out of nothing, and internal reconciliation consumes tempo that doesn't contribute to external mismatch correction. A proof sketch exists (below) but the formal step from $\varepsilon^*$ to $C_{\text{coord}}$ — showing that the closure defect functionally determines the coordination penalty — remains open. The inequality $\mathcal{T}_c \leq \sum \mathcal{T}_i$ is almost certainly correct; the quantitative relationship $C_{\text{coord}}(\varepsilon^*)$ is the genuine open problem.
 
-### Proof sketch
+### Derivation sketch
 
 1. Tempo is a rate of mismatch correction ($\nu \cdot \eta^*_{\text{eff}}$).
 2. In the ideal case ($\varepsilon^* = 0$), every "tick" of an individual's ACT loop contributes directly to the macro ACT loop without friction. Thus $\mathcal{T}_c = \sum \mathcal{T}_i$ and $C_{\text{coord}} = 0$.

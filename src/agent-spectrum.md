@@ -1,7 +1,7 @@
 ---
 slug: agent-spectrum
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - agent-environment
   - agent-model

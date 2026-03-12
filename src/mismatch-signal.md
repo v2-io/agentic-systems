@@ -1,7 +1,7 @@
 ---
 slug: mismatch-signal
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - agent-model
   - observation-function

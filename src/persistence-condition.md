@@ -1,6 +1,6 @@
 ---
 slug: persistence-condition
-type: theorem
+type: result
 status: exact
 depends:
   - adaptive-tempo
@@ -25,7 +25,7 @@ where:
 
 **Assumptions.** Bounded disturbance ($\|w(t)\| \leq \rho$, GA-2) and sector condition on the correction function (GA-3). See #sector-condition-stability for the general nonlinear treatment from which this threshold emerges.
 
-### Proof Sketch
+### Derivation
 
 From the sector-condition analysis ( #sector-condition-stability):
 

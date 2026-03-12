@@ -1,7 +1,7 @@
 ---
 slug: scope-condition
 type: scope
-status: first-principled
+status: axiomatic
 depends:
   - agent-environment
   - observation-function

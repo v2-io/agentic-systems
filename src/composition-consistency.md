@@ -1,7 +1,7 @@
 ---
 slug: composition-consistency
-type: axiom
-status: first-principled
+type: postulate
+status: axiomatic
 depends:
   - scope-condition
 ---
@@ -12,7 +12,7 @@ ACT applies at every level of description where the scope condition is met. A te
 
 ## Formal Expression
 
-*[Axiom (composition-consistency)]*
+*[Postulate (composition-consistency)]*
 
 For any system $S$ satisfying the scope condition ( #scope-condition), and any decomposition of $S$ into subsystems $\{S_1, \ldots, S_n\}$ where each $S_i$ also satisfies the scope condition, ACT's predictions at the system level must be compatible with its predictions at the subsystem level. Specifically, composition laws must exist such that:
 
@@ -32,7 +32,7 @@ Most functioning groups easily satisfy this condition. A software team with dail
 
 ## Epistemic Status
 
-*First-principled.* The meta-requirement (cross-level compatibility) is a structural requirement for ACT's internal consistency — if the scope condition doesn't restrict which level the theory applies to, the predictions must not contradict across levels. The timescale separation condition is stated here as a sufficient condition for practical composition; its formal derivation requires the composition closure criterion ( #composition-closure) and the tempo composition inequality ( #tempo-composition) developed in Section III. The condition is not yet proved; it is stated early because it is intuitive, likely correct, and gives readers an immediate practical test.
+*Axiomatic.* The meta-requirement (cross-level compatibility) is a structural requirement for ACT's internal consistency — if the scope condition doesn't restrict which level the theory applies to, the predictions must not contradict across levels. The timescale separation condition is stated here as a sufficient condition for practical composition; its formal derivation requires the composition closure criterion ( #composition-closure) and the tempo composition inequality ( #tempo-composition) developed in Section III. The condition is not yet proved; it is stated early because it is intuitive, likely correct, and gives readers an immediate practical test.
 
 ## Discussion
 

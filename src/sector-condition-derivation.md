@@ -1,15 +1,15 @@
 ---
-slug: sector-condition-proof
-type: proof
+slug: sector-condition-derivation
+type: derivation
 status: exact
 depends:
   - adaptive-tempo
   - mismatch-signal
 ---
 
-# Sector Condition Stability — Lyapunov Proof
+# Sector Condition Stability — Lyapunov Derivation
 
-Complete Lyapunov proofs of bounded mismatch and adaptive reserve for the sector-condition results stated in #sector-condition-stability.
+Complete Lyapunov derivations of bounded mismatch and adaptive reserve for the sector-condition results stated in #sector-condition-stability.
 
 ## Motivation
 
@@ -141,7 +141,7 @@ without mismatch diverging (where $R$ is the radius of the sector-condition regi
 
 ## Epistemic Status
 
-The setup and assumptions are *definitions* — they specify what we mean by "correction function" and "disturbance." Propositions A.1 and A.2 are *exact* — they follow from the assumptions via standard Lyapunov theory (Khalil 2002, Chapters 4 and 9). The assumptions themselves (sector condition, bounded disturbance) are *empirical claims* about the qualitative behavior of real correction dynamics. The sector-condition framework originates with Lur'e (1957); the Lyapunov stability results are standard. The application to adaptive agents under the ACT framework is new but the mathematics is not.
+The setup and assumptions are *definitions* — they specify what we mean by "correction function" and "disturbance." Propositions A.1 and A.2 are *exact* — they follow from the assumptions via standard Lyapunov theory (Khalil 2002[^khalil2002], Chapters 4 and 9). The assumptions themselves (sector condition, bounded disturbance) are *empirical claims* about the qualitative behavior of real correction dynamics. The sector-condition framework originates with Lur'e (1957); the Lyapunov stability results are standard. The application to adaptive agents under the ACT framework is new but the mathematics is not.
 
 ## Discussion
 

@@ -1,6 +1,6 @@
 ---
-slug: recursive-update-proof
-type: proof
+slug: recursive-update-derivation
+type: derivation
 status: exact
 depends:
   - agent-model
@@ -9,9 +9,9 @@ depends:
   - scope-condition
 ---
 
-# Recursive Update — Uniqueness Proof
+# Recursive Update — Uniqueness Derivation
 
-Proof that $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the *unique* update form consistent with directed time, partial observability, and state completeness. Not merely one option, but the only one.
+Derivation showing that $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the *unique* update form consistent with directed time, partial observability, and state completeness. Not merely one option, but the only one.
 
 ## Setup
 
@@ -31,7 +31,7 @@ The question: of these, which can the update $M_{\tau^+}$ depend on?
 
 ## The Three Constraints
 
-**Constraint 1 — Arrow of time ( #causal-structure axiom).** Events are temporally ordered and this ordering is irreversible. An update occurring at time $\tau$ cannot depend on events that have not yet occurred:
+**Constraint 1 — Arrow of time ( #causal-structure postulate).** Events are temporally ordered and this ordering is irreversible. An update occurring at time $\tau$ cannot depend on events that have not yet occurred:
 
 $$M_{\tau^+} \text{ cannot depend on } \{e_{\tau'}\}_{\tau' > \tau}$$
 
@@ -49,15 +49,15 @@ $$M_{\tau^+} \text{ cannot depend on } \mathcal{C}_{\tau^-} \text{ or } \{M_{\ta
 
 This constraint does the most interesting work and deserves careful examination (see Discussion below).
 
-## The Proof
+## The Derivation
 
-**Theorem (Recursive Update Uniqueness).** Under Constraints 1–3, the model update at event time $\tau$ must have the form
+**Result (Recursive Update Uniqueness).** Under Constraints 1–3, the model update at event time $\tau$ must have the form
 
 $$M_{\tau^+} = f(M_{\tau^-}, e_\tau)$$
 
 for some function $f: \mathcal{M} \times \mathcal{E} \to \mathcal{M}$. No other update form is consistent with the three constraints.
 
-**Proof.** Consider the most general possible update. The updated state $M_{\tau^+}$ is a function of *all accessible information*:
+**Derivation.** Consider the most general possible update. The updated state $M_{\tau^+}$ is a function of *all accessible information*:
 
 $$M_{\tau^+} = F(\text{accessible information at } \tau)$$
 
@@ -139,7 +139,7 @@ Agents A and B share a common memory bank (shared database). The clean resolutio
 
 ### Attack 5: External randomness not in $e_\tau$
 
-Hardware thermal noise used in the update. The stochastic case $M_{\tau^+} \sim P(\cdot \mid M_{\tau^-}, e_\tau)$ is a special case of $f$ where $f$ is a randomized function. The *form* — dependence on exactly $(M_{\tau^-}, e_\tau)$ — is preserved. The theorem statement should explicitly allow stochastic $f$.
+Hardware thermal noise used in the update. The stochastic case $M_{\tau^+} \sim P(\cdot \mid M_{\tau^-}, e_\tau)$ is a special case of $f$ where $f$ is a randomized function. The *form* — dependence on exactly $(M_{\tau^-}, e_\tau)$ — is preserved. The result statement should explicitly allow stochastic $f$.
 
 ### Attack 6: Time-dependent updates
 
@@ -151,7 +151,7 @@ An agent with $M_{\tau^-} \supseteq \mathcal{C}_{\tau^-}$ is entirely consistent
 
 ## Epistemic Status
 
-The theorem is correct but partly definitional. The three constraints have different epistemic characters:
+The result is correct but partly definitional. The three constraints have different epistemic characters:
 
 | Constraint | Character | Can it be violated? |
 |------------|-----------|---------------------|
@@ -161,11 +161,11 @@ The theorem is correct but partly definitional. The three constraints have diffe
 
 C1 and C2 do genuine eliminative work — they rule out update forms that depend on future events or on raw $\Omega$. These are non-trivial constraints.
 
-C3 is a definitional commitment that produces the Markov structure. It cannot be "violated" because any violation is absorbed by expanding $M$. This is not a weakness — it's the nature of the claim. The theorem says: *the Markovian analysis is the only one consistent with C1 + C2 + the definition of $M$ as complete*. The alternative — an update that depends on something outside $M$ — is not "wrong" but rather means $M$ was misspecified.
+C3 is a definitional commitment that produces the Markov structure. It cannot be "violated" because any violation is absorbed by expanding $M$. This is not a weakness — it's the nature of the claim. The result says: *the Markovian analysis is the only one consistent with C1 + C2 + the definition of $M$ as complete*. The alternative — an update that depends on something outside $M$ — is not "wrong" but rather means $M$ was misspecified.
 
-**What the theorem says:** C1 eliminates a physically impossible class of updates (future-dependent). C2 eliminates a scope-excluded class ($\Omega$-dependent). After (1) and (2), the *only remaining question* is how the past enters: through the full history $\mathcal{C}_{\tau^-}$ or through a compressed state $M_{\tau^-}$. C3 says the agent *has* a complete state, and whatever that state is, it's all the agent has. The Markov form follows.
+**What the result says:** C1 eliminates a physically impossible class of updates (future-dependent). C2 eliminates a scope-excluded class ($\Omega$-dependent). After (1) and (2), the *only remaining question* is how the past enters: through the full history $\mathcal{C}_{\tau^-}$ or through a compressed state $M_{\tau^-}$. C3 says the agent *has* a complete state, and whatever that state is, it's all the agent has. The Markov form follows.
 
-**What the theorem does NOT say:** That $M$ must be a lossy compression (the agent could store full history). That the Markov property is "natural" or "optimal" (it's a consequence of how $M$ is defined). That continuous-coupling systems are event-driven (the event framework is one abstraction; $\dot{M} = g(M, u)$ is the more general one, arrived at by the same three constraints).
+**What the result does NOT say:** That $M$ must be a lossy compression (the agent could store full history). That the Markov property is "natural" or "optimal" (it's a consequence of how $M$ is defined). That continuous-coupling systems are event-driven (the event framework is one abstraction; $\dot{M} = g(M, u)$ is the more general one, arrived at by the same three constraints).
 
 ## Discussion
 
@@ -175,8 +175,8 @@ C3 is a definitional commitment that produces the Markov structure. It cannot be
 
 ## Working Notes
 
-- C3's definitional character is a feature, not a bug — but it must be stated honestly. The theorem is not "the update must be Markovian" but rather "the Markovian analysis is the *only* consistent one, given the modeling commitment of #agent-model." These sound the same but have different epistemic status.
+- C3's definitional character is a feature, not a bug — but it must be stated honestly. The result is not "the update must be Markovian" but rather "the Markovian analysis is the *only* consistent one, given the modeling commitment of #agent-model." These sound the same but have different epistemic status.
 - The continuous-coupling generalization (Attack 2) deserves a proper note somewhere: $\dot{M} = g(M, u)$ is the more general form, with event-driven updates as a special case. The three constraints produce the same argument structure in both cases.
 - The information-set formalization (Doob-Dynkin) provides the cleanest technical proof. It should probably be considered the primary proof path, with the elimination argument as the more intuitive exposition.
 
-*(Descended from TFT Appendix: Recursive Update Uniqueness Proof.)*
+*(Descended from TFT Appendix: Recursive Update Uniqueness Derivation.)*

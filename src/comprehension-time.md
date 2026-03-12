@@ -1,7 +1,7 @@
 ---
 slug: comprehension-time
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - feature-definition
   - software-scope

@@ -1,7 +1,7 @@
 ---
 slug: pearl-causal-hierarchy
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - causal-structure
   - scope-condition

@@ -1,7 +1,7 @@
 ---
 slug: event-driven-dynamics
 type: formulation
-status: first-principled
+status: axiomatic
 depends:
   - causal-structure
   - observation-function
@@ -44,7 +44,7 @@ Different channels have different noise characteristics. A noisy channel (high $
 
 ## Epistemic Status
 
-This is a *formulation choice*, not an axiom. The event-driven representation extends #causal-structure's recursive update to heterogeneous, asynchronous multi-channel interactions. The discrete-time form ($M_t = f(M_{t-1}, o_t, a_{t-1})$) from #recursive-update is a special case sufficient for many formal analyses — the event-driven formulation is needed only when multi-rate or asynchronous channels matter.
+This is a *formulation choice*, not a postulate. The event-driven representation extends #causal-structure's recursive update to heterogeneous, asynchronous multi-channel interactions. The discrete-time form ($M_t = f(M_{t-1}, o_t, a_{t-1})$) from #recursive-update is a special case sufficient for many formal analyses — the event-driven formulation is needed only when multi-rate or asynchronous channels matter.
 
 ## Discussion
 

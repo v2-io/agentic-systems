@@ -1,7 +1,7 @@
 ---
 slug: observation-function
 type: definition
-status: first-principled
+status: axiomatic
 depends:
   - agent-environment
 ---

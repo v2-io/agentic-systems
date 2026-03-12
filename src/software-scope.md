@@ -1,7 +1,7 @@
 ---
 slug: software-scope
 type: scope
-status: first-principled
+status: axiomatic
 depends:
   - scope-condition
   - temporal-optimality

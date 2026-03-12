@@ -1,6 +1,6 @@
 ---
 slug: specification-bound
-type: theorem
+type: result
 status: conditional
 depends:
   - temporal-optimality

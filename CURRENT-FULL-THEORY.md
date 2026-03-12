@@ -11,96 +11,97 @@ See `FORMAT.md` for segment file conventions. See `notation.md` for symbols, con
 
 Every slug is linked to its intended `src/{slug}.md` file, even when that file doesn't exist yet (`missing` or `old` stage). This is deliberate — the links serve as stable intent markers so the only ongoing maintenance is updating the Stage column. A `missing` link means no file exists; an `old` link means the content lives in a corresponding `src/old-*` source file awaiting conversion. Segments may also contain forward references (`#slug-name`) to not-yet-written segments; these are intentional dependency markers, not broken links.
 
-| Slug | Claim | Type | § | Stage |
-|------|-------|------|---|-------|
-| [#temporal-optimality](src/temporal-optimality.md) | Least-time is optimal | Axiom | I | draft |
-| [#agent-environment](src/agent-environment.md) | Agent-environment boundary | Definition | I | draft |
-| [#observation-function](src/observation-function.md) | Lossy, noisy observations | Definition | I | draft |
-| [#action-transition](src/action-transition.md) | Actions affect environment | Definition | I | draft |
-| [#scope-condition](src/scope-condition.md) | Where ACT applies | Scope | I | draft |
-| [#composition-consistency](src/composition-consistency.md) | Agent/subagent scale invariance | Axiom | I | draft |
-| [#causal-structure](src/causal-structure.md) | Irreducible causal structure | Axiom | I | draft |
-| [#pearl-causal-hierarchy](src/pearl-causal-hierarchy.md) | Three levels of causal reasoning | Definition | I | draft |
-| [#chronica](src/chronica.md) | Complete interaction history | Definition | I | draft |
-| [#agent-model](src/agent-model.md) | Compressed history as state | Formulation | I | draft |
-| [#information-bottleneck](src/information-bottleneck.md) | Optimal model compression | Formulation | I | draft |
-| [#model-sufficiency](src/model-sufficiency.md) | Predictive information retained | Definition | I | draft |
-| [#model-class-fitness](src/model-class-fitness.md) | Best achievable sufficiency | Definition | I | draft |
-| [#event-driven-dynamics](src/event-driven-dynamics.md) | Events in continuous time | Formulation | I | draft |
-| [#recursive-update](src/recursive-update.md) | State updates must be recursive | Derived | I | draft |
-| [#action-selection](src/action-selection.md) | Action as function of model | Derived | I | draft |
-| [#mismatch-signal](src/mismatch-signal.md) | Prediction error signal | Definition | I | draft |
-| [#mismatch-decomposition](src/mismatch-decomposition.md) | Model error + obs noise | Theorem | I | draft |
-| [#update-gain](src/update-gain.md) | Optimal update weighting | Empirical | I | draft |
-| [#causal-information-yield](src/causal-information-yield.md) | Information from interventions | Definition | I | draft |
-| [#adaptive-tempo](src/adaptive-tempo.md) | Rate of useful info acquisition | Definition | I | draft |
-| [#mismatch-dynamics](src/mismatch-dynamics.md) | Mismatch evolution ODE | Hypothesis | I | draft |
-| [#deliberation-cost](src/deliberation-cost.md) | Think vs act tradeoff | Derived | I | draft |
-| [#persistence-condition](src/persistence-condition.md) | Bounded mismatch condition | Theorem | I | draft |
-| [#sector-condition-stability](src/sector-condition-stability.md) | Nonlinear persistence (Lyapunov) | Theorem | I | draft |
-| [#structural-adaptation-necessity](src/structural-adaptation-necessity.md) | When parametric update fails | Theorem | I | draft |
-| [#temporal-nesting](src/temporal-nesting.md) | Timescale stratification | Derived | I | draft |
-| [#agent-identity](src/agent-identity.md) | Non-forkable causal trajectory | Discussion | I | draft |
-| [#agent-spectrum](src/agent-spectrum.md) | ±model × ±objective quadrants | Definition | II | draft |
-| [#complete-agent-state](src/complete-agent-state.md) | X_t = (M_t, G_t) | Formulation | II | draft |
-| [#objective-functional](src/objective-functional.md) | O_t parametrizes value | Definition | II | draft |
-| [#value-object](src/value-object.md) | Horizon/policy-conditioned value | Definition | II | draft |
-| [#strategy-dimension](src/strategy-dimension.md) | G_t = (O_t, Σ_t) split | Definition | II | draft |
-| [#causal-hierarchy-requirement](src/causal-hierarchy-requirement.md) | Level 2 needed for planning | Derived + Scope | II | draft |
-| [#loop-interventional-access](src/loop-interventional-access.md) | Feedback loop → Level 2 data | Derived | II | draft |
-| [#explicit-strategy-condition](src/explicit-strategy-condition.md) | When planning beats exploring | Normative | II | draft |
-| [#chain-confidence-decay](src/chain-confidence-decay.md) | Log-confidence additive in depth | Derived | II | draft |
-| [#and-or-scope](src/and-or-scope.md) | Conjunctive/disjunctive scope | Scope | II | draft |
-| [#strategy-dag](src/strategy-dag.md) | Strategy as probabilistic DAG | Definition | II | draft |
-| [#directed-separation](src/directed-separation.md) | Epistemic update is goal-blind | Derived + Scope | II | draft |
-| [#satisfaction-gap](src/satisfaction-gap.md) | Ideal vs best achievable | Definition | II | draft |
-| [#control-regret](src/control-regret.md) | Best achievable vs current | Definition | II | draft |
-| [#strategic-calibration](src/strategic-calibration.md) | Edge residuals | Definition | II | draft |
-| [#orient-cascade](src/orient-cascade.md) | Resolution order by info dep | Derived | II | draft |
-| [#observability-dominance](src/observability-dominance.md) | Unobservable edges freeze | Derived | II | draft |
-| [#edge-update-via-gain](src/edge-update-via-gain.md) | Gain extends to strategy edges | Hypothesis | II | draft |
-| [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous | Formulation | II | draft |
-| [#strategy-persistence-schema](src/strategy-persistence-schema.md) | Sector conditions for Σ_t | Proposed schema | II | draft |
-| [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | Scope | III | draft |
-| [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | Formulation | III | draft |
-| [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | Derived | III | draft |
-| [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | Definition | III | draft |
-| [#shared-intent](src/shared-intent.md) | IB-compressed purpose | Definition + Discussion | III | draft |
-| [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | Hypothesis | III | draft |
-| [#team-persistence](src/team-persistence.md) | Composite persistence condition | Derived | III | draft |
-| [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | Theorem | III | draft |
-| [#communication-gain](src/communication-gain.md) | Trust-weighted update gain for inter-agent channels | Hypothesis | III | draft |
-| [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop; includes effects spiral corollary | Derived | III | draft |
-| [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | α = 2, 3/2, or ~1 | Observation | III | draft |
-| [#observation-gates-advantage](src/observation-gates-advantage.md) | Obs noise gates advantage | Observation | III | draft |
-| [#per-dimension-persistence](src/per-dimension-persistence.md) | Weak dimension is bottleneck | Theorem | III | draft |
-| [#software-scope](src/software-scope.md) | Systems with P(change) > ε | Scope | IV | draft |
-| [#software-epistemic-properties](src/software-epistemic-properties.md) | Software's 6 unique properties | Observation | IV | missing |
-| [#feature-definition](src/feature-definition.md) | Unit of coherent change | Definition | IV | draft |
-| [#specification-bound](src/specification-bound.md) | Can't implement unspecified; includes communication bottleneck corollary | Theorem | IV | draft |
-| [#change-expectation-baseline](src/change-expectation-baseline.md) | Median future ≈ observed past; includes investment scale form | Derived | IV | draft |
-| [#developer-as-act-agent](src/developer-as-act-agent.md) | Developer as (M_t, O_t, Σ_t) | Definition | IV | missing |
-| [#comprehension-time](src/comprehension-time.md) | Cost of constructing local M_t | Definition | IV | draft |
-| [#implementation-time](src/implementation-time.md) | Cost from first change to done | Definition | IV | draft |
-| [#dual-optimization](src/dual-optimization.md) | Min comprehension + impl time | Derived | IV | draft |
-| [#change-investment](src/change-investment.md) | When extra time now pays off | Derived | IV | draft |
-| [#code-quality-as-observation-infrastructure](src/code-quality-as-observation-infrastructure.md) | Code quality → U_o → η* → T | Discussion + Hypothesis | IV | missing |
-| [#conceptual-alignment](src/conceptual-alignment.md) | Code-domain alignment; includes realignment corollary | Hypothesis | IV | draft |
-| [#atomic-changeset](src/atomic-changeset.md) | The diff that is the feature | Definition | IV | draft |
-| [#changeset-size-principle](src/changeset-size-principle.md) | Time ∝ changeset size; includes comprehension corollary | Empirical | IV | draft |
-| [#change-distance](src/change-distance.md) | Lexical < file < module < svc | Definition | IV | draft |
-| [#change-proximity-principle](src/change-proximity-principle.md) | Closer changes → less time | Derived + Hypothesis | IV | draft |
-| [#exponential-cognitive-load](src/exponential-cognitive-load.md) | Context-switch cost compounds? | Hypothesis | IV | draft |
-| [#system-coupling](src/system-coupling.md) | P(change j \| change i) | Definition | IV | draft |
-| [#system-coherence](src/system-coherence.md) | E[proximity within module] | Definition | IV | draft |
-| [#coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Coherence/coupling from git | Measurement | IV | draft |
-| [#principled-decision-integration](src/principled-decision-integration.md) | Optimal C minimizes E[T\|C] | Derived | IV | draft |
-| [#system-availability](src/system-availability.md) | MTTF/(MTTF+MTTR) | Definition | IV | draft |
-| [#continuous-operation](src/continuous-operation.md) | Include P(fail)×T_recovery | Scope | IV | draft |
-| [#causal-discovery-from-git](src/causal-discovery-from-git.md) | Git as interventional data | Hypothesis | IV | missing |
-| [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | Definition | V | missing |
-| [#context-turnover](src/context-turnover.md) | 100% M_t reset per session | Observation | V | missing |
-| [#m-preservation](src/m-preservation.md) | External memory as persistent M_t | Discussion | V | missing |
+| N | Tag | Claim | Type | § | Stage |
+|---|-----|-------|------|---|-------|
+|  | | **Adaptive Systems Under Uncertainty** | | | |
+|  | [#temporal-optimality](src/temporal-optimality.md) | Least-time is optimal | Postulate | I | draft |
+|  | [#agent-environment](src/agent-environment.md) | Agent-environment boundary | Definition | I | draft |
+|  | [#observation-function](src/observation-function.md) | Lossy, noisy observations | Definition | I | draft |
+|  | [#action-transition](src/action-transition.md) | Actions affect environment | Definition | I | draft |
+|  | [#scope-condition](src/scope-condition.md) | Where ACT applies | Scope | I | draft |
+|  | [#composition-consistency](src/composition-consistency.md) | Agent/subagent scale invariance | Postulate | I | draft |
+|  | [#causal-structure](src/causal-structure.md) | Irreducible causal structure | Postulate | I | draft |
+|  | [#pearl-causal-hierarchy](src/pearl-causal-hierarchy.md) | Three levels of causal reasoning | Definition | I | draft |
+|  | [#chronica](src/chronica.md) | Complete interaction history | Definition | I | draft |
+|  | [#agent-model](src/agent-model.md) | Compressed history as state | Formulation | I | draft |
+|  | [#information-bottleneck](src/information-bottleneck.md) | Optimal model compression | Formulation | I | draft |
+|  | [#model-sufficiency](src/model-sufficiency.md) | Predictive information retained | Definition | I | draft |
+|  | [#model-class-fitness](src/model-class-fitness.md) | Best achievable sufficiency | Definition | I | draft |
+|  | [#event-driven-dynamics](src/event-driven-dynamics.md) | Events in continuous time | Formulation | I | draft |
+|  | [#recursive-update](src/recursive-update.md) | State updates must be recursive | Derived | I | draft |
+|  | [#action-selection](src/action-selection.md) | Action as function of model | Derived | I | draft |
+|  | [#mismatch-signal](src/mismatch-signal.md) | Prediction error signal | Definition | I | draft |
+|  | [#mismatch-decomposition](src/mismatch-decomposition.md) | Model error + obs noise | Result | I | draft |
+|  | [#update-gain](src/update-gain.md) | Optimal update weighting | Empirical | I | draft |
+|  | [#causal-information-yield](src/causal-information-yield.md) | Information from interventions | Definition | I | draft |
+|  | [#adaptive-tempo](src/adaptive-tempo.md) | Rate of useful info acquisition | Definition | I | draft |
+|  | [#mismatch-dynamics](src/mismatch-dynamics.md) | Mismatch evolution ODE | Hypothesis | I | draft |
+|  | [#deliberation-cost](src/deliberation-cost.md) | Think vs act tradeoff | Derived | I | draft |
+|  | [#persistence-condition](src/persistence-condition.md) | Bounded mismatch condition | Result | I | draft |
+|  | [#sector-condition-stability](src/sector-condition-stability.md) | Nonlinear persistence (Lyapunov) | Result | I | draft |
+|  | [#structural-adaptation-necessity](src/structural-adaptation-necessity.md) | When parametric update fails | Result | I | draft |
+|  | [#temporal-nesting](src/temporal-nesting.md) | Timescale stratification | Derived | I | draft |
+|  | [#agent-identity](src/agent-identity.md) | Non-forkable causal trajectory | Discussion | I | draft |
+|  | [#agent-spectrum](src/agent-spectrum.md) | ±model × ±objective quadrants | Definition | II | draft |
+|  | [#complete-agent-state](src/complete-agent-state.md) | X_t = (M_t, G_t) | Formulation | II | draft |
+|  | [#objective-functional](src/objective-functional.md) | O_t parametrizes value | Definition | II | draft |
+|  | [#value-object](src/value-object.md) | Horizon/policy-conditioned value | Definition | II | draft |
+|  | [#strategy-dimension](src/strategy-dimension.md) | G_t = (O_t, Σ_t) split | Definition | II | draft |
+|  | [#causal-hierarchy-requirement](src/causal-hierarchy-requirement.md) | Level 2 needed for planning | Derived + Scope | II | draft |
+|  | [#loop-interventional-access](src/loop-interventional-access.md) | Feedback loop → Level 2 data | Derived | II | draft |
+|  | [#explicit-strategy-condition](src/explicit-strategy-condition.md) | When planning beats exploring | Normative | II | draft |
+|  | [#chain-confidence-decay](src/chain-confidence-decay.md) | Log-confidence additive in depth | Derived | II | draft |
+|  | [#and-or-scope](src/and-or-scope.md) | Conjunctive/disjunctive scope | Scope | II | draft |
+|  | [#strategy-dag](src/strategy-dag.md) | Strategy as probabilistic DAG | Definition | II | draft |
+|  | [#directed-separation](src/directed-separation.md) | Epistemic update is goal-blind | Derived + Scope | II | draft |
+|  | [#satisfaction-gap](src/satisfaction-gap.md) | Ideal vs best achievable | Definition | II | draft |
+|  | [#control-regret](src/control-regret.md) | Best achievable vs current | Definition | II | draft |
+|  | [#strategic-calibration](src/strategic-calibration.md) | Edge residuals | Definition | II | draft |
+|  | [#orient-cascade](src/orient-cascade.md) | Resolution order by info dep | Derived | II | draft |
+|  | [#observability-dominance](src/observability-dominance.md) | Unobservable edges freeze | Derived | II | draft |
+|  | [#edge-update-via-gain](src/edge-update-via-gain.md) | Gain extends to strategy edges | Hypothesis | II | draft |
+|  | [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous | Formulation | II | draft |
+|  | [#strategy-persistence-schema](src/strategy-persistence-schema.md) | Sector conditions for Σ_t | Proposed schema | II | draft |
+|  | [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | Scope | III | draft |
+|  | [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | Formulation | III | draft |
+|  | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | Derived | III | draft |
+|  | [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | Definition | III | draft |
+|  | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | Definition + Discussion | III | draft |
+|  | [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | Hypothesis | III | draft |
+|  | [#team-persistence](src/team-persistence.md) | Composite persistence condition | Derived | III | draft |
+|  | [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | Result | III | draft |
+|  | [#communication-gain](src/communication-gain.md) | Trust-weighted update gain for inter-agent channels | Hypothesis | III | draft |
+|  | [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop; includes effects spiral corollary | Derived | III | draft |
+|  | [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | α = 2, 3/2, or ~1 | Observation | III | draft |
+|  | [#observation-gates-advantage](src/observation-gates-advantage.md) | Obs noise gates advantage | Observation | III | draft |
+|  | [#per-dimension-persistence](src/per-dimension-persistence.md) | Weak dimension is bottleneck | Result | III | draft |
+|  | [#software-scope](src/software-scope.md) | Systems with P(change) > ε | Scope | IV | draft |
+|  | [#software-epistemic-properties](src/software-epistemic-properties.md) | Software's 6 unique properties | Observation | IV | missing |
+|  | [#feature-definition](src/feature-definition.md) | Unit of coherent change | Definition | IV | draft |
+|  | [#specification-bound](src/specification-bound.md) | Can't implement unspecified; includes communication bottleneck corollary | Result | IV | draft |
+|  | [#change-expectation-baseline](src/change-expectation-baseline.md) | Median future ≈ observed past; includes investment scale form | Derived | IV | draft |
+|  | [#developer-as-act-agent](src/developer-as-act-agent.md) | Developer as (M_t, O_t, Σ_t) | Definition | IV | missing |
+|  | [#comprehension-time](src/comprehension-time.md) | Cost of constructing local M_t | Definition | IV | draft |
+|  | [#implementation-time](src/implementation-time.md) | Cost from first change to done | Definition | IV | draft |
+|  | [#dual-optimization](src/dual-optimization.md) | Min comprehension + impl time | Derived | IV | draft |
+|  | [#change-investment](src/change-investment.md) | When extra time now pays off | Derived | IV | draft |
+|  | [#code-quality-as-observation-infrastructure](src/code-quality-as-observation-infrastructure.md) | Code quality → U_o → η* → T | Discussion + Hypothesis | IV | missing |
+|  | [#conceptual-alignment](src/conceptual-alignment.md) | Code-domain alignment; includes realignment corollary | Hypothesis | IV | draft |
+|  | [#atomic-changeset](src/atomic-changeset.md) | The diff that is the feature | Definition | IV | draft |
+|  | [#changeset-size-principle](src/changeset-size-principle.md) | Time ∝ changeset size; includes comprehension corollary | Empirical | IV | draft |
+|  | [#change-distance](src/change-distance.md) | Lexical < file < module < svc | Definition | IV | draft |
+|  | [#change-proximity-principle](src/change-proximity-principle.md) | Closer changes → less time | Derived + Hypothesis | IV | draft |
+|  | [#exponential-cognitive-load](src/exponential-cognitive-load.md) | Context-switch cost compounds? | Hypothesis | IV | draft |
+|  | [#system-coupling](src/system-coupling.md) | P(change j \| change i) | Definition | IV | draft |
+|  | [#system-coherence](src/system-coherence.md) | E[proximity within module] | Definition | IV | draft |
+|  | [#coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Coherence/coupling from git | Measurement | IV | draft |
+|  | [#principled-decision-integration](src/principled-decision-integration.md) | Optimal C minimizes E[T\|C] | Derived | IV | draft |
+|  | [#system-availability](src/system-availability.md) | MTTF/(MTTF+MTTR) | Definition | IV | draft |
+|  | [#continuous-operation](src/continuous-operation.md) | Include P(fail)×T_recovery | Scope | IV | draft |
+|  | [#causal-discovery-from-git](src/causal-discovery-from-git.md) | Git as interventional data | Hypothesis | IV | missing |
+|  | [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | Definition | V | missing |
+|  | [#context-turnover](src/context-turnover.md) | 100% M_t reset per session | Observation | V | missing |
+|  | [#m-preservation](src/m-preservation.md) | External memory as persistent M_t | Discussion | V | missing |
 
 
 ---
@@ -135,7 +136,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 ## III. Composition and Coordination
 
-*Scope: multiple agents interacting through a shared environment, or equivalently, the internal structure of composite agents. The composition axiom ( #composition-consistency) ensures the theory applies at every level of description; this section develops what happens when composition is imperfect and what the dynamics of inter-agent interaction look like.*
+*Scope: multiple agents interacting through a shared environment, or equivalently, the internal structure of composite agents. The composition postulate ( #composition-consistency) ensures the theory applies at every level of description; this section develops what happens when composition is imperfect and what the dynamics of inter-agent interaction look like.*
 
 *Correlated observations as default; independence as the special case requiring justification. Adversarial dynamics are one end of a teleological unity spectrum, not a separate theory.*
 
@@ -154,7 +155,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 *Domain instantiation: software development as an ACT domain. This section re-grounds TST (Temporal Software Theory) in ACT's formal machinery — adding the causal mathematics and adaptive dynamics that TST was developed without. Software is not just another domain example; it has unique epistemic properties that make it the ideal testbed for ACT and, recursively, the domain where ACT-grounded agents will operate.*
 
-*The temporal optimality axiom ( #temporal-optimality) now has full backing: tempo advantage ( #adversarial-tempo-advantage), persistence conditions ( #persistence-condition), and gain dynamics ( #update-gain) explain WHY time-optimal development practices work, not just THAT they do.*
+*The temporal optimality postulate ( #temporal-optimality) now has full backing: tempo advantage ( #adversarial-tempo-advantage), persistence conditions ( #persistence-condition), and gain dynamics ( #update-gain) explain WHY time-optimal development practices work, not just THAT they do.*
 
 ### Section IV — Gaps
 
@@ -188,8 +189,8 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 | Slug | Description | Type | Stage |
 |------|-------------|------|-------|
-| [#sector-condition-proof](src/sector-condition-proof.md) | Lyapunov proofs for bounded mismatch and adaptive reserve | Proof | draft |
-| [#recursive-update-proof](src/recursive-update-proof.md) | Uniqueness proof via three constraints + counterexamples | Proof | draft |
+| [#sector-condition-derivation](src/sector-condition-derivation.md) | Lyapunov derivations for bounded mismatch and adaptive reserve | Derivation | draft |
+| [#recursive-update-derivation](src/recursive-update-derivation.md) | Uniqueness derivation via three constraints + counterexamples | Derivation | draft |
 | [#multi-timescale-stability](src/multi-timescale-stability.md) | N-timescale singular perturbation sketch | Sketch | draft |
 | [#operationalization](src/operationalization.md) | Estimation procedures for ACT quantities | Detail | draft |
 | [#worked-example-kalman](src/worked-example-kalman.md) | End-to-end Kalman instantiation (exact) | Worked example | draft |
@@ -198,4 +199,4 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#simulation-results](src/simulation-results.md) | 6 variants validating claims | Detail | draft |
 | [#intent-dag-development](src/intent-dag-development.md) | Convergence on AND/OR + single-p | Aside | missing |
 | [#prior-art-positioning](src/prior-art-positioning.md) | Hafez, IBM, BDI, active inference | Detail | missing |
-| [#graph-structure-uniqueness](src/graph-structure-uniqueness.md) | 4 axioms → DAG structure | Proof | draft |
+| [#graph-structure-uniqueness](src/graph-structure-uniqueness.md) | 4 postulates → DAG structure | Derivation | draft |

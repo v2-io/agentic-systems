@@ -55,7 +55,7 @@ In these domains, explicit $\Sigma_t$ is strongly motivated even if the planning
 - The environment changes faster than $\Sigma_t$ can be maintained ($\rho_\Sigma$ exceeds planning capacity)
 - Actions are cheap and reversible (A/B testing, sandbox exploration)
 
-**This makes #temporal-optimality load-bearing.** The axiom provides the normative grounding: among approaches producing equivalent outcomes, prefer the one requiring less time. The cost inequality instantiates this for the planning-vs-exploration choice. Without #temporal-optimality, the inequality would be an engineering heuristic without theoretical grounding.
+**This makes #temporal-optimality load-bearing.** The postulate provides the normative grounding: among approaches producing equivalent outcomes, prefer the one requiring less time. The cost inequality instantiates this for the planning-vs-exploration choice. Without #temporal-optimality, the inequality would be an engineering heuristic without theoretical grounding.
 
 **Connection to the three-way tradeoff.** For actuated agents, the binary explore/exploit tradeoff extends to three modes: exploit (pursue $O_t$ via $\Sigma_t$), explore (improve $M_t$), and deliberate (revise $\Sigma_t$). The cost inequality addresses the coarsest question (is explicit $\Sigma_t$ worth having?). The finer question of how to allocate between the three modes at each time step is open — it connects to #causal-information-yield's exploration price $\lambda$ extended with $\Sigma_t$ revision costs.
 

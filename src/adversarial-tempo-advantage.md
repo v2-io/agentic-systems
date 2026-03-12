@@ -1,6 +1,6 @@
 ---
 slug: adversarial-tempo-advantage
-type: theorem
+type: result
 status: exact
 depends:
   - mismatch-dynamics
@@ -30,7 +30,7 @@ Taking the ratio:
 
 $$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} = \frac{\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A}{\mathcal{T}_B} \cdot \frac{\mathcal{T}_A}{\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B}$$
 
-*[Theorem (adversarial-tempo-advantage)]*
+*[Result (adversarial-tempo-advantage)]*
 
 $$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} = \frac{(\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) \cdot \mathcal{T}_A}{(\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) \cdot \mathcal{T}_B}$$
 
@@ -46,7 +46,7 @@ $$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} \to \left(\frac{\mathcal{T}_A}{\ma
 
 The exponent is $b = 2$: a **squared** tempo advantage. A 2:1 tempo ratio yields a 4:1 mismatch ratio, not 2:1.
 
-### Proof
+### Derivation
 
 From #mismatch-dynamics, the steady-state condition $d\|\delta\|/dt = 0$ gives $\|\delta\|_{ss} = \rho / \mathcal{T}$.
 
