@@ -8,7 +8,7 @@ depends:
   - sector-condition-derivation
 ---
 
-# Sector Condition Stability
+# Result: Sector Condition Stability
 
 An agent's mismatch remains bounded if its correction function satisfies a sector condition (points inward with at least baseline efficiency) and the effective correction strength exceeds the environmental disturbance rate.
 

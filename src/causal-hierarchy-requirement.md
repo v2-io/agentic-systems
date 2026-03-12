@@ -8,7 +8,7 @@ depends:
   - scope-condition
 ---
 
-# Causal Hierarchy Requirement
+# Derived: Causal Hierarchy Requirement
 
 Evaluating the action-value $Q_O$ requires answering "what happens if I *do* action $a$?" — a Level 2 (interventional) query in Pearl's causal hierarchy. An agent that must learn the answer to this question during operation needs access to causal structure beyond what purely predictive models can provide.
 

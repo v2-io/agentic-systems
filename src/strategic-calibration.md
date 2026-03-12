@@ -7,7 +7,7 @@ depends:
   - value-object
 ---
 
-# Strategic Calibration
+# Definition: Strategic Calibration
 
 The strategic calibration residual measures whether the strategy's causal model is correct: are the edges in $\Sigma_t$ accurate predictors of how much value each step actually produces? This is the fine-grained diagnostic that localizes control regret to specific parts of the strategy.
 

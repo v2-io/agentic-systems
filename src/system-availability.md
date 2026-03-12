@@ -6,7 +6,7 @@ depends:
   - software-scope
 ---
 
-# System Availability
+# Definition: System Availability
 
 The fraction of time a system serves its users successfully.
 

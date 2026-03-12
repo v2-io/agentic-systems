@@ -7,7 +7,7 @@ depends:
   - recursive-update
 ---
 
-# Action Selection
+# Derived: Action Selection
 
 Action is a function of the model. The model's role is not merely to represent the environment but to generate actions — either implicitly (from internalized patterns) or through explicit deliberation. The degree to which effective action flows from the model without deliberative computation is *action fluency*.
 

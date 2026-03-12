@@ -7,7 +7,7 @@ depends:
   - scope-condition
 ---
 
-# Complete Agent State
+# Formulation: Complete Agent State
 
 To treat agents with purpose, the internal state lifts from $M_t$ alone to $X_t = (M_t, G_t)$, separating epistemic content (beliefs about reality) from purposeful content (what the agent wants and how it plans to get it).
 

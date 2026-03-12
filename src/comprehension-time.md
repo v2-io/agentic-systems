@@ -7,7 +7,7 @@ depends:
   - software-scope
 ---
 
-# Comprehension Time
+# Definition: Comprehension Time
 
 The time from initial idea to first surviving change — the cost of understanding enough to act effectively.
 

@@ -6,7 +6,7 @@ depends:
   - agent-model
 ---
 
-# Information Bottleneck
+# Formulation: Information Bottleneck
 
 Optimal model compression balances retained history against predictive power; the information bottleneck objective provides a principled framework for understanding this trade-off.
 

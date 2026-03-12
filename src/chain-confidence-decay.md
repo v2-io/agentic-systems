@@ -6,7 +6,7 @@ depends:
   - strategy-dimension
 ---
 
-# Chain Confidence Decay
+# Derived: Chain Confidence Decay
 
 Confidence in a multi-step strategy decays monotonically with depth. The rate depends on the conditional dependence structure, but the qualitative result — longer chains are less confident than shorter ones — is robust.
 

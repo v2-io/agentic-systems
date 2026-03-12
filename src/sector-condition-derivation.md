@@ -7,7 +7,7 @@ depends:
   - mismatch-signal
 ---
 
-# Sector Condition Stability — Lyapunov Derivation
+# Derivation: Sector Condition Stability — Lyapunov Derivation
 
 Complete Lyapunov derivations of bounded mismatch and adaptive reserve for the sector-condition results stated in #sector-condition-stability.
 

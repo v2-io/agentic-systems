@@ -7,7 +7,7 @@ depends:
   - structural-adaptation-necessity
 ---
 
-# Structural Change as Parametric Limit
+# Formulation: Structural Change as Parametric Limit
 
 In the probabilistic DAG, "structural" changes to $\Sigma_t$ are continuous operations on edge weights and node sets — not a separate mechanism. Pruning is a credence dropping below threshold; grafting is a new causal hypothesis initialized at a prior. This dissolves the sharp line between parametric update (adjusting weights) and structural change (adding/removing edges).
 

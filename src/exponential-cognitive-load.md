@@ -7,7 +7,7 @@ depends:
   - deliberation-cost
 ---
 
-# Exponential Cognitive Load
+# Hypothesis: Exponential Cognitive Load
 
 If context-switching compounds multiplicatively, implementation time grows exponentially with the number of boundary crossings (discontinuities) in a changeset.
 

@@ -7,7 +7,7 @@ depends:
   - objective-functional
 ---
 
-# Satisfaction Gap
+# Definition: Satisfaction Gap
 
 The satisfaction gap measures whether the agent's objective is achievable: the distance between what the objective requires and what the best available policy can deliver. It answers "is this goal feasible given what I know and what I can do?"
 

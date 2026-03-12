@@ -7,7 +7,7 @@ depends:
   - update-gain
 ---
 
-# Observability Dominance
+# Derived: Observability Dominance
 
 Unobservable strategy edges cannot be updated — the gain principle drives their update rate to zero. This means the agent's effective strategy is limited to the parts it can observe, regardless of the nominal confidence in unobservable paths. Observability dominates nominal confidence in determining which strategies are epistemically alive.
 

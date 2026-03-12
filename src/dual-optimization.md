@@ -10,7 +10,7 @@ depends:
   - software-scope
 ---
 
-# Dual Optimization
+# Derived: Dual Optimization
 
 A principled implementation decision minimizes both comprehension time and implementation time for future features, weighted by how many future features are expected.
 

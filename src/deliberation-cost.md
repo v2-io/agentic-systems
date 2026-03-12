@@ -9,7 +9,7 @@ depends:
   - event-driven-dynamics
 ---
 
-# Deliberation Cost
+# Derived: Deliberation Cost
 
 Explicit deliberation improves action quality by using the model for internal simulation before acting. But deliberation takes time — and during that time, the environment continues to evolve. Deliberation is justified when the improvement exceeds the mismatch accumulated during the pause.
 

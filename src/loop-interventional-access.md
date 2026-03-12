@@ -8,7 +8,7 @@ depends:
   - causal-structure
 ---
 
-# Loop Provides Interventional Data Access
+# Derived: Loop Provides Interventional Data Access
 
 An agent in the feedback loop generates interventional data by construction: the agent's action $a_t$ causally precedes the next observation $o_{t+1}$, and the mismatch conditioned on $a_t$ carries interventional information. This is how agents within ACT's scope gain Level 2 access — not through internal architecture, but through the loop itself.
 

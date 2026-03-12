@@ -7,7 +7,7 @@ depends:
   - system-coherence
 ---
 
-# Coherence-Coupling Measurement
+# Measurement: Coherence-Coupling Measurement
 
 Software coherence and coupling can be measured from git history, enabling empirical evaluation of architectural quality.
 

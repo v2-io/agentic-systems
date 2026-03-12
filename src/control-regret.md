@@ -7,7 +7,7 @@ depends:
   - satisfaction-gap
 ---
 
-# Control Regret
+# Definition: Control Regret
 
 Control regret measures the gap between the best achievable performance and the agent's current performance — how much the agent is leaving on the table by following its current policy rather than the best available one. This is the signal for strategy revision.
 

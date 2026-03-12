@@ -6,7 +6,7 @@ depends:
   - software-scope
 ---
 
-# Feature
+# Definition: Feature
 
 A unit of functionality, as perceived by those who requested, implement, or use it, that coherently changes the codebase and/or running system.
 

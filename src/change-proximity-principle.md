@@ -8,7 +8,7 @@ depends:
   - comprehension-time
 ---
 
-# Change Proximity Principle
+# Derived: Change Proximity Principle
 
 Given two implementations with identical changeset sizes, the one with changes closer together requires less time.
 

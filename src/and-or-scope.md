@@ -7,7 +7,7 @@ depends:
   - chain-confidence-decay
 ---
 
-# AND/OR Combination Scope
+# Scope: AND/OR Combination Scope
 
 We restrict to environments where the causal combination of strategy steps is approximately conjunctive (AND: all parents required) or disjunctive (OR: any parent sufficient), without strong interaction effects between parents.
 

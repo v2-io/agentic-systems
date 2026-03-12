@@ -8,7 +8,7 @@ depends:
   - sector-condition-stability
 ---
 
-# Persistence Condition
+# Result: Persistence Condition
 
 An agent maintains bounded mismatch — persists as a viable adaptive system — if and only if its adaptive tempo exceeds the rate of environment change relative to its tolerance threshold.
 

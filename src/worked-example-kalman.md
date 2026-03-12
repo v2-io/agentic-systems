@@ -16,7 +16,7 @@ depends:
   - sector-condition-stability
 ---
 
-# Worked Example — 1D Active Tracking (Kalman Domain)
+# Worked-example: Worked Example — 1D Active Tracking (Kalman Domain)
 
 Every ACT quantity has an exact Kalman-filter counterpart. This is a *validation* of the formal chain — all quantities are computable in closed form.
 

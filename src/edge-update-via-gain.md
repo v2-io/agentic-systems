@@ -8,7 +8,7 @@ depends:
   - mismatch-signal
 ---
 
-# Edge Update via Gain
+# Hypothesis: Edge Update via Gain
 
 The uncertainty-ratio gain principle ( #update-gain) extends from epistemic updates to strategy-edge updates: edge credences revise in proportion to the ratio of edge uncertainty to observation noise. This gives a principled, conservative update rule that avoids overreacting to single observations.
 

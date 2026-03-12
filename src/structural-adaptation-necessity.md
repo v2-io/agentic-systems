@@ -9,7 +9,7 @@ depends:
   - update-gain
 ---
 
-# Structural Adaptation Necessity
+# Result: Structural Adaptation Necessity
 
 When model class fitness is insufficient — when no model in the current class can adequately represent reality — no amount of parametric adaptation can close the mismatch floor. The agent must change its model class, not just its parameters.
 

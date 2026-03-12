@@ -5,7 +5,7 @@ status: axiomatic
 depends: []
 ---
 
-# Agent-Environment Coupling
+# Definition: Agent-Environment Coupling
 
 An agent is an entity that receives observations from an environment, maintains internal state, and produces actions that affect the environment.
 The agent cannot access the environment directly — observations are necessarily lossy.

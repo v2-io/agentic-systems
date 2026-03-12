@@ -7,7 +7,7 @@ depends:
   - composition-consistency
 ---
 
-# Multi-Agent Scope
+# Scope: Multi-Agent Scope
 
 Section III applies wherever multiple agents satisfying the scope condition interact through a shared environment. Each agent observes, acts, and faces uncertainty; their actions affect each other's environments. This is the general case for organizations, teams, ecosystems, and adversarial encounters. Independence (agents whose actions don't affect each other) is the special case requiring justification.
 

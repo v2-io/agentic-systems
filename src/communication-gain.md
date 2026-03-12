@@ -7,7 +7,7 @@ depends:
   - multi-agent-scope
 ---
 
-# Communication Gain
+# Hypothesis: Communication Gain
 
 When an agent incorporates information from another agent (rather than from direct observation), the optimal update gain extends the uncertainty ratio with additional terms for source quality and alignment uncertainty.
 

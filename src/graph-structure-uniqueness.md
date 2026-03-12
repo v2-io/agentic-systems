@@ -8,7 +8,7 @@ depends:
   - explicit-strategy-condition
 ---
 
-# Graph Structure Uniqueness
+# Derivation: Graph Structure Uniqueness
 
 Four operational postulates — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — force the strategy representation to be a directed acyclic graph with the Markov property.
 

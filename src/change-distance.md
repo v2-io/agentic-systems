@@ -6,7 +6,7 @@ depends:
   - atomic-changeset
 ---
 
-# Change Distance
+# Definition: Change Distance
 
 The structural separation between two changes in a codebase, measured along a hierarchy of boundaries.
 

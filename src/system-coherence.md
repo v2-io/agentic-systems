@@ -6,7 +6,7 @@ depends:
   - change-distance
 ---
 
-# System Coherence
+# Definition: System Coherence
 
 The expected proximity of changes within a module.
 

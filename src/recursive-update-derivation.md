@@ -9,7 +9,7 @@ depends:
   - scope-condition
 ---
 
-# Recursive Update — Uniqueness Derivation
+# Derivation: Recursive Update — Uniqueness Derivation
 
 Derivation showing that $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the *unique* update form consistent with directed time, partial observability, and state completeness. Not merely one option, but the only one.
 

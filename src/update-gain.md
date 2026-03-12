@@ -7,7 +7,7 @@ depends:
   - observation-function
 ---
 
-# Update Gain
+# Empirical: Update Gain
 
 The optimal weight an agent assigns to new observations when updating its model balances model uncertainty against observation noise.
 

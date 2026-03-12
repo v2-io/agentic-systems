@@ -8,7 +8,7 @@ depends:
   - adaptive-tempo
 ---
 
-# Observation Noise Gates Adversarial Advantage
+# Observation: Observation Noise Gates Adversarial Advantage
 
 Observation noise collapses the adversarial tempo advantage. When agents observe their mismatch through a noisy channel, the faster agent's additional corrections become noisy, partially offsetting its tempo advantage. The optimal gain ( #update-gain) partially restores the advantage but cannot fully recover it.
 

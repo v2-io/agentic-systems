@@ -9,7 +9,7 @@ depends:
   - strategy-dimension
 ---
 
-# Unity Dimensions
+# Definition: Unity Dimensions
 
 The quality of a composite agent's composition can be decomposed along four substantially independent dimensions: epistemic (shared model), teleological (shared objective), strategic (coordinated action), and perceptual (shared observations). These dimensions predict the closure defect $\varepsilon^*$ ( #composition-closure) — high unity along all four predicts low $\varepsilon^*$.
 

@@ -9,7 +9,7 @@ depends:
   - event-driven-dynamics
 ---
 
-# Composition Closure Criterion
+# Formulation: Composition Closure Criterion
 
 We define a group of interacting agents as a valid composite macro-agent when its closed-loop dynamics approximately commute with coarse-graining — that is, when projecting micro-states to macro-states and then running macro-dynamics yields approximately the same result as running micro-dynamics and then projecting.
 

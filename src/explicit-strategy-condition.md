@@ -8,7 +8,7 @@ depends:
   - causal-hierarchy-requirement
 ---
 
-# Explicit Strategy Condition
+# Normative: Explicit Strategy Condition
 
 An agent benefits from maintaining an explicit strategy $\Sigma_t$ when the cost of planning is less than the cost of learning through exploration alone. This is a normative design criterion — it tells you when explicit strategy is *worth it*, not that it's always necessary.
 

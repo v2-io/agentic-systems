@@ -8,7 +8,7 @@ depends:
   - comprehension-time
 ---
 
-# Changeset Size Principle
+# Empirical: Changeset Size Principle
 
 Implementation time is proportional to the size of the atomic changeset.
 

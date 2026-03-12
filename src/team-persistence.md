@@ -9,7 +9,7 @@ depends:
   - adaptive-tempo
 ---
 
-# Team Persistence
+# Derived: Team Persistence
 
 Teams persist where individuals cannot because cooperative communication adds to each agent's effective tempo while reducing effective disturbance.
 

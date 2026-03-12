@@ -8,7 +8,7 @@ depends:
   - action-transition
 ---
 
-# Chronica
+# Definition: Chronica
 
 The interaction history $\mathcal{C}_t$ is the complete, singular causal record of the agent's observations and actions. Everything the agent can ever know must be constructed from this sequence.
 

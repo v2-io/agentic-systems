@@ -7,7 +7,7 @@ depends:
   - objective-functional
 ---
 
-# Strategy Dimension
+# Definition: Strategy Dimension
 
 The purposeful substate $G_t$ decomposes into two structurally distinct components: $O_t$ (the objective — what the agent wants) and $\Sigma_t$ (the strategy — the agent's theory of how its actions produce progress toward $O_t$). These carry different kinds of information answering different questions.
 

@@ -14,7 +14,7 @@ depends:
   - persistence-condition
 ---
 
-# Worked Example — Nonstationary Bandit (RL Domain)
+# Worked-example: Worked Example — Nonstationary Bandit (RL Domain)
 
 ACT's conceptual architecture applies beyond the conjugate-Bayesian regime. The mapping here is *approximate* — it shows that ACT's concepts organize RL phenomena, but the quantitative relationships are structural analogies, not derivations. Where the mapping is exact versus approximate is marked explicitly.
 

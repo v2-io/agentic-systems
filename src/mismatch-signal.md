@@ -7,7 +7,7 @@ depends:
   - observation-function
 ---
 
-# Mismatch Signal
+# Definition: Mismatch Signal
 
 The discrepancy between the model's prediction and the actual observation — the fundamental error signal that drives all adaptation.
 

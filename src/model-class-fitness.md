@@ -6,7 +6,7 @@ depends:
   - model-sufficiency
 ---
 
-# Model Class Fitness
+# Definition: Model Class Fitness
 
 The best achievable sufficiency within a model class.
 When no model in the class can adequately represent reality, the agent faces a structural limitation that no amount of parameter tuning can resolve.

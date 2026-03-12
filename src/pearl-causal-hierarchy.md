@@ -7,7 +7,7 @@ depends:
   - scope-condition
 ---
 
-# Pearl's Causal Hierarchy
+# Definition: Pearl's Causal Hierarchy
 
 Three levels of causal reasoning emerge from the causal structure of the feedback loop: association ("what if I observe?"), intervention ("what if I do?"), and counterfactual ("what if I had done differently?"). The binary action requirement ( #scope-condition) ensures at least Level 2 access is structurally available.
 

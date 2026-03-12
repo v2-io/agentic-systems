@@ -7,7 +7,7 @@ depends:
   - adaptive-tempo
 ---
 
-# Composite Tempo Inequality
+# Derived: Composite Tempo Inequality
 
 The adaptive tempo of a composite agent is bounded from above by the sum of its sub-agents' tempos. The gap between aggregate potential and realized composite tempo is the coordination overhead — tempo consumed by internal reconciliation rather than external mismatch correction.
 

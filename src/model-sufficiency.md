@@ -7,7 +7,7 @@ depends:
   - information-bottleneck
 ---
 
-# Model Sufficiency
+# Definition: Model Sufficiency
 
 The fraction of predictive information the model retains relative to the full interaction history; $S = 1$ means the model is a sufficient statistic for prediction, $S < 1$ means predictive information has been lost.
 

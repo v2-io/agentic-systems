@@ -7,7 +7,7 @@ depends:
   - structural-adaptation-necessity
 ---
 
-# Temporal Nesting
+# Derived: Temporal Nesting
 
 An agent's adaptive processes stratify naturally by timescale, with each level operating on the quasi-steady-state output of the level below. Faster processes must approximately converge before slower ones act on their output.
 

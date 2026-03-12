@@ -10,7 +10,7 @@ depends:
   - change-proximity-principle
 ---
 
-# Principled Decision Integration
+# Derived: Principled Decision Integration
 
 The optimal implementation choice minimizes total expected time across all probable future features, integrating all temporal factors simultaneously.
 

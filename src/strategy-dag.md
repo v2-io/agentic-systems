@@ -10,7 +10,7 @@ depends:
   - strategy-dimension
 ---
 
-# Strategy DAG
+# Definition: Strategy DAG
 
 The strategy $\Sigma_t$ is a directed acyclic graph with probabilistic edges and AND/OR combination semantics. Each edge carries the agent's causal credence that completing the parent step advances the child step. The graph encodes the agent's theory of how its actions produce progress toward its objectives.
 

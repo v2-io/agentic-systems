@@ -7,7 +7,7 @@ depends:
   - agent-model
 ---
 
-# Value Object
+# Definition: Value Object
 
 The horizon- and policy-conditioned value object $V_O$ turns the abstract objective functional $V_{O_t}$ into a decision-making tool: "given what I believe, what I plan to do next, and how far I'm looking ahead, how good is this situation?"
 

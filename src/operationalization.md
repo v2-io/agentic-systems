@@ -12,7 +12,7 @@ depends:
   - structural-adaptation-necessity
 ---
 
-# Operationalization — Estimation Procedures
+# Detail: Operationalization — Estimation Procedures
 
 Estimation recipes for core ACT quantities, bridging the measurement gap between formal objects and practical deployment.
 

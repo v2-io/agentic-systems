@@ -6,7 +6,7 @@ depends:
   - complete-agent-state
 ---
 
-# Objective Functional
+# Definition: Objective Functional
 
 The objective $O_t$ is the component of $G_t$ that specifies what the agent wants — the evaluation criterion for trajectories. Its interface to the theory is a single functional $V_{O_t}: \text{trajectories} \to \mathbb{R}$, regardless of how the objective is internally represented.
 

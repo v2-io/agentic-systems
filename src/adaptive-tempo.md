@@ -7,7 +7,7 @@ depends:
   - event-driven-dynamics
 ---
 
-# Adaptive Tempo
+# Definition: Adaptive Tempo
 
 The effective rate at which an agent acquires useful information from its environment — the product of observation frequency and update quality across all channels.
 

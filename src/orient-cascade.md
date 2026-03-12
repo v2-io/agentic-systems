@@ -10,7 +10,7 @@ depends:
   - strategic-calibration
 ---
 
-# Orient Cascade
+# Derived: Orient Cascade
 
 The resolution order for updating the agent's state is forced by information dependency: epistemic update first, then attainability assessment, then strategy evaluation, then (if needed) objective revision. Each step's input depends on the output of prior steps. The ordering is not a design choice — it's a consequence of which quantities require which others.
 

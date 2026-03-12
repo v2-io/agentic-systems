@@ -6,7 +6,7 @@ depends:
   - feature-definition
 ---
 
-# Atomic Changeset
+# Definition: Atomic Changeset
 
 The complete diff between the codebase state before and after a feature is fully implemented, excluding generated artifacts.
 

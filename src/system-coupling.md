@@ -6,7 +6,7 @@ depends:
   - atomic-changeset
 ---
 
-# System Coupling
+# Definition: System Coupling
 
 The probability that a change to one module will require a change to another.
 

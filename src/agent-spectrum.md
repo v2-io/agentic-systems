@@ -7,7 +7,7 @@ depends:
   - agent-model
 ---
 
-# The Agent Spectrum
+# Definition: The Agent Spectrum
 
 Two independent dimensions — model richness and objective richness — create a spectrum from reactive systems through purposeful agents. These are regions of a continuum, not discrete categories.
 

@@ -8,7 +8,7 @@ depends:
   - action-transition
 ---
 
-# Event-Driven Dynamics
+# Formulation: Event-Driven Dynamics
 
 The coupling between agent and environment occurs through discrete events — observations arriving and actions completing — at potentially variable and heterogeneous rates. Discrete-time notation is the special case of uniform-interval events on a single channel.
 

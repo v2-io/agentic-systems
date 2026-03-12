@@ -6,7 +6,7 @@ depends:
   - agent-environment
 ---
 
-# Action and Transition
+# Definition: Action and Transition
 
 Actions affect the environment through a transition function that is unknown to the agent and possibly stochastic.
 

@@ -7,7 +7,7 @@ depends:
   - mismatch-signal
 ---
 
-# Mismatch Dynamics
+# Hypothesis: Mismatch Dynamics
 
 The evolution of model-reality mismatch over time is governed by the balance between the agent's corrective capacity (tempo) and the rate of environmental change (disturbance). The linear ODE is a first-order approximation; the general nonlinear case is handled by the sector-condition framework ( #sector-condition-stability).
 

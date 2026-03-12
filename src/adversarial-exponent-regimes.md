@@ -8,7 +8,7 @@ depends:
   - persistence-condition
 ---
 
-# Adversarial Exponent Regimes
+# Observation: Adversarial Exponent Regimes
 
 The adversarial tempo advantage exponent — the power $b$ in $\|\delta_B\| / \|\delta_A\| \sim (\mathcal{T}_A / \mathcal{T}_B)^b$ — is not a single number. It depends on two structural features of the disturbance: whether the adversarial coupling enters as deterministic drift or stochastic noise, and whether the coupling dominates the base disturbance rate. Three regimes emerge from simulation.
 

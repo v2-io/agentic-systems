@@ -7,7 +7,7 @@ depends:
   - temporal-nesting
 ---
 
-# Multi-Timescale Stability
+# Sketch: Multi-Timescale Stability
 
 When adaptive processes operate at $N$ nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs.
 

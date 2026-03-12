@@ -8,7 +8,7 @@ depends:
   - temporal-optimality
 ---
 
-# Continuous Operation
+# Scope: Continuous Operation
 
 For systems that must operate while evolving, temporal optimization includes the expected cost of failures and recovery.
 

@@ -6,7 +6,7 @@ depends:
   - software-scope
 ---
 
-# Change Expectation Baseline
+# Derived: Change Expectation Baseline
 
 Absent specific information about a software system's future, the best prediction for remaining feature count equals the observed past feature count. This is not a heuristic — it is the mathematical consequence of maximum ignorance. Any deviation requires information that justifies it.
 

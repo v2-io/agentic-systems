@@ -8,7 +8,7 @@ depends:
   - mismatch-signal
 ---
 
-# Causal Information Yield
+# Definition: Causal Information Yield
 
 Actions don't merely select among outcomes — they generate information about how the environment responds to interventions. Causal information yield (CIY) quantifies this: how much an action reveals about causal structure that passive observation cannot provide.
 

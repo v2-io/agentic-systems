@@ -7,7 +7,7 @@ depends:
   - change-expectation-baseline
 ---
 
-# Change Investment
+# Derived: Change Investment
 
 Accept higher initial implementation cost when the amortized savings across expected future changes exceed the upfront cost. This is the pairwise decision rule derived from #dual-optimization.
 

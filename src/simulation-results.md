@@ -10,7 +10,7 @@ depends:
   - adversarial-destabilization
 ---
 
-# Simulation Results
+# Detail: Simulation Results
 
 Six simulation variants validated, refined, and extended the analytical predictions from Section I, forcing regime splits and discovering scaling laws that the analytical derivations left ambiguous.
 

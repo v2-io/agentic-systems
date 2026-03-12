@@ -7,7 +7,7 @@ depends:
   - comprehension-time
 ---
 
-# Implementation Time
+# Definition: Implementation Time
 
 The time from first surviving change to complete feature.
 

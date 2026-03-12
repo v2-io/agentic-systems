@@ -7,7 +7,7 @@ depends:
   - recursive-update
 ---
 
-# Directed Separation
+# Derived: Directed Separation
 
 The epistemic update function $f_M$ is goal-blind: it processes incoming events without reference to the agent's objectives or strategy. The purposeful update $f_G$ depends on the updated epistemic state. Action couples all substates. This directed asymmetry — epistemic update is independent of purpose; purposeful update depends on epistemic state — is the structural backbone of the theory.
 

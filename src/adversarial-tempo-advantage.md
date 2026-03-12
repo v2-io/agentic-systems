@@ -8,7 +8,7 @@ depends:
   - persistence-condition
 ---
 
-# Adversarial Tempo Advantage
+# Result: Adversarial Tempo Advantage
 
 Under adversarial coupling where one agent's actions contribute to the other's disturbance rate, the steady-state mismatch ratio scales superlinearly with the tempo ratio.
 

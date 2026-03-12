@@ -6,7 +6,7 @@ depends:
   - agent-environment
 ---
 
-# Causal Structure
+# Postulate: Causal Structure
 
 The agent-environment interaction has irreducible causal structure grounded in the temporal ordering of events. Actions precede their consequences; observations follow from the state they observe. This ordering is constitutive of the feedback loop and holds independent of the magnitude of the agent's influence on the environment.
 

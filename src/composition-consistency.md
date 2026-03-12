@@ -6,7 +6,7 @@ depends:
   - scope-condition
 ---
 
-# Composition Consistency
+# Postulate: Composition Consistency
 
 ACT applies at every level of description where the scope condition is met. A team of agents is itself an agent; a department of teams is itself an agent. The theory's predictions at each level must be compatible — and they are, under a condition analogous to the persistence threshold: the composite's internal coordination must be fast relative to the external dynamics it faces.
 

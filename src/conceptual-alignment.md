@@ -7,7 +7,7 @@ depends:
   - change-investment
 ---
 
-# Conceptual Alignment
+# Hypothesis: Conceptual Alignment
 
 Comprehension time is inversely related to the alignment between code structure and the current domain model. When code mirrors the domain, the agent's $M_t$ construction is cheaper.
 

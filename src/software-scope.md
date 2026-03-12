@@ -7,7 +7,7 @@ depends:
   - temporal-optimality
 ---
 
-# Software Scope
+# Scope: Software Scope
 
 ACT's software domain applies to systems with non-negligible probability of future change.
 

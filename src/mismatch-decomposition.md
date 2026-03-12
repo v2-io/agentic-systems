@@ -8,7 +8,7 @@ depends:
   - agent-model
 ---
 
-# Mismatch Decomposition
+# Result: Mismatch Decomposition
 
 Expected squared mismatch decomposes into reducible model error and irreducible observation noise. The model can improve the first term; the second is a property of the channel.
 

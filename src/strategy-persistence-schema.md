@@ -8,7 +8,7 @@ depends:
   - strategy-dag
 ---
 
-# Strategy Persistence Schema
+# Proposed-schema: Strategy Persistence Schema
 
 The sector-condition mathematics ( #sector-condition-stability, #sector-condition-derivation) proves bounded mismatch for any system with: a mismatch state, a correction function satisfying sector bounds, and bounded disturbance. This mathematics is domain-agnostic — it doesn't care whether the mismatch is epistemic or strategic. If the strategic update dynamics can be shown to satisfy the same structural conditions, strategy persistence follows by the same result.
 

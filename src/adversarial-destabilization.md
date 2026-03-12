@@ -8,7 +8,7 @@ depends:
   - adaptive-tempo
 ---
 
-# Adversarial Destabilization
+# Derived: Adversarial Destabilization
 
 When two agents are coupled such that one's actions contribute to the other's disturbance rate, the faster agent can drive the slower agent outside its invariant region — causing the correction mechanism to break down entirely.
 

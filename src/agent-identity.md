@@ -7,7 +7,7 @@ depends:
   - model-sufficiency
 ---
 
-# Agent Identity and Temporal Continuity
+# Discussion: Agent Identity and Temporal Continuity
 
 An agent's causal history ( #chronica) is singular and non-forkable. Identity within ACT is grounded not in the model state $M_t$ (which can be copied) but in the unique causal trajectory $\mathcal{C}_t$ (which cannot).
 

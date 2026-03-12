@@ -8,7 +8,7 @@ depends:
   - action-transition
 ---
 
-# Scope Condition
+# Scope: Scope Condition
 
 ACT applies wherever there is an agent that observes, acts with at least a binary choice, and faces residual uncertainty about its environment.
 

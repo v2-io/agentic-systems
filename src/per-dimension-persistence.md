@@ -7,7 +7,7 @@ depends:
   - adaptive-tempo
 ---
 
-# Per-Dimension Persistence
+# Result: Per-Dimension Persistence
 
 The scalar persistence condition $\mathcal{T} > \rho / \|\delta_{\text{critical}}\|$ overestimates adaptive capacity when the agent's correction gain varies across dimensions. The weak dimension is the bottleneck — it dominates the aggregate mismatch regardless of performance on strong dimensions. The correct condition is per-dimension: $\mathcal{T}_k > \rho_k / \|\delta_{\text{critical},k}\|$ for each dimension $k$ with significant disturbance.
 

@@ -8,7 +8,7 @@ depends:
   - software-scope
 ---
 
-# Specification Bound
+# Result: Specification Bound
 
 The minimum time to implement a feature is bounded below by the time required to transmit enough information for the implementer to distinguish the intended feature from competing possibilities. Written specification and demonstration are special cases of this more general transmission bound.
 

@@ -5,7 +5,7 @@ status: axiomatic
 depends: []
 ---
 
-# Temporal Optimality
+# Postulate: Temporal Optimality
 
 Among agents achieving identical outcomes across all non-temporal dimensions, the one requiring least time is optimal.
 
