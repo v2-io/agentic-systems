@@ -77,18 +77,12 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | II | Derived | | [#orient-cascade](src/orient-cascade.md) | Resolution order by info dep | draft |
 | II | Derived | | [#observability-dominance](src/observability-dominance.md) | Unobservable edges freeze | draft |
 | II | Hypothesis | | [#edge-update-via-gain](src/edge-update-via-gain.md) | Gain extends to strategy edges | draft |
+| | --GAP-- | | | When observational edge updates yield valid causal semantics | |
 | II | Formulation | | [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous | draft |
+| | --GAP-- | | | Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy) | |
+| | --GAP-- | | | Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs) | |
 | II | Proposed schema | | [#strategy-persistence-schema](src/strategy-persistence-schema.md) | Sector conditions for Σ_t | draft |
-
-### Gaps
-
-**???** — Gap: *Action-deliberation-exploration tradeoff.* Three-way: exploit (pursue $O_t$ via $\Sigma_t$), explore (improve $M_t$), deliberate (revise $\Sigma_t$). TF-07/08/09 treat explore/exploit for $M_t$; adding $\Sigma_t$ creates a richer tradeoff. Connects to CIY (TF-09) and the exploration price $\lambda$.
-
-**???** — Gap: *Strategy tempo.* The analog of #adaptive-tempo for $\Sigma_t$ updates. What observation channels contribute to strategy revision? How fast must the agent revise $\Sigma_t$ to maintain strategy persistence ( #strategy-persistence-schema)?
-
-**???** — Gap: *Cognitive cost of $\Sigma_t$.* The IB analog for strategy maintenance: a 500-node DAG is qualitatively different from a 12-node one. For finite-context agents, the DAG must fit in working memory. Connects to #information-bottleneck, shared intent compression ( #shared-intent), and the cost inequality ( #explicit-strategy-condition).
-
-**???** — Gap: *Edge identifiability.* Edges claim interventional semantics ($p_{ij} = P(j \mid do(i), M_t)$) but update from observational signals. In confounded domains (military, organizational), this is a real causal-identification problem. In software, genuine interventions (tests, deploys, git bisect) are available. Resolution may come from the software domain pushing requirements back up.
+| | --GAP-- | | | Three-way exploit/explore/deliberate allocation with $\Sigma_t$ | |
 
 
 ---
@@ -106,6 +100,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | III | Scope | | [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | draft |
 | III | Formulation | | [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | draft |
 | III | Derived | | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | draft |
+| | --GAP-- | | | Does epistemic goal-blindness survive composition? | |
 | III | Definition | | [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | draft |
 | III | Definition + Discussion | | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | draft |
 | III | Hypothesis | | [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | draft |
@@ -113,15 +108,10 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | III | Result | | [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | draft |
 | III | Hypothesis | | [#communication-gain](src/communication-gain.md) | Trust-weighted update gain for inter-agent channels | draft |
 | III | Derived | | [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop; includes effects spiral corollary | draft |
+| | --GAP-- | | | Which strategy edges are most valuable to attack | |
 | III | Observation | | [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | α = 2, 3/2, or ~1 | draft |
 | III | Observation | | [#observation-gates-advantage](src/observation-gates-advantage.md) | Obs noise gates advantage | draft |
 | III | Result | | [#per-dimension-persistence](src/per-dimension-persistence.md) | Weak dimension is bottleneck | draft |
-
-### Gaps
-
-**???** — Gap: *Adversarial DAG targeting.* Which strategy edges are most valuable to attack? Centrality in the DAG, inter-agent coupling edges, edges observable to the adversary. #chain-confidence-decay as a weapon: disrupting one AND-edge in a deep chain collapses the whole path.
-
-**???** — Gap: *Directed separation at the composite level.* If each sub-agent's $f_M$ is $G_t$-independent, is the composite's $f_M^c$ independent of $G_t^c$? Hypothesis: goal-blindness composes, BUT coordination routing may break it — if which observations reach the composite depends on the shared objective, the composite's effective observation function is goal-dependent.
 
 
 ---
@@ -145,6 +135,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | IV | Derived | | [#dual-optimization](src/dual-optimization.md) | Min comprehension + impl time | draft |
 | IV | Derived | | [#change-investment](src/change-investment.md) | When extra time now pays off | draft |
 | IV | Discussion + Hypothesis | | [#code-quality-as-observation-infrastructure](src/code-quality-as-observation-infrastructure.md) | Code quality → U_o → η* → T | missing |
+| | --GAP-- | | | Developer tempo as $\mathcal{T}_{\text{obs}}$ + $\mathcal{T}_{\text{explore}}$ + $\mathcal{T}_{\text{probe}}$ | |
 | IV | Hypothesis | | [#conceptual-alignment](src/conceptual-alignment.md) | Code-domain alignment; includes realignment corollary | draft |
 | IV | Definition | | [#atomic-changeset](src/atomic-changeset.md) | The diff that is the feature | draft |
 | IV | Empirical | | [#changeset-size-principle](src/changeset-size-principle.md) | Time ∝ changeset size; includes comprehension corollary | draft |
@@ -158,12 +149,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | IV | Definition | | [#system-availability](src/system-availability.md) | MTTF/(MTTF+MTTR) | draft |
 | IV | Scope | | [#continuous-operation](src/continuous-operation.md) | Include P(fail)×T_recovery | draft |
 | IV | Hypothesis | | [#causal-discovery-from-git](src/causal-discovery-from-git.md) | Git as interventional data | missing |
-
-### Gaps
-
-**???** — Gap: *Three-part tempo decomposition for software:* $\mathcal{T}_{\text{obs}}$ (compiler, linter, tests) + $\mathcal{T}_{\text{explore}}$ (code reading, navigation) + $\mathcal{T}_{\text{probe}}$ (test runs, staging). Which component is the bottleneck? How does each connect to #code-quality-as-observation-infrastructure?
-
-**???** — Gap: *Software persistence condition: the unmaintainability threshold formalized.* $\mathcal{T}_{\text{team}} \gt \rho_{\text{total}} / \|\delta_{\text{critical}}\|$. When does a codebase cross from maintainable to unmaintainable? What are the observable precursors?
+| | --GAP-- | | | Software persistence: the unmaintainability threshold formalized | |
 
 
 ---
@@ -177,16 +163,10 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | V | Definition | | [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | missing |
 | V | Observation | | [#context-turnover](src/context-turnover.md) | 100% M_t reset per session | missing |
 | V | Discussion | | [#m-preservation](src/m-preservation.md) | External memory as persistent M_t | missing |
-
-### Gaps
-
-**???** — Gap: *Cognitive loop formalization.* The cycle: read environment $\to$ construct $M_t$ $\to$ form/revise $\Sigma_t$ $\to$ select action $\to$ observe result $\to$ update $M_t$. How does this differ from the generic orient cascade ( #orient-cascade)? What's specific to language-based agents?
-
-**???** — Gap: *Evaluation framework.* How do you measure an AI agent's ACT quantities? $M_t$ quality, $\Sigma_t$ quality, tempo. Connects to creche and training design.
-
-**???** — Gap: *Creche concept.* Experiential training environments where agents develop adaptive capacity. What does an ACT-grounded training regime look like?
-
-**???** — Gap: *The recursive completion.* An agent using ACT to guide its own behavior while operating on a codebase that implements ACT. Self-referential but not paradoxical.
+| | --GAP-- | | | Language-specific orient cascade (what's specific to logogenic agents?) | |
+| | --GAP-- | | | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents | |
+| | --GAP-- | | | ACT-grounded experiential training environments | |
+| | --GAP-- | | | Self-referential closure: ACT agent on ACT codebase | |
 
 
 ---

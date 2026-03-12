@@ -250,8 +250,17 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
   the rate is not formalized.
 - Cognitive cost of $\Sigma_t$ (no $\beta$ analog yet). DAGs don't compress
   the way probability distributions do — the right framework may be closer to
-  MDL than IB. Critical for finite-context agents.
-- Edge identifiability conditions (resolved in software, open in general)
+  MDL than IB. Critical for finite-context agents. A 500-node DAG is
+  qualitatively different from a 12-node one — for finite-context agents the
+  DAG must fit in working memory. Connects to #information-bottleneck (model
+  compression), #shared-intent (intent compression for communication), and
+  #explicit-strategy-condition (the cost inequality's maintenance term).
+- Edge identifiability conditions (resolved in software, open in general).
+  Edges claim interventional semantics ($p_{ij} = P(j \mid do(i), M_t)$) but
+  update from observational signals. In confounded domains (military,
+  organizational), this is a real causal-identification problem. In software,
+  genuine interventions (tests, deploys, git bisect) are available. Resolution
+  may come from the software domain pushing requirements back up.
 - P3→Markov step in graph uniqueness (sketch, needs tightening)
 - Bridge lemma for composition closure: formally proving small expected
   component-wise errors guarantee bounded trajectory divergence under
@@ -278,6 +287,37 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
   distinct from $A_O$, terminal alignment error as experience-only signal.
   Spike at `scratch/spike-dag-type-closure.md` (v2). Terminal alignment
   error ($\delta_\text{align}$) formalization still open.
+- Adversarial DAG targeting (Section III). Which strategy edges are most
+  valuable to attack? Centrality in the DAG, inter-agent coupling edges,
+  edges observable to the adversary. #chain-confidence-decay as a weapon:
+  disrupting one AND-edge in a deep chain collapses the whole path.
+- Composite directed separation (Section III). If each sub-agent's $f_M$ is
+  $G_t$-independent, is the composite's $f_M^c$ independent of $G_t^c$?
+  Hypothesis: goal-blindness composes, BUT coordination routing may break
+  it — if which observations reach the composite depends on the shared
+  objective, the composite's effective observation function is
+  goal-dependent.
+- Software tempo decomposition (Section IV). Three components:
+  $\mathcal{T}_{\text{obs}}$ (compiler, linter, tests),
+  $\mathcal{T}_{\text{explore}}$ (code reading, navigation),
+  $\mathcal{T}_{\text{probe}}$ (test runs, staging). Which is the
+  bottleneck? Each connects to #code-quality-as-observation-infrastructure.
+  Source: old-tst-via-tft-mapping has the richest treatment.
+- Section V gaps (all blocked on scope decision):
+  - **Cognitive loop formalization.** How does the logogenic agent's cycle
+    differ from the generic orient cascade (#orient-cascade)? What's
+    specific to language-based agents? Source: `agentic-tft/11-cognitive-
+    loop-spec.md`.
+  - **Evaluation framework.** Measuring $M_t$ quality, $\Sigma_t$ quality,
+    and tempo in AI agents. Connects to creche design. Source:
+    `agentic-tft/12-evaluation-framework.md`.
+  - **Creche concept.** ACT-grounded experiential training environments
+    where agents develop adaptive capacity. Source: `agentic-tft/06-creche-
+    and-experiential-training.md`.
+  - **Recursive completion.** An agent using ACT to guide its own behavior
+    while operating on a codebase that implements ACT. Self-referential but
+    not paradoxical — the recursion is well-founded because the agent's
+    $M_t$ includes the theory as domain knowledge, not as self-reference.
 
 
 ## Cross-Segment Consistency Issues
@@ -368,6 +408,24 @@ remaining work.
 - Section II ordering: the v3 spike proposes a specific 16-segment
   linearization (§11). Is that still the best ordering after the codex
   review corrections?
+
+- **Section III: #communication-gain appears after #team-persistence, but
+  team-persistence depends on it.** Team-persistence uses communication-gain
+  in defining distributed tempo. Either reorder (communication-gain before
+  team-persistence) or restructure the dependency.
+
+- **Section II: #complete-agent-state forward-references #directed-separation.**
+  The factorization $M_{\tau^+} = f_M(\ldots)$, $G_{\tau^+} = f_G(\ldots)$
+  is labeled "Derived (from recursive-update + directed-separation)" but
+  directed-separation doesn't appear until 10 segments later. Not wrong
+  (forward references are allowed) but worth a note in the segment that the
+  justification comes later.
+
+- **Section III: cooperative → adversarial transition is abrupt.** Segments
+  1–7 build a cooperative composition story; segment 8 (adversarial-tempo-
+  advantage) introduces adversarial coupling with no narrative bridge. A
+  transition sentence in the section scope text or a brief framing segment
+  could smooth this.
 
 
 ## Promotion Priorities (updated 2026-03-12)
