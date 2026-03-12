@@ -10,21 +10,36 @@ depends:
 
 # Specification Bound
 
-The minimum time to implement a feature is bounded below by the time required to specify it with sufficient detail, where detail required is inversely proportional to shared context between specifier and implementer.
+The minimum time to implement a feature is bounded below by the time required to transmit enough information for the implementer to distinguish the intended feature from competing possibilities. Written specification and demonstration are special cases of this more general transmission bound.
 
 ## Formal Expression
 
 *[Derived (specification-bound)]*
 
-$$\forall \text{ feature } F: \quad \text{time}_{\min}(F) \geq \min\!\big(\text{time}_{\text{specify}}(F, \text{context}),\; \text{time}_{\text{demo}}(F)\big)$$
+$$\forall \text{ feature } F: \quad \text{time}_{\min}(F) \geq \inf_{c \in \mathcal{C}_{\text{suff}}(F)} \text{time}_{\text{transmit}}(F, c, M_{\text{shared}})$$
 
-*[Derived (specification-time)]*
+where:
+- $\mathcal{C}_{\text{suff}}(F)$ is the set of communication channels or transmission paths sufficient to convey feature $F$ to the implementer
+- $M_{\text{shared}}$ is the context shared by specifier and implementer
+- $\text{time}_{\text{transmit}}(F, c, M_{\text{shared}})$ is the time required for channel $c$ to transmit enough information, given that shared context
 
-$$\text{time}_{\text{specify}} \propto \frac{H(F)}{C_{\text{shared}}}$$
+*[Derived (two-channel special case)]*
 
-where $H(F)$ is the information content of the feature specification and $C_{\text{shared}}$ is the shared context between specifier and implementer.
+If the only admissible sufficient channels are written specification and demonstration, the general bound reduces to:
 
-**Assumptions.** The feature $F$ is within #software-scope (non-negligible future change probability). "Specification" means communicating sufficient information for the implementer to produce the feature — not necessarily a written document.
+$$\text{time}_{\min}(F) \geq \min\!\big(\text{time}_{\text{specify}}(F, M_{\text{shared}}),\; \text{time}_{\text{demo}}(F, M_{\text{shared}})\big)$$
+
+*[Derived (specification-time, first-order approximation)]*
+
+$$\text{time}_{\text{specify}}(F, M_{\text{shared}}) \approx \frac{H_{\text{req}}(F \mid M_{\text{shared}})}{R_{\text{spec}}}$$
+
+where:
+- $H_{\text{req}}(F \mid M_{\text{shared}})$ is the residual information that must still be communicated once shared context is taken into account
+- $R_{\text{spec}}$ is the effective information rate of the specification channel
+
+Shared context acts as compression by reducing $H_{\text{req}}$, not by appearing as a free-standing divisor.
+
+**Assumptions.** The feature $F$ is within #software-scope (non-negligible future change probability). A channel is "sufficient" if it transmits enough information for the implementer to produce the intended feature, not merely approximate it.
 
 ### Corollary: Communication as Bottleneck
 
@@ -32,17 +47,20 @@ where $H(F)$ is the information content of the feature specification and $C_{\te
 
 As actual implementation time approaches $\text{time}_{\min}(F)$, communication speed and quality become the limiting factor.
 
-This follows directly: if the bound is specification time, and implementation time approaches zero (e.g., via AI), then the remaining time is specification time — which is fundamentally a communication problem.
+This follows directly: if implementation overhead shrinks (for example, through automation or stronger tools), the remaining irreducible time is the cheapest sufficient transmission path. In many real settings that path is still dominated by communication and context-building.
 
 ## Epistemic Status
 
-The bound's *existence* is *derived* from information theory: you cannot implement what you have not specified; specification requires transmitting $H(F)$ bits; shared context compresses the transmission.
-The proportionality form $\text{time}_{\text{specify}} \propto H(F)/C_{\text{shared}}$ is a *first-order approximation* — the actual relationship depends on channel characteristics and encoding efficiency.
-The proportionality constant is not derived within ACT.
+The bound's *existence* is *derived* from information theory: you cannot implement what has not been sufficiently distinguished from competing implementations, and that distinction requires transmitting enough residual information through some admissible channel.
+The general infimum-over-channels statement is the strongest version currently justified.
+The approximation $\text{time}_{\text{specify}} \approx H_{\text{req}} / R_{\text{spec}}$ is *first-order* — the actual relationship depends on channel characteristics, encoding efficiency, and interaction structure.
+Neither the exact form of $H_{\text{req}}$ nor the effective rate $R_{\text{spec}}$ is derived within ACT.
 
 ## Discussion
 
-**Shared context as compression.** The denominator $C_{\text{shared}}$ explains why domain-specific languages, established conventions, and shared mental models accelerate development. "Make it like Twitter but for dogs" is an efficient specification only because the receiver has extensive context about what "Twitter" means. Without that context, the specification would require orders of magnitude more information.
+**Shared context as compression.** Domain-specific languages, established conventions, examples, and shared mental models reduce the residual information $H_{\text{req}}(F \mid M_{\text{shared}})$. "Make it like Twitter but for dogs" is an efficient specification only because the receiver already has a rich model of what "Twitter" implies. Without that context, the same feature would require far more transmission time.
+
+**Specification is one channel among many.** Natural language requirements, demonstrations, examples, tests, partial implementations, and prior conventions are all candidate transmission paths. The lower bound is on the cheapest *sufficient* path, not specifically on prose. This is why showing a user a working prototype, giving a failing test, or pointing to an analogous feature can outperform a long written brief.
 
 **Connection to ACT.** In ACT terms, the specification bound constrains how fast $O_t$ ( #objective-functional) can be communicated from specifier to implementer. Shared context corresponds to the overlap between specifier's $M_t$ and implementer's $M_t$. When this overlap is small, even a simple objective requires extensive specification.
 
@@ -53,6 +71,6 @@ The proportionality constant is not derived within ACT.
 
 ## Working Notes
 
-- The $\min(\text{specify}, \text{demo})$ formulation may be too narrow. Demonstration is just one alternative communication channel; the real lower bound is the **cheapest sufficient transmission path** for $F$ — specification, demonstration, example, shared convention, or any combination. The formula should generalize to $\text{time}_{\min}(F) \geq \inf_{\text{channels}} \text{time}_{\text{transmit}}(F, \text{channel}, \text{context})$. As currently written, the theorem statement and prose are slightly misaligned — the prose explains more than the formula captures.
+- The strongest next tightening would be to define "sufficient" more formally: e.g. the channel must reduce the implementer's posterior uncertainty over acceptable implementations below some task-dependent threshold. Right now sufficiency is intuitive rather than operationalized.
 - This segment was written by an earlier agent with less context (noted in WORKBENCH). Needs a review pass during Section I/IV tightening — particularly to connect to the ACT communication framework ( #communication-gain) and to make the information-theoretic derivation more explicit.
-- The $H(F) / C_{\text{shared}}$ proportionality is a first-order approximation. A tighter version would account for encoding efficiency and channel characteristics — but this may be over-engineering for a bound that is primarily conceptual.
+- The $H_{\text{req}} / R_{\text{spec}}$ expression is still a first-order approximation. A tighter version would separate encoding efficiency, channel noise, and interactive back-and-forth — but that may be over-engineering for a bound that is primarily conceptual.

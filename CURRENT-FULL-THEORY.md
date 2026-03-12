@@ -18,7 +18,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#observation-function](src/observation-function.md) | Lossy, noisy observations | Definition | I | draft |
 | [#action-transition](src/action-transition.md) | Actions affect environment | Definition | I | draft |
 | [#scope-condition](src/scope-condition.md) | Where ACT applies | Scope | I | draft |
-| [#composition-consistency](src/composition-consistency.md) | Agent/subagent scale invariance | Axiom | I | missing |
+| [#composition-consistency](src/composition-consistency.md) | Agent/subagent scale invariance | Axiom | I | draft |
 | [#causal-structure](src/causal-structure.md) | Irreducible causal structure | Axiom | I | draft |
 | [#pearl-causal-hierarchy](src/pearl-causal-hierarchy.md) | Three levels of causal reasoning | Definition | I | draft |
 | [#chronica](src/chronica.md) | Complete interaction history | Definition | I | draft |

@@ -7,7 +7,7 @@ reference document. For the canonical theory structure, see
 
 ## Segment Status
 
-### Written — Section I (28 segments, 27 written)
+### Written — Section I (28 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
 | [temporal-optimality](src/temporal-optimality.md) | Axiom | Needs review |
@@ -15,6 +15,7 @@ reference document. For the canonical theory structure, see
 | [observation-function](src/observation-function.md) | Definition | Needs review |
 | [action-transition](src/action-transition.md) | Definition | Needs review |
 | [scope-condition](src/scope-condition.md) | Scope | Needs review |
+| [composition-consistency](src/composition-consistency.md) | Axiom | Scale invariance requirement. Source: spike-agent-composition.md §1, §9. |
 | [agent-model](src/agent-model.md) | Formulation | Needs review |
 | [information-bottleneck](src/information-bottleneck.md) | Formulation | Needs review |
 | [model-sufficiency](src/model-sufficiency.md) | Definition | Needs review |
@@ -37,11 +38,6 @@ reference document. For the canonical theory structure, see
 | [structural-adaptation-necessity](src/structural-adaptation-necessity.md) | Theorem | Needs review |
 | [temporal-nesting](src/temporal-nesting.md) | Derived | Needs review |
 | [agent-identity](src/agent-identity.md) | Discussion | Needs review |
-
-### Not Yet Written — Section I
-| Slug | Type | Source material |
-|------|------|-----------------|
-| composition-consistency | Axiom | `scratch/spike-agent-composition.md` |
 
 ### Written — Section II (20 of 20 segments — all written)
 | Slug | Type | Notes |
