@@ -57,7 +57,7 @@ ACT's value is primarily **integration**: connecting established mathematical to
 
 4. **Open bridges.** The git-metrics → Lyapunov-parameters operationalization (coherence → $\alpha$, coupling → $\gamma$) is analogical, not formally proved. The composition laws are sketches. The strategy persistence schema lacks a correction function. These are flagged honestly as open problems.
 
-5. **Formal analogs of known insights.** The model produces patterns structurally parallel to Boyd's OODA dynamics, Brooks's Law, Auftragstaktik, and dual-process theory. These are suggestive — the model captures the same structural tradeoffs — but they are analogs, not derivations. Whether the model's mechanisms are the actual mechanisms behind these phenomena is an empirical question in every case.
+5. **Formal analogs of known insights.** The model independently produces patterns that turn out to parallel Boyd's OODA dynamics, Brooks's Law, Auftragstaktik, and dual-process theory. These are suggestive — the model captures the same structural tradeoffs — but they are analogs, not derivations. Whether the model's mechanisms are the actual mechanisms behind these phenomena is an empirical question in every case.
 
 ### Key Results by Section
 
@@ -104,6 +104,19 @@ act/
     ├── tft/                    all content copied to src/old-tf-*)
     └── tst/                    all content copied to src/old-tst-*)
 ```
+
+
+## Operationalization — Where the Bridge Exists and Where It Doesn't
+
+ACT's variables ($\delta$, $\eta^*$, $\mathcal{T}$, $\rho$, $\Sigma_t$, etc.) are defined abstractly. Applying the theory to any specific domain requires mapping these abstractions to measurable quantities. The operationalization gap varies significantly across the theory's sections — and honesty about where that gap is wide is essential.
+
+**Section IV (Evolving Software) — most concrete.** Changesets, git history, code metrics, and test outcomes provide observable proxies for most variables. Mismatch has a natural proxy in failing tests and divergence between developer expectations and system behavior. Changeset size, proximity, and boundary-crossing costs are directly measurable from version control data. The dual-optimization prediction (comprehension cost dominates under high turnover) is testable with existing engineering metrics. The remaining gap: translating git-derived metrics (coherence, coupling) into Lyapunov parameters ($\alpha$, $R$) — this bridge is analogical, not formally proved. See known fragilities in [`WORKBENCH.md`](WORKBENCH.md).
+
+**Section I (Adaptive Systems) — domain-dependent.** The persistence condition, uncertainty ratio, and adversarial scaling laws are simulation-validated in the abstract. For engineered control systems, operationalization is straightforward (the math was originally developed for them). For biological, organizational, or cognitive agents, the theory identifies the *structural constraints* a system must satisfy — but measuring $\delta$, $\eta^*$, and $\rho$ in situ requires domain-specific instrumentation that ACT does not prescribe.
+
+**Section V (AI Agents) — the open research program.** For LLM-based agents, candidate observables exist: context window state, tool-use traces, API logs, success/failure rates, strategy revision frequency. But no one has yet written the code that computes "adaptive tempo" from an agent's runtime telemetry, or that detects when an agent has crossed its persistence threshold and needs structural adaptation (context reset, model switch, strategy overhaul). This is the highest-value operationalization target — and the most open.
+
+**The theory's value before full operationalization.** Even where variables aren't directly measurable, the theory provides *design constraints*: what structure an agent needs (Orient Cascade ordering, satisfaction gap / control regret diagnostics, persistence monitoring), why it needs that structure (derived from the formalism, not asserted as best practice), and what failure modes to expect when the structure is absent. These constraints are actionable for agent architects today, independent of whether every variable can be tracked in real-time.
 
 
 ## Prior Art and Positioning
