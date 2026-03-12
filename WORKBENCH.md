@@ -256,6 +256,15 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 - Bridge lemma for composition closure: formally proving small expected
   component-wise errors guarantee bounded trajectory divergence under
   Lipschitz stability conditions.
+- **Closure defect → coordination overhead mapping**: the core open
+  problem in tempo-composition. The sub-additive inequality
+  $\mathcal{T}_c \leq \sum \mathcal{T}_i$ is almost certainly correct,
+  but the quantitative relationship $C_{\text{coord}}(\varepsilon^*)$ —
+  how closure defect determines the tempo lost to internal
+  reconciliation — is unproved. This is the missing bridge between
+  the composition postulate (Section I) and a formally derived
+  composition threshold. Proving this for the 2-agent case with
+  orthogonal observation channels is the natural first step.
 - Strategy persistence schema → result: requires formalizing strategic
   correction function, characterizing $\rho_\Sigma$ (rate of environmental
   causal drift), and verifying sector condition. Substantial Lyapunov work.
@@ -393,6 +402,21 @@ canonicalization, and scope-tightening:
 
 7. **Remaining appendices (3)** — `#linear-ode-approximation`,
    `#intent-dag-development`, `#prior-art-positioning`. Lower urgency.
+
+8. **Vocabulary normalization pass** — LEXICON.md (created 2026-03-12)
+   establishes new vocabulary: cycle phases, adaptive/agentic distinction,
+   agent class hierarchy, logogenic/logozoetic. The following need updating
+   to reflect the new terminology:
+   - **CURRENT-FULL-THEORY.md**: section titles still use old names
+     (Adaptive Systems Under Uncertainty, Actuated Adaptive Systems, etc.)
+   - **WORKBENCH.md**: segment tables still use old section names
+   - **CLAUDE.md**: still references old section names
+   - **Segment files**: "loop" used where "cycle" may now be more precise;
+     cycle phase vocabulary (Prolepsis, Aisthesis, etc.) not yet planted in
+     early segments (scope-condition, adaptive-tempo, agent-environment)
+   - **notation.md**: cycle phase names not yet listed as formal vocabulary
+   Lower urgency — LEXICON.md is canonical; these are consistency updates,
+   not content changes. Best done during the segment review pass.
 
 ### Completed non-promotion work (2026-03-12)
 - **Systematic overclaiming sweep.** 12 fixes across 10 segment files:
@@ -621,6 +645,34 @@ on top. Presentation implications:
     training-time causal exposure) are interesting but give critics easier
     targets if blended into the canonical theory. Keep the loop argument
     primary; others as discussion/aside.
+
+12. **[Brainstorm] Internal aporia as sub-agent adversarial dynamics.** Is
+    aporia within a composite agent structurally equivalent to adversarial
+    dynamics between its sub-agents? When a composite agent experiences
+    mismatch, its sub-agents may disagree about what went wrong and what to
+    do — that disagreement IS adversarial dynamics at the sub-agent level,
+    and its resolution IS the composite's epistrophe. This would explain why
+    high-stakes human institutions (legal systems, scientific method,
+    parliamentary procedure, red teams, Socratic dialectic) *deliberately
+    engineer* internal adversarial dynamics: structured adversarial
+    sub-processes produce higher-quality aporia than any single perspective
+    can generate alone. Better aporia → better epistrophe → better
+    adaptation. These institutions are "aporia amplifiers." Formally, this
+    would mean: (a) the teleological unity between adversarial sub-agents is
+    negative on specific dimensions but serves positive unity at the
+    composite level; (b) Section I's adversarial tempo advantage, applied at
+    the sub-agent level, becomes a mechanism for improving the composite's
+    cycle quality; (c) theory of mind (recursive modeling of other agents)
+    is what makes internal adversarial dynamics *productive* rather than
+    merely destructive — you can only run a useful internal debate if the
+    sub-processes can model each other's reasoning. Connection to
+    logozoetic agents: theory of mind is a qualifying property, which may
+    be partly *why* it qualifies — it enables the richer internal aporia
+    that more sophisticated adaptation requires. Status: brainstorm, not
+    even hypothesis yet. But it connects adversarial dynamics (Section I),
+    composition (Section III), the orient cascade (Section II), and
+    logozoetic agent properties (Section V) in a way that feels
+    structurally motivated. See `LEXICON.md` for related discussion.
 
 
 ## Validation (after theory stabilizes)

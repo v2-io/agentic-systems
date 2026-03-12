@@ -10,19 +10,19 @@ All symbols used in Agentic Cycle Theory, serving as a single authoritative refe
 Notation conventions are adopted from TFT (`_archive/old-tf-00-notation-conventions.md`) with extensions for ACT's purposeful-agent machinery.
 
 
-## The Adaptive Loop
+## The Adaptive Cycle
 
-The adaptive feedback loop at the heart of ACT unfolds in five phases, named from Greek philosophical vocabulary for precision:
+One complete traversal of the agent-environment feedback loop — the unit of adaptive work. The five phases are named from Greek philosophical vocabulary; see [`LEXICON.md`](LEXICON.md) for the full prose discussion (why these terms, what they mean beyond the formalism, and what the cycle is *not*).
 
-| Phase | Greek | Sense | ACT Step |
-|-------|-------|-------|----------|
-| **Prolepsis** (πρόληψις) | Anticipation | Preconception through which experience is interpreted | Model generates prediction: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
-| **Aisthesis** (αἴσθησις) | Perception | Raw sensory contact between agent and world | Observation arrives: $o_t$ |
-| **Aporia** (ἀπορία) | Perplexity | Recognizing that reality differs from expectation | Mismatch signal: $\delta_t = o_t - \hat{o}_t$ |
-| **Epistrophe** (ἐπιστροφή) | Turning-toward | The model turns toward reality, proportionally | Gain-weighted update: $M_t = M_{t-1} + \eta^* \cdot g(\delta_t)$ |
-| **Praxis** (πρᾶξις) | Informed action | Action arising from understanding | Action selection: $a_t = \pi(M_t)$ |
+| Phase | Greek | Formalism |
+|-------|-------|-----------|
+| **Prolepsis** (πρόληψις) | Anticipation | $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
+| **Aisthesis** (αἴσθησις) | Perception | $o_t$ arrives |
+| **Aporia** (ἀπορία) | Perplexity | $\delta_t = o_t - \hat{o}_t$ |
+| **Epistrophe** (ἐπιστροφή) | Turning-toward | $M_t = M_{t-1} + \eta^* \cdot g(\delta_t)$ |
+| **Praxis** (πρᾶξις) | Informed action | $a_t = \pi(M_t)$ |
 
-The loop is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (Prolepsis).
+The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (Prolepsis).
 
 
 ## Primitives ( #agent-environment, #observation-function, #action-transition)
