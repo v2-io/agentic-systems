@@ -75,30 +75,26 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#software-scope](src/software-scope.md) | Systems with P(change) > ε | Scope | IV | draft |
 | [#software-epistemic-properties](src/software-epistemic-properties.md) | Software's 6 unique properties | Observation | IV | missing |
 | [#feature-definition](src/feature-definition.md) | Unit of coherent change | Definition | IV | draft |
-| [#specification-bound](src/specification-bound.md) | Can't implement unspecified | Theorem | IV | draft |
-| [#communication-as-bottleneck](src/communication-as-bottleneck.md) | Spec time → limiting factor | Corollary | IV | old |
-| [#change-expectation-baseline](src/change-expectation-baseline.md) | Median future ≈ observed past | Derived | IV | draft |
-| [#investment-scaling](src/investment-scaling.md) | Investment scales with n_past | Corollary | IV | draft |
+| [#specification-bound](src/specification-bound.md) | Can't implement unspecified; includes communication bottleneck corollary | Theorem | IV | draft |
+| [#change-expectation-baseline](src/change-expectation-baseline.md) | Median future ≈ observed past; includes investment scale form | Derived | IV | draft |
 | [#developer-as-act-agent](src/developer-as-act-agent.md) | Developer as (M_t, O_t, Σ_t) | Definition | IV | missing |
 | [#comprehension-time](src/comprehension-time.md) | Cost of constructing local M_t | Definition | IV | draft |
 | [#implementation-time](src/implementation-time.md) | Cost from first change to done | Definition | IV | draft |
 | [#dual-optimization](src/dual-optimization.md) | Min comprehension + impl time | Derived | IV | draft |
-| [#change-investment](src/change-investment.md) | When extra time now pays off | Derived | IV | old |
+| [#change-investment](src/change-investment.md) | When extra time now pays off | Derived | IV | draft |
 | [#code-quality-as-observation-infrastructure](src/code-quality-as-observation-infrastructure.md) | Code quality → U_o → η* → T | Discussion + Hypothesis | IV | missing |
-| [#conceptual-alignment](src/conceptual-alignment.md) | Code-domain alignment | Hypothesis | IV | old |
-| [#realignment-as-feature](src/realignment-as-feature.md) | Realignment has ROI | Corollary | IV | old |
-| [#atomic-changeset](src/atomic-changeset.md) | The diff that is the feature | Definition | IV | old |
-| [#changeset-size-principle](src/changeset-size-principle.md) | Time ∝ changeset size | Empirical | IV | old |
-| [#comprehension-follows-changeset](src/comprehension-follows-changeset.md) | Comprehension ∝ files touched | Corollary + Hypothesis | IV | old |
-| [#change-distance](src/change-distance.md) | Lexical < file < module < svc | Definition | IV | old |
-| [#change-proximity-principle](src/change-proximity-principle.md) | Closer changes → less time | Derived + Hypothesis | IV | old |
-| [#exponential-cognitive-load](src/exponential-cognitive-load.md) | Context-switch cost compounds? | Hypothesis | IV | old |
-| [#system-coupling](src/system-coupling.md) | P(change j \| change i) | Definition | IV | old |
-| [#system-coherence](src/system-coherence.md) | E[proximity within module] | Definition | IV | old |
-| [#coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Coherence/coupling from git | Measurement | IV | old |
-| [#principled-decision-integration](src/principled-decision-integration.md) | Optimal C minimizes E[T\|C] | Integration | IV | old |
-| [#system-availability](src/system-availability.md) | MTTF/(MTTF+MTTR) | Definition | IV | old |
-| [#continuous-operation](src/continuous-operation.md) | Include P(fail)×T_recovery | Scope Extension | IV | old |
+| [#conceptual-alignment](src/conceptual-alignment.md) | Code-domain alignment; includes realignment corollary | Hypothesis | IV | draft |
+| [#atomic-changeset](src/atomic-changeset.md) | The diff that is the feature | Definition | IV | draft |
+| [#changeset-size-principle](src/changeset-size-principle.md) | Time ∝ changeset size; includes comprehension corollary | Empirical | IV | draft |
+| [#change-distance](src/change-distance.md) | Lexical < file < module < svc | Definition | IV | draft |
+| [#change-proximity-principle](src/change-proximity-principle.md) | Closer changes → less time | Derived + Hypothesis | IV | draft |
+| [#exponential-cognitive-load](src/exponential-cognitive-load.md) | Context-switch cost compounds? | Hypothesis | IV | draft |
+| [#system-coupling](src/system-coupling.md) | P(change j \| change i) | Definition | IV | draft |
+| [#system-coherence](src/system-coherence.md) | E[proximity within module] | Definition | IV | draft |
+| [#coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Coherence/coupling from git | Measurement | IV | draft |
+| [#principled-decision-integration](src/principled-decision-integration.md) | Optimal C minimizes E[T\|C] | Integration | IV | draft |
+| [#system-availability](src/system-availability.md) | MTTF/(MTTF+MTTR) | Definition | IV | draft |
+| [#continuous-operation](src/continuous-operation.md) | Include P(fail)×T_recovery | Scope Extension | IV | draft |
 | [#causal-discovery-from-git](src/causal-discovery-from-git.md) | Git as interventional data | Hypothesis | IV | missing |
 | [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | Definition | V | missing |
 | [#context-turnover](src/context-turnover.md) | 100% M_t reset per session | Observation | V | missing |

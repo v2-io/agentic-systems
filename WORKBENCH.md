@@ -48,17 +48,29 @@ reference document. For the canonical theory structure, see
 |------|------|-------|
 | [agent-spectrum](src/agent-spectrum.md) | Definition | Needs review |
 
-### Written — Section IV (8 of 29 segments)
+### Written — Section IV (20 segments; 4 missing, 0 old remain)
 | Slug | Type | Notes |
 |------|------|-------|
 | [software-scope](src/software-scope.md) | Scope | Needs review |
 | [feature-definition](src/feature-definition.md) | Definition | Needs review |
-| [specification-bound](src/specification-bound.md) | Theorem | Needs review; written by earlier agent with less context |
-| [change-expectation-baseline](src/change-expectation-baseline.md) | Derived | Median not expectation — key finding |
-| [investment-scaling](src/investment-scaling.md) | Corollary | Redirect to change-expectation-baseline |
+| [specification-bound](src/specification-bound.md) | Theorem | Needs review; written by earlier agent with less context. Includes communication-as-bottleneck corollary. |
+| [change-expectation-baseline](src/change-expectation-baseline.md) | Derived | Median not expectation — key finding. Includes investment-scaling corollary. |
 | [comprehension-time](src/comprehension-time.md) | Definition | Needs review |
 | [implementation-time](src/implementation-time.md) | Definition | Needs review |
 | [dual-optimization](src/dual-optimization.md) | Derived | Turnover multiplier |
+| [change-investment](src/change-investment.md) | Derived | Pairwise threshold from dual-optimization. Compound effects are hypothesis, not derived. |
+| [conceptual-alignment](src/conceptual-alignment.md) | Hypothesis | Includes realignment-as-feature corollary. Functional form ungrounded. |
+| [atomic-changeset](src/atomic-changeset.md) | Definition | |
+| [changeset-size-principle](src/changeset-size-principle.md) | Empirical | Includes comprehension-follows-changeset corollary (hypothesis). |
+| [change-distance](src/change-distance.md) | Definition | |
+| [change-proximity-principle](src/change-proximity-principle.md) | Derived + Hypothesis | Qualitative derived; functional form hypothesis. |
+| [exponential-cognitive-load](src/exponential-cognitive-load.md) | Hypothesis | ACT deliberation-cost suggests dependency-structure model, not fixed exponent. |
+| [system-coupling](src/system-coupling.md) | Definition | Causal (interventional) interpretation via git. |
+| [system-coherence](src/system-coherence.md) | Definition | |
+| [coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Measurement | Ratio form is one possible aggregation. |
+| [principled-decision-integration](src/principled-decision-integration.md) | Derived | General form of dual-optimization with per-feature P(F_i). |
+| [system-availability](src/system-availability.md) | Definition | Standard reliability engineering. |
+| [continuous-operation](src/continuous-operation.md) | Scope | Extends temporal optimization to include operational failures. |
 
 ### Not Yet Written — Section II
 | Slug | Type | Source material |
@@ -282,17 +294,17 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 |----------|---------|------------|
 | ~~old-tst-readme~~ | ~~TST overview~~ | **Archived.** Superseded by Section IV of CURRENT-FULL-THEORY.md. |
 | ~~old-tst-01-temporal-optimality~~ | ~~T-01~~ | **Archived.** → #temporal-optimality (generalized). |
-| old-tst-02-specification-bound | D-01 (feature def) + T-02 + C-02.1 | **Absorbed** into #specification-bound, #feature-definition, #communication-as-bottleneck. TST has richer discussion of LLM/AI implications. |
-| old-tst-03-evolving-scope | T-03: evolving systems scope, infinite velocity insight | **Absorbed** into #software-scope. "Infinite velocity" framing preserved. |
-| old-tst-04-change-expectation | T-04: Bayesian baseline, Jeffrey's prior, C-04.1, C-04.2, velocity inflection discussion | **Absorbed** into #change-expectation-baseline, #investment-scaling. Open question on velocity inflection not in ACT. |
-| old-tst-05-dual-optimization | D-02, D-03, T-05: comprehension + implementation, turnover multiplier, AI collaboration implications | **Absorbed** into #comprehension-time, #implementation-time, #dual-optimization. Rich AI-turnover discussion not fully in ACT. |
-| old-tst-06-change-investment | T-06: investment threshold, compound effects, near-zero cost reality, AI advantage | **Absorbed** into #change-investment. Detailed practical guidance not in ACT. |
-| old-tst-07-conceptual-alignment | T-07 + C-07.1: alignment hypothesis, dual comprehension, startup pivot principle | **Absorbed** into #conceptual-alignment, #realignment-as-feature. |
-| old-tst-08-changeset-size | D-04, T-08, C-08.1: atomic changeset, size principle, comprehension follows size | **Absorbed** into #atomic-changeset, #changeset-size-principle, #comprehension-follows-changeset. |
-| old-tst-09-change-proximity | D-05, T-09, H-09.1, Der-09.1: change distance, proximity principle, exponential cognitive load hypothesis | **Absorbed** into #change-distance, #change-proximity-principle, #exponential-cognitive-load. |
-| old-tst-10-coherence-coupling | D-06, D-07, T-10: coupling/coherence definitions, measurement from git | **Absorbed** into #system-coupling, #system-coherence, #coherence-coupling-measurement. |
-| old-tst-11-decision-integration | T-11: principled decision integration, expanded temporal terms | **Absorbed** into #principled-decision-integration. |
-| old-tst-12-continuous-operation | D-08, T-12: availability, fault-tolerant vs defensive, perturbation types | **Absorbed** into #system-availability, #continuous-operation. |
+| ~~old-tst-02-specification-bound~~ | ~~D-01 + T-02 + C-02.1~~ | **Archived.** → #specification-bound, #feature-definition. |
+| ~~old-tst-03-evolving-scope~~ | ~~T-03~~ | **Archived.** → #software-scope. |
+| ~~old-tst-04-change-expectation~~ | ~~T-04, C-04.1, C-04.2~~ | **Archived.** → #change-expectation-baseline. |
+| ~~old-tst-05-dual-optimization~~ | ~~D-02, D-03, T-05~~ | **Archived.** → #comprehension-time, #implementation-time, #dual-optimization. |
+| ~~old-tst-06-change-investment~~ | ~~T-06~~ | **Archived.** → #change-investment. |
+| ~~old-tst-07-conceptual-alignment~~ | ~~T-07 + C-07.1~~ | **Archived.** → #conceptual-alignment. |
+| ~~old-tst-08-changeset-size~~ | ~~D-04, T-08, C-08.1~~ | **Archived.** → #atomic-changeset, #changeset-size-principle. |
+| ~~old-tst-09-change-proximity~~ | ~~D-05, T-09, H-09.1~~ | **Archived.** → #change-distance, #change-proximity-principle, #exponential-cognitive-load. |
+| ~~old-tst-10-coherence-coupling~~ | ~~D-06, D-07, T-10~~ | **Archived.** → #system-coupling, #system-coherence, #coherence-coupling-measurement. |
+| ~~old-tst-11-decision-integration~~ | ~~T-11~~ | **Archived.** → #principled-decision-integration. |
+| ~~old-tst-12-continuous-operation~~ | ~~D-08, T-12~~ | **Archived.** → #system-availability, #continuous-operation. |
 
 ### TST via-TFT Bridge Material → ACT Mapping
 
