@@ -46,7 +46,7 @@ The uninformed baseline is rarely used directly — almost all real code comes w
 
 *[Derived (investment-scaling, from change-expectation-baseline)]*
 
-Investment in abstraction and flexibility should scale with $n_{\text{past}}$, since the expected return period equals the observed lifetime. Systems with minimal feature history ($n_{\text{past}} \lt 3$) warrant minimal structural investment.
+Investment in abstraction and flexibility should scale with $n_{\text{past}}$, since the median-predicted remaining lifetime equals the observed lifetime. Systems with minimal feature history ($n_{\text{past}} \lt 3$) warrant minimal structural investment.
 
 ## Epistemic Status
 

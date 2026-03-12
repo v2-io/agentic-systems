@@ -1,18 +1,20 @@
 # ACT: Agentic Cycle Theory
 
-A first-principles mathematical theory of adaptive, purposeful agents under uncertainty.
+A mathematical framework for adaptive, purposeful agents under uncertainty — integrating control theory, causal inference, information theory, and agent architecture under a common formalism.
 
 ## What ACT Is
 
-ACT unifies three aspects of agency that existing theories treat separately:
+ACT is a unifying framework, not a new branch of mathematics. The individual mathematical tools it uses — Lyapunov stability, Kalman filtering, the information bottleneck, causal DAGs — are well-established. ACT's contribution is connecting them into a single coherent account of adaptive agency, producing specific testable predictions and a few genuinely novel formalizations along the way.
 
-1. **Adaptive feedback dynamics** — how agents build and maintain models of reality under environmental change. Originally developed as Temporal Feedback Theory (TFT, now subsumed): mismatch signals, update gain via the uncertainty ratio, adaptive tempo, persistence conditions, adversarial dynamics.
+The framework unifies three aspects of agency that existing theories treat separately:
 
-2. **Actuated (purposeful or goal-driven) agency** — how agents hold, pursue, and revise goals. Objectives ($O_t$) and strategy ($\Sigma_t$) are distinct formal objects. Strategy is formalized as a probabilistic causal DAG encoding the agent's theory of how its actions produce goal-achievement.
+1. **Adaptive feedback dynamics** — how agents build and maintain models of reality under environmental change. Originally developed as Temporal Feedback Theory (TFT, now subsumed): mismatch signals, update gain via the uncertainty ratio, adaptive tempo, persistence conditions, adversarial dynamics. The mathematical backbone is standard (Lyapunov/sector-condition analysis); the application to general agents — not just control systems — and the specific results (uncertainty ratio, persistence threshold, adversarial scaling laws) are ACT's contribution.
 
-3. **Composition and shared intent** — how agents compose into larger agents and communicate purpose under uncertainty. Intent compression via the information bottleneck (the Auftragstaktik insight). Composition consistency as a requirement, not a feature.
+2. **Actuated (purposeful or goal-driven) agency** — how agents hold, pursue, and revise goals. Objectives ($O_t$) and strategy ($\Sigma_t$) are distinct formal objects. Strategy is formalized as a probabilistic causal DAG encoding the agent's theory of how its actions produce goal-achievement. The derivation chain from adaptive foundations to purposeful architecture — showing *why* causal structure is needed, not just assuming it — is where ACT does genuinely new work.
 
-Beneath all three is a single recurring pattern: **an agent persists when its internal correction outpaces external challenge.** For an individual, this means adaptive tempo must exceed the rate of environmental disturbance — the persistence condition. For a composite (a team, an organization, a swarm), it means internal coordination must equilibrate faster than the external dynamics change — the composition threshold. Both are measurable. Both are comfortably satisfied by most competent agents. The interesting theory lives near the boundary where they aren't.
+3. **Composition and shared intent** *(research program, less mature than 1-2)* — how agents compose into larger agents and communicate purpose under uncertainty. Intent compression via the information bottleneck. Composition consistency as a structural requirement on the theory; the operational bridge (admissibility constraints, closure-to-trajectory error bounds) is still open.
+
+Beneath all three is a single recurring pattern: **an agent persists when its internal correction outpaces external challenge.** For an individual, this means adaptive tempo must exceed the rate of environmental disturbance — the persistence condition (Section I, simulation-validated). For a composite (a team, an organization, a swarm), this means internal coordination must equilibrate faster than the external dynamics change — the composition threshold (Section III, stated as a sufficient condition, not yet formally derived).
 
 The theory progresses from general adaptive systems through actuated agency and multi-agent composition to domain instantiations — particularly software development and AI agents operating on code.
 
@@ -43,34 +45,27 @@ Five sections scope progressively:
 Canonical ordering lives in `CURRENT-FULL-THEORY.md`, not in filenames. Slugs are the stable identities; the linearization will change as the theory develops.
 
 
-## Key Results
+## What ACT Contributes — Honest Calibration
 
-### Section I — Adaptive Systems (nearing completion)
+ACT's value is primarily **integration**: connecting established mathematical tools into a unified account of adaptive agency. The individual pieces (Lyapunov stability, Kalman filtering, IB, causal DAGs) are known. The specific contributions fall into five categories:
 
-The formal backbone is the Lyapunov/sector-condition analysis — general, nonlinear, robust. The linear ODE is pedagogical, correct in its regime, not the general case.
+1. **Synthesis that produces new structure.** The uncertainty ratio $\eta^* = U_M/(U_M + U_o)$ unifies Kalman gain, Bayesian learning rates, and RL step sizes under one principle. The persistence condition $\mathcal{T} > \rho/\|\delta_{\text{critical}}\|$ connects Lyapunov stability to agent viability. These are known mathematics applied to a new domain — their value is the unified framework, not the individual results.
 
-- **Uncertainty ratio principle**: $\eta^* = U_M / (U_M + U_o)$ — validated empirically (52% mismatch reduction with Riccati-optimal gain)
-- **Persistence condition**: $\mathcal{T} > \rho / \|\delta_{\text{critical}}\|$ — robust across all correction functions tested
-- **Adversarial tempo advantage**: superlinear in coupling-dominant regimes (exponent = 2 deterministic, 3/2 stochastic, ~1 non-coupling-dominant)
-- **Observation quality gates tempo advantage**: $U_o$ collapses adversarial exponent from ~1.0 to ~0.2 — formally grounding Boyd's emphasis on Orient quality over raw OODA speed
-- **Structural adaptation necessity** — catastrophic breakdown observed at predicted threshold
+2. **Genuinely novel formalizations.** The derivation that graph structure (DAGs) is *forced* by temporal ordering + probabilistic uncertainty + local revisability (not just a convenient choice). DAG acyclicity derived from finite planning horizons. The satisfaction gap / control regret split (separating "infeasible goal" from "bad strategy"). The feedback loop as a Level 2 causal engine (Bareinboim et al.'s causal hierarchy applied to agent architecture). These produce results we have not seen stated elsewhere.
 
-### Section II — Actuated Adaptive Systems (derivation mature, segments in progress)
+3. **Quantitative predictions.** Adversarial tempo advantage exponents (2 deterministic, 3/2 stochastic, ~1 non-coupling-dominant — simulation-validated). Observation noise collapsing tempo advantage ($U_o$ drops exponent from ~1.0 to ~0.2). Structural adaptation breakdown at predicted threshold. These are testable and, where tested, confirmed.
 
-The derivation chain is in `scratch/spike-v3-purposeful-agent.md`. Porting to segment files is the remaining work.
+4. **Open bridges.** The git-metrics → Lyapunov-parameters operationalization (coherence → $\alpha$, coupling → $\gamma$) is analogical, not formally proved. The composition laws are sketches. The strategy persistence schema lacks a correction function. These are flagged honestly as open problems.
 
-- **Strategy as probabilistic causal DAG** with AND/OR nodes and single-parameter edges — converged across three independent formalism attempts
-- **Orient cascade**: observation → $M_t$ update → $\Sigma_t$ edge revision → feasibility check → possible $O_t$ revision
-- **Satisfaction gap / control regret split**: separates "infeasible goal" from "bad strategy"
-- **DAG acyclicity derived** from temporal ordering over finite planning horizons
-- **Directed separation**: $M_t$ update function is $G_t$-independent (conditional on realized action and event)
+5. **Formal analogs of known insights.** The model produces patterns structurally parallel to Boyd's OODA dynamics, Brooks's Law, Auftragstaktik, and dual-process theory. These are suggestive — the model captures the same structural tradeoffs — but they are analogs, not derivations. Whether the model's mechanisms are the actual mechanisms behind these phenomena is an empirical question in every case.
 
-### Section IV — Evolving Software (in active conversion from TST)
+### Key Results by Section
 
-TST's claims are being systematically integrated with ACT's formal machinery — not just relabeled, but rederived where possible and honestly tagged where not.
+**Section I — Adaptive Systems** (28 segments, nearing completion). Lyapunov/sector-condition analysis — general, nonlinear, robust. The linear ODE is pedagogical, correct in its regime, not the general case. Uncertainty ratio validated empirically (52% mismatch reduction with Riccati-optimal gain). Persistence condition robust across all correction functions tested.
 
-- **Median prediction, not expectation**: TST's $\hat{n}_{\text{future}} = n_{\text{past}}$ is a median under Jeffrey's prior on Pareto($\alpha = 1$), whose mean diverges. This affects all downstream quantitative claims.
-- **Dual optimization with turnover multiplier**: comprehension cost compounds per-reader; implementation cost does not. Under 100% AI context turnover, comprehension dominates overwhelmingly.
+**Section II — Actuated Adaptive Systems** (20 segments, complete). Strategy as probabilistic causal DAG with AND/OR nodes. Orient cascade derived from information dependency. Directed separation (conditional on scope restriction). Derivation chain in `scratch/spike-v3-purposeful-agent.md`.
+
+**Section IV — Evolving Software** (20/24 segments, in conversion from TST). Median prediction (not expectation — Pareto($\alpha=1$) mean diverges). Dual optimization with turnover multiplier. TST's claims integrated with ACT's formal machinery — not relabeled, but rederived where possible and honestly tagged where not.
 
 
 ## Current Status
@@ -113,8 +108,12 @@ act/
 
 ## Prior Art and Positioning
 
-- **BDI** (Rao & Georgeff): Named the parts but has no dynamics. ACT provides the physiology.
-- **Active Inference** (Friston): Unifies perception and action under free energy. ACT uses causal feedback dynamics — more transparent and measurable. Expected free energy ≈ ACT's value + $\lambda$ CIY (structural isomorphism, different foundations).
+ACT builds on and connects to substantial prior work. Honest positioning requires acknowledging what's borrowed, what's bridged, and what's new.
+
+- **Control theory** (Lyapunov, Kalman, sector conditions): ACT's Section I machinery. The mathematics is standard; the application to general adaptive agents (not just engineered control systems) and the specific results (persistence threshold, adversarial scaling laws) are ACT's extension.
+- **BDI** (Rao & Georgeff): Named the agent architecture components (beliefs, desires, intentions). ACT provides dynamics — how these components evolve, interact, and degrade — which BDI does not address.
+- **Active Inference** (Friston): Unifies perception and action under free energy minimization. ACT uses causal feedback dynamics with different foundations (Lyapunov stability rather than variational free energy). Expected free energy $\approx$ ACT's value + $\lambda$ CIY — a structural isomorphism suggesting shared deep structure, not a claim that one subsumes the other.
+- **Causal inference** (Pearl, Bareinboim): ACT uses the causal hierarchy theorem to derive the need for causal structure in adaptive agents. The theorem is Bareinboim et al.'s; the application to agent architecture is ACT's.
 - **Hafez et al. 2026**: Bi-predictability metric ($P$). Complementary — $P$ diagnoses architecture, mismatch diagnoses performance.
-- **IBM "Agentic AI Needs a Systems Theory" 2025**: Articulates the void ACT fills. Their open challenges (subgoal emergence, residual control rights) are directly addressed by ACT.
+- **IBM "Agentic AI Needs a Systems Theory" 2025**: Articulates the need for a unified agent theory. ACT addresses several of their open challenges (subgoal emergence via DAG decomposition, residual control rights via the composition framework), though the composition results are still sketches.
 - **TST**: Software domain theory. Gets full treatment in Section IV, regrounded in ACT's formal machinery. TST's claims are honestly scoped and carefully stated; ACT adds the causal mathematics and adaptive dynamics, not rigor — TST already had that.

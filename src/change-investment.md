@@ -25,7 +25,7 @@ Equivalently: accept $X$ extra minutes now to save $Y$ minutes per future change
 
 ## Epistemic Status
 
-*Derived* from #dual-optimization. The threshold form is the pairwise comparison obtained by requiring $C_1$ to have lower total expected time than $C_2$ in the dual-optimization objective. It inherits the assumptions of #change-expectation-baseline (median prediction, uniform feature rate) and #dual-optimization (single typical future feature approximation).
+*Derived* from #dual-optimization. The threshold form is the pairwise comparison obtained by requiring $C_1$ to have lower total median-predicted time than $C_2$ in the dual-optimization objective. It inherits the assumptions of #change-expectation-baseline (median prediction — not expectation, since the mean is undefined — and uniform feature rate) and #dual-optimization (single typical future feature approximation).
 
 The **compound effects** discussed below are structurally motivated but not formally derived within ACT. They connect to the persistence condition ( #persistence-condition) but the formal link has not been established.
 

@@ -45,7 +45,7 @@ The gap: step 3→4 requires formalizing the distinction between internal and ex
 
 These are stated as sufficient conditions; whether they are also necessary is open.
 
-**Brooks's Law.** Adding more agents (increasing $\sum \mathcal{T}_i$) only increases the composite tempo $\mathcal{T}_c$ if the corresponding increase in closure defect $\varepsilon^*$ doesn't let $C_{\text{coord}}$ dominate. This is the formal content of Brooks's Law: adding people to a late project makes it later, because the communication overhead ($C_{\text{coord}}$) grows faster than the aggregate capability ($\sum \mathcal{T}_i$).
+**Brooks's Law.** Adding more agents (increasing $\sum \mathcal{T}_i$) only increases the composite tempo $\mathcal{T}_c$ if the corresponding increase in closure defect $\varepsilon^*$ doesn't let $C_{\text{coord}}$ dominate. The model provides a formal analog of Brooks's Law: if communication overhead ($C_{\text{coord}}$) grows faster than aggregate capability ($\sum \mathcal{T}_i$) when adding agents, then adding people to a late project makes it later. Whether this specific mechanism (coordination overhead consuming tempo) is the dominant cause in practice is an empirical question.
 
 **Connection to #team-persistence.** The persistence condition for the composite agent requires $\mathcal{T}_c > \rho_{\text{ext}} / \|\delta_{\text{critical}}\|$. Since $\mathcal{T}_c = \sum \mathcal{T}_i - C_{\text{coord}}$, high coordination overhead can push the composite below the persistence threshold, causing it to disintegrate as a coherent entity — even though each sub-agent individually persists.
 

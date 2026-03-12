@@ -10,7 +10,7 @@ depends:
 
 # Auftragstaktik Principle
 
-For a composite agent with limited communication bandwidth, the optimal allocation prioritizes sharing objectives over strategies over models. This is the formal content of Auftragstaktik (mission-type tactics): invest communication bandwidth in teleological unity first, accept lower epistemic and strategic unity, and grant sub-agents autonomy to adapt locally.
+For a composite agent with limited communication bandwidth, the optimal allocation prioritizes sharing objectives over strategies over models. This captures the structural insight of Auftragstaktik (mission-type tactics): investing communication bandwidth in shared purpose (teleological unity) while accepting lower epistemic and strategic unity, granting sub-agents autonomy to adapt locally. The model predicts the same priority ordering that military doctrine discovered empirically; whether the mechanism (IB-optimal bandwidth allocation) is the actual reason Auftragstaktik works is an open question.
 
 ## Formal Expression
 

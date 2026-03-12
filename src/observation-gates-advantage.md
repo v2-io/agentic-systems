@@ -36,7 +36,7 @@ At $\sigma_{\text{obs}} = 1.0$ (10x the process noise), the fixed-gain adversari
 
 ## Discussion
 
-**Boyd's Orient emphasis, formalized.** Boyd insisted that the quality of Orient (observation processing) matters more than raw OODA speed. This finding is the formal grounding: faster OODA with bad observations ($\sigma_{\text{obs}}$ high) gives nearly zero advantage over a slower agent with equally bad observations. The tempo advantage is gated by observation quality.
+**Observation quality gates tempo advantage.** Boyd insisted that the quality of Orient (observation processing) matters more than raw OODA speed. The simulation results show a formal analog of this pattern: faster tempo with noisy observations ($\sigma_{\text{obs}}$ high) gives nearly zero advantage over a slower agent with equally noisy observations. The tempo advantage is gated by observation quality — consistent with Boyd's emphasis, though the model captures a specific mechanism (noisy correction steps) rather than the full richness of Orient processing.
 
 **The optimal gain helps most in the moderate-noise regime.** At $\sigma_{\text{obs}} = 0.05$ (observation noise half of process noise), the optimal gain cuts steady-state mismatch by 52% compared to fixed gain. At very high noise, the improvement is less dramatic in absolute terms but more important relatively (0.40 vs. 0.18 exponent).
 

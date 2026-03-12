@@ -18,7 +18,7 @@ A principled implementation decision minimizes both comprehension time and imple
 
 *[Derived (dual-optimization, from temporal-optimality + software-scope)]*
 
-For implementation choice $C$ of the current feature, the time-optimal choice minimizes total expected future time:
+For implementation choice $C$ of the current feature, the time-optimal choice minimizes total median-predicted future time:
 
 $$C^* = \operatorname{argmin}_{C} \left[ t_0(C) + \hat{n}_{\text{future}} \cdot \left( t_{\text{comp}}(F_{\text{typical}} \mid C) + t_{\text{impl}}(F_{\text{typical}} \mid C) \right) \right]$$
 
@@ -40,7 +40,7 @@ where $k = (1 + r) \times s$ for team size $s$ and turnover rate $r$ over the re
 
 *Conditional* on #temporal-optimality and #change-expectation-baseline. The derivation is straightforward: if you accept that total time should be minimized (axiom) and that future feature count is predicted by the baseline (derived), then the dual optimization follows by applying the axiom to the decomposed cost structure. The turnover multiplier follows from the observation that comprehension is per-reader while implementation (of a specific feature) is per-feature.
 
-The quantitative form inherits the assumptions of #change-expectation-baseline: median prediction, uniform feature rate.
+The quantitative form inherits the assumptions of #change-expectation-baseline: median prediction (not expectation — the mean is undefined for Pareto($\alpha = 1$)), uniform feature rate. The median-case optimization is conservative: the true expected future cost is *larger* than the median prediction (in fact, unbounded), so if anything this underestimates the case for investment.
 
 ## Discussion
 

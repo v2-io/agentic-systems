@@ -1,6 +1,6 @@
 # ACT: Agentic Cycle Theory
 
-A first-principles theory of adaptive, purposeful agents under uncertainty.
+A mathematical framework for adaptive, purposeful agents under uncertainty.
 
 **Working draft.** This is the current canonical outline of the theory — the argument laid out claim by claim. The ordering is the current best linearization of the dependency DAG; it will change as the theory develops. Slugs are the stable identities. Treat this as a living proof sketch, not a specification.
 
@@ -167,7 +167,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 ## V. Software-Grounded Agentic Systems
 
-*Extending the arc: AI agents operating on code are ACT agents whose domain is software, creating a recursive structure — ACT theory $\to$ software domain $\to$ agents that embody ACT. This is where the 100% context turnover problem, $M_t$ preservation, and the cognitive loop connect the theory back to the systems being built with it.*
+*Extending the arc: AI agents operating on code are ACT agents whose domain is software, creating a recursive structure — ACT theory $\to$ software domain $\to$ agents that embody ACT. This is where the 100% context turnover problem, $M_t$ preservation, and the cognitive loop connect the theory back to the systems being built with it. Note: LLM-based agents are goal-conditioned — their epistemic processing depends on $G_t$ — so the clean factorization from directed separation ( #directed-separation) is an approximation for this class. Section I's $M_t$-side quantities remain well-defined; the sequential orient cascade becomes approximate. Whether Section V requires a first-class coupled $f_M(M_t, G_t, e_\tau)$ extension or can work with the approximation is an open question.*
 
 ### Section V — Gaps
 

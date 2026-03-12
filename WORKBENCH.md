@@ -285,6 +285,14 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
   cascade. Without it, coupled analysis, not broken theory. Updated in
   #directed-separation, #agent-spectrum, CURRENT-FULL-THEORY.md §II scope.
   Scalar objective scope restriction added to #objective-functional.
+- **Section IV → Section I bridge is analogical, not formal.** Git-derived
+  metrics (coherence, coupling, Q) are claimed to operationalize Lyapunov
+  quantities (α, R, ρ) but no mathematical proof connects them. The chain
+  git data → Q → comprehension time → developer tempo → α has empirical
+  hypothesis steps. This matters because the operationalization story is
+  ACT's main defense against the "unmeasurable quantities" critique. Either
+  formalize the bridge or be explicit that it's an empirical research program,
+  not a derivation.
 
 
 ## Codex Review Issues (from memory — fixes needed)
@@ -474,12 +482,74 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 
 **Lead with:** Section I (proved, simulated) + Section II (purposeful-agent derivation). These are where ACT has real substance. Sections III–V are "the theory extends to" demonstrations.
 
-**ACT's unique contributions** (beyond repackaging):
-1. The integration: control theory + causal inference + information theory + agent architecture under one framework
-2. Novel results: satisfaction gap / control regret split, $G_t$ complexity bounded by $M_t$, compound probability decay as plan fragility, feedback loop as Level 2 causal access, adversarial tempo exponents, acyclicity derived from temporal ordering
-3. Software as both testbed and recursive instantiation
+**ACT's contributions — honest calibration:**
+
+1. **The integration itself.** Control theory + causal inference + information
+   theory + agent architecture under one framework. The individual pieces are
+   mostly known; the synthesis is the contribution. This is worth doing
+   (Maxwell unified electricity and magnetism using known equations) but
+   should not be presented as discovery of the component parts.
+2. **Novel formalizations of known patterns.** The satisfaction gap / control
+   regret split applies an established pattern (approximation error vs.
+   estimation error, model-class limitation vs. within-class suboptimality)
+   to agent self-diagnosis with cascading corrective actions — the 2×2
+   diagnostic table and orient cascade ordering are genuinely new
+   applications. The feedback loop as Level 2 engine is a useful bridge
+   between Pearl and Sutton, with a real additional claim for non-RL agents
+   (LLMs get interventional data from the loop despite no internal causal
+   architecture).
+3. **Known results applied to new domains.** DAG acyclicity from temporal
+   ordering is standard in Dynamic Bayesian Networks (unrolling). Timescale
+   separation for composition is standard singular perturbation theory.
+   Both are useful applications to agent/strategy domains, not discoveries.
+   Do not list these as "novel results."
+4. **Genuinely open bridges.** The git → Lyapunov operationalization is
+   analogical, not formal. There is no mathematical proof that git-derived
+   metrics (coherence, coupling, Q) translate to Lyapunov bounds (α, R).
+   The chain git data → Q → comprehension time → developer tempo → α has
+   empirical hypothesis steps in the middle. This is a real gap, not just
+   a presentation issue. Section IV's operationalization story is promising
+   but not yet a bridge.
+5. **Software as both testbed and recursive instantiation.** This framing
+   is genuinely distinctive — no other theory treats software development
+   as both the primary operationalization domain and the domain where the
+   theory's own agents will operate.
 
 **Discipline:** Don't overclaim. Present as a unifying framework with specific novel results. Be honest about what's integration vs. what's discovery.
+
+**Anticipated critique: "physics envy" / "just renaming."** A serious
+external review (Gemini, 2026-03-11) raised this directly: Section I's
+gain is the Kalman gain, the Lyapunov proof is standard, the deliberation
+threshold is opportunity cost. The review caught the pedagogical scaffold
+(linear ODE) and missed the load-bearing structure (sector-condition
+framework), read the Kalman exact case and missed the multi-domain
+structural claim, and didn't examine Section II's novel results at all.
+But the meta-critique is fair: Section I is largely careful synthesis of
+known mathematics (Kalman, Lyapunov, IB). The contribution is identifying
+these as aspects of a single structure and then building purposeful agency
+on top. Presentation implications:
+
+1. **Lead with "unifying framework," not "new mathematics."** The individual
+   pieces are mostly known; the synthesis and what it enables (Sections II–V)
+   is the contribution. Don't let the presentation suggest the gain formula
+   or the Lyapunov proof are discoveries — they are instantiations.
+2. **Make the sector-condition framework more prominent than the linear ODE.**
+   Casual readers who stop at mismatch-dynamics see the pedagogical scaffold
+   and conclude the theory rests on a fluid-limit approximation. The actual
+   foundation is the nonlinear Lyapunov analysis, which is robust. Title,
+   ordering, and emphasis should guide readers to sector-condition-stability
+   before mismatch-dynamics, or at minimum make the relationship unmissable.
+3. **Section IV as the operationalization answer.** The charge that α and R
+   are unmeasurable outside hardware is answered by Section IV, where
+   comprehension time, implementation time, and change rates are measurable
+   from git history. This should be prominent in any paper — "here is the
+   domain where we can actually measure these quantities" directly addresses
+   the strongest version of the critique.
+4. **Name the genuinely novel results explicitly.** Readers scanning for "what's
+   new" need to find it fast: satisfaction gap / control regret split, DAG
+   acyclicity derived from temporal ordering, feedback loop as Level 2 engine,
+   composition consistency as structural requirement, the dual persistence
+   pattern (individual + composite thresholds). These are not repackaging.
 
 
 ## Governing Objectives

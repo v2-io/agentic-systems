@@ -36,12 +36,12 @@ The quantitative form (inverse proportionality) is a *hypothesis*. The actual re
 
 ## Discussion
 
-**Proximity explains architectural preferences.** The principle explains why certain patterns persist:
+**Proximity predicts architectural preferences.** The principle is consistent with the persistence of certain patterns:
 - Modules that group commonly co-changing code (maximize proximity)
 - Layered architectures that localize changes to specific layers
 - Domain boundaries that contain related changes ( #conceptual-alignment)
 
-These are not aesthetic preferences — they are structural choices that minimize the distance term for typical future features.
+These patterns minimize the distance term for typical future features. Whether proximity minimization is the actual mechanism driving their adoption (versus convention, tooling constraints, or other forces) is an empirical question — but the structural alignment is suggestive.
 
 **The size-proximity decomposition.** Together with #changeset-size-principle, this gives a two-factor model of implementation cost: *how much* changes (size) and *how spread out* the changes are (proximity). Size is the first-order term; proximity is the structure-dependent correction. A good architecture minimizes both: small changesets with concentrated changes.
 

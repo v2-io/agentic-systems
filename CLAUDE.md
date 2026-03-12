@@ -2,11 +2,12 @@
 
 ## What This Project Is
 
-ACT (Agentic Cycle Theory) is a first-principles mathematical theory of
-adaptive, purposeful agents. It supersedes and subsumes Temporal Feedback
-Theory (TFT, in priors/tft/), which provides the adaptive-systems
-foundation. TFT is prior work now absorbed into ACT, not a separate
-co-existing theory.
+ACT (Agentic Cycle Theory) is a mathematical framework for adaptive,
+purposeful agents — integrating control theory, causal inference,
+information theory, and agent architecture under a common formalism. It
+supersedes and subsumes Temporal Feedback Theory (TFT, in priors/tft/),
+which provides the adaptive-systems foundation. TFT is prior work now
+absorbed into ACT, not a separate co-existing theory.
 
 This is theoretical research, not software engineering. The primary artifacts
 are mathematical formalisms and claim segments. Quality means rigor, honesty

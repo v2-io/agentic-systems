@@ -37,7 +37,7 @@ The scope extension is *definitional* — we choose to include operational time 
 - **Defensive programming**: high $T_{\text{implementation}}$ (validation, error handling), aims for low $P(\text{failure})$, often high $T_{\text{recovery}}$ when failures occur (complex systems fail complexly)
 - **Fault-tolerant design** (e.g., "let it crash"): lower $T_{\text{implementation}}$, accepts higher $P(\text{failure})$, minimizes $T_{\text{recovery}}$ (fast restart, isolated failures)
 
-When $T_{\text{recovery}} \ll T_{\text{defensive}}$, accepting and quickly recovering from failures is time-optimal. This explains the temporal optimality of supervision trees, circuit breakers, bulkheads, and health checks — they minimize $T_{\text{recovery}}$.
+When $T_{\text{recovery}} \ll T_{\text{defensive}}$, accepting and quickly recovering from failures is time-optimal. Supervision trees, circuit breakers, bulkheads, and health checks are all mechanisms that minimize $T_{\text{recovery}}$ — their widespread adoption is consistent with the temporal-optimality prediction, though the model captures only the time dimension of the design tradeoff.
 
 **Perturbation types.** Systems face impulse perturbations (traffic spikes, deploys), sustained stress (degraded dependencies, memory leaks), and cascading failures (propagation through coupled components). Low #system-coupling limits cascade scope; fast recovery minimizes $T_{\text{recovery}}$; graceful degradation maintains partial #system-availability.
 
