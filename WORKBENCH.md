@@ -123,13 +123,14 @@ integration (F.5). See Promotion Priorities item 3.
 
 | Spike | Location | Status |
 |-------|----------|--------|
-| Purposeful agent derivation (v3) | `scratch/spike-v3-purposeful-agent.md` | **Definitive** for Section II porting |
+| Purposeful agent derivation (v3) | `scratch/spike-v3-purposeful-agent.md` | Section II porting **COMPLETE** — all 20 segments in src/ |
 | Agent composition / holon | `scratch/spike-agent-composition.md` | Core insight strong; composition laws are sketches |
 | Composition closure | `scratch/spike-composition-closure.md` | Formalized closure defect ε*; promoted to #composition-closure + #tempo-composition |
 | Graph structure uniqueness | `scratch/spike-graph-uniqueness.md` | Acyclicity derived; P3→Markov needs tightening |
 | Intent DAG consolidated | `scratch/04-intent-dag-consolidated.md` | Canonical DAG reference; converged |
 | Prior art assessment | `scratch/02-prior-art-assessment.md` | Hafez/IBM/BDI/active-inference positioning |
 | LLM causal access note | `scratch/llm-causal-access-note.md` | Pearl reconciliation; potential intro/paper/blog |
+| DAG boundary type closure | `scratch/spike-dag-type-closure.md` | v2; reviewed by Codex; ready for porting |
 | Track-b simulations | `scratch/track-b-nonlinear-sims/` | 6 variants, all validated |
 
 
@@ -223,12 +224,35 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 
 ## What's Open
 
-- Action-deliberation-exploration tradeoff (three-way with $\Sigma_t$)
-- Strategy tempo formalization
-- Cognitive cost of $\Sigma_t$ (no $\beta$ analog yet)
+- Action-deliberation-exploration tradeoff (three-way with $\Sigma_t$).
+  Existing machinery handles components separately (CIY for explore, δ_regret
+  for deliberation trigger). Unified policy objective would need a deliberation
+  information value term alongside λ·CIY.
+- Strategy tempo formalization ($\mathcal{T}_\Sigma$). Needed for
+  strategy-persistence-schema to have quantitative content. Observation
+  channels that trigger Σ_t revision identified (orient cascade steps 4-7);
+  the rate is not formalized.
+- Cognitive cost of $\Sigma_t$ (no $\beta$ analog yet). DAGs don't compress
+  the way probability distributions do — the right framework may be closer to
+  MDL than IB. Critical for finite-context agents.
 - Edge identifiability conditions (resolved in software, open in general)
 - P3→Markov step in graph uniqueness (sketch, needs tightening)
-- Bridge lemma for composition closure: formally proving small expected component-wise errors guarantee bounded trajectory divergence under Lipschitz stability conditions.
+- Bridge lemma for composition closure: formally proving small expected
+  component-wise errors guarantee bounded trajectory divergence under
+  Lipschitz stability conditions.
+- Strategy persistence schema → theorem: requires formalizing strategic
+  correction function, characterizing $\rho_\Sigma$ (rate of environmental
+  causal drift), and verifying sector condition. Substantial Lyapunov work.
+- Meta-adaptation of $\Pi$ and $N_h$: can the agent structurally adapt its
+  own policy class and planning horizon? Analogous to model-class change
+  (TF-10). Satisfaction gap's disambiguation table handles descriptively;
+  formal mechanism open.
+- DAG boundary type closure — **PORTED to #strategy-dag.** Leaf base
+  credence ($p_v$) with temporal indexing, unique root terminal,
+  well-formedness constraint, $\hat{P}_\Sigma$ as strategy self-assessment
+  distinct from $A_O$, terminal alignment error as experience-only signal.
+  Spike at `scratch/spike-dag-type-closure.md` (v2). Terminal alignment
+  error ($\delta_\text{align}$) formalization still open.
 
 
 ## Cross-Segment Consistency Issues
@@ -318,16 +342,12 @@ remaining work.
 The bottleneck is no longer idea generation — it is promotion,
 canonicalization, and scope-tightening:
 
-1. **Section II backbone** — promote from v3 spike in order:
-   complete-agent-state, objective-functional, value-object,
-   strategy-dimension, directed-separation, satisfaction-gap,
-   control-regret, orient-cascade. This is where ACT's differentiating
-   machinery lives; leaving it in scratch undermines the canonical layer.
+1. ~~**Section II backbone** — DONE.~~ All 20 segments promoted to src/
+   and marked draft in CURRENT-FULL-THEORY.md.
 
-2. **Simulation results → ACT-native claims/appendices** —
+2. ~~**Simulation results → ACT-native claims/appendices** — DONE.~~
    adversarial-exponent-regimes, observation-gates-advantage, and
-   per-dimension-persistence are ready to exist as first-class segments
-   rather than scratch conclusions.
+   per-dimension-persistence promoted to src/ as first-class segments.
 
 3. **Section III — extract remaining Appendix F content** —
    `old-tf-appendix-f-multi-agent.md` has load-bearing content not yet in

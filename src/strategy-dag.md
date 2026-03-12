@@ -6,6 +6,8 @@ depends:
   - and-or-scope
   - causal-structure
   - pearl-causal-hierarchy
+  - objective-functional
+  - strategy-dimension
 ---
 
 # Strategy DAG
@@ -19,7 +21,7 @@ The strategy $\Sigma_t$ is a directed acyclic graph with probabilistic edges and
 $$\Sigma_t = (V_t, E_t, p_t, \gamma_t)$$
 
 where:
-- $V_t$: set of propositional nodes (conditions that could be true or false)
+- $V_t$: set of **propositional nodes** — each node represents a condition that could be true or false (including action-success propositions at the leaves)
 - $E_t \subseteq V_t \times V_t$: directed causal edges
 - $p_t : E_t \to [0,1]$: **causal credence** per edge — the agent's confidence that completing the parent advances the child
 - $\gamma_t : V_t \to \{\text{AND}, \text{OR}\}$: combination rule per node ( #and-or-scope)
@@ -27,8 +29,14 @@ where:
 **Structural constraints:**
 
 1. **Acyclicity.** $\Sigma_t$ is a DAG. This is *derived*, not assumed — see below.
-2. **Rootedness.** Every node has a directed path to at least one terminal (objective) node.
-3. **Source constraint.** Leaf nodes are actions the agent can take or conditions the agent can observe.
+2. **Rootedness.** Every node has a directed path to a unique root terminal $v_\text{root}$ — the single sink node (out-degree 0) of $\Sigma_t$. Compound objectives express their combination structure through the AND/OR machinery below $v_\text{root}$, consistent with scalar $V_O$ ( #objective-functional).
+3. **Source constraint.** Leaf nodes are propositions about action success ("action $a$ succeeds at $\tau_v$") or observable conditions ("condition $C_v$ holds at $\tau_v$"). Both are propositional — the distinction is whether the proposition is within the agent's causal control (action) or not (condition).
+
+**Leaf base credence.** For each leaf node $v \in V_t^{\text{leaf}}$, the base credence used in status propagation:
+
+$$p_v(M_t) = \begin{cases} \Pr(\text{action } v \text{ succeeds at } \tau_v \mid M_t) & \text{if } v \text{ is an action node} \\[4pt] \Pr(C_v(\tau_v) \mid M_t) & \text{if } v \text{ is a condition node} \end{cases}$$
+
+where $C_v$ is the propositional condition associated with node $v$ and $\tau_v$ is the node's temporal position (from the acyclicity structure). For action leaves, $p_v$ is *capability credence* — "can I execute this?" For condition leaves, $p_v$ is *state credence* — "will this hold?" Both are conditional on $M_t$ and update whenever $M_t$ updates. This is the mechanism by which Section I's adaptive machinery enters the strategy: $M_t$ changes → leaf credences change → status propagation produces new terminal credences.
 
 **Edge semantics.** Each edge carries a single causal credence weight:
 
@@ -39,6 +47,22 @@ This is the agent's credence that completing step $i$ causally advances step $j$
 **Status propagation.** Forward pass in topological order, $O(\lvert V \rvert + \lvert E \rvert)$:
 
 $$s_v = \begin{cases} p_v & \text{if } v \text{ is a leaf (base credence)} \\ \prod_{i \in \text{pa}(v)} p_{iv} \cdot s_i & \text{if } \gamma(v) = \text{AND} \\ 1 - \prod_{i \in \text{pa}(v)} (1 - p_{iv} \cdot s_i) & \text{if } \gamma(v) = \text{OR} \end{cases}$$
+
+**Terminal satisfaction conditions.** The root terminal $v_\text{root}$ and any intermediate nodes near the top of the DAG carry **satisfaction conditions**: predicates on environment states/trajectories that the agent treats as operational success criteria for the objective. These conditions operationalize $O_t$ within $\Sigma_t$ — they are the agent's theory of what it means to satisfy the objective. $O_t$ itself lives outside $\Sigma_t$ ( #strategy-dimension); the terminal conditions are $\Sigma_t$'s internal encoding of what $O_t$ requires. When $O_t$ changes, terminal conditions must be reassessed and potentially replaced ( #structural-change-as-parametric-limit).
+
+**Well-formedness.** $\Sigma_t$ is **$O_t$-well-formed** when the agent believes that achieving the terminal conditions yields a trajectory that satisfies the objective:
+
+$$\Pr\!\left(O_t \text{ satisfied by } \tau \;\middle|\; \text{terminal conditions achieved},\; M_t\right) \geq 1 - \epsilon$$
+
+where "$O_t$ satisfied" means $V_{O_t}(\tau)$ exceeds the objective's own satisfaction criterion (formalized as $V_{O_t}^{\min}$ in #satisfaction-gap). This is a constraint on the relationship between $\Sigma_t$ and $O_t$, not a separate state object. It is explicit and in-principle assessable, though evaluating it requires the same value-side machinery as $A_O$ — it is not a cheap structural test. Violation triggers terminal reassessment: either the terminals need revision (they don't operationalize $O_t$ correctly) or $O_t$ itself needs revision.
+
+**Strategy self-assessment.** The root node's propagated status:
+
+$$\hat{P}_\Sigma(M_t) = s_{v_\text{root}}$$
+
+is the strategy's self-assessed success probability — the DAG's own answer to "will this plan work?" This is explicitly distinct from $A_O$ ( #satisfaction-gap), which optimizes over the entire policy class, and from $V_O(\pi_\text{current})$ ( #value-object), which evaluates the current policy. $\hat{P}_\Sigma$ is cheap to compute ($O(|V| + |E|)$ forward pass) and updates in real time as $M_t$ changes through leaf credences.
+
+**Scope of the terminal construction.** Terminal conditions as Boolean predicates with AND/OR aggregation work naturally for threshold, constraint, and composite objectives. For continuous-valued objectives without natural thresholds, the agent must set an operational threshold — introducing a discretization that is a practical proxy, not a lossless encoding of $V_O$. The primary $O_t$ ↔ theory interface remains $V_O$ through the value object ( #value-object); terminal conditions are $\Sigma_t$'s internal operational encoding.
 
 **Single-parameter edges.** Each edge carries one number ($p_{ij}$), not two. An earlier formalism attempt used $(p_{ij}, \theta_{ij})$ where $\theta$ was "contribution magnitude." This was dropped because the AND/OR combination rules at nodes absorb $\theta$'s role — the complexity budget goes to one bit per node ($\gamma$) instead of one float per edge.
 
@@ -73,5 +97,5 @@ The AND/OR parameterization is a parsimony-motivated formulation choice within t
 - Edge failures are assumed independent in the combination rules. Real systems have correlated failures (shared infrastructure, common-mode risks). The actual confidence is lower than the independent-edge formula suggests. Modeling correlation structure would require augmenting the DAG with hidden common-cause nodes or using a richer parameterization — both increase complexity. Currently acknowledged as a limitation.
 - The graph-uniqueness argument (P1-P4 → DAG with Markov property) is the strongest structural justification: temporal ordering + Cox's theorem + local revisability + observable intermediates → directed graphical model with the Markov factorization. If the P3→Markov step can be tightened to a full proof, strategy-dag could be promoted from Definition to Derived. See `scratch/spike-graph-uniqueness.md`.
 - Health metrics (groundedness, observability coverage, weighted redundancy, bottleneck scores) are scaffold — engineering quantities for monitoring DAG health, not principled derivations. They may be useful for implementation but should not enter the theory's formal chain.
-- **The O_t ↔ terminal-node interface is under-specified.** The rootedness constraint says every node has a directed path to a terminal (objective) node, and #structural-change-as-parametric-limit lists "objective revision" as changing terminal nodes. But #strategy-dimension defines $O_t$ and $\Sigma_t$ as distinct objects. If terminals encode $O_t$, then $\Sigma_t$ contains $O_t$, blurring the split. The intended interpretation: terminal nodes are *defined by* $O_t$ (they represent evaluation criteria derived from $O_t$), but $O_t$ lives outside $\Sigma_t$. When $O_t$ changes, terminal conditions change, which can trigger structural changes in $\Sigma_t$. An explicit terminal-condition map $\phi: O_t \to \mathcal{P}(V_t^{\text{terminal}})$ would formalize this interface. Until then, the split is clean in prose but not in the math.
-- **$p_v$ (leaf base credence) is undefined.** The status propagation formula uses $p_v$ for leaf nodes but this is not defined in the formal expression. It should be: the agent's prior credence that the leaf condition is achievable or currently holds. For action nodes, $p_v$ is the agent's confidence it can execute the action; for observable-condition nodes, $p_v$ is the agent's estimate that the condition obtains. This needs to be explicitly added to the definition.
+- **Satisfaction criterion not yet first-class.** The well-formedness constraint references "the objective's own satisfaction criterion," which is semantically named here but not formally introduced until #satisfaction-gap defines $V_{O_t}^{\min}$. If stricter dependency hygiene is needed, the satisfaction criterion should be introduced as a first-class object in #objective-functional (where V_O is defined), independent of the gap machinery.
+- **Terminal alignment error.** When the agent achieves its terminal conditions but evaluates $V_{O_t}(\tau) < V_{O_t}^{\min}$ on the actual trajectory, the well-formedness belief was wrong — the operational success criteria didn't capture what the objective actually required. This is detectable only through experience (achieve the terminals, evaluate $V_O$), not through a priori analysis. It triggers terminal reassessment — a structural change in $\Sigma_t$ driven by the $O_t$ ↔ terminal mismatch. Whether this should be formalized as a named diagnostic signal ($\delta_\text{align}$) alongside $\delta_\text{sat}$, $\delta_\text{regret}$, and $\delta_\text{strategic}$ is open.
