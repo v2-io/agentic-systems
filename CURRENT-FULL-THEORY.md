@@ -67,8 +67,8 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | Definition | III | draft |
 | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | Definition + Discussion | III | draft |
 | [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | Hypothesis | III | draft |
-| [#team-persistence](src/team-persistence.md) | Composite persistence condition | Derived | III | missing |
-| [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | Theorem | III | missing |
+| [#team-persistence](src/team-persistence.md) | Composite persistence condition | Derived | III | draft |
+| [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | Theorem | III | draft |
 | [#communication-gain](src/communication-gain.md) | Trust-weighted update gain for inter-agent channels | Hypothesis | III | draft |
 | [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop; includes effects spiral corollary | Derived | III | draft |
 | [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | α = 2, 3/2, or ~1 | Observation | III | draft |
@@ -195,7 +195,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#worked-example-kalman](src/worked-example-kalman.md) | End-to-end Kalman instantiation (exact) | Worked example | draft |
 | [#worked-example-bandit](src/worked-example-bandit.md) | End-to-end RL bandit instantiation (approximate) | Worked example | draft |
 | [#linear-ode-approximation](src/linear-ode-approximation.md) | Pedagogical linear mismatch ODE | Detail | missing |
-| [#simulation-results](src/simulation-results.md) | 6 variants validating claims | Detail | missing |
+| [#simulation-results](src/simulation-results.md) | 6 variants validating claims | Detail | draft |
 | [#intent-dag-development](src/intent-dag-development.md) | Convergence on AND/OR + single-p | Aside | missing |
 | [#prior-art-positioning](src/prior-art-positioning.md) | Hafez, IBM, BDI, active inference | Detail | missing |
-| [#graph-structure-uniqueness](src/graph-structure-uniqueness.md) | 4 axioms → DAG structure | Proof | missing |
+| [#graph-structure-uniqueness](src/graph-structure-uniqueness.md) | 4 axioms → DAG structure | Proof | draft |

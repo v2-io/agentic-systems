@@ -70,7 +70,7 @@ ACT's value is primarily **integration**: connecting established mathematical to
 
 ## Current Status
 
-~99 claims mapped across five sections. 85 segments at draft, 14 remaining. Sections I (28) and II (20) are complete. Section III (11/13) has its backbone and simulation results written — two segments remain (Appendix F extraction). Section IV (20/24) is in active conversion from TST. Section V (3/6) and appendices (3/8) have source material identified.
+~99 claims mapped across five sections. 89 segments at draft, 10 remaining. Sections I (28), II (20), and III (13) are complete. Section IV (20/24) is in active conversion from TST. Section V (3/6) and appendices (5/8) have source material identified.
 
 See [`WORKBENCH.md`](WORKBENCH.md) for detailed development state, open questions, known fragilities, and prior-work migration progress.
 

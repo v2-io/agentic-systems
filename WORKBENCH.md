@@ -87,7 +87,7 @@ reference document. For the canonical theory structure, see
 | [system-availability](src/system-availability.md) | Definition | Standard reliability engineering. |
 | [continuous-operation](src/continuous-operation.md) | Scope | Extends temporal optimization to include operational failures. |
 
-### Written — Section III (11 of 13 segments)
+### Written — Section III (13 of 13 segments — all written)
 | Slug | Type | Notes |
 |------|------|-------|
 | [multi-agent-scope](src/multi-agent-scope.md) | Scope | Coupling through shared environment. |
@@ -101,8 +101,10 @@ reference document. For the canonical theory structure, see
 | [adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | Observation | Three regimes: b=2 (det/coupled), b=1.5 (stoch/coupled), b→1 (non-coupled). From track-b sims. |
 | [observation-gates-advantage](src/observation-gates-advantage.md) | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E. |
 | [per-dimension-persistence](src/per-dimension-persistence.md) | Theorem | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F. |
+| [team-persistence](src/team-persistence.md) | Derived | Distributed tempo, cooperative-adversarial ρ decomposition, 3-lever persistence. From TFT F.3. |
+| [adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Theorem | Superlinear exponent b=2 (det/coupled). Analytical theorem + regime conditions. From TFT Cor 11.2. |
 
-### Written — Appendices (6 segments)
+### Written — Appendices (8 segments)
 | Slug | Type | Notes |
 |------|------|-------|
 | [sector-condition-proof](src/sector-condition-proof.md) | Proof | Full Lyapunov proofs (A.1, A.2). |
@@ -111,12 +113,26 @@ reference document. For the canonical theory structure, see
 | [operationalization](src/operationalization.md) | Detail | Estimation procedures for ACT quantities. |
 | [worked-example-kalman](src/worked-example-kalman.md) | Worked example | End-to-end exact mapping. |
 | [worked-example-bandit](src/worked-example-bandit.md) | Worked example | End-to-end approximate mapping; persistence failure diagnostic. |
+| [simulation-results](src/simulation-results.md) | Detail | 6 variants validating/refining Section I predictions. Track-b reference. |
+| [graph-structure-uniqueness](src/graph-structure-uniqueness.md) | Proof | 4 axioms → DAG structure. Acyclicity proved; P3→Markov sketch. |
 
-### Not Yet Written — Sections III–V
-Remaining claims. Source material in TFT (TF-11, Appendix F track-b sims),
-composition spike, TST, and agentic-tft docs 10-14. Key near-term extraction:
-Appendix F → #team-persistence (F.3), topology analysis (F.4), game-theoretic
-integration (F.5). See Promotion Priorities item 3.
+### Not Yet Written — 10 segments remaining
+
+**Section IV (4 missing):**
+- `#software-epistemic-properties` — software's 6 unique epistemic properties. Source: old-tst-via-tft-readme.
+- `#developer-as-act-agent` — developer as (M_t, O_t, Σ_t). Source: old-tst-via-tft-mapping.
+- `#code-quality-as-observation-infrastructure` — code quality → U_o → η* → T. Source: old-tst-via-tft-mapping.
+- `#causal-discovery-from-git` — git as interventional data source. Source: old-tst-via-tft-causal-extensions.
+
+**Section V (3 missing — blocked on scope decision):**
+- `#ai-agent-as-act-agent` — AI agent as actuated agent (directed separation fails → coupled analysis).
+- `#context-turnover` — 100% M_t reset per session.
+- `#m-preservation` — external memory as persistent M_t.
+
+**Appendices (3 missing):**
+- `#linear-ode-approximation` — pedagogical linear mismatch ODE (detail).
+- `#intent-dag-development` — convergence on AND/OR + single-p (aside). Source: 04-intent-dag-consolidated.md.
+- `#prior-art-positioning` — Hafez, IBM, BDI, active inference (detail). Source: scratch/02-prior-art-assessment.md.
 
 
 ## Key Spikes
@@ -345,7 +361,7 @@ remaining work.
   review corrections?
 
 
-## Promotion Priorities (from Codex review, 2026-03-11)
+## Promotion Priorities (updated 2026-03-12)
 
 The bottleneck is no longer idea generation — it is promotion,
 canonicalization, and scope-tightening:
@@ -357,21 +373,38 @@ canonicalization, and scope-tightening:
    adversarial-exponent-regimes, observation-gates-advantage, and
    per-dimension-persistence promoted to src/ as first-class segments.
 
-3. **Section III — extract remaining Appendix F content** —
-   `old-tf-appendix-f-multi-agent.md` has load-bearing content not yet in
-   ACT segments: distributed tempo / team persistence (F.3 → #team-persistence),
-   cooperative-adversarial disturbance decomposition (F.3), topology analysis
-   (F.4 — peer, ensemble, hierarchical), game-theoretic integration points
-   (F.5), trust transitivity details and risk-adjusted trust (F.2 extensions),
-   falsification predictions (F.7). Extract as Section III segments get built.
-   The `#communication-gain` and `#adversarial-destabilization` segments already
-   absorb the core of F.2 and the A.3 Lyapunov coupling, respectively.
+3. ~~**Section III completion (2 segments)** — DONE.~~
+   `#team-persistence` and `#adversarial-tempo-advantage` promoted.
+   Section III is now 13/13.
 
-4. **Section V scope decision** — directed separation fails for
+4. ~~**Appendices — graph-structure-uniqueness and simulation-results** —
+   DONE.~~ Both promoted. Appendices now 8/11 (3 remaining).
+
+5. **Section V scope decision** — directed separation fails for
    goal-conditioned LLMs (acknowledged). Section V is where the project
    wants to land. Need to decide: is Section V an approximate application
    of current ACT, or does it require a genuine coupled $M_t$/$G_t$
    extension? Currently honest but strategically unresolved.
+
+6. **Section IV remaining 4 segments** — strengthens operationalization
+   story. `#software-epistemic-properties`, `#developer-as-act-agent`,
+   `#code-quality-as-observation-infrastructure`, `#causal-discovery-from-git`.
+   Source material in old-tst-via-tft-* files.
+
+7. **Remaining appendices (3)** — `#linear-ode-approximation`,
+   `#intent-dag-development`, `#prior-art-positioning`. Lower urgency.
+
+### Completed non-promotion work (2026-03-12)
+- **Systematic overclaiming sweep.** 12 fixes across 10 segment files:
+  "formalizes X" / "formal content of" / "This IS" / "proves" language
+  shifted to "formal analog" / "consistent with" / "captures the pattern"
+  with empirical caveats. README, CLAUDE.md, CURRENT-FULL-THEORY.md also
+  updated: "first-principles mathematical theory" → "mathematical
+  framework." Operationalization section added to README.
+- **README positioning overhaul.** "What ACT Contributes — Honest
+  Calibration" with 5-category breakdown. Prior Art section expanded with
+  explicit credit to borrowed mathematics. Operationalization section
+  addresses the bridge gap across all sections.
 
 
 ## Simulation Findings (Summary)
@@ -389,7 +422,7 @@ analytical derivations left ambiguous. Full details in variant result files.
 ### Observation noise (Variant E)
 - Observation noise collapses adversarial exponent from ~1.0 to **~0.2** — tempo advantage nearly vanishes.
 - Optimal gain (TF-06's $\eta^*$) partially restores it (~0.4) but cannot fully recover.
-- This formally grounds Boyd's emphasis on Orient quality: faster OODA is worthless with bad observations.
+- Consistent with Boyd's emphasis on Orient quality: faster OODA is worthless with bad observations.
 
 ### Anisotropic correction (Variant F)
 - Per-dimension persistence theory is **exact** (matches AR(1) prediction to 4 significant figures).
