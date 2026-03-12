@@ -87,13 +87,20 @@ reference document. For the canonical theory structure, see
 | [system-availability](src/system-availability.md) | Definition | Standard reliability engineering. |
 | [continuous-operation](src/continuous-operation.md) | Scope | Extends temporal optimization to include operational failures. |
 
-### Written — Section III (4 of 13 segments)
+### Written — Section III (11 of 13 segments)
 | Slug | Type | Notes |
 |------|------|-------|
+| [multi-agent-scope](src/multi-agent-scope.md) | Scope | Coupling through shared environment. |
 | [composition-closure](src/composition-closure.md) | Formulation | Operationalizes agent boundary as bounded closure defect. Status: conditional (admissibility constraints and norms under-specified). |
 | [tempo-composition](src/tempo-composition.md) | Derived | Sub-additive tempo inequality. Status: sketch (proof incomplete — ε*→C_coord mapping open). |
+| [unity-dimensions](src/unity-dimensions.md) | Definition | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping. |
+| [shared-intent](src/shared-intent.md) | Definition | IB-compressed purposeful state for inter-agent communication. Status: discussion-grade. |
+| [auftragstaktik-principle](src/auftragstaktik-principle.md) | Hypothesis | B_O > B_Σ > B_M. Bungay evidence. Status: discussion-grade. |
 | [adversarial-destabilization](src/adversarial-destabilization.md) | Derived | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1. |
 | [communication-gain](src/communication-gain.md) | Hypothesis | Trust-weighted inter-agent gain. From TFT Appendix F, F.2. |
+| [adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | Observation | Three regimes: b=2 (det/coupled), b=1.5 (stoch/coupled), b→1 (non-coupled). From track-b sims. |
+| [observation-gates-advantage](src/observation-gates-advantage.md) | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E. |
+| [per-dimension-persistence](src/per-dimension-persistence.md) | Theorem | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F. |
 
 ### Written — Appendices (6 segments)
 | Slug | Type | Notes |

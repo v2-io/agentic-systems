@@ -61,19 +61,19 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | [#edge-update-via-gain](src/edge-update-via-gain.md) | Gain extends to strategy edges | Hypothesis | II | draft |
 | [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous | Formulation | II | draft |
 | [#strategy-persistence-schema](src/strategy-persistence-schema.md) | Sector conditions for Σ_t | Proposed schema | II | draft |
-| [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | Scope | III | missing |
+| [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | Scope | III | draft |
 | [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | Formulation | III | draft |
 | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | Derived | III | draft |
-| [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | Definition | III | missing |
-| [#shared-intent](src/shared-intent.md) | IB-compressed purpose | Definition + Discussion | III | missing |
-| [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | Hypothesis | III | missing |
+| [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | Definition | III | draft |
+| [#shared-intent](src/shared-intent.md) | IB-compressed purpose | Definition + Discussion | III | draft |
+| [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | Hypothesis | III | draft |
 | [#team-persistence](src/team-persistence.md) | Composite persistence condition | Derived | III | missing |
 | [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | Theorem | III | missing |
 | [#communication-gain](src/communication-gain.md) | Trust-weighted update gain for inter-agent channels | Hypothesis | III | draft |
 | [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop; includes effects spiral corollary | Derived | III | draft |
-| [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | α = 2, 3/2, or ~1 | Observation | III | missing |
-| [#observation-gates-advantage](src/observation-gates-advantage.md) | Obs noise gates advantage | Observation | III | missing |
-| [#per-dimension-persistence](src/per-dimension-persistence.md) | Weak dimension is bottleneck | Theorem | III | missing |
+| [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | α = 2, 3/2, or ~1 | Observation | III | draft |
+| [#observation-gates-advantage](src/observation-gates-advantage.md) | Obs noise gates advantage | Observation | III | draft |
+| [#per-dimension-persistence](src/per-dimension-persistence.md) | Weak dimension is bottleneck | Theorem | III | draft |
 | [#software-scope](src/software-scope.md) | Systems with P(change) > ε | Scope | IV | draft |
 | [#software-epistemic-properties](src/software-epistemic-properties.md) | Software's 6 unique properties | Observation | IV | missing |
 | [#feature-definition](src/feature-definition.md) | Unit of coherent change | Definition | IV | draft |
