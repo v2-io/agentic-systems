@@ -26,41 +26,25 @@ where $\mathbf{M}$ is the set of all measurable outcome dimensions, and identica
 
 ## Epistemic Status
 
-This is a postulate — deliberately tautological.
-The statement reduces to: "given a choice between identical outcomes, the one that arrives sooner is preferred."
-The inability to construct genuine counterexamples without violating the equivalence precondition reveals its postulate nature.
-The fungibility argument (below) is *discussion* — a qualitative observation about why time is a natural optimization target, not a derived result.
+This is a postulate — deliberately tautological. The statement reduces to: "given a choice between identical outcomes, the one that arrives sooner is preferred." The inability to construct genuine counterexamples without violating the equivalence precondition reveals its postulate nature. The fungibility argument (below) is *discussion* — a qualitative observation about why time is a natural optimization target, not a derived result.
 
 ## Discussion
 
-**Why time is special.** Time is uniquely fungible among outcome dimensions: saved time can become exploration, learning, rest, additional action — anything.
-Other outcome dimensions (correctness, safety, quality) are not fungible in this way.
-A unit of saved correctness cannot be spent on learning.
-This is why, once all other outcome dimensions are held equal, time is the natural residual to optimize.
-The postulate makes this optimization explicit.
+**Why time is special.** Time is uniquely fungible among outcome dimensions: saved time can become exploration, learning, rest, additional action — anything. Other outcome dimensions (correctness, safety, quality) are not fungible in this way. A unit of saved correctness cannot be spent on learning. This is why, once all other outcome dimensions are held equal, time is the natural residual to optimize. The postulate makes this optimization explicit.
 
-**The equivalence precondition is load-bearing.** The phrase "identical outcomes across all non-temporal dimensions" is doing most of the work.
-It must be verified concretely before the postulate applies.
-Apparent counterexamples invariably violate it:
+**The equivalence precondition is load-bearing.** The phrase "identical outcomes across all non-temporal dimensions" is doing most of the work. It must be verified concretely before the postulate applies. Apparent counterexamples invariably violate it:
 - "Move fast and break things" — violates quality equivalence
 - Burnout-inducing speed — violates sustainability equivalence
 - Premature optimization for unlikely futures — optimizes for a counterfactual outcome, violating actual-outcome equivalence
 - Skipping tests for speed — violates defect probability equivalence
 
-The postulate does not say faster is always better.
-It says faster is better *given identical outcomes*.
-An agent that achieves a worse outcome faster is not preferred by this postulate.
-Misapplication of temporal optimality without verifying the equivalence precondition produces exactly the pathologies listed above.
+The postulate does not say faster is always better. It says faster is better *given identical outcomes*. An agent that achieves a worse outcome faster is not preferred by this postulate. Misapplication of temporal optimality without verifying the equivalence precondition produces exactly the pathologies listed above.
 
-**Why start here.** The adaptive machinery that follows — tempo, gain, persistence, adversarial dynamics — can be understood as consequences of optimizing for this criterion under constraints of partial observability, bounded resources, and environmental change.
-The connections are developed in their respective claims; they are not implied by this postulate alone.
+**Why start here.** The adaptive machinery that follows — tempo, gain, persistence, adversarial dynamics — can be understood as consequences of optimizing for this criterion under constraints of partial observability, bounded resources, and environmental change. The connections are developed in their respective claims; they are not implied by this postulate alone.
 
-**Domain generality.** This postulate applies to any agent-environment pairing within ACT's scope ( #scope-condition).
-In the software domain, it specializes to the statement that among implementations achieving identical outcomes, the one requiring least development time is optimal (TST T-01).
-The generalization is straightforward: replace "implementation" with "adaptive strategy."
+**Domain generality.** This postulate applies to any agent-environment pairing within ACT's scope ( #scope-condition). In the software domain, it specializes to the statement that among implementations achieving identical outcomes, the one requiring least development time is optimal (TST T-01). The generalization is straightforward: replace "implementation" with "adaptive strategy."
 
-**Scope limitation.** This postulate does not, by itself, say anything about *how* to achieve temporal optimality.
-That is the subject of the rest of the theory.
+**Scope limitation.** This postulate does not, by itself, say anything about *how* to achieve temporal optimality. That is the subject of the rest of the theory.
 
 ## Working Notes
 

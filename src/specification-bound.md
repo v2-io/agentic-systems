@@ -51,10 +51,7 @@ This follows directly: if implementation overhead shrinks (for example, through 
 
 ## Epistemic Status
 
-The bound's *existence* is *derived* from information theory: you cannot implement what has not been sufficiently distinguished from competing implementations, and that distinction requires transmitting enough residual information through some admissible channel.
-The general infimum-over-channels statement is the strongest version currently justified.
-The approximation $\text{time}_{\text{specify}} \approx H_{\text{req}} / R_{\text{spec}}$ is *first-order* — the actual relationship depends on channel characteristics, encoding efficiency, and interaction structure.
-Neither the exact form of $H_{\text{req}}$ nor the effective rate $R_{\text{spec}}$ is derived within ACT.
+The bound's *existence* is *derived* from information theory: you cannot implement what has not been sufficiently distinguished from competing implementations, and that distinction requires transmitting enough residual information through some admissible channel. The general infimum-over-channels statement is the strongest version currently justified. The approximation $\text{time}_{\text{specify}} \approx H_{\text{req}} / R_{\text{spec}}$ is *first-order* — the actual relationship depends on channel characteristics, encoding efficiency, and interaction structure. Neither the exact form of $H_{\text{req}}$ nor the effective rate $R_{\text{spec}}$ is derived within ACT.
 
 ## Discussion
 

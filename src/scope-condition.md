@@ -26,9 +26,7 @@ Three conditions jointly define ACT's domain:
 
 ## Epistemic Status
 
-This is a *scope definition* — it draws the boundary around the systems ACT addresses.
-The three conditions are not derived; they are the minimal requirements for the adaptive machinery that follows to be non-vacuous.
-The action-space requirement ($\lvert\mathcal{A}\rvert \geq 2$) is the most substantive choice: it ensures at least one interventional contrast, which is the minimal condition for causal learning and exploration.
+This is a *scope definition* — it draws the boundary around the systems ACT addresses. The three conditions are not derived; they are the minimal requirements for the adaptive machinery that follows to be non-vacuous. The action-space requirement ($\lvert\mathcal{A}\rvert \geq 2$) is the most substantive choice: it ensures at least one interventional contrast, which is the minimal condition for causal learning and exploration.
 
 ## Discussion
 

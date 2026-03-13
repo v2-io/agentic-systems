@@ -28,18 +28,12 @@ where:
 
 ## Epistemic Status
 
-This is a *formulation* — it provides a principled framework for understanding compression trade-offs, not a claim about how actual agents compute their models.
-No agent explicitly solves this optimization (except in the variational IB literature, where it is a training objective).
-The formulation is analytically useful because it makes the compression-prediction trade-off explicit and connects model quality to information-theoretic quantities.
+This is a *formulation* — it provides a principled framework for understanding compression trade-offs, not a claim about how actual agents compute their models. No agent explicitly solves this optimization (except in the variational IB literature, where it is a training objective). The formulation is analytically useful because it makes the compression-prediction trade-off explicit and connects model quality to information-theoretic quantities.
 
 ## Discussion
 
-**The IB framework is not prescriptive.** It characterizes what an optimal $\phi$ would look like, not how to find one.
-Actual agents approximate this trade-off through diverse mechanisms: forgetting, attention, abstraction, summarization.
+**The IB framework is not prescriptive.** It characterizes what an optimal $\phi$ would look like, not how to find one. Actual agents approximate this trade-off through diverse mechanisms: forgetting, attention, abstraction, summarization.
 
-**Connection to model sufficiency.** The IB objective implicitly defines when a model is "good enough": when the predictive power term $I(M_t;\, o_{t+1:\infty} \mid a_{t:\infty})$ is close to its maximum (the full history's predictive power).
-This is formalized in #model-sufficiency.
+**Connection to model sufficiency.** The IB objective implicitly defines when a model is "good enough": when the predictive power term $I(M_t;\, o_{t+1:\infty} \mid a_{t:\infty})$ is close to its maximum (the full history's predictive power). This is formalized in #model-sufficiency.
 
-**Broader applicability.** The same IB principle applies beyond intra-agent compression.
-It governs inter-agent communication ( #shared-intent) — how much of one agent's model or strategy to transmit to another — and constrains the cognitive cost of maintaining a complex strategy.
-In each case, the trade-off is between the cost of retaining or transmitting information and the value of that information for future decisions.
+**Broader applicability.** The same IB principle applies beyond intra-agent compression. It governs inter-agent communication ( #shared-intent) — how much of one agent's model or strategy to transmit to another — and constrains the cognitive cost of maintaining a complex strategy. In each case, the trade-off is between the cost of retaining or transmitting information and the value of that information for future decisions.

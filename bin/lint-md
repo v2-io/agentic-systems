@@ -3,7 +3,7 @@
 Lint markdown files against ACT's FORMAT.md conventions.
 
 Usage:
-    bin/lint-md.py [--fix] [files...]
+    bin/lint-md [--fix] [files...]
 
 If no files given, lints all top-level *.md files.
 With --fix, applies safe auto-fixes and re-reports remaining issues.
@@ -434,104 +434,49 @@ def check_indented_bare_math(lines):
 
 
 def check_hard_wrapping(lines):
-    """Detect lines broken at a fixed column width instead of letting renderers wrap.
+    """Detect hard-wrapped lines: a line ending with a word character
+    followed by a line starting with a plain letter [a-zA-Z].
 
-    Heuristic: a line shorter than HARD_WRAP_MAX that ends mid-sentence
-    (no terminal punctuation) and is followed by a continuation line at
-    the same or expected indent level.
+    The key insight: every markdown structural element (headings, lists,
+    math, tables, blockquotes, code, blank lines) starts with a non-letter
+    character. Only prose continuation starts with [a-zA-Z]. So the test
+    is simply: does the next line start with a letter?
+
+    Skips YAML frontmatter, code blocks, and display math blocks.
     """
     issues = []
     ctx = MathContext()
-    # YAML frontmatter only exists when line 0 is '---'
     in_yaml = (lines[0].strip() == '---') if lines else False
     in_display_math = False
 
     for i, line in enumerate(lines):
         stripped = line.strip()
 
-        # YAML frontmatter: only if file started with ---
         if stripped == '---' and in_yaml:
-            in_yaml = (i == 0)  # closing --- ends frontmatter
+            in_yaml = (i == 0)
             continue
         if in_yaml:
             continue
-
-        # Code blocks
         if ctx.update_code_block(line):
             continue
         if ctx.in_code_block:
             continue
-
-        # Display math
         if stripped == '$$':
             in_display_math = not in_display_math
             continue
         if in_display_math:
             continue
 
-        # Skip non-prose lines
-        if not stripped or stripped.startswith('#'):
-            continue
-        if stripped.startswith('|') and '|' in stripped[1:]:
-            continue
-        if stripped in ('---', '***', '- - -'):
-            continue
-
-        line_len = len(line.rstrip())
-        if line_len > HARD_WRAP_MAX:
-            continue
-
         if i + 1 >= len(lines):
             continue
 
-        next_line = lines[i + 1]
-        next_stripped = next_line.strip()
-
-        if not next_stripped:
-            continue
-        if next_stripped.startswith('#') or next_stripped.startswith('$$'):
-            continue
-        if next_stripped.startswith('|') and '|' in next_stripped[1:]:
-            continue
-        if next_stripped in ('---', '***'):
-            continue
-
-        # Current line must end mid-sentence.
-        # Strip trailing markdown formatting (bold **, italic _, closing ))
-        # before checking for sentence-ending punctuation.
+        # The whole test: line ends with a word char, next starts with [a-zA-Z]
         rstripped = line.rstrip()
-        end_check = rstripped.rstrip('*_)`')
-        if end_check and end_check[-1] in '.!?:;':
+        if not rstripped or not re.search(r'\w$', rstripped):
             continue
-
-        curr_indent = len(line) - len(line.lstrip())
-        next_indent = len(next_line) - len(next_line.lstrip())
-
-        # New list item at same or lesser indent = not continuation
-        if (re.match(r'^[-*] ', next_stripped) or re.match(r'^\d+\. ', next_stripped)):
-            if next_indent <= curr_indent:
-                continue
-
-        # Paragraph continuation: same indent, not a new block element.
-        # If current line IS a list item, same-indent means a sibling item,
-        # not a continuation — skip (continuations use content indent).
-        curr_is_list = (re.match(r'^[-*] ', stripped)
-                        or re.match(r'^\d+\. ', stripped))
-        if next_indent == curr_indent and not curr_is_list:
-            if not (re.match(r'^[-*] ', next_stripped) or re.match(r'^\d+\. ', next_stripped)):
-                issues.append((i + 1, 0, f'possible hard wrap (len {line_len})'))
-                continue
-
-        # List item continuation: indented to content level
-        if stripped.startswith('- ') or stripped.startswith('* '):
-            if next_indent == curr_indent + 2:
-                issues.append((i + 1, 0,
-                               f'possible hard wrap in list item (len {line_len})'))
-                continue
-        m = re.match(r'^(\d+\. )', stripped)
-        if m and next_indent == curr_indent + len(m.group(1)):
-            issues.append((i + 1, 0,
-                           f'possible hard wrap in numbered list (len {line_len})'))
+        next_line = lines[i + 1]
+        if re.match(r'[a-zA-Z]', next_line.lstrip()):
+            issues.append((i + 1, 0, 'hard wrap (next line starts with letter)'))
 
     return issues
 
@@ -708,16 +653,18 @@ def fix_emphasis_braces(line):
 
 
 def fix_hard_wrapping(lines):
-    """Join hard-wrapped continuation lines within paragraphs and list items.
+    """Join hard-wrapped lines: where a line ends with a word character
+    and the next starts with [a-zA-Z], join them with a space.
 
-    Walks through lines, detecting paragraphs where all inner lines are
-    shorter than HARD_WRAP_MAX and end mid-sentence.  Joins them into
-    single lines as FORMAT.md requires.
+    Same logic as check_hard_wrapping — the next line starting with a
+    plain letter is the only signal needed. Skips YAML, code, display math.
     """
-    result = []
-    ctx = MathContext()
-    # YAML frontmatter only exists when line 0 is '---'
+    # Work on the full text — the fix is literally s/\\b\\n([a-zA-Z])/ \\1/
+    # applied within non-protected regions.
+    text = '\n'.join(lines)
+    result_lines = []
     in_yaml = (lines[0].strip() == '---') if lines else False
+    in_code = False
     in_display_math = False
     i = 0
 
@@ -725,135 +672,51 @@ def fix_hard_wrapping(lines):
         line = lines[i]
         stripped = line.strip()
 
-        # YAML frontmatter: only if file started with ---
+        # YAML frontmatter
         if stripped == '---' and in_yaml:
-            in_yaml = (i == 0)  # closing --- ends frontmatter
-            result.append(line)
+            in_yaml = (i == 0)
+            result_lines.append(line)
             i += 1
             continue
         if in_yaml:
-            result.append(line)
+            result_lines.append(line)
             i += 1
             continue
 
-        # Code blocks — pass through entirely
+        # Code blocks
         if stripped.startswith('```'):
-            result.append(line)
+            in_code = not in_code
+            result_lines.append(line)
             i += 1
-            while i < len(lines):
-                result.append(lines[i])
-                if lines[i].strip().startswith('```'):
-                    i += 1
-                    break
-                i += 1
+            continue
+        if in_code:
+            result_lines.append(line)
+            i += 1
             continue
 
-        # Display math — pass through
+        # Display math
         if stripped == '$$':
             in_display_math = not in_display_math
-            result.append(line)
+            result_lines.append(line)
             i += 1
             continue
         if in_display_math:
-            result.append(line)
+            result_lines.append(line)
             i += 1
             continue
 
-        # Non-prose: pass through
-        if not stripped or stripped.startswith('#'):
-            result.append(line)
+        # Accumulate: while this line ends with \w and next starts with [a-zA-Z], join
+        joined = line.rstrip()
+        while (i + 1 < len(lines)
+               and joined and re.search(r'\w$', joined)
+               and re.match(r'[a-zA-Z]', lines[i + 1].lstrip())):
             i += 1
-            continue
-        if stripped.startswith('|') and '|' in stripped[1:]:
-            result.append(line)
-            i += 1
-            continue
-        if stripped in ('---', '***', '- - -'):
-            result.append(line)
-            i += 1
-            continue
+            joined = joined + ' ' + lines[i].strip()
 
-        # Prose line — check for hard-wrapping
-        line_len = len(line.rstrip())
-        curr_indent = len(line) - len(line.lstrip())
-
-        # Determine continuation indent for list items
-        is_list = stripped.startswith('- ') or stripped.startswith('* ')
-        m_num = re.match(r'^(\d+\. )', stripped)
-        is_numbered = bool(m_num)
-        if is_list:
-            cont_indent = curr_indent + 2
-        elif is_numbered:
-            cont_indent = curr_indent + len(m_num.group(1))
-        else:
-            cont_indent = curr_indent
-
-        # Try to join continuation lines if this line looks hard-wrapped
-        rstripped = line.rstrip()
-        end_check = rstripped.rstrip('*_)`')
-        if (line_len <= HARD_WRAP_MAX and end_check
-                and end_check[-1] not in '.!?:;'):
-            joined = rstripped
-            j = i + 1
-            while j < len(lines):
-                nline = lines[j]
-                nstripped = nline.strip()
-                nindent = len(nline) - len(nline.lstrip())
-
-                # Stop at blank lines or block elements
-                if not nstripped:
-                    break
-                if nstripped.startswith('#') or nstripped.startswith('$$'):
-                    break
-                if nstripped.startswith('```'):
-                    break
-                if nstripped.startswith('|') and '|' in nstripped[1:]:
-                    break
-                if nstripped in ('---', '***'):
-                    break
-                # New list item at same or lesser indent
-                if (re.match(r'^[-*] ', nstripped)
-                        or re.match(r'^\d+\. ', nstripped)):
-                    if nindent <= curr_indent:
-                        break
-
-                # Must match continuation indent
-                if nindent != cont_indent:
-                    break
-
-                # Join this continuation line
-                joined = joined + ' ' + nstripped
-                j += 1
-
-                # If this continuation ends at a sentence boundary and
-                # the NEXT line would not be a continuation, stop here
-                if joined.rstrip()[-1:] in '.!?:;':
-                    # Check if next line would also be a continuation
-                    if j < len(lines):
-                        peek = lines[j]
-                        peek_stripped = peek.strip()
-                        peek_indent = len(peek) - len(peek.lstrip())
-                        if (not peek_stripped
-                                or peek_stripped.startswith('#')
-                                or peek_indent != cont_indent
-                                or re.match(r'^[-*] ', peek_stripped)
-                                or re.match(r'^\d+\. ', peek_stripped)):
-                            break
-                        # Next line IS a continuation — but is the current
-                        # joined line now long enough to not be hard-wrapped?
-                        # Keep going only if the next line is short too.
-                        if len(peek.rstrip()) > HARD_WRAP_MAX:
-                            break
-
-            if j > i + 1:
-                result.append(joined)
-                i = j
-                continue
-
-        result.append(line)
+        result_lines.append(joined)
         i += 1
 
-    return result
+    return result_lines
 
 
 # ---------------------------------------------------------------------------

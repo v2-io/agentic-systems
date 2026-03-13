@@ -28,7 +28,7 @@ $F$ satisfies the **local sector condition** for $\Vert\delta\Vert \leq R$:
 
 $$\delta^T F(\mathcal{T}, \delta) \geq \alpha \Vert\delta\Vert^2$$
 
-where $\alpha \gt 0$ is the worst-case correction efficiency within the valid region of radius $R$ (the model class capacity). Disturbance is bounded: $\Vertw(t)\Vert \leq \rho$.
+where $\alpha \gt 0$ is the worst-case correction efficiency within the valid region of radius $R$ (the model class capacity). Disturbance is bounded: $\Vert w(t)\Vert \leq \rho$.
 
 *[Derived (bounded-mismatch, from Lyapunov analysis)]*
 

@@ -89,8 +89,7 @@ The developer maintains a model $M_t$ — a compressed representation of their u
 
 $$M_t = \phi(\mathcal C_t)$$
 
-where $\mathcal C_t$ is the developer's interaction history (files read, tests run, changes
-made, feedback received).
+where $\mathcal C_t$ is the developer's interaction history (files read, tests run, changes made, feedback received).
 
 **Model space M varies by agent type:**
 

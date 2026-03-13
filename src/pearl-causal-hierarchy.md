@@ -15,7 +15,7 @@ Three levels of causal reasoning emerge from the causal structure of the feedbac
 
 *[Definition (pearl-causal-hierarchy)]*
 
-**Level 1 — Associational**: $P(o_t \mid \mathcal{C}_{\ltt})$
+**Level 1 — Associational**: $P(o_t \mid \mathcal{C}_{\lt t})$
 
 *What will I observe next, given what I've observed before?*
 

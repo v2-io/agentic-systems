@@ -23,7 +23,7 @@ where:
 - $\rho$ is the rate of environment change (rate of new mismatch introduction)
 - $\delta_{\text{critical}}$ is the maximum tolerable mismatch magnitude
 
-**Assumptions.** Bounded disturbance ($\Vertw(t)\Vert \leq \rho$, GA-2) and sector condition on the correction function (GA-3). See #sector-condition-stability for the general nonlinear treatment from which this threshold emerges.
+**Assumptions.** Bounded disturbance ($\Vert w(t)\Vert \leq \rho$, GA-2) and sector condition on the correction function (GA-3). See #sector-condition-stability for the general nonlinear treatment from which this threshold emerges.
 
 ### Derivation
 
