@@ -413,6 +413,69 @@ def rewrite_tags(text, numbering):
     return text
 
 
+# ── Table of contents ─────────────────────────────────────────────────────
+
+def build_toc(toc_entries):
+    """Format collected ToC entries as a navigable markdown section.
+
+    toc_entries is a list of tuples:
+        ('section', heading_text, anchor)    — section header
+        ('segment', label, type_str, slug, title)  — segment entry
+        ('gap', description)                 — undeveloped theory gap
+        ('missing', label, type_str, slug, title)   — unwritten segment
+    """
+    if not toc_entries:
+        return ''
+
+    lines = ['## Table of Contents', '']
+
+    for entry in toc_entries:
+        kind = entry[0]
+
+        if kind == 'section':
+            _, heading, anchor = entry
+            # Section headers as bold linked lines with spacing
+            if lines[-1] != '':
+                lines.append('')
+            lines.append(f'**[{heading}](#{anchor})**')
+            lines.append('')
+
+        elif kind == 'segment':
+            _, label, type_str, slug, title = entry
+            primary = type_str.split('+')[0].strip() if type_str else ''
+            if primary:
+                lines.append(f'- [{primary} {label}: {title}](#{slug})')
+            else:
+                lines.append(f'- [{label}. {title}](#{slug})')
+
+        elif kind == 'missing':
+            _, label, type_str, slug, title = entry
+            primary = type_str.split('+')[0].strip() if type_str else ''
+            if primary:
+                lines.append(f'- *{primary} {label}: {title}* (not yet written)')
+            else:
+                lines.append(f'- *{label}. {title}* (not yet written)')
+
+        elif kind == 'gap':
+            _, desc = entry
+            lines.append(f'- *\\[Gap\\] {desc}*')
+
+    lines.append('')
+    return '\n'.join(lines)
+
+
+def make_heading_anchor(heading_text):
+    """Generate a GitHub-compatible anchor from a heading string.
+
+    Lowercases, replaces spaces with hyphens, strips non-alphanumeric
+    characters except hyphens. Matches GitHub's auto-generated anchors.
+    """
+    anchor = heading_text.lower().strip()
+    anchor = re.sub(r'[^\w\s-]', '', anchor)
+    anchor = re.sub(r'[\s]+', '-', anchor)
+    return anchor
+
+
 # ── Core builder ─────────────────────────────────────────────────────────
 
 def collect_slugs(lines):
@@ -440,6 +503,7 @@ def build(index_path, src_dir, strip_notes=False):
     numbering = assign_numbers(lines)
 
     out = []             # accumulated output lines
+    toc_entries = []     # collected for table of contents
     in_table = False
     table_entries = []   # list of (kind, slug_or_none, claim_text)
     section_level = 2    # current section heading level; updated as we go
@@ -455,11 +519,14 @@ def build(index_path, src_dir, strip_notes=False):
                 out.append(f'> **\\[GAP\\]** {claim_text}')
                 out.append('')
                 stats['gaps'] += 1
+                toc_entries.append(('gap', claim_text))
 
             elif kind == 'segment':
                 seg_path = src_dir / f'{slug}.md'
                 label_info = numbering.get(slug)
                 label = label_info[0] if label_info else None
+                type_str = label_info[1] if label_info else ''
+                title = claim_text if claim_text else slug
 
                 # HTML anchor for cross-references (#slug links)
                 out.append('')
@@ -478,10 +545,10 @@ def build(index_path, src_dir, strip_notes=False):
                     out.append(seg_text.rstrip())
                     out.append('')
                     stats['included'] += 1
+                    if label:
+                        toc_entries.append(('segment', label, type_str, slug, title))
                 else:
                     level = section_level + 1
-                    type_str = label_info[1] if label_info else ''
-                    title = claim_text if claim_text else slug
                     if label and type_str:
                         out.append(f'{"#" * level} {type_str} {label}: *{title}*')
                     elif label:
@@ -492,6 +559,8 @@ def build(index_path, src_dir, strip_notes=False):
                     out.append(f'*Segment `{slug}` has not yet been written.*')
                     out.append('')
                     stats['missing'] += 1
+                    if label:
+                        toc_entries.append(('missing', label, type_str, slug, title))
 
         table_entries = []
 
@@ -550,6 +619,11 @@ def build(index_path, src_dir, strip_notes=False):
         hm = re.match(r'^(#{1,6})\s', line)
         if hm:
             section_level = len(hm.group(1))
+            heading_text = line[hm.end():].strip()
+            # Collect section headings for ToC (## level = major sections)
+            if len(hm.group(1)) == 2 and heading_text:
+                anchor = make_heading_anchor(heading_text)
+                toc_entries.append(('section', heading_text, anchor))
 
         out.append(rewrite_links(line, known_slugs))
         i += 1
@@ -557,6 +631,19 @@ def build(index_path, src_dir, strip_notes=False):
     # Flush if file ends while still in a table
     if in_table:
         flush_table()
+
+    # Insert table of contents after introductory text, before first ---
+    toc_text = build_toc(toc_entries)
+    if toc_text:
+        assembled_lines = out
+        insert_idx = None
+        for idx, ln in enumerate(assembled_lines):
+            if ln.strip() == '---':
+                insert_idx = idx
+                break
+        if insert_idx is not None:
+            # Insert ToC before the first --- separator, with surrounding blanks
+            assembled_lines[insert_idx:insert_idx] = ['', toc_text, '']
 
     # Final pass: rewrite #slug cross-references throughout the assembled doc
     assembled = '\n'.join(out)

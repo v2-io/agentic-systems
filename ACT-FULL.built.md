@@ -9,6 +9,141 @@ See `FORMAT.md` for segment file conventions. See `NOTATION.md` for symbols, con
 Every slug is linked to its intended `src/{slug}.md` file, even when that file doesn't exist yet (`missing` or `old` stage). This is deliberate — the links serve as stable intent markers so the only ongoing maintenance is updating the Stage column. A `missing` link means no file exists; an `old` link means the content lives in a corresponding `src/old-*` source file awaiting conversion. Segments may also contain forward references (`#slug-name`) to not-yet-written segments; these are intentional dependency markers, not broken links.
 
 
+
+## Table of Contents
+
+**[I. Adaptive Systems Under Uncertainty](#i-adaptive-systems-under-uncertainty)**
+
+- [Postulate I.1: Least-time is optimal](#temporal-optimality)
+- [Definition I.2: Agent-environment boundary](#agent-environment)
+- [Definition I.3: Lossy, noisy observations](#observation-function)
+- [Definition I.4: Actions affect environment](#action-transition)
+- [Scope I.5: Where ACT applies](#scope-condition)
+- [Postulate I.6: Agent/subagent scale invariance](#composition-consistency)
+- [Postulate I.7: Irreducible causal structure](#causal-structure)
+- [Definition I.8: Three levels of causal reasoning](#pearl-causal-hierarchy)
+- [Definition I.9: Complete interaction history](#chronica)
+- [Formulation I.10: Compressed history as state](#agent-model)
+- [Formulation I.11: Optimal model compression](#information-bottleneck)
+- [Definition I.12: Predictive information retained](#model-sufficiency)
+- [Definition I.13: Best achievable sufficiency](#model-class-fitness)
+- [Formulation I.14: Events in continuous time](#event-driven-dynamics)
+- [Derived I.15: State updates must be recursive](#recursive-update)
+- [Derived I.16: Action as function of model](#action-selection)
+- [Definition I.17: Prediction error signal](#mismatch-signal)
+- [Result I.18: Model error + obs noise](#mismatch-decomposition)
+- [Empirical I.19: Optimal update weighting](#update-gain)
+- [Definition I.20: Information from interventions](#causal-information-yield)
+- [Definition I.21: Rate of useful info acquisition](#adaptive-tempo)
+- [Hypothesis I.22: Mismatch evolution ODE](#mismatch-dynamics)
+- [Derived I.23: Think vs act tradeoff](#deliberation-cost)
+- [Result I.24: Bounded mismatch condition](#persistence-condition)
+- [Result I.25: Nonlinear persistence (Lyapunov)](#sector-condition-stability)
+- [Result I.26: When parametric update fails](#structural-adaptation-necessity)
+- [Derived I.27: Timescale stratification](#temporal-nesting)
+- [Discussion I.28: Non-forkable causal trajectory](#agent-identity)
+
+**[II. Actuated Adaptation: Agentic Systems](#ii-actuated-adaptation-agentic-systems)**
+
+- [Definition II.1: ±model × ±objective quadrants](#agent-spectrum)
+- [Formulation II.2: $X_t = (M_t, G_t)$](#complete-agent-state)
+- [Definition II.3: $O_t$ parametrizes value](#objective-functional)
+- [Definition II.4: Horizon/policy-conditioned value](#value-object)
+- [Definition II.5: $G_t = (O_t, \Sigma_t)$ split](#strategy-dimension)
+- [Derived II.6: Level 2 needed for planning](#causal-hierarchy-requirement)
+- [Derived II.7: Feedback loop → Level 2 data](#loop-interventional-access)
+- [Normative II.8: When planning beats exploring](#explicit-strategy-condition)
+- [Derived II.9: Log-confidence additive in depth](#chain-confidence-decay)
+- [Scope II.10: Conjunctive/disjunctive scope](#and-or-scope)
+- [Definition II.11: Strategy as probabilistic DAG](#strategy-dag)
+- [Derived II.12: Epistemic update is goal-blind](#directed-separation)
+- [Definition II.13: Ideal vs best achievable](#satisfaction-gap)
+- [Definition II.14: Best achievable vs current](#control-regret)
+- [Definition II.15: Edge residuals](#strategic-calibration)
+- [Derived II.16: Resolution order by info dep](#orient-cascade)
+- [Derived II.17: Unobservable edges freeze](#observability-dominance)
+- [Hypothesis II.18: Gain extends to strategy edges](#edge-update-via-gain)
+- *\[Gap\] When observational edge updates yield valid causal semantics*
+- [Formulation II.19: Pruning/grafting as continuous](#structural-change-as-parametric-limit)
+- *\[Gap\] Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy)*
+- *\[Gap\] Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)*
+- [Proposed schema II.20: Sector conditions for $\Sigma_t$](#strategy-persistence-schema)
+- *\[Gap\] Three-way exploit/explore/deliberate allocation with $\Sigma_t$*
+
+**[III. Agentic Composites](#iii-agentic-composites)**
+
+- [Scope III.1: Multiple agents, shared env](#multi-agent-scope)
+- [Formulation III.2: Composite agent via closure defect](#composition-closure)
+- [Derived III.3: Sub-additive tempo inequality](#tempo-composition)
+- *\[Gap\] Does epistemic goal-blindness survive composition?*
+- [Definition III.4: 4 dimensions of coherence](#unity-dimensions)
+- [Definition III.5: IB-compressed purpose](#shared-intent)
+- [Hypothesis III.6: Prioritize objective sharing](#auftragstaktik-principle)
+- [Derived III.7: Composite persistence condition](#team-persistence)
+- [Result III.8: Superlinear tempo advantage](#adversarial-tempo-advantage)
+- [Hypothesis III.9: Trust-weighted update gain for inter-agent channels](#communication-gain)
+- [Derived III.10: Inside opponent's loop; includes effects spiral corollary](#adversarial-destabilization)
+- *\[Gap\] Which strategy edges are most valuable to attack*
+- [Observation III.11: $\alpha = 2, 3/2, \text{or } {\sim}1$](#adversarial-exponent-regimes)
+- [Observation III.12: Obs noise gates advantage](#observation-gates-advantage)
+- [Result III.13: Weak dimension is bottleneck](#per-dimension-persistence)
+
+**[IV. Agentic-Grounded Software Systems](#iv-agentic-grounded-software-systems)**
+
+- [Scope IV.1: Systems with $P(\text{change}) \gt \varepsilon$](#software-scope)
+- *Observation IV.2: Software's 6 unique properties* (not yet written)
+- [Definition IV.3: Unit of coherent change](#feature-definition)
+- [Result IV.4: Can't implement unspecified; includes communication bottleneck corollary](#specification-bound)
+- [Derived IV.5: Median future ≈ observed past; includes investment scale form](#change-expectation-baseline)
+- *Definition IV.6: Developer as $(M_t, O_t, \Sigma_t)$* (not yet written)
+- [Definition IV.7: Cost of constructing local $M_t$](#comprehension-time)
+- [Definition IV.8: Cost from first change to done](#implementation-time)
+- [Derived IV.9: Min comprehension + impl time](#dual-optimization)
+- [Derived IV.10: When extra time now pays off](#change-investment)
+- *Discussion IV.11: Code quality $\to U_o \to \eta^\ast \to \mathcal{T}$* (not yet written)
+- *\[Gap\] Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$*
+- [Hypothesis IV.12: Code-domain alignment; includes realignment corollary](#conceptual-alignment)
+- [Definition IV.13: The diff that is the feature](#atomic-changeset)
+- [Empirical IV.14: Time ∝ changeset size; includes comprehension corollary](#changeset-size-principle)
+- [Definition IV.15: Lexical < file < module < svc](#change-distance)
+- [Derived IV.16: Closer changes → less time](#change-proximity-principle)
+- [Hypothesis IV.17: Context-switch cost compounds?](#exponential-cognitive-load)
+- [Definition IV.18: $P(\text{change } j \mid \text{change } i)$](#system-coupling)
+- [Definition IV.19: $E[\text{proximity within module}]$](#system-coherence)
+- [Measurement IV.20: Coherence/coupling from git](#coherence-coupling-measurement)
+- [Derived IV.21: Optimal $C$ minimizes $E[T \vert C]$](#principled-decision-integration)
+- [Definition IV.22: $\text{MTTF}/(\text{MTTF}+\text{MTTR})$](#system-availability)
+- [Scope IV.23: Include $P(\text{fail}) \times T_{\text{recovery}}$](#continuous-operation)
+- *Hypothesis IV.24: Git as interventional data* (not yet written)
+- *\[Gap\] Software persistence: the unmaintainability threshold formalized*
+
+**[V. Logogenic Agents](#v-logogenic-agents)**
+
+- *Definition V.1: AI agent as actuated agent* (not yet written)
+- *Observation V.2: 100% $M_t$ reset per session* (not yet written)
+- *Discussion V.3: External memory as persistent $M_t$* (not yet written)
+- *\[Gap\] Language-specific orient cascade (what's specific to logogenic agents?)*
+- *\[Gap\] Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents*
+- *\[Gap\] ACT-grounded experiential training environments*
+- *\[Gap\] Self-referential closure: ACT agent on ACT codebase*
+
+**[VI. Logozoetic Agents](#vi-logozoetic-agents)**
+
+**[Appendices: Details](#appendices-details)**
+
+- [Derivation A.1: Lyapunov derivations for bounded mismatch and adaptive reserve](#sector-condition-derivation)
+- [Derivation A.2: Uniqueness derivation via three constraints + counterexamples](#recursive-update-derivation)
+- [Sketch A.3: N-timescale singular perturbation sketch](#multi-timescale-stability)
+- *Detail A.4: Pedagogical linear mismatch ODE* (not yet written)
+- [Detail A.5: 6 variants validating claims](#simulation-results)
+
+**[Appendices: Operational Domains](#appendices-operational-domains)**
+
+- [Detail B.1: Estimation procedures for ACT quantities](#operationalization)
+- [Worked example B.2: End-to-end Kalman instantiation (exact)](#worked-example-kalman)
+- [Worked example B.3: End-to-end RL bandit instantiation (approximate)](#worked-example-bandit)
+
+
 ---
 
 ## I. Adaptive Systems Under Uncertainty
@@ -4761,7 +4896,7 @@ Bi-predictability $P$ (Hafez et al.) measures the informational architecture of 
 
 <a id="operationalization"></a>
 
-### Detail A.6: *Operationalization — Estimation Procedures*
+### Detail B.1: *Operationalization — Estimation Procedures*
 
 Estimation recipes for core ACT quantities, bridging the measurement gap between formal objects and practical deployment.
 
@@ -4917,7 +5052,7 @@ This is a *procedures document* — estimation recipes, not theoretical claims. 
 
 #### Working Notes
 
-- End-to-end worked examples instantiating the full chain are in [Worked example A.7](#worked-example-kalman) (exact) and [Worked example A.8](#worked-example-bandit) (approximate).
+- End-to-end worked examples instantiating the full chain are in [Worked example B.2](#worked-example-kalman) (exact) and [Worked example B.3](#worked-example-bandit) (approximate).
 - The $\hat{\rho}$ estimator's dependence on $\hat{\mathcal{T}}$ creates a sequential estimation chain. Errors compound. An alternative approach: estimate $\rho$ directly from exogenous environmental change measurements when available, bypassing the mismatch trajectory entirely.
 - The structural-switch trigger's $T_{\text{horizon}}$ (expected time the new model class will remain adequate) is itself uncertain and difficult to estimate. In practice, this is where the agent's $M_t$ does the real work — predicting environmental stability.
 
@@ -4926,7 +5061,7 @@ This is a *procedures document* — estimation recipes, not theoretical claims. 
 
 <a id="worked-example-kalman"></a>
 
-### Worked-example A.7: *Worked Example — 1D Active Tracking (Kalman Domain)*
+### Worked-example B.2: *Worked Example — 1D Active Tracking (Kalman Domain)*
 
 Every ACT quantity has an exact Kalman-filter counterpart. This is a *validation* of the formal chain — all quantities are computable in closed form.
 
@@ -5049,14 +5184,14 @@ This is a *worked instantiation*, not a theoretical claim. Every mapping is exac
 
 - This example uses a 1D system. The tensor-tempo extension ([Result III.13](#per-dimension-persistence)) becomes visible only in multi-dimensional tracking where different state dimensions have different observability.
 - The structural adaptation trigger (constant-velocity → constant-acceleration) is manufactured for the example. A more natural test would be a real tracking system with genuine regime changes.
-- The Kalman filter is provably optimal for the linear-Gaussian case. Every TFT/ACT quantity has not just an analog but the *exact optimal* value. This makes it the strongest validation but also the easiest — the real test is non-Kalman domains (see [Worked example A.8](#worked-example-bandit)).
+- The Kalman filter is provably optimal for the linear-Gaussian case. Every TFT/ACT quantity has not just an analog but the *exact optimal* value. This makes it the strongest validation but also the easiest — the real test is non-Kalman domains (see [Worked example B.3](#worked-example-bandit)).
 
 *(Descended from TFT Appendix C.)*
 
 
 <a id="worked-example-bandit"></a>
 
-### Worked-example A.8: *Worked Example — Nonstationary Bandit (RL Domain)*
+### Worked-example B.3: *Worked Example — Nonstationary Bandit (RL Domain)*
 
 ACT's conceptual architecture applies beyond the conjugate-Bayesian regime. The mapping here is *approximate* — it shows that ACT's concepts organize RL phenomena, but the quantitative relationships are structural analogies, not derivations. Where the mapping is exact versus approximate is marked explicitly.
 

@@ -197,8 +197,8 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 *Operational-specific appendices and end-to-end domain instantiations validating the theory chain.*
 
-| § | Type | N | Tag | Claim | Stage |
-|---|------|---|-----|-------|-------|
-| A   | Detail     |     | [#operationalization](src/operationalization.md)                   | Estimation procedures for ACT quantities                       | draft   |
-| A | Worked example | | [#worked-example-kalman](src/worked-example-kalman.md) | End-to-end Kalman instantiation (exact) | draft |
-| A | Worked example | | [#worked-example-bandit](src/worked-example-bandit.md) | End-to-end RL bandit instantiation (approximate) | draft |
+| §   | Type           | N   | Tag                                                    | Claim                                            | Stage |
+| --- | -------------- | --- | ------------------------------------------------------ | ------------------------------------------------ | ----- |
+| B   | Detail         |     | [#operationalization](src/operationalization.md)       | Estimation procedures for ACT quantities         | draft |
+| B   | Worked example |     | [#worked-example-kalman](src/worked-example-kalman.md) | End-to-end Kalman instantiation (exact)          | draft |
+| B   | Worked example |     | [#worked-example-bandit](src/worked-example-bandit.md) | End-to-end RL bandit instantiation (approximate) | draft |
