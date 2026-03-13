@@ -30,7 +30,7 @@ The resolution order for updating the agent's state is forced by information dep
 4. **If $\delta_{\text{regret}}$ high, evaluate $\delta_{\text{strategic}}$** — is the plan's causal model wrong?
    Examine edge residuals. Requires adequate $M_t$, feasible $O_t$, and evidence of suboptimal execution ( #strategic-calibration).
 
-5. **If $\delta_{\text{sat}} > 0$ persists across $\Sigma_t$ revisions** — revise $O_t$.
+5. **If $\delta_{\text{sat}} \gt 0$ persists across $\Sigma_t$ revisions** — revise $O_t$.
    The cascade's ordering ensures objective revision is the last resort, not the first response to unmet goals.
 
 **Derivation.** Each step's input depends on prior steps' outputs:

@@ -21,7 +21,7 @@ Explicit deliberation improves action quality by using the model for internal si
 
 During a deliberation pause of duration $\Delta\tau$, mismatch increases at an approximately constant local rate $\rho_{\text{delib}}$:
 
-$$\Delta\|\delta\|_{\text{deliberation}} \approx \rho_{\text{delib}} \cdot \Delta\tau$$
+$$\Delta\Vert\delta\Vert_{\text{deliberation}} \approx \rho_{\text{delib}} \cdot \Delta\tau$$
 
 This is a short-horizon assumption about inaction windows, not a full global dynamics model. It is weaker than the mismatch ODE and can be estimated directly from pause windows in empirical traces.
 
@@ -31,42 +31,42 @@ This is a short-horizon assumption about inaction windows, not a full global dyn
 
 Deliberation of duration $\Delta\tau$ is net-beneficial when:
 
-$$\Delta\eta^*(\Delta\tau) \cdot \|\delta_{\text{post}}\| > \rho_{\text{delib}} \cdot \Delta\tau$$
+$$\Delta\eta^*(\Delta\tau) \cdot \Vert\delta_{\text{post}}\Vert \gt \rho_{\text{delib}} \cdot \Delta\tau$$
 
-where $\Delta\eta^*(\Delta\tau)$ is the improvement in post-deliberation update gain and $\|\delta_{\text{post}}\|$ is the mismatch magnitude the agent will face when it resumes acting.
+where $\Delta\eta^\ast(\Delta\tau)$ is the improvement in post-deliberation update gain and $\Vert\delta_{\text{post}}\Vert$ is the mismatch magnitude the agent will face when it resumes acting.
 
 ### Derivation
 
-1. Without deliberation, the agent acts immediately at current tempo $\mathcal{T}_0 = \nu \cdot \eta^*_0$.
-2. With deliberation of duration $\Delta\tau$, the agent pauses, then acts with improved gain $\eta^*_0 + \Delta\eta^*$. But during the pause, mismatch has grown by $\rho_{\text{delib}} \cdot \Delta\tau$.
-3. The net mismatch reduction from acting after deliberation versus acting immediately: $\text{Net} = \Delta\eta^* \cdot \|\delta_{\text{post}}\| - \rho_{\text{delib}} \cdot \Delta\tau$.
-4. Deliberation is justified iff $\text{Net} > 0$. $\square$
+1. Without deliberation, the agent acts immediately at current tempo $\mathcal{T}_0 = \nu \cdot \eta^\ast_0$.
+2. With deliberation of duration $\Delta\tau$, the agent pauses, then acts with improved gain $\eta^\ast_0 + \Delta\eta^\ast$. But during the pause, mismatch has grown by $\rho_{\text{delib}} \cdot \Delta\tau$.
+3. The net mismatch reduction from acting after deliberation versus acting immediately: $\text{Net} = \Delta\eta^\ast \cdot \Vert\delta_{\text{post}}\Vert - \rho_{\text{delib}} \cdot \Delta\tau$.
+4. Deliberation is justified iff $\text{Net} \gt 0$. $\square$
 
 **Optimal deliberation duration** (under diminishing returns):
 
 *[Derived (Conditional on diminishing-returns + deliberation-drift)]*
 
-$$\Delta\tau^* = \arg\max_{\Delta\tau} \left[\Delta\eta^*(\Delta\tau) \cdot \|\delta_{\text{post}}\| - \rho_{\text{delib}} \cdot \Delta\tau \right]$$
+$$\Delta\tau^* = \arg\max_{\Delta\tau} \left[\Delta\eta^*(\Delta\tau) \cdot \Vert\delta_{\text{post}}\Vert - \rho_{\text{delib}} \cdot \Delta\tau \right]$$
 
-At the first-order condition: $\frac{\partial \Delta\eta^*}{\partial \Delta\tau} \cdot \|\delta_{\text{post}}\| = \rho_{\text{delib}}$. Stop deliberating when the marginal improvement rate drops below the mismatch drift rate (normalized by post-deliberation mismatch).
+At the first-order condition: $\frac{\partial \Delta\eta^\ast}{\partial \Delta\tau} \cdot \Vert\delta_{\text{post}}\Vert = \rho_{\text{delib}}$. Stop deliberating when the marginal improvement rate drops below the mismatch drift rate (normalized by post-deliberation mismatch).
 
 ## Epistemic Status
 
-*Conditional* on the local deliberation-drift assumption. The threshold condition is derived given the assumption; the assumption itself is a local approximation validated by consistency with the global mismatch dynamics ( #persistence-condition). The result captures the *epistemic* benefit of deliberation (improving $\eta^*$); in practice, deliberation also provides a direct *action-value* benefit (choosing better actions that alter the environment trajectory), which operates through $\rho$ reduction and immediate reward — a fuller formalization would incorporate the unified policy objective ( #causal-information-yield) at significantly more complexity.
+*Conditional* on the local deliberation-drift assumption. The threshold condition is derived given the assumption; the assumption itself is a local approximation validated by consistency with the global mismatch dynamics ( #persistence-condition). The result captures the *epistemic* benefit of deliberation (improving $\eta^\ast$); in practice, deliberation also provides a direct *action-value* benefit (choosing better actions that alter the environment trajectory), which operates through $\rho$ reduction and immediate reward — a fuller formalization would incorporate the unified policy objective ( #causal-information-yield) at significantly more complexity.
 
 ## Discussion
 
-**High-$\rho_{\text{delib}}$ environments penalize deliberation.** When the environment changes rapidly during pause windows, the cost term grows quickly. Only very short deliberation with large $\Delta\eta^*$ can justify the pause. The model captures the same tradeoff Boyd emphasized: in fast-tempo adversarial environments, over-deliberation is fatal not because thinking is bad, but because the environment moves during the thinking. Whether the specific mechanism (mismatch drift during pause) is the dominant real-world effect is an empirical question.
+**High-$\rho_{\text{delib}}$ environments penalize deliberation.** When the environment changes rapidly during pause windows, the cost term grows quickly. Only very short deliberation with large $\Delta\eta^\ast$ can justify the pause. The model captures the same tradeoff Boyd emphasized: in fast-tempo adversarial environments, over-deliberation is fatal not because thinking is bad, but because the environment moves during the thinking. Whether the specific mechanism (mismatch drift during pause) is the dominant real-world effect is an empirical question.
 
-**Diminishing returns.** In most models, $\Delta\eta^*(\Delta\tau)$ exhibits diminishing returns — the first moments of simulation yield the largest improvement. Combined with the linear cost $\rho_{\text{delib}} \cdot \Delta\tau$, this implies a finite optimal deliberation duration. Past that point, additional thinking is net-harmful.
+**Diminishing returns.** In most models, $\Delta\eta^\ast(\Delta\tau)$ exhibits diminishing returns — the first moments of simulation yield the largest improvement. Combined with the linear cost $\rho_{\text{delib}} \cdot \Delta\tau$, this implies a finite optimal deliberation duration. Past that point, additional thinking is net-harmful.
 
-**Implicit action as the high-tempo limit.** As $\rho_{\text{delib}} \to \infty$ or $\Delta\tau^* \to 0$: the optimal strategy converges to zero deliberation — pure implicit action ( #action-selection). This provides a mathematical basis for why high-tempo environments favor action fluency: the cost of deliberation exceeds its benefit when $\Delta\eta^*$ is small (action-selection is already fluent) or $\rho_{\text{delib}}$ is large.
+**Implicit action as the high-tempo limit.** As $\rho_{\text{delib}} \to \infty$ or $\Delta\tau^\ast \to 0$: the optimal strategy converges to zero deliberation — pure implicit action ( #action-selection). This provides a mathematical basis for why high-tempo environments favor action fluency: the cost of deliberation exceeds its benefit when $\Delta\eta^\ast$ is small (action-selection is already fluent) or $\rho_{\text{delib}}$ is large.
 
-**Deliberation as an investment.** When $\rho_{\text{delib}}$ is low (stable environment) or $\|\delta_{\text{post}}\|$ is large (significant model-reality gap), deliberation pays off. The conditions favoring deliberation — stable environment, large mismatch — resemble the high-stakes, low-urgency scenarios where deliberative reasoning (System 2) is advantageous in dual-process theories. The structural parallel is suggestive; whether the cost-benefit mechanism is the same one governing System 1/System 2 selection is an open question.
+**Deliberation as an investment.** When $\rho_{\text{delib}}$ is low (stable environment) or $\Vert\delta_{\text{post}}\Vert$ is large (significant model-reality gap), deliberation pays off. The conditions favoring deliberation — stable environment, large mismatch — resemble the high-stakes, low-urgency scenarios where deliberative reasoning (System 2) is advantageous in dual-process theories. The structural parallel is suggestive; whether the cost-benefit mechanism is the same one governing System 1/System 2 selection is an open question.
 
-**The circularity of $\|\delta_{\text{post}}\|$.** Evaluating the threshold requires the agent to *predict* post-deliberation mismatch using its current model — the same model deliberation is meant to improve. This circularity is typically benign: $\|\delta_{\text{post}}\|$ is bounded below by $\rho_{\text{delib}} \cdot \Delta\tau$ and above by current mismatch plus that accumulation. An agent that underestimates its mismatch will under-deliberate; one that overestimates will over-deliberate. The bias is self-correcting through the feedback loop. The threshold is best understood as a *design criterion*, not a real-time decision procedure.
+**The circularity of $\Vert\delta_{\text{post}}\Vert$.** Evaluating the threshold requires the agent to *predict* post-deliberation mismatch using its current model — the same model deliberation is meant to improve. This circularity is typically benign: $\Vert\delta_{\text{post}}\Vert$ is bounded below by $\rho_{\text{delib}} \cdot \Delta\tau$ and above by current mismatch plus that accumulation. An agent that underestimates its mismatch will under-deliberate; one that overestimates will over-deliberate. The bias is self-correcting through the feedback loop. The threshold is best understood as a *design criterion*, not a real-time decision procedure.
 
-**Resource costs beyond time.** Real agents also incur computational and energetic costs: internal simulation burns calories, compute cycles, or opportunity cost of not processing new observations. These are additive: $\Delta\eta^*(\Delta\tau) \cdot \|\delta_{\text{post}}\| > \rho_{\text{delib}} \cdot \Delta\tau + C(\Delta\tau)$. In high-$\rho_{\text{delib}}$ environments the temporal cost dominates; in low-$\rho_{\text{delib}}$ environments, resource costs may be the binding constraint.
+**Resource costs beyond time.** Real agents also incur computational and energetic costs: internal simulation burns calories, compute cycles, or opportunity cost of not processing new observations. These are additive: $\Delta\eta^\ast(\Delta\tau) \cdot \Vert\delta_{\text{post}}\Vert \gt \rho_{\text{delib}} \cdot \Delta\tau + C(\Delta\tau)$. In high-$\rho_{\text{delib}}$ environments the temporal cost dominates; in low-$\rho_{\text{delib}}$ environments, resource costs may be the binding constraint.
 
 **Structural adaptation as massive deliberation.** Structural adaptation ( #structural-adaptation-necessity) can be understood as deliberation with a massive $\Delta\tau$. During decomposition-and-recombination, the agent's high-frequency parametric loop is partially or fully suspended while it searches for a new model class. The mismatch debt $\rho_{\text{delib}} \cdot \Delta\tau$ is enormous (weeks/months for organizational restructuring). The agent rationally resists structural adaptation until the parametric mismatch floor exceeds this debt.
 
@@ -78,7 +78,7 @@ At the first-order condition: $\frac{\partial \Delta\eta^*}{\partial \Delta\tau}
 
 **Domain instantiations:**
 
-| Domain | Deliberation | $\Delta\eta^*$ source | When $\rho_{\text{delib}}$ is high |
+| Domain | Deliberation | $\Delta\eta^\ast$ source | When $\rho_{\text{delib}}$ is high |
 |--------|-------------|----------------------|---------------------|
 | Boyd's OODA | Explicit "Decide" step | War-gaming, staff analysis | Collapses to IG&C (implicit) |
 | RL / MCTS | Planning rollouts | Monte Carlo tree search | Fewer rollouts, shallower search |

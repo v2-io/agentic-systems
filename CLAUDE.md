@@ -43,11 +43,11 @@ Definition/notation and scope-narrowing files may use a simpler format than full
 
 The adaptive-systems foundation (from TFT) formalizes how agents adapt to reality (mismatch signals, gain, tempo, persistence). But it has no treatment of goals. ACT adds:
 
-- **O_t** (objective — what the agent wants) and **Σ_t** (strategy — how it plans to get there) alongside **M_t** (reality model)
-- Strategy formalized as a **probabilistic causal DAG** (AND/OR nodes, edges with confidence weights p, update via the uncertainty ratio)
-- The **Orient cascade**: observation → M_t update → Σ_t edge revision → feasibility check → possible O_t revision
-- **Directed separation**: M_t dynamics independent of O_t/Σ_t; Σ_t depends on M_t; action couples all three
-- **G_t = (O_t, Σ_t)**: the purposeful substate decomposes into objective (evaluation) and strategy (guidance) — a definitional split, not a timescale claim
+- $O_t$ (objective — what the agent wants) and $\Sigma_t$ (strategy — how it plans to get there) alongside $M_t$ (reality model)
+- Strategy formalized as a **probabilistic causal DAG** (AND/OR nodes, edges with confidence weights $p$, update via the uncertainty ratio)
+- The **Orient cascade**: observation → $M_t$ update → $\Sigma_t$ edge revision → feasibility check → possible $O_t$ revision
+- **Directed separation**: $M_t$ dynamics independent of $O_t$/$\Sigma_t$; $\Sigma_t$ depends on $M_t$; action couples all three
+- $G_t = (O_t, \Sigma_t)$: the purposeful substate decomposes into objective (evaluation) and strategy (guidance) — a definitional split, not a timescale claim
 
 ## Epistemic Conventions
 
@@ -89,18 +89,18 @@ See `WORKBENCH.md` for the full development state. Summary:
 ### Settled (from convergence testing + spikes)
 - Single-parameter edges with AND/OR nodes
 - Orient cascade structure (derived from information dependency)
-- Additive log-confidence decay (generalizes p^n)
+- Additive log-confidence decay (generalizes $p^n$)
 - Observability as strategy enablement
 - Directed separation (with explicit scope condition)
-- G_t = (O_t, Σ_t) split (definitional)
+- $G_t = (O_t, \Sigma_t)$ split (definitional)
 - Satisfaction gap / control regret split
 - DAG acyclicity derived from temporal ordering
 - Composition consistency required by scope condition's level-independence
 
 ### Open
-- Action-deliberation-exploration tradeoff (three-way with Σ_t)
+- Action-deliberation-exploration tradeoff (three-way with $\Sigma_t$)
 - Strategy tempo formalization
-- Cognitive cost of Σ_t (no β analog yet)
+- Cognitive cost of $\Sigma_t$ (no $\beta$ analog yet)
 - Edge identifiability conditions (resolved in software, open in general)
 - P3→Markov step in graph uniqueness (sketch, needs tightening)
 - Composition laws (specific forms are sketches; existence is required)

@@ -23,7 +23,7 @@ The sector-condition mathematics ( #sector-condition-stability, #sector-conditio
 
 **Then** $\Sigma_t$ persists iff:
 
-$$\alpha_\Sigma > \frac{\rho_\Sigma}{R_\Sigma}$$
+$$\alpha_\Sigma \gt \frac{\rho_\Sigma}{R_\Sigma}$$
 
 where $\alpha_\Sigma$ is the strategic correction rate, $\rho_\Sigma$ is the strategic disturbance rate, and $R_\Sigma$ is the strategic reserve (tolerance for strategic mismatch before performance degrades catastrophically).
 

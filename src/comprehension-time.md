@@ -40,7 +40,7 @@ Definitional. The quantity is well-defined and measurable in principle (though r
 ## Working Notes
 
 - The claim that comprehension = $M_t$ construction is tempting but may be too simple. The developer is building a model of the code AND the domain AND the mapping between them (as T-07 conceptual alignment points out). Is this one $M_t$ or should it be decomposed? In ACT's current formulation, $M_t$ is the complete agent state — so it includes all of these. But the IB tradeoff ( #information-bottleneck) might have different $\beta$ for code-model vs domain-model.
-- Can comprehension time be connected to $U_o$ and $\eta^*$? Well-written code (low $U_o$) should enable faster $M_t$ construction (higher $\eta^*$ per observation). The connection is qualitatively clear but quantitatively unformalized.
+- Can comprehension time be connected to $U_o$ and $\eta^\ast$? Well-written code (low $U_o$) should enable faster $M_t$ construction (higher $\eta^\ast$ per observation). The connection is qualitatively clear but quantitatively unformalized.
 - The "surviving" qualifier is important — false starts that get reverted don't count. This means comprehension time is retrospectively defined, which creates measurement challenges.
 
 *(Descended from TST D-02.)*

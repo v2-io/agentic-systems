@@ -24,17 +24,17 @@ where $F$ is a (possibly nonlinear) correction function and $w(t)$ is environmen
 
 *[Assumption (sector-condition)]*
 
-$F$ satisfies the **local sector condition** for $\|\delta\| \leq R$:
+$F$ satisfies the **local sector condition** for $\Vert\delta\Vert \leq R$:
 
-$$\delta^T F(\mathcal{T}, \delta) \geq \alpha \|\delta\|^2$$
+$$\delta^T F(\mathcal{T}, \delta) \geq \alpha \Vert\delta\Vert^2$$
 
-where $\alpha > 0$ is the worst-case correction efficiency within the valid region of radius $R$ (the model class capacity). Disturbance is bounded: $\|w(t)\| \leq \rho$.
+where $\alpha \gt 0$ is the worst-case correction efficiency within the valid region of radius $R$ (the model class capacity). Disturbance is bounded: $\Vertw(t)\Vert \leq \rho$.
 
 *[Derived (bounded-mismatch, from Lyapunov analysis)]*
 
-The mismatch $\delta(t)$ is ultimately bounded by $R^* = \rho / \alpha$. The agent persists (avoids divergence) iff:
+The mismatch $\delta(t)$ is ultimately bounded by $R^\ast = \rho / \alpha$. The agent persists (avoids divergence) iff:
 
-$$\alpha > \frac{\rho}{R}$$
+$$\alpha \gt \frac{\rho}{R}$$
 
 *[Derived (adaptive-reserve)]*
 
@@ -44,10 +44,10 @@ $$\Delta\rho^* = \alpha R - \rho$$
 
 ### Derivation
 
-1. Lyapunov function $V(\delta) = \frac{1}{2}\|\delta\|^2$.
-2. $\dot{V} = \delta^T(-F + w) \leq -\alpha\|\delta\|^2 + \rho\|\delta\|$.
-3. $\dot{V} < 0$ when $\|\delta\| > \rho/\alpha$, giving ultimate bound $R^* = \rho/\alpha$.
-4. Persistence requires $R^* < R$, i.e., $\alpha > \rho/R$. $\square$
+1. Lyapunov function $V(\delta) = \frac{1}{2}\Vert\delta\Vert^2$.
+2. $\dot{V} = \delta^T(-F + w) \leq -\alpha\Vert\delta\Vert^2 + \rho\Vert\delta\Vert$.
+3. $\dot{V} \lt 0$ when $\Vert\delta\Vert \gt \rho/\alpha$, giving ultimate bound $R^\ast = \rho/\alpha$.
+4. Persistence requires $R^\ast \lt R$, i.e., $\alpha \gt \rho/R$. $\square$
 
 Full derivation in #sector-condition-derivation (Props A.1, A.2).
 
@@ -59,6 +59,6 @@ These results are *exact* consequences of standard Lyapunov stability theory und
 
 **Why the sector condition.** The linear ODE assumes correction scales linearly with mismatch forever. Real adaptive systems saturate, exhibit thresholding, or break down when the model class is exhausted. The sector condition captures the minimal structural requirement: the correction must point in the right direction with at least baseline efficiency $\alpha$.
 
-**Generalizing the persistence threshold.** In the linear case, $\alpha = \mathcal{T}$ (adaptive tempo). The general result $\alpha > \rho/R$ proves the persistence threshold ( #persistence-condition) is a structural necessity of any bounded-correction system, not an artifact of the linear approximation.
+**Generalizing the persistence threshold.** In the linear case, $\alpha = \mathcal{T}$ (adaptive tempo). The general result $\alpha \gt \rho/R$ proves the persistence threshold ( #persistence-condition) is a structural necessity of any bounded-correction system, not an artifact of the linear approximation.
 
-**Connection to structural adaptation.** When $\rho/\alpha > R$, disturbance exceeds the model class's capacity. The sector condition fails — this is the dynamical trigger for structural adaptation ( #structural-adaptation-necessity), requiring a new model class with larger valid radius $R'$ or better efficiency $\alpha'$.
+**Connection to structural adaptation.** When $\rho/\alpha \gt R$, disturbance exceeds the model class's capacity. The sector condition fails — this is the dynamical trigger for structural adaptation ( #structural-adaptation-necessity), requiring a new model class with larger valid radius $R'$ or better efficiency $\alpha'$.

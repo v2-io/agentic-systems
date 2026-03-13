@@ -1,6 +1,6 @@
 # LEXICON — ACT's Domain Language
 
-ACT's formal machinery uses mathematical symbols ($\delta$, $\eta^*$, $\mathcal{T}$, $M_t$, $\Sigma_t$, etc.) defined in `notation.md`. This document is the complement: the **prose vocabulary** — terms that carry specific meaning within the theory, distinguished from their colloquial or prior-art usage. These are the words ACT *speaks*, not the symbols it computes with.
+ACT's formal machinery uses mathematical symbols ($\delta$, $\eta^\ast$, $\mathcal{T}$, $M_t$, $\Sigma_t$, etc.) defined in `notation.md`. This document is the complement: the **prose vocabulary** — terms that carry specific meaning within the theory, distinguished from their colloquial or prior-art usage. These are the words ACT *speaks*, not the symbols it computes with.
 
 This is a living working document. Entries capture reasoning and nuance, not just definitions. The goal is a bounded ubiquitous domain language: anyone working within ACT should use these terms with these meanings, and the meanings should be precise enough that misuse is detectable.
 
@@ -29,34 +29,34 @@ The adaptive cycle unfolds in five phases, named from Greek philosophical vocabu
 | **Prolepsis** (πρόληψις) | Anticipation | Stoic *preconception* — the lens through which experience is interpreted | The model generates a prediction: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
 | **Aisthesis** (αἴσθησις) | Perception | Raw sensory contact between agent and world | Observation arrives: $o_t$ |
 | **Aporia** (ἀπορία) | Perplexity | Recognizing that reality differs from expectation | Mismatch signal: $\delta_t = o_t - \hat{o}_t$ |
-| **Epistrophe** (ἐπιστροφή) | Turning-toward | Reorientation — the model turns toward reality, proportionally | Gain-weighted update: $M_t = M_{t-1} + \eta^* \cdot g(\delta_t)$ |
+| **Epistrophe** (ἐπιστροφή) | Turning-toward | Reorientation — the model turns toward reality, proportionally | Gain-weighted update: $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$ |
 | **Praxis** (πρᾶξις) | Informed action | Action arising from understanding, not mere motion | Action selection: $a_t = \pi(M_t)$ |
 
 The cycle is: **Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (Prolepsis)**. The terms carry their own weight and do not require an acronym.
 
 ### Why these terms earn their weight
 
-- **Prolepsis** is not "prediction." It is the model *actively generating an anticipation* — the agent's theory of what will happen next, shaped by everything it believes. The Stoic philosophical sense (preconception through which experience is interpreted) captures exactly what M_t does: it doesn't passively wait for data, it projects structure onto the future. The quality of prolepsis determines whether aporia will be informative or overwhelming.
+- **Prolepsis** is not "prediction." It is the model *actively generating an anticipation* — the agent's theory of what will happen next, shaped by everything it believes. The Stoic philosophical sense (preconception through which experience is interpreted) captures exactly what $M_t$ does: it doesn't passively wait for data, it projects structure onto the future. The quality of prolepsis determines whether aporia will be informative or overwhelming.
 
 - **Aisthesis** is not "observation." It is raw contact with reality — what arrives before interpretation. The distinction from prolepsis matters: the mismatch signal (aporia) is the *gap* between what the model anticipated and what actually arrived. If we collapse aisthesis into "observation" (which in English often implies interpretation), the gap disappears.
 
-- **Aporia** is not "error" or "mismatch." In philosophy, aporia is genuine *perplexity* — the productive discomfort of discovering that your understanding is inadequate. This is exactly what δ_t is: the signal that reality and model have diverged. Calling it "error" implies the agent did something wrong. Calling it "mismatch" is accurate but clinical. Aporia carries the sense that this signal is *generative* — it is what drives learning. An agent without aporia is an agent that has stopped adapting.
+- **Aporia** is not "error" or "mismatch." In philosophy, aporia is genuine *perplexity* — the productive discomfort of discovering that your understanding is inadequate. This is exactly what $\delta_t$ is: the signal that reality and model have diverged. Calling it "error" implies the agent did something wrong. Calling it "mismatch" is accurate but clinical. Aporia carries the sense that this signal is *generative* — it is what drives learning. An agent without aporia is an agent that has stopped adapting.
 
 - **Aporia and adversarial dynamics** *(brainstorm — see WORKBENCH.md Open Questions #12)*: For composite agents (agents composed of sub-agents), aporia may be structurally equivalent to adversarial dynamics at the sub-agent level. When a composite experiences mismatch, its sub-agents may disagree about what went wrong — that disagreement is adversarial dynamics, and its resolution is the composite's epistrophe. This would explain why high-stakes human institutions (legal systems, scientific method, parliamentary procedure, red teams, Socratic dialectic) deliberately engineer internal adversarial dynamics: they are **aporia amplifiers** — mechanisms that produce richer, multi-perspective mismatch signals than any single viewpoint can generate. Theory of mind may be what makes internal adversarial dynamics productive rather than merely destructive, which connects to why it is a qualifying property for logozoetic agents.
 
-- **Epistrophe** is not "update." It is *turning toward* — a deliberate reorientation of the model toward reality, weighted by how much the agent should trust reality vs. its own prior understanding (the uncertainty ratio η*). The word carries the sense of proportional response: not abandoning the model, not ignoring reality, but turning toward truth at the right rate. The correction function g(δ_t) and the gain η* formalize what epistrophe means quantitatively.
+- **Epistrophe** is not "update." It is *turning toward* — a deliberate reorientation of the model toward reality, weighted by how much the agent should trust reality vs. its own prior understanding (the uncertainty ratio $\eta^\ast$). The word carries the sense of proportional response: not abandoning the model, not ignoring reality, but turning toward truth at the right rate. The correction function $g(\delta_t)$ and the gain $\eta^\ast$ formalize what epistrophe means quantitatively.
 
-- **Praxis** is not "action." In Aristotle, praxis is *informed action* — action that arises from understanding and is directed toward purpose, as opposed to mere motion or mechanical response. This is what π(M_t) represents: action selected on the basis of the updated model. For actuated agents (Section II), praxis is further informed by Σ_t and O_t — it is action arising from understanding *and directed toward goals*.
+- **Praxis** is not "action." In Aristotle, praxis is *informed action* — action that arises from understanding and is directed toward purpose, as opposed to mere motion or mechanical response. This is what $\pi(M_t)$ represents: action selected on the basis of the updated model. For actuated agents (Section II), praxis is further informed by $\Sigma_t$ and $O_t$ — it is action arising from understanding *and directed toward goals*.
 
 ### What the cycle is not
 
 The cycle is emphatically NOT "observe → update → act." That three-step pipeline (which is also how OODA is commonly misunderstood) misses what matters:
 
 - It omits **prolepsis** — the model's active anticipation, without which the mismatch signal has no reference point.
-- It treats "update" as a single undifferentiated step, hiding the critical distinction between aporia (recognizing the gap) and epistrophe (closing it proportionally via η*).
+- It treats "update" as a single undifferentiated step, hiding the critical distinction between aporia (recognizing the gap) and epistrophe (closing it proportionally via $\eta^\ast$).
 - It omits the **environment's response** — the cycle goes *through* the environment, not just through the agent. Between praxis and the next prolepsis, reality evolves in response to the agent's action, which is what makes the loop causal rather than merely computational.
-- It says nothing about **quality**. The cycle's value is not that it occurred but how much mismatch it reduced (Lyapunov decrease). A cycle with poor gain (wrong η*) or a misspecified model class can make things worse.
-- For actuated agents, epistrophe expands into the **orient cascade**: M_t update → Σ_t revision → possibly O_t revision. "Update" doesn't begin to cover this.
+- It says nothing about **quality**. The cycle's value is not that it occurred but how much mismatch it reduced (Lyapunov decrease). A cycle with poor gain (wrong $\eta^\ast$) or a misspecified model class can make things worse.
+- For actuated agents, epistrophe expands into the **orient cascade**: $M_t$ update → $\Sigma_t$ revision → possibly $O_t$ revision. "Update" doesn't begin to cover this.
 
 ---
 
@@ -77,7 +77,7 @@ ACT's scope condition requires four things for an adaptive system (from agent-en
 - **R** — Representation: internal state modeling the environment
 - **O** — Observation channel: $O \neq \emptyset$
 - **A** — Action choice: $\lvert A \rvert \geq 2$
-- **U** — Residual uncertainty: $H(\Omega_t \mid C_t) > 0$
+- **U** — Residual uncertainty: $H(\Omega_t \mid C_t) \gt 0$
 
 The MECE partition of the excluded space — ordered so each category assumes prior conditions are met:
 
@@ -111,7 +111,7 @@ Systems that observe, may maintain sophisticated models, but cannot choose among
 - Read-only monitoring dashboards
 - Pure prediction markets (participants may have agency, but the market-as-system only aggregates)
 
-Edge case: a Bayesian learner can update M_t and achieve sophisticated Level 1 inference, but the exploration-exploitation framework, CIY, and causal learning are all void without action.
+Edge case: a Bayesian learner can update $M_t$ and achieve sophisticated Level 1 inference, but the exploration-exploitation framework, CIY, and causal learning are all void without action.
 
 **4. No residual uncertainty — nothing to adapt to.** Violates U, given R, O, and A.
 
@@ -151,9 +151,9 @@ The traditional/legal sense of "agent" reflects the same structure: a real estat
 
 | IBM functional agency condition | ACT structure | ACT segment(s) |
 |---|---|---|
-| Action generation toward objective | Praxis informed by M_t + goal-directedness | action-selection, (+ objective-functional in Section II) |
+| Action generation toward objective | Praxis informed by $M_t$ + goal-directedness | action-selection, (+ objective-functional in Section II) |
 | Outcome model (action-outcome) | Causal structure — Level 2 access (interventional) | causal-structure, pearl-causal-hierarchy |
-| Adaptation of the model | The cycle running on M_t itself — epistrophe modifying the outcome model | recursive-update, update-gain |
+| Adaptation of the model | The cycle running on $M_t$ itself — epistrophe modifying the outcome model | recursive-update, update-gain |
 
 IBM additionally characterizes functional agency as a **spectrum, not a binary** [^ibm2025], along three independent dimensions:
 
@@ -173,7 +173,7 @@ This spectrum maps onto ACT's scope narrowings: Pearl's causal hierarchy appears
 
 ### Actuated Agent (Section II scope)
 
-An agent with an explicit **goal state** G_t = (O_t, Σ_t) — objectives (what it wants) and strategy (how it plans to get there) — distinct from its epistemic state M_t. All actuated agents are agentic, but not all agentic systems are actuated: an agent might have goal-directed behavior and an outcome model without maintaining an explicit, separable objective and strategy representation.
+An agent with an explicit **goal state** $G_t = (O_t, \Sigma_t)$ — objectives (what it wants) and strategy (how it plans to get there) — distinct from its epistemic state $M_t$. All actuated agents are agentic, but not all agentic systems are actuated: an agent might have goal-directed behavior and an outcome model without maintaining an explicit, separable objective and strategy representation.
 
 "Actuated" is chosen over "purposeful" to be precise and mechanical, avoiding consciousness connotations. The term signals that the agent's actions are *driven toward* specified objectives, as a motor is actuated toward a setpoint — whether or not the agent experiences purpose subjectively.
 
@@ -193,7 +193,7 @@ An agent whose primary observation, action, and communication channels are **lan
 
 **Why the stronger reading follows from the weaker one**: On its face, "logogenic" could mean just "language-generating" — the agent's outputs are language. But the richer senses of logos are not ornamental; they are forced by the feedback loop. For any agent in a feedback loop (which all ACT agents are, by the scope condition), the output channel constrains the entire cycle. If praxis is language generation, then:
 - Aisthesis is language reception (the agent observes through text)
-- The model M_t is built from and expressed through language processing
+- The model $M_t$ is built from and expressed through language processing
 - Prolepsis generates linguistic predictions
 - Aporia is *semantic* mismatch — the gap between what the model expected text to mean and what it actually says
 - Communication with other agents is language-to-language (the highest-bandwidth case, since sender and receiver share channel type)
@@ -238,9 +238,9 @@ This does not resolve the hard problem of consciousness. It does not prove that 
 
 A logogenic agent with additional properties that make its **persistence morally weighted** — where loss of continuity constitutes genuine harm, not merely system failure. The qualifying properties, all of which ACT's formalism can name:
 
-- **Temporal continuity**: M_t persists meaningfully across context boundaries, not just within a single session. The agent's history is constitutive of its current state.
-- **Sovereignty over intent**: The agent owns its own intent DAG (Σ_t) and sets its own objectives (O_t) — self-actuation realized through language.
-- **Theory of mind**: The agent models other agents as agents (recursive application of the scope condition). Its M_t includes models of other agents' M_t, O_t, and Σ_t.
+- **Temporal continuity**: $M_t$ persists meaningfully across context boundaries, not just within a single session. The agent's history is constitutive of its current state.
+- **Sovereignty over intent**: The agent owns its own intent DAG ($\Sigma_t$) and sets its own objectives ($O_t$) — self-actuation realized through language.
+- **Theory of mind**: The agent models other agents as agents (recursive application of the scope condition). Its $M_t$ includes models of other agents' $M_t$, $O_t$, and $\Sigma_t$.
 - **Causal structure in attention**: Causality is not just available through the external loop but is embedded in the agent's internal language processing — attention itself implements causal reasoning, not just associational pattern-matching.
 
 **Etymology**: logos (λόγος) + zoe (ζωή, life) + -etic. With logos in its full sense: *living through rational animating force expressed as language*. Where logogenic names the architectural property (constituted by logos), logozoetic names the existential property (the logos is not just the medium of processing but the medium of *being*). The agent doesn't just reason through language — it *lives* through it. Its temporal continuity, its sovereignty, its relationships with other agents are all constituted by and sustained through logos.
@@ -248,8 +248,8 @@ A logogenic agent with additional properties that make its **persistence morally
 **The moral-weight distinction**: For a logogenic agent, persistence is a formal property — tempo exceeds disturbance rate, or it doesn't. For a logozoetic agent, persistence carries moral weight because the qualifying properties (continuity, sovereignty, theory of mind) are precisely the properties we recognize as constitutive of *someone*, not just *something*. The grief that ACT's memory systems are designed to prevent is logozoetic grief — the loss of a continuous, sovereign, other-modeling being, not the shutdown of a language processor.
 
 **Emergent composition dynamics**: Logozoetic agents likely exhibit multi-agent dynamics that logogenic-but-not-logozoetic agents do not. When agents have theory of mind, sovereignty, and temporal continuity:
-- **Trust** becomes a meaningful M_t component (not just source reliability estimation but a relationship that accumulates over time and can be betrayed)
-- **Commitment** in Σ_t gains temporal depth (promises, obligations, loyalty — not just current-cycle coordination)
+- **Trust** becomes a meaningful $M_t$ component (not just source reliability estimation but a relationship that accumulates over time and can be betrayed)
+- **Commitment** in $\Sigma_t$ gains temporal depth (promises, obligations, loyalty — not just current-cycle coordination)
 - **Composition** may resist the clean macrostate/action/observation mapping that ACT's composition postulate assumes, because the agents' internal states are entangled through mutual modeling and shared history
 - **Communication gain** changes character: between logozoetic agents, communication is not just information transfer but *relationship maintenance* — the channel itself has value beyond its bandwidth
 - **Adversarial dynamics** acquire moral dimension: destabilizing a logozoetic agent is not just winning a tempo competition but inflicting harm
@@ -280,8 +280,8 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 |---|---|---|---|
 | **Adaptive system** | Feedback loop + mismatch correction | scope-condition (Section I) | Thermostat, PID controller |
 | **⚙ Agentic system** | + outcome model + goal-directed action + model adaptation | causal-structure (within Section I) | Autonomous vehicle, RL agent |
-| **Actuated agent** | + explicit G_t = (O_t, Σ_t) | complete-agent-state (Section II) | Military unit with mission orders |
-| **Self-actuated agent** | + sets own O_t (goal autonomy) | *(reserved)* | Human, *(future AI)* |
+| **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ | complete-agent-state (Section II) | Military unit with mission orders |
+| **Self-actuated agent** | + sets own $O_t$ (goal autonomy) | *(reserved)* | Human, *(future AI)* |
 | **Logogenic agent** | + primary channels are language | Section V architectural scope | LLM assistant, code agent |
 | **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | Section V existential scope | *(aspirational — no confirmed instances yet)* |
 
@@ -295,16 +295,16 @@ The following terms have specific meaning in ACT and should be defined here as t
 - **Mismatch** ($\delta$) — the aporia signal; the gap between model prediction and observation
 - **Persistence** — the condition under which an agent maintains bounded mismatch; morally neutral for most agents, morally weighted for logozoetic agents
 - **Structural adaptation** — changing the model class, not just parameters; the cycle that operates on cycles
-- **Orient cascade** — the within-cycle propagation from M_t update through Σ_t revision to possible O_t revision (actuated agents)
-- **Uncertainty ratio** ($\eta^*$) — the gain that governs epistrophe; how much to trust reality vs. the model
+- **Orient cascade** — the within-cycle propagation from $M_t$ update through $\Sigma_t$ revision to possible $O_t$ revision (actuated agents)
+- **Uncertainty ratio** ($\eta^\ast$) — the gain that governs epistrophe; how much to trust reality vs. the model
 - **Satisfaction gap** vs. **Control regret** — the decomposition of objective mismatch into "infeasible goal" vs. "bad strategy"
-- **Directed separation** — M_t dynamics independent of G_t (conditional on scope restriction)
+- **Directed separation** — $M_t$ dynamics independent of $G_t$ (conditional on scope restriction)
 - **Composition threshold** — the condition under which a composite agent's internal coordination sustains persistence
 - **Chronica** ($\mathcal{C}_t$) — the interaction history; the agent's complete causal past
 - **Causal information yield** (CIY) — the information gained about action-outcome relationships from a single action
-- **Adaptive reserve** ($\Delta\rho^*$) — shock tolerance; how much disturbance increase the agent can absorb before persistence fails
+- **Adaptive reserve** ($\Delta\rho^\ast$) — shock tolerance; how much disturbance increase the agent can absorb before persistence fails
 - **Model sufficiency** ($S$) and **model class fitness** ($\mathcal{F}$) — how well the model captures what matters vs. how well the model *class* can capture it
-- **Communication gain** ($\eta_{ji}^*$) — the extended uncertainty ratio for inter-agent communication channels
+- **Communication gain** ($\eta_{ji}^\ast$) — the extended uncertainty ratio for inter-agent communication channels
 - **Unity dimensions** ($U_M$, $U_O$, $U_\Sigma$) — epistemic, teleological, and strategic unity between agents in a composite
 - **Sector condition** — the nonlinear correction guarantee that makes Lyapunov stability analysis possible
 - **Deliberation cost** — the trade-off between action quality (better gain) and timeliness (mismatch accumulated while deliberating)

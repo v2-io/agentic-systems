@@ -20,12 +20,12 @@ Let a composite agent's total inter-agent communication bandwidth be $B = B_O + 
 
 The hypothesis: the allocation that maximizes composite tempo $\mathcal{T}_c$ (or equivalently, minimizes coordination overhead $C_{\text{coord}}$) prioritizes:
 
-$$B_O > B_\Sigma > B_M$$
+$$B_O \gt B_\Sigma \gt B_M$$
 
 when:
 - Objectives change slowly relative to strategies: $\nu_O \ll \nu_\Sigma$
 - Strategies change slowly relative to models: $\nu_\Sigma \ll \nu_M$
-- Sub-agents have sufficient local adaptive capacity: each $\mathcal{T}_i > \rho_i^{\text{local}} / \|\delta_{\text{critical}}^i\|$
+- Sub-agents have sufficient local adaptive capacity: each $\mathcal{T}_i \gt \rho_i^{\text{local}} / \Vert\delta_{\text{critical}}^i\Vert$
 
 The priority ordering follows from the IB framework ( #shared-intent): the bits with the longest shelf life and highest coordination value per bit should be transmitted first. Objectives change slowly and enable autonomous coordination (sub-agents who share objectives can independently choose compatible strategies). Models change fast and provide diminishing coordination value (two agents with the same model but different objectives still conflict).
 
@@ -35,7 +35,7 @@ The priority ordering follows from the IB framework ( #shared-intent): the bits 
 
 ## Discussion
 
-**When the ordering reverses.** The prioritization $B_O > B_\Sigma > B_M$ assumes sub-agents can independently construct adequate local models. When the environment is genuinely ambiguous and local observations are insufficient (fog of war, novel codebase, unprecedented market conditions), model synchronization may be worth more than objective sharing — sub-agents who share the same wrong model at least err consistently, which is sometimes better than each having a different wrong model.
+**When the ordering reverses.** The prioritization $B_O \gt B_\Sigma \gt B_M$ assumes sub-agents can independently construct adequate local models. When the environment is genuinely ambiguous and local observations are insufficient (fog of war, novel codebase, unprecedented market conditions), model synchronization may be worth more than objective sharing — sub-agents who share the same wrong model at least err consistently, which is sometimes better than each having a different wrong model.
 
 **Bungay's evidence.** In *The Art of Action*, Bungay documents that organizations consistently fail by inverting this priority: they over-invest in controlling *how* subordinates act (strategy sharing, $B_\Sigma$) rather than ensuring subordinates understand *why* (objective sharing, $B_O$). The result: subordinates who follow instructions precisely but cannot adapt when conditions change, because they lack the teleological context to improvise intelligently.
 

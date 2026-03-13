@@ -10,7 +10,7 @@ depends:
 
 # Observation: Adversarial Exponent Regimes
 
-The adversarial tempo advantage exponent — the power $b$ in $\|\delta_B\| / \|\delta_A\| \sim (\mathcal{T}_A / \mathcal{T}_B)^b$ — is not a single number. It depends on two structural features of the disturbance: whether the adversarial coupling enters as deterministic drift or stochastic noise, and whether the coupling dominates the base disturbance rate. Three regimes emerge from simulation.
+The adversarial tempo advantage exponent — the power $b$ in $\Vert\delta_B\Vert / \Vert\delta_A\Vert \sim (\mathcal{T}_A / \mathcal{T}_B)^b$ — is not a single number. It depends on two structural features of the disturbance: whether the adversarial coupling enters as deterministic drift or stochastic noise, and whether the coupling dominates the base disturbance rate. Three regimes emerge from simulation.
 
 ## Formal Expression
 
@@ -20,7 +20,7 @@ The adversarial tempo advantage exponent — the power $b$ in $\|\delta_B\| / \|
 
 $$b \to 2.0 \qquad \text{(confirmed at 1.999)}$$
 
-This is the exact prediction of the mismatch ODE steady state $\|\delta\|_{ss} = \rho / \mathcal{T}$.
+This is the exact prediction of the mismatch ODE steady state $\Vert\delta\Vert_{ss} = \rho / \mathcal{T}$.
 
 **Regime 2: Stochastic noise, coupling-dominant.** When adversarial coupling enters through the noise scale of zero-mean perturbations ($\sigma_B = \sigma_{\text{base}} + \gamma \cdot \mathcal{T}_A$) and coupling dominates:
 
@@ -47,11 +47,11 @@ The exponent degrades smoothly as the base-to-coupling ratio increases.
 
 ## Discussion
 
-**The mismatch ODE conflates two quantities.** The equation $d\|\delta\|/dt = -\mathcal{T} \cdot \|\delta\| + \rho$ is ambiguous about whether $\rho$ represents deterministic drift (persistent directional change) or stochastic noise scale (unpredictable fluctuations). These give different steady-state scaling: $\rho / \mathcal{T}$ vs. $\rho / \sqrt{\mathcal{T}}$. For the mismatch dynamics ( #mismatch-dynamics), this distinction needs explicit treatment.
+**The mismatch ODE conflates two quantities.** The equation $d\Vert\delta\Vert/dt = -\mathcal{T} \cdot \Vert\delta\Vert + \rho$ is ambiguous about whether $\rho$ represents deterministic drift (persistent directional change) or stochastic noise scale (unpredictable fluctuations). These give different steady-state scaling: $\rho / \mathcal{T}$ vs. $\rho / \sqrt{\mathcal{T}}$. For the mismatch dynamics ( #mismatch-dynamics), this distinction needs explicit treatment.
 
-**Why the squared law held for the coupling-dominance sweep.** In Variant A, the coupling enters as deterministic drift: $\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal{T}_A$, and the steady state is $\|\delta_B\| = \rho_B / \mathcal{T}_B$. The ratio $\|\delta_B\| / \|\delta_A\|$ in the coupling-dominant limit gives $(\mathcal{T}_A / \mathcal{T}_B)^2$ directly.
+**Why the squared law held for the coupling-dominance sweep.** In Variant A, the coupling enters as deterministic drift: $\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal{T}_A$, and the steady state is $\Vert\delta_B\Vert = \rho_B / \mathcal{T}_B$. The ratio $\Vert\delta_B\Vert / \Vert\delta_A\Vert$ in the coupling-dominant limit gives $(\mathcal{T}_A / \mathcal{T}_B)^2$ directly.
 
-**Nonlinear correction creates thresholds, not lower exponents.** For saturating, sigmoid, and breakdown correction functions under deterministic drift, the issue is not a reduced exponent but a catastrophic divergence when $\rho$ exceeds the correction capacity ($\rho > \mathcal{T} \cdot R$). This is exactly the persistence threshold failure ( #persistence-condition), observed directly in simulation.
+**Nonlinear correction creates thresholds, not lower exponents.** For saturating, sigmoid, and breakdown correction functions under deterministic drift, the issue is not a reduced exponent but a catastrophic divergence when $\rho$ exceeds the correction capacity ($\rho \gt \mathcal{T} \cdot R$). This is exactly the persistence threshold failure ( #persistence-condition), observed directly in simulation.
 
 **Domain interpretation.** Whether a given opponent's tempo increase causes deterministic drift or stochastic noise depends on the domain:
 - Military: an opponent who maneuvers faster creates systematic positional change (drift, $b \approx 2$)

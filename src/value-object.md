@@ -28,7 +28,7 @@ $Q_O$ answers: "if I take action $a$ now and then follow $\pi_{\text{cont}}$ aft
 **Continuation convention.** All value queries are conditioned on a specific continuation policy $\pi_{\text{cont}}$ and finite horizon $N_h$. $\pi_{\text{cont}}$ is a *parameter* of the value object, not a derived quantity. ACT does not prescribe a specific solution concept. Common choices:
 
 - $\pi_{\text{cont}} = \pi_{\text{current}}$ — **one-step improvement** (evaluate each action assuming current behavior continues afterward). Natural default for ACT: requires no fixed-point computation and aligns with incremental update philosophy ( #update-gain). Not a convergence guarantee; a practical default.
-- $\pi_{\text{cont}} = \pi^*$ — **Bellman fixed point** (self-consistent optimal continuation). Requires solving a fixed-point equation. Standard in RL and dynamic programming.
+- $\pi_{\text{cont}} = \pi^\ast$ — **Bellman fixed point** (self-consistent optimal continuation). Requires solving a fixed-point equation. Standard in RL and dynamic programming.
 - $\pi_{\text{cont}}$ re-optimized each step — **receding horizon / MPC**. Re-plans at each step with updated $M_t$.
 
 The one-step improvement is the natural default because it mirrors ACT's general philosophy: update incrementally from where you are, using the best available information, without requiring global optimality.
@@ -52,7 +52,7 @@ Note that $\lambda$ now depends on $(M_t, O_t, N_h)$, not just $M_t$. The value 
 
 This extension is structurally motivated but the specific form of $\lambda(M_t, O_t, N_h)$ is not derived within ACT (same status as #causal-information-yield's treatment of $\lambda$).
 
-**Connection to #model-sufficiency.** $V_O$ is conditioned on $M_t$, not on the true environment state $\Omega_t$. When $S(M_t) < 1$, the agent's value estimates are biased — it may over- or underestimate trajectory values because its model is incomplete. The satisfaction gap ( #satisfaction-gap) and control regret ( #control-regret) are defined in terms of $V_O(M_t, \cdot)$, not $V_O(\Omega_t, \cdot)$, which means they measure the agent's *believed* situation, not the true one. Improving $M_t$ (reducing $\delta_{\text{epistemic}}$) brings the agent's value estimates closer to reality.
+**Connection to #model-sufficiency.** $V_O$ is conditioned on $M_t$, not on the true environment state $\Omega_t$. When $S(M_t) \lt 1$, the agent's value estimates are biased — it may over- or underestimate trajectory values because its model is incomplete. The satisfaction gap ( #satisfaction-gap) and control regret ( #control-regret) are defined in terms of $V_O(M_t, \cdot)$, not $V_O(\Omega_t, \cdot)$, which means they measure the agent's *believed* situation, not the true one. Improving $M_t$ (reducing $\delta_{\text{epistemic}}$) brings the agent's value estimates closer to reality.
 
 **Horizon dependence.** $N_h$ is not merely a computational convenience — it reflects genuine uncertainty about the far future. Long horizons amplify the impact of model error (small biases in $M_t$ compound over many steps). The choice of $N_h$ trades off farsightedness against robustness to model error. An agent in a fast-changing environment ($\rho$ high) should use shorter horizons; one in a stable environment can plan further.
 

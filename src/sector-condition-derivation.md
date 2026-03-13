@@ -13,7 +13,7 @@ Complete Lyapunov derivations of bounded mismatch and adaptive reserve for the s
 
 ## Motivation
 
-#mismatch-dynamics hypothesizes the linear ODE $d\|\delta\|/dt = -\mathcal{T}\|\delta\| + \rho$ as a first-order approximation. The linear form yields clean closed-form results but commits to a specific functional relationship between mismatch magnitude and correction rate. True correction dynamics are almost certainly nonlinear — exhibiting saturation at large mismatch, threshold effects near zero, and structural breakdown when the model class is exhausted.
+#mismatch-dynamics hypothesizes the linear ODE $d\Vert\delta\Vert/dt = -\mathcal{T}\Vert\delta\Vert + \rho$ as a first-order approximation. The linear form yields clean closed-form results but commits to a specific functional relationship between mismatch magnitude and correction rate. True correction dynamics are almost certainly nonlinear — exhibiting saturation at large mismatch, threshold effects near zero, and structural breakdown when the model class is exhausted.
 
 A Lyapunov approach proves persistence and stability under much weaker assumptions: any correction dynamics satisfying qualitative monotonicity properties (the sector condition). The results below are strictly more general — the linear case is recovered where the sector bounds coincide.
 
@@ -29,8 +29,8 @@ $$\frac{d\delta}{dt} = -F(\mathcal{T}, \delta) + w(t)$$
 
 where:
 
-- $F(\mathcal{T}, \delta): \mathbb{R}_+ \times \mathbb{R}^n \to \mathbb{R}^n$ is the **correction function** — how the agent's adaptive process reduces mismatch. It maps to the same space as $\delta$ (so that the inner product $\delta^T F$ in the sector condition is well-defined). This subsumes the update gain $\eta^*$ ( #update-gain), event rate $\nu$, and the structure of the update rule.
-- $w(t)$ is the **disturbance** — new mismatch introduced by environmental change, with $\|w(t)\| \leq \rho$ (bounded disturbance rate).
+- $F(\mathcal{T}, \delta): \mathbb{R}_+ \times \mathbb{R}^n \to \mathbb{R}^n$ is the **correction function** — how the agent's adaptive process reduces mismatch. It maps to the same space as $\delta$ (so that the inner product $\delta^T F$ in the sector condition is well-defined). This subsumes the update gain $\eta^\ast$ ( #update-gain), event rate $\nu$, and the structure of the update rule.
+- $w(t)$ is the **disturbance** — new mismatch introduced by environmental change, with $\Vertw(t)\Vert \leq \rho$ (bounded disturbance rate).
 
 The linear case from #mismatch-dynamics has $F(\mathcal{T}, \delta) = \mathcal{T} \cdot \delta$.
 
@@ -48,13 +48,13 @@ No correction is applied when the model perfectly matches reality.
 
 ### (A2') Local Sector Condition
 
-There exists a region $\mathcal{B}_R = \{\delta : \|\delta\| \leq R\}$ and $\alpha > 0$ such that (following the sector-condition framework of Lur'e[^lure1957]):
+There exists a region $\mathcal{B}_R = \{\delta : \Vert\delta\Vert \leq R\}$ and $\alpha \gt 0$ such that (following the sector-condition framework of Lur'e[^lure1957]):
 
 *[Assumption A2' (sector-condition)]*
 
-$$\delta^T F(\mathcal{T}, \delta) \geq \alpha \|\delta\|^2 \quad \forall \delta \in \mathcal{B}_R$$
+$$\delta^T F(\mathcal{T}, \delta) \geq \alpha \Vert\delta\Vert^2 \quad \forall \delta \in \mathcal{B}_R$$
 
-The correction function always points "inward" (reducing mismatch), and its magnitude is bounded below relative to $\|\delta\|^2$. The linear case has $\alpha = \mathcal{T}$. A saturating correction has $\alpha$ decreasing for large $\|\delta\|$. A threshold correction has $\alpha = 0$ for small $\|\delta\|$.
+The correction function always points "inward" (reducing mismatch), and its magnitude is bounded below relative to $\Vert\delta\Vert^2$. The linear case has $\alpha = \mathcal{T}$. A saturating correction has $\alpha$ decreasing for large $\Vert\delta\Vert$. A threshold correction has $\alpha = 0$ for small $\Vert\delta\Vert$.
 
 The local form allows the correction to break down outside $\mathcal{B}_R$ — the structural adaptation regime of #structural-adaptation-necessity.
 
@@ -62,19 +62,19 @@ The local form allows the correction to break down outside $\mathcal{B}_R$ — t
 
 For fixed $\delta$, $\delta^T F(\mathcal{T}, \delta)$ is monotone increasing in $\mathcal{T}$. Higher tempo means faster correction.
 
-**Connection to ACT parameters.** The sector parameter $\alpha$ is determined by the adaptive tempo $\mathcal{T}$ ( #adaptive-tempo) and the structure of the correction function. In the linear case, $\alpha = \mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)*}$. In nonlinear cases, $\alpha$ represents the *worst-case* correction efficiency within the valid region — the minimum ratio of correction power to mismatch magnitude. The radius $R$ represents the model class capacity: how large a mismatch can grow before the correction mechanism fails (i.e., before the sector condition ceases to hold), at which point structural adaptation ( #structural-adaptation-necessity) becomes necessary.
+**Connection to ACT parameters.** The sector parameter $\alpha$ is determined by the adaptive tempo $\mathcal{T}$ ( #adaptive-tempo) and the structure of the correction function. In the linear case, $\alpha = \mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$. In nonlinear cases, $\alpha$ represents the *worst-case* correction efficiency within the valid region — the minimum ratio of correction power to mismatch magnitude. The radius $R$ represents the model class capacity: how large a mismatch can grow before the correction mechanism fails (i.e., before the sector condition ceases to hold), at which point structural adaptation ( #structural-adaptation-necessity) becomes necessary.
 
 ## Candidate Lyapunov Function
 
 *[Definition (Lyapunov Candidate)]*
 
-$$V(\delta) = \frac{1}{2}\|\delta\|^2$$
+$$V(\delta) = \frac{1}{2}\Vert\delta\Vert^2$$
 
 Positive definite, radially unbounded, continuously differentiable. Its level sets $V = c$ are spheres of radius $\sqrt{2c}$ in mismatch space.
 
 ## Proposition A.1: Bounded Mismatch (Single Agent)
 
-**Statement.** Under (A1), (A2'), (A3), with bounded disturbance $\|w(t)\| \leq \rho$, the mismatch $\delta(t)$ is **ultimately bounded**: there exists $R^* > 0$ such that $\|\delta(t)\| \leq R^*$ for all sufficiently large $t$, provided $R^* < R$ (the ultimately bounded region fits within the sector-condition region).
+**Statement.** Under (A1), (A2'), (A3), with bounded disturbance $\Vertw(t)\Vert \leq \rho$, the mismatch $\delta(t)$ is **ultimately bounded**: there exists $R^\ast \gt 0$ such that $\Vert\delta(t)\Vert \leq R^\ast$ for all sufficiently large $t$, provided $R^\ast \lt R$ (the ultimately bounded region fits within the sector-condition region).
 
 **Proof.**
 
@@ -88,25 +88,25 @@ $$\dot{V} = \delta^T \dot{\delta} = \delta^T[-F(\mathcal{T}, \delta) + w(t)]$$
 
 $$= -\delta^T F(\mathcal{T}, \delta) + \delta^T w(t)$$
 
-By (A2'): $\delta^T F(\mathcal{T}, \delta) \geq \alpha\|\delta\|^2$
+By (A2'): $\delta^T F(\mathcal{T}, \delta) \geq \alpha\Vert\delta\Vert^2$
 
-By Cauchy-Schwarz: $\delta^T w(t) \leq \|\delta\| \cdot \|w(t)\| \leq \rho\|\delta\|$
+By Cauchy-Schwarz: $\delta^T w(t) \leq \Vert\delta\Vert \cdot \Vertw(t)\Vert \leq \rho\Vert\delta\Vert$
 
 Therefore:
 
 *[Derived (Proof Step)]*
 
-$$\dot{V} \leq -\alpha\|\delta\|^2 + \rho\|\delta\| = -\|\delta\|(\alpha\|\delta\| - \rho)$$
+$$\dot{V} \leq -\alpha\Vert\delta\Vert^2 + \rho\Vert\delta\Vert = -\Vert\delta\Vert(\alpha\Vert\delta\Vert - \rho)$$
 
-$\dot{V} < 0$ whenever $\|\delta\| > \rho/\alpha$.
+$\dot{V} \lt 0$ whenever $\Vert\delta\Vert \gt \rho/\alpha$.
 
-Define $R^* = \rho/\alpha$. Outside the ball $\mathcal{B}_{R^*}$, the Lyapunov function is strictly decreasing, so trajectories are driven inward. Any trajectory entering $\mathcal{B}_{R^*}$ remains in a neighborhood of it (with possible oscillation at the boundary due to the disturbance).
+Define $R^\ast = \rho/\alpha$. Outside the ball $\mathcal{B}_{R^\ast}$, the Lyapunov function is strictly decreasing, so trajectories are driven inward. Any trajectory entering $\mathcal{B}_{R^\ast}$ remains in a neighborhood of it (with possible oscillation at the boundary due to the disturbance).
 
-The agent persists iff $R^* < R$, i.e., iff $\rho/\alpha < R$, i.e., iff $\alpha > \rho/R$. $\square$
+The agent persists iff $R^\ast \lt R$, i.e., iff $\rho/\alpha \lt R$, i.e., iff $\alpha \gt \rho/R$. $\square$
 
-**Interpretation.** The ultimately bounded region has radius $R^* = \rho/\alpha$. In the linear case, $\alpha = \mathcal{T}$, recovering #persistence-condition's steady-state result $R^* = \rho/\mathcal{T}$ exactly. But Proposition A.1 holds for *any* correction function satisfying the sector condition, not just the linear one.
+**Interpretation.** The ultimately bounded region has radius $R^\ast = \rho/\alpha$. In the linear case, $\alpha = \mathcal{T}$, recovering #persistence-condition's steady-state result $R^\ast = \rho/\mathcal{T}$ exactly. But Proposition A.1 holds for *any* correction function satisfying the sector condition, not just the linear one.
 
-**The persistence threshold, generalized.** The agent persists (mismatch remains bounded within the model class capacity) iff $\rho/\alpha < R$. If the correction function breaks down (A2' fails) before $R^*$ is reached, the agent may diverge. This IS #structural-adaptation-necessity's trigger: when $\rho/\alpha > R$ (the environment demands more correction than the model class can provide), parametric adaptation fails and structural change is required.
+**The persistence threshold, generalized.** The agent persists (mismatch remains bounded within the model class capacity) iff $\rho/\alpha \lt R$. If the correction function breaks down (A2' fails) before $R^\ast$ is reached, the agent may diverge. This IS #structural-adaptation-necessity's trigger: when $\rho/\alpha \gt R$ (the environment demands more correction than the model class can provide), parametric adaptation fails and structural change is required.
 
 ## Proposition A.2: Stability Margin (Adaptive Reserve)
 
@@ -116,16 +116,16 @@ The agent persists iff $R^* < R$, i.e., iff $\rho/\alpha < R$, i.e., iff $\alpha
 
 $$\Delta\rho^* = \alpha R - \rho$$
 
-without mismatch diverging (where $R$ is the radius of the sector-condition region from A2'). Beyond this, $R^*$ exceeds $R$ and the correction function may fail.
+without mismatch diverging (where $R$ is the radius of the sector-condition region from A2'). Beyond this, $R^\ast$ exceeds $R$ and the correction function may fail.
 
 **Proof.** After a shock, the new disturbance rate is $\rho + \Delta\rho$. The new ultimately bounded radius is $(\rho + \Delta\rho)/\alpha$. This remains within the valid region iff $(\rho + \Delta\rho)/\alpha \leq R$, i.e., $\Delta\rho \leq \alpha R - \rho$. $\square$
 
-**Interpretation.** $\Delta\rho^*$ is the agent's **adaptive reserve** — how much additional environmental volatility it can absorb before its model breaks down. This is a single number characterizing an agent's robustness to shock:
+**Interpretation.** $\Delta\rho^\ast$ is the agent's **adaptive reserve** — how much additional environmental volatility it can absorb before its model breaks down. This is a single number characterizing an agent's robustness to shock:
 
 - An agent operating well below capacity ($\rho \ll \alpha R$) has a large reserve — it is **robust**.
 - An agent near its limit ($\rho \approx \alpha R$) has a small reserve — it is **fragile**.
 
-| Domain | Large $\Delta\rho^*$ (robust) | Small $\Delta\rho^*$ (fragile) |
+| Domain | Large $\Delta\rho^\ast$ (robust) | Small $\Delta\rho^\ast$ (fragile) |
 |--------|-------------------------------|-------------------------------|
 | Control | Kalman filter on slow target | Same filter on erratic target |
 | Biology | Organism in stable niche | Same organism under climate change |
@@ -136,8 +136,8 @@ without mismatch diverging (where $R$ is the radius of the sector-condition regi
 
 | Result | What it proves | Assumptions | Linear case recovery |
 |--------|---------------|-------------|---------------------|
-| **A.1** (Bounded Mismatch) | $R^* = \rho/\alpha$ | (A1), (A2'), bounded $\rho$ | $\alpha = \mathcal{T}$ gives $R^* = \rho/\mathcal{T}$ |
-| **A.2** (Stability Margin) | $\Delta\rho^* = \alpha R - \rho$ | Same as A.1 | $R \to \infty$ for linear (always stable if $\mathcal{T} > 0$) |
+| **A.1** (Bounded Mismatch) | $R^\ast = \rho/\alpha$ | (A1), (A2'), bounded $\rho$ | $\alpha = \mathcal{T}$ gives $R^\ast = \rho/\mathcal{T}$ |
+| **A.2** (Stability Margin) | $\Delta\rho^\ast = \alpha R - \rho$ | Same as A.1 | $R \to \infty$ for linear (always stable if $\mathcal{T} \gt 0$) |
 
 ## Epistemic Status
 
@@ -149,13 +149,13 @@ The setup and assumptions are *definitions* — they specify what we mean by "co
 
 **What the proofs do NOT illuminate.** (1) Quantitative steady-state values — Lyapunov gives *bounds*, not exact values; the linear analysis remains necessary for quantitative predictions. (2) Convergence rates — standard Lyapunov tells you stable/unstable, not how fast. (3) Optimal gain structure — #update-gain comes from estimation theory, not stability theory. (4) Model sufficiency — the #information-bottleneck framework is information-theoretic, complementary to but independent of stability analysis.
 
-**The bounded-disturbance assumption.** Proposition A.1 requires $\|w(t)\| \leq \rho$ — a finite upper bound on disturbance magnitude. This excludes heavy-tailed environmental shocks (financial crises, ecological catastrophes, strategic surprise) where $\|w(t)\|$ can exceed any finite bound with non-negligible probability. For such environments, stochastic Lyapunov methods (input-to-state stability in probability, martingale-based stability) would be needed. The bounded case gives worst-case guarantees for the typical regime; extreme tail events are better understood as triggers for structural adaptation ( #structural-adaptation-necessity) rather than disturbances to be absorbed parametrically.
+**The bounded-disturbance assumption.** Proposition A.1 requires $\Vertw(t)\Vert \leq \rho$ — a finite upper bound on disturbance magnitude. This excludes heavy-tailed environmental shocks (financial crises, ecological catastrophes, strategic surprise) where $\Vertw(t)\Vert$ can exceed any finite bound with non-negligible probability. For such environments, stochastic Lyapunov methods (input-to-state stability in probability, martingale-based stability) would be needed. The bounded case gives worst-case guarantees for the typical regime; extreme tail events are better understood as triggers for structural adaptation ( #structural-adaptation-necessity) rather than disturbances to be absorbed parametrically.
 
 ## Working Notes
 
 - The adversarial extension (Prop A.3, coupled agents) and effects spiral (Cor A.3.1) are in #adversarial-destabilization. The multi-timescale sketch (A.4) is in #multi-timescale-stability.
 - The vector treatment of $\delta(t) \in \mathbb{R}^n$ connects directly to per-dimension tempo analysis ( #per-dimension-persistence). Each dimension can have different effective $\alpha_k$ values, and the weakest dimension determines overall persistence — a tensor generalization of the scalar results here.
-- A global sector condition (A2 without the local restriction to $\mathcal{B}_R$) would give global stability, making $\Delta\rho^*$ infinite — the agent could absorb any finite disturbance shock. But this requires the correction function to work perfectly at arbitrary mismatch magnitudes, which is unrealistic for any finite model class. The local form (A2') is the honest one.
+- A global sector condition (A2 without the local restriction to $\mathcal{B}_R$) would give global stability, making $\Delta\rho^\ast$ infinite — the agent could absorb any finite disturbance shock. But this requires the correction function to work perfectly at arbitrary mismatch magnitudes, which is unrealistic for any finite model class. The local form (A2') is the honest one.
 
 ---
 

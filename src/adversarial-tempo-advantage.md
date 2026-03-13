@@ -20,47 +20,47 @@ Under adversarial coupling where one agent's actions contribute to the other's d
 
 $$\rho_A = \rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B, \qquad \rho_B = \rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A$$
 
-where $\gamma_A, \gamma_B > 0$ are the coupling effectivenesses and $\rho_{\text{base}}$ is the background disturbance rate (taken equal for both agents for clarity; the asymmetric case is a straightforward generalization).
+where $\gamma_A, \gamma_B \gt 0$ are the coupling effectivenesses and $\rho_{\text{base}}$ is the background disturbance rate (taken equal for both agents for clarity; the asymmetric case is a straightforward generalization).
 
-**Steady-state mismatch ratio.** From the linear mismatch dynamics ( #mismatch-dynamics), $\|\delta\|_{ss} = \rho / \mathcal{T}$. Substituting the coupled disturbance rates:
+**Steady-state mismatch ratio.** From the linear mismatch dynamics ( #mismatch-dynamics), $\Vert\delta\Vert_{ss} = \rho / \mathcal{T}$. Substituting the coupled disturbance rates:
 
-$$\|\delta_A\|_{ss} = \frac{\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B}{\mathcal{T}_A}, \qquad \|\delta_B\|_{ss} = \frac{\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A}{\mathcal{T}_B}$$
+$$\Vert\delta_A\Vert_{ss} = \frac{\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B}{\mathcal{T}_A}, \qquad \Vert\delta_B\Vert_{ss} = \frac{\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A}{\mathcal{T}_B}$$
 
 Taking the ratio:
 
-$$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} = \frac{\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A}{\mathcal{T}_B} \cdot \frac{\mathcal{T}_A}{\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B}$$
+$$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} = \frac{\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A}{\mathcal{T}_B} \cdot \frac{\mathcal{T}_A}{\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B}$$
 
 *[Result (adversarial-tempo-advantage)]*
 
-$$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} = \frac{(\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) \cdot \mathcal{T}_A}{(\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) \cdot \mathcal{T}_B}$$
+$$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} = \frac{(\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) \cdot \mathcal{T}_A}{(\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) \cdot \mathcal{T}_B}$$
 
 ### Coupling-Dominant Limit
 
 In the coupling-dominant regime ($\gamma_A \cdot \mathcal{T}_A \gg \rho_{\text{base}}$ and $\gamma_B \cdot \mathcal{T}_B \gg \rho_{\text{base}}$), the base disturbance becomes negligible:
 
-$$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} \to \frac{\gamma_A \cdot \mathcal{T}_A^2}{\gamma_B \cdot \mathcal{T}_B^2} = \frac{\gamma_A}{\gamma_B} \cdot \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^2$$
+$$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} \to \frac{\gamma_A \cdot \mathcal{T}_A^2}{\gamma_B \cdot \mathcal{T}_B^2} = \frac{\gamma_A}{\gamma_B} \cdot \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^2$$
 
 For symmetric coupling ($\gamma_A = \gamma_B$):
 
-$$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} \to \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^2$$
+$$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} \to \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^2$$
 
 The exponent is $b = 2$: a **squared** tempo advantage. A 2:1 tempo ratio yields a 4:1 mismatch ratio, not 2:1.
 
 ### Derivation
 
-From #mismatch-dynamics, the steady-state condition $d\|\delta\|/dt = 0$ gives $\|\delta\|_{ss} = \rho / \mathcal{T}$.
+From #mismatch-dynamics, the steady-state condition $d\Vert\delta\Vert/dt = 0$ gives $\Vert\delta\Vert_{ss} = \rho / \mathcal{T}$.
 
-1. Substitute the coupling model into $B$'s steady state: $\|\delta_B\|_{ss} = (\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) / \mathcal{T}_B$.
+1. Substitute the coupling model into $B$'s steady state: $\Vert\delta_B\Vert_{ss} = (\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) / \mathcal{T}_B$.
 
-2. Substitute the coupling model into $A$'s steady state: $\|\delta_A\|_{ss} = (\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) / \mathcal{T}_A$.
+2. Substitute the coupling model into $A$'s steady state: $\Vert\delta_A\Vert_{ss} = (\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) / \mathcal{T}_A$.
 
 3. Form the ratio:
 
-$$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} = \frac{(\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) / \mathcal{T}_B}{(\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) / \mathcal{T}_A} = \frac{(\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) \cdot \mathcal{T}_A}{(\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) \cdot \mathcal{T}_B}$$
+$$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} = \frac{(\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) / \mathcal{T}_B}{(\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) / \mathcal{T}_A} = \frac{(\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) \cdot \mathcal{T}_A}{(\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) \cdot \mathcal{T}_B}$$
 
 4. In the coupling-dominant limit, $\rho_{\text{base}} \to 0$ relative to $\gamma \cdot \mathcal{T}$:
 
-$$\frac{\|\delta_B\|_{ss}}{\|\delta_A\|_{ss}} \to \frac{\gamma_A \cdot \mathcal{T}_A \cdot \mathcal{T}_A}{\gamma_B \cdot \mathcal{T}_B \cdot \mathcal{T}_B} = \frac{\gamma_A}{\gamma_B} \cdot \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^2$$
+$$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} \to \frac{\gamma_A \cdot \mathcal{T}_A \cdot \mathcal{T}_A}{\gamma_B \cdot \mathcal{T}_B \cdot \mathcal{T}_B} = \frac{\gamma_A}{\gamma_B} \cdot \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^2$$
 
 $\square$
 

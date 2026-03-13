@@ -18,7 +18,7 @@ For agents $i = 1, \ldots, N$, each maintains its own TFT state:
 
 - $M_i$: local model (TF-03)
 - $\delta_i$: local mismatch (TF-05)
-- $\eta_i^*$, $\mathcal{T}_i$, $\alpha_i$, $R_i$: local gain, tempo, sector bound, model class capacity (TF-06, TF-11, App. A)
+- $\eta_i^\ast$, $\mathcal{T}_i$, $\alpha_i$, $R_i$: local gain, tempo, sector bound, model class capacity (TF-06, TF-11, App. A)
 
 ### Coupled Update
 
@@ -51,13 +51,13 @@ where:
 
 **Normalization requirement.** All four uncertainty terms must be expressed in a **common predictive-dispersion scale** before summation — the same units as $U_{M_i}$ (variance of the predictive distribution over the observed quantity; see TF-06). In practice: $U_{o,ji}$ is the variance of the channel noise added to $j$'s signal; $U_{\text{src},j}$ is the expected additional prediction variance attributable to $j$'s model miscalibration; $U_{\text{align},ji}$ is the expected additional prediction variance attributable to strategic distortion. When these are hard to estimate directly, a conservative approximation is to set $U_{\text{src}} + U_{\text{align}}$ to the empirical variance of $j$'s past prediction residuals as observed by $i$, minus the known channel noise $U_{o,ji}$.
 
-**Additivity as heuristic.** The additive denominator treats all uncertainty sources as independent, zero-mean noise — a structural heuristic, not a strict variance derivation. This is appropriate for $U_{o,ji}$ (channel noise) and $U_{\text{src},j}$ (miscalibration), which are typically unstructured. For $U_{\text{align},ji}$ (deception), additivity is conservative: it correctly drives $\eta_{ji}^*$ toward zero when alignment uncertainty is high. But it misses the adversary's *actual* strategy, which is to make $U_{\text{align},ji}$ *appear* low — presenting as a trustworthy source so that $i$ assigns high $\eta_{ji}^*$ to a poisoned signal. The additive model captures the *defender's* response to detected misalignment; it does not model the *attacker's* optimization over the defender's trust dynamics. See F.5 for where game theory enters.
+**Additivity as heuristic.** The additive denominator treats all uncertainty sources as independent, zero-mean noise — a structural heuristic, not a strict variance derivation. This is appropriate for $U_{o,ji}$ (channel noise) and $U_{\text{src},j}$ (miscalibration), which are typically unstructured. For $U_{\text{align},ji}$ (deception), additivity is conservative: it correctly drives $\eta_{ji}^\ast$ toward zero when alignment uncertainty is high. But it misses the adversary's *actual* strategy, which is to make $U_{\text{align},ji}$ *appear* low — presenting as a trustworthy source so that $i$ assigns high $\eta_{ji}^\ast$ to a poisoned signal. The additive model captures the *defender's* response to detected misalignment; it does not model the *attacker's* optimization over the defender's trust dynamics. See F.5 for where game theory enters.
 
 ### Interpretation
 
-When all additional uncertainty terms are zero (perfect channel, perfectly calibrated and fully aligned source): $\eta_{ji}^* \to U_{M_i}/(U_{M_i} + 0) = 1$. Agent $i$ trusts $j$ completely and updates fully.
+When all additional uncertainty terms are zero (perfect channel, perfectly calibrated and fully aligned source): $\eta_{ji}^\ast \to U_{M_i}/(U_{M_i} + 0) = 1$. Agent $i$ trusts $j$ completely and updates fully.
 
-When any term is large (noisy channel, unreliable or misaligned source): $\eta_{ji}^* \to 0$. Agent $i$ effectively ignores $j$'s signal.
+When any term is large (noisy channel, unreliable or misaligned source): $\eta_{ji}^\ast \to 0$. Agent $i$ effectively ignores $j$'s signal.
 
 The denominator sums are *not* all equivalent in nature:
 - $U_{o,ji}$ is a property of the *channel* — potentially improvable by infrastructure
@@ -66,9 +66,9 @@ The denominator sums are *not* all equivalent in nature:
 
 ### Connection to Existing TFT
 
-When $j$ is the environment itself (direct observation): the communication gain reduces to TF-06's standard gain $\eta_i^* = U_{M_i}/(U_{M_i} + U_{o_i})$, with $U_{\text{src}} = U_{\text{align}} = 0$ (the environment is neither calibrated nor strategic).
+When $j$ is the environment itself (direct observation): the communication gain reduces to TF-06's standard gain $\eta_i^\ast = U_{M_i}/(U_{M_i} + U_{o_i})$, with $U_{\text{src}} = U_{\text{align}} = 0$ (the environment is neither calibrated nor strategic).
 
-When $j$ is an adversary engaged in deception (TF-08): $U_{\text{align},ji}$ is high, driving $\eta_{ji}^*$ toward zero if $i$ correctly estimates $j$'s adversarial intent. The adversary's strategy is to make $U_{\text{align},ji}$ *appear* low (feigning alignment) so that $i$ assigns high $\eta_{ji}^*$ to deceptive signals. This is precisely the trust-exploitation dynamic described in TF-08's adversarial mirror section.
+When $j$ is an adversary engaged in deception (TF-08): $U_{\text{align},ji}$ is high, driving $\eta_{ji}^\ast$ toward zero if $i$ correctly estimates $j$'s adversarial intent. The adversary's strategy is to make $U_{\text{align},ji}$ *appear* low (feigning alignment) so that $i$ assigns high $\eta_{ji}^\ast$ to deceptive signals. This is precisely the trust-exploitation dynamic described in TF-08's adversarial mirror section.
 
 ### Trust Calibration as a Meta-Model
 
@@ -104,9 +104,9 @@ $$U_{\text{align},ki}^{\text{eff}} = U_{\text{align},ki}^{\text{Bayes}} \cdot \f
 
 where $Q_p[\theta_k]$ is the $p$-th quantile of the trust posterior (e.g., $p = 0.05$ for a 95%-conservative estimate). When the posterior is concentrated (much direct evidence), $Q_p \approx \mathbb{E}[\theta_k]$ and the risk adjustment is negligible. When the posterior is diffuse (little evidence, relying on transitive trust), $Q_p \ll \mathbb{E}[\theta_k]$ and the effective alignment uncertainty is inflated — requiring *more evidence before granting high trust*.
 
-The severity of the quantile $p$ should scale with the stakes: routine interactions use $p$ near 0.5 (posterior mean, minimal conservatism); high-impact interactions use $p$ near 0.05 or lower. This is equivalent to requiring that the trust posterior concentrate more before allowing high $\eta_{ki}^*$ in high-stakes settings.
+The severity of the quantile $p$ should scale with the stakes: routine interactions use $p$ near 0.5 (posterior mean, minimal conservatism); high-impact interactions use $p$ near 0.05 or lower. This is equivalent to requiring that the trust posterior concentrate more before allowing high $\eta_{ki}^\ast$ in high-stakes settings.
 
-**Connection to TF-06 gain dynamics.** This risk adjustment is the trust analog of TF-06's observation that an agent with high $U_M$ (uncertain model) should use a high $\eta^*$ (trust new observations), while an agent with low $U_M$ (confident model) should use a low $\eta^*$ (trust the model). The risk-adjusted trust inverts this for the *alignment* dimension: when stakes are high, treat all transitively-derived trust as carrying higher effective uncertainty, and require more direct evidence before converging.
+**Connection to TF-06 gain dynamics.** This risk adjustment is the trust analog of TF-06's observation that an agent with high $U_M$ (uncertain model) should use a high $\eta^\ast$ (trust new observations), while an agent with low $U_M$ (confident model) should use a low $\eta^\ast$ (trust the model). The risk-adjusted trust inverts this for the *alignment* dimension: when stakes are high, treat all transitively-derived trust as carrying higher effective uncertainty, and require more direct evidence before converging.
 
 ## F.3 Distributed Tempo and Team Persistence
 
@@ -130,23 +130,23 @@ where $\mathcal{A}_i$ is the set of agents adversarially coupled to $i$, $\mathc
 
 **The cooperative term is negative.** Allies *reduce* agent $i$'s effective disturbance by sharing information that preemptively corrects mismatch. This is the formal content of why teams can persist in environments where individuals cannot: the cooperative communication tempo offsets environment disturbance that would exceed any single agent's capacity.
 
-**Sign convention.** The decomposition above can yield $\rho_i < 0$ when cooperative coupling dominates both environment disturbance and adversarial coupling. Appendix A's sector-condition analysis (Propositions A.1–A.3) assumes $\rho \geq 0$ (non-negative disturbance bound). For the persistence condition, define the **effective disturbance rate**:
+**Sign convention.** The decomposition above can yield $\rho_i \lt 0$ when cooperative coupling dominates both environment disturbance and adversarial coupling. Appendix A's sector-condition analysis (Propositions A.1–A.3) assumes $\rho \geq 0$ (non-negative disturbance bound). For the persistence condition, define the **effective disturbance rate**:
 
 *[Definition (effective-disturbance)]*
 $$\rho_i^{\text{eff}} = \max(\rho_i, \, 0)$$
 
-When $\rho_i^{\text{eff}} = 0$, the agent's cooperative network fully absorbs all disturbance — the persistence condition is trivially satisfied and mismatch decays to zero. This is the idealized limit; in practice, $\rho_i^{\text{eff}} > 0$ because cooperative coupling is imperfect and environment disturbance is never fully preempted. All downstream uses of $\rho_i$ in the persistence and reserve conditions should be read as $\rho_i^{\text{eff}}$.
+When $\rho_i^{\text{eff}} = 0$, the agent's cooperative network fully absorbs all disturbance — the persistence condition is trivially satisfied and mismatch decays to zero. This is the idealized limit; in practice, $\rho_i^{\text{eff}} \gt 0$ because cooperative coupling is imperfect and environment disturbance is never fully preempted. All downstream uses of $\rho_i$ in the persistence and reserve conditions should be read as $\rho_i^{\text{eff}}$.
 
 ### Team Persistence Condition
 
 Applying Appendix A's sector-condition framework with $\rho_i^{\text{eff}}$, agent $i$ persists iff:
 
 *[Derived (team-persistence)]*
-$$\frac{\rho_i^{\text{eff}}}{\alpha_i} < R_i$$
+$$\frac{\rho_i^{\text{eff}}}{\alpha_i} \lt R_i$$
 
 Substituting the decomposition (the $\max(\cdot, 0)$ in $\rho_i^{\text{eff}}$ is omitted here to expose the three levers; the condition is trivially satisfied when the numerator is non-positive):
 
-$$\frac{\rho_{i,\text{env}} + \sum_j \gamma_{j \to i}^{\text{adv}} \mathcal{T}_j - \sum_j \gamma_{j \to i}^{\text{coop}} \mathcal{T}_j}{\alpha_i} < R_i$$
+$$\frac{\rho_{i,\text{env}} + \sum_j \gamma_{j \to i}^{\text{adv}} \mathcal{T}_j - \sum_j \gamma_{j \to i}^{\text{coop}} \mathcal{T}_j}{\alpha_i} \lt R_i$$
 
 This reveals three distinct levers for team persistence:
 1. **Increase $\alpha_i$** (individual correction efficiency) — better models, better gain calibration
@@ -160,7 +160,7 @@ Communication channels have costs: time to compose/parse messages, bandwidth lim
 The net benefit of adding agent $j$ to $i$'s communication network is positive only when the communication tempo gained exceeds the direct-adaptation tempo lost:
 
 *[Discussion — Coordination Threshold]*
-$$\nu_{ji}^{\text{comm}} \, \eta_{ji}^* > \Delta \mathcal{T}_i^{\text{cost}}(j)$$
+$$\nu_{ji}^{\text{comm}} \, \eta_{ji}^* \gt \Delta \mathcal{T}_i^{\text{cost}}(j)$$
 
 Both sides have units $[t^{-1}]$: the LHS is communication tempo gained, the RHS is direct-adaptation tempo lost to coordination overhead. This implies a natural team-size limit: adding members increases communication tempo with diminishing returns (as $U_{\text{src}}$ and $U_{o}$ accumulate across diverse sources) while coordination costs grow, potentially superlinearly. The optimal team size occurs where the marginal communication tempo equals the marginal coordination cost.
 
@@ -173,8 +173,8 @@ The multi-agent framework instantiates differently depending on the coupling str
 Agents with roughly equal capability and aligned objectives share information to reduce collective mismatch.
 
 - **Update structure**: Weighted consensus or diffusion — each agent moves its model toward a trust-weighted average of neighbors' models, while also updating from its own observations.
-- **Key metric**: *Disagreement energy* — $\sum_{(i,j)} w_{ij} \| M_i - M_j \|^2$. High disagreement with low external mismatch often indicates miscalibrated trust (one agent is right, the other hasn't updated), not model inadequacy. Low disagreement with high mismatch indicates the team is wrong together — a shared structural limitation (TF-10).
-- **Failure mode**: *Groupthink* — the network converges on a shared model that is confidently wrong, because internal consensus suppresses the mismatch signals from dissenting agents. In TFT terms: $U_{\text{src},j} \to 0$ for all in-group sources (excessive trust), while $\eta_i^*$ for direct observations is depressed by the confidence of the group model. The remedy is to maintain sensitivity to direct-observation mismatch even when the group is confident — i.e., to never let communication tempo fully substitute for observation tempo.
+- **Key metric**: *Disagreement energy* — $\sum_{(i,j)} w_{ij} \Vert M_i - M_j \Vert^2$. High disagreement with low external mismatch often indicates miscalibrated trust (one agent is right, the other hasn't updated), not model inadequacy. Low disagreement with high mismatch indicates the team is wrong together — a shared structural limitation (TF-10).
+- **Failure mode**: *Groupthink* — the network converges on a shared model that is confidently wrong, because internal consensus suppresses the mismatch signals from dissenting agents. In TFT terms: $U_{\text{src},j} \to 0$ for all in-group sources (excessive trust), while $\eta_i^\ast$ for direct observations is depressed by the confidence of the group model. The remedy is to maintain sensitivity to direct-observation mismatch even when the group is confident — i.e., to never let communication tempo fully substitute for observation tempo.
 
 ### Ensemble (Parallel Specialists + Aggregator)
 
@@ -190,7 +190,7 @@ Agents at different timescales coupled vertically, mapping TF-11's temporal nest
 
 - **Update structure**: Upper layers receive *summaries* (quasi-steady-state output) from lower layers and issue *directives* (hyperparameter updates: goals, constraints, priors), not high-frequency control commands.
 - **Key constraint**: TF-11's convergence condition ($\nu_{n+1} \ll \nu_n$) applies between organizational levels. When upper-layer intervention frequency approaches lower-layer correction timescale, the result is *command-induced oscillation* — the organizational analog of control-theoretic instability from gain mismatch. This is the formal content of "micromanagement degrades performance."
-- **Information asymmetry**: Upper layers have broader context but lower resolution; lower layers have higher resolution but narrower scope. The communication gain $\eta_{ji}^*$ should reflect this: upward communication compresses local detail into aggregate summaries ($U_{o,ji}$ high from compression), while downward communication translates broad directives into local constraints ($U_{\text{align},ji}$ encodes the mapping quality from strategic objectives to tactical actions).
+- **Information asymmetry**: Upper layers have broader context but lower resolution; lower layers have higher resolution but narrower scope. The communication gain $\eta_{ji}^\ast$ should reflect this: upward communication compresses local detail into aggregate summaries ($U_{o,ji}$ high from compression), while downward communication translates broad directives into local constraints ($U_{\text{align},ji}$ encodes the mapping quality from strategic objectives to tactical actions).
 
 ## F.5 Game-Theoretic Integration Points
 
@@ -218,8 +218,8 @@ Within each agent's loop, decision theory refines the policy:
 TFT's value for game-theoretic analysis is providing precise, measurable state variables for strategic interaction:
 
 - **Tempo as a strategic resource**: $\mathcal{T}$ is the asset agents compete over or cooperate to increase.
-- **Reserve as vulnerability**: $\Delta\rho^*$ is the target adversaries aim to exhaust and allies aim to preserve.
-- **Mismatch as the battlefield**: $\|\delta\|$ is what adversaries try to increase in opponents and reduce in themselves.
+- **Reserve as vulnerability**: $\Delta\rho^\ast$ is the target adversaries aim to exhaust and allies aim to preserve.
+- **Mismatch as the battlefield**: $\Vert\delta\Vert$ is what adversaries try to increase in opponents and reduce in themselves.
 - **Trust calibration as the meta-game**: the accuracy of $U_{\text{align},ji}$ estimates determines whether the agent can correctly price communication signals.
 
 This gives game theory concrete operands rather than abstract "utilities" — the payoff structure is grounded in measurable adaptive quantities.
@@ -234,7 +234,7 @@ For implementing multi-agent TFT, the following quantities should be tracked per
 | $d_{ji}$ | Communication delay | Direct measurement of message latency |
 | $A_{ji}$ | Alignment score | Inferred from agreement on verifiable predictions; domain-specific |
 | $\Delta\mathcal{T}_i^{\text{cost}}$ | Tempo-equivalent coordination cost | Direct-adaptation tempo lost to communication overhead $[t^{-1}]$ |
-| $V_{\text{disagree}}$ | Network disagreement energy | $\sum_{(i,j)} w_{ij} \|M_i - M_j\|^2$; high with low mismatch → trust miscalibration |
+| $V_{\text{disagree}}$ | Network disagreement energy | $\sum_{(i,j)} w_{ij} \VertM_i - M_j\Vert^2$; high with low mismatch → trust miscalibration |
 
 ### Practical Control Rules
 
@@ -247,9 +247,9 @@ For implementing multi-agent TFT, the following quantities should be tracked per
 
 If the multi-agent extension's core claims are wrong, the following observable failures should occur. These are testable in multi-agent simulations (distributed estimation, multi-agent RL, adversarial games) and, with instrumentation, in organizational and team settings.
 
-1. **Adaptive communication gain outperforms fixed trust.** The communication gain hypothesis (F.2) predicts that $\eta_{ji}^* = U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ should yield lower steady-state mismatch than any fixed trust weight $w_{ji}$ when source reliability varies over time or across contexts. **Falsified if**: in a multi-agent estimation task with heterogeneous and time-varying source reliability, a well-tuned *fixed* trust weight consistently matches or outperforms the adaptive communication gain across a range of drift rates and source-failure scenarios. This would indicate that the additional uncertainty terms ($U_{\text{src}}$, $U_{\text{align}}$) either don't carry usable information or that the overhead of estimating them exceeds their value.
+1. **Adaptive communication gain outperforms fixed trust.** The communication gain hypothesis (F.2) predicts that $\eta_{ji}^\ast = U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ should yield lower steady-state mismatch than any fixed trust weight $w_{ji}$ when source reliability varies over time or across contexts. **Falsified if**: in a multi-agent estimation task with heterogeneous and time-varying source reliability, a well-tuned *fixed* trust weight consistently matches or outperforms the adaptive communication gain across a range of drift rates and source-failure scenarios. This would indicate that the additional uncertainty terms ($U_{\text{src}}$, $U_{\text{align}}$) either don't carry usable information or that the overhead of estimating them exceeds their value.
 
-2. **Cooperative communication enables persistence beyond individual capacity.** The team persistence condition (F.3) predicts that agents with $\mathcal{T}_i < \rho_i / R_i$ individually (insufficient solo tempo) can persist when cooperative communication provides enough distributed tempo to close the gap. Specifically: adding a reliable ally with tempo $\mathcal{T}_j$ and cooperative coupling $\gamma_{j \to i}^{\text{coop}}$ should reduce $i$'s effective $\rho_i$ by $\gamma_{j \to i}^{\text{coop}} \mathcal{T}_j$, bringing the persistence condition into range. **Falsified if**: in a controlled setting, adding cooperative communication channels with measured $\gamma^{\text{coop}}$ and $\mathcal{T}_j$ does *not* reduce $i$'s steady-state mismatch by the predicted amount. This would indicate the cooperative $\rho$ decomposition is structurally wrong — cooperation helps through a mechanism not captured by the additive disturbance model.
+2. **Cooperative communication enables persistence beyond individual capacity.** The team persistence condition (F.3) predicts that agents with $\mathcal{T}_i \lt \rho_i / R_i$ individually (insufficient solo tempo) can persist when cooperative communication provides enough distributed tempo to close the gap. Specifically: adding a reliable ally with tempo $\mathcal{T}_j$ and cooperative coupling $\gamma_{j \to i}^{\text{coop}}$ should reduce $i$'s effective $\rho_i$ by $\gamma_{j \to i}^{\text{coop}} \mathcal{T}_j$, bringing the persistence condition into range. **Falsified if**: in a controlled setting, adding cooperative communication channels with measured $\gamma^{\text{coop}}$ and $\mathcal{T}_j$ does *not* reduce $i$'s steady-state mismatch by the predicted amount. This would indicate the cooperative $\rho$ decomposition is structurally wrong — cooperation helps through a mechanism not captured by the additive disturbance model.
 
 3. **Risk-adjusted transitive trust outperforms Bayesian mean trust under adversarial contamination.** The HILP/LIHP trust adjustment (F.2) predicts that using a conservative quantile $Q_p[\theta_k]$ rather than the posterior mean $\mathbb{E}[\theta_k]$ for setting $U_{\text{align}}$ should yield better *worst-case* mismatch in environments with occasional deceptive sources, at the cost of slightly worse *average-case* efficiency. **Falsified if**: in a multi-agent setting with a known fraction of adversarial sources, conservative-quantile trust does not improve worst-case mismatch relative to mean trust, or if the average-case efficiency cost is so large that total mismatch is higher. This would indicate that the risk-asymmetric adjustment overcorrects — that the HILP tail risk is already adequately handled by the Bayesian posterior without additional conservatism.
 
@@ -265,7 +265,7 @@ These predictions target the extension's three main hypotheses (communication ga
 
 4. **Trust transitivity — remaining questions.** The three-phase model in F.2 (prior → transitive update → direct experience) with risk-asymmetric quantile adjustment provides a starting framework. Open questions remain: (a) How should the null distribution $P_0$ be chosen? A uniform $P_0$ makes the mixture model equivalent to soft discounting; a structured $P_0$ (e.g., biased toward deception) models actively adversarial intermediaries. (b) How should the risk quantile $p$ be calibrated? Ideally from the loss function, but the loss from deception may be hard to estimate *before* it occurs. (c) When multiple intermediaries provide corroborating recommendations, how should correlation be handled? If $j_1$ and $j_2$ both recommend $k$ but both got their information from the same source, the corroboration is illusory. The trust network's dependency structure matters.
 
-5. **Communication as structural adaptation.** A well-formed query to an expert can transfer not just parametric information (reducing $\|\delta\|$) but *structural* information (expanding $\mathcal{M}$). This is the "grafting" mechanism from TF-10: incorporating another agent's representational structure. A theory of *when and how* communication triggers structural vs. parametric adaptation in the receiver is needed.
+5. **Communication as structural adaptation.** A well-formed query to an expert can transfer not just parametric information (reducing $\Vert\delta\Vert$) but *structural* information (expanding $\mathcal{M}$). This is the "grafting" mechanism from TF-10: incorporating another agent's representational structure. A theory of *when and how* communication triggers structural vs. parametric adaptation in the receiver is needed.
 
 ---
 
@@ -274,8 +274,8 @@ These predictions target the extension's three main hypotheses (communication ga
 | Concept | Single-agent TFT | Multi-agent extension |
 |---------|------------------|----------------------|
 | Update | $M^+ = M^- + \eta \, g(\delta)$ | + communication term $\sum_j w_{ji} \eta_{ji} h_{ji}(M_j, M_i)$ |
-| Gain | $\eta^* = U_M/(U_M + U_o)$ | $\eta_{ji}^* = U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ |
-| Tempo | $\mathcal{T} = \sum_k \nu^{(k)} \eta^{(k)*}$ | + $\sum_j \nu_{ji}^{\text{comm}} \eta_{ji}^*$ (communication channels) |
+| Gain | $\eta^\ast = U_M/(U_M + U_o)$ | $\eta_{ji}^\ast = U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ |
+| Tempo | $\mathcal{T} = \sum_k \nu^{(k)} \eta^{(k)\ast}$ | + $\sum_j \nu_{ji}^{\text{comm}} \eta_{ji}^\ast$ (communication channels) |
 | Disturbance | $\rho$ (exogenous or adversarial) | $\rho_i = \rho_{\text{env}} + \gamma^{\text{adv}} \mathcal{T}_j - \gamma^{\text{coop}} \mathcal{T}_j$ |
-| Persistence | $\alpha > \rho / R$ | Same, with cooperative $\rho$ reduction |
+| Persistence | $\alpha \gt \rho / R$ | Same, with cooperative $\rho$ reduction |
 | New quantities | — | $U_{\text{src}}$, $U_{\text{align}}$, $C^{\text{coord}}$, $V_{\text{disagree}}$ |

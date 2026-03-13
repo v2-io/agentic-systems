@@ -68,7 +68,7 @@ The Laplace succession formula ($E[n_{\text{future}} \mid n_{\text{past}}] = n_{
 - "This connects to a volatile API" → $\hat{n}_{\text{future}}$ likely $\gt n_{\text{past}}$
 - "This is a sorting algorithm" → $\hat{n}_{\text{future}} \to 0$ (approaching the stable-subsystem regime of #software-scope)
 
-Each of these is an observation that updates the agent's model $M_t$ about the system's future. The gain applied to these updates ( #update-gain) depends on how reliable the information source is — a product roadmap from an engaged PM carries more weight ($\eta^*$ closer to 1) than a vague feeling about market direction.
+Each of these is an observation that updates the agent's model $M_t$ about the system's future. The gain applied to these updates ( #update-gain) depends on how reliable the information source is — a product roadmap from an engaged PM carries more weight ($\eta^\ast$ closer to 1) than a vague feeling about market direction.
 
 **Connection to ACT.** The baseline is a statement about the agent's $M_t$ regarding the system's future change rate $\rho$. When the agent has observed $n_{\text{past}}$ changes over time $t_0$, and has no other information, the maximum-ignorance prediction is that $\rho$ will continue at approximately its observed rate. This is the null hypothesis — the starting point before any observations update it.
 

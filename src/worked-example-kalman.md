@@ -46,7 +46,7 @@ Action precedes observation and changes $P(y_t \mid do(a_t))$ through $r_{a_t}$.
 
 *[Worked Quantity]*
 
-$$\text{CIY}(H) = D_{\mathrm{KL}}\!\big(P(y \mid do(H)) \,\|\, P(y \mid do(L))\big)$$
+$$\text{CIY}(H) = D_{\mathrm{KL}}\!\big(P(y \mid do(H)) \,\Vert\, P(y \mid do(L))\big)$$
 
 $$= \frac{1}{2}\left[\log\!\left(\frac{P^- + r_L}{P^- + r_H}\right) + \frac{P^- + r_H}{P^- + r_L} - 1\right]$$
 
@@ -74,7 +74,7 @@ $$K_t = \frac{P^-_t}{P^-_t + r_{a_t}}$$
 
 With $P^- = 4.25$: $K(H) \approx 0.810$, $K(L) \approx 0.321$.
 
-The exact uncertainty ratio mapping: $U_M = P^-_t$, $U_o = r_{a_t}$, $\eta^* = K_t$.
+The exact uncertainty ratio mapping: $U_M = P^-_t$, $U_o = r_{a_t}$, $\eta^\ast = K_t$.
 
 ### Exploration ( #causal-information-yield)
 
@@ -88,13 +88,13 @@ When uncertainty is high ($P^-$ large), CIY term favors high mode. As uncertaint
 
 Suppose a planning pause of $\Delta\tau = 0.5 \text{ s}$, with measured $\rho_{\text{delib}} = 0.40 \;\text{surprise/s}$.
 
-Cost during pause: $0.20$ surprise units. If $\|\delta_{\text{post}}\| = 0.70$, deliberation is worthwhile when:
+Cost during pause: $0.20$ surprise units. If $\Vert\delta_{\text{post}}\Vert = 0.70$, deliberation is worthwhile when:
 
-$$\Delta\eta^*(0.5)\cdot 0.70 > 0.20 \;\Longrightarrow\; \Delta\eta^*(0.5) > 0.286$$
+$$\Delta\eta^*(0.5)\cdot 0.70 \gt 0.20 \;\Longrightarrow\; \Delta\eta^*(0.5) \gt 0.286$$
 
 ### Structural Adaptation ( #structural-adaptation-necessity)
 
-Assume maneuvering regime change introduces sustained residual autocorrelation and mismatch floor. If estimated valid radius drops to $R = 0.08$ while $R^* = \rho/\alpha = 0.12$, parametric adaptation is no longer adequate ($R^* > R$), triggering model-class change (e.g., constant-velocity → constant-acceleration process model).
+Assume maneuvering regime change introduces sustained residual autocorrelation and mismatch floor. If estimated valid radius drops to $R = 0.08$ while $R^\ast = \rho/\alpha = 0.12$, parametric adaptation is no longer adequate ($R^\ast \gt R$), triggering model-class change (e.g., constant-velocity → constant-acceleration process model).
 
 ### Tempo + Persistence ( #adaptive-tempo, #persistence-condition)
 
@@ -104,15 +104,15 @@ $$\bar{\eta}^* = 0.7(0.810) + 0.3(0.321) = 0.663$$
 
 $$\mathcal{T} = \nu \bar{\eta}^* = 5 \cdot 0.663 = 3.315 \;\text{s}^{-1}$$
 
-With $\rho = 0.18 \text{ surprise/s}$ and $\|\delta_{\text{critical}}\| = 1$:
+With $\rho = 0.18 \text{ surprise/s}$ and $\Vert\delta_{\text{critical}}\Vert = 1$:
 
-$$\mathcal{T} > \frac{\rho}{\|\delta_{\text{critical}}\|} \;\;\Rightarrow\;\; 3.315 > 0.18 \;\checkmark$$
+$$\mathcal{T} \gt \frac{\rho}{\Vert\delta_{\text{critical}}\Vert} \;\;\Rightarrow\;\; 3.315 \gt 0.18 \;\checkmark$$
 
 ### Lyapunov Bounds ( #sector-condition-stability)
 
 From data: $\alpha = 2.6 \text{ s}^{-1}$, $R = 1.4$, $\rho = 0.18$.
 
-$$R^* = \frac{\rho}{\alpha} = \frac{0.18}{2.6} \approx 0.069 < R$$
+$$R^* = \frac{\rho}{\alpha} = \frac{0.18}{2.6} \approx 0.069 \lt R$$
 
 $$\Delta\rho^* = \alpha R - \rho = 2.6(1.4) - 0.18 = 3.46$$
 
@@ -126,10 +126,10 @@ The agent is comfortably within its invariant region with substantial adaptive r
 | Causal structure + CIY | Exact | Closed-form KL |
 | Model ($M_t$ as sufficient statistic) | Exact | Kalman state + covariance |
 | Mismatch ($\delta_t$ = innovation) | Exact | Standard Kalman innovation |
-| Gain ($\eta^* = K_t$) | Exact | Kalman gain IS uncertainty ratio |
-| Tempo ($\mathcal{T} = \nu \bar{\eta}^*$) | Exact | Closed-form |
+| Gain ($\eta^\ast = K_t$) | Exact | Kalman gain IS uncertainty ratio |
+| Tempo ($\mathcal{T} = \nu \bar{\eta}^\ast$) | Exact | Closed-form |
 | Persistence condition | Exact | Linear ODE solution |
-| Lyapunov bounds ($R^*$, $\Delta\rho^*$) | Exact | From estimated sector parameters |
+| Lyapunov bounds ($R^\ast$, $\Delta\rho^\ast$) | Exact | From estimated sector parameters |
 
 ## Epistemic Status
 

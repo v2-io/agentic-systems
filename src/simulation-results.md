@@ -38,13 +38,13 @@ The simulations were theory-shaping, not merely confirmatory. In particular:
 
 ## Methodology
 
-**Discrete mismatch dynamics.** The environment follows a random walk $x_{t+1} = x_t + w_t$ with $w_t \sim N(0, q^2)$. The agent corrects via $\hat{x}_{t+1} = \hat{x}_t + \eta \cdot g(\delta_t)$, yielding the AR(1) mismatch process $\delta_{t+1} = (1 - \eta) \cdot \delta_t + w_t$ for linear $g$. This is the discrete-time analog of the mismatch ODE $d\|\delta\|/dt = -\mathcal{T} \cdot \|\delta\| + \rho$ from #mismatch-dynamics.
+**Discrete mismatch dynamics.** The environment follows a random walk $x_{t+1} = x_t + w_t$ with $w_t \sim N(0, q^2)$. The agent corrects via $\hat{x}_{t+1} = \hat{x}_t + \eta \cdot g(\delta_t)$, yielding the AR(1) mismatch process $\delta_{t+1} = (1 - \eta) \cdot \delta_t + w_t$ for linear $g$. This is the discrete-time analog of the mismatch ODE $d\Vert\delta\Vert/dt = -\mathcal{T} \cdot \Vert\delta\Vert + \rho$ from #mismatch-dynamics.
 
 **Parameter sweeps.** Each variant swept its key parameter(s) across 7--20 values. Monte Carlo: 200 independent trials per parameter point, 10,000--20,000 timesteps per trial, with 2,000--5,000 step burn-in for steady-state convergence. Fixed random seeds for reproducibility.
 
-**Exponent fitting.** Adversarial exponents were estimated by fitting $\log(\|\delta_B\| / \|\delta_A\|) = a + b \cdot \log(\mathcal{T}_A / \mathcal{T}_B)$ via weighted least squares, with weights inversely proportional to variance of each point's log-estimate. 95% confidence intervals via bootstrap (1,000 samples).
+**Exponent fitting.** Adversarial exponents were estimated by fitting $\log(\Vert\delta_B\Vert / \Vert\delta_A\Vert) = a + b \cdot \log(\mathcal{T}_A / \mathcal{T}_B)$ via weighted least squares, with weights inversely proportional to variance of each point's log-estimate. 95% confidence intervals via bootstrap (1,000 samples).
 
-**Correction functions.** Five functions $g: \mathbb{R} \to \mathbb{R}$ were tested, all satisfying $g(0) = 0$ and $g'(0) = 1$: linear ($g(\delta) = \delta$), saturating ($g(\delta) = \delta / (1 + |\delta|/R)$), threshold ($g(\delta) = \delta \cdot \mathbf{1}[|\delta| > \epsilon]$), sigmoid ($g(\delta) = R \cdot \tanh(\delta/R)$), and structural breakdown ($g(\delta) = \delta \cdot \mathbf{1}[|\delta| < R_\text{max}]$).
+**Correction functions.** Five functions $g: \mathbb{R} \to \mathbb{R}$ were tested, all satisfying $g(0) = 0$ and $g'(0) = 1$: linear ($g(\delta) = \delta$), saturating ($g(\delta) = \delta / (1 + |\delta|/R)$), threshold ($g(\delta) = \delta \cdot \mathbf{1}[|\delta| \gt \epsilon]$), sigmoid ($g(\delta) = R \cdot \tanh(\delta/R)$), and structural breakdown ($g(\delta) = \delta \cdot \mathbf{1}[|\delta| \lt R_\text{max}]$).
 
 **Simulation code.** All code is in `scratch/track-b-nonlinear-sims/`. Initial simulations: `sim1_nonlinear_mismatch.py` (single-agent), `sim2_adversarial_coupling.py` (two-agent). Variant extensions: `variants/variant_ab_drift.py`, `variants/variant_cd_regimes.py`, `variants/variant_ef_extensions.py`, `variants/variant_hafez_bridge.py`. Detailed result write-ups: `variants/variant_ab_results.md`, `variants/variant_cd_results.md`, `variants/variant_ef_results.md`, `variants/variant_hafez_results.md`.
 
@@ -54,8 +54,8 @@ The simulations were theory-shaping, not merely confirmatory. In particular:
 
 The mismatch ODE's $\rho$ parameter conflates two quantities: deterministic drift (persistent directional change) and stochastic noise scale (unpredictable fluctuations). These yield different steady-state scaling:
 
-- **Deterministic drift, coupling-dominant:** $\|\delta\|_{ss} = \rho / \mathcal{T}$. Adversarial exponent $b \to 2.0$.
-- **Stochastic noise, coupling-dominant:** $\|\delta\|_{ss} = \rho / \sqrt{\mathcal{T}}$ (from AR(1) stationary variance). Adversarial exponent $b \to 1.5$.
+- **Deterministic drift, coupling-dominant:** $\Vert\delta\Vert_{ss} = \rho / \mathcal{T}$. Adversarial exponent $b \to 2.0$.
+- **Stochastic noise, coupling-dominant:** $\Vert\delta\Vert_{ss} = \rho / \sqrt{\mathcal{T}}$ (from AR(1) stationary variance). Adversarial exponent $b \to 1.5$.
 - **Non-coupling-dominant:** Exponent degrades smoothly toward 1.0 (deterministic) or 0.5 (stochastic) as base disturbance grows relative to adversarial coupling.
 
 The original sim2 result ($b \approx 1.05$) was not a falsification of Corollary 11.2 but a measurement in the wrong regime -- stochastic noise coupling at moderate coupling dominance. Variants A--D systematically mapped the full regime space and identified the analytical root causes. See #adversarial-exponent-regimes for the full treatment.
@@ -70,7 +70,7 @@ In a 3-dimensional system with 5:1 gain variation across dimensions, the per-dim
 
 ### Nonlinear correction creates thresholds, not lower exponents
 
-Under deterministic drift, saturating, sigmoid, and breakdown correction functions did not simply reduce the adversarial exponent. Instead, they produced catastrophic divergence when disturbance exceeded the correction capacity ($\rho > \mathcal{T} \cdot R$). This is the persistence threshold failure from #persistence-condition, observed directly in simulation. The measured "exponents" above 3.0 for these functions were divergence artifacts, not meaningful scaling laws.
+Under deterministic drift, saturating, sigmoid, and breakdown correction functions did not simply reduce the adversarial exponent. Instead, they produced catastrophic divergence when disturbance exceeded the correction capacity ($\rho \gt \mathcal{T} \cdot R$). This is the persistence threshold failure from #persistence-condition, observed directly in simulation. The measured "exponents" above 3.0 for these functions were divergence artifacts, not meaningful scaling laws.
 
 ### Hafez bridge: architecture vs. performance
 

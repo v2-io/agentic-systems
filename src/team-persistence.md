@@ -23,7 +23,7 @@ Agent $i$'s effective tempo includes contributions from both direct observation 
 
 $$\mathcal{T}_i = \underbrace{\sum_k \nu_i^{(k)} \eta_i^{(k)*}}_{\text{direct observation tempo}} + \underbrace{\sum_{j \in \mathcal{N}(i)} \nu_{ji}^{\text{comm}} \, \eta_{ji}^*}_{\text{communication tempo}}$$
 
-where $\nu_{ji}^{\text{comm}}$ is the rate of communication events from agent $j$ to agent $i$, and $\eta_{ji}^*$ is the communication gain ( #communication-gain). Faster team adaptation comes not only from faster individual sensing but from faster, more reliable knowledge transfer.
+where $\nu_{ji}^{\text{comm}}$ is the rate of communication events from agent $j$ to agent $i$, and $\eta_{ji}^\ast$ is the communication gain ( #communication-gain). Faster team adaptation comes not only from faster individual sensing but from faster, more reliable knowledge transfer.
 
 ### Cooperative-Adversarial Disturbance Decomposition
 
@@ -37,13 +37,13 @@ where $\mathcal{A}_i$ is the set of agents adversarially coupled to $i$, $\mathc
 
 **The cooperative term is negative.** Allies reduce agent $i$'s effective disturbance by sharing information that preemptively corrects mismatch — each cooperative communication event that arrives before the corresponding environment disturbance would have been observed effectively cancels a unit of disturbance. This is the structural pattern consistent with why teams can persist in environments where individuals cannot: cooperative communication tempo offsets environment disturbance that would exceed any single agent's capacity.
 
-**Effective disturbance rate.** The decomposition can yield $\rho_i < 0$ when cooperative coupling dominates both environment disturbance and adversarial coupling. The sector-condition analysis ( #sector-condition-stability) assumes non-negative disturbance (GA-2). Define:
+**Effective disturbance rate.** The decomposition can yield $\rho_i \lt 0$ when cooperative coupling dominates both environment disturbance and adversarial coupling. The sector-condition analysis ( #sector-condition-stability) assumes non-negative disturbance (GA-2). Define:
 
 *[Definition (effective-disturbance)]*
 
 $$\rho_i^{\text{eff}} = \max(\rho_i, \, 0)$$
 
-When $\rho_i^{\text{eff}} = 0$, the agent's cooperative network fully absorbs all disturbance — the persistence condition is trivially satisfied and mismatch decays to zero. This is an idealized limit; in practice, $\rho_i^{\text{eff}} > 0$ because cooperative coupling is imperfect and environment disturbance is never fully preempted. All downstream uses of $\rho_i$ in the persistence and reserve conditions should be read as $\rho_i^{\text{eff}}$.
+When $\rho_i^{\text{eff}} = 0$, the agent's cooperative network fully absorbs all disturbance — the persistence condition is trivially satisfied and mismatch decays to zero. This is an idealized limit; in practice, $\rho_i^{\text{eff}} \gt 0$ because cooperative coupling is imperfect and environment disturbance is never fully preempted. All downstream uses of $\rho_i$ in the persistence and reserve conditions should be read as $\rho_i^{\text{eff}}$.
 
 ### Team Persistence Condition
 
@@ -83,11 +83,11 @@ Max attainable: *robust-qualitative* for the persistence condition (it inherits 
 
 ## Discussion
 
-**Compositional analog of #persistence-condition.** The single-agent persistence condition says an agent persists when $\mathcal{T} > \rho / \|\delta_{\text{critical}}\|$. This segment extends that condition to agents embedded in a cooperative-adversarial network. The formal structure is identical — the sector-condition machinery applies unchanged — but the *inputs* ($\mathcal{T}_i$ and $\rho_i$) now include inter-agent terms. This is consistent with #composition-consistency: the same dynamical laws apply at every level of description; what changes between levels is which channels contribute to tempo and which sources contribute to disturbance.
+**Compositional analog of #persistence-condition.** The single-agent persistence condition says an agent persists when $\mathcal{T} \gt \rho / \Vert\delta_{\text{critical}}\Vert$. This segment extends that condition to agents embedded in a cooperative-adversarial network. The formal structure is identical — the sector-condition machinery applies unchanged — but the *inputs* ($\mathcal{T}_i$ and $\rho_i$) now include inter-agent terms. This is consistent with #composition-consistency: the same dynamical laws apply at every level of description; what changes between levels is which channels contribute to tempo and which sources contribute to disturbance.
 
-**Why teams can persist where individuals cannot.** The cooperative term $\sum_j \gamma_{j \to i}^{\text{coop}} \mathcal{T}_j$ is subtracted from the disturbance rate. An individual agent facing $\rho_{i,\text{env}} > \alpha_i R_i$ fails the persistence condition. Adding cooperative allies with sufficient communication tempo can reduce $\rho_i^{\text{eff}}$ below the persistence threshold without any change to the individual's own capabilities. The mechanism is information-theoretic: allies provide observations the agent could not make on its own timescale.
+**Why teams can persist where individuals cannot.** The cooperative term $\sum_j \gamma_{j \to i}^{\text{coop}} \mathcal{T}_j$ is subtracted from the disturbance rate. An individual agent facing $\rho_{i,\text{env}} \gt \alpha_i R_i$ fails the persistence condition. Adding cooperative allies with sufficient communication tempo can reduce $\rho_i^{\text{eff}}$ below the persistence threshold without any change to the individual's own capabilities. The mechanism is information-theoretic: allies provide observations the agent could not make on its own timescale.
 
-**Timescale separation and #composition-consistency.** The distributed tempo definition presumes that communication events and direct observation events are comparable — they enter additively into $\mathcal{T}_i$. This requires that the communication timescale is not so slow relative to the environment dynamics that communicated information is stale on arrival. When communication latency approaches $1/\rho_{i,\text{env}}$, the effective $\eta_{ji}^*$ degrades (the observation uncertainty $U_{o,ji}$ increases with staleness), naturally suppressing the communication tempo contribution.
+**Timescale separation and #composition-consistency.** The distributed tempo definition presumes that communication events and direct observation events are comparable — they enter additively into $\mathcal{T}_i$. This requires that the communication timescale is not so slow relative to the environment dynamics that communicated information is stale on arrival. When communication latency approaches $1/\rho_{i,\text{env}}$, the effective $\eta_{ji}^\ast$ degrades (the observation uncertainty $U_{o,ji}$ increases with staleness), naturally suppressing the communication tempo contribution.
 
 **Complement to #adversarial-destabilization.** That segment characterizes when an adversary can push an agent past its stability boundary. This segment characterizes the cooperative counterpart: when allies can pull an agent back from instability. The $\gamma$ coefficients have the same structure — coupling effectiveness — but opposite sign in the disturbance decomposition.
 

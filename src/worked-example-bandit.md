@@ -56,7 +56,7 @@ This measures how *distinctive* arm $i$'s predicted reward is relative to altern
 
 $$M_t = (\hat{\mu}_1, \ldots, \hat{\mu}_4,\; n_1, \ldots, n_4)$$
 
-Model sufficiency $S(M_t) < 1$ for two reasons: (1) No drift tracking — the model treats reward means as stationary. (2) No uncertainty representation — unlike a Bayesian agent that would maintain posterior variances.
+Model sufficiency $S(M_t) \lt 1$ for two reasons: (1) No drift tracking — the model treats reward means as stationary. (2) No uncertainty representation — unlike a Bayesian agent that would maintain posterior variances.
 
 ### Mismatch ( #mismatch-signal)
 
@@ -76,11 +76,11 @@ The Q-learning update $\hat{\mu}_{a_t} \leftarrow \hat{\mu}_{a_t} + \alpha \cdot
 
 $$U_M \approx \frac{\sigma^2}{W} + q \cdot W$$
 
-The optimal window $W^* = \sigma / \sqrt{q} = 10$ gives $\alpha^* \approx 0.091$, $U_M \approx 0.2$, and:
+The optimal window $W^\ast = \sigma / \sqrt{q} = 10$ gives $\alpha^\ast \approx 0.091$, $U_M \approx 0.2$, and:
 
 $$\eta^* = \frac{U_M}{U_M + U_o} = \frac{0.2}{1.2} \approx 0.167$$
 
-The discrepancy between $\alpha^*$ and $\eta^*$ arises because $\alpha$ operates on raw prediction errors while $\eta^*$ accounts for the full uncertainty structure. The two converge when the model properly tracks its own uncertainty.
+The discrepancy between $\alpha^\ast$ and $\eta^\ast$ arises because $\alpha$ operates on raw prediction errors while $\eta^\ast$ accounts for the full uncertainty structure. The two converge when the model properly tracks its own uncertainty.
 
 ### Exploration ( #causal-information-yield)
 
@@ -109,12 +109,12 @@ $$\mathcal{T}_i = \frac{\nu}{k} \cdot \alpha = 0.25 \times 0.091 = 0.023 \;\text
 
 **Interpretation.** This is expected and informative. ACT diagnoses exactly why: with 4 arms and one pull per step, each arm is visited too infrequently to track its drifting mean. Two remedies:
 
-1. **Increase $\eta^*$** (raise $\alpha$): Extract more per observation, but increase steady-state noise.
+1. **Increase $\eta^\ast$** (raise $\alpha$): Extract more per observation, but increase steady-state noise.
 2. **Concentrate $\nu$**: Abandon uniform exploration. Focus pulls on a subset, increasing per-arm $\nu/k_{\text{active}}$. This is exactly what a good UCB policy does.
 
 With focused exploration ($k_{\text{active}} = 2$, $\alpha = 0.2$): $\mathcal{T}_i = 0.5 \times 0.2 = 0.1$ — barely meets the threshold. The fundamental tension: with limited pulls and significant drift, the agent must accept either failing to track some arms or using high $\alpha$ that introduces noise.
 
-**Aggregate failure.** $\mathcal{T} = \nu \cdot \alpha = 0.091$ vs $\rho = k \cdot \sqrt{q} = 0.4$. The agent's total adaptive capacity is outpaced by total environmental drift — a regime where model-based approaches (Bayesian bandits, Kalman bandit filters) with higher effective $\eta^*$ have a structural advantage.
+**Aggregate failure.** $\mathcal{T} = \nu \cdot \alpha = 0.091$ vs $\rho = k \cdot \sqrt{q} = 0.4$. The agent's total adaptive capacity is outpaced by total environmental drift — a regime where model-based approaches (Bayesian bandits, Kalman bandit filters) with higher effective $\eta^\ast$ have a structural advantage.
 
 ## Mapping Quality Summary
 
@@ -124,23 +124,23 @@ With focused exploration ($k_{\text{active}} = 2$, $\alpha = 0.2$): $\mathcal{T}
 | Causal structure | Exact | Structural |
 | CIY | Approximate | Model lacks uncertainty representation |
 | Model ($M_t$) | Exact | Definitional |
-| Model sufficiency ($S < 1$) | Exact | Q-learner demonstrably insufficient |
+| Model sufficiency ($S \lt 1$) | Exact | Q-learner demonstrably insufficient |
 | Mismatch ($\delta_t$) | Exact | Standard prediction error |
-| Gain ($\alpha$ as degenerate $\eta^*$) | Approximate | Fixed, does not adapt |
+| Gain ($\alpha$ as degenerate $\eta^\ast$) | Approximate | Fixed, does not adapt |
 | Exploration (UCB as approximate CIY) | Approximate | Structural analogy |
 | Tempo ($\mathcal{T} = (\nu/k) \cdot \alpha$ per arm) | Approximate | Assumes uniform allocation |
 | Persistence condition | Exact (qualitative) | Threshold structure is robust |
 
 ## Epistemic Status
 
-This is a *structural mapping*, not a derivation. The mapping is *exact* for scope, causal ordering, model compression, and mismatch. It is *approximate* for gain, exploration, and tempo — precisely because the Q-learner does not represent its own uncertainty, which is what #update-gain requires for optimal behavior. The gap between the Q-learner's fixed $\alpha$ and the ACT-optimal adaptive $\eta^*$ is precisely the gap between a fixed-gain PID controller and a Kalman filter.
+This is a *structural mapping*, not a derivation. The mapping is *exact* for scope, causal ordering, model compression, and mismatch. It is *approximate* for gain, exploration, and tempo — precisely because the Q-learner does not represent its own uncertainty, which is what #update-gain requires for optimal behavior. The gap between the Q-learner's fixed $\alpha$ and the ACT-optimal adaptive $\eta^\ast$ is precisely the gap between a fixed-gain PID controller and a Kalman filter.
 
 The mapping status is *conditional* because the quantitative relationships depend on the Gaussian reward model and specific parameterization. The qualitative conclusions (persistence failure under uniform exploration, the concentration-vs-noise tradeoff) should be robust.
 
 ## Working Notes
 
 - The per-arm analysis is a natural instance of the per-dimension tempo decomposition ( #per-dimension-persistence): each arm is an independent mismatch dimension with its own $\mathcal{T}_i$ and $\rho_i$. The aggregate tempo overstates effective adaptation along any individual arm's dimension — exactly the failure mode that the scalar-to-tensor generalization captures.
-- A Bayesian bandit (maintaining per-arm posteriors with exponential discounting) would achieve higher #model-sufficiency by representing its own uncertainty, yielding an adaptive $\eta^*$ that matches the ACT-optimal form. Comparing Q-learner vs Bayesian bandit performance under nonstationarity is a direct test of #update-gain's structural claim.
+- A Bayesian bandit (maintaining per-arm posteriors with exponential discounting) would achieve higher #model-sufficiency by representing its own uncertainty, yielding an adaptive $\eta^\ast$ that matches the ACT-optimal form. Comparing Q-learner vs Bayesian bandit performance under nonstationarity is a direct test of #update-gain's structural claim.
 - Reward-unit and surprise-unit formulations coincide up to normalization by $\sigma^2$. For this example ($\sigma = 1$), they are identical.
 
 *(Descended from TFT Appendix D.)*

@@ -108,7 +108,7 @@ This resolves a former known fragility in the theory. Acyclicity of $\Sigma_t$ i
 
 **Derivation.**
 
-1. Each node $X_i$ in $\Sigma_t$ represents a future event or state with temporal position $\tau_i > t$ (the future time at which the step occurs or the state is evaluated).
+1. Each node $X_i$ in $\Sigma_t$ represents a future event or state with temporal position $\tau_i \gt t$ (the future time at which the step occurs or the state is evaluated).
 2. Each edge $X_i \to X_j$ requires $\tau_i \lt \tau_j$ (P1: causes temporally precede effects).
 3. A cycle $X_i \to X_j \to \cdots \to X_i$ would require $\tau_i \lt \tau_j \lt \cdots \lt \tau_i$, which is impossible for a real-valued time index.
 4. Therefore the graph is acyclic. $\square$

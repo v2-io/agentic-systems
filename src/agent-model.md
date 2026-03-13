@@ -19,7 +19,7 @@ This is a formulation choice — we commit to analyzing the agent as having a co
 $$M_t = \phi(\mathcal{C}_t)$$
 
 where:
-- $\phi: \mathcal{C}^* \to \mathcal{M}$ maps interaction history to model space $\mathcal{M}$
+- $\phi: \mathcal{C}^\ast \to \mathcal{M}$ maps interaction history to model space $\mathcal{M}$
 - $\mathcal{C}_t = (o_1, a_1, \ldots, o_t)$ is the chronica ( #chronica) — the complete record of agent-environment interaction
 - $\mathcal{M}$ is the space of possible models the agent can hold
 

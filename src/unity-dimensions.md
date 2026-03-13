@@ -11,7 +11,7 @@ depends:
 
 # Definition: Unity Dimensions
 
-The quality of a composite agent's composition can be decomposed along four substantially independent dimensions: epistemic (shared model), teleological (shared objective), strategic (coordinated action), and perceptual (shared observations). These dimensions predict the closure defect $\varepsilon^*$ ( #composition-closure) — high unity along all four predicts low $\varepsilon^*$.
+The quality of a composite agent's composition can be decomposed along four substantially independent dimensions: epistemic (shared model), teleological (shared objective), strategic (coordinated action), and perceptual (shared observations). These dimensions predict the closure defect $\varepsilon^\ast$ ( #composition-closure) — high unity along all four predicts low $\varepsilon^\ast$.
 
 ## Formal Expression
 
@@ -35,7 +35,7 @@ over trajectories the composite encounters. $+1$ for identical objectives; $-1$ 
 
 *[Discussion]*
 
-$$U_\Sigma = 1 - \frac{D_{\text{KL}}(\pi^c_{\text{actual}} \| \pi^c_{\text{optimal}})}{D_{\text{KL}}(\pi^c_{\text{independent}} \| \pi^c_{\text{optimal}})}$$
+$$U_\Sigma = 1 - \frac{D_{\text{KL}}(\pi^c_{\text{actual}} \Vert \pi^c_{\text{optimal}})}{D_{\text{KL}}(\pi^c_{\text{independent}} \Vert \pi^c_{\text{optimal}})}$$
 
 where $\pi^c_{\text{optimal}}$ is the jointly optimal policy. $U_\Sigma = 1$ when actual matches optimal; $U_\Sigma = 0$ when actual matches independent (no coordination). Requires knowing the jointly optimal policy, which is itself a strong assumption.
 
@@ -69,6 +69,6 @@ The mapping is not perfect — Clausewitz's "effects gap" blends action coordina
 - Low $U_{\text{obs}}$: information silos → critical signals observed by one agent but not actionable by the composite.
 
 ## Working Notes
-- The independence of unity dimensions needs careful examination. High epistemic unity likely enables (but does not guarantee) high strategic unity — if agents share models, they can coordinate implicitly. The dimensions may be better described as "substantially independent inputs to a joint prediction of $\varepsilon^*$" rather than "independent properties."
+- The independence of unity dimensions needs careful examination. High epistemic unity likely enables (but does not guarantee) high strategic unity — if agents share models, they can coordinate implicitly. The dimensions may be better described as "substantially independent inputs to a joint prediction of $\varepsilon^\ast$" rather than "independent properties."
 - The specific metric formulations need testing on concrete cases (software team, military unit) to determine if they discriminate meaningfully between well-composed and poorly-composed groups.
 - The teleological unity scalar per objective dimension ($+1$ to $-1$) captures mixed cooperative-competitive situations: a company can be cooperative on product quality and competitive on internal resource allocation simultaneously.

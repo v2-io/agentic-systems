@@ -209,8 +209,8 @@ GitHub's math renderer is stricter than Obsidian's. To keep both working:
 - **Vertical bars**: use `\vert` (not `|`) for single bars and `\Vert` (not `\|`) for double bars, everywhere in math — not just in tables. Raw `|` is ambiguous (conditional? delimiter? absolute value?) and breaks inside markdown table cells; `\|` has inconsistent rendering. For matched delimiters (absolute value, norms, set-builder notation), prefer `\lvert`/`\rvert` and `\lVert`/`\rVert` respectively
 - Subscripts/superscripts with multiple characters need braces:
   `$x_{t+1}$` not `$x_t+1$`
-- Avoid raw `<` and `>` in math — use `\lt` and `\gt` if needed
-  (GitHub can interpret these as HTML tags)
+- Avoid raw `<` and `>` in math — use `\lt` and `\gt` (GitHub can interpret these as HTML tags, breaking the math span and corrupting everything after the `>`)
+- **Asterisks in inline math**: use `\ast` instead of bare `*` inside `$...$`. Markdown's italic/bold parser runs before the math renderer, so `$\eta^*$` can be parsed as `$\eta^` + italic start, destroying the expression. Write `$\eta^\ast$` or `$\eta^{\ast}$`. Display math (`$$...$$` on own lines) is unaffected
 
 
 ## Notation Conventions

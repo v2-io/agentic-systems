@@ -15,23 +15,23 @@ The evolution of model-reality mismatch over time is governed by the balance bet
 
 *[Hypothesis (mismatch-dynamics)]*
 
-$$\frac{d\|\delta\|}{dt} = -\mathcal{T} \cdot \|\delta\| + \rho(t)$$
+$$\frac{d\Vert\delta\Vert}{dt} = -\mathcal{T} \cdot \Vert\delta\Vert + \rho(t)$$
 
 where:
-- $\mathcal{T} \cdot \|\delta\|$ is the rate at which the agent corrects mismatch (proportional to both tempo and current mismatch)
+- $\mathcal{T} \cdot \Vert\delta\Vert$ is the rate at which the agent corrects mismatch (proportional to both tempo and current mismatch)
 - $\rho(t)$ is the **environment change rate** — the rate at which new mismatch is introduced by changes in $\Omega$
 
-**Steady state** ($d\|\delta\|/dt = 0$):
+**Steady state** ($d\Vert\delta\Vert/dt = 0$):
 
 *[Derived (from linear hypothesis)]*
 
-$$\|\delta\|_{ss} = \frac{\rho}{\mathcal{T}}$$
+$$\Vert\delta\Vert_{ss} = \frac{\rho}{\mathcal{T}}$$
 
 Steady-state mismatch is the ratio of how fast the environment changes to how fast the agent adapts.
 
 **Transient solution:**
 
-$$\|\delta(t)\| = \|\delta_0\| e^{-\mathcal{T} t} + \frac{\rho}{\mathcal{T}}(1 - e^{-\mathcal{T} t})$$
+$$\Vert\delta(t)\Vert = \Vert\delta_0\Vert e^{-\mathcal{T} t} + \frac{\rho}{\mathcal{T}}(1 - e^{-\mathcal{T} t})$$
 
 Mismatch decays exponentially from initial conditions toward the steady state.
 
@@ -39,18 +39,18 @@ Mismatch decays exponentially from initial conditions toward the steady state.
 
 *Heuristic.* This is explicitly a first-order linear approximation. The qualitative behavior (bounded mismatch, steady-state ratio, exponential convergence) is robust across correction function forms. The quantitative predictions (exact steady-state value, convergence rate, the squared adversarial scaling law) are specific to the linear case. The general nonlinear treatment ( #sector-condition-stability) replaces the linear correction term with a sector-bounded correction function and proves persistence without committing to a specific functional form.
 
-**Bridging assumption (discrete to continuous).** This ODE is a fluid-limit approximation of the discrete event-driven dynamics ( #event-driven-dynamics). Valid when $\eta^* \ll 1$ (the small-gain regime — each event makes a small correction). Least accurate during initial transients when $\eta^*$ is large, but this phase is short-lived.
+**Bridging assumption (discrete to continuous).** This ODE is a fluid-limit approximation of the discrete event-driven dynamics ( #event-driven-dynamics). Valid when $\eta^\ast \ll 1$ (the small-gain regime — each event makes a small correction). Least accurate during initial transients when $\eta^\ast$ is large, but this phase is short-lived.
 
 ## Discussion
 
-**Speed-quality substitutability.** From $\mathcal{T} = \nu \cdot \eta^*$ (single-channel case): doubling event rate $\nu$ has the same effect on $\|\delta\|_{ss}$ as doubling update quality $\eta^*$. They are multiplicative when both improve: 50% improvement in each yields $1.5 \times 1.5 = 2.25\times$, not $3\times$. This is the formal analog of Boyd's insight that Orient quality often matters more than raw OODA speed — the same structural observation (quality and speed are substitutable, quality often dominates) appears in the model.
+**Speed-quality substitutability.** From $\mathcal{T} = \nu \cdot \eta^\ast$ (single-channel case): doubling event rate $\nu$ has the same effect on $\Vert\delta\Vert_{ss}$ as doubling update quality $\eta^\ast$. They are multiplicative when both improve: 50% improvement in each yields $1.5 \times 1.5 = 2.25\times$, not $3\times$. This is the formal analog of Boyd's insight that Orient quality often matters more than raw OODA speed — the same structural observation (quality and speed are substitutable, quality often dominates) appears in the model.
 
-**The persistence threshold.** From the steady-state: $\|\delta\|_{ss} < \|\delta_{\text{critical}}\|$ iff $\mathcal{T} > \rho/\|\delta_{\text{critical}}\|$ ( #persistence-condition). Below this threshold, the model cannot support effective action. The same structural pattern — correction capacity falling below disturbance rate — appears across domains: extinction (environment changes faster than organism adapts), organizational failure (market moves faster than company learns), control instability (disturbances exceed correction capacity), cognitive overload (information arrives faster than processing). The persistence condition captures the common structure; whether it captures the dominant mechanism in each domain is an empirical question.
+**The persistence threshold.** From the steady-state: $\Vert\delta\Vert_{ss} \lt \Vert\delta_{\text{critical}}\Vert$ iff $\mathcal{T} \gt \rho/\Vert\delta_{\text{critical}}\Vert$ ( #persistence-condition). Below this threshold, the model cannot support effective action. The same structural pattern — correction capacity falling below disturbance rate — appears across domains: extinction (environment changes faster than organism adapts), organizational failure (market moves faster than company learns), control instability (disturbances exceed correction capacity), cognitive overload (information arrives faster than processing). The persistence condition captures the common structure; whether it captures the dominant mechanism in each domain is an empirical question.
 
 **Nonlinear reality.** The true correction dynamics are almost certainly nonlinear:
-- *Saturation at large $\|\delta\|$*: correction mechanism overwhelmed, so correction is slower than linear for large errors. Makes the persistence threshold harder to satisfy.
-- *Threshold effects*: small mismatches go uncorrected ($F \approx 0$ for $\|\delta\| < \varepsilon$), creating a dead zone.
-- *Structural breakdown*: beyond some critical $\|\delta\|$, correction drops to zero because the model class is no longer appropriate ( #structural-adaptation-necessity).
+- *Saturation at large $\Vert\delta\Vert$*: correction mechanism overwhelmed, so correction is slower than linear for large errors. Makes the persistence threshold harder to satisfy.
+- *Threshold effects*: small mismatches go uncorrected ($F \approx 0$ for $\Vert\delta\Vert \lt \varepsilon$), creating a dead zone.
+- *Structural breakdown*: beyond some critical $\Vert\delta\Vert$, correction drops to zero because the model class is no longer appropriate ( #structural-adaptation-necessity).
 
 These nonlinearities are exactly what the sector-condition framework ( #sector-condition-stability) handles.
 

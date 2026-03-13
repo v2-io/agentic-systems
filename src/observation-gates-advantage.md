@@ -18,7 +18,7 @@ Observation noise collapses the adversarial tempo advantage. When agents observe
 
 In a two-agent adversarial system with observation noise $\sigma_{\text{obs}}$ added to each agent's mismatch signal:
 
-| $\sigma_{\text{obs}}$ | Exponent (fixed $\eta$) | Exponent (optimal $\eta^*$) |
+| $\sigma_{\text{obs}}$ | Exponent (fixed $\eta$) | Exponent (optimal $\eta^\ast$) |
 |:---:|:---:|:---:|
 | 0.00 | 1.04 | 1.04 |
 | 0.10 | 1.00 | 0.97 |
@@ -32,7 +32,7 @@ At $\sigma_{\text{obs}} = 1.0$ (10x the process noise), the fixed-gain adversari
 
 ## Epistemic Status
 
-*Empirical.* Max attainable: derived (the mechanism is analytically tractable via Riccati analysis of noisy AR(1) processes). The observation that noise degrades advantage is confirmed by simulation. The optimal gain's partial restoration is consistent with the uncertainty ratio principle ( #update-gain: $\eta^* = U_M / (U_M + U_o)$). The quantitative degradation curve ($b$ vs. $\sigma_{\text{obs}}$) is empirical at these parameters; a general analytical expression would require solving the coupled noisy-AR(1) system.
+*Empirical.* Max attainable: derived (the mechanism is analytically tractable via Riccati analysis of noisy AR(1) processes). The observation that noise degrades advantage is confirmed by simulation. The optimal gain's partial restoration is consistent with the uncertainty ratio principle ( #update-gain: $\eta^\ast = U_M / (U_M + U_o)$). The quantitative degradation curve ($b$ vs. $\sigma_{\text{obs}}$) is empirical at these parameters; a general analytical expression would require solving the coupled noisy-AR(1) system.
 
 ## Discussion
 

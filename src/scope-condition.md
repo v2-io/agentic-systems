@@ -16,13 +16,13 @@ ACT applies wherever there is an agent that observes, acts with at least a binar
 
 *[Definition (scope-condition)]*
 
-$$\mathcal{S}_{\text{ACT}} = \left\{(\text{Agent}, \Omega) \;:\; \mathcal{O} \neq \emptyset, \;\; |\mathcal{A}| \geq 2, \;\; H(\Omega_t \mid \mathcal{C}_t) > 0 \right\}$$
+$$\mathcal{S}_{\text{ACT}} = \left\{(\text{Agent}, \Omega) \;:\; \mathcal{O} \neq \emptyset, \;\; |\mathcal{A}| \geq 2, \;\; H(\Omega_t \mid \mathcal{C}_t) \gt 0 \right\}$$
 
 Three conditions jointly define ACT's domain:
 
 1. **Observations exist**: $\mathcal{O} \neq \emptyset$ — the agent has some perceptual channel to the environment ( #observation-function)
 2. **At least binary choice**: $|\mathcal{A}| \geq 2$ — the agent can choose between at least two actions ( #action-transition)
-3. **Residual uncertainty persists**: $H(\Omega_t \mid \mathcal{C}_t) > 0$ — the environment is not fully determined by the interaction history
+3. **Residual uncertainty persists**: $H(\Omega_t \mid \mathcal{C}_t) \gt 0$ — the environment is not fully determined by the interaction history
 
 ## Epistemic Status
 
@@ -36,7 +36,7 @@ The action-space requirement ($|\mathcal{A}| \geq 2$) is the most substantive ch
 
 **What is excluded.** Three classes fall outside ACT's scope:
 
-- **Passive observers** ($|\mathcal{A}| < 2$): An entity that observes but cannot act has no interventional contrast and cannot learn causal structure. It can correlate but not intervene.
+- **Passive observers** ($|\mathcal{A}| \lt 2$): An entity that observes but cannot act has no interventional contrast and cannot learn causal structure. It can correlate but not intervene.
 - **Closed-form systems** ($H(\Omega_t \mid \mathcal{C}_t) = 0$): When the agent has complete knowledge of the environment, there is no uncertainty to adapt to. Optimal control over known dynamics is a solved problem outside ACT's concerns.
 - **Pure computation** ($\mathcal{O} = \emptyset$): A system with no observation channel — e.g., a mathematical proof engine operating on axioms alone — has no agent-environment boundary in ACT's sense.
 

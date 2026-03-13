@@ -26,7 +26,7 @@ For any system $S$ satisfying the scope condition ( #scope-condition), and any d
 
 $$\tau_{\text{eq}} \ll \tau_{\text{ext}}$$
 
-When this holds, the internal dynamics have approximately settled by the time the next external challenge arrives, and the composite's macro-state is predictive of its macro-behavior. This is the composition analog of the persistence condition ( #persistence-condition): just as an individual agent requires $\mathcal{T} > \rho / \|\delta_{\text{critical}}\|$ to maintain bounded mismatch, a composite agent requires fast internal coordination to maintain a coherent macro-description.
+When this holds, the internal dynamics have approximately settled by the time the next external challenge arrives, and the composite's macro-state is predictive of its macro-behavior. This is the composition analog of the persistence condition ( #persistence-condition): just as an individual agent requires $\mathcal{T} \gt \rho / \Vert\delta_{\text{critical}}\Vert$ to maintain bounded mismatch, a composite agent requires fast internal coordination to maintain a coherent macro-description.
 
 Most functioning groups easily satisfy this condition. A software team with daily standups and shared CI ($\tau_{\text{eq}} \sim$ hours) facing weekly feature deadlines ($\tau_{\text{ext}} \sim$ weeks) is comfortably a valid composite. A military squad communicating by voice ($\tau_{\text{eq}} \sim$ seconds) in a tactical situation evolving over minutes is clearly a single agent. The theory applies broadly; the interesting questions arise near the threshold.
 

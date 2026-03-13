@@ -39,7 +39,7 @@ This is *definitional*. Given any model that predicts ( #agent-model) and any ob
 
 ## Discussion
 
-**Units and normalization.** When $\delta_t$ is in physical units (meters, dollars), the $\|\delta\|$ that enters the mismatch dynamics should be understood as the Mahalanobis distance: $\|\delta_t\|_\Sigma = \sqrt{\delta_t^T \Sigma^{-1} \delta_t}$ where $\Sigma$ is the observation noise covariance. This maps physical prediction error to dimensionless surprise-equivalent units.
+**Units and normalization.** When $\delta_t$ is in physical units (meters, dollars), the $\Vert\delta\Vert$ that enters the mismatch dynamics should be understood as the Mahalanobis distance: $\Vert\delta_t\Vert_\Sigma = \sqrt{\delta_t^T \Sigma^{-1} \delta_t}$ where $\Sigma$ is the observation noise covariance. This maps physical prediction error to dimensionless surprise-equivalent units.
 
 **The zero-mismatch ambiguity.** $\delta_t \approx 0$ does NOT necessarily indicate model adequacy. It may mean: (a) the model genuinely reflects reality — *desirable*; (b) the agent is only observing aspects its model already explains, while remaining ignorant of aspects where the model is wrong — *confirmation bias*; or (c) the observation channel is too noisy to detect model errors — *architectural limitation*. Only (a) is desirable. This ambiguity is why active testing — choosing actions to generate informative mismatch signals — can be valuable (see #causal-information-yield for the CIY framework).
 

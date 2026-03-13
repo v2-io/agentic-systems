@@ -49,7 +49,7 @@ The full optimization is intractable in practice — it requires knowing the pro
 ## Working Notes
 
 - TST T-11 includes a rich expanded form with empirical constants $\alpha$ and $\beta$ that convert proportionalities to equalities. These constants are codebase-specific and not derived. In practice, relative comparisons (architecture A vs B) may not need absolute constants — the proportionalities suffice for ordering.
-- The summation over $P(F_i)$ assumes the feature distribution is known or estimable. In practice, this is where the agent's $M_t$ does the real work — predicting not just *how many* future features (#change-expectation-baseline) but *what kind*. The quality of this prediction is bounded by the agent's model quality, connecting back to #model-sufficiency.
+- The summation over $P(F_i)$ assumes the feature distribution is known or estimable. In practice, this is where the agent's $M_t$ does the real work — predicting not just *how many* future features ( #change-expectation-baseline) but *what kind*. The quality of this prediction is bounded by the agent's model quality, connecting back to #model-sufficiency.
 - This segment might be better positioned as a discussion/synthesis rather than a standalone derived claim, since it mostly assembles previously stated results into a composite objective. Its independent contribution is the explicit per-feature probability weighting, which dual-optimization elides.
 
 *(Descended from TST T-11.)*

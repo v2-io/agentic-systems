@@ -41,25 +41,25 @@ Working notes for theory development. This is a thinking tool, not a reference d
 | Slug | Type | Notes |
 |------|------|-------|
 | [agent-spectrum](src/agent-spectrum.md) | Definition | Needs review |
-| [complete-agent-state](src/complete-agent-state.md) | Formulation | X_t = (M_t, G_t) lift. Backward-compatible with Section I. |
-| [objective-functional](src/objective-functional.md) | Definition | O_t → V_{O_t}: trajectories → ℝ. Fills TF-08's "value" gap. |
-| [value-object](src/value-object.md) | Definition | V_O, Q_O with continuation convention. Extends policy objective with λ(M_t, O_t, N_h). |
-| [strategy-dimension](src/strategy-dimension.md) | Definition | G_t = (O_t, Σ_t). Evaluation vs guidance. Independence of richness dimensions. |
-| [causal-hierarchy-requirement](src/causal-hierarchy-requirement.md) | Derived + Scope | Level 2 for Q_O evaluation. Scope: agents that learn during operation. |
+| [complete-agent-state](src/complete-agent-state.md) | Formulation | $X_t = (M_t, G_t)$ lift. Backward-compatible with Section I. |
+| [objective-functional](src/objective-functional.md) | Definition | $O_t \to V_{O_t}$: trajectories $\to \mathbb{R}$. Fills TF-08's "value" gap. |
+| [value-object](src/value-object.md) | Definition | $V_O$, $Q_O$ with continuation convention. Extends policy objective with $\lambda(M_t, O_t, N_h)$. |
+| [strategy-dimension](src/strategy-dimension.md) | Definition | $G_t = (O_t, \Sigma_t)$. Evaluation vs guidance. Independence of richness dimensions. |
+| [causal-hierarchy-requirement](src/causal-hierarchy-requirement.md) | Derived + Scope | Level 2 for $Q_O$ evaluation. Scope: agents that learn during operation. |
 | [loop-interventional-access](src/loop-interventional-access.md) | Derived | Loop generates interventional data by construction. |
-| [explicit-strategy-condition](src/explicit-strategy-condition.md) | Normative | Cost inequality for explicit Σ_t. Makes temporal-optimality load-bearing. |
-| [chain-confidence-decay](src/chain-confidence-decay.md) | Derived | Log-confidence additive in depth. p^n is special case. |
+| [explicit-strategy-condition](src/explicit-strategy-condition.md) | Normative | Cost inequality for explicit $\Sigma_t$. Makes temporal-optimality load-bearing. |
+| [chain-confidence-decay](src/chain-confidence-decay.md) | Derived | Log-confidence additive in depth. $p^n$ is special case. |
 | [and-or-scope](src/and-or-scope.md) | Scope | AND/OR restriction. Noisy-OR and WEIGHTED rejected. Parsimony argument. |
-| [strategy-dag](src/strategy-dag.md) | Definition | Σ_t = (V, E, p, γ). Acyclicity derived. Edge semantics as causal credence. |
-| [directed-separation](src/directed-separation.md) | Derived + Scope | f_M is G_t-independent. Scope condition for goal-conditioned agents. |
-| [satisfaction-gap](src/satisfaction-gap.md) | Definition | δ_sat with disambiguation table. A_O (attainability) defined here. |
-| [control-regret](src/control-regret.md) | Definition | δ_regret. 2×2 diagnostic with satisfaction gap. |
+| [strategy-dag](src/strategy-dag.md) | Definition | $\Sigma_t = (V, E, p, \gamma)$. Acyclicity derived. Edge semantics as causal credence. |
+| [directed-separation](src/directed-separation.md) | Derived + Scope | $f_M$ is $G_t$-independent. Scope condition for goal-conditioned agents. |
+| [satisfaction-gap](src/satisfaction-gap.md) | Definition | $\delta_{\text{sat}}$ with disambiguation table. $A_O$ (attainability) defined here. |
+| [control-regret](src/control-regret.md) | Definition | $\delta_{\text{regret}}$. 2×2 diagnostic with satisfaction gap. |
 | [strategic-calibration](src/strategic-calibration.md) | Definition | Edge residuals. Discussion-grade aggregation. |
-| [orient-cascade](src/orient-cascade.md) | Derived | Resolution order from information dependency. G_t bounded by M_t. |
-| [observability-dominance](src/observability-dominance.md) | Derived | Low σ → frozen edges → epistemically dead paths. |
+| [orient-cascade](src/orient-cascade.md) | Derived | Resolution order from information dependency. $G_t$ bounded by $M_t$. |
+| [observability-dominance](src/observability-dominance.md) | Derived | Low $\sigma$ → frozen edges → epistemically dead paths. |
 | [edge-update-via-gain](src/edge-update-via-gain.md) | Hypothesis | Gain principle extended to edge credences. Signal function open. |
 | [structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Formulation | Six operations from reweighting to full restructure. |
-| [strategy-persistence-schema](src/strategy-persistence-schema.md) | Proposed schema | Sector conditions for Σ_t. Schema, not result — needs instantiation. |
+| [strategy-persistence-schema](src/strategy-persistence-schema.md) | Proposed schema | Sector conditions for $\Sigma_t$. Schema, not result — needs instantiation. |
 
 ### Written — Section IV (20 segments; 4 missing, 0 old remain)
 | Slug | Type | Notes |
@@ -81,7 +81,7 @@ Working notes for theory development. This is a thinking tool, not a reference d
 | [system-coupling](src/system-coupling.md) | Definition | Causal (interventional) interpretation via git. |
 | [system-coherence](src/system-coherence.md) | Definition | |
 | [coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Measurement | Ratio form is one possible aggregation. |
-| [principled-decision-integration](src/principled-decision-integration.md) | Derived | General form of dual-optimization with per-feature P(F_i). |
+| [principled-decision-integration](src/principled-decision-integration.md) | Derived | General form of dual-optimization with per-feature $P(F_i)$. |
 | [system-availability](src/system-availability.md) | Definition | Standard reliability engineering. |
 | [continuous-operation](src/continuous-operation.md) | Scope | Extends temporal optimization to include operational failures. |
 
@@ -90,17 +90,17 @@ Working notes for theory development. This is a thinking tool, not a reference d
 |------|------|-------|
 | [multi-agent-scope](src/multi-agent-scope.md) | Scope | Coupling through shared environment. |
 | [composition-closure](src/composition-closure.md) | Formulation | Operationalizes agent boundary as bounded closure defect. Status: conditional (admissibility constraints and norms under-specified). |
-| [tempo-composition](src/tempo-composition.md) | Derived | Sub-additive tempo inequality. Status: sketch (proof incomplete — ε*→C_coord mapping open). |
+| [tempo-composition](src/tempo-composition.md) | Derived | Sub-additive tempo inequality. Status: sketch (proof incomplete — $\varepsilon^\ast \to C_{\text{coord}}$ mapping open). |
 | [unity-dimensions](src/unity-dimensions.md) | Definition | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping. |
 | [shared-intent](src/shared-intent.md) | Definition | IB-compressed purposeful state for inter-agent communication. Status: discussion-grade. |
-| [auftragstaktik-principle](src/auftragstaktik-principle.md) | Hypothesis | B_O > B_Σ > B_M. Bungay evidence. Status: discussion-grade. |
+| [auftragstaktik-principle](src/auftragstaktik-principle.md) | Hypothesis | $B_O \gt B_\Sigma \gt B_M$. Bungay evidence. Status: discussion-grade. |
 | [adversarial-destabilization](src/adversarial-destabilization.md) | Derived | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1. |
 | [communication-gain](src/communication-gain.md) | Hypothesis | Trust-weighted inter-agent gain. From TFT Appendix F, F.2. |
-| [adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | Observation | Three regimes: b=2 (det/coupled), b=1.5 (stoch/coupled), b→1 (non-coupled). From track-b sims. |
+| [adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | Observation | Three regimes: $b=2$ (det/coupled), $b=1.5$ (stoch/coupled), $b \to 1$ (non-coupled). From track-b sims. |
 | [observation-gates-advantage](src/observation-gates-advantage.md) | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E. |
 | [per-dimension-persistence](src/per-dimension-persistence.md) | Result | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F. |
-| [team-persistence](src/team-persistence.md) | Derived | Distributed tempo, cooperative-adversarial ρ decomposition, 3-lever persistence. From TFT F.3. |
-| [adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Result | Superlinear exponent b=2 (det/coupled). Analytical result + regime conditions. From TFT Cor 11.2. |
+| [team-persistence](src/team-persistence.md) | Derived | Distributed tempo, cooperative-adversarial $\rho$ decomposition, 3-lever persistence. From TFT F.3. |
+| [adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Result | Superlinear exponent $b=2$ (det/coupled). Analytical result + regime conditions. From TFT Cor 11.2. |
 
 ### Written — Appendices (8 segments)
 | Slug | Type | Notes |
@@ -118,14 +118,14 @@ Working notes for theory development. This is a thinking tool, not a reference d
 
 **Section IV (4 missing):**
 - `#software-epistemic-properties` — software's 6 unique epistemic properties. Source: old-tst-via-tft-readme.
-- `#developer-as-act-agent` — developer as (M_t, O_t, Σ_t). Source: old-tst-via-tft-mapping.
-- `#code-quality-as-observation-infrastructure` — code quality → U_o → η* → T. Source: old-tst-via-tft-mapping.
+- `#developer-as-act-agent` — developer as $(M_t, O_t, \Sigma_t)$. Source: old-tst-via-tft-mapping.
+- `#code-quality-as-observation-infrastructure` — code quality → $U_o$ → $\eta^\ast$ → $\mathcal{T}$. Source: old-tst-via-tft-mapping.
 - `#causal-discovery-from-git` — git as interventional data source. Source: old-tst-via-tft-causal-extensions.
 
 **Section V (3 missing — blocked on scope decision):**
 - `#ai-agent-as-act-agent` — AI agent as actuated agent (directed separation fails → coupled analysis).
-- `#context-turnover` — 100% M_t reset per session.
-- `#m-preservation` — external memory as persistent M_t.
+- `#context-turnover` — 100% $M_t$ reset per session.
+- `#m-preservation` — external memory as persistent $M_t$.
 
 **Appendices (3 missing):**
 - `#linear-ode-approximation` — pedagogical linear mismatch ODE (detail).
@@ -139,7 +139,7 @@ Working notes for theory development. This is a thinking tool, not a reference d
 |-------|----------|--------|
 | Purposeful agent derivation (v3) | `scratch/spike-v3-purposeful-agent.md` | Section II porting **COMPLETE** — all 20 segments in src/ |
 | Agent composition / holon | `scratch/spike-agent-composition.md` | Core insight strong; composition laws are sketches |
-| Composition closure | `scratch/spike-composition-closure.md` | Formalized closure defect ε*; promoted to #composition-closure + #tempo-composition |
+| Composition closure | `scratch/spike-composition-closure.md` | Formalized closure defect $\varepsilon^\ast$; promoted to #composition-closure + #tempo-composition |
 | Graph structure uniqueness | `scratch/spike-graph-uniqueness.md` | Acyclicity derived; P3→Markov needs tightening |
 | Intent DAG consolidated | `scratch/04-intent-dag-consolidated.md` | Canonical DAG reference; converged |
 | Prior art assessment | `scratch/02-prior-art-assessment.md` | Hafez/IBM/BDI/active-inference positioning |
@@ -179,11 +179,11 @@ These are the segments where the goal is: "given the prior objects, this is the 
 | #persistence-condition | Given sector conditions, the threshold follows by Lyapunov. |
 | #sector-condition-stability + #sector-condition-derivation | Lyapunov stability result applied to the mismatch dynamics. |
 | #structural-adaptation-necessity | Parametric update converges within model class; wrong class → structural change necessary. |
-| #orient-cascade | Resolution order forced by information dependency (M_t before Σ_t before O_t). |
-| #satisfaction-gap / #control-regret | Two gaps are arithmetic once V_ideal, A_O, V_current are defined. The diagnostic value is the insight. |
-| #causal-hierarchy-requirement | Application of Bareinboim et al.'s causal hierarchy result to Q_O evaluation. |
+| #orient-cascade | Resolution order forced by information dependency ($M_t$ before $\Sigma_t$ before $O_t$). |
+| #satisfaction-gap / #control-regret | Two gaps are arithmetic once $V_{\text{ideal}}$, $A_O$, $V_{\text{current}}$ are defined. The diagnostic value is the insight. |
+| #causal-hierarchy-requirement | Application of Bareinboim et al.'s causal hierarchy result to $Q_O$ evaluation. |
 | #loop-interventional-access | Feedback loop generates interventional data by construction — structural property. |
-| #directed-separation | f_M independence from G_t follows from the update structure, given scope condition. |
+| #directed-separation | $f_M$ independence from $G_t$ follows from the update structure, given scope condition. |
 | #deliberation-cost | Think-vs-act threshold from information-theoretic argument. |
 | #composition-consistency | If scope condition doesn't restrict level, predictions at different levels must be compatible. (Needs proof.) |
 
@@ -208,13 +208,13 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 
 ## What's Open
 
-- Action-deliberation-exploration tradeoff (three-way with $\Sigma_t$). Existing machinery handles components separately (CIY for explore, δ_regret for deliberation trigger). Unified policy objective would need a deliberation information value term alongside λ·CIY.
-- Strategy tempo formalization ($\mathcal{T}_\Sigma$). Needed for strategy-persistence-schema to have quantitative content. Observation channels that trigger Σ_t revision identified (orient cascade steps 4-7); the rate is not formalized.
+- Action-deliberation-exploration tradeoff (three-way with $\Sigma_t$). Existing machinery handles components separately (CIY for explore, $\delta_{\text{regret}}$ for deliberation trigger). Unified policy objective would need a deliberation information value term alongside $\lambda \cdot \text{CIY}$.
+- Strategy tempo formalization ($\mathcal{T}_\Sigma$). Needed for strategy-persistence-schema to have quantitative content. Observation channels that trigger $\Sigma_t$ revision identified (orient cascade steps 4-7); the rate is not formalized.
 - Cognitive cost of $\Sigma_t$ (no $\beta$ analog yet). DAGs don't compress the way probability distributions do — the right framework may be closer to MDL than IB. Critical for finite-context agents. A 500-node DAG is qualitatively different from a 12-node one — for finite-context agents the DAG must fit in working memory. Connects to #information-bottleneck (model compression), #shared-intent (intent compression for communication), and #explicit-strategy-condition (the cost inequality's maintenance term).
 - Edge identifiability conditions (resolved in software, open in general). Edges claim interventional semantics ($p_{ij} = P(j \mid do(i), M_t)$) but update from observational signals. In confounded domains (military, organizational), this is a real causal-identification problem. In software, genuine interventions (tests, deploys, git bisect) are available. Resolution may come from the software domain pushing requirements back up.
 - P3→Markov step in graph uniqueness (sketch, needs tightening)
 - Bridge lemma for composition closure: formally proving small expected component-wise errors guarantee bounded trajectory divergence under Lipschitz stability conditions.
-- **Closure defect → coordination overhead mapping**: the core open problem in tempo-composition. The sub-additive inequality $\mathcal{T}_c \leq \sum \mathcal{T}_i$ is almost certainly correct, but the quantitative relationship $C_{\text{coord}}(\varepsilon^*)$ — how closure defect determines the tempo lost to internal reconciliation — is unproved. This is the missing bridge between the composition postulate (Section I) and a formally derived composition threshold. Proving this for the 2-agent case with orthogonal observation channels is the natural first step.
+- **Closure defect → coordination overhead mapping**: the core open problem in tempo-composition. The sub-additive inequality $\mathcal{T}_c \leq \sum \mathcal{T}_i$ is almost certainly correct, but the quantitative relationship $C_{\text{coord}}(\varepsilon^\ast)$ — how closure defect determines the tempo lost to internal reconciliation — is unproved. This is the missing bridge between the composition postulate (Section I) and a formally derived composition threshold. Proving this for the 2-agent case with orthogonal observation channels is the natural first step.
 - Strategy persistence schema → result: requires formalizing strategic correction function, characterizing $\rho_\Sigma$ (rate of environmental causal drift), and verifying sector condition. Substantial Lyapunov work.
 - Meta-adaptation of $\Pi$ and $N_h$: can the agent structurally adapt its own policy class and planning horizon? Analogous to model-class change (TF-10). Satisfaction gap's disambiguation table handles descriptively; formal mechanism open.
 - DAG boundary type closure — **PORTED to #strategy-dag.** Leaf base credence ($p_v$) with temporal indexing, unique root terminal, well-formedness constraint, $\hat{P}_\Sigma$ as strategy self-assessment distinct from $A_O$, terminal alignment error as experience-only signal. Spike at `scratch/spike-dag-type-closure.md` (v2). Terminal alignment error ($\delta_\text{align}$) formalization still open.
@@ -231,7 +231,7 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 ## Cross-Segment Consistency Issues
 
 - **Low-end examples (thermostat, PID) — RESOLVED.**
-  Settled doctrine: the spectrum is about *richness*, not *presence/absence*. #agent-spectrum table relabeled from "absent" to "absent or trivial" with continuum framing. Thermostat has degenerate M_t and O_t (near origin, not truly reactive). PID has degenerate M_t (not "no genuine M_t"). Reflex arc is the truly reactive case. #agent-model updated to match. Classification question is "rich enough for the machinery?" not "present or absent?"
+  Settled doctrine: the spectrum is about *richness*, not *presence/absence*. #agent-spectrum table relabeled from "absent" to "absent or trivial" with continuum framing. Thermostat has degenerate $M_t$ and $O_t$ (near origin, not truly reactive). PID has degenerate $M_t$ (not "no genuine $M_t$"). Reflex arc is the truly reactive case. #agent-model updated to match. Classification question is "rich enough for the machinery?" not "present or absent?"
 - **"Section I carries over" compatibility boundary.** After the $X_t = (M_t, G_t)$ lift, epistemic machinery transfers cleanly to the $M_t$ substate. But #action-selection's derivation of $a_t = \pi(M_t)$ relied on $M_t$ being *complete* — this is superseded by $a_t = \pi(M_t, G_t)$. Noted in #complete-agent-state Discussion.
 
 
@@ -239,8 +239,8 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 
 - Edge semantics claim interventional but update from observational. During Section II promotion: consider scoping literal $P(j \mid do(i), M_t)$ semantics to intervention-rich domains (software), using weaker "agent-calibrated causal credence" for the general case. This is a natural scope narrowing, not a retreat.
 - Missing commitment/resource/temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs) — now framed correctly: M_t-side quantities remain well-defined regardless; directed separation gives the clean factorized update and sequential orient cascade. Without it, coupled analysis, not broken theory. Updated in #directed-separation, #agent-spectrum, ACT-FULL.md §II scope. Scalar objective scope restriction added to #objective-functional.
-- **Section IV → Section I bridge is analogical, not formal.** Git-derived metrics (coherence, coupling, Q) are claimed to operationalize Lyapunov quantities (α, R, ρ) but no mathematical proof connects them. The chain git data → Q → comprehension time → developer tempo → α has empirical hypothesis steps. This matters because the operationalization story is ACT's main defense against the "unmeasurable quantities" critique. Either formalize the bridge or be explicit that it's an empirical research program, not a derivation.
+- Directed separation violated by goal-conditioned agents (LLMs) — now framed correctly: $M_t$-side quantities remain well-defined regardless; directed separation gives the clean factorized update and sequential orient cascade. Without it, coupled analysis, not broken theory. Updated in #directed-separation, #agent-spectrum, ACT-FULL.md §II scope. Scalar objective scope restriction added to #objective-functional.
+- **Section IV → Section I bridge is analogical, not formal.** Git-derived metrics (coherence, coupling, $Q$) are claimed to operationalize Lyapunov quantities ($\alpha$, $R$, $\rho$) but no mathematical proof connects them. The chain git data → $Q$ → comprehension time → developer tempo → $\alpha$ has empirical hypothesis steps. This matters because the operationalization story is ACT's main defense against the "unmeasurable quantities" critique. Either formalize the bridge or be explicit that it's an empirical research program, not a derivation.
 
 
 ## Codex Review Issues (from memory — fixes needed)
@@ -319,14 +319,14 @@ The track-b simulations (`scratch/track-b-nonlinear-sims/`) are theory-shaping, 
 
 ### Observation noise (Variant E)
 - Observation noise collapses adversarial exponent from ~1.0 to **~0.2** — tempo advantage nearly vanishes.
-- Optimal gain (TF-06's $\eta^*$) partially restores it (~0.4) but cannot fully recover.
+- Optimal gain (TF-06's $\eta^\ast$) partially restores it (~0.4) but cannot fully recover.
 - Consistent with Boyd's emphasis on Orient quality: faster OODA is worthless with bad observations.
 
 ### Anisotropic correction (Variant F)
 - Per-dimension persistence theory is **exact** (matches AR(1) prediction to 4 significant figures).
 - Scalar tempo **overestimates by ~72%** — the weak dimension is the bottleneck.
 - Isotropic allocation beats anisotropic by 13%; targeted adversarial attack on weak dimensions amplifies advantage 17%.
-- **Implication**: need per-dimension persistence condition, not scalar $\mathcal{T} > \rho / \lVert\delta_{\text{critical}}\rVert$.
+- **Implication**: need per-dimension persistence condition, not scalar $\mathcal{T} \gt \rho / \lVert\delta_{\text{critical}}\rVert$.
 
 ### Gain validation (Variant E)
 - TF-06's uncertainty ratio principle empirically validated: 52% mismatch reduction with Riccati-optimal gain.
@@ -409,7 +409,7 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 - **Hafez** (bi-predictability $P$): complementary diagnostic, no goals/dynamics. $H_b$ has no ACT analog yet — matters for legibility/coordination.
 - **IBM 2025** (systems theory manifesto): calls for what ACT provides. Their open challenges (subgoal emergence, residual control rights) directly addressed by ACT.
 - **BDI**: named the parts, no dynamics.
-- **Active inference**: closest competitor, different foundation. Expected free energy ≈ ACT's value + $\lambda$ CIY (structural isomorphism, different foundations). ACT grounds exploration in causal information specifically.
+- **Active inference**: closest competitor, different foundation. Expected free energy ≈ ACT's value + $\lambda \cdot \text{CIY}$ (structural isomorphism, different foundations). ACT grounds exploration in causal information specifically.
 
 **Lead with:** Section I (proved, simulated) + Section II (purposeful-agent derivation). These are where ACT has real substance. Sections III–V are "the theory extends to" demonstrations.
 
@@ -418,7 +418,7 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 1. **The integration itself.** Control theory + causal inference + information theory + agent architecture under one framework. The individual pieces are mostly known; the synthesis is the contribution. This is worth doing (Maxwell unified electricity and magnetism using known equations) but should not be presented as discovery of the component parts.
 2. **Novel formalizations of known patterns.** The satisfaction gap / control regret split applies an established pattern (approximation error vs. estimation error, model-class limitation vs. within-class suboptimality) to agent self-diagnosis with cascading corrective actions — the 2×2 diagnostic table and orient cascade ordering are genuinely new applications. The feedback loop as Level 2 engine is a useful bridge between Pearl and Sutton, with a real additional claim for non-RL agents (LLMs get interventional data from the loop despite no internal causal architecture).
 3. **Known results applied to new domains.** DAG acyclicity from temporal ordering is standard in Dynamic Bayesian Networks (unrolling). Timescale separation for composition is standard singular perturbation theory. Both are useful applications to agent/strategy domains, not discoveries. Do not list these as "novel results."
-4. **Genuinely open bridges.** The git → Lyapunov operationalization is analogical, not formal. There is no mathematical proof that git-derived metrics (coherence, coupling, Q) translate to Lyapunov bounds (α, R). The chain git data → Q → comprehension time → developer tempo → α has empirical hypothesis steps in the middle. This is a real gap, not just a presentation issue. Section IV's operationalization story is promising but not yet a bridge.
+4. **Genuinely open bridges.** The git → Lyapunov operationalization is analogical, not formal. There is no mathematical proof that git-derived metrics (coherence, coupling, $Q$) translate to Lyapunov bounds ($\alpha$, $R$). The chain git data → $Q$ → comprehension time → developer tempo → $\alpha$ has empirical hypothesis steps in the middle. This is a real gap, not just a presentation issue. Section IV's operationalization story is promising but not yet a bridge.
 5. **Software as both testbed and recursive instantiation.** This framing is genuinely distinctive — no other theory treats software development as both the primary operationalization domain and the domain where the theory's own agents will operate.
 
 **Discipline:** Don't overclaim. Present as a unifying framework with specific novel results. Be honest about what's integration vs. what's discovery.
@@ -427,7 +427,7 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 
 1. **Lead with "unifying framework," not "new mathematics."** The individual pieces are mostly known; the synthesis and what it enables (Sections II–V) is the contribution. Don't let the presentation suggest the gain formula or the Lyapunov proof are discoveries — they are instantiations.
 2. **Make the sector-condition framework more prominent than the linear ODE.** Casual readers who stop at mismatch-dynamics see the pedagogical scaffold and conclude the theory rests on a fluid-limit approximation. The actual foundation is the nonlinear Lyapunov analysis, which is robust. Title, ordering, and emphasis should guide readers to sector-condition-stability before mismatch-dynamics, or at minimum make the relationship unmissable.
-3. **Section IV as the operationalization answer.** The charge that α and R are unmeasurable outside hardware is answered by Section IV, where comprehension time, implementation time, and change rates are measurable from git history. This should be prominent in any paper — "here is the domain where we can actually measure these quantities" directly addresses the strongest version of the critique.
+3. **Section IV as the operationalization answer.** The charge that $\alpha$ and $R$ are unmeasurable outside hardware is answered by Section IV, where comprehension time, implementation time, and change rates are measurable from git history. This should be prominent in any paper — "here is the domain where we can actually measure these quantities" directly addresses the strongest version of the critique.
 4. **Name the genuinely novel results explicitly.** Readers scanning for "what's new" need to find it fast: satisfaction gap / control regret split, DAG acyclicity derived from temporal ordering, feedback loop as Level 2 engine, composition consistency as structural requirement, the dual persistence pattern (individual + composite thresholds). These are not repackaging.
 
 
@@ -475,4 +475,4 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 - Multi-agent intent propagation simulation
 - TST testable predictions: specification bound calibration, coherence-coupling measurement
 - Simulations 3–6 from old-tst-via-tft-simulation-proposals (Sims 1–2 done as track-b)
-- **Flagship empirical agenda**: software unmaintainability threshold and measurement program. Formalize $\mathcal{T}_{\text{team}} > \rho_{\text{total}} / \lVert\delta_{\text{critical}}\rVert$ with observable precursors. This is where ACT could become decisively useful beyond elegant theory.
+- **Flagship empirical agenda**: software unmaintainability threshold and measurement program. Formalize $\mathcal{T}_{\text{team}} \gt \rho_{\text{total}} / \lVert\delta_{\text{critical}}\rVert$ with observable precursors. This is where ACT could become decisively useful beyond elegant theory.

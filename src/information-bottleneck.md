@@ -19,7 +19,7 @@ $$\phi^* = \arg\min_{\phi} \left[ I(M_t;\, \mathcal{C}_t) - \beta \cdot I(M_t;\,
 where:
 - $I(M_t;\, \mathcal{C}_t)$ is the compression cost — how much of the interaction history the model retains
 - $I(M_t;\, o_{t+1:\infty} \mid a_{t:\infty})$ is the predictive power — how much the model tells the agent about future observations given future actions
-- $\beta > 0$ is the trade-off parameter controlling the compression-prediction balance
+- $\beta \gt 0$ is the trade-off parameter controlling the compression-prediction balance
 
 **Dependence on volatility.** The trade-off $\beta$ depends on environment volatility $\rho$:
 

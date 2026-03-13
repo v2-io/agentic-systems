@@ -17,32 +17,32 @@ When model class fitness is insufficient — when no model in the current class 
 
 *[Derived (structural-adaptation-necessity, Prop 10.1 from TFT)]*
 
-If the model class fitness $\mathcal{F}(\mathcal{M}) < 1 - \varepsilon$ for some $\varepsilon > 0$, then no parametric adaptation within $\mathcal{M}$ can reduce the expected mismatch below a floor determined by $\varepsilon$.
+If the model class fitness $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ for some $\varepsilon \gt 0$, then no parametric adaptation within $\mathcal{M}$ can reduce the expected mismatch below a floor determined by $\varepsilon$.
 
 ### Derivation
 
-1. By definition, $S(M^*) = \mathcal{F}(\mathcal{M}) < 1 - \varepsilon$ where $M^* = \arg\sup_{M \in \mathcal{M}} S(M)$.
-2. Therefore $I(\mathcal{C}_t; o_{t+1:\infty} \mid M^*, a_{t:\infty}) > 0$: the history contains predictive information that $M^*$ does not capture.
+1. By definition, $S(M^\ast) = \mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ where $M^\ast = \arg\sup_{M \in \mathcal{M}} S(M)$.
+2. Therefore $I(\mathcal{C}_t; o_{t+1:\infty} \mid M^\ast, a_{t:\infty}) \gt 0$: the history contains predictive information that $M^\ast$ does not capture.
 3. This uncaptured information manifests as *systematic* mismatch — structured residuals $\delta_t$ containing signal, not merely noise.
 4. From #mismatch-decomposition, the model error component has a positive lower bound that cannot be reduced by any $M \in \mathcal{M}$.
-5. The update rule ( #update-gain) adjusts $M_t$ within $\mathcal{M}$, but $M^*$ is already (approximately) reached. Further updates oscillate without net improvement.
+5. The update rule ( #update-gain) adjusts $M_t$ within $\mathcal{M}$, but $M^\ast$ is already (approximately) reached. Further updates oscillate without net improvement.
 6. Therefore: reducing mismatch below the floor requires changing $\mathcal{M}$ — structural adaptation. $\square$
 
 **Corollary.** Persistent irreducible mismatch (after parametric convergence) is *diagnostic* of model class inadequacy. Systematic patterns in residuals are evidence that $\mathcal{F}(\mathcal{M})$ is insufficient.
 
 ## Epistemic Status
 
-*Exact* — this is a pure information-theoretic result. If the model class cannot represent the environment's predictive structure, no parameter optimization within that class can compensate. The assumptions are: the agent has converged parametrically (reached $M^*$ or its vicinity), and the environment has predictable structure that exceeds $\mathcal{M}$'s capacity.
+*Exact* — this is a pure information-theoretic result. If the model class cannot represent the environment's predictive structure, no parameter optimization within that class can compensate. The assumptions are: the agent has converged parametrically (reached $M^\ast$ or its vicinity), and the environment has predictable structure that exceeds $\mathcal{M}$'s capacity.
 
 ## Discussion
 
 **Observable symptoms of model class inadequacy.** When $\mathcal{F}(\mathcal{M})$ is low:
 
-1. **Persistent irreducible mismatch**: $\|\delta_t\|$ remains large despite extended updating — the model has converged within $\mathcal{M}$ but the best achievable model is still poor.
-2. **Gain collapse without performance**: $\eta^*$ has decreased (model appears confident) but predictions remain inaccurate — the model is confidently wrong, having fitted to structure in $\mathcal{M}$ that doesn't match reality.
+1. **Persistent irreducible mismatch**: $\Vert\delta_t\Vert$ remains large despite extended updating — the model has converged within $\mathcal{M}$ but the best achievable model is still poor.
+2. **Gain collapse without performance**: $\eta^\ast$ has decreased (model appears confident) but predictions remain inaccurate — the model is confidently wrong, having fitted to structure in $\mathcal{M}$ that doesn't match reality.
 3. **Systematic mismatch patterns**: $\delta_t$ shows structure (correlations, trends, periodicities) that the model class cannot represent — the residuals contain signal that $\mathcal{M}$ lacks the capacity to absorb.
 
-**Structural overfitting: the opposite failure mode.** $\mathcal{M}$ can also be *too expressive*, causing the model to memorize irreducible noise. Symptoms: low training mismatch but high generalization mismatch; model complexity growing without predictive gain; $\eta^* \to 0$ (confident) but confidence is spurious. The information bottleneck ( #information-bottleneck) provides the diagnostic: when marginal increases in model complexity yield no marginal predictive power, the model is past the optimal point on the rate-distortion curve. Structural adaptation in this case means *compression* — moving to a simpler $\mathcal{M}'$. Structural adaptation is bidirectional: expansion when too constrained (this proposition), compression when too expressive.
+**Structural overfitting: the opposite failure mode.** $\mathcal{M}$ can also be *too expressive*, causing the model to memorize irreducible noise. Symptoms: low training mismatch but high generalization mismatch; model complexity growing without predictive gain; $\eta^\ast \to 0$ (confident) but confidence is spurious. The information bottleneck ( #information-bottleneck) provides the diagnostic: when marginal increases in model complexity yield no marginal predictive power, the model is past the optimal point on the rate-distortion curve. Structural adaptation in this case means *compression* — moving to a simpler $\mathcal{M}'$. Structural adaptation is bidirectional: expansion when too constrained (this proposition), compression when too expressive.
 
 **Mechanisms of structural change.** Structural adaptation can proceed by:
 

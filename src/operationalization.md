@@ -26,7 +26,7 @@ Estimation recipes for core ACT quantities, bridging the measurement gap between
 | $\rho_{\text{delib}}$ | Local mismatch drift during pauses ( #deliberation-cost) | surprise per time | Deliberation windows with no corrective action |
 | $\alpha$ | Lower correction efficiency bound ( #sector-condition-stability) | inverse time | Vector mismatch trajectories + correction term |
 | $R$ | Radius where local sector condition holds ( #sector-condition-stability) | surprise magnitude | Same as $\alpha$, plus breakdown detection |
-| $\|\delta_{\text{critical}}\|$ | Functional adequacy threshold ( #persistence-condition) | surprise magnitude | Task-level performance curve vs mismatch |
+| $\Vert\delta_{\text{critical}}\Vert$ | Functional adequacy threshold ( #persistence-condition) | surprise magnitude | Task-level performance curve vs mismatch |
 
 ## Estimator Cookbook
 
@@ -50,7 +50,7 @@ $$\hat{\eta}^*_t = \frac{\hat{U}_{M,t}}{\hat{U}_{M,t} + \hat{U}_{o,t}}$$
 
 ### Estimating $\rho(t)$ and $\rho_{\text{delib}}$
 
-Let $s_t = \|\delta_t\|$ in surprise units (e.g., negative log-likelihood residual scale).
+Let $s_t = \Vert\delta_t\Vert$ in surprise units (e.g., negative log-likelihood residual scale).
 
 Global mismatch injection rate:
 
@@ -60,7 +60,7 @@ $$\hat{\rho}(t) = \left[\frac{s_{t+\Delta t} - s_t}{\Delta t} + \hat{\mathcal{T}
 
 where $[x]_+ = \max(x, 0)$ and $\hat{\mathcal{T}}_t$ is estimated adaptive tempo.
 
-**Note on estimation sequencing.** This estimator requires $\hat{\mathcal{T}}_t$, estimated from $\hat{\nu}$ and $\hat{\eta}^*$. Estimate the gain and event rate first (from the agent's internal statistics and observation timing), then use these to extract $\rho$ from the mismatch trajectory. This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal{T}}$ propagate linearly into $\hat{\rho}$.
+**Note on estimation sequencing.** This estimator requires $\hat{\mathcal{T}}_t$, estimated from $\hat{\nu}$ and $\hat{\eta}^\ast$. Estimate the gain and event rate first (from the agent's internal statistics and observation timing), then use these to extract $\rho$ from the mismatch trajectory. This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal{T}}$ propagate linearly into $\hat{\rho}$.
 
 Local pause-window drift for #deliberation-cost:
 
@@ -72,11 +72,11 @@ using windows where corrective action is suspended or effectively delayed.
 
 ### Estimating $\alpha$ (sector lower bound)
 
-#sector-condition-derivation uses $\delta^T F(\mathcal{T}, \delta) \geq \alpha \|\delta\|^2$ for $\|\delta\| \leq R$. Operationally:
+#sector-condition-derivation uses $\delta^T F(\mathcal{T}, \delta) \geq \alpha \Vert\delta\Vert^2$ for $\Vert\delta\Vert \leq R$. Operationally:
 
 1. Estimate $\dot{\delta}_t$ (finite differences or filtered derivative).
 2. Compute $\widehat{F}_t = -\dot{\delta}_t + w_t$ where disturbance proxy $w_t$ is estimated from exogenous perturbation channels or residual balancing.
-3. Form ratios $r_t = (\delta_t^T \widehat{F}_t) / \|\delta_t\|^2$ on bins of $\|\delta_t\|$.
+3. Form ratios $r_t = (\delta_t^T \widehat{F}_t) / \Vert\delta_t\Vert^2$ on bins of $\Vert\delta_t\Vert$.
 4. Set conservative lower bound $\hat{\alpha}$ as a low quantile (e.g., 10th percentile) of $r_t$ in the valid region.
 
 ### Estimating $R$ (valid-region radius)
@@ -85,17 +85,17 @@ Estimate $R$ as the largest radius for which sector inequality violations remain
 
 *[Operational Criterion]*
 
-$$\hat{R} = \sup \left\{ r > 0 : \Pr\left(\delta^T \widehat{F} < \hat{\alpha}\|\delta\|^2 \,\middle|\, \|\delta\| \le r\right) \le \epsilon \right\}$$
+$$\hat{R} = \sup \left\{ r \gt 0 : \Pr\left(\delta^T \widehat{F} \lt \hat{\alpha}\Vert\delta\Vert^2 \,\middle|\, \Vert\delta\Vert \le r\right) \le \epsilon \right\}$$
 
 with a chosen violation tolerance $\epsilon$ (e.g., 5%).
 
-### Estimating $\|\delta_{\text{critical}}\|$
+### Estimating $\Vert\delta_{\text{critical}}\Vert$
 
 Define a mission-level performance metric $J$ (reward rate, tracking error, service SLA, etc.). Set the critical mismatch threshold where performance crosses a minimum acceptable level $J_{\min}$:
 
 *[Operational Definition]*
 
-$$\|\hat{\delta}_{\text{critical}}\| = \inf \left\{ d : \mathbb{E}[J \mid \|\delta\| = d] < J_{\min} \right\}$$
+$$\Vert\hat{\delta}_{\text{critical}}\Vert = \inf \left\{ d : \mathbb{E}[J \mid \Vert\delta\Vert = d] \lt J_{\min} \right\}$$
 
 This anchors #persistence-condition to real task outcomes.
 
@@ -103,11 +103,11 @@ This anchors #persistence-condition to real task outcomes.
 
 1. Fix mismatch representation $\delta$ in one consistent unit system (prefer surprise-scale).
 2. Estimate $U_o$ from channel physics/calibration; estimate $U_M$ from model uncertainty.
-3. Validate gain behavior against #update-gain ($\hat{\eta}^*$ trend checks).
+3. Validate gain behavior against #update-gain ($\hat{\eta}^\ast$ trend checks).
 4. Estimate $\rho_{\text{delib}}$ from pause windows ( #deliberation-cost) and $\rho(t)$ from full traces.
 5. Estimate $\alpha$ and $R$ from local correction dynamics ( #sector-condition-derivation).
-6. Estimate $\|\delta_{\text{critical}}\|$ from task-performance degradation.
-7. Compute derived diagnostics: tempo margin $\hat{\mathcal{T}} - \hat{\rho}/\|\hat{\delta}_{\text{critical}}\|$, reserve $\widehat{\Delta \rho^*} = \hat{\alpha}\hat{R} - \hat{\rho}$, and deliberation feasibility $\Delta\eta^*(\Delta\tau)\|\delta_{\text{post}}\| - \hat{\rho}_{\text{delib}}\Delta\tau$.
+6. Estimate $\Vert\delta_{\text{critical}}\Vert$ from task-performance degradation.
+7. Compute derived diagnostics: tempo margin $\hat{\mathcal{T}} - \hat{\rho}/\Vert\hat{\delta}_{\text{critical}}\Vert$, reserve $\widehat{\Delta \rho^\ast} = \hat{\alpha}\hat{R} - \hat{\rho}$, and deliberation feasibility $\Delta\eta^\ast(\Delta\tau)\Vert\delta_{\text{post}}\Vert - \hat{\rho}_{\text{delib}}\Delta\tau$.
 
 ## Decision-Theoretic Procedures
 
@@ -126,25 +126,25 @@ For the heuristic: when $U_M \gg U_o$ (highly uncertain model), exploration is c
 
 ### Deliberation Stopping Policy
 
-From #deliberation-cost, deliberation of duration $\Delta\tau$ is warranted when $\Delta\eta^*(\Delta\tau) \cdot \|\delta_{\text{post}}\| > \rho_{\text{delib}} \cdot \Delta\tau$. Operationally:
+From #deliberation-cost, deliberation of duration $\Delta\tau$ is warranted when $\Delta\eta^\ast(\Delta\tau) \cdot \Vert\delta_{\text{post}}\Vert \gt \rho_{\text{delib}} \cdot \Delta\tau$. Operationally:
 
 1. Estimate $\rho_{\text{delib}}$ from prior pause windows.
-2. Before each deliberation episode, estimate $\|\delta_{\text{post}}\|$ as current mismatch + $\rho_{\text{delib}} \cdot \Delta\tau_{\text{planned}}$.
-3. Estimate $\Delta\eta^*(\Delta\tau)$ from the diminishing-returns profile of past deliberation episodes.
-4. Stop deliberating when the marginal improvement rate $\partial \Delta\eta^* / \partial \Delta\tau$ drops below $\rho_{\text{delib}} / \|\delta_{\text{post}}\|$.
+2. Before each deliberation episode, estimate $\Vert\delta_{\text{post}}\Vert$ as current mismatch + $\rho_{\text{delib}} \cdot \Delta\tau_{\text{planned}}$.
+3. Estimate $\Delta\eta^\ast(\Delta\tau)$ from the diminishing-returns profile of past deliberation episodes.
+4. Stop deliberating when the marginal improvement rate $\partial \Delta\eta^\ast / \partial \Delta\tau$ drops below $\rho_{\text{delib}} / \Vert\delta_{\text{post}}\Vert$.
 
 ### Structural-Switch Trigger
 
 From #structural-adaptation-necessity, structural adaptation is indicated when parametric convergence leaves a mismatch floor. Operationally:
 
-1. Estimate the current mismatch floor $\|\delta\|_{\text{floor}}$ from converged residual statistics.
-2. Estimate post-switch expected mismatch as $\|\delta\|_{\text{new}} \approx \rho / \alpha'$ where $\alpha'$ is the sector bound under the candidate new model class.
+1. Estimate the current mismatch floor $\Vert\delta\Vert_{\text{floor}}$ from converged residual statistics.
+2. Estimate post-switch expected mismatch as $\Vert\delta\Vert_{\text{new}} \approx \rho / \alpha'$ where $\alpha'$ is the sector bound under the candidate new model class.
 3. Estimate transition cost $C_{\text{switch}}$: knowledge loss, retraining time ($\Delta\tau_{\text{switch}}$), and accumulated mismatch during transition ($\rho \cdot \Delta\tau_{\text{switch}}$).
-4. Switch when: $(\|\delta\|_{\text{floor}} - \|\delta\|_{\text{new}}) \cdot T_{\text{horizon}} > C_{\text{switch}}$.
+4. Switch when: $(\Vert\delta\Vert_{\text{floor}} - \Vert\delta\Vert_{\text{new}}) \cdot T_{\text{horizon}} \gt C_{\text{switch}}$.
 
 ## Estimator Uncertainty Guidance
 
-**$\hat{\eta}^*$ (gain estimate).** Approximate variance via the delta method:
+**$\hat{\eta}^\ast$ (gain estimate).** Approximate variance via the delta method:
 
 $$\text{Var}(\hat{\eta}^*) \approx \hat{\eta}^{*2}(1-\hat{\eta}^*)^2 \left[\frac{\text{Var}(\hat{U}_M)}{\hat{U}_M^2} + \frac{\text{Var}(\hat{U}_o)}{\hat{U}_o^2}\right]$$
 

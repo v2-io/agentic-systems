@@ -25,7 +25,7 @@ We work within ACT's scope ( #scope-condition): an agent coupled to an environme
 | $\mathcal{C}_{\tau^-}$ | The complete interaction history ( #chronica) up to (but not including) $e_\tau$ |
 | $\{M_{\tau'}\}_{\tau' \leq \tau^-}$ | The agent's prior internal states, culminating in $M_{\tau^-}$ |
 | $e_\tau$ | The current event (observation arriving or action completing) |
-| $\{e_{\tau'}\}_{\tau' > \tau}$ | Future events (not yet occurred) |
+| $\{e_{\tau'}\}_{\tau' \gt \tau}$ | Future events (not yet occurred) |
 
 The question: of these, which can the update $M_{\tau^+}$ depend on?
 
@@ -33,7 +33,7 @@ The question: of these, which can the update $M_{\tau^+}$ depend on?
 
 **Constraint 1 — Arrow of time ( #causal-structure postulate).** Events are temporally ordered and this ordering is irreversible. An update occurring at time $\tau$ cannot depend on events that have not yet occurred:
 
-$$M_{\tau^+} \text{ cannot depend on } \{e_{\tau'}\}_{\tau' > \tau}$$
+$$M_{\tau^+} \text{ cannot depend on } \{e_{\tau'}\}_{\tau' \gt \tau}$$
 
 This is a physical constraint — the most primitive one. In a classical universe, information from the future is simply not available. Even if the agent can *predict* future events, those predictions are part of $M_{\tau^-}$ (they are internal computations, not future information).
 
@@ -45,7 +45,7 @@ This is a scope constraint. If the agent could access $\Omega$ directly, the res
 
 **Constraint 3 — State completeness ( #agent-model).** $M_{\tau^-}$ is the agent's *complete* internal state just before event $e_\tau$. There is no information about the agent's past that is available to the update mechanism but not encoded in $M_{\tau^-}$:
 
-$$M_{\tau^+} \text{ cannot depend on } \mathcal{C}_{\tau^-} \text{ or } \{M_{\tau'}\}_{\tau' < \tau^-} \text{ except through } M_{\tau^-}$$
+$$M_{\tau^+} \text{ cannot depend on } \mathcal{C}_{\tau^-} \text{ or } \{M_{\tau'}\}_{\tau' \lt \tau^-} \text{ except through } M_{\tau^-}$$
 
 This constraint does the most interesting work and deserves careful examination (see Discussion below).
 
@@ -63,7 +63,7 @@ $$M_{\tau^+} = F(\text{accessible information at } \tau)$$
 
 We characterize the accessible information by eliminating what is not accessible.
 
-**(i) Eliminate future events.** By C1 (arrow of time), $\{e_{\tau'}\}_{\tau' > \tau}$ is not accessible.
+**(i) Eliminate future events.** By C1 (arrow of time), $\{e_{\tau'}\}_{\tau' \gt \tau}$ is not accessible.
 
 After this elimination, the candidate dependency set is:
 $$\{\Omega_\tau,\; \mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; e_\tau\}$$
@@ -73,7 +73,7 @@ $$\{\Omega_\tau,\; \mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; 
 After this elimination:
 $$\{\mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; e_\tau\}$$
 
-**(iii) Reduce past information to $M_{\tau^-}$.** By C3 (state completeness), $M_{\tau^-}$ is the agent's complete internal state. Every element of $\mathcal{C}_{\tau^-}$ and every prior model state $M_{\tau'}$ ($\tau' < \tau^-$) that could influence the update can do so *only through* its effect on $M_{\tau^-}$. The agent's internal state evolves through a sequence of updates; the cumulative effect of all prior events is exactly $M_{\tau^-}$. The raw events that produced this state are no longer separately available — they were "consumed" by the update mechanism and their information (to the extent it was retained) is now encoded in $M_{\tau^-}$.
+**(iii) Reduce past information to $M_{\tau^-}$.** By C3 (state completeness), $M_{\tau^-}$ is the agent's complete internal state. Every element of $\mathcal{C}_{\tau^-}$ and every prior model state $M_{\tau'}$ ($\tau' \lt \tau^-$) that could influence the update can do so *only through* its effect on $M_{\tau^-}$. The agent's internal state evolves through a sequence of updates; the cumulative effect of all prior events is exactly $M_{\tau^-}$. The raw events that produced this state are no longer separately available — they were "consumed" by the update mechanism and their information (to the extent it was retained) is now encoded in $M_{\tau^-}$.
 
 Could the agent maintain a separate log of raw events outside of $M$? It could — but that log *is part of $M$*. Whatever information the agent retains in any form — model parameters, cached data, raw event buffers, metadata — is by definition part of its complete internal state $M_{\tau^-}$. If something is available to the update mechanism and not in $M_{\tau^-}$, then $M_{\tau^-}$ was not the complete state — contradicting C3.
 
@@ -105,7 +105,7 @@ The agent's **information set** at time $\tau$ is the sigma-algebra $\mathcal{I}
 
 - **C1** restricts $\mathcal{I}_\tau^{agent} \subseteq \sigma(\{e_{\tau'} : \tau' \leq \tau\} \cup \{\Omega_\tau\} \cup \{M_{\tau'} : \tau' \leq \tau^-\})$ — no future information.
 - **C2** further restricts: $\sigma(\Omega_\tau) \setminus \sigma(e_\tau)$ is not in $\mathcal{I}_\tau^{agent}$ — the agent cannot condition on aspects of $\Omega_\tau$ not captured by $e_\tau$.
-- **C3** further restricts: $\sigma(\{e_{\tau'} : \tau' < \tau\} \cup \{M_{\tau'} : \tau' < \tau^-\}) \subseteq \sigma(M_{\tau^-})$ from the agent's perspective.
+- **C3** further restricts: $\sigma(\{e_{\tau'} : \tau' \lt \tau\} \cup \{M_{\tau'} : \tau' \lt \tau^-\}) \subseteq \sigma(M_{\tau^-})$ from the agent's perspective.
 
 After all three restrictions: $\mathcal{I}_\tau^{agent} = \sigma(M_{\tau^-}, e_\tau)$.
 

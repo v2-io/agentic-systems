@@ -9,7 +9,7 @@ depends:
 
 # Definition: Model Sufficiency
 
-The fraction of predictive information the model retains relative to the full interaction history; $S = 1$ means the model is a sufficient statistic for prediction, $S < 1$ means predictive information has been lost.
+The fraction of predictive information the model retains relative to the full interaction history; $S = 1$ means the model is a sufficient statistic for prediction, $S \lt 1$ means predictive information has been lost.
 
 ## Formal Expression
 
@@ -24,7 +24,7 @@ where:
 **Boundary values:**
 - $S(M_t) = 1$: $M_t$ is a sufficient statistic — it captures all predictive information in $\mathcal{C}_t$. Knowing the full history beyond $M_t$ adds nothing.
 - $S(M_t) = 0$: $M_t$ retains no predictive information. The model is useless for prediction.
-- $0 < S(M_t) < 1$: partial sufficiency — some predictive information is retained, some lost.
+- $0 \lt S(M_t) \lt 1$: partial sufficiency — some predictive information is retained, some lost.
 
 ## Epistemic Status
 

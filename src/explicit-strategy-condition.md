@@ -18,7 +18,7 @@ An agent benefits from maintaining an explicit strategy $\Sigma_t$ when the cost
 
 An agent benefits from explicit $\Sigma_t$ when:
 
-$$C_{\text{plan}} + C_{\text{maintain}} < C_{\text{explore}} + C_{\text{repair}}$$
+$$C_{\text{plan}} + C_{\text{maintain}} \lt C_{\text{explore}} + C_{\text{repair}}$$
 
 where:
 - $C_{\text{plan}}$: cost of constructing and evaluating the strategy (deliberation, simulation, model queries)

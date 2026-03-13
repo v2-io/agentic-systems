@@ -21,7 +21,7 @@ where $\mathcal{M}$ is the model class — the set of all models the agent can r
 
 **Structural inadequacy condition:**
 
-$$\mathcal{F}(\mathcal{M}) < 1 - \varepsilon$$
+$$\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$$
 
 When this holds, no model $M \in \mathcal{M}$ achieves sufficiency above $1 - \varepsilon$.
 The gap is structural: it cannot be closed by better parameter estimation, more data, or longer training within the current class.

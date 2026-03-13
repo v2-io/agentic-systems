@@ -55,5 +55,5 @@ It includes prediction generation (what the agent expects to see next), uncertai
 In event-driven systems ( #event-driven-dynamics), the between-event interval is variable, making $g_M$ load-bearing for agents that must act or predict between observations.
 
 **Connection to the update gain.**
-The event-driven update $f_M(M_{\tau^-}, e_\tau)$ is where the gain principle ( #update-gain) operates: $\eta^*$ determines how strongly $e_\tau$ shifts $M_t$ away from its prior value.
+The event-driven update $f_M(M_{\tau^-}, e_\tau)$ is where the gain principle ( #update-gain) operates: $\eta^\ast$ determines how strongly $e_\tau$ shifts $M_t$ away from its prior value.
 The recursive form makes the gain's role explicit — it modulates the single-step correction.

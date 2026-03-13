@@ -19,7 +19,7 @@ One complete traversal of the agent-environment feedback loop — the unit of ad
 | **Prolepsis** (πρόληψις) | Anticipation | $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
 | **Aisthesis** (αἴσθησις) | Perception | $o_t$ arrives |
 | **Aporia** (ἀπορία) | Perplexity | $\delta_t = o_t - \hat{o}_t$ |
-| **Epistrophe** (ἐπιστροφή) | Turning-toward | $M_t = M_{t-1} + \eta^* \cdot g(\delta_t)$ |
+| **Epistrophe** (ἐπιστροφή) | Turning-toward | $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$ |
 | **Praxis** (πρᾶξις) | Informed action | $a_t = \pi(M_t)$ |
 
 The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (Prolepsis).
@@ -61,7 +61,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $f$ | Function | Recursive update: $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ |
 | $S(M_t)$ | $\in [0, 1]$ | Model sufficiency ( #model-sufficiency) |
 | $\mathcal{F}(\mathcal{M})$ | $\in [0, 1]$ | Model class fitness ( #model-class-fitness) |
-| $\beta$ | Scalar $> 0$ | Information bottleneck trade-off parameter |
+| $\beta$ | Scalar $\gt 0$ | Information bottleneck trade-off parameter |
 
 
 ## Event-Driven Dynamics ( #event-driven-dynamics)
@@ -74,7 +74,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $\nu^{(k)}$ | Rate (Hz) | Event rate on channel $k$ |
 | $M_{\tau^-}$, $M_{\tau^+}$ | $\in \mathcal{M}$ | Model state just before / after event at $\tau$ |
 | $\mathcal{I}(e_\tau)$ | Scalar $\geq 0$ | Event information content: $I(e_\tau;\, \Omega_\tau \mid M_{\tau^-})$ |
-| $U_o^{(k)}$ | Scalar $> 0$ | Observation uncertainty on channel $k$ |
+| $U_o^{(k)}$ | Scalar $\gt 0$ | Observation uncertainty on channel $k$ |
 
 
 ## Mismatch Signal ( #mismatch-signal)
@@ -91,10 +91,10 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | Symbol | Type | Meaning |
 |--------|------|---------|
 | $\eta$ | Scalar, vector, or matrix | Update gain (general) |
-| $\eta^*$ | Same | Optimal update gain |
-| $\eta^{(k)*}$ | Same | Optimal gain on channel $k$ |
-| $U_M$ | Scalar $> 0$ | Model uncertainty: $\text{Var}_{M_{t-1}}[\hat{o}_t \mid a_{t-1}]$ |
-| $U_o$ | Scalar $> 0$ | Observation uncertainty: $\text{Var}[\varepsilon_t]$ |
+| $\eta^\ast$ | Same | Optimal update gain |
+| $\eta^{(k)\ast}$ | Same | Optimal gain on channel $k$ |
+| $U_M$ | Scalar $\gt 0$ | Model uncertainty: $\text{Var}_{M_{t-1}}[\hat{o}_t \mid a_{t-1}]$ |
+| $U_o$ | Scalar $\gt 0$ | Observation uncertainty: $\text{Var}[\varepsilon_t]$ |
 | $g$ | Function | Mismatch transform: maps mismatch to update direction |
 
 
@@ -110,7 +110,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
-| $\mathcal{T}$ | Rate ($t^{-1}$) | Adaptive tempo: $\sum_k \nu^{(k)} \cdot \eta^{(k)*}$ |
+| $\mathcal{T}$ | Rate ($t^{-1}$) | Adaptive tempo: $\sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$ |
 | $\rho(t)$ | Rate (surprise/time) | Environment change rate (mismatch injection rate) |
 | $\lVert\delta\rVert_{ss}$ | Scalar $\geq 0$ | Steady-state mismatch: $\rho / \mathcal{T}$ (linear approximation) |
 
@@ -121,11 +121,11 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 |--------|------|---------|
 | $F(\mathcal{T}, \delta)$ | Function | Correction function (general nonlinear) |
 | $w(t)$ | Vector | Disturbance (new mismatch), $\lVert w(t)\rVert \leq \rho$ |
-| $\alpha$ | Scalar $> 0$ | Lower sector bound of correction function |
-| $R$ | Scalar $> 0$ | Radius of sector-condition region (model class capacity) |
-| $R^*$ | Scalar $> 0$ | Ultimately bounded mismatch radius: $\rho/\alpha$ |
-| $\Delta\rho^*$ | Scalar $\geq 0$ | Adaptive reserve: $\alpha R - \rho$ |
-| $\gamma_A$ | Scalar $> 0$ | Coupling effectiveness of $A$'s actions on $B$'s disturbance |
+| $\alpha$ | Scalar $\gt 0$ | Lower sector bound of correction function |
+| $R$ | Scalar $\gt 0$ | Radius of sector-condition region (model class capacity) |
+| $R^\ast$ | Scalar $\gt 0$ | Ultimately bounded mismatch radius: $\rho/\alpha$ |
+| $\Delta\rho^\ast$ | Scalar $\geq 0$ | Adaptive reserve: $\alpha R - \rho$ |
+| $\gamma_A$ | Scalar $\gt 0$ | Coupling effectiveness of $A$'s actions on $B$'s disturbance |
 | $V(\delta)$ | Scalar $\geq 0$ | Lyapunov function: $\frac{1}{2}\lVert\delta\rVert^2$ |
 
 
@@ -134,7 +134,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | Symbol | Type | Meaning |
 |--------|------|---------|
 | $\Delta\tau$ | Duration $\geq 0$ | Deliberation duration |
-| $\Delta\eta^*(\Delta\tau)$ | Scalar $\geq 0$ | Gain improvement from deliberation |
+| $\Delta\eta^\ast(\Delta\tau)$ | Scalar $\geq 0$ | Gain improvement from deliberation |
 | $\rho_{\text{delib}}$ | Rate | Local mismatch drift rate during deliberation pauses |
 
 
@@ -162,7 +162,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $U_M$ | Scalar $\in [-1, 1]$ | Epistemic unity (shared model) |
 | $U_O$ | Scalar $\in [-1, 1]$ | Teleological unity (shared objective) |
 | $U_\Sigma$ | Scalar $\in [-1, 1]$ | Strategic unity (coordinated action) |
-| $\eta_{ji}^*$ | Scalar | Communication gain: $U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ |
+| $\eta_{ji}^\ast$ | Scalar | Communication gain: $U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ |
 | $C_{\text{coord}}$ | Rate ($t^{-1}$) | Coordination overhead (tempo-equivalent) |
 
 
@@ -180,7 +180,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 
 **$\lvert\cdot\rvert$**: Cardinality of a set (e.g., $\lvert\mathcal{A}\rvert$). Not for mismatch — use $\lVert\cdot\rVert$.
 
-**Scalar reduction of gain and tempo.** When $\eta^*$ appears as scalar in mismatch dynamics, it represents the effective correction fraction along the current mismatch direction: $\eta^*_{\text{eff}} = \delta^T K \delta / \lVert\delta\rVert^2$. Scalar tempo $\mathcal{T} = \nu \cdot \eta^*_{\text{eff}}$ is the correction rate along this direction. The sector condition parameter $\alpha$ corresponds to the worst-case scalar projection. The full anisotropic treatment requires a tempo tensor; the scalar reduction is valid when correction dynamics are approximately isotropic.
+**Scalar reduction of gain and tempo.** When $\eta^\ast$ appears as scalar in mismatch dynamics, it represents the effective correction fraction along the current mismatch direction: $\eta^\ast_{\text{eff}} = \delta^T K \delta / \lVert\delta\rVert^2$. Scalar tempo $\mathcal{T} = \nu \cdot \eta^\ast_{\text{eff}}$ is the correction rate along this direction. The sector condition parameter $\alpha$ corresponds to the worst-case scalar projection. The full anisotropic treatment requires a tempo tensor; the scalar reduction is valid when correction dynamics are approximately isotropic.
 
 
 ## Units
@@ -189,13 +189,13 @@ The theory uses natural (dimensionless information-theoretic) units where possib
 
 | Quantity | Units | Notes |
 |----------|-------|-------|
-| $\eta^*$ | Dimensionless $\in [0, 1]$ | Ratio |
+| $\eta^\ast$ | Dimensionless $\in [0, 1]$ | Ratio |
 | $\nu^{(k)}$ | Events per unit time (Hz) | |
 | $\mathcal{T}$ | Inverse time ($t^{-1}$) | Effective correction rate |
 | $\rho$ | Surprise $\cdot t^{-1}$ | Mismatch injection rate |
 | $S(M_t)$ | Dimensionless $\in [0, 1]$ | Ratio |
 
-**Dimensional analysis of the mismatch ODE.** In $d\lVert\delta\rVert/dt = -\mathcal{T}\lVert\delta\rVert + \rho$: LHS has units [surprise $\cdot t^{-1}$]; $\mathcal{T}\lVert\delta\rVert$ has $[t^{-1}] \cdot [\text{surprise}]$; $\rho$ has [surprise $\cdot t^{-1}$]. All consistent. Note $\mathcal{T}$ and $\rho$ have different units — the persistence condition $\mathcal{T} > \rho/\lVert\delta_{\text{critical}}\rVert$ is dimensionally consistent. The shorthand "$\mathcal{T} > \rho$" is valid only when $\lVert\delta_{\text{critical}}\rVert$ is normalized to 1.
+**Dimensional analysis of the mismatch ODE.** In $d\lVert\delta\rVert/dt = -\mathcal{T}\lVert\delta\rVert + \rho$: LHS has units [surprise $\cdot t^{-1}$]; $\mathcal{T}\lVert\delta\rVert$ has $[t^{-1}] \cdot [\text{surprise}]$; $\rho$ has [surprise $\cdot t^{-1}$]. All consistent. Note $\mathcal{T}$ and $\rho$ have different units — the persistence condition $\mathcal{T} \gt \rho/\lVert\delta_{\text{critical}}\rVert$ is dimensionally consistent. The shorthand "$\mathcal{T} \gt \rho$" is valid only when $\lVert\delta_{\text{critical}}\rVert$ is normalized to 1.
 
 
 ## Global Assumptions
@@ -208,4 +208,4 @@ Load-bearing assumptions that appear locally but are referenced by multiple resu
 | GA-2 | **Bounded disturbance.** $\lVert w(t)\rVert \leq \rho$ for finite $\rho$. | #sector-condition-stability, #persistence-condition |
 | GA-3 | **Sector condition.** $\delta^T F(\mathcal{T}, \delta) \geq \alpha\lVert\delta\rVert^2$ for $\lVert\delta\rVert \leq R$. | #sector-condition-stability |
 | GA-4 | **Local deliberation drift.** Mismatch accumulates at rate $\rho_{\text{delib}}$ during inaction. | #deliberation-cost |
-| GA-5 | **Fluid limit.** Event rate high relative to dynamics timescale ($\eta^* \ll 1$). | #mismatch-dynamics |
+| GA-5 | **Fluid limit.** Event rate high relative to dynamics timescale ($\eta^\ast \ll 1$). | #mismatch-dynamics |
