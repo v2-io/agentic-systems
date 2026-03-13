@@ -26,7 +26,7 @@ where total expected time given choice $C$ is:
 
 $$E[T \mid C] = t_0(C) + \sum_{i} P(F_i) \cdot \left[ t_{\text{comp}}(F_i \mid C) + t_{\text{impl}}(F_i \mid C) \right]$$
 
-This is the general form of #dual-optimization. Where dual-optimization uses a single "typical future feature" $F_{\text{typical}}$ with count $\hat{n}_{\text{future}}$, this integrates over the full distribution of possible future features $F_i$ with their individual probabilities $P(F_i)$.
+This is the general form of #dual-optimization. Where dual-optimization uses a single "typical future feature" $F_{\text{typical}}$ with count $\hat n_{\text{future}}$, this integrates over the full distribution of possible future features $F_i$ with their individual probabilities $P(F_i)$.
 
 Substituting the proportional relationships from #conceptual-alignment, #changeset-size-principle, and #change-proximity-principle:
 

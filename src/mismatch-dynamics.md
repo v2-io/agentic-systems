@@ -54,6 +54,6 @@ Mismatch decays exponentially from initial conditions toward the steady state.
 
 These nonlinearities are exactly what the sector-condition framework ( #sector-condition-stability) handles.
 
-**Adversarial coupling.** When two agents are coupled ($A$'s actions increase $B$'s $\rho$): $\rho_B = \rho_{B,\text{base}} + \gamma_A \cdot \mathcal{T}_A$. Under linear dynamics with coupling-dominant disturbance, steady-state mismatch ratios scale as $(\mathcal{T}_A/\mathcal{T}_B)^2$ (Cor. 11.2 from TFT — heuristic, confirmed by simulation at exponent 1.999 under deterministic drift). Under stochastic disturbances, the exponent is 3/2, not 2. See #adversarial-tempo-advantage.
+**Adversarial coupling.** When two agents are coupled ($A$'s actions increase $B$'s $\rho$): $\rho_B = \rho_{B,\text{base}} + \gamma_A \cdot \mathcal T_A$. Under linear dynamics with coupling-dominant disturbance, steady-state mismatch ratios scale as $(\mathcal T_A/\mathcal T_B)^2$ (Cor. 11.2 from TFT — heuristic, confirmed by simulation at exponent 1.999 under deterministic drift). Under stochastic disturbances, the exponent is 3/2, not 2. See #adversarial-tempo-advantage.
 
 **(Descended from TF-11.)**

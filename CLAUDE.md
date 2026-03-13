@@ -120,11 +120,5 @@ See `WORKBENCH.md` for the full development state. Summary:
 - `priors/tft/` — TFT submodule (**historical only** — all content copied to `src/old-tf-*` files; no need to read these)
 - `priors/tst/` — TST submodule (**historical only** — all content copied to `src/old-tst-*` files; no need to read these)
 - `refs/` — Reference papers
-- `scratch/` — Working documents, spikes, historical artifacts
-  - `spike-v3-purposeful-agent.md` — Definitive Section II derivation
-  - `spike-agent-composition.md` — Composition/holon theory
-  - `spike-graph-uniqueness.md` — DAG structure uniqueness argument
-  - `04-intent-dag-consolidated.md` — Canonical intent DAG reference
-  - `track-a-intent-dag/` — DAG formalism variants (historical)
-  - `track-b-nonlinear-sims/` — Simulation code and results
+- `scratch/` — Working documents, spikes, historical artifacts - `spike-v3-purposeful-agent.md` — Definitive Section II derivation - `spike-agent-composition.md` — Composition/holon theory - `spike-graph-uniqueness.md` — DAG structure uniqueness argument - `04-intent-dag-consolidated.md` — Canonical intent DAG reference - `track-a-intent-dag/` — DAG formalism variants (historical) - `track-b-nonlinear-sims/` — Simulation code and results
 - `../agentic-tft/` — Prior bridge work: TFT → AI agents. Docs 10-14 relevant to Section V.

@@ -29,7 +29,7 @@ $$\frac{d\delta}{dt} = -F(\mathcal{T}, \delta) + w(t)$$
 
 where:
 
-- $F(\mathcal{T}, \delta): \mathbb{R}_+ \times \mathbb{R}^n \to \mathbb{R}^n$ is the **correction function** — how the agent's adaptive process reduces mismatch. It maps to the same space as $\delta$ (so that the inner product $\delta^T F$ in the sector condition is well-defined). This subsumes the update gain $\eta^\ast$ ( #update-gain), event rate $\nu$, and the structure of the update rule.
+- $F(\mathcal{T}, \delta): \mathbb R_+ \times \mathbb{R}^n \to \mathbb{R}^n$ is the **correction function** — how the agent's adaptive process reduces mismatch. It maps to the same space as $\delta$ (so that the inner product $\delta^T F$ in the sector condition is well-defined). This subsumes the update gain $\eta^\ast$ ( #update-gain), event rate $\nu$, and the structure of the update rule.
 - $w(t)$ is the **disturbance** — new mismatch introduced by environmental change, with $\Vertw(t)\Vert \leq \rho$ (bounded disturbance rate).
 
 The linear case from #mismatch-dynamics has $F(\mathcal{T}, \delta) = \mathcal{T} \cdot \delta$.
@@ -48,7 +48,7 @@ No correction is applied when the model perfectly matches reality.
 
 ### (A2') Local Sector Condition
 
-There exists a region $\mathcal{B}_R = \{\delta : \Vert\delta\Vert \leq R\}$ and $\alpha \gt 0$ such that (following the sector-condition framework of Lur'e[^lure1957]):
+There exists a region $\mathcal B_R = \{\delta : \Vert\delta\Vert \leq R\}$ and $\alpha \gt 0$ such that (following the sector-condition framework of Lur'e[^lure1957]):
 
 *[Assumption A2' (sector-condition)]*
 
@@ -56,7 +56,7 @@ $$\delta^T F(\mathcal{T}, \delta) \geq \alpha \Vert\delta\Vert^2 \quad \forall \
 
 The correction function always points "inward" (reducing mismatch), and its magnitude is bounded below relative to $\Vert\delta\Vert^2$. The linear case has $\alpha = \mathcal{T}$. A saturating correction has $\alpha$ decreasing for large $\Vert\delta\Vert$. A threshold correction has $\alpha = 0$ for small $\Vert\delta\Vert$.
 
-The local form allows the correction to break down outside $\mathcal{B}_R$ — the structural adaptation regime of #structural-adaptation-necessity.
+The local form allows the correction to break down outside $\mathcal B_R$ — the structural adaptation regime of #structural-adaptation-necessity.
 
 ### (A3) Tempo Monotonicity
 
@@ -100,7 +100,7 @@ $$\dot{V} \leq -\alpha\Vert\delta\Vert^2 + \rho\Vert\delta\Vert = -\Vert\delta\V
 
 $\dot{V} \lt 0$ whenever $\Vert\delta\Vert \gt \rho/\alpha$.
 
-Define $R^\ast = \rho/\alpha$. Outside the ball $\mathcal{B}_{R^\ast}$, the Lyapunov function is strictly decreasing, so trajectories are driven inward. Any trajectory entering $\mathcal{B}_{R^\ast}$ remains in a neighborhood of it (with possible oscillation at the boundary due to the disturbance).
+Define $R^\ast = \rho/\alpha$. Outside the ball $\mathcal B_{R^\ast}$, the Lyapunov function is strictly decreasing, so trajectories are driven inward. Any trajectory entering $\mathcal B_{R^\ast}$ remains in a neighborhood of it (with possible oscillation at the boundary due to the disturbance).
 
 The agent persists iff $R^\ast \lt R$, i.e., iff $\rho/\alpha \lt R$, i.e., iff $\alpha \gt \rho/R$. $\square$
 
@@ -155,7 +155,7 @@ The setup and assumptions are *definitions* — they specify what we mean by "co
 
 - The adversarial extension (Prop A.3, coupled agents) and effects spiral (Cor A.3.1) are in #adversarial-destabilization. The multi-timescale sketch (A.4) is in #multi-timescale-stability.
 - The vector treatment of $\delta(t) \in \mathbb{R}^n$ connects directly to per-dimension tempo analysis ( #per-dimension-persistence). Each dimension can have different effective $\alpha_k$ values, and the weakest dimension determines overall persistence — a tensor generalization of the scalar results here.
-- A global sector condition (A2 without the local restriction to $\mathcal{B}_R$) would give global stability, making $\Delta\rho^\ast$ infinite — the agent could absorb any finite disturbance shock. But this requires the correction function to work perfectly at arbitrary mismatch magnitudes, which is unrealistic for any finite model class. The local form (A2') is the honest one.
+- A global sector condition (A2 without the local restriction to $\mathcal B_R$) would give global stability, making $\Delta\rho^\ast$ infinite — the agent could absorb any finite disturbance shock. But this requires the correction function to work perfectly at arbitrary mismatch magnitudes, which is unrealistic for any finite model class. The local form (A2') is the honest one.
 
 ---
 

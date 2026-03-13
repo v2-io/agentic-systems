@@ -135,14 +135,14 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | IV | Derived | | [#dual-optimization](src/dual-optimization.md) | Min comprehension + impl time | draft |
 | IV | Derived | | [#change-investment](src/change-investment.md) | When extra time now pays off | draft |
 | IV | Discussion + Hypothesis | | [#code-quality-as-observation-infrastructure](src/code-quality-as-observation-infrastructure.md) | Code quality $\to U_o \to \eta^\ast \to \mathcal{T}$ | missing |
-| | --GAP-- | | | Developer tempo as $\mathcal{T}_{\text{obs}}$ + $\mathcal{T}_{\text{explore}}$ + $\mathcal{T}_{\text{probe}}$ | |
+| | --GAP-- | | | Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$ | |
 | IV | Hypothesis | | [#conceptual-alignment](src/conceptual-alignment.md) | Code-domain alignment; includes realignment corollary | draft |
 | IV | Definition | | [#atomic-changeset](src/atomic-changeset.md) | The diff that is the feature | draft |
 | IV | Empirical | | [#changeset-size-principle](src/changeset-size-principle.md) | Time ∝ changeset size; includes comprehension corollary | draft |
 | IV | Definition | | [#change-distance](src/change-distance.md) | Lexical < file < module < svc | draft |
 | IV | Derived + Hypothesis | | [#change-proximity-principle](src/change-proximity-principle.md) | Closer changes → less time | draft |
 | IV | Hypothesis | | [#exponential-cognitive-load](src/exponential-cognitive-load.md) | Context-switch cost compounds? | draft |
-| IV | Definition | | [#system-coupling](src/system-coupling.md) | P(change j \| change i) | draft |
+| IV | Definition | | [#system-coupling](src/system-coupling.md) | $P(\text{change } j \mid \text{change } i)$ | draft |
 | IV | Definition | | [#system-coherence](src/system-coherence.md) | $E[\text{proximity within module}]$ | draft |
 | IV | Measurement | | [#coherence-coupling-measurement](src/coherence-coupling-measurement.md) | Coherence/coupling from git | draft |
 | IV | Derived | | [#principled-decision-integration](src/principled-decision-integration.md) | Optimal $C$ minimizes $E[T \vert C]$ | draft |

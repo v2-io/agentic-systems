@@ -10,31 +10,31 @@ depends:
 
 # Observation: Adversarial Exponent Regimes
 
-The adversarial tempo advantage exponent — the power $b$ in $\Vert\delta_B\Vert / \Vert\delta_A\Vert \sim (\mathcal{T}_A / \mathcal{T}_B)^b$ — is not a single number. It depends on two structural features of the disturbance: whether the adversarial coupling enters as deterministic drift or stochastic noise, and whether the coupling dominates the base disturbance rate. Three regimes emerge from simulation.
+The adversarial tempo advantage exponent — the power $b$ in $\Vert\delta_B\Vert / \Vert\delta_A\Vert \sim (\mathcal T_A / \mathcal T_B)^b$ — is not a single number. It depends on two structural features of the disturbance: whether the adversarial coupling enters as deterministic drift or stochastic noise, and whether the coupling dominates the base disturbance rate. Three regimes emerge from simulation.
 
 ## Formal Expression
 
 *[Observation (adversarial-exponent-regimes, from track-b simulations)]*
 
-**Regime 1: Deterministic drift, coupling-dominant.** When adversarial coupling enters as a persistent directional disturbance ($\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal{T}_A$, deterministic) and coupling dominates ($\gamma \cdot \mathcal{T}_B \gg \rho_{\text{base}}$):
+**Regime 1: Deterministic drift, coupling-dominant.** When adversarial coupling enters as a persistent directional disturbance ($\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal T_A$, deterministic) and coupling dominates ($\gamma \cdot \mathcal T_B \gg \rho_{\text{base}}$):
 
 $$b \to 2.0 \qquad \text{(confirmed at 1.999)}$$
 
 This is the exact prediction of the mismatch ODE steady state $\Vert\delta\Vert_{ss} = \rho / \mathcal{T}$.
 
-**Regime 2: Stochastic noise, coupling-dominant.** When adversarial coupling enters through the noise scale of zero-mean perturbations ($\sigma_B = \sigma_{\text{base}} + \gamma \cdot \mathcal{T}_A$) and coupling dominates:
+**Regime 2: Stochastic noise, coupling-dominant.** When adversarial coupling enters through the noise scale of zero-mean perturbations ($\sigma_B = \sigma_{\text{base}} + \gamma \cdot \mathcal T_A$) and coupling dominates:
 
 $$b \to 1.5$$
 
 Root cause: the AR(1) steady-state RMS scales as $\rho / \sqrt{\mathcal{T}}$ (not $\rho / \mathcal{T}$), because variance scales as $\rho^2 / \mathcal{T}$ and the expected absolute deviation scales as the square root of variance.
 
-**Regime 3: Non-coupling-dominant.** When base disturbance is comparable to or exceeds the adversarial coupling ($\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}_B$):
+**Regime 3: Non-coupling-dominant.** When base disturbance is comparable to or exceeds the adversarial coupling ($\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal T_B$):
 
 $$b \to 1.0 \text{ (deterministic)} \quad \text{or} \quad b \to 0.5 \text{ (stochastic)}$$
 
 The exponent degrades smoothly as the base-to-coupling ratio increases.
 
-| $\rho_{\text{base}} / (\gamma \cdot \mathcal{T}_B)$ | Exponent (deterministic) | Exponent (stochastic) |
+| $\rho_{\text{base}} / (\gamma \cdot \mathcal T_B)$ | Exponent (deterministic) | Exponent (stochastic) |
 |:---:|:---:|:---:|
 | 0.002 | 1.999 | 1.481 |
 | 0.20 | 1.877 | 1.101 |
@@ -49,7 +49,7 @@ The exponent degrades smoothly as the base-to-coupling ratio increases.
 
 **The mismatch ODE conflates two quantities.** The equation $d\Vert\delta\Vert/dt = -\mathcal{T} \cdot \Vert\delta\Vert + \rho$ is ambiguous about whether $\rho$ represents deterministic drift (persistent directional change) or stochastic noise scale (unpredictable fluctuations). These give different steady-state scaling: $\rho / \mathcal{T}$ vs. $\rho / \sqrt{\mathcal{T}}$. For the mismatch dynamics ( #mismatch-dynamics), this distinction needs explicit treatment.
 
-**Why the squared law held for the coupling-dominance sweep.** In Variant A, the coupling enters as deterministic drift: $\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal{T}_A$, and the steady state is $\Vert\delta_B\Vert = \rho_B / \mathcal{T}_B$. The ratio $\Vert\delta_B\Vert / \Vert\delta_A\Vert$ in the coupling-dominant limit gives $(\mathcal{T}_A / \mathcal{T}_B)^2$ directly.
+**Why the squared law held for the coupling-dominance sweep.** In Variant A, the coupling enters as deterministic drift: $\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal T_A$, and the steady state is $\Vert\delta_B\Vert = \rho_B / \mathcal T_B$. The ratio $\Vert\delta_B\Vert / \Vert\delta_A\Vert$ in the coupling-dominant limit gives $(\mathcal T_A / \mathcal T_B)^2$ directly.
 
 **Nonlinear correction creates thresholds, not lower exponents.** For saturating, sigmoid, and breakdown correction functions under deterministic drift, the issue is not a reduced exponent but a catastrophic divergence when $\rho$ exceeds the correction capacity ($\rho \gt \mathcal{T} \cdot R$). This is exactly the persistence threshold failure ( #persistence-condition), observed directly in simulation.
 

@@ -86,21 +86,21 @@ Working notes for theory development. This is a thinking tool, not a reference d
 | [continuous-operation](src/continuous-operation.md) | Scope | Extends temporal optimization to include operational failures. |
 
 ### Written — Section III (13 of 13 segments — all written)
-| Slug | Type | Notes |
-|------|------|-------|
-| [multi-agent-scope](src/multi-agent-scope.md) | Scope | Coupling through shared environment. |
-| [composition-closure](src/composition-closure.md) | Formulation | Operationalizes agent boundary as bounded closure defect. Status: conditional (admissibility constraints and norms under-specified). |
-| [tempo-composition](src/tempo-composition.md) | Derived | Sub-additive tempo inequality. Status: sketch (proof incomplete — $\varepsilon^\ast \to C_{\text{coord}}$ mapping open). |
-| [unity-dimensions](src/unity-dimensions.md) | Definition | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping. |
-| [shared-intent](src/shared-intent.md) | Definition | IB-compressed purposeful state for inter-agent communication. Status: discussion-grade. |
-| [auftragstaktik-principle](src/auftragstaktik-principle.md) | Hypothesis | $B_O \gt B_\Sigma \gt B_M$. Bungay evidence. Status: discussion-grade. |
-| [adversarial-destabilization](src/adversarial-destabilization.md) | Derived | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1. |
-| [communication-gain](src/communication-gain.md) | Hypothesis | Trust-weighted inter-agent gain. From TFT Appendix F, F.2. |
-| [adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | Observation | Three regimes: $b=2$ (det/coupled), $b=1.5$ (stoch/coupled), $b \to 1$ (non-coupled). From track-b sims. |
-| [observation-gates-advantage](src/observation-gates-advantage.md) | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E. |
-| [per-dimension-persistence](src/per-dimension-persistence.md) | Result | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F. |
-| [team-persistence](src/team-persistence.md) | Derived | Distributed tempo, cooperative-adversarial $\rho$ decomposition, 3-lever persistence. From TFT F.3. |
-| [adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Result | Superlinear exponent $b=2$ (det/coupled). Analytical result + regime conditions. From TFT Cor 11.2. |
+| Slug                                                                | Type        | Notes                                                                                                                                |
+| ------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [multi-agent-scope](src/multi-agent-scope.md)                       | Scope       | Coupling through shared environment.                                                                                                 |
+| [composition-closure](src/composition-closure.md)                   | Formulation | Operationalizes agent boundary as bounded closure defect. Status: conditional (admissibility constraints and norms under-specified). |
+| [tempo-composition](src/tempo-composition.md)                       | Derived     | Sub-additive tempo inequality. Status: sketch (proof incomplete — $\varepsilon^\ast \to C_{\text{coord}}$ mapping open).             |
+| [unity-dimensions](src/unity-dimensions.md)                         | Definition  | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping.                          |
+| [shared-intent](src/shared-intent.md)                               | Definition  | IB-compressed purposeful state for inter-agent communication. Status: discussion-grade.                                              |
+| [auftragstaktik-principle](src/auftragstaktik-principle.md)         | Hypothesis  | $B_O \gt B_\Sigma \gt B_M$. Bungay evidence. Status: discussion-grade.                                                               |
+| [adversarial-destabilization](src/adversarial-destabilization.md)   | Derived     | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1.                                                           |
+| [communication-gain](src/communication-gain.md)                     | Hypothesis  | Trust-weighted inter-agent gain. From TFT Appendix F, F.2.                                                                           |
+| [adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | Observation | Three regimes: $b=2$ (det/coupled), $b=1.5$ (stoch/coupled), $b \to 1$ (non-coupled). From track-b sims.                             |
+| [observation-gates-advantage](src/observation-gates-advantage.md)   | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E.                                              |
+| [per-dimension-persistence](src/per-dimension-persistence.md)       | Result      | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F.                                                 |
+| [team-persistence](src/team-persistence.md)                         | Derived     | Distributed tempo, cooperative-adversarial $\rho$ decomposition, 3-lever persistence. From TFT F.3.                                  |
+| [adversarial-tempo-advantage](src/adversarial-tempo-advantage.md)   | Result      | Superlinear exponent $b=2$ (det/coupled). Analytical result + regime conditions. From TFT Cor 11.2.                                  |
 
 ### Written — Appendices (8 segments)
 | Slug | Type | Notes |
@@ -209,18 +209,18 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 ## What's Open
 
 - Action-deliberation-exploration tradeoff (three-way with $\Sigma_t$). Existing machinery handles components separately (CIY for explore, $\delta_{\text{regret}}$ for deliberation trigger). Unified policy objective would need a deliberation information value term alongside $\lambda \cdot \text{CIY}$.
-- Strategy tempo formalization ($\mathcal{T}_\Sigma$). Needed for strategy-persistence-schema to have quantitative content. Observation channels that trigger $\Sigma_t$ revision identified (orient cascade steps 4-7); the rate is not formalized.
+- Strategy tempo formalization ($\mathcal T_\Sigma$). Needed for strategy-persistence-schema to have quantitative content. Observation channels that trigger $\Sigma_t$ revision identified (orient cascade steps 4-7); the rate is not formalized.
 - Cognitive cost of $\Sigma_t$ (no $\beta$ analog yet). DAGs don't compress the way probability distributions do — the right framework may be closer to MDL than IB. Critical for finite-context agents. A 500-node DAG is qualitatively different from a 12-node one — for finite-context agents the DAG must fit in working memory. Connects to #information-bottleneck (model compression), #shared-intent (intent compression for communication), and #explicit-strategy-condition (the cost inequality's maintenance term).
 - Edge identifiability conditions (resolved in software, open in general). Edges claim interventional semantics ($p_{ij} = P(j \mid do(i), M_t)$) but update from observational signals. In confounded domains (military, organizational), this is a real causal-identification problem. In software, genuine interventions (tests, deploys, git bisect) are available. Resolution may come from the software domain pushing requirements back up.
 - P3→Markov step in graph uniqueness (sketch, needs tightening)
 - Bridge lemma for composition closure: formally proving small expected component-wise errors guarantee bounded trajectory divergence under Lipschitz stability conditions.
-- **Closure defect → coordination overhead mapping**: the core open problem in tempo-composition. The sub-additive inequality $\mathcal{T}_c \leq \sum \mathcal{T}_i$ is almost certainly correct, but the quantitative relationship $C_{\text{coord}}(\varepsilon^\ast)$ — how closure defect determines the tempo lost to internal reconciliation — is unproved. This is the missing bridge between the composition postulate (Section I) and a formally derived composition threshold. Proving this for the 2-agent case with orthogonal observation channels is the natural first step.
+- **Closure defect → coordination overhead mapping**: the core open problem in tempo-composition. The sub-additive inequality $\mathcal T_c \leq \sum \mathcal T_i$ is almost certainly correct, but the quantitative relationship $C_{\text{coord}}(\varepsilon^\ast)$ — how closure defect determines the tempo lost to internal reconciliation — is unproved. This is the missing bridge between the composition postulate (Section I) and a formally derived composition threshold. Proving this for the 2-agent case with orthogonal observation channels is the natural first step.
 - Strategy persistence schema → result: requires formalizing strategic correction function, characterizing $\rho_\Sigma$ (rate of environmental causal drift), and verifying sector condition. Substantial Lyapunov work.
 - Meta-adaptation of $\Pi$ and $N_h$: can the agent structurally adapt its own policy class and planning horizon? Analogous to model-class change (TF-10). Satisfaction gap's disambiguation table handles descriptively; formal mechanism open.
-- DAG boundary type closure — **PORTED to #strategy-dag.** Leaf base credence ($p_v$) with temporal indexing, unique root terminal, well-formedness constraint, $\hat{P}_\Sigma$ as strategy self-assessment distinct from $A_O$, terminal alignment error as experience-only signal. Spike at `scratch/spike-dag-type-closure.md` (v2). Terminal alignment error ($\delta_\text{align}$) formalization still open.
+- DAG boundary type closure — **PORTED to #strategy-dag.** Leaf base credence ($p_v$) with temporal indexing, unique root terminal, well-formedness constraint, $\hat P_\Sigma$ as strategy self-assessment distinct from $A_O$, terminal alignment error as experience-only signal. Spike at `scratch/spike-dag-type-closure.md` (v2). Terminal alignment error ($\delta_\text{align}$) formalization still open.
 - Adversarial DAG targeting (Section III). Which strategy edges are most valuable to attack? Centrality in the DAG, inter-agent coupling edges, edges observable to the adversary. #chain-confidence-decay as a weapon: disrupting one AND-edge in a deep chain collapses the whole path.
 - Composite directed separation (Section III). If each sub-agent's $f_M$ is $G_t$-independent, is the composite's $f_M^c$ independent of $G_t^c$? Hypothesis: goal-blindness composes, BUT coordination routing may break it — if which observations reach the composite depends on the shared objective, the composite's effective observation function is goal-dependent.
-- Software tempo decomposition (Section IV). Three components: $\mathcal{T}_{\text{obs}}$ (compiler, linter, tests), $\mathcal{T}_{\text{explore}}$ (code reading, navigation), $\mathcal{T}_{\text{probe}}$ (test runs, staging). Which is the bottleneck? Each connects to #code-quality-as-observation-infrastructure. Source: old-tst-via-tft-mapping has the richest treatment.
+- Software tempo decomposition (Section IV). Three components: $\mathcal T_{\text{obs}}$ (compiler, linter, tests), $\mathcal T_{\text{explore}}$ (code reading, navigation), $\mathcal T_{\text{probe}}$ (test runs, staging). Which is the bottleneck? Each connects to #code-quality-as-observation-infrastructure. Source: old-tst-via-tft-mapping has the richest treatment.
 - Section V gaps (all blocked on scope decision):
   - **Cognitive loop formalization.** How does the logogenic agent's cycle differ from the generic orient cascade ( #orient-cascade)? What's specific to language-based agents? Source: `agentic-tft/11-cognitive-loop-spec.md`.
   - **Evaluation framework.** Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents. Connects to creche design. Source: `agentic-tft/12-evaluation-framework.md`.
@@ -475,4 +475,4 @@ All TFT and TST content has been copied into `src/old-*` files. The priors/ subm
 - Multi-agent intent propagation simulation
 - TST testable predictions: specification bound calibration, coherence-coupling measurement
 - Simulations 3–6 from old-tst-via-tft-simulation-proposals (Sims 1–2 done as track-b)
-- **Flagship empirical agenda**: software unmaintainability threshold and measurement program. Formalize $\mathcal{T}_{\text{team}} \gt \rho_{\text{total}} / \lVert\delta_{\text{critical}}\rVert$ with observable precursors. This is where ACT could become decisively useful beyond elegant theory.
+- **Flagship empirical agenda**: software unmaintainability threshold and measurement program. Formalize $\mathcal T_{\text{team}} \gt \rho_{\text{total}} / \lVert\delta_{\text{critical}}\rVert$ with observable precursors. This is where ACT could become decisively useful beyond elegant theory.

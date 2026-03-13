@@ -20,7 +20,7 @@ $$M_t = \phi(\mathcal{C}_t)$$
 
 where:
 - $\phi: \mathcal{C}^\ast \to \mathcal{M}$ maps interaction history to model space $\mathcal{M}$
-- $\mathcal{C}_t = (o_1, a_1, \ldots, o_t)$ is the chronica ( #chronica) — the complete record of agent-environment interaction
+- $\mathcal C_t = (o_1, a_1, \ldots, o_t)$ is the chronica ( #chronica) — the complete record of agent-environment interaction
 - $\mathcal{M}$ is the space of possible models the agent can hold
 
 The mapping $\phi$ is a many-to-one compression: multiple distinct histories may produce the same model state.
@@ -30,16 +30,15 @@ This is not a deficiency — it is the essential function of the model: retainin
 
 This is a *formulation* — a representational commitment, not a derived result.
 We choose to analyze agents as maintaining a state object $M_t$ that mediates between history and future action.
-Alternative formulations exist (e.g., history-based policies that map $\mathcal{C}_t$ directly to actions without an explicit model).
+Alternative formulations exist (e.g., history-based policies that map $\mathcal C_t$ directly to actions without an explicit model).
 The formulation is justified by its analytical utility: it enables the information bottleneck analysis ( #information-bottleneck), the mismatch decomposition ( #mismatch-signal), and the gain principle ( #update-gain).
 
 ## Discussion
 
-**M_t is the epistemic substate.** It captures "what the agent believes about reality."
-Different agents realize $M_t$ differently: a Kalman filter holds a state estimate and covariance matrix; an RL agent holds a value function; a developer holds a mental model of codebase architecture; an LLM agent holds its context window contents plus retrieved memory.
+**M_t is the epistemic substate.** It captures "what the agent believes about reality." Different agents realize $M_t$ differently: a Kalman filter holds a state estimate and covariance matrix; an RL agent holds a value function; a developer holds a mental model of codebase architecture; an LLM agent holds its context window contents plus retrieved memory.
 The formalism is agnostic to the realization — it asks only that $M_t$ exist as a well-defined object that the agent's policy can condition on.
 
-**Completeness assumption.** By writing $M_t = \phi(\mathcal{C}_t)$, we assume that $M_t$ captures everything the agent retains from its history.
+**Completeness assumption.** By writing $M_t = \phi(\mathcal C_t)$, we assume that $M_t$ captures everything the agent retains from its history.
 Any information not in $M_t$ is lost to the agent.
 This is what makes $M_t$ the complete epistemic substate, not merely one component of a richer internal representation.
 Whether $M_t$ retains *enough* information is the subject of #model-sufficiency.

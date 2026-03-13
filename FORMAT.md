@@ -108,31 +108,15 @@ The `## Working Notes` section is for active development: open questions about t
 
 ## Epistemic Triage
 
-Three questions to ask when writing or reviewing any segment. These determine
-the segment's honest `type` and `status` — and, critically, its **maximum
-attainable status** (the strongest epistemic category it could ever occupy,
-regardless of additional work).
+Three questions to ask when writing or reviewing any segment. These determine the segment's honest `type` and `status` — and, critically, its **maximum attainable status** (the strongest epistemic category it could ever occupy, regardless of additional work).
 
 ### The three questions
 
-1. **What prior objects make this claim well-typed?** Which definitions,
-   axioms, or derived results must exist for this claim to even be
-   statable? If the answer is "none" or "only standard math," the claim
-   may be foundational. If it requires many prior objects, it sits later
-   in the dependency chain.
+1. **What prior objects make this claim well-typed?** Which definitions, axioms, or derived results must exist for this claim to even be statable? If the answer is "none" or "only standard math," the claim may be foundational. If it requires many prior objects, it sits later in the dependency chain.
 
-2. **What competing formulation would also fit the prior objects?** If the
-   answer is "none — this is the only form compatible with the priors,"
-   the claim may be a theorem candidate (mathematical inevitability). If
-   several forms work and you're choosing the most useful one, it's a
-   formulation or design principle. Be honest: most claims have
-   alternatives.
+2. **What competing formulation would also fit the prior objects?** If the answer is "none — this is the only form compatible with the priors," the claim may be a theorem candidate (mathematical inevitability). If several forms work and you're choosing the most useful one, it's a formulation or design principle. Be honest: most claims have alternatives.
 
-3. **What observation would falsify this claim in practice?** If a
-   concrete falsifier exists, the claim is empirical or hypothesis. If no
-   observation could distinguish it from alternatives, it may be a
-   definition or tautology, not a testable claim. If it's unfalsifiable
-   *and* not a definition, something is wrong.
+3. **What observation would falsify this claim in practice?** If a concrete falsifier exists, the claim is empirical or hypothesis. If no observation could distinguish it from alternatives, it may be a definition or tautology, not a testable claim. If it's unfalsifiable *and* not a definition, something is wrong.
 
 ### Diagnostic
 
@@ -145,16 +129,9 @@ regardless of additional work).
 
 ### Max attainable status
 
-Each segment has a ceiling — the strongest epistemic status it could ever
-reach, no matter how much work is invested. A segment whose functional form
-is inherently empirical (e.g., #conceptual-alignment) will never become
-`exact`; investing effort to "prove" it is wasted. A segment that's
-discussion-grade because it hasn't been worked yet (e.g., a sketch with a
-clear proof path) may have `exact` as its ceiling.
+Each segment has a ceiling — the strongest epistemic status it could ever reach, no matter how much work is invested. A segment whose functional form is inherently empirical (e.g., #conceptual-alignment) will never become `exact`; investing effort to "prove" it is wasted. A segment that's discussion-grade because it hasn't been worked yet (e.g., a sketch with a clear proof path) may have `exact` as its ceiling.
 
-When the ceiling is clear, note it in the segment's Epistemic Status
-paragraph: *"Max attainable: [status]. Currently [status] because [reason]."*
-This prevents wasted effort and focuses energy where promotion is possible.
+When the ceiling is clear, note it in the segment's Epistemic Status paragraph: *"Max attainable: [status]. Currently [status] because [reason]."* This prevents wasted effort and focuses energy where promotion is possible.
 
 
 ## Equation-Level Tags
@@ -184,7 +161,7 @@ Both forms work in GitHub and Obsidian. The plain `#slug-name` form is preferred
 
 **Forward references are expected.** Segments routinely reference not-yet-written segments via `#slug-name`. These are intentional dependency markers — they document the claim's connections within the theory even before the target segment exists. Do not treat them as broken links or remove them.
 
-**Obsidian tag recognition**: Obsidian treats `#word` as a tag only when preceded by a space (or start of line). Always ensure a space before `#slug-name` — write `( #scope-condition)` not `(#scope-condition)`, and `see #update-gain` not `see#update-gain`.
+**Obsidian tag recognition**: Obsidian treats `#word` as a tag only when preceded by a space (or start of line). Always ensure a space before `#slug-name` — write `( #scope-condition)` not `( #scope-condition)`, and `see #update-gain` not `see#update-gain`.
 
 
 ## Math Formatting
@@ -201,16 +178,16 @@ GitHub's math renderer is stricter than Obsidian's. To keep both working:
 - No space immediately after `$` or before closing `$`:
   `$x^2$` not `$ x^2 $`
 - Display math delimiters `$$` must be on their own lines
-- Use `\begin{aligned}` inside `$$...$$` instead of `\begin{align}`
-  (the latter is a top-level environment that conflicts with `$$` wrapping)
+- Use `\begin{aligned}` inside `$$...$$` instead of `\begin{align}` (the latter is a top-level environment that conflicts with `$$` wrapping)
 - `\text{}` works in both for words inside math
-- `\operatorname{}` for multi-letter operators
-  (e.g., `$\operatorname{argmin}$`)
+- `\operatorname{}` for multi-letter operators (e.g., `$\operatorname{argmin}$`)
 - **Vertical bars**: use `\vert` (not `|`) for single bars and `\Vert` (not `\|`) for double bars, everywhere in math — not just in tables. Raw `|` is ambiguous (conditional? delimiter? absolute value?) and breaks inside markdown table cells; `\|` has inconsistent rendering. For matched delimiters (absolute value, norms, set-builder notation), prefer `\lvert`/`\rvert` and `\lVert`/`\rVert` respectively
 - Subscripts/superscripts with multiple characters need braces:
   `$x_{t+1}$` not `$x_t+1$`
 - Avoid raw `<` and `>` in math — use `\lt` and `\gt` (GitHub can interpret these as HTML tags, breaking the math span and corrupting everything after the `>`)
 - **Asterisks in inline math**: use `\ast` instead of bare `*` inside `$...$`. Markdown's italic/bold parser runs before the math renderer, so `$\eta^*$` can be parsed as `$\eta^` + italic start, destroying the expression. Write `$\eta^\ast$` or `$\eta^{\ast}$`. Display math (`$$...$$` on own lines) is unaffected
+- **Underscores and emphasis interference**: when multiple inline `$...$` spans on the same line contain `_` after a non-alphanumeric character (like `}`), GitHub's emphasis parser can match the `_` characters as italic delimiters *across* math spans, breaking all affected expressions. Fix: remove optional braces from single-character command arguments before `_` — write `$\hat P_\Sigma$` not `$\hat{P}_\Sigma$`, and `$\mathcal T_c$` not `$\mathcal{T}_c$`. The braces are optional for single-char arguments and removing them places an alpha character before `_`, which disables GFM emphasis. For nested commands like `$\hat{\mathcal{T}}_t$` where braces can't be removed, restructure the line so only one subscript-bearing expression appears per line. The linter's `--fix` mode handles the brace-removal cases automatically
+- **Underscores in `\text{}`**: bare `_` inside `\text{}` can break GitHub rendering (the `_` triggers subscript in math mode and emphasis in markdown). Use `-` instead: `$\mathcal{T}_{\text{obs-noise}}$` not `$\mathcal{T}_{\text{obs_noise}}$`. The linter auto-fixes `_` → `-` inside `\text{}`
 
 
 ## Notation Conventions
@@ -223,4 +200,4 @@ Follow TFT conventions. See `notation.md` for ACT's symbol reference. The origin
 - **Subscript $t$**: discrete time or macroscopic continuous time
 - **Subscript $\tau$**: continuous event timestamp (microscopic)
 - **Superscript $(k)$**: channel index
-- **$\mathcal{C}_t$** for chronica (interaction history) — not $\mathcal{H}$ (avoids collision with entropy)
+- **$\mathcal C_t$** for chronica (interaction history) — not $\mathcal{H}$ (avoids collision with entropy)

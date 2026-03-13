@@ -16,9 +16,9 @@ One complete traversal of the agent-environment feedback loop — the unit of ad
 
 | Phase | Greek | Formalism |
 |-------|-------|-----------|
-| **Prolepsis** (πρόληψις) | Anticipation | $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
+| **Prolepsis** (πρόληψις) | Anticipation | $\hat o_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
 | **Aisthesis** (αἴσθησις) | Perception | $o_t$ arrives |
-| **Aporia** (ἀπορία) | Perplexity | $\delta_t = o_t - \hat{o}_t$ |
+| **Aporia** (ἀπορία) | Perplexity | $\delta_t = o_t - \hat o_t$ |
 | **Epistrophe** (ἐπιστροφή) | Turning-toward | $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$ |
 | **Praxis** (πρᾶξις) | Informed action | $a_t = \pi(M_t)$ |
 
@@ -46,7 +46,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
-| $\mathcal{C}_t$ | Sequence | Interaction history (*chronica*): $(o_1, a_1, \ldots, a_{t-1}, o_t)$ |
+| $\mathcal C_t$ | Sequence | Interaction history (*chronica*): $(o_1, a_1, \ldots, a_{t-1}, o_t)$ |
 | $do(\cdot)$ | Operator | Pearl's intervention operator (Level 2) |
 | $\text{CIY}(a)$ | Scalar $\geq 0$ | Causal information yield of action $a$ ( #causal-information-yield) |
 
@@ -57,7 +57,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 |--------|------|---------|
 | $M_t$ | $\in \mathcal{M}$ | Model state (epistemic substate) at time $t$ |
 | $\mathcal{M}$ | Set | Model space (the class of representable models) |
-| $\phi$ | Function | Compression: $M_t = \phi(\mathcal{C}_t)$ |
+| $\phi$ | Function | Compression: $M_t = \phi(\mathcal C_t)$ |
 | $f$ | Function | Recursive update: $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ |
 | $S(M_t)$ | $\in [0, 1]$ | Model sufficiency ( #model-sufficiency) |
 | $\mathcal{F}(\mathcal{M})$ | $\in [0, 1]$ | Model class fitness ( #model-class-fitness) |
@@ -69,7 +69,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | Symbol | Type | Meaning |
 |--------|------|---------|
 | $e$ | Event | An atomic observation or action-completion event |
-| $\tau$ | $\in \mathbb{R}_{\geq 0}$ | Continuous timestamp of an event |
+| $\tau$ | $\in \mathbb R_{\geq 0}$ | Continuous timestamp of an event |
 | $\mathcal{E}$ | Sequence | Event stream: $\{(e_i, \tau_i)\}$ |
 | $\nu^{(k)}$ | Rate (Hz) | Event rate on channel $k$ |
 | $M_{\tau^-}$, $M_{\tau^+}$ | $\in \mathcal{M}$ | Model state just before / after event at $\tau$ |
@@ -81,8 +81,8 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
-| $\hat{o}_t$ | $\in \mathcal{O}$ | Predicted observation: $\mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
-| $\delta_t$ | $\in \mathcal{O}$ | Mismatch signal (prediction error): $o_t - \hat{o}_t$ |
+| $\hat o_t$ | $\in \mathcal{O}$ | Predicted observation: $\mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ |
+| $\delta_t$ | $\in \mathcal{O}$ | Mismatch signal (prediction error): $o_t - \hat o_t$ |
 | $\tilde{\delta}_t$ | $\in T_M\mathcal{M}$ | Score-function mismatch: $-\nabla_M \log P(o_t \mid M_{t-1}, a_{t-1})$ |
 
 
@@ -93,7 +93,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $\eta$ | Scalar, vector, or matrix | Update gain (general) |
 | $\eta^\ast$ | Same | Optimal update gain |
 | $\eta^{(k)\ast}$ | Same | Optimal gain on channel $k$ |
-| $U_M$ | Scalar $\gt 0$ | Model uncertainty: $\text{Var}_{M_{t-1}}[\hat{o}_t \mid a_{t-1}]$ |
+| $U_M$ | Scalar $\gt 0$ | Model uncertainty: $\text{Var}_{M_{t-1}}[\hat o_t \mid a_{t-1}]$ |
 | $U_o$ | Scalar $\gt 0$ | Observation uncertainty: $\text{Var}[\varepsilon_t]$ |
 | $g$ | Function | Mismatch transform: maps mismatch to update direction |
 
@@ -204,7 +204,7 @@ Load-bearing assumptions that appear locally but are referenced by multiple resu
 
 | ID | Assumption | Used by |
 |----|-----------|---------|
-| GA-1 | **Fresh noise.** $\varepsilon_t$ is conditionally independent of $\mathcal{C}_{t-1}$ given $(\Omega_t, a_{t-1})$. | #mismatch-decomposition |
+| GA-1 | **Fresh noise.** $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(\Omega_t, a_{t-1})$. | #mismatch-decomposition |
 | GA-2 | **Bounded disturbance.** $\lVert w(t)\rVert \leq \rho$ for finite $\rho$. | #sector-condition-stability, #persistence-condition |
 | GA-3 | **Sector condition.** $\delta^T F(\mathcal{T}, \delta) \geq \alpha\lVert\delta\rVert^2$ for $\lVert\delta\rVert \leq R$. | #sector-condition-stability |
 | GA-4 | **Local deliberation drift.** Mismatch accumulates at rate $\rho_{\text{delib}}$ during inaction. | #deliberation-cost |

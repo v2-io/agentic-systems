@@ -105,14 +105,14 @@ $$\mathcal{T}_i = \frac{\nu}{k} \cdot \alpha = 0.25 \times 0.091 = 0.023 \;\text
 
 **Per-arm drift rate:** $\rho_i = \sqrt{q} = 0.1 \;\text{reward units} \cdot \text{step}^{-1}$.
 
-**Persistence check:** $\mathcal{T}_i = 0.023$ vs $\rho_i = 0.1$ — **fails**. Per-arm correction tempo is too low relative to drift. The agent cannot keep all arms' estimates current under uniform exploration.
+**Persistence check:** $\mathcal T_i = 0.023$ vs $\rho_i = 0.1$ — **fails**. Per-arm correction tempo is too low relative to drift. The agent cannot keep all arms' estimates current under uniform exploration.
 
 **Interpretation.** This is expected and informative. ACT diagnoses exactly why: with 4 arms and one pull per step, each arm is visited too infrequently to track its drifting mean. Two remedies:
 
 1. **Increase $\eta^\ast$** (raise $\alpha$): Extract more per observation, but increase steady-state noise.
 2. **Concentrate $\nu$**: Abandon uniform exploration. Focus pulls on a subset, increasing per-arm $\nu/k_{\text{active}}$. This is exactly what a good UCB policy does.
 
-With focused exploration ($k_{\text{active}} = 2$, $\alpha = 0.2$): $\mathcal{T}_i = 0.5 \times 0.2 = 0.1$ — barely meets the threshold. The fundamental tension: with limited pulls and significant drift, the agent must accept either failing to track some arms or using high $\alpha$ that introduces noise.
+With focused exploration ($k_{\text{active}} = 2$, $\alpha = 0.2$): $\mathcal T_i = 0.5 \times 0.2 = 0.1$ — barely meets the threshold. The fundamental tension: with limited pulls and significant drift, the agent must accept either failing to track some arms or using high $\alpha$ that introduces noise.
 
 **Aggregate failure.** $\mathcal{T} = \nu \cdot \alpha = 0.091$ vs $\rho = k \cdot \sqrt{q} = 0.4$. The agent's total adaptive capacity is outpaced by total environmental drift — a regime where model-based approaches (Bayesian bandits, Kalman bandit filters) with higher effective $\eta^\ast$ have a structural advantage.
 
@@ -139,7 +139,7 @@ The mapping status is *conditional* because the quantitative relationships depen
 
 ## Working Notes
 
-- The per-arm analysis is a natural instance of the per-dimension tempo decomposition ( #per-dimension-persistence): each arm is an independent mismatch dimension with its own $\mathcal{T}_i$ and $\rho_i$. The aggregate tempo overstates effective adaptation along any individual arm's dimension — exactly the failure mode that the scalar-to-tensor generalization captures.
+- The per-arm analysis is a natural instance of the per-dimension tempo decomposition ( #per-dimension-persistence): each arm is an independent mismatch dimension with its own $\mathcal T_i$ and $\rho_i$. The aggregate tempo overstates effective adaptation along any individual arm's dimension — exactly the failure mode that the scalar-to-tensor generalization captures.
 - A Bayesian bandit (maintaining per-arm posteriors with exponential discounting) would achieve higher #model-sufficiency by representing its own uncertainty, yielding an adaptive $\eta^\ast$ that matches the ACT-optimal form. Comparing Q-learner vs Bayesian bandit performance under nonstationarity is a direct test of #update-gain's structural claim.
 - Reward-unit and surprise-unit formulations coincide up to normalization by $\sigma^2$. For this example ($\sigma = 1$), they are identical.
 

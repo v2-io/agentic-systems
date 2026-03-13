@@ -75,8 +75,8 @@ using windows where corrective action is suspended or effectively delayed.
 #sector-condition-derivation uses $\delta^T F(\mathcal{T}, \delta) \geq \alpha \Vert\delta\Vert^2$ for $\Vert\delta\Vert \leq R$. Operationally:
 
 1. Estimate $\dot{\delta}_t$ (finite differences or filtered derivative).
-2. Compute $\widehat{F}_t = -\dot{\delta}_t + w_t$ where disturbance proxy $w_t$ is estimated from exogenous perturbation channels or residual balancing.
-3. Form ratios $r_t = (\delta_t^T \widehat{F}_t) / \Vert\delta_t\Vert^2$ on bins of $\Vert\delta_t\Vert$.
+2. Compute $\widehat F_t = -\dot{\delta}_t + w_t$ where disturbance proxy $w_t$ is estimated from exogenous perturbation channels or residual balancing.
+3. Form ratios $r_t = (\delta_t^T \widehat F_t) / \Vert\delta_t\Vert^2$ on bins of $\Vert\delta_t\Vert$.
 4. Set conservative lower bound $\hat{\alpha}$ as a low quantile (e.g., 10th percentile) of $r_t$ in the valid region.
 
 ### Estimating $R$ (valid-region radius)
@@ -120,7 +120,7 @@ The exploration weight $\lambda(M_t)$ in #causal-information-yield's policy obje
 | Finite bandits | Gittins index from dynamic programming | Exact (Gittins 1979) |
 | Linear-Gaussian | Probing cost in quadratic objective | Exact (dual control) |
 | Discrete MDP | $(\text{VoI})^2 / \text{info gain}$ | Information-directed sampling (Russo & Van Roy) |
-| General | $\hat{\lambda} = c \cdot \hat{U}_M / \hat{U}_o$ | Heuristic: scale CIY weight by relative uncertainty |
+| General | $\hat{\lambda} = c \cdot \hat U_M / \hat U_o$ | Heuristic: scale CIY weight by relative uncertainty |
 
 For the heuristic: when $U_M \gg U_o$ (highly uncertain model), exploration is cheap relative to exploitation risk, so $\lambda$ should be large. When $U_M \ll U_o$ (confident model, noisy observations), exploitation dominates. The constant $c$ is domain-specific.
 

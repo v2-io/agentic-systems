@@ -18,11 +18,11 @@ The fraction of predictive information the model retains relative to the full in
 $$S(M_t) = 1 - \frac{I(\mathcal{C}_t;\, o_{t+1:\infty} \mid M_t,\, a_{t:\infty})}{I(\mathcal{C}_t;\, o_{t+1:\infty} \mid a_{t:\infty})}$$
 
 where:
-- The numerator $I(\mathcal{C}_t;\, o_{t+1:\infty} \mid M_t,\, a_{t:\infty})$ is the predictive information that the full history $\mathcal{C}_t$ carries about the future *beyond* what $M_t$ already captures — the information lost by compression
-- The denominator $I(\mathcal{C}_t;\, o_{t+1:\infty} \mid a_{t:\infty})$ is the total predictive information in the full history
+- The numerator $I(\mathcal C_t;\, o_{t+1:\infty} \mid M_t,\, a_{t:\infty})$ is the predictive information that the full history $\mathcal C_t$ carries about the future *beyond* what $M_t$ already captures — the information lost by compression
+- The denominator $I(\mathcal C_t;\, o_{t+1:\infty} \mid a_{t:\infty})$ is the total predictive information in the full history
 
 **Boundary values:**
-- $S(M_t) = 1$: $M_t$ is a sufficient statistic — it captures all predictive information in $\mathcal{C}_t$. Knowing the full history beyond $M_t$ adds nothing.
+- $S(M_t) = 1$: $M_t$ is a sufficient statistic — it captures all predictive information in $\mathcal C_t$. Knowing the full history beyond $M_t$ adds nothing.
 - $S(M_t) = 0$: $M_t$ retains no predictive information. The model is useless for prediction.
 - $0 \lt S(M_t) \lt 1$: partial sufficiency — some predictive information is retained, some lost.
 

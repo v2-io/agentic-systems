@@ -20,13 +20,13 @@ For any agent-environment pair within ACT's scope ( #scope-condition), when obse
 
 $$\mathbb{E}[\Vert\delta_t\Vert^2] = \underbrace{\mathbb{E}[\Vert\hat{o}_t - \bar{o}_t\Vert^2]}_{\text{model error (reducible)}} + \underbrace{\mathbb{E}[\text{Var}(o_t \mid \Omega_t, a_{t-1})]}_{\text{observation noise (irreducible)}} \gt 0$$
 
-where $\bar{o}_t = \mathbb{E}[o_t \mid \Omega_t, a_{t-1}]$ is the true conditional mean.
+where $\bar o_t = \mathbb{E}[o_t \mid \Omega_t, a_{t-1}]$ is the true conditional mean.
 
 ### Derivation
 
-1. By #scope-condition, $H(\Omega_t \mid \mathcal{C}_t) \gt 0$ — residual uncertainty persists.
-2. By #agent-model, the model generates predictions $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$.
-3. Decompose mismatch into model error and noise. The cross-term vanishes by the fresh-noise assumption: $\varepsilon_t$ is conditionally independent of $\mathcal{C}_{t-1}$ given $(\Omega_t, a_{t-1})$. Condition on $(\Omega_t, a_{t-1})$; then $\bar{o}_t - \hat{o}_t$ is fixed and $\mathbb{E}[o_t - \bar{o}_t \mid \Omega_t, a_{t-1}] = 0$ by definition of $\bar{o}_t$. The outer expectation gives zero. This is orthogonality (uncorrelated), not independence.
+1. By #scope-condition, $H(\Omega_t \mid \mathcal C_t) \gt 0$ — residual uncertainty persists.
+2. By #agent-model, the model generates predictions $\hat o_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$.
+3. Decompose mismatch into model error and noise. The cross-term vanishes by the fresh-noise assumption: $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(\Omega_t, a_{t-1})$. Condition on $(\Omega_t, a_{t-1})$; then $\bar o_t - \hat o_t$ is fixed and $\mathbb{E}[o_t - \bar o_t \mid \Omega_t, a_{t-1}] = 0$ by definition of $\bar o_t$. The outer expectation gives zero. This is orthogonality (uncorrelated), not independence.
 4. Term (ii) is positive when observation noise is non-degenerate. Term (i) is positive when the model's predictive mean differs from the true conditional mean. Either suffices.
 
 ## Epistemic Status

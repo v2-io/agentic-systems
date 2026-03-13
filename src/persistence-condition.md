@@ -35,8 +35,7 @@ From the sector-condition analysis ( #sector-condition-stability):
    $\dot{V} \leq -\alpha\Vert\delta\Vert^2 + \rho\Vert\delta\Vert$
 3. This gives $\dot{V} \lt 0$ when $\Vert\delta\Vert \gt \rho/\alpha$.
 4. Ultimate bound: $\Vert\delta\Vert \leq R^\ast = \rho/\alpha$.
-5. The agent persists (mismatch stays bounded within tolerance) when
-   $R^\ast \lt \Vert\delta_{\text{critical}}\Vert$, i.e., $\alpha \gt \rho/\Vert\delta_{\text{critical}}\Vert$.
+5. The agent persists (mismatch stays bounded within tolerance) when $R^\ast \lt \Vert\delta_{\text{critical}}\Vert$, i.e., $\alpha \gt \rho/\Vert\delta_{\text{critical}}\Vert$.
 
 The full proof is in Appendix A (Prop A.1). $\square$
 

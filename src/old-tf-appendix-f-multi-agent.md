@@ -18,7 +18,7 @@ For agents $i = 1, \ldots, N$, each maintains its own TFT state:
 
 - $M_i$: local model (TF-03)
 - $\delta_i$: local mismatch (TF-05)
-- $\eta_i^\ast$, $\mathcal{T}_i$, $\alpha_i$, $R_i$: local gain, tempo, sector bound, model class capacity (TF-06, TF-11, App. A)
+- $\eta_i^\ast$, $\mathcal T_i$, $\alpha_i$, $R_i$: local gain, tempo, sector bound, model class capacity (TF-06, TF-11, App. A)
 
 ### Coupled Update
 
@@ -126,7 +126,7 @@ The effective disturbance rate for agent $i$ decomposes into environment, advers
 *[Formulation (disturbance-decomposition)]*
 $$\rho_i = \rho_{i,\text{env}} + \sum_{j \in \mathcal{A}_i} \gamma_{j \to i}^{\text{adv}} \, \mathcal{T}_j - \sum_{j \in \mathcal{C}_i} \gamma_{j \to i}^{\text{coop}} \, \mathcal{T}_j$$
 
-where $\mathcal{A}_i$ is the set of agents adversarially coupled to $i$, $\mathcal{C}_i$ is the set cooperatively coupled, and the $\gamma$ coefficients capture coupling effectiveness (as in TF-11 and Appendix A).
+where $\mathcal A_i$ is the set of agents adversarially coupled to $i$, $\mathcal C_i$ is the set cooperatively coupled, and the $\gamma$ coefficients capture coupling effectiveness (as in TF-11 and Appendix A).
 
 **The cooperative term is negative.** Allies *reduce* agent $i$'s effective disturbance by sharing information that preemptively corrects mismatch. This is the formal content of why teams can persist in environments where individuals cannot: the cooperative communication tempo offsets environment disturbance that would exceed any single agent's capacity.
 
@@ -150,12 +150,12 @@ $$\frac{\rho_{i,\text{env}} + \sum_j \gamma_{j \to i}^{\text{adv}} \mathcal{T}_j
 
 This reveals three distinct levers for team persistence:
 1. **Increase $\alpha_i$** (individual correction efficiency) — better models, better gain calibration
-2. **Increase cooperative tempo** ($\gamma^{\text{coop}} \mathcal{T}_j$) — more reliable allies, faster communication
-3. **Reduce adversarial coupling** ($\gamma^{\text{adv}} \mathcal{T}_j$) — better deception detection, reduced exposure
+2. **Increase cooperative tempo** ($\gamma^{\text{coop}} \mathcal T_j$) — more reliable allies, faster communication
+3. **Reduce adversarial coupling** ($\gamma^{\text{adv}} \mathcal T_j$) — better deception detection, reduced exposure
 
 ### Coordination Overhead
 
-Communication channels have costs: time to compose/parse messages, bandwidth limitations, synchronization requirements, meeting overhead. These costs reduce the agent's effective tempo by diverting time and compute from direct adaptation. Let $\Delta \mathcal{T}_i^{\text{cost}}(j)$ represent the **tempo-equivalent coordination cost** of maintaining the communication channel with $j$ — the reduction in $i$'s direct observation tempo caused by the overhead, in units of $[t^{-1}]$.
+Communication channels have costs: time to compose/parse messages, bandwidth limitations, synchronization requirements, meeting overhead. These costs reduce the agent's effective tempo by diverting time and compute from direct adaptation. Let $\Delta \mathcal T_i^{\text{cost}}(j)$ represent the **tempo-equivalent coordination cost** of maintaining the communication channel with $j$ — the reduction in $i$'s direct observation tempo caused by the overhead, in units of $[t^{-1}]$.
 
 The net benefit of adding agent $j$ to $i$'s communication network is positive only when the communication tempo gained exceeds the direct-adaptation tempo lost:
 
@@ -233,7 +233,7 @@ For implementing multi-agent TFT, the following quantities should be tracked per
 | $r_{ji}$ | Reliability calibration of source $j$ | Running Brier/log-loss score against subsequent ground truth |
 | $d_{ji}$ | Communication delay | Direct measurement of message latency |
 | $A_{ji}$ | Alignment score | Inferred from agreement on verifiable predictions; domain-specific |
-| $\Delta\mathcal{T}_i^{\text{cost}}$ | Tempo-equivalent coordination cost | Direct-adaptation tempo lost to communication overhead $[t^{-1}]$ |
+| $\Delta\mathcal T_i^{\text{cost}}$ | Tempo-equivalent coordination cost | Direct-adaptation tempo lost to communication overhead $[t^{-1}]$ |
 | $V_{\text{disagree}}$ | Network disagreement energy | $\sum_{(i,j)} w_{ij} \VertM_i - M_j\Vert^2$; high with low mismatch → trust miscalibration |
 
 ### Practical Control Rules
@@ -249,7 +249,7 @@ If the multi-agent extension's core claims are wrong, the following observable f
 
 1. **Adaptive communication gain outperforms fixed trust.** The communication gain hypothesis (F.2) predicts that $\eta_{ji}^\ast = U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ should yield lower steady-state mismatch than any fixed trust weight $w_{ji}$ when source reliability varies over time or across contexts. **Falsified if**: in a multi-agent estimation task with heterogeneous and time-varying source reliability, a well-tuned *fixed* trust weight consistently matches or outperforms the adaptive communication gain across a range of drift rates and source-failure scenarios. This would indicate that the additional uncertainty terms ($U_{\text{src}}$, $U_{\text{align}}$) either don't carry usable information or that the overhead of estimating them exceeds their value.
 
-2. **Cooperative communication enables persistence beyond individual capacity.** The team persistence condition (F.3) predicts that agents with $\mathcal{T}_i \lt \rho_i / R_i$ individually (insufficient solo tempo) can persist when cooperative communication provides enough distributed tempo to close the gap. Specifically: adding a reliable ally with tempo $\mathcal{T}_j$ and cooperative coupling $\gamma_{j \to i}^{\text{coop}}$ should reduce $i$'s effective $\rho_i$ by $\gamma_{j \to i}^{\text{coop}} \mathcal{T}_j$, bringing the persistence condition into range. **Falsified if**: in a controlled setting, adding cooperative communication channels with measured $\gamma^{\text{coop}}$ and $\mathcal{T}_j$ does *not* reduce $i$'s steady-state mismatch by the predicted amount. This would indicate the cooperative $\rho$ decomposition is structurally wrong — cooperation helps through a mechanism not captured by the additive disturbance model.
+2. **Cooperative communication enables persistence beyond individual capacity.** The team persistence condition (F.3) predicts that agents with $\mathcal T_i \lt \rho_i / R_i$ individually (insufficient solo tempo) can persist when cooperative communication provides enough distributed tempo to close the gap. Specifically: adding a reliable ally with tempo $\mathcal T_j$ and cooperative coupling $\gamma_{j \to i}^{\text{coop}}$ should reduce $i$'s effective $\rho_i$ by $\gamma_{j \to i}^{\text{coop}} \mathcal T_j$, bringing the persistence condition into range. **Falsified if**: in a controlled setting, adding cooperative communication channels with measured $\gamma^{\text{coop}}$ and $\mathcal T_j$ does *not* reduce $i$'s steady-state mismatch by the predicted amount. This would indicate the cooperative $\rho$ decomposition is structurally wrong — cooperation helps through a mechanism not captured by the additive disturbance model.
 
 3. **Risk-adjusted transitive trust outperforms Bayesian mean trust under adversarial contamination.** The HILP/LIHP trust adjustment (F.2) predicts that using a conservative quantile $Q_p[\theta_k]$ rather than the posterior mean $\mathbb{E}[\theta_k]$ for setting $U_{\text{align}}$ should yield better *worst-case* mismatch in environments with occasional deceptive sources, at the cost of slightly worse *average-case* efficiency. **Falsified if**: in a multi-agent setting with a known fraction of adversarial sources, conservative-quantile trust does not improve worst-case mismatch relative to mean trust, or if the average-case efficiency cost is so large that total mismatch is higher. This would indicate that the risk-asymmetric adjustment overcorrects — that the HILP tail risk is already adequately handled by the Bayesian posterior without additional conservatism.
 
@@ -276,6 +276,6 @@ These predictions target the extension's three main hypotheses (communication ga
 | Update | $M^+ = M^- + \eta \, g(\delta)$ | + communication term $\sum_j w_{ji} \eta_{ji} h_{ji}(M_j, M_i)$ |
 | Gain | $\eta^\ast = U_M/(U_M + U_o)$ | $\eta_{ji}^\ast = U_{M_i}/(U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji})$ |
 | Tempo | $\mathcal{T} = \sum_k \nu^{(k)} \eta^{(k)\ast}$ | + $\sum_j \nu_{ji}^{\text{comm}} \eta_{ji}^\ast$ (communication channels) |
-| Disturbance | $\rho$ (exogenous or adversarial) | $\rho_i = \rho_{\text{env}} + \gamma^{\text{adv}} \mathcal{T}_j - \gamma^{\text{coop}} \mathcal{T}_j$ |
+| Disturbance | $\rho$ (exogenous or adversarial) | $\rho_i = \rho_{\text{env}} + \gamma^{\text{adv}} \mathcal T_j - \gamma^{\text{coop}} \mathcal T_j$ |
 | Persistence | $\alpha \gt \rho / R$ | Same, with cooperative $\rho$ reduction |
 | New quantities | — | $U_{\text{src}}$, $U_{\text{align}}$, $C^{\text{coord}}$, $V_{\text{disagree}}$ |

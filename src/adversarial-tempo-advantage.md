@@ -16,7 +16,7 @@ Under adversarial coupling where one agent's actions contribute to the other's d
 
 *[Derived (adversarial-tempo-advantage, from mismatch-dynamics steady state and adversarial-destabilization coupling model)]*
 
-**Setup.** Two agents $A$ and $B$ with adaptive tempos $\mathcal{T}_A$ and $\mathcal{T}_B$, coupled via the same model as #adversarial-destabilization:
+**Setup.** Two agents $A$ and $B$ with adaptive tempos $\mathcal T_A$ and $\mathcal T_B$, coupled via the same model as #adversarial-destabilization:
 
 $$\rho_A = \rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B, \qquad \rho_B = \rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A$$
 
@@ -36,7 +36,7 @@ $$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} = \frac{(\rho_{\text{b
 
 ### Coupling-Dominant Limit
 
-In the coupling-dominant regime ($\gamma_A \cdot \mathcal{T}_A \gg \rho_{\text{base}}$ and $\gamma_B \cdot \mathcal{T}_B \gg \rho_{\text{base}}$), the base disturbance becomes negligible:
+In the coupling-dominant regime ($\gamma_A \cdot \mathcal T_A \gg \rho_{\text{base}}$ and $\gamma_B \cdot \mathcal T_B \gg \rho_{\text{base}}$), the base disturbance becomes negligible:
 
 $$\frac{\Vert\delta_B\Vert_{ss}}{\Vert\delta_A\Vert_{ss}} \to \frac{\gamma_A \cdot \mathcal{T}_A^2}{\gamma_B \cdot \mathcal{T}_B^2} = \frac{\gamma_A}{\gamma_B} \cdot \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^2$$
 
@@ -50,9 +50,9 @@ The exponent is $b = 2$: a **squared** tempo advantage. A 2:1 tempo ratio yields
 
 From #mismatch-dynamics, the steady-state condition $d\Vert\delta\Vert/dt = 0$ gives $\Vert\delta\Vert_{ss} = \rho / \mathcal{T}$.
 
-1. Substitute the coupling model into $B$'s steady state: $\Vert\delta_B\Vert_{ss} = (\rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A) / \mathcal{T}_B$.
+1. Substitute the coupling model into $B$'s steady state: $\Vert\delta_B\Vert_{ss} = (\rho_{\text{base}} + \gamma_A \cdot \mathcal T_A) / \mathcal T_B$.
 
-2. Substitute the coupling model into $A$'s steady state: $\Vert\delta_A\Vert_{ss} = (\rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B) / \mathcal{T}_A$.
+2. Substitute the coupling model into $A$'s steady state: $\Vert\delta_A\Vert_{ss} = (\rho_{\text{base}} + \gamma_B \cdot \mathcal T_B) / \mathcal T_A$.
 
 3. Form the ratio:
 
@@ -76,7 +76,7 @@ The squared law ($b = 2$) holds under deterministic drift coupling and coupling-
 
 **Regime 2 (stochastic).** When the adversarial coupling enters as zero-mean noise rather than persistent drift, the steady-state RMS mismatch scales as $\rho / \sqrt{\mathcal{T}}$ (because the stationary variance of the AR(1) process scales as $\rho^2 / \mathcal{T}$, and absolute deviation scales as the square root of variance). Substituting into the ratio yields $b = 3/2$ in the coupling-dominant limit.
 
-**Regime 3 (non-coupling-dominant).** When $\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}$, the base disturbance dominates and the coupling terms become a perturbation. The mismatch ratio degrades toward $\mathcal{T}_A / \mathcal{T}_B$ (linear, $b = 1$) for deterministic dynamics, or toward $(\mathcal{T}_A / \mathcal{T}_B)^{1/2}$ for stochastic.
+**Regime 3 (non-coupling-dominant).** When $\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}$, the base disturbance dominates and the coupling terms become a perturbation. The mismatch ratio degrades toward $\mathcal T_A / \mathcal T_B$ (linear, $b = 1$) for deterministic dynamics, or toward $(\mathcal T_A / \mathcal T_B)^{1/2}$ for stochastic.
 
 The simulation validation across all three regimes is in #adversarial-exponent-regimes.
 
@@ -100,7 +100,7 @@ Max attainable: exact conditional on the mismatch dynamics and coupling model. T
 
 ## Working Notes
 
-- The analysis treats each agent's tempo as exogenous — $\mathcal{T}_A$ does not change in response to $B$'s actions and vice versa. A fully coupled analysis where both agents' mismatch states co-evolve simultaneously (joint Lyapunov function over $(\delta_A, \delta_B)$) is the open extension. The decoupled result is a worst-case bound for the slower agent: in practice, the faster agent may divert adaptive capacity to generating disturbance rather than correcting its own mismatch, creating a self-limiting effect.
+- The analysis treats each agent's tempo as exogenous — $\mathcal T_A$ does not change in response to $B$'s actions and vice versa. A fully coupled analysis where both agents' mismatch states co-evolve simultaneously (joint Lyapunov function over $(\delta_A, \delta_B)$) is the open extension. The decoupled result is a worst-case bound for the slower agent: in practice, the faster agent may divert adaptive capacity to generating disturbance rather than correcting its own mismatch, creating a self-limiting effect.
 - The stochastic exponent ($b = 3/2$) is derived from the AR(1) stationary variance scaling, which is exact for the discrete process. The continuous-time analog (Ornstein-Uhlenbeck) gives the same scaling. A full derivation from the stochastic mismatch SDE would unify Regimes 1 and 2 under a single framework with drift and diffusion terms.
 - Asymmetric coupling ($\gamma_A \neq \gamma_B$) appears as a multiplicative prefactor $\gamma_A / \gamma_B$ that shifts the mismatch ratio without changing the exponent. An agent with lower tempo but higher coupling effectiveness ($\gamma$) can partially compensate — but the squared dependence on tempo dominates for large tempo ratios.
 

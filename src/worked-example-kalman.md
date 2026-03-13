@@ -56,7 +56,7 @@ With $P^- = 4.25$: $\text{CIY}(H) \approx 0.161 \text{ nats}$.
 
 *Mapping: exact.*
 
-Model state $M_t = (\hat{x}_{t|t}, P_{t|t})$ — a compression of interaction history with recursive update.
+Model state $M_t = (\hat x_{t|t}, P_{t|t})$ — a compression of interaction history with recursive update.
 
 ### Mismatch ( #mismatch-signal)
 
