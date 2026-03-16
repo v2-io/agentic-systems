@@ -1,6 +1,0 @@
-[submodule "priors/tft"]
-	path = priors/tft
-	url = https://github.com/v2-io/temporal-feedback.git
-[submodule "priors/tst"]
-	path = priors/tst
-	url = https://github.com/v2-io/tst.git
