@@ -852,9 +852,12 @@ def main():
         args.remove('--fix')
 
     if not args:
-        # Default: top-level *.md files
+        # Default: top-level *.md plus act-core/ and act-core/src/
         root = Path(__file__).resolve().parent.parent
-        args = sorted(str(p) for p in root.glob('*.md'))
+        paths = list(root.glob('*.md'))
+        paths += list((root / 'act-core').glob('*.md'))
+        paths += list((root / 'act-core' / 'src').glob('*.md'))
+        args = sorted(str(p) for p in paths)
 
     total = 0
     for filepath in args:
