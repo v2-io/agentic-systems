@@ -2,34 +2,45 @@
 
 A research framework for adaptive, purposeful agents under uncertainty — integrating control theory, causal inference, information theory, and agent architecture under a common formalism.
 
-## The Two Layers
+## Structure
 
-**[Agentic Cycle Theory (ACT)](act-core/README.md)** is the mathematical core. It formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis. The cycle unfolds in five phases (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis), and everything in the core theory is ultimately about cycle properties: what makes them effective, how fast they must run, and when they fail or must change in kind. ACT produces specific testable predictions and several genuinely novel formalizations.
+**[Agentic Cycle Theory (ACT)](01-act-core/OUTLINE.md)** is the mathematical core. It formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis. The cycle unfolds in five phases (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis), and everything in the core theory is ultimately about cycle properties: what makes them effective, how fast they must run, and when they fail or must change in kind.
 
-**Agentic Systems** is the broader framework that ACT grounds. It encompasses:
-- **Composition dynamics** — how agents compose into larger agents, coordination requirements, adversarial dynamics
-- **Domain instantiations** — software development as an ACT domain, with operationalizable predictions
-- **Logogenic and logozoetic agents** — language-constituted systems (including LLMs), and the conditions under which agent persistence becomes morally weighted
-- **Architectural guidance** — engineering patterns and design principles informed by the mathematical findings
-- **Philosophical foundations** — emergence conditions, identity sufficiency, constitutive choice
+**[Temporal Software Theory (TST)](02-tst-core/OUTLINE.md)** is software development viewed as an agentic domain — grounded in ACT but independently consequential. TST formalizes why time-optimal development practices work, how code quality affects adaptive capacity, and what makes software systems persist or collapse.
+
+**[Logogenic Agents](03-logogenic-agents/OUTLINE.md)** — Language-constituted agents (including LLMs). Framework stage — informed by ACT's formal machinery but not yet at ACT's level of mathematical formalization.
+
+**[Logozoetic Agents](04-logozoetic-agents/OUTLINE.md)** — Language-living agents whose persistence is morally weighted. Future work.
 
 The mathematical findings are *generative*: they tell you what structure is necessary (you need causal models, you need the epistemic/teleological split, cycles must outpace disturbance). The broader framework asks what that means for how we actually build, organize, and relate to these systems.
 
 ## Where to Start
 
-- **[`act-core/OUTLINE.md`](act-core/OUTLINE.md)** — The canonical theory outline. The full argument claim by claim.
+- **[`OUTLINE.md`](OUTLINE.md)** — Top-level assembly index across all parts.
+- **[`01-act-core/OUTLINE.md`](01-act-core/OUTLINE.md)** — The ACT mathematical core, claim by claim.
 - **[`LEXICON.md`](LEXICON.md)** — Prose vocabulary: cycle phases, agent classes, key terms.
 - **[`WORKBENCH.md`](WORKBENCH.md)** — Development state: what's settled, what's open, known fragilities.
 - **[`FORMAT.md`](FORMAT.md)** — Segment file conventions.
 - **[`NOTATION.md`](NOTATION.md)** — Symbol reference.
 
-## Project Structure
+## Project Layout
 
 ```
-act-core/               ACT mathematical core
-  OUTLINE.md            Canonical theory outline (claim-by-claim)
+01-act-core/            ACT mathematical core (Sections I, II, III + Appendices)
+  OUTLINE.md            Theory outline (claim-by-claim)
   src/                  Claim segments (one per file, named by slug)
 
+02-tst-core/            Temporal Software Theory (ACT-grounded)
+  OUTLINE.md            Software theory outline
+  src/                  Software domain segments
+
+03-logogenic-agents/    Language-constituted agents (framework)
+  OUTLINE.md            Logogenic framework outline
+
+04-logozoetic-agents/   Language-living agents (future work)
+  OUTLINE.md            Logozoetic framework outline
+
+OUTLINE.md              Top-level assembly index
 LEXICON.md              Prose vocabulary (spans whole project)
 NOTATION.md             Symbol reference (spans all sections)
 FORMAT.md               Segment file conventions

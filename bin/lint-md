@@ -852,11 +852,16 @@ def main():
         args.remove('--fix')
 
     if not args:
-        # Default: top-level *.md plus act-core/ and act-core/src/
+        # Default: top-level *.md plus all component dirs and their src/
         root = Path(__file__).resolve().parent.parent
         paths = list(root.glob('*.md'))
-        paths += list((root / 'act-core').glob('*.md'))
-        paths += list((root / 'act-core' / 'src').glob('*.md'))
+        for component in ['01-act-core', '02-tst-core', '03-logogenic-agents', '04-logozoetic-agents']:
+            cdir = root / component
+            if cdir.is_dir():
+                paths += list(cdir.glob('*.md'))
+                src = cdir / 'src'
+                if src.is_dir():
+                    paths += list(src.glob('*.md'))
         args = sorted(str(p) for p in paths)
 
     total = 0

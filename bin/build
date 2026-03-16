@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Build a composite markdown document from an ACT index file.
+Assemble a composite markdown document from an outline file.
 
-Reads an index file (like ACT-FULL.md) whose tables reference src/{slug}.md
-segment files, and assembles a single document with:
+Reads an outline file whose tables reference segment files, and assembles a
+single document with:
 
   - Section structure (headers, scope text, separators) preserved
   - Segment content inlined with adjusted header levels
@@ -12,15 +12,18 @@ segment files, and assembles a single document with:
   - HTML anchors for working cross-references
   - Placeholders for gaps (undeveloped theory) and missing segments
 
-The N column in index tables supports manual overrides that reset the counter
-(e.g., "II.14" makes the next auto-numbered entry II.15). A bare number like
-"14" keeps the current section prefix.
+Segment resolution: links in outline tables (e.g., [#slug](src/slug.md)) are
+resolved relative to the outline file's directory. If the path as written
+doesn't exist, the tool also tries src/{slug}.md relative to the outline.
+This means outline tables can use bare slug.md or src/slug.md and both work.
+
+Output goes to stdout by default (pipe-friendly). Use -o for file output.
 
 Usage:
-    bin/build-index ACT-FULL.md                        # → ACT-FULL.built.md
-    bin/build-index ACT-FULL.md -o theory.md           # custom output path
-    bin/build-index ACT-FULL.md --strip-working-notes  # omit dev notes
-    bin/build-index ACT-FULL.md --src-dir other/       # custom segment dir
+    bin/build 01-act-core/OUTLINE.md                     # → stdout
+    bin/build 01-act-core/OUTLINE.md -o theory.md        # → file
+    bin/build 01-act-core/OUTLINE.md --strip-working-notes
+    bin/build my-scratch/alt.md -o ~/Documents/out.md    # any outline, any output
 """
 
 import argparse
@@ -32,38 +35,26 @@ from pathlib import Path
 # ── Text transforms ──────────────────────────────────────────────────────
 
 def strip_frontmatter(text):
-    """Remove YAML frontmatter (--- delimited block at start of file).
-
-    Only recognized when the very first line is '---'. Returns everything
-    after the closing '---', with leading blank lines stripped.
-    """
+    """Remove YAML frontmatter (--- delimited block at start of file)."""
     lines = text.split('\n')
     if not lines or lines[0].strip() != '---':
         return text
     for i in range(1, len(lines)):
         if lines[i].strip() == '---':
             return '\n'.join(lines[i + 1:]).lstrip('\n')
-    return text  # No closing --- found; return unchanged
+    return text
 
 
 def bump_headers(text, offset):
-    """Increase all markdown header levels by offset (capped at H6).
-
-    '## Foo' with offset=2 becomes '#### Foo'.
-    """
+    """Increase all markdown header levels by offset (capped at H6)."""
     def _bump(m):
         new_level = min(len(m.group(1)) + offset, 6)
         return '#' * new_level + m.group(2)
-
     return re.sub(r'^(#{1,6})([ \t])', _bump, text, flags=re.MULTILINE)
 
 
 def strip_working_notes(text):
-    """Remove the '## Working Notes' section (always the last section).
-
-    Must be called BEFORE bump_headers so the heading is still at its
-    original level.
-    """
+    """Remove the '## Working Notes' section (always the last section)."""
     matches = list(re.finditer(r'^## Working Notes\b', text, re.MULTILINE))
     if not matches:
         return text
@@ -71,49 +62,27 @@ def strip_working_notes(text):
 
 
 def insert_label(text, label):
-    """Insert a numbering label into the first heading of segment text.
-
-    Handles two heading patterns:
-      '### Type: Title'  →  '### Type S.N: *Title*'
-      '### Title'        →  '### S.N. *Title*'
-
-    Only modifies the first heading; sub-headings are untouched.
-    The title is italicized to distinguish it from the type+label prefix.
-    """
+    """Insert a numbering label into the first heading of segment text."""
     def _insert(m):
         hashes, content = m.group(1), m.group(2).strip()
-        # Try "Type: Title" pattern — type is everything before the first colon
         cm = re.match(r'([^:]+?):\s+(.*)', content)
         if cm:
             return f'{hashes}{cm.group(1)} {label}: *{cm.group(2)}*'
-        # Plain title without type prefix
         return f'{hashes}{label}. *{content}*'
-
     return re.sub(r'^(#{1,6}\s+)(.*)', _insert, text, count=1, flags=re.MULTILINE)
 
 
 def rewrite_links(text, known_slugs):
-    """Convert file-path links to internal anchor links.
-
-    Rewrites:
-      [text](src/slug.md)  →  [text](#slug)    (links from root-level files)
-      [text](slug.md)      →  [text](#slug)    (links from src/ files, if known)
-    """
-    # Root-level form: [text](src/slug.md)
-    text = re.sub(
-        r'\[([^\]]+)\]\(src/([\w-]+)\.md\)',
-        r'[\1](#\2)',
-        text
-    )
-    # Relative form from src/: [text](slug.md) — only for known segments
-    def _rewrite_relative(m):
-        link_label, slug = m.group(1), m.group(2)
-        if slug in known_slugs:
-            return f'[{link_label}](#{slug})'
+    """Convert file-path links to internal anchor links."""
+    # Any path ending in /slug.md or just slug.md → #slug (if known)
+    def _rewrite(m):
+        link_label, path = m.group(1), m.group(2)
+        # Extract slug from path like "src/slug.md" or "slug.md"
+        slug_m = re.match(r'(?:.*/)?([\w-]+)\.md$', path)
+        if slug_m and slug_m.group(1) in known_slugs:
+            return f'[{link_label}](#{slug_m.group(1)})'
         return m.group(0)
-
-    text = re.sub(r'\[([^\]]+)\]\(([\w-]+)\.md\)', _rewrite_relative, text)
-    return text
+    return re.sub(r'\[([^\]]+)\]\(([^)]*?[\w-]+\.md)\)', _rewrite, text)
 
 
 # ── Table parsing ────────────────────────────────────────────────────────
@@ -128,40 +97,30 @@ def parse_table_row(line):
 
 
 def is_separator_row(cells):
-    """True if this is a table header/body separator row (---|---|...)."""
+    """True if this is a table header/body separator row."""
     return all(re.match(r'^[-:]+$', c) for c in cells if c)
 
 
-def extract_slug(cell):
-    """Extract slug from '[#slug-name](src/slug-name.md)'. Returns slug or None."""
-    m = re.search(r'\[#([\w-]+)\]\(src/[\w-]+\.md\)', cell)
-    return m.group(1) if m else None
+def extract_slug_and_path(cell):
+    """Extract slug and relative path from a table cell link.
+
+    Handles:
+      [#slug](src/slug.md)   → ('slug', 'src/slug.md')
+      [#slug](slug.md)       → ('slug', 'slug.md')
+    Returns (slug, rel_path) or (None, None).
+    """
+    m = re.search(r'\[#([\w-]+)\]\(([^)]+\.md)\)', cell)
+    if m:
+        return m.group(1), m.group(2)
+    return None, None
 
 
 # ── Numbering ────────────────────────────────────────────────────────────
-#
-# Produces a slug → (label, type_str) map in a dedicated pass over the
-# index. This map is the single source of truth for labels — used by
-# heading insertion, tag rewriting, and (potentially) future passes.
 
 def assign_numbers(lines):
     """Walk index tables and assign sequential labels to each segment.
 
     Returns dict mapping slug → (label, type_str).
-        label:    "I.3", "II.14", "A.1", etc.
-        type_str: "Definition", "Derived + Scope", etc. (from the index)
-
-    Numbering rules:
-      - Shared counter per section (I, II, III, IV, V, A, …), starting at 1
-      - Gaps (--GAP-- rows) are skipped — they don't consume a number
-      - Section change (new § value) resets the counter
-      - N column overrides:
-          "II.14" → set section to II, counter to 14
-          "14"    → keep current section, set counter to 14
-        The overridden entry gets that label; the next auto-entry continues
-        from there (II.15, 15, etc.)
-
-    Index table columns: § | Type | N | Tag | Claim | Stage
     """
     numbering = {}
     current_section = None
@@ -173,7 +132,7 @@ def assign_numbers(lines):
 
         if cells and not in_table:
             in_table = True
-            continue  # skip header row
+            continue
 
         if in_table:
             if not cells:
@@ -181,19 +140,16 @@ def assign_numbers(lines):
                 continue
             if is_separator_row(cells):
                 continue
-
-            # Skip gaps — they don't consume numbers
             if any('--GAP--' in c for c in cells):
                 continue
 
-            # Extract fields from row
             section   = cells[0].strip() if len(cells) > 0 else ''
             type_str  = cells[1].strip() if len(cells) > 1 else ''
             n_override = cells[2].strip() if len(cells) > 2 else ''
 
             slug = None
             for c in cells:
-                s = extract_slug(c)
+                s, _ = extract_slug_and_path(c)
                 if s:
                     slug = s
                     break
@@ -201,22 +157,17 @@ def assign_numbers(lines):
             if not slug:
                 continue
 
-            # New section resets counter
             if section and section != current_section:
                 current_section = section
                 counter = 0
 
-            # N column override
             if n_override:
-                # Full label: "II.14"
                 m = re.match(r'^([A-Za-z]+)\.(\d+)$', n_override)
                 if m:
                     current_section = m.group(1)
                     counter = int(m.group(2))
-                # Bare number: "14"
                 elif re.match(r'^\d+$', n_override):
                     counter = int(n_override)
-                # Unrecognized — fall back to auto
                 else:
                     counter += 1
             else:
@@ -228,22 +179,8 @@ def assign_numbers(lines):
 
 
 # ── Tag rewriting ────────────────────────────────────────────────────────
-#
-# Converts #slug-name cross-references into academic-style numbered links.
-# Two phases:
-#   Phase 1: [#slug](#slug) → [Type S.N](#slug)   (rewrite existing links)
-#   Phase 2: standalone #slug → [Type S.N](#slug)  (convert prose references)
-#
-# Phase 2 walks each line character by character to correctly skip code
-# spans, inline math, link syntax, and HTML tags.
 
 def _ref_display(label, type_str):
-    """Format the display text for a cross-reference.
-
-    Uses the primary type for compound types:
-      "Derived + Scope" → "Derived II.13"
-      "Definition"      → "Definition I.3"
-    """
     if not type_str:
         return label
     primary = type_str.split('+')[0].strip()
@@ -251,14 +188,7 @@ def _ref_display(label, type_str):
 
 
 def _rewrite_tags_in_line(line, numbering):
-    """Replace standalone #slug references in a single line.
-
-    Walks character by character, skipping protected regions:
-      - Inline code spans (`...`)
-      - Inline math ($...$)
-      - Link syntax ([...](...))
-      - HTML tags (<...>)
-    """
+    """Replace standalone #slug references in a single line."""
     out = []
     i = 0
     n = len(line)
@@ -266,7 +196,6 @@ def _rewrite_tags_in_line(line, numbering):
     while i < n:
         ch = line[i]
 
-        # ── Inline code span: `...` or ``...`` ──
         if ch == '`':
             ticks = 0
             while i + ticks < n and line[i + ticks] == '`':
@@ -281,10 +210,8 @@ def _rewrite_tags_in_line(line, numbering):
                 i = n
             continue
 
-        # ── Inline math: $...$ ──
         if ch == '$':
             if i + 1 < n and line[i + 1] == '$':
-                # Display math $$ on a single line — skip to closing $$
                 end = line.find('$$', i + 2)
                 if end != -1:
                     out.append(line[i:end + 2])
@@ -302,7 +229,6 @@ def _rewrite_tags_in_line(line, numbering):
                     i += 1
             continue
 
-        # ── Link: [text](url) — skip the whole construct ──
         if ch == '[':
             depth = 1
             j = i + 1
@@ -315,19 +241,16 @@ def _rewrite_tags_in_line(line, numbering):
                 elif line[j] == ']':
                     depth -= 1
                 j += 1
-            # j is now past the ']'. Check for (url) immediately after.
             if j < n and line[j] == '(':
                 k = line.find(')', j + 1)
                 if k != -1:
                     out.append(line[i:k + 1])
                     i = k + 1
                     continue
-            # Just brackets, not a full link — output bracket content
             out.append(line[i:j])
             i = j
             continue
 
-        # ── HTML tag: <tag ...> ──
         if ch == '<' and i + 1 < n and (line[i + 1].isalpha() or line[i + 1] == '/'):
             end = line.find('>', i + 1)
             if end != -1:
@@ -335,7 +258,6 @@ def _rewrite_tags_in_line(line, numbering):
                 i = end + 1
                 continue
 
-        # ── #slug reference ──
         if ch == '#' and (i == 0 or line[i - 1] in ' \t'):
             m = re.match(r'([a-z][a-z0-9-]*[a-z0-9])', line[i + 1:])
             if m and m.group(1) in numbering:
@@ -353,18 +275,10 @@ def _rewrite_tags_in_line(line, numbering):
 
 
 def rewrite_tags(text, numbering):
-    """Rewrite all #slug cross-references to academic-style numbered links.
-
-    Phase 1: Existing links [#slug](#slug) get their display text replaced.
-    Phase 2: Standalone #slug in prose become [Type S.N](#slug) links.
-
-    Skips fenced code blocks and display math blocks.
-    """
+    """Rewrite all #slug cross-references to academic-style numbered links."""
     if not numbering:
         return text
 
-    # Phase 1: rewrite display text of existing internal links
-    #   [#slug](#slug) → [Type S.N](#slug)
     def _rewrite_link_display(m):
         slug, target = m.group(1), m.group(2)
         if slug == target and slug in numbering:
@@ -375,8 +289,6 @@ def rewrite_tags(text, numbering):
 
     text = re.sub(r'\[#([\w-]+)\]\(#([\w-]+)\)', _rewrite_link_display, text)
 
-    # Phase 2: standalone #slug → [Type S.N](#slug)
-    # Process line by line, tracking block-level protected regions.
     lines = text.split('\n')
     result = []
     in_fenced = False
@@ -384,7 +296,6 @@ def rewrite_tags(text, numbering):
 
     for line in lines:
         stripped = line.strip()
-
         if stripped.startswith('```'):
             in_fenced = not in_fenced
             result.append(line)
@@ -392,7 +303,6 @@ def rewrite_tags(text, numbering):
         if in_fenced:
             result.append(line)
             continue
-
         if stripped == '$$':
             in_display_math = not in_display_math
             result.append(line)
@@ -400,46 +310,27 @@ def rewrite_tags(text, numbering):
         if in_display_math:
             result.append(line)
             continue
-
         result.append(_rewrite_tags_in_line(line, numbering))
 
     text = '\n'.join(result)
-
-    # Clean up Obsidian-convention spacing: "( [Link](...)" → "([Link](...)"
-    # The original " #slug" needed a space after "(" for Obsidian tag parsing,
-    # but the rewritten "[Type S.N](#slug)" link doesn't.
     text = re.sub(r'\( \[', '([', text)
-
     return text
 
 
 # ── Table of contents ─────────────────────────────────────────────────────
 
 def build_toc(toc_entries):
-    """Format collected ToC entries as a navigable markdown section.
-
-    toc_entries is a list of tuples:
-        ('section', heading_text, anchor)    — section header
-        ('segment', label, type_str, slug, title)  — segment entry
-        ('gap', description)                 — undeveloped theory gap
-        ('missing', label, type_str, slug, title)   — unwritten segment
-    """
     if not toc_entries:
         return ''
-
     lines = ['## Table of Contents', '']
-
     for entry in toc_entries:
         kind = entry[0]
-
         if kind == 'section':
             _, heading, anchor = entry
-            # Section headers as bold linked lines with spacing
             if lines[-1] != '':
                 lines.append('')
             lines.append(f'**[{heading}](#{anchor})**')
             lines.append('')
-
         elif kind == 'segment':
             _, label, type_str, slug, title = entry
             primary = type_str.split('+')[0].strip() if type_str else ''
@@ -447,7 +338,6 @@ def build_toc(toc_entries):
                 lines.append(f'- [{primary} {label}: {title}](#{slug})')
             else:
                 lines.append(f'- [{label}. {title}](#{slug})')
-
         elif kind == 'missing':
             _, label, type_str, slug, title = entry
             primary = type_str.split('+')[0].strip() if type_str else ''
@@ -455,66 +345,85 @@ def build_toc(toc_entries):
                 lines.append(f'- *{primary} {label}: {title}* (not yet written)')
             else:
                 lines.append(f'- *{label}. {title}* (not yet written)')
-
         elif kind == 'gap':
             _, desc = entry
             lines.append(f'- *\\[Gap\\] {desc}*')
-
     lines.append('')
     return '\n'.join(lines)
 
 
 def make_heading_anchor(heading_text):
-    """Generate a GitHub-compatible anchor from a heading string.
-
-    Lowercases, replaces spaces with hyphens, strips non-alphanumeric
-    characters except hyphens. Matches GitHub's auto-generated anchors.
-    """
     anchor = heading_text.lower().strip()
     anchor = re.sub(r'[^\w\s-]', '', anchor)
     anchor = re.sub(r'[\s]+', '-', anchor)
     return anchor
 
 
+# ── Segment resolution ───────────────────────────────────────────────────
+
+def resolve_segment(outline_dir, rel_path, slug):
+    """Find a segment file, trying multiple resolution strategies.
+
+    1. rel_path as written, relative to outline_dir
+    2. src/{slug}.md relative to outline_dir (fallback)
+
+    Returns the resolved Path or None.
+    """
+    # Try the path as written in the outline
+    candidate = outline_dir / rel_path
+    if candidate.exists():
+        return candidate
+
+    # Fallback: src/{slug}.md relative to outline
+    candidate = outline_dir / 'src' / f'{slug}.md'
+    if candidate.exists():
+        return candidate
+
+    return None
+
+
 # ── Core builder ─────────────────────────────────────────────────────────
 
 def collect_slugs(lines):
-    """First pass: gather all segment slugs from index tables for link rewriting."""
     slugs = set()
     for line in lines:
         cells = parse_table_row(line)
         if cells:
             for cell in cells:
-                slug = extract_slug(cell)
-                if slug:
-                    slugs.add(slug)
+                s, _ = extract_slug_and_path(cell)
+                if s:
+                    slugs.add(s)
     return slugs
 
 
-def build(index_path, src_dir, strip_notes=False):
+def build(index_path, strip_notes=False):
     """Build the composite document.
 
+    Resolves all paths relative to the outline file's directory.
     Returns (output_text, stats_dict, numbering_map).
     """
+    outline_dir = index_path.parent
     index_text = index_path.read_text(encoding='utf-8')
     lines = index_text.split('\n')
 
     known_slugs = collect_slugs(lines)
     numbering = assign_numbers(lines)
 
-    out = []             # accumulated output lines
-    toc_entries = []     # collected for table of contents
+    out = []
+    toc_entries = []
     in_table = False
-    table_entries = []   # list of (kind, slug_or_none, claim_text)
-    section_level = 2    # current section heading level; updated as we go
+    table_entries = []   # list of (kind, slug, rel_path, claim_text)
+    section_level = 2
 
     stats = {'included': 0, 'missing': 0, 'gaps': 0}
 
     def flush_table():
-        """Emit accumulated table entries as segment content or placeholders."""
         nonlocal table_entries
-        for kind, slug, claim_text in table_entries:
+        for entry in table_entries:
+            kind = entry[0]
+
             if kind == 'gap':
+                _, _, _, claim_text = entry
                 out.append('')
                 out.append(f'> **\\[GAP\\]** {claim_text}')
                 out.append('')
@@ -522,18 +431,18 @@ def build(index_path, src_dir, strip_notes=False):
                 toc_entries.append(('gap', claim_text))
 
             elif kind == 'segment':
-                seg_path = src_dir / f'{slug}.md'
+                _, slug, rel_path, claim_text = entry
+                seg_path = resolve_segment(outline_dir, rel_path, slug) if rel_path else None
                 label_info = numbering.get(slug)
                 label = label_info[0] if label_info else None
                 type_str = label_info[1] if label_info else ''
                 title = claim_text if claim_text else slug
 
-                # HTML anchor for cross-references (#slug links)
                 out.append('')
                 out.append(f'<a id="{slug}"></a>')
                 out.append('')
 
-                if seg_path.exists():
+                if seg_path and seg_path.exists():
                     seg_text = seg_path.read_text(encoding='utf-8')
                     seg_text = strip_frontmatter(seg_text)
                     if strip_notes:
@@ -564,21 +473,17 @@ def build(index_path, src_dir, strip_notes=False):
 
         table_entries = []
 
-    # ── Main loop: assemble structural content + segment content ─────
-
     i = 0
     while i < len(lines):
         line = lines[i]
         cells = parse_table_row(line)
 
-        # Entering a table (first row is the header)
         if cells and not in_table:
             in_table = True
             table_entries = []
-            i += 1  # skip header row
+            i += 1
             continue
 
-        # Inside a table
         if in_table:
             if cells:
                 if is_separator_row(cells):
@@ -586,41 +491,35 @@ def build(index_path, src_dir, strip_notes=False):
                     continue
 
                 is_gap = any('--GAP--' in c for c in cells)
-
                 if is_gap:
-                    # Extract the description — usually in the Claim column
                     desc_candidates = [
                         c for c in cells
-                        if c
-                        and '--GAP--' not in c
-                        and not re.match(r'^[IVA]+$', c.strip())
+                        if c and '--GAP--' not in c
+                        and not re.match(r'^[IVSA]+$', c.strip())
                     ]
                     gap_desc = desc_candidates[-1] if desc_candidates else 'Open question'
-                    table_entries.append(('gap', None, gap_desc))
+                    table_entries.append(('gap', None, None, gap_desc))
                 else:
-                    slug = None
+                    slug, rel_path = None, None
                     for c in cells:
-                        s = extract_slug(c)
+                        s, p = extract_slug_and_path(c)
                         if s:
-                            slug = s
+                            slug, rel_path = s, p
                             break
                     claim_text = cells[4].strip() if len(cells) > 4 else ''
                     if slug:
-                        table_entries.append(('segment', slug, claim_text))
+                        table_entries.append(('segment', slug, rel_path, claim_text))
 
                 i += 1
                 continue
             else:
-                # Left the table — flush entries, then fall through
                 in_table = False
                 flush_table()
 
-        # Non-table line: track heading level and emit
         hm = re.match(r'^(#{1,6})\s', line)
         if hm:
             section_level = len(hm.group(1))
             heading_text = line[hm.end():].strip()
-            # Collect section headings for ToC (## level = major sections)
             if len(hm.group(1)) == 2 and heading_text:
                 anchor = make_heading_anchor(heading_text)
                 toc_entries.append(('section', heading_text, anchor))
@@ -628,24 +527,19 @@ def build(index_path, src_dir, strip_notes=False):
         out.append(rewrite_links(line, known_slugs))
         i += 1
 
-    # Flush if file ends while still in a table
     if in_table:
         flush_table()
 
-    # Insert table of contents after introductory text, before first ---
     toc_text = build_toc(toc_entries)
     if toc_text:
-        assembled_lines = out
         insert_idx = None
-        for idx, ln in enumerate(assembled_lines):
+        for idx, ln in enumerate(out):
             if ln.strip() == '---':
                 insert_idx = idx
                 break
         if insert_idx is not None:
-            # Insert ToC before the first --- separator, with surrounding blanks
-            assembled_lines[insert_idx:insert_idx] = ['', toc_text, '']
+            out[insert_idx:insert_idx] = ['', toc_text, '']
 
-    # Final pass: rewrite #slug cross-references throughout the assembled doc
     assembled = '\n'.join(out)
     assembled = rewrite_tags(assembled, numbering)
 
@@ -656,24 +550,18 @@ def build(index_path, src_dir, strip_notes=False):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Assemble an ACT index file into a composite markdown document.'
+        description='Assemble an outline file into a composite markdown document.'
     )
     parser.add_argument(
-        'index',
+        'outline',
         type=Path,
-        help='Path to the index file (e.g. ACT-FULL.md)'
+        help='Path to the outline file (e.g., 01-act-core/OUTLINE.md)'
     )
     parser.add_argument(
         '-o', '--output',
         type=Path,
         default=None,
-        help='Output file path (default: {stem}.built.md alongside the index)'
-    )
-    parser.add_argument(
-        '--src-dir',
-        type=Path,
-        default=None,
-        help='Directory containing segment files (default: src/ relative to index)'
+        help='Output file path (default: stdout)'
     )
     parser.add_argument(
         '--strip-working-notes',
@@ -683,30 +571,28 @@ def main():
 
     args = parser.parse_args()
 
-    index_path = args.index.resolve()
+    index_path = args.outline.resolve()
     if not index_path.exists():
         print(f'Error: {index_path} not found', file=sys.stderr)
         return 1
 
-    src_dir = (args.src_dir or (index_path.parent / 'src')).resolve()
-    if not src_dir.is_dir():
-        print(f'Error: segment directory {src_dir} not found', file=sys.stderr)
-        return 1
+    text, stats, numbering = build(index_path, strip_notes=args.strip_working_notes)
 
-    output_path = args.output or index_path.with_suffix('.built.md')
-
-    text, stats, numbering = build(
-        index_path, src_dir, strip_notes=args.strip_working_notes
-    )
-    output_path.write_text(text, encoding='utf-8')
+    if args.output:
+        output_path = args.output.resolve()
+        output_path.write_text(text, encoding='utf-8')
+        dest = output_path.name
+    else:
+        sys.stdout.write(text)
+        dest = 'stdout'
 
     total = stats['included'] + stats['missing'] + stats['gaps']
-    print(f'Built {output_path.name}:')
-    print(f'  {stats["included"]} segments included')
-    print(f'  {stats["missing"]} segments missing (placeholder)')
-    print(f'  {stats["gaps"]} gaps (theory not developed)')
-    print(f'  {total} total entries')
-    print(f'  {len(numbering)} slugs numbered')
+    print(f'Built → {dest}:', file=sys.stderr)
+    print(f'  {stats["included"]} segments included', file=sys.stderr)
+    print(f'  {stats["missing"]} segments missing (placeholder)', file=sys.stderr)
+    print(f'  {stats["gaps"]} gaps (theory not developed)', file=sys.stderr)
+    print(f'  {total} total entries', file=sys.stderr)
+    print(f'  {len(numbering)} slugs numbered', file=sys.stderr)
 
     return 0
 

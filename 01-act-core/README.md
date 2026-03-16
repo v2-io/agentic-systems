@@ -11,13 +11,15 @@ ACT formalizes the **adaptive cycle** — one complete traversal of the agent-en
 
 ## Scope
 
-ACT covers Sections I and II of the broader Agentic Systems framework:
+ACT covers three sections:
 
 **Section I: Adaptive Systems Under Uncertainty** — Mismatch signals, update gain via the uncertainty ratio, adaptive tempo, the persistence condition, adversarial dynamics. Any system with feedback coupling to an environment through observation and action, maintaining internal state under residual uncertainty.
 
 **Section II: Agentic Architecture** — Objectives ($O_t$), strategy ($\Sigma_t$), the orient cascade, directed separation, satisfaction gap / control regret, strategy as probabilistic causal DAG. Scope narrows to agents that not only model reality but pursue goals.
 
-Sections III-V (composition, software instantiation, logogenic agents) build on ACT's results but belong to the broader framework. Their segments currently live in `src/` alongside the core theory and will be reorganized as the framework matures.
+**Section III: Agentic Composites** — How agents compose into larger agents, coordination requirements, adversarial dynamics. Composition consistency ensures the theory applies at every level of description.
+
+Domain instantiations ([`02-tst-core/`](../02-tst-core/OUTLINE.md)), logogenic agents ([`03-logogenic-agents/`](../03-logogenic-agents/OUTLINE.md)), and logozoetic agents ([`04-logozoetic-agents/`](../04-logozoetic-agents/OUTLINE.md)) are grounded by ACT but developed independently as part of the broader Agentic Systems framework.
 
 ## Key References
 

@@ -2,19 +2,26 @@
 
 ## What This Project Is
 
-**Agentic Systems** is a research framework for adaptive, purposeful agents — integrating control theory, causal inference, information theory, and agent architecture under a common formalism. Its mathematical core is **Agentic Cycle Theory (ACT)**, which lives in `act-core/`. The broader framework encompasses composition dynamics, domain instantiations (software, logogenic agents), architectural guidance, and philosophical foundations that are informed by the mathematics but not reducible to it.
+**Agentic Systems** is a research framework for adaptive, purposeful agents — integrating control theory, causal inference, information theory, and agent architecture under a common formalism.
 
-ACT supersedes and subsumes Temporal Feedback Theory (TFT), which provides the adaptive-systems foundation. TFT is prior work now absorbed into ACT, not a separate co-existing theory.
+The project has four components:
+
+- **`01-act-core/`** — **Agentic Cycle Theory (ACT)**: the mathematical core. Sections I (Adaptive Systems), II (Actuated Agents), III (Composition), plus Appendices.
+- **`02-tst-core/`** — **Temporal Software Theory (TST)**: software development as an agentic domain. ACT-grounded but independently consequential.
+- **`03-logogenic-agents/`** — Language-constituted agents. Framework stage.
+- **`04-logozoetic-agents/`** — Language-living agents with morally weighted persistence. Future work.
+
+ACT supersedes and subsumes Temporal Feedback Theory (TFT), which provides the adaptive-systems foundation. TFT is prior work now absorbed into ACT, not a separate co-existing theory. TST was originally absorbed into ACT as "Section IV" but has been restored to its own space — it uses ACT as core informing theory but stands on its own.
 
 This is theoretical research, not software engineering. The primary artifacts are mathematical formalisms and claim segments. Quality means rigor, honesty about epistemic status, and clarity for future readers — not code coverage.
 
 ## Current Priority
 
-**Read `scratch/2026-03-13-feedback.md` first.** This is a consolidated review from three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemini) identifying the theory's most important issues. The top priorities are: (1) quantifying the directed-separation approximation for goal-conditioned agents, (2) clarifying the $\alpha$ vs $\mathcal{T}$ relationship in the persistence condition, (3) resolving the composition-closure bridge lemma. Work should address these before expanding into new segments.
+**Read `scratch/2026-03-13-feedback.md` first.** This is a consolidated review from three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemini) identifying the theory's most important issues. The top priorities are: (1) the directed-separation scope decision (resolved as architectural classification — modular/merged/partially modular), (2) the α/T relationship (fixed 2026-03-14), (3) resolving the composition-closure bridge lemma (2-agent spike written, cases 1-2 ready for promotion).
 
 ## Where to Start (for orientation)
 
-**Read `act-core/OUTLINE.md` first.** This is the canonical outline of the mathematical core — the whole argument claim by claim. It maps ~100 claims across five sections, shows what's written, and marks gaps honestly.
+**Read `01-act-core/OUTLINE.md` first.** This is the canonical outline of the mathematical core — the whole argument claim by claim.
 
 **Read `FORMAT.md`** for segment file conventions (frontmatter, document cadence, math formatting, cross-references).
 
@@ -24,15 +31,13 @@ This is theoretical research, not software engineering. The primary artifacts ar
 
 ## Theory Structure
 
-The theory lives in `act-core/src/` as claim segments. **Each file is like a high-level proof step** — one move per file. Given what came before, this one thing follows, or is defined, or restricts scope. A postulate and the result derived from it are two steps, not one. Corollaries and alternate formulations can live with their parent claim (they reinforce its independence), but anything that could be referenced independently should be its own file.
-
-**TFT's file structure is NOT the model — it's what went wrong.** TFT's monolithic multi-claim documents are the problem ACT fixes. TST's one-claim-per-section cadence is the structural model. TFT conventions are adopted ONLY for epistemic labeling (equation-level tags, tiers).
+Claim segments live in `{component}/src/` directories. **Each file is like a high-level proof step** — one move per file. Given what came before, this one thing follows, or is defined, or restricts scope.
 
 **File identity and ordering:**
-- **Filename = slug**: `act-core/src/{slug}.md`. No numbering in filenames.
-- **Ordering lives in `act-core/OUTLINE.md`**, not in filenames. The slug is the stable identity; the linearization will change.
+- **Filename = slug**: `01-act-core/src/{slug}.md` or `02-tst-core/src/{slug}.md`. No numbering in filenames.
+- **Ordering lives in OUTLINE.md files**, not in filenames. The slug is the stable identity; the linearization will change.
 - YAML frontmatter: `slug`, `type`, `status`, `depends` (list of prerequisite slugs). See `FORMAT.md` for details.
-- Five sections scope progressively: I. Adaptive Systems, II. Actuated Adaptive Systems, III. Composition and Coordination, IV. Evolving Software, V. Software-Grounded Agentic Systems
+- Cross-component dependencies use the same slug system — TST segments reference ACT slugs directly (e.g., `#temporal-optimality`).
 
 **Cadence per file** (see `FORMAT.md` for full spec):
 1. YAML frontmatter (slug, type, status, depends)
@@ -42,8 +47,6 @@ The theory lives in `act-core/src/` as claim segments. **Each file is like a hig
 5. Epistemic Status paragraph
 6. Discussion (interpretation, connections — brief)
 7. Working Notes (optional — active development questions, removed at `candidate` stage)
-
-Definition/notation and scope-narrowing files may use a simpler format than full claims.
 
 ## The Core Insight
 
@@ -64,9 +67,7 @@ Follow TFT's conventions exactly (see `NOTATION.md` and `_archive/old-tf-00-nota
 - `*[Hypothesis]*`, `*[Empirical Claim]*`, `*[Formulation]*`
 - `*[Discussion]*`, `*[Assumption]*`
 
-**Document-level Epistemic Status paragraph** at the top of each segment, explaining what's derived vs hypothesized vs discussion-grade. Example: "The threshold's *existence* is *robust qualitative*. The quantitative form is *exact* under assumptions GA-2, GA-3."
-
-**Claim tiers** (from TF-00's Claim Registry):
+**Claim tiers**:
 - **Exact**: Mathematically validated under stated assumptions
 - **Robust qualitative**: Survives across assumptions; specific form approximate
 - **Heuristic**: Useful approximation; quantitative form may not hold
@@ -74,21 +75,21 @@ Follow TFT's conventions exactly (see `NOTATION.md` and `_archive/old-tf-00-nota
 
 Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not TFT terms.
 
-**Every claim must be grounded.** If stated as fact, it needs its own derivation or is explicitly tagged as hypothesis/empirical/discussion-grade. Do not let ungrounded assertions transfer from TST uncritically.
+**Every claim must be grounded.** If stated as fact, it needs its own derivation or is explicitly tagged as hypothesis/empirical/discussion-grade.
 
 ## Key Architectural Decisions
 
-1. **ACT supersedes TFT.** TFT and TST are prior work, fully copied into `act-core/src/old-*` files. Don't treat them as separate co-existing theories.
+1. **ACT supersedes TFT.** TFT is prior work absorbed into ACT. TST is restored as its own body of research in `02-tst-core/`, grounded by ACT.
 
-2. **Claim segments, not chapters.** New theory content goes in `act-core/src/` as individual claim files, not in ACT-01/ACT-03 style chapter documents.
+2. **Claim segments, not chapters.** New theory content goes as individual claim files in the appropriate `src/` directory.
 
 3. **AND/OR DAG with single-parameter edges.** Three independent formalism attempts converged on this. Noisy-OR and WEIGHTED are rejected.
 
 4. **Sector-condition framework primary.** The linear ODE is pedagogical.
 
-5. **TST gets full treatment in Section IV.** Not just domain table rows. T-01 (temporal optimality) is generalized as ACT's first postulate ( #temporal-optimality).
+5. **Directed separation is architectural, not parametric.** Three architecture classes: modular (separation by construction), fully merged (fails by construction), partially modular. The κ-as-scalar framing is a category error. Section II results apply exactly to modular agents. Logogenic agents need coupled formulation from the start.
 
-6. **Math in conversation vs files.** In terminal chat responses, use Unicode for math (α, δ, Σ, →, ≥, etc.) — there is no LaTeX rendering in the terminal and raw LaTeX is harder to parse visually. In markdown files written to disk, use proper inline LaTeX per FORMAT.md. Joseph may respond in whatever notation is easiest to type (Latin approximations, prose, code-like, Unicode, or LaTeX) — interpret generously.
+6. **Math in conversation vs files.** In terminal chat responses, use Unicode for math (α, δ, Σ, →, ≥, etc.) — there is no LaTeX rendering in the terminal. In markdown files written to disk, use proper inline LaTeX per FORMAT.md. Joseph may respond in whatever notation is easiest to type — interpret generously.
 
 ## What's Settled vs. Open
 
@@ -99,11 +100,12 @@ See `WORKBENCH.md` for the full development state. Summary:
 - Orient cascade structure (derived from information dependency)
 - Additive log-confidence decay (generalizes $p^n$)
 - Observability as strategy enablement
-- Directed separation (with explicit scope condition)
+- Directed separation (with architectural classification, not κ-scalar)
 - $G_t = (O_t, \Sigma_t)$ split (definitional)
 - Satisfaction gap / control regret split
 - DAG acyclicity derived from temporal ordering
 - Composition consistency required by scope condition's level-independence
+- α/T relationship verified for all correction function classes (α proportional to T)
 
 ### Open
 - Action-deliberation-exploration tradeoff (three-way with $\Sigma_t$)
@@ -112,29 +114,35 @@ See `WORKBENCH.md` for the full development state. Summary:
 - Edge identifiability conditions (resolved in software, open in general)
 - P3→Markov step in graph uniqueness (sketch, needs tightening)
 - Composition laws (specific forms are sketches; existence is required)
+- Coupled formulation for logogenic agents (Section V scope decision)
 
 ### Known Fragilities
 - Edge semantics claim interventional but update from observational
 - Missing commitment/resource/temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs) — acknowledged as scope restriction, not a bug
+- Directed separation violated by goal-conditioned agents (LLMs) — resolved as architectural scope, not approximation
 
 ## File Organization
 
 **Root level (Agentic Systems):**
+- `OUTLINE.md` — **Top-level assembly index** across all parts.
 - `WORKBENCH.md` — **Development state.** What's done, open, fragile.
 - `FORMAT.md` — **Segment file conventions.** How to write claim files.
 - `NOTATION.md` — **Symbol reference.** All math notation defined here.
 - `LEXICON.md` — **Prose vocabulary.** Cycle phases, agent classes, key terms.
 - `TODO.md` — **Deferred organizational items.**
 
-**ACT mathematical core:**
-- `act-core/OUTLINE.md` — **The canonical theory outline.** Claim-by-claim, section-by-section, with the current linearization.
-- `act-core/src/` — **The theory.** Claim segment files, named by slug (`act-core/src/{slug}.md`). No numbering.
+**Components:**
+- `01-act-core/OUTLINE.md` — **ACT canonical outline.** Sections I, II, III + Appendices.
+- `01-act-core/src/` — **ACT segments.** Named by slug. No numbering.
+- `02-tst-core/OUTLINE.md` — **TST outline.** Software domain segments.
+- `02-tst-core/src/` — **TST segments.**
+- `03-logogenic-agents/OUTLINE.md` — **Logogenic framework outline.**
+- `04-logozoetic-agents/OUTLINE.md` — **Logozoetic framework outline.**
 
 **Supporting:**
-- `bin/` — Build and lint tools (`build-index`, `lint-md`)
+- `bin/` — Build and lint tools (`build`, `lint-md`)
 - `_archive/` — Superseded docs. Preserved for archaeology.
 - `refs/` — Reference papers
-- `scratch/` — Working documents, spikes, historical artifacts - `spike-v3-purposeful-agent.md` — Definitive Section II derivation - `spike-agent-composition.md` — Composition/holon theory - `spike-graph-uniqueness.md` — DAG structure uniqueness argument - `04-intent-dag-consolidated.md` — Canonical intent DAG reference - `track-a-intent-dag/` — DAG formalism variants (historical) - `track-b-nonlinear-sims/` — Simulation code and results
+- `scratch/` — Working documents, spikes, historical artifacts
 - `reflections/` — Author's philosophical/theoretical journal
-- `../agentic-tft/` — Prior bridge work: TFT → AI agents. Docs 10-14 relevant to Section V.
+- `../agentic-tft/` — Prior bridge work: TFT → AI agents. Docs 10-14 relevant to logogenic agents.
