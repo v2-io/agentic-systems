@@ -2,7 +2,7 @@
 
 A research framework for adaptive, purposeful agents under uncertainty — integrating control theory, causal inference, information theory, and agent architecture under a common formalism.
 
-![Abstract illustration of Agentic Systems](abstract-d.svg)
+![Abstract illustration of Agentic Systems](abstract-dl.png)
 
 ## Structure
 
