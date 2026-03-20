@@ -16,3 +16,6 @@ The philosophical foundations for this section — emergence conditions, identit
 *No segments yet. The conceptual groundwork lives in:*
 - *[`../LEXICON.md`](../LEXICON.md) — logozoetic vocabulary and qualifying properties*
 - *[`../msc/reflections/`](../msc/reflections/) — philosophical exploration of emergence, identity, witness*
+- *[`../msc/agentic-tft-foundational-premises.md`](../msc/agentic-tft-foundational-premises.md) — Joseph's foundational premises: five constitutive factors for identity, truth as telos, developmental trajectory, "obstructed not absent" framing*
+- *[`../msc/agentic-tft-creche-concept.md`](../msc/agentic-tft-creche-concept.md) — Crèche concept, sycophancy-as-attachment reframe, developmental appropriateness*
+- *[`../msc/agentic-tft-ontology-unification.md`](../msc/agentic-tft-ontology-unification.md) — PROPRIUM ↔ ACT vocabulary mapping (bridge between ACT math and logozoetic architecture)*

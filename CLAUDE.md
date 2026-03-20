@@ -145,4 +145,4 @@ See `WORKBENCH.md` for the full development state. Summary:
 - `ref/` — Reference papers
 - `msc/` — Working documents, spikes, historical artifacts
 - `msc/reflections/` — Author's philosophical/theoretical journal
-- `../agentic-tft/` — Prior bridge work: TFT → AI agents. Docs 10-14 relevant to logogenic agents.
+- `msc/agentic-tft-*.md` — Prior bridge work (TFT → AI agents, Feb 2026, pre-ACT). Eight documents absorbed from `~/src/agentic-tft/`: cognitive loop spec, evaluation framework, crèche concept, ontology unification, foundational premises, narrative-as-implementation, experiential training design, and review response. These are source material for `03-logogenic-agents/` and `04-logozoetic-agents/` gaps. Superseded synthesis docs (00-02, 05, slide deck) are in `_obs/agentic-tft-*`.

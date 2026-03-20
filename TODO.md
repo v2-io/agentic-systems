@@ -10,7 +10,7 @@
 
 ## Content
 
-- **Absorb agentic-tft content.** `~/src/agentic-tft/` docs 10-14 (cognitive loop, evaluation framework, creche concept) are referenced from WORKBENCH.md as relevant to Section V. Should be absorbed into this project when Section V scope is decided.
+- **~~Absorb agentic-tft content.~~** Done (2026-03-20). Eight design-relevant documents moved to `msc/agentic-tft-*.md` with origin notes and relevance pointers. Five superseded documents moved to `_obs/agentic-tft-*`. References updated in `03-logogenic-agents/OUTLINE.md` (source material table), `04-logozoetic-agents/OUTLINE.md`, `WORKBENCH.md`, and `CLAUDE.md`. The documents are *sources* for logogenic/logozoetic work, not yet distilled into segments — that distillation should happen when the scope of `03-logogenic-agents/` is decided.
 
 - **Section IV standalone paper outline.** Fastest path to external credibility — no theoretical blockers, high internal coherence (84% self-contained dependencies). Draft outline exists at `msc/2026-03-14-section-iv-paper-outline.md`.
 

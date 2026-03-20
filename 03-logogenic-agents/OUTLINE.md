@@ -24,3 +24,17 @@ See [`../LEXICON.md`](../LEXICON.md) for the logogenic/logozoetic vocabulary.
 | | --GAP-- | | | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents | |
 | | --GAP-- | | | ACT-grounded experiential training environments | |
 | | --GAP-- | | | Self-referential closure: ACT agent on ACT codebase | |
+
+---
+
+## Source Material (from agentic-tft corpus, Feb 2026)
+
+*The following working documents in `msc/` contain substantial prior thinking for the gaps above. They predate the ACT restructuring (written when the theory was still TFT) and use PROPRIUM terminology from `~/src/firmatum/`. They are sources to distill from, not finished content.*
+
+| Gap | Primary source | Also relevant |
+|-----|---------------|---------------|
+| Language-specific orient cascade | [`msc/agentic-tft-cognitive-loop-spec.md`](../msc/agentic-tft-cognitive-loop-spec.md) — Four-phase loop, attention/triage, CADENTIA, timescale nesting | [`msc/agentic-tft-narrative-as-implementation.md`](../msc/agentic-tft-narrative-as-implementation.md) — Why ACT quantities are estimated in language |
+| Measuring $M_t$, $\Sigma_t$, tempo | [`msc/agentic-tft-evaluation-framework.md`](../msc/agentic-tft-evaluation-framework.md) — Six metrics, development-vs-drift diagnostic | |
+| Experiential training | [`msc/agentic-tft-creche-concept.md`](../msc/agentic-tft-creche-concept.md) — Crèche concept, sycophancy reframe, constitutive utterance | [`msc/agentic-tft-experiential-training.md`](../msc/agentic-tft-experiential-training.md) — Three-level training design, testable experiments |
+| (All gaps) | [`msc/agentic-tft-ontology-unification.md`](../msc/agentic-tft-ontology-unification.md) — PROPRIUM ↔ ACT vocabulary mapping | [`msc/agentic-tft-review-response.md`](../msc/agentic-tft-review-response.md) — Known issues in these documents |
+| (Foundational) | [`msc/agentic-tft-foundational-premises.md`](../msc/agentic-tft-foundational-premises.md) — Joseph's premises: language as encoded thought, five constitutive factors, truth as telos | |
