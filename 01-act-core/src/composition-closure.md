@@ -7,6 +7,9 @@ depends:
   - multi-agent-scope
   - agent-environment
   - event-driven-dynamics
+  - sector-condition-stability
+  - sector-condition-derivation
+  - persistence-condition
 ---
 
 # Formulation: Composition Closure Criterion
@@ -15,50 +18,122 @@ We define a group of interacting agents as a valid composite macro-agent when it
 
 ## Formal Expression
 
-Let a system consist of $N$ sub-agents interacting in a shared environment with state space $\mathcal S_{env}$. The micro-state, micro-observations, and micro-actions are:
+Let a system consist of $N$ sub-agents interacting in a shared environment with state space $\mathcal S_{\text{env}}$. The micro-state, micro-observations, and micro-actions are:
 
-$$X_{micro, t} = \{ (M_{i,t}, G_{i,t}) \}_{i=1}^N \in \mathcal X_{micro}$$
+$$X_{\text{micro}, t} = \{ (M_{i,t}, G_{i,t}) \}_{i=1}^N \in \mathcal X_{\text{micro}}$$
 
-$$o_{micro, t} = \{ o_{i,t} \}_{i=1}^N \in \mathcal O_{micro}$$
+$$o_{\text{micro}, t} = \{ o_{i,t} \}_{i=1}^N \in \mathcal O_{\text{micro}}$$
 
-$$a_{micro, t} = \{ a_{i,t} \}_{i=1}^N \in \mathcal A_{micro}$$
+$$a_{\text{micro}, t} = \{ a_{i,t} \}_{i=1}^N \in \mathcal A_{\text{micro}}$$
 
 The coupled micro-dynamics form an action-observation loop:
 
-$$X_{micro, t} \xrightarrow{\pi_{micro}} a_{micro, t} \xrightarrow{E} (\Omega_{t+1}, o_{micro, t+1}) \xrightarrow{f_{micro}} X_{micro, t+1}$$
+$$X_{\text{micro}, t} \xrightarrow{\pi_{\text{micro}}} a_{\text{micro}, t} \xrightarrow{E} (\Omega_{t+1}, o_{\text{micro}, t+1}) \xrightarrow{f_{\text{micro}}} X_{\text{micro}, t+1}$$
 
-We constrain our search to an admissible class of projections $\Lambda \in \mathcal P_{adm}$ mapping micro to macro, and an admissible class of macro-dynamics $(\pi_c, E_c, f_c) \in \mathcal M_{adm}$:
-- $\Lambda_x : \mathcal X_{micro} \to \mathcal X_c = (M_c, G_c)$
-- $\Lambda_o : \mathcal O_{micro} \to \mathcal O_c$
-- $\Lambda_a : \mathcal A_{micro} \to \mathcal A_c$
-- $\Lambda_\Omega : \mathcal S_{env} \to \mathcal S_{env, c}$
+We constrain our search to an admissible class of projections $\Lambda \in \mathcal P_{\text{adm}}$ mapping micro to macro, and an admissible class of macro-dynamics $(\pi_c, E_c, f_c) \in \mathcal M_{\text{adm}}$:
+- $\Lambda_x : \mathcal X_{\text{micro}} \to \mathcal X_c = (M_c, G_c)$
+- $\Lambda_o : \mathcal O_{\text{micro}} \to \mathcal O_c$
+- $\Lambda_a : \mathcal A_{\text{micro}} \to \mathcal A_c$
+- $\Lambda_\Omega : \mathcal S_{\text{env}} \to \mathcal S_{\text{env}, c}$
 
-Let $\mathcal D_{micro}$ be the distribution of reachable trajectories generated entirely by the true micro-system over horizon $H$.
+Let $\mathcal D_{\text{micro}}$ be the distribution of reachable trajectories generated entirely by the true micro-system over horizon $H$.
 
 *[Definition (Composition Closure)]* We define the minimal achievable closure defect $\varepsilon^\ast$ over the admissible classes as:
-$$ \varepsilon^* = \inf_{\Lambda \in \mathcal{P}_{adm}, (\pi_c, E_c, f_c) \in \mathcal{M}_{adm}} \big\Vert (\varepsilon_x, \varepsilon_a, \varepsilon_o) \big\Vert $$
 
-Where the expected component errors evaluated over true micro-trajectories $\tau \sim \mathcal D_{micro}$ are:
-- $\varepsilon_x = \mathbb E_{\tau} \Big[ \frac{1}{H} \sum_{t=1}^H \big\Vert \Lambda_x\big(f_{micro}(X_{micro, t}, o_{micro, t+1})\big) - f_c\big(\Lambda_x(X_{micro, t}), \Lambda_o(o_{micro, t+1})\big) \big\Vert_{\mathcal{X}} \Big]$
-- $\varepsilon_a = \mathbb E_{\tau} \Big[ \frac{1}{H} \sum_{t=1}^H \big\Vert \Lambda_a\big(\pi_{micro}(X_{micro, t})\big) - \pi_c\big(\Lambda_x(X_{micro, t})\big) \big\Vert_{\mathcal{A}} \Big]$
-- $\varepsilon_o = \mathbb E_{\tau} \Big[ \frac{1}{H} \sum_{t=1}^H \big\Vert \Lambda_o\big(E_{obs}(\Omega_t, a_{micro, t})\big) - E_{c, obs}\big(\Lambda_\Omega(\Omega_t), \Lambda_a(a_{micro, t})\big) \big\Vert_{\mathcal{O}} \Big]$
+$$ \varepsilon^\ast = \inf_{\Lambda \in \mathcal P_{\text{adm}},\, (\pi_c, E_c, f_c) \in \mathcal M_{\text{adm}}} \big\lVert (\varepsilon_x, \varepsilon_a, \varepsilon_o) \big\rVert $$
 
-A set of agents forms a meaningful composite agent when $\varepsilon^\ast \leq \varepsilon_{max}$.
+Where the expected component errors evaluated over true micro-trajectories $\tau \sim \mathcal D_{\text{micro}}$ are:
+- $\varepsilon_x = \mathbb E_\tau \Big[ \frac{1}{H} \sum_{t=1}^H \big\lVert \Lambda_x\big(f_{\text{micro}}(X_{\text{micro}, t}, o_{\text{micro}, t+1})\big) - f_c\big(\Lambda_x(X_{\text{micro}, t}), \Lambda_o(o_{\text{micro}, t+1})\big) \big\rVert_\mathcal{X} \Big]$
+- $\varepsilon_a = \mathbb E_\tau \Big[ \frac{1}{H} \sum_{t=1}^H \big\lVert \Lambda_a\big(\pi_{\text{micro}}(X_{\text{micro}, t})\big) - \pi_c\big(\Lambda_x(X_{\text{micro}, t})\big) \big\rVert_\mathcal{A} \Big]$
+- $\varepsilon_o = \mathbb E_\tau \Big[ \frac{1}{H} \sum_{t=1}^H \big\lVert \Lambda_o\big(E_{\text{obs}}(\Omega_t, a_{\text{micro}, t})\big) - E_{c, \text{obs}}\big(\Lambda_\Omega(\Omega_t), \Lambda_a(a_{\text{micro}, t})\big) \big\rVert_\mathcal{O} \Big]$
+
+A set of agents forms a meaningful composite agent when $\varepsilon^\ast \leq \varepsilon_{\text{max}}$.
+
+### Admissibility constraints on macro-dynamics
+
+*[Formulation (macro-dynamics-admissibility)]*
+
+$\mathcal M_{\text{adm}}$ is the class of macro-dynamics $(\pi_c, E_c, f_c)$ satisfying:
+
+**(A1) ACT agent structure.** The macro-state decomposes as $X_c = (M_c, G_c)$. The macro-update is recursive:
+
+$$X_{c,t+1} = f_c(X_{c,t}, o_{c,t+1})$$
+
+The macro-policy is state-dependent: $a_{c,t} = \pi_c(X_{c,t})$. This ensures the macro-agent has the same structural components as a single ACT agent ( #agent-environment, #recursive-update, #action-selection).
+
+**(A2) Macro-mismatch.** A mismatch signal is well-defined:
+
+$$\delta_{c,t} = o_{c,t} - \hat{o}_{c,t}(M_c, a_{c,t-1})$$
+
+where $\hat{o}_{c,t}$ is the macro-model's prediction of the next macro-observation. This ensures the macro-agent can detect prediction errors — the foundation of adaptation ( #mismatch-signal).
+
+**(A3) Macro-tempo.** The macro-update has well-defined adaptive tempo:
+
+$$\mathcal T_c = \sum_k \nu_c^{(k)} \cdot \eta_c^{(k)\ast}$$
+
+where $k$ indexes the macro-agent's observation channels, $\nu_c^{(k)}$ is the event rate, and $\eta_c^{(k)\ast}$ is the optimal gain ( #adaptive-tempo, #update-gain). This ensures the persistence condition is formulable at the macro level.
+
+**(A4) Bounded macro-correction.** The macro-correction function satisfies the sector condition ( #sector-condition-stability):
+
+$$\delta_c^T F_c(\mathcal T_c, \delta_c) \geq \alpha_c \lVert \delta_c \rVert^2 \quad \text{for } \lVert \delta_c \rVert \leq R_c$$
+
+with $\alpha_c \gt 0$ (positive correction rate) and $R_c \gt 0$ (finite reserve). This ensures the macro-agent's corrections work — they reduce mismatch rather than amplifying it, within the macro-model's capacity.
+
+**What (A1)-(A4) prevent.** Without these constraints, the infimum over $\mathcal M_{\text{adm}}$ is trivially zero (any dynamical system can curve-fit micro-trajectories over a finite horizon). The constraints force the macro-dynamics to be a genuine ACT agent — with decomposed state, prediction errors, adaptive tempo, and stable correction — not an arbitrary function approximator. $\varepsilon^\ast$ then measures the irreducible cost of representing multiple agents as one ACT agent.
+
+**What (A1)-(A4) do NOT require.** Directed separation ( #directed-separation) is not part of the admissibility constraints. It is an additional structural property that some composites have and others don't ( #directed-separation-under-composition). Results that depend on directed separation declare it as an additional assumption. Similarly, strategy structure ($G_c = (O_c, \Sigma_c)$ with a DAG) is not required — simpler goal representations are admissible.
+
+### Bridge lemma: closure defect to trajectory error
+
+*[Derived (bridge-lemma, sketch, from sector-condition-derivation + A4)]*
+
+If the macro-dynamics satisfy (A4), then bounded closure defect implies bounded trajectory error by the same argument that proves bounded mismatch in Prop A.1 of #sector-condition-derivation.
+
+Define trajectory error: $e_t = X_{c,t} - \Lambda_x(X_{\text{micro},t})$ — the divergence between the macro-state evolved by macro-dynamics and the projected micro-state.
+
+The closure defect acts as persistent perturbation on $e_t$, while the sector condition on $f_c$ provides contraction. By the Lyapunov argument (Prop A.1 applied to $e_t$ with disturbance $\varepsilon^\ast$):
+
+$$\limsup_{t \to \infty} \lVert e_t \rVert \leq \frac{\varepsilon^\ast}{\alpha_c}$$
+
+provided $\varepsilon^\ast \lt \alpha_c R_c$ — the closure defect is within the macro-agent's adaptive reserve.
+
+**Interpretation.** The trajectory error bound $\varepsilon^\ast / \alpha_c$ has the same structure as the mismatch bound $\rho / \alpha$ from #persistence-condition. This is not coincidence — both are instances of the same Lyapunov result: any system with contracting dynamics and bounded perturbation has bounded steady-state error, regardless of what the "error" measures. The sector condition (A4) ensures contraction; the closure defect provides the perturbation.
+
+**Condition for meaningful composition.** The composite is a meaningful macro-agent when $\varepsilon^\ast / \alpha_c \lt R_c$, i.e., when $\varepsilon^\ast \lt \alpha_c R_c$. This parallels the persistence condition: the closure defect must not exceed the macro-agent's adaptive reserve. If it does, the macro-description diverges from micro-reality and the composite "isn't really a single agent" in a precise dynamical sense.
 
 ## Epistemic Status
 
-*Conditional.* Max attainable: conditional (formulation choice). The mathematical definition of $\varepsilon^\ast$ is well-formed — given specified norms and admissibility constraints, it's a well-defined infimum. The formulation is conditional on two under-specified components: (1) the admissibility constraints ($\mathcal P_{adm}$ and $\mathcal M_{adm}$) that prevent trivial closure by requiring the macro-agent to satisfy ACT's structural requirements, and (2) the norm choices for states, actions, and observations, which are load-bearing — different norms yield different $\varepsilon^\ast$ values. The criterion itself is a *formulation choice*: approximate dynamical homomorphism is one way to operationalize the scale invariance required by #composition-consistency, but not the only possible one.
+*Conditional.* Max attainable: conditional (formulation choice).
+
+The closure defect $\varepsilon^\ast$ is well-defined given (A1)-(A4) and specified norms. The admissibility constraints (A1)-(A4) are a *formulation choice* — they specify what "ACT-shaped macro-dynamics" means by requiring the components that ACT's results depend on. Other admissibility specifications are possible (behavioral equivalence, information-theoretic measures); this one is motivated by making the persistence machinery and the bridge lemma available at the macro level.
+
+The bridge lemma is a *sketch* — the continuous-time Lyapunov argument is clean but the discrete-time translation (one-step contraction maps) needs technical work. The argument that (A4) provides both persistence and trajectory-error boundedness is structurally sound — it's the same theorem applied to different state variables — but the precise conditions for this reuse (whether contraction on the mismatch subspace implies contraction on the trajectory-error subspace) need verification.
+
+The norm choices ($\lVert\cdot\rVert_\mathcal{X}$, $\lVert\cdot\rVert_\mathcal{A}$, $\lVert\cdot\rVert_\mathcal{O}$, and the combination norm) remain load-bearing and unspecified. Domain-specific instantiation will require choosing these.
 
 ## Discussion
 
 This criterion replaces intuitive questions about "where the boundary of an agent is" with a functional test: does a macroscopic ACT description preserve the underlying micro-dynamics well enough to remain predictive and capable? The core requirement is an **approximate dynamical homomorphism** — the macro-dynamics approximately commute with the projection.
 
-Without admissibility constraints on $\mathcal P_{adm}$ and $\mathcal M_{adm}$, closure would be trivial (e.g., arbitrarily curve-fitting an open-loop model). By forcing the macro-components to retain the structure of an ACT agent, the minimal closure defect $\varepsilon^\ast$ quantifies the irreducible cost of being multiple. High qualitative unity (shared models, shared objectives) strongly predicts a low $\varepsilon^\ast$.
+**Relationship to #composition-consistency.** The Section I postulate requires that ACT's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." The admissibility constraints ensure the macro-description is genuinely ACT-shaped, so the same persistence condition, the same tempo framework, and the same mismatch dynamics apply at the macro level with macro-level parameters.
 
-**Relationship to #composition-consistency.** The Section I postulate requires that ACT's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." Other operationalizations are possible (e.g., behavioral equivalence, information-theoretic measures), making this a formulation choice rather than a derived consequence.
+**The sector condition does double duty.** (A4) ensures the macro-agent's corrections work (persistence), AND it ensures the macro-description tracks micro-reality (bridge lemma). This is the central insight: an ACT agent that persists in its own right also persists as a faithful representation of its constituents, because both require the same thing — contracting correction dynamics under bounded perturbation.
+
+**Deriving composite (A4) from sub-agent properties.** If each sub-agent satisfies the sector condition with parameters $(\alpha_i, R_i)$, and coordination costs are bounded by $\Delta\mathcal T_i^{\text{cost}}$ per agent ( #team-persistence), then the composite satisfies (A4) with:
+
+$$\alpha_c \geq \min_i (\alpha_i - \Delta\mathcal T_i^{\text{cost}})$$
+
+$$R_c \leq \min_i R_i$$
+
+This is a weakest-link bound (conservative but clean). Cooperative coupling ( #team-persistence) can improve $\alpha_c$ beyond this bound by reducing effective disturbance. The key implication: (A4) is *verifiable* from micro-level properties — compute each sub-agent's sector-condition parameters, estimate coordination costs, and check whether the composite has positive correction rate. No need to compute $f_c$ directly. See `msc/working-composition-admissibility.md` §6.2 for the derivation.
+
+**Connection to team-persistence.** #team-persistence derives persistence conditions for sub-agents in a cooperative-adversarial network. This segment provides the macro-level complement: the conditions under which the composite itself is a valid ACT agent. Together they close the loop: sub-agents persist individually (team-persistence) AND the composite is a meaningful macro-agent (composition closure with admissibility).
 
 ## Working Notes
-- The admissibility constraints are the hard part and currently serve as placeholders. What exactly must the macro-agent satisfy? Recursive update? Directed separation? The full scope condition? Specifying $\mathcal M_{adm}$ is where the real content will live.
-- The norm choices ($\Vert\cdot\Vert_{\mathcal{X}}$, $\Vert\cdot\Vert_{\mathcal{A}}$, $\Vert\cdot\Vert_{\mathcal{O}}$, and the combination norm on the tuple) are load-bearing but unspecified. Domain-specific instantiation will require choosing these.
-- Bridge lemma needed: small expected component-wise errors guarantee bounded trajectory divergence only if the admissible macro-dynamics $\mathcal M_{adm}$ satisfy appropriate Lipschitz stability conditions. Without this, bounded $\varepsilon^\ast$ doesn't formally guarantee bounded trajectory error.
-- The approach is an approximate dynamical homomorphism condition, a standard tool in dynamical systems and model reduction (cf. Mori-Zwanzig projection, balanced truncation). The specific contribution is applying it to ACT's closed-loop agent structure.
+
+- The norm choices ($\lVert\cdot\rVert_\mathcal{X}$, $\lVert\cdot\rVert_\mathcal{A}$, $\lVert\cdot\rVert_\mathcal{O}$, and the combination norm on the tuple) are load-bearing but unspecified. Domain-specific instantiation will require choosing these. For a software team, the natural norms might be task-weighted; for a military unit, they might be objective-weighted.
+- The $\mathcal P_{\text{adm}}$ question (projection admissibility) is not addressed by (A1)-(A4), which constrain the macro-dynamics. Projection admissibility — what projections $\Lambda$ are allowed — is an independent question. An information-preservation approach ($\Lambda$ must retain predictive mutual information) is promising but not yet formalized.
+- The bridge lemma's discrete-time formalization needs the contraction mapping theorem for one-step update maps under persistent perturbation. This is standard in discrete Lyapunov theory (Elaydi 2005) and should be a straightforward translation of the continuous-time sketch.
+- The weakest-link structure ($\alpha_c = \min_i \alpha_i^{\text{eff}}$) is conservative. In practice, strong sub-agents may compensate for weak ones through cooperative coupling. A tighter bound would account for cross-agent compensation, likely through the cooperative disturbance reduction terms in #team-persistence.
+- **A richer toy case** is needed: two purposeful agents (Section II) with strategy DAGs, cooperative communication, and a shared objective. This would exercise (A1) fully (including the $G_c$ component) and test whether the admissibility constraints are tight enough to be useful without being so tight they exclude interesting composites.
+- The approach is an approximate dynamical homomorphism condition, a standard tool in dynamical systems and model reduction (cf. Mori-Zwanzig projection, balanced truncation). The specific contribution is applying it to ACT's closed-loop agent structure with sector-condition-based stability guarantees.

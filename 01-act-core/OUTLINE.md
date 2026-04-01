@@ -59,32 +59,32 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 *"If a man knows not to which port he sails, no wind is favorable." — Seneca*
 
-| § | Type | N | Tag | Claim | Stage |
-|---|------|---|-----|-------|-------|
-| II | Definition | | [#agent-spectrum](src/agent-spectrum.md) | ±model × ±objective quadrants | draft |
-| II | Formulation | | [#complete-agent-state](src/complete-agent-state.md) | $X_t = (M_t, G_t)$ | draft |
-| II | Definition | | [#objective-functional](src/objective-functional.md) | $O_t$ parametrizes value | draft |
-| II | Definition | | [#value-object](src/value-object.md) | Horizon/policy-conditioned value | draft |
-| II | Definition | | [#strategy-dimension](src/strategy-dimension.md) | $G_t = (O_t, \Sigma_t)$ split | draft |
-| II | Derived + Scope | | [#causal-hierarchy-requirement](src/causal-hierarchy-requirement.md) | Level 2 needed for planning | draft |
-| II | Derived | | [#loop-interventional-access](src/loop-interventional-access.md) | Feedback loop → Level 2 data | draft |
-| II | Normative | | [#explicit-strategy-condition](src/explicit-strategy-condition.md) | When planning beats exploring | draft |
-| II | Derived | | [#chain-confidence-decay](src/chain-confidence-decay.md) | Log-confidence additive in depth | draft |
-| II | Scope | | [#and-or-scope](src/and-or-scope.md) | Conjunctive/disjunctive scope | draft |
-| II | Definition | | [#strategy-dag](src/strategy-dag.md) | Strategy as probabilistic DAG | draft |
-| II | Derived + Scope | | [#directed-separation](src/directed-separation.md) | Epistemic update is goal-blind | draft |
-| II | Definition | | [#satisfaction-gap](src/satisfaction-gap.md) | Ideal vs best achievable | draft |
-| II | Definition | | [#control-regret](src/control-regret.md) | Best achievable vs current | draft |
-| II | Definition | | [#strategic-calibration](src/strategic-calibration.md) | Edge residuals | draft |
-| II | Derived | | [#orient-cascade](src/orient-cascade.md) | Resolution order by info dep | draft |
-| II | Derived | | [#observability-dominance](src/observability-dominance.md) | Unobservable edges freeze | draft |
-| II | Hypothesis | | [#edge-update-via-gain](src/edge-update-via-gain.md) | Gain extends to strategy edges | draft |
-| II | Scope | | [#edge-update-causal-validity](src/edge-update-causal-validity.md) | When edge updates are causally valid | draft |
-| II | Formulation | | [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous | draft |
-| | --GAP-- | | | Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy) | |
-| | --GAP-- | | | Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs) | |
-| II | Proposed schema | | [#strategy-persistence-schema](src/strategy-persistence-schema.md) | Sector conditions for $\Sigma_t$ | draft |
-| | --GAP-- | | | Three-way exploit/explore/deliberate allocation with $\Sigma_t$ | |
+| §   | Type            | N   | Tag                                                                                    | Claim                                                            | Stage |
+| --- | --------------- | --- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----- |
+| II  | Definition      |     | [#agent-spectrum](src/agent-spectrum.md)                                               | ±model × ±objective quadrants                                    | draft |
+| II  | Formulation     |     | [#complete-agent-state](src/complete-agent-state.md)                                   | $X_t = (M_t, G_t)$                                               | draft |
+| II  | Definition      |     | [#objective-functional](src/objective-functional.md)                                   | $O_t$ parametrizes value                                         | draft |
+| II  | Definition      |     | [#value-object](src/value-object.md)                                                   | Horizon/policy-conditioned value                                 | draft |
+| II  | Definition      |     | [#strategy-dimension](src/strategy-dimension.md)                                       | $G_t = (O_t, \Sigma_t)$ split                                    | draft |
+| II  | Derived + Scope |     | [#causal-hierarchy-requirement](src/causal-hierarchy-requirement.md)                   | Level 2 needed for planning                                      | draft |
+| II  | Derived         |     | [#loop-interventional-access](src/loop-interventional-access.md)                       | Feedback loop → Level 2 data                                     | draft |
+| II  | Normative       |     | [#explicit-strategy-condition](src/explicit-strategy-condition.md)                     | When planning beats exploring                                    | draft |
+| II  | Derived         |     | [#chain-confidence-decay](src/chain-confidence-decay.md)                               | Log-confidence additive in depth                                 | draft |
+| II  | Scope           |     | [#and-or-scope](src/and-or-scope.md)                                                   | Conjunctive/disjunctive scope                                    | draft |
+| II  | Definition      |     | [#strategy-dag](src/strategy-dag.md)                                                   | Strategy as probabilistic DAG                                    | draft |
+| II  | Derived + Scope |     | [#directed-separation](src/directed-separation.md)                                     | Epistemic update is goal-blind                                   | draft |
+| II  | Definition      |     | [#satisfaction-gap](src/satisfaction-gap.md)                                           | Ideal vs best achievable                                         | draft |
+| II  | Definition      |     | [#control-regret](src/control-regret.md)                                               | Best achievable vs current                                       | draft |
+| II  | Definition      |     | [#strategic-calibration](src/strategic-calibration.md)                                 | Edge residuals                                                   | draft |
+| II  | Derived         |     | [#orient-cascade](src/orient-cascade.md)                                               | Resolution order by info dep                                     | draft |
+| II  | Derived         |     | [#observability-dominance](src/observability-dominance.md)                             | Unobservable edges freeze                                        | draft |
+| II  | Hypothesis      |     | [#edge-update-via-gain](src/edge-update-via-gain.md)                                   | Gain extends to strategy edges                                   | draft |
+| II  | Scope           |     | [#edge-update-causal-validity](src/edge-update-causal-validity.md)                     | When edge updates are causally valid                             | draft |
+| II  | Formulation     |     | [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous                                   | draft |
+|     | --GAP--         |     |                                                                                        | Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy) |       |
+|     | --GAP--         |     |                                                                                        | Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)      |       |
+| II  | Proposed schema |     | [#strategy-persistence-schema](src/strategy-persistence-schema.md)                     | Sector conditions for $\Sigma_t$                                 | draft |
+|     | --GAP--         |     |                                                                                        | Three-way exploit/explore/deliberate allocation with $\Sigma_t$  |       |
 
 
 ---
