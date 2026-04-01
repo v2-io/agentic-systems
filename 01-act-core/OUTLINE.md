@@ -79,7 +79,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | II | Derived | | [#orient-cascade](src/orient-cascade.md) | Resolution order by info dep | draft |
 | II | Derived | | [#observability-dominance](src/observability-dominance.md) | Unobservable edges freeze | draft |
 | II | Hypothesis | | [#edge-update-via-gain](src/edge-update-via-gain.md) | Gain extends to strategy edges | draft |
-| | --GAP-- | | | When observational edge updates yield valid causal semantics | |
+| II | Scope | | [#edge-update-causal-validity](src/edge-update-causal-validity.md) | When edge updates are causally valid | draft |
 | II | Formulation | | [#structural-change-as-parametric-limit](src/structural-change-as-parametric-limit.md) | Pruning/grafting as continuous | draft |
 | | --GAP-- | | | Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy) | |
 | | --GAP-- | | | Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs) | |
@@ -102,7 +102,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | III | Scope | | [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | draft |
 | III | Formulation | | [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | draft |
 | III | Derived | | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | draft |
-| | --GAP-- | | | Does epistemic goal-blindness survive composition? | |
+| III | Hypothesis | | [#directed-separation-under-composition](src/directed-separation-under-composition.md) | Goal-blindness survives iff routing is goal-blind (two cases) | draft |
 | III | Definition | | [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | draft |
 | III | Definition + Discussion | | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | draft |
 | III | Hypothesis | | [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | draft |

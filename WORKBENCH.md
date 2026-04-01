@@ -53,7 +53,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | [temporal-nesting](01-act-core/src/temporal-nesting.md) | Derived | Needs review |
 | [agent-identity](01-act-core/src/agent-identity.md) | Discussion | Needs review |
 
-### Written — Section II (20 of 20 segments — all written)
+### Written — Section II (21 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
 | [agent-spectrum](01-act-core/src/agent-spectrum.md) | Definition | Needs review |
@@ -74,6 +74,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | [orient-cascade](01-act-core/src/orient-cascade.md) | Derived | Resolution order from information dependency. $G_t$ bounded by $M_t$. |
 | [observability-dominance](01-act-core/src/observability-dominance.md) | Derived | Low $\sigma$ → frozen edges → epistemically dead paths. |
 | [edge-update-via-gain](01-act-core/src/edge-update-via-gain.md) | Hypothesis | Gain principle extended to edge credences. Signal function open. |
+| [edge-update-causal-validity](01-act-core/src/edge-update-causal-validity.md) | Scope | Three-regime causal validity for edge updates. Identifiability coefficient $\iota_{ij}$. |
 | [structural-change-as-parametric-limit](01-act-core/src/structural-change-as-parametric-limit.md) | Formulation | Six operations from reweighting to full restructure. |
 | [strategy-persistence-schema](01-act-core/src/strategy-persistence-schema.md) | Proposed schema | Sector conditions for $\Sigma_t$. Schema, not result — needs instantiation. |
 
@@ -101,12 +102,13 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | [system-availability](02-tst-core/src/system-availability.md) | Definition | Standard reliability engineering. |
 | [continuous-operation](02-tst-core/src/continuous-operation.md) | Scope | Extends temporal optimization to include operational failures. |
 
-### Written — Section III (13 of 13 segments — all written)
+### Written — Section III (14 segments, all written)
 | Slug                                                                | Type        | Notes                                                                                                                                |
 | ------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [multi-agent-scope](01-act-core/src/multi-agent-scope.md)                       | Scope       | Coupling through shared environment.                                                                                                 |
 | [composition-closure](01-act-core/src/composition-closure.md)                   | Formulation | Operationalizes agent boundary as bounded closure defect. Status: conditional (admissibility constraints and norms under-specified). |
 | [tempo-composition](01-act-core/src/tempo-composition.md)                       | Derived     | Sub-additive tempo inequality. Status: sketch (proof incomplete — $\varepsilon^\ast \to C_{\text{coord}}$ mapping open).             |
+| [directed-separation-under-composition](01-act-core/src/directed-separation-under-composition.md) | Hypothesis | Two cases: goal-blind routing preserves, goal-dependent routing breaks. Status: discussion-grade — rests on informal architectural classification and undefined routing concept. Earlier draft had a Case 3 (environmental coupling) that was correctly identified by review as not a directed-separation issue. |
 | [unity-dimensions](01-act-core/src/unity-dimensions.md)                         | Definition  | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping.                          |
 | [shared-intent](01-act-core/src/shared-intent.md)                               | Definition  | IB-compressed purposeful state for inter-agent communication. Status: discussion-grade.                                              |
 | [auftragstaktik-principle](01-act-core/src/auftragstaktik-principle.md)         | Hypothesis  | $B_O \gt B_\Sigma \gt B_M$. Bungay evidence. Status: discussion-grade.                                                               |

@@ -32,7 +32,21 @@ $$\text{CIY}_{\text{proxy}}(a_{t-1}) = I(o_t; a_{t-1} \mid M_{t-1}) - I(o_t; a_{
 
 This proxy is **sign-indefinite in general** and requires causal assumptions for interpretation. The canonical CIY (interventional) is the primary quantity; the proxy is auxiliary.
 
-**Safety conditions for proxy use.** The proxy form should NOT be used in policy optimization (e.g., as the CIY term in the unified policy objective) because an agent maximizing a sign-indefinite quantity may optimize in the wrong direction. The proxy is suitable only for diagnostic purposes: detecting whether an action carried causal information (large $\lvert\text{CIY}_{\text{proxy}}\rvert$) vs. none ($\text{CIY}_{\text{proxy}} \approx 0$). For decision-making, use the canonical CIY (non-negative by construction) or a known-safe surrogate (ensemble disagreement, UCB bonuses). If the canonical CIY is intractable and no safe surrogate is available, the CIY term should be dropped from the policy objective entirely, defaulting to pure exploitation.
+**Safety conditions for proxy use.** The proxy form should NOT be used in policy optimization (e.g., as the CIY term in the unified policy objective) because an agent maximizing a sign-indefinite quantity may optimize in the wrong direction. The proxy is suitable only for diagnostic purposes: detecting whether an action carried causal information (large proxy magnitude) vs. none (proxy near zero). For decision-making, use the canonical CIY (non-negative by construction) or a known-safe surrogate (ensemble disagreement, UCB bonuses). If the canonical CIY is intractable and no safe surrogate is available, the CIY term should be dropped from the policy objective entirely, defaulting to pure exploitation.
+
+### Admissibility regimes
+
+*[Scope Condition (ciy-admissibility)]*
+
+Three regimes determine when CIY can be estimated and how strong the causal identification is:
+
+**Regime A — Randomized interventions.** The agent varies its actions across episodes (RL agents exploring, scientists experimenting, organisms probing). CIY is directly estimable from the agent's execution data and non-negative by construction. This is the standard case for active agents within the adaptive loop ( #loop-interventional-access). Action variation provides the identification needed for clean interventional estimates.
+
+**Regime B — Observational with causal assumptions.** The agent cannot freely vary actions (constrained by coordination, policy, or resource limits). CIY estimation requires additional structure: a known causal DAG, instrumental variables, or functional form assumptions. Results inherit whatever causal assumptions are made. The interventional interpretation of CIY is weaker — it holds under the assumed causal structure but not model-free.
+
+**Regime C — Adversarial or passive observation.** The agent either did not intervene (passive monitoring) or the observation channel includes responses from potentially adversarial sources. In the passive case, CIY is zero by definition (no intervention, no interventional information). In the adversarial case, CIY from the query action itself remains non-negative, but the *content* of the response may be designed to increase model-reality mismatch. The adversary operates through the disturbance term $\rho$, not through the information measure.
+
+The regime is a property of the **domain and the agent's action space**, not a parameter the agent chooses. Software development is typically Regime A (the agent runs tests, deploys to staging, observes results — high action variation). Organizational strategy is typically Regime B (multiple initiatives run concurrently, attribution requires assumptions). Intelligence analysis is typically Regime C (the analyst observes but does not intervene).
 
 ## Epistemic Status
 
@@ -41,12 +55,6 @@ The CIY *definition* is well-grounded in causal inference theory. The *structura
 ## Discussion
 
 **Dependence on the reference distribution $q$.** The quantitative CIY value depends on the choice of $q$, which is a significant degree of freedom. A uniform $q$ treats all alternatives equally; a policy-induced $q$ emphasizes alternatives the agent would consider. ACT adopts the policy-induced $q$ as default: $q(\cdot \mid M) = \pi(\cdot \mid M)$, yielding CIY as "how different is this action's outcome from what I'd typically see?" CIY values are not comparable across different $q$ choices.
-
-**CIY admissibility regimes.** Three regimes determine when CIY can be estimated:
-
-- **Regime A — Randomized interventions.** Actions are varied (RL agents exploring, scientists experimenting, organisms probing). CIY is directly estimable and non-negative. The standard case for active agents.
-- **Regime B — Observational with causal assumptions.** Agent cannot freely vary actions. CIY estimation requires a known DAG, instrumental variables, or functional form assumptions. Results inherit the causal assumptions.
-- **Regime C — Adversarial communication.** Observation channel includes responses from potentially adversarial sources. CIY from the query itself remains non-negative, but the *content* may be designed to increase model-reality mismatch. The adversary operates through the disturbance term $\rho$, not through the information measure.
 
 **The unified policy objective.** The exploration-exploitation tension suggests:
 
