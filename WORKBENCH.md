@@ -21,7 +21,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 
 ## Segment Status
 
-### Written — Section I (26 segments, all written)
+### Written — Section I (27 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
 | [temporal-optimality](01-act-core/src/temporal-optimality.md) | Postulate | Needs review |

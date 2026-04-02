@@ -134,3 +134,94 @@ Both reviews independently recommend the same next steps:
 3. Tighten the update-gain → sector-condition bridge
 4. Formalize the G_t complexity bound
 5. Bound the fluid-limit approximation error
+
+
+---
+
+## Spike Results: The Gain → Sector Condition Bridge (2026-04-02)
+
+Two spikes completed, investigating the theory's softest structural joint:
+
+### Spike 1: Kalman Case (`msc/spike-gain-sector-bridge.md`)
+
+**Result:** For the Kalman filter, the sector condition is DERIVED, not assumed. The sector parameter α = K (scalar case) = η* exactly. The bridge holds because the correction is linear (F(e) = KHe) and KH has non-negative eigenvalues in the (P⁻)⁻¹-weighted inner product.
+
+**Generalization:** The "Gain-to-Sector Bridge Theorem" — the gain-based update satisfies the sector condition whenever the mismatch transform g has **directional fidelity** (B1): δᵀg(δ) ≥ c‖δ‖². For optimal Bayesian updates, B1 holds by construction. Five failure modes precisely characterized: directional infidelity, gain collapse, nonlinear saturation, unobservable directions, model misspecification.
+
+### Spike 2: Nonlinear / Gradient Descent Case (`msc/spike-gain-sector-bridge-nonlinear.md`)
+
+**Result:** For any gradient-based agent, GA-3 is **mathematically equivalent** to local strong convexity of the loss function. The equivalence is exact:
+
+    α = η · μ,  where μ = λ_min(∇²L) is the strong convexity modulus
+    R = radius of the largest ball where ∇²L remains positive definite
+
+**Classification verified by simulation (6 experiments):**
+- Quadratic loss: GA-3 global (R = ∞), α = η · λ_min(H)
+- L2-regularized convex: GA-3 global, α ≥ η · λ
+- Exponential family (natural params): GA-3 global, subsumes Beta-Bernoulli spike
+- Unregularized logistic: GA-3 global but α → 0 at infinity
+- Non-convex (mixtures, neural nets): GA-3 LOCAL only, R = basin of attraction
+- Quasi-convex: technically local, α decays to zero
+
+**Key insight:** The structural-adaptation trigger (#structural-adaptation-necessity) IS the loss landscape's inflection surface (basin boundary). When mismatch exceeds R, the agent has been pushed out of its convexity basin and needs structural change — exactly what the theory predicts.
+
+### Combined Assessment
+
+GA-3 transforms from "opaque global assumption" to "derivable conditional result":
+
+    gain principle + directional fidelity (B1) →[derived]→ sector condition
+    gradient descent + local strong convexity →[equivalent]→ sector condition
+
+**Recommendation:** Keep GA-3 as a named assumption (it covers non-gradient agents too) but add a derivation note documenting the equivalence. The assumption is not eliminated but made transparent and verifiable.
+
+
+## Promotion Plan: Gain-Sector Bridge → Segment
+
+### Step 1: Write the segment (`01-act-core/src/gain-sector-bridge.md`)
+
+A new segment combining the results of both spikes:
+- **Type:** derived
+- **Status:** conditional (conditional on B1: directional fidelity, or equivalently, local strong convexity for gradient agents)
+- **Depends:** update-gain, sector-condition-derivation, sector-condition-stability
+- **Formal Expression:** The Gain-to-Sector Bridge Theorem (B1 + positive gain → sector condition with α = η* · c_min). The gradient equivalence as a corollary (α = η · μ for gradient agents).
+- **Epistemic Status:** Conditional derivation. Exact for optimal Bayesian updates and gradient descent on strongly convex losses. Local for non-convex losses. Does not cover non-gradient agents.
+
+### Step 2: Reclassify GA-3 in NOTATION.md
+
+Change GA-3 from "Global Assumption" to:
+> GA-3: Sector condition. Derived from the gain principle when the update rule has directional fidelity (B1); see #gain-sector-bridge. For gradient-based agents, equivalent to local strong convexity of the loss. Remains an independent assumption for non-gradient agents.
+
+### Step 3: Update sector-condition-derivation.md
+
+Add a note at the top of the Assumptions section: GA-3 is derivable from the gain principle under B1, not merely assumed. The Lyapunov proofs are unchanged — they operate downstream of GA-3 regardless of how it is established.
+
+### Step 4: Update worked-example-kalman.md
+
+Derive α from the Kalman gain (α = K = P⁻/(P⁻ + R_obs)) rather than reporting it "from data." This closes the worked example's last semi-empirical step.
+
+### Step 5: Update persistence-condition.md
+
+Add to Common Properties: "The α-T relationship is now grounded: for linear correction, α = T exactly; for gradient-based correction on strongly convex losses, α = η · μ where μ is the strong convexity modulus. The empirical observation that α is monotone in T is derived for these cases."
+
+### Step 6: The weighted-norm subtlety
+
+In the matrix Kalman case, the sector condition holds in the (P⁻)⁻¹-weighted norm, not Euclidean. For fully observable systems with bounded condition number κ(P⁻), the norms are equivalent up to κ(P⁻). Add a brief note to sector-condition-derivation.md acknowledging this: the Euclidean Lyapunov function V = ½‖δ‖² is sufficient for the scalar case and the well-conditioned matrix case; the weighted Lyapunov function V = ½eᵀ(P⁻)⁻¹e is the proper generalization.
+
+
+## What This Unblocks
+
+With the bridge formalized, Section I's promotion bottleneck shifts:
+
+**Resolved by bridge:**
+- GA-3 is no longer an opaque assumption — it's derivable for all well-designed agents
+- The α-T relationship is grounded, not merely empirical
+- The worked-example-kalman can be fully derived
+
+**Remaining Section I bottlenecks:**
+1. Formal definitions for ρ, δ_critical, and the mismatch transform g (quick — definitions, not derivations)
+2. The fluid-limit bridging assumption GA-5 (real math — bounding the discrete-to-continuous error)
+3. The scalar ODE imprecision (caveat paragraph, not a blocker)
+
+**Section II bottleneck:** Signal function for edge revision (unblocks strategy loop closure)
+
+**Section III bottleneck:** Purposeful composite worked example (validates admissibility machinery with G_t)

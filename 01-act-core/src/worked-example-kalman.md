@@ -14,6 +14,7 @@ depends:
   - adaptive-tempo
   - persistence-condition
   - sector-condition-stability
+  - gain-sector-bridge
 ---
 
 # Worked-example: Worked Example — 1D Active Tracking (Kalman Domain)
@@ -108,13 +109,19 @@ With $\rho = 0.18 \text{ surprise/s}$ and $\Vert\delta_{\text{critical}}\Vert = 
 
 $$\mathcal{T} \gt \frac{\rho}{\Vert\delta_{\text{critical}}\Vert} \;\;\Rightarrow\;\; 3.315 \gt 0.18 \;\checkmark$$
 
-### Lyapunov Bounds ( #sector-condition-stability)
+### Lyapunov Bounds ( #sector-condition-stability, #gain-sector-bridge)
 
-From data: $\alpha = 2.6 \text{ s}^{-1}$, $R = 1.4$, $\rho = 0.18$.
+*Mapping: exact (derived, not estimated).*
 
-$$R^* = \frac{\rho}{\alpha} = \frac{0.18}{2.6} \approx 0.069 \lt R$$
+By #gain-sector-bridge, the sector parameter for a scalar Kalman filter is $\alpha = \mathcal{T} = \nu \bar\eta^\ast$:
 
-$$\Delta\rho^* = \alpha R - \rho = 2.6(1.4) - 0.18 = 3.46$$
+$$\alpha = \mathcal{T} = 3.315 \text{ s}^{-1}$$
+
+This is derived from the Kalman gain, not estimated from data — the correction function $F(e) = Ke$ is exactly linear, so $\alpha = K$ per observation and $\alpha = \nu \bar K = \mathcal{T}$ in continuous time. With $R = 1.4$ (model class capacity, a domain parameter) and $\rho = 0.18$:
+
+$$R^\ast = \frac{\rho}{\alpha} = \frac{0.18}{3.315} \approx 0.054 \lt R$$
+
+$$\Delta\rho^\ast = \alpha R - \rho = 3.315(1.4) - 0.18 = 4.46$$
 
 The agent is comfortably within its invariant region with substantial adaptive reserve.
 
@@ -129,7 +136,8 @@ The agent is comfortably within its invariant region with substantial adaptive r
 | Gain ($\eta^\ast = K_t$) | Exact | Kalman gain IS uncertainty ratio |
 | Tempo ($\mathcal{T} = \nu \bar{\eta}^\ast$) | Exact | Closed-form |
 | Persistence condition | Exact | Linear ODE solution |
-| Lyapunov bounds ($R^\ast$, $\Delta\rho^\ast$) | Exact | From estimated sector parameters |
+| Sector parameter ($\alpha = \mathcal{T}$) | Exact | Derived from Kalman gain via #gain-sector-bridge |
+| Lyapunov bounds ($R^\ast$, $\Delta\rho^\ast$) | Exact | From derived sector parameter + domain $R$ |
 
 ## Epistemic Status
 

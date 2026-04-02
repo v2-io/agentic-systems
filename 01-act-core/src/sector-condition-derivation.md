@@ -58,6 +58,8 @@ The correction function always points "inward" (reducing mismatch), and its magn
 
 The local form allows the correction to break down outside $\mathcal B_R$ — the structural adaptation regime of #structural-adaptation-necessity.
 
+**Grounding of GA-3.** The sector condition (A2') is not an irreducible assumption for well-designed agents. #gain-sector-bridge shows that gain-based updating ( #update-gain) with directional fidelity produces correction functions satisfying A2', with $\alpha = \eta^\ast \cdot c_{\min}$. For gradient-based agents, A2' is equivalent to local strong convexity of the loss function, with $\alpha = \eta \cdot \mu$ where $\mu$ is the strong convexity modulus. The Lyapunov proofs below are unchanged — they operate downstream of A2' regardless of whether it is assumed or derived.
+
 ### (A3) Tempo Monotonicity
 
 For fixed $\delta$, $\delta^T F(\mathcal{T}, \delta)$ is monotone increasing in $\mathcal{T}$. Higher tempo means faster correction.

@@ -44,6 +44,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I | Definition | | [#adaptive-tempo](src/adaptive-tempo.md) | Rate of useful info acquisition | draft |
 | I | Hypothesis | | [#mismatch-dynamics](src/mismatch-dynamics.md) | Mismatch evolution ODE | draft |
 | I | Derived | | [#deliberation-cost](src/deliberation-cost.md) | Think vs act tradeoff | draft |
+| I | Derived | | [#gain-sector-bridge](src/gain-sector-bridge.md) | Gain + directional fidelity → sector condition | draft |
 | I | Result | | [#sector-condition-stability](src/sector-condition-stability.md) | Nonlinear persistence (Lyapunov) | draft |
 | I | Result | | [#persistence-condition](src/persistence-condition.md) | Bounded mismatch condition | draft |
 | I | Result | | [#structural-adaptation-necessity](src/structural-adaptation-necessity.md) | When parametric update fails | draft |
