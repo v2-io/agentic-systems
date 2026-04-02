@@ -91,10 +91,13 @@ Max attainable: *conditional* — with a formal intractability reduction, the bo
 **OKRs as observability-by-design.** The Objectives and Key Results framework is a direct organizational instantiation of this principle. The OKR discipline converts a deep, partially-unobservable strategy DAG (objective → vague initiatives → daily actions) into one with explicitly observable intermediate nodes (objective → measurable Key Results → tracked initiatives). In ACT terms: Key Results are intermediate nodes with $\sigma_v \approx 1$ by construction, making credit assignment between actions and objectives componentwise (Prop B.2) rather than intractable.
 
 OKR failure modes map to ACT predictions:
-- **Vanity metrics** (measurable but irrelevant): high $\sigma_v$ but low $p_{ij}$ — the observable node is not causally connected to the objective. The agent updates the edge, but the edge doesn't lead where it thinks.
-- **Too many Key Results**: wide OR-node with the $1/k$ exploration-gating penalty (Prop B.4) — correction capacity diluted across alternatives.
-- **Lagging indicators**: evidence starvation by delay — by the time the KR is measured, the correction window has passed and the mismatch has accumulated.
-- **Goodhart's Law** (the metric becomes the goal): terminal-condition misalignment — the well-formedness constraint in #strategy-dag is violated because the agent optimizes the intermediate observable rather than the actual objective. This is detectable: when terminal conditions are achieved but $V_{O_t}(\tau) \lt V_{O_t}^{\min}$, the terminals don't operationalize the objective correctly.
+
+| OKR Failure | ACT Analog | Formal Quantity | Consequence |
+|---|---|---|---|
+| **Vanity metrics** (measurable but irrelevant) | Observable node not causally connected to objective | High $\sigma_v$, low $p_{ij}$ | Edge updates, but the edge doesn't lead where the agent thinks — correction effort is wasted |
+| **Too many Key Results** | Wide OR-node exploration-gating | $\alpha_\Sigma \propto 1/k$ (Prop B.4) | Correction capacity diluted across alternatives; persistence threshold harder to meet |
+| **Lagging indicators** | Evidence starvation by delay | $\nu_{\text{obs}} \ll \rho$ | By the time the KR is measured, the correction window has passed; mismatch accumulated beyond $R_\Sigma$ |
+| **Goodhart's Law** (metric becomes the goal) | Terminal-condition misalignment with $O_t$ | $V_{O_t}(\tau) \lt V_{O_t}^{\min}$ despite terminals achieved | Well-formedness constraint ( #strategy-dag) violated; agent optimizes the intermediate rather than the objective |
 
 This is not an analogy — it is a domain instantiation. The same formal machinery that predicts when strategic persistence holds also predicts when OKRs work: when Key Results are genuinely causally connected to the Objective ($p_{ij}$ is high and calibrated), few enough to monitor effectively ($k$ is small), and measured on a timescale that permits correction (observation rate exceeds environment drift rate). The TST bridge to software team dynamics runs through exactly this connection.
 
