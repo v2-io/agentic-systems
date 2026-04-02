@@ -163,6 +163,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | Prior art assessment | `msc/02-prior-art-assessment.md` | Hafez/IBM/BDI/active-inference positioning |
 | LLM causal access note | `msc/llm-causal-access-note.md` | Pearl reconciliation; potential intro/paper/blog |
 | DAG boundary type closure | `msc/spike-dag-type-closure.md` | v2; reviewed by Codex; ready for porting |
+| Single-edge strategic dynamics | `msc/spike-single-edge-strategic-dynamics.md` | **Sector condition verified** for Beta-Bernoulli. α_Σ = η_edge = 1/(n+1). Persistence threshold n < R_Σ/ρ_Σ - 1. Gain collapse quantified. Ready for promotion to formal segment. |
 | Track-b simulations | `msc/track-b-nonlinear-sims/` | 6 variants, all validated |
 
 
@@ -233,7 +234,7 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 - ~~P3→Markov step in graph uniqueness (sketch, needs tightening)~~ **Resolved 2026-04-01**: conditional on causal sufficiency
 - Bridge lemma for composition closure: formally proving small expected component-wise errors guarantee bounded trajectory divergence under Lipschitz stability conditions.
 - **Closure defect → coordination overhead mapping**: the core open problem in tempo-composition. The sub-additive inequality $\mathcal T_c \leq \sum \mathcal T_i$ is almost certainly correct, but the quantitative relationship $C_{\text{coord}}(\varepsilon^\ast)$ — how closure defect determines the tempo lost to internal reconciliation — is unproved. This is the missing bridge between the composition postulate (Section I) and a formally derived composition threshold. Proving this for the 2-agent case with orthogonal observation channels is the natural first step.
-- Strategy persistence schema → result: requires formalizing strategic correction function, characterizing $\rho_\Sigma$ (rate of environmental causal drift), and verifying sector condition. Substantial Lyapunov work.
+- Strategy persistence schema → result: sector condition **verified for single-edge Beta-Bernoulli case** (`msc/spike-single-edge-strategic-dynamics.md`). $\alpha_\Sigma = \eta_{\text{edge}} = 1/(n+1)$; persistence iff $n \lt R_\Sigma/\rho_\Sigma - 1$. Remaining: multi-edge extension (credit assignment, correlated edges), non-Bernoulli outcomes, stochastic Lyapunov formalization, connecting $\delta_\Sigma$ to $\delta_{\text{strategic}}$ from #strategic-calibration.
 - Meta-adaptation of $\Pi$ and $N_h$: can the agent structurally adapt its own policy class and planning horizon? Analogous to model-class change (TF-10). Satisfaction gap's disambiguation table handles descriptively; formal mechanism open.
 - DAG boundary type closure — **PORTED to #strategy-dag.** Leaf base credence ($p_v$) with temporal indexing, unique root terminal, well-formedness constraint, $\hat P_\Sigma$ as strategy self-assessment distinct from $A_O$, terminal alignment error as experience-only signal. Spike at `msc/spike-dag-type-closure.md` (v2). Terminal alignment error ($\delta_\text{align}$) formalization still open.
 - Adversarial DAG targeting (Section III). Which strategy edges are most valuable to attack? Centrality in the DAG, inter-agent coupling edges, edges observable to the adversary. #chain-confidence-decay as a weapon: disrupting one AND-edge in a deep chain collapses the whole path.
@@ -254,11 +255,45 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 - **"Section I carries over" compatibility boundary.** After the $X_t = (M_t, G_t)$ lift, epistemic machinery transfers cleanly to the $M_t$ substate. But #action-selection's derivation of $a_t = \pi(M_t)$ relied on $M_t$ being *complete* — this is superseded by $a_t = \pi(M_t, G_t)$. Noted in #complete-agent-state Discussion.
 
 
+## Directed Separation: What Holds for Class 2 (Fully Merged) Agents
+
+**2026-04-01 analysis.** The architectural classification (Class 1 modular / Class 2 merged / Class 3 partial) is settled. The question is: which Section II results survive when directed separation fails?
+
+### Results that survive for Class 2
+
+- **Satisfaction gap and control regret** — defined in terms of $V_O$, $A_O$, $\pi_{\text{current}}$. None reference $f_M$ or $f_G$. The 2×2 diagnostic works for LLMs.
+- **Orient cascade ordering** — information dependency (need to know what's true before evaluating strategy) exists even in coupled systems. Becomes a simultaneous fixed-point problem rather than sequential resolution, but the logical structure is unchanged.
+- **Strategy DAG structure** — goals decompose into subgoals causally regardless of whether perception is goal-conditioned.
+- **Observability dominance** — gain principle drives update rate to zero for unobservable edges regardless of architecture.
+- **Acyclicity** — temporal ordering still prevents cycles.
+- **Section I quantities** — $\delta$, $\eta^\ast$, $\mathcal{T}$, the persistence condition remain well-defined on $M_t$.
+
+### Results that genuinely fail for Class 2
+
+- **Sequential M-then-G update** — for an LLM, epistemic and strategic processing happen in the same forward pass. No well-defined moment where $M_t$ is updated but $G_t$ is not.
+- **$G_t$ complexity bound** — depends on $M_t$ being independently established. In a coupled system, the agent can "see what it wants to see," breaking the bound.
+- **Clean persistence analysis on $M_t$ alone** — mismatch dynamics become coupled: perception quality depends on goals.
+
+### Results where it's genuinely unclear
+
+- **Persistence condition form.** Does $\alpha > \rho/R$ still hold? The Lyapunov machinery is general enough that it should — but $\alpha$ would depend on $G_t$ (goal-conditioned perception changes correction quality), making the persistence condition state-dependent rather than structural. This is a meaningful qualitative change. See Persistence (structural vs. operational) in `LEXICON.md`.
+- **Adversarial dynamics.** If the target's perception is goal-conditioned, an adversary who knows the target's goals can exploit motivated reasoning — feeding observations that will be misinterpreted. New attack surface absent for Class 1. Exponents might change.
+- **Composition.** Does directed separation under composition (#directed-separation-under-composition) make sense when components are Class 2?
+
+### Engineering implications
+
+The #directed-separation segment's Working Notes point toward the right response: even though an LLM is internally Class 2, the *agent system* (LLM + tools + memory + monitoring) can be designed with modular topology — creating partial separation at the system level. This is an architectural prescription that emerges from the classification: build Class 1 structure *around* Class 2 components.
+
+### What's needed
+
+A formal treatment of what happens to the dynamics when separation fails. Not just "it's harder" but: what new phenomena emerge (motivated reasoning, confirmation bias as coupling terms in $f_M$), what the persistence condition becomes for coupled systems (state-dependent $\alpha$?), and which Section II results survive as approximate or limiting cases. This is the scope of `03-logogenic-agents/`.
+
+
 ## Known Fragilities
 
 - Edge semantics claim interventional but update from observational. During Section II promotion: consider scoping literal $P(j \mid do(i), M_t)$ semantics to intervention-rich domains (software), using weaker "agent-calibrated causal credence" for the general case. This is a natural scope narrowing, not a retreat.
 - Missing commitment/resource/temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs) — now framed correctly: $M_t$-side quantities remain well-defined regardless; directed separation gives the clean factorized update and sequential orient cascade. Without it, coupled analysis, not broken theory. Updated in #directed-separation, #agent-spectrum, 01-act-core/OUTLINE.md §II scope. Scalar objective scope restriction added to #objective-functional.
+- Directed separation violated by goal-conditioned agents (LLMs) — now framed correctly: $M_t$-side quantities remain well-defined regardless; directed separation gives the clean factorized update and sequential orient cascade. Without it, coupled analysis, not broken theory. Updated in #directed-separation, #agent-spectrum, 01-act-core/OUTLINE.md §II scope. Scalar objective scope restriction added to #objective-functional. See "Directed Separation: What Holds for Class 2" above for detailed analysis.
 - **TST → ACT bridge is analogical, not formal.** Git-derived metrics (coherence, coupling, $Q$) are claimed to operationalize Lyapunov quantities ($\alpha$, $R$, $\rho$) but no mathematical proof connects them. The chain git data → $Q$ → comprehension time → developer tempo → $\alpha$ has empirical hypothesis steps. This matters because the operationalization story is ACT's main defense against the "unmeasurable quantities" critique. Either formalize the bridge or be explicit that it's an empirical research program, not a derivation.
 
 
