@@ -81,6 +81,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | II  | Definition      |     | [#satisfaction-gap](src/satisfaction-gap.md)                                           | Ideal vs best achievable                                         | draft |
 | II  | Definition      |     | [#control-regret](src/control-regret.md)                                               | Best achievable vs current                                       | draft |
 | II  | Definition      |     | [#strategic-calibration](src/strategic-calibration.md)                                 | Edge residuals                                                   | draft |
+| II  | Discussion      |     | [#credit-assignment-boundary](src/credit-assignment-boundary.md)                       | Tractable/intractable boundary; design requirement               | draft |
 | II  | Derived         |     | [#orient-cascade](src/orient-cascade.md)                                               | Resolution order by info dep                                     | draft |
 | II  | Derived         |     | [#observability-dominance](src/observability-dominance.md)                             | Unobservable edges freeze                                        | draft |
 | II  | Hypothesis      |     | [#edge-update-via-gain](src/edge-update-via-gain.md)                                   | Gain extends to strategy edges                                   | draft |
