@@ -274,7 +274,8 @@ The critical experience is halved relative to the single-edge case. Each additio
 | **B.3** Two-edge, $B$ unobservable | $A \to B \to G$ (AND) | $1/(n_\Phi\!+\!1)$ (plan-level) | Per-edge: No ($O(1/n)$ bias); Plan: Yes | N/A | Credit-assignment collapse |
 | **B.4** Two-arm OR, $\varepsilon$-greedy | $A_1, A_2 \to G$ (OR) | $\min((1\!-\!\varepsilon)/(n_1\!+\!1),\;\varepsilon/(n_2\!+\!1))$ | Yes | Required | Exploration-gated |
 | **B.5a** Credence→value (linear) | Any | $\alpha_s = \alpha_c$ (Jacobian cancels) | — | — | None (exact transfer) |
-| **B.5b** Credence→value (nonlinear) | Any | $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$ | — | — | DAG sensitivity anisotropy |
+| **B.5b** Credence→value (nonlinear, componentwise) | Any | $\alpha_s = \alpha_c$ ($J_k \geq 0$ preserves bound) | — | — | None (exact transfer) |
+| **B.5b** Credence→value (coupled) | Any | $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$ | — | — | Inter-edge coupling |
 
 **Structural results across cases:**
 
@@ -329,53 +330,61 @@ This holds because $\mathbf{J}\mathbf{J}^T$ appears in both numerator and denomi
 
 **Interpretation.** The Jacobian $\mathbf{J}$ determines *which* credence errors matter most for plan value (high-sensitivity edges contribute more to value residuals). But it does not change the *rate* at which those errors are corrected, because the correction is proportional to the error regardless of the error's plan-value impact.
 
-### B.5b: Nonlinear Correction
+### B.5b: Nonlinear Componentwise Correction
 
-*[Derived (Conditional on Jacobian regularity)]*
+*[Derived (from per-component sector condition + Jacobian non-negativity)]*
 
-When the correction is nonlinear — $\mathbf{F}_c(\boldsymbol\delta_c)$ not proportional to $\boldsymbol\delta_c$ — the Jacobian no longer cancels. The sector condition transfers with a condition-number penalty.
+When the correction is nonlinear but **componentwise** — each edge corrects independently, so $(\mathbf{F}_c)_k$ depends only on $(\boldsymbol\delta_c)_k$ — and the plan-value Jacobian is **non-negative** ($J_k \geq 0$ for all $k$), the transfer is lossless regardless of nonlinearity.
 
-**The general bound.** The credence-space sector condition gives $\boldsymbol\delta_c^T \mathbf{F}_c \geq \alpha_c \lVert\boldsymbol\delta_c\rVert^2$. We need $\delta_s \cdot F_s \geq \alpha_s \cdot \delta_s^2$.
+**The per-component sector condition** (from Props B.1-B.4): for each edge $k$,
 
-Using $\delta_s = \mathbf{J}^T \boldsymbol\delta_c$ and $F_s = \mathbf{J}^T \mathbf{F}_c$:
+$$(\boldsymbol\delta_c)_k \cdot (\mathbf{F}_c)_k \geq \alpha_c \cdot (\boldsymbol\delta_c)_k^2$$
 
-$$\delta_s \cdot F_s = \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \mathbf{F}_c$$
+which gives $(\mathbf{F}_c)_k / (\boldsymbol\delta_c)_k \geq \alpha_c$ (the correction-to-mismatch ratio exceeds $\alpha_c$ for each edge independently).
 
-and $\delta_s^2 = \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \boldsymbol\delta_c$.
+**Jacobian non-negativity** holds for all well-formed AND/OR DAGs: increasing any edge credence $p_k$ never decreases plan value $P_\Sigma$ (monotonicity of AND/OR propagation). Therefore $J_k = \partial P_\Sigma / \partial p_k \geq 0$ for all $k$.
 
-Let $\mathbf{A} = \mathbf{J}\mathbf{J}^T$ (positive semidefinite, positive definite when $\mathbf{J}$ has full rank). In the $\mathbf{A}$-weighted inner product:
+**The transfer.** Since $J_k \geq 0$ preserves the inequality direction:
 
-$$\frac{\delta_s \cdot F_s}{\delta_s^2} = \frac{\langle \boldsymbol\delta_c, \mathbf{F}_c \rangle_A}{\langle \boldsymbol\delta_c, \boldsymbol\delta_c \rangle_A}$$
+$$J_k \cdot (\mathbf{F}_c)_k \geq J_k \cdot \alpha_c \cdot (\boldsymbol\delta_c)_k \quad \text{for each } k$$
 
-This is the Rayleigh quotient of $\mathbf{F}_c$ with respect to $\boldsymbol\delta_c$ in the $\mathbf{A}$-weighted norm. The Euclidean sector condition gives $\langle \boldsymbol\delta_c, \mathbf{F}_c \rangle_I \geq \alpha_c \lVert\boldsymbol\delta_c\rVert_I^2$. To transfer to the $\mathbf{A}$-weighted inner product:
+Summing:
 
-$$\langle \boldsymbol\delta_c, \mathbf{F}_c \rangle_A = \boldsymbol\delta_c^T \mathbf{A} \mathbf{F}_c$$
+$$\mathbf{J}^T \mathbf{F}_c = \sum_k J_k (\mathbf{F}_c)_k \geq \alpha_c \sum_k J_k (\boldsymbol\delta_c)_k = \alpha_c \cdot \mathbf{J}^T \boldsymbol\delta_c$$
 
-By Cauchy-Schwarz in the $\mathbf{A}$-norm and using the Euclidean sector condition:
+Therefore $F_s \geq \alpha_c \cdot \delta_s$, giving:
 
-$$\alpha_s \geq \alpha_c \cdot \frac{\sigma_{\min}(\mathbf{A})}{\sigma_{\max}(\mathbf{A})} = \alpha_c \cdot \frac{\sigma_{\min}(\mathbf{J})^2}{\sigma_{\max}(\mathbf{J})^2} = \frac{\alpha_c}{\kappa(\mathbf{J})^2}$$
+$$\alpha_s = \alpha_c$$
 
-where $\kappa(\mathbf{J}) = \sigma_{\max}(\mathbf{J})/\sigma_{\min}(\mathbf{J})$ is the condition number of the Jacobian.
+**No condition-number penalty.** The Jacobian's anisotropy is irrelevant when the correction is componentwise and the Jacobian is non-negative. The non-negativity ensures that every edge's correction contributes in the right direction to the value correction, regardless of how unevenly the Jacobian weights different edges.
 
-**Interpretation.** The condition number $\kappa(\mathbf{J})$ measures how *anisotropic* the DAG's value sensitivity is across edges. When all edges contribute roughly equally to plan value ($\kappa \approx 1$), the transfer is near-lossless. When one edge dominates ($\kappa \gg 1$), the transfer loses a factor of $\kappa^2$ — the agent corrects the high-sensitivity edge efficiently but the low-sensitivity edge's correction doesn't register in value space.
+**When does componentwise correction hold?** For all cases in Props B.1, B.2, and B.4 — the standard Beta-Bernoulli update on each edge, including the stochastic (nonlinear) single-step realization. The correction IS nonlinear (the actual per-step update $(y - \hat p)/(n+1)$ is random, not proportional to $\delta_k$), but it is componentwise (each edge updates from its own observation independently).
 
-**When $\kappa(\mathbf{J})$ is large.** For deep AND-chains, the root-to-leaf Jacobian entries span a large range (leaves deep in the chain have attenuated sensitivity). For wide OR-nodes with one dominant arm, the non-dominant arms have low sensitivity. In both cases, $\kappa(\mathbf{J})$ grows with structural complexity.
+**When does it fail?** When edge corrections are coupled — correcting one edge changes another's correction direction. This occurs for:
+- **Unobservable intermediates (B.3):** The marginal Bayesian update couples edge posteriors. The correction for edge 2 depends on the joint posterior over both edges, not just on $(\boldsymbol\delta_c)_2$ alone.
+- **Shared observations:** If testing one arm gives partial information about another (correlated arms), corrections couple across edges.
 
-**When $\kappa(\mathbf{J})$ is small.** For shallow DAGs with comparable edge sensitivities (balanced AND/OR trees), $\kappa \approx 1$ and the nonlinear penalty is negligible.
+For coupled corrections, the general Cauchy-Schwarz bound gives:
+
+$$\alpha_s \geq \frac{\alpha_c}{\kappa(\mathbf{J})^2}$$
+
+where $\kappa(\mathbf{J})$ is the condition number of the Jacobian (ratio of maximum to minimum singular values). This is the bound from the earlier analysis but it now applies only to the coupled case, not to all nonlinear corrections.
+
+**The refined picture: nonlinearity is not the problem; inter-edge coupling is.** A nonlinear but componentwise correction transfers losslessly through any non-negative Jacobian. A coupled correction — even a linear one — incurs the condition-number penalty because the coupling can redirect correction away from the value-relevant direction.
 
 ### B.5c: Implications
 
 Three regimes for the credence-to-value bridge:
 
-| Correction type | DAG structure | Transfer | $\alpha_s$ |
+| Correction type | Edge coupling | Transfer | $\alpha_s$ |
 |---|---|---|---|
-| Linear (Beta-Bernoulli) | Any | Exact (Jacobian cancels) | $\alpha_c$ |
-| Nonlinear | Well-conditioned ($\kappa \approx 1$) | Near-lossless | $\approx \alpha_c$ |
-| Nonlinear | Ill-conditioned ($\kappa \gg 1$) | Lossy | $\alpha_c / \kappa^2$ |
+| Linear | Any | Exact (Jacobian cancels) | $\alpha_c$ |
+| Nonlinear, componentwise | Independent edges | Exact ($J_k \geq 0$ preserves bound) | $\alpha_c$ |
+| Nonlinear, coupled | Coupled edges | $\kappa(\mathbf{J})^2$ penalty | $\alpha_c / \kappa^2$ |
 
-**The linear case closes the gap completely.** For Beta-Bernoulli edge updates (Props B.1-B.4), the operational diagnostic $\delta_{\text{strategic}}$ inherits the sector condition from credence error with no penalty. The derivation appendix validates the operational mismatch, not merely a surrogate.
+**Componentwise correction closes the gap for all verified cases.** Props B.1, B.2, and B.4 all use componentwise edge updates with non-negative Jacobian. The operational diagnostic $\delta_{\text{strategic}}$ inherits the sector condition from credence error with no penalty — even for the nonlinear (stochastic) single-step realization. The derivation validates the operational mismatch, not merely a surrogate.
 
-**The nonlinear case identifies a new fragility.** Deep or unbalanced DAGs have high $\kappa(\mathbf{J})$, making the value-residual sector condition harder to satisfy even when per-edge credence correction is adequate. This is a *structural* fragility: the DAG's value sensitivity anisotropy degrades the persistence guarantee. It provides a new formal argument for the structural pressure toward shallow, balanced strategies identified qualitatively in #chain-confidence-decay.
+**Inter-edge coupling — not nonlinearity — is the fragility.** The $\kappa^2$ penalty arises only when correcting one edge changes another's correction direction (B.3's unobservable case, correlated observations). Deep or unbalanced DAGs have high $\kappa(\mathbf{J})$ when corrections couple, but the coupling, not the depth or imbalance per se, is what degrades the persistence guarantee.
 
 **Connection to credit assignment.** The Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$ is computable from the DAG's status propagation formulas — it does not require solving the credit-assignment problem. The credit-assignment problem is about *decomposing observed value changes into per-edge contributions* (needed for the update rule). The Jacobian bridge is about *transferring a per-edge sector condition to the value-residual space* (needed for the persistence guarantee). These are different problems: the bridge works even when credit assignment is unsolved, because it only requires the sensitivity structure, not the causal attribution.
 
@@ -407,4 +416,4 @@ The time-varying $\alpha_\Sigma$ issue remains: since $n_k$ increases with each 
 
 **The credence-to-value bridge decouples persistence from credit assignment.** Proposition B.5 shows that strategic persistence (in value-residual space) can be established from per-edge sector conditions (in credence space) without solving the credit-assignment problem. The bridge requires only the value-sensitivity Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$, which is computable from the DAG's status propagation formulas in $O(\lvert V\rvert + \lvert E\rvert)$ time. Credit assignment — attributing observed value changes to specific edges — is needed for the *update rule* (computing the signal function in #edge-update-via-gain), not for the *persistence guarantee*. This means the persistence analysis can proceed even while the update rule remains incompletely specified.
 
-**Value-sensitivity anisotropy is a new fragility dimension.** For nonlinear corrections, the condition number $\kappa(\mathbf{J})$ determines how much persistence degrades in value space relative to credence space. High $\kappa$ means some edges have outsized influence on plan value while others are nearly irrelevant. The agent corrects all edges at comparable rates (via the gain principle), but only the high-sensitivity corrections register in the value diagnostic. This creates a distinct failure mode from evidence starvation (B.2) and exploration gating (B.4): the agent can be correcting its beliefs adequately at every edge while still failing to correct its value assessment, because the value-relevant corrections are masked by value-irrelevant ones. Deep AND-chains and unbalanced OR-nodes are the high-$\kappa$ cases — reinforcing the structural pressure toward shallow, balanced strategies from a new direction.
+**Inter-edge coupling is the true fragility, not nonlinearity or DAG depth.** Proposition B.5b shows that nonlinear componentwise corrections transfer losslessly through any non-negative Jacobian — the $\kappa(\mathbf{J})^2$ penalty arises only when corrections are *coupled* across edges. This refines the earlier qualitative argument from #chain-confidence-decay: the structural pressure toward shallow, balanced strategies is not about depth per se but about the coupling that deep or complex structures tend to introduce. A deep AND-chain with fully observable intermediates (B.2) has componentwise corrections and transfers losslessly despite high depth. The same chain with unobservable intermediates (B.3) has coupled corrections and incurs the penalty. The distinction is observability-mediated coupling, not topological complexity.
