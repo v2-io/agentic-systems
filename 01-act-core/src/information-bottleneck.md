@@ -4,6 +4,7 @@ type: formulation
 status: discussion-grade
 depends:
   - agent-model
+stage: draft
 ---
 
 # Formulation: Information Bottleneck

@@ -4,6 +4,7 @@ type: definition
 status: axiomatic
 depends:
   - model-sufficiency
+stage: draft
 ---
 
 # Definition: Model Class Fitness

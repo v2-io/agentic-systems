@@ -6,6 +6,7 @@ depends:
   - shared-intent
   - unity-dimensions
   - adaptive-tempo
+stage: draft
 ---
 
 # Hypothesis: Auftragstaktik Principle

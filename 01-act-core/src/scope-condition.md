@@ -6,6 +6,7 @@ depends:
   - agent-environment
   - observation-function
   - action-transition
+stage: draft
 ---
 
 # Scope: Scope Condition

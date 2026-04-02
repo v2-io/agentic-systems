@@ -8,6 +8,7 @@ depends:
   - adaptive-tempo
   - persistence-condition
   - sector-condition-derivation
+stage: draft
 ---
 
 # Result: Adversarial Exponent Regimes

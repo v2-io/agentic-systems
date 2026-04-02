@@ -5,6 +5,7 @@ status: exact
 depends:
   - objective-functional
   - agent-model
+stage: draft
 ---
 
 # Definition: Value Object

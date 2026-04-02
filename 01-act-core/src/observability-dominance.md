@@ -5,6 +5,7 @@ status: robust-qualitative
 depends:
   - strategy-dag
   - update-gain
+stage: draft
 ---
 
 # Derived: Observability Dominance

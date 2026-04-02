@@ -6,6 +6,7 @@ depends:
   - update-gain
   - sector-condition-derivation
   - gain-sector-bridge
+stage: draft
 ---
 
 # Derivation: Gain-Sector Bridge — Proofs and Verification

@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - scope-condition
   - composition-consistency
+stage: draft
 ---
 
 # Scope: Multi-Agent Scope

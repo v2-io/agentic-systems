@@ -5,6 +5,7 @@ status: exact
 depends:
   - adaptive-tempo
   - mismatch-signal
+stage: draft
 ---
 
 # Derivation: Sector Condition Stability — Lyapunov Derivation

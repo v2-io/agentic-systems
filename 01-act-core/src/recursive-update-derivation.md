@@ -7,6 +7,7 @@ depends:
   - event-driven-dynamics
   - causal-structure
   - scope-condition
+stage: draft
 ---
 
 # Derivation: Recursive Update — Uniqueness Derivation

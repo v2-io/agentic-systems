@@ -5,6 +5,7 @@ status: discussion-grade
 depends:
   - chronica
   - model-sufficiency
+stage: draft
 ---
 
 # Discussion: Agent Identity and Temporal Continuity

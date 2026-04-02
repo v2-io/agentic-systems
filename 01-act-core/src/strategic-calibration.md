@@ -5,6 +5,7 @@ status: discussion-grade
 depends:
   - strategy-dag
   - value-object
+stage: draft
 ---
 
 # Definition: Strategic Calibration

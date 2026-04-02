@@ -5,6 +5,7 @@ status: robust-qualitative
 depends:
   - strategy-dimension
   - chain-confidence-decay
+stage: draft
 ---
 
 # Scope: AND/OR Combination Scope

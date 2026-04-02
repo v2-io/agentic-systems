@@ -6,6 +6,7 @@ depends:
   - directed-separation
   - multi-agent-scope
   - composition-closure
+stage: draft
 ---
 
 # Hypothesis: Directed Separation Under Composition

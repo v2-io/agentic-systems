@@ -15,6 +15,7 @@ depends:
   - persistence-condition
   - sector-condition-stability
   - gain-sector-bridge
+stage: draft
 ---
 
 # Worked-example: Worked Example — 1D Active Tracking (Kalman Domain)

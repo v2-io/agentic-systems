@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - complete-agent-state
   - objective-functional
+stage: draft
 ---
 
 # Definition: Strategy Dimension

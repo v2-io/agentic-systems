@@ -6,6 +6,7 @@ depends:
   - agent-model
   - scope-condition
   - recursive-update
+stage: draft
 ---
 
 # Formulation: Complete Agent State

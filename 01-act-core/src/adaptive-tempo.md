@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - update-gain
   - event-driven-dynamics
+stage: draft
 ---
 
 # Definition: Adaptive Tempo

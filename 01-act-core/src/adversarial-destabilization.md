@@ -6,6 +6,7 @@ depends:
   - sector-condition-stability
   - sector-condition-derivation
   - adaptive-tempo
+stage: draft
 ---
 
 # Derived: Adversarial Destabilization

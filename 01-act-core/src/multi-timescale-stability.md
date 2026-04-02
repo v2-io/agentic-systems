@@ -5,6 +5,7 @@ status: sketch
 depends:
   - sector-condition-stability
   - temporal-nesting
+stage: draft
 ---
 
 # Sketch: Multi-Timescale Stability

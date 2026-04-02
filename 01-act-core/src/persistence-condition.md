@@ -6,6 +6,7 @@ depends:
   - adaptive-tempo
   - mismatch-signal
   - sector-condition-stability
+stage: draft
 ---
 
 # Result: Persistence Condition

@@ -7,6 +7,7 @@ depends:
   - edge-update-via-gain
   - sector-condition-derivation
   - and-or-scope
+stage: draft
 ---
 
 # Derivation: Sector Condition Verification for Strategic Dynamics

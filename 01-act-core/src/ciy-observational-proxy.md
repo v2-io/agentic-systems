@@ -5,6 +5,7 @@ status: conditional
 depends:
   - causal-information-yield
   - loop-interventional-access
+stage: draft
 ---
 
 # Scope: CIY Observational Proxy

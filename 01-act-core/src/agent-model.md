@@ -6,6 +6,7 @@ depends:
   - agent-environment
   - observation-function
   - chronica
+stage: draft
 ---
 
 # Formulation: The Reality Model

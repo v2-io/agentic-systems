@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - agent-environment
   - agent-model
+stage: draft
 ---
 
 # Definition: The Agent Spectrum

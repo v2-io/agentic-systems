@@ -7,6 +7,7 @@ depends:
   - chain-confidence-decay
   - explicit-strategy-condition
   - causal-structure
+stage: draft
 ---
 
 # Derivation: Graph Structure Uniqueness

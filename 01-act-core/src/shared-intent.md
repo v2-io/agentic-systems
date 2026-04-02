@@ -6,6 +6,7 @@ depends:
   - unity-dimensions
   - information-bottleneck
   - objective-functional
+stage: draft
 ---
 
 # Definition: Shared Intent

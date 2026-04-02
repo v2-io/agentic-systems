@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - agent-model
   - observation-function
+stage: draft
 ---
 
 # Definition: Mismatch Signal

@@ -6,6 +6,7 @@ depends:
   - sector-condition-stability
   - strategic-calibration
   - strategy-dag
+stage: draft
 ---
 
 # Proposed-schema: Strategy Persistence Schema

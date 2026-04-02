@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - agent-model
   - information-bottleneck
+stage: draft
 ---
 
 # Definition: Model Sufficiency

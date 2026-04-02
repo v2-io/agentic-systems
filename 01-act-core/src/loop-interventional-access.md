@@ -6,6 +6,7 @@ depends:
   - causal-hierarchy-requirement
   - recursive-update
   - causal-structure
+stage: draft
 ---
 
 # Derived: Loop Provides Interventional Data Access

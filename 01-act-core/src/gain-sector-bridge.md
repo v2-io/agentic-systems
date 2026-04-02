@@ -7,6 +7,7 @@ depends:
   - mismatch-signal
   - sector-condition-derivation
   - gain-sector-derivation
+stage: draft
 ---
 
 # Derived: Gain–Sector Bridge

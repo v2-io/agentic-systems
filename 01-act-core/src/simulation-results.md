@@ -8,6 +8,7 @@ depends:
   - persistence-condition
   - sector-condition-stability
   - adversarial-destabilization
+stage: draft
 ---
 
 # Detail: Simulation Results

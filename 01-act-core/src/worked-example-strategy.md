@@ -22,6 +22,7 @@ depends:
   - and-or-scope
   - directed-separation
   - strategic-calibration
+stage: draft
 ---
 
 # Worked Example: Nonstationary Bandit with Explicit Strategy (Section II Validation)

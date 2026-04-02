@@ -6,6 +6,7 @@ depends:
   - value-object
   - pearl-causal-hierarchy
   - scope-condition
+stage: draft
 ---
 
 # Derived: Causal Hierarchy Requirement

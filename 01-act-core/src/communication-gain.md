@@ -5,6 +5,7 @@ status: discussion-grade
 depends:
   - update-gain
   - multi-agent-scope
+stage: draft
 ---
 
 # Hypothesis: Communication Gain

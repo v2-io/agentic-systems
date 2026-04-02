@@ -4,6 +4,7 @@ type: postulate
 status: axiomatic
 depends:
   - agent-environment
+stage: draft
 ---
 
 # Postulate: Causal Structure

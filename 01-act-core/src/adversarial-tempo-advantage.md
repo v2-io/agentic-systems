@@ -6,6 +6,7 @@ depends:
   - mismatch-dynamics
   - adversarial-destabilization
   - persistence-condition
+stage: draft
 ---
 
 # Result: Adversarial Tempo Advantage

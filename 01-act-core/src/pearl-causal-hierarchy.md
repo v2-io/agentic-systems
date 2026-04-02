@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - causal-structure
   - scope-condition
+stage: draft
 ---
 
 # Definition: Pearl's Causal Hierarchy

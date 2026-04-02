@@ -6,6 +6,7 @@ depends:
   - persistence-condition
   - adaptive-tempo
   - sector-condition-derivation
+stage: draft
 ---
 
 # Result: Per-Dimension Persistence

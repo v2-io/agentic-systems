@@ -70,23 +70,101 @@ depends:
 
 Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not ACT terms.
 
+### `depends` — prerequisite slugs
+
+List the slugs this claim directly depends on. The type of each dependency (definition import vs logical antecedent vs scope assumption) is derivable from the referenced file's own `type` field — no typed edges needed.
+
 ### `stage` — development process state
 
 Orthogonal to epistemic status. Tracks where the segment is in our working process, not how strong the claim is.
 
-| Stage | Meaning |
-|-------|---------|
-| `missing` | No segment file exists yet |
-| `old` | Content exists only as `old-*` source material, not yet converted |
-| `draft` | First ACT-formatted version written, not yet reviewed |
-| `in-progress-1`…`9` | Actively being refined; number indicates review passes |
-| `candidate` | Believed ready; can downgrade to `in-progress` if issues found |
+Stage is recorded in segment frontmatter (e.g., `stage: draft`) and in the OUTLINE.md index table. A script can verify consistency between the two.
 
-Stage appears in `ACT-FULL.md`'s index table, not in segment frontmatter (it changes too often and is a property of the project, not the file).
+| Stage | Meaning | Gate to advance |
+|-------|---------|-----------------|
+| `missing` | No segment file exists yet | — |
+| `old` | Content exists only as `old-*` source material, not yet converted | Write ACT-formatted version |
+| `draft` | First ACT-formatted version written, not yet reviewed | — |
+| `deps-verified` | All dependencies audited | Dependency audit (see below) |
+| `claims-verified` | Content reviewed: derivations valid, labels accurate | Content review (see below) |
+| `format-clean` | Mechanical review passed | Mechanical review (see below) |
+| `candidate` | Ready for external challenge; Working Notes resolved | Working Notes disposition (see below) |
 
-### `depends` — prerequisite slugs
+Stages are ordered: a segment at `claims-verified` has also passed `deps-verified`. A segment can be downgraded (e.g., `candidate` → `draft`) when a dependency changes, an error is found, or the claim's scope shifts.
 
-List the slugs this claim directly depends on. The type of each dependency (definition import vs logical antecedent vs scope assumption) is derivable from the referenced file's own `type` field — no typed edges needed.
+
+## Promotion Workflow
+
+Segments advance through stages by passing named gates. Each gate has a specific completion criterion — advancement encodes *what has been verified*, not how many times someone has looked at it.
+
+### Ordering: promote in topological order
+
+Compute the dependency DAG from `depends:` fields. Promote leaves first, then their dependents. A segment should not reach `claims-verified` while any of its dependencies is still at `draft` — you cannot verify a derivation whose premises have not been checked.
+
+Group segments into promotion batches by DAG depth. Process all segments in a batch before advancing to the next. Within a batch, segments are independent and can be reviewed in parallel.
+
+### Gate 1: Dependency audit → `deps-verified`
+
+For each entry in `depends:`:
+
+1. The referenced slug exists as a segment file
+2. The dependency is genuine — this segment uses the referenced segment's definitions, results, or scope conditions (not merely "related" or "mentioned in Discussion")
+3. The referenced segment is itself at `deps-verified` or higher
+4. No missing dependencies — if the Formal Expression uses a quantity defined elsewhere, that slug appears in `depends:`
+
+**Completion criterion:** all dependencies verified, no missing dependencies identified.
+
+### Gate 2: Content review → `claims-verified`
+
+The substantive gate. For each segment, answer the three epistemic triage questions:
+
+1. **What prior objects make this claim well-typed?** → Verify `depends:` is complete (should already be, from Gate 1)
+2. **What competing formulation would also fit the prior objects?** → Verify `type:` is correct. If only one form fits the priors, it should be `derived` or `result`, not `formulation`. If several forms work and this is the most useful, it should be `formulation`. If it depends on the world, it should be `empirical` or `hypothesis`.
+3. **What observation would falsify this claim in practice?** → Verify `status:` is correct. If unfalsifiable and not a definition, something is wrong.
+
+Additionally:
+
+- **Derivation check.** For segments with type `derived`, `result`, or `corollary`: trace each derivation step. Does each step follow from stated premises? Are all premises either in `depends:` or stated as local assumptions with equation-level tags?
+- **Label audit.** Does the `status:` field match the actual epistemic strength? Common errors: labeling a formulation choice as `exact`, labeling a hypothesis as `derived`, labeling a conditional result as `exact` without flagging the condition.
+- **Formal expression check.** Are equations well-typed? Do quantities have consistent units? Do boundary cases behave correctly?
+
+**Completion criterion:** derivations valid, all labels accurate, no known issues with formal expressions. If the review reveals a mismatch, the segment returns to `draft` with a specific note about what is wrong.
+
+### Gate 3: Mechanical review → `format-clean`
+
+Separate from content review — different cognitive mode.
+
+- Linter passes (`bin/lint-md`)
+- Cross-references (`#slug-name`) resolve to existing files
+- Notation matches `NOTATION.md`
+- Math renders correctly in GitHub and Obsidian (check the compatibility notes above)
+- Document cadence matches the template (frontmatter → title → summary → formal expression → epistemic status → discussion → working notes)
+- Equation-level tags are present and correct
+
+**Completion criterion:** all mechanical checks pass.
+
+### Gate 4: Working Notes disposition → `candidate`
+
+Every item in `## Working Notes` must be explicitly resolved:
+
+- **Resolved.** The answer is now incorporated into the segment's Formal Expression or Discussion. Delete the note.
+- **Deferred.** The question is real but out of scope for this segment. Move it to `WORKBENCH.md` or a relevant spike document with rationale. Delete the note from the segment.
+- **Promoted.** The question warrants its own segment or is a known gap in the outline. Add cross-reference, delete the note.
+
+A segment with unresolved Working Notes is not a candidate. The `## Working Notes` section should be empty or absent at `candidate` stage.
+
+**Completion criterion:** Working Notes section empty or absent. The segment says what it means to say.
+
+### When to downgrade
+
+A segment at any stage can be downgraded to `draft` when:
+
+- A dependency is revised in a way that affects this segment's claims
+- An error is discovered in a derivation or formal expression
+- The segment's scope changes (e.g., a scope condition is added or removed upstream)
+- External review identifies an issue not caught in the original promotion
+
+Downgrade to `draft`, not to an intermediate stage — the segment needs full re-review from the dependency audit forward, since the issue may have cascading effects.
 
 
 ## Document Cadence

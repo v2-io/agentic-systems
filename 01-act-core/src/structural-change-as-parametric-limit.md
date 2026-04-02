@@ -5,6 +5,7 @@ status: robust-qualitative
 depends:
   - strategy-dag
   - structural-adaptation-necessity
+stage: draft
 ---
 
 # Formulation: Structural Change as Parametric Limit

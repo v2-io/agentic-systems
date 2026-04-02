@@ -7,6 +7,7 @@ depends:
   - sector-condition-stability
   - communication-gain
   - adaptive-tempo
+stage: draft
 ---
 
 # Derived: Team Persistence

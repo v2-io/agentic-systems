@@ -106,7 +106,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 |---|------|---|-----|-------|-------|
 | III | Scope | | [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | draft |
 | III | Formulation | | [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | draft |
-| III | Derived | | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | draft |
+| III | Sketch | | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | draft |
 | III | Hypothesis | | [#directed-separation-under-composition](src/directed-separation-under-composition.md) | Goal-blindness survives iff routing is goal-blind (two cases) | draft |
 | III | Discussion | | [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | draft |
 | III | Definition + Discussion | | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | draft |

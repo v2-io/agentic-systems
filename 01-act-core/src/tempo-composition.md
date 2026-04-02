@@ -1,10 +1,11 @@
 ---
 slug: tempo-composition
-type: derived
+type: sketch
 status: sketch
 depends:
   - composition-closure
   - adaptive-tempo
+stage: draft
 ---
 
 # Derived: Composite Tempo Inequality

@@ -10,6 +10,7 @@ depends:
   - persistence-condition
   - deliberation-cost
   - structural-adaptation-necessity
+stage: draft
 ---
 
 # Detail: Operationalization — Estimation Procedures

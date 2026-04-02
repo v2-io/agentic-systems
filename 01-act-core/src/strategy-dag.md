@@ -8,6 +8,7 @@ depends:
   - pearl-causal-hierarchy
   - objective-functional
   - strategy-dimension
+stage: draft
 ---
 
 # Definition: Strategy DAG

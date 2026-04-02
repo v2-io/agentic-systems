@@ -6,6 +6,7 @@ depends:
   - agent-model
   - event-driven-dynamics
   - recursive-update-derivation
+stage: draft
 ---
 
 # Derived: Recursive Update

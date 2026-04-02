@@ -4,6 +4,7 @@ type: formulation
 status: axiomatic
 depends:
   - complete-agent-state
+stage: draft
 ---
 
 # Formulation: Objective Functional

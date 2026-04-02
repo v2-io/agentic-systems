@@ -12,6 +12,7 @@ depends:
   - causal-information-yield
   - adaptive-tempo
   - persistence-condition
+stage: draft
 ---
 
 # Worked-example: Worked Example — Nonstationary Bandit (RL Domain)

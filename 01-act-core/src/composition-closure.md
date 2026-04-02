@@ -10,6 +10,7 @@ depends:
   - sector-condition-stability
   - sector-condition-derivation
   - persistence-condition
+stage: draft
 ---
 
 # Formulation: Composition Closure Criterion

@@ -6,6 +6,7 @@ depends:
   - temporal-optimality
   - strategy-dimension
   - causal-hierarchy-requirement
+stage: draft
 ---
 
 # Normative: Explicit Strategy Condition

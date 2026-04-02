@@ -8,6 +8,7 @@ depends:
   - satisfaction-gap
   - control-regret
   - strategic-calibration
+stage: draft
 ---
 
 # Derived: Orient Cascade

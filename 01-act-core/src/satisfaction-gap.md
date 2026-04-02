@@ -5,6 +5,7 @@ status: exact
 depends:
   - value-object
   - objective-functional
+stage: draft
 ---
 
 # Definition: Satisfaction Gap
