@@ -106,7 +106,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | Slug                                                                | Type        | Notes                                                                                                                                |
 | ------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [multi-agent-scope](01-act-core/src/multi-agent-scope.md)                       | Scope       | Coupling through shared environment.                                                                                                 |
-| [composition-closure](01-act-core/src/composition-closure.md)                   | Formulation | Operationalizes agent boundary as bounded closure defect. Admissibility (A1)-(A4) specified: ACT structure, mismatch, tempo, sector condition. Bridge lemma sketched: (A4) implies bounded trajectory error at $\varepsilon^\ast / \alpha_c$. Status: conditional (norms still unspecified, bridge lemma needs discrete-time formalization). |
+| [composition-closure](01-act-core/src/composition-closure.md)                   | Formulation | Operationalizes agent boundary as bounded closure defect. Admissibility (A1)-(A4) + projection admissibility (P1)-(P3) specified. Bridge lemma: (A4) implies trajectory error bounded at $\varepsilon^\ast / \alpha_c$. Two-Kalman instantiation exact ($\varepsilon^\ast = 0$ uncorrelated). Mahalanobis norm specified for estimation-type agents. Status: conditional (discrete-time formalization pending, general-case P1 computability open). |
 | [tempo-composition](01-act-core/src/tempo-composition.md)                       | Derived     | Sub-additive tempo inequality. Status: sketch (proof incomplete — $\varepsilon^\ast \to C_{\text{coord}}$ mapping open).             |
 | [directed-separation-under-composition](01-act-core/src/directed-separation-under-composition.md) | Hypothesis | Two cases: goal-blind routing preserves, goal-dependent routing breaks. Status: conditional — upgraded from discussion-grade after routing formalization in #multi-agent-scope and architectural classification promotion in #directed-separation. Remaining caveat: composition-closure admissibility placeholders. Earlier draft had a Case 3 (environmental coupling) that was correctly identified by review as not a directed-separation issue. |
 | [unity-dimensions](01-act-core/src/unity-dimensions.md)                         | Definition  | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping.                          |
@@ -114,16 +114,16 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | [auftragstaktik-principle](01-act-core/src/auftragstaktik-principle.md)         | Hypothesis  | $B_O \gt B_\Sigma \gt B_M$. Bungay evidence. Status: discussion-grade.                                                               |
 | [adversarial-destabilization](01-act-core/src/adversarial-destabilization.md)   | Derived     | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1.                                                           |
 | [communication-gain](01-act-core/src/communication-gain.md)                     | Hypothesis  | Trust-weighted inter-agent gain. From TFT Appendix F, F.2.                                                                           |
-| [adversarial-exponent-regimes](01-act-core/src/adversarial-exponent-regimes.md) | Observation | Three regimes: $b=2$ (det/coupled), $b=1.5$ (stoch/coupled), $b \to 1$ (non-coupled). From track-b sims.                             |
+| [adversarial-exponent-regimes](01-act-core/src/adversarial-exponent-regimes.md) | Result | Three regimes: $b=2$ (Model D/coupled), $b=1.5$ (Model S/coupled), $b \to 1$ (non-coupled). Both coupling-dominant exponents now **derived** (from Model D/S steady-state scaling). Status: conditional.                             |
 | [observation-gates-advantage](01-act-core/src/observation-gates-advantage.md)   | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E.                                              |
-| [per-dimension-persistence](01-act-core/src/per-dimension-persistence.md)       | Result      | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. From track-b Variant F.                                                 |
+| [per-dimension-persistence](01-act-core/src/per-dimension-persistence.md)       | Result      | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. Model D/S thresholds now distinguished. Status: conditional. Regime-mixing issue **resolved**.                                                 |
 | [team-persistence](01-act-core/src/team-persistence.md)                         | Derived     | Distributed tempo, cooperative-adversarial $\rho$ decomposition, 3-lever persistence. From TFT F.3.                                  |
-| [adversarial-tempo-advantage](01-act-core/src/adversarial-tempo-advantage.md)   | Result      | Superlinear exponent $b=2$ (det/coupled). Analytical result + regime conditions. From TFT Cor 11.2.                                  |
+| [adversarial-tempo-advantage](01-act-core/src/adversarial-tempo-advantage.md)   | Result      | Both coupling-dominant exponents derived: $b=2$ (Model D), $b=3/2$ (Model S). Status: conditional on disturbance model.                                  |
 
 ### Written — Appendices (8 segments)
 | Slug | Type | Notes |
 |------|------|-------|
-| [sector-condition-derivation](01-act-core/src/sector-condition-derivation.md) | Derivation | Full Lyapunov derivations (A.1, A.2). |
+| [sector-condition-derivation](01-act-core/src/sector-condition-derivation.md) | Derivation | Full Lyapunov derivations (A.1, A.1S, A.2). A.1S adds stochastic (Model S) Itô-Lyapunov result. |
 | [recursive-update-derivation](01-act-core/src/recursive-update-derivation.md) | Derivation | Uniqueness derivation + 7 counterexample attacks. |
 | [multi-timescale-stability](01-act-core/src/multi-timescale-stability.md) | Sketch | N-timescale singular perturbation framework. |
 | [operationalization](01-act-core/src/operationalization.md) | Detail | Estimation procedures for ACT quantities. |
@@ -163,7 +163,11 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | Prior art assessment | `msc/02-prior-art-assessment.md` | Hafez/IBM/BDI/active-inference positioning |
 | LLM causal access note | `msc/llm-causal-access-note.md` | Pearl reconciliation; potential intro/paper/blog |
 | DAG boundary type closure | `msc/spike-dag-type-closure.md` | v2; reviewed by Codex; ready for porting |
-| Single-edge strategic dynamics | `msc/spike-single-edge-strategic-dynamics.md` | **Sector condition verified** for Beta-Bernoulli. α_Σ = η_edge = 1/(n+1). Persistence threshold n < R_Σ/ρ_Σ - 1. Gain collapse quantified. Ready for promotion to formal segment. |
+| Single-edge strategic dynamics | `msc/spike-single-edge-strategic-dynamics.md` | **Sector condition verified** for Beta-Bernoulli. α_Σ = η_edge = 1/(n+1). **PROMOTED** to segments. |
+| Two-edge strategic dynamics | `msc/spike-two-edge-strategic-dynamics.md` | Observable: weakest-link α_Σ with evidence starvation. Unobservable: per-edge fails (A1 violation), plan-level recovers. **PROMOTED** to segments. |
+| Disturbance model split | `msc/spike-disturbance-model-split.md` | Model D vs Model S. Derives $b=3/2$ analytically. Resolves regime mixing. **PROMOTED** to 9 segments + NOTATION.md. |
+| Projection admissibility | `msc/spike-projection-admissibility.md` | P_adm = (P1, P2, P3). Two-Kalman exact instantiation. Mahalanobis norms. **PROMOTED** to composition-closure + tempo-composition. |
+| Scalar objective scope | `msc/spike-scalar-objective-scope.md` | Scalar is load-bearing for diagnostics, not structural results. Revealed-preference argument. AND-node workaround documented. **PROMOTED** to objective-functional + satisfaction-gap. |
 | Track-b simulations | `msc/track-b-nonlinear-sims/` | 6 variants, all validated |
 
 
@@ -180,6 +184,14 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 - Satisfaction gap / control regret split (replaces simpler $\delta_{\text{objective}}$)
 - DAG acyclicity derived from temporal ordering (former fragility resolved)
 - Composition consistency required (not optional) by scope condition's level-independence
+- Disturbance model split: Model D (deterministic, GA-2) vs Model S (stochastic, GA-2S) with distinct scaling
+- Adversarial exponents derived: $b=2$ (Model D) and $b=3/2$ (Model S), both from steady-state scaling
+- Strategy persistence schema verified for single-edge, two-edge observable, and plan-level cases (α_Σ = η_edge)
+- Evidence starvation: downstream edge correction attenuated by ∏θⱼ (double depth penalty with chain-confidence decay)
+- Projection admissibility (P1-P3) defined; independent of macro-dynamics admissibility (A1-A4)
+- Scalar objective load-bearing for diagnostics; structural results survive vector extension
+- Three senses of persistence disambiguated: structural, operational, continuity (see LEXICON in README.md)
+- Agent continuity stance orthogonal to purposefulness (five stances defined)
 
 
 ## Theory Core
