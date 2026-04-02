@@ -287,30 +287,26 @@ The critical experience is halved relative to the single-edge case. Each additio
 
 ## Proposition B.5: Bridge from Credence Error to Value Residuals
 
-The propositions above verify the sector condition for the credence-error mismatch state $\boldsymbol\delta_c = (\hat p_k - \theta_k)$. But #strategy-persistence-schema identifies $\delta_{\text{strategic}}$ (from #strategic-calibration) — the aggregated value-increment residuals — as the operational diagnostic. This proposition connects the two.
+The propositions above verify the sector condition for the credence-error mismatch state $\boldsymbol\delta_c = (\hat p_k - \theta_k)$. This proposition extends the result to **plan-confidence error** — the scalar difference between the agent's plan-confidence score and the true plan success probability. This is a natural plan-level mismatch that is distinct from (but related to) the per-edge value-increment residuals $\delta_{\text{strategic}}$ defined in #strategic-calibration.
+
+**Relationship to $\delta_{\text{strategic}}$.** #strategic-calibration defines $\delta_{\text{strategic}}$ as an $L^2$ aggregation of per-edge value-increment residuals — a quantity that requires credit assignment to compute. Plan-confidence error $\delta_s$ defined here is a *different* quantity: it is the error in the DAG's aggregate self-assessment, computable from status propagation without credit assignment. The two are related (both measure strategy-reality mismatch) but not identical. This proposition shows the sector condition holds for plan-confidence error; extending it to $\delta_{\text{strategic}}$ directly would require the credit-assignment machinery discussed in #credit-assignment-boundary.
 
 ### Setup
 
 The plan value $\hat P_\Sigma = P_\Sigma(\mathbf{p})$ is a function of the edge credence vector $\mathbf{p} = (p_1, \ldots, p_m)$. The true plan value is $\Phi = P_\Sigma(\boldsymbol\theta)$. Define:
 
 - **Credence-error mismatch:** $\boldsymbol\delta_c = \mathbf{p} - \boldsymbol\theta \in \mathbb{R}^m$
-- **Value-residual mismatch:** $\delta_s = \hat P_\Sigma - \Phi = P_\Sigma(\mathbf{p}) - P_\Sigma(\boldsymbol\theta)$
+- **Plan-confidence error:** $\delta_s = \hat P_\Sigma - \Phi = P_\Sigma(\mathbf{p}) - P_\Sigma(\boldsymbol\theta)$ (scalar)
 
-The Jacobian of plan value with respect to credences is $\mathbf{J} = \nabla_{\mathbf{p}} P_\Sigma \in \mathbb{R}^m$. By first-order Taylor expansion:
+The gradient of plan value with respect to credences is $\mathbf{J} = \nabla_{\mathbf{p}} P_\Sigma \in \mathbb{R}^m$ (a vector, since $P_\Sigma$ is scalar). By first-order Taylor expansion:
 
 $$\delta_s \approx \mathbf{J}^T \boldsymbol\delta_c$$
-
-For the vector-valued case (multiple diagnostic targets), $\boldsymbol\delta_s = \mathbf{J} \boldsymbol\delta_c$ where $\mathbf{J}$ is an appropriate Jacobian matrix. We treat the scalar case first, then generalize.
 
 ### B.5a: Linear Correction (Beta-Bernoulli)
 
 *[Derived (value-residual sector condition, linear case)]*
 
-When the correction in credence space is linear — $\mathbf{F}_c(\boldsymbol\delta_c) = \boldsymbol\eta \odot \boldsymbol\delta_c$ where $\eta_k = 1/(n_k+1)$ and $\odot$ is elementwise product — the expected correction in value space is:
-
-$$F_s(\delta_s) = \mathbf{J}^T (\boldsymbol\eta \odot \boldsymbol\delta_c) = \mathbf{J}^T (\boldsymbol\eta \odot \mathbf{J}^{-T} \delta_s)$$
-
-But we don't need this inverse. Consider the sector ratio directly. Since $\delta_s = \mathbf{J}^T \boldsymbol\delta_c$ and $F_s = \mathbf{J}^T \mathbf{F}_c$:
+When the correction in credence space is linear — $\mathbf{F}_c(\boldsymbol\delta_c) = \boldsymbol\eta \odot \boldsymbol\delta_c$ where $\eta_k = 1/(n_k+1)$ and $\odot$ is elementwise product — consider the sector ratio directly. Since $\delta_s = \mathbf{J}^T \boldsymbol\delta_c$ and $F_s = \mathbf{J}^T \mathbf{F}_c$:
 
 $$\delta_s \cdot F_s = (\mathbf{J}^T \boldsymbol\delta_c)^T (\mathbf{J}^T \mathbf{F}_c) = \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \mathbf{F}_c$$
 
