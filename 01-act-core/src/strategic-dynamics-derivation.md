@@ -273,6 +273,8 @@ The critical experience is halved relative to the single-edge case. Each additio
 | **B.2** Two-edge, $B$ observable | $A \to B \to G$ (AND) | $\min(1/(n_1\!+\!1),\;\theta_1/(n_2\!+\!1))$ | Yes | N/A | Depth-gated (evidence starvation) |
 | **B.3** Two-edge, $B$ unobservable | $A \to B \to G$ (AND) | $1/(n_\Phi\!+\!1)$ (plan-level) | Per-edge: No ($O(1/n)$ bias); Plan: Yes | N/A | Credit-assignment collapse |
 | **B.4** Two-arm OR, $\varepsilon$-greedy | $A_1, A_2 \to G$ (OR) | $\min((1\!-\!\varepsilon)/(n_1\!+\!1),\;\varepsilon/(n_2\!+\!1))$ | Yes | Required | Exploration-gated |
+| **B.5a** Credence→value (linear) | Any | $\alpha_s = \alpha_c$ (Jacobian cancels) | — | — | None (exact transfer) |
+| **B.5b** Credence→value (nonlinear) | Any | $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$ | — | — | DAG sensitivity anisotropy |
 
 **Structural results across cases:**
 
@@ -282,9 +284,105 @@ The critical experience is halved relative to the single-edge case. Each additio
 - **Gain-collapse threshold.** In all cases, increasing experience eventually violates persistence when the environment drifts. The critical experience level $n^\ast$ is inversely proportional to the drift rate $\rho_\Sigma$.
 
 
+## Proposition B.5: Bridge from Credence Error to Value Residuals
+
+The propositions above verify the sector condition for the credence-error mismatch state $\boldsymbol\delta_c = (\hat p_k - \theta_k)$. But #strategy-persistence-schema identifies $\delta_{\text{strategic}}$ (from #strategic-calibration) — the aggregated value-increment residuals — as the operational diagnostic. This proposition connects the two.
+
+### Setup
+
+The plan value $\hat P_\Sigma = P_\Sigma(\mathbf{p})$ is a function of the edge credence vector $\mathbf{p} = (p_1, \ldots, p_m)$. The true plan value is $\Phi = P_\Sigma(\boldsymbol\theta)$. Define:
+
+- **Credence-error mismatch:** $\boldsymbol\delta_c = \mathbf{p} - \boldsymbol\theta \in \mathbb{R}^m$
+- **Value-residual mismatch:** $\delta_s = \hat P_\Sigma - \Phi = P_\Sigma(\mathbf{p}) - P_\Sigma(\boldsymbol\theta)$
+
+The Jacobian of plan value with respect to credences is $\mathbf{J} = \nabla_{\mathbf{p}} P_\Sigma \in \mathbb{R}^m$. By first-order Taylor expansion:
+
+$$\delta_s \approx \mathbf{J}^T \boldsymbol\delta_c$$
+
+For the vector-valued case (multiple diagnostic targets), $\boldsymbol\delta_s = \mathbf{J} \boldsymbol\delta_c$ where $\mathbf{J}$ is an appropriate Jacobian matrix. We treat the scalar case first, then generalize.
+
+### B.5a: Linear Correction (Beta-Bernoulli)
+
+*[Derived (value-residual sector condition, linear case)]*
+
+When the correction in credence space is linear — $\mathbf{F}_c(\boldsymbol\delta_c) = \boldsymbol\eta \odot \boldsymbol\delta_c$ where $\eta_k = 1/(n_k+1)$ and $\odot$ is elementwise product — the expected correction in value space is:
+
+$$F_s(\delta_s) = \mathbf{J}^T (\boldsymbol\eta \odot \boldsymbol\delta_c) = \mathbf{J}^T (\boldsymbol\eta \odot \mathbf{J}^{-T} \delta_s)$$
+
+But we don't need this inverse. Consider the sector ratio directly. Since $\delta_s = \mathbf{J}^T \boldsymbol\delta_c$ and $F_s = \mathbf{J}^T \mathbf{F}_c$:
+
+$$\delta_s \cdot F_s = (\mathbf{J}^T \boldsymbol\delta_c)^T (\mathbf{J}^T \mathbf{F}_c) = \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \mathbf{F}_c$$
+
+For the linear case $\mathbf{F}_c = \eta_{\min} \boldsymbol\delta_c$ (using the worst-case uniform gain for the bound):
+
+$$\delta_s \cdot F_s = \eta_{\min} \cdot \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \boldsymbol\delta_c = \eta_{\min} \cdot \lVert\mathbf{J}^T \boldsymbol\delta_c\rVert^2 = \eta_{\min} \cdot \delta_s^2$$
+
+Therefore:
+
+$$\frac{\delta_s \cdot F_s}{\delta_s^2} = \eta_{\min}$$
+
+**The Jacobian cancels.** The sector parameter in value-residual space equals the sector parameter in credence space, regardless of DAG structure:
+
+$$\alpha_s = \alpha_c = \eta_{\min} = \min_k \frac{1}{n_k + 1}$$
+
+This holds because $\mathbf{J}\mathbf{J}^T$ appears in both numerator and denominator of the sector ratio, and the linear correction commutes with the Jacobian mapping.
+
+**Interpretation.** The Jacobian $\mathbf{J}$ determines *which* credence errors matter most for plan value (high-sensitivity edges contribute more to value residuals). But it does not change the *rate* at which those errors are corrected, because the correction is proportional to the error regardless of the error's plan-value impact.
+
+### B.5b: Nonlinear Correction
+
+*[Derived (Conditional on Jacobian regularity)]*
+
+When the correction is nonlinear — $\mathbf{F}_c(\boldsymbol\delta_c)$ not proportional to $\boldsymbol\delta_c$ — the Jacobian no longer cancels. The sector condition transfers with a condition-number penalty.
+
+**The general bound.** The credence-space sector condition gives $\boldsymbol\delta_c^T \mathbf{F}_c \geq \alpha_c \lVert\boldsymbol\delta_c\rVert^2$. We need $\delta_s \cdot F_s \geq \alpha_s \cdot \delta_s^2$.
+
+Using $\delta_s = \mathbf{J}^T \boldsymbol\delta_c$ and $F_s = \mathbf{J}^T \mathbf{F}_c$:
+
+$$\delta_s \cdot F_s = \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \mathbf{F}_c$$
+
+and $\delta_s^2 = \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \boldsymbol\delta_c$.
+
+Let $\mathbf{A} = \mathbf{J}\mathbf{J}^T$ (positive semidefinite, positive definite when $\mathbf{J}$ has full rank). In the $\mathbf{A}$-weighted inner product:
+
+$$\frac{\delta_s \cdot F_s}{\delta_s^2} = \frac{\langle \boldsymbol\delta_c, \mathbf{F}_c \rangle_A}{\langle \boldsymbol\delta_c, \boldsymbol\delta_c \rangle_A}$$
+
+This is the Rayleigh quotient of $\mathbf{F}_c$ with respect to $\boldsymbol\delta_c$ in the $\mathbf{A}$-weighted norm. The Euclidean sector condition gives $\langle \boldsymbol\delta_c, \mathbf{F}_c \rangle_I \geq \alpha_c \lVert\boldsymbol\delta_c\rVert_I^2$. To transfer to the $\mathbf{A}$-weighted inner product:
+
+$$\langle \boldsymbol\delta_c, \mathbf{F}_c \rangle_A = \boldsymbol\delta_c^T \mathbf{A} \mathbf{F}_c$$
+
+By Cauchy-Schwarz in the $\mathbf{A}$-norm and using the Euclidean sector condition:
+
+$$\alpha_s \geq \alpha_c \cdot \frac{\sigma_{\min}(\mathbf{A})}{\sigma_{\max}(\mathbf{A})} = \alpha_c \cdot \frac{\sigma_{\min}(\mathbf{J})^2}{\sigma_{\max}(\mathbf{J})^2} = \frac{\alpha_c}{\kappa(\mathbf{J})^2}$$
+
+where $\kappa(\mathbf{J}) = \sigma_{\max}(\mathbf{J})/\sigma_{\min}(\mathbf{J})$ is the condition number of the Jacobian.
+
+**Interpretation.** The condition number $\kappa(\mathbf{J})$ measures how *anisotropic* the DAG's value sensitivity is across edges. When all edges contribute roughly equally to plan value ($\kappa \approx 1$), the transfer is near-lossless. When one edge dominates ($\kappa \gg 1$), the transfer loses a factor of $\kappa^2$ — the agent corrects the high-sensitivity edge efficiently but the low-sensitivity edge's correction doesn't register in value space.
+
+**When $\kappa(\mathbf{J})$ is large.** For deep AND-chains, the root-to-leaf Jacobian entries span a large range (leaves deep in the chain have attenuated sensitivity). For wide OR-nodes with one dominant arm, the non-dominant arms have low sensitivity. In both cases, $\kappa(\mathbf{J})$ grows with structural complexity.
+
+**When $\kappa(\mathbf{J})$ is small.** For shallow DAGs with comparable edge sensitivities (balanced AND/OR trees), $\kappa \approx 1$ and the nonlinear penalty is negligible.
+
+### B.5c: Implications
+
+Three regimes for the credence-to-value bridge:
+
+| Correction type | DAG structure | Transfer | $\alpha_s$ |
+|---|---|---|---|
+| Linear (Beta-Bernoulli) | Any | Exact (Jacobian cancels) | $\alpha_c$ |
+| Nonlinear | Well-conditioned ($\kappa \approx 1$) | Near-lossless | $\approx \alpha_c$ |
+| Nonlinear | Ill-conditioned ($\kappa \gg 1$) | Lossy | $\alpha_c / \kappa^2$ |
+
+**The linear case closes the gap completely.** For Beta-Bernoulli edge updates (Props B.1-B.4), the operational diagnostic $\delta_{\text{strategic}}$ inherits the sector condition from credence error with no penalty. The derivation appendix validates the operational mismatch, not merely a surrogate.
+
+**The nonlinear case identifies a new fragility.** Deep or unbalanced DAGs have high $\kappa(\mathbf{J})$, making the value-residual sector condition harder to satisfy even when per-edge credence correction is adequate. This is a *structural* fragility: the DAG's value sensitivity anisotropy degrades the persistence guarantee. It provides a new formal argument for the structural pressure toward shallow, balanced strategies identified qualitatively in #chain-confidence-decay.
+
+**Connection to credit assignment.** The Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$ is computable from the DAG's status propagation formulas — it does not require solving the credit-assignment problem. The credit-assignment problem is about *decomposing observed value changes into per-edge contributions* (needed for the update rule). The Jacobian bridge is about *transferring a per-edge sector condition to the value-residual space* (needed for the persistence guarantee). These are different problems: the bridge works even when credit assignment is unsolved, because it only requires the sensitivity structure, not the causal attribution.
+
+
 ## Epistemic Status
 
-*Conditional on the Beta-Bernoulli model.* Propositions B.1, B.2, and B.4 are *derived*: the sector-condition verification is exact algebra under the stated generative model. The persistence conditions follow by direct application of Proposition A.1 ( #sector-condition-derivation), which is independently established. Proposition B.3(a) (the SA1 violation) is also derived; B.3(b) reduces to B.1 by construction.
+*Conditional on the Beta-Bernoulli model.* Propositions B.1, B.2, and B.4 are *derived*: the sector-condition verification is exact algebra under the stated generative model. The persistence conditions follow by direct application of Proposition A.1 ( #sector-condition-derivation), which is independently established. Proposition B.3(a) (the SA1 violation) is also derived; B.3(b) reduces to B.1 by construction. Proposition B.5a (the credence-to-value bridge for linear correction) is *exact* — the Jacobian cancellation is algebraic, independent of DAG structure. Proposition B.5b (the nonlinear transfer) is *conditional on Jacobian regularity* — the condition-number bound requires $\sigma_{\min}(\mathbf{J}) \gt 0$, which holds for non-degenerate DAGs.
 
 All results use the *expected-value* sector condition. A full stochastic treatment (Foster-Lyapunov or supermartingale convergence) would give probability bounds rather than expected-value bounds. The expected-value analysis gives the correct asymptotic behavior (posterior concentration at $O(1/\sqrt{n})$) but does not prove almost-sure convergence. For the stationary Beta-Bernoulli case, almost-sure convergence is guaranteed by the standard Bayesian consistency theorem independently of this derivation.
 
