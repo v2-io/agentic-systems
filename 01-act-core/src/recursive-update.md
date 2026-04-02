@@ -1,7 +1,7 @@
 ---
 slug: recursive-update
 type: derived
-status: exact
+status: conditional
 depends:
   - agent-model
   - event-driven-dynamics

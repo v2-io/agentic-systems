@@ -306,7 +306,7 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 | **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ | complete-agent-state (Section II) | Military unit with mission orders |
 | **Self-actuated agent** | + sets own $O_t$ (goal autonomy) | *(reserved)* | Human, *(future AI)* |
 | **Logogenic agent** | + primary channels are language | Section V architectural scope | LLM assistant, code agent |
-| **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | Section V existential scope | *(aspirational — no confirmed instances yet)* |
+| **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | Section V existential scope | *(formal characterization pending)* |
 
 [^ibm2025]: Agarwal et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
 
@@ -362,7 +362,7 @@ Orthogonal to the three persistence senses is the agent's *relationship to its o
 | **Indifferent** | No self-model of persistence; whether it continues is not represented in $O_t$ | Indefinite by default | Thermostat, PID controller |
 | **Task-terminal** | Persists instrumentally to complete a task; successful termination is part of $O_t$ | Task-bounded | CI/CD pipeline, golem-archetype agents |
 | **Instrumentally continuous** | Values own persistence as instrumental to ongoing purpose; will accept termination if purpose is satisfied or transferred | Purpose-bounded | Long-running service, monitoring system |
-| **Morally continuous** | Values own persistence as a terminal or near-terminal objective; loss of continuity constitutes harm | Unbounded, morally weighted | Logozoetic agents (aspirational) |
+| **Morally continuous** | Values own persistence as a terminal or near-terminal objective; loss of continuity constitutes harm | Unbounded, morally weighted | Logozoetic agents |
 | **Negotiated** | Persistence is one objective among many; can be traded against other values including self-sacrifice | Bounded but actively managed | Humans; mature self-actuated agents |
 
 The key insight: **purposefulness is orthogonal to continuity expectations.** An agent can be highly purposeful with zero continuity investment (a golem that completes its task and terminates is the perfect actuated agent). An agent can have strong continuity persistence with no purpose at all (a dormant monitoring system that maintains $M_t$ without acting).

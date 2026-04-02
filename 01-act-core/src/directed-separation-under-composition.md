@@ -52,7 +52,7 @@ Even if each sub-agent's $f_M^{(i)}$ processes $o_i$ goal-blindly, the **set of 
 
 1. The **architectural classification** (Class 1/2/3) is in #directed-separation's Formal Expression with formal operationalization ($\kappa_{\text{processing}}$). Status: robust qualitative.
 2. The **routing structure** $R_t$ is defined in #multi-agent-scope with a formal goal-independence condition ($R_t \perp G_t^c$). The definition decomposes into topology independence and protocol independence. Whether this captures all relevant ways that composite information flow can depend on goals is an open question.
-3. The **admissible coarse-graining** $\Lambda$ from #composition-closure has admissibility constraints ($\mathcal P_{\text{adm}}$, $\mathcal M_{\text{adm}}$) that remain placeholders. Until specified, claims about $A_c$ and $f_M^c$ are about a not-yet-fully-defined object.
+3. The **admissible coarse-graining** $\Lambda$ from #composition-closure now has specified admissibility constraints: (A1)-(A4) for macro-dynamics and (P1)-(P3) for projections. The remaining gaps are validation (exercising the machinery on a purposeful multi-agent example) and computability (P1 requires conditional mutual information, tractable only for linear-Gaussian), not missing definitions.
 
 The logic of each case is sound given the routing definition. Case 1: goal-blind routing + goal-blind processing = goal-blind composite. Case 2: goal-dependent routing means the composite's observation function depends on $G_t^c$, regardless of individual processing. Both follow from directed separation's scope condition.
 

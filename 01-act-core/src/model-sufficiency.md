@@ -1,7 +1,7 @@
 ---
 slug: model-sufficiency
 type: definition
-status: exact
+status: axiomatic
 depends:
   - agent-model
   - information-bottleneck

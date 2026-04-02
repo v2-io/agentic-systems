@@ -1,7 +1,7 @@
 ---
 slug: adversarial-destabilization
 type: derived
-status: exact
+status: conditional
 depends:
   - sector-condition-stability
   - sector-condition-derivation
