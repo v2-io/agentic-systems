@@ -6,6 +6,7 @@ depends:
   - strategy-dag
   - chain-confidence-decay
   - explicit-strategy-condition
+  - causal-structure
 ---
 
 # Derivation: Graph Structure Uniqueness

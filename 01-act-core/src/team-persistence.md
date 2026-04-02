@@ -25,6 +25,8 @@ $$\mathcal{T}_i = \underbrace{\sum_k \nu_i^{(k)} \eta_i^{(k)*}}_{\text{direct ob
 
 where $\nu_{ji}^{\text{comm}}$ is the rate of communication events from agent $j$ to agent $i$, and $\eta_{ji}^\ast$ is the communication gain ( #communication-gain). Faster team adaptation comes not only from faster individual sensing but from faster, more reliable knowledge transfer.
 
+**Channel independence caveat.** Both sums are additive, inheriting the channel-independence assumption from #adaptive-tempo: each channel and each communication source contributes non-redundant correction capacity. When allies report correlated information (overlapping observations, shared intelligence sources, redundant status reports), the communication tempo overcounts. The additive formula is an upper bound; the redundancy penalty depends on the mutual information between communication sources. See #adaptive-tempo for the single-agent version of this caveat.
+
 ### Cooperative-Adversarial Disturbance Decomposition
 
 *[Formulation (disturbance-decomposition)]*

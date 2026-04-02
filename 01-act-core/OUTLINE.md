@@ -41,8 +41,6 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I | Result | | [#mismatch-decomposition](src/mismatch-decomposition.md) | Model error + obs noise | draft |
 | I | Empirical | | [#update-gain](src/update-gain.md) | Optimal update weighting | draft |
 | I | Definition | | [#causal-information-yield](src/causal-information-yield.md) | Information from interventions | draft |
-| I | Scope | | [#ciy-observational-proxy](src/ciy-observational-proxy.md) | When CIY is estimable from observational data | draft |
-| I | Discussion | | [#ciy-unified-objective](src/ciy-unified-objective.md) | Joint exploitation-exploration objective | draft |
 | I | Definition | | [#adaptive-tempo](src/adaptive-tempo.md) | Rate of useful info acquisition | draft |
 | I | Hypothesis | | [#mismatch-dynamics](src/mismatch-dynamics.md) | Mismatch evolution ODE | draft |
 | I | Derived | | [#deliberation-cost](src/deliberation-cost.md) | Think vs act tradeoff | draft |
@@ -72,6 +70,8 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | II  | Definition      |     | [#strategy-dimension](src/strategy-dimension.md)                                       | $G_t = (O_t, \Sigma_t)$ split                                    | draft |
 | II  | Derived + Scope |     | [#causal-hierarchy-requirement](src/causal-hierarchy-requirement.md)                   | Level 2 needed for planning                                      | draft |
 | II  | Derived         |     | [#loop-interventional-access](src/loop-interventional-access.md)                       | Feedback loop → Level 2 data                                     | draft |
+| II  | Scope           |     | [#ciy-observational-proxy](src/ciy-observational-proxy.md)                             | When CIY is estimable from observational data                    | draft |
+| II  | Discussion      |     | [#ciy-unified-objective](src/ciy-unified-objective.md)                                 | Joint exploitation-exploration objective                         | draft |
 | II  | Normative       |     | [#explicit-strategy-condition](src/explicit-strategy-condition.md)                     | When planning beats exploring                                    | draft |
 | II  | Derived         |     | [#chain-confidence-decay](src/chain-confidence-decay.md)                               | Log-confidence additive in depth                                 | draft |
 | II  | Scope           |     | [#and-or-scope](src/and-or-scope.md)                                                   | Conjunctive/disjunctive scope                                    | draft |

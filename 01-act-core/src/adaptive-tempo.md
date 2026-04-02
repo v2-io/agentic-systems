@@ -40,6 +40,12 @@ This is a *definition*. It names the quantity that characterizes an agent's tota
 
 **Mismatch dynamics.** The evolution of mismatch over time is governed by the balance between correction (via tempo) and disturbance ($\rho$) ( #mismatch-dynamics).
 
+**Channel independence assumption.** The additive formula assumes informationally independent channels — each channel contributes non-redundant correction capacity. When channels are correlated (overlapping sensors, repeated teammate reports, redundant telemetry), the additive formula *overcounts* effective tempo. The correct tempo satisfies:
+
+$$\mathcal{T} \leq \sum_k \nu^{(k)} \cdot \eta^{(k)*}$$
+
+with equality iff channels are informationally independent. The gap is the *redundancy penalty* — the effective correction capacity lost to overlapping information. For two correlated channels, the penalty involves the mutual information $I(e^{(1)}; e^{(2)} \mid M_{\tau^-})$ between their event streams conditioned on the current model. Since tempo is the core capacity variable (appearing in the persistence condition, adversarial dynamics, and composition), this overcounting inflates margins wherever channel independence fails. The additive formula remains an upper bound and is exact when channels measure genuinely different aspects of the environment. Multi-agent composition ( #team-persistence) inherits this limitation: the communication tempo contribution is additive in the same sense and overcounts when different allies report correlated information.
+
 **Scalar vs. vector tempo.** The scalar $\mathcal{T}$ assumes isotropic correction capacity. When the agent corrects some dimensions faster than others, scalar tempo overestimates effective adaptation along weak dimensions. Simulation confirms: in an anisotropic 3D system (gain varying 5:1), scalar $\rho/\mathcal{T}$ overestimated by 72%, with the weak dimension accounting for 84% of total mismatch. The correct formulation is per-dimension: $\mathcal{T}_k \gt \rho_k / \delta_{\text{critical},k}$ ( #per-dimension-persistence).
 
 **(Descended from TF-11.)**

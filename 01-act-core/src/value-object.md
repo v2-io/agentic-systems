@@ -25,13 +25,16 @@ $$Q_O(M_t, a; \pi_{\text{cont}}, N_h) = \mathbb{E}\!\left[V_{O_t}(\tau) \;\middl
 
 $Q_O$ answers: "if I *do* action $a$ now and then follow $\pi_{\text{cont}}$ afterward, what is my expected trajectory value?" The $do(\cdot)$ notation is explicit: this is an interventional query ( #causal-hierarchy-requirement), not conditioning on observed action choice. The agent asks about consequences of an intervention, not about correlates of a naturally occurring action. Under model sufficiency ($S(M_t) = 1$), the interventional and conditional expectations coincide because $M_t$ screens off confounders; when $S(M_t) \lt 1$, the interventional interpretation is the correct one and the conditional may be biased by unmodeled confounders.
 
-**Continuation convention.** All value queries are conditioned on a specific continuation policy $\pi_{\text{cont}}$ and finite horizon $N_h$. $\pi_{\text{cont}}$ is a *parameter* of the value object, not a derived quantity. ACT does not prescribe a specific solution concept. Common choices:
+**Continuation convention.** All value queries are conditioned on a specific continuation policy $\pi_{\text{cont}}$ and finite horizon $N_h$. $\pi_{\text{cont}}$ is a *parameter* of the value object, not a derived quantity.
 
-- $\pi_{\text{cont}} = \pi_{\text{current}}$ — **one-step improvement** (evaluate each action assuming current behavior continues afterward). Natural default for ACT: requires no fixed-point computation and aligns with incremental update philosophy ( #update-gain). Not a convergence guarantee; a practical default.
+**Canonical default: one-step improvement.** ACT adopts $\pi_{\text{cont}} = \pi_{\text{current}}$ as the canonical continuation convention unless otherwise specified. Under this convention, each action is evaluated assuming current behavior continues afterward — no fixed-point computation, no global optimality assumption. This aligns with ACT's incremental update philosophy ( #update-gain) and makes all ACT diagnostics ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$, $A_O$) comparable across analyses of the same agent over time. It is not a convergence guarantee; it is a shared evaluation frame.
+
+**Alternative conventions** are legitimate but must be stated explicitly when used:
+
 - $\pi_{\text{cont}} = \pi^\ast$ — **Bellman fixed point** (self-consistent optimal continuation). Requires solving a fixed-point equation. Standard in RL and dynamic programming.
 - $\pi_{\text{cont}}$ re-optimized each step — **receding horizon / MPC**. Re-plans at each step with updated $M_t$.
 
-The one-step improvement is the natural default because it mirrors ACT's general philosophy: update incrementally from where you are, using the best available information, without requiring global optimality.
+Different continuation conventions yield different values for $A_O$, $\delta_{\text{sat}}$, and $\delta_{\text{regret}}$. Diagnostics computed under different conventions are not directly comparable — the convention is part of the measurement, not just the computation. When a specific convergence guarantee is needed (e.g., for #strategy-persistence-schema), the solution concept must be stated explicitly; the one-step improvement default does not provide convergence guarantees.
 
 ## Epistemic Status
 
@@ -58,6 +61,6 @@ This extension is structurally motivated but the specific form of $\lambda(M_t, 
 
 ## Working Notes
 
-- The continuation convention is a degree of freedom that interacts with the satisfaction gap and control regret: different $\pi_{\text{cont}}$ choices give different $A_O$ values, which changes what "best achievable" means. The theory needs to be explicit about which convention is used when these quantities are compared.
+- The one-step improvement convention is now the canonical default (promoted from Working Notes to Formal Expression). This resolves the comparability issue: $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ are comparable across analyses when computed under the same convention.
 - When a specific convergence guarantee is needed (e.g., for strategy-persistence-schema), the solution concept must be stated explicitly — the one-step improvement default is not sufficient.
 - For LLM agents with context turnover, $N_h$ has a natural bound: the current session. The "continuation policy" is whatever the next agent instance will do, which the current instance cannot control. This connects to #context-turnover (Section V).

@@ -20,7 +20,7 @@ Two dimensions — model richness and objective richness — define four regions
 | | Objective absent or trivial | Objective structured |
 |---|---|---|
 | **Model absent or trivial** | *Reactive system*: fixed input-output rule (reflex arc, hardwired relay) | *Blind pursuer*: pursues goal without modeling reality (gradient follower, basic search) |
-| **Model structured** | *Adaptive tracker*: builds reality model, no goal beyond tracking (Kalman filter, passive Bayesian learner) | *Actuated agent*: models reality AND pursues objectives (commander, developer, AI agent) |
+| **Model structured** | *Adaptive tracker*: builds reality model, no goal beyond tracking (Kalman filter, Bayesian learner) | *Actuated agent*: models reality AND pursues objectives (commander, developer, AI agent) |
 
 The regions differ in which state objects carry nontrivial structure:
 - Reactive: $M_t$ and $O_t$ both absent or too degenerate for the associated machinery to be non-vacuous
@@ -38,7 +38,9 @@ This is *definitional* — it names regions of a continuum for analytical conven
 
 **Low-end agents sit near region boundaries.** A thermostat has degenerate forms of both $M_t$ (last temperature reading — no history, no prediction) and $O_t$ (setpoint). It sits near the origin of both axes — closest to the reactive region but not truly absent on either axis. A PID controller has a richer error signal ($M_t$: error, integral, derivative) and a clear setpoint ($O_t$) — it's a blind pursuer with a degenerate model, not a system with no model at all. A reflex arc (no retained state, no setpoint) is the truly reactive case. The meaningful classification question is not "does $M_t$ exist?" but "is $M_t$ rich enough to support the adaptive dynamics of Section I?"
 
-**Section I covers the left column.** Adaptive trackers are the primary subject of Section I — agents that build and maintain $M_t$ without explicit purpose. The mismatch signal ( #mismatch-signal), gain ( #update-gain), tempo ( #adaptive-tempo), and persistence condition ( #persistence-condition) fully characterize their adaptive dynamics. TFT was developed primarily for this region.
+**Section I covers the left column.** Adaptive trackers are the primary subject of Section I — agents that build and maintain $M_t$ without explicit purpose. The mismatch signal ( #mismatch-signal), gain ( #update-gain), tempo ( #adaptive-tempo), and persistence condition ( #persistence-condition) characterize their adaptive dynamics. TFT was developed primarily for this region.
+
+**Passive trackers and the scope condition.** The adaptive machinery (mismatch, gain, tempo, persistence) applies to any system that observes and updates a model — including passive Bayesian learners with no action choices. The causal-effect results (CIY, #loop-interventional-access, #causal-hierarchy-requirement) require the full #scope-condition, which demands at least binary choice with genuine causal effect. Passive trackers are therefore in scope for Section I's adaptive results but outside scope for the causal-information results now in Section II. The Kalman filter worked example ( #worked-example-kalman) uses a controlled system (actions affect state), placing it within the full scope condition.
 
 **Section II adds the right column.** Actuated agents need everything from Section I plus objectives, strategy, and the orient cascade that connects them. The adaptive machinery from Section I applies to the epistemic substate $M_t$ directly. When directed separation ( #directed-separation) holds — when the epistemic update is goal-blind — the Section I → Section II lift is clean and the orient cascade resolves sequentially.
 

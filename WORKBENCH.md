@@ -21,7 +21,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 
 ## Segment Status
 
-### Written — Section I (28 segments, all written)
+### Written — Section I (26 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
 | [temporal-optimality](01-act-core/src/temporal-optimality.md) | Postulate | Needs review |
@@ -53,7 +53,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | [temporal-nesting](01-act-core/src/temporal-nesting.md) | Derived | Needs review |
 | [agent-identity](01-act-core/src/agent-identity.md) | Discussion | Needs review |
 
-### Written — Section II (21 segments, all written)
+### Written — Section II (23 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
 | [agent-spectrum](01-act-core/src/agent-spectrum.md) | Definition | Needs review |

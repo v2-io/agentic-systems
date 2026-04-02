@@ -5,6 +5,7 @@ status: robust-qualitative
 depends:
   - agent-model
   - scope-condition
+  - recursive-update
 ---
 
 # Formulation: Complete Agent State

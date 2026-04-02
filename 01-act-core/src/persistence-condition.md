@@ -10,44 +10,61 @@ depends:
 
 # Result: Persistence Condition
 
-An agent maintains bounded mismatch — persists as a viable adaptive system — if and only if its correction efficiency exceeds the rate of environment change relative to its model class capacity.
+An agent persists when two independent conditions hold: the correction machinery can contain mismatch within its operating region (*structural persistence*), and the resulting steady-state mismatch is small enough for the agent's actions to remain adequate (*task adequacy*).
 
 ## Formal Expression
 
-*[Derived (persistence-threshold, from sector-condition analysis)]*
+### Structural Persistence
 
-### Model D: Deterministic Bounded Disturbance (GA-2)
+*[Derived (structural-persistence, from sector-condition analysis)]*
 
-**General form (nonlinear):**
+The correction machinery contains mismatch within its operating region:
+
+**Model D** (deterministic bounded disturbance, GA-2):
 
 $$\alpha \gt \frac{\rho}{R}$$
 
-where:
-- $\alpha$ is the worst-case correction efficiency (the sector-condition lower bound on the correction function — see #sector-condition-stability)
-- $\rho$ is the disturbance bound (GA-2: $\lVert w(t)\rVert \leq \rho$)
-- $R$ is the model class capacity (radius of the region where the sector condition holds)
-
-The ultimately bounded mismatch is $R^\ast = \rho / \alpha$, and persistence requires $R^\ast \lt R$.
-
-**Linear operational form (Model D):**
-
-$$\mathcal{T} \gt \frac{\rho}{\lVert\delta_{\text{critical}}\rVert}$$
-
-In the linear case ($F(\mathcal{T}, \delta) = \mathcal{T} \cdot \delta$), $\alpha = \mathcal{T}$ exactly and $R \to \infty$. The critical mismatch $\lVert\delta_{\text{critical}}\rVert$ then replaces $R$ as the effective bound — the agent persists when steady-state mismatch $\rho / \mathcal{T}$ stays below the tolerance threshold. This is the form used throughout the theory as the operational persistence condition. It is exact for linear correction and a useful proxy for mildly nonlinear correction (where $\alpha \approx \mathcal{T}$), but it overstates the persistence margin when the correction function saturates at large mismatch.
-
-### Model S: Stochastic Disturbance (GA-2S)
-
-**General form (nonlinear):**
+**Model S** (stochastic disturbance, GA-2S):
 
 $$\alpha > \frac{n\sigma_w^2}{2R^2}$$
 
-where $n = \dim(\delta)$ and $\sigma_w^2 = \mathbb{E}[\lVert w(t)\rVert^2]$. The RMS steady-state mismatch is $R^*_S = \sigma_w\sqrt{n/(2\alpha)}$, and persistence (in the mean-square sense) requires $R^*_S < R$. See Prop A.1S in #sector-condition-derivation.
+where:
+- $\alpha$ is the worst-case correction efficiency (the sector-condition lower bound — see #sector-condition-stability)
+- $\rho$ is the disturbance bound (GA-2: $\lVert w(t)\rVert \leq \rho$); $\sigma_w^2 = \mathbb{E}[\lVert w(t)\rVert^2]$ for Model S
+- $R$ is the model class capacity (radius of the region where the sector condition holds)
+- $n = \dim(\delta)$
 
-**Linear operational form (Model S):**
+Structural persistence is about the *machinery*, not the task. It says "the correction dynamics can keep mismatch bounded within the region where the Lyapunov guarantee holds." It is a property of the agent's adaptive architecture, not of its goals or domain. The ultimately bounded mismatch is $R^\ast = \rho / \alpha$ (Model D) or $R^*_S = \sigma_w\sqrt{n/(2\alpha)}$ (Model S), and structural persistence requires $R^\ast \lt R$.
 
-$$\mathcal{T} > \frac{n\sigma_w^2}{2\lVert\delta_{\text{critical}}\rVert^2}$$
+**In the linear case** ($F(\mathcal{T}, \delta) = \mathcal{T} \cdot \delta$), $\alpha = \mathcal{T}$ exactly and $R \to \infty$. Structural persistence is then satisfied trivially — any agent with $\mathcal{T} \gt 0$ is structurally persistent under linear correction. This is why the "linear operational form" below exists: when structural persistence is free, the binding constraint is task adequacy.
 
-In the linear case, $\alpha = \mathcal{T}$. The condition is quadratic in $\lVert\delta_{\text{critical}}\rVert$ (not linear as in Model D) because the RMS mismatch scales as $1/\sqrt{\mathcal{T}}$, not $1/\mathcal{T}$.
+### Task Adequacy
+
+*[Definition (task-adequacy)]*
+
+The steady-state mismatch is small enough for the agent's actions to remain acceptable:
+
+$$R^\ast \lt \lVert\delta_{\text{critical}}\rVert$$
+
+where $\lVert\delta_{\text{critical}}\rVert$ is a domain-specific tolerance threshold — "how wrong can the model be before the agent's actions become harmful or ineffective?" This is set by the application domain, not derived by ACT.
+
+**Task adequacy is a separate condition from structural persistence.** An agent can be structurally persistent ($R^\ast \lt R$) but task-inadequate ($R^\ast \gt \lVert\delta_{\text{critical}}\rVert$) — the machinery contains mismatch, but not tightly enough for the domain's needs. Conversely, when $\lVert\delta_{\text{critical}}\rVert \lt R$ (the domain's tolerance is stricter than the model class capacity), task adequacy is the binding constraint.
+
+### Operational Persistence Condition
+
+*[Derived (operational-persistence, conjunction of structural persistence + task adequacy)]*
+
+The agent persists operationally when BOTH conditions hold. In the nonlinear case with $\lVert\delta_{\text{critical}}\rVert \lt R$, the binding condition is:
+
+$$\alpha \gt \frac{\rho}{\lVert\delta_{\text{critical}}\rVert} \quad \text{(Model D)} \qquad \alpha > \frac{n\sigma_w^2}{2\lVert\delta_{\text{critical}}\rVert^2} \quad \text{(Model S)}$$
+
+These are the same as the structural conditions with $R$ replaced by $\lVert\delta_{\text{critical}}\rVert$, because when $\lVert\delta_{\text{critical}}\rVert \lt R$, task adequacy is stricter.
+
+**Linear operational forms:** In the linear case ($\alpha = \mathcal{T}$, $R \to \infty$), structural persistence is trivially satisfied and the operational condition reduces to task adequacy alone:
+
+$$\mathcal{T} \gt \frac{\rho}{\lVert\delta_{\text{critical}}\rVert} \quad \text{(Model D)} \qquad \mathcal{T} > \frac{n\sigma_w^2}{2\lVert\delta_{\text{critical}}\rVert^2} \quad \text{(Model S)}$$
+
+These are the forms used throughout the theory as the operational persistence condition. They are exact for linear correction and useful proxies for mildly nonlinear correction (where $\alpha \approx \mathcal{T}$), but they overstate the persistence margin when the correction function saturates, because they omit the structural constraint ($\alpha \gt \rho/R$) that becomes binding when $R$ is finite.
 
 **Per-dimension (Model S):** $\eta_k > c \cdot \rho_k^2 / \delta_{\text{critical},k}^2$ where $c$ depends on the probability guarantee. See #per-dimension-persistence.
 
@@ -59,9 +76,11 @@ In the linear case, $\alpha = \mathcal{T}$. The condition is quadratic in $\lVer
 
 ### Derivation
 
-**Model D:** From #sector-condition-stability (Prop A.1 in #sector-condition-derivation): under the sector condition and bounded disturbance, mismatch is ultimately bounded by $R^\ast = \rho/\alpha$, and the agent persists iff $R^\ast \lt R$, i.e., $\alpha \gt \rho/R$. In the linear case, $\alpha = \mathcal{T}$ and the relevant bound is $\lVert\delta_{\text{critical}}\rVert$ rather than $R$ (which is infinite), giving $\mathcal{T} \gt \rho / \lVert\delta_{\text{critical}}\rVert$. $\square$
+**Structural (Model D):** From Prop A.1 in #sector-condition-derivation: under the sector condition and bounded disturbance, mismatch is ultimately bounded by $R^\ast = \rho/\alpha$. The agent is structurally persistent iff $R^\ast \lt R$, i.e., $\alpha \gt \rho/R$. $\square$
 
-**Model S:** From Prop A.1S in #sector-condition-derivation: under the sector condition and stochastic disturbance, the RMS mismatch converges to $\sigma_w\sqrt{n/(2\alpha)}$, and the agent persists (mean-square) iff $\alpha > n\sigma_w^2/(2R^2)$. In the linear case, $\mathcal{T} > n\sigma_w^2/(2\lVert\delta_{\text{critical}}\rVert^2)$. $\square$
+**Structural (Model S):** From Prop A.1S in #sector-condition-derivation: under the sector condition and stochastic disturbance, the RMS mismatch converges to $\sigma_w\sqrt{n/(2\alpha)}$. Structurally persistent (mean-square) iff $\alpha > n\sigma_w^2/(2R^2)$. $\square$
+
+**Operational:** Structural persistence gives $R^\ast$. Task adequacy requires $R^\ast \lt \lVert\delta_{\text{critical}}\rVert$. Combined: $\alpha \gt \rho/\min(R, \lVert\delta_{\text{critical}}\rVert)$. In the linear case $R \to \infty$, so $\min(R, \lVert\delta_{\text{critical}}\rVert) = \lVert\delta_{\text{critical}}\rVert$. $\square$
 
 ### Per-Dimension Extension
 
@@ -77,15 +96,23 @@ The scalar condition overestimates by up to 72% in simulation. The weak dimensio
 
 ## Epistemic Status
 
-The threshold's *existence* is *robust qualitative* — any monotone correction function has a capacity limit; this holds across all correction functions tested (linear, saturating, threshold, sigmoid). Both disturbance models produce exact thresholds: Model D gives $\alpha > \rho/R$ (*exact* under GA-2, GA-3; Prop A.1); Model S gives $\alpha > n\sigma_w^2/(2R^2)$ (*exact* under GA-2S, GA-3; Prop A.1S). The linear operational forms ($\mathcal{T} > \rho/\lVert\delta_{\text{critical}}\rVert$ for Model D; $\mathcal{T} > n\sigma_w^2/(2\lVert\delta_{\text{critical}}\rVert^2)$ for Model S) are *exact* for linear correction and *useful approximations* for mildly nonlinear correction. For strongly nonlinear correction, the general $\alpha$-forms are required. Downstream segments that use the linear operational forms should be understood accordingly; the qualitative conclusions hold because $\alpha$ is monotone in $\mathcal{T}$. The per-dimension extension is *empirically exact* for Model S (matches AR(1) prediction to 4 significant figures in simulation); the Model D per-dimension threshold ($\mathcal{T}_k > \rho_k/\delta_{\text{critical},k}$) is exact by the same Lyapunov argument applied per dimension.
+**Structural persistence** thresholds are *exact* under their stated assumptions: Model D gives $\alpha > \rho/R$ (Prop A.1, exact under GA-2, GA-3); Model S gives $\alpha > n\sigma_w^2/(2R^2)$ (Prop A.1S, exact under GA-2S, GA-3). The threshold's *existence* is *robust qualitative* — any monotone correction function has a capacity limit; this holds across all correction functions tested.
+
+**Task adequacy** ($R^\ast < \lVert\delta_{\text{critical}}\rVert$) is *exact as a definition* — given $R^\ast$ (derived) and $\lVert\delta_{\text{critical}}\rVert$ (domain parameter), the comparison is well-defined. The substance lies in estimating $\lVert\delta_{\text{critical}}\rVert$ for specific domains, which is an operationalization question ( #operationalization), not a theory question.
+
+**The linear operational forms** ($\mathcal{T} > \rho/\lVert\delta_{\text{critical}}\rVert$ for Model D; $\mathcal{T} > n\sigma_w^2/(2\lVert\delta_{\text{critical}}\rVert^2)$ for Model S) are *exact* for linear correction (where they express task adequacy alone, structural persistence being trivially satisfied) and *useful approximations* for mildly nonlinear correction (where $\alpha \approx \mathcal{T}$). For strongly nonlinear correction, the general $\alpha$-forms are required and BOTH structural and task-adequacy conditions must be checked. Downstream segments that use the linear operational forms should be understood as expressing task adequacy, not structural stability.
+
+The per-dimension extension is *empirically exact* for Model S (matches AR(1) prediction to 4 significant figures in simulation); the Model D per-dimension threshold ($\mathcal{T}_k > \rho_k/\delta_{\text{critical},k}$) is exact by the same Lyapunov argument applied per dimension.
 
 ## Discussion
 
-**This is structural persistence.** The persistence condition formalizes *structural persistence* (see Persistence in `LEXICON.md`) — whether the correction machinery's capacity can outpace the disturbance rate. It does not address *operational persistence* (whether the agent is currently near the boundary $R$, which is governed by the adaptive reserve $\Delta\rho^\ast$) or *continuity persistence* (whether the agent maintains coherent identity through time). A system can satisfy $\alpha > \rho/R$ and still be operationally fragile or have zero continuity. These are independent dimensions requiring independent analysis.
+**Two conditions, not one.** This segment now separates what was previously conflated. Structural persistence ($\alpha > \rho/R$) is the Lyapunov-derived result — it says the machinery *works*. Task adequacy ($R^\ast < \lVert\delta_{\text{critical}}\rVert$) is a domain-specific constraint — it says the machinery works *well enough*. Neither implies the other, and downstream segments should specify which they mean. Most adversarial-dynamics results ( #adversarial-tempo-advantage, #adversarial-destabilization) depend on structural persistence. Most domain instantiations (TST, logogenic agent design) care about task adequacy. See Persistence in `LEXICON.md` and `README.md` for the full three-sense taxonomy (structural, operational, continuity).
 
-**Below threshold.** When $\alpha \leq \rho / R$ (or in the linear case, $\mathcal{T} \leq \rho / \Vert\delta_{\text{critical}}\Vert$), mismatch is not merely large — it grows without effective bound (up to $R$, the sector-condition region). The agent loses contact with reality. This is a qualitative transition, not a gradual degradation.
+**Below structural threshold.** When $\alpha \leq \rho / R$, mismatch is not merely large — it grows without effective bound (up to $R$, the sector-condition region). The correction machinery is overwhelmed. This is a qualitative transition, not a gradual degradation.
 
-**$\delta_{\text{critical}}$ and $R$ are domain parameters, not theory outputs.** The theory derives the *existence* of a persistence threshold and its *form* (ratio of correction to disturbance). But the specific values of $\delta_{\text{critical}}$ (how much mismatch is tolerable) and $R$ (the model class capacity) are set by the application domain, not derived by ACT. $\delta_{\text{critical}}$ encodes "how wrong can the model be before the agent's actions become harmful or ineffective?" — this depends on the stakes, the action space, and the environment's forgiveness. $R$ encodes "how large a mismatch can the correction function handle before it saturates or breaks down?" — this depends on the model class and the correction architecture. See #operationalization for guidance on estimating these quantities in specific domains.
+**Below task-adequacy threshold.** When $R^\ast > \lVert\delta_{\text{critical}}\rVert$ but $R^\ast < R$, the system is structurally stable but performing unacceptably. Mismatch is bounded but too large for the domain. The remedy is different from structural failure: increase $\mathcal{T}$ (faster or better correction), decrease $\rho$ (reduce environmental volatility), or relax $\lVert\delta_{\text{critical}}\rVert$ (accept more mismatch). Structural failure requires changing the correction architecture entirely ( #structural-adaptation-necessity).
+
+**$\delta_{\text{critical}}$ and $R$ are domain parameters, not theory outputs.** The theory derives the *existence* of persistence thresholds and their *form* (ratio of correction to disturbance). But the specific values are set by the application domain: $\delta_{\text{critical}}$ encodes "how wrong can the model be before the agent's actions become harmful or ineffective?" — this depends on the stakes, the action space, and the environment's forgiveness. $R$ encodes "how large a mismatch can the correction function handle before it saturates or breaks down?" — this depends on the model class and the correction architecture. See #operationalization for guidance on estimating these quantities in specific domains.
 
 **Adaptive reserve.** The quantity $\Delta\rho^\ast = \alpha R - \rho$ (Prop A.2) measures how much additional disturbance the agent can absorb before persistence fails. Positive reserve means the agent has margin; zero reserve means it is at the threshold.
 

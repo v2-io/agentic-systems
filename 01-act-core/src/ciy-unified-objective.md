@@ -4,6 +4,7 @@ type: discussion
 status: discussion-grade
 depends:
   - causal-information-yield
+  - ciy-observational-proxy
   - value-object
   - action-selection
 ---
