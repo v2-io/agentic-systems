@@ -8,7 +8,7 @@ depends:
 
 # Definition: Observation Function
 
-Observations are lossy, possibly noisy functions of environment state, prior action, and perceptual noise. The agent knows neither the observation function nor the noise distribution exactly.
+Observations (aisthesis — raw contact with reality) are lossy, possibly noisy functions of environment state, prior action, and perceptual noise. The agent knows neither the observation function nor the noise distribution exactly.
 
 ## Formal Expression
 

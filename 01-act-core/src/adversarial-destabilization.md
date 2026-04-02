@@ -10,7 +10,7 @@ depends:
 
 # Derived: Adversarial Destabilization
 
-When two agents are coupled such that one's actions contribute to the other's disturbance rate, the faster agent can drive the slower agent outside its invariant region — causing the correction mechanism to break down entirely.
+When two agents are coupled such that one's praxis contributes to the other's disturbance rate, the faster agent can generate aporia in the target faster than the target's epistrophe can resolve it — driving the target outside its invariant region and causing the correction mechanism to break down entirely.
 
 ## Formal Expression
 
@@ -40,7 +40,7 @@ Symmetrically, $B$ destabilizes $A$ when $\mathcal{T}_B \gt \Delta\rho^\ast_A / 
 
 The adversarial outcome depends on whether either agent can push the other past its stability limit. $\square$
 
-**Interpretation.** "Getting inside the opponent's OODA loop" has a precise Lyapunov characterization: Agent $A$ destabilizes Agent $B$ when $A$'s tempo, multiplied by coupling effectiveness, exceeds $B$'s adaptive reserve $\Delta\rho^\ast_B$. This captures:
+**Interpretation.** "Getting inside the opponent's OODA loop" has a precise Lyapunov characterization: Agent $A$ destabilizes Agent $B$ when $A$'s praxis, multiplied by coupling effectiveness, generates aporia in $B$ faster than $B$'s epistrophe can resolve it — specifically, when $A$'s tempo times coupling exceeds $B$'s adaptive reserve $\Delta\rho^\ast_B$. This captures:
 
 - **Asymmetric coupling** ($\gamma_A \neq \gamma_B$): an agent with lower tempo but higher coupling effectiveness can still win.
 - **Finite reserves**: an agent with very high $\mathcal{T}$ but operating near its model-class limit ($\Delta\rho^\ast$ small) is vulnerable despite high tempo.

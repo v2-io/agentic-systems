@@ -9,7 +9,7 @@ depends:
 
 # Empirical: Update Gain
 
-The optimal weight an agent assigns to new observations when updating its model balances model uncertainty against observation noise.
+The optimal weight an agent assigns to new observations when updating its model — the rate of *epistrophe* (turning toward reality). How much the agent should trust the incoming observation versus its own prior understanding.
 
 ## Formal Expression
 
@@ -38,11 +38,11 @@ where $\delta_t$ is the mismatch ( #mismatch-signal) and $g(\cdot)$ is a correct
 
 **Limiting behavior.** When $U_M \gg U_o$ (high model uncertainty — e.g., after initialization or structural adaptation), $\eta^\ast \to 1$: trust the observation. When $U_M \ll U_o$ (confident model, noisy channel), $\eta^\ast \to 0$: trust the model. The gain determines how strongly the agent corrects toward reality on each update.
 
-**Gain collapse.** When the agent incorrectly estimates $U_M \to 0$ (spurious confidence) or $U_o \to \infty$ (spurious distrust of sensors), $\eta^\ast \to 0$ and the agent stops learning. Mismatches are ignored, producing confirmation bias or a decoupled reality model.
+**Gain collapse — epistrophe failure.** When the agent incorrectly estimates $U_M \to 0$ (spurious confidence) or $U_o \to \infty$ (spurious distrust of sensors), $\eta^\ast \to 0$ and epistrophe ceases. Aporia still arrives — the mismatch signal is still generated — but the agent no longer turns toward it. Mismatches are ignored, producing confirmation bias or a decoupled reality model. The cycle runs but the corrective phase is hollow.
 
 **Multi-dimensional generalization.** In vector-valued systems, $U_M$ and $U_o$ are covariance matrices and $\eta^\ast$ becomes a gain matrix (as in the Kalman filter). The scalar form captures the essential structure.
 
-**Connection to adaptive tempo.** The update gain is one factor in the agent's adaptive tempo ( #adaptive-tempo): $\mathcal{T} = \nu \cdot \eta^\ast$. Updating frequently (high $\nu$) is useless if the updates extract no information (low $\eta^\ast$). Gain measures the *quality* of the update cycle; event rate measures its *speed*.
+**Connection to adaptive tempo.** The update gain is one factor in the agent's adaptive tempo ( #adaptive-tempo): $\mathcal{T} = \nu \cdot \eta^\ast$. Frequent aisthesis (high $\nu$) is useless if epistrophe extracts no information (low $\eta^\ast$). Gain measures the *quality* of the cycle's corrective phase; event rate measures its *speed*.
 
 **Gain dynamics.** The optimal gain changes over time following predictable patterns:
 

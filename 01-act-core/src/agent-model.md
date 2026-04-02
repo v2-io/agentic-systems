@@ -10,7 +10,7 @@ depends:
 
 # Formulation: The Reality Model
 
-The agent's compressed representation of how the world works, mapping interaction history to model space. This is a formulation choice — we commit to analyzing the agent as having a complete state $M_t$ that subsumes all retained information from its history.
+The agent's compressed representation of how the world works, mapping interaction history to model space. $M_t$ is the substrate of prolepsis — the model from which predictions are generated and against which observations are compared. This is a formulation choice — we commit to analyzing the agent as having a complete state $M_t$ that subsumes all retained information from its history.
 
 ## Formal Expression
 

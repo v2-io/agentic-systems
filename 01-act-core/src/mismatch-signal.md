@@ -9,7 +9,7 @@ depends:
 
 # Definition: Mismatch Signal
 
-The discrepancy between the model's prediction and the actual observation — the fundamental error signal that drives all adaptation.
+The discrepancy between the model's prediction and the actual observation — the formal expression of *aporia* (productive perplexity). This is the signal that drives all adaptation: the agent discovers that reality and model have diverged, and this discovery is generative.
 
 ## Formal Expression
 
@@ -41,6 +41,6 @@ This is *definitional*. Given any model that predicts ( #agent-model) and any ob
 
 **Units and normalization.** When $\delta_t$ is in physical units (meters, dollars), the $\Vert\delta\Vert$ that enters the mismatch dynamics should be understood as the Mahalanobis distance: $\Vert\delta_t\Vert_\Sigma = \sqrt{\delta_t^T \Sigma^{-1} \delta_t}$ where $\Sigma$ is the observation noise covariance. This maps physical prediction error to dimensionless surprise-equivalent units.
 
-**The zero-mismatch ambiguity.** $\delta_t \approx 0$ does NOT necessarily indicate model adequacy. It may mean: (a) the model genuinely reflects reality — *desirable*; (b) the agent is only observing aspects its model already explains, while remaining ignorant of aspects where the model is wrong — *confirmation bias*; or (c) the observation channel is too noisy to detect model errors — *architectural limitation*. Only (a) is desirable. This ambiguity is why active testing — choosing actions to generate informative mismatch signals — can be valuable (see #causal-information-yield for the CIY framework).
+**The zero-aporia ambiguity.** $\delta_t \approx 0$ does NOT necessarily indicate model adequacy. It may mean: (a) the model genuinely reflects reality — *desirable*; (b) the agent is only observing aspects its model already explains, while remaining ignorant of aspects where the model is wrong — *confirmation bias*; or (c) the observation channel is too noisy to detect model errors — *architectural limitation*. Only (a) is desirable. An agent without aporia is an agent that has stopped adapting — but silence can mean peace or deafness. This ambiguity is why active testing — choosing actions to generate informative aporia — can be valuable (see #causal-information-yield for the CIY framework).
 
 **The mismatch transform.** TF-06's update rule writes $M_t = M_{t-1} + \eta \cdot g(\delta_t)$, where the transform $g$ maps from $\delta_t$'s space to the model's update space: $g: \mathcal{O} \to T_M\mathcal{M}$ for prediction errors; $g: T_M\mathcal{M} \to T_M\mathcal{M}$ for score-function mismatches.

@@ -11,7 +11,7 @@ depends:
 
 # Derived: Deliberation Cost
 
-Explicit deliberation improves action quality by using the model for internal simulation before acting. But deliberation takes time — and during that time, the environment continues to evolve. Deliberation is justified when the improvement exceeds the mismatch accumulated during the pause.
+Explicit deliberation improves action quality by using the model for internal simulation before acting — pausing praxis to improve upcoming epistrophe. But deliberation takes time, and during that time aporia accumulates (the environment continues to evolve while the agent is not correcting). Deliberation is justified when the improvement in epistrophe quality exceeds the aporia accumulated during the pause.
 
 ## Formal Expression
 
