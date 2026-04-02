@@ -36,6 +36,8 @@ If the model class fitness $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ for so
 
 ## Discussion
 
+**Structural adaptation as structural persistence failure.** When the model class is inadequate, the effective $\alpha$ in the sector condition shrinks — the correction function cannot point inward strongly enough because the model class lacks the capacity to represent the correct direction. This is a failure of *structural persistence* (see Persistence in `LEXICON.md`): the machinery's capacity to outpace disturbance degrades not because disturbance increased or tempo decreased, but because the correction function itself has become less effective. The remedy is not faster cycling (operational) or identity preservation (continuity) but a change of model class.
+
 **Observable symptoms of model class inadequacy.** When $\mathcal{F}(\mathcal{M})$ is low:
 
 1. **Persistent irreducible mismatch**: $\Vert\delta_t\Vert$ remains large despite extended updating — the model has converged within $\mathcal{M}$ but the best achievable model is still poor.

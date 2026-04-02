@@ -19,7 +19,7 @@ If $M_t$ is a sufficient statistic for $\mathcal C_t$ ( #model-sufficiency), and
 
 ## Epistemic Status
 
-This is *discussion-grade*. The observations follow qualitatively from the formalism but are not formal propositions. No downstream formal result depends on this material. Whether the mathematical structure grounds something that deserves to be called "identity" or "continuity of experience" is beyond ACT's scope. The mathematical structure is clear: the feedback loop produces a singular, non-forkable causal trajectory, and model adequacy is defined relative to that trajectory.
+This is *discussion-grade*. The observations follow qualitatively from the formalism but are not formal propositions. No downstream formal result depends on this material. Whether the mathematical structure grounds something that deserves to be called "identity" or "continuity of experience" is beyond ACT's scope. The mathematical structure is clear: the feedback loop produces a singular, non-forkable causal trajectory, and model adequacy is defined relative to that trajectory. What this segment discusses is *continuity persistence* in the sense of `LEXICON.md` — whether the agent maintains a coherent identity and trajectory through time, as distinct from the structural persistence of #persistence-condition (can the machinery outpace disturbance?) and operational persistence (is the agent currently within its viable region?).
 
 ## Discussion
 

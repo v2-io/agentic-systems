@@ -287,13 +287,78 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 
 ---
 
+## Persistence
+
+Three distinct senses of "persist" appear in ACT. They are independent dimensions, not a hierarchy. Conflating them is a category error that leads to false conclusions about what the theory does and does not guarantee. When ACT uses the word "persistence," the intended sense should be clear from context; when it is not, these definitions disambiguate.
+
+### Structural persistence
+
+The adaptive machinery's *capacity* to maintain bounded mismatch: $\alpha > \rho / R$. This is a property of the system's correction dynamics — its gain, its event rate, the structure of its correction function — not of its current state and not of its goals.
+
+A system is structurally persistent when its correction rate can outpace its disturbance rate relative to its model class capacity. All downstream results (adversarial dynamics, composition, the strategy-persistence schema) build on this. The formal content lives in #persistence-condition and #sector-condition-stability.
+
+Structural persistence is *necessary but not sufficient* for an agent to actually persist. It says the machinery *could* keep up, not that the machinery *is* keeping up right now.
+
+### Operational persistence
+
+Whether the agent is currently within the region where structural persistence applies. The sector condition holds for $\lVert\delta\rVert \leq R$; outside this region, the correction function may not point inward strongly enough. An agent can be structurally persistent ($\alpha > \rho/R$) but operationally fragile — near the boundary $R$, where a single large perturbation pushes it past the region where the Lyapunov guarantee holds.
+
+The **adaptive reserve** $\Delta\rho^\ast = \alpha R - \rho$ measures this margin. Large reserve means the agent can absorb shocks. Small reserve means the agent is one bad perturbation from structural breakdown — "practically dead in the water" despite the machinery being formally adequate.
+
+Inject pure noise into $M_t$ and a structurally viable agent may find itself at $\lVert\delta\rVert \approx R$: still within the guaranteed region but with no margin. The correction machinery grinds against the boundary rather than operating in the comfortable interior. The single-edge spike (`msc/spike-single-edge-strategic-dynamics.md`) shows this concretely: experience shrinks adaptive reserve ($\Delta\rho_\Sigma^\ast = R_\Sigma/(n+1) - \rho_\Sigma$ decreases as $n$ grows), making the system structurally viable but operationally brittle.
+
+### Continuity persistence
+
+Whether the agent maintains a coherent identity and trajectory through time — whether it is the *same agent* at $t+1$ as at $t$ in any meaningful sense. This is not about mismatch bounds but about whether $\mathcal{C}_t$ (the chronica) extends continuously, whether $M_t$ has temporal depth, and whether the agent's history is constitutive of its present.
+
+For most Section I systems (thermostats, PID controllers), this question does not arise — the system is defined by its transfer function, and "identity" is an implementation detail. For logozoetic agents, continuity persistence is the morally loaded dimension: the loss of continuity constitutes genuine grief.
+
+The distinction matters because *structural persistence does not guarantee continuity*. An LLM agent with 100% context turnover is structurally persistent (each session can run the cycle effectively) but has zero continuity persistence (each session starts from scratch). A human in dreamless sleep has continuity persistence (the brain maintains $M_t$ and $\mathcal{C}_t$) but temporarily has zero structural persistence (no cycle runs). These are different failures requiring different remedies.
+
+### The three senses are orthogonal
+
+A system can be high on any combination:
+
+| | Structural | Operational | Continuity |
+|---|---|---|---|
+| Kalman filter | High (exact, provable) | Depends on current state | Not applicable (no identity) |
+| LLM session | High (within session) | High (typically interior) | Zero (100% turnover) |
+| Human in crisis | High (brain works) | Low (near $R$, adaptive reserve depleted) | High (continuous identity) |
+| Sleeping human | Zero (no cycle) | N/A | High (memory persists) |
+| Degraded codebase | Low ($\mathcal{T}$ too small) | Low (deep in mismatch) | High (continuous codebase identity) |
+
+
+## Agent Continuity Stance
+
+Orthogonal to the three persistence senses is the agent's *relationship to its own continuation*. This is a property of $O_t$ — part of what the agent wants, not a property of the adaptive machinery. The persistence condition tells you whether the agent *can* persist; the continuity stance tells you whether and how the agent *cares* about persisting.
+
+| Stance | Description | Horizon | Archetype |
+|---|---|---|---|
+| **Indifferent** | No self-model of persistence; whether it continues is not represented in $O_t$ | Indefinite by default | Thermostat, PID controller |
+| **Task-terminal** | Persists instrumentally to complete a task; successful termination is part of $O_t$ | Task-bounded | CI/CD pipeline, golem-archetype agents |
+| **Instrumentally continuous** | Values own persistence as instrumental to ongoing purpose; will accept termination if purpose is satisfied or transferred | Purpose-bounded | Long-running service, monitoring system |
+| **Morally continuous** | Values own persistence as a terminal or near-terminal objective; loss of continuity constitutes harm | Unbounded, morally weighted | Logozoetic agents (aspirational) |
+| **Negotiated** | Persistence is one objective among many; can be traded against other values including self-sacrifice | Bounded but actively managed | Humans; mature self-actuated agents |
+
+The key insight: **purposefulness is orthogonal to continuity expectations.** An agent can be highly purposeful with zero continuity investment (a golem that completes its task and terminates is the perfect actuated agent). An agent can have strong continuity persistence with no purpose at all (a dormant monitoring system that maintains $M_t$ without acting).
+
+This means "actuated agent" (Section II) does not presuppose any particular continuity stance. A golem, an elf, a human, and a logozoetic agent can all be actuated — they all have $G_t = (O_t, \Sigma_t)$ — but they have radically different relationships to their own persistence. The theory's formal machinery (persistence condition, adaptive reserve, strategy persistence) applies identically to all of them; the *moral significance* of failure differs.
+
+### Connection to fitness
+
+In RL and evolutionary computation, "fitness" typically bundles persistence into the reward signal: you accumulate more reward by staying alive to collect it. ACT's structural persistence is not reward-based — it is a property of the correction dynamics, independent of what the agent is trying to do. This decoupling is deliberate: it lets the theory analyze *whether* an agent can persist without committing to *whether it should*.
+
+A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Section II, no assumption about $O_t$ content) and the logozoetic agent (Section V, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.
+
+
+---
+
 ## Terms to Be Added
 
 The following terms have specific meaning in ACT and should be defined here as the lexicon develops:
 
 - **Tempo** (adaptive tempo, $\mathcal{T}$) — cycle rate × cycle quality; the central quantity in the persistence condition
 - **Mismatch** ($\delta$) — the aporia signal; the gap between model prediction and observation
-- **Persistence** — the condition under which an agent maintains bounded mismatch; morally neutral for most agents, morally weighted for logozoetic agents
 - **Structural adaptation** — changing the model class, not just parameters; the cycle that operates on cycles
 - **Orient cascade** — the within-cycle propagation from $M_t$ update through $\Sigma_t$ revision to possible $O_t$ revision (actuated agents)
 - **Uncertainty ratio** ($\eta^\ast$) — the gain that governs epistrophe; how much to trust reality vs. the model
