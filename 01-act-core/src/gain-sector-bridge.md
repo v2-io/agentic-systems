@@ -6,6 +6,7 @@ depends:
   - update-gain
   - mismatch-signal
   - sector-condition-derivation
+  - gain-sector-derivation
 ---
 
 # Derived: Gain–Sector Bridge
@@ -80,7 +81,7 @@ The bridge fails precisely in five cases:
 
 - **For non-gradient agents** (PID controllers, rule-based systems, human judgment): B1 remains an empirical claim. The bridge covers the important special cases but does not eliminate GA-3 as an assumption for all agents.
 
-The gradient equivalence is validated by simulation across quadratic, logistic, exponential-family, and non-convex losses (see `msc/spike-gain-sector-bridge-nonlinear.md`). The Kalman case is verified analytically (see `msc/spike-gain-sector-bridge.md`).
+The gradient equivalence is validated by simulation across quadratic, logistic, exponential-family, and non-convex losses. The Kalman case is verified analytically. Full derivations and simulation results in #gain-sector-derivation.
 
 **Max attainable:** *conditional* — the condition (B1 or strong convexity) is inherent, not removable. Pathological update rules exist that violate B1.
 

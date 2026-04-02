@@ -130,10 +130,12 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | §   | Type       | N   | Tag                                                                | Claim                                                          | Stage   |
 | --- | ---------- | --- | ------------------------------------------------------------------ | -------------------------------------------------------------- | ------- |
 | A   | Derivation |     | [#sector-condition-derivation](src/sector-condition-derivation.md) | Lyapunov derivations for bounded mismatch and adaptive reserve | draft   |
+| A   | Derivation |     | [#gain-sector-derivation](src/gain-sector-derivation.md)           | Gain-sector bridge proofs: Kalman, gradient equivalence, verification | draft |
 | A   | Derivation |     | [#recursive-update-derivation](src/recursive-update-derivation.md) | Uniqueness derivation via three constraints + counterexamples  | draft   |
 | A   | Sketch     |     | [#multi-timescale-stability](src/multi-timescale-stability.md)     | N-timescale singular perturbation sketch                       | draft   |
 | A   | Detail     |     | [#linear-ode-approximation](src/linear-ode-approximation.md)       | Pedagogical linear mismatch ODE                                | missing |
 | A   | Derivation |     | [#graph-structure-uniqueness](src/graph-structure-uniqueness.md)   | 4 postulates → DAG; acyclicity proved, P3→Markov sketch        | draft   |
+| A   | Derivation |     | [#strategic-dynamics-derivation](src/strategic-dynamics-derivation.md) | Sector condition verification for strategy edges (4 cases)    | draft   |
 | A   | Detail     |     | [#simulation-results](src/simulation-results.md)                   | 6 variants validating claims                                   | draft   |
 
 

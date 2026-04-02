@@ -30,7 +30,7 @@ where $\alpha_\Sigma$ is the strategic correction rate, $\rho_\Sigma$ is the str
 
 ## Epistemic Status
 
-*Sketch, with verified instances.* This is a **result schema**, not a proven result in the general case. The mathematical template (sector conditions → bounded mismatch) is derived ( #sector-condition-derivation). What was missing was instantiation — showing that specific strategic update dynamics satisfy the template's preconditions. Three cases have now been verified in spike analyses (`msc/spike-single-edge-strategic-dynamics.md`, `msc/spike-two-edge-strategic-dynamics.md`):
+*Sketch, with verified instances.* This is a **result schema**, not a proven result in the general case. The mathematical template (sector conditions → bounded mismatch) is derived ( #sector-condition-derivation). What was missing was instantiation — showing that specific strategic update dynamics satisfy the template's preconditions. Four cases have now been verified (full derivations in #strategic-dynamics-derivation):
 
 1. **Single edge, Beta-Bernoulli** ($A \to G$): Sector condition satisfied globally with $\alpha_\Sigma = 1/(n+1)$. The bound is tight (expected correction is exactly linear). (A1) satisfied. Persistence condition: $1/(n+1) > \rho_\Sigma / R_\Sigma$.
 
@@ -64,6 +64,6 @@ The schema is no longer purely hypothetical. The sector parameter for strategic 
 
 ## Working Notes
 
-- **Done.** Four cases verified: single-edge AND, two-edge AND (observable and unobservable intermediate), and two-arm OR ($\varepsilon$-greedy). See `msc/spike-single-edge-strategic-dynamics.md`, `msc/spike-two-edge-strategic-dynamics.md`, `msc/spike-or-node-strategic-dynamics.md`. Key findings: AND-node persistence is depth-gated (evidence starvation); OR-node persistence is exploration-gated (action selection policy). Both satisfy the schema's form ($\alpha_\Sigma > \rho_\Sigma/R_\Sigma$) but OR-nodes require the additional SA3 condition. The next step is mixed AND/OR DAGs and general topologies.
+- **Done.** Four cases verified: single-edge AND, two-edge AND (observable and unobservable intermediate), and two-arm OR ($\varepsilon$-greedy). Full derivations in #strategic-dynamics-derivation (Props S.1–S.4). Key findings: AND-node persistence is depth-gated (evidence starvation); OR-node persistence is exploration-gated (action selection policy). Both satisfy the schema's form ($\alpha_\Sigma > \rho_\Sigma/R_\Sigma$) but OR-nodes require the additional SA3 condition. The next step is mixed AND/OR DAGs and general topologies.
 - The strategic disturbance $\rho_\Sigma$ is qualitatively different from epistemic disturbance $\rho$. Epistemic disturbance is about the environment changing (physical state evolves). Strategic disturbance is about the agent's causal theory becoming invalid (the intervention-outcome mapping shifts). These can be correlated (a changing environment invalidates both model and strategy) but they're not the same quantity.
 - The stochastic treatment (from track-b simulations) suggests $\rho_\Sigma / \sqrt{\mathcal T_\Sigma}$ rather than $\rho_\Sigma / \mathcal T_\Sigma$ for the steady-state strategic mismatch. If this carries over from the epistemic domain, the persistence threshold is different in the stochastic case. Whether strategic disturbance is better modeled as deterministic or stochastic drift is domain-dependent.
