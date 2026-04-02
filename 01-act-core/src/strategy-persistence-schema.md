@@ -51,7 +51,9 @@ The schema is no longer purely hypothetical. The sector parameter for strategic 
 
 2. ~~**Strategic correction function**: needs to satisfy the sector condition.~~ **Resolved** for Beta-Bernoulli edges. Props B.1-B.4 in #strategic-dynamics-derivation verify the sector condition for four topologies (single edge, two-edge AND observable/unobservable, two-arm OR).
 
-3. **Strategic disturbance**: The rate at which the environment invalidates causal links in $\Sigma_t$. Candidates: requirement changes (what the agent needs to achieve changes), resource changes (what's available changes), adversary actions (the opponent disrupts the agent's causal links), state decay (previously true causal relationships weaken over time). This needs to be bounded (or shown to satisfy statistical stationarity conditions). **Still open** — currently a domain parameter, not formalized.
+3. **Strategic disturbance**: The rate at which the environment invalidates causal links in $\Sigma_t$. **Still open** as a formalized quantity — currently a domain parameter ($\rho_\Sigma$), analogous to how $\rho$ for epistemic disturbance is a domain parameter in #persistence-condition.
+
+5. ~~**Credit assignment / signal function**: needed for edge updates.~~ **Resolved at the theory level.** #credit-assignment-boundary provides a default gradient-based signal function (the ACT analog of the gain formula $\eta^\ast$), characterizes the tractable/intractable boundary, and establishes that persistence does not require credit assignment at all (Prop B.5). The specific update algorithm is domain engineering, not theory — the same way the gain estimator is domain engineering.
 
 4. ~~**Sector condition verification**: the critical mathematical step.~~ **Resolved** for four topologies. See #strategic-dynamics-derivation.
 

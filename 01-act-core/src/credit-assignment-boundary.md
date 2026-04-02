@@ -28,6 +28,24 @@ $$p_{ij}^{\text{new}} = p_{ij} + \eta_{\text{edge}} \cdot (\text{signal}(o_t, i,
 
 drives credences toward truth. The problem is trivial when all intermediates are observable (each edge updates from its own observation) and genuinely hard when intermediates are unobservable and the DAG has shared structure.
 
+### Default Signal Function (Gradient-Based Attribution)
+
+*[Formulation (gradient-signal-function)]*
+
+ACT's default signal function for edge updates, analogous to $\eta^\ast = U_M/(U_M + U_o)$ being the default gain:
+
+$$\text{signal}_k(o_t) = p_k + \frac{J_k \cdot (y_G - \hat P_\Sigma)}{\lVert\mathbf{J}\rVert^2}$$
+
+where $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$ is the plan-value gradient (computable from status propagation in $O(\lvert V\rvert + \lvert E\rvert)$), $y_G$ is the observed root outcome, and $\hat P_\Sigma$ is the current plan-confidence score. The signal attributes the plan-level residual $(y_G - \hat P_\Sigma)$ to each edge in proportion to its sensitivity $J_k = \partial P_\Sigma / \partial p_k$.
+
+**Properties:**
+- **Directional fidelity (B1):** Satisfies $\mathbb{E}[\text{signal}_k - p_k] \propto J_k(\Phi - \hat P_\Sigma) \propto J_k \cdot \delta_s$. Since $J_k \geq 0$ for monotone AND/OR DAGs and $\delta_s = \Phi - \hat P_\Sigma$ has the correct sign, the expected signal pushes each edge toward truth.
+- **Sector parameter:** $\alpha_s = \eta_{\text{edge}}$ for componentwise corrections (Prop B.5b); $\alpha_s = \eta_{\text{edge}} / \kappa(\mathbf{J})^2$ for coupled corrections.
+- **Computational cost:** $O(\lvert V\rvert + \lvert E\rvert)$ — the same forward pass that computes $\hat P_\Sigma$ also yields $\mathbf{J}$.
+- **Relationship to RL:** This is the ACT analog of REINFORCE — the Jacobian $\mathbf{J}$ is the score function, and the signal attributes the plan-level return to each edge via the score-weighted residual.
+
+Domains with richer observation structure can do better (Thompson sampling, full belief propagation, domain-specific attribution). The gradient-based signal is the *concrete Level 1 default* — the minimum viable credit-assignment scheme that satisfies the theory's requirements.
+
 ### What the Theory Can Guarantee Without Solving Credit Assignment
 
 Three results hold independently of any specific credit-assignment scheme:
@@ -91,13 +109,11 @@ $$\mathbb{E}[(\text{signal}(o_t, i, j) - p_{ij}) \cdot (p_{ij} - \theta_{ij})] \
 | **2** (approximate) | Proportional blame / expectation propagation | Persistence + per-edge diagnostics (with bias) | Factor-graph inference |
 | **3** (exact) | Full Bayesian posterior | Persistence + optimal per-edge calibration | \#P-hard (general case) |
 
-ACT's formal guarantees require only Level 0. Practical agents need at least Level 1 for adaptive behavior. Level 2 is the sweet spot for most applications. Level 3 is a mathematical ideal that is computationally unattainable in the general case.
-
-**The strongest Level 1 candidate: gradient-based attribution.** The signal function $\text{signal}_k = p_k + J_k \cdot (y_G - \hat P_\Sigma) / \lVert\mathbf{J}\rVert^2$ uses the Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$ already computed for the persistence analysis. This satisfies directional fidelity (SA1) when the DAG is monotone (which AND/OR DAGs are), has sector parameter $\alpha_s = \eta / \kappa(\mathbf{J})^2$ for coupled cases and $\alpha_s = \eta$ for componentwise cases, and is computable in $O(\lvert V\rvert + \lvert E\rvert)$. It is the ACT analog of policy gradient methods (REINFORCE) in RL.
+ACT's formal guarantees require only Level 0. Practical agents need at least Level 1 for adaptive behavior — and the default signal function (above) provides a concrete Level 1 scheme. Level 2 is the sweet spot for most applications. Level 3 is a mathematical ideal that is computationally unattainable in the general case.
 
 ## Epistemic Status
 
-*Discussion-grade.* This segment characterizes a boundary, not a result. The tractable cases are derived (Props B.2-B.4 in #strategic-dynamics-derivation). The intractable cases are structurally motivated (the Shapley connection is a sketch, not a formal reduction). The design requirement is derived from the bridge theorem ( #gain-sector-bridge, #strategic-dynamics-derivation Prop B.5).
+*Mixed.* The default signal function (gradient-based attribution) is a *formulation* — a concrete, well-motivated representational choice analogous to the gain principle's $\eta^\ast$ formula. It satisfies directional fidelity for monotone AND/OR DAGs (derivable from Jacobian non-negativity). The boundary characterization (tractable cases, intractability barriers, design requirement) is *discussion-grade*, with the intractability argument at sketch level and the design requirement derived from the bridge theorem ( #gain-sector-bridge, #strategic-dynamics-derivation Prop B.5).
 
 Max attainable: *conditional* — with a formal intractability reduction, the boundary characterization could be promoted. The design requirement is already exact (it follows from the bridge theorem).
 
