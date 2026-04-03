@@ -1,7 +1,7 @@
 ---
 slug: discrete-sector-condition
 type: derivation
-status: exact
+status: conditional
 depends:
   - sector-condition-derivation
   - update-gain
@@ -26,47 +26,73 @@ $$\delta_{k+1} = \delta_k - \eta^\ast F_d(\delta_k) + w_k$$
 
 where $\eta^\ast$ is the update gain ( #update-gain), $F_d$ is the discrete correction direction, and $w_k$ is the per-step disturbance. The continuous correction function $F(\mathcal{T}, \delta)$ from #sector-condition-derivation decomposes as $F = \nu \cdot \eta^\ast \cdot F_d$ at event rate $\nu$.
 
-### (DA2') Discrete Sector Condition
+### (DA2') Discrete Sector-Lipschitz Condition
 
 *[Assumption DA2' (discrete-sector-condition)]*
 
 There exist constants $c_{\min} > 0$ and $c_{\max} < 2/\eta^\ast$ such that for all $\lVert\delta\rVert \leq R$:
 
-$$c_{\min} \lVert\delta\rVert^2 \leq \delta^T F_d(\delta) \leq c_{\max} \lVert\delta\rVert^2$$
+**(DA2'a) Lower sector bound (directional fidelity):**
 
-The **lower bound** ($c_{\min}$) is directional fidelity — the correction points inward, identical to the continuous sector condition (A2') from #sector-condition-derivation via #gain-sector-bridge.
+$$\delta^T F_d(\delta) \geq c_{\min} \lVert\delta\rVert^2$$
 
-The **upper bound** ($c_{\max} < 2/\eta^\ast$) is the **no-overshoot condition**: each correction step must not reverse the mismatch. This is the classical step-size condition $\eta^\ast < 2/L$ for gradient descent (where $L$ is the Lipschitz constant of the gradient). For Bayesian updates, this is satisfied by construction — the posterior lies between prior and data.
+**(DA2'b) Lipschitz bound (bounded correction magnitude):**
+
+$$\lVert F_d(\delta)\rVert \leq c_{\max} \lVert\delta\rVert$$
+
+The **lower bound** (DA2'a) is directional fidelity — the correction points inward, identical to the continuous sector condition (A2') from #sector-condition-derivation via #gain-sector-bridge.
+
+The **Lipschitz bound** (DA2'b) controls the *magnitude* of the correction, not merely its projection onto the mismatch direction. The combined constraint $c_{\max} < 2/\eta^\ast$ is the **no-overshoot condition**: each correction step must not reverse the mismatch. This is the classical step-size condition $\eta^\ast < 2/L$ for gradient descent (where $L$ is the Lipschitz constant of the gradient). For Bayesian updates, this is satisfied by construction — the posterior lies between prior and data.
+
+**Why DA2'b is stronger than an inner-product upper bound.** A two-sided inner-product condition $\delta^T F_d(\delta) \leq c_{\max}\lVert\delta\rVert^2$ constrains only the projection of $F_d$ onto $\delta$. By Cauchy-Schwarz, the Lipschitz bound (DA2'b) implies the inner-product upper bound: $\delta^T F_d(\delta) \leq \lVert\delta\rVert \cdot \lVert F_d(\delta)\rVert \leq c_{\max}\lVert\delta\rVert^2$. But the converse fails — a correction function with a large transverse component (orthogonal to $\delta$) can satisfy the inner-product bound while violating the norm bound. The proofs below (especially DA.1S) require the norm bound $\lVert F_d(\delta)\rVert^2 \leq c_{\max}^2\lVert\delta\rVert^2$, which follows from DA2'b but not from an inner-product condition alone.
+
+**Scalar case.** In one dimension, DA2'a and DA2'b together reduce to the classical sector condition $c_{\min} \leq F_d(\delta)/\delta \leq c_{\max}$, since norm and inner product coincide. No generality is lost for scalar systems.
+
+**Relationship to the continuous-time condition.** The continuous sector condition (A2'/GA-3) is a one-sided inner-product bound $\delta^T F \geq \alpha\lVert\delta\rVert^2$ — this suffices for continuous-time Lyapunov analysis because $\dot{V}$ involves only $\delta^T F$, not $\lVert F\rVert$. Discretization introduces the quadratic term $(\eta^\ast)^2\lVert F_d\rVert^2$ (see DA.1S proof), which requires the Lipschitz bound. This is the standard sector-vs-Lipschitz distinction in nonlinear systems theory.
 
 ### Contraction factor
 
-Under DA2', the per-step Lyapunov function $V_k = \frac{1}{2}\lVert\delta_k\rVert^2$ satisfies:
+Under DA2', the per-step Lyapunov function $V_k = \frac{1}{2}\lVert\delta_k\rVert^2$ satisfies (in the zero-disturbance case $w_k = 0$):
 
 *[Derived (contraction, from DA2')]*
 
-$$\lVert\delta_{k+1} - 0\rVert^2 \leq \lambda^2 \lVert\delta_k\rVert^2 + 2\lVert\delta_k\rVert \lVert w_k\rVert + \lVert w_k\rVert^2$$
+$$\lVert\delta_{k+1}\rVert^2 = \lVert\delta_k - \eta^\ast F_d(\delta_k)\rVert^2 = \lVert\delta_k\rVert^2 - 2\eta^\ast \delta_k^T F_d(\delta_k) + (\eta^\ast)^2 \lVert F_d(\delta_k)\rVert^2$$
+
+Applying DA2'a (lower sector bound on $\delta^T F_d$) and DA2'b (Lipschitz bound on $\lVert F_d\rVert$):
+
+$$\lVert\delta_{k+1}\rVert^2 \leq (1 - 2\eta^\ast c_{\min} + (\eta^\ast)^2 c_{\max}^2) \lVert\delta_k\rVert^2 = \lambda_{\text{eff}}^2 \lVert\delta_k\rVert^2$$
 
 where:
 
-$$\lambda = \max(\lvert 1 - \eta^\ast c_{\min}\rvert,\; \lvert 1 - \eta^\ast c_{\max}\rvert)$$
+$$\lambda_{\text{eff}}^2 = 1 - 2\eta^\ast c_{\min} + (\eta^\ast)^2 c_{\max}^2$$
 
-DA2' ensures $\lvert\lambda\rvert < 1$: the lower bound gives $1 - \eta^\ast c_{\min} < 1$, and the upper bound gives $1 - \eta^\ast c_{\max} > -1$.
+**Stability condition.** $\lambda_{\text{eff}}^2 < 1$ requires $2\eta^\ast c_{\min} > (\eta^\ast)^2 c_{\max}^2$, i.e.:
+
+$$\eta^\ast < \frac{2 c_{\min}}{c_{\max}^2}$$
+
+This is automatically satisfied when $c_{\min} \approx c_{\max}$ (well-conditioned correction), recovering the standard step-size condition $\eta^\ast < 2/c_{\max}$. For ill-conditioned corrections ($c_{\min} \ll c_{\max}$), the constraint is tighter. For Bayesian updates with bounded condition number, both conditions are satisfied.
+
+**Scalar (colinear) specialization.** When $F_d(\delta) \parallel \delta$ (scalar system or colinear correction), $\lVert F_d(\delta)\rVert = |F_d(\delta)/\delta| \cdot \lVert\delta\rVert$ and the contraction factor simplifies to $\lambda = \max(|1 - \eta^\ast c_{\min}|, |1 - \eta^\ast c_{\max}|)$, the classical form. The general vector formula $\lambda_{\text{eff}}^2$ reduces to $\lambda^2$ in this case.
+
+With disturbance $w_k \neq 0$:
+
+$$\lVert\delta_{k+1}\rVert^2 \leq \lambda_{\text{eff}}^2 \lVert\delta_k\rVert^2 + 2\lVert\delta_k\rVert \lVert w_k\rVert + \lVert w_k\rVert^2$$
 
 ### Proposition DA.1: Bounded Mismatch (Deterministic)
 
-**Statement.** Under DA2' with bounded per-step disturbance $\lVert w_k\rVert \leq \rho_{\text{step}}$, the mismatch is ultimately bounded:
+**Statement.** Under DA2' with $\eta^\ast < 2c_{\min}/c_{\max}^2$ and bounded per-step disturbance $\lVert w_k\rVert \leq \rho_{\text{step}}$, the mismatch is ultimately bounded:
 
 *[Derived (DA.1, discrete bounded mismatch)]*
 
-$$R^\ast_D = \frac{\rho_{\text{step}}}{1 - \lvert\lambda\rvert}$$
+$$R^\ast_D = \frac{\rho_{\text{step}}}{1 - \lambda_{\text{eff}}}$$
 
-**Proof.** The contraction mapping yields:
+**Proof.** By the triangle inequality: $\lVert\delta_{k+1}\rVert = \lVert(\delta_k - \eta^\ast F_d(\delta_k)) + w_k\rVert \leq \lVert\delta_k - \eta^\ast F_d(\delta_k)\rVert + \lVert w_k\rVert$. The contraction bound gives $\lVert\delta_k - \eta^\ast F_d(\delta_k)\rVert \leq \lambda_{\text{eff}} \lVert\delta_k\rVert$. Therefore:
 
-$$\lVert\delta_{k+1}\rVert \leq \lvert\lambda\rvert \lVert\delta_k\rVert + \rho_{\text{step}}$$
+$$\lVert\delta_{k+1}\rVert \leq \lambda_{\text{eff}} \lVert\delta_k\rVert + \rho_{\text{step}}$$
 
-This is an affine contraction with $\lvert\lambda\rvert < 1$. By the Banach fixed-point theorem, all trajectories starting in $\mathcal B_R$ converge to the ball of radius $R^\ast_D = \rho_{\text{step}}/(1 - \lvert\lambda\rvert)$, provided $R^\ast_D < R$. $\square$
+This is an affine contraction with $\lambda_{\text{eff}} < 1$. By the Banach fixed-point theorem, all trajectories starting in $\mathcal B_R$ converge to the ball of radius $R^\ast_D = \rho_{\text{step}}/(1 - \lambda_{\text{eff}})$, provided $R^\ast_D < R$. $\square$
 
-**Recovery of continuous result.** In the fluid limit ($\eta^\ast \to 0$, $\nu \to \infty$, $\nu \eta^\ast = \mathcal{T}$ fixed), $\lambda \to 1 - \eta^\ast c_{\min}$ and $\rho_{\text{step}} \to \rho/\nu$. Then:
+**Recovery of continuous result.** In the fluid limit ($\eta^\ast \to 0$, $\nu \to \infty$, $\nu \eta^\ast = \mathcal{T}$ fixed), $\lambda_{\text{eff}}^2 = 1 - 2\eta^\ast c_{\min} + O((\eta^\ast)^2)$, so $\lambda_{\text{eff}} \to 1 - \eta^\ast c_{\min}$ and $\rho_{\text{step}} \to \rho/\nu$. Then:
 
 $$R^\ast_D = \frac{\rho/\nu}{\eta^\ast c_{\min}} = \frac{\rho}{\nu \eta^\ast c_{\min}} = \frac{\rho}{\alpha}$$
 
@@ -78,15 +104,15 @@ recovering Prop A.1 exactly. The discrete-to-continuous gap for Model D steady s
 
 *[Derived (DA.2, discrete adaptive reserve)]*
 
-$$\Delta\rho^\ast_{\text{step}} = (1 - \lvert\lambda\rvert) R - \rho_{\text{step}}$$
+$$\Delta\rho^\ast_{\text{step}} = (1 - \lambda_{\text{eff}}) R - \rho_{\text{step}}$$
 
-**Proof.** Identical to Prop A.2: the new $R^\ast_D = (\rho_{\text{step}} + \Delta\rho)/(1 - \lvert\lambda\rvert)$ must satisfy $R^\ast_D \leq R$. $\square$
+**Proof.** Identical to Prop A.2: the new $R^\ast_D = (\rho_{\text{step}} + \Delta\rho)/(1 - \lambda_{\text{eff}})$ must satisfy $R^\ast_D \leq R$. $\square$
 
-The structure is identical to the continuous adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$, with $\alpha$ replaced by the discrete contraction rate $(1 - \lvert\lambda\rvert)/\eta^\ast$ (which equals $\alpha$ in the fluid limit).
+The structure is identical to the continuous adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$. The per-event contraction rate is $(1 - \lambda_{\text{eff}})$; the per-unit-time rate is $\nu(1 - \lambda_{\text{eff}})$. In the fluid limit, $\nu(1 - \lambda_{\text{eff}}) \to \nu \cdot \eta^\ast c_{\min} = \alpha$, recovering the continuous result. (Note: the per-event rate $(1 - \lambda_{\text{eff}})$ converges to $\eta^\ast c_{\min}$, not to $\alpha$ directly — the factor of $\nu$ converts between per-event and per-unit-time.)
 
 ### Proposition DA.1S: Stochastic Bounded Mismatch (Discrete)
 
-**Statement.** Under DA2' with i.i.d. zero-mean disturbance $\mathbb{E}[w_k] = 0$, $\mathbb{E}[\lVert w_k\rVert^2] = \sigma^2_{\text{step}}$, the mismatch satisfies:
+**Statement.** Under DA2' with $\eta^\ast < 2c_{\min}/c_{\max}^2$ and i.i.d. zero-mean disturbance $\mathbb{E}[w_k] = 0$, $\mathbb{E}[\lVert w_k\rVert^2] = \sigma^2_{\text{step}}$, the mismatch satisfies:
 
 *[Derived (DA.1S, discrete stochastic bounded mismatch)]*
 
@@ -98,15 +124,19 @@ where $\lambda^2_{\text{eff}} = 1 - 2\eta^\ast c_{\min} + (\eta^\ast)^2 c^2_{\ma
 
 $$\mathbb{E}[V_{k+1} \mid \delta_k] = \lVert\delta_k - \eta^\ast F_d(\delta_k)\rVert^2 + \sigma^2_{\text{step}}$$
 
-The first term satisfies:
+The first term expands as:
 
 $$\lVert\delta_k - \eta^\ast F_d(\delta_k)\rVert^2 = V_k - 2\eta^\ast \delta_k^T F_d(\delta_k) + (\eta^\ast)^2 \lVert F_d(\delta_k)\rVert^2$$
 
-By DA2' (lower bound on $\delta^T F_d$ and upper bound implying $\lVert F_d\rVert^2 \leq c^2_{\max} V_k$):
+By DA2'a (lower sector bound): $\delta_k^T F_d(\delta_k) \geq c_{\min} V_k$.
+
+By DA2'b (Lipschitz bound): $\lVert F_d(\delta_k)\rVert^2 \leq c^2_{\max} V_k$.
+
+Note that the second step requires the *norm* bound DA2'b, not merely an inner-product upper bound — this is where the Lipschitz condition is essential. Combining:
 
 $$\mathbb{E}[V_{k+1} \mid \delta_k] \leq \lambda^2_{\text{eff}} V_k + \sigma^2_{\text{step}}$$
 
-This is a supermartingale (when $V_k$ is large enough). Iterating:
+The condition $\eta^\ast < 2c_{\min}/c_{\max}^2$ ensures $\lambda^2_{\text{eff}} < 1$. This is a supermartingale (when $V_k$ is large enough). Iterating:
 
 $$\mathbb{E}[V_k] \leq \lambda^{2k}_{\text{eff}} V_0 + \frac{\sigma^2_{\text{step}}}{1 - \lambda^2_{\text{eff}}}$$
 
@@ -134,21 +164,23 @@ For Model S (stochastic): the steady-state variance gap is $O((\eta^\ast)^2 c^2_
 
 ## Epistemic Status
 
-**DA.1 and DA.2** are *exact* — standard contraction-mapping results. The proofs require only the discrete sector condition DA2', which is itself derived from the gain principle + directional fidelity ( #gain-sector-bridge) for well-designed agents.
+**DA.1, DA.1S, and DA.2** are *conditional* on DA2', which now includes both a sector lower bound (DA2'a) and a Lipschitz upper bound (DA2'b). The Lipschitz condition is strictly stronger than an inner-product upper bound — this is a real assumption, not a technicality. For Bayesian updates and gradient descent on smooth losses, DA2'b is satisfied (the correction magnitude is controlled by the loss curvature). For agents with non-smooth or pathological correction functions, DA2'b must be verified independently.
 
-**DA.1S** is *exact* under the stated i.i.d. assumption. The supermartingale argument is standard.
+The proofs themselves are standard contraction-mapping (DA.1/DA.2) and supermartingale (DA.1S) arguments. The step-size constraint $\eta^\ast < 2c_{\min}/c_{\max}^2$ is essential and is stated explicitly in each proposition.
 
 **Fluid limit theorem** is *conditional* on Lipschitz regularity of $F_d$ — a standard regularity condition satisfied by all correction functions in the verified instances table ( #gain-sector-bridge). The convergence rate follows from classical ODE approximation theory (Kushner & Yin, 2003); the application to the ACT mismatch dynamics is new but the mathematics is not.
 
-**Max attainable:** exact for DA.1/DA.2/DA.1S; conditional for the fluid limit (Lipschitz cannot be removed).
+**Max attainable:** conditional — the Lipschitz bound DA2'b is inherent to the discrete-time treatment and cannot be replaced by a weaker inner-product condition without losing the norm bound used in the proofs.
 
 ## Discussion
 
 **GA-5 is closed.** The fluid-limit bridging assumption is no longer required as an ungrounded assumption. For Model D, the discrete and continuous steady states are identical — the gap is zero. For Model S, the gap is $O(\eta^\ast c_{\max})$ in variance, quantitatively bounded and small in the regime where $\eta^\ast c_{\max} \ll 1$. The continuous-time results in #sector-condition-derivation are formally justified as the fluid limit of the discrete results here.
 
-**The upper bound is the classical step-size condition.** The no-overshoot condition $c_{\max} < 2/\eta^\ast$ (equivalently $\eta^\ast < 2/c_{\max}$) is the same constraint as the step-size condition $\eta < 2/L$ for gradient descent, the stability condition for the Kalman gain, and the convergence condition for fixed-point iteration. For Bayesian updates, it is satisfied by construction. The discrete framework reveals this constraint, which is invisible in the continuous limit.
+**DA2' is a sector-Lipschitz condition, not a pure sector condition.** The continuous-time treatment ( #sector-condition-derivation) requires only the one-sided sector bound $\delta^T F \geq \alpha\lVert\delta\rVert^2$ because the Lyapunov derivative $\dot{V}$ depends only on $\delta^T F$. Discretization introduces a quadratic term $(\eta^\ast)^2\lVert F_d\rVert^2$ that requires the Lipschitz bound $\lVert F_d\rVert \leq c_{\max}\lVert\delta\rVert$. This is the standard distinction between sector conditions and Lipschitz conditions in nonlinear systems theory. For all agents in the verified instances table ( #gain-sector-bridge), the Lipschitz bound holds alongside the sector bound, so DA2' imposes no additional restriction in practice.
 
-**No downstream results change qualitatively.** The persistence condition, adaptive reserve, and adversarial scaling laws derived in #sector-condition-derivation and #adversarial-destabilization hold as stated. The discrete framework provides sharper constants (replacing $\alpha$ with $(1 - \lvert\lambda\rvert)/\eta^\ast$) and a quantitative transient error bound, but the qualitative structure is unchanged.
+**The step-size constraint has two forms.** For well-conditioned corrections ($c_{\min} \approx c_{\max}$), the constraint reduces to $\eta^\ast < 2/c_{\max}$ — the classical form. For ill-conditioned corrections ($c_{\min} \ll c_{\max}$), the tighter constraint $\eta^\ast < 2c_{\min}/c_{\max}^2$ applies. This distinction is invisible in scalar systems but matters for high-dimensional agents with anisotropic correction.
+
+**No downstream results change qualitatively.** The persistence condition, adaptive reserve, and adversarial scaling laws derived in #sector-condition-derivation and #adversarial-destabilization hold as stated. The discrete framework provides sharper constants (replacing $\alpha$ with $\nu(1 - \lambda_{\text{eff}})$) and a quantitative transient error bound, but the qualitative structure is unchanged.
 
 **Section I's formal chain is now complete.** The prediction chain:
 
