@@ -117,7 +117,7 @@ See `WORKBENCH.md` for the full development state. Summary:
 - Coupled formulation for logogenic agents (Section V scope decision)
 
 ### Known Fragilities
-- Edge semantics claim interventional but update from observational
+- ~~Edge semantics claim interventional but update from observational~~ — resolved 2026-04-02 as regime-indexed interpretation (causal efficacy estimate with A/B/C regime classification)
 - Missing commitment/resource/temporal structure in the DAG
 - Directed separation violated by goal-conditioned agents (LLMs) — resolved as architectural scope, not approximation
 

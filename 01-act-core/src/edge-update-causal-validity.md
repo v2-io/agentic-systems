@@ -13,7 +13,7 @@ stage: draft
 
 # Scope: Causal Validity of Edge Updates
 
-The gain-based edge update ( #edge-update-via-gain) revises interventional credences $p_{ij}$ using execution data. This data is interventional in character ( #loop-interventional-access) but varies in identification strength depending on the edge's position in the DAG and the domain's causal structure. This segment scopes where the update yields causally valid revisions.
+The gain-based edge update ( #edge-update-via-gain) revises edge credences $p_{ij}$ --- causal efficacy estimates whose identification strength varies with the data regime ( #strategy-dag). This segment scopes where the update yields credences that approximate the interventional quantity $P(j \mid do(i), M_t)$, where it yields partially identified estimates, and where it yields associational proxies.
 
 ## Formal Expression
 
