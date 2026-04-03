@@ -50,7 +50,7 @@ The noisy-OR model cannot represent "all of these are required." This was the pr
 
 **The parsimony argument.** For binary-outcome nodes, AND and OR form a complete Boolean basis — any Boolean combination can be decomposed into layers of AND/OR (disjunctive/conjunctive normal form). Under bounded cognition, the agent needs the most expressive $O(k)$-parameter representation. AND/OR is the natural candidate. This is a parsimony-motivated hypothesis, not a derived necessity — see #graph-structure-uniqueness for the full argument and its limitations.
 
-**What this scope excludes.** Environments with strong interaction effects: where the value of combining parent contributions is not separable into independent per-parent terms. Examples: synergistic drug interactions (combined effect exceeds sum of individual effects), complementary goods (neither is useful alone), strategic surprise (the combination of actions matters more than any individual action). These require richer parameterizations within the forced graphical structure ( #strategy-dag) — a direction for future work.
+**What this scope excludes.** Environments with strong interaction effects: where the value of combining parent contributions is not separable into independent per-parent terms. Examples: synergistic drug interactions (combined effect exceeds sum of individual effects), complementary goods (neither is useful alone), strategic surprise (the combination of actions matters more than any individual action). These require richer parameterizations within the strongly motivated graphical structure ( #strategy-dag) — a direction for future work.
 
 ## Working Notes
 

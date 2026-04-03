@@ -12,7 +12,7 @@ stage: draft
 
 # Derivation: Graph Structure Uniqueness
 
-Four operational postulates — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — force the strategy representation to be a directed acyclic graph (exact), with the Markov property conditional on causal sufficiency of the strategy.
+Four operational postulates — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — derive that the strategy representation is a directed acyclic graph (proved), with the Markov property conditional on causal sufficiency of the strategy.
 
 ## Formal Expression
 
@@ -102,7 +102,7 @@ $$P(X_1, \ldots, X_n) = \prod_{i=1}^{n} P(X_i \mid \text{Pa}(X_i))$$
 
 This is the defining property of a Bayesian network.
 
-**What about non-parent local neighborhoods?** The earlier sketch noted that other sparse factorizations (e.g., factor graphs with message-passing) might also support local revision. This is true — factor-graph message passing achieves exact inference for trees and approximate inference for loopy graphs, using a different local neighborhood (the factor's scope, not the parents). But P1 (directed temporal ordering) selects the parent-conditional factorization specifically, because the causal direction matters: the agent needs to reason about consequences of interventions ($do(X_i)$), and Pearl's do-calculus is defined on the parent-conditional DAG factorization, not on undirected factor graphs. Directed local neighborhoods (parents) are forced by the combination of locality (P3) and causal directionality (P1); undirected alternatives sacrifice the causal semantics that #strategy-dag requires.
+**What about non-parent local neighborhoods?** The earlier sketch noted that other sparse factorizations (e.g., factor graphs with message-passing) might also support local revision. This is true — factor-graph message passing achieves exact inference for trees and approximate inference for loopy graphs, using a different local neighborhood (the factor's scope, not the parents). But P1 (directed temporal ordering) selects the parent-conditional factorization specifically, because the causal direction matters: the agent needs to reason about consequences of interventions ($do(X_i)$), and Pearl's do-calculus is defined on the parent-conditional DAG factorization, not on undirected factor graphs. Directed local neighborhoods (parents) are strongly motivated by the combination of locality (P3) and causal directionality (P1); undirected alternatives sacrifice the causal semantics that #strategy-dag requires.
 
 **Why non-descendants specifically.** Descendants of $X_i$ depend on $X_i$ by construction — they are downstream. Updating $X_i$ based on $\text{Pa}(X_i)$ does not require knowing descendants, because causal influence flows FROM $X_i$ TO descendants, not the reverse. Learning about descendants can provide evidence about $X_i$ (diagnostic reasoning / explaining away), but that evidence flows through the graph structure itself via belief propagation — it does not violate P3 because the update still propagates locally.
 
@@ -145,9 +145,9 @@ Each attempt is a distinct node at a distinct time. The apparent cycle is a line
 
 **Connection to Pearl.** Pearl's do-calculus is defined on DAGs. Extensions to cyclic structures exist (cyclic SCMs, equilibrium models) but are substantially more complex and lose some of do-calculus's clean properties. The temporal argument here shows that for strategy representations (future-looking plans), acyclicity is not a convenience restriction on Pearl's framework — it is a consequence of the temporal structure of planning.
 
-### What Is Forced vs. What Is Chosen
+### What Is Derived vs. What Is Chosen
 
-| Property | Forcing postulate | Strength |
+| Property | Motivating postulate | Strength |
 |---|---|---|
 | Directed edges | Temporal ordering (P1, #causal-structure) | Proved |
 | Probabilistic uncertainty | Cox's theorem (P2) | Proved |
@@ -159,7 +159,7 @@ Each attempt is a distinct node at a distinct time. The apparent cycle is a line
 | Single-parameter edges | Parsimony / IB | Formulation choice |
 | Specific node ontology | — | Formulation choice |
 
-The dividing line: the graph structure (DAG with Markov property) is forced by operational postulates. The parameterization (AND/OR, CPT form, edge semantics) is a formulation choice within the forced structure, motivated by parsimony and domain fit but not by mathematical necessity.
+The dividing line: acyclicity and directed edges are proved; the full DAG-with-Markov-property is conditional on causal sufficiency. The parameterization (AND/OR, CPT form, edge semantics) is a formulation choice within the strongly motivated structure, motivated by parsimony and domain fit but not by mathematical necessity.
 
 ### Equivalence Class
 
@@ -186,13 +186,13 @@ The previous concern about alternative sparse factorizations (factor graphs, mes
 
 Max attainable: *exact* for acyclicity (already there). *Conditional* for the full DAG-with-Markov-property claim — conditional on causal sufficiency, which is a property of strategy quality rather than agent architecture. This is an honest upgrade from the previous "sketch" status.
 
-The AND/OR restriction is a *hypothesis* for binary outcomes, grounded in Boolean completeness and parsimony. For non-binary outcomes, it does not apply and richer parameterizations within the forced graphical structure are needed.
+The AND/OR restriction is a *hypothesis* for binary outcomes, grounded in Boolean completeness and parsimony. For non-binary outcomes, it does not apply and richer parameterizations within the strongly motivated graphical structure are needed.
 
-The analogy to Cox's theorem — consistency axioms force probability; operational postulates force graphical structure — is suggestive but not established. Cox's theorem has a formal proof; this argument has a derivation sketch with one step that needs tightening. The analogy is worth stating as motivation but should not be relied on as evidence.
+The analogy to Cox's theorem — consistency axioms force probability; operational postulates strongly motivate graphical structure — is suggestive but not established. Cox's theorem has a formal proof; this argument has a derivation sketch with one step that needs tightening. The analogy is worth stating as motivation but should not be relied on as evidence.
 
 ## Discussion
 
-**The contribution of this analysis.** The dividing line between forced structure and chosen parameterization is the key result. The agent community (and future researchers) know exactly what is mathematically forced (the graph) and what is a formulation choice (the parameterization within the graph). Alternative parameterizations can be explored without abandoning the theoretical foundation.
+**The contribution of this analysis.** The dividing line between derived/conditional structure and chosen parameterization is the key result. The agent community (and future researchers) know exactly what is proved (acyclicity, directed edges), what is conditional (Markov property, contingent on causal sufficiency), and what is a formulation choice (the parameterization within the graph). Alternative parameterizations can be explored without abandoning the theoretical foundation.
 
 **Acyclicity deserves emphasis.** The existing theory previously flagged "DAG acyclicity is an assumption, not forced" as a known fragility. The derivation above resolves this: acyclicity of $\Sigma_t$ follows from temporal ordering over a finite planning horizon. This is specific to the strategy — $M_t$'s environment model is not restricted to acyclic structures.
 
