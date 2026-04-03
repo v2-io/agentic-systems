@@ -1,37 +1,89 @@
-# TODO — Deferred Organizational Items
+# TODO — Open Work Items
 
-## Project Structure
+Canonical source: `msc/analysis-2026-04-02-comprehensive.md` for full context and rationale. This file is the action list.
 
-- **Root-level assembly index.** A root OUTLINE.md or INDEX.md that assembles the full "Agentic Systems book" — covering all sections including ACT core, composition, software, logogenic agents, and framework-level content. Deferred until there is organized AS content beyond ACT to assemble.
 
-- **`framework/` directory.** For structured non-mathematical content: architectural guidance, engineering patterns, philosophical foundations (emergence conditions, identity sufficiency, constitutive choice). Currently this material lives informally in msc/ and msc/reflections/. Create when enough content warrants organization.
+## HIGH — Genuine Open Gaps
 
-- **Multiple index support.** The `bin/build` tool can already assemble any outline file. Future indexes for specific outputs: a paper (Sections I+II), a preprint, a monograph, topical selections. Each would be its own OUTLINE file selecting and ordering a subset of segments.
+- **Three-way exploit/explore/deliberate tradeoff.** The only --GAP-- in Section II OUTLINE. Write segment connecting #temporal-optimality, #explicit-strategy-condition, #deliberation-cost into a resource-allocation framework. No spike done yet — the pieces exist but the integration does not.
 
-## Content
 
-- **~~Absorb agentic-tft content.~~** Done (2026-03-20). Eight design-relevant documents moved to `msc/agentic-tft-*.md` with origin notes and relevance pointers. Five superseded documents moved to `_obs/agentic-tft-*`. References updated in `03-logogenic-agents/OUTLINE.md` (source material table), `04-logozoetic-agents/OUTLINE.md`, `WORKBENCH.md`, and `CLAUDE.md`. The documents are *sources* for logogenic/logozoetic work, not yet distilled into segments — that distillation should happen when the scope of `03-logogenic-agents/` is decided.
+## MEDIUM — Extensions and Refinements
 
-- **Section IV standalone paper outline.** Fastest path to external credibility — no theoretical blockers, high internal coherence (84% self-contained dependencies). Draft outline exists at `msc/2026-03-14-section-iv-paper-outline.md`.
+- **Composition scaling with N.** Whether closure defect scales polynomially or exponentially with team size. Critical for applying the theory to large teams. No spike done.
 
-- **Promote segments past draft.** 89 segments at `draft`, zero past it. The 15-20 strongest segments in Sections I+II should be promoted to `candidate` stage.
+- **Multi-timescale stability.** #multi-timescale-stability is a sketch; #temporal-nesting leans on it. Needs formal N-timescale singular perturbation treatment.
 
-## Section II Diagnostic Chain — Codex Review (2026-04-02)
+- **Channel independence caveat propagation.** Caveat added to #adaptive-tempo; propagate to #persistence-condition, #adversarial-tempo-advantage, #team-persistence, #tempo-composition (72% overestimate in anisotropic systems).
 
-Six issues identified by Codex automated review. Items 1-3 are HIGH priority (affect core diagnostic chain); 4-6 are MEDIUM.
+- **Edge-independence scope note.** Correlated edges flagged in #strategy-dag, #strategic-calibration, #chain-confidence-decay, #credit-assignment-boundary. No segment provides formal treatment. Either formalize or add a single cross-cutting scope note.
 
-1. ~~**HIGH — Q_O causal validity conditions on wrong state.**~~ **FIXED 2026-04-02.** Rewrote causal validity paragraph in value-object.md. Two mechanisms: (1) do-operator severs action-selection confounding from $G_t$, (2) continuation policy is a parameter. Under directed separation, $M_t$ alone is sufficient. Class 2 degradation cross-referenced.
+- **Communication-gain adversarial scope.** Additive model fails for deception (trust is game-theoretic). Either extend or add explicit scope limitation to #communication-gain.
 
-2. ~~**HIGH — Orient cascade contradicts 2×2 diagnostic.**~~ **FIXED 2026-04-02.** Removed "if feasible" gate on step 3. Cascade now evaluates $\delta_{\text{regret}}$ regardless of $\delta_{\text{sat}}$'s sign, with all four 2×2 quadrants explicitly handled. Step 5 entry conditions clarified.
 
-3. ~~**HIGH — Strategy-persistence overstates Prop B.5.**~~ **FIXED 2026-04-02.** Changed "Resolved" to "partially resolved." B.5 proves sector transfer to $\delta_s$ (plan-confidence error); transfer to $\delta_{\text{strategic}}$ (calibration residual) remains open and requires credit-assignment machinery.
+## Missing Segments (narrative completeness)
 
-4. ~~**MEDIUM — Composition bridge assumes extra contraction.**~~ **FIXED 2026-04-02.** Added caveat in tempo-composition.md that the connection depends on the bridge lemma's contraction assumption, which is not formally derived from (A4).
+### ACT Core (01-act-core/)
 
-5. ~~**MEDIUM — A_O mixes full-policy and one-step attainability.**~~ **FIXED 2026-04-02.** Clarified in satisfaction-gap.md that $A_O$ inherits the continuation convention. Under canonical default, $A_O$ is best-first-action (one-step improvement), not full-policy optimum. Distinction made explicit.
+| Slug | Section | Type | Description |
+|------|---------|------|-------------|
+| (new: exploit-explore-deliberate) | II | Derived? | Three-way allocation with Sigma_t — **the** Section II gap |
+| (new: adversarial-edge-targeting) | III | Derived? | Which strategy edges most valuable to attack — the Section III gap |
+| #linear-ode-approximation | A | Detail | Pedagogical linear mismatch ODE — the only missing appendix segment |
+| (new: intent-dag-development) | A | Aside | Convergence history of AND/OR + single-p (archaeological record) |
+| (new: prior-art-positioning) | A | Detail | Active inference, POMDP, BDI positioning. Source: msc/02-prior-art-assessment.md |
 
-6. ~~**MEDIUM — Graph-structure-uniqueness overclaims.**~~ **FIXED 2026-04-02.** Title/summary qualified: "DAG (exact), Markov conditional on causal sufficiency." OUTLINE entry updated to match.
+### Cross-component (needed for ACT scope claims)
 
-## Tooling
+| Slug | Component | Relevance |
+|------|-----------|-----------|
+| #ai-agent-as-act-agent | 03-logogenic | Validates Section II for Class 2 agents |
+| #section-ii-survival | 03-logogenic | Which Section II results survive without directed separation |
+| #coupled-update-dynamics | 03-logogenic | The coupled formulation directed-separation defers to |
+| #developer-as-act-agent | 02-tst-core | Validates Section II for human agents |
+| #causal-discovery-from-git | 02-tst-core | Validates CIY and loop-interventional-access for software domain |
 
-- **Lint-md directory arguments.** Currently accepts file paths; could accept directory paths to lint all .md files within. Low priority.
+
+## Presentation
+
+- **Three-way presentation split.** All reviewers recommend: (a) core results, (b) conditional architecture, (c) empirical programs. Single highest-leverage presentation change.
+
+- **Prior art positioning.** Active inference/FEP, POMDP, BDI relationships. Source: msc/02-prior-art-assessment.md.
+
+- **"Forced" vs "strongly motivated" language.** Audit for consistency: acyclicity IS proved, Markov IS conditional.
+
+
+## Promotion Pipeline
+
+**First batch (dependency leaves):** temporal-optimality, agent-environment, causal-structure, observation-function, action-transition, pearl-causal-hierarchy, chronica.
+
+**Strongest candidates for full promotion:** sector-condition-derivation, recursive-update-derivation, mismatch-decomposition, chain-confidence-decay, persistence-condition, gain-sector-bridge, worked-example-kalman, discrete-sector-condition, satisfaction-gap, control-regret, graph-structure-uniqueness.
+
+
+## Lower Priority
+
+- **Observability-dominance product formula.** conf_obs = conf * obs posited but not derived from gain principle. Minor — label as formulation choice or derive.
+- **Strategy-complexity-cost IB operationalization.** I(Sigma_t; pi* | M_t) undefined in practice. Depth bound d* is rigorous; broader framework is aspirational.
+- **Strategic calibration aggregation.** L2 norm unjustified. Label explicitly as design choice.
+- **Scope architecture.** "Within ACT's scope" ambiguous in prose between adaptive and agency scope.
+- **loop-interventional-access status.** "exact" defensible; opening claim could be softened.
+- **Between-event dynamics.** g_M(M_tau) defined but unreferenced. Important for logogenic agents.
+- **Fully coupled adversarial dynamics.** Both agents' mismatch co-evolving. Open.
+- **objective-functional labeling.** "axiomatic" for scalar-comparability is a formulation choice.
+- **information-bottleneck orphaned.** No downstream segment uses IB objective formally.
+- **Heavy-tailed disturbances.** Model S assumes finite second moment.
+- **satisfaction-gap/control-regret convention-dependence.** "exact" but convention-dependent.
+- **External validation design.** Testable predictions not yet tested. Candidates: git data, RL bandits, adaptive controllers.
+
+
+## Project Structure (Deferred)
+
+- Root-level assembly index (when content beyond ACT warrants it)
+- `framework/` directory for non-mathematical content
+- Multiple index support (paper, preprint, monograph)
+- Section IV standalone paper outline (draft at `msc/2026-03-14-section-iv-paper-outline.md`)
+
+
+## Tooling (Deferred)
+
+- Lint-md directory arguments
