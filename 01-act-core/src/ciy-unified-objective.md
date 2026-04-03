@@ -12,15 +12,15 @@ stage: draft
 
 # Discussion: CIY Unified Policy Objective
 
-The exploration-exploitation tension can be formalized as a single policy objective that jointly maximizes expected value and causal information yield.
+The exploration-exploitation tension can be expressed as a single policy objective that jointly maximizes expected value and a causal information surrogate. This formulation is *heuristic* — CIY measures action-distinguishability, not expected information gain (see #causal-information-yield), so the objective selects for causally distinctive actions rather than maximally informative ones. The $\lambda$-weighting partially compensates by suppressing the CIY term when model uncertainty is low, but the surrogate nature is inherent.
 
 ## Formal Expression
 
-*[Discussion (unified-policy-objective)]*
+*[Discussion (unified-policy-objective — heuristic)]*
 
 $$\pi^\ast(M_t) = \arg\max_a \left[\mathbb{E}[\text{value}(a) \mid M_t] + \lambda(M_t) \cdot \text{CIY}_q(a;\, M_t)\right]$$
 
-The first term is exploitation (expected value given current model). The second is exploration (causal information yield, #causal-information-yield). $\lambda(M_t)$ controls the balance:
+The first term is exploitation (expected value given current model). The second is a *heuristic exploration term* using CIY as a surrogate for expected information gain ( #causal-information-yield). CIY measures how different the action's outcome distribution is from alternatives — this is action-distinguishability, not learning value. The surrogate is reasonable when $U_M$ is high (distinguishable actions are also informative to an uncertain agent) and poor when $U_M$ is low (distinguishable actions teach nothing to a confident agent). $\lambda(M_t)$ controls the balance:
 
 - High $U_M$ (uncertain model) → large $\lambda$ — exploration is valuable
 - Low $U_M$ (confident model) → small $\lambda$ — exploitation dominates
@@ -41,9 +41,9 @@ $\lambda$ carries units of [value per unit information]. In specific domains it 
 
 ## Epistemic Status
 
-Discussion-grade. The structural claim — that the optimal policy jointly maximizes value and causal information — is supported by convergent results in Bayesian RL, active inference, and information-directed sampling, but not derived from first principles within ACT. The specific form of $\lambda(M_t)$ is not derived; its behavior (increasing with $U_M$, horizon, $\rho$) is motivated by the convergent results but not formally constrained by ACT machinery.
+Discussion-grade (heuristic). The structural claim — that a useful policy jointly considers value and causal information — is supported by convergent results in Bayesian RL, active inference, and information-directed sampling, but not derived from first principles within ACT. The use of CIY rather than proper expected information gain (EIG) makes this a *surrogate* formulation: the objective selects for causally distinctive actions, which approximately coincides with selecting for informative actions when model uncertainty is high but diverges when it is low. The $\lambda(M_t)$ weighting partially compensates (suppressing CIY when $U_M$ is low) but the compensation is heuristic, not derived.
 
-Max attainable: robust-qualitative. The structural form is well-supported by convergent results across multiple frameworks, but the specific $\lambda$ parameterization is domain-dependent and will never be exact within ACT.
+Max attainable: *heuristic* unless CIY is replaced by proper EIG. The structural form (value + information term) is well-supported, but the specific information term (CIY rather than EIG) is a tractability-motivated surrogate that selects for distinguishability rather than informativeness. The $\lambda$ parameterization is domain-dependent and the surrogate nature of CIY places a ceiling below robust-qualitative.
 
 ## Discussion
 

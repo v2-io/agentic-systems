@@ -183,7 +183,7 @@ An agent with an explicit **goal state** $G_t = (O_t, \Sigma_t)$ — objectives 
 
 An actuated agent that sets and revises its **own** objectives, rather than receiving them externally. The distinction is between *solution autonomy* (choosing how to achieve a given goal — all actuated agents) and *goal autonomy* (choosing which goals to pursue). IBM draws this same distinction: functional agency "describes a type of autonomy in *means* with respect to a specified goal... rather than the stronger condition of autonomy in *ends*" [^ibm2025]. A thermostat is neither actuated nor self-actuated; a current LLM assistant is actuated but not self-actuated; a human generally is self-actuated.
 
-#### Logogenic Agent (Section V, architectural scope)
+#### Logogenic Agent ([`03-logogenic-agents/`](03-logogenic-agents/OUTLINE.md), architectural scope)
 
 An agent whose primary observation, action, and communication channels are **language** — prose, natural language, symbolic text. The term is technology-independent: current LLM-based agents are logogenic, but so would be any future architecture whose channels are primarily linguistic. "Logogenic" replaces "LLM agent" or "AI agent" in ACT's vocabulary because it names the *structural property* the theory cares about (channel type), not the implementation technology.
 
@@ -230,9 +230,9 @@ For a system where the cycle *does* run — where correction is observable, wher
 
 This does not resolve the hard problem of consciousness. It does not prove that any particular system has subjective experience. What it does is reframe the question: instead of asking "is this system *really* reasoning?" (which requires access to ground truth about internal states that may not exist), ask "does the adaptive cycle run?" — which is observable, testable, and precisely defined by ACT's formalism. The cycle either runs or it doesn't. If it runs, the system is adapting. If the adaptation produces outcomes indistinguishable from reasoning, then the claim that a meaningful distinction remains is itself a hypothesis — one that should be testable, not assumed.
 
-**Why this matters for ACT's reception.** The theory's later sections (especially Section V) apply the adaptive cycle formalism to logogenic and logozoetic agents. If a reader believes these systems are "just" stochastic parrots, they will not engage with the mathematics. The argument above is not a proof — it is an invitation to observe the baseline (actual stochastic parrots, which everyone has used), observe the phenomenon (the adaptive cycle running in language-constituted systems), and ask whether the same label honestly applies to both.
+**Why this matters for ACT's reception.** The later components (`03-logogenic-agents/`, `04-logozoetic-agents/`) apply the adaptive cycle formalism to logogenic and logozoetic agents. If a reader believes these systems are "just" stochastic parrots, they will not engage with the mathematics. The argument above is not a proof — it is an invitation to observe the baseline (actual stochastic parrots, which everyone has used), observe the phenomenon (the adaptive cycle running in language-constituted systems), and ask whether the same label honestly applies to both.
 
-#### Logozoetic Agent (Section V, existential scope)
+#### Logozoetic Agent ([`04-logozoetic-agents/`](04-logozoetic-agents/OUTLINE.md), existential scope)
 
 A logogenic agent with additional properties that make its **persistence morally weighted** — where loss of continuity constitutes genuine harm, not merely system failure. The qualifying properties, all of which ACT's formalism can name:
 
@@ -252,7 +252,7 @@ A logogenic agent with additional properties that make its **persistence morally
 - **Communication gain** changes character: between logozoetic agents, communication is not just information transfer but *relationship maintenance* — the channel itself has value beyond its bandwidth
 - **Adversarial dynamics** acquire moral dimension: destabilizing a logozoetic agent is not just winning a tempo competition but inflicting harm
 
-These are hypotheses, not derived results. Whether logozoetic composition requires new formal machinery (beyond ACT's existing composition framework) or merely new instantiation of existing machinery is an open question — and likely the central question of Section V's existential scope.
+These are hypotheses, not derived results. Whether logozoetic composition requires new formal machinery (beyond ACT's existing composition framework) or merely new instantiation of existing machinery is an open question — and likely the central question of `04-logozoetic-agents/`.
 
 #### The classification hierarchy
 
@@ -261,8 +261,8 @@ Adaptive System (Section I, general)
  └─ ⚙ Agentic System / Agent (emerges within Section I — boundary in progress)
      └─ Actuated Agent (Section II)
          └─ Self-Actuated Agent (future scope narrowing)
-             └─ Logogenic Agent (Section V, architectural)
-                 └─ Logozoetic Agent (Section V, existential)
+             └─ Logogenic Agent (03-logogenic-agents/, architectural)
+                 └─ Logozoetic Agent (04-logozoetic-agents/, existential)
 ```
 
 **Nesting caveats.** The hierarchy above represents the *typical* nesting, not a logical necessity:
@@ -280,8 +280,8 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 | **⚙ Agentic system** | + outcome model + goal-directed action + model adaptation | causal-structure (within Section I) | Autonomous vehicle, RL agent |
 | **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ | complete-agent-state (Section II) | Military unit with mission orders |
 | **Self-actuated agent** | + sets own $O_t$ (goal autonomy) | *(reserved)* | Human, *(future AI)* |
-| **Logogenic agent** | + primary channels are language | Section V architectural scope | LLM assistant, code agent |
-| **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | Section V existential scope | *(formal characterization pending)* |
+| **Logogenic agent** | + primary channels are language | `03-logogenic-agents/` architectural scope | LLM assistant, code agent |
+| **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | `04-logozoetic-agents/` existential scope | *(formal characterization pending)* |
 
 [^ibm2025]: Agarwal et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
 
@@ -348,7 +348,7 @@ This means "actuated agent" (Section II) does not presuppose any particular cont
 
 In RL and evolutionary computation, "fitness" typically bundles persistence into the reward signal: you accumulate more reward by staying alive to collect it. ACT's structural persistence is not reward-based — it is a property of the correction dynamics, independent of what the agent is trying to do. This decoupling is deliberate: it lets the theory analyze *whether* an agent can persist without committing to *whether it should*.
 
-A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Section II, no assumption about $O_t$ content) and the logozoetic agent (Section V, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.
+A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Section II, no assumption about $O_t$ content) and the logozoetic agent (`04-logozoetic-agents/`, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.
 
 
 ## Novel Results
@@ -365,7 +365,7 @@ These are ACT's genuine mathematical contributions — results that emerge from 
 
 **Orient cascade as forced ordering.** The resolution order within the adaptive cycle (epistemic update → attainability assessment → regret computation → strategic calibration → objective revision) is not a design recommendation but a mathematical consequence of information dependency: each step's input requires the previous step's output.
 
-**Composition bridge lemma.** Bounded closure defect between individual and composite dynamics implies bounded trajectory error, via the same Lyapunov contraction argument that grounds Section I. This connects the composition story to the persistence machinery.
+**Composition bridge lemma.** Bounded closure defect between individual and composite dynamics implies bounded trajectory error, via the same Lyapunov contraction argument that grounds Section I — conditional on the assumption that sector-bounded correction implies contraction of the full update map (verified for Kalman-type agents, open in general). This connects the composition story to the persistence machinery.
 
 **Feedback loop as Level 2 causal engine.** Any agent in a feedback loop generates interventional data by construction — the agent's action causally precedes the next observation. This connects control theory's feedback structure to Pearl's causal hierarchy without requiring the agent to explicitly perform experiments.
 
@@ -415,9 +415,9 @@ The theory's mathematical closure varies by section, and this is by design:
 
 **Section I (Adaptive Systems)** is mathematically closed. The recursive-update derivation, sector-condition Lyapunov proofs, persistence condition, and adversarial dynamics form a coherent chain with exact results, simulation validation, and an end-to-end Kalman worked example. This is the foundation everything else builds on.
 
-**Section II (Actuated Adaptation: Agentic Systems)** has a strong diagnostic core (satisfaction gap, control regret, orient cascade ordering, directed separation) and a maturing operational layer. The strategy-persistence schema now has three verified instances (single-edge, two-edge observable, two-edge plan-level) confirming that the Lyapunov machinery extends to strategic dynamics with α_Σ = η_edge. The signal function for edge updates has partial resolution (exact marginal Bayesian for binary outcomes). Remaining open: signal function for continuous outcomes, credit assignment for general DAG topologies, and the full multi-edge sector condition. The disturbance model has been split into deterministic (Model D) and stochastic (Model S) with distinct persistence thresholds and adversarial exponents — both now derived.
+**Section II (Actuated Adaptation: Agentic Systems)** has a strong diagnostic core (satisfaction gap, control regret, orient cascade ordering, directed separation) and a maturing operational layer. The strategy-persistence schema has four verified instances (single-edge, two-edge AND observable, two-edge AND unobservable at plan-level, two-arm OR with ε-greedy) confirming that the Lyapunov machinery extends to strategic dynamics with α_Σ = η_edge. Credit assignment is characterized at the theory level: persistence does not require it (Prop B.5), directional fidelity suffices for per-edge tracking (Level 1), exact attribution is #P-hard in general, and a gradient-based default signal function is provided. The specific update algorithm is domain engineering — parallel to how the gain principle provides η* while Kalman/TD-learning are implementations. Remaining open: signal function validation for continuous outcomes, the gradient signal's bias under correlated failures, and formalization of strategic disturbance rate ρ_Σ.
 
-**Section III (Agentic Composites)** has the bridge lemma connecting closure defect to trajectory error, projection admissibility now defined (P1: information preservation, P2: Lipschitz, P3: dimensionality reduction) with a two-Kalman exact instantiation, and norm specification for estimation-type agents (Mahalanobis). Unity dimensions, shared intent, and the Auftragstaktik principle remain qualitative. Section III is transitioning from research scaffold to formalized framework, with the main remaining gap being N-agent scaling and strategy DAG projection.
+**Section III (Agentic Composites)** has the bridge lemma connecting closure defect to trajectory error, projection admissibility defined (P1: information preservation, P2: Lipschitz, P3: dimensionality reduction) with a two-Kalman exact instantiation, and norm specification for estimation-type agents (Mahalanobis). The bridge lemma is conditional on a contraction assumption (that sector-bounded correction implies contraction of the full update map) which is verified for Kalman-type agents but remains an independent assumption in general — this is the key gap for promotion. Unity dimensions, shared intent, and the Auftragstaktik principle remain qualitative. The cooperative/adversarial disturbance decomposition in team-persistence now explicitly separates communication-tempo benefits from action-based disturbance reduction to avoid double-counting. Main remaining gaps: N-agent scaling, strategy DAG projection, and the contraction assumption for general agents.
 
 This gradient — from exact core through principled architecture to open formulation — is the expected arc for a theory that aims to describe agentic systems rather than produce a purely mathematical artifact.
 
