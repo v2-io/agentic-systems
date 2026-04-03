@@ -43,7 +43,9 @@ Objective revision is the **last resort**, not the first response to unmet goals
 
 ## Epistemic Status
 
-*Exact.* The satisfaction gap is a mathematical definition — the difference between a threshold and a supremum over a function class. The definition is precise; the *computation* of $A_O$ is generally intractable (it requires optimization over a policy class), but the quantity is well-defined.
+*Exact as a definition.* The satisfaction gap is a mathematical definition — the difference between a threshold and a supremum over a function class. The definition is precise; the *computation* of $A_O$ is generally intractable (it requires optimization over a policy class), but the quantity is well-defined.
+
+**Convention dependence.** $A_O$ and $\delta_{\text{sat}}$ depend on the continuation convention ($\pi_{\text{cont}}$), horizon ($N_h$), and policy class ($\Pi$) — all parameters of the value object ( #value-object). Changing any of these changes the diagnostic value. ACT adopts the one-step improvement convention ($\pi_{\text{cont}} = \pi_{\text{current}}$) as the canonical default; all diagnostics are comparable across analyses of the same agent only when computed under the same convention. Analyses using different conventions (Bellman fixed point, receding horizon) produce different values and should not be compared directly. The convention is part of the measurement frame, not a background assumption.
 
 ## Discussion
 

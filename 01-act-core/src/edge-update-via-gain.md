@@ -29,12 +29,13 @@ with:
 - $U_{\text{edge}}$: uncertainty about this specific causal link. If $p_{ij} \sim \text{Beta}(\alpha_{ij}, \beta_{ij})$: $U_{\text{edge}} = \text{Var}[\text{Beta}] = \alpha\beta / ((\alpha + \beta)^2(\alpha + \beta + 1))$
 - $U_{\text{obs}}$: observation noise on the channel confirming this link. $U_{\text{obs}} \propto 1/\sigma_j$ (inverse of observability of node $j$)
 
-**Beta-Bernoulli equivalence.** For binary observations (success/failure of step $j$):
+**Beta-Bernoulli instantiation.** For binary observations (success/failure of step $j$):
 - Observe success: $\alpha_{ij} \to \alpha_{ij} + 1$
 - Observe failure: $\beta_{ij} \to \beta_{ij} + 1$
 - Point estimate: $p_{ij} = \alpha / (\alpha + \beta)$
+- Effective gain: $\eta_{\text{edge}} = 1/(n+1)$ where $n = \alpha + \beta$
 
-This is the standard Bayesian update for a Bernoulli process — the gain principle reduces to conjugate updating in the binary case.
+This is the standard Bayesian conjugate update, yielding $\Delta\hat p = (y - \hat p)/(n+1)$. The gain $1/(n+1)$ is the exact conjugate update rate — not a literal substitution into $\eta = U_{\text{edge}}/(U_{\text{edge}} + U_{\text{obs}})$, which is a structural principle (conservative updating proportional to relative uncertainty), not a universal algebraic formula. The Beta-Bernoulli gain satisfies the same principle: it decreases as posterior certainty increases, trusting accumulated evidence over individual observations. But the algebraic derivation is conjugate analysis, not Kalman-style variance ratios, because the Bernoulli observation model has different noise structure than the Gaussian case where the variance-ratio formula is exact. The sector-condition analysis in #strategic-dynamics-derivation (Props B.1-B.4) uses the exact Beta-Bernoulli gain $1/(n+1)$ directly.
 
 ## Epistemic Status
 
