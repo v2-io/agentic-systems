@@ -18,7 +18,7 @@ The sector-condition mathematics ( #sector-condition-stability, #sector-conditio
 *[Proposed Schema (strategy-persistence-schema)]*
 
 **If** strategic update dynamics satisfy:
-- **(SA1)** Zero correction at zero strategic mismatch: when $\delta_{\text{strategic}} = 0$, no revision occurs
+- **(SA1)** Zero correction at zero strategic mismatch: when the mismatch state is zero, no revision occurs
 - **(SA2')** Local sector condition on strategic correction: the correction function is appropriately bounded
 - **(SA3)** Sufficient exploration (OR-nodes only): the action selection policy allocates correction capacity to all OR alternatives at a rate exceeding the strategic disturbance-to-reserve ratio
 - Bounded strategic disturbance: the rate at which the environment invalidates causal links is bounded
@@ -28,6 +28,13 @@ The sector-condition mathematics ( #sector-condition-stability, #sector-conditio
 $$\alpha_\Sigma \gt \frac{\rho_\Sigma}{R_\Sigma}$$
 
 where $\alpha_\Sigma$ is the strategic correction rate, $\rho_\Sigma$ is the strategic disturbance rate, and $R_\Sigma$ is the strategic reserve (tolerance for strategic mismatch before performance degrades catastrophically).
+
+**Which mismatch state?** The schema applies to any mismatch state for which conditions (SA1)-(SA3) can be verified. Two candidates exist:
+
+- **Plan-confidence error** $\delta_s = \hat P_\Sigma - \Phi$: the scalar difference between the agent's plan-confidence score and the independence-model plan value at true edge parameters. This is the mismatch for which persistence IS proved (Props B.1-B.5 in #strategic-dynamics-derivation). It is computable from status propagation without credit assignment.
+- **Strategic-calibration residual** $\delta_{\text{strategic}}$: the per-edge value-increment residual aggregation defined in #strategic-calibration. This is the mismatch the orient cascade ( #orient-cascade) uses for edge-level revision. Persistence of $\delta_{\text{strategic}}$ remains **open** and requires the credit-assignment machinery in #credit-assignment-boundary.
+
+The verified instances below all use per-edge credence error $\boldsymbol\delta_c = (\hat p_k - \theta_k)$ or the plan-level surrogate $\delta_s$. They do not verify the schema for $\delta_{\text{strategic}}$ directly.
 
 ## Epistemic Status
 
@@ -47,7 +54,7 @@ The schema is no longer purely hypothetical. The sector parameter for strategic 
 
 **What's needed to promote this from schema to result.**
 
-1. **Strategic mismatch state**: partially resolved. Prop B.5 in #strategic-dynamics-derivation shows the sector condition transfers from per-edge credence error to **plan-confidence error** $\delta_s = \hat P_\Sigma - \Phi$ — the scalar difference between the agent's plan-confidence score and the true plan success probability. For linear correction (Beta-Bernoulli), the transfer is exact ($\alpha_s = \alpha_c$); for nonlinear correction, $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$. **However**, $\delta_s$ is distinct from the **strategic-calibration residual** $\delta_{\text{strategic}}$ defined in #strategic-calibration, which is an $L^2$ aggregation of per-edge value-increment residuals requiring credit assignment to compute. Persistence of $\delta_s$ (plan-level tracking) is proved; persistence of $\delta_{\text{strategic}}$ (per-edge diagnostics) remains open and requires the credit-assignment machinery in #credit-assignment-boundary.
+1. **Strategic mismatch state**: partially resolved. Prop B.5 in #strategic-dynamics-derivation shows the sector condition transfers from per-edge credence error to **plan-confidence error** $\delta_s = \hat P_\Sigma - \Phi$ — the scalar difference between the agent's plan-confidence score and the independence-model plan value at true edge parameters (note: $\Phi$ is NOT actual plan success probability under correlated failure — see #strategy-dag edge-independence caveat). For linear correction (Beta-Bernoulli), the transfer is exact ($\alpha_s = \alpha_c$); for nonlinear correction, $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$. **However**, $\delta_s$ is distinct from the **strategic-calibration residual** $\delta_{\text{strategic}}$ defined in #strategic-calibration, which is an $L^2$ aggregation of per-edge value-increment residuals requiring credit assignment to compute. Persistence of $\delta_s$ (plan-level tracking) is proved; persistence of $\delta_{\text{strategic}}$ (per-edge diagnostics) remains open and requires the credit-assignment machinery in #credit-assignment-boundary.
 
 2. ~~**Strategic correction function**: needs to satisfy the sector condition.~~ **Resolved** for Beta-Bernoulli edges. Props B.1-B.4 in #strategic-dynamics-derivation verify the sector condition for four topologies (single edge, two-edge AND observable/unobservable, two-arm OR).
 

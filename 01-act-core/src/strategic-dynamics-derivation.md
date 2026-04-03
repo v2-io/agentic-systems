@@ -287,13 +287,13 @@ The critical experience is halved relative to the single-edge case. Each additio
 
 ## Proposition B.5: Bridge from Credence Error to Value Residuals
 
-The propositions above verify the sector condition for the credence-error mismatch state $\boldsymbol\delta_c = (\hat p_k - \theta_k)$. This proposition extends the result to **plan-confidence error** — the scalar difference between the agent's plan-confidence score and the true plan success probability. This is a natural plan-level mismatch that is distinct from (but related to) the per-edge value-increment residuals $\delta_{\text{strategic}}$ defined in #strategic-calibration.
+The propositions above verify the sector condition for the credence-error mismatch state $\boldsymbol\delta_c = (\hat p_k - \theta_k)$. This proposition extends the result to **plan-confidence error** — the scalar difference between the agent's plan-confidence score and the independence-model plan value evaluated at true edge parameters. This is a natural plan-level mismatch that is distinct from (but related to) the per-edge value-increment residuals $\delta_{\text{strategic}}$ defined in #strategic-calibration.
 
 **Relationship to $\delta_{\text{strategic}}$.** #strategic-calibration defines $\delta_{\text{strategic}}$ as an $L^2$ aggregation of per-edge value-increment residuals — a quantity that requires credit assignment to compute. Plan-confidence error $\delta_s$ defined here is a *different* quantity: it is the error in the DAG's aggregate self-assessment, computable from status propagation without credit assignment. The two are related (both measure strategy-reality mismatch) but not identical. This proposition shows the sector condition holds for plan-confidence error; extending it to $\delta_{\text{strategic}}$ directly would require the credit-assignment machinery discussed in #credit-assignment-boundary.
 
 ### Setup
 
-The plan value $\hat P_\Sigma = P_\Sigma(\mathbf{p})$ is a function of the edge credence vector $\mathbf{p} = (p_1, \ldots, p_m)$. The true plan value is $\Phi = P_\Sigma(\boldsymbol\theta)$. Define:
+The plan value $\hat P_\Sigma = P_\Sigma(\mathbf{p})$ is a function of the edge credence vector $\mathbf{p} = (p_1, \ldots, p_m)$. The **independence-model reference value** is $\Phi = P_\Sigma(\boldsymbol\theta)$ — the AND/OR propagation formula evaluated at the true edge parameters $\boldsymbol\theta$. Note: $\Phi$ is NOT the actual probability of plan success when edge outcomes are correlated ( #strategy-dag, edge-independence caveat). It is the best the independence model can do with perfect edge knowledge. Under correlated failure, the actual plan success probability may be lower than $\Phi$; the gap is a model-class limitation of the AND/OR DAG representation, not an estimation error. What $\delta_s$ tracks is calibration *within the independence model*, not calibration to reality. Define:
 
 - **Credence-error mismatch:** $\boldsymbol\delta_c = \mathbf{p} - \boldsymbol\theta \in \mathbb{R}^m$
 - **Plan-confidence error:** $\delta_s = \hat P_\Sigma - \Phi = P_\Sigma(\mathbf{p}) - P_\Sigma(\boldsymbol\theta)$ (scalar)

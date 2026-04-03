@@ -97,7 +97,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 ## III. Agentic Composites
 
-*Scope: multiple agents interacting through a shared environment, or equivalently, the internal structure of composite agents. The composition postulate ( #composition-consistency) ensures the theory applies at every level of description; this section develops what happens when composition is imperfect and what the dynamics of inter-agent interaction look like.*
+*Scope: multiple agents interacting through a shared environment, or equivalently, the internal structure of composite agents. The composition postulate ( #composition-consistency) requires that the theory apply at every level of description where the scope condition is met. This section develops what "applies at every level" means formally (the composition closure criterion, which requires an additional contraction assumption beyond Section I's sector condition), what happens when composition is imperfect, and what the dynamics of inter-agent interaction look like.*
 
 *Correlated observations as default; independence as the special case requiring justification. Adversarial dynamics are one end of a teleological unity spectrum, not a separate theory.*
 

@@ -45,7 +45,7 @@ This is a **second-order inference** — it requires accumulating evidence over 
 
 **Connection to #strategy-persistence-schema.** There are two distinct strategic mismatch quantities:
 
-1. **Plan-confidence error** $\delta_s = \hat P_\Sigma - \Phi$ — the scalar gap between the agent's aggregate plan-confidence and the true plan success probability. Computable from status propagation alone, without credit assignment. The sector condition transfers to $\delta_s$ (Prop B.5 in #strategic-dynamics-derivation).
+1. **Plan-confidence error** $\delta_s = \hat P_\Sigma - \Phi$ — the scalar gap between the agent's plan-confidence score and the independence-model plan value at true edge parameters. Computable from status propagation alone, without credit assignment. The sector condition transfers to $\delta_s$ (Prop B.5 in #strategic-dynamics-derivation). Note: $\Phi$ is the AND/OR propagation formula evaluated at true edge rates — it is NOT actual plan success probability under correlated failure ( #strategy-dag, edge-independence caveat). $\delta_s$ tracks calibration *within the independence model*, not calibration to strategic reality.
 
 2. **Strategic calibration residual** $\delta_{\text{strategic}}$ (this segment) — an $L^2$ aggregation of per-edge value-increment residuals requiring credit assignment to compute.
 

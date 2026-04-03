@@ -25,7 +25,7 @@ Always non-negative: the current policy cannot outperform the best in its class.
 
 ## Epistemic Status
 
-*Exact as a definition.* Like the satisfaction gap, this is a mathematical definition — a difference between two values of the same functional. The quantity is well-defined; computing it requires evaluating $A_O$ (generally intractable) and $V_O$ under the current policy (tractable in simulation, approximate in practice). Like $\delta_{\text{sat}}$, this diagnostic is convention-dependent — it changes with $\pi_{\text{cont}}$, $N_h$, and $\Pi$. See #satisfaction-gap Epistemic Status for the convention-dependence caveat; the same considerations apply here.
+*Exact as a definition — convention-relative as a diagnostic.* Like the satisfaction gap, this is a mathematical definition — a difference between two values of the same functional. The quantity is well-defined; computing it requires evaluating $A_O$ (generally intractable) and $V_O$ under the current policy (tractable in simulation, approximate in practice). Like $\delta_{\text{sat}}$, this diagnostic is convention-relative: it changes with $\pi_{\text{cont}}$, $N_h$, $\Pi$, and the scalarization $V_{O_t}$. Results computed under different conventions are not comparable. See #satisfaction-gap Epistemic Status for the full convention-dependence discussion.
 
 ## Discussion
 
