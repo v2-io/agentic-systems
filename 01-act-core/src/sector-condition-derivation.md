@@ -5,7 +5,7 @@ status: exact
 depends:
   - adaptive-tempo
   - mismatch-signal
-stage: draft
+stage: claims-verified
 ---
 
 # Derivation: Sector Condition Stability — Lyapunov Derivation
@@ -211,7 +211,7 @@ Persistence requires $R^*_S < R$, giving $\alpha > n\sigma_w^2 / (2R^2)$. $\squa
 
 ## Epistemic Status
 
-The setup and assumptions are *definitions* — they specify what we mean by "correction function" and "disturbance." Propositions A.1 and A.2 are *exact* — they follow from the assumptions via standard Lyapunov theory (Khalil 2002[^khalil2002], Chapters 4 and 9). The assumptions themselves (sector condition, bounded disturbance) are *empirical claims* about the qualitative behavior of real correction dynamics. The sector-condition framework originates with Lur'e (1957); the Lyapunov stability results are standard. The application to adaptive agents under the ACT framework is new but the mathematics is not.
+The setup and assumptions are *definitions* — they specify what we mean by "correction function" and "disturbance." Propositions A.1 and A.2 are *exact* — they follow from the assumptions via standard Lyapunov theory (Khalil 2002[^khalil2002], Chapters 4 and 9). Proposition A.1S is *exact* under an implicit strengthening of A2': the Ito-Lyapunov proof uses the sector bound on the entire trajectory, but the Wiener process can push $\delta$ outside $\mathcal B_R$ where the local sector condition does not hold. The proof is valid when A2' holds in a sufficiently large region (or globally), or when a stopping-time argument bounds the contribution of excursions. For practical purposes the tail bound (Markov inequality) quantifies the excursion probability and the gap is higher-order when $R^*_S \ll R$. This is a standard subtlety in applied stochastic Lyapunov theory, not specific to ACT. The assumptions themselves (sector condition, bounded disturbance) are *empirical claims* about the qualitative behavior of real correction dynamics. The sector-condition framework originates with Lur'e (1957); the Lyapunov stability results are standard. The application to adaptive agents under the ACT framework is new but the mathematics is not.
 
 ## Discussion
 
@@ -229,6 +229,7 @@ The setup and assumptions are *definitions* — they specify what we mean by "co
 
 ---
 
-[^khalil2002]: Khalil, H. K. (2002). *Nonlinear Systems* (3rd ed.). Prentice Hall. Chapters 4 (Lyapunov stability), 9 (input-output stability). [^lure1957]: Lur'e, A. I. (1957). *Some Nonlinear Problems in the Theory of Automatic Control*. Original sector-condition framework for absolute stability.
+[^khalil2002]: Khalil, H. K. (2002). *Nonlinear Systems* (3rd ed.). Prentice Hall. Chapters 4 (Lyapunov stability), 9 (input-output stability).
+[^lure1957]: Lur'e, A. I. (1957). *Some Nonlinear Problems in the Theory of Automatic Control*. Original sector-condition framework for absolute stability.
 
 *(Descended from TFT Appendix A, Props A.1–A.2.)*

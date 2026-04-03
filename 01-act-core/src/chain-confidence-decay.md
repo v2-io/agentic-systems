@@ -4,7 +4,7 @@ type: derived
 status: exact
 depends:
   - strategy-dimension
-stage: deps-verified
+stage: claims-verified
 ---
 
 # Derived: Chain Confidence Decay

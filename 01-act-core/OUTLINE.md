@@ -38,7 +38,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I | Derived | | [#recursive-update](src/recursive-update.md) | State updates must be recursive | deps-verified |
 | I | Derived | | [#action-selection](src/action-selection.md) | Action as function of model | deps-verified |
 | I | Definition | | [#mismatch-signal](src/mismatch-signal.md) | Prediction error signal | deps-verified |
-| I | Result | | [#mismatch-decomposition](src/mismatch-decomposition.md) | Model error + obs noise | deps-verified |
+| I | Result | | [#mismatch-decomposition](src/mismatch-decomposition.md) | Model error + obs noise | claims-verified |
 | I | Empirical | | [#update-gain](src/update-gain.md) | Optimal update weighting | deps-verified |
 | I | Definition | | [#causal-information-yield](src/causal-information-yield.md) | Information from interventions | deps-verified |
 | I | Definition | | [#adaptive-tempo](src/adaptive-tempo.md) | Rate of useful info acquisition | deps-verified |
@@ -74,12 +74,12 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | II  | Scope           |     | [#ciy-observational-proxy](src/ciy-observational-proxy.md)                             | When CIY is estimable from observational data                    | draft |
 | II  | Discussion      |     | [#ciy-unified-objective](src/ciy-unified-objective.md)                                 | Joint exploitation-exploration objective                         | draft |
 | II  | Normative       |     | [#explicit-strategy-condition](src/explicit-strategy-condition.md)                     | When planning beats exploring                                    | draft |
-| II  | Derived         |     | [#chain-confidence-decay](src/chain-confidence-decay.md)                               | Log-confidence additive in depth                                 | deps-verified |
+| II  | Derived         |     | [#chain-confidence-decay](src/chain-confidence-decay.md)                               | Log-confidence additive in depth                                 | claims-verified |
 | II  | Scope           |     | [#and-or-scope](src/and-or-scope.md)                                                   | Conjunctive/disjunctive scope                                    | draft |
 | II  | Definition      |     | [#strategy-dag](src/strategy-dag.md)                                                   | Strategy as probabilistic DAG                                    | draft |
 | II  | Derived + Scope |     | [#directed-separation](src/directed-separation.md)                                     | Epistemic update is goal-blind                                   | draft |
-| II  | Definition      |     | [#satisfaction-gap](src/satisfaction-gap.md)                                           | Ideal vs best achievable                                         | deps-verified |
-| II  | Definition      |     | [#control-regret](src/control-regret.md)                                               | Best achievable vs current                                       | deps-verified |
+| II  | Definition      |     | [#satisfaction-gap](src/satisfaction-gap.md)                                           | Ideal vs best achievable                                         | claims-verified |
+| II  | Definition      |     | [#control-regret](src/control-regret.md)                                               | Best achievable vs current                                       | claims-verified |
 | II  | Definition      |     | [#strategic-calibration](src/strategic-calibration.md)                                 | Edge residuals ( #credit-assignment-boundary)                    | draft |
 | II  | Derived         |     | [#orient-cascade](src/orient-cascade.md)                                               | Resolution order by info dep                                     | draft |
 | II  | Derived         |     | [#observability-dominance](src/observability-dominance.md)                             | Unobservable edges freeze                                        | draft |
@@ -130,7 +130,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 | §   | Type       | N   | Tag                                                                    | Claim                                                                 | Stage   |
 | --- | ---------- | --- | ---------------------------------------------------------------------- | --------------------------------------------------------------------- | ------- |
-| A   | Derivation |     | [#sector-condition-derivation](src/sector-condition-derivation.md)     | Lyapunov derivations for bounded mismatch and adaptive reserve        | draft   |
+| A   | Derivation |     | [#sector-condition-derivation](src/sector-condition-derivation.md)     | Lyapunov derivations for bounded mismatch and adaptive reserve        | claims-verified |
 | A   | Derivation |     | [#gain-sector-derivation](src/gain-sector-derivation.md)               | Gain-sector bridge proofs: Kalman, gradient equivalence, verification | draft   |
 | A   | Derivation |     | [#recursive-update-derivation](src/recursive-update-derivation.md)     | Uniqueness derivation via three constraints + counterexamples         | draft   |
 | A   | Sketch     |     | [#multi-timescale-stability](src/multi-timescale-stability.md)         | N-timescale singular perturbation sketch                              | draft   |

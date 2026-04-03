@@ -7,7 +7,7 @@ depends:
   - observation-function
   - agent-model
   - scope-condition
-stage: deps-verified
+stage: claims-verified
 ---
 
 # Result: Mismatch Decomposition
@@ -28,7 +28,7 @@ where $\bar o_t = \mathbb{E}[o_t \mid \Omega_t, a_{t-1}]$ is the true conditiona
 
 1. By #scope-condition, $H(\Omega_t \mid \mathcal C_t) \gt 0$ — residual uncertainty persists.
 2. By #agent-model, the model generates predictions $\hat o_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$.
-3. Decompose mismatch into model error and noise. The cross-term vanishes by the fresh-noise assumption: $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(\Omega_t, a_{t-1})$. Condition on $(\Omega_t, a_{t-1})$; then $\bar o_t - \hat o_t$ is fixed and $\mathbb{E}[o_t - \bar o_t \mid \Omega_t, a_{t-1}] = 0$ by definition of $\bar o_t$. The outer expectation gives zero. This is orthogonality (uncorrelated), not independence.
+3. Decompose mismatch into model error and noise. The cross-term vanishes by the fresh-noise assumption (GA-1): $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(\Omega_t, a_{t-1})$. Condition on $(\Omega_t, a_{t-1}, \mathcal C_{t-1})$; then both $\bar o_t$ and $\hat o_t$ are fixed, and $\mathbb{E}[o_t - \bar o_t \mid \Omega_t, a_{t-1}, \mathcal C_{t-1}] = \mathbb{E}[o_t - \bar o_t \mid \Omega_t, a_{t-1}] = 0$ by definition of $\bar o_t$ and GA-1. The outer expectation gives zero. This is orthogonality (uncorrelated), not independence.
 4. Term (ii) is positive when observation noise is non-degenerate. Term (i) is positive when the model's predictive mean differs from the true conditional mean. Either suffices.
 
 ## Epistemic Status
