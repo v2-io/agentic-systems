@@ -64,8 +64,8 @@ $$\frac{\rho_{i,\text{env}} + \sum_j \gamma_{j \to i}^{\text{adv}} \mathcal{T}_j
 
 This reveals three distinct levers for team persistence:
 
-1. **Increase $\alpha_i$** (individual correction efficiency) — better models, better gain calibration
-2. **Increase cooperative tempo** ($\gamma^{\text{coop}} \mathcal T_j$) — more reliable allies, faster communication channels
+1. **Increase $\alpha_i$** (individual correction efficiency) — better models, better gain calibration, including communication-improved tempo from allies ( #communication-gain)
+2. **Increase cooperative disturbance reduction** ($\gamma^{\text{coop}} \mathcal T_j$) — more effective allied action in the shared environment: stabilizing shared resources, preempting threats, absorbing environmental variation. This is the action-based mechanism distinguished above, not the communication channel.
 3. **Reduce adversarial coupling** ($\gamma^{\text{adv}} \mathcal T_j$) — better deception detection, reduced exposure to adversarial actions
 
 ### Coordination Overhead Threshold

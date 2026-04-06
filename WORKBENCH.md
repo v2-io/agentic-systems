@@ -153,10 +153,18 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 - `#m-preservation` — external memory as persistent $M_t$.
 - `#observation-ambiguity-modulation` — $\kappa \times$ ambiguity scope condition. **NEW from spike.**
 
-**Appendices (3 missing):**
+**Section III — Composition Dynamics (5 gaps from Miller bridge analysis):**
+- Latent structural diversity — correction-architecture variation invisible to persistence analysis. Source: `msc/spike-miller-act-bridge.md` §7, `msc/spike-neutral-drift-lyapunov.md`.
+- Endogenous coupling — γ as function of population composition. Source: `msc/spike-neutral-drift-lyapunov.md`.
+- Composition transition motif — Miller's 5-phase pattern in ACT terms. Source: `msc/spike-miller-act-bridge.md` §2.1.
+- Computational thresholds for social behavior — minimum agent complexity and interaction depth. Source: Miller (2022) Ch. 12, Table 12.2.
+- Communication as transitional phenomenon — communication gain most load-bearing during transitions. Source: Miller (2022) Ch. 11.
+
+**Appendices (4 missing):**
 - `#linear-ode-approximation` — pedagogical linear mismatch ODE (detail).
 - `#intent-dag-development` — convergence on AND/OR + single-p (aside). Source: 04-intent-dag-consolidated.md.
 - `#prior-art-positioning` — Hafez, IBM, BDI, active inference (detail). Source: msc/02-prior-art-assessment.md.
+- `#worked-example-cam` — coevolving automata (Miller 2022): ACT ↔ Moore machine mapping, meta-machine as ε*=0 composition, simplest adaptive agent. Source: `msc/spike-miller-act-bridge.md` §3, `msc/spike-fsa-dag-relationship.md`.
 
 
 ## Key Spikes
@@ -182,6 +190,9 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | Projection admissibility | `msc/spike-projection-admissibility.md` | P_adm = (P1, P2, P3). Two-Kalman exact instantiation. Mahalanobis norms. **PROMOTED** to composition-closure + tempo-composition. |
 | Scalar objective scope | `msc/spike-scalar-objective-scope.md` | Scalar is load-bearing for diagnostics, not structural results. Revealed-preference argument. AND-node workaround documented. **PROMOTED** to objective-functional + satisfaction-gap. |
 | Track-b simulations | `msc/track-b-nonlinear-sims/` | 6 variants, all validated |
+| Miller ↔ ACT bridge | `msc/spike-miller-act-bridge.md` | Maps Miller's *Ex Machina* (2022) to ACT. Five new Section III dynamics elements identified. FSA ↔ DAG relationship analyzed (orthogonal, not competing). Sector condition blind to neutral drift — new concept "latent structural diversity" needed. Paths C/D (automata foundations) ruled out; Path B (Section III dynamics) recommended. |
+| FSA ↔ strategy-DAG | `msc/spike-fsa-dag-relationship.md` | Moore machine = behavioral surface; strategy DAG = epistemic interior. Orthogonal representations. DAG→FSA is lossy (discards causal semantics). FSA composition exact for behavior only; agent-level composition still approximate (ε* from internal state projection). |
+| Neutral drift ↔ Lyapunov | `msc/spike-neutral-drift-lyapunov.md` | Phases 1,5 map cleanly; Phases 2-3 invisible to sector condition; Phase 4 partial (coupling emergence missing). Missing concept: latent structural diversity — correction-architecture variation invisible to persistence analysis. Endogenous γ needed. |
 
 
 ## What's Settled

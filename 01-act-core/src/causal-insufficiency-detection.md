@@ -7,7 +7,6 @@ depends:
   - strategy-dag
   - loop-interventional-access
   - causal-information-yield
-  - graph-structure-uniqueness
 stage: draft
 ---
 
