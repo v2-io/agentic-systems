@@ -12,7 +12,7 @@ stage: draft
 
 # Derivation: Graph Structure Uniqueness
 
-Four operational postulates — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — derive that the strategy representation is a directed acyclic graph (proved), with the Markov property conditional on causal sufficiency of the strategy.
+Four operational postulates — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — derive that the strategy representation is a directed acyclic graph (proved), with the Markov property proved under causal sufficiency via the Causal Markov Condition theorem.
 
 ## Formal Expression
 
@@ -66,45 +66,45 @@ Each component $X_i$ of the strategy has a set of direct causes $\text{Pa}(X_i)$
 
 Each edge carries uncertainty: $P(X_i \mid \text{Pa}(X_i))$. By P2 (Cox), this is a probability distribution. The joint distribution over all strategy components is some $P(X_1, \ldots, X_n)$.
 
-#### Step 3: P3 + P1 + causal sufficiency imply the Markov condition
+#### Step 3: Causal sufficiency implies the Markov condition (proved)
 
 *[Derived (Conditional on causal sufficiency of $\Sigma_t$)]*
 
-**Claim.** P3 (state-local revisability) combined with P1 (temporal ordering) and causal sufficiency of the strategy representation implies the local Markov property.
+**Claim.** For a causally sufficient strategy DAG, the Markov factorization property is a theorem — a consequence of the Causal Markov Condition (CMC).
 
-**The local Markov property.** Each variable $X_i$ is conditionally independent of its non-descendants given its parents:
+**The Markov factorization property.** Each variable $X_i$ is conditionally independent of its non-descendants given its parents:
 
 $$X_i \perp \text{NonDesc}(X_i) \mid \text{Pa}(X_i)$$
 
-**The argument has three parts:**
-
-**(a) P3 requires some local neighborhood to suffice.** When the agent updates its belief about $X_i$, it must do so using a local neighborhood $\text{Ne}(X_i)$ rather than the entire graph. For the local update to be correct:
-
-$$P(X_i \mid \text{Ne}(X_i), \text{rest}) = P(X_i \mid \text{Ne}(X_i))$$
-
-P3 establishes that SOME such neighborhood exists. It does not specify which.
-
-**(b) P1 identifies parents as the natural neighborhood.** In a directed graph respecting temporal ordering, causal influence on $X_i$ flows from temporally preceding nodes through directed edges. The nodes with direct causal influence on $X_i$ are precisely $\text{Pa}(X_i)$ — the parents. Non-parent predecessors can only affect $X_i$ through the parents (their influence is mediated). Non-descendants are either predecessors (influence mediated through parents) or temporally unrelated (no causal path to $X_i$). Therefore: in a temporally ordered directed graph, $\text{Pa}(X_i)$ is the minimal local neighborhood that captures all direct causal influence on $X_i$.
-
-**(c) Causal sufficiency makes parents sufficient.** The above requires that all direct causes of $X_i$ ARE represented as parents in the graph — that there are no latent common causes between $X_i$ and its non-descendants. This is the causal sufficiency assumption.
-
-For $\Sigma_t$ specifically, causal sufficiency is a reasonable assumption: the agent *constructed* the strategy graph, so all nodes are explicit. There are no "hidden" strategy components — the agent chose every node. If environmental factors affect multiple strategy steps (shared infrastructure, weather, market conditions), they should appear as condition nodes in $\Sigma_t$ ( #strategy-dag, source constraint). If they are omitted, the strategy is model-inadequate — exactly the situation #structural-adaptation-necessity addresses — and the Markov condition fails for the explicit nodes. This is a model quality issue, not a structural limitation of the argument.
-
-**Assembling (a)-(c).** P3 requires a sufficient local neighborhood. P1 identifies parents as the causal neighborhood. Causal sufficiency ensures parents capture all direct influences. Therefore:
-
-$$P(X_i \mid \text{Pa}(X_i), \text{NonDesc}(X_i)) = P(X_i \mid \text{Pa}(X_i))$$
-
-This IS the local Markov property.
-
-**Equivalence to factorization.** For positive distributions (all configurations have nonzero probability — a mild regularity condition), the local Markov property is equivalent to the global Markov property and to the factorization property (Lauritzen 1996, Theorem 3.27; Verma 1993):
+Equivalently, the joint distribution factorizes as:
 
 $$P(X_1, \ldots, X_n) = \prod_{i=1}^{n} P(X_i \mid \text{Pa}(X_i))$$
 
-This is the defining property of a Bayesian network.
+(The equivalence holds for positive distributions — Lauritzen 1996, Theorem 3.27.)
 
-**What about non-parent local neighborhoods?** The earlier sketch noted that other sparse factorizations (e.g., factor graphs with message-passing) might also support local revision. This is true — factor-graph message passing achieves exact inference for trees and approximate inference for loopy graphs, using a different local neighborhood (the factor's scope, not the parents). But P1 (directed temporal ordering) selects the parent-conditional factorization specifically, because the causal direction matters: the agent needs to reason about consequences of interventions ($do(X_i)$), and Pearl's do-calculus is defined on the parent-conditional DAG factorization, not on undirected factor graphs. Directed local neighborhoods (parents) are strongly motivated by the combination of locality (P3) and causal directionality (P1); undirected alternatives sacrifice the causal semantics that #strategy-dag requires.
+**The argument has five parts:**
 
-**Why non-descendants specifically.** Descendants of $X_i$ depend on $X_i$ by construction — they are downstream. Updating $X_i$ based on $\text{Pa}(X_i)$ does not require knowing descendants, because causal influence flows FROM $X_i$ TO descendants, not the reverse. Learning about descendants can provide evidence about $X_i$ (diagnostic reasoning / explaining away), but that evidence flows through the graph structure itself via belief propagation — it does not violate P3 because the update still propagates locally.
+**(a) The DAG is a causal model.** P1 establishes that edges represent causal relationships: completing a parent step causally advances the child step. P2 establishes probabilistic uncertainty over outcomes. Together: $\Sigma_t$ is a causal DAG in the sense of structural causal models (Pearl 2009, Definition 7.1.1) — each node's outcome is determined by its parents' outcomes (through the causal mechanism encoded in the edge credences) plus exogenous uncertainty specific to that step. Formally, each node admits a structural equation:
+
+$$X_i = f_i(\text{Pa}(X_i), \varepsilon_i)$$
+
+where $f_i$ is the local causal mechanism and $\varepsilon_i$ is the exogenous noise (the residual uncertainty at step $i$ not determined by its parents).
+
+**(b) Causal sufficiency implies exogenous independence.** The exogenous terms $\varepsilon_i$ are mutually independent if and only if no unmodeled common cause affects two or more nodes in the graph. This is precisely the **causal sufficiency** assumption: every variable that is a direct common cause of two or more nodes in $\Sigma_t$ is itself a node in $\Sigma_t$.
+
+For agent-constructed strategies, causal sufficiency is a reasonable assumption: the agent designed the graph, so all intended causal relationships are explicit. If an environmental factor (shared infrastructure, weather, market shift) affects multiple strategy steps, it *should* appear as a condition node in $\Sigma_t$ ( #strategy-dag, source constraint). If it is omitted, the strategy DAG is causally insufficient — the exogenous terms become correlated — and the Markov condition fails. This is not a structural limitation of the argument; it is model inadequacy ( #structural-adaptation-necessity), and the remedy is to add the missing common-cause node.
+
+**(c) The Causal Markov Condition theorem.** For a DAG $G$ over variables $V = \{X_1, \ldots, X_n\}$ with structural equations $X_i = f_i(\text{Pa}(X_i), \varepsilon_i)$ where the $\varepsilon_i$ are mutually independent:
+
+$$P(X_1, \ldots, X_n) = \prod_{i=1}^{n} P(X_i \mid \text{Pa}(X_i))$$
+
+This is the **Causal Markov Condition** — a proved theorem, not a modeling assumption. The standard references are Spirtes, Glymour, and Scheines (2000, Theorem 3.4) and Pearl (2009, §1.4.1, Theorem 1.4.1). The proof applies the chain rule in topological order: $P(X_1, \ldots, X_n) = \prod_i P(X_i \mid X_1, \ldots, X_{i-1})$, then uses the independence of $\varepsilon_i$ to show that conditioning on all predecessors reduces to conditioning on parents only. Each non-parent predecessor's influence on $X_i$ is fully mediated through the parents — its direct contribution enters through the causal mechanism $f_i$, not through $\varepsilon_i$.
+
+**(d) P3 as consequence.** State-local revisability (P3) was originally stated as an independent postulate. The CMC reveals it is a *consequence* of the causal structure under causal sufficiency: since $X_i \perp \text{NonDesc}(X_i) \mid \text{Pa}(X_i)$, updating beliefs about $X_i$ requires only $\text{Pa}(X_i)$ — local revision is automatically correct. No information from the rest of the graph changes the conditional distribution of $X_i$ given its parents. P3 was motivated as an operational requirement (agents *need* local revision for computational tractability, and the persistence condition demands it). The CMC shows the requirement is automatically satisfied by any causally sufficient causal DAG. The two arguments converge from different directions: P3 says local revision is *needed*; the CMC says it is *guaranteed* (under causal sufficiency).
+
+**(e) Connection to edge independence.** The CMC's exogenous independence condition ($\varepsilon_i$ mutually independent) is precisely the **edge-independence assumption** in the AND/OR status propagation ( #strategy-dag). When exogenous noise terms are independent, edge outcomes are conditionally independent given parents, and the AND/OR formulas compute correct probabilities. When they are correlated (causal insufficiency — latent common causes), the AND/OR propagation systematically overestimates success because it treats joint failure probability as the product of marginals. The validity of the Markov factorization and the validity of the independence model are the *same condition*: causal sufficiency of $\Sigma_t$. See #strategy-dag for the full treatment of correlated failure as the primary case.
+
+**Assembling (a)-(e).** P1-P2 establish that $\Sigma_t$ is a causal DAG with probabilistic uncertainty. Under causal sufficiency (exogenous independence), the CMC theorem proves the Markov factorization. P3 (local revisability) follows as a validated consequence. The Markov property is both operationally required (P3) and structurally guaranteed (CMC). When causal sufficiency fails, the Markov factorization is still the agent's *intended* factorization — the one its DAG represents — but it is wrong about the world. The gap between intended and actual factorization manifests as correlated failure and $\hat P_\Sigma$ overestimation, and the fix is structural: add the missing common-cause nodes to restore causal sufficiency.
 
 #### Step 4: P1 + finite horizon implies acyclicity (proved)
 
@@ -112,9 +112,9 @@ This is the strongest piece of the argument. See the dedicated section below.
 
 #### Step 5: Assembly
 
-P1 (directed edges) + P2 (probabilistic) + P3 (Markov condition) + P4 (internal nodes) + finite horizon (acyclicity):
+P1 (directed edges + causal interpretation) + P2 (probabilistic) + causal sufficiency (CMC → Markov factorization) + P4 (internal nodes) + finite horizon (acyclicity):
 
-**The strategy representation must be representable as a directed acyclic graph with probability distributions at each node conditioned on its parents — a Bayesian network.**
+**The strategy representation must be representable as a directed acyclic graph with probability distributions at each node conditioned on its parents — a Bayesian network.** P3 (local revisability) is validated as a consequence of this structure, not required as a premise.
 
 ### Acyclicity Derivation
 
@@ -153,8 +153,8 @@ Each attempt is a distinct node at a distinct time. The apparent cycle is a line
 | Probabilistic uncertainty | Cox's theorem (P2) | Proved |
 | Acyclicity | Temporal ordering + finite horizon (P1) | Proved |
 | Internal structure | Fragility + monitoring (P4, #chain-confidence-decay) | Derived |
-| Markov factorization | Local revisability (P3) + temporal ordering (P1) + causal sufficiency | Conditional — holds for causally sufficient strategies |
-| **DAG with Markov property** | **P1 + P2 + P3 + P4 + causal sufficiency** | **Conditional — causal sufficiency is the remaining assumption** |
+| Markov factorization | Causal Markov Condition theorem (P1 causal interpretation + P2 probability + causal sufficiency) | Proved under causal sufficiency (CMC theorem) |
+| **DAG with Markov property** | **P1 + P2 + causal sufficiency (CMC) + P4** | **Conditional on causal sufficiency — which is testable and repairable** |
 | AND/OR parameterization | Boolean completeness + parsimony | Hypothesis (binary outcomes only) |
 | Single-parameter edges | Parsimony / IB | Formulation choice |
 | Specific node ontology | — | Formulation choice |
@@ -180,15 +180,15 @@ The correct claim is narrow: for a given factorized distribution, DAG and factor
 
 The acyclicity derivation is *exact* — it follows from temporal ordering over a finite horizon via standard order theory. The individual postulates P1, P2, and P4 are each well-grounded (temporal structure, Cox's theorem, and chain fragility respectively).
 
-The P3→Markov step is now *conditional on causal sufficiency* of $\Sigma_t$. The argument has three parts: P3 requires some local neighborhood (locality), P1 identifies parents as the causal neighborhood (directionality), and causal sufficiency ensures parents capture all direct influences (no hidden common causes). Assembling these gives the local Markov property, which Lauritzen (1996, Theorem 3.27) proves equivalent to the factorization property for positive distributions. The causal sufficiency assumption is reasonable for agent-constructed strategies (all nodes are explicit) and fails precisely when the strategy is model-inadequate — the situation #structural-adaptation-necessity addresses.
+The Markov property is now *proved under causal sufficiency* via the Causal Markov Condition theorem (Spirtes, Glymour & Scheines 2000, Theorem 3.4; Pearl 2009, Theorem 1.4.1). The previous sketch argument (P3 requires locality → P1 identifies parents → therefore Markov) has been replaced by a rigorous chain: P1-P2 establish the causal DAG structure, causal sufficiency guarantees exogenous independence, and the CMC theorem proves the factorization. P3 (local revisability) is now a *consequence* of the Markov property, not a premise — the CMC shows that local revision is automatically correct for causally sufficient DAGs, validating P3's operational requirement.
 
-The previous concern about alternative sparse factorizations (factor graphs, message-passing structures) is resolved: P1's directed temporal ordering selects the parent-conditional factorization specifically, because undirected alternatives sacrifice the causal semantics that #strategy-dag requires for interventional reasoning.
+The conditioning on causal sufficiency is the right level of conditionality: it is a property of *strategy quality* (did the agent include all relevant common causes as nodes?), not of agent architecture. It is testable in principle (correlated residuals after convergence indicate missing common causes) and repairable in practice (add the common-cause node). When causal sufficiency fails, the Markov factorization fails, and this manifests as correlated failure and $\hat P_\Sigma$ overestimation ( #strategy-dag). The edge-independence assumption in AND/OR propagation and the causal sufficiency condition for the Markov property are the same condition viewed from different angles.
 
-Max attainable: *exact* for acyclicity (already there). *Conditional* for the full DAG-with-Markov-property claim — conditional on causal sufficiency, which is a property of strategy quality rather than agent architecture. This is an honest upgrade from the previous "sketch" status.
+Max attainable: *exact* for acyclicity (already there). *Derived conditional* for the full DAG-with-Markov-property — the derivation is rigorous (invokes a proved theorem), and the remaining condition (causal sufficiency) is about model quality, not proof quality.
 
-The AND/OR restriction is a *hypothesis* for binary outcomes, grounded in Boolean completeness and parsimony. For non-binary outcomes, it does not apply and richer parameterizations within the strongly motivated graphical structure are needed.
+The AND/OR restriction is a *hypothesis* for binary outcomes, grounded in Boolean completeness and parsimony. For non-binary outcomes, it does not apply and richer parameterizations within the derived graphical structure are needed.
 
-The analogy to Cox's theorem — consistency axioms force probability; operational postulates strongly motivate graphical structure — is suggestive but not established. Cox's theorem has a formal proof; this argument has a derivation sketch with one step that needs tightening. The analogy is worth stating as motivation but should not be relied on as evidence.
+The parallel to Cox's theorem is now tighter than previously stated: Cox's theorem proves that consistency axioms force probability; the CMC theorem proves that causal structure under sufficiency forces the Markov factorization. Both are formal results, not analogies. The remaining gap: Cox's axioms are necessary and sufficient for probability; ACT's postulates are sufficient for DAG+Markov structure, but the necessity direction (could a non-DAG structure satisfy P1-P4?) is not established. For practical purposes this gap is unimportant — the proved sufficiency gives a rigorous foundation for the strategy representation.
 
 ## Discussion
 
@@ -200,8 +200,8 @@ The analogy to Cox's theorem — consistency axioms force probability; operation
 
 ## Working Notes
 
-- **P3 implies Markov tightening.** The critical open question. The argument that local revisability requires the Markov condition is plausible but not proved. The specific gap: other sparse factorizations (message-passing on factor graphs, junction tree decompositions) also support local computation. Does P3 specifically force parent-conditional independence, or does it force a weaker structural property that the Markov condition happens to satisfy? The answer likely depends on how "local" is formalized — if it means "conditioned on direct causes only," the Markov condition follows by definition; if it means "conditioned on a small neighborhood," broader structures qualify.
+- **P3→Markov: resolved.** The previous gap (P3 could be satisfied by non-Markov sparse factorizations) is resolved by grounding the Markov property in the CMC theorem rather than in P3. The CMC proves the factorization from the causal structure (P1) and causal sufficiency (exogenous independence), making P3 a consequence rather than a premise. The alternative-factorization concern (factor graphs, junction trees) is now moot: the Markov property follows from the causal semantics, not from locality. P3 remains valuable as an *operational requirement* that the CMC-guaranteed factorization satisfies.
 - **Parsimony theorem for AND/OR.** Is there a formal result that AND/OR (noisy-AND + noisy-OR) is the unique $O(k)$-parameter complete basis for binary nodes? This would strengthen #and-or-scope from formulation choice to derived. The Boolean completeness half is standard; the uniqueness-under-parsimony half is not established.
 - **Non-binary outcome analogs.** For continuous or multi-valued outcomes, the natural analogs of AND/OR might be min/max or additive/multiplicative combination. Is there a completeness result for these? The current argument applies cleanly only to binary outcomes.
-- **Environmental common causes.** Multiple strategy steps may share unmodeled environmental dependencies (weather affecting both supply chain and demand). This violates the Markov condition within $\Sigma_t$ even though the agent chose all the nodes, because the agent did not model the common cause as a node. Addressing this requires either adding latent variables to the DAG or acknowledging that the independent-edge calculations systematically overestimate confidence (consistent with the correlated-failure note in #strategy-dag).
-- **If P3 implies Markov is tightened to a full proof**, #strategy-dag could potentially be promoted from Definition to Derived — the DAG structure would be forced rather than chosen. Until then, the definition stands and this segment provides the best available structural motivation.
+- **Environmental common causes and the CMC.** The CMC proof makes the failure mode precise: when unmodeled environmental dependencies (weather, shared infrastructure, market conditions) affect multiple strategy steps, the exogenous noise terms $\varepsilon_i$ become correlated, causal sufficiency fails, and the Markov factorization is violated. The consequence is exactly the correlated-failure phenomenon in #strategy-dag: $\hat P_\Sigma$ overestimates success because it treats joint failure probability as the product of marginals. The fix is structural: add the common-cause as a condition node in $\Sigma_t$, restoring causal sufficiency and the Markov property for the augmented DAG. This connects the graph-theoretic result (Markov property) to the strategy-layer result (independence model validity) through a single condition: causal sufficiency.
+- **Promotion potential.** With the CMC-based proof, #strategy-dag's DAG structure claim is now strongly grounded: acyclicity is proved, the Markov property is proved under causal sufficiency. The remaining "definition" character of strategy-dag is about the *parameterization* (AND/OR, single-parameter edges), which is a formulation choice within the proved graphical structure.

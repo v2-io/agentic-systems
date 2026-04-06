@@ -398,7 +398,7 @@ The time-varying $\alpha_\Sigma$ issue remains: since $n_k$ increases with each 
 1. *General DAG topology.* Only linear AND-chains and isolated OR-nodes are verified. Mixed AND/OR DAGs may exhibit interaction effects between evidence starvation and exploration gating.
 2. *Continuous outcomes.* The Beta-Bernoulli model gives conjugate, closed-form updates. Non-conjugate cases (continuous signals, partial observability) require approximate inference, and the sector condition must be verified for the approximation.
 3. *Modified sector condition for biased correction.* The $O(1/n)$ bias in the unobservable case (B.3a) could be accommodated by a sector-condition variant tolerating asymptotically vanishing bias, potentially recovering per-edge results.
-4. *Correlated edges.* All cases assume independent edges. Shared infrastructure or common-mode failures would introduce additional coupling.
+4. *Correlated edges (L1/L2 scope).* All cases operate at L0 of the Correlation Hierarchy ( #strategy-dag) — independent edges under causal sufficiency. For L1 (augmented DAGs with common-cause nodes), the same propositions apply to the augmented graph because the augmented DAG is itself L0-compliant. The open question is whether the additional depth and structure introduced by common-cause nodes materially affects the sector parameter $\alpha_\Sigma$ — initial expectation is that it does not (common-cause nodes are condition nodes, not AND/OR combiners, so they add observable intermediates without changing the combination structure).
 5. *Adaptive exploration.* Proposition B.4 uses fixed $\varepsilon$. Adaptive strategies (UCB, Thompson sampling) allocate exploration based on current uncertainty and should yield tighter sector bounds.
 
 

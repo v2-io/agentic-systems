@@ -109,7 +109,9 @@ See `WORKBENCH.md` for the full development state. Summary:
 - Strategic tempo $\mathcal{T}_\Sigma$ (defined, verified against four topologies)
 - Cognitive cost of $\Sigma_t$ (IB/MDL framework, max useful depth $d^\ast$)
 - Three-way exploit/explore/deliberate: extended deliberation threshold derived; two-stage decomposition and dominance regimes are discussion-grade (simulation shows unified objective outperforms two-stage; deliberation rarely chosen by oracle)
-- P3→Markov step in graph uniqueness (conditional on causal sufficiency)
+- P3→Markov proved via Causal Markov Condition theorem (conditional on causal sufficiency; P3 is now consequence, not premise)
+- Correlation Hierarchy (L0/L1/L2) in strategy-dag — correlated failure first-class, independence as tractable special case
+- Convention hierarchy (C1/C2/C3) in value-object with monotonicity result — diagnostics scale from local heuristic to global
 
 ### Open
 - Edge identifiability conditions (resolved in software, open in general)
