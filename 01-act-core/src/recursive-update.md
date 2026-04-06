@@ -6,7 +6,7 @@ depends:
   - agent-model
   - event-driven-dynamics
   - recursive-update-derivation
-stage: deps-verified
+stage: claims-verified
 ---
 
 # Derived: Recursive Update

@@ -6,7 +6,7 @@ depends:
   - agent-environment
   - observation-function
   - action-transition
-stage: deps-verified
+stage: claims-verified
 ---
 
 # Scope: Scope Condition

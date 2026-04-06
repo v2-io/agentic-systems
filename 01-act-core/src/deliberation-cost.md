@@ -7,7 +7,7 @@ depends:
   - update-gain
   - adaptive-tempo
   - event-driven-dynamics
-stage: deps-verified
+stage: claims-verified
 ---
 
 # Derived: Deliberation Cost

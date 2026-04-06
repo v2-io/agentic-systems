@@ -6,7 +6,7 @@ depends:
   - agent-model
   - scope-condition
   - recursive-update
-stage: deps-verified
+stage: claims-verified
 ---
 
 # Formulation: Complete Agent State
@@ -29,23 +29,13 @@ Section I is the special case $X_t = (M_t, \emptyset)$: adaptive systems without
 
 $$X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$$
 
-This decomposes into component updates when the epistemic update is goal-blind ( #directed-separation):
-
-*[Derived (from recursive-update + directed-separation)]*
-
-$$M_{\tau^+} = f_M(M_{\tau^-}, e_\tau)$$
-
-$$G_{\tau^+} = f_G(G_{\tau^-}, M_{\tau^+}, e_\tau)$$
-
-Between events: $\dot{M} = g_M(M)$, $\dot{G} = g_G(G, M)$.
-
-The asymmetry is structural: $f_M$ has no $G_t$ argument; $f_G$ depends on $M_{\tau^+}$ (the *post-update* epistemic state — the agent revises its goals in light of its revised understanding of reality, not the other way around).
+The general update $f_X$ operates on the full state. Whether and how $f_X$ decomposes into separate epistemic and purposeful updates — and the conditions under which the epistemic update is independent of $G_t$ — is the subject of #directed-separation.
 
 **Policy.** Action couples all substates:
 
 $$a_t = \pi(M_t, G_t)$$
 
-This is the single point of coupling between epistemic and purposeful dynamics. The update functions are separated; the action is not.
+Action is the single point where epistemic and purposeful states interact. The policy depends on both what the agent knows ($M_t$) and what it wants ($G_t$).
 
 ## Epistemic Status
 
