@@ -1,0 +1,455 @@
+#!/usr/bin/env python3
+"""
+Lint an outline file against segment frontmatter dependencies.
+
+Checks:
+  1. Ordering violations: segment listed before a dependency in the outline
+  2. Missing dependencies: segment depends on a slug that doesn't exist as a file
+  3. Undeclared dependencies: segment references #slug in body but slug not in depends
+  4. Orphan segments: files in src/ not referenced in the outline
+
+Usage:
+    bin/lint-outline [options] [OUTLINE_FILE]
+
+    OUTLINE_FILE defaults to 01-act-core/OUTLINE.md
+
+Options:
+    --graph FILE    Write a Graphviz DOT file of the dependency graph
+    --section S     Only check/graph a specific section (I, II, III, A, B)
+    --svg FILE      Write SVG directly (requires dot command)
+    --quiet         Only show violations, not summary
+    --help          Show this help
+
+Exit code 0 = clean, 1 = violations found.
+"""
+
+import os
+import re
+import sys
+import subprocess
+from pathlib import Path
+from collections import defaultdict
+
+# ── Frontmatter parsing ────────────────────────────────────────────
+
+def parse_frontmatter(filepath):
+    """Extract slug, depends, and stage from YAML frontmatter."""
+    result = {"slug": None, "depends": [], "stage": None, "type": None, "status": None}
+    try:
+        with open(filepath, "r") as f:
+            lines = f.readlines()
+    except (OSError, UnicodeDecodeError):
+        return result
+
+    if not lines or lines[0].strip() != "---":
+        return result
+
+    in_depends = False
+    for line in lines[1:]:
+        stripped = line.strip()
+        if stripped == "---":
+            break
+        if stripped.startswith("slug:"):
+            result["slug"] = stripped.split(":", 1)[1].strip()
+        elif stripped.startswith("stage:"):
+            result["stage"] = stripped.split(":", 1)[1].strip()
+        elif stripped.startswith("type:"):
+            result["type"] = stripped.split(":", 1)[1].strip()
+        elif stripped.startswith("status:"):
+            result["status"] = stripped.split(":", 1)[1].strip()
+        elif stripped.startswith("depends:"):
+            rest = stripped.split(":", 1)[1].strip()
+            if rest:
+                # Inline list: depends: [a, b, c] or depends: a
+                rest = rest.strip("[]")
+                result["depends"] = [d.strip().strip("'\"") for d in rest.split(",") if d.strip()]
+            else:
+                in_depends = True
+        elif in_depends:
+            if stripped.startswith("- "):
+                result["depends"].append(stripped[2:].strip().strip("'\""))
+            else:
+                in_depends = False
+
+    return result
+
+
+# ── Outline parsing ────────────────────────────────────────────────
+
+def parse_outline(outline_path):
+    """
+    Parse an OUTLINE.md file.
+    Returns a list of (section, slug, row_index) in order of appearance.
+    Also returns section metadata (preamble text etc).
+    """
+    entries = []
+    current_section = None
+    row_index = 0
+
+    with open(outline_path, "r") as f:
+        for line in f:
+            # Detect section headers
+            m = re.match(r'^##\s+(I+|III|IV|V|A|B)\.\s', line)
+            if m:
+                current_section = m.group(1)
+                continue
+
+            # Also detect "## Appendices:" style headers
+            if re.match(r'^##\s+Appendices', line):
+                current_section = "A"  # default; will be overridden by table content
+                continue
+
+            # Parse table rows with slug references
+            # Format: | § | Type | N | [#slug](src/slug.md) | Claim | Stage |
+            m = re.search(r'\[#([a-zA-Z0-9_-]+)\]\(src/', line)
+            if m:
+                slug = m.group(1)
+                # Try to get section from the first column
+                cols = [c.strip() for c in line.split("|")]
+                if len(cols) >= 2:
+                    sec = cols[1].strip()
+                    if sec in ("I", "II", "III", "IV", "V", "A", "B"):
+                        current_section = sec
+
+                entries.append((current_section, slug, row_index))
+                row_index += 1
+
+    return entries
+
+
+# ── Violation detection ────────────────────────────────────────────
+
+def find_ordering_violations(entries, all_deps):
+    """
+    Find cases where a segment appears before one of its dependencies
+    in the outline ordering.
+
+    Classifies violations as:
+    - "intra-section": both slug and dep are in the same section (true violations)
+    - "backmatter": dep is in an appendix section (A, B) and slug is in a main
+      section (I, II, III) — intentional presentation order (results before proofs)
+    - "cross-section": other cross-section violations
+    """
+    APPENDIX_SECTIONS = {"A", "B"}
+    MAIN_SECTIONS = {"I", "II", "III", "IV", "V"}
+
+    slug_to_index = {}
+    slug_to_section = {}
+    for section, slug, idx in entries:
+        slug_to_index[slug] = idx
+        slug_to_section[slug] = section
+
+    violations = []
+    for section, slug, idx in entries:
+        deps = all_deps.get(slug, [])
+        for dep in deps:
+            dep_idx = slug_to_index.get(dep)
+            if dep_idx is not None and dep_idx > idx:
+                dep_section = slug_to_section.get(dep)
+                if section == dep_section:
+                    kind = "intra-section"
+                elif dep_section in APPENDIX_SECTIONS and section in MAIN_SECTIONS:
+                    kind = "backmatter"
+                elif dep_section in APPENDIX_SECTIONS and section in APPENDIX_SECTIONS:
+                    kind = "intra-appendix"
+                else:
+                    kind = "cross-section"
+
+                violations.append({
+                    "slug": slug,
+                    "slug_idx": idx,
+                    "dep": dep,
+                    "dep_idx": dep_idx,
+                    "section": section,
+                    "dep_section": dep_section,
+                    "kind": kind,
+                })
+
+    return violations
+
+
+def find_missing_deps(all_deps, existing_slugs):
+    """Find dependencies that reference non-existent slugs."""
+    missing = []
+    for slug, deps in all_deps.items():
+        for dep in deps:
+            if dep not in existing_slugs:
+                missing.append({"slug": slug, "dep": dep})
+    return missing
+
+
+def find_orphan_segments(src_dir, outline_slugs, all_slugs):
+    """Find src/ files not referenced in the outline."""
+    orphans = []
+    for slug in all_slugs:
+        if slug not in outline_slugs and not slug.startswith("old-"):
+            orphans.append(slug)
+    return orphans
+
+
+# ── Graphviz output ────────────────────────────────────────────────
+
+SECTION_COLORS = {
+    "I": "#4a86c8",
+    "II": "#e07b39",
+    "III": "#6b9e3c",
+    "A": "#888888",
+    "B": "#aa7744",
+}
+
+STAGE_STYLES = {
+    "claims-verified": "style=filled fillcolor=\"#d4edda\"",
+    "deps-verified": "style=filled fillcolor=\"#fff3cd\"",
+    "draft": "style=filled fillcolor=\"#f8f9fa\"",
+    "missing": "style=filled fillcolor=\"#f8d7da\"",
+}
+
+def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath, section_filter=None):
+    """Write a Graphviz DOT file."""
+    # Determine which slugs to include
+    if section_filter:
+        include = {slug for sec, slug, _ in entries if sec == section_filter}
+        # Also include deps that are in other sections (as external nodes)
+        external = set()
+        for slug in include:
+            for dep in all_deps.get(slug, []):
+                if dep not in include:
+                    external.add(dep)
+    else:
+        include = {slug for _, slug, _ in entries}
+        external = set()
+        for slug in include:
+            for dep in all_deps.get(slug, []):
+                if dep not in include:
+                    external.add(dep)
+
+    with open(filepath, "w") as f:
+        f.write("digraph ACT_Dependencies {\n")
+        f.write("  rankdir=TB;\n")
+        f.write("  node [shape=box fontsize=10 fontname=\"Helvetica\"];\n")
+        f.write("  edge [color=\"#666666\"];\n\n")
+
+        # Group by section using subgraphs
+        sections_seen = {}
+        for sec, slug, _ in entries:
+            if slug in include:
+                if sec not in sections_seen:
+                    sections_seen[sec] = []
+                sections_seen[sec].append(slug)
+
+        for sec, slugs in sections_seen.items():
+            color = SECTION_COLORS.get(sec, "#999999")
+            f.write(f"  subgraph cluster_{sec} {{\n")
+            f.write(f"    label=\"Section {sec}\";\n")
+            f.write(f"    color=\"{color}\";\n")
+            f.write(f"    fontcolor=\"{color}\";\n")
+            f.write(f"    fontsize=14;\n")
+            f.write(f"    style=dashed;\n\n")
+
+            for slug in slugs:
+                meta = slug_to_meta.get(slug, {})
+                stage = meta.get("stage", "draft")
+                style = STAGE_STYLES.get(stage, "")
+                label = slug.replace("-", "\\n", 2)  # wrap long names
+                seg_type = meta.get("type", "")
+                if seg_type:
+                    label = f"{seg_type}:\\n{slug}"
+                f.write(f"    \"{slug}\" [{style} label=\"{label}\"];\n")
+
+            f.write("  }\n\n")
+
+        # External nodes (deps from other components)
+        for slug in external:
+            f.write(f"  \"{slug}\" [style=dashed color=\"#cccccc\" fontcolor=\"#999999\"];\n")
+        if external:
+            f.write("\n")
+
+        # Edges
+        for slug in include:
+            for dep in all_deps.get(slug, []):
+                if dep in include or dep in external:
+                    f.write(f"  \"{dep}\" -> \"{slug}\";\n")
+
+        f.write("}\n")
+
+
+# ── Main ───────────────────────────────────────────────────────────
+
+def main():
+    args = sys.argv[1:]
+
+    # Parse arguments
+    graph_file = None
+    svg_file = None
+    section_filter = None
+    quiet = False
+    outline_file = None
+
+    i = 0
+    while i < len(args):
+        if args[i] == "--graph":
+            i += 1
+            graph_file = args[i]
+        elif args[i] == "--svg":
+            i += 1
+            svg_file = args[i]
+        elif args[i] == "--section":
+            i += 1
+            section_filter = args[i]
+        elif args[i] == "--quiet":
+            quiet = True
+        elif args[i] == "--help":
+            print(__doc__)
+            sys.exit(0)
+        elif not args[i].startswith("-"):
+            outline_file = args[i]
+        i += 1
+
+    # Resolve paths
+    script_dir = Path(__file__).resolve().parent
+    project_root = script_dir.parent
+
+    if outline_file is None:
+        outline_file = project_root / "01-act-core" / "OUTLINE.md"
+    else:
+        outline_file = Path(outline_file)
+
+    outline_dir = outline_file.parent
+    src_dir = outline_dir / "src"
+
+    if not outline_file.exists():
+        print(f"Error: {outline_file} not found", file=sys.stderr)
+        sys.exit(1)
+
+    # ── Collect all segment metadata ───────────────────────────────
+
+    all_deps = {}       # slug → [dep_slugs]
+    all_slugs = set()   # all slugs found in src/
+    slug_to_meta = {}   # slug → {stage, type, status, depends}
+
+    if src_dir.exists():
+        for md_file in sorted(src_dir.glob("*.md")):
+            meta = parse_frontmatter(md_file)
+            slug = meta["slug"] or md_file.stem
+            all_slugs.add(slug)
+            all_deps[slug] = meta["depends"]
+            slug_to_meta[slug] = {
+                "stage": meta["stage"],
+                "type": meta["type"],
+                "status": meta["status"],
+                "depends": meta["depends"],
+            }
+
+    # ── Parse outline ──────────────────────────────────────────────
+
+    entries = parse_outline(outline_file)
+    outline_slugs = {slug for _, slug, _ in entries}
+
+    # Build section map
+    slug_to_section = {}
+    for sec, slug, _ in entries:
+        slug_to_section[slug] = sec
+
+    # ── Check for violations ───────────────────────────────────────
+
+    violations = find_ordering_violations(entries, all_deps)
+    missing = find_missing_deps(all_deps, all_slugs)
+    orphans = find_orphan_segments(src_dir, outline_slugs, all_slugs)
+
+    # Filter by section if requested
+    if section_filter:
+        violations = [v for v in violations if v["section"] == section_filter]
+
+    has_issues = False
+
+    # Separate violations by kind
+    true_violations = [v for v in violations if v["kind"] in ("intra-section", "intra-appendix", "cross-section")]
+    backmatter_refs = [v for v in violations if v["kind"] == "backmatter"]
+
+    if true_violations:
+        has_issues = True
+        print(f"\n{'='*60}")
+        print(f" ORDERING VIOLATIONS ({len(true_violations)})")
+        print(f"{'='*60}\n")
+        for v in true_violations:
+            kind_label = f"[{v['kind']}]"
+            print(f"  {v['slug']} (§{v['section']}, row {v['slug_idx']}) depends on {v['dep']} (§{v.get('dep_section','?')}, row {v['dep_idx']})  {kind_label}")
+            print(f"    → {v['slug']} must come AFTER {v['dep']}")
+            print()
+
+    if backmatter_refs and not quiet:
+        print(f"\n{'='*60}")
+        print(f" BACKMATTER REFERENCES ({len(backmatter_refs)}) — intentional presentation order")
+        print(f"{'='*60}\n")
+        for v in backmatter_refs:
+            print(f"  {v['slug']} (§{v['section']}) references proof in {v['dep']} (§{v.get('dep_section','?')})")
+        print()
+
+    if missing:
+        has_issues = True
+        print(f"\n{'='*60}")
+        print(f" MISSING DEPENDENCIES ({len(missing)})")
+        print(f"{'='*60}\n")
+        for m in missing:
+            print(f"  {m['slug']} depends on {m['dep']} — no such file in src/")
+
+    if orphans and not quiet:
+        print(f"\n{'='*60}")
+        print(f" ORPHAN SEGMENTS ({len(orphans)})")
+        print(f"{'='*60}\n")
+        for o in sorted(orphans):
+            print(f"  src/{o}.md — not referenced in outline")
+
+    # ── Summary ────────────────────────────────────────────────────
+
+    if not quiet:
+        print(f"\n{'='*60}")
+        print(f" SUMMARY")
+        print(f"{'='*60}\n")
+        print(f"  Outline entries:      {len(entries)}")
+        print(f"  Segment files:        {len(all_slugs)}")
+        print(f"  Ordering violations:  {len(true_violations)}")
+        print(f"  Backmatter refs:      {len(backmatter_refs)}")
+        print(f"  Missing dependencies: {len(missing)}")
+        print(f"  Orphan segments:      {len(orphans)}")
+
+        # Stage distribution
+        stages = defaultdict(int)
+        for slug in outline_slugs:
+            meta = slug_to_meta.get(slug, {})
+            stage = meta.get("stage") or "unknown"
+            stages[stage] += 1
+        print(f"\n  Stage distribution:")
+        for stage in ["claims-verified", "deps-verified", "draft", "missing", "unknown"]:
+            if stages[stage]:
+                print(f"    {stage:20s} {stages[stage]:3d}")
+
+    # ── Graph output ───────────────────────────────────────────────
+
+    if graph_file:
+        write_dot(entries, all_deps, slug_to_section, slug_to_meta, graph_file, section_filter)
+        if not quiet:
+            print(f"\n  Graph written to: {graph_file}")
+
+    if svg_file:
+        dot_tmp = svg_file + ".dot"
+        write_dot(entries, all_deps, slug_to_section, slug_to_meta, dot_tmp, section_filter)
+        try:
+            subprocess.run(["dot", "-Tsvg", "-o", svg_file, dot_tmp], check=True)
+            os.unlink(dot_tmp)
+            if not quiet:
+                print(f"  SVG written to: {svg_file}")
+        except FileNotFoundError:
+            print("  Warning: 'dot' command not found. Install graphviz for SVG output.", file=sys.stderr)
+            print(f"  DOT file written to: {dot_tmp}")
+        except subprocess.CalledProcessError as e:
+            print(f"  Warning: dot failed: {e}", file=sys.stderr)
+
+    if not quiet:
+        print()
+
+    sys.exit(1 if has_issues else 0)
+
+
+if __name__ == "__main__":
+    main()

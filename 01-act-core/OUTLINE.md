@@ -70,6 +70,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | --- | --------------- | --- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----- |
 | II  | Definition      |     | [#agent-spectrum](src/agent-spectrum.md)                                               | ±model × ±objective quadrants                                    | deps-verified |
 | II  | Formulation     |     | [#complete-agent-state](src/complete-agent-state.md)                                   | $X_t = (M_t, G_t)$                                               | deps-verified |
+| II  | Derived + Scope |     | [#directed-separation](src/directed-separation.md)                                     | Epistemic update is goal-blind                                   | draft |
 | II  | Formulation     |     | [#objective-functional](src/objective-functional.md)                                   | $O_t$ parametrizes value                                         | deps-verified |
 | II  | Definition      |     | [#value-object](src/value-object.md)                                                   | Horizon/policy-conditioned value                                 | deps-verified |
 | II  | Definition      |     | [#strategy-dimension](src/strategy-dimension.md)                                       | $G_t = (O_t, \Sigma_t)$ split                                    | deps-verified |
@@ -81,7 +82,6 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | II  | Derived         |     | [#chain-confidence-decay](src/chain-confidence-decay.md)                               | Log-confidence additive in depth                                 | claims-verified |
 | II  | Scope           |     | [#and-or-scope](src/and-or-scope.md)                                                   | Conjunctive/disjunctive scope                                    | draft |
 | II  | Definition      |     | [#strategy-dag](src/strategy-dag.md)                                                   | Strategy as probabilistic DAG                                    | draft |
-| II  | Derived + Scope |     | [#directed-separation](src/directed-separation.md)                                     | Epistemic update is goal-blind                                   | draft |
 | II  | Definition      |     | [#satisfaction-gap](src/satisfaction-gap.md)                                           | Ideal vs best achievable                                         | claims-verified |
 | II  | Definition      |     | [#control-regret](src/control-regret.md)                                               | Best achievable vs current                                       | claims-verified |
 | II  | Definition      |     | [#strategic-calibration](src/strategic-calibration.md)                                 | Edge residuals ( #credit-assignment-boundary)                    | draft |
@@ -106,7 +106,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 *Correlated observations as default; independence as the special case requiring justification. Adversarial dynamics are one end of a teleological unity spectrum, not a separate theory.*
 
-*Two sources: the simulation-validated adversarial dynamics from TFT (TF-11/Appendix F, track-b simulations), and the composition spike (`msc/spike-agent-composition.md`) which derives the requirement for composition consistency from the scope condition's level-independence.*
+*Two sources: the simulation-validated adversarial dynamics from TFT (TF-11/Appendix F, track-b simulations), and the composition spike (`msc/spike-agent-composition.md`) which derives the requirement for composition consistency from the scope condition's level-independence. A third source — Miller's Coevolving Automata Model (Ex Machina, 2022) — provides constructive mechanisms for composition dynamics: how composites form, undergo phase transitions, and restructure through neutral drift and niche creation. The bridge analysis is in `msc/spike-miller-act-bridge.md`.*
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
@@ -117,14 +117,21 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | III | Discussion | | [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | draft |
 | III | Definition + Discussion | | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | draft |
 | III | Hypothesis | | [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | draft |
-| III | Derived | | [#team-persistence](src/team-persistence.md) | Composite persistence condition | draft |
-| III | Result | | [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | draft |
 | III | Hypothesis | | [#communication-gain](src/communication-gain.md) | Trust-weighted update gain for inter-agent channels | draft |
+| III | Derived | | [#team-persistence](src/team-persistence.md) | Composite persistence condition | draft |
 | III | Derived | | [#adversarial-destabilization](src/adversarial-destabilization.md) | Inside opponent's loop; includes effects spiral corollary | draft |
+| III | Result | | [#adversarial-tempo-advantage](src/adversarial-tempo-advantage.md) | Superlinear tempo advantage | draft |
 | | --GAP-- | | | Which strategy edges are most valuable to attack | |
 | III | Observation | | [#adversarial-exponent-regimes](src/adversarial-exponent-regimes.md) | $\alpha = 2, 3/2, \text{or } {\sim}1$ | draft |
 | III | Observation | | [#observation-gates-advantage](src/observation-gates-advantage.md) | Obs noise gates advantage | draft |
 | III | Result | | [#per-dimension-persistence](src/per-dimension-persistence.md) | Weak dimension is bottleneck | draft |
+| | | | | | |
+| | *— Composition Dynamics (Miller bridge) —* | | | *Source: `msc/spike-miller-act-bridge.md` §7* | |
+| | --GAP-- | | | Latent structural diversity: variation in correction architectures invisible to persistence analysis under current conditions, consequential under regime change | |
+| | --GAP-- | | | Endogenous coupling: γ as function of population composition, not exogenous parameter; coupling emergence threshold | |
+| | --GAP-- | | | Composition transition motif: epochal stability → latent diversification → niche emergence → cascading restructuring → re-equilibration (Miller's 5-phase pattern in ACT terms) | |
+| | --GAP-- | | | Computational thresholds for social behavior: minimum agent complexity and interaction depth for composition dynamics (grounds #strategy-complexity-cost) | |
+| | --GAP-- | | | Communication as transitional phenomenon: communication gain most load-bearing during regime transitions, wanes during stable epochs | |
 
 
 ---
@@ -139,10 +146,10 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | A   | Derivation |     | [#gain-sector-derivation](src/gain-sector-derivation.md)               | Gain-sector bridge proofs: Kalman, gradient equivalence, verification | deps-verified |
 | A   | Derivation |     | [#recursive-update-derivation](src/recursive-update-derivation.md)     | Uniqueness derivation via three constraints + counterexamples         | claims-verified |
 | A   | Sketch     |     | [#multi-timescale-stability](src/multi-timescale-stability.md)         | N-timescale singular perturbation sketch                              | draft   |
+| A   | Derivation |     | [#discrete-sector-condition](src/discrete-sector-condition.md)         | Discrete-time Props DA.1, DA.1S, DA.2; fluid limit; GA-5 closed       | draft   |
 | A   | Detail     |     | [#linear-ode-approximation](src/linear-ode-approximation.md)           | Pedagogical linear mismatch ODE                                       | draft   |
 | A   | Derivation |     | [#graph-structure-uniqueness](src/graph-structure-uniqueness.md)       | 4 postulates + causal sufficiency → DAG with Markov property (CMC theorem)  | draft   |
-| A   | Derivation |     | [#strategic-dynamics-derivation](src/strategic-dynamics-derivation.md) | Sector condition verification for strategy edges (4 cases)            | draft   |
-| A   | Derivation |     | [#discrete-sector-condition](src/discrete-sector-condition.md)         | Discrete-time Props DA.1, DA.1S, DA.2; fluid limit; GA-5 closed       | draft   |
+| A   | Derivation |     | [#strategic-dynamics-derivation](src/strategic-dynamics-derivation.md) | Sector condition verification for strategy edges (5 cases + bridge)   | draft   |
 | A   | Detail     |     | [#simulation-results](src/simulation-results.md)                       | 6 variants validating claims                                          | draft   |
 
 
@@ -159,3 +166,4 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | B   | Worked example |     | [#worked-example-bandit](src/worked-example-bandit.md) | End-to-end RL bandit instantiation (approximate) | draft |
 | B   | Worked example |     | [#worked-example-strategy](src/worked-example-strategy.md) | Section II strategy DAG instantiation (3-arm bandit) | draft |
 | B   | Worked example |     | [#worked-example-L1](src/worked-example-L1.md) | L1 augmented DAG: common-cause node, sector condition, L0/L1 comparison | draft |
+| B   | Worked example |     | [#worked-example-cam](src/worked-example-cam.md) | Coevolving automata (Miller 2022): ACT ↔ Moore machine mapping, meta-machine as ε*=0 composition, simplest adaptive agent | missing |
