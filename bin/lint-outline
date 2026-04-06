@@ -285,8 +285,11 @@ def _short_label(slug, seg_type=None):
     return "\\n".join(lines)
 
 
-def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath, section_filter=None):
+def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath,
+              section_filter=None, exclude_sections=None):
     """Write a Graphviz DOT file."""
+    exclude_sections = set(exclude_sections or [])
+
     # Determine which slugs to include
     if section_filter:
         include = {slug for sec, slug, _ in entries if sec == section_filter}
@@ -298,7 +301,7 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath, sectio
                     has_external_deps.add(slug)
         external = set()  # empty — don't render external nodes in section views
     else:
-        include = {slug for _, slug, _ in entries}
+        include = {slug for sec, slug, _ in entries if sec not in exclude_sections}
         has_external_deps = set()
         external = set()
         for slug in include:
@@ -586,16 +589,16 @@ def main():
             print(f"\n  Graph written to: {graph_file}")
 
     if svg_file:
-        dot_tmp = svg_file + ".dot"
-        write_dot(entries, all_deps, slug_to_section, slug_to_meta, dot_tmp, section_filter)
+        dot_path = str(Path(svg_file).with_suffix(".dot"))
+        write_dot(entries, all_deps, slug_to_section, slug_to_meta, dot_path, section_filter)
         try:
-            subprocess.run(["dot", "-Tsvg", "-o", svg_file, dot_tmp], check=True)
-            os.unlink(dot_tmp)
+            subprocess.run(["dot", "-Tsvg", "-o", svg_file, dot_path], check=True)
             if not quiet:
                 print(f"  SVG written to: {svg_file}")
+                print(f"  DOT written to: {dot_path}")
         except FileNotFoundError:
             print("  Warning: 'dot' command not found. Install graphviz for SVG output.", file=sys.stderr)
-            print(f"  DOT file written to: {dot_tmp}")
+            print(f"  DOT file written to: {dot_path}")
         except subprocess.CalledProcessError as e:
             print(f"  Warning: dot failed: {e}", file=sys.stderr)
 
@@ -605,20 +608,20 @@ def main():
         img_dir = outline_dir / "src" / "img"
         img_dir.mkdir(exist_ok=True)
 
+        # (section_filter, exclude_sections, filename, description)
         diagram_specs = [
-            (None, "dep-graph-full.svg", "full dependency graph"),
-            ("I", "dep-graph-section-I.svg", "Section I"),
-            ("II", "dep-graph-section-II.svg", "Section II"),
-            ("III", "dep-graph-section-III.svg", "Section III"),
+            (None, ["B"], "dep-graph-full.svg", "full dependency graph"),
+            ("I", None, "dep-graph-section-I.svg", "Section I"),
+            ("II", None, "dep-graph-section-II.svg", "Section II"),
+            ("III", None, "dep-graph-section-III.svg", "Section III"),
         ]
 
-        for sec, filename, desc in diagram_specs:
+        for sec, excl, filename, desc in diagram_specs:
             svg_path = img_dir / filename
-            dot_tmp = str(svg_path) + ".dot"
-            write_dot(entries, all_deps, slug_to_section, slug_to_meta, dot_tmp, sec)
+            dot_path = svg_path.with_suffix(".dot")
+            write_dot(entries, all_deps, slug_to_section, slug_to_meta, str(dot_path), sec, excl)
             try:
-                subprocess.run(["dot", "-Tsvg", "-o", str(svg_path), dot_tmp], check=True)
-                os.unlink(dot_tmp)
+                subprocess.run(["dot", "-Tsvg", "-o", str(svg_path), str(dot_path)], check=True)
                 if not quiet:
                     print(f"  {desc}: {svg_path}")
             except FileNotFoundError:
