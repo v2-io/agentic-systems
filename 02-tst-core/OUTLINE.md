@@ -6,7 +6,7 @@ Software development as an agentic domain — grounded in ACT's formal machinery
 
 See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATION.md`](../NOTATION.md) for symbols.
 
-**Relationship to ACT:** TST segments reference ACT concepts by slug (e.g., `#temporal-optimality`, `#persistence-condition`). The temporal optimality postulate now has full backing: tempo advantage, persistence conditions, and gain dynamics explain WHY time-optimal development practices work. The dependency is one-directional: TST depends on ACT, not the reverse.
+**Relationship to ACT:** TST segments reference ACT concepts by slug (e.g., `#persistence-condition`, `#adaptive-tempo`). The temporal optimality postulate — TST's foundational normative principle — is grounded by ACT's descriptive results: tempo advantage, persistence conditions, and gain dynamics explain WHY time-optimal development practices work. The dependency is one-directional: TST depends on ACT, not the reverse. `#temporal-optimality` lives in TST (where it is normatively load-bearing) and is referenced parenthetically from ACT (where the persistence condition provides the descriptive grounding).
 
 
 ---
@@ -17,6 +17,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
+| S | Postulate | | [#temporal-optimality](src/temporal-optimality.md) | Least-time is optimal (given equivalent outcomes) | deps-verified |
 | S | Scope | | [#software-scope](src/software-scope.md) | Systems with $P(\text{change}) \gt \varepsilon$ | draft |
 | S | Observation | | [#software-epistemic-properties](src/software-epistemic-properties.md) | Software's 6 unique properties | missing |
 | S | Definition | | [#feature-definition](src/feature-definition.md) | Unit of coherent change | draft |

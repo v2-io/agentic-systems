@@ -21,10 +21,9 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 
 ## Segment Status
 
-### Written — Section I (27 segments, all written)
+### Written — Section I (26 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
-| [temporal-optimality](01-act-core/src/temporal-optimality.md) | Postulate | Needs review |
 | [agent-environment](01-act-core/src/agent-environment.md) | Definition | Needs review |
 | [observation-function](01-act-core/src/observation-function.md) | Definition | Needs review |
 | [action-transition](01-act-core/src/action-transition.md) | Definition | Needs review |
@@ -160,11 +159,12 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 - Computational thresholds for social behavior — minimum agent complexity and interaction depth. Source: Miller (2022) Ch. 12, Table 12.2.
 - Communication as transitional phenomenon — communication gain most load-bearing during transitions. Source: Miller (2022) Ch. 11.
 
-**Appendices (4 missing):**
+**Appendices (3 missing):**
 - `#linear-ode-approximation` — pedagogical linear mismatch ODE (detail).
 - `#intent-dag-development` — convergence on AND/OR + single-p (aside). Source: 04-intent-dag-consolidated.md.
-- `#prior-art-positioning` — Hafez, IBM, BDI, active inference (detail). Source: msc/02-prior-art-assessment.md.
 - `#worked-example-cam` — coevolving automata (Miller 2022): ACT ↔ Moore machine mapping, meta-machine as ε*=0 composition, simplest adaptive agent. Source: `msc/spike-miller-act-bridge.md` §3, `msc/spike-fsa-dag-relationship.md`.
+
+~~`#prior-art-positioning`~~ — **Superseded.** Prior art (Hafez, Miller, etc.) now integrated into Discussion sections of relevant segments rather than a separate appendix. Hafez: agent-spectrum (P ↔ T, agency/intelligence mapping), directed-separation (IDT as Class 2 monitoring), adversarial-destabilization (H_b as opacity metric), causal-hierarchy-requirement (bi-predictability as Level 2 evidence). Miller: structural-adaptation-necessity (neutral drift mechanism), agent-spectrum (Moore machine as minimal agent), adversarial-destabilization (transition motif), plus Section III dynamics gaps. Source material remains in `msc/02-prior-art-assessment.md`.
 
 
 ## Key Spikes

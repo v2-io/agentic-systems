@@ -197,19 +197,65 @@ SECTION_COLORS = {
     "B": "#aa7744",
 }
 
-STAGE_STYLES = {
-    "claims-verified": "style=filled fillcolor=\"#d4edda\"",
-    "deps-verified": "style=filled fillcolor=\"#fff3cd\"",
-    "draft": "style=filled fillcolor=\"#f8f9fa\"",
-    "missing": "style=filled fillcolor=\"#f8d7da\"",
+SECTION_BG = {
+    "I": "#eef3fa",
+    "II": "#fdf3ec",
+    "III": "#f0f5eb",
+    "A": "#f5f5f5",
+    "B": "#f8f4ef",
 }
+
+TYPE_COLORS = {
+    "postulate":        "#8e44ad",  # purple — foundational axioms
+    "definition":       "#2980b9",  # blue — what things are
+    "formulation":      "#2471a3",  # darker blue — representational choices
+    "scope":            "#7f8c8d",  # gray — boundary conditions
+    "derived":          "#27ae60",  # green — proved results
+    "result":           "#1e8449",  # darker green — major results
+    "hypothesis":       "#e67e22",  # orange — conjectured
+    "discussion":       "#d4ac0d",  # gold — interpretive
+    "empirical":        "#e74c3c",  # red — data-driven
+    "normative":        "#c0392b",  # darker red — prescriptive
+    "derivation":       "#27ae60",  # green — proof appendix
+    "sketch":           "#95a5a6",  # light gray — incomplete
+    "detail":           "#95a5a6",  # light gray — supporting
+    "worked-example":   "#16a085",  # teal — instantiation
+    "proposed-schema":  "#e67e22",  # orange — not yet proved
+    "observation":      "#e74c3c",  # red — empirical
+    "derived + scope":  "#27ae60",  # green
+    "definition + discussion": "#2980b9",  # blue
+}
+
+APPENDIX_SECTIONS = {"A", "B"}
+MAIN_SECTIONS = {"I", "II", "III", "IV", "V"}
+
+
+def _short_label(slug):
+    """Make a compact label from a slug."""
+    # Abbreviate common prefixes
+    s = slug
+    for prefix in ["worked-example-", "causal-information-", "ciy-"]:
+        if s.startswith(prefix):
+            break
+    # Wrap at hyphens — max ~20 chars per line
+    parts = s.split("-")
+    lines = []
+    current = parts[0]
+    for p in parts[1:]:
+        if len(current) + len(p) + 1 > 18:
+            lines.append(current)
+            current = p
+        else:
+            current += "-" + p
+    lines.append(current)
+    return "\\n".join(lines)
+
 
 def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath, section_filter=None):
     """Write a Graphviz DOT file."""
     # Determine which slugs to include
     if section_filter:
         include = {slug for sec, slug, _ in entries if sec == section_filter}
-        # Also include deps that are in other sections (as external nodes)
         external = set()
         for slug in include:
             for dep in all_deps.get(slug, []):
@@ -225,9 +271,14 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath, sectio
 
     with open(filepath, "w") as f:
         f.write("digraph ACT_Dependencies {\n")
-        f.write("  rankdir=TB;\n")
-        f.write("  node [shape=box fontsize=10 fontname=\"Helvetica\"];\n")
-        f.write("  edge [color=\"#666666\"];\n\n")
+        f.write("  rankdir=LR;\n")
+        f.write("  newrank=true;\n")
+        f.write("  concentrate=true;\n")
+        f.write("  splines=ortho;\n")
+        f.write("  ranksep=0.4;\n")
+        f.write("  nodesep=0.2;\n")
+        f.write('  node [shape=box fontsize=8 fontname="Helvetica" height=0.3 margin="0.06,0.04"];\n')
+        f.write('  edge [color="#999999" arrowsize=0.5];\n\n')
 
         # Group by section using subgraphs
         sections_seen = {}
@@ -239,36 +290,85 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath, sectio
 
         for sec, slugs in sections_seen.items():
             color = SECTION_COLORS.get(sec, "#999999")
+            bg = SECTION_BG.get(sec, "#fafafa")
             f.write(f"  subgraph cluster_{sec} {{\n")
-            f.write(f"    label=\"Section {sec}\";\n")
-            f.write(f"    color=\"{color}\";\n")
-            f.write(f"    fontcolor=\"{color}\";\n")
-            f.write(f"    fontsize=14;\n")
-            f.write(f"    style=dashed;\n\n")
+            sec_label = {"A": "Appendices: Details", "B": "Appendices: Domains"}.get(sec, f"Section {sec}")
+            f.write(f'    label="{sec_label}";\n')
+            f.write(f'    color="{color}";\n')
+            f.write(f'    fontcolor="{color}";\n')
+            f.write(f'    bgcolor="{bg}";\n')
+            f.write(f"    fontsize=11;\n")
+            f.write(f"    style=rounded;\n")
+            f.write(f"    penwidth=1.5;\n\n")
 
             for slug in slugs:
                 meta = slug_to_meta.get(slug, {})
                 stage = meta.get("stage", "draft")
-                style = STAGE_STYLES.get(stage, "")
-                label = slug.replace("-", "\\n", 2)  # wrap long names
-                seg_type = meta.get("type", "")
-                if seg_type:
-                    label = f"{seg_type}:\\n{slug}"
-                f.write(f"    \"{slug}\" [{style} label=\"{label}\"];\n")
+                seg_type = (meta.get("type") or "").strip().lower()
+                label = _short_label(slug)
+
+                # Color from type
+                fill = TYPE_COLORS.get(seg_type, "#cccccc")
+                # Lighten fill, use full color for border
+                # Convert hex to lighter version for fill
+                r, g, b = int(fill[1:3], 16), int(fill[3:5], 16), int(fill[5:7], 16)
+                lr = min(255, r + (255 - r) * 7 // 10)
+                lg = min(255, g + (255 - g) * 7 // 10)
+                lb = min(255, b + (255 - b) * 7 // 10)
+                light_fill = f"#{lr:02x}{lg:02x}{lb:02x}"
+
+                # Double outline for claims-verified
+                if stage == "claims-verified":
+                    peripheries = "peripheries=2"
+                    penwidth = "penwidth=2.0"
+                else:
+                    peripheries = ""
+                    penwidth = "penwidth=1.0"
+
+                # Slightly muted for draft (lower saturation border)
+                if stage == "draft":
+                    # Desaturate the border color
+                    dr = r + (128 - r) // 3
+                    dg = g + (128 - g) // 3
+                    db = b + (128 - b) // 3
+                    border = f"#{dr:02x}{dg:02x}{db:02x}"
+                else:
+                    border = fill
+
+                attrs = f'style=filled fillcolor="{light_fill}" color="{border}" {penwidth}'
+                if peripheries:
+                    attrs += f" {peripheries}"
+                f.write(f'    "{slug}" [{attrs} label="{label}"];\n')
 
             f.write("  }\n\n")
 
-        # External nodes (deps from other components)
+        # External nodes
         for slug in external:
-            f.write(f"  \"{slug}\" [style=dashed color=\"#cccccc\" fontcolor=\"#999999\"];\n")
+            f.write(f'  "{slug}" [style=dashed color="#cccccc" fontcolor="#999999" label="{_short_label(slug)}"];\n')
         if external:
             f.write("\n")
 
-        # Edges
+        # Edges — classify backmatter vs intra-section
         for slug in include:
+            slug_sec = slug_to_section.get(slug)
             for dep in all_deps.get(slug, []):
-                if dep in include or dep in external:
-                    f.write(f"  \"{dep}\" -> \"{slug}\";\n")
+                if dep not in include and dep not in external:
+                    continue
+                dep_sec = slug_to_section.get(dep)
+
+                # Backmatter edge: main body depends on appendix proof
+                if slug_sec in MAIN_SECTIONS and dep_sec in APPENDIX_SECTIONS:
+                    f.write(f'  "{dep}" -> "{slug}" [style=dashed color="#cccccc" constraint=false];\n')
+                # Cross-section edge between main sections
+                elif slug_sec != dep_sec and slug_sec in MAIN_SECTIONS and dep_sec in MAIN_SECTIONS:
+                    f.write(f'  "{dep}" -> "{slug}" [color="#aaaaaa" constraint=false];\n')
+                # Intra-appendix cross-reference
+                elif slug_sec in APPENDIX_SECTIONS and dep_sec in APPENDIX_SECTIONS and slug_sec != dep_sec:
+                    f.write(f'  "{dep}" -> "{slug}" [color="#bbbbbb"];\n')
+                else:
+                    # Normal intra-section edge
+                    sec_color = SECTION_COLORS.get(slug_sec, "#666666")
+                    f.write(f'  "{dep}" -> "{slug}" [color="{sec_color}"];\n')
 
         f.write("}\n")
 

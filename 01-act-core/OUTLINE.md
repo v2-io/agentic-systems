@@ -21,7 +21,6 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
-| I | Postulate | | [#temporal-optimality](src/temporal-optimality.md) | Least-time is optimal | deps-verified |
 | I | Definition | | [#agent-environment](src/agent-environment.md) | Agent-environment boundary | deps-verified |
 | I | Definition | | [#observation-function](src/observation-function.md) | Lossy, noisy observations | deps-verified |
 | I | Definition | | [#action-transition](src/action-transition.md) | Actions affect environment | deps-verified |

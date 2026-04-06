@@ -41,9 +41,9 @@ This is a postulate — deliberately tautological. The statement reduces to: "gi
 
 The postulate does not say faster is always better. It says faster is better *given identical outcomes*. An agent that achieves a worse outcome faster is not preferred by this postulate. Misapplication of temporal optimality without verifying the equivalence precondition produces exactly the pathologies listed above.
 
-**Why start here.** The adaptive machinery that follows — tempo, gain, persistence, adversarial dynamics — can be understood as consequences of optimizing for this criterion under constraints of partial observability, bounded resources, and environmental change. The connections are developed in their respective claims; they are not implied by this postulate alone.
+**Why start here.** TST's claims about development time, change investment, and dual optimization can be understood as consequences of optimizing for this criterion under constraints of partial observability, bounded resources, and environmental change. The connections are developed in their respective claims; they are not implied by this postulate alone.
 
-**Domain generality.** This postulate applies to any agent-environment pairing within ACT's scope ( #scope-condition). In the software domain, it specializes to the statement that among implementations achieving identical outcomes, the one requiring least development time is optimal (TST T-01). The generalization is straightforward: replace "implementation" with "adaptive strategy."
+**Relationship to ACT.** ACT's persistence machinery demonstrates the *descriptive* consequence of temporal pressure: agents whose correction tempo falls below the disturbance rate degrade. This postulate provides the *normative* grounding: among equivalent outcomes, faster is preferred. ACT proves what happens when tempo is insufficient; this postulate states that tempo is the right thing to optimize once other dimensions are held equal. The postulate is most directly load-bearing in TST, where development time is the primary fungible resource.
 
 **Scope limitation.** This postulate does not, by itself, say anything about *how* to achieve temporal optimality. That is the subject of the rest of the theory.
 

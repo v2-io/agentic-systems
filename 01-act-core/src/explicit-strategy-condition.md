@@ -3,7 +3,6 @@ slug: explicit-strategy-condition
 type: normative
 status: conditional
 depends:
-  - temporal-optimality
   - strategy-dimension
   - causal-hierarchy-requirement
 stage: draft
@@ -15,7 +14,7 @@ An agent benefits from maintaining an explicit strategy $\Sigma_t$ when the cost
 
 ## Formal Expression
 
-*[Normative (explicit-strategy-condition, via temporal-optimality)]*
+*[Normative (explicit-strategy-condition)]*
 
 An agent benefits from explicit $\Sigma_t$ when:
 
@@ -27,11 +26,11 @@ where:
 - $C_{\text{explore}}$: cost of learning action-outcome mappings through direct interaction (real actions, real time, real consequences)
 - $C_{\text{repair}}$: cost of correcting errors discovered only through execution (rollbacks, rework, damage)
 
-All costs are measured in time ( #temporal-optimality) under the precondition that the two approaches produce approximately equivalent non-temporal outcomes.
+All costs are measured in the same units (typically time or tempo-equivalent cost). The inequality requires that the two approaches produce approximately equivalent non-temporal outcomes — otherwise the comparison is between different strategies, not different approaches to the same goal.
 
 ## Epistemic Status
 
-*Normative, not derived.* This is labeled *normative* because #temporal-optimality requires identical non-temporal outcomes as a precondition — "given equivalent outcomes, prefer the faster approach." In practice, loop-based and model-based approaches may differ in:
+*Normative, not derived.* This is labeled *normative* because it is a design criterion (a preference for the less costly approach given equivalent outcomes), not a theorem. In practice, loop-based and model-based approaches may differ in:
 
 - **Final value**: the model introduces bias; exploration may discover things planning cannot
 - **Risk profile**: exploration risks real damage; planning risks wrong models
@@ -56,9 +55,9 @@ In these domains, explicit $\Sigma_t$ is strongly motivated even if the planning
 - The environment changes faster than $\Sigma_t$ can be maintained ($\rho_\Sigma$ exceeds planning capacity)
 - Actions are cheap and reversible (A/B testing, sandbox exploration)
 
-**This makes #temporal-optimality load-bearing.** The postulate provides the normative grounding: among approaches producing equivalent outcomes, prefer the one requiring less time. The cost inequality instantiates this for the planning-vs-exploration choice. Without #temporal-optimality, the inequality would be an engineering heuristic without theoretical grounding.
+**Normative grounding.** The cost inequality is grounded in the persistence condition ( #persistence-condition), not in an external preference postulate. The persistence condition demonstrates that agents whose correction tempo is insufficient *degrade* — this is a descriptive result, not a value judgment. The cost inequality operationalizes the consequence: approaches that consume less tempo budget leave more margin above the persistence threshold. The normative element is the preference for maintaining persistence margin — which is hard to argue against, since the alternative is degradation. (In TST, the temporal optimality postulate provides an additional normative grounding specific to software development.)
 
-**Connection to the three-way tradeoff.** For actuated agents, the binary explore/exploit tradeoff extends to three modes: exploit (pursue $O_t$ via $\Sigma_t$), explore (improve $M_t$), and deliberate (revise $\Sigma_t$). The cost inequality addresses the coarsest question (is explicit $\Sigma_t$ worth having?). The finer allocation between the three modes is addressed in #exploit-explore-deliberate — the extended deliberation threshold is derived, but the broader three-way framing is discussion-grade. The deepest insight: deliberation is computation on existing data (no new observations), making it a fundamentally different resource type from external action.
+**Connection to the three-way tradeoff.** For actuated agents, the binary explore/exploit tradeoff extends to three modes: exploit (pursue $O_t$ via $\Sigma_t$), explore (improve $M_t$), and deliberate (revise $\Sigma_t$). The cost inequality addresses the coarsest question (is explicit $\Sigma_t$ worth having?). The finer allocation between the three modes is addressed in #exploit-explore-deliberate — the extended deliberation threshold is derived, but the broader three-way framing is discussion-grade. The deepest insight: deliberation is internal exploration (simulation, counterfactual reasoning, cross-domain synthesis), making it a fundamentally different resource type from external action.
 
 ## Working Notes
 
