@@ -17,6 +17,7 @@ Options:
     --graph FILE    Write a Graphviz DOT file of the dependency graph
     --section S     Only check/graph a specific section (I, II, III, A, B)
     --svg FILE      Write SVG directly (requires dot command)
+    --diagrams      Generate all dependency diagrams into src/img/
     --quiet         Only show violations, not summary
     --help          Show this help
 
@@ -432,6 +433,7 @@ def main():
     graph_file = None
     svg_file = None
     section_filter = None
+    diagrams = False
     quiet = False
     outline_file = None
 
@@ -446,6 +448,8 @@ def main():
         elif args[i] == "--section":
             i += 1
             section_filter = args[i]
+        elif args[i] == "--diagrams":
+            diagrams = True
         elif args[i] == "--quiet":
             quiet = True
         elif args[i] == "--help":
@@ -594,6 +598,37 @@ def main():
             print(f"  DOT file written to: {dot_tmp}")
         except subprocess.CalledProcessError as e:
             print(f"  Warning: dot failed: {e}", file=sys.stderr)
+
+    # ── Diagrams mode ────────────────────────────────────────────────
+
+    if diagrams:
+        img_dir = outline_dir / "src" / "img"
+        img_dir.mkdir(exist_ok=True)
+
+        diagram_specs = [
+            (None, "dep-graph-full.svg", "full dependency graph"),
+            ("I", "dep-graph-section-I.svg", "Section I"),
+            ("II", "dep-graph-section-II.svg", "Section II"),
+            ("III", "dep-graph-section-III.svg", "Section III"),
+        ]
+
+        for sec, filename, desc in diagram_specs:
+            svg_path = img_dir / filename
+            dot_tmp = str(svg_path) + ".dot"
+            write_dot(entries, all_deps, slug_to_section, slug_to_meta, dot_tmp, sec)
+            try:
+                subprocess.run(["dot", "-Tsvg", "-o", str(svg_path), dot_tmp], check=True)
+                os.unlink(dot_tmp)
+                if not quiet:
+                    print(f"  {desc}: {svg_path}")
+            except FileNotFoundError:
+                print("  Warning: 'dot' not found. Install graphviz.", file=sys.stderr)
+                break
+            except subprocess.CalledProcessError as e:
+                print(f"  Warning: dot failed for {desc}: {e}", file=sys.stderr)
+
+        if not quiet:
+            print()
 
     if not quiet:
         print()

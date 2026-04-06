@@ -12,12 +12,18 @@ See [`FORMAT.md`](../FORMAT.md) for segment file conventions. See [`NOTATION.md`
 
 Every slug is linked to its intended `src/{slug}.md` file, even when that file doesn't exist yet (`missing` or `old` stage). This is deliberate — the links serve as stable intent markers so the only ongoing maintenance is updating the Stage column. A `missing` link means no file exists; an `old` link means the content lives in a corresponding `src/old-*` source file awaiting conversion. Segments may also contain forward references (`#slug-name`) to not-yet-written segments; these are intentional dependency markers, not broken links.
 
+**Full dependency graph** (regenerate with `bin/lint-outline --diagrams`):
+
+![[src/img/dep-graph-full.svg]]
+
 
 ---
 
 ## I. Adaptive Systems Under Uncertainty
 
 *Scope: Any system consisting of an agent coupled to an environment through observation and action channels, where the environment is not fully observable. This is the general case — thermostats through commanders. The claims in this section are largely drawn from TFT (TF-01 through TF-11, Appendix A), which developed the adaptive-systems foundation that ACT subsumes.*
+
+![[src/img/dep-graph-section-I.svg]]
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
@@ -65,6 +71,8 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 *"If a man knows not to which port he sails, no wind is favorable." — Seneca*
 
+![[src/img/dep-graph-section-II.svg]]
+
 | §   | Type            | N   | Tag                                                                                    | Claim                                                            | Stage |
 | --- | --------------- | --- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----- |
 | II  | Definition      |     | [#agent-spectrum](src/agent-spectrum.md)                                               | ±model × ±objective quadrants                                    | deps-verified |
@@ -106,6 +114,8 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 *Correlated observations as default; independence as the special case requiring justification. Adversarial dynamics are one end of a teleological unity spectrum, not a separate theory.*
 
 *Three primary sources: the simulation-validated adversarial dynamics from TFT (TF-11/Appendix F, track-b simulations); the composition spike (`msc/spike-agent-composition.md`) which derives composition consistency from the scope condition's level-independence; and Miller's Coevolving Automata Model (Ex Machina, 2022), which provides constructive mechanisms for composition dynamics — how composites form, undergo phase transitions, and restructure through neutral drift and niche creation. Agent opacity ($H_b$) is adopted from Hafez et al. (2026).*
+
+![[src/img/dep-graph-section-III.svg]]
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
