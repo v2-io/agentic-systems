@@ -67,7 +67,15 @@ For any model $M_t$, horizon $N_h$, and policy class $\Pi$:
 
 $$A_O^{(1)}(M_t;\, \Pi, N_h) \leq A_O^{\text{RH}}(M_t;\, \Pi, N_r, N_h) \leq A_O^{\text{B}}(M_t;\, \Pi, N_h)$$
 
-**Derivation.** Each convention evaluates the best first action under a different continuation. A better continuation yields a higher expected trajectory value. One-step improvement freezes continuation at $\pi_{\text{current}}$ (possibly suboptimal). Receding-horizon re-optimizes periodically ($\pi_{\text{RH}} \succeq \pi_{\text{current}}$ at each future step, by construction). Bellman uses the globally optimal continuation ($\pi^\ast \succeq \pi_{\text{RH}}$ because the optimal policy is at least as good as any replanning policy). Taking the supremum over the first action preserves the ordering. $\square$
+**Derivation.** Fix the model $M_t$, policy class $\Pi$, and horizon $N_h$. Each convention evaluates the best first action under a different continuation rule, holding these fixed:
+
+- **C1** freezes continuation at $\pi_{\text{current}}$ (the agent's current policy, which may be suboptimal).
+- **C2** re-optimizes periodically: at each replanning step, the agent selects the best available first action from $\Pi$ given $M_t$ at that time. By construction, $\pi_{\text{RH}} \succeq \pi_{\text{current}}$ at each future step, because C2 optimizes where C1 holds fixed.
+- **C3** uses the globally optimal continuation $\pi^\ast = \arg\sup_{\pi \in \Pi} V_O(M_t, \pi; N_h)$, which is at least as good as any replanning policy because it optimizes over the full trajectory.
+
+A weakly better continuation yields a weakly higher expected trajectory value (the objective $V_{O_t}$ is evaluated on the same trajectory distribution, with only the continuation policy changed). The ordering of continuations ($\pi_{\text{current}} \preceq \pi_{\text{RH}} \preceq \pi^\ast$) therefore implies $A_O^{(1)} \leq A_O^{\text{RH}} \leq A_O^{\text{B}}$. Taking the supremum over the first action preserves the ordering because the supremum of a larger set is at least as large. $\square$
+
+**Assumptions held fixed:** same $M_t$ (the agent's current model, which may be wrong), same $\Pi$ (the agent's policy class, which may be narrow), same $N_h$ (the planning horizon). The ordering is about the *continuation rule*, not about the model or policy class. Improving $M_t$, expanding $\Pi$, or extending $N_h$ can change all three values simultaneously and is a separate operation (addressed in #orient-cascade, step 5).
 
 **Corollary (monotonicity of $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$).**
 

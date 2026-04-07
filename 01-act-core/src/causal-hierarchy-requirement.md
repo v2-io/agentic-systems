@@ -6,7 +6,7 @@ depends:
   - value-object
   - pearl-causal-hierarchy
   - scope-condition
-stage: draft
+stage: deps-verified
 ---
 
 # Derived: Causal Hierarchy Requirement
@@ -25,14 +25,14 @@ The $do(\cdot)$ notation is explicit: this is an *intervention*, not a *conditio
 
 An agent that must evaluate $Q_O$ from experience needs access to Level 2 knowledge — knowledge about the effects of its own interventions, not merely correlational patterns.
 
-*[Scope Narrowing (learning-agents)]*
+*[Scope Narrowing (learning-agent scope)]*
 
-We restrict attention to agents that must **acquire or refine** Level 2 knowledge during operation. This excludes agents with **pre-compiled** interventional structure:
+We restrict attention to **learning purposeful agents** — agents that must **acquire or refine** Level 2 knowledge during operation. This is a named sub-scope of the agency scope defined in #scope-condition. It excludes agents with **pre-compiled** interventional structure:
 - PID controllers (the designer pre-computed the control law)
 - LQR (separation principle gives optimal policy from model parameters)
 - Hardcoded reactive policies
 
-Pre-compiled agents are purposeful — they have objectives and act on them — but their causal structure was externally supplied by a designer who had Level 2 access. This scope narrowing focuses the theory on agents that must build or maintain their own causal understanding.
+Pre-compiled agents are within agency scope (they have objectives and act on them) but outside learning-agent scope — their causal structure was externally supplied by a designer who had Level 2 access. **All remaining Section II results operate within learning-agent scope** unless explicitly noted otherwise. This scope narrowing focuses the theory on agents that must build or maintain their own causal understanding.
 
 ## Epistemic Status
 

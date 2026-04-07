@@ -21,36 +21,40 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 
 ## Segment Status
 
-### Written — Section I (26 segments, all written)
-| Slug | Type | Notes |
+### Written — Section I (28 segments, all written)
+
+*Note: The authoritative stage for each segment is the `stage` field in its YAML frontmatter. The OUTLINE.md stage column should match. This WORKBENCH table is a summary; when in doubt, check the segment file.*
+
+| Slug | Type | Stage |
 |------|------|-------|
-| [agent-environment](01-act-core/src/agent-environment.md) | Definition | Needs review |
-| [observation-function](01-act-core/src/observation-function.md) | Definition | Needs review |
-| [action-transition](01-act-core/src/action-transition.md) | Definition | Needs review |
-| [scope-condition](01-act-core/src/scope-condition.md) | Scope | Needs review |
-| [composition-consistency](01-act-core/src/composition-consistency.md) | Postulate | Scale invariance requirement. Source: spike-agent-composition.md §1, §9. |
-| [agent-model](01-act-core/src/agent-model.md) | Formulation | Needs review |
-| [information-bottleneck](01-act-core/src/information-bottleneck.md) | Formulation | Needs review |
-| [model-sufficiency](01-act-core/src/model-sufficiency.md) | Definition | Needs review |
-| [model-class-fitness](01-act-core/src/model-class-fitness.md) | Definition | Needs review |
-| [causal-structure](01-act-core/src/causal-structure.md) | Postulate | Needs review |
-| [pearl-causal-hierarchy](01-act-core/src/pearl-causal-hierarchy.md) | Definition | Needs review |
-| [chronica](01-act-core/src/chronica.md) | Definition | Needs review |
-| [event-driven-dynamics](01-act-core/src/event-driven-dynamics.md) | Formulation | Needs review |
-| [recursive-update](01-act-core/src/recursive-update.md) | Derived | Needs review |
-| [action-selection](01-act-core/src/action-selection.md) | Derived | Needs review |
-| [mismatch-signal](01-act-core/src/mismatch-signal.md) | Definition | Needs review |
-| [mismatch-decomposition](01-act-core/src/mismatch-decomposition.md) | Result | Needs review |
-| [update-gain](01-act-core/src/update-gain.md) | Empirical | Needs review |
-| [causal-information-yield](01-act-core/src/causal-information-yield.md) | Definition | Needs review |
-| [adaptive-tempo](01-act-core/src/adaptive-tempo.md) | Definition | Needs review |
-| [mismatch-dynamics](01-act-core/src/mismatch-dynamics.md) | Hypothesis | Needs review |
-| [deliberation-cost](01-act-core/src/deliberation-cost.md) | Derived | Needs review |
-| [persistence-condition](01-act-core/src/persistence-condition.md) | Result | Needs review |
-| [sector-condition-stability](01-act-core/src/sector-condition-stability.md) | Result | Needs review |
-| [structural-adaptation-necessity](01-act-core/src/structural-adaptation-necessity.md) | Result | Needs review |
-| [temporal-nesting](01-act-core/src/temporal-nesting.md) | Derived | Needs review |
-| [agent-identity](01-act-core/src/agent-identity.md) | Discussion | Needs review |
+| [agent-environment](01-act-core/src/agent-environment.md) | Definition | deps-verified |
+| [observation-function](01-act-core/src/observation-function.md) | Definition | deps-verified |
+| [action-transition](01-act-core/src/action-transition.md) | Definition | deps-verified |
+| [scope-condition](01-act-core/src/scope-condition.md) | Scope | claims-verified |
+| [composition-consistency](01-act-core/src/composition-consistency.md) | Postulate | deps-verified |
+| [causal-structure](01-act-core/src/causal-structure.md) | Postulate | deps-verified |
+| [pearl-causal-hierarchy](01-act-core/src/pearl-causal-hierarchy.md) | Definition | deps-verified |
+| [chronica](01-act-core/src/chronica.md) | Definition | deps-verified |
+| [agent-model](01-act-core/src/agent-model.md) | Formulation | deps-verified |
+| [information-bottleneck](01-act-core/src/information-bottleneck.md) | Formulation | deps-verified |
+| [model-sufficiency](01-act-core/src/model-sufficiency.md) | Definition | deps-verified |
+| [model-class-fitness](01-act-core/src/model-class-fitness.md) | Definition | deps-verified |
+| [event-driven-dynamics](01-act-core/src/event-driven-dynamics.md) | Formulation | deps-verified |
+| [recursive-update](01-act-core/src/recursive-update.md) | Derived | claims-verified |
+| [action-selection](01-act-core/src/action-selection.md) | Derived | deps-verified |
+| [mismatch-signal](01-act-core/src/mismatch-signal.md) | Definition | deps-verified |
+| [mismatch-decomposition](01-act-core/src/mismatch-decomposition.md) | Result | claims-verified |
+| [update-gain](01-act-core/src/update-gain.md) | Empirical | claims-verified |
+| [causal-information-yield](01-act-core/src/causal-information-yield.md) | Definition | deps-verified |
+| [adaptive-tempo](01-act-core/src/adaptive-tempo.md) | Definition | claims-verified |
+| [mismatch-dynamics](01-act-core/src/mismatch-dynamics.md) | Hypothesis | deps-verified |
+| [deliberation-cost](01-act-core/src/deliberation-cost.md) | Derived | claims-verified |
+| [gain-sector-bridge](01-act-core/src/gain-sector-bridge.md) | Derived | claims-verified |
+| [sector-condition-stability](01-act-core/src/sector-condition-stability.md) | Result | claims-verified |
+| [persistence-condition](01-act-core/src/persistence-condition.md) | Result | claims-verified |
+| [structural-adaptation-necessity](01-act-core/src/structural-adaptation-necessity.md) | Result | claims-verified |
+| [temporal-nesting](01-act-core/src/temporal-nesting.md) | Derived | deps-verified |
+| [agent-identity](01-act-core/src/agent-identity.md) | Discussion | deps-verified |
 
 ### Written — Section II (25 segments, all written)
 | Slug | Type | Notes |
@@ -360,7 +364,7 @@ Items 1–10 are addressed in v3 spike. Porting to src/ segments is the remainin
 
 - Section II ordering: the v3 spike proposes a specific 16-segment linearization (§11). Is that still the best ordering after the codex review corrections?
 
-- **Section III: #communication-gain appears after #team-persistence, but team-persistence depends on it.** Team-persistence uses communication-gain in defining distributed tempo. Either reorder (communication-gain before team-persistence) or restructure the dependency.
+- ~~**Section III: #communication-gain appears after #team-persistence, but team-persistence depends on it.**~~ **FIXED.** communication-gain now appears before team-persistence in OUTLINE.md.
 
 - **Section II: #complete-agent-state forward-references #directed-separation.** The factorization $M_{\tau^+} = f_M(\ldots)$, $G_{\tau^+} = f_G(\ldots)$ is labeled "Derived (from recursive-update + directed-separation)" but directed-separation doesn't appear until 10 segments later. Not wrong (forward references are allowed) but worth a note in the segment that the justification comes later.
 

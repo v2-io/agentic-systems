@@ -26,11 +26,19 @@ $$\Phi^{L0} - \bar{y}_G \;\longrightarrow\; \begin{cases} +\rho & \text{OR-heavy
 
 where $\rho$ aggregates the latent covariance structure and $\bar{y}_G$ is the empirical success rate.
 
-**Detection criterion.** A persistently nonzero L0 residual after edge-credence convergence is diagnostic of causal insufficiency:
+**Detection criterion.** A persistently nonzero L0 residual after edge-credence convergence is a strong indicator of causal insufficiency:
 
-$$\lvert\Phi^{L0} - \bar{y}_G\rvert \gt \epsilon \quad \text{after } n_k \gg 1 \;\forall\; k \quad\implies\quad \text{DAG is causally insufficient}$$
+$$\lvert\Phi^{L0} - \bar{y}_G\rvert \gt \epsilon \quad \text{after } n_k \gg 1 \;\forall\; k \quad\implies\quad \text{DAG is likely causally insufficient}$$
 
 The sign diagnoses the dominant bias: positive means OR-node overestimation (illusory redundancy), negative means AND-node underestimation (unrecognized synergy).
+
+**Preconditions.** The diagnostic is valid under three conditions that must be verified before attributing a persistent residual to causal insufficiency:
+
+1. **Marginal convergence.** Edge credences have actually converged ($n_k \gg 1$ is necessary but not sufficient — the agent should verify that per-edge updates have stabilized, not just that many observations have occurred).
+2. **Approximate stationarity.** The environment's true edge probabilities are not drifting faster than the agent's update rate. Under nonstationarity ($\rho_\Sigma$ comparable to $\mathcal{T}_\Sigma$), a persistent residual may reflect tracking lag rather than structural model inadequacy.
+3. **No systematic update bias.** The edge-update rule itself does not introduce systematic bias (e.g., the marginal Bayesian update for unobservable intermediates has $O(1/n)$ downward bias — see #strategic-dynamics-derivation, Prop B.3).
+
+When these preconditions hold, the persistent L0 residual is diagnostic of causal insufficiency. When they do not, the residual is ambiguous — it may reflect model-class inadequacy, nonstationarity, incomplete convergence, or update-rule bias.
 
 This is not a new principle — it is #structural-adaptation-necessity's diagnostic criterion ("persistent irreducible mismatch after parametric convergence is diagnostic of model class inadequacy") instantiated for the strategy layer with the independence model as the model class and $\rho$ as the irreducible mismatch.
 

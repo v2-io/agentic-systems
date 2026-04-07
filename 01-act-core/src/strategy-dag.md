@@ -8,12 +8,14 @@ depends:
   - pearl-causal-hierarchy
   - objective-functional
   - strategy-dimension
-stage: draft
+stage: deps-verified
 ---
 
 # Definition: Strategy DAG
 
 The strategy $\Sigma_t$ is a directed acyclic graph with probabilistic edges and AND/OR combination semantics. Each edge carries the agent's causal credence that completing the parent step advances the child step. The graph encodes the agent's theory of how its actions produce progress toward its objectives.
+
+**Strategy-layer exactness contract.** All formal results in ACT's strategy layer — the sector condition transfer ( #strategic-dynamics-derivation, Prop B.5), the persistence schema ( #strategy-persistence-schema), the gradient-based credit assignment ( #credit-assignment-boundary) — are proved under **L0 (independence)**: causally sufficient DAGs with independent edge outcomes. **L1 (augmented DAG with explicit common-cause nodes) is the practical default in complex domains** where correlated failure is typical (adversarial, organizational, infrastructure-dependent settings). L0 formal results transfer exactly to correctly constructed L1 DAGs, because L1 restores causal sufficiency by construction. See the Correlation Hierarchy below for the full treatment.
 
 ## Formal Expression
 

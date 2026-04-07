@@ -7,7 +7,7 @@ depends:
   - chain-confidence-decay
   - explicit-strategy-condition
   - causal-structure
-stage: draft
+stage: deps-verified
 ---
 
 # Derivation: Graph Structure Uniqueness
@@ -52,9 +52,11 @@ When the agent observes evidence about one component of its strategy (e.g., "ste
 
 *[Derived (from #chain-confidence-decay + monitoring requirement)]*
 
-The strategy representation must have internal checkpoints — observable states between the initial action and the final goal — that the agent can monitor to detect partial failure.
+To support **localized strategic diagnosis and revision**, the strategy representation benefits from internal checkpoints — observable states between the initial action and the final goal — that the agent can monitor to detect partial failure.
 
 Without intermediates, the agent cannot detect chain failure until the final outcome. By the time the final outcome reveals failure, all intermediate actions are wasted. With intermediates, the agent can detect failure at step $k$ and revise, saving the cost of steps $k+1$ through $n$. The value of early detection grows with chain length, because longer chains fail more often (P2 + #chain-confidence-decay).
+
+**Observable intermediates are not required for strategy representation or persistence.** When intermediates are unobservable, plan-level tracking ( #strategy-persistence-schema, Case 3) preserves the sector condition at the cost of per-edge diagnostic resolution — the agent knows the plan is failing but cannot localize which step needs revision ( #observability-dominance). P4 is therefore a requirement for *strong diagnostics*, not for strategy representation per se. The observability investment tradeoff ( #observability-dominance) quantifies the payoff: making an intermediate observable improves the sector parameter from $1/(n_\Phi + 1)$ (plan-level) to $\min(1/(n_1+1),\; \theta_1/(n_2+1))$ (per-edge weakest-link).
 
 ### The Derivation
 
@@ -92,7 +94,7 @@ where $f_i$ is the local causal mechanism and $\varepsilon_i$ is the exogenous n
 
 **(b) Causal sufficiency implies exogenous independence.** The exogenous terms $\varepsilon_i$ are mutually independent if and only if no unmodeled common cause affects two or more nodes in the graph. This is precisely the **causal sufficiency** assumption: every variable that is a direct common cause of two or more nodes in $\Sigma_t$ is itself a node in $\Sigma_t$.
 
-For agent-constructed strategies, causal sufficiency is a reasonable assumption: the agent designed the graph, so all intended causal relationships are explicit. If an environmental factor (shared infrastructure, weather, market shift) affects multiple strategy steps, it *should* appear as a condition node in $\Sigma_t$ ( #strategy-dag, source constraint). If it is omitted, the strategy DAG is causally insufficient — the exogenous terms become correlated — and the Markov condition fails. This is not a structural limitation of the argument; it is model inadequacy ( #structural-adaptation-necessity), and the remedy is to add the missing common-cause node.
+For agent-constructed strategies, causal sufficiency is a **modeling ideal, not a typical condition**. The agent designed the graph, so all *intended* causal relationships are explicit — but environmental common causes (shared infrastructure, weather, market shifts, correlated adversary actions) routinely affect multiple strategy steps without appearing as nodes. In complex, multi-stakeholder, or adversarial environments, causal insufficiency is the dominant case ( #strategy-dag, Correlation Hierarchy). When an environmental factor is omitted, the exogenous terms become correlated and the Markov condition fails. This is model inadequacy ( #structural-adaptation-necessity), and the remedy is to add the missing common-cause node — but identifying which common causes matter is a modeling judgment, not a mechanical procedure ( #strategy-dag, L1 construction principle). The proof's conditional on causal sufficiency is therefore a condition on model quality: the result holds exactly when the DAG is well-constructed, approximately when it is close, and fails when major common causes are missing. The Correlation Hierarchy in #strategy-dag provides the practical framework: L0 (independence, this proof's assumption) gives tractable results; L1 (augmented DAG with explicit common-cause nodes) is the practical default in complex domains; L0 formal results transfer to correctly constructed L1 DAGs.
 
 **(c) The Causal Markov Condition theorem.** For a DAG $G$ over variables $V = \{X_1, \ldots, X_n\}$ with structural equations $X_i = f_i(\text{Pa}(X_i), \varepsilon_i)$ where the $\varepsilon_i$ are mutually independent:
 

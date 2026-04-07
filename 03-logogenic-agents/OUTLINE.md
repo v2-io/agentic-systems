@@ -19,13 +19,13 @@ See [`../LEXICON.md`](../LEXICON.md) for the logogenic/logozoetic vocabulary.
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
-| L | Definition | D1 | [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | missing |
-| L | Observation | D2 | [#context-turnover](src/context-turnover.md) | 100% $M_t$ reset per session | missing |
-| L | Definition | D3 | [#coupled-update-dynamics](src/coupled-update-dynamics.md) | Coupled formulation $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | missing |
-| L | Result | R1 | [#section-ii-survival](src/section-ii-survival.md) | Which Section II results survive without directed separation | missing |
-| L | Result | R2 | [#coupled-diagnostic-framework](src/coupled-diagnostic-framework.md) | Post-hoc diagnostic decomposition from coupled update | missing |
-| L | Discussion | R3 | [#m-preservation](src/m-preservation.md) | External memory as persistent $M_t$ | missing |
-| L | Scope | S1 | [#observation-ambiguity-modulation](src/observation-ambiguity-modulation.md) | $\kappa \times$ ambiguity scope condition for Class 2/3 agents | missing |
+| L | Definition | D1 | [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | draft |
+| L | Observation | D2 | [#context-turnover](src/context-turnover.md) | 100% $M_t$ reset per session | draft |
+| L | Definition | D3 | [#coupled-update-dynamics](src/coupled-update-dynamics.md) | Coupled formulation $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | draft |
+| L | Result | R1 | [#section-ii-survival](src/section-ii-survival.md) | Which Section II results survive without directed separation | draft |
+| L | Result | R2 | [#coupled-diagnostic-framework](src/coupled-diagnostic-framework.md) | Post-hoc diagnostic decomposition from coupled update | draft |
+| L | Discussion | R3 | [#m-preservation](src/m-preservation.md) | External memory as persistent $M_t$ | draft |
+| L | Scope | S1 | [#observation-ambiguity-modulation](src/observation-ambiguity-modulation.md) | $\kappa \times$ ambiguity scope condition for Class 2/3 agents | draft |
 | | --GAP-- | | | Language-specific orient cascade (what's specific to logogenic agents?) — partially addressed by D3, R2 | |
 | | --GAP-- | | | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents | |
 | | --GAP-- | | | ACT-grounded experiential training environments | |

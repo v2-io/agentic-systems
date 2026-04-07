@@ -29,7 +29,7 @@
 <text xml:space="preserve" text-anchor="middle" x="201" y="-210.9" font-family="Helvetica,sans-Serif" font-size="8.00">Closure ↑</text>
 </g>
 <!-- multi&#45;agent&#45;scope&#45;&gt;composition&#45;closure -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>multi&#45;agent&#45;scope&#45;&gt;composition&#45;closure</title>
 <path fill="none" stroke="#6b9e3c" d="M186.81,-266.02C186.81,-266.02 186.81,-237.24 186.81,-237.24"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="188.56,-237.24 186.81,-232.24 185.06,-237.24 188.56,-237.24"/>
@@ -43,7 +43,7 @@
 <text xml:space="preserve" text-anchor="middle" x="167" y="-140.64" font-family="Helvetica,sans-Serif" font-size="8.00">Composition ↑</text>
 </g>
 <!-- multi&#45;agent&#45;scope&#45;&gt;directed&#45;separation&#45;under&#45;composition -->
-<g id="edge2" class="edge">
+<g id="edge5" class="edge">
 <title>multi&#45;agent&#45;scope&#45;&gt;directed&#45;separation&#45;under&#45;composition</title>
 <path fill="none" stroke="#6b9e3c" d="M146.49,-265.9C146.49,-265.9 146.49,-175.77 146.49,-175.77"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="148.24,-175.77 146.49,-170.77 144.74,-175.77 148.24,-175.77"/>
@@ -55,7 +55,7 @@
 <text xml:space="preserve" text-anchor="middle" x="346" y="-149.64" font-family="Helvetica,sans-Serif" font-size="8.00">DSC: Unity Dimensions ↑</text>
 </g>
 <!-- multi&#45;agent&#45;scope&#45;&gt;unity&#45;dimensions -->
-<g id="edge12" class="edge">
+<g id="edge11" class="edge">
 <title>multi&#45;agent&#45;scope&#45;&gt;unity&#45;dimensions</title>
 <path fill="none" stroke="#6b9e3c" d="M153.4,-265.96C153.4,-238.25 153.4,-176 153.4,-176 153.4,-176 314.18,-176 314.18,-176 314.18,-176 314.18,-169.67 314.18,-169.67"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="315.93,-169.67 314.18,-164.67 312.43,-169.67 315.93,-169.67"/>
@@ -68,7 +68,7 @@
 <text xml:space="preserve" text-anchor="middle" x="76" y="-210.9" font-family="Helvetica,sans-Serif" font-size="8.00">Gain ↑</text>
 </g>
 <!-- multi&#45;agent&#45;scope&#45;&gt;communication&#45;gain -->
-<g id="edge1" class="edge">
+<g id="edge8" class="edge">
 <title>multi&#45;agent&#45;scope&#45;&gt;communication&#45;gain</title>
 <path fill="none" stroke="#6b9e3c" d="M139.59,-266.07C139.59,-248.16 139.59,-218 139.59,-218 139.59,-218 125.28,-218 125.28,-218"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="125.28,-216.25 120.28,-218 125.28,-219.75 125.28,-216.25"/>
@@ -81,19 +81,19 @@
 <text xml:space="preserve" text-anchor="middle" x="250" y="-145.14" font-family="Helvetica,sans-Serif" font-size="8.00">Composition ↑</text>
 </g>
 <!-- composition&#45;closure&#45;&gt;tempo&#45;composition -->
-<g id="edge14" class="edge">
+<g id="edge13" class="edge">
 <title>composition&#45;closure&#45;&gt;tempo&#45;composition</title>
 <path fill="none" stroke="#6b9e3c" d="M233.65,-204.76C233.65,-204.76 233.65,-171.47 233.65,-171.47"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="235.4,-171.47 233.65,-166.47 231.9,-171.47 235.4,-171.47"/>
 </g>
 <!-- composition&#45;closure&#45;&gt;directed&#45;separation&#45;under&#45;composition -->
-<g id="edge3" class="edge">
+<g id="edge6" class="edge">
 <title>composition&#45;closure&#45;&gt;directed&#45;separation&#45;under&#45;composition</title>
 <path fill="none" stroke="#6b9e3c" d="M181.75,-204.76C181.75,-204.76 181.75,-175.71 181.75,-175.71"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="183.5,-175.71 181.75,-170.71 180,-175.71 183.5,-175.71"/>
 </g>
 <!-- composition&#45;closure&#45;&gt;unity&#45;dimensions -->
-<g id="edge13" class="edge">
+<g id="edge12" class="edge">
 <title>composition&#45;closure&#45;&gt;unity&#45;dimensions</title>
 <path fill="none" stroke="#6b9e3c" d="M225.6,-204.8C225.6,-195.28 225.6,-184 225.6,-184 225.6,-184 332.06,-184 332.06,-184 332.06,-184 332.06,-169.7 332.06,-169.7"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="333.81,-169.7 332.06,-164.7 330.31,-169.7 333.81,-169.7"/>
@@ -105,7 +105,7 @@
 <text xml:space="preserve" text-anchor="middle" x="317" y="-85.71" font-family="Helvetica,sans-Serif" font-size="8.00">DEF: Shared Intent ↑</text>
 </g>
 <!-- unity&#45;dimensions&#45;&gt;shared&#45;intent -->
-<g id="edge15" class="edge">
+<g id="edge9" class="edge">
 <title>unity&#45;dimensions&#45;&gt;shared&#45;intent</title>
 <path fill="none" stroke="#6b9e3c" d="M328.12,-140.85C328.12,-140.85 328.12,-105.58 328.12,-105.58"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="329.88,-105.58 328.13,-100.58 326.38,-105.58 329.88,-105.58"/>
@@ -118,13 +118,13 @@
 <text xml:space="preserve" text-anchor="middle" x="346" y="-21.78" font-family="Helvetica,sans-Serif" font-size="8.00">Principle ↑</text>
 </g>
 <!-- unity&#45;dimensions&#45;&gt;auftragstaktik&#45;principle -->
-<g id="edge11" class="edge">
+<g id="edge2" class="edge">
 <title>unity&#45;dimensions&#45;&gt;auftragstaktik&#45;principle</title>
 <path fill="none" stroke="#6b9e3c" d="M372.38,-141.04C372.38,-141.04 372.38,-48.08 372.38,-48.08"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="374.13,-48.08 372.38,-43.08 370.63,-48.08 374.13,-48.08"/>
 </g>
 <!-- shared&#45;intent&#45;&gt;auftragstaktik&#45;principle -->
-<g id="edge10" class="edge">
+<g id="edge1" class="edge">
 <title>shared&#45;intent&#45;&gt;auftragstaktik&#45;principle</title>
 <path fill="none" stroke="#6b9e3c" d="M333.56,-76.88C333.56,-76.88 333.56,-47.92 333.56,-47.92"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="335.31,-47.92 333.56,-42.92 331.81,-47.92 335.31,-47.92"/>
@@ -156,7 +156,7 @@
 <text xml:space="preserve" text-anchor="middle" x="320" y="-210.9" font-family="Helvetica,sans-Serif" font-size="8.00">Advantage ↑</text>
 </g>
 <!-- adversarial&#45;destabilization&#45;&gt;adversarial&#45;tempo&#45;advantage -->
-<g id="edge4" class="edge">
+<g id="edge14" class="edge">
 <title>adversarial&#45;destabilization&#45;&gt;adversarial&#45;tempo&#45;advantage</title>
 <path fill="none" stroke="#6b9e3c" d="M347.88,-266.02C347.88,-266.02 347.88,-237.24 347.88,-237.24"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="349.63,-237.24 347.88,-232.24 346.13,-237.24 349.63,-237.24"/>
@@ -169,7 +169,7 @@
 <text xml:space="preserve" text-anchor="middle" x="452" y="-145.14" font-family="Helvetica,sans-Serif" font-size="8.00">Exponent Regimes ↑</text>
 </g>
 <!-- adversarial&#45;destabilization&#45;&gt;adversarial&#45;exponent&#45;regimes -->
-<g id="edge5" class="edge">
+<g id="edge3" class="edge">
 <title>adversarial&#45;destabilization&#45;&gt;adversarial&#45;exponent&#45;regimes</title>
 <path fill="none" stroke="#6b9e3c" d="M375,-265.99C375,-243.09 375,-198 375,-198 375,-198 455.27,-198 455.27,-198 455.27,-198 455.27,-171.57 455.27,-171.57"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="457.02,-171.57 455.27,-166.57 453.52,-171.57 457.02,-171.57"/>
@@ -182,13 +182,13 @@
 <text xml:space="preserve" text-anchor="middle" x="430" y="-210.9" font-family="Helvetica,sans-Serif" font-size="8.00">Advantage ↑</text>
 </g>
 <!-- adversarial&#45;destabilization&#45;&gt;observation&#45;gates&#45;advantage -->
-<g id="edge8" class="edge">
+<g id="edge15" class="edge">
 <title>adversarial&#45;destabilization&#45;&gt;observation&#45;gates&#45;advantage</title>
 <path fill="none" stroke="#6b9e3c" d="M390.12,-266.02C390.12,-266.02 390.12,-237.24 390.12,-237.24"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="391.88,-237.24 390.13,-232.24 388.38,-237.24 391.88,-237.24"/>
 </g>
 <!-- adversarial&#45;tempo&#45;advantage&#45;&gt;adversarial&#45;exponent&#45;regimes -->
-<g id="edge6" class="edge">
+<g id="edge4" class="edge">
 <title>adversarial&#45;tempo&#45;advantage&#45;&gt;adversarial&#45;exponent&#45;regimes</title>
 <path fill="none" stroke="#6b9e3c" d="M349.94,-204.69C349.94,-197.9 349.94,-191 349.94,-191 349.94,-191 432.73,-191 432.73,-191 432.73,-191 432.73,-171.28 432.73,-171.28"/>
 <polygon fill="#6b9e3c" stroke="#6b9e3c" points="434.48,-171.28 432.73,-166.28 430.98,-171.28 434.48,-171.28"/>

@@ -6,7 +6,7 @@ depends:
   - complete-agent-state
   - recursive-update
   - scope-condition
-stage: draft
+stage: deps-verified
 ---
 
 # Derived: Directed Separation

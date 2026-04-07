@@ -33,19 +33,19 @@ digraph ACT_Dependencies {
     "per-dimension-persistence" [style=filled fillcolor="#bbdac8" color="#3e825b" penwidth=1.0 label="RES: Per Dimension\nPersistence ↑"];
   }
 
-  "multi-agent-scope" -> "communication-gain" [color="#6b9e3c"];
-  "multi-agent-scope" -> "directed-separation-under-composition" [color="#6b9e3c"];
-  "composition-closure" -> "directed-separation-under-composition" [color="#6b9e3c"];
-  "adversarial-destabilization" -> "adversarial-tempo-advantage" [color="#6b9e3c"];
-  "adversarial-destabilization" -> "adversarial-exponent-regimes" [color="#6b9e3c"];
-  "adversarial-tempo-advantage" -> "adversarial-exponent-regimes" [color="#6b9e3c"];
-  "communication-gain" -> "team-persistence" [color="#6b9e3c"];
-  "adversarial-destabilization" -> "observation-gates-advantage" [color="#6b9e3c"];
-  "multi-agent-scope" -> "composition-closure" [color="#6b9e3c"];
   "shared-intent" -> "auftragstaktik-principle" [color="#6b9e3c"];
   "unity-dimensions" -> "auftragstaktik-principle" [color="#6b9e3c"];
+  "adversarial-destabilization" -> "adversarial-exponent-regimes" [color="#6b9e3c"];
+  "adversarial-tempo-advantage" -> "adversarial-exponent-regimes" [color="#6b9e3c"];
+  "multi-agent-scope" -> "directed-separation-under-composition" [color="#6b9e3c"];
+  "composition-closure" -> "directed-separation-under-composition" [color="#6b9e3c"];
+  "communication-gain" -> "team-persistence" [color="#6b9e3c"];
+  "multi-agent-scope" -> "communication-gain" [color="#6b9e3c"];
+  "unity-dimensions" -> "shared-intent" [color="#6b9e3c"];
+  "multi-agent-scope" -> "composition-closure" [color="#6b9e3c"];
   "multi-agent-scope" -> "unity-dimensions" [color="#6b9e3c"];
   "composition-closure" -> "unity-dimensions" [color="#6b9e3c"];
   "composition-closure" -> "tempo-composition" [color="#6b9e3c"];
-  "unity-dimensions" -> "shared-intent" [color="#6b9e3c"];
+  "adversarial-destabilization" -> "adversarial-tempo-advantage" [color="#6b9e3c"];
+  "adversarial-destabilization" -> "observation-gates-advantage" [color="#6b9e3c"];
 }

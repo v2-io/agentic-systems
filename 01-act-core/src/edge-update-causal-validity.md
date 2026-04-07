@@ -8,7 +8,7 @@ depends:
   - loop-interventional-access
   - strategic-calibration
   - strategy-dag
-stage: draft
+stage: deps-verified
 ---
 
 # Scope: Causal Validity of Edge Updates
