@@ -12,7 +12,7 @@ stage: deps-verified
 
 # Derivation: Graph Structure Uniqueness
 
-Four operational postulates — directed temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates — derive that the strategy representation is a directed acyclic graph (proved), with the Markov property proved under causal sufficiency via the Causal Markov Condition theorem.
+Three operational postulates — directed temporal ordering, probabilistic uncertainty, and state-local revisability — derive that the strategy representation is a directed acyclic graph (proved), with the Markov property proved under causal sufficiency via the Causal Markov Condition theorem. A fourth postulate (observable intermediates) is required for localized strategic diagnosis but not for the representation or persistence results themselves.
 
 ## Formal Expression
 
