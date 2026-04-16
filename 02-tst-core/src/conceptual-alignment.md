@@ -35,13 +35,13 @@ where $\Delta t_{\text{comp}}$ is the per-feature comprehension savings from ali
 
 ## Epistemic Status
 
-*Hypothesis.* The qualitative claim (better alignment → faster comprehension) is nearly tautological — code that matches how the agent thinks about the domain is easier to understand. But the *functional form* (inverse proportionality) is not derived from ACT. The relationship could be logarithmic (diminishing returns from alignment), threshold-based (alignment matters only below a minimum), or dependent on agent type (human vs AI may have different alignment sensitivities). ACT does not currently predict the functional form.
+*Hypothesis.* The qualitative claim (better alignment → faster comprehension) is nearly tautological — code that matches how the agent thinks about the domain is easier to understand. But the *functional form* (inverse proportionality) is not derived from AAD. The relationship could be logarithmic (diminishing returns from alignment), threshold-based (alignment matters only below a minimum), or dependent on agent type (human vs AI may have different alignment sensitivities). AAD does not currently predict the functional form.
 
 The realignment corollary is *derived* from #change-investment — it is simply the investment threshold applied to alignment changes. Its epistemic status inherits from both the investment threshold (conditional) and the alignment hypothesis (discussion-grade); the weaker link governs.
 
 ## Discussion
 
-**Alignment as observation channel quality.** In ACT terms, code structure is part of the agent's observation channel — it determines how efficiently the agent can extract the information needed to construct $M_t$. Well-aligned code delivers domain-relevant information in an organized form that matches the agent's needs. Misaligned code forces the agent to perform an additional mental translation (mapping between code vocabulary and domain vocabulary) on every observation. This translation cost is paid per comprehension event, making it subject to the turnover multiplier in #dual-optimization.
+**Alignment as observation channel quality.** In AAD terms, code structure is part of the agent's observation channel — it determines how efficiently the agent can extract the information needed to construct $M_t$. Well-aligned code delivers domain-relevant information in an organized form that matches the agent's needs. Misaligned code forces the agent to perform an additional mental translation (mapping between code vocabulary and domain vocabulary) on every observation. This translation cost is paid per comprehension event, making it subject to the turnover multiplier in #dual-optimization.
 
 **The dual comprehension cost.** Comprehension isn't just understanding the code — it's understanding the code, the domain, and the *mapping between them*. When alignment is high, the mapping is trivial (code names = domain names, code structure = domain structure). When alignment is low, the mapping itself becomes a cognitive task.
 

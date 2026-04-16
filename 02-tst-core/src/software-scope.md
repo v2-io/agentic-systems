@@ -9,7 +9,7 @@ depends:
 
 # Scope: Software Scope
 
-ACT's software domain applies to systems with non-negligible probability of future change.
+AAD's software domain applies to systems with non-negligible probability of future change.
 
 ## Formal Expression
 
@@ -33,13 +33,13 @@ For any subsystem $s$ where $P(\text{change}(s)) \lt \varepsilon$:
 
 $$\text{time}_{\text{future}}(s) \to 0$$
 
-A subsystem with negligible change probability consumes zero future development time. In ACT terms: its environment change rate $\rho \to 0$, so from #persistence-condition, any nonzero tempo suffices — the subsystem is permanently adapted. No adaptive capacity needs to be allocated to it.
+A subsystem with negligible change probability consumes zero future development time. In AAD terms: its environment change rate $\rho \to 0$, so from #persistence-condition, any nonzero tempo suffices — the subsystem is permanently adapted. No adaptive capacity needs to be allocated to it.
 
 This justifies using stable, battle-tested libraries and frameworks: reimplementing `sort()` takes a subsystem at $\rho \approx 0$ and reintroduces it at finite $\rho$, consuming adaptive capacity that could be directed elsewhere.
 
 ## Epistemic Status
 
-The scope restriction is definitional — we choose to analyze evolving systems. The consequence (lifecycle time dominates initial time) follows from #temporal-optimality applied to the scope. The stable-subsystem corollary follows directly from the scope definition. The connection to #persistence-condition ($\rho \to 0$ means trivially satisfied persistence) is a restatement in ACT's formal language, not a new derivation.
+The scope restriction is definitional — we choose to analyze evolving systems. The consequence (lifecycle time dominates initial time) follows from #temporal-optimality applied to the scope. The stable-subsystem corollary follows directly from the scope definition. The connection to #persistence-condition ($\rho \to 0$ means trivially satisfied persistence) is a restatement in AAD's formal language, not a new derivation.
 
 ## Discussion
 
@@ -50,8 +50,8 @@ The scope restriction is definitional — we choose to analyze evolving systems.
 ## Working Notes
 
 - The $\varepsilon$ threshold is a parameter choice, not derived. What determines a sensible $\varepsilon$? Is it related to the team's ability to detect change (an observation threshold)?
-- TST's original "infinite velocity" language is vivid but potentially misleading — velocity is undefined when there are zero changes. The ACT framing ($\rho \to 0$, persistence trivially satisfied) is more precise.
+- TST's original "infinite velocity" language is vivid but potentially misleading — velocity is undefined when there are zero changes. The AAD framing ($\rho \to 0$, persistence trivially satisfied) is more precise.
 - The via-tft-mapping material has a much richer decomposition of the software "environment" (codebase, runtime behavior, user requirements, team knowledge, dependency ecosystem, infrastructure state). This scope segment doesn't need that detail, but #developer-as-act-agent or #software-epistemic-properties should incorporate it.
-- The observation that software development = building systems that evolve efficiently is essentially the claim that software development is an adaptive process subject to ACT. This is what motivates the entire section, not just this scope narrowing.
+- The observation that software development = building systems that evolve efficiently is essentially the claim that software development is an adaptive process subject to AAD. This is what motivates the entire section, not just this scope narrowing.
 
 *(Descended from TST T-03.)*

@@ -38,7 +38,7 @@ The comprehension corollary is a *hypothesis* — weaker than the implementation
 
 **Architecture as temporal optimization.** The principle suggests a mechanism for why architecture matters: good architecture minimizes *future* changeset sizes, not current ones. A refactoring that touches 15 files now but ensures future features touch only 1 file (instead of 3) is justified when the savings exceed the cost — which is precisely the #change-investment threshold. This reframes architectural decisions as temporal investments, though the reduction to changeset size captures only one dimension of architectural quality.
 
-**Connection to ACT.** The changeset is the observable trace of the agent's intervention in the environment. Changeset size is a proxy for the *scope* of the intervention. Larger interventions require more of the agent's time (both to plan and to execute), which is the implementation-time proportionality. They also require more of the *next* agent's time to comprehend (the corollary), which matters under the turnover multiplier in #dual-optimization.
+**Connection to AAD.** The changeset is the observable trace of the agent's intervention in the environment. Changeset size is a proxy for the *scope* of the intervention. Larger interventions require more of the agent's time (both to plan and to execute), which is the implementation-time proportionality. They also require more of the *next* agent's time to comprehend (the corollary), which matters under the turnover multiplier in #dual-optimization.
 
 **Architectural patterns that reduce future changeset size.** *[Discussion — the principle's practical force lies in predicting changeset size from architecture.]*
 

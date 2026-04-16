@@ -1,19 +1,19 @@
 # TST: Temporal Software Theory
 
-Software development as an agentic domain — grounded in ACT's formal machinery, restored to its original status as a consequential body of research in its own right.
+Software development as an agentic domain — grounded in AAD's formal machinery, restored to its original status as a consequential body of research in its own right.
 
-**Working draft.** TST re-grounds the original Temporal Software Theory in ACT's mathematical framework — adding causal mathematics, adaptive dynamics, and the persistence condition that explain *why* time-optimal development practices work, not just *that* they do. Software is not just another domain example; it has unique epistemic properties that make it the ideal testbed for ACT and, recursively, the domain where ACT-grounded agents will operate.
+**Working draft.** TST re-grounds the original Temporal Software Theory in AAD's mathematical framework — adding causal mathematics, adaptive dynamics, and the persistence condition that explain *why* time-optimal development practices work, not just *that* they do. Software is not just another domain example; it has unique epistemic properties that make it the ideal testbed for AAD and, recursively, the domain where AAD-grounded agents will operate.
 
 See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATION.md`](../NOTATION.md) for symbols.
 
-**Relationship to ACT:** TST segments reference ACT concepts by slug (e.g., `#persistence-condition`, `#adaptive-tempo`). The temporal optimality postulate — TST's foundational normative principle — is grounded by ACT's descriptive results: tempo advantage, persistence conditions, and gain dynamics explain WHY time-optimal development practices work. The dependency is one-directional: TST depends on ACT, not the reverse. `#temporal-optimality` lives in TST (where it is normatively load-bearing) and is referenced parenthetically from ACT (where the persistence condition provides the descriptive grounding).
+**Relationship to AAD:** TST segments reference AAD concepts by slug (e.g., `#persistence-condition`, `#adaptive-tempo`). The temporal optimality postulate — TST's foundational normative principle — is grounded by AAD's descriptive results: tempo advantage, persistence conditions, and gain dynamics explain WHY time-optimal development practices work. The dependency is one-directional: TST depends on AAD, not the reverse. `#temporal-optimality` lives in TST (where it is normatively load-bearing) and is referenced parenthetically from AAD (where the persistence condition provides the descriptive grounding).
 
 
 ---
 
 ## Software as Agentic Domain
 
-*Domain instantiation: software development viewed through ACT. The developer (or AI agent) is an actuated adaptive agent whose environment is a codebase, whose observations are mediated by tools (compiler, tests, IDE), and whose actions are code changes. Software's unique epistemic properties — full observability in principle, genuine interventions via tests, counterfactual replay via version control — make it the richest operationalization domain for ACT.*
+*Domain instantiation: software development viewed through AAD. The developer (or AI agent) is an actuated adaptive agent whose environment is a codebase, whose observations are mediated by tools (compiler, tests, IDE), and whose actions are code changes. Software's unique epistemic properties — full observability in principle, genuine interventions via tests, counterfactual replay via version control — make it the richest operationalization domain for AAD.*
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
@@ -77,8 +77,8 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 - `old-tst-proximity-coherence-for-ai` — Proximity/coherence/coupling analysis specific to AI agents
 - Prior art for #specification-bound (Austin, Putnam, Shannon) is in `lit-review/` — see `specification-bound-prior-art.md`, `formal-bounds-on-implementation-speed.md`, `putnam-vs-tst-bounds.md`
 
-**TFT bridge work** (maps TFT/ACT concepts to the software domain):
-- `old-tst-via-tft-readme` — Why software is uniquely suited as ACT testbed (6 epistemic properties)
+**TFT bridge work** (maps TFT/AAD concepts to the software domain):
+- `old-tst-via-tft-readme` — Why software is uniquely suited as AAD testbed (6 epistemic properties)
 - `old-tst-via-tft-mapping` — Detailed TFT↔software domain mapping (~8,500 words)
 - `old-tst-via-tft-causal-extensions` — Causal DAGs in software, Level 2/3 reasoning, counterfactual via git
 - `old-tst-via-tft-reformulated-sketch` — S-00 through S-14 structured outline

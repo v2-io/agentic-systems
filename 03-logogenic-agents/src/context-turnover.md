@@ -70,7 +70,7 @@ $$S(f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}})) \g
 where $S_{\text{min}}$ is the minimum model sufficiency required for the agent to function effectively in the new session. This is a reconstruction adequacy condition, not a rate condition.
 
 **Two timescales of persistence.** LLM agent persistence operates at two timescales:
-1. **Intra-session** (event-driven, continuous): standard ACT dynamics apply. The coupled update $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ ( #coupled-update-dynamics) processes events and evolves $X_t$. The persistence condition applies within a session.
+1. **Intra-session** (event-driven, continuous): standard AAD dynamics apply. The coupled update $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ ( #coupled-update-dynamics) processes events and evolves $X_t$. The persistence condition applies within a session.
 2. **Inter-session** (episodic, discontinuous): the state is reconstructed from external memory. The persistence challenge is information preservation through the externalization-reconstruction cycle. See #m-preservation.
 
 **Context window as finite $\mathcal C_t$ capacity.** Even within a session, the chronica is bounded by the context window length $L$. When $\lvert\mathcal C_t\rvert \gt L$, older events are dropped — a forced compression that degrades sufficiency. This creates an intra-session analog of the turnover problem: the agent must continuously prioritize which information to retain in its finite context. The rate of information loss from context-window overflow is an additional disturbance term in the intra-session mismatch dynamics.

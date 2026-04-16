@@ -15,9 +15,9 @@ depends:
 stage: draft
 ---
 
-# Definition: Developer as ACT Agent
+# Definition: Developer as AAD Agent
 
-The developer (human or AI) instantiated as an ACT agent: $X_t = (M_t, G_t)$ where $M_t$ is the developer's understanding of the codebase, $G_t = (O_t, \Sigma_t)$ decomposes into feature/fix objectives and implementation strategy.
+The developer (human or AI) instantiated as an AAD agent: $X_t = (M_t, G_t)$ where $M_t$ is the developer's understanding of the codebase, $G_t = (O_t, \Sigma_t)$ decomposes into feature/fix objectives and implementation strategy.
 
 ## Formal Expression
 
@@ -80,7 +80,7 @@ The developer's implementation plan — how the agent intends to achieve $O_t$:
 
 $$\Sigma_t = \text{plan decomposition of } O_t \text{ into subtasks with dependency and confidence structure}$$
 
-In ACT terms, $\Sigma_t$ is a probabilistic causal DAG ( #strategy-dag) whose nodes are subtasks and whose edges carry confidence weights $p_{ij}$ representing the developer's belief that completing subtask $i$ enables subtask $j$. Examples:
+In AAD terms, $\Sigma_t$ is a probabilistic causal DAG ( #strategy-dag) whose nodes are subtasks and whose edges carry confidence weights $p_{ij}$ representing the developer's belief that completing subtask $i$ enables subtask $j$. Examples:
 
 - "First understand the data model, then modify the schema, then update the API, then update the UI" — a chain DAG
 - "Either refactor the existing handler OR write a new one, then integrate" — an OR-node DAG
@@ -157,13 +157,13 @@ The uncertainty ratio principle ( #update-gain) instantiates as:
 
 ## Epistemic Status
 
-This is a *definition* — it names the correspondence between software development entities and ACT formal objects. The mapping is exact in the sense that each ACT quantity has a concrete, identifiable software counterpart. The definition itself is not a truth-claim; the substantive claims come from applying ACT's derived results (persistence, tempo, gain dynamics) to this instantiation.
+This is a *definition* — it names the correspondence between software development entities and AAD formal objects. The mapping is exact in the sense that each AAD quantity has a concrete, identifiable software counterpart. The definition itself is not a truth-claim; the substantive claims come from applying AAD's derived results (persistence, tempo, gain dynamics) to this instantiation.
 
 The observation channel tables and action classification are *discussion-grade* taxonomies — useful organizing structures, not exhaustive or formally derived.
 
 ## Discussion
 
-**The 100% turnover problem.** For AI agents, $M_t$ is reset to near-zero at each session start. In ACT terms: $M_0 \approx M_{\text{prior}}$ (whatever memory files provide), $U_M$ starts very high, and $\eta^\ast$ starts near 1. The agent must rapidly build $M_t$ through high-$\nu$ observation before it can act effectively. This creates a formal "cold-start" phase — a transient where the agent is in observation mode, building $M_t$ before the persistence condition ( #persistence-condition) can even be meaningfully evaluated.
+**The 100% turnover problem.** For AI agents, $M_t$ is reset to near-zero at each session start. In AAD terms: $M_0 \approx M_{\text{prior}}$ (whatever memory files provide), $U_M$ starts very high, and $\eta^\ast$ starts near 1. The agent must rapidly build $M_t$ through high-$\nu$ observation before it can act effectively. This creates a formal "cold-start" phase — a transient where the agent is in observation mode, building $M_t$ before the persistence condition ( #persistence-condition) can even be meaningfully evaluated.
 
 Persistent external memory (documentation, CLAUDE.md files, well-structured codebases) converts ephemeral model state into persistent environmental state. The agent writes its model into $\Omega$ so future agents can reconstruct $M_t$ through observation. The quality of this externalization determines how much of the previous agent's $M_t$ survives turnover. In information-bottleneck ( #information-bottleneck) terms: the externalized memory should retain everything predictively relevant while compressing aggressively.
 
@@ -179,7 +179,7 @@ where each component sums the $\nu^{(k)} \cdot \eta^{(k)\ast}$ products across c
 
 - The environment table includes "team knowledge" and "dependency ecosystem" which are clearly part of $\Omega_t$ but hard to formalize as observation channels with well-defined $(\nu, U_o)$. These may be better treated as slowly varying background parameters that affect $\rho$ rather than as observable state.
 - The tempo decomposition into $\mathcal T_{\text{obs}} + \mathcal T_{\text{explore}} + \mathcal T_{\text{probe}}$ appears in the OUTLINE as a separate gap segment. This definition provides the ingredients; the formal decomposition with its optimization implications deserves its own treatment.
-- The strategy DAG instantiation is thin — real developer plans are often implicit, partially formed, and revised continuously. Whether ACT's explicit DAG formalism applies without modification to implicit human planning is an open question. For AI agents with explicit planning steps, the mapping is more direct.
+- The strategy DAG instantiation is thin — real developer plans are often implicit, partially formed, and revised continuously. Whether AAD's explicit DAG formalism applies without modification to implicit human planning is an open question. For AI agents with explicit planning steps, the mapping is more direct.
 - The distinction between "exploration" and "interventional probe" actions can be blurry. Reading code does not modify $\Omega_t$ and is purely exploratory. Running tests does modify $\Omega_t$ temporarily (process state) and is interventional. But making a speculative code change to see if it compiles is both environment-modifying and exploratory. The classification is useful but not a partition.
 
 *(Source: old-tst-via-tft-mapping.md, "The Agent-Environment Coupling," "The Mismatch Signal," "The Update Gain.")*
