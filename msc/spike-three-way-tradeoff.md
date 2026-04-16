@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-02 (revised: deep adversarial pass)
 **Status:** Adversarial spike. Replaces the earlier constructive spike.
-**Target segment:** `01-act-core/src/exploit-explore-deliberate.md`
+**Target segment:** `01-aad-core/src/exploit-explore-deliberate.md`
 **Simulation:** `msc/sim-three-way-tradeoff.py`
 
 
@@ -293,7 +293,7 @@ These conditions are DOMAIN-SPECIFIC and probably cannot be captured in a single
 
 ## Part 6: Recommendation
 
-### For the segment (`01-act-core/src/exploit-explore-deliberate.md`)
+### For the segment (`01-aad-core/src/exploit-explore-deliberate.md`)
 
 **Rewrite substantially.** The segment should:
 

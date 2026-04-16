@@ -1,6 +1,6 @@
 # Sketch: Composition Gaps (Section III)
 
-**Status**: Working sketch for the two --GAP-- entries in Section III of `01-act-core/OUTLINE.md`. These concern how single-agent properties behave under composition — specifically, whether directed separation survives and where adversarial attacks are most effective.
+**Status**: Working sketch for the two --GAP-- entries in Section III of `01-aad-core/OUTLINE.md`. These concern how single-agent properties behave under composition — specifically, whether directed separation survives and where adversarial attacks are most effective.
 
 **Date**: 2026-04-01
 

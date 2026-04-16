@@ -589,7 +589,7 @@ The load-bearing assumption shifts from "the correction function satisfies the s
 
 ### 9.1 To close the bridge formally
 
-1. **Write a segment `gain-sector-bridge.md`** (in `01-act-core/src/`) that states the conditional derivation: the gain principle + directional fidelity implies the sector condition. Type: `derived`. Status: `conditional` (conditional on B1).
+1. **Write a segment `gain-sector-bridge.md`** (in `01-aad-core/src/`) that states the conditional derivation: the gain principle + directional fidelity implies the sector condition. Type: `derived`. Status: `conditional` (conditional on B1).
 
 2. **Modify `sector-condition-derivation.md`** to note that GA-3 is derivable from the gain principle under B1, not merely assumed. The Lyapunov proofs themselves are unchanged — they operate downstream of GA-3 regardless of whether GA-3 is assumed or derived.
 

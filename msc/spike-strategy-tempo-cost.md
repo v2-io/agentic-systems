@@ -1,6 +1,6 @@
 # Strategic Tempo and Cognitive Cost of Strategy
 
-**Status**: Spike. Addresses two --GAP-- entries in `01-act-core/OUTLINE.md` Section II: (1) "Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy)" and (2) "Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)."
+**Status**: Spike. Addresses two --GAP-- entries in `01-aad-core/OUTLINE.md` Section II: (1) "Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy)" and (2) "Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)."
 
 **Date**: 2026-04-02
 

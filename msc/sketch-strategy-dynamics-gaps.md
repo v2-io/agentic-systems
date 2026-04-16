@@ -1,6 +1,6 @@
 # Sketch: Strategy Dynamics Gaps (Section II)
 
-**Status**: Working sketch for the four --GAP-- entries in Section II of `01-act-core/OUTLINE.md`. These gaps concern how $\Sigma_t$ evolves over time — the dynamics that parallel Section I's treatment of $M_t$ dynamics but with important structural differences.
+**Status**: Working sketch for the four --GAP-- entries in Section II of `01-aad-core/OUTLINE.md`. These gaps concern how $\Sigma_t$ evolves over time — the dynamics that parallel Section I's treatment of $M_t$ dynamics but with important structural differences.
 
 **Date**: 2026-04-01
 

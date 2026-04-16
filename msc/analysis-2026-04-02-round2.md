@@ -177,7 +177,7 @@ GA-3 transforms from "opaque global assumption" to "derivable conditional result
 
 ## Promotion Plan: Gain-Sector Bridge → Segment
 
-### Step 1: Write the segment (`01-act-core/src/gain-sector-bridge.md`)
+### Step 1: Write the segment (`01-aad-core/src/gain-sector-bridge.md`)
 
 A new segment combining the results of both spikes:
 - **Type:** derived

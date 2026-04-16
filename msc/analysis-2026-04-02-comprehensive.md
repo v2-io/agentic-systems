@@ -1,6 +1,6 @@
 # Comprehensive ACT Core Review — 2026-04-02
 
-Consolidates the full review of `01-act-core/` (68 segments) with all still-relevant findings from `analysis-2026-04-01.md`, `analysis-2026-04-01-remaining.md`, `analysis-2026-04-02-synthesis.md`, and `analysis-2026-04-02-round2.md`. Items resolved since those analyses were written are marked ~~struck~~ and noted. Items from the new review that were not in prior analyses are marked **NEW**.
+Consolidates the full review of `01-aad-core/` (68 segments) with all still-relevant findings from `analysis-2026-04-01.md`, `analysis-2026-04-01-remaining.md`, `analysis-2026-04-02-synthesis.md`, and `analysis-2026-04-02-round2.md`. Items resolved since those analyses were written are marked ~~struck~~ and noted. Items from the new review that were not in prior analyses are marked **NEW**.
 
 ---
 
@@ -165,7 +165,7 @@ Both labeled "exact" but are convention-dependent on value-object's horizon/poli
 
 ## 4. Missing Segments and Narrative Gaps
 
-### 4.1 ACT Core (01-act-core/) — OUTLINE Gaps
+### 4.1 ACT Core (01-aad-core/) — OUTLINE Gaps
 
 | Gap | Section | Type | Description | Difficulty |
 |-----|---------|------|-------------|------------|
