@@ -35,7 +35,7 @@ This is a *definition*. It names the quantity that characterizes an agent's tota
 
 **Observation noise gating.** Because $\eta^\ast = U_M / (U_M + U_o)$, high observation noise ($U_o$) depresses gain and collapses tempo regardless of loop speed. You cannot outrun a bad observation channel by iterating faster. This grounds Boyd's emphasis on Orient quality over raw OODA speed.
 
-**Centrality.** Tempo is ACT's core capacity metric. It appears on the left side of the persistence condition ( #persistence-condition), determines adversarial advantage ( #adversarial-tempo-advantage), and connects to code quality as observation infrastructure ( #code-quality-as-observation-infrastructure — cross-component reference, see `02-tst-core/`) in the software domain. The strategic analog $\mathcal{T}_\Sigma$ ( #strategic-tempo) extends the same structure to strategy-edge revision, with the key difference that strategic edge rates are endogenous (depend on action policy and upstream success).
+**Centrality.** Tempo is AAD's core capacity metric. It appears on the left side of the persistence condition ( #persistence-condition), determines adversarial advantage ( #adversarial-tempo-advantage), and connects to code quality as observation infrastructure ( #code-quality-as-observation-infrastructure — cross-component reference, see `02-tst-core/`) in the software domain. The strategic analog $\mathcal{T}_\Sigma$ ( #strategic-tempo) extends the same structure to strategy-edge revision, with the key difference that strategic edge rates are endogenous (depend on action policy and upstream success).
 
 **Temporal nesting.** Adaptive processes stratify by timescale, with convergence constraints between levels ( #temporal-nesting).
 

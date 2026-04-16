@@ -49,7 +49,7 @@ $$\alpha_{ss} = K_{ss} = \frac{-Q + \sqrt{Q^2 + 4 Q R_{\text{obs}}}}{2 R_{\text{
 
 Limiting behavior: when $Q \gg R_{\text{obs}}$ (fast dynamics, clean observations), $K_{ss} \to 1$; when $Q \ll R_{\text{obs}}$ (slow dynamics, noisy observations), $K_{ss} \approx \sqrt{Q / R_{\text{obs}}}$.
 
-**Connection to ACT quantities.** The adaptive tempo for a single observation channel at rate $\nu$ is $\mathcal{T} = \nu \cdot K_{ss}$, and the sector parameter in the continuous-time framework is $\alpha = \mathcal{T}$. The bridge is trivial in the scalar case: the gain IS the sector parameter.
+**Connection to AAD quantities.** The adaptive tempo for a single observation channel at rate $\nu$ is $\mathcal{T} = \nu \cdot K_{ss}$, and the sector parameter in the continuous-time framework is $\alpha = \mathcal{T}$. The bridge is trivial in the scalar case: the gain IS the sector parameter.
 
 
 ## Proposition B.2: Matrix Kalman Sector Condition

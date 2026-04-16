@@ -35,7 +35,7 @@ The simulations were theory-shaping, not merely confirmatory. In particular:
 | D | **D vs. S** (separated) | Exponent vs. base noise ($q_\text{base}$) at fixed $\eta$ | Continuous ODE exponent $\to$ 2.0 (Model D), discrete AR(1) exponent $\to$ 1.5 (Model S), as $q_\text{base} \to 0$ | Definitively separated the two asymptotes; validates both derivations | [#adversarial-exponent-regimes](adversarial-exponent-regimes.md) |
 | E | **S** (stochastic AR(1)) | Observation noise; optimal gain validation | Observation noise collapses adversarial exponent from $\sim 1.0$ to $\sim 0.2$; Riccati-optimal gain restores it to $\sim 0.4$; 52% mismatch reduction at moderate noise | Observation quality gates tempo advantage; optimal gain ( #update-gain) empirically validated | [#observation-gates-advantage](observation-gates-advantage.md) |
 | F | **S** (stochastic AR(1)) | Multi-dimensional anisotropic correction; targeted adversarial attack | Per-dimension theory exact to 4 significant figures; scalar tempo overestimates by 72%; targeted attack amplifies advantage by 17% | Validates Model S per-dimension steady state | [#per-dimension-persistence](per-dimension-persistence.md) |
-| Hafez bridge | **S** (stochastic AR(1)) | Bi-predictability $P$ vs. ACT mismatch in adversarial and non-adversarial settings | $P$ measures coupling architecture (scale-invariant); mismatch measures coupling performance; $P$ is blind to adversarial dynamics | $P$ and ACT mismatch are complementary diagnostics; $H_b$ (agent opacity) has no direct ACT analog -- potential gap for multi-agent work | -- |
+| Hafez bridge | **S** (stochastic AR(1)) | Bi-predictability $P$ vs. AAD mismatch in adversarial and non-adversarial settings | $P$ measures coupling architecture (scale-invariant); mismatch measures coupling performance; $P$ is blind to adversarial dynamics | $P$ and AAD mismatch are complementary diagnostics; $H_b$ (agent opacity) has no direct AAD analog -- potential gap for multi-agent work | -- |
 
 ## Methodology
 
@@ -75,7 +75,7 @@ Under deterministic drift, saturating, sigmoid, and breakdown correction functio
 
 ### Hafez bridge: architecture vs. performance
 
-Bi-predictability $P$ (Hafez et al.) measures the informational architecture of agent-environment coupling; ACT mismatch measures the operational performance. In adversarial settings, $P$ remained nearly constant ($\sim 0.268$) across a 10:1 range of opponent tempo, while the mismatch ratio varied from 0.54 to 5.95. $P$ is scale-invariant after z-score normalization, making it insensitive to adversarial dynamics. The two metrics are complementary: $P$ diagnoses whether the coupling structure is sound; mismatch predicts how well it performs.
+Bi-predictability $P$ (Hafez et al.) measures the informational architecture of agent-environment coupling; AAD mismatch measures the operational performance. In adversarial settings, $P$ remained nearly constant ($\sim 0.268$) across a 10:1 range of opponent tempo, while the mismatch ratio varied from 0.54 to 5.95. $P$ is scale-invariant after z-score normalization, making it insensitive to adversarial dynamics. The two metrics are complementary: $P$ diagnoses whether the coupling structure is sound; mismatch predicts how well it performs.
 
 ## Epistemic Status
 

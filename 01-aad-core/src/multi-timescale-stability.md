@@ -53,7 +53,7 @@ The standard singular perturbation result (Tikhonov's theorem, generalized) appl
 
 ## Epistemic Status
 
-This is a *sketch*, not a complete result. The framework and approach are presented as a guide for future development. The claim that timescale separation ensures composite stability is a standard result in singular perturbation theory; the application to ACT's nested adaptive levels is new but follows the standard pattern.
+This is a *sketch*, not a complete result. The framework and approach are presented as a guide for future development. The claim that timescale separation ensures composite stability is a standard result in singular perturbation theory; the application to AAD's nested adaptive levels is new but follows the standard pattern.
 
 Making it rigorous requires specifying the dynamics $G^{(k)}$ for levels deeper than parametric adaptation. #structural-adaptation-necessity gives the *trigger condition* for structural change but not the *dynamics* of how change at deeper levels proceeds. Specifying these would require theories of how agents search over model classes, modify their own architecture, or restructure their adaptive mechanisms — open problems in RL (architecture search, meta-learning), biology (evolutionary dynamics), and organizational theory (institutional change).
 

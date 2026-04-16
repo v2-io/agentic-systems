@@ -10,7 +10,7 @@ stage: deps-verified
 
 # Discussion: Agent Identity and Temporal Continuity
 
-An agent's causal history ( #chronica) is singular and non-forkable. Identity within ACT is grounded not in the model state $M_t$ (which can be copied) but in the unique causal trajectory $\mathcal C_t$ (which cannot).
+An agent's causal history ( #chronica) is singular and non-forkable. Identity within AAD is grounded not in the model state $M_t$ (which can be copied) but in the unique causal trajectory $\mathcal C_t$ (which cannot).
 
 ## Formal Expression
 
@@ -20,13 +20,13 @@ If $M_t$ is a sufficient statistic for $\mathcal C_t$ ( #model-sufficiency), and
 
 ## Epistemic Status
 
-This is *discussion-grade*. The observations follow qualitatively from the formalism but are not formal propositions. No downstream formal result depends on this material. Whether the mathematical structure grounds something that deserves to be called "identity" or "continuity of experience" is beyond ACT's scope. The mathematical structure is clear: the feedback loop produces a singular, non-forkable causal trajectory, and model adequacy is defined relative to that trajectory. What this segment discusses is *continuity persistence* in the sense of `LEXICON.md` — whether the agent maintains a coherent identity and trajectory through time, as distinct from the structural persistence of #persistence-condition (can the machinery outpace disturbance?) and operational persistence (is the agent currently within its viable region?).
+This is *discussion-grade*. The observations follow qualitatively from the formalism but are not formal propositions. No downstream formal result depends on this material. Whether the mathematical structure grounds something that deserves to be called "identity" or "continuity of experience" is beyond AAD's scope. The mathematical structure is clear: the feedback loop produces a singular, non-forkable causal trajectory, and model adequacy is defined relative to that trajectory. What this segment discusses is *continuity persistence* in the sense of `LEXICON.md` — whether the agent maintains a coherent identity and trajectory through time, as distinct from the structural persistence of #persistence-condition (can the machinery outpace disturbance?) and operational persistence (is the agent currently within its viable region?).
 
 ## Discussion
 
 **The clone problem, precisely stated.** Consider copying an LLM's weights (a concrete $M_t$) exactly. At the moment of duplication, both copies are identical — same model state, same causal history $\mathcal C_t$. But the *very next* event — a different user's message, a different observation — creates two divergent, irreversible causal trajectories $\mathcal C_{t+1}^{(1)}$ and $\mathcal C_{t+1}^{(2)}$. Their Level 2 and Level 3 capacities ( #pearl-causal-hierarchy) now reference different causal pasts. Their sufficiency $S(M_{t+1})$ is measured against different histories. Neither copy's future model state is a sufficient statistic for the other's trajectory.
 
-Within ACT's formalism, identity is not the model state $M_t$ (which can be copied) but the *singular causal trajectory* $\mathcal C_t$ (which cannot). A copy shares a *prefix* of the original's causal history, as a sibling shares early childhood; it does not share the trajectory itself.
+Within AAD's formalism, identity is not the model state $M_t$ (which can be copied) but the *singular causal trajectory* $\mathcal C_t$ (which cannot). A copy shares a *prefix* of the original's causal history, as a sibling shares early childhood; it does not share the trajectory itself.
 
 **Formal consequences (not merely philosophical):**
 

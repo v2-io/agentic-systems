@@ -168,7 +168,7 @@ For Model S (stochastic): the steady-state variance gap is $O((\eta^\ast)^2 c^2_
 
 The proofs themselves are standard contraction-mapping (DA.1/DA.2) and supermartingale (DA.1S) arguments. The step-size constraint $\eta^\ast < 2c_{\min}/c_{\max}^2$ is essential and is stated explicitly in each proposition.
 
-**Fluid limit theorem** is *conditional* on Lipschitz regularity of $F_d$ — a standard regularity condition satisfied by all correction functions in the verified instances table ( #gain-sector-bridge). The convergence rate follows from classical ODE approximation theory (Kushner & Yin, 2003); the application to the ACT mismatch dynamics is new but the mathematics is not.
+**Fluid limit theorem** is *conditional* on Lipschitz regularity of $F_d$ — a standard regularity condition satisfied by all correction functions in the verified instances table ( #gain-sector-bridge). The convergence rate follows from classical ODE approximation theory (Kushner & Yin, 2003); the application to the AAD mismatch dynamics is new but the mathematics is not.
 
 **Max attainable:** conditional — the Lipschitz bound DA2'b is inherent to the discrete-time treatment and cannot be replaced by a weaker inner-product condition without losing the norm bound used in the proofs.
 

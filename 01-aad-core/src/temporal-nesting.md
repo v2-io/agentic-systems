@@ -31,7 +31,7 @@ This table is illustrative — real systems may have additional intermediate lev
 
 ## Epistemic Status
 
-*Robust qualitative* — this is standard singular perturbation reasoning (Tikhonov's theorem). The convergence constraint follows from the structure of multi-timescale updating. The specific timescale ratios needed for adequate separation are domain-dependent and not derived within ACT.
+*Robust qualitative* — this is standard singular perturbation reasoning (Tikhonov's theorem). The convergence constraint follows from the structure of multi-timescale updating. The specific timescale ratios needed for adequate separation are domain-dependent and not derived within AAD.
 
 ## Discussion
 
@@ -47,6 +47,6 @@ This table is illustrative — real systems may have additional intermediate lev
 
 **Violation symptoms.** When nesting is violated (a slower process acts before the faster one converges): oscillation, instability, degraded performance. In organizations: micromanagement (strategic decisions at operational tempo). In RL: policy updates before value function converges (policy oscillation). In biology: premature developmental transitions.
 
-**Multi-timescale stability (sketch).** Singular perturbation theory gives the composite stability result: if each level is stable given the levels above it (each level has a stable attractor for fixed slower-level parameters), and the timescale separation is sufficient, the composite $N$-level system is stable. Making this rigorous for ACT requires specifying dynamics at deeper adaptive levels — an open problem. See #multi-timescale-stability for the framework.
+**Multi-timescale stability (sketch).** Singular perturbation theory gives the composite stability result: if each level is stable given the levels above it (each level has a stable attractor for fixed slower-level parameters), and the timescale separation is sufficient, the composite $N$-level system is stable. Making this rigorous for AAD requires specifying dynamics at deeper adaptive levels — an open problem. See #multi-timescale-stability for the framework.
 
 **(Descended from TF-11.)**

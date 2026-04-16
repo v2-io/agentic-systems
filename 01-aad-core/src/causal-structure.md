@@ -21,7 +21,7 @@ We adopt the most primitive notion of causality: **event $A$ can be a cause of e
 
 ## Epistemic Status
 
-This is a *postulate* — the temporal ordering of events is a physical fact about the universe that the theory takes as given. The second law of thermodynamics, the light-cone structure of relativity, and the arrow of psychological time all enforce it, but ACT does not derive it from any of these. It is simply noted as a precondition: the theory applies to agents embedded in a universe where time has a direction.
+This is a *postulate* — the temporal ordering of events is a physical fact about the universe that the theory takes as given. The second law of thermodynamics, the light-cone structure of relativity, and the arrow of psychological time all enforce it, but AAD does not derive it from any of these. It is simply noted as a precondition: the theory applies to agents embedded in a universe where time has a direction.
 
 ## Discussion
 

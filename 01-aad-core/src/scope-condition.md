@@ -11,7 +11,7 @@ stage: claims-verified
 
 # Scope: Scope Condition
 
-ACT's scope is defined by progressive narrowing. The broadest applicable scope — any system that observes under uncertainty — supports Section I's adaptive machinery. Adding causal action unlocks the interventional and purposeful results of Sections II and III.
+AAD's scope is defined by progressive narrowing. The broadest applicable scope — any system that observes under uncertainty — supports Section I's adaptive machinery. Adding causal action unlocks the interventional and purposeful results of Sections II and III.
 
 ## Formal Expression
 
@@ -41,7 +41,7 @@ These are required for the adaptive loop to generate interventional data ( #loop
 
 ## Epistemic Status
 
-This is a *scope definition* — it draws the boundary around the systems each part of ACT addresses. The conditions are not derived; they are the minimal requirements for the associated machinery to be non-vacuous. The progressive structure reflects the theory's own architecture: Section I's adaptive results need only observations and uncertainty; Section II's purposeful results additionally need causal action.
+This is a *scope definition* — it draws the boundary around the systems each part of AAD addresses. The conditions are not derived; they are the minimal requirements for the associated machinery to be non-vacuous. The progressive structure reflects the theory's own architecture: Section I's adaptive results need only observations and uncertainty; Section II's purposeful results additionally need causal action.
 
 ## Discussion
 
@@ -49,12 +49,12 @@ This is a *scope definition* — it draws the boundary around the systems each p
 
 **What is excluded from both scopes.**
 
-- **Closed-form systems** ($H(\Omega_t \mid \mathcal C_t) = 0$): When the agent has complete knowledge of the environment, there is no uncertainty to adapt to. Optimal control over known dynamics is a solved problem outside ACT's concerns.
-- **Pure computation** ($\mathcal O = \emptyset$): A system with no observation channel — e.g., a mathematical proof engine operating on axioms alone — has no agent-environment boundary in ACT's sense.
+- **Closed-form systems** ($H(\Omega_t \mid \mathcal C_t) = 0$): When the agent has complete knowledge of the environment, there is no uncertainty to adapt to. Optimal control over known dynamics is a solved problem outside AAD's concerns.
+- **Pure computation** ($\mathcal O = \emptyset$): A system with no observation channel — e.g., a mathematical proof engine operating on axioms alone — has no agent-environment boundary in AAD's sense.
 
 **What is in adaptive scope but excluded from agency scope.**
 
 - **Passive observers** ($\lvert\mathcal A\rvert \lt 2$): Can observe and model, but cannot intervene. Section I's adaptive machinery applies; the causal-information and purposeful-agent results do not.
-- **Nominal agents** ($P(o \mid do(a)) = P(o \mid do(a'))$ for all $a, a'$): Have choices that make no difference. Can estimate but cannot learn causal structure. Same as passive observers for ACT's purposes: adaptive scope only.
+- **Nominal agents** ($P(o \mid do(a)) = P(o \mid do(a'))$ for all $a, a'$): Have choices that make no difference. Can estimate but cannot learn causal structure. Same as passive observers for AAD's purposes: adaptive scope only.
 
 **Why causal effect matters for the agency scope.** Binary choice ($\lvert\mathcal A\rvert \geq 2$) is necessary but not sufficient. Two actions that produce identical outcome distributions provide no interventional contrast — the agent cannot learn which action produces which effect because the effects are the same. The causal-effect condition ensures at least one meaningful contrast exists, which is what #loop-interventional-access needs to generate Level 2 data.

@@ -18,7 +18,7 @@ Expected squared mismatch decomposes into reducible model error and irreducible 
 
 *[Derived (mismatch-decomposition, Prop 5.1 from TFT)]*
 
-For any agent-environment pair within ACT's scope ( #scope-condition), when observation noise is non-degenerate or the model's predictive mean is misspecified:
+For any agent-environment pair within AAD's scope ( #scope-condition), when observation noise is non-degenerate or the model's predictive mean is misspecified:
 
 $$\mathbb{E}[\Vert\delta_t\Vert^2] = \underbrace{\mathbb{E}[\Vert\hat{o}_t - \bar{o}_t\Vert^2]}_{\text{model error (reducible)}} + \underbrace{\mathbb{E}[\text{Var}(o_t \mid \Omega_t, a_{t-1})]}_{\text{observation noise (irreducible)}} \gt 0$$
 
@@ -41,4 +41,4 @@ where $\bar o_t = \mathbb{E}[o_t \mid \Omega_t, a_{t-1}]$ is the true conditiona
 
 **Connection to model sufficiency.** When $S(M_t) \lt 1$ ( #model-sufficiency), the model has lost predictive information relative to the full history. Under an alignment assumption (the lost information affects the one-step conditional mean), this implies positive model error (term i). Without that alignment assumption, insufficiency still implies positive regret under proper scoring rules but not necessarily positive one-step mean error.
 
-**Mismatch is structurally persistent.** In realistic ACT regimes, mismatch signals persist — they can be reduced but not eliminated when observation noise is non-degenerate. Deterministic, noiseless, perfectly specified systems are limiting edge cases, not the typical adaptive regime.
+**Mismatch is structurally persistent.** In realistic AAD regimes, mismatch signals persist — they can be reduced but not eliminated when observation noise is non-degenerate. Deterministic, noiseless, perfectly specified systems are limiting edge cases, not the typical adaptive regime.

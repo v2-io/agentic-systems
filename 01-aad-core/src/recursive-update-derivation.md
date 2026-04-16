@@ -17,7 +17,7 @@ Derivation showing that $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the *unique* upd
 
 ## Setup
 
-We work within ACT's scope ( #scope-condition): an agent coupled to an environment $\Omega$ through observation and action channels, with residual uncertainty.
+We work within AAD's scope ( #scope-condition): an agent coupled to an environment $\Omega$ through observation and action channels, with residual uncertainty.
 
 **Universe of information at event time $\tau$.** The following information exists (in the broadest ontological sense) at the moment event $e_\tau$ occurs:
 
@@ -158,7 +158,7 @@ The result is correct but partly definitional. The three constraints have differ
 | Constraint | Character | Can it be violated? |
 |------------|-----------|---------------------|
 | C1 (arrow of time) | Physical law | Not in a classical universe |
-| C2 (partial observability) | Scope definition | Only by leaving ACT's scope |
+| C2 (partial observability) | Scope definition | Only by leaving AAD's scope |
 | C3 (state completeness) | Analytical commitment | Not without redefining $M$ |
 
 C1 and C2 do genuine eliminative work — they rule out update forms that depend on future events or on raw $\Omega$. These are non-trivial constraints.

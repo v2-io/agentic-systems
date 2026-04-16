@@ -15,11 +15,11 @@ stage: draft
 
 # Detail: Operationalization — Estimation Procedures
 
-Estimation recipes for core ACT quantities, bridging the measurement gap between formal objects and practical deployment.
+Estimation recipes for core AAD quantities, bridging the measurement gap between formal objects and practical deployment.
 
 ## Measurement Targets
 
-| Quantity | Role in ACT | Typical unit | Minimum data needed |
+| Quantity | Role in AAD | Typical unit | Minimum data needed |
 |----------|-------------|--------------|---------------------|
 | $U_M$ | Model uncertainty ( #update-gain) | domain-specific variance/entropy | Predictive posterior or ensemble spread |
 | $U_o$ | Observation uncertainty ( #update-gain) | sensor variance/noise scale | Channel calibration or residual variance |

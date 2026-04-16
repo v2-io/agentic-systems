@@ -27,7 +27,7 @@ stage: draft
 
 # Worked Example: Nonstationary Bandit with Explicit Strategy (Section II Validation)
 
-ACT's Section II machinery — objectives, strategy DAGs, the orient cascade, satisfaction gap, control regret, chain confidence decay, observability dominance, and edge update via gain — is exercised on a concrete system simple enough for closed-form analysis. The key payoff: Section II diagnostics tell the agent things that Section I quantities alone cannot.
+AAD's Section II machinery — objectives, strategy DAGs, the orient cascade, satisfaction gap, control regret, chain confidence decay, observability dominance, and edge update via gain — is exercised on a concrete system simple enough for closed-form analysis. The key payoff: Section II diagnostics tell the agent things that Section I quantities alone cannot.
 
 ## System
 
@@ -362,7 +362,7 @@ Section II tells the agent: *switch to arm 2, but first explore to confirm — t
 
 ## Mapping Quality Summary
 
-| ACT Concept | Bandit-Strategy Mapping | Status | Notes |
+| AAD Concept | Bandit-Strategy Mapping | Status | Notes |
 |---|---|---|---|
 | Scope ( #scope-condition) | Exact | Definitional | Same as #worked-example-bandit |
 | Model $M_t$ ( #agent-model) | Exact | Structural | Beta posteriors per arm |

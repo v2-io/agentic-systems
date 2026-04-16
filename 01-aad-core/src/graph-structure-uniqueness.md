@@ -176,7 +176,7 @@ The dividing line: acyclicity and directed edges are proved; the full DAG-with-M
 
 The correct claim is narrow: for a given factorized distribution, DAG and factor-graph representations can compute the same marginals. But causal semantics (do-calculus) are DAG-specific and do not transfer to undirected or mixed representations without additional structure.
 
-**ACT's choice.** ACT uses DAG + AND/OR because: (a) AND/OR is the most parsimonious complete basis for binary combination ( #and-or-scope), (b) the DAG naturally supports causal/interventional reasoning (Pearl's do-calculus), and (c) the representation converged across three independent formalism attempts.
+**AAD's choice.** AAD uses DAG + AND/OR because: (a) AND/OR is the most parsimonious complete basis for binary combination ( #and-or-scope), (b) the DAG naturally supports causal/interventional reasoning (Pearl's do-calculus), and (c) the representation converged across three independent formalism attempts.
 
 ## Epistemic Status
 
@@ -190,7 +190,7 @@ Max attainable: *exact* for acyclicity (already there). *Derived conditional* fo
 
 The AND/OR restriction is a *hypothesis* for binary outcomes, grounded in Boolean completeness and parsimony. For non-binary outcomes, it does not apply and richer parameterizations within the derived graphical structure are needed.
 
-The parallel to Cox's theorem is now tighter than previously stated: Cox's theorem proves that consistency axioms force probability; the CMC theorem proves that causal structure under sufficiency forces the Markov factorization. Both are formal results, not analogies. The remaining gap: Cox's axioms are necessary and sufficient for probability; ACT's postulates are sufficient for DAG+Markov structure, but the necessity direction (could a non-DAG structure satisfy P1-P4?) is not established. For practical purposes this gap is unimportant — the proved sufficiency gives a rigorous foundation for the strategy representation.
+The parallel to Cox's theorem is now tighter than previously stated: Cox's theorem proves that consistency axioms force probability; the CMC theorem proves that causal structure under sufficiency forces the Markov factorization. Both are formal results, not analogies. The remaining gap: Cox's axioms are necessary and sufficient for probability; AAD's postulates are sufficient for DAG+Markov structure, but the necessity direction (could a non-DAG structure satisfy P1-P4?) is not established. For practical purposes this gap is unimportant — the proved sufficiency gives a rigorous foundation for the strategy representation.
 
 ## Discussion
 

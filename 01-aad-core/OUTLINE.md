@@ -1,12 +1,12 @@
-# ACT: Agentic Cycle Theory
+# AAD: Adaptation and Actuation Dynamics
 
-The mathematical core of the [Agentic Systems](../OUTLINE.md) research framework. ACT formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis for adaptive, purposeful agents under uncertainty.
+The mathematical core of the [Agentic Systems](../OUTLINE.md) research framework. AAD formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis for adaptive, purposeful agents under uncertainty.
 
 **Working draft.** The argument laid out claim by claim. The ordering is the current best linearization of the dependency DAG; it will change as the theory develops. Slugs are the stable identities. Treat this as a living proof sketch, not a specification.
 
 **On mathematical precision.** The theory's relationship to formalism varies by section and is expected to. Section I (adaptive systems) is the most mathematically locked down — the persistence machinery, mismatch dynamics, and gain structure have clean derivations and Lyapunov proofs. Section II (purposeful agents) has an exact diagnostic core whose inferential force scales with the continuation convention hierarchy ( #value-object): from local heuristics (C1/one-step) through moderate-horizon diagnostics (C2/receding-horizon) to global conclusions (C3/Bellman). The strategy layer now has a proved DAG structure (acyclicity from temporal ordering, Markov property from the CMC theorem under causal sufficiency) and a first-class treatment of correlated failure via the Correlation Hierarchy ( #strategy-dag). Both the diagnostic core and the strategy layer depend on the directed-separation scope condition ( #directed-separation): **Section II's exact results apply to Class 1 (modular) agents.** The scope restriction to modular agents is detailed in the Section II preamble below. Section III (composition) has promising structure built on the Section I Lyapunov machinery but depends on admissibility choices that are formulated, not derived, and a bridge lemma that requires a contraction assumption beyond the stated admissibility constraints. This gradient — from exact core through conditionally exact architecture to open formulation — is the expected arc. The goal is to describe agentic systems, not to produce a purely mathematical artifact. We pursue mathematical precision when it yields genuine insight (the persistence condition, the CMC-based Markov proof, the convention hierarchy monotonicity) and settle for principled sketches when the insight is structural rather than quantitative (the strategy-revision loop, the composition admissibility). The boundaries between these regimes are fluid and still being discovered.
 
-**Scope:** ACT covers the general theory of adaptive systems (Section I), actuated/purposeful agents (Section II), and agent composition (Section III). Domain instantiations (software: [`02-tst-core/`](../02-tst-core/OUTLINE.md)), logogenic agents ([`03-logogenic-agents/`](../03-logogenic-agents/OUTLINE.md)), and logozoetic agents ([`04-logozoetic-agents/`](../04-logozoetic-agents/OUTLINE.md)) are part of the broader Agentic Systems framework, grounded by ACT but developed independently.
+**Scope:** AAD covers the general theory of adaptive systems (Section I), actuated/purposeful agents (Section II), and agent composition (Section III). Domain instantiations (software: [`02-tst-core/`](../02-tst-core/OUTLINE.md)), logogenic agents ([`03-logogenic-agents/`](../03-logogenic-agents/OUTLINE.md)), and logozoetic agents ([`04-logozoetic-agents/`](../04-logozoetic-agents/OUTLINE.md)) are part of the broader Agentic Systems framework, grounded by AAD but developed independently.
 
 See [`FORMAT.md`](../FORMAT.md) for segment file conventions. See [`NOTATION.md`](../NOTATION.md) for symbols, conventions, and units.
 
@@ -19,7 +19,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 ## I. Adaptive Systems Under Uncertainty
 
-*Scope: Any system consisting of an agent coupled to an environment through observation and action channels, where the environment is not fully observable. This is the general case — thermostats through commanders. The claims in this section are largely drawn from TFT (TF-01 through TF-11, Appendix A), which developed the adaptive-systems foundation that ACT subsumes.*
+*Scope: Any system consisting of an agent coupled to an environment through observation and action channels, where the environment is not fully observable. This is the general case — thermostats through commanders. The claims in this section are largely drawn from TFT (TF-01 through TF-11, Appendix A), which developed the adaptive-systems foundation that AAD subsumes.*
 
 ![Dependency Graph](src/img/dep-graph-section-I.svg)
 
@@ -28,7 +28,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I   | Definition  |     | [#agent-environment](src/agent-environment.md)                             | Agent-environment boundary                     | deps-verified   |
 | I   | Definition  |     | [#observation-function](src/observation-function.md)                       | Lossy, noisy observations                      | deps-verified   |
 | I   | Definition  |     | [#action-transition](src/action-transition.md)                             | Actions affect environment                     | deps-verified   |
-| I   | Scope       |     | [#scope-condition](src/scope-condition.md)                                 | Where ACT applies                              | claims-verified |
+| I   | Scope       |     | [#scope-condition](src/scope-condition.md)                                 | Where AAD applies                              | claims-verified |
 | I   | Postulate   |     | [#composition-consistency](src/composition-consistency.md)                 | Agent/subagent scale invariance                | deps-verified   |
 | I   | Postulate   |     | [#causal-structure](src/causal-structure.md)                               | Irreducible causal structure                   | deps-verified   |
 | I   | Definition  |     | [#pearl-causal-hierarchy](src/pearl-causal-hierarchy.md)                   | Three levels of causal reasoning               | deps-verified   |
@@ -60,6 +60,8 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 ## II. Actuated Adaptation: Agentic Systems
 
 *Scope narrowing: agents that not only track reality but aim at something. This adds objectives and strategy alongside the reality model.*
+
+*This is the **actuation** half of *Adaptation and Actuation Dynamics*: Section I develops adaptive systems in general; Section II develops the goal-directed layer built on top.*
 
 ***Architectural scope.** Section II's exact results apply to **Class 1 (modular) agents** — architectures where epistemic processing ($f_M$) is structurally separated from purposeful processing ($f_G$). This includes: Kalman filter + LQR, modular RL with separate world model, military intelligence separated from operations, and tool-use AI agents with separate perception and planning modules. **Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation ( #directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-logogenic-agents/`. Class 3 (partially modular) agents are an approximation, with quality depending on the degree of coupling. This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II.*
 
@@ -166,9 +168,9 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 | §   | Type           | N   | Tag                                                    | Claim                                            | Stage |
 | --- | -------------- | --- | ------------------------------------------------------ | ------------------------------------------------ | ----- |
-| B   | Detail         |     | [#operationalization](src/operationalization.md)       | Estimation procedures for ACT quantities         | draft |
+| B   | Detail         |     | [#operationalization](src/operationalization.md)       | Estimation procedures for AAD quantities         | draft |
 | B   | Worked example |     | [#worked-example-kalman](src/worked-example-kalman.md) | End-to-end Kalman instantiation (exact)          | draft |
 | B   | Worked example |     | [#worked-example-bandit](src/worked-example-bandit.md) | End-to-end RL bandit instantiation (approximate) | draft |
 | B   | Worked example |     | [#worked-example-strategy](src/worked-example-strategy.md) | Section II strategy DAG instantiation (3-arm bandit) | draft |
 | B   | Worked example |     | [#worked-example-L1](src/worked-example-L1.md) | L1 augmented DAG: common-cause node, sector condition, L0/L1 comparison | draft |
-| B   | Worked example |     | [#worked-example-cam](src/worked-example-cam.md) | Coevolving automata (Miller 2022): ACT ↔ Moore machine mapping, meta-machine as ε*=0 composition, simplest adaptive agent | missing |
+| B   | Worked example |     | [#worked-example-cam](src/worked-example-cam.md) | Coevolving automata (Miller 2022): AAD ↔ Moore machine mapping, meta-machine as ε*=0 composition, simplest adaptive agent | missing |

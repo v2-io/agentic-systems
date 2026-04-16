@@ -38,7 +38,7 @@ The regime is a property of the **domain and the agent's action space**, not a p
 
 ## Epistemic Status
 
-Conditional on the causal assumptions within each regime. The proxy definition is standard information theory; the admissibility classification is a scope decision, not a derived result. The safety conditions for proxy use are normative — they follow from the sign-indefiniteness of the proxy, not from ACT-specific machinery.
+Conditional on the causal assumptions within each regime. The proxy definition is standard information theory; the admissibility classification is a scope decision, not a derived result. The safety conditions for proxy use are normative — they follow from the sign-indefiniteness of the proxy, not from AAD-specific machinery.
 
 Max attainable: conditional. The regime boundaries are domain properties that cannot be derived within the theory.
 
