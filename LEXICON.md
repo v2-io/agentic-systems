@@ -1,6 +1,6 @@
 # LEXICON — Quick Reference
 
-Concise definitions of ACT's prose vocabulary. For the full discussion — philosophical grounding, etymologies, the stochastic parrot argument, agent class reasoning, persistence taxonomy — see the [Lexicon section in README.md](README.md#lexicon).
+Concise definitions of AAD's prose vocabulary. For the full discussion — philosophical grounding, etymologies, the stochastic parrot argument, agent class reasoning, persistence taxonomy — see the [Lexicon section in README.md](README.md#lexicon).
 
 For mathematical symbols, see [`NOTATION.md`](NOTATION.md).
 
@@ -20,7 +20,7 @@ For mathematical symbols, see [`NOTATION.md`](NOTATION.md).
 
 ## Agent Classes
 
-| Class | Definition | ACT boundary |
+| Class | Definition | AAD boundary |
 |-------|-----------|--------------|
 | **Adaptive system** | Feedback loop + mismatch correction under uncertainty | #scope-condition (Section I) |
 | **Agentic system** | + outcome model + goal-directed action + model adaptation | #causal-structure (within Section I) |
@@ -91,7 +91,7 @@ For mathematical symbols, see [`NOTATION.md`](NOTATION.md).
 
 ## Terms to Be Added
 
-Terms with specific ACT meaning awaiting full treatment in README.md:
+Terms with specific AAD meaning awaiting full treatment in README.md:
 
 - **Observability dominance** — unobservable strategy edges freeze; paths become epistemically dead
 - **Strategy DAG** ($\Sigma_t$) — probabilistic AND/OR DAG with single-parameter edges and derived acyclicity

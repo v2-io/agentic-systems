@@ -96,7 +96,7 @@ Max attainable: conditional. The accuracy bounds require the Lipschitz constant 
 
 ## Discussion
 
-**The diagnostic framework as the bridge.** This segment is the practical bridge between ACT's Section II machinery and logogenic agent engineering. The message: you can still use the 2x2 diagnostic table, the satisfaction gap, and control regret. What you lose is the guarantee that these quantities were computed in the right order from unbiased inputs. What you must add is: (a) an enforcement mechanism for the cascade ordering, and (b) awareness that the diagnostics may be biased by goal-conditioning, with bias proportional to observation ambiguity.
+**The diagnostic framework as the bridge.** This segment is the practical bridge between AAD's Section II machinery and logogenic agent engineering. The message: you can still use the 2x2 diagnostic table, the satisfaction gap, and control regret. What you lose is the guarantee that these quantities were computed in the right order from unbiased inputs. What you must add is: (a) an enforcement mechanism for the cascade ordering, and (b) awareness that the diagnostics may be biased by goal-conditioning, with bias proportional to observation ambiguity.
 
 **Strategic calibration under coupling.** The edge residual ( #strategic-calibration) in the coupled formulation becomes:
 

@@ -2,7 +2,7 @@
 
 ## What happened
 
-Full read of the entire corpus (TFT, TST, via-tft, ACT src/, all appendices, msc/, feedback). Then a theoretical spike on deriving purposeful agency from first principles, iterated through three versions with Gemini and Codex review at each stage, culminating in a graph uniqueness argument.
+Full read of the entire corpus (TFT, TST, via-tft, AAD src/, all appendices, msc/, feedback). Then a theoretical spike on deriving purposeful agency from first principles, iterated through three versions with Gemini and Codex review at each stage, culminating in a graph uniqueness argument.
 
 ## What we produced
 
@@ -36,7 +36,7 @@ Most of the v3 spike. The X_t = (M_t, G_t) lift, the O_t/Σ_t split, the orient 
 
 ### What we learned about the theory's nature
 
-**ACT's main contribution is integration.** The individual pieces (Kalman-style gain, Pearl's hierarchy, Lyapunov stability, BDI-style agent architecture) are known. The synthesis — connecting code quality to U_o to η* to T to persistence — is what no single field provides. The theory should be presented as a unifying framework with specific novel results, not as a revolutionary new mathematics.
+**AAD's main contribution is integration.** The individual pieces (Kalman-style gain, Pearl's hierarchy, Lyapunov stability, BDI-style agent architecture) are known. The synthesis — connecting code quality to U_o to η* to T to persistence — is what no single field provides. The theory should be presented as a unifying framework with specific novel results, not as a revolutionary new mathematics.
 
 **The functional requirements are the theorems; the formalisms are the engineering.** The derivation chain produces requirements (you need causal structure, you need belief-goal separation, you need feasibility assessment, you need a graphical model). How those requirements are realized (AND/OR DAG vs influence diagram vs factor graph) is engineering — equivalent representations exist, and the choice between them is driven by computational properties and domain fit.
 

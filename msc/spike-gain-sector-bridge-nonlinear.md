@@ -4,7 +4,7 @@
 
 **Date**: 2026-04-02
 
-**Objective**: Determine whether GA-3 is a derivable consequence of well-understood loss function properties, or an irreducible assumption. The answer is: **GA-3 is equivalent to local strong convexity for any gradient-based agent, and the ACT sector parameter $\alpha$ is the product of the learning rate and the loss landscape's strong convexity modulus.**
+**Objective**: Determine whether GA-3 is a derivable consequence of well-understood loss function properties, or an irreducible assumption. The answer is: **GA-3 is equivalent to local strong convexity for any gradient-based agent, and the AAD sector parameter $\alpha$ is the product of the learning rate and the loss landscape's strong convexity modulus.**
 
 **Depends on**: #sector-condition-derivation, #sector-condition-stability, #update-gain, #mismatch-dynamics, #structural-adaptation-necessity, #persistence-condition
 
@@ -92,7 +92,7 @@ The equivalence is **approximate** when:
 
 ### 1.6 How $\eta$ Enters the Sector Parameter
 
-The factorization $\alpha = \eta \cdot \mu$ has a clean ACT interpretation:
+The factorization $\alpha = \eta \cdot \mu$ has a clean AAD interpretation:
 
 - **$\mu$** is a property of the *loss landscape* (the environment's curvature, the model class's natural geometry). It measures how strongly the loss surface pushes the agent toward the optimum per unit mismatch. This is the "quality" of the correction signal — analogous to $\eta^\ast$ in the update-gain framework.
 - **$\eta$** is the agent's *responsiveness* — how much it trusts each gradient signal. This maps directly to the update gain from #update-gain.
@@ -100,7 +100,7 @@ The factorization $\alpha = \eta \cdot \mu$ has a clean ACT interpretation:
 
 In the linear case, $\nabla L = H\delta$ where $H$ is the Hessian, and $\mu = \lambda_{\min}(H)$. Then $\alpha = \eta \lambda_{\min}(H)$, recovering the adaptive tempo $\mathcal{T}$ from #mismatch-dynamics when $\eta = \eta^\ast$ and $\nu = 1$ (one update per time step).
 
-The factorization also explains the convergence condition for gradient descent: the requirement $\eta < 2/L_{\text{smooth}}$ (where $L_{\text{smooth}}$ is the smoothness constant) ensures the correction function doesn't overshoot. Overshoot would violate an *upper* sector condition ($\delta^T F \leq \bar{\alpha} \lVert\delta\rVert^2$), causing oscillation instead of convergence. The sector framework in ACT focuses on the lower bound; the upper bound is the stability condition from optimization theory.
+The factorization also explains the convergence condition for gradient descent: the requirement $\eta < 2/L_{\text{smooth}}$ (where $L_{\text{smooth}}$ is the smoothness constant) ensures the correction function doesn't overshoot. Overshoot would violate an *upper* sector condition ($\delta^T F \leq \bar{\alpha} \lVert\delta\rVert^2$), causing oscillation instead of convergence. The sector framework in AAD focuses on the lower bound; the upper bound is the stability condition from optimization theory.
 
 ---
 
@@ -114,7 +114,7 @@ where $H \succ 0$ is the Hessian (e.g., $H = X^T X / N$ for linear regression).
 
 - **Strong convexity**: $\mu = \lambda_{\min}(H) > 0$ **globally**
 - **Sector condition**: $\alpha = \eta \cdot \lambda_{\min}(H)$, holds for all $\delta$ (no radius restriction, $R = \infty$)
-- **ACT consequence**: The linear case from #mismatch-dynamics, where $\alpha = \mathcal{T}$, is recovered exactly. Structural persistence is trivially satisfied. Only task adequacy matters.
+- **AAD consequence**: The linear case from #mismatch-dynamics, where $\alpha = \mathcal{T}$, is recovered exactly. Structural persistence is trivially satisfied. Only task adequacy matters.
 
 **Simulation verification** (Simulation 1): With a Hessian having eigenvalues $\{0.5, 1.0, 2.0, 3.0, 5.0\}$ and $\eta = 0.1$, the sector ratio $\delta^T F / \lVert\delta\rVert^2$ ranged from 0.050 to 0.317, exactly within $[\eta\mu, \eta L] = [0.05, 0.50]$, confirming the bound at every step of the gradient descent trajectory.
 
@@ -127,7 +127,7 @@ $$L(w) = \frac{1}{N} \sum_{i=1}^N \log(1 + \exp(-y_i \cdot x_i^T w))$$
 - **Result**: **Convex globally but not strongly convex globally**. Locally strongly convex in any bounded region, with $\mu(R)$ depending on the region.
 - **With L2 regularization** ($L_{\text{reg}} = L + \frac{\lambda}{2}\lVert w\rVert^2$): $\mu \geq \lambda$ globally.
 
-**ACT consequence**: Unregularized logistic regression satisfies GA-3 *locally* with a position-dependent $\alpha$. The sector parameter weakens as the agent moves far from the optimum. L2 regularization provides a floor: $\alpha \geq \eta\lambda$, guaranteeing GA-3 globally.
+**AAD consequence**: Unregularized logistic regression satisfies GA-3 *locally* with a position-dependent $\alpha$. The sector parameter weakens as the agent moves far from the optimum. L2 regularization provides a floor: $\alpha \geq \eta\lambda$, guaranteeing GA-3 globally.
 
 **Simulation verification** (Simulation 2): Unregularized logistic with 5000 samples showed the sector ratio positive along the entire trajectory from initialization to convergence, with the local strong convexity parameter ranging from 0.076 (at the MLE) to higher values far from it. With L2 regularization ($\lambda = 0.1$), the sector ratio was bounded below by $\eta\lambda = 0.03$ at every point, confirmed numerically.
 
@@ -149,7 +149,7 @@ which is the Fisher information matrix — positive definite everywhere in the i
 
 **Simulation verification** (Simulation 5): Poisson in natural parameter space. The sector ratio was positive at every step, ranging from 0.00177 to 0.00240 (with $\eta = 0.001$). The strong convexity parameter $\mu = e^\theta$ varies with position but is always positive.
 
-**ACT consequence**: Any agent using exponential family models in natural parameter form satisfies GA-3 globally. The Kalman filter (Gaussian), Beta-Bernoulli edge updates, and Bayesian conjugate models all fall in this category. This is a large and important class.
+**AAD consequence**: Any agent using exponential family models in natural parameter form satisfies GA-3 globally. The Kalman filter (Gaussian), Beta-Bernoulli edge updates, and Bayesian conjugate models all fall in this category. This is a large and important class.
 
 ### 2.4 Non-Convex Losses (Neural Networks, Mixture Models)
 
@@ -180,7 +180,7 @@ A function is quasi-convex if its sublevel sets $\{w : L(w) \leq c\}$ are convex
 - The local sector parameter is $\alpha(R) = \eta \cdot 2/(1+R^2)^2$, which is positive but becomes vacuously small for large $R$
 - **Result**: GA-3 technically holds locally for any finite $R$, but with $\alpha \to 0$ the persistence bound $R^\ast = \rho/\alpha \to \infty$, meaning the agent effectively cannot persist against any disturbance
 
-**ACT consequence**: Quasi-convex (but not strongly convex) losses produce arbitrarily weak sector bounds. The persistence condition requires $\alpha > \rho/R$, and for quasi-convex losses the achievable $\alpha$ may fall below this threshold even though the loss is unimodal. These losses need the local analysis (Part 3) to be useful.
+**AAD consequence**: Quasi-convex (but not strongly convex) losses produce arbitrarily weak sector bounds. The persistence condition requires $\alpha > \rho/R$, and for quasi-convex losses the achievable $\alpha$ may fall below this threshold even though the loss is unimodal. These losses need the local analysis (Part 3) to be useful.
 
 ### 2.6 Multi-Modal Non-Monotone Losses
 
@@ -196,7 +196,7 @@ For losses with multiple local minima (Simulation 6, second case: $L(w) = \sin(w
 
 ### 3.1 R as the Convexity Basin Radius
 
-ACT's sector condition is local: it holds for $\lVert\delta\rVert \leq R$. The equivalence established in Part 1 gives this a precise meaning for gradient-based agents:
+AAD's sector condition is local: it holds for $\lVert\delta\rVert \leq R$. The equivalence established in Part 1 gives this a precise meaning for gradient-based agents:
 
 *[Derived (basin-radius identification)]*
 
@@ -417,7 +417,7 @@ The Beta-Bernoulli result from #spike-single-edge-strategic-dynamics is a specia
 
 ### 5.7 Open Questions
 
-1. **Non-gradient agents.** For agents whose correction is not gradient-based (PID controllers, rule-based systems, human judgment), GA-3 remains an empirical claim. Can it be derived from other principles? PID controllers satisfy a sector condition when the plant transfer function is in a specific sector (Lur'e stability theory) — the connection to ACT's sector condition is structural, not accidental.
+1. **Non-gradient agents.** For agents whose correction is not gradient-based (PID controllers, rule-based systems, human judgment), GA-3 remains an empirical claim. Can it be derived from other principles? PID controllers satisfy a sector condition when the plant transfer function is in a specific sector (Lur'e stability theory) — the connection to AAD's sector condition is structural, not accidental.
 
 2. **Adaptive $\eta$.** When $\eta$ is itself adapted (Adam, RMSprop, Kalman gain), the sector parameter $\alpha = \eta(t) \cdot \mu(w_t)$ is time-varying. The Lyapunov proofs in #sector-condition-derivation assume constant $\alpha$. Extension to time-varying $\alpha(t) \geq \underline{\alpha} > 0$ is standard (see Khalil 2002, Chapter 8) and should be noted.
 

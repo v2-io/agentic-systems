@@ -41,12 +41,12 @@ When $T_{\text{recovery}} \ll T_{\text{defensive}}$, accepting and quickly recov
 
 **Perturbation types.** Systems face impulse perturbations (traffic spikes, deploys), sustained stress (degraded dependencies, memory leaks), and cascading failures (propagation through coupled components). Low #system-coupling limits cascade scope; fast recovery minimizes $T_{\text{recovery}}$; graceful degradation maintains partial #system-availability.
 
-**Connection to ACT.** Perturbations are environmental disturbances ($\rho$) in the operational domain. The persistence condition ( #persistence-condition) applies: the team's operational tempo must exceed the disturbance rate relative to acceptable mismatch. A team that cannot recover faster than failures accumulate is in the unmaintainability regime.
+**Connection to AAD.** Perturbations are environmental disturbances ($\rho$) in the operational domain. The persistence condition ( #persistence-condition) applies: the team's operational tempo must exceed the disturbance rate relative to acceptable mismatch. A team that cannot recover faster than failures accumulate is in the unmaintainability regime.
 
 ## Working Notes
 
-- The $P(\text{failure}) \times T_{\text{recovery}}$ term is an expected-value approximation. In practice, failure distributions are heavy-tailed — rare catastrophic failures may dominate the expectation. A risk-sensitive formulation (e.g., CVaR) might be more appropriate for critical systems, but ACT's temporal-optimality postulate as stated uses expected time.
+- The $P(\text{failure}) \times T_{\text{recovery}}$ term is an expected-value approximation. In practice, failure distributions are heavy-tailed — rare catastrophic failures may dominate the expectation. A risk-sensitive formulation (e.g., CVaR) might be more appropriate for critical systems, but AAD's temporal-optimality postulate as stated uses expected time.
 - The scope extension is mild — it just says "count operational time too." But it has strong implications: development decisions that seem suboptimal under pure implementation time (T-08) become optimal when operational time is included. This is why the scope narrowing matters.
-- TST T-12's perturbation taxonomy (impulse, stress, cascade) maps to ACT's disturbance characterization in the persistence condition. Impulse = spike in $\rho$; stress = sustained elevated $\rho$; cascade = $\rho$ amplified by coupling. The persistence condition handles all three through the $\rho$ term, but the qualitative distinction is useful for practitioners.
+- TST T-12's perturbation taxonomy (impulse, stress, cascade) maps to AAD's disturbance characterization in the persistence condition. Impulse = spike in $\rho$; stress = sustained elevated $\rho$; cascade = $\rho$ amplified by coupling. The persistence condition handles all three through the $\rho$ term, but the qualitative distinction is useful for practitioners.
 
 *(Descended from TST T-12, D-08.)*

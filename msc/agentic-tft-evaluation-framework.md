@@ -1,6 +1,6 @@
 # Evaluation Framework: How to Know If the Loop Is Working
 
-> **Origin**: `~/src/agentic-tft/12-evaluation-framework.md` (Feb 2026 session, pre-ACT restructuring). TFT references should be read as ACT. PROPRIUM references point to `~/src/firmatum/`.
+> **Origin**: `~/src/agentic-tft/12-evaluation-framework.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
 > **Relevance**: Primary source for the "Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents" gap in `03-logogenic-agents/OUTLINE.md`. Six core metrics operationalized for language-constituted agents. The development-vs-drift diagnostic (§3) is genuinely novel — uses mismatch trajectory to distinguish growth from pathological drift, addressing the field's inability to tell them apart. Known issues cataloged in `agentic-tft-review-response.md`.
 >

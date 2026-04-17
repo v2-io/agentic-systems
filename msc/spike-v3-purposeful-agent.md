@@ -61,12 +61,12 @@ $$Q_O(M_t, a; \pi_{\text{cont}}, N_h) = \mathbb{E}\!\left[V_{O_t}(\tau) \;\middl
 
 **Continuation convention**: All value queries are conditioned on a specific continuation policy $\pi_{\text{cont}}$ and finite horizon $N_h$. This parallels TF-10's operational sufficiency $S_\Pi$, which also uses finite horizon and policy class.
 
-**Policy closure**: $\pi_{\text{cont}}$ is a *parameter* of the value object, not a derived quantity. ACT does not prescribe a specific solution concept. Common choices:
+**Policy closure**: $\pi_{\text{cont}}$ is a *parameter* of the value object, not a derived quantity. AAD does not prescribe a specific solution concept. Common choices:
 - $\pi_{\text{cont}} = \pi_{\text{current}}$ — one-step improvement (evaluate each action assuming current behavior continues afterward)
 - $\pi_{\text{cont}} = \pi^\ast$ — Bellman fixed point (self-consistent optimal continuation; requires solving a fixed-point equation)
 - $\pi_{\text{cont}}$ re-optimized each step — receding-horizon / MPC
 
-The one-step improvement ($\pi_{\text{cont}} = \pi_{\text{current}}$) is the natural default for ACT: it requires no fixed-point computation, aligns with the incremental update philosophy (TF-06), and is a practical default — not a convergence guarantee (specific convergence conditions depend on the environment and policy class). When a solution concept matters (e.g., for the optimality of $A_O$ in §7), it should be stated explicitly.
+The one-step improvement ($\pi_{\text{cont}} = \pi_{\text{current}}$) is the natural default for AAD: it requires no fixed-point computation, aligns with the incremental update philosophy (TF-06), and is a practical default — not a convergence guarantee (specific convergence conditions depend on the environment and policy class). When a solution concept matters (e.g., for the optimality of $A_O$ in §7), it should be stated explicitly.
 
 **Policy objective** (extending TF-08):
 

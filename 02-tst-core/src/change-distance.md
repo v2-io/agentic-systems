@@ -34,7 +34,7 @@ Definitional. The hierarchy is a structural observation about how software is or
 
 Change distance operationalizes the intuition that "scattered changes are harder." The hierarchy reflects real discontinuities in the agent's observation channel: reading within a file is cheap (scrolling), reading across files requires navigation, reading across modules requires understanding interfaces, reading across services requires understanding protocols.
 
-In ACT terms, each boundary crossing increases the cost of constructing the relevant portion of $M_t$ — the agent must load more context to hold both changes in working state simultaneously.
+In AAD terms, each boundary crossing increases the cost of constructing the relevant portion of $M_t$ — the agent must load more context to hold both changes in working state simultaneously.
 
 ## Working Notes
 

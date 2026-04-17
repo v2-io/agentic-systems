@@ -1,6 +1,6 @@
 # LLMs and Causal Access: The Loop, the Language, and Pearl's Objection
 
-**Status**: Working note — captures a discussion thread from the March 2026 spike session. May become part of ACT's introduction, a standalone note, or a blog entry. The content is relevant to ACT (it formalizes the "model + loop" claim using ACT machinery) but is also independently interesting as a response to Pearl's critique of deep learning.
+**Status**: Working note — captures a discussion thread from the March 2026 spike session. May become part of AAD's introduction, a standalone note, or a blog entry. The content is relevant to AAD (it formalizes the "model + loop" claim using AAD machinery) but is also independently interesting as a response to Pearl's critique of deep learning.
 
 **Date**: 2026-03-09
 
@@ -14,11 +14,11 @@ Judea Pearl has argued repeatedly (since ~2018) that deep learning systems, incl
 
 ## Three Independent Responses
 
-ACT provides the formal framework for three responses, each operating at a different level. Together they constitute a comprehensive rebuttal — not of Pearl's causal hierarchy (which is mathematically correct) but of his application of it to dismiss LLMs as merely associational.
+AAD provides the formal framework for three responses, each operating at a different level. Together they constitute a comprehensive rebuttal — not of Pearl's causal hierarchy (which is mathematically correct) but of his application of it to dismiss LLMs as merely associational.
 
-### Response 1: The Loop Provides Level 2 (from ACT/TFT)
+### Response 1: The Loop Provides Level 2 (from AAD/TFT)
 
-Pearl's critique treats the LLM *in isolation*. ACT's fundamental observation (TF-02) is that an agent embedded in an action-observation feedback loop achieves Level 2 epistemic access *by construction*:
+Pearl's critique treats the LLM *in isolation*. AAD's fundamental observation (TF-02) is that an agent embedded in an action-observation feedback loop achieves Level 2 epistemic access *by construction*:
 
 1. The agent selects an action a_t (TF-07)
 2. The action causally affects the environment (TF-01)
@@ -68,9 +68,9 @@ If behavioral evidence suffices for attributing causal reasoning capacity to hum
 
 One might respond: "But humans have evolutionary history that shaped them for causal reasoning; LLMs were trained on next-token prediction." This is true but irrelevant to the causal hierarchy. The hierarchy is about *what the system can compute*, not *how it came to be able to compute it*. A system either can or cannot answer interventional queries correctly. The training objective (next-token prediction vs. survival and reproduction) is part of the mechanism, not part of the capability assessment.
 
-## The ACT Synthesis
+## The AAD Synthesis
 
-ACT unifies these three responses:
+AAD unifies these three responses:
 
 1. **The loop** (TF-02, TF-07): The feedback cycle provides Level 2 access structurally, regardless of internal architecture.
 
@@ -78,7 +78,7 @@ ACT unifies these three responses:
 
 3. **The behavioral evidence** (TF-05, mismatch): If an agent's actions produce outcomes consistent with Level 2-3 reasoning (low δ in interventional prediction tasks), the capacity is demonstrated regardless of the mechanism.
 
-The implication for ACT's scope: LLMs embedded in feedback loops are legitimate ACT agents. They are not excluded from purposeful agency by Pearl's hierarchy. The hierarchy is correct — Level 2 requires causal structure — but the structure comes from the *loop* and the *training data*, not from an explicit internal SCM.
+The implication for AAD's scope: LLMs embedded in feedback loops are legitimate AAD agents. They are not excluded from purposeful agency by Pearl's hierarchy. The hierarchy is correct — Level 2 requires causal structure — but the structure comes from the *loop* and the *training data*, not from an explicit internal SCM.
 
 ## Connection to the Purposeful Agency Spike
 
@@ -88,7 +88,7 @@ The spike (spike-purposeful-agent-derivation.md) establishes that:
 - The feedback loop provides Level 2 (Part 3.4, derived from TF-02)
 - Temporal optimality (#010) narrows us to explicit causal models when planning is cheaper than experimentation (Part 10.3, scope narrowing)
 
-The LLM case is interesting because it occupies a *middle ground*: the LLM has absorbed implicit causal structure from training (Response 2) AND operates in a feedback loop (Response 1), but doesn't maintain an explicit causal DAG (the Σ_t of ACT's Level 4 G_t).
+The LLM case is interesting because it occupies a *middle ground*: the LLM has absorbed implicit causal structure from training (Response 2) AND operates in a feedback loop (Response 1), but doesn't maintain an explicit causal DAG (the Σ_t of AAD's Level 4 G_t).
 
 Where does this place the LLM agent in the G_t hierarchy from the spike?
 
@@ -101,9 +101,9 @@ This suggests that the G_t hierarchy is not just about the environment's complex
 
 ## What This Means Practically
 
-For ACT-grounded AI agent design:
+For AAD-grounded AI agent design:
 
-1. **Don't try to build explicit SCMs into LLM agents.** The loop provides Level 2 access; language training provides implicit causal priors. What the agent needs is a good loop (fast feedback, informative observations, appropriate gain) — ACT's adaptive machinery.
+1. **Don't try to build explicit SCMs into LLM agents.** The loop provides Level 2 access; language training provides implicit causal priors. What the agent needs is a good loop (fast feedback, informative observations, appropriate gain) — AAD's adaptive machinery.
 
 2. **Invest in the observation channels.** The agent's effective causal access is gated by observation quality (U_o). Good tests, clear error messages, informative logging — these raise η*, which raises T, which determines whether the agent persists as an effective purposeful system.
 

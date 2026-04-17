@@ -10,7 +10,7 @@
 
 Software development decisions are implicitly dual-optimization problems: minimizing both comprehension time (understanding what exists) and implementation time (changing what exists), weighted by how many future changes are expected. This paper formalizes the tradeoff using control-theoretic tools, derives specific predictions, and proposes git-based operationalization.
 
-## What to include (from existing ACT segments)
+## What to include (from existing AAD segments)
 
 ### 1. Introduction: The Time Problem in Software
 - Software systems that expect change ($P(\text{change}) > \varepsilon$) face a fundamental tradeoff between optimizing for the current change and for all future ones
@@ -20,7 +20,7 @@ Software development decisions are implicitly dual-optimization problems: minimi
 ### 2. Background: Adaptive Systems Meet Software
 - Brief: software development as an adaptive system (developer has a model of the codebase, updates it through observation, acts through changesets)
 - The key variables: mismatch (developer understanding vs. code reality), tempo (rate of learning), gain (how much each observation teaches)
-- **Source**: Stripped-down #agent-model, #mismatch-signal, #adaptive-tempo — enough to define the formal objects, not the full ACT apparatus
+- **Source**: Stripped-down #agent-model, #mismatch-signal, #adaptive-tempo — enough to define the formal objects, not the full AAD apparatus
 - **Omit**: Full Section I derivation chain, persistence condition, adversarial dynamics, the cycle phase names
 
 ### 3. Feature Time Decomposition
@@ -67,10 +67,10 @@ Software development decisions are implicitly dual-optimization problems: minimi
 - DORA metrics (deployment frequency, lead time, change failure rate, MTTR)
 - Developer experience research (DX framework, cognitive load)
 - Code quality literature (McCabe complexity, Halstead metrics)
-- ACT's contribution: the *formal tradeoff structure* that explains why these metrics matter and how they relate
+- AAD's contribution: the *formal tradeoff structure* that explains why these metrics matter and how they relate
 
 ### 9. Discussion: Connection to Adaptive Agency (brief)
-- This paper derives from a broader framework (ACT) that connects software engineering to control theory, causal inference, and agent composition
+- This paper derives from a broader framework (AAD) that connects software engineering to control theory, causal inference, and agent composition
 - The framework explains WHY temporal optimization principles work — through the persistence condition and adaptive tempo
 - Pointer to positioning preprint (if available by then)
 
@@ -83,7 +83,7 @@ Software development decisions are implicitly dual-optimization problems: minimi
 ## What to omit from the paper
 
 - Greek cycle terminology (Prolepsis, Aisthesis, etc.)
-- Full ACT apparatus (Lyapunov stability, sector conditions)
+- Full AAD apparatus (Lyapunov stability, sector conditions)
 - Adversarial dynamics
 - Multi-agent composition
 - Logogenic/logozoetic taxonomy
@@ -92,7 +92,7 @@ Software development decisions are implicitly dual-optimization problems: minimi
 - Information bottleneck / model sufficiency formalism
 - Pearl's causal hierarchy
 
-These are all essential to ACT but create barriers for the SE audience. The paper should stand on its own with the minimum formal apparatus needed for the results.
+These are all essential to AAD but create barriers for the SE audience. The paper should stand on its own with the minimum formal apparatus needed for the results.
 
 ## What needs to be created for the paper
 
@@ -111,6 +111,6 @@ These are all essential to ACT but create barriers for the SE audience. The pape
 
 ## Strategic notes
 
-- This paper doesn't require anyone to accept ACT. It stands on temporal optimality (a postulate most developers would accept intuitively) and the cost decomposition (straightforward).
+- This paper doesn't require anyone to accept AAD. It stands on temporal optimality (a postulate most developers would accept intuitively) and the cost decomposition (straightforward).
 - The empirical operationalization is the weakest part. A small pilot study (even just coherence/coupling metrics from 5 repos) would dramatically improve the paper's credibility.
 - The competition is thin: none of the 25 surveyed frameworks have a formal software-specific theory that produces testable quantitative predictions from first principles. The gap analysis (msc/2026-03-13-landscape-research/gap-analysis.md) confirms "code quality as observation infrastructure" has no prior art as a formal control-theoretic treatment.

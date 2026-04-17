@@ -12,7 +12,7 @@
 
 ## 0. The Gap
 
-ACT's quantitative prediction chain:
+AAD's quantitative prediction chain:
 
 $$\text{gain principle} \;\xrightarrow{\text{GA-3 assumed}}\; \text{sector condition} \;\xrightarrow{\text{Lyapunov (exact)}}\; \text{persistence, reserve, adversarial scaling}$$
 
@@ -62,7 +62,7 @@ The sector condition operates on mismatch dynamics: $d\delta/dt = -F(\mathcal{T}
 
 **Option C: Predicted-observation-space.** Track $\hat{\delta}_t = H e_t = H(x_t - \hat{x}_{t|t})$, the projection of the state error into observation space. This is the predictable part of the next innovation.
 
-We work in **observation space** (Option B), because that is where ACT defines the mismatch signal (#mismatch-signal): $\delta_t = o_t - \hat{o}_t$, with $\hat{o}_t = H \hat{x}_{t|t-1}$.
+We work in **observation space** (Option B), because that is where AAD defines the mismatch signal (#mismatch-signal): $\delta_t = o_t - \hat{o}_t$, with $\hat{o}_t = H \hat{x}_{t|t-1}$.
 
 ### 2.2 Mismatch Dynamics in Observation Space
 
@@ -208,13 +208,13 @@ $$\alpha_{ss} = K_{ss} = \frac{-Q + \sqrt{Q^2 + 4 Q R_{\text{obs}}}}{2 R_{\text{
 - $Q \ll R_{\text{obs}}$ (slow dynamics, noisy observations): $K_{ss} \approx \sqrt{Q / R_{\text{obs}}}$, $\alpha_{ss} \approx \sqrt{Q / R_{\text{obs}}}$. Correction efficiency degrades as the square root of the signal-to-noise ratio.
 - $Q = 0$ (static target): $K_{ss} \to 0$, $\alpha_{ss} \to 0$. No correction needed (and no disturbance $w = 0$), so the persistence question is vacuous.
 
-### 3.4 Connection to ACT Quantities
+### 3.4 Connection to AAD Quantities
 
 The adaptive tempo (for a single observation channel at rate $\nu$):
 
 $$\mathcal{T} = \nu \cdot K_{ss}$$
 
-And the sector parameter (in the continuous-time ACT framework) is $\alpha = \mathcal{T} = \nu \cdot K_{ss}$. The bridge holds trivially in the scalar Kalman case: the gain IS the sector parameter. The linear correction means the sector bound is tight, not merely a lower bound.
+And the sector parameter (in the continuous-time AAD framework) is $\alpha = \mathcal{T} = \nu \cdot K_{ss}$. The bridge holds trivially in the scalar Kalman case: the gain IS the sector parameter. The linear correction means the sector bound is tight, not merely a lower bound.
 
 This matches the worked example (#worked-example-kalman) where $\alpha$ is reported from data but the derivation from $K$ is not shown.
 
@@ -488,7 +488,7 @@ For small $R$, $\alpha \approx \eta^*$ (the linear regime). For large $R$, $\alp
 
 As shown in Section 4.4, when $m < n$ (fewer observations than state dimensions), the correction function has no effect in unobservable directions. The sector condition fails in those directions: $e^T KH \, e = 0$ for $e \in \ker(H)$.
 
-**This is a fundamental structural limitation, not an approximation.** The agent cannot correct errors it cannot observe. In ACT terms: the model class capacity $R$ in unobservable directions is effectively infinite (no correction, but no disturbance detection either), or equivalently, $\alpha = 0$ in those directions.
+**This is a fundamental structural limitation, not an approximation.** The agent cannot correct errors it cannot observe. In AAD terms: the model class capacity $R$ in unobservable directions is effectively infinite (no correction, but no disturbance detection either), or equivalently, $\alpha = 0$ in those directions.
 
 For the sector condition to hold in the full state space, the system must be *detectable* — all unstable modes must be observable. Stable unobservable modes decay naturally (via $A$) without needing correction.
 
@@ -496,7 +496,7 @@ For the sector condition to hold in the full state space, the system must be *de
 
 The gain principle assumes the model class contains the truth (or a reasonable approximation). If the model class is wrong — e.g., fitting a linear model to quadratic dynamics — then the expected correction does not point toward the true state. The mismatch transform $g$ is computed under a false model, and directional fidelity (B1) fails.
 
-In ACT terms: this is the model-class-fitness condition $\mathcal{F}(\mathcal{M}) < 1$. When the model class cannot represent reality, the correction function's sector parameter degrades. The sector condition holds with reduced $\alpha$ (or fails entirely) proportional to the model misspecification.
+In AAD terms: this is the model-class-fitness condition $\mathcal{F}(\mathcal{M}) < 1$. When the model class cannot represent reality, the correction function's sector parameter degrades. The sector condition holds with reduced $\alpha$ (or fails entirely) proportional to the model misspecification.
 
 This is the trigger for structural adaptation (#structural-adaptation-necessity): the sector condition fails not because the gain is wrong but because the correction *direction* is wrong.
 
@@ -589,7 +589,7 @@ The load-bearing assumption shifts from "the correction function satisfies the s
 
 ### 9.1 To close the bridge formally
 
-1. **Write a segment `gain-sector-bridge.md`** (in `01-act-core/src/`) that states the conditional derivation: the gain principle + directional fidelity implies the sector condition. Type: `derived`. Status: `conditional` (conditional on B1).
+1. **Write a segment `gain-sector-bridge.md`** (in `01-aad-core/src/`) that states the conditional derivation: the gain principle + directional fidelity implies the sector condition. Type: `derived`. Status: `conditional` (conditional on B1).
 
 2. **Modify `sector-condition-derivation.md`** to note that GA-3 is derivable from the gain principle under B1, not merely assumed. The Lyapunov proofs themselves are unchanged — they operate downstream of GA-3 regardless of whether GA-3 is assumed or derived.
 
@@ -611,7 +611,7 @@ The load-bearing assumption shifts from "the correction function satisfies the s
 
 ## 10. Implications for Theory Architecture
 
-The bridge result has a satisfying structural consequence. ACT's formal chain becomes:
+The bridge result has a satisfying structural consequence. AAD's formal chain becomes:
 
 $$\text{gain principle} + \text{directional fidelity (B1)} \;\xrightarrow{\text{derived}}\; \text{sector condition (GA-3)} \;\xrightarrow{\text{Lyapunov (exact)}}\; \text{persistence, reserve, scaling}$$
 

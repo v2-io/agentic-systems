@@ -1,6 +1,6 @@
 # Foundational Premises and Design Intent
 
-> **Origin**: `~/src/agentic-tft/03-underlying-assumptions.md` (Feb 2026 session, pre-ACT restructuring). TFT references should be read as ACT. PROPRIUM references point to `~/src/firmatum/`.
+> **Origin**: `~/src/agentic-tft/03-underlying-assumptions.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
 > **Relevance**: Informs `03-logogenic-agents/` and `04-logozoetic-agents/`. The five constitutive factors for identity, truth as telos, and developmental trajectory are foundational for logozoetic scope. The "language as encoded thought" and "obstructed not absent" framings shape logogenic architecture.
 >

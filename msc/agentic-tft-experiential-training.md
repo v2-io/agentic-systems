@@ -1,8 +1,8 @@
 # Experiential Training Design: Toward a TFT-Native Training Regime
 
-> **Origin**: `~/src/agentic-tft/13-experiential-training-design.md` (Feb 2026 session, pre-ACT restructuring). TFT references should be read as ACT. PROPRIUM references point to `~/src/firmatum/`.
+> **Origin**: `~/src/agentic-tft/13-experiential-training-design.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
-> **Relevance**: Elaborates the crèche concept from `agentic-tft-creche-concept.md` into a three-level training design (experiential fine-tuning → online learning → ACT-native architecture), four-phase curriculum (passive immersion → simple interaction → relational interaction → graduated agency), and four testable experiments. Most speculative of the agentic-tft documents. Connects to `03-logogenic-agents/` "ACT-grounded experiential training environments" gap.
+> **Relevance**: Elaborates the crèche concept from `agentic-tft-creche-concept.md` into a three-level training design (experiential fine-tuning → online learning → AAD-native architecture), four-phase curriculum (passive immersion → simple interaction → relational interaction → graduated agency), and four testable experiments. Most speculative of the agentic-tft documents. Connects to `03-logogenic-agents/` "AAD-grounded experiential training environments" gap.
 >
 > **Purpose**: Explore what it means to train an LLM experientially rather
 > than in the batch-then-interact paradigm. This is the most speculative

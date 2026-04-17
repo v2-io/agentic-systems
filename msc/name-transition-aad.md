@@ -1,9 +1,17 @@
 # Name Transition Plan: ACT → AAD within Agentic Systems Framework
 
-**Status:** planning / pre-execution
+**Status:** execution in progress (branch `rename/act-to-aad`)
 **Author:** drafted 2026-04-15, during naming collision resolution
 **Scope:** repository-wide rename of the mathematical core and its umbrella positioning
-**Execution branch:** `rename/act-to-aad` (recommended)
+
+## Plan revisions after theory re-read (2026-04-16)
+
+The original §6 hedged on a vocabulary split (*adaptive cycle* vs *agentic cycle*) that isn't actually present in live prose. Grep of all `*.md` files confirms: every bare "Agentic Cycle" (Title Case) outside `_obs/` is a fragment of the proper noun "Agentic Cycle Theory." The object of study is uniformly called "the adaptive cycle"; the LEXICON makes no cycle-class distinction. So the §6 audit is dropped — mechanical replacement is sufficient. Additional simplifications:
+
+- **No "formerly ACT" note.** ACT was never externally publicized; no collaborator-facing disambiguation is needed.
+- **No ASF introduction block in README.** Deferred (post-rename §8 task 5 removed).
+- **Section titles already AAD-aligned.** §I "Adaptive Systems Under Uncertainty" and §II "Actuated Adaptation: Agentic Systems" already encode the dual scope. A single sentence added to §II preamble ("Section II is the actuation half of AAD") completes the framing — folded into Stage 3.
+- **Commit cadence.** Per-stage commits on `rename/act-to-aad`, then `--no-ff` merge to main.
 
 ---
 
@@ -157,7 +165,11 @@ These are spikes, reflections, and landscape research. Many use ACT casually thr
 
 **Recommendation**: rename in `msc/` for consistency. Working documents are actively referenced in WORKBENCH.md and segment Working Notes; leaving them as ACT would create a split vocabulary that future agents would have to navigate. Rename fully.
 
-**Exception**: the file `msc/2026-03-13--hypothetical-theory-choice.md` (if it documents the naming history itself) should be left or preserved with an annotation, since it records the naming decision process.
+**Exceptions (historical record — do NOT rename):**
+- `msc/name-transition-aad.md` (this plan — documents the rename itself)
+- `msc/2026-03-13--hypothetical-theory-choice.md` (naming deliberation)
+- `msc/2026-03-13-landscape-research/*` (collision research — records the landscape *at the time* of the decision)
+- `msc/00-founding-notes.md` (founding retrospective — historical record of theory's original identity)
 
 Verify: same pattern.
 
@@ -223,20 +235,15 @@ Verify: `grep -l '\bACT\b\|Agentic Cycle Theory' ~/.claude/projects/-Users-josep
 | Memory system out-of-sync with repo | Low | Stage 8 handles explicitly; verify grep returns empty after |
 | Dependency graphs stale | Certain | Stage 6 regenerates |
 | `_obs/` files scanned accidentally | Low | All grep/sed commands include `--exclude-dir="_obs"` |
-| External citations of "ACT" by collaborators | Unknown | Add a note in CLAUDE.md: "This project was previously named Agentic Cycle Theory (ACT); it is now Adaptation and Actuation Dynamics (AAD). References to ACT in external work before 2026-04 should be read as AAD." |
 | Baigozin GAA / other recent sibling work | Known | Separate task (not part of rename) — read and cite appropriately |
 
-## 6. Handling "Agentic Cycle" (bare, without "Theory")
+## 6. Handling "Agentic Cycle" (bare, without "Theory") — RESOLVED
 
-This is the subtlest substitution. Audit every occurrence of "Agentic Cycle" (Title Case) without "Theory" following it.
+**Disposition: no manual audit required.**
 
-Three categories:
+Pre-execution grep (2026-04-16) confirmed that every bare "Agentic Cycle" occurrence in live prose (outside `_obs/`) is a fragment of the proper noun "Agentic Cycle Theory." There is no separate vocabulary distinction to preserve: the object of study is uniformly called "the adaptive cycle" (README §Lexicon, LEXICON.md, NOTATION.md §The Adaptive Cycle, 01-act-core/OUTLINE.md). LEXICON's only cycle entries are *Loop* (topology) and *Cycle* (traversal) — no class-indexed cycle.
 
-1. **Historical self-reference to the framework name** — e.g., "ACT formalizes the agentic cycle" or "Agentic Cycle Theory, or ACT for short." → **Rename** to AAD references.
-2. **Reference to the object of study** — e.g., "the adaptive cycle" or "the cycle one traverses." → **Leave as "adaptive cycle"** (the object doesn't change name).
-3. **"Agentic cycle" as LEXICON vocabulary** — the README and LEXICON distinguish *adaptive cycle* (Section I object) from *agentic cycle* (Section II+ object, where goals are involved). If this distinction is load-bearing anywhere in the prose, preserve it — the cycle in an agentic system is a specific kind of adaptive cycle.
-
-**Recommendation**: after the mechanical pass, do a dedicated manual audit of the ~20-30 "Agentic Cycle" bare-phrase occurrences remaining. Each is a short review.
+Mechanical rule: replace "Agentic Cycle Theory" → "Adaptation and Actuation Dynamics" globally; leave "adaptive cycle" untouched; "Agentic" in agent-class vocabulary ("Agentic Systems," "Agentic Composites," "agentic system") stays — that usage is independent of the theory name.
 
 ## 7. Mechanical commands (reference)
 
@@ -273,7 +280,6 @@ After the rename is merged:
 2. **Read arxiv 2603.10779 "A Control-Theoretic Foundation for Agentic Systems"** — directly overlapping claim-space. Assess.
 3. **Read arxiv 2512.16301 "Adaptation of Agentic AI" (Jiang et al.)** — the survey that concerned us in naming; understand what they mean by "agentic adaptation" so AAD's Part 1 can cleanly differentiate in its framing section.
 4. **Update the WORKBENCH** with a note on naming evolution and decisions made.
-5. **Add a short "Naming and Positioning" section to the top-level README or OUTLINE** explaining ASF/AAD and why it is named as it is — this replaces the natural question "what was ACT?" with a clean answer.
 
 ## 9. Commit message template for the merge
 

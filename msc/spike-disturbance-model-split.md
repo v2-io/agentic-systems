@@ -1,10 +1,10 @@
 # Spike: Disturbance Model Split — Deterministic vs. Stochastic
 
-**Status**: Exploratory — working through the consequences of splitting ACT's single disturbance parameter into two distinct models (bounded-deterministic and stochastic zero-mean), deriving the correct results for each, and showing how the split propagates through persistence, adversarial coupling, per-dimension analysis, and operationalization.
+**Status**: Exploratory — working through the consequences of splitting AAD's single disturbance parameter into two distinct models (bounded-deterministic and stochastic zero-mean), deriving the correct results for each, and showing how the split propagates through persistence, adversarial coupling, per-dimension analysis, and operationalization.
 
 **Date**: 2026-04-01
 
-**Motivation**: ACT's mismatch dynamics use a single disturbance term $w(t)$ with bound $\|w(t)\| \leq \rho$, but the theory already contains two incompatible scaling laws:
+**Motivation**: AAD's mismatch dynamics use a single disturbance term $w(t)$ with bound $\|w(t)\| \leq \rho$, but the theory already contains two incompatible scaling laws:
 
 - Deterministic: $\|\delta\|_{ss} = \rho/\alpha$, adversarial exponent $b = 2$
 - Stochastic: $\|\delta\|_{ss} \sim \sigma_w/\sqrt{2\alpha}$, adversarial exponent $b = 3/2$

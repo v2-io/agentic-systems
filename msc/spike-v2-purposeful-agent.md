@@ -10,7 +10,7 @@
 
 ## 0. Starting Point: Section I Agents
 
-ACT Section I (from TFT) gives us an agent with complete state M_t, observations o_t, actions a_t, mismatch δ_t, gain η*, tempo T, and the persistence condition. The agent tracks reality. It may act effectively (TF-07), but its policy π(M_t) serves no declared purpose — the "value" term in TF-08's policy objective is a placeholder with no formal content.
+AAD Section I (from TFT) gives us an agent with complete state M_t, observations o_t, actions a_t, mismatch δ_t, gain η*, tempo T, and the persistence condition. The agent tracks reality. It may act effectively (TF-07), but its policy π(M_t) serves no declared purpose — the "value" term in TF-08's policy objective is a placeholder with no formal content.
 
 **The question**: What minimal formal extension makes the agent *purposeful*, and what structure must that extension have?
 

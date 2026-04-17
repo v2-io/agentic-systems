@@ -10,7 +10,7 @@
 
 ## 0. The Question
 
-ACT's Section II develops purposeful agency under the assumption of directed separation:
+AAD's Section II develops purposeful agency under the assumption of directed separation:
 
 $$M_{\tau^+} = f_M(M_{\tau^-}, e_\tau) \qquad \text{(no } G_t \text{ argument)}$$
 
@@ -501,7 +501,7 @@ Based on this analysis, the minimum new content needed for `03-logogenic-agents/
 
 ### 7.1 New Definitions (3 segments)
 
-**D1: Logogenic agent as ACT agent** (#ai-agent-as-act-agent — already planned). Define the LLM-in-loop as an actuated agent. Map: context window → $X_t$, prompt → $e_\tau$, response → $a_t$, tool results → $o_{t+1}$.
+**D1: Logogenic agent as AAD agent** (#ai-agent-as-act-agent — already planned). Define the LLM-in-loop as an actuated agent. Map: context window → $X_t$, prompt → $e_\tau$, response → $a_t$, tool results → $o_{t+1}$.
 
 **D2: Context turnover** (#context-turnover — already planned). Formalize the 100% $M_t$ reset per session. The LLM agent has no persistent internal state between sessions; $M_t$ is reconstructed from external memory and the current prompt.
 
@@ -565,7 +565,7 @@ For a logogenic agent, the orient cascade is replaced by a **reasoning disciplin
 
 This is the cognitive loop from `msc/agentic-tft-cognitive-loop-spec.md` (PERCEIVE → CONTEXTUALIZE → CHOOSE → EFFECT) instantiated as a reasoning pattern. The four-phase loop maps onto the cascade:
 
-| Cognitive Loop Phase | ACT Cascade Step | What Happens for LLM Agent |
+| Cognitive Loop Phase | AAD Cascade Step | What Happens for LLM Agent |
 |---------------------|------------------|---------------------------|
 | PERCEIVE | (input) | New token(s) enter context window |
 | CONTEXTUALIZE (predict) | Reduce $\delta_{\text{epistemic}}$ | "What was I expecting? How does this differ?" |
@@ -605,7 +605,7 @@ This ordering is not guaranteed — it is a statistical tendency shaped by train
 
 ## 10. Conclusion
 
-The survival analysis reveals a surprisingly optimistic picture for applying ACT's Section II to Class 2 agents:
+The survival analysis reveals a surprisingly optimistic picture for applying AAD's Section II to Class 2 agents:
 
 **The definitions survive.** The conceptual architecture — $X_t = (M_t, G_t)$, $G_t = (O_t, \Sigma_t)$, $V_{O_t}$, $\Sigma_t$ as DAG, satisfaction gap, control regret — is intact. These are about the *structure* of purposeful agency, not about the *processing architecture*.
 
@@ -617,4 +617,4 @@ The survival analysis reveals a surprisingly optimistic picture for applying ACT
 
 The minimal coupled formulation for `03-logogenic-agents/` requires approximately 7 new segments: 3 definitions, 3 results, and 1 scope condition. The language-specific orient cascade is best understood as a *reasoning discipline* that approximates the cascade's logical structure, with quality depending on training and prompting rather than architecture.
 
-The deepest insight: for Class 2 agents, the cascade ordering transitions from a *derived consequence* of directed information dependency to a *normative design pattern* that must be enforced through training, prompting, or system-level architecture (e.g., separating observation processing from strategy evaluation at the system level, even though the LLM component is internally merged). This is the bridge between ACT's mathematical core and the engineering of logogenic agent systems.
+The deepest insight: for Class 2 agents, the cascade ordering transitions from a *derived consequence* of directed information dependency to a *normative design pattern* that must be enforced through training, prompting, or system-level architecture (e.g., separating observation processing from strategy evaluation at the system level, even though the LLM component is internally merged). This is the bridge between AAD's mathematical core and the engineering of logogenic agent systems.

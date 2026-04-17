@@ -1,4 +1,4 @@
-# ACT Core Review — Remaining Items (2026-04-01)
+# AAD Core Review — Remaining Items (2026-04-01)
 
 Revised from the original `analysis-2026-04-01.md` after a full session of work.
 Everything below is what remains actionable; completed items are removed.
@@ -27,8 +27,8 @@ For the record, the following were identified and resolved:
 **Not attempted this session.** Both reviews note the empirical program is internal validation only. The theory makes testable predictions (persistence threshold, adversarial exponents, weak-dimension bottleneck, evidence starvation depth penalty) that have not been tested against real-world data.
 
 **Candidates for first external test:**
-- **Software teams:** Operationalize tempo, disturbance rate, model class fitness from git data. Predict which projects approach the persistence boundary. The TST bridge, but would validate ACT-level predictions.
-- **RL agents:** Compare ACT's per-arm persistence predictions to actual arm-dropping behavior in deployed bandits.
+- **Software teams:** Operationalize tempo, disturbance rate, model class fitness from git data. Predict which projects approach the persistence boundary. The TST bridge, but would validate AAD-level predictions.
+- **RL agents:** Compare AAD's per-arm persistence predictions to actual arm-dropping behavior in deployed bandits.
 - **Control systems:** Compare persistence condition to known stability margins in deployed adaptive controllers beyond the exact Kalman case.
 
 **Priority:** Medium. Important for credibility but the formal theory needs to be more settled first. The disturbance model split (now done) makes the predictions more precise and therefore more testable.
@@ -96,13 +96,13 @@ This is described as "the single highest-leverage presentation change." Not yet 
 
 The following relationships deserve explicit treatment (dedicated segments or scope notes):
 
-- **Active inference / FEP.** Structural isomorphism with expected free energy noted in CIY segment. ACT's differentiators: persistence condition (no FEP analog), adversarial dynamics, composition machinery. These should be stated explicitly.
-- **POMDP planning.** Strategy DAG is close to a policy tree. ACT adds: mismatch dynamics, persistence condition, composition. The embedding is the contribution, not the DAG itself.
-- **BDI architecture.** Named the parts; ACT adds dynamics. Brief positioning exists in `msc/02-prior-art-assessment.md` but not in the segments.
+- **Active inference / FEP.** Structural isomorphism with expected free energy noted in CIY segment. AAD's differentiators: persistence condition (no FEP analog), adversarial dynamics, composition machinery. These should be stated explicitly.
+- **POMDP planning.** Strategy DAG is close to a policy tree. AAD adds: mismatch dynamics, persistence condition, composition. The embedding is the contribution, not the DAG itself.
+- **BDI architecture.** Named the parts; AAD adds dynamics. Brief positioning exists in `msc/02-prior-art-assessment.md` but not in the segments.
 
 ### Computational Tractability
 
-Several ACT quantities (A_O, CIY, V_O, model sufficiency S) are defined as expectations or suprema that are intractable to compute in general. The operationalization appendix addresses some. A systematic analysis distinguishing "computable" from "intractable" quantities would strengthen the theory's practical credibility.
+Several AAD quantities (A_O, CIY, V_O, model sufficiency S) are defined as expectations or suprema that are intractable to compute in general. The operationalization appendix addresses some. A systematic analysis distinguishing "computable" from "intractable" quantities would strengthen the theory's practical credibility.
 
 ### Between-Event Dynamics
 
@@ -121,4 +121,4 @@ The git → Lyapunov operationalization remains analogical, not formal. The chai
 4. **Coupled formulation spike** — simplest Class 2 case. Opens 03-logogenic-agents/ with concrete content. High value, uncertain effort.
 5. **External validation design** — first real-world test. Important but depends on the theory being stable enough to predict from.
 6. **Composition remaining pieces** — N-agent scaling, discrete-time bridge lemma. Important for Section III but lower priority than Section II completion.
-7. **TST bridge formalization** — critical for the operationalization story but somewhat independent of core ACT work.
+7. **TST bridge formalization** — critical for the operationalization story but somewhat independent of core AAD work.

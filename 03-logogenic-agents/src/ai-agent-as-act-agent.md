@@ -11,17 +11,17 @@ depends:
 stage: draft
 ---
 
-# Definition: AI Agent as ACT Agent
+# Definition: AI Agent as AAD Agent
 
-An LLM-based agent operating through a tool-use loop is an actuated agent in ACT's sense: it maintains structured $M_t$ and $G_t$, acts causally on its environment, and observes consequences under uncertainty. It is a Class 2 (fully merged) agent — directed separation fails because the transformer's forward pass processes goals and observations jointly.
+An LLM-based agent operating through a tool-use loop is an actuated agent in AAD's sense: it maintains structured $M_t$ and $G_t$, acts causally on its environment, and observes consequences under uncertainty. It is a Class 2 (fully merged) agent — directed separation fails because the transformer's forward pass processes goals and observations jointly.
 
 ## Formal Expression
 
 *[Definition (ai-agent-as-act-agent)]*
 
-An **LLM-based agent** is an actuated agent ( #agent-spectrum) with the following mapping to ACT primitives:
+An **LLM-based agent** is an actuated agent ( #agent-spectrum) with the following mapping to AAD primitives:
 
-| ACT Primitive | LLM Agent Instantiation |
+| AAD Primitive | LLM Agent Instantiation |
 |---|---|
 | $X_t = (M_t, G_t)$ | Context window contents (beliefs, goals, strategy, working state) |
 | $M_t$ | Beliefs about reality encoded in the context: code state, system behavior, user intent, environment dynamics |
@@ -53,13 +53,13 @@ The **agent system** (LLM + tools + memory + monitoring) may have partially modu
 
 ## Epistemic Status
 
-*Robust qualitative.* The mapping from LLM agent to ACT primitives is a representational choice — there is genuine latitude in how to draw the boundary between $M_t$ and $G_t$ within a context window, and the context window is not the only possible operationalization of $X_t$ (the model's weights encode persistent knowledge that is not in the context). The Class 2 classification is structural and not in doubt: the attention mechanism's causal graph has goal tokens upstream of all computations.
+*Robust qualitative.* The mapping from LLM agent to AAD primitives is a representational choice — there is genuine latitude in how to draw the boundary between $M_t$ and $G_t$ within a context window, and the context window is not the only possible operationalization of $X_t$ (the model's weights encode persistent knowledge that is not in the context). The Class 2 classification is structural and not in doubt: the attention mechanism's causal graph has goal tokens upstream of all computations.
 
 Max attainable: robust-qualitative. The mapping is a formulation (multiple reasonable instantiations exist), not a derivation. The Class 2 classification could be elevated to exact with a formal analysis of the transformer's causal graph, but the mapping itself will remain a representational choice.
 
 ## Discussion
 
-**What the mapping does and does not claim.** The mapping claims that the LLM agent has the *structure* of an actuated agent — it maintains beliefs, pursues goals, acts, and observes. It does not claim that the LLM's internal representations are isomorphic to ACT's formal objects. The agent's "beliefs" are distributed across token representations, not stored as an explicit probability distribution over $\Omega$. The agent's "strategy" may be implicit in its attention patterns rather than an explicit DAG. The mapping is at the *functional* level — the agent behaves as if it has these objects — not at the *mechanistic* level.
+**What the mapping does and does not claim.** The mapping claims that the LLM agent has the *structure* of an actuated agent — it maintains beliefs, pursues goals, acts, and observes. It does not claim that the LLM's internal representations are isomorphic to AAD's formal objects. The agent's "beliefs" are distributed across token representations, not stored as an explicit probability distribution over $\Omega$. The agent's "strategy" may be implicit in its attention patterns rather than an explicit DAG. The mapping is at the *functional* level — the agent behaves as if it has these objects — not at the *mechanistic* level.
 
 **The forward pass as $f_X$.** The LLM's forward pass, given a prompt assembled from the prior state and a new event, produces a response that simultaneously encodes updated beliefs and strategic assessments. This is the coupled update $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ instantiated as:
 
@@ -67,7 +67,7 @@ $$X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$$
 
 The prompt-assembly function and the forward pass together implement $f_X$. The coupled update dynamics are formalized in #coupled-update-dynamics.
 
-**The weight-context boundary.** The LLM's weights encode a vast prior $M_0$ — pretrained knowledge about language, code, reasoning patterns. The context window encodes the session-specific $X_t$. The agent's effective state is the combination: $X_t^{\text{eff}} = (M_0^{\text{weights}}, X_t^{\text{context}})$, where the weights are fixed within a session and the context evolves. ACT's $M_t$ corresponds to the *effective beliefs at time $t$* — what the agent would predict given both its weights and its context. The weights provide the prior; the context provides the update.
+**The weight-context boundary.** The LLM's weights encode a vast prior $M_0$ — pretrained knowledge about language, code, reasoning patterns. The context window encodes the session-specific $X_t$. The agent's effective state is the combination: $X_t^{\text{eff}} = (M_0^{\text{weights}}, X_t^{\text{context}})$, where the weights are fixed within a session and the context evolves. AAD's $M_t$ corresponds to the *effective beliefs at time $t$* — what the agent would predict given both its weights and its context. The weights provide the prior; the context provides the update.
 
 **The 100% turnover problem.** Between sessions, the context window is cleared — the entire $X_t^{\text{context}}$ is lost. This is a qualitatively different persistence challenge than what Section I addresses, where $M_t$ evolves continuously. See #context-turnover.
 

@@ -9,7 +9,7 @@ Canonical source: `msc/analysis-2026-04-02-comprehensive.md` for full context an
 
 2. ~~**HIGH — Φ called "true plan success probability" but isn't under correlated failure.**~~ **FIXED.** Changed language in #strategic-dynamics-derivation B.5: Φ = P_Σ(θ) is now "independence-model reference value," not "true success probability." Added explicit note that δ_s tracks calibration within the independence model, not calibration to reality.
 
-3. **HIGH — Composition bridge still open.** Already honest in #composition-closure (line 161: "additional assumption beyond (A4)") and #tempo-composition (sketch status). Codex recommends presenting as "ACT plus contraction premise," not as scale invariance discharged. **Action:** Audit prose in OUTLINE.md and README for overstatement. No segment fix needed — the segments are correct.
+3. **HIGH — Composition bridge still open.** Already honest in #composition-closure (line 161: "additional assumption beyond (A4)") and #tempo-composition (sketch status). Codex recommends presenting as "AAD plus contraction premise," not as scale invariance discharged. **Action:** Audit prose in OUTLINE.md and README for overstatement. No segment fix needed — the segments are correct.
 
 4. ~~**MEDIUM — value-object "depends on M_t alone" hides O_t dependence.**~~ **FIXED.** Added qualifier: "as a state variable" — O_t enters as a fixed parameter, same as π_cont and N_h.
 
@@ -46,7 +46,7 @@ Canonical source: `msc/analysis-2026-04-02-comprehensive.md` for full context an
 
 ## Missing Segments (narrative completeness)
 
-### ACT Core (01-act-core/)
+### AAD Core (01-aad-core/)
 
 | Slug | Section | Type | Description |
 |------|---------|------|-------------|
@@ -56,7 +56,7 @@ Canonical source: `msc/analysis-2026-04-02-comprehensive.md` for full context an
 | (new: intent-dag-development) | A | Aside | Convergence history of AND/OR + single-p (archaeological record) |
 | (new: prior-art-positioning) | A | Detail | Active inference, POMDP, BDI positioning. Source: msc/02-prior-art-assessment.md |
 
-### Cross-component (needed for ACT scope claims)
+### Cross-component (needed for AAD scope claims)
 
 | Slug | Component | Relevance |
 |------|-----------|-----------|
@@ -90,7 +90,7 @@ Canonical source: `msc/analysis-2026-04-02-comprehensive.md` for full context an
 - **Observability-dominance product formula.** conf_obs = conf * obs posited but not derived. Label as formulation choice or derive.
 - **Strategy-complexity-cost IB operationalization.** I(Sigma_t; pi* | M_t) undefined in practice.
 - **Strategic calibration aggregation.** L2 norm unjustified. Label as design choice.
-- **Scope architecture.** "Within ACT's scope" ambiguous between adaptive and agency scope.
+- **Scope architecture.** "Within AAD's scope" ambiguous between adaptive and agency scope.
 - **loop-interventional-access status.** "exact" defensible; opening claim could be softened.
 - **Between-event dynamics.** g_M(M_tau) defined but unreferenced. Important for logogenic agents.
 - **Fully coupled adversarial dynamics.** Both agents' mismatch co-evolving. Open.
@@ -103,7 +103,7 @@ Canonical source: `msc/analysis-2026-04-02-comprehensive.md` for full context an
 
 ## Project Structure (Deferred)
 
-- Root-level assembly index (when content beyond ACT warrants it)
+- Root-level assembly index (when content beyond AAD warrants it)
 - `framework/` directory for non-mathematical content
 - Multiple index support (paper, preprint, monograph)
 - Section IV standalone paper outline (draft at `msc/2026-03-14-section-iv-paper-outline.md`)

@@ -28,7 +28,7 @@ Definitional. The conditional probability is a standard quantity. Its value for 
 
 Coupling defined this way captures the *actual* change propagation in a system, which may differ from what static dependency analysis predicts. Two modules with no compile-time dependency can still be highly coupled if features routinely require changing both. Conversely, a module that imports another heavily may show low coupling if the interface is stable.
 
-In ACT terms, coupling is a property of the environment's causal structure as experienced by the agent: changing module $i$ (an intervention) tends to require changing module $j$ (a consequence). This is genuinely causal, not just correlational — the agent performs $do(\text{change}(m_i))$ and observes whether $m_j$ must also change. Git history provides the interventional data ( #causal-discovery-from-git).
+In AAD terms, coupling is a property of the environment's causal structure as experienced by the agent: changing module $i$ (an intervention) tends to require changing module $j$ (a consequence). This is genuinely causal, not just correlational — the agent performs $do(\text{change}(m_i))$ and observes whether $m_j$ must also change. Git history provides the interventional data ( #causal-discovery-from-git).
 
 ## Working Notes
 

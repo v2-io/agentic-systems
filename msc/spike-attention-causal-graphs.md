@@ -63,7 +63,7 @@ Starting from the observation-channel-centric view Joseph sketched:
 
 **Observation**: This is a SINGLE loop, but it has a branch point at Epistrophe — the model correction both redirects attention (the meta-level) AND drives action (the object-level). The two outputs compete for resources.
 
-**Key causal claim**: Orientation → Observations is a causal link (changing where you look CAUSES different observations). This means the observation channel is not exogenous — it's endogenous to the agent's attentional state. ACT's scope condition treats 𝒪 ≠ ∅ as given, but the actual information content of 𝒪 depends on orientation.
+**Key causal claim**: Orientation → Observations is a causal link (changing where you look CAUSES different observations). This means the observation channel is not exogenous — it's endogenous to the agent's attentional state. AAD's scope condition treats 𝒪 ≠ ∅ as given, but the actual information content of 𝒪 depends on orientation.
 
 ---
 
@@ -285,7 +285,7 @@ Taking Joseph's hint about "epistrophic intent as a continual loop with its own 
 - **Strategic intent**: "What actions advance my plan?" (exploitation)
 - **Epistrophic intent**: "What actions improve my model?" (exploration/sentinel)
 
-This is ACT's CIY tradeoff, but drawn as a causal DAG rather than a single optimization. The λ parameter in the policy objective:
+This is AAD's CIY tradeoff, but drawn as a causal DAG rather than a single optimization. The λ parameter in the policy objective:
 
     π*(M_t, G_t) = argmax [Q_O(...) + λ · CIY(a; M_t)]
 
@@ -393,7 +393,7 @@ This is the dual-control problem from LQG, surfaced as a causal graph. The LQG s
 
 ### 5. The interrupt mechanism IS composition dynamics
 
-Version 5 shows: the sentinel interrupting the task executor is a specific case of ACT's composition dynamics. It's one sub-agent overriding another based on a severity threshold. The meta-agent's interrupt policy is a composition coordination mechanism.
+Version 5 shows: the sentinel interrupting the task executor is a specific case of AAD's composition dynamics. It's one sub-agent overriding another based on a severity threshold. The meta-agent's interrupt policy is a composition coordination mechanism.
 
 This means the attention governance layer might not need NEW theory — it might be an application of Section III's composition framework to the case of intra-agent sub-systems. The question becomes: does the composition bridge lemma (if we had it) cover the case of sub-agents that share a model and can preempt each other?
 
@@ -403,11 +403,11 @@ This means the attention governance layer might not need NEW theory — it might
 
 **1. Time.** These graphs are static. The real dynamics involve CYCLES — the loops running at different frequencies, the interrupt happening mid-cycle, the phase relationships between loops. A static DAG can't capture the temporal dynamics. We might need something like a timed Petri net or a dynamical system on a graph.
 
-**2. The between-event dynamics.** ACT has Ṁ = g_M(M) for autonomous model evolution between events. The attention allocation probably also evolves between events — the agent's attention gradually drifts or narrows over time without new observations. This drift is part of what makes the stationarity assumption in unmonitored regions dangerous: attention narrows over time, and the agent progressively forgets that it was once attending to something else.
+**2. The between-event dynamics.** AAD has Ṁ = g_M(M) for autonomous model evolution between events. The attention allocation probably also evolves between events — the agent's attention gradually drifts or narrows over time without new observations. This drift is part of what makes the stationarity assumption in unmonitored regions dangerous: attention narrows over time, and the agent progressively forgets that it was once attending to something else.
 
 **3. The cost of reorientation.** Switching attention has a real cost — context-switching overhead, loss of accumulated context in the prior focus, startup cost in the new focus. This cost should appear as a barrier in the severity calculation: reorientation happens when severity EXCEEDS the switching cost, not just when severity is positive.
 
-**4. Memory of prior orientations.** The agent should maintain some memory of what it was monitoring before and what the model state was in those regions. This decaying memory is what allows the sentinel loop to detect anomalies — it compares current ambient observations against a remembered baseline. Without this memory, every ambient observation is equally surprising. ACT's M_t preservation framework (CLAUDE.md, memory files) is an engineering solution to this for LLM agents across sessions. Within a session, the memory of prior orientations is part of M_t.
+**4. Memory of prior orientations.** The agent should maintain some memory of what it was monitoring before and what the model state was in those regions. This decaying memory is what allows the sentinel loop to detect anomalies — it compares current ambient observations against a remembered baseline. Without this memory, every ambient observation is equally surprising. AAD's M_t preservation framework (CLAUDE.md, memory files) is an engineering solution to this for LLM agents across sessions. Within a session, the memory of prior orientations is part of M_t.
 
 ---
 

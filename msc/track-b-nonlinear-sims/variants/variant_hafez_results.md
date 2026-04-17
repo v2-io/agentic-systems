@@ -306,9 +306,9 @@ The mapping is:
 - H_b (backward uncertainty) has no direct TFT analog -- it measures
   agent-side ambiguity that TFT doesn't currently formalize
 
-### Potential Value for ACT
+### Potential Value for AAD
 
-The most interesting finding for ACT is the **DH decomposition**. The
+The most interesting finding for AAD is the **DH decomposition**. The
 consistently negative DH reveals that in our tracking setup, the environment
 is relatively transparent to the agent (low H_f) but the agent is opaque
 to the environment (high H_b). This asymmetry has no direct TFT

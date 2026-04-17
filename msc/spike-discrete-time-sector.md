@@ -354,7 +354,7 @@ $$\sup_{0 \leq t \leq T_0} \lVert \delta^{(\nu)}(t) - \delta_{\text{ODE}}(t) \rV
 
 where $C$ depends on $\tilde{F}$ and the disturbance regularity. This goes to zero as $\nu \to \infty$ ($\eta^\ast \to 0$) for fixed $T_0$. $\square$
 
-**Epistemic status: Conditional.** The result is a standard functional law of large numbers (FLLN) for density-dependent processes. The condition is Lipschitz regularity of $\tilde{F}$ and a finite time horizon. The finite-horizon restriction is not a limitation for ACT because the steady-state bounds (Props A.1, DA.1) are independent of time horizon — they describe the long-run attracting set, which the discrete and continuous systems share exactly (as shown in Sections 2 and 3).
+**Epistemic status: Conditional.** The result is a standard functional law of large numbers (FLLN) for density-dependent processes. The condition is Lipschitz regularity of $\tilde{F}$ and a finite time horizon. The finite-horizon restriction is not a limitation for AAD because the steady-state bounds (Props A.1, DA.1) are independent of time horizon — they describe the long-run attracting set, which the discrete and continuous systems share exactly (as shown in Sections 2 and 3).
 
 ### 5.2 Quantitative Approximation Error
 

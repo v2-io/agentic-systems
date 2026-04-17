@@ -1,6 +1,6 @@
 # Review Response: Addressing the Critical Feedback
 
-> **Origin**: `~/src/agentic-tft/14-review-response.md` (Feb 2026 session, pre-ACT restructuring). TFT references should be read as ACT. PROPRIUM references point to `~/src/firmatum/`.
+> **Origin**: `~/src/agentic-tft/14-review-response.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
 > **Relevance**: Essential companion to the ontology-unification, cognitive-loop-spec, and evaluation-framework documents. Catalogs known internal inconsistencies, missing connections, underspecified areas, and open design questions. Must be read alongside those documents to avoid re-discovering the same issues.
 >

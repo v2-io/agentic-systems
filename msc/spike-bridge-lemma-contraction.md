@@ -50,9 +50,9 @@ The sector condition guarantees that the correction *component* acts contractive
 
 ## 2. Decomposition of the Full Update Map
 
-### 2.1 General ACT update structure
+### 2.1 General AAD update structure
 
-The general discrete-time ACT update for the macro-agent has the form (from #event-driven-dynamics and #recursive-update):
+The general discrete-time AAD update for the macro-agent has the form (from #event-driven-dynamics and #recursive-update):
 
 *[Definition (general-update-decomposition)]*
 
@@ -62,7 +62,7 @@ where:
 - $X - \eta_c F_d(\delta(X))$: the correction step (parametric update driven by mismatch)
 - $h(X, o)$: any residual state-observation coupling
 
-For a mismatch-driven agent, the update is driven entirely by the innovation $\delta = o - \hat{o}(X)$. Most ACT agents have this structure:
+For a mismatch-driven agent, the update is driven entirely by the innovation $\delta = o - \hat{o}(X)$. Most AAD agents have this structure:
 
 $$f_c(X, o) = X + \eta_c \cdot g(\delta(X))$$
 
@@ -364,7 +364,7 @@ Yet the one-point bound holds with $c_{\min} = 2$ on $[0, \pi]$ (and by odd symm
 
 **Physical interpretation.** The one-point sector bound says "each correction pushes toward the origin." The incremental bound says "larger mismatches always get larger corrections." An oscillatory correction function can push toward the origin at every point while having local regions where the correction magnitude decreases — it "wobbles" while maintaining overall inward direction.
 
-### 4.2 Which ACT agent classes satisfy DA2'a-inc?
+### 4.2 Which AAD agent classes satisfy DA2'a-inc?
 
 | Agent class | DA2'a-inc status | Reason |
 |---|---|---|
@@ -535,7 +535,7 @@ The bridge lemma should be restated with the condition hierarchy:
 
 The key theoretical contribution of this spike is identifying **incremental monotonicity (strong monotonicity) of the correction function** as the precise condition bridging sector-bounded correction to update-map contraction.
 
-This is a well-studied property in optimization and monotone operator theory. Strong monotonicity of the gradient is equivalent to strong convexity of the objective. The ACT connection: *an agent whose correction function is strongly monotone has the property that perturbations to its state are always reduced by the correction mechanism* — not just perturbations from the origin (the one-point sector bound), but perturbations between any two states.
+This is a well-studied property in optimization and monotone operator theory. Strong monotonicity of the gradient is equivalent to strong convexity of the objective. The AAD connection: *an agent whose correction function is strongly monotone has the property that perturbations to its state are always reduced by the correction mechanism* — not just perturbations from the origin (the one-point sector bound), but perturbations between any two states.
 
 For the working notes in #composition-closure, the characterization is:
 

@@ -1,4 +1,4 @@
-# ACT Core Review — Round 2 Integration (2026-04-02)
+# AAD Core Review — Round 2 Integration (2026-04-02)
 
 **Sources:** Codex round 2 (5 findings), fresh Claude instance (full review), plus the round 1 synthesis (`analysis-2026-04-02-synthesis.md`).
 
@@ -35,7 +35,7 @@ VERIFIED: Line 55 says admissibility constraints "remain placeholders." But comp
 
 **4. Scope split not clean enough (Codex #1)**
 
-Our round 1 passive-observer fix (adding caveat paragraphs to scope-condition and agent-spectrum) doesn't go far enough. Codex wants a clean structural split: an *adaptive-core scope* (observations + model + uncertainty — includes passive trackers) and a narrower *agency scope* (adds causal effect — the full scope condition). Currently, "within ACT's scope" is ambiguous because both scopes exist in the same segment.
+Our round 1 passive-observer fix (adding caveat paragraphs to scope-condition and agent-spectrum) doesn't go far enough. Codex wants a clean structural split: an *adaptive-core scope* (observations + model + uncertainty — includes passive trackers) and a narrower *agency scope* (adds causal effect — the full scope condition). Currently, "within AAD's scope" is ambiguous because both scopes exist in the same segment.
 
 **5. "Forced graph structure" language still oscillates (Codex #3)**
 
@@ -177,7 +177,7 @@ GA-3 transforms from "opaque global assumption" to "derivable conditional result
 
 ## Promotion Plan: Gain-Sector Bridge → Segment
 
-### Step 1: Write the segment (`01-act-core/src/gain-sector-bridge.md`)
+### Step 1: Write the segment (`01-aad-core/src/gain-sector-bridge.md`)
 
 A new segment combining the results of both spikes:
 - **Type:** derived
@@ -247,7 +247,7 @@ This is a real gap but not a fatal one — the derivation shows the sector-condi
 
 **N3. Passive tracker scope (Codex #3, recurring).** Three rounds now. The caveat paragraphs aren't satisfying reviewers. Decision needed: formal scope split or accept the ambiguity.
 
-**N4. Composition assumes ACT-shaped macro-agents (Codex #6).** The admissibility class (A1-A4) requires ACT state decomposition, macro mismatch, macro tempo, and sector-stable correction. This is a constrained representation test, not scale-invariance. Honest acknowledgment needed in composition-closure.
+**N4. Composition assumes AAD-shaped macro-agents (Codex #6).** The admissibility class (A1-A4) requires AAD state decomposition, macro mismatch, macro tempo, and sector-stable correction. This is a constrained representation test, not scale-invariance. Honest acknowledgment needed in composition-closure.
 
 **N5. Team tempo should have redundancy as a first-class term (Codex #5).** We added the caveat but correlated observations are the *default* in multi-agent settings. The additive formula with a footnote caveat understates the issue.
 

@@ -16,7 +16,7 @@ The closure defect is:
 
 $$\varepsilon^\ast = \inf_{\Lambda \in \mathcal P_{\text{adm}},\, (\pi_c, E_c, f_c) \in \mathcal M_{\text{adm}}} \big\lVert (\varepsilon_x, \varepsilon_a, \varepsilon_o) \big\rVert$$
 
-$\mathcal M_{\text{adm}}$ is the class of macro-dynamics satisfying (A1)-(A4): ACT agent structure, well-defined mismatch, well-defined tempo, bounded macro-correction (sector condition). This prevents the infimum from being trivially zero.
+$\mathcal M_{\text{adm}}$ is the class of macro-dynamics satisfying (A1)-(A4): AAD agent structure, well-defined mismatch, well-defined tempo, bounded macro-correction (sector condition). This prevents the infimum from being trivially zero.
 
 $\mathcal P_{\text{adm}}$ is the class of admissible projections $\Lambda = (\Lambda_x, \Lambda_o, \Lambda_a, \Lambda_\Omega)$. Without constraints:
 - If $\mathcal P_{\text{adm}}$ is too broad, the infimum can be driven to zero by degenerate projections (e.g., $\Lambda_x = \text{const}$, which maps every micro-state to the same macro-state -- trivially zero $\varepsilon_x$ but useless).
@@ -55,12 +55,12 @@ The left side is the predictive mutual information the macro-state has about nex
 **Strengths:**
 - Principled: directly controls the predictive capability of the macro-agent.
 - Domain-agnostic: mutual information is well-defined for any probability space.
-- Connected to existing ACT machinery: the information bottleneck framework (#information-bottleneck) already formalizes model compression; this extends it to the projection.
+- Connected to existing AAD machinery: the information bottleneck framework (#information-bottleneck) already formalizes model compression; this extends it to the projection.
 - The parameter $\epsilon_I$ is interpretable: the fraction of predictive information lost to projection.
 
 **Weaknesses:**
 - Requires knowing the joint distribution $P(X_{\text{micro},t}, o_{\text{micro},t+1}, a_{\text{micro},t})$ -- hard or impossible to compute in general.
-- Does not guarantee ACT structure at the macro level. A neural network encoder could satisfy this condition without producing a decomposed $(M_c, G_c)$ state. (But this is handled by $\mathcal M_{\text{adm}}$, which constrains the macro-dynamics to be ACT-shaped.)
+- Does not guarantee AAD structure at the macro level. A neural network encoder could satisfy this condition without producing a decomposed $(M_c, G_c)$ state. (But this is handled by $\mathcal M_{\text{adm}}$, which constrains the macro-dynamics to be AAD-shaped.)
 - Does not guarantee regularity (Lipschitz continuity) of the projection.
 
 ### 2.2 Approach II: Lipschitz Admissibility
@@ -189,7 +189,7 @@ And steady-state gain:
 
 $$K_i^\ast = \frac{P_i^\ast + q_i}{P_i^\ast + q_i + r_i}$$
 
-The ACT parameters for each filter:
+The AAD parameters for each filter:
 - Event rate: $\nu_i = 1$ (one observation per time step).
 - Optimal gain: $\eta_i^\ast = K_i^\ast$.
 - Adaptive tempo: $\mathcal T_i = \nu_i \cdot \eta_i^\ast = K_i^\ast$.
@@ -366,7 +366,7 @@ For domains without a natural covariance structure (e.g., discrete state spaces,
 
 ## 5. Can $\mathcal P_{\text{adm}}$ Be Derived from (A1)-(A4)?
 
-This is the key structural question: are the projection admissibility constraints (P1)-(P3) independent of the macro-dynamics admissibility constraints (A1)-(A4), or does requiring the macro-dynamics to be ACT-shaped already constrain which projections are admissible?
+This is the key structural question: are the projection admissibility constraints (P1)-(P3) independent of the macro-dynamics admissibility constraints (A1)-(A4), or does requiring the macro-dynamics to be AAD-shaped already constrain which projections are admissible?
 
 ### 5.1 (A1)-(A4) partially constrain the projection
 
@@ -447,7 +447,7 @@ The Mori-Zwanzig (MZ) projection operator formalism (Mori 1965, Zwanzig 1973) is
 
 The closure defect $\varepsilon^\ast$ is related to the MZ memory kernel: when the memory kernel is small (fast decay of correlations between projected and discarded variables), the closure defect is small. When the memory kernel is large (slow decay, long-range correlations), the macro-description requires memory corrections -- the "Markovian macro-dynamics" assumed by (A1) fail.
 
-A rigorous connection between $\varepsilon^\ast$ and the MZ memory kernel would anchor ACT's composition framework in established dynamical-systems theory. The form should be: $\varepsilon^\ast \geq \text{(something involving the norm of the memory kernel)}$, providing a lower bound on the closure defect in terms of the non-Markovian character of the projected dynamics. This connection is plausible but unworked.
+A rigorous connection between $\varepsilon^\ast$ and the MZ memory kernel would anchor AAD's composition framework in established dynamical-systems theory. The form should be: $\varepsilon^\ast \geq \text{(something involving the norm of the memory kernel)}$, providing a lower bound on the closure defect in terms of the non-Markovian character of the projected dynamics. This connection is plausible but unworked.
 
 ### 6.6 Projection admissibility for strategy DAGs
 

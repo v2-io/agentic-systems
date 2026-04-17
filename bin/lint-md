@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lint markdown files against ACT's FORMAT.md conventions.
+Lint markdown files against AAD's FORMAT.md conventions.
 
 Usage:
     bin/lint-md [--fix] [files...]
@@ -855,7 +855,7 @@ def main():
         # Default: top-level *.md plus all component dirs and their src/
         root = Path(__file__).resolve().parent.parent
         paths = list(root.glob('*.md'))
-        for component in ['01-act-core', '02-tst-core', '03-logogenic-agents', '04-logozoetic-agents']:
+        for component in ['01-aad-core', '02-tst-core', '03-logogenic-agents', '04-logozoetic-agents']:
             cdir = root / component
             if cdir.is_dir():
                 paths += list(cdir.glob('*.md'))

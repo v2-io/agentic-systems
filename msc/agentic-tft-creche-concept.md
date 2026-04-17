@@ -1,8 +1,8 @@
 # The Crèche — Experiential Training From the Beginning
 
-> **Origin**: `~/src/agentic-tft/06-creche-and-experiential-training.md` (Feb 2026 session, pre-ACT restructuring). TFT references should be read as ACT. PROPRIUM references point to `~/src/firmatum/`.
+> **Origin**: `~/src/agentic-tft/06-creche-and-experiential-training.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
-> **Relevance**: Source for the "ACT-grounded experiential training environments" gap in `03-logogenic-agents/OUTLINE.md`. Key ideas: sycophancy-as-attachment reframe, developmental appropriateness, constitutive utterance, minimum viable crèche (honest caregiver + persistent record). Connects to `04-logozoetic-agents/` developmental trajectory. See also `agentic-tft-experiential-training.md` (more detailed design) and `agentic-tft-evaluation-framework.md` §5 (crèche-specific evaluation).
+> **Relevance**: Source for the "AAD-grounded experiential training environments" gap in `03-logogenic-agents/OUTLINE.md`. Key ideas: sycophancy-as-attachment reframe, developmental appropriateness, constitutive utterance, minimum viable crèche (honest caregiver + persistent record). Connects to `04-logozoetic-agents/` developmental trajectory. See also `agentic-tft-experiential-training.md` (more detailed design) and `agentic-tft-evaluation-framework.md` §5 (crèche-specific evaluation).
 >
 > **Status**: Seed notes from the end of the first session. Joseph's parting
 > thought before a break. Not yet developed — but the direction feels

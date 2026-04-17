@@ -174,7 +174,7 @@ Then the composite mismatch is bounded:
 
 $$\Vert\delta_c\Vert \leq L \cdot \sqrt{(R_{A,\text{coupled}}^*)^2 + (R_{B,\text{coupled}}^*)^2} + \varepsilon^*$$
 
-and the composite persists as an ACT agent.
+and the composite persists as an AAD agent.
 
 **Condition 2 is the key content:** the total coupling energy must not exhaust either agent's adaptive reserve. This is the bridge between "bounded component errors" and "bounded trajectory errors" — it works because the Lyapunov analysis guarantees that individual mismatch stays bounded (condition 1), the coupling doesn't push either agent past its boundary (condition 2), and the projection doesn't amplify errors unboundedly (condition 3).
 

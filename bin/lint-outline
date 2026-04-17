@@ -11,7 +11,7 @@ Checks:
 Usage:
     bin/lint-outline [options] [OUTLINE_FILE]
 
-    OUTLINE_FILE defaults to 01-act-core/OUTLINE.md
+    OUTLINE_FILE defaults to 01-aad-core/OUTLINE.md
 
 Options:
     --graph FILE    Write a Graphviz DOT file of the dependency graph
@@ -313,7 +313,7 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath,
     SECTION_ORDER = ["I", "II", "III", "A", "B"]
 
     with open(filepath, "w") as f:
-        f.write("digraph ACT_Dependencies {\n")
+        f.write("digraph AAD_Dependencies {\n")
         f.write("  rankdir=TB;\n")
         f.write("  compound=true;\n")
         f.write("  concentrate=true;\n")
@@ -467,7 +467,7 @@ def main():
     project_root = script_dir.parent
 
     if outline_file is None:
-        outline_file = project_root / "01-act-core" / "OUTLINE.md"
+        outline_file = project_root / "01-aad-core" / "OUTLINE.md"
     else:
         outline_file = Path(outline_file)
 

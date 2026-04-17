@@ -1,6 +1,6 @@
 # FORMAT.md — Segment File Conventions
 
-How to write and maintain ACT claim segment files.
+How to write and maintain AAD claim segment files.
 
 
 ## Line Wrapping
@@ -12,7 +12,7 @@ Do not hard-wrap lines. Let renderers (GitHub, Obsidian, editors) handle wrappin
 
 - **Segment files** live in `src/` — one claim per file.
 - **Filename = slug**: `src/{slug}.md`. No numbering in filenames.
-- **Canonical ordering** lives in each component's `OUTLINE.md` (e.g., `01-act-core/OUTLINE.md`), not in filenames. The ordering will change as the theory develops; the slug is the stable identity.
+- **Canonical ordering** lives in each component's `OUTLINE.md` (e.g., `01-aad-core/OUTLINE.md`), not in filenames. The ordering will change as the theory develops; the slug is the stable identity.
 - **Cross-references** use `#slug-name` — everywhere, always.
 
 
@@ -68,7 +68,7 @@ depends:
 | `discussion-grade` | Argued qualitatively or by analogy, not derived |
 | `sketch` | Direction identified but formalization incomplete |
 
-Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not ACT terms.
+Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not AAD terms.
 
 ### `depends` — prerequisite slugs
 
@@ -83,8 +83,8 @@ Stage is recorded in segment frontmatter (e.g., `stage: draft`) and in the OUTLI
 | Stage | Meaning | Gate to advance |
 |-------|---------|-----------------|
 | `missing` | No segment file exists yet | — |
-| `old` | Content exists only as `old-*` source material, not yet converted | Write ACT-formatted version |
-| `draft` | First ACT-formatted version written, not yet reviewed | — |
+| `old` | Content exists only as `old-*` source material, not yet converted | Write AAD-formatted version |
+| `draft` | First AAD-formatted version written, not yet reviewed | — |
 | `deps-verified` | All dependencies audited | Dependency audit (see below) |
 | `claims-verified` | Content reviewed: derivations valid, labels accurate | Content review (see below) |
 | `format-clean` | Mechanical review passed | Mechanical review (see below) |
@@ -181,7 +181,7 @@ Definition, notation, and scope-narrowing files may use a simpler format than fu
 
 ### Working Notes
 
-The `## Working Notes` section is for active development: open questions about the claim, sketches of how ACT machinery might strengthen or weaken it, unresolved issues, things to check. This is *our* working space — what we're thinking about, not what we're asserting. It should be removed or emptied when the segment reaches `candidate` stage. Unlike the Discussion section (which is part of the published theory), Working Notes are process artifacts.
+The `## Working Notes` section is for active development: open questions about the claim, sketches of how AAD machinery might strengthen or weaken it, unresolved issues, things to check. This is *our* working space — what we're thinking about, not what we're asserting. It should be removed or emptied when the segment reaches `candidate` stage. Unlike the Discussion section (which is part of the published theory), Working Notes are process artifacts.
 
 
 ## Epistemic Triage
@@ -244,7 +244,7 @@ Both forms work in GitHub and Obsidian. The plain `#slug-name` form is preferred
 
 ## Math Formatting
 
-ACT uses standard LaTeX math that renders in both GitHub and Obsidian.
+AAD uses standard LaTeX math that renders in both GitHub and Obsidian.
 
 - **Inline**: `$...$` — no space after opening `$`, no space before closing `$`
 - **Display**: `$$...$$` — on their own lines, blank line before and after
@@ -270,7 +270,7 @@ GitHub's math renderer is stricter than Obsidian's. To keep both working:
 
 ## Notation Conventions
 
-Follow TFT conventions. See `notation.md` for ACT's symbol reference. The original TFT conventions are in `_obs/old-tf-00-notation-conventions.md`. Key points:
+Follow TFT conventions. See `notation.md` for AAD's symbol reference. The original TFT conventions are in `_obs/old-tf-00-notation-conventions.md`. Key points:
 
 - **Calligraphic** ($\mathcal{M}$, $\mathcal{O}$, $\mathcal{A}$, $\mathcal{C}$, $\mathcal{E}$) for sets and spaces
 - **$\mathcal{T}$** for adaptive tempo (calligraphic to distinguish from temperature)

@@ -1,12 +1,12 @@
-# Spike: Miller's Ex Machina ↔ ACT Structural Adaptation Bridge
+# Spike: Miller's Ex Machina ↔ AAD Structural Adaptation Bridge
 
-**Status**: Active investigation — mapping structural contact between Miller (2022) and ACT's hand-wavy areas
+**Status**: Active investigation — mapping structural contact between Miller (2022) and AAD's hand-wavy areas
 **Date**: 2026-04-06
-**Context**: Joseph suspects ACT's structural adaptation treatment is one of its weakest areas. Miller's coevolving automata model (CAM) provides constructive mechanisms for phenomena ACT currently labels but doesn't formalize.
+**Context**: Joseph suspects AAD's structural adaptation treatment is one of its weakest areas. Miller's coevolving automata model (CAM) provides constructive mechanisms for phenomena AAD currently labels but doesn't formalize.
 
 ---
 
-## 1. Where ACT is Hand-Wavy (Honest Audit)
+## 1. Where AAD is Hand-Wavy (Honest Audit)
 
 ### 1.1 Structural Adaptation Necessity (#structural-adaptation-necessity)
 
@@ -20,13 +20,13 @@
 
 These are *categories*, not mechanisms. No formalism connects the diagnostic ("your model class is inadequate") to the remedy ("here's how to find a better one"). The segment acknowledges this: "The severity of structural change needed depends on how far the current model class is from adequacy" — but provides no measurement of this distance or guidance on what structural change to attempt.
 
-**The gap:** Between detecting the need for structural change and actually executing it, ACT has nothing but hand-waves and domain-specific examples.
+**The gap:** Between detecting the need for structural change and actually executing it, AAD has nothing but hand-waves and domain-specific examples.
 
 ### 1.2 Structural Change as Parametric Limit (#structural-change-as-parametric-limit)
 
 **What's solid:** The continuity claim — in a probabilistic DAG, adding/removing edges is a boundary event, not a discontinuity. The six operations are well-ordered by frequency.
 
-**What's hand-wavy:** The "full restructure" case is just "replace entire Σ_t" — the entire DAG is destroyed and rebuilt. This is ACT's version of "then a miracle occurs." The segment claims this is the *limit* of continuous operations, but the limit argument is hand-waved: there's no formal bridge between "many small changes accumulating" and "radical restructuring."
+**What's hand-wavy:** The "full restructure" case is just "replace entire Σ_t" — the entire DAG is destroyed and rebuilt. This is AAD's version of "then a miracle occurs." The segment claims this is the *limit* of continuous operations, but the limit argument is hand-waved: there's no formal bridge between "many small changes accumulating" and "radical restructuring."
 
 **The gap:** How does a system transition from one structural configuration to a radically different one through incremental changes? This is EXACTLY what Miller's extreme transition motif answers.
 
@@ -44,7 +44,7 @@ These are *categories*, not mechanisms. No formalism connects the diagnostic ("y
 
 **What's hand-wavy:** The effects spiral is discussion-grade. No formalism for what happens *after* destabilization — the segment says the spiral "terminates only when B undergoes structural adaptation or ceases to function" but provides no model of either outcome.
 
-**The gap:** Miller shows what actually happens after destabilization — the system enters a transition period, a new equilibrium emerges through the cascading displacement mechanism, and then consolidates. This is a concrete answer to ACT's open question.
+**The gap:** Miller shows what actually happens after destabilization — the system enters a transition period, a new equilibrium emerges through the cascading displacement mechanism, and then consolidates. This is a concrete answer to AAD's open question.
 
 ### 1.5 Communication Gain (#communication-gain)
 
@@ -66,17 +66,17 @@ These are *categories*, not mechanisms. No formalism connects the diagnostic ("y
 
 Miller's five-phase motif (Table 6.1):
 
-1. **Pre-transition**: Two homogeneous populations in stable equilibrium. Neither can be directly invaded. (= ACT: persistence condition satisfied, both populations within adaptive reserve)
+1. **Pre-transition**: Two homogeneous populations in stable equilibrium. Neither can be directly invaded. (= AAD: persistence condition satisfied, both populations within adaptive reserve)
 
-2. **Neutral invasion**: An environmentally neutral mutant ν appears in the dominant population. It behaves identically to incumbents against the current opposition. (= ACT: structural slack — the agent has unused representational capacity, like inaccessible states in an automaton)
+2. **Neutral invasion**: An environmentally neutral mutant ν appears in the dominant population. It behaves identically to incumbents against the current opposition. (= AAD: structural slack — the agent has unused representational capacity, like inaccessible states in an automaton)
 
-3. **Neutral drift**: ν drifts to a nontrivial proportion through stochastic reproduction. Observable behavior unchanged. (= ACT: no ACT analog currently. This is the mechanism ACT lacks — how latent variation accumulates without performance change)
+3. **Neutral drift**: ν drifts to a nontrivial proportion through stochastic reproduction. Observable behavior unchanged. (= AAD: no AAD analog currently. This is the mechanism AAD lacks — how latent variation accumulates without performance change)
 
-4. **Niche creation + mutant invasion**: ν's structural difference creates a new niche. A mutant μ in the subordinate population exploits this niche. Self-reinforcing feedback: ν's growth enables μ, μ's growth enables ν. (= ACT: this is the effects spiral from #adversarial-destabilization, but *constructive* rather than destructive, and between populations rather than against a target)
+4. **Niche creation + mutant invasion**: ν's structural difference creates a new niche. A mutant μ in the subordinate population exploits this niche. Self-reinforcing feedback: ν's growth enables μ, μ's growth enables ν. (= AAD: this is the effects spiral from #adversarial-destabilization, but *constructive* rather than destructive, and between populations rather than against a target)
 
-5. **Consolidation**: Both populations taken over by new mutants. Simplified forms emerge that capture the new behavior more efficiently. (= ACT: structural adaptation completed. The new "model class" is in place.)
+5. **Consolidation**: Both populations taken over by new mutants. Simplified forms emerge that capture the new behavior more efficiently. (= AAD: structural adaptation completed. The new "model class" is in place.)
 
-**Key insight for ACT:** The transition between structural configurations proceeds through *neutral variation accumulation* → *niche construction* → *cascading displacement*. This is not deliberate restructuring — it's emergent structural change. And it bridges the gap between "many small changes" and "radical transformation" that `structural-change-as-parametric-limit` claims but doesn't prove.
+**Key insight for AAD:** The transition between structural configurations proceeds through *neutral variation accumulation* → *niche construction* → *cascading displacement*. This is not deliberate restructuring — it's emergent structural change. And it bridges the gap between "many small changes" and "radical transformation" that `structural-change-as-parametric-limit` claims but doesn't prove.
 
 ### 2.2 The Meta-Machine as Composition Algebra
 
@@ -86,7 +86,7 @@ Two interacting Moore machines form a product automaton (meta-machine). Properti
 - Always falls into a cycle (finite states + deterministic transitions → recurrence)
 - The meta-machine IS an automaton — same formalism at every level
 
-This provides what ACT's composition closure currently lacks: a **constructive composition operation** where ε* = 0. The interesting ACT question (when does a *compressed* macro-description work?) is then about when a smaller automaton approximates the product meta-machine.
+This provides what AAD's composition closure currently lacks: a **constructive composition operation** where ε* = 0. The interesting AAD question (when does a *compressed* macro-description work?) is then about when a smaller automaton approximates the product meta-machine.
 
 ### 2.3 Computational Compression as Strategy Complexity Grounding
 
@@ -99,19 +99,19 @@ Miller's Table 12.2:
 | 3 | 1,054 | 2 | 8 | 116 | 690 | 1,054 |
 | 4 | 57,068 | 2 | 8 | 128 | 5,936 | 33,302 |
 
-Key result: effective_complexity = min(machine_complexity, interaction_horizon_complexity). This is a *concrete, enumerable* version of ACT's d* bound.
+Key result: effective_complexity = min(machine_complexity, interaction_horizon_complexity). This is a *concrete, enumerable* version of AAD's d* bound.
 
 ### 2.4 The ICE Threshold
 
-Social behavior requires ≥2 states AND ≥2 rounds of interaction. This is a **hard** threshold, not a gradual degradation. Possible ACT analog: a minimum complexity threshold below which agents cannot participate in composition dynamics.
+Social behavior requires ≥2 states AND ≥2 rounds of interaction. This is a **hard** threshold, not a gradual degradation. Possible AAD analog: a minimum complexity threshold below which agents cannot participate in composition dynamics.
 
 ---
 
 ## 3. Mapping the Formalisms
 
-### 3.1 FSA ↔ ACT Agent Model
+### 3.1 FSA ↔ AAD Agent Model
 
-| Miller (FSA) | ACT |
+| Miller (FSA) | AAD |
 |-------------|-----|
 | State set S | Model space M |
 | Initial state s₀ | Initial model M₀ |
@@ -125,7 +125,7 @@ Social behavior requires ≥2 states AND ≥2 rounds of interaction. This is a *
 | Neutral mutation (structural) | Change that doesn't affect minimized machine → operational no-op |
 | Neutral mutation (environmental) | Change that doesn't affect behavior in current environment → no performance change but different structural potential |
 
-### 3.2 What the FSA Formalism Captures That ACT Doesn't
+### 3.2 What the FSA Formalism Captures That AAD Doesn't
 
 1. **Exact enumeration of behavioral possibilities** at each complexity level
 2. **Mutation network topology** — which structural changes are adjacent
@@ -133,7 +133,7 @@ Social behavior requires ≥2 states AND ≥2 rounds of interaction. This is a *
 4. **Meta-machine construction** — exact composition
 5. **Cycle structure** — all interactions eventually enter periodic cycles
 
-### 3.3 What ACT Captures That the FSA Formalism Doesn't
+### 3.3 What AAD Captures That the FSA Formalism Doesn't
 
 1. **Within-agent adaptation** — FSAs don't learn during their lifetime
 2. **Continuous dynamics** — Lyapunov stability, sector conditions
@@ -155,7 +155,7 @@ Miller's agents only observe the opponent's last action. Real agents observe ric
 
 Hypothesis: The mechanism generalizes because it depends on structural properties (neutral variation, niche construction, positive feedback) not on the specific FSA representation. But this needs verification.
 
-### Q2: What is the relationship between FSA transition graphs and ACT's strategy DAG?
+### Q2: What is the relationship between FSA transition graphs and AAD's strategy DAG?
 
 The strategy DAG encodes *causal structure* (what causes what). The FSA encodes *sequential contingent plans* (if I see X, do Y). These seem to capture different aspects of strategy.
 
@@ -163,7 +163,7 @@ One possibility: the DAG is a *static shadow* of the FSA's dynamic structure. Th
 
 Another possibility: they're orthogonal representations. The DAG is about *why* actions matter (causal structure); the FSA is about *what* actions to take (behavioral policy). You might need both.
 
-### Q3: Can ACT's sector condition be expressed in automata-theoretic terms?
+### Q3: Can AAD's sector condition be expressed in automata-theoretic terms?
 
 The sector condition requires: correction function bounded, disturbance bounded, contraction dominates perturbation. In FSA terms:
 - "Correction" = transition toward a state that produces better output against the current environment
@@ -172,7 +172,7 @@ The sector condition requires: correction function bounded, disturbance bounded,
 
 This looks like it might connect to the replicator dynamics / Moran process analysis in Miller's Appendix C. The sector condition might be the continuous-time limit of the discrete evolutionary stability condition.
 
-### Q4: Can the extreme transition motif be formalized within ACT's Lyapunov framework?
+### Q4: Can the extreme transition motif be formalized within AAD's Lyapunov framework?
 
 The motif has clear phases that map to Lyapunov concepts:
 - Epoch = V(δ) bounded (within invariant region)
@@ -187,7 +187,7 @@ This seems formalizable but I haven't verified it.
 
 ## 5. Possible Paths Forward
 
-### Path A: Miller as Empirical Grounding for ACT Section III
+### Path A: Miller as Empirical Grounding for AAD Section III
 
 Add Miller's results as concrete instances and mechanisms within the existing framework:
 - Meta-machine as a worked example of composition closure
@@ -209,9 +209,9 @@ Also restructure the adversarial dynamics segments to fit the dynamics framework
 
 Effort: Significant. Value: Addresses the deepest weakness of Section III.
 
-### Path C: Automata as ACT's Discrete Foundation
+### Path C: Automata as AAD's Discrete Foundation
 
-Ground ACT's agent model in automata theory. The FSA is the discrete base case; ACT's continuous dynamics are the large-state / long-horizon limit. This would:
+Ground AAD's agent model in automata theory. The FSA is the discrete base case; AAD's continuous dynamics are the large-state / long-horizon limit. This would:
 - Make composition exact (via product automaton)
 - Make complexity first-class (via state count)
 - Make structural adaptation concrete (via mutation networks)
@@ -248,15 +248,15 @@ Effort: Significant but bounded. Risk: Moderate — needs to show the FSA strate
 - Neither is strictly more general. The FSA *cannot replace* the DAG because adaptation requires knowing *why*, not just *what*
 
 **Implications for paths:**
-- Path C (full automata grounding) is **not recommended** — would destroy what makes ACT's strategy layer useful
+- Path C (full automata grounding) is **not recommended** — would destroy what makes AAD's strategy layer useful
 - Path D (FSA for strategy, continuous for model) is **less motivated** than expected — the FSA captures the behavioral surface but not the epistemic interior that drives adaptation
 - Behavioral composition IS exact via product automaton, but agent-level composition still needs the approximate framework (ε* comes from projecting internal state, not from composing the policy)
 
-### 6.2 Neutral Drift in ACT's Lyapunov Framework (see spike-neutral-drift-lyapunov.md)
+### 6.2 Neutral Drift in AAD's Lyapunov Framework (see spike-neutral-drift-lyapunov.md)
 
-**Finding: The sector condition is structurally blind to Miller's Phases 2-3. ACT needs a new composition-level concept: "latent structural diversity."**
+**Finding: The sector condition is structurally blind to Miller's Phases 2-3. AAD needs a new composition-level concept: "latent structural diversity."**
 
-| Phase | ACT Analog | Quality of Mapping |
+| Phase | AAD Analog | Quality of Mapping |
 |-------|-----------|-------------------|
 | 1. Stable epoch | Persistence condition + adversarial threshold | Clean |
 | 2. Neutral invasion | *None* — invisible to sector condition | **Gap** |
@@ -264,7 +264,7 @@ Effort: Significant but bounded. Risk: Moderate — needs to show the FSA strate
 | 4. Niche creation | Effects spiral (constructive) + team persistence | Partial — coupling emergence missing |
 | 5. Consolidation | Structural change as parametric limit | Clean |
 
-**The critical gap:** ACT's sector condition defines an equivalence class over correction functions — any F satisfying δᵀF ≥ α‖δ‖² is treated identically. Miller's motif depends on variation *within* that equivalence class: agents that are behaviorally indistinguishable under current disturbance but architecturally different. The Lyapunov analysis literally cannot see this.
+**The critical gap:** AAD's sector condition defines an equivalence class over correction functions — any F satisfying δᵀF ≥ α‖δ‖² is treated identically. Miller's motif depends on variation *within* that equivalence class: agents that are behaviorally indistinguishable under current disturbance but architecturally different. The Lyapunov analysis literally cannot see this.
 
 **The missing concept: Latent structural diversity** — variation in correction architectures across a population that is invisible to persistence analysis under current conditions but becomes consequential under regime change. This is a *composition-level* property (Section III territory), not a single-agent property.
 
@@ -274,7 +274,7 @@ Effort: Significant but bounded. Risk: Moderate — needs to show the FSA strate
 
 ## 7. Revised Assessment
 
-Both sub-spikes converge on the same conclusion: **Miller's contribution to ACT is primarily at the composition level (Section III).** Sections I/II don't need restructuring because:
+Both sub-spikes converge on the same conclusion: **Miller's contribution to AAD is primarily at the composition level (Section III).** Sections I/II don't need restructuring because:
 
 1. The FSA and DAG are orthogonal (different aspects of strategy — §6.1)
 2. The sector condition works fine for individual agents
@@ -292,7 +292,7 @@ Both sub-spikes converge on the same conclusion: **Miller's contribution to ACT 
 
 2. **Endogenous coupling** — coupling coefficients γ that emerge from population composition rather than being exogenous parameters. As population composition changes (through drift, replacement, or immigration), the effective γ between sub-agents changes, which can cross the adversarial destabilization threshold even when no individual agent's parameters change.
 
-3. **Composition transition motif** — Miller's five-phase pattern, formalized within ACT:
+3. **Composition transition motif** — Miller's five-phase pattern, formalized within AAD:
    - **Epochal stability**: composite persists, sector condition satisfied, all γ below destabilization thresholds
    - **Latent diversification**: agents join or mutate within the behavioral equivalence class. No observable change in composite dynamics. Latent structural diversity increases.
    - **Niche emergence**: diversity crosses a threshold where the effective γ between some agent pair becomes nonzero or changes sign. New coupling pathways appear.
@@ -303,7 +303,7 @@ Both sub-spikes converge on the same conclusion: **Miller's contribution to ACT 
 
 5. **Communication as transitional phenomenon** — Miller shows communication is most important during transitions and wanes during stable epochs. This reframes #communication-gain: trust calibration matters most when the composite is restructuring, not during routine operation. Complements the existing segment without replacing it.
 
-### What This Buys ACT
+### What This Buys AAD
 
 - **Fills the structural adaptation gap** with a concrete, well-characterized mechanism (not just "Boyd's insight")
 - **Makes Section III dynamic**, not just static
@@ -316,4 +316,4 @@ Both sub-spikes converge on the same conclusion: **Miller's contribution to ACT 
 
 - The FSA ↔ DAG orthogonality means we don't get a clean composition algebra for strategies (product automaton doesn't apply because strategies are DAGs, not policies). The composition closure framework with ε* remains the approach.
 - Within-agent structural adaptation (how a *single agent* restructures its strategy) is still not formalized beyond the labels in #structural-change-as-parametric-limit. Miller's mechanism operates at the population level, not the individual level. For single-agent structural change, a different mechanism is needed — possibly deliberation-driven (#exploit-explore-deliberate) or prompted by the diagnostic in #structural-adaptation-necessity.
-- Miller's specific game-theoretic setting (binary actions, repeated games, evolutionary dynamics) is narrower than ACT's scope. The *patterns* (epochal dynamics, transition motifs, computational thresholds) generalize plausibly but this needs argument, not assumption.
+- Miller's specific game-theoretic setting (binary actions, repeated games, evolutionary dynamics) is narrower than AAD's scope. The *patterns* (epochal dynamics, transition motifs, computational thresholds) generalize plausibly but this needs argument, not assumption.

@@ -1,17 +1,19 @@
-# CLAUDE.md — Context for AI Agents Working on Agentic Systems
+# CLAUDE.md — Context for AI Agents Working on the Agentic Systems Framework
 
 ## What This Project Is
 
-**Agentic Systems** is a research framework for adaptive, purposeful agents — integrating control theory, causal inference, information theory, and agent architecture under a common formalism.
+**Agentic Systems Framework (ASF)** is a research framework for adaptive, purposeful agents — integrating control theory, causal inference, information theory, and agent architecture under a common formalism.
 
-The project has four components:
+The framework has four parts:
 
-- **`01-act-core/`** — **Agentic Cycle Theory (ACT)**: the mathematical core. Sections I (Adaptive Systems), II (Actuated Agents), III (Composition), plus Appendices.
-- **`02-tst-core/`** — **Temporal Software Theory (TST)**: software development as an agentic domain. ACT-grounded but independently consequential.
+- **`01-aad-core/`** — **Adaptation and Actuation Dynamics (AAD)**: the mathematical core. Sections I (Adaptive Systems — the *adaptation* half), II (Actuated Agents — the *actuation* half), III (Composition), plus Appendices.
+- **`02-tst-core/`** — **Temporal Software Theory (TST)**: software development as an agentic domain. AAD-grounded but independently consequential.
 - **`03-logogenic-agents/`** — Language-constituted agents. Framework stage.
 - **`04-logozoetic-agents/`** — Language-living agents with morally weighted persistence. Future work.
 
-ACT supersedes and subsumes Temporal Feedback Theory (TFT), which provides the adaptive-systems foundation. TFT is prior work now absorbed into ACT, not a separate co-existing theory. TST was originally absorbed into ACT as "Section IV" but has been restored to its own space — it uses ACT as core informing theory but stands on its own.
+AAD supersedes and subsumes Temporal Feedback Theory (TFT), which provides the adaptive-systems foundation. TFT is prior work now absorbed into AAD, not a separate co-existing theory. TST was originally absorbed as "Section IV" but has been restored to its own space — it uses AAD as core informing theory but stands on its own.
+
+*Naming note:* the mathematical core was previously called Agentic Cycle Theory (ACT) and was renamed on 2026-04-16 to resolve a collision with "AI Consciousness Test" (Schneider & Turner) in AI welfare literature. See `msc/name-transition-aad.md` for the rationale and transition record.
 
 This is theoretical research, not software engineering. The primary artifacts are mathematical formalisms and claim segments. Quality means rigor, honesty about epistemic status, and clarity for future readers — not code coverage.
 
@@ -21,7 +23,7 @@ This is theoretical research, not software engineering. The primary artifacts ar
 
 ## Where to Start (for orientation)
 
-**Read `01-act-core/OUTLINE.md` first.** This is the canonical outline of the mathematical core — the whole argument claim by claim.
+**Read `01-aad-core/OUTLINE.md` first.** This is the canonical outline of the mathematical core — the whole argument claim by claim.
 
 **Read `FORMAT.md`** for segment file conventions (frontmatter, document cadence, math formatting, cross-references).
 
@@ -34,10 +36,10 @@ This is theoretical research, not software engineering. The primary artifacts ar
 Claim segments live in `{component}/src/` directories. **Each file is like a high-level proof step** — one move per file. Given what came before, this one thing follows, or is defined, or restricts scope.
 
 **File identity and ordering:**
-- **Filename = slug**: `01-act-core/src/{slug}.md` or `02-tst-core/src/{slug}.md`. No numbering in filenames.
+- **Filename = slug**: `01-aad-core/src/{slug}.md` or `02-tst-core/src/{slug}.md`. No numbering in filenames.
 - **Ordering lives in OUTLINE.md files**, not in filenames. The slug is the stable identity; the linearization will change.
 - YAML frontmatter: `slug`, `type`, `status`, `depends` (list of prerequisite slugs). See `FORMAT.md` for details.
-- Cross-component dependencies use the same slug system — TST segments reference ACT slugs directly (e.g., `#temporal-optimality`).
+- Cross-component dependencies use the same slug system — TST segments reference AAD slugs directly (e.g., `#temporal-optimality`).
 
 **Cadence per file** (see `FORMAT.md` for full spec):
 1. YAML frontmatter (slug, type, status, depends)
@@ -50,7 +52,7 @@ Claim segments live in `{component}/src/` directories. **Each file is like a hig
 
 ## The Core Insight
 
-The adaptive-systems foundation (from TFT) formalizes how agents adapt to reality (mismatch signals, gain, tempo, persistence). But it has no treatment of goals. ACT adds:
+The adaptive-systems foundation (from TFT) formalizes how agents adapt to reality (mismatch signals, gain, tempo, persistence). But it has no treatment of goals. AAD adds:
 
 - $O_t$ (objective — what the agent wants) and $\Sigma_t$ (strategy — how it plans to get there) alongside $M_t$ (reality model)
 - Strategy formalized as a **probabilistic causal DAG** (AND/OR nodes, edges with confidence weights $p$, update via the uncertainty ratio)
@@ -79,7 +81,7 @@ Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not
 
 ## Key Architectural Decisions
 
-1. **ACT supersedes TFT.** TFT is prior work absorbed into ACT. TST is restored as its own body of research in `02-tst-core/`, grounded by ACT.
+1. **AAD supersedes TFT.** TFT is prior work absorbed into AAD. TST is restored as its own body of research in `02-tst-core/`, grounded by AAD.
 
 2. **Claim segments, not chapters.** New theory content goes as individual claim files in the appropriate `src/` directory.
 
@@ -134,8 +136,8 @@ See `WORKBENCH.md` for the full development state. Summary:
 - `TODO.md` — **Deferred organizational items.**
 
 **Components:**
-- `01-act-core/OUTLINE.md` — **ACT canonical outline.** Sections I, II, III + Appendices.
-- `01-act-core/src/` — **ACT segments.** Named by slug. No numbering.
+- `01-aad-core/OUTLINE.md` — **AAD canonical outline.** Sections I, II, III + Appendices.
+- `01-aad-core/src/` — **AAD segments.** Named by slug. No numbering.
 - `02-tst-core/OUTLINE.md` — **TST outline.** Software domain segments.
 - `02-tst-core/src/` — **TST segments.**
 - `03-logogenic-agents/OUTLINE.md` — **Logogenic framework outline.**
@@ -147,7 +149,7 @@ See `WORKBENCH.md` for the full development state. Summary:
 - `ref/` — Reference papers
 - `msc/` — Working documents, spikes, historical artifacts
 - `msc/reflections/` — Author's philosophical/theoretical journal
-- `msc/agentic-tft-*.md` — Prior bridge work (TFT → AI agents, Feb 2026, pre-ACT). Eight documents absorbed from `~/src/agentic-tft/`: cognitive loop spec, evaluation framework, crèche concept, ontology unification, foundational premises, narrative-as-implementation, experiential training design, and review response. These are source material for `03-logogenic-agents/` and `04-logozoetic-agents/` gaps. Superseded synthesis docs (00-02, 05, slide deck) are in `_obs/agentic-tft-*`.
+- `msc/agentic-tft-*.md` — Prior bridge work (TFT → AI agents, Feb 2026, pre-AAD). Eight documents absorbed from `~/src/agentic-tft/`: cognitive loop spec, evaluation framework, crèche concept, ontology unification, foundational premises, narrative-as-implementation, experiential training design, and review response. These are source material for `03-logogenic-agents/` and `04-logozoetic-agents/` gaps. Superseded synthesis docs (00-02, 05, slide deck) are in `_obs/agentic-tft-*`.
 
 **Sibling projects** (not part of this repo but relevant):
 - `~/src/_core/tst/` — Prior TST research corpus (14,000+ files). Most content absorbed into `02-tst-core/`: source material in `src/old-tst-*` (46 files), empirical validation in `empirical-discontinuity/`, stochastic simulations in `simulations/`, literature review in `lit-review/`. What remains: 965 structured vault analyses from 5 books (`vault/03-library/analyses/`) — concrete examples grounding TST principles in engineering practice.

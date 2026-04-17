@@ -1,12 +1,12 @@
-# Comprehensive ACT Core Review — 2026-04-02
+# Comprehensive AAD Core Review — 2026-04-02
 
-Consolidates the full review of `01-act-core/` (68 segments) with all still-relevant findings from `analysis-2026-04-01.md`, `analysis-2026-04-01-remaining.md`, `analysis-2026-04-02-synthesis.md`, and `analysis-2026-04-02-round2.md`. Items resolved since those analyses were written are marked ~~struck~~ and noted. Items from the new review that were not in prior analyses are marked **NEW**.
+Consolidates the full review of `01-aad-core/` (68 segments) with all still-relevant findings from `analysis-2026-04-01.md`, `analysis-2026-04-01-remaining.md`, `analysis-2026-04-02-synthesis.md`, and `analysis-2026-04-02-round2.md`. Items resolved since those analyses were written are marked ~~struck~~ and noted. Items from the new review that were not in prior analyses are marked **NEW**.
 
 ---
 
 ## 1. Overall Assessment
 
-ACT is a well-constructed integrative framework — 68 segments forming a coherent argument from adaptive-systems axioms through purposeful agency to multi-agent composition. The epistemic honesty system is the single most impressive feature: nearly every segment correctly self-classifies. The theory achieves genuine integration of control theory, causal inference, information theory, and agent architecture.
+AAD is a well-constructed integrative framework — 68 segments forming a coherent argument from adaptive-systems axioms through purposeful agency to multi-agent composition. The epistemic honesty system is the single most impressive feature: nearly every segment correctly self-classifies. The theory achieves genuine integration of control theory, causal inference, information theory, and agent architecture.
 
 **Section I** (28 segments): Mathematically tight. The Lyapunov persistence machinery is exact and well-proved. Gain-sector bridge grounds the central assumption (GA-3) in verifiable properties. Discrete-sector-condition closes GA-5.
 
@@ -116,7 +116,7 @@ All three original reviewers recommend splitting into: (a) core results, (b) con
 - *Source:* analysis-2026-04-01-remaining, msc/2026-03-13-feedback.md
 
 **P2. Prior art positioning.**
-Active inference/FEP, POMDP, BDI relationships deserve explicit treatment. Segment #prior-art-positioning is missing. Brief positioning exists in msc/02-prior-art-assessment.md but not in segments. ACT's differentiators vs. active inference: persistence condition (no FEP analog), adversarial dynamics, composition machinery.
+Active inference/FEP, POMDP, BDI relationships deserve explicit treatment. Segment #prior-art-positioning is missing. Brief positioning exists in msc/02-prior-art-assessment.md but not in segments. AAD's differentiators vs. active inference: persistence condition (no FEP analog), adversarial dynamics, composition machinery.
 - *Source:* analysis-2026-04-01, analysis-2026-04-01-remaining
 
 **P3. **NEW** "Forced" vs "strongly motivated" language inconsistency.**
@@ -126,7 +126,7 @@ strategy-dag Discussion says "strongly motivated" while other segments and OUTLI
 ### 3.4 LOWER — Open Questions and Refinements
 
 **L1. Scope architecture: adaptive vs agency scope.**
-scope-condition has two formal scope levels, but "within ACT's scope" remains ambiguous in prose. Multiple review rounds flagged this. Current caveat paragraphs address it but a structural split (or formal "scope levels" subsection) would be cleaner.
+scope-condition has two formal scope levels, but "within AAD's scope" remains ambiguous in prose. Multiple review rounds flagged this. Current caveat paragraphs address it but a structural split (or formal "scope levels" subsection) would be cleaner.
 - *Source:* analysis-2026-04-02-round2 DD1
 
 **L2. loop-interventional-access status.**
@@ -149,8 +149,8 @@ Labeled "axiomatic" but the scalar-comparability commitment is a substantive for
 No downstream segment formally uses the IB objective; it provides conceptual framing only. Either formalize its role (strategy-complexity-cost is the closest consumer) or note its status as motivational.
 - *Source:* analysis-2026-04-02-round2
 
-**L7. Composition assumes ACT-shaped macro-agents.**
-Admissibility (A1)-(A4) constrains the macro-agent to be ACT-shaped. This IS acknowledged in composition-closure (verified), but the Discussion could be more explicit that this is a constrained representation test, not unconstrained scale-invariance.
+**L7. Composition assumes AAD-shaped macro-agents.**
+Admissibility (A1)-(A4) constrains the macro-agent to be AAD-shaped. This IS acknowledged in composition-closure (verified), but the Discussion could be more explicit that this is a constrained representation test, not unconstrained scale-invariance.
 - *Source:* analysis-2026-04-02-round2 N4
 
 **L8. Heavy-tailed disturbances.**
@@ -165,7 +165,7 @@ Both labeled "exact" but are convention-dependent on value-object's horizon/poli
 
 ## 4. Missing Segments and Narrative Gaps
 
-### 4.1 ACT Core (01-act-core/) — OUTLINE Gaps
+### 4.1 AAD Core (01-aad-core/) — OUTLINE Gaps
 
 | Gap | Section | Type | Description | Difficulty |
 |-----|---------|------|-------------|------------|
@@ -173,7 +173,7 @@ Both labeled "exact" but are convention-dependent on value-object's horizon/poli
 | #adversarial-edge-targeting | III | Derived? | Which strategy edges are most valuable to attack. Connects to adversarial-destabilization and observability-dominance. | Medium — likely involves sensitivity analysis on DAG structure |
 | #linear-ode-approximation | A | Detail | Pedagogical linear mismatch ODE. Currently the linear form appears only in mismatch-dynamics. A standalone appendix would let mismatch-dynamics focus on the qualitative behavior and point here for the full linear treatment. | Small |
 
-### 4.2 ACT Core — Missing Appendices (from WORKBENCH.md)
+### 4.2 AAD Core — Missing Appendices (from WORKBENCH.md)
 
 | Gap | Type | Description | Difficulty |
 |-----|------|-------------|------------|
@@ -188,11 +188,11 @@ Both labeled "exact" but are convention-dependent on value-object's horizon/poli
 | #multi-timescale-stability | sketch | Formal N-timescale singular perturbation treatment. |
 | #strategy-persistence-schema | sketch | Natural next step: mixed AND/OR DAGs (four pure topologies verified). Formalize strategic disturbance rho_Sigma. |
 
-### 4.4 Cross-Component Gaps Relevant to ACT
+### 4.4 Cross-Component Gaps Relevant to AAD
 
-These are tracked in other components' OUTLINEs but their absence affects how ACT's scope claims read:
+These are tracked in other components' OUTLINEs but their absence affects how AAD's scope claims read:
 
-| Gap | Component | Relevance to ACT |
+| Gap | Component | Relevance to AAD |
 |-----|-----------|-------------------|
 | #ai-agent-as-act-agent | 03-logogenic | Validates Section II scope claims about Class 2 agents |
 | #section-ii-survival | 03-logogenic | Documents which Section II results survive without directed separation (16/24 exactly, 5 approximately, 2 require modification per spike) |

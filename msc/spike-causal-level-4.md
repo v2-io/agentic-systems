@@ -135,11 +135,11 @@ When the agent is reasoning about alternative causal structures (imagining possi
 
 And the κ problem becomes: in agents where Levels 1-3 and Level 4 reasoning share the same processing infrastructure (merged topology — LLMs!), the goal-conditioning needed for Level 4 contaminates the goal-blindness needed for Levels 1-3. The agent can't separate "I'm updating my model from evidence" from "I'm imagining a goal-relevant alternative." They run on the same hardware.
 
-## 5. The ACT Implications
+## 5. The AAD Implications
 
 ### 5.1 A Fifth Mismatch Type?
 
-ACT currently has four mismatch types in the orient cascade:
+AAD currently has four mismatch types in the orient cascade:
 - δ_epistemic: prediction error (Level 1-2)
 - δ_sat: goal achievability (Level 2 — requires interventional reasoning about A_O)
 - δ_regret: policy optimality (Level 2-3 — requires counterfactual comparison of policies)
@@ -150,7 +150,7 @@ If Level 4 is real, there might be a fifth:
 
 This isn't "are the parameters wrong?" (that's δ_epistemic). It's "are the structural equations wrong? Am I missing causal links? Do I have spurious links?"
 
-ACT already has a concept for this: #structural-adaptation-necessity — when parametric updates within the current model class fail and the agent needs to change its model's structure. But it's treated as a binary event (either the model class is adequate or it needs changing). A Level 4 framing would make it continuous: the agent always has some degree of structural uncertainty, and δ_structural measures how much.
+AAD already has a concept for this: #structural-adaptation-necessity — when parametric updates within the current model class fail and the agent needs to change its model's structure. But it's treated as a binary event (either the model class is adequate or it needs changing). A Level 4 framing would make it continuous: the agent always has some degree of structural uncertainty, and δ_structural measures how much.
 
 **Where this fits in the cascade**: δ_structural should sit BETWEEN δ_epistemic and δ_sat:
 1. Update M_t from observations (δ_epistemic) — Level 1-2
@@ -162,7 +162,7 @@ This ordering makes sense: you can't meaningfully evaluate goal attainability if
 
 ### 5.2 Aspiration as Productive δ_sat > 0
 
-ACT currently treats δ_sat > 0 as a problem: the goal is unmet under the best available policy. The cascade says: try improving M_t, expanding Π, extending N_h, and only then consider revising O_t.
+AAD currently treats δ_sat > 0 as a problem: the goal is unmet under the best available policy. The cascade says: try improving M_t, expanding Π, extending N_h, and only then consider revising O_t.
 
 The "shoot for the stars" insight suggests an additional possibility: sometimes δ_sat > 0 is PRODUCTIVE. An aspirational O_t that's technically infeasible generates a gradient through strategy space that's better than the gradient from any feasible O_t.
 
@@ -173,7 +173,7 @@ This happens when:
 - The infeasible objective's gradient cuts through the local optima
 - The "overshoot" from aiming too high lands in a better feasible region than direct optimization would find
 
-This is not just metaphorical — it's a known phenomenon in optimization (regularization by over-parameterization, implicit bias from aspirational loss functions, the benefits of optimistic exploration in RL). Whether ACT should formalize it depends on whether it's a general feature of purposeful agents or a special case.
+This is not just metaphorical — it's a known phenomenon in optimization (regularization by over-parameterization, implicit bias from aspirational loss functions, the benefits of optimistic exploration in RL). Whether AAD should formalize it depends on whether it's a general feature of purposeful agents or a special case.
 
 ### 5.3 Imagination as Deliberate κ > 0
 
@@ -185,7 +185,7 @@ The key is the epistemic tag: the agent must distinguish between:
 
 When these are clearly distinguished, the agent is "imagining." When they're confused, the agent is "hallucinating."
 
-In ACT's formalism, this might mean that the complete agent state needs a third component:
+In AAD's formalism, this might mean that the complete agent state needs a third component:
 
     X_t = (M_t, G_t, W_t)
 
@@ -197,7 +197,7 @@ This is speculative but structurally clean: it resolves the directed separation 
 
 There's a pattern here that might be worth stating explicitly:
 
-| Pearl Level | Reasoning type | ACT mismatch | Directed separation | Loop type |
+| Pearl Level | Reasoning type | AAD mismatch | Directed separation | Loop type |
 |---|---|---|---|---|
 | 1 | Association | δ_epistemic (partial) | Holds — evidence is goal-blind | Observation loop |
 | 2 | Intervention | δ_epistemic, δ_sat | Holds — interventional evidence is still goal-blind in processing | Action-observation loop |
@@ -206,7 +206,7 @@ There's a pattern here that might be worth stating explicitly:
 
 The pattern: as you go up Pearl's hierarchy, the reasoning gets more powerful but also more coupled between beliefs and goals. At Level 1-2, the coupling goes only through the action channel (κ_selection > 0, κ_processing = 0). At Level 3, counterfactual reasoning might introduce some processing coupling (which counterfactuals to evaluate is goal-directed). At Level 4, the coupling is the point.
 
-And the timescale ordering from ACT's orient cascade maps to the levels:
+And the timescale ordering from AAD's orient cascade maps to the levels:
 - Fast: Level 1-2 reasoning (update M_t from evidence)
 - Medium: Level 3 reasoning (evaluate strategies via counterfactual comparison)
 - Slow: Level 4 reasoning (structural imagination, aspirational planning)
@@ -223,9 +223,9 @@ But even if Level 4 COLLAPSES into Level 3 formally, it's COMPUTATIONALLY distin
 - The computational complexity is qualitatively different
 - The cognitive resources required are qualitatively different
 
-And for ACT's purposes, what matters isn't the formal hierarchy but the PROCESSING ARCHITECTURE. The question is: does the agent need to do goal-blind evidence processing (Levels 1-3) and goal-directed structure exploration (Level 4) simultaneously? If yes, directed separation fails — not because Level 4 is formally above Level 3, but because the two types of reasoning share processing resources and contaminate each other.
+And for AAD's purposes, what matters isn't the formal hierarchy but the PROCESSING ARCHITECTURE. The question is: does the agent need to do goal-blind evidence processing (Levels 1-3) and goal-directed structure exploration (Level 4) simultaneously? If yes, directed separation fails — not because Level 4 is formally above Level 3, but because the two types of reasoning share processing resources and contaminate each other.
 
-## 8. What This Means for ACT's κ Problem
+## 8. What This Means for AAD's κ Problem
 
 If I take this seriously, the κ problem reframes again:
 
@@ -246,7 +246,7 @@ This gives a much cleaner target for the theory:
 
 ## 9. Connections to Existing Literature (Tentative)
 
-- **Bayesian model selection / structure learning**: The formal framework for Level 4-A reasoning (uncertainty over SCMs) already exists in the causal discovery literature. ACT could draw on this.
+- **Bayesian model selection / structure learning**: The formal framework for Level 4-A reasoning (uncertainty over SCMs) already exists in the causal discovery literature. AAD could draw on this.
 - **Analogical reasoning / structure mapping** (Gentner, Holyoak): Reasoning by structural analogy between domains is a form of Level 4 reasoning — transferring causal structure from a known domain to a novel one.
 - **Mental simulation / prospection** (Buckner & Carroll, 2007; Schacter et al., 2007): The cognitive neuroscience of imagination and future thinking. The brain's "default mode network" activates during imagination, distinct from task-focused processing — biological evidence for the M_t / W_t separation.
 - **Active Inference**: Friston's framework treats beliefs and preferences as part of the same generative model. The distinction between M_t and W_t might not exist in Active Inference — which could be either a feature (it naturally handles Level 4) or a bug (it can't separate grounded beliefs from imagination).
@@ -274,7 +274,7 @@ That is: the policy optimized for the aspirational objective produces better out
 
 3. **Gradient quality**: The gradient ∇_π V_{O_aspirational} may be better-conditioned (more informative, more stable) than ∇_π V_{O_feasible} in the neighborhood of π_f. Optimizing toward the aspirational target navigates the landscape more smoothly.
 
-**ACT formalization**: This could be a corollary or working note in #satisfaction-gap: "δ_sat > 0 is not always a signal for O_t revision. When the aspirational objective produces a better gradient through strategy space than any feasible alternative, maintaining δ_sat > 0 is optimal." This would modify the cascade's rule that O_t revision is the last resort — instead, O_t revision is only warranted when the aspirational gradient is WORSE than the feasible gradient, not just when δ_sat > 0.
+**AAD formalization**: This could be a corollary or working note in #satisfaction-gap: "δ_sat > 0 is not always a signal for O_t revision. When the aspirational objective produces a better gradient through strategy space than any feasible alternative, maintaining δ_sat > 0 is optimal." This would modify the cascade's rule that O_t revision is the last resort — instead, O_t revision is only warranted when the aspirational gradient is WORSE than the feasible gradient, not just when δ_sat > 0.
 
 ## 11. What's Real Here and What's Fog
 

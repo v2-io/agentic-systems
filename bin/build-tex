@@ -4,9 +4,9 @@
 # Uses kramdown (via bin/md2context) for markdown→ConTeXt conversion.
 #
 # Usage:
-#   bin/build-tex 01-act-core/OUTLINE.md
-#   bin/build-tex 01-act-core/OUTLINE.md --tex-only
-#   bin/build-tex 01-act-core/OUTLINE.md -o output.tex
+#   bin/build-tex 01-aad-core/OUTLINE.md
+#   bin/build-tex 01-aad-core/OUTLINE.md --tex-only
+#   bin/build-tex 01-aad-core/OUTLINE.md -o output.tex
 
 require 'pathname'
 require 'yaml'

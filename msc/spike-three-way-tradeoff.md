@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-02 (revised: deep adversarial pass)
 **Status:** Adversarial spike. Replaces the earlier constructive spike.
-**Target segment:** `01-act-core/src/exploit-explore-deliberate.md`
+**Target segment:** `01-aad-core/src/exploit-explore-deliberate.md`
 **Simulation:** `msc/sim-three-way-tradeoff.py`
 
 
@@ -114,7 +114,7 @@ Deliberation's information ceiling is the gap between the total information in t
 
 **Simulation confirmation:** Exploration earned 3.5x more entropy reduction per step than exploitation, while deliberation earned approximately the same as exploitation (ratio 0.99). Deliberation's information yield is tiny compared to exploration's. This is because in the bandit setting, the Bayesian update already extracts most available information — the gap is small.
 
-**What this reveals about ACT:** The information-theoretic approach shows that deliberation's value is fundamentally about **computational approximation** — the agent hasn't fully processed its existing information. This makes deliberation's value:
+**What this reveals about AAD:** The information-theoretic approach shows that deliberation's value is fundamentally about **computational approximation** — the agent hasn't fully processed its existing information. This makes deliberation's value:
 
 1. **Agent-architecture-dependent** (a perfect Bayesian has zero deliberation value)
 2. **Diminishing within a cycle** (each deliberation step closes the computation gap)
@@ -206,9 +206,9 @@ The three-way oracle chose deliberation 0-8 times out of 200 steps across all co
 
 **Interpretation:** Even when deliberation is FREE (no special cost), the oracle rarely chooses it. The value of acting (and getting both reward AND information) almost always exceeds the value of pausing to think.
 
-### Finding 3: The ACT Heuristic Policy Failed Catastrophically
+### Finding 3: The AAD Heuristic Policy Failed Catastrophically
 
-The ACT dominance-regime heuristic produced total reward of 0.0 in all configurations (deliberating 100% of steps). This is partly a thresholding bug (the heuristic is poorly calibrated), but it reveals a deeper problem: the qualitative regime descriptions don't translate into actionable decision rules without specific quantitative thresholds, which the theory doesn't provide.
+The AAD dominance-regime heuristic produced total reward of 0.0 in all configurations (deliberating 100% of steps). This is partly a thresholding bug (the heuristic is poorly calibrated), but it reveals a deeper problem: the qualitative regime descriptions don't translate into actionable decision rules without specific quantitative thresholds, which the theory doesn't provide.
 
 **Interpretation:** "Deliberate when regret is high and environment is stable" sounds right but is useless without knowing WHAT VALUE of regret is "high" and what drift rate is "stable." The segment provides no guidance.
 
@@ -288,12 +288,12 @@ In these domains, deliberation is genuinely a third mode that cannot be replaced
 - When actions are irreversible (deliberation as risk management)
 - When the model has latent structure exploitable by computation
 
-These conditions are DOMAIN-SPECIFIC and probably cannot be captured in a single formal criterion within ACT.
+These conditions are DOMAIN-SPECIFIC and probably cannot be captured in a single formal criterion within AAD.
 
 
 ## Part 6: Recommendation
 
-### For the segment (`01-act-core/src/exploit-explore-deliberate.md`)
+### For the segment (`01-aad-core/src/exploit-explore-deliberate.md`)
 
 **Rewrite substantially.** The segment should:
 

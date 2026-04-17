@@ -177,7 +177,7 @@ This is not three different quantities --- it is one quantity ($p_{ij}$) whose e
 
 ### Why not B or C
 
-**Resolution B** (restrict updates to Regime A) sacrifices the theory's generality. ACT aims to cover agents from software bots to military commanders. Restricting edge updates to intervention-rich domains makes it a theory of Regime A agents with an acknowledgment that other agents exist. This is the wrong scope for a general framework.
+**Resolution B** (restrict updates to Regime A) sacrifices the theory's generality. AAD aims to cover agents from software bots to military commanders. Restricting edge updates to intervention-rich domains makes it a theory of Regime A agents with an acknowledgment that other agents exist. This is the wrong scope for a general framework.
 
 **Resolution C** (two-layer edges) violates the single-parameter-edge design principle that three independent formalism attempts converged on. The $\iota_{ij}$ coefficient already exists as a gain modulator in edge-update-causal-validity --- promoting it to a first-class edge parameter adds weight without theoretical return. The ghost-quantity problem (interventional credence is operationally inaccessible except where it equals the operational credence) makes the separation formally tidy but practically empty.
 

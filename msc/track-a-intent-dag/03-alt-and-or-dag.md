@@ -534,4 +534,4 @@ conjunctions), provides sharper prescriptions (bottleneck concentration,
 differential hedging), and is more principled (derivable from causal
 semantics of M_t). Cost: one bit per node, one modeling decision, less
 uniform degradation at AND-nodes. It should replace noisy-OR as the
-default combination semantics for the ACT intent DAG.
+default combination semantics for the AAD intent DAG.

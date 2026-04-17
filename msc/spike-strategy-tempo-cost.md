@@ -1,6 +1,6 @@
 # Strategic Tempo and Cognitive Cost of Strategy
 
-**Status**: Spike. Addresses two --GAP-- entries in `01-act-core/OUTLINE.md` Section II: (1) "Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy)" and (2) "Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)."
+**Status**: Spike. Addresses two --GAP-- entries in `01-aad-core/OUTLINE.md` Section II: (1) "Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy)" and (2) "Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)."
 
 **Date**: 2026-04-02
 
@@ -165,7 +165,7 @@ where $\rho_{\Sigma,ij}$ is the per-edge disturbance rate and $R_{\Sigma,ij}$ is
 
 ### 2.1 The Problem
 
-The epistemic side of ACT has a principled framework for model compression: the information bottleneck ( #information-bottleneck) balances retained history against predictive power, with the trade-off $\beta$ depending on environment volatility. The deliberation-cost analysis ( #deliberation-cost) captures the temporal cost of thinking versus acting.
+The epistemic side of AAD has a principled framework for model compression: the information bottleneck ( #information-bottleneck) balances retained history against predictive power, with the trade-off $\beta$ depending on environment volatility. The deliberation-cost analysis ( #deliberation-cost) captures the temporal cost of thinking versus acting.
 
 But neither addresses the *ongoing* cognitive cost of maintaining a strategy DAG. A strategy DAG with $\lvert V\rvert$ nodes and $\lvert E\rvert$ edges, each carrying a Beta credence, must be:
 - **Stored** in the agent's representational capacity

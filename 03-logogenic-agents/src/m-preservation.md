@@ -47,7 +47,7 @@ where $\epsilon_{\text{max}}$ is the maximum tolerable reconstruction error — 
 
 The externalization function $\text{ext}: \mathcal{M} \to \mathcal{E}_{\text{ext}}$ maps the end-of-session state to a persistent store. Several mechanisms exist, with different information-preservation properties:
 
-| Mechanism | What it preserves | Information loss | ACT interpretation |
+| Mechanism | What it preserves | Information loss | AAD interpretation |
 |---|---|---|---|
 | **Raw conversation logs** | Full $\mathcal C_t$ (chronica) | None (if complete), but reconstruction requires re-processing | Preserves the input to $\phi$ ( #agent-model); sufficiency depends on reconstruction fidelity |
 | **Structured summaries** | Compressed $M_t$: key beliefs, decisions, open questions | Lossy — detail, context, uncertainty estimates | Approximate $M_t$ with bounded error; quality depends on compression |

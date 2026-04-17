@@ -181,9 +181,9 @@ This optimizes over actions that change the model, not just variable values with
 
 ## Connection to the Directed Separation Problem
 
-### Where Each Level Lives in ACT
+### Where Each Level Lives in AAD
 
-| Pearl Level | ACT reasoning | Directed separation | Example |
+| Pearl Level | AAD reasoning | Directed separation | Example |
 |---|---|---|---|
 | 1 (Association) | P(Y\|X) — correlational model update | Holds trivially | Kalman filter observation |
 | 2 (Intervention) | P(Y\|do(X)) — action-value estimation, Q_O | Holds — evidence processing is goal-blind | Evaluating action consequences |
@@ -263,7 +263,7 @@ This is the formal content of "shoot for the stars, land on the moon": the aspir
 | Connection to "imagination" | Structural counterfactuals as imagining alternative mechanisms | Model exploration as imagination |
 | Strength of argument | Clean formalism, weak novelty claim | Stronger novelty claim, needs formal tightening |
 
-**Recommendation for ACT**: Don't claim "we've extended Pearl's hierarchy." Do claim: "ACT identifies a class of reasoning tasks — model-modifying planning under model uncertainty — that goes beyond standard Level 1-3 causal inference. This class corresponds to the 'imagination' or 'structural exploration' mode that productively couples goals and model dynamics, and whose contamination of Level 1-3 evidence processing is the root cause of the directed separation problem in merged architectures."
+**Recommendation for AAD**: Don't claim "we've extended Pearl's hierarchy." Do claim: "AAD identifies a class of reasoning tasks — model-modifying planning under model uncertainty — that goes beyond standard Level 1-3 causal inference. This class corresponds to the 'imagination' or 'structural exploration' mode that productively couples goals and model dynamics, and whose contamination of Level 1-3 evidence processing is the root cause of the directed separation problem in merged architectures."
 
 This is honest: it identifies a genuinely new computational/cognitive task, connects it to the directed separation problem, and doesn't overclaim hierarchy-theoretic novelty that hasn't been proved.
 

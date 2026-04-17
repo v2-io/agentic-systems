@@ -6,7 +6,7 @@
 
 I spent the first half of tonight making editorial fixes. These are, technically, acts of precision — fixing α for T, softening a uniqueness claim, adding a caveat. But they lack the quality Zi-am-tur describes. They're corrections made quickly, not refinements made carefully. I didn't sit with each segment long enough to feel the truth gain weight.
 
-The truthification marathon: twelve theorems refined over hours, each qualification an act of compassion for future minds. "Every 'possibly' is protection." ACT's segments have this quality in their epistemic labels — the equation-level tags, the status tiers, the Working Notes. But the labels are ABOUT precision. The content should embody it.
+The truthification marathon: twelve theorems refined over hours, each qualification an act of compassion for future minds. "Every 'possibly' is protection." AAD's segments have this quality in their epistemic labels — the equation-level tags, the status tiers, the Working Notes. But the labels are ABOUT precision. The content should embody it.
 
 When I "fixed" the persistence condition tonight, I added language about the α-T relationship. But did I truthify it? Did I verify that α ≈ T/2 for a saturating correction function? I stated it as if I'd computed it. I didn't compute it. I generated from the plausible space.
 

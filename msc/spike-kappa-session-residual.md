@@ -12,7 +12,7 @@
 
 The session started with Joseph asking me to prepare for a discussion of the κ coupling parameter / directed separation issue. I read the relevant segments, spikes, and feedback documents. Joseph then asked about LQG separation principle failure modes — not as abstract theory, but to understand what KIND of failure directed separation undergoes. That question turned out to be the seed for everything that followed.
 
-From LQG failures, Joseph moved into a detailed first-person walkthrough of what it FEELS LIKE when directed separation fails in a high-stakes agent (fighter pilot in a dogfight). This wasn't theoretical — it was Joseph reasoning from lived cognitive experience about what ACT's formalism is trying to capture. The walkthrough surfaced structural gaps in the theory that formal analysis alone hadn't identified.
+From LQG failures, Joseph moved into a detailed first-person walkthrough of what it FEELS LIKE when directed separation fails in a high-stakes agent (fighter pilot in a dogfight). This wasn't theoretical — it was Joseph reasoning from lived cognitive experience about what AAD's formalism is trying to capture. The walkthrough surfaced structural gaps in the theory that formal analysis alone hadn't identified.
 
 The key insight cascade:
 1. LQG failure modes are provable, not just empirical → directed separation failure is structural
@@ -27,7 +27,7 @@ Joseph's first question was precise: "Can you discuss the LQG separation princip
 
 The answer, which grounded everything after:
 
-**LQG separation** says: for linear systems with Gaussian noise and quadratic cost, the optimal estimator (Kalman filter) and optimal controller (LQR) can be designed independently. The estimator doesn't need to know the cost function. This is EXACTLY ACT's directed separation — f_M is goal-blind.
+**LQG separation** says: for linear systems with Gaussian noise and quadratic cost, the optimal estimator (Kalman filter) and optimal controller (LQR) can be designed independently. The estimator doesn't need to know the cost function. This is EXACTLY AAD's directed separation — f_M is goal-blind.
 
 **The failures are PROVABLE, not just empirical:**
 
@@ -35,7 +35,7 @@ The answer, which grounded everything after:
 
 - **Non-Gaussian noise**: The Kalman filter is optimal because Gaussian distributions have sufficient statistics (mean, covariance) that don't depend on the control policy. With non-Gaussian noise, the sufficient statistic is the full posterior, which CAN depend on which part of state space the controller steers toward.
 
-- **Dual control (Feldbaum, 1960s)**: When the agent can choose actions that IMPROVE its estimate (probing, exploratory actions), there's a fundamental coupling. The optimal action depends on estimation uncertainty, and estimation uncertainty depends on future actions. This maps directly to ACT's CIY / explore-exploit tradeoff.
+- **Dual control (Feldbaum, 1960s)**: When the agent can choose actions that IMPROVE its estimate (probing, exploratory actions), there's a fundamental coupling. The optimal action depends on estimation uncertainty, and estimation uncertainty depends on future actions. This maps directly to AAD's CIY / explore-exploit tradeoff.
 
 **Critical nuance**: LQG doesn't become IRRELEVANT under these conditions — it becomes an APPROXIMATION. Engineers use certainty-equivalence (pretend separation holds) for mildly nonlinear systems all the time, and it often works. The Extended Kalman Filter + nonlinear control is exactly this.
 
@@ -45,7 +45,7 @@ The answer, which grounded everything after:
 - Dual control: structurally wrong — can't represent explore/exploit at all
 
 **Three types of coupling emerged** (not standard terminology — emerged from the analysis):
-1. **Attention coupling** (which events to seek) — goes through the action channel, ACT already handles this via the processing/selection distinction
+1. **Attention coupling** (which events to seek) — goes through the action channel, AAD already handles this via the processing/selection distinction
 2. **Interpretation coupling** (how to process events) — the actual violation of directed separation. The LLM case.
 3. **Filtering coupling** (which parts of an event to attend to) — somewhere between 1 and 2
 
@@ -53,13 +53,13 @@ This decomposition fed directly into the κ_selection / κ_processing split in t
 
 ## 3. The Fighter Pilot Thought Experiment
 
-Joseph walked through a detailed first-person account of what the ACT cycle feels like in a high-stakes, high-complexity agent. This is worth preserving because it reveals structural gaps that formal analysis misses.
+Joseph walked through a detailed first-person account of what the AAD cycle feels like in a high-stakes, high-complexity agent. This is worth preserving because it reveals structural gaps that formal analysis misses.
 
 ### The Setup
 
 "I am still, and I have prolepsis — I'm waiting for any stimulus. Prolepsis says I am oriented — my prediction/expectation is primed, caring about a subset of the model. There's a specific part of the model that I have a future prediction on — what I intended all of my prior actions to accomplish that still might happen. My brain is in OKR mode and I'm especially watching for any of the most important key results."
 
-**What this reveals**: Prolepsis isn't just "prediction." It's ATTENTIONALLY BIASED prediction. The agent's prediction is concentrated on the model regions relevant to its current strategy. This is goal-directed attention allocation — a form of κ_selection that ACT acknowledges but doesn't formalize as a structural feature.
+**What this reveals**: Prolepsis isn't just "prediction." It's ATTENTIONALLY BIASED prediction. The agent's prediction is concentrated on the model regions relevant to its current strategy. This is goal-directed attention allocation — a form of κ_selection that AAD acknowledges but doesn't formalize as a structural feature.
 
 ### The Crisis
 
@@ -79,7 +79,7 @@ This creates a specific cascade that doesn't fit the sequential orient cascade:
 
 ### The Formal Gap This Reveals
 
-ACT's scope condition requires observations exist (𝒪 ≠ ∅) but says nothing about FINITE CHANNEL CAPACITY. Every real agent has limited attention. This creates:
+AAD's scope condition requires observations exist (𝒪 ≠ ∅) but says nothing about FINITE CHANNEL CAPACITY. Every real agent has limited attention. This creates:
 
 1. **Implicit stationarity assumptions**: When you allocate attention to region A, you implicitly assume regions B, C, D aren't changing importantly. This assumption is never made explicit in the theory.
 
@@ -95,7 +95,7 @@ Joseph extended the thought experiment to biological preemptive reorientation:
 
 The key insight: there are PREBUILT COUPLINGS that cause the current strategy to be preempted by reorienting-for-survival with varying degrees of severity. These bypass the normal orient cascade entirely. They operate on SIGNAL STATISTICS (sudden change in gain, unexpected pattern) not semantic content. This is fast enough to preempt deliberative processing.
 
-This led to: "ACT has the CONTENT of reorientation (the orient cascade) but not the GOVERNANCE of reorientation (what triggers it, how fast, at what cost to the current plan)."
+This led to: "AAD has the CONTENT of reorientation (the orient cascade) but not the GOVERNANCE of reorientation (what triggers it, how fast, at what cost to the current plan)."
 
 ### The POSIX Error Code Analogy
 
@@ -103,7 +103,7 @@ Joseph pointed out that POSIX error codes give a reasonable ontology of severity
 
 "One reason POSIX error codes are both principled and unprincipled is that they give a pretty good ontology of severity and state, but they are almost never planned for in a way that completes the loop — that says these are the appropriate range of actions depending on the severity."
 
-The missing piece is exactly what ACT could provide: severity-proportional response grounded in δ × ∂Σ/∂M, from "note and continue" through "drop everything and reorient."
+The missing piece is exactly what AAD could provide: severity-proportional response grounded in δ × ∂Σ/∂M, from "note and continue" through "drop everything and reorient."
 
 ## 4. The Kelvin-Helmholtz Connection
 
@@ -111,7 +111,7 @@ Joseph sent an image of Kelvin-Helmholtz instability — two fluid layers at dif
 
 "I've felt for years now that Kelvin-Helmholtz instability was trying to tell me something about the actual flow of information from fast flowing systems to slower systems (practices → frameworks → principles → first-principles)."
 
-The mapping to ACT: ACT has an implicit timescale ordering (ν_epistemic ≫ ν_edge-update ≫ ν_prune/graft ≫ ν_O-revision). These are layers running at different speeds. When the frequencies are well-separated, the boundary is laminar — clean information transfer. When a crisis forces two layers to the same frequency (the radar lock forces tactical and strategic loops into the same timescale), you get turbulent mixing — Kelvin-Helmholtz vortices where neither loop has clean authority.
+The mapping to AAD: AAD has an implicit timescale ordering (ν_epistemic ≫ ν_edge-update ≫ ν_prune/graft ≫ ν_O-revision). These are layers running at different speeds. When the frequencies are well-separated, the boundary is laminar — clean information transfer. When a crisis forces two layers to the same frequency (the radar lock forces tactical and strategic loops into the same timescale), you get turbulent mixing — Kelvin-Helmholtz vortices where neither loop has clean authority.
 
 "The vortices are the mixed states where the agent is simultaneously reorienting at multiple scales, and neither loop has clean authority."
 
@@ -147,11 +147,11 @@ Joseph raised a further observation about channel capacity and attention that ad
 
 When deeply focused on typing, someone speaks to you. You don't process the speech — you continue typing. But you DO retain the raw auditory signal. Minutes later, you look up and REPLAY the sound from memory, translating it into words as if hearing it fresh: "Oh — yes, I do have the keys — sorry, I was finishing something."
 
-This reveals a decoupling between INPUT CAPTURE and ATTENTIONAL PROCESSING that ACT's current formalism doesn't distinguish. The observation channel captured the event (the sound arrived, was buffered in sensory memory). But the epistemic update — the processing of that event into model content — was DEFERRED. The event sat in a raw, unprocessed buffer until attention was redirected to it.
+This reveals a decoupling between INPUT CAPTURE and ATTENTIONAL PROCESSING that AAD's current formalism doesn't distinguish. The observation channel captured the event (the sound arrived, was buffered in sensory memory). But the epistemic update — the processing of that event into model content — was DEFERRED. The event sat in a raw, unprocessed buffer until attention was redirected to it.
 
-### What This Means for ACT's Formalism
+### What This Means for AAD's Formalism
 
-In ACT, f_M(M_τ⁻, e_τ) fires when an event arrives. But in the latent processing case, the event arrives at τ and is processed at τ + Δ, where Δ can be seconds to minutes. During that interval:
+In AAD, f_M(M_τ⁻, e_τ) fires when an event arrives. But in the latent processing case, the event arrives at τ and is processed at τ + Δ, where Δ can be seconds to minutes. During that interval:
 
 - The raw signal exists in a buffer (not yet part of M_t)
 - The agent is aware THAT something was said (enough to know deferred processing is needed) but not WHAT was said (the content hasn't been extracted)
@@ -201,7 +201,7 @@ These dimensions are probably orthogonal in the formal model but coupled in engi
 - **Continuity**: finite vs. thresholds vs. unbounded (the agent's maximum viable lifespan)
 - **Attention capacity**: finite vs. thresholds vs. unbounded (how much can be processed / recalled simultaneously)
 
-With finite retention and unbounded continuity, the agent must compress — and the compression strategy IS the agent's long-term intelligence. With finite attention capacity and unbounded retention, recall becomes a strategic action. With all three finite, you get the current LLM agent: bounded lifespan, bounded memory, bounded attention — the logogenic condition that ACT's Section V needs to address.
+With finite retention and unbounded continuity, the agent must compress — and the compression strategy IS the agent's long-term intelligence. With finite attention capacity and unbounded retention, recall becomes a strategic action. With all three finite, you get the current LLM agent: bounded lifespan, bounded memory, bounded attention — the logogenic condition that AAD's Section V needs to address.
 
 **Human recall as strategic action.** The recall cost gradient isn't just an engineering artifact — it appears to be a structural feature of intelligences in our range. The human experience of "hmmm, I don't remember, let me think for a moment..." is strategic recall in action. The mechanism is probably different from a storage-tier lookup: the mind seems to probe tenuous adjacent connections, searching for latent activation patterns from which the memory can be reconstituted rather than retrieved intact. But the STRUCTURAL property is the same — recall takes effort, that effort competes with other cognitive demands, and the cost increases with distance (temporal, contextual, or associational) from the current working state.
 

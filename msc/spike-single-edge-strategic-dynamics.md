@@ -28,7 +28,7 @@ $$\hat{p}_{\text{new}} = \frac{\alpha_c + y}{n + 1}$$
 
 ---
 
-## 2. Mapping to ACT Quantities
+## 2. Mapping to AAD Quantities
 
 The sector-condition framework (#sector-condition-derivation) requires:
 
@@ -76,7 +76,7 @@ $$\mathbb{E}[\Delta \hat{p} \mid \theta, \hat{p}] = \frac{1}{n+1}(\theta - \hat{
 
 The expected update always points toward the truth: positive when $\hat{p} < \theta$, negative when $\hat{p} > \theta$, zero when $\hat{p} = \theta$.
 
-**Identifying $F$.** The mismatch dynamics in ACT are $d\delta/dt = -F(\mathcal{T}, \delta) + w(t)$. In the discrete single-edge case, with one observation per time step and no disturbance (stationary $\theta$):
+**Identifying $F$.** The mismatch dynamics in AAD are $d\delta/dt = -F(\mathcal{T}, \delta) + w(t)$. In the discrete single-edge case, with one observation per time step and no disturbance (stationary $\theta$):
 
 $$\mathbb{E}[\delta_{\Sigma,t+1} - \delta_{\Sigma,t}] = \mathbb{E}[\Delta \hat{p}] = -\frac{1}{n+1}\delta_\Sigma$$
 
@@ -218,7 +218,7 @@ When mismatch exceeds this threshold, the expected Lyapunov derivative is negati
 
 The sector condition holds in the deterministic-equivalent sense: the expected correction satisfies $\alpha_\Sigma = 1/(n+1)$. The stochastic residual introduces an effective noise floor at $|\delta_\Sigma|^* = \sqrt{\theta(1-\theta)/(2n+1)}$.
 
-To map this cleanly to the ACT framework, we decompose:
+To map this cleanly to the AAD framework, we decompose:
 
 *[Formulation (stochastic sector decomposition)]*
 
@@ -328,13 +328,13 @@ $$(1 - \lambda) > \frac{\rho_\Sigma}{R_\Sigma} \quad \iff \quad \lambda < 1 - \f
 
 **Interpretation.** The forgetting rate $(1 - \lambda)$ must exceed the disturbance-to-reserve ratio. More forgetting means faster tracking but noisier estimates; less forgetting means stable estimates but slower tracking. The optimal $\lambda$ balances these — this is the bias-variance tradeoff for a non-stationary single-edge strategy.
 
-**Connection to ACT.** This is the strategic analog of the gain-reset mechanism described in #update-gain: "An agent whose gain does NOT reset after structural change will continue trusting a stale model." In the single-edge case, continuous discounting replaces discrete reset, but the principle is the same — the agent must maintain sufficient update capacity to track a changing environment.
+**Connection to AAD.** This is the strategic analog of the gain-reset mechanism described in #update-gain: "An agent whose gain does NOT reset after structural change will continue trusting a stale model." In the single-edge case, continuous discounting replaces discrete reset, but the principle is the same — the agent must maintain sufficient update capacity to track a changing environment.
 
 ---
 
 ## 6. Summary of Results
 
-| Quantity | ACT (epistemic, general) | Single-edge strategic analog |
+| Quantity | AAD (epistemic, general) | Single-edge strategic analog |
 |----------|-------------------------|------------------------------|
 | Mismatch $\delta$ | $M_t$ predictions $-$ reality | $\hat{p} - \theta$ (credence $-$ truth) |
 | Correction $F$ | Sector-bounded, general | $\eta_{\text{edge}} \cdot \delta_\Sigma$ (linear, exact) |

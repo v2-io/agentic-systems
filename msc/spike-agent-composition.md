@@ -1,10 +1,10 @@
 # Spike: Agent Composition and the Holon Principle
 
-**Status**: Exploratory spike — pushing on whether ACT's framework *requires* compositional consistency across agent boundaries, and what that consistency requirement looks like formally.
+**Status**: Exploratory spike — pushing on whether AAD's framework *requires* compositional consistency across agent boundaries, and what that consistency requirement looks like formally.
 
 **Date**: 2026-03-10
 
-**The driving intuition**: Almost every agentic system of interest can be studied at multiple boundary levels. A development team is an agent (from the stakeholder's view) composed of agent-developers. A military division is an agent composed of agent-battalions composed of agent-companies. A company is an agent in a market composed of agent-departments. If ACT applies at every level — and the scope condition (#050) doesn't restrict which level — then the theory must give *consistent* answers regardless of where we draw the boundary. This consistency requirement may not be optional. It may be a mathematical imperative: you cannot cleanly define an agent of interest without this property holding.
+**The driving intuition**: Almost every agentic system of interest can be studied at multiple boundary levels. A development team is an agent (from the stakeholder's view) composed of agent-developers. A military division is an agent composed of agent-battalions composed of agent-companies. A company is an agent in a market composed of agent-departments. If AAD applies at every level — and the scope condition (#050) doesn't restrict which level — then the theory must give *consistent* answers regardless of where we draw the boundary. This consistency requirement may not be optional. It may be a mathematical imperative: you cannot cleanly define an agent of interest without this property holding.
 
 **What this spike explores**:
 1. Why composition consistency is a requirement, not a feature
@@ -19,7 +19,7 @@
 
 ### 1.1 Boundary arbitrariness
 
-ACT's scope condition (#050) says the theory applies where:
+AAD's scope condition (#050) says the theory applies where:
 - Observations exist
 - The agent has at least binary choice (|A| ≥ 2)
 - Residual uncertainty persists: H(Ω_t | C_t) > 0
@@ -46,7 +46,7 @@ The environment is the market, users, infrastructure.
 - Σ_t^C = the department's technical strategy
 - Scope condition satisfied? Yes.
 
-ACT claims to apply at all three levels. If it does, the predictions at each level must be *compatible*:
+AAD claims to apply at all three levels. If it does, the predictions at each level must be *compatible*:
 
 - The team's tempo T^B must relate to the individuals' tempos T^A_i through some composition law
 - The team's persistence condition must be derivable from individual persistence conditions plus their coordination structure
@@ -54,19 +54,19 @@ ACT claims to apply at all three levels. If it does, the predictions at each lev
 
 ### 1.2 Why this is a requirement, not a feature
 
-If the predictions are NOT compatible, ACT has a genuine problem:
+If the predictions are NOT compatible, AAD has a genuine problem:
 
-**Scenario**: ACT predicts the team (boundary B) will persist because T^B > ρ/δ_critical. But when we analyze the individuals (boundary A), we find each A_i has T^A_i < ρ_i/δ_critical_i — each individual is below their persistence threshold. Is the team persisting or not?
+**Scenario**: AAD predicts the team (boundary B) will persist because T^B > ρ/δ_critical. But when we analyze the individuals (boundary A), we find each A_i has T^A_i < ρ_i/δ_critical_i — each individual is below their persistence threshold. Is the team persisting or not?
 
 If the theory gives contradictory answers at different boundaries, the theory is *inconsistent*. The boundary choice is a modeling decision, not a physical fact — the same physical system is being described. Consistency requires that the predictions at different levels are compatible (not necessarily identical — different levels see different quantities — but non-contradictory).
 
-This is analogous to the requirement in physics that laws be consistent across scales. The renormalization group in statistical mechanics formalizes exactly this: the requirement that the same physics holds at different scales constrains the form of the theory. Our composition principle is ACT's version of this constraint.
+This is analogous to the requirement in physics that laws be consistent across scales. The renormalization group in statistical mechanics formalizes exactly this: the requirement that the same physics holds at different scales constrains the form of the theory. Our composition principle is AAD's version of this constraint.
 
 ### 1.3 The imperative, stated precisely
 
 *[Hypothesis — structural argument, not yet a theorem]*
 
-**Claim**: For ACT to be internally consistent, the following must hold:
+**Claim**: For AAD to be internally consistent, the following must hold:
 
 For any system S satisfying the scope condition (#050), and any decomposition of S into subsystems ${S_1, ..., S_n}$ where each $S_i$ also satisfies the scope condition:
 
@@ -109,7 +109,7 @@ where $M_t^c$ and $G_t^c$ are defined by the degree of internal unity (§3 below
 - A jointly optimized policy: $\pi^c(M_t, G_t) = (\pi^{(1)}, \ldots, \pi^{(n)})$ where the individual policies are computed jointly
 - Instantaneous, lossless internal communication
 
-Then $A_c$ is trivially a single agent. Its state is $X_t^c = (M_t, G_t)$ and all of ACT applies directly. The "multiple agents" are just effectors and sensors of a single cognitive entity.
+Then $A_c$ is trivially a single agent. Its state is $X_t^c = (M_t, G_t)$ and all of AAD applies directly. The "multiple agents" are just effectors and sensors of a single cognitive entity.
 
 This is the limiting case. It describes, roughly:
 - A single brain controlling multiple limbs
@@ -296,7 +296,7 @@ Clausewitz identified three fundamental gaps in warfare (as systematized by Bung
 
 These map precisely to our four unity dimensions:
 
-| Clausewitz Gap | ACT Unity Dimension | Formal Quantity |
+| Clausewitz Gap | AAD Unity Dimension | Formal Quantity |
 |---|---|---|
 | Knowledge gap | Epistemic unity ($U_M$) | $1 - U_M$: fraction of model not shared |
 | Alignment gap | Teleological unity ($U_O$) | $1 - U_O$: objective misalignment |
@@ -304,7 +304,7 @@ These map precisely to our four unity dimensions:
 
 **Bungay's Auftragstaktik solution**: Accept the knowledge gap (don't try for full epistemic unity — it's too expensive). Minimize the alignment gap (invest heavily in shared intent — teleological unity). Allow the effects gap to be managed locally (grant strategic autonomy — accept imperfect strategic unity in exchange for adaptability).
 
-In ACT terms: Auftragstaktik optimizes for *teleological unity* while accepting lower epistemic and strategic unity. The IB-compressed shared intent (#410) IS the mechanism: communicate enough of O_t to align objectives, not so much that you constrain local adaptation of Σ_t.
+In AAD terms: Auftragstaktik optimizes for *teleological unity* while accepting lower epistemic and strategic unity. The IB-compressed shared intent (#410) IS the mechanism: communicate enough of O_t to align objectives, not so much that you constrain local adaptation of Σ_t.
 
 **The formal Auftragstaktik principle** (proposed):
 
@@ -329,13 +329,13 @@ Koestler (1967) introduced "holon" for entities that are simultaneously wholes a
 
 *[Definition (holon)]*
 
-An **agent holon** (or simply **holon**) $H$ is an agent satisfying ACT's scope condition (#050) such that:
+An **agent holon** (or simply **holon**) $H$ is an agent satisfying AAD's scope condition (#050) such that:
 
 1. **Whole**: $H$ can be described as a single agent with state $X_t^H = (M_t^H, G_t^H)$, observations $o_t^H$, and actions $a_t^H$, interacting with an external environment $\Omega^{\text{ext}}$.
 
 2. **Parts**: $H$ can be decomposed into sub-agents $\{A_1, \ldots, A_n\}$ where each $A_i$ satisfies the scope condition with respect to an environment that includes other sub-agents and the external environment: $\Omega^{(i)} = \Omega^{\text{ext}} \cup \{A_j : j \neq i\}$
 
-3. **Composition consistency**: The dynamics of $X_t^H$ (as predicted by ACT at the holon level) are compatible with the aggregate dynamics of $\{X_t^{(i)}\}$ (as predicted by ACT at the sub-agent level plus inter-agent dynamics).
+3. **Composition consistency**: The dynamics of $X_t^H$ (as predicted by AAD at the holon level) are compatible with the aggregate dynamics of $\{X_t^{(i)}\}$ (as predicted by AAD at the sub-agent level plus inter-agent dynamics).
 
 4. **Recursive applicability**: Each sub-agent $A_i$ may itself be a holon, decomposable into further sub-agents, with the same consistency requirement at every level.
 
@@ -343,7 +343,7 @@ Property 3 is the load-bearing one. "Compatible" means: the holon- level quantit
 
 ### 5.1 What the holon definition buys us
 
-**Theoretical economy**: ACT's machinery (Sections I and II) is developed ONCE, for a single agent. The holon principle says it applies at every level of composition. Section III (multi-agent) becomes: "Here are the composition conditions and the analysis of what happens when composition is imperfect." The core theory doesn't need to be re-derived for teams, organizations, or ecosystems.
+**Theoretical economy**: AAD's machinery (Sections I and II) is developed ONCE, for a single agent. The holon principle says it applies at every level of composition. Section III (multi-agent) becomes: "Here are the composition conditions and the analysis of what happens when composition is imperfect." The core theory doesn't need to be re-derived for teams, organizations, or ecosystems.
 
 **Principled boundary drawing**: Instead of "where should we draw the agent boundary?", the answer is: "anywhere you like — the theory is consistent across boundaries." The choice of boundary is a modeling convenience (what questions are you asking?), not a theoretical commitment.
 
@@ -357,11 +357,11 @@ The theory connects the two: the exogenic quantities are DERIVED from the endoge
 
 General systems theory (von Bertalanffy, Ashby, etc.) asserts that systems have hierarchical structure and emergent properties. This is true but vague — it doesn't tell you how to compute anything.
 
-ACT's holon principle is specific: it provides *composition laws* for definite quantities (tempo, persistence, mismatch, gain). It makes testable predictions: "a team with these individual tempos and this coordination structure will have this composite tempo and will persist / not persist against this rate of change." The composition laws are the formal content that generic systems theory lacks.
+AAD's holon principle is specific: it provides *composition laws* for definite quantities (tempo, persistence, mismatch, gain). It makes testable predictions: "a team with these individual tempos and this coordination structure will have this composite tempo and will persist / not persist against this rate of change." The composition laws are the formal content that generic systems theory lacks.
 
 ---
 
-## 6. Implications for ACT's Structure
+## 6. Implications for AAD's Structure
 
 ### 6.1 Section III reconceived
 
@@ -406,7 +406,7 @@ This would mean the composition principle is a *foundational* claim, not a multi
 
 ### Forced (by consistency requirement)
 
-- Composition laws MUST EXIST. If ACT applies at multiple levels and the scope condition doesn't restrict level, then the predictions must be compatible. This is not optional.
+- Composition laws MUST EXIST. If AAD applies at multiple levels and the scope condition doesn't restrict level, then the predictions must be compatible. This is not optional.
 
 - Tempo must compose ADDITIVELY (or nearly so) for independent channels. This follows from tempo being an information rate — mutual information rates from independent sources add. (More precisely, they add when the sources provide information about different aspects of the environment. When they overlap, diminishing returns apply.)
 
@@ -435,7 +435,7 @@ This would mean the composition principle is a *foundational* claim, not a multi
 
 5. **How does this interact with directed separation?** If the composite's observation function is goal-dependent (because communication routing depends on G_t), the composite violates directed separation even if each sub-agent satisfies it individually. This is an important scope restriction.
 
-6. **Infinite regress?** If every agent is a holon, and every holon is composed of sub-agents that are holons... where does it bottom out? Presumably at atomic agents — agents that satisfy the scope condition but cannot be meaningfully decomposed further. These are agents whose "inner" dynamics are not usefully described by ACT (neurons, transistors, irreducible mechanisms). The scope condition provides the floor: below the level where observations, actions, and uncertainty exist, ACT doesn't apply.
+6. **Infinite regress?** If every agent is a holon, and every holon is composed of sub-agents that are holons... where does it bottom out? Presumably at atomic agents — agents that satisfy the scope condition but cannot be meaningfully decomposed further. These are agents whose "inner" dynamics are not usefully described by AAD (neurons, transistors, irreducible mechanisms). The scope condition provides the floor: below the level where observations, actions, and uncertainty exist, AAD doesn't apply.
 
 ---
 
@@ -493,7 +493,7 @@ Composition laws should be proved for 2 agents (and 3 where pairwise interaction
 
 ### 9.4 The "trivial" composition case needs fixing
 
-§2.2 currently requires "instantaneous, lossless internal communication" for the trivial case. This is wrong — it smuggles in a physically impossible idealization. The actual trivial case is: if a composite already satisfies the scope condition as a whole, ACT applies to it as one, *regardless of internal mechanism*. The internal communication quality affects the composite's effective quantities (tempo, gain), not whether it counts as an agent.
+§2.2 currently requires "instantaneous, lossless internal communication" for the trivial case. This is wrong — it smuggles in a physically impossible idealization. The actual trivial case is: if a composite already satisfies the scope condition as a whole, AAD applies to it as one, *regardless of internal mechanism*. The internal communication quality affects the composite's effective quantities (tempo, gain), not whether it counts as an agent.
 
 A Rube Goldberg machine that satisfies the scope condition is an agent. A team communicating via carrier pigeon is an agent. Their internals affect their fitness, not their status.
 
@@ -515,7 +515,7 @@ This applies per-dimension of the objective space. Most real organizations have 
 ## 10. Status Assessment
 
 **What's promising here:**
-- The consistency argument (§1) is strong. If ACT claims level- independence, composition laws ARE required, not optional.
+- The consistency argument (§1) is strong. If AAD claims level- independence, composition laws ARE required, not optional.
 - The tempo composition (§2.3) seems straightforwardly derivable from information theory — information rates from independent sources add.
 - The Clausewitz mapping (§4) provides grounding in 200+ years of organizational experience and gives the unity dimensions empirical content.
 - The Auftragstaktik principle as IB-optimal communication is a testable prediction.
@@ -529,10 +529,10 @@ This applies per-dimension of the objective space. Most real organizations have 
 - The infinite regress question (§7, item 6) needs the "atomic agent" concept to be made precise.
 
 **What's genuinely novel:**
-- The consistency argument: that composition isn't a feature of ACT but a *requirement* for its coherence.
+- The consistency argument: that composition isn't a feature of AAD but a *requirement* for its coherence.
 - The formal holon definition with the composition consistency property.
 - The four unity dimensions as independent axes with Clausewitz grounding.
 - The Auftragstaktik principle as IB optimization.
 - Team persistence as a corollary of composition + persistence condition.
 
-**Epistemic status of this spike**: The structural argument (ACT requires composition consistency) is strong — Hypothesis verging on Derived. The specific composition laws are Sketch. The unity metrics are Discussion-grade. The Clausewitz/Auftragstaktik formalization is Hypothesis.
+**Epistemic status of this spike**: The structural argument (AAD requires composition consistency) is strong — Hypothesis verging on Derived. The specific composition laws are Sketch. The unity metrics are Discussion-grade. The Clausewitz/Auftragstaktik formalization is Hypothesis.

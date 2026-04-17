@@ -187,9 +187,9 @@ Once we're in DAG territory, what representations are mathematically interchange
 
 The correct claim is narrower: within the class of DAGs, multiple DAGs can encode the same conditional independence relations (forming a Markov equivalence class, identified by a CPDAG). And for a given factorized distribution, DAG and factor-graph representations can compute the same marginals. But causal semantics (do-calculus) are DAG-specific and do not transfer to undirected or mixed representations without additional structure.
 
-**What this means for ACT**: Once we've established that Σ_t must be a directed graphical model with the Markov property (from P1-P4), we can say:
+**What this means for AAD**: Once we've established that Σ_t must be a directed graphical model with the Markov property (from P1-P4), we can say:
 
-"The graphical structure of the strategy representation is forced by the axioms. The specific graphical notation (Bayesian network, factor graph, influence diagram, etc.) is a presentational choice — all are mathematically equivalent. ACT uses the DAG with AND/OR nodes because: (a) AND/OR is the most parsimonious complete basis for binary outcomes, (b) the DAG notation naturally supports causal/interventional reasoning (Pearl's do-calculus), and (c) it converged across three independent formalism attempts, suggesting it's the most natural fit for strategic planning."
+"The graphical structure of the strategy representation is forced by the axioms. The specific graphical notation (Bayesian network, factor graph, influence diagram, etc.) is a presentational choice — all are mathematically equivalent. AAD uses the DAG with AND/OR nodes because: (a) AND/OR is the most parsimonious complete basis for binary outcomes, (b) the DAG notation naturally supports causal/interventional reasoning (Pearl's do-calculus), and (c) it converged across three independent formalism attempts, suggesting it's the most natural fit for strategic planning."
 
 ---
 
@@ -233,13 +233,13 @@ This is analogous to: probability is forced by Cox's axioms, but the specific pr
 
 ---
 
-## What This Means for ACT
+## What This Means for AAD
 
 1. **The DAG is not a design choice.** Section II can state: "Any strategy representation satisfying temporal ordering, probabilistic uncertainty, state-local revisability, and observable intermediates is representable as a directed acyclic graph with the Markov property. This is a theorem, not a formulation."
 
 2. **Acyclicity is derived, not assumed.** Remove "DAG acyclicity is an assumption, not forced" from the known fragilities list. Replace with: "Acyclicity of Σ_t follows from temporal ordering over a finite planning horizon."
 
-3. **Equivalent representations are acknowledged.** "The specific graphical notation (Bayesian network, factor graph, influence diagram) is a presentational choice. ACT uses DAG + AND/OR for parsimony and causal reasoning compatibility."
+3. **Equivalent representations are acknowledged.** "The specific graphical notation (Bayesian network, factor graph, influence diagram) is a presentational choice. AAD uses DAG + AND/OR for parsimony and causal reasoning compatibility."
 
 4. **The AND/OR restriction is honestly labeled.** It's a parsimony- motivated formulation for binary outcomes, not a derived necessity for all domains. For continuous or multi-valued outcomes, richer parameterizations within the forced graphical structure are needed.
 
@@ -256,7 +256,7 @@ The goal of this spike is to **narrow the formulation-choice space**, not (yet) 
 ## Open Questions
 
 1. Can the P3 → Markov condition argument be made fully rigorous?
-   The proof sketch above relies on "correct local updates require conditional independence." This is standard in the graphical models literature (Lauritzen 1996, Koller & Friedman 2009) but connecting it to ACT's specific axioms requires spelling out the full argument.
+   The proof sketch above relies on "correct local updates require conditional independence." This is standard in the graphical models literature (Lauritzen 1996, Koller & Friedman 2009) but connecting it to AAD's specific axioms requires spelling out the full argument.
 
 2. Is there a parsimony theorem for AND/OR specifically? Something like: "Among all O(k)-parameter CPT parameterizations for binary nodes, AND/OR (noisy-AND + noisy-OR) is the unique pair that forms a complete basis." I suspect this is true but haven't verified it.
 

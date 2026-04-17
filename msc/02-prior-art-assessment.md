@@ -1,6 +1,6 @@
 # Prior Art Assessment
 
-**Date**: March 2026 **Status**: First read assessment. These are initial reactions, not definitive positioning. Each entry may need re-reading as ACT develops.
+**Date**: March 2026 **Status**: First read assessment. These are initial reactions, not definitive positioning. Each entry may need re-reading as AAD develops.
 
 ---
 
@@ -38,7 +38,7 @@ They propose an **Information Digital Twin (IDT)** — a sidecar process that mo
 
 - **No treatment of goals or intent.** P measures how tightly the agent-environment coupling works, not what the agent is trying to achieve. The same P value could describe an agent perfectly pursuing the wrong goal or imperfectly pursuing the right one. The goal/intent gap we identified in TFT is equally present here — arguably more so, since they don't even have TFT's black-box value function.
 
-- **No dynamics.** P is a *diagnostic metric*, not a dynamical theory. It measures coupling efficiency at a point in time but doesn't describe how that coupling evolves, what drives it, or what happens when it degrades. ACT/TFT describes the dynamics; Hafez measures the temperature.
+- **No dynamics.** P is a *diagnostic metric*, not a dynamical theory. It measures coupling efficiency at a point in time but doesn't describe how that coupling evolves, what drives it, or what happens when it degrades. AAD/TFT describes the dynamics; Hafez measures the temperature.
 
 - **No adversarial treatment.** No multi-agent coupling, no adversarial tempo advantage, no effects spiral. Their framework is single-agent-environment.
 
@@ -48,9 +48,9 @@ They propose an **Information Digital Twin (IDT)** — a sidecar process that mo
 
 - **No multi-agent dynamics.** No treatment of teams, communication, trust, shared intent, or adversarial coupling.
 
-### Relationship to ACT
+### Relationship to AAD
 
-**Complementary, not competing.** They provide a diagnostic metric (P) that could be used to *measure* quantities that ACT's dynamics *predict*. Specifically:
+**Complementary, not competing.** They provide a diagnostic metric (P) that could be used to *measure* quantities that AAD's dynamics *predict*. Specifically:
 
 - Their P might be expressible in terms of TFT quantities. A rough mapping:
   high T (tempo) should correlate with high P (good coupling). Low η* (poor gain) should manifest as high H_f (agent's predictions are poor). The relationship isn't exact — P is a ratio while T is a rate — but the structural correspondence is suggestive.
@@ -59,9 +59,9 @@ They propose an **Information Digital Twin (IDT)** — a sidecar process that mo
 
 - Their agency/intelligence distinction maps loosely: their "agency" ≈ TFT's scope condition (TF-01); their "intelligence" ≈ TFT's full machinery (learning = TF-06, self-monitoring ≈ meta-model, adaptation ≈ TF-10).
 
-- Their IDT concept (monitoring P as a sidecar) could be a practical instantiation of what ACT would call "coupling health monitoring" — a meta-observation about the quality of the agent-environment interaction.
+- Their IDT concept (monitoring P as a sidecar) could be a practical instantiation of what AAD would call "coupling health monitoring" — a meta-observation about the quality of the agent-environment interaction.
 
-**Positioning**: ACT should cite Hafez as a complementary information-theoretic diagnostic, note that P could potentially be derived from or mapped to ACT quantities, and point out that their framework shares the goal/intent gap: measuring coupling quality without asking what the coupling is *for*.
+**Positioning**: AAD should cite Hafez as a complementary information-theoretic diagnostic, note that P could potentially be derived from or mapped to AAD quantities, and point out that their framework shares the goal/intent gap: measuring coupling quality without asking what the coupling is *for*.
 
 ---
 
@@ -107,34 +107,34 @@ Each condition exists on a spectrum:
 
 - **Pearl's hierarchy is used but not developed.** They place it in the outcome model spectrum but don't build on it the way TF-02 does.
 
-### Relationship to ACT
+### Relationship to AAD
 
-**They are calling for what ACT provides.** Almost literally:
+**They are calling for what AAD provides.** Almost literally:
 
-- "The field would benefit from a common theoretical language" — ACT provides the mathematical language.
-- They want to understand emergent behavior from interaction dynamics — ACT's multi-agent framework (from TFT Appendix F) + shared intent formalization provides the tools.
-- Their functional agency definition is weaker than ACT's scope but compatible.
-  ACT's scope (TF-01 specialized) is more precise; their three conditions map to elements of TF-01 + TF-03 + TF-10.
+- "The field would benefit from a common theoretical language" — AAD provides the mathematical language.
+- They want to understand emergent behavior from interaction dynamics — AAD's multi-agent framework (from TFT Appendix F) + shared intent formalization provides the tools.
+- Their functional agency definition is weaker than AAD's scope but compatible.
+  AAD's scope (TF-01 specialized) is more precise; their three conditions map to elements of TF-01 + TF-03 + TF-10.
 - Their causal hierarchy usage aligns with TF-02.
 - Their emergence mechanisms (predictive processing → causal models) describe at a qualitative level what TFT formalizes quantitatively (mismatch → model update → structural adaptation).
 
-**Positioning**: ACT should cite this paper as articulating the need that ACT addresses. Their functional agency definition can be mapped to ACT's scope. Their emergence mechanisms can be grounded in ACT's formal dynamics. Their open challenges (world models, causal reasoning, metacognition, human-AI dynamics, safety) are all within ACT's scope.
+**Positioning**: AAD should cite this paper as articulating the need that AAD addresses. Their functional agency definition can be mapped to AAD's scope. Their emergence mechanisms can be grounded in AAD's formal dynamics. Their open challenges (world models, causal reasoning, metacognition, human-AI dynamics, safety) are all within AAD's scope.
 
-**A specific opportunity**: Their emphasis on emergence — simple agents producing complex system behavior through interaction — is something ACT can formalize through the multi-agent framework. The team persistence condition from Appendix F already shows how cooperative communication tempo enables persistence in environments where individuals fail. ACT could extend this to show how shared intent enables goal-achievement that no individual agent could manage.
+**A specific opportunity**: Their emphasis on emergence — simple agents producing complex system behavior through interaction — is something AAD can formalize through the multi-agent framework. The team persistence condition from Appendix F already shows how cooperative communication tempo enables persistence in environments where individuals fail. AAD could extend this to show how shared intent enables goal-achievement that no individual agent could manage.
 
 ---
 
 ## 3. FAST Workshop (AAAI 2026) — Selective Assessment
 
-17 papers presented. Most are narrow/applied. The most relevant to ACT:
+17 papers presented. Most are narrow/applied. The most relevant to AAD:
 
 ### High Relevance
 
 **#7: "From Agentic AI to Autonomous Agents"** (Shiwali Mohan)
-- Revisits computational agency theory from AI subdisciplines, maps modern foundation models to established theory. Directly relevant to ACT's positioning — we should read this to understand the state of computational agency theory and ensure ACT's framing is well-informed.
+- Revisits computational agency theory from AI subdisciplines, maps modern foundation models to established theory. Directly relevant to AAD's positioning — we should read this to understand the state of computational agency theory and ensure AAD's framing is well-informed.
 
 **#9: "Leapsight: A Functional Account of Mediation Between Perception and Action"** (Bagiński & Jha)
-- Introduces functional account of agency focusing on "sustained coordination between internal representations and environment." Sounds structurally similar to what ACT does. Need to read to check overlap.
+- Introduces functional account of agency focusing on "sustained coordination between internal representations and environment." Sounds structurally similar to what AAD does. Need to read to check overlap.
 
 ### Medium Relevance
 
@@ -142,18 +142,18 @@ Each condition exists on a spectrum:
 - Observability layers for monitoring agent-agent and agent-environment interfaces. Related to TFT's observation channels and the Hafez IDT concept.
 
 **#16: "The Multi-Agent Off-Switch Game"** (Agrawal et al.)
-- Demonstrates individually corrigible agents become collectively incorrigible through strategic interaction. Related to ACT's persistence/goal tradeoff and multi-agent adversarial dynamics.
+- Demonstrates individually corrigible agents become collectively incorrigible through strategic interaction. Related to AAD's persistence/goal tradeoff and multi-agent adversarial dynamics.
 
 **#11: "Proactive Interference Reveals Working Memory Limits in LLMs"** (Wang & Sun)
 - Cognitive science paradigm showing LLMs suffer from interference in state maintenance. Directly relevant to the 100% turnover problem.
 
-### Low Relevance (to ACT's foundational theory)
+### Low Relevance (to AAD's foundational theory)
 
-The remaining papers are either applied (evaluation metrics, federated learning, constrained workflows), ethical/governance-focused (AI moral status, safety), or too narrow (AGI measurement, wireheading, scheming) to be directly relevant to ACT's foundational theory work.
+The remaining papers are either applied (evaluation metrics, federated learning, constrained workflows), ethical/governance-focused (AI moral status, safety), or too narrow (AGI measurement, wireheading, scheming) to be directly relevant to AAD's foundational theory work.
 
 ---
 
-## 4. Synthesis: Where ACT Stands
+## 4. Synthesis: Where AAD Stands
 
 ### The Void Is Confirmed
 
@@ -167,19 +167,19 @@ Neither Hafez nor IBM fills the void. Hafez provides a diagnostic metric without
 5. Adversarial dynamics with formal tempo advantage — TFT does
 6. Domain instantiation with measurable quantities — TST begins to
 
-ACT, built on TFT + the goal/intent extension, would be the first to provide all six. This is the unique contribution.
+AAD, built on TFT + the goal/intent extension, would be the first to provide all six. This is the unique contribution.
 
 ### Positioning Strategy
 
-1. **Cite Hafez as complementary metric.** Their P could be a diagnostic for ACT's dynamics — measuring coupling quality that ACT's tempo/gain/persistence machinery predicts. Note the shared goal/intent gap.
+1. **Cite Hafez as complementary metric.** Their P could be a diagnostic for AAD's dynamics — measuring coupling quality that AAD's tempo/gain/persistence machinery predicts. Note the shared goal/intent gap.
 
-2. **Cite IBM as articulating the need.** Their position paper calls for what ACT provides. Their functional agency maps to ACT's scope. Their emergence mechanisms get formal grounding in ACT's dynamics.
+2. **Cite IBM as articulating the need.** Their position paper calls for what AAD provides. Their functional agency maps to AAD's scope. Their emergence mechanisms get formal grounding in AAD's dynamics.
 
-3. **Cite BDI as the architecture ACT gives dynamics to.** BDI named the parts (Belief ≈ M_t, Desire ≈ G_t, Intention ≈ committed goals). ACT provides the physiology: how beliefs and desires update, interact, and drive action.
+3. **Cite BDI as the architecture AAD gives dynamics to.** BDI named the parts (Belief ≈ M_t, Desire ≈ G_t, Intention ≈ committed goals). AAD provides the physiology: how beliefs and desires update, interact, and drive action.
 
-4. **Cite active inference as the closest theoretical competitor.** FEP has prior preferences (≈ G_t) and unifies perception/action. ACT differs in foundation (causal feedback vs. free energy), accessibility (measurable quantities vs. free energy), and scope (adversarial, multi-agent, shared intent).
+4. **Cite active inference as the closest theoretical competitor.** FEP has prior preferences (≈ G_t) and unifies perception/action. AAD differs in foundation (causal feedback vs. free energy), accessibility (measurable quantities vs. free energy), and scope (adversarial, multi-agent, shared intent).
 
-5. **Don't overclaim.** ACT is being developed. The goal/intent extension is speculative. The math hasn't been worked out. Position honestly: TFT provides the adaptive foundation (that's solid); the purposeful agency extension is the hypothesis under development.
+5. **Don't overclaim.** AAD is being developed. The goal/intent extension is speculative. The math hasn't been worked out. Position honestly: TFT provides the adaptive foundation (that's solid); the purposeful agency extension is the hypothesis under development.
 
 ### Reading Priorities (Updated)
 
@@ -194,35 +194,35 @@ ACT, built on TFT + the goal/intent extension, would be the first to provide all
 
 ## 5. Deeper Cross-Mapping (March 2026, second pass)
 
-Detailed analysis of what each paper can *concretely inform* for ACT, beyond the first-read positioning above.
+Detailed analysis of what each paper can *concretely inform* for AAD, beyond the first-read positioning above.
 
-### Hafez → ACT: Specific Technical Connections
+### Hafez → AAD: Specific Technical Connections
 
-1. **P as measurable proxy for ACT dynamics.** High tempo (T) should correlate with high P. The persistence threshold (T > ρ/δ_critical) may have a P-space analog: P dropping below some value when persistence fails. This could provide an empirical measurement path for ACT's theoretical predictions — especially useful since ACT's quantities (T, η*, ρ) are harder to measure directly in complex systems.
+1. **P as measurable proxy for AAD dynamics.** High tempo (T) should correlate with high P. The persistence threshold (T > ρ/δ_critical) may have a P-space analog: P dropping below some value when persistence fails. This could provide an empirical measurement path for AAD's theoretical predictions — especially useful since AAD's quantities (T, η*, ρ) are harder to measure directly in complex systems.
 
-2. **H_f / H_b is a different cut than U_M / U_o.** ACT decomposes mismatch into model uncertainty vs. observation uncertainty. Hafez decomposes into "world opaque to agent" (H_f) vs. "agent opaque to world" (H_b). These are orthogonal. H_b captures action ambiguity — multiple internal states leading to indistinguishable outcomes. ACT currently has no analog of H_b. This matters for legibility, coordination, and shared intent (#410). An agent that is opaque to its environment (high H_b) is harder for teammates to model and coordinate with.
+2. **H_f / H_b is a different cut than U_M / U_o.** AAD decomposes mismatch into model uncertainty vs. observation uncertainty. Hafez decomposes into "world opaque to agent" (H_f) vs. "agent opaque to world" (H_b). These are orthogonal. H_b captures action ambiguity — multiple internal states leading to indistinguishable outcomes. AAD currently has no analog of H_b. This matters for legibility, coordination, and shared intent (#410). An agent that is opaque to its environment (high H_b) is harder for teammates to model and coordinate with.
 
-3. **Agency/intelligence distinction maps to ACT's spectrum.** Hafez's "agency without intelligence" ≈ ACT's reactive-to-adaptive quadrants (M_t machinery without self-monitoring). Hafez's "intelligence" requires self-monitoring and adaptation ≈ ACT's structural-adaptation (#200) + meta-level monitoring. This gives ACT a clean external reference point for the agent-spectrum (#210).
+3. **Agency/intelligence distinction maps to AAD's spectrum.** Hafez's "agency without intelligence" ≈ AAD's reactive-to-adaptive quadrants (M_t machinery without self-monitoring). Hafez's "intelligence" requires self-monitoring and adaptation ≈ AAD's structural-adaptation (#200) + meta-level monitoring. This gives AAD a clean external reference point for the agent-spectrum (#210).
 
-4. **IDT as ACT persistence monitor.** The "Information Digital Twin" — a sidecar monitoring P in real-time — is a practical architecture that could instantiate ACT's persistence monitoring. An ACT-informed IDT would monitor not just coupling quality but *purposeful* coupling quality: is the coupling serving O_t? Hafez's IDT detects drift (coupling degradation) but not goal misalignment. ACT could extend it.
+4. **IDT as AAD persistence monitor.** The "Information Digital Twin" — a sidecar monitoring P in real-time — is a practical architecture that could instantiate AAD's persistence monitoring. An AAD-informed IDT would monitor not just coupling quality but *purposeful* coupling quality: is the coupling serving O_t? Hafez's IDT detects drift (coupling degradation) but not goal misalignment. AAD could extend it.
 
-### IBM → ACT: The Manifesto Mapping
+### IBM → AAD: The Manifesto Mapping
 
-1. **IBM's functional agency spectra map to ACT's existing structure:**
+1. **IBM's functional agency spectra map to AAD's existing structure:**
    - Action generation (reactive → stateful → epistemic) ≈ agent-spectrum (#210)
    - Outcome model (association → intervention → counterfactual) ≈ causal hierarchy (#060, #070)
    - Adaptation (contextual → parametric → reflective) ≈ recursive-update (#130) through structural-adaptation (#200)
 
-2. **IBM's "controlling emergence of subgoals" (§4.3) is directly addressed by ACT.** They note: the longer the chain of subgoals, the weaker the constraint from the human's initial task specification. This IS compound probability decay (#260). ACT already has the math for why this happens and what it implies.
+2. **IBM's "controlling emergence of subgoals" (§4.3) is directly addressed by AAD.** They note: the longer the chain of subgoals, the weaker the constraint from the human's initial task specification. This IS compound probability decay (#260). AAD already has the math for why this happens and what it implies.
 
 3. **IBM's "residual control rights" maps to δ_sat disambiguation.**
-   When should a subordinate agent revise vs. escalate? ACT's cascade (check M_t, then Π, then N_h, then revise O_t) provides a principled answer. Their discussion of risk accumulation from sequences of local decisions connects to compound probability decay and observability dominance (#270).
+   When should a subordinate agent revise vs. escalate? AAD's cascade (check M_t, then Π, then N_h, then revise O_t) provides a principled answer. Their discussion of risk accumulation from sequences of local decisions connects to compound probability decay and observability dominance (#270).
 
-4. **IBM's "prediction + interaction enables metacognition"** — where confidence calibration through social interaction produces shared representations — connects to ACT's shared-intent gap (#410, #415). ACT's IB-compressed shared intent could be the *formalism* for their qualitative story about shared representations.
+4. **IBM's "prediction + interaction enables metacognition"** — where confidence calibration through social interaction produces shared representations — connects to AAD's shared-intent gap (#410, #415). AAD's IB-compressed shared intent could be the *formalism* for their qualitative story about shared representations.
 
-### What ACT Currently Answers from the Manifesto
+### What AAD Currently Answers from the Manifesto
 
-| IBM Requirement | ACT Status | Assessment |
+| IBM Requirement | AAD Status | Assessment |
 |---|---|---|
 | Common theoretical language | Sections I–II vocabulary | Partial — formalism exists but Section II not in src/ yet |
 | Emergent behavior from interaction | Section III (multi-agent) | Foundation exists (adversarial tempo proved); cooperative gaps remain |
@@ -234,11 +234,11 @@ Detailed analysis of what each paper can *concretely inform* for ACT, beyond the
 
 ### Honest Positioning Statement (for eventual paper)
 
-ACT answers IBM's call with a mathematical framework that provides the dynamics IBM identifies as missing, incorporates the coupling diagnostics Hafez develops, extends BDI with formal dynamics, and differentiates from active inference in accessibility and scope.
+AAD answers IBM's call with a mathematical framework that provides the dynamics IBM identifies as missing, incorporates the coupling diagnostics Hafez develops, extends BDI with formal dynamics, and differentiates from active inference in accessibility and scope.
 
 The honest framing: "IBM called for a theory. We provide a framework with these properties [list]. Here is what's derived, what's hypothesized, and what remains open." Lead with Section I (proved, simulated) and Section II (the purposeful-agent derivation chain), with Sections III–V as "the theory extends to" demonstrations.
 
-The risk is over-claiming. ACT's unique contributions beyond existing fields (control theory, causal inference, BDI) are:
+The risk is over-claiming. AAD's unique contributions beyond existing fields (control theory, causal inference, BDI) are:
 1. The integration itself — connecting fields under one framework with consistent notation and derivation chains
 2. Specific novel results: satisfaction gap / control regret split, G_t complexity bounded by M_t capacity, compound probability decay as formal plan fragility, feedback loop as Level 2 causal access, adversarial tempo exponents
 3. The software domain as both testbed and recursive instantiation

@@ -1,6 +1,6 @@
-# WORKBENCH — ACT Theory Development
+# WORKBENCH — AAD Theory Development
 
-Working notes for theory development. This is a thinking tool, not a reference document. For the canonical theory structure, see `01-act-core/OUTLINE.md`.
+Working notes for theory development. This is a thinking tool, not a reference document. For the canonical theory structure, see `01-aad-core/OUTLINE.md`.
 
 
 ## Review Feedback — 2026-03-13 (PRIORITY)
@@ -27,62 +27,62 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 
 | Slug | Type | Stage |
 |------|------|-------|
-| [agent-environment](01-act-core/src/agent-environment.md) | Definition | deps-verified |
-| [observation-function](01-act-core/src/observation-function.md) | Definition | deps-verified |
-| [action-transition](01-act-core/src/action-transition.md) | Definition | deps-verified |
-| [scope-condition](01-act-core/src/scope-condition.md) | Scope | claims-verified |
-| [composition-consistency](01-act-core/src/composition-consistency.md) | Postulate | deps-verified |
-| [causal-structure](01-act-core/src/causal-structure.md) | Postulate | deps-verified |
-| [pearl-causal-hierarchy](01-act-core/src/pearl-causal-hierarchy.md) | Definition | deps-verified |
-| [chronica](01-act-core/src/chronica.md) | Definition | deps-verified |
-| [agent-model](01-act-core/src/agent-model.md) | Formulation | deps-verified |
-| [information-bottleneck](01-act-core/src/information-bottleneck.md) | Formulation | deps-verified |
-| [model-sufficiency](01-act-core/src/model-sufficiency.md) | Definition | deps-verified |
-| [model-class-fitness](01-act-core/src/model-class-fitness.md) | Definition | deps-verified |
-| [event-driven-dynamics](01-act-core/src/event-driven-dynamics.md) | Formulation | deps-verified |
-| [recursive-update](01-act-core/src/recursive-update.md) | Derived | claims-verified |
-| [action-selection](01-act-core/src/action-selection.md) | Derived | deps-verified |
-| [mismatch-signal](01-act-core/src/mismatch-signal.md) | Definition | deps-verified |
-| [mismatch-decomposition](01-act-core/src/mismatch-decomposition.md) | Result | claims-verified |
-| [update-gain](01-act-core/src/update-gain.md) | Empirical | claims-verified |
-| [causal-information-yield](01-act-core/src/causal-information-yield.md) | Definition | deps-verified |
-| [adaptive-tempo](01-act-core/src/adaptive-tempo.md) | Definition | claims-verified |
-| [mismatch-dynamics](01-act-core/src/mismatch-dynamics.md) | Hypothesis | deps-verified |
-| [deliberation-cost](01-act-core/src/deliberation-cost.md) | Derived | claims-verified |
-| [gain-sector-bridge](01-act-core/src/gain-sector-bridge.md) | Derived | claims-verified |
-| [sector-condition-stability](01-act-core/src/sector-condition-stability.md) | Result | claims-verified |
-| [persistence-condition](01-act-core/src/persistence-condition.md) | Result | claims-verified |
-| [structural-adaptation-necessity](01-act-core/src/structural-adaptation-necessity.md) | Result | claims-verified |
-| [temporal-nesting](01-act-core/src/temporal-nesting.md) | Derived | deps-verified |
-| [agent-identity](01-act-core/src/agent-identity.md) | Discussion | deps-verified |
+| [agent-environment](01-aad-core/src/agent-environment.md) | Definition | deps-verified |
+| [observation-function](01-aad-core/src/observation-function.md) | Definition | deps-verified |
+| [action-transition](01-aad-core/src/action-transition.md) | Definition | deps-verified |
+| [scope-condition](01-aad-core/src/scope-condition.md) | Scope | claims-verified |
+| [composition-consistency](01-aad-core/src/composition-consistency.md) | Postulate | deps-verified |
+| [causal-structure](01-aad-core/src/causal-structure.md) | Postulate | deps-verified |
+| [pearl-causal-hierarchy](01-aad-core/src/pearl-causal-hierarchy.md) | Definition | deps-verified |
+| [chronica](01-aad-core/src/chronica.md) | Definition | deps-verified |
+| [agent-model](01-aad-core/src/agent-model.md) | Formulation | deps-verified |
+| [information-bottleneck](01-aad-core/src/information-bottleneck.md) | Formulation | deps-verified |
+| [model-sufficiency](01-aad-core/src/model-sufficiency.md) | Definition | deps-verified |
+| [model-class-fitness](01-aad-core/src/model-class-fitness.md) | Definition | deps-verified |
+| [event-driven-dynamics](01-aad-core/src/event-driven-dynamics.md) | Formulation | deps-verified |
+| [recursive-update](01-aad-core/src/recursive-update.md) | Derived | claims-verified |
+| [action-selection](01-aad-core/src/action-selection.md) | Derived | deps-verified |
+| [mismatch-signal](01-aad-core/src/mismatch-signal.md) | Definition | deps-verified |
+| [mismatch-decomposition](01-aad-core/src/mismatch-decomposition.md) | Result | claims-verified |
+| [update-gain](01-aad-core/src/update-gain.md) | Empirical | claims-verified |
+| [causal-information-yield](01-aad-core/src/causal-information-yield.md) | Definition | deps-verified |
+| [adaptive-tempo](01-aad-core/src/adaptive-tempo.md) | Definition | claims-verified |
+| [mismatch-dynamics](01-aad-core/src/mismatch-dynamics.md) | Hypothesis | deps-verified |
+| [deliberation-cost](01-aad-core/src/deliberation-cost.md) | Derived | claims-verified |
+| [gain-sector-bridge](01-aad-core/src/gain-sector-bridge.md) | Derived | claims-verified |
+| [sector-condition-stability](01-aad-core/src/sector-condition-stability.md) | Result | claims-verified |
+| [persistence-condition](01-aad-core/src/persistence-condition.md) | Result | claims-verified |
+| [structural-adaptation-necessity](01-aad-core/src/structural-adaptation-necessity.md) | Result | claims-verified |
+| [temporal-nesting](01-aad-core/src/temporal-nesting.md) | Derived | deps-verified |
+| [agent-identity](01-aad-core/src/agent-identity.md) | Discussion | deps-verified |
 
 ### Written — Section II (25 segments, all written)
 | Slug | Type | Notes |
 |------|------|-------|
-| [agent-spectrum](01-act-core/src/agent-spectrum.md) | Definition | Needs review |
-| [complete-agent-state](01-act-core/src/complete-agent-state.md) | Formulation | $X_t = (M_t, G_t)$ lift. Backward-compatible with Section I. |
-| [objective-functional](01-act-core/src/objective-functional.md) | Formulation | $O_t \to V_{O_t}$: trajectories $\to \mathbb{R}$. Scalar-comparability is a substantive commitment. |
-| [value-object](01-act-core/src/value-object.md) | Definition | $V_O$, $Q_O$ with convention hierarchy (C1/C2/C3) and monotonicity result. Extends policy objective with $\lambda(M_t, O_t, N_h)$. |
-| [strategy-dimension](01-act-core/src/strategy-dimension.md) | Definition | $G_t = (O_t, \Sigma_t)$. Evaluation vs guidance. Independence of richness dimensions. |
-| [causal-hierarchy-requirement](01-act-core/src/causal-hierarchy-requirement.md) | Derived + Scope | Level 2 for $Q_O$ evaluation. Scope: agents that learn during operation. |
-| [loop-interventional-access](01-act-core/src/loop-interventional-access.md) | Derived | Loop generates interventional data by construction. |
-| [explicit-strategy-condition](01-act-core/src/explicit-strategy-condition.md) | Normative | Cost inequality for explicit $\Sigma_t$. Makes temporal-optimality load-bearing. |
-| [chain-confidence-decay](01-act-core/src/chain-confidence-decay.md) | Derived | Log-confidence additive in depth. $p^n$ is special case. |
-| [and-or-scope](01-act-core/src/and-or-scope.md) | Scope | AND/OR restriction. Noisy-OR and WEIGHTED rejected. Parsimony argument. |
-| [strategy-dag](01-act-core/src/strategy-dag.md) | Definition | $\Sigma_t = (V, E, p, \gamma)$. Acyclicity derived. Edge semantics as causal credence. Correlation Hierarchy (L0/L1/L2) first-class. |
-| [directed-separation](01-act-core/src/directed-separation.md) | Derived + Scope | $f_M$ is $G_t$-independent. Scope condition for goal-conditioned agents. |
-| [satisfaction-gap](01-act-core/src/satisfaction-gap.md) | Definition | $\delta_{\text{sat}}$ with disambiguation table. $A_O$ (attainability) defined here. |
-| [control-regret](01-act-core/src/control-regret.md) | Definition | $\delta_{\text{regret}}$. 2×2 diagnostic with satisfaction gap. |
-| [strategic-calibration](01-act-core/src/strategic-calibration.md) | Definition | Edge residuals. Discussion-grade aggregation. |
-| [orient-cascade](01-act-core/src/orient-cascade.md) | Derived | Resolution order from information dependency. $G_t$ bounded by $M_t$. |
-| [observability-dominance](01-act-core/src/observability-dominance.md) | Derived | Low $\sigma$ → frozen edges → epistemically dead paths. |
-| [edge-update-via-gain](01-act-core/src/edge-update-via-gain.md) | Hypothesis | Gain principle extended to edge credences. Signal function open. |
-| [edge-update-causal-validity](01-act-core/src/edge-update-causal-validity.md) | Scope | Three-regime causal validity for edge updates. Identifiability coefficient $\iota_{ij}$. |
-| [structural-change-as-parametric-limit](01-act-core/src/structural-change-as-parametric-limit.md) | Formulation | Six operations from reweighting to full restructure. |
-| [strategy-persistence-schema](01-act-core/src/strategy-persistence-schema.md) | Proposed schema | Sector conditions for $\Sigma_t$. Schema, not result — needs instantiation. |
-| [strategic-tempo](01-act-core/src/strategic-tempo.md) | Definition | T_Σ = Σ ν_ij·η_edge,ij. Verified against four topologies. AND depth-gated, OR exploration-gated. |
-| [strategy-complexity-cost](01-act-core/src/strategy-complexity-cost.md) | Formulation | IB/MDL for strategy DAGs. Max useful depth d*. Triple depth penalty. Discussion-grade. |
-| [exploit-explore-deliberate](01-act-core/src/exploit-explore-deliberate.md) | Discussion | Extended deliberation threshold (derived). Two-stage decomposition NOT forced (unified objective outperforms in simulation). Dominance regimes qualitative. Deliberation = internal exploration (simulation, counterfactual reasoning, cross-domain synthesis). Discussion-grade. |
+| [agent-spectrum](01-aad-core/src/agent-spectrum.md) | Definition | Needs review |
+| [complete-agent-state](01-aad-core/src/complete-agent-state.md) | Formulation | $X_t = (M_t, G_t)$ lift. Backward-compatible with Section I. |
+| [objective-functional](01-aad-core/src/objective-functional.md) | Formulation | $O_t \to V_{O_t}$: trajectories $\to \mathbb{R}$. Scalar-comparability is a substantive commitment. |
+| [value-object](01-aad-core/src/value-object.md) | Definition | $V_O$, $Q_O$ with convention hierarchy (C1/C2/C3) and monotonicity result. Extends policy objective with $\lambda(M_t, O_t, N_h)$. |
+| [strategy-dimension](01-aad-core/src/strategy-dimension.md) | Definition | $G_t = (O_t, \Sigma_t)$. Evaluation vs guidance. Independence of richness dimensions. |
+| [causal-hierarchy-requirement](01-aad-core/src/causal-hierarchy-requirement.md) | Derived + Scope | Level 2 for $Q_O$ evaluation. Scope: agents that learn during operation. |
+| [loop-interventional-access](01-aad-core/src/loop-interventional-access.md) | Derived | Loop generates interventional data by construction. |
+| [explicit-strategy-condition](01-aad-core/src/explicit-strategy-condition.md) | Normative | Cost inequality for explicit $\Sigma_t$. Makes temporal-optimality load-bearing. |
+| [chain-confidence-decay](01-aad-core/src/chain-confidence-decay.md) | Derived | Log-confidence additive in depth. $p^n$ is special case. |
+| [and-or-scope](01-aad-core/src/and-or-scope.md) | Scope | AND/OR restriction. Noisy-OR and WEIGHTED rejected. Parsimony argument. |
+| [strategy-dag](01-aad-core/src/strategy-dag.md) | Definition | $\Sigma_t = (V, E, p, \gamma)$. Acyclicity derived. Edge semantics as causal credence. Correlation Hierarchy (L0/L1/L2) first-class. |
+| [directed-separation](01-aad-core/src/directed-separation.md) | Derived + Scope | $f_M$ is $G_t$-independent. Scope condition for goal-conditioned agents. |
+| [satisfaction-gap](01-aad-core/src/satisfaction-gap.md) | Definition | $\delta_{\text{sat}}$ with disambiguation table. $A_O$ (attainability) defined here. |
+| [control-regret](01-aad-core/src/control-regret.md) | Definition | $\delta_{\text{regret}}$. 2×2 diagnostic with satisfaction gap. |
+| [strategic-calibration](01-aad-core/src/strategic-calibration.md) | Definition | Edge residuals. Discussion-grade aggregation. |
+| [orient-cascade](01-aad-core/src/orient-cascade.md) | Derived | Resolution order from information dependency. $G_t$ bounded by $M_t$. |
+| [observability-dominance](01-aad-core/src/observability-dominance.md) | Derived | Low $\sigma$ → frozen edges → epistemically dead paths. |
+| [edge-update-via-gain](01-aad-core/src/edge-update-via-gain.md) | Hypothesis | Gain principle extended to edge credences. Signal function open. |
+| [edge-update-causal-validity](01-aad-core/src/edge-update-causal-validity.md) | Scope | Three-regime causal validity for edge updates. Identifiability coefficient $\iota_{ij}$. |
+| [structural-change-as-parametric-limit](01-aad-core/src/structural-change-as-parametric-limit.md) | Formulation | Six operations from reweighting to full restructure. |
+| [strategy-persistence-schema](01-aad-core/src/strategy-persistence-schema.md) | Proposed schema | Sector conditions for $\Sigma_t$. Schema, not result — needs instantiation. |
+| [strategic-tempo](01-aad-core/src/strategic-tempo.md) | Definition | T_Σ = Σ ν_ij·η_edge,ij. Verified against four topologies. AND depth-gated, OR exploration-gated. |
+| [strategy-complexity-cost](01-aad-core/src/strategy-complexity-cost.md) | Formulation | IB/MDL for strategy DAGs. Max useful depth d*. Triple depth penalty. Discussion-grade. |
+| [exploit-explore-deliberate](01-aad-core/src/exploit-explore-deliberate.md) | Discussion | Extended deliberation threshold (derived). Two-stage decomposition NOT forced (unified objective outperforms in simulation). Dominance regimes qualitative. Deliberation = internal exploration (simulation, counterfactual reasoning, cross-domain synthesis). Discussion-grade. |
 
 ### Written — TST (20 segments; 4 missing, 0 old remain) — now in `02-tst-core/`
 | Slug | Type | Notes |
@@ -100,7 +100,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | [changeset-size-principle](02-tst-core/src/changeset-size-principle.md) | Empirical | Includes comprehension-follows-changeset corollary (hypothesis). |
 | [change-distance](02-tst-core/src/change-distance.md) | Definition | |
 | [change-proximity-principle](02-tst-core/src/change-proximity-principle.md) | Derived + Hypothesis | Qualitative derived; functional form hypothesis. |
-| [exponential-cognitive-load](02-tst-core/src/exponential-cognitive-load.md) | Hypothesis | ACT deliberation-cost suggests dependency-structure model, not fixed exponent. |
+| [exponential-cognitive-load](02-tst-core/src/exponential-cognitive-load.md) | Hypothesis | AAD deliberation-cost suggests dependency-structure model, not fixed exponent. |
 | [system-coupling](02-tst-core/src/system-coupling.md) | Definition | Causal (interventional) interpretation via git. |
 | [system-coherence](02-tst-core/src/system-coherence.md) | Definition | |
 | [coherence-coupling-measurement](02-tst-core/src/coherence-coupling-measurement.md) | Measurement | Ratio form is one possible aggregation. |
@@ -111,33 +111,33 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 ### Written — Section III (14 segments, all written)
 | Slug                                                                | Type        | Notes                                                                                                                                |
 | ------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [multi-agent-scope](01-act-core/src/multi-agent-scope.md)                       | Scope       | Coupling through shared environment.                                                                                                 |
-| [composition-closure](01-act-core/src/composition-closure.md)                   | Formulation | Operationalizes agent boundary as bounded closure defect. Admissibility (A1)-(A4) + projection admissibility (P1)-(P3) specified. Bridge lemma: (A4) + contraction assumption implies trajectory error bounded at $\varepsilon^\ast / \alpha_c$. Two-Kalman instantiation exact ($\varepsilon^\ast = 0$ uncorrelated). Mahalanobis norm specified for estimation-type agents. Status: conditional (discrete-time formalization pending, general-case P1 computability open). |
-| [tempo-composition](01-act-core/src/tempo-composition.md)                       | Sketch      | Sub-additive tempo inequality. Status: sketch (proof incomplete — $\varepsilon^\ast \to C_{\text{coord}}$ mapping open).             |
-| [directed-separation-under-composition](01-act-core/src/directed-separation-under-composition.md) | Hypothesis | Two cases: goal-blind routing preserves, goal-dependent routing breaks. Status: conditional — upgraded from discussion-grade after routing formalization in #multi-agent-scope and architectural classification promotion in #directed-separation. Remaining caveat: composition-closure admissibility placeholders. Earlier draft had a Case 3 (environmental coupling) that was correctly identified by review as not a directed-separation issue. |
-| [unity-dimensions](01-act-core/src/unity-dimensions.md)                         | Discussion  | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping. $U_{\text{obs}}$ has no formula; $U_\Sigma$ circular. |
-| [shared-intent](01-act-core/src/shared-intent.md)                               | Definition  | IB-compressed purposeful state for inter-agent communication. Status: discussion-grade.                                              |
-| [auftragstaktik-principle](01-act-core/src/auftragstaktik-principle.md)         | Hypothesis  | $B_O \gt B_\Sigma \gt B_M$. Bungay evidence. Status: discussion-grade.                                                               |
-| [adversarial-destabilization](01-act-core/src/adversarial-destabilization.md)   | Derived     | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1.                                                           |
-| [communication-gain](01-act-core/src/communication-gain.md)                     | Hypothesis  | Trust-weighted inter-agent gain. From TFT Appendix F, F.2.                                                                           |
-| [adversarial-exponent-regimes](01-act-core/src/adversarial-exponent-regimes.md) | Result | Three regimes: $b=2$ (Model D/coupled), $b=1.5$ (Model S/coupled), $b \to 1$ (non-coupled). Both coupling-dominant exponents now **derived** (from Model D/S steady-state scaling). Status: conditional.                             |
-| [observation-gates-advantage](01-act-core/src/observation-gates-advantage.md)   | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E.                                              |
-| [per-dimension-persistence](01-act-core/src/per-dimension-persistence.md)       | Result      | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. Model D/S thresholds now distinguished. Status: conditional. Regime-mixing issue **resolved**.                                                 |
-| [team-persistence](01-act-core/src/team-persistence.md)                         | Derived     | Distributed tempo, cooperative-adversarial $\rho$ decomposition, 3-lever persistence. From TFT F.3.                                  |
-| [adversarial-tempo-advantage](01-act-core/src/adversarial-tempo-advantage.md)   | Result      | Both coupling-dominant exponents derived: $b=2$ (Model D), $b=3/2$ (Model S). Status: conditional on disturbance model.                                  |
+| [multi-agent-scope](01-aad-core/src/multi-agent-scope.md)                       | Scope       | Coupling through shared environment.                                                                                                 |
+| [composition-closure](01-aad-core/src/composition-closure.md)                   | Formulation | Operationalizes agent boundary as bounded closure defect. Admissibility (A1)-(A4) + projection admissibility (P1)-(P3) specified. Bridge lemma: (A4) + contraction assumption implies trajectory error bounded at $\varepsilon^\ast / \alpha_c$. Two-Kalman instantiation exact ($\varepsilon^\ast = 0$ uncorrelated). Mahalanobis norm specified for estimation-type agents. Status: conditional (discrete-time formalization pending, general-case P1 computability open). |
+| [tempo-composition](01-aad-core/src/tempo-composition.md)                       | Sketch      | Sub-additive tempo inequality. Status: sketch (proof incomplete — $\varepsilon^\ast \to C_{\text{coord}}$ mapping open).             |
+| [directed-separation-under-composition](01-aad-core/src/directed-separation-under-composition.md) | Hypothesis | Two cases: goal-blind routing preserves, goal-dependent routing breaks. Status: conditional — upgraded from discussion-grade after routing formalization in #multi-agent-scope and architectural classification promotion in #directed-separation. Remaining caveat: composition-closure admissibility placeholders. Earlier draft had a Case 3 (environmental coupling) that was correctly identified by review as not a directed-separation issue. |
+| [unity-dimensions](01-aad-core/src/unity-dimensions.md)                         | Discussion  | 4 dimensions: epistemic, teleological, strategic, perceptual. Status: discussion-grade. Clausewitz mapping. $U_{\text{obs}}$ has no formula; $U_\Sigma$ circular. |
+| [shared-intent](01-aad-core/src/shared-intent.md)                               | Definition  | IB-compressed purposeful state for inter-agent communication. Status: discussion-grade.                                              |
+| [auftragstaktik-principle](01-aad-core/src/auftragstaktik-principle.md)         | Hypothesis  | $B_O \gt B_\Sigma \gt B_M$. Bungay evidence. Status: discussion-grade.                                                               |
+| [adversarial-destabilization](01-aad-core/src/adversarial-destabilization.md)   | Derived     | Lyapunov destabilization + effects spiral. From TFT Appendix A, A.3/A.3.1.                                                           |
+| [communication-gain](01-aad-core/src/communication-gain.md)                     | Hypothesis  | Trust-weighted inter-agent gain. From TFT Appendix F, F.2.                                                                           |
+| [adversarial-exponent-regimes](01-aad-core/src/adversarial-exponent-regimes.md) | Result | Three regimes: $b=2$ (Model D/coupled), $b=1.5$ (Model S/coupled), $b \to 1$ (non-coupled). Both coupling-dominant exponents now **derived** (from Model D/S steady-state scaling). Status: conditional.                             |
+| [observation-gates-advantage](01-aad-core/src/observation-gates-advantage.md)   | Observation | Obs noise collapses advantage; optimal gain partially restores. From track-b Variant E.                                              |
+| [per-dimension-persistence](01-aad-core/src/per-dimension-persistence.md)       | Result      | Per-dim AR(1) exact to 4 sig figs. Scalar overestimates 72%. Model D/S thresholds now distinguished. Status: conditional. Regime-mixing issue **resolved**.                                                 |
+| [team-persistence](01-aad-core/src/team-persistence.md)                         | Derived     | Distributed tempo, cooperative-adversarial $\rho$ decomposition, 3-lever persistence. From TFT F.3.                                  |
+| [adversarial-tempo-advantage](01-aad-core/src/adversarial-tempo-advantage.md)   | Result      | Both coupling-dominant exponents derived: $b=2$ (Model D), $b=3/2$ (Model S). Status: conditional on disturbance model.                                  |
 
 ### Written — Appendices (9 segments)
 | Slug | Type | Notes |
 |------|------|-------|
-| [sector-condition-derivation](01-act-core/src/sector-condition-derivation.md) | Derivation | Full Lyapunov derivations (A.1, A.1S, A.2). A.1S adds stochastic (Model S) Itô-Lyapunov result. |
-| [recursive-update-derivation](01-act-core/src/recursive-update-derivation.md) | Derivation | Uniqueness derivation + 7 counterexample attacks. |
-| [multi-timescale-stability](01-act-core/src/multi-timescale-stability.md) | Sketch | N-timescale singular perturbation framework. |
-| [operationalization](01-act-core/src/operationalization.md) | Detail | Estimation procedures for ACT quantities. |
-| [worked-example-kalman](01-act-core/src/worked-example-kalman.md) | Worked example | End-to-end exact mapping. |
-| [worked-example-bandit](01-act-core/src/worked-example-bandit.md) | Worked example | End-to-end approximate mapping; persistence failure diagnostic. |
-| [simulation-results](01-act-core/src/simulation-results.md) | Detail | 6 variants validating/refining Section I predictions. Track-b reference. |
-| [graph-structure-uniqueness](01-act-core/src/graph-structure-uniqueness.md) | Derivation | 4 postulates + causal sufficiency → DAG with Markov property. Acyclicity exact. Markov property proved via CMC theorem (2026-04-06) — P3 is consequence, not premise. Edge independence = causal sufficiency. |
-| [discrete-sector-condition](01-act-core/src/discrete-sector-condition.md) | Derivation | Discrete-time Props DA.1, DA.1S, DA.2 via contraction mapping. Fluid limit theorem. **GA-5 closed** — Model D gap zero, Model S gap $O(\eta^\ast c_{\max})$. |
+| [sector-condition-derivation](01-aad-core/src/sector-condition-derivation.md) | Derivation | Full Lyapunov derivations (A.1, A.1S, A.2). A.1S adds stochastic (Model S) Itô-Lyapunov result. |
+| [recursive-update-derivation](01-aad-core/src/recursive-update-derivation.md) | Derivation | Uniqueness derivation + 7 counterexample attacks. |
+| [multi-timescale-stability](01-aad-core/src/multi-timescale-stability.md) | Sketch | N-timescale singular perturbation framework. |
+| [operationalization](01-aad-core/src/operationalization.md) | Detail | Estimation procedures for AAD quantities. |
+| [worked-example-kalman](01-aad-core/src/worked-example-kalman.md) | Worked example | End-to-end exact mapping. |
+| [worked-example-bandit](01-aad-core/src/worked-example-bandit.md) | Worked example | End-to-end approximate mapping; persistence failure diagnostic. |
+| [simulation-results](01-aad-core/src/simulation-results.md) | Detail | 6 variants validating/refining Section I predictions. Track-b reference. |
+| [graph-structure-uniqueness](01-aad-core/src/graph-structure-uniqueness.md) | Derivation | 4 postulates + causal sufficiency → DAG with Markov property. Acyclicity exact. Markov property proved via CMC theorem (2026-04-06) — P3 is consequence, not premise. Edge independence = causal sufficiency. |
+| [discrete-sector-condition](01-aad-core/src/discrete-sector-condition.md) | Derivation | Discrete-time Props DA.1, DA.1S, DA.2 via contraction mapping. Fluid limit theorem. **GA-5 closed** — Model D gap zero, Model S gap $O(\eta^\ast c_{\max})$. |
 
 ### Not Yet Written — 14 segments remaining
 
@@ -166,7 +166,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 **Appendices (3 missing):**
 - `#linear-ode-approximation` — pedagogical linear mismatch ODE (detail).
 - `#intent-dag-development` — convergence on AND/OR + single-p (aside). Source: 04-intent-dag-consolidated.md.
-- `#worked-example-cam` — coevolving automata (Miller 2022): ACT ↔ Moore machine mapping, meta-machine as ε*=0 composition, simplest adaptive agent. Source: `msc/spike-miller-act-bridge.md` §3, `msc/spike-fsa-dag-relationship.md`.
+- `#worked-example-cam` — coevolving automata (Miller 2022): AAD ↔ Moore machine mapping, meta-machine as ε*=0 composition, simplest adaptive agent. Source: `msc/spike-miller-act-bridge.md` §3, `msc/spike-fsa-dag-relationship.md`.
 
 ~~`#prior-art-positioning`~~ — **Superseded.** Prior art (Hafez, Miller, etc.) now integrated into Discussion sections of relevant segments rather than a separate appendix. Hafez: agent-spectrum (P ↔ T, agency/intelligence mapping), directed-separation (IDT as Class 2 monitoring), adversarial-destabilization (H_b as opacity metric), causal-hierarchy-requirement (bi-predictability as Level 2 evidence). Miller: structural-adaptation-necessity (neutral drift mechanism), agent-spectrum (Moore machine as minimal agent), adversarial-destabilization (transition motif), plus Section III dynamics gaps. Source material remains in `msc/02-prior-art-assessment.md`.
 
@@ -194,7 +194,7 @@ Three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemi
 | Projection admissibility | `msc/spike-projection-admissibility.md` | P_adm = (P1, P2, P3). Two-Kalman exact instantiation. Mahalanobis norms. **PROMOTED** to composition-closure + tempo-composition. |
 | Scalar objective scope | `msc/spike-scalar-objective-scope.md` | Scalar is load-bearing for diagnostics, not structural results. Revealed-preference argument. AND-node workaround documented. **PROMOTED** to objective-functional + satisfaction-gap. |
 | Track-b simulations | `msc/track-b-nonlinear-sims/` | 6 variants, all validated |
-| Miller ↔ ACT bridge | `msc/spike-miller-act-bridge.md` | Maps Miller's *Ex Machina* (2022) to ACT. Five new Section III dynamics elements identified. FSA ↔ DAG relationship analyzed (orthogonal, not competing). Sector condition blind to neutral drift — new concept "latent structural diversity" needed. Paths C/D (automata foundations) ruled out; Path B (Section III dynamics) recommended. |
+| Miller ↔ AAD bridge | `msc/spike-miller-act-bridge.md` | Maps Miller's *Ex Machina* (2022) to AAD. Five new Section III dynamics elements identified. FSA ↔ DAG relationship analyzed (orthogonal, not competing). Sector condition blind to neutral drift — new concept "latent structural diversity" needed. Paths C/D (automata foundations) ruled out; Path B (Section III dynamics) recommended. |
 | FSA ↔ strategy-DAG | `msc/spike-fsa-dag-relationship.md` | Moore machine = behavioral surface; strategy DAG = epistemic interior. Orthogonal representations. DAG→FSA is lossy (discards causal semantics). FSA composition exact for behavior only; agent-level composition still approximate (ε* from internal state projection). |
 | Neutral drift ↔ Lyapunov | `msc/spike-neutral-drift-lyapunov.md` | Phases 1,5 map cleanly; Phases 2-3 invisible to sector condition; Phase 4 partial (coupling emergence missing). Missing concept: latent structural diversity — correction-architecture variation invisible to persistence analysis. Endogenous γ needed. |
 
@@ -249,13 +249,13 @@ These are the segments where the goal is: "given the prior objects, this is the 
 
 ### Canonical formulations (second ring)
 
-Good representational choices that are motivated but not forced. The three-question triage (FORMAT.md) answer to "what competing formulation would also fit?" is "at least one alternative exists." These are where ACT's *design* lives.
+Good representational choices that are motivated but not forced. The three-question triage (FORMAT.md) answer to "what competing formulation would also fit?" is "at least one alternative exists." These are where AAD's *design* lives.
 
 Includes: #complete-agent-state, #objective-functional, #value-object, #strategy-dimension, #strategy-dag, #and-or-scope, #agent-model, #information-bottleneck, #event-driven-dynamics, #adaptive-tempo, #structural-change-as-parametric-limit, #explicit-strategy-condition (normative, not derived), #composition-closure (operationalizes #composition-consistency but is a formulation choice, not the only possible operationalization), most definitions.
 
 ### Empirical, heuristic, and discussion (third ring)
 
-Claims whose ceiling is empirical or heuristic — testable against the world but not derivable from the formalism. This is NOT a demotion: these are where ACT becomes falsifiable and useful. Section IV is mostly here.
+Claims whose ceiling is empirical or heuristic — testable against the world but not derivable from the formalism. This is NOT a demotion: these are where AAD becomes falsifiable and useful. Section IV is mostly here.
 
 Includes: #update-gain, #mismatch-dynamics, #edge-update-via-gain, #strategic-calibration, #communication-gain, #conceptual-alignment, #exponential-cognitive-load, #changeset-size-principle, most TST and logogenic agent segments, simulation observations.
 
@@ -282,10 +282,10 @@ See FORMAT.md "Epistemic Triage" for the three-question diagnostic.
 - Composite directed separation (Section III). If each sub-agent's $f_M$ is $G_t$-independent, is the composite's $f_M^c$ independent of $G_t^c$? Hypothesis: goal-blindness composes, BUT coordination routing may break it — if which observations reach the composite depends on the shared objective, the composite's effective observation function is goal-dependent.
 - Software tempo decomposition (TST / `02-tst-core/`). Three components: $\mathcal T_{\text{obs}}$ (compiler, linter, tests), $\mathcal T_{\text{explore}}$ (code reading, navigation), $\mathcal T_{\text{probe}}$ (test runs, staging). Which is the bottleneck? Each connects to #code-quality-as-observation-infrastructure. Source: old-tst-via-tft-mapping has the richest treatment.
 - Logogenic agent gaps (all blocked on scope decision — `03-logogenic-agents/`):
-  - **Cognitive loop formalization.** How does the logogenic agent's cycle differ from the generic orient cascade ( #orient-cascade)? What's specific to language-based agents? Source: [`msc/agentic-tft-cognitive-loop-spec.md`](msc/agentic-tft-cognitive-loop-spec.md). Also: [`msc/agentic-tft-narrative-as-implementation.md`](msc/agentic-tft-narrative-as-implementation.md) (why ACT quantities are estimated in language).
+  - **Cognitive loop formalization.** How does the logogenic agent's cycle differ from the generic orient cascade ( #orient-cascade)? What's specific to language-based agents? Source: [`msc/agentic-tft-cognitive-loop-spec.md`](msc/agentic-tft-cognitive-loop-spec.md). Also: [`msc/agentic-tft-narrative-as-implementation.md`](msc/agentic-tft-narrative-as-implementation.md) (why AAD quantities are estimated in language).
   - **Evaluation framework.** Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents. Connects to creche design. Source: [`msc/agentic-tft-evaluation-framework.md`](msc/agentic-tft-evaluation-framework.md).
-  - **Creche concept.** ACT-grounded experiential training environments where agents develop adaptive capacity. Source: [`msc/agentic-tft-creche-concept.md`](msc/agentic-tft-creche-concept.md). Also: [`msc/agentic-tft-experiential-training.md`](msc/agentic-tft-experiential-training.md) (detailed three-level training design).
-  - **Recursive completion.** An agent using ACT to guide its own behavior while operating on a codebase that implements ACT. Self-referential but not paradoxical — the recursion is well-founded because the agent's $M_t$ includes the theory as domain knowledge, not as self-reference.
+  - **Creche concept.** AAD-grounded experiential training environments where agents develop adaptive capacity. Source: [`msc/agentic-tft-creche-concept.md`](msc/agentic-tft-creche-concept.md). Also: [`msc/agentic-tft-experiential-training.md`](msc/agentic-tft-experiential-training.md) (detailed three-level training design).
+  - **Recursive completion.** An agent using AAD to guide its own behavior while operating on a codebase that implements AAD. Self-referential but not paradoxical — the recursion is well-founded because the agent's $M_t$ includes the theory as domain knowledge, not as self-reference.
   - **Known issues in source material.** The cognitive loop spec, evaluation framework, and ontology unification have cataloged issues: [`msc/agentic-tft-review-response.md`](msc/agentic-tft-review-response.md). Key flags: bootstrap problem (grounding epistemic estimates measurably), sovereignty in a designed system, "estimated in language" not yet operationalized.
 
 
@@ -334,8 +334,8 @@ A formal treatment of what happens to the dynamics when separation fails. Not ju
 
 - ~~Edge semantics claim interventional but update from observational.~~ **RESOLVED 2026-04-02.** Resolved as regime-indexed interpretation: $p_{ij}$ is a causal efficacy estimate whose identification strength varies with the data regime (A/B/C). Single-parameter edge preserved; $\iota_{ij}$ characterizes causal warrant separately. See `msc/spike-edge-semantics-resolution.md`.
 - Missing commitment/resource/temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs) — now framed correctly: $M_t$-side quantities remain well-defined regardless; directed separation gives the clean factorized update and sequential orient cascade. Without it, coupled analysis, not broken theory. Updated in #directed-separation, #agent-spectrum, 01-act-core/OUTLINE.md §II scope. Scalar objective scope restriction added to #objective-functional. See "Directed Separation: What Holds for Class 2" above for detailed analysis.
-- **TST → ACT bridge is analogical, not formal.** Git-derived metrics (coherence, coupling, $Q$) are claimed to operationalize Lyapunov quantities ($\alpha$, $R$, $\rho$) but no mathematical proof connects them. The chain git data → $Q$ → comprehension time → developer tempo → $\alpha$ has empirical hypothesis steps. This matters because the operationalization story is ACT's main defense against the "unmeasurable quantities" critique. Either formalize the bridge or be explicit that it's an empirical research program, not a derivation.
+- Directed separation violated by goal-conditioned agents (LLMs) — now framed correctly: $M_t$-side quantities remain well-defined regardless; directed separation gives the clean factorized update and sequential orient cascade. Without it, coupled analysis, not broken theory. Updated in #directed-separation, #agent-spectrum, 01-aad-core/OUTLINE.md §II scope. Scalar objective scope restriction added to #objective-functional. See "Directed Separation: What Holds for Class 2" above for detailed analysis.
+- **TST → AAD bridge is analogical, not formal.** Git-derived metrics (coherence, coupling, $Q$) are claimed to operationalize Lyapunov quantities ($\alpha$, $R$, $\rho$) but no mathematical proof connects them. The chain git data → $Q$ → comprehension time → developer tempo → $\alpha$ has empirical hypothesis steps. This matters because the operationalization story is AAD's main defense against the "unmeasurable quantities" critique. Either formalize the bridge or be explicit that it's an empirical research program, not a derivation.
 
 
 ## Codex Review Issues (from memory — fixes needed)
@@ -356,7 +356,7 @@ Items 1–10 are addressed in v3 spike. Porting to src/ segments is the remainin
 
 ## Ordering Questions
 
-*The current linearization in 01-act-core/OUTLINE.md may need revision:*
+*The current linearization in 01-aad-core/OUTLINE.md may need revision:*
 
 - Should #temporal-optimality move from Section I to Section II? It's about specific objectives — arguably an actuated-agent concept, not a general adaptive-systems concept. Counter-argument: it applies to Section I agents too (a Kalman filter that converges faster is better).
 
@@ -375,22 +375,22 @@ Items 1–10 are addressed in v3 spike. Porting to src/ segments is the remainin
 
 The bottleneck is no longer idea generation — it is promotion, canonicalization, and scope-tightening:
 
-1. ~~**Section II backbone** — DONE.~~ All 20 segments promoted to src/ and marked draft in 01-act-core/OUTLINE.md.
+1. ~~**Section II backbone** — DONE.~~ All 20 segments promoted to src/ and marked draft in 01-aad-core/OUTLINE.md.
 
-2. ~~**Simulation results → ACT-native claims/appendices** — DONE.~~ adversarial-exponent-regimes, observation-gates-advantage, and per-dimension-persistence promoted to src/ as first-class segments.
+2. ~~**Simulation results → AAD-native claims/appendices** — DONE.~~ adversarial-exponent-regimes, observation-gates-advantage, and per-dimension-persistence promoted to src/ as first-class segments.
 
 3. ~~**Section III completion (2 segments)** — DONE.~~ `#team-persistence` and `#adversarial-tempo-advantage` promoted. Section III is now 13/13.
 
 4. ~~**Appendices — graph-structure-uniqueness and simulation-results** — DONE.~~ Both promoted. Appendices now 8/11 (3 remaining).
 
-5. **Logogenic agents scope decision (`03-logogenic-agents/`)** — directed separation fails for goal-conditioned LLMs (acknowledged). This is where the project wants to land. Need to decide: is it an approximate application of current ACT, or does it require a genuine coupled $M_t$/$G_t$ extension? Currently honest but strategically unresolved.
+5. **Logogenic agents scope decision (`03-logogenic-agents/`)** — directed separation fails for goal-conditioned LLMs (acknowledged). This is where the project wants to land. Need to decide: is it an approximate application of current AAD, or does it require a genuine coupled $M_t$/$G_t$ extension? Currently honest but strategically unresolved.
 
 6. **TST remaining 4 segments (`02-tst-core/`)** — strengthens operationalization story. `#software-epistemic-properties`, `#developer-as-act-agent`, `#code-quality-as-observation-infrastructure`, `#causal-discovery-from-git`. Source material in old-tst-via-tft-* files.
 
 7. **Remaining appendices (3)** — `#linear-ode-approximation`, `#intent-dag-development`, `#prior-art-positioning`. Lower urgency.
 
 8. **Vocabulary normalization pass** — LEXICON.md (created 2026-03-12) establishes new vocabulary: cycle phases, adaptive/agentic distinction, agent class hierarchy, logogenic/logozoetic. The following need updating to reflect the new terminology:
-   - **01-act-core/OUTLINE.md**: section titles still use old names (Adaptive Systems Under Uncertainty, Actuated Adaptive Systems, etc.)
+   - **01-aad-core/OUTLINE.md**: section titles still use old names (Adaptive Systems Under Uncertainty, Actuated Adaptive Systems, etc.)
    - **WORKBENCH.md**: segment tables still use old section names
    - **CLAUDE.md**: still references old section names
    - **Segment files**: "loop" used where "cycle" may now be more precise; cycle phase vocabulary (Prolepsis, Aisthesis, etc.) not yet planted in early segments (scope-condition, adaptive-tempo, agent-environment)
@@ -398,8 +398,8 @@ The bottleneck is no longer idea generation — it is promotion, canonicalizatio
    Lower urgency — LEXICON.md is canonical; these are consistency updates, not content changes. Best done during the segment review pass.
 
 ### Completed non-promotion work (2026-03-12)
-- **Systematic overclaiming sweep.** 12 fixes across 10 segment files: "formalizes X" / "formal content of" / "This IS" / "proves" language shifted to "formal analog" / "consistent with" / "captures the pattern" with empirical caveats. README, CLAUDE.md, 01-act-core/OUTLINE.md also updated: "first-principles mathematical theory" → "mathematical framework." Operationalization section added to README.
-- **README positioning overhaul.** "What ACT Contributes — Honest Calibration" with 5-category breakdown. Prior Art section expanded with explicit credit to borrowed mathematics. Operationalization section addresses the bridge gap across all sections.
+- **Systematic overclaiming sweep.** 12 fixes across 10 segment files: "formalizes X" / "formal content of" / "This IS" / "proves" language shifted to "formal analog" / "consistent with" / "captures the pattern" with empirical caveats. README, CLAUDE.md, 01-aad-core/OUTLINE.md also updated: "first-principles mathematical theory" → "mathematical framework." Operationalization section added to README.
+- **README positioning overhaul.** "What AAD Contributes — Honest Calibration" with 5-category breakdown. Prior Art section expanded with explicit credit to borrowed mathematics. Operationalization section addresses the bridge gap across all sections.
 
 
 ## Simulation Findings (Summary)
@@ -427,27 +427,27 @@ The track-b simulations (`msc/track-b-nonlinear-sims/`) are theory-shaping, not 
 - TF-06's uncertainty ratio principle empirically validated: 52% mismatch reduction with Riccati-optimal gain.
 
 ### Hafez bridge (Variant Hafez)
-- Bi-predictability $P$ measures coupling *architecture*; ACT mismatch measures *performance*. $P$ cannot detect adversarial dynamics.
+- Bi-predictability $P$ measures coupling *architecture*; AAD mismatch measures *performance*. $P$ cannot detect adversarial dynamics.
 - Agency has structural information cost: passive $P = 0.44$, active $P = 0.27$.
-- $H_b$ (backward uncertainty / agent opacity) has no direct ACT analog — potential gap for multi-agent work.
+- $H_b$ (backward uncertainty / agent opacity) has no direct AAD analog — potential gap for multi-agent work.
 
 
 ## Prior Work Migration Map
 
-All TFT and TST content has been copied into `old-*` files within their respective `src/` directories (`01-act-core/src/` and `02-tst-core/src/`). The priors/ submodules are now purely historical. The `old-` prefix means the content is prior work that hasn't been fully ACTualized yet — it may not conform to ACT formatting standards.
+All TFT and TST content has been copied into `old-*` files within their respective `src/` directories (`01-aad-core/src/` and `02-tst-core/src/`). The priors/ submodules are now purely historical. The `old-` prefix means the content is prior work that hasn't yet been fully converted — it may not conform to AAD formatting standards.
 
-### TFT → ACT Mapping
+### TFT → AAD Mapping
 
-| Old file | Content | ACT status |
+| Old file | Content | AAD status |
 |----------|---------|------------|
 | ~~old-tf-readme~~ | ~~TFT overview~~ | **Archived.** Superseded by CLAUDE.md, FORMAT.md. |
-| old-tf-00-notation-conventions | Symbol tables, conventions, adaptive loop phases, global assumptions, units, claim registry | **Partially absorbed.** Notation referenced by FORMAT.md. Adaptive loop phases, global assumptions table, claim registry format — ACT should have its own. |
+| old-tf-00-notation-conventions | Symbol tables, conventions, adaptive loop phases, global assumptions, units, claim registry | **Partially absorbed.** Notation referenced by FORMAT.md. Adaptive loop phases, global assumptions table, claim registry format — AAD should have its own. |
 | ~~old-tf-01-scope~~ | ~~Scope definitions~~ | **Archived.** → #agent-environment, #observation-function, #action-transition, #scope-condition. Coupling spectrum now in #causal-structure. |
 | ~~old-tf-02-causal-structure~~ | ~~Temporal arrow, chronica, Pearl's 3 levels, recursive update~~ | **Archived.** → #causal-structure, #pearl-causal-hierarchy, #chronica, #recursive-update. |
 | ~~old-tf-03-model~~ | ~~Model, IB, sufficiency~~ | **Archived.** → #agent-model, #information-bottleneck, #model-sufficiency. |
 | ~~old-tf-04-event-driven-dynamics~~ | ~~Event types, channels, rates~~ | **Archived.** → #event-driven-dynamics. |
 | ~~old-tf-05-mismatch-signal~~ | ~~Prediction error, Prop 5.1~~ | **Archived.** → #mismatch-signal, #mismatch-decomposition. |
-| old-tf-06-update-gain | Uncertainty ratio, domain validation, gain dynamics, overfitting as miscalibration | **Mostly absorbed** into #update-gain. Domain validation tables and gain dynamics (convergence, reset) richer than ACT segment — enrich then archive. |
+| old-tf-06-update-gain | Uncertainty ratio, domain validation, gain dynamics, overfitting as miscalibration | **Mostly absorbed** into #update-gain. Domain validation tables and gain dynamics (convergence, reset) richer than AAD segment — enrich then archive. |
 | ~~old-tf-07-action-selection~~ | ~~Action as model function, fluency~~ | **Archived.** → #action-selection. |
 | ~~old-tf-08-exploration-exploitation~~ | ~~CIY, unified policy objective, query actions~~ | **Archived.** → #causal-information-yield. |
 | ~~old-tf-09-deliberation-cost~~ | ~~Prop 9.1, deliberation threshold~~ | **Archived.** → #deliberation-cost. |
@@ -457,18 +457,18 @@ All TFT and TST content has been copied into `old-*` files within their respecti
 | ~~old-tf-appendix-b-operationalization~~ | ~~Estimation procedures for all TFT quantities~~ | **Absorbed.** → #operationalization. Ready to archive. |
 | ~~old-tf-appendix-c-kalman-example~~ | ~~Complete Kalman worked example~~ | **Absorbed.** → #worked-example-kalman. Ready to archive. |
 | ~~old-tf-appendix-d-rl-example~~ | ~~Nonstationary bandit worked example~~ | **Absorbed.** → #worked-example-bandit. Ready to archive. |
-| ~~old-tf-appendix-e-tft-core~~ | ~~Condensed formal chain~~ | **Archived.** Superseded by 01-act-core/OUTLINE.md. |
+| ~~old-tf-appendix-e-tft-core~~ | ~~Condensed formal chain~~ | **Archived.** Superseded by 01-aad-core/OUTLINE.md. |
 | old-tf-appendix-f-multi-agent | Communication gain, trust, distributed tempo, topology, game theory | **Partially absorbed.** → #communication-gain (F.2 core), #adversarial-destabilization (uses coupling model). **Still needed from F:** distributed tempo → #team-persistence (F.3), topology analysis (F.4), game-theoretic integration (F.5), trust transitivity details, falsification predictions (F.7). Extract as Section III segments get built. |
 | ~~old-tf-appendix-g-agent-identity~~ | ~~Non-forkability, clone problem~~ | **Archived.** → #agent-identity. |
 | ~~old-tf-recursive-update-derivation~~ | ~~Full uniqueness proof~~ | **Absorbed.** → #recursive-update-derivation. Ready to archive. |
-| old-tf-goal-intent-gap | What TFT lacked (goals/intent) | **Historical.** The gap ACT exists to fill. Can archive when comfortable. |
+| old-tf-goal-intent-gap | What TFT lacked (goals/intent) | **Historical.** The gap AAD exists to fill. Can archive when comfortable. |
 | old-tf-citations-catalog | TFT reference catalog | **Reference material.** Useful for paper writing. |
 | old-tf-novelty-analysis | What's novel in TFT | **Reference material.** Useful for positioning. |
 | old-tf-ooda-universal-pattern | OODA as universal adaptive pattern (v7) | **Historical.** Early framing. Can archive when comfortable. |
 
-### TST → ACT Mapping
+### TST → AAD Mapping
 
-| Old file | Content | ACT status |
+| Old file | Content | AAD status |
 |----------|---------|------------|
 | ~~old-tst-readme~~ | ~~TST overview~~ | **Archived.** Superseded by 02-tst-core/OUTLINE.md. |
 | ~~old-tst-01-temporal-optimality~~ | ~~T-01~~ | **Archived.** → #temporal-optimality (generalized). |
@@ -484,14 +484,14 @@ All TFT and TST content has been copied into `old-*` files within their respecti
 | ~~old-tst-11-decision-integration~~ | ~~T-11~~ | **Archived.** → #principled-decision-integration. |
 | ~~old-tst-12-continuous-operation~~ | ~~D-08, T-12~~ | **Archived.** → #system-availability, #continuous-operation. |
 
-### TST via-TFT Bridge Material → ACT Mapping
+### TST via-TFT Bridge Material → AAD Mapping
 
-| Old file | Content | ACT status |
+| Old file | Content | AAD status |
 |----------|---------|------------|
 | old-tst-via-tft-readme | Why the bridge exists, software's 6 unique epistemic properties, key open questions | **Partially absorbed.** The 6 properties → #software-epistemic-properties (outlined). Open questions (observation channel under agent control, 100% turnover, counterfactual replay) feed TST (`02-tst-core/`) and logogenic agents (`03-logogenic-agents/`). |
-| old-tst-via-tft-mapping | Detailed TFT→software mapping: environment decomposition, observation channels, action taxonomy, model, mismatch, gain, tempo, persistence, structural adaptation, multi-agent | **Richest single document for TST (`02-tst-core/`).** Action taxonomy (exploration/probe/query/modify/infrastructure-investment), three-part tempo decomposition, code-quality feedback loop, death spiral formalization — much not yet in ACT segments. |
-| old-tst-via-tft-causal-extensions | Explicit causal DAGs in software, interventional reasoning via tests, counterfactual evaluation via git, causal discovery from git, runtime causal models | **Partially absorbed** into #causal-discovery-from-git and #software-epistemic-properties. Detailed treatment of dependency DAG vs empirical DAG, Level 2 channel spectrum, counterfactual machine — largely not in ACT. |
-| old-tst-via-tft-reformulated-sketch | S-00 through S-14: complete outline of TST rebuilt on TFT/ACT foundations | **Valuable roadmap** for TST work (`02-tst-core/`). Shows how each TST claim maps to the ACT framework. The "what's new" and "what's removed" sections are useful for understanding the transformation. |
+| old-tst-via-tft-mapping | Detailed TFT→software mapping: environment decomposition, observation channels, action taxonomy, model, mismatch, gain, tempo, persistence, structural adaptation, multi-agent | **Richest single document for TST (`02-tst-core/`).** Action taxonomy (exploration/probe/query/modify/infrastructure-investment), three-part tempo decomposition, code-quality feedback loop, death spiral formalization — much not yet in AAD segments. |
+| old-tst-via-tft-causal-extensions | Explicit causal DAGs in software, interventional reasoning via tests, counterfactual evaluation via git, causal discovery from git, runtime causal models | **Partially absorbed** into #causal-discovery-from-git and #software-epistemic-properties. Detailed treatment of dependency DAG vs empirical DAG, Level 2 channel spectrum, counterfactual machine — largely not in AAD. |
+| old-tst-via-tft-reformulated-sketch | S-00 through S-14: complete outline of TST rebuilt on TFT/AAD foundations | **Valuable roadmap** for TST work (`02-tst-core/`). Shows how each TST claim maps to the AAD framework. The "what's new" and "what's removed" sections are useful for understanding the transformation. |
 | old-tst-via-tft-simulation-proposals | 6 simulation proposals ordered by value/effort | **Partially executed.** Sims 1-2 done (track-b). Sims 3-6 remain as future work. |
 
 
@@ -499,16 +499,16 @@ All TFT and TST content has been copied into `old-*` files within their respecti
 
 *Detailed cross-mapping in `msc/02-prior-art-assessment.md`.*
 
-**The landscape:** IBM (Miehling et al. 2025) calls for a systems theory of agentic AI — explicitly identifying the void. Hafez et al. (2026) provide a diagnostic metric (bi-predictability $P$) without dynamics or goals. No existing work fills the void. ACT is the most complete response identifiable.
+**The landscape:** IBM (Miehling et al. 2025) calls for a systems theory of agentic AI — explicitly identifying the void. Hafez et al. (2026) provide a diagnostic metric (bi-predictability $P$) without dynamics or goals. No existing work fills the void. AAD is the most complete response identifiable.
 
-- **Hafez** (bi-predictability $P$): complementary diagnostic, no goals/dynamics. $H_b$ has no ACT analog yet — matters for legibility/coordination.
-- **IBM 2025** (systems theory manifesto): calls for what ACT provides. Their open challenges (subgoal emergence, residual control rights) directly addressed by ACT.
+- **Hafez** (bi-predictability $P$): complementary diagnostic, no goals/dynamics. $H_b$ has no AAD analog yet — matters for legibility/coordination.
+- **IBM 2025** (systems theory manifesto): calls for what AAD provides. Their open challenges (subgoal emergence, residual control rights) directly addressed by AAD.
 - **BDI**: named the parts, no dynamics.
-- **Active inference**: closest competitor, different foundation. Expected free energy ≈ ACT's value + $\lambda \cdot \text{CIY}$ (structural isomorphism, different foundations). ACT grounds exploration in causal information specifically.
+- **Active inference**: closest competitor, different foundation. Expected free energy ≈ AAD's value + $\lambda \cdot \text{CIY}$ (structural isomorphism, different foundations). AAD grounds exploration in causal information specifically.
 
-**Lead with:** Section I (proved, simulated) + Section II (purposeful-agent derivation). These are where ACT has real substance. Sections III–V are "the theory extends to" demonstrations.
+**Lead with:** Section I (proved, simulated) + Section II (purposeful-agent derivation). These are where AAD has real substance. Sections III–V are "the theory extends to" demonstrations.
 
-**ACT's contributions — honest calibration:**
+**AAD's contributions — honest calibration:**
 
 1. **The integration itself.** Control theory + causal inference + information theory + agent architecture under one framework. The individual pieces are mostly known; the synthesis is the contribution. This is worth doing (Maxwell unified electricity and magnetism using known equations) but should not be presented as discovery of the component parts.
 2. **Novel formalizations of known patterns.** The satisfaction gap / control regret split applies an established pattern (approximation error vs. estimation error, model-class limitation vs. within-class suboptimality) to agent self-diagnosis with cascading corrective actions — the 2×2 diagnostic table and orient cascade ordering are genuinely new applications. The feedback loop as Level 2 engine is a useful bridge between Pearl and Sutton, with a real additional claim for non-RL agents (LLMs get interventional data from the loop despite no internal causal architecture).
@@ -530,7 +530,7 @@ All TFT and TST content has been copied into `old-*` files within their respecti
 
 1. **Subsume TFT as the adaptive-systems foundation.** The sector-condition/Lyapunov framework is primary; the linear ODE is pedagogical. TFT is absorbed, not extended.
 2. **Derive purposeful agency from first principles.** Start with the simplest abstract purposeful object and derive the need for richer structure from mathematical necessity — specifically from the causal hierarchy result (Bareinboim et al.).
-3. **Make TST a rigorous software-domain instantiation of ACT.** Every claim gets epistemic tagging; ungrounded assertions are derived, retagged, or removed.
+3. **Make TST a rigorous software-domain instantiation of AAD.** Every claim gets epistemic tagging; ungrounded assertions are derived, retagged, or removed.
 4. **Develop multi-agent dynamics to the degree needed for TST grounding.** Cooperative, adversarial, mixed. Not a complete multi-agent theory, but enough for software teams and adversarial dynamics.
 5. **Maintain claim-segment structure throughout.** One claim per file, strictly incremental.
 
@@ -551,8 +551,8 @@ All TFT and TST content has been copied into `old-*` files within their respecti
 2. Can the intent DAG handle temporal dependencies (action ordering)?
 3. How does 100% context turnover interact with the intent DAG? $O_t$ and $\Sigma_t$ may survive context death even when $M_t$ doesn't.
 4. Is there a derivable "comprehension vs action" optimal allocation from the dual-mismatch framework?
-5. Can Hafez's $P$ be derived from ACT quantities? Can $\Delta H$ (strategic legibility) enter multi-agent dynamics? ($H_b$ has no ACT analog yet.)
-6. Relationship between ACT and active inference's prior preferences?
+5. Can Hafez's $P$ be derived from AAD quantities? Can $\Delta H$ (strategic legibility) enter multi-agent dynamics? ($H_b$ has no AAD analog yet.)
+6. Relationship between AAD and active inference's prior preferences?
 7. Which physical domains have deterministic vs stochastic $\rho$?
 8. Cognitive cost of maintaining $\Sigma_t$ (the $\beta$ analog for strategy).
 9. P3→Markov step in graph uniqueness: does state-local revisability strictly force the Markov condition? See `msc/spike-graph-uniqueness.md`.
@@ -565,9 +565,9 @@ All TFT and TST content has been copied into `old-*` files within their respecti
 ## Validation (after theory stabilizes)
 
 - Extend nonlinear sims to characterize regime boundaries
-- Developer-as-ACT-agent on real codebase (software worked example)
+- Developer-as-AAD-agent on real codebase (software worked example)
 - Test DAG health metrics against real project outcome data
 - Multi-agent intent propagation simulation
 - TST testable predictions: specification bound calibration, coherence-coupling measurement
 - Simulations 3–6 from old-tst-via-tft-simulation-proposals (Sims 1–2 done as track-b)
-- **Flagship empirical agenda**: software unmaintainability threshold and measurement program. Formalize $\mathcal T_{\text{team}} \gt \rho_{\text{total}} / \lVert\delta_{\text{critical}}\rVert$ with observable precursors. This is where ACT could become decisively useful beyond elegant theory.
+- **Flagship empirical agenda**: software unmaintainability threshold and measurement program. Formalize $\mathcal T_{\text{team}} \gt \rho_{\text{total}} / \lVert\delta_{\text{critical}}\rVert$ with observable precursors. This is where AAD could become decisively useful beyond elegant theory.

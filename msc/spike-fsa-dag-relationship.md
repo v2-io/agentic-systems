@@ -1,6 +1,6 @@
 # Spike: FSA/Moore Machine vs. Strategy DAG
 
-**Status**: Exploratory spike — investigating the formal relationship between ACT's strategy DAG and Miller's Moore machine representation of agent strategies.
+**Status**: Exploratory spike — investigating the formal relationship between AAD's strategy DAG and Miller's Moore machine representation of agent strategies.
 
 **Date**: 2026-04-06
 
@@ -10,7 +10,7 @@
 
 ## Analysis
 
-ACT's strategy DAG and Miller's Moore machine formalize different aspects of what "strategy" means. They are not competing representations of the same object — they are representations of different objects that both get called "strategy."
+AAD's strategy DAG and Miller's Moore machine formalize different aspects of what "strategy" means. They are not competing representations of the same object — they are representations of different objects that both get called "strategy."
 
 **What each encodes.** The Moore machine $(S, A, \tilde{A}, \delta, \lambda, s_0)$ is a *reactive policy*: given the current state and the other agent's last action, produce an output and transition. It encodes a complete input-output mapping over an indefinite horizon. The strategy DAG $\Sigma_t = (V_t, E_t, p_t, \gamma_t)$ is a *causal plan*: a theory of which conditions must hold (AND/OR) and with what credence for the objective to be achieved. It encodes the agent's beliefs about the causal structure of its problem.
 
@@ -22,7 +22,7 @@ ACT's strategy DAG and Miller's Moore machine formalize different aspects of wha
 
 **Cycles vs. acyclicity.** The Moore machine's cycles (revisiting states) correspond to the DAG's time-unrolled iteration: the Moore machine state "cooperate" visited at $t=1$ and $t=5$ is a single node in the machine but two distinct nodes $v_{t=1}, v_{t=5}$ in the DAG. The DAG's acyclicity is not a restriction — it is a consequence of temporal indexing (#graph-structure-uniqueness). The Moore machine's cycles are not additional expressiveness — they are a compact encoding of repeated structure that the DAG represents explicitly. For finite horizons, both have equivalent expressive power over behavioral sequences; the Moore machine is exponentially more compact for repetitive strategies.
 
-**Composition.** Miller's product-automaton construction gives *exact* composition: two Moore machines interacting produce a meta-machine whose state space is $S_1 \times S_2$ and whose transitions are deterministic. ACT's composition closure (#composition-closure) uses an *approximate* dynamical homomorphism with closure defect $\varepsilon^*$. These address different questions. The product automaton asks: "what behavior does the pair produce?" (answer: another automaton, exactly). ACT asks: "can this pair be described as a single ACT agent?" (answer: approximately, with bounded error). If strategies were Moore machines, composition of *behavior* would become exact (product automaton), but composition of *agent descriptions* (model $M_t$, objective $O_t$, strategy $\Sigma_t$) would still require the approximate framework — the closure defect comes from projecting the joint internal state, not from composing the policy.
+**Composition.** Miller's product-automaton construction gives *exact* composition: two Moore machines interacting produce a meta-machine whose state space is $S_1 \times S_2$ and whose transitions are deterministic. AAD's composition closure (#composition-closure) uses an *approximate* dynamical homomorphism with closure defect $\varepsilon^*$. These address different questions. The product automaton asks: "what behavior does the pair produce?" (answer: another automaton, exactly). AAD asks: "can this pair be described as a single AAD agent?" (answer: approximately, with bounded error). If strategies were Moore machines, composition of *behavior* would become exact (product automaton), but composition of *agent descriptions* (model $M_t$, objective $O_t$, strategy $\Sigma_t$) would still require the approximate framework — the closure defect comes from projecting the joint internal state, not from composing the policy.
 
 ## Summary of Findings
 
@@ -34,4 +34,4 @@ ACT's strategy DAG and Miller's Moore machine formalize different aspects of wha
 | Cycles vs. acyclicity? | Equivalent for finite horizons; different encoding of the same temporal sequences. |
 | Would FSA strategies make composition exact? | Behavioral composition yes (product automaton). Agent-level composition still approximate ($\varepsilon^*$ from internal state projection). |
 
-**The core distinction**: a Moore machine is a *policy* (mapping from histories to actions); a strategy DAG is a *plan with a causal model* (theory of how actions produce outcomes). ACT needs the latter because adaptation requires knowing *why* you are doing something, not just *what* you are doing — otherwise there is no basis for strategy revision when $M_t$ changes.
+**The core distinction**: a Moore machine is a *policy* (mapping from histories to actions); a strategy DAG is a *plan with a causal model* (theory of how actions produce outcomes). AAD needs the latter because adaptation requires knowing *why* you are doing something, not just *what* you are doing — otherwise there is no basis for strategy revision when $M_t$ changes.

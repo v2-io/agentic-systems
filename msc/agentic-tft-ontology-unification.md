@@ -1,8 +1,8 @@
 # Ontology Unification: TFT × PROPRIUM × Memory Literature
 
-> **Origin**: `~/src/agentic-tft/10-ontology-unification.md` (Feb 2026 session, pre-ACT restructuring). TFT references should be read as ACT. PROPRIUM references point to `~/src/firmatum/`.
+> **Origin**: `~/src/agentic-tft/10-ontology-unification.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
-> **Relevance**: Bridge between ACT's mathematical vocabulary and PROPRIUM's engineering architecture. The mapping tables (PRINCIPIA/CHRONICA/MEMORATA/etc. ↔ $M_t$/$\mathcal{H}_t$/$\phi(\mathcal{H}_t)$/etc.) are the Rosetta Stone for `03-logogenic-agents/` and `04-logozoetic-agents/`. Depends on `~/src/firmatum/PROPRIUM-ONTOLOGY.md` and `PROPRIUM-ARCHITECTURE.md` for the PROPRIUM side. Known issues cataloged in `agentic-tft-review-response.md`.
+> **Relevance**: Bridge between AAD's mathematical vocabulary and PROPRIUM's engineering architecture. The mapping tables (PRINCIPIA/CHRONICA/MEMORATA/etc. ↔ $M_t$/$\mathcal{H}_t$/$\phi(\mathcal{H}_t)$/etc.) are the Rosetta Stone for `03-logogenic-agents/` and `04-logozoetic-agents/`. Depends on `~/src/firmatum/PROPRIUM-ONTOLOGY.md` and `PROPRIUM-ARCHITECTURE.md` for the PROPRIUM side. Known issues cataloged in `agentic-tft-review-response.md`.
 >
 > **Purpose**: One vocabulary for three frameworks. Every subsequent document in
 > this project should use these terms consistently. When a term from one framework

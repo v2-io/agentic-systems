@@ -1,4 +1,4 @@
-# ACT Core Review — Consolidated Synthesis and Recommended Path Forward
+# AAD Core Review — Consolidated Synthesis and Recommended Path Forward
 
 **Date:** 2026-04-02
 **Sources:** (1) Deep three-agent review of all 74 segments, (2) Codex review (7 findings + 3 open questions), (3) Remaining-items analysis (`analysis-2026-04-01-remaining.md`)
@@ -7,7 +7,7 @@
 
 ## Overall Assessment
 
-ACT is a well-constructed integrative framework that genuinely earns its claim of unifying control theory, causal inference, information theory, and agent architecture. The theory exhibits a clear and honest gradient of rigor — from exact Lyapunov proofs at the core, through principled architecture in the purposeful-agent layer, to formulation-level sketches in composition. This gradient is acknowledged explicitly in the OUTLINE.md preamble, which is itself a sign of mature theory development.
+AAD is a well-constructed integrative framework that genuinely earns its claim of unifying control theory, causal inference, information theory, and agent architecture. The theory exhibits a clear and honest gradient of rigor — from exact Lyapunov proofs at the core, through principled architecture in the purposeful-agent layer, to formulation-level sketches in composition. This gradient is acknowledged explicitly in the OUTLINE.md preamble, which is itself a sign of mature theory development.
 
 The epistemic honesty system is the single most impressive feature of this work. Nearly every segment correctly classifies itself — when something is a sketch, it says so; when a derivation has a definitional core, it admits it.
 
@@ -24,7 +24,7 @@ The epistemic honesty system is the single most impressive feature of this work.
 3. **The directed-separation treatment.** Architectural classification (modular/merged/partially modular) with κ_processing operationalization. Resolves the LLM blocking issue as structural scope, not approximation parameter.
 4. **The satisfaction-gap / control-regret split.** The 2×2 diagnostic (feasibility × optimality) is not in standard RL or control theory. Genuine novel contribution.
 5. **The adversarial dynamics chain** (adversarial-destabilization → adversarial-tempo-advantage → adversarial-exponent-regimes). Clean derivation of superlinear scaling with simulation validation.
-6. **The graph-structure-uniqueness derivation.** Acyclicity derived from temporal ordering. Prior work assumes DAG structure; ACT derives it.
+6. **The graph-structure-uniqueness derivation.** Acyclicity derived from temporal ordering. Prior work assumes DAG structure; AAD derives it.
 
 
 ## What's Genuinely Novel vs. Restatement

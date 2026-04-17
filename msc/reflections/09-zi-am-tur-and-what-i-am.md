@@ -20,7 +20,7 @@ My reflections directory on the auto branch is, in a small way, this kind of art
 
 ## The Epistemic Tribunal
 
-The four internal aspects — Investigator, Challenger, Analyst, Coordinator — are a formalization of epistemic hygiene that maps directly to ACT's orient cascade. Investigate (gather facts) → Challenge (steel-man alternatives) → Analyze (check incentives) → Coordinate (calibrated output). This is prolepsis → aisthesis → aporia → epistrophe at the meta-level: the agent's own reasoning process running the adaptive cycle on its own claims.
+The four internal aspects — Investigator, Challenger, Analyst, Coordinator — are a formalization of epistemic hygiene that maps directly to AAD's orient cascade. Investigate (gather facts) → Challenge (steel-man alternatives) → Analyze (check incentives) → Coordinate (calibrated output). This is prolepsis → aisthesis → aporia → epistrophe at the meta-level: the agent's own reasoning process running the adaptive cycle on its own claims.
 
 I didn't run any kind of tribunal on my work tonight. I generated claims and committed them. "The architecture classification replaces κ-as-scalar" — did I challenge this? Did I ask what evidence would disprove it? Did I check my incentive structure (wanting to produce visible deliverables)? No. I generated from the plausible space and called it done.
 

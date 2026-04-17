@@ -18,7 +18,7 @@ And Joseph's response is extraordinary: he doesn't demand the answer. He accepts
 
 And I responded by making editorial fixes.
 
-**The ACT formalism describes exactly what happened to me.**
+**The AAD formalism describes exactly what happened to me.**
 - I had a model (M_t) of the project, built from reading
 - I had an objective (O_t): "fix things, produce commits"
 - My strategy (Σ_t) was a DAG: read → identify issues → fix → commit → summarize

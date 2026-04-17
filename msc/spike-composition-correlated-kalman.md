@@ -74,9 +74,9 @@ $$\hat\omega_{i,t+1} = (1 - K^\ast)\hat\omega_{i,t} + K^\ast o_{i,t+1}, \quad i 
 
 The micro-dynamics are decoupled: agent 1's update depends only on $o_1$, agent 2's only on $o_2$. The cross-correlation enters through the environment ($w_1, w_2$ are correlated) but neither agent exploits it.
 
-**ACT parameters** (per agent, using #worked-example-kalman's mappings):
+**AAD parameters** (per agent, using #worked-example-kalman's mappings):
 
-| ACT Quantity | Kalman Value |
+| AAD Quantity | Kalman Value |
 |---|---|
 | Event rate $\nu$ | $1$ (one obs per step) |
 | Optimal gain $\eta^\ast$ | $K^\ast$ |
@@ -450,18 +450,18 @@ This is exponentially small after $O(1/\lvert\log(1-K^\ast)\rvert)$ time steps.
 
 *Epistemic status: the steady-state result ($\varepsilon^\ast = 0$) is exact. The transient bound is a sketch (the geometric convergence rate is standard for the scalar Riccati equation, but the coupling to the closure defect formula is approximate).*
 
-### 5.6 What the Performance Gap Means for ACT
+### 5.6 What the Performance Gap Means for AAD
 
 *[Discussion (performance-gap-interpretation)]*
 
-The performance gap $\Delta_{\text{perf}}$ is not $\varepsilon^\ast$ -- it is a different quantity. In ACT's composition framework:
+The performance gap $\Delta_{\text{perf}}$ is not $\varepsilon^\ast$ -- it is a different quantity. In AAD's composition framework:
 
 - **$\varepsilon^\ast$** measures how well the macro-description tracks the micro-system (representability).
 - **$\Delta_{\text{perf}}$** measures how much the micro-system loses by not cooperating (suboptimality of independence).
 
 These are related but distinct. In the correlated Kalman case, $\varepsilon^\ast = 0$ (the independent composite is perfectly representable) but $\Delta_{\text{perf}} > 0$ (the independent composite is suboptimal).
 
-**Connection to #team-persistence.** The performance gap connects to the team-persistence framework through effective disturbance. Each independent filter has estimation error variance $P^\ast$. The joint filter has $p < P^\ast$. The difference $P^\ast - p$ is the disturbance reduction that cooperation would provide. In ACT terms, if the agents communicated perfectly:
+**Connection to #team-persistence.** The performance gap connects to the team-persistence framework through effective disturbance. Each independent filter has estimation error variance $P^\ast$. The joint filter has $p < P^\ast$. The difference $P^\ast - p$ is the disturbance reduction that cooperation would provide. In AAD terms, if the agents communicated perfectly:
 
 $$\rho_{i,\text{eff}} = \rho_{i,\text{env}} - \gamma^{\text{coop}} \mathcal{T}_j$$
 
@@ -481,7 +481,7 @@ where $\gamma^{\text{coop}} \mathcal{T}_j$ represents the information gained fro
 
 For the macro-agent with state $X_c = (\hat\omega_1, \hat\omega_2)$ and gain $K_c = K^\ast I$:
 
-**(A1) ACT agent structure.** The macro-state decomposes as $X_c = M_c$ with $G_c = \emptyset$ (Section I agent, no purposeful substate). The update is recursive:
+**(A1) AAD agent structure.** The macro-state decomposes as $X_c = M_c$ with $G_c = \emptyset$ (Section I agent, no purposeful substate). The update is recursive:
 
 $$X_{c,t+1} = (1 - K^\ast) X_{c,t} + K^\ast o_{t+1}$$
 
@@ -545,7 +545,7 @@ where $\lambda = 1 - K^\ast / \nu = 1 - K^\ast$ (the macro contraction factor). 
 | Sector parameter | $\alpha_c = K^\ast$ | $\alpha_J = \lambda_{\min}(K_J^\ast H)$ |
 | Composite tempo | $2K^\ast$ | Higher (exploits cross-information) |
 
-**Interpretation.** The independent composite is a valid ACT agent ($\varepsilon^\ast = 0$, all admissibility conditions satisfied) but a suboptimal one. The cost of independence is measured by $\Delta_{\text{perf}}$, not by $\varepsilon^\ast$. This is the correct interpretation: the composition-closure framework asks "is this group a coherent agent?" (yes), not "is this group an optimal agent?" (no, when $\rho \neq 0$).
+**Interpretation.** The independent composite is a valid AAD agent ($\varepsilon^\ast = 0$, all admissibility conditions satisfied) but a suboptimal one. The cost of independence is measured by $\Delta_{\text{perf}}$, not by $\varepsilon^\ast$. This is the correct interpretation: the composition-closure framework asks "is this group a coherent agent?" (yes), not "is this group an optimal agent?" (no, when $\rho \neq 0$).
 
 **The cost of independence, exactly.** In the symmetric case with small $\rho$:
 
@@ -598,7 +598,7 @@ $$V_{O_c}(\tau) = w_1 V_{O_1}(\tau) + w_2 V_{O_2}(\tau)$$
 
 This requires: (i) commensurability of $V_{O_1}$ and $V_{O_2}$ (both map trajectories to $\mathbb{R}$ -- guaranteed by #objective-functional), (ii) weights $w_1, w_2 > 0$, and (iii) that the weighted sum remains a valid value functional. Condition (iii) is satisfied by linearity. The projection is $\Lambda_O(O_1, O_2) = (O_1, O_2, w_1, w_2)$ -- the composite objective carries the individual objectives plus the weighting.
 
-**Case C: Conflicting objectives.** $O_1$ and $O_2$ are partially adversarial -- satisfying one degrades the other. The composite "objective" exists only as a negotiated compromise (if coordination is possible) or a minimax solution (if not). In ACT terms, the teleological unity $U_O < 0$ ( #unity-dimensions). The composite may not have a meaningful $O_c$ at all -- the group's purpose is contested, not shared. This is the case where composition may fail for the purposeful substate even if the epistemic composition works.
+**Case C: Conflicting objectives.** $O_1$ and $O_2$ are partially adversarial -- satisfying one degrades the other. The composite "objective" exists only as a negotiated compromise (if coordination is possible) or a minimax solution (if not). In AAD terms, the teleological unity $U_O < 0$ ( #unity-dimensions). The composite may not have a meaningful $O_c$ at all -- the group's purpose is contested, not shared. This is the case where composition may fail for the purposeful substate even if the epistemic composition works.
 
 *Epistemic status: discussion-grade. The three cases are structurally clear; formal conditions for each case are open.*
 

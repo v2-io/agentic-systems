@@ -1,6 +1,6 @@
 # Intent DAG: Consolidated Formalism
 
-**Status**: Synthesis of three independent formalism attempts (track-a/00, track-a/02, track-a/03) plus the founding sketch (scratch/03). States what's settled, frames what's open. This is the canonical reference for future work on ACT's purposeful agency layer.
+**Status**: Synthesis of three independent formalism attempts (track-a/00, track-a/02, track-a/03) plus the founding sketch (scratch/03). States what's settled, frames what's open. This is the canonical reference for future work on AAD's purposeful agency layer.
 
 **Epistemic status**: The settled core is **[Plausible]** — structurally motivated, converged across independent attempts, internally consistent. The predictions are **[Speculative]** — non-obvious consequences that haven't been empirically tested. Open decisions are genuine design freedom, not gaps in understanding.
 
@@ -8,9 +8,9 @@
 
 ## 1. Formal Objects
 
-ACT's agent state has three components:
+AAD's agent state has three components:
 
-- **M_t** — reality model. The agent's compressed representation of how the world works. TFT (now absorbed into ACT) formalizes this completely: mismatch signal δ_t, update gain η*, adaptive tempo T, persistence condition.
+- **M_t** — reality model. The agent's compressed representation of how the world works. TFT (now absorbed into AAD) formalizes this completely: mismatch signal δ_t, update gain η*, adaptive tempo T, persistence condition.
 
 - **O_t** — objective. What the agent wants. A target state, region, or condition in state space S. The port. Simple object. The PID has this (setpoint r_t). The Kalman filter does not.
 
@@ -186,7 +186,7 @@ This is the worst observability along the path — the darkest point in the caus
 
 The cascade specifies the ORDER in which updates propagate. This is the formal content of Boyd's Orient — not just model updating, but the interaction between reality-understanding and strategy.
 
-    Step 1. Observation arrives: o_t Step 2. M_t update: δ_epistemic = o_t − ô_t; standard ACT machinery Step 3. Edge revision: for each edge (i,j) in Σ_t, update p_ij given
+    Step 1. Observation arrives: o_t Step 2. M_t update: δ_epistemic = o_t − ô_t; standard AAD machinery Step 3. Edge revision: for each edge (i,j) in Σ_t, update p_ij given
             the new M_t and any evidence about link i → j
     Step 4. Status propagation: recompute s_v for all nodes via §3 Step 5. Feasibility check: are terminal objectives still achievable?
             (aggregate confidence above threshold?)
@@ -379,7 +379,7 @@ The clean-slate variant (track-a/02) proposed:
 
 where ν_v is observation rate, η_v is effective gain, and ∂s_{v_t}/∂s_v is sensitivity of objective status to node v (computed from combination rules).
 
-And a persistence ODE mirroring ACT's adaptive-systems layer:
+And a persistence ODE mirroring AAD's adaptive-systems layer:
 
     d(Δ_G)/dt = −T_G · Δ_G + ρ_G(t)
 
@@ -450,4 +450,4 @@ P(root objective) already encodes conjunction fragility and disjunction robustne
 
 - **Simulation or empirical validation.** The predictions (§9) are testable but untested. Validation is Phase 4 work.
 
-- **The adaptive-systems foundation.** M_t dynamics, mismatch, gain, tempo, persistence — all inherited from TFT (now subsumed by ACT) and not repeated here. See priors/tft/ for the full treatment.
+- **The adaptive-systems foundation.** M_t dynamics, mismatch, gain, tempo, persistence — all inherited from TFT (now subsumed by AAD) and not repeated here. See priors/tft/ for the full treatment.

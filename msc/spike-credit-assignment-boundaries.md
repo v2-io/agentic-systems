@@ -10,9 +10,9 @@
 
 ---
 
-## 0. What Credit Assignment Means in ACT
+## 0. What Credit Assignment Means in AAD
 
-Credit assignment in ACT is the problem of decomposing an observed outcome at a DAG node into per-edge contributions, so that each edge's credence $p_{ij}$ can be updated appropriately. Formally:
+Credit assignment in AAD is the problem of decomposing an observed outcome at a DAG node into per-edge contributions, so that each edge's credence $p_{ij}$ can be updated appropriately. Formally:
 
 Given observation $o_t$ at some set of observable nodes $\mathcal{V}_{\text{obs}} \subseteq V_t$, compute, for each edge $(i,j) \in E_t$, a **signal** $\text{signal}(o_t, i, j) \in [0,1]$ that represents the evidential content of $o_t$ about the causal link $i \to j$.
 
@@ -86,7 +86,7 @@ More precisely, define the **identifiable subspace** $\mathcal{I}(\mathcal{V}_{\
 
 $$\dim(\mathcal{I}(\mathcal{V}_{\text{obs}})) \leq |\mathcal{V}_{\text{obs}}|$$
 
-**Consequences for ACT:**
+**Consequences for AAD:**
 1. Credit assignment for edges whose effects are pooled at unobservable nodes is not just computationally hard --- it is *information-theoretically impossible* without additional structure (prior information, structural constraints, or interventional data).
 2. Any credit-assignment scheme operating with fewer observations than edges must rely on prior beliefs to resolve the underdetermined directions. The quality of the attribution depends on prior quality, not just on the update algorithm.
 3. This is not a failure of the theory but a fundamental property of partial observability. The theory's response (#observability-dominance) is correct: unobservable edges are epistemically frozen, and the correct unit of analysis is the largest identifiable aggregate.
@@ -252,7 +252,7 @@ where $\Phi = \prod_k \theta_k$. For large $m$ (many parents), $\Phi \to 0$, and
 
 **When it breaks:** (a) Many parents at an AND-node with small $\Phi$ (bias dominates); (b) prior beliefs are far from truth (the prior-determined decomposition may be very wrong); (c) the agent needs per-edge precision, not just plan-level correctness.
 
-**Verdict.** Usable for ACT's purposes when combined with plan-level tracking as a fallback. The directional fidelity requirement is approximately satisfied when the agent has reasonable priors and moderate per-edge mismatch.
+**Verdict.** Usable for AAD's purposes when combined with plan-level tracking as a fallback. The directional fidelity requirement is approximately satisfied when the agent has reasonable priors and moderate per-edge mismatch.
 
 ### 3.2 Gradient-Based Attribution
 
@@ -361,7 +361,7 @@ This is a sampling-based approximation to the leave-one-out influence, not the S
 
 **Computational cost.** $O(|V| \cdot |E| \cdot k_{\text{iter}})$ per update, where $k_{\text{iter}}$ is the number of BP iterations to convergence.
 
-**Verdict.** BP/EP is the standard approximate inference toolkit. It subsumes proportional blame (which is one iteration of EP on the two-edge factor graph) and bounded-treewidth exact inference (which is BP on a junction tree). For ACT's purposes, EP is a reasonable implementation strategy, but it does not have the clean sector-condition characterization that the theory demands.
+**Verdict.** BP/EP is the standard approximate inference toolkit. It subsumes proportional blame (which is one iteration of EP on the two-edge factor graph) and bounded-treewidth exact inference (which is BP on a junction tree). For AAD's purposes, EP is a reasonable implementation strategy, but it does not have the clean sector-condition characterization that the theory demands.
 
 ### 3.5 Comparison of Approximation Schemes
 
@@ -372,7 +372,7 @@ This is a sampling-based approximation to the leave-one-out influence, not the S
 | MCTS sampling | N/A | Approximately | Not characterized | $O(N m (\lvert V\rvert + \lvert E\rvert))$ | Diagnostics, importance ranking |
 | Belief propagation / EP | Varies | Approximately | Not characterized | $O(\lvert V\rvert \lvert E\rvert k)$ | Complex posteriors, iterative refinement |
 
-**Recommendation for ACT.** The gradient-based scheme is the most principled because it (a) satisfies SA1, (b) has a characterizable sector parameter, and (c) directly leverages the Jacobian bridge (Prop B.5). Its weakness --- the condition-number penalty --- is the same penalty that Prop B.5b already identifies as inherent to coupled corrections. This is not an artifact of the approximation; it is the cost of credit assignment with partial observability.
+**Recommendation for AAD.** The gradient-based scheme is the most principled because it (a) satisfies SA1, (b) has a characterizable sector parameter, and (c) directly leverages the Jacobian bridge (Prop B.5). Its weakness --- the condition-number penalty --- is the same penalty that Prop B.5b already identifies as inherent to coupled corrections. This is not an artifact of the approximation; it is the cost of credit assignment with partial observability.
 
 ---
 
@@ -439,7 +439,7 @@ Combining Sections 4.1--4.3:
 | **2** (approximate) | Proportional blame / EP | Persistence + per-edge diagnostics (with bias) | Factor-graph inference |
 | **3** (exact) | Full Bayesian posterior | Persistence + optimal per-edge calibration | #P-hard (general case) |
 
-ACT's formal guarantees require only Level 0. Practical agents need at least Level 1 for adaptive behavior. Level 2 is the sweet spot for most applications. Level 3 is a mathematical ideal that is computationally unattainable in the general case.
+AAD's formal guarantees require only Level 0. Practical agents need at least Level 1 for adaptive behavior. Level 2 is the sweet spot for most applications. Level 3 is a mathematical ideal that is computationally unattainable in the general case.
 
 ---
 
@@ -451,39 +451,39 @@ RL faces the same problem: when a reward arrives at the end of an episode, which
 
 **Temporal difference (TD) learning.** TD($\lambda$) with eligibility traces assigns credit to past state-action pairs based on temporal recency. The eligibility trace $e_t(s, a)$ decays exponentially with time since the pair was visited. This is a heuristic that assumes "recent actions are more responsible" --- a temporal analog of proportional blame.
 
-- **ACT parallel**: The evidence-starvation effect (Props B.2, generalized) is the structural analog of eligibility-trace decay. Upstream edges (earlier in time) receive cleaner attribution than downstream edges, because their outcomes are observed first.
-- **What ACT can borrow**: The idea that credit should decay with causal distance (not just temporal distance) is more principled than TD's temporal-only decay. ACT's DAG structure provides the causal distance; the Jacobian $\mathbf{J}$ provides the sensitivity weighting.
+- **AAD parallel**: The evidence-starvation effect (Props B.2, generalized) is the structural analog of eligibility-trace decay. Upstream edges (earlier in time) receive cleaner attribution than downstream edges, because their outcomes are observed first.
+- **What AAD can borrow**: The idea that credit should decay with causal distance (not just temporal distance) is more principled than TD's temporal-only decay. AAD's DAG structure provides the causal distance; the Jacobian $\mathbf{J}$ provides the sensitivity weighting.
 
 **Policy gradient methods.** REINFORCE and its variants estimate $\nabla_\theta J(\theta)$ by $\mathbb{E}[\nabla_\theta \log \pi_\theta(a|s) \cdot R]$. This attributes the total reward $R$ to each parameter proportional to the score function $\nabla \log \pi$.
 
-- **ACT parallel**: The gradient-based attribution (Section 3.2) is the ACT analog of policy gradient. The Jacobian $\mathbf{J}$ plays the role of the score function, and the plan-level surprise $(y_G - \hat{P}_\Sigma)$ plays the role of the reward signal.
-- **What ACT can borrow**: Variance reduction techniques (baselines, advantage functions) from policy gradient literature could reduce the variance of the gradient-based edge update. A "baseline" for edge $(i,j)$ would be the average plan-value change when that edge is not the one being updated.
+- **AAD parallel**: The gradient-based attribution (Section 3.2) is the AAD analog of policy gradient. The Jacobian $\mathbf{J}$ plays the role of the score function, and the plan-level surprise $(y_G - \hat{P}_\Sigma)$ plays the role of the reward signal.
+- **What AAD can borrow**: Variance reduction techniques (baselines, advantage functions) from policy gradient literature could reduce the variance of the gradient-based edge update. A "baseline" for edge $(i,j)$ would be the average plan-value change when that edge is not the one being updated.
 
 **Hindsight credit assignment (HCA).** Recent RL work (Harutyunyan et al., 2019; Mesnard et al., 2021) develops methods that retrospectively attribute outcomes to specific actions using counterfactual reasoning: "what would have happened if a different action had been taken at time $k$?"
 
-- **ACT parallel**: This is exactly the leave-one-out influence computation in Section 3.3. The counterfactual "set $p_{ij} = 0$ vs. $p_{ij} = 1$" is the ACT version of "what if this edge didn't exist?"
-- **What ACT can borrow**: HCA's key insight is that counterfactual attribution is tractable when a model of the environment is available. Since $\Sigma_t$ IS the agent's model of its plan dynamics, model-based counterfactual attribution is natural.
+- **AAD parallel**: This is exactly the leave-one-out influence computation in Section 3.3. The counterfactual "set $p_{ij} = 0$ vs. $p_{ij} = 1$" is the AAD version of "what if this edge didn't exist?"
+- **What AAD can borrow**: HCA's key insight is that counterfactual attribution is tractable when a model of the environment is available. Since $\Sigma_t$ IS the agent's model of its plan dynamics, model-based counterfactual attribution is natural.
 
 ### 5.2 Causal Inference: Attribution Methods
 
 **Do-calculus and interventional queries.** Pearl's framework provides the gold standard for causal attribution: the effect of edge $(i,j)$ is $P(j \mid do(i)) - P(j \mid do(\neg i))$. This requires interventional data (or identifiability conditions that allow interventional conclusions from observational data).
 
-- **ACT connection**: Edge credences $p_{ij}$ are intended to approximate $P(j \mid do(i), M_t)$ (#strategy-dag, edge semantics). In intervention-rich domains (software, laboratory), the agent can directly estimate this via experiment. In confounded domains, the do-calculus provides conditions under which observational data suffice.
-- **Key insight for ACT**: The identifiability conditions from do-calculus (back-door criterion, front-door criterion) translate directly to observability conditions on the strategy DAG. A "back-door admissible" set in the DAG is a set of observable nodes that blocks confounding. This gives a formal criterion for when per-edge credences are identifiable from partial observations.
+- **AAD connection**: Edge credences $p_{ij}$ are intended to approximate $P(j \mid do(i), M_t)$ (#strategy-dag, edge semantics). In intervention-rich domains (software, laboratory), the agent can directly estimate this via experiment. In confounded domains, the do-calculus provides conditions under which observational data suffice.
+- **Key insight for AAD**: The identifiability conditions from do-calculus (back-door criterion, front-door criterion) translate directly to observability conditions on the strategy DAG. A "back-door admissible" set in the DAG is a set of observable nodes that blocks confounding. This gives a formal criterion for when per-edge credences are identifiable from partial observations.
 
 **Mediation analysis.** Decomposes the total effect of a treatment into direct and indirect effects (through mediating variables). The AND-chain $A \to B \to G$ is a mediation model where $B$ is the mediator.
 
-- **ACT connection**: The two-edge spike's observable-intermediate case IS mediation analysis: the total effect $\theta_1 \theta_2$ is decomposed into direct effects $\theta_1$ (on $B$) and $\theta_2$ ($B$ on $G$). The unobservable case is mediation analysis without observing the mediator --- known to be problematic in the causal inference literature as well.
+- **AAD connection**: The two-edge spike's observable-intermediate case IS mediation analysis: the total effect $\theta_1 \theta_2$ is decomposed into direct effects $\theta_1$ (on $B$) and $\theta_2$ ($B$ on $G$). The unobservable case is mediation analysis without observing the mediator --- known to be problematic in the causal inference literature as well.
 
 **Shapley-based methods (SHAP, Owen values).** Recent work in ML interpretability uses Shapley values to attribute model predictions to input features. Efficient approximation algorithms exist:
 - **KernelSHAP** (Lundberg & Lee, 2017): Approximates Shapley values by weighted least-squares regression over sampled coalitions. Complexity: $O(m \cdot N)$ where $N$ is the number of coalition samples.
 - **TreeSHAP** (Lundberg et al., 2020): Exact Shapley values for tree-structured models in $O(TLD^2)$. Exploits tree structure for efficient subset enumeration.
 
-- **What ACT can borrow**: KernelSHAP's sampling approach could be adapted for approximate edge attribution in strategy DAGs. The "model" being explained is the plan-value function $\hat{P}_\Sigma$, and the "features" are the edge credences. The Shapley value of each edge would give its "fair" contribution to plan value, providing a principled signal function. TreeSHAP's exploitation of tree structure is relevant to the tractable cases (Section 2).
+- **What AAD can borrow**: KernelSHAP's sampling approach could be adapted for approximate edge attribution in strategy DAGs. The "model" being explained is the plan-value function $\hat{P}_\Sigma$, and the "features" are the edge credences. The Shapley value of each edge would give its "fair" contribution to plan value, providing a principled signal function. TreeSHAP's exploitation of tree structure is relevant to the tractable cases (Section 2).
 
 ### 5.3 Summary of Literature Connections
 
-| ACT Problem | RL Analog | Causal Inference Analog | Tractable Method |
+| AAD Problem | RL Analog | Causal Inference Analog | Tractable Method |
 |-------------|-----------|------------------------|-----------------|
 | Per-edge attribution | Temporal credit assignment | Mediation analysis | Gradient (policy gradient) |
 | Unobservable intermediates | Partial observability / POMDPs | Unobserved mediators | Plan-level tracking / EM |
@@ -560,7 +560,7 @@ where the minimum is over the independent subproblems created by observable node
 4. **Fully observable intermediates**: trivial, per-edge independent. (Established.)
 5. **Trees**: chain decomposition between observable nodes. (Derived from existing results.)
 6. **Series-parallel DAGs**: recursive decomposition. (Hypothesis, structurally motivated.)
-7. **Bounded treewidth**: junction-tree exact inference. (Standard result, applied to ACT.)
+7. **Bounded treewidth**: junction-tree exact inference. (Standard result, applied to AAD.)
 
 ### Principled Approximations
 
@@ -578,8 +578,8 @@ where the minimum is over the independent subproblems created by observable node
 
 ### Literature Connections
 
-13. The gradient-based scheme is the ACT analog of policy gradient methods in RL.
-14. The Jacobian bridge (Prop B.5) is the ACT analog of the score function in REINFORCE.
+13. The gradient-based scheme is the AAD analog of policy gradient methods in RL.
+14. The Jacobian bridge (Prop B.5) is the AAD analog of the score function in REINFORCE.
 15. Do-calculus identifiability conditions translate to observability conditions on the strategy DAG.
 16. Sampling-based Shapley approximation (KernelSHAP) is applicable to approximate attribution.
 

@@ -3,11 +3,11 @@ slug: notation
 type: reference
 ---
 
-# ACT Notation and Conventions
+# AAD Notation and Conventions
 
-All symbols used in Agentic Cycle Theory, serving as a single authoritative reference. When a symbol appears in any ACT document, its meaning is as defined here unless explicitly noted otherwise.
+All symbols used in Adaptation and Actuation Dynamics, serving as a single authoritative reference. When a symbol appears in any AAD document, its meaning is as defined here unless explicitly noted otherwise.
 
-Notation conventions are adopted from TFT (`_obs/old-tf-00-notation-conventions.md`) with extensions for ACT's purposeful-agent machinery.
+Notation conventions are adopted from TFT (`_obs/old-tf-00-notation-conventions.md`) with extensions for AAD's purposeful-agent machinery.
 
 
 ## The Adaptive Cycle

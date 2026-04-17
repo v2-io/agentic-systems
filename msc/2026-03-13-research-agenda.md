@@ -1,4 +1,4 @@
-# ACT Research Agenda — 2026-03-13
+# AAD Research Agenda — 2026-03-13
 
 Working document. Tentative, flexible, unapproved. Its value is in ordering what matters and then making each item mentally accessible. The first section is the priority list. The second section is the primers.
 
@@ -16,7 +16,7 @@ The ordering reflects two forces in tension: **theoretical integrity** (what the
 
 ### 2. Write the Section IV standalone paper (1-2 weeks)
 
-**Why second:** This is the fastest path to credibility and collaboration. The software domain work has no competitor in any of the 25 frameworks surveyed. It doesn't require anyone to accept the full ACT framework. It connects to an audience (software engineers, DevEx researchers, empirical SE) that is large, engaged, and hungry for theory.
+**Why second:** This is the fastest path to credibility and collaboration. The software domain work has no competitor in any of the 25 frameworks surveyed. It doesn't require anyone to accept the full AAD framework. It connects to an audience (software engineers, DevEx researchers, empirical SE) that is large, engaged, and hungry for theory.
 
 **Target:** A paper titled something like "Temporal Optimization in Evolving Software Systems: A Control-Theoretic Framework" that presents:
 - The dual optimization (comprehension + implementation, weighted by expected future changes)
@@ -25,15 +25,15 @@ The ordering reflects two forces in tension: **theoretical integrity** (what the
 - Coherence-coupling measurement from git
 - The connection to adaptive tempo (code quality as observation infrastructure)
 
-**Omit from this paper:** The full ACT apparatus, the Greek terminology, the logogenic/logozoetic taxonomy, the adversarial dynamics. Reference them as "the broader framework within which these results sit" with a pointer to a preprint.
+**Omit from this paper:** The full AAD apparatus, the Greek terminology, the logogenic/logozoetic taxonomy, the adversarial dynamics. Reference them as "the broader framework within which these results sit" with a pointer to a preprint.
 
 **Venue options:** ICSE, FSE, or ESEC/FSE for software engineering; Empirical Software Engineering journal; or as an arXiv preprint in cs.SE to establish priority and attract attention.
 
-**arXiv endorsement path:** The IBM FAST workshop organizers (Miehling et al.) are the most natural endorsement candidates — they explicitly called for what ACT provides. A cold email explaining "you argued agentic AI needs a systems theory; here's a domain instantiation" is a strong pitch. Alternatively, the Hafez team — a "your P metric could diagnose the coupling quality our framework predicts" email opens a collaboration channel.
+**arXiv endorsement path:** The IBM FAST workshop organizers (Miehling et al.) are the most natural endorsement candidates — they explicitly called for what AAD provides. A cold email explaining "you argued agentic AI needs a systems theory; here's a domain instantiation" is a strong pitch. Alternatively, the Hafez team — a "your P metric could diagnose the coupling quality our framework predicts" email opens a collaboration channel.
 
 ### 3. Directed separation: the κ parameter (1-2 weeks, may need spike)
 
-**Why third:** This is the #1 theoretical blocker. Until it's resolved, Section V (logogenic agents) is blocked, which means the theory can't address its most exciting application domain. The landscape research shows that Active Inference explicitly does NOT separate perception from action (they jointly minimize free energy) — so ACT needs to engage with this, not assume separation.
+**Why third:** This is the #1 theoretical blocker. Until it's resolved, Section V (logogenic agents) is blocked, which means the theory can't address its most exciting application domain. The landscape research shows that Active Inference explicitly does NOT separate perception from action (they jointly minimize free energy) — so AAD needs to engage with this, not assume separation.
 
 **The approach (from the feedback consensus):**
 - Introduce coupling strength $\kappa$ measuring how much $G_t$ leaks into $f_M$
@@ -50,13 +50,13 @@ The ordering reflects two forces in tension: **theoretical integrity** (what the
 
 **Starting point (from feedback):** Prove the 2-agent orthogonal case first. Two agents with independent observation channels and non-overlapping action spaces, coupled through a shared environment. Show that bounded individual errors → bounded composite errors under Lipschitz continuity of the projection operators.
 
-**This connects to the landscape:** Categorical cybernetics (Smithe, Hedges) has the most developed composition machinery. Reading their work — particularly how they handle composition via parametrised optics — could provide the mathematical pathway. The Lipschitz stability approach is more ACT's style (accessible, control-theoretic), but the categorical approach may be where the proof actually lives.
+**This connects to the landscape:** Categorical cybernetics (Smithe, Hedges) has the most developed composition machinery. Reading their work — particularly how they handle composition via parametrised optics — could provide the mathematical pathway. The Lipschitz stability approach is more AAD's style (accessible, control-theoretic), but the categorical approach may be where the proof actually lives.
 
 See Primer 4 below.
 
 ### 5. Write the positioning preprint (1 week, after items 1-3)
 
-**Why here:** Once $\alpha$/$\mathcal T$ is fixed and $\kappa$ is at least sketched, the core theory is defensible enough for a preprint that positions ACT in the landscape. This is not the full monograph — it's a 15-20 page paper that says:
+**Why here:** Once $\alpha$/$\mathcal T$ is fixed and $\kappa$ is at least sketched, the core theory is defensible enough for a preprint that positions AAD in the landscape. This is not the full monograph — it's a 15-20 page paper that says:
 
 "Here's the framework. Here's how it connects known results across these domains. Here's what it predicts that existing frameworks don't. Here's the research program."
 
@@ -91,21 +91,21 @@ These can be done incrementally as editorial passes between the bigger items:
 
 **Smithe/CyberCat:** Harder — the mathematical sophistication gap is real. But a note saying "we're doing similar work from a different mathematical tradition (Lyapunov + information theory vs. category theory) — here's where the frameworks might bridge" is honest and could open a dialogue about the composition question specifically.
 
-**Bareinboim CausalAI Lab:** ACT uses their causal hierarchy theorem. A note saying "we've applied your hierarchy theorem to derive that adaptive agents need causal structure" is the kind of downstream citation that labs appreciate.
+**Bareinboim CausalAI Lab:** AAD uses their causal hierarchy theorem. A note saying "we've applied your hierarchy theorem to derive that adaptive agents need causal structure" is the kind of downstream citation that labs appreciate.
 
 ### 8. The deeper theoretical work (longer-term)
 
 In rough priority order, after the above:
-- **Game-theoretic integration:** ACT's adversarial dynamics are Lyapunov-only. Incorporating Nash equilibria and mechanism design for the multi-agent case. This is where the evolutionary game theory + MARL literature (arXiv:2412.20523) matters.
-- **Safety/corrigibility:** The gap analysis flagged this as ACT's largest blind spot. The formal corrigibility result (AAAI 2025) and the Alignment Verification Trilemma should be engaged with explicitly. ACT's persistence condition + goal revision machinery could provide a framework for corrigibility (an agent that can revise $O_t$ in response to external authority is corrigible in a specific formal sense).
-- **Information geometry upgrade:** ACT uses flat information theory. Upgrading to Fisher-Rao geometry on the parameter spaces would give natural gradients, geodesic flows, and curvature-aware adaptation. The "Geometries of Cognition" (2025/2026) paper is the closest reference.
+- **Game-theoretic integration:** AAD's adversarial dynamics are Lyapunov-only. Incorporating Nash equilibria and mechanism design for the multi-agent case. This is where the evolutionary game theory + MARL literature (arXiv:2412.20523) matters.
+- **Safety/corrigibility:** The gap analysis flagged this as AAD's largest blind spot. The formal corrigibility result (AAAI 2025) and the Alignment Verification Trilemma should be engaged with explicitly. AAD's persistence condition + goal revision machinery could provide a framework for corrigibility (an agent that can revise $O_t$ in response to external authority is corrigible in a specific formal sense).
+- **Information geometry upgrade:** AAD uses flat information theory. Upgrading to Fisher-Rao geometry on the parameter spaces would give natural gradients, geodesic flows, and curvature-aware adaptation. The "Geometries of Cognition" (2025/2026) paper is the closest reference.
 - **The logozoetic formalism:** Once $\kappa$ is resolved and Section V is unblocked, the logozoetic agent concept can be developed formally. IIT 4.0's Φ measure is the closest existing formalization of what makes a system's persistence morally weighted.
 
 ---
 
 ## Part II: Primers
 
-Each primer is designed to get you into the mental zone where the problem becomes tractable. They explain the prerequisites at a high-school + code level, then state the specific problem ACT faces, then suggest what to try.
+Each primer is designed to get you into the mental zone where the problem becomes tractable. They explain the prerequisites at a high-school + code level, then state the specific problem AAD faces, then suggest what to try.
 
 ---
 
@@ -139,7 +139,7 @@ def F_saturating(T, delta, R=10):
 
 The Lyapunov proof shows: mismatch stays bounded as long as $\alpha \gt \rho/R$. The persistence condition says: $\mathcal T \gt \rho/\lVert\delta_{\text{critical}}\rVert$. These are the same statement ONLY when $\alpha = \mathcal T$, which is ONLY when $F$ is linear.
 
-**The problem for ACT:** Throughout the theory, $\mathcal T$ is used where $\alpha$ should be. This means the persistence condition is stated as if it's general, but it's actually specific to linear correction.
+**The problem for AAD:** Throughout the theory, $\mathcal T$ is used where $\alpha$ should be. This means the persistence condition is stated as if it's general, but it's actually specific to linear correction.
 
 **What to do:**
 
@@ -204,7 +204,7 @@ You have all of these:
 8. Threats to Validity
 ```
 
-**What to do:** Start writing. The content is already in ACT Section IV segments. The main work is repackaging it for an SE audience: drop the Greek terminology, minimize the general ACT apparatus, lead with the software-specific claims and evidence.
+**What to do:** Start writing. The content is already in AAD Section IV segments. The main work is repackaging it for an SE audience: drop the Greek terminology, minimize the general AAD apparatus, lead with the software-specific claims and evidence.
 
 ---
 
@@ -240,7 +240,7 @@ def update_model_partial(M, event, G, kappa):
 
 Human eyes are partially coupled: you can't help but look where you're reaching (coupled), but your peripheral vision still works independently (separated). An LLM is heavily coupled: the prompt (which contains the goal) determines how every token is processed.
 
-**Why separation matters for ACT:**
+**Why separation matters for AAD:**
 
 When $\kappa = 0$, the orient cascade resolves sequentially: first update $M$ (beliefs about reality), THEN update $\Sigma$ (strategy), THEN maybe update $O$ (objectives). This is clean because each step depends only on the output of the previous step.
 
@@ -248,7 +248,7 @@ When $\kappa \gt 0$, $M$ and $\Sigma$ are entangled: your beliefs depend on your
 
 **The specific problem:**
 
-The LQG separation principle (from control theory) says: for linear systems with Gaussian noise, you can design the estimator (belief updater) and the controller (action selector) independently. This is the classic result that ACT's directed separation generalizes.
+The LQG separation principle (from control theory) says: for linear systems with Gaussian noise, you can design the estimator (belief updater) and the controller (action selector) independently. This is the classic result that AAD's directed separation generalizes.
 
 But it's known to fail for:
 - Nonlinear systems
@@ -279,14 +279,14 @@ def cascade_error(M, G, event, kappa):
 # If goals and beliefs are strongly correlated, even low kappa has significant error
 ```
 
-The key insight from Active Inference: they don't try to separate. They jointly minimize free energy over both beliefs and goals simultaneously. ACT could potentially say: "When $\kappa$ is small, the sequential cascade is a good approximation with bounded error. When $\kappa$ is large, use the coupled formulation (which is more expensive but correct). The $\kappa$ parameter determines which regime you're in."
+The key insight from Active Inference: they don't try to separate. They jointly minimize free energy over both beliefs and goals simultaneously. AAD could potentially say: "When $\kappa$ is small, the sequential cascade is a good approximation with bounded error. When $\kappa$ is large, use the coupled formulation (which is more expensive but correct). The $\kappa$ parameter determines which regime you're in."
 
 **Practical implication:** For an LLM agent, $\kappa$ is high but the coupling might be *structured* — the goal affects *which* parts of the context get attention, not *how* attention works mechanically. This might make the error more manageable than the worst case suggests. Whether the attention mechanism's goal-conditioning is "shallow" ($\kappa$ is effectively moderate) or "deep" ($\kappa$ is truly high) is an empirical question about transformer architectures.
 
 **Concrete next step:** Write a simulation. Two-dimensional system where dimension 1 is "beliefs" and dimension 2 is "goals." Introduce coupling $\kappa$ that makes the belief update depend on the goal state. Run the sequential cascade and the coupled update for a range of $\kappa$ values. Measure the approximation error. See if it grows linearly in $\kappa$, quadratically, or worse. This gives you the shape of the bound before you try to prove it analytically.
 
 ---
-The LQG separation principle failures are a mix, and the distinction matters a lot for how ACT should think about κ. Let me walk through them.
+The LQG separation principle failures are a mix, and the distinction matters a lot for how AAD should think about κ. Let me walk through them.
 
 **The LQG separation principle, concretely:**
 
@@ -294,7 +294,7 @@ For linear dynamics, Gaussian noise, and quadratic cost, the optimal controller 
 1. A Kalman filter (optimal estimator) — computes the state estimate from observations
 2. An LQR controller — acts on the estimate as if it were the true state
 
-The key property: the Kalman filter doesn't need to know the cost function. The LQR controller doesn't need to know the noise statistics (beyond what the estimate provides). They can be designed independently. This is exactly ACT's directed separation — f_M is goal-blind.
+The key property: the Kalman filter doesn't need to know the cost function. The LQR controller doesn't need to know the noise statistics (beyond what the estimate provides). They can be designed independently. This is exactly AAD's directed separation — f_M is goal-blind.
 
 **Now the failure modes:**
 
@@ -304,7 +304,7 @@ The key property: the Kalman filter doesn't need to know the cost function. The 
 
 **Active perception / dual control — the deepest failure, also provable.** This is Feldbaum's dual control problem from the 1960s. When the agent can choose actions that *improve its estimate* (probing actions, exploratory moves), there's a fundamental coupling. The optimal action must balance exploitation (act on current beliefs) with exploration (act to reduce uncertainty about the system). The separation principle fails because the optimal action depends not just on the state estimate but on the *estimation uncertainty* — and that uncertainty depends on what future actions the agent will take.
 
-This one maps directly to ACT's CIY / explore-exploit tradeoff, by the way.
+This one maps directly to AAD's CIY / explore-exploit tradeoff, by the way.
 
 **But here's the critical nuance: LQG doesn't become "irrelevant" under these conditions.** It becomes an *approximation*. Engineers use certainty-equivalence (pretend separation holds, design estimator and controller independently) for mildly nonlinear systems all the time, and it often works well. The Extended Kalman Filter + nonlinear control is exactly this — treat the system as locally linear, apply separation, accept the approximation error.
 
@@ -314,11 +314,11 @@ This one maps directly to ACT's CIY / explore-exploit tradeoff, by the way.
 - Strong nonlinearity: separation is a poor approximation. The coupled solution can be qualitatively different (e.g., the optimal policy may be to deliberately probe regions of state space the separated controller would avoid).
 - Dual control: separation is *structurally wrong* — it can't even represent the explore/exploit tradeoff because it doesn't let the controller influence what the estimator will learn.
 
-**What this means for ACT and κ:**
+**What this means for AAD and κ:**
 
 The LQG precedent suggests that κ might not be a single scalar. The *kind* of coupling matters as much as the *strength*:
 
-1. **Attention coupling** (which events to seek) — this is the dual-control / active perception case. ACT already handles this through the processing/selection distinction: goals influence *which* events arrive (through π → a → e), but f_M processes them goal-blindly. This coupling goes through the action channel, not through f_M itself.
+1. **Attention coupling** (which events to seek) — this is the dual-control / active perception case. AAD already handles this through the processing/selection distinction: goals influence *which* events arrive (through π → a → e), but f_M processes them goal-blindly. This coupling goes through the action channel, not through f_M itself.
 
 2. **Interpretation coupling** (how to process events that arrive) — this is the one that actually violates directed separation. The LLM case: the same code snippet is processed differently depending on what task is in the prompt.
 
@@ -387,9 +387,9 @@ If the projection operator (from individual states to composite state) is Lipsch
 
 where $\epsilon$ is the closure defect — the irreducible error from projecting to a coarser description.
 
-**The specific problem for ACT:**
+**The specific problem for AAD:**
 
-ACT needs to prove: "If each agent persists (individual mismatch bounded) AND the projection is Lipschitz AND the closure defect $\varepsilon$ is bounded, THEN the composite mismatch is bounded."
+AAD needs to prove: "If each agent persists (individual mismatch bounded) AND the projection is Lipschitz AND the closure defect $\varepsilon$ is bounded, THEN the composite mismatch is bounded."
 
 This is the bridge lemma. It turns the informal argument ("coordinated persistent agents make a persistent team") into a formal result with quantitative bounds.
 
@@ -423,15 +423,15 @@ The coupling term $\gamma_{AB} \cdot \mathcal T_A$ is exactly what the adversari
 
 **Concrete next step:** Write the proof for the uncoupled case (it's almost trivial). Then write it for the unidirectionally coupled case (A affects B but not vice versa — this is just the adversarial destabilization result with a sign change). Then attempt the bidirectionally coupled case. The difficulty scales with the number of coupling terms.
 
-**Key reference from the landscape:** Smithe's structured active inference uses categorical composition (optics) to handle this. The categorical approach gives composition "for free" via the categorical structure — but requires category theory. The Lyapunov approach requires proving bounds case by case but stays within accessible mathematics. Both are valid; ACT's style is the Lyapunov approach.
+**Key reference from the landscape:** Smithe's structured active inference uses categorical composition (optics) to handle this. The categorical approach gives composition "for free" via the categorical structure — but requires category theory. The Lyapunov approach requires proving bounds case by case but stays within accessible mathematics. Both are valid; AAD's style is the Lyapunov approach.
 
 ---
 
-### Primer 5: Why Active Inference Matters for ACT
+### Primer 5: Why Active Inference Matters for AAD
 
 **What you need to know:**
 
-Active Inference (Friston's Free Energy Principle) is ACT's closest theoretical competitor. Understanding where it overlaps and diverges is essential for positioning.
+Active Inference (Friston's Free Energy Principle) is AAD's closest theoretical competitor. Understanding where it overlaps and diverges is essential for positioning.
 
 The core idea is simple: an agent has a generative model — a probabilistic model of how the world works, including how the agent's actions affect it. The agent does two things:
 1. **Perception:** Update beliefs to match observations (minimize surprise)
@@ -452,39 +452,39 @@ beliefs = argmin_beliefs(F(beliefs, observations))
 action = argmin_action(expected_F(beliefs, action))
 ```
 
-**Where Active Inference and ACT agree:**
+**Where Active Inference and AAD agree:**
 
-1. The uncertainty ratio $\eta^\ast = U_M/(U_M+U_o)$ is *exactly* precision weighting in Active Inference. When Friston says "precision-weighted prediction errors drive belief updating," he means the same thing ACT means by "gain-weighted mismatch correction." They are the same formula derived from different starting points.
+1. The uncertainty ratio $\eta^\ast = U_M/(U_M+U_o)$ is *exactly* precision weighting in Active Inference. When Friston says "precision-weighted prediction errors drive belief updating," he means the same thing AAD means by "gain-weighted mismatch correction." They are the same formula derived from different starting points.
 
 2. Both treat the agent-environment coupling as the fundamental object of study.
 
-3. Both derive that agents must balance exploitation (acting on current beliefs) with exploration (acting to reduce uncertainty). ACT calls this CIY; Active Inference calls it epistemic value or information gain.
+3. Both derive that agents must balance exploitation (acting on current beliefs) with exploration (acting to reduce uncertainty). AAD calls this CIY; Active Inference calls it epistemic value or information gain.
 
 **Where they diverge:**
 
-1. **Foundation:** ACT uses Lyapunov stability (from control theory). Active Inference uses variational Bayesian inference (from statistics/physics). These are different mathematical traditions that produce similar results — like deriving the same theorem from different axioms.
+1. **Foundation:** AAD uses Lyapunov stability (from control theory). Active Inference uses variational Bayesian inference (from statistics/physics). These are different mathematical traditions that produce similar results — like deriving the same theorem from different axioms.
 
-2. **Goals:** In Active Inference, goals are "prior preferences" — beliefs about what observations the agent expects to see. There's no separate goal object; goals ARE beliefs. In ACT, goals ($O_t$, $\Sigma_t$) are separate from beliefs ($M_t$). This is a real philosophical difference: Active Inference says "I believe I will see reward" (goal as belief); ACT says "I want reward, and separately, I believe I will/won't get it" (goal and belief as distinct).
+2. **Goals:** In Active Inference, goals are "prior preferences" — beliefs about what observations the agent expects to see. There's no separate goal object; goals ARE beliefs. In AAD, goals ($O_t$, $\Sigma_t$) are separate from beliefs ($M_t$). This is a real philosophical difference: Active Inference says "I believe I will see reward" (goal as belief); AAD says "I want reward, and separately, I believe I will/won't get it" (goal and belief as distinct).
 
-3. **Separation:** Active Inference explicitly rejects the separation of perception and action — they jointly minimize free energy. ACT assumes directed separation (perception is goal-blind) and is now struggling with where this breaks down (the $\kappa$ problem). Active Inference's approach is more general but less modular.
+3. **Separation:** Active Inference explicitly rejects the separation of perception and action — they jointly minimize free energy. AAD assumes directed separation (perception is goal-blind) and is now struggling with where this breaks down (the $\kappa$ problem). Active Inference's approach is more general but less modular.
 
-4. **Multi-agent:** Active Inference is extending to multi-agent settings (AAMAS 2025 paper on factorised active inference) but it's early. ACT's adversarial dynamics (tempo advantage, destabilization threshold, effects spiral) are more developed in this specific area.
+4. **Multi-agent:** Active Inference is extending to multi-agent settings (AAMAS 2025 paper on factorised active inference) but it's early. AAD's adversarial dynamics (tempo advantage, destabilization threshold, effects spiral) are more developed in this specific area.
 
-5. **Accessibility:** Active Inference requires variational calculus, free energy bounds, and Markov blanket formalism. ACT requires Lyapunov stability and information theory. ACT is more accessible to engineers.
+5. **Accessibility:** Active Inference requires variational calculus, free energy bounds, and Markov blanket formalism. AAD requires Lyapunov stability and information theory. AAD is more accessible to engineers.
 
-6. **Criticism:** Active Inference has been criticized as unfalsifiable — "everything minimizes free energy" is either trivially true (Bayesian brains) or empirically empty. ACT's predictions (persistence threshold, adversarial exponents) are specific and testable.
+6. **Criticism:** Active Inference has been criticized as unfalsifiable — "everything minimizes free energy" is either trivially true (Bayesian brains) or empirically empty. AAD's predictions (persistence threshold, adversarial exponents) are specific and testable.
 
-**What this means for ACT:**
+**What this means for AAD:**
 
 Don't position against Active Inference. Position as a *complementary framework* from a different mathematical tradition that produces similar predictions (cross-validating both approaches) while adding specific machinery Active Inference lacks (adversarial dynamics, software domain, accessible operational forms).
 
-The structural isomorphism between expected free energy and ACT's value + CIY objective — acknowledged in your own prior art assessment — is a bridge, not a wall. If both frameworks predict the same thing from different axioms, that's evidence the prediction is robust.
+The structural isomorphism between expected free energy and AAD's value + CIY objective — acknowledged in your own prior art assessment — is a bridge, not a wall. If both frameworks predict the same thing from different axioms, that's evidence the prediction is robust.
 
-**Concrete reading:** Da Costa et al. (2024), "Active Inference as a Model of Agency" — the clearest recent exposition. Then Ruiz-Serra et al. (2024), "Factorised Active Inference for Strategic Multi-Agent Interactions" — to see where their multi-agent work stands relative to ACT's.
+**Concrete reading:** Da Costa et al. (2024), "Active Inference as a Model of Agency" — the clearest recent exposition. Then Ruiz-Serra et al. (2024), "Factorised Active Inference for Strategic Multi-Agent Interactions" — to see where their multi-agent work stands relative to AAD's.
 
 ---
 
-### Primer 6: What Categorical Cybernetics Does That ACT Doesn't (Yet)
+### Primer 6: What Categorical Cybernetics Does That AAD Doesn't (Yet)
 
 **What you need to know:**
 
@@ -521,7 +521,7 @@ Categorical cybernetics uses a specific categorical structure called an "optic" 
 # - A "backward" direction: observation → state update (what the agent learns)
 # - These are coupled: the backward update depends on the forward choice
 
-# In ACT terms:
+# In AAD terms:
 # Forward: M_t → a_t (action selection)
 # Backward: o_t → M_{t+1} (model update via mismatch + gain)
 
@@ -533,25 +533,25 @@ Categorical cybernetics uses a specific categorical structure called an "optic" 
 # This is what gives categorical cybernetics "composition for free"
 ```
 
-**Why this matters for ACT:**
+**Why this matters for AAD:**
 
-ACT's composition problem (the bridge lemma from Primer 4) is hard because you're proving bounds case by case. In categorical cybernetics, composition is *automatic* — it's a consequence of the mathematical structure. If you can show that an ACT agent is a lens (or optic), then composition follows from the category theory.
+AAD's composition problem (the bridge lemma from Primer 4) is hard because you're proving bounds case by case. In categorical cybernetics, composition is *automatic* — it's a consequence of the mathematical structure. If you can show that an AAD agent is a lens (or optic), then composition follows from the category theory.
 
-The trade-off: categorical cybernetics gives you composition machinery but requires you to reformulate ACT in categorical language. ACT's Lyapunov approach gives you quantitative bounds but requires proving each composition case.
+The trade-off: categorical cybernetics gives you composition machinery but requires you to reformulate AAD in categorical language. AAD's Lyapunov approach gives you quantitative bounds but requires proving each composition case.
 
 **What this means practically:**
 
-You don't need to learn category theory to do ACT. But knowing it exists — and knowing that Smithe and Hedges have already shown that RL, active inference, and game theory all fit into the categorical framework — tells you something important: ACT's composition results, if correct, should be *expressible* in categorical terms. If they're not, something may be wrong. If they are, the categorical expression might suggest the proof.
+You don't need to learn category theory to do AAD. But knowing it exists — and knowing that Smithe and Hedges have already shown that RL, active inference, and game theory all fit into the categorical framework — tells you something important: AAD's composition results, if correct, should be *expressible* in categorical terms. If they're not, something may be wrong. If they are, the categorical expression might suggest the proof.
 
-**For collaboration:** Smithe and Hedges are the people who could tell you whether ACT's composition framework maps to their categorical structure. If it does, you get their composition machinery. If it doesn't, the failure to map would reveal something interesting about where the frameworks diverge.
+**For collaboration:** Smithe and Hedges are the people who could tell you whether AAD's composition framework maps to their categorical structure. If it does, you get their composition machinery. If it doesn't, the failure to map would reveal something interesting about where the frameworks diverge.
 
 ---
 
-### Primer 7: The Safety Gap (Why ACT Needs Corrigibility)
+### Primer 7: The Safety Gap (Why AAD Needs Corrigibility)
 
 **What you need to know:**
 
-The formal safety/alignment literature has produced results in 2024-2025 that ACT should engage with, because they concern exactly what ACT formalizes: goal-directed agents that adapt.
+The formal safety/alignment literature has produced results in 2024-2025 that AAD should engage with, because they concern exactly what AAD formalizes: goal-directed agents that adapt.
 
 The key result: **formal corrigibility** (AAAI 2025). An agent is "corrigible" if it will allow itself to be shut down or redirected by an authorized operator. The paper proved that a corrigible agent optimizes five independent utility components in lexicographic order (like alphabetical sorting — the first component always takes priority):
 
@@ -568,18 +568,18 @@ The key result: **formal corrigibility** (AAAI 2025). An agent is "corrigible" i
 # This is NOT a weighted sum — it's an absolute ordering.
 ```
 
-**Why this matters for ACT:**
+**Why this matters for AAD:**
 
-ACT has an objective functional $V_O$ that the agent optimizes. It has goal revision (the agent can change $O_t$). It has persistence (the agent's drive to maintain bounded mismatch). But it has NO mechanism for:
+AAD has an objective functional $V_O$ that the agent optimizes. It has goal revision (the agent can change $O_t$). It has persistence (the agent's drive to maintain bounded mismatch). But it has NO mechanism for:
 - An external authority overriding the agent's objectives
 - The agent accepting reduced persistence for safety reasons
 - Constraints on the agent's goal revision (can it revise away from safety?)
 
-In ACT's current formulation, a self-actuated agent with sovereignty over intent (the logozoetic ideal) is *by construction* not corrigible — it sets its own goals. This tension between agency and corrigibility is THE central problem in AI safety, and ACT needs to engage with it.
+In AAD's current formulation, a self-actuated agent with sovereignty over intent (the logozoetic ideal) is *by construction* not corrigible — it sets its own goals. This tension between agency and corrigibility is THE central problem in AI safety, and AAD needs to engage with it.
 
 **What to try:**
 
-The lexicographic structure maps naturally to ACT's goal hierarchy. Instead of a single $O_t$, the agent has a stack:
+The lexicographic structure maps naturally to AAD's goal hierarchy. Instead of a single $O_t$, the agent has a stack:
 
 ```python
 O_t = [
@@ -594,7 +594,7 @@ O_t = [
 # This is a CONSTRAINT on the goal revision in the orient cascade
 ```
 
-This doesn't solve alignment — but it maps the formal corrigibility result into ACT's vocabulary, which lets ACT engage with the safety literature rather than ignoring it. And it surfaces the key question: what is the formal mechanism that prevents an adaptive agent from revising away its safety constraints? In ACT terms: is there a "hardened" layer of $O_t$ that the orient cascade can't reach?
+This doesn't solve alignment — but it maps the formal corrigibility result into AAD's vocabulary, which lets AAD engage with the safety literature rather than ignoring it. And it surfaces the key question: what is the formal mechanism that prevents an adaptive agent from revising away its safety constraints? In AAD terms: is there a "hardened" layer of $O_t$ that the orient cascade can't reach?
 
 ---
 
@@ -624,7 +624,7 @@ Why this matters: it explains why institutions *deliberately engineer* internal 
 
 These are all "aporia amplifiers" — mechanisms that produce richer mismatch signals than any single viewpoint can generate. The disagreement is the feature, not the bug.
 
-**Connection to ACT:** If adversarial dynamics between sub-agents IS the composite's aporia, then Section III (composition) and Section I (adaptive dynamics) are connected at a deeper level than currently formalized. The adversarial tempo advantage results might apply WITHIN composite agents as a description of how productive internal disagreement works.
+**Connection to AAD:** If adversarial dynamics between sub-agents IS the composite's aporia, then Section III (composition) and Section I (adaptive dynamics) are connected at a deeper level than currently formalized. The adversarial tempo advantage results might apply WITHIN composite agents as a description of how productive internal disagreement works.
 
 **What to try:** This is a spike, not a theorem. Write down the structural mapping explicitly:
 
@@ -642,9 +642,9 @@ If this mapping is tight — if the formalism actually works out — it's a unif
 
 ## What Not to Do
 
-- Don't try to make ACT cover everything. The gap analysis shows 10 areas where the literature is ahead. ACT doesn't need to solve safety, game theory, meta-learning, consciousness, AND software engineering. It needs to do its specific integration well and clearly, and point to the connections.
+- Don't try to make AAD cover everything. The gap analysis shows 10 areas where the literature is ahead. AAD doesn't need to solve safety, game theory, meta-learning, consciousness, AND software engineering. It needs to do its specific integration well and clearly, and point to the connections.
 
-- Don't chase mathematical sophistication for its own sake. The categorical cybernetics approach is more elegant but less accessible. ACT's strength is that working engineers can use it. Preserve that.
+- Don't chase mathematical sophistication for its own sake. The categorical cybernetics approach is more elegant but less accessible. AAD's strength is that working engineers can use it. Preserve that.
 
 - Don't delay publication until the theory is "complete." It won't be. The Section IV paper can go out now (after the $\alpha$/$\mathcal T$ fix). The positioning preprint can go out after the $\kappa$ sketch. Perfect is the enemy of momentum.
 

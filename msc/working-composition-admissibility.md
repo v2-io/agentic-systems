@@ -12,9 +12,9 @@
 
 $\mathcal{M}_{adm}$ constrains what kind of object $(\pi_c, E_c, f_c)$ the macro-dynamics can be. Three sub-questions:
 
-**(Q1) What structural form must the macro-dynamics have?** Must $(\pi_c, E_c, f_c)$ decompose into the same components as a single ACT agent? Or can it be any dynamical system that happens to predict the micro-behavior?
+**(Q1) What structural form must the macro-dynamics have?** Must $(\pi_c, E_c, f_c)$ decompose into the same components as a single AAD agent? Or can it be any dynamical system that happens to predict the micro-behavior?
 
-**(Q2) What properties must the macro-quantities satisfy?** Must the macro-state decompose as $(M_c, G_c)$? Must the macro-update be recursive? Must directed separation hold? Each ACT result depends on specific properties — which are required?
+**(Q2) What properties must the macro-quantities satisfy?** Must the macro-state decompose as $(M_c, G_c)$? Must the macro-update be recursive? Must directed separation hold? Each AAD result depends on specific properties — which are required?
 
 **(Q3) What regularity conditions are needed for the bridge from bounded $\varepsilon^*$ to bounded trajectory error?** (The bridge lemma issue.) Even if $\varepsilon^*$ is small, compounding errors can make trajectory predictions diverge. What prevents this?
 
@@ -24,19 +24,19 @@ $\mathcal{M}_{adm}$ constrains what kind of object $(\pi_c, E_c, f_c)$ the macro
 
 ### 2.1 Analogies from Other Fields
 
-**Statistical mechanics → thermodynamics.** A thermodynamic description is admissible when the system has well-defined intensive variables (temperature, pressure) and equations of state relating them. Not every microscopic system has a useful thermodynamic description — those near equilibrium do; far-from-equilibrium systems require kinetic theory. The analog: not every group of agents has a useful macro-agent description. Those with fast internal coordination (near "coordination equilibrium") do. The admissibility is: the macro-state has well-defined ACT state variables and update dynamics.
+**Statistical mechanics → thermodynamics.** A thermodynamic description is admissible when the system has well-defined intensive variables (temperature, pressure) and equations of state relating them. Not every microscopic system has a useful thermodynamic description — those near equilibrium do; far-from-equilibrium systems require kinetic theory. The analog: not every group of agents has a useful macro-agent description. Those with fast internal coordination (near "coordination equilibrium") do. The admissibility is: the macro-state has well-defined AAD state variables and update dynamics.
 
 What makes this interesting: thermodynamics doesn't require knowing the microscopic dynamics. It requires the MACROSCOPIC variables to satisfy certain relationships (laws of thermodynamics). Similarly, $\mathcal{M}_{adm}$ might not need to reference the micro-dynamics at all — it might only constrain the macro-dynamics' own structure.
 
-**Renormalization group (RG).** The RG asks: what theories are fixed points of coarse-graining? The effective Hamiltonian after coarse-graining must live in the same function space as the original. ACT's analog: the macro-dynamics must live in the same "function space" as individual ACT agents — same structural components, same update logic, same relationship between tempo and persistence. The admissibility is: coarse-graining maps ACT agents to ACT agents.
+**Renormalization group (RG).** The RG asks: what theories are fixed points of coarse-graining? The effective Hamiltonian after coarse-graining must live in the same function space as the original. AAD's analog: the macro-dynamics must live in the same "function space" as individual AAD agents — same structural components, same update logic, same relationship between tempo and persistence. The admissibility is: coarse-graining maps AAD agents to AAD agents.
 
-What makes this sharp: the RG framework says the admissible class is determined by what SURVIVES coarse-graining. Properties that are destroyed by projection are not part of the admissible class. This suggests: $\mathcal{M}_{adm}$ should require exactly those ACT properties that survive projection from micro to macro, and not require properties that are destroyed.
+What makes this sharp: the RG framework says the admissible class is determined by what SURVIVES coarse-graining. Properties that are destroyed by projection are not part of the admissible class. This suggests: $\mathcal{M}_{adm}$ should require exactly those AAD properties that survive projection from micro to macro, and not require properties that are destroyed.
 
-**Control theory → model reduction.** Balanced truncation preserves the Hankel singular values — the modes that are simultaneously most controllable and most observable. The admissibility is: the reduced model preserves these modes. ACT analog: $\Lambda$ should preserve the most observable and most actionable aspects of the micro-state. Admissibility requires the macro-model to have good observability (macro-observations are informative about macro-state) and good controllability (macro-actions affect macro-state).
+**Control theory → model reduction.** Balanced truncation preserves the Hankel singular values — the modes that are simultaneously most controllable and most observable. The admissibility is: the reduced model preserves these modes. AAD analog: $\Lambda$ should preserve the most observable and most actionable aspects of the micro-state. Admissibility requires the macro-model to have good observability (macro-observations are informative about macro-state) and good controllability (macro-actions affect macro-state).
 
-**Software architecture → interface contracts.** A module is valid when its public API (interface) is a sufficient specification for clients. The internal implementation can be anything. Analog: the macro-agent's "API" — how it responds to observations and produces actions — must satisfy ACT's structural contracts. The internal micro-dynamics are implementation details.
+**Software architecture → interface contracts.** A module is valid when its public API (interface) is a sufficient specification for clients. The internal implementation can be anything. Analog: the macro-agent's "API" — how it responds to observations and produces actions — must satisfy AAD's structural contracts. The internal micro-dynamics are implementation details.
 
-This maps to a behavioral admissibility: don't constrain the macro-agent's internals, constrain its input-output behavior. A macro-agent is admissible if its behavior (observation → action mapping over time) is indistinguishable from SOME ACT agent with well-defined tempo, mismatch, gain, etc.
+This maps to a behavioral admissibility: don't constrain the macro-agent's internals, constrain its input-output behavior. A macro-agent is admissible if its behavior (observation → action mapping over time) is indistinguishable from SOME AAD agent with well-defined tempo, mismatch, gain, etc.
 
 **Coase's theory of the firm.** A firm's boundary is where internal coordination becomes cheaper than market transactions. The admissibility analog: a composite boundary is where internal coordination costs are low enough that the macro-description is simpler than tracking all micro-agents individually. Admissibility is: the macro-description is actually a simplification (lower description length than the micro-description), not a complication.
 
@@ -52,7 +52,7 @@ Minimal: the macro-agent satisfies the scope condition (observations, binary cho
 
 This prevents: open-loop models (no recursive update), memoryless models (no state), and non-agent systems (no observation or action).
 
-This doesn't prevent: macro-dynamics that are technically recursive but have no meaningful decomposition into epistemic and purposeful substates. A lookup table mapping macro-observations to macro-actions is recursive but not an ACT agent in any meaningful sense.
+This doesn't prevent: macro-dynamics that are technically recursive but have no meaningful decomposition into epistemic and purposeful substates. A lookup table mapping macro-observations to macro-actions is recursive but not an AAD agent in any meaningful sense.
 
 **Approach B: Require $(M_c, G_c)$ decomposition + mismatch signal.**
 
@@ -87,24 +87,24 @@ $$I(\Lambda_x(X_{micro,t}); \Lambda_o(o_{micro, t+1}) \mid \Lambda_a(a_{micro,t}
 The macro-state must retain at least $(1-\epsilon)$ of the predictive mutual information that the micro-state has about next observations. This is the information bottleneck applied to the projection.
 
 **Advantage**: principled, connects to IB framework, domain-agnostic.
-**Disadvantage**: doesn't guarantee ACT-structure at the macro level. A neural network could satisfy this without having decomposed state, mismatch signals, etc.
+**Disadvantage**: doesn't guarantee AAD-structure at the macro level. A neural network could satisfy this without having decomposed state, mismatch signals, etc.
 
 **Approach E: Behavioral equivalence.**
 
-The macro-agent's externally observable behavior (actions given observation history) must be $\epsilon$-close to the behavior produced by some well-formed ACT agent with known tempo, mismatch, and gain:
+The macro-agent's externally observable behavior (actions given observation history) must be $\epsilon$-close to the behavior produced by some well-formed AAD agent with known tempo, mismatch, and gain:
 
-$$\sup_{\text{obs histories}} \lVert \pi_c(\Lambda_x(X_{micro})) - \pi_{ACT}(M_{ACT}, G_{ACT}) \rVert \leq \epsilon$$
+$$\sup_{\text{obs histories}} \lVert \pi_c(\Lambda_x(X_{micro})) - \pi_{AAD}(M_{AAD}, G_{AAD}) \rVert \leq \epsilon$$
 
-for some ACT agent $(M_{ACT}, G_{ACT}, \pi_{ACT})$ with well-defined quantities.
+for some AAD agent $(M_{AAD}, G_{AAD}, \pi_{AAD})$ with well-defined quantities.
 
-**Advantage**: doesn't constrain internals, only requires that the external behavior is consistent with ACT.
-**Disadvantage**: existential quantifier — hard to verify. How do you show such an ACT agent exists?
+**Advantage**: doesn't constrain internals, only requires that the external behavior is consistent with AAD.
+**Disadvantage**: existential quantifier — hard to verify. How do you show such an AAD agent exists?
 
 ### 2.3 The Bridge Lemma Perspective
 
 The composition-closure Working Notes flag: "small expected component-wise errors guarantee bounded trajectory divergence only if the admissible macro-dynamics satisfy appropriate Lipschitz stability conditions."
 
-This suggests a different angle on admissibility: $\mathcal{M}_{adm}$ should be the class of macro-dynamics for which bounded closure defect implies bounded trajectory error. The admissibility isn't about ACT structure at all — it's about stability.
+This suggests a different angle on admissibility: $\mathcal{M}_{adm}$ should be the class of macro-dynamics for which bounded closure defect implies bounded trajectory error. The admissibility isn't about AAD structure at all — it's about stability.
 
 The key condition: the macro-dynamics must be Lipschitz continuous in the macro-state:
 
@@ -112,9 +112,9 @@ $$\lVert f_c(X_c, o_c) - f_c(X_c', o_c) \rVert \leq L \cdot \lVert X_c - X_c' \r
 
 With Lipschitz constant $L$, a per-step error of $\varepsilon$ produces at most $\varepsilon \cdot (L^H - 1)/(L - 1)$ trajectory divergence over horizon $H$.
 
-Connection to ACT: the sector condition from the persistence framework (δᵀF ≥ α‖δ‖² for ‖δ‖ ≤ R) IS a Lipschitz-like condition on the correction function. If the macro-dynamics satisfy the sector condition, they satisfy the Lipschitz requirement. So: **macro-dynamics in the persistence regime automatically satisfy the bridge lemma requirement.**
+Connection to AAD: the sector condition from the persistence framework (δᵀF ≥ α‖δ‖² for ‖δ‖ ≤ R) IS a Lipschitz-like condition on the correction function. If the macro-dynamics satisfy the sector condition, they satisfy the Lipschitz requirement. So: **macro-dynamics in the persistence regime automatically satisfy the bridge lemma requirement.**
 
-This is promising. It means: if we require $\mathcal{M}_{adm}$ to satisfy the sector condition, we get both ACT-structure (persistence condition applies) and trajectory-error boundedness (bridge lemma holds) in one requirement.
+This is promising. It means: if we require $\mathcal{M}_{adm}$ to satisfy the sector condition, we get both AAD-structure (persistence condition applies) and trajectory-error boundedness (bridge lemma holds) in one requirement.
 
 ---
 
@@ -126,7 +126,7 @@ Combine the minimal structural requirements with the stability requirement:
 
 **$\mathcal{M}_{adm}$ requires:**
 
-1. **Structural form**: $(\pi_c, f_c, E_c)$ decomposes as an ACT agent — state $X_c = (M_c, G_c)$, recursive update $X_{c,t+1} = f_c(X_{c,t}, o_{c,t+1})$, state-dependent policy $a_{c,t} = \pi_c(X_{c,t})$.
+1. **Structural form**: $(\pi_c, f_c, E_c)$ decomposes as an AAD agent — state $X_c = (M_c, G_c)$, recursive update $X_{c,t+1} = f_c(X_{c,t}, o_{c,t+1})$, state-dependent policy $a_{c,t} = \pi_c(X_{c,t})$.
 
 2. **Mismatch well-defined**: A mismatch signal $\delta_{c,t}$ exists that compares macro-predictions to macro-observations.
 
@@ -137,7 +137,7 @@ $$\delta_c^T f_c(\delta_c) \geq \alpha_c \lVert \delta_c \rVert^2 \quad \text{fo
 with finite $\alpha_c > 0$ and $R_c > 0$.
 
 **What this buys:**
-- (1) ensures ACT structure at the macro level
+- (1) ensures AAD structure at the macro level
 - (2) ensures the persistence machinery applies
 - (3) ensures bounded trajectory error (bridge lemma) AND gives the macro-agent a well-defined adaptive reserve
 
@@ -150,15 +150,15 @@ This connects directly to #team-persistence, which already derives the composite
 
 ### 3.2 Direction: RG-Fixed-Point Approach
 
-Define $\mathcal{M}_{adm}$ as the class of dynamics that are "ACT-shaped" in the following sense:
+Define $\mathcal{M}_{adm}$ as the class of dynamics that are "AAD-shaped" in the following sense:
 
-An ACT agent is characterized by a tuple $(\mathcal{T}, \rho, \delta_{\text{crit}}, R, \alpha)$ — tempo, disturbance, critical mismatch, reserve, correction rate. These are the "slow variables" that survive coarse-graining (like temperature and pressure survive the micro-to-thermodynamic projection).
+An AAD agent is characterized by a tuple $(\mathcal{T}, \rho, \delta_{\text{crit}}, R, \alpha)$ — tempo, disturbance, critical mismatch, reserve, correction rate. These are the "slow variables" that survive coarse-graining (like temperature and pressure survive the micro-to-thermodynamic projection).
 
 $\mathcal{M}_{adm}$ = the class of macro-dynamics for which these five quantities are well-defined and satisfy the persistence condition:
 
 $$\alpha_c > \rho_c / R_c$$
 
-**The RG connection**: the projection $\Lambda$ maps micro-quantities to macro-quantities. The admissibility is: the macro-quantities satisfy the same dynamical law (persistence condition) as the micro-quantities. This is a fixed-point condition — ACT is invariant under coarse-graining within the admissible class.
+**The RG connection**: the projection $\Lambda$ maps micro-quantities to macro-quantities. The admissibility is: the macro-quantities satisfy the same dynamical law (persistence condition) as the micro-quantities. This is a fixed-point condition — AAD is invariant under coarse-graining within the admissible class.
 
 **What this buys**: a clean mathematical statement of what composition-consistency actually requires. The theory is scale-invariant in the strong sense: the same persistence condition holds at every level, with level-specific parameters.
 
@@ -188,7 +188,7 @@ This seems most promising. Let me try to make it precise.
 
 $\mathcal{M}_{adm}$ is the class of macro-dynamics $(\pi_c, E_c, f_c)$ satisfying:
 
-**(A1) ACT agent structure.** The macro-state decomposes as $X_c = (M_c, G_c) \in \mathcal{X}_c$. The macro-update is recursive: $X_{c,t+1} = f_c(X_{c,t}, o_{c,t+1})$. The macro-policy is state-dependent: $a_{c,t} = \pi_c(X_{c,t})$.
+**(A1) AAD agent structure.** The macro-state decomposes as $X_c = (M_c, G_c) \in \mathcal{X}_c$. The macro-update is recursive: $X_{c,t+1} = f_c(X_{c,t}, o_{c,t+1})$. The macro-policy is state-dependent: $a_{c,t} = \pi_c(X_{c,t})$.
 
 **(A2) Macro-mismatch.** A mismatch signal is well-defined:
 
@@ -299,7 +299,7 @@ $$\lVert e_t \rVert \leq \frac{\varepsilon^\ast}{\alpha_c} \quad \text{(ultimate
 
 The condition for the bridge to hold: $\varepsilon^\ast < \alpha_c R_c$. That is: the closure defect must be within the macro-agent's adaptive reserve. If the closure defect exceeds the reserve, the macro-description diverges from the micro-reality — the composite "isn't really a single agent" in a precise dynamical sense.
 
-**Epistemic status update:** The continuous-time sketch above has been superseded by a discrete-time derivation in `01-act-core/src/composition-closure.md`. The discrete version uses a standard linear recurrence ($\lVert e_{t+1} \rVert \leq \lambda \lVert e_t \rVert + \varepsilon_x$) with contraction factor $\lambda = 1 - \alpha_c / \nu_c$, giving the bound $\varepsilon_x \nu_c / \alpha_c$. The remaining assumption: the sector condition on the correction function implies contraction of the full update map in its state argument. This holds when correction dominates the state update — the normal regime for adaptive agents, excluding structural adaptation events.
+**Epistemic status update:** The continuous-time sketch above has been superseded by a discrete-time derivation in `01-aad-core/src/composition-closure.md`. The discrete version uses a standard linear recurrence ($\lVert e_{t+1} \rVert \leq \lambda \lVert e_t \rVert + \varepsilon_x$) with contraction factor $\lambda = 1 - \alpha_c / \nu_c$, giving the bound $\varepsilon_x \nu_c / \alpha_c$. The remaining assumption: the sector condition on the correction function implies contraction of the full update map in its state argument. This holds when correction dominates the state update — the normal regime for adaptive agents, excluding structural adaptation events.
 
 **What this buys.** If correct, (A4) simultaneously ensures:
 1. Macro-agent persistence (the standard result from #sector-condition-stability)
@@ -385,13 +385,13 @@ team-persistence assumes, for each sub-agent $i$:
 - **(A3)** Explicitly: the distributed tempo formula defines $\mathcal{T}_i$. ✓
 - **(A4)** Explicitly: the persistence condition applies the sector-condition framework. ✓
 
-team-persistence does NOT derive (A1)-(A4) for the COMPOSITE macro-agent. It derives persistence conditions from the sub-agents' perspective: each sub-agent persists given the cooperative/adversarial network. The macro-agent level — whether the composite AS A WHOLE satisfies ACT's structural requirements — is not addressed.
+team-persistence does NOT derive (A1)-(A4) for the COMPOSITE macro-agent. It derives persistence conditions from the sub-agents' perspective: each sub-agent persists given the cooperative/adversarial network. The macro-agent level — whether the composite AS A WHOLE satisfies AAD's structural requirements — is not addressed.
 
 The gap between team-persistence and what we need:
 - team-persistence: "each sub-agent persists in the team context" (micro-level persistence)
-- Composition admissibility: "the macro-agent satisfies ACT's structural requirements" (macro-level structure)
+- Composition admissibility: "the macro-agent satisfies AAD's structural requirements" (macro-level structure)
 
-These are RELATED but DIFFERENT. Micro-level persistence is NECESSARY for macro-level admissibility (if sub-agents diverge, the composite can't be a valid macro-agent). But it's not SUFFICIENT — the macro-dynamics must also have ACT structure (decomposed state, mismatch signal, tempo, sector condition on the correction function).
+These are RELATED but DIFFERENT. Micro-level persistence is NECESSARY for macro-level admissibility (if sub-agents diverge, the composite can't be a valid macro-agent). But it's not SUFFICIENT — the macro-dynamics must also have AAD structure (decomposed state, mismatch signal, tempo, sector condition on the correction function).
 
 The composite sector condition derived in §6.2 provides the bridge: IF each sub-agent satisfies its sector condition AND coordination costs are bounded, THEN the composite has a well-defined correction rate $\alpha_c$ and reserve $R_c$ — satisfying (A4) at the macro level.
 
@@ -408,7 +408,7 @@ Agent 2: $\dot{\delta}_2 = -\alpha_2 \delta_2 + w_2(t)$, $\lVert w_2 \rVert \leq
 
 $$\dot{\delta}_c = -\frac{\alpha_1 \delta_1 + \alpha_2 \delta_2}{2} + \frac{w_1 + w_2}{2}$$
 
-**Sub-case: $\alpha_1 = \alpha_2 = \alpha$.** Then $\dot{\delta}_c = -\alpha \delta_c + w_c$, where $\lVert w_c \rVert \leq (\rho_1 + \rho_2)/2$. The macro-dynamics are exactly ACT-shaped. $\varepsilon^\ast = 0$ (no closure defect). $\alpha_c = \alpha$, $\rho_c = (\rho_1 + \rho_2)/2$.
+**Sub-case: $\alpha_1 = \alpha_2 = \alpha$.** Then $\dot{\delta}_c = -\alpha \delta_c + w_c$, where $\lVert w_c \rVert \leq (\rho_1 + \rho_2)/2$. The macro-dynamics are exactly AAD-shaped. $\varepsilon^\ast = 0$ (no closure defect). $\alpha_c = \alpha$, $\rho_c = (\rho_1 + \rho_2)/2$.
 
 The composite persistence condition: $\alpha > (\rho_1 + \rho_2)/(2R)$. Compare to individual: $\alpha > \rho_i / R_i$. If agents face similar disturbance ($\rho_1 \approx \rho_2 \approx \rho$), the composite threshold is $\alpha > \rho / R$ — same as individual. No advantage from composition when channels are independent and rates are equal. This is expected: without communication, the agents don't help each other.
 

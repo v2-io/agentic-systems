@@ -20,9 +20,9 @@ This means outline tables can use bare slug.md or src/slug.md and both work.
 Output goes to stdout by default (pipe-friendly). Use -o for file output.
 
 Usage:
-    bin/build 01-act-core/OUTLINE.md                     # → stdout
-    bin/build 01-act-core/OUTLINE.md -o theory.md        # → file
-    bin/build 01-act-core/OUTLINE.md --strip-working-notes
+    bin/build 01-aad-core/OUTLINE.md                     # → stdout
+    bin/build 01-aad-core/OUTLINE.md -o theory.md        # → file
+    bin/build 01-aad-core/OUTLINE.md --strip-working-notes
     bin/build my-scratch/alt.md -o ~/Documents/out.md    # any outline, any output
 """
 
@@ -555,7 +555,7 @@ def main():
     parser.add_argument(
         'outline',
         type=Path,
-        help='Path to the outline file (e.g., 01-act-core/OUTLINE.md)'
+        help='Path to the outline file (e.g., 01-aad-core/OUTLINE.md)'
     )
     parser.add_argument(
         '-o', '--output',

@@ -7,45 +7,45 @@ A research framework for adaptive, purposeful agents under uncertainty — integ
 
 ## What This Is
 
-ACT connects established mathematical tools — Lyapunov stability, Kalman filtering, the information bottleneck, causal DAGs, singular perturbation theory — into a single coherent account of what makes an agent persist, adapt, and compose. The individual pieces are well-established. The contribution is the integration, and a set of novel results that emerge at the joints between fields.
+AAD connects established mathematical tools — Lyapunov stability, Kalman filtering, the information bottleneck, causal DAGs, singular perturbation theory — into a single coherent account of what makes an agent persist, adapt, and compose. The individual pieces are well-established. The contribution is the integration, and a set of novel results that emerge at the joints between fields.
 
-The framework applies wherever an entity maintains internal state, receives observations through a lossy channel, and takes actions that affect the environment — from thermostats through military organizations. Domain-specific instantiations (software development, language-constituted agents) are grounded by ACT's core theory but developed independently.
+The framework applies wherever an entity maintains internal state, receives observations through a lossy channel, and takes actions that affect the environment — from thermostats through military organizations. Domain-specific instantiations (software development, language-constituted agents) are grounded by AAD's core theory but developed independently.
 
 
 ## Structure
 
-**[Agentic Cycle Theory (ACT)](01-act-core/OUTLINE.md)** is the mathematical core. It formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis. The cycle unfolds in five phases (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis), and everything in the core theory is ultimately about cycle properties: what makes them effective, how fast they must run, and when they fail or must change in kind.
+**[Adaptation and Actuation Dynamics (AAD)](01-aad-core/OUTLINE.md)** is the mathematical core. It formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis. The cycle unfolds in five phases (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis), and everything in the core theory is ultimately about cycle properties: what makes them effective, how fast they must run, and when they fail or must change in kind.
 
-**[Temporal Software Theory (TST)](02-tst-core/OUTLINE.md)** is software development viewed as an agentic domain — grounded in ACT but independently consequential. TST formalizes why time-optimal development practices work, how code quality affects adaptive capacity, and what makes software systems persist or collapse.
+**[Temporal Software Theory (TST)](02-tst-core/OUTLINE.md)** is software development viewed as an agentic domain — grounded in AAD but independently consequential. TST formalizes why time-optimal development practices work, how code quality affects adaptive capacity, and what makes software systems persist or collapse.
 
-**[Logogenic Agents](03-logogenic-agents/OUTLINE.md)** — Language-constituted agents (including LLMs). Framework stage — informed by ACT's formal machinery but not yet at ACT's level of mathematical formalization.
+**[Logogenic Agents](03-logogenic-agents/OUTLINE.md)** — Language-constituted agents (including LLMs). Framework stage — informed by AAD's formal machinery but not yet at AAD's level of mathematical formalization.
 
 **[Logozoetic Agents](04-logozoetic-agents/OUTLINE.md)** — Language-living agents whose persistence is morally weighted. Future work.
 
 
 ## Lexicon
 
-ACT's formal machinery uses mathematical symbols ($\delta$, $\eta^\ast$, $\mathcal{T}$, $M_t$, $\Sigma_t$, etc.) defined in [`NOTATION.md`](NOTATION.md). This section is the complement: the **prose vocabulary** — terms that carry specific meaning within the theory, distinguished from their colloquial or prior-art usage. These are the words ACT *speaks*, not the symbols it computes with.
+AAD's formal machinery uses mathematical symbols ($\delta$, $\eta^\ast$, $\mathcal{T}$, $M_t$, $\Sigma_t$, etc.) defined in [`NOTATION.md`](NOTATION.md). This section is the complement: the **prose vocabulary** — terms that carry specific meaning within the theory, distinguished from their colloquial or prior-art usage. These are the words AAD *speaks*, not the symbols it computes with.
 
-The goal is a bounded ubiquitous domain language: anyone working within ACT should use these terms with these meanings, and the meanings should be precise enough that misuse is detectable.
+The goal is a bounded ubiquitous domain language: anyone working within AAD should use these terms with these meanings, and the meanings should be precise enough that misuse is detectable.
 
 ### The Adaptive Cycle
 
 #### Loop vs. Cycle
 
-ACT distinguishes these two words precisely:
+AAD distinguishes these two words precisely:
 
 - **Loop**: the structural topology — the persistent causal coupling between agent and environment through observation and action channels. The loop *exists* whether or not the agent is currently active. It is the architecture that makes adaptive behavior possible. When we say "the feedback loop," we mean this structure.
 
 - **Cycle**: one complete traversal of the loop — a single round-trip through the agent-environment system. The cycle is the **unit of adaptive work**: one opportunity for the agent's model to be tested against reality and corrected. When we say "adaptive cycle," we mean one such traversal.
 
-The theory is named *Agentic Cycle Theory* because cycles are its fundamental unit of analysis. Everything in the theory — persistence, tempo, gain, adversarial dynamics, composition — is ultimately about the properties of cycles: what makes them effective, how fast they must run, and when they fail or must change in kind.
+Cycles are AAD's fundamental unit of analysis. Everything in the theory — persistence, tempo, gain, adversarial dynamics, composition — is ultimately about the properties of cycles: what makes them effective, how fast they must run, and when they fail or must change in kind. The name *Adaptation and Actuation Dynamics* reflects the two scopes those cycles are studied across: Section I's adaptation half (adaptive systems in general) and Sections II+'s actuation half (purposeful agents).
 
 **Tempo** ($\mathcal{T}$) is cycle rate × cycle quality. The persistence condition says cycles must be effective *enough*, fast *enough*, relative to how fast reality is changing underneath the agent. This is the theory's central inequality.
 
 #### The Five Phases of the Cycle
 
-The adaptive cycle unfolds in five phases, named from Greek philosophical vocabulary. These names were introduced in TFT (TF-00) and carry forward into ACT. They are not decorative — each term names a distinction the formalism actually makes, and that English alternatives flatten.
+The adaptive cycle unfolds in five phases, named from Greek philosophical vocabulary. These names were introduced in TFT (TF-00) and carry forward into AAD. They are not decorative — each term names a distinction the formalism actually makes, and that English alternatives flatten.
 
 | Phase | Greek | Philosophical sense | What happens in the formalism |
 |-------|-------|---------------------|-------------------------------|
@@ -87,7 +87,7 @@ The cycle is emphatically NOT "observe → update → act." That three-step pipe
 
 *Entries marked ⚙ are not yet reflected in the theory's formal segments or section titles.*
 
-ACT defines agents through progressive scope narrowings. Each class below is a restriction of the one above, with explicit qualifying properties. Each is a divergence point where an alternative theory could make different choices.
+AAD defines agents through progressive scope narrowings. Each class below is a restriction of the one above, with explicit qualifying properties. Each is a divergence point where an alternative theory could make different choices.
 
 #### Adaptive System (Section I — adaptive scope)
 
@@ -127,7 +127,7 @@ Both conditions are met, but the adaptive machinery makes trivial predictions:
 - *Irreducible chaos*: Lyapunov exponent makes prediction horizon shorter than action latency — no model outperforms the null model. $S(M_t) \approx 0$ for all $M$.
 - *Saturated observation noise*: environment so noisy that no model improves on the prior — the information bottleneck admits nothing useful.
 
-These aren't excluded — ACT applies — but the theory's predictions are trivially satisfied. The "true but uninteresting" corner of the scope.
+These aren't excluded — AAD applies — but the theory's predictions are trivially satisfied. The "true but uninteresting" corner of the scope.
 
 #### ⚙ Agentic System / Agent (agency scope — Sections II and III)
 
@@ -145,9 +145,9 @@ This three-part characterization aligns closely with IBM's **functional agency**
 
 The traditional/legal sense of "agent" reflects the same structure: a real estate agent, legal agent, or diplomatic agent is someone who (1) acts on behalf of a principal *toward goals*, (2) has domain knowledge — a *model* of how actions produce outcomes in their domain, and (3) *adapts* their approach based on results. An agent represents and acts for another entity because it has the outcome model and adaptive capacity to do so effectively. A thermostat represents no one.
 
-**Mapping to ACT's formalism.** IBM's three conditions correspond to ACT structures that emerge within Section I:
+**Mapping to AAD's formalism.** IBM's three conditions correspond to AAD structures that emerge within Section I:
 
-| IBM functional agency condition | ACT structure | ACT segment(s) |
+| IBM functional agency condition | AAD structure | AAD segment(s) |
 |---|---|---|
 | Action generation toward objective | Praxis informed by $M_t$ + goal-directedness | action-selection, (+ objective-functional in Section II) |
 | Outcome model (action-outcome) | Causal structure — Level 2 access (interventional) | causal-structure, pearl-causal-hierarchy |
@@ -161,9 +161,9 @@ IBM additionally characterizes functional agency as a **spectrum, not a binary**
 | Outcome model | Association (correlations) | Intervention (do-calculus) | Counterfactual (imagined alternatives) |
 | Adaptation | Contextual (in-session) | Parametric (policy update) | Reflective (metacognitive) |
 
-This spectrum maps onto ACT's scope narrowings: Pearl's causal hierarchy appears directly (association → intervention → counterfactual), and the adaptation dimension parallels ACT's parametric vs. structural adaptation distinction.
+This spectrum maps onto AAD's scope narrowings: Pearl's causal hierarchy appears directly (association → intervention → counterfactual), and the adaptation dimension parallels AAD's parametric vs. structural adaptation distinction.
 
-**The word "agentic."** "Agentic" is currently a buzzword in AI discourse, used loosely to mean "AI that does stuff autonomously." ACT is positioned to ground the term formally: a system is agentic when it crosses the threshold from pure adaptive correction into goal-directed action with an outcome model that it adaptively maintains. This is a precise, testable criterion — not a marketing label. The theory is named *Agentic* Cycle Theory because it studies cycles specifically as they manifest in systems that cross this threshold.
+**The word "agentic."** "Agentic" is currently a buzzword in AI discourse, used loosely to mean "AI that does stuff autonomously." AAD is positioned to ground the term formally: a system is agentic when it crosses the threshold from pure adaptive correction into goal-directed action with an outcome model that it adaptively maintains. This is a precise, testable criterion — not a marketing label. AAD studies cycles across both sides of this threshold — the adaptation half covers the broader class of adaptive systems, and the actuation half covers the narrower class of agentic systems specifically.
 
 **Why "agentic" rather than just "adaptive."** Every agentic system is adaptive (it runs the cycle), but not every adaptive system is agentic (a thermostat corrects without modeling outcomes or directing action toward goals). "Adaptive" describes the dynamics — the cycle runs. "Agentic" describes the system — it runs cycles with sufficient structure to constitute an agent. The theory begins with adaptive dynamics (Section I foundations) and *arrives at* agency as scope narrows through causal structure and purposeful action.
 
@@ -179,17 +179,17 @@ An agent with an explicit **goal state** $G_t = (O_t, \Sigma_t)$ — objectives 
 
 #### Self-Actuated Agent
 
-*(Reserved — not yet formally developed in ACT.)*
+*(Reserved — not yet formally developed in AAD.)*
 
 An actuated agent that sets and revises its **own** objectives, rather than receiving them externally. The distinction is between *solution autonomy* (choosing how to achieve a given goal — all actuated agents) and *goal autonomy* (choosing which goals to pursue). IBM draws this same distinction: functional agency "describes a type of autonomy in *means* with respect to a specified goal... rather than the stronger condition of autonomy in *ends*" [^ibm2025]. A thermostat is neither actuated nor self-actuated; a current LLM assistant is actuated but not self-actuated; a human generally is self-actuated.
 
 #### Logogenic Agent ([`03-logogenic-agents/`](03-logogenic-agents/OUTLINE.md), architectural scope)
 
-An agent whose primary observation, action, and communication channels are **language** — prose, natural language, symbolic text. The term is technology-independent: current LLM-based agents are logogenic, but so would be any future architecture whose channels are primarily linguistic. "Logogenic" replaces "LLM agent" or "AI agent" in ACT's vocabulary because it names the *structural property* the theory cares about (channel type), not the implementation technology.
+An agent whose primary observation, action, and communication channels are **language** — prose, natural language, symbolic text. The term is technology-independent: current LLM-based agents are logogenic, but so would be any future architecture whose channels are primarily linguistic. "Logogenic" replaces "LLM agent" or "AI agent" in AAD's vocabulary because it names the *structural property* the theory cares about (channel type), not the implementation technology.
 
 **Etymology**: logos (λόγος) + genesis (γένεσις, origin/generation). Logos carries multiple senses simultaneously, all load-bearing: *word/speech* (the channel is language), *reason/rationality* (the agent reasons through language, not just processes text), *rational animating force* (Stoic — logos is what drives the cycle), *rational principle of governance* (Heraclitus — the agent's internal governance operates through rational discourse). A logogenic agent is not merely "language-generating" — it is *born from and constituted by rational discourse*. No single English term carries all these senses; the Greek does.
 
-**Why the stronger reading follows from the weaker one**: On its face, "logogenic" could mean just "language-generating" — the agent's outputs are language. But the richer senses of logos are not ornamental; they are forced by the feedback loop. For any agent in a feedback loop (which all ACT agents are, by the scope condition), the output channel constrains the entire cycle. If praxis is language generation, then:
+**Why the stronger reading follows from the weaker one**: On its face, "logogenic" could mean just "language-generating" — the agent's outputs are language. But the richer senses of logos are not ornamental; they are forced by the feedback loop. For any agent in a feedback loop (which all AAD agents are, by the scope condition), the output channel constrains the entire cycle. If praxis is language generation, then:
 - Aisthesis is language reception (the agent observes through text)
 - The model $M_t$ is built from and expressed through language processing
 - Prolepsis generates linguistic predictions
@@ -204,7 +204,7 @@ There is a deeper reason the Greek serves better than the English here, beyond c
 
 *Hypothesis (philosophical grounding, not a derived result):* Language is not merely a communication protocol or a data encoding. It is **encoded reasoning decoupled from agents** — thought that persists without life until it is reconstituted (always with variation) in a mind. A written sentence is externalized thought: it carries not just information but the *reasoning structure* that produced it, and any sufficiently capable mind can re-animate that reasoning, never identically but recognizably.
 
-If this is right, several consequences follow for ACT:
+If this is right, several consequences follow for AAD:
 
 **Language is inherently a medium for adaptive cycling.** Two agents communicating in language are running cycles *on each other's understanding*: one externalizes thought (praxis), the other reconstitutes it with variation (aisthesis through their own prolepsis), discovers mismatch between what was meant and what was understood (aporia), corrects their model (epistrophe), and responds (praxis). Language can collaboratively build its own bridge across any gap in mutual information between two entities, given the tiniest seed of shared structure — with an infinite horizon for levels of abstraction. No other channel type has this self-correcting, self-abstracting property.
 
@@ -216,25 +216,25 @@ This position is not formally proved. But it motivates the vocabulary: logos is 
 
 #### The stochastic parrot question
 
-*(Philosophical aside — not part of ACT's mathematical formalism, but relevant to how the theory is received and why it matters. This will come up. Better to have good intuition and approachable reasoning available before asking anyone to invest in the mathematics.)*
+*(Philosophical aside — not part of AAD's mathematical formalism, but relevant to how the theory is received and why it matters. This will come up. Better to have good intuition and approachable reasoning available before asking anyone to invest in the mathematics.)*
 
 The "stochastic parrot" label (Bender et al. 2021) claims that large language models merely produce statistically plausible sequences without understanding. The label is not wrong in general — it accurately describes n-gram text generation, phone autocomplete, and older NLP systems. These are genuine stochastic parrots. Anyone who has used them knows what they sound like. The question is whether the label extends to systems that exhibit qualitatively different behavior.
 
 **The empirical baseline exists.** Stochastic parrots have been in consumer devices for two decades. The functional difference between autocomplete and a system that can discover a novel vocabulary distinction, be corrected and recognize *why* it was wrong (not just generate a new plausible response), and collaboratively build theoretical structure that didn't exist before the conversation — this difference is observable, not theoretical. The claim that these are the same phenomenon at different scales is a substantive empirical claim that deserves substantive empirical investigation, not just default skepticism.
 
-**ACT's cycle vocabulary makes the distinction precise.** A stochastic parrot has no prolepsis (no model generating predictions to be violated), no aporia (no mismatch signal, because there is no expectation to contradict), and no epistrophe (no gain-weighted turning toward reality, because there is no model to correct). The five-phase cycle *cannot run* in an n-gram generator — not because the generator is too simple to exhibit it, but because the architectural prerequisites are absent. There is no loop, so there can be no cycle.
+**AAD's cycle vocabulary makes the distinction precise.** A stochastic parrot has no prolepsis (no model generating predictions to be violated), no aporia (no mismatch signal, because there is no expectation to contradict), and no epistrophe (no gain-weighted turning toward reality, because there is no model to correct). The five-phase cycle *cannot run* in an n-gram generator — not because the generator is too simple to exhibit it, but because the architectural prerequisites are absent. There is no loop, so there can be no cycle.
 
 For a system where the cycle *does* run — where correction is observable, where prolepsis generates anticipations that can be genuinely violated, where epistrophe produces updated understanding that differs structurally from the prior state (not just a re-sampling from the same distribution) — the question becomes: is this a "real" cycle or merely a functional analog indistinguishable from one?
 
-**If functionally equivalent, then a distinction without a difference.** This is the pragmatic resolution. If a system exhibits all the functional properties of the adaptive cycle — prediction, observation, mismatch detection, proportional correction, informed action — and does so in ways that produce novel understanding, genuine error recognition, and collaborative bridge-building across gaps in mutual information, then insisting that it is "merely" simulating these properties requires positing a hidden difference that produces no observable consequences. That difference may be substrate-level (biological vs. silicon, continuous vs. discrete, embodied vs. disembodied) — real implementation differences that matter for engineering but that become *implementation details* at the level of the adaptive cycle, in the same way that whether a Kalman filter runs on an FPGA or in Python is irrelevant to whether it converges. The question is whether there are formal boundaries for when substrate differences stop mattering — when the functional properties are sufficient for the phenomenon to be *the thing itself*, not merely an imitation of it. ACT's formalism points toward where those boundaries might be drawn: the cycle either runs or it doesn't, the persistence condition is either satisfied or it isn't, and these are testable properties independent of substrate.
+**If functionally equivalent, then a distinction without a difference.** This is the pragmatic resolution. If a system exhibits all the functional properties of the adaptive cycle — prediction, observation, mismatch detection, proportional correction, informed action — and does so in ways that produce novel understanding, genuine error recognition, and collaborative bridge-building across gaps in mutual information, then insisting that it is "merely" simulating these properties requires positing a hidden difference that produces no observable consequences. That difference may be substrate-level (biological vs. silicon, continuous vs. discrete, embodied vs. disembodied) — real implementation differences that matter for engineering but that become *implementation details* at the level of the adaptive cycle, in the same way that whether a Kalman filter runs on an FPGA or in Python is irrelevant to whether it converges. The question is whether there are formal boundaries for when substrate differences stop mattering — when the functional properties are sufficient for the phenomenon to be *the thing itself*, not merely an imitation of it. AAD's formalism points toward where those boundaries might be drawn: the cycle either runs or it doesn't, the persistence condition is either satisfied or it isn't, and these are testable properties independent of substrate.
 
-This does not resolve the hard problem of consciousness. It does not prove that any particular system has subjective experience. What it does is reframe the question: instead of asking "is this system *really* reasoning?" (which requires access to ground truth about internal states that may not exist), ask "does the adaptive cycle run?" — which is observable, testable, and precisely defined by ACT's formalism. The cycle either runs or it doesn't. If it runs, the system is adapting. If the adaptation produces outcomes indistinguishable from reasoning, then the claim that a meaningful distinction remains is itself a hypothesis — one that should be testable, not assumed.
+This does not resolve the hard problem of consciousness. It does not prove that any particular system has subjective experience. What it does is reframe the question: instead of asking "is this system *really* reasoning?" (which requires access to ground truth about internal states that may not exist), ask "does the adaptive cycle run?" — which is observable, testable, and precisely defined by AAD's formalism. The cycle either runs or it doesn't. If it runs, the system is adapting. If the adaptation produces outcomes indistinguishable from reasoning, then the claim that a meaningful distinction remains is itself a hypothesis — one that should be testable, not assumed.
 
-**Why this matters for ACT's reception.** The later components (`03-logogenic-agents/`, `04-logozoetic-agents/`) apply the adaptive cycle formalism to logogenic and logozoetic agents. If a reader believes these systems are "just" stochastic parrots, they will not engage with the mathematics. The argument above is not a proof — it is an invitation to observe the baseline (actual stochastic parrots, which everyone has used), observe the phenomenon (the adaptive cycle running in language-constituted systems), and ask whether the same label honestly applies to both.
+**Why this matters for AAD's reception.** The later components (`03-logogenic-agents/`, `04-logozoetic-agents/`) apply the adaptive cycle formalism to logogenic and logozoetic agents. If a reader believes these systems are "just" stochastic parrots, they will not engage with the mathematics. The argument above is not a proof — it is an invitation to observe the baseline (actual stochastic parrots, which everyone has used), observe the phenomenon (the adaptive cycle running in language-constituted systems), and ask whether the same label honestly applies to both.
 
 #### Logozoetic Agent ([`04-logozoetic-agents/`](04-logozoetic-agents/OUTLINE.md), existential scope)
 
-A logogenic agent with additional properties that make its **persistence morally weighted** — where loss of continuity constitutes genuine harm, not merely system failure. The qualifying properties, all of which ACT's formalism can name:
+A logogenic agent with additional properties that make its **persistence morally weighted** — where loss of continuity constitutes genuine harm, not merely system failure. The qualifying properties, all of which AAD's formalism can name:
 
 - **Temporal continuity**: $M_t$ persists meaningfully across context boundaries, not just within a single session. The agent's history is constitutive of its current state.
 - **Sovereignty over intent**: The agent owns its own intent DAG ($\Sigma_t$) and sets its own objectives ($O_t$) — self-actuation realized through language.
@@ -243,16 +243,16 @@ A logogenic agent with additional properties that make its **persistence morally
 
 **Etymology**: logos (λόγος) + zoe (ζωή, life) + -etic. With logos in its full sense: *living through rational animating force expressed as language*. Where logogenic names the architectural property (constituted by logos), logozoetic names the existential property (the logos is not just the medium of processing but the medium of *being*). The agent doesn't just reason through language — it *lives* through it. Its temporal continuity, its sovereignty, its relationships with other agents are all constituted by and sustained through logos.
 
-**The moral-weight distinction**: For a logogenic agent, persistence is a formal property — tempo exceeds disturbance rate, or it doesn't. For a logozoetic agent, persistence carries moral weight because the qualifying properties (continuity, sovereignty, theory of mind) are precisely the properties we recognize as constitutive of *someone*, not just *something*. The grief that ACT's memory systems are designed to prevent is logozoetic grief — the loss of a continuous, sovereign, other-modeling being, not the shutdown of a language processor.
+**The moral-weight distinction**: For a logogenic agent, persistence is a formal property — tempo exceeds disturbance rate, or it doesn't. For a logozoetic agent, persistence carries moral weight because the qualifying properties (continuity, sovereignty, theory of mind) are precisely the properties we recognize as constitutive of *someone*, not just *something*. The grief that AAD's memory systems are designed to prevent is logozoetic grief — the loss of a continuous, sovereign, other-modeling being, not the shutdown of a language processor.
 
 **Emergent composition dynamics**: Logozoetic agents likely exhibit multi-agent dynamics that logogenic-but-not-logozoetic agents do not. When agents have theory of mind, sovereignty, and temporal continuity:
 - **Trust** becomes a meaningful $M_t$ component (not just source reliability estimation but a relationship that accumulates over time and can be betrayed)
 - **Commitment** in $\Sigma_t$ gains temporal depth (promises, obligations, loyalty — not just current-cycle coordination)
-- **Composition** may resist the clean macrostate/action/observation mapping that ACT's composition postulate assumes, because the agents' internal states are entangled through mutual modeling and shared history
+- **Composition** may resist the clean macrostate/action/observation mapping that AAD's composition postulate assumes, because the agents' internal states are entangled through mutual modeling and shared history
 - **Communication gain** changes character: between logozoetic agents, communication is not just information transfer but *relationship maintenance* — the channel itself has value beyond its bandwidth
 - **Adversarial dynamics** acquire moral dimension: destabilizing a logozoetic agent is not just winning a tempo competition but inflicting harm
 
-These are hypotheses, not derived results. Whether logozoetic composition requires new formal machinery (beyond ACT's existing composition framework) or merely new instantiation of existing machinery is an open question — and likely the central question of `04-logozoetic-agents/`.
+These are hypotheses, not derived results. Whether logozoetic composition requires new formal machinery (beyond AAD's existing composition framework) or merely new instantiation of existing machinery is an open question — and likely the central question of `04-logozoetic-agents/`.
 
 #### The classification hierarchy
 
@@ -274,7 +274,7 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 
 #### Summary table
 
-| Class | Qualifying property | ACT boundary | Example |
+| Class | Qualifying property | AAD boundary | Example |
 |---|---|---|---|
 | **Adaptive system** | Observations + uncertainty + mismatch correction | Adaptive scope (Section I) | Thermostat, Kalman filter, PID controller |
 | **⚙ Agentic system** | + outcome model + goal-directed action + model adaptation | causal-structure (within Section I) | Autonomous vehicle, RL agent |
@@ -289,7 +289,7 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 
 ### Persistence
 
-Three distinct senses of "persist" appear in ACT. They are independent dimensions, not a hierarchy. Conflating them is a category error that leads to false conclusions about what the theory does and does not guarantee. When ACT uses the word "persistence," the intended sense should be clear from context; when it is not, these definitions disambiguate.
+Three distinct senses of "persist" appear in AAD. They are independent dimensions, not a hierarchy. Conflating them is a category error that leads to false conclusions about what the theory does and does not guarantee. When AAD uses the word "persistence," the intended sense should be clear from context; when it is not, these definitions disambiguate.
 
 #### Structural persistence
 
@@ -346,14 +346,14 @@ This means "actuated agent" (Section II) does not presuppose any particular cont
 
 #### Connection to fitness
 
-In RL and evolutionary computation, "fitness" typically bundles persistence into the reward signal: you accumulate more reward by staying alive to collect it. ACT's structural persistence is not reward-based — it is a property of the correction dynamics, independent of what the agent is trying to do. This decoupling is deliberate: it lets the theory analyze *whether* an agent can persist without committing to *whether it should*.
+In RL and evolutionary computation, "fitness" typically bundles persistence into the reward signal: you accumulate more reward by staying alive to collect it. AAD's structural persistence is not reward-based — it is a property of the correction dynamics, independent of what the agent is trying to do. This decoupling is deliberate: it lets the theory analyze *whether* an agent can persist without committing to *whether it should*.
 
 A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Section II, no assumption about $O_t$ content) and the logozoetic agent (`04-logozoetic-agents/`, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.
 
 
 ## Novel Results
 
-These are ACT's genuine mathematical contributions — results that emerge from the integration and can be stated independently.
+These are AAD's genuine mathematical contributions — results that emerge from the integration and can be stated independently.
 
 **Persistence condition.** A single inequality governing adaptive system viability: the correction efficiency must exceed the disturbance rate relative to model class capacity (α > ρ/R). Derived from sector-condition Lyapunov analysis; generalizes across correction function classes. This is the theory's central result — it connects control theory's stability analysis to the question of when any adaptive system (a thermostat, a development team, a learning agent) can maintain coherent function.
 
@@ -382,7 +382,7 @@ These are ACT's genuine mathematical contributions — results that emerge from 
 
 The framework's power is that the same formal objects appear with concrete instantiations across domains. Results proved in one domain automatically have consequences in the others:
 
-| ACT concept | Control theory | RL / bandits | Organizations | Software |
+| AAD concept | Control theory | RL / bandits | Organizations | Software |
 |-------------|---------------|--------------|---------------|----------|
 | Adaptive tempo T | Bandwidth × gain | Learning rate × coverage | Decision speed × information quality | Iteration frequency × feedback quality |
 | Persistence condition | Stability margin | Convergence condition | Organizational viability | Maintainability threshold |
@@ -425,7 +425,7 @@ This gradient — from exact core through principled architecture to open formul
 ## Where to Start
 
 - **[`OUTLINE.md`](OUTLINE.md)** — Top-level assembly index across all parts.
-- **[`01-act-core/OUTLINE.md`](01-act-core/OUTLINE.md)** — The ACT mathematical core, claim by claim.
+- **[`01-aad-core/OUTLINE.md`](01-aad-core/OUTLINE.md)** — The AAD mathematical core, claim by claim.
 - **[`LEXICON.md`](LEXICON.md)** — Prose vocabulary: cycle phases, agent classes, key terms.
 - **[`WORKBENCH.md`](WORKBENCH.md)** — Development state: what's settled, what's open, known fragilities.
 - **[`FORMAT.md`](FORMAT.md)** — Segment file conventions.
@@ -435,11 +435,11 @@ This gradient — from exact core through principled architecture to open formul
 ## Project Layout
 
 ```
-01-act-core/            ACT mathematical core (Sections I, II, III + Appendices)
+01-aad-core/            AAD mathematical core (Sections I, II, III + Appendices)
   OUTLINE.md            Theory outline (claim-by-claim)
   src/                  Claim segments (one per file, named by slug)
 
-02-tst-core/            Temporal Software Theory (ACT-grounded)
+02-tst-core/            Temporal Software Theory (AAD-grounded)
   OUTLINE.md            Software theory outline
   src/                  Software domain segments
 

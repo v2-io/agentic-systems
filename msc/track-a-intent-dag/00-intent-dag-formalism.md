@@ -1,6 +1,6 @@
 # Intent as Probabilistic Causal DAG: First Formal Treatment
 
-**Status**: Working document. First formal sketch of the core novel object in ACT.
+**Status**: Working document. First formal sketch of the core novel object in AAD.
 **Date**: March 2026
 **Depends on**: TF-00 through TF-11, Appendix E (TFT Core), 03-goal-formalism-sketch.md
 
@@ -45,7 +45,7 @@ We will track this throughout.
 
 **Principled vs. scaffold — a guide to reading this document.**
 Not everything here has equal epistemic standing. Some elements are
-*first-principled* — they follow necessarily from ACT's foundations (TFT's
+*first-principled* — they follow necessarily from AAD's foundations (TFT's
 feedback dynamics, Pearl's causal hierarchy, the goal/intent gap analysis).
 Others are *scaffold-engineering* — reasonable modeling choices that structure
 the formalism but could legitimately be different. The distinction:
@@ -350,14 +350,14 @@ same uncertainty ratio principle (TF-06). The key difference: the "model"
 being updated is not M_t (the reality model) but a specific causal
 hypothesis within G_t (the intent model).
 
-This is what makes ACT more than BDI-with-dynamics. BDI says agents have
-beliefs and desires but provides no mechanism for desire revision. ACT says:
+This is what makes AAD more than BDI-with-dynamics. BDI says agents have
+beliefs and desires but provides no mechanism for desire revision. AAD says:
 desires (G_t edges) are updated by the SAME uncertainty-ratio machinery as
 beliefs (M_t), applied to causal hypotheses about goal-achievement rather
 than to predictions about reality. The gain structure is universal — it
 applies whenever an agent holds a probabilistic belief and receives evidence.
 The distinction between "updating beliefs about reality" (TFT) and "updating
-beliefs about strategy" (ACT Part II) is a distinction in *what* is being
+beliefs about strategy" (AAD Part II) is a distinction in *what* is being
 updated, not in *how*.
 
 **[Prediction 1]**: The rate at which edge weights converge should follow
@@ -929,13 +929,13 @@ tactical level.
 
 ### 4.3 The Orient Cycle Formalized
 
-**[FIRST-PRINCIPLED — this is ACT's central contribution.]**
+**[FIRST-PRINCIPLED — this is AAD's central contribution.]**
 
 The three interactions above constitute the formal content of Boyd's
-Orient. This is what TFT was missing and what ACT adds: the cascade from
+Orient. This is what TFT was missing and what AAD adds: the cascade from
 reality-model update to strategy revision to goal reframing.
 
-TFT formalizes observation → model update (aisthesis → epistrophe). ACT
+TFT formalizes observation → model update (aisthesis → epistrophe). AAD
 extends the chain: observation → model update → strategy update →
 feasibility check → goal revision. Each stage is principled — it follows
 from the previous stage via the intent-reality consistency requirement

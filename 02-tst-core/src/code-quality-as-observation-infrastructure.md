@@ -14,7 +14,7 @@ stage: draft
 
 # Derived: Code Quality as Observation Infrastructure
 
-Code quality determines the observation noise $U_o$ for code-reading channels. Lower $U_o$ raises update gain $\eta^\ast$, which raises adaptive tempo $\mathcal{T}$, which determines whether the persistence condition is satisfied. This chain — code quality $\to U_o \to \eta^\ast \to \mathcal{T} \to$ persistence — is the formal bridge from "write clean code" to ACT's mathematical machinery.
+Code quality determines the observation noise $U_o$ for code-reading channels. Lower $U_o$ raises update gain $\eta^\ast$, which raises adaptive tempo $\mathcal{T}$, which determines whether the persistence condition is satisfied. This chain — code quality $\to U_o \to \eta^\ast \to \mathcal{T} \to$ persistence — is the formal bridge from "write clean code" to AAD's mathematical machinery.
 
 ## Formal Expression
 
@@ -88,7 +88,7 @@ The two cycles share a bifurcation: codebases near the persistence threshold are
 
 **The investment structure** is *derived* from #change-investment applied to observation-infrastructure actions. The form is correct given the quality-to-tempo chain.
 
-**The feedback loops** are *hypothesis-grade*. The vicious cycle is widely observed in practice and structurally motivated by the quality-to-tempo chain, but the self-reinforcing dynamic (the claim that the cycle is *accelerating* rather than merely *repeating*) has not been formally analyzed within ACT. This would require modeling $Q$ as a state variable subject to its own dynamics, with the developer's actions as inputs. The connection to ACT's persistence condition is suggestive (the vicious cycle is a self-inflicted persistence failure), but the formal treatment is missing.
+**The feedback loops** are *hypothesis-grade*. The vicious cycle is widely observed in practice and structurally motivated by the quality-to-tempo chain, but the self-reinforcing dynamic (the claim that the cycle is *accelerating* rather than merely *repeating*) has not been formally analyzed within AAD. This would require modeling $Q$ as a state variable subject to its own dynamics, with the developer's actions as inputs. The connection to AAD's persistence condition is suggestive (the vicious cycle is a self-inflicted persistence failure), but the formal treatment is missing.
 
 Max attainable for the chain: *conditional* (exact given an operationalized quality measure). Max attainable for the feedback loops: *empirical* (the dynamics are intrinsically empirical).
 

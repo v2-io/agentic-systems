@@ -4,7 +4,7 @@
 
 **Date**: 2026-03-13 (overnight session)
 
-**Core observation**: ACT's scope condition requires observations exist (𝒪 ≠ ∅) and residual uncertainty (H > 0), but says nothing about **finite channel capacity**. Every real agent has limited attention — it can't monitor everything simultaneously. This constraint is load-bearing for the theory and may need first-class treatment.
+**Core observation**: AAD's scope condition requires observations exist (𝒪 ≠ ∅) and residual uncertainty (H > 0), but says nothing about **finite channel capacity**. Every real agent has limited attention — it can't monitor everything simultaneously. This constraint is load-bearing for the theory and may need first-class treatment.
 
 ---
 
@@ -22,14 +22,14 @@ This creates a specific cascade that doesn't fit neatly into the sequential orie
 - The agent needs to simultaneously: update M_t (new threat), invalidate Σ_t (pursuit plan is now dangerous), and reorient sensors (need to track the new threat)
 - These happen effectively simultaneously, not sequentially
 
-## 2. What ACT Currently Handles
+## 2. What AAD Currently Handles
 
-ACT *partially* handles this through the processing/selection distinction in directed separation: goals influence which events arrive (through π → a_t → e_τ), and this is acknowledged as coupling through the action channel. The pilot's attention allocation is part of π — it's an action that determines what observations will be available.
+AAD *partially* handles this through the processing/selection distinction in directed separation: goals influence which events arrive (through π → a_t → e_τ), and this is acknowledged as coupling through the action channel. The pilot's attention allocation is part of π — it's an action that determines what observations will be available.
 
-What ACT doesn't handle:
+What AAD doesn't handle:
 1. **The implicit assumption of stationarity in unmonitored regions.** When the agent allocates attention to region A of the model, it implicitly assumes regions B, C, D are either unchanging or have low strategy sensitivity. This assumption is never made explicit.
 2. **The cost of reorientation.** Switching attention from one model region to another takes time and has opportunity cost (you stop monitoring the old region). This is a real resource constraint that affects the orient cascade's timing.
-3. **Preemptive reorientation triggers.** What makes an ambient signal "break through" and demand attention? ACT has no mechanism for signals from unmonitored regions to interrupt the current processing focus.
+3. **Preemptive reorientation triggers.** What makes an ambient signal "break through" and demand attention? AAD has no mechanism for signals from unmonitored regions to interrupt the current processing focus.
 4. **The meta-strategic question of attention allocation.** How should the agent divide its finite attention across model regions? This is itself a strategic decision that should be part of Σ_t — but it's currently implicit in the policy π.
 
 ## 3. Finite Attention as a Constraint on the Orient Cascade
@@ -57,7 +57,7 @@ These share a common structure:
 3. They trigger **attention reallocation** (force the agent to look at something else)
 4. They have **severity-proportional responses** (from "note and continue" to "drop everything")
 
-This is the "governance of reorientation" we identified as missing from ACT. It's a meta-loop that monitors the quality of the primary loops and intervenes when coupling quality degrades.
+This is the "governance of reorientation" we identified as missing from AAD. It's a meta-loop that monitors the quality of the primary loops and intervenes when coupling quality degrades.
 
 ## 5. Attention Allocation as Part of Strategy
 
@@ -65,7 +65,7 @@ Here's a structural observation: attention allocation should probably be part of
 
 The strategy DAG encodes the agent's theory of how its actions produce progress toward O_t. One class of actions is **observation actions** — actions that change what the agent can perceive (move sensors, run different queries, look in a different direction). The strategy should include nodes for these observation actions, with edges representing their expected information yield.
 
-Currently, ACT has CIY (Causal Information Yield) which quantifies the information value of an action. But CIY doesn't distinguish between actions that produce information about the current strategy's execution (within attended scope) and actions that produce information about currently unmonitored regions (outside attended scope).
+Currently, AAD has CIY (Causal Information Yield) which quantifies the information value of an action. But CIY doesn't distinguish between actions that produce information about the current strategy's execution (within attended scope) and actions that produce information about currently unmonitored regions (outside attended scope).
 
 A richer treatment might split CIY into:
 - **Exploitation CIY**: information that helps execute the current strategy (within attended scope)
@@ -126,9 +126,9 @@ The sentinel loop described above is essentially an IDT for the agent's internal
 
 Joseph's observation about POSIX error codes is sharp. POSIX gives a reasonable ontology of severity and state (EINTR, EAGAIN, ENOENT, EPERM, ENOMEM, SIGTERM, SIGKILL...) but doesn't close the loop to a principled response mapping.
 
-The missing piece is exactly what ACT could provide: a severity-proportional response mapping grounded in the theory's quantities:
+The missing piece is exactly what AAD could provide: a severity-proportional response mapping grounded in the theory's quantities:
 
-| Signal severity | Interpretation | Response | ACT mapping |
+| Signal severity | Interpretation | Response | AAD mapping |
 |---|---|---|---|
 | Low | Minor anomaly in monitored region | Note and continue | Small δ_epistemic; handled by normal gain |
 | Medium | Significant anomaly in monitored region | Pause and investigate | Large δ_epistemic; may trigger Σ_t re-evaluation |
@@ -144,7 +144,7 @@ The severity threshold for each level should depend on:
 
 The "hardwired responses" at the emergency level correspond to Joseph's formal corrigibility stack: O_safety always wins over O_task, regardless of the cascade.
 
-## 9. What This Adds to ACT
+## 9. What This Adds to AAD
 
 ### Formally:
 - **Finite attention** as an explicit constraint alongside finite observation and finite action
@@ -166,7 +166,7 @@ The "hardwired responses" at the emergency level correspond to Joseph's formal c
 ## 10. Honest Uncertainty
 
 **What feels structurally sound:**
-- Finite attention is a real and load-bearing constraint that ACT should address
+- Finite attention is a real and load-bearing constraint that AAD should address
 - Multi-frequency loops within a single agent are real (biological and computational evidence)
 - Preemptive reorientation mechanisms exist at every level and have a common structure
 - The connection between attention allocation and strategy is genuine

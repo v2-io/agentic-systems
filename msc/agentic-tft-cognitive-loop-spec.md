@@ -1,6 +1,6 @@
 # The Cognitive Loop: Architecture Specification
 
-> **Origin**: `~/src/agentic-tft/11-cognitive-loop-spec.md` (Feb 2026 session, pre-ACT restructuring). TFT references should be read as ACT. PROPRIUM references point to `~/src/firmatum/`.
+> **Origin**: `~/src/agentic-tft/11-cognitive-loop-spec.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
 > **Relevance**: Primary source for the "Language-specific orient cascade" gap in `03-logogenic-agents/OUTLINE.md`. The most substantial design document in the agentic-tft corpus. Contains the four-phase loop (PERCEIVE → CONTEXTUALIZE → CHOOSE → EFFECT), attention/triage mechanism, CADENTIA (temporal driver), timescale nesting, state persistence model, and implementation constraints. Known issues cataloged in `agentic-tft-review-response.md`.
 >

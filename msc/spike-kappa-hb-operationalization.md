@@ -41,7 +41,7 @@ Here's where it gets interesting. The event e_τ can itself be informative about
 
 The agent's goal influences which events arrive (through action selection). So H(G_t | e_τ) < H(G_t) in general — the event already "leaks" some information about the goal.
 
-But this is the *selection* channel, not the *processing* channel. ACT's directed separation is about processing, not selection. So the right normalization might be:
+But this is the *selection* channel, not the *processing* channel. AAD's directed separation is about processing, not selection. So the right normalization might be:
 
     κ_processing = I(G_t ; M_τ⁺ | e_τ) / H(G_t | e_τ)
 
@@ -56,7 +56,7 @@ This is the precise formal content of directed separation, expressed in informat
 
 This analysis naturally produces two separate coupling measures:
 
-1. **κ_selection = I(G_t ; e_τ) / H(G_t)**: How much does the goal influence which events arrive? This is the coupling through the action channel. ACT already accounts for this (it's part of the processing/selection distinction). This coupling is *expected* and *fine*.
+1. **κ_selection = I(G_t ; e_τ) / H(G_t)**: How much does the goal influence which events arrive? This is the coupling through the action channel. AAD already accounts for this (it's part of the processing/selection distinction). This coupling is *expected* and *fine*.
 
 2. **κ_processing = I(G_t ; M_τ⁺ | e_τ) / H(G_t | e_τ)**: How much does the goal influence how events are processed? This is the coupling that violates directed separation. This is the problematic one.
 
@@ -84,7 +84,7 @@ If κ_processing can be measured (or at least estimated) from the agent's intera
 For a real agent, computing I(G_t ; M_τ⁺ | e_τ) requires access to the joint distribution over goals, updated models, and events. For an LLM agent, this might require running the same event under different goals and seeing how the model update differs. This is feasible in simulation but hard in practice.
 
 ### The G_t representation problem
-κ_processing as defined requires a well-defined distribution over G_t. For agents with complex, structured goals (like ACT's O_t + Σ_t), the entropy H(G_t) might be hard to compute. You might need to compute κ_processing for specific projections of G_t rather than the full goal state.
+κ_processing as defined requires a well-defined distribution over G_t. For agents with complex, structured goals (like AAD's O_t + Σ_t), the entropy H(G_t) might be hard to compute. You might need to compute κ_processing for specific projections of G_t rather than the full goal state.
 
 ### Does κ_processing vary by model region?
 Probably yes. An LLM agent might process factual observations about code structure nearly goal-blindly (low κ_processing for that region of M_t) but process ambiguous error messages in a highly goal-conditioned way (high κ_processing for that region). This suggests κ_processing should be indexed by region of M_t, not just a single scalar.
@@ -107,7 +107,7 @@ The product κ_processing × ∂Σ/∂M captures the intuition that coupling onl
 ## Where This Sits Epistemically
 
 **What feels solid:**
-- The decomposition into κ_selection and κ_processing (this is a clean formal distinction that maps exactly to ACT's processing/selection distinction)
+- The decomposition into κ_selection and κ_processing (this is a clean formal distinction that maps exactly to AAD's processing/selection distinction)
 - The information-theoretic operationalization using conditional mutual information
 - The connection to Hafez's H_b
 

@@ -1,6 +1,6 @@
 # κ as Reynolds Number: Directed Separation as a Regime Boundary
 
-**Status**: Exploratory spike. Emerged from a March 13, 2026 evening conversation between Joseph and Claude about the directed separation problem. Not yet theory — a set of connected observations that may reframe how ACT treats the κ coupling parameter.
+**Status**: Exploratory spike. Emerged from a March 13, 2026 evening conversation between Joseph and Claude about the directed separation problem. Not yet theory — a set of connected observations that may reframe how AAD treats the κ coupling parameter.
 
 **Epistemic ladder**: Most of this is at the Guess → Pattern level. A few connections feel like Hypothesis. Nothing here is Tested. The value is in the reframing, not in specific results.
 
@@ -10,7 +10,7 @@
 
 ## 1. The Observation That Started This
 
-ACT's directed separation says: f_M has no G_t argument. The epistemic update processes incoming events goal-blindly. This gives us the clean sequential orient cascade (M first, then G), the modular Section I → Section II lift, and all the nice analytical properties.
+AAD's directed separation says: f_M has no G_t argument. The epistemic update processes incoming events goal-blindly. This gives us the clean sequential orient cascade (M first, then G), the modular Section I → Section II lift, and all the nice analytical properties.
 
 The three reviewers flagged this as the #1 theoretical blocker: LLM agents violate it, which blocks Section V. The proposed fix was a scalar κ ∈ [0,1] measuring coupling strength, with bounds on approximation error.
 
@@ -24,9 +24,9 @@ Kelvin-Helmholtz instability: two fluid layers moving at different velocities. W
 
 When the velocity difference exceeds a critical threshold, the interface becomes unstable. Small perturbations grow into characteristic vortices. The layers entrain each other, creating structured chaos at the boundary. Neither layer has clean authority over the interface region.
 
-**The mapping to ACT's multi-timescale processing:**
+**The mapping to AAD's multi-timescale processing:**
 
-| Fluid dynamics | ACT agent processing |
+| Fluid dynamics | AAD agent processing |
 |---|---|
 | Fluid layers at different velocities | Processing loops at different frequencies |
 | Layer velocity | Loop update frequency (ν) |
@@ -39,11 +39,11 @@ When the velocity difference exceeds a critical threshold, the interface becomes
 
 **The critical insight**: In fluid dynamics, you don't get from laminar to turbulent by adding a perturbation parameter to the Navier-Stokes equations. The equations are the same in both regimes. What changes is the **stability** of the laminar solution. Below critical Re, perturbations decay. Above it, they grow.
 
-Similarly: ACT's sequential cascade might be stable (perturbations from goal-conditioned processing decay and the cascade converges to approximately the same answer as the separated case) below some critical κ, and unstable above it. The question isn't "what's the approximation error at κ = 0.3?" but "what's the critical κ for this agent architecture, and what happens on either side?"
+Similarly: AAD's sequential cascade might be stable (perturbations from goal-conditioned processing decay and the cascade converges to approximately the same answer as the separated case) below some critical κ, and unstable above it. The question isn't "what's the approximation error at κ = 0.3?" but "what's the critical κ for this agent architecture, and what happens on either side?"
 
-## 3. ACT's Processing Layers and Their Boundaries
+## 3. AAD's Processing Layers and Their Boundaries
 
-ACT already has an implicit timescale ordering (from the orient cascade segment):
+AAD already has an implicit timescale ordering (from the orient cascade segment):
 
     ν_epistemic ≫ ν_edge-update ≫ ν_reclassify ≫ ν_prune/graft ≫ ν_O-revision
 
@@ -106,7 +106,7 @@ The pathological regime has low H_b (goal leaks into processing — confirmation
 
 ### 4.4 Connection to Clausewitz's Three Gaps (via the Composition Spike)
 
-The composition spike maps Clausewitz's three gaps to ACT:
+The composition spike maps Clausewitz's three gaps to AAD:
 - Knowledge gap ↔ epistemic unity deficit
 - Alignment gap ↔ teleological unity deficit
 - Effects gap ↔ strategic/coordination unity deficit
@@ -120,7 +120,7 @@ This is speculative but the structural mapping is suggestive.
 
 ## 5. The Governance Layer: IDT as Reorientation Trigger
 
-The conversation identified a structural gap in ACT: the theory has the *content* of reorientation (the orient cascade) but not the *governance* of reorientation (what triggers it, how fast, at what cost to the current plan).
+The conversation identified a structural gap in AAD: the theory has the *content* of reorientation (the orient cascade) but not the *governance* of reorientation (what triggers it, how fast, at what cost to the current plan).
 
 Hafez's IDT (Information Digital Twin) is exactly this governance layer:
 - It monitors coupling quality (P, ΔH) at the interaction interface
@@ -149,7 +149,7 @@ If directed separation is a laminar regime, what determines whether the flow is 
 
 In fluid dynamics, Re = ρvL/μ. The critical Re depends on the geometry (pipe flow ≈ 2300, boundary layer ≈ 500,000).
 
-For ACT, the stability of the separated regime might depend on:
+For AAD, the stability of the separated regime might depend on:
 
 1. **Frequency ratio** (v): How well-separated are the update frequencies of adjacent layers? Large ratio → stable. When the strategic loop runs at 1/100th the frequency of the epistemic loop, there's little opportunity for entrainment. When a crisis forces both to the same frequency, stability drops.
 
@@ -172,8 +172,8 @@ When κ_eff exceeds a critical threshold (architecture-dependent), the laminar s
 ### "Quantify the approximation error of directed separation" (Claude's question)
 Reframed: determine the **stability boundary** of the separated regime. Below critical κ_eff, the approximation error is bounded and the separated cascade is a good approximation. Above critical κ_eff, the approximation error can grow without bound (the separated solution is qualitatively wrong). The bound in the stable regime might be straightforward; the important result is characterizing the boundary.
 
-### "Is ACT universal or scoped?" (Codex's question)
-Reframed: ACT is universal in its *framework* (the layers, the coupling metrics, the regime characterization) but the **analytical tools** are regime-dependent. In the laminar regime, you get the clean sequential cascade and all the nice closed-form results. In the turbulent regime, you need coupled analysis (and may need to accept that only statistical characterization is possible, not closed-form solutions). Both regimes are within ACT's scope — they're just different mathematical territories within the same framework.
+### "Is AAD universal or scoped?" (Codex's question)
+Reframed: AAD is universal in its *framework* (the layers, the coupling metrics, the regime characterization) but the **analytical tools** are regime-dependent. In the laminar regime, you get the clean sequential cascade and all the nice closed-form results. In the turbulent regime, you need coupled analysis (and may need to accept that only statistical characterization is possible, not closed-form solutions). Both regimes are within AAD's scope — they're just different mathematical territories within the same framework.
 
 ### "Treat logogenic agents as a distinct regime" (Gemini's suggestion)
 Reframed: logogenic agents are in a **different κ_eff regime** due to their architectural properties (low damping — everything through attention; high bandwidth — raw context, not compressed estimates; potentially high goal-sensitivity). They're not a different theory. They're the turbulent end of the same spectrum. The theory extends smoothly; the analytical techniques change.
@@ -187,7 +187,7 @@ If this reframing holds, Section V doesn't need a fundamentally new theory for l
 3. **Engineering design principles** for keeping critical boundaries stable (the "engineered laminar mechanisms" Joseph mentioned — harmonic frequency relationships, buffering, temporal rhythms)
 4. **IDT-like monitoring** (how would an LLM agent detect that its coupling quality is degrading at a particular boundary?)
 
-The first two are theoretical work. The third is where ACT becomes prescriptive for agent design. The fourth connects directly to Hafez's architecture.
+The first two are theoretical work. The third is where AAD becomes prescriptive for agent design. The fourth connects directly to Hafez's architecture.
 
 ## 9. Connection to Boyd (Worth Mining Further)
 
@@ -217,7 +217,7 @@ Joseph's intuition that Boyd's more detailed teachings might yield high-level-of
 ### What I genuinely don't know:
 - Whether there exists a well-defined critical κ for any given architecture, or whether the transition is always gradual
 - Whether the laminar regime extends far enough to cover interesting agents (if critical κ is very low, almost everything is turbulent and the separated theory covers only trivial cases)
-- Whether Hafez's discrete-state information-theoretic framework extends cleanly to the continuous-state, continuous-time setting that ACT uses
+- Whether Hafez's discrete-state information-theoretic framework extends cleanly to the continuous-state, continuous-time setting that AAD uses
 - Whether the multi-layer IDT idea scales (monitoring every boundary might be computationally expensive, or the monitors might interfere with each other)
 
 ### What would make me more confident:
@@ -229,11 +229,11 @@ Joseph's intuition that Boyd's more detailed teachings might yield high-level-of
 
 ## 11. Possible Next Steps (Not a Plan, Just Options)
 
-1. **Formalize the stability condition.** Take ACT's update dynamics, add a coupling term κ to f_M, and ask: for what values of κ is the sequential cascade a stable fixed point of the iterative dynamics? This is a concrete math problem.
+1. **Formalize the stability condition.** Take AAD's update dynamics, add a coupling term κ to f_M, and ask: for what values of κ is the sequential cascade a stable fixed point of the iterative dynamics? This is a concrete math problem.
 
 2. **Run the 2D simulation** from the research agenda, but look for regime transition (sharp change in approximation error as κ increases) rather than smooth degradation.
 
-3. **Compute P and ΔH between layers** for the existing ACT simulation code (the track-b simulations). Even in a simple simulated agent, you can compute coupling metrics between the epistemic update and the correction function.
+3. **Compute P and ΔH between layers** for the existing AAD simulation code (the track-b simulations). Even in a simple simulated agent, you can compute coupling metrics between the epistemic update and the correction function.
 
 4. **Read Boyd more carefully.** The OODA loop is the simplified version. Boyd's actual briefings ("Patterns of Conflict," "Destruction and Creation") are more nuanced. The regime framework might be implicit in his detailed analysis.
 

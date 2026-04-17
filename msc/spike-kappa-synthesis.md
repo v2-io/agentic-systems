@@ -14,7 +14,7 @@
 4. **spike-attention-causal-graphs.md** — Five versions of the attention-observation-orientation causal graph; structural implications
 5. **spike-kappa-topology-insight.md** — **KEY OUTPUT #1**: directed separation as a property of processing topology (architecture class), not a tunable parameter. Three classes: modular (separation holds by construction), fully merged (fails by construction), partially shared (parameterizable)
 6. **spike-causal-level-4.md** — **KEY OUTPUT #2**: Possible extension of Pearl's hierarchy. Directed separation applies to Levels 1-3 (evidence processing, goal-blind) and correctly FAILS at Level 4 (structural imagination, goal-directed). κ problem reframes as contamination between reasoning modes, not coupling strength. M_t / W_t distinction (grounded beliefs vs. exploratory hypotheticals). Aspiration as productive δ_sat > 0.
-7. **spike-causal-level-4-formal.md** — **KEY OUTPUT #3**: Two formal sketch approaches. Approach 1 (structural intervention operator do_s): extends do-calculus to mechanism changes but doesn't create a strict new level. Approach 2 (model uncertainty layer): identifies model-modifying actions as a genuinely new computational task — when actions change causal structure, model identification and inference are inseparable. This is the strongest formal claim. Recommended framing: don't claim hierarchy extension, DO claim ACT identifies a new class of reasoning tasks that maps to the directed separation boundary.
+7. **spike-causal-level-4-formal.md** — **KEY OUTPUT #3**: Two formal sketch approaches. Approach 1 (structural intervention operator do_s): extends do-calculus to mechanism changes but doesn't create a strict new level. Approach 2 (model uncertainty layer): identifies model-modifying actions as a genuinely new computational task — when actions change causal structure, model identification and inference are inseparable. This is the strongest formal claim. Recommended framing: don't claim hierarchy extension, DO claim AAD identifies a new class of reasoning tasks that maps to the directed separation boundary.
 
 ## What's Strongest
 
@@ -26,9 +26,9 @@ The implication for Section V is strong: LLM agents are in the fully merged clas
 **Confidence: Hypothesis level.** The classification feels correct and useful. The formal characterization of "topology class" needs work (real agents don't have clean boundaries).
 
 ### The κ_selection / κ_processing decomposition (spike 2)
-This is the tightest formal contribution. It cleanly separates two kinds of coupling that ACT currently lumps together under "directed separation":
+This is the tightest formal contribution. It cleanly separates two kinds of coupling that AAD currently lumps together under "directed separation":
 
-- **κ_selection**: Goal influences which events arrive. This goes through π → a → e and is ALREADY ACCOUNTED FOR in ACT's processing/selection distinction. This coupling is expected and doesn't violate directed separation.
+- **κ_selection**: Goal influences which events arrive. This goes through π → a → e and is ALREADY ACCOUNTED FOR in AAD's processing/selection distinction. This coupling is expected and doesn't violate directed separation.
 - **κ_processing**: Goal influences how events are processed. This is the actual violation of directed separation — f_M depends on G_t.
 
 The information-theoretic definition κ_processing = I(G_t ; M_τ⁺ | e_τ) / H(G_t | e_τ) is the precise formal content of directed separation's scope condition, expressed as a continuous quantity rather than a binary condition. This feels like a genuine step from discussion to definition.
@@ -38,7 +38,7 @@ The information-theoretic definition κ_processing = I(G_t ; M_τ⁺ | e_τ) / H
 ### The H_b connection to Hafez (spike 2, section 4.2 of spike 1)
 High H_b between epistemic and purposeful layers = goal-blind processing = directed separation. This is essentially a restatement of directed separation in Hafez's language. It's valid but not deep — it's a translation, not a new result.
 
-Where it becomes potentially deep: if you can MEASURE H_b from the agent's interaction stream (without access to internals), then you have an empirical test for directed separation. Hafez showed this is feasible for RL agents and LLMs. Whether it's feasible for ACT's more abstract formulation is unclear.
+Where it becomes potentially deep: if you can MEASURE H_b from the agent's interaction stream (without access to internals), then you have an empirical test for directed separation. Hafez showed this is feasible for RL agents and LLMs. Whether it's feasible for AAD's more abstract formulation is unclear.
 
 **Confidence: Pattern level.** The mapping is correct. The empirical utility is uncertain.
 
@@ -54,13 +54,13 @@ What would make the regime framing non-trivial: a proof that there exists a crit
 ## What's Weakest
 
 ### The Kelvin-Helmholtz specifics
-The Kelvin-Helmholtz image is vivid and the qualitative mapping is suggestive. But fluid dynamics and information processing have very different mathematical structures. KH instability arises from the Navier-Stokes equations (PDEs over continuous fields). ACT's coupling dynamics would be governed by different mathematics (stochastic processes, information geometry, maybe dynamical systems). The vortex structure, the specific instability mechanism, and the transition criteria won't transfer directly.
+The Kelvin-Helmholtz image is vivid and the qualitative mapping is suggestive. But fluid dynamics and information processing have very different mathematical structures. KH instability arises from the Navier-Stokes equations (PDEs over continuous fields). AAD's coupling dynamics would be governed by different mathematics (stochastic processes, information geometry, maybe dynamical systems). The vortex structure, the specific instability mechanism, and the transition criteria won't transfer directly.
 
 Keep as intuition pump. Don't lean on it for formal results.
 
 ### The multi-frequency self-composition (spike 3)
 The idea of primary/sentinel/strategic loops is plausible as an engineering description of how complex agents work. But it's not clear whether this is:
-- A genuine theoretical contribution (something derivable from ACT's existing principles)
+- A genuine theoretical contribution (something derivable from AAD's existing principles)
 - An engineering pattern (a good design, but not load-bearing for the theory)
 - Already captured by the temporal nesting claim (#temporal-nesting)
 

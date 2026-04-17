@@ -164,7 +164,7 @@ When the agent's **goal class fitness** F_G is low — i.e., no achievable varia
 
 **Symptoms of goal class inadequacy (mirroring TF-10):**
 
-| TFT symptom (model class) | ACT symptom (goal class) |
+| TFT symptom (model class) | AAD symptom (goal class) |
 |---------------------------|--------------------------|
 | Persistent irreducible mismatch | Persistent delta_goal despite adequate model and competent action |
 | Gain collapse without performance | Agent "knows what it wants" but can't make progress |
@@ -214,7 +214,7 @@ This sequence is exactly what skilled developers do. TST's T-05 ("bias toward co
 
 ---
 
-## 5. The Separation Principle for ACT
+## 5. The Separation Principle for AAD
 
 ### 5.1 When Separation Holds
 
@@ -238,11 +238,11 @@ The separation is *asymmetric*:
 
 ### 5.3 Implications
 
-- TFT (Part I of ACT) is a *complete, self-contained* theory of the M_t dynamics. It doesn't need G_t to be internally valid. This is the separation principle working in our favor.
+- TFT (Part I of AAD) is a *complete, self-contained* theory of the M_t dynamics. It doesn't need G_t to be internally valid. This is the separation principle working in our favor.
 
-- The goal/intent layer (Part II of ACT) REQUIRES M_t. It cannot stand alone. This is the correct dependency direction — you need to understand reality before you can meaningfully pursue or revise goals.
+- The goal/intent layer (Part II of AAD) REQUIRES M_t. It cannot stand alone. This is the correct dependency direction — you need to understand reality before you can meaningfully pursue or revise goals.
 
-- The full ACT (Part I + Part II) captures the coupled dynamics where goals influence actions influence observations influence models influence goal revision. This is the full Orient cycle.
+- The full AAD (Part I + Part II) captures the coupled dynamics where goals influence actions influence observations influence models influence goal revision. This is the full Orient cycle.
 
 ---
 
@@ -345,11 +345,11 @@ Optimally compressed intent (Auftragstaktik sweet spot): Retains exactly what th
 | T_goal | Closed-loop bandwidth | Control bandwidth | Features-shipped-per-sprint | Operational tempo toward objective | Episodes-to-convergence |
 | Separation | Perfect (no M_t) | Perfect (separation principle) | Partial (comprehension informs feasibility) | Imperfect (intel shapes objectives) | Partial (model-based RL couples them) |
 
-**The PID column is revealing**: PID has G_t (setpoint) and delta_goal (e_t = r_t - y_t) but NO M_t and NO delta_epistemic. It's pure goal-pursuit without epistemic modeling. TFT tried to fit this into the model framework and the fit was awkward. ACT gives it a proper home — the PID is a goal-persistence-only agent, the degenerate case where Part I (adaptive model) is absent and only Part II (purposeful agency) operates.
+**The PID column is revealing**: PID has G_t (setpoint) and delta_goal (e_t = r_t - y_t) but NO M_t and NO delta_epistemic. It's pure goal-pursuit without epistemic modeling. TFT tried to fit this into the model framework and the fit was awkward. AAD gives it a proper home — the PID is a goal-persistence-only agent, the degenerate case where Part I (adaptive model) is absent and only Part II (purposeful agency) operates.
 
-**The Kalman filter column is the opposite**: pure M_t, no G_t. It's an epistemic-only agent. TFT describes it perfectly. ACT's Part I covers it completely; Part II doesn't apply.
+**The Kalman filter column is the opposite**: pure M_t, no G_t. It's an epistemic-only agent. TFT describes it perfectly. AAD's Part I covers it completely; Part II doesn't apply.
 
-**LQG (Kalman + LQR together)** is the simplest case where BOTH parts operate. The separation principle tells us they can be designed independently in this case. ACT's claim is that this separation is the exception, not the rule — in complex domains (software, military, organizational), the M_t and G_t dynamics are coupled through action selection and goal revision.
+**LQG (Kalman + LQR together)** is the simplest case where BOTH parts operate. The separation principle tells us they can be designed independently in this case. AAD's claim is that this separation is the exception, not the rule — in complex domains (software, military, organizational), the M_t and G_t dynamics are coupled through action selection and goal revision.
 
 ---
 
@@ -466,8 +466,8 @@ The OKR/DAG structure feels right descriptively. But formalizing it risks over-e
 
 Three paths forward from this sketch, in order of likely value:
 
-1. **Test against PID + LQG formally.** These are cases where the answer is known. If ACT's formalism reproduces the PID error dynamics and the LQG separation principle as special cases, the formalism is on solid ground. If it doesn't, the formalism needs fixing before we go further.
+1. **Test against PID + LQG formally.** These are cases where the answer is known. If AAD's formalism reproduces the PID error dynamics and the LQG separation principle as special cases, the formalism is on solid ground. If it doesn't, the formalism needs fixing before we go further.
 
-2. **Test against a software development scenario.** Walk through a concrete feature implementation using ACT's framework: G_t = the spec, M_t = the codebase model, delta_goal = spec-reality gap, the cold-start sequence, goal revision when the spec turns out to be infeasible. See if the formalism produces non-obvious predictions.
+2. **Test against a software development scenario.** Walk through a concrete feature implementation using AAD's framework: G_t = the spec, M_t = the codebase model, delta_goal = spec-reality gap, the cold-start sequence, goal revision when the spec turns out to be infeasible. See if the formalism produces non-obvious predictions.
 
 3. **Formalize the goal dynamics ODE.** Write down the differential equation for delta_goal evolution, analogous to TF-11's mismatch ODE. Analyze stability. Derive a goal persistence condition. See if the adversarial dynamics (Cor. 11.2, effects spiral) have goal-level analogs.

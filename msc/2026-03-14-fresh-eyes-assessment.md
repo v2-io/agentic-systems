@@ -8,7 +8,7 @@
 
 ## What This Theory Actually Is
 
-ACT is a unifying framework that connects control theory (Lyapunov stability), estimation theory (Kalman filtering / uncertainty ratio), information theory (IB, entropy), and causal inference (Pearl's hierarchy, DAGs) under a single account of what makes an agent persist, pursue goals, and compose with other agents.
+AAD is a unifying framework that connects control theory (Lyapunov stability), estimation theory (Kalman filtering / uncertainty ratio), information theory (IB, entropy), and causal inference (Pearl's hierarchy, DAGs) under a single account of what makes an agent persist, pursue goals, and compose with other agents.
 
 The individual mathematical tools are well-established. The integration is the contribution. This is stated clearly in the project's own documents and it's true — but I want to say more precisely *what kind* of contribution integration is.
 
@@ -94,7 +94,7 @@ The claim that git commit data provides "genuinely causal" information is analog
 ### Medium-term (next month)
 
 8. Promote 10-15 strongest segments from `draft` to `in-progress-1` — the theory has too many segments at draft and zero past it
-9. Write the positioning preprint — 15-20 pages, ACT's contribution framed against the landscape
+9. Write the positioning preprint — 15-20 pages, AAD's contribution framed against the landscape
 10. Begin the coupled Section V analysis — what does the orient cascade look like when f_M depends on G_t?
 
 ### What NOT to do
@@ -107,7 +107,7 @@ The claim that git commit data provides "genuinely causal" information is analog
 
 ## On the Theory's Character
 
-ACT is honest about what it is. It says "integration, not new mathematics" and means it. It says "discussion-grade" when it means discussion-grade. It says "conditional on scope restriction" when the scope restriction is genuine. This honesty is rare and immensely valuable.
+AAD is honest about what it is. It says "integration, not new mathematics" and means it. It says "discussion-grade" when it means discussion-grade. It says "conditional on scope restriction" when the scope restriction is genuine. This honesty is rare and immensely valuable.
 
 But the honesty creates a paradox: the theory's own documents are so careful about epistemic status that a reader might conclude there's less here than there is. The integration IS the contribution, and it's a substantial one. The vocabulary IS new, and it enables new thinking. The specific formalizations (satisfaction gap, orient cascade, adversarial exponents, code quality as U_o) ARE novel within their landscapes.
 

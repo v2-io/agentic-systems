@@ -21,7 +21,7 @@
 
 ## Part 0: What We Already Have
 
-Section I of ACT (from TFT) gives us an agent with:
+Section I of AAD (from TFT) gives us an agent with:
 - M_t ∈ M — a compressed model of reality
 - δ_t = o_t − ô_t — mismatch between prediction and observation
 - η* = U_M / (U_M + U_o) — optimal update gain
@@ -185,7 +185,7 @@ An LLM with no causal DAG, operating in an action loop (write code → run tests
 
 In software, the agent even achieves Level 3: git checkout → implement alternative → observe difference provides *literal counterfactual evaluation* with ground-truth verification.
 
-Pearl's objection (LLMs are Level 1 pattern matchers) is correct about the model *in isolation*. ACT's response: the model never operates in isolation. The feedback loop elevates the system's causal access beyond the model's internal level. The agent = model + loop, not model alone.
+Pearl's objection (LLMs are Level 1 pattern matchers) is correct about the model *in isolation*. AAD's response: the model never operates in isolation. The feedback loop elevates the system's causal access beyond the model's internal level. The agent = model + loop, not model alone.
 
 **Formal statement**: Let A be an agent with internal model M_t (Level 1 capacity) embedded in a feedback loop L with the environment. The composite system (A, L) has Level 2 capacity by construction (TF-02), because:
 1. The agent selects actions (TF-07)
@@ -220,7 +220,7 @@ This is where the chain/graph structure becomes necessary.
 Consider a causal chain of depth n: a_1 → s_1 → a_2 → s_2 → ... → O_t.
 
 If each link succeeds with probability p, the chain confidence is p^n.
-This is the compound probability decay that ACT already identifies (#260).
+This is the compound probability decay that AAD already identifies (#260).
 
 Five links at p = 0.9: chain confidence 0.59.
 Ten links at p = 0.9: chain confidence 0.35.
@@ -319,7 +319,7 @@ O_t may also depend on M_t: a goal may be abandoned when the reality model shows
 
 The policy π(M_t, G_t) selects actions that depend on both the reality model and the purposeful state. Actions affect the world (changing Ω_t), which changes observations, which updates M_t, which triggers G_t revision. The coupling is through the action-observation-update cycle, not through direct state dependence.
 
-This is exactly ACT's #250 (directed separation), but derived from the different update sources rather than assumed.
+This is exactly AAD's #250 (directed separation), but derived from the different update sources rather than assumed.
 
 ---
 
@@ -489,7 +489,7 @@ Each scope narrowing in the proposed structure does double duty:
 
 1. **For the current theory**: It honestly marks where generality ends and specific commitment begins, preventing hand-waving from masquerading as derivation.
 
-2. **For future work**: It clearly marks *divergence points* — places where a different researcher could take a different path. "What happens for agents without timescale-separated purpose?" is not a failure of ACT — it's an explicitly marked research question that ACT's structure makes precise.
+2. **For future work**: It clearly marks *divergence points* — places where a different researcher could take a different path. "What happens for agents without timescale-separated purpose?" is not a failure of AAD — it's an explicitly marked research question that AAD's structure makes precise.
 
 This is better than the common theoretical practice of making assumptions silently (so they're invisible) or stating them as axioms (which implies they can't be questioned). Scope narrowings say: "we could go either way here; we're choosing this direction for these reasons; the other direction is legitimate and unexplored."
 
@@ -511,7 +511,7 @@ each result holds for the *intersection* of all prior scopes. A claim about "pur
 
 - **Temporal structure in the DAG**: Current DAG has no explicit temporal ordering among actions. Real strategies have sequential dependencies ("do A before B"). This might need to be added as edge metadata or node ordering.
 
-- **Resource constraints**: The DAG doesn't represent resource budgets, commitment costs, or opportunity costs. A full intention theory would need these. Current ACT defers this.
+- **Resource constraints**: The DAG doesn't represent resource budgets, commitment costs, or opportunity costs. A full intention theory would need these. Current AAD defers this.
 
 ### 8.5 The G_t / M_t compatibility constraint
 
@@ -543,7 +543,7 @@ And a vicious one: if M_t degrades, the effective complexity of G_t shrinks — 
 
 The derivation above has a specific payoff for TST grounding:
 
-**Software developers operate at Level 2-3 naturally.** When a developer runs a test, they perform do(change) → observe(test result). When they git bisect, they perform counterfactual evaluation. Software is the domain where Pearl's hierarchy is most directly accessible — and ACT formalizes why.
+**Software developers operate at Level 2-3 naturally.** When a developer runs a test, they perform do(change) → observe(test result). When they git bisect, they perform counterfactual evaluation. Software is the domain where Pearl's hierarchy is most directly accessible — and AAD formalizes why.
 
 **The developer's G_t is explicit.** A developer's O_t is the task ("implement OAuth"). Their Σ_t is the plan (an AND/OR structure: need BOTH auth flow AND token storage AND rate limiting; each achievable through multiple approaches). This plan is often literally written down (in a ticket, a TODO list, or a PLANS.md).
 
@@ -580,13 +580,13 @@ Similarities:
 - Both make the feedback loop central
 
 Differences:
-- ACT uses causal feedback dynamics (mismatch → gain → tempo); active inference uses variational free energy
-- ACT's purposeful state is explicit (G_t with possible DAG structure);
+- AAD uses causal feedback dynamics (mismatch → gain → tempo); active inference uses variational free energy
+- AAD's purposeful state is explicit (G_t with possible DAG structure);
   active inference embeds preferences in the generative model
-- ACT's derivation uses Pearl's causal hierarchy directly; active inference uses the free energy principle's blanket formalism
-- ACT is more transparent and measurable (the claim); active inference is more general (their claim)
+- AAD's derivation uses Pearl's causal hierarchy directly; active inference uses the free energy principle's blanket formalism
+- AAD is more transparent and measurable (the claim); active inference is more general (their claim)
 
-**Open question**: Is there a formal mapping between ACT's G_t and active inference's prior preferences + expected free energy? If so, ACT and active inference may be different coordinate systems for the same underlying mathematics.
+**Open question**: Is there a formal mapping between AAD's G_t and active inference's prior preferences + expected free energy? If so, AAD and active inference may be different coordinate systems for the same underlying mathematics.
 
 ### 10.3 The transition from loop-based to model-based causal access
 
@@ -639,7 +639,7 @@ The directed separation claim becomes precise:
 - π depends on both: a_t = π(M_t, G_t)
 - Closed-loop M transition depends on G_t through π → a_t → o_{t+1}
 
-**Impact**: This is a foundational fix that makes ACT's extension of TFT formally clean. Section I agents have X_t = (M_t, ∅) — the purposeful substate is empty. Section II adds G_t ≠ ∅.
+**Impact**: This is a foundational fix that makes AAD's extension of TFT formally clean. Section I agents have X_t = (M_t, ∅) — the purposeful substate is empty. Section II adds G_t ≠ ∅.
 
 This also addresses Codex's point 6: the precise claim is that f_M is independent of G_t (the epistemic update function doesn't reference purpose), not that M_t's closed-loop trajectory is independent of G_t (it isn't, because actions depend on G_t).
 

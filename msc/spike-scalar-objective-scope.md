@@ -4,13 +4,13 @@
 
 **Date**: 2026-04-01
 
-**Motivation**: ACT's #objective-functional defines $V_{O_t}: \text{trajectories} \to \mathbb{R}$, requiring a total ordering on trajectory outcomes. The codex review flagged this as making the diagnostics ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$) less universal than they appear for organizations, safety-constrained AI, and agents with true Pareto structure. The Working Notes in #objective-functional suggest modeling compound objectives as terminal AND-nodes in $\Sigma_t$ with simple scalar $O_t$. This spike tests that workaround and analyzes the alternatives.
+**Motivation**: AAD's #objective-functional defines $V_{O_t}: \text{trajectories} \to \mathbb{R}$, requiring a total ordering on trajectory outcomes. The codex review flagged this as making the diagnostics ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$) less universal than they appear for organizations, safety-constrained AI, and agents with true Pareto structure. The Working Notes in #objective-functional suggest modeling compound objectives as terminal AND-nodes in $\Sigma_t$ with simple scalar $O_t$. This spike tests that workaround and analyzes the alternatives.
 
 ---
 
 ## 1. Where the Scalar Restriction is Load-Bearing
 
-The real-valued codomain of $V_{O_t}$ enters ACT in five places. Not all of them require total ordering with equal force.
+The real-valued codomain of $V_{O_t}$ enters AAD in five places. Not all of them require total ordering with equal force.
 
 ### 1.1 Genuinely requires total ordering
 
@@ -180,7 +180,7 @@ Any Pareto-optimal policy corresponds to *some* scalarization — a weighted sum
 - Varying the weights traces the frontier (for convex feasible sets).
 - The formalism misses only the *meta-question* of which weights to use.
 
-This means the scalar restriction is less severe than it appears: ACT with scalar $V_{O_t}$ can analyze any single Pareto-optimal policy. What it cannot do is analyze the *set* of Pareto-optimal policies simultaneously, or reason about the tradeoff structure itself.
+This means the scalar restriction is less severe than it appears: AAD with scalar $V_{O_t}$ can analyze any single Pareto-optimal policy. What it cannot do is analyze the *set* of Pareto-optimal policies simultaneously, or reason about the tradeoff structure itself.
 
 ### 4.3 The Timescale Argument
 
@@ -190,19 +190,19 @@ There is a natural timescale separation that makes the scalar restriction less r
 - **Across action cycles**: the effective weights may shift. A safety-critical situation raises safety's weight; an efficiency deadline raises speed's weight.
 - **At the objective-revision timescale**: the agent or its principal may explicitly revise the scalarization weights.
 
-ACT already has this timescale structure ($\nu_M \gg \nu_\Sigma \gg \nu_O$). The scalar $V_{O_t}$ can be understood as the *current* scalarization, which changes at the $\nu_O$ timescale. This is not a cheat — it is the claim that at any given moment, the agent's behavior reveals a scalar ordering, even if that ordering changes over time.
+AAD already has this timescale structure ($\nu_M \gg \nu_\Sigma \gg \nu_O$). The scalar $V_{O_t}$ can be understood as the *current* scalarization, which changes at the $\nu_O$ timescale. This is not a cheat — it is the claim that at any given moment, the agent's behavior reveals a scalar ordering, even if that ordering changes over time.
 
 ### 4.4 Verdict
 
 The scalar restriction reflects a genuine insight about action-level agency: choosing an action forces a total ordering on the relevant alternatives at the moment of choice. This is substantive, not just convenient. But it is a restriction to *coherent individual agents* — organizations, committees, and multi-principal systems may genuinely lack the coherence that makes a scalar objective well-defined.
 
-The restriction is therefore **correctly scoped** for ACT's core target (individual agents or tightly coordinated teams with unified command), and **honestly acknowledged** as a limitation for the composition setting (Section III) where multiple agents with different objectives must coordinate.
+The restriction is therefore **correctly scoped** for AAD's core target (individual agents or tightly coordinated teams with unified command), and **honestly acknowledged** as a limitation for the composition setting (Section III) where multiple agents with different objectives must coordinate.
 
 ---
 
 ## 5. Recommendation
 
-### What ACT Should Do
+### What AAD Should Do
 
 **Keep the scalar restriction for the core theory (Sections I-II).** The restriction is load-bearing for the diagnostic system and reflects a genuine insight about coherent agency. Removing it would sacrifice the quantitative diagnostics ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$ as magnitudes) for a more general but less actionable formulation.
 
@@ -225,11 +225,11 @@ The restriction is therefore **correctly scoped** for ACT's core target (individ
 
 **Add one new entry to the disambiguation table in #satisfaction-gap.** The compound-objective case introduces a failure mode not currently listed: "objectives jointly infeasible — individually attainable but no single policy satisfies all simultaneously." This belongs in the table even under the scalar formalism, because the AND-node workaround makes it visible through per-terminal $\delta_{\text{sat}}$ values.
 
-### What ACT Should NOT Do
+### What AAD Should NOT Do
 
-**Do not attempt a Pareto extension in Sections I-II.** The structural theory does not need it (it is already dimension-agnostic). The diagnostic system would be weakened by it. The coherent-agency argument justifies the restriction for individual agents, which is ACT's scope.
+**Do not attempt a Pareto extension in Sections I-II.** The structural theory does not need it (it is already dimension-agnostic). The diagnostic system would be weakened by it. The coherent-agency argument justifies the restriction for individual agents, which is AAD's scope.
 
-**Do not treat the scalar restriction as a deficiency.** It is a scope decision, analogous to directed separation being an architectural classification rather than an approximation. Agents with genuinely incommensurable objectives are outside ACT's core scope, just as fully merged agents (where $M_t$ depends on $G_t$) are outside the directed-separation scope. Both are acknowledged, not apologized for.
+**Do not treat the scalar restriction as a deficiency.** It is a scope decision, analogous to directed separation being an architectural classification rather than an approximation. Agents with genuinely incommensurable objectives are outside AAD's core scope, just as fully merged agents (where $M_t$ depends on $G_t$) are outside the directed-separation scope. Both are acknowledged, not apologized for.
 
 **Do not conflate the AND-node workaround with the vector extension.** The AND-node workaround keeps $V_{O_t}$ scalar at each terminal and uses the DAG's combination structure to express compound requirements. The vector extension changes the type of $V_{O_t}$ itself. These are different approaches with different tradeoffs. The workaround is a technique within the current formalism; the extension would change the formalism.
 
