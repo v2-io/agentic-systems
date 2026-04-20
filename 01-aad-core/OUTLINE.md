@@ -120,6 +120,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
 | III | Scope | | [#multi-agent-scope](src/multi-agent-scope.md) | Multiple agents, shared env | draft |
+| III | Scope | | [#composition-scope-condition](src/composition-scope-condition.md) | Teleological alignment required for composite-agent status | draft |
 | III | Formulation | | [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | draft |
 | III | Sketch | | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | draft |
 | III | Hypothesis | | [#directed-separation-under-composition](src/directed-separation-under-composition.md) | Goal-blindness survives iff routing is goal-blind (two cases) | draft |
