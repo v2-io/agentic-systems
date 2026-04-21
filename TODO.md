@@ -7,18 +7,9 @@
 
 Two theoretical findings that survived the 2026-04-21 audit and were explicitly deferred from that session. Both are characterized in `msc/pending-findings-2026-04-21.md`.
 
-### Finding A — Temporal coarse-graining gap in `#composition-closure` (HIGH)
+### ~~Finding A — Temporal coarse-graining gap in `#composition-closure`~~ — RESOLVED 2026-04-22
 
-The state closure defect $\varepsilon_x$ (line 49 of `#composition-closure`) iterates over micro-timesteps, forcing synchronous micro/macro update cadence and prohibiting the timescale abstraction that `#temporal-nesting` asserts composites enjoy ($\nu_{n+1} \ll \nu_n$). This is the more load-bearing of the two pending findings — the formulation as written cannot express a macro-agent that updates every $K \gg 1$ micro-steps, which was always part of the composition theory's intent.
-
-**Repair options** (see pending-findings for the full statement):
-- Option 1: aggregated micro-window — $\Lambda_o$ aggregates $K$ observations and $\varepsilon_x$ sums over macro-steps.
-- Option 2: Tikhonov/Mori-Zwanzig equilibrium residual — most principled, 3–5 sessions.
-- Option 3: per-macro-step formulation — simpler than option 2, equivalent for most purposes.
-
-**Recommended:** Option 3 (or 1) — clean fix at 90–120 min including bridge-lemma re-verification. Option 2 if one wants an explicit Mori-Zwanzig connection.
-
-**Touches:** `#composition-closure` definition directly. Bridge lemma re-verification because the sector-persistence template's disturbance rate becomes macro-step-rated. Cross-references from `#tempo-composition`, `#unity-closure-mapping`, `#composition-scope-condition` likely need a scan for consistency.
+Option 3 (per-macro-step formulation) executed. `#composition-closure` now carries the timescale ratio $K_c \geq 1$ alongside admissibility, rewrites $\varepsilon_x, \varepsilon_a, \varepsilon_o$ over macro-steps with window-aware $\Lambda_o, \Lambda_a$, restates (P1) at macro granularity, adds an explicit unit-consistency note to the bridge lemma, and records $K_c = 1$ as the previous-formulation special case. The sector-persistence-template instantiation table updated to show $e_m$ (trajectory error at macro-boundaries). The two-Kalman worked example continues to live at $K_c = 1$. See `msc/pending-findings-2026-04-21.md` Finding A for the closed-out resolution note.
 
 ### Finding B — `#observation-ambiguity-modulation` is architecture-contaminated (MEDIUM)
 

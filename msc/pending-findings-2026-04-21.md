@@ -13,7 +13,11 @@ Other findings from those batches were executed in this session and committed; o
 
 ---
 
-## Finding A — Temporal coarse-graining gap in `#composition-closure` (from Gemini)
+## Finding A — Temporal coarse-graining gap in `#composition-closure` (from Gemini) — RESOLVED 2026-04-22
+
+**Resolution.** Option 3 (per-macro-step formulation with window-aware $\Lambda_o, \Lambda_a$) executed in `01-aad-core/src/composition-closure.md`. The segment now introduces the timescale ratio $K_c \geq 1$ alongside the admissibility conditions, rewrites $\varepsilon_x, \varepsilon_a, \varepsilon_o$ to sum over macro-steps $m$, restates (P1) at macro-step granularity, adds an explicit unit-consistency note to the bridge lemma, and records $K_c = 1$ as the previous-formulation special case (the two-Kalman instantiation continues to live there). The sector-persistence-template cross-reference now shows $e_m$ (trajectory error at macro-boundaries) rather than $e_t$. Option 2 (full Mori-Zwanzig equilibrium form) remains an optional future refinement — the current fix is clean at $K_c \gg 1$ without committing to a singular-perturbation framing. The previously described below Repair options / Recommended path / Estimated effort are retained for historical record.
+
+### Original finding
 
 **Problem.** `#composition-closure` defines the state closure defect as
 
@@ -74,6 +78,7 @@ Recast $A(e)$ as a property of the observation event itself — e.g., the condit
 ## Notes for the next agent
 
 - Both findings should probably be executed in a single session (they are independent and neither blocks the other).
-- If you are prioritizing: **Finding A** (temporal coarse-graining) is the more theoretically load-bearing. It corrects a real definitional bug in `#composition-closure` that prevents the theory from expressing the timescale-abstraction that was always part of its intent. **Finding B** is a logogenic-framework hygiene issue.
+- Finding A was resolved on 2026-04-22 (see its top stanza). **Finding B** is the remaining open item.
+- Historical prioritization note (retained for context): Finding A was the more theoretically load-bearing because it corrected a real definitional bug in `#composition-closure` preventing the timescale abstraction that was always part of its intent. **Finding B** is a logogenic-framework hygiene issue.
 - `msc/spike-ib-unification-plan.md` is the IB scoping spike that informed `#compression-operations`. It remains as the record for any future push toward full IB unification (currently deferred per the synthesis-first recommendation).
 - `msc/opus-audit-2026-04-21.md` is the master audit that drove the 2026-04-21 work. Its findings §1–4 and bigger-picture synthesis §1, §2, §3, §4 (partial), §5 are all addressed in the segments. §6 is embodied in `#sector-persistence-template`. §7 ($G_t$ as single object) and §8 (continuous convention hierarchy) are deferred as foundational moves awaiting the right context.
