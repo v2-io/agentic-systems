@@ -6,3 +6,5 @@ __pycache__/
 .obsidian.vimrc
 .claude/
 .build/
+combined_aad.md
+combined_*.md

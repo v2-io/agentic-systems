@@ -19,7 +19,9 @@ This is theoretical research, not software engineering. The primary artifacts ar
 
 ## Current Priority
 
-**Read `msc/2026-03-13-feedback.md` first.** This is a consolidated review from three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemini) identifying the theory's most important issues. The top priorities are: (1) the directed-separation scope decision (resolved as architectural classification — modular/merged/partially modular), (2) the α/T relationship (fixed 2026-03-14), (3) resolving the composition-closure bridge lemma (2-agent spike written, cases 1-2 ready for promotion).
+**Read `TODO-04-21.md` first** if you are picking up work after 2026-04-21. That file contains the session-by-session plan derived from three audits (Gemini, Codex, Opus) and Joseph's sequencing preference (larger-scale reframings first). The primary audit driving the plan is `msc/opus-audit-2026-04-21.md`. Session A (sector-Lyapunov template factoring + four promotion-honesty fixes) is the next substantive work.
+
+**For broader orientation**, read `msc/2026-03-13-feedback.md` — the earlier consolidated review from three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemini) that framed the theory's structural priorities. Historical top-priority items from that review: (1) the directed-separation scope decision (resolved as architectural classification — modular/merged/partially modular), (2) the α/T relationship (fixed 2026-03-14), (3) resolving the composition-closure bridge lemma (tier-specific contraction structure promoted; IB unification and sector-Lyapunov template factoring identified as remaining structural moves in `TODO-04-21.md`).
 
 ## Where to Start (for orientation)
 
