@@ -11,41 +11,57 @@ All four cleanups landed. F20 strengthened rather than softened; the others were
 - ~~**F20** — KL-direction degeneracy in `#strategy-complexity-cost` variational form~~ — **LANDED as strengthening** (not softening). New appendix segment **#strategy-cost-regret-bound** hosts the full derivation: TV bound via bounded value range, Pinsker-KL bound, direction-forcing argument (forward-KL is vacuous under deterministic $\pi^\ast$), admissible-divergence family analysis (TV tight but non-differentiable; reverse-KL canonical-not-unique on gradient-tractability + variational-inference + Fisher-geometry + MDL-coding grounds), and the linear-vs-square-root $\beta_\Sigma$ trade-off (linear preserves IB-shape alignment; square-root would give $\beta_\Sigma \propto V_{\max}$ global naturalization). Segment-level cross-refs updated in `#compression-operations`, `#exploit-explore-deliberate`, `#ciy-unified-objective`. `msc/spike-f20-kl-direction-strengthening.md` retained as the reasoning trail only; framework is complete without it.
 - ~~**F21** — `#identifiability-floor` frontmatter status conflicts with internal text~~ — **LANDED.** Frontmatter `status:` changed to `discussion-grade`; Epistemic Status rewritten to cleanly separate the meta-pattern (discussion-grade presentational principle) from individual instances (F1's no-go: *exact* for shallow / *robust qualitative* for general; F13's L1' refutation: *exact*).
 
-## Recommendations for next session (from 2026-04-22 close-out review)
+## Recommendations for next session (from 2026-04-22/23 close-out review)
 
-What follows is one agent's prioritization, not a binding commitment. Joseph's call which to follow.
+What follows is one agent's prioritization after the 2026-04-22/23 strengthening cycle. Joseph's call which to follow.
 
-### Recommended sequence
+### Session gains (what landed; refresh of session character)
 
-**Phase 1 — Cleanups (1–2 hrs total).** Land F18, F19, F20, F21 as a small cleanup commit. These are all known issues from prior work, they don't entangle with any architectural decision, and F20 in particular is a substantive bug in load-bearing recently-landed work. Recommended order within the phase: F21 first (5 min, builds confidence), F18 second (10 min, mechanical), F19 third (20 min, mechanical), F20 last (30–45 min, requires the small theoretical decision on KL direction).
+The 2026-04-22/23 cycle ran Phases 1–5 + 7 of the proposed sequence, plus two unplanned in-flight strengthening spikes surfaced during the work. Nine commits delivered:
 
-For F20 specifically: prefer Option (a) (reverse KL direction to $D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t}) = -\log Q_{\Sigma_t}(a^\ast \mid M_t)$) over Option (b) (Boltzmann-smoothing of $\pi^\ast$). Reason: Option (a) preserves the V-medium move's original spirit (the strategy's distance from the optimum, measured via KL) while fixing the deterministic-$\pi^\ast$ degeneracy with a cleaner mathematical object (negative log-likelihood of the optimal action under the agent's strategy). Option (b) requires introducing a temperature parameter that has no AAD-internal justification. The fix needs to land in `#strategy-complexity-cost`, the companion spike `msc/spike-active-inference-vs-aad.md` §E.6, the `#compression-operations` variational note, and a one-line acknowledgment in `#exploit-explore-deliberate` and `#ciy-unified-objective`. Worth a small `msc/spike-finding-20-kl-direction.md` to document the choice and the reasoning, parallel to how F1 / F7 / F13 strengthening work was documented.
+- **Three new uniqueness theorems**, each forcing a logarithmic coordinate via a Cauchy-functional-equation argument on an AAD-internally-motivated additivity axiom: (i) F20 regret-bound derivation (reverse-KL direction forced); (ii) reverse-KL chain-rule uniqueness (Csiszár 1991 / Shore-Johnson 1980 / Hobson 1969, under chain-rule-additivity axiom); (iii) evidential-additivity uniqueness of log-odds (Aczél 1966 Cauchy-functional-equation argument, under evidential-additivity axiom).
+- **Discovered structural pattern** — the three theorems share a common shape. See `msc/architectural-proposals-2026-04-22.md` "Discovered structural patterns from the 2026-04-22/23 strengthening cycle" §SP-1. Candidate for explicit meta-segment promotion (`#additive-decomposition-pattern`) in a future session.
+- **Scope partitions sharpened.** A2' α/β sub-scope (Kalman/conjugate-Bayesian/gradient-strongly-convex = α derived; PID/rule-based/human-judgment = β assumed). Prop A.1S region condition lifted via stopping-time localization (Khasminskii 2012).
+- **Three new meta-segments or promotions.** `#separability-pattern` (positive-half complement to `#identifiability-floor`, six ladders enumerated); `#agent-identity` promoted to formal scope (type: scope, status: robust-qualitative); `#edge-update-natural-parameter` (uniqueness theorem + scope condition).
+- **O-BP14 derivation-table convention** landed in `FORMAT.md` with tables applied to five derivation segments.
+- **C-BP3 TST reframing** as calibration laboratory with transfer-assumption table.
+- **Citation audit** ran on the reverse-KL uniqueness work: three wrong attributions (Csiszár 1972 / Amari 2009 Theorem 1 / Amari-Cichocki 2010 Prop 3.2 — none contain the chain-rule uniqueness theorem) corrected to Hobson 1969 / Csiszár 1991 / Shore-Johnson 1980 / Aczél-Daróczy 1975 with PDFs saved to `ref/`. Eguchi 1983 venue corrected. Three-layer-pattern discovery now rests on defensible citations.
 
-**Phase 2 — Derivation-table convention (O-BP14, 30 min + incremental).** Add the convention to FORMAT.md, then apply to 3–5 high-value derivation-type segments first (`#sector-condition-derivation`, `#strategic-dynamics-derivation` Props B.5–B.7, `#composition-closure`, `#graph-structure-uniqueness`). The remaining segments can be touched as they're next visited. Rationale: this is the highest payoff-to-effort move in the entire portfolio. The derivation-table format itself surfaces what's chosen vs. derived in each segment — which is exactly the kind of clarity that later architectural proposals (O-BP1, O-BP10, C-BP2) need to land cleanly. The tables become scoping artifacts for those moves, not just reader-friendly scaffolding.
+Segment count: 93 → 96 (added `#identifiability-floor` before this cycle; `#strategy-cost-regret-bound`, `#separability-pattern`, `#edge-update-natural-parameter` this cycle). Stage distribution: ~13 claims-verified, ~23 deps-verified, ~59 draft.
 
-**Phase 3 — Coordinated framing pass: O-BP1 + O-BP10 + O-BP8 (1–3 sessions).** Three composable framing moves, all editorial rather than structural:
+### Recommended sequence for next session
 
-- **O-BP10** (projection-contraction framing): "an adaptive system is a projection whose contraction rate exceeds its target's drift rate." Goes in OUTLINE.md preamble + `#sector-persistence-template` introductory passage.
-- **O-BP1** (template as organizing principle): reframe the OUTLINE around disturbance decomposition at scales. Composes with O-BP10 — O-BP10 is the object-level slogan, O-BP1 is the result-level organizing principle.
-- **O-BP8** (explicit scope lattice): name the adaptive → agency → learning-purposeful → exact-Section-II-modular → coupled/logogenic lattice once. Closes Finding 16 and supports both O-BP1 and the eventual C-BP1 three-layer separation.
+**Phase A — Citation audit project-wide (2–3 sessions; see "Active — Citations Audit" below).** The reverse-KL audit found a 3-wrong-out-of-~16 error rate. Prior strengthening cycles invoked Bareinboim/Khalil/Khasminskii/Khasminskii/Friston/Tishby/Pearl/etc.; none has had the same audit scrutiny. Next session should run the audit in batches (Section I derivations first; then Section III composition; then TST operational segments).
 
-These three together would constitute a complete elevator-pitch reframing of AAD. They close several of the §H underclaim findings from the morning's AI-positioning spike (especially the persistence-template's broader-validity-than-FEP-flow positioning, which gets sharper under O-BP10's "what AAD actually is" framing). Risk: low — all three are presentational, not structural.
+**Phase B — Promote the three-layer additive-decomposition pattern as a meta-segment (1–2 sessions).** New segment `#additive-decomposition-pattern` (or `#logarithmic-coordinate-forcing`) naming the pattern across the three current instances, with a candidate-extensions section flagging composition-closure / tempo-composition / communication-gain / continuous-$M_t$ update as open extension questions. Takes its place alongside `#identifiability-floor`, `#separability-pattern`, `#approximation-tiering`, `#independence-audit` as the fifth meta-segment in AAD's scope-characterization family. Low risk — framing touch; the math is already in the three source segments.
 
-**Phase 4 — Then choose:** Either (a) continue editorial/positioning work with O-BP6 (identity promotion, 1 session), C-BP3 (software calibration laboratory, 45–90 min), C-BP2 (master separability pattern naming, 1–2 sessions); or (b) launch the O-BP11 (observability as master variable) scoping spike as the next substantive structural investigation. Recommendation: do (a) first if the goal is consolidation; do (b) first if the goal is to scope the largest available reorganization while the strengthening cycle's intuitions are fresh.
+**Phase C — Coordinated framing pass: O-BP1 + O-BP10 + O-BP8 (1–3 sessions).** Three composable framing moves, all editorial:
+
+- **O-BP10** (projection-contraction framing): "an adaptive system is a projection whose contraction rate exceeds its target's drift rate." Goes in OUTLINE.md preamble + `#sector-persistence-template` introductory passage. **Note added 2026-04-23:** the three-layer pattern sharpens O-BP10's scope — the "contraction" works on disturbance expressed in whichever coordinate makes the underlying decomposition additive. Under G-BP1's log-odds coordinate, edge-level contraction is natural; under the reverse-KL coordinate, divergence-level contraction is natural. The slogan is cleaner once the additive-decomposition pattern is visible.
+- **O-BP1** (template as organizing principle): reframe the OUTLINE around disturbance decomposition at scales. Composes with O-BP10 and SP-1.
+- **O-BP8** (explicit scope lattice): name the adaptive → agency → learning-purposeful → exact-Section-II-modular → coupled/logogenic lattice once. Closes Finding 16.
+
+**Phase D — Then choose:**
+- **(i) O-BP11 observability master-variable scoping spike** (deepest remaining structural insight from the audit cycle; should be explicitly falsification-designed per the prior recommendation).
+- **(ii) Phase 2.5 B.5d uniqueness spike** (parallel to the other three Cauchy-functional-equation uniqueness results; potential fourth instance of the pattern).
+- **(iii) Phase 9 C-BP1 + C-BP4 epistemic separation** (three-layer separation + claim-level statuses; composes with O-BP14 tables).
 
 ### What to defer
 
-- **G-BP1, G-BP3, O-BP3** (natural parameters + Fisher geometry + continuous tiering) — large coordinated cluster; defer until project capacity allows multi-session investment. Gemini's Riemannian-manifold reaffirmation strengthened the case but did not change the scoping cost.
+- **G-BP3 (Fisher-information unification)** — large multi-session rewrite. Gemini's Riemannian-manifold reaffirmation strengthened the case but did not change the scoping cost. G-BP1 partial execution (Path B uniqueness theorem landed) reduces the remaining G-BP3 scope somewhat.
 - **G-BP2 V-strong** (full reformulation as variational free energy) — paper-writing-time decision per `msc/spike-active-inference-vs-aad.md` §I action 5. Not theoretical-development work.
-- **O-BP4, O-BP5, O-BP15, O-BP16** — substantial structural work each. Worth scoping spikes individually when their specific motivation becomes more pressing than the smaller framing moves.
-- **O-BP12 (resource budget $B_t$)** — interesting and adjacent to O-BP7, but the framework currently handles bounded rationality piecewise without obvious dysfunction. Defer until the piecewise treatment shows specific friction.
-- **O-BP13 (Cox-necessity)** — would elevate `#graph-structure-uniqueness` from sufficiency-only to full Cox-style. Worth a 1–2 session spike but not high-priority unless reviewers raise the necessity question.
+- **O-BP4, O-BP5, O-BP15, O-BP16** — substantial structural work each.
+- **O-BP12 (resource budget $B_t$)** — interesting but piecewise treatment currently works.
+- **O-BP13 (Cox-necessity)** — worth a 1–2 session spike but not high-priority.
+- **Full Props B.1–B.7 restatement in log-odds** — the G-BP1 spike showed this is not required for Finding 2 (Fisher-equivalent in moment parameters). Deferred to a future G-BP3 Fisher-unification session.
 
-### Strategic observation
+### Strategic observation (updated)
 
-The pattern emerging from the 2026-04-21 → 2026-04-22 cycle is that AAD benefits more from **concise framing moves** than from major theoretical reorganization. The sector-Lyapunov template factoring, the strengthening cycle, the AI integration positioning, the identifiability-floor meta-segment — all are framing / integration moves with isolated genuinely-new content (F1's no-go theorem, F13's Prop B.7). The Phase 2 + 3 recommendations above continue this pattern. Major structural reorganization (O-BP11, O-BP4, G-BP3) should probably wait until the framing layer has stabilized and the genuine remaining structural friction is more visible.
+The 2026-04-22/23 cycle ran at a different depth than the prior cycle. The prior cycle was 3:1 promoting-to-creating (per CLAUDE.md's "convergent depth over generative breadth" principle). This cycle was closer to 2:1 — six framing/consolidation moves (cleanups, O-BP14 tables, C-BP3 calibration lab, C-BP2 separability pattern, O-BP6 identity promotion, citation audit) plus three genuinely-new derivations (F20 regret bound, reverse-KL chain-rule uniqueness, log-odds evidential-additivity uniqueness). The denser output is acceptable because the three new derivations were not independent — they share the Cauchy-functional-equation structure, and discovering the shared structure was itself a consolidation move.
 
-This is consistent with CLAUDE.md's "convergent depth over generative breadth" principle (3:1 ratio of promoting to creating). The 2026-04-22 cycles were 3:1 in the right direction (one new derivation in F1, one in F13, one new meta-segment, plus extensive framing/integration work). The same ratio should hold in the next cycle: derivation-table convention + O-BP1/10/8 framing pass + cleanups, with at most one substantive spike (probably O-BP11 scoping) thrown in.
+The recommended next session should rebalance toward consolidation: Phase A (citation audit) is pure consolidation; Phase B (three-layer meta-segment) is naming-the-obvious; Phase C (framing pass) is editorial. Phase D opens to substantive structural work only after the consolidation layer is stable.
+
+The pattern becoming visible: AAD's strengthening cycles alternate between *depth* (new theorems) and *breadth-compression* (consolidation and naming). This cycle was depth-heavy; the next should be breadth-compression-heavy. If this alternation continues, it may itself be a project-level discipline worth naming in CLAUDE.md.
 
 
 ## Active — Citations Audit (project-wide)
@@ -63,14 +79,28 @@ The broader concern: *every* external-theorem citation across AAD and TST segmen
 
 ## Active — Strategic Architectural Proposals
 
-Architectural moves remaining from the 2026-04-22 portfolio (`msc/architectural-proposals-2026-04-22.md`). G-BP2 was partially executed in V-medium form during the 2026-04-22 strengthening cycle (variational form of strategy IB; see #strategy-complexity-cost and #compression-operations). The remaining proposals are evaluated on their own merits — beauty, concision, correctness, approachability, fundamentality.
+Architectural moves from the 2026-04-22 portfolio (`msc/architectural-proposals-2026-04-22.md`). Six proposals from the portfolio have now landed (O-BP14, O-BP6, C-BP3, C-BP2, G-BP1 partial, G-BP2 V-medium); the three-layer additive-decomposition pattern was discovered as a by-product and is now documented in the proposals doc (§SP-1 "Discovered structural patterns"). Remaining proposals are evaluated on their own merits.
 
-### Smaller / approachable
+### Landed in the 2026-04-22/23 strengthening cycle
 
-- **O-BP1 — Sector-persistence template as organizing principle.** Reframe OUTLINE preamble around "AAD decomposes disturbance for bounded-correction dynamics at each scale." Subsumes Finding 9 (Section II preamble). 1–2 sessions, framing touch, low risk. Strengthened by the 2026-04-22 cycle's promotion of the template's load-bearing role across the persistence-flavored results. **Natural next move.**
-- **O-BP6 — Identity promotion (`#agent-identity` to formal scope).** AAD applies to agents on singular causal trajectories; grounds why loop Level-2 access is interventional. Partial on Finding 5. One session, localized; no scoping spike needed.
-- **C-BP3 — Software as calibration laboratory.** Reframe TST as "privileged high-identifiability calibration domain," other domains as exports under additional assumptions. Subsumes Finding 15; strengthens Findings 7 and 14. The 2026-04-22 F7 strengthening (per-quantity exactness audit + conditional maximality) supplies most of the substance; C-BP3 is the framing layer over it. 45–90 min editorial reframing.
-- **C-BP2 — Master separability pattern as explicit organizing principle.** Name the meta-pattern that AAD already runs across L0/L1/L1'/L2, Class 1/2/3, Tier 1/2/3, C1/C2/C3. The 2026-04-22 cycle's #identifiability-floor segment captures one half of this (the no-go side); C-BP2 would name the positive side (separable-core / structured-repair / general-open). Composes with O-BP1. 1–2 sessions.
+- **O-BP14 — Derivation-audit-table convention.** **LANDED** (commit c1d9fcf). FORMAT.md carries the convention; tables applied to #strategy-cost-regret-bound, #recursive-update-derivation, #sector-condition-derivation, #strategic-dynamics-derivation, #composition-closure. Surfaced A2' α/β ambiguity (→ A2' strengthening spike) and B.5d minimal-scheme claim (→ Phase 2.5 parked).
+- **O-BP6 — Identity promotion.** **LANDED** (commit 2980327). #agent-identity promoted to type:scope / status:robust-qualitative; three consequences named; #loop-interventional-access + #model-sufficiency carry cross-refs. Closes Finding 5 end-to-end.
+- **C-BP3 — Software as calibration laboratory.** **LANDED** (commit d0373fc). #software-epistemic-properties + 02-tst-core/OUTLINE preamble reframed; transfer-assumption table for five AAD-core quantities. Closes Finding 15.
+- **C-BP2 — Master separability pattern.** **LANDED** (commit 72ca532). New meta-segment #separability-pattern (positive-half complement to #identifiability-floor, six ladders enumerated). Three-part characterization of AAD scope: #independence-audit + #approximation-tiering + #separability-pattern. Composes with future O-BP1 + O-BP10.
+- **G-BP1 — Logit reparameterization (partial).** **PARTIALLY EXECUTED** (commit a39dfb7). Scoping confirmed narrow scope (only #credit-assignment-boundary required substantive work); Path B strengthening yielded the **evidential-additivity uniqueness theorem** in new appendix segment #edge-update-natural-parameter (log-odds forced via Cauchy functional equation, AAD-internally motivated as the update-level analog of #chain-confidence-decay). Finding 2 resolved by restating default signal in log-odds (domain = ℝ, no mechanical break). Interface notes in #strategy-dag + #edge-update-via-gain. Props B.1-B.7 retained in moment-parameter form (Fisher-equivalent). Full sweep deferred to future G-BP3 Fisher-unification session.
+- **G-BP2 V-medium** (prior cycle, commit a14642e). KL-form in #strategy-complexity-cost; this cycle added the **regret-bound derivation of KL direction** (commit 0a772d2, new appendix #strategy-cost-regret-bound) and the **chain-rule uniqueness theorem** (commit f70fb68; citations corrected in commit e777f01). V-strong still an open paper-writing-time decision.
+
+### Not yet landed — smaller / approachable
+
+- **O-BP1 — Sector-persistence template as organizing principle.** Reframe OUTLINE preamble around "AAD decomposes disturbance for bounded-correction dynamics at each scale." Subsumes Finding 9 (Section II preamble). 1–2 sessions, framing touch, low risk. Now sharpened by the three-layer additive-decomposition pattern (§SP-1): O-BP1's "disturbance decomposition at scales" reads cleanly once readers know AAD has a forced-logarithmic-coordinate move at three layers. **Natural next move after Phase B (SP-1 meta-segment).**
+
+### Not yet landed — larger / scoping required
+
+- **G-BP3 — Fisher-information unification of tempo and gain.** The largest single move in the portfolio. Major rewrite; scoping spike essential. The 2026-04-22 AAD-vs-AI positioning spike increased the case for keeping AAD's Lyapunov/sector-condition machinery distinct from the FEP-flow apparatus. G-BP1 partial-execution shrinks the remaining scope somewhat (log-odds coordinate already landed).
+- **O-BP3 — Continuous-parameter approximation tiering.** L0/L1/L1'/L2, C1/C2/C3, Tier 1/2/3 as continuous parameter spaces. Partial on Finding 11 (now closed by F1's no-go strengthening).
+- **O-BP4 — Continuous-valued strategy DAG.** Dedicated scoping spike recommended.
+- **O-BP5 — Orient cascade as recursive adaptive cycle.** Strengthens composition-consistency.
+- **O-BP7 — Known structural absences (meta-proposal).** Treat alongside #identifiability-floor §"Adjacent Floors" as parallel research agendas.
 
 ### Larger / scoping required
 
@@ -147,7 +177,7 @@ The 2026-04-22 batch had 15 findings; the strengthening cycle resolved 4 directl
 | 2 | Unbounded gradient in credit-assignment signal | **RESOLVED** by G-BP1 scoping + partial execution (`msc/spike-gbp1-logit-scoping.md`): Path B evidential-additivity uniqueness theorem landed in new appendix segment #edge-update-natural-parameter (parallel to reverse-KL uniqueness under chain-rule axiom); #credit-assignment-boundary default signal function restated in log-odds (domain = ℝ, no mechanical break); #strategy-dag and #edge-update-via-gain carry parallel-presentation notes; #strategic-dynamics-derivation Props B.1-B.7 retained in moment-parameter form (Fisher-equivalent). Full G-BP1 sweep deferred; current scope narrow + strengthened |
 | 3 | Degenerate MI in strategy IB objective | **RESOLVED** by V-medium G-BP2 (commit a14682e): KL-form replaces Shannon-MI in #strategy-complexity-cost |
 | 4 | Section II silent scope narrowing (agency → learning) | Open. 45–60 min reconciliation. Coordinate with Finding 9 for combined Section II preamble pass (or absorb both into O-BP1 framing pass) |
-| 5 | Loop framing overstates Level 2 access | **PARTIALLY RESOLVED** by 2026-04-22 AI integration: #loop-interventional-access now distinguishes "data generated under intervention" from "cleanly identified do-estimates" via the three distinctive AAD moves and Bruineberg-blanket positioning. Full closure requires O-BP6 identity promotion |
+| 5 | Loop framing overstates Level 2 access | **RESOLVED** by O-BP6 identity promotion (commit 2980327): #agent-identity now a formal scope statement (type: scope, status: robust-qualitative); #loop-interventional-access depends on it and carries an explicit singular-trajectory-ground paragraph. F5 closed end-to-end |
 | 6 | Composition timescale heuristic outruns bridge conditions | Open. 30–45 min scope-narrowing in #composition-consistency |
 | 7 | TST overstates git as complete chronica | **RESOLVED** by strengthening (commit b6134c2): per-quantity exactness audit + conditional maximality + $\mathcal{C}_t^{\text{commit}}$ in #software-epistemic-properties |
 | 8 | (C-iii) mutual-benefit vs (A1) decomposable $G_c$ gap | Open. 45–60 min scope-reconciliation; involves Joseph's Option A vs Option B decision |
@@ -157,7 +187,7 @@ The 2026-04-22 batch had 15 findings; the strengthening cycle resolved 4 directl
 | 12 | Section II survival slides from statement-level to operational | Open. Subsumed by C-BP1 (three-layer epistemic separation) |
 | 13 | `#strategy-dag` L1-as-default overgeneralizes beyond strict-prerequisite | **RESOLVED** by strengthening (commit 4d050c8): Prop B.7 derives L1' transfer for observable $C$ with five-way gating; refutes unobservable-$C$ via Cramér-Rao floor; #strategy-dag headline + Correlation Hierarchy table updated |
 | 14 | `#developer-as-act-agent` exact-status mismatch (human vs AI regimes) | Open. Option A (15–30 min status downgrade) is straightforward regardless of C-BP4 |
-| 15 | Software "richest operationalization domain" headline overclaims | Open; subsumed by C-BP3 reframing |
+| 15 | Software "richest operationalization domain" headline overclaims | **RESOLVED** by C-BP3 calibration-lab reframing (commit d0373fc): #software-epistemic-properties headline rewritten; 02-tst-core/OUTLINE preamble updated; transfer-assumption table makes non-software identification relaxations explicit |
 
 ### Actionable now (independent of remaining portfolio decisions)
 
@@ -166,18 +196,18 @@ The 2026-04-22 batch had 15 findings; the strengthening cycle resolved 4 directl
 - **Finding 8** — (C-iii) Option A vs Option B decision needed before edit.
 - **Finding 14 Option A** — `#developer-as-act-agent` status downgrade. 15–30 min.
 
-### 2026-04-22 evening batch — six new findings
+### 2026-04-22 evening batch — six new findings (all resolved)
 
-Three independent de novo audits (Codex, Gemini, Opus) ran *after* the strengthening cycle. Three categories of finding emerged: integration gaps from prior cycles, new scope/operational-extractability frictions, and bugs introduced by the strengthening cycle itself.
+Three independent de novo audits (Codex, Gemini, Opus) ran *after* the morning strengthening cycle and surfaced six new findings. The 2026-04-22/23 strengthening cycle resolved all six (F18-F21 in the Phase 1 cleanup commit; F16 partial, F17 partial). Status table:
 
-| # | Finding | Source | Severity | Subsumed by |
-|---|---------|--------|----------|-------------|
-| 16 | Section II scope lattice underspecified across segments | Codex F1 (evening) | Medium | O-BP8 (scope-lattice naming); partial O-BP1 |
-| 17 | `#coupled-diagnostic-framework` operational-computability overclaim | Codex F4 (evening) | Medium-high | C-BP1; partial O-BP9 |
-| 18 | `#worked-example-L1` says L1' transfer "open" — STALE after F13 strengthening | Gemini F1 (evening) | Medium | — (cross-segment update) |
-| 19 | `#section-ii-survival` bias bound in entropy form, stale after 2026-04-21 Finding B | Gemini F3 (evening) | Medium | — (cross-segment update) |
-| 20 | KL-direction degeneracy in `#strategy-complexity-cost` variational form (introduced by V-medium) | Opus F1 (evening) | High | — (theoretical-correction repair) |
-| 21 | `#identifiability-floor` frontmatter status conflicts with internal text | Opus F3 (evening) | Low | — (drafting cleanup) |
+| # | Finding | Source | Severity | Status |
+|---|---------|--------|----------|--------|
+| 16 | Section II scope lattice underspecified across segments | Codex F1 (evening) | Medium | Open; subsumed by O-BP8 in future Phase C framing pass |
+| 17 | `#coupled-diagnostic-framework` operational-computability overclaim | Codex F4 (evening) | Medium-high | Open; subsumed by C-BP1 three-layer separation (future Phase 9) |
+| 18 | `#worked-example-L1` says L1' transfer "open" — STALE after F13 strengthening | Gemini F1 (evening) | Medium | **RESOLVED** (commit 0a772d2): updated with Prop B.7 + Cramér-Rao refutation + three repair routes; facilitator monotonicity surfaced as load-bearing |
+| 19 | `#section-ii-survival` bias bound in entropy form, stale after 2026-04-21 Finding B | Gemini F3 (evening) | Medium | **RESOLVED** (commit 0a772d2): MI form + triple-zero boundary structure made explicit |
+| 20 | KL-direction degeneracy in `#strategy-complexity-cost` variational form (introduced by V-medium) | Opus F1 (evening) | High | **RESOLVED AS STRENGTHENING** (commits 0a772d2, f70fb68, e777f01): new appendix #strategy-cost-regret-bound with regret-bound derivation (direction forced) + chain-rule uniqueness theorem (specific divergence uniquely forced) + corrected citations |
+| 21 | `#identifiability-floor` frontmatter status conflicts with internal text | Opus F3 (evening) | Low | **RESOLVED** (commit 0a772d2): status → discussion-grade; Epistemic Status rewritten cleanly separating meta-pattern from instances |
 
 **Reaffirmed (not new):** Codex F2 evening reaffirms F6 (composition timescale heuristic); Codex F3 evening reaffirms F8 ((C-iii) gap); Opus F2 evening reaffirms F14 (developer-as-act-agent status). Several other candidate findings were *rescinded* by the audits themselves on in-segment counterevidence — see `msc/pending-findings-2026-04-22.md` and the audit transcripts for the transparency tables.
 
@@ -281,6 +311,21 @@ Recommended next promotion candidates remain the ones from the prior round: `#se
 ## Archive — Work landed
 
 Detailed historical items moved out of the active list. Kept here so that future agents can find what was done.
+
+### 2026-04-22/23 strengthening cycle — COMPLETE (commits `0a772d2`, `c1d9fcf`, `2980327`, `f70fb68`, `80b40d2`, `d0373fc`, `72ca532`, `e777f01`, `a39dfb7`)
+
+Nine commits delivering six proposal executions, three Cauchy-functional-equation uniqueness theorems, and one citation-audit cleanup. The cycle's distinctive pattern: three independent strengthenings all forced logarithmic coordinates via Cauchy-functional-equation arguments, which on retrospect comprise a three-layer additive-decomposition pattern (documented as §SP-1 in `msc/architectural-proposals-2026-04-22.md`).
+
+- **Phase 1 cleanups (F18-F21) + F20 regret-bound strengthening** (commit `0a772d2`). F18 (worked-example-L1 stale L1' open claim), F19 (section-ii-survival entropy→MI bias bound), F21 (identifiability-floor frontmatter). F20 strengthened as regret-bound derivation: the π*-first KL direction is forced because forward-KL is vacuous under deterministic π*. New appendix segment `#strategy-cost-regret-bound`.
+- **Phase 2: O-BP14 derivation-table convention** (commit `c1d9fcf`). FORMAT.md convention + tables applied to 5 derivation segments. Surfaced A2' α/β ambiguity (→ A2' strengthening spike) and B.5d minimal-scheme claim (parked Phase 2.5).
+- **Phase 3: O-BP6 identity promotion** (commit `2980327`). `#agent-identity` promoted to type:scope/status:robust-qualitative with three explicit consequences. Closes F5.
+- **Reverse-KL uniqueness theorem** (commit `f70fb68`, citations corrected in `e777f01`). Under the chain-rule additivity axiom (Hobson 1969 / Csiszár 1991 / Shore-Johnson 1980 / Aczél-Daróczy 1975), reverse-KL is uniquely forced within the direction-forced f-divergence family. Axiom AAD-internally motivated as divergence-level analog of #chain-confidence-decay. Concrete χ² counterexample exhibited.
+- **A2' strengthening** (commit `80b40d2`). Sub-scope partition α (A2' derived) vs β (A2' assumed). Prop A.1S region condition lifted via stopping-time localization (Khasminskii 2012). Sub-scope label inherited by sector-persistence-template instances.
+- **Phase 4: C-BP3 calibration laboratory** (commit `d0373fc`). TST reframed as "privileged high-identifiability calibration laboratory" with transfer-assumption table for five AAD-core quantities. Closes F15.
+- **Phase 7: C-BP2 separability pattern** (commit `72ca532`). New meta-segment `#separability-pattern` (six ladders enumerated; positive-half complement to `#identifiability-floor`). Three-part meta-segment family: #independence-audit + #approximation-tiering + #separability-pattern.
+- **Citation audit of reverse-KL work** (commit `e777f01`). Three wrong attributions corrected (Csiszár 1972, Amari 2009 Theorem 1, Amari-Cichocki 2010 Prop 3.2 do not contain the claimed chain-rule uniqueness theorem); Eguchi 1983 venue corrected. Audit trail preserved in-segment. Three PDFs saved to `ref/`.
+- **Phase 5: G-BP1 logit scoping — partial execution** (commit `a39dfb7`). Third Cauchy-functional-equation uniqueness theorem: under the evidential-additivity axiom (Bayesian independent-evidence updates add in a fixed coordinate), log-odds is uniquely forced up to positive affine. Axiom AAD-internally motivated as update-level analog of #chain-confidence-decay. New appendix segment `#edge-update-natural-parameter`. Finding 2 (unbounded gradient mechanical break in #credit-assignment-boundary) resolved by restating default signal in log-odds (domain ℝ, no mechanical break). Props B.1-B.7 retained in moment-parameter form (Fisher-equivalent); full restatement deferred to future G-BP3.
+- **New meta-pattern discovered** (cascaded observation, commit `a39dfb7` and prior). Three independent uniqueness theorems (chain-confidence-decay, reverse-KL, log-odds) share structural shape: Cauchy-functional-equation argument on an AAD-internally-motivated additivity axiom forces logarithmic coordinates. Documented as §SP-1 in `msc/architectural-proposals-2026-04-22.md`; candidate for promotion to explicit meta-segment (`#additive-decomposition-pattern`) in a future session.
 
 ### 2026-04-22 strengthening cycle — COMPLETE (commits `14a6095`, `b6134c2`, `4d050c8`, `b91493c`, `a14682e`)
 

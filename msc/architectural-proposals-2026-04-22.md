@@ -746,3 +746,21 @@ A single segment (or reorganization around) **"Observability: what can be seen, 
 This is not a proposal but an observation about the project's character. The strengthen-first feedback memory captures part of this; the identifiability-floor segment's structural-impossibility-as-positive-content reframe captures another part. Worth surfacing in the OUTLINE.md preamble or CLAUDE.md "Theory Character" section as an explicit principle: AAD makes its scope and limits visible at the segment level rather than burying them; this is what gives the theory its load-bearing posture against critical scrutiny.
 
 This deserves a small CLAUDE.md addition — not a full proposal but a one-paragraph principle statement under "Theory Character."
+
+
+---
+
+## Discovered structural patterns (2026-04-22/23 strengthening cycle)
+
+The strengthening cycle ran after the audit-derived proposals above and surfaced a theoretical pattern that was not visible to any single audit. Unlike the G-BP / O-BP / C-BP proposals — which are *choices* about how the theory should be reorganized — this is a *discovery* about what the theory already does across multiple segments. It is documented here as an architectural observation so future work can deploy it deliberately rather than re-discover it.
+
+### SP-1 — The three-layer additive-decomposition pattern
+
+**Source:** 2026-04-22/23 strengthening cycle, surfaced by the F20 regret-bound spike (commit `f70fb68`), the reverse-KL uniqueness spike (commit `e777f01` with corrected citations), and the G-BP1 logit scoping spike (commit `a39dfb7`).
+
+**The pattern.** AAD now carries **three independent uniqueness theorems**, each forcing a logarithmic coordinate through a Cauchy-functional-equation argument on an AAD-internally-motivated additivity axiom:
+
+| Layer | Quantity | Axiom | Forced form | Segment |
+|---|---|---|---|---|
+| **Chain** | Confidence along causal chains | Additive log-confidence decay | $\log P(	ext{chain}) = \sum_i \log P(E_i \mid E_{\lt i})$ | #chain-confidence-decay |
+| **Divergence** | Policy mismatch between $\pi^st$ and $Q_{\Sigma_t}$ | Chain-rule additivity over conditional factorizations | $f(t) = c 

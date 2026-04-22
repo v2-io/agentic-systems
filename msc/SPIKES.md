@@ -4,6 +4,17 @@ Index of the spikes in `msc/`, with location and current status. Spikes are proc
 
 This index was extracted from WORKBENCH.md when that file was retired on 2026-04-22. Updates happen informally — a spike added, promoted, or parked should ideally be reflected here, but the authoritative state is always the spike file itself and the segments it feeds.
 
+### 2026-04-22/23 strengthening cycle spikes — ALL PROMOTED
+
+| Spike | Location | Status |
+|-------|----------|--------|
+| F20 KL-direction strengthening | `msc/spike-f20-kl-direction-strengthening.md` | Regret-bound derivation forcing $\pi^\ast$-first KL direction. **PROMOTED** to `#strategy-cost-regret-bound` appendix (commit `0a772d2`). |
+| Reverse-KL uniqueness | `msc/spike-reverse-kl-uniqueness.md` | Chain-rule uniqueness theorem under Cauchy functional equation argument. **PROMOTED** to `#strategy-cost-regret-bound` §6.1 (commits `f70fb68` + citation corrections `e777f01`). |
+| A2' strengthening | `msc/spike-a2-prime-strengthening.md` | Sub-scope $\alpha$/$\beta$ partition + Prop A.1S region-condition lift via stopping-time localization. **PROMOTED** to `#sector-condition-derivation`, `#gain-sector-bridge`, `#sector-persistence-template` (commit `80b40d2`). |
+| G-BP1 logit scoping | `msc/spike-gbp1-logit-scoping.md` | Evidential-additivity uniqueness theorem (third Cauchy-functional-equation result). **PROMOTED** to new appendix `#edge-update-natural-parameter`; Finding 2 resolved via log-odds restatement of `#credit-assignment-boundary` default signal (commit `a39dfb7`). |
+
+### Prior cycles
+
 | Spike | Location | Status |
 |-------|----------|--------|
 | Purposeful agent derivation (v3) | `msc/spike-v3-purposeful-agent.md` | Section II porting **COMPLETE** — all 20 segments in src/ |
