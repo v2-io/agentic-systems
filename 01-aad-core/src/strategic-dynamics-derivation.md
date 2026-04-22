@@ -341,6 +341,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 | **B.5b** Credence→value (nonlinear, componentwise) | Any | $\alpha_s = \alpha_c$ ($J_k \geq 0$ preserves bound) | — | — | None (exact transfer) |
 | **B.5b** Credence→value (coupled) | Any | $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$ | — | — | Inter-edge coupling |
 | **B.6** L1 augmented, mixed AND/OR | $G = \text{AND}(C, \text{OR}(A_1, A_2))$ | $\min(1/(n_C\!+\!1),\;\theta_C(1\!-\!\varepsilon)/(n_{A_1}\!+\!1),\;\theta_C\varepsilon/(n_{A_2}\!+\!1))$ | Yes | Required | Three-way gating |
+| **B.7** L1' mixture form, observable $C$ | $\hat P_\Sigma^{L1'} = \hat\theta_C P_\Sigma(\hat{\mathbf p}_{\mid C}) + (1\!-\!\hat\theta_C) P_\Sigma(\hat{\mathbf p}_{\mid \neg C})$ | $\min(1/(n_C\!+\!1),\;\min_j \theta_C\pi_{j\mid C}/(n_{j\mid C}\!+\!1),\;\min_j (1\!-\!\theta_C)\pi_{j\mid \neg C}/(n_{j\mid \neg C}\!+\!1))$ | Yes | Required *and* facilitator monotonicity | Five-way gating; **refuted under unobservable $C$** (Cramér-Rao floor) |
 
 **Structural results across cases:**
 
@@ -348,8 +349,106 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 - **Evidence starvation (AND-chains).** Downstream edges in AND-chains have correction rates attenuated by the product of upstream success probabilities. Depth increases fragility: $\alpha_\Sigma$ decays exponentially with chain depth.
 - **Exploration gating (OR-nodes).** Unchosen OR-alternatives receive zero correction. The sector condition requires deliberate exploration (SA3) at a rate exceeding $\rho_\Sigma(n_{\max}+1)/R_\Sigma$. Pure greedy policies fail.
 - **Three-way gating (L1 augmented).** When a common cause gates OR-alternatives, calibration faces condition testing, evidence starvation, and exploration gating simultaneously (B.6). The bottleneck is the least-explored action behind the rarest condition.
+- **Five-way gating (L1' mixture, observable $C$).** When the common cause is a *soft facilitator* ($\theta_{j\mid \neg C} \gt 0$) and is observable per trial, calibration faces five gating mechanisms simultaneously (B.7): condition testing, evidence starvation on each conditional branch ($C=1$ and $C=0$), and exploration gating on each branch. The bottleneck is whichever branch is rarer, modulated by exploration on that branch. **Identifiability obstruction under unobservable $C$:** without direct $C$-observation, the mixture parameters are non-identifiable from a single observation channel — the per-trial Fisher information matrix is rank 1 rather than rank $2K+1$, so by the Cramér-Rao bound no unbiased online estimator on the joint conditional vector admits $\alpha \gt 0$. The agent must augment $C$-observability, run multi-child joint observations, or fall back to plan-level (L0-on-marginals) tracking.
 - **Gain-collapse threshold.** In all cases, increasing experience eventually violates persistence when the environment drifts. The critical experience level $n^\ast$ is inversely proportional to the drift rate $\rho_\Sigma$.
 - **L1 tradeoff.** L1 augmented DAGs have lower $\alpha_\Sigma$ (harder to persist) but honest calibration ($\Phi^{L1}$ matches reality). L0 is easier to maintain but calibrates to a biased target. The choice depends on whether accuracy or trackability is the binding constraint.
+
+
+## Proposition B.7: L1' Mixture-Form Sector Transfer (Observable Common Cause)
+
+Where Prop B.6 handles a strict-prerequisite common cause via an AND-prerequisite construction (L1), this proposition handles a *soft-facilitator* common cause via the mixture form L1' ( #strategy-dag, Correlation Hierarchy). It is the L1' analog of B.6, generalizing three-way gating to five-way gating across two parallel conditional branches.
+
+### Setup
+
+L1' (mixture-form) DAG with binary common cause $C$, true prior $\theta_C \in (0,1)$, gating a sub-plan with conditional structures $G_{\mid C}$ (when $C=1$) and $G_{\mid \neg C}$ (when $C=0$). Each affected child $j$ carries two conditional credences $\hat p_{j\mid C}$ and $\hat p_{j\mid \neg C}$. Plan confidence:
+
+$$\hat P_\Sigma^{L1'} = \hat\theta_C \cdot P_\Sigma(\hat{\mathbf{p}}_{\mid C}) + (1-\hat\theta_C) \cdot P_\Sigma(\hat{\mathbf{p}}_{\mid \neg C})$$
+
+The agent observes $C$-state directly each trial (i.e., $C$ is treated as an observable condition leaf, in parallel with B.6). Per trial, the agent (i) updates $\hat\theta_C$ from observed $C$ via Beta-Bernoulli; (ii) on $C=1$ trials, attempts a child $j$ via the active selection policy $\pi_{\mid C}$ and updates $\hat p_{j\mid C}$ from $y_j$; (iii) on $C=0$ trials, attempts a child $j$ via $\pi_{\mid \neg C}$ and updates $\hat p_{j\mid \neg C}$ from $y_j$.
+
+Mismatch state: $\boldsymbol\xi = (\xi_C, \{\xi_{j\mid C}\}, \{\xi_{j\mid \neg C}\})$ with $\xi_C = \theta_C - \hat\theta_C$, $\xi_{j\mid s} = \theta_{j\mid s} - \hat p_{j\mid s}$.
+
+### Statement
+
+*[Derived (Conditional on Beta-Bernoulli model, observable common cause, facilitator monotonicity)]*
+
+Under Beta-Bernoulli updating with observable common cause, componentwise updates per conditional branch, and *facilitator monotonicity* ($P_\Sigma(G_{\mid C}) \geq P_\Sigma(G_{\mid \neg C})$), the expected correction function on the joint state satisfies the sector condition globally with:
+
+$$\alpha_{L1'} = \min\!\left(\frac{1}{n_C+1},\; \min_{j \in \mathcal{J}_C}\frac{\theta_C \pi_{j\mid C}}{n_{j\mid C}+1},\; \min_{j \in \mathcal{J}_{\neg C}}\frac{(1-\theta_C)\pi_{j\mid \neg C}}{n_{j\mid \neg C}+1}\right)$$
+
+where $\mathcal J_s$ is the set of children tested on the $C=s$ branch and $\pi_{j\mid s}$ is the action-selection probability for child $j$ on that branch.
+
+### Proof
+
+*Edge $C$ (condition leaf, observable every trial).* Standard Beta-Bernoulli on direct $C$-observation:
+
+$$\mathbb{E}[\Delta\hat\theta_C] = \frac{\theta_C - \hat\theta_C}{n_C+1} = -\frac{\xi_C}{n_C+1}$$
+
+so $F_C(\boldsymbol\xi) = \xi_C/(n_C+1)$.
+
+*Edge $p_{j\mid C}$ (conditional credence, $C=1$ branch).* Tested when $C=1$ (probability $\theta_C$) and the agent's $C=1$-conditional policy selects $j$ (probability $\pi_{j\mid C}$):
+
+$$\mathbb{E}[\Delta\hat p_{j\mid C}] = \theta_C \pi_{j\mid C} \cdot \frac{\theta_{j\mid C} - \hat p_{j\mid C}}{n_{j\mid C}+1} = -\frac{\theta_C \pi_{j\mid C} \xi_{j\mid C}}{n_{j\mid C}+1}$$
+
+so $F_{j\mid C}(\boldsymbol\xi) = \theta_C \pi_{j\mid C} \xi_{j\mid C}/(n_{j\mid C}+1)$.
+
+*Edge $p_{j\mid \neg C}$ (conditional credence, $C=0$ branch).* Symmetric: tested with probability $(1-\theta_C)\pi_{j\mid \neg C}$:
+
+$$F_{j\mid \neg C}(\boldsymbol\xi) = \frac{(1-\theta_C)\pi_{j\mid \neg C} \xi_{j\mid \neg C}}{n_{j\mid \neg C}+1}$$
+
+*Sector product.* The correction function is diagonal in $\boldsymbol\xi$ with positive entries:
+
+$$\boldsymbol\xi^T \mathbf F(\boldsymbol\xi) = \frac{\xi_C^2}{n_C+1} + \sum_{j \in \mathcal{J}_C}\frac{\theta_C \pi_{j\mid C} \xi_{j\mid C}^2}{n_{j\mid C}+1} + \sum_{j \in \mathcal{J}_{\neg C}}\frac{(1-\theta_C)\pi_{j\mid \neg C} \xi_{j\mid \neg C}^2}{n_{j\mid \neg C}+1} \;\geq\; \alpha_{L1'} \cdot \lVert\boldsymbol\xi\rVert^2$$
+
+with $\alpha_{L1'}$ as stated.
+
+*SA1 check.* $\mathbf F(\mathbf 0) = \mathbf 0$ at truth ($\boldsymbol\xi = 0$). ✓
+
+*Globality.* The Beta-Bernoulli updates are linear in $\boldsymbol\xi$ on $[-1, 1]^{2K+1}$, so the diagonal Jacobian computed at truth is the exact $\mathbf J_{\mathbf F}$ throughout. The sector inequality holds globally with the same $\alpha_{L1'}$.
+
+*B.5b bridge to plan value.* Jacobian of $\hat P_\Sigma^{L1'}$ with respect to the joint state:
+
+$$\mathbf{J}_{P_\Sigma} = \begin{pmatrix} P_\Sigma(\hat{\mathbf{p}}_{\mid C}) - P_\Sigma(\hat{\mathbf{p}}_{\mid \neg C}) \\ \hat\theta_C \cdot \nabla_{\hat{\mathbf{p}}_{\mid C}} P_\Sigma(\hat{\mathbf{p}}_{\mid C}) \\ (1-\hat\theta_C) \cdot \nabla_{\hat{\mathbf{p}}_{\mid \neg C}} P_\Sigma(\hat{\mathbf{p}}_{\mid \neg C}) \end{pmatrix}$$
+
+By facilitator monotonicity, the first entry is $\geq 0$. The other entries are $\geq 0$ by AND/OR monotonicity on each conditional sub-DAG. So $\mathbf J_{P_\Sigma} \geq 0$ componentwise. By the componentwise nonlinear case of B.5b, the sector condition transfers losslessly: $\alpha_s = \alpha_c = \alpha_{L1'}$. $\square$
+
+### Five-Way Gating
+
+This generalizes B.6's three-way gating to five gating mechanisms, one per term in the $\min$:
+
+1. **Condition testing** ($1/(n_C+1)$): the common cause is the easiest component to calibrate — directly observed every trial.
+2. **Evidence starvation, $C=1$ branch** ($\theta_C$ factor): conditional edges on the $C=1$ branch are gated by the prior frequency of $C=1$.
+3. **Exploration gating, $C=1$ branch** ($\pi_{j\mid C}$ factor): OR-alternatives within the $C=1$ branch compete for test opportunities.
+4. **Evidence starvation, $C=0$ branch** ($1-\theta_C$ factor): conditional edges on the $C=0$ branch are gated by the prior frequency of $C=0$.
+5. **Exploration gating, $C=0$ branch** ($\pi_{j\mid \neg C}$ factor): OR-alternatives within the $C=0$ branch.
+
+The bottleneck is typically whichever of $\theta_C$ and $1-\theta_C$ is smaller (the rare branch sees fewer trials), modulated by exploration on that branch.
+
+### Reduction to B.6 (Strict-Prerequisite Limit)
+
+Setting $\theta_{j\mid \neg C} \to 0$ collapses the $\neg C$ branch (the agent learns the $\neg C$ conditionals are zero with no remaining variance). The per-edge state for the $\neg C$ branch drops out of the sector inequality, and the formula reduces to B.6's three-way gating with $\alpha_\Sigma = \min(1/(n_C+1), \theta_C(1-\varepsilon)/(n_{A_1}+1), \theta_C\varepsilon/(n_{A_2}+1))$. ✓
+
+### Refuted Under Unobservable $C$ (Mixture Identifiability Obstruction)
+
+*[Derived (cramer-rao-floor, from Fisher information of mixture model + Cramér-Rao bound)]*
+
+When $C$ is not observable, the agent can only update the joint state via online soft EM on the marginal $y_j$. Computing the Fisher information of the mixture model $\mu_j = \theta_C \theta_{j\mid C} + (1-\theta_C)\theta_{j\mid \neg C}$ at truth, the score vector for parameters $\phi = (\theta_C, p_{j\mid C}, p_{j\mid \neg C})$ admits the rank-1 factorization:
+
+$$\mathcal{F}(\phi) = \frac{1}{\mu_j(1-\mu_j)}\, u u^T, \qquad u = (\Delta_j,\; \theta_C,\; 1-\theta_C)$$
+
+where $\Delta_j = p_{j\mid C} - p_{j\mid \neg C}$ is the *separability gap*. The matrix is rank 1 for any non-degenerate mixture; the two-dimensional null space corresponds to perturbations along the indeterminacy manifold $\{\hat\phi : \hat\theta_C \hat p_{\mid C} + (1-\hat\theta_C) \hat p_{\mid \neg C} = \mu_j\}$ — directions unobservable from a single binary signal.
+
+Since the soft-EM step at truth equals (up to the $1/(n+1)$ scaling) the natural-gradient ascent on the expected log-likelihood, the Jacobian of the correction function equals $\mathcal F / (n+1)$, also rank 1. Therefore $\lambda_{\min}(\mathbf J_F) = 0$, and **no SA1-preserving update on the joint conditional vector admits a sector parameter $\alpha \gt 0$ under SUB-B.** This is a Cramér-Rao bound, not a defect of any particular update rule: any unbiased online estimator must respect the bound, which is infinite in the unidentifiable directions.
+
+**Repair routes.** When $C$ is unobservable, the agent must:
+
+(i) **Augment $C$-observability** (recover B.7 above) — instrument secondary signals that identify $C$ per trial, transforming the problem from refuted to globally derived.
+(ii) **Run $K \geq 2$ children jointly under the same $C$-realization** — when the joint Fisher matrix reaches rank $2K+1$, the mixture is identifiable; local sector condition holds with $\alpha \geq \sigma_{\min}(\mathcal F_{\text{joint}})/\max_k(n_k+1)$. Strong structural requirement (joint observation typically unavailable in standard sequential strategy execution).
+(iii) **Fall back to plan-level tracking on the marginal $\hat\mu_j$** — recovers B.1's $\alpha = 1/(n_\mu+1)$ on the scalar marginal but loses the per-conditional decomposition (equivalent to L0-on-marginals).
+
+### Connection to the Identifiability-Floor Pattern
+
+The B.7-vs-refuted-unobservable-$C$ structure is one of two no-go theorems in AAD's strategy layer. The other is the on-policy detection no-go in #causal-insufficiency-detection, which prohibits L0-vs-L1 distinction from purely on-policy data via the causal hierarchy theorem. Both are structural impossibility results derived from external information-theoretic theorems (Bareinboim et al. 2022 Causal Hierarchy Theorem; Cramér-Rao bound on the Fisher information). Both strengthen related machinery — the on-policy no-go strengthens #loop-interventional-access; the mixture no-go strengthens the case for *observability-as-information-augmentation*. See #identifiability-floor for the meta-pattern.
 
 
 ## Proposition B.5: Bridge from Credence Error to Value Residuals
@@ -510,7 +609,7 @@ The time-varying $\alpha_\Sigma$ issue remains: since $n_k$ increases with each 
 1. ~~*General DAG topology.*~~ **Partially resolved.** Proposition B.6 verifies the first mixed AND/OR case (L1 augmented DAG with common-cause node). The three-way gating structure (condition testing × evidence starvation × exploration gating) appears to be the general pattern. Remaining: arbitrary mixed AND/OR DAGs with multiple common causes and deeper nesting.
 2. *Continuous outcomes.* The Beta-Bernoulli model gives conjugate, closed-form updates. Non-conjugate cases (continuous signals, partial observability) require approximate inference, and the sector condition must be verified for the approximation.
 3. ~~*Modified sector condition for biased correction.*~~ **Resolved via Prop B.5d (gradient-based attribution).** The $O(1/n)$ bias in the unobservable case (B.3a) under marginal Bayesian updates is eliminated by switching to gradient-based attribution, which satisfies SA1 exactly at truth. Per-edge results are recovered under the gradient scheme at the $\sigma_{\min}^4 / \sigma_{\max}^2$ scaling. Alternative route (plan-level tracking, B.3(b)) remains available without the condition-number penalty.
-4. ~~*Correlated edges (L1/L2 scope).*~~ **Partially resolved.** Proposition B.6 verifies the sector condition for an L1 augmented DAG and confirms that L0 results transfer — but only with correct L1 construction (common cause factored above the correlation). The $\theta_C$ attenuation of $\alpha_\Sigma$ is the quantitative cost of honest calibration. The main open question: strategies where the common cause cannot be cleanly factored above the correlation (requiring conditioning-based propagation at cost $O(2^k)$).
+4. ~~*Correlated edges (L1/L2 scope).*~~ **Resolved.** Proposition B.6 verifies the sector condition for L1 (strict-prerequisite augmented DAG); Proposition B.7 verifies it for L1' (soft-facilitator mixture form, observable common cause) with five-way gating. The unobservable-$C$ single-channel case is *refuted* by the Cramér-Rao floor (mixture identifiability obstruction; see B.7 §"Refuted Under Unobservable $C$") — not merely "open" but structurally impossible without additional information augmentation. Practical paths under unobservable $C$: augment $C$-observability, run multi-child joint observations (sketch only, narrow applicability), or fall back to plan-level tracking on the marginal. Strategies requiring full L2 conditioning over $k$ unobservable common causes still cost $O(2^k)$.
 5. *Adaptive exploration.* Proposition B.4 uses fixed $\varepsilon$. Adaptive strategies (UCB, Thompson sampling) allocate exploration based on current uncertainty and should yield tighter sector bounds.
 
 
