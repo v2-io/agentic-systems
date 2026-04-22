@@ -1,26 +1,44 @@
 ---
 slug: agent-identity
-type: discussion
-status: discussion-grade
+type: scope
+status: robust-qualitative
 depends:
   - chronica
   - model-sufficiency
-stage: deps-verified
+stage: draft
 ---
 
-# Discussion: Agent Identity and Temporal Continuity
+# Scope: Agent Identity as Singular Causal Trajectory
 
-An agent's causal history ( #chronica) is singular and non-forkable. Identity within AAD is grounded not in the model state $M_t$ (which can be copied) but in the unique causal trajectory $\mathcal C_t$ (which cannot).
+AAD applies to agents instantiated on singular causal trajectories. Identity within AAD is grounded not in the model state $M_t$ (which can be copied) but in the unique causal trajectory $\mathcal C_t$ (which cannot).
 
 ## Formal Expression
 
-*[Discussion (agent-identity)]*
+*[Scope (agent-identity, from chronica + model-sufficiency)]*
 
-If $M_t$ is a sufficient statistic for $\mathcal C_t$ ( #model-sufficiency), and $\mathcal C_t$ is a unique temporal sequence ( #chronica), then $M_t$ represents a *singular causal trajectory*. Duplicating $M_t$ and exposing the copies to different future events creates two agents with *divergent* causal histories, neither of which is a sufficient statistic for the other's trajectory.
+**Scope commitment.** AAD's formal apparatus presumes each agent is instantiated on a **singular, non-forkable causal trajectory** $\mathcal C_t$ ( #chronica). Sufficiency of the model state $M_t$ ( #model-sufficiency) is defined *relative to* this trajectory — not relative to a model-state equivalence class. Duplicating $M_t$ and exposing the copies to different future events produces two agents with *divergent* causal histories, each of which is a sufficient statistic only for *its own* trajectory.
+
+**Three consequences of the scope commitment:**
+
+1. **Sufficiency is trajectory-indexed.** $S(M_t)$ ( #model-sufficiency) measures against *this* agent's $\mathcal C_t$; not against a hypothetical parallel copy's $\mathcal C_t^{(2)}$.
+
+2. **Model merging is lossy by construction.** Reconciling the models of two agents that share a prefix of their trajectory but have diverged requires choosing which causal history to privilege; no generally optimal merge exists. This is a structural constraint of the scope, not a defect of any particular merge algorithm.
+
+3. **The loop's interventional access depends on the trajectory's singularity.** When the agent acts and observes, the observation is the response to *its* intervention on *its* single trajectory. Replaying a saved $M_t$ against a different event stream is not the same as intervening — the observed consequences are under a different causal trajectory. This grounds the interventional interpretation in #loop-interventional-access: the loop provides Level-2-quality data precisely because the agent is on a singular trajectory, not because of any architectural property of the agent itself.
+
+**What the scope excludes (or requires additional machinery for):**
+
+- Agents conceived as type/equivalence-class entities (e.g., "the GPT-4 model") rather than token/trajectory entities (e.g., "this particular session with state $M_t$ on trajectory $\mathcal C_t$"). AAD's formal results apply to tokens, not types. Aggregated claims across tokens of the same type require additional machinery (e.g., population-level dynamics; see Section III gaps on latent structural diversity).
+- "Clone problem" scenarios where multiple copies of an agent are formally the same until divergence — each copy becomes its own AAD agent at the moment it acquires a distinct event (Discussion below).
+- Formal treatment of reincarnation, restoration from backup, or other operations that attempt to transplant $M_t$ across trajectories. AAD's sufficiency machinery does not apply across trajectory discontinuities; such operations are out-of-scope events whose epistemic consequences require separate treatment.
 
 ## Epistemic Status
 
-This is *discussion-grade*. The observations follow qualitatively from the formalism but are not formal propositions. No downstream formal result depends on this material. Whether the mathematical structure grounds something that deserves to be called "identity" or "continuity of experience" is beyond AAD's scope. The mathematical structure is clear: the feedback loop produces a singular, non-forkable causal trajectory, and model adequacy is defined relative to that trajectory. What this segment discusses is *continuity persistence* in the sense of `LEXICON.md` — whether the agent maintains a coherent identity and trajectory through time, as distinct from the structural persistence of #persistence-condition (can the machinery outpace disturbance?) and operational persistence (is the agent currently within its viable region?).
+*Robust qualitative.* The scope commitment is structurally clear once stated and is load-bearing for at least one downstream formal result: the interventional interpretation in #loop-interventional-access rests on the singular-trajectory scope, not on any agent-architectural property. The three consequences above follow directly from the scope commitment combined with #chronica's non-forkability and #model-sufficiency's trajectory-indexed definition.
+
+Max attainable: *robust qualitative*. Scope statements are not theorems; they specify what kind of object the theory applies to. Further formalization (e.g., category-theoretic treatment of "agent" as a functor from event-streams to model-states, or explicit type/token distinction in logogenic-agent work) could reach *exact* on the formal structure but would not change the scope content.
+
+Whether the mathematical structure grounds something that deserves to be called "identity" or "continuity of experience" is beyond AAD's scope. The mathematical structure is clear: the feedback loop produces a singular, non-forkable causal trajectory, and model adequacy is defined relative to that trajectory. What this segment specifies is *continuity persistence* in the sense of `LEXICON.md` — whether the agent maintains a coherent identity and trajectory through time, as distinct from the structural persistence of #persistence-condition (can the machinery outpace disturbance?) and operational persistence (is the agent currently within its viable region?).
 
 ## Discussion
 
@@ -30,7 +48,7 @@ Within AAD's formalism, identity is not the model state $M_t$ (which can be copi
 
 **Formal consequences (not merely philosophical):**
 
-- A forked model's sufficiency $S(M_t)$ ( #model-sufficiency) is defined relative to *its own* interaction history. Post-fork, each copy's sufficiency is measured against a different $\mathcal{C}$.
+- A forked model's sufficiency $S(M_t)$ ( #model-sufficiency) is defined relative to *its own* interaction history. Post-fork, each copy's sufficiency is measured against a different $\mathcal C$.
 - Merging divergent models requires reconciling incompatible causal histories — a lossy operation with no generally optimal solution.
 - Temporal continuity (one unbroken causal thread) is what gives the model's sufficient statistic its meaning.
 

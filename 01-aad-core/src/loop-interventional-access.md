@@ -6,6 +6,7 @@ depends:
   - causal-hierarchy-requirement
   - recursive-update
   - causal-structure
+  - agent-identity
 stage: draft
 ---
 
@@ -55,6 +56,8 @@ When confounding is high, delays are long, or the agent follows a fixed policy, 
 The reframing here is rhetorical, not substantive: the headline result (the loop is a Level-2 engine) stays; what changes is the explicit acknowledgment that the observation about loop data being action-generated is shared with the broader literature. AAD's distinctive content sits in the three specific moves above. The companion architectural move on #directed-separation (Pearl-blanket vs. Friston-blanket form of Markov blanket; cf. Bruineberg et al. 2022) makes AAD's conservative-form positioning visible across both architectural and access-channel segments.
 
 **Connection to the identifiability-floor pattern.** This segment is structurally load-bearing for the L0-causal-insufficiency-detection no-go ( #causal-insufficiency-detection): without the loop's interventional access, the no-go forbids detection entirely; the covariance test under joint sibling observability is the unique broadly-available violation of the no-go's "purely on-policy" scope. See #identifiability-floor for the meta-pattern.
+
+**Why the loop data is genuinely interventional — the singular-trajectory ground.** The interventional character of loop data is not a property of the feedback mechanism in isolation; it rests on the scope commitment in #agent-identity that each agent is instantiated on a singular, non-forkable causal trajectory. When the agent executes $a_t$ and observes $o_{t+1}$, the observation is the response to *this* agent's intervention on *its* single trajectory $\mathcal C_t$. Replaying $a_t$ from a checkpointed $M_t$ against a different event stream would *not* constitute an intervention on $\mathcal C_t$ — it would be an intervention on a different trajectory $\mathcal C_t^{(2)}$ that happened to share a prefix. Pearl's $do$-operator presumes a definite causal system acted upon; AAD inherits this presumption via the singular-trajectory scope. Agents whose ontology is *type-like* (equivalence classes of copies) rather than *token-like* (singular trajectories) are outside AAD's formal scope; in particular, aggregate claims about "the model" across copies require additional machinery not provided here. This is the ontological ground that makes the "action-generated data is Level-2" claim honest rather than metaphorical.
 
 ## Working Notes
 
