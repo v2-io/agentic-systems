@@ -5,6 +5,7 @@ status: heuristic
 depends:
   - adaptive-tempo
   - mismatch-signal
+  - sector-condition-derivation
 stage: deps-verified
 ---
 

@@ -3,9 +3,17 @@
 **Last reconciled:** 2026-04-22. This file is the living action list. For the 2026-04-21 master audit that seeded most current items, see `msc/opus-audit-2026-04-21.md`. For the 2026-04-02 round that drove the prior wave of work, see `msc/analysis-2026-04-02-comprehensive.md` — its concrete fixes are done and archived at the bottom of this file rather than carried in the active list.
 
 
-## Active — 2026-04-21 Pending Findings
+## Active — Pending Findings
 
-Two theoretical findings that survived the 2026-04-21 audit and were explicitly deferred from that session. Both are characterized in `msc/pending-findings-2026-04-21.md`.
+### 2026-04-22 batch
+
+One finding flagged post-Gate-2-promotions during review of `#causal-insufficiency-detection`. Characterized in `msc/pending-findings-2026-04-22.md`.
+
+- **L0 residual detection mechanism fails under on-policy execution** (MEDIUM-HIGH). The segment's Detection Principle asserts $\Phi^{L0} - \bar y_G \to \pm\rho$ as a causal-insufficiency signal, but rational short-circuit execution of AND/OR strategies produces conditionally-learned credences that, under naive L0 arithmetic, exactly recover the true joint probability. Residual is zero under pure on-policy; scales as $\varepsilon\cdot\rho$ under $\varepsilon$-greedy. Repair: scope-condition fix in Detection Principle + elevate the covariance test (which survives the finding) to primary mechanism. 60–90 min. The segment's §"Interventional Localization" is the durable half, and `#orient-cascade` step 4c correctly references that half rather than the residual mechanism — so downstream damage is contained.
+
+### 2026-04-21 batch — both RESOLVED 2026-04-22
+
+Historical record of the 2026-04-21 audit residue and its resolution: see `msc/pending-findings-2026-04-21.md`. Both findings below were closed 2026-04-22.
 
 ### ~~Finding A — Temporal coarse-graining gap in `#composition-closure`~~ — RESOLVED 2026-04-22
 
@@ -27,7 +35,7 @@ These are foundational moves identified in `msc/opus-audit-2026-04-21.md` §"Big
 
 ## Active — Genuinely Open MEDIUM Items
 
-- **Composition scaling with $N$.** Whether closure defect scales polynomially or exponentially with team size (see `#composition-closure` Working Notes line 179). Tree-structured coupling may allow efficient reduction; fully-connected may not. No spike done. Critical for large-team applications.
+- **Composition scaling with $N$.** Whether closure defect scales polynomially or exponentially with team size (see `#composition-closure` Working Notes). Tree-structured coupling may allow efficient reduction; fully-connected may not. **Scoping spike done** (`msc/spike-composition-scaling-N.md`, 2026-04-22): four distinct readings of "scaling with $N$" identified, five candidate first moves named ($N$-Kalman chain and balanced-tree are cheapest), composing axes ($K_c$ macro-timescale; unity × update-heterogeneity) flagged. Question is well-framed but unresolved; execution deferred. Critical for large-team applications.
 
 - **Multi-timescale stability formalization.** `#multi-timescale-stability` is stage `sketch`; `#temporal-nesting` leans on it. Needs formal $N$-timescale singular perturbation treatment. Partially overlaps with Finding A's repair path if Option 2 (Tikhonov) is chosen.
 
