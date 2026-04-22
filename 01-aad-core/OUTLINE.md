@@ -164,6 +164,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | A   | Discussion |     | [#independence-audit](src/independence-audit.md)                       | Six load-bearing independence assumptions with failure regimes + repairs | draft |
 | A   | Discussion |     | [#approximation-tiering](src/approximation-tiering.md)                 | Meta-pattern: L0/L1/L2, C1/C2/C3, Tier 1/2/3 as common structure      | draft |
 | A   | Discussion |     | [#compression-operations](src/compression-operations.md)               | Shared IB shape across $M_t$, $\Sigma_t$, shared intent, $\Lambda$ (P1); $\Sigma_t$ source reformulated, (P1) as IB Lagrangian-dual | draft |
+| A   | Discussion |     | [#identifiability-floor](src/identifiability-floor.md)                 | Meta-pattern: structural no-go results from external info-theoretic theorems (CHT, Cramér-Rao); on-policy detection no-go + L1' mixture-identifiability obstruction | draft |
 | A   | Detail     |     | [#simulation-results](src/simulation-results.md)                       | 6 variants validating claims                                          | draft   |
 
 
