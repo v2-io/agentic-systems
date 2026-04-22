@@ -111,7 +111,7 @@ The agent's **information set** at time $\tau$ is the sigma-algebra $\mathcal{I}
 
 After all three restrictions: $\mathcal{I}_\tau^{agent} = \sigma(M_{\tau^-}, e_\tau)$.
 
-By the Doob–Dynkin lemma, any $\sigma(M_{\tau^-}, e_\tau)$-measurable random variable is a (Borel) function of $(M_{\tau^-}, e_\tau)$. Therefore $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ for some measurable $f$. $\square$
+By the Doob–Dynkin lemma[^kallenberg2002], any $\sigma(M_{\tau^-}, e_\tau)$-measurable random variable is a (Borel) function of $(M_{\tau^-}, e_\tau)$. Therefore $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ for some measurable $f$. $\square$
 
 ## Attempts to Break the Result
 
@@ -199,3 +199,7 @@ C3 is a definitional commitment that produces the Markov structure. It cannot be
 - The information-set formalization (Doob-Dynkin) provides the cleanest technical proof. It should probably be considered the primary proof path, with the elimination argument as the more intuitive exposition.
 
 *(Descended from TFT Appendix: Recursive Update Uniqueness Derivation.)*
+
+---
+
+[^kallenberg2002]: Kallenberg, O. (2002). *Foundations of Modern Probability* (2nd ed.). Springer. §1.2 (measurability and the Doob–Dynkin lemma).

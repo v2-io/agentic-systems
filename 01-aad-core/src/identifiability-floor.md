@@ -36,10 +36,10 @@ The pattern is *not* a negative posture. AAD does not say "many things are impos
 
 **External theorem.** Bareinboim, Correa, Ibeling & Icard (2022) Causal Hierarchy Theorem: there exist SCMs that agree on Level 1 (associational) data but disagree on Level 2 (interventional) questions. Therefore Level 2 distinctions are not in general identifiable from Level 1 data.
 
-**No-go.** For any L1 world $\mathcal{W}_{L1}$ with latent common cause $C$, there exists an L0 world $\mathcal{W}_{L0}^\ast$ with edge probabilities matched to the on-policy regime conditionals such that the on-policy observation distribution is *identical*: $\mathbb{P}_{\pi_{L0}}^{\text{obs}}[\mathcal{W}_{L1}] = \mathbb{P}_{\pi_{L0}}^{\text{obs}}[\mathcal{W}_{L0}^\ast]$. The L0/L1 distinction is a Level 2 question (it concerns $P(A_2 \mid do(\neg A_1))$ vs $P(A_2 \mid \neg A_1)$); on-policy data is Level 1; the CHT forbids distinguishing them.
+**No-go.** For any L1 world $\mathcal W_{L1}$ with latent common cause $C$, there exists an L0 world $\mathcal W_{L0}^\ast$ with edge probabilities matched to the on-policy regime conditionals such that the on-policy observation distribution is *identical*: $\mathbb P_{\pi_{L0}}^{\text{obs}}[\mathcal W_{L1}] = \mathbb P_{\pi_{L0}}^{\text{obs}}[\mathcal W_{L0}^\ast]$. The L0/L1 distinction is a Level 2 question (it concerns $P(A_2 \mid do(\neg A_1))$ vs $P(A_2 \mid \neg A_1)$); on-policy data is Level 1; the CHT forbids distinguishing them.
 
 **Boundary characterization.** Five routes (cf. #causal-insufficiency-detection):
-- (a) ε-exploration violates pure on-policy execution → partial detection at scale $O(\varepsilon)$.
+- (a) $\varepsilon$-exploration violates pure on-policy execution → partial detection at scale $O(\varepsilon)$.
 - (b) Joint sibling observability under exploration violates short-circuit censoring → strong detection via the pairwise covariance test under #loop-interventional-access.
 - (c) Intermediate-state observability at finer grain → very strong detection where available.
 - (d) Structural priors positing common causes → prior-quality-dependent.
@@ -53,7 +53,7 @@ The pattern is *not* a negative posture. AAD does not say "many things are impos
 
 **Setting.** Identify the mixture parameters $(\theta_C, p_{j\mid C}, p_{j\mid \neg C})$ of a soft-facilitator L1' DAG using single-channel observations $y_j$ of one child at a time, with $C$ unobservable.
 
-**External theorem.** The Cramér-Rao bound: the variance of any unbiased estimator is at least the inverse of the Fisher information matrix; if the Fisher matrix is rank-deficient, the bound is infinite in the null directions and no unbiased estimator achieves finite variance there.
+**External theorem.** The Cramér-Rao bound (Cramér 1946, *Mathematical Methods of Statistics*, Princeton University Press): the variance of any unbiased estimator is at least the inverse of the Fisher information matrix; if the Fisher matrix is rank-deficient, the bound is infinite in the null directions and no unbiased estimator achieves finite variance there.
 
 **No-go.** Computing the Fisher information of the mixture model $\mu_j = \theta_C \theta_{j\mid C} + (1-\theta_C)\theta_{j\mid \neg C}$ at truth, the matrix admits the rank-1 factorization $\mathcal{F} = uu^T/(\mu_j(1-\mu_j))$ with $u = (\Delta_j, \theta_C, 1-\theta_C)$ and $\Delta_j = p_{j\mid C} - p_{j\mid \neg C}$ the separability gap. The two-dimensional null space corresponds to perturbations along the indeterminacy manifold $\{\hat\phi : \hat\theta_C \hat p_{\mid C} + (1-\hat\theta_C) \hat p_{\mid \neg C} = \mu_j\}$ — directions unobservable from a single binary signal. The smallest eigenvalue of the soft-EM update Jacobian is therefore zero; no SA1-preserving update on the joint conditional vector admits a sector parameter $\alpha \gt 0$.
 

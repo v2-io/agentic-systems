@@ -31,7 +31,7 @@ This table is illustrative — real systems may have additional intermediate lev
 
 ## Epistemic Status
 
-*Robust qualitative* — this is standard singular perturbation reasoning (Tikhonov's theorem). The convergence constraint follows from the structure of multi-timescale updating. The specific timescale ratios needed for adequate separation are domain-dependent and not derived within AAD.
+*Robust qualitative* — this is standard singular perturbation reasoning (Tikhonov 1952, "Systems of differential equations containing a small parameter multiplying the derivative," *Matematicheskii Sbornik* 31(3):575–586; modern textbook exposition in Khalil 2002, *Nonlinear Systems* (3rd ed.), Prentice Hall, Chapter 11). The convergence constraint follows from the structure of multi-timescale updating. The specific timescale ratios needed for adequate separation are domain-dependent and not derived within AAD.
 
 ## Discussion
 

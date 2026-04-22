@@ -47,7 +47,7 @@ where $\epsilon \ll 1$ reflects the timescale separation and $F$ depends on $x^{
 
 ### Sketch of Approach (General Case)
 
-The standard singular perturbation result (Tikhonov's theorem, generalized) applies layer by layer: if level $k$ is stable for each fixed configuration of the slower levels $k+1, \ldots, N$ (each level has a stable attractor given the levels above it), and each successive slow manifold is itself stable, then the composite $N$-level system is stable.
+The standard singular perturbation result (Tikhonov 1952, "Systems of differential equations containing a small parameter multiplying the derivative," *Matematicheskii Sbornik* 31(3):575–586; generalized $N$-level form per Khalil 2002, *Nonlinear Systems* (3rd ed.), Prentice Hall, Chapter 11) applies layer by layer: if level $k$ is stable for each fixed configuration of the slower levels $k+1, \ldots, N$ (each level has a stable attractor given the levels above it), and each successive slow manifold is itself stable, then the composite $N$-level system is stable.
 
 #temporal-nesting's convergence constraint $\nu_{n+1} \ll \nu_n$ is the condition ensuring sufficient timescale separation at each boundary — i.e., $\epsilon_k / \epsilon_{k+1} \ll 1$ for each $k$. When this separation is violated between any adjacent pair, the faster level's transients contaminate the slower level's dynamics, potentially destabilizing the composite system.
 

@@ -34,7 +34,7 @@ This is a consequence of the temporal postulate ( #causal-structure): the arrow 
 
 *[Derived (from Cox's theorem)]*
 
-The agent's uncertainty about whether each step of the strategy will succeed must be quantified by a measure satisfying Cox's axioms (consistency, universality, non-negativity). The unique such measure is probability (Cox 1946). The agent may use other representations internally (confidence scores, fuzzy logic), but these must be mappable to probability to be consistent.
+The agent's uncertainty about whether each step of the strategy will succeed must be quantified by a measure satisfying Cox's axioms (consistency, universality, non-negativity). The unique such measure is probability (Cox 1946, "Probability, Frequency and Reasonable Expectation," *American Journal of Physics* 14(1):1–13; modern exposition in Jaynes 2003, *Probability Theory: The Logic of Science*, Cambridge University Press, Chapter 2). The agent may use other representations internally (confidence scores, fuzzy logic), but these must be mappable to probability to be consistent.
 
 #### P3: State-Local Revisability
 
