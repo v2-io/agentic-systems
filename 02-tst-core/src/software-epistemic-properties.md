@@ -12,7 +12,7 @@ stage: draft
 
 # Observation: Software's Epistemic Properties
 
-Software development possesses six epistemic properties that collectively make it the richest operationalization domain for AAD — not merely another instantiation, but a domain where AAD's formal machinery can be tested with unusually high fidelity.
+Software development possesses six epistemic properties that collectively establish it as AAD's **privileged high-identifiability calibration laboratory** — the domain where AAD's quantitative machinery can be most cleanly grounded, and from which other domains inherit under explicitly-stated transfer assumptions.
 
 ## Formal Expression
 
@@ -77,13 +77,41 @@ For these quantities, the original "without information loss" claim is preserved
 
 *Consequence:* The agent's environment-modifying actions at time $t$ affect the observation function $h$ at time $t+k$, creating a second-order dynamic where current code quality investments compound into future adaptive capacity via $U_o \to \eta^\ast \to \mathcal{T}$. See #code-quality-as-observation-infrastructure.
 
+### Software as AAD's calibration laboratory; transfer to other domains
+
+*[Formulation (software-calibration-lab)]*
+
+The six properties collectively warrant positioning software as the **privileged high-identifiability calibration laboratory** for AAD, not as a generic "best operationalization domain." The distinction matters: "richest operationalization domain" is a comparative superlative without a principled yardstick; "calibration laboratory" is a specific architectural role — it is the domain where quantitative forms of AAD's machinery can be grounded because each load-bearing identification assumption is cleanly satisfied, and other domains inherit AAD's results under explicitly-named transfer assumptions to specified each identification relaxation.
+
+**What "calibration laboratory" means concretely.** For each AAD-core quantity that requires an identification condition to be sharpened from *defined* to *operationally extractable*, software provides the configuration where the condition is most cleanly satisfied. Concretely:
+
+| AAD-core quantity | Identification condition | Software configuration | Non-software transfer requirement |
+|---|---|---|---|
+| Intervention effect $P(\cdot \mid do(a))$ ( #pearl-causal-hierarchy) | Action is a literal intervention on the target variable | Tests/deploys/`git bisect` realize literal $do(\cdot)$ on code state (P3) | Approximate intervention-as-observation with explicit confounding adjustment (Regime B/C, #edge-update-causal-validity) |
+| Counterfactual outcome $Y_{a}$ | Deterministic outcome function, reproducible environment | `git checkout` + re-execution on fixed test suite realizes literal Level 3 (P2, code-internal regime) | Proxy via structural model + path-dependent external event reconstruction (P2 agent-coupled regime) |
+| Causal DAG structure ($\Sigma_t$, $M_t$ causal skeleton) | Structure observable or declared | Import graphs, type systems, API contracts partially declare structure (P4) | Causal discovery from observational data with identifiability conditions; typically weaker |
+| Exteriorized chronica subset $\mathcal{C}_t^{\text{commit}}$ (P5) | Cryptographic immutability + attribution + universal retrieval + mainline-bounded scope | Git commits satisfy all four under current standard protocols | Sampled rather than exteriorized; recall bias in event logs, survey instruments, interview reconstruction |
+| Observation function $h$ controllability (P6) | Agent can modify its own sensing channels | Code quality IS $h$-quality for code-reading channels | Fixed by physics or external infrastructure; agents cannot improve their own sensors |
+
+**The calibration-lab framing prevents three systematic overclaim patterns.**
+
+1. **Domain generalization by default.** Quantitative claims calibrated in software (e.g., the $\alpha \approx 0.118$ exponential-cognitive-load coefficient derived from git analysis) are not automatically claims about human cognition or agent dynamics generally — they are claims about software-calibrated dynamics, which can be exported to other domains only with additional assumptions explicitly stated.
+
+2. **Identification assumptions treated as universal.** The intervention-as-$do(\cdot)$ identification that holds strongly in software (P3, Regime A) weakens significantly in organizational settings (Regime B) and operates as observation-only (Regime C) in most social domains. A TST result that invokes interventional identification is software-calibrated; exports require the domain to provide the same identification or to accept the biased-estimator form.
+
+3. **Chronica completeness treated as definitional.** The P5 conditional-maximality result — where $\mathcal C_t^{\text{commit}}$ is the unique maximal exteriorized subset under current standard protocols — is a software-specific result. Other domains lack universal content-addressed cryptographic recording; any AAD-core quantity that is exactly computable from the committed-state subset in software is approximate in proportion to recording-fidelity loss elsewhere.
+
+**Implication for TST's rhetorical posture.** TST's load-bearing claims are *about software under high-identifiability conditions* — not about agents, development, or adaptive systems in general. Transfer to other domains requires the analyst to name which property (P1–P6) the target domain shares, which it approximates, and which it lacks, and to accept the corresponding strengthening or weakening of the operational conclusion. This is not a concession; it is a clarification that strengthens TST's defensibility by making its scope explicit.
+
+**Relation to #developer-as-act-agent.** The developer-as-AAD-agent mapping exists under software's identification conditions; claims about developer cognition calibrated via that mapping inherit the calibration-lab scope. Exports to human cognition generally (outside software development) require the analyst to specify which of the six properties holds in the target setting.
+
 ## Epistemic Status
 
-These six properties are *observations* — empirical features of the software development domain, not derived from AAD. Their AAD-theoretic consequences are *discussion-grade*: structurally motivated mappings from domain features to formal quantities, not derivations. The individual properties are independently verifiable (P1: can you read all the source? P2: can you `git checkout`? P3: can you run tests? etc.) and uncontroversial as descriptions of the domain.
+The individual properties P1–P4, P6 are *observations* — empirical features of the software development domain, not derived from AAD. P5's within-scope exactness and conditional-maximality claims are at *empirical claim* tier (see the per-clause tagging in P5). The calibration-laboratory framing and the transfer-assumption table above are *formulation* — a principled architectural positioning of TST within AAD, derived from the six properties + the requirement that quantitative AAD claims be cleanly grounded somewhere, not itself a theorem.
 
-The claim that these properties *collectively* make software the richest AAD testbed is comparative and harder to verify — it requires showing that no other accessible domain offers all six simultaneously. This is plausible (biological systems lack P1, P2, P5; military systems lack P1, P5; financial systems lack P4, P6) but the comparison has not been systematic.
+The calibration-lab framing replaces an earlier "richest operationalization domain" framing that was comparative without a principled yardstick. The new framing asserts a specific architectural role — software is where AAD's identification conditions can be most cleanly satisfied, and other domains inherit under explicit transfer assumptions — which is defensible on each property-by-property basis rather than requiring a systematic domain comparison.
 
-Max attainable: *discussion-grade*. These are domain observations with theoretical interpretation, not derivable claims.
+Max attainable: the calibration-lab framing can reach *robust qualitative* once the transfer-assumption table is verified domain-by-domain (which properties apply, which approximate, which are absent) for at least two or three non-software domains (biological, organizational, financial). Full *exact*-tier formalization would require a uniqueness argument showing that software's configuration is the unique satisfying assignment for all six properties under current standard practice — interesting but not obviously achievable. The individual domain observations (P1–P6) remain at *discussion-grade* and *empirical* tiers as before.
 
 ## Discussion
 

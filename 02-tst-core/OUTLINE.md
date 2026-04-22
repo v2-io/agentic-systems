@@ -2,7 +2,9 @@
 
 Software development as an agentic domain — grounded in AAD's formal machinery, restored to its original status as a consequential body of research in its own right.
 
-**Working draft.** TST re-grounds the original Temporal Software Theory in AAD's mathematical framework — adding causal mathematics, adaptive dynamics, and the persistence condition that explain *why* time-optimal development practices work, not just *that* they do. Software is not just another domain example; it has unique epistemic properties that make it the ideal testbed for AAD and, recursively, the domain where AAD-grounded agents will operate.
+**Working draft.** TST re-grounds the original Temporal Software Theory in AAD's mathematical framework — adding causal mathematics, adaptive dynamics, and the persistence condition that explain *why* time-optimal development practices work, not just *that* they do.
+
+**Software as AAD's calibration laboratory.** Software serves as the *privileged high-identifiability calibration laboratory* for AAD, not a generic "best operationalization domain." Its role is specifically architectural: it is the domain in which AAD's quantitative machinery can be most cleanly grounded — where edge interventions can sometimes be literally interventional (tests, deploys, `git bisect`), where the chronica is partially exteriorized with exact cryptographic immutability over its committed subset ( #software-epistemic-properties P5), where the causal DAG is partially declared rather than inferred (P4), and where the observation function itself is under agent control (P1/P6). Other domains instantiate AAD under *additional transfer assumptions* that must be stated explicitly — approximation of interventional access, sampled rather than exteriorized chronica, inferred rather than declared causal structure. The calibration-lab framing makes these transfer assumptions first-class rather than implicit and prevents unacknowledged overclaim when AAD machinery calibrated in software is used in other domains.
 
 See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATION.md`](../NOTATION.md) for symbols.
 
@@ -13,7 +15,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 
 ## Software as Agentic Domain
 
-*Domain instantiation: software development viewed through AAD. The developer (or AI agent) is an actuated adaptive agent whose environment is a codebase, whose observations are mediated by tools (compiler, tests, IDE), and whose actions are code changes. Software's unique epistemic properties — full observability in principle, genuine interventions via tests, counterfactual replay via version control — make it the richest operationalization domain for AAD.*
+*Domain instantiation: software development viewed through AAD. The developer (or AI agent) is an actuated adaptive agent whose environment is a codebase, whose observations are mediated by tools (compiler, tests, IDE), and whose actions are code changes. Software's distinctive epistemic properties — codebase inspectability, genuine test-based interventions, counterfactual replay via version control, exact cryptographic recording of committed-state transitions — establish it as AAD's privileged high-identifiability calibration laboratory (see preamble). Other domains inherit AAD's machinery under additional transfer assumptions rather than by direct equivalence.*
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
