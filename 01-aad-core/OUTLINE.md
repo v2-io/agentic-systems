@@ -54,6 +54,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I   | Result      |     | [#persistence-condition](src/persistence-condition.md)                     | Bounded mismatch condition                     | claims-verified |
 | I   | Result      |     | [#structural-adaptation-necessity](src/structural-adaptation-necessity.md) | When parametric update fails                   | claims-verified |
 | I   | Derived     |     | [#temporal-nesting](src/temporal-nesting.md)                               | Timescale stratification                       | deps-verified   |
+| I   | Formulation |     | [#consolidation-dynamics](src/consolidation-dynamics.md)                   | Offline regime of $g_M$ driven by replayed/pseudo-events with IB-gap-reduction objective; stability-plasticity feasibility window; necessity under sub-state factorization + bounded per-event budget | draft |
 | I   | Discussion  |     | [#agent-identity](src/agent-identity.md)                                   | Non-forkable causal trajectory                 | deps-verified   |
 
 

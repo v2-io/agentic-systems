@@ -23,7 +23,8 @@ for each adjacent pair of adaptive timescales. If a slower process acts before t
 | Timescale | Process | What changes |
 |-----------|---------|-------------|
 | Fastest | Reactive response | Action given current model |
-| Fast | Parametric update | Model parameters within $\mathcal{M}$ |
+| Fast | Parametric update (online) | Model parameters within $\mathcal{M}$ |
+| Intermediate | Consolidation (offline, cf. #consolidation-dynamics) | Redistribution of information within $M_t$'s sub-state factorization toward IB-optimum |
 | Slow | Structural adaptation | Model class $\mathcal{M}$ |
 | Slowest | Architectural change | The agent's fundamental structure |
 
