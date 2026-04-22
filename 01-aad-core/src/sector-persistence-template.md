@@ -65,6 +65,14 @@ The template is invoked across six segments. Each specifies its own $(\xi, F, \r
 
 The same Lyapunov argument applies in every row. What varies is how each instantiation defines its state variable, its correction function, and — most importantly — what counts as "effective disturbance" for its context (environmental noise, adversarial coupling, closure defect, or a decomposition of these).
 
+### Comparison with the FEP-flow stability argument
+
+Active inference's stability arguments come from the geometry of the variational free-energy landscape — agents are argued to flow toward the minimum of variational free energy on a non-equilibrium-steady-state (NESS) density (Friston 2019, "A free energy principle for a particular physics," arXiv:1906.10184; Friston, Da Costa, Sakthivadivel, Heins, Pavliotis, Ramstead & Parr 2023, "Path integrals, particular kinds, and strange things," *Phys. Life Rev.* 47). Aguilera, Millidge, Tschantz & Buckley (2022, "How particular is the physics of the free energy principle?", *Phys. Life Rev.* 40) showed that this argument's mathematical validity is narrow: the NESS-density framing for the FEP-flow holds only in a small parameter regime for non-equilibrium linear stochastic systems, and natural extensions (nonlinear, non-Gaussian, non-equilibrium) often fall outside the proven regime.
+
+The AAD persistence template is structurally different: it is a Lyapunov-based argument requiring only (T1) zero-correction-at-zero-state, (T2) local sector condition (correction points inward), and (T3) bounded disturbance — all of which are checked locally for each instantiation ( #sector-condition-derivation Props A.1, A.1S, A.2). The template applies to bounded and to mean-square-stochastic disturbance, gives explicit ultimate-bound and adaptive-reserve formulas, and does not depend on NESS structure or on a free-energy gradient.
+
+The breadth difference is not rhetorical: where the FEP-flow argument's parameter regime is debated in the AI literature itself, the sector-Lyapunov apparatus is the standard machinery of nonlinear control theory (Khalil 2002, *Nonlinear Systems*, 3rd ed., Prentice Hall, ch. 4) and applies wherever (T1)–(T3) hold. This is one of AAD's stronger structural positions and is worth making explicit when comparing AAD to active inference: AAD does the persistence work AI tries to do, with broader validity and explicit ultimate-bound formulas.
+
 ## Epistemic Status
 
 *Exact.* The template is the abstract form of the Lyapunov result proved in #sector-condition-derivation (Props A.1, A.1S, A.2). The proofs transfer without modification whenever (T1)–(T3) hold; the template's contribution is the recognition that AAD's persistence-flavored results are instances of a single pattern and the enumeration of what each instantiation must verify.

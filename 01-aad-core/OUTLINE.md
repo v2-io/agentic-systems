@@ -34,7 +34,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I   | Definition  |     | [#pearl-causal-hierarchy](src/pearl-causal-hierarchy.md)                   | Three levels of causal reasoning               | deps-verified   |
 | I   | Definition  |     | [#chronica](src/chronica.md)                                               | Complete interaction history                   | deps-verified   |
 | I   | Formulation |     | [#agent-model](src/agent-model.md)                                         | Compressed history as state                    | deps-verified   |
-| I   | Formulation |     | [#information-bottleneck](src/information-bottleneck.md)                   | Optimal model compression                      | deps-verified   |
+| I   | Formulation |     | [#information-bottleneck](src/information-bottleneck.md)                   | Optimal model compression                      | draft           |
 | I   | Definition  |     | [#model-sufficiency](src/model-sufficiency.md)                             | Predictive information retained                | deps-verified   |
 | I   | Definition  |     | [#model-class-fitness](src/model-class-fitness.md)                         | Best achievable sufficiency                    | deps-verified   |
 | I   | Formulation |     | [#event-driven-dynamics](src/event-driven-dynamics.md)                     | Events in continuous time                      | deps-verified   |
@@ -77,7 +77,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | --- | --------------- | --- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----- |
 | II  | Definition      |     | [#agent-spectrum](src/agent-spectrum.md)                                               | ±model × ±objective quadrants                                    | deps-verified |
 | II  | Formulation     |     | [#complete-agent-state](src/complete-agent-state.md)                                   | $X_t = (M_t, G_t)$                                               | claims-verified |
-| II  | Derived + Scope |     | [#directed-separation](src/directed-separation.md)                                     | Epistemic update is goal-blind                                   | deps-verified |
+| II  | Derived + Scope |     | [#directed-separation](src/directed-separation.md)                                     | Epistemic update is goal-blind                                   | draft |
 | II  | Formulation     |     | [#objective-functional](src/objective-functional.md)                                   | $O_t$ parametrizes value                                         | deps-verified |
 | II  | Definition      |     | [#value-object](src/value-object.md)                                                   | Horizon/policy-conditioned value                                 | deps-verified |
 | II  | Definition      |     | [#strategy-dimension](src/strategy-dimension.md)                                       | $G_t = (O_t, \Sigma_t)$ split                                    | deps-verified |
@@ -88,9 +88,9 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | II  | Normative       |     | [#explicit-strategy-condition](src/explicit-strategy-condition.md)                     | When planning beats exploring                                    | draft |
 | II  | Derived         |     | [#chain-confidence-decay](src/chain-confidence-decay.md)                               | Log-confidence additive in depth                                 | claims-verified |
 | II  | Scope           |     | [#and-or-scope](src/and-or-scope.md)                                                   | Conjunctive/disjunctive scope                                    | draft |
-| II  | Definition      |     | [#strategy-dag](src/strategy-dag.md)                                                   | Strategy as probabilistic DAG                                    | deps-verified |
-| II  | Definition      |     | [#satisfaction-gap](src/satisfaction-gap.md)                                           | Ideal vs best achievable                                         | claims-verified |
-| II  | Definition      |     | [#control-regret](src/control-regret.md)                                               | Best achievable vs current                                       | claims-verified |
+| II  | Definition      |     | [#strategy-dag](src/strategy-dag.md)                                                   | Strategy as probabilistic DAG                                    | draft |
+| II  | Definition      |     | [#satisfaction-gap](src/satisfaction-gap.md)                                           | Ideal vs best achievable                                         | draft |
+| II  | Definition      |     | [#control-regret](src/control-regret.md)                                               | Best achievable vs current                                       | draft |
 | II  | Definition      |     | [#strategic-calibration](src/strategic-calibration.md)                                 | Edge residuals ( #credit-assignment-boundary)                    | draft |
 | II  | Derived         |     | [#causal-insufficiency-detection](src/causal-insufficiency-detection.md)               | Detecting latent common causes from structured residuals + interventional localization | draft |
 | II  | Derived         |     | [#orient-cascade](src/orient-cascade.md)                                               | Resolution order by info dep                                     | deps-verified |

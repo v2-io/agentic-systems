@@ -37,20 +37,22 @@ The total scales as $O(\lvert E\rvert \log \lvert V\rvert)$ for moderate-precisi
 
 The optimal strategy complexity balances parsimony against decision-relevance. $\Sigma_t$ is the IB-compression of the interaction history $\mathcal C_t$ *for guidance*, parallel to $M_t$ as the IB-compression of $\mathcal C_t$ *for prediction* ( #compression-operations for the shared IB shape across AAD's compression operations, and for the relationship between the theoretical $I(\mathcal C_t; \Sigma_t)$ compression cost and the operational DL-based minimization below):
 
-**Theoretical form.** The IB objective with $\mathcal C_t$ as source and $\pi^\ast \mid M_t$ as relevance variable:
+**Theoretical form (variational).** $\Sigma_t$ is a tractable variational approximation of the optimal-policy posterior $Q^\ast(\pi \mid M_t)$. The strategy-cost objective:
 
-$$\Sigma_t^\ast = \arg\min_{\Sigma_t} \left[\, I(\mathcal C_t;\, \Sigma_t) - \beta_\Sigma \cdot I(\Sigma_t;\, \pi^\ast \mid M_t)\right]$$
+$$\Sigma_t^\ast = \arg\min_{\Sigma_t} \left[\, I(\mathcal C_t;\, \Sigma_t) \;+\; \beta_\Sigma \cdot D_{\mathrm{KL}}\bigl(Q_{\Sigma_t}(\pi \mid M_t) \,\big\Vert\, \pi^\ast(\cdot \mid M_t)\bigr)\right]$$
 
-**Operational form.** Since $I(\mathcal C_t; \Sigma_t)$ is not computable in closed form for general DAG encodings, the operational minimization replaces the information cost with a description-length surrogate:
+where $Q_{\Sigma_t}(\pi \mid M_t)$ is the action distribution induced by the strategy DAG given the current model state, and $\pi^\ast(\cdot \mid M_t)$ is the optimal-policy reference. The KL-divergence measures how far the agent's tractable strategy departs from the optimum — it is well-defined when $\pi^\ast$ is deterministic-from-$M_t$ (the degenerate case that collapses Shannon mutual information to zero). The variational form is the strategy-layer analog of variational free energy minimization in active inference (Friston, FitzGerald, Rigoli, Schwartenbeck & Pezzulo 2017, "Active inference: a process theory," *Neural Computation* 29; Da Costa, Parr, Sajid, Veselic, Neacsu & Friston 2020, "Active inference on discrete state-spaces," *J. Math. Psych.* 99; Parr & Pezzulo 2022, *Active Inference*, MIT Press). AAD borrows the variational form as the appropriate generalization of the Shannon-MI relevance term — without committing to AI's preferences-as-priors encoding ($C(o) = \log P_{\mathrm{pref}}(o)$; AAD's $O_t$ remains a value functional on trajectories, #objective-functional) or to expected free energy as master objective (AAD's CIY-unified objective is a related but distinct decomposition; #ciy-unified-objective).
 
-$$\Sigma_t^\ast \approx \arg\min_{\Sigma_t} \left[\operatorname{DL}(\Sigma_t) - \beta_\Sigma \cdot I(\Sigma_t;\, \pi^\ast \mid M_t)\right]$$
+**Operational form.** Since $I(\mathcal C_t; \Sigma_t)$ is not computable in closed form for general DAG encodings, the operational minimization replaces the information cost with a description-length surrogate and the KL term with a sample-based estimate (a per-edge calibration discrepancy weighted by decision-relevance — see #credit-assignment-boundary for the gradient form):
+
+$$\Sigma_t^\ast \approx \arg\min_{\Sigma_t} \left[\operatorname{DL}(\Sigma_t) + \beta_\Sigma \cdot \widehat{D_{\mathrm{KL}}}(Q_{\Sigma_t} \,\Vert\, \pi^\ast)\right]$$
 
 where:
 - $\operatorname{DL}(\Sigma_t)$: description length (coding-cost upper bound on $I(\mathcal C_t; \Sigma_t)$ for the given DAG encoding scheme — see §2.2 below)
-- $I(\Sigma_t;\, \pi^\ast \mid M_t)$: mutual information between the strategy and the optimal policy, conditioned on the current model — how much the strategy helps the agent choose good actions beyond what the model already provides
+- $\widehat{D_{\mathrm{KL}}}(Q_{\Sigma_t} \,\Vert\, \pi^\ast)$: sample-based estimate of the KL divergence between the strategy-induced policy and the optimal-policy reference
 - $\beta_\Sigma \gt 0$: trade-off parameter — cognitive cost per decision-relevant bit (the $\Sigma_t$ instance of the shared $\beta$ framework in #compression-operations)
 
-The two forms agree in the limit where the DAG encoding is rate-distortion optimal; the operational form is the one an agent actually runs. The theoretical form places the objective on the same IB frontier family as $M_t$, shared intent, and composition projection.
+The two forms agree in the limit where the DAG encoding is rate-distortion optimal and the policy posterior is sample-recoverable; the operational form is the one an agent actually runs. The theoretical form places the objective on the same variational frontier as $M_t$, shared intent, and composition projection, with the KL-form relevance term resolving the Shannon-zero degeneracy that arises under deterministic $\pi^\ast$.
 
 When $\beta_\Sigma$ is low (high maintenance cost relative to decision value), the agent prefers simple strategies. When $\beta_\Sigma$ is high (strategy is cheap to maintain relative to its decision value), the agent can afford complex plans. The explicit strategy condition ( #explicit-strategy-condition) is the binary threshold: $\beta_\Sigma$ large enough that *any* $\Sigma_t$ is worth maintaining.
 
@@ -118,7 +120,7 @@ The IB objective suggests three compression operations, corresponding to structu
 
 ## Epistemic Status
 
-The description length formulation is a *formulation* --- it applies standard MDL to the strategy DAG, which is a representational choice not a derived necessity. The IB objective is *formulation/discussion-grade* --- it names the right trade-off by analogy with #information-bottleneck but the mutual information term $I(\Sigma_t;\, \pi^\ast \mid M_t)$ is not operationalized. The maximum useful depth $d^\ast$ is *derived* conditional on Beta-Bernoulli dynamics and the per-edge persistence condition from #strategic-tempo. The triple depth penalty is an *observation* combining results from three independent segments. The enriched maintenance decomposition is *formulation*. The compression operations are *discussion-grade*.
+The description length formulation is a *formulation* --- it applies standard MDL to the strategy DAG, which is a representational choice not a derived necessity. The IB objective is *formulation* in its variational form (above) --- the KL-divergence relevance term is a representational choice that AAD shares with the active-inference literature (Friston et al. 2017; Parr & Pezzulo 2022) without committing to that literature's preferences-as-priors stance. The variational form replaces an earlier Shannon-MI form $-\beta_\Sigma \cdot I(\Sigma_t;\, \pi^\ast \mid M_t)$ which had a Shannon-zero degeneracy: when $\pi^\ast$ is a deterministic function of $M_t$ (the standard scope), Shannon mutual information to a constant vanishes identically, collapsing the objective to $\arg\min \operatorname{DL}(\Sigma_t)$. The KL form does not have this degeneracy. The maximum useful depth $d^\ast$ is *derived* conditional on Beta-Bernoulli dynamics and the per-edge persistence condition from #strategic-tempo. The triple depth penalty is an *observation* combining results from three independent segments. The enriched maintenance decomposition is *formulation*. The compression operations are *discussion-grade*.
 
 Max attainable: conditional. The DL formulation is standard; the IB objective and compression operations would require empirical validation or formal optimality proofs to advance beyond discussion-grade. The depth bound could reach exact status for specific edge models.
 

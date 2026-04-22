@@ -5,7 +5,7 @@ status: exact
 depends:
   - value-object
   - satisfaction-gap
-stage: claims-verified
+stage: draft
 ---
 
 # Definition: Control Regret
@@ -43,3 +43,5 @@ This diagnostic is what makes the orient cascade ( #orient-cascade) actionable: 
 **Control regret as the signal for $\Sigma_t$ revision.** When $\delta_{\text{regret}}$ is high, the agent knows it could do better with a different strategy. The *specific* corrections — which edges to revise, which branches to prune, which alternatives to add — come from the strategic calibration residual ( #strategic-calibration), which localizes the regret to specific parts of $\Sigma_t$.
 
 **Regret approaching zero when optimally failing.** This is the key insight motivating the two-gap split. A single $\delta_{\text{objective}}$ would show "large gap" for both "bad strategy, achievable goal" and "good strategy, impossible goal." The first warrants strategy revision; the second warrants goal revision (after ruling out $M_t$/$\Pi$/$N_h$ inadequacy). Without the split, the agent cannot distinguish these cases and may waste effort optimizing a strategy that's already near-optimal for an infeasible goal.
+
+**Diagnostic content vs. AI's expected-free-energy decomposition.** The 2×2 disambiguation depends on the satisfaction gap / control regret split being orthogonal — distinguishing "goal too hard" from "strategy too weak." Active inference's expected free energy decomposition (pragmatic value + epistemic value; Friston, FitzGerald, Rigoli, Schwartenbeck & Pezzulo 2017, "Active inference: a process theory," *Neural Computation* 29) supports policy ranking but does not separate these diagnoses — both increase EFE without distinguishing cause. See #satisfaction-gap for the full analysis of why the diagnostic structure depends on $V_{O_t}$ being a value functional rather than log-priors over outcomes (Sun & Firestone 2020, "The dark room problem," *Trends Cog. Sci.* 24).
