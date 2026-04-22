@@ -754,16 +754,17 @@ This deserves a small CLAUDE.md addition — not a full proposal but a one-parag
 
 The strengthening cycle ran after the audit-derived proposals above and surfaced a theoretical pattern that was not visible to any single audit. Unlike the G-BP / O-BP / C-BP proposals — which are *choices* about how the theory should be reorganized — this is a *discovery* about what the theory already does across multiple segments. It is documented here as an architectural observation so future work can deploy it deliberately rather than re-discover it.
 
-### SP-1 — The three-layer additive-decomposition pattern
+### SP-1 — The three-layer additive-coordinate-forcing pattern (PROMOTED)
 
 **Source:** 2026-04-22/23 strengthening cycle, surfaced by the F20 regret-bound spike (commit `f70fb68`), the reverse-KL uniqueness spike (commit `e777f01` with corrected citations), and the G-BP1 logit scoping spike (commit `a39dfb7`).
 
-**The pattern.** AAD now carries **three independent uniqueness theorems**, each forcing a logarithmic coordinate through a Cauchy-functional-equation argument on an AAD-internally-motivated additivity axiom:
+**Status: promoted to `#additive-coordinate-forcing` meta-segment** (2026-04-23 session). The canonical statement now lives at `01-aad-core/src/additive-coordinate-forcing.md` (`type: discussion`, `status: discussion-grade`). The promotion tightened the original "three independent uniqueness theorems" framing to a more honest **1-anchor-plus-2-theorem characterization**: the chain layer is a mathematical identity (probability chain rule + logarithm), not a Cauchy-FE uniqueness theorem; the divergence and update layers are theorems conditional on AAD-internally-motivated additivity axioms, each explicitly invoking the chain layer as the motivating analog.
 
-| Layer | Quantity | Axiom | Forced form | Segment |
-|---|---|---|---|---|
-| **Chain** | Confidence along causal chains | Additive log-confidence decay | $\log P(	ext{chain}) = \sum_i \log P(E_i \mid E_{\lt i})$ | #chain-confidence-decay |
-| **Divergence** | Policy mismatch between $\pi^st$ and $Q_{\Sigma_t}$ | Chain-rule additivity over conditional factorizations | $f(t) = c 
+Two cases originally proposed for promotion in SP-2 — Lyapunov quadratic (`#sector-condition-derivation`) and IB Lagrangian (`#information-bottleneck`, `#compression-operations`) — are classified in the segment as *adjacent family members* that share the additive-decomposition shape without the AAD-internal forcing structure: Lyapunov because the quadratic coordinate is matched to the sector condition rather than forced by it (the segment itself labels the quadratic candidate a "formulation choice"); IB because AAD adopts the Tishby, Pereira & Bialek 1999 form as an applied external theorem rather than re-deriving under an AAD-internal additivity axiom. Both adjacent cases carry cross-references in their home segments pointing to this classification.
+
+The new meta-segment composes with `#identifiability-floor` (negative-scope half) and `#separability-pattern` (positive-scope half) as AAD's three-part meta-architecture — each segment names a distinct cross-section of the theory's architecture.
+
+**Downstream consequence.** SP-2's original "five-instance meta-pattern" proposal is partially executed and partially redirected: the three primary instances are canonicalized in segment form; the 4th and 5th candidates are excluded from primary status with documented reasoning. The "promote to meta-segment at verified generality" item in `TODO.md` Phase B is closed; the next piece of work on this axis is the Future-Extensions item flagged in the segment's Working Notes (candidate future layers at credit-assignment, composition-closure-defect, and shared-intent compression).
 
 ---
 
@@ -792,7 +793,7 @@ Three de novo audits (Codex, Gemini, Opus) ran after the 2026-04-22/23 cascading
 
 **Risks.** If the Lyapunov / IB Lagrangian "instances" turn out to be structurally different (e.g., the Lyapunov additivity is at the level of the *derivative* $\dot V$, while the three primary instances' additivity is at the level of the *function value*), the five-instance claim overreaches. Honest alternative: document the three-instance primary + two adjacent family-members observation, not a five-instance theorem.
 
-**Status:** unexamined; supersedes Phase B as originally proposed (three-instance promotion). Recommendation: do the verification spike as part of Phase B, with the possibility of promoting to five-instance.
+**Status: partially executed and redirected** (2026-04-23 session). The meta-segment `#additive-coordinate-forcing` has landed with the three primary instances canonicalized. Verification of Opus's 5-instance conjecture produced the honest alternative Opus anticipated: the risk case materialized (Lyapunov additivity is at the level of the derivative $\dot V$, not the function value; IB additivity is imported from external axiomatic derivation rather than re-motivated under AAD-internal axioms). The segment documents both as *adjacent family members* with explicit reasoning. The promotion-to-meta-segment item is closed; the remaining work on this axis is the Future-Extensions Working Note in the segment (candidate layers at credit-assignment, composition-closure-defect, shared-intent compression), each requiring its own AAD-internal axiom + Cauchy-FE derivation.
 
 ### SP-3 — Calibration-laboratory template generalization
 
