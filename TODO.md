@@ -1,19 +1,68 @@
 # TODO — Open Work Items
 
-**Last reconciled:** 2026-04-22. This file is the living action list. For the 2026-04-21 master audit that seeded most current items, see `msc/opus-audit-2026-04-21.md`. For the 2026-04-02 round that drove the prior wave of work, see `msc/analysis-2026-04-02-comprehensive.md` — its concrete fixes are done and archived at the bottom of this file rather than carried in the active list.
+**Last reconciled:** 2026-04-22. This file is the living action list. For the 2026-04-21 master audit that seeded some current items, see `msc/opus-audit-2026-04-21.md`. For the 2026-04-22 three-audit batch (Gemini, Codex, Opus), local findings live in `msc/pending-findings-2026-04-22.md` and architectural proposals in `msc/architectural-proposals-2026-04-22.md`. For the 2026-04-02 round, see `msc/analysis-2026-04-02-comprehensive.md` — its concrete fixes are done and archived at the bottom of this file.
+
+
+## Active — Strategic Architectural Proposals (HIGHEST IMPLIED PRIORITY)
+
+Ten architectural proposals surfaced in the 2026-04-22 audits, each characterized in `msc/architectural-proposals-2026-04-22.md` as an *independent structural investment option* — evaluated on its own merits (beauty / concision / correctness / approachability / fundamentality), not primarily as machinery for subsuming findings. These are at the top of TODO because the project's governing purpose (CLAUDE.md) makes those virtues first-class. Some of these moves are more important than any individual finding; some will subsume several findings as a side-effect.
+
+**Read `msc/architectural-proposals-2026-04-22.md`** for the full portfolio. One-line summaries below.
+
+- **G-BP1 — Natural-parameter / logit reparameterization.** All beliefs in natural exponential-family parameters; additive gradient updates in $\mathbb{R}^n$; link functions at the interface. Merits: **correctness (high)**, concision, fundamentality. Subsumes Finding 2 (unbounded gradient). 2–3 sessions; scoping spike optional.
+- **G-BP2 — Variational free-energy framing of strategy IB.** $\Sigma_t$ as a variational approximation of $\pi^\ast$; KL-divergence replaces Shannon MI; variational free energy replaces IB Lagrangian. Merits: **correctness (high)**, fundamentality, beauty. Subsumes Finding 3 (degenerate MI). Scoping spike essential; multi-session.
+- **G-BP3 — Fisher-information unification of tempo and gain.** $\delta$ as KL-divergence; $\alpha$, $\eta^\ast$, $\mathcal{T}$ collapse into natural gradient descent; per-dimension becomes the anisotropic special case. Merits: **fundamentality (very high)**, concision, beauty. The largest single move in the portfolio. Major rewrite; scoping spike essential.
+- **O-BP1 — Sector-persistence template as organizing principle.** Reframe OUTLINE preamble around "AAD decomposes disturbance for bounded-correction dynamics at each scale." Merits: **approachability (very high)**, beauty, concision. Subsumes Finding 9 (Section II preamble). 1–2 sessions, framing touch, low risk. **Natural first move.**
+- **O-BP2 — Four compression operations as one hierarchy.** Agent as portfolio of compression maps with different relevance variables; $M_t$, $\Sigma_t$, shared intent, $\Lambda$ become projections not distinct objects. Merits: **fundamentality (high)**, approachability, beauty. Subsumes Finding 10 (IB status); strengthens existing $G_t$-single-object item. Scoping spike valuable.
+- **O-BP3 — Continuous-parameter approximation tiering.** L0/L1/L2, C1/C2/C3, Tier 1/2/3 as points in continuous parameter spaces; results live in 3D operating-regime space. Merits: fundamentality, **beauty (high)**, concision. Subsumes the existing continuous-convention tier-C item; partial on Finding 11.
+- **O-BP4 — Continuous-valued strategy DAG.** Edges carry expected-progress rates; nodes aggregate progress fields; replaces Boolean AND/OR for continuous-value domains. Merits: **correctness (high)**, approachability. Partial on Finding 2. Dedicated scoping spike recommended before any portfolio decision.
+- **O-BP5 — Orient cascade as recursive adaptive cycle.** AAD applied at every level where a state variable has a correction function and bounded disturbance; unifies deliberation, cascade, and composition. Merits: beauty, fundamentality. No findings directly subsumed; strengthens composition-consistency.
+- **O-BP6 — Identity promotion (`#agent-identity` to formal scope statement).** AAD applies to agents on singular causal trajectories; grounds why loop Level-2 access is interventional. Merits: **fundamentality (medium-high)**. Partial on Finding 5 (loop framing). Small (one session); no scoping spike needed.
+- **O-BP7 — Known structural absences (meta-proposal).** Four gaps: tier-switching policy, misspecification cost quantification, cross-hierarchy monotonicity, CIY/EIG gap. Each candidate for future scoping spike. Long-term research agenda.
+
+**Proposal clusters.** G-BP1 + G-BP3 + O-BP3 (natural parameters + Fisher geometry + continuous tiering); G-BP1 + O-BP4 (logit + continuous DAG); G-BP2 vs O-BP2 (alternative unifying framings); O-BP1 + O-BP5 + O-BP6 (template + recursion + identity, the "recursive persistence on singular trajectories" picture).
+
+**Recommended first moves** (from rough smallest-payoff-to-effort ordering in the portfolio doc): **O-BP1** (framing touch, high payoff, low risk) → **O-BP6** (one session, localized) → **G-BP1** (fixes a real finding with groundwork in spike).
 
 
 ## Active — Pending Findings
 
-### 2026-04-22 batch
+Local findings — scope bugs, mechanical breaks, framing issues. Full characterizations in `msc/pending-findings-2026-04-22.md`. Each finding notes its "subsumed by" architectural proposal (if any); the choice between local repair and architectural move is Joseph's.
 
-One finding flagged post-Gate-2-promotions during review of `#causal-insufficiency-detection`. Characterized in `msc/pending-findings-2026-04-22.md`.
+### 2026-04-22 batch — 11 findings (1 from pre-audit Gemini, 2 Gemini, 4 Codex, 4 Opus — Opus F1 deduplicated with Gemini pre-audit)
 
-- **L0 residual detection mechanism fails under on-policy execution** (MEDIUM-HIGH). The segment's Detection Principle asserts $\Phi^{L0} - \bar y_G \to \pm\rho$ as a causal-insufficiency signal, but rational short-circuit execution of AND/OR strategies produces conditionally-learned credences that, under naive L0 arithmetic, exactly recover the true joint probability. Residual is zero under pure on-policy; scales as $\varepsilon\cdot\rho$ under $\varepsilon$-greedy. Repair: scope-condition fix in Detection Principle + elevate the covariance test (which survives the finding) to primary mechanism. 60–90 min. The segment's §"Interventional Localization" is the durable half, and `#orient-cascade` step 4c correctly references that half rather than the residual mechanism — so downstream damage is contained.
+| # | Finding | Severity | Subsumed by |
+|---|---------|----------|-------------|
+| 1 | L0 residual under on-policy execution | Medium-high | — |
+| 2 | Unbounded gradient in credit-assignment signal | High | G-BP1 |
+| 3 | Degenerate MI in strategy IB objective | Medium-high | G-BP2 |
+| 4 | Section II silent scope narrowing (agency → learning) | Medium | — |
+| 5 | Loop framing overstates Level 2 access | Medium | Partial by O-BP6 |
+| 6 | Composition timescale heuristic outruns bridge conditions | Medium-high | — |
+| 7 | TST overstates git as complete chronica | High | — |
+| 8 | (C-iii) mutual-benefit vs (A1) decomposable $G_c$ gap | Medium | — |
+| 9 | Section II preamble framing understates survival | Medium-high | O-BP1 |
+| 10 | `#information-bottleneck` status mismatches unification role | Low-medium | O-BP2 |
+| 11 | Orient cascade step 4c convergence in non-stationary envs | Medium | Partial by O-BP3; compounds with F1 |
+
+**Actionable now (independent of portfolio decisions):**
+
+- **Finding 1** — already characterized; repair ready. 60–90 min. Covariance test stays as primary; residual demoted to exploration-rate-gated secondary.
+- **Finding 7** — git claims; sharp and contained. 30–45 min.
+- **Finding 10** — IB status reclassification; 15 min.
+
+**Coordinated passes (multiple findings close together):**
+
+- Findings 4 + 9 — both touch Section II scope framing at different layers. 60–90 min combined. Finding 9 absorbed if O-BP1 is adopted.
+- Findings 1 + 11 — both concern step 4c mechanism under different failure modes. 30–45 min combined with Finding 1's repair.
+
+**Holding for portfolio decisions:**
+
+- Findings 2, 3 — subsumed by G-BP1 / G-BP2 respectively. Local repairs are wasted work if the architectural moves are pursued.
 
 ### 2026-04-21 batch — both RESOLVED 2026-04-22
 
-Historical record of the 2026-04-21 audit residue and its resolution: see `msc/pending-findings-2026-04-21.md`. Both findings below were closed 2026-04-22.
+Historical record of the 2026-04-21 audit residue and its resolution: see `msc/pending-findings-2026-04-21.md`. Both findings closed 2026-04-22.
 
 ### ~~Finding A — Temporal coarse-graining gap in `#composition-closure`~~ — RESOLVED 2026-04-22
 
@@ -24,13 +73,12 @@ Option 3 (per-macro-step formulation) executed. `#composition-closure` now carri
 $\mathcal{A}(e_\tau)$ recast as an observation-stream property at the Bayesian-optimal level: $I(G;\Omega\mid e,M) / H(\Omega\mid e,M)$ under a reference goal prior $P_{\text{ref}}(G)$. No hypothetical processors appear in the definition; $\kappa_{\text{processing}}$ enters only through the explicit composition $\kappa_{\text{eff}} = \kappa \cdot \mathcal{A}$ in the scope condition. The bias bound simplifies to $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot I(G;\Omega\mid e,M)$. The operational estimator $\hat{\mathcal{A}}$ now uses a reference interpreter as a measurement instrument; the processor-probing form of $\hat\kappa_{\text{processing}}$ moved to `#directed-separation` where it belongs canonically. Holistic scan of the six other logogenic segments: no similar contamination — the pattern was localized. See `msc/pending-findings-2026-04-21.md` Finding B for the closed-out resolution note.
 
 
-## Active — Tier-C Deferrals (Opus 2026-04-21 bigger-picture synthesis)
+## Active — Tier-C Deferrals
 
-These are foundational moves identified in `msc/opus-audit-2026-04-21.md` §"Bigger-picture synthesis" that were explicitly deferred. Not to be opened casually.
+Foundational moves currently deferred for specific reasons. Not a general "defer" bucket — the bigger-picture items from 2026-04-22 live under "Strategic Architectural Proposals" above, evaluated on their own merits.
 
-- **$G_t$ as single object; $(O_t, \Sigma_t)$ as a property** (Opus synthesis §7). The split is currently axiomatic. Class 2 (LLM) agents carry both roles in one representation; a cleaner formulation would define $G_t$ as a single purposeful-state object and treat the decomposition as a property Class 1 agents have. Touches Section II scaffolding. **Defer** until more Class 2 logogenic work lands.
-
-- **Continuous convention hierarchy** $N_r \in [1, \infty]$ (Opus synthesis §8). C1/C2/C3 are limits of a continuous receding-horizon family. A continuous parameter subsumes the three conventions and makes monotonicity a one-line claim ($A_O(N_r)$ weakly monotone). Low urgency; natural part of a future `#value-object` revision pass.
+- **$G_t$ as single object; $(O_t, \Sigma_t)$ as a property** (Opus 2026-04-21 synthesis §7). Axiomatic split currently; Class 2 agents carry both roles in one representation. A cleaner formulation would define $G_t$ as a single purposeful-state object and treat the decomposition as a property Class 1 agents have. Touches Section II scaffolding. **Defer until more Class 2 logogenic work lands.** Strengthened by O-BP2 (compressions-as-projections); if O-BP2 is pursued, this item converges with it.
+- **Continuous convention hierarchy** $N_r \in [1, \infty]$ (Opus 2026-04-21 synthesis §8). C1/C2/C3 are limits of a continuous receding-horizon family. Subsumed by O-BP3 (continuous-parameter tiering) — moving to Strategic Proposals as part of O-BP3.
 
 
 ## Active — Genuinely Open MEDIUM Items
