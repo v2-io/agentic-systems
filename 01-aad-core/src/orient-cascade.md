@@ -5,12 +5,17 @@ status: conditional
 depends:
   - directed-separation
   - mismatch-signal
+  - update-gain
   - satisfaction-gap
   - control-regret
   - strategic-calibration
   - strategy-dag
+  - strategy-persistence-schema
+  - strategic-dynamics-derivation
+  - credit-assignment-boundary
   - causal-insufficiency-detection
-stage: deps-verified
+  - value-object
+stage: claims-verified
 ---
 
 # Derived: Orient Cascade

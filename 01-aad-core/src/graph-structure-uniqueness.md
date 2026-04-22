@@ -7,7 +7,7 @@ depends:
   - chain-confidence-decay
   - explicit-strategy-condition
   - causal-structure
-stage: deps-verified
+stage: claims-verified
 ---
 
 # Derivation: Graph Structure Uniqueness
