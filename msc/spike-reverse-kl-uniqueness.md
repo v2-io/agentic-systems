@@ -11,7 +11,9 @@ date: 2026-04-22
 
 **Charter.** Is there a set of structural axioms under which reverse-KL is *uniquely* the smooth f-divergence providing an upper regret bound $R(Q) \leq g(D(\pi^\ast \Vert Q))$ within the $\pi^\ast$-first family?
 
-**Outcome: A (uniqueness theorem found).** Under the additional structural axiom of **chain-rule additivity** (Csiszár 1972; Amari 2009), reverse-KL is the unique f-divergence among the direction-forced family. The axiom is independently motivated by AAD's decomposition of strategic plans into conditional sub-plans (DAG factorization), which should produce an additive rather than multiplicative cost-of-mismatch. Paths A, D, E, F fail (honestly; each explained); Path B narrows the family to alpha-divergences (Čencov/Morozova-Chentsov); Path C closes the uniqueness.
+**Outcome: A (uniqueness theorem found).** Under the additional structural axiom of **chain-rule additivity over conditional factorizations** (Hobson 1969's composition/additivity axiom; Csiszár 1991 Theorem 5 composition-consistency characterization; standard functional-equation derivation), reverse-KL (equivalently, the I-divergence / KL-divergence) is the unique f-divergence among the direction-forced family. The axiom is independently motivated by AAD's decomposition of strategic plans into conditional sub-plans (DAG factorization), which should produce an additive rather than multiplicative cost-of-mismatch. Paths A, D, E, F fail (honestly; each explained); Path B narrows the family to alpha-divergences (Čencov/Morozova-Chentsov); Path C closes the uniqueness.
+
+**Citation audit note (2026-04-22 evening, post-landing).** The load-bearing citations in §4 were corrected after a post-landing citation audit. Original draft cited Csiszár 1972 *Periodica Math. Hung.* 2:191–213 and Amari 2009 IEEE *Trans. Inf. Theory* 55(11):4925–4931 Theorem 1 as the source of the chain-rule uniqueness theorem; **both attributions were incorrect** (Csiszár 1972 is about f-informativity of observation channels, not chain-rule uniqueness; Amari 2009 proves $\alpha$-divergence uniqueness at f-div∩Bregman-div intersection, not chain-rule uniqueness; Amari & Cichocki 2010's claimed "Prop. 3.2" does not exist). The corrected citations are **Hobson 1969** (*J. Stat. Phys.* 1(3):383–391) for the canonical axiomatic uniqueness via additivity/composition, **Csiszár 1991** (*Ann. Statist.* 19:2032–2066, Theorem 3 corollary + Theorem 5 composition-consistency) for the projection-rule-level uniqueness of I-divergence, and **Shore & Johnson 1980** (*IEEE Trans. Info. Theory* 26:26–37) for system-independence axioms; the functional-equation derivation itself is folk (see also Aczél & Daróczy 1975 *On Measures of Information and Their Characterizations*, Academic Press). Additionally, **Eguchi 1983** was cited to *AISM* 35(1):1–24; the correct venue is ***Annals of Statistics*** 11(3):793–803. See §11 References for the corrected list.
 
 ## §1 — The Question Precisely
 
@@ -30,7 +32,7 @@ The F20 direction-forcing result: forward-KL $D_{\mathrm{KL}}(Q \Vert \pi^\ast) 
 
 **Candidate axiom.** "Reverse-KL is the unique smooth f-divergence whose Hessian at $P = Q$ equals the Fisher information metric on the policy manifold."
 
-**Why this fails.** This is exactly what **Eguchi's theorem** (Eguchi 1983, "Second order efficiency of minimum contrast estimators viewed from a differential geometric point of view," Annals of the Institute of Statistical Mathematics 35(1), 1–24) forbids.
+**Why this fails.** This is exactly what **Eguchi's theorem** (Eguchi 1983, "Second order efficiency of minimum contrast estimators in a curved exponential family," *Annals of Statistics* 11(3):793–803; see also Amari & Cichocki 2010 Theorem 5 eq. (126) which credits Eguchi 1983 for the derivation) forbids.
 
 **Eguchi's theorem (restated).** For any smooth f-divergence $D_f(P\Vert Q) = \int f(dP/dQ)\, dQ$ with $f''(1) \gt 0$, the Hessian at $P = Q$ equals $f''(1)$ times the Fisher information metric:
 
@@ -74,13 +76,14 @@ This is the "additivity over conditional decomposition" property: the total mism
 
 **Theorem (KL uniqueness among f-divergences via chain rule).** The chain rule above holds for an f-divergence $D_f$ (on arbitrary joint distributions) *if and only if* $f(t) = c \cdot t\log t$ for some constant $c \gt 0$ — i.e., $D_f$ is reverse-KL (up to positive scaling).
 
-**References.**
-- Csiszár 1972, "A class of measures of informativity of observation channels," *Periodica Mathematica Hungarica* 2:191–213 — gives the information-theoretic characterization; KL is identified as the unique f-divergence satisfying a "chain rule for observation channels."
-- Amari 2009 op. cit. — gives the cleanest modern statement. Theorem 1 there: within f-divergences, KL is the unique decomposable (additive over independent factors and chain-rule-respecting) divergence.
-- Amari & Cichocki 2010, "Information geometry of divergence functions," *Bulletin of the Polish Academy of Sciences: Technical Sciences* 58(1):183–195 — survey; Proposition 3.2 gives the chain-rule uniqueness.
-- Liese & Vajda 2006, "On divergences and informations in statistics and information theory," IEEE Trans. Info. Theory 52(10):4394–4412 — survey.
+**Status of the theorem and its references.** The theorem itself is a classical folk result in information theory, obtainable by a direct functional-equation argument (below). The canonical published sources for the axiomatic characterizations *equivalent to* the chain-rule statement are:
 
-**Proof sketch (following Amari 2009).** The chain rule for $D_f(P_{XY}\Vert Q_{XY}) = \sum_{x,y} Q(x,y) f(P(x,y)/Q(x,y))$. Decompose $P(x,y) = P(x)P(y\mid x)$ and $Q(x,y) = Q(x)Q(y\mid x)$. Let $r_x = P(x)/Q(x)$ and $s_{y\mid x} = P(y\mid x)/Q(y\mid x)$. Then $P(x,y)/Q(x,y) = r_x \cdot s_{y\mid x}$ and:
+- **Hobson 1969**, "A new theorem of information theory," *Journal of Statistical Physics* 1(3):383–391 — the closest direct match. Hobson proves that the Kullback expression $I = k\sum p_i \log(p_i / p_i^0)$ is the unique measure satisfying four conditions, one of which is a *composition/additivity property*: information about subdivided events equals information about the coarse partition plus the conditional-expectation of information about the subdivisions. This is exactly the chain-rule axiom in the form used above.
+- **Csiszár 1991**, "Why least squares and maximum entropy? An axiomatic approach to inference for linear inverse problems," *Annals of Statistics* 19:2032–2066 — Theorem 3 corollary: "The only transitive statistical projection rule (on $R_+^n$ or $\Delta_n$) is the I-divergence projection rule." Theorem 5(ii): product-consistency selects I-divergence uniquely. These are the projection-rule-level statements of the chain-rule / additivity uniqueness for KL.
+- **Shore & Johnson 1980**, "Axiomatic derivation of the principle of maximum entropy and the principle of minimum cross-entropy," *IEEE Trans. Info. Theory* 26:26–37 — system-independence axiom (stronger than Csiszár 1991's product-consistency) uniquely characterizes cross-entropy / I-divergence minimization.
+- **Aczél & Daróczy 1975**, *On Measures of Information and Their Characterizations*, Academic Press — comprehensive treatment of functional-equation arguments for characterizing information measures.
+
+**Proof sketch (standard functional-equation argument).** The chain rule for $D_f(P_{XY}\Vert Q_{XY}) = \sum_{x,y} Q(x,y) f(P(x,y)/Q(x,y))$. Decompose $P(x,y) = P(x)P(y\mid x)$ and $Q(x,y) = Q(x)Q(y\mid x)$. Let $r_x = P(x)/Q(x)$ and $s_{y\mid x} = P(y\mid x)/Q(y\mid x)$. Then $P(x,y)/Q(x,y) = r_x \cdot s_{y\mid x}$ and:
 
 $$D_f(P_{XY}\Vert Q_{XY}) = \sum_x Q(x) \sum_y Q(y\mid x) f(r_x s_{y\mid x})$$
 
@@ -92,7 +95,7 @@ Fix $x$ and consider the inner sums. The identity must hold for all $Q(y\mid x)$
 
 $$f(r s) = f(r) + r f(s) + g(r)$$
 
-for some function $g$, where the equation holds for all $r, s \gt 0$. (The full derivation requires a careful $y$-expectation argument; see Amari 2009 Theorem 1 or Csiszár's original 1972 derivation.) This functional equation has solution $f(t) = c \cdot t \log t + h(t-1)$ for linear $h$, and the normalization $f(1) = 0$ with convexity forces $h = 0$, leaving $f(t) = c \cdot t\log t$. QED.
+for some function $g$, where the equation holds for all $r, s \gt 0$. This functional equation has solution $f(t) = c \cdot t \log t + h(t-1)$ for linear $h$, and the normalization $f(1) = 0$ with convexity forces $h = 0$, leaving $f(t) = c \cdot t\log t$. QED. (See Aczél & Daróczy 1975 §4 for the general functional-equation machinery; Hobson 1969 for the specific KL characterization via this argument.)
 
 **Why other f-divergences fail the chain rule (quick checks):**
 
@@ -160,7 +163,7 @@ However: Sanov gives a *rate-function identification* at the asymptotic-large-sa
 
 ## §8 — Outcome Declaration
 
-**Outcome A.** Under the additional structural axiom of **chain-rule additivity over conditional factorizations** (Csiszár 1972 / Amari 2009), reverse-KL is the **unique** smooth f-divergence in the $\pi^\ast$-first direction-forced family providing an upper regret bound.
+**Outcome A.** Under the additional structural axiom of **chain-rule additivity over conditional factorizations** (Hobson 1969; Csiszár 1991 Theorem 3 corollary and Theorem 5; standard functional-equation derivation per Aczél & Daróczy 1975), reverse-KL is the **unique** smooth f-divergence in the $\pi^\ast$-first direction-forced family providing an upper regret bound.
 
 The axiom is independently motivated by AAD's DAG factorization of strategies ( #strategy-dag) and by the parallel with additive log-confidence decay ( #chain-confidence-decay). It is the divergence-level analog of additive-mismatch-decomposition-along-causal-chains, a principle AAD has already committed to.
 
@@ -186,18 +189,27 @@ The axiom is independently motivated by AAD's DAG factorization of strategies ( 
 
 ## §11 — References invoked
 
-- Eguchi, S. 1983. "Second order efficiency of minimum contrast estimators in a curved exponential family." *Annals of the Institute of Statistical Mathematics* 35(1):1–24.
+**Axiomatic uniqueness of KL / I-divergence** (load-bearing for §4 chain-rule uniqueness):
+- Hobson, A. 1969. "A new theorem of information theory." *Journal of Statistical Physics* 1(3):383–391. *(Canonical source for KL uniqueness via composition/additivity axioms equivalent to the chain rule.)*
+- Csiszár, I. 1991. "Why least squares and maximum entropy? An axiomatic approach to inference for linear inverse problems." *Annals of Statistics* 19(4):2032–2066. *(Theorem 3 corollary: transitive statistical projection rule is I-divergence uniquely; Theorem 5: product-consistency characterizes I-divergence.)*
+- Shore, J. E. & Johnson, R. W. 1980. "Axiomatic derivation of the principle of maximum entropy and the principle of minimum cross-entropy." *IEEE Trans. Info. Theory* 26(1):26–37. *(System-independence axiom characterization.)*
+- Aczél, J. & Daróczy, Z. 1975. *On Measures of Information and Their Characterizations.* Academic Press. *(Functional-equation machinery for characterizing information measures.)*
+
+**Information geometry of f-divergences:**
+- Eguchi, S. 1983. "Second order efficiency of minimum contrast estimators in a curved exponential family." *Annals of Statistics* 11(3):793–803. *(Fisher-metric-from-contrast-function derivation; see Amari & Cichocki 2010 Theorem 5 eq. (126) for the modern restatement.)*
 - Čencov, N. N. 1982. *Statistical Decision Rules and Optimal Inference.* AMS Translations of Mathematical Monographs 53.
 - Campbell, L. L. 1986. "An extended Čencov characterization of the information metric." *Proceedings of the AMS* 98(1):135–141.
 - Morozova, E. A. & Chentsov, N. N. 1991. "Markov invariant geometry on state manifolds." (Russian, English translation in *J. Sov. Math.* 56(5):2648–2669.)
 - Ay, N., Jost, J., Lê, H. V. & Schwachhöfer, L. 2017. *Information Geometry.* Springer (Ergebnisse der Mathematik 64).
-- Amari, S. 2009. "$\alpha$-divergence is unique, belonging to both $f$-divergence and Bregman divergence classes." *IEEE Trans. Information Theory* 55(11):4925–4931.
+- Amari, S. 2009. "$\alpha$-divergence is unique, belonging to both $f$-divergence and Bregman divergence classes." *IEEE Trans. Information Theory* 55(11):4925–4931. *($\alpha$-divergence uniqueness at f-div∩Bregman-div intersection; NOT the chain-rule uniqueness theorem.)*
 - Amari, S. & Nagaoka, H. 2000. *Methods of Information Geometry.* AMS / Oxford University Press.
 - Amari, S. 2016. *Information Geometry and Its Applications.* Springer Applied Mathematical Sciences 194.
-- Amari, S. & Cichocki, A. 2010. "Information geometry of divergence functions." *Bulletin of the Polish Academy of Sciences: Technical Sciences* 58(1):183–195.
-- Csiszár, I. 1972. "A class of measures of informativity of observation channels." *Periodica Mathematica Hungarica* 2:191–213.
+- Amari, S. & Cichocki, A. 2010. "Information geometry of divergence functions." *Bulletin of the Polish Academy of Sciences: Technical Sciences* 58(1):183–195. *(Survey; Theorem 5: f-divergence induces Fisher metric uniquely via information monotonicity. Does NOT contain a "Prop 3.2" chain-rule theorem.)*
+- Csiszár, I. 1972. "A class of measures of informativity of observation channels." *Periodica Mathematica Hungarica* 2:191–213. *(f-informativity of observation channels with data-processing theorem and f-radius/channel-capacity minimax result; NOT a chain-rule uniqueness theorem. Cited only for background on f-informativity framework.)*
 - Liese, F. & Vajda, I. 2006. "On divergences and informations in statistics and information theory." *IEEE Trans. Info. Theory* 52(10):4394–4412.
 - Sason, I. & Verdú, S. 2016. "f-divergence inequalities." *IEEE Trans. Info. Theory* 62(11):5973–6006.
+
+**Other invoked results:**
 - Cover, T. & Thomas, J. 2006. *Elements of Information Theory.* Wiley (2nd ed.).
 - Dembo, A. & Zeitouni, O. 2010. *Large Deviations Techniques and Applications.* Springer (2nd ed.).
 - Jordan, M. I., Ghahramani, Z., Jaakkola, T. S. & Saul, L. K. 1999. "An introduction to variational methods for graphical models." *Machine Learning* 37(2):183–233.
@@ -207,8 +219,10 @@ The axiom is independently motivated by AAD's DAG factorization of strategies ( 
 
 - **The chain-rule axiom is the tightest structural constraint I found.** Earlier axioms (Fisher-metric at second order, Čencov invariance) did not pick out reverse-KL. The chain rule *does* — it is the unique structural property of reverse-KL that no other direction-forced f-divergence shares. The result is robust.
 
-- **Why I am confident the theorem is correct.** The chain-rule uniqueness of KL is a classical result stated in multiple independent sources (Csiszár 1972; Amari 2009; Amari & Cichocki 2010). The derivation in §4 (sketch) traces the core functional-equation argument. The $\chi^2$ counterexample in §4 ($r=s=2$ giving $9 \neq 3$) is a concrete arithmetic check; it is correct. I verified by hand.
+- **Why I am confident the theorem is correct (post-audit).** The chain-rule / composition-additivity uniqueness of KL is a classical folk result obtainable by direct functional-equation argument (§4 sketch). The canonical published sources are **Hobson 1969** (composition-additivity axiom → KL uniquely) and **Csiszár 1991** (transitive statistical projection rule → I-divergence uniquely, Theorem 3 corollary; product-consistency → I-divergence, Theorem 5). The functional-equation machinery is in **Aczél & Daróczy 1975**. The $\chi^2$ counterexample in §4 ($9/16 \neq 8/16$) is a concrete arithmetic check; it is correct. I verified by hand.
 
-- **The axiom's AAD-internal motivation is the key load-bearing piece.** A pure Csiszár-theorem uniqueness would be technically correct but unmotivated. The §5 argument — that the chain rule is the natural divergence-level analog of additive log-confidence decay, which AAD already commits to — is what makes the axiom a principled choice rather than an imported constraint. If Joseph pushes back on §5's motivation, the uniqueness theorem still holds but loses its AAD-groundedness.
+- **Citation audit history (2026-04-22 evening).** On initial landing, the load-bearing citations here were **Csiszár 1972** *Periodica Math. Hung.* 2:191–213 and **Amari 2009** *IEEE Trans. Info. Theory* Theorem 1 and **Amari & Cichocki 2010** *Bull. Pol. Acad. Sci.* Prop 3.2. A post-landing citation audit (by careful reading of the actual papers) found that: (a) Csiszár 1972 is about f-informativity of observation channels and contains no chain-rule uniqueness theorem; (b) Amari 2009's main Theorem is about $\alpha$-divergence at f-div∩Bregman-div intersection, not about chain-rule uniqueness, and there is no "Theorem 1" labeled with that content (the paper's first numbered theorem is in §IV on $\alpha$-divergence); (c) Amari & Cichocki 2010 has no Prop 3.2 — its theorem numbering runs 1–12, and its f-divergence characterization (Theorem 3) uses information monotonicity, not chain rule. The attributions were wrong even though the theorem itself is correct. Corrected citations above. Additionally, Eguchi 1983 was cited to *AISM* 35(1):1–24; the correct venue is *Annals of Statistics* 11(3):793–803 (Amari & Cichocki 2010 reference [37] confirms this).
+
+- **The axiom's AAD-internal motivation is the key load-bearing piece.** A pure Hobson-theorem uniqueness would be technically correct but unmotivated. The §5 argument — that the chain rule is the natural divergence-level analog of additive log-confidence decay, which AAD already commits to — is what makes the axiom a principled choice rather than an imported constraint. If Joseph pushes back on §5's motivation, the uniqueness theorem still holds but loses its AAD-groundedness.
 
 - **What this does not resolve.** The linear-vs-square-root form choice in `#strategy-cost-regret-bound` §7 is orthogonal — the uniqueness result picks the divergence; the functional form around the divergence is a separate choice. Also, the choice between Pinsker and BH bounds on top of reverse-KL is not forced by the uniqueness theorem (both use reverse-KL; they differ in the bounding function $g$). The segment already handles these via the admissible-family table.
