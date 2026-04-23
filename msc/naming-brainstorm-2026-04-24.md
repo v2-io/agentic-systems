@@ -12,25 +12,29 @@ Two concrete examples from elsewhere in this project make the stakes visible. *S
 
 This is not a cosmetic concern. AAD is trying to seed communal imagination around a set of structural ideas that the reader has never seen assembled this way before. **Memorable names are the substrate of communal imagination** — a community can argue about, extend, and apply *directed separation* more easily than it can argue about a thing with a clinical multi-word label, because the name has enough shape for a group of minds to get purchase on collectively. (Joseph's own framing in `msc/joseph-working-notes.md` §2: *"memorable names for the right concepts open up the communal imagination."*) This matters for a framework whose value is integrative — the work is done when others can wield the concepts without the original authors in the room.
 
-The question is not "should we rename everything." It is: **which names are doing load-bearing work, which are coasting, which are blocking, and where are the memorable-noun slots that would repay a deliberate act of naming?**
+The question is not "should we rename everything." It is: **which names are doing load-bearing work, which are coasting, which are causing friction, and where are the missing memorable-noun slots that would repay a deliberate act of naming?** Some names were early placeholders that just propagated via shear momentum and an unjustified assumption that they were named deliberately or carefully. *Now* is the time to revisit all of those assumptions.
 
 ## 2. Evaluation criteria
 
 Extracted from Joseph's working-notes framing plus project conventions:
 
-1. **Self-descriptive vs. baggage-carrying.** A name can either try to *describe* its referent from scratch ("information bottleneck") or *adopt* existing baggage from an adjacent field ("sector condition," "Lyapunov function"). Both can be right. Self-descriptive wins when the field lacks prior art; baggage-adoption wins when the prior art's structural intuitions should travel with the name. The worst outcome is a name whose *only* content is the baggage, when the theory means something subtly different than the baggage implies.
+1. **Self-descriptive vs. baggage-carrying.** A name can either try to *describe* its referent from scratch ("information bottleneck") or *adopt* existing baggage from an adjacent field ("sector condition," "Lyapunov function"). Both can be right. Self-descriptive wins when the field lacks prior art; baggage-adoption wins when the prior art's structural intuitions should travel with the name. The worst outcome is a name whose *only* content is the baggage, when the theory means something subtly different than the baggage implies (e.g., "Update Cycle", "LLM", ...).
 
 2. **Familiarity gradient.** For each named concept: how many seconds of unfamiliarity does a trained reader in the adjacent field experience? Zero (they see "Lyapunov" and know what to expect) is usually good but occasionally dangerous (if AAD's usage differs from the baggage, the name creates false confidence). High unfamiliarity is usually bad but occasionally good (a novel name signals a novel concept).
 
 3. **Memorable-noun potential.** Does the name render as a *thing* that can be named in discussion without paraphrase? "Chronica" is a thing. "The AAD complete interaction history with temporal ordering" is not. The asymmetry compounds across every conversation the community will ever have.
 
-4. **Overload risk.** Does the word collide with other uses in the same project, or in adjacent AI/ML vocabulary? The word "hierarchy" appears in Pearl's causal hierarchy, in AAD's convention hierarchy, in AAD's correlation hierarchy, and in approximation tiering — four distinct uses in one framework, which is too many.
+4. **Overload risk.** Does the word collide with other uses in the same project, or in adjacent AI/ML vocabulary? The word "hierarchy" appears in Pearl's causal hierarchy, in AAD's convention hierarchy, in AAD's correlation hierarchy, and in approximation tiering — four distinct uses in one framework, which is likely too many.
 
 5. **Scope honesty.** Does the name over-promise relative to what the concept actually delivers? This is AAD's own distinctive epistemic posture applied to naming: if a name suggests more generality, more exactness, or more novelty than the concept provides, it violates the same scope-honesty commitment that the rest of the framework holds itself to.
 
 6. **Aging potential.** Names age differently: some harden into standard vocabulary, some drift into embarrassment, some become locked in by citation velocity even when better options become available. Names that are too cute age poorly; names that are too clinical never attract citation in the first place.
 
-## 3. What's working — names that are pulling their weight
+
+# One Agent's Brainstorm
+
+
+## 1. What's working — names that are pulling their weight
 
 These should not be touched. Listing them matters because a brainstorm that only surfaces weaknesses creates a false impression that everything needs changing.
 
@@ -48,7 +52,7 @@ These should not be touched. Listing them matters because a brainstorm that only
 - **Sector-persistence template** — technical-clinical but clear; the meta-segment's role as shared lemma is legible from the name. Keep (but see §4 for the template-family naming question).
 - **Auftragstaktik principle** — adopts a load-bearing term from a specific historical tradition; the reader who knows it gets the full intended intuition, the reader who doesn't gets an interesting keyword to look up. Keep.
 
-## 4. Quiet successes — names that could be a little louder
+## 2. Quiet successes — names that could be a little louder
 
 A category for names that are technically adequate but could do more work with a small tweak.
 
@@ -60,7 +64,7 @@ A category for names that are technically adequate but could do more work with a
 
 - **Correlation hierarchy (L0/L1/L1'/L2).** Pedagogically clean. The "L1'" notation (L1-prime) is a little awkward to speak; in conversation it tends to get glossed as "L1-prime" or "observable-C L1." If this hierarchy becomes load-bearing for outside readers (and it will, because it parallels Pearl's hierarchy), giving L1' a *name* rather than just a prime-decoration might help: e.g., *L1-observable* / *L1-latent* or *L1-C* / *L1-Ĉ*. Not urgent.
 
-## 5. Drift risks — names with hidden baggage or ambiguity
+## 3. Drift risks — names with hidden baggage or ambiguity
 
 Names that *work* for trained-in readers but carry baggage that might mislead others.
 
@@ -74,7 +78,7 @@ Names that *work* for trained-in readers but carry baggage that might mislead ot
 
 - **Persistence — three senses (structural / operational / continuity).** The word "persistence" is carrying three distinct technical meanings in AAD, flagged in LEXICON. The three senses *are* related (they're all about the agent sustaining itself), and LEXICON disambiguates. But readers encountering "persistence condition" vs. "structural persistence" vs. "continuity persistence" need the LEXICON on hand. *Observation, not proposal:* the triple-meaning is load-bearing and probably irreducible. But each usage site could be explicit about which sense applies when it matters.
 
-## 6. Anonymous technical names — accurate but forgettable
+## 4. Anonymous technical names — accurate but forgettable
 
 These names do their job but don't compound into community vocabulary. They are not *bad*; they are *quiet*.
 
@@ -112,7 +116,7 @@ So of the three meta-segments forming AAD's "cross-sectional epistemic structure
   
   Value: replace "this lands in α₁" with "this lands in derived-gain," which reads naturally in prose without requiring the reader to remember what α₁ means. The subscripts stay as shorthand; the English becomes pronounceable. *Weak proposal, low priority.*
 
-## 7. The overloaded-word problem
+## 5. The overloaded-word problem
 
 Three words are doing too many jobs in AAD:
 
@@ -122,7 +126,7 @@ Three words are doing too many jobs in AAD:
 
 3. **Persistence** — three senses, flagged in §5. Probably irreducible.
 
-## 8. The `-act-agent` slug relics
+## 6. The `-act-agent` slug relics
 
 Two segments carry slugs that predate the 2026-04-16 ACT → AAD rename: `#developer-as-act-agent` (TST) and `#ai-agent-as-act-agent` (logogenic). Both read as relics — the "act" prefix was the old ACT (Agentic Cycle Theory) branding, not the English verb. Renaming is probably overdue.
 
@@ -136,7 +140,7 @@ My preference, weak: `#developer-as-adaptive-agent` and `#ai-agent-as-adaptive-a
 
 This is a mechanical rename once decided — I can execute it with appropriate dependency-propagation if you bless one of the candidates.
 
-## 9. Memorable-noun opportunities
+## 7. Memorable-noun opportunities
 
 The meta-question: are there currently-unnamed *things* in the project that deserve a name? Joseph's working-notes phrasing: "possible 'Noun' category naming opportunities." My survey:
 
@@ -150,7 +154,7 @@ The meta-question: are there currently-unnamed *things* in the project that dese
 
 - **The cycle-phase sequence as a whole.** The five-phase sequence (prolepsis → aisthesis → aporia → epistrophe → praxis) is named piecewise but the sequence itself — the "full cycle of adaptation" as a Thing — has no collective name. "The adaptive cycle" works as description but is clinical; candidates like **the pentad**, **the five-turn**, or **the five-phase cycle** give the community a handle. Probably not worth a rename effort, but worth surfacing.
 
-## 10. The "Actuation" problem in AAD itself
+## 8. The "Actuation" problem in AAD itself
 
 The framework's own name — *Adaptation and Actuation Dynamics* — has an asymmetry worth acknowledging. "Adaptation" captures Section I beautifully (it's exactly what Section I is). "Actuation" is supposed to capture Section II, which is about *purposeful* agency with explicit objectives and strategy. But "actuation" in engineering vocabulary (and in the reader's ear) means *the mechanical conversion of a control signal into movement*. It is the *output* step of a control loop, not the strategic/purposeful layer. A control theorist hearing "actuation dynamics" will expect servo-motor modeling, not strategy-DAG updating.
 
@@ -163,7 +167,7 @@ Candidate alternatives (all Heuristic, all uncomfortable because framework renam
 
 My read: **do not rename AAD itself.** It's a recent rename (2026-04-16); further thrash dilutes the identity. But the Section II preamble could do more work to establish what "actuation" means in this framework specifically, explicitly contrasting with the engineering actuator sense. A two-sentence addition would suffice.
 
-## 11. The epistemic architecture naming question
+## 9. The epistemic architecture naming question
 
 CLAUDE.md §7 and the OUTLINE.md "Reading AAD" preamble establish that AAD's distinctive contribution — the thing that makes it more than "integration of [four subfields]" — is its **epistemic architecture** (scope-honesty-as-architecture, the three meta-patterns, the seven elements).
 
@@ -173,7 +177,7 @@ CLAUDE.md §7 and the OUTLINE.md "Reading AAD" preamble establish that AAD's dis
 
 *Counter-consideration:* if the meta-segments get renamed (floor / ladder / Cauchy-coordinates per §6), they form a trio whose collective noun might be worth naming. *Epistemic architecture* fits. **Lowest-priority proposal:** if and when the three meta-segments are renamed as a trio, the collective-noun slot is **the epistemic architecture** (not a segment, but an OUTLINE-level section heading in §A).
 
-## 12. Proposals, prioritized
+## 10. Proposals, prioritized
 
 Pulling the above together. All proposals are Heuristic unless marked otherwise; none is load-bearing enough to execute without your read.
 
@@ -205,7 +209,7 @@ Pulling the above together. All proposals are Heuristic unless marked otherwise;
 - Do not rename logogenic / logozoetic — they are deliberate neologisms holding reserved memorable-noun slots
 - Do not rename the cycle-phase Greek vocabulary (prolepsis / aisthesis / aporia / epistrophe / praxis) — the aesthetic commitment is working
 
-## 13. Meta-observations about the naming landscape
+## 11. Meta-observations about the naming landscape
 
 Three patterns worth noting beyond the individual proposals.
 
@@ -215,7 +219,7 @@ Three patterns worth noting beyond the individual proposals.
 
 **Observation 3 — The "communal imagination" test is the right test.** For every name in the project, the test question is: *could a skilled reader, six months after first encounter, refer to this concept in a conversation without looking it up?* Names that pass: satisfaction gap, control regret, chronica, orient cascade, identifiability floor, directed separation. Names that fail: additive-coordinate-forcing, separability-pattern, A2' sub-scope α₁/α₂/β, convention hierarchy. The communal-imagination test correlates with memorable-noun-slot ownership, not with self-descriptiveness — an evocative imprecise name beats a precise forgettable name.
 
-## 14. Questions for Joseph
+## 12. Questions for Joseph
 
 Things I cannot decide alone.
 
@@ -231,7 +235,7 @@ Things I cannot decide alone.
 
 6. **Did I miss anything big?** I deliberately stayed inside the 01-aad-core / 02-tst-core / LEXICON / OUTLINE landscape. If there are naming landmines in 03-logogenic-agents or 04-logozoetic-agents that I didn't surface, those are the areas most likely to need a second pass.
 
-## 15. Epistemic status of this paper
+## 13. Epistemic status of this paper
 
 *Heuristic throughout.* Naming is a judgment call, not a derivation. I have tried to apply the project's scope-honesty posture to the proposals themselves (each with an explicit tradeoff, none with "this is clearly correct"). Where I have a weak preference I have said so; where I am uncertain I have flagged it. None of the proposals should be treated as settled by this paper — the paper is the opening move of a conversation, not its resolution.
 

@@ -503,6 +503,91 @@ Finding A (composition-closure temporal coarse-graining) and Finding B (observat
 - **Prior-art positioning synthesis.** Active inference / FEP / POMDP / BDI relationships now in individual segments (substantially expanded 2026-04-22). A synthesis pass that surfaces the pattern across segments may still be valuable.
 
 
+## Active — Naming Discipline (paused pre-pilot 2026-04-24)
+
+**Status: paused mid-workstream.** Round 1 of a distributed multi-agent naming-sweep is complete but not landed. Before running Round 2 — and before executing any rename decisions from Round 1 — we're piloting a **role-prefix discipline** on a narrow set of specific renames, and after that pilot we'll rewrite the principles file incorporating the converging insights from all 10 Round-1 agents and rerun Round 1 with the refined instructions.
+
+### What exists (artifacts)
+
+- `msc/naming-principles.md` — shared principles + voting format + instructions given to all Round-1 agents.
+- `msc/naming-brainstorm-2026-04-24.md` — the original single-agent brainstorm that seeded the work (one agent's voice; preserved as historical reference).
+- `msc/naming-votes/*.md` — 10 Round-1 vote files: `agent1-original-brainstorm.md`, `opus-1m.md`, `opus-4-7.md`, `opus-4-7-b.md`, `sonnet-4-6.md`, `haiku-4-5.md`, `codex-1.md`, `codex-2.md`, `gemini-1.md`, `gemini-2.md`. ~1,073 total vote rows across 7 model architectures (Claude ×5, Codex ×2, Gemini ×2).
+- `msc/naming-alias-clusters-codex-2.md`, `msc/naming-cleanup-scan-codex-2.md` — supplementary analyses from Codex-2 (not vote files; human-judgment overlays).
+- `bin/naming-aggregate.rb` — Ruby aggregation script. Parses vote tables, sums weights per `(current, candidate)` pair, emits three formats:
+  - `--format=review` (grouped by current-name, tallies + notes);
+  - `--format=round2` (blind input for Round 2, tallies withheld, notes retained);
+  - `--format=json` (machine-readable).
+  Handles multi-table files with repeated headers (for resumed-append incremental files), deduplicates exact-match rows silently, flags near-duplicate current-names, warns on weight-conflicts.
+- `msc/naming-aggregate-{review,round2,votes.json}` — aggregated outputs from Round 1.
+
+### Why paused
+
+The Round-1 outputs surface a set of converging insights that suggest the principles file is significantly under-specified relative to what agents actually needed. Rather than run Round 2 on the current principles and compound the mismatch, we're pausing to refine. Key converging insights across agents, worth folding in before Round 2:
+
+1. **Weight scale too coarse.** The +1 / +3 / −1 granularity collapses "acceptable keep" and "load-bearing keep" into the same bucket. Multiple agents (haiku, opus-4-7-b) explicitly flagged this; others drifted to `+2` informally. Round 2 should include `+2`.
+2. **Greek-vocabulary commitment is implicit but undocumented.** Chronica, prolepsis, aisthesis, aporia, epistrophe, praxis, logogenic, logozoetic form a coherent aesthetic-epistemic commitment that no one stated as principle. Four agents (agent1, opus-1m, opus-4-7-b, gemini-2) flagged this independently. Making it explicit would help future agents extend consistently.
+3. **Scope-honesty should dominate memorability for meta-segment names specifically.** The `#additive-coordinate-forcing → #cauchy-coordinates` vs `#forced-coordinates` decision — memorability loses to scope-honesty because the Čencov 4th instance isn't Cauchy-FE. Principle worth calling out by case.
+4. **Canonicalize vs. keep vs. rename are three distinct moves.** The principles conflate "keep status quo" with "keep, and now canonicalize — stop paraphrasing, reference by this name." Deserves its own weight category or flag.
+5. **Name-unnamed-thing ≠ rename.** Proposing a name for a currently-paraphrased recurring pattern is architecturally different from renaming an established segment. Both currently share the vote format.
+6. **Symbol-to-English parity is a third category.** Adding an English alias alongside a symbol (α₁ → derived-gain regime) is neither rename nor keep — it's "add alias." May deserve its own notation.
+7. **Cold-start instruction must be the first paragraph of the principles file.** Opus-4-7-b openly disclosed accidental contamination from `git status` showing a modified brainstorm file. The instruction needs to fire before agents start any orientation reading.
+8. **Subject-noun preference for slug naming.** Name segments by the *thing* they define, not by the *role* the segment plays. `#scope-condition` → `#adaptive-system` is the canonical case. Round 1 surfaced this via Sonnet-4-6's "objects over proof-devices" observation; Joseph confirmed as general principle.
+9. **Acronym discipline underspecified.** Multiple agents flagged that every new acronym carries cost; no principle governs when adding one is worth it.
+10. **Three / four naming layers need explicit governance.** Formal slugs / prose defaults for symbols / framing-posture vocabulary / public-API headers. Friction comes from mixing these.
+11. **"Renamed-from-now-sounds-weird" test.** Opus-4-7-b's implicit criterion: imagine the project six months from now; does the old name sound quaint or does the new name sound forced? Worth making explicit.
+
+### The role-prefix discipline (proposed, not yet ratified)
+
+Emerging from Joseph's own read of Round 1 + opus-1m's subject-noun conversation: rename segments to use `{role-type}-{subject-noun}` pattern, using FORMAT.md's existing type vocabulary. This front-loads the segment's epistemic character in the slug itself, which is read repeatedly in cross-references across the repo. Examples:
+
+- `#scope-condition` → `#scope-adaptive-system`
+- `#composition-scope-condition` → `#scope-composite-agent`
+- `#agent-identity` → `#scope-agent-identity`
+- `#composition-consistency` → `#postulate-composition-consistency`
+- `#sector-condition-stability` → `#result-sector-condition-stability`
+- `#mismatch-dynamics` → `#hypothesis-mismatch-dynamics`
+- `#mismatch-decomposition` → `#result-mismatch-decomposition`
+- `#graph-structure-uniqueness` → `#derivation-strategy-dag-sufficiency`
+- `#recursive-update` → `#derivation-recursive-update` (or `#result-recursive-update` depending on claim-type)
+
+Type prefix vocabulary (from FORMAT.md): `#scope-`, `#definition-`, `#postulate-`, `#derivation-`, `#derived-`, `#result-`, `#formulation-`, `#hypothesis-`, `#discussion-`, `#sketch-`, `#empirical-`, `#observation-`.
+
+### Pilot plan
+
+Before cascading to all ~130 slugs, pilot the prefix discipline on a narrow set of specific renames that were already surfacing from Round 1 as consensus moves. Specifically:
+
+- `#scope-condition` → `#scope-adaptive-system`
+- `#composition-scope-condition` → `#scope-composite-agent`
+- `#developer-as-act-agent` → `#scope-human-developer-agent` (also resolves the `-act-agent` relic)
+- `#ai-agent-as-act-agent` → `#scope-logogenic-agent` (also resolves the `-act-agent` relic; also resolves the "ai-agent is not a taxonomy rung" issue)
+- Possibly `#separability-pattern` → `#discussion-separability-ladder` (compound move: prefix + Round-1 consensus rename)
+- Possibly `#additive-coordinate-forcing` → `#discussion-forced-coordinates` (same)
+- Possibly `#identifiability-floor` → `#discussion-identifiability-floor` (pure prefix; name already strong)
+
+Pilot goal: see how role-prefix reads in context across the repo (dependency declarations, OUTLINE tables, segment cross-references, prose citations). If it reads well, cascade to the remaining ~120 slugs as a coordinated pass. If it reads awkwardly, retreat to unprefixed slugs and absorb the lessons.
+
+### Post-pilot plan
+
+Assuming the pilot validates the approach:
+
+1. **Refine `msc/naming-principles.md`** based on (a) all 11 insights above, (b) the role-prefix discipline as an invariant (not a vote target — the prefix is architectural), (c) clarify "canonicalize" as a distinct move from "keep", (d) make the Greek-vocabulary commitment explicit as a preference principle, (e) move cold-start instruction to the first paragraph, (f) name `+2` explicitly and spell out weight bands, (g) separate name-unnamed-thing from rename categories in the format, (h) add subject-noun preference as principle, (i) flag the "renamed-from-now-sounds-weird" test.
+2. **Rerun Round 1 cold-start with the refined principles.** 5–8 fresh agents across architectures; same cold-start discipline; instructions note that prefix is invariant and only the subject-noun is vote-target-able.
+3. **Quick "import anything of unique value from the original Round 1"** — before aggregating the new Round 1, scan the existing 10 vote files for proposals that the new batch might not have surfaced (deeper unnamed-pattern discoveries, edge-case rejections, etc.) and add them to the new aggregation as supplementary items.
+4. **Aggregate, then run Round 2** (blind, using the existing `bin/naming-aggregate.rb --format=round2`).
+5. **Collision audit** on the top finalists after Round 2 (per earlier discussion — web search for external conflicts à la the ACT → AI Consciousness Test precedent that forced the 2026-04-16 rename).
+6. **Final judgment pass and landing.**
+
+### Known deferred items that will resume after the pilot
+
+- **The `aad-agent` vs `adaptive-agent` split for `-act-agent` destination slugs** — resolved by the taxonomy-conformant rename to `#scope-human-developer-agent` and `#scope-logogenic-agent` (neither of the original options). Pilot will validate; no longer an open vote.
+- **The `ASF` vs `Agentic Systems Framework` umbrella naming** — surfaced in Round 1 but voted under incomplete framing (agents thought "Agentic Systems Framework" was debt rather than the intentional parent-level name). Defer to post-pilot Round 1 with correct framing: "ASF is the umbrella; AAD is Part I; TST is Part II; etc. Do you want to rename the umbrella, change the acronym, or keep?"
+- **The converging Round-1 consensus renames** (`#equilibrium-composition`, `#separability-ladder`, `#forced-coordinates`, symbol-to-English α-regime names, `persistence envelope` and other unnamed-thing proposals) will re-surface in the refined Round 1 under the subject-noun + role-prefix discipline. Not pre-deciding; let the refined vote reconfirm.
+
+### Resume trigger
+
+This workstream resumes when the pilot rename pass lands cleanly and we have confidence in the role-prefix discipline reading well in the repo. Post-pilot, the principles rewrite is the next piece of work; then refined Round 1; then aggregation + Round 2 + collision audit + landing.
+
+
 ## Active — Editorial Hygiene
 
 - **Spike-to-segment reverse-check.** Standing Gate 2 check per `FORMAT.md`: "What did the spike establish that the segment does not say?" — added in Session C.5 of 2026-04-21 cycle; verify it's still present and visible.
