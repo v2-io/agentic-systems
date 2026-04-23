@@ -3,7 +3,7 @@ slug: software-scope
 type: scope
 status: axiomatic
 depends:
-  - scope-condition
+  - scope-agency
   - temporal-optimality
 ---
 
@@ -51,7 +51,7 @@ The scope restriction is definitional — we choose to analyze evolving systems.
 
 - The $\varepsilon$ threshold is a parameter choice, not derived. What determines a sensible $\varepsilon$? Is it related to the team's ability to detect change (an observation threshold)?
 - TST's original "infinite velocity" language is vivid but potentially misleading — velocity is undefined when there are zero changes. The AAD framing ($\rho \to 0$, persistence trivially satisfied) is more precise.
-- The via-tft-mapping material has a much richer decomposition of the software "environment" (codebase, runtime behavior, user requirements, team knowledge, dependency ecosystem, infrastructure state). This scope segment doesn't need that detail, but #developer-as-act-agent or #software-epistemic-properties should incorporate it.
+- The via-tft-mapping material has a much richer decomposition of the software "environment" (codebase, runtime behavior, user requirements, team knowledge, dependency ecosystem, infrastructure state). This scope segment doesn't need that detail, but #scope-developer-agent or #software-epistemic-properties should incorporate it.
 - The observation that software development = building systems that evolve efficiently is essentially the claim that software development is an adaptive process subject to AAD. This is what motivates the entire section, not just this scope narrowing.
 
 *(Descended from TST T-03.)*

@@ -266,7 +266,7 @@ This is the key question for the spike's honest assessment. AAD adds:
 
 **(iii) The identifiability-floor connection.** Operator-sector gives you a contraction rate $\kappa$ assuming the operator is well-defined. But whether $\iota_k \gt 0$ (Regime A), $\iota_k \in (0,1)$ (Regime B), or $\iota_k = 0$ (Regime C) is an *identifiability* question, not an operator-sector question. AAD's combination of operator-sector (dynamics) + identifiability-floor (information-theoretic no-go) is the substantive move; monotone-operator theory alone does not supply this second axis.
 
-**(iv) Composition consistency and scope condition.** The requirement that the operator-sector structure applies at every level of description that satisfies the scope condition ( #scope-condition, #composition-consistency) is not part of the monotone-operator literature — it is AAD's postulate. The operator-family classification enables the consistency argument; monotone-operator theory by itself is indifferent to whether the operator lives at the agent level or the composite level.
+**(iv) Composition consistency and scope condition.** The requirement that the operator-sector structure applies at every level of description that satisfies the scope condition ( #scope-agency, #composition-consistency) is not part of the monotone-operator literature — it is AAD's postulate. The operator-family classification enables the consistency argument; monotone-operator theory by itself is indifferent to whether the operator lives at the agent level or the composite level.
 
 **(v) The sub-scope α/β partition.** Monotone-operator theory classifies operators by structural properties (proximal, gradient, cocoercive, firmly nonexpansive), but does not distinguish "operator-sector by construction" from "operator-sector by empirical verification." The α/β labeling is *epistemic*, not mathematical — it tracks which classes of real-world systems give operator-sector structurally vs. as a modeling assumption. This is a scope-honesty move (per CLAUDE.md §7(a)), not a mathematical one.
 
@@ -335,13 +335,13 @@ Elevate the operator-sector primitive to a new appendix meta-segment that:
 - Recasts the A2'/DA2' α/β partition as operator-family classification (§4).
 - Documents what is NOT unified (projection $\Lambda$, identifiability-floor, regime-indexing) and cross-references the relevant other meta-segments.
 
-This meta-segment sits alongside `#separability-pattern`, `#identifiability-floor`, `#additive-coordinate-forcing` as a fourth AAD meta-pattern — it is AAD's *geometric* meta-pattern, complementary to the separability (positive-half scope), identifiability (negative half), and additive-coordinate (constructive half) meta-patterns.
+This meta-segment sits alongside `#discussion-separability-pattern`, `#discussion-identifiability-floor`, `#additive-coordinate-forcing` as a fourth AAD meta-pattern — it is AAD's *geometric* meta-pattern, complementary to the separability (positive-half scope), identifiability (negative half), and additive-coordinate (constructive half) meta-patterns.
 
 **Proposed slug:** `#operator-sector-template` or `#operator-sector-geometry`.
 
 **Proposed composition with existing meta-segments:**
-- `#separability-pattern` — scope (what's in-scope).
-- `#identifiability-floor` — information-theoretic obstructions (the negative half).
+- `#discussion-separability-pattern` — scope (what's in-scope).
+- `#discussion-identifiability-floor` — information-theoretic obstructions (the negative half).
 - `#additive-coordinate-forcing` — coordinate choice (the constructive half).
 - `#operator-sector-template` — geometric unification of the dynamics (the *mechanism* half).
 
@@ -442,4 +442,4 @@ Max attainable for this spike's content: **exact for §1–§5 (operator-sector 
 - Parikh, N., & Boyd, S. (2014). "Proximal algorithms." *Foundations and Trends in Optimization* 1(3), 127–239. Practical monotone-operator pipeline.
 - Elaydi, S. (2005). *An Introduction to Difference Equations* (3rd ed.). Springer. Thm 4.14 (Banach-fixed-point for affine contractions).
 
-AAD cross-references used throughout: #sector-persistence-template, #sector-condition-derivation, #gain-sector-bridge, #discrete-sector-condition, #credit-assignment-boundary, #edge-update-natural-parameter, #composition-closure, #strategic-dynamics-derivation, #identifiability-floor, #separability-pattern, #additive-coordinate-forcing, #team-persistence, #adversarial-destabilization, #critical-mass-composition, #unity-closure-mapping, #compression-operations.
+AAD cross-references used throughout: #sector-persistence-template, #sector-condition-derivation, #gain-sector-bridge, #discrete-sector-condition, #credit-assignment-boundary, #edge-update-natural-parameter, #composition-closure, #strategic-dynamics-derivation, #discussion-identifiability-floor, #discussion-separability-pattern, #additive-coordinate-forcing, #team-persistence, #adversarial-destabilization, #critical-mass-composition, #unity-closure-mapping, #compression-operations.

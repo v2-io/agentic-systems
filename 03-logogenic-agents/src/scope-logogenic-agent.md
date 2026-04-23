@@ -1,23 +1,23 @@
 ---
-slug: ai-agent-as-act-agent
-type: definition
+slug: scope-logogenic-agent
+type: scope
 status: robust-qualitative
 depends:
   - agent-spectrum
   - complete-agent-state
   - directed-separation
-  - scope-condition
+  - scope-agency
   - recursive-update
 stage: draft
 ---
 
-# Definition: AI Agent as AAD Agent
+# Scope: Logogenic Agent
 
-An LLM-based agent operating through a tool-use loop is an actuated agent in AAD's sense: it maintains structured $M_t$ and $G_t$, acts causally on its environment, and observes consequences under uncertainty. It is a Class 2 (fully merged) agent — directed separation fails because the transformer's forward pass processes goals and observations jointly.
+An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language. It maintains structured $M_t$ and $G_t$, acts causally on its environment, and observes consequences under uncertainty. It is a Class 2 (fully merged) agent — directed separation fails because the transformer's forward pass processes goals and observations jointly.
 
 ## Formal Expression
 
-*[Definition (ai-agent-as-act-agent)]*
+*[Scope (scope-logogenic-agent)]*
 
 An **LLM-based agent** is an actuated agent ( #agent-spectrum) with the following mapping to AAD primitives:
 
@@ -32,7 +32,7 @@ An **LLM-based agent** is an actuated agent ( #agent-spectrum) with the followin
 | $\mathcal C_t$ | The conversation history (chronica), subject to context-window truncation |
 | $\pi$ | The policy implemented by the forward pass conditioned on the full context |
 
-*[Scope Condition (ai-agent-class)]*
+*[Scope (logogenic-agent-class)]*
 
 The LLM-based agent is **Class 2** (fully merged) in the architectural classification of #directed-separation:
 
@@ -40,7 +40,7 @@ $$\kappa_{\text{processing}} \approx 1$$
 
 The transformer attention mechanism processes all tokens in the context window jointly. The goal tokens (system prompt, task description) are causally upstream of every computation in the forward pass via the attention pattern. There is no architectural separation between epistemic processing and purposeful processing — the same mechanism that updates the agent's beliefs about code also evaluates whether those beliefs support the current strategy.
 
-**Scope verification.** The agent satisfies the agency scope ( #scope-condition):
+**Scope verification.** The agent satisfies the agency scope ( #scope-agency):
 
 1. **Observations exist**: $\mathcal{O} \neq \emptyset$ — the agent receives tool outputs, user messages, and file contents
 2. **Residual uncertainty persists**: $H(\Omega_t \mid \mathcal C_t) \gt 0$ — the agent cannot fully determine the environment from its context (code has unseen dependencies, tests have unobserved failure modes, user intent is partially ambiguous)

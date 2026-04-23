@@ -22,7 +22,7 @@ For mathematical symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Class | Definition | AAD boundary |
 |-------|-----------|--------------|
-| **Adaptive system** | Feedback loop + mismatch correction under uncertainty | #scope-condition (Section I) |
+| **Adaptive system** | Feedback loop + mismatch correction under uncertainty | #scope-adaptive-system (Section I) |
 | **Agentic system** | + outcome model + goal-directed action + model adaptation | #causal-structure (within Section I) |
 | **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$ | #complete-agent-state (Section II) |
 | **Self-actuated agent** | + sets own $O_t$ (goal autonomy, not just solution autonomy) | *(reserved)* |

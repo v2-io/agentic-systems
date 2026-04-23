@@ -4,7 +4,7 @@ type: derivation
 status: conditional
 depends:
   - composition-consistency
-  - composition-scope-condition
+  - scope-composite-agent
   - sector-persistence-template
   - objective-functional
   - adversarial-destabilization
@@ -75,7 +75,7 @@ Two agents $A, B$ with scalar actions $a_i \in [-1, 1]$ and state $s_{t+1} = s_t
 
 The potential $\Phi(a_A, a_B) = a_A - a_B$ satisfies both agents' unilateral deviation conditions; this is a potential game. Nash equilibrium at $(a_A^\ast, a_B^\ast) = (1, -1)$ — $A$ pushes up maximally, $B$ pushes down maximally, the boundary of the feasible region. The sector-persistence template instantiates with $\xi = (a_A - 1, a_B + 1)$, $F(\xi) = -\xi$, $\alpha = 1$, $R = 2\sqrt 2$ (box diameter), $\rho_\xi$ from environmental $w_t$. Under Model S, $R^\ast_S = \sigma$; persistence requires $\sigma < 2\sqrt 2$.
 
-### New scope route (C-iv) in `#composition-scope-condition`
+### New scope route (C-iv) in `#scope-composite-agent`
 
 *[Proposed Scope (composition-scope-condition, route C-iv)]*
 
@@ -95,10 +95,10 @@ Strategic composition with partially-opposing $\{O_t^{(i)}\}$ admits a joint equ
 | Regret-minimization CCE convergence | Hart-Mas-Colell 2000 | Derived (external theorem applied) |
 | Sub-scope $\alpha'$ / $\beta'$ partition | Parallel to `#sector-condition-derivation` α/β | Formulation choice |
 | Zero-sum scalar instantiation | Direct substitution into potential-game + sector-persistence-template | Exact (within stated setup) |
-| (C-iv) scope route | Extension to `#composition-scope-condition` disjunction | Formulation choice (scope extension) |
+| (C-iv) scope route | Extension to `#scope-composite-agent` disjunction | Formulation choice (scope extension) |
 | Effects-spiral eigenvalue condition | Joint-Jacobian Re($\lambda_{\max}$) > 0 at candidate equilibria — formalizes `#adversarial-destabilization`'s discussion-grade effects spiral | Sketch (specific AAD instantiations open) |
 | Strategic composition produces Class 3 composites from Class 1 sub-agents | Across-agent coupling through environment + cross-agent observation; preserves within-agent modularity | Derived (scope-structural) |
-| Mechanism-design impossibility as candidate 4th `#identifiability-floor` instance | Gibbard-Satterthwaite 1973-75, Arrow 1951, Myerson-Satterthwaite 1983 | Flagged; not derived in this segment |
+| Mechanism-design impossibility as candidate 4th `#discussion-identifiability-floor` instance | Gibbard-Satterthwaite 1973-75, Arrow 1951, Myerson-Satterthwaite 1983 | Flagged; not derived in this segment |
 | Potential function $\Phi$ as additive-coordinate-forcing instance | $\Phi$'s additivity is definitional consequence of being a potential game, not forced by AAD-internal axiom; adjacent family member | Discussion-grade |
 | Bridge from strategic composition to `#composition-closure` $\varepsilon^\ast$ | Macro-description is an equilibrium statistic, not an equilibrium state | Open |
 | General equilibrium-selection under multiple Nash | Existence theorems do not pin down which equilibrium; selection (risk-dominance, payoff-dominance, Pareto) is partial | Open |
@@ -138,13 +138,13 @@ Sub-scope $\beta'$ gives AAD substantially weaker predictive power than sub-scop
 
 **Class-3-composite-from-Class-1-sub-agents.** `#directed-separation` classifies agents (Class 1 modular, Class 2 fully merged, Class 3 partially modular) based on within-agent coupling. Strategic composition introduces a distinct form of coupling: *across-agent* coupling through the shared environment and cross-agent observation — each sub-agent's $M_t^{(i)}$ contains a model of other sub-agents' policies, but its own $f_M^{(i)}$ remains goal-blind. Strategic composites of Class 1 sub-agents are therefore **Class 3 composites**: within-agent processing is modular, but composite-level directed separation fails because composite $(M_c, G_c)$ acquires intrinsic coupling through the sub-agents' observations of each other. This refines `#directed-separation`'s classification: class-type is a property of composites, not just of individual agents; strategic composition is the canonical Class-1-sub-agents → Class-3-composite case.
 
-**Mechanism-design impossibility.** If an outside designer can shape $\{O_t^{(i)}\}$, strategic composition becomes a **mechanism-design problem**: choose objectives so that the induced equilibrium *is* contraction to a designed state. Impossibility results — Gibbard-Satterthwaite 1973–75 (no dominant-strategy non-dictatorial Pareto-efficient voting mechanism for ≥3 alternatives); Myerson-Satterthwaite 1983 (no efficient, individually-rational, incentive-compatible bilateral-trade mechanism without subsidies); Arrow 1951 (no social welfare function satisfying unrestricted-domain, Pareto-efficient, IIA, non-dictatorial) — are **candidate fourth instances of `#identifiability-floor`**: external theorems forbidding design-of-alignment under stated constraints, with AAD machinery (Bayes-Nash relaxation, randomized allocations, subsidy injection) as structural escapes. Flagged for future follow-up spike; not derived in this segment.
+**Mechanism-design impossibility.** If an outside designer can shape $\{O_t^{(i)}\}$, strategic composition becomes a **mechanism-design problem**: choose objectives so that the induced equilibrium *is* contraction to a designed state. Impossibility results — Gibbard-Satterthwaite 1973–75 (no dominant-strategy non-dictatorial Pareto-efficient voting mechanism for ≥3 alternatives); Myerson-Satterthwaite 1983 (no efficient, individually-rational, incentive-compatible bilateral-trade mechanism without subsidies); Arrow 1951 (no social welfare function satisfying unrestricted-domain, Pareto-efficient, IIA, non-dictatorial) — are **candidate fourth instances of `#discussion-identifiability-floor`**: external theorems forbidding design-of-alignment under stated constraints, with AAD machinery (Bayes-Nash relaxation, randomized allocations, subsidy injection) as structural escapes. Flagged for future follow-up spike; not derived in this segment.
 
 **Meta-pattern positioning.**
 
-- *`#separability-pattern`:* sub-scope $\alpha'$ (potential / monotone — template transfers) is separable-core; sub-scope $\beta'$ (VI / regret-minimization — set-convergence only) is structured-repair; cyclic / non-convergent / multi-equilibrium-selection-ambiguous is general-open. Candidate additional ladder (strategic-interaction regime); decide whether to surface as 8th ladder or merge into an existing ladder.
-- *`#identifiability-floor`:* mechanism-design impossibility is a candidate fourth instance (flagged above).
-- *`#additive-coordinate-forcing`:* the potential function $\Phi$ plays an additive-coordinate role at the strategic layer, but its additivity is a *definitional consequence* of being a potential game (Monderer-Shapley require the additivity property by definition) rather than forced by a uniqueness theorem on an AAD-internal axiom. This positions $\Phi$ as an adjacent family member, parallel to Lyapunov quadratic and IB Lagrangian, not a primary instance.
+- *`#discussion-separability-pattern`:* sub-scope $\alpha'$ (potential / monotone — template transfers) is separable-core; sub-scope $\beta'$ (VI / regret-minimization — set-convergence only) is structured-repair; cyclic / non-convergent / multi-equilibrium-selection-ambiguous is general-open. Candidate additional ladder (strategic-interaction regime); decide whether to surface as 8th ladder or merge into an existing ladder.
+- *`#discussion-identifiability-floor`:* mechanism-design impossibility is a candidate fourth instance (flagged above).
+- *`#discussion-additive-coordinate-forcing`:* the potential function $\Phi$ plays an additive-coordinate role at the strategic layer, but its additivity is a *definitional consequence* of being a potential game (Monderer-Shapley require the additivity property by definition) rather than forced by a uniqueness theorem on an AAD-internal axiom. This positions $\Phi$ as an adjacent family member, parallel to Lyapunov quadratic and IB Lagrangian, not a primary instance.
 
 **Active-inference sharpening.** Sun-Firestone 2020's dark-room argument observes that preferences-as-priors collapse under mutual prediction. Strategic composition gives this argument a formal substrate: two agents mutually predicting each other become a **fixed-point problem**, not a Lyapunov descent. The active-inference attempt to unify goal-seeking and prediction fails here in a derivable way — the fixed point is not at the prediction-optimum; it is at the strategic-equilibrium, which is structurally different. This strengthens `#satisfaction-gap`'s positioning against preferences-as-priors without requiring additional refutation machinery.
 
@@ -152,7 +152,7 @@ Sub-scope $\beta'$ gives AAD substantially weaker predictive power than sub-scop
 
 - **Effects-spiral eigenvalue condition formalization.** The condition $\max_{\pi^\ast} \text{Re}(\lambda_{\max}(\nabla F(\pi^\ast))) > 0$ is sketched in §Discussion. Deriving it for specific AAD agent classes (two Beta-Bernoulli agents on a shared DAG; two Kalman agents with coupled observations) would upgrade the spiral from discussion-grade in `#adversarial-destabilization` to derived here. Follow-on spike candidate.
 
-- **Mechanism-design impossibility as `#identifiability-floor` Instance 4.** Would require working out the external-theorem anchoring, the boundary characterization (Bayes-Nash / randomization / subsidies as structural escapes), and the strengthened consequence (which AAD machinery the escapes operationalize). Follow-on spike.
+- **Mechanism-design impossibility as `#discussion-identifiability-floor` Instance 4.** Would require working out the external-theorem anchoring, the boundary characterization (Bayes-Nash / randomization / subsidies as structural escapes), and the strengthened consequence (which AAD machinery the escapes operationalize). Follow-on spike.
 
 - **Composite-class-inheritance refinement.** The Class-1-sub-agents → Class-3-composite argument needs cross-checking against `#directed-separation-under-composition` for consistency. The refinement is structurally sound but deserves dedicated cross-reference work.
 

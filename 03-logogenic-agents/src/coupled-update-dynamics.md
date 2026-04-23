@@ -3,7 +3,7 @@ slug: coupled-update-dynamics
 type: definition
 status: robust-qualitative
 depends:
-  - ai-agent-as-act-agent
+  - scope-logogenic-agent
   - complete-agent-state
   - recursive-update
   - directed-separation

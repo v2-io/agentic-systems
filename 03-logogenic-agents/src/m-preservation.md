@@ -4,7 +4,7 @@ type: discussion
 status: discussion-grade
 depends:
   - context-turnover
-  - ai-agent-as-act-agent
+  - scope-logogenic-agent
   - persistence-condition
   - model-sufficiency
   - adaptive-tempo

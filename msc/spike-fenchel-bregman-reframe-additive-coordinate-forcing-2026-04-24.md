@@ -378,7 +378,7 @@ If this reframe is adopted, the concrete changes to `#additive-coordinate-forcin
 
 5. **Update the Čencov-Fenchel relationship.** Explicitly state that on AAD's current Fisher-metric scope (exponential-family-in-natural-parameters and matrix-Kalman cases), the Čencov-derived Fisher metric coincides with the Hessian of the dual potential. Note the scope dependency: outside exponential families, Čencov applies but Fenchel-Bregman does not straightforwardly.
 
-6. **Update the complementarity-with-#identifiability-floor-and-#separability-pattern section.** The three meta-segments retain their cross-sectional roles. The exponential-family reframe sharpens #additive-coordinate-forcing's "constructive" role: when AAD forces a coordinate, it forces a surface of the exponential-family geometry — not a generic logarithmic coordinate, but the specific log-coordinate-of-exponential-family.
+6. **Update the complementarity-with-#identifiability-floor-and-#discussion-separability-pattern section.** The three meta-segments retain their cross-sectional roles. The exponential-family reframe sharpens #additive-coordinate-forcing's "constructive" role: when AAD forces a coordinate, it forces a surface of the exponential-family geometry — not a generic logarithmic coordinate, but the specific log-coordinate-of-exponential-family.
 
 7. **Preserve the motivational anchor.** Keep the paragraphs where the theorem-level axioms are stated as analogs of the chain-layer identity — these are still correct and still load-bearing. Add: "The reason the three analog axioms all succeed is that they all probe one geometric object; the chain-layer identity is the motivational anchor *and* the geometric object is the structural target." Both observations are true.
 
@@ -446,7 +446,7 @@ Under reframe (A), the meta-pattern's primary-instance count is stable at **four
 ### §9.3 What I did not attempt
 
 - **Deriving the three axioms from a single deeper commitment.** If such a derivation existed, the reframe would move from "axioms converge on one object" to "one axiom forces one object with multiple surface expressions." This would be a strictly stronger claim and I did not pursue it. The candidate deeper commitment would be something like "AAD's probabilistic architecture commits to exponential-family representability"; whether this is derivable from existing AAD commitments or would need to be added as a new axiom is a separate spike. The conservative reading — axioms are independent and happen to converge — is the one defended here.
-- **Connecting to the monotone-operator-theory lineage** (Rockafellar / Bauschke-Combettes) invoked in `#sector-persistence-template`. Bregman divergences sit inside monotone-operator theory (convex-analytic duality is a special case of monotone-operator duality); the three meta-segments (`#additive-coordinate-forcing`, `#identifiability-floor`, `#separability-pattern`) plus `#sector-persistence-template` might all share a deeper convex-analytic common substrate. This is speculative and not pursued in this spike.
+- **Connecting to the monotone-operator-theory lineage** (Rockafellar / Bauschke-Combettes) invoked in `#sector-persistence-template`. Bregman divergences sit inside monotone-operator theory (convex-analytic duality is a special case of monotone-operator duality); the three meta-segments (`#additive-coordinate-forcing`, `#discussion-identifiability-floor`, `#discussion-separability-pattern`) plus `#sector-persistence-template` might all share a deeper convex-analytic common substrate. This is speculative and not pursued in this spike.
 
 ---
 
@@ -481,7 +481,7 @@ Under reframe (A), the meta-pattern's primary-instance count is stable at **four
 - `#edge-update-natural-parameter` (update-layer instance)
 - `#agent-identity` (where (PI) is anchored)
 - `#gain-sector-bridge` (Fisher-metric cases)
-- `#identifiability-floor`, `#separability-pattern` (the sister meta-segments)
+- `#discussion-identifiability-floor`, `#discussion-separability-pattern` (the sister meta-segments)
 - `msc/spike-ib-purity-strategy-cost-strengthening-2026-04-24.md` (Path 7 source)
 - `msc/spike-reverse-kl-uniqueness.md` (prior divergence-layer uniqueness spike)
 - `msc/spike-jacobian-b1-strengthening.md` (prior metric-layer spike)

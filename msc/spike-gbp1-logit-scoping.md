@@ -243,7 +243,7 @@ The default signal function is restated in log-odds. The probability-space surfa
 - **A2' $\alpha$/$\beta$ partition unchanged** (§2 interactions). Log-odds does not shift any agent between sub-scopes.
 - **Prop B.7 five-way gating unaffected** (§2 interactions). The conditional-branch componentwise structure and Cramér-Rao refutation are parameterization-agnostic.
 - **Prop B.5d gradient attribution** — the probability-space image of the log-odds gradient update, already correctly derived. No change.
-- **`#identifiability-floor`** is unaffected. The no-go results are information-theoretic, not parameterization-dependent.
+- **`#discussion-identifiability-floor`** is unaffected. The no-go results are information-theoretic, not parameterization-dependent.
 
 ---
 

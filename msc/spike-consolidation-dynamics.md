@@ -183,11 +183,11 @@ Both are AAD-expressible but neither is AAD-named. The consolidation-augmented f
 
 ## 5. The Identifiability Floor Lens
 
-`#identifiability-floor` (the meta-segment naming AAD's negative half) prompts: is there a structural no-go result that consolidation is the unique escape from?
+`#discussion-identifiability-floor` (the meta-segment naming AAD's negative half) prompts: is there a structural no-go result that consolidation is the unique escape from?
 
 **Candidate no-go.** Under a finite per-event processing budget $B_{\text{online}} \lt B_{\text{consol-needed}}$ and non-trivial model-class structure (hierarchical representation with distinct fast/slow sub-states), no online-only update policy can reach the IB-optimal compression $\phi^\ast$ in steady state. The argument reduces to a rate-distortion inequality: the online update's effective rate is $B_{\text{online}} \cdot \nu$ bits/time; the rate required to drive $M_t$ toward $\phi^\ast$ while also integrating new events is strictly larger whenever the environment has cross-episode structural regularities.
 
-If this can be made rigorous (it is close to known results in rate-distortion with side information and continual-learning theory; see Parisi et al. 2019), it would be a third derived instance of `#identifiability-floor`'s pattern — an external information-theoretic obstruction (online-only cannot reach the IB optimum under a compute budget) with AAD machinery as the unique escape (a consolidation regime in $g_M$ with $B_{\text{offline}} \gg B_{\text{online}}$).
+If this can be made rigorous (it is close to known results in rate-distortion with side information and continual-learning theory; see Parisi et al. 2019), it would be a third derived instance of `#discussion-identifiability-floor`'s pattern — an external information-theoretic obstruction (online-only cannot reach the IB optimum under a compute budget) with AAD machinery as the unique escape (a consolidation regime in $g_M$ with $B_{\text{offline}} \gg B_{\text{online}}$).
 
 **Status.** Worth a follow-up spike. Not part of the disposition of this spike — consolidation's load-bearing role is clear even without the no-go; the no-go would sharpen the case further.
 
@@ -290,11 +290,11 @@ An AAD segment on consolidation dynamics would predict: *the depth of consolidat
 
 **Working Notes.**
 
-- *Identifiability-floor candidate.* Under bounded online budget, online-only cannot reach $\phi^\ast$. Candidate for the third `#identifiability-floor` instance; needs the rate-distortion inequality made rigorous.
+- *Identifiability-floor candidate.* Under bounded online budget, online-only cannot reach $\phi^\ast$. Candidate for the third `#discussion-identifiability-floor` instance; needs the rate-distortion inequality made rigorous.
 - *EWC formulation.* Stability-weighted update gain (per-parameter Fisher weighting) is an alternative to consolidation for escaping catastrophic forgetting. Not the recommended AAD frame (consolidation reuses existing machinery; EWC would require tensor-valued $\eta$), but worth naming.
 - *Logogenic specialization.* Required for `03-logogenic-agents/` as an architectural primitive; context-turnover + linguistic medium + pre-consolidated embedding space make consolidation first-class in that setting. This is a dependency for `#context-turnover` to resolve cleanly.
 
-**Epistemic Status language (draft).** *Robust qualitative. The regime characterization is a formulation choice — consolidation can always be re-described as a regime of `#recursive-update`'s $g_M$ with appropriate pseudo-events. The distinguishing objective (IB gap reduction via replayed pseudo-events) is well-defined and distinct from online update's one-step mismatch minimization. The necessity condition (fast/slow factorization + bounded budget) is a conjunction of conditions that together are sufficient; whether they are individually necessary is an open scope question. The stability-plasticity window statement follows from the forgetting prerequisite (`#strategy-persistence-schema`) combined with a consolidation-cadence condition that this segment introduces but does not derive. Mathematical status of the window-empty no-go theorem is open; it is candidate for `#identifiability-floor` promotion.*
+**Epistemic Status language (draft).** *Robust qualitative. The regime characterization is a formulation choice — consolidation can always be re-described as a regime of `#recursive-update`'s $g_M$ with appropriate pseudo-events. The distinguishing objective (IB gap reduction via replayed pseudo-events) is well-defined and distinct from online update's one-step mismatch minimization. The necessity condition (fast/slow factorization + bounded budget) is a conjunction of conditions that together are sufficient; whether they are individually necessary is an open scope question. The stability-plasticity window statement follows from the forgetting prerequisite (`#strategy-persistence-schema`) combined with a consolidation-cadence condition that this segment introduces but does not derive. Mathematical status of the window-empty no-go theorem is open; it is candidate for `#discussion-identifiability-floor` promotion.*
 
 ### 9.3 What this does not claim
 
@@ -323,7 +323,7 @@ An AAD segment on consolidation dynamics would predict: *the depth of consolidat
 
 **Logogenic-specific requirement?** Yes. Three-way necessity: context turnover structure forces session-boundary consolidation; the linguistic medium of reflection makes consolidation the operative unit of cross-session cognition; pre-consolidated embedding space provides an asymmetric advantage over sub-linguistic agents that is itself a consolidation-related fact.
 
-**Recommendation:** new AAD segment `#consolidation-dynamics` in Section I, formulation-type, robust-qualitative status at candidacy, promoting what is currently a parenthetical in `#recursive-update` to a first-class named regime with scope conditions, stability-plasticity window, and structural-adaptation enablement. The segment composes with `#identifiability-floor` (candidate third instance: bounded-online-budget + no-reach-of-IB-optimum) and `#separability-pattern` (consolidation is the repair machinery between separable-core and structured-repair ladders on the representation-factorization axis).
+**Recommendation:** new AAD segment `#consolidation-dynamics` in Section I, formulation-type, robust-qualitative status at candidacy, promoting what is currently a parenthetical in `#recursive-update` to a first-class named regime with scope conditions, stability-plasticity window, and structural-adaptation enablement. The segment composes with `#discussion-identifiability-floor` (candidate third instance: bounded-online-budget + no-reach-of-IB-optimum) and `#discussion-separability-pattern` (consolidation is the repair machinery between separable-core and structured-repair ladders on the representation-factorization axis).
 
 ---
 
@@ -345,5 +345,5 @@ External:
 
 AAD-internal (linked above):
 
-- `#recursive-update`, `#recursive-update-derivation`, `#event-driven-dynamics`, `#information-bottleneck`, `#temporal-nesting`, `#multi-timescale-stability`, `#structural-adaptation-necessity`, `#structural-change-as-parametric-limit`, `#strategy-persistence-schema`, `#strategy-complexity-cost`, `#compression-operations`, `#identifiability-floor`, `#separability-pattern`, `#directed-separation`, `#context-turnover` (logogenic), `#update-gain`, `#sector-condition-stability`, `#model-class-fitness`.
+- `#recursive-update`, `#recursive-update-derivation`, `#event-driven-dynamics`, `#information-bottleneck`, `#temporal-nesting`, `#multi-timescale-stability`, `#structural-adaptation-necessity`, `#structural-change-as-parametric-limit`, `#strategy-persistence-schema`, `#strategy-complexity-cost`, `#compression-operations`, `#discussion-identifiability-floor`, `#discussion-separability-pattern`, `#directed-separation`, `#context-turnover` (logogenic), `#update-gain`, `#sector-condition-stability`, `#model-class-fitness`.
 - `msc/agentic-tft-cognitive-loop-spec.md`, `msc/agentic-tft-narrative-as-implementation.md`.

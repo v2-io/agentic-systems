@@ -4,13 +4,13 @@ type: definition
 status: axiomatic
 depends:
   - causal-structure
-  - scope-condition
+  - scope-agency
 stage: deps-verified
 ---
 
 # Definition: Pearl's Causal Hierarchy
 
-Three levels of causal reasoning emerge from the causal structure of the feedback loop: association ("what if I observe?"), intervention ("what if I do?"), and counterfactual ("what if I had done differently?"). The binary action requirement ( #scope-condition) ensures at least Level 2 access is structurally available.
+Three levels of causal reasoning emerge from the causal structure of the feedback loop: association ("what if I observe?"), intervention ("what if I do?"), and counterfactual ("what if I had done differently?"). The binary action requirement ( #scope-agency) ensures at least Level 2 access is structurally available.
 
 ## Formal Expression
 

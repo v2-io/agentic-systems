@@ -9,7 +9,7 @@ depends:
   - adversarial-tempo-advantage
   - team-persistence
   - directed-separation
-  - identifiability-floor
+  - discussion-identifiability-floor
 stage: draft
 ---
 
@@ -79,8 +79,8 @@ The superlinear formula $(\mathcal T_A / \mathcal T_B)^2$ becomes $(\mathcal T_A
 | 16-cell emitter-recipient composition closes `#adversarial-edge-targeting` | Product of emitter opacity × recipient vulnerability-to-shock over four × four cells | Derived (arg-max construction) |
 | Tempo-amplification leading-order: $\mathcal T^{\text{eff}} = \mathcal T \cdot H_b/H_b^{\max}$ | First-order substitution into `#adversarial-tempo-advantage`'s tempo-multiplier under Model D | Derived (conditional on Gaussian-coupling sub-scope $\alpha$) |
 | Parameterization-invariance of $H_b$ | $H_b$ is an action-marginal entropy; action space is coordinate-free per `#agent-identity` | Derived |
-| Candidate 4th `#identifiability-floor` instance (generic observer-side form) | $H_b$'s formal structure — "observer cannot predict agent's future action better than $H_b^{A\mid B}$" — is a CHT-style no-go at the observer-side-inference task | Discussion-grade (framing; precise external theorem not yet identified) |
-| Candidate opacity ladder for `#separability-pattern` | Transparent-core / partial-transparency / full-opacity across observer filtrations | Formulation choice (ladder proposal) |
+| Candidate 4th `#discussion-identifiability-floor` instance (generic observer-side form) | $H_b$'s formal structure — "observer cannot predict agent's future action better than $H_b^{A\mid B}$" — is a CHT-style no-go at the observer-side-inference task | Discussion-grade (framing; precise external theorem not yet identified) |
+| Candidate opacity ladder for `#discussion-separability-pattern` | Transparent-core / partial-transparency / full-opacity across observer filtrations | Formulation choice (ladder proposal) |
 | Effects-spiral opacity amplification (higher $H_b$ → higher $\gamma_A$ → larger $\dot V_B$ → $B$'s actions become more erratic → observer's model of $B$ degrades → higher $H_b^{B\mid A}$) | Composition of sign-flip derivation with `#adversarial-destabilization`'s effects spiral | Sketch (discussion-grade; specific functional form open) |
 | Dual-filtration apparatus (each agent's $M_t$ carries an other-filtration as feature) | Would unify observer-indexing with `#agent-identity`'s single-trajectory formalism more tightly | Open extension (mild architectural, orthogonal to derivations) |
 | Sharp functional form for $\gamma^{\text{adv}}_{\text{effective}} = f(H_b)$ | Leading-order: $\gamma \propto H_b$. Exact function depends on sub-scope — Gaussian-coupling linear; sigmoid-coupling saturating | Open per sub-scope |
@@ -97,7 +97,7 @@ The superlinear formula $(\mathcal T_A / \mathcal T_B)^2$ becomes $(\mathcal T_A
 **Not established:**
 - Sharp functional forms for $\gamma^{\text{adv}}_{\text{effective}}(H_b)$ outside Gaussian-coupling sub-scope $\alpha$.
 - Whether $b$ (the adversarial exponent from `#adversarial-exponent-regimes`) is reshaped under bilateral opacity.
-- Formal fourth `#identifiability-floor` instance (requires external-theorem anchoring not yet identified); discussion-grade framing only.
+- Formal fourth `#discussion-identifiability-floor` instance (requires external-theorem anchoring not yet identified); discussion-grade framing only.
 - The effects-spiral's opacity amplification (composition with `#adversarial-destabilization`'s spiral) is sketch-level.
 
 ## Honest Limits
@@ -113,11 +113,11 @@ The superlinear formula $(\mathcal T_A / \mathcal T_B)^2$ becomes $(\mathcal T_A
 **Closing `#adversarial-edge-targeting`.** The segment provides the emitter-side arg-max structure missing from the Section III adversarial machinery. Paired with `#interaction-channel-classification`'s recipient-side four-regime decomposition, the full adversarial-targeting problem has a closed-form: choose edges where emitter's $H_b$ (to target) and target's recipient-side vulnerability (Regime II magnitude/structural shock) are jointly maximized. This operationalizes what "inside the opponent's loop" means at the targeting layer — Boyd's aphorism becomes an explicit optimization over the 16-cell emitter-recipient product.
 
 **Meta-pattern positioning.**
-- *`#identifiability-floor`:* $H_b$'s structure suggests a generic observer-side floor — "the observer cannot predict the agent's action better than $H_b$" — that Instances 1/2/3 specialize on specific variables (causal structure / mixture parameters / coupling sign). The generic framing is candidate-status: it lacks a single external-theorem anchor clear enough to match F1's CHT or F13's Cramér-Rao, but $H_b$ appears naturally in Instance 3's coupling-sign unidentifiability and in Instance 1's on-policy detection no-go (an observer watching the agent's on-policy play has non-zero $H_b$ on the agent's interventional regime).
-- *`#separability-pattern`:* candidate opacity ladder — transparent-core (E-I Broadcast; allies / public interfaces) / structured-repair (E-II Selective-signal; trust-weighted partial instrumentation) / general-open (E-III, E-IV; uniformly opaque or active-deceive). Adds to the ladder count if adopted.
-- *`#additive-coordinate-forcing`:* $H_b$'s logarithmic form is adopted from Shannon via Khinchin-Aczél axiomatics, imported as an applied external theorem rather than re-forced under an AAD-internal additivity axiom. Cross-agent additivity fails under the coupling regimes AAD cares about (correlated opacity structures break independence). Adjacent family member, parallel to the IB Lagrangian's position — not a primary instance.
+- *`#discussion-identifiability-floor`:* $H_b$'s structure suggests a generic observer-side floor — "the observer cannot predict the agent's action better than $H_b$" — that Instances 1/2/3 specialize on specific variables (causal structure / mixture parameters / coupling sign). The generic framing is candidate-status: it lacks a single external-theorem anchor clear enough to match F1's CHT or F13's Cramér-Rao, but $H_b$ appears naturally in Instance 3's coupling-sign unidentifiability and in Instance 1's on-policy detection no-go (an observer watching the agent's on-policy play has non-zero $H_b$ on the agent's interventional regime).
+- *`#discussion-separability-pattern`:* candidate opacity ladder — transparent-core (E-I Broadcast; allies / public interfaces) / structured-repair (E-II Selective-signal; trust-weighted partial instrumentation) / general-open (E-III, E-IV; uniformly opaque or active-deceive). Adds to the ladder count if adopted.
+- *`#discussion-additive-coordinate-forcing`:* $H_b$'s logarithmic form is adopted from Shannon via Khinchin-Aczél axiomatics, imported as an applied external theorem rather than re-forced under an AAD-internal additivity axiom. Cross-agent additivity fails under the coupling regimes AAD cares about (correlated opacity structures break independence). Adjacent family member, parallel to the IB Lagrangian's position — not a primary instance.
 
-**Parameterization-invariance composes cleanly.** $H_b$ is an action-marginal entropy. Under `#agent-identity`'s (PI) axiom, the action space is coordinate-free; $H_b$ is invariant under change of the agent's internal-state parameterization. This composes with the (PI)/Čencov fourth primary instance of `#additive-coordinate-forcing` without adding a new axiom.
+**Parameterization-invariance composes cleanly.** $H_b$ is an action-marginal entropy. Under `#agent-identity`'s (PI) axiom, the action space is coordinate-free; $H_b$ is invariant under change of the agent's internal-state parameterization. This composes with the (PI)/Čencov fourth primary instance of `#discussion-additive-coordinate-forcing` without adding a new axiom.
 
 **Relation to `#directed-separation`.** Class 2 (fully merged) agents have high structural opacity to any observer without internal access — their $f_M$ and $G_t$ are entangled, so predicting the next action requires joint state modelling. Class 1 (modular) agents are more transparent at the interface level because the decomposed update admits separate modelling of epistemic vs. purposeful components. $H_b$ therefore tends to be *architecturally higher* for Class 2 agents — a structural consequence of architecture rather than choice, beyond what E-III Information-hide captures.
 
@@ -125,7 +125,7 @@ The superlinear formula $(\mathcal T_A / \mathcal T_B)^2$ becomes $(\mathcal T_A
 
 ## Working Notes
 
-- The (C-iv) scope route of `#composition-scope-condition` accommodates adversarial composition via equilibrium convergence; the effects-spiral joint-Jacobian eigenvalue condition of `#strategic-composition` composes with this segment's opacity-amplification story to give a fully-coupled picture of symmetric adversarial dynamics. Full composition is open work.
-- Candidate fourth-instance formalization for `#identifiability-floor`: the most natural external-theorem anchor is Fano's inequality (relating $H_b$ to error-probability lower bounds) applied to the observer-side prediction task. Open; not pursued here.
+- The (C-iv) scope route of `#scope-composite-agent` accommodates adversarial composition via equilibrium convergence; the effects-spiral joint-Jacobian eigenvalue condition of `#strategic-composition` composes with this segment's opacity-amplification story to give a fully-coupled picture of symmetric adversarial dynamics. Full composition is open work.
+- Candidate fourth-instance formalization for `#discussion-identifiability-floor`: the most natural external-theorem anchor is Fano's inequality (relating $H_b$ to error-probability lower bounds) applied to the observer-side prediction task. Open; not pursued here.
 - The 16-cell emitter-recipient composition admits closed-form arg-max only under sub-scope $\alpha$ coupling; general non-convex coupling requires per-case optimization.
 - Dual-filtration apparatus ($M_A$ carries $\mathcal F_B^t$ as feature, $M_B$ carries $\mathcal F_A^t$ as feature) would tighten the formalism by unifying observer-indexing with the single-trajectory scope of `#agent-identity`. Architecturally clean; not needed for the derivations here.

@@ -3,7 +3,7 @@ slug: worked-example-kalman
 type: worked-example
 status: exact
 depends:
-  - scope-condition
+  - scope-adaptive-system
   - causal-structure
   - agent-model
   - mismatch-signal
@@ -34,7 +34,7 @@ The agent tracks scalar state $x_t$ and chooses sensor mode $a_t \in \{L, H\}$:
 
 ## Chain Instantiation
 
-### Scope ( #scope-condition)
+### Scope ( #scope-adaptive-system)
 
 *Mapping: exact.*
 

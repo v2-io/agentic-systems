@@ -3,7 +3,7 @@
 **Date**: 2026-04-24
 **Status**: Exploratory strengthening spike. Prompted by Gemini's reiteration of the "neutral drift / endogenous $\gamma$" gap (after reading `msc/spike-neutral-drift-lyapunov.md` and prior snapshot of Section III).
 **Prior art in-project**: `msc/spike-neutral-drift-lyapunov.md` (the original framing of the gap); `msc/spike-miller-act-bridge.md`; `msc/spike-kappa-hb-operationalization.md`; `msc/spike-kappa-topology-insight.md`.
-**Segments most relevant to this spike** (post-2026-04-23 state, which is AFTER Gemini's snapshot): `#agent-opacity` (new), `#interaction-channel-classification` (new), `#critical-mass-composition` (new), `#agent-identity` with (PI), `#identifiability-floor` (including Instance 3 composition-layer), `#loop-interventional-access`, `#agent-spectrum`, `#multi-agent-scope`.
+**Segments most relevant to this spike** (post-2026-04-23 state, which is AFTER Gemini's snapshot): `#agent-opacity` (new), `#interaction-channel-classification` (new), `#critical-mass-composition` (new), `#agent-identity` with (PI), `#discussion-identifiability-floor` (including Instance 3 composition-layer), `#loop-interventional-access`, `#agent-spectrum`, `#multi-agent-scope`.
 
 **Brief for the reader:** the gap alleged is that AAD's Lyapunov-persistence machinery uses only behavioral observables $(\alpha, \rho, R)$, so two architecturally different agents with identical behavioral signatures in the current regime are formally indistinguishable — AAD is "blind to neutral drift." Coupling coefficients $\gamma$ are treated as exogenous, blocking a model of niche creation. This spike attempts to *strengthen* rather than soften: derive what AAD can see, name the precise observability conditions under which it cannot, and propose segment-level moves.
 
@@ -15,7 +15,7 @@ The allegation rests on a snapshot that predates the 2026-04-23 cycle. Three rec
 
 - **`#agent-opacity`** introduced $H_b^{A\mid B}(t, \tau)$: observer-indexed, horizon-indexed, trajectory-indexed entropy of agent $A$'s future action given $B$'s filtration. This is a *non-$(\alpha, \rho, R)$* behavioral observable.
 - **`#interaction-channel-classification`** decomposed recipient-side coupling into four regimes (Informative I / Magnitude-shock II-a / Structural-shock II-b / Ambient III) with boundaries in $(\lVert e\rVert, R, \mathcal I, \mathcal F(\mathcal M), \mathcal I_{\max}, U_o, \nu, c_{\text{floor}})$. Eight quantities, not three.
-- **`#identifiability-floor` Instance 3** (composition-layer, Liberzon 2003): proved a structural no-go — the single bit of coupling sign distinguishing cooperative from adversarial regimes is *unidentifiable from component marginal observation distributions*. Four escapes named: (a) composite-extended loop interventional access; (b) matched-Tier-at-composite; (c) passivity / storage certificate; (d) common contraction metric.
+- **`#discussion-identifiability-floor` Instance 3** (composition-layer, Liberzon 2003): proved a structural no-go — the single bit of coupling sign distinguishing cooperative from adversarial regimes is *unidentifiable from component marginal observation distributions*. Four escapes named: (a) composite-extended loop interventional access; (b) matched-Tier-at-composite; (c) passivity / storage certificate; (d) common contraction metric.
 
 The existence of Instance 3 is the most important pre-existing result for this spike: **AAD has already formalized one version of the gap** (unidentifiable sign of $\gamma$ from marginals), has already named the structural conditions under which identification is recovered, and has already tied those conditions to specific AAD machinery. The question this spike asks is whether the remainder of the "neutral drift" gap — structural variation *within* a contraction-sign class, and the emergence of $\gamma$ itself — admits similar treatment.
 
@@ -63,7 +63,7 @@ The endogenization above recovers the *scalar* $\gamma$ in the matched-symmetric
 
 - **Nonlinear coupling** $\gamma = \gamma(\delta_j)$: the steady-state cross-covariance becomes a functional of the disturbance distribution, not a scalar; recovering the functional requires either high-moment data or explicit perturbation experiments.
 - **State-dependent direction** (the "effects-spiral" territory of `#adversarial-destabilization`): no stationary cross-covariance in general; need trajectory-level analysis.
-- **Common-latent-driver confound**: a shared disturbance $w$ entering both agents produces cross-covariance *without* coupling. This is exactly `#identifiability-floor` Instance 2's single-channel mixture problem lifted to the coupling layer — unobservable common cause is unidentifiable from marginals-plus-cross-covariance. Only (a) loop-interventional access on $A$ while observing $B$'s response or (b) instrumenting the latent ("structural priors positing common causes" in Instance 1's route (d) language) escapes it.
+- **Common-latent-driver confound**: a shared disturbance $w$ entering both agents produces cross-covariance *without* coupling. This is exactly `#discussion-identifiability-floor` Instance 2's single-channel mixture problem lifted to the coupling layer — unobservable common cause is unidentifiable from marginals-plus-cross-covariance. Only (a) loop-interventional access on $A$ while observing $B$'s response or (b) instrumenting the latent ("structural priors positing common causes" in Instance 1's route (d) language) escapes it.
 
 The **sign** of $\gamma$ from Instance 3 is recovered in the matched-symmetric-Tier-1 case, but Instance 3's no-go was about exactly this regime's boundary: under *pure marginal* component observation, the sign is invisible. Instance 3 does not forbid recovery from *joint* observation — it forbids recovery from marginal observation. The endogenization above uses *joint* observation (the cross-covariance), so it does not violate Instance 3; it *operationalizes* Instance 3's escape (b) matched-Tier-at-composite.
 
@@ -107,7 +107,7 @@ This is a real scope limit: $H_b$ is not magic. It discriminates over the class 
 
 **Moderate strengthening.** The `#agent-opacity` segment supplies the "missing state-space dimension" the gap alleged was absent — but only under (i) admitting horizon-indexed observation and (ii) admitting observers whose filtrations extend beyond the current-regime boundary. Both (i) and (ii) are structurally available in the `#agent-opacity` formalism; neither is automatic.
 
-**Segment-level implication.** `#agent-opacity`'s "Future meta-segment candidate" note in Discussion mentions a possible fourth `#identifiability-floor` instance. The natural formal anchor is Fano's inequality at the observer-side prediction task: for observers whose $H_b^{A\mid B}(t, \tau) \geq H_{\text{threshold}}$, there exists a lower bound on prediction-error probability. The neutral-drift-invisibility result then becomes: "under Phase-1-regime-restricted observers, $H_b$ is insufficient to distinguish a drift variant from the incumbent; out-of-regime observation or intervention is required." This would be a genuine fourth instance.
+**Segment-level implication.** `#agent-opacity`'s "Future meta-segment candidate" note in Discussion mentions a possible fourth `#discussion-identifiability-floor` instance. The natural formal anchor is Fano's inequality at the observer-side prediction task: for observers whose $H_b^{A\mid B}(t, \tau) \geq H_{\text{threshold}}$, there exists a lower bound on prediction-error probability. The neutral-drift-invisibility result then becomes: "under Phase-1-regime-restricted observers, $H_b$ is insufficient to distinguish a drift variant from the incumbent; out-of-regime observation or intervention is required." This would be a genuine fourth instance.
 
 ---
 
@@ -191,7 +191,7 @@ The non-trivial statement is: **the equivalence class under Fisher-Rao distance 
 
 **Tautological strengthening; non-trivial reframe.** Fisher-Rao gives AAD the correct metric for measuring neutral drift *once the observation channel is fixed*. The neutral-drift problem is then precisely the problem of *which observation channel* an observer has. This dovetails with `#agent-opacity`'s observer-indexing: neutral drift is invisibility under the observer's filtration, and filtration-expansion (adding horizon, moments, or interventions) is the only escape.
 
-**Segment-level implication.** The Čencov / Fisher-Rao apparatus is already in AAD via `#additive-coordinate-forcing` Instance 4; the *observer-conditioned* form of neutral-drift identification is implicit. Surfacing it could happen as an `#agent-opacity` Discussion extension or (more cleanly) as a new Discussion paragraph in `#identifiability-floor` where the structural-drift-invisibility theme would then sit alongside Instance 3's coupling-sign invisibility.
+**Segment-level implication.** The Čencov / Fisher-Rao apparatus is already in AAD via `#additive-coordinate-forcing` Instance 4; the *observer-conditioned* form of neutral-drift identification is implicit. Surfacing it could happen as an `#agent-opacity` Discussion extension or (more cleanly) as a new Discussion paragraph in `#discussion-identifiability-floor` where the structural-drift-invisibility theme would then sit alongside Instance 3's coupling-sign invisibility.
 
 ---
 
@@ -209,11 +209,11 @@ Consider two agents $A, A'$ with identical $(\alpha, \rho, R)$, both in the pers
 
 This is `#loop-interventional-access` applied at the *probing-agent* layer rather than the agent-under-study layer. An observer running interventional probes against the candidate agent generates do-data per Pearl's hierarchy. The response is a Level-2 signature of the agent's architecture that is strictly finer than the Level-1 behavior in the unperturbed regime.
 
-**Instance 3 of `#identifiability-floor`** already names this escape at the composition layer: "Observable coupling topology via composite-extended `#loop-interventional-access` — interventions on sub-agent $A_j$ reveal $A_i$'s cross-coupling response." The agent-level version is the same move: interventions on $A$'s input reveal $A$'s correction-function response-to-intervention, which neutral-drift variants will differ on.
+**Instance 3 of `#discussion-identifiability-floor`** already names this escape at the composition layer: "Observable coupling topology via composite-extended `#loop-interventional-access` — interventions on sub-agent $A_j$ reveal $A_i$'s cross-coupling response." The agent-level version is the same move: interventions on $A$'s input reveal $A$'s correction-function response-to-intervention, which neutral-drift variants will differ on.
 
 ### E.3 The observation-only counterexample
 
-Instance 1 of `#identifiability-floor` is instructive: on-policy data cannot distinguish L0 and L1. The Miller neutral-drift variant is precisely the L1/L1' version at the *correction-function* layer — a latent structural distinction invisible under observation but visible under the right intervention. The theorem form: **under observation-only access (Level 1 in the Pearl hierarchy), the equivalence class of architecturally-different-behaviorally-identical agents is nonempty; under loop-interventional access, the equivalence class collapses to the architecture class.**
+Instance 1 of `#discussion-identifiability-floor` is instructive: on-policy data cannot distinguish L0 and L1. The Miller neutral-drift variant is precisely the L1/L1' version at the *correction-function* layer — a latent structural distinction invisible under observation but visible under the right intervention. The theorem form: **under observation-only access (Level 1 in the Pearl hierarchy), the equivalence class of architecturally-different-behaviorally-identical agents is nonempty; under loop-interventional access, the equivalence class collapses to the architecture class.**
 
 This is the same pattern Instance 1 and Instance 2 already follow. The structural form:
 
@@ -227,7 +227,7 @@ This is the same pattern Instance 1 and Instance 2 already follow. The structura
 
 **Strong strengthening.** Neutral-drift detection reduces to a Pearl-Level-2 task, which AAD has already equipped itself for via `#loop-interventional-access`. The alleged gap becomes a known identifiability-floor instance, with AAD machinery as unique broadly-available escape.
 
-**This is the headline strengthening of the spike.** Combined with E's connection to the composition-layer no-go (Instance 3), the two form a natural *pair* of identifiability floors — one at the single-agent architecture layer, one at the composition layer. The single-agent version would be a candidate fourth `#identifiability-floor` instance.
+**This is the headline strengthening of the spike.** Combined with E's connection to the composition-layer no-go (Instance 3), the two form a natural *pair* of identifiability floors — one at the single-agent architecture layer, one at the composition layer. The single-agent version would be a candidate fourth `#discussion-identifiability-floor` instance.
 
 *[Claim-tier: The pattern match is robust qualitative; formalizing the single-agent neutral-drift floor to the standard of Instances 1-3 (explicit external theorem, specific no-go construction, four structural escapes) is scope for a follow-up spike. The pattern shape is established, but the tight Instance-N derivation is not yet produced.]*
 
@@ -308,7 +308,7 @@ The correct segment-level move is to state: *AAD's token-level machinery does no
 
 ## 8. Putting the pieces together: the no-go version
 
-### 8.1 Theorem sketch (candidate fourth `#identifiability-floor` instance)
+### 8.1 Theorem sketch (candidate fourth `#discussion-identifiability-floor` instance)
 
 *[Claim-tier: sketch — pattern is established (five-element shape matches Instances 1–3); specific external-theorem anchoring and the four escape routes still need tightening to reach Instance-form.]*
 
@@ -328,7 +328,7 @@ The correct segment-level move is to state: *AAD's token-level machinery does no
 **Strengthened consequences.**
 - `#loop-interventional-access` becomes the unique broadly-available escape at the agent-internal layer (matching its role at Instance 1's causal-sufficiency layer and Instance 3's composition layer — a three-layer chain).
 - `#agent-opacity`'s horizon-indexing and `#interaction-channel-classification`'s regime-histogram become structurally required diagnostic instruments, not optional ones.
-- The Lyapunov template `#sector-persistence-template` acquires explicit "this is a bound on ultimate-deviation statistics; architectural discrimination requires additional information channels per #identifiability-floor Instance N" as a Discussion note.
+- The Lyapunov template `#sector-persistence-template` acquires explicit "this is a bound on ultimate-deviation statistics; architectural discrimination requires additional information channels per #discussion-identifiability-floor Instance N" as a Discussion note.
 
 ### 8.2 Why this is a genuine fourth instance
 
@@ -358,7 +358,7 @@ These are explicit to-dos for a follow-up promotion-directed spike.
 3. **§5 / Attempt E**: Reduction of neutral-drift detection to a Pearl-Level-2 task, with `#loop-interventional-access` as unique broadly-available escape. *Robust qualitative; pattern-match solid; formal Instance-N tightening deferred to follow-up.*
 4. **§6 / Attempt F**: Confirmation that `#interaction-channel-classification`'s regime-histogram already provides a filter-signature separating architectural variants within $(\alpha, R)$-equivalence. *Derived from the segment's existing machinery.*
 5. **§7 / Attempt G**: Population-layer compatibility with `#agent-identity`'s singular-trajectory scope; identification of niche-creation as the natural Phase 4 extension target. *Scope-level, permissive with explicit exit.*
-6. **§8 / Synthesis**: Candidate fourth `#identifiability-floor` instance articulated at pattern level, matching the five-element shape of Instances 1–3.
+6. **§8 / Synthesis**: Candidate fourth `#discussion-identifiability-floor` instance articulated at pattern level, matching the five-element shape of Instances 1–3.
 
 ### 9.2 What was not strengthened
 
@@ -383,9 +383,9 @@ This is a more accurate picture than either the original spike's "structurally b
 
 Ordered by what carries the most theoretical consequence, not by effort.
 
-### 10.1 Fourth `#identifiability-floor` instance (SP-3 candidate)
+### 10.1 Fourth `#discussion-identifiability-floor` instance (SP-3 candidate)
 
-*Segment*: `#identifiability-floor`, as new Instance 4.
+*Segment*: `#discussion-identifiability-floor`, as new Instance 4.
 
 *Content*: Architecture-within-behavior-class no-go at the agent-internal layer. Setting: distinguish behaviorally-equivalent agents. External theorem: CHT at the agent-as-SCM layer (linear-Gaussian Kalman canonical-form non-uniqueness as the tight sub-scope anchor). No-go: on-policy in-regime observation cannot distinguish. Four escapes: loop-interventional access; horizon-extended observation; higher-moment observation; architecture instrumentation. Strengthened consequence: `#loop-interventional-access` gets a *third* load-bearing role (after Instance 1's causal-sufficiency and Instance 3's composition).
 
@@ -397,7 +397,7 @@ Ordered by what carries the most theoretical consequence, not by effort.
 
 *Segment*: `#agent-opacity`, Discussion section or a new "Scope of observer-filtration" subsection.
 
-*Content*: $H_b$'s discrimination within $(\alpha, R)$-equivalence is real but parasitic on the observer's filtration; neutral drift undetectable under Phase-1-regime-restricted observers is exactly what $H_b$ cannot see with that filtration. Out-of-regime observation, horizon extension, or interventional probing is required. Cross-reference to `#identifiability-floor` Instance 4 (once landed) and to `#loop-interventional-access`.
+*Content*: $H_b$'s discrimination within $(\alpha, R)$-equivalence is real but parasitic on the observer's filtration; neutral drift undetectable under Phase-1-regime-restricted observers is exactly what $H_b$ cannot see with that filtration. Out-of-regime observation, horizon extension, or interventional probing is required. Cross-reference to `#discussion-identifiability-floor` Instance 4 (once landed) and to `#loop-interventional-access`.
 
 *Effort estimate*: One paragraph plus cross-reference. Low.
 
@@ -407,7 +407,7 @@ Ordered by what carries the most theoretical consequence, not by effort.
 
 *Segment*: `#sector-persistence-template`.
 
-*Content*: the template bounds first-moment / second-moment ultimate deviation; architectural discrimination within an $(\alpha, R, \sigma_w^2)$-equivalence class requires higher-moment observables (skewness / kurtosis / spectral moments beyond second), which the nonlinear sub-scope generically supplies. Reference to `#interaction-channel-classification` Case 4 as worked instance; forward-reference to `#identifiability-floor` Instance 4.
+*Content*: the template bounds first-moment / second-moment ultimate deviation; architectural discrimination within an $(\alpha, R, \sigma_w^2)$-equivalence class requires higher-moment observables (skewness / kurtosis / spectral moments beyond second), which the nonlinear sub-scope generically supplies. Reference to `#interaction-channel-classification` Case 4 as worked instance; forward-reference to `#discussion-identifiability-floor` Instance 4.
 
 *Effort estimate*: One paragraph. Low.
 
@@ -435,7 +435,7 @@ Ordered by what carries the most theoretical consequence, not by effort.
 
 ### 10.6 Do NOT: new segment on "latent structural diversity"
 
-The original `msc/spike-neutral-drift-lyapunov.md` proposed a new AAD concept "latent structural diversity" for correction-architecture variation invisible under current conditions. After the 2026-04-23 cycle, this concept is **not needed as a new segment** — it is fully expressible using `#agent-opacity`'s horizon-indexing combined with `#identifiability-floor` Instance 4 (candidate). Creating a separate "latent structural diversity" segment would violate the "prior art integration" convention (adopt/compose existing segments rather than invent NIH concepts).
+The original `msc/spike-neutral-drift-lyapunov.md` proposed a new AAD concept "latent structural diversity" for correction-architecture variation invisible under current conditions. After the 2026-04-23 cycle, this concept is **not needed as a new segment** — it is fully expressible using `#agent-opacity`'s horizon-indexing combined with `#discussion-identifiability-floor` Instance 4 (candidate). Creating a separate "latent structural diversity" segment would violate the "prior art integration" convention (adopt/compose existing segments rather than invent NIH concepts).
 
 ---
 
@@ -447,12 +447,12 @@ The original `msc/spike-neutral-drift-lyapunov.md` proposed a new AAD concept "l
 
 3. **Fluctuation-FDT anchoring in nonequilibrium regimes.** The FDT analog in §3 is cleanest in Ornstein-Uhlenbeck steady state. AAD's $\beta$ sub-scope includes agents far from this regime. Whether a nonequilibrium-FDT (Crooks, Jarzynski) form applies at the rigor level of the existing sector-persistence template is not obvious; heuristic use in Discussion is safe, derivation-layer claims are not.
 
-4. **Mechanism-design as fifth-instance candidate.** `#identifiability-floor` Working Notes already flags Gibbard-Satterthwaite / Myerson-Satterthwaite / Arrow as candidate fourth instance. The interaction with the architecture-within-behavior-class instance identified here needs coordination — whether these are parallel fourth-instance candidates, or one subsumes the other, or they target genuinely different layers, deserves explicit treatment before either is promoted.
+4. **Mechanism-design as fifth-instance candidate.** `#discussion-identifiability-floor` Working Notes already flags Gibbard-Satterthwaite / Myerson-Satterthwaite / Arrow as candidate fourth instance. The interaction with the architecture-within-behavior-class instance identified here needs coordination — whether these are parallel fourth-instance candidates, or one subsumes the other, or they target genuinely different layers, deserves explicit treatment before either is promoted.
 
-5. **Interaction with `#separability-pattern`.** The fourth-instance candidate in §8 naturally pairs with a separability-pattern-like positive-scope ladder: *architecture-observable-core* (sub-scope $\alpha_1$ with horizon-extended observation) / *architecture-semi-observable* ($\alpha_1/\alpha_2$ with intervention or moment-observation) / *architecture-unobservable* ($\beta$ with adversarial matching). Another ladder candidate for `#separability-pattern` (which currently has seven).
+5. **Interaction with `#discussion-separability-pattern`.** The fourth-instance candidate in §8 naturally pairs with a separability-pattern-like positive-scope ladder: *architecture-observable-core* (sub-scope $\alpha_1$ with horizon-extended observation) / *architecture-semi-observable* ($\alpha_1/\alpha_2$ with intervention or moment-observation) / *architecture-unobservable* ($\beta$ with adversarial matching). Another ladder candidate for `#discussion-separability-pattern` (which currently has seven).
 
 ---
 
 *Follow-up spike candidates:* (a) closed-form single-agent Instance 4 with Kalman-Ho canonical-form anchoring (§8 + §11.1); (b) slow-fast endogenous-$\gamma$ dynamics via `#adaptive-gain-dynamics` meta-gain transfer (§11.2); (c) mechanism-design vs. architecture-within-behavior-class instance coordination (§11.4). Each is independent of the others; each could run in parallel.
 
-*The primary segment-level move this spike recommends is §10.1 (fourth `#identifiability-floor` instance).* Everything else is smaller addenda or scope notes that land naturally alongside §10.1 or stand on their own.
+*The primary segment-level move this spike recommends is §10.1 (fourth `#discussion-identifiability-floor` instance).* Everything else is smaller addenda or scope notes that land naturally alongside §10.1 or stand on their own.

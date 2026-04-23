@@ -106,7 +106,7 @@ with $\lambda_N \asymp 1/N$ (contraction rate set by window length) and $\eta^{\
 
 Prop A.1S applied to the meta-gain channel gives $R^\ast_{S,K} \asymp 1/\sqrt N$ — the classical Mehra asymptotic rate, now derived from (MG-2). Primary sector floor is preserved: $\underline\alpha = K^\ast - \lvert\tilde K\rvert_{\max}$ via triangle. Composed persistence via augmented-state Lyapunov gives $O(1/\sqrt N)$ degradation from the fixed-gain case. **This case is derived at sub-scope $\alpha_2$.**
 
-Under Mehra non-identifiability (rank-deficient transform matrix; see Zagrobelny-Rawlings 2015, Dunik et al. 2021), (MG-2) fails structurally — an instance of the #identifiability-floor pattern on the meta-gain channel.
+Under Mehra non-identifiability (rank-deficient transform matrix; see Zagrobelny-Rawlings 2015, Dunik et al. 2021), (MG-2) fails structurally — an instance of the #discussion-identifiability-floor pattern on the meta-gain channel.
 
 *[Derivation (case-rmsprop-alpha2-conditional)]*
 
@@ -144,7 +144,7 @@ Outside those conditions (aggressive $\beta$ + ill-conditioning + small gradient
 | Case B (RMSProp): sub-scope $\alpha_2$ under design conditions; $\beta$ otherwise; AMSGrad as meta-gain repair | EMA second-moment derivation + fixed-point closure + Reddi et al. 2018 counterexample | Derived (conditional); AMSGrad framing is discussion |
 | Case C (IMM): sub-scope $\alpha_2$ between-transition + $\beta$ across-transition via dwell-time | Posterior re-concentration + impulsive-disturbance absorption | Sketch |
 | Case D (MAML): inner-loop $\alpha_1$ + outer-loop $\beta$ | Fallah et al. 2020 meta-loss non-convexity | Classification (not derivation) |
-| Mehra non-identifiability as meta-gain #identifiability-floor instance | Rank-deficient transform matrix blocks (MG-2) derivation | Discussion (candidate floor instance) |
+| Mehra non-identifiability as meta-gain #discussion-identifiability-floor instance | Rank-deficient transform matrix blocks (MG-2) derivation | Discussion (candidate floor instance) |
 
 ## Epistemic Status
 
@@ -168,7 +168,7 @@ The core claim — that (MG-1)–(MG-4) together give an augmented-state sector-
 **Three timescale patterns in AAD.** #multi-timescale-stability distinguishes model-class (slow) and parametric (fast) timescales. This segment introduces a *third* pattern: gain-parameter timescale, sitting between parametric-correction (fastest) and model-class (slowest). Adaptive gain is a different two-timescale pattern from structural adaptation — the gain is a parameter of the update rule, not of the model class. The convergence constraint $\nu_{n+1} \ll \nu_n$ from #temporal-nesting translates in this segment to $\alpha_K \ll \underline\alpha$ on Lyapunov decay rates, which is the (MG-3) condition.
 
 **Meta-gain scope-honesty failure modes.**
-- *Identifiability failures* on the meta-gain channel (Mehra non-identifiability) are instances of the #identifiability-floor pattern: a structural no-go (non-identifiability) on the meta-gain channel blocks the sub-scope $\alpha_2$ derivation. AMSGrad as a meta-gain repair is the constructive complement — an added structural condition (monotonicity on $v_t$) that restores (MG-1) and keeps the adaptive scheme in $\alpha_2$.
+- *Identifiability failures* on the meta-gain channel (Mehra non-identifiability) are instances of the #discussion-identifiability-floor pattern: a structural no-go (non-identifiability) on the meta-gain channel blocks the sub-scope $\alpha_2$ derivation. AMSGrad as a meta-gain repair is the constructive complement — an added structural condition (monotonicity on $v_t$) that restores (MG-1) and keeps the adaptive scheme in $\alpha_2$.
 - *Non-convex meta-losses* (MAML outer loop) put the outer loop in sub-scope $\beta$: A2' must be assumed within a basin, not derived from the meta-loss's global structure. This is the honest scope-narrowing posture — different from saying "it works" or "it doesn't" without qualification.
 - *Regime transitions* (IMM across switches) violate (MG-1) uniformly in time during posterior re-concentration windows. Repair via dwell-time is clean but significant scope narrowing.
 
@@ -178,7 +178,7 @@ The core claim — that (MG-1)–(MG-4) together give an augmented-state sector-
 
 ## Working Notes
 
-- **Identifiability as meta-gain obstruction.** Mehra non-identifiability for certain system structures (Dunik et al. 2021) is an instance of #identifiability-floor on the meta-gain channel — a structural no-go blocking (MG-2) derivation. Candidate for explicit cross-reference in #identifiability-floor's §"Adjacent Floors" as a fourth derived instance (after F1 CHT no-go, F13 Cramér-Rao mixture-identifiability, and Regime II-b misspecification-cost from #interaction-channel-classification).
+- **Identifiability as meta-gain obstruction.** Mehra non-identifiability for certain system structures (Dunik et al. 2021) is an instance of #discussion-identifiability-floor on the meta-gain channel — a structural no-go blocking (MG-2) derivation. Candidate for explicit cross-reference in #discussion-identifiability-floor's §"Adjacent Floors" as a fourth derived instance (after F1 CHT no-go, F13 Cramér-Rao mixture-identifiability, and Regime II-b misspecification-cost from #interaction-channel-classification).
 - **Rate-specific results.** The composed persistence result is a bound, not a rate. Can the $1/\sqrt N$ rate of Mehra-adaptive-Kalman be derived rigorously from the augmented-state Lyapunov? Classical Mehra asymptotics give it directly; deriving it from (MG-1)–(MG-4) would confirm the framework's completeness.
 - **Adversarial adaptive-gain.** If the environment adversarially varies $K^\ast$ (hostile regime-switching cadence), dwell-time repair of Case C fails. Adversarial-tempo-advantage analog at the meta-gain level: faster meta-gain tracking beats faster environmental regime switching iff $\alpha_K T_{\text{dwell}}$ exceeds the transition rate. Not derived here; adjacent spike.
 - **Discrete-time form.** Everything above is continuous-time. Discrete-time version involves the Lipschitz bound of #discrete-sector-condition on both $F$ and $\Phi$. Extension is mechanical but deferred.

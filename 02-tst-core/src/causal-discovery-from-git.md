@@ -4,7 +4,7 @@ type: hypothesis
 status: discussion-grade
 depends:
   - software-epistemic-properties
-  - developer-as-act-agent
+  - scope-developer-agent
   - pearl-causal-hierarchy
   - causal-structure
   - causal-information-yield

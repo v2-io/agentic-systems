@@ -25,7 +25,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | S | Definition | | [#feature-definition](src/feature-definition.md) | Unit of coherent change | draft |
 | S | Result | | [#specification-bound](src/specification-bound.md) | Can't implement unspecified; includes communication bottleneck corollary | draft |
 | S | Derived | | [#change-expectation-baseline](src/change-expectation-baseline.md) | Median future ≈ observed past; includes investment scale form | draft |
-| S | Definition | | [#developer-as-act-agent](src/developer-as-act-agent.md) | Developer as $(M_t, O_t, \Sigma_t)$ | missing |
+| S | Definition | | [#scope-developer-agent](src/scope-developer-agent.md) | Developer as $(M_t, O_t, \Sigma_t)$ | missing |
 | S | Definition | | [#comprehension-time](src/comprehension-time.md) | Cost of constructing local $M_t$ | draft |
 | S | Definition | | [#implementation-time](src/implementation-time.md) | Cost from first change to done | draft |
 | S | Derived | | [#dual-optimization](src/dual-optimization.md) | Min comprehension + impl time | draft |
@@ -75,7 +75,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 
 **Mathematical grounding**:
 - `old-tst-lindy-foundations` + `old-tst-lindy-math-foundations` — Bayesian derivation of Lindy via Jeffreys prior, maximum entropy, hazard rates → #change-expectation-baseline
-- `old-tst-ai-specification-limit` — As implementation time → 0, specification quality becomes sole determinant → #software-epistemic-properties, #developer-as-act-agent
+- `old-tst-ai-specification-limit` — As implementation time → 0, specification quality becomes sole determinant → #software-epistemic-properties, #scope-developer-agent
 - `old-tst-proximity-coherence-for-ai` — Proximity/coherence/coupling analysis specific to AI agents
 - Prior art for #specification-bound (Austin, Putnam, Shannon) is in `lit-review/` — see `specification-bound-prior-art.md`, `formal-bounds-on-implementation-speed.md`, `putnam-vs-tst-bounds.md`
 

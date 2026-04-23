@@ -6,14 +6,14 @@ depends:
   - credit-assignment-boundary
   - edge-update-natural-parameter
   - gain-sector-bridge
-  - additive-coordinate-forcing
+  - discussion-additive-coordinate-forcing
   - agent-identity
 stage: draft
 ---
 
 # Derivation: Fisher-Whitened Edge Update Under Correlated Evidence
 
-Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural gradient never exceeds $45°$ at finite correlation $\rho$, so B1 directional fidelity ( #gain-sector-bridge) is never actively violated — but its *magnitude alignment* degrades by a factor $\sqrt{1-r^2}$ in the sector constant. The Fisher-whitened correction restores sharp B1 on the Fisher-weighted inner product. Under the (PI) parameterization-invariance axiom named in `#agent-identity` and promoted to a primary instance of `#additive-coordinate-forcing` via Čencov 1982, Fisher whitening is **AAD-internally derivable** rather than externally imported. The result adds sub-scope $\alpha_3$ (correlated evidence + Fisher-whitened update + Bayesian coherence → A2' derived) to the A2' partition and composes cleanly with the meta-gain machinery of `#adaptive-gain-dynamics` (Fisher whitening is a special case of meta-gain with $K_t = \mathbf I^{-1}(\lambda_t)$).
+Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural gradient never exceeds $45°$ at finite correlation $\rho$, so B1 directional fidelity ( #gain-sector-bridge) is never actively violated — but its *magnitude alignment* degrades by a factor $\sqrt{1-r^2}$ in the sector constant. The Fisher-whitened correction restores sharp B1 on the Fisher-weighted inner product. Under the (PI) parameterization-invariance axiom named in `#agent-identity` and promoted to a primary instance of `#discussion-additive-coordinate-forcing` via Čencov 1982, Fisher whitening is **AAD-internally derivable** rather than externally imported. The result adds sub-scope $\alpha_3$ (correlated evidence + Fisher-whitened update + Bayesian coherence → A2' derived) to the A2' partition and composes cleanly with the meta-gain machinery of `#adaptive-gain-dynamics` (Fisher whitening is a special case of meta-gain with $K_t = \mathbf I^{-1}(\lambda_t)$).
 
 ## Formal Expression
 
@@ -47,7 +47,7 @@ $$T_{\text{FW}}(\lambda) = \lambda - \eta_{\text{edge}} \cdot \mathbf I^{-1}(\la
 
 **Path A (B1-parameterization-invariance).** Require B1 directional fidelity to be *parameterization-invariant* in the sense of `#agent-identity`'s (PI) axiom: the theorems about sub-scope α derivation in `#gain-sector-bridge` should not depend on arbitrary coordinate choices for $M_t$'s natural parameters. Under (PI), B1 sub-scope α partition is coordinate-invariant iff the inner product defining the directional-fidelity condition is the Fisher metric (Čencov 1982 uniqueness theorem under (PI); extended by Ay-Jost-Lê-Schwachhöfer 2017). The Fisher-weighted inner product is therefore *forced* by (PI), and the Fisher-whitened update is the AAD-internally derived correction direction for directional-fidelity preservation across parameterizations.
 
-**Path B (Lyapunov-coordinate-matching via adjacent-family classification).** In the adjacent-family framing of `#additive-coordinate-forcing`, the Lyapunov coordinate is *matched* (not forced) to the sector condition. For natural-gradient updates, the canonical Lyapunov is Fisher-weighted (Amari 1998, "Natural gradient works efficiently in learning," *Neural Computation* 10); this matches the geometry of the update operator. The two paths converge on the same Fisher-weighted result; Path A forces it via axiomatics, Path B confirms it via adjacent-family coordinate-matching.
+**Path B (Lyapunov-coordinate-matching via adjacent-family classification).** In the adjacent-family framing of `#discussion-additive-coordinate-forcing`, the Lyapunov coordinate is *matched* (not forced) to the sector condition. For natural-gradient updates, the canonical Lyapunov is Fisher-weighted (Amari 1998, "Natural gradient works efficiently in learning," *Neural Computation* 10); this matches the geometry of the update operator. The two paths converge on the same Fisher-weighted result; Path A forces it via axiomatics, Path B confirms it via adjacent-family coordinate-matching.
 
 Under L0 (no correlation), $r = 0$ and $\mathbf I$ is diagonal — Fisher whitening is vacuous (reduces to the existing Euclidean log-odds update). The axioms pick out Fisher whitening *uniquely* only under L1'/L2 (correlated evidence) regimes; they are vacuously satisfied under L0.
 
@@ -80,11 +80,11 @@ The Fisher-whitened update is a meta-gain law in the sense of `#adaptive-gain-dy
 
 This hands `#adaptive-gain-dynamics` a **concrete second instance** of derivable meta-gain alongside adaptive-Kalman-with-Mehra-estimator (its primary instance). The machinery of meta-gain composition via `#sector-persistence-template` (augmented-state Lyapunov) applies directly.
 
-### L2 regime: candidate third `#identifiability-floor` instance or strengthening of Instance 2
+### L2 regime: candidate third `#discussion-identifiability-floor` instance or strengthening of Instance 2
 
 *[Hypothesis (L2-latent-floor)]*
 
-Under L2-latent regimes (unobservable correlation structure beyond what Fisher information can resolve), Fisher whitening fails: the correlation sub-block of Fisher is rank-deficient (Cramér-Rao floor on unobservable parameters). This parallels `#identifiability-floor` Instance 2's L1'-unobservable-$C$ Fisher-rank-1 obstruction — potentially a new L2 instance, or potentially a generalization of Instance 2 to higher correlation orders. Open whether these are distinct floors or a single unified obstruction.
+Under L2-latent regimes (unobservable correlation structure beyond what Fisher information can resolve), Fisher whitening fails: the correlation sub-block of Fisher is rank-deficient (Cramér-Rao floor on unobservable parameters). This parallels `#discussion-identifiability-floor` Instance 2's L1'-unobservable-$C$ Fisher-rank-1 obstruction — potentially a new L2 instance, or potentially a generalization of Instance 2 to higher correlation orders. Open whether these are distinct floors or a single unified obstruction.
 
 L2-degenerate (perfect correlation, $r \to 1$) is a *structural* collapse — it requires DAG repair (edge merging) rather than update repair. This sits outside the Fisher-whitening framework.
 
@@ -100,7 +100,7 @@ L2-degenerate (perfect correlation, $r \to 1$) is a *structural* collapse — it
 
 **Relationship to the default signal function.** `#credit-assignment-boundary`'s default log-odds signal was landed in the 2026-04-22/23 strengthening cycle via the Cauchy-FE uniqueness theorem in `#edge-update-natural-parameter`. Under L0 evidence independence, the default signal is exact. Under L1' correlated evidence, the default signal's direction is preserved (≤ 45° angle to natural-gradient direction) but magnitude degrades by $\sqrt{1-r^2}$. This segment's Fisher-whitened update is the correction under (PI)/Čencov; it recovers sharp B1 under L1' by lifting the inner product from Euclidean to Fisher.
 
-**Relationship to `#identifiability-floor` Instance 2.** Instance 2 (L1' unobservable-$C$ Cramér-Rao floor) refutes single-channel identification of mixture parameters. Under observable $C$, Prop B.7 gives the L1' transfer; under unobservable $C$, no update — including Fisher-whitened — recovers identification. Fisher whitening operates *downstream* of identification: it corrects the update direction given that the Fisher information is known; it does not manufacture Fisher information that the data cannot yield.
+**Relationship to `#discussion-identifiability-floor` Instance 2.** Instance 2 (L1' unobservable-$C$ Cramér-Rao floor) refutes single-channel identification of mixture parameters. Under observable $C$, Prop B.7 gives the L1' transfer; under unobservable $C$, no update — including Fisher-whitened — recovers identification. Fisher whitening operates *downstream* of identification: it corrects the update direction given that the Fisher information is known; it does not manufacture Fisher information that the data cannot yield.
 
 **Composition with the (PI)/Čencov 4th primary instance.** The Fisher-metric cases in `#gain-sector-bridge`'s Verified Instances table (Matrix Kalman, Exponential family in natural parameters) are also AAD-internally forced under (PI)/Čencov. Fisher whitening at the edge-update layer of Section II therefore shares the same AAD-internal axiom as the Kalman / exp-family cases in Section I's update machinery. This is a cross-layer consistency: the (PI) axiom operates uniformly across Sections I and II whenever the natural parameters are parameters on a statistical manifold.
 
@@ -112,4 +112,4 @@ L2-degenerate (perfect correlation, $r \to 1$) is a *structural* collapse — it
 
 - **Relationship to natural-gradient variational inference.** Khan & Lin 2017 (*Conjugate-computation variational inference*) derives natural-gradient VI as a special case of conjugate Bayesian computation. Under (PI)/Čencov, their result becomes AAD-internally derived within sub-scope $\alpha_3$. This composes with `#variational-sector-condition` if that segment lands — natural-gradient VI would be the $\varepsilon = 0$ limit of ε-fidelity B1.
 
-- **Landing context.** This segment lands from `msc/spike-fisher-whitened-update.md` (2026-04-23 Gap A/B cycle). The AAD-internal axiom path via (PI)/Čencov was validated by `msc/spike-jacobian-b1-strengthening.md` (2026-04-23 follow-up); see that spike for the broader discussion of uniqueness-theorem machinery clearing the `#additive-coordinate-forcing` discipline.
+- **Landing context.** This segment lands from `msc/spike-fisher-whitened-update.md` (2026-04-23 Gap A/B cycle). The AAD-internal axiom path via (PI)/Čencov was validated by `msc/spike-jacobian-b1-strengthening.md` (2026-04-23 follow-up); see that spike for the broader discussion of uniqueness-theorem machinery clearing the `#discussion-additive-coordinate-forcing` discipline.

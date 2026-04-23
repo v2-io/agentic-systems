@@ -64,7 +64,7 @@ with $R^\ast = \rho/\alpha$ (Model D). Persistence is $\mathcal V \gt 0$.
 
 *[Candidate axiom — viability composition]*
 
-For $n$ independent sub-agents (architecturally modular, teleologically aligned via route C-i of `#composition-scope-condition`, and facing disturbance channels that factor independently), the composite log-viability decomposes additively:
+For $n$ independent sub-agents (architecturally modular, teleologically aligned via route C-i of `#scope-composite-agent`, and facing disturbance channels that factor independently), the composite log-viability decomposes additively:
 
 $$\mathcal V_c \;=\; \sum_i \phi_i \mathcal V_i \;+\; \mathcal V_{\text{coupling}}$$
 
@@ -158,7 +158,7 @@ Classification: **adjacent family member** in the same sense as IB. The additive
 
 ### 4.1 The candidate
 
-`#identifiability-floor` states structural no-go results from external information-theoretic theorems. Each agent faces an identifiability floor determined by Fisher information: what it *cannot* distinguish with its current observation channel and model class.
+`#discussion-identifiability-floor` states structural no-go results from external information-theoretic theorems. Each agent faces an identifiability floor determined by Fisher information: what it *cannot* distinguish with its current observation channel and model class.
 
 **Candidate composition question.** When $n$ agents pool observations (team, crèche, organization), does the composite identifiability-shortfall decompose additively over sub-agent Fisher information contributions?
 
@@ -446,7 +446,7 @@ Add a working note:
 
 Add a Discussion paragraph:
 
-> **The anchor reaches Section III directly.** The log-of-product-is-sum-of-logs identity extends beyond the strategy DAG: (a) across independent likelihood samples, it gives Fisher-information additivity and log-identifiability-shortfall composition (Cramér-Rao-based, `#identifiability-floor` Instance 2); (b) along a composition tower of Tier 1 sub-agents, it gives additive decomposition of log-contraction-deficit $\mathcal D_{\text{tower}} = \sum_\ell \log(\nu_\ell/\alpha_\ell)$ (`#composition-closure` bridge-lemma-in-sequence); (c) along communication trees with multiplicative trust-weighted gains, it gives additive decomposition of log-reachability per pairwise channel (`#communication-gain`). These are direct corollaries of the chain-layer identity, not new theorems. The anchor's reach is wider than the strategy-DAG context in which it is currently derived.
+> **The anchor reaches Section III directly.** The log-of-product-is-sum-of-logs identity extends beyond the strategy DAG: (a) across independent likelihood samples, it gives Fisher-information additivity and log-identifiability-shortfall composition (Cramér-Rao-based, `#discussion-identifiability-floor` Instance 2); (b) along a composition tower of Tier 1 sub-agents, it gives additive decomposition of log-contraction-deficit $\mathcal D_{\text{tower}} = \sum_\ell \log(\nu_\ell/\alpha_\ell)$ (`#composition-closure` bridge-lemma-in-sequence); (c) along communication trees with multiplicative trust-weighted gains, it gives additive decomposition of log-reachability per pairwise channel (`#communication-gain`). These are direct corollaries of the chain-layer identity, not new theorems. The anchor's reach is wider than the strategy-DAG context in which it is currently derived.
 
 ### 10.3 Follow-on spike: composition's own structural family
 

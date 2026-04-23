@@ -109,8 +109,8 @@ This gives the full current picture: {α, α₁, α₂, α₃, α', β}.
 **Relationship to `#compression-operations`.** Variational compression is the first of the four AAD compression operations; its α' sector structure gives a concrete persistence guarantee for variational representation of $M_t$. The other three operations (strategy $\Sigma_t$, shared-intent, coarse-graining $\Lambda$) may admit similar ε-fidelity analyses where a KL-bound on the compression is available.
 
 **Meta-pattern positioning.**
-- *`#separability-pattern`*: α' sits on the structured-repair tier of the A2'-scope ladder (7th ladder from `#contraction-template`), alongside metric-α₂ and α₃. Each represents "sector condition recovered under explicit additional structure."
-- *`#additive-coordinate-forcing`*: variational persistence sits *outside* this meta-pattern — no logarithmic coordinate is forced; Pinsker is a bound, not a Cauchy-FE argument. α' is an adjacent family member (shape: controlled-approximation-with-quantified-degradation), not a primary instance.
+- *`#discussion-separability-pattern`*: α' sits on the structured-repair tier of the A2'-scope ladder (7th ladder from `#contraction-template`), alongside metric-α₂ and α₃. Each represents "sector condition recovered under explicit additional structure."
+- *`#discussion-additive-coordinate-forcing`*: variational persistence sits *outside* this meta-pattern — no logarithmic coordinate is forced; Pinsker is a bound, not a Cauchy-FE argument. α' is an adjacent family member (shape: controlled-approximation-with-quantified-degradation), not a primary instance.
 
 ## Working Notes
 

@@ -6,14 +6,14 @@ depends:
   - credit-assignment-boundary
   - edge-update-natural-parameter
   - strategic-dynamics-derivation
-  - identifiability-floor
+  - discussion-identifiability-floor
   - strategy-persistence-schema
 stage: draft
 ---
 
 # Derivation: L1' Update-Bias Formula
 
-Under L1' correlated-evidence regimes with unobservable common cause, the default log-odds edge-update ( #edge-update-natural-parameter) converges to a **biased fixed point** — edges settle at log-odds values that match the L1' root-probability rather than the marginal-edge truth. This segment derives a closed-form bias formula for the two-edge OR-root case, verifies it via Monte Carlo, and composes it with `#identifiability-floor` Instance 2 and `#strategy-persistence-schema`'s forgetting prerequisite to produce a **dual forgetting-rate requirement** on strategic persistence.
+Under L1' correlated-evidence regimes with unobservable common cause, the default log-odds edge-update ( #edge-update-natural-parameter) converges to a **biased fixed point** — edges settle at log-odds values that match the L1' root-probability rather than the marginal-edge truth. This segment derives a closed-form bias formula for the two-edge OR-root case, verifies it via Monte Carlo, and composes it with `#discussion-identifiability-floor` Instance 2 and `#strategy-persistence-schema`'s forgetting prerequisite to produce a **dual forgetting-rate requirement** on strategic persistence.
 
 The bias is the quantitative companion to F13's structural-identifiability-floor result: F13 shows identification is *structurally impossible* from single-channel observation; this segment shows the resulting *magnitude drift* is bounded, Lipschitz in correlation strength $\rho$, and Cramér-Rao-floored under forgetting.
 
@@ -41,7 +41,7 @@ $$\lambda_k^{\text{L1'-FP}} = \lambda_k^\ast + \int_0^\infty e^{-\eta_{\text{edg
 
 (for constant-$\iota$ approximation). Each edge's log-odds converges to a **wrong value** that matches the L1' root probability rather than the marginal truth. **Plan-level correctness is purchased at edge-level miscalibration**: the agent predicts plan outcomes correctly on-policy (the L1' mixture on the sibling matches the L1' marginal), but its per-edge credences are systematically biased.
 
-This is the quantitative companion to F1's on-policy undetectability (`#identifiability-floor` Instance 1) at the marginal level: the bias accumulates at rate $1/(n_k+1)$, converges to a bounded non-zero value, and is *not detectable from on-policy data* because the mixture's marginal is matched to the on-policy observations.
+This is the quantitative companion to F1's on-policy undetectability (`#discussion-identifiability-floor` Instance 1) at the marginal level: the bias accumulates at rate $1/(n_k+1)$, converges to a bounded non-zero value, and is *not detectable from on-policy data* because the mixture's marginal is matched to the on-policy observations.
 
 ### Observable-$C$ zero-bias result
 
@@ -61,7 +61,7 @@ When $C$ is unobservable and the agent uses experience discounting at rate $\lam
 
 $$B_k^{\text{SS}}(\rho, \lambda) = -\frac{\iota_k \cdot \rho \cdot (1 - \mu_{\bar k})}{(1 - \lambda) \cdot \left[(1 - \mu_1)^2 + (1 - \mu_2)^2\right]}.$$
 
-The Cramér-Rao floor from `#identifiability-floor` Instance 2's rank-1 Fisher matrix translates directly: no unbiased estimator can reduce the bias below $\rho / (1 - \lambda) \cdot [\text{constant}]$. The bias is structurally present in any online estimator operating on single-channel observation of one child edge, not merely the specific default-signal estimator.
+The Cramér-Rao floor from `#discussion-identifiability-floor` Instance 2's rank-1 Fisher matrix translates directly: no unbiased estimator can reduce the bias below $\rho / (1 - \lambda) \cdot [\text{constant}]$. The bias is structurally present in any online estimator operating on single-channel observation of one child edge, not merely the specific default-signal estimator.
 
 ### Dual forgetting-rate requirement
 
@@ -108,7 +108,7 @@ Full simulation parameters and results in `msc/spike-l1-update-bias.md` §7.
 
 ## Discussion
 
-**Composition with `#identifiability-floor` Instance 2.** F13 establishes the structural no-go for single-channel L1' mixture identification (Cramér-Rao rank-1); this segment gives the **quantitative numerical-floor** companion — the bias is bounded, continuous in $\rho$, and vanishes at $\rho = 0$. Instance 2 answers "is it identifiable?" (no, structurally); this segment answers "if we update anyway, how wrong is the result?" (bounded drift to a biased fixed point).
+**Composition with `#discussion-identifiability-floor` Instance 2.** F13 establishes the structural no-go for single-channel L1' mixture identification (Cramér-Rao rank-1); this segment gives the **quantitative numerical-floor** companion — the bias is bounded, continuous in $\rho$, and vanishes at $\rho = 0$. Instance 2 answers "is it identifiable?" (no, structurally); this segment answers "if we update anyway, how wrong is the result?" (bounded drift to a biased fixed point).
 
 **Composition with `#fisher-whitened-update-rule`.** The Fisher-whitened update recovers sharp *directional* fidelity but does not reduce the *magnitude* bias — Fisher whitening operates downstream of identification, and Instance 2's obstruction is an identification obstruction. The full picture for the default signal function under L1': **direction preserved (angle ≤ 45° per `#fisher-whitened-update-rule`)**, **magnitude biased by $B_k(\rho)$ with Cramér-Rao floor under forgetting (this segment)**, **observable-$C$ restores exactness (Prop B.7)**, **undetectable on-policy (Instance 1 + Instance 2 composition)**. This is the honest quantitative account of what the default signal function does under Gemini's Gap A (validation under correlated failures).
 

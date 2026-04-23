@@ -6,7 +6,7 @@ depends:
   - agent-model
   - event-driven-dynamics
   - causal-structure
-  - scope-condition
+  - scope-adaptive-system
   - observation-function
 stage: draft
 ---
@@ -17,7 +17,7 @@ Derivation showing that $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the *unique* upd
 
 ## Setup
 
-We work within AAD's scope ( #scope-condition): an agent coupled to an environment $\Omega$ through observation and action channels, with residual uncertainty.
+We work within AAD's scope ( #scope-adaptive-system): an agent coupled to an environment $\Omega$ through observation and action channels, with residual uncertainty.
 
 **Universe of information at event time $\tau$.** The following information exists (in the broadest ontological sense) at the moment event $e_\tau$ occurs:
 
@@ -39,11 +39,11 @@ $$M_{\tau^+} \text{ cannot depend on } \{e_{\tau'}\}_{\tau' \gt \tau}$$
 
 This is a physical constraint — the most primitive one. In a classical universe, information from the future is simply not available. Even if the agent can *predict* future events, those predictions are part of $M_{\tau^-}$ (they are internal computations, not future information).
 
-**Constraint 2 — Partial observability ( #scope-condition).** The agent cannot access $\Omega_\tau$ directly. Its only interface with the environment is through the event $e_\tau$, which is a lossy function of $\Omega_\tau$ (via #observation-function):
+**Constraint 2 — Partial observability ( #scope-adaptive-system).** The agent cannot access $\Omega_\tau$ directly. Its only interface with the environment is through the event $e_\tau$, which is a lossy function of $\Omega_\tau$ (via #observation-function):
 
 $$M_{\tau^+} \text{ cannot depend on } \Omega_\tau \text{ except through } e_\tau$$
 
-This is a scope constraint. If the agent could access $\Omega$ directly, the residual uncertainty condition in #scope-condition would be trivially violable.
+This is a scope constraint. If the agent could access $\Omega$ directly, the residual uncertainty condition in #scope-adaptive-system would be trivially violable.
 
 **Constraint 3 — State completeness ( #agent-model).** $M_{\tau^-}$ is the agent's *complete* internal state just before event $e_\tau$. There is no information about the agent's past that is available to the update mechanism but not encoded in $M_{\tau^-}$:
 

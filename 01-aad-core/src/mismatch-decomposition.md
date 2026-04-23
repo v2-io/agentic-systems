@@ -6,7 +6,7 @@ depends:
   - mismatch-signal
   - observation-function
   - agent-model
-  - scope-condition
+  - scope-adaptive-system
 stage: claims-verified
 ---
 
@@ -18,7 +18,7 @@ Expected squared mismatch decomposes into reducible model error and irreducible 
 
 *[Derived (mismatch-decomposition, Prop 5.1 from TFT)]*
 
-For any agent-environment pair within AAD's scope ( #scope-condition), when observation noise is non-degenerate or the model's predictive mean is misspecified:
+For any agent-environment pair within AAD's scope ( #scope-adaptive-system), when observation noise is non-degenerate or the model's predictive mean is misspecified:
 
 $$\mathbb{E}[\Vert\delta_t\Vert^2] = \underbrace{\mathbb{E}[\Vert\hat{o}_t - \bar{o}_t\Vert^2]}_{\text{model error (reducible)}} + \underbrace{\mathbb{E}[\text{Var}(o_t \mid \Omega_t, a_{t-1})]}_{\text{observation noise (irreducible)}} \gt 0$$
 
@@ -26,7 +26,7 @@ where $\bar o_t = \mathbb{E}[o_t \mid \Omega_t, a_{t-1}]$ is the true conditiona
 
 ### Derivation
 
-1. By #scope-condition, $H(\Omega_t \mid \mathcal C_t) \gt 0$ — residual uncertainty persists.
+1. By #scope-adaptive-system, $H(\Omega_t \mid \mathcal C_t) \gt 0$ — residual uncertainty persists.
 2. By #agent-model, the model generates predictions $\hat o_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$.
 3. Decompose mismatch into model error and noise. The cross-term vanishes by the fresh-noise assumption (GA-1): $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(\Omega_t, a_{t-1})$. Condition on $(\Omega_t, a_{t-1}, \mathcal C_{t-1})$; then both $\bar o_t$ and $\hat o_t$ are fixed, and $\mathbb{E}[o_t - \bar o_t \mid \Omega_t, a_{t-1}, \mathcal C_{t-1}] = \mathbb{E}[o_t - \bar o_t \mid \Omega_t, a_{t-1}] = 0$ by definition of $\bar o_t$ and GA-1. The outer expectation gives zero. This is orthogonality (uncorrelated), not independence.
 4. Term (ii) is positive when observation noise is non-degenerate. Term (i) is positive when the model's predictive mean differs from the true conditional mean. Either suffices.

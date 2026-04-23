@@ -3,7 +3,7 @@ slug: symbiogenic-composition
 type: hypothesis
 status: robust-qualitative
 depends:
-  - composition-scope-condition
+  - scope-composite-agent
   - objective-functional
   - strategy-dimension
   - structural-change-as-parametric-limit
@@ -12,13 +12,13 @@ stage: draft
 
 # Hypothesis: Symbiogenic Composition
 
-Symbiogenesis is an asymmetric composition mechanism in which one agent (the *host*) integrates another (the *endosymbiont*) as a specialized sub-component, with the endosymbiont's objective gradually subsumed into the host's. It is distinct from peer coupling ( #composition-closure) and from population-level restructuring (the extreme transition motif drawn from Miller 2022, discussed in #structural-adaptation-necessity): symbiogenesis is how composite agents *come into existence* by crossing the #composition-scope-condition from below. The mechanism is well-attested empirically (eukaryote formation, firm mergers, legal-precedent adoption, language families) but formally underspecified within AAD. This segment captures the phenomenon and flags the specific formalization gaps.
+Symbiogenesis is an asymmetric composition mechanism in which one agent (the *host*) integrates another (the *endosymbiont*) as a specialized sub-component, with the endosymbiont's objective gradually subsumed into the host's. It is distinct from peer coupling ( #composition-closure) and from population-level restructuring (the extreme transition motif drawn from Miller 2022, discussed in #structural-adaptation-necessity): symbiogenesis is how composite agents *come into existence* by crossing the #scope-composite-agent from below. The mechanism is well-attested empirically (eukaryote formation, firm mergers, legal-precedent adoption, language families) but formally underspecified within AAD. This segment captures the phenomenon and flags the specific formalization gaps.
 
 ## Formal Expression
 
 *[Hypothesis (symbiogenic-composition)]*
 
-Given two purposeful agents $A_h$ (host) and $A_e$ (endosymbiont), each satisfying #scope-condition, symbiogenic composition is a process on the joint state space with three coupled dynamics:
+Given two purposeful agents $A_h$ (host) and $A_e$ (endosymbiont), each satisfying #scope-agency, symbiogenic composition is a process on the joint state space with three coupled dynamics:
 
 ### (S-1) Objective absorption
 
@@ -26,7 +26,7 @@ The endosymbiont's objective $O_e$ transforms toward alignment with or derivatio
 
 $$O_e(\tau) \;\xrightarrow{\tau \to \tau_{\text{consolidated}}}\; \mathcal D_e(O_h)$$
 
-where $\mathcal D_e$ is a derivation functional (in the sense of route (C-ii) in #composition-scope-condition): $O_e$ becomes a sub-objective derived from $O_h$. Before: $O_h$ and $O_e$ are independent objectives, no route of #composition-scope-condition applies, and the pair is a multi-agent system ( #multi-agent-scope) rather than a composite. After: $O_e$ is a role within $O_h$; route (C-ii) applies; the composite $(A_h, A_e)$ satisfies the composition scope condition.
+where $\mathcal D_e$ is a derivation functional (in the sense of route (C-ii) in #scope-composite-agent): $O_e$ becomes a sub-objective derived from $O_h$. Before: $O_h$ and $O_e$ are independent objectives, no route of #scope-composite-agent applies, and the pair is a multi-agent system ( #multi-agent-scope) rather than a composite. After: $O_e$ is a role within $O_h$; route (C-ii) applies; the composite $(A_h, A_e)$ satisfies the composition scope condition.
 
 ### (S-2) Function transfer
 
@@ -50,7 +50,7 @@ At consolidation, the joint system is a single composite agent $A_c$ whose subst
 
 $$X_c = \big(M_c, G_c\big) = \big(M_h \cup \mathcal F(M_e, \Sigma_e),\; (O_c, \Sigma_c)\big) \quad \text{with } O_c \approx O_h$$
 
-The endosymbiont persists as a specialized sub-component of the host, not as an independent agent. The #composition-scope-condition is now satisfied; the peer-coupling machinery of #composition-closure applies to the resulting composite.
+The endosymbiont persists as a specialized sub-component of the host, not as an independent agent. The #scope-composite-agent is now satisfied; the peer-coupling machinery of #composition-closure applies to the resulting composite.
 
 ## Epistemic Status
 
@@ -75,7 +75,7 @@ The three dynamics (S-1), (S-2), (S-3) are proposed schemas, not results. A foll
 
 **The role of this mechanism in Section III.** Three distinct composition mechanisms are now in scope:
 
-1. **Peer coupling** ( #composition-closure, #team-persistence, #tempo-composition) — sub-agents interact through shared environment; closure defect measures faithfulness of projection. Presumes scope-satisfaction via at least one route of #composition-scope-condition (not a scalar $U_O$ threshold).
+1. **Peer coupling** ( #composition-closure, #team-persistence, #tempo-composition) — sub-agents interact through shared environment; closure defect measures faithfulness of projection. Presumes scope-satisfaction via at least one route of #scope-composite-agent (not a scalar $U_O$ threshold).
 2. **Extreme transition motif** (Miller 2022; introduced in #structural-adaptation-necessity; pending dedicated segments for composition-transition dynamics, latent structural diversity, and endogenous coupling) — population-level restructuring via neutral drift / niche creation / cascading displacement. $U_O$ shifts across a population as agent types replace one another.
 3. **Symbiogenesis** (this segment) — hierarchical absorption. $U_O$ crosses the composition scope condition from below, creating a composite that did not previously exist.
 

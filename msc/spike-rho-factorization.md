@@ -493,11 +493,11 @@ The parent spike should be revised along the following lines:
 4. **Downgrade the overall tier.** The coarse form remains *exact* for Model D linear; the fine form with (R-V) is *conditional* (on the independence-of-sources Pythagorean conditions holding approximately, which is a sub-scope-$\alpha$ assumption) and in the full-generality case is *heuristic / first-order-approximation*.
 5. **The confounding discussion in §5 of the parent spike should be preserved but reframed.** The four confounding channels now manifest as cross terms in (R-V), not as coupling between independent multiplicative factors. This is *more rigorous*, not less — the cross terms have explicit mediation-analysis interpretation (Imai et al. 2010).
 
-### 13.2 Impact on the `#identifiability-floor` claim
+### 13.2 Impact on the `#discussion-identifiability-floor` claim
 
 The parent spike's §5.3 claims the decomposition is Instance 3 of the identifiability-floor pattern. This claim *survives* the reframe, but with a slightly different content: under Regime C (observational, fixed coupling), the full (R-V) decomposition with its cross terms is not identifiable; under Regime A (rotation / natural experiments) the decomposition *with cross terms treated as a third identifiable quantity* (mediation analysis) becomes identifiable. The Instance 3 status is preserved.
 
-### 13.3 Impact on `#separability-pattern` ladder
+### 13.3 Impact on `#discussion-separability-pattern` ladder
 
 The seventh ladder (internal-external attribution) stands. The "separable core" is the Regime A case under the coarse decomposition; the "structured repair" is (R-V) under functional-form assumptions (the cross terms) + Regime B; the "general open" is (R-V) under Regime C with unrestricted cross terms. The pattern positioning is actually *strengthened* by the reframe, because the structured-repair ring now has a concrete technical content (mediation analysis on the cross terms) rather than "functional-form assumptions on $f, g, h, Q$" as abstract placeholders.
 
@@ -527,8 +527,8 @@ The seventh ladder (internal-external attribution) stands. The "separable core" 
 - Downgrade the fine decomposition from *robust-qualitative* to *conditional* (under first-order approximation) or *heuristic* (in general).
 - Preserve the coarse decomposition $\mathcal V = \log\lVert\delta_\text{crit}\rVert - \log\rho + \log\alpha$ at *exact* tier — this is unaffected.
 - Reframe the confounding analysis in §5 of the parent spike as *cross terms in a variance decomposition* rather than *coupling between independent multiplicative factors*. This is a technical upgrade: mediation analysis (Imai et al. 2010) gives concrete quantitative content to cross terms; "coupling between multiplicative factors" was always hand-wavy.
-- Keep `#identifiability-floor` Instance 3 status. Under Regime C, the cross-terms are not separately identifiable; under Regime A, rotation-style experiments resolve them.
-- Keep `#separability-pattern` seventh-ladder status. The separable core + structured repair + general open frame survives.
+- Keep `#discussion-identifiability-floor` Instance 3 status. Under Regime C, the cross-terms are not separately identifiable; under Regime A, rotation-style experiments resolve them.
+- Keep `#discussion-separability-pattern` seventh-ladder status. The separable core + structured repair + general open frame survives.
 
 **Recommendation for promotion of the parent spike:** With the reframe, the parent spike can be promoted to `#internal-external-decomposition` (new appendix segment) at *conditional* tier for the fine decomposition and *exact* for the coarse decomposition. Without the reframe, the (R-F) weakest link forces the fine decomposition to *heuristic*, which erodes the value of the fine split.
 
@@ -551,7 +551,7 @@ The seventh ladder (internal-external attribution) stands. The "separable core" 
 - **Outcome.** (C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms.
 - **Four specific findings.** (1) $\rho$ is agent-conditional, not environmental. (2) Variance-additivity is the native structure. (3) $f$ and $g$ are not independent — they entangle at source. (4) No AAD-internal additivity axiom motivates $\log\rho$ decomposition.
 - **Honest reframe.** (R-V): $\rho^2 = \rho^2_\text{irr} + \Delta_{\mathcal M}^2 + \Delta_\pi^2 + \text{cross}$, variance-additive with explicit cross terms. (R-2T): agent-controllable vs environment-irreducible two-term split if the fine decomposition is not essential. (R-KL): information-geometric Pythagorean decomposition, strongest under sub-scope $\alpha$.
-- **Impact on parent spike.** Coarse decomposition survives at *exact*; fine decomposition is *conditional* under (R-V) first-order approximation or *heuristic* in general. `#identifiability-floor` Instance 3 status survives; `#separability-pattern` seventh-ladder status survives. `#additive-coordinate-forcing` is *not* a primary instance; the logarithmic coordinate here is *matched rather than forced*, like the Lyapunov and IB adjacent-family members.
+- **Impact on parent spike.** Coarse decomposition survives at *exact*; fine decomposition is *conditional* under (R-V) first-order approximation or *heuristic* in general. `#discussion-identifiability-floor` Instance 3 status survives; `#discussion-separability-pattern` seventh-ladder status survives. `#additive-coordinate-forcing` is *not* a primary instance; the logarithmic coordinate here is *matched rather than forced*, like the Lyapunov and IB adjacent-family members.
 - **Small-$\Delta$ regime.** (R-F) is approximately correct as a first-order Taylor expansion around near-optimal model + near-benign policy. This is an honest special case, not a derivation.
 - **Recommendation.** The parent spike should promote with the (R-V) reframe: retain the coarse decomposition at exact tier; express the fine decomposition with explicit cross terms; downgrade the fine tier from *robust-qualitative* to *conditional* (with small-$\Delta$ scope) or *heuristic* (in general). This is still a substantial contribution — the coarse decomposition, the regime structure, the identifiability-floor instance, and the separability-pattern ladder all stand.
 

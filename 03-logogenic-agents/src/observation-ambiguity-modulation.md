@@ -3,7 +3,7 @@ slug: observation-ambiguity-modulation
 type: scope
 status: conditional
 depends:
-  - ai-agent-as-act-agent
+  - scope-logogenic-agent
   - coupled-update-dynamics
   - directed-separation
   - section-ii-survival

@@ -3,7 +3,7 @@ slug: worked-example-strategy
 type: worked-example
 status: conditional
 depends:
-  - scope-condition
+  - scope-agency
   - causal-structure
   - agent-model
   - mismatch-signal
@@ -49,7 +49,7 @@ At each step, pulling arm $k$ yields reward $r_t \in \{0, 1\}$ with $P(r_t = 1 \
 
 Section I quantities map as in #worked-example-bandit. The brief summary here establishes the epistemic baseline; the novel content is Section II.
 
-**Scope** ( #scope-condition). $\Omega_t = (\theta_1(t), \theta_2(t), \theta_3(t))$; $\mathcal{A} = \{1, 2, 3\}$; residual uncertainty persists. *Exact.*
+**Scope** ( #scope-agency). $\Omega_t = (\theta_1(t), \theta_2(t), \theta_3(t))$; $\mathcal{A} = \{1, 2, 3\}$; residual uncertainty persists. *Exact.*
 
 **Model** ( #agent-model). $M_t = (\alpha_k, \beta_k)_{k=1}^{3}$ — Beta posteriors per arm, with exponential discounting (effective window $W = 20$):
 
@@ -364,7 +364,7 @@ Section II tells the agent: *switch to arm 2, but first explore to confirm — t
 
 | AAD Concept | Bandit-Strategy Mapping | Status | Notes |
 |---|---|---|---|
-| Scope ( #scope-condition) | Exact | Definitional | Same as #worked-example-bandit |
+| Scope ( #scope-agency) | Exact | Definitional | Same as #worked-example-bandit |
 | Model $M_t$ ( #agent-model) | Exact | Structural | Beta posteriors per arm |
 | Mismatch $\delta_t$ ( #mismatch-signal) | Exact | Standard | Prediction error |
 | Update gain $\eta^\ast$ ( #update-gain) | Exact | Conjugate | Beta-Bernoulli gain |

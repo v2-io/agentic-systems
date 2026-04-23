@@ -3,7 +3,7 @@ slug: context-turnover
 type: observation
 status: exact
 depends:
-  - ai-agent-as-act-agent
+  - scope-logogenic-agent
   - chronica
   - persistence-condition
   - model-sufficiency

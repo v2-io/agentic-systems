@@ -290,8 +290,8 @@ Content (summarizing this spike):
 ### 9.4 Cross-cutting connections
 
 - **`#additive-coordinate-forcing`** (2026-04-23 meta-segment): variational persistence sits outside the meta-pattern — no logarithmic coordinate is *forced*; the Pinsker $\sqrt\varepsilon$ is a bound, not a coordinate transform. Classify as *outside* the meta-pattern's three-layer structure. This is informative: it shows the meta-pattern's scope boundary (the pattern is about coordinate-forcing via Cauchy-FE, not about approximation-quantification via Pinsker).
-- **`#identifiability-floor`**: ε-A2' is a *positive* result, the opposite structural pattern from identifiability-floor's external-no-go results. No direct floor-instance.
-- **`#separability-pattern`**: ε-A2' introduces a new *ladder* position — between "separable core" (sub-scope α, clean derivation) and "general open" (sub-scope β, per-agent verification), ε-A2' is the *structured-repair* row for the VI agent class. This strengthens `#separability-pattern`'s three-part characterization by populating the structured-repair half of the contraction ladder.
+- **`#discussion-identifiability-floor`**: ε-A2' is a *positive* result, the opposite structural pattern from identifiability-floor's external-no-go results. No direct floor-instance.
+- **`#discussion-separability-pattern`**: ε-A2' introduces a new *ladder* position — between "separable core" (sub-scope α, clean derivation) and "general open" (sub-scope β, per-agent verification), ε-A2' is the *structured-repair* row for the VI agent class. This strengthens `#discussion-separability-pattern`'s three-part characterization by populating the structured-repair half of the contraction ladder.
 
 ## 10. Epistemic assessment
 
@@ -334,4 +334,4 @@ Content (summarizing this spike):
 - Tsybakov, A. B. (2009). *Introduction to Nonparametric Estimation*. Springer. Lemma 2.5 (Pinsker).
 - Wainwright, M. & Jordan, M. (2008). Graphical models, exponential families, and variational inference. *Found. Trends Mach. Learn.* 1(1–2):1–305. §§2.3, 3.4, 5 (mean-field VI).
 - Aguilera, M., Millidge, B., Tschantz, A. & Buckley, C. L. (2022). How particular is the physics of the free energy principle? *Phys. Life Rev.* 40:24–50. (FEP-flow narrow-validity cite.)
-- AAD segments cited: `#sector-condition-derivation`, `#gain-sector-bridge`, `#sector-persistence-template`, `#strategy-complexity-cost`, `#strategy-cost-regret-bound`, `#additive-coordinate-forcing`, `#identifiability-floor`, `#separability-pattern`, `#structural-adaptation-necessity`.
+- AAD segments cited: `#sector-condition-derivation`, `#gain-sector-bridge`, `#sector-persistence-template`, `#strategy-complexity-cost`, `#strategy-cost-regret-bound`, `#additive-coordinate-forcing`, `#discussion-identifiability-floor`, `#discussion-separability-pattern`, `#structural-adaptation-necessity`.

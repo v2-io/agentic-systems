@@ -3,7 +3,7 @@ slug: worked-example-bandit
 type: worked-example
 status: conditional
 depends:
-  - scope-condition
+  - scope-agency
   - causal-structure
   - agent-model
   - model-sufficiency
@@ -33,7 +33,7 @@ $$\mu_i(t+1) = \mu_i(t) + w_i(t), \quad w_i(t) \sim \mathcal{N}(0, q), \quad q =
 
 ## Chain Instantiation
 
-### Scope ( #scope-condition)
+### Scope ( #scope-agency)
 
 *Mapping: exact.*
 

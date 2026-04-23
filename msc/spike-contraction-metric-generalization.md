@@ -10,7 +10,7 @@ relates_to:
   - gain-sector-bridge
   - composition-closure
   - critical-mass-composition
-  - separability-pattern
+  - discussion-separability-pattern
   - multi-timescale-stability
   - msc/spike-critical-mass-composition.md
   - msc/spike-adaptive-gain-dynamics.md
@@ -29,7 +29,7 @@ The template's **(T2) is a *one-point* sector bound matched to a *quadratic* Lya
 
 2. **Sub-scope β is absent.** PID, rule-based agents, variational-approximate posteriors, and non-convex agents beyond basin fail the Euclidean sector condition generically. `#sector-condition-derivation`'s A2' sub-scope β entry is "A2' must be verified per-system" — the current architecture has no lift that generically buys β.
 
-3. **Tier 2/3 agents lose closed form.** `#composition-closure` requires the **incremental sector bound** (DA2'-inc, strong monotonicity across the whole state space), which is strictly stronger than (T2). Tier 2 / Tier 3 sit at "local only" or "verify per-domain" — `#separability-pattern`'s "general open" under the Contraction ladder.
+3. **Tier 2/3 agents lose closed form.** `#composition-closure` requires the **incremental sector bound** (DA2'-inc, strong monotonicity across the whole state space), which is strictly stronger than (T2). Tier 2 / Tier 3 sit at "local only" or "verify per-domain" — `#discussion-separability-pattern`'s "general open" under the Contraction ladder.
 
 4. **Composition results (`#critical-mass-composition`) are Tier-1-symmetric-matched only.** `#composition-closure` acquires composite $\alpha_c$ via weakest-link bound; `#critical-mass-composition` pushes to a closed form for matched-symmetric-Tier-1 pairs. Heterogeneous-architecture composites are §6.1 obstruction territory.
 
@@ -346,9 +346,9 @@ which matches `#critical-mass-composition`'s form (setting $k = \gamma\mathcal{T
 **Post-contraction-metric state:** Bridge lemma is derived for:
 - **Tier 1M (metric-contraction-global):** Kalman / exp-family / strongly-convex / L2-regularized / linear-Hurwitz. Global contraction in a specified metric. Composite bridge lemma via §4.1 compositional theorems.
 - **Tier 2M (metric-contraction-basin):** PID-with-bounded-plant-Lipschitz / non-convex-within-basin. Contraction in basin-specific metric. Composite bridge lemma valid in the intersection-of-basins, with basin-crossing as structural-adaptation trigger.
-- **Tier 3M (no global metric):** Rule-based / variational / severely-misspecified. Bridge lemma remains discussion-grade; `#separability-pattern`'s "general open" entry.
+- **Tier 3M (no global metric):** Rule-based / variational / severely-misspecified. Bridge lemma remains discussion-grade; `#discussion-separability-pattern`'s "general open" entry.
 
-**Net:** Tier 1 absorbs metric-α₁ and metric-α₂ cases; Tier 2 becomes basin-chart structure; Tier 3 shrinks to the cases where metric formulation genuinely fails. The three-part `#separability-pattern` shape is preserved with the separable-core expanded and the structured-repair layer made more explicit (basin-chart).
+**Net:** Tier 1 absorbs metric-α₁ and metric-α₂ cases; Tier 2 becomes basin-chart structure; Tier 3 shrinks to the cases where metric formulation genuinely fails. The three-part `#discussion-separability-pattern` shape is preserved with the separable-core expanded and the structured-repair layer made more explicit (basin-chart).
 
 ### 4.5 Heterogeneous composition — the composition bridge lemma
 
@@ -388,17 +388,17 @@ Four items stay β: variational, rule-based, severely-misspecified, human-judgme
 
 One item is structurally unchanged: per-step SGD (noise-is-disturbance treatment identical under Euclidean and metric formulations).
 
-### 5.4 How this interacts with `#separability-pattern`
+### 5.4 How this interacts with `#discussion-separability-pattern`
 
-`#separability-pattern`'s "A2' sub-scope partition is a binary special case" observation (its own §Discussion) becomes **three-part** under the metric formulation:
+`#discussion-separability-pattern`'s "A2' sub-scope partition is a binary special case" observation (its own §Discussion) becomes **three-part** under the metric formulation:
 
 - Separable core: metric-α₁ (Euclidean metric, trivial).
 - Structured repair: metric-α₂ (specific non-Euclidean metric derived under explicit conditions — basin-Lipschitz, plant-Lipschitz, Fisher-conditioning).
 - General open: metric-β (smoothness / target-validity obstructions).
 
-This is the **third part that `#separability-pattern` flagged as missing** in its §Discussion under A2'. The metric formulation supplies it: the structured-repair tier is "derive contraction in a problem-appropriate metric, under stated conditions on smoothness / Lipschitz / basin structure."
+This is the **third part that `#discussion-separability-pattern` flagged as missing** in its §Discussion under A2'. The metric formulation supplies it: the structured-repair tier is "derive contraction in a problem-appropriate metric, under stated conditions on smoothness / Lipschitz / basin structure."
 
-**Consequence:** A2' now fits `#separability-pattern` as a proper three-tier ladder, making it **the seventh ladder** in the six-ladder enumeration (Correlation, Convention, Architecture, Contraction, Identification-regime, Scope-hierarchy + **A2'-scope**).
+**Consequence:** A2' now fits `#discussion-separability-pattern` as a proper three-tier ladder, making it **the seventh ladder** in the six-ladder enumeration (Correlation, Convention, Architecture, Contraction, Identification-regime, Scope-hierarchy + **A2'-scope**).
 
 ---
 
@@ -438,9 +438,9 @@ The Lohmiller-Slotine theorem statement is "local contraction on a region implie
 
 ### 6.6 Identifiability floor instances
 
-The metric formulation operates **downstream of identification.** It assumes the correction function $F$ points in a valid direction (a B1-analog at the Jacobian level). If B1 fails (severe misspecification, unidentifiable meta-gain), the metric cannot recover — a wrong-direction correction in any metric is still wrong-direction. This is the `#identifiability-floor` intersection: contraction metrics are silent on identification.
+The metric formulation operates **downstream of identification.** It assumes the correction function $F$ points in a valid direction (a B1-analog at the Jacobian level). If B1 fails (severe misspecification, unidentifiable meta-gain), the metric cannot recover — a wrong-direction correction in any metric is still wrong-direction. This is the `#discussion-identifiability-floor` intersection: contraction metrics are silent on identification.
 
-**Consequence:** the metric formulation and `#identifiability-floor` are *orthogonal* architectural moves. Metric lifts the geometry-of-correction half of sub-scope α; identifiability-floor lives on the what-correction-to-make half. The metric formulation *cannot* escape identifiability-floor constraints.
+**Consequence:** the metric formulation and `#discussion-identifiability-floor` are *orthogonal* architectural moves. Metric lifts the geometry-of-correction half of sub-scope α; identifiability-floor lives on the what-correction-to-make half. The metric formulation *cannot* escape identifiability-floor constraints.
 
 ---
 
@@ -459,7 +459,7 @@ Four promotion options, ranked:
 5. Present the compositional theorems (§4.1) as a cross-reference / theorem-import from Slotine 2003.
 6. State the compositional lift (§4.2 — topology-indexed bridge lemma, §4.3 — (CM2-M) heterogeneous critical-mass).
 7. Document the failure modes (§6) honestly in a dedicated "Where the metric formulation does not lift AAD" section.
-8. Cross-reference `#separability-pattern` as the seventh ladder (A2'-scope with metric-α₁ / metric-α₂ / metric-β).
+8. Cross-reference `#discussion-separability-pattern` as the seventh ladder (A2'-scope with metric-α₁ / metric-α₂ / metric-β).
 
 **Rationale:** the metric formulation is a genuine structural extension that deserves a segment rather than a paragraph. Retaining `#sector-persistence-template` parallel preserves the Euclidean-template narrative for readers who do not need the metric machinery and preserves the existing six instantiations as first-class items. `#contraction-template` sits as the more general form, with `#sector-persistence-template` as its $M = I$ specialization.
 
@@ -490,7 +490,7 @@ A new meta-segment `#contraction-template` at type:result, status:conditional (c
 - `#gain-sector-bridge`: clean up the "Weighted-norm subtlety" — move matrix-Kalman's $(P^-)^{-1}$-weighting to the information-metric statement in `#contraction-template`, removing the $\kappa(P^-)$ degradation.
 - `#composition-closure`: add topology-indexed bridge-lemma results to the Tier-2-Tier-3 discussion; cross-reference Slotine 2003's compositional theorems.
 - `#critical-mass-composition`: add (CM2-M) heterogeneous generalization; note that (CM2) is the matched-symmetric specialization.
-- `#separability-pattern`: promote A2'-scope from "binary special case" to a full seventh ladder (metric-α₁ / metric-α₂ / metric-β).
+- `#discussion-separability-pattern`: promote A2'-scope from "binary special case" to a full seventh ladder (metric-α₁ / metric-α₂ / metric-β).
 - `#adversarial-destabilization`: add a note in Working Notes that contraction metrics cover the cooperative half; adversarial remains in game-theoretic territory (§6.2).
 - `#multi-timescale-stability`: add cross-reference to contraction-metric cascade composition as an alternative to singular-perturbation reduction (§6.4).
 
@@ -508,7 +508,7 @@ A new meta-segment `#contraction-template` at type:result, status:conditional (c
 
 4. **§4 compositional lift.** Slotine 2003's three composition theorems import directly into Section III as the topology-indexed bridge lemma and the heterogeneous critical-mass generalization (CM2-M). Strength: derived via theorem-import, conditional on Slotine's theorems being correctly stated (which they are — Slotine 2003 is standard).
 
-5. **§5 redrawn A2' partition.** metric-α₁ / metric-α₂ / metric-β as a proper three-tier scope partition, filling `#separability-pattern`'s "A2' is binary" gap. Strength: structural/derived from §§2–3.
+5. **§5 redrawn A2' partition.** metric-α₁ / metric-α₂ / metric-β as a proper three-tier scope partition, filling `#discussion-separability-pattern`'s "A2' is binary" gap. Strength: structural/derived from §§2–3.
 
 6. **§6 honest failure modes.** Non-smooth (rule-based), adversarial (strategic equilibria), state-dependent-metric stochastic, multi-basin, identifiability-floor intersection. These are genuine barriers, not softening retreats.
 
@@ -552,7 +552,7 @@ A new meta-segment `#contraction-template` at type:result, status:conditional (c
 - Sub-scope β shrinks to the four cases where the metric formulation genuinely fails (variational, rule-based, severely-misspecified, human-judgment — all for distinct reasons named in §3).
 - `#composition-closure` gets topology-indexed closure (parallel / cascade / feedback / general) via Slotine 2003 import. Tier 1/2/3 becomes Tier 1M / 2M / 3M with sharper tier boundaries.
 - `#critical-mass-composition` (CM2) generalizes to (CM2-M) — heterogeneous sub-agents, not just matched-symmetric.
-- `#separability-pattern` gains a seventh ladder (A2'-scope), closing the binary-special-case gap flagged in its Discussion.
+- `#discussion-separability-pattern` gains a seventh ladder (A2'-scope), closing the binary-special-case gap flagged in its Discussion.
 - `#adversarial-destabilization` remains the canonical tool for adversarial regimes; contraction metrics do not compete, they complement.
 
 This is **a substantive architectural move** that lifts Section III's coverage from "linear-Kalman-centric with Tier 2/3 caveats" to "broadly-nonlinear-cooperative-via-Slotine-compositional-theorems with named honest failure modes." The Gemini gap is **substantially addressed** for the cooperative half of Section III; the adversarial half remains outside the metric framework by structural necessity, not by oversight.
@@ -565,7 +565,7 @@ The spike's strongest claim is the **compositional lift** (§4) — Slotine 2003
 
 The spike's most honest retreat is **adversarial composition** (§6.2) — contraction metrics cover the cooperative half of Section III and no more. `#adversarial-destabilization`'s coupling-amplified-disturbance approach remains the adversarial-regime tool, and the metric-framework does not — cannot, in a structural sense — displace it.
 
-The metric formulation does **not** resolve `#identifiability-floor` instances, does **not** eliminate the need for basin-level analysis in non-convex cases, and does **not** make adaptive-metric algorithms clean. These are all honest limits that align with existing `#separability-pattern` and `#identifiability-floor` positioning.
+The metric formulation does **not** resolve `#discussion-identifiability-floor` instances, does **not** eliminate the need for basin-level analysis in non-convex cases, and does **not** make adaptive-metric algorithms clean. These are all honest limits that align with existing `#discussion-separability-pattern` and `#discussion-identifiability-floor` positioning.
 
 ---
 
@@ -608,7 +608,7 @@ The metric formulation does **not** resolve `#identifiability-floor` instances, 
 - Sontag, E. D. (1989). "Smooth stabilization implies coprime factorization." *IEEE Trans. Automatic Control* 34:435–443.
 
 **AAD segments referenced:**
-- `#sector-persistence-template`, `#sector-condition-derivation`, `#gain-sector-bridge`, `#composition-closure`, `#critical-mass-composition`, `#separability-pattern`, `#identifiability-floor`, `#adversarial-destabilization`, `#multi-timescale-stability`, `#structural-adaptation-necessity`, `#discrete-sector-condition`.
+- `#sector-persistence-template`, `#sector-condition-derivation`, `#gain-sector-bridge`, `#composition-closure`, `#critical-mass-composition`, `#discussion-separability-pattern`, `#discussion-identifiability-floor`, `#adversarial-destabilization`, `#multi-timescale-stability`, `#structural-adaptation-necessity`, `#discrete-sector-condition`.
 
 **AAD spike trail:**
 - `msc/spike-bridge-lemma-contraction.md` (2026-04-06) — DA2'-inc and Tier 1/2/3.

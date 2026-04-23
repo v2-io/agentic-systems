@@ -1,5 +1,5 @@
 ---
-slug: identifiability-floor
+slug: discussion-identifiability-floor
 type: discussion
 status: discussion-grade
 depends:
@@ -85,7 +85,7 @@ The pattern is *not* a negative posture. AAD does not say "many things are impos
 
 1. `#critical-mass-composition` moves from "closed-form result in a special case" to **the unique broadly-available composition-contraction certificate under the matched-Tier structural escape (b)**; without (CM2) or its contraction-metric generalization (CM2-M) in `#contraction-template`, the weakest-link bound (WL) in `#composition-closure` cannot see coupling sign and so cannot distinguish the two coupled constructions.
 2. **Composite-extended `#loop-interventional-access`** becomes the unique coupling-sign identifier under heterogeneous Tier structures — the composite-layer analog of the single-agent interventional-access-escape for Instance 1.
-3. `#composition-scope-condition` acquires **load-bearing enabling status**: scope-satisfaction (one of C-i, C-ii, C-iii) is what positions the composite within a regime where one of (a)–(d) can operate. Without scope-satisfaction, the composite might not be a composite, and the escapes have no coherent target.
+3. `#scope-composite-agent` acquires **load-bearing enabling status**: scope-satisfaction (one of C-i, C-ii, C-iii) is what positions the composite within a regime where one of (a)–(d) can operate. Without scope-satisfaction, the composite might not be a composite, and the escapes have no coherent target.
 
 **Tier.** *Exact* for the symmetric-matched-Tier-1-scalar construction exhibited above. *Robust qualitative* for general heterogeneous composites, inheriting the common-Lyapunov-nonexistence structure from Liberzon / Shorten / Dayawansa-Martin without a closed-form AAD-level counterexample.
 
@@ -135,7 +135,7 @@ Max attainable: *discussion-grade* for the meta-pattern (it is a presentational 
 
 **The pattern composes with AAD's scope honesty.** Directed separation ( #directed-separation) classifies architectures by where Section II's exact results apply (Class 1 modular; Class 2 fully merged needs coupled formulation). The identifiability floors are a different kind of scope claim: they specify what the theory's machinery *cannot do* under specific information regimes, with explicit characterization of the regime escapes. Together, the architectural classification and the identifiability floors mark AAD's scope at two levels — what kinds of agents the theory applies to, and what those agents can and cannot infer from given data.
 
-**Complementarity with the separability pattern ( #separability-pattern).** This segment names the *negative half* of AAD's scope; the companion meta-segment #separability-pattern names the *positive half* — separable-core / structured-repair / general-open across six ladders (correlation, convention, architecture, contraction, identification, scope). Each identifiability-floor instance here has a positive counterpart there: Instance 1's on-policy detection no-go matches the observable-sibling-covariance structured-repair in the correlation ladder; Instance 2's unobservable-$C$ L1' refutation matches the observable-$C$ / facilitator-monotonicity structured-repair in the same ladder. The two halves together characterize AAD's scope at both extremes — what succeeds and under what machinery, and what structurally cannot succeed without specific information augmentation.
+**Complementarity with the separability pattern ( #discussion-separability-pattern).** This segment names the *negative half* of AAD's scope; the companion meta-segment #discussion-separability-pattern names the *positive half* — separable-core / structured-repair / general-open across six ladders (correlation, convention, architecture, contraction, identification, scope). Each identifiability-floor instance here has a positive counterpart there: Instance 1's on-policy detection no-go matches the observable-sibling-covariance structured-repair in the correlation ladder; Instance 2's unobservable-$C$ L1' refutation matches the observable-$C$ / facilitator-monotonicity structured-repair in the same ladder. The two halves together characterize AAD's scope at both extremes — what succeeds and under what machinery, and what structurally cannot succeed without specific information augmentation.
 
 **The pattern is conservative in style.** Each floor invokes a published external theorem (Bareinboim et al. 2022; standard Cramér-Rao bound) rather than deriving a new impossibility result. AAD's contribution is the *application* — recognizing the AAD setting falls within the theorem's scope, characterizing the boundary conditions, and identifying which AAD machinery is the unique broadly-available escape. This style aligns with the broader posture of AAD as an integrating framework that connects established results across control theory, causal inference, and information theory under a common formalism.
 

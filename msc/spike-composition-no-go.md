@@ -4,10 +4,10 @@ type: spike
 status: exploratory
 date: 2026-04-23
 depends:
-  - identifiability-floor
-  - separability-pattern
+  - discussion-identifiability-floor
+  - discussion-separability-pattern
   - composition-closure
-  - composition-scope-condition
+  - scope-composite-agent
   - sector-persistence-template
   - critical-mass-composition
   - directed-separation
@@ -16,19 +16,19 @@ depends:
 
 # Spike: Composition-Layer Instance of the Identifiability Floor
 
-**Status**: Exploratory derivation. Two candidate no-go statements pushed through; a third (Class-2 merged architectures) reframed as a *different* meta-pattern. One survives as a genuine load-bearing result matching the `#identifiability-floor` shape.
+**Status**: Exploratory derivation. Two candidate no-go statements pushed through; a third (Class-2 merged architectures) reframed as a *different* meta-pattern. One survives as a genuine load-bearing result matching the `#discussion-identifiability-floor` shape.
 
 **Date**: 2026-04-23
 
-**Motivation**: The `#identifiability-floor` meta-pattern currently has two derived instances (F1 on-policy L0-insufficiency detection via CHT; F13 L1' mixture-identifiability via Cramér-Rao). Both live at the single-agent level. A composition-layer instance would complete the negative half of AAD's meta-architecture with a Section III entry — symmetric to what `#separability-pattern` does for scope. The question is whether there is a *genuinely load-bearing* no-go theorem at the composition layer, with an AAD-specific escape that strengthens Section III's machinery.
+**Motivation**: The `#discussion-identifiability-floor` meta-pattern currently has two derived instances (F1 on-policy L0-insufficiency detection via CHT; F13 L1' mixture-identifiability via Cramér-Rao). Both live at the single-agent level. A composition-layer instance would complete the negative half of AAD's meta-architecture with a Section III entry — symmetric to what `#discussion-separability-pattern` does for scope. The question is whether there is a *genuinely load-bearing* no-go theorem at the composition layer, with an AAD-specific escape that strengthens Section III's machinery.
 
-**Depends on**: `#identifiability-floor`, `#separability-pattern`, `#composition-closure`, `#composition-scope-condition`, `#sector-persistence-template`, `#critical-mass-composition`, `#directed-separation`, `#loop-interventional-access`, `msc/spike-critical-mass-composition.md`, `msc/spike-bridge-lemma-contraction.md`, `msc/spike-composition-scaling-N.md`.
+**Depends on**: `#discussion-identifiability-floor`, `#discussion-separability-pattern`, `#composition-closure`, `#scope-composite-agent`, `#sector-persistence-template`, `#critical-mass-composition`, `#directed-separation`, `#loop-interventional-access`, `msc/spike-critical-mass-composition.md`, `msc/spike-bridge-lemma-contraction.md`, `msc/spike-composition-scaling-N.md`.
 
 ---
 
 ## 1. What the Meta-Pattern Requires
 
-The `#identifiability-floor` segment states the shape precisely. For a result to qualify as an instance:
+The `#discussion-identifiability-floor` segment states the shape precisely. For a result to qualify as an instance:
 
 1. **Setting.** An AAD inferential task under a specific information regime.
 2. **External theorem.** An information-theoretic limit independent of AAD.
@@ -53,7 +53,7 @@ I consider four candidate no-go statements, each pairing a composition-layer tas
 - **(N-C)** Scope-satisfaction detection from on-policy composite behavior alone.
 - **(N-D)** Class-2 (fully merged) composite analysis via Section II machinery.
 
-Each is pushed in §§3-6 below. Results: (N-A) survives as a genuine no-go matching the meta-pattern; (N-B) is essentially a sharper restatement of (N-A) and is folded in; (N-C) has promise but depends on open work in `#composition-scope-condition`; (N-D) reframes an existing scope exit as a scope claim, not an identifiability floor proper.
+Each is pushed in §§3-6 below. Results: (N-A) survives as a genuine no-go matching the meta-pattern; (N-B) is essentially a sharper restatement of (N-A) and is folded in; (N-C) has promise but depends on open work in `#scope-composite-agent`; (N-D) reframes an existing scope exit as a scope claim, not an identifiability floor proper.
 
 ---
 
@@ -67,7 +67,7 @@ Consider the composition task at its sharpest: given $N$ sub-agents, each verifi
 
 *[Setting (composition-contraction-certification)]*
 
-Let $N \geq 2$ sub-agents $\{A_1, \ldots, A_N\}$ each satisfy: (i) `#scope-condition`, (ii) `#sector-condition-stability` with positive $(\alpha_i, R_i)$, (iii) Tier 1 per `msc/spike-bridge-lemma-contraction.md` (incremental sector bound DA2'-inc). Each sub-agent carries its own Lyapunov function $V_i$, each with its own metric/norm structure compatible with its update rule (e.g., Mahalanobis under the sub-agent's own innovation covariance for Kalman, quadratic in state for gradient descent on strongly convex losses). The agents interact through a shared environment; the coupling structure (who influences whom, and with what sign) is *not* observed by the certifier.
+Let $N \geq 2$ sub-agents $\{A_1, \ldots, A_N\}$ each satisfy: (i) `#scope-agency`, (ii) `#sector-condition-stability` with positive $(\alpha_i, R_i)$, (iii) Tier 1 per `msc/spike-bridge-lemma-contraction.md` (incremental sector bound DA2'-inc). Each sub-agent carries its own Lyapunov function $V_i$, each with its own metric/norm structure compatible with its update rule (e.g., Mahalanobis under the sub-agent's own innovation covariance for Kalman, quadratic in state for gradient descent on strongly convex losses). The agents interact through a shared environment; the coupling structure (who influences whom, and with what sign) is *not* observed by the certifier.
 
 **Task:** certify $\kappa_c \gt 0$ (the composite is contracting in a combined metric compatible with all $V_i$) from component data.
 
@@ -132,9 +132,9 @@ The primary AAD-supplied escape is **(E-a) + (E-b)**: `#loop-interventional-acce
 
 2. **`#loop-interventional-access` extended to the composite layer** becomes the unique mechanism by which the coupling sign is identifiable under heterogeneous Tier structures. Interventions on one sub-agent reveal the coupling effect on the others — this is the composite-layer analog of the single-agent interventional-access-escape for F1.
 
-3. **`#composition-scope-condition`** acquires a sharper load-bearing role: since composite-contraction certification fails under arbitrary topology, the structural machinery of scope satisfaction (one of C-i, C-ii, C-iii) must be doing real work. Without scope-satisfaction, neither the matched-Tier route (E-b) nor the interventional route (E-a) has motivation — there would be no coherent composite objective to certify. Scope-satisfaction is therefore not decorative; it is what positions the composite within a regime where one of (E-a)-(E-d) can operate.
+3. **`#scope-composite-agent`** acquires a sharper load-bearing role: since composite-contraction certification fails under arbitrary topology, the structural machinery of scope satisfaction (one of C-i, C-ii, C-iii) must be doing real work. Without scope-satisfaction, neither the matched-Tier route (E-b) nor the interventional route (E-a) has motivation — there would be no coherent composite objective to certify. Scope-satisfaction is therefore not decorative; it is what positions the composite within a regime where one of (E-a)-(E-d) can operate.
 
-This is the asymmetry the identifiability-floor pattern insists on. Component-level data alone *cannot* establish composite contraction. The AAD composition-layer apparatus — `#critical-mass-composition` + `#loop-interventional-access` (composite-extension) + `#composition-scope-condition` — is the unique broadly-available route that escapes the no-go.
+This is the asymmetry the identifiability-floor pattern insists on. Component-level data alone *cannot* establish composite contraction. The AAD composition-layer apparatus — `#critical-mass-composition` + `#loop-interventional-access` (composite-extension) + `#scope-composite-agent` — is the unique broadly-available route that escapes the no-go.
 
 ### 3.6 Tier
 
@@ -164,7 +164,7 @@ with $\gamma$'s sign distinguishing cooperation from destabilization, and since 
 
 ### 5.1 Candidate statement
 
-Can the certifier detect whether `#composition-scope-condition` is satisfied — specifically, whether any of (C-i), (C-ii), (C-iii) applies — from on-policy observation of the composite's behavior alone?
+Can the certifier detect whether `#scope-composite-agent` is satisfied — specifically, whether any of (C-i), (C-ii), (C-iii) applies — from on-policy observation of the composite's behavior alone?
 
 ### 5.2 Analysis
 
@@ -178,13 +178,13 @@ CHT (Bareinboim et al. 2022) in principle applies: the scope-satisfaction struct
 
 Two reasons:
 
-1. **(C-i)/(C-ii)/(C-iii) are qualitative routes.** The `#composition-scope-condition` segment explicitly states (§Discussion) that the three routes are not shown to reduce to a single scalar. Constructing observationally-equivalent scope-satisfying vs scope-failing systems requires careful handling of which route each system occupies — a construction that the current `#composition-scope-condition` segment says *can* be done (the scope-failure examples are adversarial pairs, orthogonal objectives, etc.). But a clean no-go theorem at the instance level depends on making the routes operationally comparable, which is open.
+1. **(C-i)/(C-ii)/(C-iii) are qualitative routes.** The `#scope-composite-agent` segment explicitly states (§Discussion) that the three routes are not shown to reduce to a single scalar. Constructing observationally-equivalent scope-satisfying vs scope-failing systems requires careful handling of which route each system occupies — a construction that the current `#scope-composite-agent` segment says *can* be done (the scope-failure examples are adversarial pairs, orthogonal objectives, etc.). But a clean no-go theorem at the instance level depends on making the routes operationally comparable, which is open.
 
 2. **The external theorem is CHT re-applied.** The novelty would be at the AAD-application level (recognizing the composite-scope question is Level 2), but the structure repeats F1 rather than offering a distinct external anchor. Whereas (N-A) anchors in the Liberzon / Shorten common-Lyapunov-nonexistence result plus the small-gain contrapositive — a genuinely distinct external anchor at the composition layer.
 
 ### 5.4 Disposition
 
-(N-C) is a plausible candidate but depends on structural work in `#composition-scope-condition` that is explicitly open. It is logged as a follow-on instance (parallel to the three adjacent-floors in `#identifiability-floor`'s "Adjacent Floors" section) but not derived here.
+(N-C) is a plausible candidate but depends on structural work in `#scope-composite-agent` that is explicitly open. It is logged as a follow-on instance (parallel to the three adjacent-floors in `#discussion-identifiability-floor`'s "Adjacent Floors" section) but not derived here.
 
 ---
 
@@ -192,7 +192,7 @@ Two reasons:
 
 ### 6.1 Candidate statement
 
-`#directed-separation`'s architectural classification names Class 2 (fully merged) as an explicit scope exit: Section II's sequential-cascade analysis fails by construction, because $G_t$ is causally upstream of every computation in $f_M$. Can this be restated as an `#identifiability-floor` instance?
+`#directed-separation`'s architectural classification names Class 2 (fully merged) as an explicit scope exit: Section II's sequential-cascade analysis fails by construction, because $G_t$ is causally upstream of every computation in $f_M$. Can this be restated as an `#discussion-identifiability-floor` instance?
 
 ### 6.2 Why this is a *different* meta-pattern
 
@@ -200,12 +200,12 @@ The identifiability-floor shape requires: (task) → (external theorem) → (no-
 
 The difference is subtle but load-bearing:
 
-- **`#identifiability-floor`** names inferential tasks that *cannot be answered from limited data* under specific information regimes. The AAD machinery's escape is an *information augmentation* — intervene, instrument, observe the latent.
+- **`#discussion-identifiability-floor`** names inferential tasks that *cannot be answered from limited data* under specific information regimes. The AAD machinery's escape is an *information augmentation* — intervene, instrument, observe the latent.
 - **Class-2 scope exit** names a structural property (goal-conditioned processing topology) that makes *the entire decomposition $f_M$ / $f_G$ / $\pi$* inapplicable. There is no "inferential task under limited data" here; the formal object Section II derives *does not exist* for Class-2 agents.
 
-(N-D) is a *scope-honesty* instance, not an *identifiability-floor* instance. It belongs to a related but distinct meta-pattern: "the formal apparatus does not apply to this architecture-type, coupled formulation required." The `#separability-pattern` segment captures this pattern for scope; the identifiability floor does not.
+(N-D) is a *scope-honesty* instance, not an *identifiability-floor* instance. It belongs to a related but distinct meta-pattern: "the formal apparatus does not apply to this architecture-type, coupled formulation required." The `#discussion-separability-pattern` segment captures this pattern for scope; the identifiability floor does not.
 
-**Disposition.** (N-D) is *not* an identifiability-floor instance. It is correctly handled by `#directed-separation`'s existing Class 1/2/3 classification plus `#separability-pattern`'s architecture-ladder row. Lumping it with (N-A) would conflate two distinct kinds of scope claim and dilute the identifiability-floor pattern. **Rejected.**
+**Disposition.** (N-D) is *not* an identifiability-floor instance. It is correctly handled by `#directed-separation`'s existing Class 1/2/3 classification plus `#discussion-separability-pattern`'s architecture-ladder row. Lumping it with (N-A) would conflate two distinct kinds of scope claim and dilute the identifiability-floor pattern. **Rejected.**
 
 ---
 
@@ -213,7 +213,7 @@ The difference is subtle but load-bearing:
 
 ### 7.1 Is (N-A) genuinely load-bearing?
 
-The test: if we remove the AAD machinery (`#critical-mass-composition`, `#loop-interventional-access`-composite-extension, `#composition-scope-condition`), is composite contraction still inferrable from component data alone?
+The test: if we remove the AAD machinery (`#critical-mass-composition`, `#loop-interventional-access`-composite-extension, `#scope-composite-agent`), is composite contraction still inferrable from component data alone?
 
 Walking the case:
 
@@ -221,7 +221,7 @@ Walking the case:
 
 - Without composite-extended `#loop-interventional-access`: the certifier cannot gather $do(\cdot)$-data on the coupling channel. The coupling sign remains unidentifiable.
 
-- Without `#composition-scope-condition`: even if (E-a) and (E-b) were available, they would certify nothing meaningful — the "composite" might not be a composite. The scope gate is load-bearing for the *interpretation* of the certification.
+- Without `#scope-composite-agent`: even if (E-a) and (E-b) were available, they would certify nothing meaningful — the "composite" might not be a composite. The scope gate is load-bearing for the *interpretation* of the certification.
 
 All three pieces of AAD machinery are genuinely required. Removing any one reduces composite-contraction certification from "derivable under matched-Tier + observable coupling + scope-satisfaction" to "undefined." This is the asymmetry the identifiability-floor pattern demands.
 
@@ -235,13 +235,13 @@ Not from component data alone — the §3.3 construction is an *exhibit* (not me
 
 ### 7.4 Does the no-go compose with the other two instances?
 
-Yes. The three instances together populate the correlation / identification / composition axes of `#separability-pattern`:
+Yes. The three instances together populate the correlation / identification / composition axes of `#discussion-separability-pattern`:
 
 | Layer | Instance | External theorem | Task | AAD escape |
 |---|---|---|---|---|
 | Agent-internal (correlation) | F1 | CHT | Distinguish L0 vs L1 on-policy | `#loop-interventional-access` (covariance test) |
 | Agent-internal (identification) | F13 | Cramér-Rao | Identify L1' mixture from single channel | Observability-as-info-augmentation (Prop B.7) |
-| Composition layer | (N-A) | Liberzon/Shorten + small-gain | Certify $\kappa_c \gt 0$ from component data | `#critical-mass-composition` + composite-extended `#loop-interventional-access` + `#composition-scope-condition` |
+| Composition layer | (N-A) | Liberzon/Shorten + small-gain | Certify $\kappa_c \gt 0$ from component data | `#critical-mass-composition` + composite-extended `#loop-interventional-access` + `#scope-composite-agent` |
 
 The three instances cover distinct external theorems (CHT / Cramér-Rao / Liberzon-Shorten), distinct AAD settings (strategy structure / mixture estimation / composite contraction), and distinct AAD-machinery escapes. This is the genuine three-layer negative structure the meta-pattern would predict.
 
@@ -249,9 +249,9 @@ The three instances cover distinct external theorems (CHT / Cramér-Rao / Liberz
 
 ## 8. Landing Map
 
-### 8.1 Primary landing: new instance in `#identifiability-floor`
+### 8.1 Primary landing: new instance in `#discussion-identifiability-floor`
 
-Add a third instance to `#identifiability-floor`, following the four-part template of Instance 1 and Instance 2:
+Add a third instance to `#discussion-identifiability-floor`, following the four-part template of Instance 1 and Instance 2:
 
 > **Instance 3 — Composite Contraction Certification from Component Data ( #critical-mass-composition, #composition-closure bridge lemma)**
 >
@@ -267,7 +267,7 @@ Add a third instance to `#identifiability-floor`, following the four-part templa
 > - (c) Passivity / storage-function certificate on the coupling channel (not currently in AAD; adjacent machinery).
 > - (d) Common contraction metric (Lohmiller & Slotine 1998; not currently a scope condition in AAD).
 >
-> **Strengthened consequence.** `#critical-mass-composition` moves from "closed-form result in a special case" to "unique broadly-available composition-contraction certificate under the structural escape (b)." Composite-extended `#loop-interventional-access` becomes the unique coupling-sign identifier under heterogeneous Tier structures. `#composition-scope-condition` acquires load-bearing status: without scope-satisfaction, there is no coherent composite for the escapes to certify.
+> **Strengthened consequence.** `#critical-mass-composition` moves from "closed-form result in a special case" to "unique broadly-available composition-contraction certificate under the structural escape (b)." Composite-extended `#loop-interventional-access` becomes the unique coupling-sign identifier under heterogeneous Tier structures. `#scope-composite-agent` acquires load-bearing status: without scope-satisfaction, there is no coherent composite for the escapes to certify.
 >
 > **Tier.** *Exact* for the symmetric-matched-Tier-1-scalar construction (cooperative vs adversarial ambiguity in closed form). *Robust qualitative* for general heterogeneous composites (common-Lyapunov obstruction inherited from switched-systems literature).
 
@@ -275,19 +275,19 @@ Add a third instance to `#identifiability-floor`, following the four-part templa
 
 The instance triggers small cross-reference updates in three segments:
 
-- **`#critical-mass-composition`**: add a Discussion paragraph noting "This derivation is the unique broadly-available escape from the composition-layer identifiability floor (`#identifiability-floor` Instance 3). Component-level data alone cannot certify composite contraction; the matched-Tier structural escape this segment supplies is what makes composite persistence certifiable at all." This reframes the segment's load-bearing role upward.
+- **`#critical-mass-composition`**: add a Discussion paragraph noting "This derivation is the unique broadly-available escape from the composition-layer identifiability floor (`#discussion-identifiability-floor` Instance 3). Component-level data alone cannot certify composite contraction; the matched-Tier structural escape this segment supplies is what makes composite persistence certifiable at all." This reframes the segment's load-bearing role upward.
 
-- **`#loop-interventional-access`**: add a forward-reference to the composite-layer extension. The segment currently grounds Instance 1 at the single-agent level; noting that the same machinery extends to `#identifiability-floor` Instance 3 at the composite layer (coupling-sign identification via interventions on one sub-agent) tightens its meta-pattern role across both floors.
+- **`#loop-interventional-access`**: add a forward-reference to the composite-layer extension. The segment currently grounds Instance 1 at the single-agent level; noting that the same machinery extends to `#discussion-identifiability-floor` Instance 3 at the composite layer (coupling-sign identification via interventions on one sub-agent) tightens its meta-pattern role across both floors.
 
-- **`#composition-scope-condition`**: add a note in the Discussion that scope-satisfaction is the *enabling condition* for the composition-layer identifiability-floor escapes. Without it, the escapes have no target; with it, they certify a genuine composite.
+- **`#scope-composite-agent`**: add a note in the Discussion that scope-satisfaction is the *enabling condition* for the composition-layer identifiability-floor escapes. Without it, the escapes have no target; with it, they certify a genuine composite.
 
-- **`#separability-pattern`**: the current "scope hierarchy" ladder row (Adaptive / Agency / Composite with "Section III gaps" in the general-open column) maps precisely onto Instance 3. Add a Discussion note connecting the separability-pattern's composite row to `#identifiability-floor` Instance 3's no-go — this is the symmetric positive/negative pairing the separability-pattern's §"Complementarity with the identifiability floor" section runs for Instances 1 and 2 already.
+- **`#discussion-separability-pattern`**: the current "scope hierarchy" ladder row (Adaptive / Agency / Composite with "Section III gaps" in the general-open column) maps precisely onto Instance 3. Add a Discussion note connecting the separability-pattern's composite row to `#discussion-identifiability-floor` Instance 3's no-go — this is the symmetric positive/negative pairing the separability-pattern's §"Complementarity with the identifiability floor" section runs for Instances 1 and 2 already.
 
 ### 8.3 Open extensions (adjacent-floor candidates)
 
-Following `#identifiability-floor`'s "Adjacent Floors" section, three natural extensions not addressed here:
+Following `#discussion-identifiability-floor`'s "Adjacent Floors" section, three natural extensions not addressed here:
 
-- **Scope-satisfaction no-go (N-C).** A composition-layer analog of F1 at the scope level: CHT-based no-go on distinguishing scope-satisfying from scope-failing composites from on-policy data. Depends on open work in `#composition-scope-condition` on operationalizing the three routes.
+- **Scope-satisfaction no-go (N-C).** A composition-layer analog of F1 at the scope level: CHT-based no-go on distinguishing scope-satisfying from scope-failing composites from on-policy data. Depends on open work in `#scope-composite-agent` on operationalizing the three routes.
 
 - **N-agent scaling identifiability floor.** Following `msc/spike-composition-scaling-N.md`: as $N$ grows, the component-data requirements for composite contraction scale as well. Is there an information-theoretic lower bound on the component-data volume needed to certify $\kappa_c \gt 0$ as a function of $N$? Candidate external theorem: sample complexity bounds for causal structure identification (Kocaoglu, Dimakis, Vishwanath 2017).
 
@@ -313,11 +313,11 @@ Following `#identifiability-floor`'s "Adjacent Floors" section, three natural ex
 
 2. **Anchors the no-go in established external theorems.** Liberzon 2003 Theorem 2.1 (common-Lyapunov nonexistence for switched linear systems) + Jiang-Teel-Praly 1994 (small-gain theorem for ISS systems). These are well-established results in switched/hybrid systems theory, matching the meta-pattern's "conservative in style" criterion — published external theorem, AAD applies it.
 
-3. **Maps the escapes to AAD machinery that acquires load-bearing status.** `#critical-mass-composition` becomes *unique broadly-available*; composite-extended `#loop-interventional-access` becomes the coupling-sign identifier; `#composition-scope-condition` becomes the enabling condition. This is the same structural move F1 makes for single-agent `#loop-interventional-access` and F13 makes for observability-as-info-augmentation.
+3. **Maps the escapes to AAD machinery that acquires load-bearing status.** `#critical-mass-composition` becomes *unique broadly-available*; composite-extended `#loop-interventional-access` becomes the coupling-sign identifier; `#scope-composite-agent` becomes the enabling condition. This is the same structural move F1 makes for single-agent `#loop-interventional-access` and F13 makes for observability-as-info-augmentation.
 
-4. **Rejects (N-D) on meta-pattern grounds.** Class-2 scope exit is scope honesty, not identifiability floor — it belongs with `#separability-pattern`'s architecture ladder, which it already occupies. Keeps the meta-pattern clean.
+4. **Rejects (N-D) on meta-pattern grounds.** Class-2 scope exit is scope honesty, not identifiability floor — it belongs with `#discussion-separability-pattern`'s architecture ladder, which it already occupies. Keeps the meta-pattern clean.
 
-5. **Logs (N-C) as an adjacent floor.** The scope-satisfaction-detection no-go depends on open structural work in `#composition-scope-condition`; it is a natural extension matching Instance 1's structure, not a closed result.
+5. **Logs (N-C) as an adjacent floor.** The scope-satisfaction-detection no-go depends on open structural work in `#scope-composite-agent`; it is a natural extension matching Instance 1's structure, not a closed result.
 
 **What it does not achieve.**
 
@@ -335,7 +335,7 @@ Following `#identifiability-floor`'s "Adjacent Floors" section, three natural ex
 - Rejection of (N-D) as identifiability-floor instance: **argued structurally** (the pattern is scope-honesty, not info-limited-inference-task-with-escape). The argument is clean; reasonable reviewers should agree.
 - (N-C) as adjacent floor: **sketch-level** — depends on open work elsewhere.
 
-**Overall.** The composition-layer identifiability-floor instance exists, is derivable, and genuinely strengthens AAD's Section III machinery. The meta-pattern's three-layer structure (two single-agent floors + one composition floor) is complete, with distinct external-theorem anchors at each layer. The spike is ready for promotion to `#identifiability-floor` as Instance 3, with cross-reference updates to `#critical-mass-composition`, `#loop-interventional-access`, `#composition-scope-condition`, and `#separability-pattern` as detailed in §8.
+**Overall.** The composition-layer identifiability-floor instance exists, is derivable, and genuinely strengthens AAD's Section III machinery. The meta-pattern's three-layer structure (two single-agent floors + one composition floor) is complete, with distinct external-theorem anchors at each layer. The spike is ready for promotion to `#discussion-identifiability-floor` as Instance 3, with cross-reference updates to `#critical-mass-composition`, `#loop-interventional-access`, `#scope-composite-agent`, and `#discussion-separability-pattern` as detailed in §8.
 
 ---
 

@@ -247,9 +247,9 @@ Opus applied the same rigorous standard used in the previous audits and rejected
 - Pinsker bound looseness vs. linear-KL form trade-off — `#strategy-cost-regret-bound` §7 self-aware
 - Channel independence in scalar tempo — `#independence-audit` item 6 + `#per-dimension-persistence`
 - $G_t = (O_t, \Sigma_t)$ "definitional but load-bearing" — `#strategy-dimension` Discussion reframes
-- Causal sufficiency as dominant failure — covered in `#strategy-dag` Correlation Hierarchy + `#causal-insufficiency-detection` + `#identifiability-floor` + `#independence-audit`
+- Causal sufficiency as dominant failure — covered in `#strategy-dag` Correlation Hierarchy + `#causal-insufficiency-detection` + `#discussion-identifiability-floor` + `#independence-audit`
 - $V_{\max} \lt \infty$ assumption — `#strategy-cost-regret-bound` §8 + `#strategy-complexity-cost` Epistemic Status
-- L1' unobservable-common-cause identifiability-blocked — refuted (not "open"); `#strategy-dag` + `#identifiability-floor` Instance 2 give Cramér-Rao
+- L1' unobservable-common-cause identifiability-blocked — refuted (not "open"); `#strategy-dag` + `#discussion-identifiability-floor` Instance 2 give Cramér-Rao
 - $K_c$ timescale ratio in composition-closure — acknowledged; 2026-04-22 repair made $K_c$ explicit
 - Section III's `--GAP--` rows — flagged in OUTLINE, not concealed
 - Logogenic agents out of formal scope of `#agent-identity` — explicit in segment Discussion

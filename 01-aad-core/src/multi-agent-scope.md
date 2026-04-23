@@ -3,7 +3,7 @@ slug: multi-agent-scope
 type: scope
 status: axiomatic
 depends:
-  - scope-condition
+  - scope-agency
   - composition-consistency
 stage: draft
 ---
@@ -16,7 +16,7 @@ Section III applies wherever multiple agents satisfying the scope condition inte
 
 *[Scope (multi-agent-scope)]*
 
-A multi-agent system consists of $N$ agents $\{A_1, \ldots, A_n\}$, each satisfying the scope condition ( #scope-condition), interacting through a shared environment with state $\Omega_t \in \mathcal{S}_{env}$:
+A multi-agent system consists of $N$ agents $\{A_1, \ldots, A_n\}$, each satisfying the scope condition ( #scope-agency), interacting through a shared environment with state $\Omega_t \in \mathcal{S}_{env}$:
 
 - Each agent $A_i$ has state $X_t^{(i)} = (M_t^{(i)}, G_t^{(i)})$
 - Each agent observes: $o_t^{(i)} = h^{(i)}(\Omega_t, a_t^{(\neg i)}, \xi_t^{(i)})$ — observations may depend on other agents' actions
@@ -64,11 +64,11 @@ This means the communication infrastructure does not change based on what the co
 
 **Correlated observations as default.** When agents share an environment, their observations are generically correlated — they see aspects of the same reality. Independence (uncorrelated observations) requires the agents to observe non-overlapping aspects of the environment, which is the special case. Most multi-agent settings of interest involve substantial observation correlation.
 
-**The adversarial case is one end of a spectrum — but not a composite.** Agents whose objectives conflict are multi-agent systems with negative teleological unity ( #unity-dimensions) and thus do not satisfy #composition-scope-condition: the absence of shared purpose means no composite agent exists. Two distinct classes of machinery apply across this spectrum:
+**The adversarial case is one end of a spectrum — but not a composite.** Agents whose objectives conflict are multi-agent systems with negative teleological unity ( #unity-dimensions) and thus do not satisfy #scope-composite-agent: the absence of shared purpose means no composite agent exists. Two distinct classes of machinery apply across this spectrum:
 
-- **Agent-level machinery** (individual persistence, agent tempo, per-agent mismatch, sector-condition stability) applies to *every* agent in *every* multi-agent configuration — cooperative, adversarial, or indifferent — because each agent individually satisfies #scope-condition and Section I/II results apply directly. The adversarial tempo advantage ( #adversarial-tempo-advantage) and adversarial destabilization ( #adversarial-destabilization) results are applications of this agent-level machinery to the case where one agent's actions are a disturbance source for another.
+- **Agent-level machinery** (individual persistence, agent tempo, per-agent mismatch, sector-condition stability) applies to *every* agent in *every* multi-agent configuration — cooperative, adversarial, or indifferent — because each agent individually satisfies #scope-agency and Section I/II results apply directly. The adversarial tempo advantage ( #adversarial-tempo-advantage) and adversarial destabilization ( #adversarial-destabilization) results are applications of this agent-level machinery to the case where one agent's actions are a disturbance source for another.
 
-- **Composite-level machinery** (closure defect, team persistence, composite tempo, unity-closure rate-distortion) applies *only* when #composition-scope-condition is satisfied — i.e., when the sub-agents' alignment is sufficient to define a coherent composite purpose. Adversarial pairs are *excluded* from this scope.
+- **Composite-level machinery** (closure defect, team persistence, composite tempo, unity-closure rate-distortion) applies *only* when #scope-composite-agent is satisfied — i.e., when the sub-agents' alignment is sufficient to define a coherent composite purpose. Adversarial pairs are *excluded* from this scope.
 
 The adversarial regime sits at the negative-$U_O$ end of the unity spectrum. Its dynamics are captured using agent-level machinery applied across the pair, not by treating the adversarial pair as a composite. The existing adversarial segments ( #adversarial-destabilization, #adversarial-tempo-advantage) correctly operate at the agent-level; the scope distinction makes explicit what those segments have always done implicitly.
 

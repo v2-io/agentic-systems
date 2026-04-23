@@ -8,7 +8,7 @@
 
 This spike proposes the classification boundary and checks it against AAD's existing machinery.
 
-**Depends on**: #observation-function, #mismatch-signal, #mismatch-decomposition, #update-gain, #adaptive-tempo, #model-class-fitness, #model-sufficiency, #structural-adaptation-necessity, #persistence-condition, #sector-persistence-template, #adversarial-destabilization, #adversarial-tempo-advantage, #observation-gates-advantage, #symbiogenic-composition, #communication-gain, #team-persistence, #identifiability-floor, #agent-identity.
+**Depends on**: #observation-function, #mismatch-signal, #mismatch-decomposition, #update-gain, #adaptive-tempo, #model-class-fitness, #model-sufficiency, #structural-adaptation-necessity, #persistence-condition, #sector-persistence-template, #adversarial-destabilization, #adversarial-tempo-advantage, #observation-gates-advantage, #symbiogenic-composition, #communication-gain, #team-persistence, #discussion-identifiability-floor, #agent-identity.
 
 ---
 
@@ -331,9 +331,9 @@ This pairs cleanly with the classification. The emitter is choosing the target e
 
 ### 6.3 Identifiability-floor connection
 
-Regime II-b — the structural-shock — is the per-event shadow of the identifiability-floor pattern ( #identifiability-floor). When the signal's information content requires a model class that $B$ does not have, $B$ cannot identify the structure of the incoming signal regardless of how many samples it sees. This is formally the Cramér-Rao-floor / misspecification-cost structural limit applied at the signal level rather than the estimator level.
+Regime II-b — the structural-shock — is the per-event shadow of the identifiability-floor pattern ( #discussion-identifiability-floor). When the signal's information content requires a model class that $B$ does not have, $B$ cannot identify the structure of the incoming signal regardless of how many samples it sees. This is formally the Cramér-Rao-floor / misspecification-cost structural limit applied at the signal level rather than the estimator level.
 
-The adjacent-floor "Misspecification-cost quantification" open problem in #identifiability-floor — "under fixed information budget, the degradation rate from misspecification is bounded below by an information-theoretic quantity" — is precisely what Regime II-b's dynamics should give once formalized: the rate at which $B$'s $\rho_B^{\text{eff}}$ degrades under a sustained Regime II-b stream is lower-bounded by the KL gap between $B$'s model class and the truth. This would make the misspecification-cost floor concrete: the emitter-side term is $\text{floor}(\mathcal M_B) \cdot \sum_{e \in \text{II-b}} \nu_e$ in the decomposition of §3.5.
+The adjacent-floor "Misspecification-cost quantification" open problem in #discussion-identifiability-floor — "under fixed information budget, the degradation rate from misspecification is bounded below by an information-theoretic quantity" — is precisely what Regime II-b's dynamics should give once formalized: the rate at which $B$'s $\rho_B^{\text{eff}}$ degrades under a sustained Regime II-b stream is lower-bounded by the KL gap between $B$'s model class and the truth. This would make the misspecification-cost floor concrete: the emitter-side term is $\text{floor}(\mathcal M_B) \cdot \sum_{e \in \text{II-b}} \nu_e$ in the decomposition of §3.5.
 
 ### 6.4 Pairing with `#symbiogenic-composition`
 
@@ -350,7 +350,7 @@ This is speculative but concrete. It suggests that symbiogenic composition is th
 
 ## 7. Scope Honesty and Limits
 
-Following the posture of #identifiability-floor and #separability-pattern, this section states precisely what the classification does and does not cover.
+Following the posture of #discussion-identifiability-floor and #discussion-separability-pattern, this section states precisely what the classification does and does not cover.
 
 ### 7.1 What the classification admits
 
@@ -403,13 +403,13 @@ Recommend a new appendix-or-Section-III segment `#interaction-channel-classifica
 
 - **`#adversarial-edge-targeting`**: promote from GAP to draft segment with the §6.2 optimization statement. Type: *derived*, status: *sketch*. The sketch becomes derived once the optimization problem is formally solved.
 - **`#adversarial-destabilization` Working Notes**: replace the "decoupled analysis is conservative" Working Note with a reference to `#interaction-channel-classification`'s rigorous recipient-side decomposition.
-- **`#identifiability-floor`**: add Regime II-b / misspecification-cost as a third concrete instance of the pattern (currently "open extension").
+- **`#discussion-identifiability-floor`**: add Regime II-b / misspecification-cost as a third concrete instance of the pattern (currently "open extension").
 - **`#symbiogenic-composition`**: §6.4's asymmetric-classification read is a candidate Working Note; would land as "discussion connection to recipient-side classification."
 - **`#team-persistence`**: tighten the cooperative-disturbance decomposition by referencing Regime I events. The sign-flip in $\rho_i^{\text{eff}}$'s decomposition is precisely the Regime I sub-sum.
 
 ### 8.3 Candidate meta-segment — `#signal-reception-pattern`
 
-A longer-term candidate, analogous to `#separability-pattern` and `#identifiability-floor`. The structural pattern: recipient-side classification is a three-boundary (magnitude / class / rate) decomposition of inter-agent coupling, composing with the existing meta-segments:
+A longer-term candidate, analogous to `#discussion-separability-pattern` and `#discussion-identifiability-floor`. The structural pattern: recipient-side classification is a three-boundary (magnitude / class / rate) decomposition of inter-agent coupling, composing with the existing meta-segments:
 
 - Separability: the classification partitions signals into separable-core (Regime I, within scope), structured-repair (Regime II-a, magnitude-structured, bounded by sector region), and general-open (Regime II-b, structural adaptation).
 - Identifiability floor: Regime II-b instantiates the floor per-event; Regime III instantiates it for the observability dimension.
@@ -466,5 +466,5 @@ Recommendation: promote to a new segment `#interaction-channel-classification` a
 
 - **Next spike candidates.**
   1. Formal derivation of the $f(H_b^B)$ function in §5.2 — the emitter's expected effect as a function of recipient opacity. Would tighten the `#adversarial-destabilization` Working Notes' qualitative $\gamma_A \propto 1/H_b$ into a derived form.
-  2. Formalization of the misspecification-cost floor as a Regime II-b structural result, closing one of `#identifiability-floor`'s adjacent-floor open questions.
+  2. Formalization of the misspecification-cost floor as a Regime II-b structural result, closing one of `#discussion-identifiability-floor`'s adjacent-floor open questions.
   3. Formal solution of the `#adversarial-edge-targeting` optimization in §6.2 — the arg-max over edges given $B$'s plan Jacobian and edge observabilities. Pairs with this spike as the emitter-side counterpart.

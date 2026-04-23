@@ -29,11 +29,11 @@ Two bundles cross the bands. Handling them as unified work-items rather than as 
 
 ### Bundle 1 — Framework-face reframe (paper-writing-time)
 
-Seven proposals converge on a single coordinated reframing pass that would shift AAD's public self-presentation from "integration of four disciplines" to "epistemic architecture with three-part meta-structure plus integrating content." Three independent frontier-model audits (Codex / Gemini / Opus, 2026-04-23) converged on this reframe on different axes; the segment-level infrastructure is already in place (CLAUDE.md §7 landed, OUTLINE.md "Reading AAD" paragraph landed, the three meta-segments `#additive-coordinate-forcing` / `#identifiability-floor` / `#separability-pattern` all live in Appendix A).
+Seven proposals converge on a single coordinated reframing pass that would shift AAD's public self-presentation from "integration of four disciplines" to "epistemic architecture with three-part meta-structure plus integrating content." Three independent frontier-model audits (Codex / Gemini / Opus, 2026-04-23) converged on this reframe on different axes; the segment-level infrastructure is already in place (CLAUDE.md §7 landed, OUTLINE.md "Reading AAD" paragraph landed, the three meta-segments `#additive-coordinate-forcing` / `#discussion-identifiability-floor` / `#discussion-separability-pattern` all live in Appendix A).
 
 **Bundle members:** SP-7 (epistemic architecture foregrounding) + O-BP1 (sector-persistence template as organizing principle) + O-BP10 (projection-contraction slogan) + O-BP8 (scope lattice) + SP-3 (calibration-laboratory template generalization) + SP-4 (agent-identity from scope to architectural postulate) + SP-8 (dual-edged floor/separability reading).
 
-**What remains unlanded:** README.md rewrite (still integration-first at line 10); OUTLINE.md preamble pass for Section I/II/III; `#sector-persistence-template` introductory paragraph restating the slogan; possible new canonical scope-lattice location; `domain-instantiation-template.md` or FORMAT.md section; `#agent-identity` frontmatter `type: scope → postulate`; `#identifiability-floor` + `#separability-pattern` dual-edged editorial touches.
+**What remains unlanded:** README.md rewrite (still integration-first at line 10); OUTLINE.md preamble pass for Section I/II/III; `#sector-persistence-template` introductory paragraph restating the slogan; possible new canonical scope-lattice location; `domain-instantiation-template.md` or FORMAT.md section; `#agent-identity` frontmatter `type: scope → postulate`; `#discussion-identifiability-floor` + `#discussion-separability-pattern` dual-edged editorial touches.
 
 **Total effort:** 2–3 coordinated sessions. Individual pieces are each small; the benefit of coordination is that the reframe reads consistently across README / OUTLINE / CLAUDE / segments rather than drifting between framings.
 
@@ -68,7 +68,7 @@ All items below have been fully executed and their content is now load-bearing i
 | Proposal | Where it lives | Landed | Value realized |
 |---|---|---|---|
 | **O-BP14** — Derivation-audit table convention | FORMAT.md §O-BP14; 15 segments carry tables | Commit `c1d9fcf` | +6 framework / +8 future-agent onboarding |
-| **C-BP2** — Master separability pattern | `#separability-pattern` meta-segment; 7 ladders (6 original + A2' added 2026-04-23) | Commit `72ca532` | +7 framework / +8 paper |
+| **C-BP2** — Master separability pattern | `#discussion-separability-pattern` meta-segment; 7 ladders (6 original + A2' added 2026-04-23) | Commit `72ca532` | +7 framework / +8 paper |
 | **C-BP3** — Software as calibration laboratory | `#software-epistemic-properties` headline + 5-row transfer-assumption table; `02-tst-core/OUTLINE.md` preamble | Commit `d0373fc` | +5 framework / +7 paper |
 | **O-BP6** — Agent-identity promotion to scope statement | `#agent-identity` `type: scope` / `status: robust-qualitative`; three named consequences; (PI) axiom subsequently added | Commit `2980327` | +6 (exceeded original proposal — (PI) axiom built atop it) |
 | **G-BP1** — Natural-parameter / logit reparameterization | `#edge-update-natural-parameter` (new appendix with uniqueness theorem); `#credit-assignment-boundary` default signal in log-odds; `#fisher-whitened-update-rule` multidimensional extension | Commit `a39dfb7` + 2026-04-23 Gap A/B cycle | +7 (strengthened beyond original: produced an SP-1 component) |
@@ -92,7 +92,7 @@ Seven proposals landed as one coordinated pass. Value **+9 framework / +10 paper
 
 Three of the five bundle members are ready now; two need upstream scoping. Ready-now entries:
 
-- **SP-11 Composition-monotonicity meta-segment** — from existing C2 spike (`msc/spike-compositional-coordinate.md`); would give Section III its fourth meta-segment parallel to `#additive-coordinate-forcing` / `#identifiability-floor` / `#separability-pattern`. Newly surfaced in 2026-04-24 audit. **1–2 sessions.**
+- **SP-11 Composition-monotonicity meta-segment** — from existing C2 spike (`msc/spike-compositional-coordinate.md`); would give Section III its fourth meta-segment parallel to `#additive-coordinate-forcing` / `#discussion-identifiability-floor` / `#discussion-separability-pattern`. Newly surfaced in 2026-04-24 audit. **1–2 sessions.**
 - **SP-6 composition-closure consolidation (residue)** — majority absorbed by 2026-04-24 Tier 1 DA2'-inc ≡ (CT2) equivalence. Remaining: scope-statement-level consolidation in `#composition-closure` + scope adjustments in `#team-persistence` / `#composition-consistency` / `#tempo-composition`. **~1 session.**
 - **O-BP9 typed admissibility for composition** — well-defined, clear Section-III-completion-via-F8 target. 1–2 session scoping spike then 2–3 session execution. **Total 3–5 sessions.**
 
@@ -112,11 +112,11 @@ Subsumes F12, F17, F23, F25; partial on F14. **Value: +6.** Primary aspect: scop
 
 ### C.1 O-BP13 — Cox-parallel necessity for `#graph-structure-uniqueness`
 
-Sharp theorem-spike question: can Lauritzen-Sadeghi 2018 unify enough to force DAG semantics from P1–P4 + causal sufficiency? Win/win outcome structure — success elevates the sufficiency-only claim to full Cox-parallel; failure produces an `#identifiability-floor` Instance 4 with sharp scope. **1–2 session scoping spike; 2–3 sessions if tractable.** External literature ready (Lauritzen-Sadeghi 2018; Evans-Richardson 2014; Drton-Maathuis-Meinshausen 2017).
+Sharp theorem-spike question: can Lauritzen-Sadeghi 2018 unify enough to force DAG semantics from P1–P4 + causal sufficiency? Win/win outcome structure — success elevates the sufficiency-only claim to full Cox-parallel; failure produces an `#discussion-identifiability-floor` Instance 4 with sharp scope. **1–2 session scoping spike; 2–3 sessions if tractable.** External literature ready (Lauritzen-Sadeghi 2018; Evans-Richardson 2014; Drton-Maathuis-Meinshausen 2017).
 
 Primary aspect: correctness. Secondary: fundamentality, transparency. **Value: +5 framework / +7 paper.**
 
-**Independence: high.** Self-contained spike on `#graph-structure-uniqueness`; either produces a necessity-direction derivation (segment extension) or surfaces a new `#identifiability-floor` Instance 4. Either outcome touches one primary segment plus one meta-segment; minimal cross-segment surface area. Safe to parallelize with any other active proposal.
+**Independence: high.** Self-contained spike on `#graph-structure-uniqueness`; either produces a necessity-direction derivation (segment extension) or surfaces a new `#discussion-identifiability-floor` Instance 4. Either outcome touches one primary segment plus one meta-segment; minimal cross-segment surface area. Safe to parallelize with any other active proposal.
 
 ### C.2 O-BP15 — Comprehensive "minimal proof of viability" worked example
 
@@ -138,7 +138,7 @@ Primary aspect: unification. Composes with O-BP11 (partial unblock for the obser
 
 ### C.4 SP-19 — Naming consolidation pass
 
-Top Priority-2 items from `msc/naming-brainstorm-2026-04-24.md`: (a) `#additive-coordinate-forcing` → `#cauchy-coordinates` (shorter, more speakable); (b) `#separability-pattern` → `#separability-ladder`; (c) paired trio "**floor / ladder / Cauchy-coordinates**"; (d) template-family naming (sector / contraction / dissipativity). Rides with Bundle 1 (framework-face reframe) — naming is the implementation layer of the reframe.
+Top Priority-2 items from `msc/naming-brainstorm-2026-04-24.md`: (a) `#additive-coordinate-forcing` → `#cauchy-coordinates` (shorter, more speakable); (b) `#discussion-separability-pattern` → `#separability-ladder`; (c) paired trio "**floor / ladder / Cauchy-coordinates**"; (d) template-family naming (sector / contraction / dissipativity). Rides with Bundle 1 (framework-face reframe) — naming is the implementation layer of the reframe.
 
 **Prereq:** Joseph-level naming decision (judgment-call territory; worth an explicit naming-cycle check-in before landing). **Execution:** 1 session.
 
@@ -152,13 +152,13 @@ Primary aspect: approachability / teachability. Secondary: beauty. **Value: +3 f
 
 ### D.1 O-BP11 — Observability as master variable across the theory
 
-**Portfolio has expanded underneath this proposal.** Three segments post-dating the original entry (`#agent-opacity`, `#interaction-channel-classification`, `#identifiability-floor` Instances 1/2/3) added observability structure the original instance-list doesn't anticipate. Re-catalog before any landing decision.
+**Portfolio has expanded underneath this proposal.** Three segments post-dating the original entry (`#agent-opacity`, `#interaction-channel-classification`, `#discussion-identifiability-floor` Instances 1/2/3) added observability structure the original instance-list doesn't anticipate. Re-catalog before any landing decision.
 
 **Scoping spike** (2–3 sessions) is now genuinely investigation-first: is observability one variable (with forward $U_o$ / backward $H_b$ / cross-agent κ / composite Λ as projections of one object) or four structurally distinct variables sharing a name? Current segment evidence is genuinely ambiguous. This is the kind of question CLAUDE.md §"Strengthen before softening; attempt the improbable" explicitly calls for — a falsification test of the unification before segment-level work.
 
 **Three outcomes the spike could produce:**
 - **Unification validated (+9):** AAD re-centers on observability-as-master-variable; new organizing dimension. Execution 6–8 sessions for full re-centering.
-- **Cataloging only (+4):** meta-segment listing observability axes without forcing unification; like `#separability-pattern`'s posture-cataloging. Execution 2–3 sessions.
+- **Cataloging only (+4):** meta-segment listing observability axes without forcing unification; like `#discussion-separability-pattern`'s posture-cataloging. Execution 2–3 sessions.
 - **Genuinely partitioned (−2):** attempting unification would introduce presentational complexity without payoff; retire the proposal.
 
 Point estimate **+6** reflecting branching-outcome distribution. **Primary aspect: unification. Secondary: fundamentality, reach.**
@@ -167,13 +167,13 @@ Point estimate **+6** reflecting branching-outcome distribution. **Primary aspec
 
 ### D.2 Section III completion — upstream pieces (see Bundle 2)
 
-**O-BP16 population-level Lyapunov dynamics** — substantially stale characterization (4–6 session estimate predates the partial coverage already landed via `#agent-opacity` $H_b$, `#interaction-channel-classification`, `#identifiability-floor` Instance 3). Residual work: Kalman-Ho closed-form follow-up spike (queued); Instance 4 promotion to `#identifiability-floor` (1 session); possibly `#population-dynamics` or `#latent-structural-diversity` segment (1–2 sessions if residual content warrants). **Updated total: 2–3 sessions, not 4–6.**
+**O-BP16 population-level Lyapunov dynamics** — substantially stale characterization (4–6 session estimate predates the partial coverage already landed via `#agent-opacity` $H_b$, `#interaction-channel-classification`, `#discussion-identifiability-floor` Instance 3). Residual work: Kalman-Ho closed-form follow-up spike (queued); Instance 4 promotion to `#discussion-identifiability-floor` (1 session); possibly `#population-dynamics` or `#latent-structural-diversity` segment (1–2 sessions if residual content warrants). **Updated total: 2–3 sessions, not 4–6.**
 
 External literature rich: Moran model, replicator-Fokker-Planck (Traulsen-Claussen-Hauert 2008), Kullback-Leibler as Lyapunov for ESS (Baez 2014), Baez-Pollard 2016. Directly reusable under prior-art-integration convention.
 
 **SP-17 goal-information-leakage $\mathcal{L}_{G \to M}^c = I(o_c; G_t^c \mid \Omega_t)$** — newly surfaced in 2026-04-24 audit from `msc/sketch-composition-gaps.md` §"Formalizing the goal-contamination." Makes $\mathcal{L}$ a first-class AAD quantity; gives Case 3 (emergent goal-conditioning under Class-2-composition boundary) a quantitative handle rather than a qualitative case-distinction. Scoping question: own segment vs. subsection of `#directed-separation-under-composition`? **1–2 sessions.** **Value: +4.** **Independence: high** if new segment; **medium** if landed as subsection (conflicts with any concurrent `#directed-separation-under-composition` work).
 
-**O-BP16 independence: medium.** New segment + cross-refs to existing Section III segments (`#agent-opacity`, `#interaction-channel-classification`, `#identifiability-floor`). Light touches only; safe to parallelize with non-Section-III work. Conflicts with O-BP9 if both edit `#composition-scope-condition` concurrently.
+**O-BP16 independence: medium.** New segment + cross-refs to existing Section III segments (`#agent-opacity`, `#interaction-channel-classification`, `#discussion-identifiability-floor`). Light touches only; safe to parallelize with non-Section-III work. Conflicts with O-BP9 if both edit `#scope-composite-agent` concurrently.
 
 ### D.3 G-BP3 — Fisher-information unification of tempo and gain
 
@@ -205,7 +205,7 @@ AAD's scope-condition presupposes an agent exists. Section I does not cover the 
 
 **Primary aspect: completeness. Secondary: reach.** **Value: +5 for AAD-core / +7 for `04-logozoetic-agents/` where it unblocks the hardest subproject.** Not urgent at AAD level; genuinely load-bearing at logozoetic level.
 
-**Independence: high.** New foundational segment either in `01-aad-core/` (at the scope-condition boundary) or in `04-logozoetic-agents/`. Minimal conflict with existing in-flight work; primarily adds content rather than rewriting. Scoping decision (AAD-core vs. logozoetic-core) affects independence slightly — if placed in AAD-core, lightly conflicts with `#scope-condition` and `#agent-identity`; if placed in logozoetic-core, fully independent from all AAD-core work.
+**Independence: high.** New foundational segment either in `01-aad-core/` (at the scope-condition boundary) or in `04-logozoetic-agents/`. Minimal conflict with existing in-flight work; primarily adds content rather than rewriting. Scoping decision (AAD-core vs. logozoetic-core) affects independence slightly — if placed in AAD-core, lightly conflicts with `#scope-agency` and `#agent-identity`; if placed in logozoetic-core, fully independent from all AAD-core work.
 
 ### D.6 O-BP12 — Resource budget $B_t$ as master variable
 
@@ -266,7 +266,7 @@ These proposals are either absorbed by other landings or have been structurally 
 | Proposal | Why retired | Pointer |
 |---|---|---|
 | **O-BP2** — Four compressions as one hierarchy | Split into three descendants over three cycles. (a) U-medium synthesis landed in `#compression-operations` (2026-04-21); (b) IB vs. info-theoretic-MDP lineage split landed in `#information-bottleneck` (2026-04-24); (c) Class-2 dissolution framing superseded by SP-9's Fenchel-Bregman candidate. No consolidated full-pass is warranted; the descendants have captured the content. | `#compression-operations`; `#information-bottleneck`; SP-9 (§E) |
-| **O-BP7** — Known structural absences (meta-proposal) | Distributed across the framework. (1) Misspecification cost + (4) CIY/EIG gap → `#identifiability-floor` §"Adjacent Floors" three open extensions. (2) Tier-switching policy → O-BP3 continuous-parameter tiering (§D indirect). (3) Cross-hierarchy monotonicity → `#approximation-tiering` Working Notes. The meta-proposal is no longer needed; its sub-items have better homes. | `#identifiability-floor` §"Adjacent Floors"; `#approximation-tiering` Working Notes |
+| **O-BP7** — Known structural absences (meta-proposal) | Distributed across the framework. (1) Misspecification cost + (4) CIY/EIG gap → `#discussion-identifiability-floor` §"Adjacent Floors" three open extensions. (2) Tier-switching policy → O-BP3 continuous-parameter tiering (§D indirect). (3) Cross-hierarchy monotonicity → `#approximation-tiering` Working Notes. The meta-proposal is no longer needed; its sub-items have better homes. | `#discussion-identifiability-floor` §"Adjacent Floors"; `#approximation-tiering` Working Notes |
 | **O-BP3** — Continuous-parameter approximation tiering | Case materially depends on G-BP3 (Fisher-unification), which is now D.3 hollow. Retain as a sub-item of G-BP3's "if rewritten, include continuous form." Independently, not worth pursuing — discrete labels carry engineering intuition readers rely on. | G-BP3 (§D.3) |
 | **O-BP4** — Continuous-valued strategy DAG | Dedicated spike has been "queued" since 2026-04-22 without progress. AND/OR convergence across three independent formalism attempts is load-bearing counterweight. G-BP1 partial execution (log-odds coordinate) absorbed the credence-continuity aspect. Either land dedicated spike (value uncertain pending spike outcome) or retire. **Recommendation: retire; reopen only if a specific domain demonstrates continuous-progress structure the Boolean form cannot handle.** | G-BP1 (§A); SP-12 (§D.4) for temporal-structure-replacement |
 | **O-BP5** — Orient cascade as recursive adaptive cycle | Composes cleanly with Bundle 1 (O-BP1 + O-BP10) as the "template applies at every scale, recursively" framing. No standalone case; absorb into Bundle 1's OUTLINE preamble pass. If Bundle 1 lands without capturing recursion explicitly, reopen. | Bundle 1 (§Cross-cutting view, B.1) |

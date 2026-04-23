@@ -12,7 +12,7 @@ depends-on:
   - discrete-sector-condition
   - strategic-dynamics-derivation
   - adaptive-gain-dynamics
-  - identifiability-floor
+  - discussion-identifiability-floor
 ---
 
 # Spike: Sector Condition on the Update Operator (Log-Odds Credit-Assignment Iteration)
@@ -27,9 +27,9 @@ $$(T\lambda - \lambda^\ast)^\top (\cdot)(\lambda - \lambda^\ast) \leq \gamma \lV
 
 can be derived from structural properties of the gradient Jacobian $J$, the identifiability coefficient $\iota$, and the gain schedule $\eta_k$.
 
-**Headline outcome (summary, then derivations).** Under log-odds presentation with linear-in-log-odds dynamics and a step-size floor, the credit-assignment iteration admits an A2'-analog `(O-A2')` contraction condition whose sector constant is the Fisher-weighted product $\iota \cdot \eta_k \cdot \lambda_{\min}(J^\top J / \lVert J\rVert^2)$ on the log-odds coordinate. The stochastic-approximation analog (Robbins-Monro under unbiased gradient estimator) inherits the same contraction in mean-square under a standard step-size schedule. Sub-scope α of `#gain-sector-bridge` transfers structurally: Bayesian and exponential-family updates satisfy `(O-A2')` by construction. Sub-scope β fails structurally: non-Bayesian, non-exponential-family updates generally fail `(O-A2')` — and AAD's `#identifiability-floor` machinery already accounts for the failure mode via `#edge-update-causal-validity` (regime-C edges have $\iota \approx 0$, hence $\alpha_{\text{op}} \approx 0$, hence frozen credence per `#observability-dominance`). The discrete step-size condition of `#discrete-sector-condition` lifts: under `O-DA2'` (additive Lipschitz bound on $J$) the operator iterates as a Banach contraction with contraction factor derived from `(O-A2')` via Cauchy-Schwarz.
+**Headline outcome (summary, then derivations).** Under log-odds presentation with linear-in-log-odds dynamics and a step-size floor, the credit-assignment iteration admits an A2'-analog `(O-A2')` contraction condition whose sector constant is the Fisher-weighted product $\iota \cdot \eta_k \cdot \lambda_{\min}(J^\top J / \lVert J\rVert^2)$ on the log-odds coordinate. The stochastic-approximation analog (Robbins-Monro under unbiased gradient estimator) inherits the same contraction in mean-square under a standard step-size schedule. Sub-scope α of `#gain-sector-bridge` transfers structurally: Bayesian and exponential-family updates satisfy `(O-A2')` by construction. Sub-scope β fails structurally: non-Bayesian, non-exponential-family updates generally fail `(O-A2')` — and AAD's `#discussion-identifiability-floor` machinery already accounts for the failure mode via `#edge-update-causal-validity` (regime-C edges have $\iota \approx 0$, hence $\alpha_{\text{op}} \approx 0$, hence frozen credence per `#observability-dominance`). The discrete step-size condition of `#discrete-sector-condition` lifts: under `O-DA2'` (additive Lipschitz bound on $J$) the operator iterates as a Banach contraction with contraction factor derived from `(O-A2')` via Cauchy-Schwarz.
 
-The honest break-test is where Gaps A and B differ: the Fisher metric is in general *non-diagonal under L1' correlation*, so the sector condition transforms rather than breaks — whitening inverts the off-diagonal via `(O-A2'-whit)`. But L1' with unobservable common cause hits `#identifiability-floor`'s Cramér-Rao refutation (rank-1 Fisher per `#strategic-dynamics-derivation` Prop B.7 refutation): no sector-positive operator exists, so `(O-A2')` fails structurally rather than gracefully. This gives the composition argument a first non-trivial obstruction to absorb.
+The honest break-test is where Gaps A and B differ: the Fisher metric is in general *non-diagonal under L1' correlation*, so the sector condition transforms rather than breaks — whitening inverts the off-diagonal via `(O-A2'-whit)`. But L1' with unobservable common cause hits `#discussion-identifiability-floor`'s Cramér-Rao refutation (rank-1 Fisher per `#strategic-dynamics-derivation` Prop B.7 refutation): no sector-positive operator exists, so `(O-A2')` fails structurally rather than gracefully. This gives the composition argument a first non-trivial obstruction to absorb.
 
 ---
 
@@ -220,7 +220,7 @@ The correlation enters through $\lambda_{\min}(\mathcal{F})$, which is bounded b
 
 *[Derived (`(O-A2')` breaks under unobservable L1', from Cramér-Rao rank-1 floor)]*
 
-When $C$ is unobservable, the marginalized Fisher is rank-1 (`#strategic-dynamics-derivation` Prop B.7 refutation, `#identifiability-floor`). Then $\lambda_{\min}(\mathcal{F}) = 0$ and `(O-A2')` fails structurally — no positive sector constant exists along the unidentifiable direction. This is *not* graceful degradation; it is the same no-go pattern as `#causal-insufficiency-detection` (on-policy L0-vs-L1 via CHT) but at the update-operator layer.
+When $C$ is unobservable, the marginalized Fisher is rank-1 (`#strategic-dynamics-derivation` Prop B.7 refutation, `#discussion-identifiability-floor`). Then $\lambda_{\min}(\mathcal{F}) = 0$ and `(O-A2')` fails structurally — no positive sector constant exists along the unidentifiable direction. This is *not* graceful degradation; it is the same no-go pattern as `#causal-insufficiency-detection` (on-policy L0-vs-L1 via CHT) but at the update-operator layer.
 
 **Interpretation.** The update operator $T$ has the same identifiability-floor structure as the underlying plant: gradual degradation under soft identifiability loss, structural break under hard identifiability loss. The Fisher-whitened repair (multi-channel joint observation per Prop B.7 repair route ii) is the operator-level analog of `#observability-dominance`'s augmentation: observability buys back rank and rank buys back sector constant.
 
@@ -332,7 +332,7 @@ If the per-observation residual $y_G - \hat P_\Sigma$ has bias (biased estimator
 
 The most serious failure: if $\mathbf J$ in the default signal function does not reflect the true causal Jacobian (wrong DAG structure, wrong regime classification, wrong edge identifiability coefficient), the operator converges to a fixed point of the *mis-specified* expected-operator, not the true operator. This is `#gain-sector-bridge` FM-5 (severe misspecification) at the operator level. The fixed point of the misspecified operator is generally offset from truth by a distance proportional to $\lVert \mathbf J - \mathbf J^{\text{true}} \rVert$. `(O-A2')` holds with respect to the misspecified $\boldsymbol\lambda^\ast$, not the true one.
 
-**This is `#identifiability-floor`'s misspecification-cost open gap at the operator level.** The structural-adaptation route (`#structural-adaptation-necessity`) is needed when the mis-specified fixed point lies outside the task-adequacy threshold.
+**This is `#discussion-identifiability-floor`'s misspecification-cost open gap at the operator level.** The structural-adaptation route (`#structural-adaptation-necessity`) is needed when the mis-specified fixed point lies outside the task-adequacy threshold.
 
 ### 7.4 Rank-deficient Fisher (Cramér-Rao refutation)
 
@@ -385,8 +385,8 @@ If Gap B / C1 becomes concrete, a unification segment would state the shared Ban
 
 `#update-operator-sector` composes cleanly with AAD's three meta-patterns:
 
-- **`#separability-pattern`.** Adds a seventh ladder (update-operator sector scope): sub-scope α-op (separable-core, Bayesian/exp-family), β-op conservative (structured-repair, bounded-rotation variational), β-op breaking (general-open, unbounded-rotation or severely misspecified).
-- **`#identifiability-floor`.** Adds an instance: rank-deficient Fisher under unobservable L1' is a Cramér-Rao-floor no-go at the operator level (§4.3 here). This is the fourth `#identifiability-floor` instance, complementing on-policy CHT no-go, L1' mixture-identifiability obstruction, and misspecification-cost extension.
+- **`#discussion-separability-pattern`.** Adds a seventh ladder (update-operator sector scope): sub-scope α-op (separable-core, Bayesian/exp-family), β-op conservative (structured-repair, bounded-rotation variational), β-op breaking (general-open, unbounded-rotation or severely misspecified).
+- **`#discussion-identifiability-floor`.** Adds an instance: rank-deficient Fisher under unobservable L1' is a Cramér-Rao-floor no-go at the operator level (§4.3 here). This is the fourth `#discussion-identifiability-floor` instance, complementing on-policy CHT no-go, L1' mixture-identifiability obstruction, and misspecification-cost extension.
 - **`#additive-coordinate-forcing`.** Adds an *application* of the log-odds coordinate forcing from `#edge-update-natural-parameter`: the sequential-composition sector constant (§6.2 here) is log-additive specifically because the log-odds coordinate is the uniquely-forced additive evidence coordinate. The operator-layer composition inherits the log-additive structure — the three-layer additive-decomposition pattern extends to the operator-composition layer as an *adjacent instance* (classified parallel to Lyapunov quadratic and IB Lagrangian in `#additive-coordinate-forcing`).
 
 ---
@@ -416,7 +416,7 @@ Strength per section, honestly:
 
 ### 9.2 What's not derived
 
-- **Section 7.3 (structurally misspecified $J$) is open.** The misspecification-cost question at the operator level is the operator-layer version of `#identifiability-floor`'s misspecification-cost open gap. A tight bound on $\lVert \boldsymbol\lambda_{\text{miss}}^\ast - \boldsymbol\lambda^\ast \rVert$ in terms of $\lVert \mathbf J - \mathbf J^{\text{true}} \rVert$ is not given here.
+- **Section 7.3 (structurally misspecified $J$) is open.** The misspecification-cost question at the operator level is the operator-layer version of `#discussion-identifiability-floor`'s misspecification-cost open gap. A tight bound on $\lVert \boldsymbol\lambda_{\text{miss}}^\ast - \boldsymbol\lambda^\ast \rVert$ in terms of $\lVert \mathbf J - \mathbf J^{\text{true}} \rVert$ is not given here.
 - **Unification with mismatch operator (Gap B).** §6.3 says the spike *supplies* a base case, not that it *closes* the gap. The actual unification — a single template covering both mismatch and update layers with coupling characterization — is deferred.
 - **Non-AND DAGs.** The monotone-AND-with-regime-A derivation in §2.2 Step 1 uses nonnegativity of Jacobian components. For OR-nodes, the Jacobian can have mixed signs, and the derivation of `(O-A2')` requires sign-control arguments that are sketched but not worked through here.
 - **Operator-Lipschitz constant $L_{\text{op}}$ is conservative.** The bound $L_{\text{op}} \leq 1/8$ in §5.2 uses $\sigma'(\lambda) \leq 1/4$ and $\eta_k \leq 1/2$ pessimistically. For specific DAGs, $L_{\text{op}}$ can be computed more tightly.
@@ -438,7 +438,7 @@ This is genuine strengthening — before the spike, the log-odds update's contra
 
 ## 10. Recommended Follow-Ups
 
-1. **Land `#update-operator-sector`** as primary deliverable. Format: `derivation` segment following FORMAT.md §Derivation-audit-table convention. Cross-reference hooks into `#credit-assignment-boundary` (default signal function is now an instance of an `(O-A2')`-satisfying operator), `#edge-update-via-gain` (Beta-Bernoulli gain gives concrete sector constant), `#identifiability-floor` (fourth instance at operator layer), `#separability-pattern` (seventh ladder).
+1. **Land `#update-operator-sector`** as primary deliverable. Format: `derivation` segment following FORMAT.md §Derivation-audit-table convention. Cross-reference hooks into `#credit-assignment-boundary` (default signal function is now an instance of an `(O-A2')`-satisfying operator), `#edge-update-via-gain` (Beta-Bernoulli gain gives concrete sector constant), `#discussion-identifiability-floor` (fourth instance at operator layer), `#discussion-separability-pattern` (seventh ladder).
 
 2. **Update `#credit-assignment-boundary`** to reference `(O-A2')` as the contraction guarantee underlying its Level-1 design requirement (directional fidelity). This clarifies that directional fidelity gives sector-positive expected update, which via `(O-A2')` + `(O-DA.1)` gives Banach contraction in log-odds.
 

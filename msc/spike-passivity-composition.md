@@ -5,7 +5,7 @@ status: exploratory; substantive for α sub-scope; partial for β; honestly limi
 motivates: candidate meta-segment #dissipativity-template OR strengthening of #sector-persistence-template; sub-scope α promotions for PID-in-positive-real-plant
 depends-on:
   - composition-closure
-  - composition-scope-condition
+  - scope-composite-agent
   - sector-persistence-template
   - sector-condition-derivation
   - gain-sector-bridge
@@ -358,7 +358,7 @@ AAD's architectural classification (Class 1 modular, Class 2 merged, Class 3 par
 
 **This provides a third reading of the architectural classification.** The Class 1/3/2 hierarchy was previously framed as:
 - (a) a modularity spectrum (#directed-separation);
-- (b) an identifiability ladder (#separability-pattern);
+- (b) an identifiability ladder (#discussion-separability-pattern);
 - (c) under the passivity frame: **a port-structure ladder for composition closure** — Class 1 has clean ports (heterogeneous composition closes); Class 3 has leaky ports (closes with ε-error); Class 2 has no ports (does not close via passivity; requires coupled formulation).
 
 This fits the "three meta-segments" framing (CLAUDE.md §7) as a concrete specialization: the separability pattern has a composition-theoretic realization under passivity.
@@ -458,7 +458,7 @@ What to promote, where, and at what status. Three candidate moves; the first is 
 
 **Status:** conditional (status=exact-under-stated-conditions for the α class; conditional for the PID promotion).
 
-**Depends on:** #sector-persistence-template, #sector-condition-derivation, #composition-closure, #composition-scope-condition, #directed-separation, #team-persistence.
+**Depends on:** #sector-persistence-template, #sector-condition-derivation, #composition-closure, #scope-composite-agent, #directed-separation, #team-persistence.
 
 **Core content:**
 
@@ -560,9 +560,9 @@ Not a new segment; modifications to existing segments after `#dissipativity-temp
 
 This spike's result (passivity as composition primitive) integrates cleanly with AAD's three-meta-segment structure:
 
-- **#separability-pattern** (positive half): passivity adds a new ladder — the **architectural-port ladder** — to the six ladders already enumerated (correlation, convention, architecture, contraction, identification, scope). Class 1 has clean ports (separable); Class 3 has leaky ports (structured repair); Class 2 has no ports (general open). This is a seventh ladder in the same shape.
+- **#discussion-separability-pattern** (positive half): passivity adds a new ladder — the **architectural-port ladder** — to the six ladders already enumerated (correlation, convention, architecture, contraction, identification, scope). Class 1 has clean ports (separable); Class 3 has leaky ports (structured repair); Class 2 has no ports (general open). This is a seventh ladder in the same shape.
 
-- **#identifiability-floor** (negative half): passivity gives a no-go result for adversarial composition — the passivity framework cannot certify stability against an adversary who chooses supply-rate inputs strategically. This is structurally parallel to the on-policy-detection no-go: there's a structural limit (adversarial choice of supply) that external machinery (passivity) cannot overcome, and an escape route (small-gain robustness plus #adversarial-destabilization's coupling analysis) that AAD machinery does supply. Candidate as a fourth instance of the identifiability-floor pattern.
+- **#discussion-identifiability-floor** (negative half): passivity gives a no-go result for adversarial composition — the passivity framework cannot certify stability against an adversary who chooses supply-rate inputs strategically. This is structurally parallel to the on-policy-detection no-go: there's a structural limit (adversarial choice of supply) that external machinery (passivity) cannot overcome, and an escape route (small-gain robustness plus #adversarial-destabilization's coupling analysis) that AAD machinery does supply. Candidate as a fourth instance of the identifiability-floor pattern.
 
 - **#additive-coordinate-forcing** (constructive half): passivity does *not* fit the Cauchy-FE-force-a-coordinate pattern. Storage functions sum additively under interconnection, but the additivity is from the port-structure identity (power-preserving interconnection), not from a Cauchy-functional-equation argument on an axiomatized additivity requirement. The storage-function summation is a *different* additivity pattern — it arises from the physics/geometry of ports, not from a uniqueness theorem. So passivity does not compose with #additive-coordinate-forcing; it stands outside the constructive-half meta-pattern.
 
@@ -606,7 +606,7 @@ The spike recommends a new meta-segment `#dissipativity-template` that generaliz
 
 Passivity does *not* handle strategic adversarial opponents — those require the #adversarial-destabilization framework on top. Passivity does *not* close the #composition-closure bridge-lemma gap — that needs composite DA2'-inc, which is orthogonal to passivity's composite (T2). Passivity does *not* cover $N \geq 3$ without additional network-level conditions. These are honest scope boundaries.
 
-Integration with AAD's three-meta-segment architecture: passivity adds a seventh ladder (architectural port structure) to #separability-pattern, contributes a fourth candidate instance to #identifiability-floor (adversarial-supply no-go), and sits outside #additive-coordinate-forcing (storage-function additivity is port-structure additivity, not Cauchy-FE additivity). This places `#dissipativity-template` as technical-machinery-segment rather than as a fourth meta-segment.
+Integration with AAD's three-meta-segment architecture: passivity adds a seventh ladder (architectural port structure) to #discussion-separability-pattern, contributes a fourth candidate instance to #discussion-identifiability-floor (adversarial-supply no-go), and sits outside #additive-coordinate-forcing (storage-function additivity is port-structure additivity, not Cauchy-FE additivity). This places `#dissipativity-template` as technical-machinery-segment rather than as a fourth meta-segment.
 
 Distinctively AAD moves in the passivity frame: (1) cross-tradition synthesis of Amari's information-geometric divergences with Willems's dissipativity; (2) port-structure reading of directed separation's Class 1/3/2; (3) scope-honesty-as-architecture applied to the α/β/α'' sub-scope partition.
 

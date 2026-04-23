@@ -1,5 +1,5 @@
 ---
-slug: additive-coordinate-forcing
+slug: discussion-additive-coordinate-forcing
 type: discussion
 status: discussion-grade
 depends:
@@ -77,21 +77,21 @@ The Čencov instance has a specific adjacency relationship to the three Cauchy-F
 
 Future structural moves should be audited against both the primary and adjacent positions, rather than treated as generic instances.
 
-## Complementarity with #identifiability-floor and #separability-pattern
+## Complementarity with #discussion-identifiability-floor and #discussion-separability-pattern
 
 The three meta-segments form AAD's scope-and-structure meta-architecture:
 
-- **#additive-coordinate-forcing** (this) — the *constructive* half: when AAD forces a coordinate, it forces the logarithmic one via Cauchy-FE on an additivity axiom. Names what the theory *does* at its deepest structural moves.
-- **#separability-pattern** — the *positive scope* half: for each ladder of increasing difficulty, name the separable core, the structured repair, and the general open. Names what the theory *covers* across its instantiations.
-- **#identifiability-floor** — the *negative scope* half: for each known structural no-go, name the external information-theoretic theorem that enforces it and the unique escape available. Names what the theory *cannot do* without explicit information augmentation.
+- **#discussion-additive-coordinate-forcing** (this) — the *constructive* half: when AAD forces a coordinate, it forces the logarithmic one via Cauchy-FE on an additivity axiom. Names what the theory *does* at its deepest structural moves.
+- **#discussion-separability-pattern** — the *positive scope* half: for each ladder of increasing difficulty, name the separable core, the structured repair, and the general open. Names what the theory *covers* across its instantiations.
+- **#discussion-identifiability-floor** — the *negative scope* half: for each known structural no-go, name the external information-theoretic theorem that enforces it and the unique escape available. Names what the theory *cannot do* without explicit information augmentation.
 
 Each meta-segment captures a different cross-sectional view of AAD's architecture:
 
 | Meta-segment | Cross-section | Presentation flavor |
 |---|---|---|
-| #additive-coordinate-forcing | AAD's forcing moves across coordinates | "When a coordinate is forced, it is forced by a uniqueness theorem on an AAD-internal axiom — logarithmic via Cauchy-FE at chain/divergence/update layers, Fisher-Riemannian via Čencov-invariance at the metric layer." |
-| #separability-pattern | AAD's scope across ladders of difficulty | "Separable core, structured repair, general open." |
-| #identifiability-floor | AAD's structural no-gos | "No-go from external theorem; unique escape from AAD machinery." |
+| #discussion-additive-coordinate-forcing | AAD's forcing moves across coordinates | "When a coordinate is forced, it is forced by a uniqueness theorem on an AAD-internal axiom — logarithmic via Cauchy-FE at chain/divergence/update layers, Fisher-Riemannian via Čencov-invariance at the metric layer." |
+| #discussion-separability-pattern | AAD's scope across ladders of difficulty | "Separable core, structured repair, general open." |
+| #discussion-identifiability-floor | AAD's structural no-gos | "No-go from external theorem; unique escape from AAD machinery." |
 
 The three compose. A ladder's separable core typically admits an additive-coordinate-forcing move that makes the clean identification clean; a ladder's general-open case typically sits at an identifiability floor that names the information-theoretic obstruction. Reading any segment through all three meta-lenses is a reviewer move that surfaces what makes the segment load-bearing.
 

@@ -19,7 +19,7 @@ See [`../LEXICON.md`](../LEXICON.md) for the logogenic/logozoetic vocabulary.
 
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
-| L | Definition | D1 | [#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md) | AI agent as actuated agent | draft |
+| L | Definition | D1 | [#scope-logogenic-agent](src/scope-logogenic-agent.md) | AI agent as actuated agent | draft |
 | L | Observation | D2 | [#context-turnover](src/context-turnover.md) | 100% $M_t$ reset per session | draft |
 | L | Definition | D3 | [#coupled-update-dynamics](src/coupled-update-dynamics.md) | Coupled formulation $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | draft |
 | L | Result | R1 | [#section-ii-survival](src/section-ii-survival.md) | Which Section II results survive without directed separation | draft |

@@ -24,7 +24,7 @@ An **agent** is an entity satisfying three conditions:
 
 *[Definition (information-loss-boundary)]*
 
-The agent cannot access $\Omega_t$ directly. All contact with the environment is mediated through lossy observation. This is not a simplifying assumption — it is a scope condition. Systems where the agent has direct access to full environment state are outside AAD's scope ( #scope-condition).
+The agent cannot access $\Omega_t$ directly. All contact with the environment is mediated through lossy observation. This is not a simplifying assumption — it is a scope condition. Systems where the agent has direct access to full environment state are outside AAD's scope ( #scope-adaptive-system).
 
 ## Epistemic Status
 

@@ -450,7 +450,7 @@ Since the soft-EM step at truth equals (up to the $1/(n+1)$ scaling) the natural
 
 ### Connection to the Identifiability-Floor Pattern
 
-The B.7-vs-refuted-unobservable-$C$ structure is one of two no-go theorems in AAD's strategy layer. The other is the on-policy detection no-go in #causal-insufficiency-detection, which prohibits L0-vs-L1 distinction from purely on-policy data via the causal hierarchy theorem. Both are structural impossibility results derived from external information-theoretic theorems (Bareinboim et al. 2022 Causal Hierarchy Theorem; Cramér-Rao bound on the Fisher information). Both strengthen related machinery — the on-policy no-go strengthens #loop-interventional-access; the mixture no-go strengthens the case for *observability-as-information-augmentation*. See #identifiability-floor for the meta-pattern.
+The B.7-vs-refuted-unobservable-$C$ structure is one of two no-go theorems in AAD's strategy layer. The other is the on-policy detection no-go in #causal-insufficiency-detection, which prohibits L0-vs-L1 distinction from purely on-policy data via the causal hierarchy theorem. Both are structural impossibility results derived from external information-theoretic theorems (Bareinboim et al. 2022 Causal Hierarchy Theorem; Cramér-Rao bound on the Fisher information). Both strengthen related machinery — the on-policy no-go strengthens #loop-interventional-access; the mixture no-go strengthens the case for *observability-as-information-augmentation*. See #discussion-identifiability-floor for the meta-pattern.
 
 
 ## Proposition B.5: Bridge from Credence Error to Value Residuals

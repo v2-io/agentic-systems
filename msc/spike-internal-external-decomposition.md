@@ -224,9 +224,9 @@ where $Q(\cdot)$ captures the cumulative quality of past actions affecting futur
 
 This regime structure is *identical* to the CIY admissibility regimes ( #ciy-observational-proxy). That is not a coincidence: both are facets of the same underlying identification question — can an analyst (or an agent) distinguish an internal contribution from an external contribution to an observed outcome using the data at hand?
 
-### 5.3 Connection to `#identifiability-floor`
+### 5.3 Connection to `#discussion-identifiability-floor`
 
-The internal-external decomposition has an identifiability floor in Regime C. The floor has the canonical shape of `#identifiability-floor`:
+The internal-external decomposition has an identifiability floor in Regime C. The floor has the canonical shape of `#discussion-identifiability-floor`:
 
 1. **Setting.** Decompose $\mathcal V$ observed in a steady-state agent-environment loop into $\mathcal V_E + \mathcal V_I$.
 2. **External theorem.** Pearl/Bareinboim causal hierarchy: distinguishing internal contribution from external contribution requires Level 2 (interventional) data — hold one side fixed, vary the other. Observational data under a fixed agent-environment coupling is Level 1.
@@ -314,7 +314,7 @@ The decomposition tells you *where the margin came from*, which tells you what t
 
 ## 8. TST specialization
 
-Map the decomposition onto a software-development team. Use `#software-epistemic-properties` P1–P6 and the developer-as-AAD-agent mapping in `#developer-as-act-agent`.
+Map the decomposition onto a software-development team. Use `#software-epistemic-properties` P1–P6 and the developer-as-AAD-agent mapping in `#scope-developer-agent`.
 
 ### 8.1 Per-component TST mapping
 
@@ -474,13 +474,13 @@ This is the only step requiring an AAD-novel claim. The claim is that $\rho$ in 
 
 Where does this decomposition sit in AAD's architecture?
 
-**#separability-pattern (positive half).** The decomposition is a separability result — it names the *separable core* of viability attribution (regimes A/B where the components are identifiable) and the *structured repair* (Regime B with functional-form assumptions) and the *general open* (Regime C, where the decomposition is not identifiable observationally). It adds a seventh ladder to the six in `#separability-pattern`:
+**#discussion-separability-pattern (positive half).** The decomposition is a separability result — it names the *separable core* of viability attribution (regimes A/B where the components are identifiable) and the *structured repair* (Regime B with functional-form assumptions) and the *general open* (Regime C, where the decomposition is not identifiable observationally). It adds a seventh ladder to the six in `#discussion-separability-pattern`:
 
 | Ladder | Separable core | Structured repair | General open |
 |---|---|---|---|
 | **Internal-external attribution** (this spike) | **Regime A** — rotation experiments, natural experiments separate $\mathcal V_E$ from $\mathcal V_I$ | **Regime B** — functional-form assumptions on $f, g, h, Q$ | **Regime C** — observational, fixed-coupling data; decomposition is not identifiable |
 
-**#identifiability-floor (negative half).** §5.3 derives the Regime-C identifiability floor for this decomposition. The external theorem invoked is the Pearl/Bareinboim CHT: separating internal contribution from external contribution requires Level 2 data (holding one side fixed). This is Instance 3 of the floor pattern — shares its shape with Instance 1 (on-policy L0-insufficiency detection) and Instance 2 (L1' single-channel unidentifiability).
+**#discussion-identifiability-floor (negative half).** §5.3 derives the Regime-C identifiability floor for this decomposition. The external theorem invoked is the Pearl/Bareinboim CHT: separating internal contribution from external contribution requires Level 2 data (holding one side fixed). This is Instance 3 of the floor pattern — shares its shape with Instance 1 (on-policy L0-insufficiency detection) and Instance 2 (L1' single-channel unidentifiability).
 
 **#additive-coordinate-forcing (constructive half).** The log-viability coordinate $\mathcal V$ is an *adjacent family member* of the three Cauchy-FE anchors, not a fourth theorem. Viability has no chain-rule-like compositionality axiom whose Cauchy solution would force the logarithmic form. The logarithmic coordinate is *matched* to the structure (products of independent factors become log-additive), not *forced* by an AAD-internal axiom. This is the honest characterization; elevating it to a fourth theorem would require identifying a compositionality axiom on viability, which I do not see.
 
@@ -512,8 +512,8 @@ Each read surfaces a different load-bearing role.
 - `#mismatch-dynamics` (the $\rho$ role)
 - `#model-class-fitness` (the $f(\mathcal M)$ factor)
 - `#edge-update-causal-validity` (Regime A/B/C identification framework)
-- `#identifiability-floor` (the negative-half instance discussion)
-- `#separability-pattern` (the positive-half seventh-ladder discussion)
+- `#discussion-identifiability-floor` (the negative-half instance discussion)
+- `#discussion-separability-pattern` (the positive-half seventh-ladder discussion)
 
 **Content shape.**
 1. Target quantity ($\mathcal V$, log-viability).
@@ -534,8 +534,8 @@ Add a section on "Decomposing the persistence margin" with:
 ### 12.3 Cross-references to add
 
 - `#persistence-condition`: add a Discussion paragraph noting that the persistence inequality admits the internal-external decomposition above; cross-reference the new segment.
-- `#separability-pattern`: add the seventh ladder row.
-- `#identifiability-floor`: add Instance 3 (internal-external decomposition under Regime C).
+- `#discussion-separability-pattern`: add the seventh ladder row.
+- `#discussion-identifiability-floor`: add Instance 3 (internal-external decomposition under Regime C).
 - `#software-epistemic-properties`: add a Discussion note that the per-quantity exactness audit supports a well-posed TST specialization of the decomposition; cross-reference.
 - `#mismatch-decomposition`: add a note distinguishing this per-instant decomposition from the per-history internal-external decomposition.
 
@@ -574,11 +574,11 @@ Add a section on "Decomposing the persistence margin" with:
 - **Coarse decomposition.** $\mathcal V = \log \lVert\delta_{\text{critical}}\rVert - \log \rho + \log \alpha$, *exact* for Model D linear.
 - **Fine decomposition.** $\mathcal V = \mathcal V_E + \mathcal V_I$ where $\mathcal V_E$ collects the purely-external factors ($\lVert\delta_{\text{critical}}^{\text{domain}}\rVert$, $\rho_{\text{external}}$, $\nu_{\text{external-cap}}$) and $\mathcal V_I$ collects the agent-controllable factors (objective ambition, model expressiveness, policy benignity, chosen event rate, update gain, directional fidelity). Status *robust-qualitative*, limited by the $\rho$ factorization.
 - **Confounding.** Four channels (P6 observation-quality feedback, policy-benignity, structural adaptation, objective re-choice) entangle $\mathcal V_E$ and $\mathcal V_I$ in feedback systems. Structural, not removable.
-- **Identifiability.** Regime A (rotation / natural experiments) separately identifies $\mathcal V_E$ and $\mathcal V_I$. Regime B requires functional-form assumptions. Regime C is an identifiability floor (Instance-3 candidate for `#identifiability-floor`).
+- **Identifiability.** Regime A (rotation / natural experiments) separately identifies $\mathcal V_E$ and $\mathcal V_I$. Regime B requires functional-form assumptions. Regime C is an identifiability floor (Instance-3 candidate for `#discussion-identifiability-floor`).
 - **Worked Kalman example.** For the `#worked-example-kalman` setup, $\mathcal V = 2.91$ decomposes as $\mathcal V_E = 2.30$ (environment-heavy) and $\mathcal V_I = 0.61$ (modest agent contribution) — the agent is tracking well mostly because the domain is forgiving.
 - **TST specialization.** Policy-benignity ($g(\pi)$) is exactly estimable from $\mathcal C_t^{\text{commit}}$ (system-coupling / changeset-size); the aggregate $(\mathcal V_E, \mathcal V_I)$ split is separately identifiable via team-rotation experiments without requiring per-component estimation. The internal-operational-health components hardest to estimate are exactly the cognitive ones — not exteriorized by standard team protocols.
 - **Meta-segment placement.** Positive-half separability seventh-ladder candidate; negative-half identifiability-floor Instance 3 candidate; adjacent family member in the logarithmic-coordinate family (not a fourth Cauchy-FE theorem, absent a compositionality axiom for viability).
-- **Recommendation.** Promote as new appendix segment `#internal-external-decomposition`; update `#operationalization`, `#persistence-condition`, `#separability-pattern`, `#identifiability-floor`, `#software-epistemic-properties`, `#mismatch-decomposition` with cross-references and companion notes.
+- **Recommendation.** Promote as new appendix segment `#internal-external-decomposition`; update `#operationalization`, `#persistence-condition`, `#discussion-separability-pattern`, `#discussion-identifiability-floor`, `#software-epistemic-properties`, `#mismatch-decomposition` with cross-references and companion notes.
 
 ## Appendix A: per-term ontological inventory
 

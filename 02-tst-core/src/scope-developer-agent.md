@@ -1,7 +1,7 @@
 ---
-slug: developer-as-act-agent
-type: definition
-status: exact
+slug: scope-developer-agent
+type: scope
+status: axiomatic
 depends:
   - software-scope
   - software-epistemic-properties
@@ -15,13 +15,13 @@ depends:
 stage: draft
 ---
 
-# Definition: Developer as AAD Agent
+# Scope: Developer Agent
 
-The developer (human or AI) instantiated as an AAD agent: $X_t = (M_t, G_t)$ where $M_t$ is the developer's understanding of the codebase, $G_t = (O_t, \Sigma_t)$ decomposes into feature/fix objectives and implementation strategy.
+AAD's developer-scope encompasses human and AI developers acting on a codebase: $X_t = (M_t, G_t)$ where $M_t$ is the developer's understanding of the codebase, and $G_t = (O_t, \Sigma_t)$ decomposes into feature/fix objectives and implementation strategy.
 
 ## Formal Expression
 
-*[Definition (developer-as-act-agent)]*
+*[Scope (scope-developer-agent)]*
 
 A software developer is an actuated adaptive agent ( #agent-environment) whose state, environment, and coupling are:
 

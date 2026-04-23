@@ -3,7 +3,7 @@ slug: code-quality-as-observation-infrastructure
 type: derived
 status: conditional
 depends:
-  - developer-as-act-agent
+  - scope-developer-agent
   - software-epistemic-properties
   - update-gain
   - adaptive-tempo
@@ -46,13 +46,13 @@ From #persistence-condition (linear operational form), the developer persists wh
 
 $$\mathcal{T}_{\text{dev}} \gt \frac{\rho}{\lVert\delta_{\text{critical}}\rVert}$$
 
-Since $\mathcal T_{\text{dev}}$ includes $\mathcal T_{\text{read}}$ as a component ( #developer-as-act-agent), and $\mathcal T_{\text{read}}$ is increasing in $Q$, code quality degradation can push $\mathcal T_{\text{dev}}$ below the persistence threshold. This is the formal content of the claim that a codebase can become "unmaintainable."
+Since $\mathcal T_{\text{dev}}$ includes $\mathcal T_{\text{read}}$ as a component ( #scope-developer-agent), and $\mathcal T_{\text{read}}$ is increasing in $Q$, code quality degradation can push $\mathcal T_{\text{dev}}$ below the persistence threshold. This is the formal content of the claim that a codebase can become "unmaintainable."
 
 ### The investment structure
 
 *[Derived (code-quality-investment, from change-investment + code-quality-tempo-chain)]*
 
-Actions that improve code quality — writing tests, improving names, adding documentation, reducing coupling — are observation-infrastructure investments ( #developer-as-act-agent, action class 4). Their cost is immediate (time spent now on quality improvement instead of feature delivery). Their benefit is a permanent reduction in $U_o^{\text{(read)}}$ that compounds across every future interaction with the modified code.
+Actions that improve code quality — writing tests, improving names, adding documentation, reducing coupling — are observation-infrastructure investments ( #scope-developer-agent, action class 4). Their cost is immediate (time spent now on quality improvement instead of feature delivery). Their benefit is a permanent reduction in $U_o^{\text{(read)}}$ that compounds across every future interaction with the modified code.
 
 From #change-investment, the investment is justified when:
 

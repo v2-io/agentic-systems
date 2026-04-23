@@ -6,7 +6,7 @@
 
 **Motivation.** #composition-closure Working Notes log "$N$-agent scaling of $\varepsilon^\ast$" as an open question (is it polynomial or exponential in team size?), and `TODO.md` flags this as "critical for applying the theory to large teams." For $N = 2$, there is one fully worked case (`msc/spike-composition-correlated-kalman.md`) and a two-agent sketch of the bridge lemma (`msc/spike-composition-bridge-2agent.md`, absorbed). For general $N$, there is nothing but the weakest-link bound $\alpha_c \geq \min_i(\alpha_i - \Delta\mathcal T_i^{\text{cost}})$ from #team-persistence. The conjectural folklore is that coupling *structure* dominates: sparse/tree-like coupling should allow efficient dimensionality reduction, fully-connected coupling should not, and real teams live somewhere between. This spike lays out the scaffolding so a future working pass can attack the question without re-deriving the frame.
 
-**Depends on**: #composition-closure, #composition-scope-condition, #sector-persistence-template, #tempo-composition, #team-persistence, #unity-dimensions, #unity-closure-mapping, #compression-operations, `msc/spike-composition-correlated-kalman.md`, `msc/spike-agent-composition.md`, `msc/speculation-soc-composition.md`, `msc/spike-unity-closure-mapping.md`, `msc/spike-mori-zwanzig-composition.md`.
+**Depends on**: #composition-closure, #scope-composite-agent, #sector-persistence-template, #tempo-composition, #team-persistence, #unity-dimensions, #unity-closure-mapping, #compression-operations, `msc/spike-composition-correlated-kalman.md`, `msc/spike-agent-composition.md`, `msc/speculation-soc-composition.md`, `msc/spike-unity-closure-mapping.md`, `msc/spike-mori-zwanzig-composition.md`.
 
 ---
 
@@ -28,7 +28,7 @@ $$\varepsilon^\ast = \inf_{\Lambda \in \mathcal P_{\text{adm}},\, (\pi_c, E_c, f
 
 Reading 1 is the easiest to attack; reading 4 is the most honest, because (P3) dimensionality-reduction is meaningful only relative to $\dim \mathcal X_{\text{micro}}$, which itself grows with $N$. Subsequent sections use reading 1 unless noted.
 
-*[Scope caveat]* The question presumes #composition-scope-condition is satisfied for the $N$-agent system — i.e., there is at least one alignment route (shared objective, hierarchical derivation, mutual benefit) that makes the group a composite rather than a multi-agent system. Without scope-satisfaction, $\varepsilon^\ast$ is still well-defined as a projection property of the micro-dynamics but has no interpretation as composition quality. Large $N$ plausibly *stresses* scope-satisfaction — maintaining shared objectives or hierarchical derivation over many agents is itself expensive — but this spike treats scope as given and focuses on the defect conditional on it.
+*[Scope caveat]* The question presumes #scope-composite-agent is satisfied for the $N$-agent system — i.e., there is at least one alignment route (shared objective, hierarchical derivation, mutual benefit) that makes the group a composite rather than a multi-agent system. Without scope-satisfaction, $\varepsilon^\ast$ is still well-defined as a projection property of the micro-dynamics but has no interpretation as composition quality. Large $N$ plausibly *stresses* scope-satisfaction — maintaining shared objectives or hierarchical derivation over many agents is itself expensive — but this spike treats scope as given and focuses on the defect conditional on it.
 
 ## 2. Why It Matters (Load-Bearing Downstream)
 

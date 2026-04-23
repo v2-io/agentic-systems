@@ -11,7 +11,7 @@
 
 These findings are not independent. **Symbiogenesis is the mechanism by which teleological unity emerges from zero to one.** Taken together, they propose a restructuring of Section III: composition has an *existence condition* (teleological unity) distinct from its *quality metrics* (the other unities, update heterogeneity, closure defect); symbiogenesis is the specific dynamical process that creates composite-agent identity by crossing the existence condition from below.
 
-**Depends on**: #scope-condition, #unity-dimensions, #composition-closure, #directed-separation, #structural-change-as-parametric-limit, #multi-agent-scope, `msc/spike-miller-act-bridge.md`, `msc/spike-unity-closure-mapping.md`, Miller (2022) Appendix B.
+**Depends on**: #scope-agency, #unity-dimensions, #composition-closure, #directed-separation, #structural-change-as-parametric-limit, #multi-agent-scope, `msc/spike-miller-act-bridge.md`, `msc/spike-unity-closure-mapping.md`, Miller (2022) Appendix B.
 
 ---
 
@@ -23,11 +23,11 @@ These findings are not independent. **Symbiogenesis is the mechanism by which te
 
 ### 1.2 Proposed framing
 
-**Teleological unity $U_O$ is a scope condition for composition**, paralleling `#scope-condition` for single agents. The other unities and update-heterogeneity parametrize composite *quality*, given that composition exists.
+**Teleological unity $U_O$ is a scope condition for composition**, paralleling `#scope-agency` for single agents. The other unities and update-heterogeneity parametrize composite *quality*, given that composition exists.
 
 *[Scope (composition-scope-condition, proposed)]*
 
-A set of purposeful sub-agents $\{A_1, \ldots, A_N\}$, each satisfying `#scope-condition`, constitutes a composite agent iff there is sufficient teleological alignment: $U_O \geq \epsilon_{\text{comp}}$ for some operationalization of $U_O$ and threshold $\epsilon_{\text{comp}}$.
+A set of purposeful sub-agents $\{A_1, \ldots, A_N\}$, each satisfying `#scope-agency`, constitutes a composite agent iff there is sufficient teleological alignment: $U_O \geq \epsilon_{\text{comp}}$ for some operationalization of $U_O$ and threshold $\epsilon_{\text{comp}}$.
 
 Three sufficient routes (weakest to strongest):
 
@@ -43,7 +43,7 @@ The current framework treats composite-existence as a derived question: a low-$\
 
 With $U_O$ as scope condition, the existence question is asked first. For composites that exist, the quality question (closure defect, tempo composition, persistence) is well-posed. For agent groups below the threshold, the theory correctly refuses to apply composite concepts.
 
-This parallels the single-agent case. A thermostat-in-environment satisfies `#scope-condition` and is an agent whose adaptive tempo we can measure; a rock-in-environment is not an agent, and asking for its tempo is a category error. The composite analog: aligned-purpose sub-agents form a composite we can analyze; orthogonal-purpose sub-agents form a multi-agent system, for which asking about composite tempo is the same category error.
+This parallels the single-agent case. A thermostat-in-environment satisfies `#scope-agency` and is an agent whose adaptive tempo we can measure; a rock-in-environment is not an agent, and asking for its tempo is a category error. The composite analog: aligned-purpose sub-agents form a composite we can analyze; orthogonal-purpose sub-agents form a multi-agent system, for which asking about composite tempo is the same category error.
 
 ---
 
@@ -172,7 +172,7 @@ Applies to composites (scope condition passes). The cooperative-adversarial deco
 
 ### 5.6 #multi-agent-scope
 
-Currently defines the scope for multi-agent systems. Under the proposal, this segment becomes the *broader* scope; `#composition-scope-condition` is a *restriction* to systems where a composite agent exists. Multi-agent systems without $U_O$ still satisfy `#multi-agent-scope` and are valid objects of study (adversarial dynamics, orthogonal ecosystems); they just don't form composites.
+Currently defines the scope for multi-agent systems. Under the proposal, this segment becomes the *broader* scope; `#scope-composite-agent` is a *restriction* to systems where a composite agent exists. Multi-agent systems without $U_O$ still satisfy `#multi-agent-scope` and are valid objects of study (adversarial dynamics, orthogonal ecosystems); they just don't form composites.
 
 ---
 
@@ -254,7 +254,7 @@ Max attainable for the overall framing: *robust qualitative*. Specific formaliza
 
 ### Immediate (promotion to segments)
 
-1. **New segment: `#composition-scope-condition`** — formal statement of the scope condition, paralleling `#scope-condition`. Likely a Scope-type segment.
+1. **New segment: `#scope-composite-agent`** — formal statement of the scope condition, paralleling `#scope-agency`. Likely a Scope-type segment.
 2. **New segment: `#symbiogenic-composition`** — the mechanism distinct from peer coupling. Likely a Formulation- or Hypothesis-type segment.
 3. **Revision: `#unity-dimensions`** — separate $U_O$ as scope from $\{U_M, U_\Sigma, U_{\text{obs}}\}$ as quality metrics.
 4. **Revision: `#structural-change-as-parametric-limit`** — remove grafting from the within-agent list; point to the new symbiogenesis segment.

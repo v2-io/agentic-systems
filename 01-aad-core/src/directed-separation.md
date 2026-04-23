@@ -5,7 +5,7 @@ status: conditional
 depends:
   - complete-agent-state
   - recursive-update
-  - scope-condition
+  - scope-agency
 stage: draft
 ---
 
@@ -36,7 +36,7 @@ The three lines encode the full coupling structure:
 
 The claim "$f_M$ has no $G_t$ argument" requires that the epistemic update is **goal-blind conditional on the realized event**. This holds when:
 
-1. The observation mechanism $h$ may be action-dependent ( #scope-condition allows this), but $f_M$ processes whatever event arrives without reference to why the agent sought that event
+1. The observation mechanism $h$ may be action-dependent ( #scope-agency allows this), but $f_M$ processes whatever event arrives without reference to why the agent sought that event
 2. The agent does not use its goals to filter, weight, or interpret observations differently — no goal-dependent attention thresholds or confirmation bias baked into $f_M$
 
 If the agent's goals influence the *observation mechanism* (goal-directed sensing, attention allocation, query selection), the **event that arrives** depends on $G_t$ through $\pi \to a_t \to e_\tau$. But $f_M$ still processes the event goal-blindly. The directed separation is about the **processing** of events, not the **selection** of events.

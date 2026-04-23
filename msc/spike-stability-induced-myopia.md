@@ -4,7 +4,7 @@
 
 **Status.** Research spike. Not a promoted segment. The argument below is exploratory; it probes whether the observed barrier-to-structural-adaptation at high-operating-points is structurally forced by AAD's machinery or already captured by existing segments.
 
-**Bottom line (deposited up front, argued below).** There IS a structural result in this neighborhood, and it is *not* fully subsumed by `#exploit-explore-deliberate`, `#structural-adaptation-necessity`, or `#strategy-persistence-schema`, though each of those contributes an ingredient. The result is a *detection-latency theorem*: under the canonical configuration (no forgetting, C1 convention, gradient credit assignment, on-policy data), the expected number of cycles between regime change and structural-revision trigger scales linearly in the accumulated pseudo-count $n$ on load-bearing edges. This is a direct consequence of the log-odds coordinate forced by `#edge-update-natural-parameter` composed with `#identifiability-floor` Instance 1 (on-policy L0/L1 detection no-go). The barrier-to-structural-adaptation is real, it is forced, and it composes with AAD's existing meta-architecture. The recommendation is promotion to an appendix segment, not a main-line segment — the result sharpens existing machinery rather than standing alone.
+**Bottom line (deposited up front, argued below).** There IS a structural result in this neighborhood, and it is *not* fully subsumed by `#exploit-explore-deliberate`, `#structural-adaptation-necessity`, or `#strategy-persistence-schema`, though each of those contributes an ingredient. The result is a *detection-latency theorem*: under the canonical configuration (no forgetting, C1 convention, gradient credit assignment, on-policy data), the expected number of cycles between regime change and structural-revision trigger scales linearly in the accumulated pseudo-count $n$ on load-bearing edges. This is a direct consequence of the log-odds coordinate forced by `#edge-update-natural-parameter` composed with `#discussion-identifiability-floor` Instance 1 (on-policy L0/L1 detection no-go). The barrier-to-structural-adaptation is real, it is forced, and it composes with AAD's existing meta-architecture. The recommendation is promotion to an appendix segment, not a main-line segment — the result sharpens existing machinery rather than standing alone.
 
 
 ## 1. Problem Statement
@@ -58,9 +58,9 @@ This is closely related to the myopia phenomenon and supplies its critical ingre
 
 **Distinction:** the forgetting prerequisite states a *necessary condition for long-run persistence to hold*. Myopia states a *detection-latency consequence on the way there*.
 
-### 2.4 NOT `#identifiability-floor` Instance 1 alone
+### 2.4 NOT `#discussion-identifiability-floor` Instance 1 alone
 
-Instance 1 of `#identifiability-floor` says: under on-policy execution, no detection mechanism can distinguish L0-insufficient from L0-sufficient DAGs (Bareinboim CHT applied). The five boundary routes characterize escape via $\varepsilon$-exploration, joint observability, intermediate-state observability, structural priors, or direct intervention.
+Instance 1 of `#discussion-identifiability-floor` says: under on-policy execution, no detection mechanism can distinguish L0-insufficient from L0-sufficient DAGs (Bareinboim CHT applied). The five boundary routes characterize escape via $\varepsilon$-exploration, joint observability, intermediate-state observability, structural priors, or direct intervention.
 
 The myopia phenomenon *includes* Instance 1 as a contributing mechanism: when regime change introduces a latent common cause (L0 → L1 structural transition at truth), the agent's on-policy signals cannot detect it. But the myopia phenomenon is broader: it covers regime changes that do NOT involve L0/L1 transitions — e.g., changes in the true edge probability $p^\ast_{ij}$ within the current L0 graph, or drift in the environment dynamics that the current model class continues to cover but with degraded efficiency.
 
@@ -73,7 +73,7 @@ The myopia phenomenon *includes* Instance 1 as a contributing mechanism: when re
 | `#structural-adaptation-necessity` | Defines trigger condition at truth | Does not characterize detection by agent |
 | `#exploit-explore-deliberate` | Gives decision rule given signals | Does not audit signal quality across operating points |
 | `#strategy-persistence-schema` | Supplies $\alpha_\Sigma = 1/(n+1)$ decay and forgetting prerequisite | Does not connect to detection latency for regime change |
-| `#identifiability-floor` Inst. 1 | Forbids detection of L0/L1 transition from on-policy data | Covers only the structural (L0/L1) transition case |
+| `#discussion-identifiability-floor` Inst. 1 | Forbids detection of L0/L1 transition from on-policy data | Covers only the structural (L0/L1) transition case |
 | `#edge-update-natural-parameter` | Forces log-odds coordinate as unique additive-evidence form | Does not connect the forced coordinate to detection latency |
 
 What remains: a *composed* result using the log-odds coordinate's additivity structure + the on-policy detection no-go + the $1/(n+1)$ per-cycle update magnitude to bound the expected cycles-to-detect as a function of accumulated $n$. This is what the rest of the spike attempts.
@@ -135,7 +135,7 @@ The monotonicity result from `#value-object` ($\delta_{\mathrm{regret}}^{(1)} \l
 
 ### 3.4 Mechanism 3 — On-policy detection no-go (case R3)
 
-When regime change R3 introduces a latent common cause, `#identifiability-floor` Instance 1 applies directly: under on-policy execution, no detection mechanism can distinguish L0-insufficient from L0-sufficient DAGs with matched regime conditionals. The expected detection time is *unbounded* without access to one of the five boundary routes: $\varepsilon$-exploration, joint sibling observability, intermediate-state observability, structural priors, or direct intervention.
+When regime change R3 introduces a latent common cause, `#discussion-identifiability-floor` Instance 1 applies directly: under on-policy execution, no detection mechanism can distinguish L0-insufficient from L0-sufficient DAGs with matched regime conditionals. The expected detection time is *unbounded* without access to one of the five boundary routes: $\varepsilon$-exploration, joint sibling observability, intermediate-state observability, structural priors, or direct intervention.
 
 The high-operating-point agent is precisely the agent *least* likely to satisfy these escape conditions. At high $\mathrm{OP}$:
 
@@ -155,7 +155,7 @@ Combining §3.2, §3.3, §3.4: the expected time from regime change to structura
 
 $$\mathbb{E}[T_{\mathrm{detect}}] \geq \begin{cases} C_1 \cdot (n_{\min} + 1) / \varepsilon & \text{(R1: within-class drift)} \\ C_2 \cdot (n_{\min} + 1) / \varepsilon + C_3 \cdot \mathcal{C}(\mathrm{convention}) & \text{(R2: model-class inadequacy)} \\ \infty \text{ unless escape route active} & \text{(R3: structural L0 → L1)} \end{cases}$$
 
-where $C_1, C_2, C_3$ are positive constants depending on the agent's detection threshold and DAG topology, $\mathcal{C}(\mathrm{convention})$ is the additional latency from C1 blindness (zero under C3, positive under C1), and the $\infty$ in R3 reflects `#identifiability-floor` Instance 1 unless the agent is in an escape route.
+where $C_1, C_2, C_3$ are positive constants depending on the agent's detection threshold and DAG topology, $\mathcal{C}(\mathrm{convention})$ is the additional latency from C1 blindness (zero under C3, positive under C1), and the $\infty$ in R3 reflects `#discussion-identifiability-floor` Instance 1 unless the agent is in an escape route.
 
 **Corollary (probability bound).** The probability that the agent triggers structural revision within the next $T$ cycles after regime change is bounded:
 
@@ -169,7 +169,7 @@ where $g$ is decreasing in $n_{\min}$ and increasing in $\varepsilon$ and $T$.
 
 - The $1/(n+1)$ scaling is exact for Beta-Bernoulli, robust qualitative for any update rule with log-odds natural parameter (which `#edge-update-natural-parameter` argues is forced by evidential additivity).
 - The R1 bound is derivable given the log-odds coordinate is forced. The derivation uses `#edge-update-natural-parameter` + Pinsker-style inequality for the residual-to-log-odds transfer.
-- The R3 case is a direct application of `#identifiability-floor` Instance 1.
+- The R3 case is a direct application of `#discussion-identifiability-floor` Instance 1.
 - The R2 case is the weakest — the C1 blindness argument is qualitative at this stage; making it quantitative requires coupling the common-mode bias between $A_O^{(1)}$ and $V_O(\pi_{\mathrm{current}})$ to the specific form of model misspecification.
 
 **What it does NOT get:**
@@ -181,7 +181,7 @@ where $g$ is decreasing in $n_{\min}$ and increasing in $\varepsilon$ and $T$.
 **Epistemic tier of the full claim:**
 - R1 sub-case: *robust qualitative* with an *exact* path (derivable from `#edge-update-natural-parameter` + update-rate bound).
 - R2 sub-case: *discussion-grade* currently; promotable to *conditional* with a quantitative C1-blindness model.
-- R3 sub-case: *exact* (direct from `#identifiability-floor` Instance 1 + $\varepsilon$-exploration cost under `#exploit-explore-deliberate`).
+- R3 sub-case: *exact* (direct from `#discussion-identifiability-floor` Instance 1 + $\varepsilon$-exploration cost under `#exploit-explore-deliberate`).
 - Composition: *discussion-grade*, pending sharpening of R2.
 
 The *qualitative* claim — "expected detection time is monotone in accumulated $n$" — is robust across all three sub-cases. The *specific* scaling is $1/(n+1)$ for R1 and R2, and the sub-cases compose additively with R3's structural no-go.
@@ -193,7 +193,7 @@ The *qualitative* claim — "expected detection time is monotone in accumulated 
 
 **There is a structural theorem.** `#exploit-explore-deliberate` is about decision given signals; the myopia theorem is about the signals themselves. The two compose: even a perfect decision rule operating on degraded signals produces deferred action. The oracle result ("deliberation rarely chosen") is a *lower bound on what a perfect-information agent does*, not an analysis of what a myopic agent does — these are different.
 
-The theorem lives at a different scale from `#exploit-explore-deliberate`: it's about the *bias in the inputs* to that decision, not the decision itself. This is the distinction between "how good is the agent at deciding given data" vs. "how informative is the data the agent has access to" — the latter being the territory `#identifiability-floor` opened and this spike extends.
+The theorem lives at a different scale from `#exploit-explore-deliberate`: it's about the *bias in the inputs* to that decision, not the decision itself. This is the distinction between "how good is the agent at deciding given data" vs. "how informative is the data the agent has access to" — the latter being the territory `#discussion-identifiability-floor` opened and this spike extends.
 
 ### 4.2 What's the precise mechanism?
 
@@ -239,7 +239,7 @@ Their density-dependence argument gives inertia as a function of organizational 
 
 ### 5.4 March exploration/exploitation
 
-March's concern is long-run under-investment in exploration relative to a horizon-balanced optimum. The myopia theorem is a complementary finding: at high $\mathrm{OP}$, exploration's *perceived* value drops (because CIY is estimated under the current model, which is overconfident), and exploration's *actual* value for detecting regime change is exactly what the myopia theorem says is required to escape `#identifiability-floor` Instance 1. The agent's signals say "exploration is not worth it"; the theorem says "exploration is the unique broadly-available violation of the detection no-go."
+March's concern is long-run under-investment in exploration relative to a horizon-balanced optimum. The myopia theorem is a complementary finding: at high $\mathrm{OP}$, exploration's *perceived* value drops (because CIY is estimated under the current model, which is overconfident), and exploration's *actual* value for detecting regime change is exactly what the myopia theorem says is required to escape `#discussion-identifiability-floor` Instance 1. The agent's signals say "exploration is not worth it"; the theorem says "exploration is the unique broadly-available violation of the detection no-go."
 
 ### 5.5 Eldredge-Gould punctuated equilibria
 
@@ -256,15 +256,15 @@ This connects to `#directed-separation`'s IDT (Information Digital Twin) note: H
 
 Reading the myopia theorem through the three meta-segments of CLAUDE.md §7:
 
-### 6.1 Through `#separability-pattern` (positive half)
+### 6.1 Through `#discussion-separability-pattern` (positive half)
 
-The myopia theorem sits along the **identification-regime ladder** of `#separability-pattern`: high-OP agents are stuck in Regime C (observational) because their exploration has collapsed; low-OP agents retain sufficient exploration to keep Regime A or B access to load-bearing edges. The theorem is about the *cost* of sliding down this ladder with accumulated experience. The "structured repair" position in the ladder — instrumenting for joint sibling observability — is exactly the boundary-route escape from `#identifiability-floor` Instance 1 that §3.4 identifies as hardest to satisfy at high OP.
+The myopia theorem sits along the **identification-regime ladder** of `#discussion-separability-pattern`: high-OP agents are stuck in Regime C (observational) because their exploration has collapsed; low-OP agents retain sufficient exploration to keep Regime A or B access to load-bearing edges. The theorem is about the *cost* of sliding down this ladder with accumulated experience. The "structured repair" position in the ladder — instrumenting for joint sibling observability — is exactly the boundary-route escape from `#discussion-identifiability-floor` Instance 1 that §3.4 identifies as hardest to satisfy at high OP.
 
-### 6.2 Through `#identifiability-floor` (negative half)
+### 6.2 Through `#discussion-identifiability-floor` (negative half)
 
 The theorem is partially a *generalization* of Instance 1: where Instance 1 forbids detection of L0/L1 transitions under on-policy data, the myopia theorem weakens this to a *latency bound* under on-policy data for a broader class of regime changes. The structural no-go becomes a quantitative no-go: detection is not forbidden, but structurally slow in a way that tracks accumulated operating-point state.
 
-If promoted, the myopia theorem would be a candidate **Instance 3** of `#identifiability-floor`, with the shape:
+If promoted, the myopia theorem would be a candidate **Instance 3** of `#discussion-identifiability-floor`, with the shape:
 
 1. **Setting.** Detect regime change (R1/R2/R3) from on-policy data while accumulating Bayesian credences under the default update rule.
 2. **External theorem.** Combination of Cauchy functional equation (forcing log-odds coordinate) and Bareinboim CHT (forbidding L0/L1 on-policy detection).
@@ -285,7 +285,7 @@ This is a case where AAD's meta-patterns interact with specific claims in a prod
 
 Yes — as an appendix segment, not a main-line segment. Rationale:
 
-- The result *sharpens* existing segments (`#strategy-persistence-schema`, `#structural-adaptation-necessity`, `#exploit-explore-deliberate`, `#identifiability-floor`) rather than standing alone. Sharpening work belongs in appendix-adjacent positions.
+- The result *sharpens* existing segments (`#strategy-persistence-schema`, `#structural-adaptation-necessity`, `#exploit-explore-deliberate`, `#discussion-identifiability-floor`) rather than standing alone. Sharpening work belongs in appendix-adjacent positions.
 - The R1 sub-case is derivable to *robust qualitative* with a clean proof path; the R3 sub-case is direct from Instance 1; the R2 sub-case needs more work. An appendix segment can stage these three tiers.
 - There is a clear downstream effect: the *corollary* of §6.2 — elevating the forgetting prerequisite's load-bearing role — belongs in `#strategy-persistence-schema`'s Discussion. This spike's content would flow into both the new appendix segment and a sharpening edit on `#strategy-persistence-schema`.
 
@@ -314,7 +314,7 @@ If promoted, three cross-segment touches:
 
 1. **`#strategy-persistence-schema` Discussion.** Add a note that the forgetting prerequisite also bounds detection latency for regime change, not only asymptotic persistence. Cite the new segment.
 
-2. **`#identifiability-floor`.** Add the new segment as a candidate Instance 3, or as an adjacent floor in the "Adjacent Floors (Open Research Directions)" section that has now been derived rather than open.
+2. **`#discussion-identifiability-floor`.** Add the new segment as a candidate Instance 3, or as an adjacent floor in the "Adjacent Floors (Open Research Directions)" section that has now been derived rather than open.
 
 3. **`#exploit-explore-deliberate` Working Notes.** Add an observation that the oracle's low deliberation rate and the myopia theorem are complementary — oracle sees truth and defers correctly in simple regimes; agent sees degraded signals and defers for reasons that compound. The asymmetric cost of restructuring vs. deliberating observed in the simulation gains a theoretical underpinning.
 
@@ -323,7 +323,7 @@ If promoted, three cross-segment touches:
 If the reviewer judges R2 too incomplete and R1 too derivable-from-existing-machinery, the appropriate disposition is:
 
 - Absorb R1's $1/(n+1)$ bound into `#credit-assignment-boundary` Discussion as an observation about detection latency.
-- Absorb R3 reference into `#identifiability-floor` Working Notes as a more specific latency consequence of Instance 1.
+- Absorb R3 reference into `#discussion-identifiability-floor` Working Notes as a more specific latency consequence of Instance 1.
 - Retain this spike as exploratory record.
 
 The lower-cost disposition is viable and would capture about 60% of the content. The appendix segment is the higher-leverage disposition and captures the composition result (the three mechanisms co-act) that the distributed-absorption path would not surface.
@@ -339,7 +339,7 @@ This spike did not produce a new theorem by itself — what it did was:
 
 Whether this rises to the level of a new appendix segment is a judgment call the reviewer should make against the backlog. The underlying phenomenon is real; the AAD-native mechanism is identifiable; the cross-segment composition is new. But none of the three pieces is itself a new result — they are visible in the source segments once one looks for them. The appendix segment would do the assembly work and make the composition citable.
 
-My weak recommendation: promote as appendix segment. My strong recommendation: if not promoted, land R1 in `#credit-assignment-boundary` Discussion and R3 reference in `#identifiability-floor` — the corollary that "forgetting prerequisite is load-bearing for detection latency" belongs in `#strategy-persistence-schema` either way.
+My weak recommendation: promote as appendix segment. My strong recommendation: if not promoted, land R1 in `#credit-assignment-boundary` Discussion and R3 reference in `#discussion-identifiability-floor` — the corollary that "forgetting prerequisite is load-bearing for detection latency" belongs in `#strategy-persistence-schema` either way.
 
 
 ## 8. Working Notes (for potential future execution)
@@ -356,4 +356,4 @@ My weak recommendation: promote as appendix segment. My strong recommendation: i
 
 - **Does this change under Class 2 architectures?** For fully-merged agents (LLMs), the edge-update structure is absorbed into the single merged computation; there is no literal Beta-Bernoulli accumulator. But there is an analogous accumulator — the token statistics during pretraining. Do LLMs exhibit an analog of the myopia theorem? This is in the domain of `03-logogenic-agents/` and may be already partially addressed under the frozen-weights / context-turnover framing.
 
-- **Naming alternative.** "Stability-induced myopia" captures the phenomenon but emphasizes the symptom. "Detection latency at high operating point" captures the mechanism. "Operating-point detection floor" positions it within `#identifiability-floor`'s nomenclature. The right name depends on where the segment lands; my current preference is `#stability-detection-latency` if it stands alone, or absorbing it as `#identifiability-floor` Instance 3 under the name "On-Policy Regime-Change Detection Under Accumulated Experience."
+- **Naming alternative.** "Stability-induced myopia" captures the phenomenon but emphasizes the symptom. "Detection latency at high operating point" captures the mechanism. "Operating-point detection floor" positions it within `#discussion-identifiability-floor`'s nomenclature. The right name depends on where the segment lands; my current preference is `#stability-detection-latency` if it stands alone, or absorbing it as `#discussion-identifiability-floor` Instance 3 under the name "On-Policy Regime-Change Detection Under Accumulated Experience."

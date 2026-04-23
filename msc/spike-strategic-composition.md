@@ -4,7 +4,7 @@ date: 2026-04-22
 status: first-pass structural spike
 related_segments:
   - composition-closure
-  - composition-scope-condition
+  - scope-composite-agent
   - sector-persistence-template
   - adversarial-destabilization
   - team-persistence
@@ -26,7 +26,7 @@ This spike does three things:
 2. Identifies where AAD's sector-persistence template transfers (under an A2'-analog from monotone- or potential-game conditions) and where it breaks (in fully general strategic settings).
 3. Proposes a landing plan: a new Section III segment sibling to `#adversarial-destabilization` rather than a rewrite of `#composition-closure`.
 
-**Depends on** (for reading): #composition-consistency, #composition-scope-condition, #composition-closure, #sector-persistence-template, #adversarial-destabilization, #adversarial-tempo-advantage, #team-persistence, #interaction-channel-classification, #critical-mass-composition, #directed-separation, #agent-identity, #objective-functional, #value-object, #strategy-dag, #identifiability-floor, #separability-pattern.
+**Depends on** (for reading): #composition-consistency, #scope-composite-agent, #composition-closure, #sector-persistence-template, #adversarial-destabilization, #adversarial-tempo-advantage, #team-persistence, #interaction-channel-classification, #critical-mass-composition, #directed-separation, #agent-identity, #objective-functional, #value-object, #strategy-dag, #discussion-identifiability-floor, #discussion-separability-pattern.
 
 ---
 
@@ -54,7 +54,7 @@ This is not a mild extension of the contraction framework. It is a different mat
 
 ### 1.3 Symptoms in the current segment coverage
 
-- `#composition-scope-condition` (C-i, C-ii, C-iii) enumerates three routes to composite status, all of which presume alignment. Adversarial/strategic pairs explicitly *fail* this scope. The current text labels adversarial pairs as "multi-agent, not composite," handing them off to `#adversarial-destabilization` — but `#adversarial-destabilization`'s machinery only covers the *asymmetric* case where one agent is exogenous and the other is the target. It does not cover the *symmetric* case where both agents are purposeful and running their full loops simultaneously.
+- `#scope-composite-agent` (C-i, C-ii, C-iii) enumerates three routes to composite status, all of which presume alignment. Adversarial/strategic pairs explicitly *fail* this scope. The current text labels adversarial pairs as "multi-agent, not composite," handing them off to `#adversarial-destabilization` — but `#adversarial-destabilization`'s machinery only covers the *asymmetric* case where one agent is exogenous and the other is the target. It does not cover the *symmetric* case where both agents are purposeful and running their full loops simultaneously.
 - `#adversarial-destabilization`'s scope is exactly this gap, as its Working Notes acknowledge: "The decoupled analysis (treating $\mathcal T_A$ as exogenous) is conservative — it's the best case for $A$. In a fully coupled system, $A$'s actions against $B$ may divert adaptive capacity from $A$'s own mismatch correction, creating a self-limiting effect. The coupled Lyapunov analysis is the open problem." Reframed in this spike's terms: the coupled Lyapunov analysis is not a Lyapunov problem; it is a fixed-point problem on the joint best-response dynamics.
 - `#adversarial-tempo-advantage`'s superlinear $b = 2$ / $b = 3/2$ scaling assumes $B$'s correction machinery is still oriented toward the true environment, not reoriented toward anticipating $A$. When $B$ is strategic — when $B$'s model $M_B$ includes $A$'s policy as a variable to track — $B$'s orientation is toward a moving $A$-dependent target, not the static environment. The superlinear advantage may attenuate or amplify, but the derivation does not apply without modification.
 
@@ -104,7 +104,7 @@ The composition-scope-condition's (C-i) / (C-ii) / (C-iii) routes are all $U_O$-
 
 This is qualitatively distinct from (C-i)-(C-iii): it does not require shared objectives, hierarchical derivation, or mutual benefit. It requires only that the strategic interaction is *structurally convergent* in the game-theoretic sense.
 
-*[Epistemic Status]* This is a candidate scope route. The current `#composition-scope-condition` presents three routes disjunctively; adding (C-iv) would admit strategic interactions as composites of a specific type — call them **strategic composites** — distinguished from **alignment composites** (C-i, C-ii) and **mutual-benefit composites** (C-iii). Whether this distinction is worth surfacing as a formal scope addition, or whether strategic composites are better handled as a separate Section III segment parallel to `#composition-closure`, is one of this spike's landing decisions (§9).
+*[Epistemic Status]* This is a candidate scope route. The current `#scope-composite-agent` presents three routes disjunctively; adding (C-iv) would admit strategic interactions as composites of a specific type — call them **strategic composites** — distinguished from **alignment composites** (C-i, C-ii) and **mutual-benefit composites** (C-iii). Whether this distinction is worth surfacing as a formal scope addition, or whether strategic composites are better handled as a separate Section III segment parallel to `#composition-closure`, is one of this spike's landing decisions (§9).
 
 ---
 
@@ -208,7 +208,7 @@ Under fully general strategic interaction (no monotonicity, no potential), a wea
 
 *[Discussion — strategic-composition-hierarchy]*
 
-Compiling §3 and §4 into a ladder parallel to `#separability-pattern`'s six ladders:
+Compiling §3 and §4 into a ladder parallel to `#discussion-separability-pattern`'s six ladders:
 
 | Strategic-interaction regime | A2'-analog | Equilibrium | Convergence | Template applies? |
 |---|---|---|---|---|
@@ -219,7 +219,7 @@ Compiling §3 and §4 into a ladder parallel to `#separability-pattern`'s six la
 | Fully general (no-regret only) | None | CCE support | To CCE set only | No |
 | Non-convergent (cyclical / chaotic) | None | May not exist | Ergodic at best | No |
 
-This is a candidate **seventh ladder for `#separability-pattern`**: strategic-interaction regime. The separable-core is potential/monotone games (template transfers); the structured-repair is VI / regret-minimization (weaker guarantees); the general-open is non-convergent strategic interaction.
+This is a candidate **seventh ladder for `#discussion-separability-pattern`**: strategic-interaction regime. The separable-core is potential/monotone games (template transfers); the structured-repair is VI / regret-minimization (weaker guarantees); the general-open is non-convergent strategic interaction.
 
 ---
 
@@ -326,7 +326,7 @@ Under (1)-(4), the sector-persistence template transfers, the equilibrium is the
 
 **Example.** Vickrey-Clarke-Groves (VCG) auctions (Vickrey 1961, Clarke 1971, Groves 1973) design the payoff structure so that truthful bidding is a dominant-strategy equilibrium, and the equilibrium allocation maximizes social welfare. The potential function is the social welfare; the mechanism's design is the payoff transformation that makes each agent's incentive gradient align with the social-welfare gradient.
 
-*[Hypothesis — mechanism-design-as-route-C-i-engineering]* Mechanism design is the *engineering* counterpart of `#composition-scope-condition`'s (C-i) route. (C-i) asks "does a shared composite objective exist such that each agent's effective policy is $\epsilon$-compatible?"; mechanism design asks "can we *construct* the payoff structure so that a shared composite objective emerges from the equilibrium?" The two are dual: (C-i) is a *test*, mechanism design is a *construction*.
+*[Hypothesis — mechanism-design-as-route-C-i-engineering]* Mechanism design is the *engineering* counterpart of `#scope-composite-agent`'s (C-i) route. (C-i) asks "does a shared composite objective exist such that each agent's effective policy is $\epsilon$-compatible?"; mechanism design asks "can we *construct* the payoff structure so that a shared composite objective emerges from the equilibrium?" The two are dual: (C-i) is a *test*, mechanism design is a *construction*.
 
 ### 6.3 When mechanism design fails
 
@@ -336,9 +336,9 @@ Impossibility results in mechanism design (Gibbard-Satterthwaite 1973-75, Myerso
 - **Myerson-Satterthwaite:** no mechanism for bilateral trade with private valuations is simultaneously efficient, individually rational, and incentive-compatible, without subsidies.
 - **Arrow:** no social welfare function satisfies unrestricted domain, Pareto efficiency, independence of irrelevant alternatives, and non-dictatorship.
 
-These correspond to cases where the strategic-composition design problem is *unsolvable* — there is no choice of $\{O_t^{(i)}\}$ that makes the equilibrium align with the designer's goals under the given constraints. In AAD's framing, this is a **composition-design identifiability floor**: a structural no-go result derived from an external theorem, analogous to the floor results in `#identifiability-floor`.
+These correspond to cases where the strategic-composition design problem is *unsolvable* — there is no choice of $\{O_t^{(i)}\}$ that makes the equilibrium align with the designer's goals under the given constraints. In AAD's framing, this is a **composition-design identifiability floor**: a structural no-go result derived from an external theorem, analogous to the floor results in `#discussion-identifiability-floor`.
 
-*[Discussion — composition-design-floor]* These impossibility results are candidates for an extension to `#identifiability-floor`. The pattern is the same: an external theorem (Gibbard-Satterthwaite, Arrow) establishes a structural no-go; AAD machinery names the unique escape (relaxing one of the constraints — e.g., Bayes-Nash instead of dominant-strategy, randomized allocations, etc.). This is a candidate fourth instance of the `#identifiability-floor` pattern, joining the two current instances (on-policy detection, L1' mixture identifiability).
+*[Discussion — composition-design-floor]* These impossibility results are candidates for an extension to `#discussion-identifiability-floor`. The pattern is the same: an external theorem (Gibbard-Satterthwaite, Arrow) establishes a structural no-go; AAD machinery names the unique escape (relaxing one of the constraints — e.g., Bayes-Nash instead of dominant-strategy, randomized allocations, etc.). This is a candidate fourth instance of the `#discussion-identifiability-floor` pattern, joining the two current instances (on-policy detection, L1' mixture identifiability).
 
 ---
 
@@ -453,16 +453,16 @@ Recommend a new Section III segment `#strategic-composition`:
 
 - **Type**: *derived* + *scope* — the result is derived (under A2'-analog-potential or A2'-analog-monotone); the scope restriction to sub-scope $\alpha'$ is explicit.
 - **Status**: *conditional* (under potential/monotone-game scope) or *robust-qualitative* (overall, for the framing move).
-- **Depends on**: #composition-consistency, #composition-scope-condition, #sector-persistence-template, #objective-functional, #adversarial-destabilization, #team-persistence, #critical-mass-composition, #interaction-channel-classification.
+- **Depends on**: #composition-consistency, #scope-composite-agent, #sector-persistence-template, #objective-functional, #adversarial-destabilization, #team-persistence, #critical-mass-composition, #interaction-channel-classification.
 - **Position**: Section III, after `#adversarial-destabilization` and `#interaction-channel-classification`, before (or alongside) `#adversarial-tempo-advantage`. It is the *symmetric* counterpart to `#adversarial-destabilization`'s asymmetric treatment.
 
 ### 10.2 Satellite moves
 
-- **`#composition-scope-condition`**: add route (C-iv) equilibrium-convergent strategic interaction to the disjunctive scope, with reference to `#strategic-composition` for the formal content. Alternative: keep (C-iv) out of the scope disjunction and treat strategic composites as a *separate* type of composite (not covered by composition-scope-condition, but covered by a parallel strategic-composition scope statement). The choice hinges on whether strategic composites are "composites of a different type" (unify under one scope condition with multiple routes) or "a different thing entirely" (separate scope condition). **Preferred reading**: treat as a different type within the same scope condition, via (C-iv). Reason: the composite is still a coherent object with a joint persistence story; calling it "not a composite" overclaims the alignment requirement.
+- **`#scope-composite-agent`**: add route (C-iv) equilibrium-convergent strategic interaction to the disjunctive scope, with reference to `#strategic-composition` for the formal content. Alternative: keep (C-iv) out of the scope disjunction and treat strategic composites as a *separate* type of composite (not covered by composition-scope-condition, but covered by a parallel strategic-composition scope statement). The choice hinges on whether strategic composites are "composites of a different type" (unify under one scope condition with multiple routes) or "a different thing entirely" (separate scope condition). **Preferred reading**: treat as a different type within the same scope condition, via (C-iv). Reason: the composite is still a coherent object with a joint persistence story; calling it "not a composite" overclaims the alignment requirement.
 - **`#adversarial-destabilization`**: add cross-reference to `#strategic-composition` indicating the fully-coupled analysis is the strategic-composition segment. The Working Note's "coupled Lyapunov analysis is the open problem" can be replaced with a reference.
 - **`#critical-mass-composition`**: add a note that the matched-symmetric-Tier-1 dyad generalizes to strategic composition under the potential-game condition, with $\gamma$ in the signed coupling form becoming a potential-gradient coupling.
-- **`#separability-pattern`**: add seventh ladder — strategic-interaction regime (separable-core: potential/monotone games; structured-repair: VI/regret-minimization; general-open: non-convergent / cyclic).
-- **`#identifiability-floor`**: add fourth instance candidate — mechanism-design impossibility (Gibbard-Satterthwaite, Arrow, Myerson-Satterthwaite) as a structural no-go derived from external social-choice theorems, with AAD machinery naming the escape routes (Bayes-Nash relaxation, randomized allocation, etc.).
+- **`#discussion-separability-pattern`**: add seventh ladder — strategic-interaction regime (separable-core: potential/monotone games; structured-repair: VI/regret-minimization; general-open: non-convergent / cyclic).
+- **`#discussion-identifiability-floor`**: add fourth instance candidate — mechanism-design impossibility (Gibbard-Satterthwaite, Arrow, Myerson-Satterthwaite) as a structural no-go derived from external social-choice theorems, with AAD machinery naming the escape routes (Bayes-Nash relaxation, randomized allocation, etc.).
 - **`#directed-separation`**: add a clause indicating that composite class inherits from sub-agent class with a scope-route modifier — strategic composition produces Class 3 composites even from Class 1 sub-agents.
 - **`#adversarial-tempo-advantage`**: add a scope caveat that the superlinear tempo advantage assumes $B$'s correction machinery is oriented toward the true environment; when $B$ is strategic (orients toward anticipating $A$), the tempo scaling may differ. This is a candidate follow-on spike.
 
@@ -476,8 +476,8 @@ Recommend a new Section III segment `#strategic-composition`:
 
 Strategic composition fits all three of AAD's meta-patterns:
 
-- **`#separability-pattern`**: sub-scope $\alpha'$ (potential/monotone) is separable-core; sub-scope $\beta'$ (VI / regret-minimization) is structured-repair; non-convergent strategic interaction is general-open. This is the seventh ladder candidate.
-- **`#identifiability-floor`**: mechanism-design impossibility is a candidate fourth instance; cyclic games (no equilibrium) are a candidate fifth instance (structural limit on convergence derived from combinatorial game theory, e.g., Shapley 1964 on fictitious-play non-convergence in 3x3 non-zero-sum).
+- **`#discussion-separability-pattern`**: sub-scope $\alpha'$ (potential/monotone) is separable-core; sub-scope $\beta'$ (VI / regret-minimization) is structured-repair; non-convergent strategic interaction is general-open. This is the seventh ladder candidate.
+- **`#discussion-identifiability-floor`**: mechanism-design impossibility is a candidate fourth instance; cyclic games (no equilibrium) are a candidate fifth instance (structural limit on convergence derived from combinatorial game theory, e.g., Shapley 1964 on fictitious-play non-convergence in 3x3 non-zero-sum).
 - **`#additive-coordinate-forcing`**: the potential function $\Phi$ plays the role of an additive coordinate at the *strategic* layer — unilateral payoff improvements are additive in $\Phi$. Whether this is a genuine instance of the Cauchy-FE forcing (axiom-motivated) or an adjacent family member (coordinate-matched, like Lyapunov quadratic) is a follow-up question. Preferred provisional classification: adjacent family member — the additivity of $\Phi$ is a *definitional consequence* of being a potential game, not forced by a Cauchy-FE argument on an AAD-internally-motivated additivity axiom.
 
 ---
@@ -500,7 +500,7 @@ The scalar zero-sum example (§5) is a worked instance: two agents with maximall
 - Formal home for `#adversarial-destabilization`'s effects spiral (joint-Jacobian eigenvalue condition).
 - Class 3 composite case — composite-level directed-separation failure from across-agent coupling, even with Class 1 sub-agents.
 
-**Recommendation:** promote to a new Section III segment `#strategic-composition` with sub-scope $\alpha'$ (derived under potential/monotone-game conditions) and explicit sub-scope $\beta'$ scope exit (regret-minimization CCE support only); add (C-iv) route to `#composition-scope-condition`; flag seventh-ladder candidate for `#separability-pattern` and fourth-instance candidate for `#identifiability-floor` (mechanism-design impossibility).
+**Recommendation:** promote to a new Section III segment `#strategic-composition` with sub-scope $\alpha'$ (derived under potential/monotone-game conditions) and explicit sub-scope $\beta'$ scope exit (regret-minimization CCE support only); add (C-iv) route to `#scope-composite-agent`; flag seventh-ladder candidate for `#discussion-separability-pattern` and fourth-instance candidate for `#discussion-identifiability-floor` (mechanism-design impossibility).
 
 ---
 
@@ -530,7 +530,7 @@ The scalar zero-sum example (§5) is a worked instance: two agents with maximall
 - **Is the strategic composite a "real" composite?** Depends on definition. Mechanically: yes — there is a joint state, joint dynamics, and (under sub-scope $\alpha'$) a joint stability property. Teleologically: ambiguous — there is no shared $O_c$, hence no shared purposeful substate $G_c$. The spike's position is that strategic composites are *real but of a different type* — the composite does not have a single $G_c$ but has a *joint dynamics* characterizable by equilibrium analysis. This preserves composition-consistency (the composite's predictions at different levels are compatible via the equilibrium structure) without requiring shared purpose.
 - **Connection to online learning / multi-agent RL.** The regret-minimization machinery in sub-scope $\beta'$ is essentially the multi-agent reinforcement learning (MARL) literature's approach. Convergence of self-play to CCE is a central MARL result. Strategic-composition under AAD machinery is a natural home for a bridge to MARL; a follow-on spike could formalize the map.
 - **Evolutionary dynamics as a separate regime.** Replicator dynamics (evolutionary game theory) is another dynamic for strategic interaction, different from best-response. It converges to ESS (evolutionarily stable strategies) which are a subset of Nash equilibria. Under what AAD-native update rules does the induced strategic dynamic match replicator? Multi-armed bandit with logit choice (softmax) approximates replicator; gradient-descent on the log-likelihood of a mixed strategy is replicator exactly. Worth a follow-on spike on AAD $\to$ evolutionary dynamics correspondence.
-- **The information-theoretic structure of strategic composition.** Each agent's $M_t^{(i)}$ includes a model of agent $j$'s $M_t^{(j)}$, which includes a model of agent $i$'s $M_t^{(i)}$, and so on — an infinite regress of "I know that you know that I know." Classical game theory cuts this regress via common knowledge; AAD's machinery cuts it via `#agent-identity` (token-level commitment, no type-level claims) and `#identifiability-floor` (structural limits on mutual modelling). The regress itself is an identifiability-floor candidate: under what conditions can two AAD agents have consistent mutual models? This is a connection worth flagging, not formalizing here.
+- **The information-theoretic structure of strategic composition.** Each agent's $M_t^{(i)}$ includes a model of agent $j$'s $M_t^{(j)}$, which includes a model of agent $i$'s $M_t^{(i)}$, and so on — an infinite regress of "I know that you know that I know." Classical game theory cuts this regress via common knowledge; AAD's machinery cuts it via `#agent-identity` (token-level commitment, no type-level claims) and `#discussion-identifiability-floor` (structural limits on mutual modelling). The regress itself is an identifiability-floor candidate: under what conditions can two AAD agents have consistent mutual models? This is a connection worth flagging, not formalizing here.
 - **Dark-room / preferences-as-priors connection.** The `#satisfaction-gap` segment notes Sun-Firestone 2020's dark-room argument — that preferences as priors collapse under mutual prediction. Strategic composition is the formal home for one aspect of that critique: two agents both predicting each other's behaviour reduce to a fixed-point problem, not to a Lyapunov descent. The active-inference framing's attempt to unify goal-seeking and prediction fails here in a derivable way: the fixed point is not at the prediction-optimum, it is at the equilibrium of the strategic interaction, which is structurally different. This strengthens the `#satisfaction-gap` segment's positioning.
 - **Refs to acquire if deepening this spike.** Monderer-Shapley 1996 (potential games); Rosen 1965 (concave games; almost certainly in the economics / operations research literature and likely obtainable); Facchinei-Pang 2003 (VI book); Hart-Mas-Colell 2000 (regret / correlated equilibrium); Sandholm 2010 (*Population Games and Evolutionary Dynamics*, MIT Press — comprehensive treatment of dynamics); Fudenberg-Tirole 1991 (*Game Theory* — the standard reference); Nash 1950 (existence), Aumann 1974 (correlated equilibrium), Foster-Vohra 1997 (calibrated play), Freund-Schapire 1997 (Hedge algorithm). The citations in this spike are placeholders for these references; before segment-level promotion, a PDF-level verification pass (per Joseph's citation-audit posture) would confirm the exact theorem attributions.
 - **One thing this spike does not do.** It does not cover **mean-field games** (Lasry-Lions 2007, Huang-Malhamé-Caines 2006) — the $N \to \infty$ limit of strategic interaction, where each agent interacts with a *distribution* rather than named others. This is the natural extension for large strategic composites (markets, populations) and is a follow-on spike topic. The mean-field limit has its own A2'-analog (monotonicity of the mean-field operator) and its own sector-persistence template transfer, but it requires the population scope condition of Section III that is currently marked GAP.

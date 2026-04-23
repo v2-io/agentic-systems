@@ -9,8 +9,8 @@ depends:
   - team-persistence
   - directed-separation
   - agent-identity
-  - identifiability-floor
-  - separability-pattern
+  - discussion-identifiability-floor
+  - discussion-separability-pattern
 related:
   - msc/spike-hafez-integration-audit.md
   - msc/spike-composition-no-go.md
@@ -21,7 +21,7 @@ related:
 
 # Spike: Backward Predictive Uncertainty $H_b$ as an AAD Quantity
 
-**Status.** Exploratory derivation. A first-class AAD-internal definition of $H_b$ is derived from existing commitments (Angle 1). The sign-flip on opacity's value across cooperative / adversarial regimes (Angle 6) is derived structurally from AAD's already-signed coupling structure. B5 and B6 are identified as *already-realized* composition-layer instances of the same pattern (Angles 4, 5) — one bit of opacity and a non-scalar mutual-opacity tensor, respectively. An emitter-side four-regime classification dual to `#interaction-channel-classification` is constructed (Angle 3). Meta-pattern audit (Angle 8) lands $H_b$ as: candidate new ladder in `#separability-pattern`; new instance-shape in `#identifiability-floor`; adjacent family member (not primary) for `#additive-coordinate-forcing`. Honest failure mode (Angle 10): a small AAD-consistent extension — the *dual-filtration* apparatus — is required, but the extension is an ontological clarification, not a new formalism. Recommended landing is a new Section III segment `#agent-opacity`, closing both the Hafez gap and the `#adversarial-edge-targeting` gap that depends on it.
+**Status.** Exploratory derivation. A first-class AAD-internal definition of $H_b$ is derived from existing commitments (Angle 1). The sign-flip on opacity's value across cooperative / adversarial regimes (Angle 6) is derived structurally from AAD's already-signed coupling structure. B5 and B6 are identified as *already-realized* composition-layer instances of the same pattern (Angles 4, 5) — one bit of opacity and a non-scalar mutual-opacity tensor, respectively. An emitter-side four-regime classification dual to `#interaction-channel-classification` is constructed (Angle 3). Meta-pattern audit (Angle 8) lands $H_b$ as: candidate new ladder in `#discussion-separability-pattern`; new instance-shape in `#discussion-identifiability-floor`; adjacent family member (not primary) for `#additive-coordinate-forcing`. Honest failure mode (Angle 10): a small AAD-consistent extension — the *dual-filtration* apparatus — is required, but the extension is an ontological clarification, not a new formalism. Recommended landing is a new Section III segment `#agent-opacity`, closing both the Hafez gap and the `#adversarial-edge-targeting` gap that depends on it.
 
 **Date.** 2026-04-23.
 
@@ -132,7 +132,7 @@ This is *structurally the same* as the Kalman-gain decomposition $U_M + U_o$ tha
 The existing AAD apparatus for forward uncertainty transposes directly:
 
 - **Observability-like augmentation is available on the backward side too.** Instrumenting $U_{\pi, B\to A}$ (giving $B$ better models of $A$'s policy — via shared objectives, via communication of $A$'s intentions, via shared architecture) reduces $H_b^{A \mid B}$ in the first term. Reducing $U_{a, A}$ (making $A$'s policy more deterministic given its state) reduces the second. The two knobs are independent; this matters for Angle 6's sign-flip analysis.
-- **The identifiability-floor machinery applies to backward-direction estimation.** When $B$'s observations of $A$'s action-consequences are below the floor $c_{\text{floor}}$ per `#observation-gates-advantage`, $B$ cannot reduce $U_{\pi, B\to A}$ even with unbounded data — a structural lower bound on $H_b^{A \mid B}$ from $B$'s side. This is the first hint that $H_b$ composes with `#identifiability-floor` (developed in §8).
+- **The identifiability-floor machinery applies to backward-direction estimation.** When $B$'s observations of $A$'s action-consequences are below the floor $c_{\text{floor}}$ per `#observation-gates-advantage`, $B$ cannot reduce $U_{\pi, B\to A}$ even with unbounded data — a structural lower bound on $H_b^{A \mid B}$ from $B$'s side. This is the first hint that $H_b$ composes with `#discussion-identifiability-floor` (developed in §8).
 
 ---
 
@@ -342,7 +342,7 @@ In the language of §2.2: the certifier, seeing component marginals only, has $H
 
 *[Derived (B5-as-Hb-instance, from B5 §3.3 + §2.2 definition)]*
 
-B5 is the **maximum-opacity** limit on the coupling-sign variable: the component-data filtration retains zero information about the sign bit. The composition-layer identifiability floor in `#identifiability-floor` Instance 3 is therefore an **$H_b$-indexed floor** at the composite layer: 1 bit of backward predictive uncertainty on coupling sign is *unobservable from component-marginal data* and is exactly what distinguishes contraction from destabilization.
+B5 is the **maximum-opacity** limit on the coupling-sign variable: the component-data filtration retains zero information about the sign bit. The composition-layer identifiability floor in `#discussion-identifiability-floor` Instance 3 is therefore an **$H_b$-indexed floor** at the composite layer: 1 bit of backward predictive uncertainty on coupling sign is *unobservable from component-marginal data* and is exactly what distinguishes contraction from destabilization.
 
 **Consequences.**
 
@@ -354,7 +354,7 @@ B5 is the **maximum-opacity** limit on the coupling-sign variable: the component
 
   All four are opacity-reduction mechanisms at the composite layer.
 
-- The `#identifiability-floor` pattern at the composition layer acquires a natural $H_b$-reading: **the floor is a lower bound on $H_b^{\Sigma_c}$ from the certifier's filtration.** Each instance names an external theorem (Liberzon, Bareinboim CHT, Cramér-Rao) that certifies the lower bound; each escape route is an information-augmentation that reduces $H_b$ below the floor.
+- The `#discussion-identifiability-floor` pattern at the composition layer acquires a natural $H_b$-reading: **the floor is a lower bound on $H_b^{\Sigma_c}$ from the certifier's filtration.** Each instance names an external theorem (Liberzon, Bareinboim CHT, Cramér-Rao) that certifies the lower bound; each escape route is an information-augmentation that reduces $H_b$ below the floor.
 
 *[Tier: Derived, exact (B5's construction is closed-form; the $H_b$-reading is the same construction re-indexed on filtrations).]*
 
@@ -398,11 +398,11 @@ The two structures compose: a composite where B5 has resolved (sign known) but B
 
 ## 8. Angle 8 — Meta-Pattern Audit
 
-### 8.1 `#identifiability-floor`
+### 8.1 `#discussion-identifiability-floor`
 
 $H_b$ is a natural **re-reading** of the identifiability-floor pattern, not a new instance of it. Each existing floor (F1 CHT; F13 Cramér-Rao; B5 Liberzon) names an external theorem that certifies a lower bound on the observer's uncertainty about some AAD-internal variable; each escape reduces that uncertainty below the floor. The $H_b$ language makes this uniform: every identifiability floor is an $H_b$-lower-bound at the relevant observer-observed-variable pair.
 
-*[Proposed — Hb-reading of #identifiability-floor]*
+*[Proposed — Hb-reading of #discussion-identifiability-floor]*
 
 Restate the three existing instances in $H_b$-indexed form:
 
@@ -421,9 +421,9 @@ The candidate fourth instance is an **agent-external** observer-observed variant
 - The pattern is mild compared to F1/F13/B5. The Shannon lower bound is less surprising than CHT or Cramér-Rao — "you cannot know what you do not observe" is tautological; the identifiability-floor pattern earns its keep partly because the external theorems (CHT, CR, Liberzon) are non-obvious.
 - The pattern is more broadly applicable than the existing three. Every inter-agent coupling runs through an $H_b$-floor; this is the *generic* identifiability structure in Section III.
 
-**Recommendation:** promote $H_b$ to a new instance of `#identifiability-floor` with the **general shape of "mutual information bounds observer-side uncertainty"** as the external-theorem anchor, and document that the existing three instances are the *specialization* to causal-structural variables (F1), estimation-parameter variables (F13), and composition-sign variables (B5). This positions $H_b$ as the *generic* instance and the existing three as specific variables-of-interest.
+**Recommendation:** promote $H_b$ to a new instance of `#discussion-identifiability-floor` with the **general shape of "mutual information bounds observer-side uncertainty"** as the external-theorem anchor, and document that the existing three instances are the *specialization* to causal-structural variables (F1), estimation-parameter variables (F13), and composition-sign variables (B5). This positions $H_b$ as the *generic* instance and the existing three as specific variables-of-interest.
 
-### 8.2 `#separability-pattern`
+### 8.2 `#discussion-separability-pattern`
 
 $H_b$ is a natural candidate for a **seventh ladder**:
 
@@ -437,9 +437,9 @@ The separable-core / structured-repair / general-open shape fits cleanly:
 - Structured repair: partial transparency via `#communication-gain`, `#auftragstaktik-principle`, shared regime indicators; the repair mechanism is explicit (specific channels, specific shared-information items).
 - General open: fully opaque agents (adversarial regime + adversary's self-opacity; Class 2 architectures where even the agent itself can't predict its own actions) sit in the general-open column with the identifiability-floor per §8.1.
 
-*[Derived (Hb-seventh-ladder, from §8.1 + #separability-pattern)]*
+*[Derived (Hb-seventh-ladder, from §8.1 + #discussion-separability-pattern)]*
 
-$H_b$ populates a seventh ladder of the `#separability-pattern` meta-segment with the three-part epistemic posture AAD runs across its other six ladders. This ladder is *composition-specific* (it only makes sense for inter-agent interactions; within a single agent, $H_b$ is trivially zero because the agent has full access to its own state). This might motivate grouping it with the "architecture" ladder (Class 1/2/3) or with a new composition sub-category. Either placement is defensible.
+$H_b$ populates a seventh ladder of the `#discussion-separability-pattern` meta-segment with the three-part epistemic posture AAD runs across its other six ladders. This ladder is *composition-specific* (it only makes sense for inter-agent interactions; within a single agent, $H_b$ is trivially zero because the agent has full access to its own state). This might motivate grouping it with the "architecture" ladder (Class 1/2/3) or with a new composition sub-category. Either placement is defensible.
 
 ### 8.3 `#additive-coordinate-forcing`
 
@@ -473,8 +473,8 @@ $H_b$-additivity across agents is **conditionally** true (under independence) an
 
 | Meta-segment | $H_b$ position | Reasoning |
 |---|---|---|
-| `#identifiability-floor` | **Candidate 4th instance (generic-observer form); the existing 3 are specializations** | Shannon inequality is a genuine external theorem; escapes are AAD machinery; pattern matches |
-| `#separability-pattern` | **Candidate 7th ladder (opacity)** | Separable-core $H_b = 0$ / structured-repair partial-transparency / general-open full opacity matches the three-part shape |
+| `#discussion-identifiability-floor` | **Candidate 4th instance (generic-observer form); the existing 3 are specializations** | Shannon inequality is a genuine external theorem; escapes are AAD machinery; pattern matches |
+| `#discussion-separability-pattern` | **Candidate 7th ladder (opacity)** | Separable-core $H_b = 0$ / structured-repair partial-transparency / general-open full opacity matches the three-part shape |
 | `#additive-coordinate-forcing` | **Adjacent family member (like IB Lagrangian)** | Logarithmic coordinate inherited from Shannon, not forced by AAD-internal axiom; cross-agent additivity fails under coupling (the regime of interest) |
 
 ---
@@ -582,7 +582,7 @@ For $H_b$:
 
 **Net characterization.** $H_b$ is **adopted** at the information-theoretic-foundation layer (Shannon), then **theorem-style extended** to AAD by observer-indexing, trajectory-indexing, and composition with signed-coupling structure. The pattern is parallel to `#information-bottleneck`'s IB-Lagrangian: adopted from Tishby-Pereira-Bialek at the foundations layer; applied AAD-internally under AAD's specific scope conditions. It is *not* a new Cauchy-FE-forced coordinate (per §8.3 analysis).
 
-This matches the discipline: $H_b$ is *not* a fourth primary instance of `#additive-coordinate-forcing`; it is adjacent-family in that meta-segment and **primary new material in two others** (`#identifiability-floor` as generic observer-side instance; `#separability-pattern` as new 7th ladder).
+This matches the discipline: $H_b$ is *not* a fourth primary instance of `#additive-coordinate-forcing`; it is adjacent-family in that meta-segment and **primary new material in two others** (`#discussion-identifiability-floor` as generic observer-side instance; `#discussion-separability-pattern` as new 7th ladder).
 
 ---
 
@@ -594,7 +594,7 @@ Promote a new segment `#agent-opacity` with:
 
 - **Type.** Derived.
 - **Status.** Conditional (sub-scope $\alpha$ exact; sub-scope $\beta$ robust qualitative).
-- **Depends on.** `#agent-identity`, `#directed-separation`, `#model-class-fitness`, `#observation-function`, `#update-gain`, `#adaptive-tempo`, `#team-persistence`, `#adversarial-destabilization`, `#adversarial-tempo-advantage`, `#interaction-channel-classification`, `#identifiability-floor`, `#separability-pattern`.
+- **Depends on.** `#agent-identity`, `#directed-separation`, `#model-class-fitness`, `#observation-function`, `#update-gain`, `#adaptive-tempo`, `#team-persistence`, `#adversarial-destabilization`, `#adversarial-tempo-advantage`, `#interaction-channel-classification`, `#discussion-identifiability-floor`, `#discussion-separability-pattern`.
 - **Contents.**
   1. The AAD-internal definition (§2.2) with reduction to Hafez's original (§2.3) and the three AAD-specific features (observer-indexing, horizon-indexing, trajectory-indexing, §2.4).
   2. The duality with forward uncertainty (§3) — the $U_{\pi, B\to A}$ + $U_{a, A}$ decomposition as backward analog of $U_M$ + $U_o$.
@@ -602,7 +602,7 @@ Promote a new segment `#agent-opacity` with:
   4. The emitter-side tempo amplification (§6) — $\mathcal T^{\text{effective}} = \mathcal T \cdot H_b/H_b^{\max}$ under adversarial coupling.
   5. A note on composition-layer readings (§7) — B5 as 1-bit opacity limit; B6 as mutual-opacity tensor gate on sub-scope $\alpha'/\beta'$.
   6. A scope-limits paragraph — Class 1 primary; Class 3 approximate; Class 2 requires coupled formulation per `03-logogenic-agents/`.
-- **Honest credit.** $H_b$ is Hafez et al. (2026)'s quantity — their definition and empirical motivation (89% IDT detection accuracy via $H_b$) stand unchanged. AAD's contribution: the AAD-internal derivation (§2.2), observer/trajectory/horizon-indexing (§2.4), the sign-flip structural derivation (§5), the emitter-side four-regime classification dual (§4), the composition with `#interaction-channel-classification`, the integration with `#identifiability-floor` and `#separability-pattern` (§8), and the closure of `#adversarial-edge-targeting` (§9).
+- **Honest credit.** $H_b$ is Hafez et al. (2026)'s quantity — their definition and empirical motivation (89% IDT detection accuracy via $H_b$) stand unchanged. AAD's contribution: the AAD-internal derivation (§2.2), observer/trajectory/horizon-indexing (§2.4), the sign-flip structural derivation (§5), the emitter-side four-regime classification dual (§4), the composition with `#interaction-channel-classification`, the integration with `#discussion-identifiability-floor` and `#discussion-separability-pattern` (§8), and the closure of `#adversarial-edge-targeting` (§9).
 - **Structural strength.** The segment closes the Hafez integration gap (`msc/spike-hafez-integration-audit.md` §Gap 1) cleanly. It also pairs naturally with `#interaction-channel-classification` as that segment's already-flagged emitter-side companion — both segments together give the full bidirectional inter-agent signaling theory.
 
 ### 14.2 Secondary landings (cross-references)
@@ -611,8 +611,8 @@ Promote a new segment `#agent-opacity` with:
 - **`#adversarial-destabilization`** — Discussion / Working Notes paragraph on agent-opacity degrades from qualitative reference ("high $H_b^{(B)}$ forces $A$ to act against an uncertain model") to the derived $\gamma^{\text{adv, effective}}$ form (§5.3), with pointer to `#agent-opacity` for the full derivation.
 - **`#adversarial-tempo-advantage`** — Discussion paragraph on the effective-tempo form $\mathcal T^{\text{effective}}_A = \mathcal T_A \cdot (H_b^{A \mid B}/H_b^{\max})$ (§6.2), with pointer to `#agent-opacity` and the derivation. The superlinear scaling $b = 2$ (Model D) or $3/2$ (Model S) remains unchanged; $H_b$ modulates the tempos that enter.
 - **`#team-persistence`** — Discussion paragraph on cooperative coupling's dependence on predictability (§5.2). The existing $\gamma^{\text{coop}}$ gets the $H_b$-modulation form; `#auftragstaktik-principle` is surfaced as the $H_b$-reduction mechanism.
-- **`#identifiability-floor`** — new instance (the generic observer-side instance per §8.1), re-framing the existing three instances as specializations.
-- **`#separability-pattern`** — new 7th ladder (opacity, per §8.2).
+- **`#discussion-identifiability-floor`** — new instance (the generic observer-side instance per §8.1), re-framing the existing three instances as specializations.
+- **`#discussion-separability-pattern`** — new 7th ladder (opacity, per §8.2).
 - **`#directed-separation`** — Working Note promoted: IDT sidecar architecture (Hafez et al. 2026) as an $H_b$-reduction mechanism for Class 2 agents; refers to `#agent-opacity` for the formal form.
 - **`#agent-identity`** — cross-reference in Discussion: trajectory-singularity is what makes observer-indexed $H_b$ well-defined (type-level agents do not admit $H_b$ definition because there is no unique trajectory to compute the entropy over).
 
@@ -640,7 +640,7 @@ Promote a new segment `#agent-opacity` with:
 2. **Derives the sign-flip (§5)** — cooperative coupling's requirement of predictability and adversarial coupling's exploitation of unpredictability are shown to be structural consequences of AAD's existing signed-coupling apparatus composed with the new definition. Not imported; derived.
 3. **Constructs the emitter-side four-regime classification (§4)** — fills the explicitly-flagged gap in `#interaction-channel-classification` §5.2. Gives the 16-cell emitter-recipient composition and closes `#adversarial-edge-targeting` (§9).
 4. **Names B5 and B6 as composition-layer $H_b$ instances (§7)** — B5 is the 1-bit opacity limit on coupling-sign; B6 is the mutual-opacity tensor threshold on strategic-interaction dimensions. Shows the composition-layer $H_b$ structure has at least two distinct granularities already realized in recent spikes.
-5. **Positions $H_b$ in the meta-pattern architecture (§8)** — candidate 4th instance of `#identifiability-floor` (generic observer-side form with existing 3 instances as specializations); candidate 7th ladder of `#separability-pattern` (opacity); adjacent-family member of `#additive-coordinate-forcing` (adopted from Shannon, not re-forced).
+5. **Positions $H_b$ in the meta-pattern architecture (§8)** — candidate 4th instance of `#discussion-identifiability-floor` (generic observer-side form with existing 3 instances as specializations); candidate 7th ladder of `#discussion-separability-pattern` (opacity); adjacent-family member of `#additive-coordinate-forcing` (adopted from Shannon, not re-forced).
 6. **Respects Hafez credit** (§14.1) — the quantity is Hafez's; AAD's contribution is the AAD-internal derivation and the structural composition work.
 
 **What it does not achieve.**

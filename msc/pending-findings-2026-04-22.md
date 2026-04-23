@@ -14,7 +14,7 @@
 
 **Remaining open:** Findings 2 (partial — V-medium G-BP2 fixed Shannon-zero degeneracy in #strategy-complexity-cost; the unbounded-gradient pathology in #credit-assignment-boundary remains), 4, 6, 8, 9, 12, 14, 15. See `TODO.md` for current actionability and subsumption-by-architectural-proposal status.
 
-**New meta-segment from this cycle:** `#identifiability-floor` collects the F1+F13 no-go pattern as an emerging structural commitment of the theory, with three open extensions (causal-IB, misspecification-cost quantification, tier-switching policy cost) added as new active items.
+**New meta-segment from this cycle:** `#discussion-identifiability-floor` collects the F1+F13 no-go pattern as an emerging structural commitment of the theory, with three open extensions (causal-IB, misspecification-cost quantification, tier-switching policy cost) added as new active items.
 
 **Origins:**
 
@@ -46,7 +46,7 @@
 | 11 | Orient cascade step 4c convergence in non-stationary envs | Opus F5 | Medium | Partial by O-BP3; compound with F1 |
 | 12 | Section II survival slides from statement-level to operationally extractable | Codex r2 F2 | High | C-BP1 |
 | 13 | `#strategy-dag` L1-as-default overgeneralizes beyond strict-prerequisite | Codex r2 F3 | High | — |
-| 14 | `#developer-as-act-agent` exact-status mismatch (human vs AI regimes) | Codex r2 F4 | High | Partial by C-BP4 |
+| 14 | `#scope-developer-agent` exact-status mismatch (human vs AI regimes) | Codex r2 F4 | High | Partial by C-BP4 |
 | 15 | Software "richest operationalization domain" headline overclaims | Codex r2 F5 | Low | C-BP3 |
 
 **Actionable-now callouts** (lowest-effort / highest-clarity, if doing local repairs):
@@ -207,14 +207,14 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Strongest counterevidence in `src/`.**
 
-- `#scope-condition` states Section II's purposeful machinery becomes non-vacuous at $S_{\text{agency}}$ (full agency scope, not the learning sub-scope).
+- `#scope-agency` states Section II's purposeful machinery becomes non-vacuous at $S_{\text{agency}}$ (full agency scope, not the learning sub-scope).
 - `#agent-spectrum` presents Section II as "the right column of actuated agents generally" (full agency scope).
 
 **Why this stands.** The narrowing from agency to learning-purposeful in `#causal-hierarchy-requirement` is defensible as a sub-scope, but it is not integrated as a named Section II-wide commitment. The repo oscillates between "Section II applies to actuated agents" (in scope-condition and agent-spectrum) and "Section II applies to learning purposeful agents" (in causal-hierarchy-requirement). A reader cannot tell whether a downstream Section II claim uses the narrower or wider scope.
 
 **msc/ lineage (not yet integrated).** `msc/analysis-2026-04-06.md` (line 265) and `msc/spike-purposeful-agent-derivation.md` (line 648) contain reasoning about the sub-scope but the integration pass has not happened.
 
-**Repair direction.** Reconciliation pass: name the Section II-wide sub-scope explicitly (e.g., $S_{\text{learning}} \subsetneq S_{\text{agency}}$), amend `#scope-condition`, `#agent-spectrum`, and the Section II preamble in `01-aad-core/OUTLINE.md` so the narrowing is declared once and inherited by downstream Section II results. 45–60 min.
+**Repair direction.** Reconciliation pass: name the Section II-wide sub-scope explicitly (e.g., $S_{\text{learning}} \subsetneq S_{\text{agency}}$), amend `#scope-agency`, `#agent-spectrum`, and the Section II preamble in `01-aad-core/OUTLINE.md` so the narrowing is declared once and inherited by downstream Section II results. 45–60 min.
 
 **Compound with Finding 9.** This and Finding 9 both touch Section II framing at different layers (Finding 4 inside segments; Finding 9 in OUTLINE preamble). A coordinated pass that rewrites the OUTLINE preamble plus the scope declarations in the inner segments is cheaper than two independent fixes.
 
@@ -298,7 +298,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 **Strongest counterevidence in `src/`.**
 
 - `#chronica` (line 15) defines $\mathcal C_t$ as the complete record of observations and actions (not just committed state transitions).
-- `02-tst-core/src/developer-as-act-agent.md` (line 89) lists many software observation channels not captured by git (IDE state, runtime observations, build system interactions, discussions outside commits).
+- `02-tst-core/src/scope-developer-agent.md` (line 89) lists many software observation channels not captured by git (IDE state, runtime observations, build system interactions, discussions outside commits).
 - `02-tst-core/src/causal-discovery-from-git.md` (line 18) explicitly says the git-to-AAD chain is "empirical and unresolved."
 
 **Why this stands.** Git records committed state transitions exactly; it does not record the full software chronica. Its causal use remains materially confounded by shared requirements, bundling conventions, and developer knowledge state that never enters commits. The current framing overstates by dropping the "committed-state subset" qualifier.
@@ -319,15 +319,15 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Problematic passages.**
 
-`#composition-scope-condition` (lines 38–44), route (C-iii):
+`#scope-composite-agent` (lines 38–44), route (C-iii):
 
 > Mutual-benefit alignment. There exists a relevance variable $Y$ such that the sub-agents' joint actions raise $E[Y]$ above the non-cooperation baseline for each sub-agent ... Weakest route. No explicit common objective, but interactions are positive-sum in some dimension.
 
 `#composition-closure` (lines 73–77, 64–65):
 
-> (A1) AAD agent structure. The macro-state decomposes as $X_c = (M_c, G_c)$. ... The closure-defect framework applies to sets that satisfy `#composition-scope-condition` — i.e., that form composites via at least one of the three alignment routes ... Given scope-satisfaction, a set forms a *meaningful* composite agent.
+> (A1) AAD agent structure. The macro-state decomposes as $X_c = (M_c, G_c)$. ... The closure-defect framework applies to sets that satisfy `#scope-composite-agent` — i.e., that form composites via at least one of the three alignment routes ... Given scope-satisfaction, a set forms a *meaningful* composite agent.
 
-**Strongest mitigating passage.** `#composition-scope-condition` Epistemic Status notes "the three alternative routes are not exhaustive but cover the well-understood cases" and flags the route-relationship question as open.
+**Strongest mitigating passage.** `#scope-composite-agent` Epistemic Status notes "the three alternative routes are not exhaustive but cover the well-understood cases" and flags the route-relationship question as open.
 
 **Why this stands.** The mitigating passage acknowledges the disjunction is open in principle but does *not* address the specific structural gap: (C-iii) admits composites with *no explicit* $O_c$, while (A1) *requires* $G_c = (O_c, \Sigma_c)$ as a state decomposition. For trading partners aligned only on mutual-benefit $Y$, $O_c$ cannot be naturally defined without strengthening the route — e.g., by positing $O_c = \text{maximize } E[Y]$, which collapses (C-iii) into (C-i). So either the three routes are not independently sufficient for the full closure framework, or the relationship between routes is not the honest disjunction currently advertised. The current text says both things in different places.
 
@@ -497,13 +497,13 @@ Second Codex audit, after the morning audit trio. One finding duplicates Finding
 
 ---
 
-## Finding 14 — `#developer-as-act-agent` tagged `status: exact` but mapping collapses human and AI developer regimes
+## Finding 14 — `#scope-developer-agent` tagged `status: exact` but mapping collapses human and AI developer regimes
 
 **Source:** Codex audit 2026-04-22 round-2, Finding 4. **Confidence:** high.
 
 **Problematic passages.**
 
-- `02-tst-core/src/developer-as-act-agent.md` frontmatter line 4: `status: exact`.
+- `02-tst-core/src/scope-developer-agent.md` frontmatter line 4: `status: exact`.
 - Line 160 (Epistemic Status): each AAD quantity has a concrete, identifiable software counterpart.
 
 **Strongest counterevidence in the same segment.**
@@ -572,7 +572,7 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Problematic passages.**
 
-- `01-aad-core/src/scope-condition.md` line 14: "Adding causal action unlocks the interventional and purposeful results of Sections II and III."
+- `01-aad-core/src/scope-agency.md` line 14: "Adding causal action unlocks the interventional and purposeful results of Sections II and III."
 - `01-aad-core/src/agent-spectrum.md` line ~30: actuated agents are "the full scope of AAD."
 
 **Strongest counterevidence in `src/`.**
@@ -580,9 +580,9 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 - `01-aad-core/src/causal-hierarchy-requirement.md` line 30 narrows to "learning purposeful agents" (a strict sub-scope of agency).
 - `01-aad-core/src/directed-separation.md` line ~84 says exact Section II results apply to Class 1 architectures only; Class 2 requires the coupled formulation.
 
-**Why this stands.** The caveats exist but are scattered. No segment carries the full intersection statement: agency-scope ∩ learning-agent-scope ∩ Class-1-architecture. A reader following the headline scope claims in `#scope-condition` and `#agent-spectrum` over-generalizes; a reader following the per-segment narrowings has to assemble the intersection themselves.
+**Why this stands.** The caveats exist but are scattered. No segment carries the full intersection statement: agency-scope ∩ learning-agent-scope ∩ Class-1-architecture. A reader following the headline scope claims in `#scope-agency` and `#agent-spectrum` over-generalizes; a reader following the per-segment narrowings has to assemble the intersection themselves.
 
-**Repair direction.** Two options: (a) Add the intersection statement to `#scope-condition` Discussion as the canonical Section II scope statement; (b) Promote a small meta-segment `#section-ii-scope-lattice` (or equivalent) that names the lattice once and is referenced from the Section II preamble in `01-aad-core/OUTLINE.md`. Option (b) is structurally cleaner and supports O-BP8 (scope-lattice naming) below.
+**Repair direction.** Two options: (a) Add the intersection statement to `#scope-agency` Discussion as the canonical Section II scope statement; (b) Promote a small meta-segment `#section-ii-scope-lattice` (or equivalent) that names the lattice once and is referenced from the Section II preamble in `01-aad-core/OUTLINE.md`. Option (b) is structurally cleaner and supports O-BP8 (scope-lattice naming) below.
 
 **Subsumed by:** O-BP8 (explicit scope lattice). Partially subsumed by O-BP1 if the template-as-organizing-principle reframing happens to surface the lattice.
 
@@ -627,7 +627,7 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Why this stands.** Mechanical integration gap: F13 strengthening landed Prop B.7 but the cross-segment update to `#worked-example-L1` was queued (per `msc/spike-finding-13-strengthening.md` §8.4) and not performed. The "open" language is now stale; the example is structurally a B.7 instance (the worked example uses observable $C$, satisfying B.7's scope condition).
 
-**Repair direction.** Update the relevant paragraph in `#worked-example-L1` to reflect Prop B.7's status: "Sector-condition verification for L1' is derived in Prop B.7 ( #strategic-dynamics-derivation) for the observable-$C$ case the example operates within (five-way gating $\alpha_{L1'}$ formula, with explicit reduction to B.6 in the strict-prerequisite limit). Under unobservable $C$, L1' is *refuted* by the Cramér-Rao floor (mixture identifiability obstruction; see B.7 §'Refuted Under Unobservable $C$' and #identifiability-floor)." 10–15 min.
+**Repair direction.** Update the relevant paragraph in `#worked-example-L1` to reflect Prop B.7's status: "Sector-condition verification for L1' is derived in Prop B.7 ( #strategic-dynamics-derivation) for the observable-$C$ case the example operates within (five-way gating $\alpha_{L1'}$ formula, with explicit reduction to B.6 in the strict-prerequisite limit). Under unobservable $C$, L1' is *refuted* by the Cramér-Rao floor (mixture identifiability obstruction; see B.7 §'Refuted Under Unobservable $C$' and #discussion-identifiability-floor)." 10–15 min.
 
 **Subsumed by:** not directly. Pure cross-segment update.
 
@@ -687,13 +687,13 @@ Recommended: option (a), with a brief Discussion paragraph noting the directiona
 
 ---
 
-## Finding 21 — `#identifiability-floor` frontmatter status conflicts with internal text
+## Finding 21 — `#discussion-identifiability-floor` frontmatter status conflicts with internal text
 
 **Source:** Opus audit 2026-04-22 (post-strengthening evening), Finding 3. **Confidence:** medium. **Severity: low (drafting artifact).**
 
 **Problematic passages.**
 
-- `01-aad-core/src/identifiability-floor.md` line 4: `status: robust-qualitative`.
+- `01-aad-core/src/discussion-identifiability-floor.md` line 4: `status: robust-qualitative`.
 - Same segment Epistemic Status (line ~95): "*Robust qualitative.* The meta-pattern itself is a *discussion-grade* observation … Whether the pattern is a *generative principle* … is a *hypothesis* …"
 
 **Why this stands.** The single Epistemic Status paragraph labels the meta-pattern three different ways (robust-qualitative, discussion-grade, hypothesis). The frontmatter chooses (i). Each phrasing is defensible on its own; the missing piece is a single non-contradictory statement.

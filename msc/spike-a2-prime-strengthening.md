@@ -154,7 +154,7 @@ for all $t \geq 0$.
 - Khasminskii, R. (2012). *Stochastic Stability of Differential Equations* (2nd ed.). Springer. Ch. 5 (Lyapunov functions and stochastic stability; stopping-time localization).
 - Lur'e, A. I. (1957). *Some Nonlinear Problems in the Theory of Automatic Control*. Gostekhizdat. Original sector-condition framework for absolute stability.
 - Nesterov, Y. (2004). *Introductory Lectures on Convex Optimization*. Springer. Thm 2.1.10 (strong convexity ⇔ gradient monotonicity).
-- AAD segments cited: `#sector-condition-derivation`, `#gain-sector-bridge`, `#gain-sector-derivation`, `#update-gain`, `#recursive-update-derivation`, `#agent-model`, `#agent-spectrum`, `#scope-condition`, `#sector-persistence-template`, `#discrete-sector-condition`.
+- AAD segments cited: `#sector-condition-derivation`, `#gain-sector-bridge`, `#gain-sector-derivation`, `#update-gain`, `#recursive-update-derivation`, `#agent-model`, `#agent-spectrum`, `#scope-agency`, `#sector-persistence-template`, `#discrete-sector-condition`.
 
 ## 7. Open questions (after this spike)
 

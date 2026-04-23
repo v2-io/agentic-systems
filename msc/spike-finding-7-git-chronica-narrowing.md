@@ -9,7 +9,7 @@
 
 ## 1. The diagnosis in one paragraph
 
-P5 currently asserts that git records the chronica $\mathcal{C}_t$ "without information loss" and that "git's scope matches the chronica's definition precisely for the codebase domain." But $\mathcal{C}_t$ is defined in `#chronica` as the *complete* sequence $(o_1, a_1, \ldots, a_{t-1}, o_t)$ of agent–environment interactions — every observation and every action. `#developer-as-act-agent` enumerates many software observation channels (IDE state, runtime logs, monitoring alerts, code-review threads, colleague queries, build-system signals, conversations) that are *not* in git. Git records *committed* codebase state transitions exactly; it does not record the full software chronica. `#causal-discovery-from-git` already concedes that the chain from git data to AAD quantities is empirical and unresolved. P5 is the only place in the segment that contradicts those companion claims, and it does so at the strongest possible verbal pitch ("exact," "without information loss," "precisely"). The repair is to narrow the equivalence claim to the committed-state subset, retain the comparative-advantage claim at lower strength, and tag the consequence (P5 Consequence) as the empirical hypothesis that it actually is.
+P5 currently asserts that git records the chronica $\mathcal{C}_t$ "without information loss" and that "git's scope matches the chronica's definition precisely for the codebase domain." But $\mathcal{C}_t$ is defined in `#chronica` as the *complete* sequence $(o_1, a_1, \ldots, a_{t-1}, o_t)$ of agent–environment interactions — every observation and every action. `#scope-developer-agent` enumerates many software observation channels (IDE state, runtime logs, monitoring alerts, code-review threads, colleague queries, build-system signals, conversations) that are *not* in git. Git records *committed* codebase state transitions exactly; it does not record the full software chronica. `#causal-discovery-from-git` already concedes that the chain from git data to AAD quantities is empirical and unresolved. P5 is the only place in the segment that contradicts those companion claims, and it does so at the strongest possible verbal pitch ("exact," "without information loss," "precisely"). The repair is to narrow the equivalence claim to the committed-state subset, retain the comparative-advantage claim at lower strength, and tag the consequence (P5 Consequence) as the empirical hypothesis that it actually is.
 
 ---
 
@@ -19,7 +19,7 @@ The following replaces lines 56–62 (P5 + Consequence) and line 84 (the P5 para
 
 ### 2a. Revised P5
 
-> **P5. Committed-state subset of chronica recorded exactly.** Git provides a complete, immutable record of every *committed* change to the codebase: what changed, when, and by whom. The chronica $\mathcal{C}_t$ ( #chronica) is broader — it is the full $(o_1, a_1, \ldots, a_{t-1}, o_t)$ sequence of agent–environment interactions, of which committed codebase state transitions are one subset. Within that subset, git records the diff between commits $i$ and $i+1$ as the exact intervention that occurred, with no sampling loss and no recall bias. Outside that subset, the software chronica also includes uncommitted edits, IDE navigation and edit traces, build-system invocations, test runs and their outputs, runtime logs and metrics, monitoring alerts, code-review threads, deployment events, and out-of-band coordination (chat, tickets, in-person discussion). These channels are enumerated in #developer-as-act-agent; most are recorded only in fragmentary, tool-specific stores, and many are not recorded at all.
+> **P5. Committed-state subset of chronica recorded exactly.** Git provides a complete, immutable record of every *committed* change to the codebase: what changed, when, and by whom. The chronica $\mathcal{C}_t$ ( #chronica) is broader — it is the full $(o_1, a_1, \ldots, a_{t-1}, o_t)$ sequence of agent–environment interactions, of which committed codebase state transitions are one subset. Within that subset, git records the diff between commits $i$ and $i+1$ as the exact intervention that occurred, with no sampling loss and no recall bias. Outside that subset, the software chronica also includes uncommitted edits, IDE navigation and edit traces, build-system invocations, test runs and their outputs, runtime logs and metrics, monitoring alerts, code-review threads, deployment events, and out-of-band coordination (chat, tickets, in-person discussion). These channels are enumerated in #scope-developer-agent; most are recorded only in fragmentary, tool-specific stores, and many are not recorded at all.
 >
 > *[Empirical Claim]* For the software domain, the committed-state subset of $\mathcal{C}_t$ — call it $\mathcal{C}_t^{\text{commit}} \subset \mathcal{C}_t$ — is captured by git with negligible sampling loss and no post-hoc revision (commits are immutable), giving lower sampling and recall bias on $\mathcal{C}_t^{\text{commit}}$ than self-report instruments offer on the comparable subset in other domains. The remainder $\mathcal{C}_t \setminus \mathcal{C}_t^{\text{commit}}$ is no better captured in software than in other instrumented-but-incomplete domains; in some sub-channels (private reasoning, in-person coordination) it is worse.
 >
@@ -45,7 +45,7 @@ The following replaces lines 56–62 (P5 + Consequence) and line 84 (the P5 para
 |---|---|---|
 | **Heading** | **P5. Exact exteriorized chronica.** | **P5. Committed-state subset of chronica recorded exactly.** |
 | **Equivalence claim** | "For the *exteriorized* content of the chronica $\mathcal{C}_t$ — the sequence of codebase state transitions, their timing, and their authorship — git records this without information loss." | "The chronica $\mathcal{C}_t$ is broader — it is the full $(o_1, a_1, \ldots, a_{t-1}, o_t)$ sequence of agent–environment interactions, of which committed codebase state transitions are one subset. Within that subset, git records the diff between commits $i$ and $i+1$ as the exact intervention that occurred, with no sampling loss and no recall bias." |
-| **Out-of-scope channels** | (not enumerated in P5) | New paragraph enumerating the channels in $\mathcal{C}_t \setminus \mathcal{C}_t^{\text{commit}}$, with a forward reference to `#developer-as-act-agent`. |
+| **Out-of-scope channels** | (not enumerated in P5) | New paragraph enumerating the channels in $\mathcal{C}_t \setminus \mathcal{C}_t^{\text{commit}}$, with a forward reference to `#scope-developer-agent`. |
 | **Comparative-advantage claim** | (currently lives only in the Consequence as "without the sampling and recall biases that afflict other domains"; framed as fact) | Moved into P5 body, tagged *[Empirical Claim]*, and explicitly scoped to $\mathcal{C}_t^{\text{commit}}$: "lower sampling and recall bias on $\mathcal{C}_t^{\text{commit}}$ than self-report instruments offer on the comparable subset in other domains. The remainder is no better captured in software than in other instrumented-but-incomplete domains." |
 
 ### Diff 3b. "Git's scope matches" paragraph (line 58)
@@ -54,7 +54,7 @@ The following replaces lines 56–62 (P5 + Consequence) and line 84 (the P5 para
 |---|---|
 | "Git's scope matches the chronica's definition precisely for the codebase domain: the codebase is the environment, commits are the interventions, diffs are the state transitions, and all of these are recorded exactly." | "Git's scope matches one well-bounded slice of the chronica exactly (the committed-state slice for the codebase component of $\Omega_t$), and is silent on the rest." |
 
-The framing "the codebase is the environment" is dropped — `#developer-as-act-agent` already establishes that $\Omega_t$ extends beyond the codebase, and reasserting the equation here was the source of the overstatement.
+The framing "the codebase is the environment" is dropped — `#scope-developer-agent` already establishes that $\Omega_t$ extends beyond the codebase, and reasserting the equation here was the source of the overstatement.
 
 ### Diff 3c. P5 Consequence (line 62)
 
@@ -97,7 +97,7 @@ No other segment file in `01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-a
 
 - `02-tst-core/src/system-coupling.md:33` references `#software-epistemic-properties, P3` for the interventional claim. **No edit needed.**
 
-- `02-tst-core/src/developer-as-act-agent.md:115` references `#software-epistemic-properties, P6` for active-channel $U_o$. **No edit needed.**
+- `02-tst-core/src/scope-developer-agent.md:115` references `#software-epistemic-properties, P6` for active-channel $U_o$. **No edit needed.**
 
 - `03-logogenic-agents/src/section-ii-survival.md:127` ("Implications for logogenic agent engineering") cites `#software-epistemic-properties` P5 explicitly for the *instrumentation-boundary framing*: "The instrumentation-boundary framing in `02-tst-core/`'s `#software-epistemic-properties` P5 is the parallel observation in the software domain: statement-level survival does not imply that the quantities are cheap or automatic to extract." This citation actually *strengthens* under the proposed narrowing — the new wording makes the instrumentation boundary more explicit. **No edit needed.**
 
@@ -159,7 +159,7 @@ Yes. Three independent confirmations:
 
 1. **Definitional.** `#chronica` (line 15) defines $\mathcal{C}_t$ as the complete observation/action sequence — not the committed-state subset. The current P5 wording asserts equivalence between the two, which is definitionally false.
 
-2. **Operational.** `#developer-as-act-agent` (lines 30–41 environment table; lines 95–113 observation channels) explicitly lists multiple software channels that are not in git: runtime logs, monitoring alerts, code review, colleague queries, IDE state, infrastructure dashboards. These are part of $\mathcal{C}_t$ for any AAD-instantiated developer agent.
+2. **Operational.** `#scope-developer-agent` (lines 30–41 environment table; lines 95–113 observation channels) explicitly lists multiple software channels that are not in git: runtime logs, monitoring alerts, code review, colleague queries, IDE state, infrastructure dashboards. These are part of $\mathcal{C}_t$ for any AAD-instantiated developer agent.
 
 3. **Already conceded in companion segment.** `#causal-discovery-from-git` (line 18, line 78, line 80) explicitly states "the chain from git data to AAD quantities is empirical and unresolved" and that "max attainable: empirical." P5's current strong-equivalence framing contradicts the companion segment that immediately depends on it. The narrowing in §2 brings P5 into register with `#causal-discovery-from-git`.
 

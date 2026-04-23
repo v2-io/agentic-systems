@@ -305,9 +305,9 @@ AAD already commits to several principles that make the persistence-cost bound n
 
 2. **`#structural-adaptation-necessity`** identifies when parametric adaptation fails. The information-rate bound sharpens this: if the observation channels do not have sufficient capacity for $\mathcal{T}$, then *no* filter can meet persistence in Model S — structural change of the *observation channels* (not just model class) is required.
 
-3. **`#separability-pattern`** classifies scope regimes. The persistence-cost bound sits in the *structured-repair* half: it holds exactly in sub-scope $\alpha$ (linear-Gaussian / Kalman) and requires per-system verification in sub-scope $\beta$ (PID, rule-based). This positions the theorem within AAD's cross-sectional structure.
+3. **`#discussion-separability-pattern`** classifies scope regimes. The persistence-cost bound sits in the *structured-repair* half: it holds exactly in sub-scope $\alpha$ (linear-Gaussian / Kalman) and requires per-system verification in sub-scope $\beta$ (PID, rule-based). This positions the theorem within AAD's cross-sectional structure.
 
-4. **`#identifiability-floor`** names the no-go pattern. This theorem is the *positive* analog: it says "here is the universal lower bound on persistence cost derived from an external theorem (Shannon RDF), with sector-persistence machinery as the bridge." The two patterns are dual — one says "AAD cannot escape X without information augmentation"; this one says "AAD requires at least Y information rate to operate."
+4. **`#discussion-identifiability-floor`** names the no-go pattern. This theorem is the *positive* analog: it says "here is the universal lower bound on persistence cost derived from an external theorem (Shannon RDF), with sector-persistence machinery as the bridge." The two patterns are dual — one says "AAD cannot escape X without information augmentation"; this one says "AAD requires at least Y information rate to operate."
 
 5. **#additive-coordinate-forcing** as a *comparison point*. The persistence-cost bound does NOT force a logarithmic coordinate — it yields a linear-in-$\alpha$ rate, not a log-in-$\alpha$ coordinate. So this result sits *outside* AAD's three-layer logarithmic-coordinate-forcing family. It is an adjacent structural result rather than a member.
 
@@ -337,7 +337,7 @@ Each of the six sector-persistence-template instances could then claim its cost 
 
 2. **Rate-distortion for strategic tempo $\mathcal{T}_\Sigma$.** The information rate required to maintain bounded *strategic* mismatch (edge credences tracking environmental change). Would instantiate the template-cost bound at the strategy-DAG state variable and quantify the information cost of maintaining a DAG against endogenous edge invalidation.
 
-3. **Persistence cost under misspecification.** What happens when $\mathcal{F}(\mathcal{M}) \lt 1$? The information rate required to close the mismatch floor diverges, but at what rate? Connects to #identifiability-floor's "misspecification-cost quantification" open item.
+3. **Persistence cost under misspecification.** What happens when $\mathcal{F}(\mathcal{M}) \lt 1$? The information rate required to close the mismatch floor diverges, but at what rate? Connects to #discussion-identifiability-floor's "misspecification-cost quantification" open item.
 
 4. **Composite persistence cost.** For a composite agent, does the information-rate lower bound add, multiply, or have a non-obvious interaction? This is the cost-analog of #tempo-composition's sub-additivity and #team-persistence's cooperative-coupling-reduces-$\rho$-effective result. Likely: $\dot R_{c,\min} \leq \sum_i \dot R_{i,\min}$ due to coordination overhead eating information capacity.
 
@@ -408,7 +408,7 @@ $$\dot R_{\min} = n\alpha/2\text{ nats per unit time}$$
 - Martins, N. C. & Dahleh, M. A. 2008. "Feedback Control in the Presence of Noisy Channels: 'Bode-Like' Fundamental Limitations of Performance." *IEEE Trans. Automatic Control* 53(7):1604–1615. *(Information-theoretic Bode integral.)*
 
 **AAD segments cited.**
-- #persistence-condition, #sector-condition-stability, #sector-condition-derivation, #sector-persistence-template, #gain-sector-bridge, #update-gain, #adaptive-tempo, #model-class-fitness, #structural-adaptation-necessity, #mismatch-decomposition, #separability-pattern, #identifiability-floor, #additive-coordinate-forcing.
+- #persistence-condition, #sector-condition-stability, #sector-condition-derivation, #sector-persistence-template, #gain-sector-bridge, #update-gain, #adaptive-tempo, #model-class-fitness, #structural-adaptation-necessity, #mismatch-decomposition, #discussion-separability-pattern, #discussion-identifiability-floor, #additive-coordinate-forcing.
 
 ---
 

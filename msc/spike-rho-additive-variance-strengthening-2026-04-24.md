@@ -113,7 +113,7 @@ measures how much the policy $\pi$ shifts the state distribution into regions wh
 
 ### 2.7 Where (AV) needs more work
 
-- **Non-exponential-family reference classes (S3 relaxation).** The Pythagorean projection argument requires $e$-flat structure. Many practical model classes (neural networks, rule-based systems) are neither $e$-flat nor $m$-flat. A coarser decomposition is available (Kullback-Leibler projection without orthogonality) but the cross-term structure becomes richer — this is the structural-repair regime of `#separability-pattern`'s separability ladder.
+- **Non-exponential-family reference classes (S3 relaxation).** The Pythagorean projection argument requires $e$-flat structure. Many practical model classes (neural networks, rule-based systems) are neither $e$-flat nor $m$-flat. A coarser decomposition is available (Kullback-Leibler projection without orthogonality) but the cross-term structure becomes richer — this is the structural-repair regime of `#discussion-separability-pattern`'s separability ladder.
 
 - **Finite-sample vs. population.** (AV) is a population-level identity under (S1)–(S4). Finite-sample estimation of each term requires concentration bounds and variance-component analysis (analogous to ANOVA for mean-square error). Not developed here.
 
@@ -254,14 +254,14 @@ Under (R-F), $\rho^2_\text{env}$ is *a single scalar* and must take the same val
 
 **What the no-go implies for (R-F).** Any attempt to write $\rho = \rho_{\text{env}} \cdot f \cdot g$ is under-specifying the environment by collapsing a two-dimensional volatility into one scalar. (MC) escapes this because its "environment" is a single Poisson emission rate $\lambda$, not a full noise-covariance structure. (LD) escapes by moving to a tail-rate coordinate where the collapse is valid (rate functions are scalar along a ray).
 
-### 4.3 Integration with `#identifiability-floor`
+### 4.3 Integration with `#discussion-identifiability-floor`
 
-The no-go has the canonical shape of `#identifiability-floor`'s pattern: *external mathematical obstruction, AAD machinery provides the escape*. Here:
+The no-go has the canonical shape of `#discussion-identifiability-floor`'s pattern: *external mathematical obstruction, AAD machinery provides the escape*. Here:
 
 - **Obstruction:** generic disturbance has multi-dimensional environment-side structure (process / observation / exogenous events) that cannot be collapsed to a single scalar multiplicative factor without losing the interaction with model misspecification.
 - **Escape:** (AV)'s variance-additive form, supplemented by PID if finer decomposition is needed.
 
-This would be Instance 4 of `#identifiability-floor`: alongside on-policy L0-detection (CHT), L1' mixture-identifiability (Cramér-Rao), and composition-layer no-go (Liberzon). The external theorem is a classical volatility-identifiability result; the escape is (AV). **Candidate for promotion to `#identifiability-floor` once the no-go is tightened to an exact counterexample.**
+This would be Instance 4 of `#discussion-identifiability-floor`: alongside on-policy L0-detection (CHT), L1' mixture-identifiability (Cramér-Rao), and composition-layer no-go (Liberzon). The external theorem is a classical volatility-identifiability result; the escape is (AV). **Candidate for promotion to `#discussion-identifiability-floor` once the no-go is tightened to an exact counterexample.**
 
 ---
 
@@ -389,7 +389,7 @@ This spike produces math that should land in segments. Per `FORMAT.md`'s "math l
 - `#model-class-fitness` (model-excess contribution)
 - `#gain-sector-bridge` (sub-scope $\alpha$)
 - `#adaptive-tempo` (rate factor $\nu$)
-- `#identifiability-floor` (no-go integration)
+- `#discussion-identifiability-floor` (no-go integration)
 
 **Rationale.** The decomposition is load-bearing for the internal-external-decomposition spike (`msc/spike-internal-external-decomposition.md`) which is deferred pending this reframe. Once `#rho-decomposition` lands, the parent spike can promote by citing (AV) at its fine-decomposition step.
 
@@ -397,7 +397,7 @@ This spike produces math that should land in segments. Per `FORMAT.md`'s "math l
 
 Add a subsection titled "Effective-disturbance decomposition" that cites `#rho-decomposition` and notes that each of the six instantiations can carry a sub-contribution attribution (irreducible / model-excess / policy-excess / cross) at no extra derivation cost.
 
-### 8.3 Extension to `#identifiability-floor`
+### 8.3 Extension to `#discussion-identifiability-floor`
 
 Add Instance 4: rate-multiplicative factorization no-go (per §4 above). External obstruction: volatility-identifiability (two-dimensional environment noise cannot collapse to scalar product form). Escape: (AV) variance-additive form with typed cross terms.
 
@@ -405,7 +405,7 @@ Add Instance 4: rate-multiplicative factorization no-go (per §4 above). Externa
 
 Add a subsection to the "Adjacent cases that share the shape but not the forcing structure" section: **variance-additive rho decomposition**. The coordinate (variance) is forced by Bienaymé's identity under independence, a direct algebraic identity rather than a Cauchy-FE uniqueness argument. Adjacent to the Lyapunov quadratic case (both coordinate-matched rather than coordinate-forced).
 
-### 8.5 Update to `#separability-pattern`
+### 8.5 Update to `#discussion-separability-pattern`
 
 Add the seventh-ladder row refinement: the internal-external attribution ladder now has a *structured* separable-core (Regime A + (AV) with measured cross-terms), a *structured repair* (Regime B + (AV) with functional-form cross-term assumptions), and a *general open* (Regime C + (AV) with confounded cross-terms). The ladder's technical content strengthens: "functional-form assumptions on $f, g, h, Q$" becomes "functional-form assumptions on the mediation term $\chi$ in (AV)," which is a specific, named mediation-analysis problem (Imai et al. 2010) rather than a generic hand-wave.
 
@@ -450,7 +450,7 @@ The parent spike's value is preserved; the weakest-link factorization is replace
 
 - **Strengthening 2 — multiplicative sub-structure.** Located. The multiplicative form is native in the Poisson-rare-event-cascade regime (MC) and in the large-deviation tail (LD) regime. Both are sub-regimes within (AV), not alternatives. PID refines the cross-term structure. Multiplicative-noise processes are a coordinate-choice issue, not a strengthening route. **Lands as sub-regime catalog in `#rho-decomposition`.**
 
-- **Strengthening 3 — no-go theorem.** Derived at discussion-grade; clear path to exact. Under mild regularity, no single-scalar "environmental volatility" can capture multi-dimensional environment noise while admitting a model-class multiplicative factor. **Lands as §4 of `#rho-decomposition` and as Instance 4 of `#identifiability-floor`.**
+- **Strengthening 3 — no-go theorem.** Derived at discussion-grade; clear path to exact. Under mild regularity, no single-scalar "environmental volatility" can capture multi-dimensional environment noise while admitting a model-class multiplicative factor. **Lands as §4 of `#rho-decomposition` and as Instance 4 of `#discussion-identifiability-floor`.**
 
 - **Strengthening 4 — `#additive-coordinate-forcing` connection.** Honest negative. (AV)'s coordinate (variance) is forced by Bienaymé's identity, not by Cauchy-FE under an AAD-internal axiom. Places (AV) as an adjacent family member (like Lyapunov quadratic), not a fourth/fifth primary instance. **Lands as subsection in the adjacent-cases section of `#additive-coordinate-forcing`.**
 
@@ -460,10 +460,10 @@ The parent spike's value is preserved; the weakest-link factorization is replace
 
 **What the prior spike got right.** The obstruction diagnosis. $\rho$ *is* agent-conditional; $\rho_\text{external}$ is not well-posed without a reference class; the natural structure *is* variance-additive. Those observations are correct and stable under this spike's work.
 
-**What the prior spike missed.** The derivation of (AV) as a theorem; the sub-regime catalog; the no-go theorem; the placement in `#additive-coordinate-forcing` (as adjacent, not primary); the composition with `#identifiability-floor` as a fourth instance. These are the strengthening moves.
+**What the prior spike missed.** The derivation of (AV) as a theorem; the sub-regime catalog; the no-go theorem; the placement in `#additive-coordinate-forcing` (as adjacent, not primary); the composition with `#discussion-identifiability-floor` as a fourth instance. These are the strengthening moves.
 
 **Recommended next action.** Land `#rho-decomposition` as a Section I appendix with §§2–6 of this spike as its content. Unblock the parent internal-external-decomposition spike for promotion.
 
 ---
 
-*End of spike. The multiplicative form (R-F) is dead as a derived result but alive as three well-characterized sub-regimes. The variance-additive form (AV) is the new structural anchor, promoted from qualitative reframe to derived theorem. A no-go theorem sharpens the negative result into AAD's `#identifiability-floor` pattern. Net: strengthen-first delivered; the heuristic fallback is no longer needed.*
+*End of spike. The multiplicative form (R-F) is dead as a derived result but alive as three well-characterized sub-regimes. The variance-additive form (AV) is the new structural anchor, promoted from qualitative reframe to derived theorem. A no-go theorem sharpens the negative result into AAD's `#discussion-identifiability-floor` pattern. Net: strengthen-first delivered; the heuristic fallback is no longer needed.*

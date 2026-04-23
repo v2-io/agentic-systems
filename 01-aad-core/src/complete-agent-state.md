@@ -4,7 +4,7 @@ type: formulation
 status: robust-qualitative
 depends:
   - agent-model
-  - scope-condition
+  - scope-agency
   - recursive-update
 stage: claims-verified
 ---

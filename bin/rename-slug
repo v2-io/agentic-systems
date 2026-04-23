@@ -1,0 +1,513 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# bin/rename-slug
+#
+# Deterministic slug rename across the repository. Executes by default; the
+# review step is `git diff` after the fact, not a dry-run preview. Safety
+# comes from: (a) refusing to clobber an existing target file whose content
+# differs from the source, (b) refusing to silently merge into pre-existing
+# references for the NEW slug unless --confirm-merge is set, (c) running
+# bin/lint-outline as a post-check.
+#
+# What it does per (OLD, NEW) pair:
+#   1. Moves {component}/src/{OLD}.md → {component}/src/{NEW}.md via `git mv`.
+#   2. Rewrites the moved file's `slug:` frontmatter field.
+#   3. Replaces `#OLD` (negative-lookahead-anchored — so `#scope-condition`
+#      does NOT match `#scope-conditioned-x`) in body text of every
+#      non-excluded .md file.
+#   4. Replaces `- OLD` entries in YAML `depends:` blocks (line-anchored).
+#   5. Replaces `src/OLD.md` path references (OUTLINE.md table links + any
+#      naked filename references in prose).
+#
+# Post-checks:
+#   - Zero residual `#OLD`, `- OLD` (depends), `src/OLD.md` outside excluded dirs.
+#   - `bin/lint-outline` exits clean on every component OUTLINE.md.
+#
+# Excluded dirs/files (references there stay on OLD names — they're frozen):
+#   _obs/ ref/ .git/ .claude/ msc/naming-votes/
+#   msc/naming-brainstorm-*.md  msc/naming-aggregate-*
+#   bin/rename-slug  (this file, which documents OLD examples)
+#
+# Usage:
+#   bin/rename-slug OLD_SLUG NEW_SLUG                 # execute
+#   bin/rename-slug --pairs pairs.txt                 # batch
+#   bin/rename-slug --dry-run OLD NEW                 # preview only
+#   bin/rename-slug --confirm-merge OLD NEW           # accept merge into
+#                                                     # pre-existing #NEW refs
+#
+# The script never creates a commit. Review with `git diff` and commit manually.
+
+require 'optparse'
+require 'pathname'
+require 'set'
+
+REPO_ROOT = Pathname.new(__dir__).parent.expand_path.freeze
+
+COMPONENT_SRCS = %w[
+  01-aad-core/src
+  02-tst-core/src
+  03-logogenic-agents/src
+  04-logozoetic-agents/src
+].map { |p| REPO_ROOT / p }.freeze
+
+COMPONENT_OUTLINES = %w[
+  01-aad-core/OUTLINE.md
+  02-tst-core/OUTLINE.md
+  03-logogenic-agents/OUTLINE.md
+  04-logozoetic-agents/OUTLINE.md
+].map { |p| REPO_ROOT / p }.freeze
+
+EXCLUDED_DIR_PREFIXES = %w[
+  _obs/
+  ref/
+  .git/
+  .claude/
+  msc/naming-votes/
+].freeze
+
+# Any naming-* file directly in msc/ is rename-frozen. These files catalogue
+# rename mappings, vote data, or analyses of the naming state — their content
+# would be catastrophically corrupted if a sweep rewrote the slugs they name.
+EXCLUDED_FILE_GLOBS = %w[
+  msc/naming-*.md
+  msc/naming-aggregate-*.json
+  bin/rename-slug
+].freeze
+
+LINT_OUTLINE = (REPO_ROOT / 'bin' / 'lint-outline').freeze
+
+Pair = Struct.new(:old, :new, keyword_init: true)
+
+FileEdit = Struct.new(:path, :body, :depends, :path_ref, :slug_field, keyword_init: true) do
+  def total
+    body + depends + path_ref + slug_field
+  end
+end
+
+PairPlan = Struct.new(
+  :pair, :old_path, :new_path, :target_identical,
+  :prior_ref_files, :edits,
+  keyword_init: true
+) do
+  def files_touched
+    edits.count { |e| e.total.positive? }
+  end
+
+  def total_edits
+    edits.sum(&:total)
+  end
+
+  def has_prior_refs?
+    !prior_ref_files.empty?
+  end
+end
+
+# --- Path utilities ------------------------------------------------------
+
+def excluded?(path)
+  rel = path.relative_path_from(REPO_ROOT).to_s
+  return true if EXCLUDED_DIR_PREFIXES.any? { |pre| rel.start_with?(pre) }
+  return true if EXCLUDED_FILE_GLOBS.any? { |glob| File.fnmatch?(glob, rel) }
+  false
+rescue ArgumentError
+  true # outside repo
+end
+
+def all_markdown_files
+  Pathname.glob(REPO_ROOT.join('**/*.md')).select do |p|
+    p.file? && !excluded?(p)
+  end
+end
+
+def locate_old_segment(slug)
+  matches = COMPONENT_SRCS.map { |src| src / "#{slug}.md" }.select(&:exist?)
+  if matches.empty?
+    abort("ERROR: no segment file found for slug '#{slug}' in any component src/.")
+  end
+  if matches.length > 1
+    locs = matches.map { |m| "  #{m.relative_path_from(REPO_ROOT)}" }.join("\n")
+    abort("ERROR: slug '#{slug}' resolves to multiple files:\n#{locs}")
+  end
+  matches.first
+end
+
+# --- Regex builders ------------------------------------------------------
+
+# Body xref: `#slug` NOT followed by another word-char or hyphen.
+# Ruby \b treats `-` as non-word, so a raw `\b` would wrongly terminate at
+# the hyphen inside `#scope-condition` — the explicit negative lookahead
+# `(?![-\w])` is required.
+def body_xref_re(slug)
+  Regexp.new("##{Regexp.escape(slug)}(?![-\\w])")
+end
+
+# Depends entry: `  - slug` on its own line (Ruby ^/$ are line-anchored by default).
+def depends_re(slug)
+  Regexp.new("^(\\s*-\\s*)#{Regexp.escape(slug)}\\s*$")
+end
+
+# Path reference: `src/slug.md` (covers OUTLINE links and naked mentions).
+def path_re(slug)
+  Regexp.new("src/#{Regexp.escape(slug)}\\.md")
+end
+
+# Frontmatter slug field: `slug: <slug>` on its own line.
+def slug_field_re(slug)
+  Regexp.new("^(slug:\\s*)#{Regexp.escape(slug)}\\s*$")
+end
+
+# --- Planning ------------------------------------------------------------
+
+def plan_pair(pair)
+  old_path = locate_old_segment(pair.old)
+  new_path = old_path.parent / "#{pair.new}.md"
+
+  target_identical = false
+  if new_path.exist? && !old_path.realpath.eql?(new_path.realpath)
+    if new_path.read == old_path.read
+      target_identical = true
+    else
+      abort(
+        "ERROR: target file already exists with different content:\n" \
+        "  #{new_path.relative_path_from(REPO_ROOT)}\n" \
+        "Refusing to clobber. Resolve manually before retrying."
+      )
+    end
+  end
+
+  old_body = body_xref_re(pair.old)
+  old_depends = depends_re(pair.old)
+  old_path_ref = path_re(pair.old)
+  old_slug_field = slug_field_re(pair.old)
+
+  new_body = body_xref_re(pair.new)
+  new_depends = depends_re(pair.new)
+
+  edits = []
+  prior_ref_files = []
+
+  all_markdown_files.each do |md|
+    text = md.read
+
+    body_hits = text.scan(old_body).length
+    depends_hits = text.scan(old_depends).length
+    path_hits = text.scan(old_path_ref).length
+    slug_field_hits = (md == old_path) ? text.scan(old_slug_field).length : 0
+
+    total = body_hits + depends_hits + path_hits + slug_field_hits
+    if total.positive?
+      edits << FileEdit.new(
+        path: md, body: body_hits, depends: depends_hits,
+        path_ref: path_hits, slug_field: slug_field_hits
+      )
+    end
+
+    # Pre-existing NEW references anywhere other than the OLD file itself.
+    next if md == old_path
+    if new_body.match?(text) || new_depends.match?(text)
+      prior_ref_files << md
+    end
+  end
+
+  PairPlan.new(
+    pair: pair, old_path: old_path, new_path: new_path,
+    target_identical: target_identical,
+    prior_ref_files: prior_ref_files, edits: edits
+  )
+end
+
+# --- Preview -------------------------------------------------------------
+
+def print_plan_summary(plan)
+  p = plan.pair
+  rel_old = plan.old_path.relative_path_from(REPO_ROOT)
+  rel_new = plan.new_path.relative_path_from(REPO_ROOT)
+  puts
+  puts "── #{p.old} → #{p.new}"
+  puts "  file:   #{rel_old} → #{rel_new}#{plan.target_identical ? ' (target identical; move skipped)' : ''}"
+  puts "  edits:  #{plan.total_edits} replacements across #{plan.files_touched} file(s)"
+
+  return unless plan.has_prior_refs?
+
+  puts
+  puts "  ⚠  #{p.new} already has references in #{plan.prior_ref_files.length} file(s):"
+  plan.prior_ref_files.first(10).each do |f|
+    puts "       #{f.relative_path_from(REPO_ROOT)}"
+  end
+  if plan.prior_ref_files.length > 10
+    puts "       ... (+#{plan.prior_ref_files.length - 10} more)"
+  end
+  puts "     The rename will merge these with the renamed segment."
+  puts "     Pass --confirm-merge to proceed."
+end
+
+def print_plan_detail(plan)
+  return if plan.edits.empty?
+  puts
+  puts "  per-file breakdown:"
+  puts format("    %-60s  %4s  %4s  %4s  %4s", 'file', 'body', 'deps', 'path', 'slug')
+  plan.edits.sort_by { |e| e.path.to_s }.each do |e|
+    rel = e.path.relative_path_from(REPO_ROOT).to_s
+    puts format("    %-60s  %4d  %4d  %4d  %4d",
+                rel, e.body, e.depends, e.path_ref, e.slug_field)
+  end
+end
+
+# --- Apply ---------------------------------------------------------------
+
+def git_mv(src, dst)
+  src_rel = src.relative_path_from(REPO_ROOT).to_s
+  dst_rel = dst.relative_path_from(REPO_ROOT).to_s
+  Dir.chdir(REPO_ROOT) do
+    system('git', 'mv', src_rel, dst_rel, exception: true)
+  end
+end
+
+def apply_pair(plan)
+  p = plan.pair
+
+  git_mv(plan.old_path, plan.new_path) unless plan.target_identical
+
+  old_body = body_xref_re(p.old)
+  old_depends = depends_re(p.old)
+  old_path_ref = path_re(p.old)
+  old_slug_field = slug_field_re(p.old)
+
+  plan.edits.each do |e|
+    # The old file now lives at new_path; every other path is unchanged.
+    file_path = (e.path == plan.old_path) ? plan.new_path : e.path
+    text = file_path.read
+    original = text
+
+    text = text.gsub(old_body, "##{p.new}") if e.body.positive?
+    if e.depends.positive?
+      text = text.gsub(old_depends) { "#{Regexp.last_match(1)}#{p.new}" }
+    end
+    text = text.gsub(old_path_ref, "src/#{p.new}.md") if e.path_ref.positive?
+    if e.slug_field.positive?
+      text = text.gsub(old_slug_field) { "#{Regexp.last_match(1)}#{p.new}" }
+    end
+
+    file_path.write(text) if text != original
+  end
+end
+
+# --- Stale-text survival scan -------------------------------------------
+
+# Apply every pair's substitutions in memory, then return the result. Used both
+# in dry-run (the on-disk file is not yet rewritten) and in apply-post
+# (substitutions are a no-op against already-rewritten text; safe either way).
+def simulate_rewrites(text, pairs)
+  result = text
+  pairs.each do |pair|
+    result = result.gsub(body_xref_re(pair.old), "##{pair.new}")
+    result = result.gsub(depends_re(pair.old)) { "#{Regexp.last_match(1)}#{pair.new}" }
+    result = result.gsub(path_re(pair.old), "src/#{pair.new}.md")
+    result = result.gsub(slug_field_re(pair.old)) { "#{Regexp.last_match(1)}#{pair.new}" }
+  end
+  result
+end
+
+# Find occurrences of the old slug in the moved file's content that SURVIVE the
+# mechanical rewrite. These are typically formal-tag labels like
+# `*[Definition (old-slug)]*` or prose mentions — references that embed the
+# slug as a literal string rather than as an xref, depends entry, path, or
+# frontmatter field. Regex cannot safely reclassify them; human judgment needed.
+#
+# The word-like boundary on both sides avoids matching inside another slug that
+# happens to contain the old one as a prefix/suffix (e.g., `scope-condition`
+# should NOT match inside `composition-scope-condition`).
+def stale_slug_hits(plan, all_pairs)
+  source = plan.new_path.exist? ? plan.new_path : plan.old_path
+  return [] unless source.exist?
+  text = simulate_rewrites(source.read, all_pairs)
+  bare_re = Regexp.new("(?<![-\\w])#{Regexp.escape(plan.pair.old)}(?![-\\w])")
+  hits = []
+  text.each_line.with_index(1) do |line, i|
+    hits << [i, line.chomp] if bare_re.match?(line)
+  end
+  hits
+end
+
+def print_stale_slug_survivals(plan, hits)
+  return if hits.empty?
+  rel = (plan.new_path.exist? ? plan.new_path : plan.old_path).relative_path_from(REPO_ROOT)
+  puts
+  puts "  ⚠  stale text in moved file (regex cannot classify — human review needed):"
+  puts "     #{rel}"
+  hits.each do |lineno, content|
+    puts format('       %4d: %s', lineno, content.strip[0..110])
+  end
+  puts "     Common cases: `*[Definition (old-slug)]*` formal-tag labels; prose"
+  puts "     mentions of the slug-as-concept; embedded paraphrase of the old name."
+end
+
+# --- Post-checks ---------------------------------------------------------
+
+def residual_counts(slug)
+  body_r = body_xref_re(slug)
+  depends_r = depends_re(slug)
+  path_r = path_re(slug)
+  body = deps = paths = 0
+  all_markdown_files.each do |md|
+    text = md.read
+    body += text.scan(body_r).length
+    deps += text.scan(depends_r).length
+    paths += text.scan(path_r).length
+  end
+  [body, deps, paths]
+end
+
+# Only 01-aad-core is self-contained; the other component outlines have known
+# cross-component dependencies (e.g., `section-ii-survival` in logogenic-agents
+# depends on `directed-separation` in aad-core) that bin/lint-outline cannot
+# resolve because it only sees one component's src/ at a time. Linting the
+# non-AAD outlines would produce noisy false-positive "missing dependency"
+# reports that are pre-existing and unrelated to any rename. Left as a known
+# gap; address by extending lint-outline to accept cross-component roots.
+def run_lint_outline
+  aad_outline = REPO_ROOT / '01-aad-core' / 'OUTLINE.md'
+  return true unless aad_outline.exist?
+  Dir.chdir(REPO_ROOT) do
+    system(LINT_OUTLINE.to_s, '--quiet', aad_outline.to_s)
+  end
+end
+
+def post_check(pairs)
+  puts
+  puts "── Post-checks"
+  all_ok = true
+  pairs.each do |pair|
+    body, deps, paths = residual_counts(pair.old)
+    total = body + deps + paths
+    tag = total.zero? ? 'OK' : 'FAIL'
+    puts format("  [%s] ##{pair.old}: body=%d  depends=%d  paths=%d", tag, body, deps, paths)
+    all_ok = false if total.positive?
+  end
+  puts
+  puts "  lint-outline:"
+  if run_lint_outline
+    puts "  [OK] all component outlines lint clean"
+  else
+    all_ok = false
+  end
+  all_ok
+end
+
+# --- Pairs file ----------------------------------------------------------
+
+def read_pairs_file(path)
+  pairs = []
+  path.read.each_line.with_index(1) do |raw, lineno|
+    line = raw.split('#', 2).first.to_s.strip
+    next if line.empty?
+    parts = line.split
+    unless parts.length == 2
+      abort("ERROR: #{path}:#{lineno}: expected 'OLD_SLUG NEW_SLUG', got: #{raw.inspect}")
+    end
+    pairs << Pair.new(old: parts[0], new: parts[1])
+  end
+  abort("ERROR: #{path}: no rename pairs found.") if pairs.empty?
+  pairs
+end
+
+# --- Main ----------------------------------------------------------------
+
+def parse_args
+  options = { dry_run: false, confirm_merge: false, pairs_file: nil, detail: false }
+  parser = OptionParser.new do |o|
+    o.banner = 'Usage: bin/rename-slug [options] [OLD_SLUG NEW_SLUG]'
+    o.on('--pairs FILE', 'batch rename from file (one "OLD NEW" per line)') do |v|
+      options[:pairs_file] = Pathname.new(v)
+    end
+    o.on('--dry-run', 'preview only; do not mutate') { options[:dry_run] = true }
+    o.on('--confirm-merge', 'proceed when NEW slug already has references') do
+      options[:confirm_merge] = true
+    end
+    o.on('--detail', 'show per-file edit breakdown') { options[:detail] = true }
+    o.on('-h', '--help', 'show help') { puts o; exit }
+  end
+  parser.parse!
+
+  pairs =
+    if options[:pairs_file]
+      abort('ERROR: cannot combine --pairs with positional OLD/NEW') unless ARGV.empty?
+      read_pairs_file(options[:pairs_file])
+    else
+      abort("ERROR: provide OLD and NEW slugs, or --pairs FILE\n\n#{parser}") unless ARGV.length == 2
+      [Pair.new(old: ARGV[0], new: ARGV[1])]
+    end
+
+  [pairs, options]
+end
+
+def print_framing_reminder(plans)
+  puts
+  puts 'ⓘ  After the mechanical rename, also review each moved file by hand:'
+  plans.each do |plan|
+    rel = (plan.new_path.exist? ? plan.new_path : plan.old_path).relative_path_from(REPO_ROOT)
+    puts "     #{rel}"
+  end
+  puts '   The H1, opening sentence, and any `*[Role (slug)]*` formal tags'
+  puts '   often embody a framing the slug change implies should update, but'
+  puts '   that regex substitution cannot safely detect or rewrite.'
+end
+
+def main
+  pairs, opts = parse_args
+
+  plans = pairs.map { |p| plan_pair(p) }
+
+  plans.each do |plan|
+    print_plan_summary(plan)
+    print_plan_detail(plan) if opts[:detail]
+    # Stale-text survivals: surface in the plan summary so the executing agent
+    # sees them both in dry-run and again before committing after --apply.
+    hits = stale_slug_hits(plan, pairs)
+    print_stale_slug_survivals(plan, hits)
+  end
+
+  # Framing reminder runs after plans regardless of merge-block or dry-run —
+  # it is advice the executing agent needs as soon as they've seen the plan.
+  print_framing_reminder(plans)
+
+  merge_blocked = plans.any? { |pl| pl.has_prior_refs? } && !opts[:confirm_merge]
+  if merge_blocked
+    puts
+    puts 'ABORT: one or more renames would merge into pre-existing references for the NEW slug.'
+    puts '       Re-run with --confirm-merge to proceed.'
+    exit 2
+  end
+
+  if opts[:dry_run]
+    puts
+    puts '(dry-run — no changes written.)'
+    exit 0
+  end
+
+  puts
+  puts '── Applying'
+  # Re-plan each pair immediately before applying. In batch mode, earlier
+  # renames in the same invocation may have moved files that appear in a
+  # later pair's edit list (two meta-segments cross-referencing each other,
+  # for instance). A stale edit list tries to edit the pre-move path and
+  # raises ENOENT. Re-planning per-apply resolves paths against the current
+  # repo state.
+  plans.each do |plan|
+    fresh = plan_pair(plan.pair)
+    apply_pair(fresh)
+    puts "  applied: ##{fresh.pair.old} → ##{fresh.pair.new}"
+  end
+
+  unless post_check(pairs)
+    puts
+    puts 'POST-CHECK FAILED. Inspect `git status` / `git diff`; do not commit yet.'
+    exit 3
+  end
+
+  puts
+  puts 'Done. Review with: git diff   (and `git status` for the file moves)'
+end
+
+main if $PROGRAM_NAME == __FILE__

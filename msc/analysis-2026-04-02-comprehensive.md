@@ -194,10 +194,10 @@ These are tracked in other components' OUTLINEs but their absence affects how AA
 
 | Gap | Component | Relevance to AAD |
 |-----|-----------|-------------------|
-| #ai-agent-as-act-agent | 03-logogenic | Validates Section II scope claims about Class 2 agents |
+| #scope-logogenic-agent | 03-logogenic | Validates Section II scope claims about Class 2 agents |
 | #section-ii-survival | 03-logogenic | Documents which Section II results survive without directed separation (16/24 exactly, 5 approximately, 2 require modification per spike) |
 | #coupled-update-dynamics | 03-logogenic | The coupled formulation that Section II's directed-separation explicitly defers to |
-| #developer-as-act-agent | 02-tst-core | Validates Section II for human agents (developer as (M_t, O_t, Sigma_t)) |
+| #scope-developer-agent | 02-tst-core | Validates Section II for human agents (developer as (M_t, O_t, Sigma_t)) |
 | #causal-discovery-from-git | 02-tst-core | Validates causal-information-yield and loop-interventional-access for software domain |
 
 ---

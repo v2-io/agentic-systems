@@ -206,7 +206,7 @@ The `## Working Notes` section is for active development: open questions about t
 
 ### Voice and provenance
 
-**Segment voice, not diff voice.** Formal Expression, Epistemic Status, and Discussion present the current state of the theory. Avoid phrasing like "landed 2026-04-23", "the prior version of this segment treated X as...", "the msc/spike-Y.md cycle lifted...", or "promoted from spike Z" in those sections — that voice positions the content *against* the theory rather than presenting the segment *as* the theory. State what the theory **is**, not what changed: "Instance 3 of #identifiability-floor derives..." rather than "Instance 3 (landed 2026-04-23 from spike X) derives..."; "the four instances of the meta-pattern..." rather than "the meta-pattern was extended to four instances after the 2026-04-23 cycle...".
+**Segment voice, not diff voice.** Formal Expression, Epistemic Status, and Discussion present the current state of the theory. Avoid phrasing like "landed 2026-04-23", "the prior version of this segment treated X as...", "the msc/spike-Y.md cycle lifted...", or "promoted from spike Z" in those sections — that voice positions the content *against* the theory rather than presenting the segment *as* the theory. State what the theory **is**, not what changed: "Instance 3 of #discussion-identifiability-floor derives..." rather than "Instance 3 (landed 2026-04-23 from spike X) derives..."; "the four instances of the meta-pattern..." rather than "the meta-pattern was extended to four instances after the 2026-04-23 cycle...".
 
 A segment is read by future agents and reviewers who have no context for the chronicle of changes; diff voice forces them to imagine the prior state in order to parse the new state, dates the segment, and positions the content as contingent. Date / commit / spike references belong only in `## Working Notes`.
 
@@ -340,7 +340,7 @@ Both forms work in GitHub and Obsidian. The plain `#slug-name` form is preferred
 
 **Forward references are expected.** Segments routinely reference not-yet-written segments via `#slug-name`. These are intentional dependency markers — they document the claim's connections within the theory even before the target segment exists. Do not treat them as broken links or remove them.
 
-**Obsidian tag recognition**: Obsidian treats `#word` as a tag only when preceded by a space (or start of line). Always ensure a space before `#slug-name` — write `( #scope-condition)` not `( #scope-condition)`, and `see #update-gain` not `see#update-gain`.
+**Obsidian tag recognition**: Obsidian treats `#word` as a tag only when preceded by a space (or start of line). Always ensure a space before `#slug-name` — write `( #scope-agency)` not `( #scope-agency)`, and `see #update-gain` not `see#update-gain`.
 
 
 ## Math Formatting

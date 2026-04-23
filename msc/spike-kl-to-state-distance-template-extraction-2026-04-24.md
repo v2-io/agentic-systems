@@ -9,8 +9,8 @@ relates_to:
   - sector-persistence-template
   - additive-coordinate-forcing
   - agent-identity
-  - identifiability-floor
-  - separability-pattern
+  - discussion-identifiability-floor
+  - discussion-separability-pattern
   - contraction-template
   - gain-sector-bridge
   - fisher-whitened-update-rule
@@ -140,11 +140,11 @@ No segment in the survey uses an informal "small KL implies small state-distance
 
 Three places where KL→state-distance machinery *could plausibly* appear in future AAD work:
 
-1. **Composition-scope-condition robustness.** If `#composition-scope-condition` ever needs a "small-KL-between-sub-agent-models implies small-composite-displacement" argument (e.g., under Class-3 partially-separated agents where the composite state-update is a pushforward of sub-agent updates), Otto-Villani+Lipschitz-posterior would be the right machinery.
+1. **Composition-scope-condition robustness.** If `#scope-composite-agent` ever needs a "small-KL-between-sub-agent-models implies small-composite-displacement" argument (e.g., under Class-3 partially-separated agents where the composite state-update is a pushforward of sub-agent updates), Otto-Villani+Lipschitz-posterior would be the right machinery.
 
-2. **Causal-IB extension (open per `#identifiability-floor`).** If causal-IB lands as a future appendix, it likely needs KL→W₂ bounds on the post-intervention distribution as a function of intervention-information budget.
+2. **Causal-IB extension (open per `#discussion-identifiability-floor`).** If causal-IB lands as a future appendix, it likely needs KL→W₂ bounds on the post-intervention distribution as a function of intervention-information budget.
 
-3. **Misspecification cost (open per `#identifiability-floor`).** The expected floor is "degradation rate from misspecification is bounded below by an information-theoretic quantity" — a Pinsker-to-state-distance cascade applies naturally.
+3. **Misspecification cost (open per `#discussion-identifiability-floor`).** The expected floor is "degradation rate from misspecification is bounded below by an information-theoretic quantity" — a Pinsker-to-state-distance cascade applies naturally.
 
 **Implication.** Future-client density matters for template cost-benefit. A template that serves Client B + three future clients is more worth extracting than a template that serves only Client B. The three future clients are all KL→state-distance-on-pushforward-distribution (Client B's pattern), *not* Client A's Pinsker+Cauchy-Schwarz→scalar pattern. This argues for Option B (narrow template on Client B's cascade) over Option A (unified template accommodating both).
 
@@ -420,7 +420,7 @@ The two meta-pieces compose: once the divergence layer selects reverse-KL (per `
 
 - **Promotion ordering.** `#posterior-displacement-template` cannot land before `#bias-bound-derivation` (the template's one current primary instance). The ordering is: first `#bias-bound-derivation` (per `msc/spike-bias-bound-constant-C-strengthening-2026-04-24.md` M1), then the template extraction as a second move. If the reader wants the template-landing executed in a single session, the `#bias-bound-derivation` segment must be written first.
 
-- **Whether the three forward-looking clients will materialize.** §3.4 names causal-IB, misspecification-cost, composition-scope-robustness as candidates. All three are listed as "Open" in CLAUDE.md §Open and `#identifiability-floor`'s open extensions. Committing to the template is a bet that at least one of these will be pursued; the bet is reasonable but not settled.
+- **Whether the three forward-looking clients will materialize.** §3.4 names causal-IB, misspecification-cost, composition-scope-robustness as candidates. All three are listed as "Open" in CLAUDE.md §Open and `#discussion-identifiability-floor`'s open extensions. Committing to the template is a bet that at least one of these will be pursued; the bet is reasonable but not settled.
 
 - **Whether `#variational-sector-condition` should reference the template or just cite Pinsker directly.** If Option B lands, the adjacent-family positioning goes in `#variational-sector-condition`'s Discussion (analogous to how Lyapunov is positioned adjacent in `#additive-coordinate-forcing`). If Option C prevails, `#variational-sector-condition` stays unchanged.
 

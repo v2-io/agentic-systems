@@ -45,7 +45,7 @@ The obvious thing is status verification: which proposals are landed, which are 
 
 The non-obvious things I'm watching for:
 
-**1. Silent supersession.** Proposals may have been superseded by something that landed without the proposal itself being retired. Example candidate: O-BP11 (observability as master variable) may be substantively absorbed into `#agent-opacity` + `#interaction-channel-classification` + `#identifiability-floor` Instance 3, even though the portfolio still lists O-BP11 as "unexamined." If so, O-BP11 should be retired *as a proposal* even though the observability-master work is more alive than ever.
+**1. Silent supersession.** Proposals may have been superseded by something that landed without the proposal itself being retired. Example candidate: O-BP11 (observability as master variable) may be substantively absorbed into `#agent-opacity` + `#interaction-channel-classification` + `#discussion-identifiability-floor` Instance 3, even though the portfolio still lists O-BP11 as "unexamined." If so, O-BP11 should be retired *as a proposal* even though the observability-master work is more alive than ever.
 
 **2. Cluster identification.** Which proposals are actually one proposal? The doc already identifies some clusters (G-BP1+G-BP3+O-BP3; O-BP1+O-BP5+O-BP6; C-BP1+C-BP4; SP-7+SP-3+O-BP10). Agents should surface clusters I'd miss or confirm the existing ones.
 

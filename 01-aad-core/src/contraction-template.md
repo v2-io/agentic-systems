@@ -8,7 +8,7 @@ depends:
   - gain-sector-bridge
   - composition-closure
   - critical-mass-composition
-  - separability-pattern
+  - discussion-separability-pattern
 stage: draft
 ---
 
@@ -97,7 +97,7 @@ The contraction formulation refines `#sector-condition-derivation`'s A2' sub-sco
 - *Severely misspecified agents*: contraction to a wrong target is still wrong. Metric choice is silent on target validity.
 - *Per-step SGD / human judgment*: noise-is-disturbance treatment identical to the Euclidean formulation; no improvement from metric choice.
 
-This is **the seventh ladder** in `#separability-pattern` (A2'-scope): metric-α₁ separable-core / metric-α₂ structured-repair / metric-β general-open.
+This is **the seventh ladder** in `#discussion-separability-pattern` (A2'-scope): metric-α₁ separable-core / metric-α₂ structured-repair / metric-β general-open.
 
 ### Compositional contraction
 
@@ -129,7 +129,7 @@ Specializing further to the matched-symmetric case ($\lambda_1 = \lambda_2 = \la
 
 **The Jacobian-level observation.** `#composition-closure`'s DA2'-inc condition is equivalent to (CT2) with $M = I$ for $C^1$ $F$ on convex domains. AAD has been carrying the Jacobian-level Euclidean contraction condition at the composite level all along under the name DA2'-inc; the contraction template's Euclidean specialization surfaces this at the single-agent level.
 
-**The (PI)/Čencov observation.** Two metric-α₂ cases (information-metric Kalman, Fisher-metric exp-family) are AAD-internally forced under the (PI) axiom in `#agent-identity` combined with Čencov's 1982 uniqueness theorem — the fourth primary instance of the meta-pattern in `#additive-coordinate-forcing`. The remaining three metric-α₂ cases (Hessian, Lyapunov-linear-Hurwitz, Lyapunov-PID) are theorem-imported: the metric choice is problem-specific (matched to loss curvature or plant structure) rather than forced by an AAD-internal axiom.
+**The (PI)/Čencov observation.** Two metric-α₂ cases (information-metric Kalman, Fisher-metric exp-family) are AAD-internally forced under the (PI) axiom in `#agent-identity` combined with Čencov's 1982 uniqueness theorem — the fourth primary instance of the meta-pattern in `#discussion-additive-coordinate-forcing`. The remaining three metric-α₂ cases (Hessian, Lyapunov-linear-Hurwitz, Lyapunov-PID) are theorem-imported: the metric choice is problem-specific (matched to loss curvature or plant structure) rather than forced by an AAD-internal axiom.
 
 **Max attainable:** *conditional*. The condition (the metric specification must be consistent with the system structure; the Slotine 2003 compositional theorems must apply to the topology) is inherent to the contraction-metric framework, not removable. Non-smooth systems (rule-based), strategic/game-theoretic equilibria, and systems without regular metric-state coupling remain honestly outside the template's scope (see §Honest failure modes).
 
@@ -155,7 +155,7 @@ The contraction-metric formulation does **not** lift AAD's coverage in five case
 
 4. **Multi-basin dynamics.** Lohmiller-Slotine contraction is local-on-a-region. Agents with multiple basins of attraction admit only basin-local metrics, giving a basin-chart structure rather than a single global metric. The basin-crossing boundary is exactly the `#structural-adaptation-necessity` trigger; the metric formulation makes the basin structure explicit but does not escape it.
 
-5. **Identifiability-floor intersection.** The metric formulation operates downstream of identification. It assumes the correction function $F$ points in a valid direction. Under the floors in `#identifiability-floor` (on-policy L0-insufficiency no-go; L1' unobservable-$C$ Cramér-Rao floor; composition-layer Instance 3 Liberzon no-go), the correction direction is structurally unavailable. Contraction metrics cannot recover identification — the two architectural moves are orthogonal.
+5. **Identifiability-floor intersection.** The metric formulation operates downstream of identification. It assumes the correction function $F$ points in a valid direction. Under the floors in `#discussion-identifiability-floor` (on-policy L0-insufficiency no-go; L1' unobservable-$C$ Cramér-Rao floor; composition-layer Instance 3 Liberzon no-go), the correction direction is structurally unavailable. Contraction metrics cannot recover identification — the two architectural moves are orthogonal.
 
 ## Discussion
 
@@ -167,13 +167,13 @@ The contraction-metric formulation does **not** lift AAD's coverage in five case
 
 **Relationship to `#composition-closure`'s bridge lemma.** The bridge lemma's DA2'-inc condition is equivalent to (CT2) with $M = I$ on convex $C^1$ domains. `#contraction-template` therefore sharpens the bridge-lemma understanding: Tier 1 (DA2'-inc globally) ≡ metric-contracting-globally at $M = I$; Tier 2 (DA2'-inc locally with $\kappa(D\hat o)^2$ degradation) ≡ metric-contracting-locally with a specific local metric; Tier 3 (per-domain verification) ≡ no globally valid metric exists. The tier structure of the bridge lemma carries over to `#contraction-template` as Tier 1M / 2M / 3M respectively.
 
-**Relationship to `#identifiability-floor` Instance 3 (composition-layer no-go).** Instance 3's §3.3 construction uses matched-symmetric-Tier-1 scalar systems; the coupling-sign bit is unidentifiable from component marginals. Escape route (E-d) in that Instance names "shared metric structure (common contraction metric; Lohmiller-Slotine 1998)" as an adjacent machinery the no-go motivates; `#contraction-template` is the segment that machinery lives in. The Instance 3 escape is therefore operationalized by a `#contraction-template` invocation with a composite metric constructed from sub-agent metrics per the topology (parallel / cascade / feedback).
+**Relationship to `#discussion-identifiability-floor` Instance 3 (composition-layer no-go).** Instance 3's §3.3 construction uses matched-symmetric-Tier-1 scalar systems; the coupling-sign bit is unidentifiable from component marginals. Escape route (E-d) in that Instance names "shared metric structure (common contraction metric; Lohmiller-Slotine 1998)" as an adjacent machinery the no-go motivates; `#contraction-template` is the segment that machinery lives in. The Instance 3 escape is therefore operationalized by a `#contraction-template` invocation with a composite metric constructed from sub-agent metrics per the topology (parallel / cascade / feedback).
 
 **Relationship to meta-patterns.**
 
-- *`#separability-pattern`:* metric-α₁ / metric-α₂ / metric-β is the seventh ladder (A2'-scope), closing the "binary special case" gap that segment's Discussion flagged. Separable-core (metric-α₁, Euclidean, AAD-internally derived via DA2'-inc ≡ (CT2)-M=I) / structured-repair (metric-α₂, non-Euclidean, derived under explicit conditions including (PI)/Čencov for Fisher-metric cases) / general-open (metric-β, metric formulation fails).
-- *`#identifiability-floor`:* orthogonal axis. Contraction metrics lift the *geometry-of-correction* half of sub-scope α; identifiability-floor operates on the *what-correction-to-make* half. The two architectural moves compose (Instance 3 at composition layer + metric-Tier structure at single-agent layer) but do not interact.
-- *`#additive-coordinate-forcing`:* the (PI)/Čencov axiom that grounds two of five metric-α₂ cases is the fourth primary instance of the meta-pattern, adding a Čencov-invariance machinery alongside the three Cauchy-FE instances. See that segment's Four Instances tables.
+- *`#discussion-separability-pattern`:* metric-α₁ / metric-α₂ / metric-β is the seventh ladder (A2'-scope), closing the "binary special case" gap that segment's Discussion flagged. Separable-core (metric-α₁, Euclidean, AAD-internally derived via DA2'-inc ≡ (CT2)-M=I) / structured-repair (metric-α₂, non-Euclidean, derived under explicit conditions including (PI)/Čencov for Fisher-metric cases) / general-open (metric-β, metric formulation fails).
+- *`#discussion-identifiability-floor`:* orthogonal axis. Contraction metrics lift the *geometry-of-correction* half of sub-scope α; identifiability-floor operates on the *what-correction-to-make* half. The two architectural moves compose (Instance 3 at composition layer + metric-Tier structure at single-agent layer) but do not interact.
+- *`#discussion-additive-coordinate-forcing`:* the (PI)/Čencov axiom that grounds two of five metric-α₂ cases is the fourth primary instance of the meta-pattern, adding a Čencov-invariance machinery alongside the three Cauchy-FE instances. See that segment's Four Instances tables.
 
 ## Working Notes
 

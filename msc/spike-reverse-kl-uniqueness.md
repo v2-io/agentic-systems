@@ -175,7 +175,7 @@ The axiom is independently motivated by AAD's DAG factorization of strategies ( 
 
 1. **`#strategy-cost-regret-bound`** — added new subsection §6.1 "Chain-rule uniqueness of reverse-KL" with the Csiszár/Amari theorem, the AAD-internal motivation (chain-rule additivity parallel to `#chain-confidence-decay`), and the updated table row. Moved "Reverse-KL canonical among smooth divergences" in the derivation-audit table from "Formulation choice" to "Derived (conditional on chain-rule axiom)". Updated Working Notes: "Family characterization strengthening" marked resolved with pointer to §6.1. Left the untouched §6.2 (the four canonical-not-unique grounds) as background context — those grounds remain independently useful (gradient-tractability, VI-alignment, Fisher geometry, MDL coding) but are no longer load-bearing for uniqueness.
 
-2. **`#identifiability-floor`** — no update needed. This outcome is Outcome A (uniqueness found), not Outcome C (structural non-uniqueness, which would have been a new Instance 3). The identifiability-floor pattern is unchanged.
+2. **`#discussion-identifiability-floor`** — no update needed. This outcome is Outcome A (uniqueness found), not Outcome C (structural non-uniqueness, which would have been a new Instance 3). The identifiability-floor pattern is unchanged.
 
 3. **OUTLINE.md** — no change to stage or title (the segment was already at draft; the addition is a sub-section strengthening).
 

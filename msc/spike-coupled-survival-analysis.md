@@ -501,7 +501,7 @@ Based on this analysis, the minimum new content needed for `03-logogenic-agents/
 
 ### 7.1 New Definitions (3 segments)
 
-**D1: Logogenic agent as AAD agent** (#ai-agent-as-act-agent — already planned). Define the LLM-in-loop as an actuated agent. Map: context window → $X_t$, prompt → $e_\tau$, response → $a_t$, tool results → $o_{t+1}$.
+**D1: Logogenic agent as AAD agent** (#scope-logogenic-agent — already planned). Define the LLM-in-loop as an actuated agent. Map: context window → $X_t$, prompt → $e_\tau$, response → $a_t$, tool results → $o_{t+1}$.
 
 **D2: Context turnover** (#context-turnover — already planned). Formalize the 100% $M_t$ reset per session. The LLM agent has no persistent internal state between sessions; $M_t$ is reconstructed from external memory and the current prompt.
 
@@ -525,7 +525,7 @@ where $\text{prompt}(\cdot)$ assembles the context window from the prior state a
 
 ### 7.4 Total: 7 segments minimum
 
-Three definitions (D1, D2, D3), three results (R1, R2, R3), one scope condition (S1). This is a minimal skeleton, not a complete theory. It would fill the three named gaps (#ai-agent-as-act-agent, #context-turnover, #m-preservation) plus four new segments addressing the coupled formulation.
+Three definitions (D1, D2, D3), three results (R1, R2, R3), one scope condition (S1). This is a minimal skeleton, not a complete theory. It would fill the three named gaps (#scope-logogenic-agent, #context-turnover, #m-preservation) plus four new segments addressing the coupled formulation.
 
 ---
 

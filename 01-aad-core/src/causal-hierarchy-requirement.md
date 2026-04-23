@@ -5,7 +5,7 @@ status: exact
 depends:
   - value-object
   - pearl-causal-hierarchy
-  - scope-condition
+  - scope-agency
 stage: deps-verified
 ---
 
@@ -27,7 +27,7 @@ An agent that must evaluate $Q_O$ from experience needs access to Level 2 knowle
 
 *[Scope Narrowing (learning-agent scope)]*
 
-We restrict attention to **learning purposeful agents** — agents that must **acquire or refine** Level 2 knowledge during operation. This is a named sub-scope of the agency scope defined in #scope-condition. It excludes agents with **pre-compiled** interventional structure:
+We restrict attention to **learning purposeful agents** — agents that must **acquire or refine** Level 2 knowledge during operation. This is a named sub-scope of the agency scope defined in #scope-agency. It excludes agents with **pre-compiled** interventional structure:
 - PID controllers (the designer pre-computed the control law)
 - LQR (separation principle gives optimal policy from model parameters)
 - Hardcoded reactive policies

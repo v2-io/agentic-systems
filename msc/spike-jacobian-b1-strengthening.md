@@ -11,7 +11,7 @@ relates_to:
   - composition-closure
   - composition-consistency
   - additive-coordinate-forcing
-  - separability-pattern
+  - discussion-separability-pattern
   - critical-mass-composition
   - msc/spike-contraction-metric-generalization.md
   - msc/spike-bridge-lemma-contraction.md
@@ -536,7 +536,7 @@ The spike instructions specified the goal: "if B1* is cleanly AAD-internally mot
 
 5. **Interaction with adaptive-metric algorithms.** `msc/spike-adaptive-gain-dynamics.md` (MG-4) coupling-boundedness discusses meta-gain sector conditions. An adaptive-metric analog (learning $M$ alongside $\xi$) has structural parallels. Whether (PI) survives when $M$ is itself adaptive is a subsequent question.
 
-6. **Interaction with `#identifiability-floor`.** The metric formulation (whether AAD-internal or theorem-imported) is silent on identification. No axiom covered in this spike escapes the identifiability floor; the metric lift and the identifiability floor are orthogonal. A combined Jacobian-level B1\* + identifiability-floor analysis would characterize the joint scope where contraction + observability hold; this is a follow-up.
+6. **Interaction with `#discussion-identifiability-floor`.** The metric formulation (whether AAD-internal or theorem-imported) is silent on identification. No axiom covered in this spike escapes the identifiability floor; the metric lift and the identifiability floor are orthogonal. A combined Jacobian-level B1\* + identifiability-floor analysis would characterize the joint scope where contraction + observability hold; this is a follow-up.
 
 ---
 
@@ -564,7 +564,7 @@ Do not modify segments within this spike. The following are *recommendations* fo
 
 The strong option is the most ambitious. It has the deepest architectural consequences and the highest return: a clean topology-indexed composition theory without per-Tier caveats. Its cost is committing to heredity, which narrows AAD's stated scope — Tier 2/3 agents in the current formulation become formally out-of-scope rather than qualified-in-scope.
 
-A follow-up spike should assess whether heredity-as-axiom is compatible with AAD's `#separability-pattern` posture (heredity would promote the current A2' binary into a three-tier ladder as the seventh ladder in `#separability-pattern`).
+A follow-up spike should assess whether heredity-as-axiom is compatible with AAD's `#discussion-separability-pattern` posture (heredity would promote the current A2' binary into a three-tier ladder as the seventh ladder in `#discussion-separability-pattern`).
 
 ---
 
@@ -583,7 +583,7 @@ A follow-up spike should assess whether heredity-as-axiom is compatible with AAD
 - Amari, S. & Nagaoka, H. (2000). *Methods of Information Geometry*. AMS / Oxford University Press.
 
 **AAD segments referenced:**
-- `#gain-sector-bridge`, `#sector-condition-derivation`, `#sector-persistence-template`, `#composition-closure`, `#composition-consistency`, `#additive-coordinate-forcing`, `#separability-pattern`, `#critical-mass-composition`, `#agent-identity`.
+- `#gain-sector-bridge`, `#sector-condition-derivation`, `#sector-persistence-template`, `#composition-closure`, `#composition-consistency`, `#additive-coordinate-forcing`, `#discussion-separability-pattern`, `#critical-mass-composition`, `#agent-identity`.
 
 **AAD spike trail:**
 - `msc/spike-contraction-metric-generalization.md` (2026-04-22) — §8.2 item 1, §9 question 1: the Jacobian-level B1 open.
