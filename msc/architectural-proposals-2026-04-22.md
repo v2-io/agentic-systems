@@ -918,6 +918,98 @@ Same applies to `#separability-pattern`'s "general open" column — presented as
 
 ---
 
+## Post-2026-04-24-cycle architectural extensions (SP-9, SP-10)
+
+The 2026-04-24 Gemini pressure-point cycle surfaced two new architectural proposals continuing the SP-series numbering. Both arise from cross-cutting follow-up spikes launched after the five primary pressure-point strengthenings landed Tier 1 content — they represent structural moves that *advance AAD's meta-architecture* rather than repair individual findings. See `LOG.md` §"2026-04-24 Gemini Pressure-Point Cycle" for the cycle context.
+
+### SP-9 — Fenchel-Bregman reframe of `#additive-coordinate-forcing`
+
+**Source:** Follow-up spike `msc/spike-fenchel-bregman-reframe-additive-coordinate-forcing-2026-04-24.md`, triggered by Path 7 of the IB-purity spike (2026-04-24 cycle).
+
+**Thesis.** The current `#additive-coordinate-forcing` framing as "1-anchor-plus-3-theorem" (chain-layer identity + divergence/update/metric theorems + adjacent family members) **over-separates what is geometrically one object**. The three theorem-level axioms (chain-rule additivity for divergence; evidential additivity for update; parameterization-invariance for metric) are logically independent, but the coordinates they force *coincide on one geometric object* — the exponential-family Legendre-Fenchel structure on categorical distributions, with negative-entropy potential, log-partition dual, softmax primal-dual correspondence, reverse-KL Bregman divergence, Fisher metric as $\nabla^2\phi^\ast$.
+
+The honest structural description is therefore neither the current over-separated framing nor the naive Path-7 reframe "1-anchor + 1 Fenchel-dual pair + 1 Čencov instance" (which under-unifies by collapsing logically-independent axioms). The accurate characterization is:
+
+> **One geometric object (exponential-family Legendre-Fenchel on categorical distributions) + four independently-motivated AAD-internal axioms converging on it + four segment manifestations at chain / divergence / update / metric layers.**
+
+The *convergence of independent axioms on one geometric object* is the meta-pattern's substance — richer than either single-axiom-in-disguise or four-parallel-instances framings.
+
+**Merits.**
+
+- **Fundamentality (very high).** Names a convergence that is mathematically real (standard information geometry: Rockafellar 1970; Amari-Nagaoka 2000 §3.5; Bregman 1967; Bauschke-Combettes 2017). Brings AAD into principled contact with standard exponential-family geometry while preserving axiom-independence story.
+- **Beauty (high).** One geometric object with multiple manifestations is a stronger and more beautiful description than four parallel theorem-level instances or a single-axiom reduction.
+- **Concision (medium-high).** Three axioms + one object + four segment-instances is tighter than four-parallel-instances count-of-cases. The three structurally-distinct categories (chain identity / Fenchel-dual pair / Čencov coincidence) reduce cognitive load without losing detail.
+- **Approachability (medium).** Lower — requires introducing Legendre-Fenchel duality. Offset: readers familiar with Amari-Nagaoka information geometry immediately recognize the structure; those unfamiliar get an entry point to that standard framework.
+- **Correctness (high).** Removes under-counting of the convergence (current framing) and under-counting of the axiom independence (naive Path-7 reframe).
+
+**Scope.** `#additive-coordinate-forcing` rewritten substantially. Seven-item change per spike §7.3:
+
+1. Revise section structure: "one-geometric-object-across-four-layers" primary framing; preserve axiom-independence substructure within it.
+2. Add new section "The underlying geometric object" stating the Legendre-Fenchel structure directly (negative-entropy potential on $\Delta^{n-1}$; log-partition conjugate; softmax correspondence; reverse-KL Bregman; Fisher as $\nabla^2\phi^\ast$).
+3. Recast the four-instance table: "four layer-specific manifestations of the same geometry" rather than "four parallel Cauchy-FE / Čencov instances"; add columns for "relation to exponential-family geometry" per layer.
+4. Revise adjacent-family discussion: Lyapunov quadratic reclassified as "Bregman divergence on Euclidean potential" (different convex potential, not different family); IB as "application of negative-entropy / reverse-KL Bregman geometry, imported axiomatic provenance"; (AV) variance-additive case noted as "Bregman-type on a squared-norm potential" — a distinct sub-family.
+5. State the Čencov-Fenchel relationship: on AAD's current Fisher-metric scope (exponential-family-in-natural-parameters; matrix-Kalman), Čencov-derived Fisher metric coincides with $\nabla^2\phi^\ast$. Note scope-dependence: outside exponential families, Čencov applies but Fenchel-Bregman does not straightforwardly.
+6. Update complementarity-with-`#identifiability-floor`-and-`#separability-pattern`: the three meta-segments retain their cross-sectional roles; the reframe sharpens the "constructive" role as "when AAD forces a coordinate, it forces a surface of the exponential-family geometry."
+7. Preserve the motivational anchor structure: the three theorem-level axioms remain motivated as analogs of the chain-layer identity *and* converge on one geometric object. Both observations are true; the reframe adds the convergence observation without erasing the motivational structure.
+
+**Findings subsumed.** None of the pending findings directly force this reframe, but it clarifies the structural picture Path 7 surfaced and resolves the "Instance-4 traffic jam" question from the 2026-04-24 cycle by providing a principled geometric-typing filter for candidate fifth instances: *does the candidate live on the exponential-family Legendre-Fenchel geometry?* If yes, check layer-specific manifestation; if no (e.g., (AV) on squared-norm Bregman), route to parallel meta-pattern; if not Bregman at all, outside the pattern entirely.
+
+**Interactions.**
+
+- **Downstream of SP-1 / SP-2 (absorbed 2026-04-23).** This reframes the meta-segment SP-1 produced.
+- **Composes with SP-7 (epistemic architecture foregrounding).** The Fenchel-Bregman reframe IS the clearest single example of what makes AAD's epistemic architecture distinctive — convergent axioms on one geometric object is a theorem-shape the project introduces.
+- **Interacts with SP-4 (agent-identity as architectural postulate).** (PI) axiom's role in the fourth primary instance + its role in `#agent-identity` compose: (PI) is the singular architectural commitment that enables Čencov-forced Fisher-metric at the metric layer, and that (PI) commitment is load-bearing for other downstream results (see `#bias-bound-derivation` Attempt E).
+- **Does not conflict with G-BP1 / G-BP2 / O-BP2.** Those reframe operational content; SP-9 reframes meta-segment architecture.
+
+**Effort shape.** Moderate — meta-segment rewrites substantially but four instance-segments need at most one paragraph of Discussion addition each pointing to the unified geometric picture. Estimated 1-2 sessions for full execution. A 1-session scoping-verification task would confirm the Gaussian (Kalman) case fits the exponential-family Legendre-Fenchel picture as cleanly as the categorical case before full rewrite.
+
+**Risks.**
+
+- **Over-unification risk.** The reframe must carefully preserve axiom-independence — pretending the three axioms are "one underlying axiom in disguise" would be wrong. The spike's modified (A) recommendation addresses this explicitly: "convergence of independent axioms" is the correct form, not "one axiom."
+- **Scope-narrowing risk.** The current framing's breadth (any layer where a coordinate is forced by a uniqueness-theorem argument on an AAD-internal axiom) narrows under the reframe to *the specific exponential-family geometry*. Future AAD work using different uniqueness-theorem machinery on a different geometry (Dempster-Shafer, min-plus semiring, non-commutative probability) would need separate accommodation.
+- **Citation verification.** The spike cited Amari-Nagaoka 2000 §3.5 Theorem 3.5, Eq. 3.77, Propositions 3.9 & 3.10 for several structural claims; these should be PDF-verified directly against Amari-Nagaoka 2000 (not the 2010 Amari-Cichocki paper already in `ref/`) before segment-level landing.
+
+**Status:** unexamined — Tier 3 architectural proposal from 2026-04-24 cycle. Deserves its own architectural-proposal entry (this one); execution contingent on a Joseph-level go-ahead after triaging against other Tier 2/3 queue items. The local Bregman-Fenchel identification landed Tier 1 in `#strategy-cost-regret-bound` §6.3 as an elementary fact independent of the meta-segment reframe.
+
+### SP-10 — `#posterior-displacement-template` extraction (narrow)
+
+**Source:** Follow-up spike `msc/spike-kl-to-state-distance-template-extraction-2026-04-24.md`, triggered by the observation that Pinsker / Otto-Villani / Lipschitz-posterior machinery appears in multiple AAD contexts with varying degrees of overlap (2026-04-24 cycle).
+
+**Thesis.** Two primary clients — `#variational-sector-condition` (already landed in 2026-04-23 Gap A/B cycle) and the newly-landed `#bias-bound-derivation` (2026-04-24 Tier 1) — share Pinsker's inequality as a first step in propagating a KL bound. But the *cascade after Pinsker* differs: `#variational-sector-condition` uses Pinsker + Cauchy-Schwarz → scalar sector-constant degradation; `#bias-bound-derivation` uses Pinsker → Otto-Villani under LSI → Lipschitz-posterior → $W_2$ on state-space pushforward.
+
+The shared machinery is *only Pinsker's first step*, not the full cascade. Option B (recommended) extracts the **narrow template** `#posterior-displacement-template` on the Otto-Villani + Lipschitz-posterior cascade specifically, with `#bias-bound-derivation` as primary instance and three forward-looking candidate clients (causal-IB, misspecification-cost, composition-scope-robustness — all open extensions in CLAUDE.md §Open and `#identifiability-floor`'s open-extensions notes). `#variational-sector-condition` is positioned as *adjacent family member* — shares Pinsker as first step but not the cascade.
+
+**Merits.**
+
+- **Correctness (medium-high).** Factored cascade is genuinely reusable apparatus if forward-looking clients materialize; replaces per-client re-derivation of the same three-step cascade.
+- **Concision (medium).** Saves a shared literature-citation chain + derivation body across potential future clients; parallels `#sector-persistence-template`'s extraction from multiple sector-persistence-flavored results.
+- **Fundamentality (low-medium).** Bound-propagation-layer template, orthogonal to `#additive-coordinate-forcing`'s coordinate-selection-layer meta-pattern. Composes cleanly with coordinate-forcing but is structurally distinct.
+- **Beauty (medium).** Named pattern surfaces repeat-usage; no awkward Option-A-style unification of two structurally-different post-Pinsker machineries.
+- **Approachability (medium).** Template with explicit T1/T2/T3 precondition tiering (Pinsker baseline / Otto-Villani under LSI / Lipschitz-posterior closure) makes the apparatus legible.
+
+**Scope.** New appendix segment `#posterior-displacement-template` in `01-aad-core/src/`. Client-instance table with one primary (`#bias-bound-derivation`) + three candidate forward-looking clients (causal-IB, misspecification-cost, composition-scope-robustness). `#variational-sector-condition` gets an adjacent-family cross-reference in its Discussion (shares Pinsker; does not share cascade). `#bias-bound-derivation` gets a cross-reference pointing at the extracted template; the T1/T2/T3 content in §2-3 of that segment consolidates into the template.
+
+**Findings subsumed.** None directly; the extraction responds to a shared-machinery observation across two segments, not a pending-finding.
+
+**Interactions.**
+
+- **Contingent on `#bias-bound-derivation` landing (2026-04-24 Tier 1, now done).** Cannot land before its one committed primary instance.
+- **Contingent on ≥ 1 forward-looking client materializing.** If causal-IB / misspecification-cost / composition-scope-robustness all fall away or use different machinery, Option C (no extraction, keep segments independent) is the honest fallback. If ≥ 1 materializes with the shared cascade, Option B becomes clearly warranted.
+- **Orthogonal to `#additive-coordinate-forcing` (and therefore to SP-9).** The coordinate-selection layer vs. bound-propagation layer split is architecturally load-bearing; the two templates compose but do not interact structurally.
+- **Composes with SP-6 (composition-closure consolidation).** If composition-scope-robustness materializes as a forward-looking client, it would instantiate the template for composite-state pushforward.
+
+**Effort shape.** ~1 session once the first forward-looking client is ready to instantiate. The template skeleton is already sketched in spike §8 with frontmatter, formal expression, precondition tiering, client-instance table, and adjacent-family positioning.
+
+**Risks.**
+
+- **Single-instance risk.** If forward-looking clients do not materialize, the template serves only one client, which doesn't justify factoring. Option C is the honest fallback here.
+- **Naming risk.** The recommended name `#posterior-displacement-template` describes the output quantity; if a forward-looking client uses a non-Bayesian pushforward (e.g., causal-IB post-intervention transformation that isn't literally a Bayesian conditioning step), the name might need to generalize to `#transport-posterior-template` or `#information-displacement-template`.
+- **Template-body-not-fully-shared risk.** The (T3) Lipschitz-posterior step is stated for Bayesian posteriors via Stuart 2010. Non-Bayesian pushforwards would require a generalized $W_2$-Lipschitz condition; the spike flagged this as a minor rephrasing at the template level.
+
+**Status:** unexamined — Tier 3 from 2026-04-24 cycle. Execution waits on (a) Joseph's architectural go-ahead and (b) at least one forward-looking client materializing with the cascade. The deferral is honest — not worth the extraction-cost on single-instance basis.
+
+---
+
 ## Convergent big-picture observations (Codex + Gemini + Opus)
 
 Across the three audits, big-picture observations converge on a shared reframe:
