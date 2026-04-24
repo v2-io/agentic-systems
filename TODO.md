@@ -1,6 +1,6 @@
 # TODO — Open Work Items
 
-**Last reconciled:** 2026-04-24 (post-Gemini-pressure-point cycle Tier 1 landing; commits `6102a93` reasoning trail + `b76ee67` theory landing; six Tier 1 items landed across eight segments + one new appendix; segment count 109 → 110). This file is the living action list.
+**Last reconciled:** 2026-04-24 (post-naming-pilot commit `09ace17`; role-prefix discipline + `scope-condition` 1:2 semantic split; seven slug changes; segment count 110 → 111). This file is the living action list.
 
 **Cycle history (most recent first).**
 - **2026-04-24 Gemini pressure-point cycle — Tier 1 landing** (commits `6102a93`, `b76ee67`). Six Tier 1 items landed: (1) `#strategy-cost-regret-bound` bundled update — §4 BH identity $D_{\mathrm{KL}} = -\log(1 - \mathrm{TV})$ replaces Pinsker as primary bound with matching lower bound; §5 asymmetry-from-one-sidedness paragraph; §6.1 Shore-Johnson/Sanov/Hobson structural-equivalence note; §6.3 Bregman-Fenchel identification; §6.4 information-theoretic-MDP lineage positioning with AAD-outlier-on-KL-direction ownership + Rubin 2012 PAC-Bayesian motivation; Bishop-vs-AAD naming-collision footnote. (2) Structural-transparency lift — `#composition-closure` DA2'-inc ≡ (CT2)-at-$M=I$ equivalence with Rockafellar-Wets citation; `#contraction-template` honest-failure-modes adversarial three-obstruction convergence; `#sector-condition-derivation` rule-based/discontinuous sub-scope-β as structural Lipschitz-floor scope-exit with van der Schaft-Schumacher 2000 reference. (3) New appendix `#bias-bound-derivation` — Track 1 transport-inequality + Track 2 Fisher-Rao + Attempt E no-go + failed-attempt record + Gaussian worked example; updates `#observation-ambiguity-modulation` and `#section-ii-survival` from "order-of-magnitude guidance" to "conditional theorem." (4) `#information-bottleneck` IB-lineage vs. information-theoretic-MDP-lineage cross-reference. (5) `#loop-interventional-access` "Modes of deployment across `#discussion-identifiability-floor` instances" subsection (Mode 1 agent-self-intervention / Mode 2 observer-on-sub-agent; positions for Mode 3 when I4 lands). (6) `ref/INDEX.md` TP2011 title correction ("The Information Theory of Decision and Action" singular) — also done in reasoning-trail commit. Lint clean: 0 ordering violations, 0 missing deps, 0 orphans. **Net effect:** Gemini pressure points #1 (bridge lemma), #2 (IB purity), #5 (constant $C$) closed outright at Tier 1; #3 (ρ factorization) and #4 (neutral drift) await Tier 2 landings.
@@ -446,7 +446,7 @@ Three independent de novo audits (Codex, Gemini, Opus) ran *after* the morning s
 | 20 | KL-direction degeneracy in `#strategy-complexity-cost` variational form (introduced by V-medium) | Opus F1 (evening) | High | **RESOLVED AS STRENGTHENING** (commits 0a772d2, f70fb68, e777f01): new appendix #strategy-cost-regret-bound with regret-bound derivation (direction forced) + chain-rule uniqueness theorem (specific divergence uniquely forced) + corrected citations |
 | 21 | `#discussion-identifiability-floor` frontmatter status conflicts with internal text | Opus F3 (evening) | Low | **RESOLVED** (commit 0a772d2): status → discussion-grade; Epistemic Status rewritten cleanly separating meta-pattern from instances |
 
-**Reaffirmed (not new):** Codex F2 evening reaffirms F6 (composition timescale heuristic); Codex F3 evening reaffirms F8 ((C-iii) gap); Opus F2 evening reaffirms F14 (developer-as-act-agent status). Several other candidate findings were *rescinded* by the audits themselves on in-segment counterevidence — see `msc/pending-findings-2026-04-22.md` and the audit transcripts for the transparency tables.
+**Reaffirmed (not new):** Codex F2 evening reaffirms F6 (composition timescale heuristic); Codex F3 evening reaffirms F8 ((C-iii) gap); Opus F2 evening reaffirms F14 (`#scope-developer-agent` status — now RESOLVED 2026-04-24). Several other candidate findings were *rescinded* by the audits themselves on in-segment counterevidence — see `msc/pending-findings-2026-04-22.md` and the audit transcripts for the transparency tables.
 
 ### 2026-04-21 batch — both RESOLVED 2026-04-22 (historical, from earlier in the day)
 
@@ -584,12 +584,12 @@ Pilot has landed. The next piece of work is the principles-file rewrite (folding
 
 - **Spike-to-segment reverse-check.** Standing Gate 2 check per `FORMAT.md`: "What did the spike establish that the segment does not say?" — added in Session C.5 of 2026-04-21 cycle; verify it's still present and visible.
 
-- **Segment counts in CLAUDE.md "What's Settled" summary** — refreshed 2026-04-22 (post-strengthening): now 93 AAD core segments. Refresh opportunistically.
+- **Segment counts in CLAUDE.md "What's Settled" summary** — refreshed 2026-04-24 (post-naming-pilot): 111 AAD core segments. Refresh opportunistically.
 
 
 ## Active — Promotion Pipeline
 
-**Current state (2026-04-22, post-strengthening):** 93 AAD core segments. Several segments reset to `draft` for re-review after the strengthening cycle: `#causal-insufficiency-detection` (full rewrite), `#strategy-dag` (Correlation Hierarchy substantially reworked), `#strategic-dynamics-derivation` (new Prop B.7), `#information-bottleneck` (status upgrade + VFE cross-ref), `#directed-separation` (Bruineberg integration), `#satisfaction-gap`/`#control-regret` (EFE-collapse contrast), `#strategy-complexity-cost` (V-medium variational form), `#compression-operations` (variational + hierarchical-generative-model credit), `#sector-persistence-template` (Aguilera contrast), `#loop-interventional-access` (honest-credit + identifiability-floor cross-ref).
+**Current state (2026-04-24, post-naming-pilot):** 111 AAD core segments. Stage distribution per `bin/lint-outline`: 14 claims-verified, 23 deps-verified, 73 draft, 1 unknown. Segments from the 2026-04-22 strengthening cycle are still reset to `draft` pending re-review: `#causal-insufficiency-detection`, `#strategy-dag`, `#strategic-dynamics-derivation`, `#information-bottleneck`, `#directed-separation`, `#satisfaction-gap`, `#control-regret`, `#strategy-complexity-cost`, `#compression-operations`, `#sector-persistence-template`, `#loop-interventional-access`. The 2026-04-23 Gap A/B cycle added six new draft segments; the 2026-04-24 pressure-point cycle added `#bias-bound-derivation` (draft); the 2026-04-24 naming pilot added `#scope-adaptive-system` and rewrote `#scope-agency` (both claims-verified).
 
 The new `#discussion-identifiability-floor` segment is at `draft`; it would benefit from a Gate 1 dependency audit on the next promotion pass.
 
@@ -626,6 +626,14 @@ Recommended next promotion candidates remain the ones from the prior round: `#se
 ## Archive — Work landed
 
 Detailed historical items moved out of the active list. Kept here so that future agents can find what was done.
+
+### 2026-04-24 naming pilot — COMPLETE (commit `09ace17`)
+
+Role-prefix discipline validation + `scope-condition` semantic split. Seven slug changes: (a) `#ai-agent-as-act-agent` → `#scope-logogenic-agent` (type: definition → scope); (b) `#developer-as-act-agent` → `#scope-developer-agent` (type: definition → scope; status: exact → axiomatic, resolving Finding 14 Option A); (c) `#composition-scope-condition` → `#scope-composite-agent`; (d) `#scope-condition` 1:2 split into `#scope-adaptive-system` + `#scope-agency` (the old name described the segment's role rather than what it defined; downstream segments actually need one of two distinct scopes); (e)–(g) pure role-prefix adds on `#discussion-identifiability-floor`, `#discussion-separability-pattern`, `#discussion-additive-coordinate-forcing`.
+
+Compound subject-noun substitutions (Round-1 consensus for `separability-ladder` and `forced-coordinates`) deferred to refined Round 1 / Round 2 — subject-noun judgment belongs to the voting process, not ad-hoc pilot landing. Going forward, file+tag role-prefix changes should be done as distinct mechanical passes, with subject-noun renames executed independently afterward.
+
+Infrastructure: `bin/rename-slug` (deterministic Ruby rename with pre/post safety checks, stale-text scan, framing reminder, merge-confirmation, batch-mode per-pair re-planning); `msc/naming-pilot-rename-plan.md` (frozen rename-mapping record, glob-excluded via `msc/naming-*.md`). 01-aad-core lint-clean after every step. Segment count 110 → 111 (net +1 from the 1:2 split).
 
 ### 2026-04-22/23 strengthening cycle — COMPLETE (commits `0a772d2`, `c1d9fcf`, `2980327`, `f70fb68`, `80b40d2`, `d0373fc`, `72ca532`, `e777f01`, `a39dfb7`)
 

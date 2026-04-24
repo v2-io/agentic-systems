@@ -42,6 +42,17 @@ during the role-prefix pilot. They are:
   `ASF` as debt when it is the intentional parent-level name (AAD is Part I;
   TST is Part II). Re-surface in refined Round 1 with correct framing.
 
+## Methodology forward — split role-prefix from subject-noun
+
+**Going forward, role-prefix addition and subject-noun renaming are distinct operations executed in separate passes.** Joseph's 2026-04-24 clarification: do the file+tag change of prefixing the type as one mechanical pass, then execute subject-noun renames independently afterward. Reasons:
+
+- Role-prefix addition is mechanical. Given a segment file with a known `type:` frontmatter value, the slug prefix is determined. No voting, no judgment, no content rewriting of conceptual vocabulary. The prefix change is idempotent under `bin/rename-slug` with no content-integrity risk.
+- Subject-noun renaming is judgment. Changing what a segment is *called as a concept* (pattern vs ladder, additive-coordinate-forcing vs forced-coordinates) needs multi-agent voting, scope-honesty review, and usually prose rewriting inside the segment to keep the segment's self-presentation coherent with its new name. This process belongs in the refined-Round-1 → Round-2 → collision-audit → landing pipeline.
+
+Bundling them in one pass (as the pilot briefly attempted for two meta-segments) creates two failure modes: (i) the rename script appears to succeed while the segment's prose has become internally inconsistent; (ii) subject-noun judgment gets entangled with prefix mechanics and voters can't vote cleanly on the noun choice.
+
+When the full-sweep role-prefix pass lands (the ~120 remaining slugs), it should be a dedicated cycle that applies prefix additions mechanically without touching subject-nouns. Subject-noun work picks up in its own cycle after — informed by the refined Round 1 and Round 2.
+
 ## Pilot-validation observations (worth folding into refined Round 1 principles)
 
 - **Role-prefix reads cleanly in cross-references.** `#scope-agency`, `#scope-composite-agent`, `#discussion-identifiability-floor` etc. read naturally in prose and sharpen the dependency graph. No awkward cases surfaced.
