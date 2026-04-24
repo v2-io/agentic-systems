@@ -93,7 +93,7 @@ Seven proposals landed as one coordinated pass. Value **+9 framework / +10 paper
 Three of the five bundle members are ready now; two need upstream scoping. Ready-now entries:
 
 - **SP-11 Composition-monotonicity meta-segment** — from existing C2 spike (`msc/spike-compositional-coordinate.md`); would give Section III its fourth meta-segment parallel to `#additive-coordinate-forcing` / `#discussion-identifiability-floor` / `#discussion-separability-pattern`. Newly surfaced in 2026-04-24 audit. **1–2 sessions.**
-- **SP-6 composition-closure consolidation (residue)** — majority absorbed by 2026-04-24 Tier 1 DA2'-inc ≡ (CT2) equivalence. Remaining: scope-statement-level consolidation in `#composition-closure` + scope adjustments in `#team-persistence` / `#postulate-composition-consistency` / `#tempo-composition`. **~1 session.**
+- **SP-6 composition-closure consolidation (residue)** — majority absorbed by 2026-04-24 Tier 1 DA2'-inc ≡ (CT2) equivalence. Remaining: scope-statement-level consolidation in `#composition-closure` + scope adjustments in `#team-persistence` / `#postulate-composition-consistency` / `#derived-tempo-composition`. **~1 session.**
 - **O-BP9 typed admissibility for composition** — well-defined, clear Section-III-completion-via-F8 target. 1–2 session scoping spike then 2–3 session execution. **Total 3–5 sessions.**
 
 ### B.3 C-BP1 + C-BP4 bundle — epistemic separation framework + claim-level statuses

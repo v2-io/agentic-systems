@@ -24,7 +24,7 @@ The three audits were run independently and share significant overlap in both fi
 | Gemini 3 | Scalar tempo overcounting | **F27** | Standalone; already substantially caveated in segment (see below) |
 | Gemini 4 | Directed separation excludes modern LLMs | merged into **F22** | Already-known scope narrowing |
 | Opus A | $\rho_\Sigma$ unmeasurable threshold parameter | **F28** | Standalone to Opus; deepest substantive finding |
-| Opus B | Update-rule heterogeneity integration debt in `#unity-dimensions` | **F29** | Standalone to Opus; pure integration debt |
+| Opus B | Update-rule heterogeneity integration debt in `#definition-unity-dimensions` | **F29** | Standalone to Opus; pure integration debt |
 | Opus C | Stacked scope narrowings (Class 1 + learning-agent) | **F30** | Strong scope-visibility finding; partial overlap with F22 |
 | Opus D | Tier 3 prevalence in composition-closure | merged into **F26** | See F26 |
 | Opus E | Orient cascade 4c signal-to-noise sensitivity | **F31** | Standalone to Opus; medium confidence |
@@ -141,7 +141,7 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 - Line 187 — admissibility, norms, $K_c$, projection computability remain open
 - Line 189 — bridge lemma conditional on DA2'a-inc (strictly stronger than (A4))
 - Epistemic Status — Tier 3 "must be verified per-domain"
-- `#tempo-composition:30` — core result marked as sketch with dependency gap
+- `#derived-tempo-composition:30` — core result marked as sketch with dependency gap
 
 **Status:** multi-layered.
 - **Layer 1 (Codex framing concern):** Summary sentences overstate closure relative to open items the segment itself names. Editorial.
@@ -188,19 +188,19 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 
 ---
 
-## F29 — Update-rule heterogeneity integration debt in `#unity-dimensions`
+## F29 — Update-rule heterogeneity integration debt in `#definition-unity-dimensions`
 
 **Source:** Opus B. **Confidence:** high.
 
-**Problematic passage:** `#unity-dimensions` opening — "The quality of a composite agent's composition... decomposes along four substantially independent *quality* dimensions..."
+**Problematic passage:** `#definition-unity-dimensions` opening — "The quality of a composite agent's composition... decomposes along four substantially independent *quality* dimensions..."
 
-**Strongest counter-passage:** `#unity-closure-mapping` — "Update heterogeneity is not captured by any of the four unity dimensions as defined in `#unity-dimensions`... This is an independent dimension of the closure-defect rate-distortion surface." And `#unity-dimensions` Working Notes: "Update-rule heterogeneity is a missing axis... Option (C) is the current working position... Formal resolution open."
+**Strongest counter-passage:** `#unity-closure-mapping` — "Update heterogeneity is not captured by any of the four unity dimensions as defined in `#definition-unity-dimensions`... This is an independent dimension of the closure-defect rate-distortion surface." And `#definition-unity-dimensions` Working Notes: "Update-rule heterogeneity is a missing axis... Option (C) is the current working position... Formal resolution open."
 
-**Status:** real, pure integration debt. The Working Note documents the gap and names the chosen resolution (Option C: two-axis structure, unity × homogeneity). But the *Formal Expression* of `#unity-dimensions` still names four dimensions as "the" decomposition. A reader who consults `#unity-dimensions` first sees a four-axis claim that the theory has internally rejected.
+**Status:** real, pure integration debt. The Working Note documents the gap and names the chosen resolution (Option C: two-axis structure, unity × homogeneity). But the *Formal Expression* of `#definition-unity-dimensions` still names four dimensions as "the" decomposition. A reader who consults `#definition-unity-dimensions` first sees a four-axis claim that the theory has internally rejected.
 
 **msc/ integration target:** `msc/spike-unity-closure-mapping.md` §"Two-axis structure" derives the closed form $\varepsilon_x^2 = (\Delta K/2)^2[S_- - C_{+-}^2/S_+]$ explicitly. Integration not yet done.
 
-**Subsumed by:** None. Pure integration debt. 45–90 min editorial work updating `#unity-dimensions` Formal Expression to two-axis form with $\Delta K$ as explicit second axis; cross-ref to `#unity-closure-mapping` and the spike.
+**Subsumed by:** None. Pure integration debt. 45–90 min editorial work updating `#definition-unity-dimensions` Formal Expression to two-axis form with $\Delta K$ as explicit second axis; cross-ref to `#unity-closure-mapping` and the spike.
 
 **Repair direction:** Mechanical integration — next session should land this.
 

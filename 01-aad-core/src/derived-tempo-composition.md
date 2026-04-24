@@ -1,6 +1,6 @@
 ---
-slug: tempo-composition
-type: sketch
+slug: derived-tempo-composition
+type: derived
 status: sketch
 depends:
   - composition-closure

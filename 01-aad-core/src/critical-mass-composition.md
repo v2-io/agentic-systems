@@ -81,7 +81,7 @@ The weakest-link bound $\alpha_c \geq \min_i(\alpha_i - \Delta\mathcal T_i^{\tex
 
 *[Derived (unity-multiplicative-modulator, conditional on LQR-compatible action structure)]*
 
-In a purposeful-agent setting where each sub-agent optimizes a quadratic objective $L_i(\omega) = \tfrac{1}{2}(\omega - r_i)^T Q(\omega - r_i)$ with target $r_i$, and $U_O := \operatorname{corr}(r_1, r_2)$ is the target correlation per #unity-dimensions' $U_O$, the cross-coupling in the joint dynamics has sign and magnitude controlled by $U_O$:
+In a purposeful-agent setting where each sub-agent optimizes a quadratic objective $L_i(\omega) = \tfrac{1}{2}(\omega - r_i)^T Q(\omega - r_i)$ with target $r_i$, and $U_O := \operatorname{corr}(r_1, r_2)$ is the target correlation per #definition-unity-dimensions' $U_O$, the cross-coupling in the joint dynamics has sign and magnitude controlled by $U_O$:
 
 $$\gamma(U_O) \;=\; -\,\gamma_{\max}\, U_O, \qquad \gamma_{\max} \gt 0, \tag{UO-mult}$$
 
@@ -159,7 +159,7 @@ What this segment does **not** establish:
 **Pattern across the signed-coupling instances.** (CM4) has the same shape as several persistence-flavored results already in AAD:
 
 - #team-persistence: per-sub-agent inequality $\alpha_i R_i \gt \rho_{i,\text{env}} + \sum_j\gamma_{j \to i}^{\text{adv}}\mathcal T_j - \sum_j\gamma_{j \to i}^{\text{coop}}\mathcal T_j$
-- #tempo-composition: composite inequality with effective disturbance $\rho_{\text{ext}} + \varepsilon^\ast\nu_c$
+- #derived-tempo-composition: composite inequality with effective disturbance $\rho_{\text{ext}} + \varepsilon^\ast\nu_c$
 - #adversarial-destabilization: failure condition $\gamma_A\mathcal T_A \gt \alpha_B R_B - \rho_B$ (negation of persistence)
 - this segment: matched-symmetric dyad with signed $\gamma$ and scope-gate
 

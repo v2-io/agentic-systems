@@ -11,7 +11,7 @@
 
 These findings are not independent. **Symbiogenesis is the mechanism by which teleological unity emerges from zero to one.** Taken together, they propose a restructuring of Section III: composition has an *existence condition* (teleological unity) distinct from its *quality metrics* (the other unities, update heterogeneity, closure defect); symbiogenesis is the specific dynamical process that creates composite-agent identity by crossing the existence condition from below.
 
-**Depends on**: #scope-agency, #unity-dimensions, #composition-closure, #directed-separation, #structural-change-as-parametric-limit, #multi-agent-scope, `msc/spike-miller-act-bridge.md`, `msc/spike-unity-closure-mapping.md`, Miller (2022) Appendix B.
+**Depends on**: #scope-agency, #definition-unity-dimensions, #composition-closure, #directed-separation, #structural-change-as-parametric-limit, #multi-agent-scope, `msc/spike-miller-act-bridge.md`, `msc/spike-unity-closure-mapping.md`, Miller (2022) Appendix B.
 
 ---
 
@@ -19,7 +19,7 @@ These findings are not independent. **Symbiogenesis is the mechanism by which te
 
 ### 1.1 Current framing
 
-`#unity-dimensions` treats the four unity dimensions ($U_M$, $U_O$, $U_\Sigma$, $U_{\text{obs}}$) as substantially independent parameters characterizing composite quality. `#composition-closure` treats a group as forming a composite whenever an admissible projection with small closure defect exists. The question "is there actually a composite here, or merely a group coincidentally approximable by a macro-description?" is not explicitly asked.
+`#definition-unity-dimensions` treats the four unity dimensions ($U_M$, $U_O$, $U_\Sigma$, $U_{\text{obs}}$) as substantially independent parameters characterizing composite quality. `#composition-closure` treats a group as forming a composite whenever an admissible projection with small closure defect exists. The question "is there actually a composite here, or merely a group coincidentally approximable by a macro-description?" is not explicitly asked.
 
 ### 1.2 Proposed framing
 
@@ -90,7 +90,7 @@ This reframes the two findings not as additions to AAD but as complementary piec
 
 ### 3.1 Operationalizations of $U_O$
 
-`#unity-dimensions` gives $U_O^{(i,j)} = \text{corr}(V_{O_t^{(i)}}, V_{O_t^{(j)}})$ over trajectories. This is a pair-wise correlation in value functions. For $N$-agent composition, aggregate to the full system.
+`#definition-unity-dimensions` gives $U_O^{(i,j)} = \text{corr}(V_{O_t^{(i)}}, V_{O_t^{(j)}})$ over trajectories. This is a pair-wise correlation in value functions. For $N$-agent composition, aggregate to the full system.
 
 Alternative operationalizations candidate for the scope condition:
 
@@ -150,7 +150,7 @@ Four axes, not two. The gate axis (a) was implicit in the existing framework; ma
 
 ## 5. Implications for Existing Segments
 
-### 5.1 #unity-dimensions
+### 5.1 #definition-unity-dimensions
 
 Restructure: separate $U_O$ as scope from $\{U_M, U_\Sigma, U_{\text{obs}}\}$ as quality metrics. Existing Discussion text on Clausewitz's gaps remains applicable; the structural reframing does not change the content, only its role.
 
@@ -209,7 +209,7 @@ The reframing unifies AAD's Section III around three distinct composition mechan
 
 | Mechanism | What happens | $U_O$ behavior | AAD machinery |
 |---|---|---|---|
-| **Peer coupling** | Sub-agents interact through shared environment | $U_O$ held fixed (quality given existence) | `#composition-closure`, `#team-persistence`, `#tempo-composition` |
+| **Peer coupling** | Sub-agents interact through shared environment | $U_O$ held fixed (quality given existence) | `#composition-closure`, `#team-persistence`, `#derived-tempo-composition` |
 | **Extreme transition** | Population-level restructuring via drift/niche/cascade | $U_O$ can shift across population as agent types replace one another | `spike-miller-act-bridge.md`; pending segments (`composition-transition-dynamics` etc.) |
 | **Symbiogenesis** | Hierarchical absorption; one agent integrates another | $U_O$ crosses scope condition from 0 to near-1 | **Missing — proposed `#symbiogenic-composition`** |
 
@@ -226,7 +226,7 @@ AAD has machinery for the second. It has machinery in progress for the third. It
 | Symbiogenesis is a composition mechanism distinct from peer coupling | Robust qualitative, well-grounded in Miller + evolutionary biology |
 | Symbiogenesis corresponds to $U_O$ emergence from 0 to 1 | Hypothesis, structurally motivated; formalization requires more work |
 | $U_O$ as composition scope condition | Proposal, requires buy-in; consistent with existing segments when interpreted carefully |
-| Recovery of other unities as quality metrics | Natural given the scope framing; compatible with existing `#unity-dimensions` text |
+| Recovery of other unities as quality metrics | Natural given the scope framing; compatible with existing `#definition-unity-dimensions` text |
 | IB reformulation: $U_O$ = existence of shared relevance | Plausible; extends unity-closure spike §6 but not formally derived |
 | Three-mechanism taxonomy (peer coupling / extreme transition / symbiogenesis) | Robust qualitative organizational claim |
 
@@ -256,7 +256,7 @@ Max attainable for the overall framing: *robust qualitative*. Specific formaliza
 
 1. **New segment: `#scope-composite-agent`** — formal statement of the scope condition, paralleling `#scope-agency`. Likely a Scope-type segment.
 2. **New segment: `#symbiogenic-composition`** — the mechanism distinct from peer coupling. Likely a Formulation- or Hypothesis-type segment.
-3. **Revision: `#unity-dimensions`** — separate $U_O$ as scope from $\{U_M, U_\Sigma, U_{\text{obs}}\}$ as quality metrics.
+3. **Revision: `#definition-unity-dimensions`** — separate $U_O$ as scope from $\{U_M, U_\Sigma, U_{\text{obs}}\}$ as quality metrics.
 4. **Revision: `#structural-change-as-parametric-limit`** — remove grafting from the within-agent list; point to the new symbiogenesis segment.
 
 ### Deferred
@@ -279,7 +279,7 @@ Three reasons:
 
 1. **It closes a real gap.** Symbiogenic composition is the mechanism behind most real hierarchical composites (eukaryotes, organisms, organizations, legal systems, religions). AAD cannot currently model any of these as composition events — only as static projections of already-composed systems.
 
-2. **It resolves latent confusion.** The current `#unity-dimensions` framework leaves the "what counts as a composite?" question implicit. The proposal makes it explicit via the scope condition. This should clean up reader confusion (the "predicts vs. rate-distortion" error corrected in `spike-unity-closure-mapping.md` §1 was partly caused by this implicit structure).
+2. **It resolves latent confusion.** The current `#definition-unity-dimensions` framework leaves the "what counts as a composite?" question implicit. The proposal makes it explicit via the scope condition. This should clean up reader confusion (the "predicts vs. rate-distortion" error corrected in `spike-unity-closure-mapping.md` §1 was partly caused by this implicit structure).
 
 3. **It integrates cleanly with the IB unification direction.** If the IB conjecture from `spike-unity-closure-mapping.md` §6 holds, then $U_O$ as scope condition = existence of shared relevance variable. The three composition mechanisms are three ways relevance variables can combine. This suggests a unified IB-based theory of composition — a genuine theoretical contraction rather than an expansion.
 

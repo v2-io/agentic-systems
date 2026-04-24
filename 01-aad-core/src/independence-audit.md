@@ -6,7 +6,7 @@ depends:
   - directed-separation
   - strategy-dag
   - adaptive-tempo
-  - unity-dimensions
+  - definition-unity-dimensions
   - per-dimension-persistence
   - graph-structure-uniqueness
 stage: draft
@@ -50,7 +50,7 @@ Six load-bearing independence assumptions in AAD, each paired with its failure r
 
 **Statement:** $\mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$ with each channel contributing independently to effective tempo.
 
-**Where it appears:** #adaptive-tempo (core definition); inherited by #persistence-condition, #adversarial-tempo-advantage, #team-persistence (communication tempo), #tempo-composition, and any result using scalar $\mathcal{T}$.
+**Where it appears:** #adaptive-tempo (core definition); inherited by #persistence-condition, #adversarial-tempo-advantage, #team-persistence (communication tempo), #derived-tempo-composition, and any result using scalar $\mathcal{T}$.
 
 **Failure regime:** Any system with redundant or correlated information sources — overlapping sensors, correlated teammate reports, redundant telemetry. In multi-agent settings, allies reporting the same intelligence source.
 
@@ -60,13 +60,13 @@ Six load-bearing independence assumptions in AAD, each paired with its failure r
 
 ### 4. Unity-dimension independence: $(U_M, U_O, U_\Sigma, U_{\text{obs}})$ substantially independent
 
-**Statement:** The four unity dimensions of #unity-dimensions parametrize composite quality along substantially independent axes.
+**Statement:** The four unity dimensions of #definition-unity-dimensions parametrize composite quality along substantially independent axes.
 
-**Where it appears:** #unity-dimensions framing; #unity-closure-mapping's rate-distortion family indexed by each unity separately.
+**Where it appears:** #definition-unity-dimensions framing; #unity-closure-mapping's rate-distortion family indexed by each unity separately.
 
 **Failure regime:** Shared models enable implicit strategic coordination (high $U_M$ → high $U_\Sigma$ without explicit policy sharing); aligned objectives often induce strategic coordination. Also *update-rule heterogeneity* (an axis not covered by any unity dimension) contributes to closure defect independently — the two-Kalman non-degenerate case shows $\varepsilon_x \gt 0$ from differing Kalman gains at perfect $U_M$.
 
-**Diagnostic signal:** No clean one. The hypothesis is empirical and the theory currently logs it as working-position rather than resolved (see #unity-dimensions Working Notes: update-heterogeneity gap).
+**Diagnostic signal:** No clean one. The hypothesis is empirical and the theory currently logs it as working-position rather than resolved (see #definition-unity-dimensions Working Notes: update-heterogeneity gap).
 
 **Repair operation:** Two options explored in the theory: (a) accept a two-axis structure (unity × homogeneity) for closure defect, (b) add a fifth update-homogeneity dimension. The current working position is (a); formal resolution open. Downstream uses of unity dimensions should not treat them as cleanly orthogonal.
 

@@ -140,7 +140,7 @@ for all $t \geq 0$.
 ### 5.3 Prop A.1S region-aware statement impact
 
 - **`#sector-persistence-template`** (T3-S) currently uses the Grönwall bound form without region-awareness. Add a brief Epistemic Status sentence pointing to the stopped / unstopped refinement, citing the updated Prop A.1S. No change to the template's instantiation table.
-- Downstream consumers (`#persistence-condition`, `#strategy-persistence-schema`, `#team-persistence`, `#composition-closure`, `#tempo-composition`, `#adversarial-destabilization`) do not need edits — they invoke the template without reference to A.1S's region technicality.
+- Downstream consumers (`#persistence-condition`, `#strategy-persistence-schema`, `#team-persistence`, `#composition-closure`, `#derived-tempo-composition`, `#adversarial-destabilization`) do not need edits — they invoke the template without reference to A.1S's region technicality.
 
 ### 5.4 Stage updates
 

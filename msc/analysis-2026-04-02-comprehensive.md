@@ -184,7 +184,7 @@ Both labeled "exact" but are convention-dependent on value-object's horizon/poli
 
 | Segment | Current Status | What's Needed |
 |---------|---------------|---------------|
-| #tempo-composition | sketch | Close epsilon* → C_coord mapping. Bridge lemma contraction is the gate (discrete-time formalization pending). |
+| #derived-tempo-composition | sketch | Close epsilon* → C_coord mapping. Bridge lemma contraction is the gate (discrete-time formalization pending). |
 | #multi-timescale-stability | sketch | Formal N-timescale singular perturbation treatment. |
 | #strategy-persistence-schema | sketch | Natural next step: mixed AND/OR DAGs (four pure topologies verified). Formalize strategic disturbance rho_Sigma. |
 

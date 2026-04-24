@@ -254,7 +254,7 @@ All four cleanups landed. F20 strengthened rather than softened; the others were
 | 26 | Section III composition-closure reads more closed than self-aware status supports; Tier 3 prevalence not characterized | Codex 5 + Gemini 1 + Opus D | Medium-high | SP-6 (composition-closure consolidation) |
 | 27 | Scalar tempo overcounting — foundational metric structurally additive | Gemini 3 | (already caveated; retained for visibility) | Partial by O-BP3 |
 | 28 | $\rho_\Sigma$ is unmeasurable threshold parameter on which trajectory guarantee depends | Opus A | High (gap); medium (substantive vs. honest-open) | None — genuinely unaddressed |
-| 29 | Update-rule heterogeneity integration debt in `#unity-dimensions` | Opus B | High (pure integration debt) | None — mechanical work |
+| 29 | Update-rule heterogeneity integration debt in `#definition-unity-dimensions` | Opus B | High (pure integration debt) | None — mechanical work |
 | 30 | Stacked scope narrowings (Class 1 + learning-agent) only Class 1 visible at OUTLINE | Opus C | High | Directly by O-BP8 |
 | 31 | Orient cascade 4c's signal-to-noise sensitivity not surfaced where step prescribed | Opus E | Medium | None — 30min editorial fix |
 
@@ -319,7 +319,7 @@ Segment count: 93 → 96 (added `#discussion-identifiability-floor` before this 
 ### Recommended sequence for next session (updated 2026-04-23)
 
 **Phase α — Quick wins first (1 session total).** Confidence-builders and pure integration debts:
-- **F29** — `#unity-dimensions` two-axis integration (45–90 min). Pure mechanical work landing `msc/spike-unity-closure-mapping.md`'s Option C into Formal Expression.
+- **F29** — `#definition-unity-dimensions` two-axis integration (45–90 min). Pure mechanical work landing `msc/spike-unity-closure-mapping.md`'s Option C into Formal Expression.
 - **F31** — `#orient-cascade` step 4c practical-sensitivity note (30 min).
 - **F21-follow-up / F24** — Promote `msc/spike-edge-semantics-resolution.md`'s "causal efficacy credence" framing to `#strategy-dag`; soften "DAG-forced" language to match `#graph-structure-uniqueness`'s sufficiency-only content (1 session).
 
@@ -672,7 +672,7 @@ Session plan derived from `msc/opus-audit-2026-04-21.md`. Summary of what landed
 
 - **Session A** — `#sector-persistence-template` factored out as shared lemma; six persistence-flavored segments re-expressed as template instances. Four honesty fixes.
 - **Session B** — `#graph-structure-uniqueness` reframed as Cox-analog; two new meta-segments: `#independence-audit` and `#approximation-tiering`.
-- **Session C** — Scope gates in `#composition-closure`, `#unity-dimensions` lead rewritten, `#software-epistemic-properties` P1 codebase-vs-environment scoping, `section-ii-survival` statement-level-vs-operational distinction, FORMAT.md promotion-workflow reverse-check.
+- **Session C** — Scope gates in `#composition-closure`, `#definition-unity-dimensions` lead rewritten, `#software-epistemic-properties` P1 codebase-vs-environment scoping, `section-ii-survival` statement-level-vs-operational distinction, FORMAT.md promotion-workflow reverse-check.
 - **Session D** — Scoping spike `msc/spike-ib-unification-plan.md` delivered; execution absorbed into `#compression-operations` segment with three integration edits.
 - **Late-cycle Gemini batch** — L1 soft-facilitator gap handled; Finding A and Finding B (composition-closure temporal coarse-graining; observation-ambiguity-modulation architecture-contamination) both closed 2026-04-22.
 

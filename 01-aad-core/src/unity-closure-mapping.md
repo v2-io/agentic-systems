@@ -3,7 +3,7 @@ slug: unity-closure-mapping
 type: result
 status: conditional
 depends:
-  - unity-dimensions
+  - definition-unity-dimensions
   - composition-closure
   - information-bottleneck
 stage: draft
@@ -11,7 +11,7 @@ stage: draft
 
 # Result: Unity-to-Closure Rate-Distortion Mapping
 
-Unity dimensions parametrize rate-distortion curves for closure-defect components, not point-valued predictors. For each unity $U_d$, the achievable closure-defect component $\varepsilon_d$ under projection of macro-dimension $k_d$ is monotone decreasing in $U_d$ (higher unity → lower achievable defect at a given compression). Closed forms hold in the linear-Gaussian case; structural monotonicity survives more broadly. Update-rule heterogeneity across sub-agents is an independent axis, not captured by the unity dimensions as defined in #unity-dimensions.
+Unity dimensions parametrize rate-distortion curves for closure-defect components, not point-valued predictors. For each unity $U_d$, the achievable closure-defect component $\varepsilon_d$ under projection of macro-dimension $k_d$ is monotone decreasing in $U_d$ (higher unity → lower achievable defect at a given compression). Closed forms hold in the linear-Gaussian case; structural monotonicity survives more broadly. Update-rule heterogeneity across sub-agents is an independent axis, not captured by the unity dimensions as defined in #definition-unity-dimensions.
 
 ## Formal Expression
 
@@ -76,7 +76,7 @@ This reveals two independent drivers of $\varepsilon_x$:
 1. **Sub-agent unity** ($U_M$, via process correlation $\rho$): higher correlation → lower $\varepsilon_x$.
 2. **Update heterogeneity** ($\Delta K$): different Kalman gains produce $\varepsilon_x \gt 0$ regardless of correlation. When $\Delta K = 0$, $\varepsilon_x = 0$ at every $\rho$; when $\Delta K \neq 0$, $\varepsilon_x \gt 0$ even at perfect correlation.
 
-Update heterogeneity is not captured by any of the four unity dimensions as defined in #unity-dimensions. The four unities measure shared *content* (information, goals, policies, observations); $\Delta K$ measures differential *structure* (whether agents implement the same correction rule). This is an independent dimension of the closure-defect rate-distortion surface.
+Update heterogeneity is not captured by any of the four unity dimensions as defined in #definition-unity-dimensions. The four unities measure shared *content* (information, goals, policies, observations); $\Delta K$ measures differential *structure* (whether agents implement the same correction rule). This is an independent dimension of the closure-defect rate-distortion surface.
 
 ## Epistemic Status
 
@@ -91,11 +91,11 @@ Ceiling-limiting factors: non-Gaussian cases require information-theoretic bound
 
 ## Discussion
 
-**Why the naive reading fails.** A literal reading of #unity-dimensions' Discussion — "high $U_M$ predicts low $\varepsilon_x$" etc. — is wrong in the two-Kalman case with the standard means-only projection: $\varepsilon_x \equiv 0$ for every correlation value. The Discussion in #unity-dimensions did not specify the projection, leaving the claim ambiguous. Making the rate-distortion structure explicit resolves the ambiguity: for a fixed projection, closure defect is a *function of multiple parameters*, and unity controls one axis (compressibility) among several.
+**Why the naive reading fails.** A literal reading of #definition-unity-dimensions' Discussion — "high $U_M$ predicts low $\varepsilon_x$" etc. — is wrong in the two-Kalman case with the standard means-only projection: $\varepsilon_x \equiv 0$ for every correlation value. The Discussion in #definition-unity-dimensions did not specify the projection, leaving the claim ambiguous. Making the rate-distortion structure explicit resolves the ambiguity: for a fixed projection, closure defect is a *function of multiple parameters*, and unity controls one axis (compressibility) among several.
 
 **Connection to the Information Bottleneck ( #information-bottleneck).** The rate-distortion shape is not coincidental. Projection admissibility condition (P1) in #composition-closure is the Lagrangian-dual of the IB constraint: the projection sits on or above the IB frontier at rate $I(X; T) \leq I_{\max}(\epsilon_I)$ for the relevance variable "next observation given action" ( #compression-operations supplies the derivation). Unity dimensions — measured as mutual-information-like quantities between sub-agent state components — parametrize the frontier's shape. The four AAD compression operations ($M_t$, $\Sigma_t$, shared intent, $\Lambda$) share IB shape but are not shown to reduce to a single master problem (U-medium, per #compression-operations); cross-instance theorems do not follow from shared shape alone. (P2) Lipschitz continuity is not naturally IB and remains a separate admissibility condition; (P3) dimensional reduction remains separate in the Gaussian case. The Gaussian-IB closed form applies to linear-Gaussian composition setups; beyond them, the IB frontier is definitional but requires variational or numerical approximation.
 
-**Two-axis structure and the unity-dimensions gap.** The update-heterogeneity finding exposes a real gap in #unity-dimensions: the four dimensions capture content-sharing but not structural homogeneity of update rules. In purposeful-agent settings ($G_t$ present), $U_\Sigma$ partially absorbs this — agents with different Kalman-like updates have different effective policies, so strategic unity captures some of the effect. In pure Section I composition (passive estimators, no $G_t$), the framework has no way to capture update heterogeneity. Three resolution options are logged in #unity-dimensions' Working Notes; the honest minimal framing is to accept the two-axis structure.
+**Two-axis structure and the unity-dimensions gap.** The update-heterogeneity finding exposes a real gap in #definition-unity-dimensions: the four dimensions capture content-sharing but not structural homogeneity of update rules. In purposeful-agent settings ($G_t$ present), $U_\Sigma$ partially absorbs this — agents with different Kalman-like updates have different effective policies, so strategic unity captures some of the effect. In pure Section I composition (passive estimators, no $G_t$), the framework has no way to capture update heterogeneity. Three resolution options are logged in #definition-unity-dimensions' Working Notes; the honest minimal framing is to accept the two-axis structure.
 
 **Interpretation of "low closure defect."** Unity controls the rate-distortion curve; low closure defect is achievable with aggressive compression when unity is high. But closure defect alone does not measure composite *optimality* (see #composition-closure §5.1): two independent Kalman filters can have $\varepsilon^\ast = 0$ (perfectly representable) while failing to exploit cross-correlations (suboptimal relative to a joint filter). The rate-distortion mapping is about representability, not optimality.
 

@@ -127,9 +127,9 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | III | Scope | | [#scope-composite-agent](src/scope-composite-agent.md) | Teleological alignment required for composite-agent status | draft |
 | III | Hypothesis | | [#symbiogenic-composition](src/symbiogenic-composition.md) | Asymmetric absorption mechanism: host integrates endosymbiont; $U_O$ crosses scope threshold from below | draft |
 | III | Formulation | | [#composition-closure](src/composition-closure.md) | Composite agent via closure defect | draft |
-| III | Sketch | | [#tempo-composition](src/tempo-composition.md) | Sub-additive tempo inequality | draft |
+| III | Sketch | | [#derived-tempo-composition](src/derived-tempo-composition.md) | Sub-additive tempo inequality | draft |
 | III | Hypothesis | | [#directed-separation-under-composition](src/directed-separation-under-composition.md) | Goal-blindness survives iff routing is goal-blind (two cases) | draft |
-| III | Discussion | | [#unity-dimensions](src/unity-dimensions.md) | 4 dimensions of coherence | draft |
+| III | Discussion | | [#definition-unity-dimensions](src/definition-unity-dimensions.md) | 4 dimensions of coherence | draft |
 | III | Result | | [#unity-closure-mapping](src/unity-closure-mapping.md) | Unity parametrizes rate-distortion curves for closure defect; two-axis structure with update heterogeneity | draft |
 | III | Definition + Discussion | | [#shared-intent](src/shared-intent.md) | IB-compressed purpose | draft |
 | III | Hypothesis | | [#auftragstaktik-principle](src/auftragstaktik-principle.md) | Prioritize objective sharing | draft |
@@ -183,7 +183,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | A   | Derivation |     | [#l1-update-bias](src/l1-update-bias.md)                               | Closed-form bias formula $B_k(\rho)$ for log-odds update under L1' common cause; Cramér-Rao floor under forgetting; dual forgetting-rate requirement; Monte Carlo validation; quantitative numerical-floor companion to `#discussion-identifiability-floor` Instance 2 | draft |
 | A   | Derivation |     | [#fisher-whitened-update-rule](src/fisher-whitened-update-rule.md)     | Fisher-whitened edge update under correlated evidence; AAD-internal derivation under (PI)/Čencov axiom; log-odds angle ≤ 45° at any finite ρ (direction preserved, magnitude degraded by √(1−r²)); sub-scope α₃ and connection to `#adaptive-gain-dynamics` as degenerate meta-gain instance | draft |
 | A   | Derivation |     | [#bias-bound-derivation](src/bias-bound-derivation.md)                 | Class-2 observation-ambiguity bias-bound constant $C$; Track 1 transport-inequality ($C_{W_2}^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$ linear in $I$ under LSI + Lipschitz-posterior); Track 2 Fisher-Rao ($C_{FR} = \sqrt{2}$ universal dimension-free under (PI)+Čencov + small-$I$); no-go for universal $C$ under Euclidean-parameter norm justifies (PI) as load-bearing | draft |
-| A   | Detail     |     | [#simulation-results](src/simulation-results.md)                       | 6 variants validating claims                                          | draft   |
+| A   | Detail     |     | [#observation-simulation-results](src/observation-simulation-results.md)                       | 6 variants validating claims                                          | draft   |
 
 
 ---

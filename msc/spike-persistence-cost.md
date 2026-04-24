@@ -339,7 +339,7 @@ Each of the six sector-persistence-template instances could then claim its cost 
 
 3. **Persistence cost under misspecification.** What happens when $\mathcal{F}(\mathcal{M}) \lt 1$? The information rate required to close the mismatch floor diverges, but at what rate? Connects to #discussion-identifiability-floor's "misspecification-cost quantification" open item.
 
-4. **Composite persistence cost.** For a composite agent, does the information-rate lower bound add, multiply, or have a non-obvious interaction? This is the cost-analog of #tempo-composition's sub-additivity and #team-persistence's cooperative-coupling-reduces-$\rho$-effective result. Likely: $\dot R_{c,\min} \leq \sum_i \dot R_{i,\min}$ due to coordination overhead eating information capacity.
+4. **Composite persistence cost.** For a composite agent, does the information-rate lower bound add, multiply, or have a non-obvious interaction? This is the cost-analog of #derived-tempo-composition's sub-additivity and #team-persistence's cooperative-coupling-reduces-$\rho$-effective result. Likely: $\dot R_{c,\min} \leq \sum_i \dot R_{i,\min}$ due to coordination overhead eating information capacity.
 
 5. **Observation-channel capacity as a first-class AAD quantity.** Lift Shannon capacity $C^{(k)}$ of channel $k$ into the notation, connect to #update-gain's $U_o$ (channel noise ↔ capacity), and add a channel-capacity-sum-floor condition as a first-class persistence prerequisite. **This is the biggest architectural extension opened by this spike — currently AAD uses $U_o$ (observation uncertainty) as a noise parameter; the channel-capacity framing would make the information-rate floor a first-class persistence diagnostic.**
 

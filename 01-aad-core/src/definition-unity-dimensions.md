@@ -1,6 +1,6 @@
 ---
-slug: unity-dimensions
-type: discussion
+slug: definition-unity-dimensions
+type: definition
 status: discussion-grade
 depends:
   - multi-agent-scope
@@ -10,7 +10,7 @@ depends:
 stage: draft
 ---
 
-# Discussion: Unity Dimensions
+# Definition: Unity Dimensions
 
 The quality of a composite agent's composition — *conditional on #scope-composite-agent being satisfied via at least one alignment route* — decomposes along four substantially independent *quality* dimensions: epistemic ($U_M$, shared model), teleological ($U_O$, shared objective), strategic ($U_\Sigma$, coordinated action), and perceptual ($U_{\text{obs}}$, shared observations). These dimensions parametrize rate-distortion curves for the component closure defects ( #composition-closure, #unity-closure-mapping) — higher unity permits more aggressive compression at lower closure defect. Unity does not directly predict closure-defect magnitude; it controls the compressibility of the corresponding state, observation, or action component under projection.
 
@@ -21,7 +21,7 @@ The quality of a composite agent's composition — *conditional on #scope-compos
 
 ## Formal Expression
 
-*[Definition (unity-dimensions)]*
+*[Definition (definition-unity-dimensions)]*
 
 For a composite agent $A_c$ composed of sub-agents $\{A_1, \ldots, A_n\}$:
 

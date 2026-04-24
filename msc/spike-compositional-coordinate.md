@@ -70,7 +70,7 @@ $$\mathcal V_c \;=\; \sum_i \phi_i \mathcal V_i \;+\; \mathcal V_{\text{coupling
 
 for some weights $\phi_i \geq 0$ and a coupling term.
 
-The hoped-for Cauchy FE argument: the composite viability $V_c = \lVert\delta_{\text{critical},c}\rVert/R_c^\ast$ should relate multiplicatively to the individual viabilities via the sub-additive tempo inequality (`#tempo-composition`) and the weakest-link bound on $R$, so $\log V_c$ should be forced additive.
+The hoped-for Cauchy FE argument: the composite viability $V_c = \lVert\delta_{\text{critical},c}\rVert/R_c^\ast$ should relate multiplicatively to the individual viabilities via the sub-additive tempo inequality (`#derived-tempo-composition`) and the weakest-link bound on $R$, so $\log V_c$ should be forced additive.
 
 ### 2.3 Derivation attempt
 

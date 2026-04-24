@@ -4,7 +4,7 @@ type: hypothesis
 status: discussion-grade
 depends:
   - shared-intent
-  - unity-dimensions
+  - definition-unity-dimensions
   - adaptive-tempo
 stage: draft
 ---

@@ -126,7 +126,7 @@ The integration gap is not "the spike addresses this but hasn't been propagated.
 
 `composition-scope-condition.md` Unified form:
 
-> All three routes express a single underlying requirement: *teleological alignment sufficient to define a coherent composite purpose*. The teleological unity measure $U_O$ introduced in #unity-dimensions provides a convenient unified scalar — the scope condition can be restated as $U_O \geq \epsilon_{\text{comp}}$ for an appropriate route-dependent operationalization.
+> All three routes express a single underlying requirement: *teleological alignment sufficient to define a coherent composite purpose*. The teleological unity measure $U_O$ introduced in #definition-unity-dimensions provides a convenient unified scalar — the scope condition can be restated as $U_O \geq \epsilon_{\text{comp}}$ for an appropriate route-dependent operationalization.
 
 `unity-dimensions.md` gives $U_O$ a pairwise form ($\text{corr}(V_{O_t^{(i)}}, V_{O_t^{(j)}})$) and then asserts "The composite teleological unity is an aggregation over all pairs" without specifying the aggregation.
 

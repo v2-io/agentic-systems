@@ -64,7 +64,7 @@ This means the communication infrastructure does not change based on what the co
 
 **Correlated observations as default.** When agents share an environment, their observations are generically correlated — they see aspects of the same reality. Independence (uncorrelated observations) requires the agents to observe non-overlapping aspects of the environment, which is the special case. Most multi-agent settings of interest involve substantial observation correlation.
 
-**The adversarial case is one end of a spectrum — but not a composite.** Agents whose objectives conflict are multi-agent systems with negative teleological unity ( #unity-dimensions) and thus do not satisfy #scope-composite-agent: the absence of shared purpose means no composite agent exists. Two distinct classes of machinery apply across this spectrum:
+**The adversarial case is one end of a spectrum — but not a composite.** Agents whose objectives conflict are multi-agent systems with negative teleological unity ( #definition-unity-dimensions) and thus do not satisfy #scope-composite-agent: the absence of shared purpose means no composite agent exists. Two distinct classes of machinery apply across this spectrum:
 
 - **Agent-level machinery** (individual persistence, agent tempo, per-agent mismatch, sector-condition stability) applies to *every* agent in *every* multi-agent configuration — cooperative, adversarial, or indifferent — because each agent individually satisfies #scope-agency and Section I/II results apply directly. The adversarial tempo advantage ( #adversarial-tempo-advantage) and adversarial destabilization ( #adversarial-destabilization) results are applications of this agent-level machinery to the case where one agent's actions are a disturbance source for another.
 

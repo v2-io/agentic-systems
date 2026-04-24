@@ -4,11 +4,11 @@
 
 **Date**: 2026-04-20
 
-**Motivation**: `01-aad-core/src/unity-dimensions.md` states "high $U_M$ predicts low $\varepsilon_x$" etc. but admits "the mapping from unity to closure error is not yet formalized." This spike formalizes the mapping in the linear-Gaussian case and — critically — reveals that the correct statement is *not* a direct correspondence but a **rate-distortion relation**: unity dimensions control the *compressibility* of their corresponding state components, which determines the closure-defect curve as projection aggressiveness varies.
+**Motivation**: `01-aad-core/src/definition-unity-dimensions.md` states "high $U_M$ predicts low $\varepsilon_x$" etc. but admits "the mapping from unity to closure error is not yet formalized." This spike formalizes the mapping in the linear-Gaussian case and — critically — reveals that the correct statement is *not* a direct correspondence but a **rate-distortion relation**: unity dimensions control the *compressibility* of their corresponding state components, which determines the closure-defect curve as projection aggressiveness varies.
 
-**Depends on**: #composition-closure, #unity-dimensions, `msc/spike-composition-correlated-kalman.md`, `msc/spike-projection-admissibility.md`.
+**Depends on**: #composition-closure, #definition-unity-dimensions, `msc/spike-composition-correlated-kalman.md`, `msc/spike-projection-admissibility.md`.
 
-**Promotion target**: after review, the framing and linear-Gaussian results should promote to a new segment `#unity-closure-mapping`, with updates to `#unity-dimensions` (fix the "predicts" claim to the rate-distortion formulation).
+**Promotion target**: after review, the framing and linear-Gaussian results should promote to a new segment `#unity-closure-mapping`, with updates to `#definition-unity-dimensions` (fix the "predicts" claim to the rate-distortion formulation).
 
 ---
 
@@ -55,7 +55,7 @@ Noises $v_1, v_2$ independent for now; the observation-correlation case is a var
 
 ## 3. Unity Measures in Closed Form
 
-*[Derived]* In the linear-Gaussian setting at steady state, each unity measure from `#unity-dimensions` reduces to a closed form in the controlling correlation.
+*[Derived]* In the linear-Gaussian setting at steady state, each unity measure from `#definition-unity-dimensions` reduces to a closed form in the controlling correlation.
 
 ### 3.1 Epistemic unity $U_M$
 
@@ -215,7 +215,7 @@ If (P1) = IB-relevance, unity = IB-rate-distortion-curve-parameter, and shared-i
 
 > **Conjecture (informal):** Composition in AAD is a multi-level IB compression. The admissible class $\mathcal{P}_{\text{adm}}$ consists of projections attaining the IB frontier for the appropriate relevance variables. Unity dimensions are IB parameters. Closure-defect components are IB distortions. The bridge lemma becomes: IB-frontier projections preserve dynamics at the admissibility rate.
 
-This would replace (P1)+(P3) with a single variational principle (IB optimality), unify `#shared-intent` and `#composition-closure` mechanistically, and give `#unity-dimensions` a quantitative foundation (unity = IB rate parameter).
+This would replace (P1)+(P3) with a single variational principle (IB optimality), unify `#shared-intent` and `#composition-closure` mechanistically, and give `#definition-unity-dimensions` a quantitative foundation (unity = IB rate parameter).
 
 Caveats before attempting this:
 - (P2) Lipschitz is not naturally IB — it must remain a separate regularity condition.
@@ -238,9 +238,9 @@ Caveats before attempting this:
 **To create as a new segment (#unity-closure-mapping, type: derived/formulation):**
 - The rate-distortion framing (§1, §5)
 - The linear-Gaussian results (§3, §4)
-- Depends on: `#unity-dimensions`, `#composition-closure`
+- Depends on: `#definition-unity-dimensions`, `#composition-closure`
 
-**To revise in `#unity-dimensions`:**
+**To revise in `#definition-unity-dimensions`:**
 - Replace "high $U_M$ predicts low $\varepsilon_x$" etc. with "each unity dimension controls the rate-distortion curve for the corresponding closure component."
 - Note that $(U_O, U_\Sigma)$ jointly control $\varepsilon_a$ — the four-unity / three-closure mismatch is resolved by this joint dependence, not by collapsing unity dimensions.
 - The current text's "high $U_M$ predicts low $\varepsilon_x$" is literally false under the means-only projection; revise to the rate-distortion formulation.
@@ -306,7 +306,7 @@ The closure defect has two *independent* contributors:
 1. **Sub-agent redundancy** — controlled by $U_M$ (here via process correlation $\rho$). Higher unity → lower $\varepsilon_x$. Consistent with the rate-distortion framing in §4–5.
 2. **Update heterogeneity** — controlled by $\Delta K$, the asymmetry of correction rules. $\Delta K = 0$ kills $\varepsilon_x$ at every $\rho$; $\Delta K \neq 0$ keeps $\varepsilon_x > 0$ even at $\rho = 1$.
 
-**Crucial observation:** Heterogeneity is *not captured* by any of the four unity dimensions from `#unity-dimensions`. The four dimensions ($U_M, U_O, U_\Sigma, U_{\text{obs}}$) measure shared *content* (information, goals, policies, observations). Heterogeneity here is shared *structure* — whether agents have the same $f_M$ update rule. In Section I adaptive-systems-only composition, with no purposeful substate, there is no $U_\Sigma$ to absorb this, so update heterogeneity is invisible to the framework.
+**Crucial observation:** Heterogeneity is *not captured* by any of the four unity dimensions from `#definition-unity-dimensions`. The four dimensions ($U_M, U_O, U_\Sigma, U_{\text{obs}}$) measure shared *content* (information, goals, policies, observations). Heterogeneity here is shared *structure* — whether agents have the same $f_M$ update rule. In Section I adaptive-systems-only composition, with no purposeful substate, there is no $U_\Sigma$ to absorb this, so update heterogeneity is invisible to the framework.
 
 This is a genuine gap. Possible resolutions:
 

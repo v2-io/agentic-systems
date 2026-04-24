@@ -70,7 +70,7 @@ Seven parallel research spikes launched as independent attempts on open structur
 |-------|----------|--------|
 | Purposeful agent derivation (v3) | `msc/spike-v3-purposeful-agent.md` | Section II porting **COMPLETE** — all 20 segments in src/ |
 | Agent composition / holon | `msc/spike-agent-composition.md` | Core insight strong; composition laws are sketches |
-| Composition closure | `msc/spike-composition-closure.md` | Formalized closure defect $\varepsilon^\ast$; promoted to #composition-closure + #tempo-composition |
+| Composition closure | `msc/spike-composition-closure.md` | Formalized closure defect $\varepsilon^\ast$; promoted to #composition-closure + #derived-tempo-composition |
 | Graph structure uniqueness | `msc/spike-graph-uniqueness.md` | Acyclicity derived; P3→Markov via CMC |
 | Intent DAG consolidated | `msc/04-intent-dag-consolidated.md` | Canonical DAG reference; converged |
 | Prior art assessment | `msc/02-prior-art-assessment.md` | Hafez/IBM/BDI/active-inference positioning |

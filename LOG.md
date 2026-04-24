@@ -189,7 +189,7 @@ This was the cycle that established the three-document pattern (findings doc + p
 
 - **2026-04-21 audit cycle** (commits `6d3f219`, `98179f9`, `70c306d`, `ba2597c`, `499afa3`, `1c3a2d9`, `853888c`) — IB unification + sector-Lyapunov template factoring landed; six AAD persistence-flavored results re-expressed as instances of `#sector-persistence-template`. See `TODO.md §Archive` for commit-level detail.
 
-- **2026-04-20** — SOC/renormalization speculation (parked in `msc/speculation-soc-composition.md`); Section III unity-closure investigation (`msc/spike-unity-closure-mapping.md`, `msc/spike-mori-zwanzig-composition.md`) finding two-axis closure structure exposing gap in `#unity-dimensions`.
+- **2026-04-20** — SOC/renormalization speculation (parked in `msc/speculation-soc-composition.md`); Section III unity-closure investigation (`msc/spike-unity-closure-mapping.md`, `msc/spike-mori-zwanzig-composition.md`) finding two-axis closure structure exposing gap in `#definition-unity-dimensions`.
 
 - **2026-04-16** — ACT → AAD rename to resolve collision with "AI Consciousness Test" (Schneider & Turner). See `msc/name-transition-aad.md`.
 

@@ -28,7 +28,7 @@ These institutions are "aporia amplifiers." The composite benefits from sub-agen
 
 Three structural claims follow if the conjecture holds:
 
-1. **Teleological unity is axis-dependent.** The teleological unity $U_O$ between adversarial sub-agents is negative on specific dimensions (they actively oppose each other on local subgoals) but serves positive unity at the composite level (the composite's meta-objective is well-served by the local adversarial dynamic). `#unity-dimensions`'s single scalar $U_O$ would need to be recognized as a projection of a richer per-dimension alignment structure.
+1. **Teleological unity is axis-dependent.** The teleological unity $U_O$ between adversarial sub-agents is negative on specific dimensions (they actively oppose each other on local subgoals) but serves positive unity at the composite level (the composite's meta-objective is well-served by the local adversarial dynamic). `#definition-unity-dimensions`'s single scalar $U_O$ would need to be recognized as a projection of a richer per-dimension alignment structure.
 
 2. **Adversarial tempo advantage applies internally.** `#adversarial-tempo-advantage` gives the squared-law (Model D) or three-halves-law (Model S) for adversarial coupling. If sub-agents within a composite are engaged in structured adversarial dynamics, the same scaling applies internally — with the composite's effective cycle quality scaling nonlinearly in the sub-agents' adversarial tempo. This would make "aporia quality" a quantifiable function of the internal adversarial dynamics' tempo.
 
@@ -41,7 +41,7 @@ This last point connects to `04-logozoetic-agents/`: theory of mind is a qualify
 ## What connects
 
 - **Adversarial dynamics** (Section I — `#adversarial-destabilization`, `#adversarial-tempo-advantage`)
-- **Composition** (Section III — `#composition-closure`, `#unity-dimensions`, `#team-persistence`)
+- **Composition** (Section III — `#composition-closure`, `#definition-unity-dimensions`, `#team-persistence`)
 - **The orient cascade** (Section II — `#orient-cascade`, specifically the aporia → epistrophe transition)
 - **Logozoetic agent properties** (`04-logozoetic-agents/`)
 - **`LEXICON.md`** — related discussion of cycle phases including aporia and epistrophe
@@ -54,4 +54,4 @@ This last point connects to `04-logozoetic-agents/`: theory of mind is a qualify
 
 ## Why not pursue now
 
-The conjecture touches too many segments simultaneously and none of them are ready to receive a connecting result. `#unity-dimensions` is still absorbing the scope-vs-quality distinction; `#adversarial-tempo-advantage` is conditional on specific disturbance models; `04-logozoetic-agents/` is explicitly future-work. A spike would either stay speculative or force premature promotion of several downstream segments. Worth revisiting when logozoetic work is more substantive and when Section III's composition machinery has settled.
+The conjecture touches too many segments simultaneously and none of them are ready to receive a connecting result. `#definition-unity-dimensions` is still absorbing the scope-vs-quality distinction; `#adversarial-tempo-advantage` is conditional on specific disturbance models; `04-logozoetic-agents/` is explicitly future-work. A spike would either stay speculative or force premature promotion of several downstream segments. Worth revisiting when logozoetic work is more substantive and when Section III's composition machinery has settled.

@@ -1,6 +1,6 @@
 ---
-slug: simulation-results
-type: detail
+slug: observation-simulation-results
+type: observation
 status: empirical
 depends:
   - mismatch-dynamics
@@ -11,7 +11,7 @@ depends:
 stage: draft
 ---
 
-# Detail: Simulation Results
+# Observation: Simulation Results
 
 Six simulation variants validated, refined, and extended the analytical predictions from Section I, forcing regime splits and discovering scaling laws that the analytical derivations left ambiguous.
 

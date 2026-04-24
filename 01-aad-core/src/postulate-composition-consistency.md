@@ -73,7 +73,7 @@ This is the formal analog of Brooks's Law: adding people to a late project incre
 
 **The boundary is a modeling choice.** A development team is simultaneously: individual developers (each an AAD agent), the team (a composite AAD agent), and part of an organization (a sub-agent within a larger composite). The scope condition is satisfied at every level. Composition consistency ensures the theory doesn't give contradictory answers about observable quantities (e.g., whether the team persists) regardless of which boundary is chosen.
 
-**What composition consistency does NOT say.** It does not specify the form of the composition laws — those are derived in Section III ( #tempo-composition). It does not say every decomposition is equally useful for analysis. And it does not require perfect internal coordination — only that internal equilibration is fast relative to external dynamics.
+**What composition consistency does NOT say.** It does not specify the form of the composition laws — those are derived in Section III ( #derived-tempo-composition). It does not say every decomposition is equally useful for analysis. And it does not require perfect internal coordination — only that internal equilibration is fast relative to external dynamics.
 
 ## Working Notes
 - The timescale separation condition is essentially the singular perturbation argument from #temporal-nesting applied to composition: the fast internal dynamics approximately equilibrate, and the composite's behavior is described by the slow (external) dynamics on the equilibrium manifold. The formal connection should be made explicit when temporal-nesting is reviewed.

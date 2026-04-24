@@ -598,7 +598,7 @@ $$V_{O_c}(\tau) = w_1 V_{O_1}(\tau) + w_2 V_{O_2}(\tau)$$
 
 This requires: (i) commensurability of $V_{O_1}$ and $V_{O_2}$ (both map trajectories to $\mathbb{R}$ -- guaranteed by #objective-functional), (ii) weights $w_1, w_2 > 0$, and (iii) that the weighted sum remains a valid value functional. Condition (iii) is satisfied by linearity. The projection is $\Lambda_O(O_1, O_2) = (O_1, O_2, w_1, w_2)$ -- the composite objective carries the individual objectives plus the weighting.
 
-**Case C: Conflicting objectives.** $O_1$ and $O_2$ are partially adversarial -- satisfying one degrades the other. The composite "objective" exists only as a negotiated compromise (if coordination is possible) or a minimax solution (if not). In AAD terms, the teleological unity $U_O < 0$ ( #unity-dimensions). The composite may not have a meaningful $O_c$ at all -- the group's purpose is contested, not shared. This is the case where composition may fail for the purposeful substate even if the epistemic composition works.
+**Case C: Conflicting objectives.** $O_1$ and $O_2$ are partially adversarial -- satisfying one degrades the other. The composite "objective" exists only as a negotiated compromise (if coordination is possible) or a minimax solution (if not). In AAD terms, the teleological unity $U_O < 0$ ( #definition-unity-dimensions). The composite may not have a meaningful $O_c$ at all -- the group's purpose is contested, not shared. This is the case where composition may fail for the purposeful substate even if the epistemic composition works.
 
 *Epistemic status: discussion-grade. The three cases are structurally clear; formal conditions for each case are open.*
 

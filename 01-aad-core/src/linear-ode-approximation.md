@@ -179,7 +179,7 @@ Under symmetric coupling ($\gamma_A \approx \gamma_B$), tempo advantage squares:
 
 **Why the squared law.** The exponent 2 arises because the $1/\mathcal{T}$ steady-state scaling appears in both numerator (faster agent generates more disturbance) and denominator (faster agent corrects better): one power from the coupling, one from the steady-state. Under Model S (stochastic coupling, $1/\sqrt{\mathcal{T}}$ scaling), the exponent reduces to $3/2$. See #adversarial-exponent-regimes for the full regime analysis.
 
-**Simulation validation.** Variant A confirmed $b = 1.999$ (Model D, coupling-dominant). Variants C-D confirmed $b = 1.481$ (Model S, coupling-dominant). Both within numerical precision of the derived values. See #simulation-results.
+**Simulation validation.** Variant A confirmed $b = 1.999$ (Model D, coupling-dominant). Variants C-D confirmed $b = 1.481$ (Model S, coupling-dominant). Both within numerical precision of the derived values. See #observation-simulation-results.
 
 ## Epistemic Status
 
@@ -195,7 +195,7 @@ Under symmetric coupling ($\gamma_A \approx \gamma_B$), tempo advantage squares:
 
 **Why this appendix exists.** The linear ODE in #mismatch-dynamics is labeled as a hypothesis and described as a "first-order approximation." That is correct for the general case. But for agents with linear correction dynamics, the ODE is not an approximation at all -- it is exact. This appendix serves two roles: (1) providing the complete derivation that #mismatch-dynamics points to rather than carrying inline, and (2) making precise when the "approximation" is exact and when it genuinely introduces error.
 
-**Pedagogical value.** The linear case is the entry point for understanding AAD's mismatch dynamics. The closed-form solutions (exponential convergence, ratio steady state, squared scaling law) build intuition that the general sector-condition results ( #sector-condition-stability) cannot provide -- Lyapunov gives bounds and existence, not quantitative trajectories. The linear treatment also connects directly to the AR(1) simulation framework ( #simulation-results) and classical control theory (PI controllers, Kalman filters).
+**Pedagogical value.** The linear case is the entry point for understanding AAD's mismatch dynamics. The closed-form solutions (exponential convergence, ratio steady state, squared scaling law) build intuition that the general sector-condition results ( #sector-condition-stability) cannot provide -- Lyapunov gives bounds and existence, not quantitative trajectories. The linear treatment also connects directly to the AR(1) simulation framework ( #observation-simulation-results) and classical control theory (PI controllers, Kalman filters).
 
 **Speed-quality substitutability.** From $\mathcal{T} = \nu \cdot \eta^\ast$ (single channel): doubling event rate $\nu$ has the same effect on $\lVert\delta\rVert_{ss}$ as doubling update quality $\eta^\ast$. They are multiplicative when both improve: 50% improvement in each yields $1.5 \times 1.5 = 2.25\times$, not $3\times$. This is the formal analog of Boyd's insight that Orient quality often matters more than raw OODA speed.
 

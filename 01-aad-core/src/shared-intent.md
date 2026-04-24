@@ -3,7 +3,7 @@ slug: shared-intent
 type: definition
 status: discussion-grade
 depends:
-  - unity-dimensions
+  - definition-unity-dimensions
   - information-bottleneck
   - objective-functional
 stage: draft
