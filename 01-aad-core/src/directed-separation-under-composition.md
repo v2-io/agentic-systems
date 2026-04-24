@@ -57,7 +57,7 @@ Even if each sub-agent's $f_M^{(i)}$ processes $o_i$ goal-blindly, the **set of 
 
 The logic of each case is sound given the routing definition. Case 1: goal-blind routing + goal-blind processing = goal-blind composite. Case 2: goal-dependent routing means the composite's observation function depends on $G_t^c$, regardless of individual processing. Both follow from directed separation's scope condition.
 
-The claim that the architectural classification lifts to composition is **structurally motivated** by #composition-consistency (the theory must give consistent answers at every level of description). This is an argument from theoretical coherence, not a derivation.
+The claim that the architectural classification lifts to composition is **structurally motivated** by #postulate-composition-consistency (the theory must give consistent answers at every level of description). This is an argument from theoretical coherence, not a derivation.
 
 ## Discussion
 

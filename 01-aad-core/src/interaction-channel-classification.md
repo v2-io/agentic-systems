@@ -5,7 +5,7 @@ status: conditional
 depends:
   - observation-function
   - mismatch-signal
-  - mismatch-decomposition
+  - result-mismatch-decomposition
   - update-gain
   - adaptive-tempo
   - model-class-fitness
@@ -144,7 +144,7 @@ Each existing emitter-side result is a restriction of the four-regime decomposit
 
 The three boundaries are structurally independent and each is stated in an existing AAD quantity, so the four-regime partition is not ad-hoc; it is forced by the structure of the quantities already in the theory. Within Class 1 (goal-blind epistemic update per #directed-separation) and sub-scope $\alpha$ recipients (Kalman / conjugate-Bayesian / exponential-family / strongly-convex-gradient / linear-PD), the Kalman-over-Kalman derivation transfers with A2' derived per #gain-sector-bridge, and each case yields the predicted regime by direct substitution. In sub-scope $\beta$ (PID / rule-based / human-judgment), the classification's form transfers but boundary (I-a) requires per-instantiation verification of the sector bound, inheriting from #sector-persistence-template's sub-scope $\beta$ caveat.
 
-**Scope limits.** Class 2 (fully merged) recipients are out of formal scope: the coupled epistemic-purposeful update violates #directed-separation, so the regime assignment cannot be cleanly computed against $M_B$ alone. This is `03-logogenic-agents/` territory. Class 3 (partially modular) recipients inherit with degradation proportional to $\kappa_{\text{processing}}$ (see `msc/spike-kappa-hb-operationalization.md`): the Regime-I update may be goal-contaminated, and Regime II-b may be misdiagnosed as II-a or III under goal-blind-update failure. Per-event classification is singular-trajectory-indexed by #agent-identity; aggregation over event streams is deferred to #sector-persistence-template.
+**Scope limits.** Class 2 (fully merged) recipients are out of formal scope: the coupled epistemic-purposeful update violates #directed-separation, so the regime assignment cannot be cleanly computed against $M_B$ alone. This is `03-logogenic-agents/` territory. Class 3 (partially modular) recipients inherit with degradation proportional to $\kappa_{\text{processing}}$ (see `msc/spike-kappa-hb-operationalization.md`): the Regime-I update may be goal-contaminated, and Regime II-b may be misdiagnosed as II-a or III under goal-blind-update failure. Per-event classification is singular-trajectory-indexed by #scope-agent-identity; aggregation over event streams is deferred to #sector-persistence-template.
 
 **What the classification does not claim.** (i) It does not determine *semantic content*: knowing an event is Regime I tells you $B$ will update, not *what* $B$ will believe afterward — that lives in #credit-assignment-boundary's default signal function. (ii) It does not make the four regimes sharp in practice: real recipients' sector regions and class capacities have estimation uncertainty, so borderline events oscillate across boundaries under parameter noise. (iii) It does not replace #sector-persistence-template's temporal aggregation; it provides the per-event regime label that feeds into the aggregate disturbance bound.
 

@@ -344,7 +344,7 @@ My weak recommendation: promote as appendix segment. My strong recommendation: i
 
 ## 8. Working Notes (for potential future execution)
 
-- **Sharpening R2.** The weakest step is §3.3's argument that $A_O^{(1)}$ and $V_O(\pi_{\mathrm{current}})$ share common-mode bias under model-class inadequacy. A clean version would model the bias as a function of `#mismatch-decomposition`'s model-error vs. observation-noise decomposition, show that common-mode bias is $O(1)$ (not $O(\varepsilon)$) when the model class is inadequate in a specific direction, and derive the convention-dependent detection latency. This is probably a one-evening spike.
+- **Sharpening R2.** The weakest step is §3.3's argument that $A_O^{(1)}$ and $V_O(\pi_{\mathrm{current}})$ share common-mode bias under model-class inadequacy. A clean version would model the bias as a function of `#result-mismatch-decomposition`'s model-error vs. observation-noise decomposition, show that common-mode bias is $O(1)$ (not $O(\varepsilon)$) when the model class is inadequate in a specific direction, and derive the convention-dependent detection latency. This is probably a one-evening spike.
 
 - **R1 sharpening.** The expected log-odds update magnitude $\mathbb{E}\lvert \Delta\lambda_k \rvert$ can be made tighter under specific regime-change forms. For independent edge drift (R1 local to one edge), the bound should be tight. For correlated drift across multiple edges, the Jacobian coupling in `#credit-assignment-boundary`'s gradient form distributes the signal; this could either tighten or loosen the bound depending on the drift's alignment with $\mathbf{J}$. Worth a careful treatment.
 

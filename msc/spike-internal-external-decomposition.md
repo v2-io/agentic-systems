@@ -14,7 +14,7 @@ $$\alpha \gt \frac{\rho}{\lVert\delta_{\text{critical}}\rVert}$$
 
 (Model D, linearized form.) The left-hand side is the agent's correction capacity; the right-hand side is the environment's demand. Persistence is the *inequality*, a single scalar relation. But the question "how much of the margin is agent capacity vs. environmental leniency?" asks us to attribute the *margin itself* to its two sides.
 
-Adjacent but not identical: **mismatch decomposition** ( #mismatch-decomposition) splits *this instant's mismatch* into reducible model error plus irreducible observation noise. That's a decomposition of *one signal* into *one agent property* and *one channel property*. What we want is a decomposition of *the persistence margin* (a quantity that integrates across time) into *all* the agent-side properties vs. *all* the environment-side properties.
+Adjacent but not identical: **mismatch decomposition** ( #result-mismatch-decomposition) splits *this instant's mismatch* into reducible model error plus irreducible observation noise. That's a decomposition of *one signal* into *one agent property* and *one channel property*. What we want is a decomposition of *the persistence margin* (a quantity that integrates across time) into *all* the agent-side properties vs. *all* the environment-side properties.
 
 This spike develops that decomposition.
 
@@ -537,7 +537,7 @@ Add a section on "Decomposing the persistence margin" with:
 - `#discussion-separability-pattern`: add the seventh ladder row.
 - `#discussion-identifiability-floor`: add Instance 3 (internal-external decomposition under Regime C).
 - `#software-epistemic-properties`: add a Discussion note that the per-quantity exactness audit supports a well-posed TST specialization of the decomposition; cross-reference.
-- `#mismatch-decomposition`: add a note distinguishing this per-instant decomposition from the per-history internal-external decomposition.
+- `#result-mismatch-decomposition`: add a note distinguishing this per-instant decomposition from the per-history internal-external decomposition.
 
 ### 12.4 Pending work before promotion
 
@@ -547,7 +547,7 @@ Add a section on "Decomposing the persistence margin" with:
 
 3. **The Instance-3-of-identifiability-floor claim needs checking.** Instances 1 and 2 of the floor cite specific external theorems (CHT, Cramér-Rao). Instance 3 cites CHT. Is the CHT application here as clean as in Instance 1? The on-policy L0-insufficiency-detection no-go (Instance 1) constructs a specific L0-world with matched regime conditionals. The internal-external-decomposition no-go (Instance 3) claims that *any* $(\mathcal V_E, \mathcal V_I)$ split consistent with observed $\mathcal V$ is Level-1-equivalent under observational data. Worth writing out the matched-distribution pair explicitly to confirm this is as tight as Instance 1.
 
-4. **Does the decomposition interact with #agent-identity (singular-trajectory scope)?** Viability is defined per trajectory. Aggregating $\mathcal V_E$ across *copies* of an environment (e.g., across multiple customer installations) requires the trajectory-indexed/type-like distinction per `#agent-identity`. The TST specialization (team operating on one codebase) is cleanly token-level; population-level claims about "how viable is *a* team operating on *a* codebase" would need additional scope machinery.
+4. **Does the decomposition interact with #scope-agent-identity (singular-trajectory scope)?** Viability is defined per trajectory. Aggregating $\mathcal V_E$ across *copies* of an environment (e.g., across multiple customer installations) requires the trajectory-indexed/type-like distinction per `#scope-agent-identity`. The TST specialization (team operating on one codebase) is cleanly token-level; population-level claims about "how viable is *a* team operating on *a* codebase" would need additional scope machinery.
 
 ### 12.5 Not in scope of this spike
 
@@ -578,7 +578,7 @@ Add a section on "Decomposing the persistence margin" with:
 - **Worked Kalman example.** For the `#worked-example-kalman` setup, $\mathcal V = 2.91$ decomposes as $\mathcal V_E = 2.30$ (environment-heavy) and $\mathcal V_I = 0.61$ (modest agent contribution) — the agent is tracking well mostly because the domain is forgiving.
 - **TST specialization.** Policy-benignity ($g(\pi)$) is exactly estimable from $\mathcal C_t^{\text{commit}}$ (system-coupling / changeset-size); the aggregate $(\mathcal V_E, \mathcal V_I)$ split is separately identifiable via team-rotation experiments without requiring per-component estimation. The internal-operational-health components hardest to estimate are exactly the cognitive ones — not exteriorized by standard team protocols.
 - **Meta-segment placement.** Positive-half separability seventh-ladder candidate; negative-half identifiability-floor Instance 3 candidate; adjacent family member in the logarithmic-coordinate family (not a fourth Cauchy-FE theorem, absent a compositionality axiom for viability).
-- **Recommendation.** Promote as new appendix segment `#internal-external-decomposition`; update `#operationalization`, `#persistence-condition`, `#discussion-separability-pattern`, `#discussion-identifiability-floor`, `#software-epistemic-properties`, `#mismatch-decomposition` with cross-references and companion notes.
+- **Recommendation.** Promote as new appendix segment `#internal-external-decomposition`; update `#operationalization`, `#persistence-condition`, `#discussion-separability-pattern`, `#discussion-identifiability-floor`, `#software-epistemic-properties`, `#result-mismatch-decomposition` with cross-references and companion notes.
 
 ## Appendix A: per-term ontological inventory
 
@@ -598,11 +598,11 @@ A reference table naming each component's ontological status in one place. "Pure
 
 The "pure external" rows define $\mathcal V_E$; "pure internal" rows define $\mathcal V_I$; "mixed" rows are assigned via the P6 / directional-fidelity arguments in §3.
 
-## Appendix B: comparison with #mismatch-decomposition
+## Appendix B: comparison with #result-mismatch-decomposition
 
 The mismatch decomposition is a different decomposition on a different quantity. Comparison:
 
-| Aspect | #mismatch-decomposition | Internal-external decomposition |
+| Aspect | #result-mismatch-decomposition | Internal-external decomposition |
 |---|---|---|
 | Target quantity | $\mathbb{E}[\lVert\delta_t\rVert^2]$ (one-instant MSE) | $\mathcal V$ (log-viability, integrated) |
 | Decomposition type | additive (bias-variance identity) | additive on log-scale |

@@ -32,7 +32,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I   | Definition  |     | [#action-transition](src/action-transition.md)                             | Actions affect environment                     | deps-verified   |
 | I   | Scope       |     | [#scope-adaptive-system](src/scope-adaptive-system.md)                     | Broadest AAD scope: observe under uncertainty  | claims-verified |
 | I   | Scope       |     | [#scope-agency](src/scope-agency.md)                                       | Narrows to action with Pearl-level-2 contrast  | claims-verified |
-| I   | Postulate   |     | [#composition-consistency](src/composition-consistency.md)                 | Agent/subagent scale invariance                | deps-verified   |
+| I   | Postulate   |     | [#postulate-composition-consistency](src/postulate-composition-consistency.md)                 | Agent/subagent scale invariance                | deps-verified   |
 | I   | Definition  |     | [#chronica](src/chronica.md)                                               | Complete interaction history                   | deps-verified   |
 | I   | Postulate   |     | [#causal-structure](src/causal-structure.md)                               | Irreducible causal structure                   | deps-verified   |
 | I   | Definition  |     | [#pearl-causal-hierarchy](src/pearl-causal-hierarchy.md)                   | Three levels of causal reasoning               | deps-verified   |
@@ -44,7 +44,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I   | Derived     |     | [#recursive-update](src/recursive-update.md)                               | State updates must be recursive                | claims-verified |
 | I   | Derived     |     | [#action-selection](src/action-selection.md)                               | Action as function of model                    | deps-verified   |
 | I   | Definition  |     | [#mismatch-signal](src/mismatch-signal.md)                                 | Prediction error signal                        | deps-verified   |
-| I   | Result      |     | [#mismatch-decomposition](src/mismatch-decomposition.md)                   | Model error + obs noise                        | claims-verified |
+| I   | Result      |     | [#result-mismatch-decomposition](src/result-mismatch-decomposition.md)                   | Model error + obs noise                        | claims-verified |
 | I   | Empirical   |     | [#update-gain](src/update-gain.md)                                         | Optimal update weighting                       | claims-verified |
 | I   | Definition  |     | [#causal-information-yield](src/causal-information-yield.md)               | Information from interventions                 | deps-verified   |
 | I   | Definition  |     | [#adaptive-tempo](src/adaptive-tempo.md)                                   | Rate of useful info acquisition                | claims-verified |
@@ -56,7 +56,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | I   | Result      |     | [#structural-adaptation-necessity](src/structural-adaptation-necessity.md) | When parametric update fails                   | claims-verified |
 | I   | Derived     |     | [#temporal-nesting](src/temporal-nesting.md)                               | Timescale stratification                       | deps-verified   |
 | I   | Formulation |     | [#consolidation-dynamics](src/consolidation-dynamics.md)                   | Offline regime of $g_M$ driven by replayed/pseudo-events with IB-gap-reduction objective; stability-plasticity feasibility window; necessity under sub-state factorization + bounded per-event budget | draft |
-| I   | Discussion  |     | [#agent-identity](src/agent-identity.md)                                   | Non-forkable causal trajectory                 | deps-verified   |
+| I   | Discussion  |     | [#scope-agent-identity](src/scope-agent-identity.md)                                   | Non-forkable causal trajectory                 | deps-verified   |
 
 
 ---
@@ -113,7 +113,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 ## III. Agentic Composites
 
-*Scope: multiple agents interacting through a shared environment, or equivalently, the internal structure of composite agents. The composition postulate ( #composition-consistency) requires that the theory apply at every level of description where the scope condition is met. This section develops what "applies at every level" means formally (the composition closure criterion, which requires an additional contraction assumption beyond Section I's sector condition), what happens when composition is imperfect, and what the dynamics of inter-agent interaction look like.*
+*Scope: multiple agents interacting through a shared environment, or equivalently, the internal structure of composite agents. The composition postulate ( #postulate-composition-consistency) requires that the theory apply at every level of description where the scope condition is met. This section develops what "applies at every level" means formally (the composition closure criterion, which requires an additional contraction assumption beyond Section I's sector condition), what happens when composition is imperfect, and what the dynamics of inter-agent interaction look like.*
 
 *Correlated observations as default; independence as the special case requiring justification. Adversarial dynamics are one end of a teleological unity spectrum, not a separate theory.*
 

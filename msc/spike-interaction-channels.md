@@ -8,7 +8,7 @@
 
 This spike proposes the classification boundary and checks it against AAD's existing machinery.
 
-**Depends on**: #observation-function, #mismatch-signal, #mismatch-decomposition, #update-gain, #adaptive-tempo, #model-class-fitness, #model-sufficiency, #structural-adaptation-necessity, #persistence-condition, #sector-persistence-template, #adversarial-destabilization, #adversarial-tempo-advantage, #observation-gates-advantage, #symbiogenic-composition, #communication-gain, #team-persistence, #discussion-identifiability-floor, #agent-identity.
+**Depends on**: #observation-function, #mismatch-signal, #result-mismatch-decomposition, #update-gain, #adaptive-tempo, #model-class-fitness, #model-sufficiency, #structural-adaptation-necessity, #persistence-condition, #sector-persistence-template, #adversarial-destabilization, #adversarial-tempo-advantage, #observation-gates-advantage, #symbiogenic-composition, #communication-gain, #team-persistence, #discussion-identifiability-floor, #scope-agent-identity.
 
 ---
 
@@ -55,7 +55,7 @@ This spike works within AAD's existing scope:
 
 - Class 1 (modular) architectures as primary. The classification is stated for agents whose epistemic update is goal-blind ( #directed-separation). Class 3 (partially modular) approximations inherit with degradation proportional to $\kappa_{\text{processing}}$ (see `msc/spike-kappa-hb-operationalization.md`); Class 2 agents require the coupled formulation from `03-logogenic-agents/`.
 - Single-recipient analysis. Multi-recipient ($A$ broadcasting to $\{B_1, \ldots, B_n\}$) inherits per-recipient by independence in the emitter-side disturbance decomposition; genuine population dynamics are out of scope (see Section III gaps).
-- Singular-trajectory recipient. By #agent-identity, $B$'s sufficiency is trajectory-indexed; the classification is about *this* $B$ on *its* $\mathcal C_t^B$, not about a type.
+- Singular-trajectory recipient. By #scope-agent-identity, $B$'s sufficiency is trajectory-indexed; the classification is about *this* $B$ on *its* $\mathcal C_t^B$, not about a type.
 - Agent-opacity enters as a conditioner on the *emitter*'s predicted effect, not as a reshape of the recipient's classification — see §5.
 
 ---
@@ -362,7 +362,7 @@ Following the posture of #discussion-identifiability-floor and #discussion-separ
 ### 7.2 What the classification does not admit
 
 - **Class 2 (fully merged) recipients**: the classification presupposes goal-blind epistemic update ( #directed-separation). When the recipient's update is entangled with its objective, the "what happens to $M_B$" question depends on "what happens to $G_B$" simultaneously; the four-regime partition would need a coupled formulation. This is `03-logogenic-agents/` territory.
-- **Non-singular trajectories**: by #agent-identity, the classification is trajectory-indexed. Type-level claims (how does an equivalence-class-agent receive a signal?) require additional machinery.
+- **Non-singular trajectories**: by #scope-agent-identity, the classification is trajectory-indexed. Type-level claims (how does an equivalence-class-agent receive a signal?) require additional machinery.
 - **Sustained multi-event dynamics**: each boundary is stated per-event. Regime II-a in particular requires event-rate information to determine whether the mismatch integrates faster than correction dissipates. The per-event classification is the building block; aggregation over event streams is the sector-persistence template's job. The classification does not replace the template; it types the events that feed it.
 - **Cascading regime transitions**: a Regime III stream might, over time, drain $\Delta\rho^\ast$ enough that subsequent events — nominally Regime I — enter Regime II-a because the recipient's correction capacity has degraded. This meta-dynamic is not captured in the static classification.
 

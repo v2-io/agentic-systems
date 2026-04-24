@@ -24,7 +24,7 @@ The **mismatch signal** (prediction error):
 
 $$\delta_t = o_t - \hat{o}_t$$
 
-This is the primary definition, used in the mismatch dynamics ( #persistence-condition, #sector-condition-stability) and in the decomposition ( #mismatch-decomposition).
+This is the primary definition, used in the mismatch dynamics ( #persistence-condition, #sector-condition-stability) and in the decomposition ( #result-mismatch-decomposition).
 
 For models with probabilistic predictions, the mismatch generalizes to the **score-function mismatch**:
 

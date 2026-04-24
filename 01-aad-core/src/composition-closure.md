@@ -3,7 +3,7 @@ slug: composition-closure
 type: formulation
 status: conditional
 depends:
-  - composition-consistency
+  - postulate-composition-consistency
   - scope-composite-agent
   - multi-agent-scope
   - agent-environment
@@ -203,7 +203,7 @@ The norm choices ($\lVert\cdot\rVert_\mathcal{X}$, $\lVert\cdot\rVert_\mathcal{A
 
 This criterion replaces intuitive questions about "where the boundary of an agent is" with a functional test: does a macroscopic AAD description preserve the underlying micro-dynamics well enough to remain predictive and capable? The core requirement is an **approximate dynamical homomorphism** — the macro-dynamics approximately commute with the projection.
 
-**Relationship to #composition-consistency.** The Section I postulate requires that AAD's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." The admissibility constraints ensure the macro-description is genuinely AAD-shaped, so the same persistence condition, the same tempo framework, and the same mismatch dynamics apply at the macro level with macro-level parameters.
+**Relationship to #postulate-composition-consistency.** The Section I postulate requires that AAD's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." The admissibility constraints ensure the macro-description is genuinely AAD-shaped, so the same persistence condition, the same tempo framework, and the same mismatch dynamics apply at the macro level with macro-level parameters.
 
 **Topology-indexed composition closures (via #contraction-template).** `#contraction-template` lifts the bridge-lemma's DA2'-inc condition into the contraction-metric framework of Lohmiller & Slotine 1998. Under its (CT1)–(CT3) preconditions, three topology-indexed closure results apply:
 

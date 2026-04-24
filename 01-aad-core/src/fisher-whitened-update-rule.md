@@ -7,13 +7,13 @@ depends:
   - edge-update-natural-parameter
   - gain-sector-bridge
   - discussion-additive-coordinate-forcing
-  - agent-identity
+  - scope-agent-identity
 stage: draft
 ---
 
 # Derivation: Fisher-Whitened Edge Update Under Correlated Evidence
 
-Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural gradient never exceeds $45°$ at finite correlation $\rho$, so B1 directional fidelity ( #gain-sector-bridge) is never actively violated — but its *magnitude alignment* degrades by a factor $\sqrt{1-r^2}$ in the sector constant. The Fisher-whitened correction restores sharp B1 on the Fisher-weighted inner product. Under the (PI) parameterization-invariance axiom named in `#agent-identity` and promoted to a primary instance of `#discussion-additive-coordinate-forcing` via Čencov 1982, Fisher whitening is **AAD-internally derivable** rather than externally imported. The result adds sub-scope $\alpha_3$ (correlated evidence + Fisher-whitened update + Bayesian coherence → A2' derived) to the A2' partition and composes cleanly with the meta-gain machinery of `#adaptive-gain-dynamics` (Fisher whitening is a special case of meta-gain with $K_t = \mathbf I^{-1}(\lambda_t)$).
+Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural gradient never exceeds $45°$ at finite correlation $\rho$, so B1 directional fidelity ( #gain-sector-bridge) is never actively violated — but its *magnitude alignment* degrades by a factor $\sqrt{1-r^2}$ in the sector constant. The Fisher-whitened correction restores sharp B1 on the Fisher-weighted inner product. Under the (PI) parameterization-invariance axiom named in `#scope-agent-identity` and promoted to a primary instance of `#discussion-additive-coordinate-forcing` via Čencov 1982, Fisher whitening is **AAD-internally derivable** rather than externally imported. The result adds sub-scope $\alpha_3$ (correlated evidence + Fisher-whitened update + Bayesian coherence → A2' derived) to the A2' partition and composes cleanly with the meta-gain machinery of `#adaptive-gain-dynamics` (Fisher whitening is a special case of meta-gain with $K_t = \mathbf I^{-1}(\lambda_t)$).
 
 ## Formal Expression
 
@@ -45,7 +45,7 @@ $$T_{\text{FW}}(\lambda) = \lambda - \eta_{\text{edge}} \cdot \mathbf I^{-1}(\la
 
 *[Derived (Fisher-whitening-from-B1-parameterization-invariance)]*
 
-**Path A (B1-parameterization-invariance).** Require B1 directional fidelity to be *parameterization-invariant* in the sense of `#agent-identity`'s (PI) axiom: the theorems about sub-scope α derivation in `#gain-sector-bridge` should not depend on arbitrary coordinate choices for $M_t$'s natural parameters. Under (PI), B1 sub-scope α partition is coordinate-invariant iff the inner product defining the directional-fidelity condition is the Fisher metric (Čencov 1982 uniqueness theorem under (PI); extended by Ay-Jost-Lê-Schwachhöfer 2017). The Fisher-weighted inner product is therefore *forced* by (PI), and the Fisher-whitened update is the AAD-internally derived correction direction for directional-fidelity preservation across parameterizations.
+**Path A (B1-parameterization-invariance).** Require B1 directional fidelity to be *parameterization-invariant* in the sense of `#scope-agent-identity`'s (PI) axiom: the theorems about sub-scope α derivation in `#gain-sector-bridge` should not depend on arbitrary coordinate choices for $M_t$'s natural parameters. Under (PI), B1 sub-scope α partition is coordinate-invariant iff the inner product defining the directional-fidelity condition is the Fisher metric (Čencov 1982 uniqueness theorem under (PI); extended by Ay-Jost-Lê-Schwachhöfer 2017). The Fisher-weighted inner product is therefore *forced* by (PI), and the Fisher-whitened update is the AAD-internally derived correction direction for directional-fidelity preservation across parameterizations.
 
 **Path B (Lyapunov-coordinate-matching via adjacent-family classification).** In the adjacent-family framing of `#discussion-additive-coordinate-forcing`, the Lyapunov coordinate is *matched* (not forced) to the sector condition. For natural-gradient updates, the canonical Lyapunov is Fisher-weighted (Amari 1998, "Natural gradient works efficiently in learning," *Neural Computation* 10); this matches the geometry of the update operator. The two paths converge on the same Fisher-weighted result; Path A forces it via axiomatics, Path B confirms it via adjacent-family coordinate-matching.
 
@@ -90,7 +90,7 @@ L2-degenerate (perfect correlation, $r \to 1$) is a *structural* collapse — it
 
 ## Epistemic Status
 
-*Conditional.* Max attainable: *exact* under Path A ((PI) + Čencov combined with B1 directional fidelity) + L1'/L2 regimes + Bayesian coherence. The derivation is textbook information-geometry (Amari 1998; Amari-Nagaoka 2000) plus the AAD-internal (PI) axiom from `#agent-identity`. What is AAD-distinctive is (a) the identification of (PI)/Čencov as the forcing machinery rather than merely a preferred choice; (b) the sub-scope $\alpha_3$ labeling within the A2' partition; (c) the composition with `#adaptive-gain-dynamics`' meta-gain framework as a degenerate special case.
+*Conditional.* Max attainable: *exact* under Path A ((PI) + Čencov combined with B1 directional fidelity) + L1'/L2 regimes + Bayesian coherence. The derivation is textbook information-geometry (Amari 1998; Amari-Nagaoka 2000) plus the AAD-internal (PI) axiom from `#scope-agent-identity`. What is AAD-distinctive is (a) the identification of (PI)/Čencov as the forcing machinery rather than merely a preferred choice; (b) the sub-scope $\alpha_3$ labeling within the A2' partition; (c) the composition with `#adaptive-gain-dynamics`' meta-gain framework as a degenerate special case.
 
 **The angle bound is ≤ 45° for all finite $r$.** This is a sharp load-bearing observation: AAD's existing default log-odds signal function is *directionally robust* under correlated failures. The bias formula in `#l1-update-bias` gives the quantitative magnitude-bias; this segment gives the qualitative direction-preservation. Together they characterize the default signal function's behavior under L1' fully: **direction preserved, magnitude biased, observable-$C$ restores exactness (Prop B.7), unobservable-$C$ floor per F13**.
 

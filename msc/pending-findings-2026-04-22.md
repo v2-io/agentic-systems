@@ -247,7 +247,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Repair direction.** Add a regime-indexed qualifier to the loop headlines: "the loop generates data *under intervention*; identification of causal effects from that data requires the regime conditions of `#edge-update-causal-validity`." Cross-reference between the two segments. 30 min.
 
-**Subsumed by:** partial by O-BP6 (identity promotion). If `#agent-identity` is promoted to formal scope ("AAD applies to agents on singular causal trajectories"), the ontological ground for calling the loop *interventional* becomes explicit, and the Level-2 headline becomes honest-but-conditional rather than overclaimed.
+**Subsumed by:** partial by O-BP6 (identity promotion). If `#scope-agent-identity` is promoted to formal scope ("AAD applies to agents on singular causal trajectories"), the ontological ground for calling the loop *interventional* becomes explicit, and the Level-2 headline becomes honest-but-conditional rather than overclaimed.
 
 **Effort estimate:** 30 min standalone; may be strengthened by the O-BP6 move.
 
@@ -259,7 +259,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Source:** Codex audit 2026-04-22, Finding 3. **Confidence:** high.
 
-**Problematic passage** (`01-aad-core/src/composition-consistency.md` line 38 and following):
+**Problematic passage** (`01-aad-core/src/postulate-composition-consistency.md` line 38 and following):
 
 > [$\tau_{\text{eq}} \ll \tau_{\text{ext}}$ is] a reliable practical test ... the gap between passing that heuristic and meeting Tier 1 conditions is small in common settings.
 

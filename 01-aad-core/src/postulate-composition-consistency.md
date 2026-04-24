@@ -1,5 +1,5 @@
 ---
-slug: composition-consistency
+slug: postulate-composition-consistency
 type: postulate
 status: axiomatic
 depends:
@@ -15,7 +15,7 @@ The operational consequences — when a decomposed system actually behaves as a 
 
 ## Formal Expression
 
-*[Postulate (composition-consistency)]*
+*[Postulate (postulate-composition-consistency)]*
 
 For any system $S$ satisfying the scope condition ( #scope-agency), and any decomposition of $S$ into subsystems $\{S_1, \ldots, S_n\}$ where each $S_i$ also satisfies the scope condition, AAD's predictions at the system level must be compatible with its predictions at the subsystem level. Specifically, composition laws must exist such that:
 

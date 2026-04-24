@@ -1,5 +1,5 @@
 ---
-slug: agent-identity
+slug: scope-agent-identity
 type: scope
 status: robust-qualitative
 depends:
@@ -14,7 +14,7 @@ AAD applies to agents instantiated on singular causal trajectories. Identity wit
 
 ## Formal Expression
 
-*[Scope (agent-identity, from chronica + model-sufficiency)]*
+*[Scope (scope-agent-identity, from chronica + model-sufficiency)]*
 
 **Scope commitment.** AAD's formal apparatus presumes each agent is instantiated on a **singular, non-forkable causal trajectory** $\mathcal C_t$ ( #chronica). Sufficiency of the model state $M_t$ ( #model-sufficiency) is defined *relative to* this trajectory — not relative to a model-state equivalence class. Duplicating $M_t$ and exposing the copies to different future events produces two agents with *divergent* causal histories, each of which is a sufficient statistic only for *its own* trajectory.
 

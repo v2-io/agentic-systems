@@ -8,7 +8,7 @@ relates_to:
   - variational-sector-condition
   - sector-persistence-template
   - additive-coordinate-forcing
-  - agent-identity
+  - scope-agent-identity
   - discussion-identifiability-floor
   - discussion-separability-pattern
   - contraction-template
@@ -302,7 +302,7 @@ slug: posterior-displacement-template
 type: result
 status: exact
 depends:
-  - agent-identity
+  - scope-agent-identity
   - additive-coordinate-forcing
   - bias-bound-derivation
 stage: draft
@@ -357,11 +357,11 @@ The cascade's three steps are standard:
 - Otto-Villani under log-Sobolev: Otto & Villani 2000, *J. Funct. Anal.* 173(2):361–400; Bakry-Émery 1985 for LSI under curvature-dimension.
 - Lipschitz-posterior stability: Stuart 2010, *Acta Numerica* 19:451–559; Hairer-Stuart-Vollmer 2014 *SIAM J. Math. Anal.* 46(1):415–451.
 
-AAD's contribution: (i) identifying the cascade as the load-bearing apparatus for KL→state-pushforward-displacement across multiple AAD segments; (ii) the geometric-stiffness interpretation of $2L_{\text{post}}^2/\rho_{\text{LSI}}$ tying prior-likelihood tension to observation concentration; (iii) the connection to `#agent-identity`'s (PI) axiom via the Fisher-Rao special case (cf. `#bias-bound-derivation`'s Track 2).
+AAD's contribution: (i) identifying the cascade as the load-bearing apparatus for KL→state-pushforward-displacement across multiple AAD segments; (ii) the geometric-stiffness interpretation of $2L_{\text{post}}^2/\rho_{\text{LSI}}$ tying prior-likelihood tension to observation concentration; (iii) the connection to `#scope-agent-identity`'s (PI) axiom via the Fisher-Rao special case (cf. `#bias-bound-derivation`'s Track 2).
 
 ### Skeleton — Fisher-Rao adjacency
 
-Under the (PI) parameterization-invariance axiom in `#agent-identity` (fourth primary instance of `#additive-coordinate-forcing`), the statistical-manifold sub-case of $\mathcal M$ carries a canonical Fisher-Rao metric. When the base space $\Omega$ and state space $\mathcal M$ are both statistical manifolds, the template's W₂ on pushforward admits a Fisher-Rao specialization: under small-information regime, $\mathbb E\lVert\Delta M\rVert_{FR} \leq \sqrt 2 \cdot \sqrt\varepsilon$ (dimension-free, universal constant). This is Track 2 of `#bias-bound-derivation`; it composes with the template's T3 output when LSI holds simultaneously in W₂ and in Fisher-Rao metric (equivalent for Gaussian observation models; divergent in general).
+Under the (PI) parameterization-invariance axiom in `#scope-agent-identity` (fourth primary instance of `#additive-coordinate-forcing`), the statistical-manifold sub-case of $\mathcal M$ carries a canonical Fisher-Rao metric. When the base space $\Omega$ and state space $\mathcal M$ are both statistical manifolds, the template's W₂ on pushforward admits a Fisher-Rao specialization: under small-information regime, $\mathbb E\lVert\Delta M\rVert_{FR} \leq \sqrt 2 \cdot \sqrt\varepsilon$ (dimension-free, universal constant). This is Track 2 of `#bias-bound-derivation`; it composes with the template's T3 output when LSI holds simultaneously in W₂ and in Fisher-Rao metric (equivalent for Gaussian observation models; divergent in general).
 
 The Fisher-Rao track is *downstream* of the (PI)/Čencov fourth primary instance, not a new primary instance of `#additive-coordinate-forcing`. Consistent with `#additive-coordinate-forcing`'s principle: the (PI)-adoption is load-bearing; derived W₂ / Fisher-Rao bounds are the (PI) commitment's downstream consequences.
 

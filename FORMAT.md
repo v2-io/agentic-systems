@@ -287,7 +287,7 @@ The current inevitability-core members, with why inevitability is plausible:
 | Segment | Why inevitability is plausible |
 |---------|-------------------------------|
 | #recursive-update + #recursive-update-derivation | Three constraints → unique recursive form. Strongest result in the theory. |
-| #mismatch-decomposition | Bias-variance decomposition: mathematical identity once mismatch is defined. |
+| #result-mismatch-decomposition | Bias-variance decomposition: mathematical identity once mismatch is defined. |
 | #chain-confidence-decay | log(product) = sum(logs). Pure algebraic identity. |
 | #persistence-condition | Given sector conditions, the threshold follows by Lyapunov. |
 | #sector-condition-stability + #sector-condition-derivation | Lyapunov stability result applied to mismatch dynamics. |
@@ -299,12 +299,12 @@ The current inevitability-core members, with why inevitability is plausible:
 | #loop-interventional-access | Feedback loop generates interventional data by construction. |
 | #directed-separation | $f_M$ independence from $G_t$ follows from the update structure, given scope condition. |
 | #deliberation-cost | Think-vs-act threshold from information-theoretic argument. |
-| #composition-consistency | If scope condition doesn't restrict level, predictions at different levels must be compatible. |
+| #postulate-composition-consistency | If scope condition doesn't restrict level, predictions at different levels must be compatible. |
 | #graph-structure-uniqueness | Four operational postulates + causal sufficiency force a Markov-factorized DAG (Cox-analog). |
 
 **Canonical formulations (second ring).** Good representational choices that are motivated but not forced. Triage question 2 ("what competing formulation would also fit?") answers "at least one alternative exists." Review focus: explaining the choice, noting alternatives, and guarding against drift toward inevitability claims that aren't there.
 
-Current members include: #complete-agent-state, #objective-functional, #value-object, #strategy-dimension, #strategy-dag, #and-or-scope, #agent-model, #information-bottleneck, #event-driven-dynamics, #adaptive-tempo, #structural-change-as-parametric-limit, #explicit-strategy-condition (normative, not derived), #composition-closure (operationalizes #composition-consistency but is one formulation among several possible ones), most definitions.
+Current members include: #complete-agent-state, #objective-functional, #value-object, #strategy-dimension, #strategy-dag, #and-or-scope, #agent-model, #information-bottleneck, #event-driven-dynamics, #adaptive-tempo, #structural-change-as-parametric-limit, #explicit-strategy-condition (normative, not derived), #composition-closure (operationalizes #postulate-composition-consistency but is one formulation among several possible ones), most definitions.
 
 **Empirical, heuristic, discussion (third ring).** Claims whose ceiling is empirical or heuristic — testable against the world but not derivable from the formalism. This is *not* a demotion: these are where AAD becomes falsifiable and useful. Review focus: stating falsifiable predictions, connecting to validation, resisting the temptation to dress empirical claims as derivations.
 

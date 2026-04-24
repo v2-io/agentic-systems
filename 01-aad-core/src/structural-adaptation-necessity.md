@@ -5,7 +5,7 @@ status: conditional
 depends:
   - model-sufficiency
   - model-class-fitness
-  - mismatch-decomposition
+  - result-mismatch-decomposition
   - update-gain
 stage: claims-verified
 ---
@@ -25,7 +25,7 @@ If the model class fitness $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ for so
 1. By definition, $S(M^\ast) = \mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ where $M^\ast = \arg\sup_{M \in \mathcal{M}} S(M)$.
 2. Therefore $I(\mathcal{C}_t; o_{t+1:\infty} \mid M^\ast, a_{t:\infty}) \gt 0$: the history contains predictive information that $M^\ast$ does not capture.
 3. This uncaptured information manifests as *systematic* mismatch — structured residuals $\delta_t$ containing signal, not merely noise.
-4. From #mismatch-decomposition, the model error component has a positive lower bound that cannot be reduced by any $M \in \mathcal{M}$.
+4. From #result-mismatch-decomposition, the model error component has a positive lower bound that cannot be reduced by any $M \in \mathcal{M}$.
 5. The update rule ( #update-gain) adjusts $M_t$ within $\mathcal{M}$, but $M^\ast$ is already (approximately) reached. Further updates oscillate without net improvement.
 6. Therefore: reducing mismatch below the floor requires changing $\mathcal{M}$ — structural adaptation. $\square$
 
@@ -33,7 +33,7 @@ If the model class fitness $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ for so
 
 ## Epistemic Status
 
-*Conditional.* The step from "lost predictive information" (step 2) to "systematic one-step mismatch" (step 3) requires an alignment assumption: that the lost predictive information affects the one-step conditional mean, not just higher moments. #mismatch-decomposition explicitly flags this: insufficiency implies positive model error under the alignment assumption, or positive proper-scoring regret without it. As written, the result is conditional on this alignment assumption. Without it, the conclusion should be stated in terms of proper-scoring regret (the best model in $\mathcal{M}$ has irreducible regret relative to the optimal predictor) rather than one-step mismatch magnitude. The qualitative conclusion — parametric adaptation cannot compensate for model-class inadequacy — holds either way; the quantitative mechanism differs.
+*Conditional.* The step from "lost predictive information" (step 2) to "systematic one-step mismatch" (step 3) requires an alignment assumption: that the lost predictive information affects the one-step conditional mean, not just higher moments. #result-mismatch-decomposition explicitly flags this: insufficiency implies positive model error under the alignment assumption, or positive proper-scoring regret without it. As written, the result is conditional on this alignment assumption. Without it, the conclusion should be stated in terms of proper-scoring regret (the best model in $\mathcal{M}$ has irreducible regret relative to the optimal predictor) rather than one-step mismatch magnitude. The qualitative conclusion — parametric adaptation cannot compensate for model-class inadequacy — holds either way; the quantitative mechanism differs.
 
 ## Discussion
 

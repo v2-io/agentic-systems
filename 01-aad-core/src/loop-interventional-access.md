@@ -6,7 +6,7 @@ depends:
   - causal-hierarchy-requirement
   - recursive-update
   - causal-structure
-  - agent-identity
+  - scope-agent-identity
 stage: draft
 ---
 
@@ -67,7 +67,7 @@ The reframing here is rhetorical, not substantive: the headline result (the loop
 
 Future instances of `#discussion-identifiability-floor` at new layers may add further modes (see `#discussion-identifiability-floor` Working Notes for the architecture-within-behavior-class layer currently under triage; the corresponding mode would be *observer-on-agent-input* at the candidate agent's observation channel). The three-mode-pattern observation is a structural regularity worth naming even though the specific Mode-3 instance has not promoted; the load-bearing content — Level-2 escape from observational-equivalence no-goes via loop-interventional access — remains shared across the deployment modes even when the specific interventional quantity varies. The unification is at the pattern level; the mechanism is semantically distinct per layer.
 
-**Why the loop data is genuinely interventional — the singular-trajectory ground.** The interventional character of loop data is not a property of the feedback mechanism in isolation; it rests on the scope commitment in #agent-identity that each agent is instantiated on a singular, non-forkable causal trajectory. When the agent executes $a_t$ and observes $o_{t+1}$, the observation is the response to *this* agent's intervention on *its* single trajectory $\mathcal C_t$. Replaying $a_t$ from a checkpointed $M_t$ against a different event stream would *not* constitute an intervention on $\mathcal C_t$ — it would be an intervention on a different trajectory $\mathcal C_t^{(2)}$ that happened to share a prefix. Pearl's $do$-operator presumes a definite causal system acted upon; AAD inherits this presumption via the singular-trajectory scope. Agents whose ontology is *type-like* (equivalence classes of copies) rather than *token-like* (singular trajectories) are outside AAD's formal scope; in particular, aggregate claims about "the model" across copies require additional machinery not provided here. This is the ontological ground that makes the "action-generated data is Level-2" claim honest rather than metaphorical.
+**Why the loop data is genuinely interventional — the singular-trajectory ground.** The interventional character of loop data is not a property of the feedback mechanism in isolation; it rests on the scope commitment in #scope-agent-identity that each agent is instantiated on a singular, non-forkable causal trajectory. When the agent executes $a_t$ and observes $o_{t+1}$, the observation is the response to *this* agent's intervention on *its* single trajectory $\mathcal C_t$. Replaying $a_t$ from a checkpointed $M_t$ against a different event stream would *not* constitute an intervention on $\mathcal C_t$ — it would be an intervention on a different trajectory $\mathcal C_t^{(2)}$ that happened to share a prefix. Pearl's $do$-operator presumes a definite causal system acted upon; AAD inherits this presumption via the singular-trajectory scope. Agents whose ontology is *type-like* (equivalence classes of copies) rather than *token-like* (singular trajectories) are outside AAD's formal scope; in particular, aggregate claims about "the model" across copies require additional machinery not provided here. This is the ontological ground that makes the "action-generated data is Level-2" claim honest rather than metaphorical.
 
 ## Working Notes
 

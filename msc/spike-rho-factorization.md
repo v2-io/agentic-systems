@@ -403,7 +403,7 @@ Agent-controllable part subsumes both model-class and policy contributions witho
 
 | AAD quantity | How (R-F) wanted it | How the honest reframe uses it |
 |---|---|---|
-| `#mismatch-decomposition` | (not directly used) | Central — the per-instant bias-variance identity is exactly the starting point for (R-V). Cross-sectional; (R-V) integrates it over time |
+| `#result-mismatch-decomposition` | (not directly used) | Central — the per-instant bias-variance identity is exactly the starting point for (R-V). Cross-sectional; (R-V) integrates it over time |
 | `#model-class-fitness` ($\mathcal F(\mathcal M)$) | supplied $f(\mathcal M)$ as a direct multiplicative factor | supplies a *ceiling* for the reducible-model-error term $\Delta_{\mathcal M}^2$; not a factor but an upper bound on one term |
 | `#model-sufficiency` | (not directly used) | $S(M_t) \lt 1$ corresponds to positive $\Delta_{\mathcal M}^2$; $S(M_t) = 1$ drives the model-class term to zero |
 | `#loop-interventional-access` | supplied $g(\pi)$ implicitly (policy chooses which disturbance the agent sees) | supplies the mechanism whereby $\Delta_\pi^2$ exists at all — the policy couples action to next observation |

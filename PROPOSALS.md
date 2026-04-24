@@ -33,13 +33,13 @@ Seven proposals converge on a single coordinated reframing pass that would shift
 
 **Bundle members:** SP-7 (epistemic architecture foregrounding) + O-BP1 (sector-persistence template as organizing principle) + O-BP10 (projection-contraction slogan) + O-BP8 (scope lattice) + SP-3 (calibration-laboratory template generalization) + SP-4 (agent-identity from scope to architectural postulate) + SP-8 (dual-edged floor/separability reading).
 
-**What remains unlanded:** README.md rewrite (still integration-first at line 10); OUTLINE.md preamble pass for Section I/II/III; `#sector-persistence-template` introductory paragraph restating the slogan; possible new canonical scope-lattice location; `domain-instantiation-template.md` or FORMAT.md section; `#agent-identity` frontmatter `type: scope → postulate`; `#discussion-identifiability-floor` + `#discussion-separability-pattern` dual-edged editorial touches.
+**What remains unlanded:** README.md rewrite (still integration-first at line 10); OUTLINE.md preamble pass for Section I/II/III; `#sector-persistence-template` introductory paragraph restating the slogan; possible new canonical scope-lattice location; `domain-instantiation-template.md` or FORMAT.md section; `#scope-agent-identity` frontmatter `type: scope → postulate`; `#discussion-identifiability-floor` + `#discussion-separability-pattern` dual-edged editorial touches.
 
 **Total effort:** 2–3 coordinated sessions. Individual pieces are each small; the benefit of coordination is that the reframe reads consistently across README / OUTLINE / CLAUDE / segments rather than drifting between framings.
 
 **Value:** **+9 for framework identity; +10 for paper-writing.** This is the highest-leverage single move available in the portfolio. Joseph-check-in recommended before execution (the organizing axis is architectural and commits the framework's self-presentation for future work).
 
-**Independence:** Bundle-internal: **low** — all seven members converge on the same presentation surface (README + OUTLINE preambles + three meta-segments + `#agent-identity` + `#sector-persistence-template`); must be done as one coordinated pass rather than parallelized. Bundle-external: **high** — touches mostly framing surfaces; does not conflict with Section I / II / III substantive segment work. Safe to run in parallel with Bundle 2 or with individual §C / §D items.
+**Independence:** Bundle-internal: **low** — all seven members converge on the same presentation surface (README + OUTLINE preambles + three meta-segments + `#scope-agent-identity` + `#sector-persistence-template`); must be done as one coordinated pass rather than parallelized. Bundle-external: **high** — touches mostly framing surfaces; does not conflict with Section I / II / III substantive segment work. Safe to run in parallel with Bundle 2 or with individual §C / §D items.
 
 **Risk:** The Fenchel-Bregman reframe (SP-9) proposes to further reorganize `#additive-coordinate-forcing` into "one geometric object + four axioms converging on it." If SP-9 is executed, the bundle's framing of the meta-segments would need revision. Two resolutions: (a) do the bundle first with the current 1-anchor-plus-3-theorem characterization (stable); (b) scope SP-9 first, decide if it supersedes SP-1's landed framing, then do the bundle. **Recommendation: (a) — don't let the Tier-3 reframe-proposal delay the framework-face work.**
 
@@ -70,7 +70,7 @@ All items below have been fully executed and their content is now load-bearing i
 | **O-BP14** — Derivation-audit table convention | FORMAT.md §O-BP14; 15 segments carry tables | Commit `c1d9fcf` | +6 framework / +8 future-agent onboarding |
 | **C-BP2** — Master separability pattern | `#discussion-separability-pattern` meta-segment; 7 ladders (6 original + A2' added 2026-04-23) | Commit `72ca532` | +7 framework / +8 paper |
 | **C-BP3** — Software as calibration laboratory | `#software-epistemic-properties` headline + 5-row transfer-assumption table; `02-tst-core/OUTLINE.md` preamble | Commit `d0373fc` | +5 framework / +7 paper |
-| **O-BP6** — Agent-identity promotion to scope statement | `#agent-identity` `type: scope` / `status: robust-qualitative`; three named consequences; (PI) axiom subsequently added | Commit `2980327` | +6 (exceeded original proposal — (PI) axiom built atop it) |
+| **O-BP6** — Agent-identity promotion to scope statement | `#scope-agent-identity` `type: scope` / `status: robust-qualitative`; three named consequences; (PI) axiom subsequently added | Commit `2980327` | +6 (exceeded original proposal — (PI) axiom built atop it) |
 | **G-BP1** — Natural-parameter / logit reparameterization | `#edge-update-natural-parameter` (new appendix with uniqueness theorem); `#credit-assignment-boundary` default signal in log-odds; `#fisher-whitened-update-rule` multidimensional extension | Commit `a39dfb7` + 2026-04-23 Gap A/B cycle | +7 (strengthened beyond original: produced an SP-1 component) |
 | **G-BP2 V-medium** — Variational form of strategy IB | `#strategy-complexity-cost` (KL-to-optimal-policy replaces Shannon-MI); `#strategy-cost-regret-bound` appendix + chain-rule uniqueness theorem + 2026-04-24 Bretagnolle-Huber tightening | Commits `a14682e` / `0a772d2` / `f70fb68` / `b76ee67` | +8 (gateway to SP-1 three-layer pattern) |
 | **SP-1 + SP-2** — Additive-coordinate-forcing meta-pattern | `#additive-coordinate-forcing` meta-segment; 1-anchor + 3-theorem (chain / divergence / update / metric-via-Čencov); Lyapunov + IB classified as adjacent | Commit `7456ec3` + 2026-04-23 Gap A/B 4th-instance | +8 framework (reshaped CLAUDE.md §7 distinctive-contribution section) |
@@ -93,7 +93,7 @@ Seven proposals landed as one coordinated pass. Value **+9 framework / +10 paper
 Three of the five bundle members are ready now; two need upstream scoping. Ready-now entries:
 
 - **SP-11 Composition-monotonicity meta-segment** — from existing C2 spike (`msc/spike-compositional-coordinate.md`); would give Section III its fourth meta-segment parallel to `#additive-coordinate-forcing` / `#discussion-identifiability-floor` / `#discussion-separability-pattern`. Newly surfaced in 2026-04-24 audit. **1–2 sessions.**
-- **SP-6 composition-closure consolidation (residue)** — majority absorbed by 2026-04-24 Tier 1 DA2'-inc ≡ (CT2) equivalence. Remaining: scope-statement-level consolidation in `#composition-closure` + scope adjustments in `#team-persistence` / `#composition-consistency` / `#tempo-composition`. **~1 session.**
+- **SP-6 composition-closure consolidation (residue)** — majority absorbed by 2026-04-24 Tier 1 DA2'-inc ≡ (CT2) equivalence. Remaining: scope-statement-level consolidation in `#composition-closure` + scope adjustments in `#team-persistence` / `#postulate-composition-consistency` / `#tempo-composition`. **~1 session.**
 - **O-BP9 typed admissibility for composition** — well-defined, clear Section-III-completion-via-F8 target. 1–2 session scoping spike then 2–3 session execution. **Total 3–5 sessions.**
 
 ### B.3 C-BP1 + C-BP4 bundle — epistemic separation framework + claim-level statuses
@@ -177,7 +177,7 @@ External literature rich: Moran model, replicator-Fokker-Planck (Traulsen-Clauss
 
 ### D.3 G-BP3 — Fisher-information unification of tempo and gain
 
-**Substantively hollowed out.** Original characterization was "essentially all of Section I rewritten around Fisher geometry"; subsequent piecemeal landings absorbed much of the theoretical content — (PI) axiom in `#agent-identity`; Čencov 4th instance in `#additive-coordinate-forcing`; `#fisher-whitened-update-rule`; `#contraction-template`; `#bias-bound-derivation` Track 2. What remains is organization-not-derivation: "organize existing Fisher-related landings into a unified Section I framing" rather than "introduce Fisher geometry into Section I."
+**Substantively hollowed out.** Original characterization was "essentially all of Section I rewritten around Fisher geometry"; subsequent piecemeal landings absorbed much of the theoretical content — (PI) axiom in `#scope-agent-identity`; Čencov 4th instance in `#additive-coordinate-forcing`; `#fisher-whitened-update-rule`; `#contraction-template`; `#bias-bound-derivation` Track 2. What remains is organization-not-derivation: "organize existing Fisher-related landings into a unified Section I framing" rather than "introduce Fisher geometry into Section I."
 
 **Scoping spike essential** before any rewrite: does `#adaptive-tempo`'s current scalar form cleanly fit the natural-gradient picture, or does it generalize beyond Fisher? The proposal's strong-unification thesis may not survive contact with current settled machinery (specifically `#adaptive-gain-dynamics`'s (MG-1)–(MG-4) meta-gain generalizes beyond Fisher-metric special case).
 
@@ -205,7 +205,7 @@ AAD's scope-condition presupposes an agent exists. Section I does not cover the 
 
 **Primary aspect: completeness. Secondary: reach.** **Value: +5 for AAD-core / +7 for `04-logozoetic-agents/` where it unblocks the hardest subproject.** Not urgent at AAD level; genuinely load-bearing at logozoetic level.
 
-**Independence: high.** New foundational segment either in `01-aad-core/` (at the scope-condition boundary) or in `04-logozoetic-agents/`. Minimal conflict with existing in-flight work; primarily adds content rather than rewriting. Scoping decision (AAD-core vs. logozoetic-core) affects independence slightly — if placed in AAD-core, lightly conflicts with `#scope-agency` and `#agent-identity`; if placed in logozoetic-core, fully independent from all AAD-core work.
+**Independence: high.** New foundational segment either in `01-aad-core/` (at the scope-condition boundary) or in `04-logozoetic-agents/`. Minimal conflict with existing in-flight work; primarily adds content rather than rewriting. Scoping decision (AAD-core vs. logozoetic-core) affects independence slightly — if placed in AAD-core, lightly conflicts with `#scope-agency` and `#scope-agent-identity`; if placed in logozoetic-core, fully independent from all AAD-core work.
 
 ### D.6 O-BP12 — Resource budget $B_t$ as master variable
 

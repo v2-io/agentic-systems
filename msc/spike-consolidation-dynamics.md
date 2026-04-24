@@ -266,7 +266,7 @@ An AAD segment on consolidation dynamics would predict: *the depth of consolidat
 
 **Slug.** `#consolidation-dynamics`
 
-**Section.** Section I (adaptive systems under uncertainty) — it belongs on the epistemic half. Placement: after `#temporal-nesting`, before `#agent-identity`.
+**Section.** Section I (adaptive systems under uncertainty) — it belongs on the epistemic half. Placement: after `#temporal-nesting`, before `#scope-agent-identity`.
 
 **Type.** `formulation` — it names a regime and characterizes its objective; it is not derived from more primitive AAD elements but connects them.
 

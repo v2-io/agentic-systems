@@ -86,7 +86,7 @@ This is structurally parallel to the single-agent case:
 - Class 2 (merged) agents violate directed separation by construction → composed agents with goal-dependent routing violate it at the composite level
 - Class 3 (partially modular) → composed agents with fixed routing but environmental coupling approximately satisfy it
 
-The architectural classification (#directed-separation, working notes) **lifts to composition**. This is satisfying — the same structural distinction applies at every level, consistent with #composition-consistency's requirement.
+The architectural classification (#directed-separation, working notes) **lifts to composition**. This is satisfying — the same structural distinction applies at every level, consistent with #postulate-composition-consistency's requirement.
 
 ### Implications for Section III
 

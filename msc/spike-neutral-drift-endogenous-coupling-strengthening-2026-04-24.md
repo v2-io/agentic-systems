@@ -3,7 +3,7 @@
 **Date**: 2026-04-24
 **Status**: Exploratory strengthening spike. Prompted by Gemini's reiteration of the "neutral drift / endogenous $\gamma$" gap (after reading `msc/spike-neutral-drift-lyapunov.md` and prior snapshot of Section III).
 **Prior art in-project**: `msc/spike-neutral-drift-lyapunov.md` (the original framing of the gap); `msc/spike-miller-act-bridge.md`; `msc/spike-kappa-hb-operationalization.md`; `msc/spike-kappa-topology-insight.md`.
-**Segments most relevant to this spike** (post-2026-04-23 state, which is AFTER Gemini's snapshot): `#agent-opacity` (new), `#interaction-channel-classification` (new), `#critical-mass-composition` (new), `#agent-identity` with (PI), `#discussion-identifiability-floor` (including Instance 3 composition-layer), `#loop-interventional-access`, `#agent-spectrum`, `#multi-agent-scope`.
+**Segments most relevant to this spike** (post-2026-04-23 state, which is AFTER Gemini's snapshot): `#agent-opacity` (new), `#interaction-channel-classification` (new), `#critical-mass-composition` (new), `#scope-agent-identity` with (PI), `#discussion-identifiability-floor` (including Instance 3 composition-layer), `#loop-interventional-access`, `#agent-spectrum`, `#multi-agent-scope`.
 
 **Brief for the reader:** the gap alleged is that AAD's Lyapunov-persistence machinery uses only behavioral observables $(\alpha, \rho, R)$, so two architecturally different agents with identical behavioral signatures in the current regime are formally indistinguishable — AAD is "blind to neutral drift." Coupling coefficients $\gamma$ are treated as exogenous, blocking a model of niche creation. This spike attempts to *strengthen* rather than soften: derive what AAD can see, name the precise observability conditions under which it cannot, and propose segment-level moves.
 
@@ -169,7 +169,7 @@ On the manifold of agent types (parameterized update rules), two behaviorally-eq
 
 ### D.2 Existing AAD anchoring
 
-The 2026-04-23 cycle landed (PI) — parameterization-invariance — in `#agent-identity` and Čencov's uniqueness theorem as the fourth primary instance of `#additive-coordinate-forcing`. The Fisher information metric is therefore the unique (up to affine) AAD-natural metric on statistical-manifold sub-cases of $M_t$. The construction this spike needs is available.
+The 2026-04-23 cycle landed (PI) — parameterization-invariance — in `#scope-agent-identity` and Čencov's uniqueness theorem as the fourth primary instance of `#additive-coordinate-forcing`. The Fisher information metric is therefore the unique (up to affine) AAD-natural metric on statistical-manifold sub-cases of $M_t$. The construction this spike needs is available.
 
 *[Claim-tier: derived for linear-Gaussian and exp-family sub-scope; robust qualitative in transfer.]*
 
@@ -271,9 +271,9 @@ Regime classification requires the observer to have *its own* model of the recip
 
 ### G.1 The brief's challenge
 
-Can population variables be introduced as a compatible secondary layer (meta-machine; Miller) without violating `#agent-identity`'s singular-trajectory scope?
+Can population variables be introduced as a compatible secondary layer (meta-machine; Miller) without violating `#scope-agent-identity`'s singular-trajectory scope?
 
-### G.2 What `#agent-identity` actually says
+### G.2 What `#scope-agent-identity` actually says
 
 The segment's scope commitment is load-bearing *for predictions about the token agent's dynamics*. It does not forbid a meta-theory in which tokens are distributed and the distribution has its own dynamics — it says AAD's formal apparatus does not presently cover that. The "What the scope excludes" list includes "Agents conceived as type/equivalence-class entities" as out-of-scope without the additional machinery.
 
@@ -302,7 +302,7 @@ The correct segment-level move is to state: *AAD's token-level machinery does no
 
 ### G.6 Outcome of G
 
-**Permissive strengthening with an explicit scope-gate.** Population layer is admissible, is compatible with singular-trajectory scope, and is the natural home for Phase 4 niche-creation dynamics. AAD does not need to reject the population layer — it needs to state that the population layer is a compatible but not currently formalized extension. This is a segment-level addition to `#agent-identity` or `#multi-agent-scope`, not a theorem.
+**Permissive strengthening with an explicit scope-gate.** Population layer is admissible, is compatible with singular-trajectory scope, and is the natural home for Phase 4 niche-creation dynamics. AAD does not need to reject the population layer — it needs to state that the population layer is a compatible but not currently formalized extension. This is a segment-level addition to `#scope-agent-identity` or `#multi-agent-scope`, not a theorem.
 
 ---
 
@@ -357,7 +357,7 @@ These are explicit to-dos for a follow-up promotion-directed spike.
 2. **§2 / Attempt B**: $H_b$'s horizon-indexing separates Miller's Phase 2–3 drift variants from the incumbent under out-of-regime horizon observation. *Robust qualitative with explicit scope limit.*
 3. **§5 / Attempt E**: Reduction of neutral-drift detection to a Pearl-Level-2 task, with `#loop-interventional-access` as unique broadly-available escape. *Robust qualitative; pattern-match solid; formal Instance-N tightening deferred to follow-up.*
 4. **§6 / Attempt F**: Confirmation that `#interaction-channel-classification`'s regime-histogram already provides a filter-signature separating architectural variants within $(\alpha, R)$-equivalence. *Derived from the segment's existing machinery.*
-5. **§7 / Attempt G**: Population-layer compatibility with `#agent-identity`'s singular-trajectory scope; identification of niche-creation as the natural Phase 4 extension target. *Scope-level, permissive with explicit exit.*
+5. **§7 / Attempt G**: Population-layer compatibility with `#scope-agent-identity`'s singular-trajectory scope; identification of niche-creation as the natural Phase 4 extension target. *Scope-level, permissive with explicit exit.*
 6. **§8 / Synthesis**: Candidate fourth `#discussion-identifiability-floor` instance articulated at pattern level, matching the five-element shape of Instances 1–3.
 
 ### 9.2 What was not strengthened
@@ -423,9 +423,9 @@ Ordered by what carries the most theoretical consequence, not by effort.
 
 *Load-bearing*: Moderate. Tightens Instance 3's escape (b) from structural-admissibility to quantitatively-operational.
 
-### 10.5 Population-layer scope extension in `#agent-identity`
+### 10.5 Population-layer scope extension in `#scope-agent-identity`
 
-*Segment*: `#agent-identity`, Discussion section.
+*Segment*: `#scope-agent-identity`, Discussion section.
 
 *Content*: Explicit statement that singular-trajectory scope at the token level is compatible with a meta-theoretic population layer in which tokens are instances with their own dynamics; such a layer is out of AAD's current formal scope and is the natural home for phenomena (Phase 4 niche creation, selection dynamics, variant introduction) that require population-level state. This is already implicit in the existing "What the scope excludes" list; the strengthening move is to make it explicit that the exclusion is a deferred extension, not a rejection.
 

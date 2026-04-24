@@ -23,6 +23,32 @@ See `TODO.md §"Active — Naming Discipline"` for the surrounding strategic pla
 Seven slug changes total, one of which (scope-condition) was a 1:2 semantic split.
 Nine total segment files moved or created; 01-aad-core lint-clean after every step.
 
+## Landed — first align-slug batch (2026-04-24)
+
+Three pure-prefix alignments landed via `bin/align-slug`, validating the wrapper and extending the role-prefix discipline to representative segments of three type categories.
+
+| Date       | Old slug                  | New slug                            | Type      | Executed by       |
+|------------|---------------------------|-------------------------------------|-----------|-------------------|
+| 2026-04-24 | `agent-identity`          | `scope-agent-identity`              | scope     | `bin/align-slug`  |
+| 2026-04-24 | `composition-consistency` | `postulate-composition-consistency` | postulate | `bin/align-slug`  |
+| 2026-04-24 | `mismatch-decomposition`  | `result-mismatch-decomposition`     | result    | `bin/align-slug`  |
+
+All three: pure role-prefix add (subject-noun preserved); H1 and formal tags updated by hand.
+
+## Candidates — pending role-prefix alignment
+
+Not yet aligned; align-slug will handle each mechanically. Pure prefix add for all:
+
+- `sector-condition-stability` (type=result) → `result-sector-condition-stability`
+- `mismatch-dynamics` (type=hypothesis) → `hypothesis-mismatch-dynamics`
+- `recursive-update` (type=derived) → `derived-recursive-update`
+- plus the remaining ~110 unprefixed slugs; a future dedicated cycle runs `bin/align-slug --all` once the TYPE_TO_PREFIX mapping is finalized and segments' `type:` frontmatter is audited for correctness.
+
+Separately-deferred (subject-noun changes, not pure prefix — belong to refined Round 1 / Round 2):
+
+- `graph-structure-uniqueness` → `#derivation-strategy-dag-sufficiency` (subject-noun substitution from "graph-structure-uniqueness" to "strategy-dag-sufficiency").
+- `recursive-update-derivation` — pure prefix would yield `derivation-recursive-update-derivation` (awkward trailing "derivation"); wants subject-noun cleanup first.
+
 ## Deferred to refined Round 1 / Round 2
 
 Subject-noun substitutions on the three meta-segments surfaced in Round 1 as

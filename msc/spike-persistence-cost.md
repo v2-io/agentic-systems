@@ -408,7 +408,7 @@ $$\dot R_{\min} = n\alpha/2\text{ nats per unit time}$$
 - Martins, N. C. & Dahleh, M. A. 2008. "Feedback Control in the Presence of Noisy Channels: 'Bode-Like' Fundamental Limitations of Performance." *IEEE Trans. Automatic Control* 53(7):1604–1615. *(Information-theoretic Bode integral.)*
 
 **AAD segments cited.**
-- #persistence-condition, #sector-condition-stability, #sector-condition-derivation, #sector-persistence-template, #gain-sector-bridge, #update-gain, #adaptive-tempo, #model-class-fitness, #structural-adaptation-necessity, #mismatch-decomposition, #discussion-separability-pattern, #discussion-identifiability-floor, #additive-coordinate-forcing.
+- #persistence-condition, #sector-condition-stability, #sector-condition-derivation, #sector-persistence-template, #gain-sector-bridge, #update-gain, #adaptive-tempo, #model-class-fitness, #structural-adaptation-necessity, #result-mismatch-decomposition, #discussion-separability-pattern, #discussion-identifiability-floor, #additive-coordinate-forcing.
 
 ---
 

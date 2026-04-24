@@ -3,7 +3,7 @@ slug: bias-bound-derivation
 type: derivation
 status: conditional
 depends:
-  - agent-identity
+  - scope-agent-identity
   - discussion-additive-coordinate-forcing
   - directed-separation
   - information-bottleneck
@@ -13,7 +13,7 @@ stage: draft
 
 # Derivation: Bias-Bound Constant $C$ for Class-2 Agent Observation-Ambiguity Modulation
 
-The observation-ambiguity bias bound carried by Class-2 (fully-coupled) agents in the logogenic-agents scope — $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$ ([#observation-ambiguity-modulation](../../03-logogenic-agents/src/observation-ambiguity-modulation.md), [#section-ii-survival](../../03-logogenic-agents/src/section-ii-survival.md)) — previously treated the constant $C$ as "domain-dependent" and the bound as "order-of-magnitude guidance, not a theorem." This appendix derives $C$ under two named sub-scopes, records a no-go showing that $C$ cannot be universal without the (PI) parameterization-invariance axiom of [#agent-identity](agent-identity.md), and documents two failed derivation routes so future agents do not repeat them.
+The observation-ambiguity bias bound carried by Class-2 (fully-coupled) agents in the logogenic-agents scope — $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$ ([#observation-ambiguity-modulation](../../03-logogenic-agents/src/observation-ambiguity-modulation.md), [#section-ii-survival](../../03-logogenic-agents/src/section-ii-survival.md)) — previously treated the constant $C$ as "domain-dependent" and the bound as "order-of-magnitude guidance, not a theorem." This appendix derives $C$ under two named sub-scopes, records a no-go showing that $C$ cannot be universal without the (PI) parameterization-invariance axiom of [#scope-agent-identity](agent-identity.md), and documents two failed derivation routes so future agents do not repeat them.
 
 ## Formal Expression
 
@@ -25,7 +25,7 @@ $$\Delta M_{\text{bias}} := f_X^M(X_{\tau^-}, e_\tau) - f_M(M_{\tau^-}, e_\tau)$
 
 **Pre-strengthening type audit.** For the bound "$\lVert \Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot I$" to be well-typed:
 
-1. **Norm on $\mathcal M$.** The LHS is a norm on model-space. $\mathcal M$ is the model space of [#agent-model](agent-model.md). Three candidate norms: Euclidean on parameters, total variation on induced measures, Fisher-Rao geodesic distance. **Under the (PI) parameterization-invariance axiom in [#agent-identity](agent-identity.md)** (fourth primary instance of [#discussion-additive-coordinate-forcing](additive-coordinate-forcing.md)), Euclidean-on-parameters is a coordinate artifact and Fisher-Rao is the canonical AAD-invariant choice on statistical-manifold sub-cases of $\mathcal M$ (Čencov 1982 uniqueness).
+1. **Norm on $\mathcal M$.** The LHS is a norm on model-space. $\mathcal M$ is the model space of [#agent-model](agent-model.md). Three candidate norms: Euclidean on parameters, total variation on induced measures, Fisher-Rao geodesic distance. **Under the (PI) parameterization-invariance axiom in [#scope-agent-identity](agent-identity.md)** (fourth primary instance of [#discussion-additive-coordinate-forcing](additive-coordinate-forcing.md)), Euclidean-on-parameters is a coordinate artifact and Fisher-Rao is the canonical AAD-invariant choice on statistical-manifold sub-cases of $\mathcal M$ (Čencov 1982 uniqueness).
 
 2. **Regularity of $f_X^M$.** For the bound to be a theorem, $f_X^M$ must satisfy some regularity. The Bayesian-posterior model (prior + likelihood reweighting) is the canonical working class; it covers the attention-reweighting mechanism typical of Class-2 architectures to leading order.
 
@@ -83,7 +83,7 @@ $$\boxed{\;\mathbb E\bigl[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{d
 
 **Named sub-scope (H1 + H4).**
 
-- **(H1) Statistical-manifold sub-case** — as in §2. Under the (PI) parameterization-invariance axiom of [#agent-identity](agent-identity.md), Čencov's 1982 uniqueness theorem (*Statistical Decision Rules and Optimal Inference*, AMS) forces the Fisher information metric as the canonical Riemannian metric on $\mathcal M$ up to global scale (Ay, Jost, Lê & Schwachhöfer 2017 *Information Geometry*, Theorem 5.1).
+- **(H1) Statistical-manifold sub-case** — as in §2. Under the (PI) parameterization-invariance axiom of [#scope-agent-identity](agent-identity.md), Čencov's 1982 uniqueness theorem (*Statistical Decision Rules and Optimal Inference*, AMS) forces the Fisher information metric as the canonical Riemannian metric on $\mathcal M$ up to global scale (Ay, Jost, Lê & Schwachhöfer 2017 *Information Geometry*, Theorem 5.1).
 - **(H4) Small-information regime.** $I(G; \Omega_\tau \mid e_\tau, M_{\tau^-}) \ll 1$ nat. The second-order Taylor expansion of KL at coincident distributions is sharp.
 
 **Step 1 — KL-to-Fisher-squared-distance identity.** For nearby distributions $P$, $Q$ on a statistical manifold with Fisher metric $\mathbf I$, the KL divergence admits the second-order expansion
@@ -170,7 +170,7 @@ The pattern shared across (F1) and (F2): **information-theoretic source-coding t
 | (F2) Rate-distortion inversion fails | Problem-structure mismatch (source-coding theorem cannot yield side-information injection bound) | Recorded failure |
 | Gaussian worked example with explicit $C_{W_2}$ and $C_{FR}$ | Conjugate-Gaussian direct computation | Exact under specified assumptions |
 
-The dividing line: both tracks are derived theorems under named hypotheses; the hypotheses (LSI, Lipschitz-posterior, small-$I$, statistical-manifold sub-case, (PI) adoption) are either standard mathematical regularity (LSI, Lipschitz-posterior) or AAD-internal axioms ((PI), already adopted in [#agent-identity](agent-identity.md) and elevated to fourth primary instance of [#discussion-additive-coordinate-forcing](additive-coordinate-forcing.md)). The no-go §4 justifies the (PI) commitment as load-bearing rather than coincidental. The failed attempts §5 document structural reasons two alternative routes cannot work, preventing future re-attempts.
+The dividing line: both tracks are derived theorems under named hypotheses; the hypotheses (LSI, Lipschitz-posterior, small-$I$, statistical-manifold sub-case, (PI) adoption) are either standard mathematical regularity (LSI, Lipschitz-posterior) or AAD-internal axioms ((PI), already adopted in [#scope-agent-identity](agent-identity.md) and elevated to fourth primary instance of [#discussion-additive-coordinate-forcing](additive-coordinate-forcing.md)). The no-go §4 justifies the (PI) commitment as load-bearing rather than coincidental. The failed attempts §5 document structural reasons two alternative routes cannot work, preventing future re-attempts.
 
 ## Epistemic Status
 

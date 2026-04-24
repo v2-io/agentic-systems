@@ -109,12 +109,12 @@ Twelve parallel research spikes against two gaps surfaced in Gemini's audit: (A)
 
 **Four structural additions to existing meta-architecture:**
 - Instance 3 in `#discussion-identifiability-floor` (composition-layer no-go via Liberzon 2003 common-Lyapunov nonexistence)
-- Fourth primary instance in `#additive-coordinate-forcing` (Čencov-invariance at metric layer under the new (PI) axiom in `#agent-identity`; 1-anchor-plus-2-theorem → 1-anchor-plus-3-theorem)
+- Fourth primary instance in `#additive-coordinate-forcing` (Čencov-invariance at metric layer under the new (PI) axiom in `#scope-agent-identity`; 1-anchor-plus-2-theorem → 1-anchor-plus-3-theorem)
 - Seventh ladder in `#discussion-separability-pattern` (A2'-scope metric-α₁/α₂/β)
 - (C-iv) scope route in `#scope-composite-agent`
 
 **Two new commitments:**
-- **(PI) parameterization-invariance axiom** adopted as natural extension of `#agent-identity`'s singular-trajectory commitment: AAD's predictions should not depend on arbitrary choice of coordinates on $M_t$.
+- **(PI) parameterization-invariance axiom** adopted as natural extension of `#scope-agent-identity`'s singular-trajectory commitment: AAD's predictions should not depend on arbitrary choice of coordinates on $M_t$.
 - **Monotone-operator-theory lineage** (Rockafellar 1970 / Bauschke-Combettes 2017) explicitly acknowledged in `#sector-persistence-template` and `#sector-condition-derivation` — AAD is a specialization (one-point anchoring; Model D/S decomposition; identifiability-floor composition; composition-consistency; α/β epistemic labeling are AAD-distinctive).
 
 Segment count: 103 → 109. Thirteen spike files retained in `msc/` as reasoning trails.
@@ -161,7 +161,7 @@ Nine commits: `0a772d2`, `c1d9fcf`, `2980327`, `f70fb68`, `80b40d2`, `d0373fc`, 
 
 5. **Citation audit** (completed 2026-04-23 in commits `7456ec3`, `6567914`, `f61e62f`): three wrong attributions in the reverse-KL work were corrected (Csiszár 1972 / Amari 2009 Theorem 1 / Amari-Cichocki 2010 Prop 3.2 → Hobson 1969 / Csiszár 1991 / Shore-Johnson 1980 / Aczél-Daróczy 1975). Project-wide audit subsequently ran across all AAD and TST segments — **zero confirmed attribution errors found elsewhere**; reverse-KL's 20-25% rate was a local concentration, not representative. PDF-level verification confirmed Bruineberg 2022's "Pearl-blanket vs Friston-blanket" is verbatim terminology (not AAD paraphrase), Bareinboim CHT = Theorem 1 p.22 of 2022 ACM Books chapter, Aguilera 2022's FEP-narrow-validity claim exactly matches AAD's usage. 5 missing-citation gaps hardened (Tikhonov, Chechik full, Doob-Dynkin, Cox, Cramér). 26 PDFs acquired and canonically named in `ref/`, then **excluded from git** (redistribution rights); `ref/INDEX.md` is the tracked bibliography.
 
-6. **Additional framing moves**: `#agent-identity` promoted to formal scope statement (Section II scope commitment grounds `#loop-interventional-access`); TST reframed as "privileged high-identifiability calibration laboratory" (not "richest operationalization domain"); O-BP14 derivation-table convention landed with applications to five derivation segments.
+6. **Additional framing moves**: `#scope-agent-identity` promoted to formal scope statement (Section II scope commitment grounds `#loop-interventional-access`); TST reframed as "privileged high-identifiability calibration laboratory" (not "richest operationalization domain"); O-BP14 derivation-table convention landed with applications to five derivation segments.
 
 ---
 

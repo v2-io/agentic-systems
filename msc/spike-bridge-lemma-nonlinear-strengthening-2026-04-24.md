@@ -16,7 +16,7 @@ relates_to:
   - discussion-identifiability-floor
   - discussion-separability-pattern
   - additive-coordinate-forcing
-  - agent-identity
+  - scope-agent-identity
   - msc/spike-bridge-lemma-contraction.md
   - msc/spike-contraction-metric-generalization.md
   - msc/spike-gain-sector-bridge-nonlinear.md
@@ -33,7 +33,7 @@ relates_to:
 
 **Is the Gemini pressure point dissolved, partially addressed, or still biting?**
 
-**Partially addressed. It still bites, but the locus has moved.** The 2026-04-23 `#contraction-template` landing substantially closed the *cooperative nonlinear* half of the gap by providing explicit Jacobian-level / metric-contraction conditions (CT2) under which sector-bounded correction does imply full-update-map contraction, with topology-indexed closure (parallel / cascade / negative-feedback / (CM2-M)) for composition. Under the (PI) axiom in `#agent-identity` and the Čencov uniqueness theorem, two of five metric-α₂ classes (information-metric Kalman, Fisher-metric exponential families) lift to AAD-internally derived. Three metric-α₂ classes (Hessian / Lyapunov-linear-Hurwitz / Lyapunov-PID-bounded-plant) remain theorem-imported from Lohmiller-Slotine 1998 with honest labeling.
+**Partially addressed. It still bites, but the locus has moved.** The 2026-04-23 `#contraction-template` landing substantially closed the *cooperative nonlinear* half of the gap by providing explicit Jacobian-level / metric-contraction conditions (CT2) under which sector-bounded correction does imply full-update-map contraction, with topology-indexed closure (parallel / cascade / negative-feedback / (CM2-M)) for composition. Under the (PI) axiom in `#scope-agent-identity` and the Čencov uniqueness theorem, two of five metric-α₂ classes (information-metric Kalman, Fisher-metric exponential families) lift to AAD-internally derived. Three metric-α₂ classes (Hessian / Lyapunov-linear-Hurwitz / Lyapunov-PID-bounded-plant) remain theorem-imported from Lohmiller-Slotine 1998 with honest labeling.
 
 What this spike adds, beyond that prior landing:
 
@@ -62,7 +62,7 @@ Gemini's finding, restated: the **Sector-Lyapunov Bridge Lemma** asserts that a 
 - `#contraction-template` (Lohmiller-Slotine generalization) landed with preconditions (CT1)–(CT3) + (M0) and Model-D / Model-S ultimate-bound results. The Jacobian-level condition (CT2) with $M=I$ is *equivalent* to `#composition-closure`'s DA2'-inc for $C^1$ $F$ on convex domains (a structural identity, standard in monotone-operator theory). This means **AAD has been carrying the Jacobian-level condition at the composite level all along** under the DA2'-inc name; the spike that produced `#contraction-template` explicitly stated this (§1.2 of `msc/spike-contraction-metric-generalization.md`).
 - Monotone-operator lineage (Rockafellar 1970 / Bauschke-Combettes 2017) acknowledged in `#sector-persistence-template` and `#sector-condition-derivation` — AAD's sector condition (T2) is one-point strong monotonicity at the equilibrium; DA2'-inc is full two-point strong monotonicity; Bauschke-Combettes §§22–28 supplies the perturbation / splitting / averaging theorems.
 - A2' sub-scope partition refined into metric-α₁ / metric-α₂ / metric-β as the seventh ladder of `#discussion-separability-pattern`. Metric-α₁ (Euclidean): Kalman-scalar, Euclidean strongly-convex-gradient, L2-regularized, linear-PD-symmetric. Metric-α₂ (non-Euclidean): information-metric matrix Kalman, Fisher-metric exp-family, Hessian-metric strongly-convex, Lyapunov-metric linear-Hurwitz-non-symmetric, Lyapunov-metric PID-bounded-plant.
-- **(PI) parameterization-invariance axiom** added to `#agent-identity`. Via Čencov 1982 (unique Fisher metric under sufficient-statistic invariance on statistical manifolds), two metric-α₂ classes (information-metric Kalman, Fisher-metric exp-family) lift to AAD-internally derived. This is `#additive-coordinate-forcing`'s fourth primary instance — via the Čencov-uniqueness family rather than the Cauchy-FE family.
+- **(PI) parameterization-invariance axiom** added to `#scope-agent-identity`. Via Čencov 1982 (unique Fisher metric under sufficient-statistic invariance on statistical manifolds), two metric-α₂ classes (information-metric Kalman, Fisher-metric exp-family) lift to AAD-internally derived. This is `#additive-coordinate-forcing`'s fourth primary instance — via the Čencov-uniqueness family rather than the Cauchy-FE family.
 - Section III composition under (CM2-M): Slotine 2003 negative-feedback small-gain gives the heterogeneous dyad closed form $(\lambda_1 - C_1)(\lambda_2 - C_2) > k_{12}k_{21}/4$, already folded into `#critical-mass-composition`.
 
 ### 1.2 Where the pressure point still bites — precise residual
@@ -471,7 +471,7 @@ The strengthen-first posture succeeds for three of six residuals (R1 Euclidean v
 
 - **Relation to `#dissipativity-template` candidate.** `msc/spike-passivity-composition.md` §9 recommends this as a substantive landing. This spike concurs and adds the Class 1/2/3 port-structure reading (§2.5) to the content. If `#dissipativity-template` is landed, it should include the port-structure reading.
 - **Relation to `#operator-sector-template` candidate.** `msc/spike-operator-sector-unification.md` §10 considers a fourth meta-segment (alongside `#discussion-separability-pattern`, `#discussion-identifiability-floor`, `#additive-coordinate-forcing`) for the operator-sector / monotone-operator lineage. That decision is orthogonal to this spike's recommendations; the operator-sector spike already recommends a "modest landing" (edits to existing segments) rather than a new meta-segment.
-- **Heredity axiom decision.** Angle 1 of `msc/spike-jacobian-b1-strengthening.md` remains the most ambitious strengthening; it would lift B1* at the agent level to AAD-internally forced under a stronger-form `#composition-consistency`. This spike does not re-litigate that decision. If heredity is adopted, the three non-statistical metric-α₂ classes promote; until then, they stay theorem-imported.
+- **Heredity axiom decision.** Angle 1 of `msc/spike-jacobian-b1-strengthening.md` remains the most ambitious strengthening; it would lift B1* at the agent level to AAD-internally forced under a stronger-form `#postulate-composition-consistency`. This spike does not re-litigate that decision. If heredity is adopted, the three non-statistical metric-α₂ classes promote; until then, they stay theorem-imported.
 - **Connection to `#update-gain` / `#adaptive-gain-dynamics`.** The augmented-state construction that `#adaptive-gain-dynamics` uses for gain-state coupling (MG-1)–(MG-4) has a structural analog for metric-state coupling under adaptive-metric algorithms. A cross-reference between `#contraction-template` and `#adaptive-gain-dynamics` would close §6.5.
 - **iISS vs dissipativity.** Both apparatuses handle inputs-to-states stability, but via different mathematical routes (Lyapunov-via-trajectory-difference vs storage-function-inequality). For AAD-internal use, iISS is closer to `#contraction-template` (differential Lyapunov); dissipativity is closer to `#dissipativity-template` (storage + supply rate). The two should cohere at landing; this spike treats them in separate routes (§2, §4) without forcing coherence, leaving that to segment-level landing.
 - **(PI) axiom limits.** The (PI) axiom lifts the two statistical metric-α₂ classes. Extending it to non-statistical metric-α₂ via a broader invariance principle (e.g., Lie-group invariance under the agent's symmetry group) is speculative and not pursued here.
@@ -515,7 +515,7 @@ The strengthen-first posture succeeds for three of six residuals (R1 Euclidean v
 - Rosen, J. B. (1965). "Existence and uniqueness of equilibrium points for concave n-person games." *Econometrica* 33(3):520–534.
 
 **AAD segments referenced:**
-`#sector-persistence-template`, `#contraction-template`, `#composition-closure`, `#critical-mass-composition`, `#scope-composite-agent`, `#gain-sector-bridge`, `#sector-condition-derivation`, `#adaptive-gain-dynamics`, `#discussion-identifiability-floor`, `#discussion-separability-pattern`, `#additive-coordinate-forcing`, `#agent-identity`, `#directed-separation`, `#strategic-composition`, `#adversarial-destabilization`, `#update-gain`.
+`#sector-persistence-template`, `#contraction-template`, `#composition-closure`, `#critical-mass-composition`, `#scope-composite-agent`, `#gain-sector-bridge`, `#sector-condition-derivation`, `#adaptive-gain-dynamics`, `#discussion-identifiability-floor`, `#discussion-separability-pattern`, `#additive-coordinate-forcing`, `#scope-agent-identity`, `#directed-separation`, `#strategic-composition`, `#adversarial-destabilization`, `#update-gain`.
 
 **AAD spike trail:**
 - `msc/spike-bridge-lemma-contraction.md` (2026-04-06) — DA2'-inc identification + Tier 1/2/3.

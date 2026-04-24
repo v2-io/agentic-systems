@@ -479,7 +479,7 @@ Under reframe (A), the meta-pattern's primary-instance count is stable at **four
 - `#chain-confidence-decay` (anchor)
 - `#strategy-cost-regret-bound` (divergence-layer instance)
 - `#edge-update-natural-parameter` (update-layer instance)
-- `#agent-identity` (where (PI) is anchored)
+- `#scope-agent-identity` (where (PI) is anchored)
 - `#gain-sector-bridge` (Fisher-metric cases)
 - `#discussion-identifiability-floor`, `#discussion-separability-pattern` (the sister meta-segments)
 - `msc/spike-ib-purity-strategy-cost-strengthening-2026-04-24.md` (Path 7 source)

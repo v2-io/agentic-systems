@@ -39,7 +39,7 @@ Definitional. This is a scoping choice about the unit of analysis, not a derived
 
 **The refactoring inclusion matters.** By including changes that "alter future implementation time while preserving external behavior," the definition ensures that investments in code quality, naming, structure, and documentation are first-class features subject to the same temporal optimization as user-facing changes. This is not a value judgment about whether refactoring is good — it is a scope decision that brings refactoring under the theory's analysis.
 
-**"As perceived by" is a level-of-description qualifier.** Different agents at different levels of composition ( #composition-consistency) may perceive the same change as different features. A single commit might be part of one feature for the developer and part of a different feature for the product manager. The definition does not privilege one level — the relevant decomposition depends on which agent's temporal optimization is being analyzed. This is consistent with AAD's scale-invariant scope condition.
+**"As perceived by" is a level-of-description qualifier.** Different agents at different levels of composition ( #postulate-composition-consistency) may perceive the same change as different features. A single commit might be part of one feature for the developer and part of a different feature for the product manager. The definition does not privilege one level — the relevant decomposition depends on which agent's temporal optimization is being analyzed. This is consistent with AAD's scale-invariant scope condition.
 
 **The atomic changeset ( #atomic-changeset) operationalizes this definition.** A feature is the conceptual unit; the changeset is its physical manifestation in the codebase.
 

@@ -36,7 +36,7 @@ The gap is that Miller's motif requires the coupling coefficients themselves to 
 
 Not exactly. The sector condition is doing its job -- it characterizes persistence given current parameters. What is missing is a *meta-level* analysis of how the *distribution of agents satisfying the sector condition* affects system robustness to regime change. During neutral drift, every individual agent's persistence analysis is unchanged, but the population's resilience profile shifts because architectural homogeneity is decreasing.
 
-This is a composition-level concern (#composition-consistency), not a single-agent concern. The sector condition operates at the agent level. Miller's motif operates at the population level. AAD's composition framework (Section III) would need to track not just whether composite persistence holds, but how the *diversity of correction architectures* within a composite affects robustness to novel disturbance regimes. This connects to the open question of composition laws.
+This is a composition-level concern (#postulate-composition-consistency), not a single-agent concern. The sector condition operates at the agent level. Miller's motif operates at the population level. AAD's composition framework (Section III) would need to track not just whether composite persistence holds, but how the *diversity of correction architectures* within a composite affects robustness to novel disturbance regimes. This connects to the open question of composition laws.
 
 ## Summary Assessment
 

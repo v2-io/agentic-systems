@@ -1,5 +1,5 @@
 ---
-slug: mismatch-decomposition
+slug: result-mismatch-decomposition
 type: result
 status: exact
 depends:
@@ -16,7 +16,7 @@ Expected squared mismatch decomposes into reducible model error and irreducible 
 
 ## Formal Expression
 
-*[Derived (mismatch-decomposition, Prop 5.1 from TFT)]*
+*[Derived (result-mismatch-decomposition, Prop 5.1 from TFT)]*
 
 For any agent-environment pair within AAD's scope ( #scope-adaptive-system), when observation noise is non-degenerate or the model's predictive mean is misspecified:
 

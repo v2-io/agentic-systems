@@ -252,7 +252,7 @@ Opus applied the same rigorous standard used in the previous audits and rejected
 - L1' unobservable-common-cause identifiability-blocked — refuted (not "open"); `#strategy-dag` + `#discussion-identifiability-floor` Instance 2 give Cramér-Rao
 - $K_c$ timescale ratio in composition-closure — acknowledged; 2026-04-22 repair made $K_c$ explicit
 - Section III's `--GAP--` rows — flagged in OUTLINE, not concealed
-- Logogenic agents out of formal scope of `#agent-identity` — explicit in segment Discussion
+- Logogenic agents out of formal scope of `#scope-agent-identity` — explicit in segment Discussion
 - Pre-compiled controllers (PID, LQR) outside learning-agent scope — acknowledged (F30 sharpens what *isn't* adequate)
 
 Also rejected (by Codex):

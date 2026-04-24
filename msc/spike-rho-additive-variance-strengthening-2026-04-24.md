@@ -44,7 +44,7 @@ The claim to derive: the effective disturbance rate $\rho$ (in rate-squared / va
 
 $$\rho^2 := \nu \cdot \mathbb E[\lVert \delta_t\rVert^2]$$
 
-where $\nu$ is the event rate (per `#adaptive-tempo`). Per `#mismatch-decomposition`, at each $t$:
+where $\nu$ is the event rate (per `#adaptive-tempo`). Per `#result-mismatch-decomposition`, at each $t$:
 
 $$\mathbb E[\lVert\delta_t\rVert^2] = \underbrace{\mathbb E[\lVert\hat o_t - \bar o_t\rVert^2]}_{\text{model error}} + \underbrace{\mathbb E[\operatorname{Var}(o_t\mid\Omega_t, a_{t-1})]}_{\text{observation noise}}$$
 
@@ -107,7 +107,7 @@ measures how much the policy $\pi$ shifts the state distribution into regions wh
 
 - **`#sector-persistence-template` (T3).** The template's Model-S disturbance statistic is $\sigma_\xi^2 = \rho^2/\nu$. (AV) decomposes this into four named sub-contributions; the template is undisturbed but each instantiation now carries a finer-grained $\rho_\xi$ attribution.
 - **`#persistence-cost`.** The information-rate floor $\dot R \geq n\alpha/2$ is insensitive to how $\rho^2$ decomposes — the RDF sees only the composite disturbance statistic. But (AV) predicts that *agent-controllable* reductions in $\Delta^2_{\mathcal M} + \Delta^2_\pi + 2\chi$ translate directly into channel-capacity slack: if $\rho^2$ drops via model/policy improvement, so does the required $\dot R$.
-- **`#mismatch-decomposition`.** (AV) is the rate-level lift of `#mismatch-decomposition`'s per-instant bias-variance identity: the per-instant two-term split (model-error + obs-noise) lifts to a rate-level four-term split (irreducible + model-excess + policy-excess + cross).
+- **`#result-mismatch-decomposition`.** (AV) is the rate-level lift of `#result-mismatch-decomposition`'s per-instant bias-variance identity: the per-instant two-term split (model-error + obs-noise) lifts to a rate-level four-term split (irreducible + model-excess + policy-excess + cross).
 - **`#critical-mass-composition`.** (AV) applied to agent $i$ in a composite yields $\rho_i^2 = \rho_{i,\star}^2 + \Delta^2_{\mathcal M_i} + \Delta^2_{\pi_i} + 2\chi_i$; substitution into (CM2) $(\alpha - C)R \gt \rho + \gamma\mathcal T$ introduces the irreducible-reducible split at the composite level. Useful for diagnosing whether a composite's marginality is due to environment hostility ($\rho_\star^2$ up) or sub-agent weakness ($\Delta^2_{\mathcal M} + \Delta^2_\pi$ up).
 - **`#interaction-channel-classification`.** The regime-typed $\rho_B^{\text{eff}}$ decomposition already has an additive structure with a *negative* Regime-I term. (AV) sits orthogonal: the four regimes (I / II-a / II-b / III) classify events by boundary-crossing, while (AV) decomposes the residual within each regime. Composition: $\rho^2_\text{eff}(\text{Regime I}) = \rho^2_{\star,\text{Regime I}} + \Delta^2_{\mathcal M, \text{Regime I}} + \ldots$ at each regime's scale.
 
@@ -383,7 +383,7 @@ This spike produces math that should land in segments. Per `FORMAT.md`'s "math l
 
 **Depends.**
 
-- `#mismatch-decomposition` (per-instant bias-variance identity)
+- `#result-mismatch-decomposition` (per-instant bias-variance identity)
 - `#mismatch-dynamics` (rate-level disturbance)
 - `#sector-persistence-template` (disturbance statistic interface)
 - `#model-class-fitness` (model-excess contribution)

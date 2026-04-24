@@ -3,7 +3,7 @@ slug: strategic-composition
 type: derivation
 status: conditional
 depends:
-  - composition-consistency
+  - postulate-composition-consistency
   - scope-composite-agent
   - sector-persistence-template
   - objective-functional
@@ -11,7 +11,7 @@ depends:
   - team-persistence
   - critical-mass-composition
   - directed-separation
-  - agent-identity
+  - scope-agent-identity
 stage: draft
 ---
 

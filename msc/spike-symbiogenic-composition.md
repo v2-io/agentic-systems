@@ -96,7 +96,7 @@ Alternative operationalizations candidate for the scope condition:
 
 - **$O_c$ existence**: a composite objective $O_c$ exists such that $\min_i \text{corr}(V_{O_c}, V_{O_i}) \geq \epsilon$.
 - **Mutual-benefit form**: there is a relevance variable $Y$ for which the sub-agents' joint actions collectively raise $\mathbb{E}[Y]$ above the non-cooperation baseline (Miller's IAM form).
-- **Common-parent hierarchical form**: $\{O_i\}$ are derivable from $O_c$ via decomposition consistent with `#composition-consistency`.
+- **Common-parent hierarchical form**: $\{O_i\}$ are derivable from $O_c$ via decomposition consistent with `#postulate-composition-consistency`.
 
 Different operationalizations admit different composites. The scope condition is satisfied if *any* of them applies — the three are progressively weaker routes to the same qualitative requirement.
 

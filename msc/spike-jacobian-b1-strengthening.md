@@ -9,7 +9,7 @@ relates_to:
   - sector-condition-derivation
   - sector-persistence-template
   - composition-closure
-  - composition-consistency
+  - postulate-composition-consistency
   - additive-coordinate-forcing
   - discussion-separability-pattern
   - critical-mass-composition
@@ -103,11 +103,11 @@ This is a substantial architectural move. The question is whether the AAD-intern
 
 ## §2. Angle 1: Composition-consistency forcing
 
-**Claim under test.** `#composition-consistency` requires AAD's machinery to apply at every level; `#composition-closure`'s bridge lemma at the composite level already requires the Jacobian-level condition (DA2'-inc / (CT2) with $M = I$); therefore composition-consistency forces B1\* at the single-agent level as an AAD-internal commitment.
+**Claim under test.** `#postulate-composition-consistency` requires AAD's machinery to apply at every level; `#composition-closure`'s bridge lemma at the composite level already requires the Jacobian-level condition (DA2'-inc / (CT2) with $M = I$); therefore composition-consistency forces B1\* at the single-agent level as an AAD-internal commitment.
 
 ### 2.1 What composition-consistency actually says
 
-`#composition-consistency` (Section I postulate): AAD's predictions at different levels of description must be compatible. `#composition-closure` operationalizes this as: bounded closure defect $\varepsilon^\ast$ under admissible coarse-graining, with composite machinery that *has the same shape* as single-agent machinery (A1–A4 admissibility).
+`#postulate-composition-consistency` (Section I postulate): AAD's predictions at different levels of description must be compatible. `#composition-closure` operationalizes this as: bounded closure defect $\varepsilon^\ast$ under admissible coarse-graining, with composite machinery that *has the same shape* as single-agent machinery (A1–A4 admissibility).
 
 The bridge-lemma content of `#composition-closure` §"Bridge lemma":
 
@@ -131,13 +131,13 @@ Under heredity, the composite-level DA2'-inc must come from agent-level properti
 
 ### 2.4 Is heredity an AAD-internal commitment?
 
-This is the decisive question. `#composition-consistency` states that AAD's machinery should "apply at every level" and be "scale-invariant." `#composition-closure` concedes Tier 1/2/3 — a classification that already tolerates per-composite verification at Tiers 2/3. The honest statement: **heredity is a stronger form of composition-consistency than AAD currently commits to.**
+This is the decisive question. `#postulate-composition-consistency` states that AAD's machinery should "apply at every level" and be "scale-invariant." `#composition-closure` concedes Tier 1/2/3 — a classification that already tolerates per-composite verification at Tiers 2/3. The honest statement: **heredity is a stronger form of composition-consistency than AAD currently commits to.**
 
 Specifically:
 
 - `#composition-closure`'s Tier 1 is the regime where agent-level properties *happen to* give composite-level contraction. The bridge lemma is derived there via the *coincidence* that Tier 1 agents have agent-level Jacobian monotonicity.
 - `#composition-closure`'s Tier 2/3 already concedes that composite-level contraction may require local verification or per-domain argument — i.e., *non*-heredity.
-- `#composition-consistency` as a postulate does not commit to heredity; it commits to level-compatibility as the existence of well-defined projections satisfying (A1)–(A4), (P1)–(P3).
+- `#postulate-composition-consistency` as a postulate does not commit to heredity; it commits to level-compatibility as the existence of well-defined projections satisfying (A1)–(A4), (P1)–(P3).
 
 So heredity is an *upgrade* to composition-consistency, not an *implication* of it. Adopting heredity-as-axiom would promote Tier 1 to "the scope where heredity is clean" and push Tiers 2/3 outside AAD's formal scope rather than inside it as qualified cases.
 
@@ -147,7 +147,7 @@ So heredity is an *upgrade* to composition-consistency, not an *implication* of 
 
 **Angle 1 force-result:** B1\* at the agent level is *equivalent*, under a heredity commitment, to composition-consistency applied at the bridge-lemma level. Stated as a conditional:
 
-> IF `#composition-consistency` is strengthened to the heredity form (composite admissibility derived from agent-level properties without per-composite axioms),
+> IF `#postulate-composition-consistency` is strengthened to the heredity form (composite admissibility derived from agent-level properties without per-composite axioms),
 > THEN agent-level B1\* is AAD-internally forced, via the argument that agent-level B1 is insufficient for composite-level DA2'-inc under parallel composition (§2.2).
 
 The conditional is airtight. The open question is whether AAD is willing to adopt heredity as an axiomatic strengthening of composition-consistency.
@@ -238,7 +238,7 @@ For statistical-manifold agents (exp-family / conjugate Bayesian / Fisher-natura
 
 ### 4.3 Is (PI) AAD-internally motivated?
 
-(PI) is structurally appealing: a theory of adaptive agents should not depend on how a particular agent's state is parameterized — different agents with different internal representations of the same underlying dynamics should satisfy (or fail) B1 uniformly. This sits as an extension of `#agent-identity`'s token-level commitment (agents are defined at the trajectory level, not the parameterization level).
+(PI) is structurally appealing: a theory of adaptive agents should not depend on how a particular agent's state is parameterized — different agents with different internal representations of the same underlying dynamics should satisfy (or fail) B1 uniformly. This sits as an extension of `#scope-agent-identity`'s token-level commitment (agents are defined at the trajectory level, not the parameterization level).
 
 However, (PI) has a critical scope limitation: **Čencov's uniqueness theorem requires the manifold to be a statistical manifold.** For non-statistical agents (PID on a physical plant, rule-based agents, human judgment, generic non-probabilistic dynamics), the Markov-morphism invariance group is not defined, and Čencov does not apply. (PI) then admits a family of invariant metrics (any Riemannian metric invariant under the *dynamics*-preserving transformations, which depend on the agent's specific structure), and the uniqueness collapses.
 
@@ -254,7 +254,7 @@ For the five metric-α₂ cases:
 
 *[Derived (conditional on PI adoption and statistical-manifold scope), tier: robust qualitative, confidence: high for Fisher cases, low for non-Fisher cases]*
 
-**Angle 3 force-result:** (PI) is an AAD-internally motivated axiom candidate (it matches `#agent-identity`'s scope commitment that AAD is agent-trajectory-level, not parameterization-level). Under (PI), Čencov's theorem forces the Fisher metric uniquely **on statistical manifolds**. For the *statistical* metric-α₂ cases (Fisher-metric exp-family, information-metric matrix Kalman), (PI) + Čencov lifts the theorem-import to AAD-internal.
+**Angle 3 force-result:** (PI) is an AAD-internally motivated axiom candidate (it matches `#scope-agent-identity`'s scope commitment that AAD is agent-trajectory-level, not parameterization-level). Under (PI), Čencov's theorem forces the Fisher metric uniquely **on statistical manifolds**. For the *statistical* metric-α₂ cases (Fisher-metric exp-family, information-metric matrix Kalman), (PI) + Čencov lifts the theorem-import to AAD-internal.
 
 **Scope limit.** (PI) does *not* force the coordinate choice for non-statistical metric-α₂ cases (Hessian gradient, Lyapunov linear-Hurwitz, Lyapunov PID-bounded-plant). For these, the metric is selected by problem structure (Hessian of loss, solution of Lyapunov equation) rather than by an invariance group. **Two of five metric-α₂ cases lift under (PI); three stay theorem-imported.**
 
@@ -387,7 +387,7 @@ The Lyapunov case, under `#additive-coordinate-forcing`, is an *adjacent family 
 
 | Angle | AAD-internal axiom | Uniqueness theorem | Coordinate forced? | Structural family |
 |---|---|---|---|---|
-| 1 (composition-consistency forcing) | Heredity commitment (strengthened #composition-consistency) | — (equivalence, not uniqueness) | (CT2) at $M=I$ via composition | Compositional-closure |
+| 1 (composition-consistency forcing) | Heredity commitment (strengthened #postulate-composition-consistency) | — (equivalence, not uniqueness) | (CT2) at $M=I$ via composition | Compositional-closure |
 | 2 (bridge-lemma equivalence) | (Existing) DA2'-inc at composite | — (identity, not uniqueness) | (CT2) at $M=I$ via DA2'-inc equivalence | Converse-Lyapunov existence |
 | 3 (parameterization invariance) | (PI) reparameterization invariance | Čencov 1982 | Fisher metric (statistical manifolds only) | **Uniqueness-theorem-forced under AAD axiom (statistical scope only)** |
 | 4 (incremental-B1) | (M3) monotone convergence to fixed point | — (direct axiom, not uniqueness) | (CT2) at $M=I$ | Converse-Lyapunov existence |
@@ -440,7 +440,7 @@ The honest landing is the **(L2) mixed-lift** outcome anticipated in §1:
 | Incremental B1\* / (CT2) at $M = I$ | DA2'-inc equivalence (Angle 2) | **AAD-internally derived (new — lifted by this spike)** |
 | Fisher-metric / information-metric contraction | (PI) + Čencov uniqueness theorem (Angle 3) | **AAD-internally derived (new — conditional on PI adoption)** |
 | Hessian / Lyapunov-metric contraction (three cases) | (SOC) domain-specific or Lyapunov-equation-from-plant | Theorem-imported from Lohmiller-Slotine with honest labeling |
-| Composition under heredity | Heredity strengthening of `#composition-consistency` (Angle 1) | Conditional lift — load-bearing architectural decision |
+| Composition under heredity | Heredity strengthening of `#postulate-composition-consistency` (Angle 1) | Conditional lift — load-bearing architectural decision |
 | Adversarial dynamics, rule-based, severely-misspecified | Out of metric scope altogether | Remains β |
 
 ### 8.4 Candidate landing for the (B1\*) formulation at segment level
@@ -463,7 +463,7 @@ The spike instructions specified the goal: "if B1* is cleanly AAD-internally mot
 
 ### 9.1 What this spike achieves
 
-1. **Angle 1 — composition-consistency forcing under heredity (conditional positive).** Heredity is a legitimate AAD-internal axiom candidate that would force B1\* at the agent level. It is a strengthening of `#composition-consistency` and is an architectural decision rather than a mathematical necessity.
+1. **Angle 1 — composition-consistency forcing under heredity (conditional positive).** Heredity is a legitimate AAD-internal axiom candidate that would force B1\* at the agent level. It is a strengthening of `#postulate-composition-consistency` and is an architectural decision rather than a mathematical necessity.
 
 2. **Angle 2 — DA2'-inc ≡ (CT2) at $M = I$ (exact equivalence).** AAD already carries the Jacobian-level Euclidean-metric condition at the composite level via DA2'-inc. The equivalence is standard (Rockafellar-Wets, Nesterov) and transfers to AAD without modification. Agent-level B1\* is the natural predecessor at the agent level, with composition-hereditary transfer to the composite.
 
@@ -518,7 +518,7 @@ The spike instructions specified the goal: "if B1* is cleanly AAD-internally mot
 
 **Strongest takeaway.** Angle 2 alone — the DA2'-inc ≡ (CT2)-at-$M=I$ equivalence — is sufficient to lift the **Euclidean metric-α₁** cases to AAD-internally-derived without any architectural commitment beyond what `#composition-closure` already carries. This is a substantive but under-advertised lift: AAD's existing bridge-lemma requirement already commits to the Jacobian-level Euclidean contraction; the spike makes the commitment explicit.
 
-**Strongest single candidate strengthening.** Angle 3's (PI) axiom is the only candidate that clears the 1-anchor-2-theorem discipline in the strict primary-instance sense. Its scope is limited to statistical manifolds, which is exactly where Čencov applies; non-statistical metric-α₂ cases stay theorem-imported. **If AAD is willing to commit to a "parameterization-invariance" axiom as an extension of its existing `#agent-identity` token-level commitment, two metric-α₂ cases (Fisher exp-family, information-metric Kalman) promote to AAD-internally-derived with a clean structural parallel to the Cauchy-FE theorems.**
+**Strongest single candidate strengthening.** Angle 3's (PI) axiom is the only candidate that clears the 1-anchor-2-theorem discipline in the strict primary-instance sense. Its scope is limited to statistical manifolds, which is exactly where Čencov applies; non-statistical metric-α₂ cases stay theorem-imported. **If AAD is willing to commit to a "parameterization-invariance" axiom as an extension of its existing `#scope-agent-identity` token-level commitment, two metric-α₂ cases (Fisher exp-family, information-metric Kalman) promote to AAD-internally-derived with a clean structural parallel to the Cauchy-FE theorems.**
 
 **Strongest architectural-decision strengthening.** Angle 1's heredity commitment is the most ambitious candidate. Its adoption would force agent-level B1\* and lift Tier 1/2/3 composition-closure to a cleaner topology-indexed structure. Its non-adoption leaves `#composition-closure`'s tier structure as the honest scope statement. The trade-off: heredity is load-bearing for generalizing `#critical-mass-composition` (CM2) to (CM2-M) heterogeneous composites; without heredity, (CM2-M) remains theorem-imported from Slotine 2003 §IV.
 
@@ -528,7 +528,7 @@ The spike instructions specified the goal: "if B1* is cleanly AAD-internally mot
 
 1. **Should AAD adopt parameterization-invariance (PI) as an axiom?** If yes, two metric-α₂ cases (Fisher exp-family, information-metric Kalman) lift to AAD-internally-derived as a fourth primary instance of `#additive-coordinate-forcing` (Čencov-invariance family). If no, these stay theorem-imported. This is a distinct axiomatic decision from the chain / divergence / update triple; its adoption would extend `#additive-coordinate-forcing`'s uniqueness-theorem-forced-coordinate mechanism from functional-equation (Cauchy-FE) to invariance-uniqueness (Čencov).
 
-2. **Should AAD adopt heredity as a strengthening of `#composition-consistency`?** If yes, agent-level B1\* is AAD-internally forced, and `#composition-closure`'s Tier 1/2/3 collapses to a cleaner topology-indexed structure. If no, the current Tier structure remains as the honest scope statement. Trade-off: heredity is needed for (CM2-M) heterogeneous composites.
+2. **Should AAD adopt heredity as a strengthening of `#postulate-composition-consistency`?** If yes, agent-level B1\* is AAD-internally forced, and `#composition-closure`'s Tier 1/2/3 collapses to a cleaner topology-indexed structure. If no, the current Tier structure remains as the honest scope statement. Trade-off: heredity is needed for (CM2-M) heterogeneous composites.
 
 3. **Is there a unified AAD-internal axiom covering non-statistical metric-α₂ cases (Hessian, Lyapunov)?** The Hessian case is AAD-motivated via `#gain-sector-bridge`'s gradient-strong-convexity equivalence but not via an invariance axiom. The Lyapunov-metric cases are plant-specific (Hurwitz spectrum, PID nominal design), selected by problem structure rather than by an AAD-internal commitment. An AAD-internal axiom that unifies these cases is open.
 
@@ -551,14 +551,14 @@ Do not modify segments within this spike. The following are *recommendations* fo
 
 ### 11.2 Moderate (adopt PI)
 
-- Add a new formulation segment `#parameterization-invariance` (type: formulation / scope; status: formulation-choice). State (PI) as an invariance commitment motivated as an infinitesimal extension of `#agent-identity`'s token-level commitment. Cite Čencov 1982.
+- Add a new formulation segment `#parameterization-invariance` (type: formulation / scope; status: formulation-choice). State (PI) as an invariance commitment motivated as an infinitesimal extension of `#scope-agent-identity`'s token-level commitment. Cite Čencov 1982.
 - `#additive-coordinate-forcing`: extend the three-instances table to four, adding the Čencov-invariance primary instance. Reframe the meta-pattern description from "Cauchy-FE on additivity axiom" to "uniqueness-theorem-forced coordinate under AAD-internally-motivated axiom" (generalization). Cross-classify the existing three as Cauchy-FE subfamily, new Čencov-invariance as distinct subfamily.
 - `#gain-sector-bridge`: add an "Incremental / Jacobian-level form (B1\*)" subsection in Formal Expression, stating (B1\*) and citing the DA2'-inc equivalence. Status: derived in sub-scope metric-α₁ via Angle 2; derived in sub-scope metric-α₂ under (PI) + Čencov for statistical-manifold agents; theorem-imported for non-statistical metric-α₂.
 - `#contraction-template`: lift statistical metric-α₂ cases to AAD-internally derived under (PI).
 
 ### 11.3 Strong (adopt heredity + PI)
 
-- Strengthen `#composition-consistency` to the heredity form: composite admissibility derivable from sub-agent properties plus topology. Consequence: `#composition-closure`'s Tier 1/2/3 compresses to topology-indexed structure; Tier 2/3 become out-of-scope rather than qualified-in-scope.
+- Strengthen `#postulate-composition-consistency` to the heredity form: composite admissibility derivable from sub-agent properties plus topology. Consequence: `#composition-closure`'s Tier 1/2/3 compresses to topology-indexed structure; Tier 2/3 become out-of-scope rather than qualified-in-scope.
 - Agent-level B1\* becomes AAD-internally forced via Angle 1.
 - `#critical-mass-composition` (CM2-M) promotes to AAD-internally-derived for heterogeneous composites (replacing the current matched-symmetric restriction).
 
@@ -583,7 +583,7 @@ A follow-up spike should assess whether heredity-as-axiom is compatible with AAD
 - Amari, S. & Nagaoka, H. (2000). *Methods of Information Geometry*. AMS / Oxford University Press.
 
 **AAD segments referenced:**
-- `#gain-sector-bridge`, `#sector-condition-derivation`, `#sector-persistence-template`, `#composition-closure`, `#composition-consistency`, `#additive-coordinate-forcing`, `#discussion-separability-pattern`, `#critical-mass-composition`, `#agent-identity`.
+- `#gain-sector-bridge`, `#sector-condition-derivation`, `#sector-persistence-template`, `#composition-closure`, `#postulate-composition-consistency`, `#additive-coordinate-forcing`, `#discussion-separability-pattern`, `#critical-mass-composition`, `#scope-agent-identity`.
 
 **AAD spike trail:**
 - `msc/spike-contraction-metric-generalization.md` (2026-04-22) — §8.2 item 1, §9 question 1: the Jacobian-level B1 open.

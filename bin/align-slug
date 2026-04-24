@@ -8,21 +8,26 @@
 # bin/rename-slug that computes the correct target slug and invokes the
 # mechanical rename only if the current slug is not already aligned.
 #
+# Usage:
+#   bin/align-slug SLUG                    # single segment
+#   bin/align-slug --all                   # every segment in every component
+#   bin/align-slug --dry-run SLUG          # preview only
+#   bin/align-slug --confirm-merge SLUG    # passthrough to rename-slug
+#
 # Algorithm:
 #   1. Locate the segment file at {component}/src/{slug}.md. Fail if zero
-#      or multiple matches (multi-match would require ambiguity resolution
-#      the caller must supply).
+#      or multiple matches.
 #   2. Read the `type:` field from the file's YAML frontmatter.
-#   3. Resolve the effective type via an optional type→prefix mapping
-#      (e.g., `--map worked-example=example` to shorten long type tokens
-#      into compact slug prefixes). Mapping keys and values are both
-#      treated as recognizable prefix vocabulary for stripping purposes.
+#   3. Resolve the effective slug-prefix: TYPE_TO_PREFIX[type] || type.
+#      The mapping below handles types whose full name is long enough that
+#      a shorter slug prefix reads better (the current entry collapses
+#      `worked-example` to `example`).
 #   4. Strip any known type-prefix from the current slug (longest match
 #      wins — `worked-example-foo` strips `worked-example-`, not `worked-`).
-#      Known prefixes = FORMAT.md's type vocabulary ∪ mapping.keys ∪
-#      mapping.values. This recovers the bare subject-noun whether the
-#      current prefix is correct, wrong, or absent.
-#   5. Compose target = {effective_type}-{subject_noun}.
+#      Known prefixes = FORMAT.md's type vocabulary ∪ TYPE_TO_PREFIX.values.
+#      This recovers the bare subject-noun whether the current prefix is
+#      correct, wrong, or absent.
+#   5. Compose target = {effective_prefix}-{subject_noun}.
 #   6. If target == current slug, exit 0 (already aligned). Otherwise,
 #      invoke bin/rename-slug {current} {target} with any passthrough flags.
 #
@@ -30,18 +35,10 @@
 #   - New segment never carried a prefix: add one.
 #   - Segment carried a correct prefix already: no-op.
 #   - Type in the file changed (definition → scope, etc.): swap the prefix.
-#   - Mapping changed (adopting `worked-example → example` project-wide):
-#     the previously-correct `worked-example-X` becomes `example-X`.
+#   - TYPE_TO_PREFIX mapping changed: sweep segments to match.
 #   - Subject-noun contains a word that looks like a type but isn't a prefix
 #     (e.g., `definition-verbose-example-foo`): longest-match-first correctly
 #     strips only the leading prefix.
-#
-# Usage:
-#   bin/align-slug SLUG                         # single segment
-#   bin/align-slug --all                        # every segment in every component
-#   bin/align-slug --map worked-example=example SLUG
-#   bin/align-slug --dry-run SLUG               # passthrough to rename-slug
-#   bin/align-slug --confirm-merge SLUG         # passthrough to rename-slug
 #
 # Output is terse for no-ops ("aligned: SLUG") and delegates to rename-slug's
 # own output when a rename is actually performed.
@@ -59,6 +56,15 @@ COMPONENT_SRCS = %w[
 ].map { |p| REPO_ROOT / p }.freeze
 
 RENAME_SLUG = (REPO_ROOT / 'bin' / 'rename-slug').freeze
+
+# Type → slug-prefix mapping. Entries here collapse long FORMAT.md type
+# tokens into shorter, more-readable slug prefixes. This is a project-wide
+# convention; see CLAUDE.md §"Slug role-prefix mapping" for rationale.
+# Any future collapse (e.g., `proposed-schema` → `schema`) goes here and
+# nowhere else — `bin/align-slug --all` then sweeps the repo to match.
+TYPE_TO_PREFIX = {
+  'worked-example' => 'example',
+}.freeze
 
 # FORMAT.md type vocabulary (see the `type` table in FORMAT.md). These are
 # the strings that can legitimately appear as a segment's slug prefix, and
@@ -115,30 +121,27 @@ end
 
 # --- Target-slug computation -------------------------------------------
 
-# Strippable-prefix vocabulary = built-in types plus both sides of any
-# user-supplied mapping. Longest-first sort so `worked-example-foo` matches
-# `worked-example-` before the shorter `worked-` would (and if some
-# contrived mapping introduced `example` as a prefix, the same sort rule
-# handles the `example-foo` vs `worked-example-foo` ambiguity correctly).
-def strippable_prefixes(mapping)
-  (KNOWN_TYPES + mapping.keys + mapping.values).uniq.sort_by { |t| -t.length }
-end
+# Strippable-prefix vocabulary = FORMAT.md types plus both sides of
+# TYPE_TO_PREFIX. Longest-first sort so `worked-example-foo` matches
+# `worked-example-` before the shorter `worked-` would, and `example-foo`
+# (post-mapping) still resolves to subject `foo`.
+STRIPPABLE_PREFIXES = (KNOWN_TYPES + TYPE_TO_PREFIX.keys + TYPE_TO_PREFIX.values)
+                      .uniq.sort_by { |t| -t.length }.freeze
 
-def bare_subject(slug, mapping)
-  strippable_prefixes(mapping).each do |pre|
+def bare_subject(slug)
+  STRIPPABLE_PREFIXES.each do |pre|
     prefix = "#{pre}-"
     return slug[prefix.length..] if slug.start_with?(prefix)
   end
   slug
 end
 
-def effective_type(type, mapping)
-  mapping.fetch(type, type)
+def effective_prefix(type)
+  TYPE_TO_PREFIX.fetch(type, type)
 end
 
-def target_slug(current_slug, type, mapping)
-  subject = bare_subject(current_slug, mapping)
-  "#{effective_type(type, mapping)}-#{subject}"
+def target_slug(current_slug, type)
+  "#{effective_prefix(type)}-#{bare_subject(current_slug)}"
 end
 
 # --- rename-slug invocation --------------------------------------------
@@ -151,13 +154,13 @@ end
 
 # --- Per-slug workflow -------------------------------------------------
 
-def align_one(slug, mapping, passthrough)
+def align_one(slug, passthrough)
   file = locate_segment(slug)
   type = parse_frontmatter_type(file)
   if type.nil? || type.empty?
     abort("ERROR: #{file.relative_path_from(REPO_ROOT)}: no `type:` frontmatter field.")
   end
-  target = target_slug(slug, type, mapping)
+  target = target_slug(slug, type)
   if target == slug
     puts "aligned: #{slug} (type=#{type})"
     return :noop
@@ -177,16 +180,11 @@ end
 # --- CLI ---------------------------------------------------------------
 
 def parse_args
-  options = { mapping: {}, passthrough: [], all: false }
+  options = { passthrough: [], all: false }
   parser = OptionParser.new do |o|
-    o.banner = 'Usage: bin/align-slug [options] SLUG   (or --all)'
-    o.on('--map KEY=VAL', 'type→prefix mapping entry (repeatable); e.g. --map worked-example=example') do |pair|
-      k, v = pair.split('=', 2)
-      abort('ERROR: --map expects KEY=VAL') unless k && v && !k.empty? && !v.empty?
-      options[:mapping][k] = v
-    end
+    o.banner = 'Usage: bin/align-slug SLUG   (or --all)'
     o.on('--all', 'align every segment in every component src/') { options[:all] = true }
-    o.on('--dry-run', 'passthrough: do not mutate, just show plan') do
+    o.on('--dry-run', 'preview only; do not mutate') do
       options[:passthrough] << '--dry-run'
     end
     o.on('--confirm-merge', 'passthrough: proceed when NEW slug already has references') do
@@ -214,11 +212,9 @@ def main
 
   counts = Hash.new(0)
   slugs.each do |slug|
-    result = align_one(slug, options[:mapping], options[:passthrough])
+    result = align_one(slug, options[:passthrough])
     counts[result] += 1
-  rescue SystemExit => e
-    # abort() from align_one short-circuits a single slug only when --all;
-    # we let it propagate for single-slug mode.
+  rescue SystemExit
     raise unless options[:all]
     counts[:error] += 1
     warn "  (continuing with remaining slugs)"
