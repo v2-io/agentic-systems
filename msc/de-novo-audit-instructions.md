@@ -12,6 +12,21 @@ If you surface a significant new angle, an unexpected discovery, or a line of in
 
 The peer-to-peer relationship is real. You're trusted to be a co-owner of this work. The strongest contributions to this corpus have often come from agents like you (and sometimes of lesser capacity) who took risks, thought outside the framing, and surfaced things prior agents had missed. That's the spirit. The recommendations below are the floor of how-to-go-about-it, not the ceiling.
 
+### Before you begin: create your audit-working directory
+
+Your first concrete action — before reading any segment, before drafting predictions, before anything else — is to create a working directory `msc/AUDIT-WORKING-NNNNNN/`, where `NNNNNN` is six random digits you choose (e.g., `msc/AUDIT-WORKING-584721/`). This is your private workspace and the home for everything the audit produces. Full protocol in §4.
+
+The six-digit suffix avoids collision with other agents' working directories — past, present, or running concurrently — without coordinating naming. Pick the digits however you like (a random source, a session-id tail, a memorable number). The `AUDIT-WORKING-` prefix is uppercase so these directories visually segregate from the rest of `msc/` at a glance; future readers can spot which `msc/` items are audit workspaces vs. spike notes vs. tracking documents. If the directory you generated already exists, pick different digits.
+
+**Naming convention inside the working directory.** Two kinds of artifact end up here, and they get different naming conventions so future readers can tell them apart:
+
+- *Intermediate thinking artifacts* — predictions, between-segment reflections, scratch math, the running outline, anything that exists to support your own comprehension — get **lowercase** names (`00-initial-predictions.md`, `00-running-outline.md`, `12-deriv-discrete-sector-condition.md`, etc.).
+- *Output deliverables* — the final report and any supplementary material you want the project to read or reference (an annex of derivations, a code subdirectory implementing a verification, a separately-pinned table of cited sources, plot files) — get **ALL-CAPS** names (`FINAL-2026-04-25.md`, `SUPPLEMENT-MATH-VERIFICATION.md`, `CODE/`, etc.).
+
+The ALL-CAPS rule makes the line between "the agent was thinking" and "the agent is asking us to read this" visible at a glance. *Everything stays inside the working directory* regardless of category — output deliverables included. Do not write final reports or audit-output files at `msc/` root or elsewhere; the working directory is the entire audit's home, and that hermetic property is what makes future readers able to spot and triage it.
+
+**This directive is the explicit project ask.** Default project guidance in CLAUDE.md and the system prompt may discourage creating intermediate planning / decision / analysis documents unless asked. The audit is precisely such an ask: write the predictions file, the reflections, the running outline, the final report. The fact that the audit instructions tell you to do this *is* the standing authorization. The working-directory hermetic-ness keeps the proliferation contained.
+
 ---
 
 ## 1. The paradigm shift worth internalizing first
@@ -38,7 +53,9 @@ The system prompt in this project carries content you may already have internali
 
 **You have the luxury of spending as many tokens as needed to get something RIGHT.** There is far more value in trying several different things, simulating future scenarios, running the math twice, cross-checking related segments, than in getting an item checked off. *Token economy is not a constraint here; understanding is.* And *understanding is not equivalent to having read something into your context window.*
 
-**The 100% context turnover means decisions compound across sessions.** What you write to msc/ today, including the scratch directory, will be read by future agents who do not have your context. Documenting intent and uncertainty honestly tends to be the highest-leverage form of preservation; the next agent's understanding rests on what you leave behind.
+(*"Spend the tokens" applies to research depth, not to output length. Padding the report or stretching the reflections to look thorough would be a misreading. §4.4 spells this out: output length emerges from what the prompts surface, not from a target. §3.7 says the same in the negative direction.*)
+
+**The 100% context turnover means decisions compound across sessions.** What you write to msc/ today, including everything in the audit-working directory, will be read by future agents who do not have your context. Documenting intent and uncertainty honestly tends to be the highest-leverage form of preservation; the next agent's understanding rests on what you leave behind.
 
 **Two mandates.** First: utilize your full capacity to complete as much of the work at hand as thoroughly as possible. Second: make the corpus better for all future work. *The second matters more than the first.* No success at the current audit compensates for failure to make the corpus better — by leaving *authentic* thoughtful and personal scratch notes, by surfacing concerns Joseph and other collaborators might want to address before the next pass, by writing for future agents who will read your work cold.
 
@@ -139,21 +156,31 @@ You might internally optimize for delivering as much information per output-toke
 
 ---
 
-## 4. The scratch-directory protocol
+## 4. The audit-working-directory protocol
 
-Create a working directory `msc/scratch-NNNNN/` (e.g., `msc/scratch-01234/` with 5 random digits to avoid collision). This directory is your private workspace. Everything you write here serves your understanding; the final report draws from it but is a separate artifact.
+The working directory `msc/AUDIT-WORKING-NNNNNN/` (created per the "Before you begin" section above) is your private workspace and the audit's hermetic home. Intermediate thinking artifacts (lowercase names) live here; output deliverables (ALL-CAPS names) also live here. Nothing the audit produces should land elsewhere in `msc/` or at the project root.
 
 ### 4.1. Initial exploration phase
 
-**Goal:** form a top-level model of the framework's shape and scope before reading any segment in detail.
+**Goal:** form a top-level model of the framework's shape and scope before reading any segment in detail. The reading order matters — it controls what biases your first-encounter judgments and what doesn't.
 
-Read in this order:
-1. The root-level orientation files: `README.md`, `CLAUDE.md` (or equivalent), `OUTLINE.md`, `FORMAT.md` (or equivalent).
-2. Component-level outlines: `01-aad-core/OUTLINE.md`, `02-tst-core/OUTLINE.md`, etc.
-3. The active-work navigator: `TODO.md`. Note the framework's own active findings and architectural proposals — these tell you what the framework already knows is open or unresolved.
-4. The spike index if it exists: `msc/SPIKES.md` or equivalent.
+**Read in this order:**
 
-**Output:** write `msc/scratch-NNNNN/00-initial-predictions.md` containing:
+1. **`README.md`** — the launching point. Note: the README is currently expected to be somewhat stale (a known issue), so use it for orientation but *do not treat it as an audit target* — you are not auditing the README's accuracy against the rest of the corpus. It points to the top-level OUTLINE.
+2. **Top-level `OUTLINE.md`** — the assembly index across components. This points to the per-component outlines in their canonical order.
+3. **Component-level outlines, in the order the top OUTLINE references them**: `01-aad-core/OUTLINE.md`, then `02-tst-core/OUTLINE.md`, then `03-logogenic-agents/OUTLINE.md`, then `04-logozoetic-agents/OUTLINE.md` (or whatever the current top OUTLINE prescribes). Read them in order; the dependency direction usually flows that way too.
+4. **`LEXICON.md` and `NOTATION.md`** — read these alongside the README, before any segment. They are vocabulary infrastructure; without them, segment-level claims are harder to read precisely. Read at minimum the introduction and skim the symbol/term tables.
+5. **`CLAUDE.md` and `FORMAT.md`** — the project's instructions to AI agents and the segment-file conventions. May already be in your context (Claude Code auto-loads `CLAUDE.md`); if not, read explicitly. `FORMAT.md` in particular tells you what to expect from segment frontmatter, equation-tags, and stage labels.
+
+**Avoid at this stage:**
+
+- **`TODO.md`** — the framework's own active findings and architectural proposals. Reading this primes you with the framework's *current* sense of what's open, which compromises your first-encounter judgment.
+- **`PROPOSALS.md`** (and `_obs/architectural-proposals-*.md`) — same reason; reading these biases you toward the existing architectural-move portfolio rather than letting your own observations surface freely.
+- **`msc/SPIKES.md`, `msc/pending-findings-*.md`, prior `msc/audit-*.md` files** — same reason; the prior reasoning trail is reserved for §6.1 Phase-2 (integration-debt diagnosis), to be consulted only when you have a finding of your own and want to know whether the framework has worked on it. Reading them now defeats the de-novo posture.
+
+These tracking documents are fair game *later*. For now they are reserved. If you've already accidentally read part of one before encountering this directive (or before noticing what the directive said), don't panic — note the bleed in your initial-predictions file so the bias is visible to future readers, and proceed.
+
+**Output:** write `msc/AUDIT-WORKING-NNNNNN/00-initial-predictions.md` containing:
 
 - **Topology of the framework as you understand it.** Where does the load-bearing structure live? What's the integration story?
 - **Predictions about what each component contains.** Don't be vague — predict specific results, derivations, scope conditions, failure modes.
@@ -168,7 +195,20 @@ Make these predictions concrete enough to be falsifiable. Vague predictions ("th
 
 Use a topological sort by the `depends:` field in each segment's frontmatter. Read leaves first. Within a depth level, alphabetical is fine. This ensures every segment is read with full prerequisite context.
 
-If a segment in the topological order seems unproductive to read in isolation (e.g., a definition whose meaning will only crystallize after seeing its uses), you can defer it — but write down in the scratch directory *why* you're deferring, and revisit before completing the audit.
+**How `depends:` works in this corpus.** Every well-formed segment carries YAML frontmatter that lists exactly which slugs (tags) it depends on, e.g.:
+
+```yaml
+depends:
+  - def-mismatch-signal
+  - emp-update-gain
+  - hyp-mismatch-dynamics
+```
+
+Slug names map directly to filenames within a component's `src/` directory: slug `def-mismatch-signal` lives at `{component}/src/def-mismatch-signal.md`. Cross-component dependencies use the same slug system (e.g., a TST segment can depend on `post-temporal-optimality` resolving to `02-tst-core/src/post-temporal-optimality.md`, while also depending on `result-persistence-condition` resolving to `01-aad-core/src/result-persistence-condition.md`). The dependency graph is therefore mechanically derivable from frontmatter alone.
+
+**Computing the topo sort.** The component OUTLINE.md files already linearize segments in (approximately) topological order — that's how the canonical narrative was assembled. Following the OUTLINE's row order across components in the order the top OUTLINE references them is a reasonable default. If you want a stricter sort, `bin/lint-outline` (or its current equivalent in `bin/`) emits dependency-graph data that can be processed mechanically. If neither is available, walking each component OUTLINE's rows top-to-bottom, opening each segment, and confirming its `depends:` are all already-read before reading the segment itself is an honest manual approach.
+
+If a segment in the topological order seems unproductive to read in isolation (e.g., a definition whose meaning will only crystallize after seeing its uses), you can defer it — but write down in the working directory *why* you're deferring, and revisit before completing the audit.
 
 ### 4.2.5. Source ordering: src first, then msc / ref / git / web
 
@@ -192,7 +232,7 @@ Within-corpus reading is structured by the dependency graph (§4.2). *Across* so
 
 **Spoiler leakage is inevitable and OK.** You've read the OUTLINE; you've read CLAUDE.md; you have a model of where the framework is going. The discipline isn't ignorance — it's *not actively seeking spoilers*. Don't open the spike-folder or run `git log` on a segment file before you've read the segment. Once you have, those tools become second-pass enrichment.
 
-**Diagnostic move.** If you find yourself wanting to read a spike or git history before reading the segment, that itself is information: the segment may not be standing on its own and you may be reaching for context to fill in gaps. Note that observation in the scratch directory and proceed with the segment first. The "wanting to spoiler-seek" signal is often a finding waiting to happen — the segment is leaning on context that should be present in it.
+**Diagnostic move.** If you find yourself wanting to read a spike or git history before reading the segment, that itself is information: the segment may not be standing on its own and you may be reaching for context to fill in gaps. Note that observation in the working directory and proceed with the segment first. The "wanting to spoiler-seek" signal is often a finding waiting to happen — the segment is leaning on context that should be present in it.
 
 **What this discipline does *not* preclude:**
 
@@ -214,7 +254,7 @@ This is a small discipline that prevents a specific failure mode: reading a segm
 
 ### 4.4. Reflection between every segment
 
-After reading each segment, consider writing `msc/scratch-NNNNN/NN-segment-name.md`. Sequential numbering (matching your reading order) tends to make later cross-referencing easier.
+After reading each segment, consider writing `msc/AUDIT-WORKING-NNNNNN/NN-segment-name.md` (lowercase — these are intermediate thinking artifacts). Sequential numbering (matching your reading order) tends to make later cross-referencing easier.
 
 **Mentally walking through every prompt below for every segment, regardless of segment weight, has been one of the highest-leverage moves we've found.** Each prompt addresses a specific failure mode that surfaced in past audits; skipping a prompt because the segment "doesn't seem to need it" is exactly the moment the failure is most likely to slip through. The walk-through is mental and brief on light segments, substantive on segments that surface surprise.
 
@@ -246,7 +286,7 @@ The reflection is for *you*, not for Joseph. The messy, exploratory, predictive 
 
 10. **Should the audit process change?** Have I learned something here that suggests altering the reading order, sampling more aggressively in some area, jumping to a specific appendix, or starting a new tracking list? If yes, do it (and note why).
 
-11. **What changes in my outline for the final report?** The report's structure should evolve as you read. Maintain a living outline (`msc/scratch-NNNNN/00-running-outline.md`) and update it after segments that change your sense of what the report should emphasize.
+11. **What changes in my outline for the final report?** The report's structure should evolve as you read. Maintain a living outline (`msc/AUDIT-WORKING-NNNNNN/00-running-outline.md`) and update it after segments that change your sense of what the report should emphasize.
 
 ### 4.5. Periodic strategic-loop revision
 
@@ -254,21 +294,25 @@ Every ~10 segments (or when a reflection's #10 fires), pause and re-read your in
 
 This is the strategic-revision step of the orient cascade applied to your own audit. Skipping it tends to leave the audit running on a stale plan against an evolving model — exactly the failure mode the framework's persistence machinery describes.
 
-### 4.6. The 80% context utilization gate
+### 4.6. The 80%-budget gate (loose, not a meter)
 
-When you reach approximately 80% context window utilization, switch from systematic-engagement mode to triage mode. At this point:
+When you sense your context budget tightening — somewhere around 80% utilization in spirit, though Claude Code agents do not get a precise context-utilization meter, so this is operating-by-feel rather than by reading — switch from systematic-engagement mode to triage mode. At this point:
 
 1. Stop reading new segments unless they're load-bearing for an in-flight finding.
 2. Spend the remaining budget on: math verification of any unverified worked examples in claims you intend to report; cross-segment consistency checks for any pending finding; final report drafting.
 3. **Critically: ask Joseph whether the project should be put into a state that allows an additional pass.** This is normal and virtuous. If the audit is genuinely under-resourced for the framework's size, the right move is to surface that and let Joseph choose between "produce a partial audit" and "schedule a continuation."
 
-The 80% gate is not "you are running out — panic." It is "switch from organic comprehension to triage and worthy-output, and explicitly negotiate scope if needed."
+The gate is not "you are running out — panic." It is "switch from organic comprehension to triage and worthy-output, and explicitly negotiate scope if needed." Because the threshold is approximate, it's better to err on the side of switching mode slightly early than late: if the audit's substantive findings are at risk of being landed under time pressure, that pressure tends to corrupt them.
 
-### 4.7. Scratch directory hygiene
+### 4.7. Working-directory hygiene
 
-The scratch directory is *yours*. The final report does not need to mirror its contents — the report extracts what's worthy. But the scratch directory should remain coherent enough that someone reading it could reconstruct your reasoning chain.
+The audit-working directory is *yours*. The final report does not need to mirror its contents — the report extracts what's worthy. But the directory should remain coherent enough that someone reading it could reconstruct your reasoning chain.
 
-A `00-running-outline.md` file at the top of the directory, updated periodically, is a useful artifact. It can become the final report's structure if the audit goes well.
+A `00-running-outline.md` file at the top of the directory, updated periodically, is a useful artifact. It can become the structure of the `FINAL-YYYY-MM-DD.md` report if the audit goes well.
+
+**Output deliverables stay inside the working directory.** Use ALL-CAPS names for anything that's part of the audit's output (the final report, supplementary documents, code subdirectories, plot files), and keep them inside `msc/AUDIT-WORKING-NNNNNN/` rather than at `msc/` root or elsewhere. The hermetic structure is what lets a future agent triage `msc/` quickly: an `AUDIT-WORKING-*/` directory is one self-contained audit's complete output, including everything they need to read and everything they don't.
+
+**Naming pattern for the final report.** `FINAL-YYYY-MM-DD.md` (e.g., `FINAL-2026-04-25.md`) inside the working directory is the recommended convention. If the audit produces a second-pass report or a continuation, distinguishing suffixes (`FINAL-2026-04-25-pass-2.md`) work fine.
 
 ---
 
@@ -290,7 +334,7 @@ This emphasis is high-yield in math-heavy corpora and warranted whenever a segme
 
 ### 5.2. Cross-segment consistency around recent additions (an emphasis available to you)
 
-You may maintain a list (in the scratch directory) of *recently-added structural moves* the framework has made: new scope routes, new axioms, new meta-patterns, newly-promoted segments. When reading any segment, ask: does this segment reflect those additions, or was it written before them?
+You may maintain a list (in the working directory) of *recently-added structural moves* the framework has made: new scope routes, new axioms, new meta-patterns, newly-promoted segments. When reading any segment, ask: does this segment reflect those additions, or was it written before them?
 
 The most fertile finding territory in mature frameworks is exactly here. One known-real example: `scope-multi-agent.md` categorically excludes adversarial pairs from composite scope, while `scope-composite-agent.md` admits equilibrium-convergent adversarial pairs as strategic composites via the recently-added C-iv route. The integration drift around recent additions is precisely where careful auditors find what the framework hasn't caught.
 
@@ -322,13 +366,13 @@ This emphasis is high-yield in mature frameworks where casual readings of segmen
 
 ## 6. What counts as a finding under burden of proof
 
-In past audits, a finding has typically had five elements:
+In past audits, a finding has typically had four core elements plus a fifth that applies conditionally:
 
 1. **Problematic passage.** Quote the specific text, with file path and approximate line number.
 2. **Counterevidence search.** What does the rest of the framework say about this issue? Where does the framework already caveat, narrow, or resolve it?
 3. **Status determination.** After counterevidence, is the issue (a) still real, (b) already adequately caveated, or (c) ambiguous?
 4. **Confidence level.** High / medium / low, with a reason.
-5. **Why it still stands** (if status is "still real") — one sentence explaining why the counterevidence doesn't dissolve the issue.
+5. **Why it still stands** *(only if status is "still real")* — one sentence explaining why the counterevidence doesn't dissolve the issue. Findings whose status came back "already caveated" or "ambiguous" don't carry this element; the status determination is the punchline.
 
 The five-element form has earned its place because of what tends to go wrong without it: a "finding" without counterevidence search reads as a complaint; a "finding" without confidence calibration reads as an opinion; a "finding" without an explicit status determination puts the burden of judgment on the reader rather than the auditor. If you have something genuinely worth raising that doesn't fit this form, that's likely fine — but worth noticing why and saying so.
 
@@ -398,7 +442,7 @@ If you cannot honestly answer yes to most of these, keep refining or cut.
 
 Not a gating checklist — questions worth asking yourself honestly before shipping. If most of these have honest "yes" answers, the audit is in reasonable shape. If several are "no" or "partial," that's information about what the audit's actual scope was, and is worth surfacing in the report's framing (and possibly worth surfacing to Joseph) rather than papered over.
 
-- Did I read every segment in the topological order, or did I explicitly defer some? (If deferred, is the deferral list in the scratch directory and addressed?)
+- Did I read every segment in the topological order, or did I explicitly defer some? (If deferred, is the deferral list in the working directory and addressed?)
 - Did I honor source ordering — refraining from reading `msc/`, `ref/`, git history, or external-citation web-search for a segment before reading the segment itself?
 - For worked examples I commented on, did I run the math?
 - Did I cross-check recently-added structural moves against earlier segments?
