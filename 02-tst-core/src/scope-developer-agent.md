@@ -12,6 +12,9 @@ depends:
   - form-complete-agent-state
   - emp-update-gain
   - def-mismatch-signal
+  - scope-logogenic-agent
+  - def-coupled-update-dynamics
+  - obs-context-turnover
 stage: draft
 ---
 
@@ -60,7 +63,7 @@ The developer's internal model — the epistemic substate ( #form-agent-model):
 - Instructions from system prompts, memory files, documentation
 - Inferences from error messages, test output, tool responses
 
-For AI agents, $M_t$ is more explicitly representable (context window contents plus persistent storage), making it closer to a directly observable quantity.
+For AI agents, $M_t$ is more explicitly representable (context window contents plus persistent storage), making it closer to a directly observable quantity — though with a Class 2 / $\kappa_{\text{processing}} \approx 1$ caveat: the goal tokens (system prompt, task description) shape the agent's effective beliefs through joint forward-pass processing rather than separable epistemic processing. The "explicit representability" is a representational convenience for the analyst, not a guarantee of architectural separation. See #scope-logogenic-agent for the Class 2 architectural classification, and #def-coupled-update-dynamics for the coupled update dynamics that replace the factored form for Class 2 agents.
 
 ### Objective ($O_t$)
 
@@ -70,7 +73,7 @@ The developer's current objective — what the agent wants:
 
 $$O_t \in \{\text{implement feature } F,\; \text{fix bug } B,\; \text{refactor module } R,\; \text{investigate incident } I,\; \ldots\}$$
 
-$O_t$ induces a value functional $V_{O_t}$ ( #form-objective-functional) over codebase states. Objective revision occurs via the orient cascade ( #der-orient-cascade): e.g., while implementing feature $F$, the developer discovers a blocking bug and revises $O_t$ from "implement $F$" to "fix blocker, then implement $F$."
+$O_t$ induces a value functional $V_{O_t}$ ( #form-objective-functional) over codebase states. For Class 1 (modular) developer-agents — the canonical human-developer case — objective revision occurs via the orient cascade ( #der-orient-cascade) with sequential epistemic-then-purposeful processing: e.g., while implementing feature $F$, the developer discovers a blocking bug and revises $O_t$ from "implement $F$" to "fix blocker, then implement $F$." For Class 2 logogenic developer-agents (LLM-based), the cascade does not hold as a derived result — instead, the coupled update dynamics ( #def-coupled-update-dynamics) apply, with the cascade quantities ($M_t$ update, $\Sigma_t$ revision, $O_t$ feasibility check) recoverable post-hoc from the coupled response by analytical decomposition rather than enforced by the processing architecture.
 
 ### Strategy ($\Sigma_t$)
 
@@ -163,9 +166,9 @@ The observation channel tables and action classification are *discussion-grade* 
 
 ## Discussion
 
-**The 100% turnover problem.** For AI agents, $M_t$ is reset to near-zero at each session start. In AAD terms: $M_0 \approx M_{\text{prior}}$ (whatever memory files provide), $U_M$ starts very high, and $\eta^\ast$ starts near 1. The agent must rapidly build $M_t$ through high-$\nu$ observation before it can act effectively. This creates a formal "cold-start" phase — a transient where the agent is in observation mode, building $M_t$ before the persistence condition ( #result-persistence-condition) can even be meaningfully evaluated.
+**The 100% turnover problem.** For AI agents, the *context-window* component of $M_t$ is reset at each session start, but the effective state is reconstructed from external memory ($\mathcal E_{\text{ext}}$) plus the session-initiating prompt plus the pretrained weights $M_0^{\text{weights}}$ (see #obs-context-turnover, #scope-logogenic-agent). Treating session start as $M_0 \approx 0$ ignores the substantial weights contribution to the effective prior — pretrained knowledge of language, code, and reasoning patterns is preserved across the boundary. In AAD terms: $X_{\tau_{k+1}} = f_{\text{init}}(\mathcal E_{\text{ext}}, p_{k+1}, M_0^{\text{weights}})$, $U_M$ starts elevated (more than continuous-session evolution but less than blank-slate), and $\eta^\ast$ starts elevated correspondingly. The agent rebuilds the session-specific component of $M_t$ through high-$\nu$ observation; the cold-start transient is real but bounded by what survives in weights and externalized state.
 
-Persistent external memory (documentation, CLAUDE.md files, well-structured codebases) converts ephemeral model state into persistent environmental state. The agent writes its model into $\Omega$ so future agents can reconstruct $M_t$ through observation. The quality of this externalization determines how much of the previous agent's $M_t$ survives turnover. In information-bottleneck ( #form-information-bottleneck) terms: the externalized memory should retain everything predictively relevant while compressing aggressively.
+Persistent external memory (documentation, CLAUDE.md files, well-structured codebases) determines how much of the prior agent's session-specific $M_t$ survives turnover by converting ephemeral context-window state into persistent environmental state. The quality of this externalization, combined with the weights' contribution, determines the reconstructed model sufficiency $S(M_{\tau_{k+1}})$ — see #obs-context-turnover for the formal sufficiency-discontinuity bound. In information-bottleneck ( #form-information-bottleneck) terms: the externalized memory should retain everything predictively relevant *that the weights do not already encode* while compressing aggressively.
 
 **Channel-specific gain calibration.** When a developer encounters conflicting signals (requirements vs. existing architecture vs. code conventions), the uncertainty ratio principle says: weight each by the channel-specific uncertainty ratio. Clear, well-tested code (low $U_o$) should override vague verbal requirements (high $U_o$). Requirements from a well-understood domain (low $U_o$) should override ambiguous code (high $U_o$). The optimal update is channel-specific, not uniform.
 

@@ -27,7 +27,7 @@ Each git commit is an intervention in the sense of #def-pearl-causal-hierarchy (
 
 $$\text{commit } c = do(\text{change files } \{f_1, \ldots, f_m\})$$
 
-The developer chose to modify specific files and observed the consequences (compiler output, test results, production behavior, subsequent development effort). The temporal ordering ( #post-causal-structure) provides causal direction for free: if commit $c_1$ precedes commit $c_2$, and $c_2$ touches files that $c_1$ also touched, then $c_1$ is in $c_2$'s causal past.
+The developer chose to modify specific files and observed the consequences (compiler output, test results, production behavior, subsequent development effort). The temporal ordering ( #post-causal-structure) identifies the *structure of possible influence*, narrowing the candidate set of actual causal directions: if commit $c_1$ precedes commit $c_2$, and $c_2$ touches files that $c_1$ also touched, then $c_1$ is in $c_2$'s causal past in the structure-of-possible-influence sense — actual causal influence remains an empirical question subject to the confounding structure (C1–C3) discussed below.
 
 The outcome of interest for TST is the downstream cost: which other files required subsequent changes, how much time elapsed before the next modification of the affected region, whether tests failed, whether incidents occurred. In AAD terms, the commit is an action $a_t$ and the downstream costs are observations $o_{t+1}, o_{t+2}, \ldots$ that carry information about the causal structure of the codebase.
 

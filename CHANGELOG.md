@@ -13,6 +13,28 @@ The split between CHANGELOG and TODO §Archive is intentional: CHANGELOG carries
 
 ---
 
+## 2026-04-25
+
+### Audit-extraction cycle: 2026-04-24 fresh-pass results captured
+
+The 2026-04-24 fresh-pass audit (an Opus-4.7 primary pass + independent Gemini and Codex re-audits in the same session) produced findings, an architectural proposal candidate, and a meta-lesson about audit failure modes. The primary pass had initially returned "zero findings"; Gemini and Codex independently surfaced five-plus real findings (math errors in worked examples, cross-segment contradictions around the recently-added C-iv route, integration debt between TST and `03-logogenic-agents/`). The audit's "Reading-mode failures" post-mortem became the foundation for the substantially improved `msc/de-novo-audit-instructions.md` (separate cycle, also 2026-04-24/25).
+
+This cycle was extraction-only: no segment-text changes, no architectural decisions made — purely surfacing the audit's substantive content into the durable tracking documents (TODO.md, PROPOSALS.md, pending-findings-2026-04-25.md) so the source `msc/audit-2026-04-24-fresh-pass.md` could scroll into obscurity without losing signal. The next audit cycle, running with the improved instructions, will inevitably re-discover some of this batch's findings — capture-first protects the existing batch's signal against that overlap.
+
+**What landed:**
+- `msc/pending-findings-2026-04-25.md` — burden-of-proof writeups for 5 verified findings (F-V1 discrete-variance-gap math error; F-V2 scope-multi-agent vs scope-composite-agent contradiction; F-V3 C-iii vs $G_c$ requirement, = F8 from 2026-04-22 batch; F-V4 sign error in zero-sum worked example; F-V5 TST↔logogenic integration debt) and 3 partial findings (P-V1, P-V2, P-V3). Each finding verified first-hand by the integrating agent against current src text. F-V1's math re-derived independently via Taylor expansion of segment's own DA.1S; F-V4's NE re-checked via Monderer-Shapley derivative test ($\Phi = a_A - a_B$ wrong, correct is $\Phi = a_A + a_B$, NE $(1,1)$ not $(1,-1)$). External-citation spot-checks (Bretagnolle-Huber, Otto-Villani 2000) confirmed accurate.
+- `TODO.md` "Active — Pending Findings" — 2026-04-25 batch table; F-V3↔F8 cross-reference; two decisions explicitly marked deferred (F-V3 routing Path A vs SP-21; SP-21 timing).
+- `PROPOSALS.md` §G — **SP-21** (composite-agent scope-route ontology split) added with full schema. Critically: SP-21 *reverses* the deliberate 2026-04-22/23 unification reasoning (the disjunctive C-i ∨ C-ii ∨ C-iii ∨ C-iv form with explicit "preferred reading: treat as a different type within the same scope condition, via (C-iv)" in `msc/spike-strategic-composition.md`). Entry includes the prior-reasoning paper trail (8 dependent segments, the spike-level decision SP-21 would undo) and recommends *deferral* until Bundle 2 (Section III completion) matures the substrate. Reversal-with-paper-trail discipline is a precedent worth preserving for future audits.
+- Mechanical fix bundle (F-V1, F-V2, F-V4, F-V5, P-V1, P-V3) delegated as a single Task agent with strict instructions to re-derive math rather than paste, read both TST and logogenic-agents segments before F-V5, and not auto-commit.
+
+**What didn't land (deferred for Joseph):**
+- F-V3 / F8 narrow editorial fix (Path A: induce $O_c$ from relevance variable $Y$ for C-iii). ~45–60 min.
+- SP-21 architectural restructure (Path B / SP-21). 4–6 sessions; recommended for deferral.
+
+**Convention surfaced this cycle.** When audit cycles produce both local findings AND architectural-restructure candidates that reverse recent deliberate decisions, the proposal should land in PROPOSALS.md with the *prior-reasoning paper trail explicit* — quoted spike passages, downstream rework cost, the specific decision-point being reversed. Joseph's question "is there prior reasoning that illuminates what will be undone?" is the right diagnostic for any restructure proposal; the answer should be in the proposal entry, not buried in the audit document.
+
+---
+
 ## 2026-04-24
 
 ### Role-prefix discipline: pilot → tooling → sweep

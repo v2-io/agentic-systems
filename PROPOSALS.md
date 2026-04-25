@@ -59,6 +59,8 @@ Five proposals form a coherent Section III completeness program. Section III has
 
 **Sequencing:** Bundle 2 is genuinely multi-session and does not force a specific ordering. Natural entry points: SP-11 (meta-segment from existing spike material, shortest); O-BP9 (scoping spike clears Hafez IDT-composite typing); SP-6 residue (majority already absorbed by 2026-04-24 Tier 1 landing).
 
+**Upstream architectural alternative (SP-21).** SP-21 in §G proposes splitting `#scope-composite-agent`'s four routes (C-i / C-ii / C-iii / C-iv) into distinct composite ontologies, each with its own macro-object structure and theorem family. If pursued, SP-21 lands *upstream* of Bundle 2 and would change Bundle 2's pieces' interlocking — current sequencing presumes the unified scope condition. SP-21 is currently recommended for *deferral* until Bundle 2 matures (the route-specific theorem families need to be visible enough to judge whether the unification framing helps or limits). Bundle 2 should proceed without preempting SP-21; if SP-21 eventually lands, Bundle 2's pieces re-evaluate against the route-typed substrate.
+
 ---
 
 ## §A. Absorbed — fully landed; retire from active portfolio
@@ -135,6 +137,8 @@ Newly surfaced in 2026-04-24 audit from `#deriv-persistence-cost` Working Note (
 Primary aspect: unification. Composes with O-BP11 (partial unblock for the observability master-variable scoping). **Value: +4 framework.**
 
 **Independence: medium.** NOTATION.md addition is self-contained; the ~6 cross-reference edits are each light touches but the target segments (`#der-observability-dominance`, `#hyp-communication-gain`, `#der-interaction-channel-classification`, `#deriv-persistence-cost`, `#def-adaptive-tempo`) may be in flight under other proposals. Conflict risk: if O-BP11 scoping spike runs concurrently and touches the same segments, coordinate. Otherwise parallelizable.
+
+**SP-14 confirmation from 2026-04-25 audit (B6 in `msc/pending-findings-2026-04-25.md`).** Audit's J4 marks `#deriv-persistence-cost` as "appendix-grade in placement, framework-grade in importance" — the channel-capacity floor $C_{\text{channel}} \geq \mathcal T/2$ pairs naturally with the threshold inequality $\alpha R > \rho$ as a two-prerequisite persistence story (one rate, one capacity), connects AAD to Landauer thermodynamic foundations without committing to thermodynamic-machinery-as-master, and gives Kalman-Bucy a privileged role (saturates the bound per Mitter-Newton 2005). Worth elevating SP-14's framing from "modest unification" to "substantive positive contribution" when executed.
 
 ### C.4 SP-19 — Naming consolidation pass
 
@@ -257,6 +261,8 @@ Tier-3 architectural proposal from 2026-04-24 cycle. Would reframe the meta-segm
 
 **Independence: low.** Rewrites `#additive-coordinate-forcing` substantially; adds Discussion paragraphs to each of the four instance segments (`#der-chain-confidence-decay`, `#deriv-strategy-cost-regret-bound`, `#deriv-edge-update-natural-parameter`, `#der-gain-sector-bridge`). Conflicts with any concurrent work on those segments or on the meta-architecture framing (Bundle 1). Must serialize with Bundle 1.
 
+**SP-9 confirmation from 2026-04-25 audit (B5 in `msc/pending-findings-2026-04-25.md`).** Audit's J3 (Hypothesis-grade, high confidence) confirms the Bregman-Fenchel observation is *real geometric convergence*, not coincidence: two AAD-internal axioms (chain-rule additivity at the divergence layer; evidential additivity at the update layer) are *logically independent* (they constrain different objects via Cauchy-FE on different functional equations), yet they force coordinates that turn out to be the *primal-dual pair* of one Legendre-Fenchel structure on the categorical simplex. Two independent axioms converging on dual coordinates of one geometric object is structural evidence the object is the right object. SP-9 is on the right track; the audit didn't change the gating but did confirm the structural payoff is genuine.
+
 ---
 
 ## §F. Retired / superseded — do not re-propose
@@ -280,6 +286,63 @@ Beyond SP-11 through SP-19 referenced above, two additional candidates deserve a
 
 - **SP-18 Internal-aporia / sub-agent adversarial dynamics** — `msc/brainstorm-aporia-sub-agent-adversarial.md`. Institutions as "aporia amplifiers"; per-dimension $U_O$; theory-of-mind as productivity gate. Load-bearing for `04-logozoetic-agents/` and for Section III adversarial/cooperative integration. **Brainstorm-grade; not yet scoped.** Reopen when logozoetic work matures. Value +3 to +5.
 - **SP-20 DAG vulnerability / redundancy metrics** — `msc/sketch-strategy-dynamics-gaps.md` §Gap 2. Adjacent to `#der-agent-opacity` / `#adversarial-edge-targeting`; probably lands as extension rather than standalone. Value +3.
+
+### SP-21 — Composite-agent scope-route ontology split
+
+**Source:** 2026-04-24 fresh-pass audit (B7 in `msc/audit-2026-04-24-fresh-pass.md`; extracted into `msc/pending-findings-2026-04-25.md`).
+
+**Decision needed from Joseph before scoping execution.** This proposal would *reverse* a deliberate architectural choice made 2026-04-22/23 — see "What this proposal reverses" below. Routing it correctly is more important than executing it quickly.
+
+**Thesis.** Treat the four composite-agent scope routes (C-i shared-objective / C-ii hierarchical-decomposition / C-iii mutual-benefit / C-iv equilibrium-convergent) as **distinct composite ontologies**, each with its own macro-object structure and theorem family, rather than as four disjuncts of a single unified scope condition.
+
+**Argument.** Each route presupposes a different macro-object:
+- **C-i / C-ii (alignment composites):** macro-object is shared-objective composite with $X_c = (M_c, G_c)$ and a coherent $O_c$. `#form-composition-closure`'s machinery applies cleanly.
+- **C-iii (mutual-benefit composites):** macro-object is *not* an explicit-objective composite — it's a coalition or stable cooperation regime around a relevance variable $Y$. The macro-state machinery is unspecified (this is the F-V3 / F8 inconsistency: line 79 of `scope-composite-agent.md` admits that without $O_c$ the composite is "a fiction").
+- **C-iv (strategic composites):** macro-object is *not* a state-tracking object — it's an equilibrium statistic over joint policy. `#deriv-strategic-composition` rightly reaches for game-theoretic primitives instead of Lyapunov-on-shared-state. Composition-closure's macro-state requirement still applies textually.
+
+The current single-disjunction form papers over the fact that C-iv composites require equilibrium-theoretic primitives, C-iii composites require coalition-theoretic primitives, and only C-i / C-ii fit the original AAD-shaped macro-state. Splitting would let each composite type carry its own theorem family (Lyapunov-on-shared-state for C-i/C-ii; relevance-variable-induced or coalition machinery for C-iii; equilibrium-theoretic for C-iv) without having to make every Section III result route-conditional.
+
+**Findings subsumed (if executed).** F-V2 (cross-segment contradiction in `scope-multi-agent` adversarial-pair exclusion); F-V3 / F8 (C-iii vs $G_c = (O_c, \Sigma_c)$ requirement). Both have narrow editorial fixes available without SP-21; the editorial fixes are recommended as Path A interim moves regardless of whether SP-21 is executed.
+
+**What this proposal reverses (CRITICAL CONTEXT).** The unified disjunctive form is recent (2026-04-22/23) and was an *explicit* architectural choice with stated reasoning, not a default that drifted in:
+
+- **The unification logic** (`scope-composite-agent.md` Discussion §"Why this is a scope condition, not merely a quality metric"): "Making this a scope condition resolves the category issue: composition applies where $G_c$ is well-defined." All four routes answer the same question — "Is there a well-defined composite-level structure that makes the group a meaningful agent rather than a projection artifact?" — so they unify under a single scope gate. The four routes give qualitatively distinct answers to "what does it mean for $G_c$ to be well-defined?"
+- **The C-iv inclusion choice** (`msc/spike-strategic-composition.md` lines 99–108): "Whether this distinction is worth surfacing as a formal scope addition, or whether strategic composites are better handled as a separate Section III segment parallel to `#form-composition-closure`, is one of this spike's landing decisions. **Preferred reading: treat as a different type within the same scope condition, via (C-iv).** Reason: the composite is still a coherent object with a joint persistence story; calling it 'not a composite' overclaims the alignment requirement." This is the explicit decision SP-21 would reverse.
+- **The "no-reduction-to-scalar" honesty.** The disjunction form was chosen because no single scalar (like $U_O$) reduces all four to a unified threshold; the disjunction "captures at least one of these qualitatively distinct mechanisms applies" without forcing premature reduction. Splitting would replace this with four parallel scope conditions, each with its own operationalization.
+
+If SP-21 lands, the framework loses the "one scope gate, multiple qualitative routes" framing that the 2026-04-23 cycle deliberately chose. Whether that loss is worth the cleaner per-route theorem families is the architectural decision Joseph needs to weigh.
+
+**Downstream rework (from prior-art audit, 2026-04-25).** Eight segments depend on the unified disjunctive form:
+1. `#form-composition-closure` — admissibility (A1)–(A4) and bridge lemma assume scope-satisfaction via *any* route; would need per-route admissibility variants or explicit condition-dependence.
+2. `#result-unity-closure-mapping` — rate-distortion curves "conditional on at least one of three disjunctive routes"; would need parallel instantiations.
+3. `#der-team-persistence` — derived assuming "one of (C-i)–(C-iii)"; C-iv excluded; would need explicit route-conditioning.
+4. `#deriv-critical-mass-composition` — (CM4) makes scope-satisfaction a conjunct in composite persistence; would need route enumeration.
+5. `#deriv-strategic-composition` — explicitly references "(C-iv)" as a route within the disjunction; would need rewrite to "strategic-composition scope condition" parallel.
+6. `#post-composition-consistency` — foundational postulate uses unified gate; would fracture into "which groups satisfy C-i? C-ii? C-iii? C-iv?"
+7. `#hyp-symbiogenic-composition` — explicitly states symbiogenesis "crosses the #scope-composite-agent from below" via route (C-ii); would become route-specific.
+8. `#def-unity-dimensions` — scope note presumes disjunction; would need per-route operationalization story.
+
+This is non-trivial cross-segment rework — call it 4–6 sessions if pursued as a coordinated split, vs ~45–60 min for the F-V3 narrow editorial fix (Path A) which preserves the unified form.
+
+**Interactions with other proposals.**
+- **SP-6 (composition-closure consolidation)** in Bundle 2 is adjacent — SP-6 is about scope-narrowing within `#form-composition-closure`'s claims; SP-21 is about restructuring the *upstream* scope condition. SP-21 would change what SP-6 needs to consolidate. If both pursued, SP-21 first.
+- **O-BP9 (typed admissibility for composition)** in Bundle 2 — explicitly proposes route-typed admissibility (model-only / goal-bearing / strategy-bearing). SP-21 is adjacent: O-BP9 splits *admissibility-by-quantity-bearing-type*; SP-21 splits *scope-by-route-ontology*. They could compose (each route gets its own admissibility-typing; or admissibility-typing replaces route-splitting). Worth resolving relationship before scoping either.
+- **Bundle 2 (Section III completion)** — SP-21 would restructure how Bundle 2's pieces interlock. Bundle 2's current sequencing (SP-11 → SP-6-residue → O-BP9 → O-BP16 + SP-17) presumes the unified scope condition; SP-21 inserted at the front would change that sequence.
+
+**Effort.** Substantial. 4–6 sessions for the segment restructure across 8 dependents. Plus a scoping spike to resolve the SP-21 vs O-BP9 relationship.
+
+**Risks.**
+1. *Loss of the unification reasoning.* The current form's "single scope gate, four qualitative routes" is structurally informative — it asserts that "well-defined composite-level structure" is one question with multiple acceptable answers. Splitting fragments this assertion.
+2. *F-V3 editorial fix may suffice.* If C-iii's induced-$O_c$ structure is made explicit (Path A in F-V3 landing), the most pressing inconsistency dissolves without architectural restructure. Whether the C-iv strategic-composite case still motivates SP-21 after Path A is open.
+3. *Post-Bundle-2 reassessment.* Section III is in active flux; a structural decision now risks being made on a still-evolving substrate. Better to land Bundle 2's existing pieces first and re-evaluate SP-21 against the matured Section III structure.
+
+**Status: Open architectural decision.**
+
+**Recommendation:** Defer SP-21 execution. Land F-V2 and F-V3 editorial fixes (Path A: cross-segment edit + C-iii induced-$O_c$ via relevance variable $Y$) which clear the immediate contradictions without architectural restructure. Re-evaluate SP-21 after Bundle 2 (Section III completion) lands, when the route-specific theorem families are visible enough to judge whether the unification framing is helpful or limiting. If at re-evaluation the answer is still "split," the work is more legible than now and the rework cost is concentrated on a more stable substrate.
+
+**Value if eventually executed:** +3 to +5 framework / +4 paper. Cleaner per-route theorem families; explicit route-typed macro-objects. Loss of the "one well-defined-ness question, four routes" framing is real but possibly worth it once Section III matures.
+
+**Independence.** **Low.** Touches the foundational scope segment plus eight downstream load-bearing segments; cannot parallelize with most Section III work; conflicts with Bundle 2's current sequencing.
 
 ---
 

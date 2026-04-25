@@ -405,9 +405,56 @@ The larger reorganizations (O-BP11 observability-master, O-BP12 resource-budget,
 
 ## Active — Pending Findings
 
-The 2026-04-22 batch had 15 findings; the strengthening cycle resolved 4 directly and resolves several others through subsumption. Updated table below; see `msc/pending-findings-2026-04-22.md` for the original characterizations.
+### 2026-04-25 batch — extracted from 2026-04-24 fresh-pass audit
+
+**Source:** `msc/audit-2026-04-24-fresh-pass.md` (one Opus-4.7 fresh pass + Gemini and Codex re-audits in the same session). Findings detail in `msc/pending-findings-2026-04-25.md`. The audit's primary pass produced "zero findings" and was corrected by independent Gemini/Codex re-audits; the resulting failure-mode analysis is folded into `msc/de-novo-audit-instructions.md` for the next audit posture.
+
+Verification status: F-V1, F-V2, F-V3, F-V4, F-V5 all verified first-hand against current src 2026-04-25. P-V1, P-V2 unverified at audit's stated confidence (medium-high / medium); P-V3 verified textually.
+
+| # | Finding | Severity | Landing path | Status |
+|---|---------|----------|--------------|--------|
+| F-V1 | Discrete-to-continuous Model S variance gap mis-stated as $O((\eta^*)^2)$ — actual is $O(\eta^*) = O(1/\nu)$ via Taylor expansion of segment's own DA.1S; numerical sanity check confirms | Medium (math correct under conservative interpretation; asymptotic claim wrong) | Editorial math correction in `deriv-discrete-sector-condition.md` (lines 147, 163) + `detail-linear-ode-approximation.md` (lines 154, 186). Plus internal-inconsistency cleanup in linear-ode line 163 ($(\eta^*)^2 c^2_{\max} \neq \eta^* c_{\max}/\nu$). ~30 min, mechanical | **DELEGATABLE — queued for fix batch** |
+| F-V2 | `scope-multi-agent.md:71` excludes adversarial pairs; `scope-composite-agent.md:89` admits them via C-iv. Integration drift around recently-added scope route | Medium-high | Editorial fix in `scope-multi-agent.md` Discussion paragraph: "Adversarial pairs are *excluded*" → split between non-equilibrium-convergent (excluded) and equilibrium-convergent (admitted via C-iv). ~20 min | **DELEGATABLE — queued for fix batch** |
+| F-V3 | C-iii admits composites without explicit $O_c$ but `scope-composite-agent.md:79` says without $O_c$ composite is "a fiction." **Same finding as F8** from 2026-04-22 batch. | High (internal contradiction) | Two paths — see Decision below. **Path A (recommended interim):** induce $O_c$ from relevance variable $Y$ for C-iii route; preserves unified scope. ~45–60 min. **Path B:** SP-21 architectural restructure (see PROPOSALS.md §G). | **DECISION DEFERRED — Joseph's call (Path A vs SP-21)** |
+| F-V4 | Sign error in zero-sum worked example in `deriv-strategic-composition.md:70-76`. Claimed potential $\Phi = a_A - a_B$ and NE $(1, -1)$; actual $\Phi = a_A + a_B$, NE $(1, 1)$. Per Codex, same error in `msc/spike-strategic-composition.md` | High (math error in promoted segment's worked example) | Editorial math correction. Replace example with corrected potential and NE; cross-check spike. Sector-template instantiation needs re-grounding around $(1,1)$. ~30 min, agent should run the math | **DELEGATABLE — queued for fix batch** |
+| F-V5 | TST `scope-developer-agent.md` (lines 63, 73, 166) treats AI agents using standard AAD apparatus (orient-cascade-as-derived; near-zero $M_t$ at session start; "directly observable" $M_t$) without referencing Class 2 architectural caveats from `03-logogenic-agents/`. Verified: `scope-logogenic-agent` says Class 2 with $\kappa_{\text{processing}} \approx 1$; `def-coupled-update-dynamics` says orient cascade does NOT hold as derived for Class 2 | Medium-high (cross-component integration debt) | Editorial cross-component pass. Three integration moves in `scope-developer-agent.md`. Should be done by an agent that has read both TST and logogenic-agents segments. ~30–45 min | **DELEGATABLE — needs cross-component-aware agent** |
+| P-V1 | "Not a discretization artifact" framing in `result-adversarial-tempo-advantage.md` Working Notes too strong. The 1.481 vs 1.5 gap is consistent with a derivable correction factor, not just numerical noise. Compounds with F-V1 | Low-medium | Working Notes edit. Could bundle with F-V1 fix. ~15 min | **QUEUED — bundle with F-V1** |
+| P-V2 | "Linear projections of linear dynamics are exact" punchline in `result-unity-closure-mapping.md` overgeneralizes; framework's MZ machinery in `form-composition-closure` already handles general non-invariant-subspace case | Low-medium | Punchline tightening + cross-reference. ~20 min | **QUEUED — low priority** |
+| P-V3 | `hyp-causal-discovery-from-git.md:30` "the temporal ordering provides causal direction for free" overstates `post-causal-structure`'s "structure of possible influence, not actual influence" posture | Low | One-sentence edit. ~5 min | **DELEGATABLE — queued for fix batch** |
+
+**Decision deferred — F-V3 routing (Joseph's call):**
+- **Path A (recommended interim):** Edit `scope-composite-agent.md` C-iii to make induced-$O_c$ structure explicit ($O_c$ derived from relevance variable $Y$ when C-iii holds). Preserves the unified disjunctive scope reasoning; resolves the "fiction" contradiction. ~45–60 min. Compatible with later SP-21 if pursued.
+- **Path B (SP-21 restructure):** Split (C-i)–(C-iv) into distinct composite ontologies. **Reverses the deliberate 2026-04-22/23 unification choice** — see PROPOSALS.md §G SP-21 entry for the prior reasoning, downstream rework (8 dependent segments), and the explicit spike-level decision that SP-21 would undo. 4–6 sessions. SP-21 currently recommended for *deferral* — re-evaluate after Bundle 2 (Section III completion) matures the substrate.
+
+**Mechanical fix bundle landed 2026-04-25** (uncommitted; Joseph review pending):
+- F-V1, F-V2, F-V4, F-V5, P-V1 (bundled), P-V3 — all mechanical fixes executed by a single Task agent.
+- P-V2 (subsequent agent) — `result-unity-closure-mapping.md` punchline tightened with invariance condition + cross-reference to `#form-composition-closure`'s Mori-Zwanzig zero-lag bound. MZ bound verified verbatim against `form-composition-closure.md:181, 256`.
+- All edits lint-clean (`bin/lint-md` + `bin/lint-outline` 0 violations, 111 segments).
+- Files modified: `01-aad-core/src/{deriv-discrete-sector-condition, detail-linear-ode-approximation, scope-multi-agent, deriv-strategic-composition, result-adversarial-tempo-advantage, hyp-causal-discovery-from-git, result-unity-closure-mapping}.md` + `02-tst-core/src/scope-developer-agent.md`.
+
+**F-V4 follow-up review required (added 2026-04-25).** The F-V4 fix to `deriv-strategic-composition.md` zero-sum worked example introduced a *quadratic action-cost regularization* with parameter $c$ to enable interior-NE sector-template instantiation. This was a substantive judgment call (the corrected unregularized linear $\Phi$ with NE at corner $(1,1)$ has no interior contraction, so the original sector-template instantiation can't be salvaged without modification). **Accepted as interim form 2026-04-25; explicit follow-up review required:**
+1. Double-check the regularization algebra ($F(\xi) = c\xi$; $R = (1-1/c)\sqrt 2$ disturbance bound).
+2. Attempt a Cournot-style linear-quadratic substitution (interior NE without ad-hoc regularization; genuine economic content).
+3. Brainstorm other alternatives (LQR-coupled-state, Monderer-Shapley §3, network-coordination, public-goods).
+4. Look for unnoticed implications of the corrected NE-at-(1,1) interpretation: §"Honest Limits" failure-regime classification, `#scope-composite-agent` C-iv pedagogical entry-point, project-wide grep for "opposite directions" / "push" near zero-sum framings.
+
+Detail in `deriv-strategic-composition.md` Working Notes §"Zero-sum example regularization." ~1–2 hours of careful follow-up work; should land before the segment is re-promoted to candidate stage. Worth scheduling in the next strengthening cycle.
+
+**Decision deferred — F-V3 / F8 routing (still open):** Path A (induce $O_c$ from relevance variable $Y$ for C-iii; ~45–60 min; preserves unified scope) vs Path B / SP-21 (architectural restructure; 4–6 sessions; reverses prior reasoning). Recommendation: Path A interim now; revisit SP-21 after Bundle 2.
+
+**B7 → SP-21 (architectural proposal).** The audit's bigger-picture observation B7 (split composite-agent scope routes into distinct ontologies) is captured as **SP-21** in `PROPOSALS.md` §G. SP-21 reverses recent (2026-04-22/23) deliberate unification reasoning; its entry includes the prior-reasoning paper trail and recommends deferral pending Bundle 2 maturation.
+
+**B1–B6 (audit's other big-picture observations).** Mostly confirmation that existing portfolio is on track. Mapped: B1 (form-shaping framing) → additive to SP-7; B5 (Bregman-Fenchel reframe) → already SP-9; B6 (channel-capacity prominence) → already SP-14. B2/B3/B4 are pedagogical/orientation, not separate proposals. Captured in `msc/pending-findings-2026-04-25.md` for orientation; no new portfolio entries needed.
+
+**J1–J10 (substantive judgments).** Confirmation that segment-level discipline holds for the ~45 segments read first-hand. Includes external-citation spot-check (Bretagnolle-Huber, Otto-Villani 2000 — both accurate). Recorded in `msc/pending-findings-2026-04-25.md`; not actionable — supplies confidence calibration for the framework's current state.
+
+---
 
 ### 2026-04-22 batch — current status
+
+The 2026-04-22 batch had 15 findings; the strengthening cycle resolved 4 directly and resolves several others through subsumption. Updated table below; see `msc/pending-findings-2026-04-22.md` for the original characterizations.
+
+**F8 note (added 2026-04-25):** F-V3 from the 2026-04-25 batch is the same finding as F8 below, re-surfaced by the 2026-04-24 fresh-pass audit. F8's "Joseph's Option A vs Option B decision" overlaps with F-V3's Path A vs SP-21 routing. F8 / F-V3 should be resolved as one decision.
 
 | # | Finding | Status |
 |---|---------|--------|

@@ -144,7 +144,15 @@ The steady-state mean-square mismatch is $\sigma^2_{\text{step}} / (1 - \lambda^
 
 **Recovery of continuous result.** In the fluid limit: $\sigma^2_{\text{step}} \to n\sigma^2_w / \nu$, $\lambda^2_{\text{eff}} \to 1 - 2\eta^\ast c_{\min}$, and $(1 - \lambda^2_{\text{eff}}) \to 2\eta^\ast c_{\min}$. The steady-state becomes $n\sigma^2_w / (2\nu \eta^\ast c_{\min}) = n\sigma^2_w / (2\alpha)$, recovering Prop A.1S exactly.
 
-The discrete-to-continuous gap for Model S variance is $O((\eta^\ast)^2 c^2_{\max})$ — the $(\eta^\ast)^2 \lVert F_d\rVert^2$ term that vanishes in the fluid limit. This quantifies the error introduced by GA-5 and confirms it is small whenever $\eta^\ast c_{\max} \ll 1$.
+The discrete-to-continuous gap for Model S variance is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$, dominated by the conditioning ratio $c_{\max}^2/c_{\min}^2$. Substituting $\sigma^2_{\text{step}} = n\sigma_w^2/\nu$ and $\eta^\ast = \mathcal{T}/\nu$ into $V_{ss} = \sigma^2_{\text{step}}/(1 - \lambda^2_{\text{eff}})$ and Taylor-expanding at small $\eta^\ast$:
+
+$$\frac{V_{ss}}{V_c} = \frac{1}{1 - \eta^\ast c_{\max}^2/(2 c_{\min})} = 1 + \frac{\eta^\ast c_{\max}^2}{2 c_{\min}} + O((\eta^\ast)^2)$$
+
+so
+
+$$V_{ss} - V_c \approx \frac{n\sigma_w^2\, c_{\max}^2}{4 c_{\min}^2\, \nu}$$
+
+— a leading correction that scales as $1/\nu$. The $(\eta^\ast)^2 \lVert F_d\rVert^2$ term in the per-step recurrence enters $1 - \lambda^2_{\text{eff}}$ at order $(\eta^\ast)^2$, but the steady-state ratio $\sigma^2_{\text{step}}/(1 - \lambda^2_{\text{eff}})$ inverts the leading $2\eta^\ast c_{\min}$ contraction, yielding $O(\eta^\ast)$ asymptotic gap rather than $O((\eta^\ast)^2)$. This quantifies the error introduced by GA-5 and confirms it is small whenever $c_{\max}^2/(c_{\min}^2 \nu) \ll 1$.
 
 ### Fluid Limit Theorem
 
@@ -160,7 +168,7 @@ for a constant $C$ depending on $T$, $L_F$, and $R$.
 
 For Model D (deterministic): the steady-state gap is exactly zero (both discrete and continuous converge to the same fixed point). The fluid-limit error affects only transients.
 
-For Model S (stochastic): the steady-state variance gap is $O((\eta^\ast)^2 c^2_{\max})$, which equals $O(\eta^\ast c_{\max} / \nu)$ when expressed in terms of the event rate.
+For Model S (stochastic): the steady-state variance gap is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$, dominated by the conditioning ratio $c_{\max}^2/c_{\min}^2$. The $(\eta^\ast)^2 \lVert F_d\rVert^2$ term in the per-step recurrence enters $1 - \lambda^2_{\text{eff}}$ at order $(\eta^\ast)^2$, but inverting the leading $2\eta^\ast c_{\min}$ in $V_{ss} = \sigma^2_{\text{step}}/(1 - \lambda^2_{\text{eff}})$ produces an $O(\eta^\ast)$ asymptotic gap, not $O((\eta^\ast)^2)$ — see the recovery calculation in Prop DA.1S above.
 
 ## Epistemic Status
 
@@ -174,7 +182,7 @@ The proofs themselves are standard contraction-mapping (DA.1/DA.2) and supermart
 
 ## Discussion
 
-**GA-5 is closed.** The fluid-limit bridging assumption is no longer required as an ungrounded assumption. For Model D, the discrete and continuous steady states are identical — the gap is zero. For Model S, the gap is $O(\eta^\ast c_{\max})$ in variance, quantitatively bounded and small in the regime where $\eta^\ast c_{\max} \ll 1$. The continuous-time results in #deriv-sector-condition are formally justified as the fluid limit of the discrete results here.
+**GA-5 is closed.** The fluid-limit bridging assumption is no longer required as an ungrounded assumption. For Model D, the discrete and continuous steady states are identical — the gap is zero. For Model S, the gap is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$ in variance, quantitatively bounded and small in the regime where $c_{\max}^2/(c_{\min}^2\,\nu) \ll 1$. The continuous-time results in #deriv-sector-condition are formally justified as the fluid limit of the discrete results here.
 
 **DA2' is a sector-Lipschitz condition, not a pure sector condition.** The continuous-time treatment ( #deriv-sector-condition) requires only the one-sided sector bound $\delta^T F \geq \alpha\lVert\delta\rVert^2$ because the Lyapunov derivative $\dot{V}$ depends only on $\delta^T F$. Discretization introduces a quadratic term $(\eta^\ast)^2\lVert F_d\rVert^2$ that requires the Lipschitz bound $\lVert F_d\rVert \leq c_{\max}\lVert\delta\rVert$. This is the standard distinction between sector conditions and Lipschitz conditions in nonlinear systems theory. For all agents in the verified instances table ( #der-gain-sector-bridge), the Lipschitz bound holds alongside the sector bound, so DA2' imposes no additional restriction in practice.
 

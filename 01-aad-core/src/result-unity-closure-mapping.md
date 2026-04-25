@@ -55,8 +55,9 @@ For linear-Gaussian micro-dynamics with consistent linear projections $\Lambda_x
 
 $$\varepsilon_x = 0$$
 
-regardless of $U_M$ or compression dimension. Linear projections of linear dynamics are exact. $\varepsilon_x$ becomes non-trivial only when:
+regardless of $U_M$ or compression dimension. Linear projections of linear dynamics are exact *when the range of $\Lambda_x$ is invariant under the micro-dynamics matrix*. $\varepsilon_x$ becomes non-trivial when:
 
+- the projection's range is non-invariant under the dynamics matrix — even with linear dynamics, consistent projections, and homogeneous updates, cross-coordinate coupling or anisotropic noise scales that mix macro-subspace components with their orthogonal complement give $\varepsilon_x \gt 0$ (the Mori-Zwanzig zero-lag bound $\varepsilon^\ast \geq \lVert Q_\Lambda U P_\Lambda \rVert_{\text{op}}$ in #form-composition-closure is the general expression of this obstruction),
 - the projection is inconsistent (macro state and macro observation projections disagree),
 - the micro-dynamics are nonlinear, or
 - sub-agent update rules are heterogeneous (see Two-axis structure below).
