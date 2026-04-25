@@ -21,15 +21,15 @@ This is theoretical research, not software engineering. The primary artifacts ar
 
 **Read `TODO.md` first.** The active work is at the top of the file: pending findings, strategic architectural proposals, recommendations for the next session.
 
-`TODO.md §Archive` records work landed at the commit/finding granularity. `LOG.md` records the *theoretical* contributions and structural moves that shaped the framework's current shape, cycle by cycle. Read LOG.md when the *origin* of a current commitment matters — for instance, when judging whether a "settled" item rests on derivation or on a cycle's working consensus, or when an audit finding's prior status helps decide a current routing call. Otherwise CLAUDE.md (architectural state, below) and TODO.md (active work) are sufficient.
+`TODO.md §Archive` records work landed at the commit/finding granularity. `CHANGELOG.md` records substantive cycle narratives (what conventions changed, what disciplines emerged, what each cycle was about) from 2026-04-24 onward; `LOG.md` is the parallel archaeology for cycles *before* 2026-04-24, frozen at that date. Read CHANGELOG.md / LOG.md when the *origin* of a current commitment matters — for instance, when judging whether a "settled" item rests on derivation or on a cycle's working consensus, or when an audit finding's prior status helps decide a current routing call. Otherwise CLAUDE.md (architectural state, below) and TODO.md (active work) are sufficient.
 
 The 01-aad-core segment count is **111** (as of 2026-04-24 naming-pilot commit). Three recent cycles shaped the current state:
 
 - **2026-04-23 Gemini Gap A/B** (103 → 109): six new segments (`#result-contraction-template`, `#deriv-strategic-composition`, `#deriv-fisher-whitened-update-rule`, `#deriv-l1-update-bias`, `#deriv-variational-sector-condition`, `#der-agent-opacity`) plus the **(PI) parameterization-invariance axiom** in `#scope-agent-identity` and explicit **monotone-operator-theory lineage** acknowledgment.
 - **2026-04-24 Gemini pressure-point Tier 1** (109 → 110): six Tier 1 items across the `#deriv-strategy-cost-regret-bound`, `#form-composition-closure`, `#result-contraction-template`, `#deriv-sector-condition`, `#form-information-bottleneck`, `#der-loop-interventional-access` segments, plus the new `#deriv-bias-bound` appendix lifting the Class-2 bias bound from "order-of-magnitude guidance" to "conditional theorem" under two explicit tracks.
-- **2026-04-24 naming pilot** (110 → 111): role-prefix discipline + `#scope-condition` 1:2 semantic split into `#scope-adaptive-system` + `#scope-agency`. Seven slug changes total; the split added one segment. Structural implication: scope is now two first-class scopes, not one nested condition; downstream segments depend on the precise one they need (adaptive or agency) rather than on an abstract compound. See LOG.md 2026-04-23 entry.
+- **2026-04-24 naming pilot → full role-prefix sweep** (110 → 111): role-prefix discipline + `#scope-condition` 1:2 semantic split into `#scope-adaptive-system` + `#scope-agency`, then expanded to a project-wide sweep — every active segment now in `[type-prefix]-[subject-noun]` form, with `TYPE_TO_PREFIX` collapsing long type tokens to compact slug prefixes (`postulate → post`, `definition → def`, `derivation → deriv`, etc.). Trailing-`-{type}` strip applied where subject-nouns redundantly carried the type word (`bias-bound-derivation` → `deriv-bias-bound`). Structural implications: scope is now two first-class scopes; downstream segments depend on the precise one they need; segment kind is visible at a glance in `ls` output. See `CHANGELOG.md` entry for 2026-04-24.
 
-See LOG.md for full cycle detail; the resulting commitments are folded into "What's Settled vs. Open" below.
+See CHANGELOG.md (current cycles) and LOG.md (pre-2026-04-24 archaeology) for full cycle detail; the resulting commitments are folded into "What's Settled vs. Open" below.
 
 **For broader orientation**, read `msc/2026-03-13-feedback.md` — the earlier consolidated review from three independent frontier-model reviews (Claude Opus, OpenAI Codex, Google Gemini) that framed the theory's structural priorities.
 
@@ -248,7 +248,8 @@ Plausible-sounding explanations that aren't grounded in the theory are *worse* t
 **Root level (Agentic Systems):**
 - `OUTLINE.md` — **Top-level assembly index** across all parts.
 - `TODO.md` — **Active work items.** Pending findings, tier-C deferrals, open MEDIUM items, missing segments, and an Archive section for commit/finding-level history. Live; read first when picking up work.
-- `LOG.md` — **Cycle-history archaeology.** Theoretical contributions and structural moves cycle by cycle. Read when the *origin* of a current commitment matters. Not load-bearing for current work.
+- `CHANGELOG.md` — **Forward-going cycle record** from 2026-04-24 onward. Substantive narratives: what conventions changed, what disciplines emerged, what each cycle was about. Add new entries here, not in LOG.md.
+- `LOG.md` — **Pre-2026-04-24 cycle archaeology** (frozen). Theoretical contributions and structural moves of cycles before the CHANGELOG transition. Read when the *origin* of a pre-transition commitment matters.
 - `FORMAT.md` — **Segment file conventions.** How to write claim files; promotion workflow (Gates 1–4); voice and provenance rules; Epistemic Triage.
 - `NOTATION.md` — **Symbol reference.** All math notation defined here.
 - `LEXICON.md` — **Prose vocabulary.** Cycle phases, agent classes, key terms.

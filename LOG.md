@@ -1,8 +1,10 @@
-# LOG.md — Cycle History
+# LOG.md — Cycle History (frozen 2026-04-24)
 
-This file records cycle-by-cycle narrative for completed audit/strengthening/brainstorm cycles. **It is archaeology, not load-bearing for current work.** Fresh agents should read `CLAUDE.md` (architectural state) and `TODO.md` (active work) first; come here only when the *origin* of a current commitment matters — for instance, when judging whether a "settled" item rests on derivation or on a cycle's working consensus, or when an audit finding's prior status helps decide a current routing call.
+**This file is frozen at 2026-04-24.** Cycle narratives from 2026-04-24 onward live in [`CHANGELOG.md`](CHANGELOG.md). Entries below remain available as archaeology of cycles before that transition.
 
-`TODO.md §Archive` records work landed at the commit/finding granularity; this file records the *theoretical* contributions and structural moves that shaped the framework's current shape. The two are complementary: TODO.md says *what shipped*, LOG.md says *what changed about how the theory thinks*.
+This file records cycle-by-cycle narrative for completed audit/strengthening/brainstorm cycles up through the early 2026-04-24 commits. **It is archaeology, not load-bearing for current work.** Fresh agents should read `CLAUDE.md` (architectural state), `TODO.md` (active work), and `CHANGELOG.md` (current-cycle narratives) first; come here only when the *origin* of a current commitment matters — for instance, when judging whether a "settled" item rests on derivation or on a cycle's working consensus, or when an audit finding's prior status helps decide a current routing call.
+
+`TODO.md §Archive` records work landed at the commit/finding granularity; this file records the *theoretical* contributions and structural moves that shaped the framework's current shape, prior to the CHANGELOG transition. The three are complementary: TODO.md says *what shipped*, LOG.md says *what changed about how the theory thought* (past), and CHANGELOG.md says *what is changing about how the theory thinks* (present).
 
 Entries are ordered most-recent-first.
 
