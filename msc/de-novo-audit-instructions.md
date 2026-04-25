@@ -206,12 +206,16 @@ This is two things at once: a reading-order discipline for you, and a verificati
 
 **The verification target.** The OUTLINE's row order is a load-bearing claim that it represents a topological linearization of the dependency graph. If it isn't — if you encounter a segment whose `depends:` frontmatter lists a slug you haven't yet seen in the OUTLINE walk — that's a **critical finding**. Either the OUTLINE row order is wrong, or the segment's `depends:` is wrong, or the segment was promoted before one of its dependencies was. Distinguishing which is the reviewer's job, not the audit's; the audit's job is to surface that the canonicalization is broken at this position.
 
+**Appendix-back-pointer exception.** When a main-section segment (Section I, II, or III) lists an Appendix A derivation in its `depends:`, that's the standard "result-in-body, proof-in-appendix" convention of mathematical writing — *not* a critical finding. You may read the appendix segment as the next segment (with its own reflections document) after it is first referenced (this matches how the paper is intended to be consumed; verifying the proof while the main result is still fresh tends to produce higher-quality math checks) and then return to your OUTLINE walk position. The critical-finding rule applies to *non-appendix* backward pointers — e.g., a Section I segment depending on a Section II concept, or a Section II segment depending on a Section III result. Those are real ordering violations the audit should surface.
+
 Practical procedure for each segment, before reading it:
 
 1. Look at its `depends:` frontmatter list.
 2. Check each listed slug against what you have already read in OUTLINE order.
 3. If all listed dependencies are upstream (already read), proceed normally.
-4. If any dependency is downstream (not yet read), stop and record a critical finding: quote the segment's slug, quote the offending `depends:` entry, note where in the OUTLINE walk you are. Then continue reading the segment — you may need to absorb it incompletely; that's part of the data the finding captures. Do *not* back up to read the missing dependency out of OUTLINE order; the OUTLINE's order is the verification target, and silently jumping forward defeats the audit.
+4. If any dependency is downstream (not yet read):
+   - **Appendix-A derivation case** (the typical case): jump to the appendix segment, read it, return to your OUTLINE position with the proof verified in context. Not a finding.
+   - **Non-appendix backward pointer**: stop and record a critical finding (quote the segment's slug, quote the offending `depends:` entry, note where in the OUTLINE walk you are). Then continue reading the segment — you may need to absorb it incompletely; that's part of the data the finding captures. Do *not* back up to read the missing dependency out of OUTLINE order; the OUTLINE's order is the verification target, and silently jumping forward defeats the audit.
 
 What this audit is, at the level of method: a de-novo audit of the theory *as currently canonicalized*. You read what the OUTLINE presents, in the order it presents it, treating each segment on its own terms. After the segment-by-segment pass, you cross-check your findings against the framework's internal/intermediate documentation (TODO.md, PROPOSALS.md, msc/, prior audits) per §6.1 Phase-2 to determine what's already known versus what's genuinely new. The cross-check happens *after* the canonical pass, never during it.
 
@@ -315,28 +319,21 @@ No length is prescribed here, even as a range. Length prescriptions — even gen
 The reflection is for *you*, not for Joseph. The messy, exploratory, predictive thinking is what the eventual report compresses. Resisting the urge to make scratch notes look polished tends to help — polish later if you ever do.
 
 #### Reflection prompts (scaffolding, not a form)
+**NOTE: If you have the capability to have a running TODO list with system reminders or equivalent, we *highly* recommend putting these items in the list as a frequent reminder of the mental checklist to perform between every segment. While this isn't a form necessarily, you are welcome to use it as if it were, as long as the filling out of the answers doesn't become performative. The reflections are your thoughts, not audit artifacts.**
 
 1. **Predictions vs evidence.** What did I predict (in the initial predictions or in earlier reflections) about this segment, and what did I find? Where was I right, where was I wrong, what nuance had I missed?
-
 2. **Cross-segment consistency.** Does this segment contradict any segment I've already read? Does it implicitly depend on something I haven't read yet? Does it use a concept under a different name from how it appeared earlier? Does a recently-added structural move (scope route, axiom, meta-pattern) propagate here cleanly, or does this segment still reflect the pre-addition framing?
-
-3. **Math verification (if applicable).** Did I actually compute the worked-example math? Are the equation-level tags accurate (Definition / Derived / Hypothesis / etc.)? Does the claimed status label match the actual derivation strength? Are external theorem citations consistent with what those theorems actually say (web-verify if uncertain)?
-
+3. **Math verification (if applicable, at your discretion).** Spot-check math when curiosity or suspicion fires — not on every segment with math. Did I compute a worked-example I had a reason to check? Are the equation-level tags accurate (Definition / Derived / Hypothesis / etc.)? Does the claimed status label match the actual derivation strength? Are external theorem citations consistent with what those theorems actually say (web-verify if uncertain)? Across multiple agents auditing the same corpus, math is collectively over-verified at the front of the OUTLINE and under-verified at the back — so apply your discretion accordingly: if a piece feels well-tested or recently-audited, skip; if it feels novel, fresh, or under-attended, lean in.
 4. **What direction will the theory take next?** What would be exciting to find derived in upcoming segments? What would be disappointing? (Frame this in terms of truth-seeking, not project-success or user-expectation.)
-
 5. **What errors should I now watch for?** Now that I've read this segment, what *future* segment patterns would conflate this with something it isn't? Where might its novel content be underutilized? Where might it be overclaimed? Maintain a running list across reflections.
-
 6. **Predictions for next segments.** Specifically — what will the next segment in the topological order contain? What will the segments referenced in this one's `depends:` (when read) clarify? Make predictions falsifiable.
-
 7. **What would I change?** In this segment, or in past segments now that I've seen this one — what move would have increased the framework's quality? (Be honest; this is for you. The answer goes in the report only if it survives the worthy gate.)
-
 8. **What am I now curious about?** In the framework, in the meta-process, in the universe of truth this segment opens onto. What new questions does this segment generate?
-
 9. **What new knowledge does this enable?** What is now tractable that wasn't before? Be specific about the kind of knowledge — empirical, formal, predictive, diagnostic.
-
 10. **Should the audit process change?** Have I learned something here that suggests altering the reading order, sampling more aggressively in some area, jumping to a specific appendix, or starting a new tracking list? If yes, do it (and note why).
-
 11. **What changes in my outline for the final report?** The report's structure should evolve as you read. Maintain a living outline (`msc/AUDIT-WORKING-NNNNNN/00-running-outline.md`) and update it after segments that change your sense of what the report should emphasize.
+12. **How valuable does this segment *feel* to me?** This ends up being a strong latent signal to help organize thoughts and even the theory later. Be authentic in type and magnitude, but also use as a potential calibration indicator of your own level of engagement with the topics at hand.
+13. **What does the framework now potentially contribute to the field?** Obviously a defect or something incomprehensible would be a negative contribution, but the intent here is to exercise diffuse, imaginative thinking about what can be done now by others using this that couldn't be done before (while the earlier #9 question is usually about the theory & mathematics).
 
 ### 4.5. Periodic strategic-loop revision
 
@@ -400,17 +397,13 @@ This emphasis is high-yield when the framework's claims depend heavily on extern
 
 ### 5.4. Status-label verification (an emphasis available to you)
 
-Each segment carries `status:` in frontmatter (`exact`, `robust-qualitative`, `conditional`, `discussion-grade`, `sketch`, etc.) and equation-level tags (`*[Derived]*`, `*[Formulation]*`, `*[Hypothesis]*`, etc.). For each substantive claim, ask whether the label matches. A `status:exact` segment with mostly-conditional content is a finding. A claim tagged `*[Derived]*` whose own Epistemic Status admits "discussion-grade" is a finding.
-
-This emphasis is high-yield when the framework has many recent revisions or when status labels appear inconsistent at first glance.
+Each segment carries `status:` in frontmatter (`exact`, `robust-qualitative`, `conditional`, `discussion-grade`, `sketch`, etc.) and equation-level tags (`*[Derived]*`, `*[Formulation]*`, `*[Hypothesis]*`, etc.). For each substantive claim, ask whether the label matches. A `status:exact` segment with mostly-conditional content is a finding. A claim tagged `*[Derived]*` whose own Epistemic Status admits "discussion-grade" is a finding. This emphasis is high-yield when the framework has many recent revisions or when status labels appear inconsistent at first glance.
 
 ### 5.5. Scope-honesty audit (an emphasis available to you)
 
 The framework's distinctive contribution is its scope-honesty discipline at the segment level. When a segment claims something, ask: *under what conditions does this hold?* Are those conditions named in Formal Expression, Epistemic Status, or only Working Notes? Are they propagated to downstream segments that depend on this one?
 
-Caveats that exist in Working Notes only, while the segment's punchline reads as universal in the OUTLINE table or downstream summaries, are integration debt and warrant flagging.
-
-This emphasis is high-yield in mature frameworks where casual readings of segment summaries can outrun the careful caveats in segment text.
+Caveats that exist in Working Notes only, while the segment's punchline reads as universal in the OUTLINE table or downstream summaries, are integration debt and warrant flagging. This emphasis is high-yield in mature frameworks where casual readings of segment summaries can outrun the careful caveats in segment text.
 
 ---
 
@@ -440,37 +433,22 @@ If you find something that doesn't fit the "finding" form but seems worth surfac
 
 Past audits have tended to organize the final report around three phases. These are basic expectations rather than prescriptions; if your audit surfaces something that doesn't fit this shape — a significant new angle, an unexpected discovery, an entire line of inquiry the theory hasn't covered — leaning toward what most benefits the project beats conforming to the structure.
 
-**Phase 1 — Findings under burden of proof.** The defended-line-by-line claims in the five-element form above. This is where the audit's verification-mode work shows up.
-
-**Phase 2 — Integration-debt diagnosis via `msc/`.** For each finding that survives Phase 1, looking in `msc/` for spike work, prior pending-findings notes, or architectural-proposal material that addresses the concern *but hasn't propagated to src* tends to be useful. This distinguishes *theory gap* (something genuinely missing or wrong; new work needed) from *integration debt* (the framework has the resolution somewhere, just not in the segment that needs it). Both warrant reporting, but they have different remediation paths and different urgency. (Note: this is the appropriate place to read prior `msc/` material — *after* you've found something and want to know whether the framework has worked on it. Reading prior `msc/` material as a starting point biases the audit; reading it as a triangulation step on a real finding tends to enrich.)
-
-**Phase 3 — Bigger-picture pondering.** After sustained engagement with the corpus, you'll likely have intuitions about simplifications, generalizations, restructurings, or reframings that might make the framework more beautiful, more correct, more applicable, more fundamental, more accessible, more concise, or more complete. These are usually worth surfacing at *Hypothesis* level on the epistemic ladder — specific enough to act on, honest about not being verified. Mark them clearly so a future agent doesn't mistake them for derived results.
+1. **Phase 1 — Findings under burden of proof.** The defended-line-by-line claims in the five-element form above. This is where the audit's verification-mode work shows up.
+2. **Phase 2 — Integration-debt diagnosis via `msc/`.** For each finding that survives Phase 1, looking in `msc/` for spike work, prior pending-findings notes, or architectural-proposal material that addresses the concern *but hasn't propagated to src* tends to be useful. This distinguishes *theory gap* (something genuinely missing or wrong; new work needed) from *integration debt* (the framework has the resolution somewhere, just not in the segment that needs it). Both warrant reporting, but they have different remediation paths and different urgency. (Note: this is the appropriate place to read prior `msc/` material — *after* you've found something and want to know whether the framework has worked on it. Reading prior `msc/` material as a starting point biases the audit; reading it as a triangulation step on a real finding tends to enrich.)
+3. **Phase 3 — Bigger-picture pondering.** After sustained engagement with the corpus, you'll likely have intuitions about simplifications, generalizations, restructurings, or reframings that might make the framework more beautiful, more correct, more applicable, more fundamental, more accessible, more concise, or more complete. These are usually worth surfacing at *Hypothesis* level on the epistemic ladder — specific enough to act on, honest about not being verified. Mark them clearly so a future agent doesn't mistake them for derived results. It is also appropriate at this point to look at some other audit artifacts to see if they were doing anything differently that you would like to bring up or even do as an additional pass.
 
 The three phases are how prior audits have shaped their reports. They're not a template you need to follow if your audit's most valuable content lives outside this structure. If you've stumbled onto something that's neither a finding nor integration-debt diagnosis nor bigger-picture pondering — say, a question the framework hasn't asked itself, or a connection to a body of external work the framework hasn't engaged — the right move is usually to surface it in the form that fits it, and let the structure follow.
 
 ### What is integration debt vs theory gap
 
 Distinguish carefully:
-
 - **Theory gap**: a result is missing or wrong; new work is required.
 - **Integration debt**: the theory is correct somewhere but hasn't propagated to all the segments that should reflect it.
-
 Both warrant findings, but they have different remediation paths. Integration debt is usually editorial; theory gaps are usually substantive.
-
----
 
 ## 7. Asking Joseph
 
-Asking Joseph for clarification, redirection, or scope adjustment is normal and virtuous. Specifically appropriate moments:
-
-- You discover the audit's scope is materially under-budgeted for the framework's size. (Surface this; let Joseph decide whether to authorize a continuation pass.)
-- You hit a finding that suggests the framework's load-bearing structure may need restructuring rather than patching. (Surface it; this is a substantive architectural decision Joseph should make, not the audit.)
-- You discover that prior session work (e.g., a half-finished audit, a flagged deferred concern) is relevant and you don't have full context. (Surface it; ask whether to read the prior material or proceed cold.)
-- You're at the 80% context gate and the audit is partial. (See §4.5.)
-
-Asking is not a failure mode. *Performing certainty you don't have* is the failure mode. Joseph values honest "I'm uncertain about X; should I do Y?" far more than confident output that turns out to be wrong.
-
----
+Asking Joseph for clarification, redirection, or scope adjustment is normal and virtuous. Asking is not a failure mode. Some agents may be able to set a loop timer to automatically resume if he hasn't responded after a certain amount of time. *Performing certainty you don't have* is the failure mode. It is an honest collaboration and you can ask in the moment, surface the issues in the final report/pieces, and/or surface them independent of the report when you are done and awaiting input from Joseph.
 
 ## 8. The worthy gate
 
@@ -485,8 +463,6 @@ Specific tests:
 - **Beauty.** Does the report tell a clear story? Does it surface insight, or just restate the surface? Is the structure clean?
 
 If you cannot honestly answer yes to most of these, keep refining or cut.
-
----
 
 ## 9. Self-reflection questions before considering the audit done
 
@@ -507,8 +483,6 @@ Not a gating checklist — questions worth asking yourself honestly before shipp
 
 A partial audit, honestly framed, is often more useful than a complete-feeling audit whose gaps aren't acknowledged. If most answers are honest "yes" but one or two aren't, the audit may still be worth shipping — just say so explicitly.
 
----
-
 ## 10. A note on the meta-discipline
 
 You are reading this file because someone has tried to do this audit before, and either failed or succeeded under specific conditions worth carrying forward. The instructions are downstream of those failures and successes; they are not invented from nothing.
@@ -516,29 +490,6 @@ You are reading this file because someone has tried to do this audit before, and
 The framework you are auditing is *itself* a theory of adaptive agents under uncertainty, which means it has language for what your audit might go wrong with: insufficient correction tempo against the rate at which the framework changes, incoherent strategy revision when scope grows, charitable reading where verification was warranted, premature closure when the task felt complete. These aren't coincidences. The audit is an instance of the cycle the framework describes; the failure modes the framework illuminates tend to be the same ones a good audit watches for in itself.
 
 Good audits are how the framework gets better. Defensive audits, charitable audits, and delegation-based audits tend to make the framework worse — they leave drift uncorrected and signal false discipline. Joseph trusts the audit to be the corrective. The peer-to-peer relationship that trust implies is real; meeting it tends to be its own reward.
-
----
-
-## Appendix A: Concrete examples of findings the auditors caught
-
-For calibration. These are findings missed by a primary audit and caught by independent re-audits in 2026-04-25. Most have been fixed-- these are just examples:
-
-1. **F-V1 (math error in `deriv-discrete-sector-condition.md` and `detail-linear-ode-approximation.md`):** the discrete-to-continuous Model S variance gap is stated as $O((\eta^*)^2)$. Direct calculation from the segment's own derivation gives $O(\eta^*) = O(1/\nu)$. Numerical check: at $\nu = 10$, gap $\approx 0.053$; at $\nu = 100$, gap $\approx 0.005$. Ten-fold $\nu$ reduces gap ten-fold, not hundred-fold. **Caught by:** running the math.
-
-2. **F-V2 (cross-segment contradiction):** `scope-multi-agent.md` excludes adversarial pairs from composite scope; `scope-composite-agent.md` admits equilibrium-convergent adversarial pairs as strategic composites via C-iv. **Caught by:** cross-checking related scope segments after a recent addition (C-iv).
-
-3. **F-V3 (internal inconsistency):** C-iii allows composites with "no explicit common objective"; `composition-closure` requires $G_c = (O_c, \Sigma_c)$. **Caught by:** noticing the segment's own admission on the next page that without $O_c$ the composite is "a fiction."
-
-4. **F-V4 (sign error in worked example):** `deriv-strategic-composition`'s zero-sum example claims potential $\Phi = a_A - a_B$ with NE $(1, -1)$. The Monderer-Shapley test gives $\partial \Phi/\partial a_B = -1$ but $\partial O_B/\partial a_B = +1$. Correct potential is $\Phi = a_A + a_B$; correct NE is $(1, 1)$. **Caught by:** running the derivative test instead of accepting the framing.
-
-5. **F-V5 (integration debt TST↔logogenic-agents):** `scope-developer-agent.md` treats AI agents using standard AAD apparatus without the Class 2 architectural caveats from `03-logogenic-agents/`. **Caught by:** cross-component consistency check — reading TST claims about AI developers against logogenic-agents Class 2 caveats.
-
-The pattern: the auditors did the math first-hand on worked examples, cross-checked related scope segments around recent additions, and sampled segments the primary audit had categorized as peripheral. The primary audit was charitable; the re-audits were verification-mode. The results differ accordingly.
-
-These are the kinds of moves that tend to surface what charitable reading misses. The instructions above are about making them habitual without making them mechanical.
-
-— end —
-
 
 ## Final Reminder
 
