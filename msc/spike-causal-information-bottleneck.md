@@ -89,4 +89,15 @@ The heuristic tuning parameter $\lambda(M_t)$ in `#disc-ciy-unified-objective` i
 
 This derivation bridges the pragmatic-epistemic gap without requiring the Active Inference "preferences-as-priors" assumption. It relies purely on the physics of Lyapunov stability.
 
+## 7. Adversarial Critique & Structural Repair (2026-04-25)
+
+**Adversarial Critique:** The derivation proves that survival requires bounding scalar observation noise $U_o$, which forces $\lambda \to \infty$ near the boundary. However, CIY is a property of a *specific action*. If an agent finds *one* safe, low-noise action that is completely orthogonal to the environment's drift (e.g., staring at a blank wall), the scalar math says it can take that action forever to minimize $U_o$ and survive. But staring at a wall teaches the agent nothing about the drifting environment! The scalar reduction collapses the dimensionality of the action space, allowing trivial, non-exploratory solutions to satisfy the math.
+
+**Forward-Pass Repair:** The critique is valid and exposes a weakness in scalarizing multivariate dynamics. The constraint $\mathbb{E}_\pi [U_o(a)] \le U_o^{\max}$ must be formulated over the *information matrix*, not a scalar trace. Staring at a wall reduces variance in an orthogonal direction to the environmental drift. The true Lyapunov constraint must require that the observation matrix spans the specific eigenspace where the disturbance $\rho$ is acting. 
+*Fix:* This requires upgrading the KKT Lagrangian from a scalar inequality to a Linear Matrix Inequality (LMI) involving the Fisher Information Matrix. This LMI will mathematically force the agent to choose actions that actively probe the specific dimensions that are drifting, forbidding "blank wall" exploitation.
+
+**Promotion Plan:** 
+- The scalar version was already promoted to `01-aad-core/src/deriv-causal-ib-exploration.md` as a first-order derivation.
+- To fully formalize the LMI repair, a future update to `#deriv-causal-ib-exploration` should introduce the Fisher Information Matrix constraint. This will also likely require an update to `#def-adaptive-tempo` to handle tensor-valued correction rates properly.
+
 *(End of spike.)*

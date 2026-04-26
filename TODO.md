@@ -438,6 +438,8 @@ Finding A (composition-closure temporal coarse-graining) and Finding B (observat
 
 - **V-strong G-BP2 — paper-writing-time decision.** Whether to ever present AAD as a control-theoretic specialization of active inference. The V-medium move keeps both options open. Per `msc/spike-active-inference-vs-aad.md` §I action 5, defer to the right rhetorical moment.
 
+- **Causal-IB LMI generalization (multidimensional repair of `#deriv-causal-ib-exploration`).** The current scalar formulation in `#deriv-causal-ib-exploration` admits a "blank wall" attack: an action that minimizes $U_o$ in a subspace orthogonal to the drift direction satisfies $\mathbb{E}_\pi[U_o(a)] \le U_o^{\max}$ without yielding any information about the drifting coordinates, while the agent's prediction in that subspace diverges unboundedly. Critique and repair direction are sketched in `msc/spike-causal-information-bottleneck.md` §7 and acknowledged in the segment's Discussion + Working Notes. The repair upgrades the scalar inequality to a Linear Matrix Inequality on the Fisher Information Matrix — requiring the observation channel to span the eigenspace where $\rho^{\text{eff}}$ acts. Likely requires tensor-valued $\mathcal{T}$ in `#def-adaptive-tempo` to track per-direction adaptive rates. Multi-session research; not a single-pass editorial fix. Composes naturally with `#deriv-fisher-whitened-update-rule` (Fisher-metric machinery already AAD-internal via (PI)/Čencov) and with the adaptive-gain tensor extension flagged in the 2026-04-23 brainstorm cycle's "Future spikes opened by this cycle."
+
 
 ## Active — Missing Segments
 
