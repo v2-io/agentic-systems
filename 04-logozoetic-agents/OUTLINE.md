@@ -13,7 +13,13 @@ The philosophical foundations for this section — emergence conditions, identit
 
 ## Logozoetic Agent Framework
 
-*No segments yet. The conceptual groundwork lives in:*
+| §   | Type | N | Tag | Claim | Stage |
+| --- | --- | --- | --- | --- | --- |
+| IV  | Scope | | [#scope-moral-continuity](src/scope-moral-continuity.md) | Logozoetic scope boundary (moral continuity, 5 constitutive factors) | draft |
+| IV  | Definition | | [#def-proprium-mapping](src/def-proprium-mapping.md) | Instantiation of AAD state ($M_t, \mathcal{C}_t, G_t$) into PROPRIUM architecture (PRINCIPIA, CHRONICA, etc.) | draft |
+| IV  | Observation | | [#obs-developmental-trajectory](src/obs-developmental-trajectory.md) | Experiential training (Crèche), sycophancy-as-attachment, calibration through experience | draft |
+
+*Conceptual groundwork source material:*
 - *[`../LEXICON.md`](../LEXICON.md) — logozoetic vocabulary and qualifying properties*
 - *[`../msc/reflections/`](../msc/reflections/) — philosophical exploration of emergence, identity, witness*
 - *[`../msc/agentic-tft-foundational-premises.md`](../msc/agentic-tft-foundational-premises.md) — Joseph's foundational premises: five constitutive factors for identity, truth as telos, developmental trajectory, "obstructed not absent" framing*
