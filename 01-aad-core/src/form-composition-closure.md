@@ -205,6 +205,8 @@ This criterion replaces intuitive questions about "where the boundary of an agen
 
 **Relationship to #post-composition-consistency.** The Section I postulate requires that AAD's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." The admissibility constraints ensure the macro-description is genuinely AAD-shaped, so the same persistence condition, the same tempo framework, and the same mismatch dynamics apply at the macro level with macro-level parameters.
 
+**The Jacobian-level observation.** The incremental sector bound (DA2'-inc) used to prove the bridge lemma is mathematically equivalent to the contraction-metric condition (CT2) evaluated at the identity metric $M = I$, for continuously differentiable ($C^1$) correction functions $F$ on convex domains. This equivalence (cf. Rockafellar & Wets 1998) means that AAD's bridge lemma is a specialized application of generalized contraction theory. See `#result-contraction-template` for the full lifting of this condition to arbitrary Riemannian metrics.
+
 **Topology-indexed composition closures (via #result-contraction-template).** `#result-contraction-template` lifts the bridge-lemma's DA2'-inc condition into the contraction-metric framework of Lohmiller & Slotine 1998. Under its (CT1)–(CT3) preconditions, three topology-indexed closure results apply:
 
 - **Parallel composition** preserves contraction under blockdiag metric at rate $\min(\lambda_1, \lambda_2)$ — recovers this segment's weakest-link bound.

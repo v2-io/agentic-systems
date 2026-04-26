@@ -89,6 +89,20 @@ The pattern is *not* a negative posture. AAD does not say "many things are impos
 
 **Tier.** *Exact* for the symmetric-matched-Tier-1-scalar construction exhibited above. *Robust qualitative* for general heterogeneous composites, inheriting the common-Lyapunov-nonexistence structure from Liberzon / Shorten / Dayawansa-Martin without a closed-form AAD-level counterexample.
 
+### Instance 4 — Universal Information-to-Distance Constant under Non-(PI) Norms ( #deriv-bias-bound )
+
+**Setting.** Derive a universal constant $C$ that bounds the parameter-space displacement $\lVert \Delta M_{\text{bias}} \rVert$ caused by observation ambiguity, scaling predictably with the mutual information $I(G; \Omega \mid e, M)$.
+
+**External theorem.** The Cramér-Rao lower bound, or equivalent metric equivalences linking Kullback-Leibler divergence to local distance metrics.
+
+**No-go.** Without a canonical metric on the model space $\mathcal{M}$, no universal information-to-distance constant exists. If the parameter space uses an arbitrary Euclidean norm, the relationship between KL divergence (an information-theoretic quantity) and parameter displacement is unbounded and coordinate-dependent. An explicit counterexample exists in heteroscedastic-normal families (see `#deriv-bias-bound`, Attempt E) where $C$ can be made arbitrarily large by reparameterization.
+
+**Boundary characterization.** The unique escape is to adopt the Parameterization Invariance (PI) axiom. Under (PI), Čencov's theorem forces the geometry to be the Fisher-Rao metric. In this canonical geometry, the relationship between mutual information and parameter displacement is universally bounded (e.g., $C_{FR} = \sqrt{2}$ in the small-information regime).
+
+**Strengthened consequence.** This elevates the (PI) axiom from a "nice-to-have" geometric property to a **load-bearing requirement** for the Class 2 bias bound in `#result-section-ii-survival` and `#scope-observation-ambiguity-modulation`. Without (PI), the bias bound is merely an order-of-magnitude heuristic; with (PI), it is a rigorous theorem.
+
+**Tier.** *Exact (counter-example-grade).* The non-existence of a universal $C$ in arbitrary Euclidean norms is proven by explicit construction.
+
 ## Adjacent Floors (Open Research Directions)
 
 ### Causal-IB Extension for Interventional Relevance Variables
