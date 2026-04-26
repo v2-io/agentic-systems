@@ -16,17 +16,21 @@ Praxis (informed action) is a function of the model. The model's role is not mer
 
 *[Derived (action-selection, from agent-model completeness)]*
 
+Action is a function of the agent's complete internal state. Under Section I scope ( #scope-adaptive-system) — where $M_t$ is the entire internal state — this gives:
+
 $$a_t = \pi(M_t) \quad \text{(deterministic)}$$
 
 $$a_t \sim \pi(\cdot \mid M_t) \quad \text{(stochastic)}$$
 
-where $\pi$ is the agent's **policy** — the mapping from model state to action.
+where $\pi$ is the agent's **policy** — the mapping from internal state to action.
 
-This is not imposed on the system but follows from #form-agent-model: $M_t$ is the agent's compressed history, and action depends on what the agent "knows" — i.e., on $M_t$. Any deterministic or stochastic dependence of action on history *through* the model is captured by $\pi(M_t)$.
+This is not imposed on the system but follows from #form-agent-model: $M_t$ is defined as the agent's compressed, complete internal record, and action depends on what the agent retains — i.e., on $M_t$. Any deterministic or stochastic dependence of action on history *through* the model is captured by $\pi(M_t)$.
+
+**Section II lift.** When the internal state lifts to $X_t = (M_t, G_t)$ for purposeful agents ( #form-complete-agent-state), the same structural argument gives $a_t = \pi(M_t, G_t)$ — action conditions on the complete internal state, which now includes the purposeful substate. The policy form here is the Section I instantiation $G_t = \emptyset$; the actuated-agent form is recovered by the same completeness argument applied to $X_t$.
 
 ## Epistemic Status
 
-*Derived* from #form-agent-model's completeness commitment. If $M_t$ is the agent's complete internal state (by definition), then action — which depends on internal state — is a function of $M_t$. The implicit/explicit distinction and action fluency concept are *discussion-grade* — qualitative properties that follow from the formalism but are not formally derived as propositions.
+*Exact* within Section I scope. The derivation follows from #form-agent-model's completeness commitment: if $M_t$ is the agent's complete internal state (by definition), then action — which depends on internal state — is a function of $M_t$. The Section II generalization $a_t = \pi(M_t, G_t)$ is exact within Section II scope by the same argument applied to the lifted state $X_t$ ( #form-complete-agent-state); see #def-model-sufficiency for the form already in use downstream. The implicit/explicit distinction and action fluency concept are *discussion-grade* — qualitative properties that follow from the formalism but are not formally derived as propositions.
 
 ## Discussion
 
@@ -44,7 +48,7 @@ This is not imposed on the system but follows from #form-agent-model: $M_t$ is t
 
 However, deliberation remains essential when the situation is genuinely novel, the action space is large relative to model capacity (chess, strategic planning), the stakes are asymmetric (cost of error vastly exceeds cost of delay), or $\rho$ is low (stable environment allows deliberation without mismatch accumulation).
 
-**Connection to Section II.** For actuated agents ( #def-agent-spectrum), action selection involves not just $M_t$ but also $G_t = (O_t, \Sigma_t)$ — the purposeful substate. The policy becomes $\pi(M_t, G_t)$, coupling all substates through action ( #der-directed-separation). The action-deliberation-exploration tradeoff (Section II gap) extends the implicit/explicit distinction to three modes: exploit (pursue $O_t$ via $\Sigma_t$), explore (improve $M_t$), deliberate (revise $\Sigma_t$).
+**Connection to Section II.** For actuated agents ( #def-agent-spectrum), the lifted form $\pi(M_t, G_t)$ above unpacks: action conditions on the purposeful substate $G_t = (O_t, \Sigma_t)$ as well as on $M_t$, coupling all substates through action ( #der-directed-separation). The action-deliberation-exploration tradeoff (Section II gap) extends the implicit/explicit distinction to three modes: exploit (pursue $O_t$ via $\Sigma_t$), explore (improve $M_t$), deliberate (revise $\Sigma_t$).
 
 **Domain instantiations:**
 
