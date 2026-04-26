@@ -1,0 +1,30 @@
+# Running Outline for Final Audit Report
+
+1.  **Introduction & Audit Posture**
+    *   Statement of audit constraints (de novo, chronological segment reading, rigorous math checks where applicable).
+    *   Summary of framework state (strengths in Section I, approximations in Section II/III).
+
+2.  **Phase 1: Findings under Burden of Proof**
+    *   *Finding 1: The Opacity-Gain Tension.* `#def-observation-function` strictly states the agent does not know the distribution of the observation noise $\varepsilon_t$. `#emp-update-gain` defines the optimal gain as $\eta^\ast = \frac{U_M}{U_M + U_o}$. If the agent cannot know $U_o$, it cannot compute $\eta^\ast$. The theory needs to explicitly account for how $U_o$ is estimated (e.g., adaptive filtering as part of $f_M$) or clarify that $\eta^\ast$ is a normative ideal used for bounding the persistence condition, not a computed variable inside the agent.
+    *   *Finding 2: Exploration Optimality Limit.* Because `def-causal-information-yield` explicitly defines CIY as action-distinguishability rather than Expected Information Gain (EIG), and relies on a heuristic $\lambda$ weighting to gate exploration, any subsequent claims that an AAD agent's exploration policy is strictly Bayes-optimal would be an overclaim. The framework's exploration mechanics are heuristic.
+    *   *Finding Area 3: Linear ODE vs Sector Bounds.* `#hyp-mismatch-dynamics` explicitly labels its linear ODE as a heuristic. Any "exact" theorems later must rely on the nonlinear sector bounds, not the linear steady-state equations. *(Update: `#result-sector-condition-stability` fulfills this perfectly by using rigorous Lyapunov bounds).*
+    *   *Finding 4: The LLM Applicability Boundary.* `der-directed-separation` explicitly proves that Section II's exact results (which rely on goal-blind epistemic updates) *do not apply* to Class 2 fully-merged architectures like Transformer LLMs. Any future claims applying Section II math directly to bare LLMs without architectural wrappers (like IDT) are formally invalid.
+
+3.  **Phase 2: Integration-Debt Diagnosis via `msc/`**
+    *   *(To be populated later by comparing findings to historical spikes and pending items).*
+
+4.  **Phase 3: Bigger-Picture Pondering**
+    *   *Observation 1: The Epistemic Anchor.* The theory makes a very strong, correct choice in `#scope-agency` by defining causal contrast via $P(o \mid do(a))$ rather than $P(\Omega \mid do(a))$. If an action changes the world but the agent can't observe it, it doesn't count for agency. This anchors the theory purely in what the agent can know and learn.
+    *   *Observation 2: Epistemic Honesty in Composition.* The theory avoids the trap of saying "groups are just agents" by introducing the Tier 1/2/3 classification based on contraction properties. This provides a rigorous dial for how well macro-dynamics track micro-dynamics.
+    *   *Observation 3: Information Bottleneck vs Active Inference.* The theory cleverly adopts the math of the Information Bottleneck (and its relation to variational free energy) to define optimal compression, but explicitly rejects the Active Inference philosophical baggage (preferences-as-priors, free energy as the single master objective).
+    *   *Observation 4: Bias vs Variance in Agents.* `def-model-class-fitness` elegantly maps statistical bias/variance to agent architecture: parametric learning fixes variance (improves $S(M_t)$), structural adaptation fixes bias (improves $\mathcal{F}(\mathcal{M})$).
+    *   *Observation 5: The Software Calibration Lab.* The mapping of software engineering concepts to AAD formalisms is remarkably clean. `git checkout` is a literal Level 3 Pearl counterfactual (`def-pearl-causal-hierarchy`). Compilers, tests, and bug reports map perfectly to independent observation channels with specific $\nu$ and $U_o$ characteristics (`form-event-driven-dynamics`).
+    *   *Observation 6: Epistemic Honesty regarding Channel Independence.* `def-adaptive-tempo` explicitly notes that $\mathcal{T} = \sum \nu \eta^\ast$ is an upper bound that overcounts if channels are correlated. This shows a mature understanding of the limits of the additive formulation.
+    *   *Observation 7: Stochastic vs Deterministic Scaling.* The derivation of the Ornstein-Uhlenbeck steady state in `hyp-mismatch-dynamics` reveals a deep insight: correction is less effective against stochastic noise ($\delta_{rms} \propto 1/\sqrt{\mathcal{T}}$) than against deterministic drift ($\delta_{ss} \propto 1/\mathcal{T}$).
+    *   *Observation 8: Structural vs Task Persistence.* `result-persistence-condition` cleanly separates Lyapunov stability (Structural Persistence, bounded by capacity $R$) from domain survival (Task Adequacy, bounded by $\delta_{\text{critical}}$). This is mathematically precise and practically necessary.
+    *   *Observation 9: The Alignment Assumption.* `result-structural-adaptation-necessity` correctly identifies that lost predictive information does not mathematically guarantee a mean-shift error $\delta_t$ without an "alignment assumption." This is an example of excellent statistical hygiene.
+    *   *Observation 10: Rigorous Lyapunov Core.* The core stability result in `result-sector-condition-stability` is a textbook application of Lyapunov stability for sector-bounded nonlinearities. The math is flawless and grounds the entire "tempo vs volatility" narrative in hard dynamics.
+    *   *Observation 11: Pearl vs Friston Blankets.* `der-directed-separation` brilliantly distinguishes between the "Pearl-blanket" (a technical conditional independence claim) and the "Friston-blanket" (a metaphysical claim about boundaries of the self), adopting the former and rejecting the latter. This is a masterclass in theoretical positioning.
+
+5.  **Audit Scope and Limitations**
+    *   What was read, what was skipped, what math was verified vs assumed.
