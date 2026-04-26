@@ -12,7 +12,7 @@ stage: draft
 
 # Derived: Gain–Sector Bridge
 
-The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at least roughly toward reality. For gradient-based agents, this is equivalent to local strong convexity of the loss function. The sector parameter $\alpha$ is not a free parameter but is determined by the gain and the correction geometry.
+The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at least roughly toward reality. For gradient-based agents, local strong convexity of the loss is sufficient for the one-point sector condition (A2' as stated in #deriv-sector-condition) and bidirectionally equivalent to the two-point / incremental sector condition (DA2'-inc). The sector parameter $\alpha$ is not a free parameter but is determined by the gain and the correction geometry.
 
 ## Formal Expression
 
@@ -36,15 +36,17 @@ $$\alpha = \eta^\ast \cdot c_{\min}, \qquad c_{\min} = \inf_{\lVert\delta\rVert 
 
 ### Gradient Equivalence
 
-*[Derived (sector-convexity equivalence)]*
+*[Derived (sector-convexity equivalence, two-point form)]*
 
 For any agent updating via gradient descent on a loss $L$ with learning rate $\eta$:
 
 $$\alpha = \eta \cdot \mu \qquad \text{where } \mu = \inf_{\lVert\delta\rVert \leq R} \lambda_{\min}(\nabla^2 L(M^\ast + \delta))$$
 
-is the strong convexity modulus. The basin radius $R$ is the largest ball around the optimum where $\nabla^2 L$ remains positive definite. The equivalence is exact:
+is the strong convexity modulus. The basin radius $R$ is the largest ball around the optimum where $\nabla^2 L$ remains positive definite. The equivalence has two forms — bidirectional under the stronger two-point sector condition, one-directional under the one-point form actually used by `#deriv-sector-condition`:
 
-$$\text{GA-3 holds with } (\alpha, R) \iff L \text{ is locally } (\alpha/\eta)\text{-strongly convex on } \mathcal B_R(M^\ast)$$
+- **Two-point / incremental sector ⇔ strong convexity (full equivalence).** Under the incremental sector bound $(F(\delta_1) - F(\delta_2))^T(\delta_1 - \delta_2) \geq \alpha\lVert\delta_1 - \delta_2\rVert^2$ on $\mathcal B_R(M^\ast)$ — DA2'-inc in #deriv-discrete-sector-condition, the bridge-lemma precondition in #form-composition-closure — the iff holds via Nesterov 2004 Theorem 2.1.10:
+  $$\text{Two-point sector with } (\alpha, R) \iff L \text{ is locally } (\alpha/\eta)\text{-strongly convex on } \mathcal B_R(M^\ast).$$
+- **One-point sector ⇐ strong convexity (one direction only).** AAD's GA-3 / A2' as stated in #deriv-sector-condition is the one-point form $\delta^T F(\delta) \geq \alpha\lVert\delta\rVert^2$ at $\delta^\ast = 0$. Strong convexity implies the one-point sector ($\alpha = \eta\mu$); the converse fails. Counterexample: $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies $x \cdot L'(x) \geq \tfrac{1}{2} x^2$ globally yet has $L''(\pi/10) \lt 0$, so it is not convex on any neighborhood of $x^\ast = 0$. The one-point sector at the equilibrium is genuinely weaker than full local strong convexity (cf. #result-sector-persistence-template's one-point/two-point distinction). Full proofs and the counterexample analysis in #deriv-gain-sector Prop B.4.
 
 ### Verified Instances
 
@@ -53,7 +55,7 @@ $$\text{GA-3 holds with } (\alpha, R) \iff L \text{ is locally } (\alpha/\eta)\t
 | Scalar Kalman | Derived | $K = P^-/(P^- + R_{\text{obs}}) = \eta^\ast$ | Global |
 | Matrix Kalman | Derived | $\lambda_{\min}^+(KH)$ in $(P^-)^{-1}$-norm | Observable subspace |
 | Beta-Bernoulli | Derived | $1/(n+1) = \eta_{\text{edge}}$ | Global |
-| Exponential family (natural params) | Derived | $\eta \cdot \lambda_{\min}(\text{Fisher})$ | Global |
+| Exponential family (natural params), bounded scope $\Theta_0 \subset \operatorname{int}(\Theta)$ | Derived | $\eta \cdot \mu_0$ where $\mu_0 = \inf_{\theta \in \Theta_0} \lambda_{\min}(\mathbf I(\theta)) \gt 0$ | $\Theta_0$ (compact / interior-bounded) — global only when the family has a uniform Fisher lower bound |
 | Gradient on strongly convex loss | Derived | $\eta \cdot \mu$ | Global ($R = \infty$) |
 | Gradient on locally convex loss | Derived | $\eta \cdot \mu_{\text{local}}$ | Basin of attraction |
 | Gradient on non-convex loss | Fails at basin boundary | N/A beyond $R$ | Finite $R$ |
@@ -80,9 +82,9 @@ The bridge fails precisely in five cases:
 **Sub-scope $\alpha$ (B1 structural, A2' derived):**
 
 - **Optimal Bayesian updates** (Kalman, conjugate, exponential family): B1 holds by construction — the posterior update minimizes expected loss, ensuring the correction aligns with the mismatch. The sector parameter equals the gain: $\alpha = \eta^\ast$ (scalar) or $\alpha = \lambda_{\min}^+(KH)$ (matrix Kalman, observable subspace).
-- **Gradient descent on (locally) strongly convex losses**: B1 is *equivalent* to strong convexity (Prop B.4) — a well-characterized property with an extensive optimization theory literature. The sector parameter factors as $\alpha = \eta \cdot \mu$ (learning rate × curvature).
+- **Gradient descent on (locally) strongly convex losses**: local strong convexity is *sufficient* for B1 (the one-point form of A2' at $M^\ast$) and *bidirectionally equivalent* to the two-point / incremental sector condition DA2'-inc (Prop B.4 (B.4-i) and (B.4-ii) respectively) — a well-characterized property with an extensive optimization theory literature. The sector parameter factors as $\alpha = \eta \cdot \mu$ (learning rate × curvature). The reverse implication B1 ⇒ strong convexity does *not* hold without the two-point upgrade: the one-point sector at $M^\ast$ is strictly weaker than full local strong convexity (counterexample in Prop B.4).
 - **L2-regularized convex losses**: the regularization parameter $\lambda$ provides a global floor $\mu \geq \lambda$, so $\alpha \geq \eta \lambda$ globally.
-- **Exponential families in natural parameters**: Fisher information matrix is PD on the interior; $\alpha = \eta \cdot \lambda_{\min}(\text{Fisher})$ globally.
+- **Exponential families in natural parameters, on a bounded interior scope**: Fisher information matrix is PD on the interior, and uniformly bounded below on any compact $\Theta_0 \subset \operatorname{int}(\Theta)$; $\alpha = \eta \cdot \mu_0$ with $\mu_0 = \inf_{\theta \in \Theta_0} \lambda_{\min}(\mathbf I(\theta))$. The bound is global only when the family has a uniform Fisher lower bound on $\Theta$ — true for Gaussian-mean and Beta-Bernoulli, false for Poisson natural parameter ($\mathbf I(\theta) = e^\theta$, infimum zero).
 - **Linear corrections with PD gain–observation product**: $\alpha = \lambda_{\min}^+(KH)$.
 
 Within sub-scope $\alpha$, A2' is written down by inspection of the update rule — no independent posit is required. This is what `#deriv-sector-condition` "Grounding of GA-3 — sub-scope $\alpha$" names.
@@ -95,7 +97,7 @@ Within sub-scope $\alpha$, A2' is written down by inspection of the update rule 
 - **Non-convex gradient agents beyond the basin** (FM-3 + basin boundary): A2' fails where the loss curvature goes non-positive; the structural-adaptation-necessity trigger.
 - **Stochastic gradients, per-step**: A2' holds in expectation; per-step noise enters as effective disturbance under Prop A.1S.
 
-The bridge covers sub-scope $\alpha$ rigorously and characterizes the boundary to sub-scope $\beta$ via the five failure modes. It does *not* eliminate GA-3 as an assumption for all AAD-in-scope agents — some agent classes genuinely require A2' as a primitive posit, and the honest architectural statement is scope narrowing rather than universal derivation (see `msc/spike-a2-prime-strengthening.md` for the analysis).
+The bridge covers sub-scope $\alpha$ rigorously and characterizes the boundary to sub-scope $\beta$ via the five failure modes. It does *not* eliminate GA-3 as an assumption for all AAD-in-scope agents — some agent classes genuinely require A2' as a primitive posit, and the honest architectural statement is scope narrowing rather than universal derivation.
 
 The gradient equivalence is validated by simulation across quadratic, logistic, exponential-family, and non-convex losses. The Kalman case is verified analytically. Full derivations and simulation results in #deriv-gain-sector.
 
@@ -124,4 +126,4 @@ The remaining Verified Instances rows (scalar Kalman, Beta-Bernoulli, gradient o
 
 $$\text{gain principle} + \text{B1} \;\xrightarrow{\text{derived}}\; \text{sector condition (GA-3)} \;\xrightarrow{\text{Lyapunov (exact)}}\; \text{persistence, reserve, adversarial scaling}$$
 
-The left arrow is this segment. The right arrow is #deriv-sector-condition. The discrete-time framework ( [#deriv-discrete-sector-condition](discrete-sector-condition.md)) requires an additional Lipschitz bound on the correction function ($\lVert F_d(\delta)\rVert \leq c_{\max}\lVert\delta\rVert$ with $c_{\max} < 2/\eta^\ast$) — strictly stronger than an inner-product upper bound, needed because the discrete contraction involves $\lVert F_d\rVert^2$. This is automatically satisfied for Bayesian updates (the posterior lies between prior and data) and for gradient descent on smooth losses (where $c_{\max}$ is the Lipschitz constant $L$). With this constraint and the step-size condition $\eta^\ast < 2c_{\min}/c_{\max}^2$, the fluid limit is formally justified: Model D steady state is exact, Model S variance gap is $O(\eta^\ast c_{\max})$. Section I's formal chain is now complete.
+The left arrow is this segment. The right arrow is #deriv-sector-condition. The discrete-time framework ( [#deriv-discrete-sector-condition](deriv-discrete-sector-condition.md)) requires an additional Lipschitz bound on the correction function ($\lVert F_d(\delta)\rVert \leq c_{\max}\lVert\delta\rVert$ with $c_{\max} < 2/\eta^\ast$) — strictly stronger than an inner-product upper bound, needed because the discrete contraction involves $\lVert F_d\rVert^2$. This is automatically satisfied for Bayesian updates (the posterior lies between prior and data) and for gradient descent on smooth losses (where $c_{\max}$ is the Lipschitz constant $L$). With this constraint and the step-size condition $\eta^\ast < 2c_{\min}/c_{\max}^2$, the fluid limit is formally justified: Model D steady state is exact, Model S variance gap is $O(\eta^\ast c_{\max})$. Section I's formal chain is now complete.

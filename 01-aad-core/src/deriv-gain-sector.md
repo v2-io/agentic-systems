@@ -126,41 +126,47 @@ $$\delta^T F(\delta) \geq \eta^\ast \cdot c_{\min} \lVert\delta\rVert^2 = \alpha
 
 ## Proposition B.4: Gradient Equivalence
 
-**Statement.** For any agent updating via gradient descent on a differentiable loss $L$ with learning rate $\eta$ and minimizer $M^\ast$ (where $\nabla L(M^\ast) = 0$):
+**Statement.** For any agent updating via gradient descent on a differentiable loss $L$ with learning rate $\eta$ and minimizer $M^\ast$ (where $\nabla L(M^\ast) = 0$), there are two distinct results corresponding to the one-point and two-point sector conditions:
 
-*[Derived (sector-convexity-equivalence)]*
+**(B.4-i) One-point sector ⇐ strong convexity (one direction only).** The one-point sector condition at $M^\ast$ — equivalent to AAD's GA-3 / A2' as stated in #deriv-sector-condition — is
 
-$$\text{GA-3 holds with } (\alpha, R) \iff L \text{ is locally } (\alpha/\eta)\text{-strongly convex on } \mathcal{B}_R(M^\ast)$$
+$$\delta^T F(\delta) \geq \alpha \lVert\delta\rVert^2 \quad \text{for } \lVert\delta\rVert \leq R$$
 
-The sector parameter factors as $\alpha = \eta \cdot \mu$, where:
+evaluated at fixed equilibrium $M^\ast$. Local $(\alpha/\eta)$-strong convexity of $L$ on $\mathcal B_R(M^\ast)$ implies this one-point sector condition with $\alpha = \eta \mu$, but the converse fails: there exist losses satisfying the one-point sector condition that are *not* strongly convex on any neighborhood of $M^\ast$ (counterexample below).
 
-$$\mu = \inf_{\lVert\delta\rVert \leq R} \lambda_{\min}(\nabla^2 L(M^\ast + \delta))$$
+**(B.4-ii) Two-point sector ⇔ strong convexity (full equivalence).** The two-point / incremental sector condition — DA2'-inc in #deriv-discrete-sector-condition and the bridge-lemma precondition in #form-composition-closure — is
 
-is the strong convexity modulus. The basin radius $R$ is the largest ball around $M^\ast$ where $\nabla^2 L$ remains positive definite.
+*[Derived (sector-convexity-equivalence, two-point form)]*
 
-**Proof.** The correction function for gradient descent is $F(\delta) = \eta \cdot \nabla L(M^\ast + \delta)$ (continuous-time form absorbing event rate $\nu$ into $\mathcal{T} = \nu \cdot \eta$). The sector condition requires:
+$$(F(\delta_1) - F(\delta_2))^T(\delta_1 - \delta_2) \geq \alpha \lVert\delta_1 - \delta_2\rVert^2 \quad \text{for } \delta_1, \delta_2 \in \mathcal{B}_R(M^\ast)$$
 
-$$\delta^T F(\delta) = \eta \cdot \delta^T \nabla L(M^\ast + \delta) \geq \alpha \lVert\delta\rVert^2$$
+Under this strengthened condition the iff holds:
 
-Dividing by $\eta \gt 0$:
+$$\text{Two-point sector with }(\alpha, R) \iff L \text{ is }(\alpha/\eta)\text{-strongly convex on }\mathcal{B}_R(M^\ast)$$
 
-$$\delta^T \nabla L(M^\ast + \delta) \geq \frac{\alpha}{\eta} \lVert\delta\rVert^2$$
+with $\alpha = \eta \mu$ and $\mu = \inf_{\delta \in \mathcal B_R(M^\ast)} \lambda_{\min}(\nabla^2 L(M^\ast + \delta))$. The basin radius $R$ is the largest ball around $M^\ast$ where $\nabla^2 L$ remains positive definite.
 
-A differentiable function $L$ is $\mu$-strongly convex on $\mathcal{S}$ iff the gradient monotonicity condition holds (Nesterov 2004, Theorem 2.1.10): for all $x, y \in \mathcal{S}$,
+**Proof of (B.4-ii).** The correction function for gradient descent is $F(\delta) = \eta \cdot \nabla L(M^\ast + \delta)$ (continuous-time form absorbing event rate $\nu$ into $\mathcal{T} = \nu \cdot \eta$). The two-point sector condition becomes:
 
-$$(\nabla L(x) - \nabla L(y))^T (x - y) \geq \mu \lVert x - y\rVert^2$$
+$$\eta \cdot (\nabla L(M^\ast + \delta_1) - \nabla L(M^\ast + \delta_2))^T (\delta_1 - \delta_2) \geq \alpha \lVert\delta_1 - \delta_2\rVert^2$$
 
-Setting $x = M^\ast + \delta$, $y = M^\ast$, and using $\nabla L(M^\ast) = 0$:
+Dividing by $\eta \gt 0$ gives gradient monotonicity with modulus $\mu = \alpha/\eta$. By Nesterov 2004, Theorem 2.1.10, $L$ is $\mu$-strongly convex on $\mathcal B_R(M^\ast)$ iff this gradient monotonicity holds for all $x, y \in \mathcal B_R(M^\ast)$. The equivalence is bidirectional:
 
-$$\nabla L(M^\ast + \delta)^T \delta \geq \mu \lVert\delta\rVert^2$$
+($\Rightarrow$) Two-point sector with $(\alpha, R)$ yields gradient monotonicity with $\mu = \alpha/\eta$, hence strong convexity.
 
-This is identical to the sector condition divided by $\eta$. The equivalence follows:
+($\Leftarrow$) $\mu$-strong convexity gives gradient monotonicity, multiplying by $\eta$ recovers the two-point sector condition with $\alpha = \eta\mu$. $\square$
 
-($\Rightarrow$) GA-3 gives $\delta^T \nabla L(M^\ast + \delta) \geq (\alpha/\eta) \lVert\delta\rVert^2$. Since $\nabla L(M^\ast) = 0$, gradient monotonicity holds with $\mu = \alpha/\eta$.
+**Proof of (B.4-i) one direction.** Setting $\delta_1 = \delta$, $\delta_2 = 0$ in the two-point condition and using $\nabla L(M^\ast) = 0$ recovers the one-point form $\delta^T F(\delta) \geq \alpha \lVert\delta\rVert^2$. So strong convexity (which is equivalent to the two-point sector by (B.4-ii)) implies the one-point sector. The reverse direction does not hold; see the counterexample below. $\square$
 
-($\Leftarrow$) $\mu$-strong convexity gives $\delta^T \nabla L(M^\ast + \delta) \geq \mu \lVert\delta\rVert^2$. Multiplying by $\eta$: $\delta^T F(\delta) \geq \eta\mu \lVert\delta\rVert^2$. So GA-3 holds with $\alpha = \eta\mu$. $\square$
+**Counterexample showing one-point ⇏ strong convexity.** Let $L: \mathbb{R} \to \mathbb{R}$ have $L'(x) = x(1 + \tfrac{1}{2}\sin(10 x))$ with $L'(0) = 0$ (so $x^\ast = 0$). The one-point sector at $x^\ast$ is
 
-**The $\alpha$ factorization.** The decomposition $\alpha = \eta \cdot \mu$ separates agent design ($\eta$, responsiveness) from environment structure ($\mu$, loss curvature). The adaptive tempo maps as $\alpha \propto \mathcal{T}$: higher gain or steeper curvature means faster mismatch correction.
+$$x \cdot L'(x) = x^2\,(1 + \tfrac{1}{2}\sin(10 x)) \geq \tfrac{1}{2} x^2,$$
+
+so the one-point sector holds globally with $\mu = \tfrac{1}{2}$. But $L''(x) = 1 + \tfrac{1}{2}\sin(10 x) + 5 x \cos(10 x)$ takes values such as $L''(\pi/10) = 1 - \pi/2 \approx -0.57 \lt 0$, so $L$ is not convex on any neighborhood of $x^\ast$ that contains $\pi/10$. The one-point sector at the equilibrium is genuinely weaker than full local strong convexity — a structural distinction, not a smoothness artifact. The full two-point sector fails on this $L$ for any pair $(\delta_1, \delta_2)$ straddling a region where $L'' \lt 0$ (gradient monotonicity fails there), so (B.4-ii) correctly identifies this $L$ as a non-instance.
+
+**The $\alpha$ factorization (under (B.4-ii)).** The decomposition $\alpha = \eta \cdot \mu$ separates agent design ($\eta$, responsiveness) from environment structure ($\mu$, loss curvature). The adaptive tempo maps as $\alpha \propto \mathcal{T}$: higher gain or steeper curvature means faster mismatch correction.
+
+**Where each direction lands in AAD.** The one-point form is what `#deriv-sector-condition`'s A2' ((A2') applied at $\delta^\ast = 0$) requires for Lyapunov persistence — and what AAD's six persistence-flavored results inherit through `#result-sector-persistence-template` (T2). The two-point / incremental form is what `#form-composition-closure`'s bridge lemma requires (DA2'-inc) for full-update-map contraction at the composite level. Strong convexity sits at the strict end of this scale: it implies both. The one-point ⇏ two-point counterexample above is exactly why AAD distinguishes the two — Lyapunov persistence is available for some agent classes (variational, PID-bounded-plant) where bridge-lemma contraction is not.
 
 
 ## Loss Function Classification
@@ -170,7 +176,7 @@ The gradient equivalence (Prop B.4) classifies which loss functions satisfy GA-3
 | Loss class | Strong convexity | $\alpha$ | Basin $R$ | Status |
 |---|---|---|---|---|
 | Quadratic (Kalman, linear regression) | Global: $\mu = \lambda_{\min}(H)$ | $\eta \cdot \lambda_{\min}(H)$ | $\infty$ | Exact |
-| Exponential family (natural params) | Global: $\mu = \lambda_{\min}(\text{Fisher})$ | $\eta \cdot \lambda_{\min}(\text{Fisher})$ | $\infty$ | Exact |
+| Exponential family (natural params), bounded scope | Pointwise on the interior; uniform on any compact $\Theta_0 \subset \operatorname{int}(\Theta)$: $\mu_0 = \inf_{\theta \in \Theta_0} \lambda_{\min}(\mathbf{I}(\theta)) \gt 0$ | $\eta \cdot \mu_0$ | $\Theta_0$ (compact / interior-bounded) | Exact within $\Theta_0$ |
 | L2-regularized convex loss | Global: $\mu \geq \lambda$ | $\eta \cdot \lambda$ (floor) | $\infty$ | Exact |
 | Unregularized logistic | Global convex, not strongly | $\eta \cdot \mu(R)$, decaying | $\infty$ (but $\alpha \to 0$) | Local |
 | Quasi-convex | $\delta^T \nabla L \geq 0$ but ratio $\to 0$ | $\eta \cdot \mu(R) \to 0$ | Finite effective | Local |
@@ -179,7 +185,7 @@ The gradient equivalence (Prop B.4) classifies which loss functions satisfy GA-3
 
 **Key observations:**
 
-1. *All exponential family models in natural parameter form satisfy GA-3 globally.* This subsumes Kalman, Beta-Bernoulli, Gaussian, and Poisson posteriors. The Hessian is the Fisher information matrix, which is positive definite in the interior of the natural parameter space.
+1. *Exponential family models in natural parameter form satisfy GA-3 pointwise on the interior of the natural-parameter space, and uniformly on any compact subset of the interior.* The Hessian is the Fisher information matrix $\mathbf{I}(\theta)$, which is positive definite in $\operatorname{int}(\Theta)$ — but pointwise positive definiteness does not imply a uniform global lower bound on $\lambda_{\min}(\mathbf{I}(\theta))$. The Poisson natural parameter is the canonical counterexample: $\mathbf{I}(\theta) = e^\theta$ on $\Theta = \mathbb{R}$, so $\inf_{\theta \in \mathbb{R}} \mathbf{I}(\theta) = 0$ and no global sector constant exists. A uniform $\mu_0 \gt 0$ — and hence a global $\alpha = \eta \mu_0$ — requires either (i) restricting the operating region to a compact $\Theta_0 \subset \operatorname{int}(\Theta)$ on which $\mu_0 := \inf_{\theta \in \Theta_0} \lambda_{\min}(\mathbf{I}(\theta)) \gt 0$, or (ii) verifying a uniform Fisher lower bound for the family in question (Gaussian-mean and Beta-Bernoulli, whose Fisher information is bounded below on the interior of $\Theta$, qualify; Poisson and Gamma-shape do not on the full natural-parameter line). The compact-scope condition is verifiable per-application from the agent's prior support and corresponds to taking $R$ as the diameter of $\Theta_0$ in the natural-parameter coordinate, matching A2's local-region structure ( #deriv-sector-condition).
 
 2. *L2 regularization transforms locally strongly convex losses into globally strongly convex ones.* The regularization parameter $\lambda$ provides a floor: $\alpha \geq \eta \lambda$ everywhere.
 
@@ -223,7 +229,7 @@ The model class does not contain the truth, so the gradient direction is systema
 
 ## Simulation Results Summary
 
-Six numerical experiments validate the gradient equivalence (Prop B.4) and the loss-function classification. Full code and traces are in `msc/spike-gain-sector-bridge-nonlinear.md`.
+Six numerical experiments validate the gradient equivalence (Prop B.4) and the loss-function classification.
 
 ### Experiment 1: Quadratic Loss (Global Strong Convexity)
 
@@ -258,9 +264,9 @@ Poisson in natural parameter space. Sector ratio positive at every step, ranging
 
 **Proposition B.3** (Bridge Theorem) is a *conditional derivation*: exact under B1 (directional fidelity). B1 holds by construction for optimal Bayesian updates (the posterior minimizes expected loss, ensuring the correction aligns with the mismatch). For approximate update rules, B1 is a design condition, not a global assumption. The condition is transparent and checkable for specific systems.
 
-**Proposition B.4** (Gradient Equivalence) is an *exact mathematical equivalence* — the bidirectional implication is proved, not assumed. The loss-function classification follows directly. The simulation experiments confirm the theoretical predictions across all six loss classes tested; no violations were observed where the theory predicts the sector condition holds.
+**Proposition B.4** (Gradient Equivalence) splits along the one-point / two-point distinction. (B.4-ii) — the iff between strong convexity and the *two-point / incremental* sector condition (DA2'-inc) — is an *exact mathematical equivalence*: bidirectional via Nesterov 2.1.10. (B.4-i) — the relation to AAD's one-point sector A2' as stated in #deriv-sector-condition — is *one-directional only*: strong convexity implies the one-point sector at $M^\ast$, but not conversely. The Codex-style counterexample $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies the one-point sector globally yet has $L''$ negative on intervals, ruling out a converse. The loss-function classification table is read accordingly: rows that supply strong convexity satisfy both forms; rows that supply only one-point sector (none in the current table — strong convexity is the universal column) would not transfer to two-point. The simulation experiments confirm the theoretical predictions across all six loss classes tested; no violations were observed where the theory predicts the sector condition holds.
 
-**Max attainable:** *conditional* for the bridge (B1 is inherent — pathological update rules exist), *exact* for the gradient equivalence. The condition cannot be removed: there exist correction functions that violate the sector condition (FM-1 through FM-5).
+**Max attainable:** *conditional* for the bridge (B1 is inherent — pathological update rules exist), *exact* for the gradient equivalence in its two-point form (B.4-ii) and *exact one-direction* for its one-point form (B.4-i). The condition cannot be removed: there exist correction functions that violate the sector condition (FM-1 through FM-5), and there exist losses that satisfy the one-point sector at $M^\ast$ without being strongly convex (the Codex-style counterexample), which is why the one-point ⇏ two-point gap is structural rather than a smoothness artifact.
 
 **What remains open.** (1) Non-gradient agents (PID controllers, rule-based systems, human judgment): GA-3 remains an empirical claim for these agent classes. (2) Time-varying $\alpha$: when the gain adapts (Adam, RMSprop, Kalman transient), $\alpha(t)$ varies; the Lyapunov analysis extends to time-varying $\alpha(t) \geq \underline{\alpha} \gt 0$ via standard results (Khalil 2002, Chapter 8). (3) Stochastic gradients: SGD satisfies the sector condition *in expectation*; the per-step noise enters as effective disturbance in the Prop A.1S framework.
 
@@ -283,11 +289,10 @@ For optimal Bayesian updates, B1 holds by construction, making the full chain a 
 - The fluid-limit gap: the bridge analysis works in expected value. The actual per-step correction is stochastic; observation noise $\varepsilon$ contributes $K\varepsilon$ to each update, acting as effective disturbance of magnitude $\lVert K\rVert \sigma_\varepsilon$ per step. This maps to the Prop A.1S (stochastic) framework — the sector condition on the expected correction plus stochastic noise.
 - For variational inference and other approximate methods, B1 is not guaranteed by optimality and must be verified per approximation scheme.
 - The adaptive-reserve factorization for gradient agents is $\Delta\rho^\ast = \eta\mu R - \rho$, with three controllable factors: gain $\eta$, curvature $\mu$, and basin width $R$. An agent is robust when $\eta\mu R \gg \rho$.
+- Full simulation code, raw traces, and intermediate analysis live in `msc/spike-gain-sector-bridge-nonlinear.md`; the segment carries the parameters and outcomes that establish the result. Landing-context provenance: this segment consolidates `msc/spike-gain-sector-bridge.md` (Kalman / bridge theorem) and `msc/spike-gain-sector-bridge-nonlinear.md` (gradient equivalence and the six experiments).
 
 ---
 
 [^khalil2002]: Khalil, H. K. (2002). *Nonlinear Systems* (3rd ed.). Prentice Hall.
 [^nesterov2004]: Nesterov, Y. (2004). *Introductory Lectures on Convex Optimization*. Springer. Theorem 2.1.10.
 [^lure1957]: Lur'e, A. I. (1957). *Some Nonlinear Problems in the Theory of Automatic Control*.
-
-*(Consolidates `msc/spike-gain-sector-bridge.md` and `msc/spike-gain-sector-bridge-nonlinear.md`.)*
