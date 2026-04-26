@@ -1,0 +1,39 @@
+{%- comment -%}
+  Public README template — composed by bin/build-readme.
+
+  Include sequence below renders to README.md at the repo root.
+  Each include resolves to doc/readme/src/{name}.md.
+
+  Hand-edited partials are stable orientation content; auto-generated
+  partials (_findings-summary, _recent-progress, _known-issues) are
+  rewritten by bin/extract-* on each refresh and should not be
+  hand-edited.
+
+  Auditor version omits the live includes and prepends
+  _auditor-instructions — see README-auditor.md.liquid.
+{%- endcomment -%}
+{% include "_banner" %}
+
+{% include "_about" %}
+
+{% include "_historical-context" %}
+
+{% include "_what-asf-is" %}
+
+{% include "_structure" %}
+
+{% include "_overview-concepts" %}
+
+{% include "_cross-domain-joining" %}
+
+{% include "_maturity-gradient" %}
+
+{% include "_findings-summary" %}
+
+{% include "_recent-progress" %}
+
+{% include "_known-issues" %}
+
+{% include "_navigation" %}
+
+{% include "_contributing" %}

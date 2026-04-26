@@ -1,0 +1,36 @@
+{%- comment -%}
+  Auditor README template — composed by bin/build-readme.
+
+  Renders to README-auditor.md at the repo root.
+
+  Differences from README.md.liquid:
+    - prepends _auditor-instructions after _about
+    - omits the three live includes (_findings-summary,
+      _recent-progress, _known-issues) — these would prime an
+      auditor on what's already been judged settled or open.
+
+  Everything else (orientation partials, structure, vocabulary,
+  cross-domain, maturity gradient, navigation, contributing) is
+  shared with the public README.
+{%- endcomment -%}
+{% include "_banner" %}
+
+{% include "_about" %}
+
+{% include "_auditor-instructions" %}
+
+{% include "_historical-context" %}
+
+{% include "_what-asf-is" %}
+
+{% include "_structure" %}
+
+{% include "_overview-concepts" %}
+
+{% include "_cross-domain-joining" %}
+
+{% include "_maturity-gradient" %}
+
+{% include "_navigation" %}
+
+{% include "_contributing" %}
