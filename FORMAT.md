@@ -206,9 +206,121 @@ Downgrade to `draft`, not to an intermediate stage — the segment needs full re
 4. **Formal Expression** — `## Formal Expression`, with equation-level tags
 5. **Epistemic Status** — `## Epistemic Status`, what's derived vs hypothesized
 6. **Discussion** — `## Discussion`, interpretation, connections — brief
-7. **Working Notes** — `## Working Notes` *(optional)*, internal development notes
+7. **Findings** — `## Findings` *(optional)*, curated catalog entries for distinctive contributions worth surfacing externally
+8. **Working Notes** — `## Working Notes` *(optional)*, internal development notes
 
 Definition, notation, and scope-narrowing files may use a simpler format than full claims. Corollaries and alternate formulations can live with their parent claim (they reinforce its independence), but anything that could be referenced independently should be its own file.
+
+### Findings
+
+The `## Findings` section is optional and exists to surface distinctive contributions into the curated catalog at root-level `FINDINGS.md`. Most segments do not carry one — that is the correct default. Definitions of standard quantities, scope statements that draw a boundary without doing definitional work, postulates accepted as foundational, derivations that back a parent result, pedagogical / illustrative material, and worked examples whose content is exhausted by the parent result they instantiate all typically lack a Findings section. A Findings section is appropriate for segments whose contribution is something an external reader would say is part of why the framework is interesting on its own merits — a result, a recognition, a partition, a synthesis, a domain transfer, a no-go, an architectural commitment.
+
+The `bin/extract-findings` script walks every component's `OUTLINE.md`, opens each referenced segment, extracts the Findings sections that are present, and emits both a canonical `FINDINGS.md` (full per-segment catalog) and a README-shaped condensed `_findings-summary.md`. Header absent ⇒ section absent ⇒ no catalog entry from this segment. This is by design.
+
+#### Where Findings live
+
+Findings live in the segment whose math or naming carries the contribution. For most segments this is straightforward — the derivation segment carries the derivation's Finding, the meta-segment carries the meta-pattern's Finding. For findings whose substance lives *between* multiple segments (e.g., a diagnostic that emerges from the orthogonality of two definitions; a synthesis that names a pattern across primary instances), the natural home is a synthesis-type or narrative-type segment that takes the underlying segments as `depends:` and carries the finding there. Promoting such synthesis segments is encouraged where the cross-segment finding has its own structural integrity; cross-references-with-primary-segment are an alternative when one segment really is upstream-canonical.
+
+A finding's content (Related Work, Impact, Brief) may freely reference dependency segments (segments earlier in the dep DAG that this segment builds on), but should not forward-reference segments that depend on this one — that would invert the dep direction inside finding content. Foundational segments at the start of a chain *may* include a brief forward navigation pointer ("see `#downstream-segment` for the finding this leads to") as orientation, but the finding's content itself lives downstream where the synthesis happens.
+
+#### Schema
+
+Each Finding within a `## Findings` section is introduced by an `### {Finding name}` sub-heading and carries five fields in this order:
+
+```markdown
+## Findings
+
+### {Finding name — Title Case preferred; slug-case acceptable for cross-reference}
+
+**Brief:** {plain-language paragraph; what this finding is and why a thoughtful generalist would care; this is the field a curious-non-specialist reader sees first.}
+
+**Impact:** {paragraph on what the finding unlocks, closes, or forces externally; concrete enough that a reader can evaluate the claim without re-reading the formal expression.}
+
+**Novelty Claim:** {one or two sentences naming the contribution and its claim posture — synthesis / differentiation / novelty / transfer / recognition. Lead naturally with the posture word; do not force into a closed-set label.}
+
+**Related Work:**
+- {Citation} (published YYYY, found YYYY-MM-DD) — *{relationship}* — {one-line note on the specific connection}
+- {Citation} (published YYYY, found YYYY-MM-DD) — *{relationship}* — {note}
+- ...
+
+**Search Log:**
+- YYYY-MM-DD (*{status}*): {one-sentence note on what was searched, what wasn't, and why this depth was right at this point}
+- YYYY-MM-DD (*{status}*): {entry from a later, deeper search; older entries stay for traceability}
+```
+
+#### Multi-finding segments
+
+When a segment carries multiple distinct findings — e.g., one segment-internal derivation that produces both a positive result and an independent no-go; one meta-segment whose synthesis claim is structurally distinct from a structural-equivalence observation — each Finding gets its own `### {name}` sub-heading. Most segments will carry one Finding; this accommodation exists for the cases where forced collapse to a single Finding would either lose an independently-citable claim or strain the Impact paragraph beyond a single coherent topic.
+
+#### Field-by-field guidance
+
+**Brief.** Plain-language paragraph that a thoughtful generalist could read in 30 seconds and come away with an honest sense of what this finding is. Use technical language where there is no plain-language equivalent that preserves meaning, but pause to define or anchor it the first time. The Brief is consistently the most-valuable field for external adoption — it is the field that decides whether an interested reader engages further. Do not let it become a translation-of-the-Impact-paragraph; it should stand on its own.
+
+**Impact.** Paragraph on what this finding *does* in the framework — what it unlocks, what it closes, what it forces. Cross-references to other segments are encouraged where they carry weight (a finding that resolves a previously-flagged GAP, or that lifts a prior result's status, or that makes a downstream construction newly possible). Do not duplicate the Discussion section; Impact is catalog-grade external positioning, while Discussion is in-segment context.
+
+**Novelty Claim.** One or two sentences in prose, naturally leading with a claim posture:
+
+- *Claim synthesis on...* — when the finding integrates multiple prior bodies of work in a way no single prior captures.
+- *Claim differentiation on...* — when the finding sharpens or extends prior work; the precursor exists but the extension is the contribution.
+- *Claim novelty on...* — when no direct anticipation has been found at the search depth conducted; the result stands as fresh.
+- *Claim transfer of X into Y* — when established machinery is being applied to a new domain where it had not been formally instantiated.
+- *Claim recognition of structural equivalence (or pattern) between X and Y* — when the contribution is recognizing an internal equivalence or a cross-segment pattern, rather than producing a new derivation.
+
+These postures are open prose, not a closed enum; the sweep can converge on additional postures as needed. The point is to make the *kind of claim* visible at a glance, with the prose carrying the substance.
+
+**Related Work.** One entry per prior work that bears on this finding. Each entry carries (a) citation, (b) publication date — useful for catching anachronism (something published 2024 cannot be precursor to something derived 2025), (c) date the project found the work, (d) a relationship label, (e) a one-line note on the specific connection.
+
+Two presentation forms are permitted; choose whichever fits the prior-art landscape:
+
+*Bulleted form* — appropriate when the prior-art landscape is simple (one to a handful of relevant priors, each bearing on the finding as a whole):
+
+```markdown
+**Related Work:**
+- {Citation} (published YYYY, found YYYY-MM-DD) — *{relationship}* — {note}
+- {Citation} (published YYYY, found YYYY-MM-DD) — *{relationship}* — {note}
+```
+
+*Table form* — appropriate for findings with richer landscapes where multiple aspects of the finding bear differently on different priors (the pattern used in `msc/Novelty_defense_and_integration.md`'s per-pillar tables). Columns: an aspect of the finding ("ASF concern"), what prior art has on that aspect ("Prior-art language"), and how the finding sits against it ("Relationship / Positioning"):
+
+```markdown
+**Related Work:**
+
+| ASF concern | Prior-art language | Relationship / Positioning |
+|---|---|---|
+| {one aspect of the finding} | {what prior art has, with citation, publication date, found date} | *{relationship}* — {note} |
+| {another aspect} | {another or same prior, with dates} | *{relationship}* — {note} |
+```
+
+The table form is encouraged where the finding's prior-art positioning has substructure — where reducing to a flat list would lose the per-aspect differentiation that makes the claim defensible. The bulleted form is encouraged where a flat list captures the landscape honestly.
+
+Suggested relationship labels (open-ended; the sweep can add):
+
+- *formal antecedent* — adopted mathematical machinery, cited and used in the derivation.
+- *conceptual precursor* — earlier informal or empirical version of the idea; the finding formalizes or sharpens it.
+- *convergent independent* — independent arrival at substantially the same conclusion under different framing or scope.
+- *direct anticipation* — prior work got there first; properly attributed.
+- *partial anticipation* — overlapping but distinct (different scope, framing, or domain).
+- *formalized by this finding* — earlier informal claim given mathematical form here.
+- *verified by this finding* — empirical or formal confirmation of prior theory.
+- *contradicted by this finding* — ASF disagrees with this prior work.
+- *empirical instantiation supporting / against* — concrete case from the literature that bears on the finding.
+- *adjacent literature* — relevant context that informs reading but is not directly antecedent.
+
+**Search Log.** Dated entries that disclose what literature search has been conducted and how. Each entry records (a) the date, (b) the search status (`not-conducted` / `cursory` / `targeted` / `comprehensive` / `intuition-only`), (c) a one-sentence note on what was searched and what was not. As searches deepen over time, new entries are appended (older entries stay for traceability). When the finding has been through a comprehensive prior-art defense at the pillar level (e.g., an Undermind report), the Search Log entry references the defense document and inherits the depth.
+
+The author creating or promoting a segment is welcome to include an *intuition entry* — what their pre-search instinct says about where prior art might lie, where the well-known form of the result might trace to, or which adjacent literatures would be the natural search targets. For AI agents, this includes intuitions grounded in training rather than in active retrieval; for humans, it includes informed-but-unconfirmed expectations. Tagging the entry status as `intuition-only` makes the source explicit. Intuition entries are valuable: they orient future targeted searches, they make the agent's training-derived priors visible (so they can be confirmed or refuted by later evidence), and they prevent the schema from forcing silence in cases where genuine search has not yet been done. An honest intuition entry beats no entry.
+
+The Search Log is the discipline that prevents `Claim novelty on...` from being hubris. A claim of novelty under cursory search is honest; a claim of novelty under comprehensive search is much stronger; a claim of novelty backed only by intuition is weaker still but still better than implicit. Future agents reading the catalog should be able to see at a glance both the claim and what backs it.
+
+#### Tier comes from frontmatter, not Findings
+
+The segment's `status:` frontmatter field carries its epistemic tier (`exact` / `robust qualitative` / `heuristic` / `conditional` / `discussion-grade` / etc., per Epistemic Triage). Findings sections do not duplicate the tier — the extractor reads `status:` from frontmatter and surfaces it alongside the Finding in the catalog. This separates *what kind of contribution* (the Findings section's job) from *how well-established* (the segment's job, anchored in Epistemic Status).
+
+#### Voice and ordering
+
+Findings are written in the segment voice (per *Voice and provenance* below) — not as a chronicle of the cycle that produced the finding, but as the framework speaking about its own contribution. Date stamps belong only in the Search Log. Spike references belong only in `## Working Notes`.
+
+Field ordering is fixed: Brief / Impact / Novelty Claim / Related Work / Search Log. The reader-facing motivation is that Brief carries the catalog reader, Impact says why it matters, Novelty Claim positions the contribution, Related Work shows the receipts, and Search Log discloses the search-state honesty. Catalog extraction relies on this ordering.
 
 ### Working Notes
 
