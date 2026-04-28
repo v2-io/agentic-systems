@@ -1,6 +1,10 @@
 # Proposal: README refactor + composable doc pipeline
 
-**Status:** draft for Joseph review (rev 2 — incorporates `doc/` reorganization and full CLAUDE-2 sunset).
+**Status (2026-04-28): largely executed.** The 2026-04-26 doc-pipeline cycle (commits `653cfeb`, `6389e4d`, `b1c61a0`, `104b777`, `5019581`, `6998a30`) landed the composable-README pipeline, segment-level `## Findings` schema, `doc/` reorganization, the auditor README variant, and the audit-safe folds into `CLAUDE.md`. The 2026-04-28 cycle (commit `614c2bf`) executed §"CLAUDE-2.md sunset" — `CLAUDE-2.md` moved to `_obs/CLAUDE-2-superseded-2026-04-28.md`, content distributed to canonical homes, gating condition met by `msc/FINDINGS-RANKED-DRAFT.md` reaching critical mass (~58 numbered findings + cross-segment + meta-architectural sections). What remains: the segment-Findings sweep itself (still pending — see `PRACTICA.md` 🌟 Findings, soft-blocked on naming-conventions refactor); promotion of cross-segment synthesis prose to meta-segments (incremental, as opportunities arise). The proposal is preserved as historical record; consult CHANGELOG entries for 2026-04-26 and 2026-04-28 for what landed, when, and in which commits.
+
+---
+
+**Original status (rev 2):** draft for Joseph review (rev 2 — incorporates `doc/` reorganization and full CLAUDE-2 sunset).
 **Supersedes:** the inline proposal in conversation 2026-04-26.
 **Scope:** root README, auditor-facing README, sunsetting per-part READMEs and CLAUDE-2.md, segment-level Findings sections, FINDINGS.md as derived artifact, refresh mechanism, `doc/` as the home for long-lived process documents currently scattered in `msc/`.
 
@@ -282,7 +286,7 @@ This is a one-commit cleanup that removes a stale duplicate.
 
 ---
 
-## CLAUDE-2.md sunset
+## CLAUDE-2.md sunset *(✓ executed 2026-04-28, commit `614c2bf`)*
 
 CLAUDE-2.md was created to hold architectural detail that would bias de-novo audits if loaded into agents' default context via CLAUDE.md. After this proposal lands, the same audit-safety is achieved by the README pipeline (auditor README + explicit auditor-hide list) plus the segment-grounded FINDINGS.md, with no need for a separate two-tier CLAUDE document.
 

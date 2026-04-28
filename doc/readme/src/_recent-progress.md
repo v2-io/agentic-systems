@@ -11,15 +11,15 @@ The 3 most recent cycle narratives. Full record at [`CHANGELOG.md`](CHANGELOG.md
 
 Three interlocking documentation moves landed.
 
+### First human review (Alan Walton) + catalog consolidation + brainstorm-as-permanent-workspace
+
+*2026-04-27*
+
+A long working day driven by the project's *first human reviewer's* feedback (Alan Walton — CTO of Latitude / AI Dungeon; mathematician + practitioner running a 12k-commit production agentic-system architecture; ~4h read window). The session landed three interlocking moves; commits `998172b` and `e0cc27b` carry them.
+
 ### Doc pipeline cycle: composable README, segment-level Findings, doc/ established
 
 *2026-04-26*
 
 A consolidation cycle on the project's documentation surface, motivated by Bundle 1 (framework-face reframe) in PROPOSALS.md and the long-standing observation that the public README had drifted from the convergent epistemic-architecture reframe and that the Lexicon section in particular was both very long (300+ lines) and partly duplicative of LEXICON.md. The cycle landed four interlocking moves rather than treating any one as standalone.
-
-### Causal-IB matrix-form lift and transient-amplification spike
-
-*2026-04-25*
-
-After the audit-extraction batch landed earlier in the day, two substantive theory threads extended AAD's matrix-form bound machinery.
 

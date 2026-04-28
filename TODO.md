@@ -297,7 +297,9 @@ SP-7 + SP-3 together partially fulfill Phase C (framing pass), which is now deep
 
 ## Recommendations for next session (updated post-2026-04-24 Gemini pressure-point cycle)
 
-**2026-04-24 Tier 1 landing is the immediate next work.** See `## Active — Pending-Review Spikes (2026-04-24 Gemini pressure-point cycle)` §"Tier 1 landing plan" above. Six bundled items across `#deriv-strategy-cost-regret-bound`, `#form-composition-closure`, `#result-contraction-template`, `#deriv-sector-condition`, `#form-information-bottleneck`, `#der-loop-interventional-access`, plus one new appendix `#deriv-bias-bound`. All items are elementary / textbook-grade; none requires new machinery.
+***Status note (2026-04-28):*** *This section is historical — the 2026-04-23 strategic plan, with Phase A and Phase B explicitly CLOSED below, Phase C Part 1 landed, and Phase C Part 2 / Phases D–G as the still-pending items. **For current priorities and active work areas, [`PRACTICA.md`](PRACTICA.md) is the strategic-portfolio navigator** — it's the live successor to this section's "what to do next" function. The detailed phase ordering below remains useful as the project's substantive-cycle plan and as reasoning trail for which strategic moves were proposed when.*
+
+**2026-04-24 Tier 1 landing is the immediate next work.** See `## Active — Pending-Review Spikes (2026-04-24 Gemini pressure-point cycle)` §"Tier 1 landing plan" above. Six bundled items across `#deriv-strategy-cost-regret-bound`, `#form-composition-closure`, `#result-contraction-template`, `#deriv-sector-condition`, `#form-information-bottleneck`, `#der-loop-interventional-access`, plus one new appendix `#deriv-bias-bound`. All items are elementary / textbook-grade; none requires new machinery. *(2026-04-28: Tier 1 LANDED 2026-04-24 in commits `6102a93`, `b76ee67`. See §"Tier 1 — LANDED" above.)*
 
 Sections below are prior recommendations from earlier cycles; consult once the 2026-04-24 Tier 1 is complete.
 

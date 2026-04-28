@@ -39,6 +39,7 @@
     - [ ] Spikes
     - [ ] Drafting & Outline modification & repair
     - [ ] Segment refinement and promotion advancement
+    - [ ] CI/CD (below)
 
 ### CI/CD
 - [ ] Revisit automatic segment -> outline normalizer (e.g., types, tags, status, etc.)
@@ -46,6 +47,7 @@
 - [ ] FINDINGS regeneration (from above)
 - [ ] IN-PROGRESS regeneration (from this file — PRACTICA — and potentially TODO, PROPOSALS, & working notes from segments)
 - [ ] LEXICON regeneration (potentially, see below)
+- [ ] TODO/CHANGELOG hygiene
 - [ ] README regeneration
     - [ ] FINDINGS -> README summary
     - [ ] IN-PROGRESS -> README summary

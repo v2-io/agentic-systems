@@ -150,9 +150,11 @@ I composed a commit message describing both the 01-aad-core/README deletion AND 
 
 Per Joseph's instruction. Branch is now ~7 commits ahead of origin/main locally.
 
-### J-21. CLAUDE-2.md sunset deferred
+### J-21. CLAUDE-2.md sunset deferred *(✓ resolved 2026-04-28, commit `614c2bf`)*
 
 Per the proposal's execution plan: full sunset waits until segment-Findings sweep is far enough along that FINDINGS.md is the credible reference. Currently 6 pilot entries; the sweep is the next major Findings-related cycle.
+
+**Resolution.** The 2026-04-27 catalog merge + Opus brainstorm pass + lower-confidence pull-back brought `msc/FINDINGS-RANKED-DRAFT.md` to ~58 numbered findings + cross-segment + meta-architectural sections — *de facto* the credible "what's settled" reference the proposal's gating condition required. The full segment-level Findings sweep (writing `## Findings` sections in each segment) is still pending and tracked in PRACTICA, but FINDINGS-RANKED-DRAFT is itself now load-bearing enough to host the architectural snapshot CLAUDE-2 used to provide. The 2026-04-28 cycle executed the sunset: CLAUDE-2 moved to `_obs/CLAUDE-2-superseded-2026-04-28.md`; content distributed; `bin/extract-known-issues` updated; live references in CLAUDE.md, TODO.md, and the README partials cleaned up. See CHANGELOG 2026-04-28 entry.
 
 ### J-22. Segment-Findings sweep deferred
 

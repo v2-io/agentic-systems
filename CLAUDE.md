@@ -21,7 +21,7 @@ This is theoretical research, not software engineering. The primary artifacts ar
 
 **Read [`PRACTICA.md`](PRACTICA.md) first.** PRACTICA is the project's strategic-portfolio navigator — *Current active areas of work, with priority markers (🌟 primary, ⭐ secondary). In AAD terms, it is the top levels of the strategy DAG.* It is the entry point for picking up active work and is intentionally readable by de-novo auditors as well (unlike TODO / PROPOSALS / CHANGELOG, which carry priming content).
 
-**Then read [`TODO.md`](TODO.md)** for the tactical layer below PRACTICA: pending findings, strategic architectural proposals, recommendations for the next session, and an Archive of landed work at the commit/finding granularity. PRACTICA names the *areas*; TODO names the *items within each area*.
+**Then read [`TODO.md`](TODO.md)** for the tactical layer below PRACTICA: pending findings, recommendations from prior cycles, navigator pointers into [`PROPOSALS.md`](PROPOSALS.md) (the architectural-moves portfolio), and an Archive of landed work at the commit/finding granularity. PRACTICA names the *areas*; TODO names the *items within each area*; PROPOSALS holds the *structural moves* that cut across areas.
 
 **The relationship between top-level project files** (worth holding in working memory):
 
