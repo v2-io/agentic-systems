@@ -1,5 +1,7 @@
 # Recommendation: Standardized Format for De Novo Audit Final Reports
 
+> **Superseded 2026-04-28 (later in same session) by [`RECOMMENDED-FORMAT-2026-04-28-v2.md`](RECOMMENDED-FORMAT-2026-04-28-v2.md).** This v1 document surveyed about half the corpus (the AUDIT-WORKING-NNNNNN finals + a few meta-docs); after the corpus grew with 17 newly-extracted `extracted-*-feedback-*.md` files plus the audit-instructions-lineage transcript, a v2 sub-agent surveyed the full corpus and produced a substantially expanded recommendation. The v1 directional shape is preserved — single-file default, required front matter, five-element burden-of-proof schema, coverage statement — and v2 should be read as an evolution rather than a contradiction. Where v1 and v2 differ, follow v2. v1 retained for archaeology of how the recommendation evolved as the evidence base grew.
+
 *Produced 2026-04-28 by a sub-agent surveying the audit corpus (`msc/AUDIT-WORKING-*/FINAL-*.md`, the older `audit-*.md` / `analysis-*.md` documents, the candidate-extraction meta-document, and `doc/de-novo-audit-instructions.md`). Awaiting Joseph's decisions on §5 open questions before any §11 content is added to `doc/de-novo-audit-instructions.md`.*
 
 ## 1. Headline
