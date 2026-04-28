@@ -23,6 +23,14 @@
 - **Bretagnolle-Huber identity** — a 1979 inequality between KL divergence and total variation, $D_{KL} \geq -\log(1-TV)$. Strictly sharper than Pinsker. Becomes an *exact equality* under deterministic optimum.
 - **Survival Lagrangian / shadow price** — Lagrangian = the constrained-optimization construction $\mathcal{L} = \text{objective} - \lambda \cdot \text{constraint}$; the multiplier $\lambda$ is the shadow price of the constraint. "Scalar isotropic" = treats all directions the same; "matrix" or "directional" = treats different directions differently.
 
+**Three patterns of cross-domain transfer recur** through the catalog and are useful as a reading aid. Each finding's *Cross-domain transfer* line is doing one of these three things:
+
+- **Pattern A — External theorem becomes an agent-theoretic primitive.** A classical result from another domain (Shannon rate-distortion; Bareinboim's Causal Hierarchy Theorem; Liberzon's common-Lyapunov-nonexistence; Čencov's invariance theorem; Mitter-Newton's Kalman saturation; Bretagnolle-Huber's KL/TV identity; Otto-Villani transport inequalities) becomes load-bearing inside AAD because the unification places the AAD setting cleanly within the theorem's scope. The theorem is not re-derived; AAD recognizes that its own setting falls within an established result and turns that recognition into structural content.
+- **Pattern B — Empirical pattern from one domain admits a unified mechanism across many.** A long-observed pattern (organizational calcification across Christensen / Levitt-March / Hannan-Freeman / March / Eldredge-Gould; OODA loop advantage; catastrophic forgetting in CLS literature; technical debt as observation infrastructure; Brooks's Law) becomes an instance of a single AAD mechanism that also predicts new instances elsewhere. Six fields' folklore collapses to one parametric form.
+- **Pattern C — Cross-segment composition produces a finding that lives at no single segment.** Stability-induced myopia as the joint product of forgetting + detection latency + consolidation (CS2); the unified RL convergence theory under non-stationarity as the composition of regret bound + tempo + loop-Level-2 + two-gap split (CS1). The finding does not live in any single derivation; it is what becomes visible when several segments are read together.
+
+The brainstorm reasoning trail at [`msc/brainstorm-findings.md`](brainstorm-findings.md) is the ongoing scratch surface where speculative candidates accumulate before promotion (and where lower-confidence catalog entries get parked when the curated list needs tightening). Lowercase = scratch; uppercase = top-level catalog (loose convention).
+
 ---
 
 ## Tier 1: Absolute Breakthroughs
@@ -396,15 +404,9 @@ For LLM agents under near-100% context turnover: same floor applies. An agent th
 * **Field Novelty:** **High** — biological/neuroscience prediction with falsifiable empirical signature.
 * **Potential Importance:** **High** — predicts non-trivial floors on continual-learning consolidation cadence.
 
-### 34. Misspecification-Cost as Adjacent Identifiability Floor
-
-**Description:** `disc-identifiability-floor` flags Misspecification-Cost as open Adjacent Floor. **Expected floor is information-theoretic**: under fixed information budget, degradation rate from misspecified model class is bounded below by KL gap between true and assumed model classes. Combined with #5 + #11, gives quantitative misspecification-cost. Would be a fifth M1 instance once derived. Highly cross-domain: Sargent-Hansen ambiguity-averse decision-making; small-gain misspecification bounds in robust control; BIC penalties; statistical-mechanical free-energy gap. All become M1 instances under one framework.
-
-* **ASF Confidence:** **Speculative** — open extension flagged in segment.
-* **Field Novelty:** **High** if derived.
-* **Potential Importance:** **High** if derived — broad cross-domain reach.
-
 ### 35. Internal Deliberation Pays the Same Bandwidth Floor
+
+*(Number gap: #34 — Misspecification-Cost as Adjacent Identifiability Floor — moved to [`brainstorm-findings.md`](brainstorm-findings.md) on 2026-04-28; the candidate is at speculative confidence, awaiting derivation.)*
 
 **Description:** From `disc-exploit-explore-deliberate`'s three-way Exploit / Explore / Deliberate framing: deliberation is "internal exploration in model-space rather than environment-space." Compose with #5: **deliberation does not relax persistence-bandwidth floor; it only changes channel allocation.** An agent deliberating is *not* exempt from receiving observations at $C \geq \mathcal T/2$. Sharpens deliberation's role: temporary reallocation, not substitute for external bandwidth.
 
@@ -570,53 +572,7 @@ For LLM agents under near-100% context turnover: same floor applies. An agent th
 
 * **ASF Confidence:** **Very High**. **Field Novelty:** **Low**. **Potential Importance:** **Medium**.
 
-### 55. The Tragedy of the Confident Agent — Thermodynamic Reading
-
-**Description:** Composes #4 (confident agents must seek pristine observations) + #5's Landauer reading ($\sim 0.35 n\alpha k_B T$ dissipation in any physical substrate): **as model-uncertainty $U_M$ shrinks, the agent's bandwidth requirement does *not* shrink — confidence does not relax persistence cost, only the information-acquisition strategy.** The agent sustains the same Shannon floor, paid via more selective (lower-noise, more directional) observations rather than more abundant ones. **Complacency does not save energy; it just changes which channels burn it.**
-
-**Cross-domain transfer (speculative-medium).** Highly skilled experts maintain higher metabolic load on focused tasks than novices (known but unexplained). Markets near efficiency dissipate trading energy at higher per-volume rates than markets far from it (Bouchaud's empirical observation). Falsifiable: experts' fMRI-measured metabolic spend on near-mastered tasks should not drop with skill, despite reduced uncertainty; it should redistribute toward more-attended channels.
-
-* **ASF Confidence:** **Speculative-medium** — composition is sound but the thermodynamic reading depends on physical substrate assumptions.
-* **Field Novelty:** **Medium-High**.
-* **Potential Importance:** **Medium**.
-
----
-
-## Speculative — Worth Flagging
-
-*Lower-confidence candidates. Each is an intuition the brainstorm could not fully ground but felt important enough to mark for follow-up. They sit below Tier 3 in confidence but several would be highly consequential if they land. Listed in roughly decreasing strength of intuition.*
-
-### S1. AGI Continuity-of-Self Has a Hard Floor From Singular-Trajectory Commitment
-
-`scope-agent-identity` is explicit: identity is the trajectory $\mathcal C_t$, not the model $M_t$. **Speculative implication:** any "continuity-of-self" guarantee for an AI system across substrate change (model-weight transfer, restart-from-checkpoint, multi-instance deployment) is *not* deliverable from AAD alone. AAD-grounded AI welfare claims (logozoetic agents) about persistence-of-self need additional structure beyond AAD's singular-trajectory commitment. *Negative finding for AI rights / digital-personhood debates.*
-
-### S2. Tier-1 Findings Cluster on Identifiability-Floor Instances
-
-Most Tier-1 findings have an M1-floor instance somewhere in their derivation. The pattern itself is a finding: the framework's most significant results are *strongest* exactly where the negative-half scope theory does work. Not confident this is novel-as-finding rather than methodologically obvious, but worth flagging as a meta-observation that the negative-half pattern (M1) may be doing more architectural work than M2 (separability) or M3 (forcing).
-
-### S3. Tempo × Opacity × Identifiability — Three-Way Generalization
-
-#10's $\mathcal T^{\text{eff}} = \mathcal T \cdot H_b/H_b^{\max}$. **Speculative:** adding the identifiability factor $\iota$ from `scope-edge-update-causal-validity` gives $\mathcal T^{\text{eff}} = \mathcal T \cdot H_b/H_b^{\max} \cdot \bar\iota$. An adversary in Regime C (observational only) against a Regime-A defender (interventional access) has a multiplicative advantage on $\iota$ alone. Empirically: covert vs overt operations produce asymmetric effectiveness even when tempo and opacity are matched.
-
-### S4. Persistence-Cost Floor + Specification Bound Predict an LLM Context-Window Lower Bound
-
-Combine #5 with `result-specification-bound` (TST): minimum context window in tokens is bounded below by $n\alpha/2$ nats/time × (time per cycle) ÷ (nats/token). The algebra hasn't been worked through; the prediction is qualitative. Possibly already known empirically by practitioners who have hit context-stuffing failure modes; Alan would recognize the prediction's shape if it lands quantitatively.
-
-### S5. Hallucination Has a Hard Lower Bound from Intrinsic Ambiguity
-
-#8 derives bias bounded by $\kappa \cdot \mathcal A$. **Speculative:** $\mathcal A$ has a hard lower bound from the prompt's *intrinsic* ambiguity given the agent's prior — some $\mathcal A_{\min}$ no prompt-engineering can drive below. This would predict a hallucination floor for any goal-bearing query, parametric in $\kappa$ (architectural — fixed at training) and $\mathcal A_{\min}$ (semantic — fixed by query structure). If derivable, would close prompt-engineering's hidden-floor gap.
-
-### S6. Chain-of-Thought Is Coupled-Deliberation, Not Pure Deliberation
-
-`disc-exploit-explore-deliberate` derives the deliberation threshold under directed separation (Class 1). For Class 2 agents, the additive decomposition is "convenience." **Speculative:** chain-of-thought is *not* simply increased deliberation; it is *coupled-deliberation* with different optimization properties. The framework may carry a structural answer to "do longer chains-of-thought always help" — they may degrade past a threshold determined by $\kappa \cdot \mathcal A$ accumulating across reasoning steps. Would predict an empirically-checkable optimal-length curve.
-
-### S7. Multi-Instance LLM Agents Don't Jointly Generate Pearl-Level-2 Data
-
-By `scope-agent-identity`, $N$ parallel LLM instances are each their own agent on its own singular trajectory. **Speculative:** they don't *jointly* generate Level-2 data on each other absent explicit coordination. May explain why federated-learning-style multi-instance LLM agentic systems underperform — each instance is at Level 1 with respect to the others, so cross-instance correction is observational rather than interventional.
-
-### S8. Mismatch-Decomposition Has Adversarial-Robustness Implications
-
-`result-mismatch-decomposition` decomposes mismatch into model-error + parameter-error + structural-error. **Speculative:** adversarial attacks target one specific component, and "robustness gains in one regime trade off against another" may map to the decomposition. Cross-regime robustness has structural cost; the framework predicts the precise tradeoff structure.
+*(Number gaps in this catalog — #34 Misspecification-Cost (Tier 2), #55 Tragedy / Thermodynamic Reading (Tier 3), and the former S1–S8 Speculative section — were moved to [`brainstorm-findings.md`](brainstorm-findings.md) on 2026-04-28 as lower-confidence candidates not yet ready for the curated catalog. They remain under active development there. Promotion back happens by the same process as new candidates: derivation tightens, scope clarifies, then the entry lands here.)*
 
 ---
 
@@ -782,4 +738,10 @@ What else is in here that nobody has noticed yet? The framework is integration p
 
 ---
 
-*This catalog is a snapshot, not a closure. The next pass should include a brainstorming agent's additions for cross-domain implications not yet surfaced — the framework's integration is broad enough that adjacent fields' open questions may have unexpected answers in here.*
+*This catalog is a snapshot, not a closure. The framework's integration is broad enough that adjacent fields' open questions may have unexpected answers in here, and many remain unsurfaced.*
+
+---
+
+## See also
+
+- [`brainstorm-findings.md`](brainstorm-findings.md) — ongoing scratch / speculative-candidate surface. Where new candidates accumulate before promotion, and where lower-confidence catalog entries are parked when this list needs tightening. Currently holds the original Pass 1 / Pass 2 brainstorm outputs (the seed material that fed this catalog), the per-field cross-domain implication map, the speculative S-section, and the rolling promotion-and-pull log. Convention: lowercase filenames in `msc/` are scratch / working artifacts; uppercase are top-level catalog or candidate documents.
