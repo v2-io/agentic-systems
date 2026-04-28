@@ -1,7 +1,7 @@
 # PRACTICA
-*Current active areas of work with 🌟 (primary) and ⭐ (secondary) indicating most immediate priorities. In AAD terms, it is the top levels of the strategy DAG.*
+*Current active areas of work with 🌟 (primary) and ⭐ (secondary) indicating most immediate priorities. In AAD terms, this is the top levels of the strategy DAG.*
 
-*Parent of [`TODO.md`](TODO.md) (tactical work items within each area), with [`PROPOSALS.md`](PROPOSALS.md) cutting across areas as the architectural-moves layer. Sister-files: [`README.md`](README.md) is the external-facing snapshot; [`CLAUDE.md`](CLAUDE.md) is the agent-onboarding entry point; [`CHANGELOG.md`](CHANGELOG.md) is the historical record. PRACTICA itself is auditor-safe — readable during de-novo audits — but linked entries into TODO / PROPOSALS / CHANGELOG are priming-heavy and should be skipped until the initial stages of the audits are complete.*
+*This file names the **areas** of active work. The systematic project workflow each area implies — audit cycles, segment refinement and promotion, citation checks, prior-art searches, the named workflow steps below — is mostly not enumerated piece-by-piece. For specific items that don't fit a more systematic home: [`TODO.md`](TODO.md) is the misc-and-details layer (open audit-finding routing decisions, queued spike follow-ups, deferred items, lower-priority specifics). For architectural moves under review: [`PROPOSALS.md`](PROPOSALS.md). Sister-files: [`README.md`](README.md) external-facing snapshot, [`CLAUDE.md`](CLAUDE.md) agent-onboarding, [`CHANGELOG.md`](CHANGELOG.md) historical record. PRACTICA itself is **auditor-safe** — readable during de-novo audits — but linked entries into TODO / PROPOSALS / CHANGELOG are priming-heavy and should be skipped until the initial stages of audits are complete.*
 
 ## ⭐Theory
 - [ ] ⭐ [[TODO]]
@@ -55,19 +55,25 @@
 
 ## Names & Lexicon
 ### 🌟 Current naming conventions refactor
-1. [ ] Launch naming survey agents with initial instructions
-2. [ ] Aggregation & Consolidation (initial/blind)
-3. [ ] Launch naming survey voters
-4. [ ] Aggregation & Consolidation (final)
-5. [ ] Final decisions
-6. [ ] Strategically execute renaming surgery, historical map, & audit
+
+Status: pilot complete; full role-prefix sweep complete (142 segments under `{type-prefix}-{subject-noun}`); refined principles file landed (2026-04-24, `b9492b7`). Architectural invariants now: role-prefix from frontmatter (mechanical via `bin/align-slug`); subject-noun preference; Greek-vocabulary commitment; separate-passes methodology. Remaining work votes only on subject-nouns. Detail in `doc/naming-principles.md` and `msc/naming-pilot-rename-plan.md`.
+
+1. [x] ~~Launch naming survey agents with initial instructions~~ (original Round 1 launched 2026-04-23; 10 vote files at `msc/naming-votes/`)
+2. [x] ~~Aggregation & Consolidation (initial/blind)~~ (`msc/naming-aggregate-{review,round2,votes.json}`; `bin/naming-aggregate.rb`)
+3. [ ] **🌟 Launch refined Round 1 (cold-start)** — agents write `*-r2.md` vote files under `msc/naming-votes/` per refined `doc/naming-principles.md` (vote on subject-nouns only; role-prefix is invariant; +2 weight band; explicit categories rename / keep / canonicalize / add-alias / name-unnamed)
+4. [ ] Aggregate refined Round 1 (re-use `bin/naming-aggregate.rb`); also import any Round-1 unique-value items the new batch missed
+5. [ ] Round 2 (blind) using refined-Round-1 aggregation
+6. [ ] Collision audit on top finalists (web search for external collisions, à la ACT → AAD precedent)
+7. [ ] Final decisions
+8. [ ] Strategically execute renaming surgery, historical map, & audit (specific deferred renames listed in [`TODO.md`](TODO.md) §"Naming pipeline — specific deferred items")
 
 ### Lexicon
 - [ ] Consider segment -> accumulator / alphabetize -> lexicon
 - [ ] Update / Refresh Lexicon (manually or automated depending on earlier)
 
 ## Misc
-- [ ] Review new README outline & partials available
+- [x] ~~Review new README outline & partials available~~ — landed via 2026-04-26 doc-pipeline cycle (commits `653cfeb`, `6389e4d`, `b1c61a0`, `104b777`); pipeline at `doc/readme/`, scripts in `bin/` (`build-readme`, `extract-findings`, etc.)
 - [ ] Consider modifying & updating link formatting + policy, and tagging (better optimized for both obsidian, plain text, and github)
 - [ ] Footnote and citation procedure
 - [ ] Historical provenance and relic cleanup (e.g., unimportant TFT mentions even if effectively in footnotes)
+- [ ] README v2 pass per Alan Walton's first-human review (queued; detail in [`TODO.md`](TODO.md))
