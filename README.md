@@ -13,6 +13,11 @@ The framework formalizes the *adaptive cycle* — one complete traversal of the 
 
 What ASF is not: a finished theory, a foundation-model architecture, or a claim that agency is reducible to its formal machinery. The framework is mathematical where the mathematics yields genuine insight, and principled-sketch where the insight is structural rather than quantitative. The boundary between these regimes is fluid and explicitly visible — see *Maturity Gradient* below.
 
+**Two entry points beyond this README:**
+
+- *Explore the theory itself* → [`OUTLINE.md`](OUTLINE.md) — the top-level assembly index across all four components, descending into each component's own OUTLINE and from there into individual claim segments.
+- *See the current work on the theory* → [`PRACTICA.md`](PRACTICA.md) — the strategic-portfolio navigator naming active areas of work with priority markers (🌟 primary, ⭐ secondary). In the framework's own vocabulary, PRACTICA is the top levels of the project's strategy DAG, sitting above [`TODO.md`](TODO.md) (tactical items) and [`PROPOSALS.md`](PROPOSALS.md) (architectural moves under review).
+
 
 <!--
   Four-paragraph distillation. The long-form authoritative version is
@@ -207,6 +212,12 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 The 3 most recent cycle narratives. Full record at [`CHANGELOG.md`](CHANGELOG.md); pre-2026-04-24 archaeology at [`LOG.md`](LOG.md).
 
+### CLAUDE-2.md sunset; PRACTICA navigator; catalog extraction
+
+*2026-04-28*
+
+Three interlocking documentation moves landed.
+
 ### Doc pipeline cycle: composable README, segment-level Findings, doc/ established
 
 *2026-04-26*
@@ -218,12 +229,6 @@ A consolidation cycle on the project's documentation surface, motivated by Bundl
 *2026-04-25*
 
 After the audit-extraction batch landed earlier in the day, two substantive theory threads extended AAD's matrix-form bound machinery.
-
-### Audit-extraction batch and cross-agent peer review
-
-*2026-04-25*
-
-Eight FINAL audit reports under `msc/AUDIT-WORKING-{584721, 613842, 738192, 742613, 849201}/` were triaged into a banded candidate file (`msc/audit-final-reports-candidate-extraction-2026-04-25.md`): §A high-confidence local fixes (14 candidates), §B already-tracked, §C strengthening-needed (4 items, escalated), §D architectural (5 items, mapped to existing PROPOSALS bands), §E borderline. The §A batch was dispatched as 7 parallel verify-then-fix agents under the discipline "the finding is *suspected*, not confirmed — verify in current segment text first; strengthen-before-soften before any softening; FORMAT discipline is non-negotiable." Landings.
 
 
 
@@ -239,7 +244,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 - Missing commitment / resource / temporal structure in the DAG
 - Directed separation violated by goal-conditioned agents (LLMs) — handled as architectural scope (Class 2 exit), not approximation
 
-*Source: [`CLAUDE-2.md`](CLAUDE-2.md).*
+*Source: [`CLAUDE.md`](CLAUDE.md).*
 
 ### Architectural proposals under review
 
@@ -293,7 +298,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 - *Conducting a de-novo audit of the framework?* Please read [`doc/de-novo-audit-instructions.md`](doc/de-novo-audit-instructions.md) first; it documents the recommended posture and the failure modes prior audit cycles surfaced. Use [`README-auditor.md`](README-auditor.md) instead of this file.
 - *Academic reader evaluating the framework's claims?* Recommended sequence: this README → [`FINDINGS.md`](FINDINGS.md) (curated novel results with epistemic tiers) → [`01-aad-core/OUTLINE.md`](01-aad-core/OUTLINE.md) (canonical theory outline) → individual segments under `01-aad-core/src/`.
 - *Engineer or practitioner?* The [Cross-Domain Joining](#cross-domain-joining) table maps AAD concepts to the domain you likely care about; from there, follow the relevant component OUTLINE.
-- *Picking up active work on the framework?* [`TODO.md`](TODO.md) is the navigator for current work items, and [`PROPOSALS.md`](PROPOSALS.md) is the architectural-proposal portfolio.
+- *Picking up active work on the framework?* [`PRACTICA.md`](PRACTICA.md) is the strategic-portfolio navigator — the active areas of work with priority markers, sitting above [`TODO.md`](TODO.md) (tactical work items within each area) and [`PROPOSALS.md`](PROPOSALS.md) (architectural-proposal portfolio cutting across areas). Start at PRACTICA; descend into TODO/PROPOSALS as the work directs.
 
 ### Project layout
 
@@ -310,7 +315,8 @@ LEXICON.md            Prose vocabulary (cycle phases, agent classes)
 NOTATION.md           Symbol reference
 FORMAT.md             Segment file conventions
 FINDINGS.md           Curated novel-results catalog (auto-generated)
-TODO.md               Active work items
+PRACTICA.md           Strategic-portfolio navigator (active areas of work)
+TODO.md               Tactical work items (sits below PRACTICA)
 PROPOSALS.md          Architectural-proposal portfolio
 CHANGELOG.md          Forward-going cycle record (2026-04-24 onward)
 LOG.md                Pre-2026-04-24 cycle archaeology (frozen)
@@ -339,6 +345,8 @@ ASF is research-stage work; contributions take a few specific forms.
 **Spikes.** Speculative or in-progress work that is not yet ready for segment promotion lives under `msc/spike-{topic}.md`. Spikes are honest reasoning trails; results that promote out of spikes land in segments per the math-lives-in-segments discipline.
 
 **Tooling.** Internal process scripts (build, extract, lint) are written in Ruby; community-facing tooling (simulations, reproducibility scripts) is written in Python. New scripts in `bin/` follow this convention; existing scripts that don't are not retroactively rewritten.
+
+**Editing this README.** This file is *auto-generated* from partials under [`doc/readme/src/`](doc/readme/src/) via [`bin/build-readme`](bin/build-readme). Direct edits to `README.md` will be overwritten on the next build. To change README content, edit the relevant partial (`doc/readme/src/_<name>.md`) and re-run `bin/build-readme`, or run [`bin/refresh-all`](bin/refresh-all) to also regenerate the auto-extracted partials (`_findings-summary.md`, `_recent-progress.md`, `_known-issues.md`). Templates live in `doc/readme/*.liquid` and only change when the section *order* or *set* changes. The same discipline applies to `README-auditor.md`.
 
 **Reporting issues.** Open an issue on GitHub or contact the project maintainer (see commit history).
 

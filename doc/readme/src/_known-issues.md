@@ -10,7 +10,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 - Missing commitment / resource / temporal structure in the DAG
 - Directed separation violated by goal-conditioned agents (LLMs) — handled as architectural scope (Class 2 exit), not approximation
 
-*Source: [`CLAUDE-2.md`](CLAUDE-2.md).*
+*Source: [`CLAUDE.md`](CLAUDE.md).*
 
 ### Architectural proposals under review
 

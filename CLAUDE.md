@@ -19,11 +19,21 @@ This is theoretical research, not software engineering. The primary artifacts ar
 
 ## Current Priority
 
-**Read `TODO.md` first.** The active work is at the top of the file: pending findings, strategic architectural proposals, recommendations for the next session.
+**Read [`PRACTICA.md`](PRACTICA.md) first.** PRACTICA is the project's strategic-portfolio navigator — *Current active areas of work, with priority markers (🌟 primary, ⭐ secondary). In AAD terms, it is the top levels of the strategy DAG.* It is the entry point for picking up active work and is intentionally readable by de-novo auditors as well (unlike TODO / PROPOSALS / CHANGELOG, which carry priming content).
 
-`TODO.md §Archive` records work landed at the commit/finding granularity. `CHANGELOG.md` records substantive cycle narratives (what conventions changed, what disciplines emerged, what each cycle was about) from 2026-04-24 onward; `LOG.md` is the parallel archaeology for cycles *before* 2026-04-24, frozen at that date.
+**Then read [`TODO.md`](TODO.md)** for the tactical layer below PRACTICA: pending findings, strategic architectural proposals, recommendations for the next session, and an Archive of landed work at the commit/finding granularity. PRACTICA names the *areas*; TODO names the *items within each area*.
 
-For detailed architectural state — recent cycles, settled commitments, novel results — see [`CLAUDE-2.md`](CLAUDE-2.md). **Do not read CLAUDE-2.md during a de-novo audit; read it only when Joseph indicates the current task is not an audit.**
+**The relationship between top-level project files** (worth holding in working memory):
+
+- **`PRACTICA.md`** — strategic-portfolio navigator (root nodes of the project's strategy DAG; areas of active work).
+- **`TODO.md`** — tactical layer; specific items within PRACTICA's areas, plus the Archive of landed work.
+- **`PROPOSALS.md`** — architectural-moves layer; structural changes under review, often cutting across multiple PRACTICA areas. Each entry carries thesis / merits / scope / interactions / effort / risks / status.
+- **`CHANGELOG.md`** — historical layer; substantive cycle narratives (what conventions changed, what disciplines emerged) from 2026-04-24 onward. **`LOG.md`** is the parallel archaeology for cycles *before* 2026-04-24, frozen at that date.
+- **`README.md`** — external-facing snapshot for human readers (auto-generated from `doc/readme/` partials — see *README discipline* below).
+- **`CLAUDE.md`** — this file; agent-onboarding for AI working on the project. Trimmed of architectural detail to avoid priming de-novo audits.
+- **Settled architectural detail** previously lived in CLAUDE-2.md (sunset 2026-04-28; preserved at `_obs/CLAUDE-2-superseded-2026-04-28.md`). It now lives in: `msc/FINDINGS-RANKED-DRAFT.md` (curated novel results + convergent choices); `CHANGELOG.md` (cycle narratives); segment-level `## Findings` sections (per-segment); `TODO.md` (open items); the catalog's M-section (meta-architectural patterns).
+
+**README discipline.** The public README is *auto-generated* from partials under `doc/readme/src/` (composed by `bin/build-readme` via Liquid templates). Direct edits to `README.md` will be overwritten on the next build. To change README content, edit the relevant partial in `doc/readme/src/_<name>.md` and re-run `bin/build-readme` (or `bin/refresh-all` to also regenerate the auto-extracted partials `_findings-summary.md`, `_recent-progress.md`, `_known-issues.md`). Templates live in `doc/readme/*.liquid` and change only when the section *order* or *set* changes. The same discipline applies to the auditor variant `README-auditor.md`.
 
 ## Where to Start (for orientation)
 
@@ -33,7 +43,7 @@ For detailed architectural state — recent cycles, settled commitments, novel r
 
 **Read `NOTATION.md`** for the symbol reference. For the full original TFT conventions and epistemic system, see `_obs/old-tf-00-notation-conventions.md`.
 
-**See `TODO.md`** for active work items and `msc/SPIKES.md` for the spike index. What's settled/architectural lives in `CLAUDE-2.md` (read only when not auditing); what's in-flight belongs in TODO.md; what's been explored belongs in `msc/` with SPIKES.md as the entry point.
+**See [`PRACTICA.md`](PRACTICA.md)** for the strategic-portfolio navigator (active areas of work; auditor-safe), and **[`TODO.md`](TODO.md)** for tactical work items beneath it. **`msc/SPIKES.md`** is the spike index. What's settled/architectural lives in `msc/FINDINGS-RANKED-DRAFT.md` (curated catalog) and segment-level `## Findings` sections; what's in-flight belongs in TODO.md; what's been explored belongs in `msc/` with SPIKES.md as the entry point.
 
 ## Theory Structure
 
@@ -99,11 +109,18 @@ Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not
 
 6. **Math in conversation vs files.** In terminal chat responses, use Unicode for math (α, δ, Σ, →, ≥, etc.) — there is no LaTeX rendering in the terminal. In markdown files written to disk, use proper inline LaTeX per FORMAT.md. Joseph may respond in whatever notation is easiest to type — interpret generously.
 
-7. **Epistemic architecture detail** — see CLAUDE-2.md.
+7. **Epistemic architecture detail** — see meta-architectural M-section (M1 identifiability-floor / M2 separability / M3 additive-coordinate-forcing) in `msc/FINDINGS-RANKED-DRAFT.md` plus the relevant `disc-*` meta-segments under `01-aad-core/src/`.
 
 ## What's Settled vs. Open
 
-For the architectural snapshot — settled load-bearing results, open structural questions, known fragilities — see [`CLAUDE-2.md`](CLAUDE-2.md) (read only when not auditing).
+For the architectural snapshot — settled load-bearing results — see [`msc/FINDINGS-RANKED-DRAFT.md`](msc/FINDINGS-RANKED-DRAFT.md) (curated catalog with epistemic tiers) and segment-level `## Findings` sections. Open structural questions live in [`TODO.md`](TODO.md); component-level GAPs are surfaced in component `OUTLINE.md` files.
+
+### Known Fragilities
+
+Scope statements about what the framework currently treats as outside its formal scope (kept here so `bin/extract-known-issues` can surface them in the README; relocated here from the sunset CLAUDE-2.md):
+
+- Missing commitment / resource / temporal structure in the DAG
+- Directed separation violated by goal-conditioned agents (LLMs) — handled as architectural scope (Class 2 exit), not approximation
 
 ## Working Conventions
 
@@ -119,7 +136,7 @@ For every finding that proposes a softening repair: spike a strengthening attemp
 
 The failure mode to watch for in your own behavior: the obvious move when faced with an apparent overclaim is to soften — it feels like "doing the work" because something concrete results. The harder move is to ask whether the claim could be made true. Notice the pull toward the obvious move and resist it.
 
-Worked examples of strengthen-first repairs are recorded in CHANGELOG.md and CLAUDE-2.md.
+Worked examples of strengthen-first repairs are recorded in CHANGELOG.md.
 
 ### Prior art integration
 
@@ -155,27 +172,28 @@ When writing framing-level material (preambles, README, paper introduction), for
 
 ## Where to look next (for non-audit work)
 
-The following carry current architectural state and recent-cycle context. They will bias de-novo audit work, so read them only once the current task is established as non-audit:
+[`PRACTICA.md`](PRACTICA.md) is the strategic-portfolio navigator and is auditor-safe. The following carry current architectural state and recent-cycle context that *will* bias de-novo audit work, so read them only once the current task is established as non-audit:
 
 - [`FINDINGS.md`](FINDINGS.md) — curated novel-results catalog (auto-generated from segment-level `## Findings` sections). External-facing summary of "what has ASF actually proved" with epistemic tiers and segment links.
 - [`CHANGELOG.md`](CHANGELOG.md) — forward-going cycle narrative (2026-04-24 onward).
 - [`LOG.md`](LOG.md) — pre-2026-04-24 cycle archaeology (frozen).
-- [`TODO.md`](TODO.md) — active work items and archived findings.
-- [`PROPOSALS.md`](PROPOSALS.md) — architectural-proposal portfolio with prior-reasoning trails.
-- [`CLAUDE-2.md`](CLAUDE-2.md) — deep architectural detail (transitional; substantive content is migrating to FINDINGS.md and segment-level Findings; full sunset planned per `msc/proposal-readme-refactor.md`).
+- [`TODO.md`](TODO.md) — tactical work items and archived findings (sits below PRACTICA in the navigator hierarchy).
+- [`PROPOSALS.md`](PROPOSALS.md) — architectural-proposal portfolio with prior-reasoning trails (cuts across PRACTICA areas).
+- [`msc/FINDINGS-RANKED-DRAFT.md`](msc/FINDINGS-RANKED-DRAFT.md) — curated catalog of distinctive results with epistemic tiers, cross-segment findings, and the meta-architectural M-section (M1 identifiability-floor / M2 separability / M3 additive-coordinate-forcing). Replaces the architectural-snapshot role formerly held by `CLAUDE-2.md` (sunset 2026-04-28; preserved at `_obs/CLAUDE-2-superseded-2026-04-28.md`).
 
-If you are conducting a de-novo audit, see [`doc/de-novo-audit-instructions.md`](doc/de-novo-audit-instructions.md) before going further. Use [`README-auditor.md`](README-auditor.md) instead of [`README.md`](README.md) for the audit-safe project framing.
+If you are conducting a de-novo audit, see [`doc/de-novo-audit-instructions.md`](doc/de-novo-audit-instructions.md) before going further. Use [`README-auditor.md`](README-auditor.md) instead of [`README.md`](README.md) for the audit-safe project framing. PRACTICA is fine to read during an audit, but follow links from it into TODO / PROPOSALS / CHANGELOG only after the audit is complete — those are priming-heavy.
 
 ## File Organization
 
 **Root level (Agentic Systems):**
+- `PRACTICA.md` — **Strategic-portfolio navigator.** Active areas of work with priority markers (🌟 primary, ⭐ secondary). In AAD terms: the top levels of the project's strategy DAG. Parent layer above TODO and PROPOSALS. Auditor-safe (does not need to be hidden from de-novo audits, unlike the children). **Read first** when picking up active work.
 - `CLAUDE.md` — **This file.** Auto-loaded context for AI agents. Trimmed of architectural detail to avoid priming de-novo audits.
-- `CLAUDE-2.md` — **Deep architectural detail** (recent cycles, settled commitments, novel results, convergent choices). Transitional — substantive content is migrating to FINDINGS.md and segment-level Findings; full sunset planned per `msc/proposal-readme-refactor.md`. **Read only when Joseph indicates the task is not a de-novo audit.**
+- *(formerly `CLAUDE-2.md` — sunset 2026-04-28, preserved at `_obs/CLAUDE-2-superseded-2026-04-28.md` for archaeology only. Substantive content distributed to: `msc/FINDINGS-RANKED-DRAFT.md` for novel results / settled commitments / convergent choices; `CHANGELOG.md` for cycle history; segment-level `## Findings` for per-segment claims; `TODO.md` for open items; OUTLINE GAPs for known fragilities. The sunset's gating condition — segment-Findings-credible-as-reference — was met by the catalog landing at 60+ entries.)*
 - `OUTLINE.md` — **Top-level assembly index** across all parts.
-- `README.md` — **Public README** (auto-generated from `doc/readme/`). For audit work, read [`README-auditor.md`](README-auditor.md) instead — it omits the Findings / Recent Progress / Known Issues sections.
+- `README.md` — **Public README** — *auto-generated from `doc/readme/src/` partials via `bin/build-readme`. Direct edits to `README.md` are overwritten on next build; modify the relevant `_<name>.md` partial and rebuild instead.* For audit work, read [`README-auditor.md`](README-auditor.md) instead — it omits the Findings / Recent Progress / Known Issues sections. (Same auto-generated discipline applies.)
 - `FINDINGS.md` — **Curated novel-results catalog** (auto-generated by `bin/extract-findings` from segment-level `## Findings` sections). External-facing.
-- `TODO.md` — **Active work items.** Pending findings, tier-C deferrals, open MEDIUM items, missing segments, and an Archive section for commit/finding-level history. Live; read first when picking up work.
-- `PROPOSALS.md` — **Architectural proposal portfolio.** Banded structural moves under review (each with thesis / merits-by-dimension / scope / findings-subsumed / interactions / effort / risks / status). Read when the prior reasoning behind a "settled" commitment may be relevant.
+- `TODO.md` — **Tactical work items.** Pending findings, tier-C deferrals, open MEDIUM items, missing segments, and an Archive section for commit/finding-level history. Lives one level below PRACTICA — the items within PRACTICA's areas. Live; priming-heavy (auditor-hidden).
+- `PROPOSALS.md` — **Architectural-proposal portfolio.** Banded structural moves under review (each with thesis / merits-by-dimension / scope / findings-subsumed / interactions / effort / risks / status). Cuts across PRACTICA areas. Read when the prior reasoning behind a "settled" commitment may be relevant. Priming-heavy (auditor-hidden).
 - `CHANGELOG.md` — **Forward-going cycle record** from 2026-04-24 onward. Substantive narratives: what conventions changed, what disciplines emerged, what each cycle was about. Add new entries here, not in LOG.md.
 - `LOG.md` — **Pre-2026-04-24 cycle archaeology** (frozen). Theoretical contributions and structural moves of cycles before the CHANGELOG transition. Read when the *origin* of a pre-transition commitment matters.
 - `FORMAT.md` — **Segment file conventions.** How to write claim files; promotion workflow (Gates 1–4); voice and provenance rules; Epistemic Triage.

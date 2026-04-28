@@ -1,3 +1,13 @@
+# CLAUDE-2.md — Superseded 2026-04-28 (archaeology only)
+
+***Sunset note (2026-04-28).*** *This file is no longer load-bearing. Its substantive content has been distributed to canonical homes — cycle history is in `CHANGELOG.md`; novel results, settled commitments, and convergent choices are in `msc/FINDINGS-RANKED-DRAFT.md` (curated catalog) with reasoning trail in `msc/brainstorm-findings.md`; epistemic-architecture practical guidance landed in `CLAUDE.md` Working Conventions; the seven-element enumeration is reflected in catalog M-section (M1/M2/M3) and #12 (Software as Calibration Lab); the "Open" and "Known Fragilities" lists are in `TODO.md` and OUTLINE GAPs; the organizing-principle slogan (BP10) is preserved in `msc/brainstorm-findings.md` §"Slogan candidate".*
+
+*The file is preserved here as historical synthesis voice — occasionally useful when chasing a "where did $X$ commitment come from?" question, but not load-bearing for any current work. Per `msc/proposal-readme-refactor.md` §"CLAUDE-2.md sunset" — the proposal's gating condition (segment-Findings sweep providing credible alternative reference) was effectively met by the curated FINDINGS-RANKED catalog landing at 60+ entries on 2026-04-27/28. The full segment-Findings sweep is still pending and tracked in `PRACTICA.md` §🌟 Findings.*
+
+*Below is the file's content as-of sunset, preserved verbatim.*
+
+---
+
 # CLAUDE-2.md — Deep Architectural Detail (read only when not auditing)
 
 This file holds the architectural detail that used to live in CLAUDE.md and the README — recent cycle history, settled commitments, novel results, and the convergent representational choices. It was extracted to keep CLAUDE.md from priming AI agents performing de-novo audits with specific findings, theorems, and architectural commitments before they read the segments themselves.

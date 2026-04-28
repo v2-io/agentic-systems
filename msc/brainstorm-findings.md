@@ -8,6 +8,15 @@
 
 ## Rolling log
 
+**2026-04-28 — Extracted from CLAUDE-2.md before sunset.**
+- **Acyclicity from temporal ordering** → promoted to FINDINGS-RANKED #56.
+- **Structural adaptation necessity** → promoted to FINDINGS-RANKED #57.
+- **Convention hierarchy monotonicity** → promoted to FINDINGS-RANKED #58.
+- **Strategic tempo verified across four topologies** → promoted to FINDINGS-RANKED #59.
+- **Convergent representational choices (AND/OR nodes; single-parameter edges; P3→Markov)** → promoted to FINDINGS-RANKED #60.
+- **Organizing-principle slogan** ("An adaptive system is a projection whose contraction rate exceeds its target's drift rate"; Opus O-BP10) → kept here as candidate; see [§Slogan candidate](#slogan-candidate-organizing-principle-from-claude-2-bp10) below.
+- **Class-2 bias-bound failed-route record** (Cramér-Rao inversion / rate-distortion inversion — see [§Failed routes](#failed-routes-from-class-2-bias-bound-derivation) below) — research-trail content; not a finding, but worth preserving as "do not repeat" guidance.
+
 **2026-04-28 — Pulled back from FINDINGS-RANKED.**
 - **#34 Misspecification-Cost as Adjacent Identifiability Floor** (was Tier 2) — speculative; segment-flagged as open extension. Full content in [§Pulled back](#pulled-back-from-findings-ranked-2026-04-28) below.
 - **#55 The Tragedy of the Confident Agent — Thermodynamic Reading** (was Tier 3) — speculative-medium; was P1-E. Continue to develop as P1-E below; no separate copy needed.
@@ -312,6 +321,29 @@ Fifth M1 instance once derived. Highly cross-domain: Sargent-Hansen ambiguity-av
 ### #55. The Tragedy of the Confident Agent — Thermodynamic Reading
 
 *Same content as P1-E above (Pass 1 §E). Was promoted into Tier 3 of FINDINGS-RANKED on 2026-04-27, pulled back on 2026-04-28 as speculative-medium. Continue to develop as P1-E.*
+
+### Slogan candidate — Organizing principle from CLAUDE-2 BP10
+
+**Candidate:** *"An adaptive system is a projection whose contraction rate exceeds its target's drift rate."*
+
+Surfaced as Opus O-BP10 during the 2026-04-23 convergent-reframe audit; preserved here as it doesn't yet have a segment-level home. The slogan compresses the persistence condition $\alpha > \rho/R$ into a Feynman-criterion English sentence and *adds* a framing — that the model is itself a *projection* of reality, with both projection-quality and projection-rate as load-bearing variables. Reads as a synthesis-prose candidate that could either:
+
+- Land as the centerpiece of a future meta-segment (perhaps a dedicated "persistence-condition-as-projection-statement" segment, or a unifying Discussion in `#result-persistence-condition`).
+- Stay as pedagogical framing in README / paper introduction without segment-level commitment.
+- Promote to a top-level catalog entry in FINDINGS-RANKED if a segment forms around it (currently doesn't, hence brainstorm not catalog).
+
+The framing has Feynman-criterion potential — it's the kind of sentence Alan's bathtub-grade gloss could pair with — and is worth keeping a handle on as the Findings sweep proceeds.
+
+### Failed routes from Class-2 bias-bound derivation
+
+*Research-trail content preserved from CLAUDE-2.md to prevent future agents from repeating these dead ends. Not findings; "do not repeat" notes.*
+
+The `#deriv-bias-bound` derivation explored four candidate routes; two failed for principled reasons documented here:
+
+- **Cramér-Rao inversion** — wrong direction. Cramér-Rao bounds estimator variance from below given Fisher information; the bias bound needs to bound parameter-space displacement from above given mutual information. The two are dual but the inversion is not free; trying to use CR directly for the bias bound flips the inequality the wrong way.
+- **Rate-distortion inversion** — wrong problem structure. Rate-distortion theory bounds achievable distortion given rate. The bias bound is structurally about a *fixed* information regime (the conditional mutual information $I(G;\Omega \mid e, M)$) yielding parameter-space displacement, not about achievable distortion under a rate budget. The mismatch is in what's held fixed vs varied.
+
+The two successful routes — Track 1 (Otto-Villani transport inequality + Bakry-Émery LSI + Lipschitz-posterior; linear in $I$) and Track 2 (Fisher-Rao + (PI)+Čencov; $\sqrt I$ scaling, universal $C_{FR} = \sqrt 2$) — are documented in `#deriv-bias-bound` and surfaced as catalog entries (#8 Logogenic Bias Bound; M1 Instance F4 in identifiability-floor meta-segment).
 
 ---
 

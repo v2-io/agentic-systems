@@ -496,6 +496,45 @@ For LLM agents under near-100% context turnover: same floor applies. An agent th
 * **Field Novelty:** **Medium-High**.
 * **Potential Importance:** **Medium-High**.
 
+### 56. Acyclicity from Temporal Ordering — Strategy DAGs Forced by Time
+
+**Description:** Strategy graphs over finite planning horizons *must* be acyclic — derived from the irreversibility of time, not assumed as a structural convenience. Any directed graph whose edges represent "$X$ causally precedes $Y$" over a finite set with real-valued timestamps is forced to be a DAG. Combined with `#deriv-graph-structure-uniqueness`'s four operational postulates plus causal sufficiency, this gives a derived rather than postulated DAG structure for $\Sigma_t$.
+
+**Engineering anchor:** "Strategy is a DAG" usually arrives in modeling literature as a representational convenience. AAD shows it as a *consequence* of finite-horizon temporal precedence — the agent could not have a cyclic strategy even in principle for a planning horizon, because cycles would require backwards time. The DAG isn't an analytic tool; it's what time forces.
+
+* **ASF Confidence:** **Very High** (derived).
+* **Field Novelty:** **Medium-High** — moves from "DAGs are the natural choice for strategies" (folklore) to "DAGs are the *only* choice over finite horizons" (theorem).
+* **Potential Importance:** **High** — closes a foundational assumption that would otherwise need separate justification per domain.
+
+### 57. Structural Adaptation Necessity — When Parameters Cannot Save You
+
+**Description:** When model class fitness $\mathcal F(\mathcal M)$ is insufficient, *no parametric adaptation* — no amount of training, tuning, or reweighting within the current class — can close the mismatch floor. The agent must change its model class itself, not just the parameters within it. Derived from the information bottleneck applied to model sufficiency: when the optimal predictive sufficiency $S^\ast$ for a model class is bounded below the agent's required mismatch threshold, parametric updates have provably-zero ultimate-bound improvement.
+
+**Engineering anchor:** Training compute spent on a model class that is structurally insufficient is provably wasted. The framework supplies a precise condition for when continued parametric optimization is futile and architectural change is required — distinct from "we haven't trained long enough" or "we need more data." Direct relevance to AI scaling debates: the *structural* threshold for when bigger-of-the-same will not work, regardless of compute.
+
+* **ASF Confidence:** **Very High** (derived from `#result-structural-adaptation-necessity`; IB applied to model sufficiency).
+* **Field Novelty:** **High** — gives a formal account of when "more of the same architecture" structurally cannot succeed.
+* **Potential Importance:** **High** — informs every long-running adaptive system's architecture-vs-tuning decision.
+* **Cross-domain transfer:** Pattern A — IB machinery (Tishby-Pereira-Bialek 1999) imported into AAD's $\mathcal F(\mathcal M)$ framework with the structural-vs-parametric threshold as the AAD-distinctive content. Predicts: organizational adaptation, RL agent training, and biological evolutionary stasis all face the same structural-floor mechanism when the model class (organizational structure / network architecture / genome) is insufficient relative to environmental disturbance.
+
+### 58. Convention Hierarchy Monotonicity — C1 → C2 → C3 Strengthens Inferential Force
+
+**Description:** AAD's convention hierarchy (C1 one-step heuristic / C2 receding-horizon / C3 full Bellman) is not just three increasingly-expensive evaluation regimes — it carries a **monotonicity result**: diagnostics scale from local heuristic at C1 through moderate-horizon at C2 to global at C3, with each level's diagnostic strictly dominating the previous in inferential force where it applies. The two-gap diagnostic (#16 Two-Gap Separation) is therefore not a single 2×2 table — it is a *convention-indexed* family of diagnostics whose cells mean different things at different conventions.
+
+**Engineering anchor:** A practitioner using satisfaction-gap / control-regret diagnostics under C1 (one-step) cannot conclude what a C3 (full Bellman) practitioner would; the monotonicity result tells you exactly what additional inferential force you gain by paying the higher computational cost. Useful when deciding how deep an evaluation to run.
+
+* **ASF Confidence:** **Derived** (segment `#def-value-object` carries the monotonicity result).
+* **Field Novelty:** **Medium-High** — most decision-theory frameworks treat convention choice as a purely computational tradeoff; AAD adds an inferential-force semantics.
+* **Potential Importance:** **Medium-High** — primary leverage in pedagogy (the diagnostic table needs the convention-indexing) and in framework-internal consistency for #16.
+
+### 59. Strategic Tempo $\mathcal T_\Sigma$ Verified Across Four Topologies
+
+**Description:** Strategic tempo $\mathcal T_\Sigma$ — the rate of useful $\Sigma_t$ revision (rate of edge-credence updates with non-trivial information content) — is *defined and verified* against four canonical topologies (linear chain, balanced tree, unbalanced tree, full DAG with feedback). Each topology yields a closed-form sector-condition transfer for the strategic-edge persistence schema (`#schema-strategy-persistence`), with $\mathcal T_\Sigma$ playing the role of $\mathcal T$ in the strategic analog of the persistence condition $(1 - \lambda) > \rho_\Sigma / R_\Sigma$. The topologies span the practical space of agent strategy structures.
+
+* **ASF Confidence:** **Derived** for each of the four topologies.
+* **Field Novelty:** **Medium** — strategic-tempo-as-quantity is AAD-distinctive (RL has no analog); the four-topology verification confirms the schema's robustness across structures.
+* **Potential Importance:** **Medium-High** — operationalizes strategic tempo as a measurable quantity for any structured-policy system.
+
 ---
 
 ## Tier 3: Rigorous Applications
@@ -572,7 +611,21 @@ For LLM agents under near-100% context turnover: same floor applies. An agent th
 
 * **ASF Confidence:** **Very High**. **Field Novelty:** **Low**. **Potential Importance:** **Medium**.
 
-*(Number gaps in this catalog — #34 Misspecification-Cost (Tier 2), #55 Tragedy / Thermodynamic Reading (Tier 3), and the former S1–S8 Speculative section — were moved to [`brainstorm-findings.md`](brainstorm-findings.md) on 2026-04-28 as lower-confidence candidates not yet ready for the curated catalog. They remain under active development there. Promotion back happens by the same process as new candidates: derivation tightens, scope clarifies, then the entry lands here.)*
+### 60. Convergent Representational Choices — AND/OR Nodes, Single-Parameter Edges, P3→Markov
+
+**Description:** A category between "derived from first principles" and "arbitrary framework decision" — representational choices where *all* investigated alternatives fail or converge to the same structure. Three such choices currently sit in this category:
+
+- **AND/OR node types for strategy.** Three independent formalism attempts (general CPT; noisy-OR; weighted combination) converged on AND/OR as the only workable basis. Noisy-OR rejected for non-identifiability; weighted combination rejected for parameter explosion ($2^k$ vs $k$). A parsimony theorem (AND/OR as the unique minimal complete basis under the theory's constraints) would promote this from convergent-choice to *derived*.
+- **Single-parameter edges.** Alternatives (multi-parameter credences, edge-specific distributions) were tried and abandoned. The convergence suggests this is forced by the interaction between the uncertainty-ratio principle and the chain-confidence identity, not arbitrary.
+- **P3 → Markov condition.** The postulate that strategy must be locally revisable, combined with temporal ordering and causal sufficiency, *appears* to force the Markov property on the strategy DAG. Currently conditional on causal sufficiency (which is guaranteed for agent-constructed strategies). If the conditioning can be removed, this promotes from convergent-choice to *derived* — analogous to how acyclicity (#56) was once assumed and is now derived.
+
+These sit between "we chose this" and "this is the only option." Tracking them separately from pure framework choices is itself the contribution: the catalog tells the reader *we didn't just pick this; we tried everything else and it didn't work*. The category is itself a research-trail honesty artifact.
+
+* **ASF Confidence:** **Robust qualitative** (per-instance) — each is an honest convergent choice with derivation gaps named.
+* **Field Novelty:** **Medium** — the *category* is methodologically distinctive; per-item the math is folk-known.
+* **Potential Importance:** **Medium-High** — preserves epistemic provenance and signals which choices are most likely to promote to "derived" with future work.
+
+*(Number gaps in this catalog — #34 Misspecification-Cost (Tier 2) and #55 Tragedy / Thermodynamic Reading (Tier 3), plus the former S1–S8 Speculative section — were moved to [`brainstorm-findings.md`](brainstorm-findings.md) on 2026-04-28 as lower-confidence candidates not yet ready for the curated catalog. They remain under active development there. Promotion back happens by the same process as new candidates: derivation tightens, scope clarifies, then the entry lands here.)*
 
 ---
 

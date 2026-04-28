@@ -5,6 +5,12 @@
 
 The 3 most recent cycle narratives. Full record at [`CHANGELOG.md`](CHANGELOG.md); pre-2026-04-24 archaeology at [`LOG.md`](LOG.md).
 
+### CLAUDE-2.md sunset; PRACTICA navigator; catalog extraction
+
+*2026-04-28*
+
+Three interlocking documentation moves landed.
+
 ### Doc pipeline cycle: composable README, segment-level Findings, doc/ established
 
 *2026-04-26*
@@ -16,10 +22,4 @@ A consolidation cycle on the project's documentation surface, motivated by Bundl
 *2026-04-25*
 
 After the audit-extraction batch landed earlier in the day, two substantive theory threads extended AAD's matrix-form bound machinery.
-
-### Audit-extraction batch and cross-agent peer review
-
-*2026-04-25*
-
-Eight FINAL audit reports under `msc/AUDIT-WORKING-{584721, 613842, 738192, 742613, 849201}/` were triaged into a banded candidate file (`msc/audit-final-reports-candidate-extraction-2026-04-25.md`): §A high-confidence local fixes (14 candidates), §B already-tracked, §C strengthening-needed (4 items, escalated), §D architectural (5 items, mapped to existing PROPOSALS bands), §E borderline. The §A batch was dispatched as 7 parallel verify-then-fix agents under the discipline "the finding is *suspected*, not confirmed — verify in current segment text first; strengthen-before-soften before any softening; FORMAT discipline is non-negotiable." Landings.
 

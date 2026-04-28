@@ -9,7 +9,7 @@
 #
 #   1. Known Fragilities — structural-scope notes that name what
 #      classes of agents fall outside the framework's formal scope.
-#      Lives in CLAUDE.md / CLAUDE-2.md as a `### Known Fragilities`
+#      Lives in CLAUDE.md as a `### Known Fragilities`
 #      section. Pulled verbatim.
 #
 #   2. PROPOSALS portfolio — entry titles from §B (Ready now), §C
@@ -27,13 +27,11 @@
 #   bin/extract-known-issues --stdout      # write to stdout
 #
 # Source files:
-#   - CLAUDE.md (Known Fragilities, if present); CLAUDE-2.md as fallback
+#   - CLAUDE.md (Known Fragilities; relocated here from CLAUDE-2.md
+#     when CLAUDE-2 was sunset 2026-04-28)
 #   - PROPOSALS.md (§B, §C, §D)
 #   - 01-aad-core/OUTLINE.md, 02-tst-core/OUTLINE.md,
 #     03-logogenic-agents/OUTLINE.md, 04-logozoetic-agents/OUTLINE.md
-#
-# When the Known Fragilities content relocates (post-CLAUDE-2 sunset),
-# update the SOURCES list below.
 
 require 'pathname'
 require 'optparse'
@@ -42,8 +40,7 @@ REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 OUTPUT = REPO_ROOT.join('doc/readme/src/_known-issues.md')
 
 KNOWN_FRAGILITIES_SOURCES = [
-  REPO_ROOT.join('CLAUDE.md'),
-  REPO_ROOT.join('CLAUDE-2.md')
+  REPO_ROOT.join('CLAUDE.md')
 ].freeze
 
 PROPOSALS = REPO_ROOT.join('PROPOSALS.md')
@@ -148,7 +145,7 @@ HEADER
 # Section: Known Fragilities
 output << "### Known Fragilities — what falls outside formal scope\n\n"
 if frag[:items].empty?
-  output << "*(No Known Fragilities section found in CLAUDE.md or CLAUDE-2.md.)*\n\n"
+  output << "*(No Known Fragilities section found in CLAUDE.md.)*\n\n"
 else
   frag[:items].each { |item| output << "- #{item}\n" }
   output << "\n*Source: [`#{frag[:source]}`](#{frag[:source]}).*\n\n"

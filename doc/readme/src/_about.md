@@ -5,3 +5,8 @@ ASF is a research framework for adaptive, purposeful agents under uncertainty �
 The framework formalizes the *adaptive cycle* — one complete traversal of the agent-environment feedback loop — as the unit of analysis, and asks what makes such cycles effective, how fast they must run, and when they fail or must change in kind. From that starting point it derives conditions for persistence, the structure of strategy under uncertainty, the dynamics of agents in composition and competition, and the ways scope-honest theory can be carried from a high-identifiability domain (software) into others.
 
 What ASF is not: a finished theory, a foundation-model architecture, or a claim that agency is reducible to its formal machinery. The framework is mathematical where the mathematics yields genuine insight, and principled-sketch where the insight is structural rather than quantitative. The boundary between these regimes is fluid and explicitly visible — see *Maturity Gradient* below.
+
+**Two entry points beyond this README:**
+
+- *Explore the theory itself* → [`OUTLINE.md`](OUTLINE.md) — the top-level assembly index across all four components, descending into each component's own OUTLINE and from there into individual claim segments.
+- *See the current work on the theory* → [`PRACTICA.md`](PRACTICA.md) — the strategic-portfolio navigator naming active areas of work with priority markers (🌟 primary, ⭐ secondary). In the framework's own vocabulary, PRACTICA is the top levels of the project's strategy DAG, sitting above [`TODO.md`](TODO.md) (tactical items) and [`PROPOSALS.md`](PROPOSALS.md) (architectural moves under review).
