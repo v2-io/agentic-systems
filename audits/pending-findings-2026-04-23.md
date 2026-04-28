@@ -121,9 +121,9 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 **Subsumed by:** C-BP1 (three-layer epistemic separation) directly. The three-layer convention would force per-quantity tagging as (defined / causally-valid / operationally-extractable), surfacing the layer-collapse.
 
 **msc/ integration targets** (Codex notes):
-- `msc/agentic-tft-evaluation-framework.md:78, 112` — explicit tracking protocols
-- `msc/agentic-tft-cognitive-loop-spec.md:125` — context-assembly protocol
-- `msc/agentic-tft-review-response.md:73` — missing failure-mode-to-metric mapping admitted
+- `ref/agentic-tft/agentic-tft-evaluation-framework.md:78, 112` — explicit tracking protocols
+- `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md:125` — context-assembly protocol
+- `ref/agentic-tft/agentic-tft-review-response.md:73` — missing failure-mode-to-metric mapping admitted
 
 **Repair direction:** The segment needs to adopt the instrumentation-boundary doctrine from `#obs-software-epistemic-properties`. Rewrite the "compute $X^{(post)}$" passages to distinguish analytical reconstruction from runtime computation, with instrumentation-boundary framing. 60–90 min if C-BP1 is not yet landed; 30–60 min if C-BP1 is landed first.
 

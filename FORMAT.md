@@ -282,7 +282,7 @@ Two presentation forms are permitted; choose whichever fits the prior-art landsc
 - {Citation} (published YYYY, found YYYY-MM-DD) — *{relationship}* — {note}
 ```
 
-*Table form* — appropriate for findings with richer landscapes where multiple aspects of the finding bear differently on different priors (the pattern used in `msc/Novelty_defense_and_integration.md`'s per-pillar tables). Columns: an aspect of the finding ("ASF concern"), what prior art has on that aspect ("Prior-art language"), and how the finding sits against it ("Relationship / Positioning"):
+*Table form* — appropriate for findings with richer landscapes where multiple aspects of the finding bear differently on different priors (the pattern used in `ref/Novelty_defense_and_integration.md`'s per-pillar tables). Columns: an aspect of the finding ("ASF concern"), what prior art has on that aspect ("Prior-art language"), and how the finding sits against it ("Relationship / Positioning"):
 
 ```markdown
 **Related Work:**

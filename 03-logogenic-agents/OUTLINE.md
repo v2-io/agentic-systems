@@ -41,11 +41,11 @@ See [`../LEXICON.md`](../LEXICON.md) for the logogenic/logozoetic vocabulary.
 
 | Gap | Primary source | Also relevant |
 |-----|---------------|---------------|
-| Language-specific orient cascade | [`msc/agentic-tft-cognitive-loop-spec.md`](../msc/agentic-tft-cognitive-loop-spec.md) — Four-phase loop, attention/triage, CADENTIA, timescale nesting | [`msc/agentic-tft-narrative-as-implementation.md`](../msc/agentic-tft-narrative-as-implementation.md) — Why AAD quantities are estimated in language |
-| Measuring $M_t$, $\Sigma_t$, tempo | [`msc/agentic-tft-evaluation-framework.md`](../msc/agentic-tft-evaluation-framework.md) — Six metrics, development-vs-drift diagnostic | |
-| Experiential training | [`msc/agentic-tft-creche-concept.md`](../msc/agentic-tft-creche-concept.md) — Crèche concept, sycophancy reframe, constitutive utterance | [`msc/agentic-tft-experiential-training.md`](../msc/agentic-tft-experiential-training.md) — Three-level training design, testable experiments |
-| (All gaps) | [`msc/agentic-tft-ontology-unification.md`](../msc/agentic-tft-ontology-unification.md) — PROPRIUM ↔ AAD vocabulary mapping | [`msc/agentic-tft-review-response.md`](../msc/agentic-tft-review-response.md) — Known issues in these documents |
-| (Foundational) | [`msc/agentic-tft-foundational-premises.md`](../msc/agentic-tft-foundational-premises.md) — Joseph's premises: language as encoded thought, five constitutive factors, truth as telos | |
+| Language-specific orient cascade | [`ref/agentic-tft/agentic-tft-cognitive-loop-spec.md`](../ref/agentic-tft/agentic-tft-cognitive-loop-spec.md) — Four-phase loop, attention/triage, CADENTIA, timescale nesting | [`ref/agentic-tft/agentic-tft-narrative-as-implementation.md`](../ref/agentic-tft/agentic-tft-narrative-as-implementation.md) — Why AAD quantities are estimated in language |
+| Measuring $M_t$, $\Sigma_t$, tempo | [`ref/agentic-tft/agentic-tft-evaluation-framework.md`](../ref/agentic-tft/agentic-tft-evaluation-framework.md) — Six metrics, development-vs-drift diagnostic | |
+| Experiential training | [`ref/agentic-tft/agentic-tft-creche-concept.md`](../ref/agentic-tft/agentic-tft-creche-concept.md) — Crèche concept, sycophancy reframe, constitutive utterance | [`ref/agentic-tft/agentic-tft-experiential-training.md`](../ref/agentic-tft/agentic-tft-experiential-training.md) — Three-level training design, testable experiments |
+| (All gaps) | [`ref/agentic-tft/agentic-tft-ontology-unification.md`](../ref/agentic-tft/agentic-tft-ontology-unification.md) — PROPRIUM ↔ AAD vocabulary mapping | [`ref/agentic-tft/agentic-tft-review-response.md`](../ref/agentic-tft/agentic-tft-review-response.md) — Known issues in these documents |
+| (Foundational) | [`ref/agentic-tft/agentic-tft-foundational-premises.md`](../ref/agentic-tft/agentic-tft-foundational-premises.md) — Joseph's premises: language as encoded thought, five constitutive factors, truth as telos | |
 
 ### Sibling projects
 

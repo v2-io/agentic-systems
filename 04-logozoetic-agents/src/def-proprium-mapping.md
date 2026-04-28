@@ -36,4 +36,4 @@ The active cognitive loop is instantiated via:
 
 By formalizing the agent's state into these components, the PROPRIUM architecture ensures that the theoretical requirements of AAD (such as separating $\mathcal{C}_t$ from its compressed form $M_t$) are mechanically preserved in software.
 
-*(Descended from `msc/agentic-tft-ontology-unification.md`.)*
+*(Descended from `ref/agentic-tft/agentic-tft-ontology-unification.md`.)*

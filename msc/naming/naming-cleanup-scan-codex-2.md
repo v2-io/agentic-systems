@@ -45,7 +45,7 @@ These should not be bulk-cleaned by search/replace.
 
 | Surface family | Why it should usually be left alone |
 |---|---|
-| `msc/name-transition-aad.md` | This is the authoritative record of the ACT -> AAD rename and should preserve the old names explicitly. |
+| `msc/naming/name-transition-aad.md` | This is the authoritative record of the ACT -> AAD rename and should preserve the old names explicitly. |
 | `LOG.md` | Historical notes such as "ACT -> AAD rename" are part of the chronology, not debt. |
 | `_obs/**` | These are older observation / predecessor materials and contain large amounts of pre-rename vocabulary by design. |
 | `_obs/2026-03-13-landscape-research/**` and similar dated research notes | These preserve earlier analytical framing and source-era terminology. |

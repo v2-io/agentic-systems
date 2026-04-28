@@ -563,7 +563,7 @@ For a logogenic agent, the orient cascade is replaced by a **reasoning disciplin
 4. **Evaluate strategy** (is my current approach still the best one?)
 5. **Decide whether to act, explore, or deliberate further**
 
-This is the cognitive loop from `msc/agentic-tft-cognitive-loop-spec.md` (PERCEIVE → CONTEXTUALIZE → CHOOSE → EFFECT) instantiated as a reasoning pattern. The four-phase loop maps onto the cascade:
+This is the cognitive loop from `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md` (PERCEIVE → CONTEXTUALIZE → CHOOSE → EFFECT) instantiated as a reasoning pattern. The four-phase loop maps onto the cascade:
 
 | Cognitive Loop Phase | AAD Cascade Step | What Happens for LLM Agent |
 |---------------------|------------------|---------------------------|

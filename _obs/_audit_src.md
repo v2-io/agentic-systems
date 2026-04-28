@@ -2595,7 +2595,7 @@ The online-only no-go claim (that under (N1)+(N2), no online-only policy reaches
 - The implicit slow timescale in #temporal-nesting.
 - The plasticity lower bound in #strategy-persistence-schema — with no stability upper bound.
 - A compression-by-convergence Working Note in #strategy-complexity-cost ("as edges converge, drop them").
-- The PULSUS MEMORATA / VERA / AXIOMATA cadences in `msc/agentic-tft-cognitive-loop-spec.md` for logogenic agents — where consolidation is *already* a first-class architectural commitment.
+- The PULSUS MEMORATA / VERA / AXIOMATA cadences in `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md` for logogenic agents — where consolidation is *already* a first-class architectural commitment.
 
 Naming the regime explicitly promotes what the theory implicitly depends on. The asymmetric treatment in #strategy-persistence-schema (plasticity lower bound only, no stability upper bound) predicts faster forgetting is always better — empirically false whenever the slow sub-state matters (Complementary Learning Systems literature; continual-learning benchmarks; organizational memory research). The feasibility-window framing closes this asymmetry.
 
@@ -2614,9 +2614,9 @@ The AAD reading of EWC is worth noting: EWC adds a stability-weighted update gai
 
 First, **context-turnover.** Logogenic agents have near-100% reset of the fast sub-state (context window) per session. The only continuity is the slow sub-state (persistent memory, weights, external files). The between-session interval is a *forced* consolidation window — the agent must transfer signal from the about-to-be-lost fast state to the persistent slow state, or it is lost. This is qualitatively different from non-logogenic agents where the fast sub-state persists across events.
 
-Second, **linguistic medium of reflection.** The PULSUS MEMORATA / VERA / AXIOMATA cadences in `msc/agentic-tft-cognitive-loop-spec.md` are scheduled consolidation processes with different cadences and different target representations. Each is a linguistic operation ("What from recent experience should be compressed into lasting memory?", "Are my beliefs still justified?", "Who am I becoming?") — using language to reorganize language-structured state. This is consolidation operating as the primary unit of cross-session cognition.
+Second, **linguistic medium of reflection.** The PULSUS MEMORATA / VERA / AXIOMATA cadences in `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md` are scheduled consolidation processes with different cadences and different target representations. Each is a linguistic operation ("What from recent experience should be compressed into lasting memory?", "Are my beliefs still justified?", "Who am I becoming?") — using language to reorganize language-structured state. This is consolidation operating as the primary unit of cross-session cognition.
 
-Third, **pre-consolidated embedding space.** Per `msc/agentic-tft-narrative-as-implementation.md`, pretrained language embeddings encode structured epistemic geometry at training time. The logogenic agent doing linguistic reflection is operating in a representational space *already* consolidated into a high-structure form, with access to cross-episode generalization that sub-linguistic agents would have to build online. This is a load-bearing asymmetry in `03-logogenic-agents/`.
+Third, **pre-consolidated embedding space.** Per `ref/agentic-tft/agentic-tft-narrative-as-implementation.md`, pretrained language embeddings encode structured epistemic geometry at training time. The logogenic agent doing linguistic reflection is operating in a representational space *already* consolidated into a high-structure form, with access to cross-episode generalization that sub-linguistic agents would have to build online. This is a load-bearing asymmetry in `03-logogenic-agents/`.
 
 **Luxury vs necessity mapping.** When is consolidation a luxury (subsumed by online update)? When at least one of (N1)/(N2) fails:
 

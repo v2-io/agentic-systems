@@ -32,7 +32,7 @@ I audited `src` first and only then used `msc/` to look for additional material 
 - For the scope seam, `audits/analysis-2026-04-06.md:265` already proposes naming "learning-agent scope," and `audits/2026-03-14-fresh-eyes-assessment.md:57` gives the cleaner sentence: Section II for modular agents, coupled/logogenic analysis for Class 2.
 - For the bridge-lemma gap, `spikes/spike-bridge-lemma-contraction.md:5` cleanly states why A4 constrains only the correction component, not the full update map, and `msc/working-composition-admissibility.md:247` treats timescale separation as only a sufficient route, not a near-equivalent theorem.
 - For `(C-iii)`, `spikes/spike-composition-correlated-kalman.md:589` already distinguishes objective-composition Cases A/B/C and says only Case A is straightforward, while `spikes/spike-projection-admissibility.md:459` adds the honest "no macro-strategy" option.
-- For logogenic diagnostics, `msc/agentic-tft-evaluation-framework.md:71`, `msc/agentic-tft-cognitive-loop-spec.md:110`, and `msc/agentic-tft-narrative-as-implementation.md:106` already push toward the better framing: these quantities are estimated in language with explicit tracking/instrumentation, not directly read out from an internal state object.
+- For logogenic diagnostics, `ref/agentic-tft/agentic-tft-evaluation-framework.md:71`, `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md:110`, and `ref/agentic-tft/agentic-tft-narrative-as-implementation.md:106` already push toward the better framing: these quantities are estimated in language with explicit tracking/instrumentation, not directly read out from an internal state object.
 
 **Bigger Picture**
 

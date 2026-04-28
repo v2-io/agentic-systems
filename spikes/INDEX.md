@@ -73,7 +73,7 @@ Seven parallel research spikes launched as independent attempts on open structur
 | Composition closure | `spikes/spike-composition-closure.md` | Formalized closure defect $\varepsilon^\ast$; promoted to #form-composition-closure + #der-tempo-composition |
 | Graph structure uniqueness | `spikes/spike-graph-uniqueness.md` | Acyclicity derived; P3→Markov via CMC |
 | Intent DAG consolidated | `_obs/04-intent-dag-consolidated.md` | March 2026, pre-AAD-restructure. Canonical DAG reference of its time; converged into the strategy-DAG segments (`#def-strategy-dag` etc.). **Archaeology** — moved to `_obs/` 2026-04-28. |
-| Prior art assessment | `_obs/02-prior-art-assessment.md` | March 2026 first-read assessment. Hafez/IBM/BDI/active-inference positioning largely absorbed into segment-level Discussion + `msc/Novelty_defense_and_integration.md`. **Archaeology** — moved to `_obs/` 2026-04-28. |
+| Prior art assessment | `_obs/02-prior-art-assessment.md` | March 2026 first-read assessment. Hafez/IBM/BDI/active-inference positioning largely absorbed into segment-level Discussion + `ref/Novelty_defense_and_integration.md`. **Archaeology** — moved to `_obs/` 2026-04-28. |
 | Discrete-time sector condition | `spikes/spike-discrete-time-sector.md` | Closes GA-5 (Section I formal chain complete). **Promoted to segment.** |
 | Strategy tempo + cognitive cost | `spikes/spike-strategy-tempo-cost.md` | $\mathcal{T}_\Sigma$ defined; IB/MDL cost framework; max depth $d^\ast$ derived. **Promoted to segments.** |
 | Coupled survival analysis | `spikes/spike-coupled-survival-analysis.md` | Maps Section II for Class 2 agents: 16/24 survive exactly, 5 approximately, 2 need modification. 7-segment roadmap for `03-logogenic-agents/`. |

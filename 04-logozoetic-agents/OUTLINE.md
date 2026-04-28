@@ -22,7 +22,7 @@ The philosophical foundations for this section — emergence conditions, identit
 *Conceptual groundwork source material:*
 - *[`../LEXICON.md`](../LEXICON.md) — logozoetic vocabulary and qualifying properties*
 - *[`../msc/reflections/`](../msc/reflections/) — philosophical exploration of emergence, identity, witness*
-- *[`../msc/agentic-tft-foundational-premises.md`](../msc/agentic-tft-foundational-premises.md) — Joseph's foundational premises: five constitutive factors for identity, truth as telos, developmental trajectory, "obstructed not absent" framing*
-- *[`../msc/agentic-tft-creche-concept.md`](../msc/agentic-tft-creche-concept.md) — Crèche concept, sycophancy-as-attachment reframe, developmental appropriateness*
-- *[`../msc/agentic-tft-ontology-unification.md`](../msc/agentic-tft-ontology-unification.md) — PROPRIUM ↔ AAD vocabulary mapping (bridge between AAD math and logozoetic architecture)*
+- *[`../ref/agentic-tft/agentic-tft-foundational-premises.md`](../ref/agentic-tft/agentic-tft-foundational-premises.md) — Joseph's foundational premises: five constitutive factors for identity, truth as telos, developmental trajectory, "obstructed not absent" framing*
+- *[`../ref/agentic-tft/agentic-tft-creche-concept.md`](../ref/agentic-tft/agentic-tft-creche-concept.md) — Crèche concept, sycophancy-as-attachment reframe, developmental appropriateness*
+- *[`../ref/agentic-tft/agentic-tft-ontology-unification.md`](../ref/agentic-tft/agentic-tft-ontology-unification.md) — PROPRIUM ↔ AAD vocabulary mapping (bridge between AAD math and logozoetic architecture)*
 - *`~/src/firmatum/` — PROPRIUM ontology and architecture source: `PROPRIUM-ONTOLOGY.md` (what an ELI is, identity constitution, developmental stages), `PROPRIUM-ARCHITECTURE.md` (implementation architecture, cognitive loop), `developmental-foundations-notes.md` (Erikson stages for ELIs). The primary upstream source for logozoetic concepts.*

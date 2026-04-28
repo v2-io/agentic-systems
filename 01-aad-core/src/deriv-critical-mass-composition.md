@@ -206,7 +206,7 @@ All four are instances of #result-sector-persistence-template's pattern with sig
 
 **Search Log:**
 
-- 2026-04 (*nominally comprehensive*, via `msc/Novelty_defense_and_integration.md` Pillar 2): Per Pillar-2 defense strategy, the strong-monotonicity hinge is foregrounded as the criterion not visible in retrieved prior art. Subramanian / Congeduti provide the closest math (bounded-loss composition) without isolating a single condition whose failure flips composite legitimacy; Markov-blanket line provides nested-agency intuition without monotonicity machinery.
+- 2026-04 (*nominally comprehensive*, via `ref/Novelty_defense_and_integration.md` Pillar 2): Per Pillar-2 defense strategy, the strong-monotonicity hinge is foregrounded as the criterion not visible in retrieved prior art. Subramanian / Congeduti provide the closest math (bounded-loss composition) without isolating a single condition whose failure flips composite legitimacy; Markov-blanket line provides nested-agency intuition without monotonicity machinery.
 - 2026-04 (*targeted*, prior to comprehensive search): the small-gain-theorem line (Jiang-Teel-Praly 1994; Sontag 1989) and consensus-dynamics line (Olfati-Saber & Murray 2004) were known and cited in the segment's existing Discussion as adjacent literature. The comprehensive search added the Sub20 / Con20 closest-neighbor positioning and confirmed no surfaced paper foregrounds the strong-monotonicity hinge.
 - 2026-04 (*intuition-only*, prior): expected adjacent literature was switched-systems stability (Liberzon 2003) and game-theoretic equilibrium analysis. Switched-systems hit confirmed via `#disc-identifiability-floor` Instance 3; game-theoretic side is properly the territory of `#deriv-strategic-composition`, scope-separated.
 

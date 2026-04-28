@@ -56,11 +56,11 @@
 ## Names & Lexicon
 ### 🌟 Current naming conventions refactor
 
-Status: pilot complete; full role-prefix sweep complete (142 segments under `{type-prefix}-{subject-noun}`); refined principles file landed (2026-04-24, `b9492b7`). Architectural invariants now: role-prefix from frontmatter (mechanical via `bin/align-slug`); subject-noun preference; Greek-vocabulary commitment; separate-passes methodology. Remaining work votes only on subject-nouns. Detail in `doc/naming-principles.md` and `msc/naming-pilot-rename-plan.md`.
+Status: pilot complete; full role-prefix sweep complete (142 segments under `{type-prefix}-{subject-noun}`); refined principles file landed (2026-04-24, `b9492b7`). Architectural invariants now: role-prefix from frontmatter (mechanical via `bin/align-slug`); subject-noun preference; Greek-vocabulary commitment; separate-passes methodology. Remaining work votes only on subject-nouns. Detail in `doc/naming-principles.md` and `msc/naming/naming-pilot-rename-plan.md`.
 
-1. [x] ~~Launch naming survey agents with initial instructions~~ (original Round 1 launched 2026-04-23; 10 vote files at `msc/naming-votes/`)
-2. [x] ~~Aggregation & Consolidation (initial/blind)~~ (`msc/naming-aggregate-{review,round2,votes.json}`; `bin/naming-aggregate.rb`)
-3. [ ] **🌟 Launch refined Round 1 (cold-start)** — agents write `*-r2.md` vote files under `msc/naming-votes/` per refined `doc/naming-principles.md` (vote on subject-nouns only; role-prefix is invariant; +2 weight band; explicit categories rename / keep / canonicalize / add-alias / name-unnamed)
+1. [x] ~~Launch naming survey agents with initial instructions~~ (original Round 1 launched 2026-04-23; 10 vote files at `msc/naming/naming-votes/`)
+2. [x] ~~Aggregation & Consolidation (initial/blind)~~ (`msc/naming/naming-aggregate-{review,round2,votes.json}`; `bin/naming-aggregate.rb`)
+3. [ ] **🌟 Launch refined Round 1 (cold-start)** — agents write `*-r2.md` vote files under `msc/naming/naming-votes/` per refined `doc/naming-principles.md` (vote on subject-nouns only; role-prefix is invariant; +2 weight band; explicit categories rename / keep / canonicalize / add-alias / name-unnamed)
 4. [ ] Aggregate refined Round 1 (re-use `bin/naming-aggregate.rb`); also import any Round-1 unique-value items the new batch missed
 5. [ ] Round 2 (blind) using refined-Round-1 aggregation
 6. [ ] Collision audit on top finalists (web search for external collisions, à la ACT → AAD precedent)

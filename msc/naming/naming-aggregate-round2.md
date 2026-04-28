@@ -4,7 +4,7 @@
 
 This is the aggregated candidate list from Round 1, sorted most-popular to least-popular (tallies withheld to prevent bandwagon convergence). Each entry shows a current-name, the alternatives proposed across agents (including explicit keeps), and the reasoning notes from Round 1 agents.
 
-**Your task:** review each entry and cast your own votes following `msc/naming-principles.md`. You may add new candidates not on this list if you discover one during review. Do not read other Round-1 vote files directly — this aggregated summary is your input. Write your votes to `msc/naming-votes/{your-agent-id}.md`.
+**Your task:** review each entry and cast your own votes following `msc/naming-principles.md`. You may add new candidates not on this list if you discover one during review. Do not read other Round-1 vote files directly — this aggregated summary is your input. Write your votes to `msc/naming/naming-votes/{your-agent-id}.md`.
 
 ---
 

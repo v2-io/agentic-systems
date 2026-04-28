@@ -17,7 +17,7 @@ relates_to:
   - deriv-strategy-cost-regret-bound
   - spikes/spike-bias-bound-constant-C-strengthening-2026-04-24.md
   - spikes/spike-bridge-lemma-nonlinear-strengthening-2026-04-24.md
-  - msc/naming-brainstorm-2026-04-24.md
+  - msc/naming/naming-brainstorm-2026-04-24.md
 ---
 
 # Spike: KL-to-State-Distance Template Extraction
@@ -272,7 +272,7 @@ Three places where KL→state-distance machinery *could plausibly* appear in fut
 
 ## §7. Candidate name — applying the communal-imagination test
 
-The communal-imagination test (per `msc/naming-brainstorm-2026-04-24.md` Observation 3): *could a skilled reader, six months after first encounter, refer to this concept in a conversation without looking it up?* Names that pass in AAD: satisfaction gap, control regret, chronica, orient cascade, identifiability floor, directed separation. Names that fail: additive-coordinate-forcing, separability-pattern.
+The communal-imagination test (per `msc/naming/naming-brainstorm-2026-04-24.md` Observation 3): *could a skilled reader, six months after first encounter, refer to this concept in a conversation without looking it up?* Names that pass in AAD: satisfaction gap, control regret, chronica, orient cascade, identifiability floor, directed separation. Names that fail: additive-coordinate-forcing, separability-pattern.
 
 **Candidates:**
 

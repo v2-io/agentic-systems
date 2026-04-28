@@ -1,6 +1,6 @@
 # Naming Alias Clusters (`codex-2`)
 
-This is a pre-aggregation note for `msc/naming-votes/`. The goal is to collapse near-duplicate rename proposals into concept clusters before any tallying or synthesis.
+This is a pre-aggregation note for `msc/naming/naming-votes/`. The goal is to collapse near-duplicate rename proposals into concept clusters before any tallying or synthesis.
 
 This note does not pick winners. It identifies where multiple vote rows are really talking about the same underlying naming issue.
 

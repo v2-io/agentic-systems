@@ -27,7 +27,7 @@ The macro-dynamics $f_c$ is evaluated at every micro-timestep $t$, forcing synch
 
 **Confidence**: High (Gemini) — the equation literally iterates micro-timesteps.
 
-**Msc context**: Timescale-separation math appears in `spikes/spike-discrete-time-sector.md`, `spikes/spike-purposeful-agent-derivation.md`, and `msc/agentic-tft-ontology-unification.md` ("the faster level must complete many correction cycles before the slower level takes a single step"). None of it has been incorporated into `#form-composition-closure`'s formulation. The original composition-generating spike (`spikes/spike-agent-composition.md`) didn't bridge singular perturbation into the $\varepsilon^\ast$ definition, leaving the core expression stranded at zero-timescale-separation.
+**Msc context**: Timescale-separation math appears in `spikes/spike-discrete-time-sector.md`, `spikes/spike-purposeful-agent-derivation.md`, and `ref/agentic-tft/agentic-tft-ontology-unification.md` ("the faster level must complete many correction cycles before the slower level takes a single step"). None of it has been incorporated into `#form-composition-closure`'s formulation. The original composition-generating spike (`spikes/spike-agent-composition.md`) didn't bridge singular perturbation into the $\varepsilon^\ast$ definition, leaving the core expression stranded at zero-timescale-separation.
 
 ### Repair options
 

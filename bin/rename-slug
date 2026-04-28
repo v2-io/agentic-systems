@@ -25,8 +25,7 @@
 #   - `bin/lint-outline` exits clean on every component OUTLINE.md.
 #
 # Excluded dirs/files (references there stay on OLD names — they're frozen):
-#   _obs/ ref/ .git/ .claude/ msc/naming-votes/
-#   msc/naming-brainstorm-*.md  msc/naming-aggregate-*
+#   _obs/ ref/ .git/ .claude/ msc/naming/
 #   bin/rename-slug  (this file, which documents OLD examples)
 #
 # Usage:
@@ -63,15 +62,15 @@ EXCLUDED_DIR_PREFIXES = %w[
   ref/
   .git/
   .claude/
-  msc/naming-votes/
+  msc/naming/
 ].freeze
 
-# Any naming-* file directly in msc/ is rename-frozen. These files catalogue
-# rename mappings, vote data, or analyses of the naming state — their content
-# would be catastrophically corrupted if a sweep rewrote the slugs they name.
+# Any naming-* file directly in msc/naming/ is rename-frozen. These files
+# catalogue rename mappings, vote data, or analyses of the naming state — their
+# content would be catastrophically corrupted if a sweep rewrote the slugs they
+# name. (The directory move from msc/naming-* to msc/naming/ landed 2026-04-28;
+# the dir-prefix exclusion above subsumes the per-file globs.)
 EXCLUDED_FILE_GLOBS = %w[
-  msc/naming-*.md
-  msc/naming-aggregate-*.json
   bin/rename-slug
 ].freeze
 

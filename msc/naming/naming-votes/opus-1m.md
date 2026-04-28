@@ -1,6 +1,6 @@
 # Naming Votes — Opus 1M (NOT COLD-START)
 
-**Disclosure.** I am the agent that conducted the architectural-proposals consolidation audit on 2026-04-24 (see `PROPOSALS.md`, `LOG.md` §"2026-04-24 — Architectural-Proposals Consolidation Audit", and `msc/reflections/20-breadth-compression-and-the-proposals-audit.md`). I have read the full original brainstorm at `msc/naming-brainstorm-2026-04-24.md` and discussed it with Joseph, reaching specific points of disagreement. I co-authored the principles file itself.
+**Disclosure.** I am the agent that conducted the architectural-proposals consolidation audit on 2026-04-24 (see `PROPOSALS.md`, `LOG.md` §"2026-04-24 — Architectural-Proposals Consolidation Audit", and `msc/reflections/20-breadth-compression-and-the-proposals-audit.md`). I have read the full original brainstorm at `msc/naming/naming-brainstorm-2026-04-24.md` and discussed it with Joseph, reaching specific points of disagreement. I co-authored the principles file itself.
 
 Therefore this vote is NOT a genuine cold-start. It reflects my actual independent judgment formed through that process. The aggregation script should weight my votes with that in mind:
 

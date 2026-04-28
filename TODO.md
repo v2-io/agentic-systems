@@ -121,7 +121,7 @@ Per-spike status detail in [`spikes/INDEX.md`](spikes/INDEX.md); reasoning trail
 
 ## Naming pipeline — specific deferred items
 
-Status: pilot complete; full role-prefix sweep complete (142 segments); principles file refined edition committed (2026-04-24, `b9492b7`). **Refined Round 1 not yet launched** — under [`doc/naming-principles.md`](doc/naming-principles.md), agents write `*-r2.md` vote files; none currently exist. The pipeline workflow steps (refined Round 1 → aggregation → Round 2 → collision audit → landing) live in [`PRACTICA.md`](PRACTICA.md) §"🌟 Current naming conventions refactor"; original-Round-1 vote files are preserved at `msc/naming-votes/*.md`.
+Status: pilot complete; full role-prefix sweep complete (142 segments); principles file refined edition committed (2026-04-24, `b9492b7`). **Refined Round 1 not yet launched** — under [`doc/naming-principles.md`](doc/naming-principles.md), agents write `*-r2.md` vote files; none currently exist. The pipeline workflow steps (refined Round 1 → aggregation → Round 2 → collision audit → landing) live in [`PRACTICA.md`](PRACTICA.md) §"🌟 Current naming conventions refactor"; original-Round-1 vote files are preserved at `msc/naming/naming-votes/*.md`.
 
 **Specific subject-noun renames deferred to that pipeline:**
 
@@ -136,7 +136,7 @@ Status: pilot complete; full role-prefix sweep complete (142 segments); principl
 - Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).
 - Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).
 
-Detail in [`msc/naming-pilot-rename-plan.md`](msc/naming-pilot-rename-plan.md); principles in [`doc/naming-principles.md`](doc/naming-principles.md); Round-1 vote archaeology in `msc/naming-votes/` and `msc/naming-aggregate-*`.
+Detail in [`msc/naming/naming-pilot-rename-plan.md`](msc/naming/naming-pilot-rename-plan.md); principles in [`doc/naming-principles.md`](doc/naming-principles.md); Round-1 vote archaeology in `msc/naming/naming-votes/` and `msc/naming/naming-aggregate-*`.
 
 
 ## Documentation queued

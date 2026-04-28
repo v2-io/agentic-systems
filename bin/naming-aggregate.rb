@@ -3,7 +3,7 @@
 
 # bin/naming-aggregate.rb
 #
-# Aggregates multi-agent naming-vote tables from msc/naming-votes/*.md.
+# Aggregates multi-agent naming-vote tables from msc/naming/naming-votes/*.md.
 # Parses the four-column markdown tables defined in msc/naming-principles.md,
 # sums weights per (current-name, new-name-candidate) pair, preserves
 # agent-attributed notes, and emits one of three output formats:
@@ -290,7 +290,7 @@ def render_round2(agg, records)
   out << ''
   out << 'This is the aggregated candidate list from Round 1, sorted most-popular to least-popular (tallies withheld to prevent bandwagon convergence). Each entry shows a current-name, the alternatives proposed across agents (including explicit keeps), and the reasoning notes from Round 1 agents.'
   out << ''
-  out << '**Your task:** review each entry and cast your own votes following `msc/naming-principles.md`. You may add new candidates not on this list if you discover one during review. Do not read other Round-1 vote files directly — this aggregated summary is your input. Write your votes to `msc/naming-votes/{your-agent-id}.md`.'
+  out << '**Your task:** review each entry and cast your own votes following `msc/naming-principles.md`. You may add new candidates not on this list if you discover one during review. Do not read other Round-1 vote files directly — this aggregated summary is your input. Write your votes to `msc/naming/naming-votes/{your-agent-id}.md`.'
   out << ''
   out << '---'
   out << ''

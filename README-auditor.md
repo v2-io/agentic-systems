@@ -196,9 +196,13 @@ doc/                  Long-lived process documentation
   readme/             Templates and partials for README generation
 spikes/               Research spikes (reasoning trails)
   INDEX.md            Spike index with per-spike status
+  PROPOSED.md         High-risk research-direction proposals
 audits/               Audit working dirs + pending-findings tables
-msc/                  Other working documents, brainstorms, reflections
-ref/                  Reference papers
+msc/                  Other working artifacts (brainstorms, working notes)
+  naming/             Current naming-cycle votes + aggregates + rename plan
+  reflections/        Author's philosophical/theoretical journal
+ref/                  Reference papers + internal references
+  agentic-tft/        Prior-bridge AAD-source materials (Feb 2026)
 bin/                  Build, lint, generation scripts
 _obs/                 Superseded materials
 ```

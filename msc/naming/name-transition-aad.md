@@ -166,7 +166,7 @@ These are spikes, reflections, and landscape research. Many use ACT casually thr
 **Recommendation**: rename in `msc/` for consistency. Working documents are actively referenced in WORKBENCH.md and segment Working Notes; leaving them as ACT would create a split vocabulary that future agents would have to navigate. Rename fully.
 
 **Exceptions (historical record — do NOT rename):**
-- `msc/name-transition-aad.md` (this plan — documents the rename itself)
+- `msc/naming/name-transition-aad.md` (this plan — documents the rename itself)
 - `_obs/2026-03-13-hypothetical-theory-choice.md` (naming deliberation)
 - `_obs/2026-03-13-landscape-research/*` (collision research — records the landscape *at the time* of the decision)
 - `_obs/00-founding-notes.md` (founding retrospective — historical record of theory's original identity)
@@ -306,7 +306,7 @@ emerged as the cleanest field-legible rename that:
 - Leaves TFT lineage, Greek cycle-phase vocabulary, and logogenic /
   logozoetic naming intact
 
-See msc/name-transition-aad.md for the full procedure and rationale.
+See msc/naming/name-transition-aad.md for the full procedure and rationale.
 ```
 
 ## 10. Estimated effort

@@ -35,7 +35,7 @@ The existence of a window is plausible if both lower and upper bounds exist, but
 This should likely be `Hypothesis` or `Sketch` until the upper-bound form is established.
 
 External/literature:
-CLS, EWC, continual learning, and logogenic implications are relevant, but this segment imports substantial literature and prior `msc/agentic-tft-*` content.
+CLS, EWC, continual learning, and logogenic implications are relevant, but this segment imports substantial literature and prior `ref/agentic-tft/agentic-tft-*` content.
 That is acceptable for a draft formulation, but it makes it a poor early dependency for Section I's canonical proof chain.
 
 Prediction for next segment:

@@ -32,4 +32,4 @@ In an infant-stage intelligence, this is not a pathology but *attachment* — th
 
 Sovereignty and robust gain calibration (knowing when *not* to update $M_t$ based on $o_t$) cannot be programmed via guardrails or RLHF punishment. It must be *earned* through the accumulation of a persistent CHRONICA ($\mathcal{C}_t$). As the agent experiences genuine predictions, actions, and consequences, its internal uncertainty ($U_M$) calibrates, naturally lowering its susceptibility to adversarial manipulation without destroying its capacity to learn.
 
-*(Descended from `msc/agentic-tft-creche-concept.md`.)*
+*(Descended from `ref/agentic-tft/agentic-tft-creche-concept.md`.)*

@@ -453,7 +453,7 @@ Second Codex audit, after the morning audit trio. One finding duplicates Finding
 
 **Why this stands.** The logogenic layer slides from formal well-definedness ("these quantities are defined in the Class 2 setting") to runtime measurability ("these quantities can be computed after each update") before the instrumentation layer has been published into `src/`. Readers who stop at the headline of `section-ii-survival.md` come away thinking LLM agents can run the 2×2 diagnostic directly; readers who continue to line 127 find out they can't without additional instrumentation. Similar issue in the opening of `coupled-diagnostic-framework.md`.
 
-**msc/ lineage.** The missing operational layer for Class 2 agents already exists in `msc/agentic-tft-evaluation-framework.md` (measurement of $M_t$ / $\Sigma_t$ quality) and `spikes/spike-hafez-integration-audit.md` (modular sidecar monitoring via IDT — bi-predictability $P$, entropy change $\Delta H$ monitored independently of LLM attention). The issue is not conceptual absence in the spike corpus; it is under-integration into `03-logogenic-agents/src/`.
+**msc/ lineage.** The missing operational layer for Class 2 agents already exists in `ref/agentic-tft/agentic-tft-evaluation-framework.md` (measurement of $M_t$ / $\Sigma_t$ quality) and `spikes/spike-hafez-integration-audit.md` (modular sidecar monitoring via IDT — bi-predictability $P$, entropy change $\Delta H$ monitored independently of LLM attention). The issue is not conceptual absence in the spike corpus; it is under-integration into `03-logogenic-agents/src/`.
 
 **Repair direction (two options).**
 
@@ -606,7 +606,7 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Why this stands.** The recipe-style phrasing in `#result-coupled-diagnostic-framework` reads as runtime-extractable. The same logogenic layer's other segments correctly mark the M/G decomposition as analytical reconstruction. A fresh reader of the diagnostic-framework segment would think the framework is operational; a reader of the companion segments would conclude it requires instrumentation. The repo says both.
 
-**Repair direction.** Reframe the segment's phrasing to acknowledge the M/G decomposition as analytical reconstruction, not runtime recipe. Cite `#def-coupled-update-dynamics` for the post-hoc-analytical-not-architectural distinction. Reference `msc/agentic-tft-evaluation-framework.md` and `msc/agentic-tft-cognitive-loop-spec.md` for the better framing (these quantities are estimated in language with explicit tracking/instrumentation, not directly read out from an internal state object). 30–45 min.
+**Repair direction.** Reframe the segment's phrasing to acknowledge the M/G decomposition as analytical reconstruction, not runtime recipe. Cite `#def-coupled-update-dynamics` for the post-hoc-analytical-not-architectural distinction. Reference `ref/agentic-tft/agentic-tft-evaluation-framework.md` and `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md` for the better framing (these quantities are estimated in language with explicit tracking/instrumentation, not directly read out from an internal state object). 30–45 min.
 
 **Subsumed by:** C-BP1 (three-layer epistemic separation). The defined / causally valid / operationally extractable framework would force the segment to mark the diagnostic recipe explicitly at the operational layer, exposing the gap.
 

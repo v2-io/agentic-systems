@@ -177,7 +177,7 @@ The four instances import distinct external theorems; per-instance prior-art lan
 
 **Search Log:**
 
-- 2026-04 (*nominally comprehensive at the per-instance level*, via `msc/Novelty_defense_and_integration.md` Pillar 1): The Undermind defense covered Instance 1's prior-art landscape (causal bandits / causal MDPs under hidden confounding); the meta-pattern itself was not the search target. Instances 2–4 inherit per-instance comprehensiveness from their constituent segments rather than from a cross-instance search.
+- 2026-04 (*nominally comprehensive at the per-instance level*, via `ref/Novelty_defense_and_integration.md` Pillar 1): The Undermind defense covered Instance 1's prior-art landscape (causal bandits / causal MDPs under hidden confounding); the meta-pattern itself was not the search target. Instances 2–4 inherit per-instance comprehensiveness from their constituent segments rather than from a cross-instance search.
 - 2026-04 (*intuition-only* on the meta-pattern as an articulated framework): The cross-instance recognition that four AAD results share the *setting → external theorem → no-go → boundary characterization → strengthened-consequence* shape has not been searched for as a unified concept. Targeted future search candidates: scope-honesty traditions in formal verification (refinement-mapping work; Lamport's TLA; Abadi-Lamport refinement); identifiability-theory meta-frameworks; the broader "no-go theorems" literature in physics and economics. Expected outcome: the constituent moves are well-precedented; the unified framework as applied to an integrated agent theory may be novel under cursory search but is unlikely to be novel under comprehensive search of methodological-essay literature.
 
 ## Working Notes

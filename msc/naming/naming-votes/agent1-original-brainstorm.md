@@ -1,6 +1,6 @@
 # Naming Votes — Agent 1 (Original Brainstorm, Reformatted)
 
-**Source:** Extracted and formatted from `msc/naming-brainstorm-2026-04-24.md`. This is the brainstorm produced by an unidentified agent on 2026-04-24 ("One Agent's Brainstorm" section of that document), translated into the standard vote-table format for aggregation purposes. The agent's own priority labels (P1 mechanical / P2 naming refinement / P3 framing nudge / P4 optional / DO-NOT-rename) have been mapped to the weight scale as follows:
+**Source:** Extracted and formatted from `msc/naming/naming-brainstorm-2026-04-24.md`. This is the brainstorm produced by an unidentified agent on 2026-04-24 ("One Agent's Brainstorm" section of that document), translated into the standard vote-table format for aggregation purposes. The agent's own priority labels (P1 mechanical / P2 naming refinement / P3 framing nudge / P4 optional / DO-NOT-rename) have been mapped to the weight scale as follows:
 
 - P1 mechanical, high confidence → +3 for the proposed rename
 - P2 naming refinement (the agent's language was "weak preference, pending Joseph's read") → +1 for preferred candidate, -1 for considered-and-rejected alternatives
@@ -90,4 +90,4 @@ The original brainstorm noted three meta-observations worth flagging to the prin
 
 3. **The "communal imagination" test correlates with memorable-noun-slot ownership, not with self-descriptiveness.** An evocative imprecise name beats a precise forgettable name. Names that pass: satisfaction gap, control regret, chronica, orient cascade, identifiability floor, directed separation. Names that fail: additive-coordinate-forcing, separability-pattern, A2' sub-scope α₁/α₂/β, convention hierarchy.
 
-The original agent had six questions for Joseph that this table operationalizes into specific votes (see `msc/naming-brainstorm-2026-04-24.md` §12 for the original questions).
+The original agent had six questions for Joseph that this table operationalizes into specific votes (see `msc/naming/naming-brainstorm-2026-04-24.md` §12 for the original questions).
