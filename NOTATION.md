@@ -195,10 +195,18 @@ The theory uses natural (dimensionless information-theoretic) units where possib
 | $\eta^\ast$ | Dimensionless $\in [0, 1]$ | Ratio |
 | $\nu^{(k)}$ | Events per unit time (Hz) | |
 | $\mathcal{T}$ | Inverse time ($t^{-1}$) | Effective correction rate |
+| $\alpha$ | Inverse time ($t^{-1}$) | Worst-case scalar correction rate from the sector condition; same units as $\mathcal{T}$ (sector projection per `#der-gain-sector-bridge`) |
 | $\rho$ | Surprise $\cdot t^{-1}$ | Mismatch injection rate |
+| $R$ | Surprise | Sector-region radius / model class capacity — the largest mismatch magnitude under which the sector condition is certified |
+| $\rho/R$ | Inverse time ($t^{-1}$) | Disturbance rate normalized by capacity — the rate constant the persistence condition compares $\alpha$ against |
+| $1/\alpha$ | Time | Characteristic correction timescale — the time over which mismatch decays by a factor of $e$ under the linear approximation |
 | $S(M_t)$ | Dimensionless $\in [0, 1]$ | Ratio |
 
 **Dimensional analysis of the mismatch ODE.** In $d\lVert\delta\rVert/dt = -\mathcal{T}\lVert\delta\rVert + \rho$: LHS has units [surprise $\cdot t^{-1}$]; $\mathcal{T}\lVert\delta\rVert$ has $[t^{-1}] \cdot [\text{surprise}]$; $\rho$ has [surprise $\cdot t^{-1}$]. All consistent. Note $\mathcal{T}$ and $\rho$ have different units — the persistence condition $\mathcal{T} \gt \rho/\lVert\delta_{\text{critical}}\rVert$ is dimensionally consistent. The shorthand "$\mathcal{T} \gt \rho$" is valid only when $\lVert\delta_{\text{critical}}\rVert$ is normalized to 1.
+
+**Persistence condition as rate comparison.** The form $\alpha \gt \rho/R$ that appears in framing-level material (README, OUTLINE, the persistence segment's headline) is a comparison of two rate constants, both with units $[t^{-1}]$. $\alpha$ is the agent's correction rate the sector condition certifies; $\rho/R$ is the disturbance rate normalized by model class capacity (how fast new mismatch accrues, per unit of mismatch the model class can absorb). The two sides being commensurable is what makes the inequality structurally meaningful, and it is what lets the same condition instantiate cleanly across domains — Kalman-filter time constants, RL learning-rate schedules, organizational decision cycles, and software release cadences all live in this dimensional family.
+
+**Why $1/\alpha$ is often the more readable form.** Practitioners frequently have a clearer intuition for $1/\alpha$ — the characteristic correction timescale — than for $\alpha$ as a raw rate. Under the linear ODE $\dot\delta = -\alpha\delta$, $\delta(t) = \delta(0)\,e^{-\alpha t}$, so $1/\alpha$ is the time over which standing mismatch decays by a factor of $e$ ($\approx 63\%$ closed). For nonlinear sector-bounded correction the same $1/\alpha$ remains a valid worst-case lower-bound timescale via the Lyapunov treatment in `#deriv-sector-condition`. Engineers reading framing-level material may find "we close standing gaps over a few release cycles" easier to anchor on than "$\alpha = 0.3$ per cycle"; the two are reciprocal readings of the same quantity. The persistence condition expressed in timescales is $1/\alpha \lt R/\rho$ — the agent's characteristic correction time must be shorter than the time it takes disturbance to fill the model class capacity at full rate.
 
 
 ## Global Assumptions

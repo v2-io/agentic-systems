@@ -141,6 +141,10 @@ Gate 2 reviews must subject Discussion-section arguments to the same epistemic r
 
 Plausible-sounding explanations that aren't grounded in the theory are *worse* than gaps — they create false confidence. When reviewing Discussion paragraphs, ask: "Does this claim ADD something that follows from the formalism, or does it just SOUND like it does?" If the latter, either derive it properly, label it as hypothesis, or cut it. (The "deliberation as computation on existing data" framing is the canonical example of a claim that previously slipped past Gate 2 because it sounded deep — it wasn't, and was corrected.)
 
+### Feynman-criterion plain-language briefs
+
+Each segment's `## Findings` Brief field aspires to the **Feynman criterion**: *if you can't explain it simply, you don't understand it yet.* The benchmark is whether a thoughtful non-specialist can re-derive the qualitative claim from the everyday analog the Brief reaches for, *without* seeing the symbols. Alan Walton's bathtub gloss of the persistence condition (water = belief-reality gap; faucet = rate of change in reality; drain = learning rate; bathtub size = how wrong we can be while still keeping up; overflow when faucet outpaces drain at full) is the canonical example — and notably, it came from a sympathetic outside reader working it out for himself on first encounter, which is the diagnostic to aim for. The same aspiration governs the README, OUTLINE preambles, and any pedagogical or casual-curious-reader-facing material; the Brief field is where the aspiration is institutionalized in the schema, but the principle is general. See `FORMAT.md` §Findings — Brief for the schema-level statement. The standard is genuinely high — most segments do not yet meet it, and reaching it for a given finding is non-trivial work that often produces the Brief *last*, after the formalism stabilizes enough that the load-bearing structure becomes legible to plain language.
+
 ### Reading and writing posture
 
 When considering new content or a repair, prefer the form that surfaces scope and limits over the form that overclaims and is later forced to caveat. The framework's honesty is load-bearing.
