@@ -27,9 +27,20 @@ See [`../LEXICON.md`](../LEXICON.md) for the logogenic/logozoetic vocabulary.
 | L | Discussion | R3 | [#disc-m-preservation](src/disc-m-preservation.md) | External memory as persistent $M_t$ | draft |
 | L | Scope | S1 | [#scope-observation-ambiguity-modulation](src/scope-observation-ambiguity-modulation.md) | $\kappa \times$ ambiguity scope condition for Class 2/3 agents | draft |
 | | --GAP-- | | | Language-specific orient cascade (what's specific to logogenic agents?) — partially addressed by D3, R2 | |
-| | --GAP-- | | | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents | |
-| | --GAP-- | | | AAD-grounded experiential training environments | |
+| L | Observation | | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md) | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in AI agents | exploratory |
+| L | Hypothesis | | [#hyp-experiential-training](src/hyp-experiential-training.md) | AAD-grounded experiential training environments | exploratory |
 | | --GAP-- | | | Self-referential closure: AAD agent on AAD codebase | |
+
+### Proposed Additions (Gap Fulfillment)
+*The following segments have been proposed to fill the gaps in the theoretical mapping between the AAD core and the empirical findings in `synaptic` and `sapientia`.*
+
+| § | Type | N | Tag | Claim | Stage |
+|---|------|---|-----|-------|-------|
+| L | Formulation | | [#form-structured-rich-context](src/form-structured-rich-context.md) | SRC/GCM as the mathematically optimal solution to the Information Bottleneck problem across session boundaries | exploratory |
+| L | Derived | | [#der-active-salience-management](src/der-active-salience-management.md) | Applies Singular Perturbation Theory to token generation, proving necessity of high-$\nu$ triage models vs low-$\nu$ structural models | exploratory |
+| L | Observation | | [#obs-backward-inference-empathy](src/obs-backward-inference-empathy.md) | LLM statelessness forces continuous Bayesian inference on own text, which is mathematically identical to Theory of Mind (empathy) | exploratory |
+| L | Definition | | [#def-cognitive-fusion](src/def-cognitive-fusion.md) | Defines "Resonance" as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 macro-agent | exploratory |
+| L | Derived | | [#der-self-referential-closure](src/der-self-referential-closure.md) | Thermodynamic stability of an agent maintaining its own codebase (allocating tempo between refactoring harness and performing tasks) | exploratory |
 
 ---
 
