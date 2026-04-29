@@ -29,7 +29,7 @@
     "enrichment_status": {
       "consolidated_rationale": "pending",
       "first_encounter_locality": "pending",
-      "segment_link": "filled 138, ambiguous 1 (flagged), no-match 301",
+      "segment_link": "filled 139 (incl. 1 manually-resolved ambiguity), 4 with shared-segment annotation, 301 no-match",
       "manual_curation": "pending"
     },
     "merged_variants": {
@@ -12971,8 +12971,8 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": "Ambiguous segment_link match — candidates: der-recursive-update.md, deriv-recursive-update.md",
+      "segment_link": "01-aad-core/src/der-recursive-update.md",
+      "manual_curation_notes": "Concept-name vote → der- (result-statement) segment, not deriv- (appendix derivation). der-recursive-update is the concept being named; deriv-recursive-update is the proof.",
       "candidates": [
         {
           "candidate": "recursive update",
@@ -30452,7 +30452,7 @@
       "category_disagreement": false,
       "first_encounter_locality": null,
       "segment_link": "02-tst-core/src/scope-software.md",
-      "manual_curation_notes": null,
+      "manual_curation_notes": "Shared segment_link with sibling current; this row votes on the bare term, sibling votes on the slug shape (sibling: \"software scope\")",
       "candidates": [
         {
           "candidate": "software",
@@ -30508,7 +30508,7 @@
       "category_disagreement": false,
       "first_encounter_locality": null,
       "segment_link": "01-aad-core/src/schema-strategy-persistence.md",
-      "manual_curation_notes": null,
+      "manual_curation_notes": "Shared segment_link with sibling current; this row votes on the term, sibling votes on whether to drop the schema- prefix from the slug (sibling: \"strategy persistence schema\")",
       "candidates": [
         {
           "candidate": "strategy persistence",
@@ -36481,7 +36481,7 @@
       "category_disagreement": false,
       "first_encounter_locality": null,
       "segment_link": "02-tst-core/src/scope-software.md",
-      "manual_curation_notes": null,
+      "manual_curation_notes": "Shared segment_link with sibling current; this row votes on the slug shape, sibling votes on the bare term (sibling: \"software\")",
       "candidates": [
         {
           "candidate": "software scope",
@@ -44285,7 +44285,7 @@
       "category_disagreement": false,
       "first_encounter_locality": null,
       "segment_link": "01-aad-core/src/schema-strategy-persistence.md",
-      "manual_curation_notes": null,
+      "manual_curation_notes": "Shared segment_link with sibling current; this row votes on whether to drop the schema- prefix from the slug, sibling votes on the term (sibling: \"strategy persistence\")",
       "candidates": [
         {
           "candidate": "strategy persistence schema",
