@@ -25,7 +25,7 @@
     ],
     "total_vote_rows": 2967,
     "total_pairs": 1805,
-    "total_currents": 690,
+    "total_currents": 686,
     "enrichment_status": {
       "consolidated_rationale": "pending",
       "first_encounter_locality": "pending",
@@ -24237,20 +24237,6 @@
       ]
     },
     {
-      "current": "prolepsis aisthesis aporia epistrophe praxis",
-      "current_description": "Prolepsis aisthesis aporia epistrophe praxis",
-      "is_concept_cluster": true,
-      "voted_by_architectures": [
-        "Opus",
-        "agent1"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": []
-    },
-    {
       "current": "purposeful substate",
       "current_description": null,
       "is_concept_cluster": false,
@@ -34274,20 +34260,6 @@
       ]
     },
     {
-      "current": "cox theorem causal hierarchy theorem tikhonov theorem",
-      "current_description": "Cox's theorem / causal hierarchy theorem / Tikhonov's theorem",
-      "is_concept_cluster": true,
-      "voted_by_architectures": [
-        "Gemini",
-        "Opus"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": []
-    },
-    {
       "current": "crossing from multi agent to composite scope",
       "current_description": "Crossing from multi-agent to composite scope",
       "is_concept_cluster": true,
@@ -35246,20 +35218,6 @@
           ]
         }
       ]
-    },
-    {
-      "current": "Hafez's $H_b$ / Miller's meta-machine / Bruineberg's Pearl-blanket (lineage)",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini",
-        "Opus"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": []
     },
     {
       "current": "Section I. Adaptive Systems Under Uncertainty",
@@ -49060,19 +49018,6 @@
           ]
         }
       ]
-    },
-    {
-      "current": "unnamed the complete adaptive cycle from anticipation through action",
-      "current_description": "The complete adaptive cycle from anticipation through action",
-      "is_concept_cluster": true,
-      "voted_by_architectures": [
-        "Haiku"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": []
     },
     {
       "current": "unnamed the dimensional consistency constraint forcing the macro step formulation",
