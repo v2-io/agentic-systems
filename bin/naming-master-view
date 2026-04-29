@@ -81,7 +81,12 @@ def render_compact(master)
   out << '|---|---|---:|'
 
   master['currents'].each do |c|
-    current = c['current']
+    current = if c['is_concept_cluster'] && c['current_description']
+                desc = c['current_description'].sub(/\A./, &:upcase)
+                "[Concept] *#{desc}*"
+              else
+                c['current']
+              end
     candidates = c['candidates']
     candidates.each_with_index do |alt, idx|
       is_keep = alt['is_keep']
