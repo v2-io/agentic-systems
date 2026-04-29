@@ -497,7 +497,7 @@
 | `[concept: the failure mode where η* → 0 freezes learning, in either of two distinguishable modes (low U_o vs high U_o)]` | `stability-induced myopia` | canonicalize | +3 | Retains the descriptive alias for success-driven failure. [original phrasing: gemini s competency trap for $\eta^st 	o 0$] |
 | `[concept: the unupdatable region of the strategy DAG where edges receive no actionable feedback]` | `epistemic dead zone` | canonicalize | +3 | Locks in the geometric dead zone over "death". [original phrasing: gemini s epistemic death for the gain collapse unobservable DAG failure] |
 | `iii agentic composites` | `Section III: Agentic Composites` | canonicalize | +3 | Standard section heading formatting. |
-| `mismatch injection rate $ho$` | `effective disturbance $ho$` | canonicalize | +3 | Connects the formal symbol to its primary interpretation. |
+| `mismatch injection rate $\rho$` | `effective disturbance $\rho$` | canonicalize | +3 | Connects the formal symbol to its primary interpretation. |
 | `promote in topological order` | `topological promotion` | rename | +2 | Formalizes the dependency-ordered maturity process. |
 | `triple depth penalty canonicalize` | `tripartite chain attenuation` | canonicalize | +3 | Re-adopts the formal descriptive phrase. |
 | `unnamed the 2×2 orient cascade diagnostic table` | `diagnostic gap matrix` | canonicalize | +3 | Locks in the diagnostic table name. |

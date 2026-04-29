@@ -25,7 +25,7 @@
     ],
     "total_vote_rows": 2967,
     "total_pairs": 1805,
-    "total_currents": 823,
+    "total_currents": 822,
     "enrichment_status": {
       "consolidated_rationale": "pending",
       "first_encounter_locality": "pending",
@@ -37845,37 +37845,6 @@
       ]
     },
     {
-      "current": "mismatch injection rate $\rho$",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "effective disturbance $\rho$",
-          "is_keep": false,
-          "total_weight": 3,
-          "category_tally": {
-            "canonicalize": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "gemini-targeted-alternatives",
-              "weight": 3,
-              "category": "canonicalize",
-              "notes": "Connects the formal symbol to its primary interpretation."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "current": "model sufficiency $S$",
       "current_description": null,
       "is_concept_cluster": false,
@@ -52796,6 +52765,7 @@
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
+        "Gemini",
         "Sonnet"
       ],
       "category_disagreement": false,
@@ -52803,6 +52773,23 @@
       "segment_link": null,
       "manual_curation_notes": null,
       "candidates": [
+        {
+          "candidate": "effective disturbance $\\rho$",
+          "is_keep": false,
+          "total_weight": 3,
+          "category_tally": {
+            "canonicalize": 1
+          },
+          "consolidated_rationale": null,
+          "votes": [
+            {
+              "agent": "gemini-targeted-alternatives",
+              "weight": 3,
+              "category": "canonicalize",
+              "notes": "Connects the formal symbol to its primary interpretation."
+            }
+          ]
+        },
         {
           "candidate": "mismatch injection rate",
           "is_keep": false,
