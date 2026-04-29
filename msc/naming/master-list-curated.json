@@ -10571,8 +10571,8 @@
       "manual_curation_notes": null,
       "candidates": [
         {
-          "candidate": "AAD adaptation and actuation dynamics",
-          "is_keep": false,
+          "candidate": "AAD (Adaptation and Actuation Dynamics)",
+          "is_keep": true,
           "total_weight": 20,
           "category_tally": {
             "canonicalize": 8
@@ -37817,8 +37817,8 @@
           ]
         },
         {
-          "candidate": "Temporal software theory TST",
-          "is_keep": false,
+          "candidate": "Temporal Software Theory (TST)",
+          "is_keep": true,
           "total_weight": 3,
           "category_tally": {
             "canonicalize": 1

@@ -93,7 +93,7 @@ Single-table compact view of the master list. One row per (original, candidate) 
 | shared intent | **_(keep)_ ⭑** | +22 |
 |  | Teleological unity | +1 |
 |  | Compressed purpose | +1 |
-| AAD (Adaptation and Actuation Dynamics) | **AAD adaptation and actuation dynamics [canonicalize]** | +20 |
+| AAD (Adaptation and Actuation Dynamics) | **_(keep)_ ⭑** | +20 |
 |  | AAD | +3 |
 |  | AAD agentic adaptation dynamics | +1 |
 | adaptive tempo | **_(keep)_ ⭑** | +32 |
@@ -1006,7 +1006,7 @@ Single-table compact view of the master list. One row per (original, candidate) 
 | teleological unity | **Teleological unity $U_o$ [canonicalize]** | +3 |
 |  | _(keep)_ ⭑ | +3 |
 | Temporal Software Theory (TST) | **Temporal software theory [canonicalize]** | +3 |
-|  | Temporal software theory TST [canonicalize] | +3 |
+|  | _(keep)_ ⭑ | +3 |
 | test as reusable intervention | **Interventional probe library [add-alias]** | +3 |
 |  | Interventional test | +2 |
 |  | Causal query infrastructure | +2 |

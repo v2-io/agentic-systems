@@ -2,7 +2,7 @@
 
 **Voter:** `opus-r2`
 **Card seed:** `opus-r2` (deterministic shuffle; same agent-id always produces the same card)
-**Generated:** 2026-04-29T22:56:47Z
+**Generated:** 2026-04-29T22:58:12Z
 
 ## Voting instructions
 
@@ -3943,7 +3943,7 @@ Heading conventions: `## N. [Concept] *description*` headings are post-consolida
 |---|---|:-:|:-:|---|
 | AAD agentic adaptation dynamics |  |  |  |  |
 | AAD |  |  |  |  |
-| AAD adaptation and actuation dynamics |  |  |  |  |
+| AAD (Adaptation and Actuation Dynamics) |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
 ## 485. `catastrophic forgetting`
@@ -4766,7 +4766,7 @@ Heading conventions: `## N. [Concept] *description*` headings are post-consolida
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Temporal software theory |  |  |  |  |
-| Temporal software theory TST |  |  |  |  |
+| Temporal Software Theory (TST) |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
 ## 588. `condition`
