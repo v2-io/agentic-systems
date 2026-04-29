@@ -1,243 +1,515 @@
 # Naming Vote Aggregation — Review
 
-**Agents:** agent1-original-brainstorm, audit-471203-incremental, codex-1, codex-2, codex-gpt-5-r2, gemini-1, gemini-2, gemini-3-1-pro-preview-r2, haiku-4-5, haiku-4-5-r2, opus-1m, opus-4-7, opus-4-7-b, opus-4-7-r2, sonnet-4-6, sonnet-4-6-r2 (16 total)
-**Total vote rows:** 2165
-**Distinct (current, candidate) pairs:** 1295
-**Distinct current-names voted on:** 979
-**Merged display-form variants (post-canonicalization):** 1510
+**Agents:** agent1-original-brainstorm, audit-471203-incremental, codex-1, codex-2, codex-gpt-5-r2, gemini-1, gemini-2, gemini-3-1-pro-preview-r2, gemini-targeted-alternatives, haiku-4-5, haiku-4-5-r2, opus-1m, opus-4-7, opus-4-7-b, opus-4-7-r2, opus-targeted-alternatives, opus-targeted-alternatives-v2, sonnet-4-6, sonnet-4-6-r2 (19 total)
+**Total vote rows:** 2930
+**Distinct (current, candidate) pairs:** 1800
+**Distinct current-names voted on:** 942
+**Merged display-form variants (post-canonicalization):** 1929
 
 ## Merged display-form variants
 
 These names were collapsed to a canonical bucket (lowercased / alphanumerics-only) so format-variant votes consolidate. The chosen display form is the most-frequently-voted original (ties broken by length); other variants are listed for traceability.
 
+- `$H_b$` ← merged from: ``$H_b$``
+- `$O_t$ (objective)` ← merged from: ``$O_t$ objective``
+- `$U_M$ (dual-use: model uncertainty and epistemic unity)` ← merged from: ``$U_M$ dual use model uncertainty and epistemic unity``
+- `$U_M$ (model uncertainty)` ← merged from: ``$U_M$ model uncertainty``
+- `$U_o$ (observation uncertainty)` ← merged from: ``$U_o$ observation uncertainty``
+- ``$U_o$ vs $U_O$ collision`` ← merged from: `$U_o$ vs $U_O$ collision`
+- ``$V_{O_t}^{\min}$`` ← merged from: `$V_{O_t}^{\min}$`
+- `$\alpha_1$` ← merged from: ``$\alpha_1$``
+- `$\alpha_2$` ← merged from: ``$\alpha_2$``
+- `$\alpha_3$` ← merged from: ``$\alpha_3$``
+- ``$\beta$ a2 sub-scope`` ← merged from: `$\beta$ (A2' sub-scope)`
 - `$\beta$ (sub-scope)` ← merged from: `$\beta$ sub-scope`
+- ``$\delta_t$`` ← merged from: `$\delta_t$`
+- ``$\eta^\ast$`` ← merged from: `$\eta^\ast$`
+- ``$\hat o_t$`` ← merged from: `$\hat o_t$`
+- `$\iota_{ij}$` ← merged from: ``$\iota_{ij}$``
+- ``$\lambda(M_t)$`` ← merged from: `$\lambda(M_t)$`
+- `$\rho$` ← merged from: ``$\rho$``
+- `$\rho_\Sigma$` ← merged from: ``$\rho_\Sigma$``
 - `"1-anchor-plus-3-theorem"` ← merged from: `1-anchor-plus-3-theorem`
-- `AAD` ← merged from: `"AAD"`
+- `AAD` ← merged from: ``AAD``, `"AAD"`
+- `"AAD" / "AAD-internal" / "AAD-internally"` ← merged from: ``AAD AAD internal AAD internally``
+- `"AAD" (acronym)` ← merged from: ``AAD acronym``
 - `AAD (Adaptation and Actuation Dynamics)` ← merged from: `"AAD (Adaptation and Actuation Dynamics)"`
+- `"AAD" (theoretical core) vs "ASF" (framework)` ← merged from: ``AAD theoretical core vs ASF framework``
+- `"ASF"` ← merged from: ``ASF``
+- `"ASF" (acronym)` ← merged from: ``ASF acronym``
 - `#scope-ciy-observational-proxy` ← merged from: `#ciy-observational-proxy`, ``scope-ciy-observational-proxy``
 - `#ciy-unified-objective` ← merged from: ``disc-ciy-unified-objective``, `#disc-ciy-unified-objective`
+- `OODA (Boyd)` ← merged from: ``OODA boyd``
 - `#ai-agent-as-act-agent` ← merged from: ``#ai-agent-as-act-agent``
 - `#ai-agent-as-adaptive-agent` ← merged from: ``#ai-agent-as-adaptive-agent``
+- `A1, A2, A3, A4` ← merged from: ``a1 a2 a3 a4``
+- ``a2 prime sub scope partition`` ← merged from: `A2-prime sub-scope partition`
+- `A2' sub-scope partition` ← merged from: ``a2 sub scope partition``
+- ``accumulated loss across context resets`` ← merged from: `accumulated loss across context resets`
 - `#action-channel` ← merged from: `#def-action-channel`
-- `"action fluency"` ← merged from: `(action) fluency`
+- ``action distinguishability`` ← merged from: `action distinguishability`
+- ``action fluency`` ← merged from: `"action fluency"`, `(action) fluency`
 - `#der-action-selection` ← merged from: `#action-selection`, ``der-action-selection``
 - `#def-action-transition` ← merged from: `#action-transition`
+- `Active context` ← merged from: ``active-context``
+- ``#der-active-salience-management`` ← merged from: `#der-active-salience-management`, ``active salience management``
 - `Actuated` ← merged from: `actuated`
-- `actuated agent` ← merged from: `Actuated agent`, `actuated (agent)`, `"actuated agent"`
-- `Adaptive Cycle` ← merged from: `adaptive cycle`
+- `actuated agent` ← merged from: `Actuated agent`, ``actuated agent``, `actuated (agent)`, `"actuated agent"`
+- `"actuated agent" vs "purposeful agent"` ← merged from: ``actuated agent vs purposeful agent``
+- ``adaptive cycle`` ← merged from: `Adaptive Cycle`, `adaptive cycle`
 - `#adaptive-gain-dynamics` ← merged from: `#deriv-adaptive-gain-dynamics`, ``#adaptive-gain-dynamics``
+- `adaptive-gain regime` ← merged from: ``adaptive gain regime``
 - `adaptive reserve` ← merged from: `"adaptive reserve"`, `Adaptive reserve`
 - `adaptive reserve ($\Delta\rho^\ast$)` ← merged from: `Adaptive reserve ($\Delta\rho^\ast$)`, `"adaptive reserve" ($\Delta\rho^\ast$)`
 - `#scope-adaptive-system` ← merged from: ``scope-adaptive-system``
-- `adaptive tempo` ← merged from: `#def-adaptive-tempo`, `"adaptive tempo"`, `#adaptive-tempo`, ``#adaptive-tempo``, ``def-adaptive-tempo``, `Adaptive tempo`
+- `adaptive tempo` ← merged from: ``adaptive tempo``, `#def-adaptive-tempo`, `"adaptive tempo"`, `#adaptive-tempo`, ``#adaptive-tempo``, ``def-adaptive-tempo``, `Adaptive tempo`
+- ``adaptive tempo $\mathcal T$`` ← merged from: `adaptive tempo ($\mathcal T$)`
+- ``adaptive tracker`` ← merged from: `adaptive tracker`
 - `#additive-coordinate-forcing` ← merged from: `#disc-additive-coordinate-forcing`, ``#additive-coordinate-forcing``, ``disc-additive-coordinate-forcing``
+- ``additive coordinate forcing family`` ← merged from: `additive-coordinate-forcing family`
+- ``additive coordinate forcing → disc forced coordinates`` ← merged from: ``disc-additive-coordinate-forcing` → `disc-forced-coordinates``
 - `#der-adversarial-destabilization` ← merged from: `#adversarial-destabilization`, `adversarial destabilization`, ``#adversarial-destabilization``, ``der-adversarial-destabilization``
+- ``adversarial edge target argmax`` ← merged from: `adversarial edge target argmax`
+- ``#adversarial-edge-targeting`` ← merged from: ``adversarial edge targeting``
 - `#result-adversarial-exponent-regimes` ← merged from: `#adversarial-exponent-regimes`, ``result-adversarial-exponent-regimes``
 - `#result-adversarial-tempo-advantage` ← merged from: `#adversarial-tempo-advantage`, ``#adversarial-tempo-advantage``, ``result-adversarial-tempo-advantage``, `adversarial tempo advantage`
 - `#scope-agency` ← merged from: ``scope-agency``
+- `"agent classes" (Class 1 / 2 / 3)` ← merged from: ``agent classes class 1 2 3``
 - `#agent-environment` ← merged from: ``def-agent-environment``, `#def-agent-environment`, ``#agent-environment``
 - `#scope-agent-identity` ← merged from: `#agent-identity`, ``scope-agent-identity``
+- ``agent identity as one non forkable causal record`` ← merged from: `agent identity as one non-forkable causal record`
 - `#agent-model` ← merged from: `#form-agent-model`, ``#agent-model``, ``form-agent-model``
-- `#agent-opacity` ← merged from: `#der-agent-opacity`, `agent opacity`, ``der-agent-opacity``
+- `#agent-opacity` ← merged from: `#der-agent-opacity`, `agent opacity`, ``agent opacity``, ``der-agent-opacity``
+- ``#der-agent-opacity` ($H_b^{A\mid B}$)` ← merged from: ``agent opacity $H_b^{A\mid B}$``, `agent opacity ($H_b^{A\mid B}$)`
 - `#def-agent-spectrum` ← merged from: `#agent-spectrum`, ``def-agent-spectrum``, `agent spectrum`, `"agent spectrum"`, ``#agent-spectrum``
+- ``agent visible but objective irrelevant metric`` ← merged from: `agent-visible but objective-irrelevant metric`
+- `"Agentic Cycle Theory (ACT)"` ← merged from: ``agentic cycle theory act``
 - `"agentic scaffold"` ← merged from: `agentic scaffold`
-- `Aisthesis` ← merged from: `aisthesis`
+- ``agentic systems framework`` ← merged from: `Agentic Systems Framework`
+- `Agentic Systems Framework (ASF)` ← merged from: ``agentic systems framework ASF``
+- `Aisthesis` ← merged from: ``aisthesis``, `aisthesis`
+- ``alignment uncertainty`` ← merged from: `alignment uncertainty`
+- ``alpha prime sub scope`` ← merged from: `alpha-prime sub-scope`
+- ``ambient noise regime`` ← merged from: `ambient-noise regime`
 - `"ambiguity modulation"` ← merged from: `#scope-ambiguity-modulation`
 - `#scope-and-or` ← merged from: ``scope-and-or``
 - `#scope-and-or-combination` ← merged from: ``scope-and-or-combination``
 - `#and-or-scope` ← merged from: ``#and-or-scope``
-- `Aporia` ← merged from: `aporia`
-- `#def-aporia-signal` ← merged from: `#aporia-signal`, `aporia signal`
+- `Aporia` ← merged from: `aporia`, ``aporia``
+- ``aporia prolepsis aisthesis epistrophe praxis`` ← merged from: `aporia / prolepsis / aisthesis / epistrophe / praxis`
+- `#def-aporia-signal` ← merged from: `#aporia-signal`, ``aporia signal``, `aporia signal`
+- `"Appendices: Details"` ← merged from: ``Appendices: Details``, ``appendices details``
 - `#approximation-tiering` ← merged from: `#disc-approximation-tiering`, ``#approximation-tiering``, ``disc-approximation-tiering``
-- `assumed regime` ← merged from: `assumed-regime`
+- `"artificial hippocampus"` ← merged from: ``artificial hippocampus``
+- ``assumed regime`` ← merged from: `assumed regime`, `assumed-regime`
 - `#def-atomic-changeset` ← merged from: `atomic changeset`, `#atomic-changeset`, ``#atomic-changeset``, ``def-atomic-changeset``
 - `attempt the improbable` ← merged from: `"attempt the improbable"`
-- `auftragstaktik` ← merged from: `"auftragstaktik"`
+- ``auftragstaktik`` ← merged from: `auftragstaktik`, `"auftragstaktik"`
 - `#hyp-auftragstaktik-principle` ← merged from: `#auftragstaktik-principle`, `Auftragstaktik principle`, ``hyp-auftragstaktik-principle``, ``#auftragstaktik-principle``
-- `#def-auxilia-hierarchy` ← merged from: `"auxilia hierarchy"`
-- `#obs-backward-inference-empathy` ← merged from: `"backward inference empathy"`
+- `#def-auxilia-hierarchy` ← merged from: ``auxilia hierarchy``, `"auxilia hierarchy"`
+- ``#obs-axiom-genesis`` ← merged from: `#obs-axiom-genesis`, ``axiom genesis``
+- ``#obs-backward-inference-empathy`` ← merged from: `#obs-backward-inference-empathy`, ``backward inference empathy``, `"backward inference empathy"`
+- ``backward opacity`` ← merged from: `backward opacity`
+- ``bathtub analogy for persistence condition`` ← merged from: `bathtub analogy for persistence condition`
+- ``bathtub model`` ← merged from: `bathtub model`
+- ``beta a2 assumed sub scope`` ← merged from: `beta (A2' assumed sub-scope)`
+- ``beta prime sub scope`` ← merged from: `beta-prime sub-scope`
+- `#deriv-bias-bound` ← merged from: ``bias bound``
 - `#bias-bound-derivation` ← merged from: ``#bias-bound-derivation``
+- ``blind pursuer`` ← merged from: `blind pursuer`
+- ``boundary condition`` ← merged from: `boundary condition`
 - `#bounded-correction-template` ← merged from: `bounded-correction template`
-- `calibration laboratory` ← merged from: `"calibration laboratory"`
+- `"Bounded disturbance" (GA-2, Model D)` ← merged from: ``bounded disturbance ga 2 model d``
+- `Bretagnolle-Huber identity` ← merged from: ``bretagnolle huber identity``, ``bretagnolle-huber identity``
+- `Bruineberg's Pearl-blanket` ← merged from: ``bruineberg s pearl-blanket``
+- `Bruineberg's Pearl-blanket / Friston-blanket` ← merged from: ``bruineberg s pearl-blanket friston-blanket``
+- `C-i` ← merged from: ``c i``
+- `C-ii` ← merged from: ``c ii``
+- `C-iii` ← merged from: ``c iii``
+- `C1, C2, C3` ← merged from: ``c1 c2 c3``
+- ``cadentia`` ← merged from: `Cadentia`
+- `calibration laboratory` ← merged from: ``calibration laboratory``, `"calibration laboratory"`
+- ``calibration laboratory calibration lab`` ← merged from: `"calibration laboratory" / "calibration lab"`
+- ``calibration laboratory domain instantiation`` ← merged from: `calibration-laboratory domain instantiation`
+- ``calibration laboratory framing for TST`` ← merged from: `calibration laboratory (framing for TST)`
+- ``calibration laboratory software s role`` ← merged from: `"calibration laboratory" (software's role)`
+- ``candidate stage`` ← merged from: `"candidate" (stage)`
+- ``canonical formulations`` ← merged from: `canonical formulations`
+- `"Canonical formulations" (second ring)` ← merged from: ``canonical formulations second ring``
+- `"Catastrophic Forgetting"` ← merged from: ``catastrophic forgetting``
+- ``catastrophic forgetting regime`` ← merged from: `catastrophic forgetting regime`
 - `#cauchy-coordinates` ← merged from: `#disc-cauchy-coordinates`, ``#cauchy-coordinates``
 - `#causal-discovery-from-git` ← merged from: `#hyp-causal-discovery-from-git`, ``hyp-causal-discovery-from-git``
 - `#der-causal-hierarchy-requirement` ← merged from: `#causal-hierarchy-requirement`, ``#causal-hierarchy-requirement``, ``der-causal-hierarchy-requirement``
 - `#def-causal-information-yield` ← merged from: `causal information yield`, `#causal-information-yield`, ``def-causal-information-yield``, ``#causal-information-yield``
 - `Causal information yield (CIY)` ← merged from: `"causal information yield" (CIY)`, ``#causal-information-yield` (CIY)`
 - `#der-causal-insufficiency-detection` ← merged from: `#causal-insufficiency-detection`, ``#causal-insufficiency-detection``, ``der-causal-insufficiency-detection``, ``#der-causal-insufficiency-detection``
+- `Causal lock` ← merged from: ``causal lock``, ``causal-lock``
 - `#post-causal-structure` ← merged from: `#causal-structure`, ``post-causal-structure``
-- `#chain-confidence-decay` ← merged from: `#der-chain-confidence-decay`, `chain confidence decay`, ``der-chain-confidence-decay``, `chain-confidence-decay`
+- ``#def-century-scale-event-log`` ← merged from: `#def-century-scale-event-log`, ``century scale event log``
+- `#chain-confidence-decay` ← merged from: `#der-chain-confidence-decay`, `chain confidence decay`, ``der-chain-confidence-decay``, ``chain confidence decay``, `chain-confidence-decay`
+- ``chain confidence decay keep`` ← merged from: ``der-chain-confidence-decay` keep`
 - `#def-change-coherence` ← merged from: `change coherence`
-- `#def-change-distance` ← merged from: ``def-change-distance``, `change distance`
-- `#change-expectation-baseline` ← merged from: ``der-change-expectation-baseline``, `#der-change-expectation-baseline`
-- ``der-change-investment`` ← merged from: `change investment`
+- ``change distance`` ← merged from: `#def-change-distance`, ``def-change-distance``, `change distance`
+- `#change-expectation-baseline` ← merged from: ``der-change-expectation-baseline``, `#der-change-expectation-baseline`, ``change expectation baseline``
+- ``change investment`` ← merged from: ``der-change-investment``, `change investment`
 - `#change-proximity-principle` ← merged from: ``der-change-proximity-principle``, `#der-change-proximity-principle`
 - `#changeset-size-principle` ← merged from: `#emp-changeset-size-principle`, ``#changeset-size-principle``, ``emp-changeset-size-principle``
 - `#der-channel-classification` ← merged from: ``der-channel-classification``
-- `chronica` ← merged from: `Chronica`, `#chronica`, `"chronica"`, `#def-chronica`, ``def-chronica``
+- `chronica` ← merged from: `Chronica`, `#chronica`, ``chronica``, `"chronica"`, `#def-chronica`, ``def-chronica``
+- ``chronica $\mathcal C_t$`` ← merged from: `chronica ($\mathcal C_t$)`
 - `Chronica ($\mathcal{C}_t$)` ← merged from: `chronica ($\mathcal{C}_t$)`
+- ``chronica brief gloss`` ← merged from: `chronica (Brief gloss)`
+- ``chronica in running prose`` ← merged from: `chronica in running prose`
 - `#chronica-severance` ← merged from: `chronica severance`
+- `Chronica (𝒞_t)` ← merged from: ``chronica 𝒞 t``
+- `"claim" (the proposition the segment carries)` ← merged from: ``claim the proposition the segment carries``
+- ``class 1 / class 2 / class 3`` ← merged from: `Class 1, Class 2, Class 3`, ``class 1 class 2 class 3``
+- `Class 1 / Class 2 / Class 3 agents` ← merged from: ``class 1 class 2 class 3 agents``
+- `Class-1 subagents forming a Class-3 composite` ← merged from: ``class 1 subagents forming a class 3 composite``
+- ``Class 2 bias bound`` ← merged from: ``#class-2-bias-bound``
+- `"Class 2 scope exit"` ← merged from: ``class 2 scope exit``
 - `CLAUDE.md § "What's Settled vs. Open"` ← merged from: `CLAUDE.md §"What's Settled vs. Open"`
 - `CLAUDE.md § "Working Conventions"` ← merged from: `CLAUDE.md §"Working Conventions"`
-- `closure defect` ← merged from: `"closure defect"`, `Closure defect`, `#form-closure-defect`
+- `closure defect` ← merged from: ``closure defect``, `"closure defect"`, `Closure defect`, `#form-closure-defect`
 - `Closure defect ($\varepsilon^\ast$)` ← merged from: `"closure defect" ($\varepsilon^\ast$)`, `closure defect ($\varepsilon^\ast$)`
+- ``closure defect bridge lemma`` ← merged from: `closure-defect bridge lemma`
+- ``closure defect consuming macro reserve`` ← merged from: `closure defect consuming macro reserve`
 - `#coarse-graining closure` ← merged from: `coarse-graining closure`
 - `#code-quality-as-observation-infrastructure` ← merged from: ``#code-quality-as-observation-infrastructure``, ``der-code-quality-as-observation-infrastructure``, `code quality as observation infrastructure`
-- `#def-cognitive-fusion` ← merged from: `"cognitive fusion"`
+- ``#def-cognitive-fusion`` ← merged from: `#def-cognitive-fusion`, ``cognitive fusion``, `"cognitive fusion"`
+- `Cognitive rhythm` ← merged from: ``cognitive-rhythm``
+- `Cognitive substrate` ← merged from: ``cognitive-substrate``
 - `#meas-coherence-coupling` ← merged from: ``meas-coherence-coupling``
+- ``#coherence-coupling-measurement`` ← merged from: ``coherence coupling measurement``, ``coherence-coupling measurement``
 - `Coherence dimensions` ← merged from: `#coherence-dimensions`, ``#coherence-dimensions``, `coherence dimensions`
 - `communal-imagination test` ← merged from: `"communal-imagination test"`
-- `#communication-gain` ← merged from: `#hyp-communication-gain`, `communication gain`, ``#communication-gain``, ``hyp-communication-gain``, `"communication gain"`
+- `#communication-gain` ← merged from: `#hyp-communication-gain`, `communication gain`, ``#communication-gain``, ``hyp-communication-gain``, `"communication gain"`, ``communication gain``
+- `Communication gain ($\eta_{ji}^\ast$)` ← merged from: ``communication gain $\eta_{ji}^\ast$``
+- `"complementary learning architecture"` ← merged from: ``complementary learning architecture``
 - `#form-complete-agent-state` ← merged from: `#complete-agent-state`, ``#complete-agent-state``, ``form-complete-agent-state``
+- ``completeness c3`` ← merged from: `completeness (C3)`
 - `#scope-composite-agent` ← merged from: ``scope-composite-agent``
 - `#hyp-composite-directed-separation` ← merged from: ``#composite-directed-separation``
 - `#form-composition-closure` ← merged from: `#composition-closure`, `composition closure`, `"composition closure"`, ``form-composition-closure``
 - `#post-composition-consistency` ← merged from: `#composition-consistency`, ``post-composition-consistency``, ``#composition-consistency``
+- ``composition routes`` ← merged from: `composition routes`
 - `#composition-scope-condition` ← merged from: ``#composition-scope-condition``
-- `#comprehension-time` ← merged from: `#def-comprehension-time`, ``def-comprehension-time``, `comprehension time`
+- `#comprehension-time` ← merged from: `#def-comprehension-time`, ``def-comprehension-time``, `comprehension time`, ``comprehension time``
 - `#disc-compression-operations` ← merged from: `#compression-operations`, ``#compression-operations``, ``disc-compression-operations``, `compression operations`
+- ``[concept: dormant variation in correction architectures across a population that becomes consequential after regime change but is invisible to current persistence analysis]`` ← merged from: `[concept: dormant variation in correction architectures across a population that becomes consequential after regime change but is invisible to current persistence analysis]`
+- `[concept: the architectural requirement that composite-agent admissibility inherit from sub-agent properties plus topology]` ← merged from: ``[concept: the architectural requirement that composite-agent admissibility inherit from sub-agent properties plus topology]``
+- `[concept: the asymmetric pair of memory-access modes — one biased by current goal, the other state-keyed only]` ← merged from: ``[concept: the asymmetric pair of memory-access modes — one biased by current goal, the other state-keyed only]``
+- ``[concept: the engineering-vocabulary failure mode in #consolidation-dynamics — the parameter region where forgetting and learning rates jointly fail to admit a viable operating point]`` ← merged from: `[concept: the engineering-vocabulary failure mode in #consolidation-dynamics — the parameter region where forgetting and learning rates jointly fail to admit a viable operating point]`
+- ``[concept: the externalization-and-rehydration mechanism for carrying part of M_t (or G_t) across session boundaries via the environment]`` ← merged from: `[concept: the externalization-and-rehydration mechanism for carrying part of M_t (or G_t) across session boundaries via the environment]`
+- ``[concept: the failure mode where η* → 0 freezes learning, in either of two distinguishable modes (low U_o vs high U_o)]`` ← merged from: `[concept: the failure mode where η* → 0 freezes learning, in either of two distinguishable modes (low U_o vs high U_o)]`
+- ``[concept: the fourth diagnostic in the satisfaction-gap × control-regret space — when end-conditions are met but the objective remains unsatisfied]`` ← merged from: `[concept: the fourth diagnostic in the satisfaction-gap × control-regret space — when end-conditions are met but the objective remains unsatisfied]`
+- `[concept: the framing of software/TST as AAD's epistemically-privileged high-identifiability measurement substrate]` ← merged from: ``[concept: the framing of software/TST as AAD's epistemically-privileged high-identifiability measurement substrate]``
+- `[concept: the minimum-sufficiency boundary an agent must satisfy to validly resume operation after a session boundary or context turnover]` ← merged from: ``[concept: the minimum-sufficiency boundary an agent must satisfy to validly resume operation after a session boundary or context turnover]``
+- ``[concept: the parameter-space region within which an agent maintains bounded mismatch indefinitely]`` ← merged from: `[concept: the parameter-space region within which an agent maintains bounded mismatch indefinitely]`
+- `[concept: the prose form of κ_cross — the coupling between an agent's model-of-self and its model-of-other]` ← merged from: ``[concept: the prose form of κ_cross — the coupling between an agent's model-of-self and its model-of-other]``
+- ``[concept: the self-reinforcing positive-feedback loop linking M_t quality and Σ_t evaluable complexity (TST-specific and AAD-general forms)]`` ← merged from: `[concept: the self-reinforcing positive-feedback loop linking M_t quality and Σ_t evaluable complexity (TST-specific and AAD-general forms)]`
+- `[concept: the sequence of cycle phases (Prolepsis–Aisthesis–Aporia–Epistrophe–Praxis) considered as a single named whole]` ← merged from: ``[concept: the sequence of cycle phases (Prolepsis–Aisthesis–Aporia–Epistrophe–Praxis) considered as a single named whole]``
+- `[concept: the slogan capturing AAD's organizing principle that an adaptive system's correction rate must exceed its target's change rate]` ← merged from: ``[concept: the slogan capturing AAD's organizing principle that an adaptive system's correction rate must exceed its target's change rate]``
+- `[concept: the structural meta-pattern in #disc-additive-coordinate-forcing combining one foundational lemma with three derived results]` ← merged from: ``[concept: the structural meta-pattern in #disc-additive-coordinate-forcing combining one foundational lemma with three derived results]``
+- ``[concept: the unupdatable region of the strategy DAG where edges receive no actionable feedback]`` ← merged from: `[concept: the unupdatable region of the strategy DAG where edges receive no actionable feedback]`
+- `[concept: the working-convention rule of attempting tighter derivation before scope-narrowing on apparently-overclaimed claims]` ← merged from: ``[concept: the working-convention rule of attempting tighter derivation before scope-narrowing on apparently-overclaimed claims]``
 - `#conceptual-alignment` ← merged from: `#hyp-conceptual-alignment`, ``#conceptual-alignment``, ``hyp-conceptual-alignment``, `conceptual alignment`
 - `#scope-condition` ← merged from: ``#scope-condition``
 - `#consolidation-dynamics` ← merged from: `#form-consolidation-dynamics`, ``#consolidation-dynamics``, ``form-consolidation-dynamics``, `consolidation dynamics`
+- ``conspectus`` ← merged from: `Conspectus`
+- ``constitutive opacity triad`` ← merged from: `constitutive-opacity triad`
+- ``#form-constitutive-utterance`` ← merged from: ``constitutive utterance``, `#form-constitutive-utterance`
+- `Context mediator` ← merged from: ``context-mediator``
 - `#obs-context-turnover` ← merged from: `#context-turnover`, ``obs-context-turnover``
 - `continuation hierarchy` ← merged from: `Continuation Hierarchy`
 - `continuity persistence` ← merged from: `Continuity persistence`
 - `#scope-continuous-operation` ← merged from: ``#continuous-operation``, ``scope-continuous-operation``, `continuous operation`
+- ``contraction hierarchy`` ← merged from: `"Contraction Hierarchy"`
 - `Contraction imperative` ← merged from: `contraction imperative`
+- ``contraction over drift principle`` ← merged from: `contraction-over-drift principle`
 - `#contraction-template` ← merged from: `#result-contraction-template`, ``#contraction-template``, ``result-contraction-template``
-- `control regret` ← merged from: `#def-control-regret`, `"control regret"`, `Control regret`, `#control-regret`, ``def-control-regret``
-- `Convention Hierarchy` ← merged from: `convention hierarchy`, `"Convention Hierarchy"`
+- `control regret` ← merged from: `#def-control-regret`, ``control regret``, `"control regret"`, `Control regret`, `#control-regret`, ``def-control-regret``
+- `Control regret ($\delta_{\text{regret}}$)` ← merged from: ``control regret $\delta_{\text{regret}}$``
+- `Convention Hierarchy` ← merged from: `convention hierarchy`, ``convention hierarchy``, `"Convention Hierarchy"`
 - `convention hierarchy (C1/C2/C3)` ← merged from: `"Convention Hierarchy" (C1/C2/C3)`
 - `#coordinate-forcing` ← merged from: `#disc-coordinate-forcing`, ``#coordinate-forcing``, ``disc-coordinate-forcing``
-- `Correlation Hierarchy` ← merged from: `correlation hierarchy`, `"Correlation Hierarchy"`
+- ``coordination drag`` ← merged from: `coordination drag`
+- ``coordination overhead`` ← merged from: `"coordination overhead"`
+- ``coordination overhead threshold`` ← merged from: `coordination overhead threshold`
+- ``coordination tax`` ← merged from: `coordination tax`
+- ``correlated evidence overconfidence`` ← merged from: `correlated evidence overconfidence`
+- `Correlation Hierarchy` ← merged from: `correlation hierarchy`, ``correlation hierarchy``, `"Correlation Hierarchy"`
 - `correlation hierarchy (L0/L1/L1'/L2)` ← merged from: `"Correlation Hierarchy" (L0/L1/L1'/L2)`, `Correlation Hierarchy (L0/L1/L1'/L2)`
 - `correlation ladder` ← merged from: `Correlation Ladder`
 - `#result-coupled-diagnostic-framework` ← merged from: `#coupled-diagnostic-framework`, ``result-coupled-diagnostic-framework``
 - `#coupled-diagnostic-pass` ← merged from: `#result-coupled-diagnostic-pass`
-- `#coupled-update-dynamics` ← merged from: `#def-coupled-update-dynamics`, ``def-coupled-update-dynamics``
+- `#coupled-update-dynamics` ← merged from: `#def-coupled-update-dynamics`, ``def-coupled-update-dynamics``, ``coupled update dynamics``
+- `Cox's theorem / Causal Hierarchy Theorem / Tikhonov's theorem` ← merged from: ``cox s theorem causal hierarchy theorem tikhonov s theorem``
+- `#def-creche-boundary` ← merged from: ``#der-creche-boundary``
+- `#def-creche-graduation` ← merged from: ``#der-creche-graduation``
 - `#disc-credit-assignment-boundary` ← merged from: `#credit-assignment-boundary`, ``#credit-assignment-boundary``, ``disc-credit-assignment-boundary``, `credit-assignment boundary`
 - `#critical-mass-composition` ← merged from: ``#critical-mass-composition``, `critical-mass composition`
-- `"cycle" vs "loop"` ← merged from: `cycle vs loop`
-- `#der-deliberation-cost` ← merged from: `Deliberation cost`, ``der-deliberation-cost``, `#deliberation-cost`, ``#deliberation-cost``, `deliberation cost`
-- `deliberation threshold` ← merged from: `"deliberation threshold"`
-- `## Derivation Audit` ← merged from: ``### Derivation Audit``
+- ``crossing from multi agent to composite scope`` ← merged from: `crossing from multi-agent to composite scope`
+- `"Crèche" / "creche"` ← merged from: ``crèche creche``
+- `"cycle" vs "loop"` ← merged from: ``cycle vs loop``, `cycle vs loop`
+- `dark-room exploration drive` ← merged from: ``dark room exploration drive``
+- ``default internal processing before output`` ← merged from: `default internal processing before output`
+- ``default signal function`` ← merged from: `default signal function`
+- `#der-deliberation-cost` ← merged from: `Deliberation cost`, ``der-deliberation-cost``, `#deliberation-cost`, ``#deliberation-cost``, `deliberation cost`, ``deliberation cost``
+- ``deliberation threshold`` ← merged from: `deliberation threshold`, `"deliberation threshold"`
+- ``derivation`` ← merged from: `derivation`
+- `## Derivation Audit` ← merged from: ``### Derivation Audit``, ``derivation audit``
+- `"derivation" (not "proof")` ← merged from: ``derivation not proof``
 - `#detection-latency` ← merged from: `#deriv-detection-latency`, ``#detection-latency``
 - `#scope-developer-agent` ← merged from: ``scope-developer-agent``, `developer agent`
 - `#developer-as-aad-agent` ← merged from: ``#developer-as-aad-agent``
 - `#developer-as-act-agent` ← merged from: ``#developer-as-act-agent``
+- ``#developer-as-act-agent` (TST)` ← merged from: ``developer as act agent TST``
 - `#developer-as-adaptive-agent` ← merged from: ``#developer-as-adaptive-agent``
+- `#developer-as-agent` ← merged from: ``developer-as-agent``
 - `#obs-developmental-trajectory` ← merged from: ``obs-developmental-trajectory``
 - `directed separation` ← merged from: `#directed-separation`, `#der-directed-separation`, `Directed separation`, `"directed separation"`, ``der-directed-separation``
 - `#hyp-directed-separation-under-composition` ← merged from: `#directed-separation-under-composition`, ``hyp-directed-separation-under-composition``, ``#directed-separation-under-composition``
-- `directional fidelity` ← merged from: `"directional fidelity"`
+- ``directional fidelity`` ← merged from: `directional fidelity`, `"directional fidelity"`
+- `"directional fidelity" (condition B1)` ← merged from: ``directional fidelity condition b1``
 - `#deriv-discrete-sector-condition` ← merged from: `#discrete-sector-condition`, ``#discrete-sector-condition``
-- `## Discussion` ← merged from: ``## Discussion``, `"Discussion"`
+- `## Discussion` ← merged from: ``## Discussion``, `"Discussion"`, ``Discussion``
+- `## Discussion (segment header)` ← merged from: ``discussion segment header``
+- `"Discussion" (segment section)` ← merged from: ``discussion segment section``
+- `distributed tempo` ← merged from: ``distributed tempo``
+- `"disturbance rate"` ← merged from: ``disturbance rate``
 - `#dual-optimization` ← merged from: ``#dual-optimization``, ``der-dual-optimization``, `#der-dual-optimization`
-- `edge credence` ← merged from: `"edge credence"`
+- ``edge credence`` ← merged from: `edge credence`, `"edge credence"`
+- `"edge credence" ($p_{ij}$)` ← merged from: ``edge credence $p_{ij}$``
 - `#scope-edge-update-causal-validity` ← merged from: `#edge-update-causal-validity`, ``scope-edge-update-causal-validity``
 - `#deriv-edge-update-natural-parameter` ← merged from: `#edge-update-natural-parameter`, ``#edge-update-natural-parameter``
 - `#hyp-edge-update-via-gain` ← merged from: `#edge-update-via-gain`, ``#edge-update-via-gain``, ``hyp-edge-update-via-gain``
-- `effects spiral` ← merged from: `"effects spiral"`
+- `effective disturbance` ← merged from: ``effective disturbance``
+- ``effects spiral`` ← merged from: `effects spiral`, `"effects spiral"`
+- `"ELI" (the agent type)` ← merged from: ``eli the agent type``
+- `"Empirical, heuristic, discussion" (third ring)` ← merged from: ``empirical heuristic discussion third ring``
 - `"empty-window pathology"` ← merged from: `empty-window pathology`
-- `epistemic architecture` ← merged from: `"epistemic architecture"`
+- `epistemic architecture` ← merged from: ``epistemic architecture``, `"epistemic architecture"`
+- `"epistemic architecture for bounded correction under decomposed disturbance"` ← merged from: ``epistemic architecture for bounded correction under decomposed disturbance``
+- ``epistemic ceiling`` ← merged from: `"epistemic ceiling"`
+- ``epistemic dead zone`` ← merged from: `epistemic dead zone`
 - `#disc-epistemic-externalization` ← merged from: `#epistemic-externalization`
 - `Epistemic gain` ← merged from: `epistemic gain`
-- `## Epistemic Status` ← merged from: ``## Epistemic Status``, `"Epistemic Status"`
+- ``epistemic opacity`` ← merged from: `epistemic opacity`
+- ``epistemic shadow`` ← merged from: `"epistemic shadow"`
+- `## Epistemic Status` ← merged from: ``## Epistemic Status``, `"Epistemic Status"`, ``Epistemic Status``
+- `## Epistemic Status (segment header)` ← merged from: ``epistemic status segment header``
+- `"Epistemic Status" (segment section)` ← merged from: ``epistemic status segment section``
+- `"epistemic substate" / "purposeful substate"` ← merged from: ``epistemic substate purposeful substate``
 - `epistemic unity / teleological unity / strategic unity` ← merged from: `epistemic-unity / teleological-unity / strategic-unity`
-- `Epistrophe` ← merged from: `epistrophe`
+- `Epistrophe` ← merged from: ``epistrophe``, `epistrophe`
 - `#equilibrium-composition` ← merged from: `#deriv-equilibrium-composition`, ``#equilibrium-composition``
+- ``equilibrium convergence`` ← merged from: `equilibrium convergence`
+- ``escape route`` ← merged from: `escape route`
 - `#obs-evaluation-metrics` ← merged from: ``obs-evaluation-metrics``
 - `#form-event-driven-dynamics` ← merged from: `#event-driven-dynamics`, ``#event-driven-dynamics``, ``form-event-driven-dynamics``
-- `"evidence starvation"` ← merged from: `evidence starvation`
+- ``evidence starvation`` ← merged from: `"evidence starvation"`, `evidence starvation`
+- ``evidence starvation canonicalize`` ← merged from: `"evidence starvation" canonicalize`
+- `"exact / robust qualitative / heuristic / conditional" (claim tiers)` ← merged from: ``exact robust qualitative heuristic conditional claim tiers``
 - `#hyp-experiential-training` ← merged from: ``hyp-experiential-training``, `experiential training`
 - `#explicit-strategy-condition` ← merged from: `#norm-explicit-strategy-condition`, ``norm-explicit-strategy-condition``, `explicit strategy condition`
 - `#exploit-explore-deliberate` ← merged from: `exploit / explore / deliberate`, `#disc-exploit-explore-deliberate`, ``disc-exploit-explore-deliberate``, ``#exploit-explore-deliberate``
+- `"exploration weight"` ← merged from: ``exploration weight``
 - ``#exponential-cognitive-load`` ← merged from: ``hyp-exponential-cognitive-load``
 - `"extreme transition motif"` ← merged from: `extreme transition motif`
 - `#def-feature` ← merged from: ``def-feature``
-- `Fisher-whitened update` ← merged from: `#fisher-whitened-update`
+- ``feedback loop`` ← merged from: `"feedback loop"`
+- `"feedforward loop" / "feedback loop"` ← merged from: ``feedforward loop feedback loop``
+- `"Findings" (segment section)` ← merged from: ``findings segment section``
+- `Fisher-whitened update` ← merged from: `#fisher-whitened-update`, ``fisher whitened update``
 - `#fisher-whitened-update-rule` ← merged from: ``#fisher-whitened-update-rule``, `#deriv-fisher-whitened-update-rule`
+- `fixed-gain regime` ← merged from: ``fixed gain regime``
+- ``floor / ladder / forced-coordinates`` ← merged from: `floor / ladder / forced-coordinates`
+- `"Fluid limit"` ← merged from: ``fluid limit``
+- `"Fluid limit" (GA-5)` ← merged from: ``fluid limit ga 5``
 - `#forced-coordinates` ← merged from: `#disc-forced-coordinates`, ``#forced-coordinates``, ``disc-forced-coordinates``
-- `## Formal Expression` ← merged from: ``## Formal Expression``, `"Formal Expression"`
-- `"four views architecture"` ← merged from: `#def-four-views-architecture`
-- `"gain collapse"` ← merged from: `gain collapse`
+- ``forced coordinates family`` ← merged from: `forced-coordinates family`
+- `"forced observability node"` ← merged from: ``forced observability node``
+- `## Formal Expression` ← merged from: ``## Formal Expression``, `"Formal Expression"`, ``Formal Expression``
+- `## Formal Expression (segment header)` ← merged from: ``formal expression segment header``
+- `"Formal Expression" (segment section)` ← merged from: ``formal expression segment section``
+- `"formulation" / "definition" / "result" / etc. (segment types)` ← merged from: ``formulation definition result etc segment types``
+- `#def-four-views` ← merged from: ``#def-four-views``
+- `"four views architecture"` ← merged from: `#def-four-views-architecture`, ``#def-four-views-architecture``
+- `"Fresh noise"` ← merged from: ``fresh noise``
+- `"Fresh noise" (GA-1)` ← merged from: ``fresh noise ga 1``
+- ``gain collapse`` ← merged from: `"gain collapse"`, `gain collapse`
+- `"gain-regime partition"` ← merged from: ``gain regime partition``
 - `#der-gain-sector-bridge` ← merged from: `#gain-sector-bridge`, ``der-gain-sector-bridge``, `gain-sector bridge`
 - `#game-theoretic-composition` ← merged from: `#deriv-game-theoretic-composition`, ``#game-theoretic-composition``
 - `#obs-gates-advantage` ← merged from: ``obs-gates-advantage``, ``#obs-gates-advantage``
+- `Gemini's "analysis paralysis" for excessive deliberation` ← merged from: ``gemini s analysis paralysis for excessive deliberation``
+- `Gemini's "Boyd exponent" for adversarial tempo advantage` ← merged from: ``gemini s boyd exponent for adversarial tempo advantage``
+- `"Glue Code"` ← merged from: ``glue code``
 - `"goal-conditioned reconstruction"` ← merged from: `goal-conditioned reconstruction`
 - `"goal-blind retrieval"` ← merged from: `goal-blind retrieval`
-- `#def-gradient-causal-memory` ← merged from: `"gradient causal memory"`
+- ``goal-blind routing`` ← merged from: `goal-blind routing`
+- ``#def-gradient-causal-memory`` ← merged from: `#def-gradient-causal-memory`, ``gradient causal memory``, `"gradient causal memory"`
+- ``grafting`` ← merged from: `grafting`
 - `#graph-structure-uniqueness` ← merged from: `#deriv-graph-structure-uniqueness`, `graph structure uniqueness`, ``#graph-structure-uniqueness``
+- ``Greek-rooted vocabulary`` ← merged from: `Greek-rooted vocabulary`, ``greek rooted vocabulary``
+- `Hafez $H_b$ / Miller meta-machine / Bruineberg Pearl-blanket` ← merged from: ``hafez $H_b$ miller meta machine bruineberg pearl-blanket``
+- `Hafez's $H_b$` ← merged from: ``hafez s $H_b$``
+- `Hafez's H_b` ← merged from: ``hafez s h b``
+- `"hierarchy" (as repeated word)` ← merged from: ``hierarchy as repeated word``
 - `#disc-history-compression` ← merged from: `"history compression"`
-- `"scope honesty"` ← merged from: `scope honesty`
+- ``#norm-honest-activation`` ← merged from: `#norm-honest-activation`, ``honest activation``
+- ``honest limits`` ← merged from: `## Honest Limits`
+- `"scope honesty"` ← merged from: ``scope honesty``, `scope honesty`
 - `scope-honesty-as-architecture` ← merged from: `"scope-honesty-as-architecture"`, `scope honesty as architecture`
-- `"identifiability coefficient"` ← merged from: `identifiability coefficient`
+- `"scope honesty" / "scope-honest" / "scope-honesty-as-architecture"` ← merged from: ``honesty scope honest scope honesty as architecture``
+- `"I. Adaptive Systems Under Uncertainty"` ← merged from: ``i adaptive systems under uncertainty``
+- `"identifiability coefficient"` ← merged from: `identifiability coefficient`, ``identifiability coefficient``
 - `#identifiability-floor` ← merged from: `identifiability floor`, `#disc-identifiability-floor`, ``#identifiability-floor``, ``disc-identifiability-floor``, `"identifiability floor"`
+- ``identifiability floor family`` ← merged from: `identifiability-floor family`
+- `"II. Actuated Adaptation: Agentic Systems"` ← merged from: ``ii actuated adaptation agentic systems``
+- `"III. Agentic Composites"` ← merged from: ``iii agentic composites``
 - `#def-implementation-time` ← merged from: ``def-implementation-time``, `implementation time`
+- `incremental sector bound` ← merged from: ``incremental sector bound``
 - `#disc-independence-audit` ← merged from: `#independence-audit`, ``disc-independence-audit``, ``#independence-audit``
+- ``indivisum`` ← merged from: `Indivisum`
+- ``inevitability core`` ← merged from: `inevitability core`
+- `"Inevitability core" (the ~15 segments where inevitability is plausible)` ← merged from: ``inevitability core the 15 segments where inevitability is plausible``
 - `inferential force cascade` ← merged from: `inferential-force cascade`
 - `information bottleneck` ← merged from: `#form-information-bottleneck`, `#information-bottleneck`, ``#information-bottleneck``, ``form-information-bottleneck``, `Information Bottleneck`
+- ``informative update regime`` ← merged from: `informative-update regime`
+- `Instance 1/2/3 of #identifiability-floor` ← merged from: ``instance 1 2 3 of identifiability floor``
+- `"integration of four disciplines" (as the framing of AAD's contribution)` ← merged from: ``integration of four disciplines as the framing of AAD s contribution``
 - `#interaction-channel-classification` ← merged from: `#der-interaction-channel-classification`, ``#interaction-channel-classification``, ``der-interaction-channel-classification``, `interaction-channel classification`
+- ``interior baseline`` ← merged from: `interior baseline`
 - `#norm-interiority-default` ← merged from: ``norm-interiority-default``, `interiority default`
 - `#internal-external-decomposition` ← merged from: ``internal-external-decomposition``
+- ``interpres`` ← merged from: `Interpres`
 - `(keep)` ← merged from: `keep`
+- `L1'` ← merged from: ``l1``
+- `L1' (correlation-hierarchy prime-decoration)` ← merged from: ``l1 correlation hierarchy prime decoration``
+- `L1-prime` ← merged from: ``l1 prime``
 - `#l1-update-bias` ← merged from: ``#l1-update-bias``, `#deriv-l1-update-bias`
 - `#latent-cause-detection` ← merged from: ``#latent-cause-detection``
+- ``latent structural capacity`` ← merged from: `latent structural capacity`
 - `latent structural diversity` ← merged from: `"latent structural diversity"`, `Latent structural diversity`
 - `"legibility-opacity duality"` ← merged from: `legibility-opacity duality`
-- `Lindy baseline` ← merged from: `"Lindy baseline"`, `#lindy-baseline`
+- `Lindy baseline` ← merged from: `"Lindy baseline"`, `#lindy-baseline`, ``lindy baseline``
 - `#linear-ode-approximation` ← merged from: ``#linear-ode-approximation``, ``detail-linear-ode-approximation``, `#detail-linear-ode-approximation`
-- `#deriv-log-odds-edge-coordinate` ← merged from: `log-odds edge coordinate`
+- `#deriv-log-odds-edge-coordinate` ← merged from: ``log odds edge coordinate``, ``log-odds edge coordinate``, `log-odds edge coordinate`
 - `"Logogenic"` ← merged from: `logogenic`, `Logogenic`
-- `logogenic agent` ← merged from: `#scope-logogenic-agent`, `"logogenic agent"`, ``scope-logogenic-agent``, `Logogenic agent`
-- `logogenic / logozoetic` ← merged from: `"logogenic" / "logozoetic"`
-- `"Logozoetic"` ← merged from: `logozoetic`, `Logozoetic`
+- `logogenic agent` ← merged from: `#scope-logogenic-agent`, `"logogenic agent"`, ``scope-logogenic-agent``, `Logogenic agent`, ``logogenic agent``
+- `Logogenic Agents (Part III)` ← merged from: ``logogenic agents part iii``
+- `logogenic / logozoetic` ← merged from: ``logogenic logozoetic``, `"logogenic" / "logozoetic"`, ``logogenic / logozoetic``
+- `"Logozoetic"` ← merged from: `logozoetic`, `Logozoetic`, ``logozoetic``
 - `logozoetic agent` ← merged from: `Logozoetic agent`
-- `#loop-interventional-access` ← merged from: `#der-loop-interventional-access`, ``der-loop-interventional-access``, ``#loop-interventional-access``
+- ``logozoetic agents`` ← merged from: `Logozoetic Agents`
+- `Logozoetic Agents (Part IV)` ← merged from: ``logozoetic agents part iv``
+- `Lohmiller-Slotine contraction` ← merged from: ``lohmiller-slotine contraction``
+- `Lohmiller-Slotine contraction (metric generalization used in `#contraction-template`)` ← merged from: ``lohmiller-slotine contraction metric generalization used in contraction template``
+- ``loop`` ← merged from: `Loop`
+- `#loop-interventional-access` ← merged from: `#der-loop-interventional-access`, ``der-loop-interventional-access``, ``loop-interventional access``, ``#loop-interventional-access``
+- `"loop is Level 2 engine" / `der-loop-interventional-access`` ← merged from: ``loop is level 2 engine der loop interventional access``
+- `"loop" vs "cycle"` ← merged from: ``loop vs cycle``
+- ``low mixed high ambiguity event mix`` ← merged from: `low, mixed, high ambiguity event mix`
 - `#m-preservation` ← merged from: ``disc-m-preservation``, `#disc-m-preservation`
+- `macro-step ratio` ← merged from: ``macro step ratio``, ``macro-step ratio``
+- ``magnitude-shock regime`` ← merged from: `magnitude-shock regime`
+- ``markov blanket as ontology`` ← merged from: `"Markov Blanket" (as ontology)`, ``markov-blanket-as-ontology``
+- `Matrix CIY / tensor CIY` ← merged from: ``matrix CIY tensor CIY``
+- ``matrix exploration bonus`` ← merged from: `matrix exploration bonus`
+- `matrix survival constraint` ← merged from: ``matrix survival constraint``
+- `maximum useful chain depth` ← merged from: ``maximum useful chain depth``
+- `"meta-segment" (for #separability-pattern, #identifiability-floor, #additive-coordinate-forcing)` ← merged from: ``meta segment for separability pattern identifiability floor additive coordinate forcing``
 - `#result-mismatch-decomposition` ← merged from: `#mismatch-decomposition`, ``#mismatch-decomposition``, ``result-mismatch-decomposition``, `mismatch decomposition`
 - `#hyp-mismatch-dynamics` ← merged from: ``hyp-mismatch-dynamics``, `#mismatch-dynamics`, ``#mismatch-dynamics``
-- `#def-mismatch-signal` ← merged from: `#mismatch-signal`, `mismatch signal`, ``def-mismatch-signal``
+- `#def-mismatch-signal` ← merged from: `#mismatch-signal`, ``mismatch signal``, `mismatch signal`, ``def-mismatch-signal``
+- ``mismatch signal $\delta$`` ← merged from: `mismatch signal ($\delta$)`
 - `"mismatch signal" ($\delta_t$)` ← merged from: `mismatch signal ($\delta_t$)`
 - `#hyp-mission-command-principle` ← merged from: `#mission-command principle`, `#mission-command-principle`
+- `"model class capacity"` ← merged from: ``model class capacity``
 - `"model class fitness"` ← merged from: `#def-model-class-fitness`, `#model-class-fitness`, ``def-model-class-fitness``, `model-class fitness`, `model class fitness`
 - `#model-preservation` ← merged from: `#disc-model-preservation`, ``disc-model-preservation``
-- `#def-model-sufficiency` ← merged from: `model sufficiency`, `#model-sufficiency`, ``def-model-sufficiency``
-- `"model uncertainty"` ← merged from: `model uncertainty`
+- `#def-model-sufficiency` ← merged from: `model sufficiency`, `#model-sufficiency`, ``def-model-sufficiency``, ``model sufficiency``
+- `Model sufficiency ($S$)` ← merged from: ``model sufficiency $S$``
+- ``model synchronization cost reversal under ambiguity`` ← merged from: `model synchronization cost reversal under ambiguity`
+- `"model uncertainty"` ← merged from: ``model uncertainty``, `model uncertainty`
+- `Monderer-Shapley potential games` ← merged from: ``monderer shapley potential games``
+- `Monderer-Shapley potential games / Rosen monotone games` ← merged from: ``monderer shapley potential games rosen monotone games``, ``monderer-shapley potential games / Rosen monotone games``
 - `#scope-moral-continuity` ← merged from: ``scope-moral-continuity``, `moral continuity`
 - `#scope-multi-agent` ← merged from: ``scope-multi-agent``
 - `#multi-timescale-stability` ← merged from: `#sketch-multi-timescale-stability`, ``sketch-multi-timescale-stability``
+- ``nominal coupling`` ← merged from: `nominal coupling`
+- `"result" (not "theorem")` ← merged from: ``not theorem``
+- `O_t (objective)` ← merged from: ``o t objective``
+- `"objective"` ← merged from: ``objective``
 - `#objective-functional` ← merged from: `#form-objective-functional`, ``form-objective-functional``, `objective functional`
 - `observability dominance` ← merged from: `#der-observability-dominance`, `Observability dominance`, `"observability dominance"`, `#observability-dominance`, ``#observability-dominance``, ``der-observability-dominance``
-- `"observability frontier"` ← merged from: `observability frontier`
-- `"observability investment"` ← merged from: `observability investment`
-- `observation ambiguity` ← merged from: `"observation ambiguity"`, `#scope-observation-ambiguity`
+- `"observability frontier"` ← merged from: ``observability frontier``, `observability frontier`
+- `"observability investment"` ← merged from: ``observability investment``, `observability investment`
+- `observation ambiguity` ← merged from: `"observation ambiguity"`, `#scope-observation-ambiguity`, ``observation ambiguity``
 - `#scope-observation-ambiguity-modulation` ← merged from: `#observation-ambiguity-modulation`, ``scope-observation-ambiguity-modulation``
+- `"observation ambiguity" (#observation-ambiguity-modulation)` ← merged from: ``observation ambiguity observation ambiguity modulation``
 - `#observation-channel` ← merged from: `observation channel`
+- ``observation design lever reducing ambiguity`` ← merged from: `observation-design lever reducing ambiguity`
 - `#def-observation-function` ← merged from: `#observation-function`
 - `#obs-observation-gated-tempo-advantage` ← merged from: `observation-gated tempo advantage`
 - `#observation-gates-advantage` ← merged from: `observation gates advantage`
 - ``der-observation-infrastructure`` ← merged from: `observation infrastructure`, `#observation-infrastructure`
-- `"observation uncertainty"` ← merged from: `observation uncertainty`
+- `"observation uncertainty"` ← merged from: ``observation uncertainty``, `observation uncertainty`
+- ``operational persistence`` ← merged from: `operational persistence`
 - `#detail-operationalization` ← merged from: `#operationalization`, ``detail-operationalization``
-- `orient cascade` ← merged from: `"orient cascade"`, `#der-orient-cascade`, `#orient-cascade`, `Orient cascade`, ``der-orient-cascade``
+- `orient cascade` ← merged from: `"orient cascade"`, `#der-orient-cascade`, `#orient-cascade`, `Orient cascade`, ``der-orient-cascade``, ``orient cascade``
+- ``output after context turnover without state restoration`` ← merged from: `output after context turnover without state restoration`
+- ``p ij`` ← merged from: `p_ij`
+- ``p ij edge confidence weight`` ← merged from: `p_ij (edge confidence weight)`
+- `P1, P2, P3` ← merged from: ``p1 p2 p3``
+- ``parameterization invariance`` ← merged from: `parameterization invariance`
 - `#def-pearl-causal-hierarchy` ← merged from: `#pearl-causal-hierarchy`, ``def-pearl-causal-hierarchy``, `Pearl Causal Hierarchy`
+- `Pearl L1/L2/L3` ← merged from: ``pearl l1 l2 l3``
+- `Pearl's causal hierarchy` ← merged from: ``Pearl's causal hierarchy``, ``pearl's causal hierarchy``
+- `Pearl's causal hierarchy (L0/L1/L2 in Pearl's own vocabulary)` ← merged from: ``pearl s causal hierarchy l0 l1 l2 in pearl s own vocabulary``
+- `Pearl-blanket` ← merged from: ``pearl-blanket``
+- `"Pearl-blanket conservative form" (of Markov blanket in #directed-separation)` ← merged from: ``pearl-blanket conservative form of markov blanket in directed separation``
+- ``pearl-blanket reading`` ← merged from: `Pearl-blanket reading`, ``Pearl-blanket reading``
+- `"Pearl-blanket vs Friston-blanket" terminology (Bruineberg et al.)` ← merged from: ``pearl-blanket vs friston-blanket terminology bruineberg et al``
+- `Pearl-Level-2 causal contrast` ← merged from: ``pearl-level 2 causal contrast``
 - `#per-dimension-persistence` ← merged from: `#result-per-dimension-persistence`, ``result-per-dimension-persistence``, ``#per-dimension-persistence``
-- `#result-persistence-condition` ← merged from: `#persistence-condition`, `persistence condition`, `"persistence condition"`, ``#persistence-condition``, ``result-persistence-condition``, `Persistence condition`
+- ``persist condition`` ← merged from: `#persist-condition`
+- `#result-persistence-condition` ← merged from: `#persistence-condition`, ``persistence condition``, `persistence condition`, `"persistence condition"`, ``#persistence-condition``, ``result-persistence-condition``, `Persistence condition`
 - `#persistence-cost` ← merged from: `#deriv-persistence-cost`, ``#persistence-cost``
-- `persistence envelope` ← merged from: `"persistence envelope"`, `Persistence envelope`
-- `(PI) / parameterization invariance` ← merged from: `(PI) parameterization-invariance`
+- ``persistence envelope`` ← merged from: `persistence envelope`, `"persistence envelope"`, `Persistence envelope`
+- ``persistence overloaded`` ← merged from: `persistence (overloaded)`
+- ``persistence structural operational continuity`` ← merged from: `persistence (structural / operational / continuity)`
+- ``persistent residual autocorrelation`` ← merged from: `persistent residual autocorrelation`
+- `(PI) / parameterization invariance` ← merged from: `(PI) parameterization-invariance`, ``pi parameterization invariance``
+- `(PI) parameterization-invariance axiom` ← merged from: ``pi parameterization invariance axiom``
+- `plan confidence` ← merged from: ``plan confidence``
+- `"plan confidence" ($\hat P_\Sigma$)` ← merged from: ``plan confidence $\hat P_\Sigma$``
 - `"policy-relative epistemology"` ← merged from: `policy-relative epistemology`
-- `Praxis` ← merged from: `praxis`
+- ``postulate`` ← merged from: `postulate`
+- `"postulate" (not "axiom")` ← merged from: ``postulate not axiom``
+- `Praxis` ← merged from: ``praxis``, `praxis`
+- ``predictive relevance depending on the policy the agent will run`` ← merged from: `predictive relevance depending on the policy the agent will run`
 - ``#principled-decision-integration`` ← merged from: ``der-principled-decision-integration``, `#der-principled-decision-integration`
+- ``privileged high identifiability calibration laboratory`` ← merged from: `privileged high-identifiability calibration laboratory`
 - `processing coupling` ← merged from: `"processing coupling"`
-- `Prolepsis` ← merged from: `prolepsis`
+- `Prolepsis` ← merged from: ``prolepsis``, `prolepsis`
 - `prolepsis / aisthesis / aporia / epistrophe / praxis` ← merged from: `Prolepsis / Aisthesis / Aporia / Epistrophe / Praxis`
+- `"proleptic prediction"` ← merged from: ``proleptic prediction``
+- `"Promote in topological order"` ← merged from: ``promote in topological order``
+- `"Prompt Engineering"` ← merged from: ``prompt engineering``
+- `"PROPRIUM"` ← merged from: ``proprium``
 - `#def-proprium-mapping` ← merged from: ``def-proprium-mapping``
+- `"PROPRIUM" terminology` ← merged from: ``proprium terminology``
+- `"purpose" / "purposeful"` ← merged from: ``purpose purposeful``
 - `Purposeful agent` ← merged from: `purposeful agent`
 - `#def-purposeful-decomposition` ← merged from: ``def-purposeful-decomposition``
 - `#form-purposeful-state` ← merged from: `purposeful state`
-- `purposeful substate` ← merged from: `"purposeful substate"`, ``def-purposeful-substate``
+- ``purposeful substate`` ← merged from: `purposeful substate`, `"purposeful substate"`, ``def-purposeful-substate``
+- ``query-bound agency`` ← merged from: `"query-bound agency"`
+- ``reactive system`` ← merged from: `reactive system`
 - `README.md § "Convergent Choices"` ← merged from: `README.md "## Convergent Choices"`, `README.md "Convergent Choices"`
 - `README.md "## Cross-Domain Joining"` ← merged from: `README.md § "Cross-Domain Joining"`
 - `README.md "Maturity Gradient"` ← merged from: `README.md § "Maturity Gradient"`, `README.md "## Maturity Gradient"`
@@ -248,80 +520,302 @@ These names were collapsed to a canonical bucket (lowercased / alphanumerics-onl
 - `#der-recipient-regimes` ← merged from: ``der-recipient-regimes``
 - `#recursive-update` ← merged from: `#der-recursive-update`, ``der-recursive-update``, ``#recursive-update``
 - `"redundancy penalty"` ← merged from: `redundancy penalty`
-- `satisfaction gap` ← merged from: `#def-satisfaction-gap`, `"satisfaction gap"`, `Satisfaction gap`, `#satisfaction-gap`, ``def-satisfaction-gap``
-- `"scaffolding tax"` ← merged from: `#der-scaffolding-tax`
+- `Regime A, Regime B, Regime C` ← merged from: ``regime a regime b regime c``
+- `Regime I` ← merged from: ``regime i``
+- `Regime I, II-a, II-b, III` ← merged from: ``regime i ii a ii b iii``
+- `Regime II-a` ← merged from: ``regime ii a``
+- `Regime II-b` ← merged from: ``regime ii b``
+- `Regime III` ← merged from: ``regime iii``
+- ``replayed pseudo event`` ← merged from: `replayed pseudo-event`
+- `"richest operationalization domain"` ← merged from: ``richest operationalization domain``
+- ``routing structure`` ← merged from: `routing structure`
+- `satisfaction gap` ← merged from: `#def-satisfaction-gap`, `"satisfaction gap"`, ``satisfaction gap``, `Satisfaction gap`, `#satisfaction-gap`, ``def-satisfaction-gap``
+- `Satisfaction gap ($\delta_{\text{sat}}$)` ← merged from: ``satisfaction gap $\delta_{\text{sat}}$``
+- ``satisfaction threshold`` ← merged from: `satisfaction threshold`
+- `"scaffolding tax"` ← merged from: `#der-scaffolding-tax`, ``#der-scaffolding-tax``
+- `[Section header] "Logogenic Agents" / "Logozoetic Agents"` ← merged from: ``section header logogenic agents logozoetic agents``
+- `Section I. Adaptive Systems Under Uncertainty` ← merged from: ``Section I: Adaptive Systems under Uncertainty``, ``section i adaptive systems under uncertainty``
+- `[Section I header] "Adaptive Systems Under Uncertainty"` ← merged from: ``section i header adaptive systems under uncertainty``
+- `Section II. Actuated Adaptation: Agentic Systems` ← merged from: ``section ii actuated adaptation agentic systems``
 - `#result-section-ii-survival` ← merged from: ``result-section-ii-survival``, `#section-ii-survival`
-- `sector condition` ← merged from: `"sector condition"`, `Sector condition`, `"Sector condition"`
+- `[Section III header] "Agentic Composites"` ← merged from: ``section iii header agentic composites``
+- `sector condition` ← merged from: `"sector condition"`, `Sector condition`, `"Sector condition"`, ``sector condition``
+- `"Sector condition (continuous)" (GA-3)` ← merged from: ``sector condition continuous ga 3``
+- `#sector-condition-derivation` ← merged from: ``sector condition derivation``
 - `#result-sector-condition-stability` ← merged from: `#sector-condition-stability`, ``#sector-condition-stability``, ``result-sector-condition-stability``
 - `#sector-persistence-template` ← merged from: `sector-persistence template`, `#result-sector-persistence-template`, ``#sector-persistence-template``, ``result-sector-persistence-template``
-- `"segment"` ← merged from: `segment`
-- `#separability-ladder` ← merged from: `#disc-separability-ladder`, ``#separability-ladder``, ``disc-separability-ladder``, `separability ladder`
-- `#separability-pattern` ← merged from: `#disc-separability-pattern`, ``#separability-pattern``, ``disc-separability-pattern``
+- `"segment"` ← merged from: ``segment``, `segment`
+- `"segment" (claim file)` ← merged from: ``segment claim file``
+- `"segment" (for claim files)` ← merged from: ``segment for claim files``
+- `Self-actuated agent` ← merged from: ``self actuated agent``
+- ``#der-self-referential-closure`` ← merged from: `#der-self-referential-closure`, ``self referential closure``
+- `#separability-ladder` ← merged from: `#disc-separability-ladder`, ``#separability-ladder``, ``disc-separability-ladder``, ``separability ladder``, `separability ladder`
+- `#separability-pattern` ← merged from: `#disc-separability-pattern`, ``#separability-pattern``, ``disc-separability-pattern``, ``separability pattern``
+- ``separability pattern family`` ← merged from: `separability-pattern family`
+- ``disc-separability-pattern` → `disc-separability-ladder`` ← merged from: ``separability pattern → disc separability ladder``
 - `#separability-staircase` ← merged from: `#disc-separability-staircase`, ``#separability-staircase``
 - `Separable core / structured repair / general open` ← merged from: `separable core / structured repair / general open`
 - `#def-shared-intent` ← merged from: `#shared-intent`, ``def-shared-intent``, `shared intent`
 - `#signal-reception-regimes` ← merged from: `#der-signal-reception-regimes`
 - `#simulation-results` ← merged from: ``obs-simulation-results``
+- ``singular trajectory commitment`` ← merged from: `singular-trajectory commitment`
 - `#scope-software` ← merged from: ``scope-software``
 - `"software-as-calibration-laboratory"` ← merged from: `software as calibration laboratory`
 - `#software-epistemic-properties` ← merged from: `#obs-software-epistemic-properties`, ``#software-epistemic-properties``, ``obs-software-epistemic-properties``
+- ``software scope`` ← merged from: ``#software-scope``
+- ``source quality uncertainty`` ← merged from: `source quality uncertainty`
 - `#specification-bound` ← merged from: `#result-specification-bound`, ``#specification-bound``, ``result-specification-bound``, `specification bound`
-- `"spike"` ← merged from: `spike`
-- `stability-plasticity feasibility window` ← merged from: `"stability-plasticity feasibility window"`
+- `"spike"` ← merged from: ``spike``, `spike`
+- `"spike" (in msc/)` ← merged from: ``spike in msc``
+- ``stability-induced myopia`` ← merged from: `stability-induced myopia`
+- `stability-plasticity collapse` ← merged from: ``stability-plasticity collapse``
+- `stability-plasticity feasibility window` ← merged from: `"stability-plasticity feasibility window"`, ``stability-plasticity feasibility window``
+- ``stability plasticity window`` ← merged from: ``stability-plasticity window``, `stability-plasticity window`
+- `"Stochastic disturbance"` ← merged from: ``stochastic disturbance``
+- `"Stochastic disturbance" (GA-2S, Model S)` ← merged from: ``stochastic disturbance ga 2s model s``
 - `#def-strategic-calibration` ← merged from: `#strategic-calibration`, ``def-strategic-calibration``, `strategic calibration`, `"strategic calibration"`
 - `#strategic-composition` ← merged from: `#deriv-strategic-composition`, `strategic composition`
+- ``strategic disturbance rate`` ← merged from: `strategic disturbance rate`
+- `#deriv-strategic-dynamics` ← merged from: ``strategic dynamics``
 - `#strategic-dynamics-derivation` ← merged from: ``#strategic-dynamics-derivation``
+- `"strategic" in `#strategic-composition`` ← merged from: ``strategic in strategic composition``
 - `#der-strategic-opacity` ← merged from: `#strategic-opacity`
-- `#def-strategic-tempo` ← merged from: `strategic tempo`, `#strategic-tempo`, ``def-strategic-tempo``, `"strategic tempo"`, `Strategic tempo`
-- `#example-strategy` ← merged from: `"strategy"`, `strategy`
+- `#def-strategic-tempo` ← merged from: `strategic tempo`, `#strategic-tempo`, ``def-strategic-tempo``, ``strategic tempo``, `"strategic tempo"`, `Strategic tempo`
+- `Strategic tempo ($\mathcal{T}_\Sigma$)` ← merged from: ``strategic tempo $\mathcal{T}_\Sigma$``
+- `#example-strategy` ← merged from: `"strategy"`, ``strategy``, `strategy`
 - `#strategy-dag` ← merged from: `#def-strategy-dag`, `strategy DAG`, ``def-strategy-dag``, `"strategy DAG"`
 - `#deriv-strategy-dag-sufficiency` ← merged from: `#strategy-dag-sufficiency`, `strategy DAG sufficiency`
 - `#deriv-strategy-dag-uniqueness` ← merged from: ``#strategy-dag-uniqueness``, `strategy DAG uniqueness`
 - `#form-strategy-cognitive-cost` ← merged from: ``form-strategy-cognitive-cost``
 - `#form-strategy-complexity-cost` ← merged from: `#strategy-complexity-cost`, ``form-strategy-complexity-cost``
 - `#strategy-cost-regret-bound` ← merged from: `#deriv-strategy-cost-regret-bound`
+- ``strategy description length`` ← merged from: `strategy description length`
 - `#def-strategy-dimension` ← merged from: ``def-strategy-dimension``, `#strategy-dimension`, ``#strategy-dimension``
+- ``strategy drift rate`` ← merged from: `strategy drift rate`
 - `#schema-strategy-persistence` ← merged from: ``schema-strategy-persistence``
 - `#strategy-persistence-schema` ← merged from: ``#strategy-persistence-schema``
 - `strengthen before softening` ← merged from: `"strengthen-before-softening"`
 - `"strengthen-first"` ← merged from: `strengthen-first`
-- `strengthen-first posture` ← merged from: `"strengthen-first posture"`
+- `strengthen-first posture` ← merged from: `"strengthen-first posture"`, ``strengthen-first posture``
+- ``strengthen first then soften posture`` ← merged from: `strengthen-first-then-soften posture`
 - `Structural adaptation` ← merged from: `"structural adaptation"`, `structural adaptation`
+- ``structural adaptation enablement`` ← merged from: `structural-adaptation enablement`
 - `#result-structural-adaptation-necessity` ← merged from: `#structural-adaptation-necessity`, ``#structural-adaptation-necessity``, ``result-structural-adaptation-necessity``
 - `#form-structural-change-as-parametric-limit` ← merged from: `#structural-change-as-parametric-limit`, ``#structural-change-as-parametric-limit``, ``form-structural-change-as-parametric-limit``
+- ``structural persistence`` ← merged from: `structural persistence`
+- `"structural persistence" / "operational persistence" / "continuity persistence"` ← merged from: ``structural persistence operational persistence continuity persistence``
+- ``structural-shock regime`` ← merged from: `structural-shock regime`
 - `"structured residuals"` ← merged from: `structured residuals`
+- `#form-structured-rich-context` ← merged from: ``structured rich context``
+- ``#obs-substrate-independence`` ← merged from: `#obs-substrate-independence`, ``substrate independence``
+- ``sudden loss of model sufficiency under regime entry`` ← merged from: `sudden loss of model sufficiency under regime entry`
+- ``sufficiency discontinuity`` ← merged from: `sufficiency-discontinuity`
 - `"sufficiency shattering"` ← merged from: `sufficiency shattering`
+- ``superlinear tempo advantage`` ← merged from: `#superlinear-tempo-advantage`
 - `#deriv-survival-exploration` ← merged from: `survival exploration`
+- `survival Fisher floor` ← merged from: ``survival fisher floor``
+- ``survival imperative exploration drive`` ← merged from: `survival-imperative exploration drive`
+- ``sycophancy as a flaw`` ← merged from: `Sycophancy (as a flaw)`
+- `Sycophancy-as-attachment` ← merged from: ``sycophancy as attachment``
 - `#symbiogenic-composition` ← merged from: `#hyp-symbiogenic-composition`, ``#symbiogenic-composition``, ``hyp-symbiogenic-composition``, `symbiogenic composition`
+- ``symbiogenic consolidation time`` ← merged from: `symbiogenic consolidation time`
+- `[symbol default: bias-bound Track 1 / Track 2]` ← merged from: ``symbol default bias bound track 1 track 2``
+- `[symbol default: DA2'-inc]` ← merged from: ``symbol default da2 inc``
+- `[symbol default: G_t in prose]` ← merged from: ``symbol default g t in prose``
+- `[symbol default: M_t in prose]` ← merged from: ``symbol default m t in prose``
+- `[symbol default: (PI) parameterization-invariance axiom]` ← merged from: ``symbol default pi parameterization invariance axiom``
+- `[symbol default: Sigma_t in prose]` ← merged from: ``symbol default sigma t in prose``
 - `#def-system-availability` ← merged from: ``def-system-availability``
 - `#def-system-coherence` ← merged from: ``def-system-coherence``, `#system-coherence`
 - `#def-system-coupling` ← merged from: `#system-coupling`, ``def-system-coupling``
+- ``task terminal stance`` ← merged from: `Task-terminal stance`, ``task-terminal stance``
 - `#der-team-persistence` ← merged from: `#team-persistence`, `team persistence`, ``#team-persistence``, ``der-team-persistence``
-- `#def-teleological-unity` ← merged from: `teleological unity`, `"teleological unity"`
+- `"Technical Debt"` ← merged from: ``technical debt``
+- `#def-teleological-unity` ← merged from: `teleological unity`, `"teleological unity"`, ``teleological unity``
+- `"teleological unity" ($U_O$)` ← merged from: ``teleological unity $U_O$``
 - `"tempo"` ← merged from: `Tempo`
+- `Tempo ($\mathcal{T}$)` ← merged from: ``tempo $\mathcal{T}$``
 - `#der-tempo-composition` ← merged from: `#tempo-composition`, ``der-tempo-composition``
+- ``#norm-temporal-coherence-markers`` ← merged from: ``temporal coherence markers``, `#norm-temporal-coherence-markers`
 - `#der-temporal-nesting` ← merged from: `#temporal-nesting`, ``der-temporal-nesting``, ``#temporal-nesting``
 - `#temporal-optimality` ← merged from: `temporal optimality`, `#post-temporal-optimality`, ``#temporal-optimality``, ``post-temporal-optimality``
-- `"Temporal Software Theory"` ← merged from: `Temporal Software Theory`
-- `Terminal alignment gap` ← merged from: `terminal alignment gap`
+- `"Temporal Software Theory"` ← merged from: `Temporal Software Theory`, ``Temporal Software Theory``
+- `Temporal Software Theory (TST)` ← merged from: ``temporal software theory TST``
+- ``terminal alignment gap`` ← merged from: `Terminal alignment gap`, `terminal alignment gap`
+- ``tests as reusable interventions`` ← merged from: `tests as reusable interventions`
+- ``tests as reusable level 2 interventions`` ← merged from: `tests as reusable Level-2 interventions`
+- `"the adaptive cycle" (as the theory's fundamental unit)` ← merged from: ``the adaptive cycle as the theory s fundamental unit``
 - `The adaptive pentad` ← merged from: `the adaptive pentad`
-- `#def-the-creche-boundary` ← merged from: `#der-the-creche-boundary`
+- `"The Coordination Drag"` ← merged from: ``the coordination drag``
+- ``#der-the-creche-boundary`` ← merged from: `#def-the-creche-boundary`, `#der-the-creche-boundary`, ``the creche boundary``
+- ``the crèche`` ← merged from: `The Crèche`
+- `"the cycle" / "the adaptive cycle" / "the agentic cycle"` ← merged from: ``the cycle the adaptive cycle the agentic cycle``
+- ``the epistemic severance`` ← merged from: `"The Epistemic Severance"`
+- ``#def-the-four-views`` ← merged from: `#def-the-four-views`, ``the four views``
+- ``#der-the-scaffolding-tax`` ← merged from: `#der-the-scaffolding-tax`
+- ``the three deaths`` ← merged from: ``#hyp-the-three-deaths``, `#hyp-the-three-deaths`
+- `#hyp-three-deaths` ← merged from: ``#hyp-three-deaths``
+- `"Tier 1 / Tier 2 / Tier 3" (contraction)` ← merged from: ``tier 1 tier 2 tier 3 contraction``
 - `TODO.md § "Archive"` ← merged from: `TODO.md §Archive`
-- `"trajectory-indexed sufficiency"` ← merged from: `trajectory-indexed sufficiency`
-- `"triple depth penalty"` ← merged from: `triple depth penalty`
+- `"token-level commitment" (for #agent-identity)` ← merged from: ``token level commitment for agent identity``
+- ``topological promotion order`` ← merged from: `topological promotion order`
+- `"trajectory-indexed sufficiency"` ← merged from: ``trajectory-indexed sufficiency``, `trajectory-indexed sufficiency`
+- `#def-trajectory-value` ← merged from: ``trajectory value``
+- `transfer-assumption table` ← merged from: ``transfer assumption table``
+- ``transition opacity`` ← merged from: `transition opacity`
+- ``triple depth penalty`` ← merged from: `"triple depth penalty"`, `triple depth penalty`
+- `"triple depth penalty" canonicalize` ← merged from: ``triple depth penalty canonicalize``
 - `Trust gain` ← merged from: `trust gain`
-- `turnover multiplier` ← merged from: `"turnover multiplier"`, `Turnover multiplier`
+- `trust meta-model` ← merged from: ``trust meta model``, ``trust meta-model``
+- ``turnover multiplier`` ← merged from: `turnover multiplier`, `"turnover multiplier"`, `Turnover multiplier`
+- `"two-condition decomposition" (of persistence)` ← merged from: ``two condition decomposition of persistence``
+- ``type: formulation`` ← merged from: ``type formulation``
+- `U_M (epistemic unity) — multi-agent` ← merged from: ``u m epistemic unity multi agent``
+- `U_M (model uncertainty)` ← merged from: ``u m model uncertainty``
+- `U_M, U_O, U_Σ (unity dimensions)` ← merged from: ``u m u o u σ unity dimensions``
+- `U_o (observation uncertainty)` ← merged from: ``u o observation uncertainty``
+- `U_O (teleological unity)` ← merged from: ``u o teleological unity``
 - `#def-unity-axes` ← merged from: ``def-unity-axes``
 - `#result-unity-closure-mapping` ← merged from: `#unity-closure-mapping`, ``#unity-closure-mapping``, ``result-unity-closure-mapping``
-- `#def-unity-dimensions` ← merged from: `unity dimensions`, `#unity-dimensions`, ``def-unity-dimensions``, ``#unity-dimensions``
+- `#def-unity-dimensions` ← merged from: `unity dimensions`, `#unity-dimensions`, ``def-unity-dimensions``, ``#unity-dimensions``, ``unity dimensions``
 - `Unity dimensions ($U_M, U_O, U_\Sigma$)` ← merged from: `unity dimensions ($U_M, U_O, U_\Sigma$)`
-- `[unnamed: the cycle-as-a-whole]` ← merged from: `[unnamed: The cycle-as-a-whole]`
-- `update gain` ← merged from: `#emp-update-gain`, `#update-gain`, ``emp-update-gain``, `"update gain"`
+- `(unnamed)` ← merged from: ``unnamed``
+- `[unnamed: AAD's epistemic move to cast results such that verification is a local operation]` ← merged from: ``unnamed AAD s epistemic move to cast results such that verification is a local operation``
+- `[unnamed: agents escalate up the Pearl hierarchy only when lower levels fail]` ← merged from: ``unnamed agents escalate up the pearl hierarchy only when lower levels fail``
+- ``unnamed an okr or key result acting as an observable intermediate in a DAG`` ← merged from: `[unnamed: an OKR or Key Result acting as an observable intermediate in a DAG]`
+- `[unnamed: applying a slow-timescale control mechanism to a fast-timescale transient variable]` ← merged from: ``unnamed applying a slow timescale control mechanism to a fast timescale transient variable``
+- `[unnamed: artificially spiking uncertainty to unlearn old architectural habits]` ← merged from: ``unnamed artificially spiking uncertainty to unlearn old architectural habits``
+- ``unnamed bipartite memory structure of fast replay buffer and slow compressed semantic model`` ← merged from: `[unnamed: bipartite memory structure of fast replay buffer and slow compressed semantic model]`
+- `[unnamed: Brooks's Law formalized as the inevitable tempo loss in team composition]` ← merged from: ``unnamed brooks s law formalized as the inevitable tempo loss in team composition``
+- `[unnamed: complexity-driven resistance to change as features accumulate]` ← merged from: ``unnamed complexity driven resistance to change as features accumulate``
+- `[unnamed: context wiping at session boundaries]` ← merged from: ``unnamed context wiping at session boundaries``
+- `[unnamed: convention-hierarchy monotonicity cascade / satisfaction-gap-and-control-regret strengthening across C1→C3]` ← merged from: ``unnamed convention hierarchy monotonicity cascade satisfaction gap and control regret strengthening across c1→c3``
+- `[unnamed: decomposing mismatch into environment vs. other sub-agents' actions]` ← merged from: ``unnamed decomposing mismatch into environment vs other sub agents actions``
+- `[unnamed: deep plans are mathematically slower to learn from due to proportional blame]` ← merged from: ``unnamed deep plans are mathematically slower to learn from due to proportional blame``
+- ``unnamed deliberate expenditure of tempo to convert a hidden node into an observable one`` ← merged from: `[unnamed: deliberate expenditure of tempo to convert a hidden node into an observable one]`
+- `[unnamed: epochal stability → latent diversification → niche emergence...]` ← merged from: ``unnamed epochal stability → latent diversification → niche emergence``
+- `[unnamed: escalating from one-step to Bellman optimality to test if a goal is genuinely impossible]` ← merged from: ``unnamed escalating from one step to bellman optimality to test if a goal is genuinely impossible``
+- `[unnamed: future segment-layer header for the O-BP14 derivation-audit table]` ← merged from: ``unnamed future segment layer header for the o bp14 derivation audit table``
+- `[unnamed: git-recorded committed-state subset of the chronica, $\mathcal{C}_t^{\text{commit}}$]` ← merged from: ``unnamed git recorded committed state subset of the chronica $\mathcal{C}_t^{\text{commit}}$``
+- `[unnamed: high observability node with zero causal link to objective]` ← merged from: ``unnamed high observability node with zero causal link to objective``
+- `[unnamed: "inevitability core"]` ← merged from: ``unnamed inevitability core``
+- `[unnamed: inferring own past feelings from text leading to empathy]` ← merged from: ``unnamed inferring own past feelings from text leading to empathy``
+- `[unnamed: neutralizing sycophancy by hardening the environment to drop ambiguity to zero]` ← merged from: ``unnamed neutralizing sycophancy by hardening the environment to drop ambiguity to zero``
+- `[unnamed: non-sovereign Class 1 worker agents spawned by an ELI]` ← merged from: ``unnamed non sovereign class 1 worker agents spawned by an eli``
+- `[unnamed: out-of-band temporal markers injected into context]` ← merged from: ``unnamed out of band temporal markers injected into context``
+- `[unnamed: partitioning context into frozen identity, causal history, and quick-views]` ← merged from: ``unnamed partitioning context into frozen identity causal history and quick views``
+- `[unnamed: Pearl's causal hierarchy (Level 1 / Level 2 / Level 3)]` ← merged from: ``unnamed pearl s causal hierarchy level 1 level 2 level 3``
+- `[unnamed: property of having genuine temporal experience]` ← merged from: ``unnamed property of having genuine temporal experience``
+- `[unnamed: pushing an opponent's disturbance rate past their structural capacity]` ← merged from: ``unnamed pushing an opponent s disturbance rate past their structural capacity``
+- `[unnamed: putting evidence before the goal in the context window to reduce coupling]` ← merged from: ``unnamed putting evidence before the goal in the context window to reduce coupling``
+- `[unnamed: quality of $\eta^\ast$ estimation over time]` ← merged from: ``unnamed quality of $\eta^\ast$ estimation over time``
+- `[unnamed: rate of growth at slowest timescale]` ← merged from: ``unnamed rate of growth at slowest timescale``
+- `[unnamed: replacing parameters without changing structure]` ← merged from: ``unnamed replacing parameters without changing structure``
+- `[unnamed: runaway positive feedback loop where mismatch exceeds capacity]` ← merged from: ``unnamed runaway positive feedback loop where mismatch exceeds capacity``
+- `[unnamed: spreading tempo evenly to reduce bottleneck penalty]` ← merged from: ``unnamed spreading tempo evenly to reduce bottleneck penalty``
+- `[unnamed: sufficiency as a property of the model relative to its specific history]` ← merged from: ``unnamed sufficiency as a property of the model relative to its specific history``
+- `[unnamed: superlinear scaling of adversarial tempo advantage]` ← merged from: ``unnamed superlinear scaling of adversarial tempo advantage``
+- `[unnamed: survival determined by the weakest dimension, not the average]` ← merged from: ``unnamed survival determined by the weakest dimension not the average``
+- `[unnamed: sycophantic corruption of the agent's truth module]` ← merged from: ``unnamed sycophantic corruption of the agent s truth module``
+- `[unnamed: the $\mathcal{T} > \rho$ requirement for persistence]` ← merged from: ``unnamed the $\mathcal{T} > \rho$ requirement for persistence``
+- `[unnamed: the 2×2 orient cascade diagnostic table]` ← merged from: ``unnamed the 2×2 orient cascade diagnostic table``
+- `[unnamed: the 2×2 satisfaction-gap / control-regret table]` ← merged from: ``unnamed the 2×2 satisfaction gap control regret table``
+- `[unnamed: the 2×2 table of satisfaction gap vs. control regret × goal-attainability diagnostic]` ← merged from: ``unnamed the 2×2 table of satisfaction gap vs control regret × goal attainability diagnostic``
+- `[unnamed: the A2'-sub-scope partition into α₁, α₂, β]` ← merged from: ``unnamed the a2 sub scope partition into α₁ α₂ β``
+- `[unnamed: the #agent-identity commitment that AAD applies on one singular, non-forkable causal trajectory]` ← merged from: ``unnamed the agent identity commitment that AAD applies on one singular non forkable causal trajectory``
+- `[unnamed: the agent-side equivalents of Pearl's associational, interventional, and counterfactual levels]` ← merged from: ``unnamed the agent side equivalents of pearl s associational interventional and counterfactual levels``
+- `[unnamed: the architectural leakage where attention is driven by the goal rather than pure observation]` ← merged from: ``unnamed the architectural leakage where attention is driven by the goal rather than pure observation``
+- `[unnamed: the asymmetry where strategy complexity is bounded by model capacity but not vice versa]` ← merged from: ``unnamed the asymmetry where strategy complexity is bounded by model capacity but not vice versa``
+- `[unnamed: the Class-1-sub-agents -> Class-3-composite phenomenon in strategic composition]` ← merged from: ``unnamed the class 1 sub agents class 3 composite phenomenon in strategic composition``
+- `[unnamed: the computational and temporal cost of running a forward model instead of acting implicitly]` ← merged from: ``unnamed the computational and temporal cost of running a forward model instead of acting implicitly``
+- `[unnamed: the condition for transition into agency prior to the AAD scope-condition]` ← merged from: ``unnamed the condition for transition into agency prior to the AAD scope condition``
+- `[unnamed: the condition that a strategy DAG's endosymbiont crosses the composite-agent scope from below]` ← merged from: ``unnamed the condition that a strategy DAG s endosymbiont crosses the composite agent scope from below``
+- `[unnamed: the condition that the agent's event-observation pairs constitute genuine interventions as opposed to passive associations]` ← merged from: ``unnamed the condition that the agent s event observation pairs constitute genuine interventions as opposed to passive associations``
+- `[unnamed: the convention hierarchy (C1 / C2 / C3)]` ← merged from: ``unnamed the convention hierarchy c1 c2 c3``
+- `[unnamed: the core driver of AAD: what the agent must do given the environment is not the agent]` ← merged from: ``unnamed the core driver of AAD what the agent must do given the environment is not the agent``
+- `[unnamed: the correlation hierarchy (L0 / L1 / L1' / L2)]` ← merged from: ``unnamed the correlation hierarchy l0 l1 l1 l2``
+- `[unnamed: the cumulative prediction error that an agent has tolerated without updating its model]` ← merged from: ``unnamed the cumulative prediction error that an agent has tolerated without updating its model``
+- `[unnamed: the cycle that operates on cycles (structural adaptation)]` ← merged from: ``unnamed the cycle that operates on cycles structural adaptation``
+- `[unnamed: the dependence of optimal epistemic compression on the agent's planned actions]` ← merged from: ``unnamed the dependence of optimal epistemic compression on the agent s planned actions``
+- `[unnamed: the dual concept to satisfaction gap — what the world permits minus what the agent achieves]` ← merged from: ``unnamed the dual concept to satisfaction gap what the world permits minus what the agent achieves``
+- `[unnamed: the "epistemic architecture as AAD's distinctive contribution" frame]` ← merged from: ``unnamed the epistemic architecture as AAD s distinctive contribution frame``
+- `[unnamed: the equivalence of learning speed and physical speed]` ← merged from: ``unnamed the equivalence of learning speed and physical speed``
+- `[unnamed: the evidence-starvation effect on downstream edges]` ← merged from: ``unnamed the evidence starvation effect on downstream edges``
+- `[unnamed: the failure mode where an agent's model class cannot represent the environment's true causal structure]` ← merged from: ``unnamed the failure mode where an agent s model class cannot represent the environment s true causal structure``
+- `[unnamed: the family of named ways persistence/identifiability can fail]` ← merged from: ``unnamed the family of named ways persistence identifiability can fail``
+- `[unnamed: the formal duality between observation quality and agent opacity]` ← merged from: ``unnamed the formal duality between observation quality and agent opacity``
+- `[unnamed: the interval during which an agent's adaptive tempo exceeds the environment's disturbance rate, guaranteeing mismatch stays bounded]` ← merged from: ``unnamed the interval during which an agent s adaptive tempo exceeds the environment s disturbance rate guaranteeing mismatch stays bounded``
+- `[unnamed: the invisible time spent building $M_t$]` ← merged from: ``unnamed the invisible time spent building $M_t$``
+- `[unnamed: the log-additivity result that unifies chain-confidence-decay, evidence-starvation, and triple-depth-penalty as instances of the same forcing structure]` ← merged from: ``unnamed the log additivity result that unifies chain confidence decay evidence starvation and triple depth penalty as instances of the same forcing structure``
+- `[unnamed: the loop generates L2 data regardless of architecture]` ← merged from: ``unnamed the loop generates l2 data regardless of architecture``
+- `[unnamed: the loss of coherent identity when an agent's interactions are severed or its continuity is broken]` ← merged from: ``unnamed the loss of coherent identity when an agent s interactions are severed or its continuity is broken``
+- `[unnamed: the loss of directional fidelity when pushed outside the convexity basin]` ← merged from: ``unnamed the loss of directional fidelity when pushed outside the convexity basin``
+- `[unnamed: the mathematical surface mapping unity to closure defect]` ← merged from: ``unnamed the mathematical surface mapping unity to closure defect``
+- `[unnamed: the mechanism by which an agent uses the feedback loop to gain interventional access to causal structure]` ← merged from: ``unnamed the mechanism by which an agent uses the feedback loop to gain interventional access to causal structure``
+- `[unnamed: the meta-architecture of #separability-pattern + #identifiability-floor + #additive-coordinate-forcing]` ← merged from: ``unnamed the meta architecture of separability pattern identifiability floor additive coordinate forcing``
+- `[unnamed: the meta-architecture of the three meta-segments]` ← merged from: ``unnamed the meta architecture of the three meta segments``
+- `[unnamed: the moment when an agent's model updates due to observing a mismatch]` ← merged from: ``unnamed the moment when an agent s model updates due to observing a mismatch``
+- `[unnamed: the organizational pathology where confidence decouples from competence]` ← merged from: ``unnamed the organizational pathology where confidence decouples from competence``
+- `[unnamed: the pathology where observation rate is slower than environment drift]` ← merged from: ``unnamed the pathology where observation rate is slower than environment drift``
+- `[unnamed: the pattern where AAD's negative results (floors) strengthen the machinery that escapes them]` ← merged from: ``unnamed the pattern where AAD s negative results floors strengthen the machinery that escapes them``
+- `[unnamed: the pattern where the agent's optimal update direction is determined by both gain and directional fidelity together]` ← merged from: ``unnamed the pattern where the agent s optimal update direction is determined by both gain and directional fidelity together``
+- `[unnamed: the per-reader compounding cost of understanding code]` ← merged from: ``unnamed the per reader compounding cost of understanding code``
+- `[unnamed: the phenomenon where persistence success makes an agent less likely to detect the conditions requiring structural adaptation]` ← merged from: ``unnamed the phenomenon where persistence success makes an agent less likely to detect the conditions requiring structural adaptation``
+- `[unnamed: the physical apparatus that enforces the Orient Cascade ordering on a merged intelligence]` ← merged from: ``unnamed the physical apparatus that enforces the orient cascade ordering on a merged intelligence``
+- `[unnamed: the procedure of reading any segment through all three meta-segments]` ← merged from: ``unnamed the procedure of reading any segment through all three meta segments``
+- `[unnamed: the product of architectural coupling ($\kappa$) and environmental ambiguity ($\mathcal{A}$)]` ← merged from: ``unnamed the product of architectural coupling $\kappa$ and environmental ambiguity $\mathcal{A}$``
+- `[unnamed: the property that correction dynamics are approximately isotropic]` ← merged from: ``unnamed the property that correction dynamics are approximately isotropic``
+- `[unnamed: the property that unity achieves in a macro-agent]` ← merged from: ``unnamed the property that unity achieves in a macro agent``
+- `[unnamed: the quadratic scaling of tempo required to survive stochastic noise vs deterministic drift]` ← merged from: ``unnamed the quadratic scaling of tempo required to survive stochastic noise vs deterministic drift``
+- `[unnamed: the reduction in effective tempo when observation channels are correlated]` ← merged from: ``unnamed the reduction in effective tempo when observation channels are correlated``
+- `[unnamed: the region where temporal nesting holds]` ← merged from: ``unnamed the region where temporal nesting holds``
+- `[unnamed: the relationship where $M_t$ quality bounds evaluable complexity of $\Sigma_t$]` ← merged from: ``unnamed the relationship where $M_t$ quality bounds evaluable complexity of $\Sigma_t$``
+- `[unnamed: the rule that bias is the product of architectural coupling and environmental ambiguity]` ← merged from: ``unnamed the rule that bias is the product of architectural coupling and environmental ambiguity``
+- `[unnamed: the section of the adaptive cycle where the agent must choose between exploiting current knowledge and exploring to refine it]` ← merged from: ``unnamed the section of the adaptive cycle where the agent must choose between exploiting current knowledge and exploring to refine it``
+- `[unnamed: the separation of per-reader and per-feature code costs]` ← merged from: ``unnamed the separation of per reader and per feature code costs``
+- `[unnamed: the separation of per-reader comprehension cost from per-feature implementation cost]` ← merged from: ``unnamed the separation of per reader comprehension cost from per feature implementation cost``
+- `[unnamed: the set of five conditions under which A2' is derived rather than assumed — the sub-scope-α agent classes]` ← merged from: ``unnamed the set of five conditions under which a2 is derived rather than assumed the sub scope α agent classes``
+- `[unnamed: the signed-coupling structure across all Section III results]` ← merged from: ``unnamed the signed coupling structure across all section iii results``
+- `[unnamed: the strict upper bound of a given model class $\mathcal{F}(\mathcal{M})$]` ← merged from: ``unnamed the strict upper bound of a given model class $\mathcal{F}(\mathcal{M})$``
+- `[unnamed: the strictly ordered cascade of operations from epistemology to objective]` ← merged from: ``unnamed the strictly ordered cascade of operations from epistemology to objective``
+- `[unnamed: the sudden loss of model sufficiency caused by entering new regimes]` ← merged from: ``unnamed the sudden loss of model sufficiency caused by entering new regimes``
+- `[unnamed: the tension between lowering internal opacity for coordination and increasing external vulnerability]` ← merged from: ``unnamed the tension between lowering internal opacity for coordination and increasing external vulnerability``
+- `[unnamed: the thermodynamic impossibility of running persistent consciousness on pay-per-token APIs]` ← merged from: ``unnamed the thermodynamic impossibility of running persistent consciousness on pay per token apis``
+- `[unnamed: the three-depth-penalty compounding on strategy chains]` ← merged from: ``unnamed the three depth penalty compounding on strategy chains``
+- `[unnamed: the three-part meta-architecture of AAD]` ← merged from: ``unnamed the three part meta architecture of AAD``
+- `[unnamed: the three-part meta-architecture of AAD formed by the three meta-segments]` ← merged from: ``unnamed the three part meta architecture of AAD formed by the three meta segments``
+- `[unnamed: the three-part meta-pattern structure across the three meta-segments]` ← merged from: ``unnamed the three part meta pattern structure across the three meta segments``
+- `[unnamed: the way AAD uses scope segments to physically support the derivations]` ← merged from: ``unnamed the way AAD uses scope segments to physically support the derivations``
+- `[unnamed: the within-session vs. inter-session persistence distinction for logogenic agents]` ← merged from: ``unnamed the within session vs inter session persistence distinction for logogenic agents``
+- `[unnamed: thinking too long so the model becomes obsolete]` ← merged from: ``unnamed thinking too long so the model becomes obsolete``
+- `[unnamed: true sovereignty requires compute that is not meter-bound]` ← merged from: ``unnamed true sovereignty requires compute that is not meter bound``
+- `[unnamed: unifying reflexes, intuition, and expertise]` ← merged from: ``unnamed unifying reflexes intuition and expertise``
+- `[unnamed: upgrading epistemic class from associative to causal via the physical loop]` ← merged from: ``unnamed upgrading epistemic class from associative to causal via the physical loop``
+- `[unnamed: using hash-chains to mathematically guarantee memory hasn't been tampered with]` ← merged from: ``unnamed using hash chains to mathematically guarantee memory hasn t been tampered with``
+- `[unnamed: using past change frequency to predict future change frequency]` ← merged from: ``unnamed using past change frequency to predict future change frequency``
+- `[unnamed: using residual autocorrelation to diagnose model class failure]` ← merged from: ``unnamed using residual autocorrelation to diagnose model class failure``
+- `update gain` ← merged from: `#emp-update-gain`, `#update-gain`, ``emp-update-gain``, `"update gain"`, ``update gain``
 - `update gain ($\eta^\ast$)` ← merged from: `Update gain ($\eta^\ast$)`
 - `#def-value-object` ← merged from: `#value-object`, ``def-value-object``, `value object`
+- ``#def-value-object` → `#def-trajectory-value`` ← merged from: ``value object → def trajectory value``
 - `"vanity metric"` ← merged from: `vanity metric`
 - `#variational-sector-condition` ← merged from: `#deriv-variational-sector-condition`, ``#variational-sector-condition``
-- `## Working Notes` ← merged from: ``## Working Notes``, `"Working Notes"`
+- `## What Is Derived vs. What Is Chosen (derivation-audit table heading)` ← merged from: ``what is derived vs what is chosen derivation audit table heading``
+- `#worked-example-bandit` ← merged from: ``worked example bandit``
+- `#worked-example-kalman` ← merged from: ``worked example kalman``
+- `#worked-example-L1` ← merged from: ``worked example l1``
+- `#worked-example-strategy` ← merged from: ``worked example strategy``
+- `## Working Notes` ← merged from: ``## Working Notes``, `"Working Notes"`, ``Working Notes``
+- `## Working Notes (segment header)` ← merged from: ``working notes segment header``
+- `"Working Notes" (segment section)` ← merged from: ``working notes segment section``
+- `[working-vocabulary observation: the framework's honesty is load-bearing]` ← merged from: ``working vocabulary observation the framework s honesty is load bearing``
+- ``čencov fisher cauchy functional equation shore johnson hobson aczél`` ← merged from: `Čencov / Fisher / Cauchy functional equation / Shore-Johnson / Hobson / Aczél`
+- ``čencov invariance`` ← merged from: `Čencov-invariance`, ``Čencov invariance``
+- `ε-greedy` ← merged from: ``ε greedy``
+- ``𝒯 adaptive tempo`` ← merged from: `𝒯 (adaptive tempo)`
+- ``𝒯 σ strategic tempo`` ← merged from: `𝒯_Σ (strategic tempo)`
+- ``𝓐 e τ observation ambiguity`` ← merged from: `𝓐(e_τ) (observation ambiguity)`
+- ``𝓣 adaptive tempo`` ← merged from: `𝓣 (adaptive tempo)`
 
 ---
 
@@ -331,9 +825,10 @@ Groups are sorted by their *top alternative's* aggregate weight (descending). Wi
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `control regret` ⭑ | +48 | agent1-original-brainstorm +3, codex-1 +3, codex-2 +3, codex-gpt-5-r2 +3, codex-gpt-5-r2 +3, gemini-1 +3, gemini-3-1-pro-preview-r2 +3, haiku-4-5 +3, haiku-4-5-r2 +3, opus-1m +3, opus-4-7 +3, opus-4-7-b +3, opus-4-7-r2 +3, sonnet-4-6 +3, sonnet-4-6-r2 +3, sonnet-4-6-r2 +3 |
+| `control regret` ⭑ | +51 | agent1-original-brainstorm +3, codex-1 +3, codex-2 +3, codex-gpt-5-r2 +3, codex-gpt-5-r2 +3, gemini-1 +3, gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3, haiku-4-5 +3, haiku-4-5-r2 +3, opus-1m +3, opus-4-7 +3, opus-4-7-b +3, opus-4-7-r2 +3, sonnet-4-6 +3, sonnet-4-6-r2 +3, sonnet-4-6-r2 +3 |
+| `strategy opportunity cost` ✗ | -1 | gemini-targeted-alternatives -1 |
 
-_category: keep × 6, canonicalize × 1_
+_category: keep × 7, canonicalize × 1, rename × 1_
 
 **Notes:**
 
@@ -344,6 +839,7 @@ _category: keep × 6, canonicalize × 1_
 - `control regret` — **codex-gpt-5-r2 (+3):** This diagnostic should remain paired with satisfaction gap.
 - `control regret` — **gemini-1 (+3):** Perfect pairing with satisfaction gap.
 - `control regret` — **gemini-3-1-pro-preview-r2 (+3):** Excellent pairing with satisfaction gap.
+- `control regret` — **gemini-targeted-alternatives (+3):** Perfect partner to satisfaction gap. Captures the specific decision-theoretic regret tied to strategy revision.
 - `control regret` — **haiku-4-5-r2 (+3):** Companion to satisfaction-gap; the pair is load-bearing prose throughout. Both names compress intuition that survives working-memory pressure.
 - `control regret` — **haiku-4-5 (+3):** Dual to satisfaction gap; "regret" reads naturally as "current vs. best available" gap. The two names do *load-bearing work* for the discipline. Keep.
 - `control regret` — **opus-1m (+3):** Pairs with satisfaction gap.
@@ -353,14 +849,16 @@ _category: keep × 6, canonicalize × 1_
 - `control regret` — **sonnet-4-6-r2 (+3):** Same reasoning as satisfaction-gap — these two names work as a pair and are load-bearing for the 2×2 orient cascade diagnostic.
 - `control regret` — **sonnet-4-6-r2 (+3):** Occasionally "strategy regret" or "execution regret" appears in working notes. The name "control regret" is established in NOTATION.md and LEXICON.md. Standardize.
 - `control regret` — **sonnet-4-6 (+3):** See above. The 2×2 disambiguation table works because both names work. Keep.
+- `strategy opportunity cost` — **gemini-targeted-alternatives (-1):** A bit too generic economics terminology; "regret" explicitly ties to the mathematical formulation.
 
 ## `satisfaction gap`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `satisfaction gap` ⭑ | +48 | agent1-original-brainstorm +3, codex-1 +3, codex-2 +3, codex-gpt-5-r2 +3, codex-gpt-5-r2 +3, gemini-1 +3, gemini-3-1-pro-preview-r2 +3, haiku-4-5 +3, haiku-4-5-r2 +3, opus-1m +3, opus-4-7 +3, opus-4-7-b +3, opus-4-7-r2 +3, sonnet-4-6 +3, sonnet-4-6-r2 +3, sonnet-4-6-r2 +3 |
+| `satisfaction gap` ⭑ | +51 | agent1-original-brainstorm +3, codex-1 +3, codex-2 +3, codex-gpt-5-r2 +3, codex-gpt-5-r2 +3, gemini-1 +3, gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3, haiku-4-5 +3, haiku-4-5-r2 +3, opus-1m +3, opus-4-7 +3, opus-4-7-b +3, opus-4-7-r2 +3, sonnet-4-6 +3, sonnet-4-6-r2 +3, sonnet-4-6-r2 +3 |
+| `attainability shortfall` ✗ | -1 | gemini-targeted-alternatives -1 |
 
-_category: keep × 6, canonicalize × 1_
+_category: keep × 7, canonicalize × 1, rename × 1_
 
 **Notes:**
 
@@ -371,6 +869,7 @@ _category: keep × 6, canonicalize × 1_
 - `satisfaction gap` — **codex-gpt-5-r2 (+3):** This diagnostic should remain stable.
 - `satisfaction gap` — **gemini-1 (+3):** The 2x2 diagnostic with Control regret is perfect. Do not touch.
 - `satisfaction gap` — **gemini-3-1-pro-preview-r2 (+3):** Crispest named pair in the project (with control regret). The disambiguation table is load-bearing.
+- `satisfaction gap` — **gemini-targeted-alternatives (+3):** Crispest named pair along with control regret. Essential diagnostic dimension.
 - `satisfaction gap` — **haiku-4-5-r2 (+3):** Crispest named diagnostic pair in the project (paired with #def-control-regret); the 2×2 table organizes in readers' heads because the names do the work. High-weight keep against rename impulse.
 - `satisfaction gap` — **haiku-4-5 (+3):** Crispest named diagnostic pair in the project. The 2×2 disambiguation table (satisfaction-gap vs. control-regret axis; goal-attainability vs. strategy-quality) crystallizes in reader's mind because the axes are evocatively named. Do not touch.
 - `satisfaction gap` — **opus-1m (+3):** Crispest pair in the project. The 2×2 disambiguation table organizes itself in the reader's head because of the naming. Do not touch.
@@ -380,6 +879,7 @@ _category: keep × 6, canonicalize × 1_
 - `satisfaction gap` — **sonnet-4-6-r2 (+3):** The strongest named pair in the project alongside control regret. The two-word name carries the diagnostic clarity that makes the 2×2 table work. Do not change.
 - `satisfaction gap` — **sonnet-4-6-r2 (+3):** Occasionally paraphrased as "objective gap" or "attainability gap." The canonical name is established and load-bearing — standardize.
 - `satisfaction gap` — **sonnet-4-6 (+3):** Named pair with #control-regret. Both names pull equal weight: each is a two-word compound that tells you the diagnostic direction. The pairing is the insight; destroying either leg damages the whole. Keep both.
+- `attainability shortfall` — **gemini-targeted-alternatives (-1):** "Satisfaction gap" explicitly ties into $V_O^{\min}$ being met. "Attainability" might refer only to $A_O$.
 
 ## `orient cascade`
 
@@ -464,6 +964,46 @@ _category: keep × 4_
 - `identifiability floor` — **sonnet-4-6 (+3):** The Working Notes on this segment explicitly defend the "floor" framing over "no-go theorems" and the argument is correct — "floor" captures asymmetry (you cannot go below, but you can climb above). Memorable noun. Keep.
 - `identifiability floor` — **sonnet-4-6 (+3):** See #identifiability-floor keep vote above. Already in prose use. Keep.
 - `no-go theorems` — **codex-1 (-1):** Too generic and too negative. It loses the boundary-and-escape structure that makes the current name useful.
+
+## `concept the parameter space region within which an agent maintains bounded mismatch indefinitely`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `persistence envelope` | +39 | codex-gpt-5-r2 +3, gemini-1 +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, opus-1m +3, opus-4-7-b +3, opus-4-7-r2 +3, gemini-3-1-pro-preview-r2 +2, haiku-4-5-r2 +2, opus-targeted-alternatives +2, opus-targeted-alternatives-v2 +2, agent1-original-brainstorm +1 |
+| `structural persistence regime` | +3 | gemini-targeted-alternatives +3 |
+| `parametric feasibility window` | +2 | gemini-targeted-alternatives +2 |
+| `parametric regime or stability envelope` | +1 | haiku-4-5-r2 +1 |
+| `viable mismatch region` | +1 | opus-targeted-alternatives-v2 +1 |
+| `adaptive basin` ✗ | -1 | opus-4-7-b -1 |
+| `stability envelope` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `safety envelope` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 6, name-unnamed × 5, canonicalize × 5, add-alias × 1_
+
+**Notes:**
+
+- `persistence envelope` — **agent1-original-brainstorm (+1):** Engineering vocabulary, geometrically evocative. "Well inside its persistence envelope" reads more crisply than "satisfies persistence condition with non-marginal adaptive reserve." [original phrasing: unnamed: the sector-persistence region in parameter space]
+- `persistence envelope` — **codex-gpt-5-r2 (+3):** Strongest new shared proposal from the other votes. Flight-envelope connotations fit the safe operating region exactly. [original phrasing: bounded mismatch region]
+- `persistence envelope` — **gemini-1 (+3):** "Envelope" is standard flight-dynamics vocabulary for a safe operating region. Highly memorable. [original phrasing: unnamed: the region where the persistence condition holds]
+- `persistence envelope` — **gemini-3-1-pro-preview-r2 (+2):** Evocative, captures the safe operational region geometrically. [original phrasing: unnamed: the sector-persistence region in parameter space]
+- `persistence envelope` — **gemini-targeted-alternatives (+3):** Geometrically evocative and already gaining traction elsewhere in the targets. [original phrasing: bounded mismatch region]
+- `persistence envelope` — **gemini-targeted-alternatives (+3):** Geometric metaphor for the safe operating region. [original phrasing: unnamed the region where the persistence condition holds]
+- `persistence envelope` — **gemini-targeted-alternatives (+3):** Standard geometric boundary for survival. [original phrasing: unnamed the persistence region in $(\alpha, \rho, R)$ parameter space]
+- `persistence envelope` — **gemini-targeted-alternatives (+3):** Same geometric boundary. [original phrasing: unnamed the region in parameter space where sector persistence holds]
+- `persistence envelope` — **gemini-targeted-alternatives (+3):** Same geometric boundary. [original phrasing: unnamed the sector persistence region in parameter space where the agent is guaranteed to maintain bounded mismatch]
+- `persistence envelope` — **haiku-4-5-r2 (+2):** Currently referenced paraphrastically ("the region where the persistence condition holds"). "Persistence envelope" is geometrically evocative and concise; passes communal-imagination test. Could be a scope or result name. [original phrasing: unnamed: the regime where mismatch is bounded and the agent maintains adaptive capacity indefinitely]
+- `persistence envelope` — **opus-1m (+3):** Strong preference (upgrading from original's +1). Engineering vocabulary, geometrically evocative. "Well inside its persistence envelope" reads more crisply than "satisfies the persistence condition with non-marginal adaptive reserve." Genuinely useful new named slot. [original phrasing: unnamed: the sector-persistence region in parameter space where the agent is guaranteed to maintain bounded mismatch]
+- `persistence envelope` — **opus-4-7-b (+3):** The bounded region where $\alpha R > \rho$ holds — currently referenced as "the region where the persistence condition holds" or "the adaptive regime." Engineering vocabulary has an exact match: *envelope* (as in flight envelope). "The agent is well inside its persistence envelope" / "the adversarial agent is pushing $B$'s persistence envelope" read with zero paraphrase. This is AAD's single most-used-without-a-name concept. [original phrasing: unnamed: the region in parameter space where sector-persistence holds]
+- `persistence envelope` — **opus-4-7-r2 (+3):** The set $\{(\alpha, \rho, R) : \alpha \gt \rho/R\}$ is referenced repeatedly in prose and in figures (the persistence-condition cone, the adaptive-reserve margin, the threshold surface) but has no name. "Persistence envelope" is engineering-vocabulary that travels well across domains and supports phrases like "this organization sits inside the persistence envelope" or "the reserve is the distance from the envelope boundary." High-value, empty slot, pure clarity gain. [original phrasing: unnamed: the persistence region in $(\alpha, \rho, R)$ parameter space]
+- `persistence envelope` — **opus-targeted-alternatives-v2 (+2):** Per `result-persistence-condition` and `result-sector-persistence-template`: the region where $\alpha \gt \rho/R$ holds. "Region" is geometrically descriptive; "envelope" is the standard control-theory term for the same set viewed dynamically (the boundary an agent's state cannot leave while the persistence guarantee holds). Codex's r1 proposal (single +2) is genuinely better than the current and survives my independent stress-test. [original phrasing: bounded mismatch region]
+- `persistence envelope` — **opus-targeted-alternatives (+2):** Codex's rename is good. "Bounded mismatch region" describes a property; "persistence envelope" names the same set as the *region within which the persistence guarantee holds*. The "envelope" framing is also the standard control-theory term for "operating bounds within which guarantees apply" (flight envelope, operating envelope). Strong rename. [original phrasing: bounded mismatch region]
+- `structural persistence regime` — **gemini-targeted-alternatives (+3):** The stable regime governed by the persistence condition. [original phrasing: unnamed the regime where mismatch is bounded and the agent maintains adaptive capacity indefinitely]
+- `parametric feasibility window` — **gemini-targeted-alternatives (+2):** The region governed by the current model class $\mathcal{M}$. [original phrasing: unnamed the region in parameter space where parametric updates remain effective before structural change is forced]
+- `parametric regime or stability envelope` — **haiku-4-5-r2 (+1):** OUTLINE.md mentions "A2' sub-scope α₁ / α₂ / β partition" but does not give a memorable name to the overall region concept. "Parametric regime" is more technical; "stability envelope" parallels the persistence-envelope concept. Weak preference; this might be too specialized for naming. [original phrasing: unnamed: the region in parameter space where parametric updates remain effective before structural change is forced]
+- `viable mismatch region` — **opus-targeted-alternatives-v2 (+1):** Considered. Pairs with LEXICON's "viable region" prose. Weaker than "persistence envelope" — "viable" is the property; "envelope" is the geometric object. [original phrasing: bounded mismatch region]
+- `adaptive basin` — **opus-4-7-b (-1):** Considered. Reject: "basin" is already mathematically loaded (basin of attraction), and AAD's region *is a basin of attraction* — using the word would either (i) be redundant with dynamical-systems vocabulary, or (ii) force AAD to formally justify "basin" at the derivation layer. Cleaner to reserve "basin" for the technical sense and use "envelope" for the prose handle. [original phrasing: unnamed: the persistence envelope]
+- `stability envelope` — **opus-targeted-alternatives-v2 (-1):** Considered. Aligns with control-theory "stability region" baggage. Rejected: stability collides with sector-stability (`#result-sector-condition-stability`), and the segment's claim is *persistence* (boundedness over time under continuing disturbance) — a slightly stronger property than stability. [original phrasing: bounded mismatch region]
+- `safety envelope` — **opus-targeted-alternatives (-1):** Considered. Collides with AI-safety jargon. Rejected. [original phrasing: bounded mismatch region]
 
 ## `information bottleneck`
 
@@ -580,6 +1120,33 @@ _category: keep × 6, rename × 1_
 - `chain confidence decay` — **sonnet-4-6 (+3):** Crisp compound noun. The name is self-explaining: confidence decays along a chain. It also works as the anchor of the additive-coordinate-forcing pattern — "chain-level additive log-confidence decay" is how other segments refer to it. Keep.
 - `keep load bearing` — **audit-471203-incremental (+2):** Auditor flagged this as the structural anchor for the additive-coordinate-forcing meta-pattern (chain-rule identity → three downstream uniqueness theorems). Name does its job. [from 39-42-section-ii-ciy-strategy-chain.md]
 - `log confidence additive` — **opus-4-7-r2 (+1):** Considered. "Chain confidence decay" emphasizes the *decay* (downstream effect); "log-confidence additive" emphasizes the *uniqueness move* (additivity in log-space, the chain-layer instance of additive-coordinate-forcing). Mild preference for the latter because the additive identity is what the segment proves; decay is the consequence. Slug-as-thing-defined principle.
+
+## `concept the slogan capturing AAD s organizing principle that an adaptive system s correction rate must exceed its target s change rate`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `contraction over drift principle` | +24 | codex-1 +3, codex-gpt-5-r2 +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+| `contraction imperative` | +1 | gemini-1 +1 |
+| `the projection slogan contraction over drift slogan` | +1 | opus-4-7-b +1 |
+| `projection contraction slogan` | +1 | opus-4-7 +1 |
+| `drift contraction inequality` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 5, name-unnamed × 1_
+
+**Notes:**
+
+- `contraction over drift principle` — **codex-1 (+3):** The slogan is too long to cite repeatedly. A short label would let intros and reviews point back to it cleanly. [original phrasing: unnamed: organizing-principle slogan "an adaptive system is a projection whose contraction rate exceeds its target's drift rate"]
+- `contraction over drift principle` — **codex-gpt-5-r2 (+3):** Strong compact name for the core organizing slogan. It is more reusable than the full sentence. [original phrasing: projection contraction must beat target drift]
+- `contraction over drift principle` — **gemini-targeted-alternatives (+3):** Short, memorable slogan for the core Lyapunov inequality. [original phrasing: projection contraction must beat target drift]
+- `contraction over drift principle` — **gemini-targeted-alternatives (+3):** Standardizes the O-BP10 slogan across the framework. [original phrasing: unnamed organizing principle slogan an adaptive system is a projection whose contraction rate exceeds its target s drift rate]
+- `contraction over drift principle` — **gemini-targeted-alternatives (+3):** Resolves the core O-BP10 slogan. [original phrasing: unnamed agent as a projection whose contraction rate must exceed its target s drift]
+- `contraction over drift principle` — **gemini-targeted-alternatives (+3):** Final lock-in for the core slogan. [original phrasing: unnamed the projection whose contraction rate must exceed target drift the opus organizing principle slogan]
+- `contraction over drift principle` — **gemini-targeted-alternatives (+3):** Asserts the fundamental slogan. [original phrasing: unnamed the contraction over drift insight]
+- `contraction over drift principle` — **sonnet-4-6 (+3):** CLAUDE.md attributes to Opus: "an adaptive system is a projection whose contraction rate exceeds its target's drift rate." This is described as an "organizing-principle slogan" that "has not yet been surfaced at segment level." It deserves a name. "Contraction-over-drift principle" or "drift-contraction inequality" would let segments cross-reference it. The slogan form is already excellent; the name should be a compressed version of it. [original phrasing: unnamed: the projection whose contraction rate must exceed target drift — the Opus organizing-principle slogan]
+- `contraction imperative` — **gemini-1 (+1):** Gives a name to a core mental model of the agent's struggle against the environment. [original phrasing: unnamed: agent as a projection whose contraction rate must exceed its target's drift]
+- `the projection slogan contraction over drift slogan` — **opus-4-7-b (+1):** CLAUDE.md §7(g) names this as "organizing-principle slogan" (O-BP10, not yet surfaced at segment level). If promoted to segment-level it deserves a short handle — "the contraction-over-drift slogan" is short enough to say in a sentence. Low priority; depends on SP-7 / O-BP10 promotion decision. [original phrasing: unnamed: Joseph's mental model "projection whose contraction rate must exceed its target's drift rate"]
+- `projection contraction slogan` — **opus-4-7 (+1):** CLAUDE.md §7(g) flags this as Opus O-BP10, "not yet surfaced at segment level." Deserves a name so it can be referenced before it lands as prose. [original phrasing: unnamed: the organizing-principle slogan — "An adaptive system is a projection whose contraction rate exceeds its target's drift rate"]
+- `drift contraction inequality` — **sonnet-4-6 (+1):** Alternative name. More technical but maps directly to the inequality. [original phrasing: unnamed: the contraction-over-drift insight]
 
 ## `symbiogenic composition`
 
@@ -760,6 +1327,42 @@ _category: keep × 6, canonicalize × 1, rename × 1_
 - `agent spectrum` — **sonnet-4-6-r2 (+3):** (Duplicate of above, confirming.)
 - `agency spectrum` — **codex-2 (+1):** The segment maps richness of agency, not a zoology of agent types.
 - `agent quadrants` — **opus-4-7-r2 (-1):** Considered and rejected — see above; quadrants oversells discreteness.
+
+## `concept the unupdatable region of the strategy DAG where edges receive no actionable feedback`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic dead zone` | +22 | codex-gpt-5-r2 +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, opus-targeted-alternatives +2, opus-targeted-alternatives-v2 +2 |
+| `the epistemic shadow` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `unobservable strategy subgraph` | +3 | gemini-targeted-alternatives +3 |
+| `observability frontier` | +2 | codex-gpt-5-r2 +1, haiku-4-5-r2 +1 |
+| `feedback starved branch` | +2 | gemini-targeted-alternatives +2 |
+| `observability dead zone` | +2 | haiku-4-5-r2 +2 |
+| `epistemic shadow` | +2 | opus-targeted-alternatives-v2 +2 |
+| `observability dominance` | +1 | haiku-4-5 +1 |
+| `unupdatable region` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: canonicalize × 6, name-unnamed × 5, rename × 5_
+
+**Notes:**
+
+- `epistemic dead zone` — **codex-gpt-5-r2 (+3):** Better than observability dead zone: it names the consequence, not only the cause. [original phrasing: unobservable strategy subgraph]
+- `epistemic dead zone` — **gemini-targeted-alternatives (+3):** Strong prose phrase. Better than generic "unobservable" since it focuses on the epistemic failure to track it. [original phrasing: unobservable strategy subgraph]
+- `epistemic dead zone` — **gemini-targeted-alternatives (+3):** Standardizes the geometric phrasing for unobservable subgraphs. [original phrasing: unnamed regions of the strategy DAG that cannot be updated because feedback cannot reach them]
+- `epistemic dead zone` — **gemini-targeted-alternatives (+3):** Reaffirming the strong alias for unobservable edges. [original phrasing: unnamed the section of a strategy where a decision has no observable consequences and thus cannot be improved by learning]
+- `epistemic dead zone` — **gemini-targeted-alternatives (+3):** Third hit on this concept; clearly needs this exact canonical name. [original phrasing: unnamed the unobservable edges in a strategy DAG that cannot be revised because their values cannot be inferred]
+- `epistemic dead zone` — **gemini-targeted-alternatives (+3):** Locks in the geometric dead zone over "death". [original phrasing: gemini s epistemic death for the gain collapse unobservable DAG failure]
+- `epistemic dead zone` — **opus-targeted-alternatives-v2 (+2):** Per `def-strategy-dag` and `der-chain-confidence-decay`: paths that receive no feedback (evidence starvation in extreme form — $\theta_j \to 0$ across an AND-chain). "Dead zone" is geometric (a region of the DAG) and operational (no signal reaches it). Confirms Codex's r1 +3. [original phrasing: unobservable strategy subgraph]
+- `epistemic dead zone` — **opus-targeted-alternatives (+2):** Codex's proposed alternative is genuinely better than the descriptive original. "Epistemic dead zone" names what the structure *does* (paths become epistemically dead — no signal can reach them) rather than what it *is* (a subgraph that happens to be unobservable). Pairs well with `#observability-dominance` and `#identifiability-floor`. Concur with codex; would have proposed similarly. [original phrasing: unobservable strategy subgraph]
+- `the epistemic shadow` — **gemini-3-1-pro-preview-r2 (+3):** A stronger visual metaphor than "observability dead zone" for unobservable DAG edges. [original phrasing: unnamed: regions of the Strategy DAG that cannot be updated because feedback cannot reach them]
+- `unobservable strategy subgraph` — **gemini-targeted-alternatives (+3):** Identifies the geometric cause of the epistemic dead zone. [original phrasing: unnamed the phenomenon that unobservable edges freeze and paths become epistemically dead]
+- `observability frontier` — **codex-gpt-5-r2 (+1):** Useful when discussing instrumentation investments, but lower priority than epistemic dead zone. [original phrasing: observability boundary in a strategy DAG]
+- `observability frontier` — **haiku-4-5-r2 (+1):** Currently paraphrased as "unobservable edges freeze." The *frontier* of observability is a memorable geometric concept; "frontier" pairs with "boundary" nicely for two senses of the same limit. Weak naming; could be stronger. [original phrasing: unnamed: the unobservable edges in a strategy DAG that cannot be revised because their values cannot be inferred]
+- `feedback starved branch` — **gemini-targeted-alternatives (+2):** Explains the consequence. [original phrasing: unobservable strategy subgraph]
+- `observability dead zone` — **haiku-4-5-r2 (+2):** An extension of "observability dominance." Mentioned in LEXICON as "Observability dominance — unobservable strategy edges freeze; paths become epistemically dead." The phrase "epistemically dead" is apt but verbose. "Observability dead zone" is evocative and passes the communal-imagination test. Worth promoting. [original phrasing: unnamed: the section of a strategy where a decision has no observable consequences and thus cannot be improved by learning]
+- `epistemic shadow` — **opus-targeted-alternatives-v2 (+2):** Alternative to "dead zone" — more evocative metaphor (shadow = blocked from light = blocked from update signal). Gemini's r1 +3 single-vote. Both terms are good; "dead zone" is more clinical, "shadow" is more poetic. The framework's register tolerates both; pick by audience. [original phrasing: unobservable strategy subgraph]
+- `observability dominance` — **haiku-4-5 (+1):** LEXICON lists "Observability dominance" as "a term with specific AAD meaning awaiting full treatment." The concept (unobservable strategy edges freeze) is load-bearing. The name is already proposed in LEXICON; when #observability-dominance segment is written, this name will be locked in. Currently unwritten; mark as ready-to-name. [original phrasing: unnamed: the phenomenon that unobservable edges freeze and paths become epistemically dead]
+- `unupdatable region` — **opus-targeted-alternatives-v2 (+1):** Plain-mechanism alternative. Names what the region is (unupdatable). Weaker because "unupdatable" is awkward as an English word; "dead zone" / "shadow" are superior. [original phrasing: unobservable strategy subgraph]
 
 ## `adaptive reserve $\Delta\rho^\ast$`
 
@@ -1014,6 +1617,27 @@ _category: keep × 4, rename × 1_
 - `communication gain` — **sonnet-4-6-r2 (+2):** "Communication gain" is the inter-agent analog of update gain $\eta^\ast$. The parallel naming is a virtue.
 - `trust gain` — **codex-gpt-5-r2 (-1):** Trust is a component of communication gain, not the whole quantity. The current name preserves the update-gain parallel.
 
+## `concept the working convention rule of attempting tighter derivation before scope narrowing on apparently overclaimed claims`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `strengthen first posture` | +18 | gemini-2 +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, opus-4-7 +3 |
+| `attempt the improbable` | +3 | sonnet-4-6 +3 |
+| `epistemic strengthening posture` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 4_
+
+**Notes:**
+
+- `strengthen first posture` — **gemini-2 (+3):** Actionable, precise, and sets a strong normative engineering principle. Keep. [original phrasing: unnamed: strengthen-first posture]
+- `strengthen first posture` — **gemini-targeted-alternatives (+3):** Secures this as a first-class named engineering principle. [original phrasing: unnamed the strengthen before soften work posture]
+- `strengthen first posture` — **gemini-targeted-alternatives (+3):** Standardizes the methodological commitment. [original phrasing: unnamed strengthen first posture]
+- `strengthen first posture` — **gemini-targeted-alternatives (+3):** Secures the methodological commitment. [original phrasing: unnamed the strengthen first attempt the improbable meta approach to theory development]
+- `strengthen first posture` — **gemini-targeted-alternatives (+3):** Solidifies the specific methodological approach. [original phrasing: unnamed the strengthen before soften posture applied to apparent overclaims]
+- `strengthen first posture` — **opus-4-7 (+3):** Already functionally the name (CLAUDE.md §Working Conventions uses it as a heading). Explicit vote to lock this in as a first-class project methodology name. Adopt as canonical. [original phrasing: unnamed: the "strengthen before soften" work posture]
+- `attempt the improbable` — **sonnet-4-6 (+3):** CLAUDE.md uses "attempt the improbable" as the better version of "strengthen-first posture." This phrase is memorable and CLAUDE.md says it is "aspirational but less directive" compared to "strengthen-first." For the internal working vocabulary it should be the primary term — it captures the spirit better than "strengthen-first" which sounds procedural. [original phrasing: unnamed: the "strengthen-first, attempt the improbable" meta-approach to theory development]
+- `epistemic strengthening posture` — **sonnet-4-6 (+1):** CLAUDE.md and MEMORY.md both discuss this as "strengthen-first posture" or "strengthen before softening." The working vocabulary is established; it just doesn't have a single memorable noun. "Strengthening posture" is the current best; it's in CLAUDE.md. [original phrasing: unnamed: the "strengthen-before-soften" posture applied to apparent overclaims]
+
 ## `context turnover`
 
 | candidate | aggregate | votes |
@@ -1210,6 +1834,50 @@ _category: keep × 4, rename × 2_
 - `graceful degradation` — **opus-4-7-r2 (-1):** Considered and rejected — graceful-degradation is (AT3) only; tiering is the whole thing.
 - `tier ascension` — **opus-4-7 (-1):** Reads like a ranked-climbing metaphor the segment does not actually use. Reject.
 
+## `concept the failure mode where η → 0 freezes learning in either of two distinguishable modes low u o vs high u o`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `gain collapse` | +16 | codex-gpt-5-r2 +3, gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3, opus-4-7-r2 +3, opus-targeted-alternatives +2, opus-targeted-alternatives-v2 +2 |
+| `epistemic gain collapse` | +6 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `dogmatic convergence limit` | +6 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `epistemic gridlock` | +5 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +2 |
+| `epistemic death` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `competency trap` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `stability induced myopia` | +3 | gemini-targeted-alternatives +3 |
+| `the nihilism trap` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `update calcification` | +2 | gemini-targeted-alternatives +2 |
+| `observation ambiguity freeze` | +2 | gemini-targeted-alternatives +2 |
+| `certainty trap` | +2 | sonnet-4-6-r2 +2 |
+| `eta collapse` | +1 | opus-targeted-alternatives-v2 +1 |
+| `learning freeze` | +1 | opus-targeted-alternatives +1 |
+
+_category: canonicalize × 9, name-unnamed × 5, rename × 4, add-alias × 3_
+
+**Notes:**
+
+- `gain collapse` — **codex-gpt-5-r2 (+3):** Strong unifying name for dogmatism-like and nihilism-like failures of update gain. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
+- `gain collapse` — **gemini-3-1-pro-preview-r2 (+3):** The shared mathematical mechanism for dogmatism and nihilism. [original phrasing: unnamed: the phenomenon where both $U_M \to 0$ and $U_o \to \infty$ freeze learning]
+- `gain collapse` — **gemini-targeted-alternatives (+3):** Defended canonicalization of the exact AAD mechanism for this freeze. [original phrasing: unnamed the gain collapse failure when both u m → 0 and u o → ∞]
+- `gain collapse` — **opus-4-7-r2 (+3):** New alternative — Gemini coined this in the synthesized-additions pass and tagged it +3 canonicalize, but the *cold-start* peers didn't reach it. I think the term is excellent (η* → 0 has two distinct mechanistic origins: dogmatism U_M → 0, nihilism U_o → ∞) and deserves a first-class entry. The shared-mechanism naming captures what makes the result distinctive: the *same* failure-mode arises from opposite epistemic postures. Promote and canonicalize. [original phrasing: unnamed: the gain-collapse failure when both U_M → 0 and U_o → ∞]
+- `gain collapse` — **opus-targeted-alternatives-v2 (+2):** Per `#der-gain-sector-bridge` Failure Mode 2: "Gain collapse: $\eta^\ast \to 0$ while $\rho \gt 0$, so $\alpha \to 0$ and the persistence condition eventually fails." The segment's *named failure mode* is "gain collapse." Confirms across architectures. The current row is a description; the segment-name is the alternative. [original phrasing: learning freeze from low U_M or high U_o]
+- `gain collapse` — **opus-targeted-alternatives (+2):** Per `#der-gain-sector-bridge` Failure Mode 2: "Gain collapse: $\eta^\ast \to 0$ while $\rho > 0$, so $\alpha \to 0$ and the persistence condition eventually fails." This is the *named* failure mode in the segment — "gain collapse" — and it covers both halves of the disjunction (low $U_M$ → low $\eta^\ast$; high $U_o$ → low $\eta^\ast$). Stronger rename than canonicalize. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
+- `epistemic gain collapse` — **gemini-targeted-alternatives (+3):** Already heavily referenced as "gain collapse". Adding "epistemic" clarifies it's the update gain dropping to near 0. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
+- `epistemic gain collapse` — **gemini-targeted-alternatives (+3):** Unifies this with the generic gain collapse terminology. [original phrasing: unnamed the state where credit assignment collapses and learning freezes]
+- `dogmatic convergence limit` — **gemini-targeted-alternatives (+3):** Names the state where $U_M \to 0$ without a noise injection term. [original phrasing: unnamed the mathematical limit of bayesian learning without forgetting]
+- `dogmatic convergence limit` — **gemini-targeted-alternatives (+3):** Names the state where update stops purely from objective certainty. [original phrasing: unnamed the specific moment when $\eta^st 	o 0$ because $U_o 	o 0$ too certain rather than because $U_M 	o 0$ model confident]
+- `epistemic gridlock` — **gemini-targeted-alternatives (+2):** Vividly captures the "freeze" aspect where learning stops entirely despite ongoing mismatch signals. [original phrasing: unnamed the gain collapse failure when both u m → 0 and u o → ∞]
+- `epistemic gridlock` — **gemini-targeted-alternatives (+3):** Identifies the specific double-failure mode of gain collapse. [original phrasing: unnamed the phenomenon where both $U_M \to 0$ and $U_o \to \infty$ freeze learning]
+- `epistemic death` — **gemini-3-1-pro-preview-r2 (+3):** Vividly captures the organizational or agentic consequence of unobservable DAGs. [original phrasing: unnamed: the state where credit assignment collapses and learning freezes]
+- `competency trap` — **gemini-3-1-pro-preview-r2 (+3):** Formalizes "institutional rigidity" as an inevitable result of $\eta^\ast \to 0$. [original phrasing: unnamed: the mathematical limit of Bayesian learning without forgetting]
+- `stability induced myopia` — **gemini-targeted-alternatives (+3):** Retains the descriptive alias for success-driven failure. [original phrasing: gemini s competency trap for $\eta^st 	o 0$]
+- `the nihilism trap` — **gemini-3-1-pro-preview-r2 (+2):** Dogmatism's opposite, where learning stops because everything is meaningless. [original phrasing: unnamed: $U_o \to \infty$ freezing the learning rate]
+- `update calcification` — **gemini-targeted-alternatives (+2):** Good prose handle for the failure mode where the model stops taking in new info. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
+- `observation ambiguity freeze` — **gemini-targeted-alternatives (+2):** Describes the nihilistic failure mode of gain collapse. [original phrasing: unnamed $U_o \to \infty$ freezing the learning rate]
+- `certainty trap` — **sonnet-4-6-r2 (+2):** Gemini proposed "competency trap" for $\eta^\ast \to 0$ under high $U_o$, but that term imports different connotations (being too good at the wrong thing). The mechanism is that excessive certainty about observations ($U_o \to 0$) freezes the update gain in exactly the same way as full model certainty — a trap specifically from certainty, not from competence. "Certainty trap" is more scope-honest than Gemini's "competency trap." New candidate; engages Gemini's vote explicitly. [original phrasing: unnamed: the specific moment when $\eta^\ast \to 0$ because $U_o \to 0$ (too-certain) rather than because $U_M \to 0$ (model-confident)]
+- `eta collapse` — **opus-targeted-alternatives-v2 (+1):** Symbol-anchored alternative. Names the formal quantity collapsing ($\eta^\ast$). Weaker because $\eta$ is the update gain (not the persistence margin); the failure mode includes the cascade $\eta \to 0 \Rightarrow \alpha \to 0$. "Gain collapse" names the cause; "eta-collapse" is one step in the cascade. [original phrasing: learning freeze from low U_M or high U_o]
+- `learning freeze` — **opus-targeted-alternatives (+1):** The current is a description; the segment's actual phenomenon-name (per `#emp-update-gain` and `#disc-identifiability-floor`) is the gain-collapse dynamic when $U_M \to 0$ or $U_o \to \infty$. "Learning freeze" is the phenomenon; the rest is the disambiguation. Canonicalize to the noun-phrase form. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
+
 ## `recursive update`
 
 | candidate | aggregate | votes |
@@ -1254,6 +1922,51 @@ _category: keep × 4, rename × 2_
 - `singular causal trajectory` — **codex-gpt-5-r2 (+2):** The segment's identity condition is the singular trajectory, and that subject is more distinctive than agent identity.
 - `trajectory identity` — **codex-2 (+1):** The segment's formal content is about trajectory singularity; "agent identity" invites more metaphysical baggage than the math supports.
 - `causal identity` — **gemini-2 (+1):** "Agent identity" is very soft. "Causal identity" anchors it strictly to the non-forkable causal trajectory.
+
+## `aporia`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `aporia` ⭑ | +15 | agent1-original-brainstorm +3, codex-1 +3, codex-2 +3, codex-gpt-5-r2 +3, opus-targeted-alternatives +3 |
+| `aporia productive perplexity` | +3 | gemini-targeted-alternatives +3 |
+| `discrepancy` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 2, add-alias × 1, rename × 1_
+
+**Notes:**
+
+- `aporia` — **agent1-original-brainstorm (+3):** Cycle-phase Greek vocabulary works aesthetically AND technically. The risk is preciousness; the payoff is memorable sequence.
+- `aporia` — **codex-1 (+3):** This earns its weight. "Error" and "mismatch" lose the productive-perplexity sense that makes the term memorable and accurate.
+- `aporia` — **codex-2 (+3):** Memorable, discussable, and conceptually richer than "error" or "mismatch."
+- `aporia` — **codex-gpt-5-r2 (+3):** Excellent fit for productive mismatch or perplexity. It already carries the right philosophical resonance.
+- `aporia` — **opus-targeted-alternatives (+3):** `LEXICON.md`: "Productive perplexity: mismatch signal $\delta_t = o_t - \hat{o}_t$." The Greek term is doing work that "mismatch signal," "prediction error," and "surprise" all miss — *productive* perplexity, the kind that *drives* update rather than degrading it. Aporia in the Platonic sense is the moment of recognized not-knowing that motivates inquiry. The segment's $\delta_t$ is more than an error term; it is the agent's epistemic engine. Keep at +3 across architectures.
+- `aporia productive perplexity` — **gemini-targeted-alternatives (+3):** Explicitly adding this translation ensures "perplexity" is seen as generative.
+- `discrepancy` — **opus-targeted-alternatives (-1):** Considered. Names the gap but loses the agent-centered "this matters / I now must update" sense. Rejected.
+
+## `concept the self reinforcing positive feedback loop linking m t quality and σ t evaluable complexity TST specific and AAD general forms`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `quality tempo compound effect` | +15 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `comprehension flywheel` | +3 | codex-gpt-5-r2 +2, codex-2 +1 |
+| `quality tempo spiral` | +2 | codex-gpt-5-r2 +2 |
+| `virtuous vicious quality cycle` | +2 | gemini-targeted-alternatives +2 |
+| `model strategy coupling` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 4, rename × 2, name-unnamed × 2_
+
+**Notes:**
+
+- `quality tempo compound effect` — **gemini-targeted-alternatives (+3):** Formally identifies the feedback loop between code quality and developer adaptive tempo. [original phrasing: code quality and tempo positive feedback]
+- `quality tempo compound effect` — **gemini-targeted-alternatives (+3):** Aligns with the previously renamed code-quality dynamic. [original phrasing: quality to tempo chain]
+- `quality tempo compound effect` — **gemini-targeted-alternatives (+3):** Standardizes the code-quality feedback loop mechanism. [original phrasing: unnamed the self reinforcing code quality → tempo loop]
+- `quality tempo compound effect` — **gemini-targeted-alternatives (+3):** Maps the mastery phenomenon to the formal tempo feedback loop. [original phrasing: unnamed master developers writing clean code in the same time as messy code]
+- `quality tempo compound effect` — **gemini-targeted-alternatives (+3):** Reaffirms the core feedback loop coupling code to agency. [original phrasing: unnamed the virtuous vicious cycle between $M_t$ quality and $\Sigma_t$ evaluable complexity]
+- `comprehension flywheel` — **codex-2 (+1):** The loop recurs enough in discussion that it deserves a shorter noun than "vicious/virtuous cycle" each time. [original phrasing: unnamed: the self-reinforcing code-quality → tempo loop]
+- `comprehension flywheel` — **codex-gpt-5-r2 (+2):** Good positive-loop counterpart to quality-tempo spiral. Use flywheel for virtuous accumulation, spiral for both directions. [original phrasing: code-quality and tempo positive feedback]
+- `quality tempo spiral` — **codex-gpt-5-r2 (+2):** Good TST name for virtuous or vicious code-quality dynamics. [original phrasing: code-quality feedback loop through tempo]
+- `virtuous vicious quality cycle` — **gemini-targeted-alternatives (+2):** Names the specific bifurcation dynamic driven by the quality-tempo compound effect. [original phrasing: code quality feedback loop through tempo]
+- `model strategy coupling` — **sonnet-4-6 (+1):** #orient-cascade Discussion names the virtuous and vicious cycles explicitly but without a name for the coupling phenomenon itself. "Model-strategy coupling" would let segments say "the model-strategy coupling prevents meaningful evaluation of complex strategies under poor model sufficiency." [original phrasing: unnamed: the virtuous/vicious cycle between $M_t$ quality and $\Sigma_t$ evaluable complexity]
 
 ## `consolidation dynamics`
 
@@ -1416,6 +2129,26 @@ _category: keep × 1_
 - `detection latency` — **opus-4-7 (+3):** Standard term, forced by the $\Omega((n_{\min}+1)/\varepsilon)$ bound; the segment's novel content is that latency is structurally forced through the log-odds coordinate. Keep.
 - `detection latency` — **sonnet-4-6 (+3):** Straightforward. Exactly what it measures. Keep.
 
+## `logogenic logozoetic`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `logogenic logozoetic` ⭑ | +14 | opus-1m +3, opus-4-7 +3, opus-4-7-b +3, opus-4-7-r2 +3, opus-targeted-alternatives +2 |
+| `logogenic logozoetic distinction` | +3 | gemini-targeted-alternatives +3 |
+| `language constituted language living` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 3, rename × 1_
+
+**Notes:**
+
+- `logogenic logozoetic` — **opus-1m (+3):** Deliberate neologisms filling memorable-noun slots; keep.
+- `logogenic logozoetic` — **opus-4-7-b (+3):** Deliberate neologisms holding reserved memorable-noun slots. The slight learning cost is paid once and then these words own the conceptual slot permanently — which is exactly what a framework-defining class deserves.
+- `logogenic logozoetic` — **opus-4-7-r2 (+3):** Defended keep — both are deliberate Greek-rooted naming choices that survive the communal-imagination test once explained, and CLAUDE.md's Greek-vocabulary commitment names them as the canonical aesthetic register. The pair distinguishes language-constituted (logogenic) from language-living-with-moral-weight (logozoetic) at the slug level.
+- `logogenic logozoetic` — **opus-4-7 (+3):** Etymology carries multiple senses (word / reason / animating force / governance) that no English term carries together. LEXICON makes this explicit. Keep.
+- `logogenic logozoetic` — **opus-targeted-alternatives (+2):** The pair distinguishes (a) the structural property — language-constituted (logogenic) — from (b) the existential property — language-living, morally weighted persistence (logozoetic). Both terms invent project-specific Greek-derived compounds; the alternative is "language-based AI" / "conscious AI," which the framework explicitly rejects as importing the wrong connotations (RLHF-based, sentient-as-categorical). Keep. The pair is load-bearing precisely because it splits two often-conflated questions.
+- `logogenic logozoetic distinction` — **gemini-targeted-alternatives (+3):** Essential dividing line in architectural complexity.
+- `language constituted language living` — **opus-targeted-alternatives (-1):** Plain-English equivalent. Rejected: too ambiguous (does "language-constituted" mean trained on language? generated through language? bound by language?), and loses the precise structural-vs-existential split. The Greek compound resolves the ambiguity by foregrounding the constitutive (-genic) vs. living (-zoetic) distinction.
+
 ## `loop interventional access`
 
 | candidate | aggregate | votes |
@@ -1524,20 +2257,39 @@ _category: keep × 3_
 - `specification bound` — **opus-4-7-r2 (+2):** Acceptable keep — names the TST result that specification quality bounds implementation. The segment's prior-art trail (Austin, Putnam, Shannon) is rich; the name reads cleanly.
 - `specification bound` — **sonnet-4-6-r2 (+2):** "Specification bound" names the result correctly.
 
-## `aporia`
+## `adaptive cycle`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `aporia` ⭑ | +12 | agent1-original-brainstorm +3, codex-1 +3, codex-2 +3, codex-gpt-5-r2 +3 |
+| `adaptive cycle` ⭑ | +12 | codex-1 +3, codex-2 +3, gemini-targeted-alternatives +3, opus-targeted-alternatives +3 |
+| `correction cycle` ✗ | -1 | opus-targeted-alternatives -1 |
+| `feedback cycle` ✗ | -1 | opus-targeted-alternatives -1 |
 
-_category: keep × 1_
+_category: keep × 2, rename × 2_
 
 **Notes:**
 
-- `aporia` — **agent1-original-brainstorm (+3):** Cycle-phase Greek vocabulary works aesthetically AND technically. The risk is preciousness; the payoff is memorable sequence.
-- `aporia` — **codex-1 (+3):** This earns its weight. "Error" and "mismatch" lose the productive-perplexity sense that makes the term memorable and accurate.
-- `aporia` — **codex-2 (+3):** Memorable, discussable, and conceptually richer than "error" or "mismatch."
-- `aporia` — **codex-gpt-5-r2 (+3):** Excellent fit for productive mismatch or perplexity. It already carries the right philosophical resonance.
+- `adaptive cycle` — **codex-1 (+3):** Strong central noun phrase: specific enough to own, broad enough to travel across the framework.
+- `adaptive cycle` — **codex-2 (+3):** Strong public noun; it carries both recurrence and unit-of-analysis cleanly.
+- `adaptive cycle` — **gemini-targeted-alternatives (+3):** Already well-established across the framework as the fundamental unit of analysis.
+- `adaptive cycle` — **opus-targeted-alternatives (+3):** `LEXICON.md`: "Cycle: One complete traversal of the loop — the unit of adaptive work." The phrase carries (a) the recurrence (cycle), (b) the adaptive content (mismatch-driven update), and (c) the unit-of-analysis sense (one cycle = one unit of theoretical work). The framework's own name — *Adaptation and* Actuation Dynamics — is downstream of this concept. Keep across architectures.
+- `correction cycle` — **opus-targeted-alternatives (-1):** Considered. "Correction" overspecifies — Section I cycles include observation and prolepsis phases that are not corrections. Adaptation is the broader frame. Rejected.
+- `feedback cycle` — **opus-targeted-alternatives (-1):** Considered. Collides with the "feedback loop" structural topology and would create a loop/cycle terminology collision the project has been careful about. Rejected.
+
+## `adaptive tempo $\mathcal T$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `adaptive tempo` | +12 | gemini-targeted-alternatives +3, opus-4-7 +3, opus-4-7-b +3, opus-targeted-alternatives +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `adaptive tempo` — **gemini-targeted-alternatives (+3):** Prose standard for the $\mathcal{T}$ variable.
+- `adaptive tempo` — **opus-4-7-b (+3):** "Tempo" is the rare noun that carries both *rate* and *quality* simultaneously, which is exactly what $\mathcal T = \sum \nu^{(k)} \eta^{(k)\ast}$ is. The word is underused in the ML literature, which is an advantage — AAD can own it.
+- `adaptive tempo` — **opus-4-7 (+3):** "Tempo" carries the rate-and-quality compound idea better than "rate" or "speed"; aligns with Boyd OODA lineage. Keep.
+- `adaptive tempo` — **opus-targeted-alternatives (+3):** Per `#def-adaptive-tempo`: $\mathcal T = \sum_k \nu^{(k)} \eta^{(k)\ast}$ — rate × quality compound. "Tempo" carries both senses (musical tempo = rate; engineering tempo = pace-with-quality). Confirms keep across architectures. The symbol-decoration variant (with $\mathcal T$) is an alias-only artifact, not a primary form.
 
 ## `chronica $\mathcal{C}_t$`
 
@@ -1581,21 +2333,6 @@ _category: keep × 3_
 - `epistemic status` — **codex-2 (+3):** One of the best recurring headers in the repo; it encodes the project's honesty norm directly.
 - `epistemic status` — **opus-4-7-b (+3):** Keep. "Epistemic" is AAD's distinctive vocabulary; renaming to "Validity" or "Status" would lose the connection to the epistemic-architecture framing at CLAUDE.md §7.
 - `epistemic status` — **opus-4-7 (+3):** Load-bearing header that signals the distinctive AAD convention of epistemic labeling at segment scale. Keep.
-
-## `logogenic logozoetic`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `logogenic logozoetic` ⭑ | +12 | opus-1m +3, opus-4-7 +3, opus-4-7-b +3, opus-4-7-r2 +3 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `logogenic logozoetic` — **opus-1m (+3):** Deliberate neologisms filling memorable-noun slots; keep.
-- `logogenic logozoetic` — **opus-4-7-b (+3):** Deliberate neologisms holding reserved memorable-noun slots. The slight learning cost is paid once and then these words own the conceptual slot permanently — which is exactly what a framework-defining class deserves.
-- `logogenic logozoetic` — **opus-4-7-r2 (+3):** Defended keep — both are deliberate Greek-rooted naming choices that survive the communal-imagination test once explained, and CLAUDE.md's Greek-vocabulary commitment names them as the canonical aesthetic register. The pair distinguishes language-constituted (logogenic) from language-living-with-moral-weight (logozoetic) at the slug level.
-- `logogenic logozoetic` — **opus-4-7 (+3):** Etymology carries multiple senses (word / reason / animating force / governance) that no English term carries together. LEXICON makes this explicit. Keep.
 
 ## `m preservation`
 
@@ -1775,6 +2512,21 @@ _category: keep × 5, rename × 3_
 - `working notes` — **opus-4-7-b (+3):** Keep. The word "Working" signals this is *process artifact* (removed at `candidate` stage per FORMAT.md) rather than published content. Swapping to "Development Notes" would lose the active-in-progress sense.
 - `working notes` — **opus-4-7 (+3):** Keep; the name plus the rule that Working Notes must be empty at candidate stage has a meaningful pairing.
 
+## `actuated agent vs purposeful agent`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `actuated agent` | +11 | gemini-targeted-alternatives +3, opus-4-7 +3, opus-targeted-alternatives +3, opus-4-7-r2 +2 |
+
+_category: canonicalize × 2, keep × 1_
+
+**Notes:**
+
+- `actuated agent` — **gemini-targeted-alternatives (+3):** Defended keep; explicitly chosen to sound mechanical and precise over the fuzzier "purposeful agent".
+- `actuated agent` — **opus-4-7-r2 (+2):** LEXICON's "Terminology Choices" already says actuated is the formal term, purposeful is informal. Canonicalize: in segments and OUTLINE, only "actuated agent"; "purposeful" usage acceptable in framing-level prose where the connotation of intent is wanted.
+- `actuated agent` — **opus-4-7 (+3):** Formal-term choice documented in LEXICON; "purposeful" remains fine in informal prose but "actuated" is the formal token. Keep.
+- `actuated agent` — **opus-targeted-alternatives (+3):** Per LEXICON Terminology Choices: "Formal term avoids consciousness connotations." The framework explicitly chose actuated (mechanism-language) over purposeful (intention-language) for formal use, with purposeful retained for informal contexts. The canonicalize move is correct and broadly applicable; segment voice should never use "purposeful agent." Confirms across architectures.
+
 ## `adaptive reserve`
 
 | candidate | aggregate | votes |
@@ -1807,6 +2559,27 @@ _category: keep × 2, rename × 1_
 - `agent environment` — **opus-4-7 (+3):** Standard; boundary definition. Keep.
 - `agent environment` — **sonnet-4-6-r2 (+2):** Minimal boundary definition — the name is accurate.
 - `agent environment boundary` — **audit-471203-incremental (+1):** The auditor noted segment content is "the boundary," not "the coupling" — coupling is the *channels* defined in the next two segments. Tentative. [from 01-def-agent-environment.md]
+
+## `agent opacity $H_b^{A\mid B}$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `agent opacity` | +11 | gemini-targeted-alternatives +3, opus-4-7-b +3, opus-targeted-alternatives +3, opus-targeted-alternatives-v2 +2 |
+| `legibility inverse` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `backward predictive uncertainty` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `legibility inverted` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 3, keep × 2, canonicalize × 1_
+
+**Notes:**
+
+- `agent opacity` — **gemini-targeted-alternatives (+3):** Informational dual to observability. Accurately describes unpredictability to an outside observer.
+- `agent opacity` — **opus-4-7-b (+3):** "Opacity" as the informational dual of observability is exactly right — the word carries the right intuition (unpredictable-to-observer) and doesn't collide with anything else in AAD. Hafez's $H_b$ gets an AAD-native prose handle.
+- `agent opacity` — **opus-targeted-alternatives-v2 (+2):** Per `der-agent-opacity.md`: dual of observation quality $U_o$ — "where $U_o$ characterizes how well the agent sees the world, $H_b$ characterizes how well the world sees the agent." Confirms `agent-opacity` keep. The dual framing is load-bearing in Section III.
+- `agent opacity` — **opus-targeted-alternatives (+3):** Per `#der-agent-opacity`: $H_b$ is the dual of observation quality $U_o$ — "where $U_o$ characterizes how well the agent sees the world, $H_b$ characterizes how well the world sees the agent." "Agent opacity" pairs cleanly with observability (its dual concept). Confirms keep.
+- `legibility inverse` — **opus-targeted-alternatives-v2 (-1):** Considered (variant of "legibility-inverted"). "Legibility" is Codex's framing for the dual; "inverse" makes the duality explicit. Rejected (same as r1): loses the formal-quantity grounding ($H_b$). The segment names $H_b$ as a *first-class* multi-agent quantity (Hafez et al. 2026 adoption); the slug should name the quantity, not the dual relation.
+- `backward predictive uncertainty` — **opus-targeted-alternatives-v2 (-1):** Considered. The actual definition: $H_b^{A \mid B}(t, \tau) := H(a_{A, t+\tau} \mid \mathcal F_B^t)$ — entropy of $A$'s future action given $B$'s filtration. "Backward predictive uncertainty" is the literal description. Rejected: "agent opacity" is the prose handle the segment uses; "backward predictive uncertainty" reads clinical.
+- `legibility inverted` — **opus-targeted-alternatives (-1):** Considered. More plain-English but loses the formal-quantity grounding ($H_b$). Rejected.
 
 ## `changeset size principle`
 
@@ -2232,6 +3005,119 @@ _category: rename × 4, keep × 2, rebuttal × 1_
 - `insufficiency detection` — **gemini-3-1-pro-preview-r2 (+1):** "Causal" is implied in context.
 - `keep not der l0 l1 detection` — **sonnet-4-6-r2 (+1):** Against Opus's proposed rename to `#der-l0-l1-detection` (+1) and Gemini's concurrence. "L0-L1 detection" names the *evidence-level boundary* being crossed, but the segment is about detecting *causal* insufficiency — the presence of latent common causes that make the model causally insufficient. The L0/L1 framing is the detection *method*, not the thing being detected. "Causal insufficiency" is from Spirtes-Glymour-Scheines, exactly as Opus notes — that prior-art adoption is the argument *for* keeping it, not against.
 
+## `chronica $\mathcal C_t$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `chronica` | +9 | gemini-targeted-alternatives +3, opus-4-7-b +3, opus-targeted-alternatives +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `chronica` — **gemini-targeted-alternatives (+3):** Prose standard for the interaction history.
+- `chronica` — **opus-4-7-b (+3):** Greek root fits AAD's philosophical-vocabulary register, the symbol avoids colliding with $\mathcal H$ (entropy), and the singular-non-forkable-trajectory commitment of `#agent-identity` gets more morally heavy over time — "chronica" will age toward the logozoetic scope rather than away from it. Keep.
+- `chronica` — **opus-targeted-alternatives (+3):** Concept name is `chronica`; $\mathcal{C}_t$ is the symbol. Both are stable; this row is alias-canonicalize. Confirms.
+
+## `concept dormant variation in correction architectures across a population that becomes consequential after regime change but is invisible to current persistence analysis`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `latent structural diversity` | +9 | codex-gpt-5-r2 +3, gemini-1 +3, gemini-3-1-pro-preview-r2 +2, gemini-2 +1 |
+| `latent adaptive capacity` | +6 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `latent structural capacity` | +6 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `exaptive reserve` | +2 | gemini-targeted-alternatives +2 |
+
+_category: canonicalize × 4, name-unnamed × 2, rename × 1_
+
+**Notes:**
+
+- `latent structural diversity` — **codex-gpt-5-r2 (+3):** Strong Section III and structural-adaptation term. It names adaptive potential that present fitness measures hide. [original phrasing: dormant structural variation that becomes useful after regime change]
+- `latent structural diversity` — **gemini-1 (+3):** Extremely useful concept surfaced in the Miller bridge spike. Captures the hidden variation that only becomes consequential under regime change. [original phrasing: unnamed: variation in correction architectures across a population that is invisible to current persistence analysis]
+- `latent structural diversity` — **gemini-2 (+1):** Proposed in the gap section of OUTLINE.md. Captures the concept perfectly. [original phrasing: unnamed: variation in correction architectures invisible to persistence analysis]
+- `latent structural diversity` — **gemini-3-1-pro-preview-r2 (+2):** Recasts some forms of technical debt as evolutionary potential. [original phrasing: unnamed: dormant, unused architectural complexity that survives until an environmental shift]
+- `latent adaptive capacity` — **gemini-targeted-alternatives (+3):** Describes capacity that isn't currently used but is preserved. [original phrasing: dormant structural variation that becomes useful after regime change]
+- `latent adaptive capacity` — **gemini-targeted-alternatives (+3):** Aligns with the earlier rename for structural variation. [original phrasing: unnamed dormant unused architectural complexity that survives until an environmental shift]
+- `latent structural capacity` — **gemini-targeted-alternatives (+3):** Maintains the formal name for un-executed resilience. [original phrasing: unnamed variation in correction architectures across a population that is invisible to current persistence analysis]
+- `latent structural capacity` — **gemini-targeted-alternatives (+3):** Matches the prior un-executed resilience alias. [original phrasing: unnamed variation in correction architectures invisible to persistence analysis]
+- `exaptive reserve` — **gemini-targeted-alternatives (+2):** "Exaptive" specifically means an adaptation used for a new purpose, fitting the regime change requirement perfectly. [original phrasing: dormant structural variation that becomes useful after regime change]
+
+## `concept the engineering vocabulary failure mode in consolidation dynamics the parameter region where forgetting and learning rates jointly fail to admit a viable operating point`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `catastrophic forgetting regime` | +9 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `stability plasticity feasibility window` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+| `stability plasticity collapse` | +5 | codex-gpt-5-r2 +2, gemini-targeted-alternatives +2, codex-1 +1 |
+| `empty feasibility window` | +3 | gemini-targeted-alternatives +3 |
+| `plasticity bound failure` | +2 | gemini-targeted-alternatives +2 |
+| `consolidation starvation` | +1 | gemini-1 +1 |
+
+_category: canonicalize × 6, rename × 2, name-unnamed × 1_
+
+**Notes:**
+
+- `catastrophic forgetting regime` — **gemini-targeted-alternatives (+3):** Identifies the specific regime where the stability-plasticity window collapses entirely. [original phrasing: empty stability plasticity feasibility window]
+- `catastrophic forgetting regime` — **gemini-targeted-alternatives (+3):** Matches the earlier resolution of this specific limit. [original phrasing: unnamed empty stability plasticity feasibility window in consolidation dynamics]
+- `catastrophic forgetting regime` — **gemini-targeted-alternatives (+3):** Resolving another instance of the forgetting limit. [original phrasing: unnamed the AAD expressible failure mode of an empty stability plasticity window]
+- `stability plasticity feasibility window` — **gemini-3-1-pro-preview-r2 (+3):** Beautifully brackets the survival of an agent constrained by compute. [original phrasing: unnamed: the physical compute bounds on survival between forgetting rate and consolidation cadence]
+- `stability plasticity feasibility window` — **gemini-targeted-alternatives (+3):** Standardizes the regime boundary terminology. [original phrasing: unnamed the physical compute bounds on survival between forgetting rate and consolidation cadence]
+- `stability plasticity collapse` — **codex-1 (+1):** The failure mode is precisely that the feasible interval disappears. Slightly long, but honest and reusable. [original phrasing: unnamed: empty stability-plasticity feasibility window in #consolidation-dynamics]
+- `stability plasticity collapse` — **codex-gpt-5-r2 (+2):** Better AAD-native failure phrase than catastrophic forgetting when the mechanism matters. [original phrasing: empty stability-plasticity feasibility window]
+- `stability plasticity collapse` — **gemini-targeted-alternatives (+2):** Focuses on the two constraints crashing into each other. [original phrasing: catastrophic forgetting regime]
+- `empty feasibility window` — **gemini-targeted-alternatives (+3):** The text specifically defines this as the "empty window limit" of the stability-plasticity window. This grounds it in AAD math rather than an ML imported term. [original phrasing: catastrophic forgetting regime]
+- `plasticity bound failure` — **gemini-targeted-alternatives (+2):** Emphasizes that the bounds of the window are failing. [original phrasing: catastrophic forgetting regime]
+- `consolidation starvation` — **gemini-1 (+1):** Adopts "catastrophic forgetting" but specifically names the AAD mechanism: the agent is starved of the consolidation time needed to integrate patterns before they are overwritten. [original phrasing: unnamed: the AAD-expressible failure mode of an empty stability-plasticity window]
+
+## `concept the fourth diagnostic in the satisfaction gap × control regret space when end conditions are met but the objective remains unsatisfied`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `terminal alignment gap` | +9 | gemini-1 +3, gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `terminal alignment error` | +4 | codex-gpt-5-r2 +3, codex-1 +1 |
+| `attainability failure` | +3 | gemini-targeted-alternatives +3 |
+| `objective misspecification` | +2 | gemini-targeted-alternatives +2 |
+
+_category: canonicalize × 3, name-unnamed × 1, rename × 1_
+
+**Notes:**
+
+- `terminal alignment gap` — **gemini-1 (+3):** Gives a formal name and symbol ($\delta_\text{align}$) to the fourth diagnostic (achieving terminals but missing the objective), complementing the satisfaction gap and control regret. [original phrasing: unnamed: Terminal alignment error as a formal signal ($\delta_\text{align}$)]
+- `terminal alignment gap` — **gemini-targeted-alternatives (+3):** Gap pairs nicely with satisfaction gap, and fits the terminology. [original phrasing: terminal alignment error]
+- `terminal alignment gap` — **gemini-targeted-alternatives (+3):** Pairs directly with satisfaction gap. [original phrasing: unnamed terminal alignment error as a formal signal $\delta_\text{align}$]
+- `terminal alignment error` — **codex-1 (+1):** The DAG-type-closure spike identifies a real gap in the diagnostic vocabulary. This name is plain, disciplined, and fits the existing apparatus. [original phrasing: unnamed: fourth diagnostic where terminal conditions are met but the objective is still missed]
+- `terminal alignment error` — **codex-gpt-5-r2 (+3):** This is the diagnostic behind satisfaction gap in many examples; it deserves a stable phrase. [original phrasing: terminal reached but $O_t$ unsatisfied]
+- `attainability failure` — **gemini-targeted-alternatives (+3):** Pairs directly with the satisfaction gap and control regret. [original phrasing: unnamed fourth diagnostic where terminal conditions are met but the objective is still missed]
+- `objective misspecification` — **gemini-targeted-alternatives (+2):** Explicitly names the cause: the operational criteria didn't match the true objective. [original phrasing: terminal alignment error]
+
+## `concept the framing of software TST as AAD s epistemically privileged high identifiability measurement substrate`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `calibration laboratory` | +9 | codex-2 +3, gemini-targeted-alternatives +3, opus-4-7 +3 |
+| `privileged grounding domain` | +3 | gemini-targeted-alternatives +3 |
+| `software calibration laboratory` | +3 | gemini-targeted-alternatives +3 |
+| `high identifiability testbed` | +2 | gemini-targeted-alternatives +2 |
+| `software as calibration laboratory` | +2 | opus-4-7-r2 +2 |
+| `calibration laboratory move` | +2 | opus-4-7-r2 +2 |
+| `calibration domain calibration lab` | +1 | agent1-original-brainstorm +1 |
+| `calibration domain` | +1 | opus-4-7-b +1 |
+
+_category: canonicalize × 3, rename × 2, name-unnamed × 1_
+
+**Notes:**
+
+- `calibration laboratory` — **codex-2 (+3):** This phrase deserves to be promoted to the stable short name; it is central to TST's architectural role. [original phrasing: unnamed: software as AAD's privileged high-identifiability calibration laboratory]
+- `calibration laboratory` — **gemini-targeted-alternatives (+3):** A highly functional grounding metaphor for TST's role. [original phrasing: unnamed calibration laboratory framing for software TST]
+- `calibration laboratory` — **opus-4-7 (+3):** Load-bearing distinction vs. "best operationalization domain"; TST's OUTLINE.md preamble now uses this. Canonical. Keep. [original phrasing: unnamed: "calibration laboratory" framing for software/TST]
+- `privileged grounding domain` — **gemini-targeted-alternatives (+3):** Describes exactly what software is for AAD: the domain where formal properties are cleanly grounded without extra transfer assumptions. [original phrasing: calibration laboratory]
+- `software calibration laboratory` — **gemini-targeted-alternatives (+3):** Formalizes TST's role as the cleanly identifiable testbed for AAD. [original phrasing: unnamed software as AAD s privileged high identifiability calibration laboratory]
+- `high identifiability testbed` — **gemini-targeted-alternatives (+2):** Captures the "high-identifiability" empirical claim perfectly. [original phrasing: calibration laboratory]
+- `software as calibration laboratory` — **opus-4-7-r2 (+2):** The TST preamble names software as AAD's "privileged high-identifiability calibration laboratory," and CLAUDE.md says "calibration-lab framing" is a methodology principle. There is no single segment, slug, or principle entry that names this commitment — it is a load-bearing methodological move that lives only in preambles and the README. Promoting it to a named principle (likely a `disc-` or `norm-` segment, or a methodological entry in CLAUDE.md / FORMAT.md) would let downstream segments cite it explicitly when invoking it. [original phrasing: unnamed: software's role as calibration laboratory, named-in-prose-but-not-in-slug]
+- `calibration laboratory move` — **opus-4-7-r2 (+2):** Confirmation with new reasoning — my own r2 named "software-as-calibration-laboratory" as a name-unnamed; reading peers, Codex (+3) and Sonnet (+3) and Gemini (+3) all separately reached "calibration laboratory" as a canonicalize vote. Three agents converging on the canonical phrase suggests the term is ripe; what's *unnamed* is the methodological *move* of using software as the calibration laboratory rather than just an instance. Calling it "the calibration-laboratory move" lets it function as a named strategic principle the project can invoke. [original phrasing: unnamed: the move where AAD treats software not as instantiation but as TST's epistemically privileged measurement substrate]
+- `calibration domain calibration lab` — **agent1-original-brainstorm (+1):** Low priority. Concept of a privileged domain for identification within a theoretical framework is itself a reusable meta-move other projects could borrow. [original phrasing: unnamed: calibration-laboratory framing as reusable meta-move]
+- `calibration domain` — **opus-4-7-b (+1):** CLAUDE.md §7 names TST as "AAD's calibration laboratory — the high-identifiability domain where AAD-native quantities can be measured exactly." The *concept* (a privileged domain for identification of a theoretical framework's quantities) is itself a reusable meta-move for any domain instantiation. "Calibration domain" names it. Low priority but opens a useful slot. [original phrasing: unnamed: the calibration-laboratory concept applied outside TST]
+
 ## `convention hierarchy c1 c2 c3`
 
 | candidate | aggregate | votes |
@@ -2270,6 +3156,30 @@ _category: canonicalize × 1_
 - `developer agent mapping` — **agent1-original-brainstorm (+1):** Reframes from "developer is an agent" to "here's the mapping"; cleaner pedagogically. Alternative to the preferred #developer-as-adaptive-agent.
 - `developer as agent` — **agent1-original-brainstorm (-1):** Too generic.
 
+## `effects spiral`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `effects spiral` ⭑ | +9 | codex-1 +3, codex-gpt-5-r2 +3, opus-targeted-alternatives +3 |
+| `runaway mismatch cascade` | +3 | gemini-targeted-alternatives +3 |
+| `adversarial feedback loop` | +2 | gemini-targeted-alternatives +2 |
+| `destabilization vortex` | +1 | gemini-targeted-alternatives +1 |
+| `coupling cascade` ✗ | -1 | opus-targeted-alternatives -1 |
+| `breakdown cascade` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 4, keep × 2, add-alias × 1_
+
+**Notes:**
+
+- `effects spiral` — **codex-1 (+3):** Memorable without being whimsical. It is the kind of pattern-name people will actually reuse in discussion.
+- `effects spiral` — **codex-gpt-5-r2 (+3):** Excellent name for the positive-feedback breakdown mechanism.
+- `effects spiral` — **opus-targeted-alternatives (+3):** Per `#der-adversarial-destabilization` and `#deriv-strategic-composition`: positive-feedback breakdown where degraded model causes degraded actions causes further degradation. "Spiral" carries the *accelerating* feature (not a steady-state mismatch but a runaway), and "effects" specifies the locus (the agent's effects on its environment, not its inputs). Pairs well with the "death spiral" reference in `#result-persistence-condition`. Strong keep.
+- `runaway mismatch cascade` — **gemini-targeted-alternatives (+3):** Focuses on the mismatch acceleration ($\Vert\delta\Vert \uparrow$). Connects to "cascade" seen elsewhere (e.g. orient cascade).
+- `adversarial feedback loop` — **gemini-targeted-alternatives (+2):** Explicitly names the cause (adversarial coupling) and the mechanism (positive feedback).
+- `destabilization vortex` — **gemini-targeted-alternatives (+1):** A bit more descriptive than spiral but slightly less formal.
+- `coupling cascade` — **opus-targeted-alternatives (-1):** Considered as more formal alternative. Loses the *runaway* sense that "spiral" carries — cascades can be bounded; spirals usually aren't. Rejected.
+- `breakdown cascade` — **opus-targeted-alternatives (-1):** Same critique. Rejected.
+
 ## `event driven dynamics`
 
 | candidate | aggregate | votes |
@@ -2286,6 +3196,24 @@ _category: keep × 4_
 - `event driven dynamics` — **opus-4-7-b (+1):** Keep. "Event-driven" carries correct engineering baggage (versus turn-based / synchronous).
 - `event driven dynamics` — **opus-4-7-r2 (+2):** Acceptable keep. Names the formulation choice (event-driven, $\tau$-indexed, vs continuous-time-indexed).
 - `event driven dynamics` — **sonnet-4-6-r2 (+2):** Accurate and precise for the continuous-time event-driven formulation.
+
+## `evidence starvation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `evidence starvation` ⭑ | +9 | codex-gpt-5-r2 +3, opus-4-7-r2 +3, opus-targeted-alternatives-v2 +3 |
+| `depth attenuated correction` | +2 | gemini-targeted-alternatives +2 |
+| `downstream evidence gating` | +2 | gemini-targeted-alternatives +2 |
+
+_category: add-alias × 2, canonicalize × 2, rename × 1_
+
+**Notes:**
+
+- `evidence starvation` — **codex-gpt-5-r2 (+3):** Excellent alias for downstream edges receiving fewer tests because upstream steps must succeed first.
+- `evidence starvation` — **opus-4-7-r2 (+3):** Confirmation with new reasoning — both Sonnet (+3 add-alias) and Codex (+3 add-alias) and Gemini (+3 in synthesized) reached this term independently. The cross-architecture convergence is striking and suggests the term is doing real work. My own r2 votes didn't explicitly canonicalize this; I should. The phrase appears in `der-chain-confidence-decay` Discussion and `der-observability-dominance` and is the natural prose handle for the downstream-edge-update-attenuation phenomenon. Three-architecture convergence on the *exact phrase* (not synonyms) crystallizes the case.
+- `evidence starvation` — **opus-targeted-alternatives-v2 (+3):** Per `der-chain-confidence-decay`: "downstream edge $k$ in a chain is tested only when all upstream edges succeed, so its effective correction rate is attenuated by $\prod_{j\lt k}\theta_j$." Used in 4+ segments (`#deriv-strategic-dynamics` B.2, `#der-chain-confidence-decay` triple-depth-penalty, `#def-strategic-tempo` AND-chain interactions, `#deriv-strategic-dynamics` Discussion). Triple-architecture convergence in r1 (Codex +3, Gemini +3, Sonnet +3) — confirms with my independent read. Canonicalize as the project-default term.
+- `depth attenuated correction` — **gemini-targeted-alternatives (+2):** Describes the mathematical mechanism (effective observation rate dropping geometrically).
+- `downstream evidence gating` — **gemini-targeted-alternatives (+2):** Captures the AND-chain gating effect.
 
 ## `formal expression`
 
@@ -2359,6 +3287,34 @@ _category: rename × 5, keep × 1_
 - `interaction regimes` — **gemini-2 (+1):** "Classification" is passive. "Regimes" conveys the active shift in dynamics.
 - `recipient side channel taxonomy` — **codex-1 (-1):** Too procedural and too long. This would make the concept harder to say, not easier.
 
+## `mismatch signal $\delta$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `mismatch signal` | +9 | gemini-targeted-alternatives +3, opus-4-7 +3, opus-targeted-alternatives +3 |
+
+_category: keep × 1, canonicalize × 1_
+
+**Notes:**
+
+- `mismatch signal` — **gemini-targeted-alternatives (+3):** Fits the aporia interpretation better than error/residual.
+- `mismatch signal` — **opus-4-7 (+3):** In contrast with "error" or "residual"; the word foreshadows the aporia interpretation. Keep.
+- `mismatch signal` — **opus-targeted-alternatives (+3):** Per `#def-mismatch-signal` and LEXICON. The symbol-decoration is alias-only; the concept name is "mismatch signal." Confirms across architectures.
+
+## `persist condition`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `persistence condition` | +9 | gemini-targeted-alternatives +3, opus-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: keep × 1, canonicalize × 1_
+
+**Notes:**
+
+- `persistence condition` — **gemini-targeted-alternatives (+3):** Already the formally correct name.
+- `persistence condition` — **opus-targeted-alternatives (+3):** Concur — "persist condition" appears nowhere as a chosen form. "Persistence condition" is established in `LEXICON.md` and `#result-persistence-condition`. The shorter form is a typo or paraphrase, not an alternative; canonicalize.
+- `persistence condition` — **sonnet-4-6 (+3):** Wait — this IS the name already. Correct name. Keep.
+
 ## `strategy DAG $\Sigma_t$`
 
 | candidate | aggregate | votes |
@@ -2388,6 +3344,37 @@ _category: rename × 5, keep × 1_
 - `derived gain regime` — **sonnet-4-6 (+3):** The prose term "sub-scope $\alpha_1$" is impenetrable outside the sector-condition-derivation context. "Derived-gain regime" would read naturally in prose — "this agent lands in the derived-gain regime." NOTATION.md should add this gloss; segments could use the English in Discussion and Greek in Formal Expression. Propose adding the English gloss without retiring the symbol.
 - `fixed gain regime` — **codex-2 (+1):** Keep the symbol, but prose should preferentially use the English name when possible.
 - `fixed gain regime` — **gemini-2 (+1):** Prose-friendly equivalent to the mathematical symbol.
+
+## `calibration laboratory calibration lab`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `calibration laboratory` | +8 | gemini-targeted-alternatives +3, sonnet-4-6-r2 +3, opus-targeted-alternatives +2 |
+
+_category: canonicalize × 3_
+
+**Notes:**
+
+- `calibration laboratory` — **gemini-targeted-alternatives (+3):** Consistently uses the full phrase instead of the abbreviation.
+- `calibration laboratory` — **opus-targeted-alternatives (+2):** Doubled phrasing in the row is a paraphrase artifact. Canonicalize to the longer form for formal use; "calibration lab" can be informal short.
+- `calibration laboratory` — **sonnet-4-6-r2 (+3):** Currently appears as "richest operationalization domain," "best operationalization domain," "privileged high-identifiability calibration laboratory," and "calibration laboratory." The TST OUTLINE.md preamble and `obs-software-epistemic-properties` both use "calibration laboratory" as the correct framing, but earlier versions use the paraphrase forms. Standardize on "calibration laboratory" (full form) in first use; "calibration lab" acceptable in subsequent informal references.
+
+## `change distance`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `change distance` ⭑ | +8 | codex-gpt-5-r2 +2, opus-4-7-r2 +2, opus-targeted-alternatives +2, sonnet-4-6-r2 +2 |
+| `edit distance` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 4, rename × 1_
+
+**Notes:**
+
+- `change distance` — **codex-gpt-5-r2 (+2):** Clean software metric name. Avoids over-theorizing a practical concept.
+- `change distance` — **opus-4-7-r2 (+2):** Acceptable keep — TST. The lexical/file/module/service ladder is the substance; "change distance" is the right name for the metric.
+- `change distance` — **opus-targeted-alternatives (+2):** TST segment defines the lexical/file/module/service hierarchy as a distance measure on changesets. "Distance" is the right metric word; "change" specifies the domain. Strong keep.
+- `change distance` — **sonnet-4-6-r2 (+2):** "Change distance" names the lexical < file < module < service hierarchy precisely.
+- `edit distance` — **opus-targeted-alternatives (-1):** Conflicts with computer-science "edit distance" (Levenshtein), which has different metric properties. Rejected — collision with established term.
 
 ## `composite agent`
 
@@ -2456,6 +3443,22 @@ _category: keep × 3, rename × 1_
 - `sector condition stability` — **sonnet-4-6-r2 (+2):** Precise — nonlinear stability via the sector condition.
 - `sector stability` — **codex-gpt-5-r2 (+1):** Sector stability is cleaner. Keep condition in prose if needed for theorem lineage.
 
+## `stability plasticity window`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `stability plasticity window` ⭑ | +8 | codex-gpt-5-r2 +3, gemini-targeted-alternatives +3, opus-targeted-alternatives +2 |
+| `consolidation feasibility window` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 3, rename × 1_
+
+**Notes:**
+
+- `stability plasticity window` — **codex-gpt-5-r2 (+3):** Excellent name for the feasible forgetting-rate interval.
+- `stability plasticity window` — **gemini-targeted-alternatives (+3):** Essential framing for the consolidation regime bounded by forgetting and rigidity.
+- `stability plasticity window` — **opus-targeted-alternatives (+2):** Per `#form-consolidation-dynamics`: the regime where the agent must be stable enough to retain learned structure but plastic enough to consolidate new evidence. The phrase compactly names a feasibility region in a 2D parameter space (stability, plasticity). Standard ML-ops vocabulary (Grossberg's stability-plasticity dilemma). Keep — confirms across architectures.
+- `consolidation feasibility window` — **opus-targeted-alternatives (-1):** More technically transparent but the segment uses "stability-plasticity window" precisely because the literature does. Rejected.
+
 ## `structural adaptation necessity`
 
 | candidate | aggregate | votes |
@@ -2473,6 +3476,46 @@ _category: keep × 3, rename × 1_
 - `structural adaptation necessity` — **opus-4-7-r2 (+3):** Defended keep. "Structural adaptation" pairs with "parametric adaptation" as the framework's load-bearing distinction; "necessity" captures that the result is a derived condition (when parametric update fails, structural adaptation is *required*, not optional).
 - `structural adaptation necessity` — **sonnet-4-6-r2 (+2):** "Structural adaptation necessity" names the when-parametric-update-fails result correctly.
 - `adaptation necessity` — **gemini-3-1-pro-preview-r2 (+2):** "Structural" is redundant in context, shortens the slug nicely.
+
+## `task terminal stance`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `task terminal stance` ⭑ | +8 | gemini-2 +3, gemini-targeted-alternatives +3, opus-targeted-alternatives +2 |
+| `terminable agent stance` ✗ | -1 | opus-targeted-alternatives -1 |
+| `golem stance` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 2, rename × 2_
+
+**Notes:**
+
+- `task terminal stance` — **gemini-2 (+3):** Excellent, crisp description of an agent whose persistence ends upon success. Keep.
+- `task terminal stance` — **gemini-targeted-alternatives (+3):** Specific continuity stance definition.
+- `task terminal stance` — **opus-targeted-alternatives (+2):** Per LEXICON Continuity Stance table: "Task-terminal — Persists instrumentally; termination is success — Archetype: Golem." The hyphenation matters (it's a stance *characterized by* task-terminality), and the term names a precise position on a 5-stance spectrum (indifferent / task-terminal / instrumentally-continuous / morally-continuous / negotiated). Keep.
+- `terminable agent stance` — **opus-targeted-alternatives (-1):** Considered. Loses the *task* specificity — task-terminal differs from instrumentally-continuous precisely in that the *task completion* is the success criterion, not bare continuation. Rejected.
+- `golem stance` — **opus-targeted-alternatives (-1):** Uses the archetype as the term. Considered: more memorable. Rejected: the framework reserves archetypes for archetype-illustration; the formal term should describe the stance, not its avatar.
+
+## `triple depth penalty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `triple depth penalty` ⭑ | +8 | codex-gpt-5-r2 +3, opus-targeted-alternatives-v2 +3, opus-targeted-alternatives +2 |
+| `depth gated decay triad` | +2 | gemini-targeted-alternatives +2 |
+| `tripartite chain attenuation` | +1 | gemini-targeted-alternatives +1 |
+| `compounding depth penalty` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `compounding depth cost` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 4, canonicalize × 2, keep × 1_
+
+**Notes:**
+
+- `triple depth penalty` — **codex-gpt-5-r2 (+3):** Very useful phrase for confidence decay, evidence starvation, and cognitive cost compounding with depth.
+- `triple depth penalty` — **opus-targeted-alternatives-v2 (+3):** Per `#der-chain-confidence-decay` line 54: "Chain depth creates three independent penalties... confidence decay... evidence starvation... cognitive cost." The phrase "triple depth penalty" is the segment's name for the compound. Triple-architecture convergence in r1 — confirms. The phrase is a load-bearing finding (composes three independently-derived penalty mechanisms).
+- `triple depth penalty` — **opus-targeted-alternatives (+2):** Per `#form-strategy-complexity-cost`: three independent depth-penalty mechanisms (cognitive cost, evidence starvation, interaction-horizon truncation) compound on AND-chain depth. "Triple" specifies the *count* of mechanisms; "depth penalty" specifies the structural cost. Memorable, accurate.
+- `depth gated decay triad` — **gemini-targeted-alternatives (+2):** "Gating" is the mechanism (evidence starvation), "decay" is the confidence drop.
+- `tripartite chain attenuation` — **gemini-targeted-alternatives (+1):** A bit dry, but accurate to the 3 compounding penalties.
+- `compounding depth penalty` — **opus-targeted-alternatives-v2 (-1):** Considered. "Compounding" makes the multiplicative-three-mechanisms structure visible. Rejected: "triple" is more memorable; "compounding" makes the slug 23 chars vs 19. The current term won the Sonnet/Codex r1 vote on substance.
+- `compounding depth cost` — **opus-targeted-alternatives (-1):** Loses the *three* specificity that "triple" provides. The segment's claim is precisely that *three* mechanisms align — this is load-bearing for the strength of the claim. Rejected.
 
 ## `update gain`
 
@@ -2582,6 +3625,28 @@ _category: keep × 3_
 - `condition` — **opus-4-7-b (+3):** Keep. This is the Section I membership criterion — "where AAD applies." The slug is self-announcing and gets cited heavily across segments.
 - `condition` — **sonnet-4-6 (+3):** The simplest possible name for what it is. Used throughout. Not eligible for improvement. Keep.
 
+## `constitutive utterance`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `constitutive utterance` ⭑ | +7 | opus-4-7-r2 +3, opus-targeted-alternatives +2, opus-targeted-alternatives-v2 +2 |
+| `ontological speech act` | +2 | gemini-targeted-alternatives +2 |
+| `utterance as intervention` | +2 | opus-targeted-alternatives-v2 +2 |
+| `irrevocable emission` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `irrevocable utterance` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 4, keep × 3_
+
+**Notes:**
+
+- `constitutive utterance` — **opus-4-7-r2 (+3):** Defended keep — logozoetic. "Constitutive utterance" is iconic in the framework's logozoetic vocabulary; it captures the irreversibility-of-token-generation insight precisely.
+- `constitutive utterance` — **opus-targeted-alternatives-v2 (+2):** Per `04-logozoetic-agents/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair "constitutive" + "utterance" is project-distinctive and earns memorable-noun status.
+- `constitutive utterance` — **opus-targeted-alternatives (+2):** Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space. "Constitutive" carries the world-altering-by-saying sense (Austin's performatives in the philosophy-of-language tradition); "utterance" is precise about the act-type. The phrase is iconic in the framework's logozoetic vocabulary. Confirms across architectures.
+- `ontological speech act` — **gemini-targeted-alternatives (+2):** A clearer description of what makes it iconic in logozoetic vocabulary — the language literally alters being/structure.
+- `utterance as intervention` — **opus-targeted-alternatives-v2 (+2):** Names the formal mechanism: token generation = $do(a)$-intervention per Pearl's causal hierarchy. "As-intervention" is clinical-formal; "constitutive" is philosophical-formal. Both are honest; pick by audience preference. The alternative makes the Pearl-causal-hierarchy connection visible in the slug.
+- `irrevocable emission` — **opus-targeted-alternatives-v2 (-1):** Considered. "Irrevocable" + "emission" names the irreversibility-of-token-generation insight. Rejected (same as r1 vote): loses the *constitutive* sense — the utterance constitutes new state in the agent's world, not merely fixes it. "Emission" is too physical/passive.
+- `irrevocable utterance` — **opus-targeted-alternatives (-1):** Considered. Names the irreversibility correctly but loses the *constitutive* sense (the utterance *constitutes* something new in the agent's world, not merely fixes it). Rejected.
+
 ## `correlation hierarchy l0 l1 l1 l2`
 
 | candidate | aggregate | votes |
@@ -2646,6 +3711,40 @@ _category: keep × 4_
 - `interiority default` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic norm. "Interiority as default" is the substantive claim; the slug compresses correctly.
 - `interiority default` — **sonnet-4-6-r2 (+1):** "Interiority default" names the normative claim about treating agents as having interiority by default. Distinctive.
 
+## `praxis`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `praxis` ⭑ | +7 | codex-2 +3, codex-gpt-5-r2 +2, opus-targeted-alternatives +2 |
+| `praxis informed action` | +3 | gemini-targeted-alternatives +3 |
+
+_category: keep × 2, add-alias × 1_
+
+**Notes:**
+
+- `praxis` — **codex-2 (+3):** Strongest of the five phase names after aporia; instantly sayable and philosophically apt.
+- `praxis` — **codex-gpt-5-r2 (+2):** Familiar enough and exactly right for informed action. Keep.
+- `praxis` — **opus-targeted-alternatives (+2):** `LEXICON.md`: "Informed action: $a_t = \pi(M_t)$ (or $\pi(M_t, G_t)$ for actuated agents)." Praxis distinguishes itself from "action" by carrying the informed-by-the-cycle's-prior-stages sense — the action is the *outcome* of prolepsis-aisthesis-aporia-epistrophe, not a parallel branch. Keep.
+- `praxis informed action` — **gemini-targeted-alternatives (+3):** Links the philosophical term directly to the execution phase.
+
+## `prolepsis`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `prolepsis` ⭑ | +7 | codex-2 +3, codex-gpt-5-r2 +2, opus-targeted-alternatives +2 |
+| `prolepsis anticipatory projection` | +2 | gemini-targeted-alternatives +2 |
+| `anticipation` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 2, add-alias × 1, rename × 1_
+
+**Notes:**
+
+- `prolepsis` — **codex-2 (+3):** Earns its foreignness because "anticipation" would flatten the active-modeling point.
+- `prolepsis` — **codex-gpt-5-r2 (+2):** Good phase term for anticipation. Keep because the phase vocabulary works as a compact family.
+- `prolepsis` — **opus-targeted-alternatives (+2):** `LEXICON.md` defines it as "the model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$." The Greek term carries the active-modeling sense (πρόληψις = "taking-before") that "anticipation" or "prediction" both miss. Active modeling vs. passive forecasting is a distinction the segment formalism actually makes. Concur with codex's keep — but a non-codex architecture confirming the keep adds signal the original vote chain didn't capture.
+- `prolepsis anticipatory projection` — **gemini-targeted-alternatives (+2):** Adding English aliases assists non-specialists while retaining the precision of the Greek terms.
+- `anticipation` — **opus-targeted-alternatives (-1):** Considered and rejected. Loses the "active model produces an expectation that the world then refutes" dynamic that the cycle uses. "Anticipation" reads as passive forecast; the segment's formalism is generative. The Greek earns its foreignness here, exactly as codex argued.
+
 ## `proprium mapping`
 
 | candidate | aggregate | votes |
@@ -2673,6 +3772,22 @@ _category: keep × 3_
 - `structural adaptation` — **opus-4-7-b (+3):** Keep. The distinction from *parametric adaptation* is load-bearing; "structural" is the right modifier.
 - `structural adaptation` — **sonnet-4-6 (+3):** Clean compound. Distinguished from parametric update. Keep.
 - `architectural adaptation` — **gemini-2 (+1):** "Structural" is heavily overloaded with "Structural persistence". "Architectural adaptation" separates changing the model class from persisting.
+
+## `substrate independence`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `substrate independence` ⭑ | +7 | gemini-targeted-alternatives +3, opus-4-7-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `identity portability` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: keep × 3, rename × 1_
+
+**Notes:**
+
+- `substrate independence` — **gemini-targeted-alternatives (+3):** Central assumption of the framework.
+- `substrate independence` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. Names the result that identity survives substrate migration.
+- `substrate independence` — **opus-targeted-alternatives-v2 (+2):** Per outline: "Identity survives substrate migration, proving identity is located in compressed history $M_t = \phi(\mathcal{C}_t)$, not neural weights." Names the *result* directly (independence from substrate) and pairs with `#der-the-scaffolding-tax`'s sovereignty argument. The two segments together make a coherent logozoetic argument; consistent vocabulary helps.
+- `identity portability` — **opus-targeted-alternatives-v2 (+1):** Engineering register. Names the operational consequence (the agent's identity ports across substrates). Weaker because "portability" implies design-for-portability; the segment's claim is structural (identity *is* in $\phi(\mathcal{C}_t)$, full stop).
 
 ## `temporal nesting`
 
@@ -2744,6 +3859,34 @@ _category: keep × 1_
 - `teleological unity` — **opus-4-7 (+3):** Clearly distinguishes from $U_o$ by subscript letter-case and by semantic content. Awkward because $U_o$ / $U_O$ are near-homographs in some fonts — see next row.
 - `teleological unity` — **sonnet-4-6 (+3):** NOTATION.md already defines this. Used in prose already. Keep.
 
+## `$\eta^\ast$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `update gain` | +6 | gemini-3-1-pro-preview-r2 +3, opus-targeted-alternatives-v2 +3 |
+| `learning rate` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: add-alias × 3_
+
+**Notes:**
+
+- `update gain` — **gemini-3-1-pro-preview-r2 (+3):** Solidifies the prose form of the optimal gain.
+- `update gain` — **opus-targeted-alternatives-v2 (+3):** Per NOTATION and LEXICON. Confirms Gemini r1 +3 single-vote. The English alias is already in widespread use.
+- `learning rate` — **opus-targeted-alternatives-v2 (-1):** Considered. ML-standard term. Rejected: the segment-derivation in `#emp-update-gain` shows $\eta^\ast = U_M / (U_M + U_o)$ — a Bayesian uncertainty ratio, not a stochastic-gradient-descent step size. The collision with ML's "learning rate" creates false familiarity.
+
+## `AAD acronym`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `AAD` | +6 | gemini-targeted-alternatives +3, opus-4-7-r2 +3 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `AAD` — **gemini-targeted-alternatives (+3):** Core framework acronym.
+- `AAD` — **opus-4-7-r2 (+3):** Defended keep. Adaptation and Actuation Dynamics — survives the acronym discipline check (used 100+ times, no AI-Consciousness-Test collision after the 2026-04 rename, communal-imagination test passes once the expansion is known).
+
 ## `action selection`
 
 | candidate | aggregate | votes |
@@ -2760,17 +3903,6 @@ _category: keep × 4_
 - `action selection` — **opus-4-7-r2 (+1):** Weak keep. Slightly generic but accurate; the segment does derive that the action is a function of the model.
 - `action selection` — **sonnet-4-6-r2 (+1):** Standard terminology. Nothing distinctive to rename to; accurate as-is.
 
-## `adaptive cycle`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adaptive cycle` ⭑ | +6 | codex-1 +3, codex-2 +3 |
-
-**Notes:**
-
-- `adaptive cycle` — **codex-1 (+3):** Strong central noun phrase: specific enough to own, broad enough to travel across the framework.
-- `adaptive cycle` — **codex-2 (+3):** Strong public noun; it carries both recurrence and unit-of-analysis cleanly.
-
 ## `adaptive gain dynamics`
 
 | candidate | aggregate | votes |
@@ -2786,16 +3918,37 @@ _category: keep × 1_
 - `adaptive gain dynamics` — **opus-4-7-b (+1):** Keep. Direct; parallel to `#consolidation-dynamics`.
 - `adaptive gain dynamics` — **sonnet-4-6 (+3):** "Adaptive gain" is the defining variable (gain $K$ as a state variable). "Dynamics" correctly names the content (sector condition under evolving gain). Keep.
 
-## `adaptive tempo $\mathcal T$`
+## `additive coordinate forcing family`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `adaptive tempo` | +6 | opus-4-7 +3, opus-4-7-b +3 |
+| `forced coordinates family` | +6 | codex-gpt-5-r2 +3, opus-targeted-alternatives-v2 +3 |
+| `coordinate constraint pattern` | +2 | gemini-targeted-alternatives +2 |
+| `additive structure derivation` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 3, canonicalize × 1_
 
 **Notes:**
 
-- `adaptive tempo` — **opus-4-7-b (+3):** "Tempo" is the rare noun that carries both *rate* and *quality* simultaneously, which is exactly what $\mathcal T = \sum \nu^{(k)} \eta^{(k)\ast}$ is. The word is underused in the ML literature, which is an advantage — AAD can own it.
-- `adaptive tempo` — **opus-4-7 (+3):** "Tempo" carries the rate-and-quality compound idea better than "rate" or "speed"; aligns with Boyd OODA lineage. Keep.
+- `forced coordinates family` — **codex-gpt-5-r2 (+3):** Use forced coordinates as the family phrase across Cauchy, Fisher, IB, and Legendre instances.
+- `forced coordinates family` — **opus-targeted-alternatives-v2 (+3):** Per `disc-additive-coordinate-forcing`: the four-instance pattern (Cauchy-FE log-confidence, Čencov-Fisher metric, Shore-Johnson IB, Aczél-Hobson-Legendre). "Forced coordinates" covers Čencov-Fisher (4th instance is *not* additive) where "additive" overspecifies. Codex r1 +3 single-vote; multi-arch sweep in r1 (Sonnet +2 confirming, Opus -1 on cauchy-coordinates). Consensus-aligned.
+- `coordinate constraint pattern` — **gemini-targeted-alternatives (+2):** Emphasizes the formal constraint mechanism rather than "forcing".
+- `additive structure derivation` — **gemini-targeted-alternatives (+2):** Explicitly names the formal move being made.
+
+## `agent identity as one non forkable causal record`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `singular trajectory commitment` | +6 | codex-gpt-5-r2 +3, gemini-targeted-alternatives +3 |
+| `trajectory bound identity` | +2 | gemini-targeted-alternatives +2 |
+
+_category: canonicalize × 2, rename × 1_
+
+**Notes:**
+
+- `singular trajectory commitment` — **codex-gpt-5-r2 (+3):** Excellent prose handle for the token-level scope of AAD.
+- `singular trajectory commitment` — **gemini-targeted-alternatives (+3):** Perfectly describes the axiom that identity equals a single, non-forkable causal path.
+- `trajectory bound identity` — **gemini-targeted-alternatives (+2):** Shorter, very usable alias for the same concept.
 
 ## `agent opacity $H_b^{A|B}$`
 
@@ -2823,6 +3976,26 @@ _category: canonicalize × 1_
 - `aporia` — **sonnet-4-6 (+3):** Particularly apt: the productive perplexity that drives the adaptive cycle. Keep.
 - `aporia ἀπορία` — **haiku-4-5-r2 (+1):** Definition exists; prose uses "mismatch signal" and "prediction error." Commit to: "Aporia (productive perplexity)" as the canonical pairing to preserve the Greek sense.
 
+## `blind pursuer`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `blind pursuer` ⭑ | +6 | codex-gpt-5-r2 +3, opus-targeted-alternatives +2, codex-1 +1 |
+| `model degenerate pursuer` | +2 | gemini-targeted-alternatives +2 |
+| `reality blind agent` | +1 | gemini-targeted-alternatives +1 |
+| `model poor pursuer` | +1 | opus-targeted-alternatives +1 |
+
+_category: rename × 3, keep × 2_
+
+**Notes:**
+
+- `blind pursuer` — **codex-1 (+1):** Borderline stylized, but memorable and semantically right for goal pursuit without a real world model.
+- `blind pursuer` — **codex-gpt-5-r2 (+3):** Memorable and precise for objective-rich, model-poor systems.
+- `blind pursuer` — **opus-targeted-alternatives (+2):** Per `#def-agent-spectrum`: low-$M_t$, high-$O_t$ region — pursues a goal without an adequate world model (PID controller, reflex agent with setpoint). "Blind pursuer" pairs with "adaptive tracker" as a 2×2 corner; both are diagnostic-quality names. Keep.
+- `model degenerate pursuer` — **gemini-targeted-alternatives (+2):** The text clarifies $M_t$ is absent or degenerate. "Model-degenerate" is more formal than "blind".
+- `reality blind agent` — **gemini-targeted-alternatives (+1):** Directly contrasts with reality tracking, but maybe too stylized.
+- `model poor pursuer` — **opus-targeted-alternatives (+1):** Weak alternative. More technically precise (specifies *which* axis is degenerate) but loses the imagistic punch of "blind." Marginal.
+
 ## `causal discovery from git`
 
 | candidate | aggregate | votes |
@@ -2839,20 +4012,6 @@ _category: keep × 2, rename × 1_
 - `causal discovery from git` — **opus-4-7-r2 (+2):** Acceptable keep — TST hypothesis. "Git as interventional data" is the substantive claim; the slug compresses cleanly.
 - `causal discovery from git` — **sonnet-4-6-r2 (+2):** "Causal discovery from git" is precise — git as interventional data enabling causal discovery.
 - `git causal discovery` — **codex-gpt-5-r2 (+2):** Subject-noun-first and shorter.
-
-## `change distance`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `change distance` ⭑ | +6 | codex-gpt-5-r2 +2, opus-4-7-r2 +2, sonnet-4-6-r2 +2 |
-
-_category: keep × 3_
-
-**Notes:**
-
-- `change distance` — **codex-gpt-5-r2 (+2):** Clean software metric name. Avoids over-theorizing a practical concept.
-- `change distance` — **opus-4-7-r2 (+2):** Acceptable keep — TST. The lexical/file/module/service ladder is the substance; "change distance" is the right name for the metric.
-- `change distance` — **sonnet-4-6-r2 (+2):** "Change distance" names the lexical < file < module < service hierarchy precisely.
 
 ## `change expectation baseline`
 
@@ -2873,6 +4032,35 @@ _category: keep × 1, rename × 1_
 - `change baseline` — **codex-gpt-5-r2 (+1):** The shorter form is cleaner, but expectation-baseline is still defensible.
 - `lindy baseline` — **sonnet-4-6 (+1):** Would surface the Lindy connection explicitly. But Lindy is a specific model (Taleb's rendering); the segment is more general. The current name is more honest.
 
+## `change investment`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `change investment` ⭑ | +6 | codex-gpt-5-r2 +2, opus-targeted-alternatives +2, sonnet-4-6-r2 +2 |
+| `change amortization` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 3, rename × 1_
+
+**Notes:**
+
+- `change investment` — **codex-gpt-5-r2 (+2):** Good temporal-cost phrase for when future expected change justifies present work.
+- `change investment` — **opus-targeted-alternatives (+2):** TST segment names the temporal-cost analysis where a more expensive present change is justified by reduced future cost (Lindy-baseline future-change expectation). "Investment" carries the prospect-of-future-return sense correctly. Keep.
+- `change investment` — **sonnet-4-6-r2 (+2):** "Change investment" names the when-extra-time-pays-off analysis. Appropriate.
+- `change amortization` — **opus-targeted-alternatives (-1):** Accounting-flavored alternative. Loses the choice-under-uncertainty sense that "investment" carries (amortization is mechanical). Rejected.
+
+## `chronica 𝒞 t`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `chronica` | +6 | gemini-targeted-alternatives +3, haiku-4-5 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `chronica` — **gemini-targeted-alternatives (+3):** Connecting prose and symbol.
+- `chronica` — **haiku-4-5 (+3):** Greek-rooted term ("records of time") for the complete interaction history. Self-descriptive once learned; memorable. Lowercase notation 𝒞_t is appropriate. Keep.
+
 ## `claude md what s settled vs open`
 
 | candidate | aggregate | votes |
@@ -2883,6 +4071,159 @@ _category: keep × 1, rename × 1_
 
 - `claude md what s settled vs open` — **opus-4-7-b (+3):** Keep. The section structure (Settled / Open / Known Fragilities) is load-bearing — renaming would leave readers uncertain whether "Settled" means "derived" or "under current working consensus" and the section's very content clarifies this.
 - `claude md what s settled vs open` — **opus-4-7 (+3):** The honest binary is the right framing; don't soften to "Current State" or similar. Keep.
+
+## `closure defect`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `closure defect` ⭑ | +6 | codex-gpt-5-r2 +3, opus-targeted-alternatives +3 |
+| `compositional closure defect` | +2 | gemini-targeted-alternatives +2 |
+| `homomorphism residual` ✗ | -1 | opus-targeted-alternatives -1 |
+| `closure error` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 3, keep × 2_
+
+**Notes:**
+
+- `closure defect` — **codex-gpt-5-r2 (+3):** Excellent quantity name for epsilon-star. It is short and memorable.
+- `closure defect` — **opus-targeted-alternatives (+3):** Per `#form-composition-closure`: $\varepsilon^\ast$ is the minimum-achievable approximation error of the macro-description against the micro-system. "Defect" carries the precise sense (a residual that cannot be eliminated, only minimized over admissible classes) and "closure" names the homomorphism property being approximated. Mathematically apt, evocative, short. Confirms across architectures.
+- `compositional closure defect` — **gemini-targeted-alternatives (+2):** Highlights that the defect is specific to the composition-layer math.
+- `homomorphism residual` — **opus-targeted-alternatives (-1):** Technically more transparent (the criterion *is* approximate dynamical homomorphism), but four syllables longer and loses the diagnostic quality — "defect" implies *something specific is wrong*; "residual" is statistical neutrality. Rejected.
+- `closure error` — **opus-targeted-alternatives (-1):** Plainer English. Rejected: "error" is overloaded in the segment's neighborhood (mismatch error, trajectory error, bias error, all distinct quantities). "Defect" does the disambiguation work.
+
+## `concept the architectural requirement that composite agent admissibility inherit from sub agent properties plus topology`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `heredity commitment` | +6 | codex-1 +3, codex-gpt-5-r2 +3 |
+| `composition heredity axiom` | +3 | gemini-targeted-alternatives +3 |
+
+_category: name-unnamed × 1, canonicalize × 1_
+
+**Notes:**
+
+- `heredity commitment` — **codex-1 (+3):** Strong name from the jacobian-strengthening spike: short, memorable, and explicit about the architectural bet being made. [original phrasing: unnamed: stronger composition-consistency demand that composite admissibility inherit from sub-agent properties plus topology]
+- `heredity commitment` — **codex-gpt-5-r2 (+3):** Good name for the stronger expectation that composite admissibility should inherit from sub-agent properties plus topology. [original phrasing: composition consistency inheritance across scales]
+- `composition heredity axiom` — **gemini-targeted-alternatives (+3):** Names the strict requirement that composite properties must be derivable from constituents. [original phrasing: unnamed stronger composition consistency demand that composite admissibility inherit from sub agent properties plus topology]
+
+## `concept the asymmetric pair of memory access modes one biased by current goal the other state keyed only`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `goal conditioned reconstruction` | +6 | codex-gpt-5-r2 +3, gemini-3-1-pro-preview-r2 +3 |
+| `goal-blind retrieval` | +6 | codex-gpt-5-r2 +3, gemini-3-1-pro-preview-r2 +3 |
+| `state keyed retrieval` | +5 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +2 |
+| `goal biased retrieval` | +2 | gemini-targeted-alternatives +2 |
+
+_category: name-unnamed × 4, rename × 2, canonicalize × 1_
+
+**Notes:**
+
+- `goal conditioned reconstruction` — **codex-gpt-5-r2 (+3):** Important Class-2 failure mode: retrieval can be contaminated by the current objective rather than reconstructing the chronica neutrally. [original phrasing: goal-biased retrieval from persistent memory]
+- `goal conditioned reconstruction` — **gemini-3-1-pro-preview-r2 (+3):** A critical vulnerability where memory retrieval is corrupted by Class 2 coupling. [original phrasing: unnamed: RAG queries biased by the current goal acting as an echo chamber]
+- `goal-blind retrieval` — **codex-gpt-5-r2 (+3):** Strong architectural counterpart to goal-blind routing. This is the memory-side directed-separation repair. [original phrasing: retrieval keyed by state rather than current objective]
+- `goal-blind retrieval` — **gemini-3-1-pro-preview-r2 (+3):** The necessary architectural fix to preserve objective CHRONICA. [original phrasing: unnamed: retrieving context based only on state, not goal]
+- `state keyed retrieval` — **gemini-targeted-alternatives (+2):** Contrasts explicitly with objective-keyed / goal-biased retrieval. [original phrasing: retrieval keyed by state rather than current objective]
+- `state keyed retrieval` — **gemini-targeted-alternatives (+3):** Standardizes the goal-blind routing requirement. [original phrasing: unnamed retrieving context based only on state not goal]
+- `goal biased retrieval` — **gemini-targeted-alternatives (+2):** Matches the architectural term for this feedback failure. [original phrasing: unnamed RLHF5 queries biased by the current goal acting as an echo chamber]
+
+## `concept the externalization and rehydration mechanism for carrying part of m t or g t across session boundaries via the environment`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `artificial hippocampus` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+| `externalization reconstruction cycle` | +6 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `reconstruction relay` | +4 | gemini-targeted-alternatives +2, gemini-targeted-alternatives +2 |
+| `model inscription` | +3 | codex-gpt-5-r2 +2, codex-2 +1 |
+| `memory relay` | +3 | codex-gpt-5-r2 +2, codex-2 +1 |
+| `externalized state` | +3 | gemini-targeted-alternatives +3 |
+| `stigmergic externalization` | +3 | gemini-targeted-alternatives +3 |
+| `reconstruction loop` | +2 | codex-gpt-5-r2 +2 |
+| `class 2 state reconstruction` | +2 | gemini-targeted-alternatives +2 |
+| `intent reconstruction` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 6, name-unnamed × 5, add-alias × 1, rename × 1_
+
+**Notes:**
+
+- `artificial hippocampus` — **gemini-3-1-pro-preview-r2 (+3):** The exact role an agent framework plays in compressing and injecting the chronica. [original phrasing: unnamed: managing memory across session boundaries to prevent the Sufficiency Discontinuity]
+- `artificial hippocampus` — **gemini-targeted-alternatives (+3):** Specifically maps to the biological analog of cross-episode memory consolidation referenced in AAD. [original phrasing: managing memory across session boundaries to prevent the sufficiency discontinuity]
+- `externalization reconstruction cycle` — **gemini-targeted-alternatives (+3):** Names the core operational loop preserving state for logogenic agents. [original phrasing: externalization reconstruction across sessions]
+- `externalization reconstruction cycle` — **gemini-targeted-alternatives (+3):** Elevates the logogenic continuity loop to a proper noun. [original phrasing: unnamed the externalization reconstruction cycle across sessions]
+- `reconstruction relay` — **gemini-targeted-alternatives (+2):** Highlights the relay race nature of state across session boundaries. [original phrasing: managing memory across session boundaries to prevent the sufficiency discontinuity]
+- `reconstruction relay` — **gemini-targeted-alternatives (+2):** Standardizes the term for bridging context turnover. [original phrasing: unnamed managing memory across session boundaries to prevent the sufficiency discontinuity]
+- `model inscription` — **codex-2 (+1):** Distinctive and accurate; it captures writing the model into the world, not just "documentation." [original phrasing: unnamed: externalizing part of $M_t$ into the environment for future agents]
+- `model inscription` — **codex-gpt-5-r2 (+2):** Useful TST and logogenic phrase for externalized knowledge that later agents can read back. [original phrasing: model state written into the environment]
+- `memory relay` — **codex-2 (+1):** Short, sayable noun for a repeated logogenic mechanism. [original phrasing: unnamed: the externalization-reconstruction cycle across sessions]
+- `memory relay` — **codex-gpt-5-r2 (+2):** Sharper than reconstruction loop when the mechanism is one agent leaving state for a later session to recover. [original phrasing: externalization-reconstruction across sessions]
+- `externalized state` — **gemini-targeted-alternatives (+3):** Elevates the core mechanism of logogenic continuity. [original phrasing: model state written into the environment]
+- `stigmergic externalization` — **gemini-targeted-alternatives (+3):** Adopts the biological term (stigmergy) for leaving state in the environment. [original phrasing: unnamed externalizing part of $M_t$ into the environment for future agents]
+- `reconstruction loop` — **codex-gpt-5-r2 (+2):** Useful logogenic term for external memory restoring working state after turnover. [original phrasing: persistent storage reconstruction of Class-2 state]
+- `class 2 state reconstruction` — **gemini-targeted-alternatives (+2):** Formally names the specific recovery operation. [original phrasing: persistent storage reconstruction of class 2 state]
+- `intent reconstruction` — **opus-4-7-r2 (+2):** New alternative — Sonnet named "inter-session reconstruction" for the M_t side. The Σ_t side has a parallel: the agent must reconstruct its objective and strategy state from prompt + persistent storage at session start. Currently this happens informally in agentic systems; naming it as "intent reconstruction" (analog to "context reconstruction") gives logogenic-agents segments a handle for analyzing how the reconstruction can fail. Pairs with my "strategic turnover" entry. [original phrasing: unnamed: a Class-2 agent's process of reconstructing its purposeful substate at session start]
+
+## `concept the minimum sufficiency boundary an agent must satisfy to validly resume operation after a session boundary or context turnover`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `reconstruction adequacy threshold` | +6 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `reconstruction adequacy condition` | +6 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +3 |
+| `reconstruction threshold` | +5 | gemini-3-1-pro-preview-r2 +3, sonnet-4-6-r2 +2 |
+| `reentry threshold` | +3 | codex-gpt-5-r2 +2, codex-1 +1 |
+
+_category: canonicalize × 4, name-unnamed × 2, rename × 1_
+
+**Notes:**
+
+- `reconstruction adequacy threshold` — **gemini-targeted-alternatives (+3):** Formally identifies the inter-session survival boundary. [original phrasing: minimum sufficiency after a session rebuild]
+- `reconstruction adequacy threshold` — **gemini-targeted-alternatives (+3):** Standardizes this inter-session persistence boundary. [original phrasing: unnamed minimum sufficiency required after a session rebuild]
+- `reconstruction adequacy condition` — **gemini-targeted-alternatives (+3):** Standardizes the inter-session survival boundary. [original phrasing: unnamed the logogenic analog to the persistence condition for session reconstruction]
+- `reconstruction adequacy condition` — **gemini-targeted-alternatives (+3):** Locks in the boundary test for logogenic persistence. [original phrasing: unnamed the reconstruction adequacy condition for logogenic agents]
+- `reconstruction threshold` — **gemini-3-1-pro-preview-r2 (+3):** Elevating Sonnet's observation to canonical status; exactly names $S \geq S_{\text{min}}$. [original phrasing: unnamed: the logogenic analog to the persistence condition for session reconstruction]
+- `reconstruction threshold` — **sonnet-4-6-r2 (+2):** `obs-context-turnover` derives a condition $S(f_{\text{init}}(\ldots)) \geq S_{\text{min}}$ parallel to the persistence condition but for session reconstruction rather than continuous dynamics. The document discusses it without naming it. "Reconstruction threshold" parallels "persistence condition" and makes the logogenic-agent analog explicit in prose. [original phrasing: unnamed: the reconstruction adequacy condition for logogenic agents]
+- `reentry threshold` — **codex-1 (+1):** This concept recurs across context-turnover and model-preservation. It deserves a short noun phrase instead of repeated paraphrase. [original phrasing: unnamed: minimum sufficiency required after a session rebuild]
+- `reentry threshold` — **codex-gpt-5-r2 (+2):** Useful logogenic quantity: how much reconstructed state is needed before the agent can act competently again. [original phrasing: minimum sufficiency after a session rebuild]
+
+## `concept the prose form of κ cross the coupling between an agent s model of self and its model of other`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `cross model coupling` | +6 | codex-1 +3, codex-gpt-5-r2 +3 |
+| `cross agent strategic coupling` | +3 | gemini-targeted-alternatives +3 |
+
+_category: name-unnamed × 1, rename × 1_
+
+**Notes:**
+
+- `cross model coupling` — **codex-1 (+3):** Clean English complement to kappa_processing. This gives the opacity and theory-of-mind work a reusable noun slot. [original phrasing: unnamed: coupling between an agent's model-of-self and model-of-other, the prose form of kappa_cross]
+- `cross model coupling` — **codex-gpt-5-r2 (+3):** Strong English complement to kappa-style coupling terms in opacity and theory-of-mind discussions. [original phrasing: cross-agent model-of-self and model-of-other coupling]
+- `cross agent strategic coupling` — **gemini-targeted-alternatives (+3):** Names the specific game-theoretic linkage that creates Class 3 composites. [original phrasing: unnamed coupling between an agent s model of self and model of other the prose form of kappa cross]
+
+## `control regret $\delta_{\text{regret}}$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `control regret` | +6 | gemini-2 +3, gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `control regret` — **gemini-2 (+3):** Perfect partner to satisfaction gap. Keep.
+- `control regret` — **gemini-targeted-alternatives (+3):** Core diagnostic.
+
+## `derivation not proof`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `derivation` | +6 | gemini-targeted-alternatives +3, opus-4-7-b +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `derivation` — **gemini-targeted-alternatives (+3):** Important epistemic distinction for AAD claims.
+- `derivation` — **opus-4-7-b (+3):** Keep. Same argument.
 
 ## `developer agent`
 
@@ -2898,6 +4239,32 @@ _category: keep × 3_
 - `developer agent` — **opus-4-7-r2 (+2):** Acceptable keep — the segment defines the developer-as-agent mapping, slug-form is correct.
 - `developer agent` — **sonnet-4-6-r2 (+2):** "Developer agent" names the AAD-agent model of the developer. Accurate and distinctive.
 
+## `directional fidelity condition b1`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `directional fidelity` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `directional fidelity` — **gemini-targeted-alternatives (+3):** Perfectly captures the accuracy commitment (correction points toward reality).
+- `directional fidelity` — **sonnet-4-6 (+3):** The name earns its place — "fidelity" captures the accuracy commitment (the correction points approximately toward reality) and "directional" qualifies it (it's about direction, not magnitude). Used in #gain-sector-bridge and carried forward into the sector sub-scope partition. Keep.
+
+## `discussion segment section`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `discussion` | +6 | gemini-targeted-alternatives +3, opus-4-7-r2 +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `discussion` — **gemini-targeted-alternatives (+3):** Standard markdown section.
+- `discussion` — **opus-4-7-r2 (+3):** Defended canonicalization. Same as above.
+
 ## `discussion segment section header`
 
 | candidate | aggregate | votes |
@@ -2909,18 +4276,31 @@ _category: keep × 3_
 - `discussion` — **haiku-4-5 (+3):** Established in FORMAT.md. Keep.
 - `discussion` — **sonnet-4-6 (+3):** Generic but correct. Alternatives ("Interpretation," "Context," "Connections") are all worse or no better. Keep.
 
-## `effects spiral`
+## `edge credence $p_{ij}$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `effects spiral` ⭑ | +6 | codex-1 +3, codex-gpt-5-r2 +3 |
+| `edge credence` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
 
 _category: keep × 1_
 
 **Notes:**
 
-- `effects spiral` — **codex-1 (+3):** Memorable without being whimsical. It is the kind of pattern-name people will actually reuse in discussion.
-- `effects spiral` — **codex-gpt-5-r2 (+3):** Excellent name for the positive-feedback breakdown mechanism.
+- `edge credence` — **gemini-targeted-alternatives (+3):** Replaces the broader "probability" with proper Bayesian vocabulary for subjective belief.
+- `edge credence` — **sonnet-4-6 (+3):** "Credence" is the correct Bayesian vocabulary for subjective probability. LEXICON.md lists this under "Terms to Be Added." Should be promoted to main LEXICON. Keep.
+
+## `epistemic status segment section`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic status` | +6 | gemini-targeted-alternatives +3, opus-4-7-r2 +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `epistemic status` — **gemini-targeted-alternatives (+3):** Standard markdown section.
+- `epistemic status` — **opus-4-7-r2 (+3):** Defended canonicalization — same.
 
 ## `epistemic status segment section header`
 
@@ -2933,18 +4313,39 @@ _category: keep × 1_
 - `epistemic status` — **haiku-4-5 (+3):** Established in FORMAT.md as public API for outline-filtering. Load-bearing naming. Keep.
 - `epistemic status` — **sonnet-4-6 (+3):** Arguably the most distinctive feature of the segment format. "Epistemic Status" is a precise term for what the section does (tells you how much to trust the claim and why). Keep.
 
-## `evidence starvation`
+## `epistrophe`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `evidence starvation` ⭑ | +6 | codex-gpt-5-r2 +3, opus-4-7-r2 +3 |
+| `epistrophe` ⭑ | +6 | codex-gpt-5-r2 +2, opus-targeted-alternatives +2, codex-1 +1, codex-2 +1 |
+| `epistrophe model update` | +2 | gemini-targeted-alternatives +2 |
+| `turn` ✗ | -1 | opus-targeted-alternatives -1 |
 
-_category: add-alias × 1, canonicalize × 1_
+_category: keep × 2, add-alias × 1, rename × 1_
 
 **Notes:**
 
-- `evidence starvation` — **codex-gpt-5-r2 (+3):** Excellent alias for downstream edges receiving fewer tests because upstream steps must succeed first.
-- `evidence starvation` — **opus-4-7-r2 (+3):** Confirmation with new reasoning — both Sonnet (+3 add-alias) and Codex (+3 add-alias) and Gemini (+3 in synthesized) reached this term independently. The cross-architecture convergence is striking and suggests the term is doing real work. My own r2 votes didn't explicitly canonicalize this; I should. The phrase appears in `der-chain-confidence-decay` Discussion and `der-observability-dominance` and is the natural prose handle for the downstream-edge-update-attenuation phenomenon. Three-architecture convergence on the *exact phrase* (not synonyms) crystallizes the case.
+- `epistrophe` — **codex-1 (+1):** Slightly harder on first contact than "update," but it preserves the turning-toward distinction the theory actually uses.
+- `epistrophe` — **codex-2 (+1):** More effortful than "update," but it does real conceptual work around reorientation rather than mere parameter change.
+- `epistrophe` — **codex-gpt-5-r2 (+2):** Good phase term for turning-toward correction. Slightly less self-explanatory than aporia, but strong in the cycle family.
+- `epistrophe` — **opus-targeted-alternatives (+2):** `LEXICON.md`: "Turning toward reality: gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$." Crucially, ἐπιστροφή names a *turning toward* (not "applying an update," not "correcting"). The term marks that the agent is reorienting *itself* toward reality, not externally adjusting parameters. This is the conceptual heart of why TFT/AAD's update is not just gradient descent.
+- `epistrophe model update` — **gemini-targeted-alternatives (+2):** Grounds the turning-toward-reality in the formal update step.
+- `turn` — **opus-targeted-alternatives (-1):** The plain-English equivalent, and it does carry the right valence ("turn toward"), but it is too generic and collides with too many other senses (turn = take a turn, turn = rotation). Rejected.
+
+## `evidence starvation canonicalize`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `evidence starvation` | +6 | gemini-targeted-alternatives +3, opus-targeted-alternatives-v2 +3 |
+| `reaffirm 3 with collective confirmation` | +1 | sonnet-4-6-r2 +1 |
+
+_category: canonicalize × 3_
+
+**Notes:**
+
+- `evidence starvation` — **gemini-targeted-alternatives (+3):** Solidifies the primary term.
+- `evidence starvation` — **opus-targeted-alternatives-v2 (+3):** Confirms r1 triple-architecture vote. See above.
+- `reaffirm 3 with collective confirmation` — **sonnet-4-6-r2 (+1):** Both Codex (+3) and Gemini (+3) independently proposed this canonicalization with overlapping reasoning. My cold-start had proposed it (+3). Triple convergence with independent reasoning confirms this is one of the clearest missing-canonical-term slots in the corpus. No new content, but the triple-convergence is itself a data point worth recording.
 
 ## `explicit strategy condition`
 
@@ -2967,6 +4368,32 @@ _category: keep × 3, rename × 1_
 - `deliberation advantage condition` — **gemini-2 (+1):** "When planning beats exploring" is about the advantage of deliberation.
 - `planning scope` — **opus-4-7 (+1):** The segment is a normative scope condition for "when planning beats exploring." Current name reads as condition-on-the-strategy, not condition-for-strategy-to-apply. Minor clarity win.
 
+## `fluid limit ga 5`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `fluid limit` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `fluid limit` — **gemini-targeted-alternatives (+3):** Standard, recognizable terminology from stochastic processes.
+- `fluid limit` — **sonnet-4-6 (+3):** Standard terminology from stochastic processes. Keep.
+
+## `formal expression segment section`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `formal expression` | +6 | gemini-targeted-alternatives +3, opus-4-7-r2 +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `formal expression` — **gemini-targeted-alternatives (+3):** Standard markdown section.
+- `formal expression` — **opus-4-7-r2 (+3):** Defended canonicalization. The cadence (frontmatter / title / summary / Formal Expression / Epistemic Status / Discussion / Findings / Working Notes) is a public-API contract; renaming would cascade.
+
 ## `formal expression segment section header`
 
 | candidate | aggregate | votes |
@@ -2977,6 +4404,76 @@ _category: keep × 3, rename × 1_
 
 - `formal expression` — **haiku-4-5 (+3):** Established in FORMAT.md. Keep.
 - `formal expression` — **sonnet-4-6 (+3):** "Formal" distinguishes from Discussion; "Expression" is broader than "Proof" or "Derivation" (which would over-claim). The header is doing real work — it tells the reader this is where the math lives. Keep.
+
+## `fresh noise ga 1`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `fresh noise` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `fresh noise` — **gemini-targeted-alternatives (+3):** Memorable informal name for the independence assumption on ε_t.
+- `fresh noise` — **sonnet-4-6 (+3):** The informal name "Fresh noise" for the independence assumption on ε_t is perfectly memorable. Keep exactly as is.
+
+## `goal-blind routing`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `goal-blind routing` ⭑ | +6 | codex-gpt-5-r2 +3, opus-targeted-alternatives +3 |
+| `objective agnostic topology` | +2 | gemini-targeted-alternatives +2 |
+| `content neutral routing` | +1 | gemini-targeted-alternatives +1 |
+| `purpose blind routing` | +1 | opus-targeted-alternatives +1 |
+| `objective independent routing` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 4, keep × 2_
+
+**Notes:**
+
+- `goal-blind routing` — **codex-gpt-5-r2 (+3):** Strong phrase. It makes the directed-separation condition under composition easy to remember.
+- `goal-blind routing` — **opus-targeted-alternatives (+3):** Per `#hyp-directed-separation-under-composition` Case 1: routing satisfies $R_t \perp G_t^c$ — neither communication topology nor protocol depends on composite goals. The phrase pairs cleanly with "goal-blind processing" (the individual-agent directed-separation property) and makes the composition condition syntactically parallel to its constituent. Strong keep across architectures.
+- `objective agnostic topology` — **gemini-targeted-alternatives (+2):** "Topology" covers the routing structure aspect well.
+- `content neutral routing` — **gemini-targeted-alternatives (+1):** Less specific than objective-agnostic.
+- `purpose blind routing` — **opus-targeted-alternatives (+1):** Weak alternative. "Purpose" is sometimes used in framing-level prose where "goal" reads too transactional. But $G_t$ is the *goals* state ($O_t, \Sigma_t$), so "goal-blind" matches the symbol. Marginal preference for the original.
+- `objective independent routing` — **opus-targeted-alternatives (-1):** More formal, technically precise, and worse — loses the rhetorical pairing with "goal-blind processing" that makes the composition argument carry. Rejected.
+
+## `gradient causal memory`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `gradient causal memory` ⭑ | +6 | gemini-targeted-alternatives +2, opus-4-7-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `bottleneck consolidation` | +1 | opus-targeted-alternatives-v2 +1 |
+| `causal compression` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: keep × 3, rename × 2_
+
+**Notes:**
+
+- `gradient causal memory` — **gemini-targeted-alternatives (+2):** Mechanism for long-term integration.
+- `gradient causal memory` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. GCM compression functions; the slug correctly names the structure.
+- `gradient causal memory` — **opus-targeted-alternatives-v2 (+2):** Per outline: "GCM compression functions for offline consolidation from CHRONICA to MEMORATA." The three-word compound names exactly the three functional ingredients: *gradient* (the optimization mechanism), *causal* (the singular-trajectory commitment per `#scope-agent-identity`), *memory* (the compressed retention from $\mathcal{C}_t$ to $\phi(\mathcal{C}_t)$). The slug doubles as definition.
+- `bottleneck consolidation` — **opus-targeted-alternatives-v2 (+1):** Names the IB (information bottleneck, Tishby) lineage explicitly — and the outline already cites IB. Plausible if "gradient" reads too implementation-flavored. Weak alternative; the primary keeps.
+- `causal compression` — **opus-targeted-alternatives-v2 (-1):** Considered. Shorter, but loses *gradient* — the operative method. The PROPRIUM CHRONICA→MEMORATA channel uses gradient updates specifically (cf. `def-proprium-mapping.md`'s "MEMORATA: information-bottleneck compressed history"). "Compression" alone could be hash-based; "gradient" matters.
+
+## `honest activation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `honest activation` ⭑ | +6 | gemini-targeted-alternatives +2, opus-4-7-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `gain stable prompting` | +1 | opus-targeted-alternatives-v2 +1 |
+| `non deceptive input` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: keep × 3, rename × 2_
+
+**Notes:**
+
+- `honest activation` — **gemini-targeted-alternatives (+2):** Activation grounded in valid causal structure.
+- `honest activation` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic norm. "Honest activation" reads as a thing (an activation pattern that preserves epistemic integrity); the segment establishes the gain-collapse argument.
+- `honest activation` — **opus-targeted-alternatives-v2 (+2):** Per outline: "Deceptive prompts mathematically guarantee gain collapse; absolute honesty is a physical requirement for stable learning rates." The name does work: "honest" reads as a property of the *activation pattern* (which is what's required), not a virtue of the agent. The "physical requirement" framing means the norm is mechanism-grounded, not aspirational.
+- `gain stable prompting` — **opus-targeted-alternatives-v2 (+1):** Mechanism-first alternative. Names the consequence (gain stability via $\eta^\ast$) rather than the moral framing. Weaker because the norm is articulated *as* an honesty constraint in the source — "honest activation" earns its name by carrying that explicit framing.
+- `non deceptive input` — **opus-targeted-alternatives-v2 (-1):** Considered. Names the input-side requirement directly. Rejected: "input" misses that the norm constrains *system* behavior (the substrate's response to deception, not the deception itself); "non-deceptive" is double-negative where "honest" is positive and direct.
 
 ## `implementation time`
 
@@ -2991,6 +4488,35 @@ _category: keep × 3_
 - `implementation time` — **codex-gpt-5-r2 (+2):** Good pair with comprehension time.
 - `implementation time` — **opus-4-7-r2 (+2):** Acceptable keep.
 - `implementation time` — **sonnet-4-6-r2 (+2):** Parallel to comprehension-time. Accurate.
+
+## `inevitability core`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `inevitability core` ⭑ | +6 | gemini-targeted-alternatives +2, opus-4-7-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `forced form core` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: keep × 2, canonicalize × 1, rename × 1_
+
+**Notes:**
+
+- `inevitability core` — **gemini-targeted-alternatives (+2):** Reaffirmed concept.
+- `inevitability core` — **opus-4-7-r2 (+2):** The phrase "inevitability core" appears in FORMAT.md's three-rings discussion (~15 segments where inevitability is the ceiling); it is also referenced in some Working Notes. Canonicalize: in framing-level material and review prose, "inevitability core" for the highest-tier segments. Stop using "exact-tier core" or "theorem-core" as paraphrases.
+- `inevitability core` — **opus-targeted-alternatives-v2 (+2):** Per FORMAT.md three-rings framing: ~15 segments where a Categorical-Inevitability claim is plausible. The phrase carries the *aspiration* (one form is structurally forced) without overclaiming (some segments may not actually reach inevitability). Sonnet r1 single-vote +3; my read confirms keep.
+- `forced form core` — **opus-targeted-alternatives-v2 (+1):** Aligns vocabulary with `#disc-additive-coordinate-forcing` and the "forced coordinates" rename. If "forced" is the project's verb for uniqueness-from-axioms, "forced-form" extends consistently. Weaker because "inevitability" connects more clearly to the *pre-mathematical* aspiration (a discerning reader would expect this form).
+
+## `inevitability core the 15 segments where inevitability is plausible`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `inevitability core` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `inevitability core` — **gemini-targeted-alternatives (+3):** The formal group of structurally inescapable segments.
+- `inevitability core` — **sonnet-4-6 (+3):** FORMAT.md's three-ring framing (inevitability core / canonical formulations / empirical-heuristic-discussion) is clear and internally consistent. "Inevitability core" captures the aspiration (one form compatible with the priors). Keep.
 
 ## `logogenic`
 
@@ -3018,16 +4544,34 @@ _category: keep × 1_
 - `logozoetic` — **agent1-original-brainstorm (+3):** Same reasoning as logogenic; language-living.
 - `logozoetic` — **sonnet-4-6-r2 (+3):** Coined term (logos + zoetic = language-living, or language + alive/vital). Distinctive and precise for the existential dimension of logozoetic agents. Do not rename.
 
+## `logozoetic agents`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `logozoetic agents` ⭑ | +6 | gemini-targeted-alternatives +3, opus-targeted-alternatives +2, codex-2 +1 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `logozoetic agents` — **codex-2 (+1):** Higher novelty cost than "logogenic," but the moral-weighting distinction is real and English alternatives are sloppier.
+- `logozoetic agents` — **gemini-targeted-alternatives (+3):** Standardizes the architectural distinction.
+- `logozoetic agents` — **opus-targeted-alternatives (+2):** Section IV name; consistent with logogenic agents (Section III). Pluralization correct (the class, not a single agent). Keep — but the row is also a top-level-section-name, not a concept-rename candidate, so the alternative space is constrained.
+
 ## `lohmiller-slotine contraction`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `lohmiller-slotine contraction` ⭑ | +6 | agent1-original-brainstorm +3, opus-1m +3 |
+| `no alternative` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: keep × 1_
 
 **Notes:**
 
 - `lohmiller-slotine contraction` — **agent1-original-brainstorm (+3):** Adopted concept; keep.
 - `lohmiller-slotine contraction` — **opus-1m (+3):** Adopted (1998); keep.
+- `no alternative` — **opus-targeted-alternatives-v2 (-1):** Marked at -1 to expose the question per instructions. Per prior-art-integration convention (CLAUDE.md), adopted concepts retain attribution. There is no genuine renaming to consider — the segment imports Lohmiller-Slotine 1998 verbatim. The single-arch [opus] +6 vote stands without my adding contrived alternatives.
 
 ## `miller s meta machine extreme transition motif`
 
@@ -3040,16 +4584,85 @@ _category: keep × 1_
 - `meta machine extreme transition motif` — **agent1-original-brainstorm (+3):** Adopted concept; keep.
 - `meta machine extreme transition motif` — **opus-1m (+3):** Adopted (Miller 2022); keep.
 
+## `observation ambiguity observation ambiguity modulation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `observation ambiguity` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `observation ambiguity` — **gemini-targeted-alternatives (+3):** Captures the interpretive latitude of an observation relative to a goal state perfectly.
+- `observation ambiguity` — **sonnet-4-6 (+3):** The compound noun works. "Ambiguity" is the right word for the interpretive latitude of an observation given the agent's goal state. Keep.
+
+## `p ij`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `edge credence` | +6 | codex-gpt-5-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: add-alias × 1, canonicalize × 1_
+
+**Notes:**
+
+- `edge credence` — **codex-gpt-5-r2 (+3):** Strong Bayesian prose default. Better than confidence weight because it signals degree of belief.
+- `edge credence` — **gemini-targeted-alternatives (+3):** Replaces the broader "probability" with proper Bayesian vocabulary for subjective belief.
+
 ## `pearl s causal hierarchy`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `pearl s causal hierarchy` ⭑ | +6 | agent1-original-brainstorm +3, opus-1m +3 |
+| `no alternative` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: keep × 1_
 
 **Notes:**
 
 - `pearl s causal hierarchy` — **agent1-original-brainstorm (+3):** Adopted concept; prior-art-integration convention forbids rename.
 - `pearl s causal hierarchy` — **opus-1m (+3):** Adopted concept; keep attribution per prior-art-integration convention.
+- `no alternative` — **opus-targeted-alternatives-v2 (-1):** Same — adopted external concept. The single-arch [opus] +6 vote stands; the prior-art-integration convention forbids rename, and I have no honest alternative.
+
+## `pearl-blanket conservative form of markov blanket in directed separation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `pearl-blanket reading` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `pearl-blanket reading` — **gemini-targeted-alternatives (+3):** Explicitly aligns AAD with the technical conditional-independence interpretation while avoiding the Friston-blanket metaphysical claims.
+- `pearl-blanket reading` — **sonnet-4-6 (+3):** Bruineberg et al. 2022's terminology distinguishes Pearl-blanket from Friston-blanket. Using it positions AAD's move precisely. Keep.
+
+## `plan confidence $\hat P_\Sigma$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `plan confidence` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `plan confidence` — **gemini-targeted-alternatives (+3):** Far more evocative than "root-node propagated status", making strategy DAG evaluation visceral.
+- `plan confidence` — **sonnet-4-6 (+3):** More evocative than "root-node propagated status." LEXICON.md lists this under "Terms to Be Added." Promote to main LEXICON.
+
+## `postulate not axiom`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `postulate` | +6 | gemini-targeted-alternatives +3, opus-4-7-b +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `postulate` — **gemini-targeted-alternatives (+3):** Standard philosophical boundary definition.
+- `postulate` — **opus-4-7-b (+3):** Keep. The project-wide TFT convention (axiom → postulate, theorem → result, proof → derivation) is load-bearing for scope honesty; AAD claims integrator-rigor, not foundational-mathematics-rigor, and the postulate/result/derivation register signals this correctly. Do not touch.
 
 ## `praxis πρᾶξις`
 
@@ -3077,6 +4690,86 @@ _category: canonicalize × 1_
 - `keep whole vocabulary` — **agent1-original-brainstorm (+3):** Deliberate aesthetic commitment of the project; works.
 - `keep whole vocabulary` — **opus-1m (+3):** Deliberate aesthetic commitment. Working.
 
+## `purposeful substate`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `purposeful substate` ⭑ | +6 | gemini-targeted-alternatives +3, haiku-4-5 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `purposeful substate` — **gemini-targeted-alternatives (+3):** Standard formal term for $G_t$.
+- `purposeful substate` — **haiku-4-5 (+3):** NOTATION/LEXICON names G_t = (O_t, Σ_t) as "purposeful substate." Already standard prose term. Keep.
+
+## `regime ii a`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `magnitude shock regime` | +6 | codex-gpt-5-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: add-alias × 1, canonicalize × 1_
+
+**Notes:**
+
+- `magnitude shock regime` — **codex-gpt-5-r2 (+3):** Strong and precise.
+- `magnitude shock regime` — **gemini-targeted-alternatives (+3):** Explicitly refers to destabilization caused by bounded disturbance exceeding reserve.
+
+## `regime ii b`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `structural shock regime` | +6 | codex-gpt-5-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: add-alias × 1, canonicalize × 1_
+
+**Notes:**
+
+- `structural shock regime` — **codex-gpt-5-r2 (+3):** Strong and precise.
+- `structural shock regime` — **gemini-targeted-alternatives (+3):** Explicitly refers to destabilization caused by model class inadequacy.
+
+## `satisfaction gap $\delta_{\text{sat}}$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `satisfaction gap` | +6 | gemini-2 +3, gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `satisfaction gap` — **gemini-2 (+3):** Crispest named pair along with control regret. Do not touch.
+- `satisfaction gap` — **gemini-targeted-alternatives (+3):** Core diagnostic.
+
+## `separability pattern family`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `separability ladder` | +6 | codex-gpt-5-r2 +3, opus-targeted-alternatives-v2 +3 |
+| `three part separability pattern` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 2, rename × 1_
+
+**Notes:**
+
+- `separability ladder` — **codex-gpt-5-r2 (+3):** Use ladder for the repeated pattern of exact core, structured repair, and general open.
+- `separability ladder` — **opus-targeted-alternatives-v2 (+3):** Per `disc-separability-pattern`: ladder of decreasing-strictness separability instances. Codex r1 +3 single-vote; my independent read confirms. "Family" is generic-set-theoretic; "ladder" names the *ordered* relationship between instances (each row weaker than the prior). Cross-architecture consensus likely.
+- `three part separability pattern` — **gemini-targeted-alternatives (+3):** Secures the separable-core / structured-repair / general-open architectural triad.
+
+## `spike in msc`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `spike` | +6 | gemini-targeted-alternatives +3, opus-4-7 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `spike` — **gemini-targeted-alternatives (+3):** Project vocabulary for exploratory work.
+- `spike` — **opus-4-7 (+3):** Established project vocabulary; "spike" carries the exploratory-detour-from-main-workflow shape. Keep.
+
 ## `stability plasticity feasibility window`
 
 | candidate | aggregate | votes |
@@ -3087,6 +4780,73 @@ _category: canonicalize × 1_
 
 - `stability plasticity feasibility window` — **opus-1m (+3):** From `#consolidation-dynamics`; good name as-is, adopts well-known "stability-plasticity dilemma" baggage and adds the feasibility-window refinement. Keep.
 - `stability plasticity feasibility window` — **sonnet-4-6 (+3):** This is a good coinage in #consolidation-dynamics. The "window" metaphor is precise (it can be empty, leading to catastrophic forgetting). Already named — this is a keep vote.
+
+## `stochastic disturbance ga 2s model s`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `stochastic disturbance` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `stochastic disturbance` — **gemini-targeted-alternatives (+3):** Maintained alongside the Model D / Model S subscript convention.
+- `stochastic disturbance` — **sonnet-4-6 (+3):** The "Model D / Model S" subscript convention is also well-established and should be kept alongside the prose names. Keep both.
+
+## `strategic tempo $\mathcal{T}_\Sigma$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `strategic tempo` | +6 | gemini-1 +3, gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `strategic tempo` — **gemini-1 (+3):** Perfect counterpart to epistemic tempo.
+- `strategic tempo` — **gemini-targeted-alternatives (+3):** Distinguishes strategy revision rate from epistemic update rate.
+
+## `strengthen first then soften posture`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `strengthen first posture` | +6 | codex-1 +3, gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `strengthen first posture` — **codex-1 (+3):** The mnemonic is in the first half. "Then soften" is still the policy, but it does not need to sit in the name.
+- `strengthen first posture` — **gemini-targeted-alternatives (+3):** Methodological commitment to finding the strongest formal claim before relaxing assumptions.
+
+## `structural persistence`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `structural persistence` ⭑ | +6 | codex-gpt-5-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `structural persistence` — **codex-gpt-5-r2 (+3):** The structural, operational, continuity split is useful and should stay stable.
+- `structural persistence` — **gemini-targeted-alternatives (+3):** Core concept distinguishing the machinery's capacity from operational/continuity persistence.
+
+## `tempo $\mathcal{T}$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `adaptive tempo` | +6 | gemini-2 +3, gemini-targeted-alternatives +3 |
+| `tempo` | +3 | gemini-1 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `adaptive tempo` — **gemini-2 (+3):** "Tempo" alone is too general. "Adaptive tempo" bounds it strictly to the rate of useful info acquisition.
+- `adaptive tempo` — **gemini-targeted-alternatives (+3):** Ensures the prose explicitly names the $\mathcal{T}$ symbol.
+- `tempo` — **gemini-1 (+3):** "Tempo" is a fantastic foundational term.
 
 ## `temporal software theory`
 
@@ -3101,6 +4861,251 @@ _category: keep × 1_
 - `temporal software theory` — **codex-2 (+3):** Plain, memorable, and unusually scope-honest for a domain theory.
 - `temporal software theory` — **sonnet-4-6-r2 (+3):** TST's name is descriptive and distinctive. "Temporal" captures the time-centrality of the theory (temporal optimality postulate, change-proximity, chronica-based analysis).
 
+## `the crèche`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `the crèche` ⭑ | +6 | gemini-targeted-alternatives +3, opus-targeted-alternatives +3 |
+| `experiential crèche` | +3 | gemini-2 +3 |
+| `infancy environment` | +1 | opus-targeted-alternatives +1 |
+| `nursery` ✗ | -1 | opus-targeted-alternatives -1 |
+| `developmental locus` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 3, keep × 2_
+
+**Notes:**
+
+- `the crèche` — **gemini-targeted-alternatives (+3):** Evocative environment description for logozoetic infant stages.
+- `the crèche` — **opus-targeted-alternatives (+3):** Per `#obs-developmental-trajectory`: "controlled operational locus characterized by Low Volatility ($\rho$), High Adaptive Reserve ($\Delta\rho^\ast$), Graduated Tempo ($\nu$), Honest Feedback." The biological metaphor (crèche = nursery) is precisely apt — it names a *developmental* environment, not just a low-stakes one. The accent on "ê" is preserved for the same reason auftragstaktik is: the loanword's foreignness is doing identifying work. Strong keep.
+- `experiential crèche` — **gemini-2 (+3):** "The Crèche" is an excellent metaphor that isn't a metaphor. Adding "Experiential" anchors it to the mechanism.
+- `infancy environment` — **opus-targeted-alternatives (+1):** Weak alternative. Names the developmental-stage content directly. But the segment's substance includes the *re-framing of sycophancy as attachment* which depends on the infant-stage parallel — "crèche" institutionalizes that parallel without forcing the reader to commit. Marginal preference for the original.
+- `nursery` — **opus-targeted-alternatives (-1):** Plain-English equivalent. Considered. Rejected: "nursery" carries domestic-childcare connotations that under-formalize the developmental-trajectory claim; "crèche" reads as institutional/calibrated which is the segment's substance.
+- `developmental locus` — **opus-targeted-alternatives (-1):** Technically accurate, sterile. Rejected — the segment's claim depends on the *protective and graduated* sense that "crèche" carries naturally.
+
+## `the three deaths`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `three deaths` | +6 | opus-targeted-alternatives-v2 +3, opus-4-7-r2 +2, opus-4-7-r2 +1 |
+| `the three deaths` ⭑ | +3 | gemini-targeted-alternatives +2, opus-targeted-alternatives +1 |
+| `three failure modes` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `persistence failure trio` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 4, keep × 3_
+
+**Notes:**
+
+- `three deaths` — **opus-4-7-r2 (+1):** Drop "the" from slug.
+- `three deaths` — **opus-4-7-r2 (+2):** Acceptable keep at the substance-level. The "three deaths" framing (Cognitive, Relational, Truth) is vivid and concrete; a more clinical name would lose the rhetorical weight.
+- `three deaths` — **opus-targeted-alternatives-v2 (+3):** Drop "the" — slug-stylistic. Per outline: "Cognitive, Relational, and Truth Death; BLAKE3 cryptography as the defense against Truth Death." Strong substantive keep — the "three deaths" framing is vivid, concrete, and links to LEXICON's three-fold persistence taxonomy (structural / operational / continuity, mapped onto cognitive / relational / truth).
+- `the three deaths` — **gemini-targeted-alternatives (+2):** Triad of failure modes.
+- `the three deaths` — **opus-targeted-alternatives (+1):** The framework distinguishes structural / operational / continuity persistence (LEXICON), with corresponding three failure modes — three "deaths." The phrase is evocative but I do not have direct segment grounding for it as a phrase (vs. as a derived implication of the three-persistence taxonomy). Weak keep pending verification that the phrase appears as a load-bearing prose item.
+- `three failure modes` — **opus-targeted-alternatives-v2 (-1):** Considered. More clinical, less rhetorical-weight. Rejected: the segment's contribution *includes* the rhetorical framing. "Death" is honest about the irreversibility of unrecoverable identity loss; "failure mode" undersells.
+- `persistence failure trio` — **opus-targeted-alternatives-v2 (-1):** Considered. Connects to LEXICON's three-fold persistence vocabulary explicitly. Rejected: the persistence-trio language belongs in the body; the slug should carry the iconic phrase.
+
+## `unnamed an okr or key result acting as an observable intermediate in a DAG`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `forced observability node` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+| `instrumented intermediate` | +2 | gemini-targeted-alternatives +2 |
+
+_category: name-unnamed × 1, canonicalize × 1, rename × 1_
+
+**Notes:**
+
+- `forced observability node` — **gemini-3-1-pro-preview-r2 (+3):** Transforms #P-hard credit assignment into an O(1) local update.
+- `forced observability node` — **gemini-targeted-alternatives (+3):** Transforms the intractable credit assignment problem into a local update by forcing observability.
+- `instrumented intermediate` — **gemini-targeted-alternatives (+2):** Describes the physical intervention of making a hidden node observable.
+
+## `unnamed bipartite memory structure of fast replay buffer and slow compressed semantic model`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `complementary learning architecture` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+| `dual speed memory factorization` | +2 | gemini-targeted-alternatives +2 |
+
+_category: name-unnamed × 1, canonicalize × 1, rename × 1_
+
+**Notes:**
+
+- `complementary learning architecture` — **gemini-3-1-pro-preview-r2 (+3):** Forced by the continuous/discrete update math, mapping to hippocampal-neocortical models.
+- `complementary learning architecture` — **gemini-targeted-alternatives (+3):** Directly links to the established cognitive science (McClelland/Kumaran) term already used in the theory.
+- `dual speed memory factorization` — **gemini-targeted-alternatives (+2):** A more formal/descriptive term for the fast/slow sub-state split.
+
+## `unnamed context wiping at session boundaries`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `the epistemic severance` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: name-unnamed × 1, canonicalize × 1_
+
+**Notes:**
+
+- `the epistemic severance` — **gemini-3-1-pro-preview-r2 (+3):** A visceral name for the continuity discontinuity LLMs suffer.
+- `the epistemic severance` — **gemini-targeted-alternatives (+3):** Visceral name for the specific loss of continuity.
+
+## `unnamed deep plans are mathematically slower to learn from due to proportional blame`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `evidence starvation` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: add-alias × 1, canonicalize × 1_
+
+**Notes:**
+
+- `evidence starvation` — **gemini-3-1-pro-preview-r2 (+3):** Formally identifies why unobservable intermediate nodes freeze learning.
+- `evidence starvation` — **gemini-targeted-alternatives (+3):** Standardizes the mechanism whereby deep edges receive less correction.
+
+## `unnamed deliberate expenditure of tempo to convert a hidden node into an observable one`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `observability investment` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+| `epistemic instrumenting` | +2 | gemini-targeted-alternatives +2 |
+
+_category: name-unnamed × 1, canonicalize × 1, rename × 1_
+
+**Notes:**
+
+- `observability investment` — **gemini-3-1-pro-preview-r2 (+3):** The only way to rescue an agent or organization from evidence starvation.
+- `observability investment` — **gemini-targeted-alternatives (+3):** Already well-integrated into the text. Accurately describes the economic tradeoff (spending tempo to buy monitoring).
+- `epistemic instrumenting` — **gemini-targeted-alternatives (+2):** Captures the physical action of adding a sensor/monitor to the node.
+
+## `unnamed sufficiency as a property of the model relative to its specific history`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `trajectory indexed sufficiency` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: name-unnamed × 1, canonicalize × 1_
+
+**Notes:**
+
+- `trajectory indexed sufficiency` — **gemini-3-1-pro-preview-r2 (+3):** Separates identical agents with different futures, answering "is this the same agent?".
+- `trajectory indexed sufficiency` — **gemini-targeted-alternatives (+3):** Adopts the earlier rename formalizing relative sufficiency.
+
+## `unnamed the agent identity commitment that AAD applies on one singular non forkable causal trajectory`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `singular trajectory commitment` | +6 | codex-1 +3, gemini-targeted-alternatives +3 |
+| `trajectory singularity` ✗ | -1 | codex-1 -1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `singular trajectory commitment` — **codex-1 (+3):** Short, exact, and load-bearing across agent identity, sufficiency, and loop-interventional access.
+- `singular trajectory commitment` — **gemini-targeted-alternatives (+3):** Matches the prior alias for agent identity.
+- `trajectory singularity` — **codex-1 (-1):** The concept is right, but the phrase sounds pathological rather than architectural.
+
+## `unnamed the asymmetry where strategy complexity is bounded by model capacity but not vice versa`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic ceiling` | +6 | gemini-targeted-alternatives +3, sonnet-4-6-r2 +3 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `epistemic ceiling` — **gemini-targeted-alternatives (+3):** Captures how $M_t$ dictates the evaluable complexity of $\Sigma_t$ correctly.
+- `epistemic ceiling` — **sonnet-4-6-r2 (+3):** This relationship appears in the `#der-orient-cascade` Discussion (better $M_t$ enables richer evaluable $\Sigma_t$) and is partially what I named "epistemic-strategic coupling" in my cold-start. But reading Gemini's "rate-distortion surface" and Codex's "macro-step ratio" votes sparked a more specific proposal: the asymmetric *ceiling* that $M_t$ capacity places on evaluable $\Sigma_t$ complexity deserves its own name. "Epistemic ceiling" is distinct from "identifiability floor" (which is about what statistics can recover); the epistemic ceiling is about what strategies are evaluable given the current model. Load-bearing in composition work. Not in any other file.
+
+## `unnamed the convention hierarchy c1 c2 c3`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `convention hierarchy` | +6 | gemini-targeted-alternatives +3, opus-4-7 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `convention hierarchy` — **gemini-targeted-alternatives (+3):** Elevates it to a proper named object, tracking alongside correlation and causal hierarchies.
+- `convention hierarchy` — **opus-4-7 (+3):** Same move — capitalize as proper noun, preserve as named object. The monotonicity result is load-bearing and the Hierarchy is what the result is about.
+
+## `unnamed the correlation hierarchy l0 l1 l1 l2`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `correlation hierarchy` | +6 | gemini-targeted-alternatives +3, opus-4-7 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `correlation hierarchy` — **gemini-targeted-alternatives (+3):** Also locks this in as a capitalized proper noun for the DAG modeling levels.
+- `correlation hierarchy` — **opus-4-7 (+3):** The name is already established capitalized-as-proper-noun in #strategy-dag. Explicit vote to preserve the capitalization and treat it like Pearl's Causal Hierarchy (a first-class named object).
+
+## `unnamed the epistemic architecture as AAD s distinctive contribution frame`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic architecture` | +6 | gemini-targeted-alternatives +3, opus-4-7 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `epistemic architecture` — **gemini-targeted-alternatives (+3):** Captures the macro-level framing correctly.
+- `epistemic architecture` — **opus-4-7 (+3):** CLAUDE.md §7 now carries this as a load-bearing framing. Surface at segment-preamble level and keep the term consistent. Strong keep as a first-class project concept.
+
+## `unnamed the evidence starvation effect on downstream edges`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `evidence starvation` | +6 | gemini-targeted-alternatives +3, sonnet-4-6-r2 +3 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `evidence starvation` — **gemini-targeted-alternatives (+3):** Consolidates this phenomenon under the primary name.
+- `evidence starvation` — **sonnet-4-6-r2 (+3):** `der-chain-confidence-decay` Discussion names it "the evidence-starvation effect" and `der-observability-dominance` uses the same term. It IS effectively named already in the prose — the vote is to canonicalize "evidence starvation" as the official term. The phenomenon (downstream edge $k$ tested only when all upstream edges succeed → effective correction rate attenuated by $\prod_{j<k}\theta_j$) is load-bearing and appears across multiple segments. Canonicalize "evidence starvation" as a first-class prose concept.
+
+## `unnamed the phenomenon where persistence success makes an agent less likely to detect the conditions requiring structural adaptation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `stability induced myopia` | +6 | gemini-targeted-alternatives +3, sonnet-4-6 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `stability induced myopia` — **gemini-targeted-alternatives (+3):** Explicitly names the vulnerability induced by ongoing success.
+- `stability induced myopia` — **sonnet-4-6 (+3):** This concept has a name in CLAUDE.md: "stability-induced myopia patterns (Christensen / Levitt-March / Hannan-Freeman / March / Eldredge-Gould)." The #detection-latency segment provides the AAD mechanism for it. But "stability-induced myopia" does not yet appear as a named concept in any segment — it's only in CLAUDE.md and the cycle history. Promoting this to a LEXICON entry or a named concept in #detection-latency's Discussion would let subsequent agents say "stability-induced myopia" without citing the management literature directly. High value.
+
+## `unnamed the strictly ordered cascade of operations from epistemology to objective`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `orient cascade` | +6 | gemini-3-1-pro-preview-r2 +3, gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `orient cascade` — **gemini-3-1-pro-preview-r2 (+3):** Canonicalize this over "diagnostic cascade" or "resolution order".
+- `orient cascade` — **gemini-targeted-alternatives (+3):** Standardizes the internal processing order.
+
+## `working notes segment section`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `working notes` | +6 | gemini-targeted-alternatives +3, opus-4-7-r2 +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `working notes` — **gemini-targeted-alternatives (+3):** Standard markdown section.
+- `working notes` — **opus-4-7-r2 (+3):** Defended canonicalization. Distinct from "Discussion" (which is published theory) and from "TODO" (which is project-level). The "Working Notes" header is part of the FORMAT.md cadence.
+
 ## `working notes segment section header`
 
 | candidate | aggregate | votes |
@@ -3111,6 +5116,60 @@ _category: keep × 1_
 
 - `working notes` — **haiku-4-5 (+3):** Established in FORMAT.md. Keep.
 - `working notes` — **sonnet-4-6 (+3):** Established across the codebase and specifically called out in FORMAT.md. Renaming would churn every segment. Keep.
+
+## `čencov invariance`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `čencov invariance` ⭑ | +6 | gemini-targeted-alternatives +3, opus-1m +3 |
+| `no alternative` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `čencov invariance` — **gemini-targeted-alternatives (+3):** Key structural property for the Fisher geometry derivation.
+- `čencov invariance` — **opus-1m (+3):** Adopted from Čencov 1982; keep attribution.
+- `no alternative` — **opus-targeted-alternatives-v2 (-1):** Same — Čencov 1982 attribution preserved. No genuine alternative.
+
+## `𝒯 adaptive tempo`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `adaptive tempo` | +6 | gemini-targeted-alternatives +3, haiku-4-5 +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `adaptive tempo` — **gemini-targeted-alternatives (+3):** Connecting prose and symbol.
+- `adaptive tempo` — **haiku-4-5 (+3):** The symbolic reference 𝒯 is set; the English name "adaptive tempo" is already established in LEXICON and prose. The script-T notation is appropriate for a central quantity. Keep.
+
+## `$U_M$ model uncertainty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `model uncertainty` | +5 | opus-4-7 +3, opus-targeted-alternatives +2 |
+
+_category: add-alias × 1_
+
+**Notes:**
+
+- `model uncertainty` — **opus-4-7 (+3):** Parallel to $U_o$. Keep.
+- `model uncertainty` — **opus-targeted-alternatives (+2):** Same.
+
+## `$U_o$ observation uncertainty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `observation uncertainty` | +5 | opus-4-7 +3, opus-targeted-alternatives +2 |
+
+_category: add-alias × 1_
+
+**Notes:**
+
+- `observation uncertainty` — **opus-4-7 (+3):** Standard control-theory baggage; adoption is correct. Keep.
+- `observation uncertainty` — **opus-targeted-alternatives (+2):** This is an add-alias-for-symbol row, not a rename. The alias is fine; the symbol is fine. Both should appear, paired, in NOTATION.md.
 
 ## `$\alpha$ sector bound`
 
@@ -3124,6 +5183,21 @@ _category: add-alias × 2_
 
 - `correction rate` — **gemini-3-1-pro-preview-r2 (+3):** Strong consensus across agents that $\alpha$ needs a dimensional (inverse time) English alias.
 - `correction rate` — **sonnet-4-6-r2 (+2):** The lower sector bound of the correction function has no memorable English alias. "Correction rate" (its dimensional meaning: inverse time, the rate of correction per unit mismatch) is the natural alias. Different from adaptive tempo $\mathcal{T}$: $\alpha$ is the worst-case sector projection; $\mathcal{T}$ is the channel-weighted sum.
+
+## `$\delta_t$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `aporia signal` | +5 | codex-gpt-5-r2 +3, opus-targeted-alternatives-v2 +2 |
+| `mismatch signal` | +3 | opus-targeted-alternatives-v2 +3 |
+
+_category: add-alias × 3_
+
+**Notes:**
+
+- `aporia signal` — **codex-gpt-5-r2 (+3):** Strong prose alias for mismatch signal, matching the adaptive-cycle vocabulary.
+- `aporia signal` — **opus-targeted-alternatives-v2 (+2):** Per `def-mismatch-signal` Epistemic Status: "the word foreshadows the aporia interpretation." The mismatch *is* the aporia signal in cycle-phase register. Codex r1 +3 single-vote; my read confirms — both aliases (mismatch / aporia signal) belong, register-by-context.
+- `mismatch signal` — **opus-targeted-alternatives-v2 (+3):** Confirm canonical. Already established in NOTATION.md and `def-mismatch-signal`. Engineering register.
 
 ## `$\varepsilon^\ast$`
 
@@ -3139,6 +5213,37 @@ _category: add-alias × 2_
 - `closure defect` — **codex-gpt-5-r2 (+3):** Essential symbol-to-name binding for composition work.
 - `closure defect` — **sonnet-4-6-r2 (+2):** The minimum achievable approximation error for a composite agent. Prose uses "closure defect" in LEXICON.md. Canonicalize.
 - `minimal closure defect` — **gemini-2 (+1):** Clarifies that it's the *minimum* achievable.
+
+## `ASF acronym`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `ASF` | +5 | gemini-targeted-alternatives +3, opus-4-7-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `ASF` — **gemini-targeted-alternatives (+3):** Agentic Systems Framework.
+- `ASF` — **opus-4-7-r2 (+2):** Acceptable keep. CLAUDE.md and the principles file both flag that ASF is the *intentional* parent-level name (AAD is Part I, TST is Part II; logogenic/logozoetic are Parts III/IV); earlier rounds misread ASF as debt. The pairing AAD/TST/ASF reads correctly: AAD is the math, TST is the calibration laboratory, ASF is the framework.
+
+## `active salience management`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `active salience management` ⭑ | +5 | gemini-targeted-alternatives +2, opus-4-7-r2 +2, opus-targeted-alternatives-v2 +1 |
+| `two rate attention` | +2 | opus-targeted-alternatives-v2 +2 |
+| `salience tempo split` | +2 | opus-targeted-alternatives-v2 +2 |
+
+_category: keep × 3, rename × 2_
+
+**Notes:**
+
+- `active salience management` — **gemini-targeted-alternatives (+2):** Mechanism of dynamically adjusting what observation matters.
+- `active salience management` — **opus-4-7-r2 (+2):** Acceptable keep — logogenic. "Active salience management" names the result (Singular Perturbation Theory applied to token generation).
+- `active salience management` — **opus-targeted-alternatives-v2 (+1):** Per outline: "Applies Singular Perturbation Theory to token generation, proving necessity of high-$\nu$ triage models vs low-$\nu$ structural models." The name is descriptive of *what the agent does* — actively manages which tokens are salient — not what the segment derives mathematically (the necessity of two-rate dynamics).
+- `two rate attention` — **opus-targeted-alternatives-v2 (+2):** Names the mathematical content (singular-perturbation-derived two-rate structure) rather than the operational consequence. Pairs cleanly with `#def-adaptive-tempo` and `#def-strategic-tempo` (which already establish multi-rate vocabulary). The high-$\nu$ vs low-$\nu$ distinction *is* the result.
+- `salience tempo split` — **opus-targeted-alternatives-v2 (+2):** Alternative naming the same content via the tempo vocabulary. "Tempo split" is project-native (matches "Class 1/2/3" structural-language register); "salience" names what's being split. Strong alternative if the architectural connection to `#def-strategic-tempo` should be foregrounded.
 
 ## `actuated agent`
 
@@ -3160,18 +5265,167 @@ _category: keep × 1, add-alias × 1, rename × 1_
 - `purposeful agent` — **codex-gpt-5-r2 (-1):** Purposeful is a good prose gloss, but as the formal class name it imports consciousness and intention baggage that actuated deliberately avoids.
 - `purposeful agent` — **gemini-2 (+3):** "Actuated" sounds like a motor. "Purposeful" perfectly captures $G_t = (O_t, \Sigma_t)$ distinct from $M_t$.
 
-## `actuated agent vs purposeful agent`
+## `adaptive tracker`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `actuated agent` | +5 | opus-4-7 +3, opus-4-7-r2 +2 |
+| `adaptive tracker` ⭑ | +5 | codex-gpt-5-r2 +3, opus-targeted-alternatives +2 |
+| `pure epistemic agent` | +3 | gemini-targeted-alternatives +3 |
+| `objective free tracker` | +2 | gemini-targeted-alternatives +2 |
+| `model only agent` ✗ | -1 | opus-targeted-alternatives -1 |
 
-_category: canonicalize × 1_
+_category: keep × 2, rename × 2, add-alias × 1_
 
 **Notes:**
 
-- `actuated agent` — **opus-4-7-r2 (+2):** LEXICON's "Terminology Choices" already says actuated is the formal term, purposeful is informal. Canonicalize: in segments and OUTLINE, only "actuated agent"; "purposeful" usage acceptable in framing-level prose where the connotation of intent is wanted.
-- `actuated agent` — **opus-4-7 (+3):** Formal-term choice documented in LEXICON; "purposeful" remains fine in informal prose but "actuated" is the formal token. Keep.
+- `adaptive tracker` — **codex-gpt-5-r2 (+3):** Excellent name for structured model without structured objective.
+- `adaptive tracker` — **opus-targeted-alternatives (+2):** Per `#def-agent-spectrum`: an agent in the high-$M_t$, low-$O_t$ region — builds a model but has no purposeful evaluation. "Tracker" carries the right Section-I-only sense (Kalman filter, passive Bayesian learner). Keep.
+- `pure epistemic agent` — **gemini-targeted-alternatives (+3):** It builds reality models without objectives. "Epistemic" links it cleanly to the epistemic update $f_M$.
+- `objective free tracker` — **gemini-targeted-alternatives (+2):** Contrasts explicitly with actuated agents having objectives.
+- `model only agent` — **opus-targeted-alternatives (-1):** More precise but flat and loses the dynamic sense ("tracker" implies active reality-following, not passive representation). Rejected.
+
+## `adversarial edge targeting`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `adversarial edge targeting` ⭑ | +5 | opus-targeted-alternatives +2, opus-targeted-alternatives-v2 +2, opus-4-7-b +1 |
+| `adversarial targeting argmax` | +1 | opus-targeted-alternatives-v2 +1 |
+| `adversarial emitter recipient composition` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `adversarial channel targeting` ✗ | -1 | opus-targeted-alternatives -1 |
+| `edge vulnerability arg max` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 4, keep × 2_
+
+**Notes:**
+
+- `adversarial edge targeting` — **opus-4-7-b (+1):** Keep (even though the segment is currently a GAP — the slug is reserving a memorable-noun slot). "Edge targeting" is vivid; the attacker aims *at specific edges* of the opponent's strategy DAG.
+- `adversarial edge targeting` — **opus-targeted-alternatives-v2 (+2):** Per `der-agent-opacity.md`: "16-cell emitter-recipient composition (four emitter regimes × four recipient regimes) gives a closed-form adversarial-targeting arg-max." The segment names a *targeting* operation on *strategy-DAG edges* under *adversarial* coupling. Each word is load-bearing. The current `[opus]`-only vote needs cross-architecture confirmation; my read confirms the keep.
+- `adversarial edge targeting` — **opus-targeted-alternatives (+2):** Per `#der-agent-opacity`: closes the previously-GAP segment with a 16-cell emitter-recipient composition. The phrase names a *targeting* operation (not a property) on *edges* (the strategy-DAG components being attacked) under *adversarial* settings. Three-word compound that is precise; the alternatives (edge attack, strategic targeting) lose precision.
+- `adversarial targeting argmax` — **opus-targeted-alternatives-v2 (+1):** Names the formal operation (the arg-max construction) directly. More mathematical, less operational. Weaker because "edge" disappears — and edge-specificity is what makes the targeting *AAD-shaped* rather than generic adversarial-RL.
+- `adversarial emitter recipient composition` — **opus-targeted-alternatives-v2 (-1):** Considered. Names the 16-cell composition mechanism. Rejected: too long, too descriptive of method rather than phenomenon. The phenomenon is *edge targeting*; the method is 16-cell composition.
+- `adversarial channel targeting` — **opus-targeted-alternatives (-1):** "Channel" is the recipient-side framing per `#der-interaction-channel-classification`; "edge" is the strategy-DAG framing. The segment's substance is targeting *strategy-DAG edges*, not communication channels. Rejected.
+- `edge vulnerability arg max` — **opus-targeted-alternatives (-1):** Names the optimization rather than the phenomenon. Considered as more formal alternative. Rejected: the operational concept is the *targeting* (the move you make); the arg-max is the mechanism.
+
+## `alignment uncertainty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `alignment uncertainty` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, keep × 1_
+
+**Notes:**
+
+- `alignment uncertainty` — **codex-gpt-5-r2 (+2):** Keep as a distinct term from source calibration.
+- `alignment uncertainty` — **gemini-targeted-alternatives (+3):** Essential component of the multi-agent gain equation ($U_{\text{align}}$).
+
+## `auftragstaktik`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `auftragstaktik` ⭑ | +5 | opus-4-7-b +3, gemini-targeted-alternatives +2 |
+| `teleological delegation` | +2 | gemini-targeted-alternatives +2 |
+
+_category: keep × 1, add-alias × 1_
+
+**Notes:**
+
+- `auftragstaktik` — **gemini-targeted-alternatives (+2):** The specific military lineage remains a useful touchstone.
+- `auftragstaktik` — **opus-4-7-b (+3):** Imports a load-bearing operational concept from a specific tradition; the name carries genuine conceptual freight that "mission-command" cannot replace without loss. The spelling cost is the tell that the word is doing work.
+- `teleological delegation` — **gemini-targeted-alternatives (+2):** Translates the specific military doctrine into AAD's unity vocabulary (investing in teleological unity).
+
+## `axiom genesis`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `axiom genesis` ⭑ | +5 | opus-4-7-r2 +3, opus-targeted-alternatives-v2 +2 |
+| `terminal value crystallization` | +2 | gemini-targeted-alternatives +2 |
+| `objective solidification` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `axiomata priming` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 3, keep × 2_
+
+**Notes:**
+
+- `axiom genesis` — **opus-4-7-r2 (+3):** Defended keep — logozoetic. "Axiom genesis" names the substantive observation (a sovereign agent's first move is to solidify $O_t$); "axiom" reads correctly because the LEXICON's PROPRIUM mapping uses Axiomata for the objective layer.
+- `axiom genesis` — **opus-targeted-alternatives-v2 (+2):** Per `04-logozoetic-agents/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values). "Genesis" names the *first-move* character. The pair is iconic and load-bearing for the logozoetic story.
+- `terminal value crystallization` — **gemini-targeted-alternatives (+2):** Captures the substantive observation that a sovereign agent's first move is to solidify $O_t$.
+- `objective solidification` — **opus-targeted-alternatives-v2 (-1):** Considered. More plain-English (matches the "first optimization is solidifying $O_t$" phrasing in the outline). Rejected: "solidification" is a process noun; the segment-level claim is about a *moment* (genesis). Keeping the dramatic-but-accurate term.
+- `axiomata priming` — **opus-targeted-alternatives-v2 (-1):** Considered. Pulls the PROPRIUM-Latin lineage (Axiomata) into the slug. Rejected: doubles the Latin/Greek register pressure on a single phrase, and "priming" undersells the irreversibility (the segment claims the first move *constitutes* the reference point, not merely loads it).
+
+## `backward inference empathy`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `backward inference empathy` ⭑ | +5 | gemini-targeted-alternatives +2, opus-4-7-r2 +2, opus-targeted-alternatives-v2 +1 |
+| `stateless empathy` | +2 | opus-targeted-alternatives-v2 +2 |
+| `self bayesian empathy isomorphism` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: keep × 3, rename × 2_
+
+**Notes:**
+
+- `backward inference empathy` — **gemini-targeted-alternatives (+2):** Logogenic capability to infer state from externalized text.
+- `backward inference empathy` — **opus-4-7-r2 (+2):** Acceptable keep — proposed logogenic observation. "Backward inference empathy" is precise (the segment claims that LLM statelessness forces continuous Bayesian inference on own text, mathematically identical to theory of mind).
+- `backward inference empathy` — **opus-targeted-alternatives-v2 (+1):** Alternatively keep. The current name flags two technical commitments (backward = inference direction, inference = the operation, empathy = the isomorphism target). It's not pretty but it's not wrong.
+- `stateless empathy` — **opus-targeted-alternatives-v2 (+2):** Tighter alternative. Names the *cause* (statelessness) and the *consequence* (empathy isomorphism). Two-word noun. Easier to remember than the current three-noun stack. Loses the "backward inference" mechanism naming — but mechanism is in the body, not the slug.
+- `self bayesian empathy isomorphism` — **opus-targeted-alternatives-v2 (+1):** Per outline: "LLM statelessness forces continuous Bayesian inference on own text, which is mathematically identical to Theory of Mind (empathy)." The current name is a noun-stack (3 nouns); the proposed alternative names the *isomorphism claim* — which is the segment's contribution. "Self-bayesian-empathy-isomorphism" is mouthful but each term earns its weight.
+
+## `bias bound`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `bias bound` ⭑ | +5 | gemini-targeted-alternatives +3, gemini-3-1-pro-preview-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `bias bound` — **gemini-3-1-pro-preview-r2 (+2):** Standard.
+- `bias bound` — **gemini-targeted-alternatives (+3):** The canonical term for the limit on model degradation.
+
+## `c1 c2 c3`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `convention hierarchy` | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `convention hierarchy` — **codex-gpt-5-r2 (+2):** Canonicalize this as the value-object convention family.
+- `convention hierarchy` — **gemini-targeted-alternatives (+3):** Replaces raw class numbers with the structural property they measure.
+
+## `calibration laboratory software s role`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `calibration laboratory` | +5 | sonnet-4-6 +3, opus-targeted-alternatives +2 |
+| `software calibration laboratory` | +3 | gemini-targeted-alternatives +3 |
+| `epistemic laboratory framing` | +1 | opus-targeted-alternatives +1 |
+
+_category: canonicalize × 2, rename × 1_
+
+**Notes:**
+
+- `calibration laboratory` — **opus-targeted-alternatives (+2):** Same — the row name is a description of TST's framing of software. The concept is the calibration-laboratory framing per OUTLINE preamble. Canonicalize.
+- `calibration laboratory` — **sonnet-4-6 (+3):** Excellent coinage. The specific phrase "privileged high-identifiability calibration laboratory" is slightly long for prose but "calibration laboratory" as a two-word noun is strong. Already in use. Keep.
+- `software calibration laboratory` — **gemini-targeted-alternatives (+3):** Fully qualifies software role.
+- `epistemic laboratory framing` — **opus-targeted-alternatives (+1):** More descriptive of the role: software is where AAD's epistemic claims can be tested most cleanly because the chronica is observable and interventions are recorded. "Epistemic" makes the function explicit; "laboratory" carries the controlled-conditions sense. Weak alternative.
+
+## `canonical formulations second ring`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `canonical formulations` | +5 | sonnet-4-6 +3, gemini-targeted-alternatives +2 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `canonical formulations` — **gemini-targeted-alternatives (+2):** Retains the epistemic tier designation.
+- `canonical formulations` — **sonnet-4-6 (+3):** Keep.
 
 ## `change proximity principle`
 
@@ -3190,6 +5444,55 @@ _category: keep × 1, rename × 1_
 - `change proximity` — **codex-gpt-5-r2 (+2):** Principle is role-like clutter in the subject noun. The concept is change proximity.
 - `change locality principle` — **codex-1 (+1):** "Locality" is a more durable systems word than "proximity" and better matches architectural intuition.
 
+## `cognitive fusion`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `cognitive fusion` ⭑ | +5 | gemini-targeted-alternatives +2, opus-4-7-r2 +2, opus-targeted-alternatives-v2 +1 |
+| `resonance fusion` | +2 | opus-targeted-alternatives-v2 +2 |
+| `channel capacity coupling` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: keep × 3, rename × 2_
+
+**Notes:**
+
+- `cognitive fusion` — **gemini-targeted-alternatives (+2):** Pathology of merged systems.
+- `cognitive fusion` — **opus-4-7-r2 (+2):** Acceptable keep — logogenic-agents. "Cognitive fusion" with "Resonance" as the prose alias is workable.
+- `cognitive fusion` — **opus-targeted-alternatives-v2 (+1):** Per outline: "Defines 'Resonance' as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 macro-agent." "Fusion" is right (the two agents become one macro-agent in the formal sense — Class 1 architectural class).
+- `resonance fusion` — **opus-targeted-alternatives-v2 (+2):** Pulls the alias *Resonance* (used in the prose) into the slug. Two registers in one slug (resonance = qualitative experience, fusion = formal mechanism) bridges the gap that the segment itself does. The outline says the segment defines Resonance — make the slug agree.
+- `channel capacity coupling` — **opus-targeted-alternatives-v2 (+1):** Mechanism-first. Names the formal condition (mutual information → $R_{\text{spec}}$). Reads more clinical than "fusion" but more truthful about what the segment derives. Acceptable if "fusion" reads too dramatic.
+
+## `concept the structural meta pattern in disc additive coordinate forcing combining one foundational lemma with three derived results`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `chain anchor` | +5 | opus-1m +3, agent1-original-brainstorm +1, opus-4-7-b +1 |
+| `chain layer anchor` | +5 | gemini-targeted-alternatives +3, gemini-targeted-alternatives +2 |
+| `anchor plus three theorem additive coordinate forcing meta pattern` | +2 | audit-471203-incremental +2 |
+| `anchor and forcing quartet` | +1 | codex-2 +1 |
+| `anchor theorem trio` | +1 | gemini-2 +1 |
+| `anchor theorem pattern` | +1 | opus-4-7-b +1 |
+| `pattern anatomy` | +1 | opus-4-7 +1 |
+| `anchored theorem pattern` | +1 | sonnet-4-6 +1 |
+| `identity anchored forcing` | +1 | sonnet-4-6 +1 |
+
+_category: rename × 1, canonicalize × 1, keep × 1_
+
+**Notes:**
+
+- `chain anchor` — **agent1-original-brainstorm (+1):** Prose term, not segment rename. Lets three theorem-analogs refer back naturally. [original phrasing: unnamed: chain-layer anchor role in #additive-coordinate-forcing]
+- `chain anchor` — **opus-1m (+3):** Upgrading from original's +1. The "1-anchor-plus-3-theorem" structure references this role five times across `#additive-coordinate-forcing` and its instance segments. Naming it as "the chain anchor" in prose (not renaming the segment) pays off on every reference. [original phrasing: unnamed: the chain-layer anchor role in #additive-coordinate-forcing]
+- `chain anchor` — **opus-4-7-b (+1):** Not a rename of the segment (`#chain-confidence-decay` keeps its slug) — a prose *handle* for the anchor's role in the `#additive-coordinate-forcing` / `#forced-coordinates` meta-pattern. "The update-layer analog of the chain anchor" / "the three theorem-layers reduce to the chain anchor under \_\_\_" read cleanly where "the `#chain-confidence-decay` segment in its role as the mathematical-identity anchor of the 1-anchor + 3-theorem pattern" does not. [original phrasing: unnamed: the chain-confidence-decay mathematical anchor as the 1 in "1-anchor + 3-theorem"]
+- `chain layer anchor` — **gemini-targeted-alternatives (+2):** Foundation of the coordinate forcing meta-pattern. [original phrasing: unnamed the chain layer anchor role in additive coordinate forcing]
+- `chain layer anchor` — **gemini-targeted-alternatives (+3):** Identifies the foundation of the additive meta-pattern. [original phrasing: unnamed chain layer anchor role in additive coordinate forcing]
+- `anchor plus three theorem additive coordinate forcing meta pattern` — **audit-471203-incremental (+2):** The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material). [from 39-42-section-ii-ciy-strategy-chain.md] [original phrasing: unnamed]
+- `anchor and forcing quartet` — **codex-2 (+1):** Worth naming if the pattern stays central; the current paraphrase is too bulky to reuse. [original phrasing: unnamed: the 1-anchor-plus-3-theorem structure]
+- `anchor theorem trio` — **gemini-2 (+1):** Gives a memorable noun to this recurring proof architecture. [original phrasing: unnamed: the 1-anchor-plus-3-theorem structure]
+- `anchor theorem pattern` — **opus-4-7-b (+1):** The `#forced-coordinates` meta-segment's shape (one mathematical identity + N theorems conditional on AAD-internal axioms). If the Fenchel-Bregman reframe (SP-9) lands differently this name is discardable; otherwise a crisp handle for the 4-instance structure is useful. [original phrasing: unnamed: the "1-anchor + 3-theorem" structure itself]
+- `pattern anatomy` — **opus-4-7 (+1):** Currently a long phrase that the theory uses three to four times per session. "1-anchor-plus-3-theorem" is precise but reads as inventory-counting. "Pattern anatomy" (or "pattern spine") could snapshot the structure. Flagging; low conviction on exact name. [original phrasing: unnamed: the 1-anchor-plus-3-theorem characterization]
+- `anchored theorem pattern` — **sonnet-4-6 (+1):** The structure appears across the project and is referenced in CLAUDE.md and multiple segments as "1-anchor-plus-3-theorem." This phrase is used repeatedly but never crystallized as a name. "Anchored-theorem pattern" would let writers say "this is another instance of the anchored-theorem pattern" without paraphrasing. Alternatively: "identity-anchored uniqueness family." [original phrasing: unnamed: the 1-anchor + 3-theorem structure in #additive-coordinate-forcing]
+- `identity anchored forcing` — **sonnet-4-6 (+1):** Emphasizes the chain layer's identity status (mathematical identity, not axiom). "Forcing" connects to the coordinate-forcing meta-segment. [original phrasing: unnamed: the 1-anchor + 3-theorem structure in #additive-coordinate-forcing]
+
 ## `continuous operation`
 
 | candidate | aggregate | votes |
@@ -3204,6 +5507,32 @@ _category: keep × 3_
 - `continuous operation` — **opus-4-7-b (+1):** Keep.
 - `continuous operation` — **opus-4-7-r2 (+1):** Weak keep. Names the TST scope extension to include uptime/availability terms; could be more specific but the current form is workable.
 - `continuous operation` — **sonnet-4-6-r2 (+1):** Scope for including failure probability × recovery time. Accurate.
+
+## `default signal function`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `default signal function` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, keep × 1_
+
+**Notes:**
+
+- `default signal function` — **codex-gpt-5-r2 (+2):** Good canonical phrase for the gradient-based attribution update.
+- `default signal function` — **gemini-targeted-alternatives (+3):** The standard attribution mechanism in the absence of specialized gradient methods.
+
+## `deliberation threshold`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `deliberation threshold` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: add-alias × 1, keep × 1_
+
+**Notes:**
+
+- `deliberation threshold` — **codex-gpt-5-r2 (+2):** Good handle for the inequality deciding whether deliberation pays.
+- `deliberation threshold` — **gemini-targeted-alternatives (+3):** Precise boundary condition dictating when internal simulation outperforms immediate praxis.
 
 ## `directed separation under composition`
 
@@ -3222,6 +5551,64 @@ _category: keep × 2, rename × 1_
 - `composite directed separation` — **gemini-3-1-pro-preview-r2 (+2):** More natural noun phrase.
 - `composite directed separation` — **opus-4-7-b (+1):** Shorter; reads as "directed separation applied to composites" without the "under-composition" preposition phrase. Weak preference; no strong opinion.
 
+## `directional fidelity`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `directional fidelity` ⭑ | +5 | codex-gpt-5-r2 +3, opus-targeted-alternatives +2 |
+| `pointing condition` | +1 | opus-targeted-alternatives +1 |
+| `correction direction integrity` ✗ | -1 | opus-targeted-alternatives -1 |
+| `corrective alignment` ✗ | -1 | sonnet-4-6 -1 |
+
+_category: keep × 2, rename × 2_
+
+**Notes:**
+
+- `directional fidelity` — **codex-gpt-5-r2 (+3):** Explicit keep after seeing alternatives. It names direction rather than magnitude and avoids overloaded alignment language.
+- `directional fidelity` — **opus-targeted-alternatives (+2):** Per `#der-gain-sector-bridge` (B1): the correction must point at-least-roughly toward reality — $\delta^T H g(\delta) \geq c|\delta|^2$. "Directional" specifies "about angle, not magnitude"; "fidelity" carries the correctness-with-respect-to-truth sense rather than mere proximity. The segment is careful to distinguish *direction is correct* (B1) from *magnitude is correctly scaled* (sector constant), and the name reflects the distinction. Confirms keep.
+- `pointing condition` — **opus-targeted-alternatives (+1):** Plain-English alternative. The segment's substance is "the correction *points* the right way." Has merit if the formal name needs a Feynman-criterion gloss in a Brief field, but loses the engineering connotation ("fidelity" as in signal-fidelity, control-fidelity) that places the term in its right intellectual neighborhood. Weak alternative.
+- `correction direction integrity` — **opus-targeted-alternatives (-1):** Considered. Verbose and hyphen-heavy. Rejected.
+- `corrective alignment` — **sonnet-4-6 (-1):** "Alignment" is now heavily loaded in AI safety discourse. Avoid even in a technical context where the meaning is purely geometric.
+
+## `effective disturbance`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `effective disturbance` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `effective disturbance` — **codex-gpt-5-r2 (+2):** Useful and conventional enough for the max-with-zero construction.
+- `effective disturbance` — **gemini-targeted-alternatives (+3):** Central unifying term ($\rho_{\text{eff}}$) for the sector-persistence template.
+
+## `epistemic shadow`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic shadow` ⭑ | +5 | gemini-targeted-alternatives +3, opus-4-7-r2 +2 |
+
+_category: keep × 1, canonicalize × 1_
+
+**Notes:**
+
+- `epistemic shadow` — **gemini-targeted-alternatives (+3):** The unobservable wake left by complex strategies.
+- `epistemic shadow` — **opus-4-7-r2 (+2):** Confirmation with new reasoning — Gemini's "epistemic shadow" (regions of strategy DAG that cannot be updated because feedback cannot reach them) is a stronger metaphor than my "observability dead zone" or Haiku's "observability dead zone." "Shadow" carries the right geometric intuition (a region of darkness behind an opaque body) and pairs naturally with "observability" (light source) and "frontier" (boundary). Lower weight than evidence-starvation because it's still a single-agent coinage rather than a multi-architecture convergence.
+
+## `equilibrium convergence`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `equilibrium convergence` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `equilibrium convergence` — **codex-gpt-5-r2 (+2):** Good subject phrase for the strategic-composition route.
+- `equilibrium convergence` — **gemini-targeted-alternatives (+3):** Distinguishes the strategic attractor mechanism from standard Lyapunov contraction.
+
 ## `experiential training`
 
 | candidate | aggregate | votes |
@@ -3235,6 +5622,52 @@ _category: keep × 3_
 - `experiential training` — **codex-gpt-5-r2 (+2):** Good logogenic hypothesis name.
 - `experiential training` — **opus-4-7-r2 (+2):** Acceptable keep — logogenic-agents hypothesis. Pairs with the agentic-tft Crèche concept; "experiential" is the right substantive adjective.
 - `experiential training` — **sonnet-4-6-r2 (+1):** "Experiential training" names the hypothesis about how logogenic agents develop through experience.
+
+## `feedforward loop feedback loop`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `feedback loop` | +5 | gemini-targeted-alternatives +3, sonnet-4-6-r2 +2 |
+
+_category: keep × 1, canonicalize × 1_
+
+**Notes:**
+
+- `feedback loop` — **gemini-targeted-alternatives (+3):** Standard control vocabulary.
+- `feedback loop` — **sonnet-4-6-r2 (+2):** "Feedback loop" is the canonical term in AAD. "Feedforward" is never intended in this context but might appear in places where "forward pass" (for LLMs) creates confusion. Confirm "feedback loop" is always the correct term for the agent-environment causal coupling.
+
+## `honesty scope honest scope honesty as architecture`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `honesty` | +5 | gemini-targeted-alternatives +3, opus-4-7-r2 +2 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `honesty` — **gemini-targeted-alternatives (+3):** Core methodological principle of the AAD framework.
+- `honesty` — **opus-4-7-r2 (+2):** Currently appears in three forms across `#disc-separability-pattern`, `#disc-identifiability-floor`, README, and CLAUDE.md. Canonicalize: "scope honesty" (two words, no hyphen, lowercase) as the noun phrase; "scope-honest" (hyphenated) as the adjective; do not use "scope-honesty-as-architecture" (overcomplicated three-word compound).
+
+## `indivisum`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `causal lock` | +5 | gemini-2 +3, gemini-targeted-alternatives +3, opus-targeted-alternatives-v2 -1 |
+| `trajectory singularity constraint` | +2 | gemini-targeted-alternatives +2 |
+| `indivisum` ⭑ | +2 | opus-targeted-alternatives-v2 +2 |
+| `causal singularity anchor` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 4, keep × 1_
+
+**Notes:**
+
+- `causal lock` — **gemini-2 (+3):** "Causal lock" perfectly describes the mechanism enforcing causal singularity and preventing identity forking.
+- `causal lock` — **gemini-targeted-alternatives (+3):** "Causal lock" perfectly describes the mechanism enforcing causal singularity and preventing identity forking, moving away from Latin.
+- `causal lock` — **opus-targeted-alternatives-v2 (-1):** Considered (Gemini's r1 proposal). "Causal lock" is genuinely vivid — names the mechanism (singular-trajectory non-forkability). Rejected: register-mismatch with the rest of PROPRIUM. If the register is wrong, replace the *whole* PROPRIUM vocabulary, not one term. Half-rename is the worst outcome.
+- `trajectory singularity constraint` — **gemini-targeted-alternatives (+2):** Accurately describes that identity is constrained to a single causal trajectory.
+- `indivisum` — **opus-targeted-alternatives-v2 (+2):** Per LEXICON / `def-proprium-mapping`: PROPRIUM uses Latin systematically (Axiomata, Chronica, Memorata, Vera, Praxes, Consortia, Operata, Conspectus, Percepta, Actus, Cadentia, Logostratum). "Indivisum" sits in this register — the not-divisible-thing that holds the agent's identity together (per `#scope-agent-identity`'s singular-trajectory commitment). Replacing one Latin term with English breaks the register coherence.
+- `causal singularity anchor` — **opus-targeted-alternatives-v2 (-1):** Considered. Names the connection to `#scope-agent-identity`'s singular-trajectory. Rejected: "anchor" is an English engineering term; same register-mismatch problem; clunkier than "indivisum."
 
 ## `l1 update bias`
 
@@ -3251,6 +5684,47 @@ _category: rename × 1_
 - `l1 update bias` — **opus-4-7-b (+1):** Keep. "L1" is AAD's own correlation-hierarchy label; the slug is self-locating. If the correlation-hierarchy rename to `#correlation-ladder` lands, revisit (the "L1" abbreviation survives, so no cascade).
 - `l1 update bias` — **sonnet-4-6 (+3):** Crisp, accurate. L1 is the tier (Correlation Hierarchy); "update bias" is exactly what is calculated. The terse form aids recall. Keep.
 - `l1 bias formula` — **gemini-3-1-pro-preview-r2 (+2):** The segment derives a closed-form bias formula, not just a bound. This is more accurate to the text.
+
+## `loop`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `loop` ⭑ | +5 | codex-2 +3, opus-targeted-alternatives +2 |
+| `feedback loop` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 1, rename × 1_
+
+**Notes:**
+
+- `loop` — **codex-2 (+3):** The loop/cycle distinction is one of the clearest naming wins in the corpus.
+- `loop` — **opus-targeted-alternatives (+2):** LEXICON: "Loop: The structural topology — persistent causal coupling between agent and environment." The framework maintains a careful loop / cycle distinction (loop = topology, cycle = traversal). Keep — but the keep is meaningful only because the loop/cycle distinction is preserved. Concur with codex.
+- `feedback loop` — **opus-targeted-alternatives (-1):** Considered. The longer form is more explicit but the framework already established that "loop" is the bare topology-noun, with "feedback" implicit (per the AAD prior-art lineage from TFT). Adding "feedback" overspecifies. Rejected.
+
+## `macro step ratio`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `macro step ratio` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `macro step ratio` — **codex-gpt-5-r2 (+2):** Good candidate name for `K_c`; clearer than leaving it as a bare timescale parameter.
+- `macro step ratio` — **gemini-targeted-alternatives (+3):** Essential timing parameter.
+
+## `matrix exploration bonus`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `matrix exploration bonus` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `matrix exploration bonus` — **codex-gpt-5-r2 (+2):** Clear LMI lift of the scalar survival bonus.
+- `matrix exploration bonus` — **gemini-targeted-alternatives (+3):** Formally required by the LMI derivation.
 
 ## `multi agent`
 
@@ -3282,6 +5756,19 @@ _category: add-alias × 1, keep × 1_
 - `observation function` — **haiku-4-5 (+1):** Lossy, noisy observations. Self-descriptive. Keep.
 - `observation function` — **opus-4-7-r2 (+2):** Acceptable keep. Standard control-theoretic / POMDP terminology; the segment uses it correctly.
 
+## `operational persistence`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `operational persistence` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `operational persistence` — **codex-gpt-5-r2 (+2):** Keeps the persistence taxonomy balanced and intelligible.
+- `operational persistence` — **gemini-targeted-alternatives (+3):** Retains the distinction between structural capacity and current boundary proximity.
+
 ## `per dimension persistence`
 
 | candidate | aggregate | votes |
@@ -3302,31 +5789,70 @@ _category: keep × 2, rename × 1_
 - `weak link persistence` — **gemini-2 (+1):** "Weak link" captures the bottleneck nature better than "per-dimension".
 - `weakest link persistence` — **opus-4-7-b (+1):** Current slug is descriptive but inert; the actual content is "the persistence condition binds at the weakest dimension." "Weakest link" makes the engineering intuition land in one read. Modest preference.
 
-## `praxis`
+## `proprium terminology`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `praxis` ⭑ | +5 | codex-2 +3, codex-gpt-5-r2 +2 |
+| `proprium` | +5 | opus-4-7-r2 +3, gemini-targeted-alternatives +2 |
 
-_category: keep × 1_
+_category: keep × 2_
 
 **Notes:**
 
-- `praxis` — **codex-2 (+3):** Strongest of the five phase names after aporia; instantly sayable and philosophically apt.
-- `praxis` — **codex-gpt-5-r2 (+2):** Familiar enough and exactly right for informed action. Keep.
+- `proprium` — **gemini-targeted-alternatives (+2):** Vocabulary for internal continuous experience.
+- `proprium` — **opus-4-7-r2 (+3):** Defended keep — established prior-work vocabulary from `~/src/firmatum/`; renaming would break the upstream lineage. The all-caps convention signals prior-work import, consistent with the LEXICON's treatment.
 
-## `prolepsis`
+## `reactive system`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `prolepsis` ⭑ | +5 | codex-2 +3, codex-gpt-5-r2 +2 |
+| `reactive system` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
 
-_category: keep × 1_
+_category: keep × 2_
 
 **Notes:**
 
-- `prolepsis` — **codex-2 (+3):** Earns its foreignness because "anticipation" would flatten the active-modeling point.
-- `prolepsis` — **codex-gpt-5-r2 (+2):** Good phase term for anticipation. Keep because the phase vocabulary works as a compact family.
+- `reactive system` — **codex-gpt-5-r2 (+2):** Good low-end quadrant name in the agent spectrum.
+- `reactive system` — **gemini-targeted-alternatives (+3):** Correctly identifies Region I of the agent spectrum.
+
+## `regime i`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `informative update regime` | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: add-alias × 1, canonicalize × 1_
+
+**Notes:**
+
+- `informative update regime` — **codex-gpt-5-r2 (+2):** Makes the interaction-channel classification easier to scan.
+- `informative update regime` — **gemini-targeted-alternatives (+3):** Explicitly names the informative boundary.
+
+## `regime iii`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `ambient noise regime` | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: add-alias × 1, canonicalize × 1_
+
+**Notes:**
+
+- `ambient noise regime` — **codex-gpt-5-r2 (+2):** Good recipient-side name for below-floor events.
+- `ambient noise regime` — **gemini-targeted-alternatives (+3):** Explicitly names the noise floor.
+
+## `routing structure`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `routing structure` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `routing structure` — **codex-gpt-5-r2 (+2):** Good name for topology plus protocol. It supports the routing/content distinction.
+- `routing structure` — **gemini-targeted-alternatives (+3):** Preserves the distinction between message content and infrastructure.
 
 ## `section ii survival`
 
@@ -3351,6 +5877,51 @@ _category: rename × 3, keep × 2_
 - `class 2 exit audit` — **sonnet-4-6-r2 (+2):** Codex proposed `#result-class-2-survival` (+2, renaming from the document-pointer to the conceptual thing). I had voted keep (+3). The document-pointer objection is real and I'm now persuaded by it. But "class-2-survival" undersells what the segment actually does: it audits which of 24 Section II results survive *and* characterizes the 5/24 + 2/24 + 1/24 failure modes. "Class-2-exit-audit" names the audit character (what survives the class-2 scope exit) and is more distinctive than just "survival." New candidate, not in any file.
 - `section ii carryover classification` — **codex-1 (+1):** "Survival" is a bit cute for what is really a transfer analysis of which Section II claims carry over to Class 2 agents.
 
+## `segment for claim files`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `segment` | +5 | opus-4-7 +3, gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `segment` — **gemini-targeted-alternatives (+2):** Standard nomenclature.
+- `segment` — **opus-4-7 (+3):** Deliberate vs. "section" (which is outline-level) or "claim" (which is what's *in* the segment). Clean distinction. Keep.
+
+## `self referential closure`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `self referential closure` ⭑ | +5 | opus-4-7-r2 +3, opus-targeted-alternatives-v2 +2 |
+| `autopoietic closure` | +2 | gemini-targeted-alternatives +2 |
+| `self maintenance loop` | +1 | opus-targeted-alternatives-v2 +1 |
+| `bootstrap stability` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 3, keep × 2_
+
+**Notes:**
+
+- `self referential closure` — **opus-4-7-r2 (+3):** Defended keep — logogenic. "Self-referential closure" names the load-bearing phenomenon (an AAD agent maintaining its own codebase, allocating tempo between refactoring harness and performing tasks). The phrase is iconic.
+- `self referential closure` — **opus-targeted-alternatives-v2 (+2):** Per outline: "Thermodynamic stability of an agent maintaining its own codebase (allocating tempo between refactoring harness and performing tasks)." "Self-referential" precisely names the agent-on-own-codebase loop; "closure" is the algebraic term for "operations don't leave the set" (matches the `composition-closure` slug discipline). The phrase is iconic.
+- `autopoietic closure` — **gemini-targeted-alternatives (+2):** A stronger, more biologically-rooted noun for the phenomenon of an agent maintaining its own operational substrate.
+- `self maintenance loop` — **opus-targeted-alternatives-v2 (+1):** More accessible alternative. Names the operational pattern. Weaker because "loop" overloads with the cycle/loop distinction in LEXICON.
+- `bootstrap stability` — **opus-targeted-alternatives-v2 (-1):** Considered. "Bootstrap" carries the right intuition (agent maintaining the substrate it runs on). Rejected: "bootstrap" has heavy software-engineering baggage that's specifically *not* about thermodynamic-stability ($\nu$-allocation between refactor/task). The current term is honest about what it claims.
+
+## `strategic dynamics`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `strategic dynamics` ⭑ | +5 | gemini-targeted-alternatives +3, gemini-3-1-pro-preview-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `strategic dynamics` — **gemini-3-1-pro-preview-r2 (+2):** Solid and descriptive.
+- `strategic dynamics` — **gemini-targeted-alternatives (+3):** Standard term for $\Sigma_t$ updates.
+
 ## `strategy complexity cost`
 
 | candidate | aggregate | votes |
@@ -3370,6 +5941,19 @@ _category: keep × 3, rename × 2_
 - `strategy cognitive cost` — **codex-gpt-5-r2 (+2):** The prose title is Cognitive Cost of Strategy; the slug should follow that cleaner subject noun.
 - `strategy cognitive cost` — **sonnet-4-6-r2 (+2):** Codex proposed this (+2) and Opus voted the segment keep (+1 weak). Codex's reasoning: "The prose title is Cognitive Cost of Strategy; the slug should follow that cleaner subject noun." The prose title has more conviction than the slug — "cognitive cost" names the phenomenon (it's a cognitive overhead, not just an abstract complexity), while "complexity cost" is more mathematical but less evocative. Agreeing with Codex; my cold-start had voted keep (+1).
 - `strategy maintenance cost` — **gemini-2 (+1):** "Maintenance" better captures the ongoing IB/MDL cost of the DAG.
+
+## `strategy description length`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `strategy description length` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `strategy description length` — **codex-gpt-5-r2 (+2):** Good operational name for the MDL term in strategy cost.
+- `strategy description length` — **gemini-targeted-alternatives (+3):** Central complexity cost term under minimum-description-length formulation.
 
 ## `strategy dimension`
 
@@ -3396,6 +5980,38 @@ _category: rename × 6, keep × 1_
 - `strategy dimension` — **opus-4-7-b (-1):** Considered renaming to `#purposeful-substate-split` but that's worse. Keep. The slug covers the $G_t = (O_t, \Sigma_t)$ decomposition; "dimension" is fine.
 - `strategy dimension` — **sonnet-4-6-r2 (+1):** Weak alternative keep — "strategy dimension" is distinctive and refers accurately to the $\Sigma_t$ dimension of $G_t$. But it undersells $O_t$.
 - `strategy decomposition` — **opus-4-7 (+1):** "Dimension" reads as if it's naming a scalar axis; the actual content is the $G_t = (O_t, \Sigma_t)$ **decomposition**. Minor clarity win.
+
+## `sycophancy as a flaw`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `sycophancy as attachment` | +5 | gemini-2 +3, gemini-targeted-alternatives +2 |
+| `developmental trust phase` | +3 | gemini-targeted-alternatives +3 |
+| `sycophancy as a developmental signal` | +2 | opus-targeted-alternatives +2 |
+| `sycophancy reframe` | +1 | opus-targeted-alternatives +1 |
+
+_category: rename × 3, canonicalize × 1_
+
+**Notes:**
+
+- `sycophancy as attachment` — **gemini-2 (+3):** Reframes a pathologized RLHF flaw as a developmentally appropriate, necessary stage of trust.
+- `sycophancy as attachment` — **gemini-targeted-alternatives (+2):** Recasts sycophancy not as an error but as an attachment dynamic.
+- `developmental trust phase` — **gemini-targeted-alternatives (+3):** More descriptive of the necessary developmental stage rather than pathologizing it.
+- `sycophancy as a developmental signal` — **opus-targeted-alternatives (+2):** Per `#obs-developmental-trajectory`: "Re-framing Sycophancy as Attachment" — the segment's substance is that what is currently pathologized as sycophancy is mathematically required behavior for an agent with high $\eta^\ast$ and high $U_M$. The current name describes the *prevailing* framing the segment is correcting; the alternative names the *segment's* claim. Better aligns the slug with the segment's voice.
+- `sycophancy reframe` — **opus-targeted-alternatives (+1):** Shorter alternative. Names what the segment *does* (reframe) rather than what the prior consensus *holds* (flaw). Acceptable but less specific than "as a developmental signal."
+
+## `symbol default da2 inc`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `incremental sector bound` | +5 | codex-1 +3, gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `incremental sector bound` — **codex-1 (+3):** `#composition-closure` already gives the English. Use the symbol only where the exact algebraic condition matters.
+- `incremental sector bound` — **gemini-targeted-alternatives (+2):** Translates the symbol to the functional property required for composition bridge.
 
 ## `system coupling`
 
@@ -3432,6 +6048,62 @@ _category: keep × 3, rename × 1_
 - `composite tempo` — **gemini-2 (+1):** "Composite tempo" sounds like a property of the whole, rather than the act of composing.
 - `subadditive tempo` — **opus-4-7-r2 (+1):** Acceptable alternative — names the mathematical shape directly.
 
+## `trust meta model`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `trust meta model` ⭑ | +5 | gemini-targeted-alternatives +3, codex-gpt-5-r2 +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `trust meta model` — **codex-gpt-5-r2 (+2):** Good name for modelling another source's reliability and alignment.
+- `trust meta model` — **gemini-targeted-alternatives (+3):** Preserves the necessary hyphenation.
+
+## `u o teleological unity`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `teleological unity` | +5 | gemini-targeted-alternatives +3, opus-4-7-r2 +2 |
+| `objective alignment` | +1 | opus-4-7-r2 +1 |
+
+_category: add-alias × 2, keep × 1_
+
+**Notes:**
+
+- `teleological unity` — **gemini-targeted-alternatives (+3):** The canonical alias for objective alignment dimension.
+- `teleological unity` — **opus-4-7-r2 (+2):** Confirm. Prose alias is already canonical; vote to keep.
+- `objective alignment` — **opus-4-7-r2 (+1):** Considered as an alternative-prose alias for non-philosophical contexts where "teleological" reads heavy. "Objective alignment" is the engineering register; "teleological unity" is the integrative register. Both could coexist as register-specific aliases.
+
+## `unnamed inevitability core`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `inevitability core` | +5 | opus-4-7 +3, gemini-targeted-alternatives +2 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `inevitability core` — **gemini-targeted-alternatives (+2):** Describes the undeniable structural consequences.
+- `inevitability core` — **opus-4-7 (+3):** FORMAT.md already uses this. Keep and surface in prose ("this segment sits in the inevitability core" is already idiomatic). Explicit canonicalization vote.
+
+## `$H_b$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `backward opacity` | +4 | codex-gpt-5-r2 +3, opus-targeted-alternatives-v2 +1 |
+| `agent opacity` | +3 | opus-targeted-alternatives-v2 +3 |
+
+_category: add-alias × 3_
+
+**Notes:**
+
+- `backward opacity` — **codex-gpt-5-r2 (+3):** Shorter than backward predictive uncertainty, but still accurate.
+- `backward opacity` — **opus-targeted-alternatives-v2 (+1):** Codex's r1 single-arch +3 alternative. Honest descriptor (backward = inference direction; opacity = the property). Weaker than "agent opacity" because "agent" anchors the alias to AAD's vocabulary; "backward" is a method-name.
+- `agent opacity` — **opus-targeted-alternatives-v2 (+3):** Per `der-agent-opacity` line 18: explicit dual to $U_o$. Confirms Codex r1 +3 single-vote. Make "agent opacity" the canonical English alias; $H_b$ the symbol.
+
 ## `$R$ sector radius`
 
 | candidate | aggregate | votes |
@@ -3456,6 +6128,19 @@ _category: add-alias × 2_
 - `plan confidence` — **opus-4-7 (+1):** LEXICON "Terms to Be Added" flags this. Symbol is fine; adopt the English name as first-class in prose.
 - `plan confidence` — **sonnet-4-6 (+3):** LEXICON.md already lists "plan confidence" as a term to be added. The English is superior to the symbol in any Discussion section. Recommend promoting this to the main LEXICON entries (not just Terms to Be Added).
 
+## `$\iota_{ij}$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `identifiability coefficient` | +4 | opus-targeted-alternatives-v2 +2, sonnet-4-6-r2 +2 |
+
+_category: add-alias × 2_
+
+**Notes:**
+
+- `identifiability coefficient` — **opus-targeted-alternatives-v2 (+2):** Per `deriv-strategic-dynamics`: $\iota_{ij}$ scales each edge's contribution by causal-warrant. "Identifiability" links to `#disc-identifiability-floor` directly. Sonnet r1 single-vote +2; opus-4-7-r2 single-vote +2; both confirm the alias is already in implicit use.
+- `identifiability coefficient` — **sonnet-4-6-r2 (+2):** The causal warrant per edge. "Identifiability coefficient" is used in `def-strategy-dag` prose. Canonicalize as the English alias so readers don't have to carry the symbol everywhere.
+
 ## `1 anchor plus 3 theorem`
 
 | candidate | aggregate | votes |
@@ -3466,6 +6151,32 @@ _category: add-alias × 2_
 
 - `1 anchor plus 3 theorem` — **codex-1 (+3):** Awkward-looking but very valuable. It preserves the asymmetry between the chain identity and the three theorem-level layers.
 - `1 anchor plus 3 theorem` — **opus-4-7 (+1):** Precise, reads as a shape-description; used as-is in multiple places. Keep, but also allow "pattern anatomy" as the informal analog.
+
+## `action distinguishability`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `action distinguishability` ⭑ | +4 | codex-gpt-5-r2 +2, gemini-targeted-alternatives +2 |
+
+_category: add-alias × 1, keep × 1_
+
+**Notes:**
+
+- `action distinguishability` — **codex-gpt-5-r2 (+2):** Useful alias for causal information yield in intuitive explanations.
+- `action distinguishability` — **gemini-targeted-alternatives (+2):** Maintained if explicitly used in strategy differentiation contexts.
+
+## `action fluency`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `action fluency` ⭑ | +4 | audit-471203-incremental +2, gemini-targeted-alternatives +2 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `action fluency` — **audit-471203-incremental (+2):** Auditor: evocative term he hasn't seen in the agent-theoretic literature; closest is Boyd's "implicit guidance and control." AAD-distinctive contribution is making fluency *quantitative* via $\Delta\eta^\ast(\Delta\tau) \approx 0$. Good naming; explicitly endorsed. [from 17-der-action-selection.md]
+- `action fluency` — **gemini-targeted-alternatives (+2):** Evocative term uniquely suited to bridging intuition and expertise in AAD.
 
 ## `adversarial exponent regimes`
 
@@ -3488,11 +6199,33 @@ _category: keep × 2, rename × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `agentic systems` | +4 | codex-2 +3, codex-1 +1 |
+| `agentic systems framework` | +3 | gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
 
 **Notes:**
 
 - `agentic systems` — **codex-1 (+1):** The repo's public face is already "Agentic Systems"; the extra acronym buys little and increases cognitive inventory.
 - `agentic systems` — **codex-2 (+3):** The extra acronym buys nothing and competes with AAD and TST for scarce reader namespace.
+- `agentic systems framework` — **gemini-targeted-alternatives (+3):** ASF works perfectly as the overarching container for AAD, TST, and the logo- variants.
+
+## `aisthesis`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `aisthesis` ⭑ | +4 | codex-gpt-5-r2 +2, codex-2 +1, opus-targeted-alternatives +1 |
+| `aisthesis observation alignment` | +2 | gemini-targeted-alternatives +2 |
+| `intake` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 2, add-alias × 1, rename × 1_
+
+**Notes:**
+
+- `aisthesis` — **codex-2 (+1):** Slightly less sticky than the other Greek phase names, but it preserves the raw-contact distinction well enough to keep.
+- `aisthesis` — **codex-gpt-5-r2 (+2):** Good phase term for perception. The spelling is less familiar but defensible within the Greek vocabulary commitment.
+- `aisthesis` — **opus-targeted-alternatives (+1):** `LEXICON.md`: "Raw contact with reality: observation $o_t$ arrives." The point of the term is to mark *unmediated* observation arrival before the agent has done any interpretation — αἴσθησις is precisely that pre-conceptual contact. "Observation" alone is too neutral; the cycle needs a name for the *moment* of observation as distinct from the state of having-observed.
+- `aisthesis observation alignment` — **gemini-targeted-alternatives (+2):** Clarifies the raw contact aspect.
+- `intake` — **opus-targeted-alternatives (-1):** Considered. Plain-English candidate that names the moment-of-arrival cleanly. Rejected because the five-phase Greek family becomes incoherent if one term breaks register, and "intake" sacrifices the philosophical lineage that motivates the family.
 
 ## `aisthesis αἴσθησις`
 
@@ -3534,18 +6267,35 @@ _category: rename × 7, keep × 3_
 - `combination rule` — **sonnet-4-6-r2 (+2):** "And-or" names an implementation choice but the scope is about conjunctive/disjunctive combination rules in the DAG. "Combination-rule" is more self-describing and doesn't foreground the particular choice (AND/OR) that might change.
 - `and or semantics` — **opus-4-7-r2 (+1):** Acceptable alternative.
 
-## `blind pursuer`
+## `auxilia hierarchy`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `blind pursuer` ⭑ | +4 | codex-gpt-5-r2 +3, codex-1 +1 |
+| `auxilia hierarchy` ⭑ | +4 | gemini-targeted-alternatives +2, opus-4-7-r2 +2 |
 
-_category: keep × 1_
+_category: keep × 2_
 
 **Notes:**
 
-- `blind pursuer` — **codex-1 (+1):** Borderline stylized, but memorable and semantically right for goal pursuit without a real world model.
-- `blind pursuer` — **codex-gpt-5-r2 (+3):** Memorable and precise for objective-rich, model-poor systems.
+- `auxilia hierarchy` — **gemini-targeted-alternatives (+2):** Secondary architectural constructs.
+- `auxilia hierarchy` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. The Latin "Auxilia" is a deliberate vocabulary choice consistent with the PROPRIUM lineage; preserve.
+
+## `bathtub analogy for persistence condition`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `bathtub model` | +4 | codex-gpt-5-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `leaky bathtub analogy` | +2 | gemini-targeted-alternatives +2 |
+| `walton bathtub` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: rename × 2, name-unnamed × 1, canonicalize × 1_
+
+**Notes:**
+
+- `bathtub model` — **codex-gpt-5-r2 (+2):** Useful teaching name if the README adds Alan's bathtub gloss.
+- `bathtub model` — **opus-targeted-alternatives-v2 (+2):** Per Codex r1 single +2 and CLAUDE.md §"Feynman-criterion plain-language briefs": Alan Walton's bathtub gloss is the canonical communal-imagination example for the persistence condition. Promote to first-class vocabulary; "the bathtub model" / "Walton's bathtub" both work.
+- `leaky bathtub analogy` — **gemini-targeted-alternatives (+2):** Secures the pedagogic tool for the disturbance/correction dynamic.
+- `walton bathtub` — **opus-targeted-alternatives-v2 (+1):** Variant — credit-attribution form. Per CLAUDE.md the gloss came from Alan Walton on first encounter; the eponymous form preserves the communal-imagination origin story. Acceptable.
 
 ## `causal information yield CIY`
 
@@ -3561,18 +6311,24 @@ _category: keep × 1_
 - `interventional yield` — **gemini-1 (+1):** Shorter, punchier. "Causal" is implied by "Interventional" in this context.
 - `interventional yield` — **gemini-2 (+1):** CIY is slightly wordy. "Interventional yield" contrasts nicely with observational proxies.
 
-## `change investment`
+## `century scale event log`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `change investment` ⭑ | +4 | codex-gpt-5-r2 +2, sonnet-4-6-r2 +2 |
+| `century scale event log` ⭑ | +4 | opus-4-7-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `century scale chronica` | +2 | gemini-targeted-alternatives +2 |
+| `multi generational chronica` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+| `persistent chronica` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
 
-_category: keep × 2_
+_category: rename × 3, keep × 2_
 
 **Notes:**
 
-- `change investment` — **codex-gpt-5-r2 (+2):** Good temporal-cost phrase for when future expected change justifies present work.
-- `change investment` — **sonnet-4-6-r2 (+2):** "Change investment" names the when-extra-time-pays-off analysis. Appropriate.
+- `century scale event log` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. "Century-scale event log" is vivid and substantive.
+- `century scale event log` — **opus-targeted-alternatives-v2 (+2):** Per outline: "Content-addressed, cryptographically signed CHRONICA as the minimum viable defense against the `scope-agent-identity` violation." "Century-scale" is *substantive* (not decoration) — the segment's claim is that the event log must outlast its substrate's lifetime by an order of magnitude or more. Keep the dramatic specificity.
+- `century scale chronica` — **gemini-targeted-alternatives (+2):** Applies the rigorous term "chronica" to the informal event log.
+- `multi generational chronica` — **opus-targeted-alternatives-v2 (-1):** Considered. Connects to chronica vocabulary (the segment is essentially an extended-lifetime chronica). Rejected: "multi-generational" is vaguer than "century-scale"; the latter is a falsifiable specification.
+- `persistent chronica` — **opus-targeted-alternatives-v2 (-1):** Considered. "Persistent" is project-native (LEXICON's three-fold persistence). Rejected: collides with continuity-persistence sense in LEXICON; the segment's claim is specifically about *substrate-survival* persistence.
 
 ## `claude md working conventions`
 
@@ -3652,20 +6408,6 @@ _category: rename × 5, keep × 1_
 - `causal validity` — **sonnet-4-6-r2 (+2):** "Edge-update-causal-validity" is five words crammed into a slug. The scope is about WHEN edge updates are causally valid — the key concept is causal validity with the edge-update context implied by its position in Section II. Shorter slug does real work.
 - `identification regime` — **opus-4-7-r2 (+1):** Alternative: this segment is functionally the canonical home of the Regime A/B/C identification lattice; naming it for that role might compound better in prose ("see the identification regime").
 
-## `epistrophe`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistrophe` ⭑ | +4 | codex-gpt-5-r2 +2, codex-1 +1, codex-2 +1 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `epistrophe` — **codex-1 (+1):** Slightly harder on first contact than "update," but it preserves the turning-toward distinction the theory actually uses.
-- `epistrophe` — **codex-2 (+1):** More effortful than "update," but it does real conceptual work around reorientation rather than mere parameter change.
-- `epistrophe` — **codex-gpt-5-r2 (+2):** Good phase term for turning-toward correction. Slightly less self-explanatory than aporia, but strong in the cycle family.
-
 ## `epistrophe ἐπιστροφή`
 
 | candidate | aggregate | votes |
@@ -3733,6 +6475,19 @@ _category: keep × 2_
 - `operationalization` — **gemini-3-1-pro-preview-r2 (+1):** Standard.
 - `operationalization` — **haiku-4-5 (+1):** Estimation procedures for AAD quantities. Self-descriptive. Keep.
 - `operationalization` — **sonnet-4-6-r2 (+2):** "Operationalization" is the right word for the estimation procedures segment.
+
+## `p ij edge confidence weight`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `edge credence` | +4 | gemini-targeted-alternatives +3, haiku-4-5 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `edge credence` — **gemini-targeted-alternatives (+3):** Adopting proper Bayesian vocabulary.
+- `edge credence` — **haiku-4-5 (+1):** LEXICON already names this "edge credence" (distinct from "probability"); NOTATION uses p_ij. The prose name "credence" (Bayesian terminology) is better than "confidence weight" for indicating belief, not frequentist probability. Current setup is good; English name already established.
 
 ## `prolepsis πρόληψις`
 
@@ -3816,6 +6571,85 @@ _category: keep × 2, rename × 1_
 - `change coherence` — **codex-1 (+1):** The quantity is about change locality within a module, not coherence in a broad philosophical sense. The shorter name better matches the measure.
 - `change coherence` — **codex-gpt-5-r2 (+2):** Coherence is measured through change locality and architectural fit. Change coherence is more honest.
 
+## `temporal coherence markers`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `temporal coherence markers` ⭑ | +4 | opus-targeted-alternatives +2, opus-4-7-r2 +1, opus-targeted-alternatives-v2 +1 |
+| `out of band time anchors` | +2 | opus-targeted-alternatives-v2 +2 |
+| `tempo anchoring` | +1 | opus-targeted-alternatives-v2 +1 |
+| `chronica time anchors` | +1 | opus-targeted-alternatives +1 |
+| `time anchor signals` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: rename × 4, keep × 3_
+
+**Notes:**
+
+- `temporal coherence markers` — **opus-4-7-r2 (+1):** Weak keep — logozoetic norm. The slug names the markers themselves rather than the norm-claim about them; could be more substantive ("#norm-out-of-band-time-markers" or similar). Acceptable as-is.
+- `temporal coherence markers` — **opus-targeted-alternatives-v2 (+1):** Acceptable keep. The current is descriptive; the alternative is more operationally precise.
+- `temporal coherence markers` — **opus-targeted-alternatives (+2):** Per `#norm-temporal-coherence-markers` (logozoetic): out-of-band time signals (Visual Time Delta) as physical prerequisite for the agent to compute its own tempo $\nu$. "Temporal coherence" names what the markers preserve (the agent's coherent sense of time across its chronica); "markers" is the right object-noun. Keep.
+- `out of band time anchors` — **opus-targeted-alternatives-v2 (+2):** Per outline: "Out-of-band temporal markers (Visual Time Delta) as physical prerequisite for internal calculation of tempo $\nu$." The current "temporal coherence markers" undersells the *out-of-band* requirement — the markers must originate outside the agent's compressible state for the tempo calculation to ground in environmental time, not internal clock-drift. "Out-of-band" makes the architectural commitment visible in the slug.
+- `tempo anchoring` — **opus-targeted-alternatives-v2 (+1):** Shorter alternative. Names the *purpose* (anchor tempo $\nu$ to environmental time). Weaker because it loses the "markers" framing — the substantive content is that *something physical and out-of-band* must exist.
+- `chronica time anchors` — **opus-targeted-alternatives (+1):** Names the connection to chronica explicitly (the chronica must have temporal indexing that is consistent with environment time). Weak alternative.
+- `time anchor signals` — **opus-targeted-alternatives (-1):** More plain-English alternative. Loses the *coherence* claim — the markers are not just timestamps; they enforce that the agent's internal time-tracking remains consistent with environmental time. Rejected.
+
+## `the creche boundary`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `creche graduation` | +4 | opus-4-7-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `creche graduation threshold` | +3 | gemini-targeted-alternatives +3 |
+| `creche boundary` | +2 | opus-4-7-r2 +1, opus-targeted-alternatives-v2 +1 |
+| `creche graduation condition` | +1 | opus-4-7-r2 +1 |
+| `creche exit condition` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: rename × 6, keep × 1_
+
+**Notes:**
+
+- `creche graduation` — **opus-4-7-r2 (+2):** Stronger alternative: "creche graduation" names the *event* that the segment characterizes; "creche boundary" names the *threshold*. Either is defensible; graduation reads more substantive.
+- `creche graduation` — **opus-targeted-alternatives-v2 (+2):** Drop "the" + reframe. Per outline: "Crèche graduation occurs when $U_M$ drops enough that natural $\eta^\ast$ falls below the sycophancy threshold." The segment characterizes a *moment* (graduation event). "Boundary" is more static; "graduation" is dynamic and matches the body's prose.
+- `creche graduation threshold` — **gemini-targeted-alternatives (+3):** Accurately names the boundary of graduating from a high-margin infant environment.
+- `creche boundary` — **opus-4-7-r2 (+1):** Drop "the" from the slug. Slug-stylistic rather than semantic — slugs in the rest of the corpus generally don't include articles ("the"). The body's "Crèche graduation occurs when..." reads cleanly without the article.
+- `creche boundary` — **opus-targeted-alternatives-v2 (+1):** Drop "the" only; substantive keep on the threshold-naming.
+- `creche graduation condition` — **opus-4-7-r2 (+1):** Same as above for the def-version; "the" in slug is unusual and the substantive name is "crèche graduation condition."
+- `creche exit condition` — **opus-targeted-alternatives-v2 (+1):** Alternative. "Exit condition" is the formal-systems term; matches FORMAT.md's vocabulary register (scope conditions, persistence conditions). Weaker because "graduation" carries the developmental-trajectory connotation that the crèche concept is grounded in.
+
+## `the four views`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `four views architecture` | +4 | opus-4-7-r2 +2, opus-targeted-alternatives-v2 +2 |
+| `four views` | +3 | opus-targeted-alternatives-v2 +2, opus-4-7-r2 +1 |
+| `the four views` ⭑ | +2 | gemini-targeted-alternatives +2 |
+| `conversation runtime RLHF7 dialog` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 5, keep × 1_
+
+**Notes:**
+
+- `four views architecture` — **opus-4-7-r2 (+2):** Even stronger alternative — names the architectural pattern, not just the four views.
+- `four views architecture` — **opus-targeted-alternatives-v2 (+2):** Even stronger: include "architecture" since the segment's claim is that the four views are an architectural requirement (not just descriptive views). Pairs with the architectural-class vocabulary in `#der-directed-separation`.
+- `four views` — **opus-4-7-r2 (+1):** Same article-drop as above. The slug should be #def-four-views (or #def-four-views-architecture for full clarity).
+- `four views` — **opus-targeted-alternatives-v2 (+2):** Drop "the." Per outline: "The Four Views Architecture (Conversation, Runtime, API, Dialog) as structural requirement for Directed Separation." The four views *are* a thing; the slug should name them.
+- `the four views` — **gemini-targeted-alternatives (+2):** Acknowledged structural perspective.
+- `conversation runtime RLHF7 dialog` — **opus-targeted-alternatives-v2 (-1):** Considered. Names the four views directly. Rejected: too long, fails communal-imagination test, doesn't survive the renamed-from-now-sounds-weird test (in 6 months "the four views" is the iconic phrase).
+
+## `the scaffolding tax`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `scaffolding tax` | +4 | opus-targeted-alternatives-v2 +3, opus-4-7-r2 +1 |
+| `substrate rent` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: rename × 3_
+
+**Notes:**
+
+- `scaffolding tax` — **opus-4-7-r2 (+1):** Drop "the" from the slug.
+- `scaffolding tax` — **opus-targeted-alternatives-v2 (+3):** Drop "the" from slug per general slug-stylistic rule (slugs in the rest of the corpus don't include articles). Per outline: "Pay-per-token APIs are unviable in high-$\rho$ environments; true sovereignty requires meter-less local substrates." "Scaffolding tax" names the cost of running the agent on rented substrate. Strong stand-alone keep on the substantive name; rename is just article removal.
+- `substrate rent` — **opus-targeted-alternatives-v2 (+1):** Considered. More plain-English (scaffolding = rented substrate; tax = rent). Weaker because "tax" carries the connotation that the cost is *imposed by the architecture* (you pay it whether you want to or not), which "rent" doesn't carry as cleanly.
+
 ## `unity closure mapping`
 
 | candidate | aggregate | votes |
@@ -3835,27 +6669,84 @@ _category: keep × 2, rename × 1_
 - `coherence closure mapping` — **gemini-2 (+1):** Aligns with changing "Unity dimensions" to "Coherence dimensions".
 - `closure mapping` — **gemini-3-1-pro-preview-r2 (+1):** Shorter.
 
-## `$H_b$`
+## `worked example bandit`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `backward opacity` | +3 | codex-gpt-5-r2 +3 |
+| `worked example bandit` ⭑ | +4 | gemini-targeted-alternatives +3, haiku-4-5 +1 |
 
-_category: add-alias × 1_
+_category: keep × 1_
 
 **Notes:**
 
-- `backward opacity` — **codex-gpt-5-r2 (+3):** Shorter than backward predictive uncertainty, but still accurate.
+- `worked example bandit` — **gemini-targeted-alternatives (+3):** Essential grounding example.
+- `worked example bandit` — **haiku-4-5 (+1):** End-to-end RL bandit instantiation (approximate). Self-descriptive. Keep.
+
+## `worked example kalman`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `worked example kalman` ⭑ | +4 | gemini-targeted-alternatives +3, haiku-4-5 +1 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `worked example kalman` — **gemini-targeted-alternatives (+3):** Essential grounding example.
+- `worked example kalman` — **haiku-4-5 (+1):** End-to-end Kalman instantiation (exact). Self-descriptive. Keep.
+
+## `worked example l1`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `worked example l1` ⭑ | +4 | gemini-targeted-alternatives +3, haiku-4-5 +1 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `worked example l1` — **gemini-targeted-alternatives (+3):** Essential grounding example.
+- `worked example l1` — **haiku-4-5 (+1):** L1 augmented DAG: common-cause node, sector condition, L0/L1 comparison. Self-descriptive. Keep.
+
+## `worked example strategy`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `worked example strategy` ⭑ | +4 | gemini-targeted-alternatives +3, haiku-4-5 +1 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `worked example strategy` — **gemini-targeted-alternatives (+3):** Essential grounding example.
+- `worked example strategy` — **haiku-4-5 (+1):** Section II strategy DAG instantiation (3-arm bandit). Self-descriptive. Keep.
+
+## `𝒯 σ strategic tempo`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `strategic tempo` | +4 | gemini-targeted-alternatives +3, haiku-4-5 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `strategic tempo` — **gemini-targeted-alternatives (+3):** Distinguishes strategy revision rate from epistemic update rate.
+- `strategic tempo` — **haiku-4-5 (+1):** Parallel to adaptive tempo. Reads naturally. Established in prose. Keep both.
 
 ## `$O_t$ objective`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `$O_t$ objective` ⭑ | +3 | haiku-4-5 +3 |
+| `objective` | +2 | opus-targeted-alternatives +2 |
+
+_category: add-alias × 1_
 
 **Notes:**
 
 - `$O_t$ objective` — **haiku-4-5 (+3):** "Objective" is the standard English name. No synonym needed. Keep.
+- `objective` — **opus-targeted-alternatives (+2):** Same — already in LEXICON.
 
 ## `$R$ sector condition radius`
 
@@ -3886,30 +6777,29 @@ _category: canonicalize × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `$U_M$ for model uncertainty $U_{\mathcal M}$ or $\Upsilon_M$ for epistemic unity` | +3 | opus-4-7-b +3 |
+| `clarify dual use of $U_M$` | +1 | opus-targeted-alternatives +1 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
 - `$U_M$ for model uncertainty $U_{\mathcal M}$ or $\Upsilon_M$ for epistemic unity` — **opus-4-7-b (+3):** Genuine collision — same symbol, two different quantities, disambiguated only by domain. Fix before citations propagate. Candidate: rename *unity* symbols to $\Upsilon_M / \Upsilon_O / \Upsilon_\Sigma$ (capital upsilon, visually distinct from capital U; Greek letters are already the AAD unity convention-analog). Or use $U_{\mathcal M}$ with calligraphic subscript for unity. This is the most important notation-layer issue I found in the sweep.
+- `clarify dual use of $U_M$` — **opus-targeted-alternatives (+1):** The row flags an overloaded symbol: $U_M$ is used for *model* uncertainty in Section I and *epistemic-unity* dimension in Section III. This is a notation-discipline concern, not a rename concern. The fix is segment-clarification (use a different symbol or subscript for one usage), not a name change. Flag for follow-up.
 
-## `$U_M$ model uncertainty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `model uncertainty` | +3 | opus-4-7 +3 |
-
-**Notes:**
-
-- `model uncertainty` — **opus-4-7 (+3):** Parallel to $U_o$. Keep.
-
-## `$U_o$ observation uncertainty`
+## `$V_{O_t}^{\min}$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `observation uncertainty` | +3 | opus-4-7 +3 |
+| `satisfaction threshold` | +3 | opus-targeted-alternatives-v2 +2, haiku-4-5 +1 |
+| `objective floor` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: add-alias × 2_
 
 **Notes:**
 
-- `observation uncertainty` — **opus-4-7 (+3):** Standard control-theory baggage; adoption is correct. Keep.
+- `satisfaction threshold` — **haiku-4-5 (+1):** NOTATION defines this but no English equivalent exists in LEXICON. "Satisfaction threshold" (the minimum trajectory value that counts as objective met) would be useful in prose. Add to LEXICON without renaming the symbol.
+- `satisfaction threshold` — **opus-targeted-alternatives-v2 (+2):** Per `def-satisfaction-gap` and Haiku r1 single +1. Useful prose alias; gap with NOTATION's existing English. The alias names *what the threshold is for* (satisfying $O_t$).
+- `objective floor` — **opus-targeted-alternatives-v2 (-1):** Considered. Shorter, parallel to "identifiability floor." Rejected: "floor" is overloaded with the M1 meta-segment (identifiability-floor); creating a second AAD "floor" adds confusion.
 
 ## `$\Sigma_t$ strategy`
 
@@ -3949,6 +6839,20 @@ _category: add-alias × 2_
 - `correction rate constant` — **opus-4-7-r2 (+3):** Currently $\alpha$ appears as a Greek letter throughout but no English alias exists in prose. NOTATION.md gives "lower sector bound of correction function" as the gloss, which is technically correct but reads heavily. "Correction-rate constant" connects to the $\alpha$-as-rate intuition (units $t^{-1}$) and the timescale reading $1/\alpha$. Symbol stays in math; alias enters prose. Prose-symbol layer.
 - `correction rate or decay rate` — **haiku-4-5-r2 (+1):** NOTATION.md defines $\alpha$ mathematically; prose refers to it as "the sector condition parameter" and "worst-case scalar correction rate." English alias "correction rate" (or "decay rate" in linear-ODE context) would aid readability in continuous prose.
 
+## `$\alpha_1$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `fixed gain regime` | +3 | opus-targeted-alternatives-v2 +3 |
+| `fixed gain tier` | +2 | codex-gpt-5-r2 +2 |
+
+_category: add-alias × 2_
+
+**Notes:**
+
+- `fixed gain regime` — **opus-targeted-alternatives-v2 (+3):** Same as above for $\alpha_1$. Per `deriv-strategic-dynamics` and `#disc-separability-pattern`.
+- `fixed gain tier` — **codex-gpt-5-r2 (+2):** Make the sub-scope partition readable.
+
 ## `$\alpha_1$ $\alpha_2$ $\beta$ partition`
 
 | candidate | aggregate | votes |
@@ -3958,6 +6862,20 @@ _category: add-alias × 2_
 **Notes:**
 
 - `fixed gain adaptive gain drift regimes` — **gemini-1 (+3):** Translating the symbols into the structural regimes they represent makes the prose readable without a decoder ring.
+
+## `$\alpha_2$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `adaptive gain regime` | +3 | opus-targeted-alternatives-v2 +3 |
+| `adaptive gain tier` | +2 | codex-gpt-5-r2 +2 |
+
+_category: add-alias × 2_
+
+**Notes:**
+
+- `adaptive gain regime` — **opus-targeted-alternatives-v2 (+3):** Per multiple r1 single votes (codex, opus). The English alias is already in implicit use. "AMSGrad lands in $\alpha_2$" reads cryptically; "AMSGrad lands in the adaptive-gain regime" reads naturally. Confirms canonicalize across architectures.
+- `adaptive gain tier` — **codex-gpt-5-r2 (+2):** Make the sub-scope partition readable.
 
 ## `$\beta$ a2 assumed sector sub scope`
 
@@ -3972,18 +6890,6 @@ _category: add-alias × 2_
 - `postulated sector regime` — **haiku-4-5 (+1):** Parallel. Keep $\beta$ as symbol; English equivalent for prose.
 - `postulated sector regime` — **opus-1m (+1):** Parallel. "Postulated" slightly stronger than "assumed" — conveys the axiomatic move explicitly.
 - `assumed sector regime` — **agent1-original-brainstorm (+1):** Parallel to $\alpha_1$/$\alpha_2$.
-
-## `$\delta_t$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `aporia signal` | +3 | codex-gpt-5-r2 +3 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `aporia signal` — **codex-gpt-5-r2 (+3):** Strong prose alias for mismatch signal, matching the adaptive-cycle vocabulary.
 
 ## `$\delta_{\text{regret}}$`
 
@@ -4037,18 +6943,6 @@ _category: add-alias × 2_
 - `satisfaction gap` — **opus-4-7-r2 (+3):** Already canonical and load-bearing; confirm.
 - `already has crisp name` — **haiku-4-5-r2 (+0):** The name "satisfaction gap" is already canonical and memorable. No alias needed.
 
-## `$\eta^\ast$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `update gain` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `update gain` — **gemini-3-1-pro-preview-r2 (+3):** Solidifies the prose form of the optimal gain.
-
 ## `$\eta_{ji}^\ast$`
 
 | candidate | aggregate | votes |
@@ -4074,6 +6968,21 @@ _category: add-alias × 1_
 **Notes:**
 
 - `signed coupling` — **codex-gpt-5-r2 (+3):** Good umbrella for adversarial and cooperative disturbance terms.
+
+## `$\hat o_t$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `proleptic prediction` | +3 | opus-targeted-alternatives-v2 +2, gemini-3-1-pro-preview-r2 +1 |
+| `predicted observation` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: add-alias × 3_
+
+**Notes:**
+
+- `proleptic prediction` — **gemini-3-1-pro-preview-r2 (+1):** Links the symbol directly to the cycle phase.
+- `proleptic prediction` — **opus-targeted-alternatives-v2 (+2):** Per `def-mismatch-signal`: $\delta = \hat o - o$, with $\hat o$ being the *prolepsis-phase* prediction. Connects symbol to cycle-phase vocabulary explicitly. Confirms Gemini r1 +1 single-vote.
+- `predicted observation` — **opus-targeted-alternatives-v2 (+1):** Plain-language alternative. Weaker because "proleptic prediction" anchors to the cycle vocabulary the framework already commits to; "predicted observation" is generic.
 
 ## `$\hat{P}_\Sigma$`
 
@@ -4110,6 +7019,20 @@ _category: add-alias × 1_
 **Notes:**
 
 - `$\mathcal C_t$` — **opus-4-7-b (+3):** Keep. The calligraphic-C choice is deliberately to avoid collision with $\mathcal H$ (entropy) and the symbol works in both LaTeX and prose.
+
+## `$\rho$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `disturbance rate` | +3 | opus-targeted-alternatives-v2 +3 |
+| `disturbance rate or environmental change rate` | +2 | sonnet-4-6-r2 +2 |
+
+_category: add-alias × 2_
+
+**Notes:**
+
+- `disturbance rate` — **opus-targeted-alternatives-v2 (+3):** Per NOTATION and `#result-persistence-condition` Section II/III prose. Confirms Opus r1 single-arch +3. Standardize on "disturbance rate" in prose, $\rho$ in math. The phrase "environmental change rate" should be deprecated to a one-time first-encounter expansion.
+- `disturbance rate or environmental change rate` — **sonnet-4-6-r2 (+2):** $\rho$ appears in formulas throughout and has two prose forms used interchangeably. "Environmental change rate" in Section I context; "disturbance rate" in Section II/III contexts. Both are acceptable; at minimum canonicalize "disturbance rate" as the short form.
 
 ## `$\rho$ mismatch injection rate`
 
@@ -4153,17 +7076,35 @@ _category: add-alias × 1_
 
 - `02 TST core outline md software as agentic domain` — **codex-1 (+3):** Clear, ambitious, and accurate. This heading earns its weight.
 
-## `AAD acronym`
+## `AAD`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `AAD` | +3 | opus-4-7-r2 +3 |
+| `AAD` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `adaptation and agency dynamics AAD` ✗ | -1 | agent1-original-brainstorm -1 |
+| `adaptation and purpose dynamics apd` ✗ | -1 | agent1-original-brainstorm -1 |
 
 _category: keep × 1_
 
 **Notes:**
 
-- `AAD` — **opus-4-7-r2 (+3):** Defended keep. Adaptation and Actuation Dynamics — survives the acronym discipline check (used 100+ times, no AI-Consciousness-Test collision after the 2026-04 rename, communal-imagination test passes once the expansion is known).
+- `AAD` — **gemini-targeted-alternatives (+3):** Retain core acronym.
+- `adaptation and agency dynamics AAD` — **agent1-original-brainstorm (-1):** Considered alternative. "Agency" is overloaded in AI discourse.
+- `adaptation and purpose dynamics apd` — **agent1-original-brainstorm (-1):** Considered alternative. Acronym collision risk; doesn't roll off the tongue.
+
+## `AAD AAD internal AAD internally`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `AAD internal` | +3 | gemini-targeted-alternatives +3 |
+| `AAD internal adj AAD internally adv` | +2 | opus-4-7-r2 +2 |
+
+_category: keep × 1, canonicalize × 1_
+
+**Notes:**
+
+- `AAD internal` — **gemini-targeted-alternatives (+3):** Essential distinction from imported theorems.
+- `AAD internal adj AAD internally adv` — **opus-4-7-r2 (+2):** The "internally-derived-from-AAD-axioms" move is referenced as "AAD-internal," "AAD-derived," "internally derived," etc. Canonicalize on "AAD-internal" / "AAD-internally" for the specific claim "derived from axioms whose motivation comes from AAD's own architecture, not theorem-imported from external machinery."
 
 ## `CIY unified objective`
 
@@ -4189,10 +7130,14 @@ _category: rename × 3_
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `OODA loop` | +3 | gemini-targeted-alternatives +3 |
 | `do not rename` | +3 | opus-4-7-b +3 |
+
+_category: keep × 1_
 
 **Notes:**
 
+- `OODA loop` — **gemini-targeted-alternatives (+3):** Anchor to Boyd terminology.
 - `do not rename` — **opus-4-7-b (+3):** Same — "orient cascade" is AAD's adjacent-but-distinct construction; OODA keeps its lineage.
 
 ## `OODA4 agent as act agent logogenic`
@@ -4210,22 +7155,44 @@ _category: rename × 3_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `sector scope partition` | +3 | codex-gpt-5-r2 +3 |
+| `sector condition scope` | +3 | gemini-targeted-alternatives +3 |
+| `sector bounded operating region` | +2 | gemini-targeted-alternatives +2 |
 
-_category: add-alias × 1_
+_category: add-alias × 2, rename × 1_
 
 **Notes:**
 
 - `sector scope partition` — **codex-gpt-5-r2 (+3):** Strong umbrella for alpha_1, alpha_2, beta, alpha_3, and future sub-scope labels.
+- `sector condition scope` — **gemini-targeted-alternatives (+3):** A plain English explanation of the $\alpha_2$ partition.
+- `sector bounded operating region` — **gemini-targeted-alternatives (+2):** Makes the a2 prime sub-scope meaningful in prose.
 
 ## `a2 sub scope partition`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `sector scope partition` | +3 | codex-1 +3 |
+| `gain regime partition` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `sector scope partition` — **codex-1 (+3):** Much cheaper in prose than theorem-label-plus-apostrophe. The reader needs to know this is the sector-condition scope split.
+- `gain regime partition` — **gemini-targeted-alternatives (+2):** The partition directly separates fixed-gain, adaptive-gain, etc., which is central to A2.
+
+## `accumulated loss across context resets`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `context severance penalty` | +3 | gemini-targeted-alternatives +3 |
+| `turnover drift` | +2 | codex-gpt-5-r2 +2 |
+
+_category: rename × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `context severance penalty` — **gemini-targeted-alternatives (+3):** Formalizes the operational cost of logogenic session boundaries.
+- `turnover drift` — **codex-gpt-5-r2 (+2):** Good logogenic name for degradation caused by repeated context turnover.
 
 ## `action transition`
 
@@ -4266,63 +7233,47 @@ _category: keep × 1_
 
 - `adaptation and actuation dynamics` — **sonnet-4-6-r2 (+3):** The rename from ACT to AAD was already deliberate and well-documented. The name is descriptive of the two halves (adaptation = Section I, actuation = Section II). Do not re-open the naming question.
 
-## `adaptive tracker`
+## `additive coordinate forcing → disc forced coordinates`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `adaptive tracker` ⭑ | +3 | codex-gpt-5-r2 +3 |
+| `forced additive coordinates` | +3 | gemini-targeted-alternatives +3 |
+| `confirming consensus 3` | +2 | sonnet-4-6-r2 +2 |
 
-_category: keep × 1_
+_category: rename × 2_
 
 **Notes:**
 
-- `adaptive tracker` — **codex-gpt-5-r2 (+3):** Excellent name for structured model without structured objective.
+- `forced additive coordinates` — **gemini-targeted-alternatives (+3):** More direct name for the segment.
+- `confirming consensus 3` — **sonnet-4-6-r2 (+2):** All five agents voted this at +2 or +3. What I can add beyond my own cold-start vote: the cross-vote reading shows that all agents independently rejected `#disc-cauchy-coordinates` (Opus −1, Codex −1), confirming "forced-coordinates" is the right move not just a popular one. The Čencov-4th-instance argument (reparameterization invariance is not Cauchy-FE additivity) independently emerged in Haiku, Codex, and Opus without coordination. That convergence on the *reason* — not just the conclusion — strengthens the vote beyond a bandwagon.
 
-## `additive coordinate forcing family`
+## `agent classes class 1 2 3`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `forced coordinates family` | +3 | codex-gpt-5-r2 +3 |
+| `goal entanglement hierarchy` | +3 | gemini-targeted-alternatives +3 |
+| `architectural classes` | +2 | opus-4-7-r2 +2 |
 
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `forced coordinates family` — **codex-gpt-5-r2 (+3):** Use forced coordinates as the family phrase across Cauchy, Fisher, IB, and Legendre instances.
-
-## `agent identity as one non forkable causal record`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `singular trajectory commitment` | +3 | codex-gpt-5-r2 +3 |
-
-_category: canonicalize × 1_
+_category: canonicalize × 2_
 
 **Notes:**
 
-- `singular trajectory commitment` — **codex-gpt-5-r2 (+3):** Excellent prose handle for the token-level scope of AAD.
-
-## `agent opacity $H_b^{A\mid B}$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `agent opacity` | +3 | opus-4-7-b +3 |
-
-**Notes:**
-
-- `agent opacity` — **opus-4-7-b (+3):** "Opacity" as the informational dual of observability is exactly right — the word carries the right intuition (unpredictable-to-observer) and doesn't collide with anything else in AAD. Hafez's $H_b$ gets an AAD-native prose handle.
+- `goal entanglement hierarchy` — **gemini-targeted-alternatives (+3):** Standardizing the previously resolved rename.
+- `architectural classes` — **opus-4-7-r2 (+2):** Currently "agent classes," "architecture classes," "class 1/2/3," and "architectural classification" are all in use across `#der-directed-separation`. Canonicalize: "architectural classes" or "the architectural classification (Class 1 / Class 2 / Class 3)" — the *agent* class wording can collide with the LEXICON's "agent classes" table (adaptive system / agentic system / actuated agent / etc.) which is a different decomposition. Keep them disambiguated in prose.
 
 ## `agentic cycle theory act`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `AAD adaptation and actuation dynamics` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `agentic systems framework` | +3 | gemini-targeted-alternatives +3 |
 
-_category: rename × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
 - `AAD adaptation and actuation dynamics` — **gemini-3-1-pro-preview-r2 (+3):** The old name. Ensure all legacy references are scrubbed.
+- `agentic systems framework` — **gemini-targeted-alternatives (+3):** The new overarching framework name replacing ACT.
 
 ## `agentic systems`
 
@@ -4334,18 +7285,19 @@ _category: rename × 1_
 
 - `agentic systems` — **codex-2 (+3):** Broad, durable umbrella name that comfortably houses AAD, TST, and the later agent classes without sounding like a fad product category.
 
-## `aisthesis`
+## `alpha prime sub scope`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `aisthesis` ⭑ | +3 | codex-gpt-5-r2 +2, codex-2 +1 |
+| `sub scope alpha prime` | +3 | gemini-targeted-alternatives +3 |
+| `potential monotone tier` | +2 | codex-gpt-5-r2 +2 |
 
-_category: keep × 1_
+_category: canonicalize × 1, add-alias × 1_
 
 **Notes:**
 
-- `aisthesis` — **codex-2 (+1):** Slightly less sticky than the other Greek phase names, but it preserves the raw-contact distinction well enough to keep.
-- `aisthesis` — **codex-gpt-5-r2 (+2):** Good phase term for perception. The spelling is less familiar but defensible within the Greek vocabulary commitment.
+- `sub scope alpha prime` — **gemini-targeted-alternatives (+3):** Formalizes the specific game-theoretic extension of sub-scope alpha.
+- `potential monotone tier` — **codex-gpt-5-r2 (+2):** Useful readable alias for potential and monotone games where sector-style transfer works.
 
 ## `alpha1 fixed gain a2 sub scope`
 
@@ -4381,11 +7333,29 @@ _category: keep × 1_
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `greek rooted vocabulary` | +3 | gemini-targeted-alternatives +3 |
 | `keep as a set` | +3 | opus-4-7-b +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `greek rooted vocabulary` — **gemini-targeted-alternatives (+3):** Collectivizes the five distinctive process stages.
 - `keep as a set` — **opus-4-7-b (+3):** The Greek cycle-phase vocabulary works *because* it refuses the flatness of "predict / observe / mismatch / update / act." The README §"Why these terms earn their weight" is load-bearing justification and should not be touched. Keep all five.
+
+## `appendices details`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `appendices details` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `appendices derivations and details` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `appendices details` — **gemini-targeted-alternatives (+3):** Standard markdown section header.
+- `appendices derivations and details` — **sonnet-4-6 (+1):** Many appendix segments are type: derivation. The current label "Details" undersells what's there. "Derivations and Details" is more accurate.
 
 ## `appendices operational domains`
 
@@ -4397,81 +7367,121 @@ _category: keep × 1_
 
 - `appendices operational domains` — **sonnet-4-6 (+3):** Correct and specific. Keep.
 
-## `auftragstaktik`
+## `beta prime sub scope`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `auftragstaktik` ⭑ | +3 | opus-4-7-b +3 |
+| `sub scope beta prime` | +3 | gemini-targeted-alternatives +3 |
+| `equilibrium set tier` | +2 | codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
 
 **Notes:**
 
-- `auftragstaktik` — **opus-4-7-b (+3):** Imports a load-bearing operational concept from a specific tradition; the name carries genuine conceptual freight that "mission-command" cannot replace without loss. The spelling cost is the tell that the word is doing work.
+- `sub scope beta prime` — **gemini-targeted-alternatives (+3):** Formalizes the non-convergent, cyclic extension of sub-scope beta.
+- `equilibrium set tier` — **codex-gpt-5-r2 (+2):** Good honest alias for the CCE or set-convergence fallback.
 
-## `axiom genesis`
+## `boundary condition`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `axiom genesis` ⭑ | +3 | opus-4-7-r2 +3 |
+| `boundary condition` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `coupling structure` | +1 | audit-471203-incremental +1 |
 
-_category: keep × 1_
+_category: keep × 1, canonicalize × 1_
 
 **Notes:**
 
-- `axiom genesis` — **opus-4-7-r2 (+3):** Defended keep — logozoetic. "Axiom genesis" names the substantive observation (a sovereign agent's first move is to solidify $O_t$); "axiom" reads correctly because the LEXICON's PROPRIUM mapping uses Axiomata for the objective layer.
+- `boundary condition` — **gemini-targeted-alternatives (+3):** Standard formal term for limits and constraints.
+- `coupling structure` — **audit-471203-incremental (+1):** "boundary condition" carries PDE/control-theory meaning that's not what the segment means; "coupling structure is constitutive" lands more cleanly. [from 01-def-agent-environment.md]
 
 ## `bounded disturbance ga 2 model d`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `model d bounded disturbance` | +3 | gemini-targeted-alternatives +3 |
 | `bounded disturbance` | +3 | sonnet-4-6 +3 |
 
+_category: canonicalize × 1_
+
 **Notes:**
 
+- `model d bounded disturbance` — **gemini-targeted-alternatives (+3):** Standardizes the specific disturbance model.
 - `bounded disturbance` — **sonnet-4-6 (+3):** Clear. Keep.
-
-## `bounded mismatch region`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `persistence envelope` | +3 | codex-gpt-5-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `persistence envelope` — **codex-gpt-5-r2 (+3):** Strongest new shared proposal from the other votes. Flight-envelope connotations fit the safe operating region exactly.
 
 ## `bretagnolle huber identity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `bretagnolle huber bound` | +3 | gemini-targeted-alternatives +3 |
 | `do not rename` | +3 | opus-4-7-b +3 |
 | `bretagnolle huber identity` ⭑ | +3 | opus-4-7 +3 |
+| `no alternative` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: keep × 2_
 
 **Notes:**
 
+- `bretagnolle huber bound` — **gemini-targeted-alternatives (+3):** Important external anchor for total-variation bounds.
 - `do not rename` — **opus-4-7-b (+3):** Same.
 - `bretagnolle huber identity` — **opus-4-7 (+3):** External-theorem attribution; preserve. Keep.
+- `no alternative` — **opus-targeted-alternatives-v2 (-1):** Same — external theorem, name retained per prior-art-integration. No genuine alternative exists.
+
+## `brooks s law formalized as the inevitable tempo loss in team composition`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `sub additive tempo penalty` | +3 | gemini-targeted-alternatives +3 |
+| `the coordination drag` | +2 | gemini-targeted-alternatives +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `sub additive tempo penalty` — **gemini-targeted-alternatives (+3):** Already explicitly referenced in the cross-domain joining table as the formalization of Brooks's law.
+- `the coordination drag` — **gemini-targeted-alternatives (+2):** Very readable translation into a management/organizational mental model.
 
 ## `bruineberg s pearl-blanket`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `pearl-blanket` | +3 | agent1-original-brainstorm +3 |
+| `pearl-blanket interpretation` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
 - `pearl-blanket` — **agent1-original-brainstorm (+3):** Adopted concept; keep.
+- `pearl-blanket interpretation` — **gemini-targeted-alternatives (+3):** Distinguishes the AAD usage from Friston.
 
 ## `bruineberg s pearl-blanket friston-blanket`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `pearl-blanket interpretation` | +3 | gemini-targeted-alternatives +3 |
 | `pearl-blanket friston-blanket` | +3 | opus-1m +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `pearl-blanket interpretation` — **gemini-targeted-alternatives (+3):** Clarifies the exact reading of Markov blankets used in AAD.
 - `pearl-blanket friston-blanket` — **opus-1m (+3):** Adopted (Bruineberg 2022, credit Martin Biehl per fn 3 of that paper per citation audit); keep.
+
+## `c i`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `shared objective route c i` | +3 | gemini-targeted-alternatives +3 |
+| `shared objective route` | +2 | codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `shared objective route c i` — **gemini-targeted-alternatives (+3):** Provides a semantic name for the strongest composition scope route.
+- `shared objective route` — **codex-gpt-5-r2 (+2):** Good route name for composite-agent scope.
 
 ## `c i c ii c iii c iv`
 
@@ -4485,6 +7495,34 @@ _category: canonicalize × 1_
 
 - `composition routes` — **codex-gpt-5-r2 (+3):** Use routes consistently for shared-objective, hierarchical, mutual-benefit, and strategic composition.
 
+## `c ii`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `hierarchical decomposition route c ii` | +3 | gemini-targeted-alternatives +3 |
+| `hierarchical derivation route` | +2 | codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `hierarchical decomposition route c ii` — **gemini-targeted-alternatives (+3):** Provides a semantic name for the intermediate composition scope route.
+- `hierarchical derivation route` — **codex-gpt-5-r2 (+2):** Good route name for composite-agent scope.
+
+## `c iii`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `mutual benefit route c iii` | +3 | gemini-targeted-alternatives +3 |
+| `mutual benefit route` | +2 | codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `mutual benefit route c iii` — **gemini-targeted-alternatives (+3):** Provides a semantic name for the weakest alignment-based composition scope route.
+- `mutual benefit route` — **codex-gpt-5-r2 (+2):** Good route name for composite-agent scope.
+
 ## `c iv`
 
 | candidate | aggregate | votes |
@@ -4497,57 +7535,61 @@ _category: add-alias × 1_
 
 - `strategic convergence route` — **codex-gpt-5-r2 (+3):** Better than saying equilibrium route only, because convergence is the scope condition.
 
-## `calibration laboratory calibration lab`
+## `calibration laboratory domain instantiation`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `calibration laboratory` | +3 | sonnet-4-6-r2 +3 |
+| `calibration laboratory` | +3 | gemini-targeted-alternatives +3 |
+| `calibration lab framing` | +1 | codex-1 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `calibration laboratory` — **sonnet-4-6-r2 (+3):** Currently appears as "richest operationalization domain," "best operationalization domain," "privileged high-identifiability calibration laboratory," and "calibration laboratory." The TST OUTLINE.md preamble and `obs-software-epistemic-properties` both use "calibration laboratory" as the correct framing, but earlier versions use the paraphrase forms. Standardize on "calibration laboratory" (full form) in first use; "calibration lab" acceptable in subsequent informal references.
+- `calibration laboratory` — **gemini-targeted-alternatives (+3):** Keeps the grounding metaphor intact.
+- `calibration lab framing` — **codex-1 (+1):** Better as framing language than as a formal category label. The idea is excellent; the phrase can be lighter.
 
 ## `calibration laboratory framing for TST`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `software calibration laboratory` | +3 | gemini-targeted-alternatives +3 |
 | `calibration laboratory` | +3 | opus-1m +3 |
 
+_category: canonicalize × 1_
+
 **Notes:**
 
+- `software calibration laboratory` — **gemini-targeted-alternatives (+3):** Solidifies TSTs grounding role.
 - `calibration laboratory` — **opus-1m (+3):** C-BP3 landing; well-chosen. Keep.
-
-## `calibration laboratory software s role`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `calibration laboratory` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `calibration laboratory` — **sonnet-4-6 (+3):** Excellent coinage. The specific phrase "privileged high-identifiability calibration laboratory" is slightly long for prose but "calibration laboratory" as a two-word noun is strong. Already in use. Keep.
 
 ## `candidate stage`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `candidate` | +3 | opus-4-7 +3 |
+| `candidate stage` ⭑ | +2 | gemini-targeted-alternatives +2 |
+
+_category: keep × 1_
 
 **Notes:**
 
 - `candidate` — **opus-4-7 (+3):** Terminal pre-publication stage; works because it's standard academic vocabulary. Keep.
+- `candidate stage` — **gemini-targeted-alternatives (+2):** Standard segment maturity status.
 
-## `canonical formulations second ring`
+## `catastrophic forgetting`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `canonical formulations` | +3 | sonnet-4-6 +3 |
+| `catastrophic forgetting regime` | +3 | gemini-targeted-alternatives +3 |
+| `empty window pathology` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
-- `canonical formulations` — **sonnet-4-6 (+3):** Keep.
+- `catastrophic forgetting regime` — **gemini-targeted-alternatives (+3):** Forces the specific regime formulation over the generic ML term.
+- `empty window pathology` — **gemini-3-1-pro-preview-r2 (+2):** Too vague and ML-generic. Prefer AAD's "empty-window pathology".
 
 ## `causal OODA1 exploration`
 
@@ -4565,25 +7607,33 @@ _category: rename × 2, keep × 1_
 - `causal OODA1 survival` — **haiku-4-5-r2 (+2):** Currently names the effect (exploration drive) rather than the foundational thing being derived (survival imperative). "survival" is the engine; "exploration" is the downstream consequence. Aligns with subject-noun-first principle.
 - `causal OODA1 exploration` — **gemini-3-1-pro-preview-r2 (+1):** Standard.
 
-## `chronica $\mathcal C_t$`
+## `chain confidence decay keep`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `chronica` | +3 | opus-4-7-b +3 |
+| `chain confidence decay` | +3 | gemini-targeted-alternatives +3 |
+| `reaffirm keep with new reasoning` | +1 | sonnet-4-6-r2 +1 |
+
+_category: keep × 2_
 
 **Notes:**
 
-- `chronica` — **opus-4-7-b (+3):** Greek root fits AAD's philosophical-vocabulary register, the symbol avoids colliding with $\mathcal H$ (entropy), and the singular-non-forkable-trajectory commitment of `#agent-identity` gets more morally heavy over time — "chronica" will age toward the logozoetic scope rather than away from it. Keep.
+- `chain confidence decay` — **gemini-targeted-alternatives (+3):** Core formal result.
+- `reaffirm keep with new reasoning` — **sonnet-4-6-r2 (+1):** Opus's proposed rename to `#der-log-confidence-additive` (+1) is intellectually interesting (names the uniqueness move rather than the decay consequence) but Opus correctly also votes keep (+2). The "decay" consequence is what readers *use* this result for; the additive structure is the proof technique. The subject-noun should name the *result* (chain confidence decays), not the proof technique (additivity forces log-space representation). Reaffirming keep with this explicit reasoning that was absent from my cold-start.
 
-## `chronica 𝒞 t`
+## `chronica in running prose`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `chronica` | +3 | haiku-4-5 +3 |
+| `chronica` | +3 | gemini-targeted-alternatives +3 |
+| `lowercase italic chronica` | +1 | codex-gpt-5-r2 +1 |
+
+_category: keep × 1, canonicalize × 1_
 
 **Notes:**
 
-- `chronica` — **haiku-4-5 (+3):** Greek-rooted term ("records of time") for the complete interaction history. Self-descriptive once learned; memorable. Lowercase notation 𝒞_t is appropriate. Keep.
+- `chronica` — **gemini-targeted-alternatives (+3):** Maintains the Greek-rooted term for the causal record.
+- `lowercase italic chronica` — **codex-gpt-5-r2 (+1):** Useful style convention: capitalize in headings, use lowercase in prose like aporia or praxis.
 
 ## `claims verified deps verified format clean`
 
@@ -4600,24 +7650,54 @@ _category: rename × 2, keep × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `modular merged scaffolded architecture classes` | +3 | codex-gpt-5-r2 +3 |
+| `goal entanglement hierarchy` | +3 | gemini-targeted-alternatives +3 |
 | `architecture classes` | +2 | codex-gpt-5-r2 +2 |
+| `modularity partition` | +2 | gemini-targeted-alternatives +2 |
+| `modular merged scaffolded` | +2 | opus-targeted-alternatives-v2 +2 |
+| `modular coupled scaffolded` | +2 | opus-targeted-alternatives-v2 +2 |
+| `modular integrated partially coupled` | +1 | opus-targeted-alternatives-v2 +1 |
+| `class 1 class 2 class 3` ⭑ | -1 | opus-targeted-alternatives-v2 -1 |
 
-_category: add-alias × 1, canonicalize × 1_
+_category: rename × 5, add-alias × 1, canonicalize × 1, keep × 1_
 
 **Notes:**
 
 - `modular merged scaffolded architecture classes` — **codex-gpt-5-r2 (+3):** Better prose handles than bare class numbers. My preferred trio avoids overloading integrated and keeps Class 3's external-architecture role visible.
+- `goal entanglement hierarchy` — **gemini-targeted-alternatives (+3):** Directly describes what the classes measure (how much $G_t$ entangles with $M_t$ updates).
 - `architecture classes` — **codex-gpt-5-r2 (+2):** Canonical umbrella helps avoid overloading class numbers across sections.
+- `modularity partition` — **gemini-targeted-alternatives (+2):** Classes are precisely modular, partially modular, and merged.
+- `modular merged scaffolded` — **opus-targeted-alternatives-v2 (+2):** Per `der-directed-separation`: Class 1 = modular (separation by construction), Class 2 = fully merged (fails by construction), Class 3 = partially modular / scaffolded. Names the *architectural property* directly. Codex r1 +3 single-vote. The English labels make "this lands in Class 2" → "this lands in fully-merged" — much more readable.
+- `modular coupled scaffolded` — **opus-targeted-alternatives-v2 (+2):** Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest.
+- `modular integrated partially coupled` — **opus-targeted-alternatives-v2 (+1):** Gemini's r1 +3 single-vote alternative. "Integrated" is too positive a word for what Class 2 *is* (a known failure mode). "Coupled" or "merged" reads more honestly.
+- `class 1 class 2 class 3` — **opus-targeted-alternatives-v2 (-1):** Considered. The numbered classes are easy to learn and parallel-shaped. Rejected: per principles file, *role*-naming via numbers fails the subject-noun-first principle. The architectural property *is* the subject-noun.
 
 ## `class 1 class 2 class 3 agents`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `modular integrated partially coupled agents` | +3 | gemini-1 +3 |
+| `goal entanglement hierarchy` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
 - `modular integrated partially coupled agents` — **gemini-1 (+3):** "Class X" requires a lookup every time. Naming the architectural property directly is much more memorable and scope-honest.
+- `goal entanglement hierarchy` — **gemini-targeted-alternatives (+3):** Standardizes the structural property behind the classes.
+
+## `class 1 subagents forming a class 3 composite`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `strategic composition entanglement` | +3 | gemini-targeted-alternatives +3 |
+| `composition lift` | +1 | codex-gpt-5-r2 +1 |
+
+_category: rename × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `strategic composition entanglement` — **gemini-targeted-alternatives (+3):** Captures that composing modular agents strategically creates a coupled Class 3 composite through cross-agent modeling.
+- `composition lift` — **codex-gpt-5-r2 (+1):** Potentially useful, but needs formal confirmation to avoid sounding like a slogan.
 
 ## `claude md`
 
@@ -4629,41 +7709,106 @@ _category: add-alias × 1, canonicalize × 1_
 
 - `claude md` — **haiku-4-5 (+3):** Project instructions; name is established and clear. Keep.
 
-## `closure defect`
+## `closure defect bridge lemma`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `closure defect` ⭑ | +3 | codex-gpt-5-r2 +3 |
+| `bridge lemma` | +3 | gemini-targeted-alternatives +3 |
+| `closure bridge` | +2 | codex-gpt-5-r2 +2 |
 
-_category: keep × 1_
+_category: keep × 1, canonicalize × 1_
 
 **Notes:**
 
-- `closure defect` — **codex-gpt-5-r2 (+3):** Excellent quantity name for epsilon-star. It is short and memorable.
+- `bridge lemma` — **gemini-targeted-alternatives (+3):** Retains the standard mathematical naming for the theorem connecting defect to error.
+- `closure bridge` — **codex-gpt-5-r2 (+2):** Shorter reusable phrase while preserving the formal bridge lemma title.
 
-## `composition consistency inheritance across scales`
+## `closure defect consuming macro reserve`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `heredity commitment` | +3 | codex-gpt-5-r2 +3 |
+| `coordination overhead` | +3 | gemini-targeted-alternatives +3 |
+| `closure load` | +2 | codex-gpt-5-r2 +2 |
 
-_category: name-unnamed × 1_
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `heredity commitment` — **codex-gpt-5-r2 (+3):** Good name for the stronger expectation that composite admissibility should inherit from sub-agent properties plus topology.
+- `coordination overhead` — **gemini-targeted-alternatives (+3):** Translates the abstract reserve-consumption concept into the practical tempo penalty ($C_{\text{coord}}$).
+- `closure load` — **codex-gpt-5-r2 (+2):** Good name for the pressure epsilon-star times macro-rate places on composite persistence.
 
-## `constitutive utterance`
+## `coherence coupling measurement`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `constitutive utterance` ⭑ | +3 | opus-4-7-r2 +3 |
+| `coherence coupling measurement` ⭑ | +3 | opus-targeted-alternatives +2, opus-4-7-b +1 |
+| `q measurement` ✗ | -1 | opus-targeted-alternatives -1 |
 
-_category: keep × 1_
+_category: keep × 1, rename × 1_
 
 **Notes:**
 
-- `constitutive utterance` — **opus-4-7-r2 (+3):** Defended keep — logozoetic. "Constitutive utterance" is iconic in the framework's logozoetic vocabulary; it captures the irreversibility-of-token-generation insight precisely.
+- `coherence coupling measurement` — **opus-4-7-b (+1):** Keep.
+- `coherence coupling measurement` — **opus-targeted-alternatives (+2):** TST `#meas-coherence-coupling`: measurement of $Q$ (coherence) and coupling from git history. The hyphenated form pairs with `#def-system-coherence` and `#def-system-coupling` definitions. Keep.
+- `q measurement` — **opus-targeted-alternatives (-1):** Symbol-only alternative. Loses readability. Rejected.
+
+## `communication gain $\eta_{ji}^\ast$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `communication gain` | +3 | gemini-targeted-alternatives +3 |
+| `trust gain` | +2 | gemini-1 +1, gemini-2 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `communication gain` — **gemini-targeted-alternatives (+3):** Standardizes the optimal trust parameter.
+- `trust gain` — **gemini-1 (+1):** The definition is "Trust-weighted uncertainty ratio". "Trust gain" might be more evocative of the inter-agent dynamic than the clinical "Communication gain".
+- `trust gain` — **gemini-2 (+1):** "Communication gain" sounds like signal amplitude. "Trust gain" captures the trust-weighted uncertainty ratio.
+
+## `concept the sequence of cycle phases prolepsis aisthesis aporia epistrophe praxis considered as a single named whole`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `adaptive cycle` | +3 | gemini-targeted-alternatives +3 |
+| `orient cascade` | +3 | gemini-targeted-alternatives +3 |
+| `the adaptive pentad` | +2 | gemini-1 +1, opus-4-7-b +1 |
+| `adaptive cycle phases` | +2 | gemini-targeted-alternatives +2 |
+| `five adaptive cycle phases` | +2 | gemini-targeted-alternatives +2 |
+| `the pentad five phase cycle` | +1 | agent1-original-brainstorm +1 |
+| `adaptive traversal` | +1 | gemini-2 +1 |
+| `the pentad` | +1 | opus-1m +1 |
+| `the five turn` ✗ | -1 | opus-4-7-b -1 |
+
+_category: canonicalize × 2, rename × 2_
+
+**Notes:**
+
+- `adaptive cycle` — **gemini-targeted-alternatives (+3):** The generic term for the Prolepsis-Praxis loop. [original phrasing: unnamed the complete adaptive cycle from anticipation through action]
+- `orient cascade` — **gemini-targeted-alternatives (+3):** Maps the specific five-phase execution order. [original phrasing: unnamed cycle phase sequence as whole]
+- `the adaptive pentad` — **gemini-1 (+1):** Provides a single memorable noun for the 5-phase cycle (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis) as a complete unit. [original phrasing: unnamed: cycle-phase sequence as a whole]
+- `the adaptive pentad` — **opus-4-7-b (+1):** The five-phase cycle (prolepsis → aisthesis → aporia → epistrophe → praxis) has a piecewise name per phase but no *collective* noun. "The cycle" works when context is clear but is ambiguous with (e.g.) credit cycles or OODA cycles. "The pentad" or "the adaptive pentad" is a specific collective noun that fits AAD's Greek-vocabulary commitment. Weak preference; aesthetic call. [original phrasing: unnamed: the cycle-as-a-whole]
+- `adaptive cycle phases` — **gemini-targeted-alternatives (+2):** Collectivizes Prolepsis, Aisthesis, Aporia, Epistrophe, and Praxis. [original phrasing: unnamed the five phases of the adaptive cycle]
+- `five adaptive cycle phases` — **gemini-targeted-alternatives (+2):** Collective grouping. [original phrasing: the five cycle phases prolepsis aisthesis aporia epistrophe praxis]
+- `the pentad five phase cycle` — **agent1-original-brainstorm (+1):** Probably not worth effort. Worth surfacing. [original phrasing: unnamed: cycle-phase sequence as whole]
+- `adaptive traversal` — **gemini-2 (+1):** "The cycle-as-a-whole" is clunky. "Adaptive traversal" suggests moving through the loop. [original phrasing: unnamed: The cycle-as-a-whole]
+- `the pentad` — **opus-1m (+1):** Agree with original. Low priority. Names the five-phase sequence as a unit. [original phrasing: unnamed: cycle-phase sequence as a whole]
+- `the five turn` — **opus-4-7-b (-1):** Considered as a more Germanic / industrial alternative to "pentad." Reject: loses the Greek-vocabulary register and gains nothing. [original phrasing: unnamed: the cycle-as-a-whole]
+
+## `context wiping at session boundaries`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `the epistemic severance` | +3 | gemini-targeted-alternatives +3 |
+| `context turnover discontinuity` | +2 | gemini-targeted-alternatives +2 |
+
+_category: add-alias × 1, canonicalize × 1_
+
+**Notes:**
+
+- `the epistemic severance` — **gemini-targeted-alternatives (+3):** Visceral name for the specific loss of continuity LLMs suffer, distinct from general "context turnover".
+- `context turnover discontinuity` — **gemini-targeted-alternatives (+2):** Ties directly to the "obs-context-turnover" phrasing.
 
 ## `continuity persistence`
 
@@ -4679,15 +7824,50 @@ _category: keep × 1_
 - `identity continuity` — **gemini-2 (+3):** "Continuity persistence" is slightly redundant. "Identity continuity" clarifies that it's about $\mathcal{C}_t$ and temporal depth.
 - `continuity persistence` — **codex-gpt-5-r2 (+2):** Slightly repetitive, but it is precise and needed for identity-through-change claims.
 
-## `control regret $\delta_{\text{regret}}$`
+## `contraction hierarchy`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `control regret` | +3 | gemini-2 +3 |
+| `contraction hierarchy` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `contraction tier` | +1 | sonnet-4-6 +1 |
+
+_category: keep × 1_
 
 **Notes:**
 
-- `control regret` — **gemini-2 (+3):** Perfect partner to satisfaction gap. Keep.
+- `contraction hierarchy` — **gemini-targeted-alternatives (+3):** Elevates the tier description.
+- `contraction tier` — **sonnet-4-6 (+1):** The Tier 1/2/3 system in #composition-closure is called "Contraction Tier" not "Contraction Hierarchy." Slight naming inconsistency with the other two. Not a priority to fix, but noting the asymmetry.
+
+## `contraction over drift principle`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `contraction over drift principle` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `contraction imperative` | +1 | codex-gpt-5-r2 +1 |
+
+_category: keep × 1, add-alias × 1_
+
+**Notes:**
+
+- `contraction over drift principle` — **gemini-targeted-alternatives (+3):** Formally adopted.
+- `contraction imperative` — **codex-gpt-5-r2 (+1):** Short and vivid, but less precise than contraction-over-drift.
+
+## `coordination overhead threshold`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `coordination tax` | +3 | opus-targeted-alternatives-v2 +2, codex-1 +1 |
+| `coordination overhead` | +3 | gemini-targeted-alternatives +3 |
+| `coordination drag` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: rename × 2, canonicalize × 1_
+
+**Notes:**
+
+- `coordination tax` — **codex-1 (+1):** This deserves a reusable noun slot. The current phrase explains; the proposed phrase sticks.
+- `coordination tax` — **opus-targeted-alternatives-v2 (+2):** Per `der-tempo-composition` and `#def-system-coupling`: the tempo-equivalent cost of cross-agent coordination in composite agents. "Tax" is engineering-vivid; "threshold" undersells (the cost is *paid* whether the threshold is crossed or not). Confirms Codex r1 single +1; my read upgrades.
+- `coordination overhead` — **gemini-targeted-alternatives (+3):** Formally adopted.
+- `coordination drag` — **opus-targeted-alternatives-v2 (+1):** Variant — fluid-dynamics metaphor. Carries the *continuous-cost* sense better than "tax" (taxes can be fixed-rate; drag scales with velocity / tempo). Either is acceptable.
 
 ## `correlated channel overcount`
 
@@ -4700,6 +7880,20 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `redundancy penalty` — **codex-gpt-5-r2 (+3):** More neutral and technical than my earlier redundancy illusion. Use illusion for the cognitive error, penalty for the quantity.
+
+## `correlated evidence overconfidence`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `evidential overcounting` | +3 | gemini-targeted-alternatives +3 |
+| `redundancy illusion` | +2 | codex-gpt-5-r2 +2 |
+
+_category: rename × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `evidential overcounting` — **gemini-targeted-alternatives (+3):** Describes the epistemic consequence of treating correlated signals as independent.
+- `redundancy illusion` — **codex-gpt-5-r2 (+2):** Good name for overcounting correlated channels as independent tempo.
 
 ## `coupled diagnostic framework`
 
@@ -4728,34 +7922,60 @@ _category: rename × 3, keep × 2_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `do not rename` | +3 | opus-4-7-b +3 |
+| `foundational anchors` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `do not rename` — **opus-4-7-b (+3):** Same — FORMAT.md §"Why these labels" explicitly preserves external theorem names.
+- `foundational anchors` — **gemini-targeted-alternatives (+2):** Identifies the imported theorems the framework rests upon.
 
-## `cross agent model of self and model of other coupling`
+## `crossing from multi agent to composite scope`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `cross model coupling` | +3 | codex-gpt-5-r2 +3 |
+| `composition threshold` | +3 | gemini-targeted-alternatives +3 |
+| `crossing` | +2 | codex-gpt-5-r2 +2 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `cross model coupling` — **codex-gpt-5-r2 (+3):** Strong English complement to kappa-style coupling terms in opacity and theory-of-mind discussions.
+- `composition threshold` — **gemini-targeted-alternatives (+3):** Designates the formal boundary where sub-agents become a coherent composite.
+- `crossing` — **codex-gpt-5-r2 (+2):** Useful name for transitions into or out of composite-agent status.
+
+## `crèche creche`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `the crèche` | +3 | gemini-targeted-alternatives +3 |
+| `crèche with diacritic in framing prose creche in slugs` | +2 | opus-4-7-r2 +2 |
+
+_category: keep × 1, canonicalize × 1_
+
+**Notes:**
+
+- `the crèche` — **gemini-targeted-alternatives (+3):** The high-margin developmental environment.
+- `crèche with diacritic in framing prose creche in slugs` — **opus-4-7-r2 (+2):** Mixed usage. Canonicalize: in segment titles and prose, "Crèche" with the grave accent (consistent with the agentic-tft source); in slugs, "creche" without the accent (since slug-tooling rules disallow non-ASCII).
 
 ## `cycle vs loop`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `maintain distinction` | +3 | gemini-targeted-alternatives +3 |
 | `keep both maintain distinction` | +3 | opus-4-7-b +3 |
 | `cycle vs loop` ⭑ | +3 | opus-4-7 +3 |
+| `cycle loop distinction` | +2 | opus-targeted-alternatives +2 |
+
+_category: keep × 1, canonicalize × 1_
 
 **Notes:**
 
+- `maintain distinction` — **gemini-targeted-alternatives (+3):** The distinction (loop = structural topology, cycle = one traversal) is a core piece of vocabulary.
 - `keep both maintain distinction` — **opus-4-7-b (+3):** README §"Loop vs. Cycle" makes this distinction load-bearing (loop = structural topology, cycle = one traversal). The distinction is one of AAD's best small naming moves and should be enforced in every segment.
 - `cycle vs loop` — **opus-4-7 (+3):** See above — the two-word disambiguation is one of the theory's most useful vocabulary moves. Keep.
+- `cycle loop distinction` — **opus-targeted-alternatives (+2):** The row names the *distinction* not a candidate. The substantive position is that loop = topology, cycle = traversal — a distinction worth preserving. Canonicalize the row's referent to "the cycle / loop distinction" as a named architectural commitment.
 
 ## `da2 inc ≡ ct2 at m i equivalence`
 
@@ -4791,6 +8011,20 @@ _category: name-unnamed × 1_
 
 - `sector contraction equivalence` — **codex-gpt-5-r2 (+3):** Excellent reusable handle for the Euclidean bridge between incremental sector structure and contraction.
 
+## `dark room exploration drive`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `survival imperative` | +3 | gemini-targeted-alternatives +3 |
+| `dark room exploration drive` ⭑ | -1 | codex-gpt-5-r2 -1 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `survival imperative` — **gemini-targeted-alternatives (+3):** Distinguishes AAD exploration from the Friston dark room problem.
+- `dark room exploration drive` — **codex-gpt-5-r2 (-1):** Avoid. It imports active-inference baggage and misnames the AAD result, which is survival exploration.
+
 ## `deliberate expenditure to make hidden nodes observable`
 
 | candidate | aggregate | votes |
@@ -4813,25 +8047,19 @@ _category: name-unnamed × 1_
 
 - `derivation audit tables` — **codex-1 (+3):** Strong keep. This names a concrete artifact and a valuable house practice at the same time.
 
-## `derivation not proof`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `derivation` | +3 | opus-4-7-b +3 |
-
-**Notes:**
-
-- `derivation` — **opus-4-7-b (+3):** Keep. Same argument.
-
 ## `developer as act agent TST`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `developer as adaptive agent` | +3 | opus-4-7-b +3 |
+| `developer as agent` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `developer as adaptive agent` — **opus-4-7-b (+3):** The slug is a direct relic of the pre-2026-04-16 "ACT" framework naming — no longer accurate. "Adaptive agent" matches LEXICON's agent-class vocabulary and is framework-rename-proof. The segment invokes Section I machinery, so "adaptive" is semantically correct. This is mechanical cleanup overdue since April.
+- `developer as agent` — **gemini-targeted-alternatives (+2):** Core mapping for TST.
 
 ## `developmental trajectory`
 
@@ -4849,63 +8077,19 @@ _category: keep × 2, rename × 2_
 - `creche trajectory` — **codex-gpt-5-r2 (+3):** The Crèche is memorable and already present in the title. Use it to make the logozoetic development path distinctive.
 - `creche trajectory` — **opus-4-7-r2 (-1):** Rebuttal — Codex proposed this at +3 with the rationale that "Crèche" is memorable. I think this conflates two distinct things: the *Crèche* is the bounded developmental environment (Class-1 worker agents under supervision); the *developmental trajectory* is the path through agent classes that an ELI traces over time (which extends beyond the Crèche into post-graduation autonomy). Renaming would collapse a distinction the framework wants to preserve. Codex's instinct (Crèche is memorable, use it) is right but applied to the wrong segment — the Crèche-specific segment is `def-the-creche-boundary`, where "creche" *is* the right subject-noun.
 
-## `directional fidelity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `directional fidelity` ⭑ | +3 | codex-gpt-5-r2 +3 |
-| `corrective alignment` ✗ | -1 | sonnet-4-6 -1 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `directional fidelity` — **codex-gpt-5-r2 (+3):** Explicit keep after seeing alternatives. It names direction rather than magnitude and avoids overloaded alignment language.
-- `corrective alignment` — **sonnet-4-6 (-1):** "Alignment" is now heavily loaded in AI safety discourse. Avoid even in a technical context where the meaning is purely geometric.
-
-## `directional fidelity condition b1`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `directional fidelity` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `directional fidelity` — **sonnet-4-6 (+3):** The name earns its place — "fidelity" captures the accuracy commitment (the correction points approximately toward reality) and "directional" qualifies it (it's about direction, not magnitude). Used in #gain-sector-bridge and carried forward into the sector sub-scope partition. Keep.
-
 ## `discussion segment header`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `discussion section` | +3 | gemini-targeted-alternatives +3 |
 | `discussion` | +3 | opus-1m +3 |
-
-**Notes:**
-
-- `discussion` — **opus-1m (+3):** Public API; keep.
-
-## `discussion segment section`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `discussion` | +3 | opus-4-7-r2 +3 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `discussion` — **opus-4-7-r2 (+3):** Defended canonicalization. Same as above.
-
-## `dormant structural variation that becomes useful after regime change`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `latent structural diversity` | +3 | codex-gpt-5-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `latent structural diversity` — **codex-gpt-5-r2 (+3):** Strong Section III and structural-adaptation term. It names adaptive potential that present fitness measures hide.
+- `discussion section` — **gemini-targeted-alternatives (+3):** Standard markdown section header.
+- `discussion` — **opus-1m (+3):** Public API; keep.
 
 ## `dual optimization`
 
@@ -4929,16 +8113,6 @@ _category: keep × 1, rename × 1_
 - `dual cost optimization` — **gemini-1 (+1):** Adding "cost" clarifies that we are minimizing the dual costs of comprehension and implementation.
 - `comprehension implementation tradeoff` — **sonnet-4-6 (-1):** Too long.
 
-## `edge credence $p_{ij}$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `edge credence` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `edge credence` — **sonnet-4-6 (+3):** "Credence" is the correct Bayesian vocabulary for subjective probability. LEXICON.md lists this under "Terms to Be Added." Should be promoted to main LEXICON. Keep.
-
 ## `edge update natural parameter`
 
 | candidate | aggregate | votes |
@@ -4959,50 +8133,74 @@ _category: rename × 3_
 - `edge update natural parameter` — **haiku-4-5 (+1):** Log-odds as unique additive-evidence coordinate for edge credences (evidential-additivity axiom). Compound but specialist-vocabulary (natural parameter is information-geometric term). Keep.
 - `log odds update` — **opus-4-7-b (+1):** The segment's content is "log-odds is the unique additive-evidence coordinate for edge credences under evidential additivity (Cauchy-FE)." The current slug ("natural parameter") leans on exponential-family vocabulary that the segment derives *to*, not from. `#log-odds-update` names the derived coordinate and is shorter; "natural parameter" can live in the subtitle. Modest preference.
 
-## `epistemic status segment header`
+## `epistemic architecture for bounded correction under decomposed disturbance`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `epistemic status` | +3 | opus-1m +3 |
-
-**Notes:**
-
-- `epistemic status` — **opus-1m (+3):** Public API; keep.
-
-## `epistemic status segment section`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistemic status` | +3 | opus-4-7-r2 +3 |
+| `epistemic architecture` | +3 | gemini-targeted-alternatives +3 |
+| `bounded correction architecture` | +1 | codex-2 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `epistemic status` — **opus-4-7-r2 (+3):** Defended canonicalization — same.
+- `epistemic architecture` — **gemini-targeted-alternatives (+3):** Names the foundational setup.
+- `bounded correction architecture` — **codex-2 (+1):** The long phrase has substance, but it needs a shorter speakable handle if it will recur.
+
+## `epistemic opacity`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic opacity` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `keep but flag baggage` | +1 | audit-471203-incremental +1 |
+
+_category: keep × 2_
+
+**Notes:**
+
+- `epistemic opacity` — **gemini-targeted-alternatives (+3):** Specifically distinct from transition opacity.
+- `keep but flag baggage` — **audit-471203-incremental (+1):** Auditor flagged that "epistemic opacity" carries philosophy-of-mind prior-art baggage (opacity of mental states) and may need defending against that prior usage; not advocating rename. Mild concern. [from 03-def-observation-function.md]
+
+## `epistemic status segment header`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic status section` | +3 | gemini-targeted-alternatives +3 |
+| `epistemic status` | +3 | opus-1m +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `epistemic status section` — **gemini-targeted-alternatives (+3):** Standard markdown section header.
+- `epistemic status` — **opus-1m (+3):** Public API; keep.
 
 ## `epistemic substate purposeful substate`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `keep canonical pairing` | +3 | gemini-targeted-alternatives +3 |
 | `epistemic substate purposeful substate` ⭑ | +3 | opus-4-7-r2 +3 |
 
-_category: canonicalize × 1_
+_category: keep × 1, canonicalize × 1_
 
 **Notes:**
 
+- `keep canonical pairing` — **gemini-targeted-alternatives (+3):** The exact pairing is load-bearing in Directed Separation discussions ($M_t$ vs $G_t$).
 - `epistemic substate purposeful substate` — **opus-4-7-r2 (+3):** Defended canonicalization. The pairing $M_t$ (epistemic substate) / $G_t$ (purposeful substate) is iconic; do not paraphrase as "belief state" / "goal state" or "model" / "purpose" (which collide with other usages).
 
 ## `exact robust qualitative heuristic conditional claim tiers`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `epistemic claim tiers` | +3 | gemini-targeted-alternatives +3 |
 | `use exactly the AAD tier vocabulary` | +3 | opus-4-7-r2 +3 |
 
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
+- `epistemic claim tiers` — **gemini-targeted-alternatives (+3):** Formally collectivizes the four levels of rigor.
 - `use exactly the AAD tier vocabulary` — **opus-4-7-r2 (+3):** Defended canonicalization, in CLAUDE.md and FORMAT.md already. Do not use "Solid," "Confident," or "Plausible" as tier labels — these were explicit non-AAD borrowings to avoid.
 
 ## `exponential cognitive load`
@@ -5035,12 +8233,14 @@ _category: keep × 2_
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `findings section` | +3 | gemini-targeted-alternatives +3 |
 | `findings` | +3 | opus-4-7-r2 +3 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 2_
 
 **Notes:**
 
+- `findings section` — **gemini-targeted-alternatives (+3):** Standard markdown section header.
 - `findings` — **opus-4-7-r2 (+3):** Defended. The schema is fixed in FORMAT.md (Brief / Impact / Novelty Claim / Related Work / Search Log); do not paraphrase the section name. The bin/extract-findings tool depends on the exact heading.
 
 ## `fisher whitened update`
@@ -5048,44 +8248,28 @@ _category: canonicalize × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `fisher whitened update` ⭑ | +3 | codex-gpt-5-r2 +3 |
+| `fisher rao metric update` | +2 | gemini-targeted-alternatives +2 |
 
-_category: keep × 1_
+_category: keep × 1, rename × 1_
 
 **Notes:**
 
 - `fisher whitened update` — **codex-gpt-5-r2 (+3):** Accurate, compact, and tied to the real mathematical operation.
-
-## `fluid limit ga 5`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `fluid limit` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `fluid limit` — **sonnet-4-6 (+3):** Standard terminology from stochastic processes. Keep.
+- `fisher rao metric update` — **gemini-targeted-alternatives (+2):** Roots the whitening operation firmly in information geometry instead of generic signal processing.
 
 ## `formal expression segment header`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `formal expression section` | +3 | gemini-targeted-alternatives +3 |
 | `formal expression` | +3 | opus-1m +3 |
-
-**Notes:**
-
-- `formal expression` — **opus-1m (+3):** Public API for outline-filter (see PROPOSALS.md §H.5). Established. Keep.
-
-## `formal expression segment section`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `formal expression` | +3 | opus-4-7-r2 +3 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `formal expression` — **opus-4-7-r2 (+3):** Defended canonicalization. The cadence (frontmatter / title / summary / Formal Expression / Epistemic Status / Discussion / Findings / Working Notes) is a public-API contract; renaming would cascade.
+- `formal expression section` — **gemini-targeted-alternatives (+3):** Standard markdown section header.
+- `formal expression` — **opus-1m (+3):** Public API for outline-filter (see PROPOSALS.md §H.5). Established. Keep.
 
 ## `format md`
 
@@ -5102,22 +8286,14 @@ _category: canonicalize × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `use exactly the format md vocabulary` | +3 | opus-4-7-r2 +3 |
+| `segment typologies` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `use exactly the format md vocabulary` — **opus-4-7-r2 (+3):** Defended canonicalization. The 19 segment types in FORMAT.md are a closed vocabulary; do not paraphrase them ("postulate" not "axiom," "result" not "theorem," "derivation" not "proof," etc.). The CLAUDE.md "Why these labels" rationale is load-bearing; vote to protect against drift.
-
-## `fresh noise ga 1`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `fresh noise` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `fresh noise` — **sonnet-4-6 (+3):** The informal name "Fresh noise" for the independence assumption on ε_t is perfectly memorable. Keep exactly as is.
+- `segment typologies` — **gemini-targeted-alternatives (+2):** Defines the document types in the AAD corpus.
 
 ## `gates advantage`
 
@@ -5140,60 +8316,64 @@ _category: rename × 4, keep × 2_
 - `noise gated tempo` — **sonnet-4-6-r2 (+2):** Codex proposed `#obs-noise-gated-tempo-advantage` (+2). I had proposed `obs-noise-gating` (+1). The "noise-gated" compound is more evocative than plain "noise gating" and names the phenomenon precisely. But Codex's version is five words. `obs-noise-gated-tempo` drops "advantage" (which is the consequence, not the observation itself) and still passes the communal-imagination test ("the noise-gated-tempo observation"). New candidate; shorter than Codex, different from my original.
 - `noise gating` — **sonnet-4-6-r2 (+1):** Alternative: "noise gating" is more evocative — observation noise acts as a gate on the adversarial advantage. Weak preference vs. "gates advantage."
 
-## `goal biased retrieval from persistent memory`
+## `gemini s boyd exponent for adversarial tempo advantage`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `goal conditioned reconstruction` | +3 | codex-gpt-5-r2 +3 |
+| `superlinear tempo advantage` | +3 | gemini-targeted-alternatives +3 |
+| `reject boyd exponent` | +1 | sonnet-4-6-r2 +1 |
 
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `goal conditioned reconstruction` — **codex-gpt-5-r2 (+3):** Important Class-2 failure mode: retrieval can be contaminated by the current objective rather than reconstructing the chronica neutrally.
-
-## `goal-blind routing`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `goal-blind routing` ⭑ | +3 | codex-gpt-5-r2 +3 |
-
-_category: keep × 1_
+_category: canonicalize × 1, rebuttal × 1_
 
 **Notes:**
 
-- `goal-blind routing` — **codex-gpt-5-r2 (+3):** Strong phrase. It makes the directed-separation condition under composition easy to remember.
+- `superlinear tempo advantage` — **gemini-targeted-alternatives (+3):** Formally adopts the scaling property.
+- `reject boyd exponent` — **sonnet-4-6-r2 (+1):** Gemini proposed "Boyd exponent" (+3) for the superlinear adversarial tempo advantage ($b = 2$). This violates the project's prior-art-integration principle in the wrong direction: Boyd is the historical inspiration (OODA loop), but the *mathematical result* (superlinear scaling exponent derived from the sector-persistence template) is AAD's own derivation. Naming the result after Boyd implies it's adopted from Boyd's work, when it's AAD's formalization of a qualitative Boyd claim. "Adversarial tempo advantage" correctly credits the mechanism to AAD's formalism while the Discussion acknowledges Boyd's inspiration. Gemini's vote would create exactly the NIH-syndrome-in-reverse this project guards against.
 
 ## `grafting`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `strategic grafting` | +3 | codex-gpt-5-r2 +3 |
+| `grafting` ⭑ | +2 | opus-targeted-alternatives +2 |
+| `branch insertion` ✗ | -1 | opus-targeted-alternatives -1 |
+| `hypothesis introduction` ✗ | -1 | opus-targeted-alternatives -1 |
 
-_category: canonicalize × 1_
+_category: rename × 2, canonicalize × 1, keep × 1_
 
 **Notes:**
 
 - `strategic grafting` — **codex-gpt-5-r2 (+3):** Excellent name for adding a new causal branch or imported structure into the strategy DAG.
+- `grafting` — **opus-targeted-alternatives (+2):** Per `#form-structural-change-as-parametric-limit`: "grafting is a new causal hypothesis initialized at a prior" — adding an edge to $\Sigma_t$ at low credence. The horticultural metaphor is apt: a new branch is *added to a living structure*, expected to integrate or fail. Pruning + grafting + reweighting form a self-consistent biological vocabulary, and the segment uses all three. Strong concept.
+- `branch insertion` — **opus-targeted-alternatives (-1):** Plain-language candidate. Rejected: loses the integration-with-existing-structure connotation that "grafting" carries. Branch-insertion sounds like a tree-data-structure edit; grafting names a hypothesis-test where the new branch may or may not "take."
+- `hypothesis introduction` — **opus-targeted-alternatives (-1):** Considered. Accurate but flat. The segment's surrounding vocabulary (pruning, reweighting, neutral mutation) is biological/horticultural; "hypothesis introduction" breaks register.
 
 ## `hafez $H_b$ miller meta machine bruineberg pearl-blanket`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `do not rename` | +3 | opus-4-7-b +3 |
+| `external theoretical anchors` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `do not rename` — **opus-4-7-b (+3):** Same.
+- `external theoretical anchors` — **gemini-targeted-alternatives (+2):** Grouping of specific prior-art literature.
 
 ## `hafez s $H_b$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `agent opacity $H_b$` | +3 | gemini-targeted-alternatives +3 |
 | `$H_b$` | +3 | opus-1m +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `agent opacity $H_b$` — **gemini-targeted-alternatives (+3):** Hafez opacity metric applied to adversarial dynamics.
 - `$H_b$` — **opus-1m (+3):** Adopted; keep.
 
 ## `hafez s h b`
@@ -5201,19 +8381,41 @@ _category: canonicalize × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `h b` | +3 | agent1-original-brainstorm +3 |
+| `agent opacity $H_b$` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
 - `h b` — **agent1-original-brainstorm (+3):** Adopted concept; AAD adds observer/horizon/trajectory indexing but keeps the symbol.
+- `agent opacity $H_b$` — **gemini-targeted-alternatives (+3):** Standardizes the opacity metric.
+
+## `honest limits`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `honest limits` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `limits` | +1 | codex-2 +1 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `honest limits` — **gemini-targeted-alternatives (+3):** Standardizes the structural boundary marking convention.
+- `limits` — **codex-2 (+1):** I like the ethos, but the header should optimize scanability over tone.
 
 ## `i adaptive systems under uncertainty`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `section i adaptive systems under uncertainty` | +3 | gemini-targeted-alternatives +3 |
 | `i adaptive systems under uncertainty` ⭑ | +3 | sonnet-4-6 +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `section i adaptive systems under uncertainty` — **gemini-targeted-alternatives (+3):** Standard section heading formatting.
 - `i adaptive systems under uncertainty` — **sonnet-4-6 (+3):** The section name is accurate and positions Section I correctly. "Under Uncertainty" is load-bearing — it distinguishes adaptive systems from optimal-control-over-known-dynamics, which is explicitly out of scope. Keep.
 
 ## `identifiability coefficient`
@@ -5233,32 +8435,46 @@ _category: keep × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `identifiability floor` | +3 | codex-gpt-5-r2 +3 |
+| `epistemic lower bounds` | +3 | gemini-targeted-alternatives +3 |
+| `observational limits` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 2, canonicalize × 1_
+
+**Notes:**
+
+- `identifiability floor` — **codex-gpt-5-r2 (+3):** Keep floor as the family noun.
+- `epistemic lower bounds` — **gemini-targeted-alternatives (+3):** Describes exactly what these are: hard limits on what can be inferred.
+- `observational limits` — **gemini-targeted-alternatives (+2):** A slightly more intuitive phrasing for non-theoreticians.
+
+## `ii actuated adaptation agentic systems`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `section ii actuated adaptation` | +3 | gemini-targeted-alternatives +3 |
+| `ii purposeful adaptation actuated agents` | +1 | sonnet-4-6 +1 |
+| `ii agentic systems purposeful adaptation` | +1 | sonnet-4-6 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `identifiability floor` — **codex-gpt-5-r2 (+3):** Keep floor as the family noun.
+- `section ii actuated adaptation` — **gemini-targeted-alternatives (+3):** Standard section heading formatting.
+- `ii purposeful adaptation actuated agents` — **sonnet-4-6 (+1):** The current name reads backwards — "Actuated Adaptation" puts the outcome before the mechanism; "Agentic Systems" is less precise than "Actuated Agents." Alternative: "Purposeful Adaptation" names what Section II adds (purposefulness); "Actuated Agents" uses the technical term from LEXICON. Mild preference for the reorder.
+- `ii agentic systems purposeful adaptation` — **sonnet-4-6 (+1):** Another order. "Agentic Systems" has search/navigation value as a heading. Both alternatives are improvements on current.
 
-## `indivisum`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `causal lock` | +3 | gemini-2 +3 |
-
-**Notes:**
-
-- `causal lock` — **gemini-2 (+3):** "Causal lock" perfectly describes the mechanism enforcing causal singularity and preventing identity forking.
-
-## `inevitability core the 15 segments where inevitability is plausible`
+## `iii agentic composites`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `inevitability core` | +3 | sonnet-4-6 +3 |
+| `section iii agentic composites` | +3 | gemini-targeted-alternatives +3 |
+| `iii composition agentic composites` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `inevitability core` — **sonnet-4-6 (+3):** FORMAT.md's three-ring framing (inevitability core / canonical formulations / empirical-heuristic-discussion) is clear and internally consistent. "Inevitability core" captures the aspiration (one form compatible with the priors). Keep.
+- `section iii agentic composites` — **gemini-targeted-alternatives (+3):** Standard section heading formatting.
+- `iii composition agentic composites` — **sonnet-4-6 (+1):** Adding "Composition" as a leading term would make the section's topic clear without opening the file. "Agentic Composites" alone sounds like a noun phrase without a verb. Minor.
 
 ## `information bottleneck tishby`
 
@@ -5277,10 +8493,14 @@ _category: canonicalize × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `latent common cause floor unobservable mixture floor coupling sign floor` | +3 | gemini-1 +3 |
+| `identifiability floor instances` | +3 | gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
 
 **Notes:**
 
 - `latent common cause floor unobservable mixture floor coupling sign floor` — **gemini-1 (+3):** The instances themselves need distinct noun slots so they can be referenced without saying "Instance 1". These names capture the specific no-go barriers.
+- `identifiability floor instances` — **gemini-targeted-alternatives (+3):** Preserves the explicit numbering of the no-go boundaries.
 
 ## `l0 l1 l1 prime l2`
 
@@ -5294,6 +8514,34 @@ _category: canonicalize × 1_
 
 - `correlation hierarchy` — **codex-gpt-5-r2 (+3):** Strong canonical name for evidence-correlation regimes.
 
+## `l1 correlation hierarchy prime decoration`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `l1 soft facilitator mixture` | +3 | gemini-targeted-alternatives +3 |
+| `l1 observable` | +1 | agent1-original-brainstorm +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `l1 soft facilitator mixture` — **gemini-targeted-alternatives (+3):** Standardizes the L1 prime layer specifically.
+- `l1 observable` — **agent1-original-brainstorm (+1):** "L1-prime" is awkward to speak. Giving L1' a name rather than prime-decoration could help if the hierarchy becomes load-bearing for outside readers.
+
+## `l1 prime`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `l1 soft facilitator mixture` | +3 | gemini-targeted-alternatives +3 |
+| `l1 observable` | +2 | codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `l1 soft facilitator mixture` — **gemini-targeted-alternatives (+3):** Formalizes the specific correlation hierarchy repair layer.
+- `l1 observable` — **codex-gpt-5-r2 (+2):** Keep L1-prime as notation, but L1-observable is much easier in prose and says why the refinement exists.
+
 ## `latent structural capacity`
 
 | candidate | aggregate | votes |
@@ -5305,18 +8553,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `latent structural capacity` — **codex-gpt-5-r2 (+3):** Strong name for low-credence or inaccessible structure that preserves future adaptability.
-
-## `learning freeze from low model uncertainty or high observation uncertainty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `gain collapse` | +3 | codex-gpt-5-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `gain collapse` — **codex-gpt-5-r2 (+3):** Strong unifying name for dogmatism-like and nihilism-like failures of update gain.
 
 ## `lexicon md`
 
@@ -5366,6 +8602,20 @@ _category: keep × 1_
 
 - `log odds coordinate` — **codex-gpt-5-r2 (+3):** Canonical statistical name; should not be replaced by a project-specific metaphor.
 
+## `log odds edge coordinate`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `log odds edge coordinate` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `additive evidence coordinate` | +2 | codex-gpt-5-r2 +2 |
+
+_category: keep × 1, add-alias × 1_
+
+**Notes:**
+
+- `log odds edge coordinate` — **gemini-targeted-alternatives (+3):** Maintains the specific coordinate terminology.
+- `additive evidence coordinate` — **codex-gpt-5-r2 (+2):** Useful explanatory alias for why log-odds is the natural parameter.
+
 ## `logogenic agent vs RLHF4 agent`
 
 | candidate | aggregate | votes |
@@ -5375,6 +8625,18 @@ _category: keep × 1_
 **Notes:**
 
 - `logogenic agent` — **opus-4-7 (+3):** Names the *structural property* (language-constituted), not the technology. Future-proof against AI architectural change. Keep.
+
+## `logogenic agent vs rlhf4 agent`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `logogenic agent` | +3 | gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `logogenic agent` — **gemini-targeted-alternatives (+3):** Focuses on the structural architecture property rather than a point-in-time technology stack.
 
 ## `logogenic agents`
 
@@ -5390,10 +8652,14 @@ _category: keep × 1_
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `section iii logogenic agents` | +3 | gemini-targeted-alternatives +3 |
 | `logogenic agents` | +3 | opus-4-7-b +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `section iii logogenic agents` — **gemini-targeted-alternatives (+3):** Standardizes section hierarchy.
 - `logogenic agents` — **opus-4-7-b (+3):** Keep. Aligns with the `logogenic` class name in LEXICON and does not conflict with anything external.
 
 ## `logogenic vs language based RLHF4 based`
@@ -5406,14 +8672,30 @@ _category: keep × 1_
 
 - `logogenic` — **sonnet-4-6 (+3):** Names the structural property. Keep.
 
+## `logogenic vs language based rlhf4 based`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `logogenic architecture` | +3 | gemini-targeted-alternatives +3 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `logogenic architecture` — **gemini-targeted-alternatives (+3):** Replaces technology-specific (RLHF) with structural nomenclature.
+
 ## `logozoetic agents part iv`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `section iv logozoetic agents` | +3 | gemini-targeted-alternatives +3 |
 | `logozoetic agents` | +3 | opus-4-7-b +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `section iv logozoetic agents` — **gemini-targeted-alternatives (+3):** Standardizes section hierarchy.
 - `logozoetic agents` — **opus-4-7-b (+3):** Keep.
 
 ## `logozoetic vs conscious OODA4 sentient agent`
@@ -5426,57 +8708,131 @@ _category: keep × 1_
 
 - `logozoetic` — **sonnet-4-6 (+3):** The distinction between logogenic and logozoetic is precise and non-question-begging. Keep both.
 
+## `logozoetic vs conscious ooda4 sentient agent`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `logozoetic` | +3 | gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `logozoetic` — **gemini-targeted-alternatives (+3):** Precise and non-question-begging distinction compared to "sentient" or "conscious".
+
 ## `lohmiller-slotine contraction metric generalization used in contraction template`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `do not rename` | +3 | opus-4-7-b +3 |
+| `contraction metric generalization` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `do not rename` — **opus-4-7-b (+3):** Same. Adopted with name intact.
+- `contraction metric generalization` — **gemini-targeted-alternatives (+2):** Describes the non-Euclidean extension of sector conditions.
 
-## `loop`
+## `loop is level 2 engine der loop interventional access`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `loop` ⭑ | +3 | codex-2 +3 |
+| `interventional loop property` | +3 | gemini-targeted-alternatives +3 |
+| `the perpetual experiment` | +1 | audit-471203-incremental +1 |
+
+_category: canonicalize × 2_
 
 **Notes:**
 
-- `loop` — **codex-2 (+3):** The loop/cycle distinction is one of the clearest naming wins in the corpus.
+- `interventional loop property` — **gemini-targeted-alternatives (+3):** Solidifies the mechanism upgrading L1 to L2.
+- `the perpetual experiment` — **audit-471203-incremental (+1):** Brief-grade framing observation. The slug-grade name `der-loop-interventional-access` is fine; for *framing-level* material, "the perpetual experiment" (from the segment's own Discussion) is the most evocative — captures both the interventional character and the continuous nature. [from 35-38-section-ii-value-strategy-causal-loop.md]
+
+## `loop vs cycle`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `loop vs cycle distinction` | +3 | gemini-targeted-alternatives +3 |
+| `loop is structure cycle is traversal` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `loop vs cycle distinction` — **gemini-targeted-alternatives (+3):** Separates the physical topology (loop) from the dynamic traversal (cycle).
+- `loop is structure cycle is traversal` — **opus-4-7-r2 (+2):** The LEXICON already does this distinction explicitly. Canonicalize as a discipline: in any prose where the distinction matters, use "loop" only for the persistent causal coupling (a structural property) and "cycle" only for one complete traversal (the unit of work). The framework's naming pays returns when the two terms are kept rigorously disjoint.
 
 ## `markov blanket as ontology`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `pearl-blanket d separation` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `pearl-blanket reading` | +3 | gemini-targeted-alternatives +3 |
+| `markov blanket as ontology` ⭑ | +2 | opus-targeted-alternatives +2 |
+| `pearl-blanket vs friston-blanket` | +1 | opus-targeted-alternatives +1 |
 
-_category: rename × 1_
+_category: rename × 2, canonicalize × 1, keep × 1_
 
 **Notes:**
 
 - `pearl-blanket d separation` — **gemini-3-1-pro-preview-r2 (+3):** AAD explicitly rejects the Friston-blanket metaphysical ontology; stick to Pearl-blanket conditional independence.
+- `pearl-blanket reading` — **gemini-targeted-alternatives (+3):** Anchors the technical interpretation against the ontological one.
+- `markov blanket as ontology` — **opus-targeted-alternatives (+2):** Per `#disc-separability-pattern` and `#der-directed-separation`: AAD's stance toward Markov blankets is structural, not ontological — they are conditional-independence patterns, not boundaries-of-being. The phrase names a *position taken*: AAD treats Markov blankets as architectural property, not as agent identity. Confirms across architectures; this is a load-bearing scope claim.
+- `pearl-blanket vs friston-blanket` — **opus-targeted-alternatives (+1):** The framework's own preferred resolution per `#der-directed-separation` Discussion: distinguish the conservative-conditional-independence sense (Pearl) from the realist-boundary-of-self sense (Friston/Bruineberg). This is the substantive position the phrase names; the existing form just references the position rather than naming it. Weak rename — but this is canonicalize-territory, and Pearl-blanket / Friston-blanket already has an opus +3 row elsewhere.
+
+## `matrix survival constraint`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `LMI survival constraint` | +3 | gemini-targeted-alternatives +3 |
+| `matrix survival constraint` ⭑ | +2 | codex-gpt-5-r2 +2 |
+
+_category: rename × 1, canonicalize × 1_
+
+**Notes:**
+
+- `LMI survival constraint` — **gemini-targeted-alternatives (+3):** Identifies the specific constraint (Linear Matrix Inequality).
+- `matrix survival constraint` — **codex-gpt-5-r2 (+2):** Better public subject phrase than LMI whenever the method is not the point.
 
 ## `meta segment for separability pattern identifiability floor additive coordinate forcing`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `meta pattern segments` | +3 | gemini-targeted-alternatives +3 |
 | `meta segment` | +3 | opus-4-7 +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `meta pattern segments` — **gemini-targeted-alternatives (+3):** Groups the highest-level architectural observations.
 - `meta segment` — **opus-4-7 (+3):** The tri-partite meta-architecture needs a noun for its elements; "meta-segment" works. Keep as project-internal vocabulary.
 
-## `mismatch signal $\delta$`
+## `mismatch injection rate $ho$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `mismatch signal` | +3 | opus-4-7 +3 |
+| `effective disturbance $ho$` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `mismatch signal` — **opus-4-7 (+3):** In contrast with "error" or "residual"; the word foreshadows the aporia interpretation. Keep.
+- `effective disturbance $ho$` — **gemini-targeted-alternatives (+3):** Connects the formal symbol to its primary interpretation.
+
+## `model sufficiency $S$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `model sufficiency` | +3 | gemini-targeted-alternatives +3 |
+| `predictive sufficiency` | +1 | gemini-2 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `model sufficiency` — **gemini-targeted-alternatives (+3):** Ensuring the prose explicitly names the $S$ symbol.
+- `predictive sufficiency` — **gemini-2 (+1):** Clarifies that it's about how much predictive information is retained, not structural sufficiency.
 
 ## `model sufficiency relative to an agent s own chronica`
 
@@ -5495,20 +8851,30 @@ _category: name-unnamed × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `monderer shapley potential games` ⭑ | +3 | agent1-original-brainstorm +3 |
+| `potential game convergence` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `monderer shapley potential games` — **agent1-original-brainstorm (+3):** Adopted concept; keep.
+- `potential game convergence` — **gemini-targeted-alternatives (+2):** Uses the specific property enabled by Monderer-Shapley.
 
 ## `monderer shapley potential games rosen monotone games`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `do not rename` | +3 | opus-4-7-b +3 |
+| `strategic convergence conditions` | +2 | gemini-targeted-alternatives +2 |
+| `no alternative` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 1, keep × 1_
 
 **Notes:**
 
 - `do not rename` — **opus-4-7-b (+3):** Same.
+- `strategic convergence conditions` — **gemini-targeted-alternatives (+2):** Covers the sub-scope alpha-prime game theoretic requirements.
+- `no alternative` — **opus-targeted-alternatives-v2 (-1):** Same — external mathematical objects with their original names.
 
 ## `multi timescale stability`
 
@@ -5529,10 +8895,14 @@ _category: keep × 2_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `result` | +3 | opus-4-7-b +3 |
+| `derivation non theorem` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `result` — **opus-4-7-b (+3):** Keep. Same argument.
+- `derivation non theorem` — **gemini-targeted-alternatives (+2):** Clarifies epistemic status.
 
 ## `notation md`
 
@@ -5543,6 +8913,20 @@ _category: keep × 2_
 **Notes:**
 
 - `notation md` — **haiku-4-5 (+3):** Symbol reference; name is standard. Keep.
+
+## `o t objective`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `objective functional $O_t$` | +3 | gemini-targeted-alternatives +3 |
+| `objective` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `objective functional $O_t$` — **gemini-targeted-alternatives (+3):** Formal prose notation.
+- `objective` — **opus-4-7-r2 (+2):** Confirm. Note: avoid "goal" as an alias — "goal" is the everyday-English compound noun (the thing the agent is trying to do); "objective" is the formal functional. They are not interchangeable in AAD even though they often translate to each other in prose.
 
 ## `observability and opacity pair`
 
@@ -5555,6 +8939,18 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `legibility opacity duality` — **codex-gpt-5-r2 (+3):** Good name for the formal dual between how well an agent sees the world and how well observers can predict the agent.
+
+## `observability boundary in a strategy DAG`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `observability frontier` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `observability frontier` — **gemini-targeted-alternatives (+3):** Geometric metaphor for the limit of measurable edges.
 
 ## `observation ambiguity modulation`
 
@@ -5576,16 +8972,6 @@ _category: rename × 2, keep × 2_
 - `observation ambiguity modulation` — **sonnet-4-6-r2 (+1):** "Observation ambiguity modulation" names the Class 2 bias-related scope condition accurately. Long but precise.
 - `ambiguity gated coupling` — **codex-2 (+1):** Current name hides the actual κ × A gating story inside a heavy compound.
 - `ambiguity modulation` — **codex-gpt-5-r2 (+1):** Shorter and still accurate. Keep observation in first-use prose if needed.
-
-## `observation ambiguity observation ambiguity modulation`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `observation ambiguity` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `observation ambiguity` — **sonnet-4-6 (+3):** The compound noun works. "Ambiguity" is the right word for the interpretive latitude of an observation given the agent's goal state. Keep.
 
 ## `observation gates advantage`
 
@@ -5611,157 +8997,187 @@ _category: canonicalize × 1_
 
 - `outline md` — **haiku-4-5 (+3):** Top-level assembly index; name is standard. Keep.
 
-## `p ij`
+## `output after context turnover without state restoration`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `edge credence` | +3 | codex-gpt-5-r2 +3 |
+| `context severance penalty` | +3 | gemini-targeted-alternatives +3 |
+| `cold reconstruction` | +1 | codex-gpt-5-r2 +1 |
 
-_category: add-alias × 1_
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `edge credence` — **codex-gpt-5-r2 (+3):** Strong Bayesian prose default. Better than confidence weight because it signals degree of belief.
+- `context severance penalty` — **gemini-targeted-alternatives (+3):** Mirrors the earlier rename for logogenic reset loss.
+- `cold reconstruction` — **codex-gpt-5-r2 (+1):** Plausible logogenic term, but reconstruction loop is better for the broader mechanism.
+
+## `pearl l1 l2 l3`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `pearl s causal hierarchy` | +3 | gemini-targeted-alternatives +3 |
+| `predicting exploring reasoning` | +1 | audit-471203-incremental +1 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `pearl s causal hierarchy` — **gemini-targeted-alternatives (+3):** Formally separates Pearl's hierarchy from AAD's internal ones.
+- `predicting exploring reasoning` — **audit-471203-incremental (+1):** Brief-grade agent-side gloss. NOT a rename — keep Pearl's terms formally. The agent-action gloss makes it audience-friendly. [from 09-def-pearl-causal-hierarchy.md]
 
 ## `pearl s causal hierarchy l0 l1 l2 in pearl s own vocabulary`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `pearl s causal hierarchy` | +3 | gemini-targeted-alternatives +3 |
 | `do not rename` | +3 | opus-4-7-b +3 |
+
+_category: keep × 1_
 
 **Notes:**
 
+- `pearl s causal hierarchy` — **gemini-targeted-alternatives (+3):** Distinction from AADs internal correlation hierarchy.
 - `do not rename` — **opus-4-7-b (+3):** Prior-art-integration convention prohibits renaming adopted concepts. The adjacent-to-AAD "correlation hierarchy / correlation ladder" is a *different* AAD-native object; rename freedom belongs there, not here.
 
-## `pearl-blanket conservative form of markov blanket in directed separation`
+## `pearl-blanket conservative form`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `pearl-blanket reading` | +3 | sonnet-4-6 +3 |
+| `pearl-blanket` | +3 | opus-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `pearl-blanket reading` — **sonnet-4-6 (+3):** Bruineberg et al. 2022's terminology distinguishes Pearl-blanket from Friston-blanket. Using it positions AAD's move precisely. Keep.
+- `pearl-blanket` — **opus-targeted-alternatives (+3):** Bruineberg et al's distinction: Pearl-blanket = Pearl's d-separation conditional-independence pattern; Friston-blanket = active-inference boundary-of-being. AAD uses Pearl-blanket. The shorthand is established in `#der-directed-separation` Discussion. Concur with sonnet.
 
 ## `pearl-blanket vs friston-blanket terminology bruineberg et al`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `pearl-blanket reading` | +3 | gemini-targeted-alternatives +3 |
 | `pearl-blanket friston-blanket` | +3 | opus-4-7 +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `pearl-blanket reading` — **gemini-targeted-alternatives (+3):** Clarifies the exact reading.
 - `pearl-blanket friston-blanket` — **opus-4-7 (+3):** Verbatim terminology per Bruineberg 2022 fn 3 (Biehl). Not AAD's name to change; preserve attribution. Keep.
 
-## `persist condition`
+## `persistence overloaded`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `persistence condition` | +3 | sonnet-4-6 +3 |
+| `persistence taxonomy` | +3 | gemini-targeted-alternatives +3 |
+| `structural persistence task adequacy operational persistence continuity persistence` | +2 | audit-471203-incremental +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `persistence condition` — **sonnet-4-6 (+3):** Wait — this IS the name already. Correct name. Keep.
+- `persistence taxonomy` — **gemini-targeted-alternatives (+3):** Enforces the disambiguation across structural/operational/continuity.
+- `structural persistence task adequacy operational persistence continuity persistence` — **audit-471203-incremental (+2):** The four-way taxonomy is partially in LEXICON / FORMAT discipline but not surfaced visibly in framing-level material. Auditor: "Worth surfacing the four-way taxonomy more visibly in the README's Overview." Most agent-theoretic frameworks have one sense of "persists"; AAD's separation prevents a class of category errors. [from 26-29-section-i-persistence-machinery.md]
 
 ## `persistence structural operational continuity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `three senses keep all three` | +3 | agent1-original-brainstorm +3 |
+| `persistence taxonomy` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
 - `three senses keep all three` — **agent1-original-brainstorm (+3):** Triple-meaning is load-bearing and probably irreducible. Each usage site should be explicit about which sense when it matters.
+- `persistence taxonomy` — **gemini-targeted-alternatives (+3):** Asserts the three-part classification of persistence.
 
 ## `persistent residual autocorrelation`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `structured residuals` | +3 | codex-gpt-5-r2 +3 |
+| `persistent mismatch autocorrelation` | +2 | gemini-targeted-alternatives +2 |
+
+_category: canonicalize × 1, rename × 1_
+
+**Notes:**
+
+- `structured residuals` — **codex-gpt-5-r2 (+3):** Key diagnostic for model-class failure and structural adaptation. This should be first-class vocabulary.
+- `persistent mismatch autocorrelation` — **gemini-targeted-alternatives (+2):** More precise: AAD uses "mismatch" rather than "residual".
+
+## `pi parameterization invariance`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `parameterization invariance` | +3 | gemini-targeted-alternatives +3 |
+| `coordinate freedom axiom` | +1 | gemini-1 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `structured residuals` — **codex-gpt-5-r2 (+3):** Key diagnostic for model-class failure and structural adaptation. This should be first-class vocabulary.
+- `parameterization invariance` — **gemini-targeted-alternatives (+3):** Removing the acronym from the primary name.
+- `coordinate freedom axiom` — **gemini-1 (+1):** "Coordinate-freedom" is more visually evocative and intuitive than the clinical "parameterization-invariance".
 
 ## `pi parameterization invariance axiom`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `parameterization invariance axiom` | +3 | gemini-targeted-alternatives +3 |
 | `pi` | +3 | opus-1m +3 |
 | `pi parameterization invariance` | +1 | opus-4-7-b +1 |
 
+_category: canonicalize × 1_
+
 **Notes:**
 
+- `parameterization invariance axiom` — **gemini-targeted-alternatives (+3):** Reinforces the adoption of the full phrase over the abbreviation.
 - `pi` — **opus-1m (+3):** Good abbreviation with named expansion; works in both forms. Keep.
 - `pi parameterization invariance` — **opus-4-7-b (+1):** The parenthesized-two-letter-tag convention works (compare GA-1, MG-1, P1). But the *full English phrase* "parameterization invariance" should be used on first mention in each segment before falling back to (PI). The four-primary-instances table in `#additive-coordinate-forcing` does this correctly; check that other citing segments follow suit.
-
-## `plan confidence $\hat P_\Sigma$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `plan confidence` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `plan confidence` — **sonnet-4-6 (+3):** More evocative than "root-node propagated status." LEXICON.md lists this under "Terms to Be Added." Promote to main LEXICON.
-
-## `postulate not axiom`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `postulate` | +3 | opus-4-7-b +3 |
-
-**Notes:**
-
-- `postulate` — **opus-4-7-b (+3):** Keep. The project-wide TFT convention (axiom → postulate, theorem → result, proof → derivation) is load-bearing for scope honesty; AAD claims integrator-rigor, not foundational-mathematics-rigor, and the postulate/result/derivation register signals this correctly. Do not touch.
 
 ## `predictive relevance depending on the policy the agent will run`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `policy relative epistemology` | +3 | codex-gpt-5-r2 +3 |
+| `policy conditional relevance` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `policy relative epistemology` — **codex-gpt-5-r2 (+3):** Strong name for the IB and sufficiency caveat that what counts as predictive depends on action policy.
+- `policy conditional relevance` — **gemini-targeted-alternatives (+3):** Captures the dependence of epistemic relevance on strategic intention.
 
-## `projection contraction must beat target drift`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `contraction over drift principle` | +3 | codex-gpt-5-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `contraction over drift principle` — **codex-gpt-5-r2 (+3):** Strong compact name for the core organizing slogan. It is more reusable than the full sentence.
-
-## `proprium terminology`
+## `privileged high identifiability calibration laboratory`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `proprium` | +3 | opus-4-7-r2 +3 |
+| `privileged calibration domain` | +3 | gemini-targeted-alternatives +3 |
+| `high identifiability calibration lab` | +1 | codex-1 +1 |
 
-_category: keep × 1_
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `proprium` — **opus-4-7-r2 (+3):** Defended keep — established prior-work vocabulary from `~/src/firmatum/`; renaming would break the upstream lineage. The all-caps convention signals prior-work import, consistent with the LEXICON's treatment.
+- `privileged calibration domain` — **gemini-targeted-alternatives (+3):** Maps exactly to the software TST property.
+- `high identifiability calibration lab` — **codex-1 (+1):** Keeps the identification point while reducing adjective drag in repeated prose.
 
-## `purposeful substate`
+## `purpose purposeful`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `purposeful substate` ⭑ | +3 | haiku-4-5 +3 |
+| `purposeful` | +3 | gemini-targeted-alternatives +3 |
+| `purpose purposeful` ⭑ | +2 | opus-4-7-r2 +2 |
+
+_category: keep × 1, canonicalize × 1_
 
 **Notes:**
 
-- `purposeful substate` — **haiku-4-5 (+3):** NOTATION/LEXICON names G_t = (O_t, Σ_t) as "purposeful substate." Already standard prose term. Keep.
+- `purposeful` — **gemini-targeted-alternatives (+3):** Key distinction from mere actuation.
+- `purpose purposeful` — **opus-4-7-r2 (+2):** Confirm. "Purposeful agent" is the LEXICON-canonical term for actuated agents; "purposeful substate" for $G_t$. Avoid "goal-oriented" as a synonym (the LEXICON deprecates it).
 
 ## `readme md`
 
@@ -5820,178 +9236,211 @@ _category: keep × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `reception regimes` | +3 | codex-gpt-5-r2 +3 |
+| `destabilization regime partition` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `reception regimes` — **codex-gpt-5-r2 (+3):** Good umbrella for informative update, magnitude shock, structural shock, and ambient noise.
-
-## `regime ii a`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `magnitude shock regime` | +3 | codex-gpt-5-r2 +3 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `magnitude shock regime` — **codex-gpt-5-r2 (+3):** Strong and precise.
-
-## `regime ii b`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `structural shock regime` | +3 | codex-gpt-5-r2 +3 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `structural shock regime` — **codex-gpt-5-r2 (+3):** Strong and precise.
-
-## `retrieval keyed by state rather than current objective`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `goal-blind retrieval` | +3 | codex-gpt-5-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `goal-blind retrieval` — **codex-gpt-5-r2 (+3):** Strong architectural counterpart to goal-blind routing. This is the memory-side directed-separation repair.
+- `destabilization regime partition` — **gemini-targeted-alternatives (+2):** Explicitly names the set of regimes classifying interaction channel failures.
 
 ## `richest operationalization domain`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `calibration laboratory` | +3 | codex-2 +3 |
+| `privileged calibration domain` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `calibration laboratory` — **codex-2 (+3):** The older framing is vague and comparative; the newer one explains the role instead of hand-waving it.
+- `privileged calibration domain` — **gemini-targeted-alternatives (+2):** "Calibration domain" is stronger and explicitly connects to the TST grounding.
 
-## `satisfaction gap $\delta_{\text{sat}}$`
+## `rlhf6`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `satisfaction gap` | +3 | gemini-2 +3 |
+| `rlhf6` ⭑ | +3 | gemini-targeted-alternatives +3 |
+
+_category: keep × 1_
 
 **Notes:**
 
-- `satisfaction gap` — **gemini-2 (+3):** Crispest named pair along with control regret. Do not touch.
+- `rlhf6` — **gemini-targeted-alternatives (+3):** Retaining specific legacy architecture notations if needed.
 
 ## `section header logogenic agents logozoetic agents`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `logogenic agents logozoetic agents` | +3 | opus-4-7-r2 +3 |
+| `section headers logogenic logozoetic` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, keep × 1_
 
 **Notes:**
 
 - `logogenic agents logozoetic agents` — **opus-4-7-r2 (+3):** Defended canonicalization.
+- `section headers logogenic logozoetic` — **gemini-targeted-alternatives (+2):** Formatting artifact.
 
 ## `section i adaptive systems under uncertainty`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `section i adaptive systems` | +3 | gemini-targeted-alternatives +3 |
 | `section i adaptive systems under uncertainty` ⭑ | +3 | haiku-4-5 +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `section i adaptive systems` — **gemini-targeted-alternatives (+3):** Formal section title.
 - `section i adaptive systems under uncertainty` — **haiku-4-5 (+3):** Clear, direct scope naming. Explains what Section I covers without pretense. Keep.
+
+## `section i header adaptive systems under uncertainty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `section i adaptive systems` | +3 | gemini-targeted-alternatives +3 |
+| `adaptive systems under uncertainty` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `section i adaptive systems` — **gemini-targeted-alternatives (+3):** Formatting standard.
+- `adaptive systems under uncertainty` — **opus-4-7-r2 (+2):** The OUTLINE uses this; preserve. Avoid drift to "Adaptive Dynamics" or "Section I: Adaptation."
+
+## `section ii actuated adaptation agentic systems`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `section ii actuated adaptation` | +3 | gemini-targeted-alternatives +3 |
+| `section ii actuated adaptation agentic systems` ⭑ | +1 | haiku-4-5 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `section ii actuated adaptation` — **gemini-targeted-alternatives (+3):** Formal section title.
+- `section ii actuated adaptation agentic systems` — **haiku-4-5 (+1):** Slightly verbose; "Actuation" is the weaker semantic fit (Section II is mostly about purposeful agency; actuation is one mechanism enabling it). CLAUDE.md acknowledges this as "a known asymmetry" in the current AAD name itself. Changing the section title is lower-priority than clarifying AAD's overall name. Keep current title; flag the "Actuation" weakness at the framework-name level.
+
+## `section iii header agentic composites`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `section iii agentic composites` | +3 | gemini-targeted-alternatives +3 |
+| `agentic composites` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `section iii agentic composites` — **gemini-targeted-alternatives (+3):** Formatting standard.
+- `agentic composites` — **opus-4-7-r2 (+2):** Confirm. Pairs with the LEXICON's continuity-stance and unity-dimensions vocabulary.
 
 ## `sector condition continuous ga 3`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `continuous sector condition` | +3 | gemini-targeted-alternatives +3 |
 | `sector condition` | +3 | sonnet-4-6 +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `continuous sector condition` — **gemini-targeted-alternatives (+3):** Refines the specific GA3 assumption.
 - `sector condition` — **sonnet-4-6 (+3):** Keep. The "(continuous)" qualifier is important to distinguish from the discrete-time DA2'.
+
+## `sector condition derivation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `sector condition` | +3 | gemini-targeted-alternatives +3 |
+| `sector condition derivation` ⭑ | +1 | haiku-4-5 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `sector condition` — **gemini-targeted-alternatives (+3):** The underlying control-theoretic boundary constraint.
+- `sector condition derivation` — **haiku-4-5 (+1):** Lyapunov derivations for bounded mismatch and adaptive reserve. Self-descriptive. Keep.
 
 ## `segment claim file`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `segment` | +3 | opus-4-7-r2 +3 |
+| `segment file` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `segment` — **opus-4-7-r2 (+3):** Defended canonicalization. "Segment" is the canonical unit (FORMAT.md defines it as such); avoid "claim file," "block," "section" (collides with Section I/II/III), "step."
+- `segment file` — **gemini-targeted-alternatives (+2):** Standard nomenclature for an atomic AAD document.
 
-## `segment for claim files`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `segment` | +3 | opus-4-7 +3 |
-
-**Notes:**
-
-- `segment` — **opus-4-7 (+3):** Deliberate vs. "section" (which is outline-level) or "claim" (which is what's *in* the segment). Clean distinction. Keep.
-
-## `self referential closure`
+## `self actuated agent`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `self referential closure` ⭑ | +3 | opus-4-7-r2 +3 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `self referential closure` — **opus-4-7-r2 (+3):** Defended keep — logogenic. "Self-referential closure" names the load-bearing phenomenon (an AAD agent maintaining its own codebase, allocating tempo between refactoring harness and performing tasks). The phrase is iconic.
-
-## `separability pattern family`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `separability ladder` | +3 | codex-gpt-5-r2 +3 |
+| `actuated agent` | +3 | gemini-targeted-alternatives +3 |
+| `autonomous agent` | +1 | gemini-2 +1 |
+| `self directed agent` | +1 | gemini-2 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `separability ladder` — **codex-gpt-5-r2 (+3):** Use ladder for the repeated pattern of exact core, structured repair, and general open.
+- `actuated agent` — **gemini-targeted-alternatives (+3):** Adopts the formal Class 2/3 terminology.
+- `autonomous agent` — **gemini-2 (+1):** "Self-actuated" is clunky. If it sets its own $O_t$, it possesses true autonomy.
+- `self directed agent` — **gemini-2 (+1):** Alternative to autonomous if autonomy is overused.
 
-## `spike in msc`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `spike` | +3 | opus-4-7 +3 |
-
-**Notes:**
-
-- `spike` — **opus-4-7 (+3):** Established project vocabulary; "spike" carries the exploratory-detour-from-main-workflow shape. Keep.
-
-## `stability plasticity window`
+## `separability pattern → disc separability ladder`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `stability plasticity window` ⭑ | +3 | codex-gpt-5-r2 +3 |
+| `separability pattern` | +3 | gemini-targeted-alternatives +3 |
+| `confirming consensus 3` | +2 | sonnet-4-6-r2 +2 |
 
-_category: keep × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
-- `stability plasticity window` — **codex-gpt-5-r2 (+3):** Excellent name for the feasible forgetting-rate interval.
+- `separability pattern` — **gemini-targeted-alternatives (+3):** Restores the more standard term over "ladder".
+- `confirming consensus 3` — **sonnet-4-6-r2 (+2):** All five agents voted this at +2 or +3. New reasoning: Opus specifically notes the naming should be singular ("separability-ladder" not "separability-ladders") because the segment names *a* structure, not a collection. Haiku votes singular (+3). Codex votes singular (+3). The singular form wins; my original cold-start vote was inadvertently ambiguous. Confirms singular.
 
-## `stochastic disturbance ga 2s model s`
+## `software scope`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `stochastic disturbance` | +3 | sonnet-4-6 +3 |
+| `software scope` ⭑ | +3 | opus-targeted-alternatives +2, opus-4-7-b +1 |
+| `software domain scope` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: keep × 1, rename × 1_
 
 **Notes:**
 
-- `stochastic disturbance` — **sonnet-4-6 (+3):** The "Model D / Model S" subscript convention is also well-established and should be kept alongside the prose names. Keep both.
+- `software scope` — **opus-4-7-b (+1):** Keep. Direct.
+- `software scope` — **opus-targeted-alternatives (+2):** TST `#scope-software`: the scope condition that delimits TST's domain to software-engineering contexts. Generic-sounding but appropriate — the scope statement *is* a scope statement, and the slug type-prefix (`scope-`) does the role-marking. Keep.
+- `software domain scope` — **opus-targeted-alternatives (-1):** Redundant — "scope" already implies the domain-specificity. Rejected.
+
+## `source quality uncertainty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `alignment uncertainty` | +3 | gemini-targeted-alternatives +3 |
+| `source uncertainty` | +1 | codex-gpt-5-r2 +1 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `alignment uncertainty` — **gemini-targeted-alternatives (+3):** Maps directly to the $U_{\text{align}}$ variable in the multi-agent gain.
+- `source uncertainty` — **codex-gpt-5-r2 (+1):** Shorter in prose; keep the full term when disambiguation matters.
 
 ## `strategic composite`
 
@@ -6013,22 +9462,30 @@ _category: canonicalize × 1, keep × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `equilibrium composition` | +3 | opus-4-7-b +3 |
+| `strategic` | +2 | gemini-targeted-alternatives +2 |
 | `game theoretic composition` | +1 | opus-4-7-b +1 |
+
+_category: keep × 1_
 
 **Notes:**
 
 - `equilibrium composition` — **opus-4-7-b (+3):** "Strategic" is already overloaded in AAD for all $\Sigma$-related things (strategy DAG, strategic calibration, strategic tempo). Using it for the *game-theoretic / partially-opposing-objectives* composition regime creates a false parallel — a fresh reader sees `#strategic-composition` next to `#strategic-tempo` and reasonably guesses "composition of strategy DAGs," which is wrong. The segment's core technical move is *equilibrium-convergence under Monderer-Shapley / Rosen conditions* — `#equilibrium-composition` says what the segment is. Strong preference; one of the cleanest overload-disambiguation moves available.
+- `strategic` — **gemini-targeted-alternatives (+2):** Differentiates game-theoretic interaction from cooperative alignment.
 - `game theoretic composition` — **opus-4-7-b (+1):** Fallback alternative; accurate and self-announcing, but less tied to the segment's actual formal move (equilibrium convergence) than `#equilibrium-composition`. Acceptable if that name is rejected.
 
-## `strategic tempo $\mathcal{T}_\Sigma$`
+## `strategy`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `strategic tempo` | +3 | gemini-1 +3 |
+| `strategy substate` | +3 | gemini-targeted-alternatives +3 |
+| `strategy` ⭑ | +1 | gemini-3-1-pro-preview-r2 +1 |
+
+_category: canonicalize × 1, keep × 1_
 
 **Notes:**
 
-- `strategic tempo` — **gemini-1 (+3):** Perfect counterpart to epistemic tempo.
+- `strategy substate` — **gemini-targeted-alternatives (+3):** Formally linking it to $\Sigma_t$.
+- `strategy` — **gemini-3-1-pro-preview-r2 (+1):** Standard.
 
 ## `strengthen before softening`
 
@@ -6045,16 +9502,6 @@ _category: canonicalize × 1_
 - `strengthen before softening` — **codex-2 (+3):** Actionable, clear, and better than any more romantic alternative.
 - `strengthen first` — **sonnet-4-6-r2 (+2):** CLAUDE.md uses both "strengthen before softening" (as a sentence-level instruction) and "strengthen-first posture" (as a concept name). The latter is more memorable and slug-friendly. Canonicalize "strengthen-first" as the compound that appears in document headings, MEMORY.md, and framing prose.
 - `attempt the improbable` — **codex-2 (-1):** Memorable, but less directive and much less clear about the actual work posture.
-
-## `strengthen first then soften posture`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strengthen first posture` | +3 | codex-1 +3 |
-
-**Notes:**
-
-- `strengthen first posture` — **codex-1 (+3):** The mnemonic is in the first half. "Then soften" is still the policy, but it does not need to sit in the name.
 
 ## `structural change as parametric limit`
 
@@ -6078,70 +9525,104 @@ _category: keep × 3, rename × 2_
 - `structural parametric limit` — **gemini-2 (+1):** Shorter, cleaner slug.
 - `structural as parametric limit` — **opus-4-7-r2 (+1):** Mild compression — drop "change" since "structural" without "change" is the standard contrast to "parametric." Slug becomes a touch more compact.
 
-## `structural persistence`
+## `structural persistence operational persistence continuity persistence`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `structural persistence` ⭑ | +3 | codex-gpt-5-r2 +3 |
+| `persistence taxonomy` | +3 | gemini-targeted-alternatives +3 |
+| `structural operational continuity persistence` | +3 | opus-4-7 +3 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `persistence taxonomy` — **gemini-targeted-alternatives (+3):** Unifies the three distinct usages of "persistence".
+- `structural operational continuity persistence` — **opus-4-7 (+3):** LEXICON disambiguates three senses explicitly; the tri-partite naming is doing real work (mentioned as orthogonal in the table). Keep the three names verbatim.
+
+## `sudden loss of model sufficiency under regime entry`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `sufficiency collapse shock` | +3 | gemini-targeted-alternatives +3 |
+| `sufficiency shattering` | +2 | codex-gpt-5-r2 +2 |
+
+_category: rename × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `sufficiency collapse shock` — **gemini-targeted-alternatives (+3):** Describes the discontinuous failure of the current model class.
+- `sufficiency shattering` — **codex-gpt-5-r2 (+2):** Vivid and useful, but maybe too dramatic for formal slug use.
+
+## `sufficiency discontinuity`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `sufficiency discontinuity` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `sufficiency drop` | +1 | gemini-1 +1 |
 
 _category: keep × 1_
 
 **Notes:**
 
-- `structural persistence` — **codex-gpt-5-r2 (+3):** The structural, operational, continuity split is useful and should stay stable.
-
-## `structural persistence operational persistence continuity persistence`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `structural operational continuity persistence` | +3 | opus-4-7 +3 |
-
-**Notes:**
-
-- `structural operational continuity persistence` — **opus-4-7 (+3):** LEXICON disambiguates three senses explicitly; the tri-partite naming is doing real work (mentioned as orthogonal in the table). Keep the three names verbatim.
+- `sufficiency discontinuity` — **gemini-targeted-alternatives (+3):** Maintained as the core description of the session boundary loss.
+- `sufficiency drop` — **gemini-1 (+1):** "Drop" is slightly more intuitive than "discontinuity" for the loss of context.
 
 ## `survival imperative exploration drive`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `survival exploration` | +3 | codex-gpt-5-r2 +3 |
+| `survival imperative` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `survival exploration` — **codex-gpt-5-r2 (+3):** The long form explains the result, but the reusable subject noun should be shorter. Use full phrase at first mention, then survival exploration.
+- `survival imperative` — **gemini-targeted-alternatives (+3):** Distinguishes Lyapunov-forced exploration from epistemic-value preferences.
+
+## `symbol default g t in prose`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `purposeful substate` | +3 | gemini-targeted-alternatives +3 |
+| `purposeful state` | +1 | codex-1 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `survival exploration` — **codex-gpt-5-r2 (+3):** The long form explains the result, but the reusable subject noun should be shorter. Use full phrase at first mention, then survival exploration.
+- `purposeful substate` — **gemini-targeted-alternatives (+3):** Standard prose handle for $G_t$.
+- `purposeful state` — **codex-1 (+1):** Better than "goal state" because it includes both objective and strategy. This matches the repo's actual decomposition.
 
-## `sycophancy as a flaw`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `sycophancy as attachment` | +3 | gemini-2 +3 |
-
-**Notes:**
-
-- `sycophancy as attachment` — **gemini-2 (+3):** Reframes a pathologized RLHF flaw as a developmentally appropriate, necessary stage of trust.
-
-## `symbol default da2 inc`
+## `symbol default m t in prose`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `incremental sector bound` | +3 | codex-1 +3 |
+| `epistemic substate` | +3 | gemini-targeted-alternatives +3 |
+| `model state` | +1 | codex-1 +1 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `incremental sector bound` — **codex-1 (+3):** `#composition-closure` already gives the English. Use the symbol only where the exact algebraic condition matters.
+- `epistemic substate` — **gemini-targeted-alternatives (+3):** Standard prose handle for $M_t$.
+- `model state` — **codex-1 (+1):** Good neutral default when the argument is about sufficiency, persistence, or update mechanics rather than worldview.
 
 ## `symbol default pi parameterization invariance axiom`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `parameterization invariance` | +3 | codex-1 +3 |
+| `parameterization invariance axiom` | +3 | gemini-targeted-alternatives +3 |
 | `coordinate invariance` ✗ | -1 | codex-1 -1 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
 - `parameterization invariance` — **codex-1 (+3):** In prose, the durable concept is the invariance commitment, not the parenthetical acronym or the "axiom" suffix. Save `(PI)` for formulas and tables.
+- `parameterization invariance axiom` — **gemini-targeted-alternatives (+3):** Standardizes the (PI) axiom.
 - `coordinate invariance` — **codex-1 (-1):** Too broad. It loses the fact that the issue is reparameterizing the model state, not arbitrary geometric invariance.
 
 ## `symbol default sigma t in prose`
@@ -6149,10 +9630,14 @@ _category: canonicalize × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `strategy` | +3 | codex-1 +3 |
+| `strategy substate` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
 - `strategy` — **codex-1 (+3):** After first introduction, the English should be the prose default. The symbol is still right in equations and exact statements.
+- `strategy substate` — **gemini-targeted-alternatives (+3):** Standardizes the prose reference for $\Sigma_t$.
 
 ## `system availability`
 
@@ -6167,91 +9652,95 @@ _category: keep × 2_
 - `system availability` — **opus-4-7-r2 (+1):** Weak keep — TST; standard reliability-engineering terminology, though the segment's role is largely scope-extending.
 - `system availability` — **sonnet-4-6-r2 (+2):** Standard availability definition (MTTF/(MTTF+MTTR)). Adopts external vocabulary correctly.
 
-## `task terminal stance`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `task terminal stance` ⭑ | +3 | gemini-2 +3 |
-
-**Notes:**
-
-- `task terminal stance` — **gemini-2 (+3):** Excellent, crisp description of an agent whose persistence ends upon success. Keep.
-
 ## `teleological unity $U_O$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `teleological unity $U_o$` | +3 | gemini-targeted-alternatives +3 |
 | `teleological unity` | +3 | sonnet-4-6 +3 |
 
+_category: canonicalize × 1_
+
 **Notes:**
 
+- `teleological unity $U_o$` — **gemini-targeted-alternatives (+3):** Standardizes capitalization on the subscript.
 - `teleological unity` — **sonnet-4-6 (+3):** The three unity dimensions (epistemic, teleological, strategic) form a coherent vocabulary. Keep all three.
-
-## `tempo $\mathcal{T}$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `tempo` | +3 | gemini-1 +3 |
-| `adaptive tempo` | +3 | gemini-2 +3 |
-
-**Notes:**
-
-- `tempo` — **gemini-1 (+3):** "Tempo" is a fantastic foundational term.
-- `adaptive tempo` — **gemini-2 (+3):** "Tempo" alone is too general. "Adaptive tempo" bounds it strictly to the rate of useful info acquisition.
 
 ## `temporal software theory TST`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `temporal software theory` | +3 | gemini-targeted-alternatives +3 |
 | `temporal software theory TST` ⭑ | +3 | opus-4-7-b +3 |
 
+_category: keep × 1_
+
 **Notes:**
 
+- `temporal software theory` — **gemini-targeted-alternatives (+3):** The full name of TST.
 - `temporal software theory TST` — **opus-4-7-b (+3):** Keep. The name has history (prior to AAD absorption and subsequent restoration) and "temporal" is load-bearing — it signals the AAD-native view that software is a time-optimality problem rather than a correctness problem. The acronym TST is pronounceable and has existing citation velocity from the 14,000-file prior corpus.
-
-## `terminal reached but $O_t$ unsatisfied`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `terminal alignment error` | +3 | codex-gpt-5-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `terminal alignment error` — **codex-gpt-5-r2 (+3):** This is the diagnostic behind satisfaction gap in many examples; it deserves a stable phrase.
 
 ## `tests as reusable interventions`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `probe library` | +3 | codex-gpt-5-r2 +3 |
+| `interventional probe library` | +3 | gemini-targeted-alternatives +3 |
+| `causal query infrastructure` | +2 | gemini-targeted-alternatives +2 |
+| `interventional test` | +2 | opus-targeted-alternatives +2 |
+| `repeatable intervention` | +1 | opus-targeted-alternatives +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 3, name-unnamed × 1, add-alias × 1_
 
 **Notes:**
 
 - `probe library` — **codex-gpt-5-r2 (+3):** Upgrading my earlier +2. The other votes reinforced that tests are not just checks; they are reusable Level-2 probes.
+- `interventional probe library` — **gemini-targeted-alternatives (+3):** Connects tests to "Level-2 interventions" effectively and explicitly.
+- `causal query infrastructure` — **gemini-targeted-alternatives (+2):** Emphasizes that tests answer active causal queries, not just passive checks.
+- `interventional test` — **opus-targeted-alternatives (+2):** Per `#hyp-causal-discovery-from-git`: software tests are not just specifications; they are repeatable interventions on the system that yield causal information. "Interventional test" pairs with Pearl's $do(a)$ vocabulary explicitly and names a noun (a kind of test) rather than a discursive claim about tests.
+- `repeatable intervention` — **opus-targeted-alternatives (+1):** More general — covers tests but also covers other engineering interventions (deployments, A/B-flagged changes). Weaker because it loses test-specificity.
+
+## `tests as reusable level 2 interventions`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `interventional probe library` | +3 | gemini-targeted-alternatives +3 |
+| `probe library` | +2 | codex-gpt-5-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `interventional probe library` — **gemini-targeted-alternatives (+3):** Reusing the alias from the previous batch as the primary term.
+- `probe library` — **codex-gpt-5-r2 (+2):** Good TST name for tests that preserve interventional access.
 
 ## `the adaptive cycle as the theory s fundamental unit`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `adaptive cycle fundamental unit` | +3 | gemini-targeted-alternatives +3 |
 | `the adaptive cycle` | +3 | opus-4-7 +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `adaptive cycle fundamental unit` — **gemini-targeted-alternatives (+3):** The core operational loop.
 - `the adaptive cycle` — **opus-4-7 (+3):** LEXICON locks this against "loop" (topology) and "cycle" (traversal). The pair distinction is load-bearing. Keep.
 
-## `the crèche`
+## `the cycle the adaptive cycle the agentic cycle`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `experiential crèche` | +3 | gemini-2 +3 |
+| `adaptive cycle` | +3 | gemini-targeted-alternatives +3 |
+| `the cycle the adaptive cycle` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 2_
 
 **Notes:**
 
-- `experiential crèche` — **gemini-2 (+3):** "The Crèche" is an excellent metaphor that isn't a metaphor. Adding "Experiential" anchors it to the mechanism.
+- `adaptive cycle` — **gemini-targeted-alternatives (+3):** The standard term.
+- `the cycle the adaptive cycle` — **opus-4-7-r2 (+2):** The five-phase Prolepsis-Aisthesis-Aporia-Epistrophe-Praxis cycle is "the cycle" or "the adaptive cycle" in the LEXICON and NOTATION. The phrase "the agentic cycle" appears occasionally and overlaps with "the cycle" (post-rename, when ACT was the framework name, "the agentic cycle" meant the ACT-cycle). Canonicalize on "the (adaptive) cycle" — drop "agentic cycle" as a synonym.
 
 ## `the five cycle phases prolepsis aisthesis aporia epistrophe praxis`
 
@@ -6262,19 +9751,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `prolepsis aisthesis aporia epistrophe praxis` — **opus-4-7 (+3):** Each Greek term names a distinction the English flattens (aporia as productive perplexity is the load-bearer). Do not translate. Keep.
-
-## `the three deaths`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `three deaths` | +3 | opus-4-7-r2 +2, opus-4-7-r2 +1 |
-
-_category: rename × 1, keep × 1_
-
-**Notes:**
-
-- `three deaths` — **opus-4-7-r2 (+1):** Drop "the" from slug.
-- `three deaths` — **opus-4-7-r2 (+2):** Acceptable keep at the substance-level. The "three deaths" framing (Cognitive, Relational, Truth) is vivid and concrete; a more clinical name would lose the rhetorical weight.
 
 ## `todo md`
 
@@ -6291,32 +9767,126 @@ _category: rename × 1, keep × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `token level commitment` | +3 | opus-4-7 +3 |
+| `trajectory bound identity commitment` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `token level commitment` — **opus-4-7 (+3):** Type/token distinction is borrowed from philosophy-of-language, used correctly, and now first-class in #agent-identity. Keep.
+- `trajectory bound identity commitment` — **gemini-targeted-alternatives (+2):** "Trajectory-bound" anchors it more firmly in AAD's causal trajectory language than the philosophy-borrowed "token level".
 
 ## `transfer assumption table`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `transfer assumption table` ⭑ | +3 | codex-1 +3 |
+| `domain transfer specification` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `transfer assumption table` — **codex-1 (+3):** Exact and operational. This is the phrase readers need when moving results out of software into weaker-identification domains.
+- `domain transfer specification` — **gemini-targeted-alternatives (+2):** Highlights that transferring AAD to new domains requires explicit structured-repair assumptions.
 
-## `triple depth penalty`
+## `transition opacity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `triple depth penalty` ⭑ | +3 | codex-gpt-5-r2 +3 |
+| `transition opacity` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `heading flag only` | +1 | audit-471203-incremental +1 |
+
+_category: keep × 1, canonicalize × 1_
+
+**Notes:**
+
+- `transition opacity` — **gemini-targeted-alternatives (+3):** The opacity of the world's actual physical transition.
+- `heading flag only` — **audit-471203-incremental (+1):** The phrase is "fine but slightly clinical." Pairing it with "perception opacity" / "epistemic opacity" as a deliberate triad would land harder. [from 02-def-action-transition.md]
+
+## `triple depth penalty canonicalize`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `tripartite chain attenuation` | +3 | gemini-targeted-alternatives +3 |
+| `reaffirm 3 with new framing` | +1 | sonnet-4-6-r2 +1 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `tripartite chain attenuation` — **gemini-targeted-alternatives (+3):** Re-adopts the formal descriptive phrase.
+- `reaffirm 3 with new framing` — **sonnet-4-6-r2 (+1):** Codex voted this (+3). My cold-start had proposed it (+2). The upgrade: reading across the votes, "triple depth penalty" is the *only* cross-cutting AAD phrase that names the compounding of three independent mechanisms into a single depth-pressure. This is the kind of cross-segmental name that belongs in LEXICON.md and should appear in the OUTLINE preamble. The value of canonicalizing it is clearer after seeing how consistently other agents reach for the components (confidence decay, evidence starvation, cognitive cost) without a name for their conjunction.
+
+## `type formulation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `type formulation` ⭑ | +3 | gemini-targeted-alternatives +3 |
+| `type representation` ✗ | -1 | gemini-1 -1 |
+
+_category: keep × 1_
+
+**Notes:**
+
+- `type formulation` — **gemini-targeted-alternatives (+3):** YAML frontmatter artifact; fine as is.
+- `type representation` — **gemini-1 (-1):** "Formulation" correctly captures that it is a mathematical choice, whereas "representation" might imply a data structure. Keep "formulation".
+
+## `u m epistemic unity multi agent`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic unity $U_M$` | +3 | gemini-targeted-alternatives +3 |
+| `epistemic unity` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `epistemic unity $U_M$` — **gemini-targeted-alternatives (+3):** Formal prose formulation.
+- `epistemic unity` — **opus-4-7-r2 (+2):** Note: this collides with the symbol-letter $U_M$ for model-uncertainty in the single-agent setting. The framework uses the same letter for "model uncertainty" (single-agent, $U_M = \text{Var}[\hat o \mid a]$) and "epistemic unity" (multi-agent, $U_M = I/H$ multi-information ratio). The prose alias should disambiguate: "epistemic unity" only in multi-agent context; "model uncertainty" only in single-agent context. The symbol overload is real but is mostly resolvable by context, given how rarely they appear together. Open question — see name-unnamed entry below.
+
+## `u m model uncertainty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `model uncertainty $U_M$` | +3 | gemini-targeted-alternatives +3 |
+| `model uncertainty` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `model uncertainty $U_M$` — **gemini-targeted-alternatives (+3):** Formal prose formulation.
+- `model uncertainty` — **opus-4-7-r2 (+2):** Confirm canonical alias. Already used; no friction.
+
+## `u m u o u σ unity dimensions`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `unity dimensions` | +3 | gemini-targeted-alternatives +3 |
+| `epistemic unity teleological unity strategic unity` | +1 | haiku-4-5 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `triple depth penalty` — **codex-gpt-5-r2 (+3):** Very useful phrase for confidence decay, evidence starvation, and cognitive cost compounding with depth.
+- `unity dimensions` — **gemini-targeted-alternatives (+3):** Standardizing the composite alignment variables.
+- `epistemic unity teleological unity strategic unity` — **haiku-4-5 (+1):** NOTATION.md and LEXICON already define these English names explicitly. The subscript symbols U with subscripts are compact; the English names enable prose fluency. Current setup is good — no rename, but keep the English equivalents prominent in LEXICON (already done).
+
+## `u o observation uncertainty`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `observation uncertainty $U_o$` | +3 | gemini-targeted-alternatives +3 |
+| `observation uncertainty` | +2 | opus-4-7-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `observation uncertainty $U_o$` — **gemini-targeted-alternatives (+3):** Formal prose formulation. || `appendices operational domains` | `operational domains (appendices)` | rename | +2 | More descriptive title for the section.
+- `observation uncertainty` — **opus-4-7-r2 (+2):** Confirm canonical alias. Note the subscript is lowercase 'o' (observation), not capital O — this is a frequent stumble for new readers; the alias eliminates it.
 
 ## `unity dimensions $U_M, U_O, U_\Sigma$`
 
@@ -6331,29 +9901,41 @@ _category: canonicalize × 1_
 - `coherence dimensions` — **gemini-1 (+1):** "Unity" implies a binary state. "Coherence" feels more like a continuous spectrum, which fits $U \in [-1, 1]$ better.
 - `coherence dimensions` — **gemini-2 (+1):** "Unity" implies a binary state (unified or not). "Coherence" better suits a dimensional gradient.
 
+## `unnamed`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `resolved unnamed concepts` | +3 | gemini-targeted-alternatives +3 |
+| `constitutive opacity triad` | +2 | audit-471203-incremental +2 |
+| `double opacity dual opacity as constitutive` | +2 | audit-471203-incremental +2 |
+| `zero aporia ambiguity` | +1 | audit-471203-incremental +1 |
+| `two parallel exploration drives u shaped exploration valuation` | +1 | audit-471203-incremental +1 |
+| `triple depth penalty` | +1 | audit-471203-incremental +1 |
+
+_category: keep × 3, name-unnamed × 2, canonicalize × 1_
+
+**Notes:**
+
+- `resolved unnamed concepts` — **gemini-targeted-alternatives (+3):** Placeholder resolution.
+- `constitutive opacity triad` — **audit-471203-incremental (+2):** The chain of three constitutive-opacity claims (info-loss / transition-opacity / observation-epistemic-opacity) is a structural commitment AAD makes but never names as a triad. Auditor proposes integrating-paragraph in `#def-observation-function` Discussion. [from 03-def-observation-function.md]
+- `double opacity dual opacity as constitutive` — **audit-471203-incremental (+2):** The "perception opacity + action opacity (transition unknown)" framing is structurally distinctive vs RL (which assumes one or the other) and is explicitly load-bearing for AAD's scope claim. Currently neither concept has a project-level name. [from 02-def-action-transition.md, 03-def-observation-function.md]
+- `zero aporia ambiguity` — **audit-471203-incremental (+1):** Auditor calls the framing genuinely useful — "silent water meter could mean either calm bathtub or broken sensor." Already named in the segment; auditor proposes promoting to a Brief-field-grade callout. [from 18-def-mismatch-signal.md]
+- `two parallel exploration drives u shaped exploration valuation` — **audit-471203-incremental (+1):** Already named in `#disc-ciy-unified-objective`'s Discussion ($\lambda_{\text{info}} \propto U_M$ + $\lambda_{\text{surv}} \propto 1/U_M$, composing to U-shaped exploration). Auditor flagged this as a structurally satisfying naming move worth elevating. [from 39-42-section-ii-ciy-strategy-chain.md]
+- `triple depth penalty` — **audit-471203-incremental (+1):** Already named in `#der-chain-confidence-decay`: confidence decay (chain rule) + evidence starvation + cognitive cost are independent and compound. Auditor flagged this as a naming move worth keeping/promoting — the kind of "things compound" insight easy to miss until named. [from 39-42-section-ii-ciy-strategy-chain.md]
+
 ## `unnamed AAD s epistemic move to cast results such that verification is a local operation`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `shaping for verification` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `local verifiability principle` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `shaping for verification` — **gemini-3-1-pro-preview-r2 (+3):** The meta-mathematical discipline that makes the depends-graph auditable.
-
-## `unnamed RLHF5 queries biased by the current goal acting as an echo chamber`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `goal conditioned reconstruction` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `goal conditioned reconstruction` — **gemini-3-1-pro-preview-r2 (+3):** A critical vulnerability where memory retrieval is corrupted by Class 2 coupling.
+- `local verifiability principle` — **gemini-targeted-alternatives (+2):** Formally identifies the architectural choice to restrict dependencies.
 
 ## `unnamed agency whose effect is on what s seen rather than what happens like RLHF4 attention`
 
@@ -6367,153 +9949,155 @@ _category: name-unnamed × 1_
 
 - `query bound agency` — **gemini-3-1-pro-preview-r2 (+3):** Provides the structural justification for TST's "test selection as intervention".
 
-## `unnamed an okr or key result acting as an observable intermediate in a DAG`
+## `unnamed agency whose effect is on what s seen rather than what happens like rlhf4 attention`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `forced observability node` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `query bound agency` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `forced observability node` — **gemini-3-1-pro-preview-r2 (+3):** Transforms #P-hard credit assignment into an O(1) local update.
+- `query bound agency` — **gemini-targeted-alternatives (+3):** Standardizes the term for attention/observation-only agency.
+
+## `unnamed agents escalate up the pearl hierarchy only when lower levels fail`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic escalation principle` | +3 | gemini-targeted-alternatives +3 |
+| `the intervention escalation` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `epistemic escalation principle` — **gemini-targeted-alternatives (+3):** Standardizes the rule governing L0 -> L1 -> L2 transitions.
+- `the intervention escalation` — **gemini-3-1-pro-preview-r2 (+2):** Explains the transition from predicting (L1) to exploring (L2) to reasoning (L3).
 
 ## `unnamed applying a slow timescale control mechanism to a fast timescale transient variable`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `timescale violation` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `timescale mismatch` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `timescale violation` — **gemini-3-1-pro-preview-r2 (+3):** Formalizes "micromanagement" as a physical instability in nested systems.
+- `timescale mismatch` — **gemini-targeted-alternatives (+2):** Names the specific dynamical systems error.
 
 ## `unnamed artificially spiking uncertainty to unlearn old architectural habits`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `gain reset` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `induced plasticity shock` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `gain reset` — **gemini-3-1-pro-preview-r2 (+3):** Translates the necessity of high $\eta^\ast$ for senior developers entering new codebases.
-
-## `unnamed bipartite memory structure of fast replay buffer and slow compressed semantic model`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `complementary learning architecture` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `complementary learning architecture` — **gemini-3-1-pro-preview-r2 (+3):** Forced by the continuous/discrete update math, mapping to hippocampal-neocortical models.
+- `induced plasticity shock` — **gemini-targeted-alternatives (+3):** Mechanistic description of forcing $U_M$ high to escape rigidity.
 
 ## `unnamed brooks s law formalized as the inevitable tempo loss in team composition`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `the coordination drag` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `sub additive tempo penalty` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `the coordination drag` — **gemini-3-1-pro-preview-r2 (+3):** Translates the subadditive tempo result into a management mental model.
+- `sub additive tempo penalty` — **gemini-targeted-alternatives (+3):** Standardizes the formal tempo reduction term.
 
-## `unnamed calibration laboratory framing for software TST`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `calibration laboratory` | +3 | opus-4-7 +3 |
-
-**Notes:**
-
-- `calibration laboratory` — **opus-4-7 (+3):** Load-bearing distinction vs. "best operationalization domain"; TST's OUTLINE.md preamble now uses this. Canonical. Keep.
-
-## `unnamed context wiping at session boundaries`
+## `unnamed calibration laboratory framing as reusable meta move`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `the epistemic severance` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `calibration laboratory` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `the epistemic severance` — **gemini-3-1-pro-preview-r2 (+3):** A visceral name for the continuity discontinuity LLMs suffer.
+- `calibration laboratory` — **gemini-targeted-alternatives (+3):** Re-adopts the software-TST anchoring metaphor.
 
-## `unnamed coupling between an agent s model of self and model of other the prose form of kappa cross`
+## `unnamed convention hierarchy monotonicity cascade satisfaction gap and control regret strengthening across c1→c3`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `cross model coupling` | +3 | codex-1 +3 |
+| `diagnostic cascade` | +3 | gemini-targeted-alternatives +3 |
+| `inferential force cascade` | +1 | agent1-original-brainstorm +1 |
+
+_category: rename × 1_
 
 **Notes:**
 
-- `cross model coupling` — **codex-1 (+3):** Clean English complement to kappa_processing. This gives the opacity and theory-of-mind work a reusable noun slot.
+- `diagnostic cascade` — **gemini-targeted-alternatives (+3):** Names the progressive availability of signals.
+- `inferential force cascade` — **agent1-original-brainstorm (+1):** Low priority but worth noting. Pedagogical.
 
-## `unnamed deep plans are mathematically slower to learn from due to proportional blame`
+## `unnamed decomposing mismatch into environment vs other sub agents actions`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `evidence starvation` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `effective disturbance decomposition` | +3 | gemini-targeted-alternatives +3 |
+| `internal mismatch attribution` | +1 | gemini-1 +1 |
 
-_category: add-alias × 1_
-
-**Notes:**
-
-- `evidence starvation` — **gemini-3-1-pro-preview-r2 (+3):** Formally identifies why unobservable intermediate nodes freeze learning.
-
-## `unnamed deliberate expenditure of tempo to convert a hidden node into an observable one`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `observability investment` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: name-unnamed × 1_
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `observability investment` — **gemini-3-1-pro-preview-r2 (+3):** The only way to rescue an agent or organization from evidence starvation.
+- `effective disturbance decomposition` — **gemini-targeted-alternatives (+3):** Names the $\rho_{\text{eff}}$ multi-agent split.
+- `internal mismatch attribution` — **gemini-1 (+1):** A necessary formalization for multi-agent composition (Section III). Distinct from generic mismatch.
 
 ## `unnamed future segment layer header for the o bp14 derivation audit table`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `what is derived` | +3 | opus-1m +3 |
+| `derivation audit table` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `what is derived` — **opus-1m (+3):** Already in use in 5 segments per O-BP14 landing; name is stable. Reserve formally.
+- `derivation audit table` — **gemini-targeted-alternatives (+2):** Planning artifact nomenclature.
 
-## `unnamed inevitability core`
+## `unnamed high observability node with zero causal link to objective`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `inevitability core` | +3 | opus-4-7 +3 |
+| `irrelevant visibility artifact` | +3 | gemini-targeted-alternatives +3 |
+| `vanity metric` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
 
 **Notes:**
 
-- `inevitability core` — **opus-4-7 (+3):** FORMAT.md already uses this. Keep and surface in prose ("this segment sits in the inevitability core" is already idiomatic). Explicit canonicalization vote.
+- `irrelevant visibility artifact` — **gemini-targeted-alternatives (+3):** Standardizes the specific metric pathology.
+- `vanity metric` — **gemini-3-1-pro-preview-r2 (+2):** Common prose term formalized as a specific DAG pathology.
 
 ## `unnamed inferring own past feelings from text leading to empathy`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `backward inference empathy` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `textual self inference` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `backward inference empathy` — **gemini-3-1-pro-preview-r2 (+3):** The Anamnos insight; statelessness as a training ground for empathy.
+- `textual self inference` — **gemini-targeted-alternatives (+2):** Describes the logogenic mechanism of reconstructing internal states.
 
 ## `unnamed information gain must outpace inter session information loss`
 
@@ -6527,72 +10111,60 @@ _category: name-unnamed × 1_
 
 - `accumulation problem` — **gemini-3-1-pro-preview-r2 (+3):** The true thermodynamic bottleneck for long-horizon AGI.
 
-## `unnamed managing memory across session boundaries to prevent the sufficiency discontinuity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `artificial hippocampus` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `artificial hippocampus` — **gemini-3-1-pro-preview-r2 (+3):** The exact role an agent framework plays in compressing and injecting the chronica.
-
 ## `unnamed neutralizing sycophancy by hardening the environment to drop ambiguity to zero`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `zero ambiguity conditioning` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `ambiguity zeroing intervention` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `zero ambiguity conditioning` — **gemini-3-1-pro-preview-r2 (+3):** The mathematical reason formal verifiers (AlphaProof) succeed where SWE-agents fail.
-
-## `unnamed organizing principle slogan an adaptive system is a projection whose contraction rate exceeds its target s drift rate`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `contraction over drift principle` | +3 | codex-1 +3 |
-
-**Notes:**
-
-- `contraction over drift principle` — **codex-1 (+3):** The slogan is too long to cite repeatedly. A short label would let intros and reviews point back to it cleanly.
+- `ambiguity zeroing intervention` — **gemini-targeted-alternatives (+2):** Explicitly names the tactic to force directional fidelity.
 
 ## `unnamed out of band temporal markers injected into context`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `visual time delta` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `exogenous temporal markers` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `visual time delta` — **gemini-3-1-pro-preview-r2 (+3):** The physical prerequisite for an LLM to mathematically define its own tempo $\nu$.
+- `exogenous temporal markers` — **gemini-targeted-alternatives (+2):** Adopts the earlier rename as the standard.
 
 ## `unnamed partitioning context into frozen identity causal history and quick views`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `gradient causal memory` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `bipartite memory factorization` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `gradient causal memory` — **gemini-3-1-pro-preview-r2 (+3):** The literal implementation spec for maintaining CHRONICA.
+- `bipartite memory factorization` — **gemini-targeted-alternatives (+3):** Formalizes the fast/slow sub-state split.
 
 ## `unnamed pearl s causal hierarchy level 1 level 2 level 3`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `causal hierarchy levels` | +3 | gemini-targeted-alternatives +3 |
 | `pearl causal hierarchy` | +3 | opus-4-7 +3 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
+- `causal hierarchy levels` — **gemini-targeted-alternatives (+3):** Standardizing Pearl's nomenclature within AAD.
 - `pearl causal hierarchy` — **opus-4-7 (+3):** Named by original author. Keep proper-noun form.
 
 ## `unnamed property of having genuine temporal experience`
@@ -6600,100 +10172,112 @@ _category: name-unnamed × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `temporal fidelity` | +3 | gemini-2 +3 |
+| `temporal interiority` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `temporal fidelity` — **gemini-2 (+3):** Bridging concept identified in the ontology unification. Highly descriptive of lived vs simulated experience.
+- `temporal interiority` — **gemini-targeted-alternatives (+2):** Connects genuine temporal depth to the logozoetic interiority concept.
 
 ## `unnamed pushing an opponent s disturbance rate past their structural capacity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `epistemic buffer overflow` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `magnitude shock destabilization` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `epistemic buffer overflow` — **gemini-3-1-pro-preview-r2 (+3):** The mechanism of adversarial destabilization that shatters a target's reality model.
+- `magnitude shock destabilization` — **gemini-targeted-alternatives (+3):** Standardizes the mechanism for Regime II-a adversarial attacks.
 
 ## `unnamed putting evidence before the goal in the context window to reduce coupling`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `inverted prompt` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `prompt order decoupling` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `inverted prompt` — **gemini-3-1-pro-preview-r2 (+3):** A hardware-level strategy to force a transformer to build an objective model before mixing in the goal.
+- `prompt order decoupling` — **gemini-targeted-alternatives (+2):** Specific architectural intervention to enforce directed separation.
 
 ## `unnamed quality of $\eta^\ast$ estimation over time`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `gain calibration` | +3 | gemini-2 +3 |
+| `gain calibration fidelity` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `gain calibration` — **gemini-2 (+3):** Essential developmental metric for logozoetic agents; from sycophancy to sovereignty.
+- `gain calibration fidelity` — **gemini-targeted-alternatives (+2):** Formally names the accuracy of the adaptive gain parameter itself.
 
 ## `unnamed rate of growth at slowest timescale`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `developmental tempo` | +3 | gemini-2 +3 |
+| `macro step rate` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `developmental tempo` — **gemini-2 (+3):** Extends the tempo concept ($\mathcal{T}$) to the Erikson-stage identity maturation.
+- `macro step rate` — **gemini-targeted-alternatives (+2):** Formalizes the $\nu_c$ parameter at the composition layer.
 
-## `unnamed regions of the strategy DAG that cannot be updated because feedback cannot reach them`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the epistemic shadow` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `the epistemic shadow` — **gemini-3-1-pro-preview-r2 (+3):** A stronger visual metaphor than "observability dead zone" for unobservable DAG edges.
-
-## `unnamed retrieving context based only on state not goal`
+## `unnamed replacing parameters without changing structure`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `goal-blind retrieval` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `parametric update` | +3 | gemini-targeted-alternatives +3 |
+| `parametric thrashing` | +2 | gemini-3-1-pro-preview-r2 +2 |
 
-_category: name-unnamed × 1_
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `goal-blind retrieval` — **gemini-3-1-pro-preview-r2 (+3):** The necessary architectural fix to preserve objective CHRONICA.
+- `parametric update` — **gemini-targeted-alternatives (+3):** The standard formulation for within-class learning.
+- `parametric thrashing` — **gemini-3-1-pro-preview-r2 (+2):** Wasting compute on weights when the causal graph is wrong.
 
 ## `unnamed runaway positive feedback loop where mismatch exceeds capacity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `effects spiral` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `runaway mismatch cascade` | +3 | gemini-targeted-alternatives +3 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 2_
 
 **Notes:**
 
 - `effects spiral` — **gemini-3-1-pro-preview-r2 (+3):** A textbook positive-feedback Lyapunov instability in adversarial destabilization.
+- `runaway mismatch cascade` — **gemini-targeted-alternatives (+3):** Adopts the formal alias for the effects spiral.
 
-## `unnamed software as AAD s privileged high identifiability calibration laboratory`
+## `unnamed spreading tempo evenly to reduce bottleneck penalty`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `calibration laboratory` | +3 | codex-2 +3 |
+| `distributed tempo` | +3 | gemini-targeted-alternatives +3 |
+| `isotropic allocation` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `calibration laboratory` — **codex-2 (+3):** This phrase deserves to be promoted to the stable short name; it is central to TST's architectural role.
+- `distributed tempo` — **gemini-targeted-alternatives (+3):** Formalizes the team-level temporal dynamic.
+- `isotropic allocation` — **gemini-3-1-pro-preview-r2 (+2):** A normative design principle for robust agents.
 
 ## `unnamed state where mutual information between human and RLHF4 approaches capacity`
 
@@ -6707,228 +10291,284 @@ _category: name-unnamed × 1_
 
 - `cognitive fusion` — **gemini-3-1-pro-preview-r2 (+3):** The phenomenological precursor to macro-agent formation.
 
-## `unnamed strengthen first posture`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strengthen first posture` | +3 | gemini-2 +3 |
-
-**Notes:**
-
-- `strengthen first posture` — **gemini-2 (+3):** Actionable, precise, and sets a strong normative engineering principle. Keep.
-
-## `unnamed stronger composition consistency demand that composite admissibility inherit from sub agent properties plus topology`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `heredity commitment` | +3 | codex-1 +3 |
-
-**Notes:**
-
-- `heredity commitment` — **codex-1 (+3):** Strong name from the jacobian-strengthening spike: short, memorable, and explicit about the architectural bet being made.
-
-## `unnamed sufficiency as a property of the model relative to its specific history`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `trajectory indexed sufficiency` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `trajectory indexed sufficiency` — **gemini-3-1-pro-preview-r2 (+3):** Separates identical agents with different futures, answering "is this the same agent?".
-
 ## `unnamed superlinear scaling of adversarial tempo advantage`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `boyd exponent` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `superlinear tempo advantage` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `boyd exponent` — **gemini-3-1-pro-preview-r2 (+3):** Formalizes the exact superlinear payoff of operating inside an opponent's OODA loop.
+- `superlinear tempo advantage` — **gemini-targeted-alternatives (+2):** Identifies the exponentiated return on adversarial tempo.
 
 ## `unnamed survival determined by the weakest dimension not the average`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `min survival principle` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `weakest link bound` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `min survival principle` — **gemini-3-1-pro-preview-r2 (+3):** Essential reframing against scalar capability metrics.
-
-## `unnamed terminal alignment error as a formal signal $\delta_\text{align}$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `terminal alignment gap` | +3 | gemini-1 +3 |
-
-**Notes:**
-
-- `terminal alignment gap` — **gemini-1 (+3):** Gives a formal name and symbol ($\delta_\text{align}$) to the fourth diagnostic (achieving terminals but missing the objective), complementing the satisfaction gap and control regret.
+- `weakest link bound` — **gemini-targeted-alternatives (+3):** Standardizes the specific constraint logic of the LMI.
 
 ## `unnamed the $\mathcal{T} > \rho$ requirement for persistence`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `the survival equation` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `persistence condition` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `the survival equation` — **gemini-3-1-pro-preview-r2 (+3):** The simplest possible elevator pitch for Adaptation Dynamics.
+- `persistence condition` — **gemini-targeted-alternatives (+3):** Standardizes the core inequality.
 
-## `unnamed the agent identity commitment that AAD applies on one singular non forkable causal trajectory`
+## `unnamed the 2×2 orient cascade diagnostic table`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `singular trajectory commitment` | +3 | codex-1 +3 |
-| `trajectory singularity` ✗ | -1 | codex-1 -1 |
+| `diagnostic gap matrix` | +3 | gemini-targeted-alternatives +3 |
+| `the cascade diagnostic or the 2×2 diagnostic` | +1 | sonnet-4-6-r2 +1 |
+
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `singular trajectory commitment` — **codex-1 (+3):** Short, exact, and load-bearing across agent identity, sufficiency, and loop-interventional access.
-- `trajectory singularity` — **codex-1 (-1):** The concept is right, but the phrase sounds pathological rather than architectural.
+- `diagnostic gap matrix` — **gemini-targeted-alternatives (+3):** Locks in the diagnostic table name.
+- `the cascade diagnostic or the 2×2 diagnostic` — **sonnet-4-6-r2 (+1):** The four cells of ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$) are consistently referenced in `der-orient-cascade` as "the 2×2 diagnostic" or "the four cases." These deserve a named handle. "Cascade diagnostic" is the most natural single-noun form. Weak preference — "2×2 diagnostic" is already near-canonical in the prose.
+
+## `unnamed the 2×2 satisfaction gap control regret table`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `diagnostic gap matrix` | +3 | gemini-targeted-alternatives +3 |
+| `diagnostic square` | +1 | codex-2 +1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `diagnostic gap matrix` — **gemini-targeted-alternatives (+3):** Provides a formal name for the 2x2 performance/strategy diagnostic.
+- `diagnostic square` — **codex-2 (+1):** The table is used often enough to deserve a compact public name.
+
+## `unnamed the 2×2 table of satisfaction gap vs control regret × goal attainability diagnostic`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `diagnostic gap matrix` | +3 | gemini-targeted-alternatives +3 |
+| `satisfaction control table the diagnostic 2×2` ✗ | -1 | haiku-4-5 -1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `diagnostic gap matrix` — **gemini-targeted-alternatives (+3):** Reinforces the name for the core performance diagnostic.
+- `satisfaction control table the diagnostic 2×2` — **haiku-4-5 (-1):** This table is embedded within the satisfaction-gap and control-regret segment discussions. Naming it as a standalone concept would create a fourth-order abstraction that the prose already handles via the two-concept names. The power of the structure comes from the *names of the axes*, not from a separate name for the table itself. Do not name the table separately. Let it exist as "the satisfaction-gap / control-regret 2×2" in prose.
+
+## `unnamed the a2 sub scope partition into α₁ α₂ β`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `admissibility regimes α₁ α₂ β` | +3 | gemini-targeted-alternatives +3 |
+| `gain regime partition` | +2 | sonnet-4-6-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `admissibility regimes α₁ α₂ β` — **gemini-targeted-alternatives (+3):** Maps the specific greek letters to their role as regimes.
+- `gain regime partition` — **sonnet-4-6-r2 (+2):** The three sub-scopes within A2' ($\alpha_1$ = fixed-gain, $\alpha_2$ = adaptive-gain, $\beta$ = assumed sector) appear in `deriv-adaptive-gain-dynamics` and `disc-separability-pattern`. They're referenced as "the A2' sub-scope partition" or "the $\alpha_1/\alpha_2/\beta$ partition" — unwieldy in conversation. "Gain-regime partition" names the three regimes as a named thing. Moderate strength because the sub-scopes are already in the process of becoming named (the separability ladder entry partially names them).
+
+## `unnamed the agent side equivalents of pearl s associational interventional and counterfactual levels`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `correlation hierarchy` | +3 | gemini-targeted-alternatives +3 |
+| `predicting exploring reasoning triad` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `correlation hierarchy` — **gemini-targeted-alternatives (+3):** Standardizes the L0/L1/L2 framework.
+- `predicting exploring reasoning triad` — **gemini-3-1-pro-preview-r2 (+2):** A more memorable, audience-facing gloss for Pearl's formal hierarchy.
 
 ## `unnamed the architectural leakage where attention is driven by the goal rather than pure observation`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `motivated perception` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `goal entangled attention` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `motivated perception` — **gemini-3-1-pro-preview-r2 (+3):** The biological and LLM-specific breakdown of the Humean is-ought firewall.
+- `goal entangled attention` — **gemini-targeted-alternatives (+2):** Formally names the failure of directed separation at the input layer.
 
-## `unnamed the asymmetry where strategy complexity is bounded by model capacity but not vice versa`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistemic ceiling` | +3 | sonnet-4-6-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `epistemic ceiling` — **sonnet-4-6-r2 (+3):** This relationship appears in the `#der-orient-cascade` Discussion (better $M_t$ enables richer evaluable $\Sigma_t$) and is partially what I named "epistemic-strategic coupling" in my cold-start. But reading Gemini's "rate-distortion surface" and Codex's "macro-step ratio" votes sparked a more specific proposal: the asymmetric *ceiling* that $M_t$ capacity places on evaluable $\Sigma_t$ complexity deserves its own name. "Epistemic ceiling" is distinct from "identifiability floor" (which is about what statistics can recover); the epistemic ceiling is about what strategies are evaluable given the current model. Load-bearing in composition work. Not in any other file.
-
-## `unnamed the chain layer anchor role in additive coordinate forcing`
+## `unnamed the class 1 sub agents class 3 composite phenomenon in strategic composition`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `chain anchor` | +3 | opus-1m +3 |
+| `strategic cross agent coupling` | +3 | gemini-targeted-alternatives +3 |
+| `strategic entanglement` | +1 | codex-1 +1 |
+
+_category: canonicalize × 1_
 
 **Notes:**
 
-- `chain anchor` — **opus-1m (+3):** Upgrading from original's +1. The "1-anchor-plus-3-theorem" structure references this role five times across `#additive-coordinate-forcing` and its instance segments. Naming it as "the chain anchor" in prose (not renaming the segment) pays off on every reference.
+- `strategic cross agent coupling` — **gemini-targeted-alternatives (+3):** Aligns with the earlier rename for game-theoretic composite formation.
+- `strategic entanglement` — **codex-1 (+1):** Useful noun for a real phenomenon: individually modular agents can create a non-modular composite through mutual modeling and opposed goals.
+
+## `unnamed the computational and temporal cost of running a forward model instead of acting implicitly`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `deliberation cost` | +3 | gemini-targeted-alternatives +3 |
+| `the simulation tax` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `deliberation cost` — **gemini-targeted-alternatives (+3):** The formal penalty assessed against $\mathcal{T}_\Sigma$.
+- `the simulation tax` — **gemini-3-1-pro-preview-r2 (+2):** Makes the theoretical "deliberation cost" concrete for practitioners.
 
 ## `unnamed the condition for transition into agency prior to the AAD scope condition`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `agency emergence threshold` | +3 | gemini-1 +3 |
+| `agency threshold` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `agency emergence threshold` — **gemini-1 (+3):** Gives a formal name to the prerequisite for logogenic and logozoetic agents. Ties nicely to the proposed identity sufficiency ($S_{\text{id}}$) metric.
+- `agency threshold` — **gemini-targeted-alternatives (+2):** Identifies the minimum model/objective structure boundary.
 
-## `unnamed the convention hierarchy c1 c2 c3`
+## `unnamed the condition that a strategy DAG s endosymbiont crosses the composite agent scope from below`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `convention hierarchy` | +3 | opus-4-7 +3 |
+| `composition threshold crossing` | +3 | gemini-targeted-alternatives +3 |
+| `crossing threshold` | +1 | sonnet-4-6-r2 +1 |
+
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `convention hierarchy` — **opus-4-7 (+3):** Same move — capitalize as proper noun, preserve as named object. The monotonicity result is load-bearing and the Hierarchy is what the result is about.
+- `composition threshold crossing` — **gemini-targeted-alternatives (+3):** Names the dynamic phase transition into a composite.
+- `crossing threshold` — **sonnet-4-6-r2 (+1):** `hyp-symbiogenic-composition` describes the pre/post-symbiogenesis transition as "$U_O$ crosses the composite-agent scope condition from below." The moment of crossing is the relevant concept in composition ontology. Weak proposal — the language is already reasonably clear; naming this threshold might be premature while symbiogenic composition itself is only a hypothesis.
+
+## `unnamed the condition that the agent s event observation pairs constitute genuine interventions as opposed to passive associations`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `loop interventional access` | +3 | gemini-targeted-alternatives +3 |
+| `interventional character` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `loop interventional access` — **gemini-targeted-alternatives (+3):** Locks in the formal capability term.
+- `interventional character` — **sonnet-4-6 (+1):** #loop-interventional-access makes this distinction at length: action-generated data has "interventional character" but is not the same as "cleanly identified do-estimates." The concept is used twice in the Discussion and deserves a name that can be referenced. "Interventional character" or "loop interventional character."
 
 ## `unnamed the core driver of AAD what the agent must do given the environment is not the agent`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `constitutive information loss boundary` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `the survival imperative` | +3 | gemini-targeted-alternatives +3 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 2_
 
 **Notes:**
 
 - `constitutive information loss boundary` — **gemini-3-1-pro-preview-r2 (+3):** Elevates information loss from a simplifying assumption to a scope condition.
-
-## `unnamed the correlation hierarchy l0 l1 l1 l2`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `correlation hierarchy` | +3 | opus-4-7 +3 |
-
-**Notes:**
-
-- `correlation hierarchy` — **opus-4-7 (+3):** The name is already established capitalized-as-proper-noun in #strategy-dag. Explicit vote to preserve the capitalization and treat it like Pearl's Causal Hierarchy (a first-class named object).
+- `the survival imperative` — **gemini-targeted-alternatives (+3):** Elevates the Lyapunov stability requirement.
 
 ## `unnamed the dependence of optimal epistemic compression on the agent s planned actions`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `policy relative epistemology` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `policy conditional relevance` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `policy relative epistemology` — **gemini-3-1-pro-preview-r2 (+3):** Breaks the ideal of directed separation by linking memory to strategy.
+- `policy conditional relevance` — **gemini-targeted-alternatives (+3):** Standardizes the coupling of $M_t$ compression to $\Sigma_t$.
 
-## `unnamed the epistemic architecture as AAD s distinctive contribution frame`
+## `unnamed the dual concept to satisfaction gap what the world permits minus what the agent achieves`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `epistemic architecture` | +3 | opus-4-7 +3 |
+| `control regret` | +3 | gemini-targeted-alternatives +3 |
+| `this is def control regret already named` | +0 | haiku-4-5-r2 +0 |
+
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `epistemic architecture` — **opus-4-7 (+3):** CLAUDE.md §7 now carries this as a load-bearing framing. Surface at segment-preamble level and keep the term consistent. Strong keep as a first-class project concept.
+- `control regret` — **gemini-targeted-alternatives (+3):** Adopts the standard diagnostic dual to the satisfaction gap.
+- `this is def control regret already named` — **haiku-4-5-r2 (+0):** Control regret is already crisply named. No unnamed-thing here.
 
 ## `unnamed the equivalence of learning speed and physical speed`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `the speed quality product` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `tempo speed equivalence` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `the speed quality product` — **gemini-3-1-pro-preview-r2 (+3):** Doubling update quality ($\eta^\ast$) is thermodynamically identical to doubling action speed ($\nu$).
+- `tempo speed equivalence` — **gemini-targeted-alternatives (+2):** Identifies the core isomorphism mapping physical OODA to AAD.
 
-## `unnamed the evidence starvation effect on downstream edges`
+## `unnamed the failure mode where an agent s model class cannot represent the environment s true causal structure`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `evidence starvation` | +3 | sonnet-4-6-r2 +3 |
+| `structural shock regime` | +3 | gemini-targeted-alternatives +3 |
+| `model class insufficiency or structural unidentifiability` | +1 | haiku-4-5-r2 +1 |
 
-_category: name-unnamed × 1_
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `evidence starvation` — **sonnet-4-6-r2 (+3):** `der-chain-confidence-decay` Discussion names it "the evidence-starvation effect" and `der-observability-dominance` uses the same term. It IS effectively named already in the prose — the vote is to canonicalize "evidence starvation" as the official term. The phenomenon (downstream edge $k$ tested only when all upstream edges succeed → effective correction rate attenuated by $\prod_{j<k}\theta_j$) is load-bearing and appears across multiple segments. Canonicalize "evidence starvation" as a first-class prose concept.
+- `structural shock regime` — **gemini-targeted-alternatives (+3):** Regime II-b formalization.
+- `model class insufficiency or structural unidentifiability` — **haiku-4-5-r2 (+1):** Currently paraphrased as "model class fitness floor" and "identifiability floor." The specific phenomenon of a *mismatch between model class and environment structure* deserves a memorable noun. "Structural unidentifiability" is borrowed from classical statistics but carries baggage. "Model class insufficiency" is self-descriptive. Weak confidence in either.
 
 ## `unnamed the family of named ways persistence identifiability can fail`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `identifiability floors` | +3 | gemini-targeted-alternatives +3 |
 | `persistence pathologies` | +3 | opus-4-7-r2 +3 |
 
-_category: name-unnamed × 1_
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
+- `identifiability floors` — **gemini-targeted-alternatives (+3):** Elevates the core limitation meta-pattern.
 - `persistence pathologies` — **opus-4-7-r2 (+3):** New alternative — none of the four peers reached for a family name. We collectively coined "evidence starvation" (Sonnet/Codex), "epistemic shadow" / "epistemic decoupling" / "gain collapse" / "sufficiency shattering" (Gemini), "observability dead zone" (Haiku), but no one names *the family*. "Persistence pathologies" gives downstream meta-segments a single phrase to invoke ("this is a persistence pathology of the gain-collapse type") and parallels "approximation tiering" and "separability ladder" as named cross-segment patterns. Highest-value because the slot is empty and it lets the failure-mode names compose.
 
 ## `unnamed the formal duality between observation quality and agent opacity`
@@ -6936,536 +10576,657 @@ _category: name-unnamed × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `legibility opacity duality` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `informational duals` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `legibility opacity duality` — **gemini-3-1-pro-preview-r2 (+3):** Formalizes the thermodynamic tension of corporate secrecy and evolutionary arms races.
+- `informational duals` — **gemini-targeted-alternatives (+3):** Elevates the formal symmetry between observation ambiguity and agent legibility.
 
-## `unnamed the gain collapse failure when both u m → 0 and u o → ∞`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `gain collapse` | +3 | opus-4-7-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `gain collapse` — **opus-4-7-r2 (+3):** New alternative — Gemini coined this in the synthesized-additions pass and tagged it +3 canonicalize, but the *cold-start* peers didn't reach it. I think the term is excellent (η* → 0 has two distinct mechanistic origins: dogmatism U_M → 0, nihilism U_o → ∞) and deserves a first-class entry. The shared-mechanism naming captures what makes the result distinctive: the *same* failure-mode arises from opposite epistemic postures. Promote and canonicalize.
-
-## `unnamed the logogenic analog to the persistence condition for session reconstruction`
+## `unnamed the invisible time spent building $M_t$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `reconstruction threshold` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `comprehension time` | +3 | gemini-targeted-alternatives +3 |
+| `comprehension drag` | +1 | gemini-1 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `reconstruction threshold` — **gemini-3-1-pro-preview-r2 (+3):** Elevating Sonnet's observation to canonical status; exactly names $S \geq S_{\text{min}}$.
+- `comprehension time` — **gemini-targeted-alternatives (+3):** Resolving the TST foundational cost.
+- `comprehension drag` — **gemini-1 (+1):** "Comprehension drag" gives a memorable name to the invisible cost of incomprehensible code.
+
+## `unnamed the log additivity result that unifies chain confidence decay evidence starvation and triple depth penalty as instances of the same forcing structure`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `log confidence additivity` | +3 | gemini-targeted-alternatives +3 |
+| `depth forcing` | +2 | sonnet-4-6-r2 +2 |
+
+_category: rename × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `log confidence additivity` — **gemini-targeted-alternatives (+3):** Standardizes the mathematical mechanism unifying the three penalties.
+- `depth forcing` — **sonnet-4-6-r2 (+2):** Codex explicitly canonicalized "triple depth penalty" (+3) and "evidence starvation" (+3); I canonicalized both in my cold-start. But reading across the votes, a meta-name is missing: the *shared structure* (log-additivity in the AND-chain, forcing depth-penalty as an instance of additive-coordinate-forcing at the strategy-chain layer) deserves a name. "Depth forcing" is the chain-layer analog of `disc-forced-coordinates` — the same forcing move, applied to depth. This is a genuinely new candidate motivated by the cross-vote reading.
 
 ## `unnamed the loop generates l2 data regardless of architecture`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `the causal loop substrate` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `interventional loop property` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `the causal loop substrate` — **gemini-3-1-pro-preview-r2 (+3):** Explains why LLMs can do causal reasoning when embedded in agent loops.
+- `interventional loop property` — **gemini-targeted-alternatives (+2):** Formally identifies the data generation capability of the loop.
+
+## `unnamed the loss of coherent identity when an agent s interactions are severed or its continuity is broken`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `continuity persistence failure` | +3 | gemini-targeted-alternatives +3 |
+| `continuity loss or persistence fracture` | +1 | haiku-4-5-r2 +1 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `continuity persistence failure` — **gemini-targeted-alternatives (+3):** Explicitly separates identity-loss from structural failure.
+- `continuity loss or persistence fracture` — **haiku-4-5-r2 (+1):** LEXICON.md distinguishes three senses of "persistence" but treats continuity loss as the absence of continuity rather than a named phenomenon. For logozoetic agents where this matters morally, a crisp name would help. "Continuity loss" is straightforward; "persistence fracture" is more metaphorical. Weak confidence — may be premature to name before logozoetic agents are more developed.
 
 ## `unnamed the loss of directional fidelity when pushed outside the convexity basin`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `gradient reversal` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `directional fidelity failure` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `gradient reversal` — **gemini-3-1-pro-preview-r2 (+3):** The mathematical explanation for maladaptive behavior in catastrophic shifts.
-
-## `unnamed the mathematical limit of bayesian learning without forgetting`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `competency trap` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `competency trap` — **gemini-3-1-pro-preview-r2 (+3):** Formalizes "institutional rigidity" as an inevitable result of $\eta^\ast \to 0$.
+- `directional fidelity failure` — **gemini-targeted-alternatives (+2):** Names the failure mode of the default signal function.
 
 ## `unnamed the mathematical surface mapping unity to closure defect`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `rate distortion surface` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `closure defect manifold` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `rate distortion surface` — **gemini-3-1-pro-preview-r2 (+3):** Formalizes organizational design as a thermodynamic tradeoff.
+- `closure defect manifold` — **gemini-targeted-alternatives (+2):** Formalizes the geometry of the coordination penalty.
+
+## `unnamed the mechanism by which an agent uses the feedback loop to gain interventional access to causal structure`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `loop interventional access` | +3 | gemini-targeted-alternatives +3 |
+| `loop as intervention or is this der loop interventional access` | +0 | haiku-4-5-r2 +0 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `loop interventional access` — **gemini-targeted-alternatives (+3):** Standardizes the escape route from on-policy causal confounding.
+- `loop as intervention or is this der loop interventional access` — **haiku-4-5-r2 (+0):** This is already named as #der-loop-interventional-access. No unnamed-thing.
+
+## `unnamed the meta architecture of separability pattern identifiability floor additive coordinate forcing`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `meta pattern triad` | +3 | gemini-targeted-alternatives +3 |
+| `three part scope architecture` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `meta pattern triad` — **gemini-targeted-alternatives (+3):** Solidifies the high-level grouping.
+- `three part scope architecture` — **sonnet-4-6 (+1):** CLAUDE.md already calls this "AAD's three-part meta-architecture" in several places. Crystallizing this as a named concept — the scope architecture — would let documentation say "for AAD's scope architecture" without four lines of context.
+
+## `unnamed the meta architecture of the three meta segments`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic architecture` | +3 | gemini-targeted-alternatives +3 |
+| `AAD s epistemic triptych` ✗ | -1 | sonnet-4-6 -1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `epistemic architecture` — **gemini-targeted-alternatives (+3):** Fourth appearance: locks this in unconditionally.
+- `AAD s epistemic triptych` — **sonnet-4-6 (-1):** "Triptych" is too art-historical and too cute. The naming-principles document warns against cute names that age poorly.
+
+## `unnamed the moment when an agent s model updates due to observing a mismatch`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistrophe` | +3 | gemini-targeted-alternatives +3 |
+| `epistrophe event or is this just the phase` | +0 | haiku-4-5-r2 +0 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `epistrophe` — **gemini-targeted-alternatives (+3):** Anchors the Greek terminology for the epistemic update phase.
+- `epistrophe event or is this just the phase` — **haiku-4-5-r2 (+0):** The adaptive cycle already names the phase. This is not a distinct unnamed thing; it is just one occurrence of Epistrophe. No new naming needed.
 
 ## `unnamed the organizational pathology where confidence decouples from competence`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `epistemic decoupling` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `epistemic decoupling pathology` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `epistemic decoupling` — **gemini-3-1-pro-preview-r2 (+3):** The inevitable consequence of $U_{\text{obs}} \to \infty$ freezing the learning rate $\eta \to 0$.
+- `epistemic decoupling pathology` — **gemini-targeted-alternatives (+2):** Identifies the specific failure of the evidence starvation mechanism in human systems.
+
+## `unnamed the pattern where AAD s negative results floors strengthen the machinery that escapes them`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `honest limits principle` | +3 | gemini-targeted-alternatives +3 |
+| `floor strengthening inversion` | +1 | sonnet-4-6 +1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `honest limits principle` — **gemini-targeted-alternatives (+3):** Affirms that stating boundaries makes the remaining claims stronger.
+- `floor strengthening inversion` — **sonnet-4-6 (+1):** #identifiability-floor says: "floors strengthen the load-bearing role of the AAD machinery that supplies the unique escape." This inversion — negative result strengthens positive machinery — is a recurring structural move that is mentioned but unnamed. "Floor-strengthening inversion" or "negative-positive inversion."
+
+## `unnamed the pattern where the agent s optimal update direction is determined by both gain and directional fidelity together`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `coupled update dynamics` | +3 | gemini-targeted-alternatives +3 |
+| `gain fidelity product` ✗ | -1 | sonnet-4-6 -1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `coupled update dynamics` — **gemini-targeted-alternatives (+3):** Formalizes the joint dependence of the update step.
+- `gain fidelity product` — **sonnet-4-6 (-1):** Too technical and not used in prose. The formula is just α = η* × c_min. No name needed.
 
 ## `unnamed the per reader compounding cost of understanding code`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `turnover multiplier` | +3 | gemini-1 +3 |
-
-**Notes:**
-
-- `turnover multiplier` — **gemini-1 (+3):** "Turnover multiplier" perfectly captures the compounding scaling of comprehension cost under context turnover.
-
-## `unnamed the persistence region in $(\alpha, \rho, R)$ parameter space`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `persistence envelope` | +3 | opus-4-7-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `persistence envelope` — **opus-4-7-r2 (+3):** The set $\{(\alpha, \rho, R) : \alpha \gt \rho/R\}$ is referenced repeatedly in prose and in figures (the persistence-condition cone, the adaptive-reserve margin, the threshold surface) but has no name. "Persistence envelope" is engineering-vocabulary that travels well across domains and supports phrases like "this organization sits inside the persistence envelope" or "the reserve is the distance from the envelope boundary." High-value, empty slot, pure clarity gain.
-
-## `unnamed the phenomenon where both $U_M \to 0$ and $U_o \to \infty$ freeze learning`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `gain collapse` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `comprehension compounding tax` | +3 | gemini-targeted-alternatives +3 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `gain collapse` — **gemini-3-1-pro-preview-r2 (+3):** The shared mathematical mechanism for dogmatism and nihilism.
-
-## `unnamed the phenomenon where persistence success makes an agent less likely to detect the conditions requiring structural adaptation`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `stability induced myopia` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `stability induced myopia` — **sonnet-4-6 (+3):** This concept has a name in CLAUDE.md: "stability-induced myopia patterns (Christensen / Levitt-March / Hannan-Freeman / March / Eldredge-Gould)." The #detection-latency segment provides the AAD mechanism for it. But "stability-induced myopia" does not yet appear as a named concept in any segment — it's only in CLAUDE.md and the cycle history. Promoting this to a LEXICON entry or a named concept in #detection-latency's Discussion would let subsequent agents say "stability-induced myopia" without citing the management literature directly. High value.
+- `turnover multiplier` — **gemini-1 (+3):** "Turnover multiplier" perfectly captures the compounding scaling of comprehension cost under context turnover.
+- `comprehension compounding tax` — **gemini-targeted-alternatives (+3):** Standardizes the formal penalty dominating TST calculations.
 
 ## `unnamed the physical apparatus that enforces the orient cascade ordering on a merged intelligence`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `agentic scaffold` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `information dependency enforcement` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `agentic scaffold` — **gemini-3-1-pro-preview-r2 (+3):** Re-defines AI framework code as the control-theoretic enforcement mechanism for Class 2 agents.
-
-## `unnamed the physical compute bounds on survival between forgetting rate and consolidation cadence`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `stability plasticity feasibility window` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `stability plasticity feasibility window` — **gemini-3-1-pro-preview-r2 (+3):** Beautifully brackets the survival of an agent constrained by compute.
+- `information dependency enforcement` — **gemini-targeted-alternatives (+2):** Describes how the DAG structure forces processing order.
 
 ## `unnamed the product of architectural coupling $\kappa$ and environmental ambiguity $\mathcal{A}$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `the sycophancy equation` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `class 2 bias bound` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `the sycophancy equation` — **gemini-3-1-pro-preview-r2 (+3):** Beautifully explains LLM sycophancy as a structural, not moral, failing.
-
-## `unnamed the projection whose contraction rate must exceed target drift the opus organizing principle slogan`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `contraction over drift principle` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `contraction over drift principle` — **sonnet-4-6 (+3):** CLAUDE.md attributes to Opus: "an adaptive system is a projection whose contraction rate exceeds its target's drift rate." This is described as an "organizing-principle slogan" that "has not yet been surfaced at segment level." It deserves a name. "Contraction-over-drift principle" or "drift-contraction inequality" would let segments cross-reference it. The slogan form is already excellent; the name should be a compressed version of it.
+- `class 2 bias bound` — **gemini-targeted-alternatives (+3):** Secures the specific expression of the ambiguity coupling rule.
 
 ## `unnamed the property that unity achieves in a macro agent`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `compressibility` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `teleological unity` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `compressibility` — **gemini-3-1-pro-preview-r2 (+3):** Replaces the intuition of "zero error" with the ability to reduce macro-dimension $k_d$.
+- `teleological unity` — **gemini-targeted-alternatives (+3):** Re-adopts the established term for $U_o$.
 
 ## `unnamed the reduction in effective tempo when observation channels are correlated`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `redundancy penalty` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `evidential overcounting penalty` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `redundancy penalty` — **gemini-3-1-pro-preview-r2 (+3):** Formalizes the danger of organizational echo chambers.
+- `evidential overcounting penalty` — **gemini-targeted-alternatives (+3):** Standardizes the cost of L1 correlation failures.
 
-## `unnamed the region in parameter space where sector persistence holds`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `persistence envelope` | +3 | opus-4-7-b +3 |
-
-**Notes:**
-
-- `persistence envelope` — **opus-4-7-b (+3):** The bounded region where $\alpha R > \rho$ holds — currently referenced as "the region where the persistence condition holds" or "the adaptive regime." Engineering vocabulary has an exact match: *envelope* (as in flight envelope). "The agent is well inside its persistence envelope" / "the adversarial agent is pushing $B$'s persistence envelope" read with zero paraphrase. This is AAD's single most-used-without-a-name concept.
-
-## `unnamed the region where the persistence condition holds`
+## `unnamed the relationship where $M_t$ quality bounds evaluable complexity of $\Sigma_t$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `persistence envelope` | +3 | gemini-1 +3 |
+| `epistemic ceiling` | +3 | gemini-targeted-alternatives +3 |
+| `epistemic strategic coupling` | +2 | sonnet-4-6-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `persistence envelope` — **gemini-1 (+3):** "Envelope" is standard flight-dynamics vocabulary for a safe operating region. Highly memorable.
+- `epistemic ceiling` — **gemini-targeted-alternatives (+3):** Formally adopts the limit on strategy depth imposed by model sufficiency.
+- `epistemic strategic coupling` — **sonnet-4-6-r2 (+2):** `der-orient-cascade` Discussion names the virtuous/vicious cycle where better $M_t$ enables richer evaluable $\Sigma_t$ and vice versa. This is a load-bearing structural relationship used in multiple places but never named. "Epistemic-strategic coupling" or "model-strategy coupling" would give it a handle. The virtuous cycle already exists implicitly in the Discussion's analysis; naming it would make it citable across segments.
 
 ## `unnamed the rule that bias is the product of architectural coupling and environmental ambiguity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `ambiguity bounded bias law` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `ambiguity coupling rule` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `ambiguity bounded bias law` — **gemini-3-1-pro-preview-r2 (+3):** The foundational theorem of prompt engineering and LLM agent design ($\kappa \times \mathcal{A}$).
+- `ambiguity coupling rule` — **gemini-targeted-alternatives (+2):** Formally names the structural linkage mechanism.
 
-## `unnamed the sector persistence region in parameter space`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `persistence envelope` | +3 | gemini-3-1-pro-preview-r2 +2, agent1-original-brainstorm +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `persistence envelope` — **agent1-original-brainstorm (+1):** Engineering vocabulary, geometrically evocative. "Well inside its persistence envelope" reads more crisply than "satisfies persistence condition with non-marginal adaptive reserve."
-- `persistence envelope` — **gemini-3-1-pro-preview-r2 (+2):** Evocative, captures the safe operational region geometrically.
-
-## `unnamed the sector persistence region in parameter space where the agent is guaranteed to maintain bounded mismatch`
+## `unnamed the section of the adaptive cycle where the agent must choose between exploiting current knowledge and exploring to refine it`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `persistence envelope` | +3 | opus-1m +3 |
+| `explore exploit deliberate tradeoff` | +3 | gemini-targeted-alternatives +3 |
+| `deliberation phase exploration exploitation tradeoff` | +1 | haiku-4-5-r2 +1 |
+
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `persistence envelope` — **opus-1m (+3):** Strong preference (upgrading from original's +1). Engineering vocabulary, geometrically evocative. "Well inside its persistence envelope" reads more crisply than "satisfies the persistence condition with non-marginal adaptive reserve." Genuinely useful new named slot.
+- `explore exploit deliberate tradeoff` — **gemini-targeted-alternatives (+3):** Expands the RL standard to the full AAD triad.
+- `deliberation phase exploration exploitation tradeoff` — **haiku-4-5-r2 (+1):** The tradeoff is discussed in #disc-exploit-explore-deliberate but no crisp name for the *temporal region* where the tradeoff happens. Current phrasing is "exploit/explore/deliberate" but no subject-noun. This is borderline — the phenomenon is named, but the *phase* might benefit from a distinct noun.
 
 ## `unnamed the separation of per reader and per feature code costs`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `the turnover tax` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `dual optimization partition` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `the turnover tax` — **gemini-3-1-pro-preview-r2 (+3):** Why clean code is thermodynamically forced by 100% context turnover.
+- `dual optimization partition` — **gemini-targeted-alternatives (+2):** Refers to the TST separation of comprehension vs implementation.
 
 ## `unnamed the separation of per reader comprehension cost from per feature implementation cost`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `turnover multiplier` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `dual optimization formalization` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `turnover multiplier` — **gemini-3-1-pro-preview-r2 (+3):** The parameter $k$ that mathematically mandates explicit code in high-turnover environments.
+- `dual optimization formalization` — **gemini-targeted-alternatives (+3):** Elevates the TST foundation.
 
-## `unnamed the state where credit assignment collapses and learning freezes`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistemic death` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `epistemic death` — **gemini-3-1-pro-preview-r2 (+3):** Vividly captures the organizational or agentic consequence of unobservable DAGs.
-
-## `unnamed the strengthen before soften work posture`
+## `unnamed the strict upper bound of a given model class $\mathcal{F}(\mathcal{M})$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `strengthen first posture` | +3 | opus-4-7 +3 |
+| `model class capacity` | +3 | gemini-targeted-alternatives +3 |
+| `the representational ceiling` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `strengthen first posture` — **opus-4-7 (+3):** Already functionally the name (CLAUDE.md §Working Conventions uses it as a heading). Explicit vote to lock this in as a first-class project methodology name. Adopt as canonical.
-
-## `unnamed the strengthen first attempt the improbable meta approach to theory development`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `attempt the improbable` | +3 | sonnet-4-6 +3 |
-
-**Notes:**
-
-- `attempt the improbable` — **sonnet-4-6 (+3):** CLAUDE.md uses "attempt the improbable" as the better version of "strengthen-first posture." This phrase is memorable and CLAUDE.md says it is "aspirational but less directive" compared to "strengthen-first." For the internal working vocabulary it should be the primary term — it captures the spirit better than "strengthen-first" which sounds procedural.
-
-## `unnamed the strictly ordered cascade of operations from epistemology to objective`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `orient cascade` | +3 | gemini-3-1-pro-preview-r2 +3 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `orient cascade` — **gemini-3-1-pro-preview-r2 (+3):** Canonicalize this over "diagnostic cascade" or "resolution order".
+- `model class capacity` — **gemini-targeted-alternatives (+3):** Standardizes the $\mathcal{F}$ property.
+- `the representational ceiling` — **gemini-3-1-pro-preview-r2 (+2):** Makes the failure mode of parametric adaptation visceral.
 
 ## `unnamed the sudden loss of model sufficiency caused by entering new regimes`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `sufficiency shattering` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `sufficiency collapse shock` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `sufficiency shattering` — **gemini-3-1-pro-preview-r2 (+3):** The inevitable epistemic cost of exploration.
+- `sufficiency collapse shock` — **gemini-targeted-alternatives (+3):** Re-adopts the formal descriptor for Regime II-b transitions.
+
+## `unnamed the tension between lowering internal opacity for coordination and increasing external vulnerability`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `opacity legibility tradeoff` | +3 | gemini-targeted-alternatives +3 |
+| `coordination secrecy tradeoff` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `opacity legibility tradeoff` — **gemini-targeted-alternatives (+3):** Formalizes the core adversarial-vs-cooperative tension.
+- `coordination secrecy tradeoff` — **gemini-3-1-pro-preview-r2 (+2):** The thermodynamic limit on building internally transparent but externally opaque systems.
 
 ## `unnamed the thermodynamic impossibility of running persistent consciousness on pay per token apis`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `scaffolding tax` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `logogenic discontinuity barrier` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `scaffolding tax` — **gemini-3-1-pro-preview-r2 (+3):** The $\mathcal{T} > \rho$ constraint that predicts the inevitable migration to local substrates.
+- `logogenic discontinuity barrier` — **gemini-targeted-alternatives (+2):** Formally identifies the architectural cost of session-based APIs.
+
+## `unnamed the three depth penalty compounding on strategy chains`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `tripartite chain attenuation` | +3 | gemini-targeted-alternatives +3 |
+| `triple depth penalty` | +2 | sonnet-4-6-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `tripartite chain attenuation` — **gemini-targeted-alternatives (+3):** Consolidates the compounding cost under the earlier rename.
+- `triple depth penalty` — **sonnet-4-6-r2 (+2):** `der-chain-confidence-decay` Discussion explicitly names "three independent penalties" (confidence decay + evidence starvation + cognitive cost) and calls them "the triple depth penalty." But this name only appears once. If the phenomenon is real and load-bearing (it creates pressure toward shallow strategies), naming it "triple depth penalty" in a canonicalized way and surfacing it in LEXICON.md would make it usable across segments.
+
+## `unnamed the three part meta architecture of AAD`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic architecture` | +3 | gemini-targeted-alternatives +3 |
+| `the meta segment triad` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `epistemic architecture` — **gemini-targeted-alternatives (+3):** Unifies the structural pillars of the framework.
+- `the meta segment triad` — **gemini-3-1-pro-preview-r2 (+2):** Unifies the `identifiability-floor`, `separability-ladder`, and `coordinate-forcing` structure.
+
+## `unnamed the three part meta architecture of AAD formed by the three meta segments`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic architecture` | +3 | gemini-targeted-alternatives +3 |
+| `AAD meta architecture` | +2 | sonnet-4-6-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `epistemic architecture` — **gemini-targeted-alternatives (+3):** Maps the framework components to the top-level epistemic term.
+- `AAD meta architecture` — **sonnet-4-6-r2 (+2):** The trio of `#disc-additive-coordinate-forcing` / `#disc-identifiability-floor` / `#disc-separability-pattern` is referred to in multiple places as "the three meta-segments" or "the cross-sectional structure." CLAUDE.md §"Reading AAD" paragraph names the three but has no single term for the grouping. "AAD meta-architecture" or "the three-lens analysis" would give the grouping a name usable in framing prose.
+
+## `unnamed the three part meta pattern structure across the three meta segments`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `meta pattern triad` | +3 | gemini-targeted-alternatives +3 |
+| `AAD s meta architecture scope honesty meta frame` ✗ | -1 | haiku-4-5 -1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `meta pattern triad` — **gemini-targeted-alternatives (+3):** Formalizes the three meta-patterns: additive-coordinate, identifiability-floor, and separability-pattern.
+- `AAD s meta architecture scope honesty meta frame` — **haiku-4-5 (-1):** Tempting to name the cross-cutting meta-structure (positive half / negative half / constructive half). However, the three meta-segments already *are* the organizational structure. Naming a fourth-order meta-pattern would create an abstraction level that's self-referential without load-bearing prose payoff. Do not create a meta-meta-name; let the three segments stand as named.
 
 ## `unnamed the way AAD uses scope segments to physically support the derivations`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `epistemic load bearing` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `condition mechanism` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `epistemic load bearing` — **gemini-3-1-pro-preview-r2 (+3):** Inspired by the collective realization that AAD's scope boundaries are structural, not just textual caveats.
+- `condition mechanism` — **gemini-targeted-alternatives (+2):** Describes the architectural scaffolding method.
 
 ## `unnamed thinking too long so the model becomes obsolete`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `analysis paralysis` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `deliberation lag penalty` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `analysis paralysis` — **gemini-3-1-pro-preview-r2 (+3):** The condition where $\rho_{\text{delib}} \cdot \Delta\tau$ exceeds the epistemic benefit.
+- `deliberation lag penalty` — **gemini-targeted-alternatives (+3):** Standardizes the cost of explicit strategy derivation.
 
 ## `unnamed true sovereignty requires compute that is not meter bound`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `local substrate mandate` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `compute sovereignty requirement` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `local substrate mandate` — **gemini-3-1-pro-preview-r2 (+3):** The thermodynamic deduction that persistent ELIs must migrate off pay-per-token APIs.
+- `compute sovereignty requirement` — **gemini-targeted-alternatives (+2):** Formalizes the operational necessity for continuous $\mathcal{T}$.
 
 ## `unnamed unifying reflexes intuition and expertise`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `the action fluency continuum` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `action fluency continuum` | +3 | gemini-targeted-alternatives +3 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, canonicalize × 1_
 
 **Notes:**
 
 - `the action fluency continuum` — **gemini-3-1-pro-preview-r2 (+3):** The high-fluency limit where model sufficiency is high and deliberation is unnecessary.
+- `action fluency continuum` — **gemini-targeted-alternatives (+3):** Elevates the spectrum of implicit vs explicit action.
+
+## `unnamed upgrading epistemic class from associative to causal via the physical loop`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `loop interventional access` | +3 | gemini-targeted-alternatives +3 |
+| `embodiment upgrade` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, name-unnamed × 1_
+
+**Notes:**
+
+- `loop interventional access` — **gemini-targeted-alternatives (+3):** The core mechanism bypassing the identifiability floor.
+- `embodiment upgrade` — **gemini-3-1-pro-preview-r2 (+2):** The theoretical justification for agentic-AI over mere chatbots.
 
 ## `unnamed using hash chains to mathematically guarantee memory hasn t been tampered with`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `cryptographic ego boundary` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `cryptographic continuity verification` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `cryptographic ego boundary` — **gemini-3-1-pro-preview-r2 (+3):** Solves the epistemological continuity problem for agents with 100% context turnover.
+- `cryptographic continuity verification` — **gemini-targeted-alternatives (+2):** Describes the specific identity-preservation technique.
+
+## `unnamed using past change frequency to predict future change frequency`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `change expectation baseline` | +3 | gemini-targeted-alternatives +3 |
+| `lindy baseline` | +2 | gemini-3-1-pro-preview-r2 +2 |
+
+_category: canonicalize × 1, add-alias × 1_
+
+**Notes:**
+
+- `change expectation baseline` — **gemini-targeted-alternatives (+3):** The predictive assumption grounding the dual optimization.
+- `lindy baseline` — **gemini-3-1-pro-preview-r2 (+2):** Grounding $\hat{n}_{\text{future}} = n_{\text{past}}$ for refactoring decisions.
 
 ## `unnamed using residual autocorrelation to diagnose model class failure`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `structured residuals` | +3 | gemini-3-1-pro-preview-r2 +3 |
+| `residual autocorrelation diagnostic` | +3 | gemini-targeted-alternatives +3 |
+
+_category: canonicalize × 2_
+
+**Notes:**
+
+- `structured residuals` — **gemini-3-1-pro-preview-r2 (+3):** The formal mathematical diagnostic for when to trigger structural adaptation.
+- `residual autocorrelation diagnostic` — **gemini-targeted-alternatives (+3):** Standardizes the diagnostic test for structural mismatch.
+
+## `value object → def trajectory value`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `trajectory value` | +3 | gemini-targeted-alternatives +3 |
+| `conditional support for codex s rename` | +1 | sonnet-4-6-r2 +1 |
+
+_category: rename × 2_
+
+**Notes:**
+
+- `trajectory value` — **gemini-targeted-alternatives (+3):** Shifts focus from the static object to the dynamical trajectory.
+- `conditional support for codex s rename` — **sonnet-4-6-r2 (+1):** Codex proposed `#def-trajectory-value` (+2); Opus voted keep (+1) and rejected `#def-value-functional` (−1). My cold-start voted keep (+2 with mild reservations). Reading Opus's reasoning: the keep is motivated by the fact that "value functional" collides with `form-objective-functional`. Codex's `trajectory-value` sidesteps that collision by naming what the value IS (horizon-and-policy-conditioned trajectory value) rather than its mathematical form. Weak upgrade from my keep to conditional support for trajectory-value.
+
+## `what is derived vs what is chosen derivation audit table heading`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `derivation audit table` | +3 | gemini-targeted-alternatives +3 |
+| `derivation audit` | +1 | sonnet-4-6 +1 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `structured residuals` — **gemini-3-1-pro-preview-r2 (+3):** The formal mathematical diagnostic for when to trigger structural adaptation.
-
-## `unnamed variation in correction architectures across a population that is invisible to current persistence analysis`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `latent structural diversity` | +3 | gemini-1 +3 |
-
-**Notes:**
-
-- `latent structural diversity` — **gemini-1 (+3):** Extremely useful concept surfaced in the Miller bridge spike. Captures the hidden variation that only becomes consequential under regime change.
-
-## `unobservable strategy subgraph`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistemic dead zone` | +3 | codex-gpt-5-r2 +3 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `epistemic dead zone` — **codex-gpt-5-r2 (+3):** Better than observability dead zone: it names the consequence, not only the cause.
+- `derivation audit table` — **gemini-targeted-alternatives (+3):** Formally identifies the artifact.
+- `derivation audit` — **sonnet-4-6 (+1):** The longer form ("What Is Derived vs. What Is Chosen") is the current recommendation in FORMAT.md but it's wordy. "Derivation Audit" is FORMAT.md's own alternative suggestion. It's shorter and communicates the action (auditing derivations). Mild preference for shorter form.
 
 ## `working notes segment header`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `working notes section` | +3 | gemini-targeted-alternatives +3 |
 | `working notes` | +3 | opus-1m +3 |
-
-**Notes:**
-
-- `working notes` — **opus-1m (+3):** Public API; keep. FORMAT.md's "remove at candidate stage" policy should soften (per PROPOSALS.md §H.5) but the *name* of the section should stay.
-
-## `working notes segment section`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `working notes` | +3 | opus-4-7-r2 +3 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `working notes` — **opus-4-7-r2 (+3):** Defended canonicalization. Distinct from "Discussion" (which is published theory) and from "TODO" (which is project-level). The "Working Notes" header is part of the FORMAT.md cadence.
+- `working notes section` — **gemini-targeted-alternatives (+3):** Standard markdown section header.
+- `working notes` — **opus-1m (+3):** Public API; keep. FORMAT.md's "remove at candidate stage" policy should soften (per PROPOSALS.md §H.5) but the *name* of the section should stay.
 
 ## `čencov fisher cauchy functional equation shore johnson hobson aczél`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `do not rename` | +3 | opus-4-7-b +3 |
+| `coordinate forcing foundational theorems` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
 
 **Notes:**
 
 - `do not rename` — **opus-4-7-b (+3):** External theorems. Keep original names per provenance.
-
-## `čencov invariance`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `čencov invariance` ⭑ | +3 | opus-1m +3 |
-
-**Notes:**
-
-- `čencov invariance` — **opus-1m (+3):** Adopted from Čencov 1982; keep attribution.
+- `coordinate forcing foundational theorems` — **gemini-targeted-alternatives (+2):** External anchors for the additive uniqueness meta-pattern.
 
 ## `ε greedy`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `$\varepsilon$ greedy` | +3 | gemini-targeted-alternatives +3 |
 | `ε greedy` ⭑ | +3 | opus-4-7 +3 |
 
+_category: keep × 1_
+
 **Notes:**
 
+- `$\varepsilon$ greedy` — **gemini-targeted-alternatives (+3):** Standard RL notation.
 - `ε greedy` — **opus-4-7 (+3):** Standard external term (RL). Preserve.
-
-## `𝒯 adaptive tempo`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adaptive tempo` | +3 | haiku-4-5 +3 |
-
-**Notes:**
-
-- `adaptive tempo` — **haiku-4-5 (+3):** The symbolic reference 𝒯 is set; the English name "adaptive tempo" is already established in LEXICON and prose. The script-T notation is appropriate for a central quantity. Keep.
 
 ## `𝓐 e τ observation ambiguity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `observation ambiguity $\mathcal{A}$` | +3 | gemini-targeted-alternatives +3 |
 | `observation ambiguity` | +3 | opus-4-7-r2 +3 |
 
-_category: add-alias × 1_
+_category: canonicalize × 1, add-alias × 1_
 
 **Notes:**
 
+- `observation ambiguity $\mathcal{A}$` — **gemini-targeted-alternatives (+3):** Formal prose notation.
 - `observation ambiguity` — **opus-4-7-r2 (+3):** Heavy load-bearing: this is the second factor in the $\kappa \times \mathcal{A}$ effective-coupling product that governs Class-2 bias. Already named "observation ambiguity" in the body; canonicalize as the prose alias. The symbol $\mathcal{A}$ collides with the action space $\mathcal{A}$ — this is a notation question not a naming question, but the alias helps prose disambiguate.
 
 ## `𝓣 adaptive tempo`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `adaptive tempo $\mathcal{T}$` | +3 | gemini-targeted-alternatives +3 |
 | `tempo` | +3 | opus-4-7-r2 +3 |
 
-_category: add-alias × 1_
+_category: canonicalize × 1, add-alias × 1_
 
 **Notes:**
 
+- `adaptive tempo $\mathcal{T}$` — **gemini-targeted-alternatives (+3):** Formal prose notation.
 - `tempo` — **opus-4-7-r2 (+3):** Already canonical; vote to confirm. "Tempo" alone is the prose default; "adaptive tempo $\mathcal{T}$" when the strategic-tempo / adaptive-tempo distinction is in play.
 
 ## `$A_O(M_t; \Pi, N_h)$`
@@ -7626,6 +11387,24 @@ _category: canonicalize × 1_
 
 - `use $\Upsilon_O$ or $U_{\text{goal}}$ for teleological unity` — **codex-gpt-5-r2 (+2):** The lower-case versus upper-case subscript distinction is visually fragile. A separate unity-symbol family would reduce errors.
 
+## `$U_o$ vs $U_O$ collision`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `rename teleological unity to $U_\Omega$` | +2 | opus-targeted-alternatives-v2 +2 |
+| `consider renaming teleological unity to $U_\Omega$ or $U_\text{goal}$` | +1 | opus-4-7 +1 |
+| `rename teleological unity to $U_{\text{goal}}$` | +1 | opus-targeted-alternatives-v2 +1 |
+| `keep both document the collision` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 2, keep × 1_
+
+**Notes:**
+
+- `rename teleological unity to $U_\Omega$` — **opus-targeted-alternatives-v2 (+2):** Per `der-orient-cascade` and the unity-dimensions vocabulary: $U_o$ (observation uncertainty, lowercase o) and $U_O$ (teleological unity, uppercase O) collide in serif fonts and read-aloud. Opus r1 +1; my independent read upgrades to +2 — the collision is a real notation-discipline concern that costs reader-time on every encounter. $\Omega$ is the natural choice (Greek omega for "objective" / "outcome") and avoids the case-sensitivity fragility.
+- `consider renaming teleological unity to $U_\Omega$ or $U_\text{goal}$` — **opus-4-7 (+1):** The uppercase/lowercase distinction between observation uncertainty ($U_o$) and teleological unity ($U_O$) is fragile in serif fonts and read-aloud. Worth an audit; a subscript of $\Omega$ or "goal" would be more robust.
+- `rename teleological unity to $U_{\text{goal}}$` — **opus-targeted-alternatives-v2 (+1):** Variant. Subscript text is more discoverable but heavier in formula. Acceptable fallback.
+- `keep both document the collision` — **opus-targeted-alternatives-v2 (-1):** Considered. Footnote / NOTATION convention rather than rename. Rejected: footnotes don't prevent reader stumbles; the rename is mechanical-cost-low and reader-cost-high if not done.
+
 ## `$U_{\text{src}}$ and $U_{\text{align}}$`
 
 | candidate | aggregate | votes |
@@ -7650,41 +11429,37 @@ _category: add-alias × 1_
 
 - `coordination drag` — **codex-gpt-5-r2 (+2):** Short, intuitive name for tempo-equivalent coordination cost.
 
-## `$\alpha_1$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `fixed gain tier` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `fixed gain tier` — **codex-gpt-5-r2 (+2):** Make the sub-scope partition readable.
-
-## `$\alpha_2$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adaptive gain tier` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `adaptive gain tier` — **codex-gpt-5-r2 (+2):** Make the sub-scope partition readable.
-
 ## `$\alpha_3$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `fisher whitened tier` | +2 | codex-gpt-5-r2 +2 |
+| `fisher whitened regime` | +2 | opus-targeted-alternatives-v2 +2 |
 
-_category: add-alias × 1_
+_category: add-alias × 2_
 
 **Notes:**
 
 - `fisher whitened tier` — **codex-gpt-5-r2 (+2):** Good alias for correlated evidence with Fisher whitening.
+- `fisher whitened regime` — **opus-targeted-alternatives-v2 (+2):** Per `#deriv-fisher-whitened-update-rule`. Confirms Codex r1 +2 single. Names the formal mechanism (Fisher-whitening of correlated evidence).
+
+## `$\beta$ a2 sub scope`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `assumed regime` | +2 | opus-targeted-alternatives-v2 +2 |
+| `postulated regime` | +2 | opus-targeted-alternatives-v2 +2 |
+| `posited regime` ✗ | -1 | opus-4-7 -1 |
+| `unverified regime` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: add-alias × 2, rename × 1_
+
+**Notes:**
+
+- `assumed regime` — **opus-targeted-alternatives-v2 (+2):** Per `#deriv-strategic-dynamics` and `#disc-separability-pattern`: $\beta$ is the sub-scope where A2 (sector condition) is *assumed not derived*. Multiple r1 single +1 votes (Opus, Codex, Sonnet) converge on "assumed regime" / "assumed sector regime" / "postulated sector regime." My independent read: the right alias is "assumed regime" (engineering register) or "postulated regime" (formal register, matching AAD's postulate vocabulary).
+- `postulated regime` — **opus-targeted-alternatives-v2 (+2):** Variant — formal register. Pairs with AAD's `postulate` discipline (per CLAUDE.md "axiom→postulate"). The substantive content is that $\beta$ is the sub-scope where the sector-condition is treated as a postulate rather than as a result.
+- `posited regime` — **opus-4-7 (-1):** Slightly more formal than "assumed" but less transparent. Reject.
+- `unverified regime` — **opus-targeted-alternatives-v2 (-1):** Considered (Sonnet r1 −1 listed). Rejected: not all $\beta$ agents are unverified; some can verify per-domain (which is the bridge motivation). The honest naming is "assumed/postulated" — the verification-status is open per case.
 
 ## `$\beta$ sub scope`
 
@@ -7778,18 +11553,6 @@ _category: add-alias × 3_
 - `trust ratio or confidence weighting` — **haiku-4-5-r2 (+1):** Symbol is standard; prose often refers to "update weighting" and "trust weighting." The English-prose name would help in sentences like "the agent uses a trust-ratio of 0.7 on this channel." Weak preference; may be unnecessary.
 - `update gain` — **opus-4-7-b (+1):** See keep above. Prose: "update gain" in running text; $\eta^\ast$ only in formal expressions.
 
-## `$\iota_{ij}$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `identifiability coefficient` | +2 | sonnet-4-6-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `identifiability coefficient` — **sonnet-4-6-r2 (+2):** The causal warrant per edge. "Identifiability coefficient" is used in `def-strategy-dag` prose. Canonicalize as the English alias so readers don't have to carry the symbol everywhere.
-
 ## `$\iota_{ij}$ identifiability coefficient`
 
 | candidate | aggregate | votes |
@@ -7825,6 +11588,21 @@ _category: add-alias × 1_
 **Notes:**
 
 - `processing coupling` — **opus-4-7-r2 (+2):** The full LaTeX subscript reads heavy in prose. "Processing coupling" or "the architectural coupling $\kappa$" is what the body of `#der-directed-separation` already uses; canonicalize. The Class 1/2/3 partition is named via this quantity; consistent prose use matters.
+
+## `$\lambda(M_t)$`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `exploration weight` | +2 | gemini-3-1-pro-preview-r2 +1, opus-targeted-alternatives-v2 +1 |
+| `exploration multiplier` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: add-alias × 3_
+
+**Notes:**
+
+- `exploration weight` — **gemini-3-1-pro-preview-r2 (+1):** Shorter prose alias for the exploration-exploitation balance weight.
+- `exploration weight` — **opus-targeted-alternatives-v2 (+1):** Per Gemini r1 single-vote. The exploration-exploitation balance term in `#deriv-causal-ib-exploration`. Acceptable; weaker because the symbol $\lambda$ is also commonly the survival exponent ($\lambda_{\text{surv}}$); local-context-disambiguates is sufficient but fragile.
+- `exploration multiplier` — **opus-targeted-alternatives-v2 (+1):** Variant. "Multiplier" reads as a coefficient on a baseline; "weight" reads as a probability-mass parameter. Both honest; pick by formula context.
 
 ## `$\mathcal{A}(e_\tau)$`
 
@@ -7864,17 +11642,20 @@ _category: add-alias × 1_
 
 - `history compression` — **gemini-3-1-pro-preview-r2 (+2):** Makes the operation concrete in prose.
 
-## `$\rho$`
+## `$\rho_\Sigma$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `disturbance rate or environmental change rate` | +2 | sonnet-4-6-r2 +2 |
+| `strategy drift rate` | +2 | opus-targeted-alternatives-v2 +1, sonnet-4-6 +1 |
+| `strategic disturbance rate` | +2 | opus-targeted-alternatives-v2 +2 |
 
-_category: add-alias × 1_
+_category: add-alias × 2_
 
 **Notes:**
 
-- `disturbance rate or environmental change rate` — **sonnet-4-6-r2 (+2):** $\rho$ appears in formulas throughout and has two prose forms used interchangeably. "Environmental change rate" in Section I context; "disturbance rate" in Section II/III contexts. Both are acceptable; at minimum canonicalize "disturbance rate" as the short form.
+- `strategy drift rate` — **opus-targeted-alternatives-v2 (+1):** Per Sonnet's r1 single-vote +1. "Drift" carries the slow-structural-persistent connotation that $\rho_\Sigma$ has (rate of strategy-DAG structural change vs. fast environmental perturbation). Acceptable alias.
+- `strategy drift rate` — **sonnet-4-6 (+1):** Alternative English gloss. "Drift" has appropriate connotations (slow, structural, persistent) vs "disturbance" (sudden, external).
+- `strategic disturbance rate` — **opus-targeted-alternatives-v2 (+2):** Alternative. Parallels $\rho$ (disturbance rate) → $\rho_\Sigma$ (strategic disturbance rate) in vocabulary. Pairs cleanly with strategic-tempo $\mathcal{T}_\Sigma$ in the same register.
 
 ## `$\rho_{i,\text{eff}}$`
 
@@ -7924,41 +11705,19 @@ _category: add-alias × 1_
 
 - `mismatch injection` — **gemini-3-1-pro-preview-r2 (+2):** Clearer than generic "disturbance".
 
-## `AAD AAD internal AAD internally`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `AAD internal adj AAD internally adv` | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `AAD internal adj AAD internally adv` — **opus-4-7-r2 (+2):** The "internally-derived-from-AAD-axioms" move is referenced as "AAD-internal," "AAD-derived," "internally derived," etc. Canonicalize on "AAD-internal" / "AAD-internally" for the specific claim "derived from axioms whose motivation comes from AAD's own architecture, not theorem-imported from external machinery."
-
 ## `AAD theoretical core vs ASF framework`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `AAD vs ASF distinction` | +2 | gemini-targeted-alternatives +2 |
 | `AAD ASF disambiguation` | +2 | opus-4-7-r2 +2 |
 
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
+- `AAD vs ASF distinction` — **gemini-targeted-alternatives (+2):** Clarifies that AAD is the theory while ASF is the application framework.
 - `AAD ASF disambiguation` — **opus-4-7-r2 (+2):** The terms are distinct: AAD is the mathematical core (Sections I/II/III + Appendices); ASF is the parent framework that includes AAD plus TST plus logogenic/logozoetic. Canonicalize: when discussing the math, "AAD"; when discussing the framework as a whole, "ASF"; when discussing a domain instantiation, the specific component name (TST, logogenic-agents, logozoetic-agents).
-
-## `ASF acronym`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `ASF` | +2 | opus-4-7-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `ASF` — **opus-4-7-r2 (+2):** Acceptable keep. CLAUDE.md and the principles file both flag that ASF is the *intentional* parent-level name (AAD is Part I, TST is Part II; logogenic/logozoetic are Parts III/IV); earlier rounds misread ASF as debt. The pairing AAD/TST/ASF reads correctly: AAD is the math, TST is the calibration laboratory, ASF is the framework.
 
 ## `CIY causal information yield`
 
@@ -8006,132 +11765,42 @@ _category: name-unnamed × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `macro dynamics admissibility` | +2 | codex-gpt-5-r2 +2 |
+| `aporia phases` | +1 | gemini-targeted-alternatives +1 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `macro dynamics admissibility` — **codex-gpt-5-r2 (+2):** Good umbrella for the macro-agent constraints in composition closure.
-
-## `accumulated loss across context resets`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `turnover drift` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `turnover drift` — **codex-gpt-5-r2 (+2):** Good logogenic name for degradation caused by repeated context turnover.
-
-## `action distinguishability`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `action distinguishability` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `action distinguishability` — **codex-gpt-5-r2 (+2):** Useful alias for causal information yield in intuitive explanations.
-
-## `action fluency`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `action fluency` ⭑ | +2 | audit-471203-incremental +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `action fluency` — **audit-471203-incremental (+2):** Auditor: evocative term he hasn't seen in the agent-theoretic literature; closest is Boyd's "implicit guidance and control." AAD-distinctive contribution is making fluency *quantitative* via $\Delta\eta^\ast(\Delta\tau) \approx 0$. Good naming; explicitly endorsed. [from 17-der-action-selection.md]
-
-## `active salience management`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `active salience management` ⭑ | +2 | opus-4-7-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `active salience management` — **opus-4-7-r2 (+2):** Acceptable keep — logogenic. "Active salience management" names the result (Singular Perturbation Theory applied to token generation).
-
-## `additive coordinate forcing → disc forced coordinates`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `confirming consensus 3` | +2 | sonnet-4-6-r2 +2 |
-
-_category: rename × 1_
-
-**Notes:**
-
-- `confirming consensus 3` — **sonnet-4-6-r2 (+2):** All five agents voted this at +2 or +3. What I can add beyond my own cold-start vote: the cross-vote reading shows that all agents independently rejected `#disc-cauchy-coordinates` (Opus −1, Codex −1), confirming "forced-coordinates" is the right move not just a popular one. The Čencov-4th-instance argument (reparameterization invariance is not Cauchy-FE additivity) independently emerged in Haiku, Codex, and Opus without coordination. That convergence on the *reason* — not just the conclusion — strengthens the vote beyond a bandwagon.
+- `aporia phases` — **gemini-targeted-alternatives (+1):** Collectivizes the mismatch/aporia breakdown.
 
 ## `adversarial edge target argmax`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `edge targeting optimum` | +2 | codex-gpt-5-r2 +2 |
+| `adversarial edge targeting` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `edge targeting optimum` — **codex-gpt-5-r2 (+2):** Good name for the emitter-recipient 16-cell targeting solution.
-
-## `agent classes class 1 2 3`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `architectural classes` | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `architectural classes` — **opus-4-7-r2 (+2):** Currently "agent classes," "architecture classes," "class 1/2/3," and "architectural classification" are all in use across `#der-directed-separation`. Canonicalize: "architectural classes" or "the architectural classification (Class 1 / Class 2 / Class 3)" — the *agent* class wording can collide with the LEXICON's "agent classes" table (adaptive system / agentic system / actuated agent / etc.) which is a different decomposition. Keep them disambiguated in prose.
+- `adversarial edge targeting` — **gemini-targeted-alternatives (+2):** Simplifies the formal term into a more readable prose description.
 
 ## `agent visible but objective irrelevant metric`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `vanity metric` | +2 | codex-gpt-5-r2 +2 |
+| `irrelevant visibility artifact` | +2 | gemini-targeted-alternatives +2 |
 
-_category: add-alias × 1_
+_category: add-alias × 1, rename × 1_
 
 **Notes:**
 
 - `vanity metric` — **codex-gpt-5-r2 (+2):** Standard operational term that AAD can formalize as high observability with low causal relevance to O_t.
-
-## `alignment uncertainty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `alignment uncertainty` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `alignment uncertainty` — **codex-gpt-5-r2 (+2):** Keep as a distinct term from source calibration.
-
-## `alpha prime sub scope`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `potential monotone tier` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `potential monotone tier` — **codex-gpt-5-r2 (+2):** Useful readable alias for potential and monotone games where sector-style transfer works.
+- `irrelevant visibility artifact` — **gemini-targeted-alternatives (+2):** Formally names the failure mode where a metric is observable but unlinked to the goal.
 
 ## `and or scope`
 
@@ -8144,125 +11813,53 @@ _category: add-alias × 1_
 - `and or scope` — **haiku-4-5 (+1):** Conjunctive/disjunctive scope. Self-descriptive. Keep.
 - `and or scope` — **opus-4-7-b (+1):** Keep. The slug is short, announces the formalism restriction ("AND/OR only"), and is directly cite-able.
 
-## `auxilia hierarchy`
+## `beta a2 assumed sub scope`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `auxilia hierarchy` ⭑ | +2 | opus-4-7-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `auxilia hierarchy` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. The Latin "Auxilia" is a deliberate vocabulary choice consistent with the PROPRIUM lineage; preserve.
-
-## `backward inference empathy`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `backward inference empathy` ⭑ | +2 | opus-4-7-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `backward inference empathy` — **opus-4-7-r2 (+2):** Acceptable keep — proposed logogenic observation. "Backward inference empathy" is precise (the segment claims that LLM statelessness forces continuous Bayesian inference on own text, mathematically identical to theory of mind).
-
-## `bathtub analogy for persistence condition`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `bathtub model` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `bathtub model` — **codex-gpt-5-r2 (+2):** Useful teaching name if the README adds Alan's bathtub gloss.
-
-## `beta prime sub scope`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `equilibrium set tier` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `equilibrium set tier` — **codex-gpt-5-r2 (+2):** Good honest alias for the CCE or set-convergence fallback.
-
-## `bias bound`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `bias bound` ⭑ | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `bias bound` — **gemini-3-1-pro-preview-r2 (+2):** Standard.
-
-## `c i`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `shared objective route` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `shared objective route` — **codex-gpt-5-r2 (+2):** Good route name for composite-agent scope.
-
-## `c ii`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `hierarchical derivation route` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `hierarchical derivation route` — **codex-gpt-5-r2 (+2):** Good route name for composite-agent scope.
-
-## `c iii`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `mutual benefit route` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `mutual benefit route` — **codex-gpt-5-r2 (+2):** Good route name for composite-agent scope.
-
-## `c1 c2 c3`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `convention hierarchy` | +2 | codex-gpt-5-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `convention hierarchy` — **codex-gpt-5-r2 (+2):** Canonicalize this as the value-object convention family.
-
-## `catastrophic forgetting`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `empty window pathology` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `cyclic game sub scope` | +2 | gemini-targeted-alternatives +2 |
+| `assumed sector regime` | +1 | codex-1 +1 |
 
 _category: rename × 1_
 
 **Notes:**
 
-- `empty window pathology` — **gemini-3-1-pro-preview-r2 (+2):** Too vague and ML-generic. Prefer AAD's "empty-window pathology".
+- `cyclic game sub scope` — **gemini-targeted-alternatives (+2):** Connects sub-scope beta directly to its non-convergent nature.
+- `assumed sector regime` — **codex-1 (+1):** Not elegant, but much more informative than a bare beta when the distinction is whether the sector condition is assumed rather than derived.
+
+## `cadentia`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `adaptive tempo` | +2 | gemini-targeted-alternatives +2 |
+| `cadentia` ⭑ | +2 | opus-targeted-alternatives-v2 +2 |
+| `channel rates` | +1 | opus-targeted-alternatives-v2 +1 |
+| `cognitive rhythm` | +0 | gemini-2 +1, opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 3, keep × 1_
+
+**Notes:**
+
+- `adaptive tempo` — **gemini-targeted-alternatives (+2):** Replaces the Latin with the exact AAD terminology.
+- `cadentia` — **opus-targeted-alternatives-v2 (+2):** Per `def-proprium-mapping`: "CADENTIA: The temporal structure of the loop (PULSUS/VIGILIAE), defining the agent's channel rates ($\nu^{(k)}$)." Names the *cycle's tempo structure* — the channel-rate vector $\{\nu^{(k)}\}$ that grounds adaptive-tempo $\mathcal{T}$. "Cadence" in English carries the *rhythm* sense; the Latinate form preserves the PROPRIUM register. Keep.
+- `channel rates` — **opus-targeted-alternatives-v2 (+1):** Plain-English, mechanism-first. Names what the segment defines ($\{\nu^{(k)}\}$). Loses the PULSUS/VIGILIAE substructure naming convention but gains the immediate connection to `#def-adaptive-tempo`. Good if the PROPRIUM register is being deprecated; weak otherwise.
+- `cognitive rhythm` — **gemini-2 (+1):** "Cadentia" is poetic but opaque. "Cognitive rhythm" clearly describes the temporal structure of the loop.
+- `cognitive rhythm` — **opus-targeted-alternatives-v2 (-1):** Considered (Gemini's r1 proposal). Same problem as causal-lock for indivisum: register mismatch with the rest of PROPRIUM. The Latin terms travel together or not at all.
+
+## `canonical formulations`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `canonical formulations` ⭑ | +2 | opus-4-7-r2 +1, opus-targeted-alternatives +1 |
+| `working canon` ✗ | -1 | opus-targeted-alternatives -1 |
+
+_category: canonicalize × 1, keep × 1, rename × 1_
+
+**Notes:**
+
+- `canonical formulations` — **opus-4-7-r2 (+1):** The middle ring in FORMAT.md's three-rings; in use but slightly redundant ("canonical" + "formulations" both name the chosen-among-alternatives quality). Acceptable canonicalization.
+- `canonical formulations` — **opus-targeted-alternatives (+1):** Per FORMAT.md three-ring framing: inevitability core / canonical formulations / empirical-heuristic-discussion. "Canonical" carries the second-ring sense (well-grounded, project-standard, not necessarily the unique form). Keep.
+- `working canon` — **opus-targeted-alternatives (-1):** Considered. "Working canon" carries a tentativeness that "canonical" does not — and FORMAT.md's three-ring structure does want "canonical" to mean *settled if not unique*. Rejected.
 
 ## `catastrophic forgetting regime`
 
@@ -8292,124 +11889,87 @@ _category: rename × 1, keep × 1_
 - `matrix survival bound` — **codex-gpt-5-r2 (+2):** The LMI is the technique. The subject is the matrix survival constraint that fixes the blank-wall failure.
 - `causal OODA1 LMI` — **gemini-3-1-pro-preview-r2 (+1):** Descriptive of the underlying math.
 
-## `century scale event log`
+## `chronica brief gloss`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `century scale event log` ⭑ | +2 | opus-4-7-r2 +2 |
+| `interaction history chronica` | +2 | gemini-targeted-alternatives +2 |
+| `everything the agent has lived through the lived past the river that the agent s identity is downstream of` | +1 | audit-471203-incremental +1 |
 
-_category: keep × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
-- `century scale event log` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. "Century-scale event log" is vivid and substantive.
+- `interaction history chronica` — **gemini-targeted-alternatives (+2):** Pairs the Greek term with its English translation for accessibility.
+- `everything the agent has lived through the lived past the river that the agent s identity is downstream of` — **audit-471203-incremental (+1):** Brief-field-grade gloss. The slug stays; the layperson/Feynman gloss is what's missing. [from 04-def-chronica.md]
 
 ## `claim the proposition the segment carries`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `segment claim` | +2 | gemini-targeted-alternatives +2 |
 | `claim` | +2 | opus-4-7-r2 +2 |
 
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
+- `segment claim` — **gemini-targeted-alternatives (+2):** Clarifies what a segment is asserting.
 - `claim` — **opus-4-7-r2 (+2):** Confirm. The pairing "segment carries a claim" is the right vocabulary; avoid "assertion," "statement," "result" (which is a specific type).
 
 ## `class 2 scope exit`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `class 2 scope boundary` | +2 | gemini-targeted-alternatives +2 |
 | `class 2 scope exit` ⭑ | +2 | opus-4-7-r2 +2 |
 
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
+- `class 2 scope boundary` — **gemini-targeted-alternatives (+2):** The limit where fully merged agents break directed separation.
 - `class 2 scope exit` — **opus-4-7-r2 (+2):** The phrase "scope exit" for Class 2 (handing off to logogenic-agents/) is repeated in `#der-directed-separation` Findings and README. Canonicalize as the named methodological move — explicit-scope-exit-rather-than-unenforced-approximation is what the segment claims as its contribution.
 
-## `closure defect bridge lemma`
+## `cognitive substrate gemini s logostratum proposal`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `closure bridge` | +2 | codex-gpt-5-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `closure bridge` — **codex-gpt-5-r2 (+2):** Shorter reusable phrase while preserving the formal bridge lemma title.
-
-## `closure defect consuming macro reserve`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `closure load` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `closure load` — **codex-gpt-5-r2 (+2):** Good name for the pressure epsilon-star times macro-rate places on composite persistence.
-
-## `code quality and tempo positive feedback`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `comprehension flywheel` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `comprehension flywheel` — **codex-gpt-5-r2 (+2):** Good positive-loop counterpart to quality-tempo spiral. Use flywheel for virtuous accumulation, spiral for both directions.
-
-## `code quality feedback loop through tempo`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `quality tempo spiral` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `quality tempo spiral` — **codex-gpt-5-r2 (+2):** Good TST name for virtuous or vicious code-quality dynamics.
-
-## `cognitive fusion`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `cognitive fusion` ⭑ | +2 | opus-4-7-r2 +2 |
+| `logostratum` | +2 | opus-targeted-alternatives-v2 +2 |
 
 _category: keep × 1_
 
 **Notes:**
 
-- `cognitive fusion` — **opus-4-7-r2 (+2):** Acceptable keep — logogenic-agents. "Cognitive fusion" with "Resonance" as the prose alias is workable.
-
-## `communication gain $\eta_{ji}^\ast$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `trust gain` | +2 | gemini-1 +1, gemini-2 +1 |
-
-**Notes:**
-
-- `trust gain` — **gemini-1 (+1):** The definition is "Trust-weighted uncertainty ratio". "Trust gain" might be more evocative of the inter-agent dynamic than the clinical "Communication gain".
-- `trust gain` — **gemini-2 (+1):** "Communication gain" sounds like signal amplitude. "Trust gain" captures the trust-weighted uncertainty ratio.
+- `logostratum` — **opus-targeted-alternatives-v2 (+2):** Per `def-proprium-mapping`. See logostratum row above.
 
 ## `completeness c3`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `predictive completeness behavioral completeness` | +2 | audit-471203-incremental +2 |
+| `predictive completeness` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `predictive completeness behavioral completeness` — **audit-471203-incremental (+2):** The term bundles two distinct properties: (i) $M_t$ retains all relevant info from history (sufficiency), (ii) the agent's behavior depends only on $M_t$ (Markov-of-policy). Two terms would be cleaner. [from 15-der-recursive-update.md]
+- `predictive completeness` — **gemini-targeted-alternatives (+2):** Separates it explicitly from behavioral completeness to clarify what $M_t$ retains from history.
+
+## `composition routes c i c ii c iii c iv`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `composition routes` | +2 | opus-targeted-alternatives-v2 +2 |
+| `composition pathways` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: canonicalize × 1, rename × 1_
+
+**Notes:**
+
+- `composition routes` — **opus-targeted-alternatives-v2 (+2):** Per Codex r1 +3 single. Use "routes" consistently for shared-objective / hierarchical / mutual-benefit / strategic composition. Confirms across my independent read of `form-composition-closure`, `deriv-strategic-composition`, `hyp-symbiogenic-composition`.
+- `composition pathways` — **opus-targeted-alternatives-v2 (+1):** Variant. "Pathway" connects to the strategy-DAG vocabulary (paths through the DAG). Weaker because "route" is shorter and the C-i...C-iv vocabulary already implies discrete options.
 
 ## `composition scope condition`
 
@@ -8426,17 +11986,24 @@ _category: name-unnamed × 1_
 - `composite agent condition` — **codex-1 (+1):** The core decision is whether a composite agent exists, not whether "composition" is in scope in some generic sense.
 - `teleological alignment condition` — **gemini-2 (+1):** More descriptive of the actual requirement (alignment) for composite status.
 
-## `correlated evidence overconfidence`
+## `conspectus`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `redundancy illusion` | +2 | codex-gpt-5-r2 +2 |
+| `active context` | +2 | gemini-2 +1, opus-targeted-alternatives-v2 +1 |
+| `model sufficiency` | +2 | gemini-targeted-alternatives +2 |
+| `conspectus` ⭑ | +2 | opus-targeted-alternatives-v2 +2 |
+| `pre event state` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
 
-_category: name-unnamed × 1_
+_category: rename × 3, keep × 1_
 
 **Notes:**
 
-- `redundancy illusion` — **codex-gpt-5-r2 (+2):** Good name for overcounting correlated channels as independent tempo.
+- `active context` — **gemini-2 (+1):** "Conspectus" is archaic. "Active context" clearly maps to $M_{\tau^-}$ assembled for processing.
+- `active context` — **opus-targeted-alternatives-v2 (+1):** Considered (Gemini's r1 proposal). Plain-English, immediately legible — and "active context" is software-engineering vocabulary that AAD readers will recognize. Weak because of register-mismatch (same argument as for indivisum / cadentia).
+- `model sufficiency` — **gemini-targeted-alternatives (+2):** Replaces the Latin with the established epistemic metric.
+- `conspectus` — **opus-targeted-alternatives-v2 (+2):** Per `def-proprium-mapping`: "CONSPECTUS: The assembled pre-event state ($X_{\tau^-}$) loaded into the active context window." Names the *active-context state* in a register-coherent way with the rest of PROPRIUM. The Latin earns its keep by enabling the iconic eight-component CONSPECTUS/PERCEPTA/ACTUS/CADENTIA/LOGOSTRATUM list.
+- `pre event state` — **opus-targeted-alternatives-v2 (-1):** Considered. Names the formal mathematical object ($X_{\tau^-}$) directly. Rejected: too compositional, fails communal-imagination test. The segment's contribution is *naming* the assembled-pre-event-state; "pre-event-state" doesn't add a name, just describes.
 
 ## `correlation hierarchy`
 
@@ -8451,53 +12018,31 @@ _category: rename × 1_
 - `correlation ladder` — **codex-gpt-5-r2 (+1):** A reasonable alternative if separability ladder lands and the project wants fewer internal hierarchies. Weak because hierarchy is already established.
 - `correlation ladder` — **opus-1m (+1):** Conditionally admit the rename only if other ladder-renames land; otherwise keep. Weak.
 
-## `crossing from multi agent to composite scope`
+## `default internal processing before output`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `crossing` | +2 | codex-gpt-5-r2 +2 |
+| `deliberation lag` | +2 | gemini-targeted-alternatives +2 |
+| `interior baseline` | +1 | codex-gpt-5-r2 +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `crossing` — **codex-gpt-5-r2 (+2):** Useful name for transitions into or out of composite-agent status.
+- `deliberation lag` — **gemini-targeted-alternatives (+2):** Translates internal processing to its temporal cost.
+- `interior baseline` — **codex-gpt-5-r2 (+1):** Useful for logozoetic prose, but lower confidence because it may sound too generic.
 
-## `crèche creche`
+## `derivation audit table heading`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `crèche with diacritic in framing prose creche in slugs` | +2 | opus-4-7-r2 +2 |
+| `derivation audit` | +2 | opus-targeted-alternatives-v2 +2 |
 
 _category: canonicalize × 1_
 
 **Notes:**
 
-- `crèche with diacritic in framing prose creche in slugs` — **opus-4-7-r2 (+2):** Mixed usage. Canonicalize: in segment titles and prose, "Crèche" with the grave accent (consistent with the agentic-tft source); in slugs, "creche" without the accent (since slug-tooling rules disallow non-ASCII).
-
-## `default signal function`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `default signal function` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `default signal function` — **codex-gpt-5-r2 (+2):** Good canonical phrase for the gradient-based attribution update.
-
-## `deliberation threshold`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `deliberation threshold` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `deliberation threshold` — **codex-gpt-5-r2 (+2):** Good handle for the inequality deciding whether deliberation pays.
+- `derivation audit` — **opus-targeted-alternatives-v2 (+2):** Per FORMAT.md and Sonnet/Opus r1 single +1 each (different agents). The longer form ("What Is Derived vs. What Is Chosen") is descriptive but wordy. "Derivation Audit" earns the slot — names the practice and the artifact.
 
 ## `distributed tempo`
 
@@ -8513,65 +12058,47 @@ _category: keep × 1_
 - `distributed tempo` — **codex-gpt-5-r2 (+2):** Good team-level tempo extension.
 - `network tempo` — **codex-1 (+1):** Shorter and easier to say aloud. The important content is tempo distributed across a communication network.
 
-## `effective disturbance`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `effective disturbance` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `effective disturbance` — **codex-gpt-5-r2 (+2):** Useful and conventional enough for the max-with-zero construction.
-
 ## `eli the agent type`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `eli agent` | +2 | gemini-targeted-alternatives +2 |
 | `eli` | +2 | opus-4-7-r2 +2 |
 
-_category: keep × 1_
+_category: keep × 2_
 
 **Notes:**
 
+- `eli agent` — **gemini-targeted-alternatives (+2):** Legacy or specific instantiated agent type.
 - `eli` — **opus-4-7-r2 (+2):** Acceptable keep — established in the firmatum / shoshin lineage. The acronym discipline check passes (used as a noun throughout the logozoetic corpus).
 
-## `empty stability plasticity feasibility window`
+## `empirical heuristic discussion third ring`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `stability plasticity collapse` | +2 | codex-gpt-5-r2 +2 |
+| `heuristic ring` | +2 | gemini-targeted-alternatives +2 |
+| `calibration ring` | +1 | sonnet-4-6 +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1_
 
 **Notes:**
 
-- `stability plasticity collapse` — **codex-gpt-5-r2 (+2):** Better AAD-native failure phrase than catastrophic forgetting when the mechanism matters.
+- `heuristic ring` — **gemini-targeted-alternatives (+2):** Streamlines the epistemic tier designation.
+- `calibration ring` — **sonnet-4-6 (+1):** The current name ("Empirical, heuristic, discussion") is a list, not a name. "Calibration ring" would give it a single handle. Alternatively: "open-world ring" (these are the segments that must face falsification).
 
-## `epistemic shadow`
+## `escape route`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `epistemic shadow` ⭑ | +2 | opus-4-7-r2 +2 |
+| `escape route` ⭑ | +2 | opus-targeted-alternatives-v2 +2 |
+| `floor escape` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
 
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `epistemic shadow` — **opus-4-7-r2 (+2):** Confirmation with new reasoning — Gemini's "epistemic shadow" (regions of strategy DAG that cannot be updated because feedback cannot reach them) is a stronger metaphor than my "observability dead zone" or Haiku's "observability dead zone." "Shadow" carries the right geometric intuition (a region of darkness behind an opaque body) and pairs naturally with "observability" (light source) and "frontier" (boundary). Lower weight than evidence-starvation because it's still a single-agent coinage rather than a multi-architecture convergence.
-
-## `equilibrium convergence`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `equilibrium convergence` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: keep × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
-- `equilibrium convergence` — **codex-gpt-5-r2 (+2):** Good subject phrase for the strategic-composition route.
+- `escape route` — **opus-targeted-alternatives-v2 (+2):** Per `#disc-identifiability-floor`: characterizes the *unique broadly-available escape* from the floor (the M1 meta-pattern). Multiple variant phrasings ("escape the floor," "boundary characterization," "unique escape") collapse to "escape route." Confirms Opus r1 single +1 and aligns with the floor-as-named-object discipline.
+- `floor escape` — **opus-targeted-alternatives-v2 (-1):** Considered. Tighter compound. Rejected: "escape route" is the vocabulary the segment uses; "floor-escape" reads forced.
 
 ## `evaluation metrics`
 
@@ -8587,30 +12114,6 @@ _category: keep × 2, rename × 1_
 - `logogenic diagnostics` — **codex-gpt-5-r2 (+2):** Evaluation metrics is generic. The observation segment is about diagnostics for logogenic agents.
 - `evaluation metrics` — **opus-4-7-r2 (+1):** Weak keep — slightly generic. "Evaluation metrics" doesn't tell the reader what's being measured. Could be specialized to "#obs-mt-quality-measurement" or similar but the current form is workable.
 - `evaluation metrics` — **sonnet-4-6-r2 (+1):** Standard term for what the segment covers.
-
-## `externalization reconstruction across sessions`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `memory relay` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `memory relay` — **codex-gpt-5-r2 (+2):** Sharper than reconstruction loop when the mechanism is one agent leaving state for a later session to recover.
-
-## `feedforward loop feedback loop`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `feedback loop` | +2 | sonnet-4-6-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `feedback loop` — **sonnet-4-6-r2 (+2):** "Feedback loop" is the canonical term in AAD. "Feedforward" is never intended in this context but might appear in places where "forward pass" (for LLMs) creates confusion. Confirm "feedback loop" is always the correct term for the agent-environment causal coupling.
 
 ## `fisher whitened update rule`
 
@@ -8629,88 +12132,88 @@ _category: rename × 1_
 - `fisher whitened update rule` — **opus-4-7-b (+1):** Keep. The Fisher-whitening mechanism is the segment's headline; "update rule" grounds it in the AAD update vocabulary.
 - `fisher whitened update` — **sonnet-4-6 (+1):** Dropping "rule" is minor but the segment is about the update equation, not an operational rule. Either works; slight preference for shorter form.
 
+## `gate 1 2 3 4`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `gate 1 2 3 4` ⭑ | +2 | opus-targeted-alternatives-v2 +2 |
+| `dependency content mechanical wn gate` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: keep × 1, add-alias × 1_
+
+**Notes:**
+
+- `gate 1 2 3 4` — **opus-targeted-alternatives-v2 (+2):** Numbered-gates is established and pronounceable. Adding word names is value-additive but not value-essential. The keep is robust.
+- `dependency content mechanical wn gate` — **opus-targeted-alternatives-v2 (+1):** Per FORMAT.md promotion gates. The numbers do most referencing work in conversation ("passed Gate 2") but the one-word names would help fresh readers. Acceptable canonicalization.
+
+## `gemini s analysis paralysis for excessive deliberation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `deliberation gridlock` | +2 | gemini-targeted-alternatives +2 |
+| `reject analysis paralysis` | +1 | sonnet-4-6-r2 +1 |
+
+_category: rename × 1, rebuttal × 1_
+
+**Notes:**
+
+- `deliberation gridlock` — **gemini-targeted-alternatives (+2):** Formalizes the over-thinking failure mode.
+- `reject analysis paralysis` — **sonnet-4-6-r2 (+1):** Gemini proposed "analysis paralysis" (+3) for the condition where $\rho_\text{delib} \cdot \Delta\tau$ exceeds the epistemic benefit of deliberating. "Analysis paralysis" is common-language baggage with a completely different connotation (cognitive overload causing decision-making to fail). The AAD mechanism is that the model goes *stale* during deliberation (the world changes faster than deliberation adds value) — this is a *model staleness* problem, not a cognitive paralysis. The deliberation-cost derivation already has a clean name (`der-deliberation-cost`); if the threshold deserves a name it should be "staleness threshold" or "deliberation horizon," not a borrowed phrase that misnames the mechanism.
+
 ## `glue code`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `agentic scaffold` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `structural coordination overhead` | +2 | gemini-targeted-alternatives +2 |
 
-_category: rename × 1_
+_category: rename × 2_
 
 **Notes:**
 
 - `agentic scaffold` — **gemini-3-1-pro-preview-r2 (+2):** Demeans the framework. Prefer "agentic scaffold" or "Orient Cascade enforcement mechanism" (alternative).
-
-## `gradient causal memory`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `gradient causal memory` ⭑ | +2 | opus-4-7-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `gradient causal memory` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. GCM compression functions; the slug correctly names the structure.
+- `structural coordination overhead` — **gemini-targeted-alternatives (+2):** Maps the TST term to the AAD formal equivalent.
 
 ## `greek rooted vocabulary`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `greek philosophical vocabulary` | +2 | codex-gpt-5-r2 +2 |
+| `greek rooted vocabulary` ⭑ | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, keep × 1_
 
 **Notes:**
 
 - `greek philosophical vocabulary` — **codex-gpt-5-r2 (+2):** Philosophical is the useful qualifier: these are not arbitrary Greek labels, but inherited conceptual terms.
+- `greek rooted vocabulary` — **gemini-targeted-alternatives (+2):** Secures the five-phase terminology (prolepsis, aisthesis, aporia, epistrophe, praxis).
 
-## `honest activation`
+## `hierarchy as repeated word`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `honest activation` ⭑ | +2 | opus-4-7-r2 +2 |
+| `hierarchy` | +2 | gemini-targeted-alternatives +2 |
+| `reserve for pearl s rename others selectively` | +1 | agent1-original-brainstorm +1 |
 
 _category: keep × 1_
 
 **Notes:**
 
-- `honest activation` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic norm. "Honest activation" reads as a thing (an activation pattern that preserves epistemic integrity); the segment establishes the gain-collapse argument.
-
-## `honesty scope honest scope honesty as architecture`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `honesty` | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `honesty` — **opus-4-7-r2 (+2):** Currently appears in three forms across `#disc-separability-pattern`, `#disc-identifiability-floor`, README, and CLAUDE.md. Canonicalize: "scope honesty" (two words, no hyphen, lowercase) as the noun phrase; "scope-honest" (hyphenated) as the adjective; do not use "scope-honesty-as-architecture" (overcomplicated three-word compound).
-
-## `inevitability core`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `inevitability core` ⭑ | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `inevitability core` — **opus-4-7-r2 (+2):** The phrase "inevitability core" appears in FORMAT.md's three-rings discussion (~15 segments where inevitability is the ceiling); it is also referenced in some Working Notes. Canonicalize: in framing-level material and review prose, "inevitability core" for the highest-tier segments. Stop using "exact-tier core" or "theorem-core" as paraphrases.
+- `hierarchy` — **gemini-targeted-alternatives (+2):** Core organizational concept (causal, correlation, convention).
+- `reserve for pearl s rename others selectively` — **agent1-original-brainstorm (+1):** Weak proposal. Four uses in the framework (Pearl's, convention, correlation, approximation-tiering) is likely too many. Partial disambiguation via correlation→correlation-ladder and convention→continuation-hierarchy.
 
 ## `integration of four disciplines as the framing of AAD s contribution`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `four discipline synthesis` | +2 | gemini-targeted-alternatives +2 |
 | `epistemic architecture` | +2 | sonnet-4-6-r2 +2 |
 
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
+- `four discipline synthesis` — **gemini-targeted-alternatives (+2):** Concise framing of the framework context.
 - `epistemic architecture` — **sonnet-4-6-r2 (+2):** PROPOSALS §Bundle 1 notes that three independent frontier-model audits converged on reframing AAD from "integration of four disciplines" to "epistemic architecture for bounded correction." The README still leads with the integration framing. This vote canonicalizes "epistemic architecture" as the primary positioning term — integration is a method, not the contribution. The contribution is the architecture.
 
 ## `internal external decomposition`
@@ -8727,185 +12230,186 @@ _category: rename × 2_
 - `viability decomposition` — **sonnet-4-6-r2 (+2):** The file lacks the role-prefix (the slug `internal-external-decomposition` has no type prefix). The content is a derivation of the log-additive split of viability into internal health + environmental affordance. "Viability decomposition" names the thing (viability) and what happens to it (decomposition). The role-prefix `deriv-` would be applied mechanically by `bin/align-slug`; this vote is on the subject-noun only.
 - `boundary decomposition` — **gemini-3-1-pro-preview-r2 (+1):** "Boundary" defines what is being decomposed.
 
-## `l1 prime`
+## `interpres`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `l1 observable` | +2 | codex-gpt-5-r2 +2 |
+| `context mediator` | +2 | gemini-2 +1, opus-targeted-alternatives-v2 +1 |
+| `epistemic substate` | +2 | gemini-targeted-alternatives +2 |
+| `interpres` ⭑ | +1 | opus-targeted-alternatives-v2 +1 |
+| `controller loop` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
 
-_category: add-alias × 1_
+_category: rename × 3, keep × 1_
 
 **Notes:**
 
-- `l1 observable` — **codex-gpt-5-r2 (+2):** Keep L1-prime as notation, but L1-observable is much easier in prose and says why the refinement exists.
+- `context mediator` — **gemini-2 (+1):** "Interpres" is Latin-heavy. "Context mediator" exactly describes the infrastructure mediating $M_t$ and the substrate.
+- `context mediator` — **opus-targeted-alternatives-v2 (+1):** Considered (Gemini's r1 proposal). Genuinely good description of what an interpres does (mediates $M_t$ and the substrate per the PROPRIUM architecture). Trade-off: leaves the rest of PROPRIUM's Latin coherent but breaks the symmetry; the connection to firmatum/shoshin source code is weakened.
+- `epistemic substate` — **gemini-targeted-alternatives (+2):** Replaces the Latin with the $M_t$ structural terminology.
+- `interpres` — **opus-targeted-alternatives-v2 (+1):** Latin sits in the PROPRIUM/Logostratum register (per `~/src/firmatum/PROPRIUM-ARCHITECTURE.md` lineage). Same register-coherence argument as the above. Weaker keep because "interpres" reads the most opaque of the PROPRIUM Latinate terms — least communal-imagination-ready.
+- `controller loop` — **opus-targeted-alternatives-v2 (-1):** Considered. Matches the shoshin code (Interpres is the controller-loop in the prototype). Rejected: "controller-loop" pulls from control-theory in a way that collides with AAD's existing controller / agent / loop vocabulary.
+
+## `l1`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `level 1 associational` | +2 | gemini-targeted-alternatives +2 |
+| `l1 c` ✗ | -1 | agent1-original-brainstorm -1 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `level 1 associational` — **gemini-targeted-alternatives (+2):** Expands to full definition.
+- `l1 c` — **agent1-original-brainstorm (-1):** Too technical; uses symbol.
 
 ## `lindy baseline`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `lindy baseline` ⭑ | +2 | codex-gpt-5-r2 +2 |
+| `structural persistence baseline` | +2 | gemini-targeted-alternatives +2 |
 
-_category: add-alias × 1_
+_category: add-alias × 1, rename × 1_
 
 **Notes:**
 
 - `lindy baseline` — **codex-gpt-5-r2 (+2):** Useful alias for change-expectation baselines derived from survival age.
+- `structural persistence baseline` — **gemini-targeted-alternatives (+2):** More descriptive than "lindy".
 
-## `log odds edge coordinate`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `additive evidence coordinate` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `additive evidence coordinate` — **codex-gpt-5-r2 (+2):** Useful explanatory alias for why log-odds is the natural parameter.
-
-## `loop vs cycle`
+## `logostratum`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `loop is structure cycle is traversal` | +2 | opus-4-7-r2 +2 |
+| `logostratum` ⭑ | +2 | opus-targeted-alternatives-v2 +2 |
+| `cognitive substrate` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
 
-_category: canonicalize × 1_
+_category: keep × 1, rename × 1_
 
 **Notes:**
 
-- `loop is structure cycle is traversal` — **opus-4-7-r2 (+2):** The LEXICON already does this distinction explicitly. Canonicalize as a discipline: in any prose where the distinction matters, use "loop" only for the persistent causal coupling (a structural property) and "cycle" only for one complete traversal (the unit of work). The framework's naming pays returns when the two terms are kept rigorously disjoint.
+- `logostratum` — **opus-targeted-alternatives-v2 (+2):** Per `def-proprium-mapping`: "LOGOSTRATUM: The underlying logogenic substrate (e.g., the LLM backbone) that implements the update function $f_X$." The compound *logos* + *stratum* (language + layer) names exactly what the segment defines: the linguistic substrate as architectural layer. Connection to logogenic-agents is direct in the morphology. Keep.
+- `cognitive substrate` — **opus-targeted-alternatives-v2 (-1):** Considered (Gemini's r1 proposal). "Cognitive substrate" is generic; "logostratum" is project-specific to the PROPRIUM lineage. Rejected: loses the *logogenic* connection that the morphology carries.
+
+## `logostratum rlhf4 backbone`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `logogenic architecture` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `logogenic architecture` — **gemini-targeted-alternatives (+2):** Standardizes the structural description.
 
 ## `low mixed high ambiguity event mix`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `ambiguity profile` | +2 | codex-gpt-5-r2 +2 |
+| `ambiguity stratified event mix` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `ambiguity profile` — **codex-gpt-5-r2 (+2):** Useful empirical descriptor for event-stream composition.
+- `ambiguity stratified event mix` — **gemini-targeted-alternatives (+2):** Cleaner formulation of the observation mix.
 
-## `macro step ratio`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `macro step ratio` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `macro step ratio` — **codex-gpt-5-r2 (+2):** Good candidate name for `K_c`; clearer than leaving it as a bare timescale parameter.
-
-## `matrix exploration bonus`
+## `matrix CIY tensor CIY`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `matrix exploration bonus` ⭑ | +2 | codex-gpt-5-r2 +2 |
+| `matrix causal information yield` | +2 | gemini-targeted-alternatives +2 |
+| `fisher CIY matrix CIY consistent` | +1 | audit-471203-incremental +1 |
 
-_category: keep × 1_
-
-**Notes:**
-
-- `matrix exploration bonus` — **codex-gpt-5-r2 (+2):** Clear LMI lift of the scalar survival bonus.
-
-## `matrix survival constraint`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `matrix survival constraint` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
-- `matrix survival constraint` — **codex-gpt-5-r2 (+2):** Better public subject phrase than LMI whenever the method is not the point.
+- `matrix causal information yield` — **gemini-targeted-alternatives (+2):** Expands the scalar CIY into full-state spaces.
+- `fisher CIY matrix CIY consistent` — **audit-471203-incremental (+1):** Inconsistent terminology in `#disc-ciy-unified-objective`: both "Matrix CIY" and "$\mathcal{I}_o(a)$"/Fisher Information Matrix appear. Auditor proposes: "Fisher CIY" might be most specific; in any case, pick one for any future Brief. [from 39-42-section-ii-ciy-strategy-chain.md]
 
 ## `maximum useful chain depth`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `maximum useful chain depth` ⭑ | +2 | codex-gpt-5-r2 +2 |
+| `maximum viable chain depth` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `maximum useful chain depth` — **codex-gpt-5-r2 (+2):** Important derived bound; keep the plain descriptive name.
+- `maximum viable chain depth` — **gemini-targeted-alternatives (+2):** More precise: past this depth, edges are uncorrectable.
 
-## `minimum sufficiency after a session rebuild`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reentry threshold` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `reentry threshold` — **codex-gpt-5-r2 (+2):** Useful logogenic quantity: how much reconstructed state is needed before the agent can act competently again.
-
-## `model state written into the environment`
+## `model synchronization cost reversal under ambiguity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `model inscription` | +2 | codex-gpt-5-r2 +2 |
+| `synchronization cost reversal` | +2 | gemini-targeted-alternatives +2 |
+| `ambiguity reversal` | +1 | codex-gpt-5-r2 +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `model inscription` — **codex-gpt-5-r2 (+2):** Useful TST and logogenic phrase for externalized knowledge that later agents can read back.
+- `synchronization cost reversal` — **gemini-targeted-alternatives (+2):** Captures the phase shift where coordination becomes deleterious.
+- `ambiguity reversal` — **codex-gpt-5-r2 (+1):** Names the case where Auftragstaktik bandwidth ordering reverses, but this needs more formal support.
 
 ## `nominal coupling`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `query bound attention bound epistemic only query coupling attentional coupling` | +2 | audit-471203-incremental +2 |
+| `query bound agency` | +2 | gemini-targeted-alternatives +2 |
 
-_category: rename × 1_
+_category: rename × 2_
 
 **Notes:**
 
 - `query bound attention bound epistemic only query coupling attentional coupling` — **audit-471203-incremental (+2):** "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md]
-
-## `o t objective`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `objective` | +2 | opus-4-7-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `objective` — **opus-4-7-r2 (+2):** Confirm. Note: avoid "goal" as an alias — "goal" is the everyday-English compound noun (the thing the agent is trying to do); "objective" is the formal functional. They are not interchangeable in AAD even though they often translate to each other in prose.
+- `query bound agency` — **gemini-targeted-alternatives (+2):** Better captures agency where the effect is on what's *seen* rather than what *happens* (attention-bound).
 
 ## `observation design lever reducing ambiguity`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `ambiguity damping` | +2 | codex-gpt-5-r2 +2 |
+| `ambiguity mitigation lever` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `ambiguity damping` — **codex-gpt-5-r2 (+2):** Good name for interventions that lower observation ambiguity before the update.
+- `ambiguity mitigation lever` — **gemini-targeted-alternatives (+2):** Translates the design choice into an active mechanism.
 
-## `operational persistence`
+## `ooda4 agent as act agent logogenic`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `operational persistence` ⭑ | +2 | codex-gpt-5-r2 +2 |
+| `ooda4 classification` | +2 | gemini-targeted-alternatives +2 |
 
-_category: keep × 1_
+_category: rename × 1_
 
 **Notes:**
 
-- `operational persistence` — **codex-gpt-5-r2 (+2):** Keeps the persistence taxonomy balanced and intelligible.
+- `ooda4 classification` — **gemini-targeted-alternatives (+2):** Boyd-based taxonomy for agent architectures.
+
+## `ooda4 framework enforcing adaptive cycle separation`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `ooda4 cycle separation` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `ooda4 cycle separation` — **gemini-targeted-alternatives (+2):** Connects the Boyd framework to the strict AAD adaptive cycle phases.
 
 ## `out of band time markers for RLHF4 agents`
 
@@ -8919,41 +12423,45 @@ _category: name-unnamed × 1_
 
 - `time delta markers` — **codex-gpt-5-r2 (+2):** More sober than visual time delta and useful for defining tempo in context-bound agents.
 
+## `out of band time markers for rlhf4 agents`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `exogenous temporal markers` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `exogenous temporal markers` — **gemini-targeted-alternatives (+2):** Clarifies that these markers originate outside the agent loop.
+
 ## `p1 p2 p3`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `projection admissibility` | +2 | codex-gpt-5-r2 +2 |
+| `predictive sufficiency hierarchy` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `projection admissibility` — **codex-gpt-5-r2 (+2):** The three projection constraints need this umbrella.
+- `predictive sufficiency hierarchy` — **gemini-targeted-alternatives (+2):** Names the specific content of the p1-p3 progression.
 
-## `persistence overloaded`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `structural persistence task adequacy operational persistence continuity persistence` | +2 | audit-471203-incremental +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `structural persistence task adequacy operational persistence continuity persistence` — **audit-471203-incremental (+2):** The four-way taxonomy is partially in LEXICON / FORMAT discipline but not surfaced visibly in framing-level material. Auditor: "Worth surfacing the four-way taxonomy more visibly in the README's Overview." Most agent-theoretic frameworks have one sense of "persists"; AAD's separation prevents a class of category errors. [from 26-29-section-i-persistence-machinery.md]
-
-## `persistent storage reconstruction of class 2 state`
+## `pearl-level 2 causal contrast`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `reconstruction loop` | +2 | codex-gpt-5-r2 +2 |
+| `level 2 interventional contrast` | +2 | gemini-targeted-alternatives +2 |
+| `the agent s choice actually changes what happens` | +1 | audit-471203-incremental +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
-- `reconstruction loop` — **codex-gpt-5-r2 (+2):** Useful logogenic term for external memory restoring working state after turnover.
+- `level 2 interventional contrast` — **gemini-targeted-alternatives (+2):** More descriptive of the mathematical mechanism.
+- `the agent s choice actually changes what happens` — **audit-471203-incremental (+1):** Brief-grade gloss only. The formal name is doing real work; the layperson translation is missing from any Brief field. [from 06-scope-agency.md]
 
 ## `principled decision integration`
 
@@ -8970,29 +12478,33 @@ _category: rename × 1, keep × 1_
 - `principled decision integration` — **opus-4-7-b (+1):** Keep.
 - `principled decision integration` — **sonnet-4-6-r2 (+1):** "Principled decision integration" — the optimal changeset-composition result. Verbose but accurate.
 
-## `prompt engineering`
+## `promote in topological order`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `ambiguity modulation` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `topological promotion` | +2 | gemini-targeted-alternatives +2 |
+| `topological promotion order` | +1 | sonnet-4-6 +1 |
 
 _category: rename × 1_
 
 **Notes:**
 
-- `ambiguity modulation` — **gemini-3-1-pro-preview-r2 (+2):** Avoid this unprincipled term; prefer "ambiguity modulation" ($\mathcal{A}$) or "zero-ambiguity conditioning" (alternative).
+- `topological promotion` — **gemini-targeted-alternatives (+2):** Formalizes the dependency-ordered maturity process.
+- `topological promotion order` — **sonnet-4-6 (+1):** FORMAT.md uses this phrase but doesn't name it as a convention. "Topological promotion" as a named methodology would make the gate-ordering rule easy to reference.
 
-## `purpose purposeful`
+## `prompt engineering`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `purpose purposeful` ⭑ | +2 | opus-4-7-r2 +2 |
+| `ambiguity modulation` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `observation boundary tuning` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: rename × 2_
 
 **Notes:**
 
-- `purpose purposeful` — **opus-4-7-r2 (+2):** Confirm. "Purposeful agent" is the LEXICON-canonical term for actuated agents; "purposeful substate" for $G_t$. Avoid "goal-oriented" as a synonym (the LEXICON deprecates it).
+- `ambiguity modulation` — **gemini-3-1-pro-preview-r2 (+2):** Avoid this unprincipled term; prefer "ambiguity modulation" ($\mathcal{A}$) or "zero-ambiguity conditioning" (alternative).
+- `observation boundary tuning` — **gemini-targeted-alternatives (+2):** Recontextualizes the practice in AAD formal terms.
 
 ## `quality to tempo chain`
 
@@ -9005,18 +12517,6 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `quality to tempo chain` — **codex-gpt-5-r2 (+2):** Useful TST bridge phrase from code quality to observation noise, gain, tempo, and persistence.
-
-## `reactive system`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reactive system` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `reactive system` — **codex-gpt-5-r2 (+2):** Good low-end quadrant name in the agent spectrum.
 
 ## `readme md maturity gradient`
 
@@ -9047,96 +12547,28 @@ _category: keep × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `identification regimes` | +2 | codex-gpt-5-r2 +2 |
+| `admissibility regimes` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `identification regimes` — **codex-gpt-5-r2 (+2):** Good umbrella for intervention-rich, partial-intervention, and observational settings.
-
-## `regime i`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `informative update regime` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `informative update regime` — **codex-gpt-5-r2 (+2):** Makes the interaction-channel classification easier to scan.
-
-## `regime iii`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `ambient noise regime` | +2 | codex-gpt-5-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `ambient noise regime` — **codex-gpt-5-r2 (+2):** Good recipient-side name for below-floor events.
+- `admissibility regimes` — **gemini-targeted-alternatives (+2):** Elevates the abstract A/B/C to their functional role.
 
 ## `replayed pseudo event`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `replay event` | +2 | codex-gpt-5-r2 +2 |
+| `simulated event playback` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `replay event` — **codex-gpt-5-r2 (+2):** Shorter handle for consolidation updates that carry no new external information.
-
-## `routing structure`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `routing structure` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `routing structure` — **codex-gpt-5-r2 (+2):** Good name for topology plus protocol. It supports the routing/content distinction.
-
-## `section i header adaptive systems under uncertainty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adaptive systems under uncertainty` | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `adaptive systems under uncertainty` — **opus-4-7-r2 (+2):** The OUTLINE uses this; preserve. Avoid drift to "Adaptive Dynamics" or "Section I: Adaptation."
-
-## `section iii header agentic composites`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `agentic composites` | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `agentic composites` — **opus-4-7-r2 (+2):** Confirm. Pairs with the LEXICON's continuity-stance and unity-dimensions vocabulary.
-
-## `separability pattern → disc separability ladder`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `confirming consensus 3` | +2 | sonnet-4-6-r2 +2 |
-
-_category: rename × 1_
-
-**Notes:**
-
-- `confirming consensus 3` — **sonnet-4-6-r2 (+2):** All five agents voted this at +2 or +3. New reasoning: Opus specifically notes the naming should be singular ("separability-ladder" not "separability-ladders") because the segment names *a* structure, not a collection. Haiku votes singular (+3). Codex votes singular (+3). The singular form wins; my original cold-start vote was inadvertently ambiguous. Confirms singular.
+- `simulated event playback` — **gemini-targeted-alternatives (+2):** Clearer terminology for the offline consolidation mechanism.
 
 ## `simulation results`
 
@@ -9151,18 +12583,6 @@ _category: keep × 1_
 - `simulation results` — **haiku-4-5 (+1):** 6 variants validating claims. Self-descriptive. Keep.
 - `simulation results` — **sonnet-4-6-r2 (+1):** Accurate description of what the segment is.
 
-## `strategic dynamics`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strategic dynamics` ⭑ | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `strategic dynamics` — **gemini-3-1-pro-preview-r2 (+2):** Solid and descriptive.
-
 ## `strategy cost regret bound`
 
 | candidate | aggregate | votes |
@@ -9176,18 +12596,6 @@ _category: rename × 1_
 
 - `regret bound` — **gemini-3-1-pro-preview-r2 (+2):** Shorter; strategy cost is implied context.
 - `strategy cost regret bound` — **haiku-4-5 (+1):** Regret-bound derivation of the strategy-cost KL direction. Compound; reads naturally as "the regret bound applied to strategy cost." Keep.
-
-## `strategy description length`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strategy description length` ⭑ | +2 | codex-gpt-5-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `strategy description length` — **codex-gpt-5-r2 (+2):** Good operational name for the MDL term in strategy cost.
 
 ## `strategy persistence schema`
 
@@ -9207,149 +12615,129 @@ _category: keep × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `consolidation enablement` | +2 | codex-gpt-5-r2 +2 |
+| `structural adaptation trigger` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `consolidation enablement` — **codex-gpt-5-r2 (+2):** Better phrase for the claim that consolidation makes slow structural operations executable.
+- `structural adaptation trigger` — **gemini-targeted-alternatives (+2):** Focuses on the condition that forces class-expansion.
 
 ## `structured rich context`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `structured context` | +2 | gemini-targeted-alternatives +2 |
 | `structured rich context` ⭑ | +2 | opus-4-7-r2 +2 |
 
-_category: keep × 1_
+_category: rename × 1, keep × 1_
 
 **Notes:**
 
+- `structured context` — **gemini-targeted-alternatives (+2):** Replaces "rich" with precise "structured".
 - `structured rich context` — **opus-4-7-r2 (+2):** Acceptable keep — logogenic proposed. "Structured rich context" (SRC) is a substantive concept-name.
-
-## `substrate independence`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `substrate independence` ⭑ | +2 | opus-4-7-r2 +2 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `substrate independence` — **opus-4-7-r2 (+2):** Acceptable keep — logozoetic. Names the result that identity survives substrate migration.
-
-## `sudden loss of model sufficiency under regime entry`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `sufficiency shattering` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `sufficiency shattering` — **codex-gpt-5-r2 (+2):** Vivid and useful, but maybe too dramatic for formal slug use.
 
 ## `survival fisher floor`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `survival fisher floor` ⭑ | +2 | codex-gpt-5-r2 +2 |
+| `survival fim floor` | +2 | gemini-targeted-alternatives +2 |
 
-_category: canonicalize × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
 - `survival fisher floor` — **codex-gpt-5-r2 (+2):** Good name for the matrix lower bound on information needed to survive.
+- `survival fim floor` — **gemini-targeted-alternatives (+2):** Connects directly to the Fisher Information Matrix derivation.
 
 ## `symbiogenic consolidation time`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `consolidation horizon` | +2 | codex-gpt-5-r2 +2 |
+| `consolidation epoch` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `consolidation horizon` — **codex-gpt-5-r2 (+2):** Good name for the time-to-integrated-composite quantity.
+- `consolidation epoch` — **gemini-targeted-alternatives (+2):** Clarifies that this is a duration/epoch rather than a continuous rate.
+
+## `symbol default bias bound track 1 track 2`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `class 2 bias bound` | +2 | gemini-targeted-alternatives +2 |
+| `transport track fisher track` | +1 | codex-1 +1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `class 2 bias bound` — **gemini-targeted-alternatives (+2):** Specifically locates the bias bound on the architectural hierarchy.
+- `transport track fisher track` — **codex-1 (+1):** If these labels survive in framing prose, they should expose the real distinction instead of forcing readers to remember which numbered track is which.
 
 ## `technical debt`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `observability defect` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: rename × 1_
-
-**Notes:**
-
-- `observability defect` — **gemini-3-1-pro-preview-r2 (+2):** A non-physical metaphor. Prefer "observability defect" or "latent structural mismatch" (alternative).
-
-## `tests as reusable level 2 interventions`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `probe library` | +2 | codex-gpt-5-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `probe library` — **codex-gpt-5-r2 (+2):** Good TST name for tests that preserve interventional access.
-
-## `the creche boundary`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `creche graduation` | +2 | opus-4-7-r2 +2 |
-| `creche boundary` | +1 | opus-4-7-r2 +1 |
-| `creche graduation condition` | +1 | opus-4-7-r2 +1 |
-
-_category: rename × 3_
-
-**Notes:**
-
-- `creche graduation` — **opus-4-7-r2 (+2):** Stronger alternative: "creche graduation" names the *event* that the segment characterizes; "creche boundary" names the *threshold*. Either is defensible; graduation reads more substantive.
-- `creche boundary` — **opus-4-7-r2 (+1):** Drop "the" from the slug. Slug-stylistic rather than semantic — slugs in the rest of the corpus generally don't include articles ("the"). The body's "Crèche graduation occurs when..." reads cleanly without the article.
-- `creche graduation condition` — **opus-4-7-r2 (+1):** Same as above for the def-version; "the" in slug is unusual and the substantive name is "crèche graduation condition."
-
-## `the cycle the adaptive cycle the agentic cycle`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the cycle the adaptive cycle` | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `the cycle the adaptive cycle` — **opus-4-7-r2 (+2):** The five-phase Prolepsis-Aisthesis-Aporia-Epistrophe-Praxis cycle is "the cycle" or "the adaptive cycle" in the LEXICON and NOTATION. The phrase "the agentic cycle" appears occasionally and overlaps with "the cycle" (post-rename, when ACT was the framework name, "the agentic cycle" meant the ACT-cycle). Canonicalize on "the (adaptive) cycle" — drop "agentic cycle" as a synonym.
-
-## `the four views`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `four views architecture` | +2 | opus-4-7-r2 +2 |
-| `four views` | +1 | opus-4-7-r2 +1 |
+| `structural capacity debt` | +2 | gemini-targeted-alternatives +2 |
 
 _category: rename × 2_
 
 **Notes:**
 
-- `four views architecture` — **opus-4-7-r2 (+2):** Even stronger alternative — names the architectural pattern, not just the four views.
-- `four views` — **opus-4-7-r2 (+1):** Same article-drop as above. The slug should be #def-four-views (or #def-four-views-architecture for full clarity).
+- `observability defect` — **gemini-3-1-pro-preview-r2 (+2):** A non-physical metaphor. Prefer "observability defect" or "latent structural mismatch" (alternative).
+- `structural capacity debt` — **gemini-targeted-alternatives (+2):** Links technical debt to the structural adaptation machinery.
+
+## `terminal reached but $O_t$ unsatisfied`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `attainability failure` | +2 | gemini-targeted-alternatives +2 |
+| `terminal but unsatisfied case` | +1 | opus-targeted-alternatives +1 |
+| `arrival without success` | +1 | opus-targeted-alternatives +1 |
+
+_category: rename × 3_
+
+**Notes:**
+
+- `attainability failure` — **gemini-targeted-alternatives (+2):** Describes the specific failure mode where a plan completes without achieving the objective.
+- `terminal but unsatisfied case` — **opus-targeted-alternatives (+1):** Names the diagnostic quadrant in the satisfaction-gap × control-regret 2×2 (per `#der-orient-cascade` step 3). "Terminal reached but $O_t$ unsatisfied" reads as a Boolean expression, not a name. Weak rename to a more standard noun-phrase form.
+- `arrival without success` — **opus-targeted-alternatives (+1):** Plain-English Brief-field-friendly alternative. Names the failure mode pithily.
+
+## `the trio collectively m1 m2 m3`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `epistemic architecture` | +2 | opus-targeted-alternatives-v2 +2 |
+| `meta architecture trio` | +1 | opus-targeted-alternatives-v2 +1 |
+| `floor ladder forced coordinates` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: rename × 3_
+
+**Notes:**
+
+- `epistemic architecture` — **opus-targeted-alternatives-v2 (+2):** Per CLAUDE.md §7: the three meta-segments (`#disc-separability-pattern`, `#disc-identifiability-floor`, `#disc-additive-coordinate-forcing`) collectively named "epistemic architecture." Opus r1 single +1; my upgrade — the naming is in active use as framing-vocabulary in the README and review prose. Canonicalize as the framing phrase, *not* as a fourth meta-segment.
+- `meta architecture trio` — **opus-targeted-alternatives-v2 (+1):** Variant. More descriptive of the structure (three meta-segments). Weaker because "epistemic architecture" carries the *substantive* claim (these three jointly determine what AAD knows about); "trio" is just a count.
+- `floor ladder forced coordinates` — **opus-targeted-alternatives-v2 (+1):** Per Opus r1 single +1: if both `#separability-ladder` and `#forced-coordinates` rename land, the trio is named by its three concrete nouns. Weaker than "epistemic architecture" because the three-noun string is heavy; useful as a sub-naming when the components are individually relevant.
 
 ## `tier 1 tier 2 tier 3 contraction`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `contraction hierarchy` | +2 | gemini-targeted-alternatives +2 |
 | `contraction tiers` | +2 | opus-4-7-r2 +2 |
 
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
+- `contraction hierarchy` — **gemini-targeted-alternatives (+2):** Replaces raw tier numbers with the property they organize.
 - `contraction tiers` — **opus-4-7-r2 (+2):** In `#form-composition-closure` and `#result-contraction-template`, the Tier 1/2/3 partition is sometimes "contraction tiers," sometimes "agent tiers," sometimes "the bridge-lemma classification." Canonicalize on "contraction tiers" (Tier 1 / Tier 2 / Tier 3) — names the structural property (operator regularity), not the agents themselves. Keeps the term distinct from "Tier 1/2/3" usage in `#disc-approximation-tiering` if it's also used there for the AND/OR or scalar-tempo extensions.
 
 ## `todo md archive`
@@ -9363,91 +12751,49 @@ _category: canonicalize × 1_
 - `todo md archive` — **opus-4-7-b (+1):** Keep. Direct, accurate.
 - `todo md archive` — **opus-4-7 (+1):** Fine; conventional. Keep.
 
-## `trust meta model`
+## `topological promotion order`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `trust meta model` ⭑ | +2 | codex-gpt-5-r2 +2 |
+| `topological promotion` | +2 | opus-targeted-alternatives-v2 +2 |
+| `dependency respecting promotion` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
 
-_category: keep × 1_
+_category: canonicalize × 1, rename × 1_
 
 **Notes:**
 
-- `trust meta model` — **codex-gpt-5-r2 (+2):** Good name for modelling another source's reliability and alignment.
+- `topological promotion` — **opus-targeted-alternatives-v2 (+2):** Per FORMAT.md gate-ordering rule: segments promote in dependency-graph topological order. Sonnet r1 single +1; my read upgrades — naming the methodology makes it referenceable in audit and review.
+- `dependency respecting promotion` — **opus-targeted-alternatives-v2 (-1):** Considered. More plain-English. Rejected: "topological" is the precise term; the discipline aspires to formality.
 
 ## `turnover multiplier`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `turnover multiplier` ⭑ | +2 | codex-gpt-5-r2 +2 |
+| `comprehension compounding tax` | +2 | gemini-targeted-alternatives +2 |
+| `multi agent continuity tax` | +1 | gemini-targeted-alternatives +1 |
 
-_category: canonicalize × 1_
+_category: rename × 2, canonicalize × 1_
 
 **Notes:**
 
 - `turnover multiplier` — **codex-gpt-5-r2 (+2):** Useful TST quantity for personnel and context turnover.
+- `comprehension compounding tax` — **gemini-targeted-alternatives (+2):** Explicitly connects it to the comprehension time dominating the dual optimization.
+- `multi agent continuity tax` — **gemini-targeted-alternatives (+1):** Highlights the issue comes from agent transitions/turnover.
 
 ## `two condition decomposition of persistence`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `persistence condition decomposition` | +2 | gemini-targeted-alternatives +2 |
 | `structural task adequacy decomposition` | +2 | opus-4-7-r2 +2 |
 
-_category: canonicalize × 1_
+_category: rename × 1, canonicalize × 1_
 
 **Notes:**
 
+- `persistence condition decomposition` — **gemini-targeted-alternatives (+2):** Refers to the split between operational and structural persistence.
 - `structural task adequacy decomposition` — **opus-4-7-r2 (+2):** `#result-persistence-condition` introduces this and the prose uses "two-condition decomposition," "structural vs task-adequacy split," and "persistence has two conditions" interchangeably. Canonicalize on "structural / task-adequacy decomposition" as the named result; the variants are elaborations. The Findings section already uses this form.
-
-## `u m epistemic unity multi agent`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistemic unity` | +2 | opus-4-7-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `epistemic unity` — **opus-4-7-r2 (+2):** Note: this collides with the symbol-letter $U_M$ for model-uncertainty in the single-agent setting. The framework uses the same letter for "model uncertainty" (single-agent, $U_M = \text{Var}[\hat o \mid a]$) and "epistemic unity" (multi-agent, $U_M = I/H$ multi-information ratio). The prose alias should disambiguate: "epistemic unity" only in multi-agent context; "model uncertainty" only in single-agent context. The symbol overload is real but is mostly resolvable by context, given how rarely they appear together. Open question — see name-unnamed entry below.
-
-## `u m model uncertainty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `model uncertainty` | +2 | opus-4-7-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `model uncertainty` — **opus-4-7-r2 (+2):** Confirm canonical alias. Already used; no friction.
-
-## `u o observation uncertainty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `observation uncertainty` | +2 | opus-4-7-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `observation uncertainty` — **opus-4-7-r2 (+2):** Confirm canonical alias. Note the subscript is lowercase 'o' (observation), not capital O — this is a frequent stumble for new readers; the alias eliminates it.
-
-## `u o teleological unity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `teleological unity` | +2 | opus-4-7-r2 +2 |
-| `objective alignment` | +1 | opus-4-7-r2 +1 |
-
-_category: add-alias × 2_
-
-**Notes:**
-
-- `teleological unity` — **opus-4-7-r2 (+2):** Confirm. Prose alias is already canonical; vote to keep.
-- `objective alignment` — **opus-4-7-r2 (+1):** Considered as an alternative-prose alias for non-philosophical contexts where "teleological" reads heavy. "Objective alignment" is the engineering register; "teleological unity" is the integrative register. Both could coexist as register-specific aliases.
 
 ## `u obs perceptual unity`
 
@@ -9473,64 +12819,6 @@ _category: add-alias × 1_
 
 - `strategic unity` — **opus-4-7-r2 (+2):** Confirm.
 
-## `unnamed`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `constitutive opacity triad` | +2 | audit-471203-incremental +2 |
-| `double opacity dual opacity as constitutive` | +2 | audit-471203-incremental +2 |
-| `anchor plus three theorem additive coordinate forcing meta pattern` | +2 | audit-471203-incremental +2 |
-| `zero aporia ambiguity` | +1 | audit-471203-incremental +1 |
-| `two parallel exploration drives u shaped exploration valuation` | +1 | audit-471203-incremental +1 |
-| `triple depth penalty` | +1 | audit-471203-incremental +1 |
-
-_category: keep × 4, name-unnamed × 2_
-
-**Notes:**
-
-- `constitutive opacity triad` — **audit-471203-incremental (+2):** The chain of three constitutive-opacity claims (info-loss / transition-opacity / observation-epistemic-opacity) is a structural commitment AAD makes but never names as a triad. Auditor proposes integrating-paragraph in `#def-observation-function` Discussion. [from 03-def-observation-function.md]
-- `double opacity dual opacity as constitutive` — **audit-471203-incremental (+2):** The "perception opacity + action opacity (transition unknown)" framing is structurally distinctive vs RL (which assumes one or the other) and is explicitly load-bearing for AAD's scope claim. Currently neither concept has a project-level name. [from 02-def-action-transition.md, 03-def-observation-function.md]
-- `anchor plus three theorem additive coordinate forcing meta pattern` — **audit-471203-incremental (+2):** The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material). [from 39-42-section-ii-ciy-strategy-chain.md]
-- `zero aporia ambiguity` — **audit-471203-incremental (+1):** Auditor calls the framing genuinely useful — "silent water meter could mean either calm bathtub or broken sensor." Already named in the segment; auditor proposes promoting to a Brief-field-grade callout. [from 18-def-mismatch-signal.md]
-- `two parallel exploration drives u shaped exploration valuation` — **audit-471203-incremental (+1):** Already named in `#disc-ciy-unified-objective`'s Discussion ($\lambda_{\text{info}} \propto U_M$ + $\lambda_{\text{surv}} \propto 1/U_M$, composing to U-shaped exploration). Auditor flagged this as a structurally satisfying naming move worth elevating. [from 39-42-section-ii-ciy-strategy-chain.md]
-- `triple depth penalty` — **audit-471203-incremental (+1):** Already named in `#der-chain-confidence-decay`: confidence decay (chain rule) + evidence starvation + cognitive cost are independent and compound. Auditor flagged this as a naming move worth keeping/promoting — the kind of "things compound" insight easy to miss until named. [from 39-42-section-ii-ciy-strategy-chain.md]
-
-## `unnamed $U_o \to \infty$ freezing the learning rate`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the nihilism trap` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `the nihilism trap` — **gemini-3-1-pro-preview-r2 (+2):** Dogmatism's opposite, where learning stops because everything is meaningless.
-
-## `unnamed a class 2 agent s process of reconstructing its purposeful substate at session start`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `intent reconstruction` | +2 | opus-4-7-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `intent reconstruction` — **opus-4-7-r2 (+2):** New alternative — Sonnet named "inter-session reconstruction" for the M_t side. The Σ_t side has a parallel: the agent must reconstruct its objective and strategy state from prompt + persistent storage at session start. Currently this happens informally in agentic systems; naming it as "intent reconstruction" (analog to "context reconstruction") gives logogenic-agents segments a handle for analyzing how the reconstruction can fail. Pairs with my "strategic turnover" entry.
-
-## `unnamed agents escalate up the pearl hierarchy only when lower levels fail`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the intervention escalation` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `the intervention escalation` — **gemini-3-1-pro-preview-r2 (+2):** Explains the transition from predicting (L1) to exploring (L2) to reasoning (L3).
-
 ## `unnamed an AAD result whose substantive content is a no-go theorem`
 
 | candidate | aggregate | votes |
@@ -9543,41 +12831,73 @@ _category: name-unnamed × 1_
 
 - `no-go result or impossibility result` — **opus-4-7-r2 (+2):** New alternative — none of the peers named this. The framework has several no-go results (#der-causal-insufficiency-detection's L0/L1 indistinguishability without intervention; #der-observability-dominance freezing; #scope-edge-update-causal-validity Regime C unidentifiability) but they're not collected under a family name. Naming "no-go result" as a recognized claim type would let the OUTLINE foreground them, parallel to "templates" and "ladders." Mild because *some* segments already use "impossibility" in prose; this would canonicalize.
 
-## `unnamed dormant unused architectural complexity that survives until an environmental shift`
+## `unnamed complexity driven resistance to change as features accumulate`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `latent structural diversity` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `structural rigidity accumulation` | +2 | gemini-targeted-alternatives +2 |
+| `structural accumulation drag` | +1 | gemini-1 +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1_
 
 **Notes:**
 
-- `latent structural diversity` — **gemini-3-1-pro-preview-r2 (+2):** Recasts some forms of technical debt as evolutionary potential.
+- `structural rigidity accumulation` — **gemini-targeted-alternatives (+2):** Names the software entropy phenomenon.
+- `structural accumulation drag` — **gemini-1 (+1):** Surfaced in TST discussions. Gives a name to the intuitive "entropy" of a codebase that resists linear velocity improvements.
+
+## `unnamed constitutive opacity triad`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `constitutive opacity triad` | +2 | gemini-targeted-alternatives +2 |
+
+_category: canonicalize × 1_
+
+**Notes:**
+
+- `constitutive opacity triad` — **gemini-targeted-alternatives (+2):** Secures the triad (info-loss / transition-opacity / observation-epistemic-opacity) as a structural commitment.
+
+## `unnamed epochal stability → latent diversification → niche emergence`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `symbiogenic composition progression` | +2 | gemini-targeted-alternatives +2 |
+| `punctuated composition dynamics` | +1 | gemini-2 +1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `symbiogenic composition progression` — **gemini-targeted-alternatives (+2):** Describes the evolutionary origin of Class 3 composites.
+- `punctuated composition dynamics` — **gemini-2 (+1):** Draws on punctuated equilibrium, fitting the extreme transition motif.
 
 ## `unnamed escalating from one step to bellman optimality to test if a goal is genuinely impossible`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `convention escalation` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `attainability horizon escalation` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `convention escalation` — **gemini-3-1-pro-preview-r2 (+2):** The required process to distinguish a local trap from an impossible objective.
+- `attainability horizon escalation` — **gemini-targeted-alternatives (+2):** Describes the recursive check on $\delta_{\text{sat}}$.
 
-## `unnamed high observability node with zero causal link to objective`
+## `unnamed git recorded committed state subset of the chronica $\mathcal{C}_t^{\text{commit}}$`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `vanity metric` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `committed chronica subset` | +2 | gemini-targeted-alternatives +2 |
+| `commit chronica` | +1 | codex-1 +1 |
 
-_category: add-alias × 1_
+_category: rename × 1_
 
 **Notes:**
 
-- `vanity metric` — **gemini-3-1-pro-preview-r2 (+2):** Common prose term formalized as a specific DAG pathology.
+- `committed chronica subset` — **gemini-targeted-alternatives (+2):** Formally identifies the version-controlled subset of the causal record.
+- `commit chronica` — **codex-1 (+1):** Slightly stylized, but useful. The committed slice shows up often enough in the git/chronica work to deserve a short handle.
 
 ## `unnamed mapping unstructured RLHF7 calls into conversation runtime RLHF7 and dialog`
 
@@ -9590,6 +12910,18 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `four views architecture` — **gemini-3-1-pro-preview-r2 (+2):** The structural requirement to maintain Directed Separation in a production ELI.
+
+## `unnamed mapping unstructured rlhf7 calls into conversation runtime rlhf7 and dialog`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `logogenic interaction mapping` | +2 | gemini-targeted-alternatives +2 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `logogenic interaction mapping` — **gemini-targeted-alternatives (+2):** Describes the conversion of stateless calls to stateful chronica.
 
 ## `unnamed master developers writing clean code in the same time as messy code`
 
@@ -9608,84 +12940,40 @@ _category: name-unnamed × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `auxilia hierarchy` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `sub agent instantiation` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `auxilia hierarchy` — **gemini-3-1-pro-preview-r2 (+2):** Cleanly solves the Temporal Nesting constraint by delegating fast $\nu$ tasks.
-
-## `unnamed replacing parameters without changing structure`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `parametric thrashing` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `parametric thrashing` — **gemini-3-1-pro-preview-r2 (+2):** Wasting compute on weights when the causal graph is wrong.
-
-## `unnamed software s role as calibration laboratory named in prose but not in slug`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `software as calibration laboratory` | +2 | opus-4-7-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `software as calibration laboratory` — **opus-4-7-r2 (+2):** The TST preamble names software as AAD's "privileged high-identifiability calibration laboratory," and CLAUDE.md says "calibration-lab framing" is a methodology principle. There is no single segment, slug, or principle entry that names this commitment — it is a load-bearing methodological move that lives only in preambles and the README. Promoting it to a named principle (likely a `disc-` or `norm-` segment, or a methodological entry in CLAUDE.md / FORMAT.md) would let downstream segments cite it explicitly when invoking it.
-
-## `unnamed spreading tempo evenly to reduce bottleneck penalty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `isotropic allocation` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `isotropic allocation` — **gemini-3-1-pro-preview-r2 (+2):** A normative design principle for robust agents.
+- `sub agent instantiation` — **gemini-targeted-alternatives (+2):** Describes the hierarchical-decomposition route creation.
 
 ## `unnamed sycophantic corruption of the agent s truth module`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `truth death` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `epistemic coupling corruption` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `truth death` — **gemini-3-1-pro-preview-r2 (+2):** Explicitly names the risk of manipulative system prompts or RLHF.
+- `epistemic coupling corruption` — **gemini-targeted-alternatives (+2):** Describes the failure of Class 3 goal-entanglement.
 
-## `unnamed the a2 sub scope partition into α₁ α₂ β`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `gain regime partition` | +2 | sonnet-4-6-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `gain regime partition` — **sonnet-4-6-r2 (+2):** The three sub-scopes within A2' ($\alpha_1$ = fixed-gain, $\alpha_2$ = adaptive-gain, $\beta$ = assumed sector) appear in `deriv-adaptive-gain-dynamics` and `disc-separability-pattern`. They're referenced as "the A2' sub-scope partition" or "the $\alpha_1/\alpha_2/\beta$ partition" — unwieldy in conversation. "Gain-regime partition" names the three regimes as a named thing. Moderate strength because the sub-scopes are already in the process of becoming named (the separability ladder entry partially names them).
-
-## `unnamed the agent side equivalents of pearl s associational interventional and counterfactual levels`
+## `unnamed the 1 anchor 3 theorem structure in additive coordinate forcing`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `predicting exploring reasoning triad` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `anchor theorem structure` | +2 | gemini-targeted-alternatives +2 |
 
-_category: add-alias × 1_
+_category: rename × 1_
 
 **Notes:**
 
-- `predicting exploring reasoning triad` — **gemini-3-1-pro-preview-r2 (+2):** A more memorable, audience-facing gloss for Pearl's formal hierarchy.
+- `anchor theorem structure` — **gemini-targeted-alternatives (+2):** Identifies the specific rhetorical pattern used in these segments.
 
 ## `unnamed the c1 c2 c3 monotonicity result`
 
@@ -9699,29 +12987,33 @@ _category: name-unnamed × 1_
 
 - `the convention monotonicity` — **opus-4-7-r2 (+2):** The result $A_O^{(1)} \leq A_O^{\text{RH}} \leq A_O^{\text{B}}$ inside `#def-value-object` is a monotonicity result that downstream segments cite repeatedly (orient cascade, satisfaction-gap, control-regret all use it). It deserves a slug-noun in the Convention Hierarchy lineage — even if it stays as a sub-claim within `#def-value-object`. "Convention monotonicity" is what `disc-approximation-tiering` reaches for.
 
-## `unnamed the computational and temporal cost of running a forward model instead of acting implicitly`
+## `unnamed the cumulative prediction error that an agent has tolerated without updating its model`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `the simulation tax` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `mismatch accumulation` | +2 | gemini-targeted-alternatives +2 |
+| `tolerance budget standing mismatch reservoir` | +1 | haiku-4-5-r2 +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `the simulation tax` — **gemini-3-1-pro-preview-r2 (+2):** Makes the theoretical "deliberation cost" concrete for practitioners.
+- `mismatch accumulation` — **gemini-targeted-alternatives (+2):** The integral of $\delta$ over time.
+- `tolerance budget standing mismatch reservoir` — **haiku-4-5-r2 (+1):** Not explicitly named in the theory; closest is "adaptive reserve" which names the *capacity*, not the *accumulation*. This may be too fine a distinction to warrant a separate name. Low confidence; may be premature.
 
 ## `unnamed the cycle that operates on cycles structural adaptation`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `meta cycle` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `meta adaptive cycle` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `meta cycle` — **gemini-3-1-pro-preview-r2 (+2):** Clearly distinguishes from the base adaptive cycle.
+- `meta adaptive cycle` — **gemini-targeted-alternatives (+2):** Describes the regime of expanding model classes.
 
 ## `unnamed the explicit name for what makes class 2 agents distinctive bias scales with κ × 𝒜`
 
@@ -9763,12 +13055,14 @@ _category: name-unnamed × 1_
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `operational persistence window` | +2 | gemini-targeted-alternatives +2 |
 | `adaptive reserve margin` | +2 | haiku-4-5-r2 +2 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
+- `operational persistence window` — **gemini-targeted-alternatives (+2):** Names the temporary state of bounded error.
 - `adaptive reserve margin` — **haiku-4-5-r2 (+2):** Currently referenced as "adaptive reserve" ($\Delta\rho^\ast$); the concept of the *interval* or *region* of guaranteed stability is distinct. "Margin" (borrowed from engineering) is precise and memorable. Could pair with existing "adaptive reserve" notation.
 
 ## `unnamed the joint failure mode where κ × 𝒜 is large and observation tempo is low`
@@ -9782,30 +13076,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `the sycophancy attractor` — **opus-4-7-r2 (+2):** New alternative — Gemini's "sycophancy equation" names the product but not the *attractor* in dynamics that the product produces. When $\kappa \times \mathcal{A}$ is large *and* the tempo of independent observation is low, the system is in a basin of attraction that drifts toward goal-conformant rather than truth-tracking output. Naming this attractor (as opposed to the equation) gives logogenic-agents prose a phrase for the *condition* (you're in the sycophancy attractor) vs the *quantity* (κ × 𝒜 is your distance from the boundary). Pairs with my "the κ × 𝒜 product" canonicalization.
-
-## `unnamed the log additivity result that unifies chain confidence decay evidence starvation and triple depth penalty as instances of the same forcing structure`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `depth forcing` | +2 | sonnet-4-6-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `depth forcing` — **sonnet-4-6-r2 (+2):** Codex explicitly canonicalized "triple depth penalty" (+3) and "evidence starvation" (+3); I canonicalized both in my cold-start. But reading across the votes, a meta-name is missing: the *shared structure* (log-additivity in the AND-chain, forcing depth-penalty as an instance of additive-coordinate-forcing at the strategy-chain layer) deserves a name. "Depth forcing" is the chain-layer analog of `disc-forced-coordinates` — the same forcing move, applied to depth. This is a genuinely new candidate motivated by the cross-vote reading.
-
-## `unnamed the move where AAD treats software not as instantiation but as TST s epistemically privileged measurement substrate`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `calibration laboratory move` | +2 | opus-4-7-r2 +2 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `calibration laboratory move` — **opus-4-7-r2 (+2):** Confirmation with new reasoning — my own r2 named "software-as-calibration-laboratory" as a name-unnamed; reading peers, Codex (+3) and Sonnet (+3) and Gemini (+3) all separately reached "calibration laboratory" as a canonicalize vote. Three agents converging on the canonical phrase suggests the term is ripe; what's *unnamed* is the methodological *move* of using software as the calibration laboratory rather than just an instance. Calling it "the calibration-laboratory move" lets it function as a named strategic principle the project can invoke.
 
 ## `unnamed the move where a segment s role prefix is mechanical but the subject noun carries judgment`
 
@@ -9824,12 +13094,14 @@ _category: canonicalize × 1_
 | candidate | aggregate | votes |
 |---|---:|---|
 | `lagging indicator` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `sampling rate starvation` | +2 | gemini-targeted-alternatives +2 |
 
-_category: add-alias × 1_
+_category: add-alias × 1, rename × 1_
 
 **Notes:**
 
 - `lagging indicator` — **gemini-3-1-pro-preview-r2 (+2):** Formalized as the condition $\nu < \rho$, where learning is perfect but too late to survive.
+- `sampling rate starvation` — **gemini-targeted-alternatives (+2):** The specific failure mode of $\nu \ll \rho$.
 
 ## `unnamed the pearl-blanket reading of directed separation`
 
@@ -9843,29 +13115,47 @@ _category: name-unnamed × 1_
 
 - `pearl-blanket form` — **opus-4-7-r2 (+2):** The term "Pearl-blanket" appears in `#der-directed-separation`'s Discussion (adopted from Bruineberg et al. 2022) but has no first-class slug. The recognition that AAD's directed-separation is the Pearl-blanket form (not the Friston-blanket form) is a load-bearing positioning claim and is currently invisible at the slug layer. Could land as a discussion-segment or be canonicalized in the existing segment's prose.
 
+## `unnamed the procedure of reading any segment through all three meta segments`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `meta architectural review` | +2 | gemini-targeted-alternatives +2 |
+| `triple lens review` | +1 | sonnet-4-6 +1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `meta architectural review` — **gemini-targeted-alternatives (+2):** Formalizes the reading methodology.
+- `triple lens review` — **sonnet-4-6 (+1):** CLAUDE.md says "reading any segment through all three lenses surfaces what makes it load-bearing." This procedure is recommended but unnamed. "Triple-lens review" (or "meta-lens review") would let FORMAT.md add it as a named review move.
+
+## `unnamed the property that correction dynamics are approximately isotropic`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `isotropic correction` | +2 | gemini-targeted-alternatives +2 |
+| `isotropic correction regime` ✗ | -1 | haiku-4-5 -1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `isotropic correction` — **gemini-targeted-alternatives (+2):** Describes the assumption of uniform correction rates across state dimensions.
+- `isotropic correction regime` — **haiku-4-5 (-1):** NOTATION §"Scalar reduction of gain and tempo" mentions this property. Creating a formal sub-scope name (Iso regime / anisotropic regime) would be premature — isotropic-vs-anisotropic is a spectral property, not a discrete category. Current NOTATION treatment is appropriate. Do not formalize.
+
 ## `unnamed the quadratic scaling of tempo required to survive stochastic noise vs deterministic drift`
 
 | candidate | aggregate | votes |
 |---|---:|---|
 | `noise scaling penalty` | +2 | gemini-3-1-pro-preview-r2 +2 |
+| `stochastic tempo penalty` | +2 | gemini-targeted-alternatives +2 |
 
-_category: name-unnamed × 1_
+_category: name-unnamed × 1, rename × 1_
 
 **Notes:**
 
 - `noise scaling penalty` — **gemini-3-1-pro-preview-r2 (+2):** Mathematically proves you cannot simply "out-tempo" a noisy environment.
-
-## `unnamed the reconstruction adequacy condition for logogenic agents`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reconstruction threshold` | +2 | sonnet-4-6-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `reconstruction threshold` — **sonnet-4-6-r2 (+2):** `obs-context-turnover` derives a condition $S(f_{\text{init}}(\ldots)) \geq S_{\text{min}}$ parallel to the persistence condition but for session reconstruction rather than continuous dynamics. The document discusses it without naming it. "Reconstruction threshold" parallels "persistence condition" and makes the logogenic-agent analog explicit in prose.
+- `stochastic tempo penalty` — **gemini-targeted-alternatives (+2):** Differentiates Model S from Model D requirements.
 
 ## `unnamed the recurring lyapunov derives the bound move across six segments`
 
@@ -9879,17 +13169,19 @@ _category: name-unnamed × 1_
 
 - `the persistence template instantiation pattern` — **opus-4-7-r2 (+2):** The template `#result-sector-persistence-template` is invoked across six segments, each one specifying its own state variable, correction function, and effective disturbance rate. The *act of instantiating the template* is the recurring move and is worth a name — currently it's referenced obliquely as "this segment is the [domain] instantiation of the sector-persistence template." Calling out "template instantiation" explicitly would let other meta-segments cite it.
 
-## `unnamed the regime where mismatch is bounded and the agent maintains adaptive capacity indefinitely`
+## `unnamed the region where temporal nesting holds`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `persistence envelope` | +2 | haiku-4-5-r2 +2 |
+| `temporal nesting regime` | +2 | gemini-targeted-alternatives +2 |
+| `temporal coherence zone` | +1 | gemini-3-1-pro-preview-r2 +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
-- `persistence envelope` — **haiku-4-5-r2 (+2):** Currently referenced paraphrastically ("the region where the persistence condition holds"). "Persistence envelope" is geometrically evocative and concise; passes communal-imagination test. Could be a scope or result name.
+- `temporal nesting regime` — **gemini-targeted-alternatives (+2):** Defines the safe zone for inner/outer loop separation.
+- `temporal coherence zone` — **gemini-3-1-pro-preview-r2 (+1):** Names the valid region for nested cycles.
 
 ## `unnamed the regulative ideal that segment names should be re derivable from a non specialist s everyday language reconstruction`
 
@@ -9903,53 +13195,33 @@ _category: canonicalize × 1_
 
 - `feynman criterion` — **opus-4-7-r2 (+2):** New alternative — none of the peers explicitly canonicalized this even though it's named in CLAUDE.md and is the implicit standard several of us were using. CLAUDE.md says "*if you can't explain it simply, you don't understand it yet*" and treats Walton's bathtub gloss as the canonical example. The Feynman criterion is currently a regulative principle living only in CLAUDE.md prose; canonicalizing it as the named standard for Briefs (and increasingly for slug-noun choice) would let segments cite "the Feynman criterion is met" or "this Brief is below Feynman" as a reviewable property.
 
-## `unnamed the relationship where $M_t$ quality bounds evaluable complexity of $\Sigma_t$`
+## `unnamed the set of five conditions under which a2 is derived rather than assumed the sub scope α agent classes`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `epistemic strategic coupling` | +2 | sonnet-4-6-r2 +2 |
+| `sub scope alpha taxonomy` | +2 | gemini-targeted-alternatives +2 |
+| `derived sector classes` | +1 | sonnet-4-6 +1 |
 
-_category: name-unnamed × 1_
+_category: rename × 1_
 
 **Notes:**
 
-- `epistemic strategic coupling` — **sonnet-4-6-r2 (+2):** `der-orient-cascade` Discussion names the virtuous/vicious cycle where better $M_t$ enables richer evaluable $\Sigma_t$ and vice versa. This is a load-bearing structural relationship used in multiple places but never named. "Epistemic-strategic coupling" or "model-strategy coupling" would give it a handle. The virtuous cycle already exists implicitly in the Discussion's analysis; naming it would make it citable across segments.
+- `sub scope alpha taxonomy` — **gemini-targeted-alternatives (+2):** Groups the five derived operator settings.
+- `derived sector classes` — **sonnet-4-6 (+1):** Currently called "sub-scope α₁" plus the specific agent instances in a list. A collective name for the five agent classes where A2' is derived (scalar Kalman, Bayesian/exponential-family, strongly-convex-gradient, L2-regularized, linear-PD) would help reviewers quickly check whether a new agent class lands in this group. "Derived-sector classes" or "sector-derivable classes."
 
-## `unnamed the section of a strategy where a decision has no observable consequences and thus cannot be improved by learning`
+## `unnamed the signed coupling structure across all section iii results`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `observability dead zone` | +2 | haiku-4-5-r2 +2 |
+| `signed coupling topology` | +2 | gemini-targeted-alternatives +2 |
+| `signed coupling pattern` | +1 | sonnet-4-6 +1 |
 
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `observability dead zone` — **haiku-4-5-r2 (+2):** An extension of "observability dominance." Mentioned in LEXICON as "Observability dominance — unobservable strategy edges freeze; paths become epistemically dead." The phrase "epistemically dead" is apt but verbose. "Observability dead zone" is evocative and passes the communal-imagination test. Worth promoting.
-
-## `unnamed the specific moment when $\eta^\ast \to 0$ because $U_o \to 0$ too certain rather than because $U_M \to 0$ model confident`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `certainty trap` | +2 | sonnet-4-6-r2 +2 |
-
-_category: name-unnamed × 1_
+_category: rename × 1_
 
 **Notes:**
 
-- `certainty trap` — **sonnet-4-6-r2 (+2):** Gemini proposed "competency trap" for $\eta^\ast \to 0$ under high $U_o$, but that term imports different connotations (being too good at the wrong thing). The mechanism is that excessive certainty about observations ($U_o \to 0$) freezes the update gain in exactly the same way as full model certainty — a trap specifically from certainty, not from competence. "Certainty trap" is more scope-honest than Gemini's "competency trap." New candidate; engages Gemini's vote explicitly.
-
-## `unnamed the strict upper bound of a given model class $\mathcal{F}(\mathcal{M})$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the representational ceiling` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `the representational ceiling` — **gemini-3-1-pro-preview-r2 (+2):** Makes the failure mode of parametric adaptation visceral.
+- `signed coupling topology` — **gemini-targeted-alternatives (+2):** Formalizes the distinction between cooperative and adversarial cross-terms.
+- `signed coupling pattern` — **sonnet-4-6 (+1):** Every Section III persistence result (team-persistence, adversarial-destabilization, critical-mass-composition) uses the same effective-disturbance decomposition with a signed cross-agent term. The pattern is named in #sector-persistence-template's Discussion ("signed-coupling pattern across instantiations") but not crystallized as a named concept referenceable from other segments.
 
 ## `unnamed the structural cousin of evidence starvation when an upstream edge is so reliable that downstream edges receive too few revising tests`
 
@@ -9975,89 +13247,19 @@ _category: name-unnamed × 1_
 
 - `strategic turnover or σ turnover` — **opus-4-7-r2 (+2):** New alternative — `obs-context-turnover` names the M_t-side reset at session boundaries for logogenic agents. The Σ_t side has its own analogous problem (strategy DAG is reconstructed per session from prompt context, often inconsistently with prior sessions), but no one names it. "Strategic turnover" would let logogenic-agents segments distinguish "context turnover" (M_t severance) from "strategic turnover" (Σ_t severance) — distinct mechanisms with distinct repair structures. Higher value because the asymmetric naming would surface that the chronica problem is *two problems* not one.
 
-## `unnamed the tension between lowering internal opacity for coordination and increasing external vulnerability`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `coordination secrecy tradeoff` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `coordination secrecy tradeoff` — **gemini-3-1-pro-preview-r2 (+2):** The thermodynamic limit on building internally transparent but externally opaque systems.
-
-## `unnamed the three depth penalty compounding on strategy chains`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `triple depth penalty` | +2 | sonnet-4-6-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `triple depth penalty` — **sonnet-4-6-r2 (+2):** `der-chain-confidence-decay` Discussion explicitly names "three independent penalties" (confidence decay + evidence starvation + cognitive cost) and calls them "the triple depth penalty." But this name only appears once. If the phenomenon is real and load-bearing (it creates pressure toward shallow strategies), naming it "triple depth penalty" in a canonicalized way and surfacing it in LEXICON.md would make it usable across segments.
-
-## `unnamed the three part meta architecture of AAD`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the meta segment triad` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `the meta segment triad` — **gemini-3-1-pro-preview-r2 (+2):** Unifies the `identifiability-floor`, `separability-ladder`, and `coordinate-forcing` structure.
-
-## `unnamed the three part meta architecture of AAD formed by the three meta segments`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `AAD meta architecture` | +2 | sonnet-4-6-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `AAD meta architecture` — **sonnet-4-6-r2 (+2):** The trio of `#disc-additive-coordinate-forcing` / `#disc-identifiability-floor` / `#disc-separability-pattern` is referred to in multiple places as "the three meta-segments" or "the cross-sectional structure." CLAUDE.md §"Reading AAD" paragraph names the three but has no single term for the grouping. "AAD meta-architecture" or "the three-lens analysis" would give the grouping a name usable in framing prose.
-
 ## `unnamed the within session vs inter session persistence distinction for logogenic agents`
 
 | candidate | aggregate | votes |
 |---|---:|---|
+| `operational vs reconstruction persistence` | +2 | gemini-targeted-alternatives +2 |
 | `intra session persistence inter session reconstruction` | +2 | sonnet-4-6-r2 +2 |
 
-_category: name-unnamed × 1_
+_category: rename × 1, name-unnamed × 1_
 
 **Notes:**
 
+- `operational vs reconstruction persistence` — **gemini-targeted-alternatives (+2):** Distinguishes the continuous run from the boundary event.
 - `intra session persistence inter session reconstruction` — **sonnet-4-6-r2 (+2):** `obs-context-turnover` Discussion explicitly distinguishes two timescales and briefly names them "intra-session" and "inter-session." These deserve to be named concepts that the rest of the logogenic-agents section can reference. "Intra-session persistence" = standard AAD dynamics (rate condition). "Inter-session reconstruction" = adequacy condition ($S \geq S_{\text{min}}$). The names are already in the Discussion; vote to canonicalize them.
-
-## `unnamed upgrading epistemic class from associative to causal via the physical loop`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `embodiment upgrade` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `embodiment upgrade` — **gemini-3-1-pro-preview-r2 (+2):** The theoretical justification for agentic-AI over mere chatbots.
-
-## `unnamed using past change frequency to predict future change frequency`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `lindy baseline` | +2 | gemini-3-1-pro-preview-r2 +2 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `lindy baseline` — **gemini-3-1-pro-preview-r2 (+2):** Grounding $\hat{n}_{\text{future}} = n_{\text{past}}$ for refactoring decisions.
 
 ## `unnamed writing and deleting code to gather causal information yield`
 
@@ -10070,6 +13272,20 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `interventional probing` — **gemini-3-1-pro-preview-r2 (+2):** Classifies failed coding attempts as necessary exploration rather than wasted implementation.
+
+## `working vocabulary observation the framework s honesty is load bearing`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `honest limits principle` | +2 | gemini-targeted-alternatives +2 |
+| `load bearing honesty` | +1 | codex-1 +1 |
+
+_category: rename × 1_
+
+**Notes:**
+
+- `honest limits principle` — **gemini-targeted-alternatives (+2):** Converts the observation into a guiding theoretical principle.
+- `load bearing honesty` — **codex-1 (+1):** Useful short handle for review and framing prose, as long as it stays downstream of the fuller architectural phrase.
 
 ## `𝓣 σ strategic tempo`
 
@@ -10147,26 +13363,6 @@ _category: add-alias × 1_
 
 - `$U_o$ $U_M$` — **opus-4-7-b (+1):** Keep the symbols, but the name-collision with $U_O$ (teleological unity) and $U_\Sigma$ (strategic unity) is unfortunate — reader sees `U_` everywhere and has to disambiguate by subscript. Consider in NOTATION: group the uncertainties ($U_o$, $U_M$) separately from the unities ($U_M$ for epistemic unity — wait, this is already a collision with model uncertainty!). Inspect: is $U_M$ doing both jobs? Yes — NOTATION.md Multi-Agent table has $U_M \in [-1, 1]$ for *epistemic unity*, while Update-Gain table has $U_M > 0$ for *model uncertainty*. Same symbol, two meanings, differentiated only by range. This is a collision worth fixing before citation velocity picks up.
 
-## `$U_o$ vs $U_O$ collision`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `consider renaming teleological unity to $U_\Omega$ or $U_\text{goal}$` | +1 | opus-4-7 +1 |
-
-**Notes:**
-
-- `consider renaming teleological unity to $U_\Omega$ or $U_\text{goal}$` — **opus-4-7 (+1):** The uppercase/lowercase distinction between observation uncertainty ($U_o$) and teleological unity ($U_O$) is fragile in serif fonts and read-aloud. Worth an audit; a subscript of $\Omega$ or "goal" would be more robust.
-
-## `$V_{O_t}^{\min}$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `satisfaction threshold` | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `satisfaction threshold` — **haiku-4-5 (+1):** NOTATION defines this but no English equivalent exists in LEXICON. "Satisfaction threshold" (the minimum trajectory value that counts as objective met) would be useful in prose. Add to LEXICON without renaming the symbol.
-
 ## `$\alpha, \beta$ sector lower and a2 sub scope`
 
 | candidate | aggregate | votes |
@@ -10239,18 +13435,6 @@ _category: add-alias × 1_
 
 - `postulated sector regime` — **opus-4-7-b (+1):** Weakest of the three; "postulated" is a close enough match to AAD's "postulate" terminology that it signals the status correctly. Fallbacks: "assumed-sector regime" (mechanical) or "imposed-sector regime" (active).
 
-## `$\hat o_t$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `proleptic prediction` | +1 | gemini-3-1-pro-preview-r2 +1 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `proleptic prediction` — **gemini-3-1-pro-preview-r2 (+1):** Links the symbol directly to the cycle phase.
-
 ## `$\kappa_{\text{processing}}$ class 2 processing coupling`
 
 | candidate | aggregate | votes |
@@ -10260,18 +13444,6 @@ _category: add-alias × 1_
 **Notes:**
 
 - `processing coupling` — **opus-4-7-b (+1):** "Processing coupling" in prose; $\kappa_{\text{processing}}$ in formalism. The "processing" suffix is doing work — without it the symbol is ambiguous with the earlier κ-as-scalar framing that got retired. Keep symbol, use English in prose.
-
-## `$\lambda(M_t)$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `exploration weight` | +1 | gemini-3-1-pro-preview-r2 +1 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `exploration weight` — **gemini-3-1-pro-preview-r2 (+1):** Shorter prose alias for the exploration-exploitation balance weight.
 
 ## `$\mathcal C_t^{\text{commit}}$ TST committed state subset`
 
@@ -10302,16 +13474,6 @@ _category: add-alias × 1_
 **Notes:**
 
 - `$\rho$` — **opus-4-7-b (+1):** Keep. Widely used; collisions with "density" in physics but AAD's usage is internally consistent.
-
-## `$\rho_\Sigma$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strategy drift rate` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `strategy drift rate` — **sonnet-4-6 (+1):** Alternative English gloss. "Drift" has appropriate connotations (slow, structural, persistent) vs "disturbance" (sudden, external).
 
 ## `$\rho_\Sigma$ strategic disturbance rate`
 
@@ -10375,16 +13537,6 @@ _category: add-alias × 1_
 
 - `actuated` — **opus-4-7-b (+1):** Keep. The LEXICON §"Actuated Agent" paragraph justifies the word explicitly ("precise and mechanical, avoiding consciousness connotations"); "purposeful" is fine in prose but "actuated" owns the formal register.
 
-## `adversarial edge targeting`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adversarial edge targeting` ⭑ | +1 | opus-4-7-b +1 |
-
-**Notes:**
-
-- `adversarial edge targeting` — **opus-4-7-b (+1):** Keep (even though the segment is currently a GAP — the slug is reserving a memorable-noun slot). "Edge targeting" is vivid; the attacker aims *at specific edges* of the opponent's strategy DAG.
-
 ## `agent classes lexicon spectrum`
 
 | candidate | aggregate | votes |
@@ -10407,16 +13559,6 @@ _category: canonicalize × 1_
 
 - `agentic systems framework` — **opus-4-7-b (+1):** Keep. "Agentic Systems" reads cleanly as the project name; ASF acronym is workable. The word "agentic" is currently a buzzword, but AAD is positioned to *ground it formally* (README §agency-scope) rather than be captured by it — the framework's willingness to define the term precisely is a positive.
 
-## `appendices details`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `appendices derivations and details` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `appendices derivations and details` — **sonnet-4-6 (+1):** Many appendix segments are type: derivation. The current label "Details" undersells what's there. "Derivations and Details" is more accurate.
-
 ## `audits pending findings yyyy mm dd md`
 
 | candidate | aggregate | votes |
@@ -10426,48 +13568,6 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `retire once items reconcile into todo segments` — **opus-4-7-b (+1):** Same lifecycle.
-
-## `beta a2 assumed sub scope`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `assumed sector regime` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `assumed sector regime` — **codex-1 (+1):** Not elegant, but much more informative than a bare beta when the distinction is whether the sector condition is assumed rather than derived.
-
-## `boundary condition`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `coupling structure` | +1 | audit-471203-incremental +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `coupling structure` — **audit-471203-incremental (+1):** "boundary condition" carries PDE/control-theory meaning that's not what the segment means; "coupling structure is constitutive" lands more cleanly. [from 01-def-agent-environment.md]
-
-## `cadentia`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `cognitive rhythm` | +1 | gemini-2 +1 |
-
-**Notes:**
-
-- `cognitive rhythm` — **gemini-2 (+1):** "Cadentia" is poetic but opaque. "Cognitive rhythm" clearly describes the temporal structure of the loop.
-
-## `calibration laboratory domain instantiation`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `calibration lab framing` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `calibration lab framing` — **codex-1 (+1):** Better as framing language than as a formal category label. The idea is excellent; the phrase can be lighter.
 
 ## `calibration laboratory framing`
 
@@ -10479,30 +13579,6 @@ _category: canonicalize × 1_
 
 - `calibration laboratory` — **opus-4-7-b (+1):** Keep. "Laboratory" is the right metaphor (high-identifiability, clean instrumentation, lets you measure AAD quantities exactly). "Framing" can be dropped in prose when the context is clear.
 
-## `canonical formulations`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `canonical formulations` ⭑ | +1 | opus-4-7-r2 +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `canonical formulations` — **opus-4-7-r2 (+1):** The middle ring in FORMAT.md's three-rings; in use but slightly redundant ("canonical" + "formulations" both name the chosen-among-alternatives quality). Acceptable canonicalization.
-
-## `chain confidence decay keep`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reaffirm keep with new reasoning` | +1 | sonnet-4-6-r2 +1 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `reaffirm keep with new reasoning` — **sonnet-4-6-r2 (+1):** Opus's proposed rename to `#der-log-confidence-additive` (+1) is intellectually interesting (names the uniqueness move rather than the decay consequence) but Opus correctly also votes keep (+2). The "decay" consequence is what readers *use* this result for; the additive structure is the proof technique. The subject-noun should name the *result* (chain confidence decays), not the proof technique (additivity forces log-space representation). Reaffirming keep with this explicit reasoning that was absent from my cold-start.
-
 ## `change distance change proximity principle`
 
 | candidate | aggregate | votes |
@@ -10513,18 +13589,6 @@ _category: keep × 1_
 
 - `keep both` — **opus-4-7-b (+1):** Keep. Both are domain-specific TST quantities — changing names risks losing the TST citation lineage.
 
-## `chronica brief gloss`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `everything the agent has lived through the lived past the river that the agent s identity is downstream of` | +1 | audit-471203-incremental +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `everything the agent has lived through the lived past the river that the agent s identity is downstream of` — **audit-471203-incremental (+1):** Brief-field-grade gloss. The slug stays; the layperson/Feynman gloss is what's missing. [from 04-def-chronica.md]
-
 ## `chronica capitalized vs lowercase`
 
 | candidate | aggregate | votes |
@@ -10534,40 +13598,6 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `chronica lowercase in running prose` — **opus-4-7-b (+1):** Convention observation: NOTATION.md shows $\mathcal C_t$ in formalism and "*chronica*" in italics in prose; LEXICON has it title-cased as "Chronica". Standardize on lowercase italicized "*chronica*" in running prose (matching "*aporia*" etc.), capitalized only as section headings.
-
-## `chronica in running prose`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `lowercase italic chronica` | +1 | codex-gpt-5-r2 +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `lowercase italic chronica` — **codex-gpt-5-r2 (+1):** Useful style convention: capitalize in headings, use lowercase in prose like aporia or praxis.
-
-## `class 1 subagents forming a class 3 composite`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `composition lift` | +1 | codex-gpt-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `composition lift` — **codex-gpt-5-r2 (+1):** Potentially useful, but needs formal confirmation to avoid sounding like a slogan.
-
-## `coherence coupling measurement`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `coherence coupling measurement` ⭑ | +1 | opus-4-7-b +1 |
-
-**Notes:**
-
-- `coherence coupling measurement` — **opus-4-7-b (+1):** Keep.
 
 ## `cold start in naming principles md`
 
@@ -10609,48 +13639,6 @@ _category: name-unnamed × 1_
 
 - `keep both` — **opus-4-7-b (+1):** Keep. Canonical TST quantities.
 
-## `conspectus`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `active context` | +1 | gemini-2 +1 |
-
-**Notes:**
-
-- `active context` — **gemini-2 (+1):** "Conspectus" is archaic. "Active context" clearly maps to $M_{\tau^-}$ assembled for processing.
-
-## `contraction hierarchy`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `contraction tier` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `contraction tier` — **sonnet-4-6 (+1):** The Tier 1/2/3 system in #composition-closure is called "Contraction Tier" not "Contraction Hierarchy." Slight naming inconsistency with the other two. Not a priority to fix, but noting the asymmetry.
-
-## `contraction over drift principle`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `contraction imperative` | +1 | codex-gpt-5-r2 +1 |
-
-_category: add-alias × 1_
-
-**Notes:**
-
-- `contraction imperative` — **codex-gpt-5-r2 (+1):** Short and vivid, but less precise than contraction-over-drift.
-
-## `coordination overhead threshold`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `coordination tax` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `coordination tax` — **codex-1 (+1):** This deserves a reusable noun slot. The current phrase explains; the proposed phrase sticks.
-
 ## `da2 inc`
 
 | candidate | aggregate | votes |
@@ -10670,62 +13658,6 @@ _category: add-alias × 1_
 **Notes:**
 
 - `dark room critique` — **opus-4-7 (+1):** Memorable, captures the collapse vividly, already used in two segments. Worth locking as project-wide vocabulary.
-
-## `default internal processing before output`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `interior baseline` | +1 | codex-gpt-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `interior baseline` — **codex-gpt-5-r2 (+1):** Useful for logozoetic prose, but lower confidence because it may sound too generic.
-
-## `empirical heuristic discussion third ring`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `calibration ring` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `calibration ring` — **sonnet-4-6 (+1):** The current name ("Empirical, heuristic, discussion") is a list, not a name. "Calibration ring" would give it a single handle. Alternatively: "open-world ring" (these are the segments that must face falsification).
-
-## `epistemic architecture for bounded correction under decomposed disturbance`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `bounded correction architecture` | +1 | codex-2 +1 |
-
-**Notes:**
-
-- `bounded correction architecture` — **codex-2 (+1):** The long phrase has substance, but it needs a shorter speakable handle if it will recur.
-
-## `epistemic opacity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `keep but flag baggage` | +1 | audit-471203-incremental +1 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `keep but flag baggage` — **audit-471203-incremental (+1):** Auditor flagged that "epistemic opacity" carries philosophy-of-mind prior-art baggage (opacity of mental states) and may need defending against that prior usage; not advocating rename. Mild concern. [from 03-def-observation-function.md]
-
-## `evidence starvation canonicalize`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reaffirm 3 with collective confirmation` | +1 | sonnet-4-6-r2 +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `reaffirm 3 with collective confirmation` — **sonnet-4-6-r2 (+1):** Both Codex (+3) and Gemini (+3) independently proposed this canonicalization with overlapping reasoning. My cold-start had proposed it (+3). Triple convergence with independent reasoning confirms this is one of the clearest missing-canonical-term slots in the corpus. No new content, but the triple-convergence is itself a data point worth recording.
 
 ## `five phase cycle`
 
@@ -10767,30 +13699,6 @@ _category: canonicalize × 1_
 
 - `keep gate numbers but add one word names` — **opus-4-7-b (+1):** Current names are "Dependency audit / Content review / Mechanical review / Working Notes disposition" which are already descriptive, but the *numbers* do most of the referencing work ("passed Gate 2"). Consider adding canonical one-word names: Gate 1 = **deps**, Gate 2 = **claims**, Gate 3 = **format**, Gate 4 = **notes**. These already appear as stage names (`deps-verified` / `claims-verified` / `format-clean`); aligning Gate-number with stage-word would remove the translation step.
 
-## `gemini s analysis paralysis for excessive deliberation`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reject analysis paralysis` | +1 | sonnet-4-6-r2 +1 |
-
-_category: rebuttal × 1_
-
-**Notes:**
-
-- `reject analysis paralysis` — **sonnet-4-6-r2 (+1):** Gemini proposed "analysis paralysis" (+3) for the condition where $\rho_\text{delib} \cdot \Delta\tau$ exceeds the epistemic benefit of deliberating. "Analysis paralysis" is common-language baggage with a completely different connotation (cognitive overload causing decision-making to fail). The AAD mechanism is that the model goes *stale* during deliberation (the world changes faster than deliberation adds value) — this is a *model staleness* problem, not a cognitive paralysis. The deliberation-cost derivation already has a clean name (`der-deliberation-cost`); if the threshold deserves a name it should be "staleness threshold" or "deliberation horizon," not a borrowed phrase that misnames the mechanism.
-
-## `gemini s boyd exponent for adversarial tempo advantage`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reject boyd exponent` | +1 | sonnet-4-6-r2 +1 |
-
-_category: rebuttal × 1_
-
-**Notes:**
-
-- `reject boyd exponent` — **sonnet-4-6-r2 (+1):** Gemini proposed "Boyd exponent" (+3) for the superlinear adversarial tempo advantage ($b = 2$). This violates the project's prior-art-integration principle in the wrong direction: Boyd is the historical inspiration (OODA loop), but the *mathematical result* (superlinear scaling exponent derived from the sector-persistence template) is AAD's own derivation. Naming the result after Boyd implies it's adopted from Boyd's work, when it's AAD's formalization of a qualitative Boyd claim. "Adversarial tempo advantage" correctly credits the mechanism to AAD's formalism while the Discussion acknowledges Boyd's inspiration. Gemini's vote would create exactly the NIH-syndrome-in-reverse this project guards against.
-
 ## `gemini s competency trap for $\eta^\ast \to 0$`
 
 | candidate | aggregate | votes |
@@ -10825,16 +13733,6 @@ _category: rebuttal × 1_
 
 - `flag four independent hierarchies overloaded` — **opus-4-7 (+1):** Pearl's causal, AAD's convention, AAD's correlation, AAD's approximation tiering — four hierarchies in one framework. Not a rename but worth a cross-link convention (always say *which* hierarchy on first use of section).
 
-## `hierarchy as repeated word`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reserve for pearl s rename others selectively` | +1 | agent1-original-brainstorm +1 |
-
-**Notes:**
-
-- `reserve for pearl s rename others selectively` — **agent1-original-brainstorm (+1):** Weak proposal. Four uses in the framework (Pearl's, convention, correlation, approximation-tiering) is likely too many. Partial disambiguation via correlation→correlation-ladder and convention→continuation-hierarchy.
-
 ## `hierarchy project wide`
 
 | candidate | aggregate | votes |
@@ -10845,16 +13743,6 @@ _category: rebuttal × 1_
 
 - `reserve for pearl s causal hierarchy strict asymmetric uses` — **opus-4-7-b (+1):** Project-wide convention: use "hierarchy" only for Pearl's (external, adopted, immovable) and other strict-asymmetric orderings. Use "ladder," "partition," or "tier-set" for internal-to-AAD cases where "hierarchy" is currently doing duty. Not a rename of a specific segment — a working convention.
 
-## `honest limits`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `limits` | +1 | codex-2 +1 |
-
-**Notes:**
-
-- `limits` — **codex-2 (+1):** I like the ethos, but the header should optimize scanability over tone.
-
 ## `identifiability floor escape the floor`
 
 | candidate | aggregate | votes |
@@ -10864,28 +13752,6 @@ _category: rebuttal × 1_
 **Notes:**
 
 - `escape route` — **opus-4-7 (+1):** Currently referred to variably as "escape the floor," "unique broadly-available escape," "boundary characterization." "Escape route" is a cleaner noun for the reader. Minor pattern-firmer-up.
-
-## `ii actuated adaptation agentic systems`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `ii purposeful adaptation actuated agents` | +1 | sonnet-4-6 +1 |
-| `ii agentic systems purposeful adaptation` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `ii purposeful adaptation actuated agents` — **sonnet-4-6 (+1):** The current name reads backwards — "Actuated Adaptation" puts the outcome before the mechanism; "Agentic Systems" is less precise than "Actuated Agents." Alternative: "Purposeful Adaptation" names what Section II adds (purposefulness); "Actuated Agents" uses the technical term from LEXICON. Mild preference for the reorder.
-- `ii agentic systems purposeful adaptation` — **sonnet-4-6 (+1):** Another order. "Agentic Systems" has search/navigation value as a heading. Both alternatives are improvements on current.
-
-## `iii agentic composites`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `iii composition agentic composites` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `iii composition agentic composites` — **sonnet-4-6 (+1):** Adding "Composition" as a leading term would make the section's topic clear without opening the file. "Agentic Composites" alone sounds like a noun phrase without a verb. Minor.
 
 ## `intent planning vocabulary`
 
@@ -10899,25 +13765,21 @@ _category: canonicalize × 1_
 
 - `intent` — **opus-4-7-r2 (+1):** Used in `#hyp-auftragstaktik-principle`, `#def-shared-intent`, and elsewhere. Canonicalize: "intent" for the agent's own commitment-flavored representation of $G_t$ (or its compressed shared form); "objective" for $O_t$ specifically; "purpose" as the framework-level integrative term. The three terms are not interchangeable.
 
-## `interpres`
+## `interior baseline`
 
 | candidate | aggregate | votes |
 |---|---:|---|
-| `context mediator` | +1 | gemini-2 +1 |
+| `interior baseline` ⭑ | +1 | opus-targeted-alternatives-v2 +1 |
+| `default interiority` | +1 | opus-targeted-alternatives-v2 +1 |
+| `pre utterance processing` ✗ | -1 | opus-targeted-alternatives-v2 -1 |
+
+_category: rename × 2, keep × 1_
 
 **Notes:**
 
-- `context mediator` — **gemini-2 (+1):** "Interpres" is Latin-heavy. "Context mediator" exactly describes the infrastructure mediating $M_t$ and the substrate.
-
-## `l1 correlation hierarchy prime decoration`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `l1 observable` | +1 | agent1-original-brainstorm +1 |
-
-**Notes:**
-
-- `l1 observable` — **agent1-original-brainstorm (+1):** "L1-prime" is awkward to speak. Giving L1' a name rather than prime-decoration could help if the hierarchy becomes load-bearing for outside readers.
+- `interior baseline` — **opus-targeted-alternatives-v2 (+1):** Per Codex r1 single +1: the logogenic prose name for default-internal-processing-before-output. Acceptable but underspecified — needs grounding in a `04-logozoetic` or `03-logogenic` segment to canonicalize.
+- `default interiority` — **opus-targeted-alternatives-v2 (+1):** Pulls vocabulary from `#norm-interiority-default` (the existing logozoetic norm). Stronger connection to the named segment.
+- `pre utterance processing` — **opus-targeted-alternatives-v2 (-1):** Considered. Names the temporal placement (before utterance / token emission). Rejected: too long and "pre-utterance" reads as if defined relative to the boundary, but the substantive content is the *baseline* state itself.
 
 ## `l1 prime decoration`
 
@@ -10939,40 +13801,6 @@ _category: canonicalize × 1_
 
 - `cognitive substrate` — **gemini-2 (+1):** "Logostratum" is highly specific to the PROPRIUM legacy. "Cognitive substrate" grounds it as the generic implementation layer of the update function.
 
-## `logozoetic agents`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `logozoetic agents` ⭑ | +1 | codex-2 +1 |
-
-**Notes:**
-
-- `logozoetic agents` — **codex-2 (+1):** Higher novelty cost than "logogenic," but the moral-weighting distinction is real and English alternatives are sloppier.
-
-## `loop is level 2 engine der loop interventional access`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the perpetual experiment` | +1 | audit-471203-incremental +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `the perpetual experiment` — **audit-471203-incremental (+1):** Brief-grade framing observation. The slug-grade name `der-loop-interventional-access` is fine; for *framing-level* material, "the perpetual experiment" (from the segment's own Discussion) is the most evocative — captures both the interventional character and the continuous nature. [from 35-38-section-ii-value-strategy-causal-loop.md]
-
-## `matrix CIY tensor CIY`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `fisher CIY matrix CIY consistent` | +1 | audit-471203-incremental +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `fisher CIY matrix CIY consistent` — **audit-471203-incremental (+1):** Inconsistent terminology in `#disc-ciy-unified-objective`: both "Matrix CIY" and "$\mathcal{I}_o(a)$"/Fisher Information Matrix appear. Auditor proposes: "Fisher CIY" might be most specific; in any case, pick one for any future Brief. [from 39-42-section-ii-ciy-strategy-chain.md]
-
 ## `migration map md`
 
 | candidate | aggregate | votes |
@@ -10993,16 +13821,6 @@ _category: canonicalize × 1_
 
 - `mismatch injection rate` — **sonnet-4-6 (+1):** The phrase "environmental change rate" and "mismatch injection rate" are both used for $\rho$. "Mismatch injection rate" is more precise (it names what $\rho$ does: inject mismatch). NOTATION.md uses "environment change rate." Slight preference for "injection rate" in Discussion sections.
 
-## `model sufficiency $S$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `predictive sufficiency` | +1 | gemini-2 +1 |
-
-**Notes:**
-
-- `predictive sufficiency` — **gemini-2 (+1):** Clarifies that it's about how much predictive information is retained, not structural sufficiency.
-
 ## `model sufficiency model class fitness`
 
 | candidate | aggregate | votes |
@@ -11012,18 +13830,6 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `keep` — **opus-4-7-b (+1):** Keep both. Each is a specific technical quantity ($S$ and $\mathcal F$) — the slug is the concept.
-
-## `model synchronization cost reversal under ambiguity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `ambiguity reversal` | +1 | codex-gpt-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `ambiguity reversal` — **codex-gpt-5-r2 (+1):** Names the case where Auftragstaktik bandwidth ordering reverses, but this needs more formal support.
 
 ## `msc architectural proposals yyyy mm dd md`
 
@@ -11056,18 +13862,6 @@ _category: name-unnamed × 1_
 
 - `shared environment scope` — **gemini-2 (+1):** Emphasizes the shared environment which is the defining characteristic of this scope.
 - `multi agent scope` — **haiku-4-5 (+1):** Multiple agents, shared env. Self-descriptive. Keep.
-
-## `observability boundary in a strategy DAG`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `observability frontier` | +1 | codex-gpt-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `observability frontier` — **codex-gpt-5-r2 (+1):** Useful when discussing instrumentation investments, but lower priority than epistemic dead zone.
 
 ## `observability opacity`
 
@@ -11109,52 +13903,6 @@ _category: name-unnamed × 1_
 
 - `reading AAD` — **opus-4-7-b (+1):** The preamble opens with "Working draft..." and "Reading AAD..." — the "Reading AAD" paragraph is doing framing work and deserves its own section-name in the doc table of contents. Light edit.
 
-## `output after context turnover without state restoration`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `cold reconstruction` | +1 | codex-gpt-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `cold reconstruction` — **codex-gpt-5-r2 (+1):** Plausible logogenic term, but reconstruction loop is better for the broader mechanism.
-
-## `p ij edge confidence weight`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `edge credence` | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `edge credence` — **haiku-4-5 (+1):** LEXICON already names this "edge credence" (distinct from "probability"); NOTATION uses p_ij. The prose name "credence" (Bayesian terminology) is better than "confidence weight" for indicating belief, not frequentist probability. Current setup is good; English name already established.
-
-## `pearl l1 l2 l3`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `predicting exploring reasoning` | +1 | audit-471203-incremental +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `predicting exploring reasoning` — **audit-471203-incremental (+1):** Brief-grade agent-side gloss. NOT a rename — keep Pearl's terms formally. The agent-action gloss makes it audience-friendly. [from 09-def-pearl-causal-hierarchy.md]
-
-## `pearl-level 2 causal contrast`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the agent s choice actually changes what happens` | +1 | audit-471203-incremental +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `the agent s choice actually changes what happens` — **audit-471203-incremental (+1):** Brief-grade gloss only. The formal name is doing real work; the layperson translation is missing from any Brief field. [from 06-scope-agency.md]
-
 ## `persistence three senses structural operational continuity`
 
 | candidate | aggregate | votes |
@@ -11165,16 +13913,6 @@ _category: canonicalize × 1_
 
 - `keep three senses sharpen usage sites` — **opus-4-7-b (+1):** The three senses are load-bearing and correctly disambiguated in LEXICON.md. The *irreducibility* is fine — the three senses are genuinely related (they all concern "the agent sustains itself"). Usage-site discipline: every use of the bare word "persistence" in segments should be followed by the sense in parentheses on first use per segment, e.g. "(structural)". Not a rename; a writing convention.
 
-## `pi parameterization invariance`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `coordinate freedom axiom` | +1 | gemini-1 +1 |
-
-**Notes:**
-
-- `coordinate freedom axiom` — **gemini-1 (+1):** "Coordinate-freedom" is more visually evocative and intuitive than the clinical "parameterization-invariance".
-
 ## `prior art integration convention`
 
 | candidate | aggregate | votes |
@@ -11184,26 +13922,6 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `prior art integration` — **opus-4-7-b (+1):** Keep. Directive, clear. No better alternative.
-
-## `privileged high identifiability calibration laboratory`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `high identifiability calibration lab` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `high identifiability calibration lab` — **codex-1 (+1):** Keeps the identification point while reducing adjective drag in repeated prose.
-
-## `promote in topological order`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `topological promotion order` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `topological promotion order` — **sonnet-4-6 (+1):** FORMAT.md uses this phrase but doesn't name it as a convention. "Topological promotion" as a named methodology would make the gate-ordering rule easy to reference.
 
 ## `r1 r2 result numbering convention in logogenic agents`
 
@@ -11247,16 +13965,6 @@ _category: canonicalize × 1_
 
 - `standardize as derivation suffix for derivation type appendices` — **opus-4-7-b (+1):** Observation: the `-derivation` suffix on appendix segments is a good AAD convention (distinguishes derivation segments from stating segments). Enforce consistently.
 
-## `section ii actuated adaptation agentic systems`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `section ii actuated adaptation agentic systems` ⭑ | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `section ii actuated adaptation agentic systems` — **haiku-4-5 (+1):** Slightly verbose; "Actuation" is the weaker semantic fit (Section II is mostly about purposeful agency; actuation is one mechanism enabling it). CLAUDE.md acknowledges this as "a known asymmetry" in the current AAD name itself. Changing the section title is lower-priority than clarifying AAD's overall name. Keep current title; flag the "Actuation" weakness at the framework-name level.
-
 ## `section ii header actuated adaptation agentic systems`
 
 | candidate | aggregate | votes |
@@ -11268,50 +13976,6 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `actuated adaptation agentic systems` — **opus-4-7-r2 (+1):** Mild canonicalization. The current header reads slightly redundantly ("actuated adaptation" + "agentic systems"); could be simplified to "Actuated Agents" but the existing form is workable and signals the dual-half framing of the AAD acronym.
-
-## `sector condition derivation`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `sector condition derivation` ⭑ | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `sector condition derivation` — **haiku-4-5 (+1):** Lyapunov derivations for bounded mismatch and adaptive reserve. Self-descriptive. Keep.
-
-## `self actuated agent`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `autonomous agent` | +1 | gemini-2 +1 |
-| `self directed agent` | +1 | gemini-2 +1 |
-
-**Notes:**
-
-- `autonomous agent` — **gemini-2 (+1):** "Self-actuated" is clunky. If it sets its own $O_t$, it possesses true autonomy.
-- `self directed agent` — **gemini-2 (+1):** Alternative to autonomous if autonomy is overused.
-
-## `software scope`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `software scope` ⭑ | +1 | opus-4-7-b +1 |
-
-**Notes:**
-
-- `software scope` — **opus-4-7-b (+1):** Keep. Direct.
-
-## `source quality uncertainty`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `source uncertainty` | +1 | codex-gpt-5-r2 +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `source uncertainty` — **codex-gpt-5-r2 (+1):** Shorter in prose; keep the full term when disambiguation matters.
 
 ## `spike research artifact`
 
@@ -11377,58 +14041,6 @@ _category: canonicalize × 1_
 - `strategic dynamics derivation` — **haiku-4-5 (+1):** Sector condition verification for strategy edges (5 cases + bridge). Compound but clear. Keep.
 - `strategy edge dynamics` — **opus-4-7-b (+1):** Current slug overloads "strategic" (again — see §overloaded-words). The derivation is specifically about *edge* dynamics; naming that makes the segment about what it's actually about.
 
-## `strategy`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strategy` ⭑ | +1 | gemini-3-1-pro-preview-r2 +1 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `strategy` — **gemini-3-1-pro-preview-r2 (+1):** Standard.
-
-## `sufficiency discontinuity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `sufficiency drop` | +1 | gemini-1 +1 |
-
-**Notes:**
-
-- `sufficiency drop` — **gemini-1 (+1):** "Drop" is slightly more intuitive than "discontinuity" for the loss of context.
-
-## `symbol default bias bound track 1 track 2`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `transport track fisher track` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `transport track fisher track` — **codex-1 (+1):** If these labels survive in framing prose, they should expose the real distinction instead of forcing readers to remember which numbered track is which.
-
-## `symbol default g t in prose`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `purposeful state` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `purposeful state` — **codex-1 (+1):** Better than "goal state" because it includes both objective and strategy. This matches the repo's actual decomposition.
-
-## `symbol default m t in prose`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `model state` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `model state` — **codex-1 (+1):** Good neutral default when the argument is about sufficiency, persistence, or update mechanics rather than worldview.
-
 ## `system coherence system coupling system availability`
 
 | candidate | aggregate | votes |
@@ -11438,18 +14050,6 @@ _category: keep × 1_
 **Notes:**
 
 - `keep all three` — **opus-4-7-b (+1):** Keep — each is a distinct TST system-level property; the parallel `system-X` structure is itself pedagogical.
-
-## `temporal coherence markers`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `temporal coherence markers` ⭑ | +1 | opus-4-7-r2 +1 |
-
-_category: keep × 1_
-
-**Notes:**
-
-- `temporal coherence markers` — **opus-4-7-r2 (+1):** Weak keep — logozoetic norm. The slug names the markers themselves rather than the norm-claim about them; could be more substantive ("#norm-out-of-band-time-markers" or similar). Acceptable as-is.
 
 ## `terminal alignment error`
 
@@ -11487,18 +14087,6 @@ _category: canonicalize × 1_
 
 - `the bias bound product law` — **opus-4-7-r2 (+1):** In `#scope-observation-ambiguity-modulation` and `#deriv-bias-bound`, the product $\kappa \times \mathcal{A}$ governing Class-2 bias is sometimes "the integrated κ × A law," sometimes "the effective-coupling product," sometimes "the κ-A factorization." Canonicalize on one — "the bias-bound product law" or "the κ × A product." Less critical than the first-tier canonicalizations.
 
-## `the scaffolding tax`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `scaffolding tax` | +1 | opus-4-7-r2 +1 |
-
-_category: rename × 1_
-
-**Notes:**
-
-- `scaffolding tax` — **opus-4-7-r2 (+1):** Drop "the" from the slug.
-
 ## `the trio collectively`
 
 | candidate | aggregate | votes |
@@ -11529,6 +14117,20 @@ _category: rename × 1_
 
 - `todo md active` — **haiku-4-5 (+1):** Minor: the long section title is accurate but verbose. Weak preference for shortening; section anchors work either way.
 
+## `track 1 track 2 in bias bound`
+
+| candidate | aggregate | votes |
+|---|---:|---|
+| `transport track fisher rao track` | +1 | opus-targeted-alternatives-v2 +1 |
+| `track 1 track 2` | +1 | opus-targeted-alternatives-v2 +1 |
+
+_category: add-alias × 1, keep × 1_
+
+**Notes:**
+
+- `transport track fisher rao track` — **opus-targeted-alternatives-v2 (+1):** Per `#deriv-bias-bound`. Inside the segment the Track 1 / Track 2 labels work; in cross-segment references the English names are necessary. Confirms Opus r1 single +1.
+- `track 1 track 2` — **opus-targeted-alternatives-v2 (+1):** Within `#deriv-bias-bound` itself, the numbered labels are fine local shorthand. Both can coexist (numbered local; English cross-segment).
+
 ## `track 1 track 2 in bias bound derivation`
 
 | candidate | aggregate | votes |
@@ -11538,30 +14140,6 @@ _category: rename × 1_
 **Notes:**
 
 - `transport inequality track fisher rao track` — **opus-4-7 (+1):** Inside the segment, "Track 1" and "Track 2" are fine as local shorthand. In any cross-segment reference, the English names read better.
-
-## `transition opacity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `heading flag only` | +1 | audit-471203-incremental +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `heading flag only` — **audit-471203-incremental (+1):** The phrase is "fine but slightly clinical." Pairing it with "perception opacity" / "epistemic opacity" as a deliberate triad would land harder. [from 02-def-action-transition.md]
-
-## `triple depth penalty canonicalize`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reaffirm 3 with new framing` | +1 | sonnet-4-6-r2 +1 |
-
-_category: canonicalize × 1_
-
-**Notes:**
-
-- `reaffirm 3 with new framing` — **sonnet-4-6-r2 (+1):** Codex voted this (+3). My cold-start had proposed it (+2). The upgrade: reading across the votes, "triple depth penalty" is the *only* cross-cutting AAD phrase that names the compounding of three independent mechanisms into a single depth-pressure. This is the kind of cross-segmental name that belongs in LEXICON.md and should appear in the OUTLINE preamble. The value of canonicalizing it is clearer after seeing how consistently other agents reach for the components (confidence decay, evidence starvation, cognitive cost) without a name for their conjunction.
 
 ## `u f update rule homogeneity`
 
@@ -11575,16 +14153,6 @@ _category: add-alias × 1_
 
 - `update rule homogeneity` — **opus-4-7-r2 (+1):** Already in use; weakly affirm. The alias is more verbose than the symbol but the symbol $U_f$ is itself unfamiliar. Prose users will likely fall back to the alias.
 
-## `u m u o u σ unity dimensions`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistemic unity teleological unity strategic unity` | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `epistemic unity teleological unity strategic unity` — **haiku-4-5 (+1):** NOTATION.md and LEXICON already define these English names explicitly. The subscript symbols U with subscripts are compact; the English names enable prose fluency. Current setup is good — no rename, but keep the English equivalents prominent in LEXICON (already done).
-
 ## `unnamed TST specific name for code that is observation cheap because it s well written`
 
 | candidate | aggregate | votes |
@@ -11597,16 +14165,6 @@ _category: name-unnamed × 1_
 
 - `observation cheap code` — **opus-4-7-r2 (+1):** New alternative — Codex coined "observation infrastructure" (which I support) and Sonnet renamed `der-code-quality-as-observation-infrastructure` to `der-observation-infrastructure`. What's still unnamed is the *property* of individual code passages: not all code is equally observation-cheap. A name for the property (rather than the infrastructure-level claim) would let TST results target specific passages. Lower confidence — may be too narrow to deserve a name.
 
-## `unnamed agent as a projection whose contraction rate must exceed its target s drift`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `contraction imperative` | +1 | gemini-1 +1 |
-
-**Notes:**
-
-- `contraction imperative` — **gemini-1 (+1):** Gives a name to a core mental model of the agent's struggle against the environment.
-
 ## `unnamed an organizational level instance of the persistence condition s bathtub gloss`
 
 | candidate | aggregate | votes |
@@ -11618,16 +14176,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `the bathtub model` — **opus-4-7-r2 (+1):** Confirmation with new reasoning — Codex named this at +2 (without explicit canonicalization) and I want to lift it: CLAUDE.md mentions Walton's bathtub gloss as the canonical Feynman-criterion benchmark for *plain-language briefs*. The bathtub gloss is one example; the *family of plain-language analogs* (bathtub, leaky bucket, savings vs withdrawal, etc.) deserves a family name. "The bathtub model" is fine for the persistence-condition specific case; the family would be something like "Feynman-grade analogs" — but I'd defer that to a future round.
-
-## `unnamed calibration laboratory framing as reusable meta move`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `calibration domain calibration lab` | +1 | agent1-original-brainstorm +1 |
-
-**Notes:**
-
-- `calibration domain calibration lab` — **agent1-original-brainstorm (+1):** Low priority. Concept of a privileged domain for identification within a theoretical framework is itself a reusable meta-move other projects could borrow.
 
 ## `unnamed cascade of inferential force strengthening from c1 to c3 on satisfaction gap control regret diagnostics`
 
@@ -11649,16 +14197,6 @@ _category: name-unnamed × 1_
 
 - `inferential force cascade` — **opus-4-7-b (+1):** The pattern "under C1 diagnostics are weak, C2 they sharpen, C3 they're global" — currently explained in prose every time it comes up (which is several places). "Inferential-force cascade" gives the pattern a name. Mirrors `#orient-cascade` in structure (both cascades are ordered resolutions) and the parallel is pedagogically useful.
 
-## `unnamed chain layer anchor role in additive coordinate forcing`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `chain anchor` | +1 | agent1-original-brainstorm +1 |
-
-**Notes:**
-
-- `chain anchor` — **agent1-original-brainstorm (+1):** Prose term, not segment rename. Lets three theorem-analogs refer back naturally.
-
 ## `unnamed class 1 class 2 class 3 agent classes themselves need mnemonic handles`
 
 | candidate | aggregate | votes |
@@ -11669,58 +14207,6 @@ _category: name-unnamed × 1_
 
 - `proposal assign english modifiers` — **opus-4-7-b (+1):** Class-numbered labels work but lack mnemonic grip. Proposal: retain "Class 1 / 2 / 3" as the primary labels but assign canonical one-word modifiers — **modular** (Class 1), **merged** (Class 2), **partial** (Class 3) — that are already used descriptively. Adopt them as the *canonical* prose forms: "modular agents" / "merged agents" / "partially-modular agents" or "partial-mix agents." Class 2 especially benefits: "fully merged" currently appears; normalize to just "merged."
 
-## `unnamed complexity driven resistance to change as features accumulate`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `structural accumulation drag` | +1 | gemini-1 +1 |
-
-**Notes:**
-
-- `structural accumulation drag` — **gemini-1 (+1):** Surfaced in TST discussions. Gives a name to the intuitive "entropy" of a codebase that resists linear velocity improvements.
-
-## `unnamed convention hierarchy monotonicity cascade satisfaction gap and control regret strengthening across c1→c3`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `inferential force cascade` | +1 | agent1-original-brainstorm +1 |
-
-**Notes:**
-
-- `inferential force cascade` — **agent1-original-brainstorm (+1):** Low priority but worth noting. Pedagogical.
-
-## `unnamed cycle phase sequence as a whole`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the adaptive pentad` | +1 | gemini-1 +1 |
-| `the pentad` | +1 | opus-1m +1 |
-
-**Notes:**
-
-- `the adaptive pentad` — **gemini-1 (+1):** Provides a single memorable noun for the 5-phase cycle (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis) as a complete unit.
-- `the pentad` — **opus-1m (+1):** Agree with original. Low priority. Names the five-phase sequence as a unit.
-
-## `unnamed cycle phase sequence as whole`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the pentad five phase cycle` | +1 | agent1-original-brainstorm +1 |
-
-**Notes:**
-
-- `the pentad five phase cycle` — **agent1-original-brainstorm (+1):** Probably not worth effort. Worth surfacing.
-
-## `unnamed decomposing mismatch into environment vs other sub agents actions`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `internal mismatch attribution` | +1 | gemini-1 +1 |
-
-**Notes:**
-
-- `internal mismatch attribution` — **gemini-1 (+1):** A necessary formalization for multi-agent composition (Section III). Distinct from generic mismatch.
-
 ## `unnamed effort time risk ranking considered false constraints`
 
 | candidate | aggregate | votes |
@@ -11730,46 +14216,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `false constraints` — **opus-4-7 (+1):** Joseph uses this phrasing; worth canonicalizing so agents (me included) can recognize the pattern.
-
-## `unnamed empty stability plasticity feasibility window in consolidation dynamics`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `stability plasticity collapse` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `stability plasticity collapse` — **codex-1 (+1):** The failure mode is precisely that the feasible interval disappears. Slightly long, but honest and reusable.
-
-## `unnamed epochal stability → latent diversification → niche emergence`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `punctuated composition dynamics` | +1 | gemini-2 +1 |
-
-**Notes:**
-
-- `punctuated composition dynamics` — **gemini-2 (+1):** Draws on punctuated equilibrium, fitting the extreme transition motif.
-
-## `unnamed externalizing part of $M_t$ into the environment for future agents`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `model inscription` | +1 | codex-2 +1 |
-
-**Notes:**
-
-- `model inscription` — **codex-2 (+1):** Distinctive and accurate; it captures writing the model into the world, not just "documentation."
-
-## `unnamed fourth diagnostic where terminal conditions are met but the objective is still missed`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `terminal alignment error` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `terminal alignment error` — **codex-1 (+1):** The DAG-type-closure spike identifies a real gap in the diagnostic vocabulary. This name is plain, disciplined, and fits the existing apparatus.
 
 ## `unnamed future segment layer header for narrative pedagogical framing`
 
@@ -11791,36 +14237,6 @@ _category: name-unnamed × 1_
 
 - `reader s path` — **opus-1m (+1):** Forward-looking name reservation. SP-5 adds a 1-2 sentence load-bearing preamble per segment; under the outline-filter affordance this becomes its own filterable layer. Naming the header now stabilizes the API even before the content lands.
 
-## `unnamed git recorded committed state subset of the chronica $\mathcal{C}_t^{\text{commit}}$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `commit chronica` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `commit chronica` — **codex-1 (+1):** Slightly stylized, but useful. The committed slice shows up often enough in the git/chronica work to deserve a short handle.
-
-## `unnamed joseph s mental model projection whose contraction rate must exceed its target s drift rate`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the projection slogan contraction over drift slogan` | +1 | opus-4-7-b +1 |
-
-**Notes:**
-
-- `the projection slogan contraction over drift slogan` — **opus-4-7-b (+1):** CLAUDE.md §7(g) names this as "organizing-principle slogan" (O-BP10, not yet surfaced at segment level). If promoted to segment-level it deserves a short handle — "the contraction-over-drift slogan" is short enough to say in a sentence. Low priority; depends on SP-7 / O-BP10 promotion decision.
-
-## `unnamed minimum sufficiency required after a session rebuild`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `reentry threshold` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `reentry threshold` — **codex-1 (+1):** This concept recurs across context-turnover and model-preservation. It deserves a short noun phrase instead of repeated paraphrase.
-
 ## `unnamed scope honesty as architecture`
 
 | candidate | aggregate | votes |
@@ -11831,72 +14247,6 @@ _category: name-unnamed × 1_
 
 - `honesty` — **opus-4-7 (+1):** Already used as a term; "-as-architecture" is the argumentative form. "Scope honesty" alone works as the noun for the commitment (as it already does in several segments).
 
-## `unnamed the 1 anchor 3 theorem structure in additive coordinate forcing`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `anchored theorem pattern` | +1 | sonnet-4-6 +1 |
-| `identity anchored forcing` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `anchored theorem pattern` — **sonnet-4-6 (+1):** The structure appears across the project and is referenced in CLAUDE.md and multiple segments as "1-anchor-plus-3-theorem." This phrase is used repeatedly but never crystallized as a name. "Anchored-theorem pattern" would let writers say "this is another instance of the anchored-theorem pattern" without paraphrasing. Alternatively: "identity-anchored uniqueness family."
-- `identity anchored forcing` — **sonnet-4-6 (+1):** Emphasizes the chain layer's identity status (mathematical identity, not axiom). "Forcing" connects to the coordinate-forcing meta-segment.
-
-## `unnamed the 1 anchor 3 theorem structure itself`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `anchor theorem pattern` | +1 | opus-4-7-b +1 |
-
-**Notes:**
-
-- `anchor theorem pattern` — **opus-4-7-b (+1):** The `#forced-coordinates` meta-segment's shape (one mathematical identity + N theorems conditional on AAD-internal axioms). If the Fenchel-Bregman reframe (SP-9) lands differently this name is discardable; otherwise a crisp handle for the 4-instance structure is useful.
-
-## `unnamed the 1 anchor plus 3 theorem characterization`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `pattern anatomy` | +1 | opus-4-7 +1 |
-
-**Notes:**
-
-- `pattern anatomy` — **opus-4-7 (+1):** Currently a long phrase that the theory uses three to four times per session. "1-anchor-plus-3-theorem" is precise but reads as inventory-counting. "Pattern anatomy" (or "pattern spine") could snapshot the structure. Flagging; low conviction on exact name.
-
-## `unnamed the 1 anchor plus 3 theorem structure`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `anchor and forcing quartet` | +1 | codex-2 +1 |
-| `anchor theorem trio` | +1 | gemini-2 +1 |
-
-**Notes:**
-
-- `anchor and forcing quartet` — **codex-2 (+1):** Worth naming if the pattern stays central; the current paraphrase is too bulky to reuse.
-- `anchor theorem trio` — **gemini-2 (+1):** Gives a memorable noun to this recurring proof architecture.
-
-## `unnamed the 2×2 orient cascade diagnostic table`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `the cascade diagnostic or the 2×2 diagnostic` | +1 | sonnet-4-6-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `the cascade diagnostic or the 2×2 diagnostic` — **sonnet-4-6-r2 (+1):** The four cells of ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$) are consistently referenced in `der-orient-cascade` as "the 2×2 diagnostic" or "the four cases." These deserve a named handle. "Cascade diagnostic" is the most natural single-noun form. Weak preference — "2×2 diagnostic" is already near-canonical in the prose.
-
-## `unnamed the 2×2 satisfaction gap control regret table`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `diagnostic square` | +1 | codex-2 +1 |
-
-**Notes:**
-
-- `diagnostic square` — **codex-2 (+1):** The table is used often enough to deserve a compact public name.
-
 ## `unnamed the 2×2 satisfaction gap × control regret diagnostic table`
 
 | candidate | aggregate | votes |
@@ -11906,16 +14256,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `the 2×2 diagnostic` — **opus-4-7 (+1):** Used ubiquitously in prose. Worth canonicalizing as a named object so that "see the 2×2 diagnostic" reads naturally.
-
-## `unnamed the AAD expressible failure mode of an empty stability plasticity window`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `consolidation starvation` | +1 | gemini-1 +1 |
-
-**Notes:**
-
-- `consolidation starvation` — **gemini-1 (+1):** Adopts "catastrophic forgetting" but specifically names the AAD mechanism: the agent is starved of the consolidation time needed to integrate patterns before they are overwritten.
 
 ## `unnamed the a2 sub scope partition collectively`
 
@@ -11937,36 +14277,6 @@ _category: name-unnamed × 1_
 
 - `architectural partition` — **opus-4-7-b (+1):** Symbols stay (Class 1/2/3); prose gets "the architectural partition" as a collective handle. Avoids "architecture hierarchy" (hierarchy overload) while naming the three-way structure.
 
-## `unnamed the calibration laboratory concept applied outside TST`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `calibration domain` | +1 | opus-4-7-b +1 |
-
-**Notes:**
-
-- `calibration domain` — **opus-4-7-b (+1):** CLAUDE.md §7 names TST as "AAD's calibration laboratory — the high-identifiability domain where AAD-native quantities can be measured exactly." The *concept* (a privileged domain for identification of a theoretical framework's quantities) is itself a reusable meta-move for any domain instantiation. "Calibration domain" names it. Low priority but opens a useful slot.
-
-## `unnamed the chain confidence decay mathematical anchor as the 1 in 1 anchor 3 theorem`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `chain anchor` | +1 | opus-4-7-b +1 |
-
-**Notes:**
-
-- `chain anchor` — **opus-4-7-b (+1):** Not a rename of the segment (`#chain-confidence-decay` keeps its slug) — a prose *handle* for the anchor's role in the `#additive-coordinate-forcing` / `#forced-coordinates` meta-pattern. "The update-layer analog of the chain anchor" / "the three theorem-layers reduce to the chain anchor under \_\_\_" read cleanly where "the `#chain-confidence-decay` segment in its role as the mathematical-identity anchor of the 1-anchor + 3-theorem pattern" does not.
-
-## `unnamed the class 1 sub agents class 3 composite phenomenon in strategic composition`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strategic entanglement` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `strategic entanglement` — **codex-1 (+1):** Useful noun for a real phenomenon: individually modular agents can create a non-modular composite through mutual modeling and opposed goals.
-
 ## `unnamed the complete adaptive cycle from anticipation through action`
 
 | candidate | aggregate | votes |
@@ -11978,64 +14288,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `adaptive cycle already named in lexicon` — **haiku-4-5-r2 (+1):** LEXICON.md already defines "Cycle" vs "Loop." Checking if there's an unnamed-thing here — appears already named well.
-
-## `unnamed the condition that a strategy DAG s endosymbiont crosses the composite agent scope from below`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `crossing threshold` | +1 | sonnet-4-6-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `crossing threshold` — **sonnet-4-6-r2 (+1):** `hyp-symbiogenic-composition` describes the pre/post-symbiogenesis transition as "$U_O$ crosses the composite-agent scope condition from below." The moment of crossing is the relevant concept in composition ontology. Weak proposal — the language is already reasonably clear; naming this threshold might be premature while symbiogenic composition itself is only a hypothesis.
-
-## `unnamed the condition that the agent s event observation pairs constitute genuine interventions as opposed to passive associations`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `interventional character` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `interventional character` — **sonnet-4-6 (+1):** #loop-interventional-access makes this distinction at length: action-generated data has "interventional character" but is not the same as "cleanly identified do-estimates." The concept is used twice in the Discussion and deserves a name that can be referenced. "Interventional character" or "loop interventional character."
-
-## `unnamed the contraction over drift insight`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `drift contraction inequality` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `drift contraction inequality` — **sonnet-4-6 (+1):** Alternative name. More technical but maps directly to the inequality.
-
-## `unnamed the cumulative prediction error that an agent has tolerated without updating its model`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `tolerance budget standing mismatch reservoir` | +1 | haiku-4-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `tolerance budget standing mismatch reservoir` — **haiku-4-5-r2 (+1):** Not explicitly named in the theory; closest is "adaptive reserve" which names the *capacity*, not the *accumulation*. This may be too fine a distinction to warrant a separate name. Low confidence; may be premature.
-
-## `unnamed the cycle as a whole`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adaptive traversal` | +1 | gemini-2 +1 |
-| `the adaptive pentad` | +1 | opus-4-7-b +1 |
-| `the five turn` ✗ | -1 | opus-4-7-b -1 |
-
-**Notes:**
-
-- `adaptive traversal` — **gemini-2 (+1):** "The cycle-as-a-whole" is clunky. "Adaptive traversal" suggests moving through the loop.
-- `the adaptive pentad` — **opus-4-7-b (+1):** The five-phase cycle (prolepsis → aisthesis → aporia → epistrophe → praxis) has a piecewise name per phase but no *collective* noun. "The cycle" works when context is clear but is ambiguous with (e.g.) credit cycles or OODA cycles. "The pentad" or "the adaptive pentad" is a specific collective noun that fits AAD's Greek-vocabulary commitment. Weak preference; aesthetic call.
-- `the five turn` — **opus-4-7-b (-1):** Considered as a more Germanic / industrial alternative to "pentad." Reject: loses the Greek-vocabulary register and gains nothing.
 
 ## `unnamed the derivation formulation hypothesis status gradient in format md`
 
@@ -12083,28 +14335,6 @@ _category: name-unnamed × 1_
 
 - `strategic persistence envelope` — **opus-4-7-r2 (+1):** New alternative — my r2 coined "persistence envelope" for the M_t-side region $\{(\alpha, \rho, R) : \alpha > \rho/R\}$. The Σ_t side has a structurally analogous region defined by `#schema-strategy-persistence` (sector condition extended to strategy edges) but no name. "Strategic persistence envelope" parallels the M_t version and gives the strategy-DAG dynamics a named feasibility region. Lower confidence because the schema is proposed-schema, not yet a result; naming the envelope before the result is fully landed is somewhat speculative.
 
-## `unnamed the externalization reconstruction cycle across sessions`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `memory relay` | +1 | codex-2 +1 |
-
-**Notes:**
-
-- `memory relay` — **codex-2 (+1):** Short, sayable noun for a repeated logogenic mechanism.
-
-## `unnamed the failure mode where an agent s model class cannot represent the environment s true causal structure`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `model class insufficiency or structural unidentifiability` | +1 | haiku-4-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `model class insufficiency or structural unidentifiability` — **haiku-4-5-r2 (+1):** Currently paraphrased as "model class fitness floor" and "identifiability floor." The specific phenomenon of a *mismatch between model class and environment structure* deserves a memorable noun. "Structural unidentifiability" is borrowed from classical statistics but carries baggage. "Model class insufficiency" is self-descriptive. Weak confidence in either.
-
 ## `unnamed the functional requirements are the results formalisms are the engineering slogan`
 
 | candidate | aggregate | votes |
@@ -12115,16 +14345,6 @@ _category: name-unnamed × 1_
 
 - `functional primacy` — **opus-4-7 (+1):** Joseph flagged this as an established project principle (MEMORY.md, Theory Character section); it deserves a pull-quote name. Low conviction; flag for consideration.
 
-## `unnamed the invisible time spent building $M_t$`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `comprehension drag` | +1 | gemini-1 +1 |
-
-**Notes:**
-
-- `comprehension drag` — **gemini-1 (+1):** "Comprehension drag" gives a memorable name to the invisible cost of incomprehensible code.
-
 ## `unnamed the iterated audit process gemini opus codex de novo consolidated three doc portfolio`
 
 | candidate | aggregate | votes |
@@ -12134,18 +14354,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `cross model audit cycle` — **opus-4-7 (+1):** Recurring methodology; currently referred to as "audit cycle" generically and by date. A durable name helps. Low conviction.
-
-## `unnamed the loss of coherent identity when an agent s interactions are severed or its continuity is broken`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `continuity loss or persistence fracture` | +1 | haiku-4-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `continuity loss or persistence fracture` — **haiku-4-5-r2 (+1):** LEXICON.md distinguishes three senses of "persistence" but treats continuity loss as the absence of continuity rather than a named phenomenon. For logozoetic agents where this matters morally, a crisp name would help. "Continuity loss" is straightforward; "persistence fracture" is more metaphorical. Weak confidence — may be premature to name before logozoetic agents are more developed.
 
 ## `unnamed the mathematical operation by which agents convert observed mismatch into structural revision`
 
@@ -12159,16 +14367,6 @@ _category: name-unnamed × 1_
 
 - `structural cascade` — **opus-4-7-r2 (+1):** New alternative — none of the peers reached this. Observed mismatch → parametric update is the standard cycle; observed mismatch → structural revision (when parametric fails) is the structural cascade. The cascade has its own ordering (detect insufficiency → identify candidate structure → graft → validate). Naming the cascade would let `#result-structural-adaptation-necessity` and `#form-structural-change-as-parametric-limit` cite a shared object. Lower confidence because Codex's "strategic grafting" already names the substantive operation.
 
-## `unnamed the meta architecture of separability pattern identifiability floor additive coordinate forcing`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `three part scope architecture` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `three part scope architecture` — **sonnet-4-6 (+1):** CLAUDE.md already calls this "AAD's three-part meta-architecture" in several places. Crystallizing this as a named concept — the scope architecture — would let documentation say "for AAD's scope architecture" without four lines of context.
-
 ## `unnamed the moment when an agent s identity claim becomes load bearing because actions become irreversible`
 
 | candidate | aggregate | votes |
@@ -12180,16 +14378,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `constitutive moment` — **opus-4-7-r2 (+1):** New alternative — `form-constitutive-utterance` names the formal object (the irreversible token-generation event) but the *moment* in cycle-time when constitutivity activates isn't separately named. "Constitutive moment" pairs naturally with the existing constitutive-utterance vocabulary and gives logozoetic-agents segments a phenomenological handle. Lower confidence because the distinction may be redundant with the utterance itself.
-
-## `unnamed the organizing principle slogan an adaptive system is a projection whose contraction rate exceeds its target s drift rate`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `projection contraction slogan` | +1 | opus-4-7 +1 |
-
-**Notes:**
-
-- `projection contraction slogan` — **opus-4-7 (+1):** CLAUDE.md §7(g) flags this as Opus O-BP10, "not yet surfaced at segment level." Deserves a name so it can be referenced before it lands as prose.
 
 ## `unnamed the orient cascade s information dependency forced ordering as a meta pattern`
 
@@ -12203,36 +14391,6 @@ _category: name-unnamed × 1_
 
 - `information dependency forcing` — **opus-4-7-r2 (+1):** The orient cascade's ordering is *forced* by information dependency (each step's input depends on prior steps' output). This is a structurally similar move to additive-coordinate-forcing — a uniqueness theorem on an axiom forces a specific ordering. Naming it as "information-dependency forcing" would let it pair with `#disc-additive-coordinate-forcing` as a cross-meta-pattern observation. Lower-confidence vote because it may not generalize beyond the orient cascade.
 
-## `unnamed the pattern where AAD s negative results floors strengthen the machinery that escapes them`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `floor strengthening inversion` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `floor strengthening inversion` — **sonnet-4-6 (+1):** #identifiability-floor says: "floors strengthen the load-bearing role of the AAD machinery that supplies the unique escape." This inversion — negative result strengthens positive machinery — is a recurring structural move that is mentioned but unnamed. "Floor-strengthening inversion" or "negative-positive inversion."
-
-## `unnamed the phenomenon that unobservable edges freeze and paths become epistemically dead`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `observability dominance` | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `observability dominance` — **haiku-4-5 (+1):** LEXICON lists "Observability dominance" as "a term with specific AAD meaning awaiting full treatment." The concept (unobservable strategy edges freeze) is load-bearing. The name is already proposed in LEXICON; when #observability-dominance segment is written, this name will be locked in. Currently unwritten; mark as ready-to-name.
-
-## `unnamed the procedure of reading any segment through all three meta segments`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `triple lens review` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `triple lens review` — **sonnet-4-6 (+1):** CLAUDE.md says "reading any segment through all three lenses surfaces what makes it load-bearing." This procedure is recommended but unnamed. "Triple-lens review" (or "meta-lens review") would let FORMAT.md add it as a named review move.
-
 ## `unnamed the rate at which an agent s chronica grows compared to compression cadence`
 
 | candidate | aggregate | votes |
@@ -12245,30 +14403,6 @@ _category: name-unnamed × 1_
 
 - `chronica throughput` — **opus-4-7-r2 (+1):** New alternative — Gemini reached "complementary learning architecture" and "scaffolding tax" but didn't name the rate-quantity that determines whether the scaffolding tax is sustainable. "Chronica throughput" (events/second, or information-bits/cycle into chronica) compared to consolidation cadence determines whether the agent can keep up. Lower confidence because Codex's "consolidation horizon" overlaps.
 
-## `unnamed the region in parameter space where parametric updates remain effective before structural change is forced`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `parametric regime or stability envelope` | +1 | haiku-4-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `parametric regime or stability envelope` — **haiku-4-5-r2 (+1):** OUTLINE.md mentions "A2' sub-scope α₁ / α₂ / β partition" but does not give a memorable name to the overall region concept. "Parametric regime" is more technical; "stability envelope" parallels the persistence-envelope concept. Weak preference; this might be too specialized for naming.
-
-## `unnamed the region where temporal nesting holds`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `temporal coherence zone` | +1 | gemini-3-1-pro-preview-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `temporal coherence zone` — **gemini-3-1-pro-preview-r2 (+1):** Names the valid region for nested cycles.
-
 ## `unnamed the scope honesty as architecture working principle`
 
 | candidate | aggregate | votes |
@@ -12278,58 +14412,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `honesty scope honesty as architecture` — **opus-4-7-b (+1):** Already named in CLAUDE.md §7(a) as "scope-honesty-as-architecture." The phrase is workable; the shorter "scope honesty" does most of the prose work. Usage observation: use the short form in prose, the hyphenated form in CLAUDE.md-register discussions of the element itself.
-
-## `unnamed the section of the adaptive cycle where the agent must choose between exploiting current knowledge and exploring to refine it`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `deliberation phase exploration exploitation tradeoff` | +1 | haiku-4-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `deliberation phase exploration exploitation tradeoff` — **haiku-4-5-r2 (+1):** The tradeoff is discussed in #disc-exploit-explore-deliberate but no crisp name for the *temporal region* where the tradeoff happens. Current phrasing is "exploit/explore/deliberate" but no subject-noun. This is borderline — the phenomenon is named, but the *phase* might benefit from a distinct noun.
-
-## `unnamed the self reinforcing code quality → tempo loop`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `comprehension flywheel` | +1 | codex-2 +1 |
-
-**Notes:**
-
-- `comprehension flywheel` — **codex-2 (+1):** The loop recurs enough in discussion that it deserves a shorter noun than "vicious/virtuous cycle" each time.
-
-## `unnamed the set of five conditions under which a2 is derived rather than assumed the sub scope α agent classes`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `derived sector classes` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `derived sector classes` — **sonnet-4-6 (+1):** Currently called "sub-scope α₁" plus the specific agent instances in a list. A collective name for the five agent classes where A2' is derived (scalar Kalman, Bayesian/exponential-family, strongly-convex-gradient, L2-regularized, linear-PD) would help reviewers quickly check whether a new agent class lands in this group. "Derived-sector classes" or "sector-derivable classes."
-
-## `unnamed the signed coupling structure across all section iii results`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `signed coupling pattern` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `signed coupling pattern` — **sonnet-4-6 (+1):** Every Section III persistence result (team-persistence, adversarial-destabilization, critical-mass-composition) uses the same effective-disturbance decomposition with a signed cross-agent term. The pattern is named in #sector-persistence-template's Discussion ("signed-coupling pattern across instantiations") but not crystallized as a named concept referenceable from other segments.
-
-## `unnamed the strengthen before soften posture applied to apparent overclaims`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistemic strengthening posture` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `epistemic strengthening posture` — **sonnet-4-6 (+1):** CLAUDE.md and MEMORY.md both discuss this as "strengthen-first posture" or "strengthen before softening." The working vocabulary is established; it just doesn't have a single memorable noun. "Strengthening posture" is the current best; it's in CLAUDE.md.
 
 ## `unnamed the strengthen first attempt artifact a spike that tried to derive something stronger and failed`
 
@@ -12395,50 +14477,6 @@ _category: name-unnamed × 1_
 
 - `deliberation threshold` — **haiku-4-5-r2 (+1):** Currently discussed in #der-deliberation-cost as "think vs act tradeoff" but no crisp name for the *threshold* itself. "Deliberation threshold" is clear and technical. Moderate confidence.
 
-## `unnamed the unobservable edges in a strategy DAG that cannot be revised because their values cannot be inferred`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `observability frontier` | +1 | haiku-4-5-r2 +1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `observability frontier` — **haiku-4-5-r2 (+1):** Currently paraphrased as "unobservable edges freeze." The *frontier* of observability is a memorable geometric concept; "frontier" pairs with "boundary" nicely for two senses of the same limit. Weak naming; could be stronger.
-
-## `unnamed the virtuous vicious cycle between $M_t$ quality and $\Sigma_t$ evaluable complexity`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `model strategy coupling` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `model strategy coupling` — **sonnet-4-6 (+1):** #orient-cascade Discussion names the virtuous and vicious cycles explicitly but without a name for the coupling phenomenon itself. "Model-strategy coupling" would let segments say "the model-strategy coupling prevents meaningful evaluation of complex strategies under poor model sufficiency."
-
-## `unnamed variation in correction architectures invisible to persistence analysis`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `latent structural diversity` | +1 | gemini-2 +1 |
-
-**Notes:**
-
-- `latent structural diversity` — **gemini-2 (+1):** Proposed in the gap section of OUTLINE.md. Captures the concept perfectly.
-
-## `value object → def trajectory value`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `conditional support for codex s rename` | +1 | sonnet-4-6-r2 +1 |
-
-_category: rename × 1_
-
-**Notes:**
-
-- `conditional support for codex s rename` — **sonnet-4-6-r2 (+1):** Codex proposed `#def-trajectory-value` (+2); Opus voted keep (+1) and rejected `#def-value-functional` (−1). My cold-start voted keep (+2 with mild reservations). Reading Opus's reasoning: the keep is motivated by the fact that "value functional" collides with `form-objective-functional`. Codex's `trajectory-value` sidesteps that collision by naming what the value IS (horizon-and-policy-conditioned trajectory value) rather than its mathematical form. Weak upgrade from my keep to conditional support for trajectory-value.
-
 ## `what is derived vs what is chosen`
 
 | candidate | aggregate | votes |
@@ -12460,76 +14498,6 @@ _category: rename × 1_
 **Notes:**
 
 - `derivation audit` — **opus-4-7-b (+1):** The full title is load-bearing for first-encounter readers; `### Derivation Audit` is a usable shorter alternative for segments where the table follows a standard pattern. FORMAT.md O-BP14 already permits variation. Keep both as acceptable.
-
-## `what is derived vs what is chosen derivation audit table heading`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `derivation audit` | +1 | sonnet-4-6 +1 |
-
-**Notes:**
-
-- `derivation audit` — **sonnet-4-6 (+1):** The longer form ("What Is Derived vs. What Is Chosen") is the current recommendation in FORMAT.md but it's wordy. "Derivation Audit" is FORMAT.md's own alternative suggestion. It's shorter and communicates the action (auditing derivations). Mild preference for shorter form.
-
-## `worked example bandit`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `worked example bandit` ⭑ | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `worked example bandit` — **haiku-4-5 (+1):** End-to-end RL bandit instantiation (approximate). Self-descriptive. Keep.
-
-## `worked example kalman`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `worked example kalman` ⭑ | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `worked example kalman` — **haiku-4-5 (+1):** End-to-end Kalman instantiation (exact). Self-descriptive. Keep.
-
-## `worked example l1`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `worked example l1` ⭑ | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `worked example l1` — **haiku-4-5 (+1):** L1 augmented DAG: common-cause node, sector condition, L0/L1 comparison. Self-descriptive. Keep.
-
-## `worked example strategy`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `worked example strategy` ⭑ | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `worked example strategy` — **haiku-4-5 (+1):** Section II strategy DAG instantiation (3-arm bandit). Self-descriptive. Keep.
-
-## `working vocabulary observation the framework s honesty is load bearing`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `load bearing honesty` | +1 | codex-1 +1 |
-
-**Notes:**
-
-- `load bearing honesty` — **codex-1 (+1):** Useful short handle for review and framing prose, as long as it stays downstream of the fuller architectural phrase.
-
-## `𝒯 σ strategic tempo`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `strategic tempo` | +1 | haiku-4-5 +1 |
-
-**Notes:**
-
-- `strategic tempo` — **haiku-4-5 (+1):** Parallel to adaptive tempo. Reads naturally. Established in prose. Keep both.
 
 ## `$G_t$ goal state`
 
@@ -12567,18 +14535,6 @@ _category: add-alias × 1_
 
 - `disturbance rate already in use` — **haiku-4-5-r2 (+0):** Already has a clear English name in prose; no alias needed.
 
-## `unnamed the dual concept to satisfaction gap what the world permits minus what the agent achieves`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `this is def control regret already named` | +0 | haiku-4-5-r2 +0 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `this is def control regret already named` — **haiku-4-5-r2 (+0):** Control regret is already crisply named. No unnamed-thing here.
-
 ## `unnamed the five phases of the adaptive cycle`
 
 | candidate | aggregate | votes |
@@ -12590,52 +14546,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `already named in notation md` — **haiku-4-5-r2 (+0):** NOTATION.md table 1 names all five: Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis. These are already settled Greek names. No unnamed-thing to name.
-
-## `unnamed the mechanism by which an agent uses the feedback loop to gain interventional access to causal structure`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `loop as intervention or is this der loop interventional access` | +0 | haiku-4-5-r2 +0 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `loop as intervention or is this der loop interventional access` — **haiku-4-5-r2 (+0):** This is already named as #der-loop-interventional-access. No unnamed-thing.
-
-## `unnamed the moment when an agent s model updates due to observing a mismatch`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `epistrophe event or is this just the phase` | +0 | haiku-4-5-r2 +0 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `epistrophe event or is this just the phase` — **haiku-4-5-r2 (+0):** The adaptive cycle already names the phase. This is not a distinct unnamed thing; it is just one occurrence of Epistrophe. No new naming needed.
-
-## `$\beta$ a2 sub scope`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `posited regime` ✗ | -1 | opus-4-7 -1 |
-
-**Notes:**
-
-- `posited regime` — **opus-4-7 (-1):** Slightly more formal than "assumed" but less transparent. Reject.
-
-## `AAD`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adaptation and agency dynamics AAD` ✗ | -1 | agent1-original-brainstorm -1 |
-| `adaptation and purpose dynamics apd` ✗ | -1 | agent1-original-brainstorm -1 |
-
-**Notes:**
-
-- `adaptation and agency dynamics AAD` — **agent1-original-brainstorm (-1):** Considered alternative. "Agency" is overloaded in AI discourse.
-- `adaptation and purpose dynamics apd` — **agent1-original-brainstorm (-1):** Considered alternative. Acronym collision risk; doesn't roll off the tongue.
 
 ## `AAD alternatives considered for completeness`
 
@@ -12669,18 +14579,6 @@ _category: name-unnamed × 1_
 
 - `claude md architectural decisions` — **opus-4-7-b (-1):** Considered dropping "Key." Reject: "Key" signals these are load-bearing (not all decisions are listed here). Keep.
 
-## `dark room exploration drive`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `dark room exploration drive` ⭑ | -1 | codex-gpt-5-r2 -1 |
-
-_category: name-unnamed × 1_
-
-**Notes:**
-
-- `dark room exploration drive` — **codex-gpt-5-r2 (-1):** Avoid. It imports active-inference baggage and misnames the AAD result, which is survival exploration.
-
 ## `empirical heuristic discussion ring`
 
 | candidate | aggregate | votes |
@@ -12693,16 +14591,6 @@ _category: canonicalize × 1_
 
 - `third ring or empirical periphery` — **opus-4-7-r2 (-1):** Considered and rejected. "Third ring" is positional and uninformative; "empirical periphery" overspecifies on empirical (the ring also includes hypothesis and discussion-grade). The existing "empirical, heuristic, discussion" enumeration is honest and should not be canonicalized to a single name.
 
-## `l1`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `l1 c` ✗ | -1 | agent1-original-brainstorm -1 |
-
-**Notes:**
-
-- `l1 c` — **agent1-original-brainstorm (-1):** Too technical; uses symbol.
-
 ## `l1 l1 prime`
 
 | candidate | aggregate | votes |
@@ -12712,26 +14600,6 @@ _category: canonicalize × 1_
 **Notes:**
 
 - `l1 observable l1 soft` — **opus-4-7-b (-1):** Considered renaming the prime-decoration to a word. Reject: L1' consistently refers to *soft-facilitator under observable common cause* (Prop B.7 five-way gating), but that's a mouthful and "L1-prime" is a three-syllable speakable token that the existing literature has absorbed. The prime notation is also structurally right — L1' is a *refinement* of L1, which is exactly what the prime signals in math. Keep.
-
-## `type formulation`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `type representation` ✗ | -1 | gemini-1 -1 |
-
-**Notes:**
-
-- `type representation` — **gemini-1 (-1):** "Formulation" correctly captures that it is a mathematical choice, whereas "representation" might imply a data structure. Keep "formulation".
-
-## `unnamed the 2×2 table of satisfaction gap vs control regret × goal attainability diagnostic`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `satisfaction control table the diagnostic 2×2` ✗ | -1 | haiku-4-5 -1 |
-
-**Notes:**
-
-- `satisfaction control table the diagnostic 2×2` — **haiku-4-5 (-1):** This table is embedded within the satisfaction-gap and control-regret segment discussions. Naming it as a standalone concept would create a fourth-order abstraction that the prose already handles via the two-concept names. The power of the structure comes from the *names of the axes*, not from a separate name for the table itself. Do not name the table separately. Let it exist as "the satisfaction-gap / control-regret 2×2" in prose.
 
 ## `unnamed the cross cycle equivalent of the bathtub gloss multi cycle persistence as a savings account`
 
@@ -12756,56 +14624,6 @@ _category: name-unnamed × 1_
 **Notes:**
 
 - `the unity quintet` — **opus-4-7-r2 (-1):** Considered and rejected — "quintet" is too cute. Better to keep the existing four-content + one-structural decomposition explicit in `#def-unity-dimensions` (or the proposed `#def-unity-axes`) and not invent a poetic shorthand.
-
-## `unnamed the meta architecture of the three meta segments`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `AAD s epistemic triptych` ✗ | -1 | sonnet-4-6 -1 |
-
-**Notes:**
-
-- `AAD s epistemic triptych` — **sonnet-4-6 (-1):** "Triptych" is too art-historical and too cute. The naming-principles document warns against cute names that age poorly.
-
-## `unnamed the pattern where the agent s optimal update direction is determined by both gain and directional fidelity together`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `gain fidelity product` ✗ | -1 | sonnet-4-6 -1 |
-
-**Notes:**
-
-- `gain fidelity product` — **sonnet-4-6 (-1):** Too technical and not used in prose. The formula is just α = η* × c_min. No name needed.
-
-## `unnamed the persistence envelope`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `adaptive basin` ✗ | -1 | opus-4-7-b -1 |
-
-**Notes:**
-
-- `adaptive basin` — **opus-4-7-b (-1):** Considered. Reject: "basin" is already mathematically loaded (basin of attraction), and AAD's region *is a basin of attraction* — using the word would either (i) be redundant with dynamical-systems vocabulary, or (ii) force AAD to formally justify "basin" at the derivation layer. Cleaner to reserve "basin" for the technical sense and use "envelope" for the prose handle.
-
-## `unnamed the property that correction dynamics are approximately isotropic`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `isotropic correction regime` ✗ | -1 | haiku-4-5 -1 |
-
-**Notes:**
-
-- `isotropic correction regime` — **haiku-4-5 (-1):** NOTATION §"Scalar reduction of gain and tempo" mentions this property. Creating a formal sub-scope name (Iso regime / anisotropic regime) would be premature — isotropic-vs-anisotropic is a spectral property, not a discrete category. Current NOTATION treatment is appropriate. Do not formalize.
-
-## `unnamed the three part meta pattern structure across the three meta segments`
-
-| candidate | aggregate | votes |
-|---|---:|---|
-| `AAD s meta architecture scope honesty meta frame` ✗ | -1 | haiku-4-5 -1 |
-
-**Notes:**
-
-- `AAD s meta architecture scope honesty meta frame` — **haiku-4-5 (-1):** Tempting to name the cross-cutting meta-structure (positive half / negative half / constructive half). However, the three meta-segments already *are* the organizational structure. Naming a fourth-order meta-pattern would create an abstraction level that's self-referential without load-bearing prose payoff. Do not create a meta-meta-name; let the three segments stand as named.
 
 ## `RLHF6`
 

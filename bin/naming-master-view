@@ -1,0 +1,272 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# bin/naming-master-view
+#
+# Project the master-list JSON onto a human-readable view. Three formats:
+#
+#   --format=compact (default) — single-table view matching the existing
+#     naming-aggregate-r2-compact.md style. One row per (original, candidate)
+#     pair, grouped adjacently; aggregate weight, category suffix where it
+#     adds signal, ⭑ marker for keeps with canonicalize votes, ✗ prefix on
+#     net-rejected. Original cell on first row of group only. The fast-scan
+#     view for human iteration.
+#
+#   --format=full — same per-target structure but with enrichment fields
+#     surfaced when populated: consolidated rationale per candidate (post
+#     agent-pass A), first-encounter locality per current (post agent-pass B),
+#     segment link, manual curation notes, voted-by-architectures, category-
+#     disagreement flag. The deep-read view; useful when iterating on the
+#     master-list itself.
+#
+#   --format=summary — meta only: agents, totals, enrichment status. Pairs
+#     with the lossless master-list to give a quick health-check.
+#
+# The master list is the canonical lossless artifact (every vote attribution
+# and note from the source files is preserved). Views hide fields they don't
+# need; they don't destroy data. To regenerate any view, re-run this script
+# against the same master-list.json.
+#
+# Usage:
+#   ruby bin/naming-master-view                                    # compact, default paths
+#   ruby bin/naming-master-view --format=full --out=...full.md
+#   ruby bin/naming-master-view --format=summary
+
+require 'json'
+require 'optparse'
+
+# --- Helpers ---------------------------------------------------------------
+
+def signed(n)
+  n >= 0 ? "+#{n}" : n.to_s
+end
+
+def pipe_safe(cell)
+  cell.to_s.gsub('|', '\\|')
+end
+
+# Suffix that surfaces category mix on non-keep candidates. `rename` is the
+# default action (no suffix, avoids clutter on the common case); `add-alias`,
+# `canonicalize`, `name-unnamed`, and any non-canonical category show as a
+# suffix. Mixed-category pairs show the full tally so the disagreement-on-
+# action is visible. Mirrors the aggregator's compact-format logic.
+def category_suffix(category_tally)
+  return '' if category_tally.nil? || category_tally.empty?
+  pairs = category_tally.sort_by { |_, c| -c }
+  if pairs.size == 1
+    cat = pairs.first.first
+    return '' if cat.to_s.downcase == 'rename'
+    " [#{cat}]"
+  else
+    " [#{pairs.map { |c, n| "#{c} × #{n}" }.join(', ')}]"
+  end
+end
+
+# --- Compact format --------------------------------------------------------
+
+def render_compact(master)
+  out = []
+  meta = master['meta']
+  out << '# Naming Vote — Master List, Compact View'
+  out << ''
+  out << "**Source:** `#{meta['generated_from']}` (master generated #{meta['generated_at']})"
+  out << "**Agents:** #{meta['agents'].size} (#{meta['agents'].join(', ')})"
+  out << "**Total vote rows:** #{meta['total_vote_rows']}"
+  out << "**Distinct pairs:** #{meta['total_pairs']}"
+  out << "**Distinct currents:** #{meta['total_currents']}"
+  out << ''
+  out << 'Single-table compact view of the master list. One row per (original, candidate) pair; rows for the same `original` are grouped adjacently with the original cell shown only on the first row. Currents are sorted by their top candidate\'s aggregate weight descending. Within each group, candidates sort by aggregate weight descending; the first row (the winning candidate) is bolded. `(keep)` marks candidate = original; the ⭑ suffix on `(keep)` means at least one vote on that row used the `canonicalize` category. ✗ prefix marks net-rejected candidates (aggregate < 0). Category suffix on non-keep candidates surfaces the per-pair category mix when it differs from the default `rename` action.'
+  out << ''
+  out << '| original | candidate | aggregate |'
+  out << '|---|---|---:|'
+
+  master['currents'].each do |c|
+    current = c['current']
+    candidates = c['candidates']
+    candidates.each_with_index do |alt, idx|
+      is_keep = alt['is_keep']
+      is_winner = idx.zero?
+      has_canon_vote = (alt['category_tally'] || {}).keys.any? { |k| k.to_s.downcase == 'canonicalize' }
+
+      candidate_cell = if is_keep
+                         "_(keep)_#{has_canon_vote ? ' ⭑' : ''}"
+                       else
+                         "#{pipe_safe(alt['candidate'])}#{category_suffix(alt['category_tally'])}"
+                       end
+      candidate_cell = "✗ #{candidate_cell}" if alt['total_weight'].to_i < 0 && !is_keep
+      candidate_cell = "**#{candidate_cell}**" if is_winner
+
+      original_cell = idx.zero? ? pipe_safe(current) : ''
+      out << "| #{original_cell} | #{candidate_cell} | #{signed(alt['total_weight'])} |"
+    end
+  end
+
+  out << ''
+  out.join("\n") + "\n"
+end
+
+# --- Full format -----------------------------------------------------------
+
+def render_full(master)
+  out = []
+  meta = master['meta']
+  out << '# Naming Vote — Master List, Full View'
+  out << ''
+  out << "**Source:** `#{meta['generated_from']}` (master generated #{meta['generated_at']})"
+  out << "**Agents:** #{meta['agents'].size}"
+  out << "**Total vote rows:** #{meta['total_vote_rows']}"
+  out << "**Distinct currents:** #{meta['total_currents']}"
+  out << "**Enrichment status:** #{meta['enrichment_status'].map { |k, v| "#{k}: #{v}" }.join(' / ')}"
+  out << ''
+  out << 'Per-current sections with enrichment fields surfaced where populated. Within each section: candidates as a table (with category mix, weight), then per-vote attribution + notes preserved verbatim from the source files. The lossless view — every per-vote note is here. Enrichment fields (consolidated rationale, first-encounter locality, segment link, manual curation notes) appear when the corresponding pass has filled them; otherwise marked _(pending)_.'
+  out << ''
+  out << '---'
+  out << ''
+
+  master['currents'].each_with_index do |c, idx|
+    current = c['current']
+    out << "## #{idx + 1}. `#{current}`"
+    out << ''
+    if c['is_concept_cluster']
+      out << "*Post-consolidation concept cluster.*"
+      out << ''
+      out << "**Concept description:** #{c['current_description']}" if c['current_description']
+      out << ''
+    end
+    out << "**Voted by architectures:** #{c['voted_by_architectures'].join(', ')}"
+    out << "**Category disagreement on top finalist:** #{c['category_disagreement'] ? 'yes' : 'no'}"
+    out << ''
+    if c['first_encounter_locality']
+      out << "**First-encounter locality:** #{c['first_encounter_locality']}"
+    else
+      out << '**First-encounter locality:** _(pending — agent-pass B)_'
+    end
+    if c['segment_link']
+      out << "**Segment link:** [#{c['segment_link']}](../#{c['segment_link']})"
+    else
+      out << '**Segment link:** _(pending — agent-pass C)_'
+    end
+    if c['manual_curation_notes']
+      out << "**Manual curation notes:** #{c['manual_curation_notes']}"
+    end
+    out << ''
+
+    # Candidate table
+    out << '| candidate | weight | category mix |'
+    out << '|---|---:|---|'
+    c['candidates'].each do |alt|
+      cands = alt['is_keep'] ? "_(keep)_" : pipe_safe(alt['candidate'])
+      cat_str = alt['category_tally'].empty? ? '—' : alt['category_tally'].map { |k, v| "#{k} × #{v}" }.join(', ')
+      out << "| #{cands} | #{signed(alt['total_weight'])} | #{cat_str} |"
+    end
+    out << ''
+
+    # Per-candidate enrichment + raw votes
+    c['candidates'].each do |alt|
+      out << "### Candidate: `#{alt['candidate']}`#{alt['is_keep'] ? ' _(keep)_' : ''}"
+      out << ''
+      if alt['consolidated_rationale']
+        out << "**Consolidated rationale:** #{alt['consolidated_rationale']}"
+      else
+        out << '**Consolidated rationale:** _(pending — agent-pass A)_'
+      end
+      out << ''
+      out << '**Per-vote detail:**'
+      out << ''
+      alt['votes'].each do |v|
+        cat = v['category'] ? "(#{v['category']})" : ''
+        notes = v['notes'].to_s.strip.empty? ? '' : " — #{v['notes']}"
+        out << "- **#{v['agent']}** #{signed(v['weight'])} #{cat}#{notes}"
+      end
+      out << ''
+    end
+    out << '---'
+    out << ''
+  end
+
+  out.join("\n") + "\n"
+end
+
+# --- Summary format --------------------------------------------------------
+
+def render_summary(master)
+  meta = master['meta']
+  out = []
+  out << '# Naming Vote — Master List, Summary'
+  out << ''
+  out << "**Generated from:** `#{meta['generated_from']}`"
+  out << "**Generated at:** #{meta['generated_at']}"
+  out << ''
+  out << '## Totals'
+  out << ''
+  out << "- Agents contributing: **#{meta['agents'].size}**"
+  out << "- Vote rows: **#{meta['total_vote_rows']}**"
+  out << "- Distinct (current, candidate) pairs: **#{meta['total_pairs']}**"
+  out << "- Distinct currents (vote-targets): **#{meta['total_currents']}**"
+  out << ''
+  out << '## Enrichment status'
+  out << ''
+  meta['enrichment_status'].each do |field, status|
+    out << "- `#{field}`: #{status}"
+  end
+  out << ''
+  out << '## Architecture-disagreement flags'
+  out << ''
+  disagreements = master['currents'].select { |c| c['category_disagreement'] }
+  out << "- Currents with category disagreement on top finalist: **#{disagreements.size}**"
+  out << ''
+  if disagreements.any?
+    out << 'These are targets where the top-weight candidate received votes in more than one category — the rename-vs-add-alias-vs-canonicalize action is contested. They warrant explicit attention in Round 2.'
+    out << ''
+    out << '| current | top candidate | category mix |'
+    out << '|---|---|---|'
+    disagreements.first(20).each do |c|
+      top = c['candidates'].first
+      mix = top['category_tally'].map { |k, v| "#{k} × #{v}" }.join(', ')
+      out << "| `#{c['current']}` | `#{top['candidate']}` | #{mix} |"
+    end
+    out << ''
+    if disagreements.size > 20
+      out << "_(showing first 20 of #{disagreements.size}; full list in master-list.json)_"
+      out << ''
+    end
+  end
+  out << '## Single-architecture currents'
+  out << ''
+  by_arch_count = master['currents'].group_by { |c| c['voted_by_architectures'].size }
+  out << "- Currents voted by 1 architecture only: **#{(by_arch_count[1] || []).size}** (Bucket-1 territory; cross-architecture pressure-testing high-value)"
+  out << "- Currents voted by 2 architectures: **#{(by_arch_count[2] || []).size}**"
+  out << "- Currents voted by 3+ architectures: **#{master['currents'].count { |c| c['voted_by_architectures'].size >= 3 }}**"
+  out << ''
+  out.join("\n") + "\n"
+end
+
+# --- Main ------------------------------------------------------------------
+
+options = {
+  in:     'msc/naming/master-list.json',
+  out:    nil, # default depends on format
+  format: 'compact'
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: bin/naming-master-view [options]'
+  opts.on('--format=FORMAT', %w[compact full summary], 'Output format: compact (default) / full / summary') { |f| options[:format] = f }
+  opts.on('--in=PATH',  'Master-list JSON input (default: msc/naming/master-list.json)') { |p| options[:in] = p }
+  opts.on('--out=PATH', 'Output path (default: msc/naming/master-list-{format}.md)')      { |p| options[:out] = p }
+  opts.on('-h', '--help', 'Show this help') { puts opts; exit }
+end.parse!
+
+abort "Master list not found: #{options[:in]}. Run bin/naming-master-init first." unless File.exist?(options[:in])
+
+master = JSON.parse(File.read(options[:in]))
+
+output = case options[:format]
+         when 'compact' then render_compact(master)
+         when 'full'    then render_full(master)
+         when 'summary' then render_summary(master)
+         end
+
+out_path = options[:out] || "msc/naming/master-list-#{options[:format]}.md"
+File.write(out_path, output)
+$stderr.puts "Wrote #{out_path} (#{File.size(out_path)} bytes)"

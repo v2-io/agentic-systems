@@ -480,6 +480,25 @@ def render_compact(result, records)
 
   pipe_safe = ->(cell) { cell.to_s.gsub('|', '\\|') }
 
+  # Category suffix discipline: surface category mix on non-keep candidates.
+  # `rename` is the default action (no suffix, avoids clutter on the common case);
+  # `add-alias`, `canonicalize`, `name-unnamed`, and any non-canonical category
+  # show as a suffix. Mixed-category pairs show the full tally so the
+  # disagreement-on-action is visible (rename and add-alias mean different
+  # downstream moves; collapsing them into one weight loses signal).
+  category_suffix = ->(votes) {
+    cats = votes.map { |v| v[:category] }.compact
+    return '' if cats.empty?
+    tally = cats.tally.sort_by { |_, c| -c }
+    if tally.size == 1
+      cat = tally[0][0]
+      return '' if cat.downcase == 'rename'
+      " [#{cat}]"
+    else
+      " [#{tally.map { |c, n| "#{c} × #{n}" }.join(', ')}]"
+    end
+  }
+
   sorted_groups.each do |current, alts|
     alts.each_with_index do |alt, idx|
       is_keep = (alt[:candidate] == current)
@@ -489,7 +508,7 @@ def render_compact(result, records)
       candidate_cell = if is_keep
                          "_(keep)_#{has_canon_vote ? ' ⭑' : ''}"
                        else
-                         pipe_safe.call(alt[:candidate])
+                         "#{pipe_safe.call(alt[:candidate])}#{category_suffix.call(alt[:votes])}"
                        end
       candidate_cell = "✗ #{candidate_cell}" if alt[:total] < 0 && !is_keep
       candidate_cell = "**#{candidate_cell}**" if is_winner
@@ -514,10 +533,12 @@ def render_json(result, records)
       merged_variants: result.merged_variants.transform_values { |vs| vs }
     },
     pairs: agg.map do |(current, candidate), data|
+      cats = data[:votes].map { |v| v[:category] }.compact
       {
         current: current,
         candidate: candidate,
         total_weight: data[:total],
+        category_tally: cats.empty? ? nil : cats.tally,
         votes: data[:votes].map { |v| { agent: v[:agent], weight: v[:weight], category: v[:category], notes: v[:notes] } }
       }
     end.sort_by { |p| [p[:current], -p[:total_weight]] }

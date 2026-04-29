@@ -56,7 +56,7 @@ Focused on cross-level legibility, sayability in live discussion, and places whe
 | $\kappa_{\text{processing}}$ | processing coupling | +1 | Better spoken noun than the symbol, especially outside equations. |
 | $\Delta\rho^\ast$ | adaptive reserve | +3 | This is the right English name and should dominate prose use. |
 | #software-epistemic-properties | #software-epistemic-properties | +3 | Plain, strong, and exactly what the segment is doing. |
-| [unnamed: software as AAD's privileged high-identifiability calibration laboratory] | calibration laboratory | +3 | This phrase deserves to be promoted to the stable short name; it is central to TST's architectural role. |
+| [concept: the framing of software/TST as AAD's epistemically-privileged high-identifiability measurement substrate] | calibration laboratory | +3 | This phrase deserves to be promoted to the stable short name; it is central to TST's architectural role. [original phrasing: unnamed: software as AAD's privileged high-identifiability calibration laboratory] |
 | "richest operationalization domain" | calibration laboratory | +3 | The older framing is vague and comparative; the newer one explains the role instead of hand-waving it. |
 | #specification-bound | #specification-bound | +3 | Strong and compact; no need to decorate it. |
 | #atomic-changeset | #atomic-changeset | +1 | Good enough and sayable; "atomic" does real work here. |
@@ -64,8 +64,8 @@ Focused on cross-level legibility, sayability in live discussion, and places whe
 | #temporal-optimality | #temporal-optimality | +3 | Excellent theorem-style name: short, forceful, and memorable. |
 | #conceptual-alignment | #conceptual-alignment | +3 | Clear, useful, and broad enough to survive application beyond the immediate segment. |
 | #code-quality-as-observation-infrastructure | #code-quality-as-observation-infrastructure | +3 | Long, but the causal bridge is exactly the point and the phrase carries it cleanly. |
-| [unnamed: the self-reinforcing code-quality → tempo loop] | comprehension flywheel | +1 | The loop recurs enough in discussion that it deserves a shorter noun than "vicious/virtuous cycle" each time. |
-| [unnamed: externalizing part of $M_t$ into the environment for future agents] | model inscription | +1 | Distinctive and accurate; it captures writing the model into the world, not just "documentation." |
+| [concept: the self-reinforcing positive-feedback loop linking M_t quality and Σ_t evaluable complexity (TST-specific and AAD-general forms)] | comprehension flywheel | +1 | The loop recurs enough in discussion that it deserves a shorter noun than "vicious/virtuous cycle" each time. [original phrasing: unnamed: the self-reinforcing code-quality → tempo loop] |
+| [concept: the externalization-and-rehydration mechanism for carrying part of M_t (or G_t) across session boundaries via the environment] | model inscription | +1 | Distinctive and accurate; it captures writing the model into the world, not just "documentation." [original phrasing: unnamed: externalizing part of $M_t$ into the environment for future agents] |
 | #change-proximity-principle | #change-proximity-principle | +3 | Direct and durable; no obvious better alternative. |
 | #changeset-size-principle | #changeset-size-principle | +3 | Same: precise, memorable, and operational. |
 | #developer-as-act-agent | #developer-as-aad-agent | +3 | `act-agent` looks like a stale internal abbreviation after the ACT → AAD rename. |
@@ -77,13 +77,13 @@ Focused on cross-level legibility, sayability in live discussion, and places whe
 | #coupled-diagnostic-framework | #coupled-diagnostic-pass | +1 | "Framework" is abstract; the segment is really a post-update procedure. |
 | #section-ii-survival | #section-ii-carryover-map | +3 | "Survival" collides with AAD's persistence vocabulary; this segment maps carryover, not viability. |
 | #observation-ambiguity-modulation | #ambiguity-gated-coupling | +1 | Current name hides the actual κ × A gating story inside a heavy compound. |
-| [unnamed: the externalization-reconstruction cycle across sessions] | memory relay | +1 | Short, sayable noun for a repeated logogenic mechanism. |
+| [concept: the externalization-and-rehydration mechanism for carrying part of M_t (or G_t) across session boundaries via the environment] | memory relay | +1 | Short, sayable noun for a repeated logogenic mechanism. [original phrasing: unnamed: the externalization-reconstruction cycle across sessions] |
 | [unnamed: the 2×2 satisfaction-gap / control-regret table] | diagnostic square | +1 | The table is used often enough to deserve a compact public name. |
 | scope-honesty-as-architecture | scope-honesty-as-architecture | +3 | Strong internal principle name; it sounds like a thesis, not a slogan. |
 | strengthen before softening | strengthen before softening | +3 | Actionable, clear, and better than any more romantic alternative. |
 | strengthen before softening | attempt the improbable | -1 | Memorable, but less directive and much less clear about the actual work posture. |
 | "epistemic architecture for bounded correction under decomposed disturbance" | bounded-correction architecture | +1 | The long phrase has substance, but it needs a shorter speakable handle if it will recur. |
-| [unnamed: the 1-anchor-plus-3-theorem structure] | anchor-and-forcing quartet | +1 | Worth naming if the pattern stays central; the current paraphrase is too bulky to reuse. |
+| [concept: the structural meta-pattern in #disc-additive-coordinate-forcing combining one foundational lemma with three derived results] | anchor-and-forcing quartet | +1 | Worth naming if the pattern stays central; the current paraphrase is too bulky to reuse. [original phrasing: unnamed: the 1-anchor-plus-3-theorem structure] |
 | ## Formal Expression | ## Formal Expression | +3 | Strong public-API header: unambiguous and better than any prettier synonym I can think of. |
 | ## Epistemic Status | ## Epistemic Status | +3 | One of the best recurring headers in the repo; it encodes the project's honesty norm directly. |
 | ## Discussion | ## Discussion | +1 | Boring on purpose; that is a virtue here. |

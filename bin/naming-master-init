@@ -1,0 +1,183 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# bin/naming-master-init
+#
+# First-stage transform: aggregator JSON → master-list JSON.
+#
+# The aggregator's JSON output (`msc/naming/naming-aggregate-r2-votes.json`) is
+# a flat list of (current, candidate) pairs with their per-vote details. That's
+# fine as a programmatic summary, but it's not a stable working artifact:
+#
+#   - It regenerates from scratch every time the aggregator runs.
+#   - It has no place to land enrichment work (consolidated rationale,
+#     first-encounter locality, segment-links, manual curation notes).
+#   - It can't represent structural manual edits like splitting one current
+#     into multiple (e.g., the "Class 1 / 2 / 3" trio that needs three
+#     separate vote-targets, not one).
+#
+# The master-list is the next-stage artifact: lossless re-projection of the
+# aggregate JSON, grouped by `current`, with enrichment fields slotted in
+# (initially null) and computed metadata fields (architectures-represented,
+# category-disagreement flags) attached.
+#
+# The lossless commitment is load-bearing: every per-vote attribution and note
+# from the source files survives unmodified into the master list. Views and
+# voting cards downstream may project away fields they don't need, but the
+# master list itself is the canonical-and-complete artifact. Enrichment passes
+# add fields; they do not strip.
+#
+# Usage:
+#   ruby bin/naming-master-init                          # default paths
+#   ruby bin/naming-master-init --in=path --out=path
+#
+# Idempotent: re-running with no new aggregate-JSON changes produces an
+# identical master list. When new votes land or aggregator-canonical changes,
+# re-run aggregator first, then this. Enrichment passes (rationale, locality,
+# segment-link) run AFTER this and write back into the master list in place.
+
+require 'json'
+require 'optparse'
+require 'set'
+
+ARCHITECTURE_FOR = lambda do |agent|
+  case agent
+  when /^codex/        then 'Codex'
+  when /^gemini/       then 'Gemini'
+  when /^opus/         then 'Opus'
+  when /^sonnet/       then 'Sonnet'
+  when /^haiku/        then 'Haiku'
+  when 'agent1-original-brainstorm' then 'agent1'
+  when /audit/         then 'audit'
+  else agent
+  end
+end
+
+# --- Per-current grouping --------------------------------------------------
+
+def group_pairs_by_current(pairs)
+  by_current = {}
+  pairs.each do |pair|
+    by_current[pair['current']] ||= []
+    by_current[pair['current']] << pair
+  end
+  by_current
+end
+
+# --- Concept-cluster detection ---------------------------------------------
+
+# A `current` whose form is `[concept: ...]` is a post-consolidation cluster
+# whose label is a deliberate functional description (the consolidation pass
+# wrote it that way to avoid biasing toward any one candidate).
+def concept_cluster?(current)
+  current.to_s.start_with?('[concept:')
+end
+
+def concept_description(current)
+  return nil unless concept_cluster?(current)
+  current.sub(/\A\[concept:\s*/, '').sub(/\]\z/, '').strip
+end
+
+# --- Candidate enrichment --------------------------------------------------
+
+def build_candidate(pair, current)
+  is_keep = pair['candidate'] == current
+  cats = pair['votes'].map { |v| v['category'] }.compact
+  category_tally = cats.empty? ? {} : cats.tally
+
+  {
+    'candidate'              => pair['candidate'],
+    'is_keep'                => is_keep,
+    'total_weight'           => pair['total_weight'],
+    'category_tally'         => category_tally,
+    'consolidated_rationale' => nil, # filled by agent-pass A
+    'votes'                  => pair['votes'].map do |v|
+      {
+        'agent'    => v['agent'],
+        'weight'   => v['weight'],
+        'category' => v['category'],
+        'notes'    => v['notes']
+      }
+    end
+  }
+end
+
+# --- Current enrichment ----------------------------------------------------
+
+def build_current(current, pairs)
+  candidates = pairs.map { |p| build_candidate(p, current) }
+                    .sort_by { |c| -c['total_weight'] }
+
+  all_votes = candidates.flat_map { |c| c['votes'] }
+  architectures = all_votes.map { |v| ARCHITECTURE_FOR.call(v['agent']) }.uniq.sort
+
+  # Category-disagreement flag: top-weight candidate has multiple distinct
+  # categories voted on it. Surfaces the rename-vs-add-alias finalist tension
+  # directly without needing to compute it downstream.
+  top = candidates.first
+  category_disagreement = top && top['category_tally'].keys.size > 1
+
+  {
+    'current'                  => current,
+    'current_description'      => concept_description(current),
+    'is_concept_cluster'       => concept_cluster?(current),
+    'voted_by_architectures'   => architectures,
+    'category_disagreement'    => category_disagreement,
+    'first_encounter_locality' => nil, # filled by agent-pass B
+    'segment_link'             => nil, # filled by agent-pass C
+    'manual_curation_notes'    => nil, # filled by human edits
+    'candidates'               => candidates
+  }
+end
+
+# --- Main ------------------------------------------------------------------
+
+options = {
+  in:  'msc/naming/naming-aggregate-r2-votes.json',
+  out: 'msc/naming/master-list.json'
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: bin/naming-master-init [options]'
+  opts.on('--in=PATH',  'Aggregator JSON input (default: msc/naming/naming-aggregate-r2-votes.json)') { |p| options[:in] = p }
+  opts.on('--out=PATH', 'Master-list JSON output (default: msc/naming/master-list.json)')              { |p| options[:out] = p }
+  opts.on('-h', '--help', 'Show this help') { puts opts; exit }
+end.parse!
+
+abort "Input not found: #{options[:in]}" unless File.exist?(options[:in])
+
+aggregate = JSON.parse(File.read(options[:in]))
+by_current = group_pairs_by_current(aggregate['pairs'])
+
+# Sort currents by their top-candidate's aggregate weight (descending), so
+# the master list is naturally ordered most-engaged-first. Within ties,
+# alphabetical for stability.
+sorted_currents = by_current.sort_by do |current, pairs|
+  top_weight = pairs.map { |p| p['total_weight'] }.max || 0
+  [-top_weight, current]
+end
+
+master = {
+  'meta' => {
+    'generated_from'      => options[:in],
+    'generated_at'        => Time.now.utc.iso8601,
+    'agents'              => aggregate.dig('meta', 'agents') || [],
+    'total_vote_rows'     => aggregate.dig('meta', 'total_rows') || 0,
+    'total_pairs'         => aggregate.dig('meta', 'distinct_pairs') || 0,
+    'total_currents'      => by_current.size,
+    'enrichment_status'   => {
+      'consolidated_rationale'  => 'pending', # agent-pass A
+      'first_encounter_locality' => 'pending', # agent-pass B
+      'segment_link'            => 'pending', # agent-pass C
+      'manual_curation'         => 'pending'
+    },
+    'merged_variants'     => aggregate.dig('meta', 'merged_variants') || {}
+  },
+  'currents' => sorted_currents.map { |current, pairs| build_current(current, pairs) }
+}
+
+File.write(options[:out], JSON.pretty_generate(master) + "\n")
+$stderr.puts "Wrote #{options[:out]} (#{File.size(options[:out])} bytes)"
+$stderr.puts "  currents: #{master['currents'].size}"
+$stderr.puts "  pairs:    #{master['currents'].sum { |c| c['candidates'].size }}"
+$stderr.puts "  vote rows: #{master['currents'].sum { |c| c['candidates'].sum { |k| k['votes'].size } }}"

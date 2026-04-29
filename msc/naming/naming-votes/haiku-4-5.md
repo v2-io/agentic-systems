@@ -82,7 +82,7 @@
 | #mismatch-decomposition | #mismatch-decomposition | +1 | Model error + obs noise. Self-descriptive. Keep. |
 | #deliberation-cost | #deliberation-cost | +3 | Think vs. act tradeoff. Reads naturally as cost-benefit. Keep. |
 | #event-driven-dynamics | #event-driven-dynamics | +1 | Events in continuous time. Self-descriptive. Keep. |
-| [unnamed: the phenomenon that unobservable edges freeze and paths become epistemically dead] | observability dominance | +1 | LEXICON lists "Observability dominance" as "a term with specific AAD meaning awaiting full treatment." The concept (unobservable strategy edges freeze) is load-bearing. The name is already proposed in LEXICON; when #observability-dominance segment is written, this name will be locked in. Currently unwritten; mark as ready-to-name. |
+| [concept: the unupdatable region of the strategy DAG where edges receive no actionable feedback] | observability dominance | +1 | LEXICON lists "Observability dominance" as "a term with specific AAD meaning awaiting full treatment." The concept (unobservable strategy edges freeze) is load-bearing. The name is already proposed in LEXICON; when #observability-dominance segment is written, this name will be locked in. Currently unwritten; mark as ready-to-name. [original phrasing: unnamed: the phenomenon that unobservable edges freeze and paths become epistemically dead] |
 | purposeful substate | purposeful substate | +3 | NOTATION/LEXICON names G_t = (O_t, Σ_t) as "purposeful substate." Already standard prose term. Keep. |
 | $O_t$ (objective) | $O_t$ (objective) | +3 | "Objective" is the standard English name. No synonym needed. Keep. |
 | $\Sigma_t$ (strategy) | $\Sigma_t$ (strategy) | +3 | "Strategy" is the standard English name. No synonym needed. Keep. |

@@ -61,8 +61,30 @@ Each vote belongs to exactly one of these categories. Marking the category in yo
 1. **Rename.** The current name fails (overclaims, underclaims, is hard to remember, collides with another use, doesn't survive the renamed-from-now-sounds-weird test). Propose a replacement subject-noun.
 2. **Keep.** The current name is right and shouldn't be changed. Voted explicitly so the aggregation distinguishes "considered and kept" from "no opinion expressed." High-weight keeps protect names whose churn would cost more than it returns.
 3. **Canonicalize.** The current concept *has* a name, but prose paraphrases it three different ways across the repo. Vote canonicalize to commit: "going forward, always reference this as X — stop paraphrasing." Distinct from keep because keep doesn't address paraphrase drift.
-4. **Add-alias.** The current name is fine for one register but a parallel name in another register would help. Most common case: a Greek/symbol name (α₁, α₂, $\Delta\rho^*$) gets an English alias for use in prose ("the derived-gain regime", "the adaptive reserve"). Symbol stays as shorthand; alias enters prose. Note: the symbol+alias pair becomes a maintained convention.
+4. **Add-alias.** The current name is fine for one register but a parallel name in another register would help. Most common case: a Greek/symbol name (α₁, α₂, $\Delta\rho^*$) gets an English alias for use in prose ("the derived-gain regime", "the adaptive reserve"). The formal/structural identifier doesn't have to be a symbol — it can be a legacy English term that's structurally precise but lacks an evocative prose handle. Symbol or formal name stays as the structural identifier; alias enters prose. The pair becomes a maintained convention with strictly differentiated roles, not a free-substitution synonym set.
 5. **Name-unnamed-thing.** A recurring pattern, region, formula, methodology, or metaphor that the theory uses repeatedly but never named. Propose a memorable-noun name for it. These are the highest-value discoveries because the slot is empty — no displacement cost, pure clarity gain.
+
+### Rename vs. Add-alias — the distinction that shapes downstream action
+
+`rename` and `add-alias` for the same proposed name imply different downstream moves; the category determines what *happens* if the proposal lands. The decision hinges on whether the framework benefits from one canonical name or from a pair with separated registers:
+
+- Vote **`rename`** when the original is structurally weak, arbitrary, or forces a lookup that doesn't pay off. The original goes away; the new name takes its place wholesale. Example: `Class 1 / Class 2 / Class 3` → `goal-entanglement hierarchy` is a rename — the numbering scheme is arbitrary and forces every reader to memorize it; the alternative names what the classes *measure* and replaces the trio.
+
+- Vote **`add-alias`** when the original is formally precise or deeply established but the framework needs a separate, evocative prose handle for discussion, framing, and pedagogy. Both terms persist with strictly differentiated roles. Example: `effects spiral` → `runaway mismatch cascade` as add-alias keeps `effects spiral` as the formal phenomenon name while making `runaway mismatch cascade` the canonical phrase for explaining the mechanism in prose.
+
+Articulated by Gemini-3.1-pro-preview in the 2026-04-29 targeted-alternatives round: *"A `+3 add-alias` means I strongly believe the framework is currently suffering in its readability because it lacks a dedicated, evocative prose noun for a concept that already has a formal identifier. It is a vote to officially mint that prose noun."*
+
+### Rename vs. Canonicalize — invented vs. excavated provenance
+
+A second axis worth distinguishing: *where does the proposed name come from?* Both `rename` and `canonicalize` can land a new name on a target, but the source of the candidate carries different epistemic weight.
+
+- Vote **`rename`** when the candidate is the agent's *invention* — coined to fix a perceived weakness in the current name. The proposed name didn't appear in the project's prose before the vote.
+
+- Vote **`canonicalize`** when the candidate is *excavated* from existing segment prose — the author or contributors had already reached for this phrase informally (in Discussion sections, Working Notes, segment titles, footnotes, brief asides), and the vote promotes the prose-use to formal canonical naming. The phrase is "organically native to the text"; the vote is for promotion, not coinage. Note this extends the canonicalize semantics beyond "concept has multiple paraphrases, commit to one" — it covers the related case where the formal naming layer hasn't yet caught up to a phrase the prose has already settled into.
+
+Articulated by Gemini-3.1-pro-preview in the 2026-04-29 targeted-alternatives round: *"When I proposed a 'new alternative' and marked it canonicalize, I was saying: 'The best new name for this concept shouldn't be invented from scratch; the best name is actually this specific, powerful phrase already buried in your prose. You should elevate (canonicalize) it to be the official name.'"*
+
+This carries real provenance signal for finalist decisions: a canonicalize-with-organic-provenance vote tells you the phrase fits the concept *empirically* — the author's own writing converged on it — not just that it sounds good in isolation. The downstream master-list surfaces this via a `canonicalize_provenance` field that records where in the prose the phrase already appears, so R2 voters can see the source attribution alongside the candidate.
 
 ## Evaluation criteria
 

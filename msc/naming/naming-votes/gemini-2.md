@@ -44,9 +44,9 @@
 | #auftragstaktik-principle | #mission-command-principle | +3 | "Auftragstaktik" is heavy historical baggage, hard to spell, and "Mission Command" is the standard modern translation that conveys the exact same intent. |
 | #interaction-channel-classification | #interaction-regimes | +1 | "Classification" is passive. "Regimes" conveys the active shift in dynamics. |
 | #agent-opacity | #strategic-opacity | +1 | "Agent opacity" is broad. "Strategic opacity" specifically points to the adversarial mechanism of hiding intent. |
-| [unnamed: the 1-anchor-plus-3-theorem structure] | anchor-theorem trio | +1 | Gives a memorable noun to this recurring proof architecture. |
-| [unnamed: The cycle-as-a-whole] | adaptive traversal | +1 | "The cycle-as-a-whole" is clunky. "Adaptive traversal" suggests moving through the loop. |
-| [unnamed: strengthen-first posture] | strengthen-first posture | +3 | Actionable, precise, and sets a strong normative engineering principle. Keep. |
+| [concept: the structural meta-pattern in #disc-additive-coordinate-forcing combining one foundational lemma with three derived results] | anchor-theorem trio | +1 | Gives a memorable noun to this recurring proof architecture. [original phrasing: unnamed: the 1-anchor-plus-3-theorem structure] |
+| [concept: the sequence of cycle phases (Prolepsis–Aisthesis–Aporia–Epistrophe–Praxis) considered as a single named whole] | adaptive traversal | +1 | "The cycle-as-a-whole" is clunky. "Adaptive traversal" suggests moving through the loop. [original phrasing: unnamed: The cycle-as-a-whole] |
+| [concept: the working-convention rule of attempting tighter derivation before scope-narrowing on apparently-overclaimed claims] | strengthen-first posture | +3 | Actionable, precise, and sets a strong normative engineering principle. Keep. [original phrasing: unnamed: strengthen-first posture] |
 | README.md "What This Is" | README.md "Core Thesis" | +3 | "What This Is" is too generic for a dense theoretical framework. |
 | README.md "Structure" | README.md "Theory Architecture" | +1 | "Theory Architecture" conveys the intentional design of the framework better than just "Structure". |
 | $\alpha_1$ (A2' fixed-gain sub-scope) | fixed-gain regime | +1 | Prose-friendly equivalent to the mathematical symbol. |
@@ -65,7 +65,7 @@
 | #shared-intent | #compressed-purpose | +1 | Highlights the Information Bottleneck aspect of shared intent. |
 | #adversarial-tempo-advantage | #superlinear-tempo-advantage | +1 | Highlights the mathematical outcome (superlinear) of the advantage. |
 | #per-dimension-persistence | #weak-link-persistence | +1 | "Weak link" captures the bottleneck nature better than "per-dimension". |
-| [unnamed: variation in correction architectures invisible to persistence analysis] | latent structural diversity | +1 | Proposed in the gap section of OUTLINE.md. Captures the concept perfectly. |
+| [concept: dormant variation in correction architectures across a population that becomes consequential after regime change but is invisible to current persistence analysis] | latent structural diversity | +1 | Proposed in the gap section of OUTLINE.md. Captures the concept perfectly. [original phrasing: unnamed: variation in correction architectures invisible to persistence analysis] |
 | [unnamed: epochal stability → latent diversification → niche emergence...] | punctuated composition dynamics | +1 | Draws on punctuated equilibrium, fitting the extreme transition motif. |
 | #multi-agent-scope | #shared-environment-scope | +1 | Emphasizes the shared environment which is the defining characteristic of this scope. |
 | #composition-scope-condition | #teleological-alignment-condition | +1 | More descriptive of the actual requirement (alignment) for composite status. |
