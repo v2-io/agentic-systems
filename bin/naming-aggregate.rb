@@ -363,7 +363,7 @@ def canonical_word(w)
   return w if w.length <= 4
   return w if w =~ /\A(?:cmp|acr|frm)\d+\z/i
   return IRREGULAR_PLURALS[w] if IRREGULAR_PLURALS.key?(w)
-  return w if w =~ /(?:ss|us|sis|tics|ics|status)\z/
+  return w if w =~ /(?:ss|us|is|sis|tics|ics|status)\z/  # skip -is endings: praxis, axis, basis, crisis, thesis, etc.
   return w.sub(/ies\z/, 'y') if w.end_with?('ies')
   return w.chop if w.end_with?('s')
   w
