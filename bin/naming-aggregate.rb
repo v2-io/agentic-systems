@@ -303,6 +303,16 @@ def canonical(name)
   s = s.gsub(/[[:punct:]]+/, ' ')
   s = s.gsub(/\s+/, ' ').strip.downcase
 
+  # Word-level cleanup: drop stray 's' tokens (from `'s` possessive after punct-strip);
+  # collapse plurals so `agent` and `agents` merge. Skip short tokens / placeholders /
+  # words that legitimately end in s (-ss, -us, -is, -sis) to avoid false collapses.
+  words = s.split(/\s+/).reject(&:empty?).map { |w| canonical_word(w) }.reject(&:empty?)
+  s = words.join(' ')
+
+  # Strip trailing section-reference suffixes (e.g., "logogenic agent part iii"
+  # and the bare reference "logogenic agents" should merge to one bucket).
+  s = s.sub(/\s+(?:part|section|chapter|appendix)\s+[ivxlcdm]+\z/, '')
+
   SLUG_PREFIXES.each do |prefix|
     next unless s.start_with?("#{prefix} ")
     remainder = s[(prefix.length + 1)..]
@@ -312,10 +322,51 @@ def canonical(name)
     end
   end
 
-  compound_phs.each { |ph, original| s = s.gsub(ph.downcase, original) }
-  acronym_phs.each  { |ph, original| s = s.gsub(ph.downcase, original) }
-  formula_phs.each  { |ph, original| s = s.gsub(ph.downcase, original) }
+  # Restore via block form — gsub's string-replacement form treats \r / \1 / \\
+  # as escape/backref sequences, which silently corrupts LaTeX commands like
+  # `\rho` (becomes \r → carriage return → 'ho') inside protected formulas.
+  # Block form returns the literal replacement.
+  compound_phs.each { |ph, original| s = s.gsub(ph.downcase) { original } }
+  acronym_phs.each  { |ph, original| s = s.gsub(ph.downcase) { original } }
+  formula_phs.each  { |ph, original| s = s.gsub(ph.downcase) { original } }
   s
+end
+
+# Irregular plurals + field names that end in -s but aren't plurals — explicit
+# table to avoid the `axes → ax`, `dynamics → dynamic`, `analyses → analyse`
+# false-collapses that pure -s chopping produces.
+IRREGULAR_PLURALS = {
+  'axes'        => 'axis',
+  'bases'       => 'basis',
+  'crises'      => 'crisis',
+  'theses'      => 'thesis',
+  'analyses'    => 'analysis',
+  'hypotheses'  => 'hypothesis',
+  'series'      => 'series',
+  'species'     => 'species',
+  'dynamics'    => 'dynamics',
+  'ethics'      => 'ethics',
+  'physics'     => 'physics',
+  'statistics'  => 'statistics',
+  'semantics'   => 'semantics',
+  'mathematics' => 'mathematics',
+  'economics'   => 'economics',
+  'mechanics'   => 'mechanics'
+}.freeze
+
+# Per-word stem: drops stray possessive 's' tokens (resulting from `'s` after
+# punct-to-space); collapses plurals to singular. Chop-one-trailing-s gives
+# `agents → agent`, `freezes → freeze`, `boxes → boxe` (the `boxe` artefact is
+# rare in this corpus and acceptable). Irregulars handled explicitly above.
+def canonical_word(w)
+  return '' if w == 's'
+  return w if w.length <= 4
+  return w if w =~ /\A(?:cmp|acr|frm)\d+\z/i
+  return IRREGULAR_PLURALS[w] if IRREGULAR_PLURALS.key?(w)
+  return w if w =~ /(?:ss|us|sis|tics|ics|status)\z/
+  return w.sub(/ies\z/, 'y') if w.end_with?('ies')
+  return w.chop if w.end_with?('s')
+  w
 end
 
 # --- Rendering ------------------------------------------------------------

@@ -1,0 +1,120 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# bin/naming-master-card
+#
+# Generate a per-agent randomized R2 voting card from master-list.json.
+#
+# Zero-leak design:
+#   - Hides aggregate weights and per-agent attribution
+#   - Hides ⭑ / ✗ markers (they leak which is current and which is rejected)
+#   - Hides notes / category counts / consolidated rationale
+#   - Shuffles cross-group order (target groups appear in random sequence)
+#   - Shuffles within-group candidate order (same)
+#
+# Per-seed shuffle: same `--seed` produces the same card (reproducible per voter);
+# different seeds produce different shuffles (per-instance randomization). Use
+# the agent-id as the seed.
+#
+# Usage:
+#   ruby bin/naming-master-card --seed=opus-r2
+#   ruby bin/naming-master-card --seed=gemini-r2 --out=path
+#   ruby bin/naming-master-card --seed=foo --no-cross-group-shuffle  # within-group only
+#
+# The default output path is msc/naming/round-2-cards/<seed>.md; the directory
+# is created if it doesn't exist.
+
+require 'json'
+require 'optparse'
+require 'digest'
+require 'fileutils'
+
+options = {
+  # Prefer the curated artifact; auto-regenerated as fallback.
+  in:  File.exist?('msc/naming/master-list-curated.json') ? 'msc/naming/master-list-curated.json' : 'msc/naming/master-list.json',
+  out: nil,
+  seed: nil,
+  randomize_cross_group: true
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: bin/naming-master-card --seed=<agent-id> [options]'
+  opts.on('--seed=SEED', 'Seed (typically agent-id) for deterministic shuffle. Required.') { |s| options[:seed] = s }
+  opts.on('--in=PATH', 'Master-list JSON input (default: msc/naming/master-list.json)') { |p| options[:in] = p }
+  opts.on('--out=PATH', 'Output path (default: msc/naming/round-2-cards/<seed>.md)') { |p| options[:out] = p }
+  opts.on('--no-cross-group-shuffle', 'Keep group order from master list (within-group still shuffled)') { options[:randomize_cross_group] = false }
+  opts.on('-h', '--help') { puts opts; exit }
+end.parse!
+
+abort 'Required: --seed=<agent-id>. Use your model identifier (e.g., opus-r2, sonnet-r2, gemini-r2).' unless options[:seed]
+abort "Master list not found: #{options[:in]}. Run bin/naming-master-init first." unless File.exist?(options[:in])
+
+# Seed RNG deterministically from the agent-id. MD5 hex → int → seed.
+seed_int = Digest::MD5.hexdigest(options[:seed]).to_i(16)
+rng = Random.new(seed_int)
+
+master = JSON.parse(File.read(options[:in]))
+
+# Build per-target groups, project away leak-fields, shuffle within-group.
+groups = master['currents'].map do |c|
+  shuffled_candidates = c['candidates'].map { |a| a['candidate'] }.shuffle(random: rng)
+  {
+    current:     c['current'],
+    is_concept:  c['is_concept_cluster'],
+    description: c['current_description'],
+    candidates:  shuffled_candidates
+  }
+end
+
+groups = groups.shuffle(random: rng) if options[:randomize_cross_group]
+
+out = []
+out << '# Naming Vote — Round 2 Voting Card'
+out << ''
+out << "**Voter:** `#{options[:seed]}`"
+out << "**Card seed:** `#{options[:seed]}` (deterministic shuffle; same agent-id always produces the same card)"
+out << "**Generated:** #{Time.now.utc.iso8601}"
+out << ''
+out << '## Voting instructions'
+out << ''
+out << 'Per target: vote `+2` (strongly prefer this finalist), `+1` (would accept; mild preference), or `-1` (explicitly reject) on candidates you have an opinion on. Absence is not a vote — only mark candidates you have a real position on.'
+out << ''
+out << 'Optionally mark **one** candidate per target as your `top-pick` — your answer to *"if exactly one had to land, which one."* The top-pick is the lightweight ranking signal alongside the cardinal scale; aggregation uses both.'
+out << ''
+out << 'For each candidate you weigh in on, also fill in `category` to be explicit about the action you\'re voting for: `rename` (the candidate replaces the current name wholesale), `keep` (the current name is right; vote on the row whose candidate equals the heading), `canonicalize` (commit to this form among multiple existing paraphrases, OR promote a phrase already used in segment prose to canonical naming), `add-alias` (keep the current name AND add this as a parallel prose handle with strictly differentiated roles), or `name-unnamed` (proposing a name for a previously-unnamed concept; relevant for `[Concept]` targets).'
+out << ''
+out << 'Write-in: if you have a thoughtful candidate not in the list, add a new row at the bottom of that target\'s table with the candidate, category, weight, and notes filled in.'
+out << ''
+out << 'Notes column is for *new* reasoning you bring to the vote. The corpus already has the prior agents\' notes; this is your independent reasoning, not a recap.'
+out << ''
+out << 'Heading conventions: `## N. [Concept] *description*` headings are post-consolidation cluster targets where the description is a deliberate functional placeholder (not biased toward any candidate). `## N. \`<name>\`` headings are existing names being voted on. Within each target, candidates are listed in randomized order — *you cannot infer popularity from position.*'
+out << ''
+out << '---'
+out << ''
+
+groups.each_with_index do |g, idx|
+  heading = if g[:is_concept] && g[:description]
+              desc = g[:description].sub(/\A./, &:upcase)
+              "## #{idx + 1}. [Concept] *#{desc}*"
+            else
+              "## #{idx + 1}. `#{g[:current]}`"
+            end
+  out << heading
+  out << ''
+  out << '| candidate | category | weight | top-pick? | notes |'
+  out << '|---|---|:-:|:-:|---|'
+  g[:candidates].each do |cand|
+    safe = cand.to_s.gsub('|', '\\|')
+    out << "| #{safe} |  |  |  |  |"
+  end
+  out << '| *(write-in)* |  |  |  |  |'
+  out << ''
+end
+
+out_path = options[:out] || "msc/naming/round-2-cards/#{options[:seed]}.md"
+FileUtils.mkdir_p(File.dirname(out_path))
+File.write(out_path, out.join("\n") + "\n")
+$stderr.puts "Wrote #{out_path} (#{File.size(out_path)} bytes)"
+$stderr.puts "  groups: #{groups.length}"
+$stderr.puts "  candidates total: #{groups.sum { |g| g[:candidates].length }}"
+$stderr.puts "  cross-group shuffle: #{options[:randomize_cross_group] ? 'on' : 'off'}"

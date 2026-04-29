@@ -16,7 +16,9 @@
 | Directed separation | Directed separation | keep | +1 | Adopts useful baggage from causal inference (d-separation) nicely. |
 | Logogenic agent | Linguistic agent | rename | -1 | Logogenic names the structural property (constituted by logos) better than the generic "linguistic". Keep Logogenic. |
 | Logozoetic agent | Sentient agent | rename | -1 | Logozoetic avoids the immense baggage and ambiguity of "sentient". Keep Logozoetic. |
-| Class 1 / Class 2 / Class 3 agents | Modular / Integrated / Partially-Coupled agents | rename | +3 | "Class X" requires a lookup every time. Naming the architectural property directly is much more memorable and scope-honest. |
+| Class 1 agents | Modular agents | rename | +3 | "Class X" requires a lookup every time. Naming the architectural property directly is much more memorable and scope-honest. [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.] |
+| Class 2 agents | Integrated agents | rename | +3 | Class 2 = integrated (the goal-entangled architecture). Companion to Modular (Class 1) and Partially-Coupled (Class 3). [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.] |
+| Class 3 agents | Partially-Coupled agents | rename | +3 | Class 3 = partially-coupled. Companion to Modular (Class 1) and Integrated (Class 2). [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.] |
 | #composition-consistency | #scale-invariance | rename | +1 | "Scale invariance" more directly describes the physical/mathematical property that the theory applies at every level. |
 | Causal information yield (CIY) | Interventional yield | rename | +1 | Shorter, punchier. "Causal" is implied by "Interventional" in this context. |
 | Closure defect ($\varepsilon^\ast$) | Closure defect | keep | +3 | Great mathematical phrasing, implies a gap that needs addressing. |

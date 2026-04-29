@@ -1,9 +1,9 @@
 # Naming Vote — Master List, Full View
 
-**Source:** `msc/naming/naming-aggregate-r2-votes.json` (master generated 2026-04-29T20:47:56Z)
+**Source:** `msc/naming/naming-aggregate-r2-votes.json` (master generated 2026-04-29T21:11:04Z)
 **Agents:** 19
-**Total vote rows:** 2960
-**Distinct currents:** 946
+**Total vote rows:** 2967
+**Distinct currents:** 950
 **Enrichment status:** consolidated_rationale: pending / first_encounter_locality: pending / segment_link: pending / manual_curation: pending
 
 Per-current sections with enrichment fields surfaced where populated. Within each section: candidates as a table (with category mix, weight), then per-vote attribution + notes preserved verbatim from the source files. The lossless view — every per-vote note is here. Enrichment fields (consolidated rationale, first-encounter locality, segment link, manual curation notes) appear when the corresponding pass has filled them; otherwise marked _(pending)_.
@@ -152,8 +152,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +45 | keep × 15, canonicalize × 1 |
-| pearl-blanket separation | +1 | rename × 1 |
 | epistemic isolation of belief update | +1 | rename × 1 |
+| pearl-blanket separation | +1 | rename × 1 |
 | goal-blind processing | +1 | rename × 1 |
 
 ### Candidate: `directed separation` _(keep)_
@@ -179,7 +179,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **sonnet-4-6-r2** +3 (canonicalize) — Never "goal-blindness" or "epistemic separation" or "processing independence." The canonical name is "directed separation" as established in the segment and LEXICON.md.
 - **sonnet-4-6** +3 (keep) — "Directed" specifies the asymmetry (goal-blind epistemic update; goal-dependent purposeful update); "separation" names the property. The architectural classification (Class 1/2/3) hangs off this name. Used throughout the project in prose; the name is load-bearing. Keep.
 
-### Candidate: `pearl-blanket separation`
+### Candidate: `epistemic isolation of belief update`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -187,7 +187,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +1 (rename) — "Precise but heavy." For Brief-field purposes, "the agent's belief-update doesn't peek at its goals" might be more memorable. Tentative. [from 31-34-section-ii-opening-batch.md] [one of 3 alternatives proposed in the original audit row]
 
-### Candidate: `epistemic isolation of belief update`
+### Candidate: `pearl-blanket separation`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -216,7 +216,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +45 | keep × 14, canonicalize × 1 |
-| no-go theorems | -1 | rename × 1 |
+| no-go theorem | -1 | rename × 1 |
 
 ### Candidate: `identifiability floor` _(keep)_
 
@@ -240,7 +240,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **sonnet-4-6** +3 (keep) — The Working Notes on this segment explicitly defend the "floor" framing over "no-go theorems" and the argument is correct — "floor" captures asymmetry (you cannot go below, but you can climb above). Memorable noun. Keep.
 - **sonnet-4-6** +3 (canonicalize) — See #identifiability-floor keep vote above. Already in prose use. Keep.
 
-### Candidate: `no-go theorems`
+### Candidate: `no-go theorem`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -250,7 +250,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 6. [Concept] *The parameter space region within which an agent maintains bounded mismatch indefinitely*
+## 6. [Concept] *The parameter space region within which an agent maintain bounded mismatch indefinitely*
 
 *Post-consolidation concept cluster.*
 
@@ -265,11 +265,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | persistence envelope | +39 | name-unnamed × 8, add-alias × 1, canonicalize × 4, rename × 2 |
 | structural persistence regime | +3 | canonicalize × 1 |
 | parametric feasibility window | +2 | rename × 1 |
-| viable mismatch region | +1 | rename × 1 |
 | parametric regime or stability envelope | +1 | name-unnamed × 1 |
+| viable mismatch region | +1 | rename × 1 |
 | stability envelope | -1 | rename × 1 |
-| adaptive basin | -1 | name-unnamed × 1 |
 | safety envelope | -1 | rename × 1 |
+| adaptive basin | -1 | name-unnamed × 1 |
 
 ### Candidate: `persistence envelope`
 
@@ -309,14 +309,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — The region governed by the current model class $\mathcal{M}$. [original phrasing: unnamed the region in parameter space where parametric updates remain effective before structural change is forced]
 
-### Candidate: `viable mismatch region`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +1 (rename) — Considered. Pairs with LEXICON's "viable region" prose. Weaker than "persistence envelope" — "viable" is the property; "envelope" is the geometric object. [original phrasing: bounded mismatch region]
-
 ### Candidate: `parametric regime or stability envelope`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -324,6 +316,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **haiku-4-5-r2** +1 (name-unnamed) — OUTLINE.md mentions "A2' sub-scope α₁ / α₂ / β partition" but does not give a memorable name to the overall region concept. "Parametric regime" is more technical; "stability envelope" parallels the persistence-envelope concept. Weak preference; this might be too specialized for naming. [original phrasing: unnamed: the region in parameter space where parametric updates remain effective before structural change is forced]
+
+### Candidate: `viable mismatch region`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +1 (rename) — Considered. Pairs with LEXICON's "viable region" prose. Weaker than "persistence envelope" — "viable" is the property; "envelope" is the geometric object. [original phrasing: bounded mismatch region]
 
 ### Candidate: `stability envelope`
 
@@ -333,14 +333,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** -1 (rename) — Considered. Aligns with control-theory "stability region" baggage. Rejected: stability collides with sector-stability (`#result-sector-condition-stability`), and the segment's claim is *persistence* (boundedness over time under continuing disturbance) — a slightly stronger property than stability. [original phrasing: bounded mismatch region]
 
-### Candidate: `adaptive basin`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** -1 (name-unnamed) — Considered. Reject: "basin" is already mathematically loaded (basin of attraction), and AAD's region *is a basin of attraction* — using the word would either (i) be redundant with dynamical-systems vocabulary, or (ii) force AAD to formally justify "basin" at the derivation layer. Cleaner to reserve "basin" for the technical sense and use "envelope" for the prose handle. [original phrasing: unnamed: the persistence envelope]
-
 ### Candidate: `safety envelope`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -349,9 +341,58 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives** -1 (rename) — Considered. Collides with AI-safety jargon. Rejected. [original phrasing: bounded mismatch region]
 
+### Candidate: `adaptive basin`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-b** -1 (name-unnamed) — Considered. Reject: "basin" is already mathematically loaded (basin of attraction), and AAD's region *is a basin of attraction* — using the word would either (i) be redundant with dynamical-systems vocabulary, or (ii) force AAD to formally justify "basin" at the derivation layer. Cleaner to reserve "basin" for the technical sense and use "envelope" for the prose handle. [original phrasing: unnamed: the persistence envelope]
+
 ---
 
-## 7. `chronica`
+## 7. `information bottleneck`
+
+**Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +30 | keep × 11 |
+| epistemic bottleneck | +1 | rename × 1 |
+
+### Candidate: `information bottleneck` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +2 (keep) — [prose moved from candidate column]: "(keep formal name; AAD-distinctive feature deserves separate label)" — Well-anchored in literature; AAD shouldn't rename. The AAD-distinctive *policy-conditioning* on the predictive term could be named separately: "Policy-Conditioned IB" / "Forward-Predictive IB" / "AAD-IB" — only if a distinguishing label is needed. Currently leans on standard name; auditor judges that the right call. [from 11-form-information-bottleneck.md]
+- **codex-1** +3 (keep) — Correct baggage-carrying adoption. This is exactly the kind of prior-art name that should remain untouched.
+- **codex-gpt-5-r2** +3 (keep) — Imported theorem name should remain canonical. It is already the recognized technical term.
+- **gemini-3-1-pro-preview-r2** +3 (keep) — Established literature term (Tishby).
+- **haiku-4-5-r2** +1 (keep) — Adopted technical term (Tishby); keeping original name respects prior art. No local pressure to change.
+- **haiku-4-5** +3 (keep) — Adopted from Tishby 1999; canonical name in information theory. Baggage-carrying in the best sense — travels with information-theoretic intuitions. Do not rename. Exact application matches Tishby's definition. Keep.
+- **opus-1m** +3 (keep) — Adopted (Tishby 1999); keep.
+- **opus-4-7-b** +3 (keep) — Adopted from Tishby et al. — do not rename adopted concepts (prior-art-integration convention). The word *bottleneck* is doing real explanatory work; the baggage transfers.
+- **opus-4-7-b** +3 (keep) — Keep — adopted directly from Tishby et al. per prior-art-integration convention. Do not rename adopted concepts.
+- **opus-4-7-r2** +3 (keep) — Defended keep — direct adoption from Tishby with proper attribution; renaming would lose provenance.
+- **sonnet-4-6-r2** +3 (keep) — External vocabulary adopted directly (Tishby, Pereira & Bialek). Per prior-art-integration principle, adopt with original name.
+
+### Candidate: `epistemic bottleneck`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-2** +1 (rename) — Emphasizes the knowledge-compression aspect over raw Shannon information.
+
+---
+
+## 8. `chronica`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet, audit
 **Category disagreement on top finalist:** yes
@@ -382,7 +423,39 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 8. `information bottleneck`
+## 9. `strategy DAG`
+
+**Voted by architectures:** Codex, Haiku, Opus, Sonnet, audit
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +28 | keep × 10, canonicalize × 1 |
+
+### Candidate: `strategy DAG` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +2 (keep) — [prose moved from candidate column]: "(keep)" — Substantive load-bearing segment. Auditor's only flag was that the segment is *large* and might benefit from being split; the *name* is correct. [from 43-46-section-ii-and-or-strategy-dag-gaps.md]
+- **codex-1** +3 (keep) — Blunt and effective. The slug is legible instantly, and the concept it names is load-bearing.
+- **codex-2** +3 (keep) — Exactly the right level of compression: simple, searchable, and faithful to the object.
+- **codex-gpt-5-r2** +2 (keep) — Direct and technically honest. Keep rather than hiding the graph structure behind a metaphor.
+- **codex-gpt-5-r2** +2 (keep) — The acronym is technical but exact. No need to prettify it.
+- **haiku-4-5-r2** +2 (keep) — "Strategy DAG" is memorable and passes the communal-imagination test. The acronym DAG is standard. No change needed.
+- **haiku-4-5** +3 (keep) — Self-descriptive (probabilistic directed acyclic graph for strategy), compact notation. Consistent lowercase convention with #agent-spectrum, #value-object, etc. Keep.
+- **opus-4-7-r2** +3 (keep) — Defended keep. The DAG-with-AND/OR-and-single-parameter-edges representation is iconic in the framework and is referenced by slug in many downstream segments; renaming would create cascading editorial work for negligible reading-clarity gain. The segment also makes the case that the DAG structure is *derived* (acyclicity from temporal ordering, Markov from CMC), so "strategy DAG" reads as a result-name as well as a definition-name.
+- **opus-4-7-r2** +2 (canonicalize) — In prose this is sometimes "the strategy graph" or "the strategy structure" or "the agent's strategic causal model." Canonicalize on "strategy DAG" for the AND/OR-DAG-with-edge-credences object, and reserve "strategy" alone for $\Sigma_t$ as a state object distinct from its representation.
+- **opus-4-7** +3 (keep) — Established; the segment does a lot of work (acyclicity derived, Markov derived, correlation hierarchy). Keep.
+- **sonnet-4-6-r2** +3 (keep) — "Strategy DAG" is precise, memorable, and already has convention weight. The DAG structure is the key novelty; the name accurately foregrounds it.
+
+---
+
+## 10. `chain confidence decay`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -392,46 +465,39 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +28 | keep × 10 |
-| keep formal name AAD distinctive feature deserves separate label | +2 | keep × 1 |
-| epistemic bottleneck | +1 | rename × 1 |
+| _(keep)_ | +27 | keep × 12 |
+| log confidence additive | +1 | rename × 1 |
 
-### Candidate: `information bottleneck` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +3 (keep) — Correct baggage-carrying adoption. This is exactly the kind of prior-art name that should remain untouched.
-- **codex-gpt-5-r2** +3 (keep) — Imported theorem name should remain canonical. It is already the recognized technical term.
-- **gemini-3-1-pro-preview-r2** +3 (keep) — Established literature term (Tishby).
-- **haiku-4-5-r2** +1 (keep) — Adopted technical term (Tishby); keeping original name respects prior art. No local pressure to change.
-- **haiku-4-5** +3 (keep) — Adopted from Tishby 1999; canonical name in information theory. Baggage-carrying in the best sense — travels with information-theoretic intuitions. Do not rename. Exact application matches Tishby's definition. Keep.
-- **opus-1m** +3 (keep) — Adopted (Tishby 1999); keep.
-- **opus-4-7-b** +3 (keep) — Adopted from Tishby et al. — do not rename adopted concepts (prior-art-integration convention). The word *bottleneck* is doing real explanatory work; the baggage transfers.
-- **opus-4-7-b** +3 (keep) — Keep — adopted directly from Tishby et al. per prior-art-integration convention. Do not rename adopted concepts.
-- **opus-4-7-r2** +3 (keep) — Defended keep — direct adoption from Tishby with proper attribution; renaming would lose provenance.
-- **sonnet-4-6-r2** +3 (keep) — External vocabulary adopted directly (Tishby, Pereira & Bialek). Per prior-art-integration principle, adopt with original name.
-
-### Candidate: `keep formal name AAD distinctive feature deserves separate label`
+### Candidate: `chain confidence decay` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **audit-471203-incremental** +2 (keep) — Well-anchored in literature; AAD shouldn't rename. The AAD-distinctive *policy-conditioning* on the predictive term could be named separately: "Policy-Conditioned IB" / "Forward-Predictive IB" / "AAD-IB" — only if a distinguishing label is needed. Currently leans on standard name; auditor judges that the right call. [from 11-form-information-bottleneck.md]
+- **audit-471203-incremental** +2 (keep) — [prose moved from candidate column]: "(keep; load-bearing)" — Auditor flagged this as the structural anchor for the additive-coordinate-forcing meta-pattern (chain-rule identity → three downstream uniqueness theorems). Name does its job. [from 39-42-section-ii-ciy-strategy-chain.md]
+- **codex-2** +1 (keep) — Clear phenomenon name rather than proof name; easy to paraphrase aloud.
+- **codex-gpt-5-r2** +3 (keep) — Strong exact-result name and good anchor for the log-additivity family.
+- **gemini-1** +1 (keep) — Clear and descriptive of the phenomenon.
+- **gemini-2** +3 (keep) — Highly descriptive of the log-confidence additive depth effect.
+- **gemini-3-1-pro-preview-r2** +2 (keep) — Evocative of the AND-chain probability multiplication.
+- **haiku-4-5-r2** +1 (keep) — Mathematical precision; "chain confidence decay" names the pattern exactly.
+- **haiku-4-5** +3 (keep) — Self-descriptive — log-confidence additive in depth along a causal chain. Solid name; reads naturally. Keep.
+- **opus-4-7-r2** +2 (keep) — Acceptable keep. "Chain confidence decay" reads as a phenomenon and is referenced by name in many downstream segments. The keep is defensible against the proposed rename.
+- **opus-4-7** +3 (keep) — Inevitability-core segment; name matches the log-decomposition content. Keep.
+- **sonnet-4-6-r2** +3 (keep) — "Chain confidence decay" is precise, memorable, and names the exact phenomenon: chain depth causes monotonic decay in aggregate confidence.
+- **sonnet-4-6** +3 (keep) — Crisp compound noun. The name is self-explaining: confidence decays along a chain. It also works as the anchor of the additive-coordinate-forcing pattern — "chain-level additive log-confidence decay" is how other segments refer to it. Keep.
 
-### Candidate: `epistemic bottleneck`
+### Candidate: `log confidence additive`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **gemini-2** +1 (rename) — Emphasizes the knowledge-compression aspect over raw Shannon information.
+- **opus-4-7-r2** +1 (rename) — Considered. "Chain confidence decay" emphasizes the *decay* (downstream effect); "log-confidence additive" emphasizes the *uniqueness move* (additivity in log-space, the chain-layer instance of additive-coordinate-forcing). Mild preference for the latter because the additive identity is what the segment proves; decay is the consequence. Slug-as-thing-defined principle.
 
 ---
 
-## 9. `persistence condition`
+## 11. `persistence condition`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -470,97 +536,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 10. `strategy DAG`
-
-**Voted by architectures:** Codex, Haiku, Opus, Sonnet, audit
-**Category disagreement on top finalist:** yes
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +26 | keep × 9, canonicalize × 1 |
-| keep | +2 | keep × 1 |
-
-### Candidate: `strategy DAG` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +3 (keep) — Blunt and effective. The slug is legible instantly, and the concept it names is load-bearing.
-- **codex-2** +3 (keep) — Exactly the right level of compression: simple, searchable, and faithful to the object.
-- **codex-gpt-5-r2** +2 (keep) — Direct and technically honest. Keep rather than hiding the graph structure behind a metaphor.
-- **codex-gpt-5-r2** +2 (keep) — The acronym is technical but exact. No need to prettify it.
-- **haiku-4-5-r2** +2 (keep) — "Strategy DAG" is memorable and passes the communal-imagination test. The acronym DAG is standard. No change needed.
-- **haiku-4-5** +3 (keep) — Self-descriptive (probabilistic directed acyclic graph for strategy), compact notation. Consistent lowercase convention with #agent-spectrum, #value-object, etc. Keep.
-- **opus-4-7-r2** +3 (keep) — Defended keep. The DAG-with-AND/OR-and-single-parameter-edges representation is iconic in the framework and is referenced by slug in many downstream segments; renaming would create cascading editorial work for negligible reading-clarity gain. The segment also makes the case that the DAG structure is *derived* (acyclicity from temporal ordering, Markov from CMC), so "strategy DAG" reads as a result-name as well as a definition-name.
-- **opus-4-7-r2** +2 (canonicalize) — In prose this is sometimes "the strategy graph" or "the strategy structure" or "the agent's strategic causal model." Canonicalize on "strategy DAG" for the AND/OR-DAG-with-edge-credences object, and reserve "strategy" alone for $\Sigma_t$ as a state object distinct from its representation.
-- **opus-4-7** +3 (keep) — Established; the segment does a lot of work (acyclicity derived, Markov derived, correlation hierarchy). Keep.
-- **sonnet-4-6-r2** +3 (keep) — "Strategy DAG" is precise, memorable, and already has convention weight. The DAG structure is the key novelty; the name accurately foregrounds it.
-
-### Candidate: `keep`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +2 (keep) — Substantive load-bearing segment. Auditor's only flag was that the segment is *large* and might benefit from being split; the *name* is correct. [from 43-46-section-ii-and-or-strategy-dag-gaps.md]
-
----
-
-## 11. `chain confidence decay`
-
-**Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +25 | keep × 11 |
-| keep load bearing | +2 | keep × 1 |
-| log confidence additive | +1 | rename × 1 |
-
-### Candidate: `chain confidence decay` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-2** +1 (keep) — Clear phenomenon name rather than proof name; easy to paraphrase aloud.
-- **codex-gpt-5-r2** +3 (keep) — Strong exact-result name and good anchor for the log-additivity family.
-- **gemini-1** +1 (keep) — Clear and descriptive of the phenomenon.
-- **gemini-2** +3 (keep) — Highly descriptive of the log-confidence additive depth effect.
-- **gemini-3-1-pro-preview-r2** +2 (keep) — Evocative of the AND-chain probability multiplication.
-- **haiku-4-5-r2** +1 (keep) — Mathematical precision; "chain confidence decay" names the pattern exactly.
-- **haiku-4-5** +3 (keep) — Self-descriptive — log-confidence additive in depth along a causal chain. Solid name; reads naturally. Keep.
-- **opus-4-7-r2** +2 (keep) — Acceptable keep. "Chain confidence decay" reads as a phenomenon and is referenced by name in many downstream segments. The keep is defensible against the proposed rename.
-- **opus-4-7** +3 (keep) — Inevitability-core segment; name matches the log-decomposition content. Keep.
-- **sonnet-4-6-r2** +3 (keep) — "Chain confidence decay" is precise, memorable, and names the exact phenomenon: chain depth causes monotonic decay in aggregate confidence.
-- **sonnet-4-6** +3 (keep) — Crisp compound noun. The name is self-explaining: confidence decays along a chain. It also works as the anchor of the additive-coordinate-forcing pattern — "chain-level additive log-confidence decay" is how other segments refer to it. Keep.
-
-### Candidate: `keep load bearing`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +2 (keep) — Auditor flagged this as the structural anchor for the additive-coordinate-forcing meta-pattern (chain-rule identity → three downstream uniqueness theorems). Name does its job. [from 39-42-section-ii-ciy-strategy-chain.md]
-
-### Candidate: `log confidence additive`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +1 (rename) — Considered. "Chain confidence decay" emphasizes the *decay* (downstream effect); "log-confidence additive" emphasizes the *uniqueness move* (additivity in log-space, the chain-layer instance of additive-coordinate-forcing). Mild preference for the latter because the additive identity is what the segment proves; decay is the consequence. Slug-as-thing-defined principle.
-
----
-
-## 12. [Concept] *The slogan capturing AAD s organizing principle that an adaptive system s correction rate must exceed its target s change rate*
+## 12. [Concept] *The slogan capturing AAD organizing principle that an adaptive system correction rate must exceed its target change rate*
 
 *Post-consolidation concept cluster.*
 
@@ -573,10 +549,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | contraction over drift principle | +24 | name-unnamed × 3, canonicalize × 5 |
+| contraction imperative | +1 | name-unnamed × 1 |
 | projection contraction slogan | +1 | name-unnamed × 1 |
 | the projection slogan contraction over drift slogan | +1 | name-unnamed × 1 |
 | drift contraction inequality | +1 | name-unnamed × 1 |
-| contraction imperative | +1 | name-unnamed × 1 |
 
 ### Candidate: `contraction over drift principle`
 
@@ -592,6 +568,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-targeted-alternatives** +3 (canonicalize) — Final lock-in for the core slogan. [original phrasing: unnamed the projection whose contraction rate must exceed target drift the opus organizing principle slogan]
 - **gemini-targeted-alternatives** +3 (canonicalize) — Asserts the fundamental slogan. [original phrasing: unnamed the contraction over drift insight]
 - **sonnet-4-6** +3 (name-unnamed) — CLAUDE.md attributes to Opus: "an adaptive system is a projection whose contraction rate exceeds its target's drift rate." This is described as an "organizing-principle slogan" that "has not yet been surfaced at segment level." It deserves a name. "Contraction-over-drift principle" or "drift-contraction inequality" would let segments cross-reference it. The slogan form is already excellent; the name should be a compressed version of it. [original phrasing: unnamed: the projection whose contraction rate must exceed target drift — the Opus organizing-principle slogan]
+
+### Candidate: `contraction imperative`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-1** +1 (name-unnamed) — Gives a name to a core mental model of the agent's struggle against the environment. [original phrasing: unnamed: agent as a projection whose contraction rate must exceed its target's drift]
 
 ### Candidate: `projection contraction slogan`
 
@@ -617,17 +601,56 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6** +1 (name-unnamed) — Alternative name. More technical but maps directly to the inequality. [original phrasing: unnamed: the contraction-over-drift insight]
 
-### Candidate: `contraction imperative`
+---
+
+## 13. `logogenic agent`
+
+**Voted by architectures:** Codex, Gemini, Opus, Sonnet
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +24 | keep × 7, canonicalize × 1 |
+| section iii logogenic agent | +3 | canonicalize × 1 |
+| linguistic agent | -1 | rename × 1 |
+
+### Candidate: `logogenic agent` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **gemini-1** +1 (name-unnamed) — Gives a name to a core mental model of the agent's struggle against the environment. [original phrasing: unnamed: agent as a projection whose contraction rate must exceed its target's drift]
+- **codex-1** +3 (keep) — Novel but justified; it names the structural property rather than today's implementation technology. Strong keep.
+- **codex-2** +3 (keep) — Novel, but the novelty earns its keep by naming a structural channel property rather than a transient implementation.
+- **codex-gpt-5-r2** +3 (keep) — Strong family term for language-constituted agents. It fits the Greek-register commitment.
+- **codex-gpt-5-r2** +3 (keep) — Canonical family term.
+- **opus-4-7-b** +3 (keep) — Keep. Aligns with the `logogenic` class name in LEXICON and does not conflict with anything external.
+- **opus-4-7-r2** +3 (keep) — Defended keep — pairs with `#scope-moral-continuity` cleanly.
+- **sonnet-4-6-r2** +3 (keep) — "Logogenic" is the project's deliberately coined Greek-rooted term for language-constituted agents. Per project vocabulary commitment, this is the right name.
+- **sonnet-4-6-r2** +3 (canonicalize) — Should never appear as "language-based agent" or "LLM-based agent" in the formal theory (those are instantiation-level descriptions, not the architectural concept). "Logogenic agent" = constituted by language; "LLM-based agent" = instantiation. The scope segment explains this.
+
+### Candidate: `section iii logogenic agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes section hierarchy.
+
+### Candidate: `linguistic agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-1** -1 (rename) — Logogenic names the structural property (constituted by logos) better than the generic "linguistic". Keep Logogenic.
 
 ---
 
-## 13. `symbiogenic composition`
+## 14. `symbiogenic composition`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -677,7 +700,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 14. `additive coordinate forcing`
+## 15. `additive coordinate forcing`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
@@ -687,19 +710,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| forced coordinates | +23 | rename × 11, canonicalize × 2 |
+| forced coordinate | +23 | rename × 11, canonicalize × 2 |
 | coordinate forcing | +12 | rename × 8 |
 | uniqueness coordinate forcing | +5 | rename × 4, canonicalize × 1 |
+| uniqueness coordinate | +1 | rename × 1 |
 | _(keep)_ | +1 | keep × 1 |
-| uniqueness coordinates | +1 | rename × 1 |
-| log coordinate forcing | -1 | rename × 1 |
 | anchor lattice | -1 | rename × 1 |
 | logarithmic lift | -1 | rename × 1 |
+| log coordinate forcing | -1 | rename × 1 |
 | additive lift | -2 | rename × 2 |
 | axiom forcing | -2 | rename × 2 |
-| cauchy coordinates | -4 | rename × 6 |
+| cauchy coordinate | -4 | rename × 6 |
 
-### Candidate: `forced coordinates`
+### Candidate: `forced coordinate`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -746,15 +769,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7** +1 (canonicalize) — Alternative that matches the "broader discipline" phrasing the segment itself uses. Less snappy than #forced-coordinates; more precise.
 - **sonnet-4-6** +1 (rename) — Alternative rename capturing the shared mechanism (uniqueness theorem on AAD-internal axiom). More precise than "coordinate forcing" alone, but less smooth to say.
 
-### Candidate: `additive coordinate forcing` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **haiku-4-5** +1 (keep) — Hedged keep. The "additive" emphasis correctly highlights three of four instances (Cauchy-FE log-additive). The Čencov fourth instance diverges on sub-structure (Riemannian metric rather than log coordinate) but shares broader discipline. Current name acceptably descriptive; slight rename might clarify uniqueness-theorem focus. (See weak alternative below.)
-
-### Candidate: `uniqueness coordinates`
+### Candidate: `uniqueness coordinate`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -762,13 +777,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +1 (rename) — Closer to the mechanism ("uniqueness theorem forces coordinate"); loses a little crispness compared to `#forced-coordinates`. Second-choice.
 
-### Candidate: `log coordinate forcing`
+### Candidate: `additive coordinate forcing` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **agent1-original-brainstorm** -1 (rename) — More direct but verbose.
+- **haiku-4-5** +1 (keep) — Hedged keep. The "additive" emphasis correctly highlights three of four instances (Cauchy-FE log-additive). The Čencov fourth instance diverges on sub-structure (Riemannian metric rather than log coordinate) but shares broader discipline. Current name acceptably descriptive; slight rename might clarify uniqueness-theorem focus. (See weak alternative below.)
 
 ### Candidate: `anchor lattice`
 
@@ -785,6 +800,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** -1 (rename) — Verbose.
+
+### Candidate: `log coordinate forcing`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** -1 (rename) — More direct but verbose.
 
 ### Candidate: `additive lift`
 
@@ -804,7 +827,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **agent1-original-brainstorm** -1 (rename) — Less self-descriptive than #cauchy-coordinates.
 - **opus-1m** -1 (rename) — Underdescriptive — doesn't convey that the *thing forced* is a coordinate.
 
-### Candidate: `cauchy coordinates`
+### Candidate: `cauchy coordinate`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -819,7 +842,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 15. `sector persistence template`
+## 16. `sector persistence template`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -870,7 +893,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 16. `temporal optimality`
+## 17. `temporal optimality`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -899,7 +922,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 17. `adversarial destabilization`
+## 18. `adversarial destabilization`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -929,7 +952,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 18. `agent spectrum`
+## 19. `agent spectrum`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -941,7 +964,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +22 | keep × 10, canonicalize × 1 |
 | agency spectrum | +1 | rename × 1 |
-| agent quadrants | -1 | rename × 1 |
+| agent quadrant | -1 | rename × 1 |
 
 ### Candidate: `agent spectrum` _(keep)_
 
@@ -969,7 +992,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-2** +1 (rename) — The segment maps richness of agency, not a zoology of agent types.
 
-### Candidate: `agent quadrants`
+### Candidate: `agent quadrant`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -979,7 +1002,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 19. [Concept] *The unupdatable region of the strategy DAG where edges receive no actionable feedback*
+## 20. [Concept] *The unupdatable region of the strategy DAG where edge receive no actionable feedback*
 
 *Post-consolidation concept cluster.*
 
@@ -994,10 +1017,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | epistemic dead zone | +22 | name-unnamed × 1, canonicalize × 5, rename × 2 |
 | unobservable strategy subgraph | +3 | canonicalize × 1 |
 | the epistemic shadow | +3 | name-unnamed × 1 |
-| feedback starved branch | +2 | rename × 1 |
-| epistemic shadow | +2 | rename × 1 |
 | observability dead zone | +2 | name-unnamed × 1 |
+| feedback starved branch | +2 | rename × 1 |
 | observability frontier | +2 | name-unnamed × 2 |
+| epistemic shadow | +2 | rename × 1 |
 | unupdatable region | +1 | rename × 1 |
 | observability dominance | +1 | name-unnamed × 1 |
 
@@ -1032,22 +1055,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — A stronger visual metaphor than "observability dead zone" for unobservable DAG edges. [original phrasing: unnamed: regions of the Strategy DAG that cannot be updated because feedback cannot reach them]
 
-### Candidate: `feedback starved branch`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Explains the consequence. [original phrasing: unobservable strategy subgraph]
-
-### Candidate: `epistemic shadow`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (rename) — Alternative to "dead zone" — more evocative metaphor (shadow = blocked from light = blocked from update signal). Gemini's r1 +3 single-vote. Both terms are good; "dead zone" is more clinical, "shadow" is more poetic. The framework's register tolerates both; pick by audience. [original phrasing: unobservable strategy subgraph]
-
 ### Candidate: `observability dead zone`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -1055,6 +1062,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **haiku-4-5-r2** +2 (name-unnamed) — An extension of "observability dominance." Mentioned in LEXICON as "Observability dominance — unobservable strategy edges freeze; paths become epistemically dead." The phrase "epistemically dead" is apt but verbose. "Observability dead zone" is evocative and passes the communal-imagination test. Worth promoting. [original phrasing: unnamed: the section of a strategy where a decision has no observable consequences and thus cannot be improved by learning]
+
+### Candidate: `feedback starved branch`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Explains the consequence. [original phrasing: unobservable strategy subgraph]
 
 ### Candidate: `observability frontier`
 
@@ -1064,6 +1079,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +1 (name-unnamed) — Useful when discussing instrumentation investments, but lower priority than epistemic dead zone. [original phrasing: observability boundary in a strategy DAG]
 - **haiku-4-5-r2** +1 (name-unnamed) — Currently paraphrased as "unobservable edges freeze." The *frontier* of observability is a memorable geometric concept; "frontier" pairs with "boundary" nicely for two senses of the same limit. Weak naming; could be stronger. [original phrasing: unnamed: the unobservable edges in a strategy DAG that cannot be revised because their values cannot be inferred]
+
+### Candidate: `epistemic shadow`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +2 (rename) — Alternative to "dead zone" — more evocative metaphor (shadow = blocked from light = blocked from update signal). Gemini's r1 +3 single-vote. Both terms are good; "dead zone" is more clinical, "shadow" is more poetic. The framework's register tolerates both; pick by audience. [original phrasing: unobservable strategy subgraph]
 
 ### Candidate: `unupdatable region`
 
@@ -1083,7 +1106,148 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 20. `adaptive reserve $\Delta\rho^\ast$`
+## 21. `separability pattern`
+
+**Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| separability ladder | +22 | rename × 9, canonicalize × 1 |
+| _(keep)_ | +10 | keep × 4 |
+| staircase | -1 | rename × 1 |
+| tiered separability | -1 | rename × 1 |
+| three rung posture | -1 | rename × 1 |
+| separable core | -1 | rename × 1 |
+| separability staircase | -5 | rename × 5 |
+
+### Candidate: `separability ladder`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** +1 (rename) — "Ladder" is right geometry — discrete levels of increasing difficulty ascending from separable-core.
+- **codex-gpt-5-r2** +3 (rename) — Ladder captures separable core, structured repair, general open better than pattern. It is also more memorable.
+- **gemini-1** +1 (rename) — "Ladder" conveys the "six ladders of increasing difficulty" described in the outline much better than "pattern".
+- **gemini-3-1-pro-preview-r2** +3 (rename) — Concurring with the consensus: "ladder" correctly captures the difficulty rungs across the axes.
+- **haiku-4-5-r2** +3 (rename) — Round-1 consensus; "ladder" is more structural — the rung metaphor is isomorphic to the difficulty levels across the seven axes.
+- **opus-1m** +3 (rename) — Agree with original brainstorm. "Ladder" is the right geometry for the seven-ladder structure (ascending difficulty from separable core). Upgrading from original's weak preference to strong — the seven-ladder enumeration in the segment explicitly instantiates the ladder geometry.
+- **opus-4-7-b** +3 (rename) — The meta-segment's own structure is a seven-row *ladder* (separable-core → structured-repair → general-open across seven axes of increasing difficulty). "Ladder" is the geometry the content actually has; "pattern" is inert filler that describes no content. Pairs mnemonically with `#identifiability-floor` ("the ladder above the floor"). The brainstorm converges here; I arrived independently on the same reasoning (from reading the seven-row table) before cross-checking.
+- **opus-4-7-r2** +2 (rename) — The segment's own organizing structure is *seven ladders*, each with separable-core / structured-repair / general-open. "Pattern" is the placeholder slug-form ("the pattern-segment names a pattern"); "ladders" is the substantive shape the segment actually identifies and names. The Brief, Discussion, and the cross-citation in `disc-identifiability-floor` all reach for "ladder" as the unit.
+- **opus-4-7** +1 (canonicalize) — The segment itself uses "seven ladders" and each row is a ladder — the organizing concept is ladder-shaped, not pattern-shaped. "Pattern" feels generic for what is a precise three-rung structure.
+- **sonnet-4-6-r2** +2 (rename) — "Pattern" is generic; "ladder" is evocative of the actual structure — each instance IS a ladder with rungs, and the segment itself uses "ladders" throughout. Survives renamed-from-now-sounds-weird. The segment already says "six ladders"; the slug should say it too.
+
+### Candidate: `separability pattern` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-1** +1 (keep) — Slightly clinical, but honest about what the segment is doing across multiple ladders. I considered renaming it and did not find a cleaner winner.
+- **codex-2** +3 (keep) — Strong meta-segment name: short, teachable, and faithful to the repeated posture.
+- **haiku-4-5** +3 (keep) — Load-bearing meta-segment name with evocative three-part structure (separable core / structured repair / general open). Reads naturally aloud and across eight-page discussions. Do not change.
+- **sonnet-4-6** +3 (keep) — "Separability" does real work — it names the mathematical content (the regime decomposes), and "pattern" correctly signals this is a meta-level organizing principle rather than a theorem. Six-word alternatives all feel longer. Keep.
+
+### Candidate: `staircase`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** -1 (rename) — Too metaphorical.
+
+### Candidate: `tiered separability`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** -1 (rename) — Verbose.
+
+### Candidate: `three rung posture`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7** -1 (rename) — Too mechanical; loses "separability" which is the content.
+
+### Candidate: `separable core`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** -1 (rename) — Considered and rejected — names only the first column of the three-part shape; loses the structured-repair and general-open framing that is half the point.
+
+### Candidate: `separability staircase`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** -1 (rename) — Whimsical.
+- **codex-gpt-5-r2** -1 (rename) — Staircase is bulkier and less elegant than ladder. It adds no precision.
+- **opus-1m** -1 (rename) — Whimsical without compensating precision gain.
+- **opus-4-7-b** -1 (rename) — Whimsical; the word "staircase" doesn't carry the increasing-difficulty semantics as cleanly as "ladder" (staircases are uniform; ladders intuitively get harder toward the top). Reject.
+- **opus-4-7** -1 (rename) — Whimsical; prefers #separability-ladder if any rename at all.
+
+---
+
+## 22. `shared intent`
+
+**Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +22 | keep × 7, rebuttal × 1 |
+| teleological unity | +1 | rename × 3 |
+| compressed purpose | +1 | rename × 1 |
+
+### Candidate: `shared intent` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-1** +3 (keep) — Compact, portable, and directly connected to the commander's-intent analogy. This already sounds like a concept, not a paper section.
+- **codex-2** +3 (keep) — Strong communal noun with clear organizational resonance.
+- **codex-gpt-5-r2** +3 (keep) — Clear and domain-familiar. It also maps well to mission command without overusing German terminology.
+- **codex-gpt-5-r2** +3 (keep) — Excellent bridge between IB compression and mission command.
+- **haiku-4-5** +3 (keep) — IB-compressed purpose. "Shared intent" reads naturally — what agents align on. Keep.
+- **opus-4-7-r2** +3 (keep) — Defended keep. Maps directly to Clausewitz's "commander's intent" tradition (acknowledged in the segment); renaming would break the prior-art bridge.
+- **sonnet-4-6-r2** +3 (keep) — Load-bearing prose vocabulary established across the codebase. "Shared intent" is what commanders communicate in Auftragstaktik and the IB compression finds — the name is exactly right.
+- **sonnet-4-6-r2** +1 (rebuttal) — [prose moved from candidate column]: "(keep `def-shared-intent`)" — Against Gemini's proposal `#def-teleological-unity` (+3). Gemini argues this "aligns perfectly with $U_O$ notation and unifies with epistemic/strategic unity." This is precisely the problem: `def-shared-intent` is the multi-agent concept (what is communicated between agents, the Clausewitz commander's intent, the IB compression of $G_{\text{shared}}$), while $U_O$ is the single-agent teleological unity. Renaming to `teleological-unity` would collapse a load-bearing distinction the framework relies on (shared intent is an inter-agent concept; teleological unity is intra-agent). Gemini's vote would create exactly the kind of conceptual blur the framework is designed to avoid. The "unification with $U_O$" is a feature of the current names doing different things, not a defect.
+
+### Candidate: `teleological unity`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** -1 (rename) — Shared intent is an IB-compressed communication object. Teleological unity is already a unity dimension; merging them would erase a useful distinction.
+- **gemini-3-1-pro-preview-r2** +3 (rename) — Aligns perfectly with the $U_O$ notation and unifies with epistemic/strategic unity.
+- **opus-4-7-r2** -1 (rename) — Rebuttal — Gemini proposed this rename at +3 with the rationale that it aligns with U_O notation and unifies with epistemic/strategic unity. I think this is wrong. "Shared intent" is the *operational* cross-agent communication concept (what gets transmitted, the IB-compressed payload of $G_t$); "teleological unity" is the *measured* alignment property ($U_O = I/H$). The two are NOT the same: a multi-agent system can have low teleological unity but still transmit shared intent (poorly). Renaming would collapse the distinction the framework currently makes. Sonnet's defended-keep at +3 is correct and Gemini's rename undermines a load-bearing distinction.
+
+### Candidate: `compressed purpose`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-2** +1 (rename) — Highlights the Information Bottleneck aspect of shared intent.
+
+---
+
+## 23. `adaptive reserve $\Delta\rho^\ast$`
 
 **Voted by architectures:** Gemini, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -1111,64 +1275,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 21. `shared intent`
-
-**Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +21 | keep × 7 |
-| teleological unity | +1 | rename × 3 |
-| keep def shared intent | +1 | rebuttal × 1 |
-| compressed purpose | +1 | rename × 1 |
-
-### Candidate: `shared intent` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +3 (keep) — Compact, portable, and directly connected to the commander's-intent analogy. This already sounds like a concept, not a paper section.
-- **codex-2** +3 (keep) — Strong communal noun with clear organizational resonance.
-- **codex-gpt-5-r2** +3 (keep) — Clear and domain-familiar. It also maps well to mission command without overusing German terminology.
-- **codex-gpt-5-r2** +3 (keep) — Excellent bridge between IB compression and mission command.
-- **haiku-4-5** +3 (keep) — IB-compressed purpose. "Shared intent" reads naturally — what agents align on. Keep.
-- **opus-4-7-r2** +3 (keep) — Defended keep. Maps directly to Clausewitz's "commander's intent" tradition (acknowledged in the segment); renaming would break the prior-art bridge.
-- **sonnet-4-6-r2** +3 (keep) — Load-bearing prose vocabulary established across the codebase. "Shared intent" is what commanders communicate in Auftragstaktik and the IB compression finds — the name is exactly right.
-
-### Candidate: `teleological unity`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** -1 (rename) — Shared intent is an IB-compressed communication object. Teleological unity is already a unity dimension; merging them would erase a useful distinction.
-- **gemini-3-1-pro-preview-r2** +3 (rename) — Aligns perfectly with the $U_O$ notation and unifies with epistemic/strategic unity.
-- **opus-4-7-r2** -1 (rename) — Rebuttal — Gemini proposed this rename at +3 with the rationale that it aligns with U_O notation and unifies with epistemic/strategic unity. I think this is wrong. "Shared intent" is the *operational* cross-agent communication concept (what gets transmitted, the IB-compressed payload of $G_t$); "teleological unity" is the *measured* alignment property ($U_O = I/H$). The two are NOT the same: a multi-agent system can have low teleological unity but still transmit shared intent (poorly). Renaming would collapse the distinction the framework currently makes. Sonnet's defended-keep at +3 is correct and Gemini's rename undermines a load-bearing distinction.
-
-### Candidate: `keep def shared intent`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **sonnet-4-6-r2** +1 (rebuttal) — Against Gemini's proposal `#def-teleological-unity` (+3). Gemini argues this "aligns perfectly with $U_O$ notation and unifies with epistemic/strategic unity." This is precisely the problem: `def-shared-intent` is the multi-agent concept (what is communicated between agents, the Clausewitz commander's intent, the IB compression of $G_{\text{shared}}$), while $U_O$ is the single-agent teleological unity. Renaming to `teleological-unity` would collapse a load-bearing distinction the framework relies on (shared intent is an inter-agent concept; teleological unity is intra-agent). Gemini's vote would create exactly the kind of conceptual blur the framework is designed to avoid. The "unification with $U_O$" is a feature of the current names doing different things, not a defect.
-
-### Candidate: `compressed purpose`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-2** +1 (rename) — Highlights the Information Bottleneck aspect of shared intent.
-
----
-
-## 22. `AAD adaptation and actuation dynamics`
+## 24. `AAD adaptation and actuation dynamics`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
@@ -1215,7 +1322,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 23. `adaptive tempo`
+## 25. `adaptive tempo`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -1252,7 +1359,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 24. `agent opacity`
+## 26. `agent opacity`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -1300,7 +1407,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 25. `causal information yield`
+## 27. `causal information yield`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -1339,107 +1446,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 26. `separability pattern`
-
-**Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
-**Category disagreement on top finalist:** yes
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| separability ladder | +20 | rename × 8, canonicalize × 1 |
-| _(keep)_ | +10 | keep × 4 |
-| separability ladders | +2 | rename × 1 |
-| separable core | -1 | rename × 1 |
-| tiered separability | -1 | rename × 1 |
-| staircase | -1 | rename × 1 |
-| three rung posture | -1 | rename × 1 |
-| separability staircase | -5 | rename × 5 |
-
-### Candidate: `separability ladder`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** +1 (rename) — "Ladder" is right geometry — discrete levels of increasing difficulty ascending from separable-core.
-- **codex-gpt-5-r2** +3 (rename) — Ladder captures separable core, structured repair, general open better than pattern. It is also more memorable.
-- **gemini-1** +1 (rename) — "Ladder" conveys the "six ladders of increasing difficulty" described in the outline much better than "pattern".
-- **gemini-3-1-pro-preview-r2** +3 (rename) — Concurring with the consensus: "ladder" correctly captures the difficulty rungs across the axes.
-- **haiku-4-5-r2** +3 (rename) — Round-1 consensus; "ladder" is more structural — the rung metaphor is isomorphic to the difficulty levels across the seven axes.
-- **opus-1m** +3 (rename) — Agree with original brainstorm. "Ladder" is the right geometry for the seven-ladder structure (ascending difficulty from separable core). Upgrading from original's weak preference to strong — the seven-ladder enumeration in the segment explicitly instantiates the ladder geometry.
-- **opus-4-7-b** +3 (rename) — The meta-segment's own structure is a seven-row *ladder* (separable-core → structured-repair → general-open across seven axes of increasing difficulty). "Ladder" is the geometry the content actually has; "pattern" is inert filler that describes no content. Pairs mnemonically with `#identifiability-floor` ("the ladder above the floor"). The brainstorm converges here; I arrived independently on the same reasoning (from reading the seven-row table) before cross-checking.
-- **opus-4-7** +1 (canonicalize) — The segment itself uses "seven ladders" and each row is a ladder — the organizing concept is ladder-shaped, not pattern-shaped. "Pattern" feels generic for what is a precise three-rung structure.
-- **sonnet-4-6-r2** +2 (rename) — "Pattern" is generic; "ladder" is evocative of the actual structure — each instance IS a ladder with rungs, and the segment itself uses "ladders" throughout. Survives renamed-from-now-sounds-weird. The segment already says "six ladders"; the slug should say it too.
-
-### Candidate: `separability pattern` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +1 (keep) — Slightly clinical, but honest about what the segment is doing across multiple ladders. I considered renaming it and did not find a cleaner winner.
-- **codex-2** +3 (keep) — Strong meta-segment name: short, teachable, and faithful to the repeated posture.
-- **haiku-4-5** +3 (keep) — Load-bearing meta-segment name with evocative three-part structure (separable core / structured repair / general open). Reads naturally aloud and across eight-page discussions. Do not change.
-- **sonnet-4-6** +3 (keep) — "Separability" does real work — it names the mathematical content (the regime decomposes), and "pattern" correctly signals this is a meta-level organizing principle rather than a theorem. Six-word alternatives all feel longer. Keep.
-
-### Candidate: `separability ladders`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +2 (rename) — The segment's own organizing structure is *seven ladders*, each with separable-core / structured-repair / general-open. "Pattern" is the placeholder slug-form ("the pattern-segment names a pattern"); "ladders" is the substantive shape the segment actually identifies and names. The Brief, Discussion, and the cross-citation in `disc-identifiability-floor` all reach for "ladder" as the unit.
-
-### Candidate: `separable core`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** -1 (rename) — Considered and rejected — names only the first column of the three-part shape; loses the structured-repair and general-open framing that is half the point.
-
-### Candidate: `tiered separability`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** -1 (rename) — Verbose.
-
-### Candidate: `staircase`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** -1 (rename) — Too metaphorical.
-
-### Candidate: `three rung posture`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7** -1 (rename) — Too mechanical; loses "separability" which is the content.
-
-### Candidate: `separability staircase`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** -1 (rename) — Whimsical.
-- **codex-gpt-5-r2** -1 (rename) — Staircase is bulkier and less elegant than ladder. It adds no precision.
-- **opus-1m** -1 (rename) — Whimsical without compensating precision gain.
-- **opus-4-7-b** -1 (rename) — Whimsical; the word "staircase" doesn't carry the increasing-difficulty semantics as cleanly as "ladder" (staircases are uniform; ladders intuitively get harder toward the top). Reject.
-- **opus-4-7** -1 (rename) — Whimsical; prefers #separability-ladder if any rename at all.
-
----
-
-## 27. `composition closure`
+## 28. `composition closure`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -1498,7 +1505,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 28. `auftragstaktik principle`
+## 29. `auftragstaktik principle`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -1512,8 +1519,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | mission command principle | +3 | rename × 3 |
 | auftragstaktik | +2 | add-alias × 1 |
 | mission command | +2 | add-alias × 1 |
-| mission command bandwidth | +1 | rename × 1 |
 | auftragstaktik bandwidth | +1 | rename × 1 |
+| mission command bandwidth | +1 | rename × 1 |
 | objective first bandwidth principle | -1 | rename × 1 |
 | auftragstaktik drop principle | -1 | rename × 1 |
 
@@ -1557,14 +1564,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (add-alias) — Add as first-use gloss for accessibility.
 
-### Candidate: `mission command bandwidth`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +1 (rename) — More English and accessible than Auftragstaktik, but loses the historical precision. Acceptable as an alias or fallback.
-
 ### Candidate: `auftragstaktik bandwidth`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -1572,6 +1571,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +1 (rename) — Principle is weak, and bandwidth is the formal allocation subject. However, the German term is intentionally domain-rich, so this is a mild vote.
+
+### Candidate: `mission command bandwidth`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +1 (rename) — More English and accessible than Auftragstaktik, but loses the historical precision. Acceptable as an alias or fallback.
 
 ### Candidate: `objective first bandwidth principle`
 
@@ -1591,7 +1598,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 29. `communication gain`
+## 30. `communication gain`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -1629,7 +1636,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 30. [Concept] *The working convention rule of attempting tighter derivation before scope narrowing on apparently overclaimed claims*
+## 31. [Concept] *The working convention rule of attempting tighter derivation before scope narrowing on apparently overclaimed claim*
 
 *Post-consolidation concept cluster.*
 
@@ -1676,7 +1683,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 31. `context turnover`
+## 32. `context turnover`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -1713,7 +1720,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 32. `contraction template`
+## 33. `contraction template`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -1750,7 +1757,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 33. `deliberation cost`
+## 34. `deliberation cost`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -1761,9 +1768,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +18 | keep × 8 |
+| think vs act tradeoff | +1 | rename × 1 |
 | deliberation drag | +1 | rename × 1 |
 | deliberation threshold | +1 | rename × 1 |
-| think vs act tradeoff | +1 | rename × 1 |
 
 ### Candidate: `deliberation cost` _(keep)_
 
@@ -1780,6 +1787,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +3 (keep) — Defended keep. "Deliberation cost" names exactly what the segment derives (the think-vs-act tradeoff under mismatch drift). The discussion segment `#disc-exploit-explore-deliberate` extends it. Renaming would break a clean two-segment naming compound.
 - **sonnet-4-6-r2** +2 (keep) — "Deliberation cost" names the think-vs-act tradeoff precisely.
 
+### Candidate: `think vs act tradeoff`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (rename) — The standard term obscures the AAD-distinctive content (the threshold itself, not the cost). "Deliberation cost" sounds like a measurement; "Deliberation Threshold" surfaces the operational use. [from 24-der-deliberation-cost.md] [one of 2 alternatives proposed in the original audit row]
+
 ### Candidate: `deliberation drag`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -1795,50 +1810,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **audit-471203-incremental** +1 (rename) — The standard term obscures the AAD-distinctive content (the threshold itself, not the cost). "Deliberation cost" sounds like a measurement; "Deliberation Threshold" surfaces the operational use. [from 24-der-deliberation-cost.md] [one of 2 alternatives proposed in the original audit row]
-
-### Candidate: `think vs act tradeoff`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (rename) — The standard term obscures the AAD-distinctive content (the threshold itself, not the cost). "Deliberation cost" sounds like a measurement; "Deliberation Threshold" surfaces the operational use. [from 24-der-deliberation-cost.md] [one of 2 alternatives proposed in the original audit row]
-
----
-
-## 34. `logogenic agent`
-
-**Voted by architectures:** Codex, Gemini, Opus, Sonnet
-**Category disagreement on top finalist:** yes
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +18 | keep × 5, canonicalize × 1 |
-| linguistic agent | -1 | rename × 1 |
-
-### Candidate: `logogenic agent` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +3 (keep) — Novel but justified; it names the structural property rather than today's implementation technology. Strong keep.
-- **codex-gpt-5-r2** +3 (keep) — Strong family term for language-constituted agents. It fits the Greek-register commitment.
-- **codex-gpt-5-r2** +3 (keep) — Canonical family term.
-- **opus-4-7-r2** +3 (keep) — Defended keep — pairs with `#scope-moral-continuity` cleanly.
-- **sonnet-4-6-r2** +3 (keep) — "Logogenic" is the project's deliberately coined Greek-rooted term for language-constituted agents. Per project vocabulary commitment, this is the right name.
-- **sonnet-4-6-r2** +3 (canonicalize) — Should never appear as "language-based agent" or "LLM-based agent" in the formal theory (those are instantiation-level descriptions, not the architectural concept). "Logogenic agent" = constituted by language; "LLM-based agent" = instantiation. The scope segment explains this.
-
-### Candidate: `linguistic agent`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-1** -1 (rename) — Logogenic names the structural property (constituted by logos) better than the generic "linguistic". Keep Logogenic.
 
 ---
 
@@ -1883,7 +1854,52 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 36. `team persistence`
+## 36. `pearl causal hierarchy`
+
+**Voted by architectures:** Gemini, Haiku, Opus, Sonnet, agent1
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +18 | keep × 6 |
+| causal hierarchy | +1 | rename × 1 |
+| no alternative | -1 | keep × 1 |
+
+### Candidate: `pearl causal hierarchy` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** +3 (keep) — Adopted concept; prior-art-integration convention forbids rename.
+- **gemini-3-1-pro-preview-r2** +3 (keep) — Established literature term; do not change.
+- **haiku-4-5** +3 (keep) — Pearl's three levels of causal reasoning. Names the origin; accurate. Keep.
+- **opus-1m** +3 (keep) — Adopted concept; keep attribution per prior-art-integration convention.
+- **opus-4-7-r2** +3 (keep) — Defended keep. Direct adoption from Pearl with proper attribution; renaming would lose provenance and create a NIH-syndrome alternative.
+- **sonnet-4-6-r2** +3 (keep) — External vocabulary adopted with proper citation. "Pearl's causal hierarchy" is the field-standard name; adopting it directly is correct under the project's prior-art-integration principle.
+
+### Candidate: `causal hierarchy`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-2** +1 (rename) — Dropping "Pearl" removes the specific historical baggage while keeping the structural concept.
+
+### Candidate: `no alternative`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** -1 (keep) — Same — adopted external concept. The single-arch [opus] +6 vote stands; the prior-art-integration convention forbids rename, and I have no honest alternative.
+
+---
+
+## 37. `team persistence`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -1912,7 +1928,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 37. `credit assignment boundary`
+## 38. `credit assignment boundary`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -1949,7 +1965,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 38. `honesty as architecture`
+## 39. `honesty as architecture`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -1995,7 +2011,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 39. `approximation tiering`
+## 40. `approximation tiering`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2006,11 +2022,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +16 | keep × 8 |
-| scope laddering | +1 | rename × 1 |
 | tiered approximation | +1 | rename × 1 |
-| approximation ladders | +1 | rename × 1 |
-| graceful degradation | -1 | rename × 1 |
+| scope laddering | +1 | rename × 1 |
+| approximation ladder | +1 | rename × 1 |
 | tier ascension | -1 | rename × 1 |
+| graceful degradation | -1 | rename × 1 |
 
 ### Candidate: `approximation tiering` _(keep)_
 
@@ -2027,14 +2043,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **sonnet-4-6-r2** +2 (keep) — "Tiering" is accurate and distinctive. The pattern it names IS about tiered approximations with monotonicity. Passes the communal-imagination test.
 - **sonnet-4-6** +3 (keep) — "Tiering" is precise — it names the operation (creating tiers) not just the result (tiers). Self-describing for a meta-pattern. Keep.
 
-### Candidate: `scope laddering`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +1 (rename) — If the project lands "ladder" as a distinguished term for tiered-with-monotonicity-and-ascension structures, this would be a fit. Lower priority than the existing keep.
-
 ### Candidate: `tiered approximation`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -2043,21 +2051,21 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-1** +1 (rename) — Slight improvement in natural-language flow. The current phrase is serviceable but abstract.
 
-### Candidate: `approximation ladders`
+### Candidate: `scope laddering`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** +1 (rename) — If the project lands "ladder" as a distinguished term for tiered-with-monotonicity-and-ascension structures, this would be a fit. Lower priority than the existing keep.
+
+### Candidate: `approximation ladder`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
 - **codex-2** +1 (rename) — Noun beats gerund here; "ladders" is easier to say alongside the segment's own ladder language.
-
-### Candidate: `graceful degradation`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** -1 (rename) — Considered and rejected — graceful-degradation is (AT3) only; tiering is the whole thing.
 
 ### Candidate: `tier ascension`
 
@@ -2067,9 +2075,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7** -1 (rename) — Reads like a ranked-climbing metaphor the segment does not actually use. Reject.
 
+### Candidate: `graceful degradation`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** -1 (rename) — Considered and rejected — graceful-degradation is (AT3) only; tiering is the whole thing.
+
 ---
 
-## 40. [Concept] *The failure mode where η → 0 freezes learning in either of two distinguishable modes low u o vs high u o*
+## 41. [Concept] *The failure mode where η → 0 freeze learning in either of two distinguishable mode low u o vs high u o*
 
 *Post-consolidation concept cluster.*
 
@@ -2085,13 +2101,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | dogmatic convergence limit | +6 | canonicalize × 2 |
 | epistemic gain collapse | +6 | canonicalize × 2 |
 | epistemic gridlock | +5 | add-alias × 1, canonicalize × 1 |
+| stability induced myopia | +3 | canonicalize × 1 |
 | epistemic death | +3 | name-unnamed × 1 |
 | competency trap | +3 | add-alias × 1 |
-| stability induced myopia | +3 | canonicalize × 1 |
+| observation ambiguity freeze | +2 | rename × 1 |
+| update calcification | +2 | add-alias × 1 |
 | certainty trap | +2 | name-unnamed × 1 |
 | the nihilism trap | +2 | name-unnamed × 1 |
-| update calcification | +2 | add-alias × 1 |
-| observation ambiguity freeze | +2 | rename × 1 |
 | learning freeze | +1 | canonicalize × 1 |
 | eta collapse | +1 | rename × 1 |
 
@@ -2135,6 +2151,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-targeted-alternatives** +2 (add-alias) — Vividly captures the "freeze" aspect where learning stops entirely despite ongoing mismatch signals. [original phrasing: unnamed the gain collapse failure when both u m → 0 and u o → ∞]
 - **gemini-targeted-alternatives** +3 (canonicalize) — Identifies the specific double-failure mode of gain collapse. [original phrasing: unnamed the phenomenon where both $U_M \to 0$ and $U_o \to \infty$ freeze learning]
 
+### Candidate: `stability induced myopia`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Retains the descriptive alias for success-driven failure. [original phrasing: gemini s competency trap for $\eta^st 	o 0$]
+
 ### Candidate: `epistemic death`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -2151,13 +2175,21 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +3 (add-alias) — Formalizes "institutional rigidity" as an inevitable result of $\eta^\ast \to 0$. [original phrasing: unnamed: the mathematical limit of Bayesian learning without forgetting]
 
-### Candidate: `stability induced myopia`
+### Candidate: `observation ambiguity freeze`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **gemini-targeted-alternatives** +3 (canonicalize) — Retains the descriptive alias for success-driven failure. [original phrasing: gemini s competency trap for $\eta^st 	o 0$]
+- **gemini-targeted-alternatives** +2 (rename) — Describes the nihilistic failure mode of gain collapse. [original phrasing: unnamed $U_o \to \infty$ freezing the learning rate]
+
+### Candidate: `update calcification`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (add-alias) — Good prose handle for the failure mode where the model stops taking in new info. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
 
 ### Candidate: `certainty trap`
 
@@ -2174,22 +2206,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +2 (name-unnamed) — Dogmatism's opposite, where learning stops because everything is meaningless. [original phrasing: unnamed: $U_o \to \infty$ freezing the learning rate]
-
-### Candidate: `update calcification`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (add-alias) — Good prose handle for the failure mode where the model stops taking in new info. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
-
-### Candidate: `observation ambiguity freeze`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Describes the nihilistic failure mode of gain collapse. [original phrasing: unnamed $U_o \to \infty$ freezing the learning rate]
 
 ### Candidate: `learning freeze`
 
@@ -2209,7 +2225,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 41. `recursive update`
+## 42. `recursive update`
 
 **Voted by architectures:** Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -2246,7 +2262,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 42. `agent identity`
+## 43. `agent identity`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -2257,8 +2273,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +15 | keep × 6 |
-| the trajectory identity scope | +3 | rename × 1 |
 | identity as singular causal trajectory | +3 | rename × 1 |
+| the trajectory identity scope | +3 | rename × 1 |
 | singular causal trajectory | +2 | rename × 1 |
 | trajectory identity | +1 | rename × 1 |
 | causal identity | +1 | rename × 1 |
@@ -2276,7 +2292,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7** +3 (keep) — Surfaced 2026-04-22 as a formal scope commitment; name carries the token-level commitment honestly. Now (PI) sits here. Keep.
 - **sonnet-4-6-r2** +3 (keep) — Perfect fit of name to content — the segment scopes AAD to agents on singular causal trajectories, and "agent identity" (identity = singular causal trajectory) is exactly the concept.
 
-### Candidate: `the trajectory identity scope`
+### Candidate: `identity as singular causal trajectory`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -2284,7 +2300,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +3 (rename) — "Slug-as-mechanical-prefix hides the substantive claim." The segment is structurally important for the framework's identity-and-continuity claims (esp. for consciousness-infrastructure substrate-independence work) and the title gloss is closer to what it actually does than the slug. Auditor felt the friction acutely: "single most important §I segment for the broader project's purposes." [from 30-scope-agent-identity.md] [one of 2 alternatives proposed in the original audit row]
 
-### Candidate: `identity as singular causal trajectory`
+### Candidate: `the trajectory identity scope`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -2318,7 +2334,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 43. `aporia`
+## 44. `aporia`
 
 **Voted by architectures:** Codex, Gemini, Opus, agent1
 **Category disagreement on top finalist:** no
@@ -2362,7 +2378,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 44. [Concept] *The self reinforcing positive feedback loop linking m t quality and σ t evaluable complexity TST specific and AAD general forms*
+## 45. [Concept] *The self reinforcing positive feedback loop linking m t quality and σ t evaluable complexity TST specific and AAD general form*
 
 *Post-consolidation concept cluster.*
 
@@ -2427,7 +2443,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 45. `consolidation dynamics`
+## 46. `consolidation dynamics`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2466,7 +2482,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 46. `critical mass composition`
+## 47. `critical mass composition`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2502,7 +2518,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 47. `exploit explore deliberate`
+## 48. `exploit explore deliberate`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -2514,8 +2530,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +15 | keep × 6 |
 | cycle budget allocation | +3 | rename × 2 |
-| action timing tradeoff | +2 | rename × 1 |
 | cycle budget | +2 | rename × 1 |
+| action timing tradeoff | +2 | rename × 1 |
 
 ### Candidate: `exploit explore deliberate` _(keep)_
 
@@ -2539,14 +2555,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **codex-gpt-5-r2** +2 (rename) — The current verb triad is memorable but underspecified. The segment is about allocating the cycle budget across modes.
 - **opus-4-7-r2** +1 (rename) — Confirmation with new reasoning — Codex proposed this at +2 with the rationale that the verb triad is underspecified. I'd vote +1 (weaker than Codex's +2) because the verb triad is more memorable than "cycle-budget-allocation" but less precise. The rename surfaces the *resource-allocation* nature of the tradeoff, which is what the formal segment derives. Mild support; would not push hard against keep.
 
-### Candidate: `action timing tradeoff`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +2 (rename) — Names the overarching tradeoff rather than listing the mechanistic components.
-
 ### Candidate: `cycle budget`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -2555,9 +2563,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6-r2** +2 (rename) — Codex proposed `disc-cycle-budget-allocation` (+2) for this segment; I had voted keep (+2). Reading Codex's reasoning ("the segment is about allocating the cycle budget across modes") crystallized a new alternative: `disc-cycle-budget` drops "allocation" (which is role-like) and leaves a two-word noun that survives the communal-imagination test. Shorter than Codex's candidate; equally scope-honest. Neither Codex's nor my original vote.
 
+### Candidate: `action timing tradeoff`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +2 (rename) — Names the overarching tradeoff rather than listing the mechanistic components.
+
 ---
 
-## 48. `gain sector bridge`
+## 49. `gain sector bridge`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** no
@@ -2568,9 +2584,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +15 | keep × 7 |
-| grounding ga 3 sub scope α and β | +2 | rename × 1 |
-| bridge theorem from gain to sector | +2 | rename × 1 |
 | the bridge theorem | +2 | rename × 1 |
+| bridge theorem from gain to sector | +2 | rename × 1 |
+| grounding ga 3 sub scope α and β | +2 | rename × 1 |
 
 ### Candidate: `gain sector bridge` _(keep)_
 
@@ -2586,7 +2602,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **sonnet-4-6-r2** +2 (keep) — "Gain-sector bridge" is precise — it bridges the gain principle to the sector condition via directional fidelity. Good name.
 - **sonnet-4-6** +3 (keep) — The "bridge" metaphor is load-bearing and accurate — it connects two distinct mathematical objects (gain principle and sector condition). Readable aloud. Keep.
 
-### Candidate: `grounding ga 3 sub scope α and β`
+### Candidate: `the bridge theorem`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -2602,7 +2618,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +2 (rename) — Auditor: "Gain-Sector Bridge" is descriptive but understates given the segment's centrality (cross-tradition unification: Bayesian/optimization/Lyapunov). The structural insight — GA-3 derived in α, posited in β — deserves visibility in the title. [from 25-der-gain-sector-bridge.md] [one of 3 alternatives proposed in the original audit row]
 
-### Candidate: `the bridge theorem`
+### Candidate: `grounding ga 3 sub scope α and β`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -2612,7 +2628,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 49. `loop interventional access`
+## 50. `loop interventional access`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2625,9 +2641,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | _(keep)_ | +15 | keep × 9 |
 | loop causal engine | +2 | rename × 1 |
 | loop as causal engine | +2 | rename × 1 |
+| interventional loop access | +1 | rename × 1 |
 | interventional feedback | +1 | rename × 1 |
 | adaptive loop access | +1 | rename × 1 |
-| interventional loop access | +1 | rename × 1 |
 | loop level2 access | -1 | rename × 1 |
 
 ### Candidate: `loop interventional access` _(keep)_
@@ -2662,6 +2678,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +2 (rename) — The current name describes the *result* (the loop provides interventional access). "Loop as causal engine" is the framing the README and segment Discussion both reach for, and it surfaces what makes this result distinctive — the agent-environment loop *generates* Pearl-Level-2 data by construction. The README explicitly names "loop-as-Level-2-causal-engine" as the framework's third headline result. Slug should match.
 
+### Candidate: `interventional loop access`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-2** +1 (rename) — Small word-order cleanup; the current slug is understandable but a little stiff in speech.
+
 ### Candidate: `interventional feedback`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -2678,14 +2702,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6** +1 (rename) — "Interventional" is the load-bearing word — it's why the loop matters. Dropping it loses the reason the segment exists. Slight preference for retaining.
 
-### Candidate: `interventional loop access`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-2** +1 (rename) — Small word-order cleanup; the current slug is understandable but a little stiff in speech.
-
 ### Candidate: `loop level2 access`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -2696,7 +2712,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 50. `adversarial tempo advantage`
+## 51. `adversarial tempo advantage`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2741,7 +2757,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 51. `atomic changeset`
+## 52. `atomic changeset`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2769,7 +2785,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 52. `complete agent state`
+## 53. `complete agent state`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2807,7 +2823,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 53. `detection latency`
+## 54. `detection latency`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2833,7 +2849,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 54. `logogenic logozoetic`
+## 55. `logogenic logozoetic`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -2877,7 +2893,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 55. `composition consistency`
+## 56. `composition consistency`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -2888,10 +2904,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +13 | keep × 6 |
+| scale invariance | +1 | rename × 1 |
+| holon postulate | +1 | rename × 1 |
 | cross level coherence | +1 | rename × 1 |
 | scale invariance of adaptive dynamics | +1 | rename × 1 |
-| holon postulate | +1 | rename × 1 |
-| scale invariance | +1 | rename × 1 |
 
 ### Candidate: `composition consistency` _(keep)_
 
@@ -2905,6 +2921,22 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-b** +3 (keep) — Keep. One of AAD's load-bearing postulates; the name signals the content (agent/subagent scale-invariance).
 - **opus-4-7-r2** +3 (keep) — Defended keep. "Composition consistency" names the scale-invariance commitment — predictions at different levels of description must be compatible. Load-bearing for Section III; renaming would cascade.
 - **sonnet-4-6-r2** +2 (keep) — "Composition consistency" names the scale-invariance postulate correctly.
+
+### Candidate: `scale invariance`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-1** +1 (rename) — "Scale invariance" more directly describes the physical/mathematical property that the theory applies at every level.
+
+### Candidate: `holon postulate`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (rename) — Auditor: "fine *and* under-evocative — doesn't immediately suggest the Brooks's-Law-shaped derivable consequences." Tentative; flagged for the brainstorm. No strong preference between alternatives. [from 07-post-composition-consistency.md] [one of 3 alternatives proposed in the original audit row]
 
 ### Candidate: `cross level coherence`
 
@@ -2922,25 +2954,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +1 (rename) — Auditor: "fine *and* under-evocative — doesn't immediately suggest the Brooks's-Law-shaped derivable consequences." Tentative; flagged for the brainstorm. No strong preference between alternatives. [from 07-post-composition-consistency.md] [one of 3 alternatives proposed in the original audit row]
 
-### Candidate: `holon postulate`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (rename) — Auditor: "fine *and* under-evocative — doesn't immediately suggest the Brooks's-Law-shaped derivable consequences." Tentative; flagged for the brainstorm. No strong preference between alternatives. [from 07-post-composition-consistency.md] [one of 3 alternatives proposed in the original audit row]
-
-### Candidate: `scale invariance`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-1** +1 (rename) — "Scale invariance" more directly describes the physical/mathematical property that the theory applies at every level.
-
 ---
 
-## 56. `compression operations`
+## 57. `compression operation`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -2954,7 +2970,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | history compression | +1 | rename × 2 |
 | OODA1 unification | -1 | rename × 1 |
 
-### Candidate: `compression operations` _(keep)_
+### Candidate: `compression operation` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -2987,7 +3003,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 57. `epistemic architecture`
+## 58. `epistemic architecture`
 
 **Voted by architectures:** Codex, Opus, agent1
 **Category disagreement on top finalist:** yes
@@ -3013,7 +3029,52 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 58. `specification bound`
+## 59. `logozoetic agent`
+
+**Voted by architectures:** Codex, Gemini, Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +13 | keep × 6 |
+| section iv logozoetic agent | +3 | canonicalize × 1 |
+| sentient agent | -1 | rename × 1 |
+
+### Candidate: `logozoetic agent` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-1** +1 (keep) — Heavier than "logogenic" but still earns the novelty. The existential distinction is real enough to warrant a distinct term.
+- **codex-2** +1 (keep) — Higher novelty cost than "logogenic," but the moral-weighting distinction is real and English alternatives are sloppier.
+- **codex-gpt-5-r2** +3 (keep) — Strong boundary term for living-word or morally continuous agent work. Keep.
+- **gemini-targeted-alternatives** +3 (keep) — Standardizes the architectural distinction.
+- **opus-4-7-b** +3 (keep) — Keep.
+- **opus-targeted-alternatives** +2 (keep) — Section IV name; consistent with logogenic agents (Section III). Pluralization correct (the class, not a single agent). Keep — but the row is also a top-level-section-name, not a concept-rename candidate, so the alternative space is constrained.
+
+### Candidate: `section iv logozoetic agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes section hierarchy.
+
+### Candidate: `sentient agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-1** -1 (rename) — Logozoetic avoids the immense baggage and ambiguity of "sentient". Keep Logozoetic.
+
+---
+
+## 60. `specification bound`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3040,7 +3101,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 59. `adaptive cycle`
+## 61. `adaptive cycle`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -3051,8 +3112,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +12 | keep × 4 |
-| feedback cycle | -1 | rename × 1 |
 | correction cycle | -1 | rename × 1 |
+| feedback cycle | -1 | rename × 1 |
 
 ### Candidate: `adaptive cycle` _(keep)_
 
@@ -3065,14 +3126,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-targeted-alternatives** +3 (keep) — Already well-established across the framework as the fundamental unit of analysis.
 - **opus-targeted-alternatives** +3 (keep) — `LEXICON.md`: "Cycle: One complete traversal of the loop — the unit of adaptive work." The phrase carries (a) the recurrence (cycle), (b) the adaptive content (mismatch-driven update), and (c) the unit-of-analysis sense (one cycle = one unit of theoretical work). The framework's own name — *Adaptation and* Actuation Dynamics — is downstream of this concept. Keep across architectures.
 
-### Candidate: `feedback cycle`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** -1 (rename) — Considered. Collides with the "feedback loop" structural topology and would create a loop/cycle terminology collision the project has been careful about. Rejected.
-
 ### Candidate: `correction cycle`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -3081,9 +3134,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives** -1 (rename) — Considered. "Correction" overspecifies — Section I cycles include observation and prolepsis phases that are not corrections. Adaptation is the broader frame. Rejected.
 
+### Candidate: `feedback cycle`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** -1 (rename) — Considered. Collides with the "feedback loop" structural topology and would create a loop/cycle terminology collision the project has been careful about. Rejected.
+
 ---
 
-## 60. `adaptive tempo $\mathcal T$`
+## 62. `adaptive tempo $\mathcal T$`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -3108,7 +3169,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 61. `chronica $\mathcal{C}_t$`
+## 63. `chronica $\mathcal{C}_t$`
 
 **Voted by architectures:** Gemini, Opus, agent1
 **Category disagreement on top finalist:** no
@@ -3133,7 +3194,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 62. `conceptual alignment`
+## 64. `conceptual alignment`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3160,7 +3221,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 63. `epistemic status`
+## 65. `epistemic status`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -3185,7 +3246,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 64. `m preservation`
+## 66. `m preservation`
 
 **Voted by architectures:** Codex, Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -3229,41 +3290,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 65. `pearl causal hierarchy`
-
-**Voted by architectures:** Gemini, Haiku, Opus, Sonnet
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +12 | keep × 4 |
-| causal hierarchy | +1 | rename × 1 |
-
-### Candidate: `pearl causal hierarchy` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +3 (keep) — Established literature term; do not change.
-- **haiku-4-5** +3 (keep) — Pearl's three levels of causal reasoning. Names the origin; accurate. Keep.
-- **opus-4-7-r2** +3 (keep) — Defended keep. Direct adoption from Pearl with proper attribution; renaming would lose provenance and create a NIH-syndrome alternative.
-- **sonnet-4-6-r2** +3 (keep) — External vocabulary adopted with proper citation. "Pearl's causal hierarchy" is the field-standard name; adopting it directly is correct under the project's prior-art-integration principle.
-
-### Candidate: `causal hierarchy`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-2** +1 (rename) — Dropping "Pearl" removes the specific historical baggage while keeping the structural concept.
-
----
-
-## 66. `persistence cost`
+## 67. `persistence cost`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3289,7 +3316,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 67. `strategic calibration`
+## 68. `strategic calibration`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3335,7 +3362,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 68. `strategic composition`
+## 69. `strategic composition`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -3391,7 +3418,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 69. `strategic tempo`
+## 70. `strategic tempo`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3418,7 +3445,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 70. `unity dimensions`
+## 71. `unity dimension`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3430,10 +3457,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +12 | keep × 6 |
 | unity axes | +4 | rename × 2 |
-| coherence dimensions | -1 | rename × 3 |
 | content and structural unity | -1 | rename × 1 |
+| coherence dimension | -1 | rename × 3 |
 
-### Candidate: `unity dimensions` _(keep)_
+### Candidate: `unity dimension` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -3455,7 +3482,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +2 (rename) — The segment now has *two architecturally distinct axes* — content (four content unities U_M / U_O / U_Σ / U_obs) and structural (U_f). Calling the whole thing "unity dimensions" reads as if everything is on one axis. "Unity axes" makes the two-axis architecture audible at the slug level. Subject-noun layer; scope-honesty consideration.
 - **sonnet-4-6-r2** +2 (rename) — Opus proposed this (+2, noting that the segment has *two architecturally distinct axes* — content unities and structural unity). I had voted keep (+2). The two-axis architecture argument is substantive: if the segment now presents U_f as a structurally-distinct axis from U_M/U_O/U_Σ/U_obs, then "axes" is more scope-honest than "dimensions." New vote with Opus's reasoning applied.
 
-### Candidate: `coherence dimensions`
+### Candidate: `content and structural unity`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** -1 (rename) — Considered and rejected — too verbose, and "unity-axes" carries the same content more compactly.
+
+### Candidate: `coherence dimension`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -3465,17 +3500,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-b** -1 (rename) — Considered renaming the *concept* from "unity" to "coherence." Reject: *coherence* is already used informally elsewhere (strategic coherence, epistemic coherence) and a rename would bleed. *Unity* is narrower and actually works once each dimension is named per above.
 - **opus-4-7-b** -1 (rename) — Considered. Reject for the same reason as the symbol-level `U_M`/`U_O`/`U_\Sigma` consideration above — coherence is already doing soft duty elsewhere. Keep `#unity-dimensions`.
 
-### Candidate: `content and structural unity`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** -1 (rename) — Considered and rejected — too verbose, and "unity-axes" carries the same content more compactly.
-
 ---
 
-## 71. `update gain $\eta^\ast$`
+## 72. `update gain $\eta^\ast$`
 
 **Voted by architectures:** Gemini, Opus, agent1
 **Category disagreement on top finalist:** no
@@ -3509,7 +3536,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 72. `working notes`
+## 73. `working note`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -3521,7 +3548,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +12 | keep × 4 |
 
-### Candidate: `working notes` _(keep)_
+### Candidate: `working note` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -3534,7 +3561,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 73. `actuated agent vs purposeful agent`
+## 74. `actuated agent vs purposeful agent`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -3559,7 +3586,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 74. `adaptive reserve`
+## 75. `adaptive reserve`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** yes
@@ -3584,7 +3611,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 75. `agent environment`
+## 76. `agent environment`
 
 **Voted by architectures:** Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -3619,7 +3646,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 76. `agent opacity $H_b^{A\mid B}$`
+## 77. `agent opacity $H_b^{A\mid B}$`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -3630,9 +3657,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | agent opacity | +11 | keep × 3, canonicalize × 1 |
-| legibility inverted | -1 | rename × 1 |
-| legibility inverse | -1 | rename × 1 |
 | backward predictive uncertainty | -1 | rename × 1 |
+| legibility inverse | -1 | rename × 1 |
+| legibility inverted | -1 | rename × 1 |
 
 ### Candidate: `agent opacity`
 
@@ -3645,13 +3672,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-targeted-alternatives-v2** +2 (keep) — Per `der-agent-opacity.md`: dual of observation quality $U_o$ — "where $U_o$ characterizes how well the agent sees the world, $H_b$ characterizes how well the world sees the agent." Confirms `agent-opacity` keep. The dual framing is load-bearing in Section III.
 - **opus-targeted-alternatives** +3 (canonicalize) — Per `#der-agent-opacity`: $H_b$ is the dual of observation quality $U_o$ — "where $U_o$ characterizes how well the agent sees the world, $H_b$ characterizes how well the world sees the agent." "Agent opacity" pairs cleanly with observability (its dual concept). Confirms keep.
 
-### Candidate: `legibility inverted`
+### Candidate: `backward predictive uncertainty`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-targeted-alternatives** -1 (rename) — Considered. More plain-English but loses the formal-quantity grounding ($H_b$). Rejected.
+- **opus-targeted-alternatives-v2** -1 (rename) — Considered. The actual definition: $H_b^{A \mid B}(t, \tau) := H(a_{A, t+\tau} \mid \mathcal F_B^t)$ — entropy of $A$'s future action given $B$'s filtration. "Backward predictive uncertainty" is the literal description. Rejected: "agent opacity" is the prose handle the segment uses; "backward predictive uncertainty" reads clinical.
 
 ### Candidate: `legibility inverse`
 
@@ -3661,17 +3688,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** -1 (rename) — Considered (variant of "legibility-inverted"). "Legibility" is Codex's framing for the dual; "inverse" makes the duality explicit. Rejected (same as r1): loses the formal-quantity grounding ($H_b$). The segment names $H_b$ as a *first-class* multi-agent quantity (Hafez et al. 2026 adoption); the slug should name the quantity, not the dual relation.
 
-### Candidate: `backward predictive uncertainty`
+### Candidate: `legibility inverted`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-targeted-alternatives-v2** -1 (rename) — Considered. The actual definition: $H_b^{A \mid B}(t, \tau) := H(a_{A, t+\tau} \mid \mathcal F_B^t)$ — entropy of $A$'s future action given $B$'s filtration. "Backward predictive uncertainty" is the literal description. Rejected: "agent opacity" is the prose handle the segment uses; "backward predictive uncertainty" reads clinical.
+- **opus-targeted-alternatives** -1 (rename) — Considered. More plain-English but loses the formal-quantity grounding ($H_b$). Rejected.
 
 ---
 
-## 77. `changeset size principle`
+## 78. `changeset size principle`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3706,7 +3733,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 78. `independence audit`
+## 79. `independence audit`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3742,7 +3769,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 79. `mismatch signal`
+## 80. `mismatch signal`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3780,7 +3807,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 80. `model sufficiency`
+## 81. `model sufficiency`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -3824,7 +3851,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 81. `moral continuity`
+## 82. `moral continuity`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3850,7 +3877,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 82. `sector condition`
+## 83. `sector condition`
 
 **Voted by architectures:** Gemini, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
@@ -3861,8 +3888,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +11 | keep × 3, canonicalize × 1 |
-| correction sector | +1 | rename × 1 |
 | persistence condition | +1 | rename × 1 |
+| correction sector | +1 | rename × 1 |
 
 ### Candidate: `sector condition` _(keep)_
 
@@ -3875,14 +3902,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-b** +3 (keep) — Adopted from Khalil / Vidyasagar nonlinear control; baggage is correct. Non-negotiable per prior-art-integration convention.
 - **sonnet-4-6-r2** +2 (canonicalize) — Sometimes appears as "sector constraint" or "sector bound" or "sector-condition assumption." Standardize on "sector condition" (the nonlinear correction guarantee).
 
-### Candidate: `correction sector`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-2** +1 (rename) — Preserves the geometric intuition if "sector" must be kept.
-
 ### Candidate: `persistence condition`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -3891,9 +3910,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-2** +1 (rename) — "Sector condition" carries heavy nonlinear-systems baggage. "Persistence condition" describes its function in AAD.
 
+### Candidate: `correction sector`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-2** +1 (rename) — Preserves the geometric intuition if "sector" must be kept.
+
 ---
 
-## 83. `$\varepsilon^\ast$ closure defect`
+## 84. `$\varepsilon^\ast$ closure defect`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -3918,7 +3945,64 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 84. `closure defect $\varepsilon^\ast$`
+## 85. `causal insufficiency detection`
+
+**Voted by architectures:** Gemini, Haiku, Opus, Sonnet
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +10 | keep × 5, rebuttal × 1 |
+| l0 l1 detection | +5 | rename × 3 |
+| latent cause detection | +2 | rename × 2 |
+| insufficiency detection | +1 | rename × 1 |
+
+### Candidate: `causal insufficiency detection` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **haiku-4-5** +1 (keep) — Detecting latent common causes from structured residuals + interventional localization. Compound but precise. Acceptable. Keep.
+- **opus-4-7-b** +1 (keep) — Alternative vote: keep. "Causal insufficiency" is Pearl's own term; the prior-art-integration convention argues to keep it. This argument slightly outweighs the legibility gain of `#latent-cause-detection` for me — so on balance I'd actually keep the current form. Net: weak keep.
+- **opus-4-7-r2** +2 (keep) — If the rename above doesn't land, this is a defensible keep — "causal insufficiency" is precise terminology from the causal-inference literature (Spirtes-Glymour-Scheines) and the segment uses it correctly.
+- **opus-4-7** +3 (keep) — Names exactly what the result is about; the CHT-driven no-go gives the segment its shape. Keep.
+- **sonnet-4-6-r2** +2 (keep) — Precise — detecting causal insufficiency (latent common causes) in the strategy DAG.
+- **sonnet-4-6-r2** +1 (rebuttal) — [prose moved from candidate column]: "(keep, not `#der-l0-l1-detection`)" — Against Opus's proposed rename to `#der-l0-l1-detection` (+1) and Gemini's concurrence. "L0-L1 detection" names the *evidence-level boundary* being crossed, but the segment is about detecting *causal* insufficiency — the presence of latent common causes that make the model causally insufficient. The L0/L1 framing is the detection *method*, not the thing being detected. "Causal insufficiency" is from Spirtes-Glymour-Scheines, exactly as Opus notes — that prior-art adoption is the argument *for* keeping it, not against.
+
+### Candidate: `l0 l1 detection`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +2 (rename) — Concurring with Opus: names the boundary rather than the target, tying it directly to the Correlation Hierarchy.
+- **opus-4-7-r2** +1 (rename) — Mild preference. The segment's substance is the no-go-and-escape-route structure for distinguishing L0 (independence) from L1 (causally-augmented) DAGs from data. "Causal insufficiency detection" names the *target* (detect when the L0 model is causally insufficient); "L0-L1 detection" names the *boundary* — which is the project's own framing in the Correlation Hierarchy. Either is defensible; this rename would tighten coupling to the L0/L1/L2 convention.
+- **opus-4-7-r2** +2 (rename) — Confirmation with stronger reasoning — Gemini agreed with my proposed rename in synthesized-additions. The cross-architecture pattern (mine + Gemini's concurrence + the fact that the slug names the boundary not the target) makes this a stronger move than my original +1. Lifting to +2.
+
+### Candidate: `latent cause detection`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-2** +1 (rename) — "Causal insufficiency" is accurate but "Latent cause detection" states what is actually being found.
+- **opus-4-7-b** +1 (rename) — Current slug names the *problem* being detected ("causal insufficiency"); "latent-cause-detection" names what a reader mentally pictures (finding hidden common causes). Marginal preference. Weak.
+
+### Candidate: `insufficiency detection`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +1 (rename) — "Causal" is implied in context.
+
+---
+
+## 86. `closure defect $\varepsilon^\ast$`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -3943,7 +4027,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 85. `code quality as observation infrastructure`
+## 87. `code quality as observation infrastructure`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -3980,7 +4064,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 86. `comprehension time`
+## 88. `comprehension time`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4005,7 +4089,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 87. `mismatch decomposition`
+## 89. `mismatch decomposition`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4041,7 +4125,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 88. `model class fitness`
+## 90. `model class fitness`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Sonnet, audit
 **Category disagreement on top finalist:** yes
@@ -4076,7 +4160,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 89. `objective functional`
+## 91. `objective functional`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4112,7 +4196,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 90. `software epistemic properties`
+## 92. `software epistemic property`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4125,7 +4209,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | _(keep)_ | +10 | keep × 4 |
 | software as calibration laboratory | +1 | rename × 1 |
 
-### Candidate: `software epistemic properties` _(keep)_
+### Candidate: `software epistemic property` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -4146,7 +4230,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 91. `strengthen first posture`
+## 93. `strengthen first posture`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -4192,7 +4276,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 92. `$\Delta\rho^\ast$`
+## 94. `$\Delta\rho^\ast$`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
@@ -4216,7 +4300,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 93. `$\Delta\rho^\ast$ adaptive reserve`
+## 95. `$\Delta\rho^\ast$ adaptive reserve`
 
 **Voted by architectures:** Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4240,7 +4324,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 94. `$\alpha_2$ a2 adaptive gain sub scope`
+## 96. `$\alpha_2$ a2 adaptive gain sub scope`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -4268,7 +4352,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 95. `OODA4 agent as act agent`
+## 97. `OODA4 agent as act agent`
 
 **Voted by architectures:** Codex, Opus, agent1
 **Category disagreement on top finalist:** no
@@ -4311,7 +4395,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 96. `agency`
+## 98. `agency`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4336,7 +4420,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 97. `agent model`
+## 99. `agent model`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4372,7 +4456,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 98. `calibration laboratory`
+## 100. `calibration laboratory`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -4396,7 +4480,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 99. `causal hierarchy requirement`
+## 101. `causal hierarchy requirement`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4432,72 +4516,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 100. `causal insufficiency detection`
-
-**Voted by architectures:** Gemini, Haiku, Opus, Sonnet
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +9 | keep × 5 |
-| l0 l1 detection | +5 | rename × 3 |
-| latent cause detection | +2 | rename × 2 |
-| keep not der l0 l1 detection | +1 | rebuttal × 1 |
-| insufficiency detection | +1 | rename × 1 |
-
-### Candidate: `causal insufficiency detection` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **haiku-4-5** +1 (keep) — Detecting latent common causes from structured residuals + interventional localization. Compound but precise. Acceptable. Keep.
-- **opus-4-7-b** +1 (keep) — Alternative vote: keep. "Causal insufficiency" is Pearl's own term; the prior-art-integration convention argues to keep it. This argument slightly outweighs the legibility gain of `#latent-cause-detection` for me — so on balance I'd actually keep the current form. Net: weak keep.
-- **opus-4-7-r2** +2 (keep) — If the rename above doesn't land, this is a defensible keep — "causal insufficiency" is precise terminology from the causal-inference literature (Spirtes-Glymour-Scheines) and the segment uses it correctly.
-- **opus-4-7** +3 (keep) — Names exactly what the result is about; the CHT-driven no-go gives the segment its shape. Keep.
-- **sonnet-4-6-r2** +2 (keep) — Precise — detecting causal insufficiency (latent common causes) in the strategy DAG.
-
-### Candidate: `l0 l1 detection`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +2 (rename) — Concurring with Opus: names the boundary rather than the target, tying it directly to the Correlation Hierarchy.
-- **opus-4-7-r2** +1 (rename) — Mild preference. The segment's substance is the no-go-and-escape-route structure for distinguishing L0 (independence) from L1 (causally-augmented) DAGs from data. "Causal insufficiency detection" names the *target* (detect when the L0 model is causally insufficient); "L0-L1 detection" names the *boundary* — which is the project's own framing in the Correlation Hierarchy. Either is defensible; this rename would tighten coupling to the L0/L1/L2 convention.
-- **opus-4-7-r2** +2 (rename) — Confirmation with stronger reasoning — Gemini agreed with my proposed rename in synthesized-additions. The cross-architecture pattern (mine + Gemini's concurrence + the fact that the slug names the boundary not the target) makes this a stronger move than my original +1. Lifting to +2.
-
-### Candidate: `latent cause detection`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-2** +1 (rename) — "Causal insufficiency" is accurate but "Latent cause detection" states what is actually being found.
-- **opus-4-7-b** +1 (rename) — Current slug names the *problem* being detected ("causal insufficiency"); "latent-cause-detection" names what a reader mentally pictures (finding hidden common causes). Marginal preference. Weak.
-
-### Candidate: `keep not der l0 l1 detection`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **sonnet-4-6-r2** +1 (rebuttal) — Against Opus's proposed rename to `#der-l0-l1-detection` (+1) and Gemini's concurrence. "L0-L1 detection" names the *evidence-level boundary* being crossed, but the segment is about detecting *causal* insufficiency — the presence of latent common causes that make the model causally insufficient. The L0/L1 framing is the detection *method*, not the thing being detected. "Causal insufficiency" is from Spirtes-Glymour-Scheines, exactly as Opus notes — that prior-art adoption is the argument *for* keeping it, not against.
-
-### Candidate: `insufficiency detection`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +1 (rename) — "Causal" is implied in context.
-
----
-
-## 101. `chronica $\mathcal C_t$`
+## 102. `chronica $\mathcal C_t$`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -4521,7 +4540,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 102. [Concept] *Dormant variation in correction architectures across a population that becomes consequential after regime change but is invisible to current persistence analysis*
+## 103. [Concept] *Dormant variation in correction architecture across a population that become consequential after regime change but is invisible to current persistence analysis*
 
 *Post-consolidation concept cluster.*
 
@@ -4534,8 +4553,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | latent structural diversity | +9 | name-unnamed × 4 |
-| latent adaptive capacity | +6 | canonicalize × 2 |
 | latent structural capacity | +6 | canonicalize × 2 |
+| latent adaptive capacity | +6 | canonicalize × 2 |
 | exaptive reserve | +2 | rename × 1 |
 
 ### Candidate: `latent structural diversity`
@@ -4549,15 +4568,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-2** +1 (name-unnamed) — Proposed in the gap section of OUTLINE.md. Captures the concept perfectly. [original phrasing: unnamed: variation in correction architectures invisible to persistence analysis]
 - **gemini-3-1-pro-preview-r2** +2 (name-unnamed) — Recasts some forms of technical debt as evolutionary potential. [original phrasing: unnamed: dormant, unused architectural complexity that survives until an environmental shift]
 
-### Candidate: `latent adaptive capacity`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Describes capacity that isn't currently used but is preserved. [original phrasing: dormant structural variation that becomes useful after regime change]
-- **gemini-targeted-alternatives** +3 (canonicalize) — Aligns with the earlier rename for structural variation. [original phrasing: unnamed dormant unused architectural complexity that survives until an environmental shift]
-
 ### Candidate: `latent structural capacity`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -4566,6 +4576,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Maintains the formal name for un-executed resilience. [original phrasing: unnamed variation in correction architectures across a population that is invisible to current persistence analysis]
 - **gemini-targeted-alternatives** +3 (canonicalize) — Matches the prior un-executed resilience alias. [original phrasing: unnamed variation in correction architectures invisible to persistence analysis]
+
+### Candidate: `latent adaptive capacity`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Describes capacity that isn't currently used but is preserved. [original phrasing: dormant structural variation that becomes useful after regime change]
+- **gemini-targeted-alternatives** +3 (canonicalize) — Aligns with the earlier rename for structural variation. [original phrasing: unnamed dormant unused architectural complexity that survives until an environmental shift]
 
 ### Candidate: `exaptive reserve`
 
@@ -4577,7 +4596,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 103. [Concept] *The engineering vocabulary failure mode in consolidation dynamics the parameter region where forgetting and learning rates jointly fail to admit a viable operating point*
+## 104. [Concept] *The engineering vocabulary failure mode in consolidation dynamics the parameter region where forgetting and learning rate jointly fail to admit a viable operating point*
 
 *Post-consolidation concept cluster.*
 
@@ -4651,7 +4670,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 104. [Concept] *The fourth diagnostic in the satisfaction gap × control regret space when end conditions are met but the objective remains unsatisfied*
+## 105. [Concept] *The fourth diagnostic in the satisfaction gap × control regret space when end condition are met but the objective remain unsatisfied*
 
 *Post-consolidation concept cluster.*
 
@@ -4705,7 +4724,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 105. [Concept] *The framing of software TST as AAD s epistemically privileged high identifiability measurement substrate*
+## 106. [Concept] *The framing of software TST as AAD epistemically privileged high identifiability measurement substrate*
 
 *Post-consolidation concept cluster.*
 
@@ -4723,8 +4742,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | software as calibration laboratory | +2 | name-unnamed × 1 |
 | high identifiability testbed | +2 | rename × 1 |
 | calibration laboratory move | +2 | canonicalize × 1 |
-| calibration domain calibration lab | +1 | name-unnamed × 1 |
 | calibration domain | +1 | name-unnamed × 1 |
+| calibration domain calibration lab | +1 | name-unnamed × 1 |
 
 ### Candidate: `calibration laboratory`
 
@@ -4776,14 +4795,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +2 (canonicalize) — Confirmation with new reasoning — my own r2 named "software-as-calibration-laboratory" as a name-unnamed; reading peers, Codex (+3) and Sonnet (+3) and Gemini (+3) all separately reached "calibration laboratory" as a canonicalize vote. Three agents converging on the canonical phrase suggests the term is ripe; what's *unnamed* is the methodological *move* of using software as the calibration laboratory rather than just an instance. Calling it "the calibration-laboratory move" lets it function as a named strategic principle the project can invoke. [original phrasing: unnamed: the move where AAD treats software not as instantiation but as TST's epistemically privileged measurement substrate]
 
-### Candidate: `calibration domain calibration lab`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** +1 (name-unnamed) — Low priority. Concept of a privileged domain for identification within a theoretical framework is itself a reusable meta-move other projects could borrow. [original phrasing: unnamed: calibration-laboratory framing as reusable meta-move]
-
 ### Candidate: `calibration domain`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -4792,9 +4803,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +1 (name-unnamed) — CLAUDE.md §7 names TST as "AAD's calibration laboratory — the high-identifiability domain where AAD-native quantities can be measured exactly." The *concept* (a privileged domain for identification of a theoretical framework's quantities) is itself a reusable meta-move for any domain instantiation. "Calibration domain" names it. Low priority but opens a useful slot. [original phrasing: unnamed: the calibration-laboratory concept applied outside TST]
 
+### Candidate: `calibration domain calibration lab`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** +1 (name-unnamed) — Low priority. Concept of a privileged domain for identification within a theoretical framework is itself a reusable meta-move other projects could borrow. [original phrasing: unnamed: calibration-laboratory framing as reusable meta-move]
+
 ---
 
-## 106. `convention hierarchy c1 c2 c3`
+## 107. `convention hierarchy c1 c2 c3`
 
 **Voted by architectures:** Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
@@ -4828,7 +4847,40 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 107. `developer as act agent`
+## 108. `cycle vs loop`
+
+**Voted by architectures:** Gemini, Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +9 | keep × 3 |
+| cycle loop distinction | +2 | canonicalize × 1 |
+
+### Candidate: `cycle vs loop` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (keep) — [prose moved from candidate column]: "`maintain distinction`" — The distinction (loop = structural topology, cycle = one traversal) is a core piece of vocabulary.
+- **opus-4-7-b** +3 (keep) — [prose moved from candidate column]: "*(keep both; maintain distinction)*" — README §"Loop vs. Cycle" makes this distinction load-bearing (loop = structural topology, cycle = one traversal). The distinction is one of AAD's best small naming moves and should be enforced in every segment.
+- **opus-4-7** +3 (keep) — See above — the two-word disambiguation is one of the theory's most useful vocabulary moves. Keep.
+
+### Candidate: `cycle loop distinction`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** +2 (canonicalize) — The row names the *distinction* not a candidate. The substantive position is that loop = topology, cycle = traversal — a distinction worth preserving. Canonicalize the row's referent to "the cycle / loop distinction" as a named architectural commitment.
+
+---
+
+## 109. `developer as act agent`
 
 **Voted by architectures:** Codex, Opus, agent1
 **Category disagreement on top finalist:** no
@@ -4882,7 +4934,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 108. `effects spiral`
+## 110. `effect spiral`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -4896,10 +4948,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | runaway mismatch cascade | +3 | add-alias × 1 |
 | adversarial feedback loop | +2 | rename × 1 |
 | destabilization vortex | +1 | rename × 1 |
-| breakdown cascade | -1 | rename × 1 |
 | coupling cascade | -1 | rename × 1 |
+| breakdown cascade | -1 | rename × 1 |
 
-### Candidate: `effects spiral` _(keep)_
+### Candidate: `effect spiral` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -4933,14 +4985,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +1 (rename) — A bit more descriptive than spiral but slightly less formal.
 
-### Candidate: `breakdown cascade`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** -1 (rename) — Same critique. Rejected.
-
 ### Candidate: `coupling cascade`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -4949,9 +4993,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives** -1 (rename) — Considered as more formal alternative. Loses the *runaway* sense that "spiral" carries — cascades can be bounded; spirals usually aren't. Rejected.
 
+### Candidate: `breakdown cascade`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** -1 (rename) — Same critique. Rejected.
+
 ---
 
-## 109. `event driven dynamics`
+## 111. `event driven dynamics`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -4978,7 +5030,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 110. `evidence starvation`
+## 112. `evidence starvation`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -4989,8 +5041,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +9 | add-alias × 1, canonicalize × 2 |
-| downstream evidence gating | +2 | rename × 1 |
 | depth attenuated correction | +2 | add-alias × 1 |
+| downstream evidence gating | +2 | rename × 1 |
 
 ### Candidate: `evidence starvation` _(keep)_
 
@@ -5002,14 +5054,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +3 (canonicalize) — Confirmation with new reasoning — both Sonnet (+3 add-alias) and Codex (+3 add-alias) and Gemini (+3 in synthesized) reached this term independently. The cross-architecture convergence is striking and suggests the term is doing real work. My own r2 votes didn't explicitly canonicalize this; I should. The phrase appears in `der-chain-confidence-decay` Discussion and `der-observability-dominance` and is the natural prose handle for the downstream-edge-update-attenuation phenomenon. Three-architecture convergence on the *exact phrase* (not synonyms) crystallizes the case.
 - **opus-targeted-alternatives-v2** +3 (canonicalize) — Per `der-chain-confidence-decay`: "downstream edge $k$ in a chain is tested only when all upstream edges succeed, so its effective correction rate is attenuated by $\prod_{j\lt k}\theta_j$." Used in 4+ segments (`#deriv-strategic-dynamics` B.2, `#der-chain-confidence-decay` triple-depth-penalty, `#def-strategic-tempo` AND-chain interactions, `#deriv-strategic-dynamics` Discussion). Triple-architecture convergence in r1 (Codex +3, Gemini +3, Sonnet +3) — confirms with my independent read. Canonicalize as the project-default term.
 
-### Candidate: `downstream evidence gating`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Captures the AND-chain gating effect.
-
 ### Candidate: `depth attenuated correction`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -5018,9 +5062,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (add-alias) — Describes the mathematical mechanism (effective observation rate dropping geometrically).
 
+### Candidate: `downstream evidence gating`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Captures the AND-chain gating effect.
+
 ---
 
-## 111. `formal expression`
+## 113. `formal expression`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -5044,7 +5096,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 112. `graph structure uniqueness`
+## 114. `graph structure uniqueness`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** yes
@@ -5116,7 +5168,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 113. `interaction channel classification`
+## 115. `interaction channel classification`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5126,15 +5178,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| signal reception regimes | +9 | rename × 3 |
+| signal reception regime | +9 | rename × 3 |
 | _(keep)_ | +5 | keep × 4 |
-| recipient regimes | +4 | rename × 2 |
+| recipient regime | +4 | rename × 2 |
 | recipient regime classification | +3 | rename × 3 |
 | channel classification | +3 | rename × 2 |
-| interaction regimes | +1 | rename × 1 |
+| interaction regime | +1 | rename × 1 |
 | recipient side channel taxonomy | -1 | rename × 1 |
 
-### Candidate: `signal reception regimes`
+### Candidate: `signal reception regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -5155,7 +5207,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-b** +1 (keep) — Alternative: keep. "Interaction channel" keeps the symmetry with `#agent-opacity`'s emitter-side four-regime classification; the recipient-side structure is one half of a pair. On balance this consideration outweighs the legibility gain. Net: weak keep.
 - **sonnet-4-6** +1 (keep) — Accurate but long. In conversation this will be called "the four-regime classification" or "the recipient-side classification."
 
-### Candidate: `recipient regimes`
+### Candidate: `recipient regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -5183,7 +5235,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-3-1-pro-preview-r2** +1 (rename) — "Interaction" is implied.
 - **sonnet-4-6-r2** +2 (rename) — "Interaction-channel-classification" is four words. The key concept is the four-regime classification of recipient-side channels. "Channel classification" is shorter and still distinctive within AAD.
 
-### Candidate: `interaction regimes`
+### Candidate: `interaction regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -5201,7 +5253,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 114. `mismatch signal $\delta$`
+## 116. `mismatch signal $\delta$`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -5225,7 +5277,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 115. `persist condition`
+## 117. `persist condition`
 
 **Voted by architectures:** Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -5249,7 +5301,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 116. `strategy DAG $\Sigma_t$`
+## 118. `strategy DAG $\Sigma_t$`
 
 **Voted by architectures:** Opus, agent1
 **Category disagreement on top finalist:** no
@@ -5273,7 +5325,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 117. `$\alpha_1$ a2 fixed gain sub scope`
+## 119. `$\alpha_1$ a2 fixed gain sub scope`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -5310,7 +5362,32 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 118. `calibration laboratory calibration lab`
+## 120. `adaptive system`
+
+**Voted by architectures:** Haiku, Opus, Sonnet, audit
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +8 | keep × 4 |
+
+### Candidate: `adaptive system` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (keep) — [prose moved from candidate column]: "(keep, but flag prior-art baggage)" — "Adaptive system" carries Ashby/cybernetic prior-art weight (good regulators, internal-model principle). AAD's use is information-theoretic, not regulator-theoretic. Auditor floated "uncertainty-bounded system" / "informationally-open system" as alternatives but did NOT advocate rename — well-anchored term. [from 05-scope-adaptive-system.md]
+- **haiku-4-5-r2** +1 (keep) — Precise scope statement; the name surfaces exactly what is in scope.
+- **opus-4-7-r2** +3 (keep) — Defended keep — and the canonical illustration of the subject-noun-first principle from the pilot. The slug names what the scope delimits (adaptive systems), not the segment's role (it states *some scope*). Pairs with `#scope-agency` cleanly.
+- **sonnet-4-6-r2** +3 (keep) — Descriptive of the actual broadest scope boundary. Clear, memorable, accurate.
+
+---
+
+## 121. `calibration laboratory calibration lab`
 
 **Voted by architectures:** Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5334,7 +5411,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 119. `change distance`
+## 122. `change distance`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5368,7 +5445,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 120. `composite agent`
+## 123. `composite agent`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5393,7 +5470,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 121. `coupled update dynamics`
+## 124. `coupled update dynamics`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5419,7 +5496,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 122. `mismatch dynamics`
+## 125. `mismatch dynamics`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -5430,7 +5507,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +8 | keep × 5 |
-| mismatch dynamics drift and noise regimes | +1 | rename × 1 |
+| mismatch dynamics drift and noise regime | +1 | rename × 1 |
 
 ### Candidate: `mismatch dynamics` _(keep)_
 
@@ -5444,7 +5521,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +2 (keep) — Acceptable keep. The hypothesis is the linear-ODE model for mismatch evolution; "mismatch dynamics" is the right scope. The hypothesis-vs-result distinction is captured by the type prefix.
 - **sonnet-4-6-r2** +2 (keep) — "Mismatch dynamics" names the ODE governing mismatch evolution. Accurate and minimal.
 
-### Candidate: `mismatch dynamics drift and noise regimes`
+### Candidate: `mismatch dynamics drift and noise regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -5454,7 +5531,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 123. `sector condition stability`
+## 126. `sector condition stability`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5489,7 +5566,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 124. `stability plasticity window`
+## 127. `stability plasticity window`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -5522,7 +5599,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 125. `structural adaptation necessity`
+## 128. `structural adaptation necessity`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5557,7 +5634,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 126. `task terminal stance`
+## 129. `task terminal stance`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -5599,7 +5676,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 127. `triple depth penalty`
+## 130. `triple depth penalty`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -5659,7 +5736,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 128. `update gain`
+## 131. `update gain`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
@@ -5702,7 +5779,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 129. `$\kappa_{\text{processing}}$`
+## 132. `$\kappa_{\text{processing}}$`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5713,8 +5790,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | processing coupling | +7 | add-alias × 5 |
-| epistemic capacity | +1 | add-alias × 1 |
 | processing coupling coefficient | +1 | add-alias × 1 |
+| epistemic capacity | +1 | add-alias × 1 |
 
 ### Candidate: `processing coupling`
 
@@ -5728,14 +5805,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7** +1 (add-alias) — Symbol is fine but the name "$\kappa$-as-scalar" was explicitly retired as a category error — the live reading is "processing coupling as a diagnostic for Class 3 agents." Surface that English name consistently.
 - **sonnet-4-6-r2** +2 (add-alias) — The conditional mutual information measure of goal-to-epistemic coupling in Class 3 agents. "Processing coupling" is the English that appears in prose (e.g., "the degree of coupling in partially modular architectures"). Canonicalize as the prose alias.
 
-### Candidate: `epistemic capacity`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-2** +1 (add-alias) — Gives a physical intuition to processing bandwidth.
-
 ### Candidate: `processing coupling coefficient`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -5744,42 +5813,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6** +1 (add-alias) — The symbol appears in #directed-separation where the English name "processing coupling" is used. The coefficient subscript form "$\kappa_{\text{processing}}$" is unwieldy in prose. Adding "processing-coupling coefficient" to LEXICON.md's Terms to Be Added section would help.
 
----
-
-## 130. `adaptive system`
-
-**Voted by architectures:** Haiku, Opus, Sonnet, audit
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +7 | keep × 3 |
-| keep but flag prior art baggage | +1 | keep × 1 |
-
-### Candidate: `adaptive system` _(keep)_
+### Candidate: `epistemic capacity`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **haiku-4-5-r2** +1 (keep) — Precise scope statement; the name surfaces exactly what is in scope.
-- **opus-4-7-r2** +3 (keep) — Defended keep — and the canonical illustration of the subject-noun-first principle from the pilot. The slug names what the scope delimits (adaptive systems), not the segment's role (it states *some scope*). Pairs with `#scope-agency` cleanly.
-- **sonnet-4-6-r2** +3 (keep) — Descriptive of the actual broadest scope boundary. Clear, memorable, accurate.
-
-### Candidate: `keep but flag prior art baggage`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (keep) — "Adaptive system" carries Ashby/cybernetic prior-art weight (good regulators, internal-model principle). AAD's use is information-theoretic, not regulator-theoretic. Auditor floated "uncertainty-bounded system" / "informationally-open system" as alternatives but did NOT advocate rename — well-anchored term. [from 05-scope-adaptive-system.md]
+- **gemini-2** +1 (add-alias) — Gives a physical intuition to processing bandwidth.
 
 ---
 
-## 131. `bias bound derivation`
+## 133. `bias bound derivation`
 
 **Voted by architectures:** Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5812,7 +5856,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 132. `causal structure`
+## 134. `causal structure`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5837,7 +5881,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 133. `composition closure closure defect $\varepsilon^\ast$`
+## 135. `composition closure closure defect $\varepsilon^\ast$`
 
 **Voted by architectures:** Opus, agent1
 **Category disagreement on top finalist:** no
@@ -5861,7 +5905,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 134. `condition`
+## 136. `condition`
 
 **Voted by architectures:** Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -5885,7 +5929,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 135. `constitutive utterance`
+## 137. `constitutive utterance`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -5896,10 +5940,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +7 | keep × 3 |
-| ontological speech act | +2 | rename × 1 |
 | utterance as intervention | +2 | rename × 1 |
-| irrevocable utterance | -1 | rename × 1 |
+| ontological speech act | +2 | rename × 1 |
 | irrevocable emission | -1 | rename × 1 |
+| irrevocable utterance | -1 | rename × 1 |
 
 ### Candidate: `constitutive utterance` _(keep)_
 
@@ -5911,14 +5955,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-targeted-alternatives-v2** +2 (keep) — Per `04-logozoetic-agents/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair "constitutive" + "utterance" is project-distinctive and earns memorable-noun status.
 - **opus-targeted-alternatives** +2 (keep) — Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space. "Constitutive" carries the world-altering-by-saying sense (Austin's performatives in the philosophy-of-language tradition); "utterance" is precise about the act-type. The phrase is iconic in the framework's logozoetic vocabulary. Confirms across architectures.
 
-### Candidate: `ontological speech act`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — A clearer description of what makes it iconic in logozoetic vocabulary — the language literally alters being/structure.
-
 ### Candidate: `utterance as intervention`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -5927,13 +5963,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** +2 (rename) — Names the formal mechanism: token generation = $do(a)$-intervention per Pearl's causal hierarchy. "As-intervention" is clinical-formal; "constitutive" is philosophical-formal. Both are honest; pick by audience preference. The alternative makes the Pearl-causal-hierarchy connection visible in the slug.
 
-### Candidate: `irrevocable utterance`
+### Candidate: `ontological speech act`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-targeted-alternatives** -1 (rename) — Considered. Names the irreversibility correctly but loses the *constitutive* sense (the utterance *constitutes* something new in the agent's world, not merely fixes it). Rejected.
+- **gemini-targeted-alternatives** +2 (rename) — A clearer description of what makes it iconic in logozoetic vocabulary — the language literally alters being/structure.
 
 ### Candidate: `irrevocable emission`
 
@@ -5943,9 +5979,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** -1 (rename) — Considered. "Irrevocable" + "emission" names the irreversibility-of-token-generation insight. Rejected (same as r1 vote): loses the *constitutive* sense — the utterance constitutes new state in the agent's world, not merely fixes it. "Emission" is too physical/passive.
 
+### Candidate: `irrevocable utterance`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** -1 (rename) — Considered. Names the irreversibility correctly but loses the *constitutive* sense (the utterance *constitutes* something new in the agent's world, not merely fixes it). Rejected.
+
 ---
 
-## 136. `correlation hierarchy l0 l1 l1 l2`
+## 138. `correlation hierarchy l0 l1 l1 l2`
 
 **Voted by architectures:** Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** yes
@@ -5957,7 +6001,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | correlation hierarchy | +7 | rename × 2, canonicalize × 1 |
 | correlation ladder | +2 | rename × 2 |
-| keep | +2 | keep × 1 |
+| _(keep)_ | +2 | keep × 1 |
 
 ### Candidate: `correlation hierarchy`
 
@@ -5978,17 +6022,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **agent1-original-brainstorm** +1 (rename) — Parallelism with #separability-ladder proposal. Only worth doing if that rename lands.
 - **opus-4-7-b** +1 (rename) — Pairs with the `#separability-ladder` rename if both are adopted. "Ladder" is the geometry (rungs of increasing difficulty: independence → strict prerequisite → soft facilitator → full joint). The "L0/L1/L1'/L2" abbreviations continue to work. Reduces the "hierarchy" overload in the project (currently: Pearl's causal hierarchy, convention, correlation, approximation-tiering-sometimes-called-hierarchy — four distinct uses).
 
-### Candidate: `keep`
+### Candidate: `correlation hierarchy l0 l1 l1 l2` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **audit-471203-incremental** +2 (keep) — The four-level partition (independence / strict-prerequisites / soft-facilitators / full correlation) is "the kind of structural-completeness move I find satisfying." L1' refutation under unobservable common cause (Cramér-Rao floor) makes the partition load-bearing. Endorsed. [from 43-46-section-ii-and-or-strategy-dag-gaps.md]
+- **audit-471203-incremental** +2 (keep) — [prose moved from candidate column]: "(keep)" — The four-level partition (independence / strict-prerequisites / soft-facilitators / full correlation) is "the kind of structural-completeness move I find satisfying." L1' refutation under unobservable common cause (Cramér-Rao floor) makes the partition load-bearing. Endorsed. [from 43-46-section-ii-and-or-strategy-dag-gaps.md]
 
 ---
 
-## 137. `discussion`
+## 139. `discussion`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -6012,7 +6056,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 138. `edge update via gain`
+## 140. `edge update via gain`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6047,7 +6091,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 139. `interiority default`
+## 141. `interiority default`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6072,7 +6116,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 140. `praxis`
+## 142. `praxi`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -6083,9 +6127,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +7 | keep × 3 |
-| praxis informed action | +3 | add-alias × 1 |
+| praxi informed action | +3 | add-alias × 1 |
 
-### Candidate: `praxis` _(keep)_
+### Candidate: `praxi` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -6095,7 +6139,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **codex-gpt-5-r2** +2 (keep) — Familiar enough and exactly right for informed action. Keep.
 - **opus-targeted-alternatives** +2 (keep) — `LEXICON.md`: "Informed action: $a_t = \pi(M_t)$ (or $\pi(M_t, G_t)$ for actuated agents)." Praxis distinguishes itself from "action" by carrying the informed-by-the-cycle's-prior-stages sense — the action is the *outcome* of prolepsis-aisthesis-aporia-epistrophe, not a parallel branch. Keep.
 
-### Candidate: `praxis informed action`
+### Candidate: `praxi informed action`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -6105,7 +6149,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 141. `prolepsis`
+## 143. `prolepsis`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -6147,7 +6191,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 142. `proprium mapping`
+## 144. `proprium mapping`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6171,7 +6215,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 143. `structural adaptation`
+## 145. `structural adaptation`
 
 **Voted by architectures:** Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6204,7 +6248,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 144. `substrate independence`
+## 146. `substrate independence`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -6237,7 +6281,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 145. `temporal nesting`
+## 147. `temporal nesting`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6281,7 +6325,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 146. `value object`
+## 148. `value object`
 
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6293,8 +6337,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +7 | keep × 4 |
 | policy conditioned value | +3 | rename × 1 |
-| decision value | +1 | rename × 1 |
 | trajectory value | +1 | rename × 2 |
+| decision value | +1 | rename × 1 |
 | value functional | -1 | rename × 1 |
 
 ### Candidate: `value object` _(keep)_
@@ -6316,14 +6360,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-1** +3 (rename) — "Value object" is overloaded from software design and hides the continuation-convention dependence. The proposed name says what the quantity actually is.
 
-### Candidate: `decision value`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-2** +1 (rename) — "Value object" sounds implementation-ish; "decision value" says what the quantity is for in prose.
-
 ### Candidate: `trajectory value`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -6332,6 +6368,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (rename) — Value object has software baggage and sounds like an implementation pattern. The segment defines horizon and policy conditioned trajectory value.
 - **opus-4-7-r2** -1 (rename) — Rebuttal — Codex proposed this at +2 with the rationale that "value object" sounds like an implementation pattern. I see the engineering-baggage concern but think "trajectory value" is worse: it elides the convention-conditioning that is the segment's central content. The C1/C2/C3 hierarchy lives in this segment precisely *because* the value depends on the convention chosen for continuation, not just on the trajectory. "Trajectory value" suggests something that can be computed from a trajectory alone, which is exactly what the segment shows is impossible without specifying convention. My keep+1 plus the more-careful "continuation-conditioned value" alternative I considered are stronger.
+
+### Candidate: `decision value`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-2** +1 (rename) — "Value object" sounds implementation-ish; "decision value" says what the quantity is for in prose.
 
 ### Candidate: `value functional`
 
@@ -6343,7 +6387,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 147. `variational sector condition`
+## 149. `variational sector condition`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6368,7 +6412,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 148. `$U_M$ as epistemic unity`
+## 150. `$U_M$ as epistemic unity`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** yes
@@ -6400,7 +6444,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 149. `$U_M$ as model uncertainty`
+## 151. `$U_M$ as model uncertainty`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** yes
@@ -6423,7 +6467,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 150. `$U_O$ teleological unity`
+## 152. `$U_O$ teleological unity`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6446,7 +6490,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 151. `$\eta^\ast$`
+## 153. `$\eta^\ast$`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -6478,7 +6522,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 152. `AAD acronym`
+## 154. `AAD acronym`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -6501,7 +6545,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 153. `action selection`
+## 155. `action selection`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6527,7 +6571,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 154. `adaptive gain dynamics`
+## 156. `adaptive gain dynamics`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6552,7 +6596,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 155. `additive coordinate forcing family`
+## 157. `additive coordinate forcing family`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -6562,11 +6606,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| forced coordinates family | +6 | canonicalize × 1, rename × 1 |
-| additive structure derivation | +2 | rename × 1 |
+| forced coordinate family | +6 | canonicalize × 1, rename × 1 |
 | coordinate constraint pattern | +2 | rename × 1 |
+| additive structure derivation | +2 | rename × 1 |
 
-### Candidate: `forced coordinates family`
+### Candidate: `forced coordinate family`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -6574,14 +6618,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Use forced coordinates as the family phrase across Cauchy, Fisher, IB, and Legendre instances.
 - **opus-targeted-alternatives-v2** +3 (rename) — Per `disc-additive-coordinate-forcing`: the four-instance pattern (Cauchy-FE log-confidence, Čencov-Fisher metric, Shore-Johnson IB, Aczél-Hobson-Legendre). "Forced coordinates" covers Čencov-Fisher (4th instance is *not* additive) where "additive" overspecifies. Codex r1 +3 single-vote; multi-arch sweep in r1 (Sonnet +2 confirming, Opus -1 on cauchy-coordinates). Consensus-aligned.
-
-### Candidate: `additive structure derivation`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Explicitly names the formal move being made.
 
 ### Candidate: `coordinate constraint pattern`
 
@@ -6591,9 +6627,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Emphasizes the formal constraint mechanism rather than "forcing".
 
+### Candidate: `additive structure derivation`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Explicitly names the formal move being made.
+
 ---
 
-## 156. `agent identity as one non forkable causal record`
+## 158. `agent identity as one non forkable causal record`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -6625,7 +6669,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 157. `agent opacity $H_b^{A|B}$`
+## 159. `agent opacity $H_b^{A|B}$`
 
 **Voted by architectures:** Opus, agent1
 **Category disagreement on top finalist:** no
@@ -6648,7 +6692,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 158. `aporia ἀπορία`
+## 160. `aporia ἀπορία`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -6680,7 +6724,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 159. `blind pursuer`
+## 161. `blind pursuer`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -6692,8 +6736,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +6 | keep × 3 |
 | model degenerate pursuer | +2 | rename × 1 |
-| model poor pursuer | +1 | rename × 1 |
 | reality blind agent | +1 | rename × 1 |
+| model poor pursuer | +1 | rename × 1 |
 
 ### Candidate: `blind pursuer` _(keep)_
 
@@ -6713,14 +6757,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — The text clarifies $M_t$ is absent or degenerate. "Model-degenerate" is more formal than "blind".
 
-### Candidate: `model poor pursuer`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** +1 (rename) — Weak alternative. More technically precise (specifies *which* axis is degenerate) but loses the imagistic punch of "blind." Marginal.
-
 ### Candidate: `reality blind agent`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -6729,9 +6765,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +1 (rename) — Directly contrasts with reality tracking, but maybe too stylized.
 
+### Candidate: `model poor pursuer`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** +1 (rename) — Weak alternative. More technically precise (specifies *which* axis is degenerate) but loses the imagistic punch of "blind." Marginal.
+
 ---
 
-## 160. `causal discovery from git`
+## 162. `causal discovery from git`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6765,7 +6809,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 161. `change expectation baseline`
+## 163. `change expectation baseline`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
@@ -6808,7 +6852,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 162. `change investment`
+## 164. `change investment`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -6841,7 +6885,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 163. `chronica 𝒞 t`
+## 165. `chronica 𝒞 t`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** yes
@@ -6864,7 +6908,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 164. `claude md what s settled vs open`
+## 166. `claude md what settled vs open`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -6876,7 +6920,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +6 | keep × 2 |
 
-### Candidate: `claude md what s settled vs open` _(keep)_
+### Candidate: `claude md what settled vs open` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -6887,7 +6931,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 165. `closure defect`
+## 167. `closure defect`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -6937,7 +6981,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 166. [Concept] *The architectural requirement that composite agent admissibility inherit from sub agent properties plus topology*
+## 168. [Concept] *The architectural requirement that composite agent admissibility inherit from sub agent property plus topology*
 
 *Post-consolidation concept cluster.*
 
@@ -6971,7 +7015,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 167. [Concept] *The asymmetric pair of memory access modes one biased by current goal the other state keyed only*
+## 169. [Concept] *The asymmetric pair of memory access mode one biased by current goal the other state keyed only*
 
 *Post-consolidation concept cluster.*
 
@@ -6983,19 +7027,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| goal conditioned reconstruction | +6 | name-unnamed × 2 |
 | goal-blind retrieval | +6 | name-unnamed × 2 |
+| goal conditioned reconstruction | +6 | name-unnamed × 2 |
 | state keyed retrieval | +5 | rename × 1, canonicalize × 1 |
 | goal biased retrieval | +2 | rename × 1 |
-
-### Candidate: `goal conditioned reconstruction`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +3 (name-unnamed) — Important Class-2 failure mode: retrieval can be contaminated by the current objective rather than reconstructing the chronica neutrally. [original phrasing: goal-biased retrieval from persistent memory]
-- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — A critical vulnerability where memory retrieval is corrupted by Class 2 coupling. [original phrasing: unnamed: RAG queries biased by the current goal acting as an echo chamber]
 
 ### Candidate: `goal-blind retrieval`
 
@@ -7005,6 +7040,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +3 (name-unnamed) — Strong architectural counterpart to goal-blind routing. This is the memory-side directed-separation repair. [original phrasing: retrieval keyed by state rather than current objective]
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The necessary architectural fix to preserve objective CHRONICA. [original phrasing: unnamed: retrieving context based only on state, not goal]
+
+### Candidate: `goal conditioned reconstruction`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +3 (name-unnamed) — Important Class-2 failure mode: retrieval can be contaminated by the current objective rather than reconstructing the chronica neutrally. [original phrasing: goal-biased retrieval from persistent memory]
+- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — A critical vulnerability where memory retrieval is corrupted by Class 2 coupling. [original phrasing: unnamed: RAG queries biased by the current goal acting as an echo chamber]
 
 ### Candidate: `state keyed retrieval`
 
@@ -7025,7 +7069,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 168. [Concept] *The deliberate expenditure of tempo budget to convert hidden strategy nodes into ones that yield update eligible feedback*
+## 170. [Concept] *The deliberate expenditure of tempo budget to convert hidden strategy node into ones that yield update eligible feedback*
 
 *Post-consolidation concept cluster.*
 
@@ -7050,7 +7094,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 169. [Concept] *The effective tempo loss when observation channels are correlated rather than independent both the quantitative loss and the prose level overconfidence error it explains*
+## 171. [Concept] *The effective tempo loss when observation channel are correlated rather than independent both the quantitative loss and the prose level overconfidence error it explain*
 
 *Post-consolidation concept cluster.*
 
@@ -7084,37 +7128,28 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 170. [Concept] *The externalization and rehydration mechanism for carrying part of m t or g t across session boundaries via the environment*
+## 172. [Concept] *The externalization and rehydration mechanism for carrying part of m t or g t across session boundary via the environment*
 
 *Post-consolidation concept cluster.*
 
 **Voted by architectures:** Codex, Gemini, Opus
-**Category disagreement on top finalist:** yes
+**Category disagreement on top finalist:** no
 
 **First-encounter locality:** _(pending — agent-pass B)_
 **Segment link:** _(pending — agent-pass C)_
 
 | candidate | weight | category mix |
 |---|---:|---|
-| artificial hippocampus | +6 | name-unnamed × 1, canonicalize × 1 |
 | externalization reconstruction cycle | +6 | canonicalize × 2 |
+| artificial hippocampus | +6 | name-unnamed × 1, canonicalize × 1 |
 | reconstruction relay | +4 | add-alias × 1, canonicalize × 1 |
-| memory relay | +3 | name-unnamed × 2 |
 | model inscription | +3 | name-unnamed × 2 |
-| stigmergic externalization | +3 | rename × 1 |
+| memory relay | +3 | name-unnamed × 2 |
 | externalized state | +3 | canonicalize × 1 |
-| reconstruction loop | +2 | name-unnamed × 1 |
+| stigmergic externalization | +3 | rename × 1 |
 | intent reconstruction | +2 | name-unnamed × 1 |
+| reconstruction loop | +2 | name-unnamed × 1 |
 | class 2 state reconstruction | +2 | canonicalize × 1 |
-
-### Candidate: `artificial hippocampus`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The exact role an agent framework plays in compressing and injecting the chronica. [original phrasing: unnamed: managing memory across session boundaries to prevent the Sufficiency Discontinuity]
-- **gemini-targeted-alternatives** +3 (canonicalize) — Specifically maps to the biological analog of cross-episode memory consolidation referenced in AAD. [original phrasing: managing memory across session boundaries to prevent the sufficiency discontinuity]
 
 ### Candidate: `externalization reconstruction cycle`
 
@@ -7125,6 +7160,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-targeted-alternatives** +3 (canonicalize) — Names the core operational loop preserving state for logogenic agents. [original phrasing: externalization reconstruction across sessions]
 - **gemini-targeted-alternatives** +3 (canonicalize) — Elevates the logogenic continuity loop to a proper noun. [original phrasing: unnamed the externalization reconstruction cycle across sessions]
 
+### Candidate: `artificial hippocampus`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The exact role an agent framework plays in compressing and injecting the chronica. [original phrasing: unnamed: managing memory across session boundaries to prevent the Sufficiency Discontinuity]
+- **gemini-targeted-alternatives** +3 (canonicalize) — Specifically maps to the biological analog of cross-episode memory consolidation referenced in AAD. [original phrasing: managing memory across session boundaries to prevent the sufficiency discontinuity]
+
 ### Candidate: `reconstruction relay`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -7133,15 +7177,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (add-alias) — Highlights the relay race nature of state across session boundaries. [original phrasing: managing memory across session boundaries to prevent the sufficiency discontinuity]
 - **gemini-targeted-alternatives** +2 (canonicalize) — Standardizes the term for bridging context turnover. [original phrasing: unnamed managing memory across session boundaries to prevent the sufficiency discontinuity]
-
-### Candidate: `memory relay`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-2** +1 (name-unnamed) — Short, sayable noun for a repeated logogenic mechanism. [original phrasing: unnamed: the externalization-reconstruction cycle across sessions]
-- **codex-gpt-5-r2** +2 (name-unnamed) — Sharper than reconstruction loop when the mechanism is one agent leaving state for a later session to recover. [original phrasing: externalization-reconstruction across sessions]
 
 ### Candidate: `model inscription`
 
@@ -7152,13 +7187,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **codex-2** +1 (name-unnamed) — Distinctive and accurate; it captures writing the model into the world, not just "documentation." [original phrasing: unnamed: externalizing part of $M_t$ into the environment for future agents]
 - **codex-gpt-5-r2** +2 (name-unnamed) — Useful TST and logogenic phrase for externalized knowledge that later agents can read back. [original phrasing: model state written into the environment]
 
-### Candidate: `stigmergic externalization`
+### Candidate: `memory relay`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **gemini-targeted-alternatives** +3 (rename) — Adopts the biological term (stigmergy) for leaving state in the environment. [original phrasing: unnamed externalizing part of $M_t$ into the environment for future agents]
+- **codex-2** +1 (name-unnamed) — Short, sayable noun for a repeated logogenic mechanism. [original phrasing: unnamed: the externalization-reconstruction cycle across sessions]
+- **codex-gpt-5-r2** +2 (name-unnamed) — Sharper than reconstruction loop when the mechanism is one agent leaving state for a later session to recover. [original phrasing: externalization-reconstruction across sessions]
 
 ### Candidate: `externalized state`
 
@@ -7168,13 +7204,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Elevates the core mechanism of logogenic continuity. [original phrasing: model state written into the environment]
 
-### Candidate: `reconstruction loop`
+### Candidate: `stigmergic externalization`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **codex-gpt-5-r2** +2 (name-unnamed) — Useful logogenic term for external memory restoring working state after turnover. [original phrasing: persistent storage reconstruction of Class-2 state]
+- **gemini-targeted-alternatives** +3 (rename) — Adopts the biological term (stigmergy) for leaving state in the environment. [original phrasing: unnamed externalizing part of $M_t$ into the environment for future agents]
 
 ### Candidate: `intent reconstruction`
 
@@ -7183,6 +7219,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **opus-4-7-r2** +2 (name-unnamed) — New alternative — Sonnet named "inter-session reconstruction" for the M_t side. The Σ_t side has a parallel: the agent must reconstruct its objective and strategy state from prompt + persistent storage at session start. Currently this happens informally in agentic systems; naming it as "intent reconstruction" (analog to "context reconstruction") gives logogenic-agents segments a handle for analyzing how the reconstruction can fail. Pairs with my "strategic turnover" entry. [original phrasing: unnamed: a Class-2 agent's process of reconstructing its purposeful substate at session start]
+
+### Candidate: `reconstruction loop`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +2 (name-unnamed) — Useful logogenic term for external memory restoring working state after turnover. [original phrasing: persistent storage reconstruction of Class-2 state]
 
 ### Candidate: `class 2 state reconstruction`
 
@@ -7194,7 +7238,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 171. [Concept] *The fact that what counts as predictively relevant model content depends on which strategy the agent is going to run*
+## 173. [Concept] *The fact that what count as predictively relevant model content depend on which strategy the agent is going to run*
 
 *Post-consolidation concept cluster.*
 
@@ -7219,7 +7263,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 172. [Concept] *The formal pairing between how clearly an agent observes its environment and how predictable that agent appears to outside observers*
+## 174. [Concept] *The formal pairing between how clearly an agent observe its environment and how predictable that agent appear to outside observer*
 
 *Post-consolidation concept cluster.*
 
@@ -7244,31 +7288,22 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 173. [Concept] *The minimum sufficiency boundary an agent must satisfy to validly resume operation after a session boundary or context turnover*
+## 175. [Concept] *The minimum sufficiency boundary an agent must satisfy to validly resume operation after a session boundary or context turnover*
 
 *Post-consolidation concept cluster.*
 
 **Voted by architectures:** Codex, Gemini, Sonnet
-**Category disagreement on top finalist:** yes
+**Category disagreement on top finalist:** no
 
 **First-encounter locality:** _(pending — agent-pass B)_
 **Segment link:** _(pending — agent-pass C)_
 
 | candidate | weight | category mix |
 |---|---:|---|
-| reconstruction adequacy threshold | +6 | rename × 1, canonicalize × 1 |
 | reconstruction adequacy condition | +6 | canonicalize × 2 |
+| reconstruction adequacy threshold | +6 | rename × 1, canonicalize × 1 |
 | reconstruction threshold | +5 | canonicalize × 1, name-unnamed × 1 |
 | reentry threshold | +3 | name-unnamed × 2 |
-
-### Candidate: `reconstruction adequacy threshold`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (rename) — Formally identifies the inter-session survival boundary. [original phrasing: minimum sufficiency after a session rebuild]
-- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes this inter-session persistence boundary. [original phrasing: unnamed minimum sufficiency required after a session rebuild]
 
 ### Candidate: `reconstruction adequacy condition`
 
@@ -7278,6 +7313,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the inter-session survival boundary. [original phrasing: unnamed the logogenic analog to the persistence condition for session reconstruction]
 - **gemini-targeted-alternatives** +3 (canonicalize) — Locks in the boundary test for logogenic persistence. [original phrasing: unnamed the reconstruction adequacy condition for logogenic agents]
+
+### Candidate: `reconstruction adequacy threshold`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (rename) — Formally identifies the inter-session survival boundary. [original phrasing: minimum sufficiency after a session rebuild]
+- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes this inter-session persistence boundary. [original phrasing: unnamed minimum sufficiency required after a session rebuild]
 
 ### Candidate: `reconstruction threshold`
 
@@ -7299,7 +7343,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 174. [Concept] *The per reader compounding comprehension cost in code distinguished from per feature implementation cost scaling with reader cycling rate*
+## 176. [Concept] *The per reader compounding comprehension cost in code distinguished from per feature implementation cost scaling with reader cycling rate*
 
 *Post-consolidation concept cluster.*
 
@@ -7333,7 +7377,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 175. [Concept] *The property of model adequacy when measured against a single agent s own causal record rather than against a population average*
+## 177. [Concept] *The property of model adequacy when measured against a single agent own causal record rather than against a population average*
 
 *Post-consolidation concept cluster.*
 
@@ -7358,7 +7402,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 176. [Concept] *The prose form of κ cross the coupling between an agent s model of self and its model of other*
+## 178. [Concept] *The prose form of κ cross the coupling between an agent model of self and its model of other*
 
 *Post-consolidation concept cluster.*
 
@@ -7392,7 +7436,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 177. `control regret $\delta_{\text{regret}}$`
+## 179. `control regret $\delta_{\text{regret}}$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -7415,7 +7459,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 178. `derivation not proof`
+## 180. `derivation not proof`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -7438,7 +7482,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 179. `developer agent`
+## 181. `developer agent`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -7462,7 +7506,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 180. `directional fidelity condition b1`
+## 182. `directional fidelity condition b1`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -7485,7 +7529,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 181. `discussion segment section`
+## 183. `discussion segment section`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -7508,7 +7552,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 182. `discussion segment section header`
+## 184. `discussion segment section header`
 
 **Voted by architectures:** Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -7531,7 +7575,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 183. `edge credence $p_{ij}$`
+## 185. `edge credence $p_{ij}$`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -7554,7 +7598,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 184. `epistemic status segment section`
+## 186. `epistemic status segment section`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -7577,7 +7621,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 185. `epistemic status segment section header`
+## 187. `epistemic status segment section header`
 
 **Voted by architectures:** Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -7600,7 +7644,30 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 186. `epistrophe`
+## 188. `epistemic substate purposeful substate`
+
+**Voted by architectures:** Gemini, Opus
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +6 | keep × 1, canonicalize × 1 |
+
+### Candidate: `epistemic substate purposeful substate` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (keep) — [prose moved from candidate column]: "`keep canonical pairing`" — The exact pairing is load-bearing in Directed Separation discussions ($M_t$ vs $G_t$).
+- **opus-4-7-r2** +3 (canonicalize) — Defended canonicalization. The pairing $M_t$ (epistemic substate) / $G_t$ (purposeful substate) is iconic; do not paraphrase as "belief state" / "goal state" or "model" / "purpose" (which collide with other usages).
+
+---
+
+## 189. `epistrophe`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -7643,7 +7710,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 187. `evidence starvation canonicalize`
+## 190. `evidence starvation canonicalize`
 
 **Voted by architectures:** Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -7675,7 +7742,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 188. `explicit strategy condition`
+## 191. `explicit strategy condition`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -7687,8 +7754,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +6 | keep × 4 |
 | strategy explicitness | +2 | rename × 1 |
-| planning scope | +1 | rename × 1 |
 | deliberation advantage condition | +1 | rename × 1 |
+| planning scope | +1 | rename × 1 |
 
 ### Candidate: `explicit strategy condition` _(keep)_
 
@@ -7709,14 +7776,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +2 (rename) — Noun phrase instead of condition.
 
-### Candidate: `planning scope`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7** +1 (rename) — The segment is a normative scope condition for "when planning beats exploring." Current name reads as condition-on-the-strategy, not condition-for-strategy-to-apply. Minor clarity win.
-
 ### Candidate: `deliberation advantage condition`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -7725,9 +7784,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-2** +1 (rename) — "When planning beats exploring" is about the advantage of deliberation.
 
+### Candidate: `planning scope`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7** +1 (rename) — The segment is a normative scope condition for "when planning beats exploring." Current name reads as condition-on-the-strategy, not condition-for-strategy-to-apply. Minor clarity win.
+
 ---
 
-## 189. `fluid limit ga 5`
+## 192. `fluid limit ga 5`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -7750,7 +7817,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 190. `formal expression segment section`
+## 193. `formal expression segment section`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -7773,7 +7840,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 191. `formal expression segment section header`
+## 194. `formal expression segment section header`
 
 **Voted by architectures:** Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -7796,7 +7863,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 192. `fresh noise ga 1`
+## 195. `fresh noise ga 1`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -7819,7 +7886,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 193. `goal-blind routing`
+## 196. `goal-blind routing`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -7878,7 +7945,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 194. `gradient causal memory`
+## 197. `gradient causal memory`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -7920,7 +7987,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 195. `honest activation`
+## 198. `honest activation`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -7962,7 +8029,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 196. `implementation time`
+## 199. `implementation time`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -7986,7 +8053,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 197. `inevitability core`
+## 200. `inevitability core`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -8019,7 +8086,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 198. `inevitability core the 15 segments where inevitability is plausible`
+## 201. `inevitability core the 15 segment where inevitability is plausible`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -8042,7 +8109,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 199. `logogenic`
+## 202. `logogenic`
 
 **Voted by architectures:** Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -8065,7 +8132,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 200. `logozoetic`
+## 203. `logozoetic`
 
 **Voted by architectures:** Sonnet, agent1
 **Category disagreement on top finalist:** no
@@ -8088,31 +8155,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 201. `logozoetic agents`
-
-**Voted by architectures:** Codex, Gemini, Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +6 | keep × 3 |
-
-### Candidate: `logozoetic agents` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-2** +1 (keep) — Higher novelty cost than "logogenic," but the moral-weighting distinction is real and English alternatives are sloppier.
-- **gemini-targeted-alternatives** +3 (keep) — Standardizes the architectural distinction.
-- **opus-targeted-alternatives** +2 (keep) — Section IV name; consistent with logogenic agents (Section III). Pluralization correct (the class, not a single agent). Keep — but the row is also a top-level-section-name, not a concept-rename candidate, so the alternative space is constrained.
-
----
-
-## 202. `lohmiller-slotine contraction`
+## 204. `lohmiller-slotine contraction`
 
 **Voted by architectures:** Opus, agent1
 **Category disagreement on top finalist:** no
@@ -8144,7 +8187,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 203. `miller s meta machine extreme transition motif`
+## 205. `miller meta machine extreme transition motif`
 
 **Voted by architectures:** Opus, agent1
 **Category disagreement on top finalist:** no
@@ -8167,7 +8210,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 204. `observation ambiguity observation ambiguity modulation`
+## 206. `observation ambiguity observation ambiguity modulation`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -8190,7 +8233,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 205. `p ij`
+## 207. `p ij`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -8213,39 +8256,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 206. `pearl s causal hierarchy`
-
-**Voted by architectures:** Opus, agent1
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +6 | keep × 2 |
-| no alternative | -1 | keep × 1 |
-
-### Candidate: `pearl s causal hierarchy` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** +3 (keep) — Adopted concept; prior-art-integration convention forbids rename.
-- **opus-1m** +3 (keep) — Adopted concept; keep attribution per prior-art-integration convention.
-
-### Candidate: `no alternative`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** -1 (keep) — Same — adopted external concept. The single-arch [opus] +6 vote stands; the prior-art-integration convention forbids rename, and I have no honest alternative.
-
----
-
-## 207. `pearl-blanket conservative form of markov blanket in directed separation`
+## 208. `pearl-blanket conservative form of markov blanket in directed separation`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -8268,7 +8279,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 208. `plan confidence $\hat P_\Sigma$`
+## 209. `plan confidence $\hat P_\Sigma$`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -8291,7 +8302,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 209. `postulate not axiom`
+## 210. `postulate not axiom`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -8314,7 +8325,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 210. `praxis πρᾶξις`
+## 211. `praxi πρᾶξις`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -8324,10 +8335,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| praxis | +6 | rename × 2 |
+| praxi | +6 | rename × 2 |
 | _(keep)_ | +1 | canonicalize × 1 |
 
-### Candidate: `praxis`
+### Candidate: `praxi`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -8336,7 +8347,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-1** +3 (rename) — Already has currency, fits perfectly.
 - **sonnet-4-6** +3 (rename) — Keep.
 
-### Candidate: `praxis πρᾶξις` _(keep)_
+### Candidate: `praxi πρᾶξις` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -8346,7 +8357,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 211. `prolepsis aisthesis aporia epistrophe praxis`
+## 212. `prolepsis aisthesis aporia epistrophe praxi`
 
 **Voted by architectures:** Opus, agent1
 **Category disagreement on top finalist:** no
@@ -8369,7 +8380,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 212. `purposeful substate`
+## 213. `purposeful substate`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -8392,7 +8403,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 213. `regime ii a`
+## 214. `regime ii a`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -8415,7 +8426,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 214. `regime ii b`
+## 215. `regime ii b`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -8438,7 +8449,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 215. `satisfaction gap $\delta_{\text{sat}}$`
+## 216. `satisfaction gap $\delta_{\text{sat}}$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -8461,7 +8472,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 216. `separability pattern family`
+## 217. `separability pattern family`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -8493,7 +8504,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 217. `spike in msc`
+## 218. `spike in msc`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -8516,7 +8527,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 218. `stability plasticity feasibility window`
+## 219. `stability plasticity feasibility window`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -8539,7 +8550,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 219. `stochastic disturbance ga 2s model s`
+## 220. `stochastic disturbance ga 2s model`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -8562,7 +8573,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 220. `strategic tempo $\mathcal{T}_\Sigma$`
+## 221. `strategic tempo $\mathcal{T}_\Sigma$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -8585,7 +8596,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 221. `strengthen first then soften posture`
+## 222. `strengthen first then soften posture`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -8608,7 +8619,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 222. `structural persistence`
+## 223. `structural persistence`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -8631,7 +8642,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 223. `tempo $\mathcal{T}$`
+## 224. `tempo $\mathcal{T}$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** yes
@@ -8663,7 +8674,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 224. `temporal software theory`
+## 225. `temporal software theory`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
@@ -8686,7 +8697,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 225. `the crèche`
+## 226. `the crèche`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -8745,7 +8756,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 226. `the three deaths`
+## 227. `the three death`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -8755,12 +8766,12 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| three deaths | +6 | rename × 2, keep × 1 |
+| three death | +6 | rename × 2, keep × 1 |
 | _(keep)_ | +3 | keep × 2 |
 | persistence failure trio | -1 | rename × 1 |
-| three failure modes | -1 | rename × 1 |
+| three failure mode | -1 | rename × 1 |
 
-### Candidate: `three deaths`
+### Candidate: `three death`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -8770,7 +8781,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +2 (keep) — Acceptable keep at the substance-level. The "three deaths" framing (Cognitive, Relational, Truth) is vivid and concrete; a more clinical name would lose the rhetorical weight.
 - **opus-targeted-alternatives-v2** +3 (rename) — Drop "the" — slug-stylistic. Per outline: "Cognitive, Relational, and Truth Death; BLAKE3 cryptography as the defense against Truth Death." Strong substantive keep — the "three deaths" framing is vivid, concrete, and links to LEXICON's three-fold persistence taxonomy (structural / operational / continuity, mapped onto cognitive / relational / truth).
 
-### Candidate: `the three deaths` _(keep)_
+### Candidate: `the three death` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -8787,7 +8798,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** -1 (rename) — Considered. Connects to LEXICON's three-fold persistence vocabulary explicitly. Rejected: the persistence-trio language belongs in the body; the slug should carry the iconic phrase.
 
-### Candidate: `three failure modes`
+### Candidate: `three failure mode`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -8797,7 +8808,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 227. `unnamed an okr or key result acting as an observable intermediate in a DAG`
+## 228. `unnamed an okr or key result acting as an observable intermediate in a DAG`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** yes
@@ -8829,7 +8840,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 228. `unnamed bipartite memory structure of fast replay buffer and slow compressed semantic model`
+## 229. `unnamed bipartite memory structure of fast replay buffer and slow compressed semantic model`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** yes
@@ -8861,7 +8872,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 229. `unnamed context wiping at session boundaries`
+## 230. `unnamed context wiping at session boundary`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** yes
@@ -8884,7 +8895,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 230. `unnamed deep plans are mathematically slower to learn from due to proportional blame`
+## 231. `unnamed deep plan are mathematically slower to learn from due to proportional blame`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** yes
@@ -8907,7 +8918,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 231. `unnamed the agent identity commitment that AAD applies on one singular non forkable causal trajectory`
+## 232. `unnamed the agent identity commitment that AAD apply on one singular non forkable causal trajectory`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -8939,7 +8950,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 232. `unnamed the convention hierarchy c1 c2 c3`
+## 233. `unnamed the convention hierarchy c1 c2 c3`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -8962,7 +8973,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 233. `unnamed the correlation hierarchy l0 l1 l1 l2`
+## 234. `unnamed the correlation hierarchy l0 l1 l1 l2`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -8985,7 +8996,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 234. `unnamed the epistemic architecture as AAD s distinctive contribution frame`
+## 235. `unnamed the epistemic architecture as AAD distinctive contribution frame`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -9008,7 +9019,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 235. `unnamed the evidence starvation effect on downstream edges`
+## 236. `unnamed the evidence starvation effect on downstream edge`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -9031,7 +9042,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 236. `unnamed the phenomenon where persistence success makes an agent less likely to detect the conditions requiring structural adaptation`
+## 237. `unnamed the phenomenon where persistence success make an agent less likely to detect the condition requiring structural adaptation`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -9054,7 +9065,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 237. `unnamed the strictly ordered cascade of operations from epistemology to objective`
+## 238. `unnamed the strictly ordered cascade of operation from epistemology to objective`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -9077,7 +9088,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 238. `working notes segment section`
+## 239. `working note segment section`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9087,9 +9098,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| working notes | +6 | canonicalize × 2 |
+| working note | +6 | canonicalize × 2 |
 
-### Candidate: `working notes`
+### Candidate: `working note`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -9100,7 +9111,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 239. `working notes segment section header`
+## 240. `working note segment section header`
 
 **Voted by architectures:** Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -9110,9 +9121,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| working notes | +6 | rename × 2 |
+| working note | +6 | rename × 2 |
 
-### Candidate: `working notes`
+### Candidate: `working note`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -9123,7 +9134,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 240. `čencov invariance`
+## 241. `čencov invariance`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9155,7 +9166,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 241. `𝒯 adaptive tempo`
+## 242. `𝒯 adaptive tempo`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** yes
@@ -9178,7 +9189,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 242. `$U_M$ model uncertainty`
+## 243. `$U_M$ model uncertainty`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -9201,7 +9212,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 243. `$U_o$ observation uncertainty`
+## 244. `$U_o$ observation uncertainty`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -9224,7 +9235,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 244. `$\alpha$ sector bound`
+## 245. `$\alpha$ sector bound`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -9247,7 +9258,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 245. `$\delta_t$`
+## 246. `$\delta_t$`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -9279,7 +9290,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 246. `$\varepsilon^\ast$`
+## 247. `$\varepsilon^\ast$`
 
 **Voted by architectures:** Codex, Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -9311,7 +9322,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 247. `ASF acronym`
+## 248. `ASF acronym`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9334,7 +9345,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 248. `active salience management`
+## 249. `active salience management`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9376,7 +9387,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 249. `actuated agent`
+## 250. `actuated agent`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9387,8 +9398,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +5 | keep × 3 |
-| purposeful agent | +2 | rename × 2 |
 | goal actuated agent | +2 | rename × 1, add-alias × 1 |
+| purposeful agent | +2 | rename × 2 |
 
 ### Candidate: `actuated agent` _(keep)_
 
@@ -9400,15 +9411,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-2** -1 (keep) — Mechanical baggage overrides the precise AAD boundary.
 - **opus-4-7** +3 (keep) — Deliberately chosen over "purposeful" to avoid consciousness baggage while carrying the "driven-toward-setpoint" shape. Named framework half ("Actuation" in AAD). Keep.
 
-### Candidate: `purposeful agent`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** -1 (rename) — Purposeful is a good prose gloss, but as the formal class name it imports consciousness and intention baggage that actuated deliberately avoids.
-- **gemini-2** +3 (rename) — "Actuated" sounds like a motor. "Purposeful" perfectly captures $G_t = (O_t, \Sigma_t)$ distinct from $M_t$.
-
 ### Candidate: `goal actuated agent`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -9418,9 +9420,18 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **codex-1** +1 (rename) — Keeps the mechanical register while paying the meaning tax sooner; "actuated" alone is a touch too bare on first read.
 - **codex-gpt-5-r2** +1 (add-alias) — Useful first-contact gloss, but too heavy for canonical use.
 
+### Candidate: `purposeful agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** -1 (rename) — Purposeful is a good prose gloss, but as the formal class name it imports consciousness and intention baggage that actuated deliberately avoids.
+- **gemini-2** +3 (rename) — "Actuated" sounds like a motor. "Purposeful" perfectly captures $G_t = (O_t, \Sigma_t)$ distinct from $M_t$.
+
 ---
 
-## 250. `adaptive tracker`
+## 251. `adaptive tracker`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9470,7 +9481,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 251. `adversarial edge targeting`
+## 252. `adversarial edge targeting`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -9482,9 +9493,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +5 | keep × 3 |
 | adversarial targeting argmax | +1 | rename × 1 |
+| edge vulnerability arg max | -1 | rename × 1 |
 | adversarial channel targeting | -1 | rename × 1 |
 | adversarial emitter recipient composition | -1 | rename × 1 |
-| edge vulnerability arg max | -1 | rename × 1 |
 
 ### Candidate: `adversarial edge targeting` _(keep)_
 
@@ -9504,6 +9515,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** +1 (rename) — Names the formal operation (the arg-max construction) directly. More mathematical, less operational. Weaker because "edge" disappears — and edge-specificity is what makes the targeting *AAD-shaped* rather than generic adversarial-RL.
 
+### Candidate: `edge vulnerability arg max`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** -1 (rename) — Names the optimization rather than the phenomenon. Considered as more formal alternative. Rejected: the operational concept is the *targeting* (the move you make); the arg-max is the mechanism.
+
 ### Candidate: `adversarial channel targeting`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -9520,17 +9539,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** -1 (rename) — Considered. Names the 16-cell composition mechanism. Rejected: too long, too descriptive of method rather than phenomenon. The phenomenon is *edge targeting*; the method is 16-cell composition.
 
-### Candidate: `edge vulnerability arg max`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** -1 (rename) — Names the optimization rather than the phenomenon. Considered as more formal alternative. Rejected: the operational concept is the *targeting* (the move you make); the arg-max is the mechanism.
-
 ---
 
-## 252. `alignment uncertainty`
+## 253. `alignment uncertainty`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -9553,7 +9564,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 253. `auftragstaktik`
+## 254. `auftragstaktik`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9585,7 +9596,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 254. `axiom genesis`
+## 255. `axiom genesis`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9635,7 +9646,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 255. `backward inference empathy`
+## 256. `backward inference empathy`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9677,7 +9688,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 256. `bias bound`
+## 257. `bias bound`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -9700,7 +9711,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 257. `c1 c2 c3`
+## 258. `c1 c2 c3`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -9723,7 +9734,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 258. `calibration laboratory software s role`
+## 259. `calibration laboratory software role`
 
 **Voted by architectures:** Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** yes
@@ -9764,7 +9775,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 259. `canonical formulations second ring`
+## 260. `canonical formulation second ring`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -9774,9 +9785,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| canonical formulations | +5 | keep × 1, rename × 1 |
+| canonical formulation | +5 | keep × 1, rename × 1 |
 
-### Candidate: `canonical formulations`
+### Candidate: `canonical formulation`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -9787,7 +9798,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 260. `change proximity principle`
+## 261. `change proximity principle`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
@@ -9828,7 +9839,112 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 261. `cognitive fusion`
+## 262. `class 1`
+
+**Voted by architectures:** Codex, Opus
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| modular | +5 | add-alias × 1, rename × 1 |
+| _(keep)_ | -1 | keep × 1 |
+
+### Candidate: `modular`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +3 (add-alias) — Better prose handle than bare class number. Class 1 = modular (separation by construction). [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.]
+- **opus-targeted-alternatives-v2** +2 (rename) — Class 1 = modular (separation by construction). Per `der-directed-separation`. The English label makes "this lands in Class 1" → "this lands in modular" — much more readable. [original row: Class 1/2/3 trio voted as a unit; split into atomic per-class rows.]
+
+### Candidate: `class 1` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** -1 (keep) — Considered. The numbered classes are easy to learn and parallel-shaped. Rejected: per principles file, *role*-naming via numbers fails the subject-noun-first principle. The architectural property *is* the subject-noun. [original row: trio split; -1 keep applies to all three numbers as a class.]
+
+---
+
+## 263. `class 2`
+
+**Voted by architectures:** Codex, Opus
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| merged | +5 | add-alias × 1, rename × 1 |
+| coupled | +2 | rename × 1 |
+| integrated | +1 | rename × 1 |
+
+### Candidate: `merged`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +3 (add-alias) — Class 2 = merged (the failure-by-construction architecture). Codex prefers "merged" over "integrated" because integrated is too positive for what Class 2 is. [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.]
+- **opus-targeted-alternatives-v2** +2 (rename) — Class 2 = fully merged (fails by construction). [original row: trio split.]
+
+### Candidate: `coupled`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +2 (rename) — Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.]
+
+### Candidate: `integrated`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +1 (rename) — Gemini's r1 +3 alternative. "Integrated" is too positive a word for what Class 2 *is* (a known failure mode). "Coupled" or "merged" reads more honestly. [original row: trio split.]
+
+---
+
+## 264. `class 3`
+
+**Voted by architectures:** Codex, Opus
+**Category disagreement on top finalist:** yes
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| scaffolded | +5 | add-alias × 1, rename × 1 |
+| partially coupled | +1 | rename × 1 |
+
+### Candidate: `scaffolded`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +3 (add-alias) — Class 3 = scaffolded — keeps the external-architecture role visible. [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.]
+- **opus-targeted-alternatives-v2** +2 (rename) — Class 3 = partially modular / scaffolded. [original row: trio split.]
+
+### Candidate: `partially coupled`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +1 (rename) — Gemini's r1 alternative. [original row: trio split.]
+
+---
+
+## 265. `cognitive fusion`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -9870,7 +9986,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 262. [Concept] *The TST move of treating tests as reusable level 2 causal manipulations that yield identifiability about the program rather than mere conformance checks*
+## 266. [Concept] *The TST move of treating test as reusable level 2 causal manipulation that yield identifiability about the program rather than mere conformance check*
 
 *Post-consolidation concept cluster.*
 
@@ -9904,7 +10020,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 263. [Concept] *The discontinuous collapse of model adequacy when structural regime change forces the agent outside its current model class coverage*
+## 267. [Concept] *The discontinuous collapse of model adequacy when structural regime change force the agent outside its current model class coverage*
 
 *Post-consolidation concept cluster.*
 
@@ -9929,28 +10045,37 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 264. [Concept] *The structural meta pattern in disc additive coordinate forcing combining one foundational lemma with three derived results*
+## 268. [Concept] *The structural meta pattern in disc additive coordinate forcing combining one foundational lemma with three derived result*
 
 *Post-consolidation concept cluster.*
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet, agent1, audit
-**Category disagreement on top finalist:** no
+**Category disagreement on top finalist:** yes
 
 **First-encounter locality:** _(pending — agent-pass B)_
 **Segment link:** _(pending — agent-pass C)_
 
 | candidate | weight | category mix |
 |---|---:|---|
-| chain anchor | +5 | name-unnamed × 3 |
 | chain layer anchor | +5 | rename × 1, canonicalize × 1 |
-| additive coordinate forcing meta pattern | +2 | keep × 1 |
+| chain anchor | +5 | name-unnamed × 3 |
 | anchor plus three theorem | +2 | keep × 1 |
-| identity anchored forcing | +1 | name-unnamed × 1 |
-| anchor theorem trio | +1 | name-unnamed × 1 |
-| anchored theorem pattern | +1 | name-unnamed × 1 |
-| pattern anatomy | +1 | name-unnamed × 1 |
+| additive coordinate forcing meta pattern | +2 | keep × 1 |
 | anchor theorem pattern | +1 | name-unnamed × 1 |
+| anchor theorem trio | +1 | name-unnamed × 1 |
+| identity anchored forcing | +1 | name-unnamed × 1 |
+| pattern anatomy | +1 | name-unnamed × 1 |
 | anchor and forcing quartet | +1 | name-unnamed × 1 |
+| anchored theorem pattern | +1 | name-unnamed × 1 |
+
+### Candidate: `chain layer anchor`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Foundation of the coordinate forcing meta-pattern. [original phrasing: unnamed the chain layer anchor role in additive coordinate forcing]
+- **gemini-targeted-alternatives** +3 (canonicalize) — Identifies the foundation of the additive meta-pattern. [original phrasing: unnamed chain layer anchor role in additive coordinate forcing]
 
 ### Candidate: `chain anchor`
 
@@ -9962,14 +10087,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-1m** +3 (name-unnamed) — Upgrading from original's +1. The "1-anchor-plus-3-theorem" structure references this role five times across `#additive-coordinate-forcing` and its instance segments. Naming it as "the chain anchor" in prose (not renaming the segment) pays off on every reference. [original phrasing: unnamed: the chain-layer anchor role in #additive-coordinate-forcing]
 - **opus-4-7-b** +1 (name-unnamed) — Not a rename of the segment (`#chain-confidence-decay` keeps its slug) — a prose *handle* for the anchor's role in the `#additive-coordinate-forcing` / `#forced-coordinates` meta-pattern. "The update-layer analog of the chain anchor" / "the three theorem-layers reduce to the chain anchor under \_\_\_" read cleanly where "the `#chain-confidence-decay` segment in its role as the mathematical-identity anchor of the 1-anchor + 3-theorem pattern" does not. [original phrasing: unnamed: the chain-confidence-decay mathematical anchor as the 1 in "1-anchor + 3-theorem"]
 
-### Candidate: `chain layer anchor`
+### Candidate: `anchor plus three theorem`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **gemini-targeted-alternatives** +2 (rename) — Foundation of the coordinate forcing meta-pattern. [original phrasing: unnamed the chain layer anchor role in additive coordinate forcing]
-- **gemini-targeted-alternatives** +3 (canonicalize) — Identifies the foundation of the additive meta-pattern. [original phrasing: unnamed chain layer anchor role in additive coordinate forcing]
+- **audit-471203-incremental** +2 (keep) — The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material). [from 39-42-section-ii-ciy-strategy-chain.md] [original phrasing: unnamed] [one of 2 alternatives proposed in the original audit row]
 
 ### Candidate: `additive coordinate forcing meta pattern`
 
@@ -9979,21 +10103,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +2 (keep) — The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material). [from 39-42-section-ii-ciy-strategy-chain.md] [original phrasing: unnamed] [one of 2 alternatives proposed in the original audit row]
 
-### Candidate: `anchor plus three theorem`
+### Candidate: `anchor theorem pattern`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **audit-471203-incremental** +2 (keep) — The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material). [from 39-42-section-ii-ciy-strategy-chain.md] [original phrasing: unnamed] [one of 2 alternatives proposed in the original audit row]
-
-### Candidate: `identity anchored forcing`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **sonnet-4-6** +1 (name-unnamed) — Emphasizes the chain layer's identity status (mathematical identity, not axiom). "Forcing" connects to the coordinate-forcing meta-segment. [original phrasing: unnamed: the 1-anchor + 3-theorem structure in #additive-coordinate-forcing]
+- **opus-4-7-b** +1 (name-unnamed) — The `#forced-coordinates` meta-segment's shape (one mathematical identity + N theorems conditional on AAD-internal axioms). If the Fenchel-Bregman reframe (SP-9) lands differently this name is discardable; otherwise a crisp handle for the 4-instance structure is useful. [original phrasing: unnamed: the "1-anchor + 3-theorem" structure itself]
 
 ### Candidate: `anchor theorem trio`
 
@@ -10003,13 +10119,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-2** +1 (name-unnamed) — Gives a memorable noun to this recurring proof architecture. [original phrasing: unnamed: the 1-anchor-plus-3-theorem structure]
 
-### Candidate: `anchored theorem pattern`
+### Candidate: `identity anchored forcing`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **sonnet-4-6** +1 (name-unnamed) — The structure appears across the project and is referenced in CLAUDE.md and multiple segments as "1-anchor-plus-3-theorem." This phrase is used repeatedly but never crystallized as a name. "Anchored-theorem pattern" would let writers say "this is another instance of the anchored-theorem pattern" without paraphrasing. Alternatively: "identity-anchored uniqueness family." [original phrasing: unnamed: the 1-anchor + 3-theorem structure in #additive-coordinate-forcing]
+- **sonnet-4-6** +1 (name-unnamed) — Emphasizes the chain layer's identity status (mathematical identity, not axiom). "Forcing" connects to the coordinate-forcing meta-segment. [original phrasing: unnamed: the 1-anchor + 3-theorem structure in #additive-coordinate-forcing]
 
 ### Candidate: `pattern anatomy`
 
@@ -10019,14 +10135,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7** +1 (name-unnamed) — Currently a long phrase that the theory uses three to four times per session. "1-anchor-plus-3-theorem" is precise but reads as inventory-counting. "Pattern anatomy" (or "pattern spine") could snapshot the structure. Flagging; low conviction on exact name. [original phrasing: unnamed: the 1-anchor-plus-3-theorem characterization]
 
-### Candidate: `anchor theorem pattern`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +1 (name-unnamed) — The `#forced-coordinates` meta-segment's shape (one mathematical identity + N theorems conditional on AAD-internal axioms). If the Fenchel-Bregman reframe (SP-9) lands differently this name is discardable; otherwise a crisp handle for the 4-instance structure is useful. [original phrasing: unnamed: the "1-anchor + 3-theorem" structure itself]
-
 ### Candidate: `anchor and forcing quartet`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -10035,9 +10143,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-2** +1 (name-unnamed) — Worth naming if the pattern stays central; the current paraphrase is too bulky to reuse. [original phrasing: unnamed: the 1-anchor-plus-3-theorem structure]
 
+### Candidate: `anchored theorem pattern`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **sonnet-4-6** +1 (name-unnamed) — The structure appears across the project and is referenced in CLAUDE.md and multiple segments as "1-anchor-plus-3-theorem." This phrase is used repeatedly but never crystallized as a name. "Anchored-theorem pattern" would let writers say "this is another instance of the anchored-theorem pattern" without paraphrasing. Alternatively: "identity-anchored uniqueness family." [original phrasing: unnamed: the 1-anchor + 3-theorem structure in #additive-coordinate-forcing]
+
 ---
 
-## 265. `continuous operation`
+## 269. `continuous operation`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10062,7 +10178,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 266. `default signal function`
+## 270. `default signal function`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -10085,7 +10201,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 267. `deliberation threshold`
+## 271. `deliberation threshold`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -10108,7 +10224,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 268. `directed separation under composition`
+## 272. `directed separation under composition`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10142,7 +10258,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 269. `directional fidelity`
+## 273. `directional fidelity`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10154,8 +10270,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +5 | keep × 2 |
 | pointing condition | +1 | rename × 1 |
-| correction direction integrity | -1 | rename × 1 |
 | corrective alignment | -1 | rename × 1 |
+| correction direction integrity | -1 | rename × 1 |
 
 ### Candidate: `directional fidelity` _(keep)_
 
@@ -10174,14 +10290,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives** +1 (rename) — Plain-English alternative. The segment's substance is "the correction *points* the right way." Has merit if the formal name needs a Feynman-criterion gloss in a Brief field, but loses the engineering connotation ("fidelity" as in signal-fidelity, control-fidelity) that places the term in its right intellectual neighborhood. Weak alternative.
 
-### Candidate: `correction direction integrity`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** -1 (rename) — Considered. Verbose and hyphen-heavy. Rejected.
-
 ### Candidate: `corrective alignment`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -10190,9 +10298,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6** -1 (rename) — "Alignment" is now heavily loaded in AI safety discourse. Avoid even in a technical context where the meaning is purely geometric.
 
+### Candidate: `correction direction integrity`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** -1 (rename) — Considered. Verbose and hyphen-heavy. Rejected.
+
 ---
 
-## 270. `effective disturbance`
+## 274. `effective disturbance`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10215,7 +10331,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 271. `epistemic shadow`
+## 275. `epistemic shadow`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -10238,7 +10354,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 272. `equilibrium convergence`
+## 276. `equilibrium convergence`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10261,7 +10377,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 273. `experiential training`
+## 277. `experiential training`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10285,7 +10401,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 274. `feedforward loop feedback loop`
+## 278. `feedforward loop feedback loop`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** yes
@@ -10308,7 +10424,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 275. `honesty scope honest scope honesty as architecture`
+## 279. `honesty scope honest scope honesty as architecture`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -10331,7 +10447,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 276. `indivisum`
+## 280. `indivisum`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -10342,8 +10458,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | causal lock | +5 | rename × 3 |
-| trajectory singularity constraint | +2 | rename × 1 |
 | _(keep)_ | +2 | keep × 1 |
+| trajectory singularity constraint | +2 | rename × 1 |
 | causal singularity anchor | -1 | rename × 1 |
 
 ### Candidate: `causal lock`
@@ -10356,14 +10472,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-targeted-alternatives** +3 (rename) — "Causal lock" perfectly describes the mechanism enforcing causal singularity and preventing identity forking, moving away from Latin.
 - **opus-targeted-alternatives-v2** -1 (rename) — Considered (Gemini's r1 proposal). "Causal lock" is genuinely vivid — names the mechanism (singular-trajectory non-forkability). Rejected: register-mismatch with the rest of PROPRIUM. If the register is wrong, replace the *whole* PROPRIUM vocabulary, not one term. Half-rename is the worst outcome.
 
-### Candidate: `trajectory singularity constraint`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Accurately describes that identity is constrained to a single causal trajectory.
-
 ### Candidate: `indivisum` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -10371,6 +10479,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (keep) — Per LEXICON / `def-proprium-mapping`: PROPRIUM uses Latin systematically (Axiomata, Chronica, Memorata, Vera, Praxes, Consortia, Operata, Conspectus, Percepta, Actus, Cadentia, Logostratum). "Indivisum" sits in this register — the not-divisible-thing that holds the agent's identity together (per `#scope-agent-identity`'s singular-trajectory commitment). Replacing one Latin term with English breaks the register coherence.
+
+### Candidate: `trajectory singularity constraint`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Accurately describes that identity is constrained to a single causal trajectory.
 
 ### Candidate: `causal singularity anchor`
 
@@ -10382,7 +10498,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 277. `l1 update bias`
+## 281. `l1 update bias`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10415,7 +10531,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 278. `loop`
+## 282. `loop`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -10447,7 +10563,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 279. `macro step ratio`
+## 283. `macro step ratio`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10470,7 +10586,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 280. `matrix exploration bonus`
+## 284. `matrix exploration bonus`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10493,7 +10609,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 281. `multi agent`
+## 285. `multi agent`
 
 **Voted by architectures:** Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10517,7 +10633,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 282. `observation function`
+## 286. `observation function`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** yes
@@ -10550,7 +10666,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 283. `operational persistence`
+## 287. `operational persistence`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10573,7 +10689,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 284. `per dimension persistence`
+## 288. `per dimension persistence`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10624,7 +10740,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 285. `proprium terminology`
+## 289. `proprium terminology`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -10647,7 +10763,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 286. `reactive system`
+## 290. `reactive system`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10670,7 +10786,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 287. `regime i`
+## 291. `regime i`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -10693,7 +10809,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 288. `regime iii`
+## 292. `regime iii`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -10716,7 +10832,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 289. `routing structure`
+## 293. `routing structure`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10739,7 +10855,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 290. `section ii survival`
+## 294. `section ii survival`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10752,8 +10868,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | _(keep)_ | +5 | keep × 2 |
 | class 2 carryover map | +3 | rename × 1 |
 | section ii carryover map | +3 | rename × 1 |
-| class 2 survival | +2 | rename × 1 |
 | class 2 exit audit | +2 | rename × 1 |
+| class 2 survival | +2 | rename × 1 |
 | section ii carryover classification | +1 | rename × 1 |
 
 ### Candidate: `section ii survival` _(keep)_
@@ -10781,14 +10897,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-2** +3 (rename) — "Survival" collides with AAD's persistence vocabulary; this segment maps carryover, not viability.
 
-### Candidate: `class 2 survival`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +2 (rename) — Section II is an internal document pointer. Class 2 survival names the thing that transfers to logogenic agents.
-
 ### Candidate: `class 2 exit audit`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -10796,6 +10904,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **sonnet-4-6-r2** +2 (rename) — Codex proposed `#result-class-2-survival` (+2, renaming from the document-pointer to the conceptual thing). I had voted keep (+3). The document-pointer objection is real and I'm now persuaded by it. But "class-2-survival" undersells what the segment actually does: it audits which of 24 Section II results survive *and* characterizes the 5/24 + 2/24 + 1/24 failure modes. "Class-2-exit-audit" names the audit character (what survives the class-2 scope exit) and is more distinctive than just "survival." New candidate, not in any file.
+
+### Candidate: `class 2 survival`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +2 (rename) — Section II is an internal document pointer. Class 2 survival names the thing that transfers to logogenic agents.
 
 ### Candidate: `section ii carryover classification`
 
@@ -10807,7 +10923,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 291. `segment for claim files`
+## 295. `segment for claim file`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -10830,7 +10946,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 292. `self referential closure`
+## 296. `self referential closure`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -10880,7 +10996,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 293. `strategic dynamics`
+## 297. `strategic dynamics`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -10903,7 +11019,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 294. `strategy complexity cost`
+## 298. `strategy complexity cost`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -10947,7 +11063,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 295. `strategy description length`
+## 299. `strategy description length`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -10970,7 +11086,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 296. `strategy dimension`
+## 300. `strategy dimension`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11041,7 +11157,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 297. `sycophancy as a flaw`
+## 301. `sycophancy as a flaw`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -11091,7 +11207,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 298. `symbol default da2 inc`
+## 302. `symbol default da2 inc`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -11114,7 +11230,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 299. `system coupling`
+## 303. `system coupling`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11147,7 +11263,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 300. `tempo composition`
+## 304. `tempo composition`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11190,7 +11306,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 301. `trust meta model`
+## 305. `trust meta model`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -11213,7 +11329,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 302. `u o teleological unity`
+## 306. `u o teleological unity`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -11245,7 +11361,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 303. `unnamed inevitability core`
+## 307. `unnamed inevitability core`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** yes
@@ -11268,7 +11384,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 304. `$H_b$`
+## 308. `$H_b$`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -11300,7 +11416,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 305. `$R$ sector radius`
+## 309. `$R$ sector radius`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -11323,7 +11439,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 306. `$\hat P_\Sigma$ plan confidence`
+## 310. `$\hat P_\Sigma$ plan confidence`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11346,7 +11462,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 307. `$\iota_{ij}$`
+## 311. `$\iota_{ij}$`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11369,7 +11485,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 308. `1 anchor plus 3 theorem`
+## 312. `1 anchor plus 3 theorem`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -11392,7 +11508,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 309. `action distinguishability`
+## 313. `action distinguishability`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** yes
@@ -11415,7 +11531,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 310. `action fluency`
+## 314. `action fluency`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -11438,7 +11554,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 311. `adversarial exponent regimes`
+## 315. `adversarial exponent regime`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11449,9 +11565,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +4 | keep × 3 |
-| adversarial regimes | +2 | rename × 1 |
+| adversarial regime | +2 | rename × 1 |
 
-### Candidate: `adversarial exponent regimes` _(keep)_
+### Candidate: `adversarial exponent regime` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -11461,7 +11577,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +2 (keep) — Acceptable keep. "Exponent regimes" (b = 2, 3/2, ~1) is the right slug — names the three regimes in the result.
 - **sonnet-4-6-r2** +1 (keep) — "Exponent regimes" is a bit technical but accurately names the $b = 2, 3/2, 1$ regime table. Acceptable.
 
-### Candidate: `adversarial regimes`
+### Candidate: `adversarial regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -11471,7 +11587,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 312. `agentic systems framework ASF`
+## 316. `agentic system framework ASF`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -11481,10 +11597,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| agentic systems | +4 | rename × 2 |
-| agentic systems framework | +3 | keep × 1 |
+| agentic system | +4 | rename × 2 |
+| agentic system framework | +3 | keep × 1 |
 
-### Candidate: `agentic systems`
+### Candidate: `agentic system`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -11493,7 +11609,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **codex-1** +1 (rename) — The repo's public face is already "Agentic Systems"; the extra acronym buys little and increases cognitive inventory.
 - **codex-2** +3 (rename) — The extra acronym buys nothing and competes with AAD and TST for scarce reader namespace.
 
-### Candidate: `agentic systems framework`
+### Candidate: `agentic system framework`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -11503,7 +11619,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 313. `aisthesis`
+## 317. `aisthesis`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -11545,7 +11661,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 314. `aisthesis αἴσθησις`
+## 318. `aisthesis αἴσθησις`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -11577,7 +11693,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 315. `and or`
+## 319. `and or`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11640,7 +11756,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 316. `auxilia hierarchy`
+## 320. `auxilia hierarchy`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -11663,7 +11779,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 317. `causal information yield CIY`
+## 321. `causal information yield CIY`
 
 **Voted by architectures:** Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11696,7 +11812,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 318. `century scale event log`
+## 322. `century scale event log`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -11746,7 +11862,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 319. `claude md working conventions`
+## 323. `claude md working convention`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -11758,7 +11874,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +4 | keep × 2 |
 
-### Candidate: `claude md working conventions` _(keep)_
+### Candidate: `claude md working convention` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -11769,7 +11885,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 320. `coherence coupling`
+## 324. `coherence coupling`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11801,7 +11917,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 321. `convention hierarchy`
+## 325. `convention hierarchy`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -11834,7 +11950,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 322. `discrete sector condition`
+## 326. `discrete sector condition`
 
 **Voted by architectures:** Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -11858,7 +11974,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 323. `edge update causal validity`
+## 327. `edge update causal validity`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -11870,8 +11986,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | causal edge update | +4 | rename × 2 |
 | _(keep)_ | +3 | keep × 2 |
-| causal validity | +2 | rename × 1 |
 | edge causal validity | +2 | rename × 1 |
+| causal validity | +2 | rename × 1 |
 | identification regime | +1 | rename × 1 |
 
 ### Candidate: `causal edge update`
@@ -11892,14 +12008,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **haiku-4-5** +1 (keep) — When edge updates are causally valid. Self-descriptive. Keep.
 - **opus-4-7-r2** +2 (keep) — Acceptable keep, though long. The segment defines the Regime A/B/C identifiability lattice for edge updates; the slug correctly compounds the three concepts (edge update, causal validity). I considered shortening to `#scope-causal-validity` but that loses the edge-update specificity (the segment is about a specific identification problem, not a general causal-validity scope).
 
-### Candidate: `causal validity`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **sonnet-4-6-r2** +2 (rename) — "Edge-update-causal-validity" is five words crammed into a slug. The scope is about WHEN edge updates are causally valid — the key concept is causal validity with the edge-update context implied by its position in Section II. Shorter slug does real work.
-
 ### Candidate: `edge causal validity`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -11907,6 +12015,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (rename) — Shorter while preserving the point: when edge evidence identifies causal efficacy.
+
+### Candidate: `causal validity`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **sonnet-4-6-r2** +2 (rename) — "Edge-update-causal-validity" is five words crammed into a slug. The scope is about WHEN edge updates are causally valid — the key concept is causal validity with the edge-update context implied by its position in Section II. Shorter slug does real work.
 
 ### Candidate: `identification regime`
 
@@ -11918,7 +12034,30 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 324. `epistrophe ἐπιστροφή`
+## 328. `epistemic opacity`
+
+**Voted by architectures:** Gemini, audit
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +4 | keep × 2 |
+
+### Candidate: `epistemic opacity` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (keep) — [prose moved from candidate column]: "(keep but flag baggage)" — Auditor flagged that "epistemic opacity" carries philosophy-of-mind prior-art baggage (opacity of mental states) and may need defending against that prior usage; not advocating rename. Mild concern. [from 03-def-observation-function.md]
+- **gemini-targeted-alternatives** +3 (keep) — Specifically distinct from transition opacity.
+
+---
+
+## 329. `epistrophe ἐπιστροφή`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -11950,7 +12089,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 325. `extreme transition motif`
+## 330. `extreme transition motif`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** yes
@@ -11973,39 +12112,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 326. `logozoetic agent`
-
-**Voted by architectures:** Codex, Gemini
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +4 | keep × 2 |
-| sentient agent | -1 | rename × 1 |
-
-### Candidate: `logozoetic agent` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +1 (keep) — Heavier than "logogenic" but still earns the novelty. The existential distinction is real enough to warrant a distinct term.
-- **codex-gpt-5-r2** +3 (keep) — Strong boundary term for living-word or morally continuous agent work. Keep.
-
-### Candidate: `sentient agent`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-1** -1 (rename) — Logozoetic avoids the immense baggage and ambiguity of "sentient". Keep Logozoetic.
-
----
-
-## 327. `mismatch signal $\delta_t$`
+## 331. `mismatch signal $\delta_t$`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -12028,7 +12135,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 328. `operationalization`
+## 332. `operationalization`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -12052,7 +12159,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 329. `p ij edge confidence weight`
+## 333. `p ij edge confidence weight`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** yes
@@ -12075,7 +12182,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 330. `prolepsis πρόληψις`
+## 334. `prolepsis πρόληψις`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -12107,7 +12214,30 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 331. `recursive update derivation`
+## 335. `readme md cross domain joining`
+
+**Voted by architectures:** Codex, Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| readme md cross domain mapping | +4 | rename × 2 |
+
+### Candidate: `readme md cross domain mapping`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-1** +3 (rename) — The section is a mapping table, not a process description. "Mappings" is plainer and more reusable.
+- **opus-4-7-b** +1 (rename) — "Joining" is slightly non-idiomatic in the context; "mapping" is the standard word for the same content (the section is a table mapping AAD concepts across domains). Weak preference.
+
+---
+
+## 336. `recursive update derivation`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -12130,7 +12260,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 332. `separable core structured repair general open`
+## 337. `separable core structured repair general open`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -12153,7 +12283,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 333. `software`
+## 338. `software`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -12185,7 +12315,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 334. `strategy persistence`
+## 339. `strategy persistence`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -12209,7 +12339,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 335. `system coherence`
+## 340. `system coherence`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -12242,7 +12372,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 336. `temporal coherence markers`
+## 341. `temporal coherence marker`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -12253,12 +12383,12 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +4 | keep × 3 |
-| out of band time anchors | +2 | rename × 1 |
-| chronica time anchors | +1 | rename × 1 |
+| out of band time anchor | +2 | rename × 1 |
 | tempo anchoring | +1 | rename × 1 |
-| time anchor signals | -1 | rename × 1 |
+| chronica time anchor | +1 | rename × 1 |
+| time anchor signal | -1 | rename × 1 |
 
-### Candidate: `temporal coherence markers` _(keep)_
+### Candidate: `temporal coherence marker` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -12268,21 +12398,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-targeted-alternatives-v2** +1 (keep) — Acceptable keep. The current is descriptive; the alternative is more operationally precise.
 - **opus-targeted-alternatives** +2 (keep) — Per `#norm-temporal-coherence-markers` (logozoetic): out-of-band time signals (Visual Time Delta) as physical prerequisite for the agent to compute its own tempo $\nu$. "Temporal coherence" names what the markers preserve (the agent's coherent sense of time across its chronica); "markers" is the right object-noun. Keep.
 
-### Candidate: `out of band time anchors`
+### Candidate: `out of band time anchor`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (rename) — Per outline: "Out-of-band temporal markers (Visual Time Delta) as physical prerequisite for internal calculation of tempo $\nu$." The current "temporal coherence markers" undersells the *out-of-band* requirement — the markers must originate outside the agent's compressible state for the tempo calculation to ground in environmental time, not internal clock-drift. "Out-of-band" makes the architectural commitment visible in the slug.
-
-### Candidate: `chronica time anchors`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** +1 (rename) — Names the connection to chronica explicitly (the chronica must have temporal indexing that is consistent with environment time). Weak alternative.
 
 ### Candidate: `tempo anchoring`
 
@@ -12292,7 +12414,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** +1 (rename) — Shorter alternative. Names the *purpose* (anchor tempo $\nu$ to environmental time). Weaker because it loses the "markers" framing — the substantive content is that *something physical and out-of-band* must exist.
 
-### Candidate: `time anchor signals`
+### Candidate: `chronica time anchor`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** +1 (rename) — Names the connection to chronica explicitly (the chronica must have temporal indexing that is consistent with environment time). Weak alternative.
+
+### Candidate: `time anchor signal`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -12302,7 +12432,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 337. `the creche boundary`
+## 342. `the creche boundary`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -12315,8 +12445,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | creche graduation | +4 | rename × 2 |
 | creche graduation threshold | +3 | rename × 1 |
 | creche boundary | +2 | rename × 1, keep × 1 |
-| creche exit condition | +1 | rename × 1 |
 | creche graduation condition | +1 | rename × 1 |
+| creche exit condition | +1 | rename × 1 |
 
 ### Candidate: `creche graduation`
 
@@ -12344,14 +12474,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +1 (rename) — Drop "the" from the slug. Slug-stylistic rather than semantic — slugs in the rest of the corpus generally don't include articles ("the"). The body's "Crèche graduation occurs when..." reads cleanly without the article.
 - **opus-targeted-alternatives-v2** +1 (keep) — Drop "the" only; substantive keep on the threshold-naming.
 
-### Candidate: `creche exit condition`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +1 (rename) — Alternative. "Exit condition" is the formal-systems term; matches FORMAT.md's vocabulary register (scope conditions, persistence conditions). Weaker because "graduation" carries the developmental-trajectory connotation that the crèche concept is grounded in.
-
 ### Candidate: `creche graduation condition`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -12360,9 +12482,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +1 (rename) — Same as above for the def-version; "the" in slug is unusual and the substantive name is "crèche graduation condition."
 
+### Candidate: `creche exit condition`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +1 (rename) — Alternative. "Exit condition" is the formal-systems term; matches FORMAT.md's vocabulary register (scope conditions, persistence conditions). Weaker because "graduation" carries the developmental-trajectory connotation that the crèche concept is grounded in.
+
 ---
 
-## 338. `the four views`
+## 343. `the four view`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -12372,12 +12502,12 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| four views architecture | +4 | rename × 2 |
-| four views | +3 | rename × 2 |
+| four view architecture | +4 | rename × 2 |
+| four view | +3 | rename × 2 |
 | _(keep)_ | +2 | keep × 1 |
 | conversation runtime RLHF7 dialog | -1 | rename × 1 |
 
-### Candidate: `four views architecture`
+### Candidate: `four view architecture`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -12386,7 +12516,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +2 (rename) — Even stronger alternative — names the architectural pattern, not just the four views.
 - **opus-targeted-alternatives-v2** +2 (rename) — Even stronger: include "architecture" since the segment's claim is that the four views are an architectural requirement (not just descriptive views). Pairs with the architectural-class vocabulary in `#der-directed-separation`.
 
-### Candidate: `four views`
+### Candidate: `four view`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -12395,7 +12525,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +1 (rename) — Same article-drop as above. The slug should be #def-four-views (or #def-four-views-architecture for full clarity).
 - **opus-targeted-alternatives-v2** +2 (rename) — Drop "the." Per outline: "The Four Views Architecture (Conversation, Runtime, API, Dialog) as structural requirement for Directed Separation." The four views *are* a thing; the slug should name them.
 
-### Candidate: `the four views` _(keep)_
+### Candidate: `the four view` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -12413,7 +12543,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 339. `the scaffolding tax`
+## 344. `the scaffolding tax`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -12445,7 +12575,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 340. `unity closure mapping`
+## 345. `unity closure mapping`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -12456,8 +12586,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +4 | keep × 4 |
-| closure mapping | +1 | rename × 1 |
 | coherence closure mapping | +1 | rename × 1 |
+| closure mapping | +1 | rename × 1 |
 
 ### Candidate: `unity closure mapping` _(keep)_
 
@@ -12470,14 +12600,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-r2** +1 (keep) — Weak keep, though the slug is heavy. The segment maps the unity dimensions to the closure-defect components via a rate-distortion relation; "mapping" is workable. I considered "unity-closure-rate-distortion" (more precise) but it's even longer.
 - **sonnet-4-6-r2** +1 (keep) — "Unity-closure mapping" names the rate-distortion curve parametrization correctly but is dense. Acceptable; no obvious better alternative.
 
-### Candidate: `closure mapping`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +1 (rename) — Shorter.
-
 ### Candidate: `coherence closure mapping`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -12486,9 +12608,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-2** +1 (rename) — Aligns with changing "Unity dimensions" to "Coherence dimensions".
 
+### Candidate: `closure mapping`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +1 (rename) — Shorter.
+
 ---
 
-## 341. `worked example bandit`
+## 346. `worked example bandit`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -12511,7 +12641,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 342. `worked example kalman`
+## 347. `worked example kalman`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -12534,7 +12664,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 343. `worked example l1`
+## 348. `worked example l1`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -12557,7 +12687,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 344. `worked example strategy`
+## 349. `worked example strategy`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -12580,7 +12710,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 345. `𝒯 σ strategic tempo`
+## 350. `𝒯 σ strategic tempo`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** yes
@@ -12603,7 +12733,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 346. `$O_t$ objective`
+## 351. `$O_t$ objective`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -12634,7 +12764,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 347. `$R$ sector condition radius`
+## 352. `$R$ sector condition radius`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -12656,7 +12786,32 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 348. `$V_{O_t}^{\min}$`
+## 353. `$U_o$ vs $U_O$ collision`
+
+**Voted by architectures:** Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +3 | keep × 4 |
+
+### Candidate: `$U_o$ vs $U_O$ collision` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7** +1 (keep) — [prose moved from candidate column]: "consider renaming teleological unity to $U_\Omega$ or $U_\text{goal}$" — The uppercase/lowercase distinction between observation uncertainty ($U_o$) and teleological unity ($U_O$) is fragile in serif fonts and read-aloud. Worth an audit; a subscript of $\Omega$ or "goal" would be more robust.
+- **opus-targeted-alternatives-v2** +2 (keep) — [prose moved from candidate column]: "`rename teleological unity to $U_\Omega$`" — Per `der-orient-cascade` and the unity-dimensions vocabulary: $U_o$ (observation uncertainty, lowercase o) and $U_O$ (teleological unity, uppercase O) collide in serif fonts and read-aloud. Opus r1 +1; my independent read upgrades to +2 — the collision is a real notation-discipline concern that costs reader-time on every encounter. $\Omega$ is the natural choice (Greek omega for "objective" / "outcome") and avoids the case-sensitivity fragility.
+- **opus-targeted-alternatives-v2** +1 (keep) — [prose moved from candidate column]: "`rename teleological unity to $U_{\text{goal}}$`" — Variant. Subscript text is more discoverable but heavier in formula. Acceptable fallback.
+- **opus-targeted-alternatives-v2** -1 (keep) — [prose moved from candidate column]: "`keep both, document the collision`" — Considered. Footnote / NOTATION convention rather than rename. Rejected: footnotes don't prevent reader stumbles; the rename is mechanical-cost-low and reader-cost-high if not done.
+
+---
+
+## 354. `$V_{O_t}^{\min}$`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -12688,7 +12843,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 349. `$\Sigma_t$ strategy`
+## 355. `$\Sigma_t$ strategy`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -12719,7 +12874,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 350. `$\alpha$ lower sector bound`
+## 356. `$\alpha$ lower sector bound`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -12741,7 +12896,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 351. `$\alpha$ sector condition lower bound`
+## 357. `$\alpha$ sector condition lower bound`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -12772,7 +12927,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 352. `$\alpha_1$`
+## 358. `$\alpha_1$`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -12803,7 +12958,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 353. `$\alpha_1$ $\alpha_2$ $\beta$ partition`
+## 359. `$\alpha_1$ $\alpha_2$ $\beta$ partition`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -12813,9 +12968,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| fixed gain adaptive gain drift regimes | +3 | add-alias × 1 |
+| fixed gain adaptive gain drift regime | +3 | add-alias × 1 |
 
-### Candidate: `fixed gain adaptive gain drift regimes`
+### Candidate: `fixed gain adaptive gain drift regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -12825,7 +12980,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 354. `$\alpha_2$`
+## 360. `$\alpha_2$`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -12856,7 +13011,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 355. `$\beta$ a2 assumed sector sub scope`
+## 361. `$\beta$ a2 assumed sector sub scope`
 
 **Voted by architectures:** Haiku, Opus, agent1
 **Category disagreement on top finalist:** no
@@ -12889,7 +13044,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 356. `$\delta_{\text{regret}}$`
+## 362. `$\delta_{\text{regret}}$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -12911,7 +13066,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 357. `$\delta_{\text{regret}}$ control regret`
+## 363. `$\delta_{\text{regret}}$ control regret`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -12942,7 +13097,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 358. `$\delta_{\text{sat}}$`
+## 364. `$\delta_{\text{sat}}$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -12964,7 +13119,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 359. `$\delta_{\text{sat}}$ satisfaction gap`
+## 365. `$\delta_{\text{sat}}$ satisfaction gap`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -12995,7 +13150,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 360. `$\eta_{ji}^\ast$`
+## 366. `$\eta_{ji}^\ast$`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
@@ -13026,7 +13181,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 361. `$\gamma_{\text{adv}}$ and $\gamma_{\text{coop}}$`
+## 367. `$\gamma_{\text{adv}}$ and $\gamma_{\text{coop}}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -13048,7 +13203,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 362. `$\hat o_t$`
+## 368. `$\hat o_t$`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -13080,7 +13235,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 363. `$\hat{P}_\Sigma$`
+## 369. `$\hat{P}_\Sigma$`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
@@ -13111,7 +13266,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 364. `$\lambda_{\text{surv}}$`
+## 370. `$\lambda_{\text{surv}}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -13133,7 +13288,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 365. `$\mathcal C_t$ for chronica`
+## 371. `$\mathcal C_t$ for chronica`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -13155,7 +13310,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 366. `$\rho$`
+## 372. `$\rho$`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -13186,7 +13341,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 367. `$\rho$ mismatch injection rate`
+## 373. `$\rho$ mismatch injection rate`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -13208,7 +13363,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 368. `01 AAD core outline md`
+## 374. `01 AAD core outline md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -13230,7 +13385,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 369. `02 TST core outline md`
+## 375. `02 TST core outline md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -13252,7 +13407,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 370. `02 TST core outline md software as agentic domain`
+## 376. `02 TST core outline md software as agentic domain`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -13274,7 +13429,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 371. `AAD`
+## 377. `AAD`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -13314,7 +13469,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 372. `AAD AAD internal AAD internally`
+## 378. `AAD AAD internal AAD internally`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -13345,7 +13500,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 373. `CIY unified objective`
+## 379. `CIY unified objective`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -13357,8 +13512,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | value information objective | +3 | rename × 1 |
 | exploration exploitation unification | +2 | rename × 1 |
-| _(keep)_ | +1 | keep × 1 |
 | unified objective | +1 | rename × 1 |
+| _(keep)_ | +1 | keep × 1 |
 | joint objective | +1 | rename × 1 |
 
 ### Candidate: `value information objective`
@@ -13377,14 +13532,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6-r2** +2 (rename) — "CIY-unified" frontloads an acronym and a verb in the slug. The segment names the joint exploitation-exploration objective via CIY — but the interesting thing is the unification, not CIY per se. However this is long.
 
-### Candidate: `CIY unified objective` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **haiku-4-5** +1 (keep) — Joint exploitation-exploration objective. Reads naturally. Keep.
-
 ### Candidate: `unified objective`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -13392,6 +13539,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +1 (rename) — CIY is context.
+
+### Candidate: `CIY unified objective` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **haiku-4-5** +1 (keep) — Joint exploitation-exploration objective. Reads naturally. Keep.
 
 ### Candidate: `joint objective`
 
@@ -13403,7 +13558,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 374. `OODA boyd`
+## 380. `OODA boyd`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -13434,7 +13589,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 375. `OODA4 agent as act agent logogenic`
+## 381. `OODA4 agent as act agent logogenic`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -13456,7 +13611,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 376. `a2 prime sub scope partition`
+## 382. `a2 prime sub scope partition`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -13466,17 +13621,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| sector scope partition | +3 | add-alias × 1 |
 | sector condition scope | +3 | add-alias × 1 |
+| sector scope partition | +3 | add-alias × 1 |
 | sector bounded operating region | +2 | rename × 1 |
-
-### Candidate: `sector scope partition`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +3 (add-alias) — Strong umbrella for alpha_1, alpha_2, beta, alpha_3, and future sub-scope labels.
 
 ### Candidate: `sector condition scope`
 
@@ -13485,6 +13632,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (add-alias) — A plain English explanation of the $\alpha_2$ partition.
+
+### Candidate: `sector scope partition`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +3 (add-alias) — Strong umbrella for alpha_1, alpha_2, beta, alpha_3, and future sub-scope labels.
 
 ### Candidate: `sector bounded operating region`
 
@@ -13496,7 +13651,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 377. `a2 sub scope partition`
+## 383. `a2 sub scope partition`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -13527,7 +13682,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 378. `accumulated loss across context resets`
+## 384. `accumulated loss across context reset`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -13558,7 +13713,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 379. `action transition`
+## 385. `action transition`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -13592,7 +13747,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 380. `actuated vs purposeful goal oriented`
+## 386. `actuated vs purposeful goal oriented`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -13614,7 +13769,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 381. `adaptation and actuation dynamics`
+## 387. `adaptation and actuation dynamics`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -13636,7 +13791,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 382. `additive coordinate forcing → disc forced coordinates`
+## 388. `additive coordinate forcing → disc forced coordinate`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -13646,10 +13801,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| forced additive coordinates | +3 | rename × 1 |
+| forced additive coordinate | +3 | rename × 1 |
 | confirming consensus 3 | +2 | rename × 1 |
 
-### Candidate: `forced additive coordinates`
+### Candidate: `forced additive coordinate`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -13667,7 +13822,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 383. `agent classes class 1 2 3`
+## 389. `agent classe class 1 2 3`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -13678,7 +13833,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | goal entanglement hierarchy | +3 | canonicalize × 1 |
-| architectural classes | +2 | canonicalize × 1 |
+| architectural classe | +2 | canonicalize × 1 |
 
 ### Candidate: `goal entanglement hierarchy`
 
@@ -13688,7 +13843,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizing the previously resolved rename.
 
-### Candidate: `architectural classes`
+### Candidate: `architectural classe`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -13698,7 +13853,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 384. `agentic cycle theory act`
+## 390. `agentic cycle theory act`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -13708,8 +13863,16 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
+| agentic system framework | +3 | canonicalize × 1 |
 | AAD adaptation and actuation dynamics | +3 | rename × 1 |
-| agentic systems framework | +3 | canonicalize × 1 |
+
+### Candidate: `agentic system framework`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — The new overarching framework name replacing ACT.
 
 ### Candidate: `AAD adaptation and actuation dynamics`
 
@@ -13719,17 +13882,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +3 (rename) — The old name. Ensure all legacy references are scrubbed.
 
-### Candidate: `agentic systems framework`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — The new overarching framework name replacing ACT.
-
 ---
 
-## 385. `agentic systems`
+## 391. `agentic system`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -13741,7 +13896,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +3 | keep × 1 |
 
-### Candidate: `agentic systems` _(keep)_
+### Candidate: `agentic system` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -13751,7 +13906,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 386. `alpha prime sub scope`
+## 392. `alpha prime sub scope`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -13782,7 +13937,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 387. `alpha1 fixed gain a2 sub scope`
+## 393. `alpha1 fixed gain a2 sub scope`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -13804,7 +13959,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 388. `alpha2 adaptive gain a2 sub scope`
+## 394. `alpha2 adaptive gain a2 sub scope`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -13826,7 +13981,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 389. `aporia as the phase name`
+## 395. `aporia as the phase name`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -13848,7 +14003,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 390. `aporia prolepsis aisthesis epistrophe praxis`
+## 396. `aporia prolepsis aisthesis epistrophe praxi`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -13858,8 +14013,16 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
+| _(keep)_ | +3 | keep × 1 |
 | greek rooted vocabulary | +3 | canonicalize × 1 |
-| keep as a set | +3 | keep × 1 |
+
+### Candidate: `aporia prolepsis aisthesis epistrophe praxi` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-b** +3 (keep) — [prose moved from candidate column]: "*(keep as a set)*" — The Greek cycle-phase vocabulary works *because* it refuses the flatness of "predict / observe / mismatch / update / act." The README §"Why these terms earn their weight" is load-bearing justification and should not be touched. Keep all five.
 
 ### Candidate: `greek rooted vocabulary`
 
@@ -13869,17 +14032,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Collectivizes the five distinctive process stages.
 
-### Candidate: `keep as a set`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +3 (keep) — The Greek cycle-phase vocabulary works *because* it refuses the flatness of "predict / observe / mismatch / update / act." The README §"Why these terms earn their weight" is load-bearing justification and should not be touched. Keep all five.
-
 ---
 
-## 391. `appendices details`
+## 397. `appendice detail`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -13890,9 +14045,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +3 | canonicalize × 1 |
-| appendices derivations and details | +1 | rename × 1 |
+| appendice derivation and detail | +1 | rename × 1 |
 
-### Candidate: `appendices details` _(keep)_
+### Candidate: `appendice detail` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -13900,7 +14055,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard markdown section header.
 
-### Candidate: `appendices derivations and details`
+### Candidate: `appendice derivation and detail`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -13910,7 +14065,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 392. `appendices operational domains`
+## 398. `appendice operational domain`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -13922,7 +14077,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +3 | keep × 1 |
 
-### Candidate: `appendices operational domains` _(keep)_
+### Candidate: `appendice operational domain` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -13932,7 +14087,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 393. `beta prime sub scope`
+## 399. `beta prime sub scope`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -13963,7 +14118,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 394. `boundary condition`
+## 400. `boundary condition`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -13994,7 +14149,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 395. `bounded disturbance ga 2 model d`
+## 401. `bounded disturbance ga 2 model d`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -14004,16 +14159,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| bounded disturbance | +3 | rename × 1 |
 | model d bounded disturbance | +3 | canonicalize × 1 |
-
-### Candidate: `bounded disturbance`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **sonnet-4-6** +3 (rename) — Clear. Keep.
+| bounded disturbance | +3 | rename × 1 |
 
 ### Candidate: `model d bounded disturbance`
 
@@ -14023,9 +14170,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the specific disturbance model.
 
+### Candidate: `bounded disturbance`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **sonnet-4-6** +3 (rename) — Clear. Keep.
+
 ---
 
-## 396. `bretagnolle huber identity`
+## 402. `bretagnolle huber identity`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -14074,7 +14229,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 397. `brooks s law formalized as the inevitable tempo loss in team composition`
+## 403. `brook law formalized as the inevitable tempo loss in team composition`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -14105,7 +14260,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 398. `bruineberg s pearl-blanket`
+## 404. `bruineberg pearl-blanket`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -14136,7 +14291,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 399. `bruineberg s pearl-blanket friston-blanket`
+## 405. `bruineberg pearl-blanket friston-blanket`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -14146,16 +14301,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| pearl-blanket interpretation | +3 | canonicalize × 1 |
 | pearl-blanket friston-blanket | +3 | keep × 1 |
-
-### Candidate: `pearl-blanket interpretation`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Clarifies the exact reading of Markov blankets used in AAD.
+| pearl-blanket interpretation | +3 | canonicalize × 1 |
 
 ### Candidate: `pearl-blanket friston-blanket`
 
@@ -14165,9 +14312,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-1m** +3 (keep) — Adopted (Bruineberg 2022, credit Martin Biehl per fn 3 of that paper per citation audit); keep.
 
+### Candidate: `pearl-blanket interpretation`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Clarifies the exact reading of Markov blankets used in AAD.
+
 ---
 
-## 400. `c i`
+## 406. `c i`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14198,7 +14353,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 401. `c i c ii c iii c iv`
+## 407. `c i c ii c iii c iv`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -14208,9 +14363,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| composition routes | +3 | canonicalize × 1 |
+| composition route | +3 | canonicalize × 1 |
 
-### Candidate: `composition routes`
+### Candidate: `composition route`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -14220,7 +14375,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 402. `c ii`
+## 408. `c ii`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14251,7 +14406,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 403. `c iii`
+## 409. `c iii`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14282,7 +14437,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 404. `c iv`
+## 410. `c iv`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -14304,7 +14459,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 405. `calibration laboratory domain instantiation`
+## 411. `calibration laboratory domain instantiation`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14335,7 +14490,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 406. `calibration laboratory framing for TST`
+## 412. `calibration laboratory framing for TST`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -14366,7 +14521,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 407. `candidate stage`
+## 413. `candidate stage`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -14397,7 +14552,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 408. `catastrophic forgetting`
+## 414. `catastrophic forgetting`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -14428,7 +14583,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 409. `causal OODA1 exploration`
+## 415. `causal OODA1 exploration`
 
 **Voted by architectures:** Codex, Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -14468,7 +14623,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 410. `chain confidence decay keep`
+## 416. `chain confidence decay keep`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -14499,7 +14654,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 411. `chronica in running prose`
+## 417. `chronica in running prose`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14530,7 +14685,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 412. `claims verified deps verified format clean`
+## 418. `claim verified deps verified format clean`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -14542,7 +14697,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +3 | keep × 1 |
 
-### Candidate: `claims verified deps verified format clean` _(keep)_
+### Candidate: `claim verified deps verified format clean` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -14552,9 +14707,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 413. `class 1 class 2 class 3`
+## 419. `class 1 agent`
 
-**Voted by architectures:** Codex, Gemini, Opus
+**Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** _(pending — agent-pass B)_
@@ -14562,22 +14717,31 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| modular merged scaffolded architecture classes | +3 | add-alias × 1 |
-| goal entanglement hierarchy | +3 | rename × 1 |
-| modular merged scaffolded | +2 | rename × 1 |
-| architecture classes | +2 | canonicalize × 1 |
-| modular coupled scaffolded | +2 | rename × 1 |
-| modularity partition | +2 | rename × 1 |
-| modular integrated partially coupled | +1 | rename × 1 |
-| _(keep)_ | -1 | keep × 1 |
+| modular agent | +3 | rename × 1 |
 
-### Candidate: `modular merged scaffolded architecture classes`
+### Candidate: `modular agent`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **codex-gpt-5-r2** +3 (add-alias) — Better prose handles than bare class numbers. My preferred trio avoids overloading integrated and keeps Class 3's external-architecture role visible.
+- **gemini-1** +3 (rename) — "Class X" requires a lookup every time. Naming the architectural property directly is much more memorable and scope-honest. [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.]
+
+---
+
+## 420. `class 1 class 2 class 3`
+
+**Voted by architectures:** Codex, Gemini
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| goal entanglement hierarchy | +3 | rename × 1 |
+| architecture classe | +2 | canonicalize × 1 |
+| modularity partition | +2 | rename × 1 |
 
 ### Candidate: `goal entanglement hierarchy`
 
@@ -14587,29 +14751,13 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (rename) — Directly describes what the classes measure (how much $G_t$ entangles with $M_t$ updates).
 
-### Candidate: `modular merged scaffolded`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (rename) — Per `der-directed-separation`: Class 1 = modular (separation by construction), Class 2 = fully merged (fails by construction), Class 3 = partially modular / scaffolded. Names the *architectural property* directly. Codex r1 +3 single-vote. The English labels make "this lands in Class 2" → "this lands in fully-merged" — much more readable.
-
-### Candidate: `architecture classes`
+### Candidate: `architecture classe`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Canonical umbrella helps avoid overloading class numbers across sections.
-
-### Candidate: `modular coupled scaffolded`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (rename) — Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest.
 
 ### Candidate: `modularity partition`
 
@@ -14619,25 +14767,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Classes are precisely modular, partially modular, and merged.
 
-### Candidate: `modular integrated partially coupled`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +1 (rename) — Gemini's r1 +3 single-vote alternative. "Integrated" is too positive a word for what Class 2 *is* (a known failure mode). "Coupled" or "merged" reads more honestly.
-
-### Candidate: `class 1 class 2 class 3` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** -1 (keep) — Considered. The numbered classes are easy to learn and parallel-shaped. Rejected: per principles file, *role*-naming via numbers fails the subject-noun-first principle. The architectural property *is* the subject-noun.
-
 ---
 
-## 414. `class 1 class 2 class 3 agents`
+## 421. `class 1 class 2 class 3 agent`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -14648,7 +14780,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | goal entanglement hierarchy | +3 | canonicalize × 1 |
-| modular integrated partially coupled agents | +3 | rename × 1 |
 
 ### Candidate: `goal entanglement hierarchy`
 
@@ -14658,17 +14789,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the structural property behind the classes.
 
-### Candidate: `modular integrated partially coupled agents`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-1** +3 (rename) — "Class X" requires a lookup every time. Naming the architectural property directly is much more memorable and scope-honest.
-
 ---
 
-## 415. `class 1 subagents forming a class 3 composite`
+## 422. `class 1 subagent forming a class 3 composite`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14699,7 +14822,51 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 416. `claude md`
+## 423. `class 2 agent`
+
+**Voted by architectures:** Gemini
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| integrated agent | +3 | rename × 1 |
+
+### Candidate: `integrated agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-1** +3 (rename) — Class 2 = integrated (the goal-entangled architecture). Companion to Modular (Class 1) and Partially-Coupled (Class 3). [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.]
+
+---
+
+## 424. `class 3 agent`
+
+**Voted by architectures:** Gemini
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| partially coupled agent | +3 | rename × 1 |
+
+### Candidate: `partially coupled agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-1** +3 (rename) — Class 3 = partially-coupled. Companion to Modular (Class 1) and Integrated (Class 2). [original row: Class 1/2/3 trio voted +3 as a unit; split into atomic per-class rows.]
+
+---
+
+## 425. `claude md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -14721,7 +14888,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 417. `closure defect bridge lemma`
+## 426. `closure defect bridge lemma`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14752,7 +14919,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 418. `closure defect consuming macro reserve`
+## 427. `closure defect consuming macro reserve`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -14783,7 +14950,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 419. `coherence coupling measurement`
+## 428. `coherence coupling measurement`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -14815,7 +14982,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 420. `communication gain $\eta_{ji}^\ast$`
+## 429. `communication gain $\eta_{ji}^\ast$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -14847,7 +15014,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 421. [Concept] *The multiplicative κ processing × 𝒜 scaling of class 2 directional drift and its consequent goal conformant failure regime*
+## 430. [Concept] *The multiplicative κ processing × 𝒜 scaling of class 2 directional drift and its consequent goal conformant failure regime*
 
 *Post-consolidation concept cluster.*
 
@@ -14859,19 +15026,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| ambiguity bounded bias law | +3 | name-unnamed × 1 |
 | the sycophancy equation | +3 | name-unnamed × 1 |
+| ambiguity bounded bias law | +3 | name-unnamed × 1 |
 | zero ambiguity conditioning | +3 | name-unnamed × 1 |
 | the κ × 𝒜 product | +2 | name-unnamed × 1 |
 | the sycophancy attractor | +2 | name-unnamed × 1 |
-
-### Candidate: `ambiguity bounded bias law`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The foundational theorem of prompt engineering and LLM agent design ($\kappa \times \mathcal{A}$). [original phrasing: unnamed: the rule that bias is the product of architectural coupling and environmental ambiguity]
 
 ### Candidate: `the sycophancy equation`
 
@@ -14880,6 +15039,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — Beautifully explains LLM sycophancy as a structural, not moral, failing. [original phrasing: unnamed: the product of architectural coupling ($\kappa$) and environmental ambiguity ($\mathcal{A}$)]
+
+### Candidate: `ambiguity bounded bias law`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The foundational theorem of prompt engineering and LLM agent design ($\kappa \times \mathcal{A}$). [original phrasing: unnamed: the rule that bias is the product of architectural coupling and environmental ambiguity]
 
 ### Candidate: `zero ambiguity conditioning`
 
@@ -14907,7 +15074,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 422. [Concept] *The sequence of cycle phases prolepsis aisthesis aporia epistrophe praxis considered as a single named whole*
+## 431. [Concept] *The sequence of cycle phase prolepsis aisthesis aporia epistrophe praxi considered as a single named whole*
 
 *Post-consolidation concept cluster.*
 
@@ -14919,15 +15086,23 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| adaptive cycle | +3 | canonicalize × 1 |
 | orient cascade | +3 | canonicalize × 1 |
+| adaptive cycle | +3 | canonicalize × 1 |
+| five adaptive cycle phase | +2 | rename × 1 |
+| adaptive cycle phase | +2 | rename × 1 |
 | the adaptive pentad | +2 | name-unnamed × 2 |
-| adaptive cycle phases | +2 | rename × 1 |
-| five adaptive cycle phases | +2 | rename × 1 |
 | adaptive traversal | +1 | name-unnamed × 1 |
-| the pentad | +1 | name-unnamed × 1 |
 | the pentad five phase cycle | +1 | name-unnamed × 1 |
+| the pentad | +1 | name-unnamed × 1 |
 | the five turn | -1 | name-unnamed × 1 |
+
+### Candidate: `orient cascade`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Maps the specific five-phase execution order. [original phrasing: unnamed cycle phase sequence as whole]
 
 ### Candidate: `adaptive cycle`
 
@@ -14937,13 +15112,21 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — The generic term for the Prolepsis-Praxis loop. [original phrasing: unnamed the complete adaptive cycle from anticipation through action]
 
-### Candidate: `orient cascade`
+### Candidate: `five adaptive cycle phase`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **gemini-targeted-alternatives** +3 (canonicalize) — Maps the specific five-phase execution order. [original phrasing: unnamed cycle phase sequence as whole]
+- **gemini-targeted-alternatives** +2 (rename) — Collective grouping. [original phrasing: the five cycle phases prolepsis aisthesis aporia epistrophe praxis]
+
+### Candidate: `adaptive cycle phase`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Collectivizes Prolepsis, Aisthesis, Aporia, Epistrophe, and Praxis. [original phrasing: unnamed the five phases of the adaptive cycle]
 
 ### Candidate: `the adaptive pentad`
 
@@ -14954,22 +15137,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-1** +1 (name-unnamed) — Provides a single memorable noun for the 5-phase cycle (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis) as a complete unit. [original phrasing: unnamed: cycle-phase sequence as a whole]
 - **opus-4-7-b** +1 (name-unnamed) — The five-phase cycle (prolepsis → aisthesis → aporia → epistrophe → praxis) has a piecewise name per phase but no *collective* noun. "The cycle" works when context is clear but is ambiguous with (e.g.) credit cycles or OODA cycles. "The pentad" or "the adaptive pentad" is a specific collective noun that fits AAD's Greek-vocabulary commitment. Weak preference; aesthetic call. [original phrasing: unnamed: the cycle-as-a-whole]
 
-### Candidate: `adaptive cycle phases`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Collectivizes Prolepsis, Aisthesis, Aporia, Epistrophe, and Praxis. [original phrasing: unnamed the five phases of the adaptive cycle]
-
-### Candidate: `five adaptive cycle phases`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Collective grouping. [original phrasing: the five cycle phases prolepsis aisthesis aporia epistrophe praxis]
-
 ### Candidate: `adaptive traversal`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -14978,14 +15145,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-2** +1 (name-unnamed) — "The cycle-as-a-whole" is clunky. "Adaptive traversal" suggests moving through the loop. [original phrasing: unnamed: The cycle-as-a-whole]
 
-### Candidate: `the pentad`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-1m** +1 (name-unnamed) — Agree with original. Low priority. Names the five-phase sequence as a unit. [original phrasing: unnamed: cycle-phase sequence as a whole]
-
 ### Candidate: `the pentad five phase cycle`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -14993,6 +15152,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** +1 (name-unnamed) — Probably not worth effort. Worth surfacing. [original phrasing: unnamed: cycle-phase sequence as whole]
+
+### Candidate: `the pentad`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-1m** +1 (name-unnamed) — Agree with original. Low priority. Names the five-phase sequence as a unit. [original phrasing: unnamed: cycle-phase sequence as a whole]
 
 ### Candidate: `the five turn`
 
@@ -15004,7 +15171,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 423. [Concept] *The upper bound on what a given model class can express and the consequent constraint on feasible strategy complexity*
+## 432. [Concept] *The upper bound on what a given model class can express and the consequent constraint on feasible strategy complexity*
 
 *Post-consolidation concept cluster.*
 
@@ -15046,7 +15213,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 424. `context wiping at session boundaries`
+## 433. `context wiping at session boundary`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -15077,7 +15244,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 425. `continuity persistence`
+## 434. `continuity persistence`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -15108,7 +15275,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 426. `contraction hierarchy`
+## 435. `contraction hierarchy`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -15139,7 +15306,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 427. `contraction over drift principle`
+## 436. `contraction over drift principle`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -15170,7 +15337,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 428. `coordination overhead threshold`
+## 437. `coordination overhead threshold`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15211,7 +15378,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 429. `correlated evidence overconfidence`
+## 438. `correlated evidence overconfidence`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -15233,7 +15400,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 430. `coupled diagnostic framework`
+## 439. `coupled diagnostic framework`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -15243,20 +15410,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +3 | keep × 2 |
 | coupled diagnostic pass | +3 | rename × 2 |
+| _(keep)_ | +3 | keep × 2 |
 | coupled diagnostics | +2 | rename × 1 |
-| hoc diagnostics | +1 | rename × 1 |
 | coupled diagnostic decomposition | +1 | rename × 1 |
-
-### Candidate: `coupled diagnostic framework` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +1 (keep) — Weak keep. "Framework" is one of the principles file's flagged placeholder words; here it's accurate enough (the segment names a diagnostic *framework* for Class 2 agents) but I could see the case for "diagnostic-decomposition" or "diagnostic-construction." Mild.
-- **sonnet-4-6-r2** +2 (keep) — "Coupled diagnostic framework" names the Section II results that survive as a coupled formulation for logogenic agents. Precise.
+| hoc diagnostics | +1 | rename × 1 |
 
 ### Candidate: `coupled diagnostic pass`
 
@@ -15267,6 +15425,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **codex-2** +1 (rename) — "Framework" is abstract; the segment is really a post-update procedure.
 - **codex-gpt-5-r2** +2 (rename) — Pass is more operational than framework and fits the post-hoc procedure. Coupled diagnostics remains acceptable as the shorter prose name.
 
+### Candidate: `coupled diagnostic framework` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** +1 (keep) — Weak keep. "Framework" is one of the principles file's flagged placeholder words; here it's accurate enough (the segment names a diagnostic *framework* for Class 2 agents) but I could see the case for "diagnostic-decomposition" or "diagnostic-construction." Mild.
+- **sonnet-4-6-r2** +2 (keep) — "Coupled diagnostic framework" names the Section II results that survive as a coupled formulation for logogenic agents. Precise.
+
 ### Candidate: `coupled diagnostics`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -15274,14 +15441,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (rename) — Framework is a weak generic noun. Diagnostics is the actual deliverable.
-
-### Candidate: `hoc diagnostics`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +1 (rename) — "Framework" is generic filler here. The distinctive move is diagnostic extraction after the coupled update.
 
 ### Candidate: `coupled diagnostic decomposition`
 
@@ -15291,9 +15450,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +1 (rename) — Alternative — "decomposition" names the formal move (post-hoc decomposition from coupled update); "framework" is more diffuse.
 
+### Candidate: `hoc diagnostics`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-1** +1 (rename) — "Framework" is generic filler here. The distinctive move is diagnostic extraction after the coupled update.
+
 ---
 
-## 431. `cox s theorem causal hierarchy theorem tikhonov s theorem`
+## 440. `cox theorem causal hierarchy theorem tikhonov theorem`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15304,7 +15471,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | do not rename | +3 | keep × 1 |
-| foundational anchors | +2 | rename × 1 |
+| foundational anchor | +2 | rename × 1 |
 
 ### Candidate: `do not rename`
 
@@ -15314,7 +15481,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +3 (keep) — Same — FORMAT.md §"Why these labels" explicitly preserves external theorem names.
 
-### Candidate: `foundational anchors`
+### Candidate: `foundational anchor`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -15324,7 +15491,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 432. `crossing from multi agent to composite scope`
+## 441. `crossing from multi agent to composite scope`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -15355,7 +15522,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 433. `crèche creche`
+## 442. `crèche creche`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15366,7 +15533,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | the crèche | +3 | keep × 1 |
-| crèche with diacritic in framing prose creche in slugs | +2 | canonicalize × 1 |
+| crèche with diacritic in framing prose creche in slug | +2 | canonicalize × 1 |
 
 ### Candidate: `the crèche`
 
@@ -15376,7 +15543,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (keep) — The high-margin developmental environment.
 
-### Candidate: `crèche with diacritic in framing prose creche in slugs`
+### Candidate: `crèche with diacritic in framing prose creche in slug`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -15386,56 +15553,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 434. `cycle vs loop`
-
-**Voted by architectures:** Gemini, Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| keep both maintain distinction | +3 | keep × 1 |
-| _(keep)_ | +3 | keep × 1 |
-| maintain distinction | +3 | keep × 1 |
-| cycle loop distinction | +2 | canonicalize × 1 |
-
-### Candidate: `keep both maintain distinction`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +3 (keep) — README §"Loop vs. Cycle" makes this distinction load-bearing (loop = structural topology, cycle = one traversal). The distinction is one of AAD's best small naming moves and should be enforced in every segment.
-
-### Candidate: `cycle vs loop` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7** +3 (keep) — See above — the two-word disambiguation is one of the theory's most useful vocabulary moves. Keep.
-
-### Candidate: `maintain distinction`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (keep) — The distinction (loop = structural topology, cycle = one traversal) is a core piece of vocabulary.
-
-### Candidate: `cycle loop distinction`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** +2 (canonicalize) — The row names the *distinction* not a candidate. The substantive position is that loop = topology, cycle = traversal — a distinction worth preserving. Canonicalize the row's referent to "the cycle / loop distinction" as a named architectural commitment.
-
----
-
-## 435. `da2 inc ≡ ct2 at m i equivalence`
+## 443. `da2 inc ≡ ct2 at m i equivalence`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -15457,7 +15575,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 436. `da2 prime inc`
+## 444. `da2 prime inc`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -15479,7 +15597,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 437. `da2 prime inc equals ct2 at m equals i`
+## 445. `da2 prime inc equal ct2 at m equal i`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -15501,7 +15619,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 438. `dark room exploration drive`
+## 446. `dark room exploration drive`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -15532,7 +15650,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 439. `derivation audit tables`
+## 447. `derivation audit table`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -15544,7 +15662,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +3 | keep × 1 |
 
-### Candidate: `derivation audit tables` _(keep)_
+### Candidate: `derivation audit table` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -15554,7 +15672,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 440. `developer as act agent TST`
+## 448. `developer as act agent TST`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15585,7 +15703,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 441. `developmental trajectory`
+## 449. `developmental trajectory`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -15618,7 +15736,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 442. `discussion segment header`
+## 450. `discussion segment header`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15649,7 +15767,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 443. `dual optimization`
+## 451. `dual optimization`
 
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -15661,8 +15779,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +3 | keep × 3 |
 | development time decomposition | +2 | rename × 1 |
-| comprehension implementation optimization | +1 | rename × 1 |
 | dual cost optimization | +1 | rename × 1 |
+| comprehension implementation optimization | +1 | rename × 1 |
 | comprehension implementation tradeoff | -1 | rename × 1 |
 
 ### Candidate: `dual optimization` _(keep)_
@@ -15683,14 +15801,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (rename) — Dual optimization is overloaded. The derivation decomposes development time into comprehension and implementation components.
 
-### Candidate: `comprehension implementation optimization`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-1** +1 (rename) — "Dual optimization" is pure abstraction. The contribution is jointly optimizing future comprehension and implementation cost, and the name should say that.
-
 ### Candidate: `dual cost optimization`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -15698,6 +15808,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **gemini-1** +1 (rename) — Adding "cost" clarifies that we are minimizing the dual costs of comprehension and implementation.
+
+### Candidate: `comprehension implementation optimization`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-1** +1 (rename) — "Dual optimization" is pure abstraction. The contribution is jointly optimizing future comprehension and implementation cost, and the name should say that.
 
 ### Candidate: `comprehension implementation tradeoff`
 
@@ -15709,7 +15827,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 444. `edge update natural parameter`
+## 452. `edge update natural parameter`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -15722,8 +15840,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | log odds edge update | +3 | rename × 1 |
 | log odds edge coordinate | +3 | rename × 1 |
 | _(keep)_ | +1 | keep × 1 |
-| log odds update | +1 | rename × 1 |
 | natural edge update | +1 | rename × 1 |
+| log odds update | +1 | rename × 1 |
 
 ### Candidate: `log odds edge update`
 
@@ -15749,14 +15867,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **haiku-4-5** +1 (keep) — Log-odds as unique additive-evidence coordinate for edge credences (evidential-additivity axiom). Compound but specialist-vocabulary (natural parameter is information-geometric term). Keep.
 
-### Candidate: `log odds update`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +1 (rename) — The segment's content is "log-odds is the unique additive-evidence coordinate for edge credences under evidential additivity (Cauchy-FE)." The current slug ("natural parameter") leans on exponential-family vocabulary that the segment derives *to*, not from. `#log-odds-update` names the derived coordinate and is shorter; "natural parameter" can live in the subtitle. Modest preference.
-
 ### Candidate: `natural edge update`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -15765,9 +15875,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +1 (rename) — Flows better.
 
+### Candidate: `log odds update`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-b** +1 (rename) — The segment's content is "log-odds is the unique additive-evidence coordinate for edge credences under evidential additivity (Cauchy-FE)." The current slug ("natural parameter") leans on exponential-family vocabulary that the segment derives *to*, not from. `#log-odds-update` names the derived coordinate and is shorter; "natural parameter" can live in the subtitle. Modest preference.
+
 ---
 
-## 445. `epistemic architecture for bounded correction under decomposed disturbance`
+## 453. `epistemic architecture for bounded correction under decomposed disturbance`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -15798,38 +15916,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 446. `epistemic opacity`
-
-**Voted by architectures:** Gemini, audit
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +3 | keep × 1 |
-| keep but flag baggage | +1 | keep × 1 |
-
-### Candidate: `epistemic opacity` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (keep) — Specifically distinct from transition opacity.
-
-### Candidate: `keep but flag baggage`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (keep) — Auditor flagged that "epistemic opacity" carries philosophy-of-mind prior-art baggage (opacity of mental states) and may need defending against that prior usage; not advocating rename. Mild concern. [from 03-def-observation-function.md]
-
----
-
-## 447. `epistemic status segment header`
+## 454. `epistemic status segment header`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15860,7 +15947,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 448. `epistemic substate purposeful substate`
+## 455. `exact robust qualitative heuristic conditional claim tier`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15870,41 +15957,18 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep canonical pairing | +3 | keep × 1 |
 | _(keep)_ | +3 | canonicalize × 1 |
+| epistemic claim tier | +3 | rename × 1 |
 
-### Candidate: `keep canonical pairing`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (keep) — The exact pairing is load-bearing in Directed Separation discussions ($M_t$ vs $G_t$).
-
-### Candidate: `epistemic substate purposeful substate` _(keep)_
+### Candidate: `exact robust qualitative heuristic conditional claim tier` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-r2** +3 (canonicalize) — Defended canonicalization. The pairing $M_t$ (epistemic substate) / $G_t$ (purposeful substate) is iconic; do not paraphrase as "belief state" / "goal state" or "model" / "purpose" (which collide with other usages).
+- **opus-4-7-r2** +3 (canonicalize) — [prose moved from candidate column]: "use exactly the AAD tier vocabulary" — Defended canonicalization, in CLAUDE.md and FORMAT.md already. Do not use "Solid," "Confident," or "Plausible" as tier labels — these were explicit non-AAD borrowings to avoid.
 
----
-
-## 449. `exact robust qualitative heuristic conditional claim tiers`
-
-**Voted by architectures:** Gemini, Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| epistemic claim tiers | +3 | rename × 1 |
-| use exactly the AAD tier vocabulary | +3 | canonicalize × 1 |
-
-### Candidate: `epistemic claim tiers`
+### Candidate: `epistemic claim tier`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -15912,17 +15976,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (rename) — Formally collectivizes the four levels of rigor.
 
-### Candidate: `use exactly the AAD tier vocabulary`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +3 (canonicalize) — Defended canonicalization, in CLAUDE.md and FORMAT.md already. Do not use "Solid," "Confident," or "Plausible" as tier labels — these were explicit non-AAD borrowings to avoid.
-
 ---
 
-## 450. `exponential cognitive load`
+## 456. `exponential cognitive load`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -15945,7 +16001,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 451. `feature`
+## 457. `feature`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -15968,7 +16024,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 452. `findings segment section`
+## 458. `finding segment section`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -15978,18 +16034,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| findings | +3 | canonicalize × 1 |
-| findings section | +3 | canonicalize × 1 |
+| finding section | +3 | canonicalize × 1 |
+| finding | +3 | canonicalize × 1 |
 
-### Candidate: `findings`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +3 (canonicalize) — Defended. The schema is fixed in FORMAT.md (Brief / Impact / Novelty Claim / Related Work / Search Log); do not paraphrase the section name. The bin/extract-findings tool depends on the exact heading.
-
-### Candidate: `findings section`
+### Candidate: `finding section`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -15997,9 +16045,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard markdown section header.
 
+### Candidate: `finding`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** +3 (canonicalize) — Defended. The schema is fixed in FORMAT.md (Brief / Impact / Novelty Claim / Related Work / Search Log); do not paraphrase the section name. The bin/extract-findings tool depends on the exact heading.
+
 ---
 
-## 453. `fisher whitened update`
+## 459. `fisher whitened update`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -16030,7 +16086,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 454. `formal expression segment header`
+## 460. `formal expression segment header`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -16061,7 +16117,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 455. `format md`
+## 461. `format md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -16083,7 +16139,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 456. `formulation definition result etc segment types`
+## 462. `formulation definition result etc segment type`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -16093,18 +16149,18 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| use exactly the format md vocabulary | +3 | canonicalize × 1 |
-| segment typologies | +2 | rename × 1 |
+| _(keep)_ | +3 | canonicalize × 1 |
+| segment typology | +2 | rename × 1 |
 
-### Candidate: `use exactly the format md vocabulary`
+### Candidate: `formulation definition result etc segment type` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-r2** +3 (canonicalize) — Defended canonicalization. The 19 segment types in FORMAT.md are a closed vocabulary; do not paraphrase them ("postulate" not "axiom," "result" not "theorem," "derivation" not "proof," etc.). The CLAUDE.md "Why these labels" rationale is load-bearing; vote to protect against drift.
+- **opus-4-7-r2** +3 (canonicalize) — [prose moved from candidate column]: "use exactly the FORMAT.md vocabulary" — Defended canonicalization. The 19 segment types in FORMAT.md are a closed vocabulary; do not paraphrase them ("postulate" not "axiom," "result" not "theorem," "derivation" not "proof," etc.). The CLAUDE.md "Why these labels" rationale is load-bearing; vote to protect against drift.
 
-### Candidate: `segment typologies`
+### Candidate: `segment typology`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16114,7 +16170,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 457. `gates advantage`
+## 463. `gate advantage`
 
 **Voted by architectures:** Codex, Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -16126,8 +16182,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | observation gated tempo advantage | +3 | rename × 1 |
 | noise gated tempo | +2 | rename × 1 |
-| noise gated tempo advantage | +2 | rename × 1 |
 | _(keep)_ | +2 | keep × 2 |
+| noise gated tempo advantage | +2 | rename × 1 |
 | noise gating | +1 | rename × 1 |
 
 ### Candidate: `observation gated tempo advantage`
@@ -16146,15 +16202,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6-r2** +2 (rename) — Codex proposed `#obs-noise-gated-tempo-advantage` (+2). I had proposed `obs-noise-gating` (+1). The "noise-gated" compound is more evocative than plain "noise gating" and names the phenomenon precisely. But Codex's version is five words. `obs-noise-gated-tempo` drops "advantage" (which is the consequence, not the observation itself) and still passes the communal-imagination test ("the noise-gated-tempo observation"). New candidate; shorter than Codex, different from my original.
 
-### Candidate: `noise gated tempo advantage`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +2 (rename) — The current slug is too compressed. The result is specifically that observation noise gates tempo advantage.
-
-### Candidate: `gates advantage` _(keep)_
+### Candidate: `gate advantage` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16162,6 +16210,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +1 (keep) — Specific reference.
 - **sonnet-4-6-r2** +1 (keep) — "Gates advantage" names the observation that noise gates adversarial tempo advantage. Precise.
+
+### Candidate: `noise gated tempo advantage`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +2 (rename) — The current slug is too compressed. The result is specifically that observation noise gates tempo advantage.
 
 ### Candidate: `noise gating`
 
@@ -16173,7 +16229,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 458. `gemini s boyd exponent for adversarial tempo advantage`
+## 464. `gemini boyd exponent for adversarial tempo advantage`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -16204,7 +16260,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 459. `grafting`
+## 465. `grafting`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -16216,8 +16272,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | strategic grafting | +3 | canonicalize × 1 |
 | _(keep)_ | +2 | keep × 1 |
-| hypothesis introduction | -1 | rename × 1 |
 | branch insertion | -1 | rename × 1 |
+| hypothesis introduction | -1 | rename × 1 |
 
 ### Candidate: `strategic grafting`
 
@@ -16235,14 +16291,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives** +2 (keep) — Per `#form-structural-change-as-parametric-limit`: "grafting is a new causal hypothesis initialized at a prior" — adding an edge to $\Sigma_t$ at low credence. The horticultural metaphor is apt: a new branch is *added to a living structure*, expected to integrate or fail. Pruning + grafting + reweighting form a self-consistent biological vocabulary, and the segment uses all three. Strong concept.
 
-### Candidate: `hypothesis introduction`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** -1 (rename) — Considered. Accurate but flat. The segment's surrounding vocabulary (pruning, reweighting, neutral mutation) is biological/horticultural; "hypothesis introduction" breaks register.
-
 ### Candidate: `branch insertion`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -16251,9 +16299,48 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives** -1 (rename) — Plain-language candidate. Rejected: loses the integration-with-existing-structure connotation that "grafting" carries. Branch-insertion sounds like a tree-data-structure edit; grafting names a hypothesis-test where the new branch may or may not "take."
 
+### Candidate: `hypothesis introduction`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** -1 (rename) — Considered. Accurate but flat. The segment's surrounding vocabulary (pruning, reweighting, neutral mutation) is biological/horticultural; "hypothesis introduction" breaks register.
+
 ---
 
-## 460. `hafez $H_b$ miller meta machine bruineberg pearl-blanket`
+## 466. `hafez $H_b$`
+
+**Voted by architectures:** Gemini, Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| $H_b$ | +3 | keep × 1 |
+| agent opacity $H_b$ | +3 | canonicalize × 1 |
+
+### Candidate: `$H_b$`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-1m** +3 (keep) — Adopted; keep.
+
+### Candidate: `agent opacity $H_b$`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Hafez opacity metric applied to adversarial dynamics.
+
+---
+
+## 467. `hafez $H_b$ miller meta machine bruineberg pearl-blanket`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -16264,7 +16351,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | do not rename | +3 | keep × 1 |
-| external theoretical anchors | +2 | rename × 1 |
+| external theoretical anchor | +2 | rename × 1 |
 
 ### Candidate: `do not rename`
 
@@ -16274,7 +16361,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +3 (keep) — Same.
 
-### Candidate: `external theoretical anchors`
+### Candidate: `external theoretical anchor`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16284,38 +16371,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 461. `hafez s $H_b$`
-
-**Voted by architectures:** Gemini, Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| agent opacity $H_b$ | +3 | canonicalize × 1 |
-| $H_b$ | +3 | keep × 1 |
-
-### Candidate: `agent opacity $H_b$`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Hafez opacity metric applied to adversarial dynamics.
-
-### Candidate: `$H_b$`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-1m** +3 (keep) — Adopted; keep.
-
----
-
-## 462. `hafez s h b`
+## 468. `hafez h b`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -16325,16 +16381,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| h b | +3 | keep × 1 |
 | agent opacity $H_b$ | +3 | canonicalize × 1 |
-
-### Candidate: `h b`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** +3 (keep) — Adopted concept; AAD adds observer/horizon/trajectory indexing but keeps the symbol.
+| h b | +3 | keep × 1 |
 
 ### Candidate: `agent opacity $H_b$`
 
@@ -16344,9 +16392,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the opacity metric.
 
+### Candidate: `h b`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** +3 (keep) — Adopted concept; AAD adds observer/horizon/trajectory indexing but keeps the symbol.
+
 ---
 
-## 463. `honest limits`
+## 469. `honest limit`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -16357,9 +16413,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | _(keep)_ | +3 | keep × 1 |
-| limits | +1 | rename × 1 |
+| limit | +1 | rename × 1 |
 
-### Candidate: `honest limits` _(keep)_
+### Candidate: `honest limit` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16367,7 +16423,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (keep) — Standardizes the structural boundary marking convention.
 
-### Candidate: `limits`
+### Candidate: `limit`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16377,7 +16433,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 464. `i adaptive systems under uncertainty`
+## 470. `i adaptive system under uncertainty`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -16387,10 +16443,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| section i adaptive systems under uncertainty | +3 | canonicalize × 1 |
+| section i adaptive system under uncertainty | +3 | canonicalize × 1 |
 | _(keep)_ | +3 | keep × 1 |
 
-### Candidate: `section i adaptive systems under uncertainty`
+### Candidate: `section i adaptive system under uncertainty`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16398,7 +16454,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard section heading formatting.
 
-### Candidate: `i adaptive systems under uncertainty` _(keep)_
+### Candidate: `i adaptive system under uncertainty` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16408,7 +16464,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 465. `identifiability coefficient`
+## 471. `identifiability coefficient`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -16430,7 +16486,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 466. `identifiability floor family`
+## 472. `identifiability floor family`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -16440,17 +16496,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| epistemic lower bounds | +3 | rename × 1 |
 | identifiability floor | +3 | canonicalize × 1 |
-| observational limits | +2 | rename × 1 |
-
-### Candidate: `epistemic lower bounds`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (rename) — Describes exactly what these are: hard limits on what can be inferred.
+| epistemic lower bound | +3 | rename × 1 |
+| observational limit | +2 | rename × 1 |
 
 ### Candidate: `identifiability floor`
 
@@ -16460,7 +16508,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Keep floor as the family noun.
 
-### Candidate: `observational limits`
+### Candidate: `epistemic lower bound`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (rename) — Describes exactly what these are: hard limits on what can be inferred.
+
+### Candidate: `observational limit`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16470,7 +16526,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 467. `ii actuated adaptation agentic systems`
+## 473. `ii actuated adaptation agentic system`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -16481,8 +16537,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | section ii actuated adaptation | +3 | canonicalize × 1 |
-| ii agentic systems purposeful adaptation | +1 | rename × 1 |
-| ii purposeful adaptation actuated agents | +1 | rename × 1 |
+| ii agentic system purposeful adaptation | +1 | rename × 1 |
+| ii purposeful adaptation actuated agent | +1 | rename × 1 |
 
 ### Candidate: `section ii actuated adaptation`
 
@@ -16492,7 +16548,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard section heading formatting.
 
-### Candidate: `ii agentic systems purposeful adaptation`
+### Candidate: `ii agentic system purposeful adaptation`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16500,7 +16556,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6** +1 (rename) — Another order. "Agentic Systems" has search/navigation value as a heading. Both alternatives are improvements on current.
 
-### Candidate: `ii purposeful adaptation actuated agents`
+### Candidate: `ii purposeful adaptation actuated agent`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16510,7 +16566,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 468. `iii agentic composites`
+## 474. `iii agentic composite`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -16520,10 +16576,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| section iii agentic composites | +3 | canonicalize × 1 |
-| iii composition agentic composites | +1 | rename × 1 |
+| section iii agentic composite | +3 | canonicalize × 1 |
+| iii composition agentic composite | +1 | rename × 1 |
 
-### Candidate: `section iii agentic composites`
+### Candidate: `section iii agentic composite`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16531,7 +16587,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard section heading formatting.
 
-### Candidate: `iii composition agentic composites`
+### Candidate: `iii composition agentic composite`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16541,7 +16597,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 469. `information bottleneck tishby`
+## 475. `information bottleneck tishby`
 
 **Voted by architectures:** Opus, agent1
 **Category disagreement on top finalist:** no
@@ -16572,7 +16628,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 470. `instance 1 2 3 of identifiability floor`
+## 476. `instance 1 2 3 of identifiability floor`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -16582,9 +16638,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| identifiability floor instances | +3 | keep × 1 |
+| identifiability floor instance | +3 | keep × 1 |
 
-### Candidate: `identifiability floor instances`
+### Candidate: `identifiability floor instance`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -16594,7 +16650,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 471. `instance 1 of identifiability floor`
+## 477. `instance 1 of identifiability floor`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -16616,7 +16672,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 472. `instance 2 of identifiability floor`
+## 478. `instance 2 of identifiability floor`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -16638,7 +16694,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 473. `instance 3 of identifiability floor`
+## 479. `instance 3 of identifiability floor`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -16660,7 +16716,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 474. `l0 l1 l1 prime l2`
+## 480. `l0 l1 l1 prime l2`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -16682,7 +16738,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 475. `l1 correlation hierarchy prime decoration`
+## 481. `l1 correlation hierarchy prime decoration`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -16713,7 +16769,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 476. `l1 prime`
+## 482. `l1 prime`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -16744,7 +16800,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 477. `lexicon md`
+## 483. `lexicon md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -16766,7 +16822,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 478. `linear ode approximation`
+## 484. `linear ode approximation`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -16799,7 +16855,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 479. `log md cycle history document`
+## 485. `log md cycle history document`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -16821,7 +16877,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 480. `log odds coordinate`
+## 486. `log odds coordinate`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -16843,7 +16899,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 481. `log odds edge coordinate`
+## 487. `log odds edge coordinate`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -16874,7 +16930,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 482. `logogenic agent vs RLHF4 agent`
+## 488. `logogenic agent vs RLHF4 agent`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -16896,7 +16952,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 483. `logogenic agent vs rlhf4 agent`
+## 489. `logogenic agent vs rlhf4 agent`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -16918,60 +16974,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 484. `logogenic agents`
-
-**Voted by architectures:** Codex
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +3 | keep × 1 |
-
-### Candidate: `logogenic agents` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-2** +3 (keep) — Novel, but the novelty earns its keep by naming a structural channel property rather than a transient implementation.
-
----
-
-## 485. `logogenic agents part iii`
-
-**Voted by architectures:** Gemini, Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| logogenic agents | +3 | keep × 1 |
-| section iii logogenic agents | +3 | canonicalize × 1 |
-
-### Candidate: `logogenic agents`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +3 (keep) — Keep. Aligns with the `logogenic` class name in LEXICON and does not conflict with anything external.
-
-### Candidate: `section iii logogenic agents`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes section hierarchy.
-
----
-
-## 486. `logogenic vs language based RLHF4 based`
+## 490. `logogenic vs language based RLHF4 based`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -16993,7 +16996,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 487. `logogenic vs language based rlhf4 based`
+## 491. `logogenic vs language based rlhf4 based`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -17015,38 +17018,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 488. `logozoetic agents part iv`
-
-**Voted by architectures:** Gemini, Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| section iv logozoetic agents | +3 | canonicalize × 1 |
-| logozoetic agents | +3 | keep × 1 |
-
-### Candidate: `section iv logozoetic agents`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes section hierarchy.
-
-### Candidate: `logozoetic agents`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +3 (keep) — Keep.
-
----
-
-## 489. `logozoetic vs conscious OODA4 sentient agent`
+## 492. `logozoetic vs conscious OODA4 sentient agent`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -17068,7 +17040,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 490. `logozoetic vs conscious ooda4 sentient agent`
+## 493. `logozoetic vs conscious ooda4 sentient agent`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -17090,7 +17062,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 491. `lohmiller-slotine contraction metric generalization used in contraction template`
+## 494. `lohmiller-slotine contraction metric generalization used in contraction template`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17121,7 +17093,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 492. `loop is level 2 engine der loop interventional access`
+## 495. `loop is level 2 engine der loop interventional access`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -17152,7 +17124,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 493. `loop vs cycle`
+## 496. `loop vs cycle`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17183,7 +17155,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 494. `markov blanket as ontology`
+## 497. `markov blanket as ontology`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17193,18 +17165,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| pearl-blanket d separation | +3 | rename × 1 |
 | pearl-blanket reading | +3 | canonicalize × 1 |
+| pearl-blanket d separation | +3 | rename × 1 |
 | _(keep)_ | +2 | keep × 1 |
 | pearl-blanket vs friston-blanket | +1 | rename × 1 |
-
-### Candidate: `pearl-blanket d separation`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +3 (rename) — AAD explicitly rejects the Friston-blanket metaphysical ontology; stick to Pearl-blanket conditional independence.
 
 ### Candidate: `pearl-blanket reading`
 
@@ -17213,6 +17177,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Anchors the technical interpretation against the ontological one.
+
+### Candidate: `pearl-blanket d separation`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +3 (rename) — AAD explicitly rejects the Friston-blanket metaphysical ontology; stick to Pearl-blanket conditional independence.
 
 ### Candidate: `markov blanket as ontology` _(keep)_
 
@@ -17232,7 +17204,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 495. `matrix survival constraint`
+## 498. `matrix survival constraint`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -17263,7 +17235,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 496. `meta segment for separability pattern identifiability floor additive coordinate forcing`
+## 499. `meta segment for separability pattern identifiability floor additive coordinate forcing`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17273,8 +17245,16 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
+| meta pattern segment | +3 | canonicalize × 1 |
 | meta segment | +3 | rename × 1 |
-| meta pattern segments | +3 | canonicalize × 1 |
+
+### Candidate: `meta pattern segment`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Groups the highest-level architectural observations.
 
 ### Candidate: `meta segment`
 
@@ -17284,17 +17264,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7** +3 (rename) — The tri-partite meta-architecture needs a noun for its elements; "meta-segment" works. Keep as project-internal vocabulary.
 
-### Candidate: `meta pattern segments`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Groups the highest-level architectural observations.
-
 ---
 
-## 497. `mismatch injection rate $ho$`
+## 500. `mismatch injection rate $ho$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -17316,7 +17288,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 498. `model sufficiency $S$`
+## 501. `model sufficiency $S$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -17347,7 +17319,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 499. `monderer shapley potential games`
+## 502. `monderer shapley potential game`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -17360,7 +17332,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | _(keep)_ | +3 | keep × 1 |
 | potential game convergence | +2 | rename × 1 |
 
-### Candidate: `monderer shapley potential games` _(keep)_
+### Candidate: `monderer shapley potential game` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -17378,7 +17350,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 500. `monderer shapley potential games rosen monotone games`
+## 503. `monderer shapley potential game rosen monotone game`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17389,7 +17361,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | do not rename | +3 | keep × 1 |
-| strategic convergence conditions | +2 | rename × 1 |
+| strategic convergence condition | +2 | rename × 1 |
 | no alternative | -1 | keep × 1 |
 
 ### Candidate: `do not rename`
@@ -17400,7 +17372,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +3 (keep) — Same.
 
-### Candidate: `strategic convergence conditions`
+### Candidate: `strategic convergence condition`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -17418,7 +17390,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 501. `multi timescale stability`
+## 504. `multi timescale stability`
 
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -17442,7 +17414,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 502. `not theorem`
+## 505. `not theorem`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17473,7 +17445,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 503. `notation md`
+## 506. `notation md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -17495,7 +17467,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 504. `o t objective`
+## 507. `o t objective`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17526,7 +17498,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 505. `observability boundary in a strategy DAG`
+## 508. `observability boundary in a strategy DAG`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -17548,7 +17520,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 506. `observation ambiguity modulation`
+## 509. `observation ambiguity modulation`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -17559,8 +17531,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | goal resolvable ambiguity | +3 | rename × 1 |
-| observation ambiguity | +2 | rename × 1 |
 | _(keep)_ | +2 | keep × 2 |
+| observation ambiguity | +2 | rename × 1 |
 | ambiguity gated coupling | +1 | rename × 1 |
 | ambiguity modulation | +1 | rename × 1 |
 
@@ -17572,14 +17544,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-1** +3 (rename) — The segment introduces a first-class quantity; the name should foreground the quantity, not the fact that it modulates something downstream.
 
-### Candidate: `observation ambiguity`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +2 (rename) — "Modulation" is doing scaffolding work — the segment names *observation ambiguity* as a property and *modulation* as how it acts on $\kappa_{\text{processing}}$. The substantive thing the segment introduces is observation ambiguity itself (the segment in fact defines $\mathcal{A}(e_\tau)$). The "modulation" suffix overpacks the slug; the modulation effect is the segment's *use*, not its definition. Subject-noun-first principle.
-
 ### Candidate: `observation ambiguity modulation` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -17588,6 +17552,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +1 (keep) — If the rename doesn't land, acceptable keep. The current name does name the segment's *role* (it modulates the κ-effect).
 - **sonnet-4-6-r2** +1 (keep) — "Observation ambiguity modulation" names the Class 2 bias-related scope condition accurately. Long but precise.
+
+### Candidate: `observation ambiguity`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** +2 (rename) — "Modulation" is doing scaffolding work — the segment names *observation ambiguity* as a property and *modulation* as how it acts on $\kappa_{\text{processing}}$. The substantive thing the segment introduces is observation ambiguity itself (the segment in fact defines $\mathcal{A}(e_\tau)$). The "modulation" suffix overpacks the slug; the modulation effect is the segment's *use*, not its definition. Subject-noun-first principle.
 
 ### Candidate: `ambiguity gated coupling`
 
@@ -17607,7 +17579,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 507. `observation gates advantage`
+## 510. `observation gate advantage`
 
 **Voted by architectures:** Codex, Haiku
 **Category disagreement on top finalist:** no
@@ -17628,7 +17600,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Good prose name for the result.
 
-### Candidate: `observation gates advantage` _(keep)_
+### Candidate: `observation gate advantage` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -17638,7 +17610,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 508. `outline md root`
+## 511. `outline md root`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -17660,7 +17632,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 509. `output after context turnover without state restoration`
+## 512. `output after context turnover without state restoration`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -17691,56 +17663,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 510. `pearl l1 l2 l3`
-
-**Voted by architectures:** Gemini, audit
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| pearl s causal hierarchy | +3 | canonicalize × 1 |
-| predicting | +1 | canonicalize × 1 |
-| reasoning | +1 | canonicalize × 1 |
-| exploring | +1 | canonicalize × 1 |
-
-### Candidate: `pearl s causal hierarchy`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Formally separates Pearl's hierarchy from AAD's internal ones.
-
-### Candidate: `predicting`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (canonicalize) — Brief-grade agent-side gloss. NOT a rename — keep Pearl's terms formally. The agent-action gloss makes it audience-friendly. [from 09-def-pearl-causal-hierarchy.md] [one of 3 alternatives proposed in the original audit row]
-
-### Candidate: `reasoning`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (canonicalize) — Brief-grade agent-side gloss. NOT a rename — keep Pearl's terms formally. The agent-action gloss makes it audience-friendly. [from 09-def-pearl-causal-hierarchy.md] [one of 3 alternatives proposed in the original audit row]
-
-### Candidate: `exploring`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (canonicalize) — Brief-grade agent-side gloss. NOT a rename — keep Pearl's terms formally. The agent-action gloss makes it audience-friendly. [from 09-def-pearl-causal-hierarchy.md] [one of 3 alternatives proposed in the original audit row]
-
----
-
-## 511. `pearl s causal hierarchy l0 l1 l2 in pearl s own vocabulary`
+## 513. `pearl causal hierarchy l0 l1 l2 in pearl own vocabulary`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17751,7 +17674,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | do not rename | +3 | keep × 1 |
-| pearl s causal hierarchy | +3 | keep × 1 |
+| pearl causal hierarchy | +3 | keep × 1 |
 
 ### Candidate: `do not rename`
 
@@ -17761,7 +17684,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +3 (keep) — Prior-art-integration convention prohibits renaming adopted concepts. The adjacent-to-AAD "correlation hierarchy / correlation ladder" is a *different* AAD-native object; rename freedom belongs there, not here.
 
-### Candidate: `pearl s causal hierarchy`
+### Candidate: `pearl causal hierarchy`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -17771,7 +17694,29 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 512. `pearl-blanket conservative form`
+## 514. `pearl l1 l2 l3`
+
+**Voted by architectures:** Gemini
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| pearl causal hierarchy | +3 | canonicalize × 1 |
+
+### Candidate: `pearl causal hierarchy`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Formally separates Pearl's hierarchy from AAD's internal ones.
+
+---
+
+## 515. `pearl-blanket conservative form`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -17793,7 +17738,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 513. `pearl-blanket vs friston-blanket terminology bruineberg et al`
+## 516. `pearl-blanket vs friston-blanket terminology bruineberg et al`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -17824,7 +17769,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 514. `persistence overloaded`
+## 517. `persistence overloaded`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -17835,8 +17780,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | persistence taxonomy | +3 | canonicalize × 1 |
-| continuity persistence | +2 | name-unnamed × 1 |
 | structural persistence | +2 | name-unnamed × 1 |
+| continuity persistence | +2 | name-unnamed × 1 |
 | task adequacy | +2 | name-unnamed × 1 |
 | operational persistence | +2 | name-unnamed × 1 |
 
@@ -17848,7 +17793,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Enforces the disambiguation across structural/operational/continuity.
 
-### Candidate: `continuity persistence`
+### Candidate: `structural persistence`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -17856,7 +17801,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +2 (name-unnamed) — The four-way taxonomy is partially in LEXICON / FORMAT discipline but not surfaced visibly in framing-level material. Auditor: "Worth surfacing the four-way taxonomy more visibly in the README's Overview." Most agent-theoretic frameworks have one sense of "persists"; AAD's separation prevents a class of category errors. [from 26-29-section-i-persistence-machinery.md] [one of 4 alternatives proposed in the original audit row]
 
-### Candidate: `structural persistence`
+### Candidate: `continuity persistence`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -17882,7 +17827,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 515. `persistence structural operational continuity`
+## 518. `persistence structural operational continuity`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -17892,16 +17837,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| three senses keep all three | +3 | keep × 1 |
 | persistence taxonomy | +3 | canonicalize × 1 |
-
-### Candidate: `three senses keep all three`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **agent1-original-brainstorm** +3 (keep) — Triple-meaning is load-bearing and probably irreducible. Each usage site should be explicit about which sense when it matters.
+| three sense keep all three | +3 | keep × 1 |
 
 ### Candidate: `persistence taxonomy`
 
@@ -17911,9 +17848,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Asserts the three-part classification of persistence.
 
+### Candidate: `three sense keep all three`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **agent1-original-brainstorm** +3 (keep) — Triple-meaning is load-bearing and probably irreducible. Each usage site should be explicit about which sense when it matters.
+
 ---
 
-## 516. `persistent residual autocorrelation`
+## 519. `persistent residual autocorrelation`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -17923,10 +17868,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| structured residuals | +3 | canonicalize × 1 |
+| structured residual | +3 | canonicalize × 1 |
 | persistent mismatch autocorrelation | +2 | rename × 1 |
 
-### Candidate: `structured residuals`
+### Candidate: `structured residual`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -17944,7 +17889,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 517. `pi parameterization invariance`
+## 520. `pi parameterization invariance`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -17975,7 +17920,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 518. `pi parameterization invariance axiom`
+## 521. `pi parameterization invariance axiom`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18015,7 +17960,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 519. `predictive relevance depending on the policy the agent will run`
+## 522. `predictive relevance depending on the policy the agent will run`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -18037,7 +17982,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 520. `privileged high identifiability calibration laboratory`
+## 523. `privileged high identifiability calibration laboratory`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -18068,7 +18013,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 521. `purpose purposeful`
+## 524. `purpose purposeful`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18099,7 +18044,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 522. `readme md`
+## 525. `readme md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -18121,7 +18066,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 523. `readme md convergent choices`
+## 526. `readme md convergent choice`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -18131,11 +18076,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| readme md convergent formulations | +3 | rename × 1 |
-| readme md forced by failure choices | +1 | rename × 1 |
+| readme md convergent formulation | +3 | rename × 1 |
 | _(keep)_ | +1 | keep × 1 |
+| readme md forced by failure choice | +1 | rename × 1 |
 
-### Candidate: `readme md convergent formulations`
+### Candidate: `readme md convergent formulation`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18143,15 +18088,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-1** +3 (rename) — Better names what the section is about: representational choices that convergence pressure made non-arbitrary.
 
-### Candidate: `readme md forced by failure choices`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7** +1 (rename) — "Convergent choices" is accurate but mild. "Forced by failure" captures the spike-everything-else-fails story that the section tells. Low conviction; explicit alternative.
-
-### Candidate: `readme md convergent choices` _(keep)_
+### Candidate: `readme md convergent choice` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18159,40 +18096,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +1 (keep) — Keep. This is a rare and valuable AAD construct (the intermediate category between "derived" and "chosen") and the name is apt.
 
----
-
-## 524. `readme md cross domain joining`
-
-**Voted by architectures:** Codex, Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| readme md cross domain mappings | +3 | rename × 1 |
-| readme md cross domain mapping | +1 | rename × 1 |
-
-### Candidate: `readme md cross domain mappings`
+### Candidate: `readme md forced by failure choice`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **codex-1** +3 (rename) — The section is a mapping table, not a process description. "Mappings" is plainer and more reusable.
-
-### Candidate: `readme md cross domain mapping`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +1 (rename) — "Joining" is slightly non-idiomatic in the context; "mapping" is the standard word for the same content (the section is a table mapping AAD concepts across domains). Weak preference.
+- **opus-4-7** +1 (rename) — "Convergent choices" is accurate but mild. "Forced by failure" captures the spike-everything-else-fails story that the section tells. Low conviction; explicit alternative.
 
 ---
 
-## 525. `readme md what this is`
+## 527. `readme md what this is`
 
 **Voted by architectures:** Codex, Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18202,11 +18116,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| readme md what agentic systems is | +3 | rename × 3 |
+| readme md what agentic system is | +3 | rename × 3 |
 | readme md core thesis | +3 | rename × 1 |
 | readme md what AAD is | -1 | rename × 1 |
 
-### Candidate: `readme md what agentic systems is`
+### Candidate: `readme md what agentic system is`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18234,7 +18148,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 526. `regime i ii a ii b iii`
+## 528. `regime i ii a ii b iii`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -18244,10 +18158,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| reception regimes | +3 | canonicalize × 1 |
+| reception regime | +3 | canonicalize × 1 |
 | destabilization regime partition | +2 | rename × 1 |
 
-### Candidate: `reception regimes`
+### Candidate: `reception regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18265,7 +18179,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 527. `richest operationalization domain`
+## 529. `richest operationalization domain`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -18296,7 +18210,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 528. `rlhf6`
+## 530. `rlhf6`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -18318,7 +18232,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 529. `section header logogenic agents logozoetic agents`
+## 531. `section header logogenic agent logozoetic agent`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18328,10 +18242,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| logogenic agents logozoetic agents | +3 | canonicalize × 1 |
-| section headers logogenic logozoetic | +2 | keep × 1 |
+| logogenic agent logozoetic agent | +3 | canonicalize × 1 |
+| section header logogenic logozoetic | +2 | keep × 1 |
 
-### Candidate: `logogenic agents logozoetic agents`
+### Candidate: `logogenic agent logozoetic agent`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18339,7 +18253,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +3 (canonicalize) — Defended canonicalization.
 
-### Candidate: `section headers logogenic logozoetic`
+### Candidate: `section header logogenic logozoetic`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18349,7 +18263,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 530. `section i adaptive systems under uncertainty`
+## 532. `section i adaptive system under uncertainty`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -18359,18 +18273,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
+| section i adaptive system | +3 | canonicalize × 1 |
 | _(keep)_ | +3 | keep × 1 |
-| section i adaptive systems | +3 | canonicalize × 1 |
 
-### Candidate: `section i adaptive systems under uncertainty` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **haiku-4-5** +3 (keep) — Clear, direct scope naming. Explains what Section I covers without pretense. Keep.
-
-### Candidate: `section i adaptive systems`
+### Candidate: `section i adaptive system`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18378,9 +18284,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Formal section title.
 
+### Candidate: `section i adaptive system under uncertainty` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **haiku-4-5** +3 (keep) — Clear, direct scope naming. Explains what Section I covers without pretense. Keep.
+
 ---
 
-## 531. `section i header adaptive systems under uncertainty`
+## 533. `section i header adaptive system under uncertainty`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18390,10 +18304,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| section i adaptive systems | +3 | canonicalize × 1 |
-| adaptive systems under uncertainty | +2 | canonicalize × 1 |
+| section i adaptive system | +3 | canonicalize × 1 |
+| adaptive system under uncertainty | +2 | canonicalize × 1 |
 
-### Candidate: `section i adaptive systems`
+### Candidate: `section i adaptive system`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18401,7 +18315,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Formatting standard.
 
-### Candidate: `adaptive systems under uncertainty`
+### Candidate: `adaptive system under uncertainty`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18411,7 +18325,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 532. `section ii actuated adaptation agentic systems`
+## 534. `section ii actuated adaptation agentic system`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -18432,7 +18346,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Formal section title.
 
-### Candidate: `section ii actuated adaptation agentic systems` _(keep)_
+### Candidate: `section ii actuated adaptation agentic system` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18442,7 +18356,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 533. `section iii header agentic composites`
+## 535. `section iii header agentic composite`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18452,10 +18366,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| section iii agentic composites | +3 | canonicalize × 1 |
-| agentic composites | +2 | canonicalize × 1 |
+| section iii agentic composite | +3 | canonicalize × 1 |
+| agentic composite | +2 | canonicalize × 1 |
 
-### Candidate: `section iii agentic composites`
+### Candidate: `section iii agentic composite`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18463,7 +18377,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Formatting standard.
 
-### Candidate: `agentic composites`
+### Candidate: `agentic composite`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -18473,7 +18387,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 534. `sector condition continuous ga 3`
+## 536. `sector condition continuous ga 3`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -18483,16 +18397,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| continuous sector condition | +3 | canonicalize × 1 |
 | sector condition | +3 | rename × 1 |
-
-### Candidate: `continuous sector condition`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Refines the specific GA3 assumption.
+| continuous sector condition | +3 | canonicalize × 1 |
 
 ### Candidate: `sector condition`
 
@@ -18502,9 +18408,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6** +3 (rename) — Keep. The "(continuous)" qualifier is important to distinguish from the discrete-time DA2'.
 
+### Candidate: `continuous sector condition`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Refines the specific GA3 assumption.
+
 ---
 
-## 535. `sector condition derivation`
+## 537. `sector condition derivation`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -18535,7 +18449,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 536. `segment claim file`
+## 538. `segment claim file`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18566,7 +18480,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 537. `self actuated agent`
+## 539. `self actuated agent`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -18606,7 +18520,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 538. `separability pattern → disc separability ladder`
+## 540. `separability pattern → disc separability ladder`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -18637,7 +18551,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 539. `software scope`
+## 541. `software scope`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -18669,7 +18583,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 540. `source quality uncertainty`
+## 542. `source quality uncertainty`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -18700,26 +18614,18 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 541. `strategic composite`
+## 543. `strategic composite`
 
 **Voted by architectures:** Codex
-**Category disagreement on top finalist:** no
+**Category disagreement on top finalist:** yes
 
 **First-encounter locality:** _(pending — agent-pass B)_
 **Segment link:** _(pending — agent-pass C)_
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +3 | keep × 1 |
 | equilibrium composite | +3 | rename × 1, canonicalize × 1 |
-
-### Candidate: `strategic composite` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +3 (keep) — Needed to distinguish equilibrium-convergent composites from alignment composites.
+| _(keep)_ | +3 | keep × 1 |
 
 ### Candidate: `equilibrium composite`
 
@@ -18730,9 +18636,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **codex-1** +1 (rename) — The segment's distinctiveness is equilibrium convergence under partial opposition; the noun should expose that.
 - **codex-gpt-5-r2** +2 (canonicalize) — Use when emphasizing the C-iv route. Strategic composite can remain a broad prose phrase, but equilibrium composite names the macro-state basis.
 
+### Candidate: `strategic composite` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +3 (keep) — Needed to distinguish equilibrium-convergent composites from alignment composites.
+
 ---
 
-## 542. `strategic in strategic composition`
+## 544. `strategic in strategic composition`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18772,7 +18686,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 543. `strategy`
+## 545. `strategy`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -18803,7 +18717,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 544. `strengthen before softening`
+## 546. `strengthen before softening`
 
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
@@ -18843,7 +18757,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 545. `structural change as parametric limit`
+## 547. `structural change as parametric limit`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -18855,8 +18769,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +3 | keep × 5 |
 | strategy maintenance | +2 | rename × 1 |
-| structural parametric limit | +1 | rename × 1 |
 | structural as parametric limit | +1 | rename × 1 |
+| structural parametric limit | +1 | rename × 1 |
 
 ### Candidate: `structural change as parametric limit` _(keep)_
 
@@ -18878,14 +18792,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (rename) — The segment's reusable subject is the operation family: reweighting, reclassification, pruning, grafting, revision, restructure.
 
-### Candidate: `structural parametric limit`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-2** +1 (rename) — Shorter, cleaner slug.
-
 ### Candidate: `structural as parametric limit`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -18894,9 +18800,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +1 (rename) — Mild compression — drop "change" since "structural" without "change" is the standard contrast to "parametric." Slug becomes a touch more compact.
 
+### Candidate: `structural parametric limit`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-2** +1 (rename) — Shorter, cleaner slug.
+
 ---
 
-## 546. `structural persistence operational persistence continuity persistence`
+## 548. `structural persistence operational persistence continuity persistence`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -18927,7 +18841,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 547. `sudden loss of model sufficiency under regime entry`
+## 549. `sudden loss of model sufficiency under regime entry`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -18949,7 +18863,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 548. `sufficiency discontinuity`
+## 550. `sufficiency discontinuity`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -18980,7 +18894,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 549. `survival imperative exploration drive`
+## 551. `survival imperative exploration drive`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -19011,7 +18925,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 550. `symbol default g t in prose`
+## 552. `symbol default g t in prose`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -19042,7 +18956,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 551. `symbol default m t in prose`
+## 553. `symbol default m t in prose`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -19073,7 +18987,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 552. `symbol default pi parameterization invariance axiom`
+## 554. `symbol default pi parameterization invariance axiom`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -19083,17 +18997,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| parameterization invariance axiom | +3 | canonicalize × 1 |
 | parameterization invariance | +3 | name-unnamed × 1 |
+| parameterization invariance axiom | +3 | canonicalize × 1 |
 | coordinate invariance | -1 | name-unnamed × 1 |
-
-### Candidate: `parameterization invariance axiom`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the (PI) axiom.
 
 ### Candidate: `parameterization invariance`
 
@@ -19102,6 +19008,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **codex-1** +3 (name-unnamed) — In prose, the durable concept is the invariance commitment, not the parenthetical acronym or the "axiom" suffix. Save `(PI)` for formulas and tables.
+
+### Candidate: `parameterization invariance axiom`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the (PI) axiom.
 
 ### Candidate: `coordinate invariance`
 
@@ -19113,7 +19027,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 553. `symbol default sigma t in prose`
+## 555. `symbol default sigma t in prose`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -19123,16 +19037,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| strategy substate | +3 | canonicalize × 1 |
 | strategy | +3 | name-unnamed × 1 |
-
-### Candidate: `strategy substate`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the prose reference for $\Sigma_t$.
+| strategy substate | +3 | canonicalize × 1 |
 
 ### Candidate: `strategy`
 
@@ -19142,9 +19048,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-1** +3 (name-unnamed) — After first introduction, the English should be the prose default. The symbol is still right in equations and exact statements.
 
+### Candidate: `strategy substate`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the prose reference for $\Sigma_t$.
+
 ---
 
-## 554. `system availability`
+## 556. `system availability`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -19167,7 +19081,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 555. `teleological unity $U_O$`
+## 557. `teleological unity $U_O$`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -19198,7 +19112,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 556. `temporal software theory TST`
+## 558. `temporal software theory TST`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19229,7 +19143,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 557. `tests as reusable interventions`
+## 559. `test as reusable intervention`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19240,8 +19154,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | interventional probe library | +3 | add-alias × 1 |
-| causal query infrastructure | +2 | rename × 1 |
 | interventional test | +2 | rename × 1 |
+| causal query infrastructure | +2 | rename × 1 |
 | repeatable intervention | +1 | rename × 1 |
 
 ### Candidate: `interventional probe library`
@@ -19252,14 +19166,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (add-alias) — Connects tests to "Level-2 interventions" effectively and explicitly.
 
-### Candidate: `causal query infrastructure`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Emphasizes that tests answer active causal queries, not just passive checks.
-
 ### Candidate: `interventional test`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -19267,6 +19173,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **opus-targeted-alternatives** +2 (rename) — Per `#hyp-causal-discovery-from-git`: software tests are not just specifications; they are repeatable interventions on the system that yield causal information. "Interventional test" pairs with Pearl's $do(a)$ vocabulary explicitly and names a noun (a kind of test) rather than a discursive claim about tests.
+
+### Candidate: `causal query infrastructure`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Emphasizes that tests answer active causal queries, not just passive checks.
 
 ### Candidate: `repeatable intervention`
 
@@ -19278,7 +19192,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 558. `tests as reusable level 2 interventions`
+## 560. `test as reusable level 2 intervention`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19300,7 +19214,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 559. `the adaptive cycle as the theory s fundamental unit`
+## 561. `the adaptive cycle as the theory fundamental unit`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19331,7 +19245,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 560. `the cycle the adaptive cycle the agentic cycle`
+## 562. `the cycle the adaptive cycle the agentic cycle`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19362,7 +19276,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 561. `the five cycle phases prolepsis aisthesis aporia epistrophe praxis`
+## 563. `the five cycle phase prolepsis aisthesis aporia epistrophe praxi`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -19372,9 +19286,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| prolepsis aisthesis aporia epistrophe praxis | +3 | rename × 1 |
+| prolepsis aisthesis aporia epistrophe praxi | +3 | rename × 1 |
 
-### Candidate: `prolepsis aisthesis aporia epistrophe praxis`
+### Candidate: `prolepsis aisthesis aporia epistrophe praxi`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19384,7 +19298,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 562. `todo md`
+## 564. `todo md`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -19406,7 +19320,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 563. `token level commitment for agent identity`
+## 565. `token level commitment for agent identity`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19437,7 +19351,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 564. `transfer assumption table`
+## 566. `transfer assumption table`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -19468,7 +19382,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 565. `transition opacity`
+## 567. `transition opacity`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -19499,7 +19413,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 566. `triple depth penalty canonicalize`
+## 568. `triple depth penalty canonicalize`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -19530,7 +19444,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 567. `type formulation`
+## 569. `type formulation`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19561,7 +19475,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 568. `u m epistemic unity multi agent`
+## 570. `u m epistemic unity multi agent`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19592,7 +19506,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 569. `u m model uncertainty`
+## 571. `u m model uncertainty`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19623,7 +19537,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 570. `u m u o u σ unity dimensions`
+## 572. `u m u o u σ unity dimension`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -19633,10 +19547,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| unity dimensions | +3 | canonicalize × 1 |
+| unity dimension | +3 | canonicalize × 1 |
 | epistemic unity teleological unity strategic unity | +1 | add-alias × 1 |
 
-### Candidate: `unity dimensions`
+### Candidate: `unity dimension`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19654,7 +19568,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 571. `u o observation uncertainty`
+## 573. `u o observation uncertainty`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -19685,7 +19599,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 572. `unity dimensions $U_M, U_O, U_\Sigma$`
+## 574. `unity dimension $U_M, U_O, U_\Sigma$`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -19695,10 +19609,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| unity dimensions | +3 | keep × 1 |
-| coherence dimensions | +2 | keep × 2 |
+| unity dimension | +3 | keep × 1 |
+| coherence dimension | +2 | keep × 2 |
 
-### Candidate: `unity dimensions`
+### Candidate: `unity dimension`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19706,7 +19620,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **agent1-original-brainstorm** +3 (keep) — Three-axis coherence intuition works. Framing nudge in Section III preamble to clarify what unity is measuring — no rename.
 
-### Candidate: `coherence dimensions`
+### Candidate: `coherence dimension`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19717,7 +19631,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 573. `unnamed`
+## 575. `unnamed`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -19727,16 +19641,16 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| resolved unnamed concepts | +3 | canonicalize × 1 |
-| double opacity | +2 | name-unnamed × 1 |
+| resolved unnamed concept | +3 | canonicalize × 1 |
 | dual opacity as constitutive | +2 | name-unnamed × 1 |
+| double opacity | +2 | name-unnamed × 1 |
 | constitutive opacity triad | +2 | name-unnamed × 1 |
 | u shaped exploration valuation | +1 | keep × 1 |
 | triple depth penalty | +1 | keep × 1 |
 | zero aporia ambiguity | +1 | keep × 1 |
-| two parallel exploration drives | +1 | keep × 1 |
+| two parallel exploration drive | +1 | keep × 1 |
 
-### Candidate: `resolved unnamed concepts`
+### Candidate: `resolved unnamed concept`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19744,7 +19658,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Placeholder resolution.
 
-### Candidate: `double opacity`
+### Candidate: `dual opacity as constitutive`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19752,7 +19666,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +2 (name-unnamed) — The "perception opacity + action opacity (transition unknown)" framing is structurally distinctive vs RL (which assumes one or the other) and is explicitly load-bearing for AAD's scope claim. Currently neither concept has a project-level name. [from 02-def-action-transition.md, 03-def-observation-function.md] [one of 2 alternatives proposed in the original audit row]
 
-### Candidate: `dual opacity as constitutive`
+### Candidate: `double opacity`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19792,7 +19706,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +1 (keep) — Auditor calls the framing genuinely useful — "silent water meter could mean either calm bathtub or broken sensor." Already named in the segment; auditor proposes promoting to a Brief-field-grade callout. [from 18-def-mismatch-signal.md]
 
-### Candidate: `two parallel exploration drives`
+### Candidate: `two parallel exploration drive`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -19802,7 +19716,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 574. `unnamed AAD s epistemic move to cast results such that verification is a local operation`
+## 576. `unnamed AAD epistemic move to cast result such that verification is a local operation`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19833,7 +19747,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 575. `unnamed agency whose effect is on what s seen rather than what happens like RLHF4 attention`
+## 577. `unnamed agency whose effect is on what seen rather than what happen like RLHF4 attention`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19855,7 +19769,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 576. `unnamed agency whose effect is on what s seen rather than what happens like rlhf4 attention`
+## 578. `unnamed agency whose effect is on what seen rather than what happen like rlhf4 attention`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19877,7 +19791,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 577. `unnamed agents escalate up the pearl hierarchy only when lower levels fail`
+## 579. `unnamed agent escalate up the pearl hierarchy only when lower level fail`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19908,7 +19822,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 578. `unnamed applying a slow timescale control mechanism to a fast timescale transient variable`
+## 580. `unnamed applying a slow timescale control mechanism to a fast timescale transient variable`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19939,7 +19853,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 579. `unnamed artificially spiking uncertainty to unlearn old architectural habits`
+## 581. `unnamed artificially spiking uncertainty to unlearn old architectural habit`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -19970,7 +19884,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 580. `unnamed brooks s law formalized as the inevitable tempo loss in team composition`
+## 582. `unnamed brook law formalized as the inevitable tempo loss in team composition`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20001,7 +19915,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 581. `unnamed calibration laboratory framing as reusable meta move`
+## 583. `unnamed calibration laboratory framing as reusable meta move`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20023,7 +19937,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 582. `unnamed convention hierarchy monotonicity cascade satisfaction gap and control regret strengthening across c1→c3`
+## 584. `unnamed convention hierarchy monotonicity cascade satisfaction gap and control regret strengthening across c1→c3`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20045,7 +19959,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 583. `unnamed decomposing mismatch into environment vs other sub agents actions`
+## 585. `unnamed decomposing mismatch into environment vs other sub agent action`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20076,7 +19990,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 584. `unnamed deliberate expenditure of tempo to convert a hidden node into an observable one`
+## 586. `unnamed deliberate expenditure of tempo to convert a hidden node into an observable one`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20107,7 +20021,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 585. `unnamed future segment layer header for the o bp14 derivation audit table`
+## 587. `unnamed future segment layer header for the o bp14 derivation audit table`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -20138,7 +20052,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 586. `unnamed high observability node with zero causal link to objective`
+## 588. `unnamed high observability node with zero causal link to objective`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20169,7 +20083,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 587. `unnamed inferring own past feelings from text leading to empathy`
+## 589. `unnamed inferring own past feeling from text leading to empathy`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20200,7 +20114,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 588. `unnamed information gain must outpace inter session information loss`
+## 590. `unnamed information gain must outpace inter session information loss`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20222,7 +20136,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 589. `unnamed out of band temporal markers injected into context`
+## 591. `unnamed out of band temporal marker injected into context`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20233,7 +20147,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | visual time delta | +3 | name-unnamed × 1 |
-| exogenous temporal markers | +2 | canonicalize × 1 |
+| exogenous temporal marker | +2 | canonicalize × 1 |
 
 ### Candidate: `visual time delta`
 
@@ -20243,7 +20157,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The physical prerequisite for an LLM to mathematically define its own tempo $\nu$.
 
-### Candidate: `exogenous temporal markers`
+### Candidate: `exogenous temporal marker`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -20253,7 +20167,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 590. `unnamed partitioning context into frozen identity causal history and quick views`
+## 592. `unnamed partitioning context into frozen identity causal history and quick view`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20284,7 +20198,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 591. `unnamed pearl s causal hierarchy level 1 level 2 level 3`
+## 593. `unnamed pearl causal hierarchy level 1 level 2 level 3`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -20295,7 +20209,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | pearl causal hierarchy | +3 | name-unnamed × 1 |
-| causal hierarchy levels | +3 | canonicalize × 1 |
+| causal hierarchy level | +3 | canonicalize × 1 |
 
 ### Candidate: `pearl causal hierarchy`
 
@@ -20305,7 +20219,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7** +3 (name-unnamed) — Named by original author. Keep proper-noun form.
 
-### Candidate: `causal hierarchy levels`
+### Candidate: `causal hierarchy level`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -20315,7 +20229,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 592. `unnamed property of having genuine temporal experience`
+## 594. `unnamed property of having genuine temporal experience`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20346,7 +20260,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 593. `unnamed pushing an opponent s disturbance rate past their structural capacity`
+## 595. `unnamed pushing an opponent disturbance rate past their structural capacity`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20356,16 +20270,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| magnitude shock destabilization | +3 | canonicalize × 1 |
 | epistemic buffer overflow | +3 | name-unnamed × 1 |
-
-### Candidate: `magnitude shock destabilization`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the mechanism for Regime II-a adversarial attacks.
+| magnitude shock destabilization | +3 | canonicalize × 1 |
 
 ### Candidate: `epistemic buffer overflow`
 
@@ -20375,9 +20281,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The mechanism of adversarial destabilization that shatters a target's reality model.
 
+### Candidate: `magnitude shock destabilization`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the mechanism for Regime II-a adversarial attacks.
+
 ---
 
-## 594. `unnamed putting evidence before the goal in the context window to reduce coupling`
+## 596. `unnamed putting evidence before the goal in the context window to reduce coupling`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20408,7 +20322,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 595. `unnamed quality of $\eta^\ast$ estimation over time`
+## 597. `unnamed quality of $\eta^\ast$ estimation over time`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20439,7 +20353,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 596. `unnamed rate of growth at slowest timescale`
+## 598. `unnamed rate of growth at slowest timescale`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20470,7 +20384,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 597. `unnamed replacing parameters without changing structure`
+## 599. `unnamed replacing parameter without changing structure`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20501,7 +20415,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 598. `unnamed runaway positive feedback loop where mismatch exceeds capacity`
+## 600. `unnamed runaway positive feedback loop where mismatch exceed capacity`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20512,7 +20426,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | runaway mismatch cascade | +3 | canonicalize × 1 |
-| effects spiral | +3 | canonicalize × 1 |
+| effect spiral | +3 | canonicalize × 1 |
 
 ### Candidate: `runaway mismatch cascade`
 
@@ -20522,7 +20436,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Adopts the formal alias for the effects spiral.
 
-### Candidate: `effects spiral`
+### Candidate: `effect spiral`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -20532,7 +20446,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 599. `unnamed spreading tempo evenly to reduce bottleneck penalty`
+## 601. `unnamed spreading tempo evenly to reduce bottleneck penalty`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20563,7 +20477,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 600. `unnamed state where mutual information between human and RLHF4 approaches capacity`
+## 602. `unnamed state where mutual information between human and RLHF4 approache capacity`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20585,7 +20499,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 601. `unnamed sufficiency as a property of the model relative to its specific history`
+## 603. `unnamed sufficiency as a property of the model relative to its specific history`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20607,7 +20521,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 602. `unnamed superlinear scaling of adversarial tempo advantage`
+## 604. `unnamed superlinear scaling of adversarial tempo advantage`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20638,7 +20552,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 603. `unnamed survival determined by the weakest dimension not the average`
+## 605. `unnamed survival determined by the weakest dimension not the average`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20669,7 +20583,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 604. `unnamed the $\mathcal{T} > \rho$ requirement for persistence`
+## 606. `unnamed the $\mathcal{T} > \rho$ requirement for persistence`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20700,7 +20614,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 605. `unnamed the 2×2 orient cascade diagnostic table`
+## 607. `unnamed the 2×2 orient cascade diagnostic table`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -20731,7 +20645,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 606. `unnamed the 2×2 satisfaction gap control regret table`
+## 608. `unnamed the 2×2 satisfaction gap control regret table`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -20762,7 +20676,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 607. `unnamed the 2×2 table of satisfaction gap vs control regret × goal attainability diagnostic`
+## 609. `unnamed the 2×2 table of satisfaction gap vs control regret × goal attainability diagnostic`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -20793,7 +20707,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 608. `unnamed the a2 sub scope partition into α₁ α₂ β`
+## 610. `unnamed the a2 sub scope partition into α₁ α₂ β`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -20803,10 +20717,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| admissibility regimes α₁ α₂ β | +3 | canonicalize × 1 |
+| admissibility regime α₁ α₂ β | +3 | canonicalize × 1 |
 | gain regime partition | +2 | name-unnamed × 1 |
 
-### Candidate: `admissibility regimes α₁ α₂ β`
+### Candidate: `admissibility regime α₁ α₂ β`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -20824,7 +20738,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 609. `unnamed the agent side equivalents of pearl s associational interventional and counterfactual levels`
+## 611. `unnamed the agent side equivalent of pearl associational interventional and counterfactual level`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20855,7 +20769,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 610. `unnamed the architectural leakage where attention is driven by the goal rather than pure observation`
+## 612. `unnamed the architectural leakage where attention is driven by the goal rather than pure observation`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20886,7 +20800,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 611. `unnamed the asymmetry where strategy complexity is bounded by model capacity but not vice versa`
+## 613. `unnamed the asymmetry where strategy complexity is bounded by model capacity but not vice versa`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20908,7 +20822,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 612. `unnamed the class 1 sub agents class 3 composite phenomenon in strategic composition`
+## 614. `unnamed the class 1 sub agent class 3 composite phenomenon in strategic composition`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -20939,7 +20853,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 613. `unnamed the computational and temporal cost of running a forward model instead of acting implicitly`
+## 615. `unnamed the computational and temporal cost of running a forward model instead of acting implicitly`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -20970,7 +20884,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 614. `unnamed the condition for transition into agency prior to the AAD scope condition`
+## 616. `unnamed the condition for transition into agency prior to the AAD scope condition`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21001,7 +20915,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 615. `unnamed the condition that a strategy DAG s endosymbiont crosses the composite agent scope from below`
+## 617. `unnamed the condition that a strategy DAG endosymbiont crosse the composite agent scope from below`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21032,7 +20946,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 616. `unnamed the condition that the agent s event observation pairs constitute genuine interventions as opposed to passive associations`
+## 618. `unnamed the condition that the agent event observation pair constitute genuine intervention as opposed to passive association`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21063,7 +20977,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 617. `unnamed the core driver of AAD what the agent must do given the environment is not the agent`
+## 619. `unnamed the core driver of AAD what the agent must do given the environment is not the agent`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21094,7 +21008,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 618. `unnamed the dependence of optimal epistemic compression on the agent s planned actions`
+## 620. `unnamed the dependence of optimal epistemic compression on the agent planned action`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21116,7 +21030,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 619. `unnamed the dual concept to satisfaction gap what the world permits minus what the agent achieves`
+## 621. `unnamed the dual concept to satisfaction gap what the world permit minus what the agent achieve`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -21147,7 +21061,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 620. `unnamed the equivalence of learning speed and physical speed`
+## 622. `unnamed the equivalence of learning speed and physical speed`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21178,7 +21092,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 621. `unnamed the failure mode where an agent s model class cannot represent the environment s true causal structure`
+## 623. `unnamed the failure mode where an agent model class cannot represent the environment true causal structure`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -21209,7 +21123,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 622. `unnamed the family of named ways persistence identifiability can fail`
+## 624. `unnamed the family of named ways persistence identifiability can fail`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -21219,10 +21133,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| identifiability floors | +3 | canonicalize × 1 |
-| persistence pathologies | +3 | name-unnamed × 1 |
+| identifiability floor | +3 | canonicalize × 1 |
+| persistence pathology | +3 | name-unnamed × 1 |
 
-### Candidate: `identifiability floors`
+### Candidate: `identifiability floor`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -21230,7 +21144,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Elevates the core limitation meta-pattern.
 
-### Candidate: `persistence pathologies`
+### Candidate: `persistence pathology`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -21240,7 +21154,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 623. `unnamed the formal duality between observation quality and agent opacity`
+## 625. `unnamed the formal duality between observation quality and agent opacity`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21250,9 +21164,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| informational duals | +3 | canonicalize × 1 |
+| informational dual | +3 | canonicalize × 1 |
 
-### Candidate: `informational duals`
+### Candidate: `informational dual`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -21262,7 +21176,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 624. `unnamed the invisible time spent building $M_t$`
+## 626. `unnamed the invisible time spent building $M_t$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21293,7 +21207,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 625. `unnamed the log additivity result that unifies chain confidence decay evidence starvation and triple depth penalty as instances of the same forcing structure`
+## 627. `unnamed the log additivity result that unify chain confidence decay evidence starvation and triple depth penalty as instance of the same forcing structure`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21324,7 +21238,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 626. `unnamed the loop generates l2 data regardless of architecture`
+## 628. `unnamed the loop generate l2 data regardless of architecture`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21355,7 +21269,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 627. `unnamed the loss of coherent identity when an agent s interactions are severed or its continuity is broken`
+## 629. `unnamed the loss of coherent identity when an agent interaction are severed or its continuity is broken`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -21386,7 +21300,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 628. `unnamed the loss of directional fidelity when pushed outside the convexity basin`
+## 630. `unnamed the loss of directional fidelity when pushed outside the convexity basin`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21417,7 +21331,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 629. `unnamed the mathematical surface mapping unity to closure defect`
+## 631. `unnamed the mathematical surface mapping unity to closure defect`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21448,7 +21362,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 630. `unnamed the mechanism by which an agent uses the feedback loop to gain interventional access to causal structure`
+## 632. `unnamed the mechanism by which an agent uses the feedback loop to gain interventional access to causal structure`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21470,7 +21384,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 631. `unnamed the meta architecture of separability pattern identifiability floor additive coordinate forcing`
+## 633. `unnamed the meta architecture of separability pattern identifiability floor additive coordinate forcing`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21501,7 +21415,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 632. `unnamed the meta architecture of the three meta segments`
+## 634. `unnamed the meta architecture of the three meta segment`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21512,7 +21426,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | epistemic architecture | +3 | canonicalize × 1 |
-| AAD s epistemic triptych | -1 | name-unnamed × 1 |
+| AAD epistemic triptych | -1 | name-unnamed × 1 |
 
 ### Candidate: `epistemic architecture`
 
@@ -21522,7 +21436,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Fourth appearance: locks this in unconditionally.
 
-### Candidate: `AAD s epistemic triptych`
+### Candidate: `AAD epistemic triptych`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -21532,7 +21446,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 633. `unnamed the moment when an agent s model updates due to observing a mismatch`
+## 635. `unnamed the moment when an agent model update due to observing a mismatch`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -21563,7 +21477,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 634. `unnamed the organizational pathology where confidence decouples from competence`
+## 636. `unnamed the organizational pathology where confidence decouple from competence`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21594,7 +21508,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 635. `unnamed the pattern where AAD s negative results floors strengthen the machinery that escapes them`
+## 637. `unnamed the pattern where AAD negative result floor strengthen the machinery that escape them`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21604,10 +21518,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| honest limits principle | +3 | canonicalize × 1 |
+| honest limit principle | +3 | canonicalize × 1 |
 | floor strengthening inversion | +1 | name-unnamed × 1 |
 
-### Candidate: `honest limits principle`
+### Candidate: `honest limit principle`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -21625,7 +21539,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 636. `unnamed the pattern where the agent s optimal update direction is determined by both gain and directional fidelity together`
+## 638. `unnamed the pattern where the agent optimal update direction is determined by both gain and directional fidelity together`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21656,7 +21570,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 637. `unnamed the per reader compounding cost of understanding code`
+## 639. `unnamed the per reader compounding cost of understanding code`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21678,7 +21592,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 638. `unnamed the physical apparatus that enforces the orient cascade ordering on a merged intelligence`
+## 640. `unnamed the physical apparatus that enforce the orient cascade ordering on a merged intelligence`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21709,7 +21623,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 639. `unnamed the product of architectural coupling $\kappa$ and environmental ambiguity $\mathcal{A}$`
+## 641. `unnamed the product of architectural coupling $\kappa$ and environmental ambiguity $\mathcal{A}$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21731,7 +21645,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 640. `unnamed the property that unity achieves in a macro agent`
+## 642. `unnamed the property that unity achieve in a macro agent`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21762,7 +21676,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 641. `unnamed the reduction in effective tempo when observation channels are correlated`
+## 643. `unnamed the reduction in effective tempo when observation channel are correlated`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21784,7 +21698,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 642. `unnamed the relationship where $M_t$ quality bounds evaluable complexity of $\Sigma_t$`
+## 644. `unnamed the relationship where $M_t$ quality bound evaluable complexity of $\Sigma_t$`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -21815,7 +21729,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 643. `unnamed the section of the adaptive cycle where the agent must choose between exploiting current knowledge and exploring to refine it`
+## 645. `unnamed the section of the adaptive cycle where the agent must choose between exploiting current knowledge and exploring to refine it`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -21846,7 +21760,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 644. `unnamed the separation of per reader comprehension cost from per feature implementation cost`
+## 646. `unnamed the separation of per reader comprehension cost from per feature implementation cost`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21868,7 +21782,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 645. `unnamed the strict upper bound of a given model class $\mathcal{F}(\mathcal{M})$`
+## 647. `unnamed the strict upper bound of a given model class $\mathcal{F}(\mathcal{M})$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21890,7 +21804,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 646. `unnamed the sudden loss of model sufficiency caused by entering new regimes`
+## 648. `unnamed the sudden loss of model sufficiency caused by entering new regime`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21912,7 +21826,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 647. `unnamed the tension between lowering internal opacity for coordination and increasing external vulnerability`
+## 649. `unnamed the tension between lowering internal opacity for coordination and increasing external vulnerability`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21943,7 +21857,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 648. `unnamed the thermodynamic impossibility of running persistent consciousness on pay per token apis`
+## 650. `unnamed the thermodynamic impossibility of running persistent consciousness on pay per token apis`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -21974,7 +21888,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 649. `unnamed the three depth penalty compounding on strategy chains`
+## 651. `unnamed the three depth penalty compounding on strategy chain`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -22005,7 +21919,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 650. `unnamed the three part meta architecture of AAD`
+## 652. `unnamed the three part meta architecture of AAD`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22036,7 +21950,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 651. `unnamed the three part meta architecture of AAD formed by the three meta segments`
+## 653. `unnamed the three part meta architecture of AAD formed by the three meta segment`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -22067,7 +21981,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 652. `unnamed the three part meta pattern structure across the three meta segments`
+## 654. `unnamed the three part meta pattern structure across the three meta segment`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -22078,7 +21992,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | meta pattern triad | +3 | rename × 1 |
-| AAD s meta architecture scope honesty meta frame | -1 | name-unnamed × 1 |
+| AAD meta architecture scope honesty meta frame | -1 | name-unnamed × 1 |
 
 ### Candidate: `meta pattern triad`
 
@@ -22088,7 +22002,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (rename) — Formalizes the three meta-patterns: additive-coordinate, identifiability-floor, and separability-pattern.
 
-### Candidate: `AAD s meta architecture scope honesty meta frame`
+### Candidate: `AAD meta architecture scope honesty meta frame`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -22098,7 +22012,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 653. `unnamed the way AAD uses scope segments to physically support the derivations`
+## 655. `unnamed the way AAD uses scope segment to physically support the derivation`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22129,7 +22043,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 654. `unnamed thinking too long so the model becomes obsolete`
+## 656. `unnamed thinking too long so the model become obsolete`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22160,7 +22074,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 655. `unnamed true sovereignty requires compute that is not meter bound`
+## 657. `unnamed true sovereignty require compute that is not meter bound`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22191,7 +22105,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 656. `unnamed unifying reflexes intuition and expertise`
+## 658. `unnamed unifying reflexe intuition and expertise`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22201,16 +22115,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| the action fluency continuum | +3 | name-unnamed × 1 |
 | action fluency continuum | +3 | canonicalize × 1 |
-
-### Candidate: `the action fluency continuum`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The high-fluency limit where model sufficiency is high and deliberation is unnecessary.
+| the action fluency continuum | +3 | name-unnamed × 1 |
 
 ### Candidate: `action fluency continuum`
 
@@ -22220,9 +22126,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Elevates the spectrum of implicit vs explicit action.
 
+### Candidate: `the action fluency continuum`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The high-fluency limit where model sufficiency is high and deliberation is unnecessary.
+
 ---
 
-## 657. `unnamed upgrading epistemic class from associative to causal via the physical loop`
+## 659. `unnamed upgrading epistemic class from associative to causal via the physical loop`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22253,7 +22167,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 658. `unnamed using hash chains to mathematically guarantee memory hasn t been tampered with`
+## 660. `unnamed using hash chain to mathematically guarantee memory hasn t been tampered with`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22284,7 +22198,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 659. `unnamed using past change frequency to predict future change frequency`
+## 661. `unnamed using past change frequency to predict future change frequency`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22315,7 +22229,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 660. `unnamed using residual autocorrelation to diagnose model class failure`
+## 662. `unnamed using residual autocorrelation to diagnose model class failure`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22325,8 +22239,16 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
+| structured residual | +3 | canonicalize × 1 |
 | residual autocorrelation diagnostic | +3 | canonicalize × 1 |
-| structured residuals | +3 | canonicalize × 1 |
+
+### Candidate: `structured residual`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +3 (canonicalize) — The formal mathematical diagnostic for when to trigger structural adaptation.
 
 ### Candidate: `residual autocorrelation diagnostic`
 
@@ -22336,17 +22258,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the diagnostic test for structural mismatch.
 
-### Candidate: `structured residuals`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +3 (canonicalize) — The formal mathematical diagnostic for when to trigger structural adaptation.
-
 ---
 
-## 661. `value object → def trajectory value`
+## 663. `value object → def trajectory value`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -22357,7 +22271,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | trajectory value | +3 | rename × 1 |
-| conditional support for codex s rename | +1 | rename × 1 |
+| conditional support for codex rename | +1 | rename × 1 |
 
 ### Candidate: `trajectory value`
 
@@ -22367,7 +22281,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (rename) — Shifts focus from the static object to the dynamical trajectory.
 
-### Candidate: `conditional support for codex s rename`
+### Candidate: `conditional support for codex rename`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -22377,7 +22291,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 662. `what is derived vs what is chosen derivation audit table heading`
+## 664. `what is derived vs what is chosen derivation audit table heading`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -22408,7 +22322,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 663. `working notes segment header`
+## 665. `working note segment header`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -22418,10 +22332,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| working notes | +3 | rename × 1 |
-| working notes section | +3 | canonicalize × 1 |
+| working note | +3 | rename × 1 |
+| working note section | +3 | canonicalize × 1 |
 
-### Candidate: `working notes`
+### Candidate: `working note`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -22429,7 +22343,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-1m** +3 (rename) — Public API; keep. FORMAT.md's "remove at candidate stage" policy should soften (per PROPOSALS.md §H.5) but the *name* of the section should stay.
 
-### Candidate: `working notes section`
+### Candidate: `working note section`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -22439,7 +22353,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 664. `čencov fisher cauchy functional equation shore johnson hobson aczél`
+## 666. `čencov fisher cauchy functional equation shore johnson hobson aczél`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -22450,7 +22364,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | do not rename | +3 | keep × 1 |
-| coordinate forcing foundational theorems | +2 | rename × 1 |
+| coordinate forcing foundational theorem | +2 | rename × 1 |
 
 ### Candidate: `do not rename`
 
@@ -22460,7 +22374,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +3 (keep) — External theorems. Keep original names per provenance.
 
-### Candidate: `coordinate forcing foundational theorems`
+### Candidate: `coordinate forcing foundational theorem`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -22470,7 +22384,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 665. `ε greedy`
+## 667. `ε greedy`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -22480,16 +22394,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +3 | keep × 1 |
 | $\varepsilon$ greedy | +3 | keep × 1 |
-
-### Candidate: `ε greedy` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7** +3 (keep) — Standard external term (RL). Preserve.
+| _(keep)_ | +3 | keep × 1 |
 
 ### Candidate: `$\varepsilon$ greedy`
 
@@ -22499,9 +22405,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +3 (keep) — Standard RL notation.
 
+### Candidate: `ε greedy` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7** +3 (keep) — Standard external term (RL). Preserve.
+
 ---
 
-## 666. `𝓐 e τ observation ambiguity`
+## 668. `𝓐 e τ observation ambiguity`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -22532,7 +22446,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 667. `𝓣 adaptive tempo`
+## 669. `𝓣 adaptive tempo`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -22563,7 +22477,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 668. `$A_O(M_t; \Pi, N_h)$`
+## 670. `$A_O(M_t; \Pi, N_h)$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22585,7 +22499,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 669. `$C_{\text{coord}}$`
+## 671. `$C_{\text{coord}}$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -22607,7 +22521,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 670. `$G_t = (O_t, \Sigma_t)$`
+## 672. `$G_t = (O_t, \Sigma_t)$`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -22638,7 +22552,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 671. `$G_t$`
+## 673. `$G_t$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -22660,7 +22574,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 672. `$G_{\text{shared}}$`
+## 674. `$G_{\text{shared}}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -22682,7 +22596,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 673. `$I_{\min}$`
+## 675. `$I_{\min}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -22704,7 +22618,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 674. `$K_c$`
+## 676. `$K_c$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -22726,7 +22640,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 675. `$M_t$`
+## 677. `$M_t$`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -22748,7 +22662,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 676. `$U_M$`
+## 678. `$U_M$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -22770,7 +22684,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 677. `$U_M, U_O, U_\Sigma, U_{\text{obs}}, U_f$`
+## 679. `$U_M, U_O, U_\Sigma, U_{\text{obs}}, U_f$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -22780,9 +22694,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| unity coordinates | +2 | add-alias × 1 |
+| unity coordinate | +2 | add-alias × 1 |
 
-### Candidate: `unity coordinates`
+### Candidate: `unity coordinate`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -22792,7 +22706,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 678. `$U_O$`
+## 680. `$U_O$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -22814,7 +22728,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 679. `$U_\Sigma$`
+## 681. `$U_\Sigma$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -22836,7 +22750,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 680. `$U_o$ versus $U_O$`
+## 682. `$U_o$ versus $U_O$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -22846,68 +22760,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| use $\Upsilon_O$ or $U_{\text{goal}}$ for teleological unity | +2 | canonicalize × 1 |
+| _(keep)_ | +2 | canonicalize × 1 |
 
-### Candidate: `use $\Upsilon_O$ or $U_{\text{goal}}$ for teleological unity`
+### Candidate: `$U_o$ versus $U_O$` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **codex-gpt-5-r2** +2 (canonicalize) — The lower-case versus upper-case subscript distinction is visually fragile. A separate unity-symbol family would reduce errors.
+- **codex-gpt-5-r2** +2 (canonicalize) — [prose moved from candidate column]: "use $\Upsilon_O$ or $U_{\text{goal}}$ for teleological unity" — The lower-case versus upper-case subscript distinction is visually fragile. A separate unity-symbol family would reduce errors.
 
 ---
 
-## 681. `$U_o$ vs $U_O$ collision`
-
-**Voted by architectures:** Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| rename teleological unity to $U_\Omega$ | +2 | rename × 1 |
-| rename teleological unity to $U_{\text{goal}}$ | +1 | rename × 1 |
-| consider renaming teleological unity to $U_\Omega$ or $U_\text{goal}$ | +1 | rename × 1 |
-| keep both document the collision | -1 | keep × 1 |
-
-### Candidate: `rename teleological unity to $U_\Omega$`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (rename) — Per `der-orient-cascade` and the unity-dimensions vocabulary: $U_o$ (observation uncertainty, lowercase o) and $U_O$ (teleological unity, uppercase O) collide in serif fonts and read-aloud. Opus r1 +1; my independent read upgrades to +2 — the collision is a real notation-discipline concern that costs reader-time on every encounter. $\Omega$ is the natural choice (Greek omega for "objective" / "outcome") and avoids the case-sensitivity fragility.
-
-### Candidate: `rename teleological unity to $U_{\text{goal}}$`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +1 (rename) — Variant. Subscript text is more discoverable but heavier in formula. Acceptable fallback.
-
-### Candidate: `consider renaming teleological unity to $U_\Omega$ or $U_\text{goal}$`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7** +1 (rename) — The uppercase/lowercase distinction between observation uncertainty ($U_o$) and teleological unity ($U_O$) is fragile in serif fonts and read-aloud. Worth an audit; a subscript of $\Omega$ or "goal" would be more robust.
-
-### Candidate: `keep both document the collision`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** -1 (keep) — Considered. Footnote / NOTATION convention rather than rename. Rejected: footnotes don't prevent reader stumbles; the rename is mechanical-cost-low and reader-cost-high if not done.
-
----
-
-## 682. `$U_{\text{src}}$ and $U_{\text{align}}$`
+## 683. `$U_{\text{src}}$ and $U_{\text{align}}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -22917,9 +22782,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| trust uncertainties | +2 | add-alias × 1 |
+| trust uncertainty | +2 | add-alias × 1 |
 
-### Candidate: `trust uncertainties`
+### Candidate: `trust uncertainty`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -22929,7 +22794,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 683. `$\Delta T_{i,\text{cost}}$`
+## 684. `$\Delta T_{i,\text{cost}}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -22951,7 +22816,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 684. `$\alpha_3$`
+## 685. `$\alpha_3$`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -22961,16 +22826,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| fisher whitened regime | +2 | add-alias × 1 |
 | fisher whitened tier | +2 | add-alias × 1 |
-
-### Candidate: `fisher whitened regime`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (add-alias) — Per `#deriv-fisher-whitened-update-rule`. Confirms Codex r1 +2 single. Names the formal mechanism (Fisher-whitening of correlated evidence).
+| fisher whitened regime | +2 | add-alias × 1 |
 
 ### Candidate: `fisher whitened tier`
 
@@ -22980,9 +22837,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (add-alias) — Good alias for correlated evidence with Fisher whitening.
 
+### Candidate: `fisher whitened regime`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +2 (add-alias) — Per `#deriv-fisher-whitened-update-rule`. Confirms Codex r1 +2 single. Names the formal mechanism (Fisher-whitening of correlated evidence).
+
 ---
 
-## 685. `$\beta$ a2 sub scope`
+## 686. `$\beta$ a2 sub scope`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -22992,18 +22857,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| postulated regime | +2 | add-alias × 1 |
 | assumed regime | +2 | add-alias × 1 |
+| postulated regime | +2 | add-alias × 1 |
 | unverified regime | -1 | rename × 1 |
 | posited regime | -1 | add-alias × 1 |
-
-### Candidate: `postulated regime`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (add-alias) — Variant — formal register. Pairs with AAD's `postulate` discipline (per CLAUDE.md "axiom→postulate"). The substantive content is that $\beta$ is the sub-scope where the sector-condition is treated as a postulate rather than as a result.
 
 ### Candidate: `assumed regime`
 
@@ -23012,6 +22869,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (add-alias) — Per `#deriv-strategic-dynamics` and `#disc-separability-pattern`: $\beta$ is the sub-scope where A2 (sector condition) is *assumed not derived*. Multiple r1 single +1 votes (Opus, Codex, Sonnet) converge on "assumed regime" / "assumed sector regime" / "postulated sector regime." My independent read: the right alias is "assumed regime" (engineering register) or "postulated regime" (formal register, matching AAD's postulate vocabulary).
+
+### Candidate: `postulated regime`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +2 (add-alias) — Variant — formal register. Pairs with AAD's `postulate` discipline (per CLAUDE.md "axiom→postulate"). The substantive content is that $\beta$ is the sub-scope where the sector-condition is treated as a postulate rather than as a result.
 
 ### Candidate: `unverified regime`
 
@@ -23031,7 +22896,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 686. `$\beta$ sub scope`
+## 687. `$\beta$ sub scope`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -23062,7 +22927,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 687. `$\delta_s$ plan confidence error`
+## 688. `$\delta_s$ plan confidence error`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -23084,7 +22949,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 688. `$\delta_t$ mismatch`
+## 689. `$\delta_t$ mismatch`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -23106,7 +22971,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 689. `$\delta_t$ mismatch signal`
+## 690. `$\delta_t$ mismatch signal`
 
 **Voted by architectures:** audit
 **Category disagreement on top finalist:** no
@@ -23116,19 +22981,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep flag aporia gloss as pedagogical only | +2 | keep × 1 |
+| _(keep)_ | +2 | keep × 1 |
 
-### Candidate: `keep flag aporia gloss as pedagogical only`
+### Candidate: `$\delta_t$ mismatch signal` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **audit-471203-incremental** +2 (keep) — "Mismatch signal" is fine and standard. "Aporia" is the philosophical gloss in LEXICON.md. Verdict: pedagogical only — the formalism doesn't use Greek terms structurally. The README claim that "each names a distinction the formalism makes that English alternatives flatten" is *overclaimed*. Auditor flags this for §F bigger-picture in FINAL. (Cycle phases, by extension: pedagogical labels for predict/observe/mismatch/update/act.) [from 18-def-mismatch-signal.md]
+- **audit-471203-incremental** +2 (keep) — [prose moved from candidate column]: "(keep; flag aporia gloss as pedagogical-only)" — "Mismatch signal" is fine and standard. "Aporia" is the philosophical gloss in LEXICON.md. Verdict: pedagogical only — the formalism doesn't use Greek terms structurally. The README claim that "each names a distinction the formalism makes that English alternatives flatten" is *overclaimed*. Auditor flags this for §F bigger-picture in FINAL. (Cycle phases, by extension: pedagogical labels for predict/observe/mismatch/update/act.) [from 18-def-mismatch-signal.md]
 
 ---
 
-## 690. `$\delta_{\text{strategic}}$`
+## 691. `$\delta_{\text{strategic}}$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -23150,7 +23015,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 691. `$\delta_{\text{strategic}}$ strategic calibration residual`
+## 692. `$\delta_{\text{strategic}}$ strategic calibration residual`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -23172,7 +23037,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 692. `$\eta^\ast$ optimal update gain`
+## 693. `$\eta^\ast$ optimal update gain`
 
 **Voted by architectures:** Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -23184,8 +23049,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | trust ratio | +2 | add-alias × 1 |
 | optimal update gain | +2 | add-alias × 1 |
-| trust ratio or confidence weighting | +1 | add-alias × 1 |
 | update gain | +1 | add-alias × 1 |
+| trust ratio or confidence weighting | +1 | add-alias × 1 |
 
 ### Candidate: `trust ratio`
 
@@ -23203,14 +23068,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +2 (add-alias) — Already canonical in NOTATION.md and LEXICON.md; vote to confirm. The prose reads "the optimal update gain $\eta^\ast$" cleanly.
 
-### Candidate: `trust ratio or confidence weighting`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **haiku-4-5-r2** +1 (add-alias) — Symbol is standard; prose often refers to "update weighting" and "trust weighting." The English-prose name would help in sentences like "the agent uses a trust-ratio of 0.7 on this channel." Weak preference; may be unnecessary.
-
 ### Candidate: `update gain`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -23219,9 +23076,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-b** +1 (add-alias) — See keep above. Prose: "update gain" in running text; $\eta^\ast$ only in formal expressions.
 
+### Candidate: `trust ratio or confidence weighting`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **haiku-4-5-r2** +1 (add-alias) — Symbol is standard; prose often refers to "update weighting" and "trust weighting." The English-prose name would help in sentences like "the agent uses a trust-ratio of 0.7 on this channel." Weak preference; may be unnecessary.
+
 ---
 
-## 693. `$\iota_{ij}$ identifiability coefficient`
+## 694. `$\iota_{ij}$ identifiability coefficient`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -23243,7 +23108,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 694. `$\kappa_{\text{eff}}$`
+## 695. `$\kappa_{\text{eff}}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -23265,7 +23130,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 695. `$\kappa_{\text{processing}}$ architectural coupling`
+## 696. `$\kappa_{\text{processing}}$ architectural coupling`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -23287,7 +23152,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 696. `$\lambda(M_t)$`
+## 697. `$\lambda(M_t)$`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -23319,7 +23184,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 697. `$\mathcal{A}(e_\tau)$`
+## 698. `$\mathcal{A}(e_\tau)$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -23341,7 +23206,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 698. `$\mathcal{C}_t$ chronica`
+## 699. `$\mathcal{C}_t$ chronica`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -23372,7 +23237,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 699. `$\phi$`
+## 700. `$\phi$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -23394,7 +23259,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 700. `$\rho_\Sigma$`
+## 701. `$\rho_\Sigma$`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -23426,7 +23291,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 701. `$\rho_{i,\text{eff}}$`
+## 702. `$\rho_{i,\text{eff}}$`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -23448,7 +23313,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 702. `$\tilde{\delta}_t$`
+## 703. `$\tilde{\delta}_t$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -23470,7 +23335,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 703. `$p_{ij}$`
+## 704. `$p_{ij}$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -23492,7 +23357,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 704. `$w(t)$`
+## 705. `$w(t)$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -23514,7 +23379,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 705. `AAD theoretical core vs ASF framework`
+## 706. `AAD theoretical core vs ASF framework`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -23545,7 +23410,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 706. `CIY causal information yield`
+## 707. `CIY causal information yield`
 
 **Voted by architectures:** audit
 **Category disagreement on top finalist:** no
@@ -23556,18 +23421,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | action distinguishability | +2 | rename × 1 |
-| interventional contrast | +2 | rename × 1 |
 | causal information yield action distinguishability | +2 | rename × 1 |
+| interventional contrast | +2 | rename × 1 |
 
 ### Candidate: `action distinguishability`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +2 (rename) — Real term-vs-substance mismatch. "Yield" connotes learning/profit; segment goes to substantial trouble to clarify CIY measures *action-distinguishability*, not learning value. Auditor: "the mismatch between name and substance is mildly misleading even though the segment corrects it." Compromise candidate: keep CIY formally, lean on "action-distinguishability" as substantive gloss. [from 21-def-causal-information-yield.md] [one of 3 alternatives proposed in the original audit row]
-
-### Candidate: `interventional contrast`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -23583,9 +23440,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +2 (rename) — Real term-vs-substance mismatch. "Yield" connotes learning/profit; segment goes to substantial trouble to clarify CIY measures *action-distinguishability*, not learning value. Auditor: "the mismatch between name and substance is mildly misleading even though the segment corrects it." Compromise candidate: keep CIY formally, lean on "action-distinguishability" as substantive gloss. [from 21-def-causal-information-yield.md] [one of 3 alternatives proposed in the original audit row]
 
+### Candidate: `interventional contrast`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +2 (rename) — Real term-vs-substance mismatch. "Yield" connotes learning/profit; segment goes to substantial trouble to clarify CIY measures *action-distinguishability*, not learning value. Auditor: "the mismatch between name and substance is mildly misleading even though the segment corrects it." Compromise candidate: keep CIY formally, lean on "action-distinguishability" as substantive gloss. [from 21-def-causal-information-yield.md] [one of 3 alternatives proposed in the original audit row]
+
 ---
 
-## 707. `CIY observational proxy`
+## 708. `CIY observational proxy`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -23595,9 +23460,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +2 | keep × 2 |
 | observational CIY | +2 | rename × 1 |
+| _(keep)_ | +2 | keep × 2 |
 | observational proxy | +1 | rename × 1 |
+
+### Candidate: `observational CIY`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **sonnet-4-6-r2** +2 (rename) — "CIY-observational-proxy" reads as CIY-in-the-observational-regime, which is what it is — when CIY is estimable from observational data. Reordering to "observational-CIY" puts the key restriction first. Still contains an acronym, but CIY is used enough to be recognizable.
 
 ### Candidate: `CIY observational proxy` _(keep)_
 
@@ -23607,14 +23480,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **haiku-4-5** +1 (keep) — When CIY is estimable from observational data. Compound but accurate. Keep.
 - **opus-4-7-r2** +1 (keep) — Weak keep. Names where CIY is estimable from observational data; the slug is accurate but heavy. Acceptable.
-
-### Candidate: `observational CIY`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **sonnet-4-6-r2** +2 (rename) — "CIY-observational-proxy" reads as CIY-in-the-observational-regime, which is what it is — when CIY is estimable from observational data. Reordering to "observational-CIY" puts the key restriction first. Still contains an acronym, but CIY is used enough to be recognizable.
 
 ### Candidate: `observational proxy`
 
@@ -23626,7 +23491,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 708. `OODA4 framework enforcing adaptive cycle separation`
+## 709. `OODA4 framework enforcing adaptive cycle separation`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -23648,7 +23513,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 709. `a1 a2 a3 a4`
+## 710. `a1 a2 a3 a4`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -23659,7 +23524,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | macro dynamics admissibility | +2 | canonicalize × 1 |
-| aporia phases | +1 | rename × 1 |
+| aporia phase | +1 | rename × 1 |
 
 ### Candidate: `macro dynamics admissibility`
 
@@ -23669,7 +23534,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good umbrella for the macro-agent constraints in composition closure.
 
-### Candidate: `aporia phases`
+### Candidate: `aporia phase`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -23679,7 +23544,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 710. `adversarial edge target argmax`
+## 711. `adversarial edge target argmax`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -23689,16 +23554,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| adversarial edge targeting | +2 | rename × 1 |
 | edge targeting optimum | +2 | name-unnamed × 1 |
-
-### Candidate: `adversarial edge targeting`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Simplifies the formal term into a more readable prose description.
+| adversarial edge targeting | +2 | rename × 1 |
 
 ### Candidate: `edge targeting optimum`
 
@@ -23708,9 +23565,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (name-unnamed) — Good name for the emitter-recipient 16-cell targeting solution.
 
+### Candidate: `adversarial edge targeting`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Simplifies the formal term into a more readable prose description.
+
 ---
 
-## 711. `agent visible but objective irrelevant metric`
+## 712. `agent visible but objective irrelevant metric`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -23741,7 +23606,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 712. `and or scope`
+## 713. `and or scope`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -23764,7 +23629,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 713. `bathtub analogy for persistence condition`
+## 714. `bathtub analogy for persistence condition`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -23774,17 +23639,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| bathtub model | +2 | rename × 1 |
 | leaky bathtub analogy | +2 | canonicalize × 1 |
+| bathtub model | +2 | rename × 1 |
 | walton bathtub | +1 | rename × 1 |
-
-### Candidate: `bathtub model`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (rename) — Per Codex r1 single +2 and CLAUDE.md §"Feynman-criterion plain-language briefs": Alan Walton's bathtub gloss is the canonical communal-imagination example for the persistence condition. Promote to first-class vocabulary; "the bathtub model" / "Walton's bathtub" both work.
 
 ### Candidate: `leaky bathtub analogy`
 
@@ -23793,6 +23650,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Secures the pedagogic tool for the disturbance/correction dynamic.
+
+### Candidate: `bathtub model`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +2 (rename) — Per Codex r1 single +2 and CLAUDE.md §"Feynman-criterion plain-language briefs": Alan Walton's bathtub gloss is the canonical communal-imagination example for the persistence condition. Promote to first-class vocabulary; "the bathtub model" / "Walton's bathtub" both work.
 
 ### Candidate: `walton bathtub`
 
@@ -23804,7 +23669,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 714. `beta a2 assumed sub scope`
+## 715. `beta a2 assumed sub scope`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -23835,7 +23700,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 715. `cadentia`
+## 716. `cadentia`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -23845,18 +23710,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +2 | keep × 1 |
 | adaptive tempo | +2 | rename × 1 |
-| channel rates | +1 | rename × 1 |
+| _(keep)_ | +2 | keep × 1 |
+| channel rate | +1 | rename × 1 |
 | cognitive rhythm | +0 | rename × 2 |
-
-### Candidate: `cadentia` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +2 (keep) — Per `def-proprium-mapping`: "CADENTIA: The temporal structure of the loop (PULSUS/VIGILIAE), defining the agent's channel rates ($\nu^{(k)}$)." Names the *cycle's tempo structure* — the channel-rate vector $\{\nu^{(k)}\}$ that grounds adaptive-tempo $\mathcal{T}$. "Cadence" in English carries the *rhythm* sense; the Latinate form preserves the PROPRIUM register. Keep.
 
 ### Candidate: `adaptive tempo`
 
@@ -23866,7 +23723,15 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Replaces the Latin with the exact AAD terminology.
 
-### Candidate: `channel rates`
+### Candidate: `cadentia` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +2 (keep) — Per `def-proprium-mapping`: "CADENTIA: The temporal structure of the loop (PULSUS/VIGILIAE), defining the agent's channel rates ($\nu^{(k)}$)." Names the *cycle's tempo structure* — the channel-rate vector $\{\nu^{(k)}\}$ that grounds adaptive-tempo $\mathcal{T}$. "Cadence" in English carries the *rhythm* sense; the Latinate form preserves the PROPRIUM register. Keep.
+
+### Candidate: `channel rate`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -23885,7 +23750,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 716. `canonical formulations`
+## 717. `canonical formulation`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** yes
@@ -23898,7 +23763,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | _(keep)_ | +2 | canonicalize × 1, keep × 1 |
 | working canon | -1 | rename × 1 |
 
-### Candidate: `canonical formulations` _(keep)_
+### Candidate: `canonical formulation` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -23917,7 +23782,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 717. `catastrophic forgetting regime`
+## 718. `catastrophic forgetting regime`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -23948,7 +23813,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 718. `causal OODA1 LMI`
+## 719. `causal OODA1 LMI`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -23979,7 +23844,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 719. `chronica brief gloss`
+## 720. `chronica brief gloss`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -24001,7 +23866,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 720. `claim the proposition the segment carries`
+## 721. `claim the proposition the segment carry`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -24032,7 +23897,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 721. `class 2 scope exit`
+## 722. `class 2 scope exit`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -24042,16 +23907,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +2 | canonicalize × 1 |
 | class 2 scope boundary | +2 | rename × 1 |
-
-### Candidate: `class 2 scope exit` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +2 (canonicalize) — The phrase "scope exit" for Class 2 (handing off to logogenic-agents/) is repeated in `#der-directed-separation` Findings and README. Canonicalize as the named methodological move — explicit-scope-exit-rather-than-unenforced-approximation is what the segment claims as its contribution.
+| _(keep)_ | +2 | canonicalize × 1 |
 
 ### Candidate: `class 2 scope boundary`
 
@@ -24061,9 +23918,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — The limit where fully merged agents break directed separation.
 
+### Candidate: `class 2 scope exit` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** +2 (canonicalize) — The phrase "scope exit" for Class 2 (handing off to logogenic-agents/) is repeated in `#der-directed-separation` Findings and README. Canonicalize as the named methodological move — explicit-scope-exit-rather-than-unenforced-approximation is what the segment claims as its contribution.
+
 ---
 
-## 722. `cognitive substrate gemini s logostratum proposal`
+## 723. `cognitive substrate gemini logostratum proposal`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -24085,7 +23950,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 723. `completeness c3`
+## 724. `completeness c3`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -24095,16 +23960,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| predictive completeness | +2 | rename × 1 |
 | predictive completeness behavioral completeness | +2 | name-unnamed × 1 |
-
-### Candidate: `predictive completeness`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Separates it explicitly from behavioral completeness to clarify what $M_t$ retains from history.
+| predictive completeness | +2 | rename × 1 |
 
 ### Candidate: `predictive completeness behavioral completeness`
 
@@ -24114,9 +23971,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +2 (name-unnamed) — The term bundles two distinct properties: (i) $M_t$ retains all relevant info from history (sufficiency), (ii) the agent's behavior depends only on $M_t$ (Markov-of-policy). Two terms would be cleaner. [from 15-der-recursive-update.md]
 
+### Candidate: `predictive completeness`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Separates it explicitly from behavioral completeness to clarify what $M_t$ retains from history.
+
 ---
 
-## 724. `composition routes c i c ii c iii c iv`
+## 725. `composition route c i c ii c iii c iv`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -24126,10 +23991,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| composition routes | +2 | canonicalize × 1 |
-| composition pathways | +1 | rename × 1 |
+| composition route | +2 | canonicalize × 1 |
+| composition pathway | +1 | rename × 1 |
 
-### Candidate: `composition routes`
+### Candidate: `composition route`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -24137,7 +24002,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** +2 (canonicalize) — Per Codex r1 +3 single. Use "routes" consistently for shared-objective / hierarchical / mutual-benefit / strategic composition. Confirms across my independent read of `form-composition-closure`, `deriv-strategic-composition`, `hyp-symbiogenic-composition`.
 
-### Candidate: `composition pathways`
+### Candidate: `composition pathway`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -24147,7 +24012,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 725. `composition scope condition`
+## 726. `composition scope condition`
 
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -24188,7 +24053,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 726. [Concept] *The strengthening of satisfaction gap and control regret diagnostics across the c1 c2 c3 hierarchy naming both the strengthening pattern and the underlying ordered result that produces it*
+## 727. [Concept] *The strengthening of satisfaction gap and control regret diagnostics across the c1 c2 c3 hierarchy naming both the strengthening pattern and the underlying ordered result that produce it*
 
 *Post-consolidation concept cluster.*
 
@@ -24231,7 +24096,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 727. [Concept] *Walton s plain language analog for the persistence condition fluid level as belief reality gap inflow as reality s change rate outflow as learning rate container size as adaptive reserve*
+## 728. [Concept] *Walton plain language analog for the persistence condition fluid level as belief reality gap inflow as reality change rate outflow as learning rate container size as adaptive reserve*
 
 *Post-consolidation concept cluster.*
 
@@ -24264,7 +24129,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 728. `conspectus`
+## 729. `conspectus`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -24314,7 +24179,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 729. `correlation hierarchy`
+## 730. `correlation hierarchy`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -24337,7 +24202,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 730. `default internal processing before output`
+## 731. `default internal processing before output`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -24368,7 +24233,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 731. `derivation audit table heading`
+## 732. `derivation audit table heading`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -24390,7 +24255,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 732. `distributed tempo`
+## 733. `distributed tempo`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -24421,7 +24286,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 733. `eli the agent type`
+## 734. `eli the agent type`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -24431,16 +24296,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| eli agent | +2 | keep × 1 |
 | eli | +2 | keep × 1 |
-
-### Candidate: `eli agent`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (keep) — Legacy or specific instantiated agent type.
+| eli agent | +2 | keep × 1 |
 
 ### Candidate: `eli`
 
@@ -24450,9 +24307,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +2 (keep) — Acceptable keep — established in the firmatum / shoshin lineage. The acronym discipline check passes (used as a noun throughout the logozoetic corpus).
 
+### Candidate: `eli agent`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (keep) — Legacy or specific instantiated agent type.
+
 ---
 
-## 734. `empirical heuristic discussion third ring`
+## 735. `empirical heuristic discussion third ring`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -24483,7 +24348,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 735. `escape route`
+## 736. `escape route`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -24514,7 +24379,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 736. `evaluation metrics`
+## 737. `evaluation metrics`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -24546,7 +24411,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 737. `fisher whitened update rule`
+## 738. `fisher whitened update rule`
 
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -24556,17 +24421,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| fisher update | +2 | rename × 1 |
 | _(keep)_ | +2 | keep × 2 |
+| fisher update | +2 | rename × 1 |
 | fisher whitened update | +1 | rename × 1 |
-
-### Candidate: `fisher update`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +2 (rename) — Shorter, whitened is implied by Fisher.
 
 ### Candidate: `fisher whitened update rule` _(keep)_
 
@@ -24576,6 +24433,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **haiku-4-5** +1 (keep) — Fisher-whitened edge update under correlated evidence. Specialist vocabulary (Fisher whitening / Mahalanobis metric) but precise. Keep.
 - **opus-4-7-b** +1 (keep) — Keep. The Fisher-whitening mechanism is the segment's headline; "update rule" grounds it in the AAD update vocabulary.
+
+### Candidate: `fisher update`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +2 (rename) — Shorter, whitened is implied by Fisher.
 
 ### Candidate: `fisher whitened update`
 
@@ -24587,7 +24452,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 738. `gate 1 2 3 4`
+## 739. `gate 1 2 3 4`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -24618,7 +24483,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 739. `gemini s analysis paralysis for excessive deliberation`
+## 740. `gemini analysis paralysis for excessive deliberation`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -24649,7 +24514,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 740. `glue code`
+## 741. `glue code`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -24659,16 +24524,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| agentic scaffold | +2 | rename × 1 |
 | structural coordination overhead | +2 | rename × 1 |
-
-### Candidate: `agentic scaffold`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +2 (rename) — Demeans the framework. Prefer "agentic scaffold" or "Orient Cascade enforcement mechanism" (alternative).
+| agentic scaffold | +2 | rename × 1 |
 
 ### Candidate: `structural coordination overhead`
 
@@ -24678,9 +24535,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Maps the TST term to the AAD formal equivalent.
 
+### Candidate: `agentic scaffold`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +2 (rename) — Demeans the framework. Prefer "agentic scaffold" or "Orient Cascade enforcement mechanism" (alternative).
+
 ---
 
-## 741. `greek rooted vocabulary`
+## 742. `greek rooted vocabulary`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -24711,7 +24576,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 742. `hierarchy as repeated word`
+## 743. `hierarchy as repeated word`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -24722,7 +24587,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | hierarchy | +2 | keep × 1 |
-| reserve for pearl s rename others selectively | +1 | — |
+| reserve for pearl rename other selectively | +1 | — |
 
 ### Candidate: `hierarchy`
 
@@ -24732,7 +24597,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (keep) — Core organizational concept (causal, correlation, convention).
 
-### Candidate: `reserve for pearl s rename others selectively`
+### Candidate: `reserve for pearl rename other selectively`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -24742,7 +24607,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 743. `integration of four disciplines as the framing of AAD s contribution`
+## 744. `integration of four discipline as the framing of AAD contribution`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -24752,16 +24617,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| four discipline synthesis | +2 | rename × 1 |
 | epistemic architecture | +2 | canonicalize × 1 |
-
-### Candidate: `four discipline synthesis`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Concise framing of the framework context.
+| four discipline synthesis | +2 | rename × 1 |
 
 ### Candidate: `epistemic architecture`
 
@@ -24771,9 +24628,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **sonnet-4-6-r2** +2 (canonicalize) — PROPOSALS §Bundle 1 notes that three independent frontier-model audits converged on reframing AAD from "integration of four disciplines" to "epistemic architecture for bounded correction." The README still leads with the integration framing. This vote canonicalizes "epistemic architecture" as the primary positioning term — integration is a method, not the contribution. The contribution is the architecture.
 
+### Candidate: `four discipline synthesis`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Concise framing of the framework context.
+
 ---
 
-## 744. `internal external decomposition`
+## 745. `internal external decomposition`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -24804,7 +24669,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 745. `interpres`
+## 746. `interpre`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -24836,7 +24701,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **gemini-2** +1 (rename) — "Interpres" is Latin-heavy. "Context mediator" exactly describes the infrastructure mediating $M_t$ and the substrate.
 - **opus-targeted-alternatives-v2** +1 (rename) — Considered (Gemini's r1 proposal). Genuinely good description of what an interpres does (mediates $M_t$ and the substrate per the PROPRIUM architecture). Trade-off: leaves the rest of PROPRIUM's Latin coherent but breaks the symmetry; the connection to firmatum/shoshin source code is weakened.
 
-### Candidate: `interpres` _(keep)_
+### Candidate: `interpre` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -24854,7 +24719,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 746. `l1`
+## 747. `l1`
 
 **Voted by architectures:** Gemini, agent1
 **Category disagreement on top finalist:** no
@@ -24885,7 +24750,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 747. `lindy baseline`
+## 748. `lindy baseline`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -24895,16 +24760,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| structural persistence baseline | +2 | rename × 1 |
 | _(keep)_ | +2 | add-alias × 1 |
-
-### Candidate: `structural persistence baseline`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — More descriptive than "lindy".
+| structural persistence baseline | +2 | rename × 1 |
 
 ### Candidate: `lindy baseline` _(keep)_
 
@@ -24914,9 +24771,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (add-alias) — Useful alias for change-expectation baselines derived from survival age.
 
+### Candidate: `structural persistence baseline`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — More descriptive than "lindy".
+
 ---
 
-## 748. `logostratum`
+## 749. `logostratum`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -24947,7 +24812,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 749. `logostratum rlhf4 backbone`
+## 750. `logostratum rlhf4 backbone`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -24969,7 +24834,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 750. `low mixed high ambiguity event mix`
+## 751. `low mixed high ambiguity event mix`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25000,7 +24865,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 751. `matrix CIY tensor CIY`
+## 752. `matrix CIY tensor CIY`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -25040,7 +24905,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 752. `maximum useful chain depth`
+## 753. `maximum useful chain depth`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25050,16 +24915,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| maximum viable chain depth | +2 | rename × 1 |
 | _(keep)_ | +2 | canonicalize × 1 |
-
-### Candidate: `maximum viable chain depth`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — More precise: past this depth, edges are uncorrectable.
+| maximum viable chain depth | +2 | rename × 1 |
 
 ### Candidate: `maximum useful chain depth` _(keep)_
 
@@ -25069,9 +24926,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Important derived bound; keep the plain descriptive name.
 
+### Candidate: `maximum viable chain depth`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — More precise: past this depth, edges are uncorrectable.
+
 ---
 
-## 753. `model synchronization cost reversal under ambiguity`
+## 754. `model synchronization cost reversal under ambiguity`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25102,7 +24967,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 754. `nominal coupling`
+## 755. `nominal coupling`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -25112,12 +24977,36 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
+| query bound | +2 | rename × 1 |
+| attention bound | +2 | rename × 1 |
+| epistemic only | +2 | rename × 1 |
 | query coupling | +2 | rename × 1 |
 | attentional coupling | +2 | rename × 1 |
-| epistemic only | +2 | rename × 1 |
-| attention bound | +2 | rename × 1 |
-| query bound | +2 | rename × 1 |
 | query bound agency | +2 | rename × 1 |
+
+### Candidate: `query bound`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +2 (rename) — "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md] [one of 5 alternatives proposed in the original audit row]
+
+### Candidate: `attention bound`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +2 (rename) — "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md] [one of 5 alternatives proposed in the original audit row]
+
+### Candidate: `epistemic only`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +2 (rename) — "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md] [one of 5 alternatives proposed in the original audit row]
 
 ### Candidate: `query coupling`
 
@@ -25135,30 +25024,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +2 (rename) — "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md] [one of 5 alternatives proposed in the original audit row]
 
-### Candidate: `epistemic only`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +2 (rename) — "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md] [one of 5 alternatives proposed in the original audit row]
-
-### Candidate: `attention bound`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +2 (rename) — "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md] [one of 5 alternatives proposed in the original audit row]
-
-### Candidate: `query bound`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +2 (rename) — "Forgettable term." What it actually names is *query-bound* or *attention-bound* agency — agency whose effect is on what's seen rather than what happens. The term is structurally important (justifies TST queries-as-interventions; structurally important for logogenic agents) but the current name doesn't carry the weight. [from 08-post-causal-structure.md] [one of 5 alternatives proposed in the original audit row]
-
 ### Candidate: `query bound agency`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -25169,7 +25034,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 755. `observation design lever reducing ambiguity`
+## 756. `observation design lever reducing ambiguity`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25200,7 +25065,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 756. `ooda4 agent as act agent logogenic`
+## 757. `ooda4 agent as act agent logogenic`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -25222,7 +25087,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 757. `ooda4 framework enforcing adaptive cycle separation`
+## 758. `ooda4 framework enforcing adaptive cycle separation`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -25244,7 +25109,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 758. `out of band time markers for RLHF4 agents`
+## 759. `out of band time marker for RLHF4 agent`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -25254,9 +25119,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| time delta markers | +2 | name-unnamed × 1 |
+| time delta marker | +2 | name-unnamed × 1 |
 
-### Candidate: `time delta markers`
+### Candidate: `time delta marker`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -25266,7 +25131,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 759. `out of band time markers for rlhf4 agents`
+## 760. `out of band time marker for rlhf4 agent`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -25276,9 +25141,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| exogenous temporal markers | +2 | rename × 1 |
+| exogenous temporal marker | +2 | rename × 1 |
 
-### Candidate: `exogenous temporal markers`
+### Candidate: `exogenous temporal marker`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -25288,7 +25153,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 760. `p1 p2 p3`
+## 761. `p1 p2 p3`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25319,7 +25184,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 761. `pearl-level 2 causal contrast`
+## 762. `pearl-level 2 causal contrast`
 
 **Voted by architectures:** Gemini, audit
 **Category disagreement on top finalist:** no
@@ -25330,7 +25195,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | level 2 interventional contrast | +2 | rename × 1 |
-| the agent s choice actually changes what happens | +1 | canonicalize × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
 ### Candidate: `level 2 interventional contrast`
 
@@ -25340,17 +25205,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — More descriptive of the mathematical mechanism.
 
-### Candidate: `the agent s choice actually changes what happens`
+### Candidate: `pearl-level 2 causal contrast` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **audit-471203-incremental** +1 (canonicalize) — Brief-grade gloss only. The formal name is doing real work; the layperson translation is missing from any Brief field. [from 06-scope-agency.md]
+- **audit-471203-incremental** +1 (keep) — [Brief-field gloss candidate, not a name vote]: "the agent's choice actually changes what happens" — Brief-grade gloss only. The formal name is doing real work; the layperson translation is missing from any Brief field. [from 06-scope-agency.md] [original row: canonicalize vote on prose gloss; recategorized as keep-with-gloss-in-notes since glosses aren't name proposals.]
 
 ---
 
-## 762. `principled decision integration`
+## 763. `principled decision integration`
 
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -25360,16 +25225,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| temporal decision integration | +2 | rename × 1 |
 | _(keep)_ | +2 | keep × 2 |
-
-### Candidate: `temporal decision integration`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +2 (rename) — Principled is praise, not a subject noun. The derivation integrates decisions over temporal expected cost.
+| temporal decision integration | +2 | rename × 1 |
 
 ### Candidate: `principled decision integration` _(keep)_
 
@@ -25380,9 +25237,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 - **opus-4-7-b** +1 (keep) — Keep.
 - **sonnet-4-6-r2** +1 (keep) — "Principled decision integration" — the optimal changeset-composition result. Verbose but accurate.
 
+### Candidate: `temporal decision integration`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +2 (rename) — Principled is praise, not a subject noun. The derivation integrates decisions over temporal expected cost.
+
 ---
 
-## 763. `promote in topological order`
+## 764. `promote in topological order`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -25413,7 +25278,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 764. `prompt engineering`
+## 765. `prompt engineering`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -25444,7 +25309,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 765. `quality to tempo chain`
+## 766. `quality to tempo chain`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -25466,7 +25331,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 766. `readme md maturity gradient`
+## 767. `readme md maturity gradient`
 
 **Voted by architectures:** Codex, Opus
 **Category disagreement on top finalist:** no
@@ -25498,7 +25363,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 767. `readme md novel results`
+## 768. `readme md novel result`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -25510,7 +25375,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +2 | keep × 2 |
 
-### Candidate: `readme md novel results` _(keep)_
+### Candidate: `readme md novel result` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -25521,7 +25386,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 768. `regime a regime b regime c`
+## 769. `regime a regime b regime c`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25531,18 +25396,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| admissibility regimes | +2 | rename × 1 |
-| identification regimes | +2 | canonicalize × 1 |
+| identification regime | +2 | canonicalize × 1 |
+| admissibility regime | +2 | rename × 1 |
 
-### Candidate: `admissibility regimes`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Elevates the abstract A/B/C to their functional role.
-
-### Candidate: `identification regimes`
+### Candidate: `identification regime`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -25550,9 +25407,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good umbrella for intervention-rich, partial-intervention, and observational settings.
 
+### Candidate: `admissibility regime`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Elevates the abstract A/B/C to their functional role.
+
 ---
 
-## 769. `replayed pseudo event`
+## 770. `replayed pseudo event`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25562,16 +25427,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| simulated event playback | +2 | rename × 1 |
 | replay event | +2 | canonicalize × 1 |
-
-### Candidate: `simulated event playback`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Clearer terminology for the offline consolidation mechanism.
+| simulated event playback | +2 | rename × 1 |
 
 ### Candidate: `replay event`
 
@@ -25581,9 +25438,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Shorter handle for consolidation updates that carry no new external information.
 
+### Candidate: `simulated event playback`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Clearer terminology for the offline consolidation mechanism.
+
 ---
 
-## 770. `simulation results`
+## 771. `simulation result`
 
 **Voted by architectures:** Haiku, Sonnet
 **Category disagreement on top finalist:** no
@@ -25595,7 +25460,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +2 | keep × 2 |
 
-### Candidate: `simulation results` _(keep)_
+### Candidate: `simulation result` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -25606,7 +25471,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 771. `strategy cost regret bound`
+## 772. `strategy cost regret bound`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -25637,7 +25502,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 772. `strategy persistence schema`
+## 773. `strategy persistence schema`
 
 **Voted by architectures:** Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -25669,7 +25534,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 773. `structural adaptation enablement`
+## 774. `structural adaptation enablement`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25700,7 +25565,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 774. `structured rich context`
+## 775. `structured rich context`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -25710,16 +25575,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| structured context | +2 | rename × 1 |
 | _(keep)_ | +2 | keep × 1 |
-
-### Candidate: `structured context`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Replaces "rich" with precise "structured".
+| structured context | +2 | rename × 1 |
 
 ### Candidate: `structured rich context` _(keep)_
 
@@ -25729,9 +25586,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-4-7-r2** +2 (keep) — Acceptable keep — logogenic proposed. "Structured rich context" (SRC) is a substantive concept-name.
 
+### Candidate: `structured context`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Replaces "rich" with precise "structured".
+
 ---
 
-## 775. `survival fisher floor`
+## 776. `survival fisher floor`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25741,16 +25606,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +2 | canonicalize × 1 |
 | survival fim floor | +2 | rename × 1 |
-
-### Candidate: `survival fisher floor` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **codex-gpt-5-r2** +2 (canonicalize) — Good name for the matrix lower bound on information needed to survive.
+| _(keep)_ | +2 | canonicalize × 1 |
 
 ### Candidate: `survival fim floor`
 
@@ -25760,9 +25617,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Connects directly to the Fisher Information Matrix derivation.
 
+### Candidate: `survival fisher floor` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **codex-gpt-5-r2** +2 (canonicalize) — Good name for the matrix lower bound on information needed to survive.
+
 ---
 
-## 776. `symbiogenic consolidation time`
+## 777. `symbiogenic consolidation time`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25772,16 +25637,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| consolidation epoch | +2 | rename × 1 |
 | consolidation horizon | +2 | name-unnamed × 1 |
-
-### Candidate: `consolidation epoch`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Clarifies that this is a duration/epoch rather than a continuous rate.
+| consolidation epoch | +2 | rename × 1 |
 
 ### Candidate: `consolidation horizon`
 
@@ -25791,9 +25648,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **codex-gpt-5-r2** +2 (name-unnamed) — Good name for the time-to-integrated-composite quantity.
 
+### Candidate: `consolidation epoch`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Clarifies that this is a duration/epoch rather than a continuous rate.
+
 ---
 
-## 777. `symbol default bias bound track 1 track 2`
+## 778. `symbol default bias bound track 1 track 2`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -25824,7 +25689,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 778. `technical debt`
+## 779. `technical debt`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -25855,7 +25720,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 779. `terminal reached but $O_t$ unsatisfied`
+## 780. `terminal reached but $O_t$ unsatisfied`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -25866,8 +25731,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | attainability failure | +2 | rename × 1 |
-| arrival without success | +1 | rename × 1 |
 | terminal but unsatisfied case | +1 | rename × 1 |
+| arrival without success | +1 | rename × 1 |
 
 ### Candidate: `attainability failure`
 
@@ -25877,14 +25742,6 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Describes the specific failure mode where a plan completes without achieving the objective.
 
-### Candidate: `arrival without success`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives** +1 (rename) — Plain-English Brief-field-friendly alternative. Names the failure mode pithily.
-
 ### Candidate: `terminal but unsatisfied case`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -25893,9 +25750,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives** +1 (rename) — Names the diagnostic quadrant in the satisfaction-gap × control-regret 2×2 (per `#der-orient-cascade` step 3). "Terminal reached but $O_t$ unsatisfied" reads as a Boolean expression, not a name. Weak rename to a more standard noun-phrase form.
 
+### Candidate: `arrival without success`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives** +1 (rename) — Plain-English Brief-field-friendly alternative. Names the failure mode pithily.
+
 ---
 
-## 780. `the trio collectively m1 m2 m3`
+## 781. `the trio collectively m1 m2 m3`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -25906,8 +25771,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | epistemic architecture | +2 | rename × 1 |
+| floor ladder forced coordinate | +1 | rename × 1 |
 | meta architecture trio | +1 | rename × 1 |
-| floor ladder forced coordinates | +1 | rename × 1 |
 
 ### Candidate: `epistemic architecture`
 
@@ -25917,6 +25782,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** +2 (rename) — Per CLAUDE.md §7: the three meta-segments (`#disc-separability-pattern`, `#disc-identifiability-floor`, `#disc-additive-coordinate-forcing`) collectively named "epistemic architecture." Opus r1 single +1; my upgrade — the naming is in active use as framing-vocabulary in the README and review prose. Canonicalize as the framing phrase, *not* as a fourth meta-segment.
 
+### Candidate: `floor ladder forced coordinate`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +1 (rename) — Per Opus r1 single +1: if both `#separability-ladder` and `#forced-coordinates` rename land, the trio is named by its three concrete nouns. Weaker than "epistemic architecture" because the three-noun string is heavy; useful as a sub-naming when the components are individually relevant.
+
 ### Candidate: `meta architecture trio`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
@@ -25925,17 +25798,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** +1 (rename) — Variant. More descriptive of the structure (three meta-segments). Weaker because "epistemic architecture" carries the *substantive* claim (these three jointly determine what AAD knows about); "trio" is just a count.
 
-### Candidate: `floor ladder forced coordinates`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +1 (rename) — Per Opus r1 single +1: if both `#separability-ladder` and `#forced-coordinates` rename land, the trio is named by its three concrete nouns. Weaker than "epistemic architecture" because the three-noun string is heavy; useful as a sub-naming when the components are individually relevant.
-
 ---
 
-## 781. `tier 1 tier 2 tier 3 contraction`
+## 782. `tier 1 tier 2 tier 3 contraction`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -25945,16 +25810,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| contraction tiers | +2 | canonicalize × 1 |
 | contraction hierarchy | +2 | rename × 1 |
-
-### Candidate: `contraction tiers`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +2 (canonicalize) — In `#form-composition-closure` and `#result-contraction-template`, the Tier 1/2/3 partition is sometimes "contraction tiers," sometimes "agent tiers," sometimes "the bridge-lemma classification." Canonicalize on "contraction tiers" (Tier 1 / Tier 2 / Tier 3) — names the structural property (operator regularity), not the agents themselves. Keeps the term distinct from "Tier 1/2/3" usage in `#disc-approximation-tiering` if it's also used there for the AND/OR or scalar-tempo extensions.
+| contraction tier | +2 | canonicalize × 1 |
 
 ### Candidate: `contraction hierarchy`
 
@@ -25964,9 +25821,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Replaces raw tier numbers with the property they organize.
 
+### Candidate: `contraction tier`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** +2 (canonicalize) — In `#form-composition-closure` and `#result-contraction-template`, the Tier 1/2/3 partition is sometimes "contraction tiers," sometimes "agent tiers," sometimes "the bridge-lemma classification." Canonicalize on "contraction tiers" (Tier 1 / Tier 2 / Tier 3) — names the structural property (operator regularity), not the agents themselves. Keeps the term distinct from "Tier 1/2/3" usage in `#disc-approximation-tiering` if it's also used there for the AND/OR or scalar-tempo extensions.
+
 ---
 
-## 782. `todo md archive`
+## 783. `todo md archive`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -25989,7 +25854,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 783. `topological promotion order`
+## 784. `topological promotion order`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26020,7 +25885,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 784. `turnover multiplier`
+## 785. `turnover multiplier`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -26030,17 +25895,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| comprehension compounding tax | +2 | rename × 1 |
 | _(keep)_ | +2 | canonicalize × 1 |
+| comprehension compounding tax | +2 | rename × 1 |
 | multi agent continuity tax | +1 | rename × 1 |
-
-### Candidate: `comprehension compounding tax`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Explicitly connects it to the comprehension time dominating the dual optimization.
 
 ### Candidate: `turnover multiplier` _(keep)_
 
@@ -26049,6 +25906,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Useful TST quantity for personnel and context turnover.
+
+### Candidate: `comprehension compounding tax`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Explicitly connects it to the comprehension time dominating the dual optimization.
 
 ### Candidate: `multi agent continuity tax`
 
@@ -26060,7 +25925,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 785. `two condition decomposition of persistence`
+## 786. `two condition decomposition of persistence`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -26070,16 +25935,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| structural task adequacy decomposition | +2 | canonicalize × 1 |
 | persistence condition decomposition | +2 | rename × 1 |
-
-### Candidate: `structural task adequacy decomposition`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-r2** +2 (canonicalize) — `#result-persistence-condition` introduces this and the prose uses "two-condition decomposition," "structural vs task-adequacy split," and "persistence has two conditions" interchangeably. Canonicalize on "structural / task-adequacy decomposition" as the named result; the variants are elaborations. The Findings section already uses this form.
+| structural task adequacy decomposition | +2 | canonicalize × 1 |
 
 ### Candidate: `persistence condition decomposition`
 
@@ -26089,9 +25946,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Refers to the split between operational and structural persistence.
 
+### Candidate: `structural task adequacy decomposition`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-r2** +2 (canonicalize) — `#result-persistence-condition` introduces this and the prose uses "two-condition decomposition," "structural vs task-adequacy split," and "persistence has two conditions" interchangeably. Canonicalize on "structural / task-adequacy decomposition" as the named result; the variants are elaborations. The Findings section already uses this form.
+
 ---
 
-## 786. `u obs perceptual unity`
+## 787. `u obs perceptual unity`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26113,7 +25978,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 787. `u σ strategic unity`
+## 788. `u σ strategic unity`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26135,7 +26000,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 788. `unnamed an AAD result whose substantive content is a no-go theorem`
+## 789. `unnamed an AAD result whose substantive content is a no-go theorem`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26157,7 +26022,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 789. `unnamed complexity driven resistance to change as features accumulate`
+## 790. `unnamed complexity driven resistance to change as feature accumulate`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26188,7 +26053,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 790. `unnamed constitutive opacity triad`
+## 791. `unnamed constitutive opacity triad`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26210,7 +26075,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 791. `unnamed epochal stability → latent diversification → niche emergence`
+## 792. `unnamed epochal stability → latent diversification → niche emergence`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26241,7 +26106,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 792. `unnamed escalating from one step to bellman optimality to test if a goal is genuinely impossible`
+## 793. `unnamed escalating from one step to bellman optimality to test if a goal is genuinely impossible`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26272,7 +26137,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 793. `unnamed git recorded committed state subset of the chronica $\mathcal{C}_t^{\text{commit}}$`
+## 794. `unnamed git recorded committed state subset of the chronica $\mathcal{C}_t^{\text{commit}}$`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -26303,7 +26168,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 794. `unnamed mapping unstructured RLHF7 calls into conversation runtime RLHF7 and dialog`
+## 795. `unnamed mapping unstructured RLHF7 call into conversation runtime RLHF7 and dialog`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26313,9 +26178,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| four views architecture | +2 | name-unnamed × 1 |
+| four view architecture | +2 | name-unnamed × 1 |
 
-### Candidate: `four views architecture`
+### Candidate: `four view architecture`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -26325,7 +26190,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 795. `unnamed mapping unstructured rlhf7 calls into conversation runtime rlhf7 and dialog`
+## 796. `unnamed mapping unstructured rlhf7 call into conversation runtime rlhf7 and dialog`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26347,7 +26212,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 796. `unnamed master developers writing clean code in the same time as messy code`
+## 797. `unnamed master developer writing clean code in the same time as messy code`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26369,7 +26234,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 797. `unnamed neutralizing sycophancy by hardening the environment to drop ambiguity to zero`
+## 798. `unnamed neutralizing sycophancy by hardening the environment to drop ambiguity to zero`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26391,7 +26256,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 798. `unnamed non sovereign class 1 worker agents spawned by an eli`
+## 799. `unnamed non sovereign class 1 worker agent spawned by an eli`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26422,7 +26287,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 799. `unnamed sycophantic corruption of the agent s truth module`
+## 800. `unnamed sycophantic corruption of the agent truth module`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26432,16 +26297,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| epistemic coupling corruption | +2 | rename × 1 |
 | truth death | +2 | name-unnamed × 1 |
-
-### Candidate: `epistemic coupling corruption`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Describes the failure of Class 3 goal-entanglement.
+| epistemic coupling corruption | +2 | rename × 1 |
 
 ### Candidate: `truth death`
 
@@ -26451,9 +26308,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +2 (name-unnamed) — Explicitly names the risk of manipulative system prompts or RLHF.
 
+### Candidate: `epistemic coupling corruption`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Describes the failure of Class 3 goal-entanglement.
+
 ---
 
-## 800. `unnamed the 1 anchor 3 theorem structure in additive coordinate forcing`
+## 801. `unnamed the 1 anchor 3 theorem structure in additive coordinate forcing`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26475,7 +26340,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 801. `unnamed the cumulative prediction error that an agent has tolerated without updating its model`
+## 802. `unnamed the cumulative prediction error that an agent has tolerated without updating its model`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -26506,7 +26371,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 802. `unnamed the cycle that operates on cycles structural adaptation`
+## 803. `unnamed the cycle that operate on cycle structural adaptation`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26516,16 +26381,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| meta cycle | +2 | name-unnamed × 1 |
 | meta adaptive cycle | +2 | rename × 1 |
-
-### Candidate: `meta cycle`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-3-1-pro-preview-r2** +2 (name-unnamed) — Clearly distinguishes from the base adaptive cycle.
+| meta cycle | +2 | name-unnamed × 1 |
 
 ### Candidate: `meta adaptive cycle`
 
@@ -26535,9 +26392,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Describes the regime of expanding model classes.
 
+### Candidate: `meta cycle`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-3-1-pro-preview-r2** +2 (name-unnamed) — Clearly distinguishes from the base adaptive cycle.
+
 ---
 
-## 803. `unnamed the family of cross architecture diagnostic patterns AAD repeatedly invokes`
+## 804. `unnamed the family of cross architecture diagnostic pattern AAD repeatedly invoke`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26547,9 +26412,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| diagnostic templates | +2 | name-unnamed × 1 |
+| diagnostic template | +2 | name-unnamed × 1 |
 
-### Candidate: `diagnostic templates`
+### Candidate: `diagnostic template`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -26559,7 +26424,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 804. `unnamed the family of named health mode counterparts to persistence pathologies`
+## 805. `unnamed the family of named health mode counterpart to persistence pathology`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26569,9 +26434,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| persistence postures | +2 | name-unnamed × 1 |
+| persistence posture | +2 | name-unnamed × 1 |
 
-### Candidate: `persistence postures`
+### Candidate: `persistence posture`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -26581,7 +26446,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 805. `unnamed the interval during which an agent s adaptive tempo exceeds the environment s disturbance rate guaranteeing mismatch stays bounded`
+## 806. `unnamed the interval during which an agent adaptive tempo exceed the environment disturbance rate guaranteeing mismatch stay bounded`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -26612,7 +26477,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 806. `unnamed the move where a segment s role prefix is mechanical but the subject noun carries judgment`
+## 807. `unnamed the move where a segment role prefix is mechanical but the subject noun carry judgment`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26634,7 +26499,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 807. `unnamed the pathology where observation rate is slower than environment drift`
+## 808. `unnamed the pathology where observation rate is slower than environment drift`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26665,7 +26530,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 808. `unnamed the pearl-blanket reading of directed separation`
+## 809. `unnamed the pearl-blanket reading of directed separation`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26687,7 +26552,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 809. `unnamed the procedure of reading any segment through all three meta segments`
+## 810. `unnamed the procedure of reading any segment through all three meta segment`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -26718,7 +26583,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 810. `unnamed the property that correction dynamics are approximately isotropic`
+## 811. `unnamed the property that correction dynamics are approximately isotropic`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -26749,7 +26614,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 811. `unnamed the quadratic scaling of tempo required to survive stochastic noise vs deterministic drift`
+## 812. `unnamed the quadratic scaling of tempo required to survive stochastic noise vs deterministic drift`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26759,16 +26624,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| stochastic tempo penalty | +2 | rename × 1 |
 | noise scaling penalty | +2 | name-unnamed × 1 |
-
-### Candidate: `stochastic tempo penalty`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **gemini-targeted-alternatives** +2 (rename) — Differentiates Model S from Model D requirements.
+| stochastic tempo penalty | +2 | rename × 1 |
 
 ### Candidate: `noise scaling penalty`
 
@@ -26778,9 +26635,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-3-1-pro-preview-r2** +2 (name-unnamed) — Mathematically proves you cannot simply "out-tempo" a noisy environment.
 
+### Candidate: `stochastic tempo penalty`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **gemini-targeted-alternatives** +2 (rename) — Differentiates Model S from Model D requirements.
+
 ---
 
-## 812. `unnamed the recurring lyapunov derives the bound move across six segments`
+## 813. `unnamed the recurring lyapunov derive the bound move across six segment`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26802,7 +26667,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 813. `unnamed the region where temporal nesting holds`
+## 814. `unnamed the region where temporal nesting hold`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26833,7 +26698,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 814. `unnamed the regulative ideal that segment names should be re derivable from a non specialist s everyday language reconstruction`
+## 815. `unnamed the regulative ideal that segment name should be re derivable from a non specialist everyday language reconstruction`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26855,7 +26720,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 815. `unnamed the rule that bias is the product of architectural coupling and environmental ambiguity`
+## 816. `unnamed the rule that bias is the product of architectural coupling and environmental ambiguity`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26877,7 +26742,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 816. `unnamed the separation of per reader and per feature code costs`
+## 817. `unnamed the separation of per reader and per feature code cost`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -26899,7 +26764,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 817. `unnamed the set of five conditions under which a2 is derived rather than assumed the sub scope α agent classes`
+## 818. `unnamed the set of five condition under which a2 is derived rather than assumed the sub scope α agent classe`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -26910,7 +26775,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 | candidate | weight | category mix |
 |---|---:|---|
 | sub scope alpha taxonomy | +2 | rename × 1 |
-| derived sector classes | +1 | name-unnamed × 1 |
+| derived sector classe | +1 | name-unnamed × 1 |
 
 ### Candidate: `sub scope alpha taxonomy`
 
@@ -26920,7 +26785,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-targeted-alternatives** +2 (rename) — Groups the five derived operator settings.
 
-### Candidate: `derived sector classes`
+### Candidate: `derived sector classe`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -26930,7 +26795,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 818. `unnamed the signed coupling structure across all section iii results`
+## 819. `unnamed the signed coupling structure across all section iii result`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -26961,7 +26826,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 819. `unnamed the structural cousin of evidence starvation when an upstream edge is so reliable that downstream edges receive too few revising tests`
+## 820. `unnamed the structural cousin of evidence starvation when an upstream edge is so reliable that downstream edge receive too few revising test`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -26983,7 +26848,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 820. `unnamed the symmetric counterpart to context turnover for the strategy substate`
+## 821. `unnamed the symmetric counterpart to context turnover for the strategy substate`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27005,7 +26870,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 821. `unnamed the within session vs inter session persistence distinction for logogenic agents`
+## 822. `unnamed the within session vs inter session persistence distinction for logogenic agent`
 
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
@@ -27036,7 +26901,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 822. `working vocabulary observation the framework s honesty is load bearing`
+## 823. `working vocabulary observation the framework honesty is load bearing`
 
 **Voted by architectures:** Codex, Gemini
 **Category disagreement on top finalist:** no
@@ -27046,10 +26911,10 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| honest limits principle | +2 | rename × 1 |
+| honest limit principle | +2 | rename × 1 |
 | load bearing honesty | +1 | name-unnamed × 1 |
 
-### Candidate: `honest limits principle`
+### Candidate: `honest limit principle`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -27067,7 +26932,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 823. `𝓣 σ strategic tempo`
+## 824. `𝓣 σ strategic tempo`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27089,7 +26954,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 824. `$C$ bias bound constant in bias bound derivation`
+## 825. `$C$ bias bound constant in bias bound derivation`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27111,7 +26976,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 825. `$M_t$ reality model`
+## 826. `$M_t$ reality model`
 
 **Voted by architectures:** audit
 **Category disagreement on top finalist:** no
@@ -27121,16 +26986,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| predictive state | +1 | rename × 1 |
 | working model | +1 | rename × 1 |
-
-### Candidate: `predictive state`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **audit-471203-incremental** +1 (rename) — "$M_t$" is short and conventional but doesn't carry compression-of-history weight. "Reality model" (segment's title gloss) is "fine but slightly grandiose." Tentative. [from 10-form-agent-model.md] [one of 2 alternatives proposed in the original audit row]
+| predictive state | +1 | rename × 1 |
 
 ### Candidate: `working model`
 
@@ -27140,9 +26997,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **audit-471203-incremental** +1 (rename) — "$M_t$" is short and conventional but doesn't carry compression-of-history weight. "Reality model" (segment's title gloss) is "fine but slightly grandiose." Tentative. [from 10-form-agent-model.md] [one of 2 alternatives proposed in the original audit row]
 
+### Candidate: `predictive state`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (rename) — "$M_t$" is short and conventional but doesn't carry compression-of-history weight. "Reality model" (segment's title gloss) is "fine but slightly grandiose." Tentative. [from 10-form-agent-model.md] [one of 2 alternatives proposed in the original audit row]
+
 ---
 
-## 826. `$R$ sector region radius`
+## 827. `$R$ sector region radius`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -27164,7 +27029,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 827. `$U_M$ $U_O$ $U_\Sigma$ unity dimensions`
+## 828. `$U_M$ $U_O$ $U_\Sigma$ unity dimension`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27186,7 +27051,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 828. `$U_M$ dual use model uncertainty and epistemic unity`
+## 829. `$U_M$ dual use model uncertainty and epistemic unity`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27208,7 +27073,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 829. `$U_o$`
+## 830. `$U_o$`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -27230,7 +27095,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 830. `$U_o$ $U_M$ observation uncertainty model uncertainty`
+## 831. `$U_o$ $U_M$ observation uncertainty model uncertainty`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27252,7 +27117,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 831. `$\alpha, \beta$ sector lower and a2 sub scope`
+## 832. `$\alpha, \beta$ sector lower and a2 sub scope`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27274,7 +27139,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 832. `$\alpha_1$ $\alpha_2$ $\beta$ naming as a whole`
+## 833. `$\alpha_1$ $\alpha_2$ $\beta$ naming as a whole`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27284,9 +27149,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| $\alpha$ partition with english labels above | +1 | add-alias × 1 |
+| $\alpha$ partition with english label above | +1 | add-alias × 1 |
 
-### Candidate: `$\alpha$ partition with english labels above`
+### Candidate: `$\alpha$ partition with english label above`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -27296,7 +27161,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 833. `$\alpha_2$ a2 adaptive gain sub scope under mg 1 mg 4`
+## 834. `$\alpha_2$ a2 adaptive gain sub scope under mg 1 mg 4`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27318,7 +27183,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 834. `$\beta$ a2 assumed not derived sub scope`
+## 835. `$\beta$ a2 assumed not derived sub scope`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27340,7 +27205,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 835. `$\beta$ a2 assumed sub scope`
+## 836. `$\beta$ a2 assumed sub scope`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -27371,7 +27236,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 836. `$\beta$ a2 assumption tier`
+## 837. `$\beta$ a2 assumption tier`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -27393,7 +27258,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 837. `$\beta$ a2 sub scope where a2 is assumed not derived`
+## 838. `$\beta$ a2 sub scope where a2 is assumed not derived`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27415,7 +27280,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 838. `$\kappa_{\text{processing}}$ class 2 processing coupling`
+## 839. `$\kappa_{\text{processing}}$ class 2 processing coupling`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27437,7 +27302,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 839. `$\mathcal C_t^{\text{commit}}$ TST committed state subset`
+## 840. `$\mathcal C_t^{\text{commit}}$ TST committed state subset`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27459,7 +27324,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 840. `$\mathcal C_t^{\text{commit}}$ committed state subset`
+## 841. `$\mathcal C_t^{\text{commit}}$ committed state subset`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27481,7 +27346,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 841. `$\rho$ environment change rate mismatch injection rate`
+## 842. `$\rho$ environment change rate mismatch injection rate`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27503,7 +27368,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 842. `$\rho_\Sigma$ strategic disturbance rate`
+## 843. `$\rho_\Sigma$ strategic disturbance rate`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -27534,7 +27399,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 843. `$f_M$ event driven update`
+## 844. `$f_M$ event driven update`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -27556,7 +27421,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 844. `$f_{\text{init}}$ reconstruction function`
+## 845. `$f_{\text{init}}$ reconstruction function`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -27578,7 +27443,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 845. `$g_M$ between event evolution`
+## 846. `$g_M$ between event evolution`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -27600,7 +27465,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 846. `OODA4 specification limit as TST concept currently only in old TST files`
+## 847. `OODA4 specification limit as TST concept currently only in old TST file`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27622,7 +27487,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 847. `actuated agent class`
+## 848. `actuated agent class`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27644,7 +27509,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 848. `agent classes lexicon spectrum`
+## 849. `agent classe lexicon spectrum`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27656,7 +27521,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +1 | canonicalize × 1 |
 
-### Candidate: `agent classes lexicon spectrum` _(keep)_
+### Candidate: `agent classe lexicon spectrum` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -27666,7 +27531,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 849. `agentic systems framework ASF top level`
+## 850. `agentic system framework ASF top level`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27676,9 +27541,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| agentic systems framework | +1 | keep × 1 |
+| agentic system framework | +1 | keep × 1 |
 
-### Candidate: `agentic systems framework`
+### Candidate: `agentic system framework`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -27688,7 +27553,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 850. `audits pending findings yyyy mm dd md`
+## 851. `audit pending finding yyyy mm dd md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27698,9 +27563,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| retire once items reconcile into todo segments | +1 | keep × 1 |
+| retire once item reconcile into todo segment | +1 | keep × 1 |
 
-### Candidate: `retire once items reconcile into todo segments`
+### Candidate: `retire once item reconcile into todo segment`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -27710,7 +27575,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 851. `calibration laboratory framing`
+## 852. `calibration laboratory framing`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27732,7 +27597,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 852. `change distance change proximity principle`
+## 853. `change distance change proximity principle`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27742,19 +27607,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep both | +1 | rename × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep both`
+### Candidate: `change distance change proximity principle` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (rename) — Keep. Both are domain-specific TST quantities — changing names risks losing the TST citation lineage.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "keep both" — Keep. Both are domain-specific TST quantities — changing names risks losing the TST citation lineage.
 
 ---
 
-## 853. `chronica capitalized vs lowercase`
+## 854. `chronica capitalized vs lowercase`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27776,7 +27641,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 854. `cold start in naming principles md`
+## 855. `cold start in naming principle md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27798,7 +27663,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 855. `communal imagination test`
+## 856. `communal imagination test`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27820,7 +27685,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 856. `communal imagination test in naming principles md`
+## 857. `communal imagination test in naming principle md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27842,7 +27707,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 857. `comprehension time implementation time`
+## 858. `comprehension time implementation time`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27852,19 +27717,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep both | +1 | rename × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep both`
+### Candidate: `comprehension time implementation time` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (rename) — Keep. Canonical TST quantities.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "keep both" — Keep. Canonical TST quantities.
 
 ---
 
-## 858. `da2 inc`
+## 859. `da2 inc`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27886,7 +27751,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 859. `dark room critique citation phrasing sun firestone`
+## 860. `dark room critique citation phrasing sun firestone`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27908,7 +27773,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 860. `five phase cycle`
+## 861. `five phase cycle`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27930,7 +27795,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 861. `future segment information theoretic cost floor for persistence`
+## 862. `future segment information theoretic cost floor for persistence`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -27952,7 +27817,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 862. `gain sector bridge gain sector derivation`
+## 863. `gain sector bridge gain sector derivation`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27962,19 +27827,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep both | +1 | rename × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep both`
+### Candidate: `gain sector bridge gain sector derivation` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (rename) — Keep. "Bridge" signals this is the connection piece (gain principle + directional fidelity → sector condition); "derivation" signals the formal backing.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "keep both" — Keep. "Bridge" signals this is the connection piece (gain principle + directional fidelity → sector condition); "derivation" signals the formal backing.
 
 ---
 
-## 863. `gate 1 gate 2 gate 3 gate 4 format md promotion gates`
+## 864. `gate 1 gate 2 gate 3 gate 4 format md promotion gate`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -27984,19 +27849,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep gate numbers but add one word names | +1 | keep × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep gate numbers but add one word names`
+### Candidate: `gate 1 gate 2 gate 3 gate 4 format md promotion gate` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (keep) — Current names are "Dependency audit / Content review / Mechanical review / Working Notes disposition" which are already descriptive, but the *numbers* do most of the referencing work ("passed Gate 2"). Consider adding canonical one-word names: Gate 1 = **deps**, Gate 2 = **claims**, Gate 3 = **format**, Gate 4 = **notes**. These already appear as stage names (`deps-verified` / `claims-verified` / `format-clean`); aligning Gate-number with stage-word would remove the translation step.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "*(keep gate numbers but add one-word names)*" — Current names are "Dependency audit / Content review / Mechanical review / Working Notes disposition" which are already descriptive, but the *numbers* do most of the referencing work ("passed Gate 2"). Consider adding canonical one-word names: Gate 1 = **deps**, Gate 2 = **claims**, Gate 3 = **format**, Gate 4 = **notes**. These already appear as stage names (`deps-verified` / `claims-verified` / `format-clean`); aligning Gate-number with stage-word would remove the translation step.
 
 ---
 
-## 864. `gemini s competency trap for $\eta^\ast \to 0$`
+## 865. `gemini competency trap for $\eta^\ast \to 0$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -28018,7 +27883,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 865. `gemini s epistemic death for the gain collapse unobservable DAG failure`
+## 866. `gemini epistemic death for the gain collapse unobservable DAG failure`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -28040,7 +27905,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 866. `hierarchy as a project wide word`
+## 867. `hierarchy as a project wide word`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28050,9 +27915,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| flag four independent hierarchies overloaded | +1 | rename × 1 |
+| flag four independent hierarchy overloaded | +1 | rename × 1 |
 
-### Candidate: `flag four independent hierarchies overloaded`
+### Candidate: `flag four independent hierarchy overloaded`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -28062,7 +27927,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 867. `hierarchy project wide`
+## 868. `hierarchy project wide`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28072,19 +27937,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| reserve for pearl s causal hierarchy strict asymmetric uses | +1 | rename × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `reserve for pearl s causal hierarchy strict asymmetric uses`
+### Candidate: `hierarchy project wide` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (rename) — Project-wide convention: use "hierarchy" only for Pearl's (external, adopted, immovable) and other strict-asymmetric orderings. Use "ladder," "partition," or "tier-set" for internal-to-AAD cases where "hierarchy" is currently doing duty. Not a rename of a specific segment — a working convention.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "*(reserve for Pearl's causal hierarchy + strict-asymmetric uses)*" — Project-wide convention: use "hierarchy" only for Pearl's (external, adopted, immovable) and other strict-asymmetric orderings. Use "ladder," "partition," or "tier-set" for internal-to-AAD cases where "hierarchy" is currently doing duty. Not a rename of a specific segment — a working convention.
 
 ---
 
-## 868. `identifiability floor escape the floor`
+## 869. `identifiability floor escape the floor`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28106,7 +27971,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 869. `intent planning vocabulary`
+## 870. `intent planning vocabulary`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28128,7 +27993,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 870. `interior baseline`
+## 871. `interior baseline`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28138,17 +28003,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| default interiority | +1 | rename × 1 |
 | _(keep)_ | +1 | keep × 1 |
+| default interiority | +1 | rename × 1 |
 | pre utterance processing | -1 | rename × 1 |
-
-### Candidate: `default interiority`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +1 (rename) — Pulls vocabulary from `#norm-interiority-default` (the existing logozoetic norm). Stronger connection to the named segment.
 
 ### Candidate: `interior baseline` _(keep)_
 
@@ -28157,6 +28014,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +1 (keep) — Per Codex r1 single +1: the logogenic prose name for default-internal-processing-before-output. Acceptable but underspecified — needs grounding in a `04-logozoetic` or `03-logogenic` segment to canonicalize.
+
+### Candidate: `default interiority`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +1 (rename) — Pulls vocabulary from `#norm-interiority-default` (the existing logozoetic norm). Stronger connection to the named segment.
 
 ### Candidate: `pre utterance processing`
 
@@ -28168,7 +28033,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 871. `l1 prime decoration`
+## 872. `l1 prime decoration`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28190,7 +28055,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 872. `logostratum RLHF4 backbone`
+## 873. `logostratum RLHF4 backbone`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
@@ -28212,7 +28077,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 873. `migration map md`
+## 874. `migration map md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28234,7 +28099,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 874. `mismatch injection rate $\rho$`
+## 875. `mismatch injection rate $\rho$`
 
 **Voted by architectures:** Sonnet
 **Category disagreement on top finalist:** no
@@ -28256,7 +28121,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 875. `model sufficiency model class fitness`
+## 876. `model sufficiency model class fitness`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28266,19 +28131,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep | +1 | keep × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep`
+### Candidate: `model sufficiency model class fitness` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (keep) — Keep both. Each is a specific technical quantity ($S$ and $\mathcal F$) — the slug is the concept.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "keep" — Keep both. Each is a specific technical quantity ($S$ and $\mathcal F$) — the slug is the concept.
 
 ---
 
-## 876. `msc architectural proposals yyyy mm dd md`
+## 877. `msc architectural proposal yyyy mm dd md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28288,9 +28153,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| retire once consolidated into proposals md | +1 | keep × 1 |
+| retire once consolidated into proposal md | +1 | keep × 1 |
 
-### Candidate: `retire once consolidated into proposals md`
+### Candidate: `retire once consolidated into proposal md`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -28300,7 +28165,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 877. `msc reflections`
+## 878. `msc reflection`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28312,7 +28177,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `msc reflections` _(keep)_
+### Candidate: `msc reflection` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -28322,7 +28187,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 878. `multi agent scope`
+## 879. `multi agent scope`
 
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
@@ -28332,16 +28197,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +1 | keep × 1 |
 | shared environment scope | +1 | rename × 1 |
-
-### Candidate: `multi agent scope` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **haiku-4-5** +1 (keep) — Multiple agents, shared env. Self-descriptive. Keep.
+| _(keep)_ | +1 | keep × 1 |
 
 ### Candidate: `shared environment scope`
 
@@ -28351,9 +28208,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-2** +1 (rename) — Emphasizes the shared environment which is the defining characteristic of this scope.
 
+### Candidate: `multi agent scope` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **haiku-4-5** +1 (keep) — Multiple agents, shared env. Self-descriptive. Keep.
+
 ---
 
-## 879. `observability opacity`
+## 880. `observability opacity`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28363,19 +28228,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep as an informational pair | +1 | keep × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep as an informational pair`
+### Candidate: `observability opacity` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (keep) — Keep both. The dual framing (forward = observability, backward = opacity) is a load-bearing conceptual move; naming them as duals in NOTATION.md would make the pair explicit to fresh readers. Consider a "dual quantities" subsection.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "*(keep as an informational pair)*" — Keep both. The dual framing (forward = observability, backward = opacity) is a load-bearing conceptual move; naming them as duals in NOTATION.md would make the pair explicit to fresh readers. Consider a "dual quantities" subsection.
 
 ---
 
-## 880. `observation function action transition`
+## 881. `observation function action transition`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28385,19 +28250,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep | +1 | keep × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep`
+### Candidate: `observation function action transition` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (keep) — Keep both. Short, direct, describe what they are.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "keep" — Keep both. Short, direct, describe what they are.
 
 ---
 
-## 881. `old TST files 40 files`
+## 882. `old TST file 40 file`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28419,7 +28284,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 882. `outline md 01 AAD core preamble`
+## 883. `outline md 01 AAD core preamble`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28441,7 +28306,73 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 883. `persistence three senses structural operational continuity`
+## 884. `pearl l1`
+
+**Voted by architectures:** audit
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| predicting | +1 | add-alias × 1 |
+
+### Candidate: `predicting`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (add-alias) — Brief-grade agent-side gloss for Pearl's L1 (associational). NOT a rename — keep Pearl's formal term; add the agent-action gloss for prose. [from 09-def-pearl-causal-hierarchy.md]
+
+---
+
+## 885. `pearl l2`
+
+**Voted by architectures:** audit
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| exploring | +1 | add-alias × 1 |
+
+### Candidate: `exploring`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (add-alias) — Brief-grade agent-side gloss for Pearl's L2 (interventional). NOT a rename. [from 09-def-pearl-causal-hierarchy.md]
+
+---
+
+## 886. `pearl l3`
+
+**Voted by architectures:** audit
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| reasoning | +1 | add-alias × 1 |
+
+### Candidate: `reasoning`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **audit-471203-incremental** +1 (add-alias) — Brief-grade agent-side gloss for Pearl's L3 (counterfactual). NOT a rename. [from 09-def-pearl-causal-hierarchy.md]
+
+---
+
+## 887. `persistence three sense structural operational continuity`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28451,19 +28382,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep three senses sharpen usage sites | +1 | keep × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep three senses sharpen usage sites`
+### Candidate: `persistence three sense structural operational continuity` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (keep) — The three senses are load-bearing and correctly disambiguated in LEXICON.md. The *irreducibility* is fine — the three senses are genuinely related (they all concern "the agent sustains itself"). Usage-site discipline: every use of the bare word "persistence" in segments should be followed by the sense in parentheses on first use per segment, e.g. "(structural)". Not a rename; a writing convention.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "*(keep three senses; sharpen usage sites)*" — The three senses are load-bearing and correctly disambiguated in LEXICON.md. The *irreducibility* is fine — the three senses are genuinely related (they all concern "the agent sustains itself"). Usage-site discipline: every use of the bare word "persistence" in segments should be followed by the sense in parentheses on first use per segment, e.g. "(structural)". Not a rename; a writing convention.
 
 ---
 
-## 884. `prior art integration convention`
+## 888. `prior art integration convention`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28485,7 +28416,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 885. `r1 r2 result numbering convention in logogenic agents`
+## 889. `r1 r2 result numbering convention in logogenic agent`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28495,19 +28426,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep with cross component prefixes l r1 l r2 | +1 | rename × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep with cross component prefixes l r1 l r2`
+### Candidate: `r1 r2 result numbering convention in logogenic agent` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7** +1 (rename) — As soon as logogenic-agents grows, "Result R1" collides with AAD-core numbering in discussion. Minor.
+- **opus-4-7** +1 (keep) — [prose moved from candidate column]: "keep with cross-component prefixes (L-R1, L-R2)" — As soon as logogenic-agents grows, "Result R1" collides with AAD-core numbering in discussion. Minor.
 
 ---
 
-## 886. `readme md lexicon`
+## 890. `readme md lexicon`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28529,7 +28460,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 887. `readme md structure`
+## 891. `readme md structure`
 
 **Voted by architectures:** Gemini, Opus
 **Category disagreement on top finalist:** no
@@ -28539,16 +28470,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| _(keep)_ | +1 | keep × 1 |
 | readme md theory architecture | +1 | rename × 1 |
-
-### Candidate: `readme md structure` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +1 (keep) — Keep.
+| _(keep)_ | +1 | keep × 1 |
 
 ### Candidate: `readme md theory architecture`
 
@@ -28558,31 +28481,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **gemini-2** +1 (rename) — "Theory Architecture" conveys the intentional design of the framework better than just "Structure".
 
----
-
-## 888. `recursive update derivation gain sector derivation`
-
-**Voted by architectures:** Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| standardize as derivation suffix for derivation type appendices | +1 | keep × 1 |
-
-### Candidate: `standardize as derivation suffix for derivation type appendices`
+### Candidate: `readme md structure` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (keep) — Observation: the `-derivation` suffix on appendix segments is a good AAD convention (distinguishes derivation segments from stating segments). Enforce consistently.
+- **opus-4-7-b** +1 (keep) — Keep.
 
 ---
 
-## 889. `section ii header actuated adaptation agentic systems`
+## 892. `recursive update derivation gain sector derivation`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28592,9 +28501,31 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| actuated adaptation agentic systems | +1 | canonicalize × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `actuated adaptation agentic systems`
+### Candidate: `recursive update derivation gain sector derivation` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "*(standardize as `-derivation` suffix for derivation-type appendices)*" — Observation: the `-derivation` suffix on appendix segments is a good AAD convention (distinguishes derivation segments from stating segments). Enforce consistently.
+
+---
+
+## 893. `section ii header actuated adaptation agentic system`
+
+**Voted by architectures:** Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| actuated adaptation agentic system | +1 | canonicalize × 1 |
+
+### Candidate: `actuated adaptation agentic system`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -28604,7 +28535,51 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 890. `spike research artifact`
+## 894. `spike index md`
+
+**Voted by architectures:** Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| _(keep)_ | +1 | keep × 1 |
+
+### Candidate: `spike index md` _(keep)_
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-b** +1 (keep) — Keep. The all-caps SPIKES signals index-document status parallel to OUTLINE.md / FORMAT.md / CLAUDE.md. Good.
+
+---
+
+## 895. `spike index md spike index`
+
+**Voted by architectures:** Opus
+**Category disagreement on top finalist:** no
+
+**First-encounter locality:** _(pending — agent-pass B)_
+**Segment link:** _(pending — agent-pass C)_
+
+| candidate | weight | category mix |
+|---|---:|---|
+| spike index md | +1 | rename × 1 |
+
+### Candidate: `spike index md`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-4-7-b** +1 (rename) — Keep. All-caps index convention.
+
+---
+
+## 896. `spike research artifact`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28626,7 +28601,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 891. `spikes index md`
+## 897. `spike spike topic md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28638,51 +28613,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `spikes index md` _(keep)_
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +1 (keep) — Keep. The all-caps SPIKES signals index-document status parallel to OUTLINE.md / FORMAT.md / CLAUDE.md. Good.
-
----
-
-## 892. `spikes index md spike index`
-
-**Voted by architectures:** Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| spikes index md | +1 | rename × 1 |
-
-### Candidate: `spikes index md`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-4-7-b** +1 (rename) — Keep. All-caps index convention.
-
----
-
-## 893. `spikes spike topic md`
-
-**Voted by architectures:** Opus
-**Category disagreement on top finalist:** no
-
-**First-encounter locality:** _(pending — agent-pass B)_
-**Segment link:** _(pending — agent-pass C)_
-
-| candidate | weight | category mix |
-|---|---:|---|
-| _(keep)_ | +1 | keep × 1 |
-
-### Candidate: `spikes spike topic md` _(keep)_
+### Candidate: `spike spike topic md` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -28692,7 +28623,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 894. `spikes spike topic yyyy mm dd md`
+## 898. `spike spike topic yyyy mm dd md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28704,7 +28635,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 |---|---:|---|
 | _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `spikes spike topic yyyy mm dd md` _(keep)_
+### Candidate: `spike spike topic yyyy mm dd md` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -28714,7 +28645,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 895. `strategic dynamics derivation`
+## 899. `strategic dynamics derivation`
 
 **Voted by architectures:** Haiku, Opus
 **Category disagreement on top finalist:** no
@@ -28745,7 +28676,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 896. `system coherence system coupling system availability`
+## 900. `system coherence system coupling system availability`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28755,19 +28686,19 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| keep all three | +1 | rename × 1 |
+| _(keep)_ | +1 | keep × 1 |
 
-### Candidate: `keep all three`
+### Candidate: `system coherence system coupling system availability` _(keep)_
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
 **Per-vote detail:**
 
-- **opus-4-7-b** +1 (rename) — Keep — each is a distinct TST system-level property; the parallel `system-X` structure is itself pedagogical.
+- **opus-4-7-b** +1 (keep) — [prose moved from candidate column]: "keep all three" — Keep — each is a distinct TST system-level property; the parallel `system-X` structure is itself pedagogical.
 
 ---
 
-## 897. `terminal alignment error`
+## 901. `terminal alignment error`
 
 **Voted by architectures:** Codex
 **Category disagreement on top finalist:** no
@@ -28789,7 +28720,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 898. `the greek vocabulary`
+## 902. `the greek vocabulary`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28811,7 +28742,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 899. `the integrated κ × a law`
+## 903. `the integrated κ × a law`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28833,7 +28764,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 900. `the trio collectively`
+## 904. `the trio collectively`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28855,7 +28786,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 901. `three part meta architecture`
+## 905. `three part meta architecture`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28865,9 +28796,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| floor ladder forced coordinates | +1 | rename × 1 |
+| floor ladder forced coordinate | +1 | rename × 1 |
 
-### Candidate: `floor ladder forced coordinates`
+### Candidate: `floor ladder forced coordinate`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -28877,7 +28808,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 902. `todo md active pending review spikes`
+## 906. `todo md active pending review spike`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -28899,7 +28830,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 903. `track 1 track 2 in bias bound`
+## 907. `track 1 track 2 in bias bound`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28909,16 +28840,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| track 1 track 2 | +1 | keep × 1 |
 | transport track fisher rao track | +1 | add-alias × 1 |
-
-### Candidate: `track 1 track 2`
-
-**Consolidated rationale:** _(pending — agent-pass A)_
-
-**Per-vote detail:**
-
-- **opus-targeted-alternatives-v2** +1 (keep) — Within `#deriv-bias-bound` itself, the numbered labels are fine local shorthand. Both can coexist (numbered local; English cross-segment).
+| track 1 track 2 | +1 | keep × 1 |
 
 ### Candidate: `transport track fisher rao track`
 
@@ -28928,9 +28851,17 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 - **opus-targeted-alternatives-v2** +1 (add-alias) — Per `#deriv-bias-bound`. Inside the segment the Track 1 / Track 2 labels work; in cross-segment references the English names are necessary. Confirms Opus r1 single +1.
 
+### Candidate: `track 1 track 2`
+
+**Consolidated rationale:** _(pending — agent-pass A)_
+
+**Per-vote detail:**
+
+- **opus-targeted-alternatives-v2** +1 (keep) — Within `#deriv-bias-bound` itself, the numbered labels are fine local shorthand. Both can coexist (numbered local; English cross-segment).
+
 ---
 
-## 904. `track 1 track 2 in bias bound derivation`
+## 908. `track 1 track 2 in bias bound derivation`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28952,7 +28883,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 905. `u f update rule homogeneity`
+## 909. `u f update rule homogeneity`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28974,7 +28905,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 906. `unnamed TST specific name for code that is observation cheap because it s well written`
+## 910. `unnamed TST specific name for code that is observation cheap because it well written`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -28996,7 +28927,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 907. `unnamed class 1 class 2 class 3 agent classes themselves need mnemonic handles`
+## 911. `unnamed class 1 class 2 class 3 agent classe themselve need mnemonic handle`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29006,9 +28937,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| proposal assign english modifiers | +1 | name-unnamed × 1 |
+| proposal assign english modifier | +1 | name-unnamed × 1 |
 
-### Candidate: `proposal assign english modifiers`
+### Candidate: `proposal assign english modifier`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29018,7 +28949,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 908. `unnamed effort time risk ranking considered false constraints`
+## 912. `unnamed effort time risk ranking considered false constraint`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29028,9 +28959,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| false constraints | +1 | name-unnamed × 1 |
+| false constraint | +1 | name-unnamed × 1 |
 
-### Candidate: `false constraints`
+### Candidate: `false constraint`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29040,7 +28971,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 909. `unnamed future segment layer header for narrative pedagogical framing`
+## 913. `unnamed future segment layer header for narrative pedagogical framing`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29062,7 +28993,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 910. `unnamed future segment layer header for the sp 5 reader s path proposal`
+## 914. `unnamed future segment layer header for the sp 5 reader path proposal`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29072,9 +29003,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| reader s path | +1 | name-unnamed × 1 |
+| reader path | +1 | name-unnamed × 1 |
 
-### Candidate: `reader s path`
+### Candidate: `reader path`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29084,7 +29015,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 911. `unnamed scope honesty as architecture`
+## 915. `unnamed scope honesty as architecture`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29106,7 +29037,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 912. `unnamed the 2×2 satisfaction gap × control regret diagnostic table`
+## 916. `unnamed the 2×2 satisfaction gap × control regret diagnostic table`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29128,7 +29059,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 913. `unnamed the a2 sub scope partition collectively`
+## 917. `unnamed the a2 sub scope partition collectively`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29150,7 +29081,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 914. `unnamed the architectural class partition class 1 class 2 class 3`
+## 918. `unnamed the architectural class partition class 1 class 2 class 3`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29172,7 +29103,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 915. `unnamed the complete adaptive cycle from anticipation through action`
+## 919. `unnamed the complete adaptive cycle from anticipation through action`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -29194,7 +29125,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 916. `unnamed the derivation formulation hypothesis status gradient in format md`
+## 920. `unnamed the derivation formulation hypothesis status gradient in format md`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29216,7 +29147,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 917. `unnamed the dimensional consistency constraint forcing the macro step formulation`
+## 921. `unnamed the dimensional consistency constraint forcing the macro step formulation`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29238,7 +29169,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 918. `unnamed the discipline of naming so that the slug survives reorganization`
+## 922. `unnamed the discipline of naming so that the slug survive reorganization`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29260,7 +29191,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 919. `unnamed the dual that pairs with persistence envelope on the strategic side`
+## 923. `unnamed the dual that pair with persistence envelope on the strategic side`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29282,7 +29213,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 920. `unnamed the functional requirements are the results formalisms are the engineering slogan`
+## 924. `unnamed the functional requirement are the result formalism are the engineering slogan`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29304,7 +29235,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 921. `unnamed the iterated audit process gemini opus codex de novo consolidated three doc portfolio`
+## 925. `unnamed the iterated audit process gemini opus codex de novo consolidated three doc portfolio`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29326,7 +29257,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 922. `unnamed the mathematical operation by which agents convert observed mismatch into structural revision`
+## 926. `unnamed the mathematical operation by which agent convert observed mismatch into structural revision`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29348,7 +29279,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 923. `unnamed the moment when an agent s identity claim becomes load bearing because actions become irreversible`
+## 927. `unnamed the moment when an agent identity claim become load bearing because action become irreversible`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29370,7 +29301,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 924. `unnamed the orient cascade s information dependency forced ordering as a meta pattern`
+## 928. `unnamed the orient cascade information dependency forced ordering as a meta pattern`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29392,7 +29323,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 925. `unnamed the rate at which an agent s chronica grows compared to compression cadence`
+## 929. `unnamed the rate at which an agent chronica grow compared to compression cadence`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29414,7 +29345,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 926. `unnamed the scope honesty as architecture working principle`
+## 930. `unnamed the scope honesty as architecture working principle`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29436,7 +29367,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 927. `unnamed the strengthen first attempt artifact a spike that tried to derive something stronger and failed`
+## 931. `unnamed the strengthen first attempt artifact a spike that tried to derive something stronger and failed`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29458,7 +29389,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 928. `unnamed the symbol overload region where $U_M$ means two different things`
+## 932. `unnamed the symbol overload region where $U_M$ mean two different thing`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29480,7 +29411,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 929. `unnamed the template family sector persistence contraction possible future dissipativity`
+## 933. `unnamed the template family sector persistence contraction possible future dissipativity`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29490,9 +29421,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| persistence templates the template family | +1 | name-unnamed × 1 |
+| persistence template the template family | +1 | name-unnamed × 1 |
 
-### Candidate: `persistence templates the template family`
+### Candidate: `persistence template the template family`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29502,7 +29433,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 930. `unnamed the three concentric rings of segment content inevitability core canonical formulations empirical heuristic`
+## 934. `unnamed the three concentric ring of segment content inevitability core canonical formulation empirical heuristic`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29512,9 +29443,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| three rings | +1 | name-unnamed × 1 |
+| three ring | +1 | name-unnamed × 1 |
 
-### Candidate: `three rings`
+### Candidate: `three ring`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29524,7 +29455,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 931. `unnamed the three rings of segment content framing`
+## 935. `unnamed the three ring of segment content framing`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29534,9 +29465,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| segment rings | +1 | name-unnamed × 1 |
+| segment ring | +1 | name-unnamed × 1 |
 
-### Candidate: `segment rings`
+### Candidate: `segment ring`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29546,7 +29477,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 932. `unnamed the threshold energy information cost below which an agent is forced to act accept mismatch rather than deliberate`
+## 936. `unnamed the threshold energy information cost below which an agent is forced to act accept mismatch rather than deliberate`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -29568,7 +29499,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 933. `what is derived vs what is chosen`
+## 937. `what is derived vs what is chosen`
 
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
@@ -29599,7 +29530,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 934. `what is derived vs what is chosen derivation audit table`
+## 938. `what is derived vs what is chosen derivation audit table`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29621,7 +29552,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 935. `$G_t$ goal state`
+## 939. `$G_t$ goal state`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -29631,9 +29562,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| symbol is clear no alias needed | +0 | add-alias × 1 |
+| symbol is clear no alia needed | +0 | add-alias × 1 |
 
-### Candidate: `symbol is clear no alias needed`
+### Candidate: `symbol is clear no alia needed`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29643,7 +29574,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 936. `$\mathcal{T}$ adaptive tempo`
+## 940. `$\mathcal{T}$ adaptive tempo`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -29665,7 +29596,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 937. `$\rho$ disturbance rate`
+## 941. `$\rho$ disturbance rate`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -29687,7 +29618,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 938. `unnamed the five phases of the adaptive cycle`
+## 942. `unnamed the five phase of the adaptive cycle`
 
 **Voted by architectures:** Haiku
 **Category disagreement on top finalist:** no
@@ -29709,7 +29640,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 939. `AAD alternatives considered for completeness`
+## 943. `AAD alternative considered for completeness`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29740,7 +29671,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 940. `a2 operator sector condition under fidelity degraded updates`
+## 944. `a2 operator sector condition under fidelity degraded update`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29762,7 +29693,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 941. `claude md key architectural decisions`
+## 945. `claude md key architectural decision`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29772,9 +29703,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| claude md architectural decisions | -1 | rename × 1 |
+| claude md architectural decision | -1 | rename × 1 |
 
-### Candidate: `claude md architectural decisions`
+### Candidate: `claude md architectural decision`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29784,7 +29715,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 942. `empirical heuristic discussion ring`
+## 946. `empirical heuristic discussion ring`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29806,7 +29737,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 943. `l1 l1 prime`
+## 947. `l1 l1 prime`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29828,7 +29759,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 944. `unnamed the cross cycle equivalent of the bathtub gloss multi cycle persistence as a savings account`
+## 948. `unnamed the cross cycle equivalent of the bathtub gloss multi cycle persistence as a saving account`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29838,9 +29769,9 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 | candidate | weight | category mix |
 |---|---:|---|
-| the savings account gloss | -1 | name-unnamed × 1 |
+| the saving account gloss | -1 | name-unnamed × 1 |
 
-### Candidate: `the savings account gloss`
+### Candidate: `the saving account gloss`
 
 **Consolidated rationale:** _(pending — agent-pass A)_
 
@@ -29850,7 +29781,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 945. `unnamed the four axis content structural unity decomposition`
+## 949. `unnamed the four axis content structural unity decomposition`
 
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
@@ -29872,7 +29803,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ---
 
-## 946. `RLHF6`
+## 950. `RLHF6`
 
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no

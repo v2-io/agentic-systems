@@ -248,7 +248,9 @@ end
 # --- Main ------------------------------------------------------------------
 
 options = {
-  in:     'msc/naming/master-list.json',
+  # Default prefers the curated artifact (manually-edited canonical store);
+  # falls back to the auto-regenerated master-list.json if curated absent.
+  in:     File.exist?('msc/naming/master-list-curated.json') ? 'msc/naming/master-list-curated.json' : 'msc/naming/master-list.json',
   out:    nil, # default depends on format
   format: 'compact'
 }

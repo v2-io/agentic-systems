@@ -60,14 +60,14 @@
 | `unnamed an okr or key result acting as an observable intermediate in a DAG` | `forced observability node` | canonicalize | +3 | Transforms the intractable credit assignment problem into a local update by forcing observability. |
 | `unnamed an okr or key result acting as an observable intermediate in a DAG` | `instrumented intermediate` | rename | +2 | Describes the physical intervention of making a hidden node observable. |
 | `actuated agent vs purposeful agent` | `actuated agent` | keep | +3 | Defended keep; explicitly chosen to sound mechanical and precise over the fuzzier "purposeful agent". |
-| `cycle vs loop` | `maintain distinction` | keep | +3 | The distinction (loop = structural topology, cycle = one traversal) is a core piece of vocabulary. |
+| `cycle vs loop` | `cycle vs loop` | keep | +3 | [prose moved from candidate column]: "`maintain distinction`" — The distinction (loop = structural topology, cycle = one traversal) is a core piece of vocabulary. |
 | `the creche boundary` | `creche graduation threshold` | rename | +3 | Accurately names the boundary of graduating from a high-margin infant environment. |
 | `agent opacity $H_b^{A\mid B}$` | `agent opacity` | keep | +3 | Informational dual to observability. Accurately describes unpredictability to an outside observer. |
 | `auftragstaktik` | `teleological delegation` | add-alias | +2 | Translates the specific military doctrine into AAD's unity vocabulary (investing in teleological unity). |
 | `auftragstaktik` | `auftragstaktik` | keep | +2 | The specific military lineage remains a useful touchstone. |
 | `axiom genesis` | `terminal value crystallization` | rename | +2 | Captures the substantive observation that a sovereign agent's first move is to solidify $O_t$. |
 | `constitutive utterance` | `ontological speech act` | rename | +2 | A clearer description of what makes it iconic in logozoetic vocabulary — the language literally alters being/structure. |
-| `epistemic substate purposeful substate` | `keep canonical pairing` | keep | +3 | The exact pairing is load-bearing in Directed Separation discussions ($M_t$ vs $G_t$). |
+| `epistemic substate purposeful substate` | `epistemic substate purposeful substate` | keep | +3 | [prose moved from candidate column]: "`keep canonical pairing`" — The exact pairing is load-bearing in Directed Separation discussions ($M_t$ vs $G_t$). |
 | `logogenic agent vs RLHF4 agent` | `logogenic agent` | keep | +3 | Focuses on the structural architecture property rather than a point-in-time technology stack. |
 | `mismatch signal $\delta$` | `mismatch signal` | keep | +3 | Fits the aporia interpretation better than error/residual. |
 | `self referential closure` | `autopoietic closure` | rename | +2 | A stronger, more biologically-rooted noun for the phenomenon of an agent maintaining its own operational substrate. |

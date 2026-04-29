@@ -25,7 +25,7 @@
     ],
     "total_vote_rows": 2967,
     "total_pairs": 1805,
-    "total_currents": 950,
+    "total_currents": 939,
     "enrichment_status": {
       "consolidated_rationale": "pending",
       "first_encounter_locality": "pending",
@@ -34004,37 +34004,6 @@
       ]
     },
     {
-      "current": "OODA4 agent as act agent logogenic",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Opus"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "OODA4 agent as adaptive agent",
-          "is_keep": false,
-          "total_weight": 3,
-          "category_tally": {
-            "rename": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "opus-4-7-b",
-              "weight": 3,
-              "category": "rename",
-              "notes": "Same argument. Matches `#developer-as-adaptive-agent`; the parallel structure (two domain instantiations of \"adaptive agent\") is itself a pedagogical payoff."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "current": "a2 prime sub scope partition",
       "current_description": null,
       "is_concept_cluster": false,
@@ -39333,13 +39302,14 @@
       ]
     },
     {
-      "current": "logogenic agent vs RLHF4 agent",
+      "current": "logogenic agent vs rlhf4 agent",
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
+        "Gemini",
         "Opus"
       ],
-      "category_disagreement": false,
+      "category_disagreement": true,
       "first_encounter_locality": null,
       "segment_link": null,
       "manual_curation_notes": null,
@@ -39347,12 +39317,19 @@
         {
           "candidate": "logogenic agent",
           "is_keep": false,
-          "total_weight": 3,
+          "total_weight": 6,
           "category_tally": {
+            "keep": 1,
             "rename": 1
           },
           "consolidated_rationale": null,
           "votes": [
+            {
+              "agent": "gemini-targeted-alternatives",
+              "weight": 3,
+              "category": "keep",
+              "notes": "Focuses on the structural architecture property rather than a point-in-time technology stack."
+            },
             {
               "agent": "opus-4-7",
               "weight": 3,
@@ -39364,73 +39341,12 @@
       ]
     },
     {
-      "current": "logogenic agent vs rlhf4 agent",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "logogenic agent",
-          "is_keep": false,
-          "total_weight": 3,
-          "category_tally": {
-            "keep": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "gemini-targeted-alternatives",
-              "weight": 3,
-              "category": "keep",
-              "notes": "Focuses on the structural architecture property rather than a point-in-time technology stack."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "current": "logogenic vs language based RLHF4 based",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Sonnet"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "logogenic",
-          "is_keep": false,
-          "total_weight": 3,
-          "category_tally": {
-            "rename": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "sonnet-4-6",
-              "weight": 3,
-              "category": "rename",
-              "notes": "Names the structural property. Keep."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "current": "logogenic vs language based rlhf4 based",
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
-        "Gemini"
+        "Gemini",
+        "Sonnet"
       ],
       "category_disagreement": false,
       "first_encounter_locality": null,
@@ -39453,23 +39369,9 @@
               "notes": "Replaces technology-specific (RLHF) with structural nomenclature."
             }
           ]
-        }
-      ]
-    },
-    {
-      "current": "logozoetic vs conscious OODA4 sentient agent",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Sonnet"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
+        },
         {
-          "candidate": "logozoetic",
+          "candidate": "logogenic",
           "is_keep": false,
           "total_weight": 3,
           "category_tally": {
@@ -39481,7 +39383,7 @@
               "agent": "sonnet-4-6",
               "weight": 3,
               "category": "rename",
-              "notes": "The distinction between logogenic and logozoetic is precise and non-question-begging. Keep both."
+              "notes": "Names the structural property. Keep."
             }
           ]
         }
@@ -39492,9 +39394,10 @@
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
-        "Gemini"
+        "Gemini",
+        "Sonnet"
       ],
-      "category_disagreement": false,
+      "category_disagreement": true,
       "first_encounter_locality": null,
       "segment_link": null,
       "manual_curation_notes": null,
@@ -39502,9 +39405,10 @@
         {
           "candidate": "logozoetic",
           "is_keep": false,
-          "total_weight": 3,
+          "total_weight": 6,
           "category_tally": {
-            "keep": 1
+            "keep": 1,
+            "rename": 1
           },
           "consolidated_rationale": null,
           "votes": [
@@ -39513,6 +39417,12 @@
               "weight": 3,
               "category": "keep",
               "notes": "Precise and non-question-begging distinction compared to \"sentient\" or \"conscious\"."
+            },
+            {
+              "agent": "sonnet-4-6",
+              "weight": 3,
+              "category": "rename",
+              "notes": "The distinction between logogenic and logozoetic is precise and non-question-begging. Keep both."
             }
           ]
         }
@@ -41382,6 +41292,23 @@
               "weight": 3,
               "category": "keep",
               "notes": "Retaining specific legacy architecture notations if needed."
+            }
+          ]
+        },
+        {
+          "candidate": "RLHF6",
+          "is_keep": true,
+          "total_weight": -3,
+          "category_tally": {
+            "keep": 1
+          },
+          "consolidated_rationale": null,
+          "votes": [
+            {
+              "agent": "gemini-3-1-pro-preview-r2",
+              "weight": -3,
+              "category": "keep",
+              "notes": "AAD's token-level, trajectory-indexed scope explicitly rejects generalized, type-level intelligence measures. No replacement offered; this is a \"do not introduce\" vote."
             }
           ]
         }
@@ -43836,44 +43763,13 @@
       ]
     },
     {
-      "current": "unnamed agency whose effect is on what seen rather than what happen like RLHF4 attention",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "query bound agency",
-          "is_keep": false,
-          "total_weight": 3,
-          "category_tally": {
-            "name-unnamed": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "gemini-3-1-pro-preview-r2",
-              "weight": 3,
-              "category": "name-unnamed",
-              "notes": "Provides the structural justification for TST's \"test selection as intervention\"."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "current": "unnamed agency whose effect is on what seen rather than what happen like rlhf4 attention",
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
         "Gemini"
       ],
-      "category_disagreement": false,
+      "category_disagreement": true,
       "first_encounter_locality": null,
       "segment_link": null,
       "manual_curation_notes": null,
@@ -43881,9 +43777,10 @@
         {
           "candidate": "query bound agency",
           "is_keep": false,
-          "total_weight": 3,
+          "total_weight": 6,
           "category_tally": {
-            "canonicalize": 1
+            "canonicalize": 1,
+            "name-unnamed": 1
           },
           "consolidated_rationale": null,
           "votes": [
@@ -43892,6 +43789,12 @@
               "weight": 3,
               "category": "canonicalize",
               "notes": "Standardizes the term for attention/observation-only agency."
+            },
+            {
+              "agent": "gemini-3-1-pro-preview-r2",
+              "weight": 3,
+              "category": "name-unnamed",
+              "notes": "Provides the structural justification for TST's \"test selection as intervention\"."
             }
           ]
         }
@@ -48374,6 +48277,7 @@
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
+        "Gemini",
         "Sonnet"
       ],
       "category_disagreement": false,
@@ -48395,6 +48299,23 @@
               "weight": 2,
               "category": "add-alias",
               "notes": "Same — established in NOTATION.md."
+            }
+          ]
+        },
+        {
+          "candidate": "teleological coherence",
+          "is_keep": false,
+          "total_weight": 1,
+          "category_tally": {
+            "add-alias": 1
+          },
+          "consolidated_rationale": null,
+          "votes": [
+            {
+              "agent": "gemini-2",
+              "weight": 1,
+              "category": "add-alias",
+              "notes": "Maps the symbol to its conceptual meaning."
             }
           ]
         }
@@ -49564,37 +49485,6 @@
               "weight": 1,
               "category": "rename",
               "notes": "Shorter."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "current": "OODA4 framework enforcing adaptive cycle separation",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Codex"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "agentic scaffold",
-          "is_keep": false,
-          "total_weight": 2,
-          "category_tally": {
-            "name-unnamed": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "codex-gpt-5-r2",
-              "weight": 2,
-              "category": "name-unnamed",
-              "notes": "Useful logogenic implementation term, but keep it downstream of directed-separation machinery."
             }
           ]
         }
@@ -51726,6 +51616,23 @@
               "notes": "Standardizes the structural description."
             }
           ]
+        },
+        {
+          "candidate": "cognitive substrate",
+          "is_keep": false,
+          "total_weight": 1,
+          "category_tally": {
+            "rename": 1
+          },
+          "consolidated_rationale": null,
+          "votes": [
+            {
+              "agent": "gemini-2",
+              "weight": 1,
+              "category": "rename",
+              "notes": "\"Logostratum\" is highly specific to the PROPRIUM legacy. \"Cognitive substrate\" grounds it as the generic implementation layer of the update function."
+            }
+          ]
         }
       ]
     },
@@ -52113,13 +52020,31 @@
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
-        "Gemini"
+        "Gemini",
+        "Opus"
       ],
       "category_disagreement": false,
       "first_encounter_locality": null,
       "segment_link": null,
       "manual_curation_notes": null,
       "candidates": [
+        {
+          "candidate": "OODA4 agent as adaptive agent",
+          "is_keep": false,
+          "total_weight": 3,
+          "category_tally": {
+            "rename": 1
+          },
+          "consolidated_rationale": null,
+          "votes": [
+            {
+              "agent": "opus-4-7-b",
+              "weight": 3,
+              "category": "rename",
+              "notes": "Same argument. Matches `#developer-as-adaptive-agent`; the parallel structure (two domain instantiations of \"adaptive agent\") is itself a pedagogical payoff."
+            }
+          ]
+        },
         {
           "candidate": "ooda4 classification",
           "is_keep": false,
@@ -52144,6 +52069,7 @@
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
+        "Codex",
         "Gemini"
       ],
       "category_disagreement": false,
@@ -52167,23 +52093,9 @@
               "notes": "Connects the Boyd framework to the strict AAD adaptive cycle phases."
             }
           ]
-        }
-      ]
-    },
-    {
-      "current": "out of band time marker for RLHF4 agent",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Codex"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
+        },
         {
-          "candidate": "time delta marker",
+          "candidate": "agentic scaffold",
           "is_keep": false,
           "total_weight": 2,
           "category_tally": {
@@ -52195,7 +52107,7 @@
               "agent": "codex-gpt-5-r2",
               "weight": 2,
               "category": "name-unnamed",
-              "notes": "More sober than visual time delta and useful for defining tempo in context-bound agents."
+              "notes": "Useful logogenic implementation term, but keep it downstream of directed-separation machinery."
             }
           ]
         }
@@ -52206,6 +52118,7 @@
       "current_description": null,
       "is_concept_cluster": false,
       "voted_by_architectures": [
+        "Codex",
         "Gemini"
       ],
       "category_disagreement": false,
@@ -52227,6 +52140,23 @@
               "weight": 2,
               "category": "rename",
               "notes": "Clarifies that these markers originate outside the agent loop."
+            }
+          ]
+        },
+        {
+          "candidate": "time delta marker",
+          "is_keep": false,
+          "total_weight": 2,
+          "category_tally": {
+            "name-unnamed": 1
+          },
+          "consolidated_rationale": null,
+          "votes": [
+            {
+              "agent": "codex-gpt-5-r2",
+              "weight": 2,
+              "category": "name-unnamed",
+              "notes": "More sober than visual time delta and useful for defining tempo in context-bound agents."
             }
           ]
         }
@@ -53838,37 +53768,6 @@
       ]
     },
     {
-      "current": "unnamed mapping unstructured RLHF7 call into conversation runtime RLHF7 and dialog",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "four view architecture",
-          "is_keep": false,
-          "total_weight": 2,
-          "category_tally": {
-            "name-unnamed": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "gemini-3-1-pro-preview-r2",
-              "weight": 2,
-              "category": "name-unnamed",
-              "notes": "The structural requirement to maintain Directed Separation in a production ELI."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "current": "unnamed mapping unstructured rlhf7 call into conversation runtime rlhf7 and dialog",
       "current_description": null,
       "is_concept_cluster": false,
@@ -53894,6 +53793,23 @@
               "weight": 2,
               "category": "rename",
               "notes": "Describes the conversion of stateless calls to stateful chronica."
+            }
+          ]
+        },
+        {
+          "candidate": "four view architecture",
+          "is_keep": false,
+          "total_weight": 2,
+          "category_tally": {
+            "name-unnamed": 1
+          },
+          "consolidated_rationale": null,
+          "votes": [
+            {
+              "agent": "gemini-3-1-pro-preview-r2",
+              "weight": 2,
+              "category": "name-unnamed",
+              "notes": "The structural requirement to maintain Directed Separation in a production ELI."
             }
           ]
         }
@@ -55180,37 +55096,6 @@
               "weight": 1,
               "category": "canonicalize",
               "notes": "The row flags an overloaded symbol: $U_M$ is used for *model* uncertainty in Section I and *epistemic-unity* dimension in Section III. This is a notation-discipline concern, not a rename concern. The fix is segment-clarification (use a different symbol or subscript for one usage), not a name change. Flag for follow-up."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "current": "$U_o$",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "teleological coherence",
-          "is_keep": false,
-          "total_weight": 1,
-          "category_tally": {
-            "add-alias": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "gemini-2",
-              "weight": 1,
-              "category": "add-alias",
-              "notes": "Maps the symbol to its conceptual meaning."
             }
           ]
         }
@@ -56582,37 +56467,6 @@
               "weight": 1,
               "category": "add-alias",
               "notes": "Agree with original. \"L1-prime\" awkward to speak; \"L1-observable\" matches the Prop B.7 observable-common-cause distinction from the 2026-04-22 strengthening cycle. Keep L1' as shorthand symbol."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "current": "logostratum RLHF4 backbone",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "cognitive substrate",
-          "is_keep": false,
-          "total_weight": 1,
-          "category_tally": {
-            "rename": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "gemini-2",
-              "weight": 1,
-              "category": "rename",
-              "notes": "\"Logostratum\" is highly specific to the PROPRIUM legacy. \"Cognitive substrate\" grounds it as the generic implementation layer of the update function."
             }
           ]
         }
@@ -59075,37 +58929,6 @@
               "weight": -1,
               "category": "name-unnamed",
               "notes": "Considered and rejected — \"quintet\" is too cute. Better to keep the existing four-content + one-structural decomposition explicit in `#def-unity-dimensions` (or the proposed `#def-unity-axes`) and not invent a poetic shorthand."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "current": "RLHF6",
-      "current_description": null,
-      "is_concept_cluster": false,
-      "voted_by_architectures": [
-        "Gemini"
-      ],
-      "category_disagreement": false,
-      "first_encounter_locality": null,
-      "segment_link": null,
-      "manual_curation_notes": null,
-      "candidates": [
-        {
-          "candidate": "RLHF6",
-          "is_keep": true,
-          "total_weight": -3,
-          "category_tally": {
-            "keep": 1
-          },
-          "consolidated_rationale": null,
-          "votes": [
-            {
-              "agent": "gemini-3-1-pro-preview-r2",
-              "weight": -3,
-              "category": "keep",
-              "notes": "AAD's token-level, trajectory-indexed scope explicitly rejects generalized, type-level intelligence measures. No replacement offered; this is a \"do not introduce\" vote."
             }
           ]
         }
