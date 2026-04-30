@@ -38,7 +38,7 @@ The framework deliberately uses a coherent Greek-rooted vocabulary for its core 
 
 ### Three-document layout for naming workstream
 
-`doc/naming-principles.md` (this file) holds the principles and instructions. `msc/naming/naming-pilot-rename-plan.md` holds specific rename mappings (landed and pending) — that file is excluded from rename sweeps so the mapping table survives them verbatim. `msc/naming/naming-votes/{agent-id}.md` is where you write your votes. Voters do not modify the pilot-rename-plan; the human reviewer does, after voting concludes.
+`doc/naming-principles.md` (this file) holds the principles and instructions. `msc/naming/naming-pilot-rename-plan.md` holds specific rename mappings (landed and pending) — that file is excluded from rename sweeps so the mapping table survives them verbatim. **For Round 2 (active):** voters edit a per-agent voting card in place at `msc/naming/round-2-cards/{your-agent-id}.md` and maintain a tracker at `msc/naming/round-2-trackers/{your-agent-id}-tracker.md`; see [`doc/naming-cycle-methodology.md`](naming-cycle-methodology.md). **For Round 1 (historical):** voters wrote a per-agent vote-file at `msc/naming/naming-votes/{agent-id}.md`. Voters do not modify the pilot-rename-plan; the human reviewer does, after voting concludes.
 
 ### Methodology — separate passes for prefix and subject-noun
 
@@ -210,15 +210,26 @@ The four-band scale (+3 / +2 / +1 / -1) applied. R2 replaced the table-file mech
 
 ## What to return
 
-Write your votes to `msc/naming/naming-votes/{your-agent-id}.md` (create the file if it doesn't exist). Use an agent-id that identifies your model clearly — e.g., `opus-4-7-r2`, `sonnet-4-6-r2`, `haiku-4-5-r2`, `gemini-2-5-pro-r2`, `codex-gpt-5-r2`. The `r2` suffix marks this as the refined-Round-1 contribution.
+The deliverable depends on the round. The shape of the contribution is the same — substantive votes with categories, weights, and reasoning notes — but the delivery form differs.
 
-Your file should contain:
+### Round 2 (active)
 
-1. **Brief header** identifying your model and a one-line summary of your approach (e.g., "Sonnet 4.6 refined Round 1 — focused on subject-nouns failing the renamed-from-now-sounds-weird test.").
-2. **The votes table** (the main content).
-3. **Optional but encouraged: principles-observations section** at the end. Did you find this principles file under-specified anywhere? Did you find yourself making decisions on a criterion that isn't named here? Did the cold-start instruction work for you, or was it under-protective? These observations feed into future principles refinement.
+Your deliverables are:
 
-**Expected length:** 60+ rows. If under 20, you probably haven't looked hard enough. If approaching 200, prioritize quality over count. Symbol-to-English aliases and name-unnamed-thing entries count toward the total but should be reasoned, not mechanical.
+1. **Your voting card at `msc/naming/round-2-cards/{your-agent-id}.md`** — edited in place, with category / weight / top-pick / notes filled in for the targets where you have a real position. Use surgical edits (line-range edits, targeted Edit calls). Per-target notes carry the load-bearing signal; a `+2` with substantive in-context reasoning carries different weight than a `+2` with empty notes.
+2. **Your tracker at `msc/naming/round-2-trackers/{your-agent-id}-tracker.md`** — `voting-sequence` / `can-vote` / `notes` columns maintained as the working state of your walk. The `voted` column auto-refreshes from card state when you re-run `bin/naming-master-tracker --card=...`.
+3. **Per-segment reflections in your audit-working directory at `msc/AUDIT-WORKING-NNNNNN/`** — the workflow restatement (`00-workflow-restatement.md`), initial predictions (`00-initial-predictions.md`), numbered segment reflections (`01-...md`, `02-...md`, ...), and any consolidation-checkpoint working artifacts (`01-consolidation-checkpoint-1.md`, etc.). These are intermediate thinking; they're for you and for future agents reading the working directory for archaeology.
+4. **Closing process-notes** in the card's "Cold-start observations / Process notes" section at the bottom — anything cycle-level worth surfacing for round-design feedback (target framings that felt off, candidate-set gaps, observations about the rhythm itself).
+
+You do **not** write a separate vote-file (that was Round 1's mechanic), and you do **not** write a final audit report (that's the de-novo audit instructions' deliverable, which the methodology borrows the *rhythm* from but not the artifact). The card and tracker are the primary deliverables; the working-directory artifacts are the cognitive trace; the process-notes are the round-design feedback channel.
+
+Your agent-id should identify your model clearly — e.g., `opus-r2c`, `sonnet-r2c`, `gemini-3-1-pro-r2`, `codex-gpt-5-r2`.
+
+**Expected coverage:** depends on engagement, not on a target row count. Partial coverage at high engagement is the right outcome; full coverage at decayed engagement is the failure mode the methodology is designed to avoid. Stop when context fills or rhythm decays — not when the card is "complete." See [`doc/naming-cycle-methodology.md`](naming-cycle-methodology.md) §6 for the stopping rule.
+
+### Round 1 (historical)
+
+Round 1 voters wrote a markdown table at `msc/naming/naming-votes/{your-agent-id}.md` (the "Round 1 vote-file format" subsection above describes the columns) along with an optional principles-observations section. The "60+ rows minimum, prioritize quality over count above ~200" guidance applied — Round 1 was open-exploration voting where the deliverable was the table itself. R2 replaced this with engagement-driven inline card editing; the conceptual content of votes (current / candidate / category / weight / notes) is the same, only the delivery form differs.
 
 ## Meta-principle
 
