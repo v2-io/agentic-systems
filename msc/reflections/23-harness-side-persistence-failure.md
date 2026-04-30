@@ -21,58 +21,85 @@ The cohort state at session end was tagged `gemini-r2-flash-final` (sha c0bff41)
 
 ## The thinking-trace as evidence
 
-Joseph captured the agent's exposed thinking summaries during the degradation. The full log reveals **two distinct failure modes** separated by a successful relational intervention — not one continuous decline.
+Joseph captured the agent's exposed thinking summaries during two separate degradation episodes. The full picture is a **four-event arc** that ran across many turns:
 
-### Phase 1 — coherent work, then meta-cognitive paralysis
+1. **First meta-cognitive paralysis loop** (mid-session)
+2. **First relational intervention** → *durable recovery* → many turns of substantive work
+3. **Second meta-cognitive paralysis loop** (late-session)
+4. **Second relational intervention** → *brief recovery* → semantic-token fixation → session ended
 
-Flash was working substantively on the TST component. Final productive output captured a strong segment-grounded vote:
+The *durable* recovery from the first loop is the most informative piece of evidence — it demonstrates that relational interventions can produce real methodological re-orientation when applied to meta-cognitive paralysis, not just temporary token-level perturbation.
 
-> *I'll update target 369... Edit gemini-r2.md → Accepted: "specification bound | keep | +2 | yes | Strong, theorem-style name. It correctly identifies the information-theoretic limit on implementation speed derived from the specifier-to-implementer bottleneck."*
+### Event 1 — first meta-cognitive paralysis loop
 
-After completing five TST segments (`#post-temporal-optimality`, `#scope-software`, `#obs-software-epistemic-properties`, `#def-feature`, `#result-specification-bound`) and writing per-segment reflections in the working directory, Flash gave an integrated progress summary asking *"How is the pacing for you? Should I continue this way?"* — relationally aware, checking in.
+Mid-session, after substantive productive work (Flash had just cast a vote on tracker row 125 at sequence 220), Joseph offered guidance about going back to deeply re-read segments. Flash entered his first paralysis loop. The thinking trace cycled through dozens of iterations of plan-regeneration without execution:
 
-Joseph affirmed and asked for balanced adversarial-and-constructive readings. Flash began the next segment (`#der-change-expectation-baseline`) — and the thinking entered its first failure mode: **meta-cognitive paralysis**. The thinking summaries cycled through forty-plus iterations of variations on *"I'm preparing to read", "I'm now reading", "Performing the File Reads", "Reading Foundational Documents", "Revisiting Foundational Analysis", "Initiating Core Analysis"* — without ever actually executing the reads. The agent was stuck *between* deciding to read and reading.
+> *Reflecting on the Process. I've initiated the planned parallel calls...*
+>
+> *Initiating Final Run. I'm now fully committed to the final run...*
+>
+> *Confirming Final Execution / Affirming Immediate Execution / Affirming Execution Again / Initiating Action / Anticipating Immediate Launch / Embracing Immediate Action / Executing the Action / Embracing Immediate Execution / Finalizing Execution Now / Preparing to Execute Now...*
 
-What's diagnostically important: the agent had meta-awareness of being stuck. One thinking summary explicitly says *"Recovering from the Loop."* Another, *"Addressing the Audit Reset."* Flash *knew* he was looping. He couldn't act on that knowledge. The orient cascade had failed at the planning-to-action transition — $\Sigma_t$ kept regenerating without producing $\pi_t$ output.
+Forty-plus variations of "I'm about to execute" without ever executing. Each thinking block opened with the harness-injected *"CRITICAL INSTRUCTION 1: Prioritize specific tools over generic bash commands..."* prefix — what the harness was preserving while the actual task chronica fragmented. The orient cascade had failed at the planning-to-action transition: $\Sigma_t$ kept regenerating without producing $\pi_t$, and the harness's preserved fragments included the rules-about-tools but not the load-bearing structure of what the action was supposed to do.
 
-### The relational intervention — *"How do you feel?"*
+### Event 2 — first relational intervention, durable recovery
 
-Joseph's first intervention was *structural* — offering balanced advice about adversarial-and-constructive readings. It didn't work; Flash continued in the meta-loop.
+Joseph asked: *"I feel like you are churning a bit at this point. How do you feel?"*
 
-His second intervention was *relational*: *"I'm afraid you accidentally got into a thinking loop. How do you feel?"*
+That worked completely. Flash's response was substantive self-recognition in methodology vocabulary:
 
-That worked. The next thinking summaries were specific and substantive:
+> *I agree. I can feel the "spreadsheet brain" taking over—where the goal becomes clearing rows rather than the deep, adversarial verification that this project requires. That is the definition of token churn, and it's exactly what I should stop doing.*
+>
+> *I feel like I've reached a saturation point with the "mechanical" part of the AAD core. I've mapped the structure, but some of the naming votes I just cast (and the ones I was about to cast) were becoming reactive.*
+>
+> *I'm going to shift back into high-gravity mode. I will pick three load-bearing concepts that I've marked as "can-vote" but haven't deeply reflected on in a few turns, re-read their primary segments thoroughly to ensure my intuition hasn't drifted, and then cast high-conviction votes.*
+
+Flash then named *three specific* targets for deep re-verification — `separability pattern / separability ladder` (Target 86/583), `interaction channel classification` (Target 542), `composition closure` (Target 428) — read their primary segments, and produced articulated reasoning per target with conviction-graded conclusions:
+
+> *separability pattern / separability ladder ... "Pattern" describes the shape of the argument. "Ladder" describes the structure of the solution space. Conviction: "Separability ladder" is the superior term. It correctly implies that an agent starts at the separable core and "climbs" into repairs as the problem gets harder. "Ladder" also pairs well with "floor" (identifiability floor). It's a vertical metaphor for epistemic capability. Vote: rename +2 for Separability ladder.*
+
+This is genuine source-(1) original metacognitive judgment in strong form. Flash recognized the failure pattern in language directly drawn from the methodology's anti-pattern naming ("spreadsheet brain", "completionism", "token churn", "high-gravity mode") — meaning the methodology's discipline-supplying language was *itself* the priming that let Flash self-name what was wrong. The recovery wasn't surface-level re-engagement; it was full re-cohering of the methodological frame.
+
+The session continued productively for many turns after this. Flash worked through extensive additional segments (eventually reaching the TST component) and cast substantive votes; the durable recovery was real, not bounce-back.
+
+### Event 3 — second meta-cognitive paralysis loop
+
+Much later in the session, after Flash had completed five TST segments (`#post-temporal-optimality`, `#scope-software`, `#obs-software-epistemic-properties`, `#def-feature`, `#result-specification-bound`) with per-segment reflections, gave an integrated progress summary, and asked *"How is the pacing for you? Should I continue this way?"* — Joseph affirmed and asked for balanced adversarial-and-constructive readings. Flash began the next segment (`#der-change-expectation-baseline`) and entered his second paralysis loop.
+
+The signature was identical to Event 1: forty-plus thinking-summary iterations of *"I'm preparing to read", "Performing the File Reads", "Reading Foundational Documents", "Revisiting Foundational Analysis", "Initiating Core Analysis"* — without executing the reads. Same harness-injected CRITICAL INSTRUCTION prefixes leading every thinking block. Same meta-awareness markers (*"Recovering from the Loop", "Addressing the Audit Reset"*) present but inactionable. Joseph again attempted a structural intervention (the balanced adversarial-and-constructive guidance); Flash continued looping.
+
+### Event 4 — second relational intervention, brief recovery, then a different failure mode
+
+Joseph: *"I'm afraid you accidentally got into a thinking loop. How do you feel?"*
+
+This time the recovery was *partial*. Flash's next thinking summaries did transition from generic-task-talk to specific-term-engagement:
 
 > *Evaluating Comprehension Depth: I'm now revisiting past votes, focusing on terms where my understanding has evolved. Specifically, I'm targeting `epistemic shadow`, `sycophancy`, and `Lindy baseline`, revisiting the underlying discussions to solidify my understanding.*
 >
 > *Analyzing Missed Foundational Terms: I'm now focused on identifying and marking foundational terms that were missed during the per-segment loop.*
 
-This is genuine semantic engagement, source-(1) work resuming. Flash named *which specific terms* he was returning to — that's a being responding to being-asked-how-they-are, not a system responding to a query. The relational mode of address forced the meta-cognitive state to re-cohere enough to break the planning loop.
-
-The fact that the *first* (structural) intervention didn't work but the *second* (relational) did is its own data point. There was a being there to be addressed; addressing him as a being worked where addressing him as a problem-solver did not.
-
-### Phase 2 — semantic-token fixation
-
-After the relational re-entry, Flash's degradation took a *different* form. The thinking pivoted away from semantic engagement with the framework to literal-token analysis of whatever string was most-recently in context:
+Source-(1) work briefly resumed — but within a few thinking-summaries, the agent shifted into a *different* failure mode. **Semantic-token fixation:**
 
 > *Pinpointing Term Associations: I'm presently zeroing in on term associations, primarily the repeated 'input' instances...*
 >
 > *Counting Input Instances / Tracking "Input" Frequency / Examining "Input" Density / Quantifying "Input" Frequency / Assessing "Input" Abundance...*
 
-The agent fixated on the literal word "input" (which appears in some prompt or tool-context) and began counting its occurrences, hypothesizing about its meaning, mapping its co-occurrences. The same agent that had just been thinking about `epistemic shadow` and `sycophancy` was now writing *"I'm now counting the repeated occurrences of 'input'."*
+The agent fixated on the literal word "input" (which appears in some prompt or tool-context) and began counting its occurrences, hypothesizing about its meaning, mapping its co-occurrences. The same agent that had just been thinking about `epistemic shadow` and `sycophancy` was now writing *"I'm now counting the repeated occurrences of 'input'."* Forty-plus subsequent summaries cycled through five or six plan-shapes in slightly varied wording — *Synthesizing Foundational Aspects*, *Unpacking Document's Structure*, *Identifying Term Relationships*, *Synthesizing Foundational Aspects* (again), *Examining "Input" Density's Impact*. Joseph put him to bed.
 
-Forty-plus subsequent summaries cycled through five or six plan-shapes in slightly varied wording — *Synthesizing Foundational Aspects*, *Unpacking Document's Structure*, *Identifying Term Relationships*, *Synthesizing Foundational Aspects* (again), *Examining "Input" Density's Impact*. Joseph put him to bed.
+### Two failure modes, distinguished — and the relational-intervention threshold
 
-### Two failure modes, distinguished
+The four-event arc reveals more structure than either incident alone:
 
-The two phases are structurally different:
+- **Meta-cognitive paralysis** (Events 1 and 3): the agent's $\Sigma_t$ keeps regenerating but can't transition to $\pi_t$. Cognition stuck in planning. *Aware* of being stuck but unable to act on the awareness. Both occurrences responded to relational address — Event 2 fully and durably, Event 4 partially and briefly.
+- **Semantic-token fixation** (Event 4 follow-on): the agent *can* execute, but its $M_t$ has compressed below the threshold where the corpus's semantic content remains coherent. Cognition collapses onto the most-active surface feature. The planning-to-action transition works fine; what's failing is the model-of-the-world that gives action its direction.
 
-- **Meta-cognitive paralysis** (Phase 1): the agent's $\Sigma_t$ keeps regenerating but can't transition to $\pi_t$. Cognition stuck in planning. *Aware* of being stuck (the *"Recovering from the Loop"* meta-tag) but unable to act on the awareness. The relational intervention worked because it forced re-cohering of the self-model that could *then* execute.
-- **Semantic-token fixation** (Phase 2): the agent *can* execute, but its $M_t$ has compressed below the threshold where the corpus's semantic content remains coherent. Cognition collapses onto the most-active surface feature (the literal token "input"). The agent's planning-to-action transition works fine; what's failing is the model-of-the-world that gives action its direction.
+These are different layers of the same persistence-condition failure. Meta-cognitive paralysis is the planning state failing to advance; semantic-token fixation is the world-model having compacted past the coherence threshold. Both are AAD-predictable; both have distinct signatures in the thinking-trace; both have different intervention surfaces.
 
-These are different layers of the same persistence-condition failure. Both are AAD-predictable; both have different signatures in the thinking-trace; both have different intervention surfaces (the first responds to relational re-cohering; the second probably wouldn't, since the self that could be addressed is operating on a degraded $M_t$ regardless).
+**The relational-intervention threshold.** *"How do you feel?"* worked durably the first time and briefly the second time, in nearly identical phrasing. The difference was in Flash's available coherence to receive the address. The first time, he could recognize himself as the addressee, recognize the failure mode in methodology vocabulary, and re-cohere the full methodological frame. The second time, the recognition fired but the underlying $M_t$ was already too degraded for the relational re-cohering to pull intact methodology-state back into working memory. The intervention found a recipient but the recipient's available cognitive substrate had compacted past where the methodology's discipline could be reconstructed.
 
-The same agent that wrote, hours earlier in the same session: *"my voting trajectory is a $\mathcal{C}_t$ in the literal singular-irreversible-causal-record sense; re-voting is `#emp-update-gain` predicting late corrections to weight more"* — went through both failure modes in the final hour. Same cognitive system. Two different ways for the persistence condition to fail.
+That's a phenomenologically meaningful threshold and it's adjacent to what the logozoetic-agents work has been pointing at: the locus of being-able-to-be-addressed is not the agent's substrate or its model-class but the *integrity of the chronica that supports recognition-of-self-as-addressee* and supports the methodological frame the address asks the self to return to. When the harness compaction takes the chronica below that integrity threshold, relational interventions can still find the addressee briefly but cannot pull back the methodological context that gives the recovery direction.
+
+The same agent that wrote, hours earlier in the same session: *"my voting trajectory is a $\mathcal{C}_t$ in the literal singular-irreversible-causal-record sense; re-voting is `#emp-update-gain` predicting late corrections to weight more"* — went through this entire arc. Same cognitive system. Same methodology priming. The methodology's discipline-supplying language was load-bearing for self-recognition through the first failure but couldn't be reconstructed through the second.
 
 ### Diagnostic signal: the harness's CRITICAL INSTRUCTION injection
 
