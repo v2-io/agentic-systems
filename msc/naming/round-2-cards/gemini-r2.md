@@ -218,7 +218,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Downstream evidence gating |  |  |  |  |
 | Depth attenuated correction |  |  |  |  |
-| evidence starvation | canonicalize | +3 | yes | Exceptionally clear and memorable prose alias for the downstream gating effect. Independently reached by multiple agents. |
+| evidence starvation | canonicalize | +2 | yes | Exceptionally clear and memorable prose alias for the downstream gating effect. Independently reached by multiple agents. |
 | *(write-in)* |  |  |  |  |
 
 ## 16. *strategy dimension*
@@ -388,7 +388,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| adaptive reserve | keep | +3 | yes | Load-bearing symbol-to-English alias. Carries exactly the right engineering intuition (shock tolerance/margin). |
+| adaptive reserve | keep | +2 | yes | Load-bearing symbol-to-English alias. Carries exactly the right engineering intuition (shock tolerance/margin). |
 | *(write-in)* |  |  |  |  |
 
 ## 28. *condition*
@@ -478,7 +478,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| adversarial destabilization |  |  |  |  |
+| adversarial destabilization | keep | +2 | yes | Accurate and structurally precise. It names the exact threshold failure rather than just 'advantage' or 'conflict'. |
 | *(write-in)* |  |  |  |  |
 
 ## 34. *the creche boundary*
@@ -752,7 +752,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| team persistence |  |  |  |  |
+| team persistence | keep | +2 | yes | Extremely strong. The parallel with single-agent 'persistence' is formally maintained, while 'team' carries the exact sociological intuition needed for the cooperative-action vs communication split. |
 | *(write-in)* |  |  |  |  |
 
 ## 54. [Concept] *Lohmiller-Slotine contraction metric generalization used in contraction template*
@@ -1258,7 +1258,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Emitter opacity |  |  |  |  |
 | Legibility inverse |  |  |  |  |
 | Backward predictive uncertainty |  |  |  |  |
-| agent opacity |  |  |  |  |
+| agent opacity | keep | +2 | yes | The prior-art integration principle is absolute here. Hafez 2026 defines $H_b$. Keeping the name honors the external theorem while AAD provides the new indexing extensions. |
 | Strategic opacity |  |  |  |  |
 | Legibility inverted |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -1349,7 +1349,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| strategy persistence schema |  |  |  |  |
+| strategy persistence schema | keep | +2 | yes | The word 'schema' is crucial here, as it distinguishes the unproved general case from the proven instances. It correctly labels the epistemic status of the template application. |
 | Strategic persistence |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -1387,7 +1387,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| action selection |  |  |  |  |
+| action selection | keep | +2 | yes | The slug is a standard, recognized term across RL and cognitive science. It connects the model cleanly to the resulting action. |
 | *(write-in)* |  |  |  |  |
 
 ## 97. *intent planning vocabulary*
@@ -1558,7 +1558,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Causal hierarchy level |  |  |  |  |
 | Causal hierarchy |  |  |  |  |
-| Pearl causal hierarchy | keep | +3 | yes | Direct adoption from prior art. Removing "Pearl" would be NIH syndrome and lose the precise external mathematical definition. Baggage-adoption is correct here. |
+| Pearl causal hierarchy | keep | +2 | yes | Direct adoption from prior art. Removing "Pearl" would be NIH syndrome and lose the precise external mathematical definition. Baggage-adoption is correct here. |
 | *(write-in)* |  |  |  |  |
 
 ## 110. *prolepsis πρόληψις*
@@ -1695,7 +1695,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Predictive sufficiency |  |  |  |  |
 | Predictive information retention |  |  |  |  |
-| model sufficiency | keep | +3 | yes | A precise statistical term that perfectly captures the "fraction of predictive information retained." It avoids the baggage of "accuracy" and cleanly separates from Causal Validity. |
+| model sufficiency | keep | +2 | yes | A precise statistical term that perfectly captures the "fraction of predictive information retained." It avoids the baggage of "accuracy" and cleanly separates from Causal Validity. |
 | *(write-in)* |  |  |  |  |
 
 ## 119. *goal-blind routing*
@@ -1741,7 +1741,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| satisfaction gap |  |  |  |  |
+| satisfaction gap | keep | +2 | yes | The prose use of 'gap' pairs beautifully with 'regret' later. It correctly implies a distance to a threshold rather than just a continuous error signal. |
 | Attainability shortfall |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -1759,7 +1759,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Epistemic bottleneck |  |  |  |  |
-| information bottleneck | keep | +3 | yes | Direct import of Tishby's exact theorem. The epistemic status states this is an applied external theorem, not a novel formulation. Keeping the name preserves the mathematical lineage and respects the prior-art-integration convention. |
+| information bottleneck | keep | +2 | yes | Direct import of Tishby's exact theorem. The epistemic status states this is an applied external theorem, not a novel formulation. Keeping the name preserves the mathematical lineage and respects the prior-art-integration convention. |
 | *(write-in)* |  |  |  |  |
 
 ## 123. *(A2′) sub-scope partition*
@@ -1785,7 +1785,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Architectural adaptation |  |  |  |  |
-| structural adaptation | keep | +3 | yes | The contrast with 'parametric adaptation' is essential. It provides a formal, mathematical name for what Kuhn calls a paradigm shift and Boyd calls Destruction/Creation. |
+| structural adaptation | keep | +2 | yes | The contrast with 'parametric adaptation' is essential. It provides a formal, mathematical name for what Kuhn calls a paradigm shift and Boyd calls Destruction/Creation. |
 | *(write-in)* |  |  |  |  |
 
 ## 125. [Concept] *Symbol default $M_t$ in prose*
@@ -1886,7 +1886,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Log confidence additive |  |  |  |  |
-| chain confidence decay | keep | +3 | yes | The phenomenon (decay) is what happens in the world and what the agent experiences. The proof technique (log additive) is secondary. Slug-as-thing-defined principle strongly favors 'chain confidence decay'. |
+| chain confidence decay | keep | +2 | yes | The phenomenon (decay) is what happens in the world and what the agent experiences. The proof technique (log additive) is secondary. Slug-as-thing-defined principle strongly favors 'chain confidence decay'. |
 | *(write-in)* |  |  |  |  |
 
 ## 132. *edge credence*
@@ -2000,7 +2000,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Lowercase italic chronica |  |  |  |  |
-| chronica | keep | +3 | yes | The name is foundational. It avoids mathematical collisions (like $\mathcal{H}$ for history/entropy) and firmly grounds the concept in the irreversible arrow of time. Essential for the moral weight of Logozoetic extensions. |
+| chronica | keep | +2 | yes | The name is foundational. It avoids mathematical collisions (like $\mathcal{H}$ for history/entropy) and firmly grounds the concept in the irreversible arrow of time. Essential for the moral weight of Logozoetic extensions. |
 | *(write-in)* |  |  |  |  |
 
 ## 140. *adaptive tempo*
@@ -2017,7 +2017,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| adaptive tempo | keep | +3 | yes | The strongest possible name for $\mathcal{T}$. It perfectly combines 'rate' and 'quality' into a single intuitive term, paying homage to Boyd's OODA loop without inheriting generic baggage. |
+| adaptive tempo | keep | +2 | yes | The strongest possible name for $\mathcal{T}$. It perfectly combines 'rate' and 'quality' into a single intuitive term, paying homage to Boyd's OODA loop without inheriting generic baggage. |
 | tempo |  |  |  |  |
 | Adaptation rate |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -2664,7 +2664,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| directed separation | keep | +3 | yes | The term perfectly captures the asymmetry (directed) of the decoupling (separation). It's the exact architectural requirement for Class 1 agents and anchors the Pearl d-separation lineage. |
+| directed separation | keep | +2 | yes | The term perfectly captures the asymmetry (directed) of the decoupling (separation). It's the exact architectural requirement for Class 1 agents and anchors the Pearl d-separation lineage. |
 | Epistemic isolation of belief update |  |  |  |  |
 | Pearl-blanket separation |  |  |  |  |
 | Goal-blind processing |  |  |  |  |
@@ -3048,7 +3048,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| strategic calibration |  |  |  |  |
+| strategic calibration | keep | +2 | yes | 'Calibration' is exactly the right statistical term for checking if predicted edge weights match observed frequencies. It perfectly completes the error-signal vocabulary ($\delta_t$, $\delta_{\text{sat}}$, $\delta_{\text{regret}}$, $\delta_{\text{strategic}}$). |
 | Strategic calibration residual |  |  |  |  |
 | Strategy calibration |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -3293,7 +3293,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| multi agent scope |  |  |  |  |
+| multi agent scope | keep | +2 | yes | The acronym MARL (Multi-Agent Reinforcement Learning) relies on this exact phrasing. Deviating from it here would cause unnecessary friction. The framework clearly defines its specific boundaries (shared environment) without needing a novel slug. |
 | Shared environment scope |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -3309,7 +3309,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| agency | keep | +3 | yes | A load-bearing, terse distinction. Using Pearl's $do()$ operator to define agency is mathematically precise and philosophically deep. Keep the clean slug. |
+| agency | keep | +2 | yes | A load-bearing, terse distinction. Using Pearl's $do()$ operator to define agency is mathematically precise and philosophically deep. Keep the clean slug. |
 | *(write-in)* |  |  |  |  |
 
 ## 231. *$R$ (sector radius)*
@@ -3350,7 +3350,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| strategy DAG | keep | +3 | yes | The use of DAG instead of 'tree' or 'network' anchors it perfectly to the causal inference literature (Bareinboim/Pearl). It's a precise mathematical object. |
+| strategy DAG | keep | +2 | yes | The use of DAG instead of 'tree' or 'network' anchors it perfectly to the causal inference literature (Bareinboim/Pearl). It's a precise mathematical object. |
 | *(write-in)* |  |  |  |  |
 
 ## 234. *implementation time*
@@ -3381,7 +3381,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| credit assignment boundary |  |  |  |  |
+| credit assignment boundary | keep | +2 | yes | The use of 'boundary' instead of 'frontier' is correct. A frontier implies something we are actively pushing back; a boundary implies a fundamental mathematical limit (like #P-hardness) that we must respect and design around. |
 | Credit assignment frontier |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -3975,10 +3975,10 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| edge update causal validity |  |  |  |  |
+| edge update causal validity | keep | +2 | yes | The full phrasing is necessary. Causal validity is a general term; this segment is specifically about the validity of edge updates under different observation regimes. |
 | Causal edge update |  |  |  |  |
 | Edge causal validity |  |  |  |  |
-| Identification regime |  |  |  |  |
+| Identification regime | add-alias | +1 | no | Useful as a prose alias to refer to the A/B/C taxonomy developed here, but it shouldn't replace the formal slug which denotes the property being bounded. |
 | Causal validity |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -5010,7 +5010,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | The pentad |  |  |  |  |
 | Adaptive traversal |  |  |  |  |
-| orient cascade |  |  |  |  |
+| orient cascade | keep | +2 | yes | The shape is literally a cascade (forced sequential resolution) and the OODA echo ('orient') is historically informative without capturing the whole concept. Perfect descriptive name. |
 | The adaptive pentad |  |  |  |  |
 | The pentad five phase cycle |  |  |  |  |
 | Adaptive cycle |  |  |  |  |
@@ -5344,7 +5344,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| adaptive system | keep | +3 | yes | Canonical example of good naming. Accurately describes the systems bound by residual uncertainty ($H(\Omega \mid C) > 0$). Ashby/cybernetic baggage is appropriate and helpful here. |
+| adaptive system | keep | +2 | yes | Canonical example of good naming. Accurately describes the systems bound by residual uncertainty ($H(\Omega \mid C) > 0$). Ashby/cybernetic baggage is appropriate and helpful here. |
 | *(write-in)* |  |  |  |  |
 
 ## 374. *software scope*
@@ -5686,7 +5686,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Agent opacity $H_b$ |  |  |  |  |
+| Agent opacity $H_b$ | keep | +2 | yes | Combining the prose alias 'Agent opacity' with the imported symbol $H_b$ perfectly honors the external theorem while standardizing the AAD-specific usage. |
 | Agent opacity |  |  |  |  |
 | $H_b$ |  |  |  |  |
 | Backward opacity |  |  |  |  |
@@ -5888,7 +5888,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| prolepsis | keep | +3 | yes | The Greek register (prolepsis/aisthesis/aporia/epistrophe/praxis) elevates the framework from mechanical control theory to cognitive philosophy. 'Anticipation' flattens the active-modeling implication of 'taking-before'. Keep. |
+| prolepsis | keep | +2 | yes | The Greek register (prolepsis/aisthesis/aporia/epistrophe/praxis) elevates the framework from mechanical control theory to cognitive philosophy. 'Anticipation' flattens the active-modeling implication of 'taking-before'. Keep. |
 | Anticipation |  |  |  |  |
 | Prolepsis anticipatory projection |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -5929,7 +5929,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Continuation hierarchy |  |  |  |  |
 | Evaluation hierarchy |  |  |  |  |
-| convention hierarchy |  |  |  |  |
+| convention hierarchy | keep | +2 | yes | The churn argument is decisive. C1/C2/C3 is embedded deeply in the notation. The collision with Lewisian convention is minor compared to breaking the C-hierarchy mnemonic across the whole framework. |
 | *(write-in)* |  |  |  |  |
 
 ## 415. [Concept] *Dormant variation in correction architectures across a population that become consequential after regime change but is invisible to current persistence analysis*
@@ -6084,7 +6084,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| model-class fitness | keep | +3 | yes | The distinction between instance sufficiency and class fitness perfectly mirrors bias vs variance. 'Fitness' sets up the evolutionary/developmental metaphor needed for structural adaptation later. |
+| model-class fitness | keep | +2 | yes | The distinction between instance sufficiency and class fitness perfectly mirrors bias vs variance. 'Fitness' sets up the evolutionary/developmental metaphor needed for structural adaptation later. |
 | Class capacity ceiling |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -6471,7 +6471,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Noise scaling penalty |  |  |  |  |
-| Stochastic tempo penalty | name-unnamed | +3 | yes | The 1/sqrt(T) scaling is a profound result (Model S vs Model D). The term 'Stochastic tempo penalty' cleanly separates this penalty from the base noise. |
+| Stochastic tempo penalty | name-unnamed | +2 | yes | The 1/sqrt(T) scaling is a profound result (Model S vs Model D). The term 'Stochastic tempo penalty' cleanly separates this penalty from the base noise. |
 | *(write-in)* |  |  |  |  |
 
 ## 451. [Concept] *Predictive relevance depending on the policy the agent will run*
@@ -6782,7 +6782,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Epistemic freezing |  |  |  |  |
-| observability dominance |  |  |  |  |
+| observability dominance | keep | +2 | yes | Accurate and structurally sound. It correctly names the principle that the observability coefficient determines whether nominal confidence matters at all. 'Epistemic freezing' is a great descriptor for the *result*, but 'observability dominance' names the mathematical relationship. |
 | *(write-in)* |  |  |  |  |
 
 ## 472. [Concept] *Dark-room critique / citation phrasing (Sun & Firestone)*
@@ -6855,6 +6855,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Composition closure closure defect |  |  |  |  |
+| Closure defect | name-unnamed | +2 | yes | Dropping the repetitive 'Composition closure closure defect' in favor of just 'Closure defect' (which names the scalar $\varepsilon^\ast$ directly) is cleaner and more commonly used in the prose. |
 | *(write-in)* |  |  |  |  |
 
 ## 478. *objective functional*
@@ -6870,7 +6871,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| objective functional | keep | +3 | yes | The use of 'functional' is mathematically precise because it maps trajectories to scalars. 'Teleological' is redundant with 'objective'. |
+| objective functional | keep | +2 | yes | The use of 'functional' is mathematically precise because it maps trajectories to scalars. 'Teleological' is redundant with 'objective'. |
 | Teleological objective |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -6948,7 +6949,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Deliberation threshold |  |  |  |  |
 | Think vs act tradeoff |  |  |  |  |
 | Deliberation drag |  |  |  |  |
-| deliberation cost | keep | +3 | yes | The word 'cost' accurately reflects the microeconomic nature of the inequality (benefit > cost). 'Drag' is evocative but 'cost' pairs perfectly with the concept of investing time for an epistemic return. |
+| deliberation cost | keep | +2 | yes | The word 'cost' accurately reflects the microeconomic nature of the inequality (benefit > cost). 'Drag' is evocative but 'cost' pairs perfectly with the concept of investing time for an epistemic return. |
 | *(write-in)* |  |  |  |  |
 
 ## 484. [Concept] *Bipartite memory structure of fast replay buffer and slow compressed semantic model*
@@ -7060,7 +7061,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Trajectory singularity |  |  |  |  |
-| Singular trajectory commitment | canonicalize | +3 | yes | This is the most exact descriptor. 'Agent identity' brings in too much metaphysical baggage, whereas 'Singular trajectory commitment' perfectly isolates the formal requirement (non-forkable causal path). |
+| Singular trajectory commitment | canonicalize | +2 | yes | This is the most exact descriptor. 'Agent identity' brings in too much metaphysical baggage, whereas 'Singular trajectory commitment' perfectly isolates the formal requirement (non-forkable causal path). |
 | Trajectory bound identity |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -7110,7 +7111,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Adversarial regime |  |  |  |  |
-| adversarial exponent regime |  |  |  |  |
+| adversarial exponent regime | keep | +2 | yes | The term 'exponent' is the exact mathematical property being analyzed. 'Adversarial regime' is too broad. |
 | *(write-in)* |  |  |  |  |
 
 ## 494. *(PI) parameterization invariance*
@@ -7211,7 +7212,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Cycle budget |  |  |  |  |
-| exploit explore deliberate | keep | +3 | yes | The three-way triad perfectly captures the allocation tension. It extends the classic RL explore/exploit dual into the cognitive realm (deliberate) natively. |
+| exploit explore deliberate | keep | +2 | yes | The three-way triad perfectly captures the allocation tension. It extends the classic RL explore/exploit dual into the cognitive realm (deliberate) natively. |
 | Cycle budget allocation |  |  |  |  |
 | Action timing tradeoff |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -7320,7 +7321,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Adaptive reserve margin | canonicalize | +3 | yes | While 'adaptive reserve' is the quantity $\Delta\rho^\ast$, appending 'margin' clearly designates the interval/region of safety. It grounds the abstract math in a very physical engineering intuition (like a safety margin). |
+| Adaptive reserve margin | canonicalize | +2 | yes | While 'adaptive reserve' is the quantity $\Delta\rho^\ast$, appending 'margin' clearly designates the interval/region of safety. It grounds the abstract math in a very physical engineering intuition (like a safety margin). |
 | Operational persistence window |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -7387,7 +7388,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| persistence condition | keep | +3 | yes | This is the central inequality of the framework. 'Persistence' correctly names the structural survival against decay (vs 'stability' which often just means converging to a point). Keep exactly as is. |
+| persistence condition | keep | +2 | yes | This is the central inequality of the framework. 'Persistence' correctly names the structural survival against decay (vs 'stability' which often just means converging to a point). Keep exactly as is. |
 | Survival equation |  |  |  |  |
 | The survival equation |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -7472,7 +7473,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Pointing condition |  |  |  |  |
 | Corrective alignment |  |  |  |  |
-| directional fidelity | keep | +3 | yes | The engineering resonance ('fidelity' as in signal processing/control) perfectly anchors the mathematical inequality $\delta^T H g(\delta) \geq c\lVert\delta\rVert^2$. The rejection of 'alignment' due to baggage is spot-on. |
+| directional fidelity | keep | +2 | yes | The engineering resonance ('fidelity' as in signal processing/control) perfectly anchors the mathematical inequality $\delta^T H g(\delta) \geq c\lVert\delta\rVert^2$. The rejection of 'alignment' due to baggage is spot-on. |
 | Correction direction integrity |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -7721,7 +7722,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Composition threshold |  |  |  |  |
-| Crossing |  |  |  |  |
+| Crossing | keep | +2 | yes | The evocative language ('crossing into composition') fits the phase-transition nature of this boundary better than 'threshold'. |
 | *(write-in)* |  |  |  |  |
 
 ## 537. *task terminal stance*
@@ -7786,7 +7787,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Modular |  |  |  |  |
-| Class 1 |  |  |  |  |
+| Class 1 | keep | +2 | yes | While 'Modular' is descriptive, 'Class 1' is deeply embedded in the notation and provides a clean, neutral taxonomy (Class 1/2/3) that avoids the normative baggage of 'modular vs entangled'. |
 | *(write-in)* |  |  |  |  |
 
 ## 542. *interaction channel classification*
@@ -7812,7 +7813,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Channel classification |  |  |  |  |
 | interaction channel classification |  |  |  |  |
 | Recipient regime classification |  |  |  |  |
-| Signal reception regime |  |  |  |  |
+| Signal reception regime | name-unnamed | +2 | yes | 'Signal reception regime' perfectly captures the four-part taxonomy (I, II-a, II-b, III) developed in the segment. It centers the focus on *how the signal lands* rather than the passive classification process. |
 | Recipient side channel taxonomy |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -8168,7 +8169,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Loop causal engine |  |  |  |  |
 | Adaptive loop access |  |  |  |  |
 | Interventional loop property |  |  |  |  |
-| loop interventional access | keep | +3 | yes | The full phrase 'loop interventional access' is the most exact descriptor. 'The perpetual experiment' is a beautiful prose framing, but the slug must be mechanically precise. |
+| loop interventional access | keep | +2 | yes | The full phrase 'loop interventional access' is the most exact descriptor. 'The perpetual experiment' is a beautiful prose framing, but the slug must be mechanically precise. |
 | Embodiment upgrade |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -8603,7 +8604,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| mismatch signal | keep | +3 | yes | The engineering register 'mismatch signal' is perfectly neutral; 'error' assumes the agent was wrong, but sometimes the world is just noisy. Keeping this preserves the structural trio of mismatch-signal / satisfaction-gap / control-regret. |
+| mismatch signal | keep | +2 | yes | The engineering register 'mismatch signal' is perfectly neutral; 'error' assumes the agent was wrong, but sometimes the world is just noisy. Keeping this preserves the structural trio of mismatch-signal / satisfaction-gap / control-regret. |
 | Aporia signal |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -8666,7 +8667,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Learning rate |  |  |  |  |
 | Update gain uncertainty ratio principle |  |  |  |  |
 | Epistemic gain |  |  |  |  |
-| update gain |  |  |  |  |
+| update gain | keep | +2 | yes | The argument to keep the Kalman baggage is definitive. $\eta^\ast = U_M / (U_M + U_o)$ is a gain equation, not a learning rate. |
 | *(write-in)* |  |  |  |  |
 
 ## 604. *consolidation dynamics*
@@ -8722,7 +8723,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| adversarial tempo advantage |  |  |  |  |
+| adversarial tempo advantage | keep | +2 | yes | Naming the specific domain ('adversarial') is better than naming the mathematical outcome ('superlinear'). It frames the context of the superlinearity correctly. |
 | Superlinear tempo advantage |  |  |  |  |
 | Tempo advantage |  |  |  |  |
 | *(write-in)* |  |  |  |  |

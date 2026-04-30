@@ -32,7 +32,7 @@
 | 30 |  |  |  | century scale event log | Persistent chronica… |  |
 | 31 |  |  |  | hierarchy as a project wide word | Flag four independe… |  |
 | 32 |  |  |  | per dimension persistence | Dimensional persist… |  |
-| 33 |  |  |  | adversarial destabilization |  |  |
+| 33 | 105 | true | true | adversarial destabilization |  |  |
 | 34 |  |  |  | the creche boundary | Creche graduation… |  |
 | 35 |  |  |  | feature |  |  |
 | 36 |  |  |  | atomic changeset |  |  |
@@ -52,7 +52,7 @@
 | 50 |  |  |  | [Concept] The 1-anchor / 3-theorem structure in additive coordinate forcing | Anchor theorem stru… |  |
 | 51 |  |  |  | [Concept] Structural persistence / operational persistence / continuity persistence | Structural operatio… |  |
 | 52 |  |  |  | Regime III | Ambient noise regime |  |
-| 53 |  |  |  | team persistence |  |  |
+| 53 | 104 | true | true | team persistence |  |  |
 | 54 |  |  |  | [Concept] Lohmiller-Slotine contraction metric generalization used in contraction template | Contraction metric … |  |
 | 55 |  |  |  | [Concept] The dual that pairs with persistence envelope on the strategic side | Strategic persisten… |  |
 | 56 |  |  |  | [Concept] Accumulated loss across context resets | Cold reconstruction… |  |
@@ -86,16 +86,16 @@
 | 84 |  |  |  | indivisum | Causal lock… |  |
 | 85 |  |  |  | [Concept] Track 1 / Track 2 in bias-bound derivation | Transport-inequalit… |  |
 | 86 |  |  |  | separability pattern | Tiered separability… |  |
-| 87 |  |  |  | agent opacity | Emitter opacity… |  |
+| 87 | 109 | true | true | agent opacity | Emitter opacity… |  |
 | 88 |  |  |  | Regime II-A | Magnitude shock reg… |  |
 | 89 |  |  |  | communication gain | Trust weighted comm… |  |
 | 90 |  |  |  | contraction hierarchy | Contraction tier |  |
 | 91 |  |  |  | lindy baseline | Structural persiste… |  |
 | 92 |  |  |  | principled decision integration | Temporal decision i… |  |
-| 93 |  |  |  | strategy persistence schema | Strategic persisten… |  |
+| 93 | 93 | true | true | strategy persistence schema | Strategic persisten… |  |
 | 94 |  |  |  | [Concept] Tests as reusable level-2 interventions | Interventional prob… |  |
 | 95 |  |  |  | default signal function |  |  |
-| 96 |  |  |  | action selection |  |  |
+| 96 | 100 | true | true | action selection |  |  |
 | 97 |  |  |  | intent planning vocabulary | Intent |  |
 | 98 |  |  |  | $\mathcal{T}$ adaptive tempo | Adaptive tempo $\ma… |  |
 | 99 |  |  |  | Pearl L3 | Reasoning |  |
@@ -120,7 +120,7 @@
 | 118 |  | true | true | model sufficiency | Predictive sufficie… |  |
 | 119 | 77 | true | true | goal-blind routing | Objective agnostic … |  |
 | 120 |  |  |  | $f_M$ (event-driven update) | Epistemic update fu… |  |
-| 121 |  |  |  | satisfaction gap | Attainability short… |  |
+| 121 | 89 | true | true | satisfaction gap | Attainability short… |  |
 | 122 |  | true | true | information bottleneck | Epistemic bottleneck |  |
 | 123 |  |  |  | (A2′) sub-scope partition | Gain regime partiti… |  |
 | 124 |  | true | true | structural adaptation | Architectural adapt… |  |
@@ -210,7 +210,7 @@
 | 208 |  |  |  | internal external decomposition | Boundary decomposit… |  |
 | 209 |  |  |  | $U_M$ as epistemic unity | Epistemic unity $U_… |  |
 | 210 |  |  |  | closure defect bridge lemma | Closure bridge… |  |
-| 211 |  |  |  | strategic calibration | Strategic calibrati… |  |
+| 211 | 92 | true | true | strategic calibration | Strategic calibrati… |  |
 | 212 |  |  |  | teleological unity | Objective alignment… |  |
 | 213 |  | true |  | causal structure |  |  |
 | 214 |  |  |  | $U_\text{obs}$ (perceptual unity) | Perceptual unity |  |
@@ -228,13 +228,13 @@
 | 226 |  |  |  | the Greek vocabulary | The greek philosoph… |  |
 | 227 |  |  |  | [Concept] Context wiping at session boundaries | Context turnover di… |  |
 | 228 |  |  |  | [Concept] The parameter-space region within which an agent maintains bounded mismatch indefinitely | Persistence envelop… |  |
-| 229 |  |  |  | multi agent scope | Shared environment … |  |
+| 229 | 101 | true | true | multi agent scope | Shared environment … |  |
 | 230 |  | true | true | agency |  |  |
 | 231 |  | true |  | $R$ (sector radius) | Capacity radius |  |
 | 232 |  |  |  | interiority default |  |  |
 | 233 | 83 | true | true | strategy DAG |  |  |
 | 234 |  |  |  | implementation time |  |  |
-| 235 |  |  |  | credit assignment boundary | Credit assignment f… |  |
+| 235 | 87 | true | true | credit assignment boundary | Credit assignment f… |  |
 | 236 |  |  |  | conceptual alignment |  |  |
 | 237 |  |  |  | $\beta$ (A2′) sub-scope | Postulated regime… |  |
 | 238 |  |  |  | CIY unified objective | Value information o… |  |
@@ -269,7 +269,7 @@
 | 267 |  |  |  | [Concept] Future segment layer header for the SP-5 reader-path proposal | Reader path |  |
 | 268 |  |  |  | $U_o$ vs $U_O$ collision |  |  |
 | 269 |  |  |  | [Concept] The three-ring of segment-content framing | Segment ring |  |
-| 270 |  |  |  | strategy persistence |  |  |
+| 270 | 94 | true | true | strategy persistence |  |  |
 | 271 |  |  |  | P1, P2, P3 | Projection admissib… |  |
 | 272 |  |  |  | $A_O(M_t; \Pi, N_h)$ | Achievable value |  |
 | 273 |  |  |  | [Concept] The unupdatable region of the strategy DAG where edges receive no actionable feedback | Epistemic dead zone… |  |
@@ -277,7 +277,7 @@
 | 275 |  |  |  | temporal software theory | Temporal Software T… |  |
 | 276 |  |  |  | [Concept] The move where a segment role prefix is mechanical but the subject-noun carries judgment | The prefix noun spl… |  |
 | 277 |  |  |  | sycophancy as a flaw | Sycophancy as a dev… |  |
-| 278 |  |  |  | edge update causal validity | Causal edge update,… |  |
+| 278 | 95 | true | true | edge update causal validity | Causal edge update,… |  |
 | 279 |  |  |  | routing structure |  |  |
 | 280 |  |  |  | [Concept] Regime I / II-A / II-B / III | Destabilization reg… |  |
 | 281 |  |  |  | strategy complexity cost | Strategy cognitive … |  |
@@ -335,7 +335,7 @@
 | 333 |  |  |  | compression operation | OODA1 unification… |  |
 | 334 |  |  |  | [Concept] The mathematical surface mapping unity to closure defect | Closure defect mani… |  |
 | 335 |  | true |  | $M_t$ (reality model) | Working model… |  |
-| 336 |  |  |  | control regret | Strategy opportunit… |  |
+| 336 | 90 | true | true | control regret | Strategy opportunit… |  |
 | 337 |  |  |  | cognitive fusion | Resonance fusion… |  |
 | 338 | 79 | true | true | value object | Value functional… |  |
 | 339 |  |  |  | continuity persistence | Identity continuity |  |
@@ -348,7 +348,7 @@
 | 346 |  |  |  | [Concept] Α₂ adaptive-gain (A2′) sub-scope | Adaptive gain regime |  |
 | 347 |  |  |  | [Concept] Instance 2 of identifiability floor | Unobservable mixtur… |  |
 | 348 |  |  |  | Section III. Agentic Composites | Section III agentic… |  |
-| 349 |  |  |  | orient cascade | The pentad… |  |
+| 349 | 91 | true | true | orient cascade | The pentad… |  |
 | 350 |  |  |  | additive coordinate forcing family | Forced coordinate f… |  |
 | 351 |  |  |  | appendices: detail | Appendice derivatio… |  |
 | 352 |  |  |  | L1 update bias | L1 bias formula |  |
@@ -397,11 +397,11 @@
 | 395 |  |  |  | sufficiency discontinuity | Sufficiency drop |  |
 | 396 |  |  |  | $U_{\text{src}}$ and $U_{\text{align}}$ | Trust uncertainty |  |
 | 397 |  |  |  | [Concept] Observability boundary in a strategy DAG | Observability front… |  |
-| 398 |  |  |  | $H_b$ | Agent opacity $H_b$… |  |
+| 398 | 110 | true | true | $H_b$ | Agent opacity $H_b$… |  |
 | 399 |  |  |  | evaluation metrics | Logogenic diagnosti… |  |
 | 400 |  |  |  | recursive update | Recursive update by… |  |
 | 401 |  |  |  | $\hat{o}_t$ | Proleptic predictio… |  |
-| 402 |  |  |  | causal information yield | Interventional yiel… |  |
+| 402 | 96 | true | true | causal information yield | Interventional yiel… |  |
 | 403 |  |  |  | strategy | $\Sigma_t$ strategy… |  |
 | 404 |  |  |  | [Concept] The failure mode where an agent's model-class cannot represent the environment's true causal structure | Structural shock re… |  |
 | 405 |  |  |  | [Concept] The loop generates L2 data regardless of architecture | Interventional loop… |  |
@@ -413,7 +413,7 @@
 | 411 |  | true | true | prolepsis | Anticipation… |  |
 | 412 |  |  |  | beta prime sub-scope | Equilibrium set tie… |  |
 | 413 |  |  |  | [Concept] The fact that what counts as predictively relevant model content depends on which strategy the agent is going to run | Policy relative epi… |  |
-| 414 |  |  |  | convention hierarchy | Continuation hierar… |  |
+| 414 | 97 | true | true | convention hierarchy | Continuation hierar… |  |
 | 415 |  |  |  | [Concept] Dormant variation in correction architectures across a population that become consequential after regime change but is invisible to current persistence analysis | Latent structural d… |  |
 | 416 |  | true |  | $M_t$ | Model state or epis… |  |
 | 417 |  |  |  | coupled diagnostic framework | Coupled diagnostic … |  |
@@ -470,13 +470,13 @@
 | 468 |  |  |  | critical mass composition | Dyad closed form |  |
 | 469 |  |  |  | $\mathcal C_t^{\text{commit}}$ (TST committed-state subset) | $\mathcal C_t^{\tex… |  |
 | 470 |  |  |  | $\kappa_{\text{processing}}$ | Processing coupling… |  |
-| 471 |  |  |  | observability dominance | Epistemic freezing |  |
+| 471 | 88 | true | true | observability dominance | Epistemic freezing |  |
 | 472 |  |  |  | [Concept] Dark-room critique / citation phrasing (Sun & Firestone) | Dark room critique |  |
 | 473 |  |  |  | $\delta_s$ plan-confidence error | Plan confidence err… |  |
 | 474 |  |  |  | aporia prolepsis aisthesis epistrophe praxis | Greek rooted vocabu… |  |
 | 475 |  |  |  | worked example l1 |  |  |
 | 476 |  | true |  | aporia | Aporia productive p… |  |
-| 477 |  |  |  | composition closure / closure defect $\varepsilon^\ast$ | Composition closure… |  |
+| 477 | 103 | true | true | composition closure / closure defect $\varepsilon^\ast$ | Composition closure… |  |
 | 478 | 78 | true | true | objective functional | Teleological object… |  |
 | 479 |  |  |  | action fluency |  |  |
 | 480 |  |  |  | closure defect | Closure error… |  |
@@ -492,7 +492,7 @@
 | 490 |  | true | true | [Concept] Agent identity as one non-forkable causal record | Trajectory singular… |  |
 | 491 |  |  |  | dual optimization | Comprehension imple… |  |
 | 492 |  |  |  | [Concept] The pathology where observation rate is slower than environment's drift | Lagging indicator… |  |
-| 493 |  |  |  | adversarial exponent regime | Adversarial regime |  |
+| 493 | 112 | true | true | adversarial exponent regime | Adversarial regime |  |
 | 494 |  |  |  | (PI) parameterization invariance | Parameterization in… |  |
 | 495 |  |  |  | candidate stage |  |  |
 | 496 |  |  |  | causal discovery from git | Git causal discovery |  |
@@ -503,7 +503,7 @@
 | 501 |  |  |  | gate advantage | Noise gating… |  |
 | 502 |  |  |  | class 2 scope exit | Class 2 scope bound… |  |
 | 503 |  |  |  | software epistemic property | Software as calibra… |  |
-| 504 |  |  |  | [Concept] The formal duality between observation quality and agent opacity | Informational dual |  |
+| 504 | 111 | true | true | [Concept] The formal duality between observation quality and agent opacity | Informational dual |  |
 | 505 |  |  |  | [Concept] Low / mixed / high ambiguity event mix | Ambiguity stratifie… |  |
 | 506 |  |  |  | [Concept] An AAD result whose substantive content is a no-go theorem | No-go result or imp… |  |
 | 507 |  |  |  | dark room exploration drive | Survival imperative… |  |
@@ -533,15 +533,15 @@
 | 531 |  |  |  | composition consistency | Holon postulate… |  |
 | 532 |  |  |  | correlation hierarchy | Predicting explorin… |  |
 | 533 |  |  |  | [Concept] The orient cascade information-dependency forced ordering as a meta-pattern | Information depende… |  |
-| 534 |  |  |  | causal insufficiency detection | L0 / L1 detection… |  |
+| 534 | 98 | true | true | causal insufficiency detection | L0 / L1 detection… |  |
 | 535 |  |  |  | [Concept] Token-level commitment for agent identity | Token level commitm… |  |
-| 536 |  |  |  | [Concept] Crossing from multi-agent to composite scope | Composition thresho… |  |
+| 536 | 102 | true | true | [Concept] Crossing from multi-agent to composite scope | Composition thresho… |  |
 | 537 |  |  |  | task terminal stance | Golem stance… |  |
 | 538 |  |  |  | [Concept] The procedure of reading any segment through all three meta-segments | Triple lens review,… |  |
 | 539 |  |  |  | Class 2 agent | Integrated agent |  |
 | 540 |  |  |  | auftragstaktik | Teleological delega… |  |
-| 541 |  | true |  | Class 1 | Modular |  |
-| 542 |  |  |  | interaction channel classification | Recipient regime… |  |
+| 541 | 99 | true | true | Class 1 | Modular |  |
+| 542 | 106 | true | true | interaction channel classification | Recipient regime… |  |
 | 543 |  |  |  | segment for claim file | Segment file… |  |
 | 544 |  |  |  | Bretagnolle-Huber identity | Bretagnolle-Huber b… |  |
 | 545 |  |  |  | logozoetic |  |  |
@@ -602,11 +602,11 @@
 | 600 |  | true |  | adaptive cycle | The cycle the adapt… |  |
 | 601 |  |  |  | effective disturbance |  |  |
 | 602 |  |  |  | ELI (agent type) | ELI agent, ELI |  |
-| 603 |  |  |  | update gain | Learning rate… |  |
+| 603 | 108 | true | true | update gain | Learning rate… |  |
 | 604 |  |  |  | consolidation dynamics | Offline consolidati… |  |
 | 605 |  |  |  | $w(t)$ | Mismatch injection |  |
 | 606 |  | true |  | [Concept] Agentic Systems Framework (ASF) — top-level | Agentic system fram… |  |
-| 607 |  |  |  | adversarial tempo advantage | Superlinear tempo a… |  |
+| 607 | 107 | true | true | adversarial tempo advantage | Superlinear tempo a… |  |
 | 608 |  |  |  | [Concept] The Class 1 sub-agent / Class 3 composite phenomenon in strategic composition | Strategic cross age… |  |
 | 609 |  |  |  | derivation audit table heading | Derivation audit |  |
 | 610 |  |  |  | objective | Objective functiona… |  |
