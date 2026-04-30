@@ -77,4 +77,6 @@ The severity of structural change needed depends on *how far* the current model 
 | Software | Incremental refactoring | Architecture migration |
 | Coevolving automata (Miller 2022) | Edge reweighting within fixed FSA structure | Mutation altering state output or transition; neutral mutations accumulating until niche creation triggers cascading restructuring |
 
-**(Descended from TF-10.)**
+## Working Notes
+
+- *Lineage:* descended from TF-10 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

@@ -77,4 +77,6 @@ This quantity — identical to adaptive tempo $\mathcal{T}$ ( #def-adaptive-temp
 
 The three-part tempo decomposition for software — $\mathcal T_{\text{obs}}$ (compiler, tests) + $\mathcal T_{\text{explore}}$ (code reading) + $\mathcal T_{\text{probe}}$ (test runs, staging) — is a direct application of multi-channel tempo. The formal development of this decomposition is a TST-side question (open GAP in `02-tst-core/OUTLINE.md`).
 
-**(Descended from TF-04.)**
+## Working Notes
+
+- *Lineage:* descended from TF-04 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

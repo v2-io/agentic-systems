@@ -61,4 +61,6 @@ This is *definitional* — it names three modes of epistemic access that are str
 | Software developer | "I think this function does X" | Run test → observe result | `git checkout` + alternative implementation |
 | Immune system | Antigen pattern matching | Antibody → pathogen response | Not exercised (no counterfactual reasoning) |
 
-**(Descended from TF-02.)**
+## Working Notes
+
+- *Lineage:* descended from TF-02 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

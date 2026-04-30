@@ -41,13 +41,13 @@ $\lambda$ carries units of [value per unit information]. In specific domains it 
 
 ## Epistemic Status
 
-*Exact.* Originally treated as a discussion-grade heuristic, the unified objective has now been formally derived as the exact Lagrangian relaxation of the Linear Matrix Inequality (LMI) governing Lyapunov persistence (see `#deriv-directional-survival-exploration`).
+*Discussion-grade summary; underlying derivation is exact.* Originally treated as a discussion-grade heuristic, the unified objective has now been formally derived as the exact Lagrangian relaxation of the Linear Matrix Inequality (LMI) governing Lyapunov persistence (see `#deriv-causal-ib-lmi`).
 
 The scalar heuristic $Q_O(a) + \lambda \cdot \text{CIY}(a)$ is formally superseded by the exact tensor trace-product:
 $$ a_t^\ast = \arg\max_a \left[ Q_O(a) + \text{Tr}\left( \Lambda \cdot \mathcal{I}_o(a) \right) \right] $$
 where $\mathcal{I}_o(a)$ is the Fisher Information Matrix (Matrix CIY) and $\Lambda$ is the positive-semidefinite shadow price matrix of the survival constraint.
 
-Max attainable: *exact*. The structural form is fully grounded in AAD's physical survival bounds and standard semidefinite programming, eliminating the need to treat exploration as an ad-hoc heuristic.
+Max attainable for this segment: *discussion-grade* (it is a discussion of the underlying result, per `type: discussion`). Max attainable for the underlying derivation in `#deriv-causal-ib-lmi`: *exact*. The structural form is fully grounded in AAD's physical survival bounds and standard semidefinite programming, eliminating the need to treat exploration as an ad-hoc heuristic.
 
 ## Discussion
 
@@ -65,4 +65,6 @@ The dark-room problem is bypassed entirely by the Survival Imperative: explorati
 
 **Regret-bound connection to the strategy-cost objective.** AAD's $Q_O$ term connects to the strategy-cost objective in #form-strategy-complexity-cost via a regret-bound derivation: strategy-induced regret $R(Q_{\Sigma_t}) = V(a^\ast) - \mathbb{E}_{Q_{\Sigma_t}}[V(a)]$ is bounded by a divergence between $\pi^\ast$ and $Q_{\Sigma_t}$, with the KL direction $\pi^\ast$-first forced (full derivation in #deriv-strategy-cost-regret-bound). Under AAD's canonical scope of deterministic $\pi^\ast$, the Bretagnolle-Huber identity $D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t}) = -\log(1 - \operatorname{TV}(\pi^\ast, Q_{\Sigma_t}))$ holds *exactly* (Bretagnolle & Huber 1978), giving the tight regret bound $R(Q_{\Sigma_t}) \leq V_{\max}\bigl(1 - e^{-D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})}\bigr)$ with matching lower bound $\Delta_{\min}\bigl(1 - e^{-D_{\mathrm{KL}}}\bigr)$ on isolated optima ( #deriv-strategy-cost-regret-bound §4). Pinsker's $V_{\max}\sqrt{\tfrac{1}{2}D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})}$ remains the correct loose general form for stochastic-$\pi^\ast$ extensions where the BH identity degrades back to inequality. The structural point: "value and information term" shares *shape* with EFE's pragmatic-epistemic decomposition, and the KL direction in the strategy-cost's variational form shares direction with variational inference — but AAD's derivation is via decision-theoretic regret bound on $Q_O$ rather than via free-energy-gradient flow, which is the AAD-internal route that does not depend on the priors-as-preferences encoding.
 
-**(Descended from TF-08.)**
+## Working Notes
+
+- *Lineage:* descended from TF-08 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

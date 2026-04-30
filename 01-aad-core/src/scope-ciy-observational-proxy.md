@@ -48,4 +48,6 @@ Max attainable: conditional. The regime boundaries are domain properties that ca
 
 **Regime as a domain property.** The admissibility regime is not something the agent selects — it is determined by the domain's action space and observation structure. An agent that cannot vary its actions is in Regime B or C regardless of its internal architecture. This has implications for which domains CIY-based exploration is applicable to: Regime A domains get the full benefit; Regime B domains get weaker guarantees; Regime C domains should use alternative exploration strategies entirely.
 
-**(Descended from TF-08.)**
+## Working Notes
+
+- *Lineage:* descended from TF-08 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

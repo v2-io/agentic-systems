@@ -50,4 +50,6 @@ This table is illustrative — real systems may have additional intermediate lev
 
 **Multi-timescale stability (sketch).** Singular perturbation theory gives the composite stability result: if each level is stable given the levels above it (each level has a stable attractor for fixed slower-level parameters), and the timescale separation is sufficient, the composite $N$-level system is stable. Making this rigorous for AAD requires specifying dynamics at deeper adaptive levels — an open problem. See #sketch-multi-timescale-stability for the framework.
 
-**(Descended from TF-11.)**
+## Working Notes
+
+- *Lineage:* descended from TF-11 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

@@ -46,4 +46,6 @@ The *agency-scope* results apply to any agent whose choices make a causal differ
 
 **Implications for model updating.** The causal postulate constrains the update rule: the model should give more weight to observations that are *causally downstream* of the agent's actions than to observations that would have occurred regardless. Action-contingent observations carry interventional (Level 2) information; action-independent observations carry only associational (Level 1) information. The formal measure of this distinction — causal information yield (CIY) — is developed in #def-causal-information-yield.
 
-**(Descended from TF-02.)**
+## Working Notes
+
+- *Lineage:* descended from TF-02 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

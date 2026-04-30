@@ -95,4 +95,6 @@ where $\Vert\delta_{\text{post}}\Vert$ is treated as a parameter estimated by th
 2. *Deliberation about deliberation*: deciding whether to deliberate itself takes time. This meta-deliberation is bounded by the same tradeoff at a higher level, suggesting a hierarchy of diminishing deliberation horizons.
 3. *Deliberation that generates observations*: internal simulation can surface model inconsistencies (internal mismatch), functioning as "exploration without external action." Can deliberation generate internal CIY?
 
-**(Descended from TF-09.)**
+## Working Notes
+
+- *Lineage:* descended from TF-09 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

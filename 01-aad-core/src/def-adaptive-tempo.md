@@ -49,4 +49,6 @@ with equality iff channels are informationally independent. The gap is the *redu
 
 **Scalar vs. vector tempo.** The scalar $\mathcal{T}$ assumes isotropic correction capacity. When the agent corrects some dimensions faster than others, scalar tempo overestimates effective adaptation along weak dimensions. *[Empirical Claim]* Simulation confirms: in an anisotropic 3D system (gain varying 5:1), scalar $\rho/\mathcal{T}$ overestimated by 72%, with the weak dimension accounting for 84% of total mismatch ( #obs-simulation-results). The correct formulation is per-dimension: $\mathcal{T}_k \gt \rho_k / \delta_{\text{critical},k}$ ( #result-per-dimension-persistence).
 
-**(Descended from TF-11.)**
+## Working Notes
+
+- *Lineage:* descended from TF-11 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

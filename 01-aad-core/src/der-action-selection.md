@@ -62,4 +62,6 @@ However, deliberation remains essential when the situation is genuinely novel, t
 | Organization | Standard procedures | Strategic planning |
 | Software developer | Known patterns, familiar code | Reading docs, analyzing alternatives |
 
-**(Descended from TF-07.)**
+## Working Notes
+
+- *Lineage:* descended from TF-07 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).
