@@ -104,7 +104,7 @@
 | 102 |  |  |  | $\alpha_3$ | Fisher whitened reg… |  |
 | 103 |  | true | true | grafting | Strategic grafting,… |  |
 | 104 |  | true | true | adaptive tempo | Adaptation rate… |  |
-| 105 |  |  |  | $G_t = (O_t, \Sigma_t)$ | Purposeful substate… |  |
+| 105 |  | true | true | $G_t = (O_t, \Sigma_t)$ | Purposeful substate… |  |
 | 106 |  |  |  | [Concept] Thinking too long so the model becomes obsolete | Deliberation lag pe… |  |
 | 107 |  |  |  | [Concept] The condition for transition into agency prior to the AAD scope condition | Agency emergence th… |  |
 | 108 |  |  |  | [Concept] Agency whose effect is on what is seen rather than what happens (e.g., LLM attention) | Query bound agency |  |
@@ -142,14 +142,14 @@
 | 140 |  |  |  | greek rooted vocabulary | Greek philosophical… |  |
 | 141 |  |  |  | L1' correlation-hierarchy prime decoration | L1-observable… |  |
 | 142 |  |  |  | $\mathcal{C}_t$ (chronica) | Chronica or interac… |  |
-| 143 |  |  |  | strategy DAG |  |  |
+| 143 |  | true | true | strategy DAG |  |  |
 | 144 |  |  |  | [Concept] The product of architectural coupling $\kappa$ and environmental ambiguity $\mathcal{A}$ | Class 2 bias bound,… |  |
 | 145 |  |  |  | C-I (composition route) | Shared objective ro… |  |
 | 146 |  |  |  | Miller's meta-machine / extreme transition motif | Meta machine extrem… |  |
 | 147 |  |  |  | $f_{\text{init}}$ reconstruction function | Epistemic reconstru… |  |
 | 148 |  |  |  | strengthen first posture | Attempt the improba… |  |
 | 149 |  |  |  | [Concept] The asymmetric pair of memory-access modes — one biased by current goal the other state-keyed only | Goal-conditioned re… |  |
-| 150 |  |  |  | correlation hierarchy | Predicting explorin… |  |
+| 150 |  | true | true | correlation hierarchy | Predicting explorin… |  |
 | 151 |  |  |  | value object | Value functional… |  |
 | 152 |  |  |  | derivation audit table heading | Derivation audit |  |
 | 153 |  |  |  | consolidation dynamics | Offline consolidati… |  |
@@ -193,7 +193,7 @@
 | 191 |  |  |  | adaptive system |  |  |
 | 192 |  |  |  | exploit explore deliberate | Cycle budget… |  |
 | 193 |  |  |  | C-IV (composition route) | Strategic convergen… |  |
-| 194 |  |  |  | orient cascade | Five adaptive cycle… |  |
+| 194 |  | true | true | orient cascade | Five adaptive cycle… |  |
 | 195 |  |  |  | teleological unity | Teleological unity … |  |
 | 196 |  |  |  | [Concept] Monderer-Shapley potential game / Rosen monotone game | Strategic convergen… |  |
 | 197 |  |  |  | $U_M, U_O, U_\Sigma, U_{\text{obs}}, U_f$ | Unity coordinate |  |
@@ -205,8 +205,8 @@
 | 203 |  |  |  | [Concept] The condition that a strategy DAG endosymbiont crosses the composite agent scope from below | Crossing threshold,… |  |
 | 204 |  |  |  | [Concept] The symmetric counterpart to context turnover for the strategy substate | Strategic turnover … |  |
 | 205 |  |  |  | shared intent | Teleological unity,… |  |
-| 206 |  |  |  | terminal alignment error | Terminal alignment … |  |
-| 207 |  |  |  | purposeful substate | Purposeful state |  |
+| 206 |  | true | true | terminal alignment error | Terminal alignment … |  |
+| 207 |  | true | true | purposeful substate | Purposeful state |  |
 | 208 |  |  |  | $C_{\text{coord}}$ | Coordination overhe… |  |
 | 209 |  | true | true | sector condition stability | Sector stability |  |
 | 210 |  |  |  | agent opacity | Strategic opacity… |  |
@@ -400,7 +400,7 @@
 | 398 |  |  |  | [Concept] The fourth diagnostic in the satisfaction gap × control regret space when end conditions are met but the objective remains unsatisfied | Terminal alignment … |  |
 | 399 |  |  |  | [Concept] Unifying reflexes / intuition / expertise | Action fluency cont… |  |
 | 400 |  |  |  | effective disturbance |  |  |
-| 401 |  |  |  | evidence starvation | Depth attenuated co… |  |
+| 401 |  | true | true | evidence starvation | Depth attenuated co… |  |
 | 402 |  |  |  | 1 anchor plus 3 theorem |  |  |
 | 403 |  |  |  | [Concept] Track 1 / Track 2 in bias-bound | Transport track / F… |  |
 | 404 |  |  |  | Regime II-A | Magnitude shock reg… |  |
@@ -414,7 +414,7 @@
 | 412 |  |  |  | [Concept] Agents escalate up the Pearl hierarchy only when lower levels fail | Epistemic escalatio… |  |
 | 413 |  |  |  | [Concept] The phenomenon where persistence success makes an agent less likely to detect the conditions requiring structural adaptation | Stability-induced m… |  |
 | 414 |  |  |  | additive coordinate forcing | Forced coordinate… |  |
-| 415 |  |  |  | strategy dimension | Strategic dimension… |  |
+| 415 |  | true | true | strategy dimension | Strategic dimension… |  |
 | 416 |  |  |  | $\beta$ (A2′) assumed sub-scope | Assumed sector regi… |  |
 | 417 |  |  |  | system coherence | Change coherence |  |
 | 418 |  |  |  | strategic in strategic composition | Equilibrium composi… |  |
@@ -543,7 +543,7 @@
 | 541 |  |  |  | [Concept] Instance 1 / 2 / 3 of identifiability floor | Identifiability flo… |  |
 | 542 |  |  |  | lindy baseline | Structural persiste… |  |
 | 543 |  |  |  | triple depth penalty | Depth gated decay t… |  |
-| 544 |  |  |  | objective functional | Teleological object… |  |
+| 544 |  | true | true | objective functional | Teleological object… |  |
 | 545 |  |  |  | chain confidence decay | Log confidence addi… |  |
 | 546 |  |  |  | unity closure mapping | Closure mapping… |  |
 | 547 |  |  |  | equilibrium convergence |  |  |

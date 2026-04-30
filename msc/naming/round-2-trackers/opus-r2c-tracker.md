@@ -181,7 +181,7 @@
 | 179 |  |  |  | [Concept] Dark-room critique / citation phrasing (Sun & Firestone) | Dark room critique |  |
 | 180 |  |  |  | change proximity principle | Change locality pri… |  |
 | 181 |  |  |  | transfer assumption table | Domain transfer spe… |  |
-| 182 |  |  |  | complete agent state | Purposeful state |  |
+| 182 |  | true | true | complete agent state | Purposeful state |  |
 | 183 |  |  |  | intent planning vocabulary | Intent |  |
 | 184 |  |  |  | closure defect bridge lemma | Bridge lemma… |  |
 | 185 |  |  |  | [Concept] The three-ring of segment-content framing | Segment ring |  |
@@ -622,7 +622,7 @@
 | 620 |  |  |  | "purpose" / "purposeful" | Purposeful |  |
 | 621 |  |  |  | [Concept] High-observability node with zero causal link to objective | Vanity metric… |  |
 | 622 |  |  |  | separability pattern family | Separability ladder |  |
-| 623 |  |  |  | agent spectrum | Agent quadrant… |  |
+| 623 |  | true | true | agent spectrum | Agent quadrant… |  |
 | 624 |  |  |  | changeset size principle | Changeset size scal… |  |
 | 625 |  |  |  | [Concept] Symbol default (PI) parameterization-invariance axiom | Coordinate invarian… |  |
 | 626 |  |  |  | change investment | Change amortization |  |

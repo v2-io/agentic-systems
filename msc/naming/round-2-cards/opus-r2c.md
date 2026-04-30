@@ -2616,8 +2616,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| complete agent state |  |  |  |  |
-| Purposeful state |  |  |  |  |
+| complete agent state | keep | +2 | top-pick | "Complete" is doing work — it specifies that $X_t = (M_t, G_t)$ is the *full* state, including both substates. Renaming to "purposeful state" would name only half. The "complete" qualifier maintains the $X_t / M_t / G_t$ pairing that the rest of Section II relies on. |
+| Purposeful state | rename | -1 |  | Names only $G_t$, not $X_t = (M_t, G_t)$. Wrong scope. |
 | *(write-in)* |  |  |  |  |
 
 ## 183. *intent planning vocabulary*
@@ -8956,9 +8956,9 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Agent quadrant |  |  |  |  |
-| agent spectrum |  |  |  |  |
-| Agency spectrum |  |  |  |  |
+| Agent quadrant | rename | -1 |  | "Quadrants" oversells discreteness; the segment's substance is that the ±model × ±objective regions are continuous. Quadrants would force re-explaining "we don't actually mean discrete categories" on every encounter. |
+| agent spectrum | keep | +2 | top-pick | "Spectrum" is right for what the segment claims — continuous regions, not discrete categories. Standardize over residual paraphrases ("quadrant", "typology", "classification") which all flatten the continuity. |
+| Agency spectrum | rename | +1 |  | "Agency" picks out the *quality* (richness of agency) over "agent" (the entity having it). Slight preference axis-wise, but "agent spectrum" is more grounded in segment-language and pairs with #scope-agency naturally. |
 | *(write-in)* |  |  |  |  |
 
 ## 624. *changeset size principle*
@@ -9046,4 +9046,54 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Stochastic disturbance |  |  |  |  |
 | *(write-in)* |  |  |  |  |
+
+---
+
+## Cold-start observations / Process notes
+
+### Cold-start posture
+
+I followed the cold-start protocol: read CLAUDE.md / README / OUTLINE / NOTATION / LEXICON / FORMAT and component OUTLINEs before any source segment. Within `msc/naming/`, I read only the whitelist (the launch prompt, principles file, methodology doc, de-novo audit instructions, name-transition-aad). I did not open vote files, aggregates, master lists, or other voters' cards. I did not glance at any anchoring artifacts. Card-shuffle ordering felt fresh.
+
+### Methodology observations
+
+**The initial consolidation checkpoint is structurally important.** Before reading any source segment, the priming material (README + LEXICON + NOTATION + OUTLINE) supports substantive votes on roughly 30+ foundational targets — the framework names (AAD, ASF, TST), the Greek vocabulary core (chronica + the five cycle phases + logogenic / logozoetic / agency), the persistence machinery (persistence condition, sector condition, adaptive tempo, adaptive reserve, structural / operational / continuity persistence), the Section II diagnostics (satisfaction gap, control regret, directed separation, orient cascade), claim-tier and segment-type vocabularies, and many of the symbol→English alias slots. Running the checkpoint first put a strong foundation under the segment-walk and surfaced terms whose readiness wouldn't have been per-segment-grep-discoverable.
+
+**The recurring consolidation checkpoint produced different yield.** After ~10 segments, the recurring checkpoint mostly identified terms whose understanding had matured in the segment-walk (Pearl L1/L2/L3 glosses, postulate-not-axiom canonicalization, separability ladder, identifiability floor) rather than entirely-new terms. The checkpoint shape is right; the per-checkpoint yield will diminish as the priming-loaded foundation gets exhausted.
+
+**Pace held; rhythm did not decay.** Stopped at ~42 votes, well before the 30-150 envelope's upper bound, because that's where the substantive engagement was at its peak. Coverage is partial by design — many Section III targets, the appendix derivations, TST-specific items, logogenic / logozoetic items, and the dense math vocabulary for the (A2′) sub-scope partition got priming-level treatment but not segment-grounded votes. The methodology accommodates that directly.
+
+### Targets where the framing felt off (cycle-level signal)
+
+Several targets surfaced framing issues that are worth flagging for the round design:
+
+- **#294 orient cascade** — the candidate set conflates two different concepts. Six of the candidates (`The pentad`, `Adaptive cycle phase`, `The adaptive pentad`, `Five adaptive cycle phase`, `The pentad five phase cycle`, `Adaptive traversal`) are proposals to *name the five-phase cycle as a unit* (a different concept than the orient cascade — which is the *within-epistrophe* M_t→Σ_t→O_t resolution order). Two distinct targets in one row. Each merits its own row.
+
+- **#418 U_o vs U_O collision** and **#36 U_M dual-use** — these rows ask voters to vote on *the concern itself* rather than on candidate replacement symbols. The substance is real and important (notation collisions damage compounding-reader experience), but the row's voting structure is ambiguous. Should be: row 1 = "vote on whether to fix it", row 2-N = "vote on each candidate replacement symbol if it's fixed."
+
+- **#50 $U_o$** — the candidate "Teleological coherence" maps to $U_O$ (uppercase O = teleological unity), not $U_o$ (lowercase o = observation uncertainty). This is exactly the U_o/U_O collision in #418 manifesting *inside the voting card itself*, which is informative about the cost of the collision: even careful editorial passes on the card couldn't keep the two straight. The collision is more expensive than the card's exploration-team analysis suggests.
+
+- **#247 [Concept] Crossing from multi-agent to composite scope** and **#3 [Concept] strategy DAG endosymbiont crosses composite scope from below** — these may be the same target framed differently, or near-duplicates. The first feels like a generalization of the second; whether voters should treat them as one cluster or two distinct concepts is unclear from the row framings alone.
+
+- **#229 worked example strategy / #280 worked example l1 / #311 worked example kalman / #317 worked example bandit** — these rows ask voters to vote on the names of *worked-example* segments, but each shows only the bare description (no candidates, no excavated form, no segment link to read). The rows are genuinely empty of voteable content for me; I left them blank.
+
+### Targets where I deliberately wrote in nothing
+
+I used the +1 / +2 / -1 scale strictly. No +3, no -2 — when the training prior pulled (and it did, particularly on satisfaction gap / chronica / loop-causal-engine where +3 would have felt natural), I clamped to +2 with the substantive notes carrying the high-conviction signal. The notes column is where intensity actually lives.
+
+### What this voter-methodology recursive-reading surfaced
+
+The methodology document explicitly invites framework-recursive readings. Two stuck:
+
+- **Voting trajectory as $\mathcal{C}_t$.** The voting-sequence column carries a literal *non-forkable causal record* of my engagement — not a hypothetical optimization but the actual order in which understanding accumulated. The card's substrate makes the chronica concept tractable to the voting-cycle process itself, which felt like genuine self-application (not just metaphor).
+
+- **Re-voting under update gain.** Late corrections to early votes, weighted by the maturity of the surrounding model, are exactly $\eta^* \cdot g(\delta_t)$ on the agent's own reading of its earlier votes. The methodology's framing of corrections as "epistemically privileged, not apologetic" is the framework's own #emp-update-gain applied recursively. I corrected one early read (the orient cascade row's framing) within-session; a future cohort would benefit from rerunning the per-target framings under the consolidated understanding the segment-walk produces.
+
+The framework-recursive readings aren't decorations — they let the voter notice when the methodology pulls against itself, which is what happened around the "wanting to batch reads" pull I felt mid-walk and resisted.
+
+### Stopping disposition
+
+Stopping at ~42 votes with engagement intact rather than pushing toward 80+ with rhythm decay. The methodology's "partial coverage at high engagement is the right outcome" framing is the explicit warrant; the decay diagnostic (the can-vote/voted gap accumulating, perfunctory notes appearing) didn't fire, which is the signal that the rhythm is holding. Stopping here is the disciplined move, not a concession.
+
+The card is the deliverable. The notes column carries the per-vote substance; the workflow restatement / initial predictions / consolidation checkpoint files in `msc/AUDIT-WORKING-419628/` carry the engagement trace. Both are complete enough to support aggregation across voters at landing time.
 

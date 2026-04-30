@@ -1091,9 +1091,9 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Pearl causal hierarchy |  |  |  |  |
-| Causal hierarchy |  |  |  |  |
-| Causal hierarchy level |  |  |  |  |
+| Pearl causal hierarchy | keep | +2 | yes | Confirmed across multiple segments (def-causal-information-yield, der-loop-interventional-access, def-strategy-dag). Prior-art integration principle: adopted external concepts retain attribution. "Pearl's causal hierarchy" is the field-standard name. Crucially: distinguishes Pearl's L0/L1/L2 from AAD's own correlation hierarchy (L0/L1/L1'/L2) and convention hierarchy (C1/C2/C3). Dropping "Pearl" would create collision. Strong keep. |
+| Causal hierarchy | rename | -1 | | Dropping "Pearl" would lose provenance AND create collision with "correlation hierarchy" (AAD's own internal hierarchy for strategy DAG). The disambiguation requires Pearl's name. |
+| Causal hierarchy level | rename | -1 | | "Level" is a per-level suffix, not a name for the hierarchy itself. |
 | *(write-in)* |  |  |  |  |
 
 ## 77. *instance 1 of identifiability floor*
@@ -2170,10 +2170,10 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| correlation hierarchy |  |  |  |  |
-| Predicting exploring reasoning triad |  |  |  |  |
-| Correlation hierarchy L0 / L1 / L1' / L2 |  |  |  |  |
-| Correlation ladder |  |  |  |  |
+| correlation hierarchy | keep | +2 | yes | Confirmed by segment — the L0/L1/L1'/L2 taxonomy is now first-class in the Formal Expression. "Correlation hierarchy" correctly names it: it's a hierarchy of treatments ordered by how well they handle correlated failures. The four-level partition is load-bearing (L1' refuted under unobservable common cause by Cramér-Rao floor). Strong keep. |
+| Predicting exploring reasoning triad | rename | -1 | | Confuses with Pearl's three-level causal hierarchy (associational/interventional/counterfactual). These are different hierarchies. |
+| Correlation hierarchy L0 / L1 / L1' / L2 | canonicalize | +1 | | The explicit level-labeling is useful in prose. Acceptable as the verbose form for first-introduction. "Correlation hierarchy" is the canonical short form. |
+| Correlation ladder | rename | +1 | | Acceptable alternative. "Ladder" is clean and parallel to "separability ladder." But "hierarchy" is slightly more precise (ordered levels with increasing realism). |
 | *(write-in)* |  |  |  |  |
 
 ## 151. *value object*
@@ -2439,9 +2439,9 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Continuation hierarchy |  |  |  |  |
-| Evaluation hierarchy |  |  |  |  |
-| convention hierarchy |  |  |  |  |
+| Continuation hierarchy | rename | +2 | | "Continuation" is self-describing: C1/C2/C3 differ by how future continuation policy is handled (one-step frozen, receding-horizon replanning, Bellman). "Convention" has Lewisian baggage; "continuation" is more precise. But the rename cost across dozens of references is real. Strong case for the rename on merits; cautious on execution cost. |
+| Evaluation hierarchy | rename | -1 | | Too generic; hides the policy-choice axis. |
+| convention hierarchy | keep | +2 | yes | Confirmed by def-satisfaction-gap: C1/C2/C3 form a monotonicity hierarchy based on continuation convention choice. The segment uses "continuation convention" throughout and references "convention hierarchy." Already established in multiple segments; "Continuation hierarchy" is better on merits but the established term deserves strong keep here given ecosystem cost of change. The two cases (+2 for continuation rename, +2 keep) reflect genuine tie. Voting keep as the lower-disruption option. |
 | *(write-in)* |  |  |  |  |
 
 ## 169. *composition scope condition*
@@ -2975,8 +2975,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Terminal alignment gap |  |  |  |  |
-| *(write-in)* |  |  |  |  |
+| Terminal alignment gap | name-unnamed | +1 | | "Gap" pairs with satisfaction-gap and control-regret vocabulary. But "error" (the current term from segment) is more precise: when terminal conditions are achieved but V_{O_t} < V_min, the well-formedness BELIEF was WRONG, not just insufficient. "Error" names the incorrect belief; "gap" names a quantitative shortfall. The Working Notes call it "terminal alignment error." Either works; "error" is more precise for this failure mode. |
+| *(write-in) terminal alignment error* | name-unnamed | +2 | yes | Confirmed by segment Working Notes: "when the agent achieves its terminal conditions but evaluates V_{O_t}(τ) < V_{O_t}^min on the actual trajectory, the well-formedness belief was wrong." This is a named concept that surfaces from def-strategy-dag. "Terminal alignment error" names the failure mode precisely — the terminal conditions didn't actually encode what the objective required. The segment notes this as open whether to formalize as δ_align. Strong case for naming. |
 
 ## 207. *purposeful substate*
 
@@ -2987,8 +2987,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| purposeful substate |  |  |  |  |
-| Purposeful state |  |  |  |  |
+| purposeful substate | canonicalize | +2 | yes | Already standard in NOTATION/LEXICON. Canonicalize to prevent prose drift. "Purposeful substate" for G_t is consistent with "epistemic substate" for M_t — parallel naming across the X_t = (M_t, G_t) decomposition. |
+| Purposeful state | canonicalize | +1 | | Acceptable. "Substate" is more precise (G_t is a component of the complete agent state X_t). Keep "purposeful substate" as primary; "purposeful state" acceptable in prose. |
 | *(write-in)* |  |  |  |  |
 
 ## 208. *$C_{\text{coord}}$*
@@ -5625,11 +5625,11 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| The cascade diagnostic or the 2×2 diagnostic |  |  |  |  |
-| Diagnostic square |  |  |  |  |
-| The 2×2 diagnostic |  |  |  |  |
-| Satisfaction control table the diagnostic 2×2 |  |  |  |  |
-| Diagnostic gap matrix |  |  |  |  |
+| The cascade diagnostic or the 2×2 diagnostic | name-unnamed | +1 | | "2×2 diagnostic" is near-canonical in prose. Worth canonicalizing as-is. But the slash "or" form is not a good name — commit to one. |
+| Diagnostic square | name-unnamed | -1 | | "Square" is informal; "2×2" is more precise. |
+| The 2×2 diagnostic | name-unnamed | +2 | yes | Confirmed by both def-satisfaction-gap and def-control-regret, which both present the 2×2 table. "The 2×2 diagnostic" is already used in prose and is self-describing. The table deserves a canonicalized handle. Strong case for naming. |
+| Satisfaction control table the diagnostic 2×2 | name-unnamed | -1 | | The rejection argument is correct: the power comes from the axis names (satisfaction gap, control regret), not from naming the table itself. But "the 2×2 diagnostic" is short enough to be acceptable. |
+| Diagnostic gap matrix | name-unnamed | -1 | | "Matrix" is technically correct (2×2 matrix of cases) but loses the diagnostic emphasis. "Diagnostic" alone is better. |
 | *(write-in)* |  |  |  |  |
 
 ## 395. *loop*
@@ -5722,9 +5722,9 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| evidence starvation |  |  |  |  |
-| Depth attenuated correction |  |  |  |  |
-| Downstream evidence gating |  |  |  |  |
+| evidence starvation | keep | +2 | yes | Confirmed by segment: "downstream edge k in a chain is tested only when all upstream edges succeed, so its effective correction rate is attenuated by ∏_j θ_j." "Starvation" is exactly right — the downstream edge is starved of evidence by the AND-chain gating. Used in 4+ segments. Strong keep. |
+| Depth attenuated correction | rename | +1 | | Describes the mechanism. But "evidence starvation" is more evocative and memorable. "Starvation" names the symptom (too little evidence) which is what causes the attenuation. |
+| Downstream evidence gating | rename | +1 | | Also acceptable. "Gating" is the mechanism. But "starvation" is better — it names the result of the gating, which is what matters operationally. |
 | *(write-in)* |  |  |  |  |
 
 ## 402. *1 anchor plus 3 theorem*
