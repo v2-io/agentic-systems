@@ -9,23 +9,33 @@
 # informs the aggregator design (note-depth distribution, off-scale
 # residual, coverage shape).
 #
-# Output is a markdown report. The report's columns and bands are designed
-# to be the things that drive next-step decisions, not an exhaustive dump.
+# Output is a markdown report at `msc/naming/round-2-progress.md` by
+# default — overwritten on each run. Open that file in your editor and
+# refresh; re-run the command whenever you want a fresh snapshot. Pass
+# `--stdout` for terminal output instead, or `--out=PATH` for a custom
+# location.
+#
+# The report's columns and bands are designed to be the things that
+# drive next-step decisions, not an exhaustive dump.
 #
 # Usage:
-#   ruby bin/naming-r2-progress
-#   ruby bin/naming-r2-progress --out=msc/naming/r2-progress-snapshot.md
-#   ruby bin/naming-r2-progress --notes-threshold=50    # stricter "substantive"
+#   ruby bin/naming-r2-progress                          # writes to default file
+#   ruby bin/naming-r2-progress --stdout                 # prints to terminal
+#   ruby bin/naming-r2-progress --out=path/to/file.md    # custom path
+#   ruby bin/naming-r2-progress --notes-threshold=50     # stricter "substantive"
 
 require 'optparse'
 require 'set'
 require 'time'
 
+DEFAULT_OUT = 'msc/naming/round-2-progress.md'
+
 options = {
   cards_dir: 'msc/naming/round-2-cards',
   trackers_dir: 'msc/naming/round-2-trackers',
   notes_threshold: 30,
-  out: nil
+  out: DEFAULT_OUT,
+  stdout: false
 }
 
 OptionParser.new do |opts|
@@ -33,9 +43,12 @@ OptionParser.new do |opts|
   opts.on('--cards-dir=PATH', 'Directory of voting cards (default msc/naming/round-2-cards)') { |p| options[:cards_dir] = p }
   opts.on('--trackers-dir=PATH', 'Directory of trackers (default msc/naming/round-2-trackers)') { |p| options[:trackers_dir] = p }
   opts.on('--notes-threshold=N', Integer, 'Char-count threshold for "substantive" notes (default 30). Tune per the depth-of-engagement distribution you actually see.') { |n| options[:notes_threshold] = n }
-  opts.on('--out=PATH', 'Output path (default stdout)') { |p| options[:out] = p }
+  opts.on('--out=PATH', "Output path (default #{DEFAULT_OUT})") { |p| options[:out] = p }
+  opts.on('--stdout', 'Print to stdout instead of writing to a file') { options[:stdout] = true }
   opts.on('-h', '--help') { puts opts; exit }
 end.parse!
+
+options[:out] = nil if options[:stdout]
 
 # Discover voters from the cards directory. The seed = filename minus .md.
 voters = Dir.glob(File.join(options[:cards_dir], '*.md')).map { |p| File.basename(p, '.md') }.sort
