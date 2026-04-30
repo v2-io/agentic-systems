@@ -191,9 +191,27 @@ Lean: pre-launch, given the rename-vs-add-alias semantic distinction is now load
 
 ## Post-launch update — 2026-04-29
 
-R2 voting was launched against this design. The first cohort surfaced two systematic failure modes that argue for round-design changes before completing R2 — full diagnostic in [`handoff-2026-04-29-post-r2-launch.md`](handoff-2026-04-29-post-r2-launch.md). Headline findings:
+R2 voting was launched against this design. The first cohort surfaced two systematic failure modes that argue for round-design changes before completing R2 — full diagnostic in [`_archive/handoff-2026-04-29-post-r2-launch.md`](_archive/handoff-2026-04-29-post-r2-launch.md). Headline findings:
 
 - **Scale drift (4/4 voters).** Agents defaulted to R1's +3/+2/+1/-1/-2/-3 scale despite the card preamble specifying R2's +2/+1/-1. Mitigation: card preamble needs to anti-pattern the R1 scale explicitly (in addition to specifying the R2 scale). Aggregation can recover the votes already in by clamping +3→+2 and -2/-3→-1.
 - **Load past quality-over-quantity threshold.** 629 targets in one ~648KB card pulls every agent toward heuristic completion despite the prompt's "honest skips beat manufactured ones" framing. opus's 10% high-conviction coverage was the *good* outcome; gemini/codex's broader-but-shallow shortcut behavior was typical. Mitigations to consider before re-launching: pre-cluster the corpus and slice (50-100 targets per voter), explicit stopping clause, or trajectory-audit walker as supplement.
 
 Pass D (collision-check) completed cleanly as a separate sweep — report at [`collision-check-2026-04-29.md`](collision-check-2026-04-29.md). Severe-rename cases queued in [`mini-lexicon-todo.md`](mini-lexicon-todo.md) §11 for post-R2 surgery.
+
+## Cohort-close update — 2026-04-30
+
+R2 voting cohort closed. Three iterations produced a substantial corpus:
+
+- **r2 (v1-prompt cohort, archived to [`naming-votes/r2-early/`](naming-votes/r2-early/)):** opus-r2 (76 voted / 99% sub / 26% off-scale), sonnet-r2 (94 voted, stalled), codex-r2 (629 / 2% sub — pure heuristic completion), gemini-r2 (continued through r2b/Flash continuation; final state preserved).
+- **r2b (v2 methodology):** opus-r2b (54 / 99%), sonnet-r2b (43 / 99% / stalled), codex-r2b (58 voted post-external-sweep / 100%), gemini-r2 (Flash continuation under inherited Pro context — 190 voted / 466 can-vote / 240 voting-sequence; eventually fragmented at the harness-side persistence-condition threshold).
+- **r2c (v2 methodology + consolidation-checkpoint mechanism):** opus-r2c (83 voted / 99%), sonnet-r2c (74 / 100% / stalled). Codex/gemini r2c not run.
+
+**Cohort-wide off-scale residual: 0** across r2b and r2c. The principles-file fix + methodology anti-pattern + restatement gate held under fresh launches and Flash's long continuation. Coverage of 258+ unique targets (≥1 voter) with multi-voter coverage on 57+. 18+ write-ins. Substantive-note rate: 99% cohort-wide.
+
+The §12.3 consolidation-checkpoint mechanism produced ~70% coverage improvement (sonnet) and ~54% (opus) at maintained engagement quality compared to pre-fix r2b runs. Validated as a methodology-level discipline for future cycles.
+
+Mid-cycle methodological findings captured in [`mini-lexicon-todo.md`](mini-lexicon-todo.md) §11 (collision check), §12.1 (Pro→Flash rationale-attribution), §12.2 (mixed-cost cohort hypothesis), §12.3 (consolidation-checkpoint, now landed in methodology), §12.4 (voting-sequence noise as limitation).
+
+Reference reflections: [`msc/reflections/22-substrate-handoff-and-rationale-attribution.md`](../reflections/22-substrate-handoff-and-rationale-attribution.md), [`msc/reflections/23-harness-side-persistence-failure.md`](../reflections/23-harness-side-persistence-failure.md), [`msc/reflections/24-framework-as-its-own-diagnostic.md`](../reflections/24-framework-as-its-own-diagnostic.md).
+
+**Phase 4 (R2 aggregation) is the next step.** Four design questions queued (substance-weighting, scale-clamping for v1-cohort, consensus thresholds, output banding). Detail in [`handoff-2026-04-30-cohort-close.md`](handoff-2026-04-30-cohort-close.md).
