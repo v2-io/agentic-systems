@@ -38,5 +38,3 @@ An architecture built from the ground up around the AAD cognitive loop, rather t
 ## Epistemic Status
 
 *Discussion-grade.* The hypothesis that temporal ordering during fine-tuning produces fundamentally different and more robust causal representations than shuffled batch training is highly plausible but requires empirical validation.
-
-*(Descended from `ref/agentic-tft/agentic-tft-experiential-training.md`.)*

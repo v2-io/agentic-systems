@@ -40,5 +40,3 @@ In AAD terms, each boundary crossing increases the cost of constructing the rele
 
 - The hierarchy is discrete but the underlying cost may not be. Two changes 5 lines apart and 500 lines apart are both "lexical distance" but have different cognitive costs. A continuous distance metric might be more accurate, but the discrete hierarchy captures the dominant effect (boundary crossings).
 - Service distance may need refinement for modern architectures (monorepo with service boundaries vs. polyrepo, serverless functions, etc.). The underlying quantity is "how much context must be loaded to reason about both changes together."
-
-*(Descended from TST D-05.)*

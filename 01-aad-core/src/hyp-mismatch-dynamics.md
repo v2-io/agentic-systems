@@ -67,7 +67,3 @@ Mismatch decays exponentially from initial conditions toward the steady state.
 These nonlinearities are exactly what the sector-condition framework ( #result-sector-condition-stability) handles.
 
 **Adversarial coupling.** When two agents are coupled ($A$'s actions increase $B$'s disturbance): $\rho_B = \rho_{B,\text{base}} + \gamma_A \cdot \mathcal T_A$. The steady-state mismatch ratio scales superlinearly with the tempo ratio, but the exponent depends on the disturbance model. Under Model D (deterministic drift, coupling-dominant): $(\mathcal T_A/\mathcal T_B)^2$ — the squared law, derived from the $1/\mathcal{T}$ steady-state scaling. Under Model S (stochastic noise, coupling-dominant): $(\mathcal T_A/\mathcal T_B)^{3/2}$ — derived from the $1/\sqrt{\mathcal{T}}$ steady-state scaling. See #result-adversarial-tempo-advantage.
-
-## Working Notes
-
-- *Lineage:* descended from TF-11 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

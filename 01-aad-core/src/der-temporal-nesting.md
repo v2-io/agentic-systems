@@ -49,7 +49,3 @@ This table is illustrative — real systems may have additional intermediate lev
 **Violation symptoms.** When nesting is violated (a slower process acts before the faster one converges): oscillation, instability, degraded performance. In organizations: micromanagement (strategic decisions at operational tempo). In RL: policy updates before value function converges (policy oscillation). In biology: premature developmental transitions.
 
 **Multi-timescale stability (sketch).** Singular perturbation theory gives the composite stability result: if each level is stable given the levels above it (each level has a stable attractor for fixed slower-level parameters), and the timescale separation is sufficient, the composite $N$-level system is stable. Making this rigorous for AAD requires specifying dynamics at deeper adaptive levels — an open problem. See #sketch-multi-timescale-stability for the framework.
-
-## Working Notes
-
-- *Lineage:* descended from TF-11 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

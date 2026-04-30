@@ -82,5 +82,3 @@ The realignment corollary formalizes one pass through this loop. The loop itself
 - Connection to #form-information-bottleneck: alignment might be formalized as the mutual information between code structure and domain structure, with misalignment as information that must be reconstructed rather than observed directly. This is speculative.
 - TST T-07's "AI Inversion" observation (that well-aligned code teaches the domain, not just the implementation) is interesting but belongs in the `03-logogenic-agents/` treatment of AI agents, not here.
 - A **description-length or translation-cost framing** may be more natural than inverse alignment: comprehension time as a function of the translation cost between code structure and domain model ($t_{\text{comp}} \sim t_{\text{base}} + \text{cost}_{\text{translate}}(S, D)$). This avoids the $1/\text{alignment}$ singularity and connects more directly to information theory — the translation cost is the additional bits needed to decode code-structure observations through a misaligned mapping. Worth exploring if this segment gets promoted beyond discussion-grade.
-
-*(Descended from TST T-07, C-07.1.)*

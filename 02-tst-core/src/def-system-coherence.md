@@ -36,5 +36,3 @@ The classic "high cohesion, low coupling" principle in software engineering is t
 
 - The proximity measure in the definition uses #def-change-distance, which is a discrete hierarchy. This means coherence is somewhat coarse-grained. A module where all changes happen in the same file has high coherence; one where they span many files has low coherence. Finer-grained measurement would require a continuous distance metric.
 - Coherence is relative to the feature distribution. A module might appear coherent for historical features but incoherent for future ones if the product direction changes. This is the same feature-distribution sensitivity as #def-system-coupling.
-
-*(Descended from TST D-07.)*

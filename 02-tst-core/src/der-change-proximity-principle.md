@@ -50,5 +50,3 @@ These patterns minimize the distance term for typical future features. Whether p
 - The pairwise sum $\sum_{i,j} d(c_i, c_j)$ treats all pairs equally. In practice, some pairs matter more (changes that must be understood together to make sense) and some matter less (independent changes that happen to be in the same commit). A weighted version would be more accurate but harder to compute.
 - TST's Der-09.1 shows how this interacts with #der-change-investment: restructuring to improve proximity is an investment decision with the same threshold form. The cost is the restructuring effort; the savings are per-feature proximity improvements across $\hat{n}_{\text{future}}$ future features.
 - The principle is about the agent's *experienced* cost, which depends on the agent's tooling and navigation capabilities. An IDE with good "jump to definition" reduces effective file distance; AI agents that can hold more context may have different distance sensitivities than humans. The principle holds qualitatively (boundaries have nonzero cost) but the distance hierarchy's quantitative weights are agent-dependent.
-
-*(Descended from TST T-09.)*

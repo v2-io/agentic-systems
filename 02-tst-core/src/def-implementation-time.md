@@ -42,5 +42,3 @@ Definitional. The decomposition of feature time into comprehension + implementat
 
 - The clean decomposition time(F) = t_comp + t_impl assumes these are sequential. In practice they overlap (exploratory implementation as part of comprehension). The decomposition is still useful as an accounting identity, but measurements will be approximate.
 - Should this definition explicitly reference #der-action-selection? Implementation is the phase where the agent is primarily acting rather than observing — high action rate, lower exploration.
-
-*(Descended from TST D-03.)*

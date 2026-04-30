@@ -68,5 +68,3 @@ Making it rigorous requires specifying the dynamics $G^{(k)}$ for levels deeper 
 - The key open problem: formalizing $G^{(k)}$ for structural adaptation levels. The two-timescale case (parametric + structural) is the tractable starting point.
 - The connection to #schema-strategy-persistence is direct: strategy operates at its own timescale, and strategy persistence requires timescale separation from the faster epistemic updates and the slower objective revisions.
 - When timescale separation breaks down between organizational levels, the result is "micromanagement" — the organizational analog of control-theoretic instability from gain mismatch. This observation connects to the hierarchical topology analysis in the multi-agent coupling material.
-
-*(Descended from TFT Appendix A, Prop A.4 sketch.)*

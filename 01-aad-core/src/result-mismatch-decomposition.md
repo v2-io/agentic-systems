@@ -17,7 +17,7 @@ Expected squared mismatch decomposes into reducible model error and irreducible 
 
 ## Formal Expression
 
-*[Derived (result-mismatch-decomposition, Prop 5.1 from TFT)]*
+*[Derived (result-mismatch-decomposition)]*
 
 For any agent-environment pair within AAD's scope ( #scope-adaptive-system), when observation noise is non-degenerate or the model's predictive mean is misspecified:
 

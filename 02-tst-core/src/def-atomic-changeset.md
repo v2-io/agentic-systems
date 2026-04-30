@@ -39,5 +39,3 @@ The changeset is the observable trace of an implementation decision. It is to so
 
 - The exclusion of generated code is pragmatically motivated but theoretically interesting. Generated code represents an amplification of the agent's action — small input, large output. The *decision* cost is in the input; the *environment effect* is in the output. Should the changeset measure decision cost or environment effect? For temporal optimization of agent time, decision cost is right. For understanding system coupling, environment effect matters.
 - The definition is implicitly per-feature, but features aren't always cleanly isolated in practice. Overlapping changesets, partial features, and incremental delivery blur the boundary. #def-feature already notes this ambiguity.
-
-*(Descended from TST D-04.)*

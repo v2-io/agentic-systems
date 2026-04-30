@@ -308,5 +308,3 @@ The assumptions themselves (sector condition on a region, bounded disturbance) a
 [^khasminskii2012]: Khasminskii, R. (2012). *Stochastic Stability of Differential Equations* (2nd ed.). Springer. Chapter 5: Lyapunov functions and stochastic stability; stopping-time localization for diffusion processes.
 [^lure1957]: Lur'e, A. I. (1957). *Some Nonlinear Problems in the Theory of Automatic Control*. Gostekhizdat. Original sector-condition framework for absolute stability.
 [^nesterov2004]: Nesterov, Y. (2004). *Introductory Lectures on Convex Optimization*. Springer. Theorem 2.1.10 (strong convexity characterized by gradient monotonicity).
-
-*(Descended from TFT Appendix A, Props A.1–A.2.)*

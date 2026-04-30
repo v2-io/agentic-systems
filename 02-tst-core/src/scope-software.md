@@ -53,5 +53,3 @@ The scope restriction is definitional — we choose to analyze evolving systems.
 - TST's original "infinite velocity" language is vivid but potentially misleading — velocity is undefined when there are zero changes. The AAD framing ($\rho \to 0$, persistence trivially satisfied) is more precise.
 - The via-tft-mapping material has a much richer decomposition of the software "environment" (codebase, runtime behavior, user requirements, team knowledge, dependency ecosystem, infrastructure state). This scope segment doesn't need that detail, but #scope-developer-agent or #obs-software-epistemic-properties should incorporate it.
 - The observation that software development = building systems that evolve efficiently is essentially the claim that software development is an adaptive process subject to AAD. This is what motivates the entire section, not just this scope narrowing.
-
-*(Descended from TST T-03.)*

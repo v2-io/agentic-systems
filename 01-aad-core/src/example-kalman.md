@@ -148,6 +148,4 @@ This is a *worked instantiation*, not a theoretical claim. Every mapping is exac
 
 - This example uses a 1D system. The tensor-tempo extension ( #result-per-dimension-persistence) becomes visible only in multi-dimensional tracking where different state dimensions have different observability.
 - The structural adaptation trigger (constant-velocity → constant-acceleration) is manufactured for the example. A more natural test would be a real tracking system with genuine regime changes.
-- The Kalman filter is provably optimal for the linear-Gaussian case. Every TFT/AAD quantity has not just an analog but the *exact optimal* value. This makes it the strongest validation but also the easiest — the real test is non-Kalman domains (see #example-bandit).
-
-*(Descended from TFT Appendix C.)*
+- The Kalman filter is provably optimal for the linear-Gaussian case. Every AAD quantity has not just an analog but the *exact optimal* value. This makes it the strongest validation but also the easiest — the real test is non-Kalman domains (see #example-bandit).

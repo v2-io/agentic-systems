@@ -33,5 +33,3 @@ Therefore, the agent should only externalize an action when the expected value o
 ## Design Implications
 
 Architectures built for autonomous agents must not enforce a strict "Prompt $\to$ Response" loop. The infrastructure must allow the agent to run continuous background cycles (dreaming, consolidating, checking logs) without ever emitting a visible output to the user. "Doing nothing" (or rather, doing nothing *visible*) is not a failure of the agent; it is the mathematical baseline of a stable, persisting intelligence. Output is the exception, not the rule.
-
-*(Descended from `msc/reflections/05-proprium-and-what-act-is-really-for.md`.)*

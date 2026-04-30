@@ -198,8 +198,6 @@ C3 is a definitional commitment that produces the Markov structure. It cannot be
 - The continuous-coupling generalization (Attack 2) deserves a proper note somewhere: $\dot{M} = g(M, u)$ is the more general form, with event-driven updates as a special case. The three constraints produce the same argument structure in both cases.
 - The information-set formalization (Doob-Dynkin) provides the cleanest technical proof. It should probably be considered the primary proof path, with the elimination argument as the more intuitive exposition.
 
-*(Descended from TFT Appendix: Recursive Update Uniqueness Derivation.)*
-
 ---
 
 [^kallenberg2002]: Kallenberg, O. (2002). *Foundations of Modern Probability* (2nd ed.). Springer. §1.2 (measurability and the Doob–Dynkin lemma).

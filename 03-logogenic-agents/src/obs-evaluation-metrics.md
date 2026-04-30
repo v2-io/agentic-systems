@@ -45,6 +45,4 @@ To diagnose *why* an agent is exhibiting a specific mismatch trajectory, the fol
 
 ## Discussion
 
-These metrics require shifting the evaluation paradigm from "batch-testing accuracy" to "longitudinal interaction tracking." An agent shouldn't be evaluated by taking an exam; it must be evaluated by having it maintain a repository or manage a project over time, tracking its explicit predictions, its stated surprises, and its belief revisions. 
-
-*(Descended from `ref/agentic-tft/agentic-tft-evaluation-framework.md`.)*
+These metrics require shifting the evaluation paradigm from "batch-testing accuracy" to "longitudinal interaction tracking." An agent shouldn't be evaluated by taking an exam; it must be evaluated by having it maintain a repository or manage a project over time, tracking its explicit predictions, its stated surprises, and its belief revisions.

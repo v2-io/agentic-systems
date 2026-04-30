@@ -189,5 +189,3 @@ This is a *procedures document* — estimation recipes, not theoretical claims. 
 - End-to-end worked examples instantiating the full chain are in #example-kalman (exact) and #example-bandit (approximate).
 - The $\hat{\rho}$ estimator's dependence on $\hat{\mathcal{T}}$ creates a sequential estimation chain. Errors compound. An alternative approach: estimate $\rho$ directly from exogenous environmental change measurements when available, bypassing the mismatch trajectory entirely.
 - The structural-switch trigger's $T_{\text{horizon}}$ (expected time the new model class will remain adequate) is itself uncertain and difficult to estimate. In practice, this is where the agent's $M_t$ does the real work — predicting environmental stability.
-
-*(Descended from TFT Appendix B: Operationalization.)*

@@ -69,5 +69,3 @@ A change that makes one module easier but another harder is justified only when 
 - The compound effects / virtuous-vicious cycle is listed in WORKBENCH.md as an ungrounded claim. The connection to persistence condition dynamics is the most promising formalization path: model code quality as a state variable subject to the mismatch ODE, with each implementation choice either reducing or increasing the effective disturbance rate $\rho$. But this requires defining "code quality" as an AAD quantity, which #der-code-quality-as-observation-infrastructure is meant to address.
 - TST T-06's AI-specific guidance (computational advantages in temporal optimization) belongs in `03-logogenic-agents/`, not here. The core mathematical claim is agent-general.
 - This segment overlaps substantially with #der-dual-optimization. The threshold form here adds the concrete decision rule; the compound effects discussion adds the feedback loop observation. If these don't justify a separate segment, this could fold into #der-dual-optimization as a corollary and discussion extension.
-
-*(Descended from TST T-06.)*

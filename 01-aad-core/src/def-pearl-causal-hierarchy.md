@@ -60,7 +60,3 @@ This is *definitional* — it names three modes of epistemic access that are str
 | Military (Boyd) | Pattern recognition | Probe/feint → observe response | "What if we had attacked from the flank?" |
 | Software developer | "I think this function does X" | Run test → observe result | `git checkout` + alternative implementation |
 | Immune system | Antigen pattern matching | Antibody → pathogen response | Not exercised (no counterfactual reasoning) |
-
-## Working Notes
-
-- *Lineage:* descended from TF-02 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

@@ -47,7 +47,3 @@ Max attainable: conditional. The regime boundaries are domain properties that ca
 **Relationship to the canonical CIY.** The proxy is not an approximation of the canonical CIY — it is a different quantity that happens to correlate with CIY under favorable conditions (Regime A). The canonical CIY ( #def-causal-information-yield) is defined interventionally and is non-negative by construction. The proxy uses observational mutual information and can be negative. They agree when the agent's action variation satisfies the conditions for causal identification; they diverge otherwise.
 
 **Regime as a domain property.** The admissibility regime is not something the agent selects — it is determined by the domain's action space and observation structure. An agent that cannot vary its actions is in Regime B or C regardless of its internal architecture. This has implications for which domains CIY-based exploration is applicable to: Regime A domains get the full benefit; Regime B domains get weaker guarantees; Regime C domains should use alternative exploration strategies entirely.
-
-## Working Notes
-
-- *Lineage:* descended from TF-08 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

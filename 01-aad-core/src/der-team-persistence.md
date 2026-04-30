@@ -106,5 +106,3 @@ Max attainable: *robust-qualitative* for the persistence condition (it inherits 
 - The topology-dependent analysis (F.4 in the source material — peer networks, ensemble architectures, hierarchical structures) and game-theoretic integration (F.5) are related but separate concerns, not covered here. They may warrant their own segments.
 - The coordination cost model $\Delta \mathcal T_i^{\text{cost}}(j)$ needs further specification to be useful. In software systems, coordination cost is empirically measurable (meeting time, code review latency, merge conflict rates). In military contexts, it maps to C2 overhead. The question is whether there is a useful *general* cost model or whether it is always domain-specific.
 - The disturbance decomposition treats cooperative and adversarial coupling as additive and independent. In practice, the same agent $j$ might be cooperatively coupled on some dimensions and adversarially coupled on others (e.g., a competitor who shares some information). The per-dimension persistence condition ( #result-persistence-condition's per-dimension extension) may be relevant here.
-
-*(Descended from TFT Appendix F, Section F.3.)*

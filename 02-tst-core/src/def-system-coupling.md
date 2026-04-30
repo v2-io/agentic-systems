@@ -45,5 +45,3 @@ Outside these regimes, the coupling estimate is better interpreted as a descript
 - The definition is asymmetric: $P(\text{change}(m_j) \mid \text{change}(m_i))$ need not equal $P(\text{change}(m_i) \mid \text{change}(m_j))$. This asymmetry is informative — it reveals directional dependency.
 - Coupling is feature-type-dependent. A module pair might be tightly coupled for UI features and uncoupled for backend features. The unconditional estimate from git history is an average over the historical feature distribution, which may not represent future features. This connects to the uniform-feature-rate assumption in #der-change-expectation-baseline.
 - The interventional interpretation is stronger than correlational. If two modules always change in the same commit, that could be coupling OR could be convention (developer habit of bundling). Distinguishing requires looking at *whether the feature required both changes* vs. *whether the developer chose to include both*. Atomic commits help; large PRs hurt.
-
-*(Descended from TST D-06.)*

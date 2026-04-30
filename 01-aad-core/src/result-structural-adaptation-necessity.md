@@ -16,7 +16,7 @@ When model class fitness is insufficient — when no model in the current class 
 
 ## Formal Expression
 
-*[Derived (structural-adaptation-necessity, Prop 10.1 from TFT)]*
+*[Derived (structural-adaptation-necessity)]*
 
 If the model class fitness $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ for some $\varepsilon \gt 0$, then no parametric adaptation within $\mathcal{M}$ can reduce the expected mismatch below a floor determined by $\varepsilon$ (under the alignment assumption — see Epistemic Status). Without the alignment assumption, the result holds for irreducible proper-scoring regret rather than one-step mean mismatch. The qualitative conclusion is the same either way: parametric adaptation cannot compensate for model-class inadequacy.
 
@@ -76,7 +76,3 @@ The severity of structural change needed depends on *how far* the current model 
 | Organization | Process optimization | Strategic pivot, restructuring |
 | Software | Incremental refactoring | Architecture migration |
 | Coevolving automata (Miller 2022) | Edge reweighting within fixed FSA structure | Mutation altering state output or transition; neutral mutations accumulating until niche creation triggers cascading restructuring |
-
-## Working Notes
-
-- *Lineage:* descended from TF-10 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

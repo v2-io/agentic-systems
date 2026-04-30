@@ -147,5 +147,3 @@ The mapping status is *conditional* because the quantitative relationships depen
 - The per-arm analysis is a natural instance of the per-dimension tempo decomposition ( #result-per-dimension-persistence): each arm is an independent mismatch dimension with its own $\mathcal T_i$ and $\rho_i$. The aggregate tempo overstates effective adaptation along any individual arm's dimension — exactly the failure mode that the scalar-to-tensor generalization captures.
 - A Bayesian bandit (maintaining per-arm posteriors with exponential discounting) would achieve higher #def-model-sufficiency by representing its own uncertainty, yielding an adaptive $\eta^\ast$ that matches the AAD-optimal form. Comparing Q-learner vs Bayesian bandit performance under nonstationarity is a direct test of #emp-update-gain's structural claim.
 - Reward-unit and surprise-unit formulations coincide up to normalization by $\sigma^2$. For this example ($\sigma = 1$), they are identical.
-
-*(Descended from TFT Appendix D.)*

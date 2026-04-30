@@ -48,5 +48,3 @@ Definitional. This is a scoping choice about the unit of analysis, not a derived
 - In AAD terms, a feature is a deliberate intervention on the software environment — the agent choosing to $do(F)$ and observing the consequences. This connects to #def-pearl-causal-hierarchy (Level 2) and #def-causal-information-yield (the information gained from implementing F). But whether this connection adds analytical power or is just relabeling needs thought.
 - The "as perceived by" qualifier creates a measurement problem: different stakeholders disagree about feature boundaries. Is there a principled way to resolve this, or is it inherently level-dependent?
 - Refactoring as a feature that modifies the observation channel: well-named code reduces $U_o$ for future readers. This connects refactoring to #der-code-quality-as-observation-infrastructure, which is currently a gap. When that segment is written, the connection should be made explicit.
-
-*(Descended from TST D-01.)*

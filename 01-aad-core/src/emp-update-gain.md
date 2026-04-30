@@ -72,7 +72,3 @@ where $\delta_t$ is the mismatch ( #def-mismatch-signal) and $g(\cdot)$ is a cor
 
 1. *Non-parametric models*: For neural networks without well-defined scalar $U_M$, how should it be computed? Ensemble methods, dropout-based uncertainty, and Bayesian neural networks are all approximations.
 2. *Matrix vs scalar gain*: In high-dimensional systems, the gain is a matrix (Kalman) or per-parameter (Adam). The cross-dimensional structure (covariance) adds complexity. The scalar captures the principle; the matrix captures the full optimization.
-
-## Working Notes
-
-- *Lineage:* descended from TF-06 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

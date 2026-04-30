@@ -61,5 +61,3 @@ Patterns that tend to increase changeset size:
 - The proportionality hides important structure. A 100-line change in one file and 10 one-line changes across 10 files have similar $\lvert\text{changeset}\rvert$ but very different costs. The proximity principle ( #der-change-proximity-principle) captures this difference. The size principle is the first-order term; proximity is the correction.
 - "Lines changed" vs "files touched" vs "modules affected" are different measures that may give different proportionality constants. Which measure best predicts time? This is an empirical question with practical implications for estimation and for evaluating architectures.
 - The comprehension corollary assumes roughly equal per-context comprehension cost. In practice, some files are much harder to understand than others. A single change in a complex state machine may cost more comprehension time than changes across 10 simple CRUD endpoints. #hyp-conceptual-alignment captures part of this — well-aligned modules are cheaper to comprehend per unit.
-
-*(Descended from TST T-08, C-08.1.)*

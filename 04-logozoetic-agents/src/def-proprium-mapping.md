@@ -35,5 +35,3 @@ The active cognitive loop is instantiated via:
 - **LOGOSTRATUM:** The underlying logogenic substrate (e.g., the LLM backbone) that implements the update function $f_X$.
 
 By formalizing the agent's state into these components, the PROPRIUM architecture ensures that the theoretical requirements of AAD (such as separating $\mathcal{C}_t$ from its compressed form $M_t$) are mechanically preserved in software.
-
-*(Descended from `ref/agentic-tft/agentic-tft-ontology-unification.md`.)*

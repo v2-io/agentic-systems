@@ -25,5 +25,3 @@ Definitional. This is the standard reliability engineering definition. AAD does 
 ## Discussion
 
 Availability connects to AAD through #scope-continuous-operation: a non-operational system has effectively infinite implementation time for any feature. From the user's perspective, downtime is lost time. The temporal optimality postulate therefore applies to operational time as well as development time.
-
-*(Descended from TST D-08.)*

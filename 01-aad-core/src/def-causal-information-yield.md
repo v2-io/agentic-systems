@@ -52,7 +52,3 @@ Key properties of query actions:
 When high-CIY query channels are available, the unified policy objective ( #disc-ciy-unified-objective) favors query actions over direct probes, particularly when $U_M$ is high, a trusted source exists, query cost is low, and the needed information is about *structure* rather than the agent's specific situation.
 
 **The adversarial mirror: deception and model corruption.** The same channel that enables cooperative knowledge transfer can be exploited to degrade the opponent's model. A deceptive response yields positive CIY in the strict information-theoretic sense, but the content drives model-reality mismatch *upward*. The update gain $\eta^\ast$ for the victim depends on trust; successful deception exploits high trust to inject a large, misdirected update. In the Lyapunov framework ( #result-sector-condition-stability), this is adversarial disturbance injected through the observation channel, with coupling coefficient $\gamma_A$ determined by the victim's trust level and exposure. See #hyp-communication-gain for the formal treatment of trust-dependent gain, and #der-adversarial-destabilization for the Lyapunov formalization. Distributed tempo, topology analysis, and game-theoretic integration are Section III content not yet fully extracted (source material in `src/old-tf-appendix-f-multi-agent.md`).
-
-## Working Notes
-
-- *Lineage:* descended from TF-08 in the prior TFT corpus (kept as Working Notes provenance per FORMAT.md voice discipline).

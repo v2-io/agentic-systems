@@ -51,7 +51,7 @@ Organizations or AI agents with true Pareto structure — where no scalarization
 
 ## Discussion
 
-**Filling TF-08's gap.** The existing policy objective ( #disc-ciy-unified-objective) contains $\mathbb{E}[\text{value}(a) \mid M_t]$ without specifying what "value" means. $O_t$ provides the formal content: value is $V_{O_t}$ applied to expected trajectories. The #def-value-object segment develops the full evaluation machinery ($V_O$, $Q_O$ with horizon and continuation policy).
+**The objective-functional gap.** The existing policy objective ( #disc-ciy-unified-objective) contains $\mathbb{E}[\text{value}(a) \mid M_t]$ without specifying what "value" means. $O_t$ provides the formal content: value is $V_{O_t}$ applied to expected trajectories. The #def-value-object segment develops the full evaluation machinery ($V_O$, $Q_O$ with horizon and continuation policy).
 
 **$O_t$ evaluates; $\Sigma_t$ guides.** The objective says "is this trajectory satisfactory?" The strategy ( #def-strategy-dimension) says "which action sequence produces a satisfactory trajectory?" A chess player's objective (win) is simple; the strategy (how to win) is complex. These answer different questions and carry different kinds of information — the split is developed in #def-strategy-dimension.
 

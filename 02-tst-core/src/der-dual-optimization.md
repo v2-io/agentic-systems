@@ -93,5 +93,3 @@ The resolution depends on $\hat{n}_{\text{future}}$ and the turnover rate. Under
 - TST's original T-05 includes a rich discussion of the AI turnover problem (redundant implementations, inconsistent patterns, half-completed features abandoned at context limit). These are real failure modes but they're consequences of high comprehension cost, not independent claims. They belong in worked examples or the `03-logogenic-agents/` treatment of AI agents, not here.
 - The turnover multiplier assumes each reader pays the full comprehension cost independently. In practice, good documentation and code structure can amortize comprehension across readers (each reader benefits from the last reader's improvements). This is the #der-code-quality-as-observation-infrastructure feedback loop — but it's not formalized yet.
 - Connection to #form-information-bottleneck: the turnover multiplier means that for AI-maintained code, the IB tradeoff should favor retention (high $\beta$) — keep the model detailed and explicit, because the cost of re-deriving compressed information is paid by every future session.
-
-*(Descended from TST T-05.)*
