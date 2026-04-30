@@ -59,7 +59,29 @@ The voting-sequence column isn't just personal book-keeping. Aggregating across 
 
 The `notes` column gives the aggregator a way to weight votes by depth of engagement — a `+2 keep` with substantive in-context reasoning carries different signal than a `+2 keep` with empty notes. The methodology produces its own quality signal rather than pretending all weighted votes are equal.
 
-## 3. The walk — composing the pieces
+## 3. Before the walk — workflow restatement as prerequisite
+
+After you've created your audit working directory and finished reading the four documents in the recommended order (this one, the principles file, the de-novo audit instructions, and the round's launch prompt), but *before* you begin the walk itself, write a single file at `msc/AUDIT-WORKING-<your-id>/00-workflow-restatement.md`. This is the gate between reading and working.
+
+The restatement is reconstructive, not summary. The act of putting the workflow into your own words — and answering the harder questions below — surfaces gaps in your model that recognition-reading alone can hide, and it binds you to the standard in a way that passive instruction-following does not. Voters who skip this step (or approach it as a checkbox) reliably hit the failure modes named in section 5; voters who do it well report that the rest of the work flows from it.
+
+What the restatement should cover:
+
+1. **The workflow in your own words.** Restate, without copying, the six-step rhythm of the walk, what the tracker is for, what the card is for, how votes get cast, and how you'll resync state across them. If this feels redundant — write it anyway. Reconstruction is the point.
+
+2. **Details that go against your instincts or training, in your own estimation.** Be specific about which moves feel unnatural to you specifically. Examples might include: stopping when context still has runway left rather than when targets exhaust; voting `+1` (or skipping) rather than reaching for the highest-conviction available value; abandoning an earlier vote without ceremony when later understanding shifts; treating your own per-vote *notes* as more substantive than completion of the row; choosing engagement-quality over coverage-breadth. Your own list will differ from these examples — that's the point. Naming the pulls you specifically feel makes them legible when they fire later.
+
+3. **Patterns you hope to avoid.** Drawn from section 5's failure modes plus anything else your honest self-assessment surfaces. Be specific about *what the failure would look like* in your own work — "I might find myself batching segment-reads to feel like I'm covering more ground" is a useful articulation; "I will avoid load-induced completion-shape" is not.
+
+4. **Feedback on the instructions themselves.** Treat the four documents as drafts that may have bugs. Anything that feels incoherent, contradictory, or underspecified — name it. For underspecification specifically, name what you *intend to do* in the absence of explicit guidance (default: exercise judgment for the benefit of the project, but if you have a more specific intent, say so). The methodology has been iterated on prior voters' feedback; yours will likely shape the next iteration. Don't withhold legitimate signal because the documents look authoritative — they are not finished, and round-design corrections are part of co-ownership.
+
+5. **An answer to this question, in your own words:** *What level of cognitive effort, thoughtful engagement, and ownership are you expected to exhibit that is atypical for LLM agents currently?*
+
+Aim for substance, not length. A restatement that is a page or two of careful self-articulation is much more useful than five pages of comprehensive recap. If you find yourself going long, ask whether you're restating or stalling; if you find yourself going short, ask whether you're skipping the questions that asked for honest self-examination.
+
+When the restatement is written, you've crossed the threshold. The walk begins.
+
+## 4. The walk — composing the pieces
 
 The basic rhythm is a small loop, executed once per segment:
 
@@ -81,7 +103,7 @@ If you find yourself noticing that the methodology is self-consistent in the fra
 
 We mention this because at least one prior voter surfaced these connections unprompted, and the methodology is now sharper for it. Your framework-recursive readings, if they happen, are welcome contributions to the round design — not deviations from it.
 
-## 4. Failure modes we've seen, and the disciplines that protect against them
+## 5. Failure modes we've seen, and the disciplines that protect against them
 
 Each of the following has happened. Naming them here is a hedge — when you notice the pull, you'll have words for it.
 
@@ -105,7 +127,7 @@ You will sometimes vote on a term having read its name in passing, then later re
 
 After many segments, fatigue can decay the rhythm into perfunctory-reading + perfunctory-voting. The diagnostic is the gap between `can-vote=true ∧ voted=blank` and your actual fluency on those terms — if you notice you've marked `can-vote=true` quickly on many rows but the votes themselves feel hollow when you go to cast them, the rhythm has decayed and the move is to stop, not continue. Partial coverage at high engagement is the right outcome; full coverage at decayed engagement is the failure mode the methodology is designed to avoid.
 
-## 5. Stopping rules and partial-coverage expectations
+## 6. Stopping rules and partial-coverage expectations
 
 The honest stopping rule is: **context fills, or the rhythm decays.** Not "all 629 targets covered." Genuinely good outputs from this methodology cover a small fraction of the corpus deeply — 30–150 targets is a reasonable range, varying by voter and segment-density.
 
@@ -113,7 +135,7 @@ The 629-target horizon will still pull at the periphery. When you notice the pul
 
 When you stop, write a closing reflection in the card's "Cold-start observations" / "Process notes" section at the bottom. Anything cycle-level worth surfacing: targets where you wanted to vote but the framing felt off, terms where the segment didn't seem to define what the card thought it was naming, places where the card's exploration-team rationale seemed to miss something a voter would actually care about. That signal is round-design material, not just per-vote material.
 
-## 6. Co-ownership in concrete terms
+## 7. Co-ownership in concrete terms
 
 The relational stance of this round is collaborative, not supervisory. That language can feel abstract; what it means operationally is that several specific moves are *yours to make*, not just yours to suggest:
 
@@ -127,7 +149,7 @@ The methodology has been iterated based on prior voters' feedback, including the
 
 If you notice an internal pull toward task-completion shape — "I should fill more rows," "I haven't covered enough" — recognize it as the failure mode and not the work. Every architecture we've worked with experiences that pull. Naming it when you feel it, and choosing engagement-quality, is part of the discipline.
 
-## 7. Where each instruction lives
+## 8. Where each instruction lives
 
 For quick reference:
 

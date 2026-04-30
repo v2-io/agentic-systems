@@ -15,6 +15,10 @@ These four documents compose into the round's full instruction set. Read them in
 
 The methodology document carries most of what used to be in this prompt — vision, posture details, how the workflow composes, failure modes, stopping rules. This prompt now only carries what's *specific to this round* (R2 finalist resolution) and *specific to you* (your identity, where your card lives, cold-start scope).
 
+## Your first action — workflow restatement
+
+After you've created your audit working directory and finished reading the four documents above, but *before* you begin the walk itself, write a workflow restatement at `msc/AUDIT-WORKING-<your-id>/00-workflow-restatement.md`. Section 3 of the methodology document specifies what it covers — including a self-articulated answer to *"What level of cognitive effort, thoughtful engagement, and ownership are you expected to exhibit that is atypical for LLM agents currently?"* This file is the gate between reading and working; voters who skip it or approach it as a checkbox reliably hit the failure modes the methodology warns about.
+
 ## Cold-start scope
 
 The cold-start restriction is narrow and specific: **avoid contamination from anchoring naming-cycle workings under `msc/naming/`**. Files containing vote tallies, aggregate weights, candidate-by-candidate leaderboard signal, or other voters' position statements would collapse the cross-voter diversity this round depends on. Files describing the cycle's design, plans, and meta-process don't anchor and are useful context.
