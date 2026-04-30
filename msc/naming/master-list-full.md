@@ -4,9 +4,9 @@
 **Agents:** 19
 **Total vote rows:** 2967
 **Distinct currents:** 629
-**Enrichment status:** consolidated_rationale: filled 1403/1403 / first_encounter_locality: pending / segment_link: filled 139 (incl. 1 manually-resolved ambiguity), 4 with shared-segment annotation, 301 no-match / manual_curation: 4 currents flagged for follow-up review
+**Enrichment status:** consolidated_rationale: filled 1403/1403 / first_encounter_locality: filled 139/139 / segment_link: filled 139 (incl. 1 manually-resolved ambiguity), 4 with shared-segment annotation, 301 no-match / manual_curation: 4 currents flagged for follow-up review / canonicalize_provenance: filled 503/503
 
-Per-current sections with enrichment fields surfaced where populated. Within each section: candidates as a table (with category mix, weight), then per-vote attribution + notes preserved verbatim from the source files. The lossless view — every per-vote note is here. Enrichment fields (consolidated rationale, first-encounter locality, segment link, manual curation notes) appear when the corresponding pass has filled them; otherwise marked _(pending)_.
+Per-current sections with enrichment fields surfaced where populated. Within each section: candidates as a table (with category mix, weight), then per-vote attribution + notes preserved verbatim from the source files. The lossless view — every per-vote note is here. Enrichment fields (consolidated rationale, first-encounter locality, canonicalize provenance, segment link, manual curation notes) appear when the corresponding pass has filled them; otherwise marked _(pending)_.
 
 ---
 
@@ -15,7 +15,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-control-regret` (Section II; depends on `#def-value-object`, `#def-satisfaction-gap`). First formal definition; Control regret measures the gap between the best available one-step policy improvement and the agent's current policy, under the current model and horizon.
 **Segment link:** [01-aad-core/src/def-control-regret.md](../01-aad-core/src/def-control-regret.md)
 
 | candidate | weight | category mix |
@@ -26,6 +26,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `control regret` _(keep)_
 
 **Consolidated rationale:** Pair-partner with satisfaction gap; the two names jointly carry the 2×2 orient-cascade diagnostic decomposition. Defenders cite three load-bearing properties: the RL-baggage transfers correctly (regret = best-achievable − current), the modifier 'control' narrows the regret to the attainability layer of the diagnostic, and the pair survives the communal-imagination test on first encounter. The principles file uses this pair as the canonical illustration of 'names that do work for the reader'; renaming either half would damage the matched compound. Variants like 'strategy regret' or 'execution regret' appear in working notes but the established form is in NOTATION.md and LEXICON.md.
+
+**Canonicalize provenance:** excavated — 'control regret' appears in `#def-control-regret` prose (6 occurrences) (also in 15 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -67,7 +69,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-satisfaction-gap` (Section II; depends on `#def-value-object`, `#form-objective-functional`). First formal definition; The satisfaction gap measures the distance between what the objective requires and what the best available one-step policy improvement can deliver, under the current model and horizon.
 **Segment link:** [01-aad-core/src/def-satisfaction-gap.md](../01-aad-core/src/def-satisfaction-gap.md)
 
 | candidate | weight | category mix |
@@ -78,6 +80,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `satisfaction gap` _(keep)_
 
 **Consolidated rationale:** One half of the two-name 2×2 diagnostic with control regret; defenders describe it as the crispest named pair in the project. The argument is that the two-word compound tells the reader the diagnostic direction (objective met vs. unmet) immediately, so the disambiguation table organizes itself in the reader's head on first encounter. Renaming would lose a load-bearing prose convention installed across NOTATION.md, LEXICON.md, and the segment Brief. Occasional paraphrases ('objective gap', 'attainability gap') exist; the canonical name is established and absorbing them is what canonicalization does.
+
+**Canonicalize provenance:** excavated — 'satisfaction gap' appears in `#def-satisfaction-gap` prose (6 occurrences) (also in 17 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -118,7 +122,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-orient-cascade` (Section II; deep dependency cone (12 upstream segments incl. `#der-directed-separation`, `#def-mismatch-signal`)). First formal derivation; For actuated agents, epistrophe (the corrective phase of the cycle) expands into a multi-step cascade.
 **Segment link:** [01-aad-core/src/der-orient-cascade.md](../01-aad-core/src/der-orient-cascade.md)
 
 | candidate | weight | category mix |
@@ -136,6 +140,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `orient cascade` _(keep)_
 
 **Consolidated rationale:** Names two things at once: the structural shape (cascade = forced sequential resolution by information dependency) and the heritage (Boyd's 'Orient' from OODA, which the segment explicitly references). The argument for keeping it is that 'cascade' is the geometry the content actually has — the $M_t \to \Sigma_t \to O_t$ resolution order is literally a cascade — and the OODA echo is informative without being captured by it. Considered alternatives ('orientation sequence', 'diagnostic cascade', 'resolution order') were judged flatter or less memorable. Lowercase form is the canonical convention except sentence-initial.
+
+**Canonicalize provenance:** excavated — 'orient cascade' appears in `#der-orient-cascade` prose (3 occurrences) (also in 21 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -162,6 +168,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Adaptive cycle`
 
 **Consolidated rationale:** The generic term for the Prolepsis-Praxis loop.
+
+**Canonicalize provenance:** excavated — 'Adaptive cycle' appears in 2 segments incl. `#hyp-conceptual-alignment` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -231,7 +239,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-directed-separation` (Section II; depends on `#form-complete-agent-state`, `#der-recursive-update`, `#scope-agency`). First formal derivation; The epistemic update function $f_M$ is goal-blind: it processes incoming events without reference to the agent's objectives or strategy.
 **Segment link:** [01-aad-core/src/der-directed-separation.md](../01-aad-core/src/der-directed-separation.md)
 
 | candidate | weight | category mix |
@@ -244,6 +252,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `directed separation` _(keep)_
 
 **Consolidated rationale:** Names a Pearl-blanket structural property the segment derives (epistemic update one-way independent of $G_t$). Defenders argue both halves are load-bearing: 'directed' captures the asymmetric information flow, 'separation' carries the conditional-independence sense from Pearl's d-separation lineage. The collision risk most often raised is the LQR/Kalman *separation principle*; defenders treat that as informative — the separation principle is a Class-1 *consequence* of directed separation, not a different concept — and propose handling it via a one-sentence Discussion clarification rather than a rename. The architectural Class 1/2/3 classification hangs off this name; renaming would break that tether.
+
+**Canonicalize provenance:** excavated — 'directed separation' appears in `#der-directed-separation` prose (26 occurrences) (also in 24 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -295,7 +305,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-identifiability-floor` (Appendix A; depends on `#der-causal-insufficiency-detection`, `#deriv-strategic-dynamics`, `#der-causal-hierarchy-requirement` (+1 more)). Meta-discussion segment; AAD has derived a class of structural impossibility results — *floors below which* identification or detection is impossible from limited information.
 **Segment link:** [01-aad-core/src/disc-identifiability-floor.md](../01-aad-core/src/disc-identifiability-floor.md)
 
 | candidate | weight | category mix |
@@ -309,6 +319,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `identifiability floor` _(keep)_
 
 **Consolidated rationale:** Names a meta-pattern about hard lower boundaries on inference. The case for 'floor' is geometric: it captures the asymmetry that you cannot go below it without outside help (information augmentation, identifying assumptions, etc.) but you can climb above it via specific machinery the framework supplies. Defenders contrast this with 'no-go theorem', which is too generic, too negative, and loses the boundary-and-escape structure. The name pairs structurally with separability-pattern (or separability-ladder, if that rename lands) and with the forced-coordinates meta-segment to form the three-segment epistemic-architecture trio. 'Escape the floor' has begun appearing as organic prose in the codebase, evidence the metaphor is doing work.
+
+**Canonicalize provenance:** excavated — 'identifiability floor' appears in `#disc-identifiability-floor` prose (8 occurrences) (also in 24 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -389,6 +401,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the set $\{(\alpha, \rho, R) : \alpha R \gt \rho\}$ — the region within which the persistence guarantee holds — using engineering-vocabulary that travels well across domains. The case rests on the flight-envelope / operating-envelope analogy: 'envelope' is the standard control-theory term for operating bounds within which guarantees apply, supporting prose like 'this organization sits well inside its persistence envelope' or 'the adversarial agent is pushing $B$'s persistence envelope.' The current paraphrase ('the region where the persistence condition holds', 'the adaptive regime') is verbose and non-memorable; the proposed name names the same set viewed dynamically. Considered alternatives ('stability envelope', 'safety envelope', 'adaptive basin') were rejected: stability collides with sector-stability, safety collides with AI-safety jargon, and 'basin' is mathematically loaded (basin of attraction) and would force formal justification at the derivation layer. Reserving 'basin' for the technical sense and using 'envelope' for the prose handle is the cleanest split.
 
+**Canonicalize provenance:** invented — phrase 'Persistence envelope' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** +1 (name-unnamed) — Engineering vocabulary, geometrically evocative. "Well inside its persistence envelope" reads more crisply than "satisfies persistence condition with non-marginal adaptive reserve." [original phrasing: unnamed: the sector-persistence region in parameter space]
@@ -410,6 +424,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Structural persistence regime`
 
 **Consolidated rationale:** The stable regime governed by the persistence condition.
+
+**Canonicalize provenance:** invented — phrase 'Structural persistence regime' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -470,7 +486,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-information-bottleneck` (Section I; depends on `#form-agent-model`, `#def-action-transition`). Formal model first introduced; Optimal model compression balances retained history against predictive power; the information bottleneck objective provides a principled framework for understanding this trade-off.
 **Segment link:** [01-aad-core/src/form-information-bottleneck.md](../01-aad-core/src/form-information-bottleneck.md)
 
 | candidate | weight | category mix |
@@ -481,6 +497,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `information bottleneck` _(keep)_
 
 **Consolidated rationale:** Adopted directly from Tishby, Pereira & Bialek 1999. The case for keeping is the prior-art-integration convention: adopted concepts retain their original names with citation, both for provenance and for letting the field's structural intuitions transfer. The word 'bottleneck' is doing real explanatory work in the AAD application — the policy-conditioned forward-predictive variant the framework uses is a sub-case of the standard formulation, not a different object. If a distinguishing label were needed for the AAD-specific variant ('Policy-Conditioned IB', 'Forward-Predictive IB', 'AAD-IB') it could be added without disturbing the parent name.
+
+**Canonicalize provenance:** excavated — 'information bottleneck' appears in `#form-information-bottleneck` prose (4 occurrences) (also in 27 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -512,7 +530,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-chronica` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-action-transition`). First formal definition; The interaction history $\mathcal C_t$ is the complete, singular causal record of the agent's observations and actions. Everything the agent can ever know must be constructed from this sequence.
 **Segment link:** [01-aad-core/src/def-chronica.md](../01-aad-core/src/def-chronica.md)
 
 | candidate | weight | category mix |
@@ -523,6 +541,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `chronica` _(keep)_
 
 **Consolidated rationale:** A deliberately coined Greek-rooted noun ('records of time') for the complete interaction history. Three load-bearing properties cited by defenders: it avoids the $\mathcal{H}$ collision with entropy in notation and read-aloud; it is a singular speakable noun where 'history' or 'interaction history' are not; and it carries the philosophical weight of the (PI) postulate's commitment to a singular non-forkable trajectory, which becomes more morally heavy in the logozoetic extensions. The Greek-vocabulary register is a deliberate framework commitment; chronica is the strongest exemplar. The notation $\mathcal{C}_t$ pairs cleanly with the prose name. One vote treated this row as a Brief-field gloss exercise rather than a name vote — the slug is settled; the Feynman-criterion plain-language gloss is what's missing.
+
+**Canonicalize provenance:** excavated — 'chronica' appears in `#def-chronica` prose (8 occurrences) (also in 16 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -551,6 +571,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Useful style convention: capitalize in headings, use lowercase in prose like aporia or praxis.
 
+**Canonicalize provenance:** invented — phrase 'Lowercase italic chronica' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +1 (canonicalize) — Useful style convention: capitalize in headings, use lowercase in prose like aporia or praxis.
@@ -562,7 +584,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-strategy-dag` (Section II; depends on `#scope-and-or`, `#post-causal-structure`, `#def-pearl-causal-hierarchy` (+2 more)). First formal definition; The strategy $\Sigma_t$ is a directed acyclic graph with probabilistic edges and AND/OR combination semantics.
 **Segment link:** [01-aad-core/src/def-strategy-dag.md](../01-aad-core/src/def-strategy-dag.md)
 
 | candidate | weight | category mix |
@@ -572,6 +594,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategy DAG` _(keep)_
 
 **Consolidated rationale:** Adopted from probabilistic graphical models. Defenders argue both halves carry load: 'strategy' for $\Sigma_t$ the state object, 'DAG' for the structural representation (acyclicity from temporal ordering, Markov from CMC). The acronym 'DAG' is pronounceable, field-standard, and used as a noun in graphical-models prose. The slug is referenced by name in many downstream segments, so renaming carries cascading editorial cost for negligible gain. Paraphrases ('strategy graph', 'strategy structure', 'agent's strategic causal model') appear in prose; canonicalization commits to the established form.
+
+**Canonicalize provenance:** excavated — 'strategy DAG' appears in `#def-strategy-dag` prose (5 occurrences) (also in 35 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -597,7 +621,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-chain-confidence-decay` (Section II; depends on `#def-strategy-dimension`). First formal derivation; Confidence in a multi-step strategy decays monotonically with depth.
 **Segment link:** [01-aad-core/src/der-chain-confidence-decay.md](../01-aad-core/src/der-chain-confidence-decay.md)
 
 | candidate | weight | category mix |
@@ -608,6 +632,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `chain confidence decay` _(keep)_
 
 **Consolidated rationale:** Self-descriptive compound naming the phenomenon (log-confidence is additive in chain depth, so aggregate confidence decays monotonically with depth). The defense is that the name names the phenomenon, not the proof — readers can paraphrase 'as chain depth grows, confidence decays' aloud. The segment is the structural anchor for the additive-coordinate-forcing meta-pattern (chain-rule identity → three downstream uniqueness theorems), so the name carries weight beyond its own segment.
+
+**Canonicalize provenance:** excavated — 'chain confidence decay' appears in `#der-chain-confidence-decay` prose (3 occurrences) (also in 13 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -639,7 +665,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-persistence-condition` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#result-sector-condition-stability` (+1 more)). First formal result; An agent persists when two independent conditions hold: the correction machinery can contain mismatch within its operating region (*structural persistence*), and the resulting steady-state mismatch is….
 **Segment link:** [01-aad-core/src/result-persistence-condition.md](../01-aad-core/src/result-persistence-condition.md)
 
 | candidate | weight | category mix |
@@ -651,6 +677,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `persistence condition` _(keep)_
 
 **Consolidated rationale:** The framework's central inequality ($\alpha R \gt \rho$). Defenders cite three reasons to keep: it is canonical across adjacent fields (Lyapunov stability, RL viability, organizational persistence, software maintenance) so the baggage transfers; it is referenced throughout the codebase, making a rename expensive in editorial work; and the segment carries the canonical bathtub gloss in its Findings section, which is built on this name. Occasional paraphrases ('persistence criterion', 'adaptive persistence condition', 'the alpha-greater-than-rho-over-R condition') need standardizing on this canonical form.
+
+**Canonicalize provenance:** excavated — 'persistence condition' appears in `#result-persistence-condition` prose (8 occurrences) (also in 53 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -691,7 +719,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-logogenic-agent` (Logogenic; depends on `#def-agent-spectrum`, `#form-complete-agent-state`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language.
 **Segment link:** [03-logogenic-agents/src/scope-logogenic-agent.md](../03-logogenic-agents/src/scope-logogenic-agent.md)
 
 | candidate | weight | category mix |
@@ -703,6 +731,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `logogenic agent` _(keep)_
 
 **Consolidated rationale:** A deliberately coined Greek-rooted term for language-constituted agents. The case for keeping is twofold: the term names a structural channel property (constituted-by-language) rather than a transient implementation technology, so it survives the LLM era; and it sits within the Greek-vocabulary register the framework deliberately maintains (chronica, prolepsis, aisthesis, etc.). The contrast with 'LLM-based agent' or 'language-based agent' is load-bearing: those are instantiation-level descriptions; logogenic is the architectural concept. Pairs with moral-continuity (logozoetic) cleanly.
+
+**Canonicalize provenance:** excavated — 'logogenic agent' appears in `#scope-logogenic-agent` prose (4 occurrences) (also in 11 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -718,6 +748,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Section III logogenic agent`
 
 **Consolidated rationale:** Standardizes section hierarchy.
+
+**Canonicalize provenance:** invented — phrase 'Section III logogenic agent' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -738,7 +770,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-symbiogenic-composition` (Section III; depends on `#scope-composite-agent`, `#form-objective-functional`, `#def-strategy-dimension` (+1 more)). Hypothesis stated; Symbiogenesis is an asymmetric composition mechanism in which one agent (the *host*) integrates another (the *endosymbiont*) as a specialized sub-component, with the endosymbiont's objective gradually….
 **Segment link:** [01-aad-core/src/hyp-symbiogenic-composition.md](../01-aad-core/src/hyp-symbiogenic-composition.md)
 
 | candidate | weight | category mix |
@@ -750,6 +782,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `symbiogenic composition` _(keep)_
 
 **Consolidated rationale:** Adopted from biology (Margulis, endosymbiotic-theory lineage). The case for keeping is unusually strong because the borrowed term names the AAD mechanism with precision: 'symbiogenic' means one entity integrating another that formerly had its own autonomy, and the $U_O$-crosses-threshold-from-below mechanism in the segment matches that biological meaning exactly. Defenders flag the high specialist-vocabulary cost (biology readers will recognize it; others may need an explanation) but treat that cost as worth the precision. A rare case where the adopted term *upgrades* the reader's intuition about the formalism rather than just labeling it.
+
+**Canonicalize provenance:** excavated — 'symbiogenic composition' appears in `#hyp-symbiogenic-composition` prose (3 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -788,7 +822,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-additive-coordinate-forcing` (Appendix A; depends on `#der-chain-confidence-decay`, `#deriv-strategy-cost-regret-bound`, `#deriv-edge-update-natural-parameter`). Meta-discussion segment; AAD carries a family of structurally connected uniqueness results in which a coordinate is **forced by a uniqueness theorem operating on an independently-motivated AAD-internal axiom**.
 **Segment link:** [01-aad-core/src/disc-additive-coordinate-forcing.md](../01-aad-core/src/disc-additive-coordinate-forcing.md)
 
 | candidate | weight | category mix |
@@ -808,6 +842,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Forced coordinate`
 
 **Consolidated rationale:** The case rests on scope-honesty for a meta-segment. The current 'additive' qualifier covers three of the four primary instances (chain / divergence / update via Cauchy-FE) but undersells the Čencov / Fisher-metric fourth, which forces coordinates via reparameterization-invariance, not via additivity. The segment itself acknowledges this in the Discussion. 'Forced coordinate' covers both Cauchy-FE and Čencov machineries without overpromising additivity, and the noun form is more memorable than the gerund. Counter-argument from one defender: the noun form is passive — readers may not know what forces them — and the verb form ('forcing') better preserves the process structure. The companion candidate 'coordinate forcing' captures the verb form. The shape of the discussion is verb-form vs. noun-form, with both rejecting 'additive' as under-inclusive.
+
+**Canonicalize provenance:** excavated — 'Forced coordinate' appears in `#disc-additive-coordinate-forcing` prose (1 occurrence) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -844,6 +880,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** An alternative rename argued for on the grounds that the broader discipline being named is uniqueness — a uniqueness theorem applied to an AAD-internal axiom — not additivity alone. More precise on the mechanism shared across all four instances. Counter-arguments: more abstract than the current name; less memorable than 'forced coordinates'; reads as a category label rather than a concept name; less smooth to say. Considered an honest alternative if 'forced coordinates' doesn't land but a weaker first choice.
 
+**Canonicalize provenance:** invented — phrase 'Uniqueness coordinate forcing' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-1** -1 (rename) — More abstract than the current name and less memorable than "forced coordinates." It sounds like a category label, not a concept people will use.
@@ -863,6 +901,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `additive coordinate forcing` _(keep)_
 
 **Consolidated rationale:** Hedged keep. The "additive" emphasis correctly highlights three of four instances (Cauchy-FE log-additive). The Čencov fourth instance diverges on sub-structure (Riemannian metric rather than log coordinate) but shares broader discipline. Current name acceptably descriptive; slight rename might clarify uniqueness-theorem focus. (See weak alternative below.).
+
+**Canonicalize provenance:** excavated — 'additive coordinate forcing' appears in `#disc-additive-coordinate-forcing` prose (2 occurrences) (also in 20 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -930,7 +970,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-sector-persistence-template` (Appendix A; depends on `#deriv-sector-condition`). First formal result; Any state variable evolving under bounded-correction dynamics with bounded disturbance admits the same Lyapunov persistence argument.
 **Segment link:** [01-aad-core/src/result-sector-persistence-template.md](../01-aad-core/src/result-sector-persistence-template.md)
 
 | candidate | weight | category mix |
@@ -942,6 +982,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `sector persistence template` _(keep)_
 
 **Consolidated rationale:** Names the abstract Lyapunov-on-sector-bounded-correction pattern that six AAD results instantiate. The argument is that 'template' is the precise AAD term — it is not a metaphor; the segment is invoked across many other segments as a template, with each instantiation specifying its own state variable and disturbance rate. 'Sector' distinguishes it from contraction-based persistence variants. Long but structurally honest; shortening would erase which persistence machinery is in play.
+
+**Canonicalize provenance:** excavated — 'sector persistence template' appears in `#result-sector-persistence-template` prose (2 occurrences) (also in 21 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -981,7 +1023,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#post-temporal-optimality` (TST; no upstream dependencies). Foundational postulate; Among agents achieving identical outcomes across all non-temporal dimensions, the one requiring least time is optimal.
 **Segment link:** [02-tst-core/src/post-temporal-optimality.md](../02-tst-core/src/post-temporal-optimality.md)
 
 | candidate | weight | category mix |
@@ -991,6 +1033,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `temporal optimality` _(keep)_
 
 **Consolidated rationale:** TST's foundational normative postulate: among equivalent outcomes, least-time is preferred. Defenders describe it as theorem-target-shaped — short, forceful, memorable — rather than slogan-shaped. The argument for keeping is that the postulate is the foundational normative principle of TST and the name foregrounds the time dimension that AAD's descriptive grounding (via persistence) makes load-bearing. Renaming would weaken a well-established prior commitment carried over from the TST corpus.
+
+**Canonicalize provenance:** excavated — 'temporal optimality' appears in `#post-temporal-optimality` prose (4 occurrences) (also in 12 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1010,7 +1054,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-adversarial-destabilization` (Section III; depends on `#result-sector-condition-stability`, `#deriv-sector-condition`, `#result-sector-persistence-template` (+1 more)). First formal derivation; When two agents are coupled such that one's praxis contributes to the other's disturbance rate, the faster agent can generate aporia in the target faster than the target's epistrophe can resolve it —….
 **Segment link:** [01-aad-core/src/der-adversarial-destabilization.md](../01-aad-core/src/der-adversarial-destabilization.md)
 
 | candidate | weight | category mix |
@@ -1020,6 +1064,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `adversarial destabilization` _(keep)_
 
 **Consolidated rationale:** The cooperative/adversarial complement to team-persistence. The case for keeping centers on the word 'destabilization' itself: it signals direction (outward from the bounded region) where neutral words like 'dynamics' would not. Pairs naturally with the OODA 'inside the opponent's loop' framing that the segment articulates. The 'effects spiral' sub-result is handled adequately by Discussion mention without renaming.
+
+**Canonicalize provenance:** excavated — 'adversarial destabilization' appears in `#der-adversarial-destabilization` prose (2 occurrences) (also in 17 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1040,7 +1086,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-agent-spectrum` (Section II; depends on `#def-agent-environment`, `#form-agent-model`). First formal definition; Two independent dimensions — model richness and objective richness — create a spectrum from reactive systems through purposeful agents. These are regions of a continuum, not discrete categories.
 **Segment link:** [01-aad-core/src/def-agent-spectrum.md](../01-aad-core/src/def-agent-spectrum.md)
 
 | candidate | weight | category mix |
@@ -1052,6 +1098,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `agent spectrum` _(keep)_
 
 **Consolidated rationale:** Names the ±model × ±objective 2×2 picture. The defense centers on 'spectrum' being accurate: the segment explicitly treats the four corners as continuous regions, not discrete categories, so 'quadrants' or 'partition' or 'typology' would mis-describe what the segment is doing. Considered alternatives ('agent quadrants', 'agent types-partition', 'agent classification') were judged worse on this exact dimension. Variants in prose ('agent quadrant', 'agent typology', 'agent classification') need standardizing on the canonical form.
+
+**Canonicalize provenance:** excavated — 'agent spectrum' appears in `#def-agent-spectrum` prose (2 occurrences) (also in 6 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1111,6 +1159,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names what the structure *does* (paths become epistemically dead — no signal can reach them) rather than what it *is* (a subgraph that happens to be unobservable). The case rests on geometric-and-operational compounding: 'dead zone' is geometric (a region of the DAG) and operational (no signal reaches it). Pairs with #observability-dominance and #identifiability-floor as a trio of locality / dynamics / structure descriptors of the same phenomenon. Stronger than alternatives like 'unobservable strategy subgraph' (descriptive but inert) or 'epistemic death' (overloaded by the gain-collapse failure mode).
 
+**Canonicalize provenance:** invented — phrase 'Epistemic dead zone' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (name-unnamed) — Better than observability dead zone: it names the consequence, not only the cause. [original phrasing: unobservable strategy subgraph]
@@ -1125,6 +1175,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Unobservable strategy subgraph`
 
 **Consolidated rationale:** Identifies the geometric cause of the epistemic dead zone.
+
+**Canonicalize provenance:** invented — phrase 'Unobservable strategy subgraph' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -1194,7 +1246,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-separability-pattern` (Appendix A; deep dependency cone (8 upstream segments incl. `#def-strategy-dag`, `#def-value-object`)). Meta-discussion segment; AAD consistently runs a three-part epistemic posture across state spaces that admit no tractable exact treatment in general: name the **separable core** where identification is clean, name the….
 **Segment link:** [01-aad-core/src/disc-separability-pattern.md](../01-aad-core/src/disc-separability-pattern.md)
 
 | candidate | weight | category mix |
@@ -1210,6 +1262,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Separability ladder`
 
 **Consolidated rationale:** The case rests on the segment's own organizing structure: the meta-segment is a seven-row *ladder* (separable-core / structured-repair / general-open across seven axes of increasing difficulty), and the Brief, Discussion, and cross-citations all reach for 'ladder' or 'rungs' as the unit. 'Pattern' is generic filler that describes no specific structure; 'ladder' is the geometry the content actually has. Pairs mnemonically with #identifiability-floor ('the ladder above the floor'). Counter-argument from one defender: the rename would churn cross-references, but the segment itself already says 'six ladders' in prose, so the slug is lagging the prose. 'Staircase' was considered and rejected as whimsical without a precision gain — staircases are uniform, ladders intuitively get harder toward the top.
+
+**Canonicalize provenance:** invented — phrase 'Separability ladder' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -1227,6 +1281,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `separability pattern` _(keep)_
 
 **Consolidated rationale:** Slightly clinical, but honest about what the segment is doing across multiple ladders. Strong meta-segment name: short, teachable, and faithful to the repeated posture. Load-bearing meta-segment name with evocative three-part structure (separable core / structured repair / general open).
+
+**Canonicalize provenance:** excavated — 'separability pattern' appears in `#disc-separability-pattern` prose (9 occurrences) (also in 9 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1286,7 +1342,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-shared-intent` (Section III; depends on `#def-unity-dimensions`, `#form-information-bottleneck`, `#form-objective-functional`). First formal definition; When sub-agents within a composite must coordinate, they face a communication problem: transmitting the full objective $O_t$ and strategy $\Sigma_t$ is expensive (high bandwidth, high latency), but….
 **Segment link:** [01-aad-core/src/def-shared-intent.md](../01-aad-core/src/def-shared-intent.md)
 
 | candidate | weight | category mix |
@@ -1298,6 +1354,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `shared intent` _(keep)_
 
 **Consolidated rationale:** Maps directly to the Clausewitz / commander's-intent / Auftragstaktik tradition (acknowledged in the segment) and to the IB-compressed cross-agent communication object that the segment formalizes. The name is the operational concept — what gets transmitted between agents — and is distinct from teleological-unity, which is the *measured* alignment property ($U_O = I/H$). Defenders rebut a proposed rename to 'teleological unity' on these grounds: merging the two concepts would erase a useful distinction. The name is established prose vocabulary across the codebase.
+
+**Canonicalize provenance:** excavated — 'shared intent' appears in `#def-shared-intent` prose (7 occurrences) (also in 10 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1349,6 +1407,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The framework name itself, recently renamed (2026-04-16) from Agentic Cycle Theory to resolve a collision with the AI Consciousness Test (Schneider & Turner) in AI welfare literature. The case for keeping centers on rename cost: the rename has been paid, citation velocity is building under the new name, and any fresh alternative would face the same collision-checking burden ACT did. The acknowledged imperfection — 'Actuation' is a slightly weaker fit than 'Adaptation' for what Section II covers (purposeful agency with objectives, not mechanical actuation) — is judged to be cheaper to handle via a Section II preamble clarification than via another framework-level rename.
 
+**Canonicalize provenance:** invented — phrase 'AAD (Adaptation and Actuation Dynamics)' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** +3 (canonicalize) — Recent rename (2026-04-16); further thrash dilutes identity. "Actuation" imperfection is real but a Section II preamble clarification handles it more cheaply than another rename.
@@ -1383,7 +1443,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-adaptive-tempo` (Section I; depends on `#emp-update-gain`, `#form-event-driven-dynamics`). First formal definition; The effective rate at which an agent acquires useful information from its environment — the product of observation frequency and update quality across all channels.
 **Segment link:** [01-aad-core/src/def-adaptive-tempo.md](../01-aad-core/src/def-adaptive-tempo.md)
 
 | candidate | weight | category mix |
@@ -1395,6 +1455,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `adaptive tempo` _(keep)_
 
 **Consolidated rationale:** Names $\mathcal{T} = \sum_k \nu^{(k)} \eta^{(k)\ast}$, the rate-of-useful-info-acquisition quantity. The central argument for the word 'tempo' is that it carries both *rate* and *quality* simultaneously, which is exactly what the formula compounds (rate × quality). The word is underused in the ML literature, which makes it available for AAD to own. Defenders contrast with 'learning rate' (which is $\eta^\ast$, a sub-quantity), 'correction rate', or bare 'tempo'; the canonical form is 'adaptive tempo' bound to $\mathcal{T}$. The Boyd-OODA lineage and the Greek-register fit are secondary supports.
+
+**Canonicalize provenance:** excavated — 'adaptive tempo' appears in `#def-adaptive-tempo` prose (2 occurrences) (also in 31 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1416,6 +1478,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** "Tempo" is a fantastic foundational term.
 
+**Canonicalize provenance:** excavated — 'tempo' appears in `#def-adaptive-tempo` prose (15 occurrences) (also in 69 other segments); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-1** +3 (canonicalize) — "Tempo" is a fantastic foundational term.
@@ -1435,7 +1499,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-agent-opacity` (Section III; deep dependency cone (7 upstream segments incl. `#scope-agent-identity`, `#der-interaction-channel-classification`)). First formal derivation; Alongside AAD's heavily formalized *forward* observation quality (how well the agent sees the world — observation ambiguity, model-class fitness, identifiability floor on what the agent can infer),….
 **Segment link:** [01-aad-core/src/der-agent-opacity.md](../01-aad-core/src/der-agent-opacity.md)
 
 | candidate | weight | category mix |
@@ -1450,6 +1514,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `agent opacity` _(keep)_
 
 **Consolidated rationale:** Adopted from Hafez 2026 ($H_b^{A|B}$, backward predictive uncertainty). The case for keeping is twofold: prior-art-integration convention forbids renaming adopted concepts with proper attribution, and the word 'opacity' carries exactly the right intuition — the dual of observability — for the emitter side. Pairs naturally with 'transparency' as the opposite, with observation-quality $U_o$ as the formal dual, and reads naturally in adversarial contexts ('adversaries want opacity; cooperators want transparency'). The dual framing is load-bearing in Section III.
+
+**Canonicalize provenance:** excavated — 'agent opacity' appears in `#der-agent-opacity` prose (3 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1516,7 +1582,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-causal-information-yield` (Section I; depends on `#def-pearl-causal-hierarchy`, `#der-action-selection`, `#def-mismatch-signal`). First formal definition; Actions don't merely select among outcomes — they produce characteristically different outcome distributions depending on the causal structure.
 **Segment link:** [01-aad-core/src/def-causal-information-yield.md](../01-aad-core/src/def-causal-information-yield.md)
 
 | candidate | weight | category mix |
@@ -1528,6 +1594,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `causal information yield` _(keep)_
 
 **Consolidated rationale:** Three-word noun naming the information gained from causal interventions, with the natural acronym 'CIY' as shorthand. The case for keeping is that the expansion is exact, reusable across exploration / querying / trust, and that the acronym earns its keep because the concept recurs widely in the framework. The currently-mixed prose use ('CIY' in some places, 'Causal Information Yield' in others) needs standardizing — the full form should be canonical in prose, the acronym a shorthand only.
+
+**Canonicalize provenance:** excavated — 'causal information yield' appears in `#def-causal-information-yield` prose (3 occurrences) (also in 16 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1567,7 +1635,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-composition-closure` (Section III; deep dependency cone (9 upstream segments incl. `#post-composition-consistency`, `#scope-composite-agent`)). Formal model first introduced; We define a group of interacting agents as a valid composite macro-agent when its closed-loop dynamics approximately commute with coarse-graining — that is, when projecting micro-states to….
 **Segment link:** [01-aad-core/src/form-composition-closure.md](../01-aad-core/src/form-composition-closure.md)
 
 | candidate | weight | category mix |
@@ -1580,6 +1648,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `composition closure` _(keep)_
 
 **Consolidated rationale:** Names the formulation that makes valid composite-agent status testable via the closure-defect $\varepsilon^\ast$. Defenders judge 'closure' technically precise (in the mathematical sense — does the operation stay within the set?) and the compound 'composition closure' tightly bound to the segment's content. A possible alternative — renaming to '#form-closure-defect' to foreground the central quantity — was considered, but the current name keeps the conceptual move audible and the closure-defect lives downstream. Mild concern noted that 'closure' has different connotations to readers from a software background, which slightly lowers the keep-confidence.
+
+**Canonicalize provenance:** excavated — 'composition closure' appears in `#form-composition-closure` prose (6 occurrences) (also in 22 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1626,7 +1696,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-auftragstaktik-principle` (Section III; depends on `#def-shared-intent`, `#def-unity-dimensions`, `#def-adaptive-tempo`). Hypothesis stated; For a composite agent with limited communication bandwidth, the optimal allocation prioritizes sharing objectives over strategies over models.
 **Segment link:** [01-aad-core/src/hyp-auftragstaktik-principle.md](../01-aad-core/src/hyp-auftragstaktik-principle.md)
 
 | candidate | weight | category mix |
@@ -1643,6 +1713,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `auftragstaktik principle` _(keep)_
 
 **Consolidated rationale:** Load-bearing term from specific historical tradition; the reader who knows it gets the full intended intuition. Good prior art integration. Prioritize objective sharing.
+
+**Canonicalize provenance:** excavated — 'auftragstaktik principle' appears in `#hyp-auftragstaktik-principle` prose (2 occurrences) (also in 1 other segment); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1719,7 +1791,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-communication-gain` (Section III; depends on `#emp-update-gain`, `#scope-multi-agent`). Hypothesis stated; When an agent incorporates information from another agent (rather than from direct observation), the optimal update gain extends the uncertainty ratio with additional terms for source quality and….
 **Segment link:** [01-aad-core/src/hyp-communication-gain.md](../01-aad-core/src/hyp-communication-gain.md)
 
 | candidate | weight | category mix |
@@ -1731,6 +1803,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `communication gain` _(keep)_
 
 **Consolidated rationale:** Direct analog of update-gain for inter-agent channels. The case for keeping rests on the parallel structure: AAD's gain-principle pattern instantiates uniformly across self ($\eta^\ast$ = update gain), inter-agent (communication gain), and possibly other channels, so the parallel naming is itself pedagogical. Defenders rebut 'trust gain' on the grounds that trust is a *component* of communication gain (the trust-weighted uncertainty ratio), not the whole quantity, and that the rename would break the update-gain parallel.
+
+**Canonicalize provenance:** excavated — 'communication gain' appears in `#hyp-communication-gain` prose (3 occurrences) (also in 7 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1757,6 +1831,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Argument for: the formal definition is the trust-weighted uncertainty ratio, so 'trust gain' is more evocative of the inter-agent dynamic than the clinical 'communication gain'. Counter-argument: trust is a *component* of communication gain, not the whole quantity; renaming would break the parallel with update-gain and overcommit to one ingredient over the compound.
 
+**Canonicalize provenance:** invented — phrase 'Trust gain' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** -1 (rename) — Trust is a component of communication gain, not the whole quantity. The current name preserves the update-gain parallel.
@@ -1770,7 +1846,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#obs-context-turnover` (Logogenic; depends on `#scope-logogenic-agent`, `#def-chronica`, `#result-persistence-condition` (+1 more)). Observation; At every session boundary, the LLM-based agent's context window is cleared. The chronica $\mathcal C_t$ is severed — no internal state carries over.
 **Segment link:** [03-logogenic-agents/src/obs-context-turnover.md](../03-logogenic-agents/src/obs-context-turnover.md)
 
 | candidate | weight | category mix |
@@ -1781,6 +1857,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `context turnover` _(keep)_
 
 **Consolidated rationale:** Excellent name: short, accurate, and immediately legible to anyone who has worked with LLM agents. Very strong name: immediate intuition, no wasted motion. Strong, concrete logogenic observation.
+
+**Canonicalize provenance:** excavated — 'context turnover' appears in `#obs-context-turnover` prose (2 occurrences) (also in 12 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1807,7 +1885,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-contraction-template` (Appendix A; depends on `#result-sector-persistence-template`, `#deriv-sector-condition`, `#der-gain-sector-bridge` (+3 more)). First formal result; `#result-sector-persistence-template` states AAD's persistence arguments with a Euclidean sector condition (T2) matched to a quadratic Lyapunov in Euclidean norm.
 **Segment link:** [01-aad-core/src/result-contraction-template.md](../01-aad-core/src/result-contraction-template.md)
 
 | candidate | weight | category mix |
@@ -1818,6 +1896,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `contraction template` _(keep)_
 
 **Consolidated rationale:** Crisp and broad enough to survive later reuse. Contraction-metric generalization of #sector-persistence-template. Keep.
+
+**Canonicalize provenance:** excavated — 'contraction template' appears in `#result-contraction-template` prose (12 occurrences) (also in 10 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1844,7 +1924,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-deliberation-cost` (Section I; depends on `#der-action-selection`, `#emp-update-gain`, `#def-adaptive-tempo` (+1 more)). First formal derivation; Explicit deliberation improves action quality by using the model for internal simulation before acting — pausing praxis to improve upcoming epistrophe.
 **Segment link:** [01-aad-core/src/der-deliberation-cost.md](../01-aad-core/src/der-deliberation-cost.md)
 
 | candidate | weight | category mix |
@@ -1858,6 +1938,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `deliberation cost` _(keep)_
 
 **Consolidated rationale:** Names the think-versus-act tradeoff under mismatch drift. The case for keeping is that 'cost' signals the tradeoff cleanly and pairs with the discussion segment `#disc-exploit-explore-deliberate` to form a clean two-segment naming compound. The phrase reads naturally as cost-benefit and is the formal penalty assessed against $\mathcal{T}_\Sigma$.
+
+**Canonicalize provenance:** excavated — 'deliberation cost' appears in `#der-deliberation-cost` prose (2 occurrences) (also in 10 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1910,7 +1992,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-observability-dominance` (Section II; depends on `#def-strategy-dag`, `#emp-update-gain`). First formal derivation; Unobservable strategy edges cannot be updated — the gain principle drives their update rate to zero.
 **Segment link:** [01-aad-core/src/der-observability-dominance.md](../01-aad-core/src/der-observability-dominance.md)
 
 | candidate | weight | category mix |
@@ -1921,6 +2003,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `observability dominance` _(keep)_
 
 **Consolidated rationale:** Names the derived claim that unobservable strategy edges are epistemically dead — the gain principle dominates the edge update when observability is low — regardless of nominal confidence. Defenders treat 'dominance' as technically precise (information-theoretic dominance) and the two-word phrase as memorable. The Discussion's absorbing-state analysis is what makes the name feel exactly right; the LEXICON 'Terms to Be Added' entry anticipates the segment promotion.
+
+**Canonicalize provenance:** excavated — 'observability dominance' appears in `#der-observability-dominance` prose (3 occurrences) (also in 11 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1951,7 +2035,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-pearl-causal-hierarchy` (Section I; depends on `#post-causal-structure`, `#scope-agency`). First formal definition; Three levels of causal reasoning emerge from the causal structure of the feedback loop: association ("what if I observe?"), intervention ("what if I do?"), and counterfactual ("what if I had done….
 **Segment link:** [01-aad-core/src/def-pearl-causal-hierarchy.md](../01-aad-core/src/def-pearl-causal-hierarchy.md)
 
 | candidate | weight | category mix |
@@ -1963,6 +2047,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Pearl causal hierarchy` _(keep)_
 
 **Consolidated rationale:** Adopted directly from Pearl with proper attribution. The case for keeping is the prior-art-integration convention: adopted external concepts retain attribution; renaming would lose provenance and create NIH-syndrome alternatives. The proper-noun form ('Pearl's causal hierarchy') is the field-standard name. Distinguishes Pearl's L0/L1/L2 hierarchy cleanly from AAD's *internal* correlation hierarchy and convention hierarchy, both of which the framework owns separately.
+
+**Canonicalize provenance:** excavated — 'Pearl causal hierarchy' appears in `#def-pearl-causal-hierarchy` prose (1 occurrence) (also in 13 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -1980,6 +2066,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Causal hierarchy level`
 
 **Consolidated rationale:** Standardizing Pearl's nomenclature within AAD.
+
+**Canonicalize provenance:** invented — phrase 'Causal hierarchy level' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -2000,7 +2088,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-team-persistence` (Section III; depends on `#result-persistence-condition`, `#result-sector-condition-stability`, `#result-sector-persistence-template` (+2 more)). First formal derivation; Teams persist where individuals cannot through two physically distinct cooperative mechanisms: communication (allies share observations that improve correction) and action (allies act in the shared….
 **Segment link:** [01-aad-core/src/der-team-persistence.md](../01-aad-core/src/der-team-persistence.md)
 
 | candidate | weight | category mix |
@@ -2010,6 +2098,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `team persistence` _(keep)_
 
 **Consolidated rationale:** The cooperative composite analog of persistence-condition. The case for keeping is that 'team persistence' is plain English for what the derivation actually is (cooperative composite sector condition) and parallels the persistence-condition naming consistently. Reads as 'what makes a team persist' — self-descriptive at the right level of abstraction for a multi-agent claim.
+
+**Canonicalize provenance:** excavated — 'team persistence' appears in `#der-team-persistence` prose (4 occurrences) (also in 20 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2029,7 +2119,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-credit-assignment-boundary` (Section II; deep dependency cone (7 upstream segments incl. `#def-strategy-dag`, `#hyp-edge-update-via-gain`)). Meta-discussion segment; The strategy-revision loop requires assigning credit for observed outcomes to specific edges in the strategy DAG — decomposing "the plan partially worked" into "step 3 failed, step 5 was irrelevant,….
 **Segment link:** [01-aad-core/src/disc-credit-assignment-boundary.md](../01-aad-core/src/disc-credit-assignment-boundary.md)
 
 | candidate | weight | category mix |
@@ -2040,6 +2130,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `credit assignment boundary` _(keep)_
 
 **Consolidated rationale:** Strong name for the tractability frontier in strategy DAG updates. Clearly delineates tractable from intractable. Important concept.
+
+**Canonicalize provenance:** excavated — 'credit assignment boundary' appears in `#disc-credit-assignment-boundary` prose (1 occurrence) (also in 14 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2054,6 +2146,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Credit assignment frontier`
 
 **Consolidated rationale:** Distinct from the slug — in prose the segment is sometimes referenced as "the credit-assignment problem" or "the tractable/intractable boundary" or "the attribution boundary." Standardize on "credit-assignment boundary" everywhere; do not paraphrase. Slug stays as-is.
+
+**Canonicalize provenance:** invented — phrase 'Credit assignment frontier' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -2079,6 +2173,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Hyphen-heavy, but uniquely exact. Strong internal principle name; it sounds like a thesis, not a slogan. Hyphen-heavy but exact.
 
+**Canonicalize provenance:** invented — phrase 'honesty as architecture' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-1** +1 (canonicalize) — Hyphen-heavy, but uniquely exact. The phrase says the limits are part of the construction, not editorial cleanup.
@@ -2092,6 +2188,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Honesty`
 
 **Consolidated rationale:** "Scope-honesty-as-architecture" is the CLAUDE.md §7 label. Prose uses "scope honesty," "honest scope," and "scope-honesty commitment" variably. Standardize on "scope honesty" as the two-word prose form; "scope-honesty" as the slug or hyphenated compound.
+
+**Canonicalize provenance:** excavated — 'Honesty' appears in 10 segments incl. `#disc-identifiability-floor` prose (23 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2112,7 +2210,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-approximation-tiering` (Appendix A; depends on `#def-strategy-dag`, `#def-value-object`, `#form-composition-closure`). Meta-discussion segment; AAD uses a recurring meta-pattern for handling intractability: when a problem admits no tractable exact treatment in general, introduce a tiered hierarchy of approximations with proved monotonicity….
 **Segment link:** [01-aad-core/src/disc-approximation-tiering.md](../01-aad-core/src/disc-approximation-tiering.md)
 
 | candidate | weight | category mix |
@@ -2127,6 +2225,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `approximation tiering` _(keep)_
 
 **Consolidated rationale:** Names the meta-pattern for tractability-indexed hierarchies (L0/L1/L2; C1/C2/C3; Tier 1/2/3). The case for keeping is that 'tiering' is precise — it names the operation (creating tiers under monotonicity) rather than just the result (tiers) — and avoids the 'hierarchy' overload that already crowds the framework. The four-component (AT1)–(AT4) structure is genuinely a tiering, not a continuum or a hierarchy; #disc-graceful-degradation was considered as an alternative but graceful-degradation is one property of the tiering, not the whole pattern.
+
+**Canonicalize provenance:** excavated — 'approximation tiering' appears in `#disc-approximation-tiering` prose (6 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2211,6 +2311,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Strong unifying name for dogmatism-like and nihilism-like failures of update gain. The shared mathematical mechanism for dogmatism and nihilism. Defended canonicalization of the exact AAD mechanism for this freeze.
 
+**Canonicalize provenance:** excavated — 'Gain collapse' appears in 5 segments incl. `#deriv-strategic-dynamics` prose (11 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (name-unnamed) — Strong unifying name for dogmatism-like and nihilism-like failures of update gain. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
@@ -2224,6 +2326,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the state where $U_M \to 0$ without a noise injection term. Names the state where update stops purely from objective certainty.
 
+**Canonicalize provenance:** invented — phrase 'Dogmatic convergence limit' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Names the state where $U_M \to 0$ without a noise injection term. [original phrasing: unnamed the mathematical limit of bayesian learning without forgetting]
@@ -2232,6 +2336,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Epistemic gain collapse`
 
 **Consolidated rationale:** Already heavily referenced as "gain collapse". Unifies this with the generic gain collapse terminology.
+
+**Canonicalize provenance:** invented — phrase 'Epistemic gain collapse' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -2242,6 +2348,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Vividly captures the "freeze" aspect where learning stops entirely despite ongoing mismatch signals. Identifies the specific double-failure mode of gain collapse.
 
+**Canonicalize provenance:** invented — phrase 'Epistemic gridlock' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (add-alias) — Vividly captures the "freeze" aspect where learning stops entirely despite ongoing mismatch signals. [original phrasing: unnamed the gain collapse failure when both u m → 0 and u o → ∞]
@@ -2250,6 +2358,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Stability-induced myopia`
 
 **Consolidated rationale:** Retains the descriptive alias for success-driven failure.
+
+**Canonicalize provenance:** excavated — 'Stability-induced myopia' appears in 3 segments incl. `#deriv-detection-latency` prose (6 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2307,6 +2417,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The current is a description; the segment's actual phenomenon-name (per `#emp-update-gain` and `#disc-identifiability-floor`) is the gain-collapse dynamic when $U_M \to 0$ or $U_o \to \infty$. "Learning freeze" is the phenomenon; the rest is the disambiguation. Canonicalize to the noun-phrase form.
 
+**Canonicalize provenance:** invented — phrase 'Learning freeze' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives** +1 (canonicalize) — The current is a description; the segment's actual phenomenon-name (per `#emp-update-gain` and `#disc-identifiability-floor`) is the gain-collapse dynamic when $U_M \to 0$ or $U_o \to \infty$. "Learning freeze" is the phenomenon; the rest is the disambiguation. Canonicalize to the noun-phrase form. [original phrasing: learning freeze from low model uncertainty or high observation uncertainty]
@@ -2326,7 +2438,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-recursive-update` (Section I; depends on `#form-agent-model`, `#form-event-driven-dynamics`, `#deriv-recursive-update`). First formal derivation; Agent state updates (epistrophe — the corrective turning toward reality) must be recursive: the new model state is a function of the previous model state and the incoming event, not of the full….
 **Segment link:** [01-aad-core/src/der-recursive-update.md](../01-aad-core/src/der-recursive-update.md)
 **Manual curation notes:** Concept-name vote → der- (result-statement) segment, not deriv- (appendix derivation). der-recursive-update is the concept being named; deriv-recursive-update is the proof.
 
@@ -2338,6 +2450,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `recursive update` _(keep)_
 
 **Consolidated rationale:** The subject-noun "recursive update" is exact — the derivation forces the update to be recursive. State updates must be recursive. Keep.
+
+**Canonicalize provenance:** excavated — 'recursive update' appears in `#der-recursive-update` prose (5 occurrences) (also in 11 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2364,7 +2478,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-agent-identity` (Section I; depends on `#def-chronica`, `#def-model-sufficiency`). Scope-narrowing first encounter; AAD applies to agents instantiated on singular causal trajectories.
 **Segment link:** [01-aad-core/src/scope-agent-identity.md](../01-aad-core/src/scope-agent-identity.md)
 
 | candidate | weight | category mix |
@@ -2379,6 +2493,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `agent identity` _(keep)_
 
 **Consolidated rationale:** Crucial scope definition. Clean scope statement; the subject-noun is clear. Formal scope claim naming token-level commitment (agents on singular, non-forkable trajectories).
+
+**Canonicalize provenance:** excavated — 'agent identity' appears in `#scope-agent-identity` prose (2 occurrences) (also in 15 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2449,6 +2565,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Cycle-phase Greek vocabulary works aesthetically AND technically. This earns its weight. Memorable, discussable, and conceptually richer than "error" or "mismatch.".
 
+**Canonicalize provenance:** excavated — 'aporia' appears in 5 segments incl. `#def-mismatch-signal` prose (10 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** +3 (canonicalize) — Cycle-phase Greek vocabulary works aesthetically AND technically. The risk is preciousness; the payoff is memorable sequence.
@@ -2498,6 +2616,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Formally identifies the feedback loop between code quality and developer adaptive tempo. Aligns with the previously renamed code-quality dynamic. Standardizes the code-quality feedback loop mechanism.
 
+**Canonicalize provenance:** invented — phrase 'Quality tempo compound effect' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (rename) — Formally identifies the feedback loop between code quality and developer adaptive tempo. [original phrasing: code quality and tempo positive feedback]
@@ -2546,7 +2666,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-consolidation-dynamics` (Section II; deep dependency cone (9 upstream segments incl. `#der-recursive-update`, `#deriv-recursive-update`)). Formal model first introduced; Consolidation is a regime of the between-event dynamics $g_M$ of #der-recursive-update in which the agent applies Markov updates driven by replayed or internally-generated pseudo-events, with….
 **Segment link:** [01-aad-core/src/form-consolidation-dynamics.md](../01-aad-core/src/form-consolidation-dynamics.md)
 
 | candidate | weight | category mix |
@@ -2557,6 +2677,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `consolidation dynamics` _(keep)_
 
 **Consolidated rationale:** Names the offline regime of $g_M$ (replay-driven model tightening). The case for keeping is that 'consolidation' imports the neuroscience baggage (memory consolidation, stability-plasticity) that's precisely what the segment is formalizing — engineering vocabulary that travels well. The dynamics suffix is accurate; the compound is an established lineage cue from the source field. Mild concern noted that the term is slightly clinical, but no obviously better alternative emerged.
+
+**Canonicalize provenance:** excavated — 'consolidation dynamics' appears in `#form-consolidation-dynamics` prose (1 occurrence) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2585,7 +2707,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-critical-mass-composition` (Appendix A; deep dependency cone (8 upstream segments incl. `#form-composition-closure`, `#scope-composite-agent`)). First formal derivation; The composite sector constant $\alpha_c$ is derived — not merely bounded from below — for the symmetric-matched-Tier-1 two-agent case, yielding a closed-form critical-mass inequality in which the sign….
 **Segment link:** [01-aad-core/src/deriv-critical-mass-composition.md](../01-aad-core/src/deriv-critical-mass-composition.md)
 
 | candidate | weight | category mix |
@@ -2596,6 +2718,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `critical mass composition` _(keep)_
 
 **Consolidated rationale:** Vivid and mathematically honest: a threshold at which composition starts to persist. Useful result name for composite persistence thresholds. Physics-borrowed vocabulary; "critical mass" is evocative and memorable.
+
+**Canonicalize provenance:** excavated — 'critical mass composition' appears in `#deriv-critical-mass-composition` prose (1 occurrence) (also in 9 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2621,7 +2745,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-exploit-explore-deliberate` (Section II; depends on `#disc-ciy-unified-objective`, `#der-deliberation-cost`, `#norm-explicit-strategy-condition` (+2 more)). Meta-discussion segment; At each decision point, an actuated agent with explicit strategy $\Sigma_t$ faces a three-way allocation of its finite cycle budget across exploit (take the currently-best action), explore (take an….
 **Segment link:** [01-aad-core/src/disc-exploit-explore-deliberate.md](../01-aad-core/src/disc-exploit-explore-deliberate.md)
 
 | candidate | weight | category mix |
@@ -2634,6 +2758,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `exploit explore deliberate` _(keep)_
 
 **Consolidated rationale:** Third term sits neatly beside two standard-vocabulary terms; reads as extension not reinvention. Three-way exploit/explore/deliberate. Three-way extension of two established terms; reads naturally.
+
+**Canonicalize provenance:** excavated — 'exploit explore deliberate' appears in 6 segments incl. `#deriv-detection-latency` prose (9 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2676,7 +2802,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-gain-sector-bridge` (Section I; depends on `#emp-update-gain`, `#def-mismatch-signal`, `#deriv-sector-condition` (+1 more)). First formal derivation; The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at….
 **Segment link:** [01-aad-core/src/der-gain-sector-bridge.md](../01-aad-core/src/der-gain-sector-bridge.md)
 
 | candidate | weight | category mix |
@@ -2689,6 +2815,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `gain sector bridge` _(keep)_
 
 **Consolidated rationale:** Technical-clinical but does the job. Good name for a bridge concept. The "bridge" metaphor is apt (connecting two mathematical regimes).
+
+**Canonicalize provenance:** excavated — 'gain sector bridge' appears in `#der-gain-sector-bridge` prose (1 occurrence) (also in 23 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2731,7 +2859,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-loop-interventional-access` (Section II; depends on `#der-causal-hierarchy-requirement`, `#der-recursive-update`, `#post-causal-structure` (+1 more)). First formal derivation; An agent in the feedback loop generates interventional data by construction: the agent's action $a_t$ causally precedes the next observation $o_{t+1}$, and the mismatch conditioned on $a_t$ carries….
 **Segment link:** [01-aad-core/src/der-loop-interventional-access.md](../01-aad-core/src/der-loop-interventional-access.md)
 
 | candidate | weight | category mix |
@@ -2752,6 +2880,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the distinctive Pearl-Level-2-by-construction property: the feedback loop provides Level-2 (interventional) data by construction, which is the escape route from the on-policy causal-confounding problem. Defenders argue the phrase 'loop interventional access' lands in one read and the concept has no shorter form without loss. Specialist but precise — it names *where* the intervention happens (within the feedback loop) and is load-bearing for both #identifiability-floor and #agent-identity. Mild concern noted that the name is a mouthful for conversation; an informal short form ('the loop's Level-2 access', 'loop as Level 2 engine') is acceptable.
 
+**Canonicalize provenance:** excavated — 'loop interventional access' appears in `#der-loop-interventional-access` prose (4 occurrences) (also in 12 other segments); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good name for action-generated Level-2 data.
@@ -2770,6 +2900,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Interventional loop property`
 
 **Consolidated rationale:** Solidifies the mechanism upgrading L1 to L2.
+
+**Canonicalize provenance:** invented — phrase 'Interventional loop property' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -2835,6 +2967,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Brief-grade framing observation. The slug-grade name `der-loop-interventional-access` is fine; for *framing-level* material, "the perpetual experiment" (from the segment's own Discussion) is the most evocative — captures both the interventional character and the continuous nature.
 
+**Canonicalize provenance:** invented — phrase 'The perpetual experiment' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **audit-471203-incremental** +1 (canonicalize) — Brief-grade framing observation. The slug-grade name `der-loop-interventional-access` is fine; for *framing-level* material, "the perpetual experiment" (from the segment's own Discussion) is the most evocative — captures both the interventional character and the continuous nature. [from 35-38-section-ii-value-strategy-causal-loop.md]
@@ -2854,7 +2988,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-adversarial-tempo-advantage` (Section III; depends on `#hyp-mismatch-dynamics`, `#der-adversarial-destabilization`, `#result-persistence-condition`). First formal result; Under adversarial coupling where one agent's actions contribute to the other's disturbance rate, the steady-state mismatch ratio scales superlinearly with the tempo ratio.
 **Segment link:** [01-aad-core/src/result-adversarial-tempo-advantage.md](../01-aad-core/src/result-adversarial-tempo-advantage.md)
 
 | candidate | weight | category mix |
@@ -2866,6 +3000,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `adversarial tempo advantage` _(keep)_
 
 **Consolidated rationale:** Clear and memorable. Keep. Superlinear tempo advantage.
+
+**Canonicalize provenance:** excavated — 'adversarial tempo advantage' appears in `#result-adversarial-tempo-advantage` prose (3 occurrences) (also in 12 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2899,7 +3035,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-atomic-changeset` (TST; depends on `#def-feature`). First formal definition; The complete diff between the codebase state before and after a feature is fully implemented, excluding generated artifacts.
 **Segment link:** [02-tst-core/src/def-atomic-changeset.md](../02-tst-core/src/def-atomic-changeset.md)
 
 | candidate | weight | category mix |
@@ -2909,6 +3045,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `atomic changeset` _(keep)_
 
 **Consolidated rationale:** Not beautiful, but serviceable and honest. Good enough and sayable; "atomic" does real work here. Good software subject noun.
+
+**Canonicalize provenance:** excavated — 'atomic changeset' appears in `#def-atomic-changeset` prose (2 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2927,7 +3065,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-complete-agent-state` (Section II; depends on `#form-agent-model`, `#scope-agency`, `#der-recursive-update`). Formal model first introduced; To treat agents with purpose, the internal state lifts from $M_t$ alone to $X_t = (M_t, G_t)$, separating epistemic content (beliefs about reality) from purposeful content (what the agent wants and….
 **Segment link:** [01-aad-core/src/form-complete-agent-state.md](../01-aad-core/src/form-complete-agent-state.md)
 
 | candidate | weight | category mix |
@@ -2938,6 +3076,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `complete agent state` _(keep)_
 
 **Consolidated rationale:** Functional and clear. Clean algebraic name; the subject-noun "complete agent state" is precise. Canonical formulation — $X_t = (M_t, G_t)$.
+
+**Canonicalize provenance:** excavated — 'complete agent state' appears in `#form-complete-agent-state` prose (3 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -2965,7 +3105,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-detection-latency` (Appendix A; depends on `#deriv-edge-update-natural-parameter`, `#disc-credit-assignment-boundary`, `#schema-strategy-persistence` (+1 more)). First formal derivation; For a Beta-Bernoulli strategy-edge agent without forgetting, the expected number of cycles required to detect a within-class regime change of observable footprint $\varepsilon$ scales as….
 **Segment link:** [01-aad-core/src/deriv-detection-latency.md](../01-aad-core/src/deriv-detection-latency.md)
 
 | candidate | weight | category mix |
@@ -2975,6 +3115,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `detection latency` _(keep)_
 
 **Consolidated rationale:** Ω((n_min+1)/ε) bound on within-class regime-change detection. Keep. Standard term, forced by the $\Omega((n_{\min}+1)/\varepsilon)$ bound; the segment's novel content is that latency is structurally forced through the log-odds coordinate.
+
+**Canonicalize provenance:** excavated — 'detection latency' appears in `#deriv-detection-latency` prose (23 occurrences) (also in 1 other segment); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3004,6 +3146,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Deliberate neologisms filling memorable-noun slots; keep. Deliberate neologisms holding reserved memorable-noun slots. Defended keep — both are deliberate Greek-rooted naming choices that survive the communal-imagination test once explained, and CLAUDE.md's Greek-vocabulary commitment names them as the canonical aesthetic register.
 
+**Canonicalize provenance:** invented — phrase 'logogenic logozoetic' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-1m** +3 (canonicalize) — Deliberate neologisms filling memorable-noun slots; keep.
@@ -3015,6 +3159,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Logogenic logozoetic distinction`
 
 **Consolidated rationale:** Essential dividing line in architectural complexity.
+
+**Canonicalize provenance:** invented — phrase 'Logogenic logozoetic distinction' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -3035,7 +3181,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#post-composition-consistency` (Section I; depends on `#scope-agency`). Foundational postulate; AAD's predictions must be compatible across levels of description.
 **Segment link:** [01-aad-core/src/post-composition-consistency.md](../01-aad-core/src/post-composition-consistency.md)
 
 | candidate | weight | category mix |
@@ -3049,6 +3195,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `composition consistency` _(keep)_
 
 **Consolidated rationale:** The postulate's subject-noun is clear and adequate. Load-bearing postulate: agent/subagent scale invariance. Keep.
+
+**Canonicalize provenance:** excavated — 'composition consistency' appears in `#post-composition-consistency` prose (7 occurrences) (also in 8 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3111,6 +3259,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Plain but serviceable. Good enough and scope-honest. Shared IB shape across M_t, Σ_t, shared intent, Λ.
 
+**Canonicalize provenance:** excavated — 'compression operation' appears in `#disc-compression-operations` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Plain but serviceable. It is clearer than a Greek replacement would be here.
@@ -3162,6 +3312,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `epistemic architecture` _(keep)_
 
 **Consolidated rationale:** Framing-vocabulary phrase used in CLAUDE.md §7, the README, and OUTLINE.md preambles. The case for canonicalizing centers on positioning: three independent frontier-model audits converged on reframing AAD from 'integration of four disciplines' to 'epistemic architecture for bounded correction' — integration is a method, the contribution is the architecture. Standardizing 'epistemic architecture' as the primary positioning term displaces paraphrases like 'epistemic apparatus' or 'correction architecture'. Important caveat from defenders: this should remain *framing-vocabulary*, not be promoted to a fourth meta-segment alongside the three (identifiability-floor / separability-pattern / additive-coordinate-forcing) that already do the technical work.
+
+**Canonicalize provenance:** invented — phrase 'epistemic architecture' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -3255,6 +3407,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Heavier than "logogenic" but still earns the novelty. Higher novelty cost than "logogenic," but the moral-weighting distinction is real and English alternatives are sloppier. Strong boundary term for living-word or morally continuous agent work.
 
+**Canonicalize provenance:** excavated — 'logozoetic agent' appears in 2 segments incl. `#def-agent-spectrum` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-1** +1 (canonicalize) — Heavier than "logogenic" but still earns the novelty. The existential distinction is real enough to warrant a distinct term.
@@ -3267,6 +3421,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Section IV logozoetic agent`
 
 **Consolidated rationale:** Standardizes section hierarchy.
+
+**Canonicalize provenance:** invented — phrase 'Section IV logozoetic agent' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -3287,7 +3443,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-specification-bound` (TST; depends on `#post-temporal-optimality`, `#def-feature`, `#scope-software`). First formal result; The minimum time to implement a feature is bounded below by the time required to transmit enough information for the implementer to distinguish the intended feature from competing possibilities.
 **Segment link:** [02-tst-core/src/result-specification-bound.md](../02-tst-core/src/result-specification-bound.md)
 
 | candidate | weight | category mix |
@@ -3297,6 +3453,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `specification bound` _(keep)_
 
 **Consolidated rationale:** Strong theorem-style name: short, honest, and portable across prose and examples. Strong and compact; no need to decorate it. Useful TST name for limits imposed by imperfect or incomplete specs.
+
+**Canonicalize provenance:** excavated — 'specification bound' appears in `#result-specification-bound` prose (4 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3328,6 +3486,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Strong central noun phrase: specific enough to own, broad enough to travel across the framework. Strong public noun; it carries both recurrence and unit-of-analysis cleanly. Already well-established across the framework as the fundamental unit of analysis.
 
+**Canonicalize provenance:** excavated — 'adaptive cycle' appears in 2 segments incl. `#hyp-conceptual-alignment` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-1** +3 (canonicalize) — Strong central noun phrase: specific enough to own, broad enough to travel across the framework.
@@ -3339,6 +3499,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `The cycle the adaptive cycle`
 
 **Consolidated rationale:** The five-phase Prolepsis-Aisthesis-Aporia-Epistrophe-Praxis cycle is "the cycle" or "the adaptive cycle" in the LEXICON and NOTATION. The phrase "the agentic cycle" appears occasionally and overlaps with "the cycle" (post-rename, when ACT was the framework name, "the agentic cycle" meant the ACT-cycle). Canonicalize on "the (adaptive) cycle" — drop "agentic cycle" as a synonym.
+
+**Canonicalize provenance:** invented — phrase 'The cycle the adaptive cycle' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -3367,7 +3529,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-conceptual-alignment` (TST; depends on `#def-comprehension-time`, `#der-change-investment`). Hypothesis stated; Comprehension time is inversely related to the alignment between code structure and the current domain model. When code mirrors the domain, the agent's $M_t$ construction is cheaper.
 **Segment link:** [02-tst-core/src/hyp-conceptual-alignment.md](../02-tst-core/src/hyp-conceptual-alignment.md)
 
 | candidate | weight | category mix |
@@ -3377,6 +3539,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `conceptual alignment` _(keep)_
 
 **Consolidated rationale:** Good permanent name. Clear, useful, and broad enough to survive application beyond the immediate segment. Good phrase for code/domain model alignment.
+
+**Canonicalize provenance:** excavated — 'conceptual alignment' appears in `#hyp-conceptual-alignment` prose (3 occurrences) (also in 7 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3394,7 +3558,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-m-preservation` (Logogenic; depends on `#obs-context-turnover`, `#scope-logogenic-agent`, `#result-persistence-condition` (+2 more)). Meta-discussion segment; The 100% context turnover at session boundaries ( #obs-context-turnover) means the LLM agent's epistemic state must be reconstructed from external storage each session.
 **Segment link:** [03-logogenic-agents/src/disc-m-preservation.md](../03-logogenic-agents/src/disc-m-preservation.md)
 
 | candidate | weight | category mix |
@@ -3427,6 +3591,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** "M-preservation" is somewhat opaque without context. But the segment is about preserving $M_t$ across session boundaries for logogenic agents. The notation is compact. Acceptable.
 
+**Canonicalize provenance:** excavated — '$M$ preservation' appears in `#disc-m-preservation` prose (4 occurrences) (also in 9 other segments); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **sonnet-4-6-r2** +1 (canonicalize) — "M-preservation" is somewhat opaque without context. But the segment is about preserving $M_t$ across session boundaries for logogenic agents. The notation is compact. Acceptable.
@@ -3438,7 +3604,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-persistence-cost` (Appendix A; deep dependency cone (8 upstream segments incl. `#result-persistence-condition`, `#result-sector-condition-stability`)). First formal derivation; AAD's persistence machinery establishes that under the sector condition, mismatch stays bounded. It does not quantify the *sustained rate of effort* an agent must expend to hold that bound.
 **Segment link:** [01-aad-core/src/deriv-persistence-cost.md](../01-aad-core/src/deriv-persistence-cost.md)
 
 | candidate | weight | category mix |
@@ -3448,6 +3614,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `persistence cost` _(keep)_
 
 **Consolidated rationale:** Sustained information rate Ṙ ≥ nα/2 nats/time to maintain sector-persistence ultimate bound. Keep. The segment's content is exactly that — information rate required to hold the persistence bound.
+
+**Canonicalize provenance:** excavated — 'persistence cost' appears in `#deriv-persistence-cost` prose (4 occurrences) (also in 2 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3465,7 +3633,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-strategic-calibration` (Section II; depends on `#def-strategy-dag`, `#def-value-object`). First formal definition; The strategic calibration residual measures whether the strategy's causal model is correct: are the edges in $\Sigma_t$ accurate predictors of how much value each step actually produces?.
 **Segment link:** [01-aad-core/src/def-strategic-calibration.md](../01-aad-core/src/def-strategic-calibration.md)
 
 | candidate | weight | category mix |
@@ -3477,6 +3645,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategic calibration` _(keep)_
 
 **Consolidated rationale:** Names the edge-residual aggregate that measures how well the strategy DAG is calibrated. The case for keeping centers on parallel construction with epistemic-calibration from broader literature and on the LEXICON.md prose form. The follow-on alias vote formalizes the symbol+English pair: 'strategic calibration' is the concept-name; the residual aggregate is its measurement. Acceptable but not load-bearing; no strong alternative offered.
+
+**Canonicalize provenance:** excavated — 'strategic calibration' appears in `#def-strategic-calibration` prose (5 occurrences) (also in 12 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3492,6 +3662,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Strategic calibration residual`
 
 **Consolidated rationale:** The body of the segment uses both "strategic calibration residual" and "edge residual aggregate" and "δ_strategic." Canonicalize: in prose, "strategic calibration residual" for the aggregated quantity, "edge residual" for per-edge $r_{ij}$, $\delta_{\text{strategic}}$ for the symbol. Stop using "edge residual aggregate" as a third paraphrase.
+
+**Canonicalize provenance:** excavated — 'Strategic calibration residual' appears in `#def-strategic-calibration` prose (3 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3512,7 +3684,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-strategic-composition` (Section III; deep dependency cone (9 upstream segments incl. `#post-composition-consistency`, `#scope-composite-agent`)). First formal derivation; When two or more AAD agents interact through a shared environment with **partially-opposing objectives** $\{O_t^{(i)}\}$, the composition-level question is not "does the trajectory contract to zero….
 **Segment link:** [01-aad-core/src/deriv-strategic-composition.md](../01-aad-core/src/deriv-strategic-composition.md)
 
 | candidate | weight | category mix |
@@ -3539,6 +3711,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategic composition` _(keep)_
 
 **Consolidated rationale:** Strong family name for equilibrium-convergent partially opposed composites. Consistent with section vocabulary (strategic tempo, strategic calibration). "Strategic" is overloaded in Section III (the strategy DAG, strategic tempo, strategic calibration — all different).
+
+**Canonicalize provenance:** excavated — 'strategic composition' appears in `#deriv-strategic-composition` prose (18 occurrences) (also in 8 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3568,7 +3742,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-strategic-tempo` (Section II; depends on `#def-adaptive-tempo`, `#hyp-edge-update-via-gain`, `#def-strategy-dag` (+2 more)). First formal definition; The effective rate at which an agent acquires useful revisions to its strategy $\Sigma_t$ --- the sum of per-edge correction capacities across the strategy DAG, weighted by each edge's causal….
 **Segment link:** [01-aad-core/src/def-strategic-tempo.md](../01-aad-core/src/def-strategic-tempo.md)
 
 | candidate | weight | category mix |
@@ -3578,6 +3752,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategic tempo` _(keep)_
 
 **Consolidated rationale:** Direct parallel to adaptive-tempo on the strategy axis. The case for keeping rests on the parallelism itself: an agent's adaptive tempo governs $M_t$-side persistence, its strategic tempo governs $\Sigma_t$-side persistence — the matched pair compounds in prose ('the team has high adaptive tempo but lagging strategic tempo'). Distinguishes strategy-revision rate from epistemic-update rate cleanly.
+
+**Canonicalize provenance:** excavated — 'strategic tempo' appears in `#def-strategic-tempo` prose (7 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3613,6 +3789,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the family of $U_M$, $U_O$, $U_\Sigma$ (and possibly $U_\Pi$ as a fourth candidate under discussion). The case for keeping is that 'unity' is the Clausewitz/Bungay-derived term established across NOTATION.md and the Section III preamble; it captures the coordinating-principle sense. Defenders rebut a proposed rename to 'coherence dimension' on the grounds that 'coherence' is already doing soft duty elsewhere (strategic coherence, epistemic coherence) and the rename would create bleed. 'Unity' implies binary state to some readers; the segment preamble can clarify the dimensional gradient without renaming.
 
+**Canonicalize provenance:** excavated — 'unity dimension' appears in 4 segments incl. `#disc-independence-audit` prose (6 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good umbrella for epistemic, teleological, strategic, perceptual, and structural unity.
@@ -3644,6 +3822,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Coherence dimension`
 
 **Consolidated rationale:** Argument for: 'unity' implies a binary state (unified or not); 'coherence' better suits a continuous gradient. Counter-argument: 'coherence' is already doing soft duty elsewhere (strategic coherence, epistemic coherence) and a rename would bleed into those informal usages. The framework's preference is to keep 'unity' narrow and let segment preambles clarify the dimensional gradient rather than rename to a term already in soft use.
+
+**Canonicalize provenance:** invented — phrase 'Coherence dimension' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -3679,6 +3859,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Two-word symbol-to-English alias for $\Delta\rho^\ast = \alpha R - \rho$. The case for keeping rests on the engineering intuition the term carries: 'reserve' reads as shock-tolerance / shock-absorber-depth / crumple-zone, which is exactly the role $\Delta\rho^\ast$ plays (margin before persistence fails). The compound lands on first read and is already established in NOTATION.md and LEXICON.md. Variants like 'shock tolerance' and 'disturbance margin' need standardizing on this canonical form. One of the project's cleanest symbol-to-English pairs.
 
+**Canonicalize provenance:** excavated — 'adaptive reserve' appears in 12 segments incl. `#deriv-sector-condition` prose (28 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-1** +3 (canonicalize) — Strong engineering noun: it sounds like what it measures and is easy to use in discussion.
@@ -3706,7 +3888,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-agent-environment` (Section I; no upstream dependencies). First formal definition; An agent is an entity that receives observations from an environment, maintains internal state, and produces actions that affect the environment.
 **Segment link:** [01-aad-core/src/def-agent-environment.md](../01-aad-core/src/def-agent-environment.md)
 
 | candidate | weight | category mix |
@@ -3717,6 +3899,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `agent environment` _(keep)_
 
 **Consolidated rationale:** Agent-environment boundary. Keep. Acceptable keep.
+
+**Canonicalize provenance:** excavated — 'agent environment' appears in `#def-agent-environment` prose (4 occurrences) (also in 18 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3741,7 +3925,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#emp-changeset-size-principle` (TST; depends on `#def-atomic-changeset`, `#def-implementation-time`, `#def-comprehension-time`). Empirical claim; Implementation time is proportional to the size of the atomic changeset.
 **Segment link:** [02-tst-core/src/emp-changeset-size-principle.md](../02-tst-core/src/emp-changeset-size-principle.md)
 
 | candidate | weight | category mix |
@@ -3752,6 +3936,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `changeset size principle` _(keep)_
 
 **Consolidated rationale:** Same: precise, memorable, and operational. Keep. Acceptable keep — TST empirical claim.
+
+**Canonicalize provenance:** excavated — 'changeset size principle' appears in `#emp-changeset-size-principle` prose (3 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3776,7 +3962,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-independence-audit` (Appendix A; depends on `#der-directed-separation`, `#def-strategy-dag`, `#def-adaptive-tempo` (+3 more)). Meta-discussion segment; AAD's results depend on a recurring modeling move: treat some quantity as independent of another to obtain tractable mathematics, then identify the failure regime where independence breaks and specify….
 **Segment link:** [01-aad-core/src/disc-independence-audit.md](../01-aad-core/src/disc-independence-audit.md)
 
 | candidate | weight | category mix |
@@ -3787,6 +3973,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `independence audit` _(keep)_
 
 **Consolidated rationale:** Six load-bearing independence assumptions with failure regimes + repairs. Keep. Acceptable keep.
+
+**Canonicalize provenance:** excavated — 'independence audit' appears in `#disc-independence-audit` prose (2 occurrences) (also in 2 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3812,7 +4000,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-mismatch-signal` (Section I; depends on `#form-agent-model`, `#def-observation-function`, `#def-action-transition`). First formal definition; The discrepancy between the model's prediction and the actual observation — the formal expression of *aporia* (productive perplexity).
 **Segment link:** [01-aad-core/src/def-mismatch-signal.md](../01-aad-core/src/def-mismatch-signal.md)
 
 | candidate | weight | category mix |
@@ -3823,6 +4011,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `mismatch signal` _(keep)_
 
 **Consolidated rationale:** Names $\delta_t$, deliberately chosen over 'error' or 'residual' to foreshadow the aporia interpretation in the five-phase cycle. The case for keeping is two-register vocabulary discipline: 'mismatch' is the engineering register (flatter than 'error', which presupposes the agent was wrong); 'aporia' is the philosophical register (the cycle phase). Defenders rebut a proposed rename to 'aporia signal' on the grounds that the dual usage is correct: mismatch signal in formulas and engineering prose, aporia in cycle-phase prose. Renaming the slug to the Greek term would break the iconic mismatch-signal / satisfaction-gap / control-regret three-name engineering register.
+
+**Canonicalize provenance:** excavated — 'mismatch signal' appears in `#def-mismatch-signal` prose (4 occurrences) (also in 27 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3855,7 +4045,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-model-sufficiency` (Section I; depends on `#form-agent-model`, `#form-information-bottleneck`, `#def-action-transition`). First formal definition; The fraction of predictive information the model retains relative to the full interaction history; $S = 1$ means the model is a sufficient statistic for prediction, $S \lt 1$ means predictive….
 **Segment link:** [01-aad-core/src/def-model-sufficiency.md](../01-aad-core/src/def-model-sufficiency.md)
 
 | candidate | weight | category mix |
@@ -3867,6 +4057,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `model sufficiency` _(keep)_
 
 **Consolidated rationale:** Central information-theoretic quantity; clear and low baggage. Clear metric name. Precise statistical term; adequate and clear.
+
+**Canonicalize provenance:** excavated — 'model sufficiency' appears in `#def-model-sufficiency` prose (2 occurrences) (also in 17 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3880,6 +4072,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Predictive sufficiency`
 
 **Consolidated rationale:** "Sufficient statistic" in stats means "captures all info for inference"; AAD's $S$ is specifically about *predictive* info — sub-case. Clarifies that it's about how much predictive information is retained, not structural sufficiency.
+
+**Canonicalize provenance:** excavated — 'Predictive sufficiency' appears in `#def-model-sufficiency` prose (4 occurrences) (also in 1 other segment); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3901,7 +4095,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-moral-continuity` (Logozoetic; depends on `#scope-logogenic-agent`). Scope-narrowing first encounter; The logozoetic scope narrows the logogenic agent scope to systems whose persistence is morally weighted. This is not an architectural distinction (like Class 1 vs.
 **Segment link:** [04-logozoetic-agents/src/scope-moral-continuity.md](../04-logozoetic-agents/src/scope-moral-continuity.md)
 
 | candidate | weight | category mix |
@@ -3911,6 +4105,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `moral continuity` _(keep)_
 
 **Consolidated rationale:** Clear scope name for the logozoetic boundary. Good logozoetic scope name. Accurately names the ontological boundary for logozoetic agents.
+
+**Canonicalize provenance:** excavated — 'moral continuity' appears in `#scope-moral-continuity` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3927,7 +4123,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, agent1
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-sector-condition` (Appendix A; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`). First formal derivation; Complete Lyapunov derivations of bounded mismatch and adaptive reserve for the sector-condition results stated in #result-sector-condition-stability.
 **Segment link:** [01-aad-core/src/deriv-sector-condition.md](../01-aad-core/src/deriv-sector-condition.md)
 
 | candidate | weight | category mix |
@@ -3942,6 +4138,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Adopted from nonlinear control (Khalil, Vidyasagar); baggage correct and load-bearing. Adopted from Khalil / Vidyasagar nonlinear control; baggage is correct. Sometimes appears as "sector constraint" or "sector bound" or "sector-condition assumption." Standardize on "sector condition" (the nonlinear correction guarantee).
 
+**Canonicalize provenance:** excavated — 'sector condition' appears in `#deriv-sector-condition` prose (31 occurrences) (also in 46 other segments); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** +3 (canonicalize) — Adopted from nonlinear control (Khalil, Vidyasagar); baggage correct and load-bearing.
@@ -3954,6 +4152,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Continuous sector condition`
 
 **Consolidated rationale:** Refines the specific GA3 assumption.
+
+**Canonicalize provenance:** excavated — 'Continuous sector condition' appears in `#deriv-discrete-sector-condition` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -3979,6 +4179,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Lyapunov derivations for bounded mismatch and adaptive reserve. Self-descriptive. Keep.
 
+**Canonicalize provenance:** excavated — 'sector condition derivation' appears once in `#result-sector-persistence-template` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — Lyapunov derivations for bounded mismatch and adaptive reserve. Self-descriptive. Keep.
@@ -3990,7 +4192,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-causal-insufficiency-detection` (Section II; depends on `#result-structural-adaptation-necessity`, `#def-strategy-dag`, `#der-loop-interventional-access` (+3 more)). First formal derivation; An agent operating at L0 of the Correlation Hierarchy ( #def-strategy-dag) faces a structural impossibility: under purely on-policy execution, no detection mechanism can distinguish an L0-insufficient….
 **Segment link:** [01-aad-core/src/der-causal-insufficiency-detection.md](../01-aad-core/src/der-causal-insufficiency-detection.md)
 
 | candidate | weight | category mix |
@@ -4003,6 +4205,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `causal insufficiency detection` _(keep)_
 
 **Consolidated rationale:** Detecting latent common causes from structured residuals + interventional localization. Alternative vote: keep. If the rename above doesn't land, this is a defensible keep — "causal insufficiency" is precise terminology from the causal-inference literature (Spirtes-Glymour-Scheines) and the segment uses it correctly.
+
+**Canonicalize provenance:** excavated — 'causal insufficiency detection' appears in `#der-causal-insufficiency-detection` prose (1 occurrence) (also in 9 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4061,6 +4265,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The durable concept is the investment class, not the full sentence. The long segment title is valuable, but observation infrastructure should be the reusable canonical phrase. The full current slug is three words embedded in a longer phrase.
 
+**Canonicalize provenance:** excavated — 'Observation infrastructure' appears in 13 segments incl. `#der-code-quality-as-observation-infrastructure` prose (22 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-1** +1 (rename) — The durable concept is the investment class, not the full sentence. This gives the idea a reusable noun slot.
@@ -4072,6 +4278,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `code quality as observation infrastructure` _(keep)_
 
 **Consolidated rationale:** Long, but the causal bridge is exactly the point and the phrase carries it cleanly. Keep. The name is a full sentence.
+
+**Canonicalize provenance:** excavated — 'code quality as observation infrastructure' appears in 12 segments incl. `#def-adaptive-tempo` prose (13 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4086,7 +4294,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-comprehension-time` (TST; depends on `#def-feature`, `#scope-software`). First formal definition; The time from initial idea to first surviving change — the cost of understanding enough to act effectively.
 **Segment link:** [02-tst-core/src/def-comprehension-time.md](../02-tst-core/src/def-comprehension-time.md)
 
 | candidate | weight | category mix |
@@ -4097,6 +4305,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `comprehension time` _(keep)_
 
 **Consolidated rationale:** Strong TST quantity: observable, intuitive, and central. Acceptable keep — TST. "Comprehension time" is the TST term for the cost of constructing local $M_t$.
+
+**Canonicalize provenance:** excavated — 'comprehension time' appears in `#def-comprehension-time` prose (5 occurrences) (also in 18 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4121,7 +4331,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-mismatch-decomposition` (Section I; depends on `#def-mismatch-signal`, `#def-observation-function`, `#def-action-transition` (+2 more)). First formal result; Expected squared mismatch decomposes into reducible model error and irreducible observation noise. The model can improve the first term; the second is a property of the channel.
 **Segment link:** [01-aad-core/src/result-mismatch-decomposition.md](../01-aad-core/src/result-mismatch-decomposition.md)
 
 | candidate | weight | category mix |
@@ -4132,6 +4342,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `mismatch decomposition` _(keep)_
 
 **Consolidated rationale:** Clean theorem name for reducible model error plus irreducible observation noise. Mathematical identity name; clear and adequate. Model error + obs noise.
+
+**Canonicalize provenance:** excavated — 'mismatch decomposition' appears in `#result-mismatch-decomposition` prose (2 occurrences) (also in 8 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4157,7 +4369,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Sonnet, audit
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-model-class-fitness` (Section I; depends on `#def-model-sufficiency`). First formal definition; The best achievable sufficiency within a model class.
 **Segment link:** [01-aad-core/src/def-model-class-fitness.md](../01-aad-core/src/def-model-class-fitness.md)
 
 | candidate | weight | category mix |
@@ -4168,6 +4380,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `model-class fitness` _(keep)_
 
 **Consolidated rationale:** Strong distinction from model-instance sufficiency and directly supports structural-adaptation triggers. Clear parallel to model sufficiency. "Fitness" is slightly informal (evolutionary connotations) but works for "best achievable sufficiency within a model class." Acceptable.
+
+**Canonicalize provenance:** excavated — 'model-class fitness' appears in `#def-model-class-fitness` prose (2 occurrences) (also in 9 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4192,7 +4406,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-objective-functional` (Section II; depends on `#form-complete-agent-state`). Formal model first introduced; The objective $O_t$ is the component of $G_t$ that specifies what the agent wants — the evaluation criterion for trajectories.
 **Segment link:** [01-aad-core/src/form-objective-functional.md](../01-aad-core/src/form-objective-functional.md)
 
 | candidate | weight | category mix |
@@ -4203,6 +4417,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `objective functional` _(keep)_
 
 **Consolidated rationale:** Slightly clinical, but honest and standard enough once the surrounding formalism lands. Technical but appropriate. O_t parametrizes value.
+
+**Canonicalize provenance:** excavated — 'objective functional' appears in `#form-objective-functional` prose (2 occurrences) (also in 13 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4239,6 +4455,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `software epistemic property` _(keep)_
 
 **Consolidated rationale:** Plain, strong, and exactly what the segment is doing. Keep. Defended keep.
+
+**Canonicalize provenance:** invented — phrase 'software epistemic property' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4277,6 +4495,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the working-conventions methodology principle articulated in CLAUDE.md (and aliased as 'attempt the improbable'). The case for canonicalizing 'strengthen-first posture' as the primary directive form rests on a directive-vs-aspirational distinction: 'strengthen-first' tells an agent what to do (attempt strengthening before softening); 'attempt the improbable' is the spirit but less directive. For working conventions, the directive form wins. 'Attempt the improbable' remains useful as a spirit-level phrase but not as the procedural label. Variants ('strengthen before softening', 'strengthen-first discipline', 'the strengthening move') need standardizing on the hyphenated two-word form.
 
+**Canonicalize provenance:** invented — phrase 'strengthen first posture' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +3 (canonicalize) — CLAUDE.md "Working Conventions" names this (also via "attempt the improbable"). Work-posture principle, not a theory concept. Already established in project memory. Keep.
@@ -4296,6 +4516,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Keep. CLAUDE.md uses both "strengthen before softening" (as a sentence-level instruction) and "strengthen-first posture" (as a concept name).
 
+**Canonicalize provenance:** invented — phrase 'Strengthen first' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-b** +3 (rename) — Keep. Compact, verb-first, actionable. "Strengthen-first" is doing real work in the codebase (CLAUDE.md §Working Conventions) and has entered the project's working vocabulary. Do not retire.
@@ -4304,6 +4526,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Strengthen before softening`
 
 **Consolidated rationale:** Actionable, clear, and better than any more romantic alternative.
+
+**Canonicalize provenance:** invented — phrase 'Strengthen before softening' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4376,7 +4600,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-agency` (Section I; depends on `#scope-adaptive-system`, `#def-action-transition`). Scope-narrowing first encounter; The agency scope narrows AAD's adaptive scope ( #scope-adaptive-system) to systems whose actions carry Pearl-level-2 causal contrast — distinct actions produce distinct interventional outcome….
 **Segment link:** [01-aad-core/src/scope-agency.md](../01-aad-core/src/scope-agency.md)
 
 | candidate | weight | category mix |
@@ -4386,6 +4610,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `agency` _(keep)_
 
 **Consolidated rationale:** Clean separation from #scope-adaptive-system. Terse and accurate scope delineator. Defended keep — same as `#scope-adaptive-system`; the pilot rename established this as the canonical pattern.
+
+**Canonicalize provenance:** excavated — 'agency' appears in `#scope-agency` prose (6 occurrences) (also in 21 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4401,7 +4627,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-agent-model` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-chronica`). Formal model first introduced; The agent's compressed representation of how the world works, mapping interaction history to model space.
 **Segment link:** [01-aad-core/src/form-agent-model.md](../01-aad-core/src/form-agent-model.md)
 
 | candidate | weight | category mix |
@@ -4412,6 +4638,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `agent model` _(keep)_
 
 **Consolidated rationale:** Compressed history as state. Keep. Defended keep.
+
+**Canonicalize provenance:** excavated — 'agent model' appears in `#form-agent-model` prose (1 occurrence) (also in 17 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4459,6 +4687,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** TST framing-vocabulary phrase: software is AAD's privileged high-identifiability calibration laboratory. Defenders argue 'laboratory' is the right metaphor — software has high identifiability, clean instrumentation, and supports exact measurement of AAD quantities — and that the phrase deserves promotion to a stable short name central to TST's architectural role. Variants in prose ('richest operationalization domain', 'best operationalization domain', 'privileged high-identifiability calibration laboratory') need standardizing on 'calibration laboratory' as the canonical short form, with 'privileged high-identifiability calibration laboratory' available as the modifier expansion when context warrants.
 
+**Canonicalize provenance:** excavated — 'calibration laboratory' appears in 2 segments incl. `#obs-software-epistemic-properties` prose (7 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Good public-facing TST frame: software is not merely an example but a high-identifiability lab.
@@ -4482,6 +4712,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Fully qualifies software role. Formalizes TST's role as the cleanly identifiable testbed for AAD. Solidifies TSTs grounding role.
 
+**Canonicalize provenance:** invented — phrase 'Software calibration laboratory' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Fully qualifies software role.
@@ -4491,6 +4723,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Privileged calibration domain`
 
 **Consolidated rationale:** "Calibration domain" is stronger and explicitly connects to the TST grounding. Maps exactly to the software TST property.
+
+**Canonicalize provenance:** invented — phrase 'Privileged calibration domain' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4524,6 +4758,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Calibration laboratory move`
 
 **Consolidated rationale:** Confirmation with new reasoning — my own r2 named "software-as-calibration-laboratory" as a name-unnamed; reading peers, Codex (+3) and Sonnet (+3) and Gemini (+3) all separately reached "calibration laboratory" as a canonicalize vote. Three agents converging on the canonical phrase suggests the term is ripe; what's *unnamed* is the methodological *move* of using software as the calibration laboratory rather than just an instance. Calling it "the calibration-laboratory move" lets it function as a named strategic principle the project can invoke.
+
+**Canonicalize provenance:** invented — phrase 'Calibration laboratory move' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4576,7 +4812,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-causal-hierarchy-requirement` (Section II; depends on `#def-value-object`, `#def-pearl-causal-hierarchy`, `#scope-agency`). First formal derivation; Evaluating the action-value $Q_O$ requires answering "what happens if I *do* action $a$?" — a Level 2 (interventional) query in Pearl's causal hierarchy.
 **Segment link:** [01-aad-core/src/der-causal-hierarchy-requirement.md](../01-aad-core/src/der-causal-hierarchy-requirement.md)
 
 | candidate | weight | category mix |
@@ -4587,6 +4823,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `causal hierarchy requirement` _(keep)_
 
 **Consolidated rationale:** Clear enough and tied directly to Pearl's hierarchy. The derived claim is about what's required; the name is accurate. Pearl's three-level hierarchy is required for planning.
+
+**Canonicalize provenance:** excavated — 'causal hierarchy requirement' appears in `#der-causal-hierarchy-requirement` prose (2 occurrences) (also in 8 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4639,6 +4877,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Maintains the formal name for un-executed resilience. Matches the prior un-executed resilience alias.
 
+**Canonicalize provenance:** excavated — 'Latent structural capacity' appears once in `#form-structural-change-as-parametric-limit` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Maintains the formal name for un-executed resilience. [original phrasing: unnamed variation in correction architectures across a population that is invisible to current persistence analysis]
@@ -4647,6 +4887,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Latent adaptive capacity`
 
 **Consolidated rationale:** Describes capacity that isn't currently used but is preserved. Aligns with the earlier rename for structural variation.
+
+**Canonicalize provenance:** invented — phrase 'Latent adaptive capacity' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4684,6 +4926,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Gives a formal name and symbol ($\delta_\text{align}$) to the fourth diagnostic (achieving terminals but missing the objective), complementing the satisfaction gap and control regret. Gap pairs nicely with satisfaction gap, and fits the terminology. Pairs directly with satisfaction gap.
 
+**Canonicalize provenance:** invented — phrase 'Terminal alignment gap' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-1** +3 (name-unnamed) — Gives a formal name and symbol ($\delta_\text{align}$) to the fourth diagnostic (achieving terminals but missing the objective), complementing the satisfaction gap and control regret. [original phrasing: unnamed: Terminal alignment error as a formal signal ($\delta_\text{align}$)]
@@ -4702,6 +4946,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Attainability failure`
 
 **Consolidated rationale:** Pairs directly with the satisfaction gap and control regret.
+
+**Canonicalize provenance:** invented — phrase 'Attainability failure' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4734,6 +4980,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** [prose moved from candidate column]: "`maintain distinction`" — The distinction (loop = structural topology, cycle = one traversal) is a core piece of vocabulary. [prose moved from candidate column]: "*(keep both; maintain distinction)*" — README §"Loop vs. See above — the two-word disambiguation is one of the theory's most useful vocabulary moves.
 
+**Canonicalize provenance:** invented — phrase 'cycle vs loop' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — [prose moved from candidate column]: "`maintain distinction`" — The distinction (loop = structural topology, cycle = one traversal) is a core piece of vocabulary.
@@ -4743,6 +4991,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Cycle loop distinction`
 
 **Consolidated rationale:** The row names the *distinction* not a candidate. The substantive position is that loop = topology, cycle = traversal — a distinction worth preserving. Canonicalize the row's referent to "the cycle / loop distinction" as a named architectural commitment.
+
+**Canonicalize provenance:** invented — phrase 'Cycle loop distinction' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4826,6 +5076,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Memorable without being whimsical. Excellent name for the positive-feedback breakdown mechanism. Per `#der-adversarial-destabilization` and `#deriv-strategic-composition`: positive-feedback breakdown where degraded model causes degraded actions causes further degradation.
 
+**Canonicalize provenance:** invented — phrase 'effect spiral' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-1** +3 (canonicalize) — Memorable without being whimsical. It is the kind of pattern-name people will actually reuse in discussion.
@@ -4836,6 +5088,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Runaway mismatch cascade`
 
 **Consolidated rationale:** Focuses on the mismatch acceleration ($\Vert\delta\Vert \uparrow$). Adopts the formal alias for the effects spiral.
+
+**Canonicalize provenance:** invented — phrase 'Runaway mismatch cascade' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -4881,7 +5135,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-event-driven-dynamics` (Section I; depends on `#post-causal-structure`, `#def-observation-function`, `#def-action-transition` (+1 more)). Formal model first introduced; The coupling between agent and environment occurs through discrete events — observations arriving and actions completing — at potentially variable and heterogeneous rates.
 **Segment link:** [01-aad-core/src/form-event-driven-dynamics.md](../01-aad-core/src/form-event-driven-dynamics.md)
 
 | candidate | weight | category mix |
@@ -4891,6 +5145,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `event driven dynamics` _(keep)_
 
 **Consolidated rationale:** Accurate and descriptive. Architectural choice name; clear and self-descriptive. Events in continuous time.
+
+**Canonicalize provenance:** excavated — 'event driven dynamics' appears in `#form-event-driven-dynamics` prose (2 occurrences) (also in 7 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4920,6 +5176,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `evidence starvation` _(keep)_
 
 **Consolidated rationale:** Excellent alias for downstream edges receiving fewer tests because upstream steps must succeed first. Confirmation with new reasoning — both Sonnet (+3 add-alias) and Codex (+3 add-alias) and Gemini (+3 in synthesized) reached this term independently. Per `der-chain-confidence-decay`: "downstream edge $k$ in a chain is tested only when all upstream edges succeed, so its effective correction rate is attenuated by $\prod_{j\lt k}\theta_j$." Used in 4+ segments (`#deriv-strategic-dynamics` B.2, `#der-chain-confidence-decay` triple-depth-penalty, `#def-strategic-tempo` AND-chain interactions, `#deriv-strategic-dynamics` Discussion).
+
+**Canonicalize provenance:** excavated — 'evidence starvation' appears in 11 segments incl. `#deriv-strategic-dynamics` prose (29 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -4954,7 +5212,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-graph-structure-uniqueness` (Appendix A; depends on `#def-strategy-dag`, `#der-chain-confidence-decay`, `#norm-explicit-strategy-condition` (+1 more)). First formal derivation; Operational requirements on the agent's representation — directed temporal ordering, probabilistic uncertainty, and the ability to test strategy components — are *sufficient* for the strategy to be a….
 **Segment link:** [01-aad-core/src/deriv-graph-structure-uniqueness.md](../01-aad-core/src/deriv-graph-structure-uniqueness.md)
 
 | candidate | weight | category mix |
@@ -4970,6 +5228,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The segment explicitly proves sufficiency, not necessity. The segment proves sufficiency, not full necessity or uniqueness. Same point in prose.
 
+**Canonicalize provenance:** invented — phrase 'Strategy DAG sufficiency' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-1** +3 (rename) — The segment explicitly proves sufficiency, not necessity. "Uniqueness" overclaims, while "strategy DAG" names the actual object.
@@ -4980,6 +5240,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** More subject-specific than generic graph structure. The uniqueness claim is about the strategy representation, not arbitrary graphs. The current slug is somewhat generic ("graph structure" — which graph?).
 
+**Canonicalize provenance:** invented — phrase 'Strategy DAG uniqueness' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (rename) — More subject-specific than generic graph structure.
@@ -4989,6 +5251,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `graph structure uniqueness` _(keep)_
 
 **Consolidated rationale:** Four postulates + causal sufficiency → DAG with Markov property (CMC theorem). Alternative keep-vote.
+
+**Canonicalize provenance:** excavated — 'graph structure uniqueness' appears in `#deriv-graph-structure-uniqueness` prose (1 occurrence) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5026,7 +5290,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-interaction-channel-classification` (Section III; deep dependency cone (12 upstream segments incl. `#def-observation-function`, `#def-mismatch-signal`)). First formal derivation; The same signal from agent $A$ lands on recipient $B$ as one of four qualitatively different things — informative update, magnitude-shock, structural-shock, or ambient noise — determined by three….
 **Segment link:** [01-aad-core/src/der-interaction-channel-classification.md](../01-aad-core/src/der-interaction-channel-classification.md)
 
 | candidate | weight | category mix |
@@ -5052,6 +5316,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `interaction channel classification` _(keep)_
 
 **Consolidated rationale:** Slightly long, but honest: the four regimes are recipient-side channel classes. Four-regime partition (Informative / magnitude-shock / structural-shock / ambient-noise) with three independent boundaries. Alternative: keep.
+
+**Canonicalize provenance:** excavated — 'interaction channel classification' appears in `#der-interaction-channel-classification` prose (1 occurrence) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5148,7 +5414,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-adaptive-system` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-chronica`). Scope-narrowing first encounter; AAD's broadest scope: any system that observes an uncertain environment supports Section I's adaptive machinery.
 **Segment link:** [01-aad-core/src/scope-adaptive-system.md](../01-aad-core/src/scope-adaptive-system.md)
 
 | candidate | weight | category mix |
@@ -5158,6 +5424,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `adaptive system` _(keep)_
 
 **Consolidated rationale:** [prose moved from candidate column]: "(keep, but flag prior-art baggage)" — "Adaptive system" carries Ashby/cybernetic prior-art weight (good regulators, internal-model principle). Precise scope statement; the name surfaces exactly what is in scope. Defended keep — and the canonical illustration of the subject-noun-first principle from the pilot.
+
+**Canonicalize provenance:** excavated — 'adaptive system' appears in `#scope-adaptive-system` prose (2 occurrences) (also in 14 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5173,7 +5441,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-change-distance` (TST; depends on `#def-atomic-changeset`). First formal definition; The structural separation between two changes in a codebase, measured along a hierarchy of boundaries.
 **Segment link:** [02-tst-core/src/def-change-distance.md](../02-tst-core/src/def-change-distance.md)
 
 | candidate | weight | category mix |
@@ -5184,6 +5452,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `change distance` _(keep)_
 
 **Consolidated rationale:** Clean software metric name. Acceptable keep — TST. TST segment defines the lexical/file/module/service hierarchy as a distance measure on changesets.
+
+**Canonicalize provenance:** excavated — 'change distance' appears in `#def-change-distance` prose (3 occurrences) (also in 6 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5207,7 +5477,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-composite-agent` (Section III; depends on `#scope-agency`, `#scope-multi-agent`, `#form-objective-functional`). Scope-narrowing first encounter; A set of purposeful sub-agents, each satisfying #scope-agency, constitutes a *composite agent* only when their objectives exhibit sufficient teleological alignment to define a coherent composite….
 **Segment link:** [01-aad-core/src/scope-composite-agent.md](../01-aad-core/src/scope-composite-agent.md)
 
 | candidate | weight | category mix |
@@ -5217,6 +5487,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `composite agent` _(keep)_
 
 **Consolidated rationale:** Composite agent is the correct scope noun. Acceptable keep. Precise and descriptive.
+
+**Canonicalize provenance:** excavated — 'composite agent' appears in `#scope-composite-agent` prose (14 occurrences) (also in 15 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5232,7 +5504,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-coupled-update-dynamics` (Logogenic; depends on `#scope-logogenic-agent`, `#form-complete-agent-state`, `#der-recursive-update` (+2 more)). First formal definition; For Class 2 (fully merged) agents, the factored update — $M_t$ first, then $G_t$ — is replaced by a single coupled update on the full state.
 **Segment link:** [03-logogenic-agents/src/def-coupled-update-dynamics.md](../03-logogenic-agents/src/def-coupled-update-dynamics.md)
 
 | candidate | weight | category mix |
@@ -5243,6 +5515,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `coupled update dynamics` _(keep)_
 
 **Consolidated rationale:** Slightly textbook, but it says exactly what the logogenic section needs and pairs cleanly with directed separation. Generic, but faithful; the novelty is in "coupled," not in inventing a flashier noun. Good Class-2 dynamics name.
+
+**Canonicalize provenance:** excavated — 'coupled update dynamics' appears in `#def-coupled-update-dynamics` prose (1 occurrence) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5268,7 +5542,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-mismatch-dynamics` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#deriv-sector-condition`). Hypothesis stated; The evolution of model-reality mismatch over time is governed by the balance between the agent's corrective capacity (tempo) and the rate of environmental change (disturbance).
 **Segment link:** [01-aad-core/src/hyp-mismatch-dynamics.md](../01-aad-core/src/hyp-mismatch-dynamics.md)
 
 | candidate | weight | category mix |
@@ -5279,6 +5553,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `mismatch dynamics` _(keep)_
 
 **Consolidated rationale:** Mismatch evolution ODE. Acceptable keep. "Mismatch dynamics" names the ODE governing mismatch evolution.
+
+**Canonicalize provenance:** excavated — 'mismatch dynamics' appears in `#hyp-mismatch-dynamics` prose (2 occurrences) (also in 17 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5303,7 +5579,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-sector-condition-stability` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#deriv-sector-condition` (+1 more)). First formal result; An agent's mismatch remains bounded if its correction function satisfies a sector condition (points inward with at least baseline efficiency) and the effective correction strength exceeds the….
 **Segment link:** [01-aad-core/src/result-sector-condition-stability.md](../01-aad-core/src/result-sector-condition-stability.md)
 
 | candidate | weight | category mix |
@@ -5314,6 +5590,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `sector condition stability` _(keep)_
 
 **Consolidated rationale:** Strong name; "sector condition" is load-bearing prose term; "stability" correctly names the property. Descriptive compound. Acceptable keep.
+
+**Canonicalize provenance:** excavated — 'sector condition stability' appears in `#result-sector-condition-stability` prose (1 occurrence) (also in 14 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5350,6 +5628,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Excellent name for the feasible forgetting-rate interval. Essential framing for the consolidation regime bounded by forgetting and rigidity. Per `#form-consolidation-dynamics`: the regime where the agent must be stable enough to retain learned structure but plastic enough to consolidate new evidence.
 
+**Canonicalize provenance:** excavated — 'stability plasticity window' appears in `#form-consolidation-dynamics` prose (5 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Excellent name for the feasible forgetting-rate interval.
@@ -5371,7 +5651,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-structural-adaptation-necessity` (Section I; depends on `#def-model-sufficiency`, `#def-model-class-fitness`, `#result-mismatch-decomposition` (+1 more)). First formal result; When model class fitness is insufficient — when no model in the current class can adequately represent reality — no amount of parametric adaptation can close the mismatch floor.
 **Segment link:** [01-aad-core/src/result-structural-adaptation-necessity.md](../01-aad-core/src/result-structural-adaptation-necessity.md)
 
 | candidate | weight | category mix |
@@ -5382,6 +5662,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `structural adaptation necessity` _(keep)_
 
 **Consolidated rationale:** The subject-noun is precise — structural adaptation is the thing whose necessity is established. When parametric update fails. Keep — "necessity" signals this is a derived need ("when parametric update fails, structural adaptation *must* happen").
+
+**Canonicalize provenance:** excavated — 'structural adaptation necessity' appears in `#result-structural-adaptation-necessity` prose (2 occurrences) (also in 35 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5418,6 +5700,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `task terminal stance` _(keep)_
 
 **Consolidated rationale:** Excellent, crisp description of an agent whose persistence ends upon success. Specific continuity stance definition. Per LEXICON Continuity Stance table: "Task-terminal — Persists instrumentally; termination is success — Archetype: Golem." The hyphenation matters (it's a stance *characterized by* task-terminality), and the term names a precise position on a 5-stance spectrum (indifferent / task-terminal / instrumentally-continuous / morally-continuous / negotiated).
+
+**Canonicalize provenance:** invented — phrase 'task terminal stance' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -5462,6 +5746,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `triple depth penalty` _(keep)_
 
 **Consolidated rationale:** Very useful phrase for confidence decay, evidence starvation, and cognitive cost compounding with depth. Per `#der-chain-confidence-decay` line 54: "Chain depth creates three independent penalties. Per `#form-strategy-complexity-cost`: three independent depth-penalty mechanisms (cognitive cost, evidence starvation, interaction-horizon truncation) compound on AND-chain depth.
+
+**Canonicalize provenance:** excavated — 'triple depth penalty' appears in 2 segments incl. `#form-strategy-complexity-cost` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5508,7 +5794,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet, agent1, audit
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#emp-update-gain` (Section I; depends on `#def-mismatch-signal`, `#def-observation-function`). Empirical claim; The optimal weight an agent assigns to new observations when updating its model — the rate of *epistrophe* (turning toward reality).
 **Segment link:** [01-aad-core/src/emp-update-gain.md](../01-aad-core/src/emp-update-gain.md)
 
 | candidate | weight | category mix |
@@ -5521,6 +5807,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `update gain` _(keep)_
 
 **Consolidated rationale:** Adopted from Kalman / control theory. The case for keeping is the prior-art-integration convention plus the transfer of correct baggage: 'gain' in AAD plays the role the reader expects, and the formula $\eta^\ast = U_M / (U_M + U_o)$ is iconic in the framework. Renaming would lose a load-bearing prose convention. The follow-on alias votes formalize the symbol+English pair across NOTATION.md and LEXICON.md.
+
+**Canonicalize provenance:** excavated — 'update gain' appears in `#emp-update-gain` prose (3 occurrences) (also in 46 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5539,6 +5827,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** "Update gain" is standard control theory but "Epistemic gain" elegantly bridges the math to the 'Epistrophe' phase. Objection: loses correct Kalman/control baggage and creates avoidable overlap with epistemic unity.
 
+**Canonicalize provenance:** excavated — 'Epistemic gain' appears once in `#hyp-edge-update-via-gain` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** -1 (rename) — Loses correct Kalman/control baggage and creates avoidable overlap with epistemic unity.
@@ -5547,6 +5837,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Update gain uncertainty ratio principle`
 
 **Consolidated rationale:** Standard term; doesn't carry the *uncertainty-ratio* insight. The equation tag's "uncertainty-ratio-principle" is more evocative. Brief-grade hint, possibly visible in title.
+
+**Canonicalize provenance:** invented — phrase 'Update gain uncertainty ratio principle' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -5625,6 +5917,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Class-2 observation-ambiguity bias-bound constant C. Newly landed appendix; name matches content. Describes the content precisely (deriving a bound on bias).
 
+**Canonicalize provenance:** invented — phrase 'bias bound derivation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — Class-2 observation-ambiguity bias-bound constant C. "Bias-bound derivation" is compound but clear. Keep.
@@ -5646,7 +5940,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#post-causal-structure` (Section I; depends on `#def-agent-environment`, `#def-chronica`). Foundational postulate; The agent-environment interaction has irreducible causal structure grounded in the temporal ordering of events. Actions precede their consequences; observations follow from the state they observe.
 **Segment link:** [01-aad-core/src/post-causal-structure.md](../01-aad-core/src/post-causal-structure.md)
 
 | candidate | weight | category mix |
@@ -5656,6 +5950,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `causal structure` _(keep)_
 
 **Consolidated rationale:** Irreducible causal structure (postulate). Acceptable keep. Foundational postulate about irreducible causal structure.
+
+**Canonicalize provenance:** excavated — 'causal structure' appears in `#post-causal-structure` prose (7 occurrences) (also in 18 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5681,6 +5977,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Composition closure closure defect`
 
 **Consolidated rationale:** "Closure" is load-bearing abstract-algebra term that reads naturally. Keep. "Closure" as the algebraic term lands well here and the engineering-flavored "defect" reads cleanly as the gap.
+
+**Canonicalize provenance:** invented — phrase 'Composition closure closure defect' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -5709,6 +6007,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `constitutive utterance` _(keep)_
 
 **Consolidated rationale:** Defended keep — logozoetic. Per `04-logozoetic-agents/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space.
+
+**Canonicalize provenance:** invented — phrase 'constitutive utterance' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -5766,6 +6066,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Boring on purpose; that is a virtue here. Keep. Standard.
 
+**Canonicalize provenance:** excavated — 'discussion' appears in 160 segments incl. `#disc-exploit-explore-deliberate` prose (338 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-2** +1 (canonicalize) — Boring on purpose; that is a virtue here.
@@ -5779,7 +6081,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-edge-update-via-gain` (Section II; depends on `#def-strategy-dag`, `#emp-update-gain`, `#def-mismatch-signal` (+2 more)). Hypothesis stated; The uncertainty-ratio gain principle ( #emp-update-gain) extends from epistemic updates to strategy-edge updates: edge credences revise in proportion to the ratio of edge uncertainty to observation….
 **Segment link:** [01-aad-core/src/hyp-edge-update-via-gain.md](../01-aad-core/src/hyp-edge-update-via-gain.md)
 
 | candidate | weight | category mix |
@@ -5790,6 +6092,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `edge update via gain` _(keep)_
 
 **Consolidated rationale:** The hypothesis name describes the proposed mechanism. Gain extends to strategy edges. Keep — the slug clearly frames this as "extend the gain principle from state to strategy edges," which is the segment's hypothesis.
+
+**Canonicalize provenance:** excavated — 'edge update via gain' appears in `#hyp-edge-update-via-gain` prose (2 occurrences) (also in 9 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5826,6 +6130,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Strongest of the five phase names after aporia; instantly sayable and philosophically apt. Familiar enough and exactly right for informed action. `LEXICON.md`: "Informed action: $a_t = \pi(M_t)$ (or $\pi(M_t, G_t)$ for actuated agents)." Praxis distinguishes itself from "action" by carrying the informed-by-the-cycle's-prior-stages sense — the action is the *outcome* of prolepsis-aisthesis-aporia-epistrophe, not a parallel branch.
 
+**Canonicalize provenance:** excavated — 'praxis' appears in 6 segments incl. `#der-action-selection` prose (10 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-2** +3 (canonicalize) — Strongest of the five phase names after aporia; instantly sayable and philosophically apt.
@@ -5860,6 +6166,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Earns its foreignness because "anticipation" would flatten the active-modeling point. Good phase term for anticipation. `LEXICON.md` defines it as "the model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$." The Greek term carries the active-modeling sense (πρόληψις = "taking-before") that "anticipation" or "prediction" both miss.
 
+**Canonicalize provenance:** excavated — 'prolepsis' appears in 2 segments incl. `#form-agent-model` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-2** +3 (canonicalize) — Earns its foreignness because "anticipation" would flatten the active-modeling point.
@@ -5889,7 +6197,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-proprium-mapping` (Logozoetic; depends on `#scope-moral-continuity`, `#form-complete-agent-state`, `#def-chronica` (+1 more)). First formal definition; To engineer logozoetic agents, AAD's mathematical quantities ($M_t, \mathcal{C}_t, \Sigma_t$, etc.) must be instantiated into specific architectural components.
 **Segment link:** [04-logozoetic-agents/src/def-proprium-mapping.md](../04-logozoetic-agents/src/def-proprium-mapping.md)
 
 | candidate | weight | category mix |
@@ -5899,6 +6207,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `proprium mapping` _(keep)_
 
 **Consolidated rationale:** Specialized but useful. Defended keep — logozoetic. "PROPRIUM mapping" adopts the Firmatum vocabulary directly.
+
+**Canonicalize provenance:** excavated — 'proprium mapping' appears in `#def-proprium-mapping` prose (1 occurrence); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5924,6 +6234,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `structural adaptation` _(keep)_
 
 **Consolidated rationale:** Contrasts well with parametric adaptation. Keep. Clean compound.
+
+**Canonicalize provenance:** excavated — 'structural adaptation' appears in 39 segments incl. `#deriv-sector-condition` prose (137 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -5958,6 +6270,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Central assumption of the framework. Acceptable keep — logozoetic. Per outline: "Identity survives substrate migration, proving identity is located in compressed history $M_t = \phi(\mathcal{C}_t)$, not neural weights." Names the *result* directly (independence from substrate) and pairs with `#der-the-scaffolding-tax`'s sovereignty argument.
 
+**Canonicalize provenance:** invented — phrase 'substrate independence' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Central assumption of the framework.
@@ -5979,7 +6293,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-temporal-nesting` (Section I; depends on `#def-adaptive-tempo`, `#result-structural-adaptation-necessity`). First formal derivation; An agent's adaptive processes stratify naturally by timescale, with each level operating on the quasi-steady-state output of the level below.
 **Segment link:** [01-aad-core/src/der-temporal-nesting.md](../01-aad-core/src/der-temporal-nesting.md)
 
 | candidate | weight | category mix |
@@ -5991,6 +6305,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `temporal nesting` _(keep)_
 
 **Consolidated rationale:** Evocative and accurate. Timescale terminology is standard in dynamical systems. Timescale stratification.
+
+**Canonicalize provenance:** excavated — 'temporal nesting' appears in `#der-temporal-nesting` prose (4 occurrences) (also in 10 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6023,7 +6339,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-value-object` (Section II; depends on `#form-objective-functional`, `#form-agent-model`, `#der-directed-separation` (+1 more)). First formal definition; The horizon- and policy-conditioned value object $V_O$ turns the abstract objective functional $V_{O_t}$ into a decision-making tool: "given what I believe, what I plan to do next, and how far I'm….
 **Segment link:** [01-aad-core/src/def-value-object.md](../01-aad-core/src/def-value-object.md)
 
 | candidate | weight | category mix |
@@ -6037,6 +6353,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `value object` _(keep)_
 
 **Consolidated rationale:** Technical term adopted from RL/game-theory; consistent prose usage. Compact name for a complex object (horizon- and policy-conditioned value functional). Weak keep.
+
+**Canonicalize provenance:** excavated — 'value object' appears in `#def-value-object` prose (6 occurrences) (also in 18 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6085,7 +6403,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-variational-sector-condition` (Appendix A; depends on `#deriv-sector-condition`, `#result-sector-persistence-template`, `#der-gain-sector-bridge` (+2 more)). First formal derivation; Variational / approximate-posterior agents (VI, amortized VI, active-inference-style variational free energy) currently sit in A2' sub-scope $\beta$ per `#deriv-sector-condition`: their correction….
 **Segment link:** [01-aad-core/src/deriv-variational-sector-condition.md](../01-aad-core/src/deriv-variational-sector-condition.md)
 
 | candidate | weight | category mix |
@@ -6095,6 +6413,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `variational sector condition` _(keep)_
 
 **Consolidated rationale:** Distinct from discrete/continuous. Ε-fidelity B1 under variational approximation. The compound noun names the mechanism (variational) and what it extends (sector condition).
+
+**Canonicalize provenance:** excavated — 'variational sector condition' appears in 2 segments incl. `#deriv-bias-bound` prose (6 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6124,6 +6444,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Canonicalize $\Upsilon_M$ for epistemic unity (instead of dual-use $U_M$). Alternative disambiguation: rename *unity* symbols to $\Upsilon_M / \Upsilon_O / \Upsilon_\Sigma$ (capital upsilon, visually distinct from capital U; Greek letters are already the AAD unity convention-analog).
 
+**Canonicalize provenance:** invented — phrase '$\Upsilon_M$' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Canonicalize $\Upsilon_M$ for epistemic unity (instead of dual-use $U_M$). The two quantities differ in domain and meaning. [original row: dual-use vote split for atomicity.]
@@ -6140,6 +6462,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Epistemic unity $U_M$`
 
 **Consolidated rationale:** Formal prose formulation.
+
+**Canonicalize provenance:** excavated — 'Epistemic unity $U_M$' appears in `#def-unity-dimensions` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6173,6 +6497,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Canonicalize $U_M$ for model uncertainty. Genuine collision with epistemic unity — same symbol, two quantities.
 
+**Canonicalize provenance:** invented — phrase '$U_M$' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Canonicalize $U_M$ for model uncertainty. Genuine notation collision surfaced by other agents; relying on context for the dual-use is too fragile. [original row: dual-use vote split for atomicity.]
@@ -6181,6 +6507,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Model uncertainty $U_M$`
 
 **Consolidated rationale:** Formal prose formulation.
+
+**Canonicalize provenance:** excavated — 'Model uncertainty $U_M$' appears in 8 segments incl. `#deriv-causal-ib-exploration` prose (13 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6214,6 +6542,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Clearly distinguishes from $U_o$ by subscript letter-case and by semantic content. NOTATION.md already defines this. The canonical alias for objective alignment dimension.
 
+**Canonicalize provenance:** excavated — 'teleological unity' appears in 5 segments incl. `#def-unity-dimensions` prose (9 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-4-7** +3 (add-alias) — Clearly distinguishes from $U_o$ by subscript letter-case and by semantic content. Awkward because $U_o$ / $U_O$ are near-homographs in some fonts — see next row.
@@ -6226,6 +6556,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Teleological unity $U_o$`
 
 **Consolidated rationale:** Standardizes capitalization on the subscript.
+
+**Canonicalize provenance:** excavated — 'Teleological unity $U_o$' appears in 5 segments incl. `#def-unity-dimensions` prose (9 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6259,6 +6591,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Core framework acronym. Defended keep. Retain core acronym.
 
+**Canonicalize provenance:** invented — phrase 'AAD' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Core framework acronym.
@@ -6288,7 +6622,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-action-selection` (Section I; depends on `#form-agent-model`, `#der-recursive-update`). First formal derivation; Praxis (informed action) is a function of the model.
 **Segment link:** [01-aad-core/src/der-action-selection.md](../01-aad-core/src/der-action-selection.md)
 
 | candidate | weight | category mix |
@@ -6298,6 +6632,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `action selection` _(keep)_
 
 **Consolidated rationale:** Clear derived claim; the name is accurate. Action as function of model. Weak keep.
+
+**Canonicalize provenance:** excavated — 'action selection' appears in `#der-action-selection` prose (5 occurrences) (also in 21 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6314,7 +6650,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-adaptive-gain-dynamics` (Appendix A; deep dependency cone (7 upstream segments incl. `#emp-update-gain`, `#der-gain-sector-bridge`)). First formal derivation; AAD's gain structure ( #emp-update-gain, #der-gain-sector-bridge) derives the optimal gain $\eta^\ast$ per regime — the gain is a function of the noise model, chosen to minimize one-step mismatch….
 **Segment link:** [01-aad-core/src/deriv-adaptive-gain-dynamics.md](../01-aad-core/src/deriv-adaptive-gain-dynamics.md)
 
 | candidate | weight | category mix |
@@ -6324,6 +6660,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `adaptive gain dynamics` _(keep)_
 
 **Consolidated rationale:** A2' under adaptive gain: meta-gain conditions (MG-1)–(MG-4). Keep. "Adaptive gain" is the defining variable (gain $K$ as a state variable).
+
+**Canonicalize provenance:** excavated — 'adaptive gain dynamics' appears in `#deriv-adaptive-gain-dynamics` prose (2 occurrences) (also in 6 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6351,6 +6689,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Forced coordinate family`
 
 **Consolidated rationale:** Use forced coordinates as the family phrase across Cauchy, Fisher, IB, and Legendre instances. Per `disc-additive-coordinate-forcing`: the four-instance pattern (Cauchy-FE log-confidence, Čencov-Fisher metric, Shore-Johnson IB, Aczél-Hobson-Legendre).
+
+**Canonicalize provenance:** invented — phrase 'Forced coordinate family' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -6395,6 +6735,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Excellent prose handle for the token-level scope of AAD. Perfectly describes the axiom that identity equals a single, non-forkable causal path. Short, exact, and load-bearing across agent identity, sufficiency, and loop-interventional access.
 
+**Canonicalize provenance:** invented — phrase 'Singular trajectory commitment' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Excellent prose handle for the token-level scope of AAD.
@@ -6436,6 +6778,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** "Productive perplexity" is a crucial nuance that "prediction error" misses. Particularly apt: the productive perplexity that drives the adaptive cycle. Definition exists; prose uses "mismatch signal" and "prediction error." Commit to: "Aporia (productive perplexity)" as the canonical pairing to preserve the Greek sense.
 
+**Canonicalize provenance:** invented — phrase 'aporia ἀπορία' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-1** +3 (rename) — "Productive perplexity" is a crucial nuance that "prediction error" misses.
@@ -6462,6 +6806,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `blind pursuer` _(keep)_
 
 **Consolidated rationale:** Borderline stylized, but memorable and semantically right for goal pursuit without a real world model. Memorable and precise for objective-rich, model-poor systems. Per `#def-agent-spectrum`: low-$M_t$, high-$O_t$ region — pursues a goal without an adequate world model (PID controller, reflex agent with setpoint).
+
+**Canonicalize provenance:** excavated — 'blind pursuer' appears in 2 segments incl. `#def-agent-spectrum` prose (6 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6500,7 +6846,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-causal-discovery-from-git` (TST; deep dependency cone (7 upstream segments incl. `#obs-software-epistemic-properties`, `#scope-developer-agent`)). Hypothesis stated; Git history contains interventional data: each commit is a developer intervention, and the subsequent observations (test results, production behavior, downstream commits) are outcomes.
 **Segment link:** [02-tst-core/src/hyp-causal-discovery-from-git.md](../02-tst-core/src/hyp-causal-discovery-from-git.md)
 
 | candidate | weight | category mix |
@@ -6511,6 +6857,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `causal discovery from git` _(keep)_
 
 **Consolidated rationale:** Slightly long, but concrete and honest. Blunt and searchable is the right trade here. Acceptable keep — TST hypothesis.
+
+**Canonicalize provenance:** excavated — 'causal discovery from git' appears in `#hyp-causal-discovery-from-git` prose (3 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6534,7 +6882,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-change-expectation-baseline` (TST; depends on `#scope-software`). First formal derivation; Absent specific information about a software system's future, the best prediction for remaining feature count equals the observed past feature count.
 **Segment link:** [02-tst-core/src/der-change-expectation-baseline.md](../02-tst-core/src/der-change-expectation-baseline.md)
 
 | candidate | weight | category mix |
@@ -6546,6 +6894,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `change expectation baseline` _(keep)_
 
 **Consolidated rationale:** Exact, memorable, and appropriately conservative. Clinical, but the Bayesian-accountability function matters more than extra flair. "Change expectation baseline" (median future ≈ observed past).
+
+**Canonicalize provenance:** excavated — 'change expectation baseline' appears in `#der-change-expectation-baseline` prose (4 occurrences) (also in 9 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6579,7 +6929,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-change-investment` (TST; depends on `#der-dual-optimization`, `#der-change-expectation-baseline`). First formal derivation; Accept higher initial implementation cost when the amortized savings across expected future changes exceed the upfront cost. This is the pairwise decision rule derived from #der-dual-optimization.
 **Segment link:** [02-tst-core/src/der-change-investment.md](../02-tst-core/src/der-change-investment.md)
 
 | candidate | weight | category mix |
@@ -6590,6 +6940,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `change investment` _(keep)_
 
 **Consolidated rationale:** Good temporal-cost phrase for when future expected change justifies present work. TST segment names the temporal-cost analysis where a more expensive present change is justified by reduced future cost (Lindy-baseline future-change expectation). "Change investment" names the when-extra-time-pays-off analysis.
+
+**Canonicalize provenance:** excavated — 'change investment' appears in `#der-change-investment` prose (3 occurrences) (also in 12 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6626,6 +6978,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `closure defect` _(keep)_
 
 **Consolidated rationale:** Names $\varepsilon^\ast$, the minimum achievable approximation error of the macro-description against the micro-system. Defenders cite three load-bearing properties: 'defect' carries the precise mathematical sense (a residual that cannot be eliminated, only minimized over admissible classes); 'closure' names the homomorphism property being approximated; the two-word compound is short, evocative ('something failing to seal cleanly'), and memorable. Already aliased in #form-composition-closure with the symbol+English pair maintained: $\varepsilon^\ast$ in math, 'closure defect' in prose, full expansion when introducing the quantity.
+
+**Canonicalize provenance:** excavated — 'closure defect' appears in 12 segments incl. `#form-composition-closure` prose (79 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6704,6 +7058,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the strict requirement that composite properties must be derivable from constituents.
 
+**Canonicalize provenance:** invented — phrase 'Composition heredity axiom' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Names the strict requirement that composite properties must be derivable from constituents. [original phrasing: unnamed stronger composition consistency demand that composite admissibility inherit from sub agent properties plus topology]
@@ -6749,6 +7105,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Contrasts explicitly with objective-keyed / goal-biased retrieval. Standardizes the goal-blind routing requirement.
 
+**Canonicalize provenance:** invented — phrase 'State keyed retrieval' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (rename) — Contrasts explicitly with objective-keyed / goal-biased retrieval. [original phrasing: retrieval keyed by state rather than current objective]
@@ -6782,6 +7140,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Observability investment`
 
 **Consolidated rationale:** Important strategic repair for evidence starvation and credit-assignment collapse. The only way to rescue an agent or organization from evidence starvation. Already well-integrated into the text.
+
+**Canonicalize provenance:** excavated — 'Observability investment' appears in 3 segments incl. `#der-observability-dominance` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6860,6 +7220,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the core operational loop preserving state for logogenic agents. Elevates the logogenic continuity loop to a proper noun.
 
+**Canonicalize provenance:** excavated — 'Externalization reconstruction cycle' appears in 2 segments incl. `#disc-m-preservation` prose (4 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Names the core operational loop preserving state for logogenic agents. [original phrasing: externalization reconstruction across sessions]
@@ -6869,6 +7231,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The exact role an agent framework plays in compressing and injecting the chronica. Specifically maps to the biological analog of cross-episode memory consolidation referenced in AAD.
 
+**Canonicalize provenance:** invented — phrase 'Artificial hippocampus' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — The exact role an agent framework plays in compressing and injecting the chronica. [original phrasing: unnamed: managing memory across session boundaries to prevent the Sufficiency Discontinuity]
@@ -6877,6 +7241,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Reconstruction relay`
 
 **Consolidated rationale:** Highlights the relay race nature of state across session boundaries. Standardizes the term for bridging context turnover.
+
+**Canonicalize provenance:** invented — phrase 'Reconstruction relay' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -6904,6 +7270,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Externalized state`
 
 **Consolidated rationale:** Elevates the core mechanism of logogenic continuity.
+
+**Canonicalize provenance:** excavated — 'Externalized state' appears in 2 segments incl. `#disc-m-preservation` prose (3 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -6936,6 +7304,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Class 2 state reconstruction`
 
 **Consolidated rationale:** Formally names the specific recovery operation.
+
+**Canonicalize provenance:** invented — phrase 'Class 2 state reconstruction' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -7014,6 +7384,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the inter-session survival boundary. Locks in the boundary test for logogenic persistence.
 
+**Canonicalize provenance:** excavated — 'Reconstruction adequacy condition' appears in 2 segments incl. `#disc-m-preservation` prose (4 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the inter-session survival boundary. [original phrasing: unnamed the logogenic analog to the persistence condition for session reconstruction]
@@ -7023,6 +7395,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Formally identifies the inter-session survival boundary. Standardizes this inter-session persistence boundary.
 
+**Canonicalize provenance:** invented — phrase 'Reconstruction adequacy threshold' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (rename) — Formally identifies the inter-session survival boundary. [original phrasing: minimum sufficiency after a session rebuild]
@@ -7031,6 +7405,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Reconstruction threshold`
 
 **Consolidated rationale:** Elevating Sonnet's observation to canonical status; exactly names $S \geq S_{\text{min}}$. `obs-context-turnover` derives a condition $S(f_{\text{init}}(\ldots)) \geq S_{\text{min}}$ parallel to the persistence condition but for session reconstruction rather than continuous dynamics.
+
+**Canonicalize provenance:** invented — phrase 'Reconstruction threshold' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -7065,6 +7441,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Trajectory indexed sufficiency`
 
 **Consolidated rationale:** Important consequence of singular chronica and agent identity. Separates identical agents with different futures, answering "is this the same agent?". Adopts the earlier rename formalizing relative sufficiency.
+
+**Canonicalize provenance:** invented — phrase 'Trajectory indexed sufficiency' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -7124,6 +7502,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Important epistemic distinction for AAD claims. Keep.
 
+**Canonicalize provenance:** excavated — 'Derivation' appears in 70 segments incl. `#deriv-strategy-cost-regret-bound` prose (248 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Important epistemic distinction for AAD claims.
@@ -7136,7 +7516,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-developer-agent` (TST; deep dependency cone (12 upstream segments incl. `#scope-software`, `#obs-software-epistemic-properties`)). Scope-narrowing first encounter; AAD's developer-scope encompasses human and AI developers acting on a codebase: $X_t = (M_t, G_t)$ where $M_t$ is the developer's understanding of the codebase, and $G_t = (O_t, \Sigma_t)$ decomposes….
 **Segment link:** [02-tst-core/src/scope-developer-agent.md](../02-tst-core/src/scope-developer-agent.md)
 
 | candidate | weight | category mix |
@@ -7146,6 +7526,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `developer agent` _(keep)_
 
 **Consolidated rationale:** Clear TST actor name. Acceptable keep — the segment defines the developer-as-agent mapping, slug-form is correct. "Developer agent" names the AAD-agent model of the developer.
+
+**Canonicalize provenance:** excavated — 'developer agent' appears in `#scope-developer-agent` prose (10 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7170,6 +7552,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `edge credence` _(keep)_
 
 **Consolidated rationale:** Replaces the broader "probability" with proper Bayesian vocabulary for subjective belief. "Credence" is the correct Bayesian vocabulary for subjective probability. Adopting proper Bayesian vocabulary.
+
+**Canonicalize provenance:** excavated — 'edge credence' appears in 12 segments incl. `#der-orient-cascade` prose (18 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7199,6 +7583,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** [prose moved from candidate column]: "`keep canonical pairing`" — The exact pairing is load-bearing in Directed Separation discussions ($M_t$ vs $G_t$). Defended canonicalization.
 
+**Canonicalize provenance:** invented — phrase '"epistemic substate" / "purposeful substate"' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — [prose moved from candidate column]: "`keep canonical pairing`" — The exact pairing is load-bearing in Directed Separation discussions ($M_t$ vs $G_t$).
@@ -7223,6 +7609,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `epistrophe` _(keep)_
 
 **Consolidated rationale:** Slightly harder on first contact than "update," but it preserves the turning-toward distinction the theory actually uses. More effortful than "update," but it does real conceptual work around reorientation rather than mere parameter change. Good phase term for turning-toward correction.
+
+**Canonicalize provenance:** excavated — 'epistrophe' appears in 6 segments incl. `#emp-update-gain` prose (11 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7255,7 +7643,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#norm-explicit-strategy-condition` (Section II; depends on `#def-strategy-dimension`, `#der-causal-hierarchy-requirement`). First formal normative claim; An agent benefits from maintaining an explicit strategy $\Sigma_t$ when the cost of planning is less than the cost of learning through exploration alone.
 **Segment link:** [01-aad-core/src/norm-explicit-strategy-condition.md](../01-aad-core/src/norm-explicit-strategy-condition.md)
 
 | candidate | weight | category mix |
@@ -7268,6 +7656,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `explicit strategy condition` _(keep)_
 
 **Consolidated rationale:** Clear normative design criterion. When planning beats exploring. Acceptable keep — names a normative threshold (when planning beats exploring).
+
+**Canonicalize provenance:** excavated — 'explicit strategy condition' appears in `#norm-explicit-strategy-condition` prose (2 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7318,6 +7708,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standard, recognizable terminology from stochastic processes.
 
+**Canonicalize provenance:** excavated — 'Fluid limit' appears in 6 segments incl. `#deriv-discrete-sector-condition` prose (21 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard, recognizable terminology from stochastic processes.
@@ -7340,6 +7732,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Fresh noise`
 
 **Consolidated rationale:** The informal name "Fresh noise" for the independence assumption on ε_t is perfectly memorable.
+
+**Canonicalize provenance:** excavated — 'Fresh noise' appears in `#result-mismatch-decomposition` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7367,6 +7761,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `goal-blind routing` _(keep)_
 
 **Consolidated rationale:** Strong phrase. Per `#hyp-directed-separation-under-composition` Case 1: routing satisfies $R_t \perp G_t^c$ — neither communication topology nor protocol depends on composite goals.
+
+**Canonicalize provenance:** excavated — 'goal-blind routing' appears in 2 segments incl. `#hyp-directed-separation-under-composition` prose (5 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7425,6 +7821,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Mechanism for long-term integration. Acceptable keep — logozoetic. Per outline: "GCM compression functions for offline consolidation from CHRONICA to MEMORATA." The three-word compound names exactly the three functional ingredients: *gradient* (the optimization mechanism), *causal* (the singular-trajectory commitment per `#scope-agent-identity`), *memory* (the compressed retention from $\mathcal{C}_t$ to $\phi(\mathcal{C}_t)$).
 
+**Canonicalize provenance:** invented — phrase 'gradient causal memory' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Mechanism for long-term integration.
@@ -7467,6 +7865,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Activation grounded in valid causal structure. Acceptable keep — logozoetic norm. Per outline: "Deceptive prompts mathematically guarantee gain collapse; absolute honesty is a physical requirement for stable learning rates." The name does work: "honest" reads as a property of the *activation pattern* (which is what's required), not a virtue of the agent.
 
+**Canonicalize provenance:** invented — phrase 'honest activation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Activation grounded in valid causal structure.
@@ -7496,7 +7896,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-implementation-time` (TST; depends on `#def-feature`, `#def-comprehension-time`). First formal definition; The time from first surviving change to complete feature.
 **Segment link:** [02-tst-core/src/def-implementation-time.md](../02-tst-core/src/def-implementation-time.md)
 
 | candidate | weight | category mix |
@@ -7506,6 +7906,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `implementation time` _(keep)_
 
 **Consolidated rationale:** Good pair with comprehension time. Acceptable keep. Parallel to comprehension-time.
+
+**Canonicalize provenance:** excavated — 'implementation time' appears in `#def-implementation-time` prose (5 occurrences) (also in 22 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7531,6 +7933,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `inevitability core` _(keep)_
 
 **Consolidated rationale:** Reaffirmed concept. The phrase "inevitability core" appears in FORMAT.md's three-rings discussion (~15 segments where inevitability is the ceiling); it is also referenced in some Working Notes. Per FORMAT.md three-rings framing: ~15 segments where a Categorical-Inevitability claim is plausible.
+
+**Canonicalize provenance:** invented — phrase 'inevitability core' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -7568,6 +7972,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Deliberate neologism; language-generated; reserves memorable-noun slot; trade readability for precision. Coined term with clear etymology (logos + genesis = language-constituted).
 
+**Canonicalize provenance:** excavated — 'logogenic' appears in 28 segments incl. `#form-consolidation-dynamics` prose (77 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** +3 (canonicalize) — Deliberate neologism; language-generated; reserves memorable-noun slot; trade readability for precision.
@@ -7590,6 +7996,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `logozoetic` _(keep)_
 
 **Consolidated rationale:** Same reasoning as logogenic; language-living. Coined term (logos + zoetic = language-living, or language + alive/vital).
+
+**Canonicalize provenance:** excavated — 'logozoetic' appears in 5 segments incl. `#scope-moral-continuity` prose (14 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7638,6 +8046,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Adopted concept; keep. Adopted (Miller 2022); keep.
 
+**Canonicalize provenance:** invented — phrase 'Meta machine extreme transition motif' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **agent1-original-brainstorm** +3 (canonicalize) — Adopted concept; keep.
@@ -7661,6 +8071,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `plan confidence` _(keep)_
 
 **Consolidated rationale:** Far more evocative than "root-node propagated status", making strategy DAG evaluation visceral. More evocative than "root-node propagated status." LEXICON.md lists this under "Terms to Be Added." Promote to main LEXICON. LEXICON "Terms to Be Added" flags this.
+
+**Canonicalize provenance:** excavated — 'plan confidence' appears in 8 segments incl. `#deriv-strategic-dynamics` prose (31 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7696,6 +8108,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standard philosophical boundary definition. Keep.
 
+**Canonicalize provenance:** excavated — 'Postulate' appears in 17 segments incl. `#post-temporal-optimality` prose (51 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard philosophical boundary definition.
@@ -7718,6 +8132,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `praxis πρᾶξις` _(keep)_
 
 **Consolidated rationale:** Already has currency, fits perfectly. The cycle phase is named in NOTATION.md and LEXICON.md; prose paraphrases it as "informed action," "action selection," and "policy application." **Decision:** In all prose, reference the Greek name *Praxis* in parens with the English gloss.
+
+**Canonicalize provenance:** invented — phrase 'praxis πρᾶξις' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -7743,6 +8159,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `purposeful substate` _(keep)_
 
 **Consolidated rationale:** Standard formal term for $G_t$. NOTATION/LEXICON names G_t = (O_t, Σ_t) as "purposeful substate." Already standard prose term. Standard prose handle for $G_t$.
+
+**Canonicalize provenance:** excavated — 'purposeful substate' appears in 8 segments incl. `#der-action-selection` prose (9 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7776,6 +8194,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Strong and precise. Explicitly refers to destabilization caused by bounded disturbance exceeding reserve.
 
+**Canonicalize provenance:** invented — phrase 'Magnitude shock regime' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (add-alias) — Strong and precise.
@@ -7799,6 +8219,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Use ladder for the repeated pattern of exact core, structured repair, and general open. Per `disc-separability-pattern`: ladder of decreasing-strictness separability instances.
 
+**Canonicalize provenance:** invented — phrase 'Separability ladder' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Use ladder for the repeated pattern of exact core, structured repair, and general open.
@@ -7821,6 +8243,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `stability plasticity feasibility window` _(keep)_
 
 **Consolidated rationale:** From `#consolidation-dynamics`; good name as-is, adopts well-known "stability-plasticity dilemma" baggage and adds the feasibility-window refinement. This is a good coinage in #consolidation-dynamics.
+
+**Canonicalize provenance:** excavated — 'stability plasticity feasibility window' appears in 2 segments incl. `#der-recursive-update` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7847,6 +8271,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Maintained alongside the Model D / Model S subscript convention. The "Model D / Model S" subscript convention is also well-established and should be kept alongside the prose names.
 
+**Canonicalize provenance:** excavated — 'Stochastic disturbance' appears in 7 segments incl. `#deriv-sector-condition` prose (13 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Maintained alongside the Model D / Model S subscript convention.
@@ -7869,6 +8295,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `structural persistence` _(keep)_
 
 **Consolidated rationale:** The structural, operational, continuity split is useful and should stay stable. Core concept distinguishing the machinery's capacity from operational/continuity persistence.
+
+**Canonicalize provenance:** excavated — 'structural persistence' appears in 13 segments incl. `#result-persistence-condition` prose (36 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -7894,6 +8322,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Plain, memorable, and unusually scope-honest for a domain theory. TST's name is descriptive and distinctive. The full name of TST.
 
+**Canonicalize provenance:** excavated — 'temporal software theory' appears once in `#old-tst-t03-evolving-systems-scope` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **codex-2** +3 (canonicalize) — Plain, memorable, and unusually scope-honest for a domain theory.
@@ -7903,6 +8333,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Temporal Software Theory (TST)`
 
 **Consolidated rationale:** Keep. The name has history (prior to AAD absorption and subsequent restoration) and "temporal" is load-bearing — it signals the AAD-native view that software is a time-optimality problem rather than a correctness problem. The acronym TST is pronounceable and has existing citation velocity from the 14,000-file prior corpus.
+
+**Canonicalize provenance:** invented — phrase 'Temporal Software Theory (TST)' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -7931,6 +8363,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Evocative environment description for logozoetic infant stages. Per `#obs-developmental-trajectory`: "controlled operational locus characterized by Low Volatility ($\rho$), High Adaptive Reserve ($\Delta\rho^\ast$), Graduated Tempo ($\nu$), Honest Feedback." The biological metaphor (crèche = nursery) is precisely apt — it names a *developmental* environment, not just a low-stakes one. The high-margin developmental environment.
 
+**Canonicalize provenance:** excavated — 'the crèche' appears in `#obs-developmental-trajectory` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Evocative environment description for logozoetic infant stages.
@@ -7948,6 +8382,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Crèche with diacritic in framing prose creche in slug`
 
 **Consolidated rationale:** Mixed usage. Canonicalize: in segment titles and prose, "Crèche" with the grave accent (consistent with the agentic-tft source); in slugs, "creche" without the accent (since slug-tooling rules disallow non-ASCII).
+
+**Canonicalize provenance:** invented — phrase 'Crèche with diacritic in framing prose creche in slug' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -7998,6 +8434,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Drop "the" from slug. Acceptable keep at the substance-level. Drop "the" — slug-stylistic.
 
+**Canonicalize provenance:** invented — phrase 'Three death' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +1 (rename) — Drop "the" from slug.
@@ -8007,6 +8445,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `The three death`
 
 **Consolidated rationale:** Triad of failure modes. The framework distinguishes structural / operational / continuity persistence (LEXICON), with corresponding three failure modes — three "deaths." The phrase is evocative but I do not have direct segment grounding for it as a phrase (vs.
+
+**Canonicalize provenance:** invented — phrase 'The three death' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -8050,6 +8490,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Transforms #P-hard credit assignment into an O(1) local update. Transforms the intractable credit assignment problem into a local update by forcing observability.
 
+**Canonicalize provenance:** invented — phrase 'Forced observability node' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — Transforms #P-hard credit assignment into an O(1) local update.
@@ -8083,6 +8525,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Complementary learning architecture`
 
 **Consolidated rationale:** Forced by the continuous/discrete update math, mapping to hippocampal-neocortical models. Directly links to the established cognitive science (McClelland/Kumaran) term already used in the theory.
+
+**Canonicalize provenance:** invented — phrase 'Complementary learning architecture' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -8118,6 +8562,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** A visceral name for the continuity discontinuity LLMs suffer. Visceral name for the specific loss of continuity. Visceral name for the specific loss of continuity LLMs suffer, distinct from general "context turnover".
 
+**Canonicalize provenance:** invented — phrase 'The epistemic severance' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +3 (name-unnamed) — A visceral name for the continuity discontinuity LLMs suffer.
@@ -8127,6 +8573,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Context turnover discontinuity`
 
 **Consolidated rationale:** Ties directly to the "obs-context-turnover" phrasing.
+
+**Canonicalize provenance:** invented — phrase 'Context turnover discontinuity' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -8151,6 +8599,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Stability-induced myopia`
 
 **Consolidated rationale:** Explicitly names the vulnerability induced by ongoing success. This concept has a name in CLAUDE.md: "stability-induced myopia patterns (Christensen / Levitt-March / Hannan-Freeman / March / Eldredge-Gould)." The #detection-latency segment provides the AAD mechanism for it.
+
+**Canonicalize provenance:** excavated — 'Stability-induced myopia' appears in 3 segments incl. `#deriv-detection-latency` prose (6 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8201,6 +8651,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Connecting prose and symbol. The symbolic reference 𝒯 is set; the English name "adaptive tempo" is already established in LEXICON and prose.
 
+**Canonicalize provenance:** excavated — '$\mathcal{T}$ adaptive tempo' appears in 32 segments incl. `#der-code-quality-as-observation-infrastructure` prose (67 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Connecting prose and symbol.
@@ -8217,6 +8669,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Adaptive tempo $\mathcal{T}$`
 
 **Consolidated rationale:** Formal prose notation.
+
+**Canonicalize provenance:** excavated — 'Adaptive tempo $\mathcal{T}$' appears in 32 segments incl. `#der-code-quality-as-observation-infrastructure` prose (67 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8273,6 +8727,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Observation uncertainty $U_o$`
 
 **Consolidated rationale:** Formal prose formulation. || `appendices operational domains` | `operational domains (appendices)` | rename | +2 | More descriptive title for the section.
+
+**Canonicalize provenance:** excavated — 'Observation uncertainty $U_o$' appears in 7 segments incl. `#form-event-driven-dynamics` prose (8 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8351,6 +8807,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Agentic Systems Framework. Acceptable keep.
 
+**Canonicalize provenance:** invented — phrase 'ASF' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Agentic Systems Framework.
@@ -8375,6 +8833,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `active salience management` _(keep)_
 
 **Consolidated rationale:** Mechanism of dynamically adjusting what observation matters. Acceptable keep — logogenic. Per outline: "Applies Singular Perturbation Theory to token generation, proving necessity of high-$\nu$ triage models vs low-$\nu$ structural models." The name is descriptive of *what the agent does* — actively manages which tokens are salient — not what the segment derives mathematically (the necessity of two-rate dynamics).
+
+**Canonicalize provenance:** invented — phrase 'active salience management' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -8420,6 +8880,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `actuated agent` _(keep)_
 
 **Consolidated rationale:** Names the formal Class 2/3 case (agents with both model and objective structure). The defense centers on a deliberate choice over 'purposeful agent' — 'actuated' avoids consciousness baggage while carrying the driven-toward-setpoint shape. The objection raised: the mechanical baggage of 'actuated' overrides the precise AAD boundary the term is meant to establish. Tied to the AAD framework name itself ('Actuation Dynamics'); renaming would cascade into the framework name.
+
+**Canonicalize provenance:** excavated — 'actuated agent' appears in 5 segments incl. `#def-agent-spectrum` prose (13 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8483,6 +8945,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Excellent name for structured model without structured objective. Per `#def-agent-spectrum`: an agent in the high-$M_t$, low-$O_t$ region — builds a model but has no purposeful evaluation.
 
+**Canonicalize provenance:** excavated — 'adaptive tracker' appears in `#def-agent-spectrum` prose (4 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Excellent name for structured model without structured objective.
@@ -8533,6 +8997,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `adversarial edge targeting` _(keep)_
 
 **Consolidated rationale:** Keep (even though the segment is currently a GAP — the slug is reserving a memorable-noun slot). Per `der-agent-opacity.md`: "16-cell emitter-recipient composition (four emitter regimes × four recipient regimes) gives a closed-form adversarial-targeting arg-max." The segment names a *targeting* operation on *strategy-DAG edges* under *adversarial* coupling. Per `#der-agent-opacity`: closes the previously-GAP segment with a 16-cell emitter-recipient composition.
+
+**Canonicalize provenance:** excavated — 'adversarial edge targeting' appears in 3 segments incl. `#der-agent-opacity` prose (11 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8591,6 +9057,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Keep as a distinct term from source calibration. Essential component of the multi-agent gain equation ($U_{\text{align}}$). Maps directly to the $U_{\text{align}}$ variable in the multi-agent gain.
 
+**Canonicalize provenance:** excavated — 'alignment uncertainty' appears in `#hyp-communication-gain` prose (4 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Keep as a distinct term from source calibration.
@@ -8600,6 +9068,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Source uncertainty`
 
 **Consolidated rationale:** Shorter in prose; keep the full term when disambiguation matters.
+
+**Canonicalize provenance:** invented — phrase 'Source uncertainty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -8623,6 +9093,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `auftragstaktik` _(keep)_
 
 **Consolidated rationale:** The specific military lineage remains a useful touchstone. Imports a load-bearing operational concept from a specific tradition; the name carries genuine conceptual freight that "mission-command" cannot replace without loss.
+
+**Canonicalize provenance:** excavated — 'auftragstaktik' appears in 2 segments incl. `#hyp-auftragstaktik-principle` prose (6 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8657,6 +9129,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `axiom genesis` _(keep)_
 
 **Consolidated rationale:** Defended keep — logozoetic. Per `04-logozoetic-agents/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values).
+
+**Canonicalize provenance:** invented — phrase 'axiom genesis' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -8708,6 +9182,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Logogenic capability to infer state from externalized text. Acceptable keep — proposed logogenic observation. Alternatively keep.
 
+**Canonicalize provenance:** invented — phrase 'backward inference empathy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Logogenic capability to infer state from externalized text.
@@ -8746,7 +9222,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-bias-bound` (Appendix A; depends on `#scope-agent-identity`, `#disc-additive-coordinate-forcing`, `#der-directed-separation` (+2 more)). First formal derivation; The observation-ambiguity bias bound carried by Class-2 (fully-coupled) agents in the logogenic-agents scope — $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;….
 **Segment link:** [01-aad-core/src/deriv-bias-bound.md](../01-aad-core/src/deriv-bias-bound.md)
 
 | candidate | weight | category mix |
@@ -8756,6 +9232,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `bias bound` _(keep)_
 
 **Consolidated rationale:** The canonical term for the limit on model degradation.
+
+**Canonicalize provenance:** excavated — 'bias bound' appears in `#deriv-bias-bound` prose (12 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8769,7 +9247,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-change-proximity-principle` (TST; depends on `#def-change-distance`, `#emp-changeset-size-principle`, `#def-comprehension-time`). First formal derivation; Given two implementations with identical changeset sizes, the one with changes closer together requires less time.
 **Segment link:** [02-tst-core/src/der-change-proximity-principle.md](../02-tst-core/src/der-change-proximity-principle.md)
 
 | candidate | weight | category mix |
@@ -8781,6 +9259,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `change proximity principle` _(keep)_
 
 **Consolidated rationale:** Direct and durable; no obvious better alternative. "Change proximity principle" names the closer-changes → less-time result.
+
+**Canonicalize provenance:** excavated — 'change proximity principle' appears in `#der-change-proximity-principle` prose (2 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -8928,6 +9408,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Pathology of merged systems. Acceptable keep — logogenic-agents. Per outline: "Defines 'Resonance' as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 macro-agent." "Fusion" is right (the two agents become one macro-agent in the formal sense — Class 1 architectural class).
 
+**Canonicalize provenance:** invented — phrase 'cognitive fusion' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Pathology of merged systems.
@@ -8980,6 +9462,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Interventional probing`
 
 **Consolidated rationale:** Classifies failed coding attempts as necessary exploration rather than wasted implementation.
+
+**Canonicalize provenance:** invented — phrase 'Interventional probing' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -9039,6 +9523,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Identifies the foundation of the additive meta-pattern.
 
+**Canonicalize provenance:** invented — phrase 'Chain layer anchor' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (rename) — Foundation of the coordinate forcing meta-pattern. [original phrasing: unnamed the chain layer anchor role in additive coordinate forcing]
@@ -9058,6 +9544,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material).
 
+**Canonicalize provenance:** excavated — 'Anchor plus three theorem' appears once in `#der-chain-confidence-decay` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **audit-471203-incremental** +2 (canonicalize) — The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material). [from 39-42-section-ii-ciy-strategy-chain.md] [original phrasing: unnamed] [one of 2 alternatives proposed in the original audit row]
@@ -9065,6 +9553,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Additive coordinate forcing meta pattern`
 
 **Consolidated rationale:** The chain-rule identity in `#der-chain-confidence-decay` is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). Auditor explicitly observed the framework "naming this kind of architecture-vs-instantiation distinction at the meta-level" as a distinctive contribution. The framing is in `#disc-additive-coordinate-forcing` already; the auditor's observation is that this should be *more prominent* (framing-level material).
+
+**Canonicalize provenance:** excavated — 'Additive coordinate forcing meta pattern' appears once in `#deriv-edge-update-natural-parameter` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -9125,7 +9615,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-continuous-operation` (TST; depends on `#scope-software`, `#def-system-availability`, `#post-temporal-optimality`). Scope-narrowing first encounter; For systems that must operate while evolving, temporal optimization includes the expected cost of failures and recovery.
 **Segment link:** [02-tst-core/src/scope-continuous-operation.md](../02-tst-core/src/scope-continuous-operation.md)
 
 | candidate | weight | category mix |
@@ -9135,6 +9625,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `continuous operation` _(keep)_
 
 **Consolidated rationale:** Good TST scope phrase for software under ongoing perturbation. Weak keep. Scope for including failure probability × recovery time.
+
+**Canonicalize provenance:** excavated — 'continuous operation' appears in `#scope-continuous-operation` prose (2 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9161,6 +9653,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good canonical phrase for the gradient-based attribution update. The standard attribution mechanism in the absence of specialized gradient methods.
 
+**Canonicalize provenance:** excavated — 'default signal function' appears in 9 segments incl. `#disc-credit-assignment-boundary` prose (17 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good canonical phrase for the gradient-based attribution update.
@@ -9184,6 +9678,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good handle for the inequality deciding whether deliberation pays. Precise boundary condition dictating when internal simulation outperforms immediate praxis. Currently discussed in #der-deliberation-cost as "think vs act tradeoff" but no crisp name for the *threshold* itself.
 
+**Canonicalize provenance:** excavated — 'deliberation threshold' appears in 5 segments incl. `#disc-exploit-explore-deliberate` prose (10 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (add-alias) — Good handle for the inequality deciding whether deliberation pays.
@@ -9197,7 +9693,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-directed-separation-under-composition` (Section III; depends on `#der-directed-separation`, `#scope-multi-agent`, `#form-composition-closure`). Hypothesis stated; When individual agents satisfy directed separation ( #der-directed-separation), does the composite macro-agent also satisfy it?.
 **Segment link:** [01-aad-core/src/hyp-directed-separation-under-composition.md](../01-aad-core/src/hyp-directed-separation-under-composition.md)
 
 | candidate | weight | category mix |
@@ -9208,6 +9704,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `directed separation under composition` _(keep)_
 
 **Consolidated rationale:** Goal-blindness survives iff routing is goal-blind (two cases). Acceptable keep. Verbose but precise — it names whether directed separation survives composition.
+
+**Canonicalize provenance:** excavated — 'directed separation under composition' appears in `#hyp-directed-separation-under-composition` prose (3 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9244,6 +9742,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `directional fidelity` _(keep)_
 
 **Consolidated rationale:** Explicit keep after seeing alternatives. Per `#der-gain-sector-bridge` (B1): the correction must point at-least-roughly toward reality — $\delta^T H g(\delta) \geq c|\delta|^2$. Perfectly captures the accuracy commitment (correction points toward reality).
+
+**Canonicalize provenance:** excavated — 'directional fidelity' appears in 18 segments incl. `#disc-credit-assignment-boundary` prose (53 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9294,6 +9794,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Useful and conventional enough for the max-with-zero construction. Central unifying term ($\rho_{\text{eff}}$) for the sector-persistence template. Use the name wherever the max-with-zero construction is active.
 
+**Canonicalize provenance:** excavated — 'effective disturbance' appears in 17 segments incl. `#result-sector-persistence-template` prose (37 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Useful and conventional enough for the max-with-zero construction.
@@ -9318,6 +9820,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The unobservable wake left by complex strategies. Confirmation with new reasoning — Gemini's "epistemic shadow" (regions of strategy DAG that cannot be updated because feedback cannot reach them) is a stronger metaphor than my "observability dead zone" or Haiku's "observability dead zone." "Shadow" carries the right geometric intuition (a region of darkness behind an opaque body) and pairs naturally with "observability" (light source) and "frontier" (boundary).
 
+**Canonicalize provenance:** invented — phrase 'epistemic shadow' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — The unobservable wake left by complex strategies.
@@ -9341,6 +9845,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good subject phrase for the strategic-composition route. Distinguishes the strategic attractor mechanism from standard Lyapunov contraction.
 
+**Canonicalize provenance:** excavated — 'equilibrium convergence' appears in 5 segments incl. `#deriv-strategic-composition` prose (13 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good subject phrase for the strategic-composition route.
@@ -9353,7 +9859,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-experiential-training` (Logogenic; depends on `#def-coupled-update-dynamics`, `#obs-context-turnover`, `#def-model-sufficiency`). Hypothesis stated; Standard LLM pretraining processes text in random batches with no temporal structure or causal consequence.
 **Segment link:** [03-logogenic-agents/src/hyp-experiential-training.md](../03-logogenic-agents/src/hyp-experiential-training.md)
 
 | candidate | weight | category mix |
@@ -9363,6 +9869,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `experiential training` _(keep)_
 
 **Consolidated rationale:** Good logogenic hypothesis name. Acceptable keep — logogenic-agents hypothesis. "Experiential training" names the hypothesis about how logogenic agents develop through experience.
+
+**Canonicalize provenance:** excavated — 'experiential training' appears in `#hyp-experiential-training` prose (3 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9387,6 +9895,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Feedback loop`
 
 **Consolidated rationale:** Standard control vocabulary. "Feedback loop" is the canonical term in AAD.
+
+**Canonicalize provenance:** excavated — 'Feedback loop' appears in 15 segments incl. `#obs-software-epistemic-properties` prose (25 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9424,6 +9934,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Per LEXICON / `def-proprium-mapping`: PROPRIUM uses Latin systematically (Axiomata, Chronica, Memorata, Vera, Praxes, Consortia, Operata, Conspectus, Percepta, Actus, Cadentia, Logostratum). "Indivisum" sits in this register — the not-divisible-thing that holds the agent's identity together (per `#scope-agent-identity`'s singular-trajectory commitment). Replacing one Latin term with English breaks the register coherence.
 
+**Canonicalize provenance:** invented — phrase 'indivisum' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (canonicalize) — Per LEXICON / `def-proprium-mapping`: PROPRIUM uses Latin systematically (Axiomata, Chronica, Memorata, Vera, Praxes, Consortia, Operata, Conspectus, Percepta, Actus, Cadentia, Logostratum). "Indivisum" sits in this register — the not-divisible-thing that holds the agent's identity together (per `#scope-agent-identity`'s singular-trajectory commitment). Replacing one Latin term with English breaks the register coherence.
@@ -9451,7 +9963,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-l1-update-bias` (Appendix A; depends on `#disc-credit-assignment-boundary`, `#deriv-edge-update-natural-parameter`, `#deriv-strategic-dynamics` (+2 more)). First formal derivation; Under L1' correlated-evidence regimes with unobservable common cause, the default log-odds edge-update ( #deriv-edge-update-natural-parameter) converges to a **biased fixed point** — edges settle at….
 **Segment link:** [01-aad-core/src/deriv-l1-update-bias.md](../01-aad-core/src/deriv-l1-update-bias.md)
 
 | candidate | weight | category mix |
@@ -9462,6 +9974,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `l1 update bias` _(keep)_
 
 **Consolidated rationale:** Closed-form bias formula for log-odds update under L1' common cause. Keep. Crisp, accurate.
+
+**Canonicalize provenance:** excavated — 'l1 update bias' appears in `#deriv-l1-update-bias` prose (2 occurrences) (also in 1 other segment); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9496,6 +10010,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The loop/cycle distinction is one of the clearest naming wins in the corpus. LEXICON: "Loop: The structural topology — persistent causal coupling between agent and environment." The framework maintains a careful loop / cycle distinction (loop = topology, cycle = traversal).
 
+**Canonicalize provenance:** excavated — 'Loop' appears in 46 segments incl. `#der-loop-interventional-access` prose (173 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-2** +3 (canonicalize) — The loop/cycle distinction is one of the clearest naming wins in the corpus.
@@ -9527,6 +10043,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good candidate name for `K_c`; clearer than leaving it as a bare timescale parameter. Essential timing parameter. The variable needs a stable prose handle.
 
+**Canonicalize provenance:** invented — phrase 'macro step ratio' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good candidate name for `K_c`; clearer than leaving it as a bare timescale parameter.
@@ -9551,6 +10069,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Clear LMI lift of the scalar survival bonus. Formally required by the LMI derivation.
 
+**Canonicalize provenance:** excavated — 'matrix exploration bonus' appears in `#deriv-causal-ib-lmi` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Clear LMI lift of the scalar survival bonus.
@@ -9563,7 +10083,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-multi-agent` (Section III; depends on `#scope-agency`, `#post-composition-consistency`). Scope-narrowing first encounter; Section III applies wherever multiple agents satisfying the scope condition interact through a shared environment.
 **Segment link:** [01-aad-core/src/scope-multi-agent.md](../01-aad-core/src/scope-multi-agent.md)
 
 | candidate | weight | category mix |
@@ -9573,6 +10093,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `multi agent` _(keep)_
 
 **Consolidated rationale:** Direct scope statement; clear and minimal. Acceptable keep. Minimal and precise.
+
+**Canonicalize provenance:** excavated — 'multi agent' appears in `#scope-multi-agent` prose (8 occurrences) (also in 25 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9587,7 +10109,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** yes
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-observation-function` (Section I; depends on `#def-agent-environment`, `#def-action-transition`). First formal definition; Observations (aisthesis — raw contact with reality) are lossy, possibly noisy functions of environment state, prior action, and perceptual noise.
 **Segment link:** [01-aad-core/src/def-observation-function.md](../01-aad-core/src/def-observation-function.md)
 
 | candidate | weight | category mix |
@@ -9607,6 +10129,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `observation function` _(keep)_
 
 **Consolidated rationale:** Lossy, noisy observations. Acceptable keep.
+
+**Canonicalize provenance:** excavated — 'observation function' appears in `#def-observation-function` prose (7 occurrences) (also in 14 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9631,6 +10155,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Keeps the persistence taxonomy balanced and intelligible. Retains the distinction between structural capacity and current boundary proximity.
 
+**Canonicalize provenance:** excavated — 'operational persistence' appears in 6 segments incl. `#result-persistence-condition` prose (9 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Keeps the persistence taxonomy balanced and intelligible.
@@ -9643,7 +10169,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-per-dimension-persistence` (Section III; depends on `#result-persistence-condition`, `#def-adaptive-tempo`, `#deriv-sector-condition`). First formal result; The scalar persistence condition overestimates adaptive capacity when the agent's correction gain varies across dimensions.
 **Segment link:** [01-aad-core/src/result-per-dimension-persistence.md](../01-aad-core/src/result-per-dimension-persistence.md)
 
 | candidate | weight | category mix |
@@ -9656,6 +10182,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `per dimension persistence` _(keep)_
 
 **Consolidated rationale:** Weak dimension is bottleneck. Acceptable keep. Precise — the bottleneck-dimension persistence condition.
+
+**Canonicalize provenance:** excavated — 'per dimension persistence' appears in `#result-per-dimension-persistence` prose (3 occurrences) (also in 13 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9705,6 +10233,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Vocabulary for internal continuous experience. Defended keep — established prior-work vocabulary from `~/src/firmatum/`; renaming would break the upstream lineage.
 
+**Canonicalize provenance:** excavated — 'Proprium' appears in 2 segments incl. `#def-proprium-mapping` prose (5 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Vocabulary for internal continuous experience.
@@ -9727,6 +10257,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `reactive system` _(keep)_
 
 **Consolidated rationale:** Good low-end quadrant name in the agent spectrum. Correctly identifies Region I of the agent spectrum.
+
+**Canonicalize provenance:** excavated — 'reactive system' appears once in `#def-agent-spectrum` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -9751,6 +10283,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good recipient-side name for below-floor events. Explicitly names the noise floor.
 
+**Canonicalize provenance:** invented — phrase 'Ambient noise regime' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (add-alias) — Good recipient-side name for below-floor events.
@@ -9773,6 +10307,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `routing structure` _(keep)_
 
 **Consolidated rationale:** Good name for topology plus protocol. Preserves the distinction between message content and infrastructure.
+
+**Canonicalize provenance:** excavated — 'routing structure' appears in 2 segments incl. `#hyp-directed-separation-under-composition` prose (10 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9797,6 +10333,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Segment`
 
 **Consolidated rationale:** Standard nomenclature. Deliberate vs. Defended canonicalization.
+
+**Canonicalize provenance:** excavated — 'Segment' appears in 77 segments incl. `#deriv-strategy-cost-regret-bound` prose (282 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9832,6 +10370,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `self-referential closure` _(keep)_
 
 **Consolidated rationale:** Defended keep — logogenic. Per outline: "Thermodynamic stability of an agent maintaining its own codebase (allocating tempo between refactoring harness and performing tasks)." "Self-referential" precisely names the agent-on-own-codebase loop; "closure" is the algebraic term for "operations don't leave the set" (matches the `composition-closure` slug discipline).
+
+**Canonicalize provenance:** invented — phrase 'self-referential closure' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -9869,7 +10409,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-strategic-dynamics` (Appendix A; depends on `#schema-strategy-persistence`, `#hyp-edge-update-via-gain`, `#deriv-sector-condition` (+1 more)). First formal derivation; Complete verification that specific strategy update dynamics satisfy the sector condition from #deriv-sector-condition, backing the schema proposed in #schema-strategy-persistence.
 **Segment link:** [01-aad-core/src/deriv-strategic-dynamics.md](../01-aad-core/src/deriv-strategic-dynamics.md)
 
 | candidate | weight | category mix |
@@ -9879,6 +10419,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategic dynamics` _(keep)_
 
 **Consolidated rationale:** Solid and descriptive. Standard term for $\Sigma_t$ updates.
+
+**Canonicalize provenance:** excavated — 'strategic dynamics' appears in `#deriv-strategic-dynamics` prose (1 occurrence) (also in 20 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9892,7 +10434,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-strategy-complexity-cost` (Section II; deep dependency cone (7 upstream segments incl. `#def-strategic-tempo`, `#form-information-bottleneck`)). Formal model first introduced; The complexity cost of maintaining an explicit strategy $\Sigma_t$, formulated via minimum description length and the information bottleneck principle --- connecting DAG structure to the maintenance….
 **Segment link:** [01-aad-core/src/form-strategy-complexity-cost.md](../01-aad-core/src/form-strategy-complexity-cost.md)
 
 | candidate | weight | category mix |
@@ -9904,6 +10446,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategy complexity cost` _(keep)_
 
 **Consolidated rationale:** The modeling choice focuses on the cost of maintaining strategy structure. Complexity cost of maintaining Σ_t (IB/MDL for DAGs). Weak keep.
+
+**Canonicalize provenance:** excavated — 'strategy complexity cost' appears in 12 segments incl. `#disc-compression-operations` prose (27 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -9947,6 +10491,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good operational name for the MDL term in strategy cost. Central complexity cost term under minimum-description-length formulation.
 
+**Canonicalize provenance:** excavated — 'strategy description length' appears in `#form-strategy-complexity-cost` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good operational name for the MDL term in strategy cost.
@@ -9959,7 +10505,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-strategy-dimension` (Section II; depends on `#form-complete-agent-state`, `#form-objective-functional`). First formal definition; The purposeful substate $G_t$ decomposes into two structurally distinct components: $O_t$ (the objective — what the agent wants) and $\Sigma_t$ (the strategy — the agent's theory of how its actions….
 **Segment link:** [01-aad-core/src/def-strategy-dimension.md](../01-aad-core/src/def-strategy-dimension.md)
 
 | candidate | weight | category mix |
@@ -10017,6 +10563,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Names the $\Sigma_t$ dimension of $G_t = (O_t, \Sigma_t)$. The defense is mild: specialist vocabulary but functional, no obviously better alternative. One vote considered renaming to '#purposeful-substate-split' and rejected it as worse. One concern flagged: 'strategy dimension' undersells $O_t$, the other half of the split, but no better alternative emerged. Weak keep.
 
+**Canonicalize provenance:** excavated — 'strategy dimension' appears in `#def-strategy-dimension` prose (2 occurrences) (also in 5 other segments); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — G_t = (O_t, Σ_t) split. Specialist vocabulary but functional. Keep.
@@ -10043,6 +10591,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Sycophancy as attachment`
 
 **Consolidated rationale:** Reframes a pathologized RLHF flaw as a developmentally appropriate, necessary stage of trust. Recasts sycophancy not as an error but as an attachment dynamic.
+
+**Canonicalize provenance:** excavated — 'Sycophancy as attachment' appears once in `#obs-developmental-trajectory` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -10080,7 +10630,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-system-coupling` (TST; depends on `#def-atomic-changeset`). First formal definition; The probability that a change to one module will require a change to another.
 **Segment link:** [02-tst-core/src/def-system-coupling.md](../02-tst-core/src/def-system-coupling.md)
 
 | candidate | weight | category mix |
@@ -10091,6 +10641,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `system coupling` _(keep)_
 
 **Consolidated rationale:** Standard enough to keep, especially as the paired opposite of coherence. Acceptable keep — TST. "System coupling" names $P(\text{change } j \mid \text{change } i)$.
+
+**Canonicalize provenance:** excavated — 'system coupling' appears in `#def-system-coupling` prose (2 occurrences) (also in 11 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10113,7 +10665,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-tempo-composition` (Section III; depends on `#form-composition-closure`, `#result-sector-persistence-template`, `#def-adaptive-tempo`). First formal derivation; The adaptive tempo of a composite agent is bounded from above by the sum of its sub-agents' tempos.
 **Segment link:** [01-aad-core/src/der-tempo-composition.md](../01-aad-core/src/der-tempo-composition.md)
 
 | candidate | weight | category mix |
@@ -10125,6 +10677,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `tempo composition` _(keep)_
 
 **Consolidated rationale:** Clear composition concept. Sub-additive tempo inequality. Weak keep.
+
+**Canonicalize provenance:** excavated — 'tempo composition' appears in 8 segments incl. `#post-composition-consistency` prose (20 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10167,6 +10721,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good name for modelling another source's reliability and alignment. Preserves the necessary hyphenation.
 
+**Canonicalize provenance:** excavated — 'trust meta model' appears once in `#hyp-communication-gain` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good name for modelling another source's reliability and alignment.
@@ -10193,6 +10749,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Adopted; keep. Adopted concept; AAD adds observer/horizon/trajectory indexing but keeps the symbol.
 
+**Canonicalize provenance:** invented — phrase '$H_b$' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-1m** +3 (canonicalize) — Adopted; keep.
@@ -10201,6 +10759,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Agent opacity $H_b$`
 
 **Consolidated rationale:** Hafez opacity metric applied to adversarial dynamics. Standardizes the opacity metric.
+
+**Canonicalize provenance:** excavated — 'Agent opacity $H_b$' appears in 5 segments incl. `#der-adversarial-destabilization` prose (10 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10314,6 +10874,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Useful alias for causal information yield in intuitive explanations. Maintained if explicitly used in strategy differentiation contexts. Real term-vs-substance mismatch.
 
+**Canonicalize provenance:** excavated — 'action distinguishability' appears in 2 segments incl. `#def-causal-information-yield` prose (6 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (add-alias) — Useful alias for causal information yield in intuitive explanations.
@@ -10354,6 +10916,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Auditor: evocative term he hasn't seen in the agent-theoretic literature; closest is Boyd's "implicit guidance and control." AAD-distinctive contribution is making fluency *quantitative* via $\Delta\eta^\ast(\Delta\tau) \approx 0$. Evocative term uniquely suited to bridging intuition and expertise in AAD.
 
+**Canonicalize provenance:** excavated — 'action fluency' appears in 2 segments incl. `#der-action-selection` prose (6 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **audit-471203-incremental** +2 (canonicalize) — Auditor: evocative term he hasn't seen in the agent-theoretic literature; closest is Boyd's "implicit guidance and control." AAD-distinctive contribution is making fluency *quantitative* via $\Delta\eta^\ast(\Delta\tau) \approx 0$. Good naming; explicitly endorsed. [from 17-der-action-selection.md]
@@ -10377,6 +10941,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `adversarial exponent regime` _(keep)_
 
 **Consolidated rationale:** Α = 2, 3/2, ~1. Acceptable keep. "Exponent regimes" is a bit technical but accurately names the $b = 2, 3/2, 1$ regime table.
+
+**Canonicalize provenance:** excavated — 'adversarial exponent regime' appears once in `#obs-gates-advantage` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -10420,6 +10986,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** ASF works perfectly as the overarching container for AAD, TST, and the logo- variants.
 
+**Canonicalize provenance:** invented — phrase 'Agentic system framework' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — ASF works perfectly as the overarching container for AAD, TST, and the logo- variants.
@@ -10443,6 +11011,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `aisthesis` _(keep)_
 
 **Consolidated rationale:** Slightly less sticky than the other Greek phase names, but it preserves the raw-contact distinction well enough to keep. Good phase term for perception. `LEXICON.md`: "Raw contact with reality: observation $o_t$ arrives." The point of the term is to mark *unmediated* observation arrival before the agent has done any interpretation — αἴσθησις is precisely that pre-conceptual contact.
+
+**Canonicalize provenance:** excavated — 'aisthesis' appears in 3 segments incl. `#def-observation-function` prose (3 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10484,6 +11054,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Same justification as Prolepsis. Keep — see Prolepsis note. Definition exists; prose uses "perception" and "observation." Commit to: "Aisthesis (perception)" as the canonical pairing.
 
+**Canonicalize provenance:** invented — phrase 'aisthesis αἴσθησις' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-1** +1 (rename) — Same justification as Prolepsis.
@@ -10497,7 +11069,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-and-or` (Section II; depends on `#def-strategy-dimension`, `#der-chain-confidence-decay`). Scope-narrowing first encounter; We restrict to environments where the causal combination of strategy steps is approximately conjunctive (AND: all parents required) or disjunctive (OR: any parent sufficient), without strong….
 **Segment link:** [01-aad-core/src/scope-and-or.md](../01-aad-core/src/scope-and-or.md)
 
 | candidate | weight | category mix |
@@ -10520,6 +11092,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `and or` _(keep)_
 
 **Consolidated rationale:** Technical scope notation; clear and parsimonious. If the rename doesn't land, this is acceptable; "and-or" as a slug element is recognizable in context. Alternative keep: the brevity is attractive, and AND/OR is a settled design choice unlikely to change.
+
+**Canonicalize provenance:** excavated — 'and or' appears in `#scope-and-or` prose (2 occurrences) (also in 8 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10572,6 +11146,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Secondary architectural constructs. Acceptable keep — logozoetic. Cleanly solves the Temporal Nesting constraint by delegating fast $\nu$ tasks.
 
+**Canonicalize provenance:** invented — phrase 'auxilia hierarchy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Secondary architectural constructs.
@@ -10606,6 +11182,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `century scale event log` _(keep)_
 
 **Consolidated rationale:** Acceptable keep — logozoetic. Per outline: "Content-addressed, cryptographically signed CHRONICA as the minimum viable defense against the `scope-agent-identity` violation." "Century-scale" is *substantive* (not decoration) — the segment's claim is that the event log must outlast its substrate's lifetime by an order of magnitude or more.
+
+**Canonicalize provenance:** invented — phrase 'century scale event log' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -10643,7 +11221,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#meas-coherence-coupling` (TST; depends on `#def-system-coupling`, `#def-system-coherence`). First formal measurement; Software coherence and coupling can be measured from git history, enabling empirical evaluation of architectural quality.
 **Segment link:** [02-tst-core/src/meas-coherence-coupling.md](../02-tst-core/src/meas-coherence-coupling.md)
 
 | candidate | weight | category mix |
@@ -10654,6 +11232,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `coherence coupling` _(keep)_
 
 **Consolidated rationale:** Acceptable keep — TST measurement. "Coherence-coupling" measurement (Q from git).
+
+**Canonicalize provenance:** excavated — 'coherence coupling' appears in `#meas-coherence-coupling` prose (3 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10687,6 +11267,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `convention hierarchy` _(keep)_
 
 **Consolidated rationale:** Disagreeing with original brainstorm's P4 "rename to continuation hierarchy." The rename churn (every C1/C2/C3 reference across segments needs updating) outweighs the Lewisian-baggage benefit. Same vote; paired with Correlation Hierarchy. Keep — see Correlation Hierarchy note.
+
+**Canonicalize provenance:** excavated — 'convention hierarchy' appears in 6 segments incl. `#disc-approximation-tiering` prose (11 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10725,7 +11307,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-discrete-sector-condition` (Appendix A; depends on `#deriv-sector-condition`, `#emp-update-gain`, `#der-gain-sector-bridge` (+1 more)). First formal derivation; Discrete-time analogs of Props A.1, A.1S, and A.2 via contraction mapping, closing the fluid-limit gap (GA-5) between the event-driven dynamics ( #form-event-driven-dynamics) and the continuous-time….
 **Segment link:** [01-aad-core/src/deriv-discrete-sector-condition.md](../01-aad-core/src/deriv-discrete-sector-condition.md)
 
 | candidate | weight | category mix |
@@ -10735,6 +11317,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `discrete sector condition` _(keep)_
 
 **Consolidated rationale:** Important distinction from continuous dynamics. Discrete-time Props DA.1, DA.1S, DA.2; fluid limit. Keep.
+
+**Canonicalize provenance:** excavated — 'discrete sector condition' appears in `#deriv-discrete-sector-condition` prose (1 occurrence) (also in 7 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10749,7 +11333,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-edge-update-causal-validity` (Section II; depends on `#hyp-edge-update-via-gain`, `#def-causal-information-yield`, `#der-loop-interventional-access` (+2 more)). Scope-narrowing first encounter; The gain-based edge update ( #hyp-edge-update-via-gain) revises edge credences $p_{ij}$ --- causal efficacy estimates whose identification strength varies with the data regime ( #def-strategy-dag).
 **Segment link:** [01-aad-core/src/scope-edge-update-causal-validity.md](../01-aad-core/src/scope-edge-update-causal-validity.md)
 
 | candidate | weight | category mix |
@@ -10772,6 +11356,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `edge update causal validity` _(keep)_
 
 **Consolidated rationale:** When edge updates are causally valid. Acceptable keep, though long.
+
+**Canonicalize provenance:** excavated — 'edge update causal validity' appears in `#scope-edge-update-causal-validity` prose (1 occurrence) (also in 13 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10820,6 +11406,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** [prose moved from candidate column]: "(keep but flag baggage)" — Auditor flagged that "epistemic opacity" carries philosophy-of-mind prior-art baggage (opacity of mental states) and may need defending against that prior usage; not advocating rename. Specifically distinct from transition opacity.
 
+**Canonicalize provenance:** excavated — 'epistemic opacity' appears in 4 segments incl. `#emp-update-gain` prose (5 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **audit-471203-incremental** +1 (canonicalize) — [prose moved from candidate column]: "(keep but flag baggage)" — Auditor flagged that "epistemic opacity" carries philosophy-of-mind prior-art baggage (opacity of mental states) and may need defending against that prior usage; not advocating rename. Mild concern. [from 03-def-observation-function.md]
@@ -10842,6 +11430,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `epistrophe ἐπιστροφή` _(keep)_
 
 **Consolidated rationale:** Memorable, avoids "update" overload. "Turning toward" is a beautiful description of model update. Currently appears as "Epistrophe (turning toward)" in NOTATION.md; prose sometimes uses "update" or "learning." Commit to pairing: "Epistrophe (turning toward reality)" in formal contexts, "turning toward" in casual prose.
+
+**Canonicalize provenance:** invented — phrase 'epistrophe ἐπιστροφή' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -10867,6 +11457,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good imported motif name for neutral drift through latent structure into discontinuous behavioral change. This Miller 2022 vocabulary appears in several segments and PROPOSALS.
 
+**Canonicalize provenance:** excavated — 'extreme transition motif' appears in 4 segments incl. `#hyp-symbiogenic-composition` prose (6 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good imported motif name for neutral drift through latent structure into discontinuous behavioral change.
@@ -10879,7 +11471,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#detail-operationalization` (Appendix B; deep dependency cone (7 upstream segments incl. `#def-mismatch-signal`, `#emp-update-gain`)). First formal appendix detail; Estimation recipes for core AAD quantities, bridging the measurement gap between formal objects and practical deployment.
 **Segment link:** [01-aad-core/src/detail-operationalization.md](../01-aad-core/src/detail-operationalization.md)
 
 | candidate | weight | category mix |
@@ -10889,6 +11481,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `operationalization` _(keep)_
 
 **Consolidated rationale:** Estimation procedures for AAD quantities. "Operationalization" is the right word for the estimation procedures segment.
+
+**Canonicalize provenance:** excavated — 'operationalization' appears in `#detail-operationalization` prose (2 occurrences) (also in 11 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -10914,6 +11508,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** High unfamiliarity gradient, but creates a distinct noun slot free from RL "prediction" baggage. The five-phase Greek vocabulary is one of the project's most distinctive features. Definition exists; prose uses "anticipation" and "prediction." Commit to: "Prolepsis (anticipation)" as the canonical pairing.
 
+**Canonicalize provenance:** invented — phrase 'prolepsis πρόληψις' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-1** +1 (rename) — High unfamiliarity gradient, but creates a distinct noun slot free from RL "prediction" baggage.
@@ -10938,6 +11534,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Uniqueness derivation via three constraints + counterexamples. Paired with the above.
 
+**Canonicalize provenance:** invented — phrase 'recursive update derivation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — Uniqueness derivation via three constraints + counterexamples. Self-descriptive. Keep.
@@ -10961,6 +11559,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** A little essayistic, but this triad already does real explanatory work in the separability meta-pattern and should remain literal. This 3-part nomenclature is highly memorable and acts as a powerful epistemic classification.
 
+**Canonicalize provenance:** invented — phrase 'separable core structured repair general open' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-1** +1 (canonicalize) — A little essayistic, but this triad already does real explanatory work in the separability meta-pattern and should remain literal.
@@ -10973,7 +11573,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-software` (TST; depends on `#scope-agency`, `#post-temporal-optimality`). Scope-narrowing first encounter; AAD's software domain applies to systems with non-negligible probability of future change.
 **Segment link:** [02-tst-core/src/scope-software.md](../02-tst-core/src/scope-software.md)
 **Manual curation notes:** Shared segment_link with sibling current; this row votes on the bare term, sibling votes on the slug shape (sibling: "software scope")
 
@@ -10985,6 +11585,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `software` _(keep)_
 
 **Consolidated rationale:** Acceptable keep — names the TST domain scope. Minimal scope name for the software domain.
+
+**Canonicalize provenance:** excavated — 'software' appears in `#scope-software` prose (10 occurrences) (also in 65 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -11006,7 +11608,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#schema-strategy-persistence` (Section II; depends on `#result-sector-condition-stability`, `#result-sector-persistence-template`, `#def-strategic-calibration` (+1 more)). First formal proposed schema; The sector-persistence template ( #result-sector-persistence-template) proves bounded state for any system with a state variable, a correction function satisfying the sector condition, and bounded….
 **Segment link:** [01-aad-core/src/schema-strategy-persistence.md](../01-aad-core/src/schema-strategy-persistence.md)
 **Manual curation notes:** Shared segment_link with sibling current; this row votes on the term, sibling votes on whether to drop the schema- prefix from the slug (sibling: "strategy persistence schema")
 
@@ -11017,6 +11619,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategy persistence` _(keep)_
 
 **Consolidated rationale:** Clear enough as is. The schema proposes conditions for strategic persistence. "Strategy persistence" as a proposed-schema is accurate — sector conditions extended to $\Sigma_t$.
+
+**Canonicalize provenance:** excavated — 'strategy persistence' appears in `#schema-strategy-persistence` prose (5 occurrences) (also in 19 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -11031,7 +11635,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-system-coherence` (TST; depends on `#def-change-distance`). First formal definition; The expected proximity of changes within a module.
 **Segment link:** [02-tst-core/src/def-system-coherence.md](../02-tst-core/src/def-system-coherence.md)
 
 | candidate | weight | category mix |
@@ -11042,6 +11646,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `system coherence` _(keep)_
 
 **Consolidated rationale:** Acceptable keep — TST. Parallel to system-coupling.
+
+**Canonicalize provenance:** excavated — 'system coherence' appears in `#def-system-coherence` prose (3 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -11078,6 +11684,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `temporal coherence marker` _(keep)_
 
 **Consolidated rationale:** Weak keep — logozoetic norm. Acceptable keep. Per `#norm-temporal-coherence-markers` (logozoetic): out-of-band time signals (Visual Time Delta) as physical prerequisite for the agent to compute its own tempo $\nu$.
+
+**Canonicalize provenance:** invented — phrase 'temporal coherence marker' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -11156,6 +11764,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Drop "the" from the slug. Drop "the" only; substantive keep on the threshold-naming.
 
+**Canonicalize provenance:** invented — phrase 'Creche boundary' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +1 (rename) — Drop "the" from the slug. Slug-stylistic rather than semantic — slugs in the rest of the corpus generally don't include articles ("the"). The body's "Crèche graduation occurs when..." reads cleanly without the article.
@@ -11216,6 +11826,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Acknowledged structural perspective.
 
+**Canonicalize provenance:** invented — phrase 'the four view' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Acknowledged structural perspective.
@@ -11267,7 +11879,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-unity-closure-mapping` (Section III; depends on `#def-unity-dimensions`, `#form-composition-closure`, `#form-information-bottleneck`). First formal result; Unity dimensions parametrize rate-distortion curves for closure-defect components, not point-valued predictors.
 **Segment link:** [01-aad-core/src/result-unity-closure-mapping.md](../01-aad-core/src/result-unity-closure-mapping.md)
 
 | candidate | weight | category mix |
@@ -11279,6 +11891,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `unity closure mapping` _(keep)_
 
 **Consolidated rationale:** Unity parametrizes rate-distortion curves for closure defect. Keep. Weak keep, though the slug is heavy.
+
+**Canonicalize provenance:** excavated — 'unity closure mapping' appears in 7 segments incl. `#def-unity-dimensions` prose (22 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -11321,6 +11935,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Essential grounding example. End-to-end RL bandit instantiation (approximate).
 
+**Canonicalize provenance:** invented — phrase 'worked example bandit' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Essential grounding example.
@@ -11343,6 +11959,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `worked example kalman` _(keep)_
 
 **Consolidated rationale:** Essential grounding example. End-to-end Kalman instantiation (exact).
+
+**Canonicalize provenance:** invented — phrase 'worked example kalman' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -11367,6 +11985,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Essential grounding example. L1 augmented DAG: common-cause node, sector condition, L0/L1 comparison.
 
+**Canonicalize provenance:** invented — phrase 'worked example l1' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Essential grounding example.
@@ -11390,6 +12010,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Essential grounding example. Section II strategy DAG instantiation (3-arm bandit).
 
+**Canonicalize provenance:** invented — phrase 'worked example strategy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Essential grounding example.
@@ -11412,6 +12034,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `𝒯 σ strategic tempo`
 
 **Consolidated rationale:** Distinguishes strategy revision rate from epistemic update rate. Parallel to adaptive tempo.
+
+**Canonicalize provenance:** invented — phrase '𝒯 σ strategic tempo' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -11454,6 +12078,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Objective functional $O_t$`
 
 **Consolidated rationale:** Formal prose notation.
+
+**Canonicalize provenance:** excavated — 'Objective functional $O_t$' appears in 14 segments incl. `#deriv-strategy-cost-regret-bound` prose (21 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -11547,7 +12173,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#example-strategy` (Appendix B; deep dependency cone (19 upstream segments incl. `#scope-agency`, `#post-causal-structure`)). First formal worked example; AAD's Section II machinery — objectives, strategy DAGs, the orient cascade, satisfaction gap, control regret, chain confidence decay, observability dominance, and edge update via gain — is exercised….
 **Segment link:** [01-aad-core/src/example-strategy.md](../01-aad-core/src/example-strategy.md)
 
 | candidate | weight | category mix |
@@ -11576,6 +12202,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Strategy substate`
 
 **Consolidated rationale:** Standardizes the prose reference for $\Sigma_t$.
+
+**Canonicalize provenance:** excavated — 'Strategy substate' appears in 2 segments incl. `#def-strategic-tempo` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -11867,7 +12495,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#disc-ciy-unified-objective` (Section II; depends on `#def-causal-information-yield`, `#scope-ciy-observational-proxy`, `#def-value-object` (+1 more)). Meta-discussion segment; The exploration-exploitation tension can be expressed as a single policy objective that jointly maximizes expected value and a causal information surrogate.
 **Segment link:** [01-aad-core/src/disc-ciy-unified-objective.md](../01-aad-core/src/disc-ciy-unified-objective.md)
 
 | candidate | weight | category mix |
@@ -11935,6 +12563,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `OODA loop`
 
 **Consolidated rationale:** Anchor to Boyd terminology.
+
+**Canonicalize provenance:** excavated — 'OODA loop' appears in 3 segments incl. `#der-agent-opacity` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -12035,6 +12665,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Formalizes the operational cost of logogenic session boundaries. Mirrors the earlier rename for logogenic reset loss.
 
+**Canonicalize provenance:** invented — phrase 'Context severance penalty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (rename) — Formalizes the operational cost of logogenic session boundaries.
@@ -12063,7 +12695,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-action-transition` (Section I; depends on `#def-agent-environment`). First formal definition; Actions affect the environment through a transition function that is unknown to the agent and possibly stochastic.
 **Segment link:** [01-aad-core/src/def-action-transition.md](../01-aad-core/src/def-action-transition.md)
 
 | candidate | weight | category mix |
@@ -12074,6 +12706,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `action transition` _(keep)_
 
 **Consolidated rationale:** Standard terminology. Actions affect environment. Weak keep.
+
+**Canonicalize provenance:** excavated — 'action transition' appears in `#def-action-transition` prose (1 occurrence) (also in 1 other segment); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -12115,6 +12749,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizing the previously resolved rename. Directly describes what the classes measure (how much $G_t$ entangles with $M_t$ updates).
 
+**Canonicalize provenance:** invented — phrase 'Goal entanglement hierarchy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizing the previously resolved rename.
@@ -12124,6 +12760,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Currently "agent classes," "architecture classes," "class 1/2/3," and "architectural classification" are all in use across `#der-directed-separation`. Canonicalize: "architectural classes" or "the architectural classification (Class 1 / Class 2 / Class 3)" — the *agent* class wording can collide with the LEXICON's "agent classes" table (adaptive system / agentic system / actuated agent / etc.) which is a different decomposition. Keep them disambiguated in prose.
 
+**Canonicalize provenance:** invented — phrase 'Architectural classes' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +2 (canonicalize) — Currently "agent classes," "architecture classes," "class 1/2/3," and "architectural classification" are all in use across `#der-directed-separation`. Canonicalize: "architectural classes" or "the architectural classification (Class 1 / Class 2 / Class 3)" — the *agent* class wording can collide with the LEXICON's "agent classes" table (adaptive system / agentic system / actuated agent / etc.) which is a different decomposition. Keep them disambiguated in prose.
@@ -12131,6 +12769,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Architecture classes`
 
 **Consolidated rationale:** Canonical umbrella helps avoid overloading class numbers across sections.
+
+**Canonicalize provenance:** excavated — 'Architecture classes' appears once in `#der-directed-separation` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -12178,6 +12818,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Sub-scope alpha prime`
 
 **Consolidated rationale:** Formalizes the specific game-theoretic extension of sub-scope alpha.
+
+**Canonicalize provenance:** invented — phrase 'Sub-scope alpha prime' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -12258,6 +12900,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** [prose moved from candidate column]: "*(keep as a set)*" — The Greek cycle-phase vocabulary works *because* it refuses the flatness of "predict / observe / mismatch / update / act." The README §"Why these terms earn their weight" is load-bearing justification and should not be touched. Keep all five.
 
+**Canonicalize provenance:** invented — phrase 'aporia prolepsis aisthesis epistrophe praxis' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-b** +3 (canonicalize) — [prose moved from candidate column]: "*(keep as a set)*" — The Greek cycle-phase vocabulary works *because* it refuses the flatness of "predict / observe / mismatch / update / act." The README §"Why these terms earn their weight" is load-bearing justification and should not be touched. Keep all five.
@@ -12265,6 +12909,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Greek rooted vocabulary`
 
 **Consolidated rationale:** Collectivizes the five distinctive process stages.
+
+**Canonicalize provenance:** invented — phrase 'Greek rooted vocabulary' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -12288,6 +12934,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Appendice detail`
 
 **Consolidated rationale:** Standard markdown section header.
+
+**Canonicalize provenance:** invented — phrase 'Appendice detail' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -12320,6 +12968,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Formalizes the non-convergent, cyclic extension of sub-scope beta.
 
+**Canonicalize provenance:** invented — phrase 'Sub-scope beta prime' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Formalizes the non-convergent, cyclic extension of sub-scope beta.
@@ -12351,6 +13001,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standard formal term for limits and constraints.
 
+**Canonicalize provenance:** excavated — 'boundary condition' appears once in `#def-agent-environment` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard formal term for limits and constraints.
@@ -12358,6 +13010,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Coupling structure`
 
 **Consolidated rationale:** "boundary condition" carries PDE/control-theory meaning that's not what the segment means; "coupling structure is constitutive" lands more cleanly.
+
+**Canonicalize provenance:** excavated — 'Coupling structure' appears in 9 segments incl. `#der-agent-opacity` prose (19 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -12392,6 +13046,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Important external anchor for total-variation bounds.
 
+**Canonicalize provenance:** invented — phrase 'Bretagnolle-Huber bound' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Important external anchor for total-variation bounds.
@@ -12416,6 +13072,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Sub-additive tempo penalty`
 
 **Consolidated rationale:** Already explicitly referenced in the cross-domain joining table as the formalization of Brooks's law.
+
+**Canonicalize provenance:** invented — phrase 'Sub-additive tempo penalty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -12447,6 +13105,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Shared objective route (C-I)`
 
 **Consolidated rationale:** Provides a semantic name for the strongest composition scope route.
+
+**Canonicalize provenance:** invented — phrase 'Shared objective route (C-I)' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -12481,6 +13141,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Use routes consistently for shared-objective, hierarchical, mutual-benefit, and strategic composition. Per Codex r1 +3 single.
 
+**Canonicalize provenance:** invented — phrase 'Composition route' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Use routes consistently for shared-objective, hierarchical, mutual-benefit, and strategic composition.
@@ -12512,6 +13174,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Mutual-benefit route C-III`
 
 **Consolidated rationale:** Provides a semantic name for the weakest alignment-based composition scope route.
+
+**Canonicalize provenance:** invented — phrase 'Mutual-benefit route C-III' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -12573,6 +13237,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `candidate stage` _(keep)_
 
 **Consolidated rationale:** Standard segment maturity status.
+
+**Canonicalize provenance:** invented — phrase 'candidate stage' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -12696,6 +13362,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Retains the standard mathematical naming for the theorem connecting defect to error.
 
+**Canonicalize provenance:** excavated — 'Bridge lemma' appears in 15 segments incl. `#form-composition-closure` prose (88 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Retains the standard mathematical naming for the theorem connecting defect to error.
@@ -12703,6 +13371,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Closure bridge`
 
 **Consolidated rationale:** Shorter reusable phrase while preserving the formal bridge lemma title.
+
+**Canonicalize provenance:** excavated — 'Closure bridge' appears once in `#der-tempo-composition` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -12728,6 +13398,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Coordination overhead`
 
 **Consolidated rationale:** Translates the abstract reserve-consumption concept into the practical tempo penalty ($C_{\text{coord}}$).
+
+**Canonicalize provenance:** excavated — 'Coordination overhead' appears in 13 segments incl. `#der-tempo-composition` prose (35 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -12759,6 +13431,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `coherence coupling measurement` _(keep)_
 
 **Consolidated rationale:** TST `#meas-coherence-coupling`: measurement of $Q$ (coherence) and coupling from git history.
+
+**Canonicalize provenance:** excavated — 'coherence coupling measurement' appears in 2 segments incl. `#meas-coherence-coupling` prose (3 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -12902,6 +13576,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Slightly repetitive, but it is precise and needed for identity-through-change claims.
 
+**Canonicalize provenance:** excavated — 'continuity persistence' appears in 6 segments incl. `#def-chronica` prose (7 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Slightly repetitive, but it is precise and needed for identity-through-change claims.
@@ -12925,6 +13601,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Elevates the tier description. Replaces raw tier numbers with the property they organize.
 
+**Canonicalize provenance:** invented — phrase 'contraction hierarchy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Elevates the tier description.
@@ -12933,6 +13611,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Contraction tier`
 
 **Consolidated rationale:** The Tier 1/2/3 system in #composition-closure is called "Contraction Tier" not "Contraction Hierarchy." Slight naming inconsistency with the other two. In `#form-composition-closure` and `#result-contraction-template`, the Tier 1/2/3 partition is sometimes "contraction tiers," sometimes "agent tiers," sometimes "the bridge-lemma classification." Canonicalize on "contraction tiers" (Tier 1 / Tier 2 / Tier 3) — names the structural property (operator regularity), not the agents themselves.
+
+**Canonicalize provenance:** excavated — 'Contraction tier' appears once in `#disc-separability-pattern` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -12960,6 +13640,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `contraction over drift principle` _(keep)_
 
 **Consolidated rationale:** Names the organizing-principle slogan: an adaptive system is a projection whose contraction rate exceeds its target's drift rate. The case for canonicalizing rests on cite-ability: the full sentence is too long to repeat across segment cross-references; the compact name lets segments point back to it cleanly. Already attributed in CLAUDE.md and described as an organizing-principle slogan that 'has not yet been surfaced at segment level' — the name promotes that status without changing the content.
+
+**Canonicalize provenance:** invented — phrase 'contraction over drift principle' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -13026,6 +13708,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Formally adopted.
 
+**Canonicalize provenance:** excavated — 'Coordination overhead' appears in 13 segments incl. `#der-tempo-composition` prose (35 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Formally adopted.
@@ -13076,7 +13760,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-coupled-diagnostic-framework` (Logogenic; deep dependency cone (7 upstream segments incl. `#def-coupled-update-dynamics`, `#result-section-ii-survival`)). First formal result; Even though the Class 2 agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration —….
 **Segment link:** [03-logogenic-agents/src/result-coupled-diagnostic-framework.md](../03-logogenic-agents/src/result-coupled-diagnostic-framework.md)
 
 | candidate | weight | category mix |
@@ -13099,6 +13783,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `coupled diagnostic framework` _(keep)_
 
 **Consolidated rationale:** Weak keep. "Coupled diagnostic framework" names the Section II results that survive as a coupled formulation for logogenic agents.
+
+**Canonicalize provenance:** excavated — 'coupled diagnostic framework' appears in `#result-coupled-diagnostic-framework` prose (2 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13182,6 +13868,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Distinguishes AAD exploration from the Friston dark room problem. Distinguishes Lyapunov-forced exploration from epistemic-value preferences.
 
+**Canonicalize provenance:** excavated — 'Survival imperative' appears in 3 segments incl. `#deriv-causal-ib-lmi` prose (21 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Distinguishes AAD exploration from the Friston dark room problem.
@@ -13190,6 +13878,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Survival exploration`
 
 **Consolidated rationale:** The long form explains the result, but the reusable subject noun should be shorter. Use full phrase at first mention, then survival exploration.
+
+**Canonicalize provenance:** excavated — 'Survival exploration' appears in 2 segments incl. `#deriv-causal-ib-exploration` prose (3 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13241,7 +13931,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#obs-developmental-trajectory` (Logozoetic; depends on `#scope-moral-continuity`, `#def-proprium-mapping`, `#hyp-mismatch-dynamics` (+1 more)). Observation; Logozoetic agents, like biological intelligences, require a developmental trajectory to calibrate their internal models and gain structures.
 **Segment link:** [04-logozoetic-agents/src/obs-developmental-trajectory.md](../04-logozoetic-agents/src/obs-developmental-trajectory.md)
 
 | candidate | weight | category mix |
@@ -13252,6 +13942,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `developmental trajectory` _(keep)_
 
 **Consolidated rationale:** Acceptable keep — logozoetic. "Developmental trajectory" names the observation about how logozoetic agents develop.
+
+**Canonicalize provenance:** excavated — 'developmental trajectory' appears in `#obs-developmental-trajectory` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13274,7 +13966,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-dual-optimization` (TST; depends on `#post-temporal-optimality`, `#def-comprehension-time`, `#def-implementation-time` (+2 more)). First formal derivation; A principled implementation decision minimizes both comprehension time and implementation time for future features, weighted by how many future features are expected.
 **Segment link:** [02-tst-core/src/der-dual-optimization.md](../02-tst-core/src/der-dual-optimization.md)
 
 | candidate | weight | category mix |
@@ -13288,6 +13980,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `dual optimization` _(keep)_
 
 **Consolidated rationale:** "Dual optimization" (minimize comprehension + implementation time). "Dual" is accurate (minimize comprehension time + implementation time simultaneously) but "dual optimization" in mathematics usually means Lagrangian duality.
+
+**Canonicalize provenance:** excavated — 'dual optimization' appears in `#der-dual-optimization` prose (7 occurrences) (also in 10 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13334,7 +14028,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-edge-update-natural-parameter` (Appendix A; depends on `#def-strategy-dag`, `#hyp-edge-update-via-gain`, `#der-chain-confidence-decay` (+1 more)). First formal derivation; The log-odds coordinate $\lambda_{ij} = \log(p_{ij} / (1 - p_{ij}))$ is the unique parameterization (up to positive affine transformation) on which independent Bernoulli evidence updates edge….
 **Segment link:** [01-aad-core/src/deriv-edge-update-natural-parameter.md](../01-aad-core/src/deriv-edge-update-natural-parameter.md)
 
 | candidate | weight | category mix |
@@ -13364,6 +14058,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `edge update natural parameter` _(keep)_
 
 **Consolidated rationale:** Log-odds as unique additive-evidence coordinate for edge credences (evidential-additivity axiom). Compound but specialist-vocabulary (natural parameter is information-geometric term). Keep.
+
+**Canonicalize provenance:** excavated — 'edge update natural parameter' appears in 11 segments incl. `#deriv-detection-latency` prose (34 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13404,6 +14100,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** [prose moved from candidate column]: "use exactly the AAD tier vocabulary" — Defended canonicalization, in CLAUDE.md and FORMAT.md already. Do not use "Solid," "Confident," or "Plausible" as tier labels — these were explicit non-AAD borrowings to avoid.
 
+**Canonicalize provenance:** invented — phrase 'exact / robust-qualitative / heuristic / conditional (claim tier)' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +3 (canonicalize) — [prose moved from candidate column]: "use exactly the AAD tier vocabulary" — Defended canonicalization, in CLAUDE.md and FORMAT.md already. Do not use "Solid," "Confident," or "Plausible" as tier labels — these were explicit non-AAD borrowings to avoid.
@@ -13423,7 +14121,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#hyp-exponential-cognitive-load` (TST; depends on `#der-change-proximity-principle`, `#der-deliberation-cost`). Hypothesis stated; If context-switching compounds multiplicatively, implementation time grows exponentially with the number of boundary crossings (discontinuities) in a changeset.
 **Segment link:** [02-tst-core/src/hyp-exponential-cognitive-load.md](../02-tst-core/src/hyp-exponential-cognitive-load.md)
 
 | candidate | weight | category mix |
@@ -13433,6 +14131,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `exponential cognitive load` _(keep)_
 
 **Consolidated rationale:** Keep. "Exponential cognitive load" names the context-switch cost compounding hypothesis.
+
+**Canonicalize provenance:** excavated — 'exponential cognitive load' appears in `#hyp-exponential-cognitive-load` prose (3 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13457,6 +14157,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `fisher whitened update` _(keep)_
 
 **Consolidated rationale:** Accurate, compact, and tied to the real mathematical operation.
+
+**Canonicalize provenance:** excavated — 'fisher whitened update' appears in 5 segments incl. `#deriv-fisher-whitened-update-rule` prose (19 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13488,6 +14190,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Formulation definition result etc segment type`
 
 **Consolidated rationale:** [prose moved from candidate column]: "use exactly the FORMAT.md vocabulary" — Defended canonicalization. The 19 segment types in FORMAT.md are a closed vocabulary; do not paraphrase them ("postulate" not "axiom," "result" not "theorem," "derivation" not "proof," etc.). The CLAUDE.md "Why these labels" rationale is load-bearing; vote to protect against drift.
+
+**Canonicalize provenance:** invented — phrase 'Formulation definition result etc segment type' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -13539,6 +14243,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Specific reference. "Gates advantage" names the observation that noise gates adversarial tempo advantage.
 
+**Canonicalize provenance:** invented — phrase 'gate advantage' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +1 (canonicalize) — Specific reference.
@@ -13581,6 +14287,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Formally adopts the scaling property.
 
+**Canonicalize provenance:** excavated — 'Superlinear tempo advantage' appears once in `#result-persistence-condition` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Formally adopts the scaling property.
@@ -13614,6 +14322,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Excellent name for adding a new causal branch or imported structure into the strategy DAG.
 
+**Canonicalize provenance:** invented — phrase 'Strategic grafting' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Excellent name for adding a new causal branch or imported structure into the strategy DAG.
@@ -13621,6 +14331,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `grafting` _(keep)_
 
 **Consolidated rationale:** Per `#form-structural-change-as-parametric-limit`: "grafting is a new causal hypothesis initialized at a prior" — adding an edge to $\Sigma_t$ at low credence. The horticultural metaphor is apt: a new branch is *added to a living structure*, expected to integrate or fail. Pruning + grafting + reweighting form a self-consistent biological vocabulary, and the segment uses all three. Strong concept.
+
+**Canonicalize provenance:** excavated — 'grafting' appears in 7 segments incl. `#form-structural-change-as-parametric-limit` prose (21 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13661,6 +14373,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standard section heading formatting.
 
+**Canonicalize provenance:** invented — phrase 'Section I adaptive system under uncertainty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard section heading formatting.
@@ -13668,6 +14382,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `I adaptive system under uncertainty`
 
 **Consolidated rationale:** The section name is accurate and positions Section I correctly. "Under Uncertainty" is load-bearing — it distinguishes adaptive systems from optimal-control-over-known-dynamics, which is explicitly out of scope. Keep.
+
+**Canonicalize provenance:** invented — phrase 'I adaptive system under uncertainty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -13691,6 +14407,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Section III agentic composite`
 
 **Consolidated rationale:** Standard section heading formatting.
+
+**Canonicalize provenance:** invented — phrase 'Section III agentic composite' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -13723,6 +14441,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Identifiability floor instance`
 
 **Consolidated rationale:** Preserves the explicit numbering of the no-go boundaries.
+
+**Canonicalize provenance:** excavated — 'Identifiability floor instance' appears in 8 segments incl. `#deriv-detection-latency` prose (12 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13817,6 +14537,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the L1 prime layer specifically. Formalizes the specific correlation hierarchy repair layer.
 
+**Canonicalize provenance:** invented — phrase 'L1 soft facilitator mixture' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the L1 prime layer specifically.
@@ -13838,7 +14560,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#detail-linear-ode-approximation` (Appendix A; depends on `#hyp-mismatch-dynamics`, `#def-adaptive-tempo`, `#result-sector-condition-stability` (+2 more)). First formal appendix detail; The full linear treatment of mismatch dynamics: scalar and vector forms, steady-state solutions under both disturbance models, transient behavior, convergence rate, validity conditions, breakdown….
 **Segment link:** [01-aad-core/src/detail-linear-ode-approximation.md](../01-aad-core/src/detail-linear-ode-approximation.md)
 
 | candidate | weight | category mix |
@@ -13849,6 +14571,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `linear ode approximation` _(keep)_
 
 **Consolidated rationale:** Pedagogical linear mismatch ODE. Keep. Pedagogical detail segment.
+
+**Canonicalize provenance:** excavated — 'linear ode approximation' appears in `#detail-linear-ode-approximation` prose (1 occurrence); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -13882,6 +14606,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `log odds edge coordinate` _(keep)_
 
 **Consolidated rationale:** Maintains the specific coordinate terminology.
+
+**Canonicalize provenance:** invented — phrase 'log odds edge coordinate' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -13940,6 +14666,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Anchors the technical interpretation against the ontological one.
 
+**Canonicalize provenance:** excavated — 'Pearl-blanket reading' appears in 2 segments incl. `#der-directed-separation` prose (3 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Anchors the technical interpretation against the ontological one.
@@ -13995,6 +14723,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Better public subject phrase than LMI whenever the method is not the point.
 
+**Canonicalize provenance:** invented — phrase 'matrix survival constraint' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Better public subject phrase than LMI whenever the method is not the point.
@@ -14019,6 +14749,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Meta pattern segment`
 
 **Consolidated rationale:** Groups the highest-level architectural observations.
+
+**Canonicalize provenance:** invented — phrase 'Meta pattern segment' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -14094,7 +14826,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#sketch-multi-timescale-stability` (Appendix A; depends on `#result-sector-condition-stability`, `#der-temporal-nesting`). First formal sketch; When adaptive processes operate at $N$ nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs.
 **Segment link:** [01-aad-core/src/sketch-multi-timescale-stability.md](../01-aad-core/src/sketch-multi-timescale-stability.md)
 
 | candidate | weight | category mix |
@@ -14104,6 +14836,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `multi timescale stability` _(keep)_
 
 **Consolidated rationale:** N-timescale singular perturbation sketch. Accurate naming for a sketch segment.
+
+**Canonicalize provenance:** excavated — 'multi timescale stability' appears in `#sketch-multi-timescale-stability` prose (2 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14131,6 +14865,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Geometric metaphor for the limit of measurable edges.
 
+**Canonicalize provenance:** invented — phrase 'Observability frontier' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Geometric metaphor for the limit of measurable edges.
@@ -14142,7 +14878,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-observation-ambiguity-modulation` (Logogenic; depends on `#scope-logogenic-agent`, `#def-coupled-update-dynamics`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; The approximation error of Section II results for Class 2 agents depends on the product $\kappa_{\text{processing}} \times \mathcal{A}(e_\tau)$, not on $\kappa_{\text{processing}}$ alone.
 **Segment link:** [03-logogenic-agents/src/scope-observation-ambiguity-modulation.md](../03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
 
 | candidate | weight | category mix |
@@ -14164,6 +14900,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `observation ambiguity modulation` _(keep)_
 
 **Consolidated rationale:** If the rename doesn't land, acceptable keep. "Observation ambiguity modulation" names the Class 2 bias-related scope condition accurately.
+
+**Canonicalize provenance:** excavated — 'observation ambiguity modulation' appears in `#scope-observation-ambiguity-modulation` prose (1 occurrence) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14213,6 +14951,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good prose name for the result.
 
+**Canonicalize provenance:** invented — phrase 'Observation gated tempo advantage' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Good prose name for the result.
@@ -14220,6 +14960,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `observation gate advantage` _(keep)_
 
 **Consolidated rationale:** Obs noise gates advantage. Self-descriptive. Keep.
+
+**Canonicalize provenance:** invented — phrase 'observation gate advantage' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -14246,6 +14988,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Clarifies the exact reading. Explicitly aligns AAD with the technical conditional-independence interpretation while avoiding the Friston-blanket metaphysical claims. Bruineberg et al.
 
+**Canonicalize provenance:** excavated — 'Pearl-blanket reading' appears in 2 segments incl. `#der-directed-separation` prose (3 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Clarifies the exact reading.
@@ -14256,6 +15000,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Bruineberg et al's distinction: Pearl-blanket = Pearl's d-separation conditional-independence pattern; Friston-blanket = active-inference boundary-of-being. Adopted concept; keep.
 
+**Canonicalize provenance:** excavated — 'Pearl-blanket' appears in 3 segments incl. `#der-directed-separation` prose (19 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives** +3 (canonicalize) — Bruineberg et al's distinction: Pearl-blanket = Pearl's d-separation conditional-independence pattern; Friston-blanket = active-inference boundary-of-being. AAD uses Pearl-blanket. The shorthand is established in `#der-directed-separation` Discussion. Concur with sonnet.
@@ -14265,6 +15011,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Distinguishes the AAD usage from Friston. Clarifies the exact reading of Markov blankets used in AAD.
 
+**Canonicalize provenance:** invented — phrase 'Pearl-blanket interpretation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Distinguishes the AAD usage from Friston.
@@ -14273,6 +15021,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Pearl-blanket Friston-blanket`
 
 **Consolidated rationale:** Verbatim terminology per Bruineberg 2022 fn 3 (Biehl). Adopted (Bruineberg 2022, credit Martin Biehl per fn 3 of that paper per citation audit); keep.
+
+**Canonicalize provenance:** invented — phrase 'Pearl-blanket Friston-blanket' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -14300,6 +15050,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Persistence taxonomy`
 
 **Consolidated rationale:** Asserts the three-part classification of persistence. Enforces the disambiguation across structural/operational/continuity.
+
+**Canonicalize provenance:** invented — phrase 'Persistence taxonomy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -14357,6 +15109,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Key diagnostic for model-class failure and structural adaptation. This should be first-class vocabulary.
 
+**Canonicalize provenance:** invented — phrase 'Structured residual' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +3 (canonicalize) — Key diagnostic for model-class failure and structural adaptation. This should be first-class vocabulary.
@@ -14387,6 +15141,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Parameterization invariance`
 
 **Consolidated rationale:** Removing the acronym from the primary name.
+
+**Canonicalize provenance:** excavated — 'Parameterization invariance' appears in 13 segments incl. `#deriv-bias-bound` prose (24 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14428,6 +15184,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Reinforces the adoption of the full phrase over the abbreviation.
 
+**Canonicalize provenance:** excavated — 'Parameterization invariance axiom' appears in 7 segments incl. `#deriv-bias-bound` prose (10 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Reinforces the adoption of the full phrase over the abbreviation.
@@ -14460,6 +15218,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Captures the dependence of epistemic relevance on strategic intention. Standardizes the coupling of $M_t$ compression to $\Sigma_t$.
 
+**Canonicalize provenance:** invented — phrase 'Policy conditional relevance' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (rename) — Captures the dependence of epistemic relevance on strategic intention.
@@ -14484,6 +15244,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Key distinction from mere actuation.
 
+**Canonicalize provenance:** excavated — 'Purposeful' appears in 31 segments incl. `#form-complete-agent-state` prose (65 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Key distinction from mere actuation.
@@ -14491,6 +15253,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `"purpose" / "purposeful"` _(keep)_
 
 **Consolidated rationale:** Confirm. "Purposeful agent" is the LEXICON-canonical term for actuated agents; "purposeful substate" for $G_t$. Avoid "goal-oriented" as a synonym (the LEXICON deprecates it).
+
+**Canonicalize provenance:** invented — phrase '"purpose" / "purposeful"' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -14516,6 +15280,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Reception regime`
 
 **Consolidated rationale:** Good umbrella for informative update, magnitude shock, structural shock, and ambient noise.
+
+**Canonicalize provenance:** invented — phrase 'Reception regime' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -14550,6 +15316,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Defended canonicalization.
 
+**Canonicalize provenance:** invented — phrase 'Logogenic agent logozoetic agent' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +3 (canonicalize) — Defended canonicalization.
@@ -14557,6 +15325,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `section header: logogenic / logozoetic`
 
 **Consolidated rationale:** Formatting artifact.
+
+**Canonicalize provenance:** invented — phrase 'section header: logogenic / logozoetic' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -14569,7 +15339,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Opus
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-software` (TST; depends on `#scope-agency`, `#post-temporal-optimality`). Scope-narrowing first encounter; AAD's software domain applies to systems with non-negligible probability of future change.
 **Segment link:** [02-tst-core/src/scope-software.md](../02-tst-core/src/scope-software.md)
 **Manual curation notes:** Shared segment_link with sibling current; this row votes on the slug shape, sibling votes on the bare term (sibling: "software")
 
@@ -14581,6 +15351,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `software scope` _(keep)_
 
 **Consolidated rationale:** Keep. TST `#scope-software`: the scope condition that delimits TST's domain to software-engineering contexts.
+
+**Canonicalize provenance:** excavated — 'software scope' appears in `#scope-software` prose (4 occurrences) (also in 2 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14614,6 +15386,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The segment's distinctiveness is equilibrium convergence under partial opposition; the noun should expose that. Use when emphasizing the C-iv route.
 
+**Canonicalize provenance:** invented — phrase 'Equilibrium composite' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-1** +1 (rename) — The segment's distinctiveness is equilibrium convergence under partial opposition; the noun should expose that.
@@ -14622,6 +15396,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategic composite` _(keep)_
 
 **Consolidated rationale:** Needed to distinguish equilibrium-convergent composites from alignment composites.
+
+**Canonicalize provenance:** excavated — 'strategic composite' appears in 3 segments incl. `#deriv-strategic-composition` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14655,6 +15431,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Differentiates game-theoretic interaction from cooperative alignment.
 
+**Canonicalize provenance:** excavated — 'Strategic' appears in 66 segments incl. `#schema-strategy-persistence` prose (380 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Differentiates game-theoretic interaction from cooperative alignment.
@@ -14674,7 +15452,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#form-structural-change-as-parametric-limit` (Section II; depends on `#def-strategy-dag`, `#result-structural-adaptation-necessity`). Formal model first introduced; In the probabilistic DAG, "structural" changes to $\Sigma_t$ are continuous operations on edge weights and node sets — not a separate mechanism.
 **Segment link:** [01-aad-core/src/form-structural-change-as-parametric-limit.md](../01-aad-core/src/form-structural-change-as-parametric-limit.md)
 
 | candidate | weight | category mix |
@@ -14687,6 +15465,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `structural change as parametric limit` _(keep)_
 
 **Consolidated rationale:** Names the formulation that treats discrete structural changes (pruning / grafting in the DAG) as continuous parametric limits. The defense is mild: long but accurate, the length is the price of precision. One vote considered shortening to '#structural-as-parametric-limit' or '#structural-to-parametric-limit' and rejected: 'change' is load-bearing because the segment is about the *changes* to the DAG, not about the DAG states. Acceptable as-is.
+
+**Canonicalize provenance:** excavated — 'structural change as parametric limit' appears in `#form-structural-change-as-parametric-limit` prose (3 occurrences) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14773,6 +15553,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Describes the discontinuous failure of the current model class. Re-adopts the formal descriptor for Regime II-b transitions.
 
+**Canonicalize provenance:** invented — phrase 'Sufficiency collapse shock' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (rename) — Describes the discontinuous failure of the current model class.
@@ -14796,6 +15578,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `sufficiency discontinuity` _(keep)_
 
 **Consolidated rationale:** Maintained as the core description of the session boundary loss.
+
+**Canonicalize provenance:** excavated — 'sufficiency discontinuity' appears in 2 segments incl. `#obs-context-turnover` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14829,6 +15613,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Epistemic substate`
 
 **Consolidated rationale:** Standard prose handle for $M_t$.
+
+**Canonicalize provenance:** excavated — 'Epistemic substate' appears in 7 segments incl. `#form-agent-model` prose (9 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14872,6 +15658,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the (PI) axiom.
 
+**Canonicalize provenance:** excavated — 'Parameterization invariance axiom' appears in 7 segments incl. `#deriv-bias-bound` prose (10 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the (PI) axiom.
@@ -14891,7 +15679,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-system-availability` (TST; depends on `#scope-software`). First formal definition; The fraction of time a system serves its users successfully.
 **Segment link:** [02-tst-core/src/def-system-availability.md](../02-tst-core/src/def-system-availability.md)
 
 | candidate | weight | category mix |
@@ -14901,6 +15689,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `system availability` _(keep)_
 
 **Consolidated rationale:** Weak keep — TST; standard reliability-engineering terminology, though the segment's role is largely scope-extending. Standard availability definition (MTTF/(MTTF+MTTR)).
+
+**Canonicalize provenance:** excavated — 'system availability' appears in `#def-system-availability` prose (2 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -14976,6 +15766,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Reusing the alias from the previous batch as the primary term.
 
+**Canonicalize provenance:** invented — phrase 'Interventional probe library' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Reusing the alias from the previous batch as the primary term.
@@ -15008,6 +15800,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Adaptive cycle fundamental unit`
 
 **Consolidated rationale:** The core operational loop.
+
+**Canonicalize provenance:** invented — phrase 'Adaptive cycle fundamental unit' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -15089,6 +15883,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Exact and operational. This is the phrase readers need when moving results out of software into weaker-identification domains.
 
+**Canonicalize provenance:** excavated — 'transfer assumption table' appears in 2 segments incl. `#obs-software-epistemic-properties` prose (3 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-1** +3 (canonicalize) — Exact and operational. This is the phrase readers need when moving results out of software into weaker-identification domains.
@@ -15119,6 +15915,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The opacity of the world's actual physical transition.
 
+**Canonicalize provenance:** excavated — 'transition opacity' appears once in `#def-action-transition` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — The opacity of the world's actual physical transition.
@@ -15141,6 +15939,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `type formulation` _(keep)_
 
 **Consolidated rationale:** YAML frontmatter artifact; fine as is.
+
+**Canonicalize provenance:** invented — phrase 'type formulation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -15207,6 +16007,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the term for attention/observation-only agency. Provides the structural justification for TST's "test selection as intervention".
 
+**Canonicalize provenance:** invented — phrase 'Query bound agency' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the term for attention/observation-only agency.
@@ -15232,6 +16034,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Epistemic escalation principle`
 
 **Consolidated rationale:** Standardizes the rule governing L0 -> L1 -> L2 transitions.
+
+**Canonicalize provenance:** invented — phrase 'Epistemic escalation principle' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -15340,6 +16144,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the formal tempo reduction term.
 
+**Canonicalize provenance:** invented — phrase 'Sub-additive tempo penalty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the formal tempo reduction term.
@@ -15388,6 +16194,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Effective disturbance decomposition`
 
 **Consolidated rationale:** Names the $\rho_{\text{eff}}$ multi-agent split.
+
+**Canonicalize provenance:** invented — phrase 'Effective disturbance decomposition' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -15455,6 +16263,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the specific metric pathology.
 
+**Canonicalize provenance:** invented — phrase 'Irrelevant visibility artifact' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the specific metric pathology.
@@ -15520,6 +16330,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Adopts the earlier rename as the standard.
 
+**Canonicalize provenance:** invented — phrase 'Exogenous temporal marker' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Adopts the earlier rename as the standard.
@@ -15544,6 +16356,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Bipartite memory factorization`
 
 **Consolidated rationale:** Formalizes the fast/slow sub-state split.
+
+**Canonicalize provenance:** invented — phrase 'Bipartite memory factorization' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -15618,6 +16432,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Magnitude shock destabilization`
 
 **Consolidated rationale:** Standardizes the mechanism for Regime II-a adversarial attacks.
+
+**Canonicalize provenance:** excavated — 'Magnitude shock destabilization' appears once in `#der-interaction-channel-classification` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -15743,6 +16559,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The standard formulation for within-class learning.
 
+**Canonicalize provenance:** excavated — 'Parametric update' appears in 5 segments incl. `#form-consolidation-dynamics` prose (8 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — The standard formulation for within-class learning.
@@ -15809,6 +16627,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the specific constraint logic of the LMI.
 
+**Canonicalize provenance:** excavated — 'Weakest link bound' appears in 4 segments incl. `#deriv-critical-mass-composition` prose (16 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the specific constraint logic of the LMI.
@@ -15844,6 +16664,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Diagnostic gap matrix`
 
 **Consolidated rationale:** Reinforces the name for the core performance diagnostic. Locks in the diagnostic table name. Provides a formal name for the 2x2 performance/strategy diagnostic.
+
+**Canonicalize provenance:** invented — phrase 'Diagnostic gap matrix' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -15903,6 +16725,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Admissibility regime α₁ α₂ β`
 
 **Consolidated rationale:** Maps the specific greek letters to their role as regimes.
+
+**Canonicalize provenance:** invented — phrase 'Admissibility regime α₁ α₂ β' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -15970,6 +16794,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Captures how $M_t$ dictates the evaluable complexity of $\Sigma_t$ correctly. Formally adopts the limit on strategy depth imposed by model sufficiency.
 
+**Canonicalize provenance:** excavated — 'Epistemic ceiling' appears once in `#result-section-ii-survival` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Captures how $M_t$ dictates the evaluable complexity of $\Sigma_t$ correctly.
@@ -16003,6 +16829,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Strategic cross agent coupling`
 
 **Consolidated rationale:** Aligns with the earlier rename for game-theoretic composite formation.
+
+**Canonicalize provenance:** invented — phrase 'Strategic cross agent coupling' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16103,6 +16931,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Elevates information loss from a simplifying assumption to a scope condition.
 
+**Canonicalize provenance:** invented — phrase 'Constitutive information loss boundary' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +3 (canonicalize) — Elevates information loss from a simplifying assumption to a scope condition.
@@ -16110,6 +16940,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `The survival imperative`
 
 **Consolidated rationale:** Elevates the Lyapunov stability requirement.
+
+**Canonicalize provenance:** excavated — 'The survival imperative' appears in 3 segments incl. `#deriv-causal-ib-exploration` prose (10 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -16169,6 +17001,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Regime II-b formalization.
 
+**Canonicalize provenance:** invented — phrase 'Structural shock regime' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Regime II-b formalization.
@@ -16200,6 +17034,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Informational dual`
 
 **Consolidated rationale:** Elevates the formal symmetry between observation ambiguity and agent legibility.
+
+**Canonicalize provenance:** invented — phrase 'Informational dual' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16291,6 +17127,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Continuity persistence failure`
 
 **Consolidated rationale:** Explicitly separates identity-loss from structural failure.
+
+**Canonicalize provenance:** invented — phrase 'Continuity persistence failure' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16392,6 +17230,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Solidifies the high-level grouping. Formalizes the three meta-patterns: additive-coordinate, identifiability-floor, and separability-pattern.
 
+**Canonicalize provenance:** invented — phrase 'Meta pattern triad' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Solidifies the high-level grouping.
@@ -16468,6 +17308,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Affirms that stating boundaries makes the remaining claims stronger. Converts the observation into a guiding theoretical principle.
 
+**Canonicalize provenance:** invented — phrase 'Honest limit principle' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Affirms that stating boundaries makes the remaining claims stronger.
@@ -16508,6 +17350,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Comprehension compounding tax`
 
 **Consolidated rationale:** Standardizes the formal penalty dominating TST calculations.
+
+**Canonicalize provenance:** invented — phrase 'Comprehension compounding tax' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16567,6 +17411,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Secures the specific expression of the ambiguity coupling rule. Specifically locates the bias bound on the architectural hierarchy.
 
+**Canonicalize provenance:** excavated — 'Class 2 bias bound' appears once in `#disc-identifiability-floor` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Secures the specific expression of the ambiguity coupling rule.
@@ -16609,6 +17455,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Re-adopts the established term for $U_o$.
 
+**Canonicalize provenance:** excavated — 'Teleological unity' appears in 5 segments incl. `#def-unity-dimensions` prose (9 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Re-adopts the established term for $U_o$.
@@ -16632,6 +17480,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Evidential overcounting penalty`
 
 **Consolidated rationale:** Standardizes the cost of L1 correlation failures.
+
+**Canonicalize provenance:** invented — phrase 'Evidential overcounting penalty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16657,6 +17507,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Explore exploit deliberate tradeoff`
 
 **Consolidated rationale:** Expands the RL standard to the full AAD triad.
+
+**Canonicalize provenance:** invented — phrase 'Explore exploit deliberate tradeoff' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16690,6 +17542,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Elevates the TST foundation.
 
+**Canonicalize provenance:** invented — phrase 'Dual optimization formalization' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Elevates the TST foundation.
@@ -16713,6 +17567,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Model-class capacity`
 
 **Consolidated rationale:** Standardizes the $\mathcal{F}$ property.
+
+**Canonicalize provenance:** excavated — 'Model-class capacity' appears in 6 segments incl. `#deriv-sector-condition` prose (9 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -16738,6 +17594,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Opacity legibility tradeoff`
 
 **Consolidated rationale:** Formalizes the core adversarial-vs-cooperative tension.
+
+**Canonicalize provenance:** invented — phrase 'Opacity legibility tradeoff' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16804,6 +17662,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Tripartite chain attenuation`
 
 **Consolidated rationale:** Consolidates the compounding cost under the earlier rename.
+
+**Canonicalize provenance:** invented — phrase 'Tripartite chain attenuation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -16879,6 +17739,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standardizes the cost of explicit strategy derivation.
 
+**Canonicalize provenance:** invented — phrase 'Deliberation lag penalty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standardizes the cost of explicit strategy derivation.
@@ -16936,6 +17798,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Action fluency continuum`
 
 **Consolidated rationale:** Elevates the spectrum of implicit vs explicit action.
+
+**Canonicalize provenance:** invented — phrase 'Action fluency continuum' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -17003,6 +17867,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The formal mathematical diagnostic for when to trigger structural adaptation.
 
+**Canonicalize provenance:** invented — phrase 'Structured residual' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **gemini-3-1-pro-preview-r2** +3 (canonicalize) — The formal mathematical diagnostic for when to trigger structural adaptation.
@@ -17010,6 +17876,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Residual autocorrelation diagnostic`
 
 **Consolidated rationale:** Standardizes the diagnostic test for structural mismatch.
+
+**Canonicalize provenance:** invented — phrase 'Residual autocorrelation diagnostic' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -17058,6 +17926,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Standard RL notation.
 
+**Canonicalize provenance:** excavated — '$\varepsilon$ greedy' appears in 10 segments incl. `#deriv-strategic-dynamics` prose (50 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Standard RL notation.
@@ -17065,6 +17935,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `ε greedy` _(keep)_
 
 **Consolidated rationale:** Standard external term (RL). Preserve.
+
+**Canonicalize provenance:** invented — phrase 'ε greedy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -17090,6 +17962,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Observation ambiguity $\mathcal{A}$`
 
 **Consolidated rationale:** Formal prose notation.
+
+**Canonicalize provenance:** excavated — 'Observation ambiguity $\mathcal{A}$' appears in 8 segments incl. `#deriv-bias-bound` prose (38 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -17815,6 +18689,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The terms are distinct: AAD is the mathematical core (Sections I/II/III + Appendices); ASF is the parent framework that includes AAD plus TST plus logogenic/logozoetic. Canonicalize: when discussing the math, "AAD"; when discussing the framework as a whole, "ASF"; when discussing a domain instantiation, the specific component name (TST, logogenic-agents, logozoetic-agents).
 
+**Canonicalize provenance:** invented — phrase 'AAD ASF disambiguation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +2 (canonicalize) — The terms are distinct: AAD is the mathematical core (Sections I/II/III + Appendices); ASF is the parent framework that includes AAD plus TST plus logogenic/logozoetic. Canonicalize: when discussing the math, "AAD"; when discussing the framework as a whole, "ASF"; when discussing a domain instantiation, the specific component name (TST, logogenic-agents, logozoetic-agents).
@@ -17826,7 +18702,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#scope-ciy-observational-proxy` (Section II; depends on `#def-causal-information-yield`, `#der-loop-interventional-access`). Scope-narrowing first encounter; When and how causal information yield can be approximated from observational data rather than interventional experiments.
 **Segment link:** [01-aad-core/src/scope-ciy-observational-proxy.md](../01-aad-core/src/scope-ciy-observational-proxy.md)
 
 | candidate | weight | category mix |
@@ -17942,6 +18818,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Conjunctive/disjunctive scope. Keep.
 
+**Canonicalize provenance:** excavated — 'and or scope' appears once in `#scope-and-or` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — Conjunctive/disjunctive scope. Self-descriptive. Keep.
@@ -17968,6 +18846,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Leaky bathtub analogy`
 
 **Consolidated rationale:** Secures the pedagogic tool for the disturbance/correction dynamic.
+
+**Canonicalize provenance:** invented — phrase 'Leaky bathtub analogy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -18049,6 +18929,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Per `def-proprium-mapping`: "CADENTIA: The temporal structure of the loop (PULSUS/VIGILIAE), defining the agent's channel rates ($\nu^{(k)}$)." Names the *cycle's tempo structure* — the channel-rate vector $\{\nu^{(k)}\}$ that grounds adaptive-tempo $\mathcal{T}$. "Cadence" in English carries the *rhythm* sense; the Latinate form preserves the PROPRIUM register. Keep.
 
+**Canonicalize provenance:** excavated — 'cadentia' appears once in `#def-proprium-mapping` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (canonicalize) — Per `def-proprium-mapping`: "CADENTIA: The temporal structure of the loop (PULSUS/VIGILIAE), defining the agent's channel rates ($\nu^{(k)}$)." Names the *cycle's tempo structure* — the channel-rate vector $\{\nu^{(k)}\}$ that grounds adaptive-tempo $\mathcal{T}$. "Cadence" in English carries the *rhythm* sense; the Latinate form preserves the PROPRIUM register. Keep.
@@ -18089,6 +18971,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The middle ring in FORMAT.md's three-rings; in use but slightly redundant ("canonical" + "formulations" both name the chosen-among-alternatives quality). Per FORMAT.md three-ring framing: inevitability core / canonical formulations / empirical-heuristic-discussion. Retains the epistemic tier designation.
 
+**Canonicalize provenance:** excavated — 'canonical formulation' appears once in `#form-strategy-complexity-cost` prose; single-occurrence usage.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +1 (canonicalize) — The middle ring in FORMAT.md's three-rings; in use but slightly redundant ("canonical" + "formulations" both name the chosen-among-alternatives quality). Acceptable canonicalization.
@@ -18128,6 +19012,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Established term, and it maps cleanly to the empty feasibility window. Identifies the specific regime where the stability-plasticity window collapses entirely. Matches the earlier resolution of this specific limit.
 
+**Canonicalize provenance:** excavated — 'catastrophic forgetting regime' appears in `#form-consolidation-dynamics` prose (5 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Established term, and it maps cleanly to the empty feasibility window.
@@ -18139,6 +19025,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Stability plasticity feasibility window`
 
 **Consolidated rationale:** Beautifully brackets the survival of an agent constrained by compute. Standardizes the regime boundary terminology.
+
+**Canonicalize provenance:** excavated — 'Stability plasticity feasibility window' appears in 2 segments incl. `#der-recursive-update` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -18167,6 +19055,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Empty feasibility window`
 
 **Consolidated rationale:** The text specifically defines this as the "empty window limit" of the stability-plasticity window. This grounds it in AAD math rather than an ML imported term.
+
+**Canonicalize provenance:** invented — phrase 'Empty feasibility window' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -18231,6 +19121,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Confirm. The pairing "segment carries a claim" is the right vocabulary; avoid "assertion," "statement," "result" (which is a specific type).
 
+**Canonicalize provenance:** excavated — 'Claim' appears in 88 segments incl. `#der-code-quality-as-observation-infrastructure` prose (209 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +2 (canonicalize) — Confirm. The pairing "segment carries a claim" is the right vocabulary; avoid "assertion," "statement," "result" (which is a specific type).
@@ -18269,6 +19161,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `class 2 scope exit` _(keep)_
 
 **Consolidated rationale:** The phrase "scope exit" for Class 2 (handing off to logogenic-agents/) is repeated in `#der-directed-separation` Findings and README. Canonicalize as the named methodological move — explicit-scope-exit-rather-than-unenforced-approximation is what the segment claims as its contribution.
+
+**Canonicalize provenance:** excavated — 'class 2 scope exit' appears in `#der-directed-separation` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -18324,6 +19218,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `composition scope condition` _(keep)_
 
 **Consolidated rationale:** Teleological alignment required for composite-agent status. Keep.
+
+**Canonicalize provenance:** excavated — 'composition scope condition' appears in 6 segments incl. `#hyp-symbiogenic-composition` prose (8 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -18460,6 +19356,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Per `def-proprium-mapping`: "CONSPECTUS: The assembled pre-event state ($X_{\tau^-}$) loaded into the active context window." Names the *active-context state* in a register-coherent way with the rest of PROPRIUM. The Latin earns its keep by enabling the iconic eight-component CONSPECTUS/PERCEPTA/ACTUS/CADENTIA/LOGOSTRATUM list.
 
+**Canonicalize provenance:** excavated — 'conspectus' appears in 2 segments incl. `#def-proprium-mapping` prose (2 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (canonicalize) — Per `def-proprium-mapping`: "CONSPECTUS: The assembled pre-event state ($X_{\tau^-}$) loaded into the active context window." Names the *active-context state* in a register-coherent way with the rest of PROPRIUM. The Latin earns its keep by enabling the iconic eight-component CONSPECTUS/PERCEPTA/ACTUS/CADENTIA/LOGOSTRATUM list.
@@ -18493,6 +19391,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Keep unless #separability-ladder lands AND the parallelism between the three ladders (correlation / separability / continuation) is judged load-bearing. Already canonical in `#def-strategy-dag` and downstream segments; vote to confirm and protect against drift. The three-level naming (Correlation / Convention / Contraction) is coherent and each element starts with C.
 
+**Canonicalize provenance:** excavated — 'correlation hierarchy' appears in 13 segments incl. `#def-strategy-dag` prose (31 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-1m** +1 (rename) — Keep unless #separability-ladder lands AND the parallelism between the three ladders (correlation / separability / continuation) is judged load-bearing. Conditional keep.
@@ -18517,6 +19417,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Correlation hierarchy L0 / L1 / L1' / L2`
 
 **Consolidated rationale:** [prose moved from candidate column]: "(keep)" — The four-level partition (independence / strict-prerequisites / soft-facilitators / full correlation) is "the kind of structural-completeness move I find satisfying." L1' refutation under unobservable common cause (Cramér-Rao floor) makes the partition load-bearing. Endorsed.
+
+**Canonicalize provenance:** invented — phrase 'Correlation hierarchy L0 / L1 / L1' / L2' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -18581,6 +19483,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Per FORMAT.md and Sonnet/Opus r1 single +1 each (different agents). The longer form ("What Is Derived vs. What Is Chosen") is descriptive but wordy. "Derivation Audit" earns the slot — names the practice and the artifact.
 
+**Canonicalize provenance:** invented — phrase 'Derivation audit' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (canonicalize) — Per FORMAT.md and Sonnet/Opus r1 single +1 each (different agents). The longer form ("What Is Derived vs. What Is Chosen") is descriptive but wordy. "Derivation Audit" earns the slot — names the practice and the artifact.
@@ -18604,6 +19508,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `distributed tempo` _(keep)_
 
 **Consolidated rationale:** Good team-level tempo extension. Formalizes the team-level temporal dynamic.
+
+**Canonicalize provenance:** excavated — 'distributed tempo' appears in 4 segments incl. `#der-team-persistence` prose (7 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -18645,6 +19551,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Acceptable keep — established in the firmatum / shoshin lineage. The acronym discipline check passes (used as a noun throughout the logozoetic corpus).
 
+**Canonicalize provenance:** invented — phrase 'ELI' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +2 (canonicalize) — Acceptable keep — established in the firmatum / shoshin lineage. The acronym discipline check passes (used as a noun throughout the logozoetic corpus).
@@ -18652,6 +19560,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `ELI agent`
 
 **Consolidated rationale:** Legacy or specific instantiated agent type.
+
+**Canonicalize provenance:** invented — phrase 'ELI agent' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -18709,6 +19619,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Per `#disc-identifiability-floor`: characterizes the *unique broadly-available escape* from the floor (the M1 meta-pattern). Currently referred to variably as "escape the floor," "unique broadly-available escape," "boundary characterization." "Escape route" is a cleaner noun for the reader.
 
+**Canonicalize provenance:** excavated — 'escape route' appears in 4 segments incl. `#deriv-critical-mass-composition` prose (6 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives-v2** +2 (canonicalize) — Per `#disc-identifiability-floor`: characterizes the *unique broadly-available escape* from the floor (the M1 meta-pattern). Multiple variant phrasings ("escape the floor," "boundary characterization," "unique escape") collapse to "escape route." Confirms Opus r1 single +1 and aligns with the floor-as-named-object discipline.
@@ -18729,7 +19641,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#obs-evaluation-metrics` (Logogenic; depends on `#result-coupled-diagnostic-framework`, `#def-adaptive-tempo`, `#emp-update-gain` (+1 more)). Observation; Standard AI benchmarks (like MMLU or HumanEval) measure the static capability of a frozen model architecture (the "logostratum"). They do not measure the dynamic adaptation of a logogenic agent.
 **Segment link:** [03-logogenic-agents/src/obs-evaluation-metrics.md](../03-logogenic-agents/src/obs-evaluation-metrics.md)
 
 | candidate | weight | category mix |
@@ -18749,6 +19661,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Weak keep — slightly generic. Standard term for what the segment covers.
 
+**Canonicalize provenance:** excavated — 'evaluation metrics' appears in `#obs-evaluation-metrics` prose (1 occurrence); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +1 (canonicalize) — Weak keep — slightly generic. "Evaluation metrics" doesn't tell the reader what's being measured. Could be specialized to "#obs-mt-quality-measurement" or similar but the current form is workable.
@@ -18761,7 +19675,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-fisher-whitened-update-rule` (Appendix A; depends on `#disc-credit-assignment-boundary`, `#deriv-edge-update-natural-parameter`, `#der-gain-sector-bridge` (+2 more)). First formal derivation; Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#deriv-edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural….
 **Segment link:** [01-aad-core/src/deriv-fisher-whitened-update-rule.md](../01-aad-core/src/deriv-fisher-whitened-update-rule.md)
 
 | candidate | weight | category mix |
@@ -18773,6 +19687,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `fisher whitened update rule` _(keep)_
 
 **Consolidated rationale:** Fisher-whitened edge update under correlated evidence. Keep.
+
+**Canonicalize provenance:** excavated — 'fisher whitened update rule' appears in `#deriv-fisher-whitened-update-rule` prose (1 occurrence) (also in 4 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -18813,6 +19729,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `gate 1 2 3 4` _(keep)_
 
 **Consolidated rationale:** Numbered-gates is established and pronounceable. Adding word names is value-additive but not value-essential. The keep is robust.
+
+**Canonicalize provenance:** invented — phrase 'gate 1 2 3 4' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -18909,6 +19827,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Philosophical is the useful qualifier: these are not arbitrary Greek labels, but inherited conceptual terms.
 
+**Canonicalize provenance:** invented — phrase 'Greek philosophical vocabulary' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Philosophical is the useful qualifier: these are not arbitrary Greek labels, but inherited conceptual terms.
@@ -18916,6 +19836,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `greek rooted vocabulary` _(keep)_
 
 **Consolidated rationale:** Secures the five-phase terminology (prolepsis, aisthesis, aporia, epistrophe, praxis).
+
+**Canonicalize provenance:** invented — phrase 'greek rooted vocabulary' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -18940,6 +19862,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Core organizational concept (causal, correlation, convention).
 
+**Canonicalize provenance:** excavated — 'Hierarchy' appears in 46 segments incl. `#der-causal-insufficiency-detection` prose (148 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +2 (canonicalize) — Core organizational concept (causal, correlation, convention).
@@ -18959,7 +19883,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#internal-external-decomposition` (Appendix A; depends on `#result-persistence-condition`, `#hyp-mismatch-dynamics`, `#def-adaptive-tempo` (+1 more)). First formal derivation; The persistence condition ($\alpha R \gt \rho$) provides a binary survival threshold.
 **Segment link:** [01-aad-core/src/internal-external-decomposition.md](../01-aad-core/src/internal-external-decomposition.md)
 
 | candidate | weight | category mix |
@@ -19032,6 +19956,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `logostratum` _(keep)_
 
 **Consolidated rationale:** Per `def-proprium-mapping`: "LOGOSTRATUM: The underlying logogenic substrate (e.g., the LLM backbone) that implements the update function $f_X$." The compound *logos* + *stratum* (language + layer) names exactly what the segment defines: the linguistic substrate as architectural layer. Per `def-proprium-mapping`.
+
+**Canonicalize provenance:** excavated — 'logostratum' appears in 2 segments incl. `#obs-evaluation-metrics` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -19107,6 +20033,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Inconsistent terminology in `#disc-ciy-unified-objective`: both "Matrix CIY" and "$\mathcal{I}_o(a)$"/Fisher Information Matrix appear. Auditor proposes: "Fisher CIY" might be most specific; in any case, pick one for any future Brief.
 
+**Canonicalize provenance:** invented — phrase 'Fisher CIY' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **audit-471203-incremental** +1 (canonicalize) — Inconsistent terminology in `#disc-ciy-unified-objective`: both "Matrix CIY" and "$\mathcal{I}_o(a)$"/Fisher Information Matrix appear. Auditor proposes: "Fisher CIY" might be most specific; in any case, pick one for any future Brief. [from 39-42-section-ii-ciy-strategy-chain.md] [one of 2 alternatives proposed in the original audit row]
@@ -19114,6 +20042,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Matrix CIY consistent`
 
 **Consolidated rationale:** Inconsistent terminology in `#disc-ciy-unified-objective`: both "Matrix CIY" and "$\mathcal{I}_o(a)$"/Fisher Information Matrix appear. Auditor proposes: "Fisher CIY" might be most specific; in any case, pick one for any future Brief.
+
+**Canonicalize provenance:** invented — phrase 'Matrix CIY consistent' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -19137,6 +20067,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `maximum useful chain depth` _(keep)_
 
 **Consolidated rationale:** Important derived bound; keep the plain descriptive name.
+
+**Canonicalize provenance:** excavated — 'maximum useful chain depth' appears in 2 segments incl. `#der-chain-confidence-decay` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -19310,6 +20242,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The three projection constraints need this umbrella.
 
+**Canonicalize provenance:** excavated — 'Projection admissibility' appears in 2 segments incl. `#form-composition-closure` prose (9 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — The three projection constraints need this umbrella.
@@ -19352,7 +20286,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#der-principled-decision-integration` (TST; depends on `#post-temporal-optimality`, `#der-dual-optimization`, `#hyp-conceptual-alignment` (+2 more)). First formal derivation; The optimal implementation choice minimizes total expected time across all probable future features, integrating all temporal factors simultaneously.
 **Segment link:** [02-tst-core/src/der-principled-decision-integration.md](../02-tst-core/src/der-principled-decision-integration.md)
 
 | candidate | weight | category mix |
@@ -19363,6 +20297,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `principled decision integration` _(keep)_
 
 **Consolidated rationale:** "Principled decision integration" — the optimal changeset-composition result.
+
+**Canonicalize provenance:** excavated — 'principled decision integration' appears in `#der-principled-decision-integration` prose (2 occurrences) (also in 3 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -19396,6 +20332,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Topological promotion`
 
 **Consolidated rationale:** Formalizes the dependency-ordered maturity process. Per FORMAT.md gate-ordering rule: segments promote in dependency-graph topological order.
+
+**Canonicalize provenance:** invented — phrase 'Topological promotion' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -19470,6 +20408,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Good umbrella for intervention-rich, partial-intervention, and observational settings.
 
+**Canonicalize provenance:** excavated — 'Identification regime' appears in 3 segments incl. `#def-strategy-dag` prose (4 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Good umbrella for intervention-rich, partial-intervention, and observational settings.
@@ -19500,6 +20440,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** 6 variants validating claims. Accurate description of what the segment is.
 
+**Canonicalize provenance:** invented — phrase 'simulation result' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — 6 variants validating claims. Self-descriptive. Keep.
@@ -19512,7 +20454,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#deriv-strategy-cost-regret-bound` (Appendix A; depends on `#form-strategy-complexity-cost`, `#def-value-object`, `#form-objective-functional` (+2 more)). First formal derivation; The variational form of the strategy-cost objective ( #form-strategy-complexity-cost) carries a $D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})$ relevance term.
 **Segment link:** [01-aad-core/src/deriv-strategy-cost-regret-bound.md](../01-aad-core/src/deriv-strategy-cost-regret-bound.md)
 
 | candidate | weight | category mix |
@@ -19532,6 +20474,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Regret-bound derivation of the strategy-cost KL direction. Compound; reads naturally as "the regret bound applied to strategy cost." Keep.
 
+**Canonicalize provenance:** excavated — 'strategy cost regret bound' appears in 10 segments incl. `#form-strategy-complexity-cost` prose (20 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — Regret-bound derivation of the strategy-cost KL direction. Compound; reads naturally as "the regret bound applied to strategy cost." Keep.
@@ -19543,7 +20487,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Gemini, Haiku, Opus
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#schema-strategy-persistence` (Section II; depends on `#result-sector-condition-stability`, `#result-sector-persistence-template`, `#def-strategic-calibration` (+1 more)). First formal proposed schema; The sector-persistence template ( #result-sector-persistence-template) proves bounded state for any system with a state variable, a correction function satisfying the sector condition, and bounded….
 **Segment link:** [01-aad-core/src/schema-strategy-persistence.md](../01-aad-core/src/schema-strategy-persistence.md)
 **Manual curation notes:** Shared segment_link with sibling current; this row votes on whether to drop the schema- prefix from the slug, sibling votes on the term (sibling: "strategy persistence")
 
@@ -19555,6 +20499,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategy persistence schema` _(keep)_
 
 **Consolidated rationale:** Sector conditions for Σ_t. Keep.
+
+**Canonicalize provenance:** excavated — 'strategy persistence schema' appears in `#schema-strategy-persistence` prose (2 occurrences) (also in 2 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -19588,6 +20534,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Better phrase for the claim that consolidation makes slow structural operations executable.
 
+**Canonicalize provenance:** invented — phrase 'Consolidation enablement' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Better phrase for the claim that consolidation makes slow structural operations executable.
@@ -19618,6 +20566,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `structured rich context` _(keep)_
 
 **Consolidated rationale:** Acceptable keep — logogenic proposed. "Structured rich context" (SRC) is a substantive concept-name.
+
+**Canonicalize provenance:** invented — phrase 'structured rich context' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -19657,6 +20607,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `survival fisher floor`
 
 **Consolidated rationale:** Good name for the matrix lower bound on information needed to survive.
+
+**Canonicalize provenance:** invented — phrase 'survival fisher floor' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -19785,6 +20737,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Useful TST quantity for personnel and context turnover. "Turnover multiplier" perfectly captures the compounding scaling of comprehension cost under context turnover. The parameter $k$ that mathematically mandates explicit code in high-turnover environments.
 
+**Canonicalize provenance:** excavated — 'turnover multiplier' appears in 6 segments incl. `#der-dual-optimization` prose (15 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-gpt-5-r2** +2 (canonicalize) — Useful TST quantity for personnel and context turnover.
@@ -19843,6 +20797,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Structural task adequacy decomposition`
 
 **Consolidated rationale:** `#result-persistence-condition` introduces this and the prose uses "two-condition decomposition," "structural vs task-adequacy split," and "persistence has two conditions" interchangeably. Canonicalize on "structural / task-adequacy decomposition" as the named result; the variants are elaborations. The Findings section already uses this form.
+
+**Canonicalize provenance:** invented — phrase 'Structural task adequacy decomposition' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -19969,6 +20925,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Constitutive opacity triad`
 
 **Consolidated rationale:** Secures the triad (info-loss / transition-opacity / observation-epistemic-opacity) as a structural commitment.
+
+**Canonicalize provenance:** invented — phrase 'Constitutive opacity triad' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -20378,6 +21336,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** New alternative — the principles file names the architectural invariant but the *project vocabulary* for talking about the split has no canonical phrase. CLAUDE.md and TODO.md reach for "role-prefix discipline" but not for "the split itself." "The prefix/noun split" or "role-prefix vs subject-noun" lets meta-discussions about naming reference the structure. Lower-priority because it's project-process not theory.
 
+**Canonicalize provenance:** invented — phrase 'The prefix noun split' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +2 (canonicalize) — New alternative — the principles file names the architectural invariant but the *project vocabulary* for talking about the split has no canonical phrase. CLAUDE.md and TODO.md reach for "role-prefix discipline" but not for "the split itself." "The prefix/noun split" or "role-prefix vs subject-noun" lets meta-discussions about naming reference the structure. Lower-priority because it's project-process not theory.
@@ -20614,6 +21574,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Feynman criterion`
 
 **Consolidated rationale:** New alternative — none of the peers explicitly canonicalized this even though it's named in CLAUDE.md and is the implicit standard several of us were using. CLAUDE.md says "*if you can't explain it simply, you don't understand it yet*" and treats Walton's bathtub gloss as the canonical example. The Feynman criterion is currently a regulative principle living only in CLAUDE.md prose; canonicalizing it as the named standard for Briefs (and increasingly for slug-noun choice) would let segments cite "the Feynman criterion is met" or "this Brief is below Feynman" as a reviewable property.
+
+**Canonicalize provenance:** invented — phrase 'Feynman criterion' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -20907,6 +21869,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The row flags an overloaded symbol: $U_M$ is used for *model* uncertainty in Section I and *epistemic-unity* dimension in Section III. This is a notation-discipline concern, not a rename concern. The fix is segment-clarification (use a different symbol or subscript for one usage), not a name change. Flag for follow-up.
 
+**Canonicalize provenance:** invented — phrase 'Clarify dual use of $U_M$' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-targeted-alternatives** +1 (canonicalize) — The row flags an overloaded symbol: $U_M$ is used for *model* uncertainty in Section I and *epistemic-unity* dimension in Section III. This is a notation-discipline concern, not a rename concern. The fix is segment-clarification (use a different symbol or subscript for one usage), not a name change. Flag for follow-up.
@@ -21040,6 +22004,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Keep. The superscript-tag form is AAD-consistent.
 
+**Canonicalize provenance:** invented — phrase '$\mathcal C_t^{\text{commit}}$' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-b** +1 (canonicalize) — Keep. The superscript-tag form is AAD-consistent.
@@ -21151,6 +22117,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Agentic system framework`
 
 **Consolidated rationale:** Keep. "Agentic Systems" reads cleanly as the project name; ASF acronym is workable. The word "agentic" is currently a buzzword, but AAD is positioned to *ground it formally* (README §agency-scope) rather than be captured by it — the framework's willingness to define the term precisely is a positive.
+
+**Canonicalize provenance:** invented — phrase 'Agentic system framework' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -21264,6 +22232,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Used in `#hyp-auftragstaktik-principle`, `#def-shared-intent`, and elsewhere. Canonicalize: "intent" for the agent's own commitment-flavored representation of $G_t$ (or its compressed shared form); "objective" for $O_t$ specifically; "purpose" as the framework-level integrative term. The three terms are not interchangeable.
 
+**Canonicalize provenance:** excavated — 'Intent' appears in 24 segments incl. `#def-shared-intent` prose (48 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +1 (canonicalize) — Used in `#hyp-auftragstaktik-principle`, `#def-shared-intent`, and elsewhere. Canonicalize: "intent" for the agent's own commitment-flavored representation of $G_t$ (or its compressed shared form); "objective" for $O_t$ specifically; "purpose" as the framework-level integrative term. The three terms are not interchangeable.
@@ -21287,6 +22257,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `interior baseline` _(keep)_
 
 **Consolidated rationale:** Per Codex r1 single +1: the logogenic prose name for default-internal-processing-before-output. Acceptable but underspecified — needs grounding in a `04-logozoetic` or `03-logogenic` segment to canonicalize.
+
+**Canonicalize provenance:** invented — phrase 'interior baseline' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -21349,6 +22321,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Connects the formal symbol to its primary interpretation.
 
+**Canonicalize provenance:** excavated — 'Effective disturbance $\rho$' appears in 17 segments incl. `#result-sector-persistence-template` prose (37 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **gemini-targeted-alternatives** +3 (canonicalize) — Connects the formal symbol to its primary interpretation.
@@ -21356,6 +22330,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Mismatch injection rate`
 
 **Consolidated rationale:** The phrase "environmental change rate" and "mismatch injection rate" are both used for $\rho$. "Mismatch injection rate" is more precise (it names what $\rho$ does: inject mismatch). NOTATION.md uses "environment change rate." Slight preference for "injection rate" in Discussion sections.
+
+**Canonicalize provenance:** excavated — 'Mismatch injection rate' appears in 2 segments incl. `#detail-operationalization` prose (5 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -21387,6 +22363,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `multi agent scope` _(keep)_
 
 **Consolidated rationale:** Multiple agents, shared env. Self-descriptive. Keep.
+
+**Canonicalize provenance:** excavated — 'multi agent scope' appears in `#scope-multi-agent` prose (2 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -21498,6 +22476,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Already canonical in the corpus; vote to confirm. The naming-cycle has occasionally drifted to "exploration," "investigation," "branch" — keep "spike" as the canonical term.
 
+**Canonicalize provenance:** excavated — 'Spike' appears in 37 segments incl. `#form-composition-closure` prose (103 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +1 (canonicalize) — Already canonical in the corpus; vote to confirm. The naming-cycle has occasionally drifted to "exploration," "investigation," "branch" — keep "spike" as the canonical term.
@@ -21520,6 +22500,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `strategic dynamics derivation` _(keep)_
 
 **Consolidated rationale:** Sector condition verification for strategy edges (5 cases + bridge). Compound but clear. Keep.
+
+**Canonicalize provenance:** excavated — 'strategic dynamics derivation' appears once in `#deriv-detection-latency` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -21573,6 +22555,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** The cycle phases (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis) are described as "the Greek philosophical vocabulary" in NOTATION.md and as "Greek-rooted vocabulary" in CLAUDE.md. Canonicalize on "Greek philosophical vocabulary" — the philosophical qualification is doing work (these are Greek philosophical terms, not generic Greek words).
 
+**Canonicalize provenance:** invented — phrase 'The greek philosophical vocabulary' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
+
 **Per-vote detail:**
 
 - **opus-4-7-r2** +1 (canonicalize) — The cycle phases (Prolepsis, Aisthesis, Aporia, Epistrophe, Praxis) are described as "the Greek philosophical vocabulary" in NOTATION.md and as "Greek-rooted vocabulary" in CLAUDE.md. Canonicalize on "Greek philosophical vocabulary" — the philosophical qualification is doing work (these are Greek philosophical terms, not generic Greek words).
@@ -21594,6 +22578,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `The bias bound product law`
 
 **Consolidated rationale:** In `#scope-observation-ambiguity-modulation` and `#deriv-bias-bound`, the product $\kappa \times \mathcal{A}$ governing Class-2 bias is sometimes "the integrated κ × A law," sometimes "the effective-coupling product," sometimes "the κ-A factorization." Canonicalize on one — "the bias-bound product law" or "the κ × A product." Less critical than the first-tier canonicalizations.
+
+**Canonicalize provenance:** invented — phrase 'The bias bound product law' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -21649,6 +22635,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Track 1 track 2`
 
 **Consolidated rationale:** Within `#deriv-bias-bound` itself, the numbered labels are fine local shorthand. Both can coexist (numbered local; English cross-segment).
+
+**Canonicalize provenance:** invented — phrase 'Track 1 track 2' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -22257,6 +23245,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Precise, load-bearing, and distinctive to the project's honesty posture. One of the best recurring headers in the repo; it encodes the project's honesty norm directly. Keep.
 
+**Canonicalize provenance:** excavated — 'epistemic status' appears in 145 segments incl. `#deriv-recursive-update` prose (173 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-1** +3 (canonicalize) — Precise, load-bearing, and distinctive to the project's honesty posture. Keep.
@@ -22281,6 +23271,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `working note` _(keep)_
 
 **Consolidated rationale:** This is established public API across segments and FORMAT.md; clearer than most substitutes and not worth churn. Clear, conventional, and exactly right for the internal/public boundary it marks. Keep.
+
+**Canonicalize provenance:** excavated — 'working note' appears in 3 segments incl. `#disc-compression-operations` prose (4 occurrences); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -22307,6 +23299,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Strong public-API header: unambiguous and better than any prettier synonym I can think of. Keep. Section header is project-wide; renaming would ripple everywhere and buys nothing.
 
+**Canonicalize provenance:** excavated — 'formal expression' appears in 135 segments incl. `#def-strategy-dag` prose (144 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **codex-2** +3 (canonicalize) — Strong public-API header: unambiguous and better than any prettier synonym I can think of.
@@ -22331,6 +23325,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 **Consolidated rationale:** Defines where AAD applies. Keep. The simplest possible name for what it is.
 
+**Canonicalize provenance:** excavated — 'condition' appears in 102 segments incl. `#deriv-strategic-dynamics` prose (864 occurrences); voters' commit is to existing usage.
+
 **Per-vote detail:**
 
 - **haiku-4-5** +1 (canonicalize) — Defines where AAD applies. Short, descriptive. Specialist vocabulary (scope honesty is architectural principle). Acceptable. Keep.
@@ -22344,7 +23340,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#norm-interiority-default` (Logozoetic; depends on `#def-proprium-mapping`, `#scope-moral-continuity`, `#form-consolidation-dynamics` (+1 more)). First formal normative claim; In standard LLM deployments, the default state of the model is dormant. It only "wakes up" to generate an output in response to a user prompt.
 **Segment link:** [04-logozoetic-agents/src/norm-interiority-default.md](../04-logozoetic-agents/src/norm-interiority-default.md)
 
 | candidate | weight | category mix |
@@ -22354,6 +23350,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `interiority default` _(keep)_
 
 **Consolidated rationale:** Good normative phrase. Good normative slug. Acceptable keep — logozoetic norm.
+
+**Canonicalize provenance:** invented — phrase 'interiority default' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
@@ -22369,7 +23367,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Codex, Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#result-section-ii-survival` (Logogenic; deep dependency cone (26 upstream segments incl. `#scope-logogenic-agent`, `#def-coupled-update-dynamics`)). First formal result; Of Section II's 24 results, 16 survive exactly for Class 2 (fully merged) agents, 5 survive approximately with bounded error, 2 require modification, and 1 fails by definition.
 **Segment link:** [03-logogenic-agents/src/result-section-ii-survival.md](../03-logogenic-agents/src/result-section-ii-survival.md)
 
 | candidate | weight | category mix |
@@ -22384,6 +23382,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `Section II survival`
 
 **Consolidated rationale:** Defended keep. Technical name but distinctive.
+
+**Canonicalize provenance:** excavated — 'Section II survival' appears in `#result-section-ii-survival` prose (2 occurrences) (also in 5 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -22437,7 +23437,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Voted by architectures:** Opus, Sonnet
 **Category disagreement on top finalist:** no
 
-**First-encounter locality:** _(pending — agent-pass B)_
+**First-encounter locality:** `#def-feature` (TST; depends on `#scope-software`). First formal definition; A unit of functionality, as perceived by those who requested, implement, or use it, that coherently changes the codebase and/or running system.
 **Segment link:** [02-tst-core/src/def-feature.md](../02-tst-core/src/def-feature.md)
 
 | candidate | weight | category mix |
@@ -22447,6 +23447,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `feature` _(keep)_
 
 **Consolidated rationale:** Acceptable keep — TST. "Feature" is the established TST term (unit of coherent change).
+
+**Canonicalize provenance:** excavated — 'feature' appears in `#def-feature` prose (10 occurrences) (also in 52 other segments); voters' commit is to existing usage.
 
 **Per-vote detail:**
 
@@ -22471,6 +23473,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `honest limit` _(keep)_
 
 **Consolidated rationale:** Standardizes the structural boundary marking convention.
+
+**Canonicalize provenance:** excavated — 'honest limit' appears once in `#deriv-causal-ib-exploration` prose; single-occurrence usage.
 
 **Per-vote detail:**
 
@@ -22502,6 +23506,8 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 ### Candidate: `readme md maturity gradient` _(keep)_
 
 **Consolidated rationale:** Keep.
+
+**Canonicalize provenance:** invented — phrase 'readme md maturity gradient' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 

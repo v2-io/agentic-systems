@@ -15,9 +15,10 @@
 #   --format=full — same per-target structure but with enrichment fields
 #     surfaced when populated: consolidated rationale per candidate (post
 #     agent-pass A), first-encounter locality per current (post agent-pass B),
-#     segment link, manual curation notes, voted-by-architectures, category-
-#     disagreement flag. The deep-read view; useful when iterating on the
-#     master-list itself.
+#     canonicalize provenance per candidate (post agent-pass B), segment link,
+#     manual curation notes, voted-by-architectures, category-disagreement
+#     flag. The deep-read view; useful when iterating on the master-list
+#     itself.
 #
 #   --format=summary — meta only: agents, totals, enrichment status. Pairs
 #     with the lossless master-list to give a quick health-check.
@@ -123,7 +124,7 @@ def render_full(master)
   out << "**Distinct currents:** #{meta['total_currents']}"
   out << "**Enrichment status:** #{meta['enrichment_status'].map { |k, v| "#{k}: #{v}" }.join(' / ')}"
   out << ''
-  out << 'Per-current sections with enrichment fields surfaced where populated. Within each section: candidates as a table (with category mix, weight), then per-vote attribution + notes preserved verbatim from the source files. The lossless view — every per-vote note is here. Enrichment fields (consolidated rationale, first-encounter locality, segment link, manual curation notes) appear when the corresponding pass has filled them; otherwise marked _(pending)_.'
+  out << 'Per-current sections with enrichment fields surfaced where populated. Within each section: candidates as a table (with category mix, weight), then per-vote attribution + notes preserved verbatim from the source files. The lossless view — every per-vote note is here. Enrichment fields (consolidated rationale, first-encounter locality, canonicalize provenance, segment link, manual curation notes) appear when the corresponding pass has filled them; otherwise marked _(pending)_.'
   out << ''
   out << '---'
   out << ''
@@ -178,6 +179,10 @@ def render_full(master)
         out << "**Consolidated rationale:** #{alt['consolidated_rationale']}"
       else
         out << '**Consolidated rationale:** _(pending — agent-pass A)_'
+      end
+      if alt['canonicalize_provenance']
+        out << ''
+        out << "**Canonicalize provenance:** #{alt['canonicalize_provenance']}"
       end
       out << ''
       out << '**Per-vote detail:**'

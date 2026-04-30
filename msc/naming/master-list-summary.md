@@ -8,49 +8,50 @@
 - Agents contributing: **19**
 - Vote rows: **2967**
 - Distinct (current, candidate) pairs: **1805**
-- Distinct currents (vote-targets): **814**
+- Distinct currents (vote-targets): **629**
 
 ## Enrichment status
 
-- `consolidated_rationale`: pending
-- `first_encounter_locality`: pending
-- `segment_link`: pending
-- `manual_curation`: pending
+- `consolidated_rationale`: filled 1403/1403
+- `first_encounter_locality`: filled 139/139
+- `segment_link`: filled 139 (incl. 1 manually-resolved ambiguity), 4 with shared-segment annotation, 301 no-match
+- `manual_curation`: 4 currents flagged for follow-up review
+- `canonicalize_provenance`: filled 503/503
 
 ## Architecture-disagreement flags
 
-- Currents with category disagreement on top finalist: **103**
+- Currents with category disagreement on top finalist: **73**
 
 These are targets where the top-weight candidate received votes in more than one category — the rename-vs-add-alias-vs-canonicalize action is contested. They warrant explicit attention in Round 2.
 
 | current | top candidate | category mix |
 |---|---|---|
-| `control regret` | `control regret` | keep × 16, canonicalize × 1 |
-| `satisfaction gap` | `satisfaction gap` | keep × 16, canonicalize × 1 |
-| `orient cascade` | `orient cascade` | keep × 15, canonicalize × 1 |
-| `directed separation` | `directed separation` | keep × 15, canonicalize × 1 |
-| `identifiability floor` | `identifiability floor` | keep × 14, canonicalize × 1 |
-| `concept the parameter space region within which an agent maintain bounded mismatch indefinitely` | `persistence envelope` | name-unnamed × 8, add-alias × 1, canonicalize × 4, rename × 2 |
-| `chronica` | `chronica` | keep × 9, canonicalize × 1 |
-| `strategy DAG` | `strategy DAG` | keep × 10, canonicalize × 1 |
-| `persistence condition` | `persistence condition` | keep × 8, canonicalize × 1 |
-| `concept the slogan capturing AAD organizing principle that an adaptive system correction rate must exceed its target change rate` | `contraction over drift principle` | name-unnamed × 3, canonicalize × 5 |
-| `logogenic agent` | `logogenic agent` | keep × 7, canonicalize × 1 |
-| `additive coordinate forcing` | `forced coordinate` | rename × 11, canonicalize × 2 |
-| `agent spectrum` | `agent spectrum` | keep × 10, canonicalize × 1 |
-| `concept the unupdatable region of the strategy DAG where edge receive no actionable feedback` | `epistemic dead zone` | name-unnamed × 1, canonicalize × 5, rename × 2 |
-| `separability pattern` | `separability ladder` | rename × 9, canonicalize × 1 |
-| `shared intent` | `shared intent` | keep × 7, rebuttal × 1 |
-| `AAD adaptation and actuation dynamics` | `AAD adaptation and actuation dynamics` | keep × 7, canonicalize × 1 |
-| `adaptive tempo` | `adaptive tempo` | keep × 6, canonicalize × 1 |
-| `causal information yield` | `causal information yield` | keep × 8, canonicalize × 1 |
-| `composition closure` | `composition closure` | keep × 9, canonicalize × 1 |
+| `control regret` | `control regret` | canonicalize × 20, add-alias × 2 |
+| `satisfaction gap` | `satisfaction gap` | canonicalize × 19, add-alias × 2 |
+| `orient cascade` | `orient cascade` | canonicalize × 19 |
+| `directed separation` | `directed separation` | canonicalize × 16 |
+| `identifiability floor` | `identifiability floor` | canonicalize × 17 |
+| `concept the parameter space region within which an agent maintain bounded mismatch indefinitely` | `Persistence envelope` | name-unnamed × 8, add-alias × 1, canonicalize × 4, rename × 2 |
+| `chronica` | `chronica` | canonicalize × 19, rename × 1 |
+| `strategy DAG` | `strategy DAG` | canonicalize × 14 |
+| `persistence condition` | `persistence condition` | canonicalize × 12, rename × 1 |
+| `logogenic agent` | `logogenic agent` | canonicalize × 8 |
+| `additive coordinate forcing` | `Forced coordinate` | rename × 11, canonicalize × 2 |
+| `agent spectrum` | `agent spectrum` | canonicalize × 11 |
+| `concept the unupdatable region of the strategy DAG where edge receive no actionable feedback` | `Epistemic dead zone` | name-unnamed × 1, canonicalize × 5, rename × 2 |
+| `separability pattern` | `Separability ladder` | rename × 9, canonicalize × 1 |
+| `shared intent` | `shared intent` | canonicalize × 7, rebuttal × 1 |
+| `AAD (Adaptation and Actuation Dynamics)` | `AAD (Adaptation and Actuation Dynamics)` | canonicalize × 8 |
+| `adaptive tempo` | `adaptive tempo` | canonicalize × 13 |
+| `causal information yield` | `causal information yield` | canonicalize × 11 |
+| `composition closure` | `composition closure` | canonicalize × 10 |
+| `observability dominance` | `observability dominance` | canonicalize × 11 |
 
-_(showing first 20 of 103; full list in master-list.json)_
+_(showing first 20 of 73; full list in master-list.json)_
 
 ## Single-architecture currents
 
-- Currents voted by 1 architecture only: **270** (Bucket-1 territory; cross-architecture pressure-testing high-value)
-- Currents voted by 2 architectures: **342**
-- Currents voted by 3+ architectures: **202**
+- Currents voted by 1 architecture only: **187** (Bucket-1 territory; cross-architecture pressure-testing high-value)
+- Currents voted by 2 architectures: **230**
+- Currents voted by 3+ architectures: **212**
 
