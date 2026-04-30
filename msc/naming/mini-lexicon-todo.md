@@ -645,6 +645,51 @@ This reframes what the workflow-restatement gate is *for* — not just a binding
 
 **Priority hint:** LOW. Don't act on this until the analysis lands.
 
+### 12.3 Post-walk consolidation gap and periodic-checkpoint recommendation
+
+**Issue:** the methodology's per-segment loop uses `grep` against the tracker as the *surface* mechanism — only terms whose names match the segment's surface vocabulary get presented to the voter for vote-decision in that iteration. But understanding doesn't accumulate at segment boundaries; it accumulates *across* segments, and some terms only become voteable after several adjacent segments have laid down enough mutual structure. Flash (Gemini Flash continuing the gemini-r2 walk) discovered at end-of-walk that he had real positions on terms the grep had missed; Codex (returning to his card after stopping) is now finding the same. The methodology's engagement work is landing — the *surfacing* mechanism is incomplete.
+
+**Sources:** Direct observation 2026-04-30 across two voters (Gemini Flash continuing, Codex returning).
+
+**Proposed actions (recommendation for future-cycle methodology):** insert periodic **consolidation checkpoints** into the walk:
+
+- **After the initial project documentation phase** (post-orientation reads of `CLAUDE.md`, `README.md`, OUTLINEs, top-level files, and *before* the first source segment). Some terms become voteable from the priming material alone.
+- **At a recurring cadence during the walk** — after every ~10 segments, or at natural part/section boundaries (e.g., end of Section I, end of each component's main results).
+
+At each checkpoint, the voter:
+
+1. Reads the entire tracker list holistically (not just the segment's grep matches).
+2. Identifies items they can now vote on but that weren't surfaced during the per-segment iterations.
+3. Identifies older votes where new understanding may warrant revisiting (raise/lower weight, change category, or remove).
+4. Marks `can-vote=true` for newly-identified items.
+5. Decides whether to vote on the identified items immediately or to proceed for a while first, casting later when the rhythm permits.
+
+The checkpoint is *consolidation-driven*, not segment-driven — its cognitive shape is different from the per-segment loop. The votes that come out should still be substantive because the understanding has already accumulated; what's new is the surfacing.
+
+This change converts the loop from purely segment-driven to *segment-driven with periodic tracker-holistic passes*. More expensive cognitively but captures the readiness-precedes-surfacing case the current methodology misses. For voters with strong context budgets it's clearly worth it; for tight-budget voters the checkpoint cadence may need to be adjusted.
+
+**Status:** open; recommended for future-cycle methodology document. Not a mid-cycle fix; the current cohort's votes stand. Codex and Flash are doing ad-hoc end-of-walk versions of this externally.
+
+**Priority hint:** MEDIUM-HIGH for next cycle's methodology. Worth landing in `doc/naming-cycle-methodology.md` §4 (the walk loop) before any future R2 / R3 round launches.
+
+### 12.4 Voting-sequence noise as a limitation
+
+**Issue:** the `voting-sequence` column was designed to capture chronological-encounter ordering of when each voter became ready to vote on each concept — the input for future cards' chronological-rather-than-random target ordering, and for the load-bearing-vs-scattered concept analysis. But what it *actually* captures is the order in which the grep-filter happened to surface a term *and* the voter happened to mark it. Whenever readiness precedes surfacing (which §12.3 establishes is common), the recorded sequence diverges from the true ready-to-vote-now sequence.
+
+The chronological-encounter signal is therefore noisier than the column's design implied — useful for *coarse* ordering (early-walk terms are reliably earlier than late-walk terms) but not for fine ordering or for "where does this concept first surface" structural inference.
+
+**Sources:** Implied by §12.3's observation that voters' understanding-readiness outpaces grep-surfacing.
+
+**Proposed actions:**
+
+- *For aggregation of the current cohort:* treat voting-sequence as a soft signal. Sequence values within ~10 of each other should be considered within the noise floor. Cross-voter sequence correlation analyses (the load-bearing-vs-scattered concept analysis sketched earlier) should weight the signal accordingly — clusters of similar sequence values across voters are still meaningful, but inferring "this concept's defining home is at OUTLINE position N" from sequence values alone would over-claim.
+- *For future cycles:* if clean chronological-encounter signal is wanted, the per-segment loop would need to shift from segment-driven (grep for this segment's terms) to tracker-driven (per iteration, holistically scan the entire tracker for ready-now items). Substantially more expensive cognitively. Worth weighing against the alternative — accept the noise and use sequence as a coarse-only signal, or invest in the cleaner-but-costlier loop.
+- The §12.3 periodic-checkpoint recommendation partially mitigates this — checkpoints capture *some* of the readiness-precedes-surfacing cases without going all the way to per-iteration tracker-holistic.
+
+**Status:** open; structural limitation of the current methodology design.
+
+**Priority hint:** LOW for the current cohort (signal is still useful at the coarse level); MEDIUM for the future-cards-default-to-encounter-order goal in `round-2-plan.md`, which depends on cleaner sequence data than this cohort produces.
+
 ---
 
 ## Coverage notes
