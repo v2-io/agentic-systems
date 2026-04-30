@@ -1,0 +1,272 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# bin/naming-master-tracker
+#
+# Extract a compact tracker table from an R2 voting card. One row per target,
+# columns: number, voted, term-or-concept, alts, notes.
+#
+# Purpose:
+#   The full voting card is large (~648KB; 9000+ lines for 629 targets) and
+#   makes batch-strategy work hard. This tracker is a single-table summary
+#   that lets a voter see the full landscape on one page, decide which
+#   targets to engage with, then dive into the card itself for the targets
+#   they pick.
+#
+# Output schema (single markdown table — header + content rows, no preamble):
+#   | number | voting-sequence | can-vote | voted | term-or-concept | alts | notes |
+#
+#   - number: 1-based position in the voting card (matches `## N.` heading)
+#   - voting-sequence: the voter writes an incrementing number each time
+#            they mark can-vote='true' or cast a vote, capturing roughly the
+#            order in which they encountered terms during their walk
+#            through the theory. Imperfect ordering is fine — the theory is
+#            acyclic but not strictly linear (especially for unnamed
+#            concepts), so fuzziness is expected. The aggregate signal lets
+#            future cards sort *concepts* by chronological-encounter order
+#            instead of random shuffle (candidate-within-target order stays
+#            randomized).
+#   - can-vote: 'true' when the voter has read enough of the theory to
+#            ostensibly cast a vote on this concept (regardless of whether
+#            they have actually navigated to the card and done so). Auto-set
+#            to 'true' whenever voted='true' (voting implies understanding).
+#            Otherwise blank — the voter marks it as their reading
+#            progresses. Liberating-stance note: voters are encouraged to
+#            change or remove earlier votes when later understanding shows
+#            the earlier read was off; the de-novo audit rhythm makes that
+#            kind of correction the right move, not an apology.
+#   - voted: 'true' if the card has any non-empty weight in this target's
+#            vote table; blank otherwise. Always reflects actual card state.
+#   - term-or-concept: heading text — existing name (italics/backticks
+#            stripped) or `[Concept] <description>` for cluster targets.
+#   - alts: alternative candidates joined with ', ', truncated at the
+#            --alts-limit char length with an ellipsis. Blank if the only
+#            candidate is the original (i.e., a pure-keep-or-rename target
+#            with no alternatives proposed).
+#   - notes: free column for the voter's strategy notes — including
+#            per-vote thinking when the rhythm produces it. Blank in fresh
+#            output; preserved across re-runs.
+#
+# Re-run behaviour:
+#   The tracker is a *working file* — the voter marks voting-sequence /
+#   can-vote / notes as they read. By default, re-running this script
+#   preserves all three voter-edited columns and only refreshes the voted
+#   column from current card state (and auto-upgrades can-vote to 'true'
+#   for any newly-voted row). Pass --regenerate to wipe the existing
+#   tracker and start fresh.
+#
+# Schema migration:
+#   Old-schema trackers are read transparently. Three schema versions are
+#   recognized by content-cell count: v1 (5 cells: number, voted, term,
+#   alts, notes), v2 (6 cells: + can-vote), v3 (7 cells: + voting-sequence
+#   in front). All migrate forward to v3 on next write; voter-edited cells
+#   are carried over wherever they exist in the old schema.
+#
+# Usage:
+#   ruby bin/naming-master-tracker --card=msc/naming/round-2-cards/gemini-r2.md
+#   ruby bin/naming-master-tracker --card=PATH --out=PATH
+#   ruby bin/naming-master-tracker --card=PATH --alts-limit=30
+#   ruby bin/naming-master-tracker --card=PATH --regenerate
+#
+#   Default output: msc/naming/round-2-trackers/<seed>-tracker.md, where
+#   <seed> is derived from the card filename. Pass --out=- for stdout.
+
+require 'optparse'
+require 'fileutils'
+
+options = { card: nil, out: nil, alts_limit: 20, regenerate: false }
+OptionParser.new do |opts|
+  opts.banner = 'Usage: bin/naming-master-tracker --card=<path> [options]'
+  opts.on('--card=PATH', 'Voting card to extract from. Required.') { |p| options[:card] = p }
+  opts.on('--out=PATH', 'Output path. Default: msc/naming/round-2-trackers/<seed>-tracker.md. Pass `-` for stdout.') { |p| options[:out] = p }
+  opts.on('--alts-limit=N', Integer, 'Truncation limit for alts column (default 20)') { |n| options[:alts_limit] = n }
+  opts.on('--regenerate', 'Wipe existing tracker (if any) instead of merging. Default is to preserve voter-edited can-vote and notes.') { options[:regenerate] = true }
+  opts.on('-h', '--help') { puts opts; exit }
+end.parse!
+
+abort 'Required: --card=<path>' unless options[:card]
+abort "Card not found: #{options[:card]}" unless File.exist?(options[:card])
+
+# Default output path mirrors the card filename: gemini-r2.md → gemini-r2-tracker.md
+if options[:out].nil?
+  seed = File.basename(options[:card], '.md')
+  options[:out] = "msc/naming/round-2-trackers/#{seed}-tracker.md"
+end
+
+content = File.read(options[:card])
+
+# Split into target sections by `## N.` headings. Each section retains its
+# heading text and the body lines up to (but not including) the next heading.
+sections = []
+current = nil
+content.each_line do |line|
+  if (m = line.match(/^## (\d+)\. (.+?)\s*$/))
+    sections << current if current
+    current = { number: m[1].to_i, heading: m[2].strip, body: [] }
+  elsif current
+    current[:body] << line
+  end
+end
+sections << current if current
+
+# Parse a heading into [display_term, is_concept, original_name_or_nil].
+# - `## N. *italic name*` → ['italic name', false, 'italic name']
+# - `## N. \`backtick name\`` → ['backtick name', false, 'backtick name']
+# - `## N. [Concept] *description*` → ['[Concept] description', true, nil]
+def parse_heading(heading)
+  if heading.start_with?('[Concept]')
+    desc = heading.sub(/^\[Concept\]\s*/, '').sub(/^\*(.+?)\*$/, '\1').strip
+    ["[Concept] #{desc}", true, nil]
+  else
+    name = heading.sub(/^\*(.+?)\*$/, '\1').sub(/^`(.+?)`$/, '\1').strip
+    [name, false, name]
+  end
+end
+
+# Read the vote table inside a section's body. Returns an array of rows with
+# {candidate, weight, voted}. The card schema is:
+#   | candidate | category | weight | top-pick? | notes |
+#   |---|---|:-:|:-:|---|
+#   | Candidate A |  |  |  |  |
+#   ...
+def parse_vote_table(body_lines)
+  rows = []
+  in_table = false
+  body_lines.each do |line|
+    next unless line.start_with?('|')
+    if line =~ /^\|\s*candidate\s*\|/i
+      in_table = true
+      next
+    end
+    next unless in_table
+    next if line =~ /^\|[\s:|-]+\|\s*$/ # separator row
+    cells = line.split('|').map(&:strip)
+    # cells[0] is empty (text before the leading |); cells[6] is empty (after
+    # the trailing |). The middle 5 are: candidate, category, weight,
+    # top-pick?, notes.
+    candidate = cells[1] || ''
+    weight = cells[3] || ''
+    rows << { candidate: candidate, weight: weight, voted: !weight.empty? }
+  end
+  rows
+end
+
+# Normalize a candidate or heading for matching: lowercase, strip backticks /
+# asterisks / whitespace. Used to identify which vote-table row corresponds
+# to the heading's "original" name so we can exclude it from alts.
+def norm(s)
+  s.downcase.gsub(/[`*\s]/, '')
+end
+
+# Truncate the alts string at `limit` chars with an ellipsis. If the cut
+# falls mid-candidate, trim back to the previous comma boundary so we don't
+# leave a half-name dangling.
+def truncate_alts(candidates, limit)
+  return '' if candidates.empty?
+  joined = candidates.join(', ')
+  return joined if joined.length <= limit
+  truncated = joined[0...(limit - 1)]
+  # If we cut mid-candidate, back up to the last complete one.
+  if (idx = truncated.rindex(', '))
+    truncated = truncated[0...idx]
+  end
+  "#{truncated}…"
+end
+
+# Read existing tracker (if any) into a hash keyed by number, capturing the
+# voter-editable cells (voting-sequence, can-vote, notes). The fresh card
+# always wins for voted, term-or-concept, and alts — those derive
+# mechanically from card state and shouldn't drift away from it. The
+# voter's voting-sequence / can-vote / notes are preserved verbatim; only
+# auto-upgrade can-vote to 'true' for rows that are newly voted in the
+# card. Robust to all three schema versions: v1 (5 cells), v2 (6 cells with
+# can-vote added), v3 (7 cells with voting-sequence added in front).
+existing = {}
+if !options[:regenerate] && options[:out] != '-' && options[:out] && File.exist?(options[:out])
+  File.read(options[:out]).each_line do |line|
+    next unless line.start_with?('|')
+    next if line =~ /^\|\s*number\s*\|/i
+    next if line =~ /^\|[\s:|-]+\|\s*$/
+    cells = line.split('|').map(&:strip)
+    content_cells = cells[1..-2] || []
+    next if content_cells.empty?
+    num = content_cells[0].to_i
+    next if num.zero?
+    case content_cells.length
+    when 7 # v3: number, voting-sequence, can-vote, voted, term, alts, notes
+      existing[num] = {
+        voting_sequence: content_cells[1],
+        can_vote: content_cells[2],
+        notes: content_cells[6]
+      }
+    when 6 # v2: number, can-vote, voted, term, alts, notes
+      existing[num] = {
+        voting_sequence: '',
+        can_vote: content_cells[1],
+        notes: content_cells[5]
+      }
+    when 5 # v1: number, voted, term, alts, notes
+      existing[num] = {
+        voting_sequence: '',
+        can_vote: '',
+        notes: content_cells[4]
+      }
+    end
+  end
+end
+
+# Build output rows.
+out = []
+out << '| number | voting-sequence | can-vote | voted | term-or-concept | alts | notes |'
+out << '|---|:-:|:-:|:-:|---|---|---|'
+
+sections.each do |sec|
+  term, _is_concept, original = parse_heading(sec[:heading])
+  rows = parse_vote_table(sec[:body])
+  rows = rows.reject { |r| r[:candidate] =~ /^\*\(write-in\)\*$/ }
+
+  voted = rows.any? { |r| r[:voted] } ? 'true' : ''
+
+  alt_candidates =
+    if original
+      orig_norm = norm(original)
+      rows.reject { |r| norm(r[:candidate]) == orig_norm }.map { |r| r[:candidate] }
+    else
+      rows.map { |r| r[:candidate] }
+    end
+
+  # Strip backticks and asterisks from candidate display. Keep math intact
+  # ($...$ passes through fine since neither char is in our strip set).
+  alt_candidates = alt_candidates.map { |c| c.gsub(/[`*]/, '').strip }.reject(&:empty?)
+
+  alts = truncate_alts(alt_candidates, options[:alts_limit])
+
+  # Voter-edited columns: preserved verbatim across re-runs, with the one
+  # auto-upgrade rule that voted='true' forces can-vote='true' (voting
+  # implies understanding).
+  prior = existing[sec[:number]] || {}
+  voting_sequence = prior[:voting_sequence].to_s.strip
+  can_vote =
+    if voted == 'true'
+      'true'
+    else
+      prior[:can_vote].to_s.strip
+    end
+  notes = prior[:notes].to_s
+
+  # Escape pipe chars in cell contents so we don't break the table.
+  term_esc = term.gsub('|', '\\|')
+  alts_esc = alts.gsub('|', '\\|')
+
+  out << "| #{sec[:number]} | #{voting_sequence} | #{can_vote} | #{voted} | #{term_esc} | #{alts_esc} | #{notes} |"
+end
+
+result = out.join("\n") + "\n"
+
+if options[:out] == '-'
+  $stdout.write(result)
+else
+  FileUtils.mkdir_p(File.dirname(options[:out]))
+  File.write(options[:out], result)
+  warn "Wrote #{sections.length} rows to #{options[:out]}"
+end
