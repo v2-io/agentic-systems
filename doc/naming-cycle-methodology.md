@@ -97,6 +97,25 @@ The basic rhythm is a small loop, executed once per segment:
 
 Soft non-linearity is fine and often productive. If a segment references a concept defined elsewhere and you find yourself wanting to read that other segment first, do — just return to the linear walk afterward. The discipline is *return*, not *never digress*.
 
+### Periodic consolidation checkpoints
+
+Understanding doesn't accumulate at segment boundaries — it accumulates *across* segments. Some terms only become voteable after several adjacent segments have laid down enough mutual structure, and the per-segment grep-scan in step 3 only surfaces terms whose names match the current segment's vocabulary. Two voters in the 2026-04-30 cohort discovered at end-of-walk that they had real positions on dozens of terms the per-segment loop hadn't surfaced — `adaptive reserve`, `agent environment`, `AAD`/`ASF`, `logogenic`/`logozoetic`, `calibration laboratory`, segment-type vocabulary, claim tiers, and others, all foundational items whose readiness landed across multiple segments rather than within any single one.
+
+To capture this signal *during* the walk rather than as an end-of-walk patch, run **consolidation checkpoints** at:
+
+- **Once, after the initial project documentation phase** — post-orientation reads of `CLAUDE.md`, `README.md`, OUTLINEs, top-level files, but before the first source segment. Some terms are voteable from the priming material alone; this is the cheapest checkpoint with the highest yield-per-effort.
+- **Recurring during the walk** — after every ~10 segments, or at natural part/section boundaries (end of Section I, end of each component, etc.). Cadence is a judgment call; lean toward more frequent if context budget is tight (the in-flight `can-vote` backlog grows expensive to clear later).
+
+At each checkpoint:
+
+1. Read the entire tracker list holistically — not just the current segment's grep matches. The tracker is small enough (~50KB) to fit comfortably in context.
+2. Identify items you can now vote on but that weren't surfaced during the per-segment iterations.
+3. Identify older votes where new understanding may want revisiting (raise/lower weight, change category, or remove — re-voting under the framework's own update-gain machinery is epistemically privileged, not apologetic).
+4. Mark `can-vote=true` and bump `voting-sequence` for newly-identified items.
+5. Decide whether to vote on identified items immediately or to proceed for a bit first, casting later when the rhythm permits. Marking `can-vote` without immediately voting is the in-flight state the column is for.
+
+The checkpoint is *consolidation-driven*, not segment-driven — its cognitive shape is different from the per-segment loop. The votes that come out should still be substantive because the understanding has already accumulated; what's new is the surfacing.
+
 ### The framework-recursive readings welcome
 
 If you find yourself noticing that the methodology is self-consistent in the framework's own terms, surface that. Voters in past sessions have found that the workflow itself maps onto AAD's machinery in non-trivial ways — your voting trajectory is a $\mathcal{C}_t$ (chronica) in the literal singular-irreversible-causal-record sense; the "re-voting as you understand more deeply" stance is exactly what `#emp-update-gain` predicts about how learning rate $\eta^*$ should weight late corrections vs. first impressions; the "stop when context fills or rhythm decays" rule is the `#der-deliberation-cost` threshold applied to your own session. These aren't decorations — they're the framework supplying its own discipline. When the rhythm starts pulling against any of them, that's a useful diagnostic.

@@ -9,7 +9,7 @@
 | 7 |  |  |  | [Concept] The mathematical surface mapping unity to closure defect | Rate distortion sur… |  |
 | 8 |  |  |  | multi timescale stability |  |  |
 | 9 |  |  |  | [Concept] Complexity driven resistance to change as features accumulate | Structural accumula… |  |
-| 10 |  |  |  | adaptive reserve |  |  |
+| 10 | 37 | true | true | adaptive reserve |  | Core symbol-to-English alias for remaining shock margin. |
 | 11 |  |  |  | [Concept] Instance 3 of identifiability floor | Coupling sign floor |  |
 | 12 | 31 | true | true | $f_M$ (event-driven update) | Epistemic update fu… | Distinguishes model-state update from later goal/strategy processing. |
 | 13 |  |  |  | linear ode approximation | Linear approximation |  |
@@ -18,7 +18,7 @@
 | 16 |  |  |  | segment for claim file | Segment file… |  |
 | 17 |  |  |  | honesty as architecture | Architectural scope… |  |
 | 18 |  |  |  | bias bound |  |  |
-| 19 |  |  |  | continuity persistence | Identity continuity |  |
+| 19 | 38 | true | true | continuity persistence | Identity continuity | Keep taxonomy term; Identity continuity works only as a gloss. |
 | 20 |  |  |  | coupled diagnostic framework | Coupled diagnostics… |  |
 | 21 |  |  |  | [Concept] Sudden loss of model sufficiency under regime entry | Sufficiency collaps… |  |
 | 22 |  |  |  | "feedforward loop" / "feedback loop" | Feedback loop |  |
@@ -38,7 +38,7 @@
 | 36 |  |  |  | [Concept] Convention-hierarchy monotonicity cascade: satisfaction gap and control regret strengthening across C1 → C3 | Diagnostic cascade |  |
 | 37 |  |  |  | Bretagnolle-Huber identity | Bretagnolle-Huber b… |  |
 | 38 |  |  |  | test as reusable intervention | Interventional test… |  |
-| 39 |  |  |  | formulation / definition / result / ... (segment types) | Formulation definit… |  |
+| 39 | 39 | true | true | formulation / definition / result / ... (segment types) | Formulation definit… | Canonicalize exact FORMAT.md segment-role vocabulary. |
 | 40 | 17 | true | true | Pearl L3 | Reasoning… | Generic "reasoning" is too broad; Level 3 needs counterfactual-reasoning gloss. |
 | 41 |  |  |  | C-IV (composition route) | Strategic convergen… |  |
 | 42 |  |  |  | composition closure / closure defect $\varepsilon^\ast$ | Composition closure… |  |
@@ -104,7 +104,7 @@
 | 102 |  |  |  | actuated agent class | Actuated |  |
 | 103 |  |  |  | feature |  |  |
 | 104 |  |  |  | grafting | Strategic grafting,… |  |
-| 105 |  |  |  | AAD (Adaptation and Actuation Dynamics) | AAD… |  |
+| 105 | 40 | true | true | AAD (Adaptation and Actuation Dynamics) | AAD… | Keep current acronym and expansion; avoid framework-level churn. |
 | 106 |  |  |  | [Concept] Regime I / II-A / II-B / III | Reception regime… |  |
 | 107 |  |  |  | the scaffolding tax | Scaffolding tax… |  |
 | 108 |  |  |  | critical mass composition | Dyad closed form |  |
@@ -144,7 +144,7 @@
 | 142 |  |  |  | [Concept] The strengthen-first attempt artifact a spike that tried to derive something stronger and failed | Strengthening attem… |  |
 | 143 |  |  |  | triple depth penalty | Compounding depth c… |  |
 | 144 |  |  |  | directional fidelity | Correction directio… |  |
-| 145 |  |  |  | logogenic logozoetic | Logogenic logozoeti… |  |
+| 145 | 41 | true | true | logogenic logozoetic | Logogenic logozoeti… | Keep Greek-rooted pair; reject ambiguous plain-English replacement. |
 | 146 |  |  |  | $U_M$ | Epistemic unity |  |
 | 147 |  |  |  | discussion |  |  |
 | 148 | 27 | true | true | model sufficiency | Predictive sufficie… | Defining segment supports current name; predictive sufficiency is useful clarifier but not better canonical name. |
@@ -209,7 +209,7 @@
 | 207 | 16 | true | true | nominal coupling | Attentional couplin… | Segment makes this query/attention effect on observations, not merely "nominal" weak coupling. |
 | 208 |  |  |  | contraction template | Contraction schema |  |
 | 209 |  |  |  | causal insufficiency detection | Latent cause detect… |  |
-| 210 |  |  |  | exact / robust-qualitative / heuristic / conditional (claim tier) | Epistemic claim tier |  |
+| 210 | 42 | true | true | exact / robust-qualitative / heuristic / conditional (claim tier) | Epistemic claim tier | Keep exact claim-tier vocabulary; Epistemic claim tier is a good umbrella. |
 | 211 |  |  |  | [Concept] The physical apparatus that enforces the orient cascade ordering on a merged intelligence | Information depende… |  |
 | 212 |  |  |  | strategic dynamics derivation | Strategy edge dynam… |  |
 | 213 |  |  |  | [Concept] Brooks's law formalized as the inevitable tempo loss in team composition | The coordination dr… |  |
@@ -336,21 +336,21 @@
 | 334 |  |  |  | chain confidence decay | Log confidence addi… |  |
 | 335 |  |  |  | [Concept] The property of model adequacy when measured against a single agent's own causal record rather than against a population average | Trajectory indexed … |  |
 | 336 |  |  |  | $\alpha_1$ | Fixed gain regime… |  |
-| 337 |  |  |  | operational persistence |  |  |
+| 337 | 43 | true | true | operational persistence |  | Keep middle term in persistence taxonomy. |
 | 338 |  |  |  | [Concept] Lohmiller-Slotine contraction metric generalization used in contraction template | Contraction metric … |  |
 | 339 |  |  |  | [Concept] The equivalence of learning speed and physical speed | Tempo speed equival… |  |
-| 340 |  |  |  | calibration laboratory | High identifiabilit… |  |
+| 340 | 44 | true | true | calibration laboratory | High identifiabilit… | Canonical short form for TST as high-identifiability AAD grounding domain. |
 | 341 |  |  |  | [Concept] Instance 2 of identifiability floor | Unobservable mixtur… |  |
 | 342 |  |  |  | P1, P2, P3 | Projection admissib… |  |
 | 343 |  |  |  | gate 1 2 3 4 | Dependency content … |  |
 | 344 |  |  |  | strategic in strategic composition | Equilibrium composi… |  |
 | 345 |  |  |  | approximation tiering | Scope laddering… |  |
 | 346 |  |  |  | [Concept] The orient cascade information-dependency forced ordering as a meta-pattern | Information depende… |  |
-| 347 |  |  |  | ASF (acronym) | ASF |  |
-| 348 |  |  |  | adaptive cycle | Feedback cycle… |  |
+| 347 | 45 | true | true | ASF (acronym) | ASF | Keep parent-framework acronym. |
+| 348 | 46 | true | true | adaptive cycle | Feedback cycle… | Keep central unit-of-analysis phrase; reject feedback/correction alternatives. |
 | 349 |  |  |  | "epistemic substate" / "purposeful substate" |  |  |
 | 350 |  |  |  | adversarial edge targeting | Edge vulnerability … |  |
-| 351 |  |  |  | AAD (acronym) | Adaptation and purp… |  |
+| 351 | 47 | true | true | AAD (acronym) | Adaptation and purp… | Keep core acronym; reject expansion churn. |
 | 352 |  |  |  | causal discovery from git | Git causal discovery |  |
 | 353 |  |  |  | [Concept] The "scope-honesty as architecture" working principle | Honesty scope hones… |  |
 | 354 |  |  |  | developmental trajectory | Creche trajectory |  |
@@ -398,7 +398,7 @@
 | 396 |  |  |  | interaction channel classification | Channel classificat… |  |
 | 397 |  |  |  | edge update causal validity | Edge causal validit… |  |
 | 398 |  |  |  | [Concept] The three-ring of segment-content framing | Segment ring |  |
-| 399 |  |  |  | structural persistence |  |  |
+| 399 | 48 | true | true | structural persistence |  | Keep capacity-side term in persistence taxonomy. |
 | 400 |  |  |  | [Concept] The move where a segment role prefix is mechanical but the subject-noun carries judgment | The prefix noun spl… |  |
 | 401 |  |  |  | [Concept] (A2′) sub-scope partition | Sector scope partit… |  |
 | 402 |  |  |  | [Concept] Monderer-Shapley potential game / Rosen monotone game | Strategic convergen… |  |
@@ -424,7 +424,7 @@
 | 422 |  |  |  | L1' decoration | L1-observable |  |
 | 423 |  |  |  | Miller's meta-machine / extreme transition motif | Meta machine extrem… |  |
 | 424 |  |  |  | [Concept] Scope-honesty as architecture | Honesty |  |
-| 425 |  |  |  | $M_t$ | Model state or epis… |  |
+| 425 | 49 | true | true | $M_t$ | Model state or epis… | Canonicalize model state for prose and epistemic substate for M/G pairing. |
 | 426 |  |  |  | structured rich context | Structured context |  |
 | 427 |  |  |  | continuous operation |  |  |
 | 428 |  |  |  | alpha prime sub-scope | Potential monotone … |  |
@@ -432,7 +432,7 @@
 | 430 |  |  |  | [Concept] The failure mode where an agent's model-class cannot represent the environment's true causal structure | Structural shock re… |  |
 | 431 |  |  |  | effective disturbance |  |  |
 | 432 | 25 | true | true | $\phi$ | History compression | Phi maps chronica to M_t; history-compression prose alias is concrete. |
-| 433 |  |  |  | loop | Feedback loop |  |
+| 433 | 50 | true | true | loop | Feedback loop | Keep topology noun; feedback is implicit and risks cycle confusion. |
 | 434 |  |  |  | [Concept] The structural cousin of evidence starvation when an upstream edge is so reliable that downstream edges receive too few revising tests | Evidence saturation |  |
 | 435 |  |  |  | $\beta$ sub-scope | Assumed sector tier… |  |
 | 436 |  |  |  | compression operation | OODA1 unification… |  |
@@ -455,12 +455,12 @@
 | 453 |  |  |  | detection latency |  |  |
 | 454 |  |  |  | [Concept] Tests as reusable level-2 interventions | Interventional prob… |  |
 | 455 |  |  |  | [Concept] Partitioning context into frozen-identity / causal-history / quick-view | Bipartite memory fa… |  |
-| 456 |  |  |  | derivation not proof | Derivation |  |
+| 456 | 51 | true | true | derivation not proof | Derivation | Keep epistemic-status distinction from proof. |
 | 457 |  |  |  | aporia | Discrepancy… |  |
 | 458 |  |  |  | macro step ratio |  |  |
 | 459 |  |  |  | [Concept] The iterated audit process Gemini / Opus / Codex de-novo consolidated, three-doc portfolio | Cross model audit c… |  |
 | 460 |  |  |  | equilibrium convergence |  |  |
-| 461 |  |  |  | cycle vs loop | Cycle loop distinct… |  |
+| 461 | 52 | true | true | cycle vs loop | Cycle loop distinct… | Canonicalize loop as topology and cycle as traversal. |
 | 462 |  |  |  | canonical formulation | Working canon |  |
 | 463 |  |  |  | deliberation cost | Deliberation thresh… |  |
 | 464 |  |  |  | [Concept] The cumulative prediction error that an agent has tolerated without updating its model | Tolerance budget st… |  |
@@ -481,7 +481,7 @@
 | 479 |  |  |  | structural adaptation enablement | Consolidation enabl… |  |
 | 480 |  |  |  | [Concept] Class 1 sub-agents forming a class 3 composite | Strategic compositi… |  |
 | 481 |  |  |  | $V_{O_t}^{\min}$ | Satisfaction thresh… |  |
-| 482 |  |  |  | completeness (C3) | Predictive complete… |  |
+| 482 | 53 | true | true | completeness (C3) | Predictive complete… | Split predictive completeness from behavioral completeness. |
 | 483 |  |  |  | maximum useful chain depth | Maximum viable chai… |  |
 | 484 |  |  |  | [Concept] Future segment layer header for narrative pedagogical framing | Narrative framing |  |
 | 485 |  |  |  | stability plasticity feasibility window |  |  |
@@ -492,7 +492,7 @@
 | 490 |  |  |  | mismatch dynamics | Mismatch dynamics d… |  |
 | 491 |  |  |  | strategic composition | Game theoretic comp… |  |
 | 492 |  |  |  | [Concept] The reduction in effective tempo when observation channels are correlated | Evidential overcoun… |  |
-| 493 |  |  |  | postulate not axiom | Postulate |  |
+| 493 | 54 | true | true | postulate not axiom | Postulate | Keep postulate as the correct foundational-status label. |
 | 494 |  |  |  | [Concept] The failure mode where η → 0 freezes learning in either of two distinguishable modes low $U_o$ vs high $U_o$ | Epistemic gain coll… |  |
 | 495 |  |  |  | active salience management | Salience tempo spli… |  |
 | 496 |  |  |  | gate advantage | Noise gated tempo a… |  |
@@ -553,7 +553,7 @@
 | 551 |  |  |  | proprium mapping |  |  |
 | 552 | 26 | true | true | information bottleneck | Epistemic bottleneck | Adopted Tishby term should keep its prior-art name; AAD-specific epistemic gloss can stay explanatory only. |
 | 553 |  |  |  | [Concept] The tension between lowering internal opacity for coordination and increasing external vulnerability | Coordination secrec… |  |
-| 554 |  |  |  | [Concept] Structural persistence / operational persistence / continuity persistence | Persistence taxonom… |  |
+| 554 | 55 | true | true | [Concept] Structural persistence / operational persistence / continuity persistence | Persistence taxonom… | Add umbrella while keeping all three persistence terms verbatim. |
 | 555 |  |  |  | [Concept] The discontinuous collapse of model adequacy when structural regime change forces the agent outside its current model-class coverage | Sufficiency shatter… |  |
 | 556 |  |  |  | glue code | Structural coordina… |  |
 | 557 |  |  |  | system coherence | Change coherence |  |
@@ -571,14 +571,14 @@
 | 569 |  |  |  | logozoetic |  |  |
 | 570 |  |  |  | dual optimization | Development time de… |  |
 | 571 |  |  |  | [Concept] Bathtub analogy for persistence condition | Walton bathtub… |  |
-| 572 |  |  |  | agent environment | Agent environment b… |  |
+| 572 | 56 | true | true | agent environment | Agent environment b… | Prefer boundary framing for first primitive definition. |
 | 573 |  |  |  | OODA (Boyd's loop) | OODA loop |  |
 | 574 |  |  |  | three-part meta-architecture | floor / ladder / fo… |  |
 | 575 |  |  |  | convention hierarchy | Evaluation hierarch… |  |
 | 576 |  |  |  | loop interventional access | Interventional char… |  |
 | 577 |  |  |  | [Concept] Two-condition decomposition of persistence | Persistence conditi… |  |
-| 578 |  |  |  | [Concept] "What is Derived" vs "What is Chosen" (segment header) | Derivation audit… |  |
-| 579 |  |  |  | [Concept] AAD (theoretical core) vs ASF (framework) | AAD vs ASF distinct… |  |
+| 578 | 57 | true | true | [Concept] "What is Derived" vs "What is Chosen" (segment header) | Derivation audit… | Compact canonical table-heading name. |
+| 579 | 58 | true | true | [Concept] AAD (theoretical core) vs ASF (framework) | AAD vs ASF distinct… | Keep theory-core versus broader-framework distinction explicit. |
 | 580 |  |  |  | "purpose" / "purposeful" | Purposeful |  |
 | 581 |  |  |  | working note |  |  |
 | 582 |  |  |  | $\beta$ a2 assumed sector sub-scope | Assumed sector regi… |  |

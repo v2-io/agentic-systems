@@ -32,7 +32,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Derivation |  |  |  |  |
+| Derivation | keep | +2 | yes | This is a critical epistemic distinction for AAD. These are physical/logical consequences, not formal axiomatic proofs. |
 | *(write-in)* |  |  |  |  |
 
 ## 2. *Pearl-blanket conservative form*
@@ -83,7 +83,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Shared intent payload |  |  |  |  |
+| Shared intent payload | name-unnamed | +2 | yes | This is the specific noun for the communicated, compressed representation of $G_t$ in multi-agent settings. |
 | *(write-in)* |  |  |  |  |
 
 ## 5. [Concept] *Instance 1 / 2 / 3 of identifiability floor*
@@ -94,7 +94,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Identifiability floor instance |  |  |  |  |
+| Identifiability floor instance | keep | +2 | yes | It is necessary to preserve the numbering of the specific no-go boundaries to allow precise cross-referencing in the derivations. |
 | *(write-in)* |  |  |  |  |
 
 ## 6. [Concept] *Code quality as observation infrastructure*
@@ -106,7 +106,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Observation infrastructure |  |  |  |  |
+| Observation infrastructure | keep | +2 | yes | This is the durable concept—the investment class. 'Code quality' is just the TST instance of this general AAD requirement for maintaining update gain. |
 | code quality as observation infrastructure |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -145,7 +145,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Agentic scaffold |  |  |  |  |
+| Agentic scaffold | rename | +2 | yes | 'Glue code' is a TST-side description of the implementation. 'Agentic scaffold' captures the formal role of this code in enforcing the AAD cycle on a non-native agent. |
 | Structural coordination overhead |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -157,7 +157,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Dimensional consistency repair |  |  |  |  |
+| Dimensional consistency repair | name-unnamed | +2 | yes | This names a generalizable methodological move: using dimensional consistency to force the correct formulation at the macro-level. |
 | *(write-in)* |  |  |  |  |
 
 ## 11. [Concept] *The organizational pathology where confidence decouples from competence*
@@ -169,7 +169,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Epistemic decoupling |  |  |  |  |
+| Epistemic decoupling | name-unnamed | +2 | yes | This perfectly names the organizational failure mode where learning stops (gain $\eta \to 0$) even while the environment continues to drift, causing internal models to detach from reality. |
 | Epistemic decoupling pathology |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -203,7 +203,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Stochastic disturbance |  |  |  |  |
+| Stochastic disturbance | keep | +2 | yes | Accurate and established. 'Disturbance' grounds it in control theory, while 'stochastic' differentiates it from 'drift' (Model D). |
 | *(write-in)* |  |  |  |  |
 
 ## 15. *evidence starvation*
@@ -255,7 +255,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Triple depth penalty |  |  |  |  |
+| Triple depth penalty | name-unnamed | +2 | yes | This name unifies three distinct mathematical results (confidence decay, evidence starvation, cognitive cost) into a single usable organizational principle. |
 | Tripartite chain attenuation |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -278,7 +278,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| equilibrium convergence |  |  |  |  |
+| equilibrium convergence | keep | +2 | yes | Accurate and established for the strategic-composition (C-iv) route. It correctly distinguishes the game-theoretic fixed-point search from the Lyapunov-descent correction. |
 | *(write-in)* |  |  |  |  |
 
 ## 20. [Concept] *The mathematical operation by which agents convert observed mismatch into structural revision*
@@ -289,7 +289,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Structural cascade |  |  |  |  |
+| Structural cascade | name-unnamed | +2 | yes | This name allows for a formal procedural link between '#result-structural-adaptation-necessity' and '#form-structural-change-as-parametric-limit'. It describes the discrete sequence of events (detect -> identify -> graft -> validate) that constitutes structural change. |
 | *(write-in)* |  |  |  |  |
 
 ## 21. *$\Delta T_{i,\text{cost}}$*
@@ -412,7 +412,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Disturbance rate |  |  |  |  |
+| Disturbance rate | keep | +2 | yes | The name 'disturbance rate' is the most accurate engineering handle for $\rho$, grounding the framework in standard control-theory terminology while avoiding the vagueness of 'environmental change rate'. |
 | $\rho$ |  |  |  |  |
 | Disturbance rate or environmental change rate |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -495,7 +495,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Creche graduation |  |  |  |  |
 | Creche graduation threshold |  |  |  |  |
-| Creche boundary |  |  |  |  |
+| Creche boundary | rename | +2 | yes | Dropping the 'the' makes for a better formal slug. 'Creche boundary' correctly names the threshold where the high adaptive reserve is no longer guaranteed. |
 | Creche graduation condition |  |  |  |  |
 | Creche exit condition |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -512,7 +512,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| feature |  |  |  |  |
+| feature | keep | +2 | yes | The established TST term for a unit of coherent change. It accurately captures both the software and perceived-functionality aspects. |
 | *(write-in)* |  |  |  |  |
 
 ## 36. *atomic changeset*
@@ -527,7 +527,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| atomic changeset |  |  |  |  |
+| atomic changeset | keep | +2 | yes | Servicable and honest software engineering handle. 'Atomic' correctly implies the logical unity of the implementation. |
 | *(write-in)* |  |  |  |  |
 
 ## 37. [Concept] *Complexity driven resistance to change as features accumulate*
@@ -539,7 +539,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Structural accumulation drag |  |  |  |  |
+| Structural accumulation drag | name-unnamed | +2 | yes | This perfectly names the intuitive 'entropy' of a codebase. It describes the physical experience of a developer (drag) caused by the accumulation of structure. |
 | Structural rigidity accumulation |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -577,7 +577,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Interventional probe library |  |  |  |  |
-| Interventional test |  |  |  |  |
+| Interventional test | keep | +2 | yes | This name pairs Pearl's interventional $do(a)$ vocabulary with standard software testing. It elevates the test from a passive check to an active causal experiment. |
 | Repeatable intervention |  |  |  |  |
 | Causal query infrastructure |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -607,7 +607,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| multi agent |  |  |  |  |
+| multi agent | keep | +2 | yes | Minimal and precise. It defines the scope of Section III without needing a redundant compound phrase. |
 | *(write-in)* |  |  |  |  |
 
 ## 43. *Markov blanket as ontology*
@@ -635,7 +635,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Survival information floor |  |  |  |  |
+| Survival information floor | name-unnamed | +2 | yes | This name correctly generalizes the result from '#deriv-persistence-cost' (C >= n*alpha/2) into a physical requirement for staying inside the sector-condition basin. |
 | *(write-in)* |  |  |  |  |
 
 ## 45. *context turnover*
@@ -665,7 +665,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Composite agent condition |  |  |  |  |
+| Composite agent condition | rename | +2 | yes | The core decision is whether a set of sub-agents formally constitutes a 'composite agent'. 'Composition scope condition' is too passive. |
 | Teleological alignment condition |  |  |  |  |
 | composition scope condition |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -726,7 +726,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Structural operational continuity persistence |  |  |  |  |
-| Persistence taxonomy |  |  |  |  |
+| Persistence taxonomy | rename | +2 | yes | This provides the necessary umbrella for the three distinct failure modes. It correctly organizes the 'three deaths' into a coherent theoretical structure. |
 | *(write-in)* |  |  |  |  |
 
 ## 52. *Regime III*
@@ -737,7 +737,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Ambient noise regime |  |  |  |  |
+| Ambient noise regime | name-unnamed | +2 | yes | This name correctly characterizes the below-floor events from the recipient's perspective. It provides a more descriptive handle than the numerical 'Regime III'. |
 | *(write-in)* |  |  |  |  |
 
 ## 53. *team persistence*
@@ -763,7 +763,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Contraction metric generalization |  |  |  |  |
+| Contraction metric generalization | name-unnamed | +2 | yes | This name correctly identifies the mathematical move used in '#form-composition-closure'. It grounds the result in contraction-analysis literature. |
 | *(write-in)* |  |  |  |  |
 
 ## 55. [Concept] *The dual that pairs with persistence envelope on the strategic side*
@@ -888,7 +888,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Boyd's exponent |  |  |  |  |
+| Boyd's exponent | name-unnamed | +2 | yes | This name honors the lineage of OODA loop theory while formalizing the exact superlinear payoff of operating at higher tempo in adversarial couplings. |
 | Superlinear tempo advantage |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -914,7 +914,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Mismatch accumulation |  |  |  |  |
+| Mismatch accumulation | name-unnamed | +2 | yes | This name correctly identifies the integral of prediction error over time, which is the physical quantity that eventually triggers structural adaptation. |
 | Tolerance budget standing mismatch reservoir |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -972,7 +972,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | $\rho_\Sigma$ |  |  |  |  |
-| Strategic disturbance rate |  |  |  |  |
+| Strategic disturbance rate | add-alias | +2 | yes | This is the necessary English alias for $\rho_\Sigma$, perfectly paralleling 'disturbance rate' ($\rho$) on the model side. It distinguishes the environment's drift from the agent's theory-of-drift. |
 | Strategy drift rate |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -1020,7 +1020,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Four discipline synthesis |  |  |  |  |
 | AAD epistemic triptych |  |  |  |  |
 | Bounded correction architecture |  |  |  |  |
-| epistemic architecture |  |  |  |  |
+| epistemic architecture | keep | +2 | yes | This is the primary positioning term for the framework. It correctly identifies AAD as a structural design for what an agent can know and act upon. |
 | *(write-in)* |  |  |  |  |
 
 ## 72. *$U_o$*
@@ -1031,7 +1031,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Teleological coherence |  |  |  |  |
+| Teleological coherence | add-alias | +2 | yes | This is the necessary English alias for $U_o$. It perfectly names the property of the agent's actions aligning with its objective, while the symbol $U_o$ remains the mathematical coordinate. |
 | *(write-in)* |  |  |  |  |
 
 ## 73. *turnover multiplier*
@@ -1070,7 +1070,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Epistemic unity |  |  |  |  |
+| Epistemic unity | add-alias | +2 | yes | Already established in the documentation as the prose name for $U_M$. It correctly identifies the property of the agent's internal model consistency. |
 | *(write-in)* |  |  |  |  |
 
 ## 76. *$\delta_{\text{strategic}}$ strategic-calibration residual*
@@ -1138,7 +1138,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Modular agent |  |  |  |  |
-| *(write-in)* |  |  |  |  |
+| Class 1 | write-in | +2 | yes | The numbered taxonomy (Class 1/2/3) is neutral and structurally clean. Replacing it with descriptive adjectives breaks the mnemonic set. |
 
 ## 81. *variational sector condition*
 
@@ -1152,7 +1152,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| variational sector condition |  |  |  |  |
+| variational sector condition | keep | +2 | yes | Accurate and descriptive name for the extension of the sector condition to the variational approximation regime. |
 | *(write-in)* |  |  |  |  |
 
 ## 82. *proprium mapping*
@@ -1230,7 +1230,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Tiered separability |  |  |  |  |
-| Separability ladder |  |  |  |  |
+| Separability ladder | rename | +2 | yes | The segment itself refers to 'six ladders' in the prose, and the structure (Separable Core / Structured Repair / General Open) is a progression of increasing difficulty. 'Ladder' is the geometry of the content; 'pattern' is a generic filler. It also pairs perfectly with 'identifiability floor' ('the ladder above the floor'). |
 | Staircase |  |  |  |  |
 | separability pattern |  |  |  |  |
 | Separability staircase |  |  |  |  |
@@ -1271,7 +1271,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Magnitude shock regime |  |  |  |  |
+| Magnitude shock regime | name-unnamed | +2 | yes | This name correctly identifies the physical cause of destabilization in this regime: a bounded disturbance that exceeds the agent's current adaptive reserve. |
 | *(write-in)* |  |  |  |  |
 
 ## 89. *communication gain*
@@ -1289,7 +1289,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Trust weighted communication gain |  |  |  |  |
-| communication gain |  |  |  |  |
+| communication gain | keep | +2 | yes | Maintains the formal parallel with 'update gain' ($n^*$). 'Trust' is a component of the gain formula, but 'communication gain' is the correct whole-quantity name for the inter-agent channel. |
 | Trust gain |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -1303,7 +1303,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | contraction hierarchy |  |  |  |  |
-| Contraction tier |  |  |  |  |
+| Contraction tier | keep | +2 | yes | Consistent with the Tier 1/2/3 numbering used in the derivations. It correctly names the structural property (operator regularity) being partitioned. |
 | *(write-in)* |  |  |  |  |
 
 ## 91. *lindy baseline*
@@ -1316,7 +1316,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | lindy baseline |  |  |  |  |
-| Structural persistence baseline |  |  |  |  |
+| Structural persistence baseline | add-alias | +2 | yes | This is the necessary formal English alias for 'lindy'. It connects the concept to the framework's 'persistence' vocabulary and correctly identifies what is being baselined. |
 | *(write-in)* |  |  |  |  |
 
 ## 92. *principled decision integration*
@@ -1361,7 +1361,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Interventional probe library |  |  |  |  |
+| Interventional probe library | name-unnamed | +2 | yes | This name captures the TST move of treating tests as reusable level-2 causal manipulations. It perfectly bridges the gap between software engineering (library) and causal theory (probe). |
 | *(write-in)* |  |  |  |  |
 
 ## 95. *default signal function*
@@ -1398,7 +1398,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Intent |  |  |  |  |
+| Intent | keep | +2 | yes | 'Intent' is the correct term for the agent's internal commitment-flavored representation of $G_t$. It correctly distinguishes the operational payload from the abstract objective ($O_t$). |
 | *(write-in)* |  |  |  |  |
 
 ## 98. *$\mathcal{T}$ adaptive tempo*
@@ -1412,7 +1412,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | $\mathcal{T}$ adaptive tempo |  |  |  |  |
-| Adaptive tempo $\mathcal{T}$ |  |  |  |  |
+| Adaptive tempo $\mathcal{T}$ | add-alias | +2 | yes | This is the formal prose notation for the $\mathcal{T}$ parameter. It correctly identifies the quantity and its symbol, maintaining consistency across mathematical and descriptive contexts. |
 | Tempo |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -1424,7 +1424,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Reasoning |  |  |  |  |
+| Reasoning | add-alias | +2 | yes | This is the necessary agent-side gloss for Pearl's L3 (counterfactual). It provides an intuitive English handle for the highest level of causal capability. |
 | *(write-in)* |  |  |  |  |
 
 ## 100. *recursive update derivation*
@@ -1454,7 +1454,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Teleological unity |  |  |  |  |
 | Compressed purpose |  |  |  |  |
-| shared intent |  |  |  |  |
+| shared intent | keep | +2 | yes | This name correctly identifies the *operational* object transmitted between agents—the IB-compressed payload of $G_t$. It is distinct from 'teleological unity' ($U_O$), which is a measured alignment property. |
 | *(write-in)* |  |  |  |  |
 
 ## 102. [Concept] *Applying a slow timescale control mechanism to a fast timescale transient variable*
@@ -1466,7 +1466,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Timescale mismatch |  |  |  |  |
+| Timescale mismatch | name-unnamed | +2 | yes | This perfectly names the dynamical systems error described in '#sketch-multi-timescale-stability'. It formalizes the instability that occurs when control loops are not properly nested. |
 | Timescale violation |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -1867,7 +1867,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| AAD |  |  |  |  |
+| AAD | keep | +2 | yes | The acronym is well-established and distinctive. It correctly labels the mathematical core. |
 | Adaptation and agency dynamics AAD |  |  |  |  |
 | Adaptation and purpose dynamics apd |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -1961,7 +1961,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Agency spectrum |  |  |  |  |
 | Agent quadrant |  |  |  |  |
-| agent spectrum |  |  |  |  |
+| agent spectrum | keep | +2 | yes | Accurate and established. 'Spectrum' correctly captures the continuous nature of the richness dimensions, avoiding the false discreteness of 'quadrant'. |
 | *(write-in)* |  |  |  |  |
 
 ## 137. *$\alpha_1$ $\alpha_2$ $\beta$ partition*
@@ -3080,7 +3080,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| causal structure |  |  |  |  |
+| causal structure | keep | +2 | yes | Load-bearing foundational term. It grounds the framework in the physical arrow of time rather than pure statistical correlation. |
 | *(write-in)* |  |  |  |  |
 
 ## 214. *$U_\text{obs}$ (perceptual unity)*
@@ -3102,7 +3102,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Model-class capacity |  |  |  |  |
+| Model-class capacity | keep | +2 | yes | 'Capacity' is the correct information-theoretic term for an upper bound ($\mathcal{F}$). It distinguishes the hard architectural limit from the current 'fitness' or 'sufficiency' of an instance. |
 | *(write-in)* |  |  |  |  |
 
 ## 216. *alignment uncertainty*
@@ -3152,7 +3152,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Chronica or interaction history |  |  |  |  |
+| Chronica or interaction history | keep | +2 | yes | 'Chronica' is the precise, register-faithful name for the sequence $\mathcal{C}_t$. 'Interaction history' is the necessary engineering translation. Keeping both allows for context-appropriate prose while maintaining technical precision. |
 | *(write-in)* |  |  |  |  |
 
 ## 220. *developer agent*
@@ -3320,7 +3320,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Capacity radius |  |  |  |  |
+| Capacity radius | keep | +2 | yes | This geometrically precise handle perfectly names the $R$ parameter. It distinguishes the *region* of valid correction from the *rate* ($\alpha$). |
 | *(write-in)* |  |  |  |  |
 
 ## 232. *interiority default*
@@ -3467,7 +3467,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Actuated |  |  |  |  |
+| Actuated | keep | +2 | yes | The LEXICON §"Actuated Agent" paragraph justifies the word explicitly ("precise and mechanical, avoiding consciousness connotations"). |
 | *(write-in)* |  |  |  |  |
 
 ## 241. [Concept] *High-observability node with zero causal link to objective*
@@ -3625,7 +3625,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Model-class capacity |  |  |  |  |
+| Model-class capacity | keep | +2 | yes | Consistent with my vote for target 215. 'Capacity' is the geometrically and information-theoretically correct term for the $R$ parameter. |
 | *(write-in)* |  |  |  |  |
 
 ## 253. *fisher whitened update*
@@ -3853,7 +3853,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| strategy persistence |  |  |  |  |
+| strategy persistence | keep | +2 | yes | Accurate and established parallel to single-agent 'persistence'. It correctly identifies the application of sector conditions to the $\Sigma_t$ dimension. |
 | *(write-in)* |  |  |  |  |
 
 ## 271. *P1, P2, P3*
@@ -4378,7 +4378,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| ASF |  |  |  |  |
+| ASF | keep | +2 | yes | Though I voted to name the parent container 'Agentic system', the acronym ASF is widely used and provides a clean, 3-letter handle for the framework as a whole. |
 | *(write-in)* |  |  |  |  |
 
 ## 308. *comprehension time*
@@ -4696,7 +4696,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Correction rate or decay rate |  |  |  |  |
-| Correction rate constant |  |  |  |  |
+| Correction rate constant | add-alias | +2 | yes | 'Correction rate constant' is the perfect English alias for $\alpha$. It connects to the $t^{-1}$ units and the $1/\alpha$ timescale intuition, and it avoids the biological baggage of 'decay'. |
 | *(write-in)* |  |  |  |  |
 
 ## 330. *catastrophic forgetting regime*
@@ -4787,7 +4787,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Working model |  |  |  |  |
+| Working model | keep | +2 | yes | "$M_t$" is the mathematical object; "Working model" is the precise, non-grandiose handle for what the agent currently uses to predict the world. |
 | Predictive state |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -4804,7 +4804,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| control regret |  |  |  |  |
+| control regret | keep | +2 | yes | Part of the matched diagnostic pair (satisfaction gap / control regret). It correctly imports the RL intuition (regret = optimum - actual) while narrowing it to the control/attainability layer. |
 | Strategy opportunity cost |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -4841,7 +4841,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Value functional |  |  |  |  |
 | Policy-conditioned value |  |  |  |  |
-| value object |  |  |  |  |
+| value object | keep | +2 | yes | Though 'value object' has software baggage, it is the standard term in the project for the decision-making tool produced by the evaluation functional under a continuation convention. Compact and evocative. |
 | Decision value |  |  |  |  |
 | Trajectory value |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -5417,7 +5417,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Agent environment boundary |  |  |  |  |
-| agent environment |  |  |  |  |
+| agent environment | keep | +2 | yes | Foundationally established. The segment defines the coupling, and 'agent environment' is the canonical name for the two-part system. |
 | *(write-in)* |  |  |  |  |
 
 ## 379. [Concept] *The fourth diagnostic in the satisfaction gap × control regret space when end conditions are met but the objective remains unsatisfied*
@@ -5753,7 +5753,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| causal information yield |  |  |  |  |
+| causal information yield | keep | +2 | yes | The three-word noun phrase is exact and reusable across exploration, querying, and trust modules. The full form should be canonical in prose, with 'CIY' as a shorthand only. |
 | Interventional yield |  |  |  |  |
 | CIY |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -5850,7 +5850,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| aporia ἀπορία |  |  |  |  |
+| aporia ἀπορία | keep | +2 | yes | Productive perplexity is a core pillar of the agentic cycle. Maintaining the Greek term preserves the philosophical register. |
 | *(write-in)* |  |  |  |  |
 
 ## 410. *approximation tiering*
@@ -5957,7 +5957,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Model state or epistemic substate |  |  |  |  |
+| Model state or epistemic substate | keep | +2 | yes | Keeping both handles allows for flexibility. 'Model state' is good for casual engineering prose; 'epistemic substate' is the precise companion for 'purposeful substate' in formal segments. |
 | *(write-in)* |  |  |  |  |
 
 ## 417. *coupled diagnostic framework*
@@ -6198,7 +6198,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Coupled |  |  |  |  |
 | Integrated |  |  |  |  |
 | Merged |  |  |  |  |
-| *(write-in)* |  |  |  |  |
+| Class 2 | write-in | +2 | yes | Consistent with my votes on Class 1 and Class 3. The neutral, numbered taxonomy is the correct choice for the core architecture classes. |
 
 ## 433. *explicit strategy condition*
 
@@ -6378,7 +6378,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | Autonomous agent |  |  |  |  |
 | Self directed agent |  |  |  |  |
 | Purposeful agent |  |  |  |  |
-| actuated agent |  |  |  |  |
+| actuated agent | keep | +2 | yes | 'Actuated' is the mathematically grounded noun for agents that steer the world toward a setpoint. It anchors the framework name ('Actuation Dynamics') while avoiding the consciousness baggage of 'purposeful'. |
 | *(write-in)* |  |  |  |  |
 
 ## 444. *three-part meta-architecture*
@@ -6527,7 +6527,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Goal entanglement hierarchy |  |  |  |  |
-| Architectural classes |  |  |  |  |
+| Architectural classes | rename | +2 | yes | 'Architectural classes' is the best collective handle. It correctly labels the Class 1/2/3 split as a structural design property. Using 'Architecture' distinguishes it from the 'Agent spectrum' (functional taxonomy). |
 | Proposal assign english modifier |  |  |  |  |
 | Modularity partition |  |  |  |  |
 | Architecture classes |  |  |  |  |
@@ -6581,7 +6581,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Intake |  |  |  |  |
-| aisthesis |  |  |  |  |
+| aisthesis | keep | +2 | yes | Part of the foundational Greek register (aporia/prolepsis/aisthesis/epistrophe/praxis). It perfectly names the moment of raw, unmediated contact with reality. |
 | Aisthesis observation alignment |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -6612,7 +6612,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| transition opacity |  |  |  |  |
+| transition opacity | keep | +2 | yes | The perfect counterpart to 'epistemic opacity'. It correctly names the opacity of the environment's transition function $T$ to the agent. |
 | *(write-in)* |  |  |  |  |
 
 ## 460. *plan confidence*
@@ -6841,7 +6841,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| aporia |  |  |  |  |
+| aporia | keep | +2 | yes | Part of the core Greek register. It perfectly captures the moment of productive perplexity that drives the adaptive update. |
 | Aporia productive perplexity |  |  |  |  |
 | Discrepancy |  |  |  |  |
 | *(write-in)* |  |  |  |  |
@@ -7270,7 +7270,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Informational dual |  |  |  |  |
+| Informational dual | keep | +2 | yes | Captures the formal symmetry between observation ambiguity (how the agent sees the world) and agent legibility (how the world sees the agent). |
 | *(write-in)* |  |  |  |  |
 
 ## 505. [Concept] *Low / mixed / high ambiguity event mix*
@@ -7696,7 +7696,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | L0 / L1 detection |  |  |  |  |
 | Latent cause detection |  |  |  |  |
 | Insufficiency detection |  |  |  |  |
-| causal insufficiency detection |  |  |  |  |
+| causal insufficiency detection | keep | +2 | yes | This is the precise terminology from the causal-inference literature (Spirtes-Glymour-Scheines). Maintaining this link is essential for theoretical provenance. |
 | *(write-in)* |  |  |  |  |
 
 ## 535. [Concept] *Token-level commitment for agent identity*
@@ -8064,7 +8064,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| $\mathcal C_t$ |  |  |  |  |
+| $\mathcal C_t$ | keep | +2 | yes | The calligraphic $\mathcal{C}_t$ symbol is the definitive handle for the interaction history. It correctly avoids collision with entropy ($\mathcal{H}$) and maintains LaTeX compatibility. |
 | *(write-in)* |  |  |  |  |
 
 ## 561. *separable core structured repair general open*
@@ -8196,7 +8196,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| History compression |  |  |  |  |
+| History compression | keep | +2 | yes | 'History compression' is the perfect prose handle for the $\phi$ function. It captures both the domain (history $\mathcal{C}_t$) and the operation (compression $\phi$). |
 | *(write-in)* |  |  |  |  |
 
 ## 569. [Concept] *The reduction in effective tempo when observation channels are correlated*
@@ -8252,7 +8252,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 |---|---|:-:|:-:|---|
 | Linguistic agent |  |  |  |  |
 | Section III logogenic agent |  |  |  |  |
-| logogenic agent |  |  |  |  |
+| logogenic agent | keep | +2 | yes | A beautifully coined term. It captures the 'logos' (language/reason) origin of the agent's model and strategy, and pairs perfectly with 'logozoetic'. |
 | *(write-in)* |  |  |  |  |
 
 ## 573. *greek rooted vocabulary*
@@ -8278,7 +8278,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Section I adaptive system under uncertainty |  |  |  |  |
-| I adaptive system under uncertainty |  |  |  |  |
+| I adaptive system under uncertainty | keep | +2 | yes | The phrase 'Under Uncertainty' is the load-bearing part of the title. It distinguishes the framework's scope from classical control over known plants. |
 | *(write-in)* |  |  |  |  |
 
 ## 575. *adaptive gain dynamics*
@@ -8365,7 +8365,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Correction rate |  |  |  |  |
+| Correction rate | keep | +2 | yes | This is the essential English alias for $\alpha$. It perfectly describes the quantity (correction per unit mismatch) and identifies the units ($t^{-1}$) and timescale ($1/\alpha$). |
 | *(write-in)* |  |  |  |  |
 
 ## 582. *prior art integration convention*
@@ -8493,7 +8493,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| aisthesis αἴσθησις |  |  |  |  |
+| aisthesis αἴσθησις | keep | +2 | yes | Consistent with the 5-phase Greek register. Perfect handle for the unmediated raw-contact observation arrival. |
 | *(write-in)* |  |  |  |  |
 
 ## 592. *and or scope*
@@ -8565,7 +8565,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Mismatch or the aporia signal |  |  |  |  |
+| Mismatch or the aporia signal | keep | +2 | yes | The dual alias (mismatch for engineering, aporia for the cycle) is a load-bearing part of the framework's accessibility strategy. |
 | *(write-in)* |  |  |  |  |
 
 ## 598. *and or*
@@ -8622,7 +8622,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | The cycle the adaptive cycle |  |  |  |  |
 | Feedback cycle |  |  |  |  |
 | Correction cycle |  |  |  |  |
-| adaptive cycle |  |  |  |  |
+| adaptive cycle | keep | +2 | yes | This is the central unit of analysis for the entire framework. It is already well-established and uniquely identifies the 5-phase recurrent process. |
 | *(write-in)* |  |  |  |  |
 
 ## 601. *effective disturbance*
@@ -8706,7 +8706,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Agentic system framework |  |  |  |  |
+| Agentic system framework | keep | +2 | yes | The full title of the framework should remain descriptive and formal. |
 | *(write-in)* |  |  |  |  |
 
 ## 607. *adversarial tempo advantage*
@@ -8779,7 +8779,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| composite agent |  |  |  |  |
+| composite agent | keep | +2 | yes | This is the formal noun for an entity composed of sub-agents that satisfies the composition closure conditions. |
 | *(write-in)* |  |  |  |  |
 
 ## 612. *C-I (composition route)*
@@ -8875,7 +8875,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | Hierarchy necessity |  |  |  |  |
-| causal hierarchy requirement |  |  |  |  |
+| causal hierarchy requirement | keep | +2 | yes | The name is accurate and tied directly to Pearl's hierarchy, which this segment proves is a formal requirement for strategy evaluation. |
 | *(write-in)* |  |  |  |  |
 
 ## 618. *completeness (C3)*

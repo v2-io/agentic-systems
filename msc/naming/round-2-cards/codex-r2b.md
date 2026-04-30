@@ -145,7 +145,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| adaptive reserve |  |  |  |  |
+| adaptive reserve | keep | +2 | yes | Clean symbol-to-English alias for $\Delta\rho^\ast$: "reserve" captures remaining shock tolerance before persistence fails. |
 | *(write-in)* |  |  |  |  |
 
 ## 11. [Concept] *Instance 3 of identifiability floor*
@@ -285,8 +285,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Identity continuity |  |  |  |  |
-| continuity persistence |  |  |  |  |
+| Identity continuity | add-alias | +1 |  | Useful plain-language gloss, but it should not replace the established three-part persistence taxonomy. |
+| continuity persistence | keep | +2 | yes | Slightly redundant in isolation, but stable and precise as the identity-through-time member of the persistence taxonomy. |
 | *(write-in)* |  |  |  |  |
 
 ## 20. *coupled diagnostic framework*
@@ -568,8 +568,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Formulation definition result etc segment type |  |  |  |  |
-| Segment typology |  |  |  |  |
+| Formulation definition result etc segment type | canonicalize | +2 | yes | The exact FORMAT.md role vocabulary is a closed set; do not drift into theorem/proof/axiom language. |
+| Segment typology | add-alias | +1 |  | Useful umbrella for the closed set of segment roles, but secondary to the actual role labels. |
 | *(write-in)* |  |  |  |  |
 
 ## 40. *Pearl L3*
@@ -1509,9 +1509,9 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| AAD |  |  |  |  |
-| AAD (Adaptation and Actuation Dynamics) |  |  |  |  |
-| AAD agentic adaptation dynamics |  |  |  |  |
+| AAD | keep | +2 |  | Short acronym is usable and already paid for across the current corpus. |
+| AAD (Adaptation and Actuation Dynamics) | canonicalize | +2 | yes | Keep the current framework expansion; another framework-level rename would spend identity without solving a real naming problem. |
+| AAD agentic adaptation dynamics | rename | -1 |  | Improves "Actuation" slightly, but creates churn and adds AI-discourse "agentic" load to the expansion. |
 | *(write-in)* |  |  |  |  |
 
 ## 106. [Concept] *Regime I / II-A / II-B / III*
@@ -2111,9 +2111,9 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Logogenic logozoetic distinction |  |  |  |  |
-| Language constituted language living |  |  |  |  |
-| logogenic logozoetic |  |  |  |  |
+| Logogenic logozoetic distinction | add-alias | +2 |  | Useful handle for the structural-vs-living-language split. |
+| Language constituted language living | rename | -1 |  | Too ambiguous and loses the -genic versus -zoetic precision. |
+| logogenic logozoetic | keep | +2 | yes | Keep the Greek-rooted pair; once explained, it names a real architectural distinction better than a plain-English paraphrase. |
 | *(write-in)* |  |  |  |  |
 
 ## 146. *$U_M$*
@@ -3032,8 +3032,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| exact / robust-qualitative / heuristic / conditional (claim tier) |  |  |  |  |
-| Epistemic claim tier |  |  |  |  |
+| exact / robust-qualitative / heuristic / conditional (claim tier) | canonicalize | +2 | yes | Keep AAD's four-tier vocabulary exactly; replacing it with softer confidence adjectives would erase the methodology distinction. |
+| Epistemic claim tier | add-alias | +2 |  | Strong umbrella for referring to the four rigor levels without repeating the whole list. |
 | *(write-in)* |  |  |  |  |
 
 ## 211. [Concept] *The physical apparatus that enforces the orient cascade ordering on a merged intelligence*
@@ -4798,7 +4798,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| operational persistence |  |  |  |  |
+| operational persistence | keep | +2 | yes | Stable middle term in the persistence taxonomy: current boundary proximity rather than machinery capacity or identity continuity. |
 | *(write-in)* |  |  |  |  |
 
 ## 338. [Concept] *Lohmiller-Slotine contraction metric generalization used in contraction template*
@@ -4845,16 +4845,16 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
 | High identifiability testbed |  |  |  |  |
-| Calibration domain |  |  |  |  |
+| Calibration domain | add-alias | +1 |  | Useful generic version of the methodological role, but weaker than the established laboratory phrase. |
 | Calibration domain calibration lab |  |  |  |  |
 | Privileged calibration domain |  |  |  |  |
 | High identifiability calibration lab |  |  |  |  |
-| Software as calibration laboratory |  |  |  |  |
-| Calibration laboratory move |  |  |  |  |
+| Software as calibration laboratory | name-unnamed | +1 |  | The methodological commitment is real, though this phrase is better explanatory prose than the canonical term. |
+| Calibration laboratory move | name-unnamed | +1 |  | Reasonable process-name for grounding AAD in high-identifiability software if a principle slot is added. |
 | Privileged grounding domain |  |  |  |  |
 | Software calibration laboratory |  |  |  |  |
 | Calibration lab framing |  |  |  |  |
-| calibration laboratory |  |  |  |  |
+| calibration laboratory | canonicalize | +2 | yes | Best short form for TST's role: the high-identifiability domain where AAD quantities can be measured cleanly. |
 | Epistemic laboratory framing |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -4954,7 +4954,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| ASF |  |  |  |  |
+| ASF | keep | +2 | yes | Good parent-framework acronym for the broader Agentic Systems Framework around AAD and its domain applications. |
 | *(write-in)* |  |  |  |  |
 
 ## 348. *adaptive cycle*
@@ -4968,10 +4968,10 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Feedback cycle |  |  |  |  |
-| The cycle the adaptive cycle |  |  |  |  |
-| adaptive cycle |  |  |  |  |
-| Correction cycle |  |  |  |  |
+| Feedback cycle | rename | -1 |  | Collides with loop as topology and would muddy the loop/cycle distinction. |
+| The cycle the adaptive cycle | canonicalize | +1 |  | Correct direction: drop "agentic cycle" drift and standardize on the adaptive cycle family. |
+| adaptive cycle | keep | +2 | yes | Central unit-of-analysis phrase: one traversal of prolepsis, aisthesis, aporia, epistrophe, and praxis. |
+| Correction cycle | rename | -1 |  | Overspecifies the cycle as correction and drops anticipation, observation, and action. |
 | *(write-in)* |  |  |  |  |
 
 ## 349. *"epistemic substate" / "purposeful substate"*
@@ -5014,9 +5014,9 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Adaptation and purpose dynamics apd |  |  |  |  |
-| AAD |  |  |  |  |
-| Adaptation and agency dynamics AAD |  |  |  |  |
+| Adaptation and purpose dynamics apd | rename | -1 |  | Acronym churn without enough semantic gain. |
+| AAD | keep | +2 | yes | Retain the core acronym; it is already doing framework-identity work. |
+| Adaptation and agency dynamics AAD | rename | -1 |  | "Agency" is too overloaded and the expansion rename is not worth the churn. |
 | *(write-in)* |  |  |  |  |
 
 ## 352. *causal discovery from git*
@@ -5674,7 +5674,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| structural persistence |  |  |  |  |
+| structural persistence | keep | +2 | yes | Stable first term in the persistence taxonomy: capacity of the machinery, distinct from current margin and identity continuity. |
 | *(write-in)* |  |  |  |  |
 
 ## 400. [Concept] *The move where a segment role prefix is mechanical but the subject-noun carries judgment*
@@ -6042,7 +6042,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Model state or epistemic substate |  |  |  |  |
+| Model state or epistemic substate | canonicalize | +2 | yes | Use "model state" in plain prose and "epistemic substate" where the $M_t$ / $G_t$ pairing matters. |
 | *(write-in)* |  |  |  |  |
 
 ## 426. *structured rich context*
@@ -6147,8 +6147,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Feedback loop |  |  |  |  |
-| Loop |  |  |  |  |
+| Feedback loop | add-alias | -1 |  | "Feedback" is already implicit in loop here, and adding it blurs the loop/cycle distinction. |
+| Loop | keep | +2 | yes | Keep as the topology noun: persistent causal coupling between agent and environment. |
 | *(write-in)* |  |  |  |  |
 
 ## 434. [Concept] *The structural cousin of evidence starvation when an upstream edge is so reliable that downstream edges receive too few revising tests*
@@ -6499,7 +6499,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Derivation |  |  |  |  |
+| Derivation | keep | +2 | yes | Important epistemic boundary: these are structured mathematical derivations, not proof-status claims. |
 | *(write-in)* |  |  |  |  |
 
 ## 457. *aporia*
@@ -6559,8 +6559,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| cycle vs loop |  |  |  |  |
-| Cycle loop distinction |  |  |  |  |
+| cycle vs loop | keep | +1 |  | Useful shorthand, but the distinction phrase is cleaner for guidance. |
+| Cycle loop distinction | canonicalize | +2 | yes | Preserve the core vocabulary rule: loop is topology, cycle is traversal. |
 | *(write-in)* |  |  |  |  |
 
 ## 462. *canonical formulation*
@@ -6892,8 +6892,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Predictive completeness |  |  |  |  |
-| Predictive completeness behavioral completeness |  |  |  |  |
+| Predictive completeness | add-alias | +1 |  | Good name for the $M_t$ retention side of C3, but it does not cover the policy-dependence side alone. |
+| Predictive completeness behavioral completeness | canonicalize | +2 | yes | Split C3's bundled commitments: what the model retains, and what behavior is allowed to depend on. |
 | *(write-in)* |  |  |  |  |
 
 ## 483. *maximum useful chain depth*
@@ -7042,7 +7042,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Postulate |  |  |  |  |
+| Postulate | keep | +2 | yes | Correct label for foundational commitments without pretending they have axiom-level formal closure. |
 | *(write-in)* |  |  |  |  |
 
 ## 494. [Concept] *The failure mode where η → 0 freezes learning in either of two distinguishable modes low $U_o$ vs high $U_o$*
@@ -7958,8 +7958,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Persistence taxonomy |  |  |  |  |
-| Structural operational continuity persistence |  |  |  |  |
+| Persistence taxonomy | add-alias | +2 | yes | Good umbrella for the three distinct senses of persistence used across the framework. |
+| Structural operational continuity persistence | canonicalize | +2 |  | Keep the three names verbatim: structural, operational, and continuity persistence. |
 | *(write-in)* |  |  |  |  |
 
 ## 555. [Concept] *The discontinuous collapse of model adequacy when structural regime change forces the agent outside its current model-class coverage*
@@ -8216,8 +8216,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| agent environment |  |  |  |  |
-| Agent environment boundary |  |  |  |  |
+| agent environment | keep | +1 |  | Serviceable broad segment root for the primitive pair. |
+| Agent environment boundary | rename | +2 | yes | The first primitive is the boundary that makes observation and action channels well-typed. |
 | *(write-in)* |  |  |  |  |
 
 ## 573. *OODA (Boyd's loop)*
@@ -8314,8 +8314,8 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| Derivation audit |  |  |  |  |
-| Derived vs chosen vs assumed |  |  |  |  |
+| Derivation audit | canonicalize | +2 | yes | Compact table-heading name for separating mathematically forced results from modeling choices. |
+| Derived vs chosen vs assumed | add-alias | +1 |  | Good expanded heading when assumptions are explicitly in scope; heavier than the normal table label. |
 | *(write-in)* |  |  |  |  |
 
 ## 579. [Concept] *AAD (theoretical core) vs ASF (framework)*
@@ -8327,7 +8327,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
-| AAD vs ASF distinction |  |  |  |  |
+| AAD vs ASF distinction | canonicalize | +2 | yes | Keep the theory-core versus application-framework distinction explicit: AAD is the mathematical core, ASF is the broader framework. |
 | AAD ASF disambiguation |  |  |  |  |
 | *(write-in)* |  |  |  |  |
 
@@ -9063,3 +9063,4 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 - **Method observation:** The segment-walk method materially changed several votes I would have guessed differently from the card alone: `boundary condition` became a write-in for `information-loss boundary`; `agent model` became `Reality model`; Pearl L2's `Exploring` gloss became a rejection in favor of `Intervening`; and `nominal coupling` became query-bound agency. That is evidence the method is doing real work.
 - **Appendix-back-pointer note:** `#der-recursive-update` depends on Appendix A `#deriv-recursive-update`. I initially pulled the main segment before separating that dependency, then corrected by reading the appendix immediately and writing it as its own reflection before voting. Future agents may want to inspect frontmatter separately before pulling long main-section files to catch appendix jumps earlier.
 - **Target-framing note:** Several card entries are really style/gloss/convention targets rather than name replacements (`Pearl L1/L2/L3` glosses, `chronica` capitalization, derivation-audit table heading). The card supports this via category choice, but notes need to be explicit so aggregation does not treat glosses as wholesale renames.
+- **Follow-up tracker sweep:** After the initial segment-walk votes, I read the tracker end to end and added a small second batch only where I had direct prior encounter from the full-card/tracker pass, orientation docs, or source segments already read. These follow-up votes emphasize missed early primitives (`agent environment`, C3 completeness), corpus-wide vocabulary (`adaptive cycle`, loop/cycle, persistence taxonomy), and naming-process conventions (segment types, claim tiers, postulate/derivation language).
