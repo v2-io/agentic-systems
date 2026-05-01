@@ -614,7 +614,7 @@ def render_table(records, multi_voter_records, voters)
   out << "**Targets included:** #{multi_voter_records.size} (filtered to ≥2 R2 voters from #{records.size} total)"
   out << "**R2 voters:** #{voters.join(', ')}"
   out << ''
-  out << 'Single unified table. Targets in `**[ ... ]**` brackets, sorted alphabetically. Within each target, candidates are ordered by total substance (leader first). Math renders as math — table cells deliberately do not use backticks so `$inline$` math passes through to the renderer.'
+  out << 'Single unified table. Targets in `**[ ... ]**` brackets, sorted by max(score/n) descending — the targets that accumulated the most normalized consensus appear first. Within each target, candidates are ordered by total substance (leader first). Math renders as math — table cells deliberately do not use backticks so `$inline$` math passes through to the renderer.'
   out << ''
   out << 'Filtered out (default): targets where the only master candidate is the current name (`is_keep`) and no R2 voter wrote in an alternative. These are uncontested keeps — no decision needed. Override with `--include-uncontested-keeps`.'
   out << ''
@@ -906,11 +906,22 @@ filtered = if options[:include_uncontested_keeps]
 excluded_count = multi_voter.size - filtered.size
 warn "  #{excluded_count} uncontested keeps excluded (use --include-uncontested-keeps to keep them)" if options[:verbose] && excluded_count.positive?
 
-# Sort by canonical name (case-insensitive) for stable output ordering.
-# Capitalization isn't load-bearing in the current corpus — case-insensitive
-# sort groups things readers expect together (e.g., `agent identity` and
-# `Agent opacity` adjacent rather than separated by case).
-sorted_multi = filtered.sort_by { |canonical, _| canonical.downcase }.to_h
+# Sort targets by max(score/n) descending — targets that accumulated the
+# most normalized consensus come first. This puts high-conviction landings
+# at the top of the score-card and surfaces under-engaged targets toward
+# the bottom (where score/n is low across all candidates). Targets with
+# all-zero substance sort to the end alphabetically as a tiebreaker.
+sorted_multi = filtered.sort_by do |canonical, rec|
+  _, per_cand, _, _ = band(rec)
+  n_target_voters = rec[:r2_voters].size + (rec[:master]['candidates'].any? { |c| (c['votes'] || []).any? } ? 1 : 0)
+  max_score_per_n =
+    if n_target_voters.positive?
+      per_cand.values.map { |d| d[:total_substance] / n_target_voters }.max || 0.0
+    else
+      0.0
+    end
+  [-max_score_per_n, canonical.downcase]
+end.to_h
 sorted_multi = sorted_multi.first(options[:limit]).to_h if options[:limit]
 
 table_md  = render_table(records, sorted_multi, voters)
