@@ -1,0 +1,185 @@
+# tools/role-encounter/config/roles.yaml
+#
+# Role definitions for the role-encounter table. Each role is a "way an agent
+# arrives at the project" — de-novo auditor, naming voter, normal contributor.
+# Each role has a different optimal first-encounter sequence, primarily driven
+# by what files would prime judgment in ways that are harmful for that role's
+# work.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Schema
+# ─────────────────────────────────────────────────────────────────────────────
+# Every role entry carries:
+#
+#   description           free-text summary of who this role is and what they're
+#                         doing (one or two sentences; reads in encounter-table.md
+#                         column header)
+#
+#   audit_safe            true if this role tolerates priming-heavy content
+#                         (CHANGELOG, TODO, PROPOSALS, etc.). False for de-novo
+#                         auditors. Drives default exclusions in top-level.yaml.
+#
+#   readme_variant        public | auditor — chooses README.md vs README-auditor.md.
+#                         Auditor variant strips Findings / Recent Progress /
+#                         Known Issues sections.
+#
+#   include_segments      true | false — whether segment files (component src/)
+#                         appear in this role's view at all. Top-level-only roles
+#                         (rare) can set false.
+#
+#   include_components    list of component dir names whose OUTLINEs this role
+#                         walks. Default is all four; naming voters typically
+#                         walk all four because vote targets span the corpus.
+#                         de-novo auditors also walk all four. Restrict only
+#                         when a role is genuinely component-scoped.
+#
+#   exclude_top_level     list of top-level filenames excluded for this role
+#                         beyond the audit_safe defaults. Use sparingly; most
+#                         filtering should happen via the per-file membership
+#                         tables in top-level.yaml.
+#
+#   notes                 inline rationale a future agent should know about why
+#                         this role's config looks the way it does. Worth using
+#                         even when "obvious" — config-as-code is co-thinking
+#                         with future agents.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Roles enumerated below are real (each has either existing instructions or a
+# natural file-subset). Speculative roles (audit-finding-triager, segment-author,
+# spike-author) are NOT enumerated — adding them is a config edit when their
+# file-subset becomes legible. The list is meant to grow.
+# ─────────────────────────────────────────────────────────────────────────────
+
+roles:
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # normal — the default "I'm here to do work on the framework" role.
+  # Reads the broadest file set. README.md (public), CLAUDE.md, OUTLINE,
+  # current TODO/PROPOSALS state, then segments. PRACTICA.md is the active-
+  # work navigator and is auditor-safe so it sits high in the orient walk.
+  # ──────────────────────────────────────────────────────────────────────────
+  normal:
+    description: |
+      Default contributor role. Agent is doing substantive work on the framework
+      (segment refinement, audit triage, theoretical exploration, doc revision)
+      and benefits from full context including current architectural state.
+    audit_safe: true
+    readme_variant: public
+    include_segments: true
+    include_components: [01-aad-core, 02-tst-core, 03-logogenic-agents, 04-logozoetic-agents]
+    exclude_top_level: []
+    notes: |
+      Sees everything. README.md (public) before CLAUDE.md before OUTLINE, then
+      LEXICON/NOTATION/FORMAT, then PRACTICA + TODO + PROPOSALS for current
+      state, then segments in OUTLINE order.
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # de-novo-auditor — the audit role described in
+  # doc/de-novo-audit-instructions.md.
+  #
+  # Critical property: this role MUST avoid priming-heavy files. The audit
+  # instructions §4.1 enumerate an explicit AVOID list:
+  #   - README.md (use README-auditor.md instead)
+  #   - FINDINGS.md
+  #   - HISTORICAL-CONTEXT.md
+  #   - TODO.md, PROPOSALS.md, CHANGELOG.md, LOG.md
+  #   - All of spikes/, audits/, msc/ (except own working dir)
+  #   - doc/readme/src/_findings-summary.md, _recent-progress.md, _known-issues.md
+  #
+  # Reading order: README-auditor → top-level OUTLINE → component OUTLINEs in
+  # the order top OUTLINE references them → LEXICON + NOTATION → CLAUDE.md +
+  # FORMAT.md + PRACTICA.md → segments in OUTLINE row order top-to-bottom across
+  # components.
+  #
+  # PRACTICA.md is auditor-safe per its own preamble; it sits in the orient
+  # walk alongside CLAUDE.md and FORMAT.md.
+  # ──────────────────────────────────────────────────────────────────────────
+  de-novo-auditor:
+    description: |
+      De-novo audit of the framework. Walks segments in OUTLINE order top-to-bottom
+      across components, writes between-segment reflections, surfaces findings.
+      Critically MUST NOT read priming-heavy files until the §7 Phase-2 (integration-
+      debt triangulation) stage. See doc/de-novo-audit-instructions.md.
+    audit_safe: false
+    readme_variant: auditor
+    include_segments: true
+    include_components: [01-aad-core, 02-tst-core, 03-logogenic-agents, 04-logozoetic-agents]
+    exclude_top_level: []
+    notes: |
+      Authoritative source: doc/de-novo-audit-instructions.md §4.1. The exclusion
+      list is enforced via per-file membership in top-level.yaml; this role-level
+      exclude_top_level stays empty so the membership tables hold the load.
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # naming-voter — the role described in doc/naming-principles.md and
+  # doc/naming-cycle-methodology.md.
+  #
+  # The voter uses the de-novo audit instructions' rhythm verbatim (per
+  # naming-cycle-methodology.md §1, §4): "the disciplines there transfer here
+  # verbatim." So this role has a similar exclusion profile to de-novo-auditor
+  # for spike/audit/msc material — but with a few important additions.
+  #
+  # Naming-specific files the voter ALSO reads (top of orient walk):
+  #   - doc/naming-principles.md  (what we name and why)
+  #   - doc/naming-cycle-methodology.md  (how to walk)
+  #   - the round's launch prompt (msc/naming/round-2-launch-prompt*.md)
+  #
+  # Naming-specific files the voter MUST NOT read before voting (cold-start rule):
+  #   - msc/naming/naming-votes/** (other agents' R1 votes)
+  #   - msc/naming/naming-brainstorm-*.md
+  #   - msc/naming/naming-aggregate-*
+  #   - msc/naming/naming-alias-*.md
+  #   - msc/naming/naming-cleanup-*.md
+  #   - msc/naming/naming-pilot-rename-plan.md
+  #   - msc/naming/_archive/* (archived prior-round artifacts)
+  #
+  # The voter walks segments in OUTLINE order across all four components (per
+  # naming-principles.md "Source material" — vote targets span the corpus).
+  #
+  # Note on README: naming-principles.md says "READ README.md" but this is
+  # before the v2 cohort's audit-instructions integration. naming-cycle-
+  # methodology.md is the more recent file and inherits the de-novo audit
+  # rhythm — we go with README-auditor for consistency, since the public
+  # README's Findings/Recent-Progress sections would prime naming judgment
+  # similarly to how they prime audit judgment. If a future cohort wants the
+  # public README, this is a one-line config flip.
+  # ──────────────────────────────────────────────────────────────────────────
+  naming-voter:
+    description: |
+      Multi-architecture naming-vote agent. Walks segments in OUTLINE order
+      casting votes on subject-noun candidates as they emerge from segment
+      context. Cold-start protocol: must not read other voters' work, brainstorms,
+      aggregates, or rename-mappings before voting. See doc/naming-principles.md
+      and doc/naming-cycle-methodology.md.
+    audit_safe: false
+    readme_variant: auditor
+    include_segments: true
+    include_components: [01-aad-core, 02-tst-core, 03-logogenic-agents, 04-logozoetic-agents]
+    exclude_top_level: []
+    notes: |
+      Inherits de-novo-auditor exclusion profile via the methodology's "disciplines
+      transfer verbatim" pointer, plus naming-cycle-specific cold-start exclusions
+      enforced in top-level.yaml. The naming-principles + naming-cycle-methodology
+      files are top-level for this role and appear at the top of the orient walk.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Roles to add later (when their file-subset becomes legible):
+#
+#   audit-finding-triager — takes audits/audit-NNNNNN-FINAL-*.md outputs and
+#     routes findings into TODO / PROPOSALS / segment edits / spike followups.
+#     Sees all priming-heavy files because the work IS routing them.
+#
+#   segment-author — promoting a segment from draft → claims-verified.
+#     Wants FORMAT.md, NOTATION.md, the segment's `depends:` chain, the relevant
+#     audit findings touching it, the spike that produced it. Substantially
+#     overlaps with `normal` but with a tighter focus on a single segment's
+#     dependency neighborhood — likely better served by a query interface than
+#     a static role view.
+#
+#   spike-author — running a spike. Wants spikes/INDEX.md, the relevant prior
+#     spikes, FORMAT.md §"Math lives in segments", the segments the spike will
+#     touch.
+#
+# These all share the same machinery (OUTLINE walk + per-file include) and
+# can be added as bare role entries when their canonical instructions land.
+# ─────────────────────────────────────────────────────────────────────────────

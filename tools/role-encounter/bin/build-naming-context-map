@@ -1,0 +1,461 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# tools/role-encounter/bin/build-naming-context-map
+#
+# Generates tools/role-encounter/views/naming-context-map.md — for each
+# candidate naming target in msc/naming/master-list-curated.json, identify
+# the segment that defines it and its recursive depends: chain.
+#
+# This is a Phase-1 metadata-only artifact useful to the renaming agent
+# working in parallel. The semantic-index version (Phase 2) will eventually
+# supersede this with first-encounter-by-attention-weight + heaviest-attention
+# + supplementary-references; for now we use:
+#
+#   1. segment_link from master-list-curated.json when present (139/629 targets)
+#   2. first_encounter_locality from master-list-curated.json when present
+#      (139/629; usually overlaps with segment_link)
+#   3. Slug-match heuristic against component src/ filenames when the target
+#      is plausibly a slug
+#   4. Grep-based first-mention search across all segments (the slowest path,
+#      reserved for genuine concept-clusters that don't have any slug match)
+#
+# Concept-cluster targets (is_concept_cluster=true; description-shaped) are
+# emitted with their description but no anchor — there isn't a definitional
+# segment to match against. These are the highest-value targets for Phase 2's
+# semantic-search anchoring.
+#
+# Usage:
+#   ruby tools/role-encounter/bin/build-naming-context-map
+#   ruby tools/role-encounter/bin/build-naming-context-map --master=PATH --out=PATH
+#   ruby tools/role-encounter/bin/build-naming-context-map --no-grep   # skip the
+#                                                                       # slow grep
+#                                                                       # fallback
+#   ruby tools/role-encounter/bin/build-naming-context-map --depth=3   # cap
+#                                                                       # depends-
+#                                                                       # chain
+#                                                                       # depth
+
+require 'json'
+require 'optparse'
+require 'pathname'
+require 'set'
+
+REPO_ROOT = Pathname.new(__dir__).parent.parent.parent.expand_path
+TOOL_DIR  = REPO_ROOT.join('tools/role-encounter')
+
+DEFAULT_MASTER = REPO_ROOT.join('msc/naming/master-list-curated.json').to_s
+DEFAULT_OUT    = TOOL_DIR.join('views/naming-context-map.md').to_s
+
+options = {
+  master: DEFAULT_MASTER,
+  out:    DEFAULT_OUT,
+  grep:   true,
+  depth:  3,
+  quiet:  false
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: build-naming-context-map [--master=PATH] [--out=PATH] [--no-grep] [--depth=N]'
+  opts.on('--master=PATH', "Master-list curated JSON (default #{DEFAULT_MASTER})") { |p| options[:master] = p }
+  opts.on('--out=PATH',    "Output path (default #{DEFAULT_OUT})") { |p| options[:out] = p }
+  opts.on('--no-grep',     'Skip the grep-fallback for unmatched targets') { options[:grep] = false }
+  opts.on('--depth=N', Integer, 'Maximum recursive depends-chain depth (default 3)') { |n| options[:depth] = n }
+  opts.on('--quiet',       'Suppress informational stderr') { options[:quiet] = true }
+  opts.on('-h', '--help')  { puts opts; exit }
+end.parse!
+
+def info(msg, quiet:)
+  warn(msg) unless quiet
+end
+
+# ── Load master list ─────────────────────────────────────────────────────────
+
+master = JSON.parse(File.read(options[:master]))
+currents = master['currents']
+info("loaded #{currents.size} naming targets from #{options[:master]}", quiet: options[:quiet])
+
+# ── Collect every segment's frontmatter (slug, depends, type, status, path) ──
+
+def parse_frontmatter(filepath)
+  result = { slug: nil, depends: [], type: nil, status: nil, stage: nil }
+  return result unless File.file?(filepath)
+
+  lines = File.readlines(filepath, encoding: 'UTF-8')
+  return result if lines.empty? || lines.first.strip != '---'
+
+  in_depends = false
+  lines[1..].each do |line|
+    stripped = line.strip
+    break if stripped == '---'
+
+    if stripped.start_with?('slug:')
+      result[:slug] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('stage:')
+      result[:stage] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('type:')
+      result[:type] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('status:')
+      result[:status] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('depends:')
+      rest = stripped.split(':', 2)[1].strip
+      if rest.empty?
+        in_depends = true
+      else
+        rest = rest.delete('[]')
+        result[:depends] = rest.split(',').map { |d| d.strip.gsub(/['"]/, '') }.reject(&:empty?)
+      end
+    elsif in_depends
+      if stripped.start_with?('- ')
+        result[:depends] << stripped[2..].strip.gsub(/['"]/, '')
+      else
+        in_depends = false
+      end
+    end
+  end
+
+  result
+end
+
+components = %w[01-aad-core 02-tst-core 03-logogenic-agents 04-logozoetic-agents]
+
+slug_to_seg = {}     # slug → {component:, slug:, type:, status:, depends:, path:}
+all_segments = []
+
+components.each do |comp|
+  src_dir = REPO_ROOT.join(comp, 'src')
+  next unless src_dir.exist?
+
+  src_dir.glob('*.md').each do |seg_path|
+    next if seg_path.basename.to_s.start_with?('old-')
+    fm = parse_frontmatter(seg_path)
+    slug = fm[:slug] || seg_path.basename('.md').to_s
+    seg = {
+      component: comp,
+      slug:      slug,
+      type:      fm[:type],
+      status:    fm[:status],
+      stage:     fm[:stage],
+      depends:   fm[:depends],
+      path:      seg_path.relative_path_from(REPO_ROOT).to_s
+    }
+    slug_to_seg[slug] = seg
+    all_segments << seg
+  end
+end
+
+info("indexed #{all_segments.size} segments across #{components.size} components", quiet: options[:quiet])
+
+# ── Resolution helpers ───────────────────────────────────────────────────────
+
+# Try to anchor a target to a segment. Returns the segment hash or nil.
+#
+# Order of attempts (each cheaper than the next):
+#   1. segment_link from master-list (already curated)
+#   2. Slug-match: target string normalized to slug-form matches a known slug
+#   3. Slug-match: any candidate string in the target's candidate list normalizes
+#      to a known slug (covers cases like "control regret" ↛ slug, but
+#      "#def-control-regret" listed as a candidate maps cleanly)
+#   4. Grep-based first-mention (slow; opt-out via --no-grep)
+
+def normalize_to_slug(text)
+  return nil if text.nil? || text.empty?
+  text.downcase
+      .gsub(/[#`*"']/, '')
+      .strip
+      .gsub(/\s+/, '-')
+      .gsub(/[^a-z0-9-]/, '')
+      .gsub(/-+/, '-')
+      .gsub(/^-|-$/, '')
+end
+
+def segment_link_to_slug(link)
+  return nil if link.nil?
+  m = link.match(%r{src/([^/]+)\.md\z})
+  m ? m[1] : nil
+end
+
+def first_mention_grep(needle, components, repo_root)
+  # Returns {component:, path:, line:} of the first segment that mentions
+  # `needle` as a literal string, walking components in canonical order and
+  # files alphabetically within each component. Best-effort.
+  return nil if needle.nil? || needle.strip.length < 3
+  needle_re = Regexp.new(Regexp.escape(needle), Regexp::IGNORECASE)
+  components.each do |comp|
+    src_dir = repo_root.join(comp, 'src')
+    next unless src_dir.exist?
+    src_dir.glob('*.md').sort.each do |seg_path|
+      next if seg_path.basename.to_s.start_with?('old-')
+      content = File.read(seg_path, encoding: 'UTF-8')
+      next unless content.match?(needle_re)
+      # Find the first line containing the match
+      content.each_line.with_index do |line, i|
+        if line.match?(needle_re)
+          return { component: comp, path: seg_path.relative_path_from(repo_root).to_s, line: i + 1 }
+        end
+      end
+    end
+  end
+  nil
+end
+
+# Resolve recursive dependency chain for a slug, capped at `depth` levels.
+def depends_chain(slug, slug_to_seg, depth, seen = Set.new)
+  return [] if depth <= 0 || seen.include?(slug)
+  seen = seen | [slug]
+  seg = slug_to_seg[slug]
+  return [] if seg.nil?
+  out = []
+  seg[:depends].each do |dep|
+    dep_seg = slug_to_seg[dep]
+    out << { slug: dep, segment: dep_seg, depth: 1 }
+    if dep_seg
+      sub = depends_chain(dep, slug_to_seg, depth - 1, seen)
+      sub.each { |s| out << s.merge(depth: s[:depth] + 1) }
+    end
+  end
+  out
+end
+
+# ── Resolve every target ─────────────────────────────────────────────────────
+
+resolutions = []
+unresolved = []
+concept_targets = []
+
+currents.each do |c|
+  is_concept = c['is_concept_cluster']
+  cur = c['current']
+
+  if is_concept
+    concept_targets << {
+      current: cur,
+      description: c['current_description'],
+      first_encounter_locality: c['first_encounter_locality']
+    }
+    next
+  end
+
+  anchor_slug = nil
+  anchor_source = nil
+
+  # Attempt 1: master-list segment_link
+  if c['segment_link']
+    s = segment_link_to_slug(c['segment_link'])
+    if s && slug_to_seg[s]
+      anchor_slug = s
+      anchor_source = 'master-list segment_link'
+    end
+  end
+
+  # Attempt 2: target string normalized to slug
+  if anchor_slug.nil?
+    s = normalize_to_slug(cur)
+    if s && slug_to_seg[s]
+      anchor_slug = s
+      anchor_source = 'slug-match (current)'
+    end
+  end
+
+  # Attempt 3: candidate list slug normalization
+  if anchor_slug.nil?
+    (c['candidates'] || []).each do |cand|
+      s = normalize_to_slug(cand['candidate'])
+      if s && slug_to_seg[s]
+        anchor_slug = s
+        anchor_source = "slug-match (candidate '#{cand['candidate']}')"
+        break
+      end
+    end
+  end
+
+  # Attempt 4: try the candidate list with `def-` / `der-` etc. prefixes
+  # stripped — useful when a candidate is `#def-foo` and the segment is
+  # actually `def-foo` already covered, but also when a current name is just
+  # the bare noun (e.g., "control regret") and the slug is "def-control-regret".
+  if anchor_slug.nil?
+    norm_cur = normalize_to_slug(cur)
+    %w[def der deriv form result post norm scope hyp emp obs disc detail
+       schema sketch corr meas example aside].each do |prefix|
+      candidate_slug = "#{prefix}-#{norm_cur}"
+      if slug_to_seg[candidate_slug]
+        anchor_slug = candidate_slug
+        anchor_source = "prefix-match (#{prefix}-)"
+        break
+      end
+    end
+  end
+
+  if anchor_slug
+    chain = depends_chain(anchor_slug, slug_to_seg, options[:depth])
+    resolutions << {
+      current: cur,
+      anchor_slug: anchor_slug,
+      anchor_source: anchor_source,
+      anchor_segment: slug_to_seg[anchor_slug],
+      depends_chain: chain,
+      first_encounter_locality: c['first_encounter_locality']
+    }
+  else
+    unresolved << c
+  end
+end
+
+info("resolved #{resolutions.size}/#{currents.size - concept_targets.size} regular targets to a segment anchor", quiet: options[:quiet])
+info("#{concept_targets.size} concept-cluster targets (no segment anchor by definition)", quiet: options[:quiet])
+info("#{unresolved.size} regular targets unresolved by metadata; trying grep" + (options[:grep] ? '...' : ' (skipped via --no-grep)'), quiet: options[:quiet])
+
+# ── Grep fallback (slow) ─────────────────────────────────────────────────────
+
+grep_resolutions = []
+grep_unresolved = []
+
+if options[:grep] && unresolved.any?
+  unresolved.each_with_index do |c, i|
+    info("  grep #{i + 1}/#{unresolved.size}: #{c['current']}", quiet: options[:quiet]) if (i % 25).zero? && i.positive?
+    hit = first_mention_grep(c['current'], components, REPO_ROOT)
+    if hit
+      grep_resolutions << {
+        current: c['current'],
+        first_mention_grep: hit,
+        first_encounter_locality: c['first_encounter_locality'],
+        candidates: c['candidates']
+      }
+    else
+      grep_unresolved << c
+    end
+  end
+  info("  grep resolved #{grep_resolutions.size}/#{unresolved.size}", quiet: options[:quiet])
+else
+  grep_unresolved = unresolved
+end
+
+# ── Render ───────────────────────────────────────────────────────────────────
+
+def fmt_segment_block(seg, indent = '  ')
+  return "#{indent}(no anchor)" if seg.nil?
+  "#{indent}**`#{seg[:slug]}`** — `#{seg[:type]}` · `#{seg[:status] || 'no-status'}` · stage `#{seg[:stage] || 'unknown'}` · `#{seg[:path]}`"
+end
+
+def fmt_chain(chain, indent = '  ')
+  return "#{indent}_(no declared dependencies)_" if chain.empty?
+  out = []
+  chain.each do |entry|
+    pad = '  ' * entry[:depth]
+    if entry[:segment]
+      out << "#{indent}#{pad}- **`#{entry[:slug]}`** (`#{entry[:segment][:type]}`)"
+    else
+      out << "#{indent}#{pad}- **`#{entry[:slug]}`** _(no segment found — depends-chain broken)_"
+    end
+  end
+  out.join("\n")
+end
+
+File.open(options[:out], 'w') do |f|
+  f.puts '<!-- Generated by tools/role-encounter/bin/build-naming-context-map. -->'
+  f.puts '<!-- Do not edit. To update, modify msc/naming/master-list-curated.json or segment frontmatter, then re-run. -->'
+  f.puts
+  f.puts '# Naming Context Map'
+  f.puts
+  f.puts <<~PREAMBLE
+    For each naming target in `msc/naming/master-list-curated.json`, the
+    segment that defines it (when one is identifiable from metadata alone)
+    and its recursive `depends:` chain. Phase-1 best-effort metadata-only
+    artifact: the Phase-2 semantic-index version will supersede this with
+    heaviest-attention anchoring + supplementary-reference search.
+
+    Useful for the renaming agent: candidate names are evaluated against
+    the segment's content; the depends-chain shows what context the
+    candidate will sit in for any reader who walked there in OUTLINE order.
+
+    Resolution order:
+
+    1. `segment_link` from `master-list-curated.json` (curated, 139/629 targets)
+    2. Direct slug-match against the target string normalized
+    3. Slug-match against candidate list entries
+    4. Prefix-match (`def-`, `der-`, `form-`, …) against the normalized target
+    5. Grep first-mention across all segments (slow; opt-out via `--no-grep`)
+
+    Concept-cluster targets (description-shaped, not name-shaped) are listed
+    separately at the bottom — they have no definitional segment by construction
+    and are the highest-value targets for Phase-2 semantic anchoring.
+  PREAMBLE
+  f.puts
+  f.puts "## Summary"
+  f.puts
+  f.puts "- Total naming targets: **#{currents.size}**"
+  f.puts "- Regular (named) targets: **#{currents.size - concept_targets.size}**"
+  f.puts "  - Resolved by metadata: **#{resolutions.size}**"
+  f.puts "  - Resolved by grep first-mention: **#{grep_resolutions.size}**"
+  f.puts "  - Unresolved: **#{grep_unresolved.size}**"
+  f.puts "- Concept-cluster targets: **#{concept_targets.size}** (no segment anchor by construction)"
+  f.puts
+
+  f.puts '---'
+  f.puts
+  f.puts '## Metadata-resolved targets'
+  f.puts
+  f.puts 'Each entry: target name, anchor segment + depends chain. Anchor source notes how the segment was identified.'
+  f.puts
+  resolutions.sort_by { |r| r[:current].to_s }.each do |r|
+    f.puts "### `#{r[:current]}`"
+    f.puts
+    f.puts "- Anchor: #{fmt_segment_block(r[:anchor_segment]).sub(/\A\s+/, '')}"
+    f.puts "- Anchor source: _#{r[:anchor_source]}_"
+    if r[:first_encounter_locality]
+      first = r[:first_encounter_locality].to_s.lines.first&.strip
+      f.puts "- First-encounter locality (curated): #{first}"
+    end
+    f.puts "- Depends chain (depth ≤ #{options[:depth]}):"
+    f.puts fmt_chain(r[:depends_chain])
+    f.puts
+  end
+
+  unless grep_resolutions.empty?
+    f.puts '---'
+    f.puts
+    f.puts '## Grep-resolved targets'
+    f.puts
+    f.puts 'Targets where the metadata didn\'t supply a segment_link, but the target name appears verbatim somewhere in a segment. The "first mention" is best-effort (alphabetical within each component); not necessarily the segment that *defines* the term.'
+    f.puts
+    grep_resolutions.sort_by { |r| r[:current].to_s }.each do |r|
+      f.puts "### `#{r[:current]}`"
+      f.puts
+      f.puts "- First-mention grep hit: `#{r[:first_mention_grep][:path]}` (line #{r[:first_mention_grep][:line]})"
+      if r[:first_encounter_locality]
+        first = r[:first_encounter_locality].to_s.lines.first&.strip
+        f.puts "- First-encounter locality (curated): #{first}"
+      end
+      f.puts
+    end
+  end
+
+  unless grep_unresolved.empty?
+    f.puts '---'
+    f.puts
+    f.puts '## Unresolved (regular) targets'
+    f.puts
+    f.puts 'Regular-target naming candidates with no segment anchor found by metadata or grep. Likely concept-paraphrases, framework-name aliases, or naming-cycle artifacts not present verbatim in segment text. Phase-2 semantic search is the right tool for these.'
+    f.puts
+    grep_unresolved.each do |c|
+      f.puts "- `#{c['current']}`#{c['first_encounter_locality'] ? " — _#{c['first_encounter_locality'].to_s.lines.first&.strip}_" : ''}"
+    end
+    f.puts
+  end
+
+  unless concept_targets.empty?
+    f.puts '---'
+    f.puts
+    f.puts '## Concept-cluster targets'
+    f.puts
+    f.puts 'Targets shaped as descriptions of recurring patterns rather than named concepts — these are by definition unresolved by metadata alone (no segment names them yet). The renamer needs the description as input. Phase-2 semantic-anchoring is the natural next step.'
+    f.puts
+    concept_targets.sort_by { |c| c[:current].to_s }.each do |c|
+      desc = c[:description] || c[:current]
+      f.puts "- _#{desc}_"
+    end
+    f.puts
+  end
+end
+
+info("wrote #{options[:out]} (#{File.size(options[:out])} bytes)", quiet: options[:quiet])

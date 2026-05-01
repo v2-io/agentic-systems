@@ -1,0 +1,151 @@
+# tools/role-encounter/config/segments.yaml
+#
+# Configuration for segment-traversal: which OUTLINE files name canonical
+# orderings, what frontmatter fields the build script reads, and how the
+# appendix-after-first-mention rule is applied.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# What "segment ordering" means here
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Per Joseph's clarification (and confirmed by inspection of bin/lint-outline):
+# OUTLINE.md is the authoritative narrative ordering for segments. lint-outline
+# already enforces consistency between OUTLINE row order and segment `depends:`
+# frontmatter — any backward dependency that ISN'T an appendix-back-pointer is
+# flagged as an ordering violation. So:
+#
+#   1. The encounter table walks segments in OUTLINE.md row order, top-to-
+#      bottom across components in the order the top-level OUTLINE.md
+#      references them.
+#
+#   2. The appendix-after-first-mention exception is implemented by the
+#      build script: when a main-section segment lists an appendix segment
+#      (Section A, B in 01-aad-core's OUTLINE) in its `depends:`, the
+#      appendix segment is hoisted to be inserted directly AFTER the
+#      first main-section segment that references it. The auditor convention
+#      (de-novo-audit-instructions §4.2) is to read the appendix immediately
+#      when first encountered, so the encounter table reflects that ordering
+#      for roles that benefit from it.
+#
+#      For roles that do NOT benefit from this hoist (e.g., if a role is
+#      doing pure structural traversal), the appendix-hoist can be disabled
+#      per-role via `apply_appendix_hoist: false` in roles.yaml. Default is
+#      true.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Appendix-need YAML field — INVESTIGATED, DOES NOT EXIST
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# The role-encounter plan suggested checking for a frontmatter field that
+# explicitly flags "this segment first surfaces the need for appendix X."
+# Joseph believed it might exist. Investigation:
+#
+#   - Grepped every segment frontmatter under 01-aad-core/src/ and 02-tst-core/
+#     src/. Confirmed fields are: slug, type, status, depends, stage. No field
+#     names anything appendix-flagging.
+#
+#   - FORMAT.md does not specify any such field.
+#
+#   - bin/lint-outline parses {slug, depends, stage, type, status} only.
+#
+# Conclusion: the appendix-need is encoded ENTIRELY via the `depends:` list.
+# Appendix segments live in the Appendix sections of the OUTLINE; main-section
+# segments depend on them. lint-outline's `find_ordering_violations` already
+# classifies these as "backmatter" references vs ordering bugs, so the
+# discriminator we need (is-this-a-back-pointer-to-an-appendix) is mechanical:
+# the appendix segment's `section` (read from the OUTLINE table's section
+# column) is in {A, B}.
+#
+# Decision: derive appendix-need from `depends: ∩ section ∈ {A, B}` rather than
+# adding a new frontmatter field. If a future cycle wants explicit per-segment
+# `surfaces:` annotation (e.g., for cases where multiple main segments depend
+# on an appendix and we want to specify which one "first surfaces" it more
+# precisely), that becomes a separate naming/tooling cycle.
+#
+# Field name proposal IF it ever lands: `surfaces:` (list of slugs the segment
+# first surfaces the need for; per-segment, the script would prefer this over
+# the depends-based heuristic). Not adding it now.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# OUTLINE files to walk, in the canonical order per the top-level OUTLINE.md.
+# The build script reads these in order; per-role include_components in
+# roles.yaml may filter the set.
+outlines:
+  - path: 01-aad-core/OUTLINE.md
+    component: 01-aad-core
+    appendix_sections: [A, B]   # OUTLINE table's `§` column values that mark
+                                # appendix rows. Used for the appendix-hoist.
+    notes: |
+      Section I (Adaptive Systems), Section II (Actuated Adaptation),
+      Section III (Composites), Appendices A (Details), B (Operational Domains).
+
+  - path: 02-tst-core/OUTLINE.md
+    component: 02-tst-core
+    appendix_sections: []       # TST OUTLINE doesn't currently have appendix
+                                # sections; rows use `S` for "Software" segments.
+    notes: |
+      TST has a single working table; no appendix split.
+
+  - path: 03-logogenic-agents/OUTLINE.md
+    component: 03-logogenic-agents
+    appendix_sections: []
+    notes: |
+      Logogenic agents, framework stage. Single working table; no appendices.
+
+  - path: 04-logozoetic-agents/OUTLINE.md
+    component: 04-logozoetic-agents
+    appendix_sections: []
+    notes: |
+      Logozoetic agents, framework stage.
+
+
+# Frontmatter fields the build script reads. Mirror's bin/lint-outline's set.
+frontmatter_fields:
+  slug:    required
+  type:    required
+  status:  optional
+  depends: optional        # absent = no declared dependencies (rare, but valid
+                           # for foundational postulates and primitive scopes)
+  stage:   optional        # tracks process state, not load-bearing for ordering
+
+
+# Cross-component dependencies. By project convention (FORMAT.md "Cross-
+# References") TST/logogenic/logozoetic segments may declare AAD slugs in
+# their `depends:`. The build resolves a slug to its component by scanning
+# every component's src/ directory for a matching frontmatter slug — i.e.,
+# slugs are globally unique across the project. The build script verifies
+# uniqueness as a sanity check.
+cross_component_dependencies:
+  enforce_global_slug_uniqueness: true
+  notes: |
+    AAD slugs are referenced from TST/logogenic segments directly. Project
+    convention is one slug per file per repo; build script asserts.
+
+
+# Default segment-handling for the encounter table:
+#
+#   - Each segment becomes one row in the encounter table.
+#
+#   - The role-membership cell shows a sequence number (per-role-monotonic
+#     within each component) for `required: true` rows in component scope,
+#     or `+` if a band-display is more honest. For segment files, sequence
+#     numbers are the right framing — segments aren't bandable; they're
+#     ordered.
+#
+#   - Excluded segments (e.g., none currently — no role excludes individual
+#     segments) would show "—".
+#
+#   - The appendix-hoist (when enabled for a role) inserts the appendix row
+#     directly after the first main-section row that depends on it. The
+#     hoisted row's sequence number reflects its hoisted position, not its
+#     OUTLINE row index. The original OUTLINE row index is preserved in a
+#     `notes` cell or via grouping for diff-friendliness.
+#
+default_segment_behavior:
+  apply_appendix_hoist: true
+  hoist_marker: "[appendix]"     # appears in the table cell to signal "this
+                                 # row was hoisted from an appendix section"
+  show_section: true             # include the OUTLINE section (I/II/III/A/B/S/L)
+                                 # in the table for orientation

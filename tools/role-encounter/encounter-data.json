@@ -1,0 +1,4549 @@
+{
+  "roles": [
+    {
+      "name": "normal",
+      "description": "Default contributor role. Agent is doing substantive work on the framework\n(segment refinement, audit triage, theoretical exploration, doc revision)\nand benefits from full context including current architectural state.\n",
+      "audit_safe": true,
+      "readme_variant": "public",
+      "include_segments": true,
+      "include_components": [
+        "01-aad-core",
+        "02-tst-core",
+        "03-logogenic-agents",
+        "04-logozoetic-agents"
+      ],
+      "notes": "Sees everything. README.md (public) before CLAUDE.md before OUTLINE, then\nLEXICON/NOTATION/FORMAT, then PRACTICA + TODO + PROPOSALS for current\nstate, then segments in OUTLINE order.\n"
+    },
+    {
+      "name": "de-novo-auditor",
+      "description": "De-novo audit of the framework. Walks segments in OUTLINE order top-to-bottom\nacross components, writes between-segment reflections, surfaces findings.\nCritically MUST NOT read priming-heavy files until the §7 Phase-2 (integration-\ndebt triangulation) stage. See doc/de-novo-audit-instructions.md.\n",
+      "audit_safe": false,
+      "readme_variant": "auditor",
+      "include_segments": true,
+      "include_components": [
+        "01-aad-core",
+        "02-tst-core",
+        "03-logogenic-agents",
+        "04-logozoetic-agents"
+      ],
+      "notes": "Authoritative source: doc/de-novo-audit-instructions.md §4.1. The exclusion\nlist is enforced via per-file membership in top-level.yaml; this role-level\nexclude_top_level stays empty so the membership tables hold the load.\n"
+    },
+    {
+      "name": "naming-voter",
+      "description": "Multi-architecture naming-vote agent. Walks segments in OUTLINE order\ncasting votes on subject-noun candidates as they emerge from segment\ncontext. Cold-start protocol: must not read other voters' work, brainstorms,\naggregates, or rename-mappings before voting. See doc/naming-principles.md\nand doc/naming-cycle-methodology.md.\n",
+      "audit_safe": false,
+      "readme_variant": "auditor",
+      "include_segments": true,
+      "include_components": [
+        "01-aad-core",
+        "02-tst-core",
+        "03-logogenic-agents",
+        "04-logozoetic-agents"
+      ],
+      "notes": "Inherits de-novo-auditor exclusion profile via the methodology's \"disciplines\ntransfer verbatim\" pointer, plus naming-cycle-specific cold-start exclusions\nenforced in top-level.yaml. The naming-principles + naming-cycle-methodology\nfiles are top-level for this role and appear at the top of the orient walk.\n"
+    }
+  ],
+  "rows": [
+    {
+      "path": "doc/de-novo-audit-instructions.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "How to run a de-novo audit. Authoritative for de-novo-auditor role;\nnaming voters borrow the rhythm.",
+        "role_effective_seq": {
+          "normal": 100,
+          "de-novo-auditor": 0,
+          "naming-voter": 11
+        }
+      },
+      "role_cells": {
+        "normal": "100",
+        "de-novo-auditor": "0*",
+        "naming-voter": "+*"
+      }
+    },
+    {
+      "path": "README-auditor.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Audit-safe README. Strips Findings / Recent Progress / Known Issues sections.",
+        "role_effective_seq": {
+          "normal": 2,
+          "de-novo-auditor": 1,
+          "naming-voter": 1
+        }
+      },
+      "role_cells": {
+        "normal": "2",
+        "de-novo-auditor": "1*",
+        "naming-voter": "1*"
+      }
+    },
+    {
+      "path": "README.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Public README. Auto-generated from doc/readme/src/* via bin/build-readme.",
+        "role_effective_seq": {
+          "normal": 1,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "1*",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "OUTLINE.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Repo-root OUTLINE.md. References component-level OUTLINEs.",
+        "role_effective_seq": {
+          "normal": 5,
+          "de-novo-auditor": 2,
+          "naming-voter": 4
+        }
+      },
+      "role_cells": {
+        "normal": "5*",
+        "de-novo-auditor": "2*",
+        "naming-voter": "4*"
+      }
+    },
+    {
+      "path": "doc/naming-principles.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Naming-principles file. Categories, criteria, weight scale.",
+        "role_effective_seq": {
+          "normal": 101,
+          "de-novo-auditor": null,
+          "naming-voter": 2
+        }
+      },
+      "role_cells": {
+        "normal": "101",
+        "de-novo-auditor": "—",
+        "naming-voter": "2*"
+      }
+    },
+    {
+      "path": "01-aad-core/OUTLINE.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "AAD core outline (Sections I, II, III + Appendices).",
+        "role_effective_seq": {
+          "normal": 10,
+          "de-novo-auditor": 3,
+          "naming-voter": 5
+        }
+      },
+      "role_cells": {
+        "normal": "+*",
+        "de-novo-auditor": "3*",
+        "naming-voter": "5*"
+      }
+    },
+    {
+      "path": "FINDINGS.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Curated novel-results catalog. Auto-generated from segment-level\n## Findings sections.",
+        "role_effective_seq": {
+          "normal": 3,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "3",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "doc/naming-cycle-methodology.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "How to walk a naming cycle. Tracker mechanics, failure modes, stopping\nrules.",
+        "role_effective_seq": {
+          "normal": 102,
+          "de-novo-auditor": null,
+          "naming-voter": 3
+        }
+      },
+      "role_cells": {
+        "normal": "102",
+        "de-novo-auditor": "—",
+        "naming-voter": "3*"
+      }
+    },
+    {
+      "path": "02-tst-core/OUTLINE.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "TST outline (software-domain instantiation).",
+        "role_effective_seq": {
+          "normal": 10,
+          "de-novo-auditor": 4,
+          "naming-voter": 6
+        }
+      },
+      "role_cells": {
+        "normal": "+*",
+        "de-novo-auditor": "4*",
+        "naming-voter": "6*"
+      }
+    },
+    {
+      "path": "CLAUDE.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Agent-onboarding context. Trimmed of architectural detail to avoid priming\nde-novo audits; auditor-safe to read.",
+        "role_effective_seq": {
+          "normal": 4,
+          "de-novo-auditor": 8,
+          "naming-voter": 10
+        }
+      },
+      "role_cells": {
+        "normal": "4*",
+        "de-novo-auditor": "+*",
+        "naming-voter": "+*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/OUTLINE.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Logogenic-agent framework outline.",
+        "role_effective_seq": {
+          "normal": 10,
+          "de-novo-auditor": 5,
+          "naming-voter": 7
+        }
+      },
+      "role_cells": {
+        "normal": "+*",
+        "de-novo-auditor": "5*",
+        "naming-voter": "7*"
+      }
+    },
+    {
+      "path": "04-logozoetic-agents/OUTLINE.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Logozoetic-agent framework outline.",
+        "role_effective_seq": {
+          "normal": 10,
+          "de-novo-auditor": 6,
+          "naming-voter": 8
+        }
+      },
+      "role_cells": {
+        "normal": "+*",
+        "de-novo-auditor": "6*",
+        "naming-voter": "8*"
+      }
+    },
+    {
+      "path": "PRACTICA.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Strategic-portfolio navigator. Auditor-safe (auditor reads it; auditor must\nNOT follow links from it into TODO/PROPOSALS/CHANGELOG until §7 Phase-2).",
+        "role_effective_seq": {
+          "normal": 6,
+          "de-novo-auditor": 8,
+          "naming-voter": 10
+        }
+      },
+      "role_cells": {
+        "normal": "6*",
+        "de-novo-auditor": "+*",
+        "naming-voter": "+*"
+      }
+    },
+    {
+      "path": "LEXICON.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Prose vocabulary. Cycle phases, agent classes, key terms.",
+        "role_effective_seq": {
+          "normal": 9,
+          "de-novo-auditor": 7,
+          "naming-voter": 9
+        }
+      },
+      "role_cells": {
+        "normal": "+*",
+        "de-novo-auditor": "+*",
+        "naming-voter": "+*"
+      }
+    },
+    {
+      "path": "NOTATION.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Symbol reference. All math notation defined here.",
+        "role_effective_seq": {
+          "normal": 9,
+          "de-novo-auditor": 7,
+          "naming-voter": 9
+        }
+      },
+      "role_cells": {
+        "normal": "+*",
+        "de-novo-auditor": "+*",
+        "naming-voter": "+*"
+      }
+    },
+    {
+      "path": "TODO.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Tactical work items. Pending findings, deferrals, naming pipeline.",
+        "role_effective_seq": {
+          "normal": 7,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "7*",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "FORMAT.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Segment file conventions. Frontmatter, document cadence, math formatting,\ncross-references, equation-level tags.",
+        "role_effective_seq": {
+          "normal": 9,
+          "de-novo-auditor": 8,
+          "naming-voter": 10
+        }
+      },
+      "role_cells": {
+        "normal": "+*",
+        "de-novo-auditor": "+*",
+        "naming-voter": "+*"
+      }
+    },
+    {
+      "path": "MIGRATION-MAP.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "TFT → AAD and TST → AAD absorption tracking. Live while old-* files\nremain in component src/.",
+        "role_effective_seq": {
+          "normal": 50,
+          "de-novo-auditor": 8,
+          "naming-voter": 10
+        }
+      },
+      "role_cells": {
+        "normal": "+",
+        "de-novo-auditor": "+",
+        "naming-voter": "+"
+      }
+    },
+    {
+      "path": "PROPOSALS.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Architectural-proposal portfolio. Banded structural moves under review.",
+        "role_effective_seq": {
+          "normal": 8,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "8*",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "CHANGELOG.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Forward-going cycle narrative (2026-04-24 onward).",
+        "role_effective_seq": {
+          "normal": 50,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "+",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "HISTORICAL-CONTEXT.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Long-form positioning. Active-inference, Hafez, Miller, IBM comparisons.",
+        "role_effective_seq": {
+          "normal": 50,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "+",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "LOG.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Pre-2026-04-24 cycle archaeology (frozen).",
+        "role_effective_seq": {
+          "normal": 50,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "+",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "ref/INDEX.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "External reference catalogue.",
+        "role_effective_seq": {
+          "normal": 60,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "+",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "spikes/INDEX.md",
+      "kind": "top-level",
+      "extra": {
+        "notes": "Spike index. Every spike with status (promoted, parked, archaeology).",
+        "role_effective_seq": {
+          "normal": 60,
+          "de-novo-auditor": null,
+          "naming-voter": null
+        }
+      },
+      "role_cells": {
+        "normal": "+",
+        "de-novo-auditor": "—",
+        "naming-voter": "—"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-agent-environment.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-agent-environment",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+
+        ]
+      },
+      "role_cells": {
+        "normal": "1*",
+        "de-novo-auditor": "1*",
+        "naming-voter": "1*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-action-transition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-action-transition",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-environment"
+        ]
+      },
+      "role_cells": {
+        "normal": "2*",
+        "de-novo-auditor": "2*",
+        "naming-voter": "2*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-observation-function.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-observation-function",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-environment",
+          "def-action-transition"
+        ]
+      },
+      "role_cells": {
+        "normal": "3*",
+        "de-novo-auditor": "3*",
+        "naming-voter": "3*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-chronica.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-chronica",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-environment",
+          "def-observation-function",
+          "def-action-transition"
+        ]
+      },
+      "role_cells": {
+        "normal": "4*",
+        "de-novo-auditor": "4*",
+        "naming-voter": "4*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-adaptive-system.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-adaptive-system",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "scope",
+        "status": "axiomatic",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-environment",
+          "def-observation-function",
+          "def-chronica"
+        ]
+      },
+      "role_cells": {
+        "normal": "5*",
+        "de-novo-auditor": "5*",
+        "naming-voter": "5*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-agency.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-agency",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "scope",
+        "status": "axiomatic",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-adaptive-system",
+          "def-action-transition"
+        ]
+      },
+      "role_cells": {
+        "normal": "6*",
+        "de-novo-auditor": "6*",
+        "naming-voter": "6*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/post-composition-consistency.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "post-composition-consistency",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "postulate",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agency"
+        ]
+      },
+      "role_cells": {
+        "normal": "7*",
+        "de-novo-auditor": "7*",
+        "naming-voter": "7*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/post-causal-structure.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "post-causal-structure",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "postulate",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-environment",
+          "def-chronica"
+        ]
+      },
+      "role_cells": {
+        "normal": "8*",
+        "de-novo-auditor": "8*",
+        "naming-voter": "8*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-pearl-causal-hierarchy.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-pearl-causal-hierarchy",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "post-causal-structure",
+          "scope-agency"
+        ]
+      },
+      "role_cells": {
+        "normal": "9*",
+        "de-novo-auditor": "9*",
+        "naming-voter": "9*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-agent-model.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-agent-model",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "formulation",
+        "status": "robust-qualitative",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-environment",
+          "def-observation-function",
+          "def-chronica"
+        ]
+      },
+      "role_cells": {
+        "normal": "10*",
+        "de-novo-auditor": "10*",
+        "naming-voter": "10*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-information-bottleneck.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-information-bottleneck",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "formulation",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-agent-model",
+          "def-action-transition"
+        ]
+      },
+      "role_cells": {
+        "normal": "11*",
+        "de-novo-auditor": "11*",
+        "naming-voter": "11*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-model-sufficiency.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-model-sufficiency",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-agent-model",
+          "form-information-bottleneck",
+          "def-action-transition"
+        ]
+      },
+      "role_cells": {
+        "normal": "12*",
+        "de-novo-auditor": "12*",
+        "naming-voter": "12*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-model-class-fitness.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-model-class-fitness",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-model-sufficiency"
+        ]
+      },
+      "role_cells": {
+        "normal": "13*",
+        "de-novo-auditor": "13*",
+        "naming-voter": "13*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-event-driven-dynamics.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-event-driven-dynamics",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "formulation",
+        "status": "robust-qualitative",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "post-causal-structure",
+          "def-observation-function",
+          "def-action-transition",
+          "form-agent-model"
+        ]
+      },
+      "role_cells": {
+        "normal": "14*",
+        "de-novo-auditor": "14*",
+        "naming-voter": "14*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-recursive-update.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-recursive-update",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-agent-model",
+          "form-event-driven-dynamics",
+          "deriv-recursive-update"
+        ]
+      },
+      "role_cells": {
+        "normal": "15*",
+        "de-novo-auditor": "15*",
+        "naming-voter": "15*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-recursive-update.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-recursive-update",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "der-recursive-update",
+        "orphan": null,
+        "depends": [
+          "form-agent-model",
+          "form-event-driven-dynamics",
+          "post-causal-structure",
+          "scope-adaptive-system",
+          "def-observation-function"
+        ]
+      },
+      "role_cells": {
+        "normal": "16*[a]",
+        "de-novo-auditor": "16*[a]",
+        "naming-voter": "16*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-action-selection.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-action-selection",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "derived",
+        "status": "exact",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-agent-model",
+          "der-recursive-update"
+        ]
+      },
+      "role_cells": {
+        "normal": "17*",
+        "de-novo-auditor": "17*",
+        "naming-voter": "17*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-mismatch-signal.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-mismatch-signal",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-agent-model",
+          "def-observation-function",
+          "def-action-transition"
+        ]
+      },
+      "role_cells": {
+        "normal": "18*",
+        "de-novo-auditor": "18*",
+        "naming-voter": "18*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-mismatch-decomposition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-mismatch-decomposition",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "result",
+        "status": "exact",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-mismatch-signal",
+          "def-observation-function",
+          "def-action-transition",
+          "form-agent-model",
+          "scope-adaptive-system"
+        ]
+      },
+      "role_cells": {
+        "normal": "19*",
+        "de-novo-auditor": "19*",
+        "naming-voter": "19*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/emp-update-gain.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "emp-update-gain",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "empirical",
+        "status": "robust-qualitative",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-mismatch-signal",
+          "def-observation-function"
+        ]
+      },
+      "role_cells": {
+        "normal": "20*",
+        "de-novo-auditor": "20*",
+        "naming-voter": "20*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-causal-information-yield.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-causal-information-yield",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "exact",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-pearl-causal-hierarchy",
+          "der-action-selection",
+          "def-mismatch-signal"
+        ]
+      },
+      "role_cells": {
+        "normal": "21*",
+        "de-novo-auditor": "21*",
+        "naming-voter": "21*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-adaptive-tempo.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-adaptive-tempo",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "definition",
+        "status": "exact",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "emp-update-gain",
+          "form-event-driven-dynamics"
+        ]
+      },
+      "role_cells": {
+        "normal": "22*",
+        "de-novo-auditor": "22*",
+        "naming-voter": "22*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/hyp-mismatch-dynamics.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-mismatch-dynamics",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "hypothesis",
+        "status": "heuristic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-adaptive-tempo",
+          "def-mismatch-signal",
+          "deriv-sector-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "23*",
+        "de-novo-auditor": "23*",
+        "naming-voter": "23*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-sector-condition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-sector-condition",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "hyp-mismatch-dynamics",
+        "orphan": null,
+        "depends": [
+          "def-adaptive-tempo",
+          "def-mismatch-signal"
+        ]
+      },
+      "role_cells": {
+        "normal": "24*[a]",
+        "de-novo-auditor": "24*[a]",
+        "naming-voter": "24*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-deliberation-cost.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-deliberation-cost",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-action-selection",
+          "emp-update-gain",
+          "def-adaptive-tempo",
+          "form-event-driven-dynamics"
+        ]
+      },
+      "role_cells": {
+        "normal": "25*",
+        "de-novo-auditor": "25*",
+        "naming-voter": "25*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-gain-sector-bridge.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-gain-sector-bridge",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "emp-update-gain",
+          "def-mismatch-signal",
+          "deriv-sector-condition",
+          "deriv-gain-sector"
+        ]
+      },
+      "role_cells": {
+        "normal": "26*",
+        "de-novo-auditor": "26*",
+        "naming-voter": "26*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-gain-sector.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-gain-sector",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "deps-verified",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "der-gain-sector-bridge",
+        "orphan": null,
+        "depends": [
+          "emp-update-gain",
+          "deriv-sector-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "27*[a]",
+        "de-novo-auditor": "27*[a]",
+        "naming-voter": "27*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-sector-condition-stability.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-sector-condition-stability",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "result",
+        "status": "exact",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-adaptive-tempo",
+          "def-mismatch-signal",
+          "deriv-sector-condition",
+          "result-sector-persistence-template"
+        ]
+      },
+      "role_cells": {
+        "normal": "28*",
+        "de-novo-auditor": "28*",
+        "naming-voter": "28*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-sector-persistence-template.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-sector-persistence-template",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "result",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "result-sector-condition-stability",
+        "orphan": null,
+        "depends": [
+          "deriv-sector-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "29*[a]",
+        "de-novo-auditor": "29*[a]",
+        "naming-voter": "29*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-persistence-condition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-persistence-condition",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "result",
+        "status": "exact",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-adaptive-tempo",
+          "def-mismatch-signal",
+          "result-sector-condition-stability",
+          "result-sector-persistence-template"
+        ]
+      },
+      "role_cells": {
+        "normal": "30*",
+        "de-novo-auditor": "30*",
+        "naming-voter": "30*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-structural-adaptation-necessity.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-structural-adaptation-necessity",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "result",
+        "status": "conditional",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-model-sufficiency",
+          "def-model-class-fitness",
+          "result-mismatch-decomposition",
+          "emp-update-gain"
+        ]
+      },
+      "role_cells": {
+        "normal": "31*",
+        "de-novo-auditor": "31*",
+        "naming-voter": "31*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-temporal-nesting.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-temporal-nesting",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "derived",
+        "status": "robust-qualitative",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-adaptive-tempo",
+          "result-structural-adaptation-necessity"
+        ]
+      },
+      "role_cells": {
+        "normal": "32*",
+        "de-novo-auditor": "32*",
+        "naming-voter": "32*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-agent-identity.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-agent-identity",
+        "component": "01-aad-core",
+        "section": "I",
+        "type": "scope",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-chronica",
+          "def-model-sufficiency"
+        ]
+      },
+      "role_cells": {
+        "normal": "33*",
+        "de-novo-auditor": "33*",
+        "naming-voter": "33*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-agent-spectrum.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-agent-spectrum",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-environment",
+          "form-agent-model"
+        ]
+      },
+      "role_cells": {
+        "normal": "34*",
+        "de-novo-auditor": "34*",
+        "naming-voter": "34*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-complete-agent-state.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-complete-agent-state",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "formulation",
+        "status": "robust-qualitative",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-agent-model",
+          "scope-agency",
+          "der-recursive-update"
+        ]
+      },
+      "role_cells": {
+        "normal": "35*",
+        "de-novo-auditor": "35*",
+        "naming-voter": "35*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-directed-separation.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-directed-separation",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-complete-agent-state",
+          "der-recursive-update",
+          "scope-agency"
+        ]
+      },
+      "role_cells": {
+        "normal": "36*",
+        "de-novo-auditor": "36*",
+        "naming-voter": "36*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-objective-functional.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-objective-functional",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "formulation",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-complete-agent-state"
+        ]
+      },
+      "role_cells": {
+        "normal": "37*",
+        "de-novo-auditor": "37*",
+        "naming-voter": "37*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-value-object.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-value-object",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "exact",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-objective-functional",
+          "form-agent-model",
+          "der-directed-separation",
+          "def-model-sufficiency"
+        ]
+      },
+      "role_cells": {
+        "normal": "38*",
+        "de-novo-auditor": "38*",
+        "naming-voter": "38*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-strategy-dimension.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-strategy-dimension",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-complete-agent-state",
+          "form-objective-functional"
+        ]
+      },
+      "role_cells": {
+        "normal": "39*",
+        "de-novo-auditor": "39*",
+        "naming-voter": "39*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-causal-hierarchy-requirement.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-causal-hierarchy-requirement",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "derived",
+        "status": "exact",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-value-object",
+          "def-pearl-causal-hierarchy",
+          "scope-agency"
+        ]
+      },
+      "role_cells": {
+        "normal": "40*",
+        "de-novo-auditor": "40*",
+        "naming-voter": "40*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-loop-interventional-access.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-loop-interventional-access",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "derived",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-causal-hierarchy-requirement",
+          "der-recursive-update",
+          "post-causal-structure",
+          "scope-agent-identity"
+        ]
+      },
+      "role_cells": {
+        "normal": "41*",
+        "de-novo-auditor": "41*",
+        "naming-voter": "41*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-ciy-observational-proxy.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-ciy-observational-proxy",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "scope",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-causal-information-yield",
+          "der-loop-interventional-access"
+        ]
+      },
+      "role_cells": {
+        "normal": "42*",
+        "de-novo-auditor": "42*",
+        "naming-voter": "42*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-ciy-unified-objective.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-ciy-unified-objective",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "discussion",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-causal-information-yield",
+          "scope-ciy-observational-proxy",
+          "def-value-object",
+          "der-action-selection"
+        ]
+      },
+      "role_cells": {
+        "normal": "43*",
+        "de-novo-auditor": "43*",
+        "naming-voter": "43*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/norm-explicit-strategy-condition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "norm-explicit-strategy-condition",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "normative",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dimension",
+          "der-causal-hierarchy-requirement"
+        ]
+      },
+      "role_cells": {
+        "normal": "44*",
+        "de-novo-auditor": "44*",
+        "naming-voter": "44*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-chain-confidence-decay.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-chain-confidence-decay",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "derived",
+        "status": "exact",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dimension"
+        ]
+      },
+      "role_cells": {
+        "normal": "45*",
+        "de-novo-auditor": "45*",
+        "naming-voter": "45*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-and-or.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-and-or",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "scope",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dimension",
+          "der-chain-confidence-decay"
+        ]
+      },
+      "role_cells": {
+        "normal": "46*",
+        "de-novo-auditor": "46*",
+        "naming-voter": "46*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-strategy-dag.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-strategy-dag",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-and-or",
+          "post-causal-structure",
+          "def-pearl-causal-hierarchy",
+          "form-objective-functional",
+          "def-strategy-dimension"
+        ]
+      },
+      "role_cells": {
+        "normal": "47*",
+        "de-novo-auditor": "47*",
+        "naming-voter": "47*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-satisfaction-gap.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-satisfaction-gap",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-value-object",
+          "form-objective-functional"
+        ]
+      },
+      "role_cells": {
+        "normal": "48*",
+        "de-novo-auditor": "48*",
+        "naming-voter": "48*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-control-regret.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-control-regret",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-value-object",
+          "def-satisfaction-gap"
+        ]
+      },
+      "role_cells": {
+        "normal": "49*",
+        "de-novo-auditor": "49*",
+        "naming-voter": "49*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-strategic-calibration.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-strategic-calibration",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "def-value-object"
+        ]
+      },
+      "role_cells": {
+        "normal": "50*",
+        "de-novo-auditor": "50*",
+        "naming-voter": "50*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-causal-insufficiency-detection.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-causal-insufficiency-detection",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-structural-adaptation-necessity",
+          "def-strategy-dag",
+          "der-loop-interventional-access",
+          "der-causal-hierarchy-requirement",
+          "def-pearl-causal-hierarchy",
+          "def-causal-information-yield"
+        ]
+      },
+      "role_cells": {
+        "normal": "51*",
+        "de-novo-auditor": "51*",
+        "naming-voter": "51*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-observability-dominance.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-observability-dominance",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "derived",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "emp-update-gain"
+        ]
+      },
+      "role_cells": {
+        "normal": "52*",
+        "de-novo-auditor": "52*",
+        "naming-voter": "52*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/hyp-edge-update-via-gain.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-edge-update-via-gain",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "hypothesis",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "emp-update-gain",
+          "def-mismatch-signal",
+          "deriv-edge-update-natural-parameter",
+          "der-chain-confidence-decay"
+        ]
+      },
+      "role_cells": {
+        "normal": "53*",
+        "de-novo-auditor": "53*",
+        "naming-voter": "53*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-edge-update-natural-parameter.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-edge-update-natural-parameter",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "hyp-edge-update-via-gain",
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "hyp-edge-update-via-gain",
+          "der-chain-confidence-decay",
+          "deriv-strategy-cost-regret-bound"
+        ]
+      },
+      "role_cells": {
+        "normal": "54*[a]",
+        "de-novo-auditor": "54*[a]",
+        "naming-voter": "54*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-edge-update-causal-validity.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-edge-update-causal-validity",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "scope",
+        "status": "conditional",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "hyp-edge-update-via-gain",
+          "def-causal-information-yield",
+          "der-loop-interventional-access",
+          "def-strategic-calibration",
+          "def-strategy-dag"
+        ]
+      },
+      "role_cells": {
+        "normal": "55*",
+        "de-novo-auditor": "55*",
+        "naming-voter": "55*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-credit-assignment-boundary.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-credit-assignment-boundary",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "discussion",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "hyp-edge-update-via-gain",
+          "deriv-edge-update-natural-parameter",
+          "def-strategic-calibration",
+          "der-observability-dominance",
+          "der-gain-sector-bridge",
+          "deriv-strategic-dynamics"
+        ]
+      },
+      "role_cells": {
+        "normal": "56*",
+        "de-novo-auditor": "56*",
+        "naming-voter": "56*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-strategic-dynamics.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-strategic-dynamics",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "disc-credit-assignment-boundary",
+        "orphan": null,
+        "depends": [
+          "schema-strategy-persistence",
+          "hyp-edge-update-via-gain",
+          "deriv-sector-condition",
+          "scope-and-or"
+        ]
+      },
+      "role_cells": {
+        "normal": "57*[a]",
+        "de-novo-auditor": "57*[a]",
+        "naming-voter": "57*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-structural-change-as-parametric-limit.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-structural-change-as-parametric-limit",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "formulation",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "result-structural-adaptation-necessity"
+        ]
+      },
+      "role_cells": {
+        "normal": "58*",
+        "de-novo-auditor": "58*",
+        "naming-voter": "58*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-strategic-tempo.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-strategic-tempo",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "definition",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-adaptive-tempo",
+          "hyp-edge-update-via-gain",
+          "def-strategy-dag",
+          "scope-edge-update-causal-validity",
+          "deriv-strategic-dynamics"
+        ]
+      },
+      "role_cells": {
+        "normal": "59*",
+        "de-novo-auditor": "59*",
+        "naming-voter": "59*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-strategy-complexity-cost.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-strategy-complexity-cost",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "formulation",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategic-tempo",
+          "form-information-bottleneck",
+          "norm-explicit-strategy-condition",
+          "der-chain-confidence-decay",
+          "form-structural-change-as-parametric-limit",
+          "def-value-object",
+          "form-objective-functional"
+        ]
+      },
+      "role_cells": {
+        "normal": "60*",
+        "de-novo-auditor": "60*",
+        "naming-voter": "60*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/schema-strategy-persistence.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "schema-strategy-persistence",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "proposed-schema",
+        "status": "sketch",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-sector-condition-stability",
+          "result-sector-persistence-template",
+          "def-strategic-calibration",
+          "def-strategy-dag"
+        ]
+      },
+      "role_cells": {
+        "normal": "61*",
+        "de-novo-auditor": "61*",
+        "naming-voter": "61*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-consolidation-dynamics.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-consolidation-dynamics",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "formulation",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-recursive-update",
+          "deriv-recursive-update",
+          "form-event-driven-dynamics",
+          "der-temporal-nesting",
+          "form-information-bottleneck",
+          "disc-compression-operations",
+          "result-structural-adaptation-necessity",
+          "schema-strategy-persistence",
+          "form-structural-change-as-parametric-limit"
+        ]
+      },
+      "role_cells": {
+        "normal": "62*",
+        "de-novo-auditor": "62*",
+        "naming-voter": "62*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-compression-operations.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-compression-operations",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "discussion",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "form-consolidation-dynamics",
+        "orphan": null,
+        "depends": [
+          "form-information-bottleneck",
+          "form-strategy-complexity-cost",
+          "def-shared-intent",
+          "form-composition-closure",
+          "def-chronica"
+        ]
+      },
+      "role_cells": {
+        "normal": "63*[a]",
+        "de-novo-auditor": "63*[a]",
+        "naming-voter": "63*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-orient-cascade.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-orient-cascade",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "claims-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-directed-separation",
+          "def-mismatch-signal",
+          "emp-update-gain",
+          "def-satisfaction-gap",
+          "def-control-regret",
+          "def-strategic-calibration",
+          "def-strategy-dag",
+          "schema-strategy-persistence",
+          "deriv-strategic-dynamics",
+          "disc-credit-assignment-boundary",
+          "der-causal-insufficiency-detection",
+          "def-value-object"
+        ]
+      },
+      "role_cells": {
+        "normal": "64*",
+        "de-novo-auditor": "64*",
+        "naming-voter": "64*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-exploit-explore-deliberate.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-exploit-explore-deliberate",
+        "component": "01-aad-core",
+        "section": "II",
+        "type": "discussion",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "disc-ciy-unified-objective",
+          "der-deliberation-cost",
+          "norm-explicit-strategy-condition",
+          "der-orient-cascade",
+          "def-control-regret"
+        ]
+      },
+      "role_cells": {
+        "normal": "65*",
+        "de-novo-auditor": "65*",
+        "naming-voter": "65*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-multi-agent.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-multi-agent",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "scope",
+        "status": "axiomatic",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agency",
+          "post-composition-consistency"
+        ]
+      },
+      "role_cells": {
+        "normal": "66*",
+        "de-novo-auditor": "66*",
+        "naming-voter": "66*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/scope-composite-agent.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-composite-agent",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "scope",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agency",
+          "scope-multi-agent",
+          "form-objective-functional"
+        ]
+      },
+      "role_cells": {
+        "normal": "67*",
+        "de-novo-auditor": "67*",
+        "naming-voter": "67*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/hyp-symbiogenic-composition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-symbiogenic-composition",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "hypothesis",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-composite-agent",
+          "form-objective-functional",
+          "def-strategy-dimension",
+          "form-structural-change-as-parametric-limit"
+        ]
+      },
+      "role_cells": {
+        "normal": "68*",
+        "de-novo-auditor": "68*",
+        "naming-voter": "68*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/form-composition-closure.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "form-composition-closure",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "formulation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "post-composition-consistency",
+          "scope-composite-agent",
+          "scope-multi-agent",
+          "def-agent-environment",
+          "form-event-driven-dynamics",
+          "result-sector-condition-stability",
+          "deriv-sector-condition",
+          "result-sector-persistence-template",
+          "result-persistence-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "69*",
+        "de-novo-auditor": "69*",
+        "naming-voter": "69*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-tempo-composition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-tempo-composition",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "derived",
+        "status": "sketch",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-composition-closure",
+          "result-sector-persistence-template",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "70*",
+        "de-novo-auditor": "70*",
+        "naming-voter": "70*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/hyp-directed-separation-under-composition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-directed-separation-under-composition",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "hypothesis",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-directed-separation",
+          "scope-multi-agent",
+          "form-composition-closure"
+        ]
+      },
+      "role_cells": {
+        "normal": "71*",
+        "de-novo-auditor": "71*",
+        "naming-voter": "71*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-unity-dimensions.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-unity-dimensions",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "definition",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-multi-agent",
+          "form-composition-closure",
+          "form-agent-model",
+          "def-strategy-dimension"
+        ]
+      },
+      "role_cells": {
+        "normal": "72*",
+        "de-novo-auditor": "72*",
+        "naming-voter": "72*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-unity-closure-mapping.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-unity-closure-mapping",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "result",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-unity-dimensions",
+          "form-composition-closure",
+          "form-information-bottleneck"
+        ]
+      },
+      "role_cells": {
+        "normal": "73*",
+        "de-novo-auditor": "73*",
+        "naming-voter": "73*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/def-shared-intent.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-shared-intent",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "definition",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-unity-dimensions",
+          "form-information-bottleneck",
+          "form-objective-functional"
+        ]
+      },
+      "role_cells": {
+        "normal": "74*",
+        "de-novo-auditor": "74*",
+        "naming-voter": "74*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/hyp-auftragstaktik-principle.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-auftragstaktik-principle",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "hypothesis",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-shared-intent",
+          "def-unity-dimensions",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "75*",
+        "de-novo-auditor": "75*",
+        "naming-voter": "75*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/hyp-communication-gain.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-communication-gain",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "hypothesis",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "emp-update-gain",
+          "scope-multi-agent"
+        ]
+      },
+      "role_cells": {
+        "normal": "76*",
+        "de-novo-auditor": "76*",
+        "naming-voter": "76*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-team-persistence.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-team-persistence",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-persistence-condition",
+          "result-sector-condition-stability",
+          "result-sector-persistence-template",
+          "hyp-communication-gain",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "77*",
+        "de-novo-auditor": "77*",
+        "naming-voter": "77*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-adversarial-destabilization.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-adversarial-destabilization",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-sector-condition-stability",
+          "deriv-sector-condition",
+          "result-sector-persistence-template",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "78*",
+        "de-novo-auditor": "78*",
+        "naming-voter": "78*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-interaction-channel-classification.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-interaction-channel-classification",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-observation-function",
+          "def-mismatch-signal",
+          "result-mismatch-decomposition",
+          "emp-update-gain",
+          "def-adaptive-tempo",
+          "def-model-class-fitness",
+          "result-structural-adaptation-necessity",
+          "result-persistence-condition",
+          "result-sector-persistence-template",
+          "der-adversarial-destabilization",
+          "der-directed-separation",
+          "disc-credit-assignment-boundary"
+        ]
+      },
+      "role_cells": {
+        "normal": "79*",
+        "de-novo-auditor": "79*",
+        "naming-voter": "79*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-adversarial-tempo-advantage.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-adversarial-tempo-advantage",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "result",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "hyp-mismatch-dynamics",
+          "der-adversarial-destabilization",
+          "result-persistence-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "80*",
+        "de-novo-auditor": "80*",
+        "naming-voter": "80*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-strategic-composition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-strategic-composition",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "post-composition-consistency",
+          "scope-composite-agent",
+          "result-sector-persistence-template",
+          "form-objective-functional",
+          "der-adversarial-destabilization",
+          "der-team-persistence",
+          "deriv-critical-mass-composition",
+          "der-directed-separation",
+          "scope-agent-identity"
+        ]
+      },
+      "role_cells": {
+        "normal": "81*",
+        "de-novo-auditor": "81*",
+        "naming-voter": "81*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-critical-mass-composition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-critical-mass-composition",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "deriv-strategic-composition",
+        "orphan": null,
+        "depends": [
+          "form-composition-closure",
+          "scope-composite-agent",
+          "result-sector-persistence-template",
+          "deriv-sector-condition",
+          "der-team-persistence",
+          "der-adversarial-destabilization",
+          "hyp-symbiogenic-composition",
+          "result-unity-closure-mapping"
+        ]
+      },
+      "role_cells": {
+        "normal": "82*[a]",
+        "de-novo-auditor": "82*[a]",
+        "naming-voter": "82*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/der-agent-opacity.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-agent-opacity",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agent-identity",
+          "der-interaction-channel-classification",
+          "der-adversarial-destabilization",
+          "result-adversarial-tempo-advantage",
+          "der-team-persistence",
+          "der-directed-separation",
+          "disc-identifiability-floor"
+        ]
+      },
+      "role_cells": {
+        "normal": "83*",
+        "de-novo-auditor": "83*",
+        "naming-voter": "83*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-identifiability-floor.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-identifiability-floor",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "discussion",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": true,
+        "hoisted_after": "der-agent-opacity",
+        "orphan": null,
+        "depends": [
+          "der-causal-insufficiency-detection",
+          "deriv-strategic-dynamics",
+          "der-causal-hierarchy-requirement",
+          "der-loop-interventional-access"
+        ]
+      },
+      "role_cells": {
+        "normal": "84*[a]",
+        "de-novo-auditor": "84*[a]",
+        "naming-voter": "84*[a]"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-adversarial-exponent-regimes.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-adversarial-exponent-regimes",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "result",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-adversarial-destabilization",
+          "result-adversarial-tempo-advantage",
+          "def-adaptive-tempo",
+          "result-persistence-condition",
+          "deriv-sector-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "85*",
+        "de-novo-auditor": "85*",
+        "naming-voter": "85*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/obs-gates-advantage.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "obs-gates-advantage",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "observation",
+        "status": "empirical",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-adversarial-destabilization",
+          "emp-update-gain",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "86*",
+        "de-novo-auditor": "86*",
+        "naming-voter": "86*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-per-dimension-persistence.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-per-dimension-persistence",
+        "component": "01-aad-core",
+        "section": "III",
+        "type": "result",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-persistence-condition",
+          "def-adaptive-tempo",
+          "deriv-sector-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "87*",
+        "de-novo-auditor": "87*",
+        "naming-voter": "87*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-persistence-cost.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-persistence-cost",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-persistence-condition",
+          "result-sector-condition-stability",
+          "deriv-sector-condition",
+          "result-sector-persistence-template",
+          "def-adaptive-tempo",
+          "emp-update-gain",
+          "der-gain-sector-bridge",
+          "def-model-class-fitness"
+        ]
+      },
+      "role_cells": {
+        "normal": "88*",
+        "de-novo-auditor": "88*",
+        "naming-voter": "88*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/sketch-multi-timescale-stability.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "sketch-multi-timescale-stability",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "sketch",
+        "status": "sketch",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-sector-condition-stability",
+          "der-temporal-nesting"
+        ]
+      },
+      "role_cells": {
+        "normal": "89*",
+        "de-novo-auditor": "89*",
+        "naming-voter": "89*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-discrete-sector-condition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-discrete-sector-condition",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "deriv-sector-condition",
+          "emp-update-gain",
+          "der-gain-sector-bridge",
+          "form-event-driven-dynamics"
+        ]
+      },
+      "role_cells": {
+        "normal": "90*",
+        "de-novo-auditor": "90*",
+        "naming-voter": "90*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/detail-linear-ode-approximation.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "detail-linear-ode-approximation",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "detail",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "hyp-mismatch-dynamics",
+          "def-adaptive-tempo",
+          "result-sector-condition-stability",
+          "deriv-sector-condition",
+          "deriv-discrete-sector-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "91*",
+        "de-novo-auditor": "91*",
+        "naming-voter": "91*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-graph-structure-uniqueness.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-graph-structure-uniqueness",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "claims-verified",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "der-chain-confidence-decay",
+          "norm-explicit-strategy-condition",
+          "post-causal-structure"
+        ]
+      },
+      "role_cells": {
+        "normal": "92*",
+        "de-novo-auditor": "92*",
+        "naming-voter": "92*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-strategy-cost-regret-bound.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-strategy-cost-regret-bound",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "form-strategy-complexity-cost",
+          "def-value-object",
+          "form-objective-functional",
+          "der-chain-confidence-decay",
+          "def-strategy-dag"
+        ]
+      },
+      "role_cells": {
+        "normal": "93*",
+        "de-novo-auditor": "93*",
+        "naming-voter": "93*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-adaptive-gain-dynamics.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-adaptive-gain-dynamics",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "emp-update-gain",
+          "der-gain-sector-bridge",
+          "deriv-gain-sector",
+          "deriv-sector-condition",
+          "result-sector-condition-stability",
+          "result-sector-persistence-template",
+          "der-recursive-update"
+        ]
+      },
+      "role_cells": {
+        "normal": "94*",
+        "de-novo-auditor": "94*",
+        "naming-voter": "94*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/internal-external-decomposition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "internal-external-decomposition",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-persistence-condition",
+          "hyp-mismatch-dynamics",
+          "def-adaptive-tempo",
+          "scope-edge-update-causal-validity"
+        ]
+      },
+      "role_cells": {
+        "normal": "95*",
+        "de-novo-auditor": "95*",
+        "naming-voter": "95*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-detection-latency.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-detection-latency",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "deriv-edge-update-natural-parameter",
+          "disc-credit-assignment-boundary",
+          "schema-strategy-persistence",
+          "deriv-strategic-dynamics"
+        ]
+      },
+      "role_cells": {
+        "normal": "96*",
+        "de-novo-auditor": "96*",
+        "naming-voter": "96*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-independence-audit.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-independence-audit",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "discussion",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-directed-separation",
+          "def-strategy-dag",
+          "def-adaptive-tempo",
+          "def-unity-dimensions",
+          "result-per-dimension-persistence",
+          "deriv-graph-structure-uniqueness"
+        ]
+      },
+      "role_cells": {
+        "normal": "97*",
+        "de-novo-auditor": "97*",
+        "naming-voter": "97*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-approximation-tiering.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-approximation-tiering",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "discussion",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "def-value-object",
+          "form-composition-closure"
+        ]
+      },
+      "role_cells": {
+        "normal": "98*",
+        "de-novo-auditor": "98*",
+        "naming-voter": "98*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-separability-pattern.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-separability-pattern",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "discussion",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "def-value-object",
+          "der-directed-separation",
+          "form-composition-closure",
+          "scope-edge-update-causal-validity",
+          "def-agent-spectrum",
+          "disc-approximation-tiering",
+          "disc-identifiability-floor"
+        ]
+      },
+      "role_cells": {
+        "normal": "99*",
+        "de-novo-auditor": "99*",
+        "naming-voter": "99*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/disc-additive-coordinate-forcing.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-additive-coordinate-forcing",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "discussion",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-chain-confidence-decay",
+          "deriv-strategy-cost-regret-bound",
+          "deriv-edge-update-natural-parameter"
+        ]
+      },
+      "role_cells": {
+        "normal": "100*",
+        "de-novo-auditor": "100*",
+        "naming-voter": "100*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/result-contraction-template.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-contraction-template",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "result",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-sector-persistence-template",
+          "deriv-sector-condition",
+          "der-gain-sector-bridge",
+          "form-composition-closure",
+          "deriv-critical-mass-composition",
+          "disc-separability-pattern"
+        ]
+      },
+      "role_cells": {
+        "normal": "101*",
+        "de-novo-auditor": "101*",
+        "naming-voter": "101*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-variational-sector-condition.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-variational-sector-condition",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "deriv-sector-condition",
+          "result-sector-persistence-template",
+          "der-gain-sector-bridge",
+          "form-strategy-complexity-cost",
+          "disc-compression-operations"
+        ]
+      },
+      "role_cells": {
+        "normal": "102*",
+        "de-novo-auditor": "102*",
+        "naming-voter": "102*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-l1-update-bias.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-l1-update-bias",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "disc-credit-assignment-boundary",
+          "deriv-edge-update-natural-parameter",
+          "deriv-strategic-dynamics",
+          "disc-identifiability-floor",
+          "schema-strategy-persistence"
+        ]
+      },
+      "role_cells": {
+        "normal": "103*",
+        "de-novo-auditor": "103*",
+        "naming-voter": "103*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-fisher-whitened-update-rule.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-fisher-whitened-update-rule",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "disc-credit-assignment-boundary",
+          "deriv-edge-update-natural-parameter",
+          "der-gain-sector-bridge",
+          "disc-additive-coordinate-forcing",
+          "scope-agent-identity"
+        ]
+      },
+      "role_cells": {
+        "normal": "104*",
+        "de-novo-auditor": "104*",
+        "naming-voter": "104*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-causal-ib-exploration.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-causal-ib-exploration",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "disc-ciy-unified-objective",
+          "form-information-bottleneck",
+          "def-pearl-causal-hierarchy",
+          "result-persistence-condition",
+          "def-mismatch-signal"
+        ]
+      },
+      "role_cells": {
+        "normal": "105*",
+        "de-novo-auditor": "105*",
+        "naming-voter": "105*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-causal-ib-lmi.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-causal-ib-lmi",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "deriv-causal-ib-exploration",
+          "form-information-bottleneck",
+          "def-pearl-causal-hierarchy",
+          "result-persistence-condition",
+          "deriv-fisher-whitened-update-rule",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "106*",
+        "de-novo-auditor": "106*",
+        "naming-voter": "106*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/deriv-bias-bound.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "deriv-bias-bound",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "derivation",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agent-identity",
+          "disc-additive-coordinate-forcing",
+          "der-directed-separation",
+          "form-information-bottleneck",
+          "disc-compression-operations"
+        ]
+      },
+      "role_cells": {
+        "normal": "107*",
+        "de-novo-auditor": "107*",
+        "naming-voter": "107*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/obs-simulation-results.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "obs-simulation-results",
+        "component": "01-aad-core",
+        "section": "A",
+        "type": "observation",
+        "status": "empirical",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "hyp-mismatch-dynamics",
+          "emp-update-gain",
+          "result-persistence-condition",
+          "result-sector-condition-stability",
+          "der-adversarial-destabilization"
+        ]
+      },
+      "role_cells": {
+        "normal": "108*",
+        "de-novo-auditor": "108*",
+        "naming-voter": "108*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/detail-operationalization.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "detail-operationalization",
+        "component": "01-aad-core",
+        "section": "B",
+        "type": "detail",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-mismatch-signal",
+          "emp-update-gain",
+          "def-adaptive-tempo",
+          "result-sector-condition-stability",
+          "result-persistence-condition",
+          "der-deliberation-cost",
+          "result-structural-adaptation-necessity"
+        ]
+      },
+      "role_cells": {
+        "normal": "109*",
+        "de-novo-auditor": "109*",
+        "naming-voter": "109*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/example-kalman.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "example-kalman",
+        "component": "01-aad-core",
+        "section": "B",
+        "type": "worked-example",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-adaptive-system",
+          "post-causal-structure",
+          "form-agent-model",
+          "def-mismatch-signal",
+          "emp-update-gain",
+          "def-causal-information-yield",
+          "der-deliberation-cost",
+          "result-structural-adaptation-necessity",
+          "def-adaptive-tempo",
+          "result-persistence-condition",
+          "result-sector-condition-stability",
+          "der-gain-sector-bridge"
+        ]
+      },
+      "role_cells": {
+        "normal": "110*",
+        "de-novo-auditor": "110*",
+        "naming-voter": "110*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/example-bandit.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "example-bandit",
+        "component": "01-aad-core",
+        "section": "B",
+        "type": "worked-example",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agency",
+          "post-causal-structure",
+          "form-agent-model",
+          "def-model-sufficiency",
+          "def-mismatch-signal",
+          "emp-update-gain",
+          "def-causal-information-yield",
+          "def-adaptive-tempo",
+          "result-persistence-condition"
+        ]
+      },
+      "role_cells": {
+        "normal": "111*",
+        "de-novo-auditor": "111*",
+        "naming-voter": "111*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/example-strategy.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "example-strategy",
+        "component": "01-aad-core",
+        "section": "B",
+        "type": "worked-example",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agency",
+          "post-causal-structure",
+          "form-agent-model",
+          "def-mismatch-signal",
+          "emp-update-gain",
+          "def-adaptive-tempo",
+          "result-persistence-condition",
+          "form-objective-functional",
+          "def-value-object",
+          "def-strategy-dag",
+          "def-satisfaction-gap",
+          "def-control-regret",
+          "der-orient-cascade",
+          "der-chain-confidence-decay",
+          "der-observability-dominance",
+          "hyp-edge-update-via-gain",
+          "scope-and-or",
+          "der-directed-separation",
+          "def-strategic-calibration"
+        ]
+      },
+      "role_cells": {
+        "normal": "112*",
+        "de-novo-auditor": "112*",
+        "naming-voter": "112*"
+      }
+    },
+    {
+      "path": "01-aad-core/src/example-L1.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "example-L1",
+        "component": "01-aad-core",
+        "section": "B",
+        "type": "worked-example",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": true,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-strategy-dag",
+          "deriv-strategic-dynamics",
+          "deriv-graph-structure-uniqueness"
+        ]
+      },
+      "role_cells": {
+        "normal": "113*",
+        "de-novo-auditor": "113*",
+        "naming-voter": "113*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/post-temporal-optimality.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "post-temporal-optimality",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "postulate",
+        "status": "axiomatic",
+        "stage": "deps-verified",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+
+        ]
+      },
+      "role_cells": {
+        "normal": "114*",
+        "de-novo-auditor": "114*",
+        "naming-voter": "114*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/scope-software.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-software",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "scope",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-agency",
+          "post-temporal-optimality"
+        ]
+      },
+      "role_cells": {
+        "normal": "115*",
+        "de-novo-auditor": "115*",
+        "naming-voter": "115*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/obs-software-epistemic-properties.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "obs-software-epistemic-properties",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "observation",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-software",
+          "def-pearl-causal-hierarchy",
+          "def-observation-function",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "116*",
+        "de-novo-auditor": "116*",
+        "naming-voter": "116*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-feature.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-feature",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-software"
+        ]
+      },
+      "role_cells": {
+        "normal": "117*",
+        "de-novo-auditor": "117*",
+        "naming-voter": "117*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/result-specification-bound.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-specification-bound",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "result",
+        "status": "conditional",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "post-temporal-optimality",
+          "def-feature",
+          "scope-software"
+        ]
+      },
+      "role_cells": {
+        "normal": "118*",
+        "de-novo-auditor": "118*",
+        "naming-voter": "118*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/der-change-expectation-baseline.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-change-expectation-baseline",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "derived",
+        "status": "exact",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-software"
+        ]
+      },
+      "role_cells": {
+        "normal": "119*",
+        "de-novo-auditor": "119*",
+        "naming-voter": "119*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/scope-developer-agent.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-developer-agent",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "scope",
+        "status": "axiomatic",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-software",
+          "obs-software-epistemic-properties",
+          "def-agent-environment",
+          "form-agent-model",
+          "def-observation-function",
+          "def-action-transition",
+          "form-complete-agent-state",
+          "emp-update-gain",
+          "def-mismatch-signal",
+          "scope-logogenic-agent",
+          "def-coupled-update-dynamics",
+          "obs-context-turnover"
+        ]
+      },
+      "role_cells": {
+        "normal": "120*",
+        "de-novo-auditor": "120*",
+        "naming-voter": "120*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-comprehension-time.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-comprehension-time",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-feature",
+          "scope-software"
+        ]
+      },
+      "role_cells": {
+        "normal": "121*",
+        "de-novo-auditor": "121*",
+        "naming-voter": "121*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-implementation-time.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-implementation-time",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-feature",
+          "def-comprehension-time"
+        ]
+      },
+      "role_cells": {
+        "normal": "122*",
+        "de-novo-auditor": "122*",
+        "naming-voter": "122*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/der-dual-optimization.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-dual-optimization",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "derived",
+        "status": "conditional",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "post-temporal-optimality",
+          "def-comprehension-time",
+          "def-implementation-time",
+          "der-change-expectation-baseline",
+          "scope-software"
+        ]
+      },
+      "role_cells": {
+        "normal": "123*",
+        "de-novo-auditor": "123*",
+        "naming-voter": "123*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/der-change-investment.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-change-investment",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "derived",
+        "status": "conditional",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-dual-optimization",
+          "der-change-expectation-baseline"
+        ]
+      },
+      "role_cells": {
+        "normal": "124*",
+        "de-novo-auditor": "124*",
+        "naming-voter": "124*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/der-code-quality-as-observation-infrastructure.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-code-quality-as-observation-infrastructure",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "derived",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-developer-agent",
+          "obs-software-epistemic-properties",
+          "emp-update-gain",
+          "def-adaptive-tempo",
+          "result-persistence-condition",
+          "der-change-investment"
+        ]
+      },
+      "role_cells": {
+        "normal": "125*",
+        "de-novo-auditor": "125*",
+        "naming-voter": "125*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/hyp-conceptual-alignment.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-conceptual-alignment",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "hypothesis",
+        "status": "discussion-grade",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-comprehension-time",
+          "der-change-investment"
+        ]
+      },
+      "role_cells": {
+        "normal": "126*",
+        "de-novo-auditor": "126*",
+        "naming-voter": "126*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-atomic-changeset.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-atomic-changeset",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-feature"
+        ]
+      },
+      "role_cells": {
+        "normal": "127*",
+        "de-novo-auditor": "127*",
+        "naming-voter": "127*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/emp-changeset-size-principle.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "emp-changeset-size-principle",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "empirical",
+        "status": "empirical",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-atomic-changeset",
+          "def-implementation-time",
+          "def-comprehension-time"
+        ]
+      },
+      "role_cells": {
+        "normal": "128*",
+        "de-novo-auditor": "128*",
+        "naming-voter": "128*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-change-distance.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-change-distance",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-atomic-changeset"
+        ]
+      },
+      "role_cells": {
+        "normal": "129*",
+        "de-novo-auditor": "129*",
+        "naming-voter": "129*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/der-change-proximity-principle.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-change-proximity-principle",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "derived",
+        "status": "conditional",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-change-distance",
+          "emp-changeset-size-principle",
+          "def-comprehension-time"
+        ]
+      },
+      "role_cells": {
+        "normal": "130*",
+        "de-novo-auditor": "130*",
+        "naming-voter": "130*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/hyp-exponential-cognitive-load.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-exponential-cognitive-load",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "hypothesis",
+        "status": "discussion-grade",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "der-change-proximity-principle",
+          "der-deliberation-cost"
+        ]
+      },
+      "role_cells": {
+        "normal": "131*",
+        "de-novo-auditor": "131*",
+        "naming-voter": "131*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-system-coupling.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-system-coupling",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-atomic-changeset"
+        ]
+      },
+      "role_cells": {
+        "normal": "132*",
+        "de-novo-auditor": "132*",
+        "naming-voter": "132*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-system-coherence.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-system-coherence",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-change-distance"
+        ]
+      },
+      "role_cells": {
+        "normal": "133*",
+        "de-novo-auditor": "133*",
+        "naming-voter": "133*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/meas-coherence-coupling.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "meas-coherence-coupling",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "measurement",
+        "status": "empirical",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-system-coupling",
+          "def-system-coherence"
+        ]
+      },
+      "role_cells": {
+        "normal": "134*",
+        "de-novo-auditor": "134*",
+        "naming-voter": "134*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/der-principled-decision-integration.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "der-principled-decision-integration",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "derived",
+        "status": "conditional",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "post-temporal-optimality",
+          "der-dual-optimization",
+          "hyp-conceptual-alignment",
+          "emp-changeset-size-principle",
+          "der-change-proximity-principle"
+        ]
+      },
+      "role_cells": {
+        "normal": "135*",
+        "de-novo-auditor": "135*",
+        "naming-voter": "135*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/def-system-availability.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-system-availability",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "definition",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-software"
+        ]
+      },
+      "role_cells": {
+        "normal": "136*",
+        "de-novo-auditor": "136*",
+        "naming-voter": "136*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/scope-continuous-operation.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-continuous-operation",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "scope",
+        "status": "axiomatic",
+        "stage": null,
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-software",
+          "def-system-availability",
+          "post-temporal-optimality"
+        ]
+      },
+      "role_cells": {
+        "normal": "137*",
+        "de-novo-auditor": "137*",
+        "naming-voter": "137*"
+      }
+    },
+    {
+      "path": "02-tst-core/src/hyp-causal-discovery-from-git.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-causal-discovery-from-git",
+        "component": "02-tst-core",
+        "section": "S",
+        "type": "hypothesis",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "obs-software-epistemic-properties",
+          "scope-developer-agent",
+          "def-pearl-causal-hierarchy",
+          "post-causal-structure",
+          "def-causal-information-yield",
+          "def-system-coupling",
+          "meas-coherence-coupling"
+        ]
+      },
+      "role_cells": {
+        "normal": "138*",
+        "de-novo-auditor": "138*",
+        "naming-voter": "138*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/scope-logogenic-agent.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-logogenic-agent",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "scope",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-agent-spectrum",
+          "form-complete-agent-state",
+          "der-directed-separation",
+          "scope-agency",
+          "der-recursive-update"
+        ]
+      },
+      "role_cells": {
+        "normal": "139*",
+        "de-novo-auditor": "139*",
+        "naming-voter": "139*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/obs-context-turnover.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "obs-context-turnover",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "observation",
+        "status": "exact",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-logogenic-agent",
+          "def-chronica",
+          "result-persistence-condition",
+          "def-model-sufficiency"
+        ]
+      },
+      "role_cells": {
+        "normal": "140*",
+        "de-novo-auditor": "140*",
+        "naming-voter": "140*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/def-coupled-update-dynamics.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-coupled-update-dynamics",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "definition",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-logogenic-agent",
+          "form-complete-agent-state",
+          "der-recursive-update",
+          "der-directed-separation",
+          "form-event-driven-dynamics"
+        ]
+      },
+      "role_cells": {
+        "normal": "141*",
+        "de-novo-auditor": "141*",
+        "naming-voter": "141*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/result-section-ii-survival.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-section-ii-survival",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "result",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-logogenic-agent",
+          "def-coupled-update-dynamics",
+          "der-directed-separation",
+          "form-complete-agent-state",
+          "def-agent-spectrum",
+          "form-objective-functional",
+          "def-value-object",
+          "def-strategy-dimension",
+          "der-causal-hierarchy-requirement",
+          "der-loop-interventional-access",
+          "scope-ciy-observational-proxy",
+          "disc-ciy-unified-objective",
+          "norm-explicit-strategy-condition",
+          "der-chain-confidence-decay",
+          "scope-and-or",
+          "def-strategy-dag",
+          "def-satisfaction-gap",
+          "def-control-regret",
+          "def-strategic-calibration",
+          "der-orient-cascade",
+          "der-observability-dominance",
+          "hyp-edge-update-via-gain",
+          "scope-edge-update-causal-validity",
+          "disc-credit-assignment-boundary",
+          "form-structural-change-as-parametric-limit",
+          "schema-strategy-persistence"
+        ]
+      },
+      "role_cells": {
+        "normal": "142*",
+        "de-novo-auditor": "142*",
+        "naming-voter": "142*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/result-coupled-diagnostic-framework.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "result-coupled-diagnostic-framework",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "result",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-coupled-update-dynamics",
+          "result-section-ii-survival",
+          "def-satisfaction-gap",
+          "def-control-regret",
+          "def-strategic-calibration",
+          "der-orient-cascade",
+          "scope-observation-ambiguity-modulation"
+        ]
+      },
+      "role_cells": {
+        "normal": "143*",
+        "de-novo-auditor": "143*",
+        "naming-voter": "143*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/disc-m-preservation.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "disc-m-preservation",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "discussion",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "obs-context-turnover",
+          "scope-logogenic-agent",
+          "result-persistence-condition",
+          "def-model-sufficiency",
+          "def-adaptive-tempo"
+        ]
+      },
+      "role_cells": {
+        "normal": "144*",
+        "de-novo-auditor": "144*",
+        "naming-voter": "144*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/scope-observation-ambiguity-modulation.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-observation-ambiguity-modulation",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "scope",
+        "status": "conditional",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-logogenic-agent",
+          "def-coupled-update-dynamics",
+          "der-directed-separation",
+          "result-section-ii-survival",
+          "def-mismatch-signal"
+        ]
+      },
+      "role_cells": {
+        "normal": "145*",
+        "de-novo-auditor": "145*",
+        "naming-voter": "145*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/obs-evaluation-metrics.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "obs-evaluation-metrics",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "observation",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "result-coupled-diagnostic-framework",
+          "def-adaptive-tempo",
+          "emp-update-gain",
+          "def-model-class-fitness"
+        ]
+      },
+      "role_cells": {
+        "normal": "146*",
+        "de-novo-auditor": "146*",
+        "naming-voter": "146*"
+      }
+    },
+    {
+      "path": "03-logogenic-agents/src/hyp-experiential-training.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "hyp-experiential-training",
+        "component": "03-logogenic-agents",
+        "section": "L",
+        "type": "hypothesis",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-coupled-update-dynamics",
+          "obs-context-turnover",
+          "def-model-sufficiency"
+        ]
+      },
+      "role_cells": {
+        "normal": "147*",
+        "de-novo-auditor": "147*",
+        "naming-voter": "147*"
+      }
+    },
+    {
+      "path": "04-logozoetic-agents/src/scope-moral-continuity.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "scope-moral-continuity",
+        "component": "04-logozoetic-agents",
+        "section": "IV",
+        "type": "scope",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-logogenic-agent"
+        ]
+      },
+      "role_cells": {
+        "normal": "148*",
+        "de-novo-auditor": "148*",
+        "naming-voter": "148*"
+      }
+    },
+    {
+      "path": "04-logozoetic-agents/src/def-proprium-mapping.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "def-proprium-mapping",
+        "component": "04-logozoetic-agents",
+        "section": "IV",
+        "type": "definition",
+        "status": "robust-qualitative",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-moral-continuity",
+          "form-complete-agent-state",
+          "def-chronica",
+          "def-information-bottleneck"
+        ]
+      },
+      "role_cells": {
+        "normal": "149*",
+        "de-novo-auditor": "149*",
+        "naming-voter": "149*"
+      }
+    },
+    {
+      "path": "04-logozoetic-agents/src/obs-developmental-trajectory.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "obs-developmental-trajectory",
+        "component": "04-logozoetic-agents",
+        "section": "IV",
+        "type": "observation",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "scope-moral-continuity",
+          "def-proprium-mapping",
+          "hyp-mismatch-dynamics",
+          "emp-update-gain"
+        ]
+      },
+      "role_cells": {
+        "normal": "150*",
+        "de-novo-auditor": "150*",
+        "naming-voter": "150*"
+      }
+    },
+    {
+      "path": "04-logozoetic-agents/src/norm-interiority-default.md",
+      "kind": "segment",
+      "extra": {
+        "slug": "norm-interiority-default",
+        "component": "04-logozoetic-agents",
+        "section": "IV",
+        "type": "normative",
+        "status": "discussion-grade",
+        "stage": "draft",
+        "is_appendix": false,
+        "hoisted": null,
+        "hoisted_after": null,
+        "orphan": null,
+        "depends": [
+          "def-proprium-mapping",
+          "scope-moral-continuity",
+          "form-consolidation-dynamics",
+          "der-deliberation-cost"
+        ]
+      },
+      "role_cells": {
+        "normal": "151*",
+        "de-novo-auditor": "151*",
+        "naming-voter": "151*"
+      }
+    }
+  ]
+}

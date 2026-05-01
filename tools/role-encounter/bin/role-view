@@ -1,0 +1,247 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# tools/role-encounter/bin/role-view
+#
+# Emit the ordered file list for one role. Suitable for embedding in a launch
+# prompt: "read these files in this order before starting the work."
+#
+# Reads tools/role-encounter/encounter-data.json (the JSON intermediate from
+# build-encounter-table). If the JSON file isn't present or is older than any
+# config file, regenerates it transparently.
+#
+# Usage:
+#   ruby tools/role-encounter/bin/role-view --role=de-novo-auditor
+#   ruby tools/role-encounter/bin/role-view --role=naming-voter --format=markdown
+#   ruby tools/role-encounter/bin/role-view --role=normal --format=plain
+#   ruby tools/role-encounter/bin/role-view --role=de-novo-auditor --required-only
+#
+# Output formats:
+#   markdown (default) — numbered/banded list with brief annotations
+#   plain              — one path per line, suitable for piping
+#   json               — machine-readable; downstream tools
+
+require 'json'
+require 'optparse'
+require 'pathname'
+
+REPO_ROOT  = Pathname.new(__dir__).parent.parent.parent.expand_path
+TOOL_DIR   = REPO_ROOT.join('tools/role-encounter')
+CONFIG_DIR = TOOL_DIR.join('config')
+JSON_PATH  = TOOL_DIR.join('encounter-data.json')
+
+options = {
+  role:          nil,
+  format:        'markdown',
+  required_only: false,
+  show_excluded: false,
+  regenerate:    false
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: role-view --role=NAME [--format=markdown|plain|json] [--required-only] [--show-excluded] [--regenerate]'
+  opts.on('--role=NAME', 'Role to view (required)') { |r| options[:role] = r }
+  opts.on('--format=FMT', %w[markdown plain json], 'Output format (default: markdown)') { |f| options[:format] = f }
+  opts.on('--required-only', 'Show only required files; skip available-but-not-required') { options[:required_only] = true }
+  opts.on('--show-excluded', 'Include the deliberately-excluded list at the bottom') { options[:show_excluded] = true }
+  opts.on('--regenerate', 'Force a fresh build before reading') { options[:regenerate] = true }
+  opts.on('-h', '--help') { puts opts; exit }
+end.parse!
+
+unless options[:role]
+  warn 'Error: --role=NAME is required.'
+  warn 'Available roles: see config/roles.yaml or run: ruby tools/role-encounter/bin/role-view --help'
+  exit 1
+end
+
+# ── Ensure JSON intermediate is fresh ────────────────────────────────────────
+
+def needs_regenerate?(json_path)
+  return true unless File.exist?(json_path)
+  json_mtime = File.mtime(json_path)
+  config_files = Dir[File.join(CONFIG_DIR.to_s, '*.yaml')]
+  config_files.each do |cf|
+    return true if File.mtime(cf) > json_mtime
+  end
+  false
+end
+
+if options[:regenerate] || needs_regenerate?(JSON_PATH.to_s)
+  cmd = "ruby #{TOOL_DIR.join('bin/build-encounter-table')} --json-out=#{JSON_PATH} --quiet"
+  unless system(cmd)
+    warn "Failed to regenerate encounter data: #{cmd}"
+    exit 1
+  end
+end
+
+data = JSON.parse(File.read(JSON_PATH), symbolize_names: true)
+
+role_def = data[:roles].find { |r| r[:name] == options[:role] }
+unless role_def
+  warn "Error: unknown role '#{options[:role]}'"
+  warn "Known roles: #{data[:roles].map { |r| r[:name] }.join(', ')}"
+  exit 1
+end
+
+# ── Gather rows for this role ────────────────────────────────────────────────
+#
+# A row is "in this role's view" if its role_cells[role] is non-empty and not '—'.
+# Cell values:
+#   integer (e.g., '12')        => required at sequence position
+#   integer + '*' (e.g., '12*') => required at sequence position
+#   '+' / '+*'                  => band-member (any order within band)
+#   '12*[a]' / '12*[o]'         => required at sequence with appendix-hoist or orphan
+#   '—'                         => deliberately excluded
+#
+# Cell encoding from the build script:
+#   - top-level files use seq (integer) or '+' (band)
+#   - segments use seq + '*' + optional [a] / [o] suffix
+#
+# For ordering: parse the leading integer from cells; band-cells use the band's
+# slot from top-level.yaml. To keep this script simple, we re-traverse the
+# rows array — which is in encounter order from build-encounter-table — and
+# emit in that order.
+
+role_key = options[:role].to_sym
+
+rows_in_view = data[:rows].select do |row|
+  cell = row[:role_cells][role_key]
+  cell && !cell.empty? && cell != '—'
+end
+
+excluded_rows = data[:rows].select do |row|
+  row[:role_cells][role_key] == '—'
+end
+
+if options[:required_only]
+  rows_in_view = rows_in_view.select { |r| r[:role_cells][role_key].include?('*') }
+end
+
+# Re-sort for ordering. Top-level rows go first, sorted by THIS role's
+# effective_seq (which the build script stamps onto each row's
+# extra.role_effective_seq map). Segments come second, already in encounter
+# order from build-encounter-table (with appendix-hoist applied).
+top_level_in_view = rows_in_view.select { |r| r[:kind] == 'top-level' }
+segment_in_view   = rows_in_view.select { |r| r[:kind] == 'segment' }
+
+top_level_in_view = top_level_in_view.sort_by do |r|
+  eff_seq = r.dig(:extra, :role_effective_seq, role_key)
+  [eff_seq.is_a?(Numeric) ? eff_seq : Float::INFINITY, r[:path]]
+end
+
+rows_in_view = top_level_in_view + segment_in_view
+
+# ── Render ───────────────────────────────────────────────────────────────────
+
+def cell_required?(cell)
+  cell&.include?('*')
+end
+
+def cell_kind(cell)
+  return :excluded if cell == '—'
+  return :band if cell.start_with?('+')
+  return :hoisted if cell.include?('[a]')
+  return :orphan if cell.include?('[o]')
+  :seq
+end
+
+case options[:format]
+when 'plain'
+  rows_in_view.each do |row|
+    puts row[:path]
+  end
+
+when 'json'
+  out = {
+    role: role_def,
+    files: rows_in_view.map do |row|
+      {
+        path: row[:path],
+        kind: row[:kind],
+        cell: row[:role_cells][role_key],
+        required: cell_required?(row[:role_cells][role_key]),
+        slug: row[:extra][:slug],
+        component: row[:extra][:component],
+        section: row[:extra][:section],
+        type: row[:extra][:type],
+        is_appendix: row[:extra][:is_appendix],
+        hoisted: row[:extra][:hoisted],
+        orphan: row[:extra][:orphan]
+      }
+    end,
+    excluded: options[:show_excluded] ? excluded_rows.map { |r| { path: r[:path] } } : nil
+  }.compact
+  puts JSON.pretty_generate(out)
+
+else  # markdown
+  puts "# Role View: `#{role_def[:name]}`"
+  puts ''
+  puts (role_def[:description] || '').strip
+  puts ''
+  puts "- **Audit-safe:** `#{role_def[:audit_safe]}`"
+  puts "- **README variant:** `#{role_def[:readme_variant]}`"
+  puts "- **Includes segments:** `#{role_def[:include_segments]}`"
+  puts "- **Components in scope:** `#{role_def[:include_components].join(', ')}`"
+  puts ''
+  puts '## Reading order'
+  puts ''
+  puts 'Cell legend: `N` = sequence; `N*` = required; `+` = band-member (any order within band); `[a]` = hoisted appendix; `[o]` = orphan (in src/ but not in OUTLINE).'
+  puts ''
+
+  # Top-level
+  top_level = rows_in_view.select { |r| r[:kind] == 'top-level' }
+  unless top_level.empty?
+    puts '### Top-level files'
+    puts ''
+    top_level.each do |row|
+      cell = row[:role_cells][role_key]
+      req_marker = cell_required?(cell) ? ' **(required)**' : ' (available)'
+      puts "- `#{cell.ljust(4)}` `#{row[:path]}`#{req_marker}"
+    end
+    puts ''
+  end
+
+  # Segments, grouped by component
+  segments = rows_in_view.select { |r| r[:kind] == 'segment' }
+  if segments.any?
+    puts '### Segments (in OUTLINE walk order, with appendix-hoist applied)'
+    puts ''
+    last_component = nil
+    segments.each do |row|
+      component = row[:extra][:component]
+      if component != last_component
+        puts ''
+        puts "**#{component}**"
+        puts ''
+        last_component = component
+      end
+
+      cell = row[:role_cells][role_key]
+      slug = row[:extra][:slug]
+      section = row[:extra][:section] || '?'
+      type = row[:extra][:type] || '?'
+      tags = []
+      tags << 'appendix-hoist' if row[:extra][:hoisted]
+      tags << 'orphan' if row[:extra][:orphan]
+      tag_str = tags.empty? ? '' : " (#{tags.join(', ')})"
+
+      puts "- `#{cell.ljust(7)}` `#{row[:path]}` — §#{section} · `#{type}` · `#{slug}`#{tag_str}"
+    end
+    puts ''
+  end
+
+  if options[:show_excluded] && excluded_rows.any?
+    puts '## Deliberately excluded'
+    puts ''
+    puts 'Files considered for this role and gated. Reading them is harmful priming for this role; consult `tools/role-encounter/config/top-level.yaml` for the per-file rationale.'
+    puts ''
+    excluded_rows.each do |row|
+      puts "- `#{row[:path]}`"
+    end
+    puts ''
+  end
+
+  puts '---'
+  puts ''
+  puts "Generated by `tools/role-encounter/bin/role-view`. Edit `tools/role-encounter/config/*.yaml` and re-run to update."
+end

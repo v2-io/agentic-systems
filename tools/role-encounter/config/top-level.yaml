@@ -1,0 +1,363 @@
+# tools/role-encounter/config/top-level.yaml
+#
+# Hand-curated catalog of top-level files (project-root + doc/ + per-component
+# OUTLINEs) plus their per-role membership and ordering. This is the file that
+# captures the orient-walk thinking once so launch prompts don't have to
+# re-curate it ad-hoc each cycle.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Schema (per file entry)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+#   path                  Relative-to-repo-root path. The build script reads
+#                         this verbatim. If a file is renamed or moved, this
+#                         is the line to update.
+#
+#   roles                 Map of role-name → {seq | band | excluded | required}
+#                         Each role's value is one of:
+#
+#                           seq: <integer>      Hard sequence number within
+#                                               this role's reading set. Use
+#                                               for files where ordering is
+#                                               load-bearing (e.g., the audit
+#                                               instructions: README-auditor
+#                                               must come before component
+#                                               OUTLINEs).
+#
+#                           band: <name>        Name of an ordering band; files
+#                                               within a band are encountered
+#                                               in any order. Bands themselves
+#                                               are ordered (see `bands` block
+#                                               at the bottom of this file).
+#                                               Use when several files are
+#                                               canonically encountered together
+#                                               but the order between them isn't
+#                                               load-bearing (e.g., LEXICON +
+#                                               NOTATION + FORMAT for a voter).
+#
+#                           excluded: true      File is NOT in this role's
+#                                               reading set. Use when the file
+#                                               is harmful priming for this
+#                                               role (the audit AVOID list is
+#                                               implemented this way).
+#
+#                           (omitted)           File is not in this role's
+#                                               reading set. Equivalent to
+#                                               `excluded: true`. Use omission
+#                                               when the file is irrelevant;
+#                                               use `excluded: true` when the
+#                                               exclusion is *deliberate* (a
+#                                               file that the role would
+#                                               otherwise plausibly want, but
+#                                               that we're choosing to gate).
+#                                               The build emits a column cell
+#                                               for `excluded: true` ("—") and
+#                                               leaves the cell blank for
+#                                               omitted; this surfaces *why* a
+#                                               file is missing from a view.
+#
+#                         A trailing `*` in the encounter-table cell marks the
+#                         file as required (must-read). Without `*` the file
+#                         is available-but-not-required. Required-vs-available
+#                         is encoded as:
+#
+#                           required: true      File is required for this role.
+#                           required: false     File is available but optional.
+#                           (omitted)           Default: true (most top-level
+#                                               files in the orient walk are
+#                                               required). Set explicitly to
+#                                               false for "you may want this
+#                                               but it's not load-bearing"
+#                                               files (HISTORICAL-CONTEXT,
+#                                               MIGRATION-MAP, etc.).
+#
+#                         (Required-flag is per-role: the same file can be
+#                         required for one role and available-only for another.
+#                         Encode this as e.g. `required: true` under one role
+#                         and `required: false` under another.)
+#
+#   notes                 inline rationale. Why this file is at this position
+#                         for these roles. Use it.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Bands (referenced from per-role `band:` cells)
+# ─────────────────────────────────────────────────────────────────────────────
+# Bands name *clusters* of files that the role encounters together but in any
+# internal order. Each band has a `seq` integer placing it in the role's
+# reading sequence; a file with `band: <name>` lands in that band's sequence
+# slot, with `+` displayed in the encounter-table cell.
+#
+# Bands are role-scoped: the same band name in different roles can have
+# different `seq` values. The `bands` block at the bottom of the file lists
+# each role's bands explicitly.
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FILES
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Order in this file is roughly topical (project-root narrative, then component
+# OUTLINEs, then doc/, then ref-and-sibling pointers). Display order in the
+# encounter table is per-role from `seq`/`band`, NOT from this file's order.
+# ─────────────────────────────────────────────────────────────────────────────
+
+files:
+
+  # ── Public-facing project-root narrative ────────────────────────────────────
+
+  - path: README.md
+    roles:
+      normal:           { seq: 1 }
+      de-novo-auditor:  { excluded: true, notes: "Public README has live Findings / Recent Progress / Known Issues sections that prime audit judgment. Use README-auditor.md instead. (See de-novo-audit-instructions §4.1.)" }
+      naming-voter:     { excluded: true, notes: "Same priming concern as de-novo-auditor; naming voters use auditor variant." }
+    notes: |
+      Public README. Auto-generated from doc/readme/src/* via bin/build-readme.
+
+  - path: README-auditor.md
+    roles:
+      normal:           { seq: 2, required: false, notes: "Available for cross-checking the audit narrative; not required when README.md is read." }
+      de-novo-auditor:  { seq: 1, notes: "First file the auditor reads. Audit-safe variant of README — orientation content fair game; not an audit target." }
+      naming-voter:     { seq: 1, notes: "Naming voter inherits the auditor variant for the same priming-avoidance reason." }
+    notes: |
+      Audit-safe README. Strips Findings / Recent Progress / Known Issues sections.
+
+  # ── Top-level OUTLINE assembly ──────────────────────────────────────────────
+
+  - path: OUTLINE.md
+    roles:
+      normal:           { seq: 5 }
+      de-novo-auditor:  { seq: 2, notes: "Top-level assembly index. The auditor reads this immediately after README-auditor — points at component OUTLINEs in the canonical order they should be walked." }
+      naming-voter:     { seq: 4 }
+    notes: |
+      Repo-root OUTLINE.md. References component-level OUTLINEs.
+
+  # ── Project conventions (orientation infrastructure) ────────────────────────
+
+  - path: CLAUDE.md
+    roles:
+      normal:           { seq: 4 }
+      de-novo-auditor:  { band: orientation-extras, notes: "Read after LEXICON/NOTATION but before segments. Auto-loaded into Claude Code agents anyway; explicit listing for visibility." }
+      naming-voter:     { band: orientation-extras }
+    notes: |
+      Agent-onboarding context. Trimmed of architectural detail to avoid priming
+      de-novo audits; auditor-safe to read.
+
+  - path: FORMAT.md
+    roles:
+      normal:           { band: conventions }
+      de-novo-auditor:  { band: orientation-extras, notes: "Tells the auditor what to expect from segment frontmatter, equation tags, stage labels. §4.1 reading list." }
+      naming-voter:     { band: orientation-extras, notes: "Voter needs FORMAT to read segment role-prefix and type rules." }
+    notes: |
+      Segment file conventions. Frontmatter, document cadence, math formatting,
+      cross-references, equation-level tags.
+
+  - path: NOTATION.md
+    roles:
+      normal:           { band: conventions }
+      de-novo-auditor:  { band: vocabulary, notes: "Symbol reference; segment-level claims are harder to read precisely without it." }
+      naming-voter:     { band: vocabulary }
+    notes: |
+      Symbol reference. All math notation defined here.
+
+  - path: LEXICON.md
+    roles:
+      normal:           { band: conventions }
+      de-novo-auditor:  { band: vocabulary, notes: "Project vocabulary infrastructure. Read alongside NOTATION before segments." }
+      naming-voter:     { band: vocabulary, notes: "Naming voters work directly on lexicon entries." }
+    notes: |
+      Prose vocabulary. Cycle phases, agent classes, key terms.
+
+  - path: PRACTICA.md
+    roles:
+      normal:           { seq: 6 }
+      de-novo-auditor:  { band: orientation-extras, notes: "Auditor-safe per its own preamble. Strategic-portfolio navigator — reading it does not bias audit judgment." }
+      naming-voter:     { band: orientation-extras }
+    notes: |
+      Strategic-portfolio navigator. Auditor-safe (auditor reads it; auditor must
+      NOT follow links from it into TODO/PROPOSALS/CHANGELOG until §7 Phase-2).
+
+  # ── Live tracking + history (priming-heavy for audit/voting) ────────────────
+
+  - path: TODO.md
+    roles:
+      normal:           { seq: 7 }
+      de-novo-auditor:  { excluded: true, notes: "Active work navigator. Reading it before §7 Phase-2 biases audit judgment toward issues already known." }
+      naming-voter:     { excluded: true, notes: "Same audit-bleed concern. Round launch prompt may surface specific items if needed." }
+    notes: |
+      Tactical work items. Pending findings, deferrals, naming pipeline.
+
+  - path: PROPOSALS.md
+    roles:
+      normal:           { seq: 8 }
+      de-novo-auditor:  { excluded: true, notes: "Architectural-proposal portfolio with current under-review state. Priming-heavy." }
+      naming-voter:     { excluded: true, notes: "naming-principles.md says 'PROPOSALS.md — Read for context, not for naming cues' — but R2 cycle methodology defaults audit-rhythm exclusion. If a launch prompt re-includes, that's a per-cycle override." }
+    notes: |
+      Architectural-proposal portfolio. Banded structural moves under review.
+
+  - path: CHANGELOG.md
+    roles:
+      normal:           { band: history-narrative, required: false }
+      de-novo-auditor:  { excluded: true, notes: "Forward-going cycle record. Substantially priming." }
+      naming-voter:     { excluded: true }
+    notes: |
+      Forward-going cycle narrative (2026-04-24 onward).
+
+  - path: LOG.md
+    roles:
+      normal:           { band: history-narrative, required: false }
+      de-novo-auditor:  { excluded: true }
+      naming-voter:     { excluded: true }
+    notes: |
+      Pre-2026-04-24 cycle archaeology (frozen).
+
+  - path: FINDINGS.md
+    roles:
+      normal:           { seq: 3, required: false, notes: "Curated novel-results catalog. Useful for orientation; not the primary doc." }
+      de-novo-auditor:  { excluded: true, notes: "Curated novel-results catalog. Reading this before the segment pass primes which results have already been judged distinctive." }
+      naming-voter:     { excluded: true, notes: "Same priming concern. The catalog already encodes naming choices." }
+    notes: |
+      Curated novel-results catalog. Auto-generated from segment-level
+      ## Findings sections.
+
+  - path: HISTORICAL-CONTEXT.md
+    roles:
+      normal:           { band: history-narrative, required: false }
+      de-novo-auditor:  { excluded: true, notes: "Long-form positioning with peer-framework comparisons that name contested positions and load-bearing distinctions. Audit-safe version is folded into README-auditor's Position & Lineage section." }
+      naming-voter:     { excluded: true }
+    notes: |
+      Long-form positioning. Active-inference, Hafez, Miller, IBM comparisons.
+
+  - path: MIGRATION-MAP.md
+    roles:
+      normal:           { band: history-narrative, required: false }
+      de-novo-auditor:  { band: orientation-extras, required: false, notes: "Old-* file absorption tracking. Mostly archaeology now; available rather than required." }
+      naming-voter:     { band: orientation-extras, required: false }
+    notes: |
+      TFT → AAD and TST → AAD absorption tracking. Live while old-* files
+      remain in component src/.
+
+  # ── Component OUTLINEs ──────────────────────────────────────────────────────
+  #
+  # The auditor reads these in the order the top-level OUTLINE references them
+  # (§4.1 step 3). The order in this list mirrors that.
+
+  - path: 01-aad-core/OUTLINE.md
+    roles:
+      normal:           { band: component-outlines }
+      de-novo-auditor:  { seq: 3, notes: "First component OUTLINE. Auditor walks segments under this OUTLINE first." }
+      naming-voter:     { seq: 5 }
+    notes: AAD core outline (Sections I, II, III + Appendices).
+
+  - path: 02-tst-core/OUTLINE.md
+    roles:
+      normal:           { band: component-outlines }
+      de-novo-auditor:  { seq: 4 }
+      naming-voter:     { seq: 6 }
+    notes: TST outline (software-domain instantiation).
+
+  - path: 03-logogenic-agents/OUTLINE.md
+    roles:
+      normal:           { band: component-outlines }
+      de-novo-auditor:  { seq: 5 }
+      naming-voter:     { seq: 7 }
+    notes: Logogenic-agent framework outline.
+
+  - path: 04-logozoetic-agents/OUTLINE.md
+    roles:
+      normal:           { band: component-outlines }
+      de-novo-auditor:  { seq: 6 }
+      naming-voter:     { seq: 8 }
+    notes: Logozoetic-agent framework outline.
+
+  # ── Process docs (under doc/) ───────────────────────────────────────────────
+
+  - path: doc/de-novo-audit-instructions.md
+    roles:
+      normal:           { seq: 100, required: false, notes: "Available for understanding what an auditor does; not required for normal work." }
+      de-novo-auditor:  { seq: 0, notes: "The auditor's own instructions — read BEFORE everything else (this is what put them on this role's path in the first place)." }
+      naming-voter:     { band: naming-rhythm, notes: "naming-cycle-methodology says 'the disciplines there transfer here verbatim' — voters read this for the rhythm." }
+    notes: |
+      How to run a de-novo audit. Authoritative for de-novo-auditor role;
+      naming voters borrow the rhythm.
+
+  - path: doc/naming-principles.md
+    roles:
+      normal:           { seq: 101, required: false }
+      de-novo-auditor:  { excluded: true, notes: "Audit role doesn't need naming principles; would prime toward naming concerns." }
+      naming-voter:     { seq: 2, notes: "What we name and why; categories; criteria. Voter reads after README-auditor and before OUTLINE walk." }
+    notes: |
+      Naming-principles file. Categories, criteria, weight scale.
+
+  - path: doc/naming-cycle-methodology.md
+    roles:
+      normal:           { seq: 102, required: false }
+      de-novo-auditor:  { excluded: true }
+      naming-voter:     { seq: 3, notes: "How to compose principles + audit-rhythm + card+tracker into a vote walk. Voter reads immediately after naming-principles." }
+    notes: |
+      How to walk a naming cycle. Tracker mechanics, failure modes, stopping
+      rules.
+
+  # ── Sibling-project / external references (rarely required) ─────────────────
+
+  # Note: doc/readme/ partials, ref/, msc/, spikes/, audits/ are NOT enumerated
+  # here. They're handled by exclusion class in the role-aware default
+  # exclusion logic in build-encounter-table:
+  #
+  #   - ref/INDEX.md is in scope for `normal` only (available, not required)
+  #   - spikes/INDEX.md likewise (available for normal; excluded for audit/voting)
+  #   - audits/, msc/ entirely excluded except own working dir for audit/voting
+  #   - doc/readme/src/_findings-summary.md, _recent-progress.md, _known-issues.md
+  #     are excluded for audit/voting (same priming as the public README)
+  #
+  # If a specific msc/ artifact becomes relevant to a role's view (e.g., a
+  # round's launch prompt), enumerate it explicitly here with a per-role entry.
+  # The default behavior is to NOT include msc/ artifacts; explicit enumeration
+  # is the override.
+
+  - path: ref/INDEX.md
+    roles:
+      normal:           { band: external-refs, required: false }
+      de-novo-auditor:  { excluded: true, notes: "External reference index — useful later but not for the segment-pass orient walk." }
+      naming-voter:     { excluded: true }
+    notes: |
+      External reference catalogue.
+
+  - path: spikes/INDEX.md
+    roles:
+      normal:           { band: external-refs, required: false }
+      de-novo-auditor:  { excluded: true, notes: "Per §4.1 — all of spikes/ is reserved for §7 Phase-2 triangulation." }
+      naming-voter:     { excluded: true }
+    notes: |
+      Spike index. Every spike with status (promoted, parked, archaeology).
+
+# ─────────────────────────────────────────────────────────────────────────────
+# BANDS — per-role band definitions (name → seq slot)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# When a file's per-role entry uses `band: <name>`, the encounter table places
+# that file at the band's `seq` slot, with `+` rendered in the cell instead of
+# an integer. Files within the same band are encountered in any order; the
+# table-builder may emit them in an arbitrary deterministic order (e.g.,
+# alphabetical by path) but the row content marks the in-any-order property.
+#
+# Bands are role-scoped. The same band name across roles can have different
+# `seq` values to reflect role-specific positioning.
+# ─────────────────────────────────────────────────────────────────────────────
+
+bands:
+
+  normal:
+    conventions:        { seq: 9,  description: "FORMAT, NOTATION, LEXICON — read alongside each other" }
+    component-outlines: { seq: 10, description: "Component OUTLINE files in any order" }
+    history-narrative:  { seq: 50, description: "Optional historical context — CHANGELOG, LOG, HISTORICAL-CONTEXT, MIGRATION-MAP" }
+    external-refs:      { seq: 60, description: "Optional external-ref pointers" }
+
+  de-novo-auditor:
+    vocabulary:         { seq: 7,  description: "LEXICON + NOTATION read together (§4.1 step 4)" }
+    orientation-extras: { seq: 8,  description: "CLAUDE + FORMAT + PRACTICA + MIGRATION-MAP (§4.1 step 5; PRACTICA per its auditor-safe preamble)" }
+
+  naming-voter:
+    vocabulary:         { seq: 9,  description: "LEXICON + NOTATION read together" }
+    orientation-extras: { seq: 10, description: "CLAUDE + FORMAT + PRACTICA + MIGRATION-MAP" }
+    naming-rhythm:      { seq: 11, description: "de-novo-audit-instructions read for rhythm (per naming-cycle-methodology §1)" }

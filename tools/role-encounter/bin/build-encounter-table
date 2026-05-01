@@ -1,0 +1,758 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# tools/role-encounter/bin/build-encounter-table
+#
+# Generates the role-encounter table at tools/role-encounter/encounter-table.md
+# from:
+#
+#   - config/roles.yaml         (role definitions)
+#   - config/top-level.yaml     (per-file role-membership and ordering)
+#   - config/segments.yaml      (OUTLINE traversal + appendix-handling rules)
+#   - the project's OUTLINE.md files
+#   - segment frontmatter under {component}/src/*.md
+#
+# The artifact is one row per file (top-level + segments), one column per role,
+# cell values encoding sequence-or-band-membership-and-required-flag for that
+# role.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Cell value encoding
+# ─────────────────────────────────────────────────────────────────────────────
+#
+#   integer (e.g., "12")        sequence number within this role's reading set
+#   integer + "*" (e.g., "12*")  required at that sequence position
+#   "+"                          available in any order within its band
+#   "+*"                         required, in any order within its band
+#   "—"                          deliberately excluded for this role
+#   ""  (blank)                  not in this role's reading set (omitted)
+#
+# Required vs available:
+#   - Required = role's instructions say "you must read this before X"
+#   - Available = role can read it but the orient walk doesn't depend on it
+#
+# Excluded vs omitted:
+#   - Excluded = file was considered for this role and deliberately gated
+#     (e.g., the de-novo-audit AVOID list)
+#   - Omitted = file is irrelevant to this role's work and not enumerated
+#
+# Both render as missing-from-the-view at runtime, but excluded carries a
+# rationale-trail in top-level.yaml that omitted does not. Surfacing this
+# distinction matters when a future agent asks "why isn't X in this role's
+# view?"
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Reuses bin/lint-outline machinery via re-implementation in Ruby (the
+# project's internal-tooling language). The frontmatter parser and outline
+# parser here mirror lint-outline's behavior closely; if lint-outline's
+# parsing logic evolves substantively, this file should track it.
+#
+# Usage:
+#   ruby tools/role-encounter/bin/build-encounter-table
+#   ruby tools/role-encounter/bin/build-encounter-table --check
+#   ruby tools/role-encounter/bin/build-encounter-table --json-out=path
+#
+# Flags:
+#   --check          Render to memory; exit non-zero if on-disk output drifts.
+#                    Suitable for pre-commit / CI.
+#   --json-out=PATH  Also emit a JSON intermediate (data the table is built
+#                    from). Useful for downstream tools (the role-view script
+#                    reads this if available; otherwise it re-runs the build).
+#   --quiet          Suppress informational stderr.
+
+require 'yaml'
+require 'json'
+require 'optparse'
+require 'pathname'
+require 'set'
+
+# ── Paths ────────────────────────────────────────────────────────────────────
+
+REPO_ROOT  = Pathname.new(__dir__).parent.parent.parent.expand_path
+TOOL_DIR   = REPO_ROOT.join('tools/role-encounter')
+CONFIG_DIR = TOOL_DIR.join('config')
+
+DEFAULT_TABLE_OUT = TOOL_DIR.join('encounter-table.md')
+DEFAULT_JSON_OUT  = TOOL_DIR.join('encounter-data.json')
+
+# ── CLI ──────────────────────────────────────────────────────────────────────
+
+options = {
+  check:    false,
+  json_out: nil,
+  table_out: DEFAULT_TABLE_OUT.to_s,
+  quiet:    false
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: build-encounter-table [--check] [--json-out=PATH] [--table-out=PATH]'
+  opts.on('--check', 'Verify on-disk output matches regenerated; exit non-zero on drift') { options[:check] = true }
+  opts.on('--json-out=PATH', 'Also emit JSON intermediate (defaults to skipping)') { |p| options[:json_out] = p }
+  opts.on('--table-out=PATH', "Markdown output path (default #{DEFAULT_TABLE_OUT.relative_path_from(REPO_ROOT)})") { |p| options[:table_out] = p }
+  opts.on('--quiet', 'Suppress informational stderr') { options[:quiet] = true }
+  opts.on('-h', '--help') { puts opts; exit }
+end.parse!
+
+def info(msg, quiet:)
+  warn(msg) unless quiet
+end
+
+# ── Frontmatter parsing ──────────────────────────────────────────────────────
+#
+# Mirrors bin/lint-outline:parse_frontmatter. Returns slug / type / status /
+# depends / stage. Only this minimal field set; if a future appendix-need
+# field lands (see segments.yaml), add parsing here.
+
+def parse_frontmatter(filepath)
+  result = { slug: nil, depends: [], stage: nil, type: nil, status: nil }
+  return result unless File.file?(filepath)
+
+  lines = File.readlines(filepath, encoding: 'UTF-8')
+  return result if lines.empty? || lines.first.strip != '---'
+
+  in_depends = false
+  lines[1..].each do |line|
+    stripped = line.strip
+    break if stripped == '---'
+
+    if stripped.start_with?('slug:')
+      result[:slug] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('stage:')
+      result[:stage] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('type:')
+      result[:type] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('status:')
+      result[:status] = stripped.split(':', 2)[1].strip
+    elsif stripped.start_with?('depends:')
+      rest = stripped.split(':', 2)[1].strip
+      if rest.empty?
+        in_depends = true
+      else
+        rest = rest.delete('[]')
+        result[:depends] = rest.split(',').map { |d| d.strip.gsub(/['"]/, '') }.reject(&:empty?)
+      end
+    elsif in_depends
+      if stripped.start_with?('- ')
+        result[:depends] << stripped[2..].strip.gsub(/['"]/, '')
+      else
+        in_depends = false
+      end
+    end
+  end
+
+  result
+end
+
+# ── Outline parsing ──────────────────────────────────────────────────────────
+#
+# Mirrors bin/lint-outline:parse_outline. Returns an array of
+# {section:, slug:, row_index:} entries in OUTLINE row order.
+
+def parse_outline(outline_path)
+  entries = []
+  current_section = nil
+  row_index = 0
+
+  File.foreach(outline_path) do |line|
+    if (m = line.match(/^##\s+(I+|III|IV|V|A|B|S|L|G)\.\s/))
+      current_section = m[1]
+      next
+    end
+
+    if line =~ /^##\s+Appendices/
+      current_section = 'A'
+      next
+    end
+
+    next unless line =~ /\[#([a-zA-Z0-9_-]+)\]\(src\//
+
+    slug = Regexp.last_match(1)
+
+    cols = line.split('|').map(&:strip)
+    if cols.size >= 2
+      sec = cols[1].strip
+      current_section = sec if %w[I II III IV V A B S L G].include?(sec)
+    end
+
+    entries << { section: current_section, slug: slug, row_index: row_index }
+    row_index += 1
+  end
+
+  entries
+end
+
+# ── Loading config ───────────────────────────────────────────────────────────
+
+def load_yaml(path)
+  YAML.safe_load(File.read(path), permitted_classes: [Symbol], aliases: false)
+end
+
+# ── Build segment data ───────────────────────────────────────────────────────
+#
+# Walks the OUTLINEs named in segments.yaml, parses each segment's frontmatter,
+# and builds:
+#
+#   - segments: array of {component:, slug:, section:, row_index:, depends:,
+#                         type:, status:, stage:}
+#   - slug_to_segment: {slug => segment} for cross-component dependency
+#                                          resolution
+#
+# Asserts global slug uniqueness if enforce_global_slug_uniqueness is true.
+
+def collect_segments(repo_root:, segments_config:, quiet:)
+  all_segments = []
+  slug_to_segment = {}
+  collisions = []
+
+  segments_config['outlines'].each do |outline_spec|
+    outline_path = repo_root.join(outline_spec['path'])
+    component = outline_spec['component']
+    src_dir = repo_root.join(component, 'src')
+    appendix_sections = (outline_spec['appendix_sections'] || []).map(&:to_s)
+
+    unless outline_path.exist?
+      warn "Warning: outline #{outline_path} does not exist; skipping" unless quiet
+      next
+    end
+
+    outline_entries = parse_outline(outline_path)
+
+    # outline_slug → entry (for join with src/ frontmatter)
+    outline_index = {}
+    outline_entries.each { |e| outline_index[e[:slug]] = e }
+
+    # Walk every src/*.md (canonical set per FORMAT.md "Segment-set principle"),
+    # skipping old-* (also per the principle).
+    if src_dir.exist?
+      src_dir.glob('*.md').sort.each do |seg_path|
+        slug_from_filename = seg_path.basename('.md').to_s
+        next if slug_from_filename.start_with?('old-')
+
+        fm = parse_frontmatter(seg_path)
+        slug = fm[:slug] || slug_from_filename
+
+        outline_entry = outline_index[slug]
+
+        seg = {
+          component:  component,
+          slug:       slug,
+          section:    outline_entry ? outline_entry[:section] : nil,
+          row_index:  outline_entry ? outline_entry[:row_index] : nil,
+          in_outline: !outline_entry.nil?,
+          depends:    fm[:depends],
+          type:       fm[:type],
+          status:     fm[:status],
+          stage:      fm[:stage],
+          path:       seg_path.relative_path_from(repo_root).to_s,
+          is_appendix: outline_entry && appendix_sections.include?(outline_entry[:section].to_s)
+        }
+        all_segments << seg
+
+        if (existing = slug_to_segment[slug])
+          collisions << { slug: slug, paths: [existing[:path], seg[:path]] }
+        else
+          slug_to_segment[slug] = seg
+        end
+      end
+    end
+  end
+
+  if segments_config.dig('cross_component_dependencies', 'enforce_global_slug_uniqueness') && !collisions.empty?
+    warn 'ERROR: slug collisions across components (global uniqueness violated):'
+    collisions.each { |c| warn "  #{c[:slug]}: #{c[:paths].join(' vs ')}" }
+    raise 'Slug collisions found; fix before regenerating.'
+  end
+
+  [all_segments, slug_to_segment]
+end
+
+# ── Order segments in OUTLINE walk order, with appendix-hoist ────────────────
+#
+# Per de-novo-audit-instructions §4.2: walk OUTLINE rows top-to-bottom. When a
+# main-section segment depends on an appendix segment, hoist the appendix to
+# read directly after that first main-section reference (matching paper-reading
+# convention — proof comes after the claim that motivates it).
+#
+# Implementation: walk segments in (component, row_index) order. When we
+# encounter a main-section segment with an appendix dependency, queue the
+# appendix to be inserted right after this segment. Skip the appendix's own
+# slot when we reach it later in the OUTLINE walk.
+#
+# Returns an array of segments in encounter order.
+
+def order_segments_with_hoist(segments:, slug_to_segment:, apply_hoist: true)
+  # Group by component, sort by row_index within each component.
+  # Components ordered per the segments.yaml outlines list (already sorted in
+  # collect_segments by virtue of iterating outlines in spec order).
+  by_component = segments.group_by { |s| s[:component] }
+  ordered_components = segments.map { |s| s[:component] }.uniq
+
+  ordered = []
+  hoisted_slugs = Set.new
+
+  ordered_components.each do |component|
+    in_outline_segs = by_component[component].select { |s| s[:in_outline] }
+                                             .sort_by { |s| s[:row_index] }
+    orphans = by_component[component].reject { |s| s[:in_outline] }
+                                     .sort_by { |s| s[:slug] }
+
+    in_outline_segs.each do |seg|
+      next if hoisted_slugs.include?(seg[:slug])
+      ordered << seg
+
+      if apply_hoist && !seg[:is_appendix]
+        # Look at this segment's depends; for each dep that's an appendix
+        # segment we haven't yet emitted, hoist it now.
+        seg[:depends].each do |dep_slug|
+          dep = slug_to_segment[dep_slug]
+          next unless dep
+          next unless dep[:is_appendix]
+          next if hoisted_slugs.include?(dep_slug)
+          # Only hoist appendices from the same component (cross-component
+          # appendix hoists are unusual; we leave them in their own component's
+          # walk).
+          next unless dep[:component] == component
+          hoisted = dep.merge(hoisted: true, hoisted_after: seg[:slug])
+          ordered << hoisted
+          hoisted_slugs << dep_slug
+        end
+      end
+    end
+
+    # Orphans (segments in src/ but not in OUTLINE) emit at the end of the
+    # component's segment list. lint-outline flags these; we surface them in
+    # the table with `[orphan]` markers so the audit can see them.
+    orphans.each { |o| ordered << o.merge(orphan: true) }
+  end
+
+  ordered
+end
+
+# ── Top-level file ordering per role ─────────────────────────────────────────
+#
+# For each role, walk top-level config and produce an ordered list of
+# {path:, role_cell_data} where role_cell_data is the per-role display info.
+#
+# Returns:
+#   {
+#     role_name => [
+#       { path:, cell: <cell-string>, required:, sequence_or_band: ..., ... },
+#       ...
+#     ]
+#   }
+#
+# Cell-string encoding follows the header-comment scheme.
+
+def per_role_top_level(role_names:, top_level_config:)
+  role_views = {}
+  role_names.each { |r| role_views[r] = [] }
+
+  top_level_config['files'].each do |file_entry|
+    path = file_entry['path']
+    roles = file_entry['roles'] || {}
+
+    role_names.each do |role|
+      role_spec = roles[role]
+      next if role_spec.nil?  # omitted
+      next if role_spec['excluded']  # handled separately for "—" rendering
+
+      required = role_spec.fetch('required', true)
+      band = role_spec['band']
+      seq  = role_spec['seq']
+
+      role_views[role] << {
+        path: path,
+        seq: seq,
+        band: band,
+        required: required,
+        notes: role_spec['notes']
+      }
+    end
+  end
+
+  role_views
+end
+
+def per_role_excluded_top_level(role_names:, top_level_config:)
+  excluded = {}
+  role_names.each { |r| excluded[r] = [] }
+
+  top_level_config['files'].each do |file_entry|
+    path = file_entry['path']
+    roles = file_entry['roles'] || {}
+    role_names.each do |role|
+      next unless roles.dig(role, 'excluded')
+      excluded[role] << { path: path, notes: roles[role]['notes'] }
+    end
+  end
+
+  excluded
+end
+
+# ── Build encounter-table rows ───────────────────────────────────────────────
+#
+# Returns the assembled data structure for both the markdown table and the
+# JSON intermediate.
+#
+#   {
+#     roles: [{name:, description:, audit_safe:, readme_variant:}, ...],
+#     rows:  [{path:, kind: 'top-level' | 'segment',
+#              extra: {...segment metadata...},
+#              role_cells: {role_name => 'cell-string'},
+#              role_required: {role_name => bool}}, ...]
+#   }
+
+def build_encounter_data(roles_config:, top_level_config:, segments_config:, segments:, slug_to_segment:)
+  role_defs = roles_config['roles'].map do |name, spec|
+    {
+      name: name,
+      description: spec['description'],
+      audit_safe: spec['audit_safe'],
+      readme_variant: spec['readme_variant'],
+      include_segments: spec['include_segments'],
+      include_components: spec['include_components'] || [],
+      notes: spec['notes']
+    }
+  end
+  role_names = role_defs.map { |r| r[:name] }
+
+  # Per-role top-level orderings (for sequence-number computation)
+  top_level_views = per_role_top_level(role_names: role_names, top_level_config: top_level_config)
+  excluded_views  = per_role_excluded_top_level(role_names: role_names, top_level_config: top_level_config)
+
+  # Each role's bands (per top-level.yaml `bands:` block)
+  role_bands = top_level_config['bands'] || {}
+
+  # Compute per-role sequence numbers.
+  #
+  # Strategy: take the role's view items, sort by (effective_seq, path) where
+  # effective_seq = seq for { seq: } entries, or band's seq for { band: } entries.
+  # Within a band, all entries share the band's seq slot (rendered as "+").
+  # Items with explicit `seq` get that integer in the cell. Following entries
+  # within bands all show "+" (with "+*" when required).
+
+  per_role_top_level_cells = {}
+  role_names.each do |role|
+    items = top_level_views[role]
+    bands_for_role = role_bands[role] || {}
+
+    # Compute effective seq for sorting
+    items.each do |it|
+      if it[:seq]
+        it[:effective_seq] = it[:seq]
+        it[:cell_kind] = :seq
+      elsif it[:band]
+        band_def = bands_for_role[it[:band]]
+        unless band_def
+          warn "Warning: role #{role} references unknown band '#{it[:band]}' for file #{it[:path]}; using seq=999"
+          it[:effective_seq] = 999
+        else
+          it[:effective_seq] = band_def['seq']
+        end
+        it[:cell_kind] = :band
+      else
+        warn "Warning: role #{role} entry for file #{it[:path]} has neither seq nor band; using seq=999"
+        it[:effective_seq] = 999
+        it[:cell_kind] = :seq
+      end
+    end
+
+    # Sort by effective_seq, then by path for determinism within same slot
+    items.sort_by! { |it| [it[:effective_seq], it[:path]] }
+
+    # Compute display value per item
+    cells = {}
+    items.each do |it|
+      cell =
+        if it[:cell_kind] == :seq
+          it[:effective_seq].to_s
+        else
+          '+'
+        end
+      cell += '*' if it[:required]
+      cells[it[:path]] = cell
+    end
+
+    # Add excluded entries
+    excluded_views[role].each do |ex|
+      cells[ex[:path]] = '—'
+    end
+
+    per_role_top_level_cells[role] = cells
+  end
+
+  # Collect every path that appears in any role's top-level view (for row enumeration)
+  all_top_level_paths = Set.new
+  role_names.each do |role|
+    per_role_top_level_cells[role].each_key { |p| all_top_level_paths << p }
+  end
+
+  # Sort top-level paths by the union-effective-seq across roles for stable display.
+  # For each path, take the min effective_seq across roles that include it (excluded
+  # counts as infinity for ordering — excluded items sort last among top-level).
+  path_min_seq = {}
+  all_top_level_paths.each do |path|
+    min_seq = Float::INFINITY
+    role_names.each do |role|
+      items = top_level_views[role]
+      it = items.find { |i| i[:path] == path }
+      if it
+        min_seq = [min_seq, it[:effective_seq]].min
+      end
+    end
+    path_min_seq[path] = min_seq
+  end
+  sorted_top_level_paths = all_top_level_paths.sort_by { |p| [path_min_seq[p], p] }
+
+  # Build top-level rows. Each row carries `role_effective_seq` per role for
+  # downstream role-view sorting (the table itself is sorted by min-seq
+  # across roles, but role-view renders per-role and needs the per-role
+  # ordering).
+  top_level_rows = sorted_top_level_paths.map do |path|
+    file_entry = top_level_config['files'].find { |f| f['path'] == path }
+    role_effective_seq = {}
+    role_names.each do |role|
+      it = top_level_views[role].find { |i| i[:path] == path }
+      role_effective_seq[role] = it ? it[:effective_seq] : nil
+    end
+
+    {
+      path: path,
+      kind: 'top-level',
+      extra: {
+        notes: file_entry ? file_entry['notes']&.strip : nil,
+        role_effective_seq: role_effective_seq
+      },
+      role_cells: role_names.each_with_object({}) do |role, h|
+        h[role] = per_role_top_level_cells[role][path] || ''
+      end
+    }
+  end
+
+  # Build segment rows. Segments appear after all top-level rows. Each segment
+  # gets per-role cells: for roles where include_segments is true and the
+  # component is in include_components, render the per-role sequence number
+  # (computed from the segment's position in that role's segment walk).
+  # Otherwise blank.
+
+  per_role_segment_seq = {}
+  role_names.each do |role|
+    role_def = role_defs.find { |r| r[:name] == role }
+    if role_def[:include_segments]
+      filtered = segments.select { |s| role_def[:include_components].include?(s[:component]) }
+      ordered = order_segments_with_hoist(segments: filtered, slug_to_segment: slug_to_segment)
+      per_role_segment_seq[role] = ordered.each_with_index.map { |s, i| [s[:slug], i + 1] }.to_h
+    else
+      per_role_segment_seq[role] = {}
+    end
+  end
+
+  # Use the union of components across roles to enumerate segments to include
+  # in the table at all (any segment listed for any role appears).
+  segment_rows_for_table = order_segments_with_hoist(
+    segments: segments,
+    slug_to_segment: slug_to_segment
+  )
+
+  segment_rows = segment_rows_for_table.map do |seg|
+    {
+      path: seg[:path],
+      kind: 'segment',
+      extra: {
+        slug:        seg[:slug],
+        component:   seg[:component],
+        section:     seg[:section],
+        type:        seg[:type],
+        status:      seg[:status],
+        stage:       seg[:stage],
+        is_appendix: seg[:is_appendix],
+        hoisted:     seg[:hoisted],
+        hoisted_after: seg[:hoisted_after],
+        orphan:      seg[:orphan],
+        depends:     seg[:depends]
+      },
+      role_cells: role_names.each_with_object({}) do |role, h|
+        seq = per_role_segment_seq[role][seg[:slug]]
+        if seq
+          # Required is implicit for segments in audit-walk-order: the role
+          # walks segments top-to-bottom and they're all "required reading".
+          # Future refinement: per-role "required-for-this-role" segment lists
+          # could mark some as available-only. For now, all included segments
+          # are required.
+          cell = seq.to_s
+          cell += '*'
+          # Distinguish hoisted appendix segments
+          cell = "#{cell}[a]" if seg[:hoisted]
+          cell = "#{cell}[o]" if seg[:orphan]
+          h[role] = cell
+        else
+          h[role] = ''
+        end
+      end
+    }
+  end
+
+  {
+    roles: role_defs,
+    rows:  top_level_rows + segment_rows
+  }
+end
+
+# ── Render markdown ──────────────────────────────────────────────────────────
+
+def render_markdown(data)
+  lines = []
+  lines << '<!-- Generated by tools/role-encounter/bin/build-encounter-table — do not edit. -->'
+  lines << '<!-- Edit config/{roles,top-level,segments}.yaml and re-run. -->'
+  lines << ''
+  lines << '# Role Encounter Table'
+  lines << ''
+  lines << <<~PREAMBLE
+    Per-role canonical reading order across the project. One row per file (top-
+    level + segments), one column per role. Cell encoding:
+
+    - **integer** (e.g., `12`) — sequence number within this role's reading set
+    - **integer** + `*` (e.g., `12*`) — required at that position
+    - `+` — available in any order within its band
+    - `+*` — required, in any order within its band
+    - `—` — deliberately excluded for this role (priming-heavy; see the per-role notes file)
+    - blank — file not enumerated for this role
+
+    Segment-row suffixes:
+
+    - `[a]` — hoisted appendix segment, inserted after the segment that first surfaced it
+    - `[o]` — orphan: file in `src/` not referenced in OUTLINE.md (lint-outline flags these)
+
+    To regenerate: `ruby tools/role-encounter/bin/build-encounter-table`. To
+    pull a single role's view: `ruby tools/role-encounter/bin/role-view --role=NAME`.
+
+    Source-of-truth for what's in this table:
+
+    - `config/roles.yaml` — role definitions
+    - `config/top-level.yaml` — per-file role-membership and ordering
+    - `config/segments.yaml` — OUTLINE traversal rules (incl. appendix-hoist)
+  PREAMBLE
+  lines << ''
+
+  # Roles header
+  role_names = data[:roles].map { |r| r[:name] }
+  lines << '## Roles'
+  lines << ''
+  data[:roles].each do |r|
+    lines << "- **`#{r[:name]}`** — #{(r[:description] || '').strip.split(/\n+/).first}"
+    lines << "  - audit-safe: `#{r[:audit_safe]}` · README variant: `#{r[:readme_variant]}` · segments: `#{r[:include_segments]}`"
+  end
+  lines << ''
+
+  # Table
+  lines << '## Encounter Table'
+  lines << ''
+  header_cells = ['Path', 'Kind', 'Section', 'Slug'] + role_names
+  align_cells  = [':---', ':---', ':---:', ':---'] + role_names.map { ':---:' }
+
+  lines << '| ' + header_cells.join(' | ') + ' |'
+  lines << '|' + align_cells.map { |a| " #{a} " }.join('|') + '|'
+
+  # Group rows: top-level first, then segments by component
+  top_level_rows = data[:rows].select { |r| r[:kind] == 'top-level' }
+  segment_rows   = data[:rows].select { |r| r[:kind] == 'segment' }
+
+  unless top_level_rows.empty?
+    top_level_rows.each do |row|
+      cells = [
+        "`#{row[:path]}`",
+        '',
+        '',
+        '',
+      ] + role_names.map { |r| row[:role_cells][r] }
+      lines << '| ' + cells.join(' | ') + ' |'
+    end
+  end
+
+  unless segment_rows.empty?
+    last_component = nil
+    segment_rows.each do |row|
+      component = row[:extra][:component]
+      if component != last_component
+        # Component-divider row — purely cosmetic, keeps the table scannable
+        divider_cells = ["**#{component}**", '', '', ''] + role_names.map { '' }
+        lines << '| ' + divider_cells.join(' | ') + ' |'
+        last_component = component
+      end
+
+      section_label = row[:extra][:section] || '?'
+      slug_label = row[:extra][:slug]
+      slug_label = "*#{slug_label}* (orphan)" if row[:extra][:orphan]
+      slug_label = "_#{slug_label}_ (hoisted from §#{section_label})" if row[:extra][:hoisted]
+
+      cells = [
+        "`#{row[:path]}`",
+        row[:extra][:type] ? "`#{row[:extra][:type]}`" : '',
+        section_label,
+        slug_label,
+      ] + role_names.map { |r| row[:role_cells][r] }
+      lines << '| ' + cells.join(' | ') + ' |'
+    end
+  end
+
+  lines << ''
+  lines << '## Summary'
+  lines << ''
+  total_rows = data[:rows].size
+  by_kind = data[:rows].group_by { |r| r[:kind] }.transform_values(&:size)
+  lines << "- Total rows: **#{total_rows}** (top-level: #{by_kind['top-level'] || 0}, segments: #{by_kind['segment'] || 0})"
+
+  data[:roles].each do |role|
+    in_view = data[:rows].count { |r| !r[:role_cells][role[:name]].nil? && !r[:role_cells][role[:name]].empty? && r[:role_cells][role[:name]] != '—' }
+    excluded = data[:rows].count { |r| r[:role_cells][role[:name]] == '—' }
+    lines << "- **`#{role[:name]}`** view: #{in_view} files (#{excluded} explicitly excluded)"
+  end
+
+  lines.join("\n") + "\n"
+end
+
+# ── Main ─────────────────────────────────────────────────────────────────────
+
+roles_config        = load_yaml(CONFIG_DIR.join('roles.yaml').to_s)
+top_level_config    = load_yaml(CONFIG_DIR.join('top-level.yaml').to_s)
+segments_config     = load_yaml(CONFIG_DIR.join('segments.yaml').to_s)
+
+segments, slug_to_segment = collect_segments(
+  repo_root:       REPO_ROOT,
+  segments_config: segments_config,
+  quiet:           options[:quiet]
+)
+
+info("collected #{segments.size} segments across #{segments.map { |s| s[:component] }.uniq.size} components", quiet: options[:quiet])
+
+data = build_encounter_data(
+  roles_config:     roles_config,
+  top_level_config: top_level_config,
+  segments_config:  segments_config,
+  segments:         segments,
+  slug_to_segment:  slug_to_segment
+)
+
+markdown = render_markdown(data)
+
+if options[:check]
+  on_disk = File.exist?(options[:table_out]) ? File.read(options[:table_out]) : ''
+  if on_disk == markdown
+    puts "OK: #{options[:table_out]} matches regenerated output"
+    exit 0
+  else
+    warn "DRIFT: #{options[:table_out]} does not match regenerated output"
+    warn "  on-disk: #{on_disk.lines.size} lines / #{on_disk.bytesize} bytes"
+    warn "  regenerated: #{markdown.lines.size} lines / #{markdown.bytesize} bytes"
+    exit 1
+  end
+else
+  File.write(options[:table_out], markdown)
+  info("wrote #{options[:table_out]} (#{markdown.bytesize} bytes / #{markdown.lines.size} lines)", quiet: options[:quiet])
+end
+
+if options[:json_out]
+  json_path = options[:json_out]
+  File.write(json_path, JSON.pretty_generate(data))
+  info("wrote #{json_path}", quiet: options[:quiet])
+end
