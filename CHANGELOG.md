@@ -14,6 +14,26 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+## 2026-05-01
+
+### R2 aggregator + score-card + patterns view; role-encounter over-engineering and reframe; Phase 2 embedding spike
+
+**R2 naming aggregator landed** as `bin/naming-r2-aggregate.rb` producing three outputs: a single-table score-card (`msc/naming/r2-aggregate-table.md`) sorted by `max(score/n)` descending, a per-target detail view with full vote breakdown (`msc/naming/r2-aggregate-detail.md`), and a cross-cutting patterns doc (`msc/naming/r2-patterns.md`) with categorical groupings (defended keeps / rename signals / add-alias landings / contested / negative) and coordination flags (Greek-vocabulary cluster, math-symbol add-alias pattern, Class-N taxonomy, Pearl hierarchy). Substance factor evolved through ~6 refinement iterations from a discrete-tier shape to a smooth `(0.7 + 0.3 × effort) × (1.0 + novelty)` with 1.2× multipliers for top-pick and canonicalize votes. Top-pick multiplier is data-justified — benchmark showed it acts as tiebreaker in 20/20 multi-+2-per-target cases. R1 cohort folded in as one synthetic voter on the R2 scale. Filters: ≥2 R2 voters AND alternatives proposed (excludes 16 uncontested keeps where no alternative was offered at any phase). Commits `21ef4a5`, `7abdb7a`, `3dbc0aa`, `45bd00e`. Coverage: 122 multi-R2-voter targets out of 629; ~40% have a metadata anchor in the naming-context-map (139 by master-list `segment_link` + 110 by grep first-mention).
+
+**Phase 2 embedding spike completed** at `spikes/spike-local-embedding-benchmark/`. Memorata exploration + 8-model benchmark on 12 AAD-specific retrieval queries. Three models tied at MRR=1.000; recommendation is `nomic-embed-text-v2-moe` (lowest cost-per-quality, already memorata's production default, 768-dim). Lift memorata's data layer wholesale, patch with multi-level chunking + source-class tagging + frontmatter-aware markdown chunker + embedding-model identity per vector. Commit `aaa08df`.
+
+**Role-encounter tooling built then shelved.** A YAML-config-driven generator for per-role file-encounter orderings landed at `tools/role-encounter/` (commit `2c8da04`). On review, identified as solving the wrong problem: building a meta-document layer parallel to the existing `doc/readme/` liquid pipeline + `bin/build-readme` infrastructure rather than extending it. Joseph reframed: the right artifact is per-role README files generated from the existing pipeline (`README.md`, `README-auditor.md`, `README-voter.md`, etc.), each composing a shared auto-generated project-tree partial plus role-specific onboarding partials migrated from `doc/de-novo-audit-instructions.md` / `naming-principles.md` / `naming-cycle-methodology.md`. `tools/role-encounter/` moved to `_obs/role-encounter-superseded-2026-05-01/` with `SUPERSEDED.md` documenting the lessons.
+
+**Three operational-discipline feedback memories captured** (saved to project memory):
+
+- *Durability claims must be verified by tool action* — caught in this session: said "recorded / logged" without firing tool actions; performance bias substituting for completion. Fix: run the test *"if I dropped dead at the end of this turn, would future-me find this?"* before any durability claim.
+- *Metacognitive Todo pattern* — Joseph's contribution from prior agents: add metacognitive prompts as Todo items; treat system-reminder pings as activation moments for self-monitoring rather than noise. Operational across the rest of the session.
+- *Problem-framing paralleling test* — when a framing produces tooling parallel to existing infrastructure rather than extending it, the framing is wrong. Validated by today's role-encounter arc.
+
+**Session handoff at `msc/handoff-2026-05-01.md`** captures where things are and the queue for next session.
+
+---
+
 ## 2026-04-28
 
 ### CLAUDE-2.md sunset; PRACTICA navigator; catalog extraction
