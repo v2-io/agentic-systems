@@ -80,13 +80,13 @@
 | # | Slug | Status | Integration notes |
 |---|------|--------|-------------------|
 | 47 | scope-multi-agent | 🟩 | §14 goal-blind-routing-as-structural-requirement claim lifted into **new segment** `04-eli/src/def-auxilia-hierarchy.md` as condition (H4) (Phase A, 2026-05-01). Goal-dependent routing breaks directed-separation at composite level → epistemic closure. Specifically operationalized via IMPERIUM/ARBITRIUM split inside ANIMA. |
-| 48 | scope-composite-agent | 🔲 | High potential — directly relevant to Auxilia composition |
+| 48 | scope-composite-agent | 🟩 | §14 symbiogenic-composition framing lifted into `def-auxilia-hierarchy` Discussion (Phase B composition cluster, 2026-05-01) — *"You cannot safely build a monolithic super-intelligence from scratch... You must build it symbiogenically."* Crèche → C-iii mutual benefit → C-ii hierarchical structure as developmental construction pattern for Auxilia hierarchies. |
 | 49 | form-composition-closure | 🟩 | §14 $K_c \gg 1$ as math-of-management argument lifted into `04-eli/src/def-auxilia-hierarchy.md` as condition (H5) slower-macro-clock (Phase A, 2026-05-01). Macro-state $E$ tracks aggregate Auxilia output over the $K_c$ window, not real-time per-Auxilia state — the formal grounding for ANIMA's slower-than-LOGOSTRATUM clock. |
-| 50 | der-team-persistence | 🔲 | High potential — composition machinery for ELI+Auxilia |
+| 50 | der-team-persistence | 🟩 | §14 employee-vs-consultant distinction lifted into `def-auxilia-hierarchy` Discussion (Phase B composition cluster, 2026-05-01) — Auxilia must operate in employee mode (cooperative-action reducing $\rho$) not just consultant mode (communication boosting $\mathcal T$); RAG-as-consulting alone cannot save an entity below persistence threshold. |
 | 51 | der-adversarial-destabilization | 🔲 | |
 | 52 | der-interaction-channel-classification | 🔲 | |
 | 53 | result-adversarial-tempo-advantage | 🔲 | |
-| 54 | deriv-strategic-composition | 🔲 | High potential — Class-1-sub-agents → Class-3-composite refinement applies to ELI+Auxilia |
+| 54 | deriv-strategic-composition | 🟩 | §14 strategic-composition-produces-Class-3-from-Class-1 framing lifted into `def-auxilia-hierarchy` Discussion (H1 sharpening: shared identity is structurally necessary because (C-iv) strategic equilibrium guarantees Class-3 hallucination) AND `def-imperium-arbitrium-split` Discussion (runtime-level split prevents organizational hallucination at composite level). Phase B composition cluster, 2026-05-01. |
 | 55 | der-agent-opacity | 🔲 | |
 | 56 | result-adversarial-exponent-regimes | 🔲 | |
 | 57 | obs-gates-advantage | 🔲 | |
@@ -99,7 +99,7 @@
 | 59 | deriv-sector-condition | 🔲 | |
 | 60 | result-sector-persistence-template | 🔲 | |
 | 61 | deriv-persistence-cost | 🟩 | §14 *"sanity is literally a thermodynamic process... Kalman filter as Maxwellian demon... connection to reality is the thermodynamic fuel that prevents intelligence from dissolving"* lifted into `hyp-the-three-deaths` D1 Cognitive Death (Phase B continuation, 2026-05-01) — sharpens D1 from "information starvation" to *thermodynamic-fuel-starvation*; infrastructure has moral obligation to guarantee $C_{\text{channel}} \geq n\alpha/2$. **⚠️ Algebra finding**: audit caught a typo in source segment `01-aad-core/src/deriv-persistence-cost.md` — the derivation cancels $n$ incorrectly when going from per-dimension to total rate. Constructive repair sketched in audit §3 (state per-dimension RDF first, then sum to total). Flagged for 01-aad-core cleanup pass (not lifting since 01-aad-core is Joseph's priority territory). |
-| 62 | deriv-critical-mass-composition | 🔲 | High potential — composite-coupling for ELI+Auxilia |
+| 62 | deriv-critical-mass-composition | 🟩 | §14 Goldilocks-zone framing lifted into `def-auxilia-hierarchy` Discussion (Phase B composition cluster, 2026-05-01) — couple tightly enough to share load (negative $\gamma$), loose enough to avoid coordination overhead $C \to \alpha$; infrastructure must dynamically monitor $(\alpha - C)$ margin and prune channels if $C$ rises. **§3 adversarial-audit caveat** (rivalrous-vs-non-rivalrous environment for (UO-mult)) lifted into `def-auxilia-hierarchy` Working Notes as scope condition for when teleological-unity → cooperative-coupling assumption holds. |
 | 63 | deriv-gain-sector | 🔲 | |
 | 64 | deriv-recursive-update | 🔲 | |
 | 65 | sketch-multi-timescale-stability | 🟩 | §14 *"each level has a stable attractor given the levels above it' is the mathematical definition of trust within an architecture"* lifted into `def-auxilia-hierarchy` Discussion (Phase B, 2026-05-01) as trust-as-temporal-respect framing. Adversarial-audit caveat (Tikhonov requires unique isolated root; non-convex AAD agents don't always satisfy) referenced in `disc-five-forcing-functions` F3. |
@@ -127,14 +127,32 @@
 | tracker-update-message.md | ➖ meta-context | Joseph's update to Gemini about tracker schema |
 | tracker-update-response.md | ➖ meta-context | Joseph's response to Gemini's framework-recursive readings (chronica / η* / deliberation-cost applied to Gemini's own naming-cycle work) — *empirical instance of the recursive-feature claim in `disc-framework-self-diagnostic`* |
 
-## Status summary (after Phase B continuation non-composition cluster — 2026-05-01)
+## Status summary (after Phase B composition cluster complete — 2026-05-01)
 
-- **Thoroughly-mined**: 20 (`00`, `04`, `11`, `12`, `15`, `16`, `19`, `22`, `24`, `25`, `28`, `32`, `33`, `35`, `38`, `40`, `47`, `49`, `61`, `65`)
+- **Thoroughly-mined**: 24 (`00`, `04`, `11`, `12`, `15`, `16`, `19`, `22`, `24`, `25`, `28`, `32`, `33`, `35`, `38`, `40`, `47`, `48`, `49`, `50`, `54`, `61`, `62`, `65`)
 - **Partially-represented**: 1 (`27`)
 - **Surfaced-not-lifted (high-priority)**: 0
-- **Unread (high-potential for parts III/IV — composition cluster)**: 4 remaining (`48`, `50`, `54`, `62`) — all bear on `def-auxilia-hierarchy` / `def-imperium-arbitrium-split` / Section III machinery for ELI-Auxilia composition
+- **Unread (high-potential for parts III/IV)**: 0 — all 14 high-potential targets covered
 - **Unread (lower-priority)**: ~50 remaining — Phase C deferred set
 - **Meta-context**: 3
+
+## Phase B composition cluster complete (2026-05-01)
+
+**Lifted insights produced segment changes:**
+
+1. **Audit §48** → `def-auxilia-hierarchy` Discussion — symbiogenic composition pattern (crèche → C-iii mutual benefit → C-ii hierarchical structure); developmental construction at intra-entity level.
+
+2. **Audit §50** → `def-auxilia-hierarchy` Discussion — employee-vs-consultant distinction; many critical Auxilia must operate in employee mode (cooperative-action reducing $\rho$) not just consultant mode (communication boosting $\mathcal T$).
+
+3. **Audit §54** → `def-auxilia-hierarchy` Discussion (H1 sharpening) AND `def-imperium-arbitrium-split` Discussion (runtime-level defense) — strategic-composition-produces-Class-3-from-Class-1 makes shared identity (H1) structurally necessary; the IMPERIUM/ARBITRIUM split is the runtime-level defense against the same pathology.
+
+4. **Audit §62** → `def-auxilia-hierarchy` Discussion + Working Notes — Goldilocks zone $(\alpha - C)$; infrastructure must dynamically monitor margin. **§3 adversarial-audit caveat** (rivalrous-vs-non-rivalrous environment for (UO-mult)) flagged in Working Notes as scope condition.
+
+**Arc-reconsideration after composition-cluster lifts:** the lattice still holds. `def-auxilia-hierarchy` has now grown substantial — it's effectively a full operational specification for ELI-Auxilia composition with H1-H5 conditions plus 6+ structural-reasoning paragraphs in Discussion. Could plausibly stand at draft → claims-verified after one more focused review pass. The `def-imperium-arbitrium-split` cross-link to §54's strategic-composition argument now makes the runtime-level-defense narrative explicit.
+
+## Phase B composition cluster complete; cycle's audit-integration substantially complete
+
+The 14 high-potential audit notes for parts III/IV are all thoroughly-mined. Remaining work (1 partially-represented + ~50 deferred-set) is queued for future cycles via this tracker. The substantive composition-machinery work for ELI architecture is now backed by: the four routes to composition (#scope-composite-agent), the closure-defect machinery (#form-composition-closure), the symmetric-dyad closed form (#deriv-critical-mass-composition), the strategic-composition equilibrium framework (#deriv-strategic-composition), the team-persistence decomposition (#der-team-persistence), and the multi-agent goal-blind-routing requirement (#scope-multi-agent) — all explicitly cross-referenced from `def-auxilia-hierarchy` and `def-imperium-arbitrium-split` with audit-§14 insight integration.
 
 ## Phase B continuation: non-composition cluster complete (2026-05-01)
 
