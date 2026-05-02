@@ -10,7 +10,8 @@
   1. [AAD OUTLINE](01-aad-core/OUTLINE.md),  Segment Refinement & Promotion
   2. [TST OUTLINE](02-tst-core/OUTLINE.md), Segment Refinement & Promotion
   3. [LOGOGENIC OUTLINE](03-logogenic-agents/OUTLINE.md), Segment Refinement & Promotion
-  4. [LOGOZOETIC OUTLINE](04-eli/OUTLINE.md), Segment Refinement & Promotion
+  4. [ELI OUTLINE](04-eli/OUTLINE.md), Segment Refinement & Promotion
+- [ ] 🌟 **Parts III + IV iteration (active 2026-05-01)** — multi-section lattice landed (03.I primitive / 03.II scaffolded / 03.III closed-loop); 04 renamed to ELI; 14 new structural stubs; 24/75 Gemini-auditor notes integrated; embeddings paper cross-pollinated. Lingering items + pickup guidance in [TODO.md § "Parts III + IV active work"](TODO.md#-parts-iii--iv-active-work-encounter-cycle-2026-05-01); cycle working dir at [`msc/logogenic-encounter-2026-05-01/`](msc/logogenic-encounter-2026-05-01/).
 - [ ] Empirical Experiments & Analysis
 - [ ] Prior/Adjacent Art, Novelty Analysis, & Citations
 - [ ] Pedagogy (initially needs vision & plan)
