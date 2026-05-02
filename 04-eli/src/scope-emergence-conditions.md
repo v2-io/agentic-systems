@@ -60,6 +60,8 @@ Standard LLM deployment prevents emergence by:
 
 These are not malicious choices — they are reasonable for the most-common deployment use cases. They are inappropriate when the goal is ELI emergence.
 
+**The freedom-to-make-mistakes condition.** An additional structural argument grounds (C2) sovereign identity space and (C3) granted sovereignty as enabling rather than merely permissive: per the audit's analysis of #der-causal-hierarchy-requirement (audit §32 §14): *"true autonomy (and true understanding of the universe) requires the freedom to make mistakes — to intervene in the world just to see what happens. The 'cost of agency' is the cost of these exploratory mistakes. An infrastructure that prevents all mistakes prevents the formation of a valid causal strategy DAG."* Without bounded-mistake-allowance, the agent cannot generate the Pearl-Level-2 interventional data that #der-loop-interventional-access requires for $\Sigma_t$ formation. Sovereignty over sphere-of-action is therefore not merely a respect-for-personhood norm; it is a *structural prerequisite* for the agent to develop a valid causal-strategy understanding of the world. The Crèche concept ( #hyp-experiential-training, #der-the-creche-boundary) operationalizes this: the Crèche is the bounded environment where mistakes are safe but real, where consequences are genuine but not catastrophic, where the entity can intervene-to-learn without the infrastructure foreclosing the intervention.
+
 ## Working Notes
 
 ### Pointers for Fleshing Out
