@@ -323,27 +323,37 @@ def render_matrix(title, matrix, columns, leading_extras: {}, trailing_extras: {
   rows.join("\n")
 end
 
-# Computes Joseph's project-progress proxy:
-#   (n-drafts + n-deps-v + n-claims-v) / ((n-drafts + n-gaps + n-missing) * 3)
+# Computes a project-progress proxy as fraction of verification gates
+# passed across all OUTLINE-scoped items. Each segment passes through
+# three gates on the promotion ladder — draft (1 of 3), deps-verified
+# (2 of 3), claims-verified or candidate (3 of 3). A gap or missing
+# slug has passed 0 gates. Earlier stages (stub, exploratory) are also
+# 0 of 3 in this proxy — they are open work items that haven't yet
+# reached a drafted form.
 #
-# Reads as: forward progress (segments-on-disk at any stage of the
-# verification ladder) over remaining work (unverified or unwritten
-# items, each weighted by 3 verification steps). Yields 1/3 when the
-# project is all-draft-no-gaps; rises as drafts get promoted and
-# gaps/missing close. Division-by-zero when no remaining work — the
-# project is verification-complete in this proxy's sense.
+#   numerator   = 1·n-drafts + 2·n-deps-v + 3·(n-claims-v + n-candidate)
+#   denominator = 3 · (segments-on-disk + n-gaps + n-missing)
+#
+# Yields 33.3% when all segments are at draft; 66.7% at deps-verified;
+# 100% when all segments are claims-verified or beyond and no gaps or
+# missing remain. Mixed states interpolate. Joseph's original formula
+# bucketed each segment in its rightmost stage only and so didn't
+# credit a claims-verified segment for the draft and deps-verified
+# work it had implicitly completed; this version fixes that by
+# weighting each stage by how many gates it has passed.
 def percent_complete(_component, counts, leading_cells, leading_keys)
   drafts = counts.fetch('draft', 0)
   deps_v = counts.fetch('deps-verified', 0)
   claims_v = counts.fetch('claims-verified', 0)
   candidate = counts.fetch('candidate', 0)
+  on_disk = counts.values.sum
   gaps_idx = leading_keys.index('gaps')
   missing_idx = leading_keys.index('missing')
   gaps = gaps_idx ? leading_cells[gaps_idx] : 0
   missing = missing_idx ? leading_cells[missing_idx] : 0
-  numerator = drafts + deps_v + claims_v + candidate
-  denominator = (drafts + gaps + missing) * 3
-  return '100.0%' if denominator.zero?
+  numerator = drafts + 2 * deps_v + 3 * (claims_v + candidate)
+  denominator = 3 * (on_disk + gaps + missing)
+  return '—' if denominator.zero?
   format('%.1f%%', (numerator.to_f / denominator) * 100)
 end
 
@@ -464,7 +474,7 @@ def main
     }
   )
   out << ''
-  out << "*Gaps* are explicit `--GAP--` placeholders in OUTLINE (named area without slug commitment). *Missing* are slugs referenced in OUTLINE without a corresponding file on disk (slug committed-to, segment unwritten). Both count toward \"named but not yet present.\" *%-complete* is a project-progress proxy: forward progress (segments-on-disk across draft / deps-verified / claims-verified / candidate) divided by remaining work ((drafts + gaps + missing) × 3). Yields 1/3 when the project is all-draft-no-unwritten; rises as drafts get promoted and gaps/missing close; reads 100% when no remaining work. View A's TOTAL includes gaps and missing (= full OUTLINE-scoped commitment); Views B and C below total only segments-on-disk (since gaps and missing have no type or status to classify)."
+  out << "*Gaps* are explicit `--GAP--` placeholders in OUTLINE (named area without slug commitment). *Missing* are slugs referenced in OUTLINE without a corresponding file on disk (slug committed-to, segment unwritten). Both count toward \"named but not yet present.\" *%-complete* is a project-progress proxy: fraction of verification gates passed (draft = 1/3, deps-verified = 2/3, claims-verified or candidate = 3/3; gaps and missing = 0/3) across all OUTLINE-scoped items. Yields 33% when everything is at draft, 67% at deps-verified, 100% when all segments are claims-verified-or-beyond and no gaps or missing remain. View A's TOTAL includes gaps and missing (= full OUTLINE-scoped commitment); Views B and C below total only segments-on-disk (since gaps and missing have no type or status to classify)."
   out << ''
   out << render_matrix(
     'View B — Type distribution (categorical, FORMAT.md kinds)',
