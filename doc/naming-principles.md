@@ -2,7 +2,7 @@
 
 ## Cold-start instruction — read this BEFORE any orientation
 
-**Do not read other agents' brainstorms, vote files, aggregations, or rename-mapping records before voting.** Specifically: do not read any file under `msc/naming/naming-votes/`, `msc/naming/naming-brainstorm-*.md`, `msc/naming/naming-aggregate-*`, `msc/naming/naming-alias-*.md`, `msc/naming/naming-cleanup-*.md`, `msc/naming/naming-pilot-rename-plan.md`, or `msc/naming/_archive/*` (archived prior-round artifacts; opening them defeats the cold-start). These would anchor your thinking and collapse the diversity this audit depends on.
+**Do not read other agents' brainstorms, vote files, aggregations, or rename-mapping records before voting.** Specifically: do not read any file under `msc/naming/naming-votes/`, `msc/naming/naming-brainstorm-*.md`, `msc/naming/naming-aggregate-*`, `msc/naming/naming-alias-*.md`, `msc/naming/naming-cleanup-*.md`, `msc/naming/naming-rename-plan.md`, `msc/naming/to-canonicalize.md`, or `msc/naming/_archive/*` (archived prior-round artifacts; opening them defeats the cold-start). These would anchor your thinking and collapse the diversity this audit depends on.
 
 This rule fires *first* — before you read CLAUDE.md, TODO.md, OUTLINE.md, FORMAT.md, segment files, or anything else. The instruction is here at the top precisely because earlier rounds discovered that even glancing at a `git status` showing one of those files disclosed enough to anchor an agent's votes. If you've already read any of the excluded files in this session, disclose it explicitly in your principles-observations section (round-1 evidence: this is recoverable as long as it's marked).
 
@@ -38,7 +38,7 @@ The framework deliberately uses a coherent Greek-rooted vocabulary for its core 
 
 ### Three-document layout for naming workstream
 
-`doc/naming-principles.md` (this file) holds the principles and instructions. `msc/naming/naming-pilot-rename-plan.md` holds specific rename mappings (landed and pending) — that file is excluded from rename sweeps so the mapping table survives them verbatim. **For Round 2 (active):** voters edit a per-agent voting card in place at `msc/naming/round-2-cards/{your-agent-id}.md` and maintain a tracker at `msc/naming/round-2-trackers/{your-agent-id}-tracker.md`; see [`doc/naming-cycle-methodology.md`](naming-cycle-methodology.md). **For Round 1 (historical):** voters wrote a per-agent vote-file at `msc/naming/naming-votes/{agent-id}.md`. Voters do not modify the pilot-rename-plan; the human reviewer does, after voting concludes.
+`doc/naming-principles.md` (this file) holds the principles and instructions. `msc/naming/naming-rename-plan.md` (renamed from `naming-pilot-rename-plan.md` on 2026-05-04) holds specific naming decisions — slug renames, prose-vocabulary renames, and confirmed canonicalize commitments (landed and pending) — that file is excluded from rename sweeps so the mapping table survives them verbatim. **For Round 2 (active):** voters edit a per-agent voting card in place at `msc/naming/round-2-cards/{your-agent-id}.md` and maintain a tracker at `msc/naming/round-2-trackers/{your-agent-id}-tracker.md`; see [`doc/naming-cycle-methodology.md`](naming-cycle-methodology.md). **For Round 1 (historical):** voters wrote a per-agent vote-file at `msc/naming/naming-votes/{agent-id}.md`. Voters do not modify the rename-plan; the human reviewer does, after voting concludes.
 
 ### Methodology — separate passes for prefix and subject-noun
 

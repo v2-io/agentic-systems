@@ -147,14 +147,32 @@ Per-spike status detail in [`spikes/INDEX.md`](spikes/INDEX.md); reasoning trail
 
 ## Naming pipeline — specific deferred items
 
-Status: pilot complete; full role-prefix sweep complete (142 segments); principles file refined edition committed (2026-04-24, `b9492b7`). **Refined Round 1 not yet launched** — under [`doc/naming-principles.md`](doc/naming-principles.md), agents write `*-r2.md` vote files; none currently exist. The pipeline workflow steps (refined Round 1 → aggregation → Round 2 → collision audit → landing) live in [`PRACTICA.md`](PRACTICA.md) §"🌟 Current naming conventions refactor"; original-Round-1 vote files are preserved at `msc/naming/naming-votes/*.md`.
+Status (updated 2026-05-04): R1 + R2 voting cohorts closed; manual canonicalize-curation pass landed 103 of 118 candidates across 8 batches into [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md). Remaining 13 rows live in [`msc/naming/to-canonicalize.md`](msc/naming/to-canonicalize.md) (D-deferred citability special cases + ??? rows on separability-triad-rung-naming pending Joseph's call). Master-list `rename_status` field tracks all decisions; 88 currents marked across canonicalize / rename / excluded statuses. **Curation-pass full narrative in [CHANGELOG 2026-05-04](CHANGELOG.md).**
 
-**Specific subject-noun renames deferred to that pipeline:**
+**Slug renames queued for `bin/rename-slug` execution:**
 
-- `#disc-additive-coordinate-forcing` → `#disc-forced-coordinates` (Round-1 consensus; addresses Čencov 4th instance which isn't Cauchy-FE)
-- `#disc-separability-pattern` → `#disc-separability-ladder` (Round-1 consensus; "ladder" more evocative than "pattern" for the rung structure)
-- `#deriv-causal-ib-exploration` → e.g. `#deriv-causal-ib-survival` or `#deriv-causal-ib-scalar` (subject-noun fix per `feedback_subject_noun_slug_naming` — names the role/effect rather than the thing defined). The companion `#deriv-causal-ib-lmi` was named correctly during its 2026-04-25 promotion; the parent inherits the misnaming.
+- `#disc-separability-pattern` → `#disc-separability-ladder` (Round-1 consensus; lifted from R1/R2-deferred to pending-post-R2 by 2026-05-04 prior-art investigation; aligns with B-N-Sep paper's Hintikka cite-and-extend posture). Companion: three rung-name decision pending Joseph (`separable core / structured repair / general open` vs Hintikka echo `definable core / identifiable region / non-identifiable frontier` vs alternates).
+- `#disc-additive-coordinate-forcing` → `#disc-forced-coordinates` (Round-1 consensus; addresses Čencov 4th instance which isn't Cauchy-FE).
+- `scope-software` → `scope-evolving-software` (segment's own formal expression $\mathcal{S}_{\text{evolving}}$ already names the scope; queued 2026-05-04).
+- `obs-simulation-results` → `obs-section-i-validation-simulations` (citability fix per Criterion 9; queued 2026-05-04).
+- `deriv-detection-latency` → `deriv-update-detection-latency` (citability fix; queued 2026-05-04).
+- `def-change-distance` → `def-discontinuity-distance` (citability fix; segment's own framing word; queued 2026-05-04).
+- `deriv-bias-bound` → `deriv-observation-ambiguity-bias-bound` (citability fix; phenomenon-name; drops Class-N reference; queued 2026-05-04).
+- `deriv-strategic-dynamics` → `deriv-edge-credence-dynamics` (citability fix; names what evolves and where; queued 2026-05-04).
+- `obs-gates-advantage` → `obs-gated-tempo-advantage` (citability fix + precision; queued 2026-05-04).
+- `#deriv-causal-ib-exploration` → e.g. `#deriv-causal-ib-survival` or `#deriv-causal-ib-scalar` (subject-noun fix per `feedback_subject_noun_slug_naming`).
 - ASF umbrella naming (Round 1 misread `ASF` as debt; reframe as the intentional umbrella where AAD = Part I, TST = Part II, etc.).
+
+**Prose-vocabulary renames** (LEXICON entry + targeted prose-cleanup sweep, no slug rename):
+
+- **Class 1 / 2 / 3 → Separated / Coupled / Partial; family/axis = "Goal-Update Coupling Class"** with **coordinated Class 2 ↔ Class 3 numbering swap** (post-renumber: Class 1 = Separated unchanged, Class 2 = Partial was Class 3, Class 3 = Coupled was Class 2). Brings Architecture into ordering-alignment with the other six AAD ladders per the meta-pattern audit. Affects ~7 segments + README + CLAUDE.md.
+- **Knowledge Type axis name** with Static / Learning attributes — already in use across `doc/DOMAINS.md`; commitment elevates it to LEXICON-canonical.
+- **`logozoetic agent` → `Emergent Logozoetic Intelligence (ELI)`** — prose-handle rename; directory-level precedent already landed.
+- **`grafting` → `strategic grafting`** — citability fix.
+- **`alignment uncertainty` → `teleological-unity uncertainty`** — citability fix; connects to project's unity vocabulary.
+- **`plan confidence` → `strategy-plan confidence`** — citability fix.
+- **`effective disturbance` → `regime-typed effective disturbance`** — citability fix.
+- **`routing structure` → `multi-agent routing structure`** — citability fix.
 
 **Mechanical follow-ups (no voting needed):**
 
@@ -162,7 +180,13 @@ Status: pilot complete; full role-prefix sweep complete (142 segments); principl
 - Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).
 - Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).
 
-Detail in [`msc/naming/naming-pilot-rename-plan.md`](msc/naming/naming-pilot-rename-plan.md); principles in [`doc/naming-principles.md`](doc/naming-principles.md); Round-1 vote archaeology in `msc/naming/naming-votes/` and `msc/naming/naming-aggregate-*`.
+**Mechanical follow-ups (no voting needed):**
+
+- ~135 segments still embed pre-rename slug names inside `*[Type (slug)]*` formal tags. Mechanical to detect; content cleanup pass.
+- Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).
+- Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).
+
+Detail in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) (renamed from `naming-pilot-rename-plan.md` on 2026-05-04 to reflect the broadened scope from role-prefix-pilot mapping to all naming decisions); principles in [`doc/naming-principles.md`](doc/naming-principles.md); Round-1 vote archaeology in `msc/naming/naming-votes/` and `msc/naming/naming-aggregate-*`.
 
 
 ## Documentation queued

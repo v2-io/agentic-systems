@@ -31,7 +31,8 @@
       "first_encounter_locality": "filled 139/139",
       "segment_link": "filled 139 (incl. 1 manually-resolved ambiguity), 4 with shared-segment annotation, 301 no-match",
       "manual_curation": "4 currents flagged for follow-up review",
-      "canonicalize_provenance": "filled 503/503"
+      "canonicalize_provenance": "filled 503/503",
+      "rename_status": "44/629 currents marked as of 2026-05-04 (corresponds to 39 canonicalize commitments in msc/naming/naming-rename-plan.md; Greek-phase phases map to 2 master-list entries each — bare + Greek-tagged — explaining the 44-vs-39 differential)"
     },
     "merged_variants": {
       "satisfaction gap": [
@@ -7040,6 +7041,16 @@
       "logozoetic vs conscious OODA4 sentient agent": [
         "\"Logozoetic\" (vs. Conscious AI, sentient agent)"
       ]
+    },
+    "rename_status_schema": {
+      "description": "Per-current naming-decision marker added by curation passes. When absent, the current is unrouted. When present, indicates the decision and where it was recorded.",
+      "fields": {
+        "status": "one of: canonicalized | canonicalized-with-nuance | canonicalized-greek-phase | canonicalized-held | renamed | deferred | excluded-no-op | excluded-different-layer (extensible)",
+        "decided_date": "YYYY-MM-DD when the decision was recorded",
+        "destination": "path to the file that records the decision (typically msc/naming/naming-rename-plan.md)",
+        "destination_section": "section within the destination file where the entry lives"
+      },
+      "usage": "A future filter-script can select currents by status (e.g., to generate a \"remaining work\" list of unrouted currents, or a \"for review\" list of held entries). Soft-delete is achieved by marking status=excluded-* rather than removing the row."
     }
   },
   "currents": [
@@ -7222,7 +7233,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "satisfaction gap",
@@ -7397,7 +7414,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "orient cascade",
@@ -8600,7 +8623,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'Lowercase italic chronica' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "strategy DAG",
@@ -8715,7 +8744,13 @@
           ],
           "canonicalize_provenance": "excavated — 'strategy DAG' appears in `#def-strategy-dag` prose (5 occurrences) (also in 35 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "chain confidence decay",
@@ -9090,7 +9125,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "symbiogenic composition",
@@ -9825,7 +9866,13 @@
           ],
           "canonicalize_provenance": "excavated — 'temporal optimality' appears in `#post-temporal-optimality` prose (4 occurrences) (also in 12 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "adversarial destabilization",
@@ -9909,7 +9956,13 @@
           ],
           "canonicalize_provenance": "excavated — 'adversarial destabilization' appears in `#der-adversarial-destabilization` prose (2 occurrences) (also in 17 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "agent spectrum",
@@ -10879,7 +10932,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "agent opacity",
@@ -11712,7 +11771,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'Trust gain' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "context turnover",
@@ -12359,7 +12424,13 @@
           ],
           "canonicalize_provenance": "excavated — 'team persistence' appears in `#der-team-persistence` prose (4 occurrences) (also in 20 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "credit assignment boundary",
@@ -12449,7 +12520,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'Credit assignment frontier' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "honesty as architecture",
@@ -13355,7 +13432,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "concept the self reinforcing positive feedback loop linking m t quality and σ t evaluable complexity TST specific and AAD general form",
@@ -14365,7 +14448,13 @@
           ],
           "canonicalize_provenance": "excavated — 'atomic changeset' appears in `#def-atomic-changeset` prose (2 occurrences) (also in 5 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "complete agent state",
@@ -14519,7 +14608,14 @@
           ],
           "canonicalize_provenance": "excavated — 'detection latency' appears in `#deriv-detection-latency` prose (23 occurrences) (also in 1 other segment); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Pending subject-noun renames — surfaced post-R2",
+        "rename_target": "deriv-update-detection-latency"
+      }
     },
     {
       "current": "logogenic logozoetic",
@@ -14611,7 +14707,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "excluded",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Excluded — not canonicalized"
+      }
     },
     {
       "current": "composition consistency",
@@ -15184,7 +15286,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Vocabulary commitments — non-slug, LEXICON + prose-pass"
+      }
     },
     {
       "current": "specification bound",
@@ -15422,7 +15530,13 @@
           ],
           "canonicalize_provenance": "excavated — 'conceptual alignment' appears in `#hyp-conceptual-alignment` prose (3 occurrences) (also in 7 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "m preservation",
@@ -15581,7 +15695,13 @@
           ],
           "canonicalize_provenance": "excavated — 'persistence cost' appears in `#deriv-persistence-cost` prose (4 occurrences) (also in 2 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "strategic calibration",
@@ -15947,7 +16067,13 @@
           ],
           "canonicalize_provenance": "excavated — 'strategic tempo' appears in `#def-strategic-tempo` prose (7 occurrences) (also in 5 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "unity dimension",
@@ -16260,7 +16386,13 @@
           ],
           "canonicalize_provenance": "excavated — 'adaptive reserve' appears in 12 segments incl. `#deriv-sector-condition` prose (28 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "agent environment",
@@ -16785,7 +16917,13 @@
           ],
           "canonicalize_provenance": "excavated — 'moral continuity' appears in `#scope-moral-continuity` prose (2 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "sector condition",
@@ -17900,7 +18038,13 @@
           ],
           "canonicalize_provenance": "excavated — 'agency' appears in `#scope-agency` prose (6 occurrences) (also in 21 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "agent model",
@@ -18685,7 +18829,14 @@
           ],
           "canonicalize_provenance": "invented — phrase 'Cycle loop distinction' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize",
+        "note": "canonicalize-as-is; competing alt \"Cycle loop distinction\" was meta-rephrasing of the row title, not a real alternative; pair-distinction itself is load-bearing AAD vocabulary per LEXICON"
+      }
     },
     {
       "current": "developer-as-act-agent",
@@ -19009,7 +19160,13 @@
           ],
           "canonicalize_provenance": "excavated — 'event driven dynamics' appears in `#form-event-driven-dynamics` prose (2 occurrences) (also in 7 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "evidence starvation",
@@ -19604,7 +19761,13 @@
           ],
           "canonicalize_provenance": "excavated — 'adaptive system' appears in `#scope-adaptive-system` prose (2 occurrences) (also in 14 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "change distance",
@@ -19673,7 +19836,14 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Pending subject-noun renames — surfaced post-R2",
+        "rename_target": "def-discontinuity-distance"
+      }
     },
     {
       "current": "composite agent",
@@ -19726,7 +19896,13 @@
           ],
           "canonicalize_provenance": "excavated — 'composite agent' appears in `#scope-composite-agent` prose (14 occurrences) (also in 15 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "coupled update dynamics",
@@ -19809,7 +19985,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "mismatch dynamics",
@@ -20025,7 +20207,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "structural adaptation necessity",
@@ -20180,7 +20368,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "triple depth penalty",
@@ -20447,7 +20641,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "$\\kappa_{\\text{processing}}$",
@@ -20667,7 +20867,14 @@
           ],
           "canonicalize_provenance": "excavated — 'causal structure' appears in `#post-causal-structure` prose (7 occurrences) (also in 18 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-adopted-standard",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Adopted-standard canonicalize",
+        "prior_art_cite": "Pearl 2009 (*Causality: Models, Reasoning, and Inference*, 2nd ed., CUP); Spirtes, Glymour & Scheines 2000 (*Causation, Prediction, and Search*, MIT Press)."
+      }
     },
     {
       "current": "composition closure / closure defect $\\varepsilon^\\ast$",
@@ -20870,7 +21077,13 @@
           ],
           "canonicalize_provenance": "excavated — 'discussion' appears in 160 segments incl. `#disc-exploit-explore-deliberate` prose (338 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-format-layer",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — FORMAT.md / process-vocabulary"
+      }
     },
     {
       "current": "edge update via gain",
@@ -21009,7 +21222,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "prolepsis",
@@ -21089,7 +21308,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "proprium mapping",
@@ -21135,7 +21360,13 @@
           ],
           "canonicalize_provenance": "excavated — 'proprium mapping' appears in `#def-proprium-mapping` prose (1 occurrence); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "structural adaptation",
@@ -21533,7 +21764,13 @@
           ],
           "canonicalize_provenance": "excavated — 'variational sector condition' appears in 2 segments incl. `#deriv-bias-bound` prose (6 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "$U_M$ as epistemic unity",
@@ -21801,7 +22038,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — with nuance flagged"
+      }
     },
     {
       "current": "AAD (acronym)",
@@ -21941,7 +22184,14 @@
           ],
           "canonicalize_provenance": "excavated — 'action selection' appears in `#der-action-selection` prose (5 occurrences) (also in 21 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-adopted-standard",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Adopted-standard canonicalize",
+        "prior_art_cite": "Sutton & Barto 2018 (*Reinforcement Learning: An Introduction*, 2nd ed., MIT Press); Russell & Norvig (*Artificial Intelligence: A Modern Approach*) — RL canonical reference."
+      }
     },
     {
       "current": "adaptive gain dynamics",
@@ -21994,7 +22244,13 @@
           ],
           "canonicalize_provenance": "excavated — 'adaptive gain dynamics' appears in `#deriv-adaptive-gain-dynamics` prose (2 occurrences) (also in 6 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "additive coordinate forcing family",
@@ -22202,7 +22458,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'aporia ἀπορία' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "blind pursuer",
@@ -22530,7 +22792,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "closure defect",
@@ -23577,7 +23845,13 @@
           ],
           "canonicalize_provenance": "excavated — 'developer agent' appears in `#scope-developer-agent` prose (10 occurrences) (also in 4 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "edge credence",
@@ -23649,7 +23923,13 @@
           ],
           "canonicalize_provenance": "excavated — 'edge credence' appears in 12 segments incl. `#der-orient-cascade` prose (18 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "\"epistemic substate\" / \"purposeful substate\"",
@@ -23781,7 +24061,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "explicit strategy condition",
@@ -24278,7 +24564,13 @@
           ],
           "canonicalize_provenance": "excavated — 'implementation time' appears in `#def-implementation-time` prose (5 occurrences) (also in 22 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "inevitability core",
@@ -24405,7 +24697,13 @@
           ],
           "canonicalize_provenance": "excavated — 'logogenic' appears in 28 segments incl. `#form-consolidation-dynamics` prose (77 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "logozoetic",
@@ -24444,7 +24742,13 @@
           ],
           "canonicalize_provenance": "excavated — 'logozoetic' appears in 5 segments incl. `#scope-moral-continuity` prose (14 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "Lohmiller-Slotine contraction",
@@ -24604,7 +24908,14 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Vocabulary commitments — non-slug, LEXICON + prose-pass",
+        "rename_target": "strategy-plan confidence"
+      }
     },
     {
       "current": "postulate not axiom",
@@ -24691,7 +25002,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'praxis πρᾶξις' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "purposeful substate",
@@ -24754,7 +25071,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "Regime II-A",
@@ -24874,7 +25197,13 @@
           ],
           "canonicalize_provenance": "excavated — 'stability plasticity feasibility window' appears in 2 segments incl. `#der-recursive-update` prose (2 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "stochastic disturbance ga 2s model",
@@ -24953,7 +25282,13 @@
           ],
           "canonicalize_provenance": "excavated — 'structural persistence' appears in 13 segments incl. `#result-persistence-condition` prose (36 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "temporal software theory",
@@ -25018,7 +25353,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'Temporal Software Theory (TST)' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "the crèche",
@@ -25589,7 +25930,13 @@
           ],
           "canonicalize_provenance": "excavated — 'Adaptive tempo $\\mathcal{T}$' appears in 32 segments incl. `#der-code-quality-as-observation-infrastructure` prose (67 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "model uncertainty",
@@ -26298,7 +26645,14 @@
           ],
           "canonicalize_provenance": "invented — phrase 'Source uncertainty' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Vocabulary commitments — non-slug, LEXICON + prose-pass",
+        "rename_target": "teleological-unity uncertainty"
+      }
     },
     {
       "current": "auftragstaktik",
@@ -26354,7 +26708,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "axiom genesis",
@@ -26585,7 +26945,14 @@
           ],
           "canonicalize_provenance": "excavated — 'bias bound' appears in `#deriv-bias-bound` prose (12 occurrences) (also in 4 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Pending subject-noun renames — surfaced post-R2",
+        "rename_target": "deriv-observation-ambiguity-bias-bound"
+      }
     },
     {
       "current": "change proximity principle",
@@ -27286,7 +27653,13 @@
           ],
           "canonicalize_provenance": "excavated — 'continuous operation' appears in `#scope-continuous-operation` prose (2 occurrences) (also in 3 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "default signal function",
@@ -27325,7 +27698,13 @@
           ],
           "canonicalize_provenance": "excavated — 'default signal function' appears in 9 segments incl. `#disc-credit-assignment-boundary` prose (17 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "deliberation threshold",
@@ -27373,7 +27752,13 @@
           ],
           "canonicalize_provenance": "excavated — 'deliberation threshold' appears in 5 segments incl. `#disc-exploit-explore-deliberate` prose (10 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "directed separation under composition",
@@ -27594,7 +27979,14 @@
           ],
           "canonicalize_provenance": "excavated — 'effective disturbance' appears in 17 segments incl. `#result-sector-persistence-template` prose (37 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Vocabulary commitments — non-slug, LEXICON + prose-pass",
+        "rename_target": "regime-typed effective disturbance"
+      }
     },
     {
       "current": "epistemic shadow",
@@ -27633,7 +28025,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'epistemic shadow' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "equilibrium convergence",
@@ -27672,7 +28070,14 @@
           ],
           "canonicalize_provenance": "excavated — 'equilibrium convergence' appears in 5 segments incl. `#deriv-strategic-composition` prose (13 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-adopted-standard",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Adopted-standard canonicalize",
+        "prior_art_cite": "Monderer & Shapley 1996 (*Games and Economic Behavior* 14(1): 124-143, potential games); Rosen 1965 (*Econometrica* 33(3): 520-534, concave $n$-person games); Nash 1950 (*PNAS* 36(1): 48-49) for the foundational equilibrium concept."
+      }
     },
     {
       "current": "experiential training",
@@ -27718,7 +28123,13 @@
           ],
           "canonicalize_provenance": "excavated — 'experiential training' appears in `#hyp-experiential-training` prose (3 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "\"feedforward loop\" / \"feedback loop\"",
@@ -27973,7 +28384,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "macro step ratio",
@@ -28019,7 +28436,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'macro step ratio' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "matrix exploration bonus",
@@ -28058,7 +28481,13 @@
           ],
           "canonicalize_provenance": "excavated — 'matrix exploration bonus' appears in `#deriv-causal-ib-lmi` prose (2 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "multi agent",
@@ -28104,7 +28533,14 @@
           ],
           "canonicalize_provenance": "excavated — 'multi agent' appears in `#scope-multi-agent` prose (8 occurrences) (also in 25 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-adopted-standard",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Adopted-standard canonicalize",
+        "prior_art_cite": "Shoham & Leyton-Brown 2008 (*Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations*, CUP); Stone & Veloso 2000 (*Auton. Robots* 8(3): 345-383)."
+      }
     },
     {
       "current": "observation function",
@@ -28208,7 +28644,13 @@
           ],
           "canonicalize_provenance": "excavated — 'operational persistence' appears in 6 segments incl. `#result-persistence-condition` prose (9 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "per dimension persistence",
@@ -28463,7 +28905,14 @@
           ],
           "canonicalize_provenance": "excavated — 'routing structure' appears in 2 segments incl. `#hyp-directed-separation-under-composition` prose (10 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Vocabulary commitments — non-slug, LEXICON + prose-pass",
+        "rename_target": "multi-agent routing structure"
+      }
     },
     {
       "current": "segment for claim file",
@@ -28654,7 +29103,14 @@
           ],
           "canonicalize_provenance": "excavated — 'strategic dynamics' appears in `#deriv-strategic-dynamics` prose (1 occurrence) (also in 20 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Pending subject-noun renames — surfaced post-R2",
+        "rename_target": "deriv-edge-credence-dynamics"
+      }
     },
     {
       "current": "strategy complexity cost",
@@ -28787,7 +29243,13 @@
           ],
           "canonicalize_provenance": "excavated — 'strategy description length' appears in `#form-strategy-complexity-cost` prose (2 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "strategy dimension",
@@ -29212,7 +29674,13 @@
           ],
           "canonicalize_provenance": "excavated — 'trust meta model' appears once in `#hyp-communication-gain` prose; single-occurrence usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "$H_b$",
@@ -29317,7 +29785,14 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary",
+        "rename_target": "$H_b$ ↔ \"agent opacity\" (symbol+prose binding, NOTATION primary on symbol, LEXICON reverse-primary on prose)"
+      }
     },
     {
       "current": "$R$ (sector radius)",
@@ -29758,7 +30233,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "aisthesis αἴσθησις",
@@ -29805,7 +30286,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'aisthesis αἴσθησις' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "and or",
@@ -30149,7 +30636,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "convention hierarchy",
@@ -30327,7 +30820,13 @@
           ],
           "canonicalize_provenance": "excavated — 'discrete sector condition' appears in `#deriv-discrete-sector-condition` prose (1 occurrence) (also in 7 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "edge update causal validity",
@@ -30482,7 +30981,13 @@
           ],
           "canonicalize_provenance": "excavated — 'epistemic opacity' appears in 4 segments incl. `#emp-update-gain` prose (5 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — with nuance flagged"
+      }
     },
     {
       "current": "epistrophe ἐπιστροφή",
@@ -30529,7 +31034,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'epistrophe ἐπιστροφή' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "extreme transition motif",
@@ -30568,7 +31079,13 @@
           ],
           "canonicalize_provenance": "excavated — 'extreme transition motif' appears in 4 segments incl. `#hyp-symbiogenic-composition` prose (6 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "operationalization",
@@ -30661,7 +31178,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'prolepsis πρόληψις' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-greek-phase",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "recursive update derivation",
@@ -30700,7 +31223,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'recursive update derivation' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "separable core structured repair general open",
@@ -30842,7 +31371,13 @@
           ],
           "canonicalize_provenance": "excavated — 'strategy persistence' appears in `#schema-strategy-persistence` prose (5 occurrences) (also in 19 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "system coherence",
@@ -31407,7 +31942,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'worked example bandit' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "worked example kalman",
@@ -31446,7 +31987,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'worked example kalman' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "worked example l1",
@@ -31485,7 +32032,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'worked example l1' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "worked example strategy",
@@ -31524,7 +32077,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'worked example strategy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "$\\mathcal{T}_\\Sigma$ strategic tempo",
@@ -34228,7 +34787,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "coordination overhead threshold",
@@ -34989,7 +35554,13 @@
           ],
           "canonicalize_provenance": "excavated — 'exponential cognitive load' appears in `#hyp-exponential-cognitive-load` prose (3 occurrences) (also in 4 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "fisher whitened update",
@@ -35332,7 +35903,14 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Vocabulary commitments — non-slug, LEXICON + prose-pass",
+        "rename_target": "strategic grafting"
+      }
     },
     {
       "current": "Section I. Adaptive Systems Under Uncertainty",
@@ -36079,7 +36657,13 @@
           ],
           "canonicalize_provenance": "excavated — 'multi timescale stability' appears in `#sketch-multi-timescale-stability` prose (2 occurrences) (also in 4 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "observability boundary in a strategy DAG",
@@ -36270,7 +36854,14 @@
           ],
           "canonicalize_provenance": "invented — phrase 'observation gate advantage' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Pending subject-noun renames — surfaced post-R2",
+        "rename_target": "obs-gated-tempo-advantage (slug); \"observation gated tempo advantage\" (prose)"
+      }
     },
     {
       "current": "Pearl-blanket conservative form",
@@ -37438,7 +38029,13 @@
           ],
           "canonicalize_provenance": "excavated — 'system availability' appears in `#def-system-availability` prose (2 occurrences) (also in 3 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — with nuance flagged"
+      }
     },
     {
       "current": "test as reusable intervention",
@@ -37766,7 +38363,13 @@
           ],
           "canonicalize_provenance": "excavated — 'transition opacity' appears once in `#def-action-transition` prose; single-occurrence usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Clean canonicalize"
+      }
     },
     {
       "current": "type formulation",
@@ -37815,7 +38418,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-format-layer",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — FORMAT.md / process-vocabulary"
+      }
     },
     {
       "current": "unnamed AAD epistemic move to cast result such that verification is a local operation",
@@ -40683,7 +41292,15 @@
           ],
           "canonicalize_provenance": "invented — phrase 'ε greedy' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "editorial format normalization (mini-lexicon-todo §1 family)",
+        "rename_target": "$\\varepsilon$ greedy (LaTeX form)",
+        "note": "editorial format normalization, not a rename per se; FORMAT.md math-symbol convention applied"
+      }
     },
     {
       "current": "$\\mathcal{A}(e,\\tau)$ observation ambiguity",
@@ -42306,7 +42923,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-with-nuance",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — with nuance flagged"
+      }
     },
     {
       "current": "catastrophic forgetting regime",
@@ -43595,7 +44218,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "excluded",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Excluded — not canonicalized"
+      }
     },
     {
       "current": "Gemini's \"analysis paralysis\" for excessive deliberation",
@@ -43743,7 +44372,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'greek rooted vocabulary' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "excluded",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Excluded — not canonicalized"
+      }
     },
     {
       "current": "hierarchy as repeated word",
@@ -43944,7 +44579,13 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-compound",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Compound and paired-vocabulary"
+      }
     },
     {
       "current": "low mixed high ambiguity event mix",
@@ -44694,7 +45335,15 @@
           ],
           "canonicalize_provenance": "invented — phrase 'simulation result' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Pending subject-noun renames — surfaced post-R2 (2026-05-04+)",
+        "rename_target": "obs-section-i-validation-simulations",
+        "note": "segment-slug rename per citability criterion 9; bare obs-simulation-results would conflict with any future simulation-results segment"
+      }
     },
     {
       "current": "strategy cost regret bound",
@@ -48662,7 +49311,13 @@
           ],
           "canonicalize_provenance": "excavated — 'epistemic status' appears in 145 segments incl. `#deriv-recursive-update` prose (173 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-format-layer",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — FORMAT.md / process-vocabulary"
+      }
     },
     {
       "current": "working note",
@@ -48713,7 +49368,13 @@
           ],
           "canonicalize_provenance": "excavated — 'working note' appears in 3 segments incl. `#disc-compression-operations` prose (4 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-format-layer",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — FORMAT.md / process-vocabulary"
+      }
     },
     {
       "current": "formal expression",
@@ -48758,7 +49419,13 @@
           ],
           "canonicalize_provenance": "excavated — 'formal expression' appears in 135 segments incl. `#def-strategy-dag` prose (144 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-format-layer",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — FORMAT.md / process-vocabulary"
+      }
     },
     {
       "current": "condition",
@@ -48804,7 +49471,13 @@
           ],
           "canonicalize_provenance": "excavated — 'condition' appears in 102 segments incl. `#deriv-strategic-dynamics` prose (864 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "excluded",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Excluded — not canonicalized"
+      }
     },
     {
       "current": "interiority default",
@@ -48856,7 +49529,13 @@
           ],
           "canonicalize_provenance": "invented — phrase 'interiority default' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments"
+      }
     },
     {
       "current": "section-ii-survival (slug)",
@@ -49020,7 +49699,14 @@
           ],
           "canonicalize_provenance": "excavated — 'feature' appears in `#def-feature` prose (10 occurrences) (also in 52 other segments); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized-adopted-standard",
+        "decided_date": "2026-05-04",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "## Confirmed canonicalize commitments — Adopted-standard canonicalize",
+        "prior_art_cite": "Software-engineering canonical (any SE foundations text); TST narrowing in `#def-feature` (\"unit of coherent change\") provides domain-specific tightening that the SE-standard sense supports without conflict."
+      }
     },
     {
       "current": "honest limit",

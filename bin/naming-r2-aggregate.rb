@@ -1149,7 +1149,7 @@ def render_patterns(records, multi_voter_records, voters)
   out << ''
   out << '- The framework itself — read the de-novo-audit instructions and ingest the segments before treating any landing as load-bearing.'
   out << '- Whether a name is *good* in some abstract sense — only what the cohort scored. Final judgment is yours.'
-  out << '- Pre-existing slug rename history — see [`msc/naming/naming-pilot-rename-plan.md`](naming-pilot-rename-plan.md) and the role-prefix discipline (already applied across all 142 segments via `bin/align-slug --all`).'
+  out << '- Pre-existing slug rename history — see [`msc/naming/naming-rename-plan.md`](naming-rename-plan.md) and the role-prefix discipline (already applied across all 142 segments via `bin/align-slug --all`).'
   out << '- Cross-voter paraphrase / cold-start violation analysis — not run for this corpus; the protocol was monitored. The check is straightforward to run if needed.'
 
   out.join("\n") + "\n"
