@@ -173,7 +173,7 @@ This spectrum maps onto AAD's scope narrowings: Pearl's causal hierarchy appears
 
 **Why "agentic" rather than just "adaptive."** Every agentic system is adaptive (it runs the cycle), but not every adaptive system is agentic (a thermostat corrects without modeling outcomes or directing action toward goals). "Adaptive" describes the dynamics — the cycle runs. "Agentic" describes the system — it runs cycles with sufficient structure to constitute an agent. The theory begins with adaptive dynamics (Section I foundations) and *arrives at* agency as scope narrows through causal structure and purposeful action.
 
-[^ibm2025]: Agarwal et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
+[^ibm2025]: Miehling et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
 
 #### Actuated Agent (Section II scope)
 
@@ -289,7 +289,7 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 | **Logogenic agent** | + primary channels are language | `03-logogenic-agents/` architectural scope | LLM assistant, code agent |
 | **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | `04-eli/` existential scope | *(formal characterization pending)* |
 
-[^ibm2025]: Agarwal et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
+[^ibm2025]: Miehling et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
 
 ---
 
