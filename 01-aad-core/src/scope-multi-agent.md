@@ -38,13 +38,13 @@ where:
 - $\mathcal N_t(i) \subseteq \{1, \ldots, N\} \setminus \{i\}$: the **communication neighborhood** — which agents send messages to $i$ at time $t$
 - $m_{ji,t} = c_t^{(j \to i)}(X_t^{(j)})$: message from $j$ to $i$, determined by the sender's full state and the communication protocol
 
-*[Definition (routing-structure)]*
+*[Definition (multi-agent-routing-structure)]*
 
-The **routing structure** $R_t = (\mathcal N_t, \{c_t^{(j \to i)}\})$ specifies:
+The **multi-agent routing structure** $R_t = (\mathcal N_t, \{c_t^{(j \to i)}\})$ specifies:
 - The **topology** $\mathcal N_t$: who communicates with whom
 - The **protocol** $c_t^{(j \to i)}$: the rule governing what class of information flows from $j$ to $i$
 
-Note: the protocol $c_t^{(j \to i)}$ is a *rule* specifying the channel, not the specific content of any message. Individual messages reflect the sender's state $X_t^{(j)}$ — including their individual goals — through the sender's policy. What the routing structure governs is the *infrastructure*: which channels exist and what kind of information they carry.
+Note: the protocol $c_t^{(j \to i)}$ is a *rule* specifying the channel, not the specific content of any message. Individual messages reflect the sender's state $X_t^{(j)}$ — including their individual goals — through the sender's policy. What the routing structure governs is the *infrastructure*: which channels exist and what kind of information they carry. *Bare-prose shorthand: the term "routing structure" is sanctioned within this segment after the first compound-form introduction; cross-segment citation should use the full "multi-agent routing structure" form.*
 
 *[Definition (goal-blind-routing)]*
 

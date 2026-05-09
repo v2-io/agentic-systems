@@ -62,10 +62,6 @@ These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, no
   - Prose pass through `#der-interaction-channel-classification` (recipient-side four-regime decomposition).
   - The "regime-typed" qualifier is the AAD-distinctive content: $\rho_B^{\text{eff}}$ decomposes by regime (Informative / magnitude-shock / structural-shock / ambient-noise) with three independent boundaries.
 
-- [ ] **`routing structure` → `multi-agent routing structure`** *(F1; networking-generic fix)*
-  - Prose pass through `#scope-multi-agent` (defines $R_t = (\mathcal{N}_t, \{c_t^{(j \to i)}\})$).
-  - The goal-blind-routing distinction lives within this concept and is load-bearing for `#hyp-directed-separation-under-composition`.
-
 [F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
 
 ---

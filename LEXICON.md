@@ -24,6 +24,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
+| **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 
 ## Continuity Stance
@@ -102,10 +103,11 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
 | **[Deliberation cost](terminology/entries/deliberation-cost.md)** |  | Think-vs-act tradeoff — gain improvement must exceed mismatch accumulated while pausing. |
 | **[Directed separation](terminology/entries/directed-separation.md)** |  | $M_t$ dynamics independent of $G_t$ (conditional on processing topology). |
+| **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
 | **[Sector condition](terminology/entries/sector-condition.md)** |  | Nonlinear correction guarantee enabling Lyapunov stability analysis. |
 | **[Structural adaptation](terminology/entries/structural-adaptation.md)** |  | Changing the model class, not just parameters — the cycle that operates on cycles. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 
 
-_Last rendered 2026-05-09 from 40 entries._
+_Last rendered 2026-05-09 from 41 entries._
