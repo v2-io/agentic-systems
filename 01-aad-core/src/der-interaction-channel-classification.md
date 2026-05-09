@@ -85,7 +85,7 @@ No new ad-hoc thresholds are introduced. $\mathcal I_{\max}(\mathcal M_B)$ is th
 
 *[Derived (regime-typed-rho-eff, from regime-boundaries + sector-persistence-template)]*
 
-Under a stream of events $\{e_\tau^A\}$, $B$'s effective disturbance rate decomposes into regime-typed contributions:
+Under a stream of events $\{e_\tau^A\}$, $B$'s **regime-typed effective disturbance** rate decomposes into regime-typed contributions:
 
 $$\rho_B^{\text{eff}} = \underbrace{\sum_{e \in \text{II-a}} \lVert e\rVert_B \cdot \nu_e}_{\text{magnitude disturbance}} \;+\; \underbrace{\text{floor}(\mathcal M_B) \cdot \sum_{e \in \text{II-b}} \nu_e}_{\text{structural mismatch floor}} \;+\; \underbrace{\sum_{e \in \text{III}} \sigma_e^2 \cdot \nu_e}_{\text{ambient variance}} \;-\; \underbrace{\sum_{e \in \text{I}} \iota_B(e)\,\mathcal I(e) \cdot \nu_e}_{\text{informative correction}}$$
 
