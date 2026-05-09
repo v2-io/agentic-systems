@@ -32,21 +32,8 @@ Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` f
 These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, not a slug. Each row: add/update LEXICON entry + sweep affected segments.
 
 - [ ] **Class 1/2/3 → Separated/Coupled/Partial; "Goal-Update Coupling Class" axis name; coordinated Class 2 ↔ 3 numbering swap** *(largest item; multi-segment; warrants its own commit)*
-  - Terminology entry for "Goal-Update Coupling Class" (axis) — `terminology/entries/goal-update-coupling-class.md` with three values + meta-pattern alignment note (Class 1 = separable core, Class 2 = structured repair, Class 3 = general open) + pointer to `#der-directed-separation`. Per-value entries (`separated.md` / `coupled.md` / `partial.md`) optional — judgment call whether the axis-entry alone is enough or each value gets its own first-class entry.
-  - Decision events: `bin/term decide goal-update-coupling-class canonicalize`, plus rename events for the three numbered-class transitions (`bin/term decide separated rename --from class-1 ...` style) so the audit trail for the swap is preserved in `terminology/decisions/`.
-  - Numbering swap: Class 1 = Separated *(unchanged)*; **Class 2 (was 3) = Partial**; **Class 3 (was 2) = Coupled**. Brings Architecture into ordering-alignment with the other six ladders in `#disc-separability-pattern`.
-  - Prose-cleanup pass — segments touched once for *both* the rename AND the swap:
-    - `01-aad-core/src/der-directed-separation.md` (canonical home; reorder + rename)
-    - `01-aad-core/src/deriv-observation-ambiguity-bias-bound.md` (currently "Class-2 ambiguity bias bound" → "Class-3 ambiguity bias bound") — *coordinate with slug rename in §A*
-    - `01-aad-core/src/scope-observation-ambiguity-modulation.md`
-    - `01-aad-core/src/result-section-ii-survival.md` (Class 1/2/3 survival classification table — reorder)
-    - `03-logogenic-agents/` segments (logogenic = Class 2 fully-coupled → Class 3 — multiple segments)
-    - `01-aad-core/src/disc-separability-pattern.md` (Architecture row in meta-pattern table — update Class numbering)
-    - `README.md` (*Position & Lineage* and *Maturity Gradient* paragraphs) — note: README is auto-generated; edit `doc/readme/src/_*.md` partials and rebuild via `bin/build-readme`
-    - `CLAUDE.md` (Section II preamble Class N references)
-  - Numbered backup retained where pedagogically useful: "**Separated** (Class 1)" on first use, then "Separated" thereafter.
-  - **Migration note in Working Notes** for any segment whose Class N reference *changes semantic meaning* (Class 2 ↔ Class 3) — one-line note documenting the 2026-05-04 swap so future readers can decode archival references. Removed at `candidate` stage per FORMAT.md Gate 4.
-  - [Full rationale + meta-pattern table](msc/naming/naming-rename-plan.md#vocabulary-commitments--non-slug-lexicon--prose-pass-2026-05-04).
+  - **Authoritative execution plan: [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md).** Self-contained — covers the transformation, surface-area enumeration (~30 segments + 4 partials + ~7 root docs), rationale, the warning-callout discipline, the migration-note convention, the terminology-system entry shape, the git-tag step, the open questions still needing Joseph's call, and the phased execution sequence.
+  - **Source rationale:** [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) lines 92–116 (original 2026-05-04 decision record + meta-pattern alignment audit). The execution plan synthesizes from this; this row defers to the plan for everything else.
 
 [F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
 
