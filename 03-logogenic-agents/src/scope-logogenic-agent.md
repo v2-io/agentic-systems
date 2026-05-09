@@ -13,7 +13,7 @@ stage: draft
 
 # Scope: Logogenic Agent
 
-An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language. It maintains structured $M_t$ and $G_t$, acts causally on its environment, and observes consequences under uncertainty. It is a Class 2 (fully merged) agent — directed separation fails because the transformer's forward pass processes goals and observations jointly.
+An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language. It maintains structured $M_t$ and $G_t$, acts causally on its environment, and observes consequences under uncertainty. It is a Class 3 (Coupled) agent — directed separation fails because the transformer's forward pass processes goals and observations jointly.
 
 ## Formal Expression
 
@@ -34,7 +34,7 @@ An **LLM-based agent** is an actuated agent ( #def-agent-spectrum) with the foll
 
 *[Scope (logogenic-agent-class)]*
 
-The LLM-based agent is **Class 2** (fully merged) in the architectural classification of #der-directed-separation:
+The LLM-based agent is **Class 3 (Coupled)** in the architectural classification of #der-directed-separation:
 
 $$\kappa_{\text{processing}} \approx 1$$
 
@@ -49,13 +49,13 @@ The transformer attention mechanism processes all tokens in the context window j
 
 *[Definition (agent-system-vs-component)]*
 
-The **agent system** (LLM + tools + memory + monitoring) may have partially modular topology (Class 3) even though the **LLM component** is Class 2. An external memory system that processes and stores observations independently of the LLM's goals creates a modular epistemic pathway at the system level. The classification applies to the processing component under analysis: for the LLM itself, Class 2; for the full agent system with modular sidecar monitoring, potentially Class 3.
+The **agent system** (LLM + tools + memory + monitoring) may have partially modular topology (Class 2 — Partial) even though the **LLM component** is Class 3 (Coupled). An external memory system that processes and stores observations independently of the LLM's goals creates a modular epistemic pathway at the system level. The classification applies to the processing component under analysis: for the LLM itself, Class 3 (Coupled); for the full agent system with modular sidecar monitoring, potentially Class 2 (Partial).
 
 ## Epistemic Status
 
-*Robust qualitative.* The mapping from LLM agent to AAD primitives is a representational choice — there is genuine latitude in how to draw the boundary between $M_t$ and $G_t$ within a context window, and the context window is not the only possible operationalization of $X_t$ (the model's weights encode persistent knowledge that is not in the context). The Class 2 classification is structural and not in doubt: the attention mechanism's causal graph has goal tokens upstream of all computations.
+*Robust qualitative.* The mapping from LLM agent to AAD primitives is a representational choice — there is genuine latitude in how to draw the boundary between $M_t$ and $G_t$ within a context window, and the context window is not the only possible operationalization of $X_t$ (the model's weights encode persistent knowledge that is not in the context). The Class 3 (Coupled) classification is structural and not in doubt: the attention mechanism's causal graph has goal tokens upstream of all computations.
 
-Max attainable: robust-qualitative. The mapping is a formulation (multiple reasonable instantiations exist), not a derivation. The Class 2 classification could be elevated to exact with a formal analysis of the transformer's causal graph, but the mapping itself will remain a representational choice.
+Max attainable: robust-qualitative. The mapping is a formulation (multiple reasonable instantiations exist), not a derivation. The Class 3 (Coupled) classification could be elevated to exact with a formal analysis of the transformer's causal graph, but the mapping itself will remain a representational choice.
 
 ## Discussion
 
@@ -74,5 +74,6 @@ The prompt-assembly function and the forward pass together implement $f_X$. The 
 ## Working Notes
 
 - The mapping omits the agent's *weights* from $X_t$ because they are frozen within a session. For fine-tuned agents where weights change across sessions, the full state would be $X_t = (M_t^{\text{weights}}, M_t^{\text{context}}, G_t)$ — a richer decomposition than the $(M_t, G_t)$ split.
-- The system-vs-component distinction (Class 2 component within a potentially Class 3 system) is important for engineering but does not change the theoretical analysis of the LLM's processing. The coupled formulation applies to the LLM component; the system-level analysis may recover partial separation through architectural design.
-- The Hafez IDT pattern (Information Digital Twin as modular sidecar) is a concrete example of system-level modularization: the IDT monitors the $(S, A, S')$ stream independently of the LLM's attention, creating a Class 1 monitoring pathway within a Class 2/3 system. See the Working Notes in #der-directed-separation.
+- The system-vs-component distinction (Class 3 (Coupled) component within a potentially Class 2 (Partial) system) is important for engineering but does not change the theoretical analysis of the LLM's processing. The coupled formulation applies to the LLM component; the system-level analysis may recover partial separation through architectural design.
+- The Hafez IDT pattern (Information Digital Twin as modular sidecar) is a concrete example of system-level modularization: the IDT monitors the $(S, A, S')$ stream independently of the LLM's attention, creating a Class 1 (Separated) monitoring pathway within a Class 3 (Coupled) or Class 2 (Partial) system. See the Working Notes in #der-directed-separation.
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Logogenic agents are now Class 3 (Coupled), not Class 2. This is the canonical "logogenic = Class X" definition segment — the class number changed from 2 to 3; the semantic meaning (fully merged, LLM-style) is unchanged. Removed at `candidate` stage per FORMAT.md Gate 4.
