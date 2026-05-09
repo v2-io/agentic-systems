@@ -19,7 +19,7 @@ do_not_confuse: []
 The optimal weight agent $i$ should apply to information received from agent
 $j$. Extends the single-agent [update gain](update-gain.md) with three
 additional uncertainty terms — channel noise $U_{o,ji}$, source-quality
-uncertainty $U_{\text{src},j}$, and alignment uncertainty $U_{\text{align},ji}$
+uncertainty $U_{\text{src},j}$, and teleological-unity uncertainty $U_{\text{align},ji}$
 — so that perfect-channel/perfectly-aligned sources recover full trust
 ($\eta_{ji}^\ast \to 1$) while noisy or misaligned sources are appropriately
 discounted ($\eta_{ji}^\ast \to 0$). Specializes to the standard update gain

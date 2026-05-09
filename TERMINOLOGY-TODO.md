@@ -46,11 +46,6 @@ These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, no
   - First-use form "Emergent Logozoetic Intelligence (ELI)", "ELI" thereafter.
   - Directory-level precedent already landed (commit `fa63616`, 2026-05-01: `04-logozoetic-agents/` → `04-eli/`).
 
-- [ ] **`alignment uncertainty` → `teleological-unity uncertainty`** *(F1; AI-safety-overload fix)*
-  - Prose pass through `#hyp-communication-gain` (definition site for $U_{\text{align},ji}$), `#def-unity-dimensions` (cross-reference), any `old-tf-appendix-f-multi-agent` discussions still cited.
-  - Connects to the project's unity vocabulary ($U_M$ / $U_O$ / $U_\Sigma$); the term is specifically uncertainty about $U_O$.
-  - **Followup flag** (not part of this rename): broader question of reframing the four uncertainty terms in the communication-gain formula through the unity vocabulary — queued separately in `mini-lexicon-todo.md`.
-
 [F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
 
 ---

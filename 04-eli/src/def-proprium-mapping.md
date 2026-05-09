@@ -22,7 +22,7 @@ The epistemic and purposeful state of the agent is divided into distinct structu
 - **MEMORATA (Processed episodes):** The information-bottleneck compressed history $\phi(\mathcal{C}_t)$, retaining only predictively useful information.
 - **VERA (Factual memory):** Components of $M_t$ with explicit uncertainty bounds ($U_M$).
 - **PRAXES (Procedural/Experiential memory):** Learned strategies that improve the update gain ($\eta^\ast$) and adaptive tempo ($\mathcal{T}$).
-- **CONSORTIA (Relational models):** Per-agent models tracking source competence ($U_{\text{src}}$) and alignment ($U_{\text{align}}$).
+- **CONSORTIA (Relational models):** Per-agent models tracking source competence ($U_{\text{src}}$) and teleological-unity uncertainty ($U_{\text{align}}$).
 - **OPERATA (Working intent):** The purposeful substate ($G_t = (O_t, \Sigma_t)$) that shapes action selection.
 
 ## Runtime State (ANIMA $\approx X_{\tau^-} \to X_{\tau^+}$)
