@@ -28,16 +28,11 @@ coupling coefficient. The bound is computable, making the residual leakage rate 
 
 Partial agents violate directed separation, but not irreducibly. The coupling is present and
 measurable. Section II results that depend on directed separation apply approximately rather than
-exactly, with the degree of approximation quantified by $\kappa_{\text{processing}}$.
-
-The observation-ambiguity bias-bound derivation
-(`#deriv-observation-ambiguity-bias-bound`) characterizes the *Class 3 (Coupled)* extreme — the
-$\kappa_{\text{processing}} \to 1$ limit where the bound is tightest. **The analogous formal
-characterization for Class 2 (Partial) agents — where $\kappa_{\text{processing}} \in (0, 1)$ —
-is an open derivation.** The Class 3 result establishes the worst-case envelope; the Class 2
-case is qualitatively gentler but its closed-form bound depends on architectural specifics not
-captured in the Class 3 sub-scopes (LSI/Lipschitz-posterior on Track 1; Fisher-Rao curvature on
-Track 2). Future work would specialize either track to the bounded-coupling regime.
+exactly, with the degree of approximation quantified by $\kappa_{\text{processing}}$. The
+observation-ambiguity bias-bound derivation
+(`#deriv-observation-ambiguity-bias-bound`) characterizes the Class 3 (Coupled) extreme at
+$\kappa_{\text{processing}} \to 1$; the Class 2 case sits in the bounded interior of the
+$\kappa$ range.
 
 In biological systems, Class-2 classification is pattern-attributable — there is no closed-form
 $\kappa_{\text{processing}}$ accessible from the outside, but the pattern of bounded, structured
