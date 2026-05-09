@@ -14,6 +14,52 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+## 2026-05-09
+
+### Naming-cycle Phase 6 execution: §A slug renames complete; §B prose-vocabulary 7/8 landed; bin/rename-slug bug fixes
+
+**§A slug renames complete (7 of 7).** All seven citability-driven slug renames from TERMINOLOGY-TODO §A landed as atomic per-rename commits. The pattern across the seven: `bin/rename-slug OLD NEW` for the mechanical sweep + 2-4 manual touch-ups (H1, formal tags, occasional cross-segment legacy formal-tag, occasional bare-prose mention), then `bin/lint-outline` clean.
+
+| Old slug | New slug | Notes |
+|---|---|---|
+| `obs-gates-advantage` | `obs-gated-tempo-advantage` | Pilot rename (committed late 2026-05-08); ~3 cross-refs |
+| `scope-software` | `scope-evolving-software` | Segment self-affirming via $\mathcal{S}_{\text{evolving}}$ |
+| `obs-simulation-results` | `obs-section-i-validation-simulations` | "Section I" precise scope; pairs with `#result-section-ii-survival` |
+| `deriv-detection-latency` | `deriv-update-detection-latency` | F1; "update" qualifier names structural source |
+| `def-change-distance` | `def-discontinuity-distance` | F1; segment's own load-bearing framing word |
+| `deriv-bias-bound` | `deriv-observation-ambiguity-bias-bound` | F1; drops Class-N reference; coordinates with §B Class 2↔3 swap |
+| `deriv-strategic-dynamics` | `deriv-edge-credence-dynamics` | F1; names what evolves and where |
+
+Heaviest rename: `deriv-strategic-dynamics` → `deriv-edge-credence-dynamics` (159 substitutions across 62 files). Lightest: `obs-simulation-results` (15 / 9). Spike-file references to legacy forms left as research-artifact archaeology per the established discipline.
+
+**bin/rename-slug bug fixes** (commit `3cdb1a6`). Two real bugs surfaced during the obs-gates-advantage rename pilot, both fixed before the §A sweep continued:
+- *Hardcoded old directory.* `COMPONENT_SRCS` listed `04-logozoetic-agents/src` (renamed to `04-eli/` on 2026-05-01); the script silently skipped the missing dir, meaning any rename targeting a slug inside `04-eli/` segments would not touch those files. Fixed: both `COMPONENT_SRCS` and `COMPONENT_OUTLINES` now reference `04-eli/`. Smoke-tested with `--dry-run scope-eli scope-eli-test`: finds 29 replacements (was 0).
+- *Bare-filename markdown links not rewritten.* `path_re` matched only `src/SLUG.md`; bare `[text](SLUG.md)` markdown links inside parens were missed. Fixed: regex extended to `(src/|\()SLUG.md` with capture-group preserving the boundary character. Caught one residual link in `obs-simulation-results.md` that the old regex would have missed.
+
+**§B prose-vocabulary renames landed: 7 of 8.** Each as its own atomic commit; the pattern is *update canonical-introduction site to use the compound form* + *write `terminology/entries/<slug>.md` with `aliases:` for in-segment shorthand and `do_not_confuse:` for overload risks* + *record `bin/term decide canonicalize`*.
+
+| Item | Rename | Notes |
+|---|---|---|
+| §B.2 | (new) **Knowledge Type** axis (Static / Learning) | LEXICON-only commitment elevating `doc/DOMAINS.md` working-table convention |
+| §B.3 | `grafting` → `strategic grafting` | Citability; bare retained as in-segment shorthand |
+| §B.5 | `alignment uncertainty` → `teleological-unity uncertainty` | Anchors $U_{\text{align},ji}$ in unity vocabulary; symbol unchanged |
+| §B.6 | `plan confidence` → `strategy-plan confidence` | Most pervasive; 8 segments touched; symbol $\hat{P}_\Sigma$ stays |
+| §B.7 | `effective disturbance` → `regime-typed effective disturbance` | Compound canonical when AAD-internal regime decomposition is in scope; bare stays for AAD-generic Lyapunov statements |
+| §B.8 | `routing structure` → `multi-agent routing structure` | Anchors $R_t$ in `#scope-multi-agent` context |
+| §B.4 | `logozoetic agent` → `Emergent Logozoetic Intelligence (ELI)` | Class-label rename completing the directory-precedent (`fa63616`); slug `logozoetic-agent` → `eli`; 6 cross-referencing entries updated; 4 segments + OUTLINE + 2 README partials touched; README rebuilt via `bin/build-readme` |
+
+The triple-hyphen compound-modifier form (e.g., `strategy-plan-confidence error`) is an unusual but unambiguous English construction; it works in body prose where the full noun-phrase modifies another noun.
+
+**LEXICON.md grew from 39 to 45 entries.** Six new prose-vocabulary entries added; one entry renamed (logozoetic-agent → eli) with content expansion.
+
+**Deferred:** `_lexicon-full-archive.md` partial has 12+ deep-philosophical mentions of "logozoetic agent" — not composed into the live README (`README.md.liquid` doesn't include it), so no urgency. Per-mention judgment warranted rather than mechanical replacement; queued for a future hygiene pass if the partial is ever brought back into composition.
+
+**Remaining for §B:** item 1 — Class 1/2/3 → Separated/Coupled/Partial bundle with the coordinated Class 2 ↔ 3 numbering swap. Largest single piece (~8 segments + README + CLAUDE.md, with semantic-reversal implications for archival Class-N references). Warrants its own dedicated cycle.
+
+**Methodological observation worth carrying.** The `bin/term decide` workflow (entry creation + decision-event recording) crystallized into a clean rhythm by mid-evening: read source segment, draft entry frontmatter + body, run `bin/term decide`, run `bin/term render`, edit `TERMINOLOGY-TODO.md` to remove the landed row, single commit per item. The decision-event audit trail (`terminology/decisions/<slug>/<ts>-<decider>-<action>.md`) accumulates naturally and reads cleanly on `bin/term show <slug>` afterward.
+
+---
+
 ## 2026-05-08
 
 ### Naming-cycle Phase 6: terminology infrastructure live; LEXICON.md migrated to per-entry store; first §A slug rename landed
