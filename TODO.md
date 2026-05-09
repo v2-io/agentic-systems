@@ -14,6 +14,17 @@ This file holds the *miscellaneous* layer of project work — open routing decis
 **Terminology note.** "Audit-findings" are the F#/F-V# items surfaced by audit cycles. "Findings" without the prefix means the catalog of ASF discoveries (see [`FINDINGS.md`](FINDINGS.md) and segment-level `## Findings` sections).
 
 
+## NeurIPS 2026 back-integration overview (queued, 2026-05-08)
+
+The three NeurIPS 2026 Main Track submissions in `~/src/neurips/` (Tragedy of the Confident Agent, Unified Convergence Theory for Non-Stationary RL, LLM Hallucination Bound) extracted three ASF results and refined them under adversarial scrutiny over the 2026-05-04 → 2026-05-07 sprint. The papers are *gain-producing* extractions, not loss-preserving — each landed strengthenings (KKT shadow-price resolution, Bretagnolle-Huber point-mass identity, chart-rescaling no-go on Euclidean chart norms, Class-1 reduction to Stuart-school, structural-class theorem on gain-decay updates, F-A-G-P enforcement framework, Coupled-class autoregressive connectivity lemma covering modern AR architectures, etc.) that don't yet exist at catalog precision in ASF.
+
+Cross-mapping between paper sections and ASF source segments, plus per-segment / catalog / meta-architectural updates the back-integration would touch, captured at: [`msc/neurips-back-integration-2026-05-08.md`](msc/neurips-back-integration-2026-05-08.md).
+
+Phasing in §6 of that file is conservative (Phase A minimum-viable ~1 week; Phase B segment-level absorption ~3-4 weeks; Phase C meta-architectural surfacing ~1-2 weeks). The cross-mapping in §1 is the hardest-to-reconstruct part — written while the paper-↔-segment correspondence was held in working memory at full fidelity, will degrade across sessions without the artifact. §7 names specific routing decisions where Joseph's judgment is needed (segment-vs-spike-vs-cross-segment routing for new material; whether the no-go-forces-axiom pattern is its own meta-pattern or an M1 refinement; how heavy to lean on the NeurIPS papers as canonical references pre-decision; etc.).
+
+Drafted by Claude (Opus 4.7, 1M context) at Joseph's request, 2026-05-08, after multi-session deep read of ASF + focused read of all three NeurIPS submissions.
+
+
 ## Greek vocabulary prose discipline (audit + author finding, 2026-04-29)
 
 The de-novo audit-471203, walking the formalism segment-by-segment, surfaced that the project's Greek cycle vocabulary (*chronica* / *prolepsis* / *aisthesis* / *aporia* / *epistrophe* / *praxis*) shows up at framing/preamble/lexicon levels but the segment-level math doesn't depend on the distinctions the Greek terms encode. The README claim that "each [Greek term] names a distinction the formalism makes that English alternatives flatten" is overclaimed against current segment prose, where authors routinely fall back to flatter English equivalents (e.g., saying "mismatch" right after defining `aporia` as something specifically richer than mismatch).
