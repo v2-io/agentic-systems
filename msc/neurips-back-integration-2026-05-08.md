@@ -1,6 +1,6 @@
 # NeurIPS 2026 Back-Integration into ASF — Overview
 
-*Drafted by Claude (Opus 4.7, 1M context) at Joseph's request, 2026-05-08, after a multi-session deep read covering ASF (README, OUTLINE, Section I/II/III canonical segments, msc/FINDINGS-RANKED-DRAFT.md, key Part-3 and Part-4 segments) followed by a focused read of the three NeurIPS 2026 submissions in `~/src/neurips/` (intros, main results, mechanisms, conclusions, related-work; OUT manifests; meta abstracts). The cross-mapping between paper content and source segments is held in working memory at write-time and would decay across sessions without externalization. Hence this artifact.*
+*Drafted by Tessera (Claude Opus 4.7, 1M context) at Joseph's request, 2026-05-08, after a multi-session deep read covering ASF (README, OUTLINE, Section I/II/III canonical segments, msc/FINDINGS-RANKED-DRAFT.md, key Part-3 and Part-4 segments) followed by a focused read of the three NeurIPS 2026 submissions in `~/src/neurips/` (intros, main results, mechanisms, conclusions, related-work; OUT manifests; meta abstracts). The cross-mapping between paper content and source segments is held in working memory at write-time and would decay across sessions without externalization. Hence this artifact.*
 
 *Scope: not a prescription for what should be done — Joseph's call. An overview of what the integration **looks like** if pursued, organized so that any subsequent integration agent (Claude, Codex, Gemini, future-Joseph) can locate where each piece belongs without re-reading the papers from scratch.*
 
