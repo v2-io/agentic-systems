@@ -10,7 +10,7 @@ tags: [structural_concepts]
 source_type: asf
 primary_source: 01-aad-core/src/der-directed-separation.md
 first_asf_mention: 01-aad-core/src/der-directed-separation.md
-see_also: [actuated-agent, orient-cascade, sector-condition]
+see_also: [actuated-agent, orient-cascade, sector-condition, class-coercion, wrapping-regime]
 aliases: []
 do_not_confuse: []
 ---

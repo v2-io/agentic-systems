@@ -4,6 +4,14 @@ Index of the spikes in `spikes/`, with location and current status. Spikes are p
 
 This index was extracted from WORKBENCH.md when that file was retired on 2026-04-22; it moved from `msc/SPIKES.md` to `spikes/INDEX.md` on 2026-04-28 when `spikes/` was created as the home for spike files (alongside `audits/` for pending-findings tables and audit-working dirs). Updates happen informally — a spike added, promoted, or parked should ideally be reflected here, but the authoritative state is always the spike file itself and the segments it feeds.
 
+### 2026-05-09 Coupling-polarity exploration — IN PROGRESS
+
+Spawned from the `#disc-adversarial-coupling-pressure` segment-drafting cycle. That segment's §"Scope: implicit assumptions and the polarity of coupling" surfaces the framework's fixed-$\mathcal{A}$ assumption — implicitly reading coupling as cost-only — and names a three-operation modularity-state-dynamics picture (truthification / strategic self-coupling / adversarial coupling pressure) of which the segment treats only the third. This spike stages the second.
+
+| Spike | Location | Status |
+|-------|----------|--------|
+| **Strategic self-coupling** | `spikes/spike-strategic-self-coupling.md` | **Scope-defined; investigation pending.** Names the structural extension required for an enabling-polarity treatment ($\mathcal{A}(\kappa_t)$ coupling-dependent action space; strategy-DAG enabling-edges; asymmetric reversibility cost). Surveys prior-art adoption candidates (Schelling 1960 *Strategy of Conflict*; Ainslie 1992 *Picoeconomics*; Akerlof-Kranton 2000 identity economics; Frank 1988 *Passions Within Reason*; Elster 1979/2000; Skyrms 1996/2004). Identifies four candidate segment products (P1 primary `disc-strategic-self-coupling`; P2 `def-coupling-dependent-action-space` formalization appendix; P3 `disc-modularity-state-dynamics` meta-segment alongside `#disc-separability-pattern`; P4 reversibility-cost appendix). Five open questions named, including the plausibly-non-monotone shape of $\mathcal{A}(\kappa_t)$ and the boundary between strategic-self-coupling and adversarial-coupling-pressure (which the cult-formation literature suggests blurs in practice). Investigation pickup awaiting. |
+
 ### 2026-04-24 Gemini pressure-point cycle — TIER 1 LANDED
 
 Nine spikes: five primary (one per Gemini-flagged pressure point, skipping #6 directed-separation-fails-for-LLMs as known structural scope-exit) + four cross-cutting follow-ups. All nine respected strengthen-first posture; none softened. Tier 1 landed in commits `6102a93` (reasoning trail) + `b76ee67` (theory landing) + `e3d7179` (TODO reconciliation). See [`LOG.md`](../LOG.md) §"2026-04-24 Gemini Pressure-Point Cycle" for the full cycle narrative; the per-spike status column below carries the Tier 2/3 disposition for items not yet landed.

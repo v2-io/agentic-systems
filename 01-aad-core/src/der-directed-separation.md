@@ -83,8 +83,18 @@ Two consequences worth surfacing for reviewers. First: the question "isn't direc
 
 **Implications for theory scope:**
 - **Class 1**: Section II's results apply exactly. The sequential orient cascade is the correct analysis.
-- **Class 2**: Requires coupled formulation from the start — $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without decomposition. This is the scope of `03-logogenic-agents/`.
+- **Class 2**: Requires coupled formulation from the start — $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without decomposition. This is the scope of `03-logogenic-agents/`. **Class 2 components can be wrapped into Class-1 composites** via the construction of `#der-class-coercion-via-wrapping` — at the cost of more component calls per macro-step (Brooks's-Law tempo overhead) and a residual leakage rate bounded structurally (in the strict-wrapping regime) or behaviorally (in the partial-wrapping regime).
 - **Class 3**: The sequential cascade is an approximation. Approximation quality depends on $\kappa_{\text{processing}}$ and requires per-architecture error analysis.
+
+### Class-1 by structure vs. Class-1 by behavior
+
+The Class-1 cell admits a refinement that matters operationally. Class-1 status can be achieved by either:
+
+- **Class-1 by structure.** The component is natively goal-blind (POMDP belief-state filter, world model, sensory pipeline) or is wrapped via the strict-wrapping (W₁) construction of `#der-class-coercion-via-wrapping`, where separate goal-blind queries to the underlying component update the wrapper's $M_W$. Directed separation holds by structural commitment of the wrapper's type signatures (no $G_W$ argument in the belief-update path), with leakage bounded structurally by the pretraining-distribution mutual information $I(A(q_M); G_W \mid q_M)$.
+
+- **Class-1 by behavior.** The component is Class-2 or Class-3 used through partial wrapping (W₂) — one goal-conditioned call per macro-step, response parsed into typed update fields. Structural separation lives at the *write boundary*; the *query boundary* still passes $G_W$ to the component. Directed separation at the wrapper level is *behavioral* — bounded by the component's compliance with the prompted instruction-to-separate, with no structural upper bound.
+
+The class-coercion theorem is what backs the Class-1-by-structure path for Class-2/3 components; the partial-wrapping regime achieves Class-1-by-behavior. The two are distinguishable by inspection: does the belief-update query to the underlying component carry $G_W$ in its input or not? The structural-vs-behavioral distinction is operationally important because behavioral compliance is empirical and adversarially fragile; structural separation is derivable from the wrapper's construction.
 
 **Composite-level class inheritance (from #deriv-strategic-composition).** The Class 1 / 2 / 3 partition above applies to individual agents based on *within-agent* coupling between $f_M$ and $G_t$. Composition introduces a second form of coupling — *across-agent* coupling through the shared environment and cross-agent observation. `#deriv-strategic-composition` provides the structural refinement:
 
