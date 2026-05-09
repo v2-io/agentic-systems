@@ -157,6 +157,12 @@ Each item: LEXICON entry + first-encounter cite added to the source segment (in 
 
 ---
 
+## E. Future terminology-system enhancements (`bin/term` evolution)
+
+Tooling improvements surfaced during rename-cycle execution. Land independently from the naming-cycle queue above — they affect how the renderer behaves, not which terms canonicalize.
+
+- **`sequence-id:` field for within-group ordering override** (surfaced 2026-05-09 during GUC rename Phase 1). Currently `bin/term render` sorts entries alphabetically by `term:` within each `tags:`-driven section. This makes axis-keyed entries render out of taxonomy order — e.g., the GUC three-value axis renders alphabetically (Coupled / Partial / Separated) in the Agent Classes section rather than monotonically (Class 1: Separated → Class 2: Partial → Class 3: Coupled). A `sequence-id:` field (integer or compound — e.g., `goal-update-coupling.1` / `.2` / `.3`) would let entries opt into a within-group ordering override; entries without `sequence-id:` continue to sort alphabetically by `term:`. Same field would serve future axis-keyed taxonomies (Knowledge Type axis, Contraction Tier 1/2/3, Identification Regime A/B/C, etc.). Implementation sketch: extend the renderer's per-section sort to read `sequence-id:` first, fall back to alphabetic by `term:`. Cross-section entries (multi-tagged) would carry one `sequence-id:` per relevant axis or use a single value where the ordering applies in all sections.
+
 ## D. Open-question residue (the 13 to-canonicalize rows still pending decision)
 
 Listed here as a pointer, not as actions — these are pre-execution decisions that come *before* the queue above grows further. See [`msc/naming/to-canonicalize.md`](msc/naming/to-canonicalize.md) §Table for the 13 rows: most carry `D` in the Confirm column (specification bound, adaptive cycle, operationalization, etc.), and one carries `???` (separable core / structured repair / general open — separability triad-rung naming, ties into [`msc/separability-standalone-paper-proposal.md`](msc/separability-standalone-paper-proposal.md)). When those decisions land, new rows will be added to the appropriate section above.
