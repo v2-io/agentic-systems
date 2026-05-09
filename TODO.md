@@ -242,6 +242,16 @@ Detail in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md)
 - Multiple index support (paper, preprint, monograph).
 - `lint-md` directory arguments.
 
+### NOTATION migration to terminology system (queued, 2026-05-09)
+
+Parallel to the LEXICON.md auto-generation shift. `NOTATION.md` is currently hand-authored — every symbol row is a manual edit. The terminology entry schema already reserves a `notation:` field for the LaTeX form (`terminology/README.md` §Schema), and §"What is not (yet) here" names the planned move: a parallel `bin/term render --notation` (or sibling verb) that emits `NOTATION.md` from entries with a non-null `notation:` field — same per-entry source, different generated view.
+
+**Concrete first move.** Implement the renderer mode: walk `terminology/entries/`, collect entries with non-null `notation:`, emit `NOTATION.md` grouped per the same `tags:`-driven sectioning the LEXICON renderer uses (or a separate `notation_section:` field if the LEXICON tagging diverges from what notation tables want — judgment call when the work opens). Apply the same clobber-guard pattern (refuse to overwrite a hand-authored `NOTATION.md` without an `Auto-generated` marker; default destination is staging path `terminology/_emitted/NOTATION.md` until bootstrap migration completes).
+
+**Bootstrap migration.** Existing hand-authored `NOTATION.md` rows that don't yet have terminology entries need to land first — catalog the rows, create or augment terminology entries with `notation:` populated, *then* switch `NOTATION.md` to generation. Same pilot-then-sweep discipline as LEXICON.
+
+**Ordering note.** Lower priority than completing LEXICON migration (TERMINOLOGY-TODO §C). Schema gaps the LEXICON sweep surfaces may also benefit NOTATION — fix once during LEXICON, not twice. Lifts `NOTATION.md` to the same audit-trail-and-multi-agent-safe discipline as LEXICON: per-symbol `terminology/decisions/<slug>/` events preserving when and why each symbol entered the canonical reference.
+
 ### bin/rename-slug bugs (queued, 2026-05-08)
 
 Two bugs surfaced during the `obs-gates-advantage → obs-gated-tempo-advantage` rename pilot. Both are minor (graceful failures, not data corruption); both should land before the next bulk slug-rename batch.

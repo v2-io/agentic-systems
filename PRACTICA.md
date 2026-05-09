@@ -97,6 +97,9 @@ Status (updated 2026-05-01 post-aggregator-landing): pilot complete; full role-p
 - [ ] Consider segment -> accumulator / alphabetize -> lexicon
 - [ ] Update / Refresh Lexicon (manually or automated depending on earlier)
 
+### NOTATION migration to terminology system
+- [ ] Migrate `NOTATION.md` to the same auto-generation discipline `LEXICON.md` just adopted. Terminology entries already reserve a `notation:` field; `bin/term render --notation` (or sibling verb) is planned per [`terminology/README.md`](terminology/README.md) §"What is not (yet) here". Lower priority than completing the LEXICON migration. Detail in [TODO §"NOTATION migration to terminology system"](TODO.md#notation-migration-to-terminology-system-queued-2026-05-09).
+
 ## Misc
 - [x] ~~Review new README outline & partials available~~ — landed via 2026-04-26 doc-pipeline cycle (commits `653cfeb`, `6389e4d`, `b1c61a0`, `104b777`); pipeline at `doc/readme/`, scripts in `bin/` (`build-readme`, `extract-findings`, etc.)
 - [ ] Joseph review new README outline & partials available
