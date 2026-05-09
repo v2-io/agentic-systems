@@ -322,7 +322,7 @@ $$\boldsymbol\delta_\Sigma^T \mathbf{F} = \frac{\delta_C^2}{n_C+1} + \frac{\thet
 
 The bottleneck is typically the explore action behind the condition: $\theta_C \varepsilon / (n_{A_2}+1)$.
 
-**B.5b applies.** The Jacobian $\mathbf{J} = (s_{G_{\text{sub}}},\; \hat p_C(1 - \hat p_{A_2}),\; \hat p_C(1 - \hat p_{A_1}))^T$ is non-negative (monotone AND/OR). Corrections are componentwise (each leaf updates independently). Therefore $\alpha_s = \alpha_c = \alpha_\Sigma$ — the plan-confidence error inherits the sector condition with no penalty.
+**B.5b applies.** The Jacobian $\mathbf{J} = (s_{G_{\text{sub}}},\; \hat p_C(1 - \hat p_{A_2}),\; \hat p_C(1 - \hat p_{A_1}))^T$ is non-negative (monotone AND/OR). Corrections are componentwise (each leaf updates independently). Therefore $\alpha_s = \alpha_c = \alpha_\Sigma$ — the strategy-plan-confidence error inherits the sector condition with no penalty.
 
 **Optimal exploration.** Equalizing the action terms: $\varepsilon^\ast = (n_{A_1}+1)/(n_{A_1}+n_{A_2}+2)$, giving $\alpha_\Sigma^\ast = \min(1/(n_C+1),\;\theta_C/(n_{A_1}+n_{A_2}+2))$.
 
@@ -455,9 +455,9 @@ The B.7-vs-refuted-unobservable-$C$ structure is one of two no-go theorems in AA
 
 ## Proposition B.5: Bridge from Credence Error to Value Residuals
 
-The propositions above verify the sector condition for the credence-error mismatch state $\boldsymbol\delta_c = (\hat p_k - \theta_k)$. This proposition extends the result to **plan-confidence error** — the scalar difference between the agent's plan-confidence score and the independence-model plan value evaluated at true edge parameters. This is a natural plan-level mismatch that is distinct from (but related to) the per-edge value-increment residuals $\delta_{\text{strategic}}$ defined in #def-strategic-calibration.
+The propositions above verify the sector condition for the credence-error mismatch state $\boldsymbol\delta_c = (\hat p_k - \theta_k)$. This proposition extends the result to **strategy-plan-confidence error** — the scalar difference between the agent's strategy-plan-confidence score and the independence-model plan value evaluated at true edge parameters. This is a natural plan-level mismatch that is distinct from (but related to) the per-edge value-increment residuals $\delta_{\text{strategic}}$ defined in #def-strategic-calibration.
 
-**Relationship to $\delta_{\text{strategic}}$.** #def-strategic-calibration defines $\delta_{\text{strategic}}$ as an $L^2$ aggregation of per-edge value-increment residuals — a quantity that requires credit assignment to compute. Plan-confidence error $\delta_s$ defined here is a *different* quantity: it is the error in the DAG's aggregate self-assessment, computable from status propagation without credit assignment. The two are related (both measure strategy-reality mismatch) but not identical. This proposition shows the sector condition holds for plan-confidence error; extending it to $\delta_{\text{strategic}}$ directly would require the credit-assignment machinery discussed in #disc-credit-assignment-boundary.
+**Relationship to $\delta_{\text{strategic}}$.** #def-strategic-calibration defines $\delta_{\text{strategic}}$ as an $L^2$ aggregation of per-edge value-increment residuals — a quantity that requires credit assignment to compute. Plan-confidence error $\delta_s$ defined here is a *different* quantity: it is the error in the DAG's aggregate self-assessment, computable from status propagation without credit assignment. The two are related (both measure strategy-reality mismatch) but not identical. This proposition shows the sector condition holds for strategy-plan-confidence error; extending it to $\delta_{\text{strategic}}$ directly would require the credit-assignment machinery discussed in #disc-credit-assignment-boundary.
 
 ### Setup
 

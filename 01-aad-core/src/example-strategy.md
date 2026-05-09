@@ -206,7 +206,7 @@ $$\log \hat P_\Sigma = \log(p_{v_\text{id}, v_\text{root}} \cdot s_{v_\text{id}}
 
 $$= \log(0.770) + \log(0.630) = -0.261 + (-0.462) = -0.724$$
 
-Each term is negative; the AND combination accumulates them additively in log-space. If the agent added a third AND-child (e.g., "maintain budget"), even with $s_\text{budget} = 0.95$, the plan confidence would drop to $0.485 \times 0.95 = 0.461$. The pressure toward shallow, narrow DAGs is structural.
+Each term is negative; the AND combination accumulates them additively in log-space. If the agent added a third AND-child (e.g., "maintain budget"), even with $s_\text{budget} = 0.95$, the strategy-plan confidence would drop to $0.485 \times 0.95 = 0.461$. The pressure toward shallow, narrow DAGs is structural.
 
 **Contrast with the OR-node.** Phase 1 (OR-node) benefits from redundancy: three alternative arms provide resilience. The OR combination yields $s_{v_\text{id}} = 0.81$ even though no single arm has credence above $0.75$. The asymmetry between AND (multiplicative decay) and OR (complementary resilience) is the core structural result of #der-chain-confidence-decay combined with #scope-and-or.
 
@@ -395,7 +395,7 @@ Section II tells the agent: *switch to arm 2, but first explore to confirm — t
 
 This is a *worked instantiation* — it demonstrates that the Section II formal chain is internally consistent and instantiable. The mapping quality is *conditional*: the quantitative relationships depend on the Beta-Bernoulli reward model, the specific DAG structure, and the parameterization. The qualitative conclusions — especially the diagnostic value of the 2x2 table and the orient cascade's ordering — should be robust across reward models and DAG topologies.
 
-The status is *conditional* rather than *exact* because the attainability $A_O$ is approximated (the exact Bayes-optimal policy for a nonstationary bandit is intractable), and the strategic calibration mapping inherits the discussion-grade status of #def-strategic-calibration. The core Section II definitions (satisfaction gap, control regret, plan confidence) are exact instantiations.
+The status is *conditional* rather than *exact* because the attainability $A_O$ is approximated (the exact Bayes-optimal policy for a nonstationary bandit is intractable), and the strategic calibration mapping inherits the discussion-grade status of #def-strategic-calibration. The core Section II definitions (satisfaction gap, control regret, strategy-plan confidence) are exact instantiations.
 
 ## Working Notes
 

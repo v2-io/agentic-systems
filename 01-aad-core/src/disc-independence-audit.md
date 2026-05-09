@@ -74,7 +74,7 @@ Six load-bearing independence assumptions in AAD, each paired with its failure r
 
 **Statement:** In $\hat P_\Sigma$ status propagation, sibling edge outcomes are independent given their parents.
 
-**Where it appears:** #def-strategy-dag status propagation formula; #scope-and-or; every downstream quantity computed from $\hat P_\Sigma$ (satisfaction gap, control regret via $A_O$, plan-confidence error $\delta_s$).
+**Where it appears:** #def-strategy-dag status propagation formula; #scope-and-or; every downstream quantity computed from $\hat P_\Sigma$ (satisfaction gap, control regret via $A_O$, strategy-plan-confidence error $\delta_s$).
 
 **Failure regime:** Same as causal sufficiency (item 2) — the CMC theorem makes them the same condition: causal sufficiency ⟺ exogenous noise independence ⟺ edge-outcome independence. When one fails, they all fail.
 

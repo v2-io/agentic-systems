@@ -51,9 +51,6 @@ These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, no
   - Connects to the project's unity vocabulary ($U_M$ / $U_O$ / $U_\Sigma$); the term is specifically uncertainty about $U_O$.
   - **Followup flag** (not part of this rename): broader question of reframing the four uncertainty terms in the communication-gain formula through the unity vocabulary — queued separately in `mini-lexicon-todo.md`.
 
-- [ ] **`plan confidence` → `strategy-plan confidence`** *(F1; symbol $\hat{P}_\Sigma$ pair)*
-  - LEXICON "Terms to Be Added" entry promoted to canonical with new name; symbol $\hat{P}_\Sigma$ stays; pair binds in NOTATION.md as well.
-
 [F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
 
 ---
