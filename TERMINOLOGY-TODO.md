@@ -31,9 +31,7 @@ Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` f
 
 These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, not a slug. Each row: add/update LEXICON entry + sweep affected segments.
 
-- [ ] **Class 1/2/3 → Separated/Coupled/Partial; "Goal-Update Coupling Class" axis name; coordinated Class 2 ↔ 3 numbering swap** *(largest item; multi-segment; warrants its own commit)*
-  - **Authoritative execution plan: [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md).** Self-contained — covers the transformation, surface-area enumeration (~30 segments + 4 partials + ~7 root docs), rationale, the warning-callout discipline, the migration-note convention, the terminology-system entry shape, the git-tag step, the open questions still needing Joseph's call, and the phased execution sequence.
-  - **Source rationale:** [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) lines 92–116 (original 2026-05-04 decision record + meta-pattern alignment audit). The execution plan synthesizes from this; this row defers to the plan for everything else.
+*All §B items landed.* The Class 1/2/3 → Separated/Coupled/Partial bundle (with the coordinated Class 2 ↔ 3 swap and the "Goal-Update Coupling Class" axis name) executed on the `guc-rename-2026-05-09` topical branch. See CHANGELOG entry for the cycle narrative; execution plan archived at [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md); live tracking at [`msc/class-rename-tracking-2026-05-09.md`](msc/class-rename-tracking-2026-05-09.md).
 
 [F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
 

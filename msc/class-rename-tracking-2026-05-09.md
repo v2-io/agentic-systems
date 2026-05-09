@@ -115,11 +115,11 @@ After surgery completes, collapse plan-file references and add CHANGELOG entry.
 
 | File | Count | Status | Notes |
 |---|---:|---|---|
-| `TERMINOLOGY-TODO.md` | 2 | untouched | Remove §B item 1 row entirely once landed (or mark complete with date pointer to CHANGELOG). |
-| `PRACTICA.md` | 3 | untouched | Cycle priority order #1 — strike-through with completion marker; pointer to CHANGELOG entry. |
-| `TODO.md` | 6 | untouched | Naming pipeline §"Prose-vocabulary renames pending" — remove or strike-through. |
-| `CHANGELOG.md` (new entry) | — | untouched | **Add cycle entry** narrating the rename + swap, the warning-callout discipline, the migration-note convention, the meta-pattern alignment achieved. Reference this tracking file + the execution plan. |
-| Git tag `pre-guc-rename-2026-05-09` | — | untouched | Tag the parent commit of this branch's first commit (the last "old vocabulary" commit). Anchor for warning callouts. |
+| `TERMINOLOGY-TODO.md` | 2 | verified | Remove §B item 1 row entirely once landed (or mark complete with date pointer to CHANGELOG). [opus 2026-05-09: §B intro updated to "All §B items landed" with pointer to CHANGELOG + plan + tracking; the inline detail row removed.] |
+| `PRACTICA.md` | 3 | verified | Cycle priority order #1 — strike-through with completion marker; pointer to CHANGELOG entry. [opus 2026-05-09: cycle priority #1 marked landed with strike-through + status note; item 10 status updated from "§B 7/8" to "§B complete (8/8)".] |
+| `TODO.md` | 6 | verified | Naming pipeline §"Prose-vocabulary renames pending" — remove or strike-through. [opus 2026-05-09: section retitled "all landed"; the Class 1/2/3 row struck through with "Landed 2026-05-09" pointer to CHANGELOG + plan + tracking.] |
+| `CHANGELOG.md` (new entry) | — | verified | **Add cycle entry** narrating the rename + swap, the warning-callout discipline, the migration-note convention, the meta-pattern alignment achieved. Reference this tracking file + the execution plan. [opus 2026-05-09: cycle entry added at top of 2026-05-09 section above the class-coercion entry; covers transformation, motivation, 8-phase execution shape, multi-agent verification cadence, six-anchor warning-callout discipline, migration-note convention, four pre-existing-bug housekeeping wins, and one net improvement beyond rename.] |
+| Git tag `pre-guc-rename-2026-05-09` | — | verified | Tag the parent commit of this branch's first commit (the last "old vocabulary" commit). Anchor for warning callouts. [opus 2026-05-09: tag points to commit `6f2586a` ("Tracking: queue 'sequence-id' field for terminology renderer") — the parent of `b8140f9` (Phase 2 step 1: first canonical-segment rename of der-directed-separation). At this tagged commit, terminology entries + LEXICON have new vocab but every canonical segment + root doc still uses old vocab — the cleanest "last-known-good old-vocab state" boundary.] |
 
 ---
 
