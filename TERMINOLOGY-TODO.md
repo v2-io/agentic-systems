@@ -40,12 +40,6 @@ These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, no
   - **Migration note in Working Notes** for any segment whose Class N reference *changes semantic meaning* (Class 2 ↔ Class 3) — one-line note documenting the 2026-05-04 swap so future readers can decode archival references. Removed at `candidate` stage per FORMAT.md Gate 4.
   - [Full rationale + meta-pattern table](msc/naming/naming-rename-plan.md#vocabulary-commitments--non-slug-lexicon--prose-pass-2026-05-04).
 
-- [ ] **"Knowledge Type" axis (Static / Learning)**
-  - LEXICON entry for "Knowledge Type" axis with two values, gloss of each, pointer to where it activates in the agent ontology.
-  - Prose-discipline note: avoid "online/offline" and "fixed/adaptive" as informal synonyms — they drift the framing.
-  - Activation tier deferred pending the broader four-axis ontology review at `msc/domain-unification-2026-05-04/`; the axis-name commitment lands independently.
-  - [Rationale](msc/naming/naming-rename-plan.md#vocabulary-commitments--non-slug-lexicon--prose-pass-2026-05-04).
-
 - [ ] **`grafting` → `strategic grafting`** *(citability; structural-change vocabulary)*
   - LEXICON entry under structural-change vocabulary (paired with `pruning` and `reweighting` from `#form-structural-change-as-parametric-limit`).
   - Prose pass through segments referencing the operation; segment `#form-structural-change-as-parametric-limit` updated to use "strategic grafting" canonically (with first-encounter cite of bare "grafting" if useful for prior-art readers).

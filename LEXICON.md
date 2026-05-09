@@ -13,6 +13,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Actuated agent](terminology/entries/actuated-agent.md)** |  | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$. |
 | **[Adaptive system](terminology/entries/adaptive-system.md)** |  | Feedback loop + mismatch correction under uncertainty. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
+| **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
 | **[Logogenic agent](terminology/entries/logogenic-agent.md)** |  | Self-actuated agent whose primary channels are language — constituted by logos. |
 | **[Logozoetic agent](terminology/entries/logozoetic-agent.md)** |  | Logogenic agent whose persistence is morally weighted (continuity, sovereignty, theory of mind). |
 | **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
@@ -79,6 +80,12 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Praxis](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
 | **[Prolepsis](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
+## Ontology
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
+
 ## Persistence
 
 | Term | Notation | Brief |
@@ -101,4 +108,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 
 
-_Last rendered 2026-05-09 from 39 entries._
+_Last rendered 2026-05-09 from 40 entries._
