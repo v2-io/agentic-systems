@@ -94,18 +94,18 @@ Logogenic agents were Class 2 (fully coupled) under the old vocab — under the 
 
 | File | Count | Status | Notes |
 |---|---:|---|---|
-| `doc/readme/src/_position-and-lineage.md` | 1 | modified | "fully-coupled (Class 2)" → "Coupled (GUC Class 3)". [modified by sonnet 2026-05-09: 1 occurrence updated; bin/build-readme run to regenerate README.md and README-auditor.md] |
-| `doc/readme/src/_maturity-gradient.md` | 1 | modified | "fully-coupled (Class 2)" → "Coupled (GUC Class 3)". [modified by sonnet 2026-05-09: 1 occurrence updated] |
-| `doc/readme/src/_known-issues.md` | 1 | modified | "Class 2 exit" → "Class 3 Coupled exit" + added "(LLMs, GUC Class 3: Coupled)" qualifier. [modified by sonnet 2026-05-09: 1 occurrence updated] |
-| `doc/readme/src/_findings-summary.md` | 1 | modified | Auto-regenerated via `bin/extract-findings` after Phase 2 segment edits — now uses new vocabulary pulled from segment Findings sections. [modified by sonnet 2026-05-09: ran bin/extract-findings; output uses Class 3 (Coupled) / Separated / Partial vocabulary from updated segments] |
-| `doc/readme/src/_terminology-warning.md` (new partial) | — | modified | **Created.** Holds the warning callout. Included in both README.md.liquid and README-auditor.md.liquid after `_auditor-instructions`/`_about` and before `_position-and-lineage`. [modified by sonnet 2026-05-09: new file; liquid templates updated; bin/build-readme run successfully] |
-| `CLAUDE.md` | 2 | modified | AD#5 updated to use GUC Class 1/2/3 (Separated/Partial/Coupled) vocabulary; warning callout placed inline after AD#5 text. Known Fragilities updated: "Class-1" → "GUC Class 1 (Separated)"; "(LLMs)" → "(LLMs, GUC Class 3: Coupled)". [modified by sonnet 2026-05-09: 2 occurrences + warning callout placed] |
-| `NOTATION.md` | 1 | modified | `f_M` row: "Modular...Class 1...Class 2/3...Class-2 ambiguity bias bound" → "Separated...Class 1...Class 2 (Partial) or Class 3 (Coupled)...Class 3 (Coupled) ambiguity bias bound". [modified by sonnet 2026-05-09: 1 row updated] |
-| `HISTORICAL-CONTEXT.md` | 1 | modified | "Class 1 / Class 2 / Class 3" → "GUC Class 1: Separated / GUC Class 2: Partial / GUC Class 3: Coupled". [modified by sonnet 2026-05-09: 1 occurrence updated in active-inference comparison paragraph] |
-| `PROPOSALS.md` | 2 | modified | SP-17 "Class-2-composition boundary" → "Class 3 (Coupled)-composition boundary"; O-BP2 "Class-2 dissolution framing" → "Class 3 (Coupled) dissolution framing". [modified by sonnet 2026-05-09: 2 occurrences; both were old Class 2 = fully merged, post-swap → Class 3 Coupled] |
-| `doc/naming-principles.md` | 2 | modified | Rename example updated from "Class 1/2/3" to "GUC Class 1: Separated / Class 2: Partial / Class 3: Coupled" with note explaining the actual 2026-05-09 rename was a canonicalize not rename; citability example updated "Class-2 ambiguity bias bound" → "Class 3 (Coupled) ambiguity bias bound". [modified by sonnet 2026-05-09: 2 occurrences] |
-| `LOG.md` | 3 | modified | Warning callout placed in header after H1 with note that body uses old vocabulary. Body itself frozen — 3 Class-N refs in body untouched. [modified by sonnet 2026-05-09: header callout only] |
-| `CHANGELOG.md` | 22 | modified | Warning callout placed in header with note that pre-2026-05-09 entries use old vocabulary verbatim. The 22 body occurrences in past cycle entries stay frozen. [modified by sonnet 2026-05-09: header callout only]
+| `doc/readme/src/_position-and-lineage.md` | 1 | verified | "fully-coupled (Class 2)" → "Coupled (GUC Class 3)". [modified by sonnet 2026-05-09: 1 occurrence updated; bin/build-readme run to regenerate README.md and README-auditor.md] |
+| `doc/readme/src/_maturity-gradient.md` | 1 | verified | "fully-coupled (Class 2)" → "Coupled (GUC Class 3)". [modified by sonnet 2026-05-09: 1 occurrence updated] |
+| `doc/readme/src/_known-issues.md` | 1 | verified | "Class 2 exit" → "Class 3 Coupled exit" + added "(LLMs, GUC Class 3: Coupled)" qualifier. [modified by sonnet 2026-05-09: 1 occurrence updated] |
+| `doc/readme/src/_findings-summary.md` | 1 | verified | Auto-regenerated via `bin/extract-findings` after Phase 2 segment edits — now uses new vocabulary pulled from segment Findings sections. [modified by sonnet 2026-05-09: ran bin/extract-findings; output uses Class 3 (Coupled) / Separated / Partial vocabulary from updated segments] |
+| `doc/readme/src/_terminology-warning.md` (new partial) | — | verified | **Created.** Holds the warning callout. Included in both README.md.liquid and README-auditor.md.liquid after `_auditor-instructions`/`_about` and before `_position-and-lineage`. [modified by sonnet 2026-05-09: new file; liquid templates updated; bin/build-readme run successfully] |
+| `CLAUDE.md` | 2 | verified | AD#5 updated to use GUC Class 1/2/3 (Separated/Partial/Coupled) vocabulary; warning callout placed inline after AD#5 text. Known Fragilities updated: "Class-1" → "GUC Class 1 (Separated)"; "(LLMs)" → "(LLMs, GUC Class 3: Coupled)". [modified by sonnet 2026-05-09: 2 occurrences + warning callout placed] |
+| `NOTATION.md` | 1 | verified | `f_M` row: "Modular...Class 1...Class 2/3...Class-2 ambiguity bias bound" → "Separated...Class 1...Class 2 (Partial) or Class 3 (Coupled)...Class 3 (Coupled) ambiguity bias bound". [modified by sonnet 2026-05-09: 1 row updated] |
+| `HISTORICAL-CONTEXT.md` | 1 | verified | "Class 1 / Class 2 / Class 3" → "GUC Class 1: Separated / GUC Class 2: Partial / GUC Class 3: Coupled". [modified by sonnet 2026-05-09: 1 occurrence updated in active-inference comparison paragraph] |
+| `PROPOSALS.md` | 2 | verified | SP-17 "Class-2-composition boundary" → "Class 3 (Coupled)-composition boundary"; O-BP2 "Class-2 dissolution framing" → "Class 3 (Coupled) dissolution framing". [modified by sonnet 2026-05-09: 2 occurrences; both were old Class 2 = fully merged, post-swap → Class 3 Coupled] |
+| `doc/naming-principles.md` | 2 | verified | Rename example updated from "Class 1/2/3" to "GUC Class 1: Separated / Class 2: Partial / Class 3: Coupled" with note explaining the actual 2026-05-09 rename was a canonicalize not rename; citability example updated "Class-2 ambiguity bias bound" → "Class 3 (Coupled) ambiguity bias bound". [modified by sonnet 2026-05-09: 2 occurrences] |
+| `LOG.md` | 3 | verified | Warning callout placed in header after H1 with note that body uses old vocabulary. Body itself frozen — 3 Class-N refs in body untouched. [modified by sonnet 2026-05-09: header callout only] |
+| `CHANGELOG.md` | 22 | verified | Warning callout placed in header with note that pre-2026-05-09 entries use old vocabulary verbatim. The 22 body occurrences in past cycle entries stay frozen. [modified by sonnet 2026-05-09: header callout only]
 
 ---
 
@@ -130,9 +130,9 @@ These regenerate from upstream sources. Verify after upstream edits land.
 | File | Count | Status | Notes |
 |---|---:|---|---|
 | `LEXICON.md` | 2 | verified | `bin/term render --output LEXICON.md --force` after Phase 1. Verify the GUC entries surface in the rendered output. [verified by sonnet (Phase 1 tracking row)] |
-| `README.md` | 4 | regenerated | `bin/build-readme` run after Phase 5 partial edits. Warning callout surfaces at lines 24-31 (after _about, before _position-and-lineage). New vocabulary in _position-and-lineage + _maturity-gradient + _known-issues + _findings-summary all present. [regenerated by sonnet 2026-05-09: 375 lines, 41156 bytes] |
-| `README-auditor.md` | 2 | regenerated | Same `bin/build-readme` run. Warning callout at lines 45-52. [regenerated by sonnet 2026-05-09: 243 lines, 26691 bytes] |
-| `FINDINGS.md` | 12 | regenerated | `bin/extract-findings` run during Phase 5. All 12 occurrences updated via segment Findings sections. [regenerated by sonnet 2026-05-09: 23 findings, 146178 bytes]
+| `README.md` | 4 | verified | `bin/build-readme` run after Phase 5 partial edits. Warning callout surfaces at lines 24-31 (after _about, before _position-and-lineage). New vocabulary in _position-and-lineage + _maturity-gradient + _known-issues + _findings-summary all present. [regenerated by sonnet 2026-05-09: 375 lines, 41156 bytes] |
+| `README-auditor.md` | 2 | verified | Same `bin/build-readme` run. Warning callout at lines 45-52. [regenerated by sonnet 2026-05-09: 243 lines, 26691 bytes] |
+| `FINDINGS.md` | 12 | verified | `bin/extract-findings` run during Phase 5. All 12 occurrences updated via segment Findings sections. [regenerated by sonnet 2026-05-09: 23 findings, 146178 bytes]
 
 ---
 
