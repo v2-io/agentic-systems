@@ -18,7 +18,7 @@
 04-eli/ Language-living agents (future work)
 
 OUTLINE.md            Top-level assembly index
-LEXICON.md            Prose vocabulary (cycle phases, agent classes)
+LEXICON.md            Prose vocabulary (cycle phases, agent classes; auto-generated from terminology/)
 NOTATION.md           Symbol reference
 FORMAT.md             Segment file conventions
 FINDINGS.md           Curated novel-results catalog (auto-generated)
@@ -33,6 +33,10 @@ doc/                  Long-lived process documentation
   de-novo-audit-instructions.md
   naming-principles.md
   readme/             Templates and partials for README generation
+terminology/          Source-of-truth for prose vocabulary (LEXICON.md is rendered from here)
+  entries/            One file per term (YAML frontmatter + markdown body)
+  decisions/          Append-only naming-decision events (per-slug audit trail)
+  README.md           Schema and tooling guide for the terminology system
 spikes/               Research spikes (reasoning trails)
   INDEX.md            Spike index with per-spike status
   PROPOSED.md         High-risk research-direction proposals

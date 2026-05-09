@@ -6,7 +6,14 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 **Pre-flight per item.** For each rename, read the rationale in `naming-rename-plan.md` first (linked per row) — the operational notes there often catch edge cases (segment H1 forms, dual references, pedagogically-useful "Old (New)" first-use) that the brief executable summary here doesn't surface.
 
-**Ordering.** Slug renames first (mechanical, tool-driven), then prose-vocabulary renames (LEXICON entry + segment sweep), then LEXICON additions (no rename, just commitment of vocabulary). Within each section: roughly easiest-first, but interleavable. The Class 1/2/3 → Separated/Coupled/Partial item is the largest single piece (touches ~8 segments + README + CLAUDE.md) and warrants its own commit.
+**Ordering.** Slug renames first (mechanical, tool-driven), then prose-vocabulary renames (terminology entry + segment sweep), then terminology additions (no rename, just commitment of vocabulary). Within each section: roughly easiest-first, but interleavable. The Class 1/2/3 → Separated/Coupled/Partial item is the largest single piece (touches ~8 segments + README + CLAUDE.md) and warrants its own commit.
+
+**Tooling note (2026-05-09).** "LEXICON entry" rows below mean *entries in the `terminology/` system*, not hand-edits to `LEXICON.md` (which is now auto-generated — see CLAUDE.md §LEXICON discipline). For each row:
+1. Edit (or scaffold via `bin/term add <slug>`) `terminology/entries/<slug>.md` — YAML frontmatter (term, brief, status, source, see_also, etc.) + markdown body for the longer prose definition.
+2. Record the naming decision via `bin/term decide <slug> <action> --by <decider> --note "<rationale pointer>"` (actions: `canonicalize` / `rename` / `add-alias` / `add-cite` / `update-gloss` / `nuance-flag`).
+3. `bin/term render --output LEXICON.md` (or whatever target the workflow specifies) to regenerate.
+4. `bin/term lint` to surface schema or cross-ref issues.
+The LEXICON.md output is the same artifact rows below describe; what changed is *how it's produced*. See `terminology/README.md` for full schema.
 
 ---
 
@@ -25,7 +32,8 @@ Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` f
 These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, not a slug. Each row: add/update LEXICON entry + sweep affected segments.
 
 - [ ] **Class 1/2/3 → Separated/Coupled/Partial; "Goal-Update Coupling Class" axis name; coordinated Class 2 ↔ 3 numbering swap** *(largest item; multi-segment; warrants its own commit)*
-  - LEXICON entry "Goal-Update Coupling Class" with three values + meta-pattern alignment note (Class 1 = separable core, Class 2 = structured repair, Class 3 = general open) + pointer to `#der-directed-separation`.
+  - Terminology entry for "Goal-Update Coupling Class" (axis) — `terminology/entries/goal-update-coupling-class.md` with three values + meta-pattern alignment note (Class 1 = separable core, Class 2 = structured repair, Class 3 = general open) + pointer to `#der-directed-separation`. Per-value entries (`separated.md` / `coupled.md` / `partial.md`) optional — judgment call whether the axis-entry alone is enough or each value gets its own first-class entry.
+  - Decision events: `bin/term decide goal-update-coupling-class canonicalize`, plus rename events for the three numbered-class transitions (`bin/term decide separated rename --from class-1 ...` style) so the audit trail for the swap is preserved in `terminology/decisions/`.
   - Numbering swap: Class 1 = Separated *(unchanged)*; **Class 2 (was 3) = Partial**; **Class 3 (was 2) = Coupled**. Brings Architecture into ordering-alignment with the other six ladders in `#disc-separability-pattern`.
   - Prose-cleanup pass — segments touched once for *both* the rename AND the swap:
     - `01-aad-core/src/der-directed-separation.md` (canonical home; reorder + rename)
@@ -44,9 +52,9 @@ These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, no
 
 ---
 
-## C. LEXICON additions — confirmed canonicalize commitments
+## C. Terminology additions — confirmed canonicalize commitments
 
-Per-batch LEXICON entries (no rename, no prose sweep — just the entry). Add each term with: one-line gloss, symbol if applicable, segment cross-reference. Group LEXICON additions into existing thematic tables where they fit (Cycle Phases / Agent Classes / Core Quantities / Structural Concepts / etc.); add new tables only where genuinely new.
+Per-batch terminology entries (no rename, no prose sweep — just the entry). Each row: scaffold `terminology/entries/<slug>.md` (`bin/term add <slug>` if starting from blank), populate the frontmatter (term, brief, status, source, tags, see_also) + body (one-line gloss minimum, longer prose where worthwhile, segment cross-reference), then `bin/term decide <slug> canonicalize --by <decider>` to record the commitment. After a batch lands, `bin/term render --output LEXICON.md` regenerates the LEXICON view. Tagging via `tags:` drives the LEXICON's thematic sectioning (Cycle Phases / Agent Classes / Core Quantities / Structural Concepts / etc.); reuse existing tags where they fit.
 
 Each batch below is a natural commit unit. Mark a row landed = remove it; add a CHANGELOG entry for the batch.
 
