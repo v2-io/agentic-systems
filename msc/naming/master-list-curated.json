@@ -32,7 +32,7 @@
       "segment_link": "filled 139 (incl. 1 manually-resolved ambiguity), 4 with shared-segment annotation, 301 no-match",
       "manual_curation": "4 currents flagged for follow-up review",
       "canonicalize_provenance": "filled 503/503",
-      "rename_status": "44/629 currents marked as of 2026-05-04 (corresponds to 39 canonicalize commitments in msc/naming/naming-rename-plan.md; Greek-phase phases map to 2 master-list entries each — bare + Greek-tagged — explaining the 44-vs-39 differential)"
+      "rename_status": "58/629 currents marked as of 2026-05-09 (44 from 2026-05-04 curation + 14 from 2026-05-09 GUC rename execution; corresponds to 39 canonicalize commitments + the GUC Class 1/2/3 → Separated/Coupled/Partial bundle in msc/naming/naming-rename-plan.md; Greek-phase phases map to 2 master-list entries each — bare + Greek-tagged — explaining the 44-vs-39 differential)"
     },
     "merged_variants": {
       "satisfaction gap": [
@@ -7047,8 +7047,13 @@
       "fields": {
         "status": "one of: canonicalized | canonicalized-with-nuance | canonicalized-greek-phase | canonicalized-held | renamed | deferred | excluded-no-op | excluded-different-layer (extensible)",
         "decided_date": "YYYY-MM-DD when the decision was recorded",
+        "executed_date": "YYYY-MM-DD when the decision was actually executed (renamed/canonicalized into the corpus). Distinct from decided_date for renames that are bundled and executed later. Optional; absent for decisions that were executed at the same time they were decided.",
         "destination": "path to the file that records the decision (typically msc/naming/naming-rename-plan.md)",
-        "destination_section": "section within the destination file where the entry lives"
+        "destination_section": "section within the destination file where the entry lives",
+        "cycle_record": "Optional. CHANGELOG entry locator (e.g., \"CHANGELOG.md 2026-05-09\") for the cycle that executed the decision.",
+        "pre_execution_tag": "Optional. Git tag anchoring the pre-execution state (used as the rosetta-stone reference for warning callouts in archaeology).",
+        "merge_commit": "Optional. Merge commit SHA (short) where the rename landed on main.",
+        "note": "Optional. Free-text note describing the specific rename or canonicalize action (e.g., \"rename → New Name (rationale)\")."
       },
       "usage": "A future filter-script can select currents by status (e.g., to generate a \"remaining work\" list of unrouted currents, or a \"for review\" list of held entries). Soft-delete is achieved by marking status=excluded-* rather than removing the row."
     }
@@ -7887,7 +7892,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "canonicalized (kept; canonical name for the property the GUC Class axis measures; per #der-directed-separation)"
+      }
     },
     {
       "current": "identifiability floor",
@@ -27081,7 +27097,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 1: Separated (number unchanged; property-name added)"
+      }
     },
     {
       "current": "Class 2",
@@ -27154,7 +27181,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 3: Coupled (semantic-reversal swap: old Class 2 fully merged → new Class 3 Coupled)"
+      }
     },
     {
       "current": "Class 3",
@@ -27210,7 +27248,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 2: Partial (semantic-reversal swap: old Class 3 partially modular → new Class 2 Partial)"
+      }
     },
     {
       "current": "cognitive fusion",
@@ -27828,7 +27877,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "canonicalized",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "canonicalized (kept; #hyp-directed-separation-under-composition stayed at this slug)"
+      }
     },
     {
       "current": "directional fidelity",
@@ -33385,7 +33445,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Goal-Update Coupling Class (axis name); values renamed Separated / Partial / Coupled with Class 2 ↔ 3 swap"
+      }
     },
     {
       "current": "alpha prime sub-scope",
@@ -34078,7 +34149,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 1 (Separated) agent (number unchanged; property-name added)"
+      }
     },
     {
       "current": "class 1 subagent forming a class 3 composite",
@@ -34127,7 +34209,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 1 (Separated) sub-agents → Class 2 (Partial) composite via strategic composition (semantic-reversal swap; old Class 3 = bounded across-agent coupling = new Class 2 Partial)"
+      }
     },
     {
       "current": "Class 2 agent",
@@ -34158,7 +34251,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 3 (Coupled) agent (semantic-reversal swap)"
+      }
     },
     {
       "current": "Class 3 agent",
@@ -34189,7 +34293,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 2 (Partial) agent (semantic-reversal swap)"
+      }
     },
     {
       "current": "closure defect bridge lemma",
@@ -34445,7 +34560,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename: class-2 references in this phenomenon now read Class 3 (Coupled) per the swap; canonical home is #scope-observation-ambiguity-modulation"
+      }
     },
     {
       "current": "concept the upper bound on what a given model class can express and the consequent constraint on feasible strategy complexity",
@@ -39720,7 +39846,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 1 (Separated) sub-agents → Class 2 (Partial) composite (named in #deriv-strategic-composition Discussion + #der-directed-separation Composite-level subsection)"
+      }
     },
     {
       "current": "unnamed the condition for transition into agency prior to the AAD scope condition",
@@ -43247,7 +43384,18 @@
           ],
           "canonicalize_provenance": "excavated — 'class 2 scope exit' appears in `#der-directed-separation` prose (4 occurrences); voters' commit is to existing usage."
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "rename → Class 3 (Coupled) scope exit (semantic-reversal swap; canonical Findings claim name in #der-directed-separation)"
+      }
     },
     {
       "current": "completeness (C3)",
@@ -46743,7 +46891,18 @@
             }
           ]
         }
-      ]
+      ],
+      "rename_status": {
+        "status": "renamed",
+        "decided_date": "2026-05-04",
+        "executed_date": "2026-05-09",
+        "destination": "msc/naming/naming-rename-plan.md",
+        "destination_section": "Vocabulary commitments — non-slug LEXICON / prose pass (2026-05-04) — Class 1/2/3 → Separated/Coupled/Partial bundle",
+        "cycle_record": "CHANGELOG.md 2026-05-09",
+        "pre_execution_tag": "pre-guc-rename-2026-05-09",
+        "merge_commit": "9e6d97a",
+        "note": "named in #der-directed-separation Findings: \"Pearl-Blanket-Form Architectural Classification with Explicit Class-3 Scope Exit\""
+      }
     },
     {
       "current": "unnamed the procedure of reading any segment through all three meta segment",
