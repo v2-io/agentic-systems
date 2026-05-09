@@ -4,7 +4,7 @@ type: definition
 status: axiomatic
 depends:
   - def-feature
-  - scope-software
+  - scope-evolving-software
 ---
 
 # Definition: Comprehension Time

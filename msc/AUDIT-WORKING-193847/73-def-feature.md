@@ -4,10 +4,10 @@
 I predicted that a feature would be defined as the "atom" of change. This segment confirms it, but the "as perceived by" qualifier is a much stronger move than I expected. It explicitly allows for the same codebase change to be viewed as multiple features at different levels of the composition hierarchy. This is very consistent with the "Fractal Agency" of AAD—where the unit of analysis is relative to the agent observing it.
 
 **2. Cross-segment consistency.**
-It correctly inherits from `#scope-software`. The inclusion of refactoring as a feature is a direct application of `#post-temporal-optimality`: if it affects future implementation time, it is subject to optimization and therefore must be in scope.
+It correctly inherits from `#scope-evolving-software`. The inclusion of refactoring as a feature is a direct application of `#post-temporal-optimality`: if it affects future implementation time, it is subject to optimization and therefore must be in scope.
 
 **3. Math verification.**
-No complex math here, just the definitional grounding of $F$. It sets the stage for the summation $\sum \text{time}(F_i)$ introduced in `#scope-software`.
+No complex math here, just the definitional grounding of $F$. It sets the stage for the summation $\sum \text{time}(F_i)$ introduced in `#scope-evolving-software`.
 
 **4. What direction will the theory take next?**
 The theory must now define the *bounds* on feature implementation speed. I expect `#result-specification-bound` to follow, showing that implementation time $\text{time}(F)$ is bounded by the quality of the specification (the information transfer from requester to implementer).

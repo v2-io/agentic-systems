@@ -3,7 +3,7 @@ slug: scope-developer-agent
 type: scope
 status: axiomatic
 depends:
-  - scope-software
+  - scope-evolving-software
   - obs-software-epistemic-properties
   - def-agent-environment
   - form-agent-model

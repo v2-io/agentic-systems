@@ -5,7 +5,7 @@ status: conditional
 depends:
   - post-temporal-optimality
   - def-feature
-  - scope-software
+  - scope-evolving-software
 ---
 
 # Result: Specification Bound
@@ -39,7 +39,7 @@ where:
 
 Shared context acts as compression by reducing $H_{\text{req}}$, not by appearing as a free-standing divisor.
 
-**Assumptions.** The feature $F$ is within #scope-software (non-negligible future change probability). A channel is "sufficient" if it transmits enough information for the implementer to produce the intended feature, not merely approximate it.
+**Assumptions.** The feature $F$ is within #scope-evolving-software (non-negligible future change probability). A channel is "sufficient" if it transmits enough information for the implementer to produce the intended feature, not merely approximate it.
 
 ### Corollary: Communication as Bottleneck
 

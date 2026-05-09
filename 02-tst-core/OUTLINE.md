@@ -20,7 +20,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | § | Type | N | Tag | Claim | Stage |
 |---|------|---|-----|-------|-------|
 | S | Postulate | | [#post-temporal-optimality](src/post-temporal-optimality.md) | Least-time is optimal (given equivalent outcomes) | deps-verified |
-| S | Scope | | [#scope-software](src/scope-software.md) | Systems with $P(\text{change}) \gt \varepsilon$ | draft |
+| S | Scope | | [#scope-evolving-software](src/scope-evolving-software.md) | Systems with $P(\text{change}) \gt \varepsilon$ | draft |
 | S | Observation | | [#obs-software-epistemic-properties](src/obs-software-epistemic-properties.md) | Software's 6 unique properties | draft |
 | S | Definition | | [#def-feature](src/def-feature.md) | Unit of coherent change | draft |
 | S | Result | | [#result-specification-bound](src/result-specification-bound.md) | Can't implement unspecified; includes communication bottleneck corollary | draft |

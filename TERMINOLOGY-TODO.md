@@ -14,9 +14,6 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` formal-tag review + cross-reference scan (the script reports stale-text warnings; H1 / opening-sentence / formal tags are touched by hand). The `msc/naming/` directory is excluded from the script's substitution patterns, so this file and `naming-rename-plan.md` are not corrupted by the sweep.
 
-- [ ] **`scope-software` → `scope-evolving-software`** *(citability fix; segment self-affirming)*
-  Segment H1 "Scope: Software" → "Scope: Evolving Software". The segment's own formal expression already names $\mathcal{S}_{\text{evolving}}$; bare `software` under-specifies. [Rationale](msc/naming/naming-rename-plan.md#pending-subject-noun-renames--surfaced-post-r2-2026-05-04).
-
 - [ ] **`obs-simulation-results` → `obs-section-i-validation-simulations`** *(citability fix; ~5 cross-refs)*
   Segment H1 → "Observation: Section I Validation Simulations". The segment is the empirical-validation appendix for Section I (six simulation variants A–F + Hafez bridge). Cross-refs from `result-adversarial-exponent-regimes`, `obs-gates-advantage`, `result-per-dimension-persistence` update mechanically.
 

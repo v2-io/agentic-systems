@@ -41,7 +41,7 @@ This file retires when the last `old-*` file is archived.
 | ~~old-tst-readme~~ | ~~TST overview~~ | **Archived.** Superseded by 02-tst-core/OUTLINE.md. |
 | ~~old-tst-01-temporal-optimality~~ | ~~T-01~~ | **Archived.** → #post-temporal-optimality (generalized). |
 | ~~old-tst-02-specification-bound~~ | ~~D-01 + T-02 + C-02.1~~ | **Archived.** → #result-specification-bound, #def-feature. |
-| ~~old-tst-03-evolving-scope~~ | ~~T-03~~ | **Archived.** → #scope-software. |
+| ~~old-tst-03-evolving-scope~~ | ~~T-03~~ | **Archived.** → #scope-evolving-software. |
 | ~~old-tst-04-change-expectation~~ | ~~T-04, C-04.1, C-04.2~~ | **Archived.** → #der-change-expectation-baseline. |
 | ~~old-tst-05-dual-optimization~~ | ~~D-02, D-03, T-05~~ | **Archived.** → #def-comprehension-time, #def-implementation-time, #der-dual-optimization. |
 | ~~old-tst-06-change-investment~~ | ~~T-06~~ | **Archived.** → #der-change-investment. |

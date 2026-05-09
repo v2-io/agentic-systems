@@ -3,7 +3,7 @@ slug: def-feature
 type: definition
 status: axiomatic
 depends:
-  - scope-software
+  - scope-evolving-software
 ---
 
 # Definition: Feature
@@ -14,7 +14,7 @@ A unit of functionality, as perceived by those who requested, implement, or use 
 
 *[Definition (feature-definition)]*
 
-A **feature** $F$ is a deliberate change to a software system $S \in \mathcal{S}_{\text{evolving}}$ ( #scope-software) that:
+A **feature** $F$ is a deliberate change to a software system $S \in \mathcal{S}_{\text{evolving}}$ ( #scope-evolving-software) that:
 
 1. Coherently modifies the codebase and/or running system behavior
 2. Is perceived as a unit by at least one stakeholder (requester, implementer, or user)

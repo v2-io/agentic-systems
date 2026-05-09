@@ -3,7 +3,7 @@ slug: def-system-availability
 type: definition
 status: axiomatic
 depends:
-  - scope-software
+  - scope-evolving-software
 ---
 
 # Definition: System Availability

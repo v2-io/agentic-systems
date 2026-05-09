@@ -10,13 +10,13 @@ This is the first TST segment. It references AAD's persistence machinery correct
 The argmin over time given equivalence across a multi-dimensional measurable set $\mathbf{M} \setminus \{\text{time}\}$ is trivial but correctly stated. It formalizes the intuition that time is the residual to minimize once constraints are met.
 
 **4. What direction will the theory take next?**
-The theory must now define the "cost" of time in specific agentic operations. I expect `#scope-software` to define the domain where change (and thus time) is the primary driver, and `#obs-software-epistemic-properties` to explain why time-optimality is uniquely achievable or visible in software compared to other physical domains.
+The theory must now define the "cost" of time in specific agentic operations. I expect `#scope-evolving-software` to define the domain where change (and thus time) is the primary driver, and `#obs-software-epistemic-properties` to explain why time-optimality is uniquely achievable or visible in software compared to other physical domains.
 
 **5. What errors should I now watch for?**
 I need to watch for downstream claims that "speed" is a virtue even when outcomes are NOT identical. Any derivation that justifies a speed-up at the cost of $U_M$ (model uncertainty) or $U_O$ (teleological unity) without explicitly noting the violation of this postulate would be an error. The theory must remain honest about when it is breaking the equivalence precondition.
 
 **6. Predictions for next segments.**
-`#scope-software` will define software systems as those with non-zero change probability ($P(\text{change}) > \varepsilon$). This effectively defines the "high-disturbance" environment that makes TST necessary.
+`#scope-evolving-software` will define software systems as those with non-zero change probability ($P(\text{change}) > \varepsilon$). This effectively defines the "high-disturbance" environment that makes TST necessary.
 
 **7. What would I change?**
 I would make the "normative selection rule" character even more explicit in the Discussion, as noted in the Working Notes. It's not just a preference; it's the *objective function* for the entire TST framework. The machinery that follows (tempo, gain, persistence) are the "how," but this is the "why."

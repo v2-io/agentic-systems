@@ -3,7 +3,7 @@ slug: scope-continuous-operation
 type: scope
 status: axiomatic
 depends:
-  - scope-software
+  - scope-evolving-software
   - def-system-availability
   - post-temporal-optimality
 ---
@@ -14,7 +14,7 @@ For systems that must operate while evolving, temporal optimization includes the
 
 ## Formal Expression
 
-*[Scope (continuous-operation, extending software-scope)]*
+*[Scope (continuous-operation, extending scope-evolving-software)]*
 
 For systems where $P(\text{perturbation}) \gt 0$ and $\text{required availability} \gt A_{\text{threshold}}$, the effective time includes operational cost:
 

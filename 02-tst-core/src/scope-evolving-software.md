@@ -1,5 +1,5 @@
 ---
-slug: scope-software
+slug: scope-evolving-software
 type: scope
 status: axiomatic
 depends:
@@ -7,19 +7,19 @@ depends:
   - post-temporal-optimality
 ---
 
-# Scope: Software Scope
+# Scope: Evolving Software
 
 AAD's software domain applies to systems with non-negligible probability of future change.
 
 ## Formal Expression
 
-*[Scope (software-scope)]*
+*[Scope (scope-evolving-software)]*
 
 $$\mathcal{S}_{\text{evolving}} = \{S : P(n_{\text{future}}(S) \gt 0) \gt \varepsilon\}$$
 
 For $S \in \mathcal{S}_{\text{evolving}}$, the total time subject to optimization is:
 
-*[Derived (software-scope, from temporal-optimality)]*
+*[Derived (scope-evolving-software, from temporal-optimality)]*
 
 $$\text{time}_{\text{total}}(S) = \text{time}(F_0) + \sum_{i=1}^{n_{\text{future}}} \text{time}(F_i)$$
 
@@ -29,7 +29,7 @@ When $n_{\text{future}}$ is non-trivial, the sum dominates: $\sum_{i=1}^{n_{\tex
 
 For any subsystem $s$ where $P(\text{change}(s)) \lt \varepsilon$:
 
-*[Derived (software-scope, from scope definition)]*
+*[Derived (scope-evolving-software, from scope definition)]*
 
 $$\text{time}_{\text{future}}(s) \to 0$$
 

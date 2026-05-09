@@ -10,7 +10,7 @@
 
 **5. What errors should I watch for?** The text notes that "This segment was written by an earlier agent with less context... Needs a review pass". It is indeed slightly less rigorous than the AAD core files. For example, it defines "sufficient" as "transmits enough information for the implementer to produce the intended feature", which is a bit circular. The Working Notes suggest formalizing this as reducing posterior uncertainty below a threshold, which would map perfectly to AAD's `def-model-sufficiency`.
 
-**6. Predictions for next segment:** `der-change-expectation-baseline.md` will define how developers predict future changes ($n_{\text{future}}$ from `#scope-software`). Based on the OUTLINE notes mentioning the "Lindy Effect," it will likely argue that the expected future lifespan/change-rate of a module is proportional to its observed past lifespan/change-rate.
+**6. Predictions for next segment:** `der-change-expectation-baseline.md` will define how developers predict future changes ($n_{\text{future}}$ from `#scope-evolving-software`). Based on the OUTLINE notes mentioning the "Lindy Effect," it will likely argue that the expected future lifespan/change-rate of a module is proportional to its observed past lifespan/change-rate.
 
 **7. What would I change?** I would formalize the definition of "sufficient transmission" using the exact language from AAD `#def-model-sufficiency`. The implementer's $M_t$ is sufficient when $S(M_t) \approx 1$ with respect to the specifier's $O_t$. 
 

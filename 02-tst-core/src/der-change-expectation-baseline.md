@@ -3,7 +3,7 @@ slug: der-change-expectation-baseline
 type: derived
 status: exact
 depends:
-  - scope-software
+  - scope-evolving-software
 ---
 
 # Derived: Change Expectation Baseline
@@ -66,7 +66,7 @@ The Laplace succession formula ($E[n_{\text{future}} \mid n_{\text{past}}] = n_{
 - "This is UI code" → higher change probability than algorithms
 - "We're sunsetting next quarter" → $\hat{n}_{\text{future}} \to 0$
 - "This connects to a volatile API" → $\hat{n}_{\text{future}}$ likely $\gt n_{\text{past}}$
-- "This is a sorting algorithm" → $\hat{n}_{\text{future}} \to 0$ (approaching the stable-subsystem regime of #scope-software)
+- "This is a sorting algorithm" → $\hat{n}_{\text{future}} \to 0$ (approaching the stable-subsystem regime of #scope-evolving-software)
 
 Each of these is an observation that updates the agent's model $M_t$ about the system's future. The gain applied to these updates ( #emp-update-gain) depends on how reliable the information source is — a product roadmap from an engaged PM carries more weight ($\eta^\ast$ closer to 1) than a vague feeling about market direction.
 

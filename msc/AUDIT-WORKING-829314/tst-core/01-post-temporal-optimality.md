@@ -6,7 +6,7 @@
 
 **3. Math verification:** The formal expression $A^* = \arg\min_{A_k} \text{time}(A_k)$ subject to $\forall m \in \mathbf{M} \setminus \{\text{time}\}, m(A_i) \equiv m(A_j)$ is a standard constrained optimization setup. The logic that "if all else is equal, faster is better" is indeed tautological, making it a perfect postulate.
 
-**4. What direction will the theory take next?** The `OUTLINE.md` lists `#scope-software` next, defining the specific boundaries of the software domain ($P(\text{change}) > \varepsilon$).
+**4. What direction will the theory take next?** The `OUTLINE.md` lists `#scope-evolving-software` next, defining the specific boundaries of the software domain ($P(\text{change}) > \varepsilon$).
 
 **5. What errors should I watch for?** The "equivalence precondition" is massive. In software, "identical outcomes" includes *maintainability* and *sustainability*. It is incredibly rare for two software approaches to yield truly identical outcomes across all non-temporal dimensions. If TST uses this postulate to justify a specific coding practice (e.g., "TDD is better"), it must rigorously prove that the non-temporal outcomes are actually equivalent or better, rather than just assuming it. I must watch for TST slipping into "faster is better" without proving the equivalence bound.
 

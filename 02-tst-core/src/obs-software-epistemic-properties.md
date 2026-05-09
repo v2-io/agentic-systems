@@ -3,7 +3,7 @@ slug: obs-software-epistemic-properties
 type: observation
 status: discussion-grade
 depends:
-  - scope-software
+  - scope-evolving-software
   - def-pearl-causal-hierarchy
   - def-observation-function
   - def-adaptive-tempo

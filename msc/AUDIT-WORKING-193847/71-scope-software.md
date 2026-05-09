@@ -1,7 +1,7 @@
-# Reflection: #scope-software
+# Reflection: #scope-evolving-software
 
 **1. Predictions vs evidence.**
-I predicted that `#scope-software` would define the domain as one where change is the primary driver. This segment confirms it with the $P(\text{change}) > \varepsilon$ condition. I didn't expect the "Stable-subsystem corollary"—it's a very clean way to justify library usage or "finished" code using AAD's $\rho \to 0$ logic.
+I predicted that `#scope-evolving-software` would define the domain as one where change is the primary driver. This segment confirms it with the $P(\text{change}) > \varepsilon$ condition. I didn't expect the "Stable-subsystem corollary"—it's a very clean way to justify library usage or "finished" code using AAD's $\rho \to 0$ logic.
 
 **2. Cross-segment consistency.**
 It correctly inherits from `#scope-agency` (the system must be an agent) and `#post-temporal-optimality` (the objective is minimizing time). The link to `#result-persistence-condition` is particularly satisfying—it shows that software "maintenance" is just "persistence" in the AAD sense. Maintenance is the act of maintaining the sector condition under a stream of incoming change-events.

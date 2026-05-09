@@ -7,7 +7,7 @@ depends:
   - def-comprehension-time
   - def-implementation-time
   - der-change-expectation-baseline
-  - scope-software
+  - scope-evolving-software
 ---
 
 # Derived: Dual Optimization
@@ -16,7 +16,7 @@ A principled implementation decision minimizes both comprehension time and imple
 
 ## Formal Expression
 
-*[Derived (dual-optimization, from temporal-optimality + software-scope)]*
+*[Derived (dual-optimization, from temporal-optimality + scope-evolving-software)]*
 
 For implementation choice $C$ of the current feature, the time-optimal choice minimizes total median-predicted future time:
 
@@ -24,7 +24,7 @@ $$C^* = \operatorname{argmin}_{C} \left[ t_0(C) + \hat{n}_{\text{future}} \cdot 
 
 where $t_0(C)$ is the immediate cost of choice $C$, and $\hat{n}_{\text{future}}$ is the median prediction from #der-change-expectation-baseline.
 
-This follows from #post-temporal-optimality (minimize total time) applied to the lifecycle cost structure of #scope-software (future costs dominate), with the feature time decomposition from #def-comprehension-time and #def-implementation-time.
+This follows from #post-temporal-optimality (minimize total time) applied to the lifecycle cost structure of #scope-evolving-software (future costs dominate), with the feature time decomposition from #def-comprehension-time and #def-implementation-time.
 
 ### The turnover multiplier
 

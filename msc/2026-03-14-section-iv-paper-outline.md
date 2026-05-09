@@ -15,7 +15,7 @@ Software development decisions are implicitly dual-optimization problems: minimi
 ### 1. Introduction: The Time Problem in Software
 - Software systems that expect change ($P(\text{change}) > \varepsilon$) face a fundamental tradeoff between optimizing for the current change and for all future ones
 - This is not a new observation (technical debt, YAGNI, over-engineering) — but it lacks formal treatment
-- **Source**: #scope-software, #post-temporal-optimality (simplified, without Greek terminology)
+- **Source**: #scope-evolving-software, #post-temporal-optimality (simplified, without Greek terminology)
 
 ### 2. Background: Adaptive Systems Meet Software
 - Brief: software development as an adaptive system (developer has a model of the codebase, updates it through observation, acts through changesets)
