@@ -14,9 +14,6 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` formal-tag review + cross-reference scan (the script reports stale-text warnings; H1 / opening-sentence / formal tags are touched by hand). The `msc/naming/` directory is excluded from the script's substitution patterns, so this file and `naming-rename-plan.md` are not corrupted by the sweep.
 
-- [ ] **`def-change-distance` → `def-discontinuity-distance`** *(F1 citability fix; qualifier-add)*
-  "Change distance" is generic (every diff tool, code-metric paper). The segment uses "discontinuity" as its own load-bearing framing; the metric is structurally a discrete count of qualitative cost-jumps (boundary crossings).
-
 - [ ] **`deriv-bias-bound` → `deriv-observation-ambiguity-bias-bound`** *(F1 citability fix; phenomenon-name)*
   Names the phenomenon the bound bounds (bias from observation-ambiguity modulation, the $\kappa \cdot \mathcal{A}$ product) without referencing the Class numbering. Segment H1 currently "Bias-Bound Constant $C$ for Class-2 Agent Observation-Ambiguity Modulation"; new H1 around "Observation-Ambiguity Bias-Bound Constant $C$". Coordinates with the Class 2 ↔ 3 numbering swap below — the dropped Class-N reference is the right move regardless of which numbering wins.
 

@@ -11,14 +11,14 @@ The `hyp-conceptual-alignment` segment brilliantly connects to `#der-change-inve
 The segment correctly downgrades its epistemic status to "Hypothesis" and "Discussion-grade," noting that the functional form ($1/\text{alignment}$) is an educated guess. The working notes beautifully suggest replacing this singularity-prone equation with an information-theoretic translation cost ($t_{\text{comp}} \sim t_{\text{base}} + \text{cost}_{\text{translate}}(S, D)$), which would perfectly align with the Information Bottleneck logic used elsewhere in AAD.
 
 **4. What direction will the theory take next?**
-Now that we have the physical manifestation of a feature (the atomic changeset), we need to know how its physical properties affect the time it takes to write it. The OUTLINE lists `#emp-changeset-size-principle` and `#def-change-distance` next.
+Now that we have the physical manifestation of a feature (the atomic changeset), we need to know how its physical properties affect the time it takes to write it. The OUTLINE lists `#emp-changeset-size-principle` and `#def-discontinuity-distance` next.
 
 **5. What errors should I now watch for?**
 I must ensure that downstream theorems don't assume changesets are always perfectly isolated. As noted in the working notes, features often overlap in time and space, blurring the boundaries of the atomic changeset.
 
 **6. Predictions for next segments:**
 - `#emp-changeset-size-principle` will assert an empirical scaling law: implementation/comprehension time grows super-linearly with the size of the changeset (e.g., lines of code or files touched).
-- `#def-change-distance` will define a metric for how "spread out" a changeset is across the codebase topology, setting up a penalty for dispersed changes.
+- `#def-discontinuity-distance` will define a metric for how "spread out" a changeset is across the codebase topology, setting up a penalty for dispersed changes.
 
 **7. What would I change?**
 I would strongly encourage promoting the "translation cost" framing from the working notes to the main formal expression of `hyp-conceptual-alignment`. It is mathematically much sounder than inverse proportionality.

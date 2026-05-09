@@ -1,18 +1,18 @@
 ---
-slug: def-change-distance
+slug: def-discontinuity-distance
 type: definition
 status: axiomatic
 depends:
   - def-atomic-changeset
 ---
 
-# Definition: Change Distance
+# Definition: Discontinuity Distance
 
 The structural separation between two changes in a codebase, measured along a hierarchy of boundaries.
 
 ## Formal Expression
 
-*[Definition (change-distance)]*
+*[Definition (def-discontinuity-distance)]*
 
 For changes $c_i, c_j$ within a changeset, distance follows a boundary hierarchy:
 

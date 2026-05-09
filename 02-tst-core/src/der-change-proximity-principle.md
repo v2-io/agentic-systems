@@ -3,7 +3,7 @@ slug: der-change-proximity-principle
 type: derived
 status: conditional
 depends:
-  - def-change-distance
+  - def-discontinuity-distance
   - emp-changeset-size-principle
   - def-comprehension-time
 ---
@@ -14,13 +14,13 @@ Given two implementations with identical changeset sizes, the one with changes c
 
 ## Formal Expression
 
-*[Derived (change-proximity-principle, from comprehension-time + change-distance)]*
+*[Derived (change-proximity-principle, from comprehension-time + def-discontinuity-distance)]*
 
 For a changeset, define proximity as:
 
 $$\text{proximity}(\text{changeset}) = \frac{1}{\sum_{i,j} d(c_i, c_j)}$$
 
-where $d$ follows the boundary hierarchy in #def-change-distance. Then:
+where $d$ follows the boundary hierarchy in #def-discontinuity-distance. Then:
 
 $$t_{\text{impl}} \propto \frac{1}{\text{proximity}(\text{changeset})}$$
 
@@ -28,11 +28,11 @@ at constant changeset size.
 
 ## Epistemic Status
 
-The qualitative claim is *derived*: comprehension time ( #def-comprehension-time) includes the cost of constructing $M_t$ for the relevant code, and scattered changes require constructing $M_t$ across more contexts, each with a boundary-crossing cost from #def-change-distance.
+The qualitative claim is *derived*: comprehension time ( #def-comprehension-time) includes the cost of constructing $M_t$ for the relevant code, and scattered changes require constructing $M_t$ across more contexts, each with a boundary-crossing cost from #def-discontinuity-distance.
 
 The quantitative form (inverse proportionality) is a *hypothesis*. The actual relationship between distance and cost is not derived — it could be linear, logarithmic, or dependent on the type of boundaries crossed. The exponential hypothesis is separated into #hyp-exponential-cognitive-load.
 
-*Conditional* on the change-distance hierarchy reflecting real cognitive costs, which is plausible but not formally grounded.
+*Conditional* on the discontinuity-distance hierarchy reflecting real cognitive costs, which is plausible but not formally grounded.
 
 ## Discussion
 

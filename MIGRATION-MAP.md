@@ -47,7 +47,7 @@ This file retires when the last `old-*` file is archived.
 | ~~old-tst-06-change-investment~~ | ~~T-06~~ | **Archived.** → #der-change-investment. |
 | ~~old-tst-07-conceptual-alignment~~ | ~~T-07 + C-07.1~~ | **Archived.** → #hyp-conceptual-alignment. |
 | ~~old-tst-08-changeset-size~~ | ~~D-04, T-08, C-08.1~~ | **Archived.** → #def-atomic-changeset, #emp-changeset-size-principle. |
-| ~~old-tst-09-change-proximity~~ | ~~D-05, T-09, H-09.1~~ | **Archived.** → #def-change-distance, #der-change-proximity-principle, #hyp-exponential-cognitive-load. |
+| ~~old-tst-09-change-proximity~~ | ~~D-05, T-09, H-09.1~~ | **Archived.** → #def-discontinuity-distance, #der-change-proximity-principle, #hyp-exponential-cognitive-load. |
 | ~~old-tst-10-coherence-coupling~~ | ~~D-06, D-07, T-10~~ | **Archived.** → #def-system-coupling, #def-system-coherence, #meas-coherence-coupling. |
 | ~~old-tst-11-decision-integration~~ | ~~T-11~~ | **Archived.** → #der-principled-decision-integration. |
 | ~~old-tst-12-continuous-operation~~ | ~~D-08, T-12~~ | **Archived.** → #def-system-availability, #scope-continuous-operation. |

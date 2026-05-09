@@ -343,7 +343,7 @@ Estimator: approximation of $S(M_t)$ for the team collectively. Poorly identifie
 **$g(\pi)$: policy-benignity.** How cleverly does the team's choice of *what to work on* avoid hitting the hard parts of the codebase?
 
 Candidates:
-- Change distribution across modules (hitting the stable core vs. the volatile edges — #def-change-distance, #der-change-proximity-principle)
+- Change distribution across modules (hitting the stable core vs. the volatile edges — #def-discontinuity-distance, #der-change-proximity-principle)
 - Coupling-weighted change rate ( #def-system-coupling): changes concentrated on low-coupling modules have lower $\rho$-inducement
 - Changeset-size distribution ( #emp-changeset-size-principle): smaller changes have smaller blast radius
 

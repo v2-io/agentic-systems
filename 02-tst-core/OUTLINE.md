@@ -35,7 +35,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | S | Hypothesis | | [#hyp-conceptual-alignment](src/hyp-conceptual-alignment.md) | Code-domain alignment; includes realignment corollary | draft |
 | S | Definition | | [#def-atomic-changeset](src/def-atomic-changeset.md) | The diff that is the feature | draft |
 | S | Empirical | | [#emp-changeset-size-principle](src/emp-changeset-size-principle.md) | Time ∝ changeset size; includes comprehension corollary | draft |
-| S | Definition | | [#def-change-distance](src/def-change-distance.md) | Lexical < file < module < svc | draft |
+| S | Definition | | [#def-discontinuity-distance](src/def-discontinuity-distance.md) | Lexical < file < module < svc | draft |
 | S | Derived + Hypothesis | | [#der-change-proximity-principle](src/der-change-proximity-principle.md) | Closer changes → less time | draft |
 | S | Hypothesis | | [#hyp-exponential-cognitive-load](src/hyp-exponential-cognitive-load.md) | Context-switch cost compounds? | draft |
 | S | Definition | | [#def-system-coupling](src/def-system-coupling.md) | $P(\text{change } j \mid \text{change } i)$ | draft |
