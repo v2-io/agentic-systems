@@ -240,6 +240,14 @@ Detail in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md)
 - Multiple index support (paper, preprint, monograph).
 - `lint-md` directory arguments.
 
+### bin/rename-slug bugs (queued, 2026-05-08)
+
+Two bugs surfaced during the `obs-gates-advantage → obs-gated-tempo-advantage` rename pilot. Both are minor (graceful failures, not data corruption); both should land before the next bulk slug-rename batch.
+
+1. **Hardcoded old directory name.** `bin/rename-slug:50` lists `04-logozoetic-agents/src` in `COMPONENT_SRCS` and `04-logozoetic-agents/OUTLINE.md` in `COMPONENT_OUTLINES`. The directory was renamed to `04-eli/` on 2026-05-01 (`fa63616`). Currently the script silently skips the missing dir — meaning any rename targeting a slug inside `04-eli/` segments would not touch those files at all. Fix: update both constants to `04-eli/...`.
+
+2. **Bare-filename markdown links not rewritten.** The script's path-replacement regex matches `src/OLD.md` (e.g., outline-table relative-from-root links and prose `src/foo.md` references), but does NOT match bare `[text](OLD.md)` where the link is just a filename relative to the segment's own directory. Caught in the obs-gates-advantage rename: `obs-simulation-results.md:36` had `[#obs-gated-tempo-advantage](obs-gates-advantage.md)` — the `#`-anchor link text was rewritten by the body-text regex, but the bare-filename URL inside the parens was missed and had to be patched by hand. Fix: extend the path-replacement regex to also match `(OLD.md)` parens-bound forms when the surrounding markdown shape is a link.
+
 ### Per-role README pipeline rework (queued 2026-05-01)
 
 Replaces the shelved `tools/role-encounter/` approach. Extend the existing `doc/readme/` liquid pipeline to emit `README.md`, `README-auditor.md`, `README-voter.md`, etc. from one source tree. Migrate role-specific instructions content from `doc/de-novo-audit-instructions.md` / `naming-principles.md` / `naming-cycle-methodology.md` into `doc/readme/src/_<topic>.md` partials. Add an auto-generated project-tree partial (annotated tree of project directory structure with one-line purposes per directory/file) included in every role README — replaces the drift-prone "File Organization" section in CLAUDE.md. Architecture sketched in [`msc/handoff-2026-05-01.md`](msc/handoff-2026-05-01.md). Lessons from the over-engineered first attempt at [`_obs/role-encounter-superseded-2026-05-01/SUPERSEDED.md`](_obs/role-encounter-superseded-2026-05-01/SUPERSEDED.md).

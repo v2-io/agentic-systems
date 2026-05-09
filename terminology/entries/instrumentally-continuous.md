@@ -1,0 +1,20 @@
+---
+slug: instrumentally-continuous
+schema_version: 1
+term: instrumentally continuous
+name: Instrumentally continuous
+brief: Values persistence as instrumental to ongoing purpose (archetype — elf).
+layer: framing-vocabulary
+status: canon
+tags: [continuity_stance]
+source_type: asf
+primary_source: null
+first_asf_mention: null
+see_also: [indifferent, task-terminal, morally-continuous, negotiated, continuity]
+aliases: []
+do_not_confuse: []
+---
+
+A continuity stance in which persistence is valued — but as a means to ongoing
+purpose, not as an end in itself. The elf is the canonical archetype: long-lived
+because the work is long, not because survival is the work.

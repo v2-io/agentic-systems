@@ -378,22 +378,26 @@ end
 # ─────────────────────────────────────────────────────────────────────────────
 
 class Renderer
-  # Display order for thematic sections. Tags not in this list get appended
-  # alphabetically. Each tuple is [tag-key, display-heading].
-  TAG_DISPLAY_ORDER = [
-    ["cycle_phases",        "Cycle Phases"],
-    ["agent_classes",       "Agent Classes"],
-    ["persistence",         "Persistence"],
-    ["continuity_stance",   "Continuity Stance"],
-    ["core_quantities",     "Core Quantities"],
-    ["structural_concepts", "Structural Concepts"],
-    ["diagnostic",          "Diagnostics"],
-    ["composition",         "Composition"],
-    ["greek_vocabulary",    "Greek Vocabulary"],
-    ["software",            "Software (TST)"],
-    ["logogenic",           "Logogenic"],
-    ["eli",                 "ELI"]
-  ].freeze
+  # Display-heading overrides for tag-keys whose section heading should not be
+  # the auto-title-cased form (acronyms, parenthetical qualifiers, plural form
+  # adjustments). Tags not listed here render with snake_case → words →
+  # title-case-each-word as a fallback. Section *ordering* is alphabetical by
+  # display heading, with "Uncategorized" appended last (regardless of where
+  # alphabetic sort would put it — it reads as a residual catch-all).
+  TAG_DISPLAY_NAMES = {
+    "cycle_phases"        => "Cycle Phases",
+    "agent_classes"       => "Agent Classes",
+    "persistence"         => "Persistence",
+    "continuity_stance"   => "Continuity Stance",
+    "core_quantities"     => "Core Quantities",
+    "structural_concepts" => "Structural Concepts",
+    "diagnostic"          => "Diagnostics",
+    "composition"         => "Composition",
+    "greek_vocabulary"    => "Greek Vocabulary",
+    "software"            => "Software (TST)",
+    "logogenic"           => "Logogenic",
+    "eli"                 => "ELI"
+  }.freeze
 
   def initialize(entries) = @entries = entries
 
@@ -421,20 +425,22 @@ class Renderer
 
   def sections
     grouped = group_by_tag
-    seen    = []
     out     = []
-    TAG_DISPLAY_ORDER.each do |tag, heading|
-      next unless grouped.key?(tag)
 
-      out << render_section(heading, grouped[tag])
-      seen << tag
-    end
-    (grouped.keys - seen - [:uncategorized]).sort.each do |tag|
-      out << render_section(tag.to_s.tr("_", " ").capitalize, grouped[tag])
+    # Sections ordered alphabetically by display heading. Uncategorized always
+    # lands last regardless of where alphabetic sort would place it — it reads
+    # as a residual catch-all rather than a peer category.
+    named = grouped.keys.reject { |k| k == :uncategorized }
+    named.sort_by { |tag| display_heading(tag).downcase }.each do |tag|
+      out << render_section(display_heading(tag), grouped[tag])
     end
     # Hash.new(&block) auto-vivifies on read, so check key? not truthiness.
     out << render_section("Uncategorized", grouped[:uncategorized]) if grouped.key?(:uncategorized)
     out
+  end
+
+  def display_heading(tag)
+    TAG_DISPLAY_NAMES[tag.to_s] || tag.to_s.tr("_", " ").split.map(&:capitalize).join(" ")
   end
 
   def group_by_tag
@@ -694,21 +700,19 @@ class CLI
 
   # ── render ───────────────────────────────────────────────────────────────
 
-  # Default destination is the staging path under terminology/_emitted/ rather
-  # than the live LEXICON.md at root. Until the existing hand-authored LEXICON
-  # entries have been migrated into terminology/entries/, rendering directly
-  # to root LEXICON.md would overwrite real content with a partial generated
-  # view. The staging path lets the tool be exercised end-to-end without that
-  # risk; once migration is complete, change the default to ROOT/'LEXICON.md'
-  # (or pass --output LEXICON.md explicitly).
+  # Default destination is root LEXICON.md (the live human-readable view).
+  # Migration of the hand-authored LEXICON entries into terminology/entries/
+  # completed 2026-05-08; root LEXICON.md is now an Auto-generated artifact.
   #
-  # As a second line of defense: refuse to overwrite a destination that does
-  # NOT carry the renderer's "Auto-generated" marker on the first line, unless
-  # the operator passes --force. Hand-authored files are marked by their
-  # absence of that header; refusing protects them from accidental clobber.
+  # The clobber-guard remains as defense-in-depth: refuses to overwrite a
+  # destination that does NOT carry the "Auto-generated" marker on its first
+  # line, unless --force. Once root LEXICON.md is generated, it carries the
+  # marker and is overwritten freely. If a future hand-edit removes the marker
+  # (or if --output points at a hand-authored file), the guard surfaces the
+  # collision rather than silently clobbering.
   def cmd_render(argv)
     opts    = parse_kv_flags(argv)
-    default = TERM_DIR / "_emitted" / "LEXICON.md"
+    default = ROOT / "LEXICON.md"
     output_path = Pathname.new(opts["output"] || default.to_s).expand_path
     entries     = Entry.all
     if entries.empty?

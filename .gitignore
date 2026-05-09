@@ -9,6 +9,3 @@ __pycache__/
 combined_aad.md
 combined_*.md
 msc/joseph-working-notes.md
-
-# bin/term render staging output (until migration to root LEXICON.md is complete)
-terminology/_emitted/

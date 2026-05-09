@@ -14,6 +14,22 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+## 2026-05-08
+
+### Naming-cycle Phase 6: terminology infrastructure live; LEXICON.md migrated to per-entry store; first §A slug rename landed
+
+Three landings extending the Phase-5 infrastructure into operational use.
+
+**Terminology-store goes live.** All 39 entries in `LEXICON.md` migrated into per-entry markdown-with-YAML-frontmatter files at `terminology/entries/<slug>.md` via a sub-agent walk over the source tables. Two were hand-authored as templates the prior session (`control-regret`, `aporia`); 37 created by the migration agent against the schema in `terminology/README.md`. `bin/term render` default destination switched from staging path (`terminology/_emitted/LEXICON.md`, gitignored) to root `LEXICON.md` — which is now an Auto-generated artifact carrying the marker-and-clobber-guard discipline. Hand-edits to LEXICON.md are blocked at the next render unless `--force`. Source-of-truth flow: edit `terminology/entries/<slug>.md` (or use `bin/term decide` to record decision events) → run `bin/term render` → LEXICON.md regenerated. Same shape as `bin/build-readme` regenerating README.md from `doc/readme/` partials.
+
+**Section ordering** in the rendered LEXICON went from a curated `TAG_DISPLAY_ORDER` list to alphabetical-by-display-heading, with the `TAG_DISPLAY_NAMES` mapping retained for headings that shouldn't be auto-title-cased (acronyms like `eli` → `ELI`, parenthetical qualifiers like `software` → `Software (TST)`). Uncategorized always lands last regardless of alphabetic position — reads as a residual catch-all rather than a peer category.
+
+**First §A slug rename landed:** `obs-gates-advantage` → `obs-gated-tempo-advantage` (TERMINOLOGY-TODO §A item 3; citability fix per Criterion 9). 35 substitutions across 16 files via `bin/rename-slug`, plus three manual touch-ups: H1 ("Observation Noise Gates Adversarial Advantage" → "Gated Tempo Advantage"), formal tag (`*[Observation (observation-gates-advantage, ...)]*` → `*[Observation (obs-gated-tempo-advantage, ...)]*`), and one bare-filename markdown link in `obs-simulation-results.md` that the script's `src/OLD.md` regex didn't match. `bin/lint-outline` clean.
+
+**Two bin/rename-slug bugs** surfaced and queued in TODO.md: hardcoded `04-logozoetic-agents/src` in `COMPONENT_SRCS` (the directory was renamed to `04-eli/` on 2026-05-01); bare-filename `[text](OLD.md)` markdown links not covered by the path-replacement regex. Both gracefully fail rather than corrupt; both should land before the next bulk slug-rename batch.
+
+---
+
 ## 2026-05-04
 
 ### Naming-cycle Phase 5: manual canonicalize-curation pass; Criterion 9 (standalone citability) added; rename plan restructured; Class 2 ↔ 3 numbering swap queued; separability-ladder standalone-paper proposal landed
