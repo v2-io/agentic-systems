@@ -63,7 +63,7 @@ The developer's internal model — the epistemic substate ( #form-agent-model):
 - Instructions from system prompts, memory files, documentation
 - Inferences from error messages, test output, tool responses
 
-For AI agents, $M_t$ is more explicitly representable (context window contents plus persistent storage), making it closer to a directly observable quantity — though with a Class 2 / $\kappa_{\text{processing}} \approx 1$ caveat: the goal tokens (system prompt, task description) shape the agent's effective beliefs through joint forward-pass processing rather than separable epistemic processing. The "explicit representability" is a representational convenience for the analyst, not a guarantee of architectural separation. See #scope-logogenic-agent for the Class 2 architectural classification, and #def-coupled-update-dynamics for the coupled update dynamics that replace the factored form for Class 2 agents.
+For AI agents, $M_t$ is more explicitly representable (context window contents plus persistent storage), making it closer to a directly observable quantity — though with a Class 3 (Coupled) / $\kappa_{\text{processing}} \approx 1$ caveat: the goal tokens (system prompt, task description) shape the agent's effective beliefs through joint forward-pass processing rather than separable epistemic processing. The "explicit representability" is a representational convenience for the analyst, not a guarantee of architectural separation. See #scope-logogenic-agent for the Class 3 (Coupled) architectural classification, and #def-coupled-update-dynamics for the coupled update dynamics that replace the factored form for Class 3 (Coupled) agents.
 
 ### Objective ($O_t$)
 
@@ -73,7 +73,7 @@ The developer's current objective — what the agent wants:
 
 $$O_t \in \{\text{implement feature } F,\; \text{fix bug } B,\; \text{refactor module } R,\; \text{investigate incident } I,\; \ldots\}$$
 
-$O_t$ induces a value functional $V_{O_t}$ ( #form-objective-functional) over codebase states. For Class 1 (modular) developer-agents — the canonical human-developer case — objective revision occurs via the orient cascade ( #der-orient-cascade) with sequential epistemic-then-purposeful processing: e.g., while implementing feature $F$, the developer discovers a blocking bug and revises $O_t$ from "implement $F$" to "fix blocker, then implement $F$." For Class 2 logogenic developer-agents (LLM-based), the cascade does not hold as a derived result — instead, the coupled update dynamics ( #def-coupled-update-dynamics) apply, with the cascade quantities ($M_t$ update, $\Sigma_t$ revision, $O_t$ feasibility check) recoverable post-hoc from the coupled response by analytical decomposition rather than enforced by the processing architecture.
+$O_t$ induces a value functional $V_{O_t}$ ( #form-objective-functional) over codebase states. For Class 1 (Separated) developer-agents — the canonical human-developer case — objective revision occurs via the orient cascade ( #der-orient-cascade) with sequential epistemic-then-purposeful processing: e.g., while implementing feature $F$, the developer discovers a blocking bug and revises $O_t$ from "implement $F$" to "fix blocker, then implement $F$." For Class 3 (Coupled) logogenic developer-agents (LLM-based), the cascade does not hold as a derived result — instead, the coupled update dynamics ( #def-coupled-update-dynamics) apply, with the cascade quantities ($M_t$ update, $\Sigma_t$ revision, $O_t$ feasibility check) recoverable post-hoc from the coupled response by analytical decomposition rather than enforced by the processing architecture.
 
 ### Strategy ($\Sigma_t$)
 
@@ -211,3 +211,5 @@ where each component sums the $\nu^{(k)} \cdot \eta^{(k)\ast}$ products across c
 - The distinction between "exploration" and "interventional probe" actions can be blurry. Reading code does not modify $\Omega_t$ and is purely exploratory. Running tests does modify $\Omega_t$ temporarily (process state) and is interventional. But making a speculative code change to see if it compiles is both environment-modifying and exploratory. The classification is useful but not a partition.
 
 *(Source: old-tst-via-tft-mapping.md, "The Agent-Environment Coupling," "The Mismatch Signal," "The Update Gain.")*
+
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. AI developer-agents (logogenic/LLM-based) were Class 2 (fully merged); they are now Class 3 (Coupled). Human developer-agents as Class 1 are unchanged in number (Class 1 = Separated). Removed at `candidate` stage per FORMAT.md Gate 4.
