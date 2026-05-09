@@ -10,7 +10,7 @@ stage: draft
 
 # Formulation: Structural Change as Parametric Limit
 
-In the probabilistic DAG, "structural" changes to $\Sigma_t$ are continuous operations on edge weights and node sets — not a separate mechanism. Pruning is a credence dropping below threshold; grafting is a new causal hypothesis initialized at a prior. This dissolves the sharp line between parametric update (adjusting weights) and structural change (adding/removing edges).
+In the probabilistic DAG, "structural" changes to $\Sigma_t$ are continuous operations on edge weights and node sets — not a separate mechanism. Pruning is a credence dropping below threshold; **strategic grafting** is a new causal hypothesis initialized at a prior. This dissolves the sharp line between parametric update (adjusting weights) and structural change (adding/removing edges). *(The unqualified term "grafting" — familiar from horticulture, graph rewriting, and decision-tree learning — is sanctioned in-segment shorthand for "strategic grafting" once the canonical compound has been introduced.)*
 
 ## Formal Expression
 
@@ -23,7 +23,7 @@ The six operations on $\Sigma_t$, ordered from most to least frequent:
 | Reweighting | Edge credence $p_{ij}$ | New observation about the link ( #hyp-edge-update-via-gain) |
 | $\gamma$ reclassification | Node combination type AND↔OR | Strong structural evidence that combination semantics changed |
 | Pruning | Remove failed branch ($p_{ij} \to \approx 0$) | Credence drops below viability threshold |
-| Grafting | Add new branch ($0 \to p_{ij}$) | Discovery of a new possible path (initialized at prior) |
+| Strategic grafting | Add new branch ($0 \to p_{ij}$) | Discovery of a new possible path (initialized at prior) |
 | Objective revision | Change terminal nodes | Feasibility failure or opportunity ( #def-satisfaction-gap) |
 | Full restructure | Replace entire $\Sigma_t$ | Catastrophic failure ( #result-structural-adaptation-necessity) |
 

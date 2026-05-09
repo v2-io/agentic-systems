@@ -26,6 +26,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAD-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAD-native quantities. |
+| **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 
 ## Continuity Stance
@@ -109,8 +110,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
 | **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAD-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAD-native quantities. |
 | **[Sector condition](terminology/entries/sector-condition.md)** |  | Nonlinear correction guarantee enabling Lyapunov stability analysis. |
+| **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
 | **[Structural adaptation](terminology/entries/structural-adaptation.md)** |  | Changing the model class, not just parameters — the cycle that operates on cycles. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 
 
-_Last rendered 2026-05-09 from 42 entries._
+_Last rendered 2026-05-09 from 43 entries._
