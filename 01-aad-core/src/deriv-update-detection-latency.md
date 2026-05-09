@@ -1,5 +1,5 @@
 ---
-slug: deriv-detection-latency
+slug: deriv-update-detection-latency
 type: derivation
 status: conditional
 depends:
@@ -10,7 +10,7 @@ depends:
 stage: draft
 ---
 
-# Derivation: Detection Latency Under Accumulated Experience
+# Derivation: Update Detection Latency Under Accumulated Experience
 
 For a Beta-Bernoulli strategy-edge agent without forgetting, the expected number of cycles required to detect a within-class regime change of observable footprint $\varepsilon$ scales as $\Omega((n_{\min}+1)/\varepsilon)$ with $n_{\min}$ the minimum accumulated pseudo-count on load-bearing edges. The $1/(n+1)$ rate is **structurally forced** — it is the log-odds update magnitude per cycle under #deriv-edge-update-natural-parameter's Aczél-Cauchy-FE uniqueness theorem, and no choice of coordinate escapes it. The result sharpens #schema-strategy-persistence's forgetting prerequisite from "required for asymptotic persistence" to "required for detection-latency bounded independently of operating point." The broader myopia observation — that successful, high-capability organizations systematically underinvest in detecting regime changes that would require structural adaptation — admits a complementary decision-theoretic account via #disc-exploit-explore-deliberate's oracle analysis; this segment's contribution is the signal-side lower bound, not the decision-side account.
 

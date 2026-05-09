@@ -77,7 +77,7 @@ Miller and the broader Santa Fe Institute complexity tradition supply constructi
 
 ### Baigozin 2025 (the GAA framework)
 
-A recent adjacent attempt at adaptive-systems formalization. Used in 2026-04 as a comparative-framework reading that prompted six new ASF segments to land via a brainstorm cycle (`#deriv-critical-mass-composition`, `#der-interaction-channel-classification`, `#form-consolidation-dynamics`, `#deriv-persistence-cost`, `#deriv-adaptive-gain-dynamics`, `#deriv-detection-latency`); see CHANGELOG.
+A recent adjacent attempt at adaptive-systems formalization. Used in 2026-04 as a comparative-framework reading that prompted six new ASF segments to land via a brainstorm cycle (`#deriv-critical-mass-composition`, `#der-interaction-channel-classification`, `#form-consolidation-dynamics`, `#deriv-persistence-cost`, `#deriv-adaptive-gain-dynamics`, `#deriv-update-detection-latency`); see CHANGELOG.
 
 ### OODA loop (Boyd) and military / decision-cycle traditions
 

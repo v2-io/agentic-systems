@@ -23,7 +23,7 @@
 
 **7. What would I change?** The "Open questions" block at the end (1: non-parametric models; 2: matrix vs scalar) is structurally unusual — most segments use Working Notes for open questions. Could move there. Mild style; not a finding.
 
-**8. What am I curious about?** "Gain collapse — epistrophe failure" is a beautifully-named pathology: aporia still arrives, but the corrective phase is hollow. This connects to **stability-induced-myopia** (per CLAUDE-2.md priming, the #deriv-detection-latency content): when $U_M$ artificially collapses (overconfidence), $\eta^* \to 0$, observations get ignored, regime-change detection latency blows up. So gain-collapse and detection-latency-blowup are two angles on the same agent pathology. Whether the segments actually surface this connection is something to track.
+**8. What am I curious about?** "Gain collapse — epistrophe failure" is a beautifully-named pathology: aporia still arrives, but the corrective phase is hollow. This connects to **stability-induced-myopia** (per CLAUDE-2.md priming, the #deriv-update-detection-latency content): when $U_M$ artificially collapses (overconfidence), $\eta^* \to 0$, observations get ignored, regime-change detection latency blows up. So gain-collapse and detection-latency-blowup are two angles on the same agent pathology. Whether the segments actually surface this connection is something to track.
 
 **9. What new knowledge enabled.** $\eta^*$ feeds into adaptive tempo $\mathcal T = \nu \cdot \eta^*$, the sector-condition bridge, the persistence condition. Empirical-tier framing keeps the claim honest about scope.
 

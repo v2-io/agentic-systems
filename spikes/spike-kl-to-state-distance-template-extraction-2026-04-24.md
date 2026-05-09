@@ -117,7 +117,7 @@ Eleven segments match against `Pinsker|KL.*TV|TV.*KL|log-Sobolev|Talagrand|Otto-
 | `#disc-compression-operations` | Cites the Pinsker → regret bound in Discussion | No — same reason |
 | `#disc-ciy-unified-objective` | Cites the Pinsker → regret bound in Discussion | No — same reason |
 | `#disc-exploit-explore-deliberate` | Cites the Pinsker → regret bound in Discussion | No — same reason |
-| `#deriv-detection-latency` | "Pinsker-type linearization" on linearized Bernoulli likelihood for mismatch-signal magnitude | No — different shape (residual-magnitude on sufficient-statistic accumulation, not KL→displacement) |
+| `#deriv-update-detection-latency` | "Pinsker-type linearization" on linearized Bernoulli likelihood for mismatch-signal magnitude | No — different shape (residual-magnitude on sufficient-statistic accumulation, not KL→displacement) |
 | `#deriv-fisher-whitened-update-rule` | (PI)+Čencov → Fisher metric; no KL→state-distance | No — uses (PI)/Čencov at the metric layer, not the transport layer |
 | `#der-gain-sector-bridge` | Fisher-metric cases under (PI)+Čencov | No — same as above |
 | `#result-contraction-template` | (CT2) Jacobian-level conditions, Fisher-metric lift under (PI)+Čencov | No — same as above |

@@ -14,9 +14,6 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` formal-tag review + cross-reference scan (the script reports stale-text warnings; H1 / opening-sentence / formal tags are touched by hand). The `msc/naming/` directory is excluded from the script's substitution patterns, so this file and `naming-rename-plan.md` are not corrupted by the sweep.
 
-- [ ] **`deriv-detection-latency` → `deriv-update-detection-latency`** *(F1 citability fix; qualifier-add)*
-  "Detection latency" is generic across fields; the segment derives latency for detecting regime-changes via log-odds-forced edge updates from `#deriv-edge-update-natural-parameter`. The `update` qualifier names the load-bearing structural source.
-
 - [ ] **`def-change-distance` → `def-discontinuity-distance`** *(F1 citability fix; qualifier-add)*
   "Change distance" is generic (every diff tool, code-metric paper). The segment uses "discontinuity" as its own load-bearing framing; the metric is structurally a discrete count of qualitative cost-jumps (boundary crossings).
 

@@ -97,7 +97,7 @@ If the framework lives up to its claims:
 - **The persistence condition $\alpha > \rho/R$** as a domain-crossing diagnostic — instantiated identically across control theory, RL, organizations, and software. This is the headline.
 - **Acyclicity from temporal ordering** is a genuinely clean derivation if it holds — I'll want to verify P3→Markov under "only causal sufficiency."
 - **The satisfaction gap / control regret split** as a 2×2 diagnostic — practically useful if the four corrective-action regimes really are mechanically distinguishable.
-- **Detection latency $\Omega((n_{\min}+1)/\varepsilon)$** as an unescapable forced consequence of additive-coordinate-forcing composing with Beta-Bernoulli update (`#deriv-detection-latency`). If the structural-forcing claim is real, this is the strongest single piece of new content in the recent cycles — it explains a phenomenon (stability-induced myopia in persistence-trained agents) without inventing new machinery.
+- **Detection latency $\Omega((n_{\min}+1)/\varepsilon)$** as an unescapable forced consequence of additive-coordinate-forcing composing with Beta-Bernoulli update (`#deriv-update-detection-latency`). If the structural-forcing claim is real, this is the strongest single piece of new content in the recent cycles — it explains a phenomenon (stability-induced myopia in persistence-trained agents) without inventing new machinery.
 - **The 1-anchor-plus-3-theorem characterization of additive-coordinate-forcing.** If genuinely honest about which layer is identity vs. theorem, this is the meta-segment doing the most work.
 
 ## What kinds of findings I expect to surface

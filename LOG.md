@@ -141,7 +141,7 @@ Seven commits: `0d7b987`, `591e8b6`, `13fe242`, `b48cdee`, `77a9bde`, `0bd859e`,
 
 5. **`#deriv-adaptive-gain-dynamics`** — A2' sub-scope partition refined from $\alpha$/$\beta$ to $\alpha_1$/$\alpha_2$/$\beta$ via augmented-state Lyapunov composition under meta-gain conditions (MG-1)–(MG-4). Adaptive Kalman, AMSGrad, IMM, MAML classified.
 
-6. **`#deriv-detection-latency`** — within-class regime-change detection latency $\Omega((n_{\min}+1)/\varepsilon)$ **structurally forced** by composition of `#deriv-edge-update-natural-parameter`'s Aczél-Cauchy-FE log-odds with Beta-Bernoulli $\eta_{\text{edge}} = 1/(n+1)$. Sharpens the forgetting prerequisite to "also required for bounded detection latency."
+6. **`#deriv-update-detection-latency`** — within-class regime-change detection latency $\Omega((n_{\min}+1)/\varepsilon)$ **structurally forced** by composition of `#deriv-edge-update-natural-parameter`'s Aczél-Cauchy-FE log-odds with Beta-Bernoulli $\eta_{\text{edge}} = 1/(n+1)$. Sharpens the forgetting prerequisite to "also required for bounded detection latency."
 
 7. **Spike H ($\rho$-factorization, in flight)** returned honest outcome (C) obstruction: multiplicative $\rho = \rho_{\text{external}} \cdot f(\mathcal M) \cdot g(\pi)$ is NOT derivable; native structure is variance-additive $\rho^2 = \rho_{\text{irr}}^2 + \Delta_{\mathcal M}^2 + \Delta_\pi^2 + \text{cross}$. Internal-external decomposition (Spike E) deferred pending variance-additive reframe.
 
