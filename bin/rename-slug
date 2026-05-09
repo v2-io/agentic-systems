@@ -47,14 +47,14 @@ COMPONENT_SRCS = %w[
   01-aad-core/src
   02-tst-core/src
   03-logogenic-agents/src
-  04-logozoetic-agents/src
+  04-eli/src
 ].map { |p| REPO_ROOT / p }.freeze
 
 COMPONENT_OUTLINES = %w[
   01-aad-core/OUTLINE.md
   02-tst-core/OUTLINE.md
   03-logogenic-agents/OUTLINE.md
-  04-logozoetic-agents/OUTLINE.md
+  04-eli/OUTLINE.md
 ].map { |p| REPO_ROOT / p }.freeze
 
 EXCLUDED_DIR_PREFIXES = %w[
@@ -146,9 +146,17 @@ def depends_re(slug)
   Regexp.new("^(\\s*-\\s*)#{Regexp.escape(slug)}\\s*$")
 end
 
-# Path reference: `src/slug.md` (covers OUTLINE links and naked mentions).
+# Path reference: `src/slug.md` OR `(slug.md)`. The first form covers
+# component-OUTLINE-relative-from-root links and prose `src/foo.md` mentions;
+# the second form covers bare-filename markdown links inside parens (relative
+# to the segment's own directory). The bare-paren case was missed by the
+# original `src/slug.md`-only regex and surfaced during the obs-gates-advantage
+# rename pilot (2026-05-08): obs-simulation-results.md had
+# `[#obs-gated-tempo-advantage](obs-gates-advantage.md)` and the link URL
+# inside the parens was not rewritten. The capture group `(\1)` carries the
+# boundary character (`src/` or `(`) through to the substitution.
 def path_re(slug)
-  Regexp.new("src/#{Regexp.escape(slug)}\\.md")
+  Regexp.new("(src/|\\()#{Regexp.escape(slug)}\\.md")
 end
 
 # Frontmatter slug field: `slug: <slug>` on its own line.
@@ -283,7 +291,7 @@ def apply_pair(plan)
     if e.depends.positive?
       text = text.gsub(old_depends) { "#{Regexp.last_match(1)}#{p.new}" }
     end
-    text = text.gsub(old_path_ref, "src/#{p.new}.md") if e.path_ref.positive?
+    text = text.gsub(old_path_ref) { "#{Regexp.last_match(1)}#{p.new}.md" } if e.path_ref.positive?
     if e.slug_field.positive?
       text = text.gsub(old_slug_field) { "#{Regexp.last_match(1)}#{p.new}" }
     end
@@ -302,7 +310,7 @@ def simulate_rewrites(text, pairs)
   pairs.each do |pair|
     result = result.gsub(body_xref_re(pair.old), "##{pair.new}")
     result = result.gsub(depends_re(pair.old)) { "#{Regexp.last_match(1)}#{pair.new}" }
-    result = result.gsub(path_re(pair.old), "src/#{pair.new}.md")
+    result = result.gsub(path_re(pair.old)) { "#{Regexp.last_match(1)}#{pair.new}.md" }
     result = result.gsub(slug_field_re(pair.old)) { "#{Regexp.last_match(1)}#{pair.new}" }
   end
   result
