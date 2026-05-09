@@ -100,7 +100,7 @@ Three of the five bundle members are ready now; two need upstream scoping. Ready
 
 ### B.3 C-BP1 + C-BP4 bundle — epistemic separation framework + claim-level statuses
 
-Two proposals that must land together ("C-BP1 alone is philosophy without enforcement; C-BP4 alone is bureaucracy without purpose"). Composes with O-BP14 (landed) as the claim-level counterpart to segment-level derivation-audit tables. Pilot candidates: `#deriv-bias-bound` (2026-04-24, already thinks in sub-scope layers) and `#result-section-ii-survival` (F12 canonical layer-collapse example).
+Two proposals that must land together ("C-BP1 alone is philosophy without enforcement; C-BP4 alone is bureaucracy without purpose"). Composes with O-BP14 (landed) as the claim-level counterpart to segment-level derivation-audit tables. Pilot candidates: `#deriv-observation-ambiguity-bias-bound` (2026-04-24, already thinks in sub-scope layers) and `#result-section-ii-survival` (F12 canonical layer-collapse example).
 
 **Scoping spike:** ~90 min to decide layer-naming between "defined / causally valid / operationally extractable" (C-BP1 original) and "object exists / exact theorem transfers / operationally extractable" (Codex evening alternative). **Execution:** 4–5 sessions application pass (~15 min per segment across ~15 segments with visible layer-collapse).
 
@@ -181,7 +181,7 @@ External literature rich: Moran model, replicator-Fokker-Planck (Traulsen-Clauss
 
 ### D.3 G-BP3 — Fisher-information unification of tempo and gain
 
-**Substantively hollowed out.** Original characterization was "essentially all of Section I rewritten around Fisher geometry"; subsequent piecemeal landings absorbed much of the theoretical content — (PI) axiom in `#scope-agent-identity`; Čencov 4th instance in `#additive-coordinate-forcing`; `#deriv-fisher-whitened-update-rule`; `#result-contraction-template`; `#deriv-bias-bound` Track 2. What remains is organization-not-derivation: "organize existing Fisher-related landings into a unified Section I framing" rather than "introduce Fisher geometry into Section I."
+**Substantively hollowed out.** Original characterization was "essentially all of Section I rewritten around Fisher geometry"; subsequent piecemeal landings absorbed much of the theoretical content — (PI) axiom in `#scope-agent-identity`; Čencov 4th instance in `#additive-coordinate-forcing`; `#deriv-fisher-whitened-update-rule`; `#result-contraction-template`; `#deriv-observation-ambiguity-bias-bound` Track 2. What remains is organization-not-derivation: "organize existing Fisher-related landings into a unified Section I framing" rather than "introduce Fisher geometry into Section I."
 
 **Scoping spike essential** before any rewrite: does `#def-adaptive-tempo`'s current scalar form cleanly fit the natural-gradient picture, or does it generalize beyond Fisher? The proposal's strong-unification thesis may not survive contact with current settled machinery (specifically `#deriv-adaptive-gain-dynamics`'s (MG-1)–(MG-4) meta-gain generalizes beyond Fisher-metric special case).
 
@@ -249,7 +249,7 @@ Paper-writing-time decision per `spikes/spike-active-inference-vs-aad.md` §I ac
 
 ### E.2 SP-10 — `#posterior-displacement-template` extraction
 
-Client-gated. The Otto-Villani + Lipschitz-posterior cascade shared by `#deriv-variational-sector-condition` and `#deriv-bias-bound` is too thin to justify extraction on two clients. Wait until ≥1 forward-looking client materializes (causal-IB, misspecification-cost, or composition-scope-robustness). If none materializes in the next 2–3 cycles, move to §F. **Value: +2 now / +5 if triggered.**
+Client-gated. The Otto-Villani + Lipschitz-posterior cascade shared by `#deriv-variational-sector-condition` and `#deriv-observation-ambiguity-bias-bound` is too thin to justify extraction on two clients. Wait until ≥1 forward-looking client materializes (causal-IB, misspecification-cost, or composition-scope-robustness). If none materializes in the next 2–3 cycles, move to §F. **Value: +2 now / +5 if triggered.**
 
 **Independence: high (when executed).** New appendix segment plus light cross-refs into two existing segments. No rewrites. Safe to parallelize with almost anything.
 

@@ -248,7 +248,7 @@ Joseph's hint — "the early parts of the theory are much more well trod" — su
 
 1. **The meta-segments** (`#disc-separability-pattern`, `#disc-identifiability-floor`, `#disc-additive-coordinate-forcing`) — where the framework's distinctive structural claims live.
 2. **Section III adversarial dynamics and composition** — where I expect richest material per segment.
-3. **The bias-bound derivation** (`#deriv-bias-bound`) — Class 2 territory, conditional theorem under named sub-scopes.
+3. **The bias-bound derivation** (`#deriv-observation-ambiguity-bias-bound`) — Class 2 territory, conditional theorem under named sub-scopes.
 4. **The persistence-cost derivation** (`#deriv-persistence-cost`) — Landauer-analog claim, channel-capacity floor.
 5. **The 04-logozoetic content** — where the consciousness-infrastructure agenda meets the formal machinery (or fails to).
 

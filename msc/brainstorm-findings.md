@@ -338,12 +338,12 @@ The framing has Feynman-criterion potential — it's the kind of sentence Alan's
 
 *Research-trail content preserved from CLAUDE-2.md to prevent future agents from repeating these dead ends. Not findings; "do not repeat" notes.*
 
-The `#deriv-bias-bound` derivation explored four candidate routes; two failed for principled reasons documented here:
+The `#deriv-observation-ambiguity-bias-bound` derivation explored four candidate routes; two failed for principled reasons documented here:
 
 - **Cramér-Rao inversion** — wrong direction. Cramér-Rao bounds estimator variance from below given Fisher information; the bias bound needs to bound parameter-space displacement from above given mutual information. The two are dual but the inversion is not free; trying to use CR directly for the bias bound flips the inequality the wrong way.
 - **Rate-distortion inversion** — wrong problem structure. Rate-distortion theory bounds achievable distortion given rate. The bias bound is structurally about a *fixed* information regime (the conditional mutual information $I(G;\Omega \mid e, M)$) yielding parameter-space displacement, not about achievable distortion under a rate budget. The mismatch is in what's held fixed vs varied.
 
-The two successful routes — Track 1 (Otto-Villani transport inequality + Bakry-Émery LSI + Lipschitz-posterior; linear in $I$) and Track 2 (Fisher-Rao + (PI)+Čencov; $\sqrt I$ scaling, universal $C_{FR} = \sqrt 2$) — are documented in `#deriv-bias-bound` and surfaced as catalog entries (#8 Logogenic Bias Bound; M1 Instance F4 in identifiability-floor meta-segment).
+The two successful routes — Track 1 (Otto-Villani transport inequality + Bakry-Émery LSI + Lipschitz-posterior; linear in $I$) and Track 2 (Fisher-Rao + (PI)+Čencov; $\sqrt I$ scaling, universal $C_{FR} = \sqrt 2$) — are documented in `#deriv-observation-ambiguity-bias-bound` and surfaced as catalog entries (#8 Logogenic Bias Bound; M1 Instance F4 in identifiability-floor meta-segment).
 
 ---
 

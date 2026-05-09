@@ -1,8 +1,8 @@
 # Reflection: Appendix A — bias-bound and persistence-cost derivations
 
-Covers `#deriv-bias-bound` and `#deriv-persistence-cost`. Both are substantively important Appendix A derivations that produce *novel* results by composing AAD apparatus with imported external theorems.
+Covers `#deriv-observation-ambiguity-bias-bound` and `#deriv-persistence-cost`. Both are substantively important Appendix A derivations that produce *novel* results by composing AAD apparatus with imported external theorems.
 
-## `#deriv-bias-bound` — universal constant under (PI)
+## `#deriv-observation-ambiguity-bias-bound` — universal constant under (PI)
 
 **Two tracks deriving the bias-bound constant $C$:**
 - Track 1 (transport-inequality, H1-H3): $C_{W_2}^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$, linear in $I$. Composition of Cover-Thomas chain rule + Otto-Villani 2000 + Stuart 2010 Lipschitz-posterior. Standard machinery, applied carefully.
@@ -59,7 +59,7 @@ The thermodynamic reading via Landauer (each nat costs $k_BT$): persistence at $
 
 **Very high on both segments.** These are among the most substantively distinctive derivations I've encountered in the framework. The bias-bound's universal $C_{FR} = \sqrt{2}$ under (PI) demonstrates the additive-coordinate-forcing meta-pattern's operational payoff. The persistence-cost's $\dot R_{\min} = n\alpha/2$ converts an opaque "filter consumes information" intuition into a precise lower bound that Kalman-Bucy saturates exactly.
 
-The "honest failure record" in `#deriv-bias-bound`'s §5 (F1 + F2) is the kind of disciplinary writing I most admire — it documents *why specific routes cannot work* at the structural level, preventing future re-attempts. Similarly, `#deriv-persistence-cost`'s "Rejected Candidate Cost Metrics" section.
+The "honest failure record" in `#deriv-observation-ambiguity-bias-bound`'s §5 (F1 + F2) is the kind of disciplinary writing I most admire — it documents *why specific routes cannot work* at the structural level, preventing future re-attempts. Similarly, `#deriv-persistence-cost`'s "Rejected Candidate Cost Metrics" section.
 
 The "positive-dual of identifiability-floor" structural observation is the kind of meta-pattern recognition the framework's distinctive epistemic architecture is supposed to produce.
 

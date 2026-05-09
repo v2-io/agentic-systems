@@ -46,4 +46,4 @@ This is one of the segments I'd want to highlight in §F as a high-water mark of
 
 ## Continuing
 
-Sampling Appendix A's substantively distinctive derivations next: `#deriv-bias-bound` (Class 2 bias-bound under Track 1 transport-inequality and Track 2 Fisher-Rao), `#deriv-persistence-cost` (Landauer-analog channel-capacity floor). Then `#result-section-ii-survival` (16/24 results survive without directed separation) before moving to 02/03/04.
+Sampling Appendix A's substantively distinctive derivations next: `#deriv-observation-ambiguity-bias-bound` (Class 2 bias-bound under Track 1 transport-inequality and Track 2 Fisher-Rao), `#deriv-persistence-cost` (Landauer-analog channel-capacity floor). Then `#result-section-ii-survival` (16/24 results survive without directed separation) before moving to 02/03/04.

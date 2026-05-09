@@ -151,7 +151,7 @@ Historical note:
 
 Classification: true broken relative links in current segment files.
 
-`01-aad-core/src/deriv-bias-bound.md` contains many links that omit the current
+`01-aad-core/src/deriv-observation-ambiguity-bias-bound.md` contains many links that omit the current
 role prefixes. Examples:
 
 | Line(s) | Old target | Likely current target |
@@ -355,7 +355,7 @@ These references should generally not be mass-edited:
 2. Rebuild README outputs with `bin/build-readme` and confirm with
    `bin/build-readme --check`.
 3. Fix current segment-local links in
-   `01-aad-core/src/deriv-bias-bound.md` and
+   `01-aad-core/src/deriv-observation-ambiguity-bias-bound.md` and
    `01-aad-core/src/obs-section-i-validation-simulations.md`.
 4. Resolve the two `bin/lint-outline` findings: the dependency ordering issue
    and the orphan segment.

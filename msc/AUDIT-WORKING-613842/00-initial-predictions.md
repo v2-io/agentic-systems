@@ -114,7 +114,7 @@ Most likely targets:
 `#deriv-strategy-cost-regret-bound`,
 `#deriv-edge-update-natural-parameter`,
 `#result-contraction-template`,
-and `#deriv-bias-bound`.
+and `#deriv-observation-ambiguity-bias-bound`.
 
 I predict the three meta-segments
 `#disc-identifiability-floor`,

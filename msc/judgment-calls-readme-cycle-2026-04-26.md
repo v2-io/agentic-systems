@@ -10,7 +10,7 @@ This log captures decisions made under autonomy after Joseph dropped off, so he 
 
 ### J-1. The six segments chosen for the Findings pilot
 
-Picked: `#result-persistence-condition`, `#disc-additive-coordinate-forcing`, `#deriv-edge-update-natural-parameter`, `#deriv-bias-bound`, `#deriv-causal-ib-lmi`, `#result-contraction-template`.
+Picked: `#result-persistence-condition`, `#disc-additive-coordinate-forcing`, `#deriv-edge-update-natural-parameter`, `#deriv-observation-ambiguity-bias-bound`, `#deriv-causal-ib-lmi`, `#result-contraction-template`.
 
 Reasoning: aimed to span the catalog's distinctive surfaces (one Section I central inequality; one meta-segment; one update-layer Cauchy-FE instance; one recent conditional-theorem appendix; one recent matrix-form derivation; one Section III generalization). All six carry results that are either headline-novel (persistence condition) or have landed substantive content in recent cycles (the others).
 
@@ -27,14 +27,14 @@ Alternatives considered:
 - Novelty / For non-specialists (two fields) — too thin
 - Single-paragraph format — loses the structural separation between "what is the claim" and "why it matters"
 
-**Worth reconsidering?** The "Impact" paragraph in some entries (especially `#deriv-bias-bound`, `#result-contraction-template`) ran long. A future pass might tighten the schema to enforce a length cap, or split Impact into two beats (what it closes / what it unlocks).
+**Worth reconsidering?** The "Impact" paragraph in some entries (especially `#deriv-observation-ambiguity-bias-bound`, `#result-contraction-template`) ran long. A future pass might tighten the schema to enforce a length cap, or split Impact into two beats (what it closes / what it unlocks).
 
 ### J-3. Tier choices
 
 - `#result-persistence-condition` — *Exact* (segment status: exact; structural persistence is exact under stated assumptions per Prop A.1/A.1S).
 - `#disc-additive-coordinate-forcing` — *Robust qualitative* (the segment is discussion-grade at meta-pattern level; individual instances have their own statuses).
 - `#deriv-edge-update-natural-parameter` — *Conditional* (uniqueness theorem conditional on evidential-additivity axiom).
-- `#deriv-bias-bound` — *Conditional* (theorem under named sub-scopes H1-H3 / H1+H4).
+- `#deriv-observation-ambiguity-bias-bound` — *Conditional* (theorem under named sub-scopes H1-H3 / H1+H4).
 - `#deriv-causal-ib-lmi` — *Conditional* (derived under DARE-stabilizability + linear-Gaussian + steady-state info-form Kalman).
 - `#result-contraction-template` — *Conditional* (template generalization conditional on (CT1)–(CT3) being verified per instance).
 

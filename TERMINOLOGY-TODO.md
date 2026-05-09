@@ -14,9 +14,6 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` formal-tag review + cross-reference scan (the script reports stale-text warnings; H1 / opening-sentence / formal tags are touched by hand). The `msc/naming/` directory is excluded from the script's substitution patterns, so this file and `naming-rename-plan.md` are not corrupted by the sweep.
 
-- [ ] **`deriv-bias-bound` → `deriv-observation-ambiguity-bias-bound`** *(F1 citability fix; phenomenon-name)*
-  Names the phenomenon the bound bounds (bias from observation-ambiguity modulation, the $\kappa \cdot \mathcal{A}$ product) without referencing the Class numbering. Segment H1 currently "Bias-Bound Constant $C$ for Class-2 Agent Observation-Ambiguity Modulation"; new H1 around "Observation-Ambiguity Bias-Bound Constant $C$". Coordinates with the Class 2 ↔ 3 numbering swap below — the dropped Class-N reference is the right move regardless of which numbering wins.
-
 - [ ] **`deriv-strategic-dynamics` → `deriv-edge-credence-dynamics`** *(F1 citability fix; qualifier-add)*
   "Strategic dynamics" collides with game-theory generic term. The segment derives the dynamics of *edge credences* $p_{ij}$ within the strategy DAG. Pairs with `#def-strategy-dag` and `#hyp-edge-update-via-gain`.
 
@@ -33,7 +30,7 @@ These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, no
   - Numbering swap: Class 1 = Separated *(unchanged)*; **Class 2 (was 3) = Partial**; **Class 3 (was 2) = Coupled**. Brings Architecture into ordering-alignment with the other six ladders in `#disc-separability-pattern`.
   - Prose-cleanup pass — segments touched once for *both* the rename AND the swap:
     - `01-aad-core/src/der-directed-separation.md` (canonical home; reorder + rename)
-    - `01-aad-core/src/deriv-bias-bound.md` (currently "Class-2 ambiguity bias bound" → "Class-3 ambiguity bias bound") — *coordinate with slug rename in §A*
+    - `01-aad-core/src/deriv-observation-ambiguity-bias-bound.md` (currently "Class-2 ambiguity bias bound" → "Class-3 ambiguity bias bound") — *coordinate with slug rename in §A*
     - `01-aad-core/src/scope-observation-ambiguity-modulation.md`
     - `01-aad-core/src/result-section-ii-survival.md` (Class 1/2/3 survival classification table — reorder)
     - `03-logogenic-agents/` segments (logogenic = Class 2 fully-coupled → Class 3 — multiple segments)

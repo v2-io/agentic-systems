@@ -26,7 +26,7 @@ relates_to:
 
 **Is the shared machinery real, and should it be factored out as a template?**
 
-**The shared machinery is real but narrower than M4's briefing suggests. Recommendation: Option B (narrow template on the Otto-Villani / Lipschitz-posterior track only), with `#deriv-variational-sector-condition` positioned as an adjacent family member sharing Pinsker's inequality but not the template's full shape.** The unified-template move (Option A) collapses two structurally different outputs (scalar sector-constant degradation vs. vector state-displacement) under one abstraction that trades compression for honest differentiation — it saves one citation chain but hides the structural distinction the reader needs. The no-extraction move (Option C) leaves a load-bearing shared-theorem apparatus un-named while AAD acquires a second primary instance in the Bias-Bound-Derivation spike. Option B captures the genuine shared machinery (Pinsker→Otto-Villani→Lipschitz-posterior cascade in W₂ on state space) with explicit T1/T2/T3 precondition tiering and accommodates `#deriv-bias-bound` as the first primary client and future KL→posterior-displacement clients as future primary clients, while leaving Pinsker+Cauchy-Schwarz→scalar-sector-degradation (`#deriv-variational-sector-condition`) to its own segment.
+**The shared machinery is real but narrower than M4's briefing suggests. Recommendation: Option B (narrow template on the Otto-Villani / Lipschitz-posterior track only), with `#deriv-variational-sector-condition` positioned as an adjacent family member sharing Pinsker's inequality but not the template's full shape.** The unified-template move (Option A) collapses two structurally different outputs (scalar sector-constant degradation vs. vector state-displacement) under one abstraction that trades compression for honest differentiation — it saves one citation chain but hides the structural distinction the reader needs. The no-extraction move (Option C) leaves a load-bearing shared-theorem apparatus un-named while AAD acquires a second primary instance in the Bias-Bound-Derivation spike. Option B captures the genuine shared machinery (Pinsker→Otto-Villani→Lipschitz-posterior cascade in W₂ on state space) with explicit T1/T2/T3 precondition tiering and accommodates `#deriv-observation-ambiguity-bias-bound` as the first primary client and future KL→posterior-displacement clients as future primary clients, while leaving Pinsker+Cauchy-Schwarz→scalar-sector-degradation (`#deriv-variational-sector-condition`) to its own segment.
 
 **Summary of the comparison.** Both client segments perform KL-to-something conversion using Pinsker as the base inequality, and both have an $O(\sqrt\varepsilon)$ baseline with $O(\varepsilon)$ refinement under LSI/T2. But the template-worthy apparatus is the *cascade* that converts a KL bound on one distribution into a W₂ bound on a pushforward distribution via an explicit Lipschitz-posterior step, giving a state-space displacement bound. `#deriv-variational-sector-condition` does not have the pushforward step — it propagates a TV bound through a correction function via Cauchy-Schwarz to degrade a scalar constant, not to bound a state displacement. The Pinsker inequality itself is shared; the cascade after Pinsker is not.
 
@@ -44,7 +44,7 @@ $$c_\varepsilon(\lVert\delta\rVert) = c_{\min} - C_H\sqrt{2\varepsilon}/\lVert\d
 
 Output: a state-dependent sector constant that is weakened uniformly on a radius-$2\delta_0$ ball around target ($\delta_0 = O(\sqrt\varepsilon)$), with Regime-A/B decomposition for the sector-persistence template. The "state distance" here is the radius $\delta_0$ at which the sector bound fails to hold, not a bound on distance between two distributions.
 
-**Client B — Proposed `#deriv-bias-bound`.** Input: a conditional mutual information bound $I(G; \Omega_\tau \vert e_\tau, M_{\tau^-})$ interpretable as an expected KL divergence from goal-conditional posterior to goal-marginalized posterior. Machinery: (i) chain-rule identity $\mathbb E_G[\mathrm{KL}(P_{\Omega\vert e,M,G}\Vert P_{\Omega\vert e,M})] = I$, (ii) Pinsker → TV bound on the observation distribution, (iii) Otto-Villani under LSI → W₂ bound on the observation distribution, (iv) Lipschitz-posterior stability (Stuart 2010) → W₂ bound on the posterior distribution over $M$:
+**Client B — Proposed `#deriv-observation-ambiguity-bias-bound`.** Input: a conditional mutual information bound $I(G; \Omega_\tau \vert e_\tau, M_{\tau^-})$ interpretable as an expected KL divergence from goal-conditional posterior to goal-marginalized posterior. Machinery: (i) chain-rule identity $\mathbb E_G[\mathrm{KL}(P_{\Omega\vert e,M,G}\Vert P_{\Omega\vert e,M})] = I$, (ii) Pinsker → TV bound on the observation distribution, (iii) Otto-Villani under LSI → W₂ bound on the observation distribution, (iv) Lipschitz-posterior stability (Stuart 2010) → W₂ bound on the posterior distribution over $M$:
 
 $$\mathbb E[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}})] \leq \frac{2 L_{\text{post}}^2}{\rho_{\text{LSI}}} \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \vert e_\tau, M_{\tau^-})$$
 
@@ -122,7 +122,7 @@ Eleven segments match against `Pinsker|KL.*TV|TV.*KL|log-Sobolev|Talagrand|Otto-
 | `#der-gain-sector-bridge` | Fisher-metric cases under (PI)+Čencov | No — same as above |
 | `#result-contraction-template` | (CT2) Jacobian-level conditions, Fisher-metric lift under (PI)+Čencov | No — same as above |
 | `#additive-coordinate-forcing` | Meta-segment naming the (PI)+Čencov family | No — meta-pattern on the metric/coordinate layer |
-| *Proposed* `#deriv-bias-bound` | Pinsker → Otto-Villani under LSI → Lipschitz-posterior → W₂ on state pushforward | **Primary instance** (§2.2) |
+| *Proposed* `#deriv-observation-ambiguity-bias-bound` | Pinsker → Otto-Villani under LSI → Lipschitz-posterior → W₂ on state pushforward | **Primary instance** (§2.2) |
 
 ### §3.2 The regret-bound cluster is a separate template-worthy group
 
@@ -163,7 +163,7 @@ Three places where KL→state-distance machinery *could plausibly* appear in fut
 | Client | Output norm | Tier | Rate | Post-Pinsker machinery |
 |---|---|---|---|---|
 | `#deriv-variational-sector-condition` (Client A) | Scalar sector-degradation | T1 | $O(\sqrt\varepsilon)$ | Cauchy-Schwarz |
-| *proposed* `#deriv-bias-bound` (Client B) | $W_2$ on state pushforward | T3 | $O(\varepsilon)$ | Otto-Villani + Lipschitz-posterior |
+| *proposed* `#deriv-observation-ambiguity-bias-bound` (Client B) | $W_2$ on state pushforward | T3 | $O(\varepsilon)$ | Otto-Villani + Lipschitz-posterior |
 
 **Honest problems with Option A.**
 
@@ -179,7 +179,7 @@ Three places where KL→state-distance machinery *could plausibly* appear in fut
 
 ### §4.2 Option B — Narrow template on Client B's cascade (recommended)
 
-**Thesis.** Write a template segment that abstracts *only* the Pinsker → Otto-Villani → Lipschitz-posterior → W₂ cascade, with Client B (proposed `#deriv-bias-bound`) as its first primary instance and the three forward-looking clients (§3.4) as candidate future instances. Position `#deriv-variational-sector-condition` as an adjacent family member in the same spirit as Lyapunov and IB Lagrangian are adjacent to the three Cauchy-FE instances in `#additive-coordinate-forcing`.
+**Thesis.** Write a template segment that abstracts *only* the Pinsker → Otto-Villani → Lipschitz-posterior → W₂ cascade, with Client B (proposed `#deriv-observation-ambiguity-bias-bound`) as its first primary instance and the three forward-looking clients (§3.4) as candidate future instances. Position `#deriv-variational-sector-condition` as an adjacent family member in the same spirit as Lyapunov and IB Lagrangian are adjacent to the three Cauchy-FE instances in `#additive-coordinate-forcing`.
 
 **Abstraction.**
 
@@ -193,7 +193,7 @@ Three places where KL→state-distance machinery *could plausibly* appear in fut
 
 | Client | Status | $P$ | $Q$ | $f$ | Tier | Output |
 |---|---|---|---|---|---|---|
-| *proposed* `#deriv-bias-bound` | Primary instance | $P_{\Omega\vert e,M,G}$ | $P_{\Omega\vert e,M}$ | Bayesian posterior on $M$ | T3 | $W_2$ on $M$-posterior |
+| *proposed* `#deriv-observation-ambiguity-bias-bound` | Primary instance | $P_{\Omega\vert e,M,G}$ | $P_{\Omega\vert e,M}$ | Bayesian posterior on $M$ | T3 | $W_2$ on $M$-posterior |
 | *forward* causal-IB | Candidate future | Interventional distr. | Observational distr. | Post-intervention pushforward | T3 | W₂ on post-intervention state |
 | *forward* misspecification-cost | Candidate future | True model likelihood | Assumed model likelihood | Bayesian posterior on $M$ | T3 | W₂ on $M$-posterior |
 | *forward* composition-scope-robustness | Candidate future | Sub-agent model $M_i$ | Nominal sub-agent model | Composite-state pushforward | T3 | W₂ on composite state |
@@ -204,11 +204,11 @@ Three places where KL→state-distance machinery *could plausibly* appear in fut
 
 **Honest problems with Option B.**
 
-1. *Only one primary instance currently exists.* The template would land with one primary client (the proposed `#deriv-bias-bound`) and three candidate future instances. `#result-sector-persistence-template`'s promotion was justified by six existing instances; a one-instance template is harder to justify. *Response:* `#result-contraction-template` was similarly promoted with five verified + three theorem-imported instances at landing, not all fully-worked AAD segments. The density test should be "does the template predict structure in future work?" — three forward-looking candidates (§3.4) plus Client B gives four, comparable to existing meta-templates. But honest: Option B depends on the forward-looking instances actually materializing; if causal-IB, misspecification-cost, and composition-scope-robustness all fall away, the template serves one client.
+1. *Only one primary instance currently exists.* The template would land with one primary client (the proposed `#deriv-observation-ambiguity-bias-bound`) and three candidate future instances. `#result-sector-persistence-template`'s promotion was justified by six existing instances; a one-instance template is harder to justify. *Response:* `#result-contraction-template` was similarly promoted with five verified + three theorem-imported instances at landing, not all fully-worked AAD segments. The density test should be "does the template predict structure in future work?" — three forward-looking candidates (§3.4) plus Client B gives four, comparable to existing meta-templates. But honest: Option B depends on the forward-looking instances actually materializing; if causal-IB, misspecification-cost, and composition-scope-robustness all fall away, the template serves one client.
 
 2. *Three of five `#result-sector-persistence-template` instances are Lyapunov-quadratic; Client B's Otto-Villani cascade is genuinely distinct machinery.* This is a structural strength: if the template predicts a *new* machinery pattern that future clients will instantiate, that's what templates are for.
 
-3. *Option B requires `#deriv-bias-bound` to land first.* Until that segment is in the codebase, the template has zero committed primary instances. *Response:* this is a promotion-ordering concern, not a template-validity concern. Land `#deriv-bias-bound` first, then the template as a second move that factors out its cascade for reuse.
+3. *Option B requires `#deriv-observation-ambiguity-bias-bound` to land first.* Until that segment is in the codebase, the template has zero committed primary instances. *Response:* this is a promotion-ordering concern, not a template-validity concern. Land `#deriv-observation-ambiguity-bias-bound` first, then the template as a second move that factors out its cascade for reuse.
 
 **Verdict on Option B.** Substantive, honest, and aligns with AAD's existing template-extraction pattern (one shared derivation body across multiple instances, explicit T1/T2/T3 preconditions, client-specific instantiation table, adjacent family members documented).
 
@@ -220,7 +220,7 @@ Three places where KL→state-distance machinery *could plausibly* appear in fut
 
 1. *Misses the genuine three-step cascade in Client B.* The cascade *Pinsker → Otto-Villani → Lipschitz-posterior → W₂ on pushforward* is not a textbook fact — it is a composition of three separate textbook results that together produce an AAD-relevant state-space bound. If it appears in four places (Client B plus three forward-looking clients) with the same structure, that's a template, and the alternative is three-way citation-chain repetition.
 
-2. *Hides the constant-C discovery from the bias-bound spike.* The bias-bound spike's key result — under (H1)–(H3), $C^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$ with explicit geometric interpretation ($L_{\text{post}}$ = prior-likelihood tension, $\rho_{\text{LSI}}$ = observation concentration) — is useful *general-purpose* content that future derivations will want to cite. Factoring it into a template makes it citable; leaving it inline in `#deriv-bias-bound` makes each future client re-derive the cascade.
+2. *Hides the constant-C discovery from the bias-bound spike.* The bias-bound spike's key result — under (H1)–(H3), $C^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$ with explicit geometric interpretation ($L_{\text{post}}$ = prior-likelihood tension, $\rho_{\text{LSI}}$ = observation concentration) — is useful *general-purpose* content that future derivations will want to cite. Factoring it into a template makes it citable; leaving it inline in `#deriv-observation-ambiguity-bias-bound` makes each future client re-derive the cascade.
 
 3. *Prevents naming a structural pattern that is visibly repeating.* If three forward-looking clients materialize, the segment-author for each will independently re-derive the three-step cascade; a template makes the pattern visible and the re-derivations unnecessary.
 
@@ -253,14 +253,14 @@ Three places where KL→state-distance machinery *could plausibly* appear in fut
 
 **Conditions under which Option B is the right move:**
 
-1. `#deriv-bias-bound` lands as a segment (currently proposed in `spikes/spike-bias-bound-constant-C-strengthening-2026-04-24.md` M1). The template cannot land before its primary instance.
+1. `#deriv-observation-ambiguity-bias-bound` lands as a segment (currently proposed in `spikes/spike-bias-bound-constant-C-strengthening-2026-04-24.md` M1). The template cannot land before its primary instance.
 2. At least one of the three forward-looking clients (§3.4) appears credible as work AAD will actually pursue. If all three are permanently shelved, Option C is honest.
 3. `#deriv-variational-sector-condition` is explicitly re-positioned in its Discussion as *adjacent family member* to the new template, with Pinsker as the shared first step and Cauchy-Schwarz / scalar-sector-degradation / Regime-A/B as the adjacent-specific content. This positioning is mathematically accurate (both use Pinsker; Client A does not use the cascade) and parallels the adjacent-family-member treatment in `#additive-coordinate-forcing` for Lyapunov and IB Lagrangian.
 
 **Conditions under which Option B is *not* the right move:**
 
 - If the three forward-looking clients are unlikely to materialize. Then Client B alone does not justify a template; Option C is honest.
-- If Client B's proposed segment `#deriv-bias-bound` is not going to land (e.g., if the Constant-C spike's Track 2 Fisher-Rao route is preferred over Track 1 transport-inequality route). Option B is specifically about Track 1 / the W₂-on-pushforward cascade; if AAD commits to Track 2 only, Option B has no client.
+- If Client B's proposed segment `#deriv-observation-ambiguity-bias-bound` is not going to land (e.g., if the Constant-C spike's Track 2 Fisher-Rao route is preferred over Track 1 transport-inequality route). Option B is specifically about Track 1 / the W₂-on-pushforward cascade; if AAD commits to Track 2 only, Option B has no client.
 
 **Tradeoffs explicit.**
 
@@ -294,7 +294,7 @@ The communal-imagination test (per `msc/naming/naming-brainstorm-2026-04-24.md` 
 
 ## §8. Sketch of the template segment (if Option B is recommended and executed)
 
-**Deliverable form (contingent on `#deriv-bias-bound` landing first).**
+**Deliverable form (contingent on `#deriv-observation-ambiguity-bias-bound` landing first).**
 
 ```yaml
 ---
@@ -304,7 +304,7 @@ status: exact
 depends:
   - scope-agent-identity
   - additive-coordinate-forcing
-  - deriv-bias-bound
+  - deriv-observation-ambiguity-bias-bound
 stage: draft
 ---
 ```
@@ -341,7 +341,7 @@ Under (T1)+(T2-LSI)+(T3): $W_2^2(f_\ast P, f_\ast Q) \leq (2 L_{\text{post}}^2/\
 
 | Client | $P$ | $Q$ | $f$ | Tier | Output | Locally-verified preconditions |
 |---|---|---|---|---|---|---|
-| `#deriv-bias-bound` | Goal-conditional obs distribution $P_{\Omega\vert e,M,G}$ | Goal-marginalized $P_{\Omega\vert e,M}$ | Bayesian posterior on $M$ | T3 | $\mathbb E[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}})]$ | (T2-LSI) via Gaussian observation $\rho_{\text{LSI}}=1/\sigma^2$ or Bakry-Émery; (T3) via Stuart 2010 for well-posed inverse problem |
+| `#deriv-observation-ambiguity-bias-bound` | Goal-conditional obs distribution $P_{\Omega\vert e,M,G}$ | Goal-marginalized $P_{\Omega\vert e,M}$ | Bayesian posterior on $M$ | T3 | $\mathbb E[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}})]$ | (T2-LSI) via Gaussian observation $\rho_{\text{LSI}}=1/\sigma^2$ or Bakry-Émery; (T3) via Stuart 2010 for well-posed inverse problem |
 | *candidate* causal-IB | Interventional $P_\tau^{\text{do}}$ | Observational $P_\tau^{\text{obs}}$ | Post-intervention state pushforward | T3 | W₂ on post-intervention state | *Open* |
 | *candidate* misspecification-cost | True $P_\theta^\ast$ | Assumed $P_{\hat\theta}$ | Bayesian posterior on $M$ | T3 | W₂ on $M$-posterior under misspecification | *Open* |
 | *candidate* composition-scope-robustness | Sub-agent $M_i$ | Nominal sub-agent | Composite-state pushforward | T3 | W₂ on composite state | *Open*; requires composition-scope-condition geometry |
@@ -357,11 +357,11 @@ The cascade's three steps are standard:
 - Otto-Villani under log-Sobolev: Otto & Villani 2000, *J. Funct. Anal.* 173(2):361–400; Bakry-Émery 1985 for LSI under curvature-dimension.
 - Lipschitz-posterior stability: Stuart 2010, *Acta Numerica* 19:451–559; Hairer-Stuart-Vollmer 2014 *SIAM J. Math. Anal.* 46(1):415–451.
 
-AAD's contribution: (i) identifying the cascade as the load-bearing apparatus for KL→state-pushforward-displacement across multiple AAD segments; (ii) the geometric-stiffness interpretation of $2L_{\text{post}}^2/\rho_{\text{LSI}}$ tying prior-likelihood tension to observation concentration; (iii) the connection to `#scope-agent-identity`'s (PI) axiom via the Fisher-Rao special case (cf. `#deriv-bias-bound`'s Track 2).
+AAD's contribution: (i) identifying the cascade as the load-bearing apparatus for KL→state-pushforward-displacement across multiple AAD segments; (ii) the geometric-stiffness interpretation of $2L_{\text{post}}^2/\rho_{\text{LSI}}$ tying prior-likelihood tension to observation concentration; (iii) the connection to `#scope-agent-identity`'s (PI) axiom via the Fisher-Rao special case (cf. `#deriv-observation-ambiguity-bias-bound`'s Track 2).
 
 ### Skeleton — Fisher-Rao adjacency
 
-Under the (PI) parameterization-invariance axiom in `#scope-agent-identity` (fourth primary instance of `#additive-coordinate-forcing`), the statistical-manifold sub-case of $\mathcal M$ carries a canonical Fisher-Rao metric. When the base space $\Omega$ and state space $\mathcal M$ are both statistical manifolds, the template's W₂ on pushforward admits a Fisher-Rao specialization: under small-information regime, $\mathbb E\lVert\Delta M\rVert_{FR} \leq \sqrt 2 \cdot \sqrt\varepsilon$ (dimension-free, universal constant). This is Track 2 of `#deriv-bias-bound`; it composes with the template's T3 output when LSI holds simultaneously in W₂ and in Fisher-Rao metric (equivalent for Gaussian observation models; divergent in general).
+Under the (PI) parameterization-invariance axiom in `#scope-agent-identity` (fourth primary instance of `#additive-coordinate-forcing`), the statistical-manifold sub-case of $\mathcal M$ carries a canonical Fisher-Rao metric. When the base space $\Omega$ and state space $\mathcal M$ are both statistical manifolds, the template's W₂ on pushforward admits a Fisher-Rao specialization: under small-information regime, $\mathbb E\lVert\Delta M\rVert_{FR} \leq \sqrt 2 \cdot \sqrt\varepsilon$ (dimension-free, universal constant). This is Track 2 of `#deriv-observation-ambiguity-bias-bound`; it composes with the template's T3 output when LSI holds simultaneously in W₂ and in Fisher-Rao metric (equivalent for Gaussian observation models; divergent in general).
 
 The Fisher-Rao track is *downstream* of the (PI)/Čencov fourth primary instance, not a new primary instance of `#additive-coordinate-forcing`. Consistent with `#additive-coordinate-forcing`'s principle: the (PI)-adoption is load-bearing; derived W₂ / Fisher-Rao bounds are the (PI) commitment's downstream consequences.
 
@@ -387,7 +387,7 @@ The two meta-pieces compose: once the divergence layer selects reverse-KL (per `
 
 ### Skeleton — Discussion
 
-**Why factor this out.** Three forward-looking clients (causal-IB, misspecification-cost, composition-scope-robustness) and one primary client (`#deriv-bias-bound`) share the same cascade. Factoring it out makes the shared machinery visible, enables citing a single (T1)+(T2)+(T3) precondition bundle, and parallels `#result-sector-persistence-template`'s treatment of Lyapunov sector-bounds.
+**Why factor this out.** Three forward-looking clients (causal-IB, misspecification-cost, composition-scope-robustness) and one primary client (`#deriv-observation-ambiguity-bias-bound`) share the same cascade. Factoring it out makes the shared machinery visible, enables citing a single (T1)+(T2)+(T3) precondition bundle, and parallels `#result-sector-persistence-template`'s treatment of Lyapunov sector-bounds.
 
 **What varies per-client.** (i) Which $P$, $Q$, $f$ apply; (ii) which LSI constant $\rho_{\text{LSI}}$ is available (Gaussian: $1/\sigma^2$; Bakry-Émery: curvature bound); (iii) which Lipschitz constant $L_{\text{post}}$ is available (well-posed inverse problem's stability constant, domain-specific).
 
@@ -405,7 +405,7 @@ The two meta-pieces compose: once the divergence layer selects reverse-KL (per `
 | Otto-Villani inequality T2 under LSI | **Exact** | Otto-Villani 2000 Thm 1; Bakry-Émery 1985 |
 | Lipschitz-posterior stability T3 | **Conditional** on well-posed inverse problem | Stuart 2010 |
 | Template cascade produces $C^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$ under (T1)+(T2)+(T3) | **Derived (conditional)** | Direct composition |
-| Client A (`#deriv-variational-sector-condition`) and Client B (proposed `#deriv-bias-bound`) share machinery | **Robust qualitative** | Pinsker shared; post-Pinsker machinery differs |
+| Client A (`#deriv-variational-sector-condition`) and Client B (proposed `#deriv-observation-ambiguity-bias-bound`) share machinery | **Robust qualitative** | Pinsker shared; post-Pinsker machinery differs |
 | The shared machinery is Pinsker *alone*, not the full cascade | **Derived** | §2.3 explicit comparison |
 | Option A (unified template) is a weak abstraction | **Derived (from §4.1)** | Template body doesn't match across Client A and Client B |
 | Option B (narrow template) aligns with `#result-sector-persistence-template` precedent | **Robust qualitative** | Shared-derivation-body pattern preserved |
@@ -418,7 +418,7 @@ The two meta-pieces compose: once the divergence layer selects reverse-KL (per `
 
 ## §10. What the spike did not settle
 
-- **Promotion ordering.** `#posterior-displacement-template` cannot land before `#deriv-bias-bound` (the template's one current primary instance). The ordering is: first `#deriv-bias-bound` (per `spikes/spike-bias-bound-constant-C-strengthening-2026-04-24.md` M1), then the template extraction as a second move. If the reader wants the template-landing executed in a single session, the `#deriv-bias-bound` segment must be written first.
+- **Promotion ordering.** `#posterior-displacement-template` cannot land before `#deriv-observation-ambiguity-bias-bound` (the template's one current primary instance). The ordering is: first `#deriv-observation-ambiguity-bias-bound` (per `spikes/spike-bias-bound-constant-C-strengthening-2026-04-24.md` M1), then the template extraction as a second move. If the reader wants the template-landing executed in a single session, the `#deriv-observation-ambiguity-bias-bound` segment must be written first.
 
 - **Whether the three forward-looking clients will materialize.** §3.4 names causal-IB, misspecification-cost, composition-scope-robustness as candidates. All three are listed as "Open" in CLAUDE.md §Open and `#disc-identifiability-floor`'s open extensions. Committing to the template is a bet that at least one of these will be pursued; the bet is reasonable but not settled.
 
@@ -428,7 +428,7 @@ The two meta-pieces compose: once the divergence layer selects reverse-KL (per `
 
 - **TST connection.** If `02-tst-core/` segments use KL→state-distance cascades (e.g., model-update bounds from commit evidence), the template would serve as a cross-part bridge. Not surveyed in this spike; `02-tst-core/src/` not checked.
 
-- **The Fisher-Rao track's positioning inside the template.** The (PI)/Čencov Fisher-Rao specialization (Track 2 of `#deriv-bias-bound`) could be a *fourth tier* T4 on top of T3, or a separate adjacent Fisher-Rao track within the template. The sketch (§8) treats it as adjacent; reasonable argument exists for treating it as T4. Defer to the template-authoring session.
+- **The Fisher-Rao track's positioning inside the template.** The (PI)/Čencov Fisher-Rao specialization (Track 2 of `#deriv-observation-ambiguity-bias-bound`) could be a *fourth tier* T4 on top of T3, or a separate adjacent Fisher-Rao track within the template. The sketch (§8) treats it as adjacent; reasonable argument exists for treating it as T4. Defer to the template-authoring session.
 
 - **Name choice finalization.** §7 recommends `#posterior-displacement-template` but flags that `#transport-posterior-template` or `#information-displacement-template` may be preferable if forward-looking clients use non-Bayesian pushforwards. Final name waits for Joseph's input.
 
@@ -436,4 +436,4 @@ The two meta-pieces compose: once the divergence layer selects reverse-KL (per `
 
 ## §11. One-paragraph summary for the caller
 
-Two primary clients share Pinsker's inequality, but the *cascade after Pinsker* (Otto-Villani under LSI → Lipschitz-posterior → W₂ on state-space pushforward) is present only in the proposed `#deriv-bias-bound`; `#deriv-variational-sector-condition` uses Pinsker followed by Cauchy-Schwarz on a correction-operator inner product to produce a scalar sector-constant degradation, not a W₂ distance on a pushforward. The unified-template move (Option A) is structurally weak — it abstracts around output "state distance" but the two clients' outputs occupy different objects (scalar vs. metric-space distance), and the template's body (post-Pinsker derivation) does not transfer between them. The narrow-template move (Option B) — factoring the Pinsker → Otto-Villani → Lipschitz-posterior → W₂ cascade as a three-tier template with `#deriv-bias-bound` as primary client, three forward-looking candidate instances (causal-IB / misspecification-cost / composition-scope-robustness) pending, and `#deriv-variational-sector-condition` as an adjacent family member — is the architecturally honest move and aligns with AAD's existing template-extraction precedent (`#result-sector-persistence-template`, `#result-contraction-template`). The no-extraction move (Option C) is the honest fallback *if* the forward-looking clients do not materialize; it leaves one primary plus one adjacent client independently carrying the cascade. Recommendation: Option B, named `#posterior-displacement-template`, with execution contingent on `#deriv-bias-bound` landing first. The template sits at AAD's *bound-propagation* layer, orthogonal to `#additive-coordinate-forcing`'s *coordinate-selection* layer; together they compose into the full KL-coordinate-selection → KL-to-state-displacement pipeline that AAD increasingly needs. No segment files were modified; the deliverable is the recommendation plus the template sketch ready for a future segment-authoring session.
+Two primary clients share Pinsker's inequality, but the *cascade after Pinsker* (Otto-Villani under LSI → Lipschitz-posterior → W₂ on state-space pushforward) is present only in the proposed `#deriv-observation-ambiguity-bias-bound`; `#deriv-variational-sector-condition` uses Pinsker followed by Cauchy-Schwarz on a correction-operator inner product to produce a scalar sector-constant degradation, not a W₂ distance on a pushforward. The unified-template move (Option A) is structurally weak — it abstracts around output "state distance" but the two clients' outputs occupy different objects (scalar vs. metric-space distance), and the template's body (post-Pinsker derivation) does not transfer between them. The narrow-template move (Option B) — factoring the Pinsker → Otto-Villani → Lipschitz-posterior → W₂ cascade as a three-tier template with `#deriv-observation-ambiguity-bias-bound` as primary client, three forward-looking candidate instances (causal-IB / misspecification-cost / composition-scope-robustness) pending, and `#deriv-variational-sector-condition` as an adjacent family member — is the architecturally honest move and aligns with AAD's existing template-extraction precedent (`#result-sector-persistence-template`, `#result-contraction-template`). The no-extraction move (Option C) is the honest fallback *if* the forward-looking clients do not materialize; it leaves one primary plus one adjacent client independently carrying the cascade. Recommendation: Option B, named `#posterior-displacement-template`, with execution contingent on `#deriv-observation-ambiguity-bias-bound` landing first. The template sits at AAD's *bound-propagation* layer, orthogonal to `#additive-coordinate-forcing`'s *coordinate-selection* layer; together they compose into the full KL-coordinate-selection → KL-to-state-displacement pipeline that AAD increasingly needs. No segment files were modified; the deliverable is the recommendation plus the template sketch ready for a future segment-authoring session.

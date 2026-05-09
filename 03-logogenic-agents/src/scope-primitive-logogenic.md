@@ -40,7 +40,7 @@ This sub-scope is what the field commonly imagines when it says "LLM agent" — 
 
 The framework's posture toward this sub-scope is *characterizing* rather than *dismissive*. Several substantive claims apply directly:
 
-- The bias bound ( #scope-observation-ambiguity-modulation, #deriv-bias-bound) applies at full strength: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot \mathcal A$ with $\kappa \approx 1$ and no scaffolding-mediated reduction of $\mathcal A$ (the goal-resolvable residual uncertainty in observation given context).
+- The bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) applies at full strength: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot \mathcal A$ with $\kappa \approx 1$ and no scaffolding-mediated reduction of $\mathcal A$ (the goal-resolvable residual uncertainty in observation given context).
 - The sandbox ceiling ( #scope-agent-identity composed with the closed-loop-Pearl-Level-2 result) applies because primitive-logogenic trajectories are forkable by definition.
 - 100% context turnover ( #obs-context-turnover) characterizes the session-boundary discontinuity.
 - Backward-inference empathy ( #obs-backward-inference-empathy) is forced by the statelessness — primitive logogenic agents are *trained for* ToM by their architectural condition, not despite it.

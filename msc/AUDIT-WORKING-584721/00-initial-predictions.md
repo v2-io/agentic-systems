@@ -53,7 +53,7 @@ Concrete predictions about specific segments:
 
 - **`#disc-additive-coordinate-forcing`** — meta-segment, status:discussion-grade, 1-anchor-plus-3-theorem characterization per the 2026-04-23 narrowing of Opus's 5-instance conjecture. I want to verify the segment's own self-characterization is honest, especially the Lyapunov-and-IB-Lagrangian "adjacent family" framing. I expect this to be self-aware.
 
-- **`#deriv-bias-bound`** — new appendix from the 2026-04-24 Gemini pressure-point cycle (Track 1 transport-inequality + Track 2 Fisher-Rao + Attempt E no-go). I want to verify the no-go construction (heteroscedastic-normal counterexample) actually works as claimed and that (PI) is genuinely load-bearing rather than coincidental.
+- **`#deriv-observation-ambiguity-bias-bound`** — new appendix from the 2026-04-24 Gemini pressure-point cycle (Track 1 transport-inequality + Track 2 Fisher-Rao + Attempt E no-go). I want to verify the no-go construction (heteroscedastic-normal counterexample) actually works as claimed and that (PI) is genuinely load-bearing rather than coincidental.
 
 - **`#deriv-graph-structure-uniqueness`** — claims the Markov property of the strategy DAG is *forced* (P3→Markov via CMC theorem) under causal sufficiency. I expect this to be the strongest single claim in Section II. I'll want to confirm the conditioning is really "only causal sufficiency" rather than smuggled additional assumptions.
 
@@ -67,7 +67,7 @@ I expect the calibration-laboratory framing to be the strongest move (the transf
 
 ### 03-logogenic-agents (7 segments per OUTLINE)
 
-The honest critical claim: directed separation *fails by construction* for LLMs (Class 2). The coupled formulation `X_{τ+} = f_LLM(prompt(X_{τ-}, e_τ))` is proposed in `#def-coupled-update-dynamics` without separation. The "16 of 24 results survive" claim from `#result-section-ii-survival` is the load-bearing positive result; "5 approximate, 2 require modification" classifies the rest. I want to read this carefully — it's where AAD touches present-day reality most directly, and any sloppy bookkeeping is high-impact. I expect to find at least one tension between Section II results being claimed-survived and the actual coupled-formulation derivation. The `#scope-observation-ambiguity-modulation` segment with $\kappa$-based bias-bound is recent (Class 2/3 specific) and depends on the new `#deriv-bias-bound` Track-2 result.
+The honest critical claim: directed separation *fails by construction* for LLMs (Class 2). The coupled formulation `X_{τ+} = f_LLM(prompt(X_{τ-}, e_τ))` is proposed in `#def-coupled-update-dynamics` without separation. The "16 of 24 results survive" claim from `#result-section-ii-survival` is the load-bearing positive result; "5 approximate, 2 require modification" classifies the rest. I want to read this carefully — it's where AAD touches present-day reality most directly, and any sloppy bookkeeping is high-impact. I expect to find at least one tension between Section II results being claimed-survived and the actual coupled-formulation derivation. The `#scope-observation-ambiguity-modulation` segment with $\kappa$-based bias-bound is recent (Class 2/3 specific) and depends on the new `#deriv-observation-ambiguity-bias-bound` Track-2 result.
 
 ### 04-logozoetic-agents (0 segments)
 

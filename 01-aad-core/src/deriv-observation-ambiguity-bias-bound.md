@@ -1,5 +1,5 @@
 ---
-slug: deriv-bias-bound
+slug: deriv-observation-ambiguity-bias-bound
 type: derivation
 status: conditional
 depends:
@@ -11,7 +11,7 @@ depends:
 stage: draft
 ---
 
-# Derivation: Bias-Bound Constant $C$ for Class-2 Agent Observation-Ambiguity Modulation
+# Derivation: Observation-Ambiguity Bias-Bound Constant $C$
 
 The observation-ambiguity bias bound carried by Class-2 (fully-coupled) agents in the logogenic-agents scope — $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$ ([#scope-observation-ambiguity-modulation](../../03-logogenic-agents/src/scope-observation-ambiguity-modulation.md), [#result-section-ii-survival](../../03-logogenic-agents/src/result-section-ii-survival.md)) — previously treated the constant $C$ as "domain-dependent" and the bound as "order-of-magnitude guidance, not a theorem." This appendix derives $C$ under two named sub-scopes, records a no-go showing that $C$ cannot be universal without the (PI) parameterization-invariance axiom of [#scope-agent-identity](scope-agent-identity.md), and documents two failed derivation routes so future agents do not repeat them.
 

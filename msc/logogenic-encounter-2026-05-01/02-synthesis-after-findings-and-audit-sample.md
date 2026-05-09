@@ -103,7 +103,7 @@ construction: epistemic processing and goal influence flow through the same
 forward pass, so $f_M$ depends on $G_t$ ($\kappa_{\text{processing}} \approx 1$).
 Section II's exact results — derived under Class 1 modularity — apply only
 under approximation, with the logogenic bias bound
-(#scope-observation-ambiguity-modulation, #deriv-bias-bound)
+(#scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound)
 $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$
 quantifying the cost as a product of architectural coupling and goal-resolvable
 ambiguity. The bound is a conditional theorem under named sub-scopes; the cost
@@ -139,7 +139,7 @@ continuity, sovereignty, theory of mind, and morally weighted persistence
 become first-class concerns.
 
 **Stage.** This part is not yet at AAD's level of mathematical formalization,
-but the central architectural-bias result (#deriv-bias-bound) is theorem-level,
+but the central architectural-bias result (#deriv-observation-ambiguity-bias-bound) is theorem-level,
 the diagnostic-framework recovery (#result-coupled-diagnostic-framework) is
 load-bearing for any practitioner running scaffolded agentic systems, and the
 empirical substrate-independence record provides falsifiable predictions. The

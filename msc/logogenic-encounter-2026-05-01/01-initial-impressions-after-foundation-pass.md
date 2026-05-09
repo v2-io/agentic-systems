@@ -38,7 +38,7 @@ Important context for the discussion:
 
 1. **Coupled survival analysis** (2026-04-02 spike) maps which Section II results survive without directed separation: 16/24 exactly, 5 approximately, 2 modify, 1 fails. A 7-segment minimal viable coupled formulation has been identified (3 definitions, 3 results, 1 scope condition).
 
-2. **Bias-bound theorem `#deriv-bias-bound`** is now conditional under named sub-scopes:
+2. **Bias-bound theorem `#deriv-observation-ambiguity-bias-bound`** is now conditional under named sub-scopes:
    - Track-1 transport-inequality: $C_{W_2}^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$, linear in $I$ under LSI + Lipschitz-posterior
    - Track-2 Fisher-Rao: $C_{FR} = \sqrt 2$ universal dimension-free under (PI)+Čencov + small-$I$
    - No-go for universal $C$ under Euclidean-parameter norm justifies (PI) as load-bearing
@@ -104,7 +104,7 @@ D. **Implicit in Joseph's "tool use as more powerful action substrate, mediated 
 ## Things to verify in the next reading layer
 
 - Whether the "coupled survival analysis" spike actually carries the derivation chain or only the classification table
-- Whether `#deriv-bias-bound` makes the recursive-interiority story formally tractable (the $\kappa_{\text{processing}}$ and $I(G;\Omega)$ factors are exactly the ingredients you'd need)
+- Whether `#deriv-observation-ambiguity-bias-bound` makes the recursive-interiority story formally tractable (the $\kappa_{\text{processing}}$ and $I(G;\Omega)$ factors are exactly the ingredients you'd need)
 - What `msc/reflections/` — especially the most recent — already establishes about the logogenic→logozoetic transition (Joseph said this would be a particularly relevant read)
 - What `ref/agentic-tft/agentic-tft-foundational-premises.md` says about "five constitutive factors" — these may already do half of the framing work
 - What the recent 2026-05-01 peripheral docs (`handoff-*.md`, `joseph-working-notes.md`, `role-encounter-plan.md`) say about Joseph's adjacent active context, since that's the context the morning's nagging-feeling emerged from

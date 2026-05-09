@@ -118,7 +118,7 @@ The framework feels mature in its Section I core. Operational concerns exist (op
 - (PI) axiom (`#scope-agent-identity`, 2026-04-23): propagation lands cleanly in der-gain-sector-bridge ✓, disc-additive-coordinate-forcing (forward) expected, deriv-bias-bound (forward) expected, result-contraction-template (forward) expected.
 - Sub-scope α₁/α₂/β partition (refined 2026-04-23): inherited by sector-persistence-template instances. Worth checking each instance verifies its sub-scope.
 - BH-identity primary bound (2026-04-24): expected in `#deriv-strategy-cost-regret-bound` (forward).
-- `#deriv-bias-bound` appendix (2026-04-24): expected in `#scope-observation-ambiguity-modulation` and `#result-section-ii-survival` (both in 03-logogenic-agents).
+- `#deriv-observation-ambiguity-bias-bound` appendix (2026-04-24): expected in `#scope-observation-ambiguity-modulation` and `#result-section-ii-survival` (both in 03-logogenic-agents).
 - DA2'-inc ≡ (CT2) at M=I structural transparency (2026-04-24): seen in result-sector-persistence-template ✓; expected in `#form-composition-closure` and `#result-contraction-template`.
 - Three-mode `#der-loop-interventional-access` (2026-04-24): expected in der-loop-interventional-access (Section II).
 - Consolidation timescale (2026-04-23): added to der-temporal-nesting's 5-level table ✓.
