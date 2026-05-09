@@ -73,6 +73,8 @@ The git tag `pre-guc-rename-2026-05-09` anchors the callouts at a stable point i
 
 **Plan and tracking-file artifacts** (preserved as the durable record of how the rename was executed): [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md), [`msc/class-rename-tracking-2026-05-09.md`](msc/class-rename-tracking-2026-05-09.md). Decision-source rationale: [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) lines 92-116 (original 2026-05-04 record + meta-pattern alignment audit).
 
+**Scope honesty.** This bundle was the highest-leverage *single* rename in the broader naming program — the architectural Class N axis touched ~60 files in canonical surface and required the only semantic-reversal handling in the program so far. But it is one bundle in a multi-cycle arc, not the closure of the naming refactor as a whole. The R2 cohort produced 629 distinct currents; **58 are now marked with a `rename_status` decision (44 from 2026-05-04 manual curation + 14 from this cycle); ~511 remain unrouted** — not yet evaluated for canonicalize / rename / add-alias / exclude. The §C terminology-canonicalize commitments (~70 entries already decided in 2026-05-04 but not yet executed) are still pending. Continuing-evaluation work tracked at PRACTICA §"Current naming conventions refactor" item 13.
+
 ---
 
 ### Class coercion via wrapping landed: constructive route from Class-2/3 components to Class-1 composites; Parts III/IV reframed as wrapping-construction instantiation; W₀/W₂/W₁ regime hierarchy with structural-vs-behavioral leakage bounds
