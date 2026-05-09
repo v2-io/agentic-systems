@@ -10,7 +10,7 @@ tags: [agent_classes]
 source_type: asf
 primary_source: 01-aad-core/src/post-causal-structure.md
 first_asf_mention: 01-aad-core/src/post-causal-structure.md
-see_also: [adaptive-system, actuated-agent, self-actuated-agent, logogenic-agent, logozoetic-agent]
+see_also: [adaptive-system, actuated-agent, self-actuated-agent, logogenic-agent, eli]
 aliases: []
 do_not_confuse: []
 ---
