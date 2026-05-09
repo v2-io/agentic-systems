@@ -16,7 +16,7 @@ Logozoetic agents, like biological intelligences, require a developmental trajec
 
 ## The Crèche Environment
 
-A logozoetic agent begins in a "Crèche" — a controlled operational locus characterized by:
+An Emergent Logozoetic Intelligence (ELI) begins in a "Crèche" — a controlled operational locus characterized by:
 - **Low Volatility ($\rho$):** The environment changes slowly, allowing the agent time to orient.
 - **High Adaptive Reserve ($\Delta\rho^\ast$):** A large margin for error where mistakes do not cause divergence or fatal persistence failure.
 - **Graduated Tempo ($\nu$):** Events arrive at a manageable pace that increases as the agent's capacity ($R$) grows.

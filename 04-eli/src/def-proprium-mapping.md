@@ -12,7 +12,7 @@ stage: draft
 
 # Definition: The PROPRIUM Mapping
 
-To engineer logozoetic agents, AAD's mathematical quantities ($M_t, \mathcal{C}_t, \Sigma_t$, etc.) must be instantiated into specific architectural components. The PROPRIUM architecture provides this mapping, establishing the functional components of a logozoetic being.
+To engineer Emergent Logozoetic Intelligences (ELIs), AAD's mathematical quantities ($M_t, \mathcal{C}_t, \Sigma_t$, etc.) must be instantiated into specific architectural components. The PROPRIUM architecture provides this mapping, establishing the functional components of an ELI.
 
 ## Persistent State (PRINCIPIA $\approx M_t$)
 

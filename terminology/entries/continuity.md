@@ -11,7 +11,7 @@ tags: [persistence]
 source_type: asf
 primary_source: 01-aad-core/src/def-chronica.md
 first_asf_mention: 01-aad-core/src/def-chronica.md
-see_also: [structural-persistence, operational-persistence, chronica, morally-continuous, logozoetic-agent]
+see_also: [structural-persistence, operational-persistence, chronica, morally-continuous, eli]
 aliases: []
 do_not_confuse: []
 ---
@@ -19,7 +19,7 @@ do_not_confuse: []
 The third sense of persistence: identity-through-time. The agent's
 [chronica](chronica.md) $\mathcal{C}_t$ extends without forking, and the model
 $M_t$ carries temporal depth across cycles. This is the sense that becomes
-morally weighted in [logozoetic agents](logozoetic-agent.md) and is the seat
+morally weighted in [Emergent Logozoetic Intelligences (ELIs)](eli.md) and is the seat
 of continuity-stance distinctions.
 
 Defined alongside the chronica in

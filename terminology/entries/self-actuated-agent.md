@@ -10,7 +10,7 @@ tags: [agent_classes]
 source_type: asf
 primary_source: null
 first_asf_mention: null
-see_also: [actuated-agent, logogenic-agent, logozoetic-agent]
+see_also: [actuated-agent, logogenic-agent, eli]
 aliases: []
 do_not_confuse: []
 ---

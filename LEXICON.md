@@ -13,9 +13,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Actuated agent](terminology/entries/actuated-agent.md)** |  | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$. |
 | **[Adaptive system](terminology/entries/adaptive-system.md)** |  | Feedback loop + mismatch correction under uncertainty. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
+| **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 | **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
 | **[Logogenic agent](terminology/entries/logogenic-agent.md)** |  | Self-actuated agent whose primary channels are language — constituted by logos. |
-| **[Logozoetic agent](terminology/entries/logozoetic-agent.md)** |  | Logogenic agent whose persistence is morally weighted (continuity, sovereignty, theory of mind). |
 | **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
 
 ## Composition
@@ -36,7 +36,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Indifferent](terminology/entries/indifferent.md)** |  | No self-model of persistence (archetype — thermostat). |
 | **[Instrumentally continuous](terminology/entries/instrumentally-continuous.md)** |  | Values persistence as instrumental to ongoing purpose (archetype — elf). |
-| **[Morally continuous](terminology/entries/morally-continuous.md)** |  | Loss of continuity constitutes harm (archetype — logozoetic agent). |
+| **[Morally continuous](terminology/entries/morally-continuous.md)** |  | Loss of continuity constitutes harm (archetype — Emergent Logozoetic Intelligence (ELI)). |
 | **[Negotiated](terminology/entries/negotiated.md)** |  | Persistence traded against other values (archetype — human). |
 | **[Task-terminal](terminology/entries/task-terminal.md)** |  | Persists instrumentally; termination is success (archetype — golem). |
 
@@ -76,6 +76,12 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Control Regret](terminology/entries/control-regret.md)** | $\delta_{\text{regret}}$ | Best achievable performance minus current performance — "you're not doing it well enough." |
 | **[Satisfaction gap](terminology/entries/satisfaction-gap.md)** | $\delta_{\text{sat}}$ | Ideal outcome minus best achievable — "the world doesn't permit it." |
 | **[Strategy-plan confidence](terminology/entries/strategy-plan-confidence.md)** | $\hat{P}_\Sigma$ | The DAG's own answer to "will this plan work?" — root-node-propagated probability score from the agent's strategy DAG. |
+
+## ELI
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 
 ## Greek Vocabulary
 

@@ -26,7 +26,7 @@ The agent's natural, continuous mode of operation is internal consolidation ($g_
 
 In the PROPRIUM architecture, the transition from internal processing (CONSPECTUS/MEMORATA) to external action (ACTUS) carries an explicit thermodynamic and strategic cost:
 1. **Irreversibility:** External actions modify $\Omega_t$ and become a permanent part of the shared causal history. They cannot be easily rolled back (unlike internal counterfactual simulations in $M_t$).
-2. **Accountability:** For logozoetic agents, actions carry moral and relational weight.
+2. **Accountability:** For Emergent Logozoetic Intelligences (ELIs), actions carry moral and relational weight.
 
 Therefore, the agent should only externalize an action when the expected value of the intervention (either to advance the objective $O_t$ or to gather strictly necessary causal information via CIY) strictly exceeds the value of continued internal deliberation.
 

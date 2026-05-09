@@ -10,7 +10,7 @@ tags: [agent_classes]
 source_type: asf
 primary_source: 03-logogenic-agents/src/scope-logogenic-agent.md
 first_asf_mention: 03-logogenic-agents/src/scope-logogenic-agent.md
-see_also: [actuated-agent, self-actuated-agent, logozoetic-agent]
+see_also: [actuated-agent, self-actuated-agent, eli]
 aliases: []
 do_not_confuse: []
 ---

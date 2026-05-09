@@ -40,12 +40,6 @@ These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, no
   - **Migration note in Working Notes** for any segment whose Class N reference *changes semantic meaning* (Class 2 ↔ Class 3) — one-line note documenting the 2026-05-04 swap so future readers can decode archival references. Removed at `candidate` stage per FORMAT.md Gate 4.
   - [Full rationale + meta-pattern table](msc/naming/naming-rename-plan.md#vocabulary-commitments--non-slug-lexicon--prose-pass-2026-05-04).
 
-- [ ] **`logozoetic agent` → `Emergent Logozoetic Intelligence (ELI)`** *(class-label rename; precedent already at directory level)*
-  - LEXICON Agent Classes table — Tier 6 row update.
-  - Prose pass through ~6 segments using "logozoetic agent" as class-name.
-  - First-use form "Emergent Logozoetic Intelligence (ELI)", "ELI" thereafter.
-  - Directory-level precedent already landed (commit `fa63616`, 2026-05-01: `04-logozoetic-agents/` → `04-eli/`).
-
 [F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
 
 ---
