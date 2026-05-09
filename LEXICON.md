@@ -26,7 +26,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Class coercion (via wrapping)](terminology/entries/class-coercion.md)** |  | Constructive procedure for making a Class-2 or Class-3 component participate as Class-1 in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
+| **[Class coercion (via wrapping)](terminology/entries/class-coercion.md)** |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
@@ -118,7 +118,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Class coercion (via wrapping)](terminology/entries/class-coercion.md)** |  | Constructive procedure for making a Class-2 or Class-3 component participate as Class-1 in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
+| **[Class coercion (via wrapping)](terminology/entries/class-coercion.md)** |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
 | **[Class 3: Coupled (GUC)](terminology/entries/coupled.md)** |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
