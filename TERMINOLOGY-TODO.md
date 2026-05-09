@@ -20,9 +20,6 @@ Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` f
 - [ ] **`obs-simulation-results` → `obs-section-i-validation-simulations`** *(citability fix; ~5 cross-refs)*
   Segment H1 → "Observation: Section I Validation Simulations". The segment is the empirical-validation appendix for Section I (six simulation variants A–F + Hafez bridge). Cross-refs from `result-adversarial-exponent-regimes`, `obs-gates-advantage`, `result-per-dimension-persistence` update mechanically.
 
-- [ ] **`obs-gates-advantage` → `obs-gated-tempo-advantage`** *(citability fix; ~3 cross-refs)*
-  Segment H1 update; pairs with parent `#result-adversarial-tempo-advantage`. Names the *tempo advantage* gated by observation quality, not a generic "observation-gate advantage."
-
 - [ ] **`deriv-detection-latency` → `deriv-update-detection-latency`** *(F1 citability fix; qualifier-add)*
   "Detection latency" is generic across fields; the segment derives latency for detecting regime-changes via log-odds-forced edge updates from `#deriv-edge-update-natural-parameter`. The `update` qualifier names the load-bearing structural source.
 

@@ -4,11 +4,11 @@
 
 **Date**: 2026-04-22
 
-**Motivation**: AAD has emitter-side Section III results — `#der-adversarial-destabilization`, `#result-adversarial-tempo-advantage`, `#obs-gates-advantage`, `#hyp-symbiogenic-composition` in part — that describe what happens when one agent's praxis couples into another's disturbance rate. What AAD does *not* have is a systematic recipient-side theory: given an incoming signal $a$ from emitter $A$, what determines whether recipient $B$ absorbs it as an informative update, a destabilizing shock, or ambient noise? The three regimes have different dynamics — they land at different terms of $B$'s sector-persistence template with qualitatively different effects on $(M_B, \Sigma_B, \kappa_B)$ — and the choice among them is not something the emitter decides. It is forced by the interaction of $B$'s internal state with the signal's information content.
+**Motivation**: AAD has emitter-side Section III results — `#der-adversarial-destabilization`, `#result-adversarial-tempo-advantage`, `#obs-gated-tempo-advantage`, `#hyp-symbiogenic-composition` in part — that describe what happens when one agent's praxis couples into another's disturbance rate. What AAD does *not* have is a systematic recipient-side theory: given an incoming signal $a$ from emitter $A$, what determines whether recipient $B$ absorbs it as an informative update, a destabilizing shock, or ambient noise? The three regimes have different dynamics — they land at different terms of $B$'s sector-persistence template with qualitatively different effects on $(M_B, \Sigma_B, \kappa_B)$ — and the choice among them is not something the emitter decides. It is forced by the interaction of $B$'s internal state with the signal's information content.
 
 This spike proposes the classification boundary and checks it against AAD's existing machinery.
 
-**Depends on**: #def-observation-function, #def-mismatch-signal, #result-mismatch-decomposition, #emp-update-gain, #def-adaptive-tempo, #def-model-class-fitness, #def-model-sufficiency, #result-structural-adaptation-necessity, #result-persistence-condition, #result-sector-persistence-template, #der-adversarial-destabilization, #result-adversarial-tempo-advantage, #obs-gates-advantage, #hyp-symbiogenic-composition, #hyp-communication-gain, #der-team-persistence, #disc-identifiability-floor, #scope-agent-identity.
+**Depends on**: #def-observation-function, #def-mismatch-signal, #result-mismatch-decomposition, #emp-update-gain, #def-adaptive-tempo, #def-model-class-fitness, #def-model-sufficiency, #result-structural-adaptation-necessity, #result-persistence-condition, #result-sector-persistence-template, #der-adversarial-destabilization, #result-adversarial-tempo-advantage, #obs-gated-tempo-advantage, #hyp-symbiogenic-composition, #hyp-communication-gain, #der-team-persistence, #disc-identifiability-floor, #scope-agent-identity.
 
 ---
 
@@ -125,7 +125,7 @@ The signal is representable and within capacity, but its information content is 
 
 - **(I-a) vs (II-a)** is the emitter-side boundary: magnitude exceeds $B$'s sector-condition capacity. This is the destabilization regime of #der-adversarial-destabilization applied to a single event rather than a tempo-integrated stream. The condition is *magnitude-based*.
 - **(I-b) vs (II-b)** is the *structural* boundary: the event's information content requires a model the class cannot express. This is #result-structural-adaptation-necessity applied to a single event. The condition is *class-based*.
-- **(I-c) vs (III)** is the observability boundary: the event's information content is below the channel's noise floor. This is #obs-gates-advantage applied at the single-event level. The condition is *rate-based*.
+- **(I-c) vs (III)** is the observability boundary: the event's information content is below the channel's noise floor. This is #obs-gated-tempo-advantage applied at the single-event level. The condition is *rate-based*.
 
 Three boundaries — magnitude-based, class-based, rate-based — give three ways a recipient can exit Regime I, corresponding to Regimes II-magnitude-shock, II-structural-shock, and III. Regime II splits into two sub-regimes because magnitude failure and class failure are structurally different dynamics, even though both are "the signal is too much for $B$."
 
@@ -268,7 +268,7 @@ $$\gamma_A^{\text{effective}} = \gamma_A^{\text{max}} \cdot f(H_b^B)$$
 
 with $f$ a monotonically decreasing function of opacity. In the high-opacity limit, the emitter-side advantage $(\mathcal T_A/\mathcal T_B)^b$ of #result-adversarial-tempo-advantage degrades because the fraction of $A$'s events landing in $B$'s destabilizing regimes (II-a, II-b) drops.
 
-This is structurally the same as the `#obs-gates-advantage` result, but applied at the emitter rather than the recipient: where observation-gates-advantage says $A$'s tempo advantage degrades when $A$'s observations of the *environment* are noisy, the opacity result says $A$'s tempo advantage degrades when $A$'s observations of *$B$* are noisy. Both are "tempo without calibration is overrated." The opacity-as-inverse-$U_o$ dual that the current `#der-adversarial-destabilization` Working Notes gesture at is now formal.
+This is structurally the same as the `#obs-gated-tempo-advantage` result, but applied at the emitter rather than the recipient: where observation-gates-advantage says $A$'s tempo advantage degrades when $A$'s observations of the *environment* are noisy, the opacity result says $A$'s tempo advantage degrades when $A$'s observations of *$B$* are noisy. Both are "tempo without calibration is overrated." The opacity-as-inverse-$U_o$ dual that the current `#der-adversarial-destabilization` Working Notes gesture at is now formal.
 
 ### 5.3 Symmetric read — legibility is cooperative
 
@@ -292,7 +292,7 @@ The classification recovers the existing emitter-side results as restrictions to
 
 - **`#der-adversarial-destabilization`** — Regime II-a with coupled event streams from $A$. The emitter-side derivation is about integrating Regime II-a contributions over time; the structural-shock in II-b was implicit, being collapsed into "adaptive reserve exceeded."
 - **`#result-adversarial-tempo-advantage`** — Regime II (aggregate) applied with tempo-proportional event rates. The superlinear scaling follows from the sector-persistence template's $1/\alpha$ (Model D) vs $1/\sqrt\alpha$ (Model S) applied to Regime II events. The classification does not change the scaling; it just sharpens the story: tempo advantage is only effective insofar as $A$'s tempo produces Regime II events, not Regime III.
-- **`#obs-gates-advantage`** — this is the recipient-side expression of the rate boundary (I-c). When $U_{o,B}$ is high, more of $A$'s events slip into Regime III (lost to noise floor), and $A$'s tempo advantage collapses. The classification makes this a structural prediction rather than an empirical finding: the $b$-exponent should drop toward zero in the high-$U_{o,B}$ limit because the fraction of $A$'s events landing in Regime II drops to zero.
+- **`#obs-gated-tempo-advantage`** — this is the recipient-side expression of the rate boundary (I-c). When $U_{o,B}$ is high, more of $A$'s events slip into Regime III (lost to noise floor), and $A$'s tempo advantage collapses. The classification makes this a structural prediction rather than an empirical finding: the $b$-exponent should drop toward zero in the high-$U_{o,B}$ limit because the fraction of $A$'s events landing in Regime II drops to zero.
 - **`#hyp-symbiogenic-composition`** — the integrated transition (S-1, S-2, S-3) corresponds to $A$'s events being classified as Regime I for $B$: they refine $B$'s $M_B$ with content that becomes part of $B$'s structure. The host-endosymbiont asymmetry is precisely "most of endosymbiont's signals to host are Regime I; host's signals to endosymbiont are a mix including high-$\mathcal I$ signals that rewrite $\mathcal M_\text{endo}$ toward $\mathcal M_\text{host}$." The Regime I sub-classification recovers catalysis/update dynamics.
 - **Cooperative signaling (implicit in `#der-team-persistence`)** — Regime I events from $A$ contribute negatively to $\rho_B^{\text{eff}}$ via the `#der-team-persistence` cooperative-disturbance term. This is the shared-intent channel: the emitter is deliberately producing Regime I events for the recipient. The communication tempo $\nu_{ji}^\text{comm} \cdot \eta_{ji}^\ast$ is the Regime I event rate times the recipient's informative-gain.
 
@@ -396,8 +396,8 @@ Recommend a new appendix-or-Section-III segment `#der-interaction-channel-classi
 - **Type**: *derived* — the classification is derivable from existing AAD quantities.
 - **Status**: *conditional* — conditional on the per-case boundary derivations (§4).
 - **Location**: Section III appendix or late-Section III segment, positioned between `#der-adversarial-destabilization` and the `#adversarial-edge-targeting` GAP. It is a companion to the emitter-side segments, not a replacement.
-- **Depends on**: #def-observation-function, #def-mismatch-signal, #emp-update-gain, #def-adaptive-tempo, #def-model-class-fitness, #result-structural-adaptation-necessity, #result-persistence-condition, #result-sector-persistence-template, #der-adversarial-destabilization, #result-adversarial-tempo-advantage, #obs-gates-advantage, #hyp-symbiogenic-composition, #hyp-communication-gain, #der-team-persistence, #disc-credit-assignment-boundary.
-- **Cross-referenced by**: #der-adversarial-destabilization (recipient-side perspective of $\gamma_A \mathcal T_A$), #hyp-symbiogenic-composition (asymmetric classification read), #der-team-persistence (Regime I as the cooperative-action term), #obs-gates-advantage (rate-boundary is the recipient-side expression).
+- **Depends on**: #def-observation-function, #def-mismatch-signal, #emp-update-gain, #def-adaptive-tempo, #def-model-class-fitness, #result-structural-adaptation-necessity, #result-persistence-condition, #result-sector-persistence-template, #der-adversarial-destabilization, #result-adversarial-tempo-advantage, #obs-gated-tempo-advantage, #hyp-symbiogenic-composition, #hyp-communication-gain, #der-team-persistence, #disc-credit-assignment-boundary.
+- **Cross-referenced by**: #der-adversarial-destabilization (recipient-side perspective of $\gamma_A \mathcal T_A$), #hyp-symbiogenic-composition (asymmetric classification read), #der-team-persistence (Regime I as the cooperative-action term), #obs-gated-tempo-advantage (rate-boundary is the recipient-side expression).
 
 ### 8.2 Satellite moves
 
@@ -433,7 +433,7 @@ The recipient-side theory is formalizable within existing AAD machinery. The fou
 - model-class (structural) via $\mathcal F(\mathcal M_B)$
 - observability (rate) via $U_{o,B}$ and $\nu^{(k)}_B$
 
-The classification recovers `#der-adversarial-destabilization` (Regime II-a), `#hyp-symbiogenic-composition` (Regime I with structural asymmetry), `#obs-gates-advantage` (rate-boundary), and cooperative signaling (`#der-team-persistence`'s action-based cooperative coupling as Regime I) as special cases. It pairs with the `#adversarial-edge-targeting` GAP as the recipient-side pattern-recognizer to the emitter-side optimizer.
+The classification recovers `#der-adversarial-destabilization` (Regime II-a), `#hyp-symbiogenic-composition` (Regime I with structural asymmetry), `#obs-gated-tempo-advantage` (rate-boundary), and cooperative signaling (`#der-team-persistence`'s action-based cooperative coupling as Regime I) as special cases. It pairs with the `#adversarial-edge-targeting` GAP as the recipient-side pattern-recognizer to the emitter-side optimizer.
 
 Agent opacity $H_b^B$ enters as an *emitter-side* modulator of the regime distribution $A$ can target, not as a recipient-side reshape. The recipient's classification depends on the recipient's own state; opacity controls what arrives.
 

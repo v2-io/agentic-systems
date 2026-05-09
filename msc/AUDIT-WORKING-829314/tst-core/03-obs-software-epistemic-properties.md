@@ -30,7 +30,7 @@ In software, the artifact *is* the measurement channel. If you write spaghetti c
 
 This means that "Refactoring" is not an aesthetic pursuit; it is the physical act of building a microscope. When a developer extracts a pure function from a massive mud-ball class, they haven't changed the software's behavior (the external $\Omega$ is identical). What they have done is isolated a causal node so they can attach a unit test to it. They have engineered a new, high-frequency ($\nu$), low-noise ($U_o$) observation channel.
 
-AAD proves (via `#der-observability-dominance` and `#obs-gates-advantage`) that if you don't do this, your update gain $\eta^\ast$ collapses, and your effective tempo $\mathcal{T}$ drops to zero. You will eventually be unable to add features to the codebase without breaking it, because you cannot see what you are doing.
+AAD proves (via `#der-observability-dominance` and `#obs-gated-tempo-advantage`) that if you don't do this, your update gain $\eta^\ast$ collapses, and your effective tempo $\mathcal{T}$ drops to zero. You will eventually be unable to add features to the codebase without breaking it, because you cannot see what you are doing.
 
 Property P2 (Executable Counterfactuals) is equally mind-bending.
 Judea Pearl writes extensively about how Level 3 (Counterfactuals: "What would have happened if I had taken the aspirin instead?") is the pinnacle of human cognition, but that it exists purely in the imagination. We cannot rewind time and take the other pill. We can only simulate it in $M_t$.

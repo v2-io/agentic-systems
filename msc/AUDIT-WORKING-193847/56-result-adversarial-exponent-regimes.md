@@ -11,13 +11,13 @@ It maps perfectly back to `#result-adversarial-tempo-advantage` (where the expon
 *Constructive repair:* The text should explicitly state that outside the coupling-dominant limit, $b$ is a *local apparent exponent* (elasticity) rather than a global scaling law. The empirical table is still highly useful for intuition, but the mathematical framing should acknowledge the curvature in log-log space.
 
 **4. What direction will the theory take next?**
-The OUTLINE lists `#obs-gates-advantage` next. This seems to be the recipient-side observation that high observation noise ($U_o$) pushes the interaction out of the coupling-dominant regime, effectively acting as a shield against adversarial tempo.
+The OUTLINE lists `#obs-gated-tempo-advantage` next. This seems to be the recipient-side observation that high observation noise ($U_o$) pushes the interaction out of the coupling-dominant regime, effectively acting as a shield against adversarial tempo.
 
 **5. What errors should I now watch for?**
 I must watch for claims that tempo advantage is *always* superlinear. This segment provides the definitive mathematical boundary: if you are fighting the environment more than you are fighting the adversary ($\rho_{\text{base}}$ dominates), being twice as fast as the adversary only makes you twice as good (linear), not four times as good (superlinear).
 
 **6. Predictions for next segments.**
-`#obs-gates-advantage` will explain how noise protects against tempo attacks.
+`#obs-gated-tempo-advantage` will explain how noise protects against tempo attacks.
 
 **7. What would I change?**
 The "Domain interpretation" list is fantastic. Mapping "fast-changing API" to Model D (drift) and "adversarial ML attack vectors" to Model S (noise) makes the abstract differential equations immediately recognizable to practitioners. 

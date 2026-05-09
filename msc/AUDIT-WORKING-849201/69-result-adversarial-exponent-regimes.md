@@ -10,13 +10,13 @@ The cross-referencing is perfect, accurately tying the regimes back to `#hyp-mis
 The mathematical framing is sound. The recognition that the exponent $b$ smoothly degrades from its theoretical maximum ($2$ or $1.5$) down to lower values ($1.0$ or $0.5$) as the environment's base disturbance overwhelms the adversary's coupled disturbance is an excellent piece of practical applied math.
 
 **4. What direction will the theory take next?**
-The OUTLINE lists `#obs-gates-advantage` next (which I've also just read), detailing how observation noise limits this tempo advantage.
+The OUTLINE lists `#obs-gated-tempo-advantage` next (which I've also just read), detailing how observation noise limits this tempo advantage.
 
 **5. What errors should I now watch for?**
 I must be careful not to apply the $b=2$ or $b=3/2$ laws universally; they only hold in the *coupling-dominant* regime (where the adversary is the primary source of your problems, not the background environment).
 
 **6. Predictions for next segments:**
-N/A - transition to `#obs-gates-advantage`.
+N/A - transition to `#obs-gated-tempo-advantage`.
 
 **7. What would I change?**
 Nothing. The domain interpretation mapping (Military = drift/2.0, Market = noise/1.5) is extremely helpful.

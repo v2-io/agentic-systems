@@ -33,7 +33,7 @@ The simulations were theory-shaping, not merely confirmatory. In particular:
 | B | **D+S** (interpolation) | Drift-noise interpolation across correction functions | Smooth transition between drift ($b = 2.0$) and noise ($b = 1.5$) regimes; coupling dominance is the key qualifier, not drift vs. noise per se | Confirmed that the coupling-dominant condition is quantitatively load-bearing | [#result-adversarial-exponent-regimes](result-adversarial-exponent-regimes.md) |
 | C | **S** (stochastic AR(1)) | Exponent vs. gain ($\eta$) in stochastic model | Exponent drops toward 0.5 as $\eta \to 0$ (away from coupling dominance at fixed $q_\text{base}$); discrete AR(1) exponent never exceeds 1.5 | Validates Model S derivation ($b = 3/2$) | [#result-adversarial-exponent-regimes](result-adversarial-exponent-regimes.md) |
 | D | **D vs. S** (separated) | Exponent vs. base noise ($q_\text{base}$) at fixed $\eta$ | Continuous ODE exponent $\to$ 2.0 (Model D), discrete AR(1) exponent $\to$ 1.5 (Model S), as $q_\text{base} \to 0$ | Definitively separated the two asymptotes; validates both derivations | [#result-adversarial-exponent-regimes](result-adversarial-exponent-regimes.md) |
-| E | **S** (stochastic AR(1)) | Observation noise; optimal gain validation | Observation noise collapses adversarial exponent from $\sim 1.0$ to $\sim 0.2$; Riccati-optimal gain restores it to $\sim 0.4$; 52% mismatch reduction at moderate noise | Observation quality gates tempo advantage; optimal gain ( #emp-update-gain) empirically validated | [#obs-gates-advantage](obs-gates-advantage.md) |
+| E | **S** (stochastic AR(1)) | Observation noise; optimal gain validation | Observation noise collapses adversarial exponent from $\sim 1.0$ to $\sim 0.2$; Riccati-optimal gain restores it to $\sim 0.4$; 52% mismatch reduction at moderate noise | Observation quality gates tempo advantage; optimal gain ( #emp-update-gain) empirically validated | [#obs-gated-tempo-advantage](obs-gated-tempo-advantage.md) |
 | F | **S** (stochastic AR(1)) | Multi-dimensional anisotropic correction; targeted adversarial attack | Per-dimension theory exact to 4 significant figures; scalar tempo overestimates by 72%; targeted attack amplifies advantage by 17% | Validates Model S per-dimension steady state | [#result-per-dimension-persistence](result-per-dimension-persistence.md) |
 | Hafez bridge | **S** (stochastic AR(1)) | Bi-predictability $P$ vs. AAD mismatch in adversarial and non-adversarial settings | $P$ measures coupling architecture (scale-invariant); mismatch measures coupling performance; $P$ is blind to adversarial dynamics | $P$ and AAD mismatch are complementary diagnostics; $H_b$ (agent opacity) has no direct AAD analog -- potential gap for multi-agent work | -- |
 
@@ -63,7 +63,7 @@ The original sim2 result ($b \approx 1.05$) was not a falsification of Corollary
 
 ### Observation noise gates adversarial advantage
 
-Adding observation noise $\sigma_\text{obs}$ to the mismatch signal collapsed the adversarial exponent from $\sim 1.0$ to $\sim 0.2$ at $\sigma_\text{obs} = 10 \times q_\text{env}$ (fixed gain). The Riccati-optimal gain ( #emp-update-gain) partially restored the advantage to $\sim 0.4$, more than doubling it but not recovering the noise-free level. The optimal gain helps most in the moderate-noise regime, where it achieved a 52% mismatch reduction over fixed gain. See #obs-gates-advantage.
+Adding observation noise $\sigma_\text{obs}$ to the mismatch signal collapsed the adversarial exponent from $\sim 1.0$ to $\sim 0.2$ at $\sigma_\text{obs} = 10 \times q_\text{env}$ (fixed gain). The Riccati-optimal gain ( #emp-update-gain) partially restored the advantage to $\sim 0.4$, more than doubling it but not recovering the noise-free level. The optimal gain helps most in the moderate-noise regime, where it achieved a 52% mismatch reduction over fixed gain. See #obs-gated-tempo-advantage.
 
 ### Per-dimension persistence is exact; scalar overestimates
 
@@ -79,7 +79,7 @@ Bi-predictability $P$ (Hafez et al.) measures the informational architecture of 
 
 ## Epistemic Status
 
-*Empirical.* Simulation results are reproducible (code in `../../spikes/track-b-nonlinear-sims/`, fixed seeds, all results documented in variant write-ups). The key results -- regime-dependent exponents, observation noise gating, per-dimension exactness -- have been promoted to first-class segments ( #result-adversarial-exponent-regimes, #obs-gates-advantage, #result-per-dimension-persistence) with their own epistemic assessments. This appendix serves as reference for the simulation program as a whole.
+*Empirical.* Simulation results are reproducible (code in `../../spikes/track-b-nonlinear-sims/`, fixed seeds, all results documented in variant write-ups). The key results -- regime-dependent exponents, observation noise gating, per-dimension exactness -- have been promoted to first-class segments ( #result-adversarial-exponent-regimes, #obs-gated-tempo-advantage, #result-per-dimension-persistence) with their own epistemic assessments. This appendix serves as reference for the simulation program as a whole.
 
 ## Discussion
 

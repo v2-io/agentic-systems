@@ -4,7 +4,7 @@
 I predicted this segment would categorize how a signal from Agent A lands on Agent B (Informative, Shock, etc.). The text does exactly this, providing a rigorous 4-regime taxonomy (I, II-a, II-b, III) based on three independent boundaries: sector-region, model-class, and observability.
 
 **2. Cross-segment consistency.**
-This is another massive integration point. It pulls in `#def-model-class-fitness` (Regime II-b), `#result-sector-persistence-template` (Regime II-a), `#obs-gates-advantage` (Regime III), and `#emp-update-gain` (Regime I). The explicit linking of cooperative action (from `#der-team-persistence`) to Regime I events confirms that the framework's internal math is globally consistent.
+This is another massive integration point. It pulls in `#def-model-class-fitness` (Regime II-b), `#result-sector-persistence-template` (Regime II-a), `#obs-gated-tempo-advantage` (Regime III), and `#emp-update-gain` (Regime I). The explicit linking of cooperative action (from `#der-team-persistence`) to Regime I events confirms that the framework's internal math is globally consistent.
 
 **3. Math verification.**
 The decomposition of $\rho_B^{\text{eff}}$ into the four regimes is beautiful. 
@@ -15,7 +15,7 @@ The decomposition of $\rho_B^{\text{eff}}$ into the four regimes is beautiful.
 The Kalman-over-Kalman derivation is standard robust filtering theory applied correctly to prove that heavy-tailed noise breaks a Gaussian filter (Regime II-b) while massive binary kicks just exceed its bandwidth (Regime II-a).
 
 **4. What direction will the theory take next?**
-The OUTLINE indicates that the next blocks are "Results" (`#result-adversarial-tempo-advantage`, `#result-per-dimension-persistence`) and "Observations" (`#result-adversarial-exponent-regimes`, `#obs-gates-advantage`). Then it moves to derivations regarding the strategic composition (C-iv) and agent opacity. I predict the next segments will just be formal proofs or empirical validations of claims already structurally mapped in the preceding sections.
+The OUTLINE indicates that the next blocks are "Results" (`#result-adversarial-tempo-advantage`, `#result-per-dimension-persistence`) and "Observations" (`#result-adversarial-exponent-regimes`, `#obs-gated-tempo-advantage`). Then it moves to derivations regarding the strategic composition (C-iv) and agent opacity. I predict the next segments will just be formal proofs or empirical validations of claims already structurally mapped in the preceding sections.
 
 **5. What errors should I now watch for?**
 I must watch for downstream logic that treats all destabilization as a tempo failure. As the text states: "Both destabilization regimes manifest as 'adaptive reserve exceeded' in the emitter-side view. But the repairs are different: magnitude-shock (II-a) calls for more bandwidth... structural-shock (II-b) calls for a different model class." Conflating these two leads to the wrong repair.

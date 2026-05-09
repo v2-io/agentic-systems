@@ -1,5 +1,5 @@
 ---
-slug: obs-gates-advantage
+slug: obs-gated-tempo-advantage
 type: observation
 status: empirical
 depends:
@@ -9,13 +9,13 @@ depends:
 stage: draft
 ---
 
-# Observation: Observation Noise Gates Adversarial Advantage
+# Observation: Gated Tempo Advantage
 
 Observation noise collapses the adversarial tempo advantage. When agents observe their mismatch through a noisy channel, the faster agent's additional corrections become noisy, partially offsetting its tempo advantage. The optimal gain ( #emp-update-gain) partially restores the advantage but cannot fully recover it.
 
 ## Formal Expression
 
-*[Observation (observation-gates-advantage, from track-b Variant E)]*
+*[Observation (obs-gated-tempo-advantage, from track-b Variant E)]*
 
 In a two-agent adversarial system with observation noise $\sigma_{\text{obs}}$ added to each agent's mismatch signal:
 

@@ -1,4 +1,4 @@
-# Reflection: #obs-gates-advantage
+# Reflection: #obs-gated-tempo-advantage
 
 **1. Predictions vs evidence.**
 I predicted this segment would explain how observation noise ($U_o$) protects against tempo attacks by pushing interactions out of the coupling-dominant regime. The segment confirms this, showing empirically that high $\sigma_{\text{obs}}$ collapses the adversarial exponent from $1.0$ down to $0.18$ (or $0.40$ with optimal gain). 

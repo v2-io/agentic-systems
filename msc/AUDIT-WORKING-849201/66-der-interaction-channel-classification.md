@@ -4,7 +4,7 @@
 My prediction was that this segment would categorize the different ways agents interact. The segment delivered a mathematically rigorous, four-regime classification (Informative update, Magnitude-shock, Structural-shock, Ambient noise) based entirely on how an incoming event compares to the recipient's internal AAD boundaries.
 
 **2. Cross-segment consistency:**
-This is a master-level unification segment. It takes almost every major result from Sections I and III (`#result-structural-adaptation-necessity`, `#der-adversarial-destabilization`, `#der-team-persistence`, `#obs-gates-advantage`) and shows that they are all just special cases of this single four-regime taxonomy. The realization that cooperative action is simply a Regime I event with a negative sign on the disturbance is beautiful.
+This is a master-level unification segment. It takes almost every major result from Sections I and III (`#result-structural-adaptation-necessity`, `#der-adversarial-destabilization`, `#der-team-persistence`, `#obs-gated-tempo-advantage`) and shows that they are all just special cases of this single four-regime taxonomy. The realization that cooperative action is simply a Regime I event with a negative sign on the disturbance is beautiful.
 
 **3. Math verification:**
 The three boundaries defining the four regimes are perfectly chosen from existing theory:

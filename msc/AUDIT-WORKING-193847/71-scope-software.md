@@ -19,7 +19,7 @@ I need to watch for downstream claims that ignore the $F_0$ (initial implementat
 `#obs-software-epistemic-properties` will list codebase inspectability and test-based interventions as the "levers" that AAD agents use to control their observation function and reduce $U_o$.
 
 **7. What would I change?**
-I would like to see a more explicit link between the $\varepsilon$ threshold and the **Observability Floor** (from `#obs-gates-advantage`). A change that is too small to be detected by the agent's observation tools (e.g., a tiny bug that doesn't trigger a test or a compiler warning) is effectively below the $\varepsilon$ threshold for that agent. The scope is relative to the agent's sensors.
+I would like to see a more explicit link between the $\varepsilon$ threshold and the **Observability Floor** (from `#obs-gated-tempo-advantage`). A change that is too small to be detected by the agent's observation tools (e.g., a tiny bug that doesn't trigger a test or a compiler warning) is effectively below the $\varepsilon$ threshold for that agent. The scope is relative to the agent's sensors.
 
 **8. What am I now curious about?**
 I'm curious about "Software Death." If $P(\text{change}) \to 0$, the system exits the TST scope. This is "Legacy Software"—it's not dead, but it's no longer an *agentic environment*. It's a static artifact. Does AAD have anything to say about the "necrotic" transition when an environment stops changing?

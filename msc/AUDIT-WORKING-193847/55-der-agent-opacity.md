@@ -12,7 +12,7 @@ This segment is the missing half of the adversarial picture. It perfectly comple
 *Constructive repair:* The "formal dual" language should be softened to "informational dual" or "structural counterpart" unless a specific channel-capacity theorem linking them is provided. For the 16-cell arg-max, the framework must explicitly define the adversary's reward function ($V_O^{\text{adv}}$) and show that this product is the first-order Taylor expansion of that reward.
 
 **4. What direction will the theory take next?**
-The theoretical core of Section III is mostly complete. The OUTLINE shows observations and gaps next (`#result-adversarial-exponent-regimes`, `#obs-gates-advantage`, `#result-per-dimension-persistence`). These will likely provide simulation validation and specific edge-case analysis for the major theorems we just audited.
+The theoretical core of Section III is mostly complete. The OUTLINE shows observations and gaps next (`#result-adversarial-exponent-regimes`, `#obs-gated-tempo-advantage`, `#result-per-dimension-persistence`). These will likely provide simulation validation and specific edge-case analysis for the major theorems we just audited.
 
 **5. What errors should I now watch for?**
 I must watch out for claims that an agent can have high $U_o$ (it is blind) but low $H_b$ (it is perfectly predictable). If an agent is blind, its actions are likely driven by internal noise or false priors, making it *less* predictable to an observer who can see the true state of the world, unless the agent is completely rigid. 

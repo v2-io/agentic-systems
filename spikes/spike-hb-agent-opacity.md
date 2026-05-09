@@ -132,7 +132,7 @@ This is *structurally the same* as the Kalman-gain decomposition $U_M + U_o$ tha
 The existing AAD apparatus for forward uncertainty transposes directly:
 
 - **Observability-like augmentation is available on the backward side too.** Instrumenting $U_{\pi, B\to A}$ (giving $B$ better models of $A$'s policy — via shared objectives, via communication of $A$'s intentions, via shared architecture) reduces $H_b^{A \mid B}$ in the first term. Reducing $U_{a, A}$ (making $A$'s policy more deterministic given its state) reduces the second. The two knobs are independent; this matters for Angle 6's sign-flip analysis.
-- **The identifiability-floor machinery applies to backward-direction estimation.** When $B$'s observations of $A$'s action-consequences are below the floor $c_{\text{floor}}$ per `#obs-gates-advantage`, $B$ cannot reduce $U_{\pi, B\to A}$ even with unbounded data — a structural lower bound on $H_b^{A \mid B}$ from $B$'s side. This is the first hint that $H_b$ composes with `#disc-identifiability-floor` (developed in §8).
+- **The identifiability-floor machinery applies to backward-direction estimation.** When $B$'s observations of $A$'s action-consequences are below the floor $c_{\text{floor}}$ per `#obs-gated-tempo-advantage`, $B$ cannot reduce $U_{\pi, B\to A}$ even with unbounded data — a structural lower bound on $H_b^{A \mid B}$ from $B$'s side. This is the first hint that $H_b$ composes with `#disc-identifiability-floor` (developed in §8).
 
 ---
 
