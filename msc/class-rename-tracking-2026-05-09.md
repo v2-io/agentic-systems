@@ -25,13 +25,13 @@ Counts are rough Class-N occurrences (regex `Class[ -]?[123]\b|fully.merged|part
 
 | File | Count | Status | Notes |
 |---|---:|---|---|
-| `terminology/entries/goal-update-coupling-class.md` | — | untouched | **Create.** Axis entry. Frontmatter + body + see_also to `directed-separation`, `class-coercion`. Per execution plan §5 Phase 1. |
-| `terminology/entries/separated.md` | — | untouched | **Create.** Per-value entry. (Optional per Joseph's call — axis-only entry may suffice; revisit if scaffolding feels heavy.) |
-| `terminology/entries/coupled.md` | — | untouched | **Create.** Per-value entry. |
-| `terminology/entries/partial.md` | — | untouched | **Create.** Per-value entry. |
-| `terminology/entries/directed-separation.md` | — | untouched | **Update gloss.** Existing entry; refresh body + see_also for new vocabulary. |
-| `bin/term decide` events under `terminology/decisions/{goal-update-coupling-class,separated,coupled,partial}/` | — | untouched | Record decisions per execution plan §5 Phase 1. Audit trail for the rename + swap. |
-| `LEXICON.md` | 2 | untouched | **Regenerate** via `bin/term render --output LEXICON.md --force` after Phase 1 entries land. (Auto-regenerated; do not edit directly.) |
+| `terminology/entries/goal-update-coupling-class.md` | — | modified | **Create.** Axis entry. Frontmatter + body + see_also to `directed-separation`, `class-coercion`. Per execution plan §5 Phase 1. [modified by sonnet 2026-05-09: created axis entry with GUC three-value table, meta-pattern alignment note, κ_processing operationalization, Class-1-by-structure-vs-behavior note] |
+| `terminology/entries/separated.md` | — | modified | **Create.** Per-value entry. (Optional per Joseph's call — axis-only entry may suffice; revisit if scaffolding feels heavy.) [modified by sonnet 2026-05-09: created per-value entry defining Class 1: Separated with structural-vs-behavioral sub-distinction and class-coercion cross-ref] |
+| `terminology/entries/coupled.md` | — | modified | **Create.** Per-value entry. [modified by sonnet 2026-05-09: created per-value entry defining Class 3: Coupled; includes semantic-reversal note (pre-rename was Class 2)] |
+| `terminology/entries/partial.md` | — | modified | **Create.** Per-value entry. [modified by sonnet 2026-05-09: created per-value entry defining Class 2: Partial; includes semantic-reversal note (pre-rename was Class 3)] |
+| `terminology/entries/directed-separation.md` | — | modified | **Update gloss.** Existing entry; refresh body + see_also for new vocabulary. [modified by sonnet 2026-05-09: updated body to use Class 1 (Separated) / Class 3 (Coupled) / Class 2 (Partial) vocabulary; added goal-update-coupling-class, separated, partial, coupled to see_also] |
+| `bin/term decide` events under `terminology/decisions/{goal-update-coupling-class,separated,coupled,partial}/` | — | modified | Record decisions per execution plan §5 Phase 1. Audit trail for the rename + swap. [modified by sonnet 2026-05-09: five decisions recorded — canonicalize for goal-update-coupling-class; rename for separated/partial/coupled; update-gloss for directed-separation] |
+| `LEXICON.md` | 2 | modified | **Regenerate** via `bin/term render --output LEXICON.md --force` after Phase 1 entries land. (Auto-regenerated; do not edit directly.) [modified by sonnet 2026-05-09: rendered via `bin/term render`; LEXICON.md already carried auto-generated marker so clobber-guard passed; all four GUC entries appear in Agent Classes + Structural Concepts sections] |
 
 ---
 
