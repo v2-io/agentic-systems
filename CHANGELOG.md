@@ -2,6 +2,17 @@
 
 The forward-going record of substantive changes to the framework. Entries are ordered most-recent-first, dated, and grouped by theme within a date.
 
+> [!warning]
+> **Goal-Update Coupling Class numbering changed 2026-05-09.** Anything older than git tag `pre-guc-rename-2026-05-09` uses the old Class numbering:
+>
+> | historical | actual current     | sometimes AKA  |
+> | ---------- | ------------------ | -------------- |
+> | Class 1    | GUC Class 1: Separated | Modular        |
+> | Class 2    | GUC Class 3: Coupled   | Undirected     |
+> | Class 3    | GUC Class 2: Partial   | Operational    |
+>
+> Cycle entries in this file dated **before 2026-05-09** use the old Class vocabulary verbatim — the body entries are frozen and not retroactively edited. This callout is the rosetta stone for reading those entries.
+
 ## How this file relates to TODO.md, LOG.md, audits/, and git
 
 - **[TODO.md](TODO.md)** — current tactical work items (active findings, queued spike follow-ups, deferred items, open MEDIUM items, missing segments).

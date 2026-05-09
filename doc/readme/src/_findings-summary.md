@@ -12,7 +12,7 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 ### II. Actuated Adaptation: Agentic Systems
 
-- **`#der-directed-separation`** *(status: conditional)* — *Pearl-Blanket-Form Architectural Classification with Explicit Class-2 Scope Exit* — *Claim recognition* of structural equivalence between the directed-separation condition and the Pearl-blanket form of the Markov-blanket apparatus, combined with *claim differentiation* on the architectural classification (Class 1 / 2 / 3) as a discrete partition with explicit Class 2 scope exit and quantitative $\kappa_{\text{processing}}$ diagnostic for the partial-modularity case.  
+- **`#der-directed-separation`** *(status: conditional)* — *Pearl-Blanket-Form Architectural Classification with Explicit Class-3 Scope Exit* — *Claim recognition* of structural equivalence between the directed-separation condition and the Pearl-blanket form of the Markov-blanket apparatus, combined with *claim differentiation* on the architectural classification (GUC Class 1 / 2 / 3: Separated / Partial / Coupled) as a discrete partition with explicit Class 3 (Coupled) boundary and quantitative $\kappa_{\text{processing}}$ diagnostic for the Partial case.  
   [`01-aad-core/src/der-directed-separation.md`](01-aad-core/src/der-directed-separation.md)
 - **`#der-causal-insufficiency-detection`** *(status: conditional)* — *On-Policy L0 Insufficiency Is Structurally Undetectable* — *Claim differentiation* on the framing of why structure-aware exploration is required.  
   [`01-aad-core/src/der-causal-insufficiency-detection.md`](01-aad-core/src/der-causal-insufficiency-detection.md)
@@ -23,6 +23,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 - **`#form-composition-closure`** *(status: conditional)* — *Composition-Closure Defect and Bridge Lemma* — *Claim differentiation* on bounded-loss composition as agent-boundary criterion.  
   [`01-aad-core/src/form-composition-closure.md`](01-aad-core/src/form-composition-closure.md)
+- **`#der-class-coercion-via-wrapping`** *(status: conditional)* — *Constructive Class Coercion via Wrapping* — *Claim integration* of POMDP / cognitive-architecture / MDP-homomorphism prior art with the AAD machinery (sector-Lyapunov persistence template, Brooks's-Law tempo accounting, Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy) plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions.  
+  [`01-aad-core/src/der-class-coercion-via-wrapping.md`](01-aad-core/src/der-class-coercion-via-wrapping.md)
 - **`#der-agent-opacity`** *(status: conditional)* — *Agent Opacity ($H_b$) as Dual to Observation Quality ($U_o$)* — *Claim differentiation* on Hafez's $H_b$.  
   [`01-aad-core/src/der-agent-opacity.md`](01-aad-core/src/der-agent-opacity.md)
 - **`#result-per-dimension-persistence`** *(status: conditional)* — *The Weakest-Link Dimensional Persistence Law* — *Claim differentiation* on per-dimension Lyapunov stability.  
@@ -38,6 +40,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
   [`01-aad-core/src/disc-identifiability-floor.md`](01-aad-core/src/disc-identifiability-floor.md)
 - **`#disc-additive-coordinate-forcing`** *(status: discussion-grade)* — *Cross-Layer Coordinate Forcing on Legendre-Fenchel Geometry* — *Claim recognition* of cross-layer pattern across four AAD coordinate-forcing results, with the recognition itself as the contribution rather than any new theorem.  
   [`01-aad-core/src/disc-additive-coordinate-forcing.md`](01-aad-core/src/disc-additive-coordinate-forcing.md)
+- **`#disc-adversarial-coupling-pressure`** *(status: discussion-grade)* — *Adversarial Coupling Pressure as Use-Case Expansion of Coupled Formulation* — *Claim recognition* of adversarial coupling pressure as a structural phenomenon in AAD's existing scope architecture — adversaries strategically drive coupling because coupling expands attack surface — combined with *claim differentiation* on the population scope of coupled-formulation analysis: not just architecturally-coupled agents, but any agent under sustained adversarial coupling pressure.  
+  [`01-aad-core/src/disc-adversarial-coupling-pressure.md`](01-aad-core/src/disc-adversarial-coupling-pressure.md)
 - **`#result-contraction-template`** *(status: conditional)* — *Topology-Indexed Compositional Closures via Contraction-Metric Generalization* — *Claim synthesis* on contraction-metric machinery + AAD's sub-scope partition + (PI)/Čencov axiom.  
   [`01-aad-core/src/result-contraction-template.md`](01-aad-core/src/result-contraction-template.md)
 - **`#deriv-causal-ib-exploration`** *(status: conditional)* — *Survival-Imperative Exploration as Lyapunov-Forced Drive* — *Claim differentiation* on the structural source of agentic exploration.  
@@ -62,4 +66,6 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 - **`#scope-observation-ambiguity-modulation`** *(status: conditional)* — *Ambiguity-Bounded Architectural Bias Law for Coupled Agents* — *Claim novelty* on the formal product-form bias law $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$ for coupled-architecture agents, where $\kappa$ is an architectural property of the processor and $I$ measures the goal-resolvable residual uncertainty left by the observation.  
   [`03-logogenic-agents/src/scope-observation-ambiguity-modulation.md`](03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
+- **`#der-logogenic-as-wrapping`** *(status: conditional)* — *Logogenic Substrate Specialization of Class Coercion* — *Claim integration* of the class-coercion theorem with the scaffolded-logogenic regime.  
+  [`03-logogenic-agents/src/der-logogenic-as-wrapping.md`](03-logogenic-agents/src/der-logogenic-as-wrapping.md)
 

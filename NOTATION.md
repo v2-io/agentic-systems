@@ -60,7 +60,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $\mathcal{M}$ | Set | Model space (the class of representable models) |
 | $\phi$ | Function | Compression: $M_t = \phi(\mathcal C_t)$ |
 | $f$ | Function | Recursive update: $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ |
-| $f_M$ | Function | Epistemic update function: M-projection of the state update. Modular ($f_X^M = f_M$, no causal path from $G_t$) under directed separation in Class 1 ( #der-directed-separation); coupled to $G_t$ in Class 2/3 (the $f_X^M \neq f_M$ case underlying the Class-2 ambiguity bias bound, #deriv-observation-ambiguity-bias-bound). |
+| $f_M$ | Function | Epistemic update function: M-projection of the state update. Separated ($f_X^M = f_M$, no causal path from $G_t$) under directed separation in Class 1 ( #der-directed-separation); coupled to $G_t$ in Class 2 (Partial) or Class 3 (Coupled) (the $f_X^M \neq f_M$ case underlying the Class 3 (Coupled) ambiguity bias bound, #deriv-observation-ambiguity-bias-bound). |
 | $S(M_t)$ | $\in [0, 1]$ | Model sufficiency ( #def-model-sufficiency) |
 | $\mathcal{F}(\mathcal{M})$ | $\in [0, 1]$ | Model class fitness ( #def-model-class-fitness) |
 | $\beta$ | Scalar $\gt 0$ | Information bottleneck trade-off parameter |

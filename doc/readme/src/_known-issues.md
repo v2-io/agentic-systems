@@ -8,7 +8,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 ### Known Fragilities — what falls outside formal scope
 
 - Missing commitment / resource / temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs) — handled as architectural scope (Class 2 exit), not approximation
+- Directed separation violated by goal-conditioned agents (LLMs, GUC Class 3: Coupled) — handled as architectural scope (Class 3 Coupled exit), not approximation
 
 *Source: [`CLAUDE.md`](CLAUDE.md).*
 
