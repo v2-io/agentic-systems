@@ -13,7 +13,7 @@ stage: draft
 
 # Definition: Coupled Update Dynamics
 
-For Class 2 (fully merged) agents, the factored update — $M_t$ first, then $G_t$ — is replaced by a single coupled update on the full state. The LLM's forward pass, given a prompt assembled from the prior state and a new event, produces a response that simultaneously encodes updated beliefs and strategic assessments. This is the starting formulation for logogenic agent theory: rather than dropping directed separation as an approximation, we begin without it.
+For Class 3 (Coupled) agents, the factored update — $M_t$ first, then $G_t$ — is replaced by a single coupled update on the full state. The LLM's forward pass, given a prompt assembled from the prior state and a new event, produces a response that simultaneously encodes updated beliefs and strategic assessments. This is the starting formulation for logogenic agent theory: rather than dropping directed separation as an approximation, we begin without it.
 
 ## Formal Expression
 
@@ -31,7 +31,7 @@ where:
 
 **Contrast with the factored update** ( #der-directed-separation):
 
-| Property | Factored (Class 1) | Coupled (Class 2) |
+| Property | Factored (Class 1 — Separated) | Coupled (Class 3 — Coupled) |
 |---|---|---|
 | Update structure | $M_{\tau^+} = f_M(M_{\tau^-}, e_\tau)$, then $G_{\tau^+} = f_G(G_{\tau^-}, M_{\tau^+}, e_\tau)$ | $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ as a single computation |
 | Information flow | Unidirectional: $M \to G$ | Bidirectional: $M \leftrightarrow G$ within the forward pass |
@@ -88,10 +88,11 @@ Max attainable: robust-qualitative. The formulation describes a concrete class o
 
 **Chain-of-thought as approximate cascade.** When the LLM generates a chain-of-thought reasoning trace, the token-by-token generation process can approximate the sequential cascade: early tokens address "what happened?" (epistemic), middle tokens address "what does this mean for my plan?" (strategic), and late tokens address "what should I do?" (action). This approximation is shaped by training, not by architecture — there is no guarantee the LLM follows this ordering, and highly goal-relevant observations may disrupt it (the agent jumps to strategic conclusions before adequately processing the evidence). The quality of the cascade approximation is a behavioral property, not an architectural one.
 
-**System-level factorization.** While the LLM component is Class 2, the agent *system* can introduce partial factorization through design: a separate retrieval module that processes documents without goal-conditioning, an external monitor that observes the $(S, A, S')$ stream independently, or a memory system that stores observations without strategic filtering. These system-level design choices can reduce the effective $\kappa_{\text{processing}}$ of the overall system below that of the LLM component alone.
+**System-level factorization.** While the LLM component is Class 3 (Coupled), the agent *system* can introduce partial factorization through design: a separate retrieval module that processes documents without goal-conditioning, an external monitor that observes the $(S, A, S')$ stream independently, or a memory system that stores observations without strategic filtering. These system-level design choices can reduce the effective $\kappa_{\text{processing}}$ of the overall system below that of the LLM component alone.
 
 ## Working Notes
 
 - The prompt-assembly function $\text{prompt}(\cdot)$ is where most engineering decisions live: what to retrieve, what context to include, how to format the objective, how much history to retain. These choices determine the effective $X_{\tau^-}$ available to the forward pass and hence the quality of the update. A theory of prompt engineering is, in AAD terms, a theory of the $\text{prompt}(\cdot)$ function's effect on update quality.
 - The response-decomposition $(r_\tau^M, r_\tau^G, r_\tau^a)$ is not always clean. A single sentence ("This test failure means our auth fix broke the session handler, so we need to revert") simultaneously updates beliefs, evaluates strategy, and implies an action. The decomposition is for analytical purposes; no claim that it is computable in general.
 - The between-event dynamics noted in #form-complete-agent-state ("$\dot{G} = g_G(G, M)$ allows autonomous purposeful evolution during deliberation") have a logogenic analog: the LLM's autoregressive generation, where each token generation is a micro-event that can shift the state. A long reasoning trace is a sequence of micro-events within a single macro-event (the tool result or user message that triggered the response).
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Logogenic agents are now Class 3 (Coupled), not Class 2. All "Class 2" references in this segment referred to logogenic/fully-merged agents and now read Class 3 (Coupled). Note: "coupled" in the segment title and throughout refers to coupled-update dynamics (the segment's central concept), not the GUC axis; "Class 3 (Coupled)" form used on first GUC mention to disambiguate. Removed at `candidate` stage per FORMAT.md Gate 4.

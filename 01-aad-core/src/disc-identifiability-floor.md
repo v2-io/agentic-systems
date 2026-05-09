@@ -99,7 +99,7 @@ The pattern is *not* a negative posture. AAD does not say "many things are impos
 
 **Boundary characterization.** The unique escape is to adopt the Parameterization Invariance (PI) axiom. Under (PI), Čencov's theorem forces the geometry to be the Fisher-Rao metric. In this canonical geometry, the relationship between mutual information and parameter displacement is universally bounded (e.g., $C_{FR} = \sqrt{2}$ in the small-information regime).
 
-**Strengthened consequence.** This elevates the (PI) axiom from a "nice-to-have" geometric property to a **load-bearing requirement** for the Class 2 bias bound in `#result-section-ii-survival` and `#scope-observation-ambiguity-modulation`. Without (PI), the bias bound is merely an order-of-magnitude heuristic; with (PI), it is a rigorous theorem.
+**Strengthened consequence.** This elevates the (PI) axiom from a "nice-to-have" geometric property to a **load-bearing requirement** for the Class 3 (Coupled) bias bound in `#result-section-ii-survival` and `#scope-observation-ambiguity-modulation`. Without (PI), the bias bound is merely an order-of-magnitude heuristic; with (PI), it is a rigorous theorem.
 
 **Tier.** *Exact (counter-example-grade).* The non-existence of a universal $C$ in arbitrary Euclidean norms is proven by explicit construction.
 
@@ -147,7 +147,7 @@ Max attainable: *discussion-grade* for the meta-pattern (it is a presentational 
 
 **The pattern is asymmetric.** Each floor forbids inference *from* limited data; it does not forbid inference *with* the augmenting capability. The asymmetry is the source of the pattern's positive content — it tells the reader exactly what to instrument, observe, or intervene upon to escape the floor.
 
-**The pattern composes with AAD's scope honesty.** Directed separation ( #der-directed-separation) classifies architectures by where Section II's exact results apply (Class 1 modular; Class 2 fully merged needs coupled formulation). The identifiability floors are a different kind of scope claim: they specify what the theory's machinery *cannot do* under specific information regimes, with explicit characterization of the regime escapes. Together, the architectural classification and the identifiability floors mark AAD's scope at two levels — what kinds of agents the theory applies to, and what those agents can and cannot infer from given data.
+**The pattern composes with AAD's scope honesty.** Directed separation ( #der-directed-separation) classifies architectures by where Section II's exact results apply (Class 1 Separated; Class 3 Coupled needs coupled formulation). The identifiability floors are a different kind of scope claim: they specify what the theory's machinery *cannot do* under specific information regimes, with explicit characterization of the regime escapes. Together, the architectural classification and the identifiability floors mark AAD's scope at two levels — what kinds of agents the theory applies to, and what those agents can and cannot infer from given data.
 
 **Complementarity with the separability pattern ( #disc-separability-pattern).** This segment names the *negative half* of AAD's scope; the companion meta-segment #disc-separability-pattern names the *positive half* — separable-core / structured-repair / general-open across six ladders (correlation, convention, architecture, contraction, identification, scope). Each identifiability-floor instance here has a positive counterpart there: Instance 1's on-policy detection no-go matches the observable-sibling-covariance structured-repair in the correlation ladder; Instance 2's unobservable-$C$ L1' refutation matches the observable-$C$ / facilitator-monotonicity structured-repair in the same ladder. The two halves together characterize AAD's scope at both extremes — what succeeds and under what machinery, and what structurally cannot succeed without specific information augmentation.
 
@@ -182,6 +182,7 @@ The four instances import distinct external theorems; per-instance prior-art lan
 
 ## Working Notes
 
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Removed at `candidate` stage per FORMAT.md Gate 4.
 - **Naming convention.** "Identifiability floor" frames the pattern positively: the floor is what the agent cannot go below given limited information, but the boundary characterization tells the agent exactly how to climb above it. An alternative name "no-go theorems" would emphasize the negative form. Recommend retaining "floor" — it captures the asymmetry.
 
 - **Instance 3 as a candidate.** The "L1 augmentation when the augmentation graph is itself causally insufficient" question (recurse the no-go: detect when the L1 augmentation is itself missing common causes) is a candidate Instance 3. Likely reduces to Instance 1 applied at the L1 level — the agent at L1 faces the same on-policy detection no-go for L1 → L2 escalation. Worth formalizing if a third instance emerges that does *not* reduce to the existing two.

@@ -44,7 +44,7 @@ This is structural, not parametric — no choice of $\eta^*$ or model size resto
 
 ## Discussion
 
-In classical AAD (Section II under directed-separation, Class 1), observations and actions are distinct: $\mathcal O$ contains sensor measurements, $\mathcal A$ contains motor commands or control inputs, and the model state $M_t$ is updated from $\mathcal O$ via $f_M$ that has no causal path from $G_t$. Modular agents like Kalman + LQR satisfy this by construction — the estimator $f_M$ is built without reference to the controller $\pi(G_t, M_t)$.
+In classical AAD (Section II under directed-separation, Class 1 (Separated)), observations and actions are distinct: $\mathcal O$ contains sensor measurements, $\mathcal A$ contains motor commands or control inputs, and the model state $M_t$ is updated from $\mathcal O$ via $f_M$ that has no causal path from $G_t$. Separated agents like Kalman + LQR satisfy this by construction — the estimator $f_M$ is built without reference to the controller $\pi(G_t, M_t)$.
 
 In a logogenic agent, this clean factorization breaks because the LLM's forward pass is *one operation* that produces tokens which serve simultaneously as model update (via attention over the prompt's prior context) and as candidate action (via decoding). There is no intermediate stage where the model state could be "extracted" before the goal-conditioning influences it.
 

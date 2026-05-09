@@ -31,9 +31,7 @@ Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` f
 
 These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, not a slug. Each row: add/update LEXICON entry + sweep affected segments.
 
-- [ ] **Class 1/2/3 → Separated/Coupled/Partial; "Goal-Update Coupling Class" axis name; coordinated Class 2 ↔ 3 numbering swap** *(largest item; multi-segment; warrants its own commit)*
-  - **Authoritative execution plan: [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md).** Self-contained — covers the transformation, surface-area enumeration (~30 segments + 4 partials + ~7 root docs), rationale, the warning-callout discipline, the migration-note convention, the terminology-system entry shape, the git-tag step, the open questions still needing Joseph's call, and the phased execution sequence.
-  - **Source rationale:** [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) lines 92–116 (original 2026-05-04 decision record + meta-pattern alignment audit). The execution plan synthesizes from this; this row defers to the plan for everything else.
+*All §B items landed.* The Class 1/2/3 → Separated/Coupled/Partial bundle (with the coordinated Class 2 ↔ 3 swap and the "Goal-Update Coupling Class" axis name) executed on the `guc-rename-2026-05-09` topical branch. See CHANGELOG entry for the cycle narrative; execution plan archived at [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md); live tracking at [`msc/class-rename-tracking-2026-05-09.md`](msc/class-rename-tracking-2026-05-09.md).
 
 [F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
 
@@ -156,6 +154,12 @@ Each item: LEXICON entry + first-encounter cite added to the source segment (in 
 - [ ] **cycle vs loop** — canonicalize the *pair-distinction* itself as load-bearing AAD vocabulary. The pair, not either word alone, is the citation handle. LEXICON's existing Cycle Phases table already carries the loop/cycle gloss — verify present in the right shape and remove this row.
 
 ---
+
+## E. Future terminology-system enhancements (`bin/term` evolution)
+
+Tooling improvements surfaced during rename-cycle execution. Land independently from the naming-cycle queue above — they affect how the renderer behaves, not which terms canonicalize.
+
+- **`sequence-id:` field for within-group ordering override** (surfaced 2026-05-09 during GUC rename Phase 1). Currently `bin/term render` sorts entries alphabetically by `term:` within each `tags:`-driven section. This makes axis-keyed entries render out of taxonomy order — e.g., the GUC three-value axis renders alphabetically (Coupled / Partial / Separated) in the Agent Classes section rather than monotonically (Class 1: Separated → Class 2: Partial → Class 3: Coupled). A `sequence-id:` field (integer or compound — e.g., `goal-update-coupling.1` / `.2` / `.3`) would let entries opt into a within-group ordering override; entries without `sequence-id:` continue to sort alphabetically by `term:`. Same field would serve future axis-keyed taxonomies (Knowledge Type axis, Contraction Tier 1/2/3, Identification Regime A/B/C, etc.). Implementation sketch: extend the renderer's per-section sort to read `sequence-id:` first, fall back to alphabetic by `term:`. Cross-section entries (multi-tagged) would carry one `sequence-id:` per relevant axis or use a single value where the ordering applies in all sections.
 
 ## D. Open-question residue (the 13 to-canonicalize rows still pending decision)
 

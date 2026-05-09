@@ -4,7 +4,7 @@
 
 **Purpose.** Stand alone as the executable plan for a (likely fresh-context) session that picks up the rename. Self-contained — should not require reading the conversation that produced it. Authoritative for sequencing and discipline; defers to `msc/naming/naming-rename-plan.md` for the original 2026-05-04 decision rationale and to `terminology/README.md` for tooling specifics.
 
-**Status when executing session opens.** The five [Open questions](#open-questions-needing-josephs-call) below need Joseph's call before surgery starts. They genuinely change the execution shape. Each carries my recommendation but the choice is his.
+**Status (2026-05-09 evening).** Five framing questions resolved by Joseph; topical branch `guc-rename-2026-05-09` created in main worktree; live tracking file at [`msc/class-rename-tracking-2026-05-09.md`](class-rename-tracking-2026-05-09.md). Decisions are recorded in [§4](#4-decisions-josephs-calls-2026-05-09); prose disposition guidance in [§4a](#4a-prose-disposition-general-principles); execution sequence in [§5](#5-execution-sequence).
 
 ---
 
@@ -61,19 +61,15 @@ grep -l -E "Class[ -]?[123]\b|class[- ]?[123]\b|fully.merged|partially.modular" 
 
 ### Direct-edit files (canonical source)
 
-**01-aad-core segments (17):**
-- `der-directed-separation.md` ⭐ canonical home (32+ occurrences; the architectural classification table, the κ operationalization, the Pearl-blanket discussion, the composite-level inheritance)
-- `der-class-coercion-via-wrapping.md` ⭐ heavy-touch (15+ occurrences; landed today; uses old vocab throughout)
-- `result-section-ii-survival.md` ⭐ heavy-touch (the "Class 2" survival classification table)
-- `disc-separability-pattern.md` ⭐ meta-pattern Architecture row (label-edit; column order stays cleanest → middle → worst — see [Open Question 3](#3-meta-pattern-table))
-- `deriv-observation-ambiguity-bias-bound.md` (segment titled "Class-2 ambiguity bias bound" → "Class-3 ambiguity bias bound" given the swap; check for slug-related references)
-- `def-value-object.md`, `der-agent-opacity.md`, `der-interaction-channel-classification.md`, `der-tempo-composition.md`, `deriv-strategic-composition.md`, `deriv-update-detection-latency.md`, `disc-adversarial-coupling-pressure.md` (landed today), `disc-exploit-explore-deliberate.md`, `disc-identifiability-floor.md`, `disc-independence-audit.md`, `example-strategy.md`, `hyp-directed-separation-under-composition.md`, `scope-composite-agent.md`
+For per-file Class-N occurrence counts and per-file notes, see the live tracking file: [`msc/class-rename-tracking-2026-05-09.md`](class-rename-tracking-2026-05-09.md). The summary below is the high-level enumeration; the tracking file has the row-level detail.
 
-**02-tst-core segments (1):** `scope-developer-agent.md`
+**01-aad-core segments (17):** canonical home (`der-directed-separation`), today's-landings (`der-class-coercion-via-wrapping`, `disc-adversarial-coupling-pressure`), the meta-pattern Architecture row (`disc-separability-pattern`), and 13 lighter segments. Plus `01-aad-core/OUTLINE.md`.
 
-**03-logogenic-agents segments (8):** `def-coupled-update-dynamics.md`, `der-logogenic-as-wrapping.md`, `result-coupled-diagnostic-framework.md`, `result-section-ii-survival.md` (note: this file is in 03 not 01 — verify), `scope-channel-collapse.md`, `scope-logogenic-agent.md`, `scope-observation-ambiguity-modulation.md`, `scope-scaffolded-logogenic.md` — *these are typically the segments where logogenic = Class 2 fully-coupled becomes Class 3 Coupled (semantic reversal applies)*
+**02-tst-core segments (1):** `scope-developer-agent.md`.
 
-**04-eli segments (4):** `def-auxilia-hierarchy.md`, `def-imperium-arbitrium-split.md`, `scope-eli.md`, `scope-moral-continuity.md`
+**03-logogenic-agents segments (8) + OUTLINE:** `def-coupled-update-dynamics`, `der-logogenic-as-wrapping`, `result-coupled-diagnostic-framework`, `result-section-ii-survival` *(this is the survival-classification segment; lives here, not in 01)*, `scope-channel-collapse`, `scope-logogenic-agent`, `scope-observation-ambiguity-modulation`, `scope-scaffolded-logogenic`. *Heaviest semantic-reversal area* — logogenic agents were Class 2 (fully merged) under the old vocab; under the swap they become Class 3 (Coupled). Cross-references that say "Class 2 ⇒ logogenic territory" remain semantically correct but now read "Class 3 ⇒ logogenic territory."
+
+**04-eli segments (4):** `def-auxilia-hierarchy`, `def-imperium-arbitrium-split`, `scope-eli`, `scope-moral-continuity`.
 
 **OUTLINE files (2):** `01-aad-core/OUTLINE.md`, `03-logogenic-agents/OUTLINE.md`
 
@@ -105,58 +101,76 @@ grep -l -E "Class[ -]?[123]\b|class[- ]?[123]\b|fully.merged|partially.modular" 
 
 ---
 
-## 4. Open Questions Needing Joseph's Call
+## 4. Decisions (Joseph's calls, 2026-05-09)
 
-These genuinely change the execution shape. Resolve before surgery starts.
+The five framing questions resolved before surgery starts. Each decision shapes the execution.
 
-### 1. Single commit vs. batched
+### 1. Topical branch + batched commits
 
-**Question.** TERMINOLOGY-TODO says "warrants its own commit." Treat as one big commit (whole surface in one shot), or batched by region (e.g., `01-aad-core` canonical → `03-logogenic-agents` → `04-eli` + `02-tst-core` → root docs + README rebuild) with a CHANGELOG entry tying them together at the end?
+**Decision.** Create branch `guc-rename-2026-05-09` in the main worktree (no separate worktree); batch-commit however the executing agent sees fit. Commit cadence is judgment, not prescribed — coherent semantic units suggested.
 
-**Trade-off.** Single commit: cleaner narrative; one revert button; no intermediate states where some files use old vocab and some use new. Batched: smaller blast radius per commit; bisectable if a regression appears; intermediate states are temporarily inconsistent but each batch lands consistently within itself.
+**Implication.** Recommended batch ordering: Phase 1 terminology entries → Phase 2 01-aad-core canonical (heaviest, surfaces issues first) → Phase 3 03-logogenic-agents (semantic-reversal heavy) → Phase 4 02-tst-core + 04-eli → Phase 5 OUTLINEs + partials + root docs + archaeology callouts → Phase 6 plan-file collapses → Phase 7 auto-regenerate downstream → Phase 8 CHANGELOG + git tag + branch merge. See [§5](#5-execution-sequence).
 
-**My recommendation.** **Batched, ordered as 01-aad-core canonical (heaviest, surfaces issues first) → 03-logogenic-agents → 02-tst-core + 04-eli → root docs + README/LEXICON regenerate → CHANGELOG entry + git tag.** Each batch a coherent commit; single CHANGELOG entry written at the end summarizing the arc.
+### 2. Surface scope: all non-archaeological in scope
 
-### 2. Surface scope
+**Decision.** All non-archaeological canonical-surface Class-N occurrences are in scope (TODO's ~7-segment estimate was wrong). Per fresh grep: 30 segments + 2 OUTLINEs + 4 partials + ~7 root docs + auto-regenerated downstream. Frozen archaeology (`_obs/`, `msc/AUDIT-WORKING-*`, `audits/`, `spikes/`, `ref/`, naming-vote files, etc.) gets warning callouts on the canonical-surface anchors but no direct edits.
 
-**Question.** TERMINOLOGY-TODO §B explicitly lists ~8 segments + README + CLAUDE.md. The fresh grep surfaces ~30 segments + 2 OUTLINEs + 4 partials + ~7 root docs (see §3 above). Treat all canonical-surface occurrences as in-scope, or stick to the explicit list and let the rest float?
+### 3. Meta-pattern table: label-edit + key
 
-**Trade-off.** Letting the rest float means future readers encounter mixed vocabulary across the corpus until a follow-on cleanup cycle. Treating all in-scope means the rename closes cleanly but the touch-radius is ~3× larger.
+**Decision.** `#disc-separability-pattern` Architecture row: label-edit only, column order unchanged. Add a one-line *key* below the Architecture row mapping the new property names to their (new) numbered classes (e.g., "Class 1 = Separated; Class 2 = Partial (was Class 3 Partially modular); Class 3 = Coupled (was Class 2 Fully merged)"). The key serves as a local mini-rosetta-stone for readers approaching the meta-pattern table fresh.
 
-**My recommendation.** **All canonical-surface occurrences in scope.** The corpus carries its own consistency cost; mixed vocabulary across segments is a chronic friction-source for future readers and audits. The semantic-reversal nature of this swap *especially* benefits from a single closing pass.
+### 4. Terminology entries first + live tracking file
 
-### 3. Meta-pattern table
+**Decision.** Phase 1 lands the terminology entries (`goal-update-coupling-class.md` axis + `separated.md` / `coupled.md` / `partial.md` per-value entries) and decision events first, before any segment sweep. **And** maintain a live tracking file at [`msc/class-rename-tracking-2026-05-09.md`](class-rename-tracking-2026-05-09.md) — a single long table of every in-scope file (and archaeology coverage) with status `untouched` → `modified` → `verified`. The tracking file lets newer batches reference verified rows + lets verification proceed in parallel with surgery on still-untouched rows.
 
-**Question.** `#disc-separability-pattern`'s Architecture row currently has columns `Class 1 | Class 3 | Class 2` (cleanest→middle→worst). Post-swap the column *order* stays cleanest→middle→worst but the *labels* inside become `Class 1 | Class 2 | Class 3`. Confirm: this is just label-edits, no column reorder?
+**First targets per Joseph:** the LEXICON regeneration (Phase 1 terminology entries → `bin/term render`) and `01-aad-core/src/der-directed-separation.md` (canonical home, 32 occurrences) — verify these first before opening the broader sweep.
 
-**My recommendation.** **Confirm. Label-edits only, no reorder.** The column semantics (separable core / structured repair / general open) don't change; the swap aligns the numerals with the column order, which is the whole point of the swap.
+### 5. Migration-note discipline: every segment with semantic-meaning change
 
-### 4. LEXICON / terminology-entry timing
+**Decision.** Apply the one-line Working-Notes migration note to every segment whose Class-N reference changes semantic meaning (i.e., the segment mentions Class 2 = fully-merged or Class 3 = partially-modular under old vocab — both swap, both warrant a note). Segments that only mention Class 1 don't need a note since Class 1 is unchanged in number. Migration notes are removed at `candidate` stage per FORMAT.md Gate 4 — they exist to bridge the rename, not to persist forever.
 
-**Question.** Land the `terminology/entries/goal-update-coupling-class.md` (axis entry) + per-value entries first (so segments can reference them during sweep), or sweep prose first and add the entries in the same commit?
+## 4a. Prose Disposition (General Principles)
 
-**Trade-off.** Entries first: cross-references resolve during the sweep; `bin/term lint` won't complain. Prose first: lets the sweep's discoveries shape the entry's gloss (some prose contexts may surface clarifications worth capturing in the entry).
+The rename moves from positional labels (Class 1/2/3) to property labels (Separated/Coupled/Partial). Prose should follow suit, but with care — bare property words can collide with adjacent concepts in the project's vocabulary (composition coupling, intertemporal coupling, strategic self-coupling, adversarial coupling pressure, partial wrapping W₂, partial information). The principles below are guidance, not mechanical rules — per-occurrence judgment is the discipline.
 
-**My recommendation.** **Entries first, in the first commit of the batch sequence.** They're small (3–4 entries), don't risk the semantic-reversal trap, and being able to cross-reference them from segment prose during the sweep is operationally useful. If the sweep surfaces clarifications, refine the entry in the final commit before the CHANGELOG entry.
+**Register-mixed default.** Use the form whose readability is highest in the local context:
 
-### 5. Migration-note discipline
+- **GUC-prefix forms** (`GUC-Separated`, `GUC-Coupled`, `GUC-Partial`) — best for headers, tables, cross-references between segments, and any context where the term needs to stand alone without surrounding context to anchor it. Citable, unambiguous, follows the project's compound-acronym discipline (matches AAD, TST, ELI, PROPRIUM).
+- **`Class N: Property` form** (`Class 1: Separated`, `Class 3: Coupled`) — best in tables, formal definitions, and first-mention-in-segment slots where preserving the numeric handle aids readers familiar with the prior vocabulary.
+- **Bare property word** (`Separated`, `Coupled`, `Partial`) — cleanest in mid-segment running prose where the segment has already established the GUC taxonomy and ambiguity with adjacent coupling/partial concepts is low. *Especially watch* segments that touch composition coupling, strategic self-coupling, adversarial coupling pressure, partial wrapping (W₂), or partial information — bare "Coupled" / "Partial" can collide with the segment's own central content there.
+- **`property class`** (`the Coupled class`, `Separated agents`) — natural for categorical reference ("the Coupled class includes transformer LLMs") or modifier use where the noun anchors the term.
 
-**Question.** Add a one-line Working Notes migration note in *every* segment whose Class-N reference changes semantic meaning, or only in segments where the change is most likely to confuse (the heaviest-cited ones)?
+**The "modular" word disambiguation.** Pre-rename, the Class 1 row in `#der-directed-separation`'s class table was titled "Modular" — that label changes to "Separated." But "modular" is heavily used in the project beyond Class-1 designation (modular topology, modular monitoring, modular sidecar, the queued M4 `#disc-modularity-state-dynamics` segment, the broader modularity-as-contested-property cycle). Per-occurrence judgment is required:
 
-**TERMINOLOGY-TODO says** *"Migration note in Working Notes for any segment whose Class N reference changes semantic meaning (Class 2 ↔ Class 3) — one-line note documenting the 2026-05-04 swap so future readers can decode archival references. Removed at `candidate` stage per FORMAT.md Gate 4."* — i.e., the discipline already commits to the broader form.
+- *Class-1 references* (in the class table; in "modular agent design with separated belief/goal/action"; in "modular RL with separate world model") → rename to Separated / GUC-Separated.
+- *Broader modularity-concept references* (modular topology, modular monitoring, modular sidecar, modularity-as-quality, the M4 segment's modularity-state vocabulary) → leave as-is. These refer to system-level modularity, not specifically GUC-Class-1 membership.
 
-**My recommendation.** **Apply to every segment whose Class-N reference changes semantic meaning** (i.e., every segment that mentions Class 2 = fully-merged or Class 3 = partially-modular under the old vocabulary; not every segment that just mentions Class 1, which is unchanged). The note is one line, removed at candidate stage, and it's the per-segment local rosetta-stone alongside the global warning callouts. Segments that only mention Class 1 don't need a note since Class 1 is unchanged in number.
+When uncertain, the test: *Could this sentence be rewritten as "GUC-Separated [thing]" without changing meaning?* If yes, rename. If no (the sentence is about modularity-as-property rather than membership-in-Class-1), leave.
+
+**Heuristic — not prescription.** These principles are guidance for the executing agent's per-occurrence judgment. Resist mechanical find-replace; read each context. The semantic-reversal nature of the Class 2 ↔ 3 swap *especially* requires reading.
+
+**Sweep regex (broader form).** The narrow `Class[ -]?[123]\b` regex misses the table-label forms ("Modular" / "Fully merged" / "Partially modular") that carry the class names through prose. Use:
+
+```bash
+grep -E -i -l "class[ -]?[123]\b|fully.merged|partially.modular|\bmodular agent|\bmodular architecture|\bmodular case|class[- ]?\([123]\)" \
+  --include="*.md" -r 01-aad-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/ doc/readme/src/ doc/naming-principles.md \
+  CLAUDE.md NOTATION.md HISTORICAL-CONTEXT.md PROPOSALS.md TODO.md PRACTICA.md TERMINOLOGY-TODO.md \
+  CHANGELOG.md LOG.md FINDINGS.md LEXICON.md README.md README-auditor.md
+```
+
+The 2026-05-09 verification surfaced no in-scope files beyond the original ~30; false positives (`form-composition-closure` on `class-coercion`, `def-strategy-dag` on `(n_C+1)` math notation, 02-tst-core ordinal-class-of-counterfactuals / SE "First Class Data") were checked and excluded. Re-verify at execution time anyway — the regex is heuristic, not exhaustive.
 
 ---
 
-## 5. Execution Sequence (Once Questions Settle)
+## 5. Execution Sequence
 
-Assuming the recommendations above are accepted; modify per Joseph's calls.
+Per the decisions in §4. The phase ordering follows Joseph's batched-commits direction.
 
 ### Phase 0: Pre-flight
 
-1. **Reverify surface area.** Re-run the grep from §3 against the current tree.
-2. **Reverify naming-rename-plan.md is intact.** Lines 92–116 are the original rationale source.
+1. **Confirm on the topical branch.** `git status` should show `On branch guc-rename-2026-05-09`.
+2. **Reverify surface area** with the broader regex from §4a (case-insensitive, includes `\bmodular agent`/etc. patterns). Cross-check against the per-file rows in the tracking file.
+3. **Reverify naming-rename-plan.md is intact.** Lines 92–116 are the original rationale source.
 3. **Read `terminology/README.md`** if not already familiar with `bin/term` — entry creation, decision events, render workflow.
 4. **Read CLAUDE.md §LEXICON discipline** — terminology system is now the canonical source for prose vocabulary; LEXICON.md is auto-generated.
 

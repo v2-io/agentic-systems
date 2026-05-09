@@ -1,5 +1,16 @@
 # LOG.md — Cycle History (frozen 2026-04-24)
 
+> [!warning]
+> **Goal-Update Coupling Class numbering changed 2026-05-09.** Anything older than git tag `pre-guc-rename-2026-05-09` uses the old Class numbering:
+>
+> | historical | actual current     | sometimes AKA  |
+> | ---------- | ------------------ | -------------- |
+> | Class 1    | GUC Class 1: Separated | Modular        |
+> | Class 2    | GUC Class 3: Coupled   | Undirected     |
+> | Class 3    | GUC Class 2: Partial   | Operational    |
+>
+> This file is frozen pre-2026-04-24 archaeology — all Class-N references in the body below use the old vocabulary.
+
 **This file is frozen at 2026-04-24.** Cycle narratives from 2026-04-24 onward live in [`CHANGELOG.md`](CHANGELOG.md). Entries below remain available as archaeology of cycles before that transition.
 
 This file records cycle-by-cycle narrative for completed audit/strengthening/brainstorm cycles up through the early 2026-04-24 commits. **It is archaeology, not load-bearing for current work.** Fresh agents should read `CLAUDE.md` (architectural state), `TODO.md` (active work), and `CHANGELOG.md` (current-cycle narratives) first; come here only when the *origin* of a current commitment matters — for instance, when judging whether a "settled" item rests on derivation or on a cycle's working consensus, or when an audit finding's prior status helps decide a current routing call.

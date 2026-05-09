@@ -21,6 +21,16 @@ What ASF is not: a finished theory, a foundation-model architecture, or a claim 
 - *See the current work on the theory* → [`PRACTICA.md`](PRACTICA.md) — the strategic-portfolio navigator naming active areas of work with priority markers (🌟 primary, ⭐ secondary). In the framework's own vocabulary, PRACTICA is the top levels of the project's strategy DAG, sitting above [`TODO.md`](TODO.md) (tactical items) and [`PROPOSALS.md`](PROPOSALS.md) (architectural moves under review).
 
 
+> [!warning]
+> **Goal-Update Coupling Class numbering changed 2026-05-09.** Anything older than git tag `pre-guc-rename-2026-05-09` uses the old Class numbering:
+>
+> | historical | actual current     | sometimes AKA  |
+> | ---------- | ------------------ | -------------- |
+> | Class 1    | GUC Class 1: Separated | Modular        |
+> | Class 2    | GUC Class 3: Coupled   | Undirected     |
+> | Class 3    | GUC Class 2: Partial   | Operational    |
+
+
 <!--
   Four-paragraph distillation. The long-form authoritative version is
   at HISTORICAL-CONTEXT.md (root). When the short form here is being
@@ -40,7 +50,7 @@ Operationally, this delivers a small set of diagnostics and structural results a
 
 For practitioners already working with active inference or standard RL framings, the divergence is precise rather than rhetorical. Active inference begins from a single optimization principle (minimize variational free energy) and recovers perception, action, and learning as cases; ASF begins from operational requirements on the feedback loop and uses information-theoretic compression as one modeling move rather than the master objective. The standard Expected Free Energy functional is recoverable from ASF's survival Lagrangian under three explicit restrictions — preferences-as-priors (loses the satisfaction-gap diagnostic), scalar isotropic shadow price in place of a directional matrix (loses targeted exploration), and associational rather than interventional dynamics (collapses Pearl Level 2 to Level 1) — making explicit which architectural commitments separate the frameworks. With Hafez 2026 (*A Mathematical Theory of Agency and Intelligence*), the relationship is complementary: bi-predictability $P$ supplies a substrate-independent diagnostic whose dynamics ASF predicts, while ASF supplies the goal-and-strategy machinery Hafez explicitly does not address. With Miller 2022 (Santa Fe coevolving automata), similarly complementary on composition mechanics. With Miehling et al.'s 2025 ICML position paper *"Agentic AI Needs a Systems Theory"* — which renewed the field-level call — ASF reads as a substantive, independently-developed answer (the formal apparatus was in place as Temporal Feedback Theory before that paper was encountered).
 
-Honest framing of maturity matters for deciding whether to depend on what is here. Section I (adaptive systems under uncertainty — mismatch dynamics, gain structure, persistence condition, adversarial tempo) is mathematically closed with simulation validation. Section II (actuated agents) has a strong diagnostic core and a maturing operational layer; the bias bound for fully-coupled (Class 2) agents is conditional under named sub-scopes. Section III (composition and adversarial dynamics) has its bridge lemma and a contraction-template generalization, with latent structural diversity, endogenous coupling, and composition transition dynamics still open. Software (TST) is a working draft grounded in AAD; logogenic agents are framework-stage with directed separation failing by construction for goal-conditioned LLMs (handled as architectural scope, not approximation); Emergent Logozoetic Intelligences (ELIs) are largely future work. The expected arc is exact core, principled architecture in the middle, open formulation at the edges. The full long-form treatment — deeper peer comparisons, the multi-decade arc of partial unifications this work joins, and the bottom-up development history — lives in [`HISTORICAL-CONTEXT.md`](HISTORICAL-CONTEXT.md).
+Honest framing of maturity matters for deciding whether to depend on what is here. Section I (adaptive systems under uncertainty — mismatch dynamics, gain structure, persistence condition, adversarial tempo) is mathematically closed with simulation validation. Section II (actuated agents) has a strong diagnostic core and a maturing operational layer; the bias bound for Coupled (GUC Class 3) agents is conditional under named sub-scopes. Section III (composition and adversarial dynamics) has its bridge lemma and a contraction-template generalization, with latent structural diversity, endogenous coupling, and composition transition dynamics still open. Software (TST) is a working draft grounded in AAD; logogenic agents are framework-stage with directed separation failing by construction for goal-conditioned LLMs (handled as architectural scope, not approximation); Emergent Logozoetic Intelligences (ELIs) are largely future work. The expected arc is exact core, principled architecture in the middle, open formulation at the edges. The full long-form treatment — deeper peer comparisons, the multi-decade arc of partial unifications this work joins, and the bottom-up development history — lives in [`HISTORICAL-CONTEXT.md`](HISTORICAL-CONTEXT.md).
 
 
 ## Structure of the Framework
@@ -131,7 +141,7 @@ The theory's mathematical closure varies by section and is expected to.
 
 **Section I (Adaptive Systems)** is mathematically closed. Mismatch dynamics, gain structure, the persistence condition, and adversarial tempo form a coherent chain with exact results and simulation validation. Section I is the foundation everything else builds on.
 
-**Section II (Actuated Adaptation: Agentic Systems)** has a strong diagnostic core (satisfaction gap and control regret as orthogonal diagnostics; the orient cascade as forced ordering; directed separation as architectural classification) and a maturing operational layer (strategy DAGs with derived structure; a schema for strategy persistence with multiple verified instances; a characterization of where credit assignment is tractable and where it is structurally hard). The bias bound for fully-coupled (Class 2) agents is a conditional theorem under named sub-scopes.
+**Section II (Actuated Adaptation: Agentic Systems)** has a strong diagnostic core (satisfaction gap and control regret as orthogonal diagnostics; the orient cascade as forced ordering; directed separation as architectural classification) and a maturing operational layer (strategy DAGs with derived structure; a schema for strategy persistence with multiple verified instances; a characterization of where credit assignment is tractable and where it is structurally hard). The bias bound for Coupled (GUC Class 3) agents is a conditional theorem under named sub-scopes.
 
 **Section III (Agentic Composites)** has its bridge lemma connecting micro-dynamics to macro-dynamics, a contraction template generalizing the sector machinery to non-Euclidean metrics, closed-form composition results in symmetric-matched cases, and equilibrium-convergence framing for partially-opposing objectives. Recipient-side and emitter-side interaction-channel classifications carry the inter-agent dynamics. Open: latent structural diversity, endogenous coupling dynamics, composition transition dynamics under regime change, computational thresholds for social behavior.
 
@@ -154,7 +164,7 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 ### II. Actuated Adaptation: Agentic Systems
 
-- **`#der-directed-separation`** *(status: conditional)* — *Pearl-Blanket-Form Architectural Classification with Explicit Class-2 Scope Exit* — *Claim recognition* of structural equivalence between the directed-separation condition and the Pearl-blanket form of the Markov-blanket apparatus, combined with *claim differentiation* on the architectural classification (Class 1 / 2 / 3) as a discrete partition with explicit Class 2 scope exit and quantitative $\kappa_{\text{processing}}$ diagnostic for the partial-modularity case.  
+- **`#der-directed-separation`** *(status: conditional)* — *Pearl-Blanket-Form Architectural Classification with Explicit Class-3 Scope Exit* — *Claim recognition* of structural equivalence between the directed-separation condition and the Pearl-blanket form of the Markov-blanket apparatus, combined with *claim differentiation* on the architectural classification (GUC Class 1 / 2 / 3: Separated / Partial / Coupled) as a discrete partition with explicit Class 3 (Coupled) boundary and quantitative $\kappa_{\text{processing}}$ diagnostic for the Partial case.  
   [`01-aad-core/src/der-directed-separation.md`](01-aad-core/src/der-directed-separation.md)
 - **`#der-causal-insufficiency-detection`** *(status: conditional)* — *On-Policy L0 Insufficiency Is Structurally Undetectable* — *Claim differentiation* on the framing of why structure-aware exploration is required.  
   [`01-aad-core/src/der-causal-insufficiency-detection.md`](01-aad-core/src/der-causal-insufficiency-detection.md)
@@ -165,6 +175,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 - **`#form-composition-closure`** *(status: conditional)* — *Composition-Closure Defect and Bridge Lemma* — *Claim differentiation* on bounded-loss composition as agent-boundary criterion.  
   [`01-aad-core/src/form-composition-closure.md`](01-aad-core/src/form-composition-closure.md)
+- **`#der-class-coercion-via-wrapping`** *(status: conditional)* — *Constructive Class Coercion via Wrapping* — *Claim integration* of POMDP / cognitive-architecture / MDP-homomorphism prior art with the AAD machinery (sector-Lyapunov persistence template, Brooks's-Law tempo accounting, Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy) plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions.  
+  [`01-aad-core/src/der-class-coercion-via-wrapping.md`](01-aad-core/src/der-class-coercion-via-wrapping.md)
 - **`#der-agent-opacity`** *(status: conditional)* — *Agent Opacity ($H_b$) as Dual to Observation Quality ($U_o$)* — *Claim differentiation* on Hafez's $H_b$.  
   [`01-aad-core/src/der-agent-opacity.md`](01-aad-core/src/der-agent-opacity.md)
 - **`#result-per-dimension-persistence`** *(status: conditional)* — *The Weakest-Link Dimensional Persistence Law* — *Claim differentiation* on per-dimension Lyapunov stability.  
@@ -180,6 +192,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
   [`01-aad-core/src/disc-identifiability-floor.md`](01-aad-core/src/disc-identifiability-floor.md)
 - **`#disc-additive-coordinate-forcing`** *(status: discussion-grade)* — *Cross-Layer Coordinate Forcing on Legendre-Fenchel Geometry* — *Claim recognition* of cross-layer pattern across four AAD coordinate-forcing results, with the recognition itself as the contribution rather than any new theorem.  
   [`01-aad-core/src/disc-additive-coordinate-forcing.md`](01-aad-core/src/disc-additive-coordinate-forcing.md)
+- **`#disc-adversarial-coupling-pressure`** *(status: discussion-grade)* — *Adversarial Coupling Pressure as Use-Case Expansion of Coupled Formulation* — *Claim recognition* of adversarial coupling pressure as a structural phenomenon in AAD's existing scope architecture — adversaries strategically drive coupling because coupling expands attack surface — combined with *claim differentiation* on the population scope of coupled-formulation analysis: not just architecturally-coupled agents, but any agent under sustained adversarial coupling pressure.  
+  [`01-aad-core/src/disc-adversarial-coupling-pressure.md`](01-aad-core/src/disc-adversarial-coupling-pressure.md)
 - **`#result-contraction-template`** *(status: conditional)* — *Topology-Indexed Compositional Closures via Contraction-Metric Generalization* — *Claim synthesis* on contraction-metric machinery + AAD's sub-scope partition + (PI)/Čencov axiom.  
   [`01-aad-core/src/result-contraction-template.md`](01-aad-core/src/result-contraction-template.md)
 - **`#deriv-causal-ib-exploration`** *(status: conditional)* — *Survival-Imperative Exploration as Lyapunov-Forced Drive* — *Claim differentiation* on the structural source of agentic exploration.  
@@ -204,6 +218,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 - **`#scope-observation-ambiguity-modulation`** *(status: conditional)* — *Ambiguity-Bounded Architectural Bias Law for Coupled Agents* — *Claim novelty* on the formal product-form bias law $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$ for coupled-architecture agents, where $\kappa$ is an architectural property of the processor and $I$ measures the goal-resolvable residual uncertainty left by the observation.  
   [`03-logogenic-agents/src/scope-observation-ambiguity-modulation.md`](03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
+- **`#der-logogenic-as-wrapping`** *(status: conditional)* — *Logogenic Substrate Specialization of Class Coercion* — *Claim integration* of the class-coercion theorem with the scaffolded-logogenic regime.  
+  [`03-logogenic-agents/src/der-logogenic-as-wrapping.md`](03-logogenic-agents/src/der-logogenic-as-wrapping.md)
 
 
 
@@ -244,7 +260,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 ### Known Fragilities — what falls outside formal scope
 
 - Missing commitment / resource / temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs) — handled as architectural scope (Class 2 exit), not approximation
+- Directed separation violated by goal-conditioned agents (LLMs, GUC Class 3: Coupled) — handled as architectural scope (Class 3 Coupled exit), not approximation
 
 *Source: [`CLAUDE.md`](CLAUDE.md).*
 

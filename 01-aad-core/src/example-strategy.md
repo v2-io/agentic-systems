@@ -316,7 +316,7 @@ With $\eta_\text{edge} = U_\text{edge}/(U_\text{edge} + U_\text{obs})$, the expl
 
 ### Directed Separation ( #der-directed-separation)
 
-*Mapping: exact. The agent is Class 1 (modular) by construction.*
+*Mapping: exact. The agent is Class 1 (Separated) by construction.*
 
 The Beta-Bernoulli update for $M_t$ processes $(a_t, r_t)$ without reference to $(O_t, \Sigma_t)$:
 
@@ -369,7 +369,7 @@ Section II tells the agent: *switch to arm 2, but first explore to confirm — t
 | Mismatch $\delta_t$ ( #def-mismatch-signal) | Exact | Standard | Prediction error |
 | Update gain $\eta^\ast$ ( #emp-update-gain) | Exact | Conjugate | Beta-Bernoulli gain |
 | Tempo $\mathcal{T}$ ( #def-adaptive-tempo) | Approximate | Per-arm decomposition | Assumes known allocation |
-| Directed separation ( #der-directed-separation) | Exact | Class 1 by construction | Beta update is goal-blind |
+| Directed separation ( #der-directed-separation) | Exact | Class 1 (Separated) by construction | Beta update is goal-blind |
 | Objective $O_t$ ( #form-objective-functional) | Exact | Utility with threshold | $V_{O_t}^{\min} = 0.6$ |
 | Value object $V_O$ ( #def-value-object) | Exact | Closed-form (greedy) | $V_O = \hat\theta_{k^\ast}$ |
 | Satisfaction gap $\delta_\text{sat}$ ( #def-satisfaction-gap) | Exact | Definition applied | $V_{O_t}^{\min} - A_O$ |

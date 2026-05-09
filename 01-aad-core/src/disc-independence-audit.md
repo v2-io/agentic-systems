@@ -26,13 +26,13 @@ Six load-bearing independence assumptions in AAD, each paired with its failure r
 
 **Statement:** $f_M(M_{\tau^-}, e_\tau)$ has no $G_t$ argument — the epistemic update is goal-blind.
 
-**Where it appears:** #der-directed-separation, the structural backbone of Section II. Feeds the orient cascade's sequential resolution ( #der-orient-cascade), the causal validity of $Q_O$ ( #def-value-object), and the scope of all Section II results to Class 1 (modular) agents.
+**Where it appears:** #der-directed-separation, the structural backbone of Section II. Feeds the orient cascade's sequential resolution ( #der-orient-cascade), the causal validity of $Q_O$ ( #def-value-object), and the scope of all Section II results to Class 1 (Separated) agents.
 
-**Failure regime:** Class 2 (fully merged) architectures — transformer LLMs where attention processes goals and observations together. Motivated reasoning, confirmation bias, prompt-conditioned perception. Partially also Class 3 (partially modular) agents.
+**Failure regime:** Class 3 (Coupled) architectures — transformer LLMs where attention processes goals and observations together. Motivated reasoning, confirmation bias, prompt-conditioned perception. Partially also Class 2 (Partial) agents.
 
-**Diagnostic signal:** $\kappa_{\text{processing}} = I(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})/H(G_t \mid e_\tau, M_{\tau^-})$. Zero for modular agents; near one for fully merged; intermediate for partial.
+**Diagnostic signal:** $\kappa_{\text{processing}} = I(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})/H(G_t \mid e_\tau, M_{\tau^-})$. Zero for Separated agents; near one for Coupled; intermediate for Partial.
 
-**Repair operation:** Class 3 approximation quality scales with $\kappa_{\text{processing}}$. Class 2 agents require the coupled formulation $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without $(M_t, G_t)$ decomposition — the scope of `03-logogenic-agents/`. At the system level, Class 2 components can be wrapped in modular topology (separate observation processing, external monitoring — see `#der-directed-separation` Working Notes on the IDT pattern).
+**Repair operation:** Class 2 (Partial) approximation quality scales with $\kappa_{\text{processing}}$. Class 3 (Coupled) agents require the coupled formulation $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without $(M_t, G_t)$ decomposition — the scope of `03-logogenic-agents/`. At the system level, Class 3 (Coupled) components can be wrapped in modular topology (separate observation processing, external monitoring — see `#der-directed-separation` Working Notes on the IDT pattern).
 
 ### 2. Causal sufficiency: no latent common causes among strategy nodes
 
@@ -123,6 +123,8 @@ When these bridges fail, the integration does not fail catastrophically — each
 
 ## Working Notes
 
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Failure-regime references under Assumption 1 updated accordingly. The C1/C2/C3 mention at line 120 is the value-convention hierarchy (a different ladder), not the GUC axis — left unchanged. Removed at `candidate` stage per FORMAT.md Gate 4.
+
 - **Interaction between assumptions.** The six assumptions are not fully orthogonal. Causal sufficiency failure and edge-independence failure are the same failure (item 5 is a consequence of item 2 via CMC). Directed separation failure can propagate through the orient cascade into the strategy-layer results (which inherit their structure from the cascade). A fuller treatment would map the dependency graph among assumptions and characterize cascading failure modes.
 - **Quantitative failure modes.** For each independence assumption, the theory has or could have a quantitative failure bound — how much the dependent result degrades as a function of the independence-violation magnitude ($\kappa_{\text{processing}}$, the covariance magnitude, the mutual information between channels). These bounds are partially specified in segment-level caveats; collecting them in one place would strengthen the audit.
-- **Empirical audit.** A concrete agent could be scored against the six assumptions to produce an "independence profile." For software agents: directed separation ~holds (modular), causal sufficiency ~holds (test-based Regime A), channel independence ~holds (tests target disjoint behaviors), scalar tempo may fail (component-level gain variation). For LLM agents: directed separation fails structurally (Class 2), causal sufficiency varies by task, channel independence varies. The profile would be a diagnostic for where the theory's exact claims apply to the agent and where they degrade.
+- **Empirical audit.** A concrete agent could be scored against the six assumptions to produce an "independence profile." For software agents: directed separation ~holds (Separated), causal sufficiency ~holds (test-based Regime A), channel independence ~holds (tests target disjoint behaviors), scalar tempo may fail (component-level gain variation). For LLM agents: directed separation fails structurally (Class 3 Coupled), causal sufficiency varies by task, channel independence varies. The profile would be a diagnostic for where the theory's exact claims apply to the agent and where they degrade.

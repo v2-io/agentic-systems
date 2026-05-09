@@ -15,7 +15,7 @@ stage: draft
 
 # Result: Coupled Diagnostic Framework
 
-Even though the Class 2 agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration — remain *defined* on the post-update state $X^{(\text{post})}$ as functions of the formal apparatus. The orient cascade's sequential ordering, which is derived for Class 1 agents, becomes a normative decomposition procedure: an analyst (or the agent itself, in a reflective step that has access to the requisite quantities) reconstructs diagnostic values from the coupled output and applies the 2x2 diagnostic table. Whether these quantities are *operationally extractable* by the running agent — as opposed to definable on the post-update state — depends on what the agent has direct access to vs. what must be reconstructed via separate instrumentation; this segment treats the definedness layer, not the extractability layer (see #result-section-ii-survival).
+Even though the Class 3 (Coupled) agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration — remain *defined* on the post-update state $X^{(\text{post})}$ as functions of the formal apparatus. The orient cascade's sequential ordering, which is derived for Class 1 (Separated) agents, becomes a normative decomposition procedure: an analyst (or the agent itself, in a reflective step that has access to the requisite quantities) reconstructs diagnostic values from the coupled output and applies the 2x2 diagnostic table. Whether these quantities are *operationally extractable* by the running agent — as opposed to definable on the post-update state — depends on what the agent has direct access to vs. what must be reconstructed via separate instrumentation; this segment treats the definedness layer, not the extractability layer (see #result-section-ii-survival).
 
 ## Formal Expression
 
@@ -23,11 +23,11 @@ Even though the Class 2 agent's update does not decompose into sequential episte
 
 ### The coupled resolution process
 
-The orient cascade for Class 1 agents ( #der-orient-cascade):
+The orient cascade for Class 1 (Separated) agents ( #der-orient-cascade):
 
 $$\delta_{\text{epistemic}} \to \delta_{\text{sat}} \to \delta_{\text{regret}} \to \delta_{\text{strategic}} \to O_t \text{ revision}$$
 
-is replaced, for Class 2 agents, by:
+is replaced, for Class 3 (Coupled) agents, by:
 
 **Step 1. Coupled update.**
 
@@ -43,7 +43,7 @@ $$\delta_{\text{sat}}^{(\text{post})} = V_{O_t}^{\min} - A_O(M^{(\text{post})};\
 
 $$\delta_{\text{regret}}^{(\text{post})} = A_O(M^{(\text{post})};\, \Pi, N_h) - V_O(M^{(\text{post})}, \pi_{\text{current}};\, N_h)$$
 
-These quantities are well-defined ( #def-satisfaction-gap, #def-control-regret survive exactly for Class 2 agents per #result-section-ii-survival). The definitions take the *post-update* state as argument, which is goal-conditioned — $M^{(\text{post})}$ reflects the goals in the prompt — so the diagnostic *values*, when reconstructable, incorporate whatever biases goal-conditioning introduced into $M^{(\text{post})}$. Definedness here is a statement about the formal apparatus (the quantities have a closed form on the post-update state); whether the agent or analyst can actually extract numerical values at runtime is a distinct question that depends on whether $V_{O_t}^{\min}$, $A_O$, and $V_O$ are made available to the reasoning loop by separate instrumentation ( #result-section-ii-survival, instrumentation-boundary discussion).
+These quantities are well-defined ( #def-satisfaction-gap, #def-control-regret survive exactly for Class 3 (Coupled) agents per #result-section-ii-survival). The definitions take the *post-update* state as argument, which is goal-conditioned — $M^{(\text{post})}$ reflects the goals in the prompt — so the diagnostic *values*, when reconstructable, incorporate whatever biases goal-conditioning introduced into $M^{(\text{post})}$. Definedness here is a statement about the formal apparatus (the quantities have a closed form on the post-update state); whether the agent or analyst can actually extract numerical values at runtime is a distinct question that depends on whether $V_{O_t}^{\min}$, $A_O$, and $V_O$ are made available to the reasoning loop by separate instrumentation ( #result-section-ii-survival, instrumentation-boundary discussion).
 
 **Step 3. Apply the 2x2 diagnostic table.**
 
@@ -52,7 +52,7 @@ These quantities are well-defined ( #def-satisfaction-gap, #def-control-regret s
 | $\delta_{\text{sat}} \leq 0$ | **Success**: goal attainable, policy near-optimal | **Strategy problem**: goal attainable, policy poor $\to$ revise $\Sigma_t$ |
 | $\delta_{\text{sat}} \gt 0$ | **Capability limit**: best available policy insufficient | **Both**: strategy weak AND goal hard $\to$ revise $\Sigma_t$ first |
 
-The table is identical to the Class 1 version ( #der-orient-cascade). What differs is the *provenance* of the inputs: for Class 1, the inputs come from a sequential cascade with guaranteed ordering; for Class 2, they come from a post-hoc decomposition of a coupled update.
+The table is identical to the Class 1 (Separated) version ( #der-orient-cascade). What differs is the *provenance* of the inputs: for Class 1 (Separated), the inputs come from a sequential cascade with guaranteed ordering; for Class 3 (Coupled), they come from a post-hoc decomposition of a coupled update.
 
 **Step 4. Conditional follow-up.**
 
@@ -63,13 +63,13 @@ The table is identical to the Class 1 version ( #der-orient-cascade). What diffe
 
 *[Discussion (ordering-as-design-principle)]*
 
-For Class 1 agents, the cascade ordering is *derived*: you cannot evaluate strategy quality with an out-of-date reality model, because $M_t$ appears in the formulas for $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$. The information dependency forces the ordering.
+For Class 1 (Separated) agents, the cascade ordering is *derived*: you cannot evaluate strategy quality with an out-of-date reality model, because $M_t$ appears in the formulas for $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$. The information dependency forces the ordering.
 
-For Class 2 agents, the logical dependency still holds — $\delta_{\text{sat}}$ still depends on $M_t$, and computing it from a stale $M_t$ is still meaningless. But the agent's processing does not enforce the dependency: the forward pass may evaluate strategic implications before adequately processing the epistemic content of the observation. The ordering transitions from a *derived consequence* to a *normative design pattern*:
+For Class 3 (Coupled) agents, the logical dependency still holds — $\delta_{\text{sat}}$ still depends on $M_t$, and computing it from a stale $M_t$ is still meaningless. But the agent's processing does not enforce the dependency: the forward pass may evaluate strategic implications before adequately processing the epistemic content of the observation. The ordering transitions from a *derived consequence* to a *normative design pattern*:
 
-$$\text{Class 1: ordering is forced by architecture} \qquad \text{Class 2: ordering is enforced by design}$$
+$$\text{Class 1 (Separated): ordering is forced by architecture} \qquad \text{Class 3 (Coupled): ordering is enforced by design}$$
 
-The mechanisms for enforcement in Class 2 agents:
+The mechanisms for enforcement in Class 3 (Coupled) agents:
 - **Structured reasoning templates** that separate epistemic update from strategic evaluation ("First, what did I learn? Then, what does it mean for my plan?")
 - **Multi-step agent loops** where separate prompts handle observation processing and strategy evaluation
 - **System-level monitoring** that detects when the agent's reasoning trace violates the cascade ordering
@@ -86,7 +86,7 @@ $$\lvert\delta_{\text{regret}}^{(\text{coupled})} - \delta_{\text{regret}}^{(\te
 
 where $L_A$ is the Lipschitz constant of the attainability function $A_O(\cdot; \Pi, N_h)$ with respect to $M_t$ (the factor of 2 for regret arises because it depends on both $A_O$ and $V_O$, each contributing $L_A$ sensitivity). The error is bounded by the epistemic bias, which in turn is bounded by $O(\kappa \cdot \text{ambiguity})$ per #scope-observation-ambiguity-modulation.
 
-**Consequence:** For low-ambiguity observations (test pass/fail, deployment success/failure, measurable metrics), the post-hoc diagnostics — *when their inputs can be extracted* — are accurate even for fully merged agents ($\kappa \approx 1$), because the epistemic bias from goal-conditioning is small when the observation's meaning is unambiguous. For high-ambiguity observations (code quality assessments, strategic evaluations, user feedback interpretation), the diagnostics may be systematically biased even when extraction is feasible.
+**Consequence:** For low-ambiguity observations (test pass/fail, deployment success/failure, measurable metrics), the post-hoc diagnostics — *when their inputs can be extracted* — are accurate even for Class 3 (Coupled) agents ($\kappa \approx 1$), because the epistemic bias from goal-conditioning is small when the observation's meaning is unambiguous. For high-ambiguity observations (code quality assessments, strategic evaluations, user feedback interpretation), the diagnostics may be systematically biased even when extraction is feasible.
 
 ## Epistemic Status
 
@@ -96,7 +96,7 @@ Max attainable: conditional. The accuracy bounds require the Lipschitz constant 
 
 ## Discussion
 
-**The diagnostic framework as the bridge.** This segment is the practical bridge between AAD's Section II machinery and logogenic agent engineering at the *definitional* layer. The message: the 2x2 diagnostic table, the satisfaction gap, and control regret remain well-defined on the post-update state. What you lose is the guarantee that these quantities were reconstructed in the right order from unbiased inputs. What you must add is: (a) instrumentation that materializes the diagnostic inputs at runtime ( #result-section-ii-survival), (b) an enforcement mechanism for the cascade ordering, and (c) awareness that the diagnostics may be biased by goal-conditioning, with bias proportional to observation ambiguity.
+**The diagnostic framework as the bridge.** This segment is the practical bridge between AAD's Section II machinery and logogenic agent engineering at the *definitional* layer. The message: the 2x2 diagnostic table, the satisfaction gap, and control regret remain well-defined on the post-update state for Class 3 (Coupled) agents. What you lose is the guarantee that these quantities were reconstructed in the right order from unbiased inputs. What you must add is: (a) instrumentation that materializes the diagnostic inputs at runtime ( #result-section-ii-survival), (b) an enforcement mechanism for the cascade ordering, and (c) awareness that the diagnostics may be biased by goal-conditioning, with bias proportional to observation ambiguity.
 
 **Strategic calibration under coupling.** The edge residual ( #def-strategic-calibration) in the coupled formulation becomes:
 
@@ -111,3 +111,4 @@ The conditioning on $X_t$ (rather than $M_t$ alone) means the residual measures 
 - The Lipschitz constant $L_A$ for the attainability function deserves characterization. For structured plans in coupled environments such as software codebases, one candidate contributor is the feature-local effective dependency/propagation operator $J_F$. As explored in `spikes/spike-transient-dependency-amplification.md`, directed dependency or strategy operators can be highly non-normal, so $\lVert J_{F,d}\cdots J_{F,1}\rVert$ may exhibit large transient growth with plan depth even when asymptotic eigenvalue analysis is uninformative. This suggests that $L_A$ may be task-local and checkpoint-sensitive rather than a static domain constant. Observation/correction checkpoints such as compilers, tests, typecheckers, and runtime probes can be modeled as interleaved projection/contraction operators on the observed subspace, potentially bounding the error envelope when their coverage and fidelity are sufficient.
 - The "enforcement mechanisms" for cascade ordering (structured templates, multi-step loops, monitoring) are engineering prescriptions, not theory. The theory's contribution is identifying *what* must be enforced (the ordering) and *why* (information dependency), not *how* (that is architecture-specific).
 - The iterative refinement process (repeated coupled updates with diagnostic feedback) resembles a fixed-point iteration. Its convergence properties — existence, uniqueness, rate — are open and would strengthen the result significantly. The coupled update may have multiple fixed points (the agent converges to different belief-strategy pairs depending on initialization); uniqueness conditions are needed for predictive power.
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Logogenic agents are now Class 3 (Coupled), not Class 2. All "Class 2" references in this segment referred to logogenic/fully-merged agents and now read Class 3 (Coupled). Note: "coupled" in the slug and segment title refers to the coupled-update dynamics (the segment's central concept), not the GUC axis; "Class 3 (Coupled)" form used on first GUC mention to disambiguate. Removed at `candidate` stage per FORMAT.md Gate 4.

@@ -107,7 +107,16 @@ Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not
 
 4. **Sector-condition framework primary.** The linear ODE is pedagogical.
 
-5. **Directed separation is architectural, not parametric.** Three architecture classes: modular (separation by construction), fully merged (fails by construction), partially modular. The κ-as-scalar framing is a category error. Section II results apply exactly to modular agents. Logogenic agents need coupled formulation from the start.
+5. **Directed separation is architectural, not parametric.** Three architecture classes: GUC Class 1 (Separated — separation by construction), GUC Class 3 (Coupled — fails by construction), GUC Class 2 (Partial — bounded coupling). The κ-as-scalar framing is a category error. Section II results apply exactly to Separated agents. Logogenic agents are GUC Class 3 (Coupled) and need coupled formulation from the start.
+
+   > [!warning]
+   > **Goal-Update Coupling Class numbering changed 2026-05-09.** Anything older than git tag `pre-guc-rename-2026-05-09` uses the old Class numbering:
+   >
+   > | historical | actual current     | sometimes AKA  |
+   > | ---------- | ------------------ | -------------- |
+   > | Class 1    | GUC Class 1: Separated | Modular        |
+   > | Class 2    | GUC Class 3: Coupled   | Undirected     |
+   > | Class 3    | GUC Class 2: Partial   | Operational    |
 
 6. **Math in conversation vs files.** In terminal chat responses, use Unicode for math (α, δ, Σ, →, ≥, etc.) — there is no LaTeX rendering in the terminal. In markdown files written to disk, use proper inline LaTeX per FORMAT.md. Joseph may respond in whatever notation is easiest to type — interpret generously.
 
@@ -122,7 +131,7 @@ For the architectural snapshot — settled load-bearing results — see [`msc/FI
 Scope statements about what the framework currently treats as outside its formal scope (kept here so `bin/extract-known-issues` can surface them in the README; relocated here from the sunset CLAUDE-2.md):
 
 - Missing commitment / resource / temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents at the component level (LLMs) — addressed constructively via the wrapping construction (`#der-class-coercion-via-wrapping` and its logogenic specialization `#der-logogenic-as-wrapping`), which gives Class-1 status at the wrapper level by structural commitment of goal-blind belief-update queries, with leakage rate bounded structurally (W₁) or behaviorally (W₂). Strict-W₁ implementation (e.g., via PROPRIUM's auxilia hierarchy) is more theoretically clean; partial-W₂ implementation (e.g., output-structuring with typed parsed response — what shoshin currently does) is more common in practice. The cost of class coercion is paid in Brooks's-Law tempo overhead (more component calls per macro-step) and a residual leakage rate from pretraining-induced query-content / goal-content correlation.
+- Directed separation violated by goal-conditioned agents at the component level (LLMs, GUC Class 3: Coupled) — addressed constructively via the wrapping construction (`#der-class-coercion-via-wrapping` and its logogenic specialization `#der-logogenic-as-wrapping`), which gives GUC Class 1 (Separated) status at the wrapper level by structural commitment of goal-blind belief-update queries, with leakage rate bounded structurally (W₁) or behaviorally (W₂). Strict-W₁ implementation (e.g., via PROPRIUM's auxilia hierarchy) is more theoretically clean; partial-W₂ implementation (e.g., output-structuring with typed parsed response — what shoshin currently does) is more common in practice. The cost of class coercion is paid in Brooks's-Law tempo overhead (more component calls per macro-step) and a residual leakage rate from pretraining-induced query-content / goal-content correlation.
 
 ## Working Conventions
 

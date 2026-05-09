@@ -27,7 +27,7 @@ A logogenic agent wrapped in a multi-step loop with external state, tool use, st
 
 $$\lvert \delta_{\text{sat}}^{(\text{coupled})} - \delta_{\text{sat}}^{(\text{clean})}\rvert \leq L_A \cdot \lVert\Delta M_{\text{bias}}\rVert$$
 
-The cascade ordering happens at the loop level rather than the model's forward-pass level; agentic-systems wrapping is not engineering convenience but a *structural* requirement for recovering Section II persistence guarantees in Class-2 architectures.
+The cascade ordering happens at the loop level rather than the model's forward-pass level; agentic-systems wrapping is not engineering convenience but a *structural* requirement for recovering Section II persistence guarantees in Class 3 (Coupled) architectures.
 
 ## Epistemic Status
 
@@ -75,3 +75,4 @@ This sub-scope is also where the upstream PROPRIUM operational architecture live
 - Can scaffolded-logogenic systems ever reach Section II's *exact* results (vs approximate)? Current claim is approximate-with-bounded-error; whether *exact* is achievable in principle under sufficient scaffolding is open.
 
 **Promotion-blocking:** depends on #scope-primitive-logogenic (just landed), #result-coupled-diagnostic-framework (draft), #der-orient-cascade (draft), #der-loop-interventional-access (draft). All available; this scope can advance through Gate 1 once those are dependency-verified.
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Logogenic agents are now Class 3 (Coupled), not Class 2. "Class-2 architectures" here referred to logogenic/fully-merged agents and now reads Class 3 (Coupled). Removed at `candidate` stage per FORMAT.md Gate 4.

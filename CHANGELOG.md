@@ -2,6 +2,17 @@
 
 The forward-going record of substantive changes to the framework. Entries are ordered most-recent-first, dated, and grouped by theme within a date.
 
+> [!warning]
+> **Goal-Update Coupling Class numbering changed 2026-05-09.** Anything older than git tag `pre-guc-rename-2026-05-09` uses the old Class numbering:
+>
+> | historical | actual current     | sometimes AKA  |
+> | ---------- | ------------------ | -------------- |
+> | Class 1    | GUC Class 1: Separated | Modular        |
+> | Class 2    | GUC Class 3: Coupled   | Undirected     |
+> | Class 3    | GUC Class 2: Partial   | Operational    |
+>
+> Cycle entries in this file dated **before 2026-05-09** use the old Class vocabulary verbatim — the body entries are frozen and not retroactively edited. This callout is the rosetta stone for reading those entries.
+
 ## How this file relates to TODO.md, LOG.md, audits/, and git
 
 - **[TODO.md](TODO.md)** — current tactical work items (active findings, queued spike follow-ups, deferred items, open MEDIUM items, missing segments).
@@ -15,6 +26,54 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 ## 2026-05-09
+
+### Goal-Update Coupling Class rename + Class 2 ↔ 3 swap landed: Class 1/2/3 → Separated/Coupled/Partial; Architecture ladder aligned with the six other AAD taxonomy ladders; warning-callout discipline anchored at six canonical surface points
+
+A whole-corpus rename + numbering swap landed on the `guc-rename-2026-05-09` topical branch, then merged to main. **Old vocabulary:** Class 1 = Modular, Class 2 = Fully merged, Class 3 = Partially modular. **New vocabulary:** Class 1 = Separated *(unchanged number)*, Class 2 = Partial *(was Class 3)*, Class 3 = Coupled *(was Class 2)*. The collective axis is the **Goal-Update Coupling Class (GUC Class)** — the property the directed-separation condition of `#der-directed-separation` measures, with $\kappa_{\text{processing}}$ as the engineered-systems quantitative diagnostic. Two operations bundled because every touched file got both: rename (descriptive labels replacing numerals at the property level) and swap (numbering aligns Architecture with the six other AAD ladders that all run cleanest → middle → worst as 1 → 2 → 3 — Pearl's Correlation L0/L1/L2; Convention C1/C2/C3; Contraction Tier 1/2/3; Identification Regime A/B/C; Scope Adaptive/Agency/Composite; A2'-scope α₁/α₂/β). Pre-rename, Architecture was the lone visual outlier in the meta-pattern table at `#disc-separability-pattern` (running 1 → 3 → 2); the swap eliminates the outlier status.
+
+**Why the rename.** The numbered classes named *positions in a taxonomy* rather than *the property the taxonomy measures*. Cross-architecture R2 voters had split across competing English-modifier slates (Modular/Merged/Scaffolded vs. Modular/Integrated/Partially-coupled vs. Modular/Coupled/Partially-modular). Resolution: name the *property* the directed-separation condition measures, not an architectural realization. "Separated" directly echoes the segment-derived property; a tightly-integrated architecture that happens to be goal-blind is also Separated.
+
+**Why now.** The class-coercion-via-wrapping segments that landed earlier the same day (`#der-class-coercion-via-wrapping` + `#der-logogenic-as-wrapping` — see entry below) used the old vocabulary throughout. Doing the rename next prevented accumulating retrofit debt. Every additional cycle of new content under old vocab would have made the eventual rename heavier.
+
+**Execution shape — 8 phases on a topical branch, multi-agent verification.** Branch `guc-rename-2026-05-09` opened in the main worktree; batched commits as the executing agent saw fit. Per-phase pattern: **Sonnet 4.6** ran the rename surgery (per-occurrence reading with semantic-reversal vigilance — every `Class 2` and `Class 3` reference classified by referent before substitution); **Opus 4.7 (1M context)** verified each batch (independent agent per the "verification by an agent other than the modifying agent" discipline in the live tracking file). Phases:
+
+- **Phase 1** — Terminology entries (`terminology/entries/goal-update-coupling-class.md` axis + `separated.md` / `coupled.md` / `partial.md` per-value entries; existing `directed-separation.md` body refreshed; five `bin/term decide` events recorded under `terminology/decisions/{...}/`); LEXICON.md regenerated via `bin/term render`.
+- **Phase 2** — `01-aad-core` canonical (18 segments + OUTLINE), heaviest batch. Canonical home `#der-directed-separation` (32 occurrences) led; second-step heavy semantic-reversal cluster (`#der-class-coercion-via-wrapping`, `#disc-adversarial-coupling-pressure`, `#deriv-observation-ambiguity-bias-bound`, `#disc-separability-pattern`); third-step mid-touch cluster (`#deriv-strategic-composition`, `#disc-independence-audit`, `#der-interaction-channel-classification`, `#der-agent-opacity`); fourth-step light cluster + OUTLINE.
+- **Phase 3** — `03-logogenic-agents` (8 segments + OUTLINE), the semantic-reversal-heaviest component since logogenic agents *are* the canonical "Class 2 (fully merged) → Class 3 (Coupled)" case under the rename.
+- **Phase 4** — `02-tst-core` (1 segment) + `04-eli` (4 segments).
+- **Phase 5** — Root docs (CLAUDE.md, NOTATION.md, HISTORICAL-CONTEXT.md, PROPOSALS.md, doc/naming-principles.md), four README partials, new `_terminology-warning.md` partial composed into the README + README-auditor liquid templates, and warning-callout placement in LOG.md + CHANGELOG.md headers.
+- **Phase 6** — Plan-file collapses: TERMINOLOGY-TODO §B closed; PRACTICA cycle priority #1 marked complete; TODO entry struck through.
+- **Phase 7** — Auto-regenerated downstream verified: LEXICON.md + README.md + README-auditor.md + FINDINGS.md.
+- **Phase 8** — This CHANGELOG entry + git tag `pre-guc-rename-2026-05-09`.
+
+**Warning-callout discipline at six canonical anchors.** Frozen archaeology (`_obs/`, `msc/AUDIT-WORKING-*/`, `audits/`, `spikes/`, `ref/`, naming-vote files, etc.) carries old-vocabulary Class-N references by design — those are not retroactively edited per the project's archaeology-preservation discipline. The six canonical-surface anchors carry the warning callout (mapping `historical → actual current → sometimes AKA` with the "sometimes AKA" column carrying informal labels Modular / Undirected / Operational that may surface in less-formal artifacts):
+
+1. `01-aad-core/src/der-directed-separation.md` — at the top of the Architectural classification subsection.
+2. `03-logogenic-agents/src/result-section-ii-survival.md` — at the top, before the Formal Expression.
+3. `CLAUDE.md` — inline after Architectural Decision #5.
+4. `README.md` + `README-auditor.md` — via the new `doc/readme/src/_terminology-warning.md` partial composed into both liquid templates near the start.
+5. `LOG.md` — header.
+6. `CHANGELOG.md` — header (this file).
+
+The git tag `pre-guc-rename-2026-05-09` anchors the callouts at a stable point in history (the parent of the branch's first rename commit).
+
+**Migration-note convention.** Every segment whose Class-N reference changed *semantic meaning* (i.e., touched Class 2 or Class 3 under old vocab) carries a one-line migration note in Working Notes: *"Migration note (2026-05-09 GUC rename): Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Removed at `candidate` stage per FORMAT.md Gate 4."* Segments that only mentioned Class 1 (unchanged in number) didn't need a note. The notes are the per-segment local rosetta-stone alongside the global warning callouts; they retire as segments promote to candidate.
+
+**Prose-disposition discipline.** Register-mixed default per the execution plan §4a: `Class N (Property)` form for headers and first-mention contexts; bare property word in mid-prose where local context is established and ambiguity risk is low; `GUC-Property` form (e.g., `GUC-Coupled`) where citability matters or where adjacent vocabulary collisions threatened (notably in `#disc-adversarial-coupling-pressure`, where "coupling pressure" / "adversarial coupling" is the central concept distinct from GUC-Coupled the value). The "modular" word required per-occurrence judgment: Class-1 references renamed to Separated; broader system-level usages (modular topology, modular monitoring, modular sidecar, modularity-as-property in the queued M4 segment) stayed.
+
+**Three-axis disambiguation.** In the wrapping-construction segments (`#der-class-coercion-via-wrapping`, `#der-logogenic-as-wrapping`, `#def-auxilia-hierarchy`), three independent axes share notation: GUC Class 1/2/3 (renamed); W₀/W₁/W₂ wrapping-regime letters (untouched — independent axis); Class A/B/C component-admissibility partition (untouched — independent axis). Migration notes in those segments document the three axes explicitly.
+
+**Four pre-existing bugs incidentally fixed by the rename** (housekeeping wins): (i) `#der-class-coercion-via-wrapping` "Class-3 LLMs are scope-in" was inconsistent with the canonical home (LLMs were Class 2 = fully merged pre-rename); rename incidentally aligned it (Class 3 = Coupled = LLMs is now correct). (ii) `#der-class-coercion-via-wrapping` W₀ row "Raw Class-3 component" framing was ambiguous (W₀ should cover the full non-Class-1 union); sweep expanded to "Raw Class 2 (Partial) or Class 3 (Coupled) component". (iii) `#der-logogenic-as-wrapping` Findings Brief had the same Class-3-for-LLMs inconsistency. (iv) `#scope-eli`'s class-coercion paragraph used "Class-3 component" for logogenic; same incidental alignment. All four are documented in their respective migration notes.
+
+**One net improvement beyond rename.** `#deriv-strategic-composition` got an explanatory paragraph added during the sweep: bounded across-agent coupling places strategic composites in **Class 2 (Partial)** rather than Class 3 (Coupled), because within-agent separation is preserved. The rationale wasn't in the original; the rename forced a clarification that future readers will benefit from. The pre-existing tracking-file row description for this segment had the wrong post-rename label ("Separated → Coupled composite"); sonnet caught the error during the read.
+
+**Methodological observation — multi-agent verification cadence worked.** The sonnet-modifies / opus-verifies pattern (verification by an agent *other than* the modifying agent, per the live tracking file's discipline) caught real issues: the wrong post-rename label in the tracking file's pre-existing row description; multiple semantic-reversal calls in the composite-inheritance subsections; the three-axis disambiguation discipline in the wrapping segments. Verification proceeded in parallel with later-batch surgery — no bottleneck. The live tracking file (single long table with `untouched → modified → verified` state machine; coordination via the file) served as the multi-agent rendezvous point. Pattern worth reusing for future whole-corpus refactors.
+
+**Surface area (final tally).** 30 segments + 2 OUTLINEs + 4 README partials + new `_terminology-warning.md` partial + 5 root docs (CLAUDE, NOTATION, HISTORICAL-CONTEXT, PROPOSALS, naming-principles) + 5 terminology entries + 5 decision events + 4 plan files (collapsed) + 4 auto-regenerated downstream files (LEXICON, README, README-auditor, FINDINGS) = ~60 files touched on the canonical surface. Frozen archaeology (~50+ files) preserved verbatim with warning-callout coverage at the canonical anchors.
+
+**Plan and tracking-file artifacts** (preserved as the durable record of how the rename was executed): [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md), [`msc/class-rename-tracking-2026-05-09.md`](msc/class-rename-tracking-2026-05-09.md). Decision-source rationale: [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) lines 92-116 (original 2026-05-04 record + meta-pattern alignment audit).
+
+---
 
 ### Class coercion via wrapping landed: constructive route from Class-2/3 components to Class-1 composites; Parts III/IV reframed as wrapping-construction instantiation; W₀/W₂/W₁ regime hierarchy with structural-vs-behavioral leakage bounds
 
