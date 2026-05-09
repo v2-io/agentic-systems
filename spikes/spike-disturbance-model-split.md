@@ -322,7 +322,7 @@ This confirms that the discrete AR(1) simulations and the continuous stochastic 
 | `#result-adversarial-exponent-regimes` | Empirical regime table | Label as Model D | Label as Model S; derivations now available |
 | `#result-per-dimension-persistence` | Mixes deterministic threshold with stochastic formula | State D threshold cleanly | State S formula cleanly; resolve regime-mixing note |
 | `#der-adversarial-destabilization` | Deterministic coupling only | Unchanged | Discuss stochastic extension (probabilistic destabilization) |
-| `#obs-simulation-results` | Notes the two regimes post-hoc | Frame as Model D validation | Frame as Model S validation |
+| `#obs-section-i-validation-simulations` | Notes the two regimes post-hoc | Frame as Model D validation | Frame as Model S validation |
 | `NOTATION.md` | GA-2 only | Keep as GA-2 | Add GA-2S |
 
 ---
@@ -429,6 +429,6 @@ This resolves the "regime mixing" note in the epistemic status.
 6. **Derive $b = 3/2$ in `#result-adversarial-tempo-advantage`** — upgrade from empirical to derived.
 7. **Upgrade `#result-adversarial-exponent-regimes`** — label regimes as Model D/S, upgrade epistemic status.
 8. **Resolve `#result-per-dimension-persistence`** — fix regime mixing.
-9. **Update `#obs-simulation-results`** — frame Model D/S validation explicitly.
+9. **Update `#obs-section-i-validation-simulations`** — frame Model D/S validation explicitly.
 
 Steps 1-3 are foundational. Steps 4-8 are consequences. Step 9 is editorial.

@@ -14,9 +14,6 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` formal-tag review + cross-reference scan (the script reports stale-text warnings; H1 / opening-sentence / formal tags are touched by hand). The `msc/naming/` directory is excluded from the script's substitution patterns, so this file and `naming-rename-plan.md` are not corrupted by the sweep.
 
-- [ ] **`obs-simulation-results` → `obs-section-i-validation-simulations`** *(citability fix; ~5 cross-refs)*
-  Segment H1 → "Observation: Section I Validation Simulations". The segment is the empirical-validation appendix for Section I (six simulation variants A–F + Hafez bridge). Cross-refs from `result-adversarial-exponent-regimes`, `obs-gates-advantage`, `result-per-dimension-persistence` update mechanically.
-
 - [ ] **`deriv-detection-latency` → `deriv-update-detection-latency`** *(F1 citability fix; qualifier-add)*
   "Detection latency" is generic across fields; the segment derives latency for detecting regime-changes via log-odds-forced edge updates from `#deriv-edge-update-natural-parameter`. The `update` qualifier names the load-bearing structural source.
 

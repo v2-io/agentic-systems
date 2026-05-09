@@ -166,7 +166,7 @@ role prefixes. Examples:
 | 245 | `gain-sector-bridge.md` | `der-gain-sector-bridge.md` |
 | 253 | `information-bottleneck.md` | `form-information-bottleneck.md` |
 
-`01-aad-core/src/obs-simulation-results.md` has the same pattern:
+`01-aad-core/src/obs-section-i-validation-simulations.md` has the same pattern:
 
 | Line(s) | Old target | Likely current target |
 | ---: | --- | --- |
@@ -356,7 +356,7 @@ These references should generally not be mass-edited:
    `bin/build-readme --check`.
 3. Fix current segment-local links in
    `01-aad-core/src/deriv-bias-bound.md` and
-   `01-aad-core/src/obs-simulation-results.md`.
+   `01-aad-core/src/obs-section-i-validation-simulations.md`.
 4. Resolve the two `bin/lint-outline` findings: the dependency ordering issue
    and the orphan segment.
 5. Decide what the missing `CHANGELOG.md` project/session links should become:

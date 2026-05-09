@@ -1,5 +1,5 @@
 ---
-slug: obs-simulation-results
+slug: obs-section-i-validation-simulations
 type: observation
 status: empirical
 depends:
@@ -11,7 +11,7 @@ depends:
 stage: draft
 ---
 
-# Observation: Simulation Results
+# Observation: Section I Validation Simulations
 
 Six simulation variants validated, refined, and extended the analytical predictions from Section I, forcing regime splits and discovering scaling laws that the analytical derivations left ambiguous.
 

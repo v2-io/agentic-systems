@@ -29,7 +29,7 @@ These are **not implied by each other**: an agent can be structurally persistent
 - $R^\ast = \rho/\alpha$ (Model D): from $\dot V = 0$ at boundary. ✓
 - $R_S^\ast = \sigma_w\sqrt{n/(2\alpha)}$ (Model S): Itô stationary variance. ✓
 - $\Delta\rho^\ast = \alpha R - \rho$: residual disturbance margin. ✓
-- The 72% scalar-overestimate / 84%-of-mismatch-on-weak-dimension claim from anisotropic simulation will be verified at `#obs-simulation-results`.
+- The 72% scalar-overestimate / 84%-of-mismatch-on-weak-dimension claim from anisotropic simulation will be verified at `#obs-section-i-validation-simulations`.
 - The `#deriv-persistence-cost` Landauer-analog claim ($\dot R \geq n\alpha/2$ nats/time) is a forward-reference that I'll verify at the appendix. The claim — a *sustained information rate* floor for persistence, with Kalman-Bucy saturating — is structurally important and cross-domain.
 - `#result-structural-adaptation-necessity`'s alignment-assumption layering is honest: under alignment, $\delta$-floor is positive; without, the result holds in proper-scoring regret. Either way the qualitative conclusion (parametric can't fix class inadequacy) survives.
 
@@ -73,7 +73,7 @@ The chain is **mathematically credible** in the sense that I'd defend the formal
 
 - **TF-XX pattern continues.** Instances 14, 15 confirmed. Pattern: 8/29 (~28%) of §I segments carry "(Descended from TF-XX)" diff-voice annotations.
 - **`#deriv-persistence-cost` claim** — channel-capacity floor — needs Appendix A verification when I reach it.
-- **The 72% / 84% anisotropic simulation numbers** need cross-check at `#obs-simulation-results`.
+- **The 72% / 84% anisotropic simulation numbers** need cross-check at `#obs-section-i-validation-simulations`.
 - **Alignment assumption propagation:** `#result-structural-adaptation-necessity` is conditional on alignment; downstream uses should preserve this. Worth checking whether §II / §III ever applies the result without invoking alignment.
 
 ## Felt value

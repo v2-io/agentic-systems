@@ -20,7 +20,7 @@ Heavy forward references; all on walk-ahead.
 
 The additive formula is well-formed. The **channel-independence-assumption paragraph** is exemplary scope-honesty: $\mathcal{T} \leq \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$ with equality iff channels are informationally independent; the redundancy penalty involves conditional MI $I(e^{(1)}; e^{(2)} \mid M_{\tau^-})$. This is the kind of explicit-named-assumption discipline that compounds across the framework.
 
-The simulation claim (72% overestimate in anisotropic 3D, 5:1 gain ratio, weak dimension accounting for 84% of mismatch) is specific and citable. Numbers — I'll cross-check when I reach `#obs-simulation-results`.
+The simulation claim (72% overestimate in anisotropic 3D, 5:1 gain ratio, weak dimension accounting for 84% of mismatch) is specific and citable. Numbers — I'll cross-check when I reach `#obs-section-i-validation-simulations`.
 
 ## What direction next
 

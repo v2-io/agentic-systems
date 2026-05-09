@@ -24,7 +24,7 @@ The scalar Kalman gain $K = U_M/(U_M + U_o)$ is correctly stated. The Beta-Binom
 
 The "resolving epistemic opacity" claim — agent estimates $U_o$ from innovations and treats gain as endogenous — is a substantive structural move. Forward-references `#deriv-adaptive-gain-dynamics` for the proof. **I'll verify when I reach that segment.** If the downstream proof actually delivers Lyapunov stability under endogenous gain estimation, this resolves what would otherwise be a circularity (you need $U_o$ to compute optimal gain, but you don't know $U_o$).
 
-The "track-b Variant E" simulation note ("52% reduction in steady-state mismatch with Riccati-optimal gain") is empirical evidence; I'll cross-check when I reach `#obs-simulation-results`.
+The "track-b Variant E" simulation note ("52% reduction in steady-state mismatch with Riccati-optimal gain") is empirical evidence; I'll cross-check when I reach `#obs-section-i-validation-simulations`.
 
 ## What direction next
 
@@ -41,7 +41,7 @@ The "track-b Variant E" simulation note ("52% reduction in steady-state mismatch
 
 ## What would I change
 
-The simulation note is good but doesn't include the simulation parameters in the segment text — a reader has to chase to `#obs-simulation-results` to see them. Adding parameter values inline (or in a Working-Notes-style mini-table) would tighten it.
+The simulation note is good but doesn't include the simulation parameters in the segment text — a reader has to chase to `#obs-section-i-validation-simulations` to see them. Adding parameter values inline (or in a Working-Notes-style mini-table) would tighten it.
 
 The "(Descended from TF-06.)" should go.
 

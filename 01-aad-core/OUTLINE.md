@@ -198,7 +198,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | A   | Derivation |     | [#deriv-causal-ib-exploration](src/deriv-causal-ib-exploration.md)                 | Survival-imperative exploration drive: $U_o^{\max} \propto U_M$ from Lyapunov persistence forces a second exploration multiplier $\lambda_{\text{surv}} \propto 1/U_M$ parallel to the epistemic CIY drive — confident agents in drifting worlds must exploit-via-explore | draft |
 | A   | Derivation |     | [#deriv-causal-ib-lmi](src/deriv-causal-ib-lmi.md)                                 | Multidimensional repair of the scalar survival bound: LMI on Fisher Information Matrix with PSD matrix Lagrange multiplier $\Lambda$ — exploration bonus $\text{Tr}(\Lambda \cdot \mathcal I_o(a))$ distinguishes by direction, mathematically forbidding blank-wall trivial solutions | draft |
 | A   | Derivation |     | [#deriv-bias-bound](src/deriv-bias-bound.md)                 | Class-2 observation-ambiguity bias-bound constant $C$; Track 1 transport-inequality ($C_{W_2}^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$ linear in $I$ under LSI + Lipschitz-posterior); Track 2 Fisher-Rao ($C_{FR} = \sqrt{2}$ universal dimension-free under (PI)+Čencov + small-$I$); no-go for universal $C$ under Euclidean-parameter norm justifies (PI) as load-bearing | draft |
-| A   | Detail     |     | [#obs-simulation-results](src/obs-simulation-results.md)                       | 6 variants validating claims                                          | draft   |
+| A   | Detail     |     | [#obs-section-i-validation-simulations](src/obs-section-i-validation-simulations.md)                       | 6 variants validating claims                                          | draft   |
 
 
 ---
