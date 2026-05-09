@@ -4,7 +4,7 @@ type: discussion
 status: discussion-grade
 depends:
   - der-causal-insufficiency-detection
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
   - der-causal-hierarchy-requirement
   - der-loop-interventional-access
 stage: draft
@@ -49,7 +49,7 @@ The pattern is *not* a negative posture. AAD does not say "many things are impos
 
 **Tier.** *Exact* for shallow strict-prerequisite cases (2-sibling OR or AND with binary common cause). *Robust qualitative* for general DAG topology, soft facilitators, and deeper structures.
 
-### Instance 2 — L1' Mixture Identifiability from Single-Channel Observations ( #deriv-strategic-dynamics Prop B.7)
+### Instance 2 — L1' Mixture Identifiability from Single-Channel Observations ( #deriv-edge-credence-dynamics Prop B.7)
 
 **Setting.** Identify the mixture parameters $(\theta_C, p_{j\mid C}, p_{j\mid \neg C})$ of a soft-facilitator L1' DAG using single-channel observations $y_j$ of one child at a time, with $C$ unobservable.
 
@@ -135,7 +135,7 @@ Under the mechanism-design framing of strategic composition ( #deriv-strategic-c
 
 *Discussion-grade* at the meta-pattern level. The segment is a presentational organizing principle — it names a shared shape across separately-derived results, not a theorem in its own right. What is derivative here is the recognition that two independent AAD findings share the pattern (setting → external theorem → no-go → boundary characterization → strengthened consequence); the pattern itself is not derived and has no identification claim of its own.
 
-*Individual instances retain their own, higher, epistemic status.* Instance 1 (on-policy L0 insufficiency detection, via the Causal Hierarchy Theorem) is *exact* for shallow strict-prerequisite cases and *robust qualitative* for general DAG topology, derived in #der-causal-insufficiency-detection. Instance 2 (L1' under unobservable common cause, via the Cramér-Rao bound on Fisher information) is *exact* under the Fisher rank-1 calculation in #deriv-strategic-dynamics Prop B.7 refutation. Readers citing this segment for a specific no-go should cite the instance's own derivation, not the meta-pattern.
+*Individual instances retain their own, higher, epistemic status.* Instance 1 (on-policy L0 insufficiency detection, via the Causal Hierarchy Theorem) is *exact* for shallow strict-prerequisite cases and *robust qualitative* for general DAG topology, derived in #der-causal-insufficiency-detection. Instance 2 (L1' under unobservable common cause, via the Cramér-Rao bound on Fisher information) is *exact* under the Fisher rank-1 calculation in #deriv-edge-credence-dynamics Prop B.7 refutation. Readers citing this segment for a specific no-go should cite the instance's own derivation, not the meta-pattern.
 
 The segment makes one additional claim: that AAD's machinery (loop-interventional access, observability-as-information-augmentation) acquires sharper load-bearing roles when read through the floors that motivate them. This is a *discussion-grade* observation about the theory's architecture — it is visible once the instances are assembled, but is not itself a theorem.
 
@@ -161,7 +161,7 @@ Max attainable: *discussion-grade* for the meta-pattern (it is a presentational 
 
 **Impact:** Surfaces a unifying frame for results that would otherwise read as disparate impossibility theorems. Each instance gains interpretive context (it is one of an emerging class) and the meta-segment provides a consistent template for evaluating candidate future floors (causal-IB extension, misspecification cost, tier-switching cost, mechanism-design impossibility). The pattern's positive content — that each floor names exactly which AAD machinery the theory requires to escape it — converts a sequence of negative results into a structural argument for the load-bearing status of the loop's interventional access (Instances 1 and 3, two semantically distinct deployment modes), of observability-as-information-augmentation (Instance 2), and of the (PI) parameterization-invariance axiom (Instance 4). The complementary `#disc-separability-pattern` carries the positive half (separable-core / structured-repair / general-open across seven ladders); together the two meta-segments mark AAD's scope honestly at both extremes.
 
-**Novelty Claim:** *Claim recognition* of structural pattern across four AAD results that import external information-theoretic theorems to derive impossibility statements with mapped boundary-route escapes; the meta-pattern is an organizing principle rather than a theorem, and the per-instance prior-art positioning lives in the instance segments (`#der-causal-insufficiency-detection`, `#deriv-strategic-dynamics`, `#deriv-critical-mass-composition` / `#result-contraction-template`, `#deriv-observation-ambiguity-bias-bound`).
+**Novelty Claim:** *Claim recognition* of structural pattern across four AAD results that import external information-theoretic theorems to derive impossibility statements with mapped boundary-route escapes; the meta-pattern is an organizing principle rather than a theorem, and the per-instance prior-art positioning lives in the instance segments (`#der-causal-insufficiency-detection`, `#deriv-edge-credence-dynamics`, `#deriv-critical-mass-composition` / `#result-contraction-template`, `#deriv-observation-ambiguity-bias-bound`).
 
 **Related Work:**
 
@@ -170,7 +170,7 @@ The four instances import distinct external theorems; per-instance prior-art lan
 | Pattern element | Where the move is established in the prior literature | Relationship / Positioning |
 |---|---|---|
 | Importing CHT to derive on-policy detection no-go (Instance 1) | Bareinboim, Correa, Ibeling & Icard 2022 (published 2022, found 2025) | *formal antecedent* — see `#der-causal-insufficiency-detection` Findings for the full Pillar-1 prior-art table; the meta-pattern subsumes this instance |
-| Importing Cramér-Rao to derive mixture-identifiability no-go (Instance 2) | Cramér 1946, *Mathematical Methods of Statistics* (published 1946, found 2025-04) | *formal antecedent* — Fisher rank-deficiency forces the floor; see `#deriv-strategic-dynamics` Prop B.7 for the explicit calculation |
+| Importing Cramér-Rao to derive mixture-identifiability no-go (Instance 2) | Cramér 1946, *Mathematical Methods of Statistics* (published 1946, found 2025-04) | *formal antecedent* — Fisher rank-deficiency forces the floor; see `#deriv-edge-credence-dynamics` Prop B.7 for the explicit calculation |
 | Importing common-Lyapunov-nonexistence to derive composite-contraction no-go (Instance 3) | Liberzon 2003, *Switching in Systems and Control* §2.1; Dayawansa & Martin 1999 *IEEE TAC* 44:751; Shorten et al. 2007 *SIAM Review* 49:545 (found 2025-04) | *formal antecedent* — the symmetric-matched-Tier-1-scalar counterexample uses the standard switched-systems machinery; see `#deriv-critical-mass-composition` and `#result-contraction-template` for the AAD-internal closures |
 | Importing (PI)/Čencov to derive universal-constant no-go (Instance 4) | Čencov 1982, *Statistical Decision Rules and Optimal Inference* (published 1982, found 2024); explicit heteroscedastic-normal counterexample derived AAD-internally | *formal antecedent for (PI) escape, AAD-internal for the no-go construction* — see `#deriv-observation-ambiguity-bias-bound` Attempt E |
 | Cross-instance pattern recognition | No direct anticipation surfaced at search depth | *claim novelty* under cursory search — the meta-pattern as an articulated framework has not been found in the surveyed literatures; the constituent moves (scope-honesty, importing external no-go theorems, boundary characterization) are individually well-precedented but their cross-instance unification within an integrated agent-theoretic framework is a presentational contribution rather than a borrowed schema |
@@ -188,4 +188,4 @@ The four instances import distinct external theorems; per-instance prior-art lan
 
 - **Is the floor pattern unique to causal/identifiability questions?** The two current instances are both about distinguishing two parameter regimes from data. The pattern may also apply to other impossibility-style results in AAD: the inevitability of structural-adaptation thresholds ( #result-structural-adaptation-necessity), the cost of representing high-correlation regimes (L2 exponential blowup), the bandwidth limits in shared intent ( #def-shared-intent). Whether to absorb those into "identifiability floor" or treat them as a separate "structural-cost" pattern is open.
 
-- **Cross-segment integrations.** The meta-pattern surfaces in (at least): #der-causal-insufficiency-detection (Instance 1); #deriv-strategic-dynamics Prop B.7 (Instance 2); #der-loop-interventional-access (load-bearing for Instance 1 escape); #def-strategy-dag (the L0/L1/L1'/L2 hierarchy is the regime ladder Instance 2 lives on). Each of these segments cross-references this one for the unifying frame.
+- **Cross-segment integrations.** The meta-pattern surfaces in (at least): #der-causal-insufficiency-detection (Instance 1); #deriv-edge-credence-dynamics Prop B.7 (Instance 2); #der-loop-interventional-access (load-bearing for Instance 1 escape); #def-strategy-dag (the L0/L1/L1'/L2 hierarchy is the regime ladder Instance 2 lives on). Each of these segments cross-references this one for the unifying frame.

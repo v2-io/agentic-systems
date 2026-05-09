@@ -6,7 +6,7 @@
 
 **Objective**: Characterize the boundary between tractable and intractable credit assignment for the strategy DAG $\Sigma_t$. Establish negative results (what cannot be done), identify tractable special cases (what can), propose principled approximations for the general case, and state precisely what the theory *requires* of a credit-assignment scheme.
 
-**Depends on**: #def-strategy-dag, #def-strategic-calibration, #hyp-edge-update-via-gain, #der-observability-dominance, #deriv-strategic-dynamics (Props B.1--B.5), `spike-two-edge-strategic-dynamics.md`
+**Depends on**: #def-strategy-dag, #def-strategic-calibration, #hyp-edge-update-via-gain, #der-observability-dominance, #deriv-edge-credence-dynamics (Props B.1--B.5), `spike-two-edge-strategic-dynamics.md`
 
 ---
 
@@ -127,7 +127,7 @@ $$\text{signal}(o_t, i, j) = \begin{cases} y_j & \text{if } y_i = 1 \\ \text{no 
 
 **Update rule**: Standard Beta-Bernoulli conjugate update. Sector condition satisfied with $\alpha_\Sigma = \min_k \eta_k$ modulated by evidence-starvation factors (Prop B.2, generalized).
 
-**Status**: *Established* (Props B.1, B.2 in #deriv-strategic-dynamics).
+**Status**: *Established* (Props B.1, B.2 in #deriv-edge-credence-dynamics).
 
 #### Case 2: Tree-Structured DAGs (Each Node Has At Most One Parent)
 

@@ -44,7 +44,7 @@ Six load-bearing independence assumptions in AAD, each paired with its failure r
 
 **Diagnostic signal:** Pairwise covariance among sibling edges after edge credences have converged. Positive covariance rejects the independence hypothesis and localizes where a common cause is missing. See #der-causal-insufficiency-detection.
 
-**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( #def-strategy-dag Correlation Hierarchy; #deriv-strategic-dynamics Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because L1 restores causal sufficiency by construction. The orient cascade's step 4c triggers this escalation.
+**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( #def-strategy-dag Correlation Hierarchy; #deriv-edge-credence-dynamics Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because L1 restores causal sufficiency by construction. The orient cascade's step 4c triggers this escalation.
 
 ### 3. Channel independence: observation channels contribute non-redundant correction
 

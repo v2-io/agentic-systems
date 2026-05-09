@@ -270,7 +270,7 @@ The no-go scope conditions (S1)–(S5) are the precise statement of "purely on-p
 
 ### Route (a): ε-exploration violates (S1)
 
-The agent occasionally takes off-policy actions (ε-greedy or similar — the SA3 condition in `#deriv-strategic-dynamics`). Under ε-exploration, the agent samples non-short-circuit branches with rate ε.
+The agent occasionally takes off-policy actions (ε-greedy or similar — the SA3 condition in `#deriv-edge-credence-dynamics`). Under ε-exploration, the agent samples non-short-circuit branches with rate ε.
 
 **What this gives.** A mixture of on-policy and off-policy data. Edge credences converge to a mixture of conditional and marginal:
 
@@ -280,7 +280,7 @@ The aggregate plan-level residual scales linearly in ε (the prior spike's "$\va
 
 **Strength.** Partial. Detection power scales with ε; for small ε the signal is small relative to noise. Adequate for confirming L1 once the agent has reason to suspect it; weak for unprompted detection.
 
-**Cross-reference.** `#deriv-strategic-dynamics` Prop B.4 (OR-node calibration via ε-exploration); the prior softening spike's secondary signal section.
+**Cross-reference.** `#deriv-edge-credence-dynamics` Prop B.4 (OR-node calibration via ε-exploration); the prior softening spike's secondary signal section.
 
 ### Route (b): Joint sibling observability violates (S3)
 
@@ -412,7 +412,7 @@ The no-go's scope conditions (S1)–(S5) define "purely on-policy." Each conditi
 
 | Route | Scope violated | AAD capability | Detection strength |
 |-------|----------------|----------------|--------------------|
-| (a) ε-exploration | (S1) | SA3 exploration ( #deriv-strategic-dynamics Prop B.4) | Partial, scales with ε |
+| (a) ε-exploration | (S1) | SA3 exploration ( #deriv-edge-credence-dynamics Prop B.4) | Partial, scales with ε |
 | (b) Joint sibling observability | (S3) | Covariance test under SA3 + #der-loop-interventional-access | Strong |
 | (c) Intermediate observability | (S3) at finer grain | Observability investment ( #der-observability-dominance) | Very strong when available |
 | (d) Structural priors | (S5) | Hypothesized common-cause nodes in DAG construction | Prior-quality-dependent |
@@ -503,7 +503,7 @@ Diagnosis is a form of internal exploration — the agent probes its own model's
 
 *Conditional* on the no-go's scope conditions (S1)–(S5) and on strategy-layer instantiation of #result-structural-adaptation-necessity. The **no-go theorem** is *exact* for shallow strict-prerequisite cases (2-sibling OR or AND, single binary common cause) by direct construction; *robust qualitative* for general DAG topology, soft facilitators, and deeper structures. The structural argument (observational equivalence of regime-conditional L0 and latent-cause L1) transfers to the general case; explicit construction of $\mathcal{W}_{L0}^\ast$ has been carried out only for shallow cases.
 
-The **boundary characterization** (routes (a)–(e)) is *robust qualitative*: each route maps to a specific scope-condition violation and to existing AAD machinery, but the precise detection power of each route depends on domain particulars. Routes (a) and (b) have explicit AAD scaffolding ( #deriv-strategic-dynamics, #der-loop-interventional-access); routes (c)–(e) depend on domain capability.
+The **boundary characterization** (routes (a)–(e)) is *robust qualitative*: each route maps to a specific scope-condition violation and to existing AAD machinery, but the precise detection power of each route depends on domain particulars. Routes (a) and (b) have explicit AAD scaffolding ( #deriv-edge-credence-dynamics, #der-loop-interventional-access); routes (c)–(e) depend on domain capability.
 
 The **primary detection mechanism** (pairwise sibling covariance) is *robust qualitative*: standard hypothesis testing applied to interventional data from the feedback loop, with explicit preconditions. Its sensitivity depends on how cleanly the agent can separate sibling-covariance signal from edge-credence noise at convergence; in adversarial or fast-drifting environments the test's effective sample size shrinks.
 

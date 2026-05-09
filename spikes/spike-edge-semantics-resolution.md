@@ -6,7 +6,7 @@
 
 **Objective**: State the tension precisely, analyze three candidate resolutions, recommend one, draft specific language changes for the affected segments, and address two secondary issues (the signal function gap and the $M_t$/edge evidence double-counting question).
 
-**Depends on**: #def-strategy-dag, #hyp-edge-update-via-gain, #scope-edge-update-causal-validity, #der-loop-interventional-access, #scope-ciy-observational-proxy, #disc-credit-assignment-boundary, #def-strategic-calibration, #der-causal-hierarchy-requirement, #der-chain-confidence-decay, #deriv-strategic-dynamics
+**Depends on**: #def-strategy-dag, #hyp-edge-update-via-gain, #scope-edge-update-causal-validity, #der-loop-interventional-access, #scope-ciy-observational-proxy, #disc-credit-assignment-boundary, #def-strategic-calibration, #der-causal-hierarchy-requirement, #der-chain-confidence-decay, #deriv-edge-credence-dynamics
 
 ---
 

@@ -7,7 +7,7 @@ depends:
   - hyp-edge-update-via-gain
   - def-strategy-dag
   - scope-edge-update-causal-validity
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
 stage: draft
 ---
 
@@ -43,7 +43,7 @@ where:
 
 ### Consistency verification
 
-The definition is consistent with the four verified topologies from #deriv-strategic-dynamics:
+The definition is consistent with the four verified topologies from #deriv-edge-credence-dynamics:
 
 **Case B.1 (single edge $A \to G$).** One edge, $\nu = \nu_{AG}$, $\eta_{\text{edge}} = 1/(n+1)$. $\mathcal T_\Sigma = \nu_{AG}/(n+1)$. The sector parameter $\alpha_\Sigma = 1/(n+1)$ is the per-observation correction quality; $\mathcal T_\Sigma = \nu \cdot \alpha_\Sigma$, matching the epistemic tempo pattern exactly.
 
@@ -65,7 +65,7 @@ Each additional depth level attenuates by a factor $\theta_k \lt 1$. For a unifo
 
 $$\mathcal{T}_\Sigma = \frac{\nu}{n+1} \sum_{k=1}^{d} \theta^{k-1} = \frac{\nu}{n+1} \cdot \frac{1 - \theta^d}{1 - \theta}$$
 
-This converges to $\nu / ((n+1)(1-\theta))$ as $d \to \infty$ --- total strategic tempo is bounded even for arbitrarily deep chains. The marginal tempo contribution of edge $k$ decays as $\theta^{k-1}$, falling below any fixed threshold at depth $d^\ast$ ( #form-strategy-complexity-cost). Deep AND-chains have low $\mathcal T_\Sigma$ at their leaves regardless of how fast the agent acts --- the evidence-starvation effect identified in #deriv-strategic-dynamics.
+This converges to $\nu / ((n+1)(1-\theta))$ as $d \to \infty$ --- total strategic tempo is bounded even for arbitrarily deep chains. The marginal tempo contribution of edge $k$ decays as $\theta^{k-1}$, falling below any fixed threshold at depth $d^\ast$ ( #form-strategy-complexity-cost). Deep AND-chains have low $\mathcal T_\Sigma$ at their leaves regardless of how fast the agent acts --- the evidence-starvation effect identified in #deriv-edge-credence-dynamics.
 
 **OR-nodes: exploration-gated.** At an OR-node with $m$ alternatives under $\varepsilon$-exploration, the rate allocated to alternative $l$ is:
 
@@ -91,7 +91,7 @@ $$\alpha_\Sigma \leq \frac{\mathcal T_\Sigma}{\lvert E\rvert} \leq \mathcal T_\S
 
 ## Epistemic Status
 
-The definition itself is axiomatic --- it names a quantity by analogy with #def-adaptive-tempo. The consistency verification with the four cases from #deriv-strategic-dynamics is *derived* (conditional on Beta-Bernoulli dynamics). The AND-chain geometric attenuation is *derived* (conditional on independent edge outcomes). The OR-node exploration gating and identifiability adjustment are *hypotheses* in the general DAG case, though verified for the specific topologies above. The bottleneck-limited persistence observation is *derived* from #result-per-dimension-persistence's result applied to the strategy substate.
+The definition itself is axiomatic --- it names a quantity by analogy with #def-adaptive-tempo. The consistency verification with the four cases from #deriv-edge-credence-dynamics is *derived* (conditional on Beta-Bernoulli dynamics). The AND-chain geometric attenuation is *derived* (conditional on independent edge outcomes). The OR-node exploration gating and identifiability adjustment are *hypotheses* in the general DAG case, though verified for the specific topologies above. The bottleneck-limited persistence observation is *derived* from #result-per-dimension-persistence's result applied to the strategy substate.
 
 Max attainable: conditional. Currently conditional because the general DAG case (mixed AND/OR topologies, correlated edges) has not been verified.
 

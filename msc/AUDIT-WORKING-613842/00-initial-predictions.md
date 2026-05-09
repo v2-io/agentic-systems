@@ -110,7 +110,7 @@ Concrete expectations:
 I predict the appendices are doing real argumentative work and will therefore produce more high-value findings than many mainline sections.
 Most likely targets:
 `#deriv-discrete-sector-condition`,
-`#deriv-strategic-dynamics`,
+`#deriv-edge-credence-dynamics`,
 `#deriv-strategy-cost-regret-bound`,
 `#deriv-edge-update-natural-parameter`,
 `#result-contraction-template`,

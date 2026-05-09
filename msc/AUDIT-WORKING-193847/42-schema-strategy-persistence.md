@@ -10,7 +10,7 @@ It flawlessly integrates the sector condition (`#result-sector-condition-stabili
 The math identifying the failure mode of raw Beta-Bernoulli updates is beautiful in its simplicity. If $\alpha_\Sigma = 1/(n+1)$, then as $n \to \infty$, $\alpha_\Sigma \to 0$. Since $\rho_\Sigma > 0$, the inequality $\alpha_\Sigma > \rho_\Sigma / R_\Sigma$ is guaranteed to fail eventually. The fix (exponential discounting $\lambda$) stabilizing the effective sample size at $1/(1-\lambda)$ is standard adaptive control, but its application here to prove a *survival boundary* is novel.
 
 **4. What direction will the theory take next?**
-The text notes that `#def-strategic-tempo` is now formalized as $\mathcal T_\Sigma = \sum \nu \cdot \eta$, and it heavily references `#deriv-strategic-dynamics` for the proofs of the four topologies. I predict the theory is moving to close out Section II by defining strategic tempo and the ultimate costs of strategy complexity.
+The text notes that `#def-strategic-tempo` is now formalized as $\mathcal T_\Sigma = \sum \nu \cdot \eta$, and it heavily references `#deriv-edge-credence-dynamics` for the proofs of the four topologies. I predict the theory is moving to close out Section II by defining strategic tempo and the ultimate costs of strategy complexity.
 
 **5. What errors should I now watch for?**
 I must watch for downstream claims that an agent can learn a perfect, permanent strategy in a changing environment. The math proves this is impossible. The agent MUST forget old data to maintain enough update gain to track the changing environment. 

@@ -24,7 +24,7 @@ Four findings survive. Several candidate issues dissolved under the burden-of-pr
 
 `orient-cascade.md` step 4a:
 
-> $\delta_s$ is credit-assignment-free (requires only status propagation), and its persistence is proved ( #schema-strategy-persistence, Prop B.5 in #deriv-strategic-dynamics). This is the **default operational signal**: AAD's formal guarantees require only plan-level tracking ( #disc-credit-assignment-boundary, Level 0).
+> $\delta_s$ is credit-assignment-free (requires only status propagation), and its persistence is proved ( #schema-strategy-persistence, Prop B.5 in #deriv-edge-credence-dynamics). This is the **default operational signal**: AAD's formal guarantees require only plan-level tracking ( #disc-credit-assignment-boundary, Level 0).
 
 `credit-assignment-boundary.md`, the hierarchy-of-quality table:
 

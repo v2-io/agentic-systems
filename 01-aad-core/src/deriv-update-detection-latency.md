@@ -6,7 +6,7 @@ depends:
   - deriv-edge-update-natural-parameter
   - disc-credit-assignment-boundary
   - schema-strategy-persistence
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
 stage: draft
 ---
 
@@ -18,13 +18,13 @@ For a Beta-Bernoulli strategy-edge agent without forgetting, the expected number
 
 ### Setup
 
-An agent with a Beta-Bernoulli strategy DAG per #schema-strategy-persistence / #deriv-strategic-dynamics, credit assignment via the log-odds signal of #disc-credit-assignment-boundary (forced by #deriv-edge-update-natural-parameter), and no forgetting ( $\lambda = 1$, pseudo-counts $n_k$ accumulate monotonically). Let $E_{\text{load}}$ denote the load-bearing edges on the current active plan; $n_{\min} = \min_{k \in E_{\text{load}}} n_k$. The agent has been operating with model-class fitness $\mathcal F(\mathcal M)$ near $1$, adaptive reserve $\Delta\rho^\ast \gt 0$, control regret $\delta_{\text{regret}}$ small — a high-operating-point configuration.
+An agent with a Beta-Bernoulli strategy DAG per #schema-strategy-persistence / #deriv-edge-credence-dynamics, credit assignment via the log-odds signal of #disc-credit-assignment-boundary (forced by #deriv-edge-update-natural-parameter), and no forgetting ( $\lambda = 1$, pseudo-counts $n_k$ accumulate monotonically). Let $E_{\text{load}}$ denote the load-bearing edges on the current active plan; $n_{\min} = \min_{k \in E_{\text{load}}} n_k$. The agent has been operating with model-class fitness $\mathcal F(\mathcal M)$ near $1$, adaptive reserve $\Delta\rho^\ast \gt 0$, control regret $\delta_{\text{regret}}$ small — a high-operating-point configuration.
 
 At cycle $t_0$, a regime change occurs within the current model class (a true edge probability shifts by $\varepsilon$; the L0 graph remains correct; the agent's model class still suffices). This is case R1 in the spike taxonomy — a within-class drift change. Other regime-change cases (R2 model-class inadequacy; R3 L0→L1 structural transition) are deferred to Working Notes and #disc-identifiability-floor respectively.
 
 ### Detection-latency theorem
 
-*[Derived (detection-latency-R1, from edge-update-natural-parameter + strategic-dynamics-derivation)]*
+*[Derived (detection-latency-R1, from edge-update-natural-parameter + deriv-edge-credence-dynamics)]*
 
 **Proposition.** Under the setup, the expected number of cycles $T_{\text{detect}}$ required for the log-odds coordinate on any load-bearing edge $k \in E_{\text{load}}$ to cross a fixed detection threshold $\Delta\lambda_{\text{detect}}$ in response to the regime change satisfies
 
@@ -34,7 +34,7 @@ $$\boxed{\;\mathbb E[T_{\text{detect}}] \;=\; \Omega\!\left(\Delta\lambda_{\text
 
 $$\lambda_k^{\text{new}} = \lambda_k + \eta_{\text{edge}} \cdot \iota_k \cdot J_k \cdot (y_G - \hat P_\Sigma) / \lVert\mathbf J\rVert^2$$
 
-with $\eta_{\text{edge}} = 1/(n_k + 1)$ for Beta-Bernoulli (Prop B.4 of #deriv-strategic-dynamics). Per-cycle the expected log-odds update magnitude is bounded:
+with $\eta_{\text{edge}} = 1/(n_k + 1)$ for Beta-Bernoulli (Prop B.4 of #deriv-edge-credence-dynamics). Per-cycle the expected log-odds update magnitude is bounded:
 
 $$\mathbb E\lvert\Delta\lambda_k\rvert \;\leq\; \frac{\lvert J_k\rvert \cdot \mathbb E\lvert y_G - \hat P_\Sigma\rvert}{\lVert\mathbf J\rVert^2 \cdot (n_k + 1)}$$
 
@@ -70,7 +70,7 @@ This dualizes #schema-strategy-persistence's asymptotic claim: forgetting is ope
 
 | Property | Source | Strength |
 |---|---|---|
-| R1 detection-latency theorem $\mathbb E[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$ | #deriv-edge-update-natural-parameter log-odds coordinate + #deriv-strategic-dynamics Prop B.4 $\eta_{\text{edge}} = 1/(n+1)$ + Pinsker-type linearization | Derived (conditional on Beta-Bernoulli + log-odds + no forgetting) |
+| R1 detection-latency theorem $\mathbb E[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$ | #deriv-edge-update-natural-parameter log-odds coordinate + #deriv-edge-credence-dynamics Prop B.4 $\eta_{\text{edge}} = 1/(n+1)$ + Pinsker-type linearization | Derived (conditional on Beta-Bernoulli + log-odds + no forgetting) |
 | $1/(n+1)$ rate structurally forced | Composition of #deriv-edge-update-natural-parameter's Aczél-Cauchy-FE theorem with Beta-Bernoulli accumulation | Proved (conditional on evidential-additivity axiom) |
 | Sharpening of forgetting prerequisite from asymptotic persistence to bounded detection latency | #schema-strategy-persistence + this theorem | Derived |
 | R2 model-class inadequacy sub-case (C1-diagnostic blindness under misspecification) | Common-mode-bias argument on $A_O^{(1)}$ vs $V_O(\pi_{\text{current}})$ | Discussion (sketch; see Working Notes) |
@@ -83,7 +83,7 @@ This dualizes #schema-strategy-persistence's asymptotic claim: forgetting is ope
 
 *Conditional.* Max attainable: *exact* for R1 under stated scope (Beta-Bernoulli + log-odds forced + no forgetting + linearized residual near pre-change parameter); *robust qualitative* for general exponential-family edge with similar sufficient-statistic accumulation; *discussion-grade* for extensions beyond the Beta-Bernoulli / log-odds specialization.
 
-The R1 theorem is a direct consequence of two derived AAD results ( #deriv-edge-update-natural-parameter's forced log-odds coordinate + #deriv-strategic-dynamics's Beta-Bernoulli $\eta_{\text{edge}}$) composed with a standard residual-magnitude argument (Pinsker-type inequality applied to the linearized Bernoulli likelihood). The mathematical core is not novel — what is novel is the AAD-framing: reading the $1/(n+1)$ scaling as *structurally forced* through composition of existing AAD theorems, not contingent on update-rule choice. The rate is unescapable without abandoning evidential additivity.
+The R1 theorem is a direct consequence of two derived AAD results ( #deriv-edge-update-natural-parameter's forced log-odds coordinate + #deriv-edge-credence-dynamics's Beta-Bernoulli $\eta_{\text{edge}}$) composed with a standard residual-magnitude argument (Pinsker-type inequality applied to the linearized Bernoulli likelihood). The mathematical core is not novel — what is novel is the AAD-framing: reading the $1/(n+1)$ scaling as *structurally forced* through composition of existing AAD theorems, not contingent on update-rule choice. The rate is unescapable without abandoning evidential additivity.
 
 The forgetting-prerequisite sharpening follows by direct substitution — replace unbounded $n_{\min}$ with bounded $n_{\text{eff}} = 1/(1-\lambda)$ and the latency bound inherits the cap. This is where the segment's most concrete contribution lies: the existing forgetting prerequisite's justification expands from "asymptotic persistence fails without it" to "detection latency is unbounded in operating point without it." Two load-bearing consequences instead of one, from the same $\lambda \lt 1$ condition.
 

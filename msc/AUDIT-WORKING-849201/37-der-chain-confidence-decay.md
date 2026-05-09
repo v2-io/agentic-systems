@@ -4,7 +4,7 @@
 My prediction was that this segment would derive how uncertainty compounds over a sequential causal chain in the strategy, showing that confidence decays multiplicatively (so log-confidence decays additively). The segment delivered exactly this, using the standard chain rule of probability.
 
 **2. Cross-segment consistency:**
-The dependencies are solid. The forward reference to `#def-strategy-dag` (AND-nodes amplify decay) perfectly sets up the graph structure of the strategy. The connection to `#deriv-strategic-dynamics` (evidence starvation) and `#form-strategy-complexity-cost` (cognitive cost) is a brilliant "Triple depth penalty" synthesis. 
+The dependencies are solid. The forward reference to `#def-strategy-dag` (AND-nodes amplify decay) perfectly sets up the graph structure of the strategy. The connection to `#deriv-edge-credence-dynamics` (evidence starvation) and `#form-strategy-complexity-cost` (cognitive cost) is a brilliant "Triple depth penalty" synthesis. 
 
 **3. Math verification:**
 The math is trivial (chain rule of probability), but the qualitative insights drawn from it are deep. The segment correctly notes that assuming independent probabilities $p^n$ is actually *optimistic* if failures are positively correlated (e.g., if a shared infrastructure issue causes step 1 to fail, it will likely cause step 2 to fail as well if step 1 miraculously succeeded). 

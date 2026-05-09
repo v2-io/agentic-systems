@@ -2,7 +2,7 @@
 
 **1. Predictions vs evidence:** I predicted it would prove that for a sequence of dependent steps, the overall probability of success is the product of individual probabilities, leading to additive log-confidence decay. It does exactly this, using the standard chain rule of probability: $\log P(\text{chain}) = \sum \log P(E_i \mid E_{<i})$.
 
-**2. Cross-segment consistency:** Good dependencies (`def-strategy-dimension`). It forward references `#def-strategy-dag`, `#deriv-strategic-dynamics`, and `#form-strategy-complexity-cost` (which I read previously, confirming the "Triple depth penalty"). 
+**2. Cross-segment consistency:** Good dependencies (`def-strategy-dimension`). It forward references `#def-strategy-dag`, `#deriv-edge-credence-dynamics`, and `#form-strategy-complexity-cost` (which I read previously, confirming the "Triple depth penalty"). 
 
 **3. Math verification:** The chain rule of probability is an exact mathematical identity. The table quantifying decay under uniform independent $p$ is accurate ($0.8^5 \approx 0.33$). 
 

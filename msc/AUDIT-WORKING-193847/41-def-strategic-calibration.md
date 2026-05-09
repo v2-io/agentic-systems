@@ -10,13 +10,13 @@ It integrates perfectly with `#def-strategy-dag` (edges and nodes) and `#def-val
 The definition $r_{ij} = \mathbb{E}[\Delta V_O \mid \dots] - \Delta V_O^{\text{observed}}$ is the standard Temporal Difference (TD) error from Reinforcement Learning. The aggregation $\delta_{\text{strategic}} = (\sum w_{ij} r_{ij}^2)^{1/2}$ is a standard weighted $L^2$ norm. The math is sound but, as the Epistemic Status notes, heuristic in its choice of aggregation.
 
 **4. What direction will the theory take next?**
-The text notes that $\delta_{\text{strategic}}$ requires accumulating evidence over multiple edge traversals, making it a "second-order inference." This contrasts with $\delta_{\text{epistemic}}$ which updates on every observation. I predict the theory will now formally analyze the dynamics of how these edges update over time, leading into `#deriv-strategic-dynamics` and `#hyp-edge-update-via-gain`.
+The text notes that $\delta_{\text{strategic}}$ requires accumulating evidence over multiple edge traversals, making it a "second-order inference." This contrasts with $\delta_{\text{epistemic}}$ which updates on every observation. I predict the theory will now formally analyze the dynamics of how these edges update over time, leading into `#deriv-edge-credence-dynamics` and `#hyp-edge-update-via-gain`.
 
 **5. What errors should I now watch for?**
 I must watch for downstream logic that conflates a bad plan with bad execution. The "execution fidelity" condition is huge. If an agent tries to update its strategy DAG because a step failed, but the failure was actually due to a motor slip (execution error), the agent will ruin a perfectly good plan. 
 
 **6. Predictions for next segments.**
-`#schema-strategy-persistence` or `#deriv-strategic-dynamics` will formalize how the persistence condition applies to this specific type of mismatch.
+`#schema-strategy-persistence` or `#deriv-edge-credence-dynamics` will formalize how the persistence condition applies to this specific type of mismatch.
 
 **7. What would I change?**
 The explicit acknowledgment that "The agent must know whether it followed its own plan, which requires a level of self-monitoring that many agents lack" is brilliant. It formally names the necessity of proprioception (knowing what your own body/actuators did) for high-level cognitive planning.

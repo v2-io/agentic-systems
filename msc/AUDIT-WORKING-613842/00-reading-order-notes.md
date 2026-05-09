@@ -21,7 +21,7 @@ The SCC consists of:
 - `#form-strategy-complexity-cost`
 - `#hyp-edge-update-via-gain`
 - `#scope-edge-update-causal-validity`
-- `#deriv-strategic-dynamics`
+- `#deriv-edge-credence-dynamics`
 - `#deriv-edge-update-natural-parameter`
 - `#deriv-strategy-cost-regret-bound`
 
@@ -39,7 +39,7 @@ I will break the cycle this way:
    `#form-strategy-complexity-cost`.
 
 2. Then read the supporting derivations:
-   `#deriv-strategic-dynamics`,
+   `#deriv-edge-credence-dynamics`,
    `#deriv-edge-update-natural-parameter`,
    `#deriv-strategy-cost-regret-bound`.
 

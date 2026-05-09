@@ -185,7 +185,7 @@ Consider a strategy DAG edge (per `#def-strategy-dag`) carrying confidence $p_{i
 
 True success probability of the underlying event: $p^\ast_{ij}$. Agent's policy $\pi$ affects whether the edge is tested (action $a_t$ invokes this sub-plan, producing a Bernoulli sample).
 
-"Disturbance" in the strategy-dynamics sense (`#deriv-strategic-dynamics`) is the rate at which the edge-credence process $p_{ij}(t)$ is driven away from its current estimate by incoming likelihood mass. Per `#deriv-edge-update-natural-parameter`'s log-odds form:
+"Disturbance" in the strategy-dynamics sense (`#deriv-edge-credence-dynamics`) is the rate at which the edge-credence process $p_{ij}(t)$ is driven away from its current estimate by incoming likelihood mass. Per `#deriv-edge-update-natural-parameter`'s log-odds form:
 
 $$\lambda_{ij}^{\text{post}} = \lambda_{ij}^{\text{prior}} + \ell(y)$$
 

@@ -7,7 +7,7 @@ depends:
   - deriv-edge-update-natural-parameter
   - der-gain-sector-bridge
   - deriv-sector-condition
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
   - additive-coordinate-forcing
   - disc-identifiability-floor
   - disc-separability-pattern
@@ -461,7 +461,7 @@ The architectural-proposals document flags G-BP1 (natural-parameter reparameteri
 - `#deriv-edge-update-natural-parameter` — Aczél-Cauchy-FE derivation of log-odds as unique additive-evidence coordinate
 - `#der-gain-sector-bridge` — B1 directional fidelity, sub-scope $\alpha$ derivation, Kalman $(P^-)^{-1}$-norm subtlety
 - `#deriv-sector-condition` — A2' sub-scope partition ($\alpha$ / $\beta$), Prop A.1, A.1S
-- `#deriv-strategic-dynamics` — Props B.5, B.6, B.7 (L1', observable-$C$ five-way gating; unobservable-$C$ Cramér-Rao floor)
+- `#deriv-edge-credence-dynamics` — Props B.5, B.6, B.7 (L1', observable-$C$ five-way gating; unobservable-$C$ Cramér-Rao floor)
 - `#additive-coordinate-forcing` — three-layer meta-pattern; Lyapunov as adjacent family member
 - `#disc-identifiability-floor` — Instance 1 (CHT on-policy); Instance 2 (L1'-unobservable Cramér-Rao)
 - `#disc-separability-pattern` — correlation ladder (L0/L1/L1'/L2); this spike proposes extending the ladder with Fisher-whitening structured-repair

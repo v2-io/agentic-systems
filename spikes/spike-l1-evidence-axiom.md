@@ -142,7 +142,7 @@ with $k_\alpha = 2K+1$ and each $\lambda = \log(\theta/(1-\theta))$.
 
 *Key observation.* The block coordinate is NOT one log-odds per edge ($K$-dimensional) and is NOT one log-odds per cluster (1-dimensional). It is $(2K+1)$-dimensional — one per *conditional* regime, with the $C$-parameter's log-odds as a shared coordinate. The per-edge marginal credence $\hat p_k = \theta_C\theta_{k\mid 1} + (1-\theta_C)\theta_{k\mid 0}$ is a *derived* quantity (a non-log-linear combination of the block coordinates); it is not itself additive under block observations.
 
-This is consistent with the #deriv-strategic-dynamics Prop B.7 state representation, which uses $(\theta_C, \{\theta_{k\mid C}\}, \{\theta_{k\mid \neg C}\})$ as the joint state — an affine image of the log-odds vector under each component's sigmoid-exp.
+This is consistent with the #deriv-edge-credence-dynamics Prop B.7 state representation, which uses $(\theta_C, \{\theta_{k\mid C}\}, \{\theta_{k\mid \neg C}\})$ as the joint state — an affine image of the log-odds vector under each component's sigmoid-exp.
 
 **Case B — $C$ unobservable.** The likelihood does NOT factorize across $C$:
 

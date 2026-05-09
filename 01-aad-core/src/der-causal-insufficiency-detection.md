@@ -54,7 +54,7 @@ The no-go's scope conditions (S1)–(S5) define "purely on-policy." Each conditi
 
 | Route | Scope violated | AAD capability | Detection strength |
 |-------|----------------|----------------|--------------------|
-| (a) ε-exploration | (S1) | SA3 exploration ( #deriv-strategic-dynamics Prop B.4) | Partial, scales with ε |
+| (a) ε-exploration | (S1) | SA3 exploration ( #deriv-edge-credence-dynamics Prop B.4) | Partial, scales with ε |
 | (b) Joint sibling observability | (S3) | Covariance test under SA3 + #der-loop-interventional-access | Strong |
 | (c) Intermediate observability | (S3) at finer grain | Observability investment ( #der-observability-dominance) | Very strong when available |
 | (d) Structural priors | (S5) | Hypothesized common-cause nodes in DAG construction | Prior-quality-dependent |
@@ -145,7 +145,7 @@ Diagnosis is a form of internal exploration — the agent probes its own model's
 
 *Conditional* on the no-go's scope conditions (S1)–(S5) and on strategy-layer instantiation of #result-structural-adaptation-necessity. The **no-go theorem** is *exact* for shallow strict-prerequisite cases (2-sibling OR or AND, single binary common cause) by direct construction; *robust qualitative* for general DAG topology, soft facilitators, and deeper structures. The structural argument (observational equivalence of regime-conditional L0 and latent-cause L1) transfers to the general case; explicit construction of $\mathcal{W}_{L0}^\ast$ has been carried out only for shallow cases.
 
-The **boundary characterization** (routes (a)–(e)) is *robust qualitative*: each route maps to a specific scope-condition violation and to existing AAD machinery, but the precise detection power of each route depends on domain particulars. Routes (a) and (b) have explicit AAD scaffolding ( #deriv-strategic-dynamics, #der-loop-interventional-access); routes (c)–(e) depend on domain capability.
+The **boundary characterization** (routes (a)–(e)) is *robust qualitative*: each route maps to a specific scope-condition violation and to existing AAD machinery, but the precise detection power of each route depends on domain particulars. Routes (a) and (b) have explicit AAD scaffolding ( #deriv-edge-credence-dynamics, #der-loop-interventional-access); routes (c)–(e) depend on domain capability.
 
 The **primary detection mechanism** (pairwise sibling covariance) is *robust qualitative*: standard hypothesis testing applied to interventional data from the feedback loop, with explicit preconditions. Its sensitivity depends on how cleanly the agent can separate sibling-covariance signal from edge-credence noise at convergence; in adversarial or fast-drifting environments the test's effective sample size shrinks.
 
@@ -174,7 +174,7 @@ These limitations parallel the information-theoretic underdetermination in #disc
 
 **Connection to the orient cascade.** The detection signal enters the orient cascade ( #der-orient-cascade) at step 4c (causal-sufficiency check). Step 4c's reference to "pairwise sibling covariance under an augmented test" aligns with the primary detection mechanism here. The no-go strengthens the cascade's load-bearing: step 4c is not "one possible diagnostic" but "the unique broadly-available diagnostic given the structural impossibility of purely on-policy detection."
 
-**Connection to the broader identifiability-floor pattern.** The no-go is one of an emerging class of structural impossibility results in AAD — limits on what can be inferred from limited information, derived from external information-theoretic theorems. See #disc-identifiability-floor for the meta-pattern collecting this result alongside the L1' mixture-identifiability obstruction ( #deriv-strategic-dynamics Prop B.7) and the open causal-IB extension for interventional relevance variables.
+**Connection to the broader identifiability-floor pattern.** The no-go is one of an emerging class of structural impossibility results in AAD — limits on what can be inferred from limited information, derived from external information-theoretic theorems. See #disc-identifiability-floor for the meta-pattern collecting this result alongside the L1' mixture-identifiability obstruction ( #deriv-edge-credence-dynamics Prop B.7) and the open causal-IB extension for interventional relevance variables.
 
 **Domain instantiations.** The covariance test (route (b)) applies concretely in:
 - **Software deployment**: two services sharing infrastructure fail together more often than independent failure rates predict → add infrastructure-health node.

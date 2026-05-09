@@ -11,13 +11,13 @@ This segment cleans up a massive amount of theoretical debt. It directly referen
 *Constructive repair:* The text handles this in the "Iteration objection resolved" section ("Each attempt is a distinct node at a distinct time"), but it should explicitly state in Step 1 that $\Sigma_t$ is strictly a *time-unrolled* execution graph, not a finite state machine or a general Markov Decision Process transition graph. If the agent compresses $\Sigma_t$ by rolling it up into a policy over states ($\pi(S)$), it loses the DAG structure.
 
 **4. What direction will the theory take next?**
-The Appendices are winding down. The OUTLINE shows only `#deriv-strategic-dynamics` and `#schema-strategy-persistence` (which I already read in the main sequence, though it might have an appendix counterpart here). The next major block is Section IV: Gaps.
+The Appendices are winding down. The OUTLINE shows only `#deriv-edge-credence-dynamics` and `#schema-strategy-persistence` (which I already read in the main sequence, though it might have an appendix counterpart here). The next major block is Section IV: Gaps.
 
 **5. What errors should I now watch for?**
 I must watch for downstream claims that assume the strategy DAG $\Sigma_t$ is equivalent to the environment model $M_t$. The text is explicitly clear: $M_t$ can be cyclic (feedback loops in the physical world); $\Sigma_t$ cannot be cyclic because it is a time-indexed plan.
 
 **6. Predictions for next segments.**
-`#deriv-strategic-dynamics` will be the final rigorous derivation, handling the edge-weight updates.
+`#deriv-edge-credence-dynamics` will be the final rigorous derivation, handling the edge-weight updates.
 
 **7. What would I change?**
 The honest comparison to Cox's Theorem ("The argument parallels Cox's theorem for probability in *form* but not yet in *strength*") is beautiful. It admits that while AAD has proven DAGs are *sufficient*, it hasn't mathematically proven they are *strictly necessary* (excluding all other possible graph types). This epistemic humility makes the framework infinitely more trustworthy.

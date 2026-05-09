@@ -4,19 +4,19 @@
 I predicted this segment would formalize the penalty of deep strategies. It confirms this exactly, using the chain rule of probability to show that $\log P(\text{chain})$ accumulates negative terms, meaning confidence decays monotonically with depth.
 
 **2. Cross-segment consistency.**
-This segment builds directly on `#def-strategy-dimension` and the DAG structure from `#def-strategy-dag`. It explicitly references the AND-node amplification defined in the DAG status propagation. The linkage to `#deriv-strategic-dynamics` (evidence starvation) and `#form-strategy-complexity-cost` (cognitive cost) perfectly sets up the "Triple depth penalty."
+This segment builds directly on `#def-strategy-dimension` and the DAG structure from `#def-strategy-dag`. It explicitly references the AND-node amplification defined in the DAG status propagation. The linkage to `#deriv-edge-credence-dynamics` (evidence starvation) and `#form-strategy-complexity-cost` (cognitive cost) perfectly sets up the "Triple depth penalty."
 
 **3. Math verification.**
 The math here is the fundamental axiom of probability: $P(A, B) = P(A)P(B|A)$. Taking the log makes it additive: $\log P(A,B) = \log P(A) + \log P(B|A)$. Because probabilities are $\leq 1$, their logs are $\leq 0$. Therefore, adding more terms *always* drives the sum down (or keeps it flat if $P=1$). The math is unassailable.
 
 **4. What direction will the theory take next?**
-The text heavily references `#deriv-strategic-dynamics` for the "evidence starvation" penalty and `#form-strategy-complexity-cost` for the "cognitive cost." Since this segment only handled the first of the three penalties, I predict the theory will now formally define the other two, likely moving to `#deriv-strategic-dynamics` next to explain how edge credences are actually updated.
+The text heavily references `#deriv-edge-credence-dynamics` for the "evidence starvation" penalty and `#form-strategy-complexity-cost` for the "cognitive cost." Since this segment only handled the first of the three penalties, I predict the theory will now formally define the other two, likely moving to `#deriv-edge-credence-dynamics` next to explain how edge credences are actually updated.
 
 **5. What errors should I now watch for?**
 I must watch for downstream claims that assume independent edges ($p^n$) in complex environments. The text explicitly notes that $p^n$ is just a "quantitative illustration" and that positive correlation (shared infrastructure failing) makes the actual confidence *lower* than the independent calculation suggests. 
 
 **6. Predictions for next segments.**
-`#deriv-strategic-dynamics` will formalize the "evidence starvation" penalty and the update rules for the DAG edges.
+`#deriv-edge-credence-dynamics` will formalize the "evidence starvation" penalty and the update rules for the DAG edges.
 
 **7. What would I change?**
 The "Triple depth penalty" framing is incredibly strong. It organizes three disparate mathematical phenomena (probability decay, sparse gradients, memory limits) into a single cohesive constraint on agent behavior. No changes needed.

@@ -1,5 +1,5 @@
 ---
-slug: deriv-strategic-dynamics
+slug: deriv-edge-credence-dynamics
 type: derivation
 status: conditional
 depends:
@@ -10,7 +10,7 @@ depends:
 stage: draft
 ---
 
-# Derivation: Sector Condition Verification for Strategic Dynamics
+# Derivation: Sector Condition Verification for Edge-Credence Dynamics
 
 Complete verification that specific strategy update dynamics satisfy the sector condition from #deriv-sector-condition, backing the schema proposed in #schema-strategy-persistence. Four cases are treated: a single-edge strategy, a two-edge AND-chain with observable intermediate, the same chain with unobservable intermediate, and a two-arm OR-node under exploratory action selection.
 

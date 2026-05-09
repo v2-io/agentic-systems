@@ -4,14 +4,14 @@ type: worked-example
 status: conditional
 depends:
   - def-strategy-dag
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
   - deriv-graph-structure-uniqueness
 stage: draft
 ---
 
 # Worked Example: L1 Augmented DAG with Common-Cause Node
 
-A concrete instantiation of the Correlation Hierarchy ( #def-strategy-dag) and Proposition B.6 ( #deriv-strategic-dynamics). Two OR-alternatives sharing an infrastructure dependency are modeled at L0 (independence) and L1 (augmented DAG), with the sector condition verified for L1.
+A concrete instantiation of the Correlation Hierarchy ( #def-strategy-dag) and Proposition B.6 ( #deriv-edge-credence-dynamics). Two OR-alternatives sharing an infrastructure dependency are modeled at L0 (independence) and L1 (augmented DAG), with the sector condition verified for L1.
 
 ## Setup
 
@@ -84,7 +84,7 @@ Three leaf nodes with Beta-Bernoulli dynamics and $\varepsilon$-greedy path sele
 | $A_1$ (greedy) | $\theta_{1\mid C} = 0.9$ | $C=1$ AND path 1 selected | $-\theta_C(1-\varepsilon)\,\delta_{A_1}/(n_{A_1}+1)$ |
 | $A_2$ (explore) | $\theta_{2\mid C} = 0.7$ | $C=1$ AND path 2 selected | $-\theta_C\varepsilon\,\delta_{A_2}/(n_{A_2}+1)$ |
 
-The sector parameter (full proof in Prop B.6 of #deriv-strategic-dynamics):
+The sector parameter (full proof in Prop B.6 of #deriv-edge-credence-dynamics):
 
 $$\alpha_\Sigma = \min\!\left(\frac{1}{n_C+1},\; \frac{\theta_C(1-\varepsilon)}{n_{A_1}+1},\; \frac{\theta_C \varepsilon}{n_{A_2}+1}\right)$$
 
@@ -131,7 +131,7 @@ where $P_\Sigma(G \mid C = c)$ is computed by standard AND/OR propagation with $
 
 $$\hat P_\Sigma^{L1'} = \theta_C \cdot P_\Sigma(G \mid C) + (1 - \theta_C) \cdot P_\Sigma(G \mid \neg C)$$
 
-where the two conditional sub-plans may share structure but carry separate edge credences $p_{ij \mid C}$ and $p_{ij \mid \neg C}$. The parametric cost per soft-facilitator-affected edge doubles; the propagation remains polynomial. This is the gap between L1 (strict prerequisites) and L2 (arbitrary joint): L1' handles soft facilitators without the $O(2^k)$ exponential blowup of L2's explicit conditioning. Sector-condition verification for L1' is derived as **Proposition B.7** in #deriv-strategic-dynamics *when $C$ is observable per trial*: under Beta-Bernoulli updating, componentwise updates per conditional branch, and facilitator monotonicity ($P_\Sigma(G_{\mid C}) \geq P_\Sigma(G_{\mid \neg C})$), the sector condition holds globally with five-way gating
+where the two conditional sub-plans may share structure but carry separate edge credences $p_{ij \mid C}$ and $p_{ij \mid \neg C}$. The parametric cost per soft-facilitator-affected edge doubles; the propagation remains polynomial. This is the gap between L1 (strict prerequisites) and L2 (arbitrary joint): L1' handles soft facilitators without the $O(2^k)$ exponential blowup of L2's explicit conditioning. Sector-condition verification for L1' is derived as **Proposition B.7** in #deriv-edge-credence-dynamics *when $C$ is observable per trial*: under Beta-Bernoulli updating, componentwise updates per conditional branch, and facilitator monotonicity ($P_\Sigma(G_{\mid C}) \geq P_\Sigma(G_{\mid \neg C})$), the sector condition holds globally with five-way gating
 
 $$\alpha_{L1'} = \min\!\left(\tfrac{1}{n_C+1},\; \min_{j \in \mathcal{J}_C}\tfrac{\theta_C \pi_{j\mid C}}{n_{j\mid C}+1},\; \min_{j \in \mathcal{J}_{\neg C}}\tfrac{(1-\theta_C)\pi_{j\mid \neg C}}{n_{j\mid \neg C}+1}\right)$$
 

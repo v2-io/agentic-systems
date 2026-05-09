@@ -10,7 +10,7 @@ depends-on:
   - disc-credit-assignment-boundary
   - deriv-edge-update-natural-parameter
   - deriv-discrete-sector-condition
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
   - deriv-adaptive-gain-dynamics
   - disc-identifiability-floor
 ---
@@ -29,7 +29,7 @@ can be derived from structural properties of the gradient Jacobian $J$, the iden
 
 **Headline outcome (summary, then derivations).** Under log-odds presentation with linear-in-log-odds dynamics and a step-size floor, the credit-assignment iteration admits an A2'-analog `(O-A2')` contraction condition whose sector constant is the Fisher-weighted product $\iota \cdot \eta_k \cdot \lambda_{\min}(J^\top J / \lVert J\rVert^2)$ on the log-odds coordinate. The stochastic-approximation analog (Robbins-Monro under unbiased gradient estimator) inherits the same contraction in mean-square under a standard step-size schedule. Sub-scope α of `#der-gain-sector-bridge` transfers structurally: Bayesian and exponential-family updates satisfy `(O-A2')` by construction. Sub-scope β fails structurally: non-Bayesian, non-exponential-family updates generally fail `(O-A2')` — and AAD's `#disc-identifiability-floor` machinery already accounts for the failure mode via `#scope-edge-update-causal-validity` (regime-C edges have $\iota \approx 0$, hence $\alpha_{\text{op}} \approx 0$, hence frozen credence per `#der-observability-dominance`). The discrete step-size condition of `#deriv-discrete-sector-condition` lifts: under `O-DA2'` (additive Lipschitz bound on $J$) the operator iterates as a Banach contraction with contraction factor derived from `(O-A2')` via Cauchy-Schwarz.
 
-The honest break-test is where Gaps A and B differ: the Fisher metric is in general *non-diagonal under L1' correlation*, so the sector condition transforms rather than breaks — whitening inverts the off-diagonal via `(O-A2'-whit)`. But L1' with unobservable common cause hits `#disc-identifiability-floor`'s Cramér-Rao refutation (rank-1 Fisher per `#deriv-strategic-dynamics` Prop B.7 refutation): no sector-positive operator exists, so `(O-A2')` fails structurally rather than gracefully. This gives the composition argument a first non-trivial obstruction to absorb.
+The honest break-test is where Gaps A and B differ: the Fisher metric is in general *non-diagonal under L1' correlation*, so the sector condition transforms rather than breaks — whitening inverts the off-diagonal via `(O-A2'-whit)`. But L1' with unobservable common cause hits `#disc-identifiability-floor`'s Cramér-Rao refutation (rank-1 Fisher per `#deriv-edge-credence-dynamics` Prop B.7 refutation): no sector-positive operator exists, so `(O-A2')` fails structurally rather than gracefully. This gives the composition argument a first non-trivial obstruction to absorb.
 
 ---
 
@@ -220,7 +220,7 @@ The correlation enters through $\lambda_{\min}(\mathcal{F})$, which is bounded b
 
 *[Derived (`(O-A2')` breaks under unobservable L1', from Cramér-Rao rank-1 floor)]*
 
-When $C$ is unobservable, the marginalized Fisher is rank-1 (`#deriv-strategic-dynamics` Prop B.7 refutation, `#disc-identifiability-floor`). Then $\lambda_{\min}(\mathcal{F}) = 0$ and `(O-A2')` fails structurally — no positive sector constant exists along the unidentifiable direction. This is *not* graceful degradation; it is the same no-go pattern as `#der-causal-insufficiency-detection` (on-policy L0-vs-L1 via CHT) but at the update-operator layer.
+When $C$ is unobservable, the marginalized Fisher is rank-1 (`#deriv-edge-credence-dynamics` Prop B.7 refutation, `#disc-identifiability-floor`). Then $\lambda_{\min}(\mathcal{F}) = 0$ and `(O-A2')` fails structurally — no positive sector constant exists along the unidentifiable direction. This is *not* graceful degradation; it is the same no-go pattern as `#der-causal-insufficiency-detection` (on-policy L0-vs-L1 via CHT) but at the update-operator layer.
 
 **Interpretation.** The update operator $T$ has the same identifiability-floor structure as the underlying plant: gradual degradation under soft identifiability loss, structural break under hard identifiability loss. The Fisher-whitened repair (multi-channel joint observation per Prop B.7 repair route ii) is the operator-level analog of `#der-observability-dominance`'s augmentation: observability buys back rank and rank buys back sector constant.
 

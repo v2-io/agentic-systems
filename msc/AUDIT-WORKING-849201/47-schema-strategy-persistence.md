@@ -4,7 +4,7 @@
 My prediction was that this segment would apply the Lyapunov sector-persistence template to the strategy DAG, proving that if the strategy updating mechanism outpaces the strategic disturbance rate ($\rho_\Sigma$), the strategy persists. The segment did exactly this: $\alpha_\Sigma > \rho_\Sigma / R_\Sigma$. However, it added a crucial "forgetting prerequisite" that I did not anticipate, proving that without exponential discounting, Bayesian updating mathematically guarantees eventual failure.
 
 **2. Cross-segment consistency:**
-This segment is the grand synthesis of Section II. It pulls together the template from `#result-sector-persistence-template`, the DAG structure from `#def-strategy-dag`, and the edge updates from `#hyp-edge-update-via-gain`. The references to specific proofs in the appendices (`#deriv-strategic-dynamics` Props B.1-B.6) show that the author actually did the grueling Lyapunov math for various DAG topologies.
+This segment is the grand synthesis of Section II. It pulls together the template from `#result-sector-persistence-template`, the DAG structure from `#def-strategy-dag`, and the edge updates from `#hyp-edge-update-via-gain`. The references to specific proofs in the appendices (`#deriv-edge-credence-dynamics` Props B.1-B.6) show that the author actually did the grueling Lyapunov math for various DAG topologies.
 
 **3. Math verification:**
 The "Forgetting as Prerequisite" argument is a masterpiece of mathematical modeling. 

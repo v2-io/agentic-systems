@@ -124,7 +124,7 @@ A significantly positive $\hat\rho_{ij}$ rejects the L0 independence hypothesis 
 
 The feedback loop ( #der-loop-interventional-access) is what makes this possible: the agent's actions are genuine interventions, so the $(A_i, Y_i)$ pairs are interventional data. The covariance test is a causal independence test conducted on interventional data — it detects common causes that would be confounded in purely observational data.
 
-**Why this is the primary mechanism.** The covariance test does not require any particular execution policy beyond the joint-observability condition that the agent occasionally generates samples of $(Y_{A_i}, Y_{A_j})$ pairs not censored by short-circuit evaluation. Standard exploration (SA3, already required by #deriv-strategic-dynamics Prop B.4 for OR-node calibration) supplies these samples. The test runs on data the agent collects anyway and detects the structural property directly rather than indirectly through aggregate residuals.
+**Why this is the primary mechanism.** The covariance test does not require any particular execution policy beyond the joint-observability condition that the agent occasionally generates samples of $(Y_{A_i}, Y_{A_j})$ pairs not censored by short-circuit evaluation. Standard exploration (SA3, already required by #deriv-edge-credence-dynamics Prop B.4 for OR-node calibration) supplies these samples. The test runs on data the agent collects anyway and detects the structural property directly rather than indirectly through aggregate residuals.
 
 **Detection criterion.** A statistically significant positive $\hat\rho_{ij}$ at sample size $N$ sufficient for the desired test power, after per-edge credences have stabilized:
 
@@ -179,7 +179,7 @@ where $R$ is a structure-dependent coefficient that recovers the marginal-limit 
 1. **Material off-policy fraction.** The agent has $\varepsilon$ large enough that $\varepsilon \cdot R$ exceeds the noise floor of empirical residual estimation. Purely greedy agents cannot use this signal.
 2. **Marginal convergence.** Per-edge credences have actually stabilized at their (conditional or mixed) limits.
 3. **Approximate stationarity.** True edge probabilities are not drifting faster than the agent's update rate.
-4. **No systematic update bias** (e.g., the marginal Bayesian update for unobservable intermediates has $O(1/n)$ downward bias — see #deriv-strategic-dynamics, Prop B.3).
+4. **No systematic update bias** (e.g., the marginal Bayesian update for unobservable intermediates has $O(1/n)$ downward bias — see #deriv-edge-credence-dynamics, Prop B.3).
 
 When all four hold and the residual is statistically significantly nonzero, its sign confirms the bias direction (OR overestimation vs AND underestimation) identified by the primary covariance test. The two diagnostics are complementary: covariance localizes *where* the missing common cause is; the residual sign characterizes the *aggregate bias direction* across the DAG.
 

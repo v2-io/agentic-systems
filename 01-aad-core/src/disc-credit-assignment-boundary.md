@@ -9,7 +9,7 @@ depends:
   - def-strategic-calibration
   - der-observability-dominance
   - der-gain-sector-bridge
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
 stage: draft
 ---
 
@@ -68,7 +68,7 @@ Domains with richer observation structure can do better (Thompson sampling, full
 
 Three results hold independently of any specific credit-assignment scheme:
 
-**1. Persistence is credit-assignment-free.** Proposition B.5 in #deriv-strategic-dynamics shows that the sector condition transfers from per-edge credence space to **plan-confidence error** $\delta_s = \hat P_\Sigma - \Phi$ via the Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$. The Jacobian is computable from status propagation in $O(\lvert V\rvert + \lvert E\rvert)$ — no outcome decomposition required. The persistence guarantee (whether the strategy's plan-level self-assessment can be maintained) does not depend on the agent's ability to attribute outcomes to edges. **Note:** this proves persistence of $\delta_s$ (plan-confidence error), not of $\delta_{\text{strategic}}$ (the per-edge calibration residual from #def-strategic-calibration). Extending persistence to $\delta_{\text{strategic}}$ requires solving the credit-assignment problem — that is the gap this segment characterizes.
+**1. Persistence is credit-assignment-free.** Proposition B.5 in #deriv-edge-credence-dynamics shows that the sector condition transfers from per-edge credence space to **plan-confidence error** $\delta_s = \hat P_\Sigma - \Phi$ via the Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$. The Jacobian is computable from status propagation in $O(\lvert V\rvert + \lvert E\rvert)$ — no outcome decomposition required. The persistence guarantee (whether the strategy's plan-level self-assessment can be maintained) does not depend on the agent's ability to attribute outcomes to edges. **Note:** this proves persistence of $\delta_s$ (plan-confidence error), not of $\delta_{\text{strategic}}$ (the per-edge calibration residual from #def-strategic-calibration). Extending persistence to $\delta_{\text{strategic}}$ requires solving the credit-assignment problem — that is the gap this segment characterizes.
 
 **2. The diagnostic framework is plan-level.** The satisfaction gap ( #def-satisfaction-gap), control regret ( #def-control-regret), and the orient cascade ordering ( #der-orient-cascade) operate on aggregate value, not per-edge quantities. They tell the agent *whether* the strategy is failing (and whether the failure is feasibility vs. optimality vs. calibration), without requiring per-edge attribution.
 
@@ -131,13 +131,13 @@ AAD's formal guarantees require only Level 0. Practical agents need at least Lev
 
 ## Epistemic Status
 
-*Mixed.* The default signal function (gradient-based attribution, stated in log-odds) is a *formulation* — a concrete, well-motivated representational choice analogous to the gain principle's $\eta^\ast$ formula. It satisfies directional fidelity for monotone AND/OR DAGs (derivable from Jacobian non-negativity). The log-odds presentation is *canonically selected* by the evidential-additivity axiom — the unique additive-evidence parameterization up to positive affine transformation ( #deriv-edge-update-natural-parameter). The boundary characterization (tractable cases, intractability barriers, design requirement) is *discussion-grade*, with the intractability argument at sketch level and the design requirement derived from the bridge theorem ( #der-gain-sector-bridge, #deriv-strategic-dynamics Prop B.5).
+*Mixed.* The default signal function (gradient-based attribution, stated in log-odds) is a *formulation* — a concrete, well-motivated representational choice analogous to the gain principle's $\eta^\ast$ formula. It satisfies directional fidelity for monotone AND/OR DAGs (derivable from Jacobian non-negativity). The log-odds presentation is *canonically selected* by the evidential-additivity axiom — the unique additive-evidence parameterization up to positive affine transformation ( #deriv-edge-update-natural-parameter). The boundary characterization (tractable cases, intractability barriers, design requirement) is *discussion-grade*, with the intractability argument at sketch level and the design requirement derived from the bridge theorem ( #der-gain-sector-bridge, #deriv-edge-credence-dynamics Prop B.5).
 
 **Historical note on the presentation choice.** An earlier probability-space presentation of the default signal function, written as
 
 $$\text{signal}_k = p_k + \iota_k \cdot J_k(y_G - \hat P_\Sigma)/\lVert\mathbf{J}\rVert^2$$
 
-with the update $p_k^{\text{new}} = p_k + \eta(\text{signal}_k - p_k)$, exhibited a mechanical break: when $\lVert\mathbf{J}\rVert^2 \to 0$ the signal magnitude could push $p_k^{\text{new}}$ outside $[0, 1]$. The log-odds presentation above eliminates this failure mode by construction. Props B.1–B.7 of #deriv-strategic-dynamics remain as stated — their sector-parameter content is Fisher-equivalent across parameterizations, and the moment-parameter form is retained for algebraic clarity. The current segment writes the *default* signal in log-odds (native coordinate), with the moment-parameter form understood as the projected image via sigmoid.
+with the update $p_k^{\text{new}} = p_k + \eta(\text{signal}_k - p_k)$, exhibited a mechanical break: when $\lVert\mathbf{J}\rVert^2 \to 0$ the signal magnitude could push $p_k^{\text{new}}$ outside $[0, 1]$. The log-odds presentation above eliminates this failure mode by construction. Props B.1–B.7 of #deriv-edge-credence-dynamics remain as stated — their sector-parameter content is Fisher-equivalent across parameterizations, and the moment-parameter form is retained for algebraic clarity. The current segment writes the *default* signal in log-odds (native coordinate), with the moment-parameter form understood as the projected image via sigmoid.
 
 Max attainable: *conditional* — with a formal intractability reduction, the boundary characterization could be promoted. The design requirement is already exact (it follows from the bridge theorem). The log-odds presentation is *derived-conditional* (on the evidential-additivity axiom) via #deriv-edge-update-natural-parameter, structurally parallel to the reverse-KL uniqueness result under the chain-rule axiom in #deriv-strategy-cost-regret-bound §6.1.
 

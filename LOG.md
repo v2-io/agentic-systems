@@ -173,7 +173,7 @@ Five commits: `14a6095`, `b6134c2`, `4d050c8`, `b91493c`, `a14682e`. Executed st
 
 **Landmark contributions:**
 - A no-go theorem for on-policy L0-insufficiency detection (Pearl/Bareinboim CHT applied) — `#der-causal-insufficiency-detection`.
-- A derived L1' sector transfer for soft-facilitators under observable common cause (Prop B.7 with facilitator monotonicity) plus Cramér-Rao refutation for the unobservable case — `#deriv-strategic-dynamics`.
+- A derived L1' sector transfer for soft-facilitators under observable common cause (Prop B.7 with facilitator monotonicity) plus Cramér-Rao refutation for the unobservable case — `#deriv-edge-credence-dynamics`.
 - Per-quantity exactness audit for git-derived TST estimators with conditional maximality — `#obs-software-epistemic-properties` + $\mathcal{C}_t^{\text{commit}}$ in NOTATION.md.
 - The `#disc-identifiability-floor` meta-segment naming the structural-no-go pattern.
 

@@ -453,7 +453,7 @@ The **epistemic-architecture interpretation** of Gemini's pressure point: it is 
 
 4. **Does not extend to `#deriv-adaptive-gain-dynamics` adaptive-metric coupling.** §6.5 observes the composition exists; the detailed statement is a follow-up.
 
-5. **Does not cover the L1' mixture regime under correlated-evidence.** `#deriv-fisher-whitened-update-rule` and Prop B.7's five-way gating in `#deriv-strategic-dynamics` handle this structurally; the bridge-lemma apparatus composes with those results but this spike does not trace the composition.
+5. **Does not cover the L1' mixture regime under correlated-evidence.** `#deriv-fisher-whitened-update-rule` and Prop B.7's five-way gating in `#deriv-edge-credence-dynamics` handle this structurally; the bridge-lemma apparatus composes with those results but this spike does not trace the composition.
 
 ### 10.3 Overall verdict
 

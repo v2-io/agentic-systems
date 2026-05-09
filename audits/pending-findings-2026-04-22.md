@@ -10,7 +10,7 @@
 - **Finding 7 — RESOLVED.** Per-quantity exactness audit + conditional maximality strengthening; predecessor at `spikes/spike-finding-7-git-chronica-narrowing.md`, strengthening at `spikes/spike-finding-7-strengthening.md`, both in commit `b6134c2`. $\mathcal{C}_t^{\text{commit}}$ added to NOTATION.md.
 - **Finding 10 — RESOLVED.** Status reclassified discussion-grade → exact (applied external theorem). Spike at `spikes/spike-finding-10-ib-status.md`; commit `a14682e`.
 - **Finding 11 — PARTIALLY RESOLVED** by F1 strengthening. Step 4c is now reframed as the unique broadly-available diagnostic given the no-go (rather than as one diagnostic among several). Optional step-4c sanity edit in `#der-orient-cascade` itself remains as cleanup.
-- **Finding 13 — RESOLVED.** Prop B.7 derived for L1' observable-$C$ + Cramér-Rao refutation for unobservable case. Predecessor softening at `spikes/spike-finding-13-l1-default-narrowing.md`, strengthening at `spikes/spike-finding-13-strengthening.md`, both in commit `4d050c8`. `#def-strategy-dag` headline + Correlation Hierarchy table updated; `#deriv-strategic-dynamics` open item #4 marked Resolved.
+- **Finding 13 — RESOLVED.** Prop B.7 derived for L1' observable-$C$ + Cramér-Rao refutation for unobservable case. Predecessor softening at `spikes/spike-finding-13-l1-default-narrowing.md`, strengthening at `spikes/spike-finding-13-strengthening.md`, both in commit `4d050c8`. `#def-strategy-dag` headline + Correlation Hierarchy table updated; `#deriv-edge-credence-dynamics` open item #4 marked Resolved.
 
 **Remaining open:** Findings 2 (partial — V-medium G-BP2 fixed Shannon-zero degeneracy in #form-strategy-complexity-cost; the unbounded-gradient pathology in #disc-credit-assignment-boundary remains), 4, 6, 8, 9, 12, 14, 15. See `TODO.md` for current actionability and subsumption-by-architectural-proposal status.
 
@@ -622,12 +622,12 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Strongest counterevidence in `src/`.**
 
-- `01-aad-core/src/deriv-strategic-dynamics.md` Prop B.7 (added 2026-04-22 commit `4d050c8`): derives the L1' sector transfer for observable common cause with explicit five-way-gating $\alpha_{L1'}$ formula.
+- `01-aad-core/src/deriv-edge-credence-dynamics.md` Prop B.7 (added 2026-04-22 commit `4d050c8`): derives the L1' sector transfer for observable common cause with explicit five-way-gating $\alpha_{L1'}$ formula.
 - `01-aad-core/src/def-strategy-dag.md` Correlation Hierarchy (updated same commit): four-row table with L1' sector status now "Derived."
 
 **Why this stands.** Mechanical integration gap: F13 strengthening landed Prop B.7 but the cross-segment update to `#example-L1` was queued (per `spikes/spike-finding-13-strengthening.md` §8.4) and not performed. The "open" language is now stale; the example is structurally a B.7 instance (the worked example uses observable $C$, satisfying B.7's scope condition).
 
-**Repair direction.** Update the relevant paragraph in `#example-L1` to reflect Prop B.7's status: "Sector-condition verification for L1' is derived in Prop B.7 ( #deriv-strategic-dynamics) for the observable-$C$ case the example operates within (five-way gating $\alpha_{L1'}$ formula, with explicit reduction to B.6 in the strict-prerequisite limit). Under unobservable $C$, L1' is *refuted* by the Cramér-Rao floor (mixture identifiability obstruction; see B.7 §'Refuted Under Unobservable $C$' and #disc-identifiability-floor)." 10–15 min.
+**Repair direction.** Update the relevant paragraph in `#example-L1` to reflect Prop B.7's status: "Sector-condition verification for L1' is derived in Prop B.7 ( #deriv-edge-credence-dynamics) for the observable-$C$ case the example operates within (five-way gating $\alpha_{L1'}$ formula, with explicit reduction to B.6 in the strict-prerequisite limit). Under unobservable $C$, L1' is *refuted* by the Cramér-Rao floor (mixture identifiability obstruction; see B.7 §'Refuted Under Unobservable $C$' and #disc-identifiability-floor)." 10–15 min.
 
 **Subsumed by:** not directly. Pure cross-segment update.
 

@@ -2,7 +2,7 @@
 
 **1. Predictions vs evidence:** I predicted this would take the Lyapunov persistence condition ($\alpha > \rho/R$) and apply it to the strategy DAG. It does exactly this, proposing the schema $\alpha_\Sigma > \rho_\Sigma / R_\Sigma$. But it adds a profound caveat: "Forgetting as Prerequisite." It proves that without explicit exponential forgetting, any Bayesian edge update mathematically guarantees asymptotic failure because $\alpha = 1/(n+1) \to 0$ as experience $n \to \infty$.
 
-**2. Cross-segment consistency:** Outstanding dependencies (`result-sector-condition-stability`, `result-sector-persistence-template`, `def-strategic-calibration`, `def-strategy-dag`). It correctly ties back to `#emp-update-gain` (gain collapse) and formalizes the 4 verified cases from `#deriv-strategic-dynamics`. It perfectly answers the open loop regarding how $\Sigma_t$ survives.
+**2. Cross-segment consistency:** Outstanding dependencies (`result-sector-condition-stability`, `result-sector-persistence-template`, `def-strategic-calibration`, `def-strategy-dag`). It correctly ties back to `#emp-update-gain` (gain collapse) and formalizes the 4 verified cases from `#deriv-edge-credence-dynamics`. It perfectly answers the open loop regarding how $\Sigma_t$ survives.
 
 **3. Math verification:** The logic that a Beta-Bernoulli update $\alpha = 1/(n+1)$ must eventually drop below any positive threshold $\rho/R$ is exact algebra. The introduction of exponential forgetting $\lambda \in (0,1)$ stabilizing the effective sample size at $n_{\text{eff}} \approx 1/(1-\lambda)$ is standard and correct. The resulting condition $(1-\lambda) > \rho_\Sigma / R_\Sigma$ is mathematically rigorous.
 

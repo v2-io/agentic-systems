@@ -4,9 +4,9 @@
 
 **Date**: 2026-04-02
 
-**Discipline**: Every step is labeled. Part 1 (strategic tempo) is largely derivable from existing machinery — the four verified cases in #deriv-strategic-dynamics already contain the essential structure. Part 2 (cognitive cost) is more speculative — the IB/MDL extension to strategy DAGs requires new formalization choices.
+**Discipline**: Every step is labeled. Part 1 (strategic tempo) is largely derivable from existing machinery — the four verified cases in #deriv-edge-credence-dynamics already contain the essential structure. Part 2 (cognitive cost) is more speculative — the IB/MDL extension to strategy DAGs requires new formalization choices.
 
-**Dependencies**: #def-adaptive-tempo, #schema-strategy-persistence, #deriv-strategic-dynamics, #hyp-edge-update-via-gain, #scope-edge-update-causal-validity, #der-chain-confidence-decay, #form-information-bottleneck, #der-deliberation-cost, #norm-explicit-strategy-condition, #disc-credit-assignment-boundary.
+**Dependencies**: #def-adaptive-tempo, #schema-strategy-persistence, #deriv-edge-credence-dynamics, #hyp-edge-update-via-gain, #scope-edge-update-causal-validity, #der-chain-confidence-decay, #form-information-bottleneck, #der-deliberation-cost, #norm-explicit-strategy-condition, #disc-credit-assignment-boundary.
 
 ---
 
@@ -37,7 +37,7 @@ where:
 
 ### 1.2 Consistency with the Four Verified Cases
 
-The definition must be consistent with the $\alpha_\Sigma$ values derived in #deriv-strategic-dynamics (Props B.1–B.4). In each case, the sector parameter $\alpha_\Sigma$ is a minimum over per-edge correction rates. The strategic tempo, as a sum, is a different quantity — it measures total correction capacity across all edges, while $\alpha_\Sigma$ measures the weakest-link correction rate. But the relationship between them is precise.
+The definition must be consistent with the $\alpha_\Sigma$ values derived in #deriv-edge-credence-dynamics (Props B.1–B.4). In each case, the sector parameter $\alpha_\Sigma$ is a minimum over per-edge correction rates. The strategic tempo, as a sum, is a different quantity — it measures total correction capacity across all edges, while $\alpha_\Sigma$ measures the weakest-link correction rate. But the relationship between them is precise.
 
 **Case B.1: Single edge ($A \to G$).** One edge, tested every trial. $\nu_{AG} = \nu$ (the base action rate). $\eta_{\text{edge}} = 1/(n+1)$.
 
@@ -105,7 +105,7 @@ $$\mathcal{T}_\Sigma = \sum_{(i,j) \in E} \nu_{ij}(\pi, \boldsymbol{\theta}) \cd
 
 where $\nu_{ij}(\pi, \boldsymbol{\theta})$ is the effective trial rate for edge $(i,j)$ under policy $\pi$ and true edge probabilities $\boldsymbol{\theta}$. For AND-chains, $\nu_{ij}$ is attenuated by upstream success probabilities. For OR-children, $\nu_{ij}$ is determined by the action-selection policy. The general computation requires propagating both the trial rate (from root to leaves, or leaves to root depending on DAG orientation) and the selection policy through the DAG.
 
-The hypothesis is that this general form is well-defined and consistent with the four verified cases. Verification for mixed topologies is open — it would be the natural next step in the #deriv-strategic-dynamics program.
+The hypothesis is that this general form is well-defined and consistent with the four verified cases. Verification for mixed topologies is open — it would be the natural next step in the #deriv-edge-credence-dynamics program.
 
 ### 1.4 Strategic Tempo Under the Three Causal Regimes
 
@@ -151,7 +151,7 @@ where $\rho_{\Sigma,ij}$ is the per-edge disturbance rate and $R_{\Sigma,ij}$ is
 
 **Strategic tempo definition** (Section 1.1): *Definition.* A naming of the quantity that characterizes the agent's total strategic corrective capacity. Max attainable: axiomatic (it is a definition). The definition is well-motivated by the structural parallel with epistemic tempo and consistent with the four verified cases.
 
-**Consistency with verified cases** (Section 1.2): *Derived.* Each computation follows directly from the per-edge rates already established in #deriv-strategic-dynamics. The tempo-to-sector-parameter relationship is algebraic.
+**Consistency with verified cases** (Section 1.2): *Derived.* Each computation follows directly from the per-edge rates already established in #deriv-edge-credence-dynamics. The tempo-to-sector-parameter relationship is algebraic.
 
 **Structural decomposition** (Section 1.3): *Derived (AND-chain), Hypothesis (general DAG).* The depth-$d$ chain tempo is derived from the evidence-starvation rates already in Props B.2 and the depth-$d$ generalization. The general DAG form is hypothesized — consistent with the four cases but not verified for mixed topologies.
 
@@ -229,7 +229,7 @@ This is the reduction in uncertainty about the optimal policy that the strategy 
 
 ### 2.4 The Complexity-Depth Trade-off
 
-Chain confidence decay ( #der-chain-confidence-decay) and evidence starvation ( #deriv-strategic-dynamics, Prop B.2) impose independent penalties on deep strategies. Combined with the cognitive cost of maintaining edges, these yield an information-theoretic upper bound on useful DAG depth.
+Chain confidence decay ( #der-chain-confidence-decay) and evidence starvation ( #deriv-edge-credence-dynamics, Prop B.2) impose independent penalties on deep strategies. Combined with the cognitive cost of maintaining edges, these yield an information-theoretic upper bound on useful DAG depth.
 
 *[Derived (useful depth bound, heuristic)]*
 
@@ -265,7 +265,7 @@ Beyond $d^\ast$, additional edges are epistemically unlearnable — they fail th
 | 100 | 0.01 | 5 |
 | 100 | 0.1 | 0 |
 
-Note: $d^\ast = 0$ means no edges are learnable at that disturbance rate — the first edge already fails the per-edge persistence condition ($1/(n+1) < \rho_\Sigma / R_\Sigma$). High experience ($n$) and high disturbance ($\rho_\Sigma$) both reduce useful depth. This is the gain-collapse effect from #deriv-strategic-dynamics applied to the depth dimension: deep edges have both lower gain (from $1/(n+1)$) and lower trial rates (from $p^{d-1}$), making them the first to lose their persistence battle.
+Note: $d^\ast = 0$ means no edges are learnable at that disturbance rate — the first edge already fails the per-edge persistence condition ($1/(n+1) < \rho_\Sigma / R_\Sigma$). High experience ($n$) and high disturbance ($\rho_\Sigma$) both reduce useful depth. This is the gain-collapse effect from #deriv-edge-credence-dynamics applied to the depth dimension: deep edges have both lower gain (from $1/(n+1)$) and lower trial rates (from $p^{d-1}$), making them the first to lose their persistence battle.
 
 ### 2.5 The Enriched Explicit Strategy Condition
 
@@ -361,7 +361,7 @@ In practice, evidence starvation is likely the binding constraint for deep AND-c
 
 **Content**: Definition, consistency verification with the four cases, structural decomposition (depth-gated for AND, exploration-gated for OR), regime adjustment. The per-edge persistence formulation.
 
-**Dependencies**: #def-adaptive-tempo, #hyp-edge-update-via-gain, #deriv-strategic-dynamics, #scope-edge-update-causal-validity.
+**Dependencies**: #def-adaptive-tempo, #hyp-edge-update-via-gain, #deriv-edge-credence-dynamics, #scope-edge-update-causal-validity.
 
 **What's derived vs hypothesized**: The definition is a naming. Consistency with Props B.1-B.4 is derived. The general DAG form and regime adjustment are hypothesized.
 
@@ -373,7 +373,7 @@ In practice, evidence starvation is likely the binding constraint for deep AND-c
 
 **Content**: Description length, the IB trade-off for strategy, the enriched explicit-strategy condition, compression operations, the useful-depth bound.
 
-**Dependencies**: #form-information-bottleneck, #norm-explicit-strategy-condition, #der-chain-confidence-decay, #deriv-strategic-dynamics, #form-structural-change-as-parametric-limit.
+**Dependencies**: #form-information-bottleneck, #norm-explicit-strategy-condition, #der-chain-confidence-decay, #deriv-edge-credence-dynamics, #form-structural-change-as-parametric-limit.
 
 **What's derived vs hypothesized**: The description length decomposition is standard. The IB objective is a formulation. The depth bound is derived (conditional on Beta-Bernoulli). The compression operations are discussion-grade.
 

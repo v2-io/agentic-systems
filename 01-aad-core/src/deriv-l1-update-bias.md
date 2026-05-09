@@ -5,7 +5,7 @@ status: conditional
 depends:
   - disc-credit-assignment-boundary
   - deriv-edge-update-natural-parameter
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
   - disc-identifiability-floor
   - schema-strategy-persistence
 stage: draft

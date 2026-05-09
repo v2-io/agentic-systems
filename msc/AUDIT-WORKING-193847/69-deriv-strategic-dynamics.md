@@ -1,4 +1,4 @@
-# Reflection: #deriv-strategic-dynamics
+# Reflection: #deriv-edge-credence-dynamics
 
 **1. Predictions vs evidence.**
 I predicted this segment would handle the edge-weight updates and formalize the penalties of deep strategies. It confirms this massively, deriving the exact sector parameter $\alpha_\Sigma$ for single edges (B.1), observable AND-chains (B.2), unobservable AND-chains (B.3), and $\varepsilon$-greedy OR-nodes (B.4), plus mixed structures (B.6, B.7). 

@@ -102,7 +102,7 @@ High evidence requirements ($n$ large) and volatile environments ($\rho_\Sigma /
 Deep AND-chains suffer three independent penalties that compound:
 
 1. **Confidence decay** ( #der-chain-confidence-decay): aggregate confidence $\prod p_k$ decays geometrically with depth. The plan is *less likely to succeed*.
-2. **Evidence starvation** ( #deriv-strategic-dynamics): effective observation rate $\nu_k = \nu \cdot \prod_{j \lt k}\theta_j$ decays geometrically. The plan is *harder to calibrate*.
+2. **Evidence starvation** ( #deriv-edge-credence-dynamics): effective observation rate $\nu_k = \nu \cdot \prod_{j \lt k}\theta_j$ decays geometrically. The plan is *harder to calibrate*.
 3. **Cognitive cost** (this segment): each additional depth level adds $O(\log \lvert V\rvert)$ bits to description length. The plan is *more expensive to maintain*.
 
 All three are multiplicative in depth, making deep sequential strategies exponentially costly along three independent dimensions.

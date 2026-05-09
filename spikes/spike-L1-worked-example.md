@@ -209,7 +209,7 @@ The Jacobian of $\hat P_\Sigma$ with respect to the credence vector:
 
 $$\mathbf{J} = \nabla_{\mathbf{p}} \hat P_\Sigma = \begin{pmatrix} s_{G_{\text{sub}}} \\ p_C(1 - p_{A_2}) \\ p_C(1 - p_{A_1}) \end{pmatrix}$$
 
-All components are non-negative (monotone AND/OR). Corrections are componentwise (each leaf updates from its own observation independently). By Proposition B.5b from #deriv-strategic-dynamics, the sector condition transfers losslessly:
+All components are non-negative (monotone AND/OR). Corrections are componentwise (each leaf updates from its own observation independently). By Proposition B.5b from #deriv-edge-credence-dynamics, the sector condition transfers losslessly:
 
 $$\alpha_s = \alpha_c = \alpha_\Sigma$$
 
@@ -326,7 +326,7 @@ If this spike is promoted to an appendix segment, the structure would be:
 - The L1 construction principle (structural requirement)
 - When naive vs correct L1 construction matters (OR-nodes only)
 
-The proposition would live in #deriv-strategic-dynamics alongside B.1-B.5. The L0/L1 comparison and construction principle could go in a discussion section of #def-strategy-dag or as a new appendix detail segment.
+The proposition would live in #deriv-edge-credence-dynamics alongside B.1-B.5. The L0/L1 comparison and construction principle could go in a discussion section of #def-strategy-dag or as a new appendix detail segment.
 
 
 ---

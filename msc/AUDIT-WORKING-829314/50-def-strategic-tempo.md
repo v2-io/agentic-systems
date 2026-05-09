@@ -2,7 +2,7 @@
 
 **1. Predictions vs evidence:** I predicted this would define the rate at which the agent can successfully execute operations on $\Sigma_t$. It defines $\mathcal{T}_\Sigma = \sum \nu_{ij} \eta_{\text{edge},ij} \iota_{ij}$. It explicitly mirrors epistemic tempo ($\mathcal{T}$) but adds the crucial identifiability coefficient $\iota_{ij}$ (from `#scope-edge-update-causal-validity`) and notes that the observation rates $\nu_{ij}$ are *endogenous* (dependent on the agent's policy), not exogenous like epistemic observations.
 
-**2. Cross-segment consistency:** Outstanding dependencies (`def-adaptive-tempo`, `hyp-edge-update-via-gain`, `def-strategy-dag`, `scope-edge-update-causal-validity`, `deriv-strategic-dynamics`). The integration of the four cases from `#deriv-strategic-dynamics` perfectly anchors this definition in the prior math.
+**2. Cross-segment consistency:** Outstanding dependencies (`def-adaptive-tempo`, `hyp-edge-update-via-gain`, `def-strategy-dag`, `scope-edge-update-causal-validity`, `deriv-strategic-dynamics`). The integration of the four cases from `#deriv-edge-credence-dynamics` perfectly anchors this definition in the prior math.
 
 **3. Math verification:** The equation for an AND-chain ($\nu_k = \nu \prod_{j<k} \theta_j$) exactly reproduces the "evidence starvation" math derived in `#der-observability-dominance`. The sum of the geometric series $\sum \theta^{k-1} = \frac{1-\theta^d}{1-\theta}$ is standard and mathematically proves that the total learning capacity of a sequential chain is strictly bounded, regardless of depth. The OR-node exploration gating ($\nu_l = \nu \varepsilon / m$) is the correct standard formulation for $\varepsilon$-greedy allocation.
 

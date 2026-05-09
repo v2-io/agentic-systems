@@ -7,7 +7,7 @@ depends:
   - disc-credit-assignment-boundary
   - deriv-edge-update-natural-parameter
   - disc-identifiability-floor
-  - deriv-strategic-dynamics
+  - deriv-edge-credence-dynamics
   - def-strategy-dag
   - der-causal-insufficiency-detection
   - schema-strategy-persistence
@@ -21,7 +21,7 @@ depends:
 
 **Bottom line (up front).** Under the canonical default signal function of #disc-credit-assignment-boundary, applied by an L0 agent whose true generative world is an L1' common-cause mixture, the per-cycle log-odds update carries a **quantifiable bias** that is (i) derivable in closed form for OR-root and AND-root structures in terms of the sibling covariance $\rho = \operatorname{Cov}(Y_i, Y_j)$, (ii) **zero in expectation under Prop B.7's observable-$C$ five-way gating** when the agent decomposes its credences along the $C$-partition, and (iii) **bounded strictly away from zero** under the Cramér-Rao floor in the unobservable-$C$ single-channel regime. The bias is **not detectable from the agent's own on-policy data** under the F1 no-go scope conditions, which converts it from a binary "detection forbidden" claim into a concrete *numerical* instance of the #disc-identifiability-floor pattern — an agent can be shown to be systematically mis-updating its log-odds coordinates without being able to recognize this fact from the signals it has access to. The result composes with #schema-strategy-persistence to produce a *forgetting-rate requirement* that tolerates bounded accumulated bias error. Simulation in §7 confirms the theoretical predictions.
 
-**Landing recommendation (up front).** Promote the closed-form OR-root bias formula (§3) and the observable/unobservable-$C$ bifurcation (§§4–5) as a new **extension segment** `#deriv-l1-update-bias` in the Appendix A cluster, sitting adjacent to `#disc-identifiability-floor` and cross-referenced from Prop B.7 of `#deriv-strategic-dynamics` and from `#disc-credit-assignment-boundary`. Weak alternative: absorb into `#disc-identifiability-floor` as Instance 3 (numerical companion). The extension-segment route is preferred because the closed-form bias formula is **of independent interest** (it quantifies what Prop B.7's no-go costs) and does not reduce to the existing two instances.
+**Landing recommendation (up front).** Promote the closed-form OR-root bias formula (§3) and the observable/unobservable-$C$ bifurcation (§§4–5) as a new **extension segment** `#deriv-l1-update-bias` in the Appendix A cluster, sitting adjacent to `#disc-identifiability-floor` and cross-referenced from Prop B.7 of `#deriv-edge-credence-dynamics` and from `#disc-credit-assignment-boundary`. Weak alternative: absorb into `#disc-identifiability-floor` as Instance 3 (numerical companion). The extension-segment route is preferred because the closed-form bias formula is **of independent interest** (it quantifies what Prop B.7's no-go costs) and does not reduce to the existing two instances.
 
 ---
 
@@ -157,7 +157,7 @@ which for OR is the solution to $(1 - p_1^\ast)(1 - p_2^\ast) = (1 - \mu_1)(1 - 
 
 ## 3. Observable-$C$ Branch: Prop B.7's Zero-Bias Result
 
-**Claim (informal).** When the agent observes $C$ per trial and decomposes its credences as per Prop B.7 of #deriv-strategic-dynamics (two conditional branches $p_{j \mid C}$ and $p_{j \mid \neg C}$), the analogue of $B_k$ in the conditional-branch log-odds coordinates is **zero at the true conditional parameters**.
+**Claim (informal).** When the agent observes $C$ per trial and decomposes its credences as per Prop B.7 of #deriv-edge-credence-dynamics (two conditional branches $p_{j \mid C}$ and $p_{j \mid \neg C}$), the analogue of $B_k$ in the conditional-branch log-odds coordinates is **zero at the true conditional parameters**.
 
 ### 3.1 Setup under Prop B.7
 
@@ -197,7 +197,7 @@ The five-way gating condition of Prop B.7 requires that every conditional branch
 
 ### 4.1 The Fisher rank-1 structure
 
-From #deriv-strategic-dynamics Prop B.7 "Refuted Under Unobservable $C$":
+From #deriv-edge-credence-dynamics Prop B.7 "Refuted Under Unobservable $C$":
 
 $$\mathcal F(\phi) = \frac{1}{\mu_j (1 - \mu_j)} u u^T, \qquad u = (\Delta_j, \theta_C, 1 - \theta_C)$$
 
@@ -523,7 +523,7 @@ The §2 closed-form bias is at **max attainable = exact**. The Cramér-Rao floor
 - **`#disc-identifiability-floor`**: add as Instance 3 in the *Current Instances* section. Update §"Adjacent Floors (Open Research Directions)" to note that one of the open directions has been derived.
 - **`#disc-credit-assignment-boundary`**: add a subsection or Working-Note reference noting the quantitative bias under L1' truth; the existing "Correlated-failure interaction (L0 vs L1)" discussion becomes the qualitative summary, pointing to the new segment for the quantitative form.
 - **`#schema-strategy-persistence`**: add a Discussion paragraph on the bias-tolerance second role of forgetting, and cross-reference the combined forgetting-window bound.
-- **`#deriv-strategic-dynamics` Prop B.7**: add a "What the positive transfer costs" observation linking to the bias formula in the unobservable-$C$ refutation subsection.
+- **`#deriv-edge-credence-dynamics` Prop B.7**: add a "What the positive transfer costs" observation linking to the bias formula in the unobservable-$C$ refutation subsection.
 - **`#stability-induced-myopia` (if/when promoted)**: note the composition with the L1' bias as a pre-change-state effect that degrades the effective regime-change footprint.
 
 ### 10.3 Alternative route: Absorb into `#disc-identifiability-floor` Instance 3
@@ -534,7 +534,7 @@ Possible but not recommended. The closed-form bias formula has independent downs
 
 If the reviewer judges the derivation too incomplete for a standalone appendix:
 - Land §2 closed form in `#disc-credit-assignment-boundary` Discussion (quantitative companion to the existing correlated-failure paragraph).
-- Land §3 zero-bias observation in `#deriv-strategic-dynamics` Prop B.7 Discussion.
+- Land §3 zero-bias observation in `#deriv-edge-credence-dynamics` Prop B.7 Discussion.
 - Land §4 Cramér-Rao bound in `#disc-identifiability-floor` Instance 2 discussion (sharpening the refutation to a quantitative floor).
 - Land §8 forgetting-window in `#schema-strategy-persistence` Discussion.
 

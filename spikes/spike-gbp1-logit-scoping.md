@@ -53,7 +53,7 @@ The domain is `ℝ`, so no clipping is needed even when `‖J‖² → 0` (the u
 
 **Scope.** Substantive touch. The mechanical fix to Finding 2 is a log-odds presentation of the same signal function, which is cleaner than "restore normalization constant + clip" because it eliminates the `[0,1]` escape by construction rather than by bookkeeping.
 
-### `#deriv-strategic-dynamics` — Props B.1–B.7 restatement
+### `#deriv-edge-credence-dynamics` — Props B.1–B.7 restatement
 
 **Change under G-BP1.** The propositions use expected-value sector-condition analysis on `δ_k = p̂_k − θ_k`. Under log-odds reparameterization, `δ^λ_k = λ̂_k − λ_k^\ast`. The expected-correction algebra is isomorphic:
 
@@ -113,7 +113,7 @@ The O-BP14 derivation-audit table row for B.5d can stay as-is; the underlying de
 | `#def-strategy-dag` | Minor touch (one paragraph) |
 | `#hyp-edge-update-via-gain` | Minor touch (parallel log-odds statement) |
 | `#disc-credit-assignment-boundary` | **Substantive**: Finding 2 fix via log-odds signal function |
-| `#deriv-strategic-dynamics` | **No edit required** (Fisher-equivalent; moment-parameter form is cleaner) |
+| `#deriv-edge-credence-dynamics` | **No edit required** (Fisher-equivalent; moment-parameter form is cleaner) |
 | `#form-agent-model` | No edit |
 | `#worked-example-*` (4 examples) | No edit required |
 
@@ -229,7 +229,7 @@ The default signal function is restated in log-odds. The probability-space surfa
 
 - `#def-strategy-dag`: one paragraph noting `λ_{ij} = log(p_{ij}/(1-p_{ij}))` as the natural-parameter presentation, with pointer to the new appendix.
 - `#hyp-edge-update-via-gain`: parallel log-odds statement of the update rule alongside the moment-parameter form.
-- `#deriv-strategic-dynamics`: a single line noting that Props B.1–B.7 are Fisher-equivalent in either parameterization.
+- `#deriv-edge-credence-dynamics`: a single line noting that Props B.1–B.7 are Fisher-equivalent in either parameterization.
 
 ### 4.4 What is NOT recommended
 

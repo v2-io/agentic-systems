@@ -46,7 +46,7 @@ The segment forward-references `#deriv-directional-survival-exploration` as the 
 
 **(E) The "anchor-plus-three-theorem" framing in `#der-chain-confidence-decay`** is now explicit. The chain-rule identity here is the *anchor*; three uniqueness theorems force coordinates at other layers (reverse-KL, log-odds, Fisher). The fourth potential instance is the composition-monotonicity / contraction-tower telescoping, which inherits the chain-rule additivity. The meta-pattern (`#disc-additive-coordinate-forcing`) catalogs this. Important structural pattern.
 
-**(F) Triple depth penalty** named in `#der-chain-confidence-decay`: confidence decay (chain rule) + evidence starvation (`#deriv-strategic-dynamics`) + cognitive cost (`#form-strategy-complexity-cost`). The three penalties are independent and compound. This is the structural reason long causal chains are bad: not just one penalty, three.
+**(F) Triple depth penalty** named in `#der-chain-confidence-decay`: confidence decay (chain rule) + evidence starvation (`#deriv-edge-credence-dynamics`) + cognitive cost (`#form-strategy-complexity-cost`). The three penalties are independent and compound. This is the structural reason long causal chains are bad: not just one penalty, three.
 
 ## Math verification
 

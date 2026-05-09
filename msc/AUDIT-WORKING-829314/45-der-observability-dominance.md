@@ -2,7 +2,7 @@
 
 **1. Predictions vs evidence:** I predicted this would prove that if an agent cannot observe the outcome of an intermediate edge in its strategy DAG, the credence for that edge cannot be updated, effectively halting learning on that path. It does exactly this, linking it directly to the gain principle ($\eta_{\text{edge}} \to 0$ as $U_{\text{obs}} \to \infty$). 
 
-**2. Cross-segment consistency:** Good dependencies (`def-strategy-dag`, `emp-update-gain`). It references `#der-chain-confidence-decay`, `#deriv-strategic-dynamics`, and `#der-code-quality-as-observation-infrastructure` (TST). It provides the formal backing for the "evidence starvation" penalty mentioned back in `#form-strategy-complexity-cost`.
+**2. Cross-segment consistency:** Good dependencies (`def-strategy-dag`, `emp-update-gain`). It references `#der-chain-confidence-decay`, `#deriv-edge-credence-dynamics`, and `#der-code-quality-as-observation-infrastructure` (TST). It provides the formal backing for the "evidence starvation" penalty mentioned back in `#form-strategy-complexity-cost`.
 
 **3. Math verification:** The logic $U_{\text{obs}} \to \infty \implies \eta \to 0$ is correct from the scalar Kalman gain formula. The "Evidence-starvation effect" (where downstream edge $k$'s learning rate is attenuated by $\prod_{j<k} \theta_j$) is exactly correct. The statistical insight that applying proportional-blame updates to unobservable intermediates introduces a systematic $O(1/n)$ bias is a deep and rigorous observation about the limits of marginal Bayesian updating on joint failures.
 

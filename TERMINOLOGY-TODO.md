@@ -14,10 +14,9 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` formal-tag review + cross-reference scan (the script reports stale-text warnings; H1 / opening-sentence / formal tags are touched by hand). The `msc/naming/` directory is excluded from the script's substitution patterns, so this file and `naming-rename-plan.md` are not corrupted by the sweep.
 
-- [ ] **`deriv-strategic-dynamics` → `deriv-edge-credence-dynamics`** *(F1 citability fix; qualifier-add)*
-  "Strategic dynamics" collides with game-theory generic term. The segment derives the dynamics of *edge credences* $p_{ij}$ within the strategy DAG. Pairs with `#def-strategy-dag` and `#hyp-edge-update-via-gain`.
-
 [F1 batch rationale block: `naming-rename-plan.md` §"Pending subject-noun renames — additions (2026-05-04, batch F1 citability fixes)"](msc/naming/naming-rename-plan.md#pending-subject-noun-renames--additions-2026-05-04-batch-f1-citability-fixes).
+
+*All §A items landed.*
 
 ---
 
