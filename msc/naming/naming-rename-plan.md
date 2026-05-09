@@ -1,4 +1,6 @@
-# Naming Rename Plan — Live Mapping Record
+# Naming Rename Plan — Decisions and Rationale Record
+
+**Active execution queue lives at [`/TERMINOLOGY-TODO.md`](../../TERMINOLOGY-TODO.md)** (root level, 2026-05-08). This file holds the *decisions and rationale* — what was decided, when, why, with the full operational-landing notes. The action checklist that drives execution is in TERMINOLOGY-TODO; rows there link back to the relevant sections here for context.
 
 Live record of specific naming decisions across the project: slug renames, prose-vocabulary renames, and confirmed canonicalize commitments. Started as a role-prefix pilot mapping; broadened in scope as subsequent cycles produced subject-noun renames, vocabulary commitments, and canonicalize affirmations. Renamed from `naming-pilot-rename-plan.md` to `naming-rename-plan.md` on 2026-05-04 to reflect the broadened scope.
 

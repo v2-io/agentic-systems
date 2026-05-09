@@ -1,0 +1,852 @@
+#!/usr/bin/env ruby
+#
+# bin/term — multi-agent-safe terminology store for the Agentic Systems Framework.
+#
+# Source of truth: per-entry markdown-with-YAML-frontmatter files at
+# terminology/entries/<slug>.md. The YAML carries structured metadata
+# (notation, status, tags, source, cross-refs); the markdown body carries
+# the actual prose definition with links to defining segments. Many entries
+# are frontmatter-mostly with a one-or-two-sentence body; that's fine.
+#
+# LEXICON.md (and eventually NOTATION.md) are GENERATED from these entries
+# via `bin/term render`, never hand-edited. Same discipline as
+# `bin/build-readme` regenerating README.md from doc/readme/ partials.
+#
+# Decision audit trail: append-only event files at
+# terminology/decisions/<slug>/<ts>-<decider>-<action>.md. Multi-decider,
+# multi-action, never destructively edited. Latest status per concern is
+# derived by replay; full history is the record.
+#
+# Concurrency story (inherited from bin/refs):
+#   - Per-entry files mean two agents adding distinct entries never collide.
+#   - Decision events are filename-unique (timestamp + decider + action);
+#     two agents recording decisions even on the same entry never write the
+#     same path. The directory is append-only — events are never edited.
+#   - All writes go through `safe_write`: temp-file + fsync + rename(2).
+#     POSIX rename is atomic on the same filesystem; readers either see the
+#     prior content or the new content, never a half-written file.
+#   - Concurrent writes to the SAME slug are intentionally NOT serialized by
+#     a lock — last-writer-wins at the filesystem level. Real coordination
+#     on same-slug edits happens through git (clean per-file conflict, not a
+#     corrupted shared store).
+#
+# Permissive-extractor / strict-linter discipline (per Joseph 2026-05-08):
+#   - Entry.load and bin/term render do NOT block on schema issues. They
+#     load and emit what's there, marking missing required fields with
+#     `(missing)` placeholders rather than aborting.
+#   - bin/term lint is the place where schema and content issues surface.
+#     Run lint to find what's wrong; run render to see the current state of
+#     the world even when entries are mid-edit.
+#
+# Subcommands:
+#   term add <slug>           — scaffold a new entry, or pipe markdown on stdin
+#   term show <slug>          — entry + decision history + cross-refs
+#   term list [--filter ...]  — summary table; filter by tag, status, layer
+#   term search <query>       — fuzzy match by slug / term / name / brief
+#   term decide <slug> <action> [--by name] [--note text] [--from old] [--to new]
+#                             — append a decision event (canonicalize, rename,
+#                               add-alias, add-cite, deprecate, supersede,
+#                               update-gloss, nuance-flag)
+#   term render [--output path]
+#                             — emit LEXICON.md (default: LEXICON.md at root)
+#   term lint                 — schema + cross-ref issues; exit 1 if any
+#   term validate             — sweep stale tmp artifacts; smoke-check load/save
+#   term help                 — usage
+
+require "pathname"
+require "yaml"
+require "fileutils"
+require "securerandom"
+require "time"
+
+ROOT          = Pathname.new(__dir__).parent.expand_path
+TERM_DIR      = ROOT / "terminology"
+ENTRIES_DIR   = TERM_DIR / "entries"
+DECISIONS_DIR = TERM_DIR / "decisions"
+
+# Decision actions — enumerated so decider invocations stay coherent. Adding a
+# new action here also wants thinking about how it surfaces in `show` and
+# whether it's terminal (deprecate / supersede end an entry's active life) or
+# refining (canonicalize / update-gloss continue it).
+ACTIONS = {
+  "canonicalize"     => "Existing name affirmed as canonical; no rename.",
+  "rename"           => "Name changed (old retired). Use --from / --to.",
+  "add-alias"        => "Parallel name added with role separation. Use --form.",
+  "add-cite"         => "First-encounter prior-art cite added (route-d adopted-standard cases).",
+  "deprecate"        => "Name retired. Use --replaced-by if applicable.",
+  "supersede"        => "Name replaced by another entry. Use --by-slug for pointer.",
+  "update-gloss"     => "Definition refined; entry already exists.",
+  "nuance-flag"      => "Nuance noted on a canonicalize commitment. Use --note."
+}.freeze
+
+# Status values for the entry's status: field. The list is informative rather
+# than enforced — bin/term lint flags unknown values as warnings.
+KNOWN_STATUSES = %w[working draft canon deprecated superseded].freeze
+
+# Layer values for the entry's layer: field. Same disposition as status —
+# informative; lint flags unknown values.
+KNOWN_LAYERS = %w[slug prose-symbol framing-vocabulary public-api].freeze
+
+# Suffix marking in-flight writes from `safe_write`.
+TMP_SUFFIX = ".tmp".freeze
+
+# ─────────────────────────────────────────────────────────────────────────────
+# safe_write — atomic file replace.
+#
+# Writes `content` to `<path>.tmp.<pid>.<rand>` in the destination's directory,
+# fsyncs the body to disk, then `rename(2)`s into place. POSIX rename is atomic
+# on the same filesystem, so concurrent readers either see the prior content
+# or the new content — never a partially-written file.
+#
+# Inherited from bin/refs (NeurIPS multi-agent citation store). The atomicity
+# contract is the only line of defense between fsync and rename; for the
+# already-committed window git is the recovery path.
+# ─────────────────────────────────────────────────────────────────────────────
+
+def safe_write(path, content)
+  path = Pathname.new(path)
+  path.dirname.mkpath
+  tmp_name = "#{path.basename}#{TMP_SUFFIX}.#{Process.pid}.#{SecureRandom.hex(4)}"
+  tmp      = path.dirname / tmp_name
+  begin
+    File.open(tmp, File::WRONLY | File::CREAT | File::EXCL, 0o644) do |f|
+      f.write(content)
+      f.fsync
+    end
+    File.rename(tmp, path)
+  rescue StandardError
+    tmp.delete if tmp.exist?
+    raise
+  end
+  path
+end
+
+# ─────────────────────────────────────────────────────────────────────────────
+# split_frontmatter — pull YAML frontmatter off the front of a markdown body.
+# Returns [parsed-yaml-hash, body-string]. If no frontmatter, [nil, body].
+# Permissive: malformed YAML returns [nil, body] rather than raising — the
+# linter is the place where that surfaces.
+# ─────────────────────────────────────────────────────────────────────────────
+
+def split_frontmatter(body)
+  return [nil, body] unless body.start_with?("---\n")
+
+  parts = body.split(/^---\s*$/, 3)
+  return [nil, body] if parts.size < 3
+
+  begin
+    [YAML.safe_load(parts[1], permitted_classes: [Date]), parts[2].sub(/\A\n/, "")]
+  rescue Psych::SyntaxError
+    [nil, body]
+  end
+end
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Entry — one markdown file = one terminology entry.
+#   - Filename basename is the slug (canonical key).
+#   - YAML frontmatter carries structured metadata.
+#   - Markdown body carries the prose definition (often short; sometimes empty).
+# Permissive load: missing fields are tolerated; the linter surfaces them.
+# ─────────────────────────────────────────────────────────────────────────────
+
+class Entry
+  attr_reader :slug, :data, :body
+
+  def initialize(slug, data, body = "")
+    @slug = slug
+    @data = data || {}
+    @body = body || ""
+  end
+
+  def self.path_for(slug) = ENTRIES_DIR / "#{slug}.md"
+
+  def self.load(slug)
+    path = path_for(slug)
+    return nil unless path.exist?
+
+    fm, body = split_frontmatter(path.read)
+    new(slug, fm, body)
+  end
+
+  def self.all
+    return [] unless ENTRIES_DIR.directory?
+
+    ENTRIES_DIR.glob("*.md").sort.filter_map do |p|
+      slug = p.basename(".md").to_s
+      load(slug)
+    end
+  end
+
+  # Save: emit YAML frontmatter (in canonical field order for stable diffs) +
+  # the body. Fields not in the canonical order are appended at the end so
+  # forward-compatible additions don't get dropped on round-trip.
+  def save
+    safe_write(Entry.path_for(@slug), to_markdown)
+  end
+
+  def to_markdown
+    "#{frontmatter_yaml}---\n\n#{@body.to_s.strip}\n"
+  end
+
+  # ── field accessors ──
+  def schema_version    = @data["schema_version"]
+  def term              = @data["term"]
+  def name              = @data["name"]
+  def notation          = @data["notation"]
+  def brief             = @data["brief"]
+  def layer             = @data["layer"]
+  def status            = @data["status"]
+  def tags              = Array(@data["tags"])
+  def source_type       = @data["source_type"]
+  def primary_source    = @data["primary_source"]
+  def first_asf_mention = @data["first_asf_mention"]
+  def see_also          = Array(@data["see_also"])
+  def aliases           = Array(@data["aliases"])
+  def do_not_confuse    = Array(@data["do_not_confuse"])
+  def internal_note     = @data["internal_note"]
+
+  # Soft schema check used by `bin/term lint`. Returns a list of
+  # warning/error strings — never raises. Distinguishes errors (block render
+  # of *this entry* meaningfully) from warnings (annoying but not blocking)
+  # via prefix; lint summarizes both.
+  def schema_issues
+    issues = []
+    issues << "ERROR slug-mismatch: file basename '#{@slug}' != frontmatter 'slug: #{@data['slug']}'" \
+      if @data["slug"] && @data["slug"] != @slug
+    issues << "ERROR missing 'term' field" if term.to_s.strip.empty?
+    issues << "ERROR missing 'brief' field" if brief.to_s.strip.empty?
+
+    issues << "WARN  missing 'name' field"          if name.to_s.strip.empty?
+    issues << "WARN  missing 'layer' field"         if layer.to_s.strip.empty?
+    issues << "WARN  missing 'status' field"        if status.to_s.strip.empty?
+    issues << "WARN  missing 'primary_source' field" if primary_source.to_s.strip.empty?
+
+    issues << "WARN  unknown status '#{status}' (known: #{KNOWN_STATUSES.join(', ')})" \
+      if status && !KNOWN_STATUSES.include?(status.to_s)
+    issues << "WARN  unknown layer '#{layer}' (known: #{KNOWN_LAYERS.join(', ')})" \
+      if layer && !KNOWN_LAYERS.include?(layer.to_s)
+    issues
+  end
+
+  private
+
+  # Canonical field order for diff-stable round-trips. Fields not in this
+  # list get appended (sorted) at the end so additions don't silently lose
+  # data. The order matches what a human reader scanning the entry expects:
+  # identity → display → structured-meta → status → provenance → cross-refs →
+  # disambiguation → internal.
+  CANONICAL_FIELD_ORDER = %w[
+    slug schema_version
+    term name notation brief
+    layer status tags
+    source_type primary_source first_asf_mention
+    see_also aliases do_not_confuse
+    internal_note
+  ].freeze
+
+  def frontmatter_yaml
+    ordered = {}
+    CANONICAL_FIELD_ORDER.each { |f| ordered[f] = @data[f] if @data.key?(f) }
+    @data.keys.sort.each { |k| ordered[k] = @data[k] unless ordered.key?(k) }
+    YAML.dump(ordered)
+  end
+end
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DecisionEvent — append-only record of a naming decision. Filename is unique
+# per event (timestamp + decider + action); creating an event never edits an
+# existing file.
+#
+# Mirrors bin/refs's VerificationEvent pattern. Event types are project-level
+# naming-decision actions (canonicalize / rename / add-alias / etc.) rather
+# than verification criteria.
+# ─────────────────────────────────────────────────────────────────────────────
+
+class DecisionEvent
+  attr_reader :slug, :action, :decider, :outcome, :timestamp, :note, :extra
+
+  def initialize(slug:, action:, decider:, outcome: "committed", note: nil, extra: {}, timestamp: nil)
+    @slug      = slug
+    @action    = action
+    @decider   = decider
+    @outcome   = outcome  # committed | rejected | revised | superseded
+    @note      = note
+    @extra     = extra    # action-specific extra fields (from / to / form / replaced_by / by_slug / cite)
+    @timestamp = timestamp || Time.now.utc.strftime("%Y%m%dT%H%M%SZ")
+  end
+
+  def self.dir_for(slug) = DECISIONS_DIR / slug
+
+  def self.events_for(slug)
+    return [] unless dir_for(slug).exist?
+
+    dir_for(slug).glob("*.md").sort.filter_map { |p| load_file(p, slug) }
+  end
+
+  def self.load_file(path, slug)
+    fm, body = split_frontmatter(path.read)
+    return nil unless fm
+
+    new(
+      slug:      slug,
+      action:    fm["action"],
+      decider:   fm["decider"],
+      outcome:   fm["outcome"],
+      note:      body&.strip,
+      extra:     fm.reject { |k, _| %w[slug action decider outcome timestamp].include?(k) },
+      timestamp: fm["timestamp"]
+    )
+  end
+
+  def filename = "#{@timestamp}-#{slugify(@decider)}-#{slugify(@action)}.md"
+
+  def write
+    dir   = self.class.dir_for(@slug)
+    path  = dir / filename
+    extra = @extra.map { |k, v| "#{k}: #{v}" }.join("\n")
+    extra = "#{extra}\n" unless extra.empty?
+    safe_write(path, <<~CONTENT)
+      ---
+      slug: #{@slug}
+      action: #{@action}
+      decider: #{@decider}
+      outcome: #{@outcome}
+      timestamp: #{@timestamp}
+      #{extra}---
+
+      #{@note || ''}
+    CONTENT
+    path
+  end
+
+  private
+
+  def slugify(str) = str.to_s.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/^-|-$/, "")
+end
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SegmentScanner — finds #slug-style segment references in segment markdown
+# under {01-aad-core,02-tst-core,03-logogenic-agents,04-eli}/src/. Used by
+# `bin/term lint` for orphan-detection (term in store but no segment refs)
+# and reverse-orphan-detection (segments invoke a term that has no entry).
+#
+# Permissive: only matches well-formed `#slug-pattern` refs; ignores
+# malformed references rather than failing.
+# ─────────────────────────────────────────────────────────────────────────────
+
+class SegmentScanner
+  SEGMENT_DIRS = %w[01-aad-core/src 02-tst-core/src 03-logogenic-agents/src 04-eli/src].freeze
+
+  # `#slug-form` references — slugs are lowercase letters, digits, hyphens.
+  # Captures the slug (without the leading `#`).
+  REF_RE = /(?<![\w])#([a-z][a-z0-9-]+[a-z0-9])\b/
+
+  def self.all_referenced_slugs
+    refs = Hash.new { |h, k| h[k] = [] }
+    each_segment_file do |path|
+      path.each_line.with_index(1) do |line, lineno|
+        line.scan(REF_RE) do |match|
+          slug = match.first
+          loc  = "#{path.relative_path_from(ROOT)}:#{lineno}"
+          refs[slug] << loc unless refs[slug].include?(loc)
+        end
+      end
+    end
+    refs
+  end
+
+  def self.each_segment_file
+    SEGMENT_DIRS.each do |rel|
+      dir = ROOT / rel
+      next unless dir.directory?
+
+      dir.glob("*.md").sort.each { |p| yield p }
+    end
+  end
+end
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Renderer — emit LEXICON.md from the entries store.
+#
+# Permissive: missing fields are surfaced as `(missing)` rather than blocking
+# the render. The linter is where these surface as actionable warnings.
+#
+# Grouping: by `tags` thematic categories. Within a section, entries sort
+# alphabetically by `term`. Entries with no tags fall into an "Uncategorized"
+# section at the end. Multi-tagged entries appear in each of their tag sections
+# (intentional — let readers find a term via any of its semantic anchors).
+# ─────────────────────────────────────────────────────────────────────────────
+
+class Renderer
+  # Display order for thematic sections. Tags not in this list get appended
+  # alphabetically. Each tuple is [tag-key, display-heading].
+  TAG_DISPLAY_ORDER = [
+    ["cycle_phases",        "Cycle Phases"],
+    ["agent_classes",       "Agent Classes"],
+    ["persistence",         "Persistence"],
+    ["continuity_stance",   "Continuity Stance"],
+    ["core_quantities",     "Core Quantities"],
+    ["structural_concepts", "Structural Concepts"],
+    ["diagnostic",          "Diagnostics"],
+    ["composition",         "Composition"],
+    ["greek_vocabulary",    "Greek Vocabulary"],
+    ["software",            "Software (TST)"],
+    ["logogenic",           "Logogenic"],
+    ["eli",                 "ELI"]
+  ].freeze
+
+  def initialize(entries) = @entries = entries
+
+  def to_markdown
+    [header, *sections, footer].join("\n")
+  end
+
+  private
+
+  def header
+    <<~HEAD
+      # LEXICON
+
+      Auto-generated from `terminology/entries/` by `bin/term render`. Do not hand-edit.
+      To change content, edit the relevant entry under `terminology/entries/<slug>.md`
+      and re-run `bin/term render`. Sections below are thematic groupings by `tags:`.
+
+      For symbols, see [`NOTATION.md`](NOTATION.md).
+    HEAD
+  end
+
+  def footer
+    "\n_Last rendered #{Time.now.utc.strftime('%Y-%m-%d')} from #{@entries.size} entries._\n"
+  end
+
+  def sections
+    grouped = group_by_tag
+    seen    = []
+    out     = []
+    TAG_DISPLAY_ORDER.each do |tag, heading|
+      next unless grouped.key?(tag)
+
+      out << render_section(heading, grouped[tag])
+      seen << tag
+    end
+    (grouped.keys - seen - [:uncategorized]).sort.each do |tag|
+      out << render_section(tag.to_s.tr("_", " ").capitalize, grouped[tag])
+    end
+    # Hash.new(&block) auto-vivifies on read, so check key? not truthiness.
+    out << render_section("Uncategorized", grouped[:uncategorized]) if grouped.key?(:uncategorized)
+    out
+  end
+
+  def group_by_tag
+    grouped = Hash.new { |h, k| h[k] = [] }
+    @entries.each do |entry|
+      tags = entry.tags
+      if tags.empty?
+        grouped[:uncategorized] << entry
+      else
+        tags.each { |t| grouped[t] << entry }
+      end
+    end
+    grouped.each_value { |list| list.sort_by! { |e| e.term.to_s.downcase } }
+    grouped
+  end
+
+  def render_section(heading, entries)
+    rows = entries.map { |e| render_row(e) }
+    <<~SECTION
+      ## #{heading}
+
+      | Term | Notation | Brief |
+      |------|----------|-------|
+      #{rows.join("\n")}
+    SECTION
+  end
+
+  def render_row(entry)
+    name  = entry.name || entry.term || "(missing)"
+    notation = entry.notation || ""
+    brief = entry.brief || "(missing brief)"
+    link  = entry_link(entry)
+    "| **#{link}** | #{notation} | #{brief} |"
+  end
+
+  def entry_link(entry)
+    label = entry.name || entry.term || entry.slug
+    target = "terminology/entries/#{entry.slug}.md"
+    "[#{label}](#{target})"
+  end
+end
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CLI — verb dispatch. Each verb is a method on this class; option parsing is
+# lightweight (most verbs take positional args + --flag value pairs).
+# ─────────────────────────────────────────────────────────────────────────────
+
+class CLI
+  def self.run(argv) = new.dispatch(argv)
+
+  def dispatch(argv)
+    verb = argv.shift or return usage
+    case verb
+    when "add"        then cmd_add(argv)
+    when "show"       then cmd_show(argv)
+    when "list"       then cmd_list(argv)
+    when "search"     then cmd_search(argv)
+    when "decide"     then cmd_decide(argv)
+    when "render"     then cmd_render(argv)
+    when "lint"       then cmd_lint(argv)
+    when "validate"   then cmd_validate(argv)
+    when "-h", "--help", "help" then usage
+    else warn "unknown verb: #{verb}"
+         usage
+         exit 1
+    end
+  end
+
+  def usage
+    puts <<~USAGE
+      bin/term — multi-agent-safe terminology store for ASF.
+
+      Verbs:
+        add <slug>             Scaffold a new entry, or pipe markdown on stdin.
+        show <slug>            Entry + decision history + segment cross-refs.
+        list [--tag t] [--status s] [--layer l]
+                               Summary table; filter by frontmatter fields.
+        search <query>         Fuzzy match by slug / term / name / brief.
+        decide <slug> <action> [--by name] [--note text] [--from x --to y]
+                               Append a decision event. Actions:
+                                 #{ACTIONS.keys.join(' / ')}
+        render [--output path] Emit LEXICON.md (default: LEXICON.md at root).
+        lint                   Schema + cross-ref checks; exit 1 if any issues.
+        validate               Sweep stale tmp artifacts; smoke-check load/save.
+
+      Source of truth: terminology/entries/<slug>.md (markdown + YAML frontmatter).
+      Decision audit trail: terminology/decisions/<slug>/*.md (append-only).
+      LEXICON.md is GENERATED by `bin/term render` — do not hand-edit.
+
+      See terminology/README.md for schema and design rationale.
+    USAGE
+  end
+
+  # ── add ──────────────────────────────────────────────────────────────────
+
+  def cmd_add(argv)
+    slug = argv.shift
+    abort "usage: term add <slug> [--stdin]  (default: scaffold; --stdin reads markdown from stdin)" unless slug
+
+    if Entry.path_for(slug).exist?
+      warn "entry '#{slug}' already exists at #{Entry.path_for(slug).relative_path_from(ROOT)}"
+      exit 2
+    end
+
+    # Default behavior is scaffold. Explicit --stdin reads piped content.
+    # The earlier $stdin.tty? heuristic broke when invoked inside bash
+    # compound commands (stdin not a tty even with no pipe upstream),
+    # silently producing empty files. Explicit-flag is more robust.
+    if argv.include?("--stdin")
+      content = $stdin.read
+      abort "no content on stdin" if content.strip.empty?
+
+      safe_write(Entry.path_for(slug), content)
+      puts "wrote #{Entry.path_for(slug).relative_path_from(ROOT)}"
+    else
+      scaffold_entry(slug)
+    end
+  end
+
+  def scaffold_entry(slug)
+    data = {
+      "slug"              => slug,
+      "schema_version"    => 1,
+      "term"              => slug.tr("-", " "),
+      "name"              => slug.tr("-", " ").split.map(&:capitalize).join(" "),
+      "notation"          => nil,
+      "brief"             => "(one-line gloss — what this is)",
+      "layer"             => "prose-symbol",
+      "status"            => "draft",
+      "tags"              => [],
+      "source_type"       => "asf",
+      "primary_source"    => nil,
+      "first_asf_mention" => nil,
+      "see_also"          => [],
+      "aliases"           => [],
+      "do_not_confuse"    => []
+    }
+    body = "(short prose definition; link to defining segment with [`#slug-form`](path) markup)"
+    Entry.new(slug, data, body).save
+    puts "scaffolded #{Entry.path_for(slug).relative_path_from(ROOT)} — edit fields, then `term decide` to record commitment."
+  end
+
+  # ── show ─────────────────────────────────────────────────────────────────
+
+  def cmd_show(argv)
+    slug  = argv.shift or abort "usage: term show <slug>"
+    entry = Entry.load(slug) or abort "no such entry: #{slug}"
+
+    show_fields(entry)
+    show_decisions(slug)
+    show_segment_refs(slug)
+  end
+
+  def show_fields(entry)
+    puts "slug:           #{entry.slug}"
+    puts "term:           #{entry.term || '(missing)'}"
+    puts "name:           #{entry.name}"           if entry.name
+    puts "notation:       #{entry.notation}"       if entry.notation
+    puts "brief:          #{entry.brief || '(missing)'}"
+    puts "layer:          #{entry.layer}"          if entry.layer
+    puts "status:         #{entry.status}"         if entry.status
+    puts "tags:           #{entry.tags.join(', ')}" unless entry.tags.empty?
+    puts "source_type:    #{entry.source_type}"    if entry.source_type
+    puts "primary_source: #{entry.primary_source}" if entry.primary_source
+    puts "first_asf_mention: #{entry.first_asf_mention}" if entry.first_asf_mention
+    puts "see_also:       #{entry.see_also.join(', ')}"   unless entry.see_also.empty?
+    puts "aliases:        #{entry.aliases.join(', ')}"    unless entry.aliases.empty?
+    puts "do_not_confuse: #{entry.do_not_confuse.join(', ')}" unless entry.do_not_confuse.empty?
+    return if entry.body.to_s.strip.empty?
+
+    puts
+    puts "body:"
+    puts entry.body.lines.map { |l| "  #{l}" }.join.rstrip
+  end
+
+  def show_decisions(slug)
+    events = DecisionEvent.events_for(slug)
+    return if events.empty?
+
+    puts
+    puts "decisions:"
+    events.each do |e|
+      puts "  #{e.timestamp}  #{e.decider.to_s.ljust(16)} #{e.action.to_s.ljust(16)} #{e.outcome}"
+      puts "    note: #{e.note.lines.first&.strip}" if e.note && !e.note.empty?
+    end
+  end
+
+  def show_segment_refs(slug)
+    sites = SegmentScanner.all_referenced_slugs[slug] || []
+    return if sites.empty?
+
+    puts
+    puts "referenced from segments:"
+    sites.first(8).each { |s| puts "  #{s}" }
+    puts "  (... +#{sites.size - 8} more)" if sites.size > 8
+  end
+
+  # ── list / search ────────────────────────────────────────────────────────
+
+  def cmd_list(argv)
+    opts    = parse_kv_flags(argv)
+    entries = Entry.all
+    entries = entries.select { |e| e.tags.include?(opts["tag"]) }     if opts["tag"]
+    entries = entries.select { |e| e.status.to_s == opts["status"] } if opts["status"]
+    entries = entries.select { |e| e.layer.to_s == opts["layer"] }   if opts["layer"]
+
+    entries.each do |e|
+      puts format("%<slug>-36s  %<status>-10s  %<layer>-18s  %<term>s",
+                  slug:   e.slug[0, 36],
+                  status: (e.status || '?')[0, 10],
+                  layer:  (e.layer  || '?')[0, 18],
+                  term:   (e.term   || '(missing)')[0, 60])
+    end
+    puts "(#{entries.size} entries#{' filtered' if opts.any?})"
+  end
+
+  def cmd_search(argv)
+    query = argv.join(" ").downcase
+    abort "usage: term search <query>" if query.empty?
+
+    Entry.all.each do |e|
+      hay = [e.slug, e.term, e.name, e.brief, e.notation, e.aliases.join(" ")].compact.join(" ").downcase
+      next unless query.split.all? { |term| hay.include?(term) }
+
+      puts format("%<slug>-36s  %<term>s", slug: e.slug[0, 36], term: e.term.to_s[0, 70])
+    end
+  end
+
+  # ── decide ───────────────────────────────────────────────────────────────
+
+  def cmd_decide(argv)
+    slug, action, *rest = argv
+    abort "usage: term decide <slug> <action> [--by name] [--note text] [--from x --to y ...]" \
+      unless slug && action
+    abort "no such entry: #{slug}" unless Entry.load(slug)
+    unless ACTIONS.key?(action)
+      warn "unknown action '#{action}'; known: #{ACTIONS.keys.join(', ')}"
+      warn "(proceeding anyway — actions are extensible; lint will surface unknowns)"
+    end
+
+    opts    = parse_kv_flags(rest)
+    decider = opts.delete("by") || opts.delete("decider") || ENV["USER"] || "unknown"
+    outcome = opts.delete("outcome") || "committed"
+    note    = opts.delete("note")
+    extra   = opts # remaining flags become event-frontmatter extras
+
+    valid_outcomes = %w[committed rejected revised superseded]
+    unless valid_outcomes.include?(outcome)
+      warn "outcome '#{outcome}' not in #{valid_outcomes.inspect} (proceeding; lint warns)"
+    end
+
+    ev   = DecisionEvent.new(slug: slug, action: action, decider: decider,
+                             outcome: outcome, note: note, extra: extra)
+    path = ev.write
+    puts "recorded #{path.relative_path_from(ROOT)}"
+  end
+
+  # ── render ───────────────────────────────────────────────────────────────
+
+  # Default destination is the staging path under terminology/_emitted/ rather
+  # than the live LEXICON.md at root. Until the existing hand-authored LEXICON
+  # entries have been migrated into terminology/entries/, rendering directly
+  # to root LEXICON.md would overwrite real content with a partial generated
+  # view. The staging path lets the tool be exercised end-to-end without that
+  # risk; once migration is complete, change the default to ROOT/'LEXICON.md'
+  # (or pass --output LEXICON.md explicitly).
+  #
+  # As a second line of defense: refuse to overwrite a destination that does
+  # NOT carry the renderer's "Auto-generated" marker on the first line, unless
+  # the operator passes --force. Hand-authored files are marked by their
+  # absence of that header; refusing protects them from accidental clobber.
+  def cmd_render(argv)
+    opts    = parse_kv_flags(argv)
+    default = TERM_DIR / "_emitted" / "LEXICON.md"
+    output_path = Pathname.new(opts["output"] || default.to_s).expand_path
+    entries     = Entry.all
+    if entries.empty?
+      warn "no entries in #{ENTRIES_DIR.relative_path_from(ROOT)}; nothing to render"
+      return
+    end
+
+    if output_path.exist? && !opts.key?("force") && !generated_marker?(output_path)
+      warn "refusing to overwrite #{output_path.relative_path_from(ROOT)}: " \
+           "no 'Auto-generated' marker on first line (looks hand-authored)"
+      warn "pass --force to override, or --output to write elsewhere"
+      exit 2
+    end
+
+    md = Renderer.new(entries).to_markdown
+    safe_write(output_path, md)
+    rel = output_path.to_s.start_with?(ROOT.to_s) ? output_path.relative_path_from(ROOT) : output_path
+    puts "wrote #{rel}  (#{entries.size} entries)"
+  end
+
+  # Heuristic: the renderer's header puts "Auto-generated" in the first ~5
+  # lines. A hand-authored LEXICON.md does not. Read just enough to decide.
+  def generated_marker?(path)
+    head = path.each_line.first(5).join
+    head.include?("Auto-generated")
+  end
+
+  # ── lint ─────────────────────────────────────────────────────────────────
+
+  def cmd_lint(_argv)
+    findings = []
+
+    # Per-entry schema issues.
+    entries = Entry.all
+    entries.each do |entry|
+      entry.schema_issues.each { |issue| findings << "#{entry.slug}: #{issue}" }
+    end
+
+    # Cross-ref: see_also targets that don't exist as entries.
+    slug_set = entries.map(&:slug).to_set
+    entries.each do |entry|
+      entry.see_also.each do |target|
+        findings << "#{entry.slug}: WARN  see_also target '#{target}' has no entry" \
+          unless slug_set.include?(target)
+      end
+    end
+
+    # Reverse-orphan: segment slugs referenced from prose that have no entry.
+    # Only surface as informational — many segment slugs are NOT terminology
+    # entries (they're segment identifiers); the test for "should be a term"
+    # is judgment-heavy. List them for review without categorizing as errors.
+    referenced = SegmentScanner.all_referenced_slugs
+    orphan_entries = entries.reject { |e| referenced.key?(e.slug) || segment_file_exists?(e.slug) }
+    orphan_entries.each do |entry|
+      findings << "#{entry.slug}: INFO  no segment references this slug (term-only? then ignore)"
+    end
+
+    if findings.empty?
+      puts "lint: clean (#{entries.size} entries)."
+    else
+      findings.sort.each { |f| puts f }
+      puts
+      puts "(#{findings.size} findings across #{entries.size} entries)"
+      exit 1 if findings.any? { |f| f.include?("ERROR") }
+    end
+  end
+
+  # Some terminology entries also exist as segment files (e.g., a defined term
+  # in a #def-* segment). Those aren't orphaned — the segment file IS the
+  # primary definition site. Check the segment dirs for a file with the same
+  # slug stem before flagging.
+  def segment_file_exists?(slug)
+    SegmentScanner::SEGMENT_DIRS.any? { |dir| (ROOT / dir / "#{slug}.md").exist? }
+  end
+
+  # ── validate ─────────────────────────────────────────────────────────────
+
+  def cmd_validate(_argv)
+    issues = 0
+    Entry.all.each do |entry|
+      # Smoke test: round-trip load → save would not corrupt.
+      reloaded = Entry.load(entry.slug)
+      next if reloaded
+
+      puts "#{entry.slug}: load failed"
+      issues += 1
+    end
+    sweep_tmp_artifacts
+    puts(issues.zero? ? "validate: #{Entry.all.size} entries load cleanly." : "(#{issues} entries failed to load)")
+    exit 1 if issues.positive?
+  end
+
+  # ── helpers ──────────────────────────────────────────────────────────────
+
+  # Sweep stale `.tmp.<pid>.<rand>` artifacts left behind by crashed
+  # `safe_write` calls. Inherited from bin/refs's discipline.
+  def sweep_tmp_artifacts
+    swept = []
+    [ENTRIES_DIR, DECISIONS_DIR].each do |dir|
+      next unless dir.directory?
+
+      dir.glob("**/*#{TMP_SUFFIX}.*").each do |stale|
+        next unless stale.file?
+        next if (Time.now - stale.mtime) < 60
+
+        stale.delete
+        swept << stale.relative_path_from(ROOT).to_s
+      end
+    end
+    swept.each { |p| warn "swept stale temp file: #{p}" }
+  end
+
+  # Lightweight `--key value` flag parser (positional args were consumed
+  # before we got here). Accepts `--key=value` and `--key value` forms.
+  def parse_kv_flags(args)
+    out    = {}
+    cursor = 0
+    while cursor < args.length
+      a = args[cursor]
+      if a.start_with?("--") && a.include?("=")
+        k, v   = a.sub(/^--/, "").split("=", 2)
+        out[k] = v
+        cursor += 1
+      elsif a.start_with?("--")
+        k        = a.sub(/^--/, "")
+        out[k]   = args[cursor + 1]
+        cursor   += 2
+      else
+        cursor += 1
+      end
+    end
+    out
+  end
+end
+
+# Set is used in lint() for fast slug lookup; require here keeps the require
+# block tight at the top while still supporting Ruby <2.5 where Set wasn't
+# autoloaded with Array.
+require "set"
+
+CLI.run(ARGV) if __FILE__ == $PROGRAM_NAME

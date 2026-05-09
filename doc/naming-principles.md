@@ -1,32 +1,18 @@
-# Naming Principles — Multi-Agent Vote Instructions (refined edition)
+# Naming Principles
 
-## Cold-start instruction — read this BEFORE any orientation
+Long-lived naming principles for the Agentic Systems Framework. Vocabulary commitments, slug discipline, evaluation criteria, decision categories, naming layers. Tactical voting mechanics (round structure, vote-weight scales, deliverable formats, cold-start discipline) live separately in [`msc/naming/naming-principles-old.md`](../msc/naming/naming-principles-old.md) for as long as the naming cycle's voting apparatus is in active use; that file will be deprecated when the apparatus retires.
 
-**Do not read other agents' brainstorms, vote files, aggregations, or rename-mapping records before voting.** Specifically: do not read any file under `msc/naming/naming-votes/`, `msc/naming/naming-brainstorm-*.md`, `msc/naming/naming-aggregate-*`, `msc/naming/naming-alias-*.md`, `msc/naming/naming-cleanup-*.md`, `msc/naming/naming-rename-plan.md`, `msc/naming/to-canonicalize.md`, or `msc/naming/_archive/*` (archived prior-round artifacts; opening them defeats the cold-start). These would anchor your thinking and collapse the diversity this audit depends on.
+The principles below apply to *every* naming decision in the project — whether reached via multi-agent voting, manual curation, an audit-finding, or a single contributor's call.
 
-This rule fires *first* — before you read CLAUDE.md, TODO.md, OUTLINE.md, FORMAT.md, segment files, or anything else. The instruction is here at the top precisely because earlier rounds discovered that even glancing at a `git status` showing one of those files disclosed enough to anchor an agent's votes. If you've already read any of the excluded files in this session, disclose it explicitly in your principles-observations section (round-1 evidence: this is recoverable as long as it's marked).
+## Architectural invariants — not subject to per-name decision
 
-Build your list from a *direct* review of the segment files and primary docs (next section).
-
-## Source material
-
-Read these to ground your votes:
-
-- `CLAUDE.md`, `TODO.md`, `OUTLINE.md` (and `01-aad-core/OUTLINE.md`)
-- `FORMAT.md`, `NOTATION.md`, `LEXICON.md`, `README.md`
-- `PROPOSALS.md` — current architectural portfolio. Read for context, not for naming cues.
-- Segment files under `01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/` — sample widely; do not just scan slugs.
-- Your own judgment about what a skilled-reader-six-months-later would struggle to parse aloud.
-
-## Architectural invariants — NOT vote targets
-
-Some structural commitments are now project-level architecture, not subjects of this round's voting. Note them and work *within* them rather than against them.
+Some structural commitments are project-level architecture. They constrain *every* naming move; work within them rather than against them.
 
 ### Role-prefix discipline
 
 **Every segment slug takes the form `{type-prefix}-{subject-noun}`.** The type prefix derives mechanically from the segment's `type:` frontmatter (one of FORMAT.md's vocabulary: `postulate`, `definition`, `scope`, `formulation`, `derived`, `result`, `corollary`, `hypothesis`, `normative`, `empirical`, `observation`, `discussion`, `measurement`, `proposed-schema`, `derivation`, `worked-example`, `detail`, `sketch`, `aside`). A small `TYPE_TO_PREFIX` mapping in `bin/align-slug` collapses overly-long type tokens into compact slug prefixes (currently `worked-example → example`; see `CLAUDE.md` §"Slug role-prefix mapping").
 
-The pilot validated this discipline (commits `09ace17`, `3aa9e74`). Role-prefix addition is mechanical — `bin/align-slug --all` sweeps the repo. **You vote only on subject-nouns**, not on prefixes.
+The pilot validated this discipline (commits `09ace17`, `3aa9e74`). Role-prefix addition is mechanical — `bin/align-slug --all` sweeps the repo. Naming decisions operate on subject-nouns; prefixes are the script's job.
 
 ### Subject-noun-first slug naming
 
@@ -36,13 +22,9 @@ The pilot validated this discipline (commits `09ace17`, `3aa9e74`). Role-prefix 
 
 The framework deliberately uses a coherent Greek-rooted vocabulary for its core nouns: *chronica*, *prolepsis*, *aisthesis*, *aporia*, *epistrophe*, *praxis*, *logogenic*, *logozoetic*. New naming proposals should sit comfortably within this aesthetic register rather than introducing competing registers (clinical-bureaucratic, marketing-feature, mathematical-acronym, etc.). This isn't an absolute prohibition — `directed separation`, `satisfaction gap`, and `control regret` are excellent non-Greek names — but it is a strong preference principle.
 
-### Three-document layout for naming workstream
-
-`doc/naming-principles.md` (this file) holds the principles and instructions. `msc/naming/naming-rename-plan.md` (renamed from `naming-pilot-rename-plan.md` on 2026-05-04) holds specific naming decisions — slug renames, prose-vocabulary renames, and confirmed canonicalize commitments (landed and pending) — that file is excluded from rename sweeps so the mapping table survives them verbatim. **For Round 2 (active):** voters edit a per-agent voting card in place at `msc/naming/round-2-cards/{your-agent-id}.md` and maintain a tracker at `msc/naming/round-2-trackers/{your-agent-id}-tracker.md`; see [`doc/naming-cycle-methodology.md`](naming-cycle-methodology.md). **For Round 1 (historical):** voters wrote a per-agent vote-file at `msc/naming/naming-votes/{agent-id}.md`. Voters do not modify the rename-plan; the human reviewer does, after voting concludes.
-
 ### Methodology — separate passes for prefix and subject-noun
 
-Going forward, role-prefix addition (mechanical, via `bin/align-slug`) and subject-noun renaming (judgment-heavy, via voting + `bin/rename-slug`) are executed in separate cycles. Bundling them creates two failure modes: the segment's prose drifts out of step with its new identity, and voters cannot vote cleanly on the noun choice when the prefix is decided in the same cycle. **This round votes only on subject-nouns** (and on the other vote categories below — canonicalizations, aliases, name-unnamed-thing). Do not propose role-prefix changes; those are the script's job.
+Role-prefix addition (mechanical, via `bin/align-slug`) and subject-noun renaming (judgment-heavy, via review + `bin/rename-slug`) execute in separate cycles. Bundling them creates two failure modes: the segment's prose drifts out of step with its new identity, and decision-makers cannot evaluate the noun choice cleanly when the prefix change is entangled with it. The mechanical pass and the judgment pass want different tooling and different review.
 
 ## Why naming deserves a deliberate pass
 
@@ -54,41 +36,41 @@ Two concrete examples from the project make the stakes visible. *Satisfaction ga
 
 The question is not "should we rename everything." It is: **which names are doing load-bearing work, which are coasting, which are causing friction, and where are the missing memorable-noun slots that would repay a deliberate act of naming?** Assume most names were first passes that got propagated by assuming they were deliberate when they were incidental.
 
-## Vote categories
+## Decision categories
 
-Each vote belongs to exactly one of these categories. Marking the category in your notes column lets the aggregation distinguish them and lets the human reviewer apply the right judgment at landing time.
+Every naming decision falls into exactly one of these categories. The categories carry different downstream actions; getting the category right matters more than getting the specific name perfect.
 
-1. **Rename.** The current name fails (overclaims, underclaims, is hard to remember, collides with another use, doesn't survive the renamed-from-now-sounds-weird test). Propose a replacement subject-noun.
-2. **Keep.** The current name is right and shouldn't be changed. Voted explicitly so the aggregation distinguishes "considered and kept" from "no opinion expressed." High-weight keeps protect names whose churn would cost more than it returns.
-3. **Canonicalize.** The current concept *has* a name, but prose paraphrases it three different ways across the repo. Vote canonicalize to commit: "going forward, always reference this as X — stop paraphrasing." Distinct from keep because keep doesn't address paraphrase drift.
+1. **Rename.** The current name fails (overclaims, underclaims, is hard to remember, collides with another use, doesn't survive the renamed-from-now-sounds-weird test). A replacement subject-noun takes its place.
+2. **Keep.** The current name is right and shouldn't be changed. The act of explicitly committing keep — distinct from "no opinion" — protects names whose churn would cost more than it returns.
+3. **Canonicalize.** The current concept *has* a name, but prose paraphrases it three different ways across the repo. The canonicalize commitment is: "going forward, always reference this as X — stop paraphrasing." Distinct from keep because keep doesn't address paraphrase drift.
 4. **Add-alias.** The current name is fine for one register but a parallel name in another register would help. Most common case: a Greek/symbol name (α₁, α₂, $\Delta\rho^*$) gets an English alias for use in prose ("the derived-gain regime", "the adaptive reserve"). The formal/structural identifier doesn't have to be a symbol — it can be a legacy English term that's structurally precise but lacks an evocative prose handle. Symbol or formal name stays as the structural identifier; alias enters prose. The pair becomes a maintained convention with strictly differentiated roles, not a free-substitution synonym set.
-5. **Name-unnamed-thing.** A recurring pattern, region, formula, methodology, or metaphor that the theory uses repeatedly but never named. Propose a memorable-noun name for it. These are the highest-value discoveries because the slot is empty — no displacement cost, pure clarity gain.
+5. **Name-unnamed-thing.** A recurring pattern, region, formula, methodology, or metaphor that the theory uses repeatedly but never named. A memorable-noun name lands on it. These are the highest-value discoveries because the slot is empty — no displacement cost, pure clarity gain.
 
 ### Rename vs. Add-alias — the distinction that shapes downstream action
 
-`rename` and `add-alias` for the same proposed name imply different downstream moves; the category determines what *happens* if the proposal lands. The decision hinges on whether the framework benefits from one canonical name or from a pair with separated registers:
+`rename` and `add-alias` for the same proposed name imply different downstream moves; the category determines what *happens* if the decision lands. The choice hinges on whether the framework benefits from one canonical name or from a pair with separated registers:
 
-- Vote **`rename`** when the original is structurally weak, arbitrary, or forces a lookup that doesn't pay off. The original goes away; the new name takes its place wholesale. Example: `Class 1 / Class 2 / Class 3` → `goal-entanglement hierarchy` is a rename — the numbering scheme is arbitrary and forces every reader to memorize it; the alternative names what the classes *measure* and replaces the trio.
+- Choose **`rename`** when the original is structurally weak, arbitrary, or forces a lookup that doesn't pay off. The original goes away; the new name takes its place wholesale. Example: `Class 1 / Class 2 / Class 3` → `goal-entanglement hierarchy` is a rename — the numbering scheme is arbitrary and forces every reader to memorize it; the alternative names what the classes *measure* and replaces the trio.
 
-- Vote **`add-alias`** when the original is formally precise or deeply established but the framework needs a separate, evocative prose handle for discussion, framing, and pedagogy. Both terms persist with strictly differentiated roles. Example: `effects spiral` → `runaway mismatch cascade` as add-alias keeps `effects spiral` as the formal phenomenon name while making `runaway mismatch cascade` the canonical phrase for explaining the mechanism in prose.
+- Choose **`add-alias`** when the original is formally precise or deeply established but the framework needs a separate, evocative prose handle for discussion, framing, and pedagogy. Both terms persist with strictly differentiated roles. Example: `effects spiral` → `runaway mismatch cascade` as add-alias keeps `effects spiral` as the formal phenomenon name while making `runaway mismatch cascade` the canonical phrase for explaining the mechanism in prose.
 
-Articulated by Gemini-3.1-pro-preview in the 2026-04-29 targeted-alternatives round (R1's four-band scale was active at the time of the quote; under R2's three-value scale this maps to a strong `+2 add-alias`): *"A `+3 add-alias` means I strongly believe the framework is currently suffering in its readability because it lacks a dedicated, evocative prose noun for a concept that already has a formal identifier. It is a vote to officially mint that prose noun."*
+Articulated by Gemini-3.1-pro-preview in the 2026-04-29 targeted-alternatives round: *"A strong add-alias means I strongly believe the framework is currently suffering in its readability because it lacks a dedicated, evocative prose noun for a concept that already has a formal identifier. It is a vote to officially mint that prose noun."*
 
 ### Rename vs. Canonicalize — invented vs. excavated provenance
 
 A second axis worth distinguishing: *where does the proposed name come from?* Both `rename` and `canonicalize` can land a new name on a target, but the source of the candidate carries different epistemic weight.
 
-- Vote **`rename`** when the candidate is the agent's *invention* — coined to fix a perceived weakness in the current name. The proposed name didn't appear in the project's prose before the vote.
+- Choose **`rename`** when the candidate is the decision-maker's *invention* — coined to fix a perceived weakness in the current name. The proposed name didn't appear in the project's prose before the decision.
 
-- Vote **`canonicalize`** when the candidate is *excavated* from existing segment prose — the author or contributors had already reached for this phrase informally (in Discussion sections, Working Notes, segment titles, footnotes, brief asides), and the vote promotes the prose-use to formal canonical naming. The phrase is "organically native to the text"; the vote is for promotion, not coinage. Note this extends the canonicalize semantics beyond "concept has multiple paraphrases, commit to one" — it covers the related case where the formal naming layer hasn't yet caught up to a phrase the prose has already settled into.
+- Choose **`canonicalize`** when the candidate is *excavated* from existing segment prose — the author or contributors had already reached for this phrase informally (in Discussion sections, Working Notes, segment titles, footnotes, brief asides), and the decision promotes the prose-use to formal canonical naming. The phrase is "organically native to the text"; the act is for promotion, not coinage. Note this extends the canonicalize semantics beyond "concept has multiple paraphrases, commit to one" — it covers the related case where the formal naming layer hasn't yet caught up to a phrase the prose has already settled into.
 
 Articulated by Gemini-3.1-pro-preview in the 2026-04-29 targeted-alternatives round: *"When I proposed a 'new alternative' and marked it canonicalize, I was saying: 'The best new name for this concept shouldn't be invented from scratch; the best name is actually this specific, powerful phrase already buried in your prose. You should elevate (canonicalize) it to be the official name.'"*
 
-This carries real provenance signal for finalist decisions: a canonicalize-with-organic-provenance vote tells you the phrase fits the concept *empirically* — the author's own writing converged on it — not just that it sounds good in isolation. The downstream master-list surfaces this via a `canonicalize_provenance` field that records where in the prose the phrase already appears, so R2 voters can see the source attribution alongside the candidate.
+This carries real provenance signal for finalist decisions: a canonicalize-with-organic-provenance call tells you the phrase fits the concept *empirically* — the author's own writing converged on it — not just that it sounds good in isolation. The downstream master-list surfaces this via a `canonicalize_provenance` field that records where in the prose the phrase already appears, so reviewers can see the source attribution alongside the candidate.
 
 ## Evaluation criteria
 
-For each name you consider, weigh these axes. You do not need to score all of them explicitly; these are the kinds of considerations the notes column should capture when a vote is non-obvious.
+For each name under consideration, weigh these axes. Not every axis needs to be scored explicitly; these are the kinds of considerations a reasoning trail should capture when a decision is non-obvious.
 
 1. **Self-descriptive vs. baggage-carrying.** A name can *describe* its referent from scratch ("information bottleneck") or *adopt* existing baggage from an adjacent field ("sector condition", "Lyapunov function"). Both can be right. Self-descriptive wins when the field lacks prior art; baggage-adoption wins when the prior art's structural intuitions should travel with the name. The worst outcome is a name whose *only* content is baggage when the theory means something subtly different.
 
@@ -114,10 +96,11 @@ For each name you consider, weigh these axes. You do not need to score all of th
 
    *Names that fail the test:* *bias bound* (thousands of bias bounds in statistics, ML fairness, generalization theory), *change distance* (every diff tool and code-metric paper), *specification bound* (formal verification, software contracts), *detection latency* (used in every field), *causal structure* (used pervasively in stats / ML / Pearl literature), *action selection* (RL-domain term used by everyone). These names work *in-context* — the surrounding paragraph carries the meaning — but they don't travel.
 
-   *When a name fails this test, the fix is usually one of three moves:*
+   *When a name fails this test, the resolution is one of four moves:*
    - **(a) Add a structural qualifier the segment already implies.** Example: *bias bound* → *Class-2 ambiguity bias bound* — the segment's own title (`#deriv-bias-bound` reads as "Bias-Bound Constant $C$ for Class-2 Agent Observation-Ambiguity Modulation") already carries the longer disambiguated form; the canonical move promotes that to the citation handle.
    - **(b) Pivot to a more distinct sibling concept.** Example: *specification bound* → *communication bottleneck bound* — the segment carries a named corollary that's sharper than the parent; the move promotes the corollary to the canonical name.
    - **(c) Treat the short form as the in-segment shorthand and commit a longer form as the citation handle.** Analogous to the symbol-to-English add-alias pattern but in reverse: instead of giving math symbols English handles, you give short generic prose names disambiguated cross-reference forms. The short form keeps reading naturally inside the segment ("the bias bound shows..."); the long form is what travels in citations and search queries.
+   - **(d) Accept the term and discipline first-encounter cite of the prior-art reference.** When the name is a *deliberately adopted standard* from an adjacent field (e.g., *causal structure*, *action selection*, *multi agent*, *equilibrium convergence*, *feature*) and AAD's use is structurally identical to the field's standard meaning, renaming creates NIH friction without adding distinctive content. The fix is at the *segment* level rather than the *name* level: each segment using the term gets a first-encounter cite of the prior-art reference in its Discussion or opening prose (per FORMAT.md §Findings — Related Work). AAD-distinctive content lives in *what AAD does within the term* — the layered machinery — not in re-coining the scope itself. Where (a)/(b)/(c) change the name to fix the citability gap, (d) accepts the gap and changes the segments to mitigate it. Apply (d) only when the segment's prior-art relationship is genuinely structural-identity adoption (the AAD use *is* the field's standard meaning, possibly with a project-internal narrowing), not "the term is convenient and we don't want to think of an alternative."
 
    The principle is distinct from familiarity gradient (criterion 2), which asks how much trained-reader intuition the name imports. A name can have low unfamiliarity *and* low standalone citability — *bias bound* is highly familiar but uselessly so, because the familiarity points everywhere. Citability is about whether the name *uniquely points back at this concept*, not whether the reader recognizes any of its words.
 
@@ -125,125 +108,31 @@ For each name you consider, weigh these axes. You do not need to score all of th
 
 Broad. Any named thing — *or* currently-unnamed-but-recurring thing that would benefit from a name — anywhere in the project is eligible.
 
-### Naming layers (be aware which layer your vote operates on)
+### Naming layers
 
-Friction often comes from mixing layers. Note in your vote which layer you're operating on:
+Friction often comes from mixing layers. Note explicitly which layer a decision operates on:
 
-- **Slug layer.** Canonical identifiers like `#strategy-dag`, `#discussion-additive-coordinate-forcing`, `#scope-agency`. Subject-nouns only this round (per architectural invariants); prefix is set by `type:`.
-- **Prose-symbol layer.** Default English forms used when prose references a symbol (`α₁` → "the derived-gain regime"). Add-alias votes typically operate here.
+- **Slug layer.** Canonical identifiers like `#strategy-dag`, `#discussion-additive-coordinate-forcing`, `#scope-agency`. Subject-nouns are the decision space; prefix is set by `type:`.
+- **Prose-symbol layer.** Default English forms used when prose references a symbol (`α₁` → "the derived-gain regime"). Add-alias decisions typically operate here.
 - **Framing-vocabulary layer.** The high-level posture words: "scope-honesty-as-architecture", "calibration laboratory", "strengthen-first posture", "integrating framework". These shape how the project presents itself in introductions and abstracts.
 - **Public-API layer.** Section header names (`## Formal Expression`, `## Epistemic Status`, `## Discussion`, `## Working Notes`), framework name (`AAD`, `ASF`), document titles. Read more than any individual segment; rename is expensive.
 
 ### Eligible categories
 
-- **Segment subject-nouns.** Slug suffix after the role-prefix. (`#discussion-separability-pattern` → vote on `separability-pattern`; the `discussion-` is fixed by type.)
+- **Segment subject-nouns.** Slug suffix after the role-prefix. (`#discussion-separability-pattern` → the eligible name is `separability-pattern`; the `discussion-` is fixed by type.)
 - **Concept names in prose.** Phrases like "satisfaction gap", "adaptive reserve", "directed separation", "orient cascade".
-- **Symbol-to-English aliases.** α₁, α₂, β, η*, ρ, U_o, κ_processing, ε*, etc. — propose English aliases via add-alias category.
-- **Pattern and region names — including ones that don't yet have names.** The sector-persistence region in parameter space. The cycle-as-a-whole. The inferential-force cascade across the C1/C2/C3 hierarchy. Use name-unnamed-thing category.
+- **Symbol-to-English aliases.** α₁, α₂, β, η*, ρ, U_o, κ_processing, ε*, etc. — eligible via add-alias category.
+- **Pattern and region names — including ones that don't yet have names.** The sector-persistence region in parameter space. The cycle-as-a-whole. The inferential-force cascade across the C1/C2/C3 hierarchy. Eligible via name-unnamed-thing category.
 - **Top-level document names and their sections.** README.md headings, NOTATION.md entries, FORMAT.md convention names, TODO.md section titles, CLAUDE.md section headers, OUTLINE.md part names.
 - **Framework name itself** (AAD, ASF). Renames here are expensive; treat with extreme care. Note that ASF is the *intentional* parent-level name (AAD is Part I, TST is Part II); earlier rounds misread it as debt.
 - **Methodologies and principles.** "Strengthen-first posture", "scope-honesty-as-architecture", "calibration-laboratory framing".
 
 ### Acronym discipline
 
-Every new acronym carries a maintenance cost: future readers must memorize it; collisions with adjacent literatures must be checked (recall the ACT → AAD rename forced by the AI Consciousness Test collision); tooling must reference it consistently. Propose new acronyms only when (a) the expanded form will be used 10+ times in nearby prose, (b) the acronym survives the communal-imagination test on its own (without expansion), and (c) you've spot-checked for collisions in the AI/ML / control / cognitive-science literatures. When in doubt: don't add an acronym; the unrolled phrase compounds less interest than a forgettable initialism.
+Every new acronym carries a maintenance cost: future readers must memorize it; collisions with adjacent literatures must be checked (recall the ACT → AAD rename forced by the AI Consciousness Test collision); tooling must reference it consistently. Coin new acronyms only when (a) the expanded form will be used 10+ times in nearby prose, (b) the acronym survives the communal-imagination test on its own (without expansion), and (c) the AI/ML / control / cognitive-science literatures have been spot-checked for collisions. When in doubt: don't add an acronym; the unrolled phrase compounds less interest than a forgettable initialism.
 
-**Rule of thumb:** if you would use the name (or paraphrase) repeatedly in a conversation about the theory, it's eligible.
-
-## How to vote
-
-Voting mechanics depend on the round. **Round 2** voters edit pre-generated voting cards in place — see [`doc/naming-cycle-methodology.md`](naming-cycle-methodology.md) §2 (the tracker) and §4 (the walk) for the active mechanics, and the card's own preamble for the per-row format. **Round 1** used a separate vote-file-per-agent (markdown table; preserved at the end of this section as historical reference). The categories, criteria, and weight scale described below apply across rounds; only the *delivery form* (card-edit vs. vote-file-table) differs.
-
-The `category` column / cell is one of: `rename`, `keep`, `canonicalize`, `add-alias`, `name-unnamed`. Use the same category vocabulary (no abbreviations).
-
-### Weight scale
-
-For the active round (Round 2), the scale is intentionally three values:
-
-- **+2** — strong preference. Strong rename; load-bearing keep; name urgently needed.
-- **+1** — would-accept; mild preference. Visible improvement; acceptable-keep.
-- **−1** — explicit rejection. You considered this candidate and reject it.
-
-No `+3`, no `-2`, no `-3`. No zero except by absence. The simpler scale is intentional for finalist resolution and forces decisive picks; bandwidth-of-intensity distinctions weren't load-bearing for the round's purpose.
-
-*Historical note:* Round 1 used a wider four-band scale (+3 / +2 / +1 / -1 / -2 / -3) for open-exploration voting where conviction-bandwidth mattered more. Across the R2 first cohort, every voter except one defaulted back to R1's wider scale anyway because the broader scale is the training prior. Scale-drift back to four-band is a documented failure mode — see [`naming-cycle-methodology.md`](naming-cycle-methodology.md) §5. If you find yourself reaching for `+3` or `-2`, that's the prior asserting itself, and the move is to clamp to the three-value scale rather than rationalize the deviation.
-
-**Absence is not a vote.** Not including a name in your table (R1) or row (R2) means "no opinion." Vote explicitly for anything you considered, whether keep or change. This lets the aggregation distinguish "nobody thought about this" from "several agents looked and declined to change it."
-
-### Example votes (Round 2 scale; mechanics shown in the R1 table form for compactness — R2 voters cast the same vote by editing their card row)
-
-**Strong rename:**
-```
-| #discussion-additive-coordinate-forcing | #discussion-forced-coordinates | rename | +2 | Current "additive" doesn't cover the Čencov-Fisher 4th instance; "forced-coordinates" covers both Cauchy-FE and Čencov machineries. Scope-honesty for meta-segment dominates. |
-```
-
-**Defended keep:**
-```
-| satisfaction gap | satisfaction gap | keep | +2 | Crispest named pair in the project; the 2×2 diagnostic works because the names work. Rename would lose load-bearing prose conventions. |
-```
-
-**Canonicalize (commit to existing name; stop paraphrasing):**
-```
-| "calibration laboratory" | "calibration laboratory" | canonicalize | +2 | Currently appears as "richest operationalization domain", "best operationalization domain", and "calibration laboratory" across CLAUDE.md and TST OUTLINE. Standardize on the third. |
-```
-
-**Add-alias (symbol + English):**
-```
-| α₁ (A2' fixed-gain sub-scope) | "derived-gain regime" | add-alias | +1 | "This lands in α₁" reads cryptically in prose; "this lands in the derived-gain regime" reads naturally. Keep α₁ as shorthand symbol. |
-```
-
-**Name-unnamed-thing:**
-```
-| [unnamed: the sector-persistence region in parameter space] | "persistence envelope" | name-unnamed | +1 | Engineering vocabulary, geometrically evocative. Currently referenced as "the region where the persistence condition holds" — verbose and non-memorable. |
-```
-
-**Explicit rejection:**
-```
-| #discussion-separability-pattern | #discussion-separability-staircase | rename | -1 | "Staircase" is whimsical and fails the communal-imagination test. "Ladder" (separate row) is the right metaphor. |
-```
-
-**Multiple alternatives for one current-name (rank with weight):**
-```
-| #discussion-additive-coordinate-forcing | #discussion-forced-coordinates | rename | +2 | Best fit per scope-honesty and meta-segment criteria. |
-| #discussion-additive-coordinate-forcing | #discussion-cauchy-coordinates | rename | -1 | Undersells the Čencov 4th instance (not Cauchy-FE). |
-| #discussion-additive-coordinate-forcing | #discussion-coordinate-forcing | rename | +1 | Verb form; acceptable alternative if forced-coordinates doesn't land. |
-```
-
-### Round 1 vote-file format (historical reference)
-
-Round 1 voters wrote a markdown table per agent at `msc/naming/naming-votes/{agent-id}.md` with five columns:
-
-```
-| current-name | new-name-candidate | category | weight | notes |
-|---|---|---|---|---|
-| ... | ... | ... | ... | ... |
-```
-
-The four-band scale (+3 / +2 / +1 / -1) applied. R2 replaced the table-file mechanic with inline card editing; the example votes above show how the same conceptual vote translates.
-
-## What to return
-
-The deliverable depends on the round. The shape of the contribution is the same — substantive votes with categories, weights, and reasoning notes — but the delivery form differs.
-
-### Round 2 (active)
-
-Your deliverables are:
-
-1. **Your voting card at `msc/naming/round-2-cards/{your-agent-id}.md`** — edited in place, with category / weight / top-pick / notes filled in for the targets where you have a real position. Use surgical edits (line-range edits, targeted Edit calls). Per-target notes carry the load-bearing signal; a `+2` with substantive in-context reasoning carries different weight than a `+2` with empty notes.
-2. **Your tracker at `msc/naming/round-2-trackers/{your-agent-id}-tracker.md`** — `voting-sequence` / `can-vote` / `notes` columns maintained as the working state of your walk. The `voted` column auto-refreshes from card state when you re-run `bin/naming-master-tracker --card=...`.
-3. **Per-segment reflections in your audit-working directory at `msc/AUDIT-WORKING-NNNNNN/`** — the workflow restatement (`00-workflow-restatement.md`), initial predictions (`00-initial-predictions.md`), numbered segment reflections (`01-...md`, `02-...md`, ...), and any consolidation-checkpoint working artifacts (`01-consolidation-checkpoint-1.md`, etc.). These are intermediate thinking; they're for you and for future agents reading the working directory for archaeology.
-4. **Closing process-notes** in the card's "Cold-start observations / Process notes" section at the bottom — anything cycle-level worth surfacing for round-design feedback (target framings that felt off, candidate-set gaps, observations about the rhythm itself).
-
-You do **not** write a separate vote-file (that was Round 1's mechanic), and you do **not** write a final audit report (that's the de-novo audit instructions' deliverable, which the methodology borrows the *rhythm* from but not the artifact). The card and tracker are the primary deliverables; the working-directory artifacts are the cognitive trace; the process-notes are the round-design feedback channel.
-
-Your agent-id should identify your model clearly — e.g., `opus-r2c`, `sonnet-r2c`, `gemini-3-1-pro-r2`, `codex-gpt-5-r2`.
-
-**Expected coverage:** depends on engagement, not on a target row count. Partial coverage at high engagement is the right outcome; full coverage at decayed engagement is the failure mode the methodology is designed to avoid. Stop when context fills or rhythm decays — not when the card is "complete." See [`doc/naming-cycle-methodology.md`](naming-cycle-methodology.md) §6 for the stopping rule.
-
-### Round 1 (historical)
-
-Round 1 voters wrote a markdown table at `msc/naming/naming-votes/{your-agent-id}.md` (the "Round 1 vote-file format" subsection above describes the columns) along with an optional principles-observations section. The "60+ rows minimum, prioritize quality over count above ~200" guidance applied — Round 1 was open-exploration voting where the deliverable was the table itself. R2 replaced this with engagement-driven inline card editing; the conceptual content of votes (current / candidate / category / weight / notes) is the same, only the delivery form differs.
+**Rule of thumb:** if a name (or paraphrase) would be used repeatedly in a conversation about the theory, it's eligible.
 
 ## Meta-principle
 
-Naming is irreducibly aesthetic. There is no derivation that settles it; there is only the accumulated judgment of many readers. Your vote is one data point among several; the multi-architecture aggregation across this round + future rounds is how the project converges. Be confident where you are; be honest where you are not; use the weight scale to express the difference.
+Naming is irreducibly aesthetic. There is no derivation that settles it; there is only the accumulated judgment of many readers. Be confident where you are; be honest where you are not.
