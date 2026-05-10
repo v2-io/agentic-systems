@@ -211,8 +211,6 @@ If you are conducting a de-novo audit, see [`doc/de-novo-audit-instructions.md`]
 - `FORMAT.md` — **Segment file conventions.** How to write claim files; promotion workflow (Gates 1–4); voice and provenance rules; Epistemic Triage.
 - `NOTATION.md` — **Symbol reference.** All math notation defined here.
 - `LEXICON.md` — **Prose vocabulary** (cycle phases, agent classes, key terms) — *auto-generated from `terminology/entries/<slug>.md` via `bin/term render`. Direct edits are overwritten on next render; modify the entry and re-render — see LEXICON discipline above.*
-- `MIGRATION-MAP.md` — **Prior-work absorption tracking.** TFT → AAD and TST → AAD tables. Live while `old-*` files remain in the component `src/` directories; retires when absorption is complete.
-
 **Components:**
 - `01-aad-core/OUTLINE.md` — **AAD canonical outline.** Sections I, II, III + Appendices.
 - `01-aad-core/src/` — **AAD segments.** Named by slug. No numbering.

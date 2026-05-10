@@ -19,7 +19,7 @@ Do not hard-wrap lines. Let renderers (GitHub, Obsidian, editors) handle wrappin
 
 **Every non-`old-*` file in a component's `src/` directory is a segment and conforms to the cadence below.** This holds even for drafts, missing-stage entries, or segments orphaned from `OUTLINE.md`. The various stages (`missing`, `old`, `draft`, `deps-verified`, `claims-verified`, `format-clean`, `candidate`) describe progress *within* FORMAT, not exemptions from it.
 
-The `old-*` filename prefix is the *only* mechanism for placing a file in `src/` that is exempt from FORMAT. Those are prior-work staging files awaiting absorption per `MIGRATION-MAP.md`; they retain their original frontmatter (often with non-AAD `type:` tokens like `Definition`, `Theorem`) until their content is converted. Tooling skips them.
+The `old-*` filename prefix is the *only* mechanism for placing a file in `src/` that is exempt from FORMAT. Those are prior-work staging files; they retain their original frontmatter (often with non-AAD `type:` tokens like `Definition`, `Theorem`) until their content is converted. Tooling skips them.
 
 Other working material — notes, drafts, READMEs, scratch — does **not** belong in `src/`. It lives in `msc/` or at the component root.
 

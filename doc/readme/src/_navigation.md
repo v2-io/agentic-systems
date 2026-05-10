@@ -27,7 +27,6 @@ TODO.md               Tactical work items (sits below PRACTICA)
 PROPOSALS.md          Architectural-proposal portfolio
 CHANGELOG.md          Forward-going cycle record (2026-04-24 onward)
 LOG.md                Pre-2026-04-24 cycle archaeology (frozen)
-MIGRATION-MAP.md      Prior-work absorption tracking
 
 doc/                  Long-lived process documentation
   de-novo-audit-instructions.md
