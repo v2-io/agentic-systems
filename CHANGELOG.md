@@ -25,6 +25,22 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+## 2026-05-10
+
+### C1 terminology canonicalize batch landed: 29 entries committed to the terminology system
+
+The first batch of terminology canonicalize commitments (C1 from `TERMINOLOGY-TODO.md`) landed in a single commit. 29 terms are now in `terminology/entries/` with complete frontmatter and body prose, backed by `bin/term decide ... canonicalize` events recorded in `terminology/decisions/`. `LEXICON.md` regenerated at 76 entries via `bin/term render`; `bin/term lint` clean (INFOs only — no segment references, all expected at this stage).
+
+**Entries breakdown.** Five entries existed from Phase 6 migration (`control-regret`, `chronica`, `satisfaction-gap`, `adaptive-reserve`, `adaptive-system`) — verified against source segments, found complete. Six additional stubs existed but were incomplete drafts (`adversarial-destabilization` was already complete and good; `strategic-tempo`, `team-persistence`, `temporal-optimality`, `credit-assignment-boundary` were all stubs needing full population). The remaining 18 terms were new scaffolds.
+
+**Coverage.** The 29 terms span the full AAD component stack: Section I quantities (adaptive system, agency, adaptive reserve, adaptive gain dynamics, persistence cost, discrete sector condition, event-driven dynamics, multi-timescale stability, variational sector condition), Section II purposeful-agent layer (strategy DAG, strategic tempo, control regret, satisfaction gap, credit assignment boundary, strategy persistence), Section III composition (composite agent, team persistence, adversarial destabilization), TST domain (temporal optimality, continuous operation, developer agent, atomic changeset, coherence-coupling), logogenic layer (coupled update dynamics, experiential training), and logozoetic / ELI layer (moral continuity, interiority default, proprium mapping). Also includes chronica (core history object).
+
+**Source discipline.** Every entry body was written after reading the source segment — briefs reflect the segment's actual formal content, not guesses. Stub entries that carried placeholder text `(one-line gloss — what this is)` were fully populated.
+
+C1 section removed from `TERMINOLOGY-TODO.md` per the lifecycle discipline (remove-when-done).
+
+---
+
 ## 2026-05-09
 
 ### Goal-Update Coupling Class rename + Class 2 ↔ 3 swap landed: Class 1/2/3 → Separated/Coupled/Partial; Architecture ladder aligned with the six other AAD taxonomy ladders; warning-callout discipline anchored at six canonical surface points

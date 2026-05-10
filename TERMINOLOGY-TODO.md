@@ -45,12 +45,6 @@ Per-batch terminology entries (no rename, no prose sweep — just the entry). Ea
 
 Each batch below is a natural commit unit. Mark a row landed = remove it; add a CHANGELOG entry for the batch.
 
-### C1. Clean canonicalize — batch 1 (29 entries)
-
-[Rationale (master batch 1)](msc/naming/naming-rename-plan.md#clean-canonicalize--no-substantive-flag-29-entries).
-
-- [ ] control regret · chronica · satisfaction gap · strategy DAG · adaptive reserve · adversarial destabilization · strategic tempo · team persistence · temporal optimality · credit assignment boundary · atomic changeset · event driven dynamics · persistence cost · coupled update dynamics · moral continuity · adaptive gain dynamics · adaptive system · agency · composite agent · variational sector condition · continuous operation · interiority default · developer agent · discrete sector condition · experiential training · multi timescale stability · proprium mapping · strategy persistence · coherence coupling
-
 ### C2. Greek-cycle phase consolidations (5 entries)
 
 [Rationale](msc/naming/naming-rename-plan.md#greek-cycle-phase-consolidations-5-entries).
