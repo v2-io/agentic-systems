@@ -7,7 +7,7 @@ notation:
 brief: A training paradigm shift from batch prediction to structured, continuous causal experience — embedding the agent in a temporally consistent environment with genuine closed-loop feedback to build robust logogenic agents.
 layer: framing-vocabulary
 status: canon
-tags: [agent_classes, structural_concepts]
+tags: [logogenic]
 source_type: asf
 primary_source: 03-logogenic-agents/src/hyp-experiential-training.md
 first_asf_mention: 03-logogenic-agents/src/hyp-experiential-training.md

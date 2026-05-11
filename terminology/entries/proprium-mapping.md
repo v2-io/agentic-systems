@@ -7,7 +7,7 @@ notation:
 brief: The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences.
 layer: framing-vocabulary
 status: canon
-tags: [agent_classes, structural_concepts]
+tags: [eli, structural_concepts]
 source_type: asf
 primary_source: 04-eli/src/def-proprium-mapping.md
 first_asf_mention: 04-eli/src/def-proprium-mapping.md

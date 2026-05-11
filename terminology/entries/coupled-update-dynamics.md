@@ -7,7 +7,7 @@ notation: "$X_{\\tau^+} = f_{\\text{LLM}}(\\text{prompt}(X_{\\tau^-}, e_\\tau))$
 brief: The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade.
 layer: prose-symbol
 status: canon
-tags: [structural_concepts, agent_classes]
+tags: [structural_concepts, logogenic]
 source_type: asf
 primary_source: 03-logogenic-agents/src/def-coupled-update-dynamics.md
 first_asf_mention: 03-logogenic-agents/src/def-coupled-update-dynamics.md

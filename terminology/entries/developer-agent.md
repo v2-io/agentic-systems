@@ -7,7 +7,7 @@ notation:
 brief: A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t.
 layer: framing-vocabulary
 status: canon
-tags: [agent_classes]
+tags: [agent_classes, software]
 source_type: asf
 primary_source: 02-tst-core/src/scope-developer-agent.md
 first_asf_mention: 02-tst-core/src/scope-developer-agent.md

@@ -6,7 +6,7 @@ name: Knowledge Type
 brief: Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation).
 layer: framing-vocabulary
 status: canon
-tags: [agent_classes, ontology]
+tags: [agent_classes]
 source_type: asf
 primary_source: doc/DOMAINS.md
 first_asf_mention: doc/DOMAINS.md

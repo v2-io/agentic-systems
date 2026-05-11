@@ -7,7 +7,7 @@ notation:
 brief: The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle.
 layer: framing-vocabulary
 status: canon
-tags: [agent_classes, structural_concepts]
+tags: [eli]
 source_type: asf
 primary_source: 04-eli/src/norm-interiority-default.md
 first_asf_mention: 04-eli/src/norm-interiority-default.md

@@ -18,16 +18,11 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
-| **[Coupled Update Dynamics](terminology/entries/coupled-update-dynamics.md)** | $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade. |
 | **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
 | **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
-| **[Experiential Training](terminology/entries/experiential-training.md)** |  | A training paradigm shift from batch prediction to structured, continuous causal experience — embedding the agent in a temporally consistent environment with genuine closed-loop feedback to build robust logogenic agents. |
 | **[Goal-Update Coupling Class (GUC Class)](terminology/entries/goal-update-coupling-class.md)** |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
-| **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
 | **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
 | **[Logogenic agent](terminology/entries/logogenic-agent.md)** |  | Self-actuated agent whose primary channels are language — constituted by logos. |
-| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
-| **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 | **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
 
 
@@ -117,6 +112,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
+| **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
+| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
+| **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 
 
 ## Epistemic Status Values
@@ -179,11 +177,12 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Prolepsis (Πρόληψις) (anticipation)](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
 
-## Ontology
+## Logogenic
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
+| **[Coupled Update Dynamics](terminology/entries/coupled-update-dynamics.md)** | $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade. |
+| **[Experiential Training](terminology/entries/experiential-training.md)** |  | A training paradigm shift from batch prediction to structured, continuous causal experience — embedding the agent in a temporally consistent environment with genuine closed-loop feedback to build robust logogenic agents. |
 
 
 ## Persistence
@@ -191,6 +190,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Continuity](terminology/entries/continuity.md)** | $\mathcal{C}_t$ | Whether the agent maintains coherent identity through time — $\mathcal{C}_t$ extends, $M_t$ has temporal depth. |
+| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
 | **[Operational](terminology/entries/operational-persistence.md)** | $\Delta\rho^\ast = \alpha R - \rho$ | Whether the agent is currently within the guaranteed region — adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$. |
 | **[Structural](terminology/entries/structural-persistence.md)** | $\alpha > \rho / R$ | The correction machinery's *capacity* to maintain bounded mismatch — $\alpha > \rho / R$. |
 
@@ -266,6 +266,13 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Aside](terminology/entries/aside.md)** |  | A segment type: tangential observation or connection — informative but not load-bearing for the theory. |
 
 
+## Software (TST)
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
+
+
 ## Structural Concepts
 
 | Term | Notation | Brief |
@@ -288,11 +295,8 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Directed separation](terminology/entries/directed-separation.md)** |  | $M_t$ dynamics independent of $G_t$ (conditional on processing topology). |
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
-| **[Experiential Training](terminology/entries/experiential-training.md)** |  | A training paradigm shift from batch prediction to structured, continuous causal experience — embedding the agent in a temporally consistent environment with genuine closed-loop feedback to build robust logogenic agents. |
 | **[Exponential cognitive load](terminology/entries/exponential-cognitive-load.md)** |  | Hypothesis that implementation time grows exponentially with the number of discontinuities in a changeset. |
 | **[Goal-Update Coupling Class (GUC Class)](terminology/entries/goal-update-coupling-class.md)** |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
-| **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
-| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
 | **[Multi-Timescale Stability](terminology/entries/multi-timescale-stability.md)** |  | When adaptive processes operate at N nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs (sketch-level result). |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
