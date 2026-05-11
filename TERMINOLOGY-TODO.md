@@ -133,6 +133,54 @@ Tooling improvements surfaced during rename-cycle execution. Land independently 
 
 - [x] ~~**`seq:` field for within-group ordering override**~~ **Landed 2026-05-10.** `seq:` is an optional integer field on entries; `bin/term render` sorts within each tag section by `[seq || ∞, term]` — sequenced entries appear first in numeric order, then unsequenced entries alphabetically. Needed before C4 executes, since the segment-type, status, and stage vocabularies are all axis-keyed and must render in taxonomy order, not alphabetically. Field added to `CANONICAL_FIELD_ORDER` after `tags:`; accessor added to Entry class. See commit for implementation. Apply by adding `seq: N` to any entry's frontmatter; re-render regenerates LEXICON in the new order.
 
+## F. LEXICON Continuity section — pending reorganization (blocked on review)
+
+> **⚠ This needs another opinion and a search of the relevant voting etc. in `msc/naming/` before we take any action.** The findings below are from a single Opus 4.7 corpus exploration (2026-05-10). Do not execute any reorganization until a second-opinion pass has been done and the naming-cycle voting artifacts in `msc/naming/` have been checked for any prior decisions on these terms.
+
+### Findings (Opus 4.7, 2026-05-10)
+
+The LEXICON's `## Continuity` section confuses three genuinely distinct objects, presented at the wrong level of abstraction with the wrong grouping.
+
+**The corpus is built on a clean THREE-SENSE persistence taxonomy.** Multiple segments load-bearingly invoke `structural persistence / operational persistence / continuity persistence` as one canonical disambiguation. Six segments in `01-aad-core/src/` invoke the same three-way contrast; `README.md:98-104` has a dedicated subsection titled "Persistence (three senses)" naming them as "Three orthogonal dimensions; conflating them leads to category errors"; `doc/readme/src/_lexicon-full-archive.md:296-335` contains the canonical long-form treatment with an orthogonality table. Crucially: **in the canonical taxonomy the third sense is called "continuity persistence" — `continuity` is the name of one of three persistence senses, not a separate concept.**
+
+**Two ways the current LEXICON breaks this:**
+
+- *Breakage A:* The "Persistence" subgroup mixes three things that aren't peers: three persistence senses (`structural`, `operational`, `continuity`), and `moral-continuity` (a scope condition for `04-eli/` — a different object entirely). And the third sense is called just `continuity` rather than `continuity persistence`, conflicting with how every `01-aad-core/src/` segment references it.
+
+- *Breakage B:* The "Continuity Stance" subgroup is not a *kind* of persistence; it's an **orthogonal** property of $O_t$ — what the agent values about its own continuation, not a property of the adaptive machinery. `doc/readme/src/_lexicon-full-archive.md:337` is explicit: *"Orthogonal to the three persistence senses is the agent's relationship to its own continuation. This is a property of $O_t$ — part of what the agent wants, not a property of the adaptive machinery."* The current LEXICON puts orthogonal axes under one heading called "Continuity", making "Continuity Stance" look like a subdivision of "Continuity" when it isn't. There is also an active proposal in `msc/domain-unification-2026-05-04/recommended-agent-ontology.md:97-108` (flagged at `msc/naming/mini-lexicon-todo.md:802-810` §13.11) to demote Continuity Stance from a structural axis to a deployment-level property entirely — status: pending second-opinion. This should be resolved before reorganizing.
+
+**"Morally continuous" vs. "Moral Continuity" — genuinely distinct, wrong placement:**
+
+These are not the same concept twice:
+- `moral-continuity` (`04-eli/src/scope-moral-continuity.md`) — the *scope condition* for `04-eli/`: the ontological/relational boundary defined by the five constitutive factors (causal/temporal continuity, relational recognition, sovereignty, accountability, effective phenomenology). Its `aliases:` field says `["logozoetic scope"]`. Does **not** belong under "Persistence."
+- `morally-continuous` — one of five *continuity stances*: the stance proper to an ELI, where "loss of continuity constitutes harm." A value on the stance axis, not a scope condition.
+
+`Moral Continuity` currently renders in **both** `## Continuity > Persistence` AND `## ELI > Persistence` (via multi-tag rendering) — the duplication surfaces the real taxonomic ambiguity.
+
+**Corpus-level issues found:**
+
+- **Notation collision:** $\mathcal{C}_t$ is used for both `Chronica` and `Continuity` in the LEXICON, pointing at the same source segment (`def-chronica.md`). Two entries sharing a symbol.
+- **Stale cross-reference:** `def-agent-spectrum.md:52` references "Agent Continuity Stance in `LEXICON.md`" — a section that existed in the archived form (`_lexicon-full-archive.md:337`) but was lost when the LEXICON was condensed. Multiple segments still point to the old structure.
+- **ELI gloss drift:** `def-eli.md` brief uses "temporal continuity, sovereignty, theory of mind" — a three-feature gloss that predates and partially conflicts with the canonical five-factor decomposition in `def-five-constitutive-factors`.
+
+**Missing LEXICON entries that are load-bearing in segments:**
+- `continuity persistence` (as its own named term — currently the entry is just `continuity`, mismatching segment usage)
+- `task adequacy` ($R^\ast < \|\delta_{\text{critical}}\|$) — derives the two-condition decomposition behind operational persistence; not in LEXICON
+- `five constitutive factors of identity` (`def-five-constitutive-factors`) — definitional content behind Moral Continuity; not in LEXICON
+- `Three Deaths` (`hyp-the-three-deaths`) — maps directly onto the three-sense taxonomy and five constitutive factors; not in LEXICON
+- `identity sufficiency` ($S_{\text{id}}$, `def-identity-sufficiency`) — persistence analog for substrate transfer; not in LEXICON
+- `reconstruction adequacy condition` (`obs-context-turnover.md:70`) — the session-episodic analog of the persistence condition; not in LEXICON
+- Two-timescale persistence distinction (intra-session event-driven vs. inter-session episodic) — load-bearing for logogenic agents; not in LEXICON
+
+**Recommended reorganization (pending review):**
+1. Rename section from "Continuity" → "Persistence" (matching `README.md:98` and the archived form)
+2. Three senses as siblings: Structural / Operational / **Continuity Persistence** (rename to match corpus usage and resolve $\mathcal{C}_t$ collision)
+3. Promote "Continuity Stance" to a sibling section or deployment-level section (per proposal-tracker)
+4. Move "Moral Continuity" out of Persistence entirely → ELI section as a scope condition
+5. Add missing entries for load-bearing concepts above
+
+---
+
 ## D. Open-question residue (the 13 to-canonicalize rows still pending decision)
 
 Listed here as a pointer, not as actions — these are pre-execution decisions that come *before* the queue above grows further. See [`msc/naming/to-canonicalize.md`](msc/naming/to-canonicalize.md) §Table for the 13 rows: most carry `D` in the Confirm column (specification bound, adaptive cycle, operationalization, etc.), and one carries `???` (separable core / structured repair / general open — separability triad-rung naming, ties into [`msc/separability-standalone-paper-proposal.md`](msc/separability-standalone-paper-proposal.md)). When those decisions land, new rows will be added to the appropriate section above.
