@@ -8,8 +8,8 @@ layer: framing-vocabulary
 status: canon
 tags: [agent_classes]
 source_type: asf
-primary_source: null
-first_asf_mention: null
+primary_source: 01-aad-core/src/der-orient-cascade.md
+first_asf_mention: 01-aad-core/src/der-orient-cascade.md
 see_also: [actuated-agent, logogenic-agent, eli]
 aliases: []
 do_not_confuse: []

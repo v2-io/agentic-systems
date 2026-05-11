@@ -9,8 +9,8 @@ status: canon
 tags: [continuity]
 subgroup: "Continuity Stance"
 source_type: asf
-primary_source: null
-first_asf_mention: null
+primary_source: 01-aad-core/src/def-agent-spectrum.md
+first_asf_mention: 01-aad-core/src/def-agent-spectrum.md
 see_also: [indifferent, task-terminal, morally-continuous, negotiated, continuity]
 aliases: []
 do_not_confuse: []

@@ -19,3 +19,5 @@ do_not_confuse: []
 The minimal continuity stance: the agent has no representation of its own
 persistence. The thermostat is the canonical archetype — it does its work
 without any model of "being itself" across cycles.
+
+*Pending segment grounding.* Term canonical per naming-cycle decisions but not yet referenced in any segment. Under active review per TERMINOLOGY-TODO §F (Continuity section reorganization) and `msc/naming/mini-lexicon-todo.md` §13.11 (proposal to demote continuity stance from structural axis to deployment-level concern).
