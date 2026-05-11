@@ -9,8 +9,8 @@ status: canon
 tags: [continuity]
 subgroup: "Continuity Stance"
 source_type: asf
-primary_source: null
-first_asf_mention: null
+primary_source: 01-aad-core/src/disc-continuity-stance.md
+first_asf_mention: 01-aad-core/src/disc-continuity-stance.md
 see_also: [indifferent, task-terminal, instrumentally-continuous, morally-continuous, continuity]
 aliases: []
 do_not_confuse: []
