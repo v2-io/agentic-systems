@@ -3,19 +3,16 @@ slug: der-class-coercion-via-wrapping
 type: derived
 status: conditional
 depends:
-  - form-composition-closure
   - der-directed-separation
-  - hyp-directed-separation-under-composition
   - def-agent-environment
-  - deriv-sector-condition
-  - result-sector-persistence-template
-  - der-tempo-composition
 stage: draft
 ---
 
 # Derived: Class Coercion via Wrapping
 
 A Class 2 (Partial) or Class 3 (Coupled) component (one whose forward pass entangles belief-update and goal-conditioning) can be embedded inside an external scaffold whose state $X_W = (M_W, G_W)$ is updated by structurally distinct query channels: **goal-blind queries** to the component update $M_W$; **goal-conditioned queries** update $G_W$. Under stated conditions on the component, directed separation holds at the wrapper level by construction, and the composite system is Class 1 (Separated) — even though the underlying component is not. This is the constructive direction of `#hyp-directed-separation-under-composition` for the wrapper-around-component special case: a procedure for *making* directed separation hold when the underlying component does not provide it.
+
+This segment establishes the directed-separation claim. The companion segment `#der-class-coercion-in-composition` establishes that the wrapped system is also a valid AAD composite agent (satisfying (A1)–(A4) of `#form-composition-closure`) and inherits the sector-persistence and tempo-composition machinery at the wrapper level.
 
 ## Formal Expression
 
@@ -53,37 +50,25 @@ $$P(A(q_M) \mid q_M, G_W) = P(A(q_M) \mid q_M) \quad \forall\, q_M, G_W$$
 
 For pretrained components (notably LLMs), (C3) holds *exactly* only when query content is statistically independent of $G_W$ in the pretraining distribution. The approximate form weakens (C3) to a leakage bound (Theorem 2 below).
 
-### Wrapper-design constraints
+### Theorem 1: Directed separation at the wrapper level (exact form)
 
-For (A2)–(A4) of `#form-composition-closure` to hold at the wrapper level:
+*[Derived (directed-separation-at-wrapper-exact, from C1+C2+C3)]*
 
-- **(D-A2)** The wrapper commits to a prediction map $\hat o_W : \mathcal X_M \times \mathcal A_W \to \mathcal O_W$ so that macro-mismatch $\delta_W = o_W - \hat o_W$ is well-defined.
-- **(D-A3)** $f_M$ supports a gain interpretation per `#def-adaptive-tempo`. Holds for Tier-1 belief-update maps — Bayesian on exponential families, gradient on strongly convex losses, linear-PD with bounded gain. Tier-2/3 cases inherit the corresponding tier-restricted scope from `#deriv-sector-condition`.
-- **(D-A4)** $f_M$ satisfies the sector condition with positive correction rate. Automatic for Tier-1 belief-update maps via `#deriv-sector-condition` Prop A.1 and `#der-gain-sector-bridge`.
-
-(A1) holds by construction — $X_W = (M_W, G_W)$ has the AAD form because we *built it in*.
-
-### Theorem 1: Class coercion (exact form)
-
-*[Derived (class-coercion-exact, from C1+C2+C3 + D-A2/A3/A4)]*
-
-Under (C1)–(C3) and (D-A2)–(D-A4), the wrapper $W$ satisfies (A1)–(A4) of `#form-composition-closure` at the wrapper level, and directed separation holds *exactly*:
+Under (C1)–(C3), directed separation holds *exactly* at the wrapper level:
 
 $$P(M_{W,m+1} \mid M_{W,m},\ o_{W,m+1},\ G_{W,m}) = P(M_{W,m+1} \mid M_{W,m},\ o_{W,m+1})$$
 
 Therefore $W$ is a Class 1 (Separated) architecture per `#der-directed-separation`.
 
-*Proof.* (A1) by construction of the type signatures. (A2)–(A4) under (D-A2)–(D-A4) by direct verification using the inheritance from `#deriv-sector-condition` and `#def-adaptive-tempo`.
-
-For directed separation: identify all paths from $G_{W,m}$ to $M_{W,m+1}$ given $(M_{W,m}, o_{W,m+1})$. The update is
+*Proof.* Identify all paths from $G_{W,m}$ to $M_{W,m+1}$ given $(M_{W,m}, o_{W,m+1})$. The update is
 
 $$M_{W,m+1} = f_M\big(M_{W,m},\, o_{W,m+1},\, q_M(M_{W,m}, o_{W,m+1}),\, A(q_M(M_{W,m}, o_{W,m+1}))\big)$$
 
 $f_M$ has no $G_W$ argument by type signature (D-pathway-1 closed). $q_M$ has no $G_W$ argument by type signature (D-pathway-2 closed). The remaining pathway is $A(q_M)$ depending on $G_W$ given $q_M$. Under (C3), $P(A(q_M) \mid q_M, G_W) = P(A(q_M) \mid q_M)$ — the response is conditionally independent of $G_W$ given $q_M$. Since $q_M$ is itself a deterministic function of $(M_{W,m}, o_{W,m+1})$, conditioning on $(M_{W,m}, o_{W,m+1})$ determines $q_M$, and the integrand $P(M_{W,m+1} \mid M_{W,m}, o_{W,m+1}, q_M, A(q_M)) \cdot P(A(q_M) \mid q_M, G_W)$ no longer depends on $G_W$. The conditional distribution of $M_{W,m+1}$ given $(M_{W,m}, o_{W,m+1}, G_{W,m})$ equals that given $(M_{W,m}, o_{W,m+1})$. ∎
 
-### Theorem 2: Class coercion (approximate form, C3 weakened to leakage bound)
+### Theorem 2: Directed separation (approximate form, C3 weakened to leakage bound)
 
-*[Derived (class-coercion-approximate, from C1+C2+leakage-bound)]*
+*[Derived (directed-separation-at-wrapper-approximate, from C1+C2+leakage-bound)]*
 
 If (C3) is replaced by a KL-leakage bound
 
@@ -111,7 +96,7 @@ The W₀ / W₂ / W₁ distinction refines the Class 1 (Separated) cell of `#der
 
 ## Epistemic Status
 
-*Conditional* on (C1), (C2), (C3) (or its weakening to a leakage bound), and the wrapper-design constraints (D-A2), (D-A3), (D-A4). The proofs are short conditional-independence reasoning (Theorem 1) and a single application of the data-processing inequality (Theorem 2); both are standard. (D-A4) is automatic for Tier-1 belief-update maps; for Tier-2/3 belief-update maps the wrapper inherits the tier-restricted scope from `#deriv-sector-condition` and `#form-composition-closure`'s bridge-lemma classification.
+*Conditional* on (C1), (C2), and (C3) (or its weakening to a leakage bound). The proofs are short conditional-independence reasoning (Theorem 1) and a single application of the data-processing inequality (Theorem 2); both are standard.
 
 Max attainable: derived under stated conditions. (C3)'s exact form is a structural ideal that pretrained components (notably LLMs with goal-rich training data) generally satisfy only approximately; the realistic regime is Theorem 2 with $\kappa$ characterized empirically.
 
@@ -123,38 +108,13 @@ The wrapping regime hierarchy (W₀/W₂/W₁) is a *formulation* — the partit
 
 For Class-B components (admitting both goal-blind and goal-conditioned modes), the wrapper has a design choice: how aggressively to restrict $q_M$ to goal-blind content, vs. how much context to allow that may carry goal-correlated information. Maximally goal-blind queries (only the current observation, no context, no history) reduce the pretraining-induced leakage that bounds $\kappa_{W_1}$, but may produce information-poor responses that hurt $f_M$'s update quality. Maximally informed queries (full history, retrieved context) produce richer responses but increase the mutual information $I(q_M; G_W)$ and therefore the upper bound on $\kappa_{W_1}$. The tradeoff is real and resolved per application.
 
-### Coercion-distance vs. tracking-distance
-
-The closure-defect $\varepsilon^\ast$ in `#form-composition-closure` is read as a *fidelity* measure: how well the macro-system tracks the projected micro-system. In the wrapping construction, the wrapper deliberately changes the underlying component's behavior to enforce separation — we *want* the wrapper to differ from the unwrapped component in the goal-conditioning direction. Two distinct quantities are involved:
-
-- $\varepsilon^\ast_{\text{track}}$ — the standard fidelity quantity from `#form-composition-closure`. Used in the bridge lemma to bound trajectory error.
-- $\varepsilon^\ast_{\text{coerce}}$ — the wrapping-specific quantity measuring behavioral divergence between the wrapped system and the unwrapped component. Higher means more aggressive coercion.
-
-For wrapper analyses: the persistence-template inheritance (below) uses $\varepsilon^\ast_{\text{track}}$. Cost-of-class-coercion analyses use $\varepsilon^\ast_{\text{coerce}}$. The leakage analysis uses $\kappa$ — a KL-divergence on response distributions, distinct from both trajectory-error quantities. Conflating them propagates downstream confusion.
-
-### Tempo cost — a Brooks's-Law instance
-
-The wrapper makes $K \geq 2$ component calls per macro-step (more in richer wrapper designs). If the component's nominal call rate is $\nu_A$, the wrapper-level macro-update rate is $\nu_W = \nu_A / K$. By `#der-tempo-composition`,
-
-$$\mathcal T_W \leq \mathcal T_A^\text{nominal} - C_\text{coord}^\text{wrap}$$
-
-where $C_\text{coord}^\text{wrap}$ is the coordination overhead specific to the wrapping construction — the tempo consumed by maintaining the wrapper's $(M_W, G_W)$ state separately from the component's internal state. This is the cost of class coercion paid in tempo: the same Brooks's-Law form whose general statement is in `#der-tempo-composition`. Adding state-management infrastructure reduces realized external tempo even when the underlying component's compute rate is unchanged.
-
-### Inheritance of the persistence template
-
-Under (D-A4), the wrapper inherits `#result-sector-persistence-template` at the wrapper level: persistence holds when $\alpha_W R_W \gt \rho_W$. The wrapper-level effective disturbance has two contributions: external environmental disturbance $\rho_\text{ext}$ acting through $o_W$, and internal disturbance from the component's response variance, $\rho_\text{int}$, bounded by the variance of $A$'s responses to goal-blind queries. Total: $\rho_W = \rho_\text{ext} + \rho_\text{int}$. Persistence at the wrapper level requires $\alpha_W R_W \gt \rho_\text{ext} + \rho_\text{int}$.
-
-### Form-preservation reading
-
-Read in form-preservation language, (A1)–(A4) of `#form-composition-closure` are the requirement that AAD's form survive coarse-graining: macro must itself be AAD. The wrapping construction is the *constructive* version — when the underlying component doesn't preserve form on its own (Class 2 (Partial) or Class 3 (Coupled)), the wrapper enforces form-preservation at the macro level by structural commitment of the type signatures. The closure-defect $\varepsilon^\ast$ then plays the role of distance from the form-preserved fixed point in the constructive setup.
-
 ### Component-admissibility partition
 
 Class A components (goal-blind by design) satisfy (C1) trivially and don't need wrapping in the substantive sense — wrapping for Class A is organizational rather than structural. Class B components (LLMs, hybrid RL with separable value/policy, multi-modal models) are the substantive wrapping case — the wrapper *chooses* to use the goal-blind mode. Class C components (pure end-to-end goal-conditioned policy networks) fail (C1) and are scope-out for the basic theorem. Salvage paths for Class C — null-goal queries, goal-uniform averaging, auxiliary distilled goal-blind heads — exist but cost something (information loss, computation, training).
 
 ### Resolution of the LLM scope question
 
-The "Class 3 (Coupled) exit" framing — *directed separation violated by goal-conditioned agents (LLMs); handled as architectural scope, not approximation* — is refined by this segment from a scope exit to a constructive route through. Class 3 (Coupled) LLMs are scope-in *for the wrapper construction* (under Class-B admissibility). The cost is paid in tempo (Brooks's-Law form), in residual coercion-distance, and in a structural leakage rate $\kappa_{W_1}$ bounded by pretraining-distribution mutual information. Whether this construction yields an operationally useful agent depends on how favorable the pretraining-distribution-induced bounds are for the application.
+The "Class 3 (Coupled) exit" framing — *directed separation violated by goal-conditioned agents (LLMs); handled as architectural scope, not approximation* — is refined by this segment from a scope exit to a constructive route through. Class 3 (Coupled) LLMs are scope-in *for the wrapper construction* (under Class-B admissibility). The cost is paid in residual leakage rate $\kappa_{W_1}$ bounded by pretraining-distribution mutual information; the tempo cost is established separately in `#der-class-coercion-in-composition`. Whether this construction yields an operationally useful agent depends on how favorable the pretraining-distribution-induced bounds are for the application.
 
 ### Relationship to `#hyp-directed-separation-under-composition`
 
@@ -162,13 +122,13 @@ The hypothesis is descriptive — when does directed separation hold under compo
 
 ## Findings
 
-### Constructive Class Coercion via Wrapping
+### Constructive Directed Separation via Wrapping
 
-**Brief:** When you have a component (like an LLM) whose belief-update and goal-conditioning are entangled in a single forward pass, you can build a scaffold around it that maintains explicit, separate stores for what the system believes and what it wants. The structural rule is that belief updates only see queries to the component that don't include the goal as input; goal updates can see the goal. Under reasonable conditions on the component, the wrapped system is goal-blind in its belief updates *by construction* — even though the underlying component isn't. The cost shows up as more component calls per cycle (so the wrapped system runs slower) and a residual leakage from the component's pretraining (the component might still infer the goal from query content, even when the goal isn't explicit in the input). Two practical regimes appear: strict wrapping with separate goal-blind and goal-conditioned calls (theoretically clean, operationally expensive), and partial wrapping with one goal-conditioned call whose response is parsed into separate update fields (operationally common, theoretically only behaviorally bounded).
+**Brief:** When you have a component (like an LLM) whose belief-update and goal-conditioning are entangled in a single forward pass, you can build a scaffold around it that maintains explicit, separate stores for what the system believes and what it wants. The structural rule is that belief updates only see queries to the component that don't include the goal as input. Under reasonable conditions on the component, the wrapped system is goal-blind in its belief updates *by construction* — even though the underlying component isn't. The cost shows up as a residual leakage from the component's pretraining (the component might still infer the goal from query content, even when the goal isn't explicit in the input). Two practical regimes appear: strict wrapping with separate goal-blind and goal-conditioned calls (theoretically clean, with a structural leakage bound), and partial wrapping with one goal-conditioned call whose response is parsed into separate update fields (operationally common, with only a behavioral leakage bound — depending on the component's instruction-following fidelity rather than its query structure).
 
-**Impact:** Promotes `#hyp-directed-separation-under-composition` to derived (in the wrapper-around-component special case). Refines the Class 1 (Separated) cell of `#der-directed-separation` with a structural-vs-behavioral sub-distinction (W₁ vs. W₂). Resolves the LLM scope question — Class 3 (Coupled) components are scope-in for the wrapper construction at a measurable cost, not scope-out. Connects Section I/II's modular-agent machinery to logogenic-substrate work in `03-logogenic-agents/` cleanly: PROPRIUM's auxilia hierarchy is the candidate constructive realization of W₁, and the agentic-tft cognitive-loop-spec's CONTEXTUALIZE-then-CHOOSE phase separation is the temporally-staged form. Inherits `#result-sector-persistence-template` and `#der-tempo-composition` at the wrapper level — the wrapper's persistence and tempo are governed by AAD's existing machinery, with the cost of class coercion paid in the Brooks's-Law tempo overhead.
+**Impact:** Promotes `#hyp-directed-separation-under-composition` to derived (in the wrapper-around-component special case). Refines the Class 1 (Separated) cell of `#der-directed-separation` with a structural-vs-behavioral sub-distinction (W₁ vs. W₂). Resolves the LLM scope question — Class 3 (Coupled) components are scope-in for the wrapper construction at a measurable cost, not scope-out. The composition-level consequences (wrapper as valid AAD composite agent, persistence-template inheritance, tempo cost) are derived in the companion segment `#der-class-coercion-in-composition`.
 
-**Novelty Claim:** *Claim integration* of POMDP / cognitive-architecture / MDP-homomorphism prior art with the AAD machinery (sector-Lyapunov persistence template, Brooks's-Law tempo accounting, Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy) plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions. The wrapping move itself is rediscovery of patterns established in POMDP theory (Bayesian belief-update is goal-blind by construction) and cognitive architectures (modular agent design with separated belief/goal/action state, four decades). AAD's contribution is the synthesis with its own machinery and the explicit regime hierarchy.
+**Novelty Claim:** *Claim integration* of POMDP / cognitive-architecture prior art with the AAD Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy, plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions. The wrapping move itself is rediscovery of patterns established in POMDP theory (Bayesian belief-update is goal-blind by construction) and cognitive architectures (modular agent design with separated belief/goal/action state, four decades). AAD's contribution is the structural-leakage analysis at the directed-separation level and the regime hierarchy that names where the separation guarantee lives.
 
 **Related Work:**
 
@@ -176,26 +136,19 @@ The hypothesis is descriptive — when does directed separation hold under compo
 |---|---|---|
 | Goal-blind belief-update by construction | Astrom 1965, "Optimal control of Markov processes with incomplete state information," *J. Math. Anal. Appl.* 10; Kaelbling, Littman, Cassandra 1998, "Planning and acting in partially observable stochastic domains," *Artificial Intelligence* 101 | *formal antecedent* — POMDP belief-state filters are goal-blind by construction; the wrapping move recapitulates this in the AAD vocabulary. The closest formal prior art for the directed-separation guarantee. |
 | Modular agent design with separated belief/goal/action | Newell 1990, *Unified Theories of Cognition*; Laird 2012, *The Soar Cognitive Architecture*; Anderson 2007, *How Can the Human Mind Occur in the Physical Universe?*; Sun 2016 *Anatomy of the Mind* (CLARION); Baars 1988 *A Cognitive Theory of Consciousness* / Dehaene 2014 *Consciousness and the Brain* (Global Workspace) | *formal antecedent* — cognitive architectures have done modular agent design with separated belief/goal/action state for 40+ years. The W₁ wrapping move is essentially the per-cycle commitment that cognitive architectures make at the system level. |
-| Predictive-loss bounds under coarse-graining of MDPs | Ravindran-Barto 2004, "An algebraic approach to abstraction in reinforcement learning"; Taylor, Precup, Panangaden 2008, "Bounding performance loss in approximate MDP homomorphisms," NeurIPS; Abel, Hershkowitz, Littman 2016, "Near optimal behavior via approximate state abstraction," ICML; Subramanian, Sinha, Seraj, Mahajan 2020, "Approximate information state for approximate planning," arXiv:2010.08843; Congeduti, Mey, Oliehoek 2020, "Loss bounds for approximate influence-based abstraction," arXiv:2011.01788 | *adjacent literature* — control-theoretic predictive-loss bounds. AAD connects to this cluster via `#form-composition-closure`'s bridge lemma at the wrapper level. |
-| Compositional structure for nested agents | Smithe 2024, "Structured Active Inference," arXiv:2406.07577; Capucci, Gavranović, Hedges, Rischel 2022, "Towards foundations of categorical cybernetics," ACT 2021 | *adjacent literature* — categorical / lens framing of compositional agents. The wrapper construction is consistent with the lens framing; an alternative reading in categorical-systems-theory terms is available. |
-| Form-preservation under coarse-graining | Friston 2019 *J. Theor. Biol.*, "On Markov blankets and hierarchical self-organisation"; Friston, Heins, Verbelen, Da Costa et al. 2025 *Front. Network Physiology*, "From pixels to planning: scale-free active inference" | *adjacent literature* — Friston's framing of the renormalization group as form-conservation under coarse-graining. The wrapping construction reads as a constructive form-preservation move. |
-| IB-Lagrangian semigroup composition | Mehta, Schwab 2014, "An exact mapping between the Variational Renormalization Group and Deep Learning," arXiv:1410.3831; Kline, Palmer 2022, "Gaussian Information Bottleneck and the Non-Perturbative Renormalization Group," PMC8967309 | *adjacent literature* — IB-as-RG. The wrapper's (P1) information-preservation condition (from `#form-composition-closure`) is IB-shaped; the semigroup composition rule is the closest analog of "AAD form preserved under iterated wrapping." |
-| Singular-perturbation as unified RG | Chen, Goldenfeld, Oono 1996, "Renormalization group and singular perturbations," *Phys. Rev. E* 54:376; Chiba 2009, SIAM J. Appl. Dyn. Syst. 8:1066 | *formal antecedent* — RG framework subsumes singular perturbation theory. The $K_c \gg 1$ timescale-separation regime in `#form-composition-closure` invokes this for free. |
 | Tool-using language-model agent frameworks | Yao et al. 2022, "ReAct: Synergizing reasoning and acting in language models"; Shinn et al. 2023, "Reflexion: language agents with verbal reinforcement learning"; Park et al. 2023, "Generative Agents: Interactive Simulacra of Human Behavior"; Packer et al. 2023, "MemGPT: Towards LLMs as operating systems"; Schick et al. 2023, "Toolformer: language models can teach themselves to use tools" | *empirical instantiation* — practical wrappers around language-model substrates. Most fall in W₂ (partial wrapping / output-structuring); Generative Agents' observation→memory step is the closest empirical instance of W₁. AAD's regime hierarchy gives these constructions a structural reading. |
 
 **Search Log:**
 
-- 2026-05-09 (*targeted*): Web + training-data search across POMDP / cognitive-architecture / MDP-homomorphism / hierarchical-control / Constitutional-AI / categorical-systems-theory / scaffolded-LLM / FEP-RG / IB-RG / singular-perturbation-RG threads. Verdict: **substantial overlap** with the POMDP and cognitive-architecture lines as the closest formal prior art. AAD's contribution is integration with its own machinery rather than novelty in the wrapping move itself.
-- 2026-05-09 (*intuition-only*, prior to the targeted search): adjacent literatures expected to host prior art were active inference (Markov blankets), control theory (approximate simulation), and scaffolded-LLM frameworks. The targeted search confirmed all three and added the POMDP and cognitive-architecture lines as the formal precedents the intuition didn't surface as load-bearing.
+- 2026-05-09 (*targeted*): Web + training-data search across POMDP / cognitive-architecture / scaffolded-LLM threads. Verdict: **substantial overlap** with the POMDP and cognitive-architecture lines as the closest formal prior art. AAD's contribution is the structural-leakage analysis and regime hierarchy rather than novelty in the wrapping move itself.
+- 2026-05-09 (*intuition-only*, prior to the targeted search): adjacent literatures expected to host prior art were active inference (Markov blankets), control theory (approximate simulation), and scaffolded-LLM frameworks. The targeted search confirmed all three and added the POMDP and cognitive-architecture lines as the formal precedents.
 
 ## Working Notes
 
-- **Detailed tempo accounting for canonical wrapper architectures.** $C_\text{coord}^\text{wrap}$ for ReAct-shape, Reflexion-shape, PROPRIUM-shape wrappers is an empirically-relevant computation deferred from this segment's promotion. The general bound (Brooks's-Law form via `#der-tempo-composition`) is established here; specific architectural breakdowns are follow-on.
 - **Empirical $\kappa$ measurement.** $\kappa_{W_1} \le I(A(q_M); G_W \mid q_M)$ is computable for any component with stochastic outputs by sampling responses under multiple goal-conditioning histories and estimating the divergence. For a fixed component, this bound is a property of the wrapper's choice of $q_M$ — narrower queries reduce the bound, richer queries increase it. The empirical instantiation is open follow-on.
 - **Compositional wrapping (wrapper-of-wrapper).** How leakage rates compose under iterated wrapping is open. Conjecture: additive in KL ($\kappa_{\text{outer}} \le \kappa_{\text{inner}} + \kappa_{\text{outer-shell}}$) by data-processing inequality applied at each level, but tightness is unclear.
 - **Behavioral compliance axiom for W₂.** $\kappa_{W_2}$ has no structural bound; it depends on the component's instruction-following fidelity. Whether a behavioral-compliance axiom (assuming the component honestly attempts to follow structural-separation instructions) yields a bound is an open hypothesis. If so, it would be hypothesis-grade rather than derived.
 - **Identifying the regime in the wild.** Practical scaffolded-LLM frameworks (ReAct, Reflexion, MemGPT, etc.) almost universally implement W₂. Distinguishing W₂ from W₁ in a deployed system requires inspection of the per-cycle query structure — does $f_M$'s update path receive a query that contains $G_W$ or not? This is the diagnostic question.
-- **Connection to ELI-specific structure in `04-eli/`.** Most ELI-specific content (sovereignty axes, accountability infrastructure, identity factors, substrate-independence) is *added structure* beyond what class coercion provides — the wrapper construction is the substrate; ELI work is what happens on top of it.
-- Reasoning-trail provenance: spike directories at `spikes/class-coercion-wrapping/` and `spikes/temporal-nesting-rg/` carry the working-out of these results and the form-preservation framing context. Per `feedback_spike_references_only_in_working_notes.md`, this Working Notes pointer is the only spike reference; the segment's substantive content is self-contained.
-
-- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Three independent axes in this segment: (a) GUC Class 1/2/3 — renamed and swapped; (b) W₀/W₁/W₂ wrapping regimes — UNCHANGED (subscript numerals are regime identifiers, not GUC class labels); (c) Class A/B/C component-admissibility partition — UNCHANGED (admissibility-class letters are from the (C1) condition, not GUC class labels). The W₀ row "Raw Class-3 component" (old vocab) → "Raw Class 2 (Partial) or Class 3 (Coupled) component" — expanded to cover the full union since old vocab was ambiguous here. "Class 2 exit" → "Class 3 (Coupled) exit"; "Class-3 LLMs" (old vocab, was internally inconsistent since LLMs are fully merged) → "Class 3 (Coupled) LLMs" (post-rename is now semantically correct). Removed at `candidate` stage per FORMAT.md Gate 4.
+- **Segment split provenance (2026-05-11).** This segment was bifurcated from a combined "class coercion" derivation. Claim A (directed separation at the wrapper level) lives here; Claim B (wrapper as valid AAD composite agent — (A1)–(A4) verification, persistence-template inheritance, Brooks's-Law tempo cost) lives in `#der-class-coercion-in-composition` (which declares this segment as prerequisite). The split reflects FORMAT.md Gate 1 discipline: this segment's depends list (`der-directed-separation`, `def-agent-environment`) reflects exactly what the directed-separation theorem actually requires. The composition-level dependencies (`form-composition-closure`, `deriv-sector-condition`, `result-sector-persistence-template`, `der-tempo-composition`) are Claim B's load and now live with Claim B.
+- Reasoning-trail provenance: spike directories at `spikes/class-coercion-wrapping/` and `spikes/temporal-nesting-rg/` carry the working-out of these results.
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Three independent axes in this segment: (a) GUC Class 1/2/3 — renamed and swapped; (b) W₀/W₁/W₂ wrapping regimes — UNCHANGED; (c) Class A/B/C component-admissibility partition — UNCHANGED.

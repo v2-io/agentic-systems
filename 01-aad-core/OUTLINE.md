@@ -143,6 +143,7 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 | III | Sketch | | [#der-tempo-composition](src/der-tempo-composition.md) | Sub-additive tempo inequality | draft |
 | III | Hypothesis | | [#hyp-directed-separation-under-composition](src/hyp-directed-separation-under-composition.md) | Goal-blindness survives iff routing is goal-blind (two cases) | draft |
 | III | Derived | | [#der-class-coercion-via-wrapping](src/der-class-coercion-via-wrapping.md) | Constructive route from Class 2 (Partial)/Class 3 (Coupled) component to Class 1 (Separated) composite via external scaffold; W₀/W₂/W₁ regime hierarchy with structural-vs-behavioral leakage bounds | draft |
+| III | Derived | | [#der-class-coercion-in-composition](src/der-class-coercion-in-composition.md) | Wrapped system as valid AAD composite agent: (A1)-(A4) of form-composition-closure verified under wrapper-design constraints (D-A2)-(D-A4); inherits sector-persistence-template at wrapper level; Brooks's-Law tempo cost via der-tempo-composition. Prerequisite: der-class-coercion-via-wrapping | draft |
 | III | Discussion | | [#def-unity-dimensions](src/def-unity-dimensions.md) | 4 dimensions of coherence | draft |
 | III | Result | | [#result-unity-closure-mapping](src/result-unity-closure-mapping.md) | Unity parametrizes rate-distortion curves for closure defect; two-axis structure with update heterogeneity | draft |
 | III | Definition + Discussion | | [#def-shared-intent](src/def-shared-intent.md) | IB-compressed purpose | draft |

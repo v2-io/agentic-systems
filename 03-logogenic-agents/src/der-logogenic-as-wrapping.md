@@ -4,6 +4,7 @@ type: derived
 status: conditional
 depends:
   - der-class-coercion-via-wrapping
+  - der-class-coercion-in-composition
   - def-coupled-update-dynamics
   - scope-logogenic-agent
   - scope-scaffolded-logogenic
