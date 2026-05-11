@@ -220,31 +220,55 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     @variant       = options[:asf_variant] || :public
     @segment_head_emitted = false
     @section_depth = 0
+    @in_working_notes = false
   end
 
   # ── Element converters ────────────────────────────────────────────────
 
   def convert_root(el, opts)
-    inner(el, opts) + segment_close
+    body = inner(el, opts)
+    # Close a still-open working notes box at end of segment (FORMAT
+    # discipline says Working Notes is the trailing section, so the env
+    # remains open through every subsequent paragraph).
+    body += "\\end{workingnotes}\n" if @in_working_notes
+    body + segment_close
   end
 
   # First header in the document is the segment title; subsequent headers
-  # are section subheads inside the segment.
+  # are section subheads inside the segment. The H2 named "Working Notes"
+  # opens the workingnotes environment instead of emitting a normal subhead,
+  # so the rest of the section reads as backgrounded marginalia.
   def convert_header(el, opts)
     title = inner(el, opts).strip
     if !@segment_head_emitted
       @segment_head_emitted = true
-      segment_open(title)
-    else
-      case el.options[:level]
-      when 2
-        "\\segmentsubhead{#{title}}\n\n"
-      when 3
-        # H3 inside a segment — kept lighter than H2 subheads
+      return segment_open(title)
+    end
+
+    # If a new H2 starts while we're inside Working Notes (rare — FORMAT
+    # puts WN last — but possible), close the box first.
+    prefix = ''
+    if @in_working_notes && el.options[:level] <= 2
+      prefix = "\\end{workingnotes}\n\n"
+      @in_working_notes = false
+    end
+
+    if el.options[:level] == 2 && title == 'Working Notes'
+      @in_working_notes = true
+      return "#{prefix}\\begin{workingnotes}\n"
+    end
+
+    case el.options[:level]
+    when 2
+      "#{prefix}\\segmentsubhead{#{title}}\n\n"
+    when 3
+      # H3 bold inline leader — same orphan discipline as the H2 subhead,
+      # just less greedy on the reserved space since it sits inline with
+      # the first sentence of its paragraph.
+      "#{prefix}\\needspace{3\\baselineskip}" \
         "\\par\\medskip\\noindent\\textbf{#{title}.}\\quad "
-      else
-        "\\par\\noindent\\textit{#{title}.}\\quad "
-      end
+    else
+      "#{prefix}\\par\\noindent\\textit{#{title}.}\\quad "
     end
   end
 
@@ -252,19 +276,51 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     "\\eqtag{#{escape_eq_tag(el.value)}}\n"
   end
 
-  # Paragraphs — rewrite #slug cross-refs as we emit text.
+  # Paragraphs — rewrite #slug cross-refs as we emit text. Also detect
+  # "leader paragraphs" — standalone bold ending in `:` like
+  # `**Event-driven update:**` — and treat them as sub-sub-headings so
+  # the orphan policy keeps them with the content that follows.
   def convert_p(el, opts)
+    if leader_paragraph?(el)
+      title = collect_text(el.children.first).chomp(':').rstrip
+      return "\\needspace{4\\baselineskip}\\par\\medskip\\noindent" \
+             "\\textbf{#{process_prose(title)}:}\\par\\nobreak\\smallskip\\nopagebreak[4]\n"
+    end
     rewritten = inner(el, opts)
     "#{rewritten}\n\n"
   end
 
-  # Text nodes — escape LaTeX specials AND rewrite cross-refs in one pass.
-  # Cross-refs come in as `#slug` literal text; rewrite to \cref{seg:slug}
-  # after escaping, so the cref command isn't itself escaped. Any `#` left
-  # after the cross-ref pass is a literal in prose and gets escaped to \#.
+  # A paragraph qualifies as a leader when its sole child is a :strong
+  # element whose text content ends in `:` (the structural signal that
+  # the bold is a label for following content, not an inline emphasis).
+  def leader_paragraph?(el)
+    return false unless el.children.size == 1
+
+    child = el.children.first
+    return false unless child.type == :strong
+
+    collect_text(child).rstrip.end_with?(':')
+  end
+
+  # Recursively collect text-node values from an element's subtree.
+  def collect_text(el)
+    return el.value.to_s if el.type == :text
+
+    el.children.map { |c| collect_text(c) }.join
+  end
+
+  # Text nodes — escape LaTeX specials AND rewrite cross-refs.
   def convert_text(el, _opts)
-    escaped = escape_text(el.value)
-    escaped
+    process_prose(el.value)
+  end
+
+  # Body-text pipeline: LaTeX-escape, rewrite #slug → \cref{seg:slug},
+  # collapse the Obsidian-required space inside `( \cref{...})`, then
+  # escape any literal `#` that survived the cross-ref pass.
+  # Shared by convert_text and by leader-paragraph rendering so all prose
+  # routes through the same rewriting.
+  def process_prose(str)
+    escape_text(str)
       .gsub(CROSS_REF_RE) { "\\cref{seg:#{Regexp.last_match(1)}}" }
       .gsub(COLLAPSE_INNER_SPACE_RE) { "#{Regexp.last_match(1)}#{Regexp.last_match(2)}" }
       .gsub(/(?<!\\)#/, '\\#')

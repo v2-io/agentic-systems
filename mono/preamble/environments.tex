@@ -26,10 +26,22 @@
 \renewcommand{\thesegment}{\Roman{chapter}.\arabic{segment}}
 
 % Internal section subheads — \segmentsubhead{Formal Expression}, etc.
+% Orphan policy: reserve enough vertical space to hold the subhead and a
+% few lines of the section that follows, and discourage a break right
+% after, so "Formal Expression" never lands at page bottom alone.
 \NewDocumentCommand{\segmentsubhead}{m}{%
+  \needspace{5\baselineskip}%
   \par\medskip%
   \noindent{\sffamily\bfseries #1}\par\nobreak\smallskip%
+  \nopagebreak[4]%
 }
+
+% Width that spans body + margin gutter + margin column. kaobook's body
+% column is \textwidth and the margin column sits to its right with
+% \marginparsep gap and \marginparwidth width. We compute the union so
+% segment-header rules read as page-spanning visual separators rather than
+% body-column decorations.
+\newcommand{\segmentrulewidth}{\dimexpr\textwidth+\marginparsep+\marginparwidth\relax}
 
 % Segment opener. Three args:
 %   #1 = type label (string, e.g. "Result", "Derivation")
@@ -39,26 +51,43 @@
 % The third argument is always required; the kramdown emitter passes the
 % empty string when frontmatter has no `status:` set, which suppresses the
 % badge via the IfStrEq below.
+%
+% Title is set large + bold (upright) so it reads with weight comparable
+% to inline body-bold cues like "Lemma 1." or "Proof." — competing with
+% the prose rather than looking decorative.
+%
+% Upper rule is 2.5x thicker and ~black, lower rule stays thin and gray —
+% the asymmetry pulls the eye to the segment opening and lets the closing
+% rule fade to a quiet separator.
+%
+% Orphan/widow policy: \needspace asks for enough vertical space to hold
+% the header + a few lines of the first paragraph; if it's not available,
+% LaTeX breaks the page first and the segment opens on the next page with
+% its body intact. \nopagebreak after the bottom rule discourages a break
+% between header and the paragraph that follows.
 \NewDocumentCommand{\segmenthead}{m m m}{%
+  \needspace{10\baselineskip}%
   \refstepcounter{segment}%
   \par\medskip%
-  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \noindent\rule{\segmentrulewidth}{0.75pt}\par%
   \nobreak\smallskip%
   \noindent%
   {\sffamily\bfseries #1~\thesegment}%
   \IfStrEq{#3}{}{}{\statusbadge{#3}}%
   \nobreak\quad\textcolor{rule-gray}{\textbullet}\quad%
-  {\itshape #2}.%
+  {\large\bfseries #2}.%
   \par\nobreak\smallskip%
-  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \noindent\textcolor{rule-gray}{\rule{\segmentrulewidth}{0.3pt}}\par%
   \nobreak\medskip%
+  \nopagebreak[4]%
 }
 
-% Segment closer.
+% Segment closer — paragraph spacing only; no visible rule. The next
+% segment's opener provides its own top border, so a foot rule would only
+% produce a doubled separator when segments sit back-to-back. A chapter
+% break or page break is enough of a closer for the trailing-segment case.
 \NewDocumentCommand{\segmentfoot}{}{%
   \par\medskip%
-  \noindent\textcolor{rule-gray}{\rule{0.3\linewidth}{0.3pt}}\par%
-  \medskip%
 }
 
 % Stage marker — review-mode only. Surfaces the `stage:` frontmatter field
@@ -72,20 +101,23 @@
 % Missing-segment placeholder — for slugs listed in OUTLINE.md but without
 % a corresponding src/ file. Generates a TOC entry and a visible marker so
 % reviewers see the gap in the rendered output, not just in a sidecar list.
+% Rules are the same full-width treatment as \segmenthead so the visual
+% break is consistent for landed and missing segments.
 \NewDocumentCommand{\missingsegment}{m m m}{%
   % #1 = type label, #2 = slug, #3 = claim text (from the outline table)
+  \needspace{8\baselineskip}%
   \refstepcounter{segment}%
   \par\medskip%
-  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \noindent{\color{status-tentative}\rule{\segmentrulewidth}{0.75pt}}\par%
   \nobreak\smallskip%
   \noindent%
   {\sffamily\bfseries\color{status-tentative} #1~\thesegment}%
   \quad\textcolor{rule-gray}{\textbullet}\quad%
-  {\itshape\color{status-tentative} #3}.%
+  {\large\bfseries\color{status-tentative} #3}.%
   \par\nobreak\smallskip%
   \noindent\emph{Segment \texttt{#2} not yet written.}\par%
   \nobreak\smallskip%
-  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \noindent\textcolor{rule-gray}{\rule{\segmentrulewidth}{0.3pt}}\par%
   \nobreak\medskip%
 }
 
@@ -95,4 +127,42 @@
   \par\medskip%
   \noindent\textcolor{status-tentative}{\textbf{[Gap]}}~\emph{#1}\par%
   \medskip%
+}
+
+% Working Notes — review-mode-only environment for the trailing ## Working
+% Notes section of each segment. Background-tinted box spanning body +
+% margin gutter + margin column (so the notes visibly step out of the main
+% column register), shrunk and dimmed so the eye reads them as process
+% chatter rather than load-bearing prose. The renderer only opens the env
+% if the segment actually has a Working Notes heading, so no empty boxes.
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+
+\definecolor{wn-bg}{HTML}{FAF7E5}  % subtle cream-tinted off-white
+\definecolor{wn-fg}{HTML}{6E6354}  % warm muted gray-brown
+
+% colupper / fontupper carry the text styling as persistent properties of
+% the tcolorbox rather than as inline `\color` / `\small` directives —
+% which is what lets them survive a page break inside a breakable box.
+% (The inline form resets to black when the second tcolorbox fragment
+% begins on the next page, a recurring KOMA + tcolorbox surprise.)
+\NewDocumentEnvironment{workingnotes}{}{%
+  \par\bigskip%
+  \begin{tcolorbox}[
+    enhanced, breakable,
+    width        = \segmentrulewidth,
+    colback      = wn-bg,
+    colframe     = wn-bg,
+    colupper     = wn-fg,
+    fontupper    = \small,
+    boxrule      = 0pt,
+    arc          = 0pt,
+    left         = 12pt, right  = 12pt,
+    top          = 10pt, bottom = 10pt,
+    before skip  = 0pt,  after skip = 0pt,
+  ]%
+  {\sffamily\bfseries Working Notes.}\par\smallskip%
+}{%
+  \end{tcolorbox}%
+  \par\medskip%
 }
