@@ -2,7 +2,7 @@
 slug: prolepsis
 schema_version: 1
 term: prolepsis
-name: Prolepsis
+name: Prolepsis (Πρόληψις) (anticipation)
 notation: "$\\hat{o}_t$"
 brief: "The model's active anticipation: $\\hat{o}_t = \\mathbb{E}[o_t \\mid M_{t-1}, a_{t-1}]$."
 layer: framing-vocabulary

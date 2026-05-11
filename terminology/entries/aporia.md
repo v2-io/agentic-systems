@@ -2,7 +2,7 @@
 slug: aporia
 schema_version: 1
 term: aporia
-name: Aporia
+name: Aporia (Ἀπορία) (productive perplexity)
 brief: Productive perplexity — the third phase of the adaptive cycle.
 layer: framing-vocabulary
 status: canon

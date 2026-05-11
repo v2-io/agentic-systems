@@ -45,13 +45,6 @@ Per-batch terminology entries (no rename, no prose sweep — just the entry). Ea
 
 Each batch below is a natural commit unit. Mark a row landed = remove it; add a CHANGELOG entry for the batch.
 
-### C2. Greek-cycle phase consolidations (5 entries)
-
-[Rationale](msc/naming/naming-rename-plan.md#greek-cycle-phase-consolidations-5-entries).
-
-- [ ] aporia (ἀπορία) (productive perplexity) · epistrophe (ἐπιστροφή) (turning-toward) · aisthesis (αἴσθησις) (perception) · praxis (πρᾶξις) (informed action) · prolepsis (πρόληψις) (anticipation)
-
-  Form: `latinized (greek) (english-translation)`. Capitalization decision deferred; LEXICON entries should reflect that deferral (note in entry, not capitalization-policy choice). The Cycle Phases table in LEXICON already has these in usable shape; this commitment is the affirmation that the form is canonical and the capitalization-decision is the only open question.
 
 ### C3. Canonicalize with nuance flagged — batch 1 (5 entries)
 

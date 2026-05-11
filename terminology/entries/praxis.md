@@ -2,7 +2,7 @@
 slug: praxis
 schema_version: 1
 term: praxis
-name: Praxis
+name: Praxis (Πρᾶξις) (informed action)
 notation: "$a_t$"
 brief: "Informed action — $a_t = \\pi(M_t)$, or $\\pi(M_t, G_t)$ for actuated agents."
 layer: framing-vocabulary

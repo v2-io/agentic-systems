@@ -89,13 +89,13 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Aisthesis](terminology/entries/aisthesis.md)** | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
-| **[Aporia](terminology/entries/aporia.md)** |  | Productive perplexity — the third phase of the adaptive cycle. |
+| **[Aisthesis (Αἴσθησις) (perception)](terminology/entries/aisthesis.md)** | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
+| **[Aporia (Ἀπορία) (productive perplexity)](terminology/entries/aporia.md)** |  | Productive perplexity — the third phase of the adaptive cycle. |
 | **[Cycle](terminology/entries/cycle.md)** |  | One complete traversal of the loop — the unit of adaptive work. |
-| **[Epistrophe](terminology/entries/epistrophe.md)** | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
+| **[Epistrophe (Ἐπιστροφή) (turning-toward)](terminology/entries/epistrophe.md)** | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
 | **[Loop](terminology/entries/loop.md)** |  | The structural topology — persistent causal coupling between agent and environment. |
-| **[Praxis](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
-| **[Prolepsis](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
+| **[Praxis (Πρᾶξις) (informed action)](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
+| **[Prolepsis (Πρόληψις) (anticipation)](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
 ## Diagnostics
 
@@ -115,11 +115,11 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Aisthesis](terminology/entries/aisthesis.md)** | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
-| **[Aporia](terminology/entries/aporia.md)** |  | Productive perplexity — the third phase of the adaptive cycle. |
-| **[Epistrophe](terminology/entries/epistrophe.md)** | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
-| **[Praxis](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
-| **[Prolepsis](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
+| **[Aisthesis (Αἴσθησις) (perception)](terminology/entries/aisthesis.md)** | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
+| **[Aporia (Ἀπορία) (productive perplexity)](terminology/entries/aporia.md)** |  | Productive perplexity — the third phase of the adaptive cycle. |
+| **[Epistrophe (Ἐπιστροφή) (turning-toward)](terminology/entries/epistrophe.md)** | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
+| **[Praxis (Πρᾶξις) (informed action)](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
+| **[Prolepsis (Πρόληψις) (anticipation)](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
 ## Ontology
 
@@ -181,4 +181,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Wrapping regime (W₀ / W₂ / W₁)](terminology/entries/wrapping-regime.md)** |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
 
 
-_Last rendered 2026-05-10 from 76 entries._
+_Last rendered 2026-05-11 from 76 entries._

@@ -2,7 +2,7 @@
 slug: epistrophe
 schema_version: 1
 term: epistrophe
-name: Epistrophe
+name: Epistrophe (Ἐπιστροφή) (turning-toward)
 notation: "$\\eta^\\ast$"
 brief: "Turning toward reality — gain-weighted update $M_t = M_{t-1} + \\eta^\\ast \\cdot g(\\delta_t)$."
 layer: framing-vocabulary

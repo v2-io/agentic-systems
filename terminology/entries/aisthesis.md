@@ -2,7 +2,7 @@
 slug: aisthesis
 schema_version: 1
 term: aisthesis
-name: Aisthesis
+name: Aisthesis (Αἴσθησις) (perception)
 notation: "$o_t$"
 brief: "Raw contact with reality — observation $o_t$ arrives."
 layer: framing-vocabulary
