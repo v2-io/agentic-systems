@@ -196,6 +196,8 @@ Sections in LEXICON.md are thematic groupings driven by the `tags:` field on eac
 
 Within each section, entries sort by `seq:` (ascending) first, then alphabetically by `term:` for entries without `seq:`. Use `seq:` on axis-keyed entries where taxonomy order matters — e.g., `seq: 1 / 2 / 3` for a three-value axis so entries render in logical rather than alphabetical order. Entries without `seq:` always sort alphabetically after any sequenced entries in the same section.
 
+**Subgroups within a section** — add `subgroup: "Subgroup Name"` to entries that belong to a named sub-table within their tag section. Entries without `subgroup:` render first as a plain table (no sub-header); named subgroups follow as `### Subgroup Name` tables, ordered by the minimum `seq:` value of their entries (then alphabetically by subgroup name). Using a globally monotonic `seq:` space across the whole section drives both entry order within each subgroup and subgroup order naturally — e.g., seq 1–5 for the top-level entries, 10–14 for "Claim Postures", 20–25 for "Search Log Depth Tiers".
+
 ### Concurrency
 
 Two agents can run any combination of `add` / `decide` / `render` / `lint` simultaneously without coordination as long as they don't both edit the *same* entry's markdown file. Decision events carry timestamps and never overwrite — concurrent decides serialize naturally on the filesystem.

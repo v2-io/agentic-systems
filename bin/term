@@ -198,7 +198,8 @@ class Entry
   def layer             = @data["layer"]
   def status            = @data["status"]
   def tags              = Array(@data["tags"])
-  def seq               = @data["seq"]   # optional integer; overrides alpha sort within tag section
+  def seq               = @data["seq"]      # optional integer; overrides alpha sort within tag section
+  def subgroup          = @data["subgroup"] # optional string; groups entries into sub-tables within a section
   def source_type       = @data["source_type"]
   def primary_source    = @data["primary_source"]
   def first_asf_mention = @data["first_asf_mention"]
@@ -240,7 +241,7 @@ class Entry
   CANONICAL_FIELD_ORDER = %w[
     slug schema_version
     term name notation brief
-    layer status tags seq
+    layer status tags seq subgroup
     source_type primary_source first_asf_mention
     see_also aliases do_not_confuse
     internal_note
@@ -373,10 +374,12 @@ end
 # Permissive: missing fields are surfaced as `(missing)` rather than blocking
 # the render. The linter is where these surface as actionable warnings.
 #
-# Grouping: by `tags` thematic categories. Within a section, entries sort
-# alphabetically by `term`. Entries with no tags fall into an "Uncategorized"
-# section at the end. Multi-tagged entries appear in each of their tag sections
-# (intentional — let readers find a term via any of its semantic anchors).
+# Grouping: by `tags` thematic categories → optional `subgroup:` sub-tables.
+# Within a section, entries without `subgroup:` render first (plain table, no
+# sub-header); named subgroups follow as ### sub-tables ordered by their min
+# `seq:` value, then alphabetically. Within any table, entries sort by
+# [seq || ∞, term]. Entries with no tags fall into "Uncategorized" last.
+# Multi-tagged entries appear in each tag section (readers find via any anchor).
 # ─────────────────────────────────────────────────────────────────────────────
 
 class Renderer
@@ -446,28 +449,48 @@ class Renderer
   end
 
   def group_by_tag
-    grouped = Hash.new { |h, k| h[k] = [] }
+    # Returns { tag => { subgroup_or_nil => [entries] } }
+    tag_grouped = Hash.new { |h, k| h[k] = Hash.new { |h2, k2| h2[k2] = [] } }
     @entries.each do |entry|
       tags = entry.tags
       if tags.empty?
-        grouped[:uncategorized] << entry
+        tag_grouped[:uncategorized][nil] << entry
       else
-        tags.each { |t| grouped[t] << entry }
+        tags.each { |t| tag_grouped[t][entry.subgroup] << entry }
       end
     end
-    grouped.each_value { |list| list.sort_by! { |e| [e.seq || Float::INFINITY, e.term.to_s.downcase] } }
-    grouped
+    tag_grouped.each_value do |subgrouped|
+      subgrouped.each_value { |list| list.sort_by! { |e| [e.seq || Float::INFINITY, e.term.to_s.downcase] } }
+    end
+    tag_grouped
   end
 
-  def render_section(heading, entries)
-    rows = entries.map { |e| render_row(e) }
-    <<~SECTION
-      ## #{heading}
+  def render_section(heading, subgrouped)
+    # Entries with no subgroup render first as a plain table (no sub-header).
+    # Named subgroups follow, ordered by the minimum seq: of their entries
+    # (then alphabetically), each with a ### sub-header and its own table.
+    no_sub  = subgrouped[nil] || []
+    named   = subgrouped.keys.compact.sort_by do |sg|
+      min_seq = subgrouped[sg].filter_map(&:seq).min || Float::INFINITY
+      [min_seq, sg.downcase]
+    end
 
-      | Term | Notation | Brief |
-      |------|----------|-------|
-      #{rows.join("\n")}
-    SECTION
+    parts = ["## #{heading}\n"]
+
+    unless no_sub.empty?
+      parts << table(no_sub)
+    end
+
+    named.each do |sg|
+      parts << "### #{sg}\n\n#{table(subgrouped[sg])}"
+    end
+
+    parts.join("\n") + "\n"
+  end
+
+  def table(entries)
+    rows = entries.map { |e| render_row(e) }
+    "| Term | Notation | Brief |\n|------|----------|-------|\n#{rows.join("\n")}\n"
   end
 
   def render_row(entry)

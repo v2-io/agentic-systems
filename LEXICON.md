@@ -30,6 +30,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 | **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
 
+
 ## Composition
 
 | Term | Notation | Brief |
@@ -45,6 +46,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Wrapper (over a primitive component)](terminology/entries/wrapper.md)** |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
 | **[Wrapping regime (W₀ / W₂ / W₁)](terminology/entries/wrapping-regime.md)** |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
 
+
 ## Continuity Stance
 
 | Term | Notation | Brief |
@@ -54,6 +56,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Morally continuous](terminology/entries/morally-continuous.md)** |  | Loss of continuity constitutes harm (archetype — Emergent Logozoetic Intelligence (ELI)). |
 | **[Negotiated](terminology/entries/negotiated.md)** |  | Persistence traded against other values (archetype — human). |
 | **[Task-terminal](terminology/entries/task-terminal.md)** |  | Persists instrumentally; termination is success (archetype — golem). |
+
 
 ## Core Quantities
 
@@ -86,6 +89,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Update gain](terminology/entries/update-gain.md)** | $\eta^\ast$ | Uncertainty ratio governing epistrophe — how much to trust reality vs. the model. |
 | **[Variational Sector Condition](terminology/entries/variational-sector-condition.md)** |  | The ε-fidelity extension of the sector condition to variational/approximate-posterior agents — sector constant degrades by O(√ε) under a KL bound on the approximation, promoting controlled-KL VI to sub-scope α′. |
 
+
 ## Cycle Phases
 
 | Term | Notation | Brief |
@@ -98,6 +102,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Praxis (Πρᾶξις) (informed action)](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
 | **[Prolepsis (Πρόληψις) (anticipation)](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
+
 ## Diagnostics
 
 | Term | Notation | Brief |
@@ -106,11 +111,13 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Satisfaction gap](terminology/entries/satisfaction-gap.md)** | $\delta_{\text{sat}}$ | Ideal outcome minus best achievable — "the world doesn't permit it." |
 | **[Strategy-plan confidence](terminology/entries/strategy-plan-confidence.md)** | $\hat{P}_\Sigma$ | The DAG's own answer to "will this plan work?" — root-node-propagated probability score from the agent's strategy DAG. |
 
+
 ## ELI
 
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
+
 
 ## Greek Vocabulary
 
@@ -122,11 +129,13 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Praxis (Πρᾶξις) (informed action)](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
 | **[Prolepsis (Πρόληψις) (anticipation)](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
+
 ## Ontology
 
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
+
 
 ## Persistence
 
@@ -135,6 +144,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Continuity](terminology/entries/continuity.md)** | $\mathcal{C}_t$ | Whether the agent maintains coherent identity through time — $\mathcal{C}_t$ extends, $M_t$ has temporal depth. |
 | **[Operational](terminology/entries/operational-persistence.md)** | $\Delta\rho^\ast = \alpha R - \rho$ | Whether the agent is currently within the guaranteed region — adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$. |
 | **[Structural](terminology/entries/structural-persistence.md)** | $\alpha > \rho / R$ | The correction machinery's *capacity* to maintain bounded mismatch — $\alpha > \rho / R$. |
+
 
 ## Structural Concepts
 
@@ -182,6 +192,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Variational Sector Condition](terminology/entries/variational-sector-condition.md)** |  | The ε-fidelity extension of the sector condition to variational/approximate-posterior agents — sector constant degrades by O(√ε) under a KL bound on the approximation, promoting controlled-KL VI to sub-scope α′. |
 | **[Wrapper (over a primitive component)](terminology/entries/wrapper.md)** |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
 | **[Wrapping regime (W₀ / W₂ / W₁)](terminology/entries/wrapping-regime.md)** |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
+
 
 
 _Last rendered 2026-05-11 from 79 entries._
