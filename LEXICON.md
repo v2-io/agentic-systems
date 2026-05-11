@@ -124,7 +124,10 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Axiomatic](terminology/entries/axiomatic.md)** |  | An epistemic status: foundational or tautological — true by definition or stipulation, not by derivation. |
+| **[Inevitability core](terminology/entries/inevitability-core.md)** |  | The ~15 AAD segments where the goal is mathematical inevitability — given the prior objects, this is the only compatible form. |
+| **[Canonical formulations ring](terminology/entries/canonical-formulations-ring.md)** |  | The second ring — segments whose form is well-motivated but not uniquely forced; at least one alternative formulation would also fit the prior objects. |
 | **[Exact](terminology/entries/exact.md)** |  | An epistemic status: mathematically validated under stated assumptions — the derivation closes. |
+| **[Empirical/heuristic/discussion ring](terminology/entries/empirical-heuristic-discussion-ring.md)** |  | The third ring — segments whose ceiling is empirical or heuristic; testable against the world but not derivable from the formalism alone. |
 | **[Robust Qualitative](terminology/entries/robust-qualitative.md)** |  | An epistemic status: qualitative claim survives across modeling assumptions, but specific functional form is approximate. |
 | **[Conditional](terminology/entries/conditional.md)** |  | An epistemic status: depends on explicitly named local assumptions that are not globally established. |
 | **[Heuristic](terminology/entries/heuristic.md)** |  | An epistemic status: useful approximation — qualitative or operational guidance without formal tier. |
@@ -312,4 +315,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-05-11 from 137 entries._
+_Last rendered 2026-05-11 from 140 entries._
