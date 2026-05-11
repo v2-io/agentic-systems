@@ -10,12 +10,14 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
+| **[Class 1: Separated (GUC)](terminology/entries/separated.md)** |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
+| **[Class 2: Partial (GUC)](terminology/entries/partial.md)** |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
+| **[Class 3: Coupled (GUC)](terminology/entries/coupled.md)** |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
 | **[Actuated agent](terminology/entries/actuated-agent.md)** |  | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$. |
 | **[Adaptive system](terminology/entries/adaptive-system.md)** |  | Feedback loop + mismatch correction under uncertainty. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
-| **[Class 3: Coupled (GUC)](terminology/entries/coupled.md)** |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
 | **[Coupled Update Dynamics](terminology/entries/coupled-update-dynamics.md)** | $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade. |
 | **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
 | **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
@@ -25,10 +27,8 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
 | **[Logogenic agent](terminology/entries/logogenic-agent.md)** |  | Self-actuated agent whose primary channels are language — constituted by logos. |
 | **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
-| **[Class 2: Partial (GUC)](terminology/entries/partial.md)** |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 | **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
-| **[Class 1: Separated (GUC)](terminology/entries/separated.md)** |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
 
 ## Composition
 
@@ -140,6 +140,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
+| **[Class 1: Separated (GUC)](terminology/entries/separated.md)** |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
+| **[Class 2: Partial (GUC)](terminology/entries/partial.md)** |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
+| **[Class 3: Coupled (GUC)](terminology/entries/coupled.md)** |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
 | **[Adaptive Gain Dynamics](terminology/entries/adaptive-gain-dynamics.md)** |  | The extension of sector-persistence to agents whose update gain is itself a state variable — deriving four conditions (MG-1 through MG-4) under which adaptive-gain schemes stay within the A2' sub-scope. |
 | **[Adversarial destabilization](terminology/entries/adversarial-destabilization.md)** | $\mathcal{T}_A > \Delta\rho^\ast_B / \gamma_A$ | When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
@@ -149,7 +152,6 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
 | **[Continuous Operation](terminology/entries/continuous-operation.md)** |  | The TST scope extension that folds failure-and-recovery cost into the temporal-optimality objective — effective time includes implementation time plus the expected cost of operational failures. |
-| **[Class 3: Coupled (GUC)](terminology/entries/coupled.md)** |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
 | **[Coupled Update Dynamics](terminology/entries/coupled-update-dynamics.md)** | $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade. |
 | **[Credit Assignment Boundary](terminology/entries/credit-assignment-boundary.md)** |  | The boundary between tractable and intractable attribution of outcomes to strategy DAG edges — solvable when intermediates are observable, |
 | **[Deliberation cost](terminology/entries/deliberation-cost.md)** |  | Think-vs-act tradeoff — gain improvement must exceed mismatch accumulated while pausing. |
@@ -164,12 +166,10 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Multi-Timescale Stability](terminology/entries/multi-timescale-stability.md)** |  | When adaptive processes operate at N nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs (sketch-level result). |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
-| **[Class 2: Partial (GUC)](terminology/entries/partial.md)** |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
 | **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot{R}_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 | **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAD-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAD-native quantities. |
 | **[Sector condition](terminology/entries/sector-condition.md)** |  | Nonlinear correction guarantee enabling Lyapunov stability analysis. |
-| **[Class 1: Separated (GUC)](terminology/entries/separated.md)** |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
 | **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
 | **[Strategic Tempo](terminology/entries/strategic-tempo.md)** | $\mathcal{T}_\Sigma$ | The effective rate at which an agent revises its strategy — the sum of per-edge correction capacities weighted by causal identifiability. |
 | **[Strategy DAG](terminology/entries/strategy-dag.md)** | $\Sigma_t = (V_t, E_t, p_t, \gamma_t)$ | The agent's causal plan — a directed acyclic graph whose edges carry the agent's credence that completing one step advances the next. |

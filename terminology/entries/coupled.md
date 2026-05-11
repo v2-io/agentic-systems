@@ -2,20 +2,35 @@
 slug: coupled
 schema_version: 1
 term: Coupled
-name: "Class 3: Coupled (GUC)"
-brief: GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction.
+name: 'Class 3: Coupled (GUC)'
+brief: GUC Class-3 value; agent whose epistemic update is irreducibly entangled with
+  its goal state — directed separation fails by construction.
 layer: framing-vocabulary
 status: canon
-tags: [structural_concepts, agent_classes]
+tags:
+- structural_concepts
+- agent_classes
 source_type: asf
 primary_source: 01-aad-core/src/der-directed-separation.md
 first_asf_mention: 01-aad-core/src/der-directed-separation.md
-see_also: [goal-update-coupling-class, directed-separation, separated, partial, class-coercion]
-aliases: ["GUC-Coupled", "Class 3", "Class-3 agent"]
+see_also:
+- goal-update-coupling-class
+- directed-separation
+- separated
+- partial
+- class-coercion
+aliases:
+- GUC-Coupled
+- Class 3
+- Class-3 agent
 do_not_confuse:
-  - "fully merged (pre-2026-05-09 label for this same value, retired as GUC-axis label in the 2026-05-09 rename; Class 2 pre-rename)"
-  - "coupling (the abstract property — entanglement of $M_t$ and $G_t$ dynamics — of which this class is the extreme case)"
-  - "adversarial coupling pressure (a distinct concept about external pressure that drives agents toward the Coupled class; see #disc-adversarial-coupling-pressure)"
+- fully merged (pre-2026-05-09 label for this same value, retired as GUC-axis label
+  in the 2026-05-09 rename; Class 2 pre-rename)
+- coupling (the abstract property — entanglement of $M_t$ and $G_t$ dynamics — of
+  which this class is the extreme case)
+- 'adversarial coupling pressure (a distinct concept about external pressure that
+  drives agents toward the Coupled class; see #disc-adversarial-coupling-pressure)'
+seq: 3
 ---
 
 **Class 3: Coupled** is the most entangled value on the [Goal-Update Coupling Class](goal-update-coupling-class.md)

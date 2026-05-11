@@ -2,20 +2,37 @@
 slug: partial
 schema_version: 1
 term: Partial
-name: "Class 2: Partial (GUC)"
-brief: GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$.
+name: 'Class 2: Partial (GUC)'
+brief: GUC Class-2 value; agent with bounded goal-update coupling — directed separation
+  is approximated with a computable residual leakage rate $\kappa_{\text{processing}}
+  \in (0, \kappa_{\max})$.
 layer: framing-vocabulary
 status: canon
-tags: [structural_concepts, agent_classes]
+tags:
+- structural_concepts
+- agent_classes
 source_type: asf
 primary_source: 01-aad-core/src/der-directed-separation.md
 first_asf_mention: 01-aad-core/src/der-directed-separation.md
-see_also: [goal-update-coupling-class, directed-separation, separated, coupled, class-coercion, wrapping-regime]
-aliases: ["GUC-Partial", "Class 2", "Class-2 agent"]
+see_also:
+- goal-update-coupling-class
+- directed-separation
+- separated
+- coupled
+- class-coercion
+- wrapping-regime
+aliases:
+- GUC-Partial
+- Class 2
+- Class-2 agent
 do_not_confuse:
-  - "partially modular (pre-2026-05-09 label for this same value, retired as GUC-axis label in the 2026-05-09 rename; Class 3 pre-rename)"
-  - "partial wrapping / W₂ (a wrapping-regime value describing how structural separation is implemented, not directly a GUC class label — though W₂ composites fall in the Class-1-by-behavior cell, not Class 2)"
-  - "partial information (information-theoretic concept; no GUC-axis connection)"
+- partially modular (pre-2026-05-09 label for this same value, retired as GUC-axis
+  label in the 2026-05-09 rename; Class 3 pre-rename)
+- partial wrapping / W₂ (a wrapping-regime value describing how structural separation
+  is implemented, not directly a GUC class label — though W₂ composites fall in the
+  Class-1-by-behavior cell, not Class 2)
+- partial information (information-theoretic concept; no GUC-axis connection)
+seq: 2
 ---
 
 **Class 2: Partial** is the middle value on the [Goal-Update Coupling Class](goal-update-coupling-class.md)

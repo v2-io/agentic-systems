@@ -72,21 +72,19 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
   Note: `empirical` and `sketch` appear as both type and status; entries should cover both senses or cross-reference. Slug disambiguation: `type-empirical` / `status-empirical` or single entry with both senses noted.
 
-**C4d — Stage vocabulary** (`stage:` frontmatter values, 7 entries). Tag `process_vocabulary`. The stage ladder is encountered in OUTLINE.md tables and segment frontmatter constantly.
-- [ ] missing · draft · deps-verified · claims-verified · format-clean · candidate
+**C4d+e — Stage and gate vocabulary** (10 entries). Tag `process_vocabulary`. Stages are what a segment *is at*; gates are what it passes *through* to get there — they belong together. `seq:` values should place these in ladder order (1–7 for stages, 1–4 for gates), not alphabetically. Each gate entry names the gate and identifies the resulting stage.
+- [ ] Stages (6; use `seq:` 1–6): **missing** · **draft** · **deps-verified** · **claims-verified** · **format-clean** · **candidate**
 
-  Note: `old` (stage) is implied by the `old-*` filename prefix; may not need a separate entry since it's already documented under the filename convention.
+  Note: `old` (stage) is implied by the `old-*` filename prefix convention; no separate entry needed.
 
-**C4e — Promotion gate vocabulary** (4 entries). Tag `process_vocabulary`. Named gates are referenced in audit and review conversations frequently.
-- [ ] **dependency audit** (Gate 1) · **content review** (Gate 2) · **mechanical review** (Gate 3) · **working notes disposition** (Gate 4)
+- [ ] Gates (4; use `seq:` 1–4): **dependency audit** (Gate 1 → deps-verified) · **content review** (Gate 2 → claims-verified) · **mechanical review** (Gate 3 → format-clean) · **notes disposition** (Gate 4 → candidate)
 
 **C4f — Findings schema fields** (9 entries). Tag `findings_vocabulary`. These appear in the `## Findings` sections of mature segments and in audit discussions.
 - [ ] **brief** (Feynman-criterion field) · **impact** (findings field) · **novelty claim** · **related work** (findings field) · **search log**
 - [ ] Claim postures (open set; 5 established): **synthesis** · **differentiation** · **novelty** · **transfer** · **recognition**
 - [ ] Search log depth tiers (6): **not-conducted** · **cursory** · **targeted** · **nominally-comprehensive** · **comprehensive** · **intuition-only**
 
-**C4g — Three rings (epistemic triage analysis)** (3 entries). Tag `epistemic_vocabulary`. Referenced in audit discussions and CLAUDE.md conventions.
-- [ ] **inevitability core** · **canonical formulations** (ring) · **empirical/heuristic/discussion ring**
+**C4g — Three rings (deferred, under review).** "Inevitability core", "canonical formulations ring", "empirical/heuristic/discussion ring" are analysis tools described in FORMAT.md §"Three rings" — useful as a reviewer's stance but not yet stabilized as first-class prose vocabulary that appears outside FORMAT.md itself. Deferring until these terms show up in segment prose or audit discussions with enough frequency to justify lexiconization. Revisit after C4a–f land.
 
 ### C5. Compound and paired-vocabulary canonicalize (8 entries)
 
@@ -168,11 +166,11 @@ Each item: LEXICON entry + first-encounter cite added to the source segment (in 
 
 ---
 
-## E. Future terminology-system enhancements (`bin/term` evolution)
+## E. Terminology-system enhancements (`bin/term` evolution)
 
 Tooling improvements surfaced during rename-cycle execution. Land independently from the naming-cycle queue above — they affect how the renderer behaves, not which terms canonicalize.
 
-- **`sequence-id:` field for within-group ordering override** (surfaced 2026-05-09 during GUC rename Phase 1). Currently `bin/term render` sorts entries alphabetically by `term:` within each `tags:`-driven section. This makes axis-keyed entries render out of taxonomy order — e.g., the GUC three-value axis renders alphabetically (Coupled / Partial / Separated) in the Agent Classes section rather than monotonically (Class 1: Separated → Class 2: Partial → Class 3: Coupled). A `sequence-id:` field (integer or compound — e.g., `goal-update-coupling.1` / `.2` / `.3`) would let entries opt into a within-group ordering override; entries without `sequence-id:` continue to sort alphabetically by `term:`. Same field would serve future axis-keyed taxonomies (Knowledge Type axis, Contraction Tier 1/2/3, Identification Regime A/B/C, etc.). Implementation sketch: extend the renderer's per-section sort to read `sequence-id:` first, fall back to alphabetic by `term:`. Cross-section entries (multi-tagged) would carry one `sequence-id:` per relevant axis or use a single value where the ordering applies in all sections.
+- [x] ~~**`seq:` field for within-group ordering override**~~ **Landed 2026-05-10.** `seq:` is an optional integer field on entries; `bin/term render` sorts within each tag section by `[seq || ∞, term]` — sequenced entries appear first in numeric order, then unsequenced entries alphabetically. Needed before C4 executes, since the segment-type, status, and stage vocabularies are all axis-keyed and must render in taxonomy order, not alphabetically. Field added to `CANONICAL_FIELD_ORDER` after `tags:`; accessor added to Entry class. See commit for implementation. Apply by adding `seq: N` to any entry's frontmatter; re-render regenerates LEXICON in the new order.
 
 ## D. Open-question residue (the 13 to-canonicalize rows still pending decision)
 

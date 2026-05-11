@@ -198,6 +198,7 @@ class Entry
   def layer             = @data["layer"]
   def status            = @data["status"]
   def tags              = Array(@data["tags"])
+  def seq               = @data["seq"]   # optional integer; overrides alpha sort within tag section
   def source_type       = @data["source_type"]
   def primary_source    = @data["primary_source"]
   def first_asf_mention = @data["first_asf_mention"]
@@ -239,7 +240,7 @@ class Entry
   CANONICAL_FIELD_ORDER = %w[
     slug schema_version
     term name notation brief
-    layer status tags
+    layer status tags seq
     source_type primary_source first_asf_mention
     see_also aliases do_not_confuse
     internal_note
@@ -454,7 +455,7 @@ class Renderer
         tags.each { |t| grouped[t] << entry }
       end
     end
-    grouped.each_value { |list| list.sort_by! { |e| e.term.to_s.downcase } }
+    grouped.each_value { |list| list.sort_by! { |e| [e.seq || Float::INFINITY, e.term.to_s.downcase] } }
     grouped
   end
 

@@ -194,6 +194,8 @@ bin/term render --output LEXICON.md --force      # writes root LEXICON.md uncond
 
 Sections in LEXICON.md are thematic groupings driven by the `tags:` field on each entry. Display order for known tags (`cycle_phases`, `agent_classes`, `core_quantities`, etc.) is set in `Renderer::TAG_DISPLAY_ORDER`; unknown tags get appended alphabetically. Multi-tagged entries appear in each of their tag sections (intentional — let readers find a term via any of its semantic anchors).
 
+Within each section, entries sort by `seq:` (ascending) first, then alphabetically by `term:` for entries without `seq:`. Use `seq:` on axis-keyed entries where taxonomy order matters — e.g., `seq: 1 / 2 / 3` for a three-value axis so entries render in logical rather than alphabetical order. Entries without `seq:` always sort alphabetically after any sequenced entries in the same section.
+
 ### Concurrency
 
 Two agents can run any combination of `add` / `decide` / `render` / `lint` simultaneously without coordination as long as they don't both edit the *same* entry's markdown file. Decision events carry timestamps and never overwrite — concurrent decides serialize naturally on the filesystem.
