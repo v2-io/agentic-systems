@@ -10,17 +10,17 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Class 1: Separated (GUC)](terminology/entries/separated.md)** |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
-| **[Class 2: Partial (GUC)](terminology/entries/partial.md)** |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
-| **[Class 3: Coupled (GUC)](terminology/entries/coupled.md)** |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
+| **[Class 1: Separated](terminology/entries/separated.md)** *(GUC)* |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
+| **[Class 2: Partial](terminology/entries/partial.md)** *(GUC)* |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
+| **[Class 3: Coupled](terminology/entries/coupled.md)** *(GUC)* |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
 | **[Actuated agent](terminology/entries/actuated-agent.md)** |  | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$. |
 | **[Adaptive system](terminology/entries/adaptive-system.md)** |  | Feedback loop + mismatch correction under uncertainty. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
 | **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
-| **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
-| **[Goal-Update Coupling Class (GUC Class)](terminology/entries/goal-update-coupling-class.md)** |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
+| **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
+| **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
 | **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
 | **[Logogenic agent](terminology/entries/logogenic-agent.md)** |  | Self-actuated agent whose primary channels are language — constituted by logos. |
 | **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
@@ -30,7 +30,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Class coercion (via wrapping)](terminology/entries/class-coercion.md)** |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
+| **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
@@ -38,8 +38,8 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
 | **[Teleological-unity uncertainty](terminology/entries/teleological-unity-uncertainty.md)** | $U_{\text{align},ji}$ | Agent $i$'s uncertainty about whether $j$'s communications serve $i$'s interests or $j$'s potentially conflicting objectives — uncertainty about $U_O$. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
-| **[Wrapper (over a primitive component)](terminology/entries/wrapper.md)** |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
-| **[Wrapping regime (W₀ / W₂ / W₁)](terminology/entries/wrapping-regime.md)** |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
+| **[Wrapper](terminology/entries/wrapper.md)** *(over a primitive component)* |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
+| **[Wrapping regime](terminology/entries/wrapping-regime.md)** *(W₀ / W₂ / W₁)* |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
 
 
 ## Continuity Stance
@@ -89,13 +89,13 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Aisthesis (Αἴσθησις) (perception)](terminology/entries/aisthesis.md)** | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
-| **[Aporia (Ἀπορία) (productive perplexity)](terminology/entries/aporia.md)** |  | Productive perplexity — the third phase of the adaptive cycle. |
+| **[Aisthesis](terminology/entries/aisthesis.md)** *(Αἴσθησις) (perception)* | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
+| **[Aporia](terminology/entries/aporia.md)** *(Ἀπορία) (productive perplexity)* |  | Productive perplexity — the third phase of the adaptive cycle. |
 | **[Cycle](terminology/entries/cycle.md)** |  | One complete traversal of the loop — the unit of adaptive work. |
-| **[Epistrophe (Ἐπιστροφή) (turning-toward)](terminology/entries/epistrophe.md)** | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
+| **[Epistrophe](terminology/entries/epistrophe.md)** *(Ἐπιστροφή) (turning-toward)* | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
 | **[Loop](terminology/entries/loop.md)** |  | The structural topology — persistent causal coupling between agent and environment. |
-| **[Praxis (Πρᾶξις) (informed action)](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
-| **[Prolepsis (Πρόληψις) (anticipation)](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
+| **[Praxis](terminology/entries/praxis.md)** *(Πρᾶξις) (informed action)* | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
+| **[Prolepsis](terminology/entries/prolepsis.md)** *(Πρόληψις) (anticipation)* | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
 
 ## Diagnostics
@@ -111,7 +111,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
+| **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 | **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
 | **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
@@ -129,9 +129,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Robust Qualitative](terminology/entries/robust-qualitative.md)** |  | An epistemic status: qualitative claim survives across modeling assumptions, but specific functional form is approximate. |
 | **[Conditional](terminology/entries/conditional.md)** |  | An epistemic status: depends on explicitly named local assumptions that are not globally established. |
 | **[Heuristic](terminology/entries/heuristic.md)** |  | An epistemic status: useful approximation — qualitative or operational guidance without formal tier. |
-| **[Empirical (epistemic status)](terminology/entries/status-empirical.md)** |  | An epistemic status: supported by data or simulation, not fully derived from the formalism. |
+| **[Empirical](terminology/entries/status-empirical.md)** *(epistemic status)* |  | An epistemic status: supported by data or simulation, not fully derived from the formalism. |
 | **[Discussion-Grade](terminology/entries/discussion-grade.md)** |  | An epistemic status: argued qualitatively or by analogy — not formally derived, not empirically validated. |
-| **[Sketch (epistemic status)](terminology/entries/status-sketch.md)** |  | An epistemic status: direction identified but formalization incomplete — the segment is actively in progress. |
+| **[Sketch](terminology/entries/status-sketch.md)** *(epistemic status)* |  | An epistemic status: direction identified but formalization incomplete — the segment is actively in progress. |
 
 
 ## Findings Schema
@@ -170,11 +170,11 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Aisthesis (Αἴσθησις) (perception)](terminology/entries/aisthesis.md)** | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
-| **[Aporia (Ἀπορία) (productive perplexity)](terminology/entries/aporia.md)** |  | Productive perplexity — the third phase of the adaptive cycle. |
-| **[Epistrophe (Ἐπιστροφή) (turning-toward)](terminology/entries/epistrophe.md)** | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
-| **[Praxis (Πρᾶξις) (informed action)](terminology/entries/praxis.md)** | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
-| **[Prolepsis (Πρόληψις) (anticipation)](terminology/entries/prolepsis.md)** | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
+| **[Aisthesis](terminology/entries/aisthesis.md)** *(Αἴσθησις) (perception)* | $o_t$ | Raw contact with reality — observation $o_t$ arrives. |
+| **[Aporia](terminology/entries/aporia.md)** *(Ἀπορία) (productive perplexity)* |  | Productive perplexity — the third phase of the adaptive cycle. |
+| **[Epistrophe](terminology/entries/epistrophe.md)** *(Ἐπιστροφή) (turning-toward)* | $\eta^\ast$ | Turning toward reality — gain-weighted update $M_t = M_{t-1} + \eta^\ast \cdot g(\delta_t)$. |
+| **[Praxis](terminology/entries/praxis.md)** *(Πρᾶξις) (informed action)* | $a_t$ | Informed action — $a_t = \pi(M_t)$, or $\pi(M_t, G_t)$ for actuated agents. |
+| **[Prolepsis](terminology/entries/prolepsis.md)** *(Πρόληψις) (anticipation)* | $\hat{o}_t$ | The model's active anticipation: $\hat{o}_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$. |
 
 
 ## Logogenic
@@ -250,7 +250,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Hypothesis](terminology/entries/hypothesis.md)** |  | A segment type: structurally motivated claim that needs empirical or formal validation. |
 | **[Normative](terminology/entries/normative.md)** |  | A segment type: grounded in axioms or postulates but requiring a precondition that must be externally verified. |
-| **[Empirical (segment type)](terminology/entries/type-empirical.md)** |  | A segment type: generalization supported by data or simulation, not fully derived from the formalism. |
+| **[Empirical](terminology/entries/type-empirical.md)** *(segment type)* |  | A segment type: generalization supported by data or simulation, not fully derived from the formalism. |
 | **[Observation](terminology/entries/observation.md)** |  | A segment type: finding from simulation or empirical investigation — more specific than a generalization. |
 | **[Measurement](terminology/entries/measurement.md)** |  | A segment type: operationalization of a theoretical quantity — how to measure what the theory defines. |
 
@@ -258,11 +258,11 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Discussion (segment type)](terminology/entries/type-discussion.md)** |  | A segment type: conceptual or normative claim used for interpretation — the entire segment is discursive. |
+| **[Discussion](terminology/entries/type-discussion.md)** *(segment type)* |  | A segment type: conceptual or normative claim used for interpretation — the entire segment is discursive. |
 | **[Proposed Schema](terminology/entries/proposed-schema.md)** |  | A segment type: mathematical shape identified, formal content pending — structure visible before proof is complete. |
 | **[Worked Example](terminology/entries/worked-example.md)** |  | A segment type: end-to-end domain instantiation validating the theory chain in a concrete case. |
 | **[Detail](terminology/entries/detail.md)** |  | A segment type: extended operational or technical material supporting other claims without making a new one. |
-| **[Sketch (segment type)](terminology/entries/type-sketch.md)** |  | A segment type: direction identified, formal rigor pending — the approach is outlined but not completed. |
+| **[Sketch](terminology/entries/type-sketch.md)** *(segment type)* |  | A segment type: direction identified, formal rigor pending — the approach is outlined but not completed. |
 | **[Aside](terminology/entries/aside.md)** |  | A segment type: tangential observation or connection — informative but not load-bearing for the theory. |
 
 
@@ -277,14 +277,14 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Class 1: Separated (GUC)](terminology/entries/separated.md)** |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
-| **[Class 2: Partial (GUC)](terminology/entries/partial.md)** |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
-| **[Class 3: Coupled (GUC)](terminology/entries/coupled.md)** |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
+| **[Class 1: Separated](terminology/entries/separated.md)** *(GUC)* |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
+| **[Class 2: Partial](terminology/entries/partial.md)** *(GUC)* |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
+| **[Class 3: Coupled](terminology/entries/coupled.md)** *(GUC)* |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
 | **[Adaptive Gain Dynamics](terminology/entries/adaptive-gain-dynamics.md)** |  | The extension of sector-persistence to agents whose update gain is itself a state variable — deriving four conditions (MG-1 through MG-4) under which adaptive-gain schemes stay within the A2' sub-scope. |
 | **[Adversarial destabilization](terminology/entries/adversarial-destabilization.md)** | $\mathcal{T}_A > \Delta\rho^\ast_B / \gamma_A$ | When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
 | **[Change investment](terminology/entries/change-investment.md)** |  | Accept higher upfront implementation cost when amortized savings across expected future changes exceed it. |
-| **[Class coercion (via wrapping)](terminology/entries/class-coercion.md)** |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
+| **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
@@ -296,7 +296,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
 | **[Exponential cognitive load](terminology/entries/exponential-cognitive-load.md)** |  | Hypothesis that implementation time grows exponentially with the number of discontinuities in a changeset. |
-| **[Goal-Update Coupling Class (GUC Class)](terminology/entries/goal-update-coupling-class.md)** |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
+| **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
 | **[Multi-Timescale Stability](terminology/entries/multi-timescale-stability.md)** |  | When adaptive processes operate at N nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs (sketch-level result). |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
@@ -314,8 +314,8 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Temporal Optimality](terminology/entries/temporal-optimality.md)** |  | Among agents achieving identical outcomes on all non-temporal dimensions, the fastest is optimal — time is the uniquely fungible residual. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 | **[Variational Sector Condition](terminology/entries/variational-sector-condition.md)** |  | The ε-fidelity extension of the sector condition to variational/approximate-posterior agents — sector constant degrades by O(√ε) under a KL bound on the approximation, promoting controlled-KL VI to sub-scope α′. |
-| **[Wrapper (over a primitive component)](terminology/entries/wrapper.md)** |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
-| **[Wrapping regime (W₀ / W₂ / W₁)](terminology/entries/wrapping-regime.md)** |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
+| **[Wrapper](terminology/entries/wrapper.md)** *(over a primitive component)* |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
+| **[Wrapping regime](terminology/entries/wrapping-regime.md)** *(W₀ / W₂ / W₁)* |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
 
 
 

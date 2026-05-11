@@ -499,11 +499,18 @@ class Renderer
   end
 
   def render_row(entry)
-    name  = entry.name || entry.term || "(missing)"
+    name     = entry.name || entry.term || "(missing)"
     notation = entry.notation || ""
-    brief = entry.brief || "(missing brief)"
-    link  = entry_link(entry)
-    "| **#{link}** | #{notation} | #{brief} |"
+    brief    = entry.brief || "(missing brief)"
+    # Split trailing parentheticals out of the link: "Foo (bar) (baz)" →
+    # **[Foo](url)** *(bar) (baz)*
+    if name =~ /\A(.+?)\s+(\(.*\))\s*\z/m
+      base, parens = $1, $2
+      term_cell = "**[#{base}](terminology/entries/#{entry.slug}.md)** *#{parens}*"
+    else
+      term_cell = "**[#{name}](terminology/entries/#{entry.slug}.md)**"
+    end
+    "| #{term_cell} | #{notation} | #{brief} |"
   end
 
   def entry_link(entry)
