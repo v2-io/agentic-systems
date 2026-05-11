@@ -47,13 +47,46 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
 
 
-### C4. FORMAT.md / process-vocabulary canonicalize (no LEXICON action)
+### C4. FORMAT.md process-vocabulary — LEXICON entries + no-drift links
 
-[Rationale](msc/naming/naming-rename-plan.md#format-md--process-vocabulary-canonicalize-2026-05-04). 
+[Original rationale](msc/naming/naming-rename-plan.md#format-md--process-vocabulary-canonicalize-2026-05-04) (original framing was "no LEXICON action"; now reversed — entries will be added).
 
-These five terms (`epistemic status`, `working note`, `discussion`, `formal expression`, `type formulation`) are already canonical via FORMAT.md itself. The commitment is *no-drift*, not LEXICON-add. **No commit action; this row exists so the curation trail is complete.** Mark and remove when reading; or leave as a permanent reminder. Joseph's call.
+**Scope change (2026-05-10).** These terms are being added to the LEXICON notwithstanding their definition in FORMAT.md. FORMAT.md remains authoritative for the *process* content; the LEXICON entries carry the concise definition and cross-link back to FORMAT.md. Any change to a term's meaning must be applied to both files — **no-drift discipline** applies. Execution for each term:
+1. Scaffold `terminology/entries/<slug>.md` + populate (brief drawn from FORMAT.md; body cross-references FORMAT.md as authoritative).
+2. `bin/term decide <slug> canonicalize --by joseph`.
+3. In FORMAT.md: add a link from the first canonical mention of each term to `terminology/entries/<slug>.md` (inline link or footnote-style).
+4. Add a comment near the top of FORMAT.md noting that key terms are cross-linked to `terminology/` and that changes must not drift.
 
-- [ ] *Acknowledged: epistemic status / working note / discussion / formal expression / type formulation are FORMAT.md-defined; no LEXICON entry.*
+**C4a — Original 5 (was the whole of old C4):**
+- [ ] **epistemic status** — the `## Epistemic Status` section in a segment; describes what is derived vs hypothesized, and the max attainable status. Slug: `epistemic-status-section` (to distinguish from the frontmatter field).
+- [ ] **formal expression** — the `## Formal Expression` section; contains the segment's mathematical content with equation-level tags. Slug: `formal-expression-section`.
+- [ ] **discussion** (section) — the `## Discussion` section; interpretation, connections, brief conceptual framing. Slug: `discussion-section` (to distinguish from `type: discussion`).
+- [ ] **working notes** — the `## Working Notes` section; active development questions removed at candidate stage. Slug: `working-notes-section`.
+- [ ] **findings** (section) — the optional `## Findings` section; curated catalog entries for externally-notable contributions. Slug: `findings-section`.
+
+**C4b — Segment type vocabulary** (`type:` frontmatter values, 18 entries). Each entry: brief definition from FORMAT.md's type table; tag `segment_types`; source FORMAT.md. These appear in every segment's frontmatter — worth lexiconizing so the vocabulary is navigable without opening FORMAT.md.
+- [ ] postulate · definition · scope · formulation · derived · result · corollary · hypothesis · normative · empirical · observation · discussion · measurement · proposed-schema · derivation · worked-example · sketch · aside
+
+**C4c — Epistemic status vocabulary** (`status:` frontmatter values, 8 entries). Tag `epistemic_vocabulary`. Source FORMAT.md.
+- [ ] axiomatic · exact · robust-qualitative · heuristic · conditional · empirical (status) · discussion-grade · sketch (status)
+
+  Note: `empirical` and `sketch` appear as both type and status; entries should cover both senses or cross-reference. Slug disambiguation: `type-empirical` / `status-empirical` or single entry with both senses noted.
+
+**C4d — Stage vocabulary** (`stage:` frontmatter values, 7 entries). Tag `process_vocabulary`. The stage ladder is encountered in OUTLINE.md tables and segment frontmatter constantly.
+- [ ] missing · draft · deps-verified · claims-verified · format-clean · candidate
+
+  Note: `old` (stage) is implied by the `old-*` filename prefix; may not need a separate entry since it's already documented under the filename convention.
+
+**C4e — Promotion gate vocabulary** (4 entries). Tag `process_vocabulary`. Named gates are referenced in audit and review conversations frequently.
+- [ ] **dependency audit** (Gate 1) · **content review** (Gate 2) · **mechanical review** (Gate 3) · **working notes disposition** (Gate 4)
+
+**C4f — Findings schema fields** (9 entries). Tag `findings_vocabulary`. These appear in the `## Findings` sections of mature segments and in audit discussions.
+- [ ] **brief** (Feynman-criterion field) · **impact** (findings field) · **novelty claim** · **related work** (findings field) · **search log**
+- [ ] Claim postures (open set; 5 established): **synthesis** · **differentiation** · **novelty** · **transfer** · **recognition**
+- [ ] Search log depth tiers (6): **not-conducted** · **cursory** · **targeted** · **nominally-comprehensive** · **comprehensive** · **intuition-only**
+
+**C4g — Three rings (epistemic triage analysis)** (3 entries). Tag `epistemic_vocabulary`. Referenced in audit discussions and CLAUDE.md conventions.
+- [ ] **inevitability core** · **canonical formulations** (ring) · **empirical/heuristic/discussion ring**
 
 ### C5. Compound and paired-vocabulary canonicalize (8 entries)
 
