@@ -1,0 +1,300 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# bin/build-monograph — assemble the Agentic Systems Framework monograph and
+# compile it to PDF via LuaLaTeX. Output:
+#     mono/agentic-framework-v<semver>[+<sha>].{md,pdf}
+#
+# v0.1.0 minimum-viable scaffold:
+#   — reads mono/VERSION, computes stem (with optional +<short-sha>)
+#   — copies mono/main.tex + mono/preamble/ into mono/.build/<stem>/
+#   — applies the Libertinus-Mono patch to vendored kaobook (idempotent)
+#   — runs lualatex with TEXINPUTS set to mono/vendor/kaobook
+#   — copies PDF up to mono/<stem>.pdf
+#
+# Future passes layer in: master OUTLINE walk → assembled markdown emission,
+# kramdown→LaTeX subclass for segments, biber bibliography, page-budget
+# reporting, --public / --review variants, etc.
+
+require 'fileutils'
+require 'pathname'
+require 'open3'
+
+ROOT_DIR     = Pathname.new(__dir__).parent.expand_path
+MONO_DIR     = ROOT_DIR / 'mono'
+LIB_DIR      = MONO_DIR / 'lib'
+VENDOR_KAO   = MONO_DIR / 'vendor' / 'kaobook'
+BUILD_DIR    = MONO_DIR / '.build'
+VERSION_FILE = MONO_DIR / 'VERSION'
+
+$LOAD_PATH.unshift(LIB_DIR.to_s)
+require 'segment_renderer'
+require 'outline_walker'
+
+# Components ordered as Parts I–IV of the monograph. Each contributes its
+# own OUTLINE.md, which the walker resolves to an ordered manifest of
+# sections / scope-text / segments / gaps.
+COMPONENTS = [
+  { dir: '01-aad-core',         title: 'Adaptation and Actuation Dynamics' },
+  { dir: '02-tst-core',         title: 'Temporal Software Theory' },
+  { dir: '03-logogenic-agents', title: 'Logogenic Agents' },
+  { dir: '04-eli',              title: 'Emergent Logozoetic Intelligences' },
+].freeze
+
+# Default to review mode (keeps Working Notes, surfaces stage marginalia);
+# pass --public for the DOI-snapshot variant that strips them.
+VARIANT = ARGV.include?('--public') ? :public : :review
+
+# ── Naming ──────────────────────────────────────────────────────────────────
+
+def short_sha
+  out, status = Open3.capture2('git', '-C', ROOT_DIR.to_s, 'rev-parse', '--short=7', 'HEAD')
+  abort 'git: unable to read HEAD short-sha' unless status.success?
+  out.strip
+end
+
+# Returns true when HEAD is exactly tagged 'v<semver>'. In that case the
+# release artifact carries no +sha suffix — it *is* the release.
+def head_at_release_tag?(semver)
+  tag = "v#{semver}"
+  _out, _err, status = Open3.capture3('git', '-C', ROOT_DIR.to_s,
+                                      'describe', '--exact-match', '--tags',
+                                      '--match', tag, 'HEAD')
+  status.success?
+end
+
+def build_stem
+  semver = VERSION_FILE.read.strip
+  if head_at_release_tag?(semver)
+    "agentic-framework-v#{semver}"
+  else
+    "agentic-framework-v#{semver}+#{short_sha}"
+  end
+end
+
+# ── Build steps ─────────────────────────────────────────────────────────────
+
+# kaobook's modern fontmethod sets \setmonofont{Liberation Mono} on line ~1153
+# of kao.sty — almost certainly an upstream typo for "Libertinus Mono" (the
+# family-matching companion to the Libertinus Serif/Sans set just above).
+# We don't have Liberation Mono on this toolchain; TeX Live ships Libertinus
+# Mono. Patch is idempotent and only touches the vendored copy.
+def patch_kao_sty
+  kao_sty = VENDOR_KAO / 'kao.sty'
+  return unless kao_sty.exist?
+
+  text = kao_sty.read
+  patched = text.sub(/\{Liberation Mono\}/, '{Libertinus Mono}')
+  return if patched == text
+
+  kao_sty.write(patched)
+  warn 'Patched vendored kao.sty: Liberation Mono → Libertinus Mono'
+end
+
+def stage_sources(stem)
+  stage = BUILD_DIR / stem
+  FileUtils.mkdir_p(stage)
+  FileUtils.cp(MONO_DIR / 'main.tex', stage / "#{stem}.tex")
+  # cp_r's :remove_destination flag only affects existing files, not the
+  # target directory tree — without the explicit rm_rf, a second build nests
+  # preamble/ inside the prior preamble/ instead of replacing it.
+  FileUtils.rm_rf(stage / 'preamble')
+  FileUtils.cp_r(MONO_DIR / 'preamble', stage / 'preamble')
+  stage
+end
+
+# Outline-prose lines that are repo-meta, not part of the reader-facing
+# theory. We skip these during body assembly so the rendered book doesn't
+# include build-system instructions and graph-image references inline.
+PROSE_NOISE = [
+  /\AWorking draft\./, /\ASee\s+`?FORMAT\.md/, /\ASee\s+`?NOTATION\.md/,
+  /\A!\[/, /\AEvery slug is linked/, /\AThe build tool/,
+].freeze
+
+def skip_prose?(content)
+  PROSE_NOISE.any? { |re| content.match?(re) }
+end
+
+# Walk every component, render each segment to its own .tex file, and
+# assemble body.tex with the proper part/chapter structure.
+def assemble_body(stage, variant:)
+  segments_dir = stage / 'segments'
+  FileUtils.rm_rf(segments_dir)
+  FileUtils.mkdir_p(segments_dir)
+
+  body  = []
+  stats = { rendered: 0, missing: 0, gaps: 0, errors: 0 }
+
+  COMPONENTS.each do |comp|
+    outline = ROOT_DIR / comp[:dir] / 'OUTLINE.md'
+    unless outline.exist?
+      warn "skip: #{outline} not found"
+      next
+    end
+
+    body << ''
+    body << "\\pagelayout{wide}"
+    body << "\\addpart{#{escape_latex(comp[:title])}}"
+    body << "\\pagelayout{margin}"
+    body << ''
+
+    first_section_seen = false
+    Mono::OutlineWalker.walk(outline).each do |item|
+      case item[:kind]
+      when :section
+        # Skip the H1 component title (we already emitted the part).
+        next if item[:level] == 1
+        cmd = case item[:level]
+              when 2 then 'chapter'
+              when 3 then 'section'
+              when 4 then 'subsection'
+              else 'subsubsection'
+              end
+        body << "\\#{cmd}{#{escape_latex(item[:title])}}"
+        first_section_seen = true
+
+      when :scope
+        # Italic scope paragraphs surface under section headers.
+        body << "\\begin{quote}\\itshape #{escape_latex(item[:content])}\\end{quote}"
+
+      when :prose
+        next if skip_prose?(item[:content])
+        # Only emit prose AFTER we've seen the first section — preamble
+        # prose under the H1 is FORMAT-meta and rarely useful in the
+        # rendered output.
+        next unless first_section_seen
+        body << escape_latex(item[:content])
+        body << ''
+
+      when :segment
+        slug = item[:slug]
+        begin
+          tex = Mono::SegmentRenderer.render(item[:path], variant: variant)
+          (segments_dir / "#{slug}.tex").write(tex)
+          body << "\\input{segments/#{slug}}"
+          stats[:rendered] += 1
+        rescue StandardError => e
+          warn "render failed: #{slug}: #{e.class}: #{e.message}"
+          body << "\\par\\textbf{[Render error: #{slug}]}\\par"
+          stats[:errors] += 1
+        end
+
+      when :missing
+        type_label = Kramdown::Converter::AsfLatex::TYPE_LABEL[item[:type].downcase] || item[:type]
+        body << "\\missingsegment{#{escape_latex(type_label)}}" \
+                "{#{escape_latex(item[:slug])}}" \
+                "{#{escape_latex(item[:claim])}}"
+        stats[:missing] += 1
+
+      when :gap
+        body << "\\outlinegap{#{escape_latex(item[:description])}}"
+        stats[:gaps] += 1
+      end
+    end
+  end
+
+  (stage / 'body.tex').write(body.join("\n") + "\n")
+  stats
+end
+
+# Minimal LaTeX escape for outline-derived strings (NOT for segment body
+# content, which goes through the kramdown converter's own escape).
+def escape_latex(text)
+  text.to_s
+      .gsub('\\', '\\textbackslash{}')
+      .gsub('&',  '\\&')
+      .gsub('%',  '\\%')
+      .gsub('$',  '\\$')
+      .gsub('#',  '\\#')
+      .gsub('_',  '\\_')
+      .gsub('{',  '\\{')
+      .gsub('}',  '\\}')
+      .gsub('~',  '\\textasciitilde{}')
+      .gsub('^',  '\\textasciicircum{}')
+end
+
+def run_lualatex(stage, stem)
+  env = {
+    # Vendored kaobook + project preamble dirs on the kpathsea search path.
+    # Trailing colon means "merge with the default search path."
+    'TEXINPUTS' => "#{stage}:#{VENDOR_KAO}:",
+  }
+  # Note: no -halt-on-error. With ~174 segments rendered, source-side math
+  # idiosyncrasies (FORMAT-violating syntax we haven't shimmed yet) would
+  # otherwise abort the whole build at the first one. Letting lualatex
+  # continue past errors gives us a PDF showing the rendered corpus with
+  # bad pages where issues occurred — sufficient for the styling-feedback
+  # cycle, and the error list in the log tells us what to fix next.
+  cmd = [
+    'lualatex',
+    '-interaction=nonstopmode',
+    '-file-line-error',
+    "-output-directory=#{stage}",
+    "#{stage}/#{stem}.tex",
+  ]
+  # Two passes so \cref / \ref / \tableofcontents resolve. (LaTeX writes its
+  # forward-ref data to .aux on pass 1, reads it on pass 2.)
+  2.times do |pass|
+    _out, status = Open3.capture2e(env, *cmd)
+    # status.success? is false even when LaTeX produces a PDF if there were
+    # errors. We accept a build that produced a PDF; otherwise abort.
+    next if (stage / "#{stem}.pdf").exist?
+
+    abort "lualatex (pass #{pass + 1}) produced no PDF for #{stem}. " \
+          "See #{stage}/#{stem}.log for the trace."
+  end
+end
+
+def copy_outputs(stage, stem)
+  src_pdf = stage / "#{stem}.pdf"
+  dst_pdf = MONO_DIR / "#{stem}.pdf"
+  # Snapshot the previous build before overwriting.
+  FileUtils.cp(dst_pdf, MONO_DIR / "#{stem}.prior.pdf") if dst_pdf.exist?
+  FileUtils.cp(src_pdf, dst_pdf)
+  dst_pdf
+end
+
+# Scan the LaTeX log for errors and emit a digest. Used after the compile
+# loop to surface what didn't render cleanly so we can prioritize fixes.
+def summarize_errors(stage, stem)
+  log = stage / "#{stem}.log"
+  return unless log.exist?
+
+  errors = []
+  log.each_line do |line|
+    case line
+    when /^! /, /^.+?:\d+: /
+      errors << line.strip
+    end
+  end
+  return if errors.empty?
+
+  warn ''
+  warn "LaTeX errors (#{errors.size}):"
+  errors.first(20).each { |e| warn "  #{e}" }
+  warn "  ... (#{errors.size - 20} more)" if errors.size > 20
+end
+
+# ── Main ────────────────────────────────────────────────────────────────────
+
+def main
+  unless VENDOR_KAO.exist?
+    abort "kaobook not vendored. Expected: #{VENDOR_KAO}\n" \
+          'Run: cd mono/vendor && git clone --depth 1 https://github.com/fmarotta/kaobook.git'
+  end
+
+  patch_kao_sty
+  stem  = build_stem
+  stage = stage_sources(stem)
+  warn "Assembling body (variant: #{VARIANT})..."
+  stats = assemble_body(stage, variant: VARIANT)
+  warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
+       "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
+  warn "Compiling #{stem}..."
+  run_lualatex(stage, stem)
+  pdf = copy_outputs(stage, stem)
+  summarize_errors(stage, stem)
+  warn "Built → #{pdf.relative_path_from(ROOT_DIR)}"
+end
+
+main if $PROGRAM_NAME == __FILE__

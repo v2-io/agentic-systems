@@ -1,0 +1,98 @@
+% mono/preamble/environments.tex
+%
+% Segment environments — the visual register for the 19 segment types
+% defined in FORMAT.md. Architecture:
+%
+%   \segmenthead{<Type Label>}{<Title>}{<status>}
+%      ... segment body ...
+%   \segmentfoot
+%
+% The kramdown emitter produces these directly. No 19 distinct LaTeX
+% environments — one parameterized macro pair, type label as a string. This
+% keeps the AAD type taxonomy and the LaTeX taxonomy decoupled: when FORMAT
+% grows a 20th type, the build pipeline maps it to the right label and the
+% rendering needs no change here.
+%
+% Numbering uses a single shared counter per chapter (matches the existing
+% bin/build markdown behavior: "Definition I.3", "Result II.7", etc.). The
+% counter is named 'segment' rather than 'claim' (per FORMAT's vocabulary —
+% segments hold claims; not all segments contain a single claim).
+
+\newcounter{segment}[chapter]
+% FORMAT.md uses "Definition I.3, Result II.7" with roman chapter numerals;
+% match it here. (kaobook's kao chapter style already renders the BIG margin
+% chapter glyph in roman, but \thechapter itself is arabic — \Roman{chapter}
+% in the counter format aligns the body convention with the head.)
+\renewcommand{\thesegment}{\Roman{chapter}.\arabic{segment}}
+
+% Internal section subheads — \segmentsubhead{Formal Expression}, etc.
+\NewDocumentCommand{\segmentsubhead}{m}{%
+  \par\medskip%
+  \noindent{\sffamily\bfseries #1}\par\nobreak\smallskip%
+}
+
+% Segment opener. Three args:
+%   #1 = type label (string, e.g. "Result", "Derivation")
+%   #2 = title (the human-readable form of the slug)
+%   #3 = status (string, e.g. "exact"; empty string = no badge)
+%
+% The third argument is always required; the kramdown emitter passes the
+% empty string when frontmatter has no `status:` set, which suppresses the
+% badge via the IfStrEq below.
+\NewDocumentCommand{\segmenthead}{m m m}{%
+  \refstepcounter{segment}%
+  \par\medskip%
+  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \nobreak\smallskip%
+  \noindent%
+  {\sffamily\bfseries #1~\thesegment}%
+  \IfStrEq{#3}{}{}{\statusbadge{#3}}%
+  \nobreak\quad\textcolor{rule-gray}{\textbullet}\quad%
+  {\itshape #2}.%
+  \par\nobreak\smallskip%
+  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \nobreak\medskip%
+}
+
+% Segment closer.
+\NewDocumentCommand{\segmentfoot}{}{%
+  \par\medskip%
+  \noindent\textcolor{rule-gray}{\rule{0.3\linewidth}{0.3pt}}\par%
+  \medskip%
+}
+
+% Stage marker — review-mode only. Surfaces the `stage:` frontmatter field
+% (draft / deps-verified / claims-verified / format-clean / candidate) as a
+% small marginal note. The kramdown emitter only calls this in :review
+% variant; :public elides it entirely.
+\NewDocumentCommand{\segmentstage}{m}{%
+  \marginnote{\footnotesize\sffamily\color{status-tentative}stage: #1}%
+}
+
+% Missing-segment placeholder — for slugs listed in OUTLINE.md but without
+% a corresponding src/ file. Generates a TOC entry and a visible marker so
+% reviewers see the gap in the rendered output, not just in a sidecar list.
+\NewDocumentCommand{\missingsegment}{m m m}{%
+  % #1 = type label, #2 = slug, #3 = claim text (from the outline table)
+  \refstepcounter{segment}%
+  \par\medskip%
+  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \nobreak\smallskip%
+  \noindent%
+  {\sffamily\bfseries\color{status-tentative} #1~\thesegment}%
+  \quad\textcolor{rule-gray}{\textbullet}\quad%
+  {\itshape\color{status-tentative} #3}.%
+  \par\nobreak\smallskip%
+  \noindent\emph{Segment \texttt{#2} not yet written.}\par%
+  \nobreak\smallskip%
+  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \nobreak\medskip%
+}
+
+% Gap marker — for --GAP-- entries in OUTLINE tables (theory not yet
+% developed; no slug, just a description of the open question).
+\NewDocumentCommand{\outlinegap}{m}{%
+  \par\medskip%
+  \noindent\textcolor{status-tentative}{\textbf{[Gap]}}~\emph{#1}\par%
+  \medskip%
+}

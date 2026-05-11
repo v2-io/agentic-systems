@@ -1,0 +1,33 @@
+% mono/preamble/status-badges.tex
+%
+% Small inline badges expressing a segment's `status:` frontmatter — the
+% epistemic tier. Visible alongside the type label in the segment header so
+% the reader's eye registers "Result II.4 (exact)" vs "Result II.4 (heuristic)"
+% as the meaningfully different artifacts they are. Load-bearing for AAD's
+% honesty discipline; not cosmetic.
+%
+% Tier groupings (visually consistent within each):
+%   solid       axiomatic, exact                   — settled
+%   soft        robust-qualitative, heuristic,
+%               conditional, empirical             — qualified
+%   tentative   discussion-grade, sketch           — discussion-only
+%
+% The dash-separated tier names ("robust-qualitative", "discussion-grade")
+% map to display strings with the dash replaced by a space.
+
+\usepackage{xstring}
+
+\NewDocumentCommand{\statusbadge}{m}{%
+  \hspace{0.4em}%
+  {\footnotesize\sffamily%
+  \IfStrEqCase{#1}{%
+    {axiomatic}          {\color{status-exact}\textsc{axiomatic}}%
+    {exact}              {\color{status-exact}\textsc{exact}}%
+    {robust-qualitative} {\color{status-soft}\textsc{robust qualitative}}%
+    {heuristic}          {\color{status-soft}\textsc{heuristic}}%
+    {conditional}        {\color{status-soft}\textsc{conditional}}%
+    {empirical}          {\color{status-soft}\textsc{empirical}}%
+    {discussion-grade}   {\color{status-tentative}\textsc{discussion-grade}}%
+    {sketch}             {\color{status-tentative}\textsc{sketch}}%
+  }[\color{status-soft}\textsc{#1}]}% fallback for unknown
+}

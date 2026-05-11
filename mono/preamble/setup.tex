@@ -1,0 +1,94 @@
+% mono/preamble/setup.tex
+%
+% Base preamble for the Agentic Systems Framework monograph.
+% Loaded by main.tex after \documentclass{kaobook}.
+%
+% Conventions:
+% — fontmethod=modern (unicode-math) so we can use fontspec to swap in
+%   open-source Garamond + Roboto for the Principia-flavored aesthetic.
+% — Math-compat macros for GFM/Obsidian idioms (\lt, \gt, etc.) are defined
+%   here rather than reverse-transformed in source: the segment markdown is
+%   the source of truth and stays viewer-friendly in both worlds.
+
+%----------------------------------------------------------------------------
+% Language & quoting
+%----------------------------------------------------------------------------
+\usepackage[english]{babel}
+\usepackage[english=american]{csquotes}
+
+%----------------------------------------------------------------------------
+% Math
+%----------------------------------------------------------------------------
+% kaobook's modern fontmethod pulls in unicode-math + Libertinus by default;
+% we override the math font below with STIX Two Math for the Garamond pairing.
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+% amsthm-style theorem environments are provided by kaotheorems (loaded in main.tex).
+
+%----------------------------------------------------------------------------
+% Fonts — EB Garamond + Roboto Light + STIX Two Math
+%
+% These names match what fontspec finds via the OS fontconfig database; on
+% TeX Live 2025 the EB Garamond and Roboto packages also install the same
+% OTFs into the tex tree, so the lookup works on machines without the system
+% fonts. STIX Two Math ships with macOS (we use the system copy) and is also
+% available via the stix2-otf TL package on Linux.
+%----------------------------------------------------------------------------
+\setmainfont{EB Garamond}[
+  Ligatures        = {TeX, Common},
+  Numbers          = OldStyle,
+  SmallCapsFeatures= {LetterSpace=4},
+]
+\setsansfont{Roboto Light}[
+  Ligatures   = TeX,
+  Scale       = MatchLowercase,
+  BoldFont    = {Roboto Medium},
+  ItalicFont  = {Roboto Light Italic},
+]
+% Monospace: kaobook will leave Libertinus Mono via modern fontmethod; we
+% keep it for now and revisit when we render code blocks.
+
+\setmathfont{STIX Two Math}
+
+%----------------------------------------------------------------------------
+% GFM/Obsidian math-compat macros
+%
+% Source segments use \lt and \gt because raw < and > break GitHub's math
+% renderer (interpreted as HTML tags). LaTeX math knows neither command, so
+% define them as the obvious operators. \ast is standard LaTeX math — no-op.
+%----------------------------------------------------------------------------
+\providecommand{\lt}{<}
+\providecommand{\gt}{>}
+
+%----------------------------------------------------------------------------
+% Microtypography
+%----------------------------------------------------------------------------
+\usepackage{microtype}
+
+%----------------------------------------------------------------------------
+% String predicates — used by segment-environment and status-badge logic.
+%----------------------------------------------------------------------------
+\usepackage{xstring}
+
+%----------------------------------------------------------------------------
+% Color palette
+%
+% Cream paper background is the Principia signature — commented out by
+% default so v0.1.0 ships on white, which is the preprint convention. Flip
+% the comment to bring the warmth back.
+%----------------------------------------------------------------------------
+\usepackage{xcolor}
+\definecolor{paper-cream}    {HTML}{FFFEF2}  % Principia background
+\definecolor{accent-deep}    {HTML}{8B0000}  % accent for section heads, refs
+\definecolor{rule-gray}      {HTML}{CCCCCC}
+\definecolor{status-exact}   {HTML}{2E5A88}  % blue-ish; settled
+\definecolor{status-soft}    {HTML}{8B6914}  % muted gold; heuristic/qualitative
+\definecolor{status-tentative}{HTML}{8B4A2F} % muted rust; sketch/discussion-grade
+
+% \pagecolor{paper-cream}  % uncomment for cream paper
+
+%----------------------------------------------------------------------------
+% That's it for the base preamble. Segment environments, status badges, and
+% equation-tag margin commands land in their own preamble files in task 2.
+%----------------------------------------------------------------------------

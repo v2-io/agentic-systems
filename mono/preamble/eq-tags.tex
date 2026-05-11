@@ -1,0 +1,28 @@
+% mono/preamble/eq-tags.tex
+%
+% Equation-level tag rendering. In segment source these look like:
+%
+%     *[Derived (slug-name, from prior-slug)]*
+%
+%     $$ \alpha > \rho/R $$
+%
+% They mark the epistemic mode of the *next* equation (Derived / Hypothesis
+% / Empirical Claim / Formulation / Discussion / Assumption / Postulate /
+% Definition). FORMAT.md §Equation-Level Tags lists the full vocabulary.
+%
+% Rendering: margin note attached to the equation it labels. kaobook's
+% \marginnote machinery handles placement, hyphenation, and the
+% sans/small typographic register.
+%
+% Usage from the kramdown emitter:
+%
+%     \eqtag{Derived (slug, from prior-slug)}
+%     \begin{equation*} ... \end{equation*}
+%
+% The tag attaches to the line where \eqtag is called, which lines up with
+% the equation that immediately follows. (kaobook's \marginnote works in
+% both horizontal and vertical modes.)
+
+\NewDocumentCommand{\eqtag}{m}{%
+  \marginnote{\footnotesize\sffamily\color{status-soft}#1}%
+}

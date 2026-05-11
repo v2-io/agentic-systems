@@ -1,0 +1,7 @@
+vendor/
+.build/
+*.prior.pdf
+# Incremental-build artifacts (+<sha> suffix). Release artifacts have no
+# +<sha> and can be tracked when a tagged build lands.
+agentic-framework-v*+*.pdf
+agentic-framework-v*+*.md
