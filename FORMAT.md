@@ -2,6 +2,8 @@
 
 How to write and maintain AAD claim segment files.
 
+> **No-drift discipline.** Key process terms used throughout this file are cross-linked to entries in [`terminology/entries/`](terminology/entries/). If a term's meaning changes, update both FORMAT.md and the corresponding terminology entry — they must stay in sync. Format conventions live here; concise definitions and the canonical prose vocabulary live in the entries (and are auto-rendered into [`LEXICON.md`](LEXICON.md)).
+
 
 ## Line Wrapping
 
@@ -45,25 +47,25 @@ depends:
 
 | Type | Meaning |
 |------|---------|
-| `postulate` | Tautological or foundational — cannot be derived, only accepted |
-| `definition` | Introduces a quantity, object, or notation |
-| `scope` | Restricts or broadens the domain under discussion |
-| `formulation` | Representational or modeling choice (could be different) |
-| `derived` | Logical consequence of prior claims under stated assumptions |
-| `result` | Formally stated with a detailed derivation |
-| `corollary` | Follows directly from a theorem |
-| `hypothesis` | Structurally motivated, needs validation |
-| `normative` | Grounded in axioms but requiring a precondition that must be verified |
-| `empirical` | Generalization supported by data, not fully derived |
-| `observation` | Finding from simulation or empirical investigation |
-| `discussion` | Conceptual or normative claim used for interpretation |
-| `measurement` | Operationalization of a theoretical quantity |
-| `proposed-schema` | Mathematical shape identified, formal content pending |
-| `derivation` | Complete formal derivation backing a result or derived claim |
-| `worked-example` | End-to-end domain instantiation validating the theory chain |
-| `detail` | Extended operational or technical material supporting other claims |
-| `sketch` | Outlines an approach or framework; direction identified, rigor pending |
-| `aside` | Tangential observation or connection; informative but not load-bearing |
+| [`postulate`](terminology/entries/postulate.md) | Tautological or foundational — cannot be derived, only accepted |
+| [`definition`](terminology/entries/definition.md) | Introduces a quantity, object, or notation |
+| [`scope`](terminology/entries/scope.md) | Restricts or broadens the domain under discussion |
+| [`formulation`](terminology/entries/formulation.md) | Representational or modeling choice (could be different) |
+| [`derived`](terminology/entries/derived.md) | Logical consequence of prior claims under stated assumptions |
+| [`result`](terminology/entries/result.md) | Formally stated with a detailed derivation |
+| [`corollary`](terminology/entries/corollary.md) | Follows directly from a theorem |
+| [`hypothesis`](terminology/entries/hypothesis.md) | Structurally motivated, needs validation |
+| [`normative`](terminology/entries/normative.md) | Grounded in axioms but requiring a precondition that must be verified |
+| [`empirical`](terminology/entries/type-empirical.md) | Generalization supported by data, not fully derived |
+| [`observation`](terminology/entries/observation.md) | Finding from simulation or empirical investigation |
+| [`discussion`](terminology/entries/type-discussion.md) | Conceptual or normative claim used for interpretation |
+| [`measurement`](terminology/entries/measurement.md) | Operationalization of a theoretical quantity |
+| [`proposed-schema`](terminology/entries/proposed-schema.md) | Mathematical shape identified, formal content pending |
+| [`derivation`](terminology/entries/derivation.md) | Complete formal derivation backing a result or derived claim |
+| [`worked-example`](terminology/entries/worked-example.md) | End-to-end domain instantiation validating the theory chain |
+| [`detail`](terminology/entries/detail.md) | Extended operational or technical material supporting other claims |
+| [`sketch`](terminology/entries/type-sketch.md) | Outlines an approach or framework; direction identified, rigor pending |
+| [`aside`](terminology/entries/aside.md) | Tangential observation or connection; informative but not load-bearing |
 
 **Why these labels.** The terminology emphasizes that AAD is a *theoretical framework* using existing mathematics, not a pure-mathematics unification project. `postulate` (not `axiom`), `result` (not `theorem`), and `derivation` (not `proof`) avoid the framing that AAD claims foundational mathematical originality where it does not. References to external theorems keep their original names — Cox's theorem, Causal Hierarchy Theorem, Tikhonov's theorem — these are other authors' terms and renaming them would obscure provenance. Segment headings follow suit: `### Derivation`, not `### Proof Sketch`. Equation-level tags use `*[Postulate (slug)]*` and `*[Result (slug)]*`. Historical files (`_obs/`, `msc/`) are not retroactively updated — they preserve the terminology of their era.
 
@@ -71,14 +73,14 @@ depends:
 
 | Status | Meaning |
 |--------|---------|
-| `axiomatic` | Foundational or tautological |
-| `exact` | Mathematically validated under stated assumptions |
-| `robust-qualitative` | Survives across assumptions; specific form approximate |
-| `heuristic` | Useful approximation; quantitative form may not hold |
-| `conditional` | Depends on explicitly named local assumptions |
-| `empirical` | Supported by data or simulation, not fully derived |
-| `discussion-grade` | Argued qualitatively or by analogy, not derived |
-| `sketch` | Direction identified but formalization incomplete |
+| [`axiomatic`](terminology/entries/axiomatic.md) | Foundational or tautological |
+| [`exact`](terminology/entries/exact.md) | Mathematically validated under stated assumptions |
+| [`robust-qualitative`](terminology/entries/robust-qualitative.md) | Survives across assumptions; specific form approximate |
+| [`heuristic`](terminology/entries/heuristic.md) | Useful approximation; quantitative form may not hold |
+| [`conditional`](terminology/entries/conditional.md) | Depends on explicitly named local assumptions |
+| [`empirical`](terminology/entries/status-empirical.md) | Supported by data or simulation, not fully derived |
+| [`discussion-grade`](terminology/entries/discussion-grade.md) | Argued qualitatively or by analogy, not derived |
+| [`sketch`](terminology/entries/status-sketch.md) | Direction identified but formalization incomplete |
 
 Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not AAD terms.
 
@@ -94,13 +96,13 @@ Stage is recorded in segment frontmatter (e.g., `stage: draft`) and in the OUTLI
 
 | Stage | Meaning | Gate to advance |
 |-------|---------|-----------------|
-| `missing` | No segment file exists yet | — |
+| [`missing`](terminology/entries/missing.md) | No segment file exists yet | — |
 | `old` | Content exists only as `old-*` source material, not yet converted | Write AAD-formatted version |
-| `draft` | First AAD-formatted version written, not yet reviewed | — |
-| `deps-verified` | All dependencies audited | Dependency audit (see below) |
-| `claims-verified` | Content reviewed: derivations valid, labels accurate | Content review (see below) |
-| `format-clean` | Mechanical review passed | Mechanical review (see below) |
-| `candidate` | Ready for external challenge; Working Notes resolved | Working Notes disposition (see below) |
+| [`draft`](terminology/entries/draft.md) | First AAD-formatted version written, not yet reviewed | — |
+| [`deps-verified`](terminology/entries/deps-verified.md) | All dependencies audited | [Dependency audit](terminology/entries/dependency-audit.md) (see below) |
+| [`claims-verified`](terminology/entries/claims-verified.md) | Content reviewed: derivations valid, labels accurate | [Content review](terminology/entries/content-review.md) (see below) |
+| [`format-clean`](terminology/entries/format-clean.md) | Mechanical review passed | [Mechanical review](terminology/entries/mechanical-review.md) (see below) |
+| [`candidate`](terminology/entries/candidate.md) | Ready for external challenge; Working Notes resolved | [Notes disposition](terminology/entries/notes-disposition.md) (see below) |
 
 Stages are ordered: a segment at `claims-verified` has also passed `deps-verified`. A segment can be downgraded (e.g., `candidate` → `draft`) when a dependency changes, an error is found, or the claim's scope shifts.
 
@@ -115,7 +117,7 @@ Compute the dependency DAG from `depends:` fields. Promote leaves first, then th
 
 Group segments into promotion batches by DAG depth. Process all segments in a batch before advancing to the next. Within a batch, segments are independent and can be reviewed in parallel.
 
-### Gate 1: Dependency audit → `deps-verified`
+### Gate 1: [Dependency audit](terminology/entries/dependency-audit.md) → [`deps-verified`](terminology/entries/deps-verified.md)
 
 For each entry in `depends:`:
 
@@ -126,7 +128,7 @@ For each entry in `depends:`:
 
 **Completion criterion:** all dependencies verified, no missing dependencies identified.
 
-### Gate 2: Content review → `claims-verified`
+### Gate 2: [Content review](terminology/entries/content-review.md) → [`claims-verified`](terminology/entries/claims-verified.md)
 
 The substantive gate. For each segment, answer the three epistemic triage questions:
 
@@ -142,7 +144,7 @@ Additionally:
 
 **Completion criterion:** derivations valid, all labels accurate, no known issues with formal expressions. If the review reveals a mismatch, the segment returns to `draft` with a specific note about what is wrong.
 
-### Gate 3: Mechanical review → `format-clean`
+### Gate 3: [Mechanical review](terminology/entries/mechanical-review.md) → [`format-clean`](terminology/entries/format-clean.md)
 
 Separate from content review — different cognitive mode.
 
@@ -174,7 +176,7 @@ When briefing a spike-agent, include an explicit deliverable: *"if any novel mat
 
 Appendix segments are the right home for: regret-bound derivations, Fisher-information calculations, sector-condition algebra specific to a result, Cramér-Rao floor calculations, and similar derivation-heavy content that supports a main-section claim.
 
-### Gate 4: Working Notes disposition → `candidate`
+### Gate 4: [Notes disposition](terminology/entries/notes-disposition.md) → [`candidate`](terminology/entries/candidate.md)
 
 Every item in `## Working Notes` must be explicitly resolved:
 
@@ -254,23 +256,23 @@ When a segment carries multiple distinct findings — e.g., one segment-internal
 
 #### Field-by-field guidance
 
-**Brief.** Plain-language paragraph that a thoughtful generalist could read in 30 seconds and come away with an honest sense of what this finding is. The aspiration is the **Feynman criterion** — *if you can't explain it simply, you don't understand it yet.* A genuinely good Brief reaches for the everyday physical or causal analog that carries the load-bearing structure, in language that lets a thoughtful non-specialist *re-derive the qualitative claim from the analog alone*, without ever seeing the symbols. The canonical example for AAD's central inequality is the bathtub: water level is the gap between belief and reality, faucet flow is the rate at which reality is changing, drain rate is the agent's ability to learn, and bathtub size is how wrong the agent can be while still keeping up. Structural persistence is the condition that drain-rate-at-full exceeds faucet-flow; below it the bathtub overflows. A reader who carries that picture away has the Section I result in hand without ever meeting α, ρ, or R. Reach for the analog whose physics or causal structure is *isomorphic* to the finding's load-bearing structure, not merely evocative — the test is whether a reader can predict the qualitative consequences of perturbing the analog and have those predictions hold against the formalism. Use technical language where there is no plain-language equivalent that preserves meaning, but pause to define or anchor it the first time. The Brief is consistently the most-valuable field for external adoption — it is the field that decides whether an interested reader engages further. Do not let it become a translation-of-the-Impact-paragraph; it should stand on its own.
+**[Brief](terminology/entries/brief-field.md).** Plain-language paragraph that a thoughtful generalist could read in 30 seconds and come away with an honest sense of what this finding is. The aspiration is the **Feynman criterion** — *if you can't explain it simply, you don't understand it yet.* A genuinely good Brief reaches for the everyday physical or causal analog that carries the load-bearing structure, in language that lets a thoughtful non-specialist *re-derive the qualitative claim from the analog alone*, without ever seeing the symbols. The canonical example for AAD's central inequality is the bathtub: water level is the gap between belief and reality, faucet flow is the rate at which reality is changing, drain rate is the agent's ability to learn, and bathtub size is how wrong the agent can be while still keeping up. Structural persistence is the condition that drain-rate-at-full exceeds faucet-flow; below it the bathtub overflows. A reader who carries that picture away has the Section I result in hand without ever meeting α, ρ, or R. Reach for the analog whose physics or causal structure is *isomorphic* to the finding's load-bearing structure, not merely evocative — the test is whether a reader can predict the qualitative consequences of perturbing the analog and have those predictions hold against the formalism. Use technical language where there is no plain-language equivalent that preserves meaning, but pause to define or anchor it the first time. The Brief is consistently the most-valuable field for external adoption — it is the field that decides whether an interested reader engages further. Do not let it become a translation-of-the-Impact-paragraph; it should stand on its own.
 
 The same Feynman-criterion aspiration governs framing-level prose elsewhere (README, OUTLINE preambles, paper introductions, pedagogical material). The Brief field happens to be where the aspiration is institutionalized in the schema, but the principle is general: where the framework is meeting a non-specialist reader, the load-bearing structure should be portable to an everyday analog. The bathtub gloss for `#result-persistence-condition` came not from us but from Alan Walton, a mathematician-practitioner working it out himself on first encounter; that the analog could be reconstructed by a sympathetic outside reader without our prompting is itself a useful diagnostic. Where we have not produced the analog ourselves, the segment is not yet at Feynman criterion.
 
-**Impact.** Paragraph on what this finding *does* in the framework — what it unlocks, what it closes, what it forces. Cross-references to other segments are encouraged where they carry weight (a finding that resolves a previously-flagged GAP, or that lifts a prior result's status, or that makes a downstream construction newly possible). Do not duplicate the Discussion section; Impact is catalog-grade external positioning, while Discussion is in-segment context.
+**[Impact](terminology/entries/impact-field.md).** Paragraph on what this finding *does* in the framework — what it unlocks, what it closes, what it forces. Cross-references to other segments are encouraged where they carry weight (a finding that resolves a previously-flagged GAP, or that lifts a prior result's status, or that makes a downstream construction newly possible). Do not duplicate the Discussion section; Impact is catalog-grade external positioning, while Discussion is in-segment context.
 
-**Novelty Claim.** One or two sentences in prose, naturally leading with a claim posture:
+**[Novelty Claim](terminology/entries/novelty-claim-field.md).** One or two sentences in prose, naturally leading with a claim posture:
 
-- *Claim synthesis on...* — when the finding integrates multiple prior bodies of work in a way no single prior captures.
-- *Claim differentiation on...* — when the finding sharpens or extends prior work; the precursor exists but the extension is the contribution.
-- *Claim novelty on...* — when no direct anticipation has been found at the search depth conducted; the result stands as fresh.
-- *Claim transfer of X into Y* — when established machinery is being applied to a new domain where it had not been formally instantiated.
-- *Claim recognition of structural equivalence (or pattern) between X and Y* — when the contribution is recognizing an internal equivalence or a cross-segment pattern, rather than producing a new derivation.
+- *[Claim synthesis](terminology/entries/synthesis-posture.md) on...* — when the finding integrates multiple prior bodies of work in a way no single prior captures.
+- *[Claim differentiation](terminology/entries/differentiation-posture.md) on...* — when the finding sharpens or extends prior work; the precursor exists but the extension is the contribution.
+- *[Claim novelty](terminology/entries/novelty-posture.md) on...* — when no direct anticipation has been found at the search depth conducted; the result stands as fresh.
+- *[Claim transfer](terminology/entries/transfer-posture.md) of X into Y* — when established machinery is being applied to a new domain where it had not been formally instantiated.
+- *[Claim recognition](terminology/entries/recognition-posture.md) of structural equivalence (or pattern) between X and Y* — when the contribution is recognizing an internal equivalence or a cross-segment pattern, rather than producing a new derivation.
 
 These postures are open prose, not a closed enum; the sweep can converge on additional postures as needed. The point is to make the *kind of claim* visible at a glance, with the prose carrying the substance.
 
-**Related Work.** One entry per prior work that bears on this finding. Each entry carries (a) citation, (b) publication date — useful for catching anachronism (something published 2024 cannot be precursor to something derived 2025), (c) date the project found the work, (d) a relationship label, (e) a one-line note on the specific connection.
+**[Related Work](terminology/entries/related-work-field.md).** One entry per prior work that bears on this finding. Each entry carries (a) citation, (b) publication date — useful for catching anachronism (something published 2024 cannot be precursor to something derived 2025), (c) date the project found the work, (d) a relationship label, (e) a one-line note on the specific connection.
 
 Two presentation forms are permitted; choose whichever fits the prior-art landscape:
 
@@ -308,7 +310,7 @@ Suggested relationship labels (open-ended; the sweep can add):
 - *empirical instantiation supporting / against* — concrete case from the literature that bears on the finding.
 - *adjacent literature* — relevant context that informs reading but is not directly antecedent.
 
-**Search Log.** Dated entries that disclose what literature search has been conducted and how. Each entry records (a) the date, (b) the search status (`not-conducted` / `cursory` / `targeted` / `nominally-comprehensive` / `comprehensive` / `intuition-only`), (c) a one-sentence note on what was searched and what was not. As searches deepen over time, new entries are appended (older entries stay for traceability). The `nominally-comprehensive` tier covers automated comprehensive-search tools (e.g., Undermind reports) that survey literature broadly but do not reach the depth a human researcher with domain knowledge would call truly comprehensive — they are stronger than `targeted` and weaker than `comprehensive` in the strict sense. The `comprehensive` tier is reserved for searches that have been pushed to that depth (multiple iterations, deliberate corner-case probing, expert review). When a finding has been through a pillar-level prior-art defense (e.g., an Undermind report), the Search Log entry references the defense document and tags the depth honestly.
+**[Search Log](terminology/entries/search-log-field.md).** Dated entries that disclose what literature search has been conducted and how. Each entry records (a) the date, (b) the search status ([`not-conducted`](terminology/entries/not-conducted.md) / [`cursory`](terminology/entries/cursory.md) / [`targeted`](terminology/entries/targeted.md) / [`nominally-comprehensive`](terminology/entries/nominally-comprehensive.md) / [`comprehensive`](terminology/entries/comprehensive.md) / [`intuition-only`](terminology/entries/intuition-only.md)), (c) a one-sentence note on what was searched and what was not. As searches deepen over time, new entries are appended (older entries stay for traceability). The `nominally-comprehensive` tier covers automated comprehensive-search tools (e.g., Undermind reports) that survey literature broadly but do not reach the depth a human researcher with domain knowledge would call truly comprehensive — they are stronger than `targeted` and weaker than `comprehensive` in the strict sense. The `comprehensive` tier is reserved for searches that have been pushed to that depth (multiple iterations, deliberate corner-case probing, expert review). When a finding has been through a pillar-level prior-art defense (e.g., an Undermind report), the Search Log entry references the defense document and tags the depth honestly.
 
 The author creating or promoting a segment is welcome to include an *intuition entry* — what their pre-search instinct says about where prior art might lie, where the well-known form of the result might trace to, or which adjacent literatures would be the natural search targets. For AI agents, this includes intuitions grounded in training rather than in active retrieval; for humans, it includes informed-but-unconfirmed expectations. Tagging the entry status as `intuition-only` makes the source explicit. Intuition entries are valuable: they orient future targeted searches, they make the agent's training-derived priors visible (so they can be confirmed or refuted by later evidence), and they prevent the schema from forcing silence in cases where genuine search has not yet been done. An honest intuition entry beats no entry.
 

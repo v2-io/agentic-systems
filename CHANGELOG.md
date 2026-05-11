@@ -27,6 +27,30 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ## 2026-05-10
 
+### C4 terminology canonicalize batch landed: 58 FORMAT.md process-vocabulary entries + no-drift links
+
+The C4 batch from `TERMINOLOGY-TODO.md` landed in full. Six sub-batches totaling 58 new entries in `terminology/entries/`, plus inline links from FORMAT.md to terminology entries at every definition site (type table rows, status table rows, stage table rows, gate headings, Findings field headings, claim postures, search log depth tiers), plus a no-drift discipline note near the top of FORMAT.md.
+
+**C4a — Segment sections (5 entries, pre-existing).** The five section entries (`epistemic-status-section`, `formal-expression-section`, `discussion-section`, `working-notes-section`, `findings-section`) were already present from prior work. Confirmed complete.
+
+**C4b — Segment type vocabulary (18 entries).** All 18 `type:` frontmatter values now have entries in `terminology/entries/`, organized into three subgroups: "Core Claim Types" (postulate, definition, scope, formulation, derived, result, corollary, derivation; seq 1–8), "Empirical and Interpretive" (hypothesis, normative, type-empirical, observation, measurement; seq 9–13), "Structural and Discursive" (type-discussion, proposed-schema, worked-example, detail, type-sketch, aside; seq 14–19). Two disambiguation slugs: `type-empirical` (segment type) vs `status-empirical` (epistemic status); `type-sketch` vs `status-sketch`. Both carry the paired `aliases:` field for the bare form.
+
+**C4c — Epistemic status vocabulary (8 entries).** All 8 `status:` values now have entries, sequenced strongest-to-weakest: axiomatic → exact → robust-qualitative → conditional → heuristic → status-empirical → discussion-grade → status-sketch (seq 1–8). Same disambiguation pattern as C4b for the two overlapping tokens.
+
+**C4d+e — Stage and gate vocabulary (10 entries).** Two subgroups within `process_vocabulary` tag: "Stages" (missing, draft, deps-verified, claims-verified, format-clean, candidate; seq 1–6) and "Gates" (dependency-audit, content-review, mechanical-review, notes-disposition; seq 11–14). Each gate entry names the resulting stage. `old` stage omitted per TERMINOLOGY-TODO note (implied by filename prefix convention, no separate entry needed).
+
+**C4f — Findings schema vocabulary (16 entries).** Three tiers: five schema field entries (brief-field, impact-field, novelty-claim-field, related-work-field, search-log-field; seq 1–5, no subgroup), five claim postures (synthesis-posture, differentiation-posture, novelty-posture, transfer-posture, recognition-posture; seq 10–14, subgroup "Claim Postures"), six search log depth tiers (not-conducted, cursory, targeted, nominally-comprehensive, comprehensive, intuition-only; seq 20–25, subgroup "Search Log Depth Tiers").
+
+**C4g — Three rings (deferred).** As noted in TERMINOLOGY-TODO: "inevitability core", "canonical formulations ring", and "empirical/heuristic/discussion ring" are deferred until these terms appear in segment prose or audit discussions with enough frequency to justify lexiconization. No action taken.
+
+**FORMAT.md links.** Inline links from the definition site of each term to its `terminology/entries/<slug>.md` entry, following the "link the definition site, not every occurrence" discipline. Type table rows, status table rows, stage table rows, and gate headings are all linked. Findings field headings and claim posture list entries are also linked. Search Log depth tiers linked at first appearance in the Search Log guidance. No-drift note added near the top of FORMAT.md.
+
+`bin/term render --output LEXICON.md --force` regenerated at 137 entries. `bin/term lint` clean (INFOs only).
+
+C4 section removed from `TERMINOLOGY-TODO.md` per the lifecycle discipline (remove-when-done).
+
+---
+
 ### C1 terminology canonicalize batch landed: 29 entries committed to the terminology system
 
 The first batch of terminology canonicalize commitments (C1 from `TERMINOLOGY-TODO.md`) landed in a single commit. 29 terms are now in `terminology/entries/` with complete frontmatter and body prose, backed by `bin/term decide ... canonicalize` events recorded in `terminology/decisions/`. `LEXICON.md` regenerated at 76 entries via `bin/term render`; `bin/term lint` clean (INFOs only — no segment references, all expected at this stage).

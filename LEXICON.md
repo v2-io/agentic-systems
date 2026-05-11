@@ -119,6 +119,52 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Emergent Logozoetic Intelligence (ELI)](terminology/entries/eli.md)** |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 
 
+## Epistemic Status Values
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Axiomatic](terminology/entries/axiomatic.md)** |  | An epistemic status: foundational or tautological — true by definition or stipulation, not by derivation. |
+| **[Exact](terminology/entries/exact.md)** |  | An epistemic status: mathematically validated under stated assumptions — the derivation closes. |
+| **[Robust Qualitative](terminology/entries/robust-qualitative.md)** |  | An epistemic status: qualitative claim survives across modeling assumptions, but specific functional form is approximate. |
+| **[Conditional](terminology/entries/conditional.md)** |  | An epistemic status: depends on explicitly named local assumptions that are not globally established. |
+| **[Heuristic](terminology/entries/heuristic.md)** |  | An epistemic status: useful approximation — qualitative or operational guidance without formal tier. |
+| **[Empirical (epistemic status)](terminology/entries/status-empirical.md)** |  | An epistemic status: supported by data or simulation, not fully derived from the formalism. |
+| **[Discussion-Grade](terminology/entries/discussion-grade.md)** |  | An epistemic status: argued qualitatively or by analogy — not formally derived, not empirically validated. |
+| **[Sketch (epistemic status)](terminology/entries/status-sketch.md)** |  | An epistemic status: direction identified but formalization incomplete — the segment is actively in progress. |
+
+
+## Findings Schema
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Brief Field](terminology/entries/brief-field.md)** |  | The first field in a Findings entry — plain-language paragraph aspiring to the Feynman criterion: can a non-specialist re-derive the qualitative claim from the everyday analog? |
+| **[Impact Field](terminology/entries/impact-field.md)** |  | The second field in a Findings entry — what the finding unlocks, closes, or forces: the external-positioning paragraph. |
+| **[Novelty Claim Field](terminology/entries/novelty-claim-field.md)** |  | The third field in a Findings entry — one or two sentences naming the contribution and its claim posture (synthesis / differentiation / novelty / transfer / recognition). |
+| **[Related Work Field](terminology/entries/related-work-field.md)** |  | The fourth field in a Findings entry — one entry per prior work that bears on the finding, with citation, dates, relationship label, and a one-line note. |
+| **[Search Log Field](terminology/entries/search-log-field.md)** |  | The fifth field in a Findings entry — dated disclosure of what literature search has been conducted and at what depth tier. |
+
+### Claim Postures
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Synthesis Posture](terminology/entries/synthesis-posture.md)** |  | A claim posture in the Novelty Claim field: the finding integrates multiple prior bodies of work in a way no single prior captures. |
+| **[Differentiation Posture](terminology/entries/differentiation-posture.md)** |  | A claim posture in the Novelty Claim field: the finding sharpens or extends prior work — the precursor exists but the extension is the contribution. |
+| **[Novelty Posture](terminology/entries/novelty-posture.md)** |  | A claim posture in the Novelty Claim field: no direct anticipation found at the search depth conducted — the result stands as fresh. |
+| **[Transfer Posture](terminology/entries/transfer-posture.md)** |  | A claim posture in the Novelty Claim field: established machinery applied to a new domain where it had not been formally instantiated. |
+| **[Recognition Posture](terminology/entries/recognition-posture.md)** |  | A claim posture in the Novelty Claim field: the contribution is recognizing a structural equivalence or cross-segment pattern — not a new derivation but a new seeing. |
+
+### Search Log Depth Tiers
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Not-Conducted](terminology/entries/not-conducted.md)** |  | A search log depth tier: no literature search has been performed for this finding yet. |
+| **[Cursory](terminology/entries/cursory.md)** |  | A search log depth tier: a brief initial search has been performed — enough to check for obvious priors, not enough for confident novelty claims. |
+| **[Targeted](terminology/entries/targeted.md)** |  | A search log depth tier: specific venues, authors, or concepts were searched deliberately for this finding. |
+| **[Nominally-Comprehensive](terminology/entries/nominally-comprehensive.md)** |  | A search log depth tier: an automated comprehensive-search tool (e.g., Undermind report) was used — broader than targeted, less deep than comprehensive. |
+| **[Comprehensive](terminology/entries/comprehensive.md)** |  | A search log depth tier: the highest tier — multiple iterations, deliberate corner-case probing, and expert-level review of the prior-art landscape. |
+| **[Intuition-Only](terminology/entries/intuition-only.md)** |  | A search log depth tier: the author's pre-search instinct — for AI agents, training-derived priors; for humans, informed-but-unconfirmed expectations. |
+
+
 ## Greek Vocabulary
 
 | Term | Notation | Brief |
@@ -144,6 +190,77 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Continuity](terminology/entries/continuity.md)** | $\mathcal{C}_t$ | Whether the agent maintains coherent identity through time — $\mathcal{C}_t$ extends, $M_t$ has temporal depth. |
 | **[Operational](terminology/entries/operational-persistence.md)** | $\Delta\rho^\ast = \alpha R - \rho$ | Whether the agent is currently within the guaranteed region — adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$. |
 | **[Structural](terminology/entries/structural-persistence.md)** | $\alpha > \rho / R$ | The correction machinery's *capacity* to maintain bounded mismatch — $\alpha > \rho / R$. |
+
+
+## Promotion Stages and Gates
+
+### Stages
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Missing](terminology/entries/missing.md)** |  | A segment stage: no segment file exists yet — the slot is claimed in OUTLINE.md but the file has not been written. |
+| **[Draft](terminology/entries/draft.md)** |  | A segment stage: first AAD-formatted version written, not yet reviewed through any gate. |
+| **[Deps-Verified](terminology/entries/deps-verified.md)** |  | A segment stage: all dependencies have been audited and confirmed correct — reached by passing Gate 1. |
+| **[Claims-Verified](terminology/entries/claims-verified.md)** |  | A segment stage: content reviewed — derivations valid, labels accurate, no known issues with formal expressions — reached by passing Gate 2. |
+| **[Format-Clean](terminology/entries/format-clean.md)** |  | A segment stage: all mechanical checks pass — linter, cross-references, notation, math rendering — reached by passing Gate 3. |
+| **[Candidate](terminology/entries/candidate.md)** |  | A segment stage: ready for external challenge — Working Notes resolved, all gates passed. |
+
+### Gates
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Dependency Audit](terminology/entries/dependency-audit.md)** |  | Gate 1: verifies that all `depends:` entries exist, are genuine, and are themselves at deps-verified or higher. Produces stage: deps-verified. |
+| **[Content Review](terminology/entries/content-review.md)** |  | Gate 2: the substantive review — derivations valid, labels accurate, Discussion claims epistemically grounded. Produces stage: claims-verified. |
+| **[Mechanical Review](terminology/entries/mechanical-review.md)** |  | Gate 3: verifies linter, cross-references, notation, and math rendering pass — different cognitive mode from Gate 2. Produces stage: format-clean. |
+| **[Notes Disposition](terminology/entries/notes-disposition.md)** |  | Gate 4: every Working Notes item resolved — incorporated, deferred, or promoted. Produces stage: candidate. |
+
+
+## Segment Structure (Sections)
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Discussion Section](terminology/entries/discussion-section.md)** |  | The `## Discussion` section in a segment — interpretation, connections, and brief conceptual framing. Distinct from the `type: discussion` frontmatter value. |
+| **[Epistemic Status Section](terminology/entries/epistemic-status-section.md)** |  | The `## Epistemic Status` section in a segment — states what is derived vs. hypothesized and names the segment's max attainable status. |
+| **[Findings Section](terminology/entries/findings-section.md)** |  | The optional `## Findings` section in a segment — curated catalog entries for contributions worth surfacing externally; drives auto-generation of root `FINDINGS.md`. |
+| **[Formal Expression Section](terminology/entries/formal-expression-section.md)** |  | The `## Formal Expression` section in a segment — carries the mathematical content with equation-level epistemic tags. |
+| **[Working Notes Section](terminology/entries/working-notes-section.md)** |  | The `## Working Notes` section in a segment — active development questions and unresolved issues; removed or emptied when the segment reaches candidate stage. |
+
+
+## Segment Types
+
+### Core Claim Types
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Postulate](terminology/entries/postulate.md)** |  | A segment type: tautological or foundational claim — cannot be derived, only accepted. |
+| **[Definition](terminology/entries/definition.md)** |  | A segment type: introduces a quantity, object, or notation. |
+| **[Scope](terminology/entries/scope.md)** |  | A segment type: restricts or broadens the domain under discussion. |
+| **[Formulation](terminology/entries/formulation.md)** |  | A segment type: representational or modeling choice — this form is motivated but alternatives exist. |
+| **[Derived](terminology/entries/derived.md)** |  | A segment type: logical consequence of prior claims under stated assumptions — only one form fits. |
+| **[Result](terminology/entries/result.md)** |  | A segment type: formally stated claim backed by a complete derivation. |
+| **[Corollary](terminology/entries/corollary.md)** |  | A segment type: follows directly from a result with little additional argument. |
+| **[Derivation](terminology/entries/derivation.md)** |  | A segment type: a complete formal derivation backing a result or derived claim. |
+
+### Empirical and Interpretive
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Hypothesis](terminology/entries/hypothesis.md)** |  | A segment type: structurally motivated claim that needs empirical or formal validation. |
+| **[Normative](terminology/entries/normative.md)** |  | A segment type: grounded in axioms or postulates but requiring a precondition that must be externally verified. |
+| **[Empirical (segment type)](terminology/entries/type-empirical.md)** |  | A segment type: generalization supported by data or simulation, not fully derived from the formalism. |
+| **[Observation](terminology/entries/observation.md)** |  | A segment type: finding from simulation or empirical investigation — more specific than a generalization. |
+| **[Measurement](terminology/entries/measurement.md)** |  | A segment type: operationalization of a theoretical quantity — how to measure what the theory defines. |
+
+### Structural and Discursive
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Discussion (segment type)](terminology/entries/type-discussion.md)** |  | A segment type: conceptual or normative claim used for interpretation — the entire segment is discursive. |
+| **[Proposed Schema](terminology/entries/proposed-schema.md)** |  | A segment type: mathematical shape identified, formal content pending — structure visible before proof is complete. |
+| **[Worked Example](terminology/entries/worked-example.md)** |  | A segment type: end-to-end domain instantiation validating the theory chain in a concrete case. |
+| **[Detail](terminology/entries/detail.md)** |  | A segment type: extended operational or technical material supporting other claims without making a new one. |
+| **[Sketch (segment type)](terminology/entries/type-sketch.md)** |  | A segment type: direction identified, formal rigor pending — the approach is outlined but not completed. |
+| **[Aside](terminology/entries/aside.md)** |  | A segment type: tangential observation or connection — informative but not load-bearing for the theory. |
 
 
 ## Structural Concepts
@@ -195,4 +312,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-05-11 from 79 entries._
+_Last rendered 2026-05-11 from 137 entries._

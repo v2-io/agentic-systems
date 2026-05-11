@@ -401,7 +401,12 @@ class Renderer
     "greek_vocabulary"    => "Greek Vocabulary",
     "software"            => "Software (TST)",
     "logogenic"           => "Logogenic",
-    "eli"                 => "ELI"
+    "eli"                 => "ELI",
+    "segment_structure"   => "Segment Structure (Sections)",
+    "segment_types"       => "Segment Types",
+    "epistemic_vocabulary" => "Epistemic Status Values",
+    "process_vocabulary"  => "Promotion Stages and Gates",
+    "findings_vocabulary" => "Findings Schema"
   }.freeze
 
   def initialize(entries) = @entries = entries
