@@ -11,7 +11,7 @@ tags: [structural_concepts, core_quantities]
 source_type: asf
 primary_source: 01-aad-core/src/form-event-driven-dynamics.md
 first_asf_mention: 01-aad-core/src/form-event-driven-dynamics.md
-see_also: [tempo, adaptive-system, chronica, developer-agent]
+see_also: [adaptive-tempo, adaptive-system, chronica, developer-agent]
 aliases: []
 do_not_confuse: []
 ---

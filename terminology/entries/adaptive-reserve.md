@@ -11,7 +11,7 @@ tags: [core_quantities]
 source_type: asf
 primary_source: 01-aad-core/src/result-persistence-condition.md
 first_asf_mention: 01-aad-core/src/result-persistence-condition.md
-see_also: [structural-persistence, operational-persistence, tempo, sector-condition]
+see_also: [structural-persistence, operational-persistence, adaptive-tempo, sector-condition]
 aliases: []
 do_not_confuse: []
 ---

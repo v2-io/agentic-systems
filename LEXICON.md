@@ -61,6 +61,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Adaptive Gain Dynamics](terminology/entries/adaptive-gain-dynamics.md)** |  | The extension of sector-persistence to agents whose update gain is itself a state variable — deriving four conditions (MG-1 through MG-4) under which adaptive-gain schemes stay within the A2' sub-scope. |
 | **[Adaptive reserve](terminology/entries/adaptive-reserve.md)** | $\Delta\rho^\ast$ | Shock tolerance — how much disturbance increase before persistence fails. |
+| **[Adaptive tempo](terminology/entries/adaptive-tempo.md)** | $\mathcal{T}$ | Cycle rate × cycle quality — central quantity in the persistence condition. |
 | **[Adversarial destabilization](terminology/entries/adversarial-destabilization.md)** | $\mathcal{T}_A > \Delta\rho^\ast_B / \gamma_A$ | When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely. |
 | **[Atomic Changeset](terminology/entries/atomic-changeset.md)** | $\text{changeset}(F)$ | The complete diff — source, schema, config, tests, infrastructure — between codebase states before and after a feature is fully implemented. |
 | **[Causal information yield](terminology/entries/causal-information-yield.md)** | CIY | Information gained about action–outcome relationships from a single action. |
@@ -70,6 +71,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Credit Assignment Boundary](terminology/entries/credit-assignment-boundary.md)** |  | The boundary between tractable and intractable attribution of outcomes to strategy DAG edges — solvable when intermediates are observable, |
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
+| **[Implementation time](terminology/entries/implementation-time.md)** | $t_{\text{impl}}$ | Time from first surviving modification to feature completion. |
 | **[Mismatch](terminology/entries/mismatch.md)** | $\delta$ | The aporia signal — gap between model prediction and observation. |
 | **[Model class fitness](terminology/entries/model-class-fitness.md)** | $\mathcal{F}$ | Best achievable sufficiency within the model class ($\mathcal{F} \in [0,1]$). |
 | **[Model sufficiency](terminology/entries/model-sufficiency.md)** | $S$ | How well the current model captures predictive information ($S \in [0,1]$). |
@@ -81,7 +83,6 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Strategy Persistence](terminology/entries/strategy-persistence.md)** |  | The strategic-layer instantiation of sector persistence — Σ_t persists iff the strategic correction rate exceeds disturbance-to-reserve ratio, with forgetting as a structural prerequisite (not a tunable heuristic). |
 | **[Strategy-plan confidence](terminology/entries/strategy-plan-confidence.md)** | $\hat{P}_\Sigma$ | The DAG's own answer to "will this plan work?" — root-node-propagated probability score from the agent's strategy DAG. |
 | **[Team Persistence](terminology/entries/team-persistence.md)** |  | Multi-agent extension of the persistence condition — teams persist where individuals cannot through communication (shared observations) and cooperative action (reduced disturbance). |
-| **[Tempo](terminology/entries/tempo.md)** | $\mathcal{T}$ | Cycle rate × cycle quality — central quantity in the persistence condition. |
 | **[Update gain](terminology/entries/update-gain.md)** | $\eta^\ast$ | Uncertainty ratio governing epistrophe — how much to trust reality vs. the model. |
 | **[Variational Sector Condition](terminology/entries/variational-sector-condition.md)** |  | The ε-fidelity extension of the sector condition to variational/approximate-posterior agents — sector constant degrades by O(√ε) under a KL bound on the approximation, promoting controlled-KL VI to sub-scope α′. |
 
@@ -142,6 +143,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Adaptive Gain Dynamics](terminology/entries/adaptive-gain-dynamics.md)** |  | The extension of sector-persistence to agents whose update gain is itself a state variable — deriving four conditions (MG-1 through MG-4) under which adaptive-gain schemes stay within the A2' sub-scope. |
 | **[Adversarial destabilization](terminology/entries/adversarial-destabilization.md)** | $\mathcal{T}_A > \Delta\rho^\ast_B / \gamma_A$ | When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
+| **[Change investment](terminology/entries/change-investment.md)** |  | Accept higher upfront implementation cost when amortized savings across expected future changes exceed it. |
 | **[Class coercion (via wrapping)](terminology/entries/class-coercion.md)** |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
@@ -155,6 +157,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
 | **[Experiential Training](terminology/entries/experiential-training.md)** |  | A training paradigm shift from batch prediction to structured, continuous causal experience — embedding the agent in a temporally consistent environment with genuine closed-loop feedback to build robust logogenic agents. |
+| **[Exponential cognitive load](terminology/entries/exponential-cognitive-load.md)** |  | Hypothesis that implementation time grows exponentially with the number of discontinuities in a changeset. |
 | **[Goal-Update Coupling Class (GUC Class)](terminology/entries/goal-update-coupling-class.md)** |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
 | **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
 | **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
@@ -181,4 +184,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Wrapping regime (W₀ / W₂ / W₁)](terminology/entries/wrapping-regime.md)** |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
 
 
-_Last rendered 2026-05-11 from 76 entries._
+_Last rendered 2026-05-11 from 79 entries._

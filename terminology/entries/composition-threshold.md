@@ -10,7 +10,7 @@ tags: [structural_concepts, composition]
 source_type: asf
 primary_source: 01-aad-core/src/der-team-persistence.md
 first_asf_mention: 01-aad-core/src/der-team-persistence.md
-see_also: [communication-gain, unity-dimensions, structural-persistence, tempo]
+see_also: [communication-gain, unity-dimensions, structural-persistence, adaptive-tempo]
 aliases: []
 do_not_confuse: []
 ---

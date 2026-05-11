@@ -1,8 +1,8 @@
 ---
-slug: tempo
+slug: adaptive-tempo
 schema_version: 1
-term: tempo
-name: Tempo
+term: adaptive tempo
+name: Adaptive tempo
 notation: "$\\mathcal{T}$"
 brief: Cycle rate × cycle quality — central quantity in the persistence condition.
 layer: prose-symbol
@@ -12,7 +12,7 @@ source_type: asf
 primary_source: 01-aad-core/src/def-adaptive-tempo.md
 first_asf_mention: 01-aad-core/src/def-adaptive-tempo.md
 see_also: [structural-persistence, update-gain, mismatch, strategic-tempo]
-aliases: []
+aliases: ["tempo"]
 do_not_confuse: []
 ---
 

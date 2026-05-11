@@ -11,7 +11,7 @@ tags: [structural_concepts, core_quantities]
 source_type: asf
 primary_source: 01-aad-core/src/der-team-persistence.md
 first_asf_mention: 01-aad-core/src/der-team-persistence.md
-see_also: [adversarial-destabilization, adaptive-reserve, tempo, strategic-tempo, structural-persistence]
+see_also: [adversarial-destabilization, adaptive-reserve, adaptive-tempo, strategic-tempo, structural-persistence]
 aliases: []
 do_not_confuse: []
 ---

@@ -68,7 +68,7 @@ name: Control Regret                      # display capitalization
 notation: $\delta_{\text{regret}}$        # LaTeX form (drives NOTATION.md eventually)
 brief: Best achievable minus current performance.
 layer: prose-symbol                       # slug | prose-symbol | framing-vocabulary | public-api
-status: canon                             # working | draft | canon | deprecated | superseded
+status: canon                             # working | draft | canon | weak | deprecated | superseded
 tags: [core_quantities, diagnostic]       # mixed semantic + flag tags; multi-section render
 source_type: asf                          # asf | external | standard | mathematical | philosophical
 primary_source: 01-aad-core/src/def-control-regret.md

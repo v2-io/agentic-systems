@@ -46,15 +46,6 @@ Per-batch terminology entries (no rename, no prose sweep — just the entry). Ea
 Each batch below is a natural commit unit. Mark a row landed = remove it; add a CHANGELOG entry for the batch.
 
 
-### C3. Canonicalize with nuance flagged — batch 1 (5 entries)
-
-[Rationale](msc/naming/naming-rename-plan.md#canonicalize-with-nuance-flagged-5-entries).
-
-- [ ] **adaptive tempo** — competing alt "tempo" (canon w=3); LEXICON entry should mention the bare-form alt was considered.
-- [ ] **logogenic agent** — competing alt "Section III logogenic agent" (canon w=3); LEXICON entry should mention the qualifier-form was considered.
-- [ ] **change investment** — citability borderline (criterion 9; review the LEXICON gloss to make sure the AAD-specific scope is visible).
-- [ ] **implementation time** — citability borderline (criterion 9; same shape as above).
-- [ ] **exponential cognitive load** — weak signal (2 votes / 2 archs); LEXICON entry should briefly note the weak base.
 
 ### C4. FORMAT.md / process-vocabulary canonicalize (no LEXICON action)
 

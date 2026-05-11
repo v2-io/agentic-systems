@@ -11,7 +11,7 @@ tags: [structural_concepts, core_quantities]
 source_type: asf
 primary_source: 01-aad-core/src/deriv-adaptive-gain-dynamics.md
 first_asf_mention: 01-aad-core/src/deriv-adaptive-gain-dynamics.md
-see_also: [adaptive-system, tempo, adaptive-reserve, sector-condition, structural-persistence]
+see_also: [adaptive-system, adaptive-tempo, adaptive-reserve, sector-condition, structural-persistence]
 aliases: []
 do_not_confuse: []
 ---

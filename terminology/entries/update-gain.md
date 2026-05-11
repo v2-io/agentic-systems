@@ -11,7 +11,7 @@ tags: [core_quantities]
 source_type: asf
 primary_source: 01-aad-core/src/emp-update-gain.md
 first_asf_mention: 01-aad-core/src/emp-update-gain.md
-see_also: [mismatch, epistrophe, tempo, communication-gain]
+see_also: [mismatch, epistrophe, adaptive-tempo, communication-gain]
 aliases: []
 do_not_confuse: []
 ---

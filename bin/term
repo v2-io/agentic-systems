@@ -76,12 +76,13 @@ ACTIONS = {
   "deprecate"        => "Name retired. Use --replaced-by if applicable.",
   "supersede"        => "Name replaced by another entry. Use --by-slug for pointer.",
   "update-gloss"     => "Definition refined; entry already exists.",
-  "nuance-flag"      => "Nuance noted on a canonicalize commitment. Use --note."
+  "nuance-flag"      => "Nuance noted on a canonicalize commitment. Use --note.",
+  "weak"             => "Term affirmed but with weak signal — few votes, borderline citability, or narrow scope. Entry exists for tracking; use with status: weak."
 }.freeze
 
 # Status values for the entry's status: field. The list is informative rather
 # than enforced — bin/term lint flags unknown values as warnings.
-KNOWN_STATUSES = %w[working draft canon deprecated superseded].freeze
+KNOWN_STATUSES = %w[working draft canon weak deprecated superseded].freeze
 
 # Layer values for the entry's layer: field. Same disposition as status —
 # informative; lint flags unknown values.

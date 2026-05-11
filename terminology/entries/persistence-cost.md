@@ -11,7 +11,7 @@ tags: [core_quantities, structural_concepts]
 source_type: asf
 primary_source: 01-aad-core/src/deriv-persistence-cost.md
 first_asf_mention: 01-aad-core/src/deriv-persistence-cost.md
-see_also: [adaptive-reserve, tempo, structural-persistence, adaptive-system]
+see_also: [adaptive-reserve, adaptive-tempo, structural-persistence, adaptive-system]
 aliases: []
 do_not_confuse: []
 ---

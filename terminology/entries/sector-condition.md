@@ -10,7 +10,7 @@ tags: [structural_concepts]
 source_type: mathematical
 primary_source: 01-aad-core/src/deriv-sector-condition.md
 first_asf_mention: 01-aad-core/src/deriv-sector-condition.md
-see_also: [directed-separation, tempo, adaptive-reserve]
+see_also: [directed-separation, adaptive-tempo, adaptive-reserve]
 aliases: []
 do_not_confuse: []
 ---
