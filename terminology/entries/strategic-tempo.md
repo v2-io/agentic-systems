@@ -13,7 +13,7 @@ primary_source: 01-aad-core/src/def-strategic-tempo.md
 first_asf_mention: 01-aad-core/src/def-strategic-tempo.md
 see_also: [strategy-dag, adaptive-tempo, adaptive-reserve, adversarial-destabilization, strategy-persistence]
 aliases: []
-do_not_confuse: [adaptive-tempo]
+do_not_confuse: [adaptive-tempo, tempo]
 ---
 
 The purposeful-side analog of adaptive tempo $\mathcal{T}$: the rate at which an agent

@@ -13,7 +13,7 @@ primary_source: 01-aad-core/src/def-adaptive-tempo.md
 first_asf_mention: 01-aad-core/src/def-adaptive-tempo.md
 see_also: [structural-persistence, update-gain, mismatch, strategic-tempo]
 aliases: ["tempo"]
-do_not_confuse: []
+do_not_confuse: [strategic-tempo, tempo]
 ---
 
 The product of cycle rate and cycle quality — how fast the agent gets through
