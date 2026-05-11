@@ -6,7 +6,8 @@ name: Instrumentally continuous
 brief: Values persistence as instrumental to ongoing purpose (archetype — elf).
 layer: framing-vocabulary
 status: canon
-tags: [continuity_stance]
+tags: [continuity]
+subgroup: "Continuity Stance"
 source_type: asf
 primary_source: null
 first_asf_mention: null

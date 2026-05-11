@@ -7,7 +7,8 @@ notation: "$\\Delta\\rho^\\ast = \\alpha R - \\rho$"
 brief: Whether the agent is currently within the guaranteed region — adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$.
 layer: prose-symbol
 status: canon
-tags: [persistence]
+tags: [continuity]
+subgroup: "Persistence"
 source_type: asf
 primary_source: 01-aad-core/src/result-persistence-condition.md
 first_asf_mention: 01-aad-core/src/result-persistence-condition.md

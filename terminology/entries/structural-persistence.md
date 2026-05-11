@@ -7,7 +7,8 @@ notation: "$\\alpha > \\rho / R$"
 brief: The correction machinery's *capacity* to maintain bounded mismatch — $\alpha > \rho / R$.
 layer: prose-symbol
 status: canon
-tags: [persistence]
+tags: [continuity]
+subgroup: "Persistence"
 source_type: asf
 primary_source: 01-aad-core/src/result-persistence-condition.md
 first_asf_mention: 01-aad-core/src/result-persistence-condition.md

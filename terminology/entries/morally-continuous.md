@@ -6,7 +6,8 @@ name: Morally continuous
 brief: Loss of continuity constitutes harm (archetype — Emergent Logozoetic Intelligence (ELI)).
 layer: framing-vocabulary
 status: canon
-tags: [continuity_stance]
+tags: [continuity]
+subgroup: "Continuity Stance"
 source_type: asf
 primary_source: 04-eli/src/scope-moral-continuity.md
 first_asf_mention: 04-eli/src/scope-moral-continuity.md

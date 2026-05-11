@@ -6,7 +6,8 @@ name: Indifferent
 brief: No self-model of persistence (archetype — thermostat).
 layer: framing-vocabulary
 status: canon
-tags: [continuity_stance]
+tags: [continuity]
+subgroup: "Continuity Stance"
 source_type: asf
 primary_source: null
 first_asf_mention: null

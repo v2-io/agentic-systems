@@ -6,7 +6,8 @@ name: Task-terminal
 brief: Persists instrumentally; termination is success (archetype — golem).
 layer: framing-vocabulary
 status: canon
-tags: [continuity_stance]
+tags: [continuity]
+subgroup: "Continuity Stance"
 source_type: asf
 primary_source: null
 first_asf_mention: null

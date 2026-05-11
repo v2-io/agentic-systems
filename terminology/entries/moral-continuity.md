@@ -7,7 +7,8 @@ notation:
 brief: The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied.
 layer: framing-vocabulary
 status: canon
-tags: [eli, persistence]
+tags: [eli, continuity]
+subgroup: "Persistence"
 source_type: asf
 primary_source: 04-eli/src/scope-moral-continuity.md
 first_asf_mention: 04-eli/src/scope-moral-continuity.md

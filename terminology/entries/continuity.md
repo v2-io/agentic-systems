@@ -7,7 +7,8 @@ notation: "$\\mathcal{C}_t$"
 brief: Whether the agent maintains coherent identity through time — $\mathcal{C}_t$ extends, $M_t$ has temporal depth.
 layer: prose-symbol
 status: canon
-tags: [persistence]
+tags: [continuity]
+subgroup: "Persistence"
 source_type: asf
 primary_source: 01-aad-core/src/def-chronica.md
 first_asf_mention: 01-aad-core/src/def-chronica.md

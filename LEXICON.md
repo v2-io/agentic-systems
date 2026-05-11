@@ -8,22 +8,22 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 ## Agent Classes
 
-| Term | Notation | Brief |
-|------|----------|-------|
-| **[Class 1: Separated](terminology/entries/separated.md)** *(GUC)* |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
-| **[Class 2: Partial](terminology/entries/partial.md)** *(GUC)* |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
-| **[Class 3: Coupled](terminology/entries/coupled.md)** *(GUC)* |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
-| **[Actuated agent](terminology/entries/actuated-agent.md)** |  | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$. |
-| **[Adaptive system](terminology/entries/adaptive-system.md)** |  | Feedback loop + mismatch correction under uncertainty. |
-| **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
-| **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
-| **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
-| **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
-| **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
-| **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
-| **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
-| **[Logogenic agent](terminology/entries/logogenic-agent.md)** |  | Self-actuated agent whose primary channels are language — constituted by logos. |
-| **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
+| Term                                                                                              | Notation | Brief                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **[Class 1: Separated](terminology/entries/separated.md)** *(GUC)*                                |          | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment.                                                                                                  |
+| **[Class 2: Partial](terminology/entries/partial.md)** *(GUC)*                                    |          | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$.                                        |
+| **[Class 3: Coupled](terminology/entries/coupled.md)** *(GUC)*                                    |          | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction.                                                                                            |
+| **[Actuated agent](terminology/entries/actuated-agent.md)**                                       |          | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$.                                                                                                                                                               |
+| **[Adaptive system](terminology/entries/adaptive-system.md)**                                     |          | Feedback loop + mismatch correction under uncertainty.                                                                                                                                                                               |
+| **[Agency](terminology/entries/agency.md)**                                                       |          | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes.                                                                      |
+| **[Agentic system](terminology/entries/agentic-system.md)**                                       |          | Adaptive system + outcome model + goal-directed action + model adaptation.                                                                                                                                                           |
+| **[Composite Agent](terminology/entries/composite-agent.md)**                                     |          | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective.                                                    |
+| **[Developer Agent](terminology/entries/developer-agent.md)**                                     |          | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
+| **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)*                        |          | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed.                                               |
+| **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |          | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies.                                                         |
+| **[Knowledge Type](terminology/entries/knowledge-type.md)**                                       |          | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation).                                                                       |
+| **[Logogenic agent](terminology/entries/logogenic-agent.md)**                                     |          | Self-actuated agent whose primary channels are language — constituted by logos.                                                                                                                                                      |
+| **[Self-actuated agent](terminology/entries/self-actuated-agent.md)**                             |          | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy.                                                                                                                                                         |
 
 
 ## Composition
@@ -42,7 +42,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Wrapping regime](terminology/entries/wrapping-regime.md)** *(W₀ / W₂ / W₁)* |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
 
 
-## Continuity Stance
+## Continuity
+
+### Continuity Stance
 
 | Term | Notation | Brief |
 |------|----------|-------|
@@ -51,6 +53,15 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Morally continuous](terminology/entries/morally-continuous.md)** |  | Loss of continuity constitutes harm (archetype — Emergent Logozoetic Intelligence (ELI)). |
 | **[Negotiated](terminology/entries/negotiated.md)** |  | Persistence traded against other values (archetype — human). |
 | **[Task-terminal](terminology/entries/task-terminal.md)** |  | Persists instrumentally; termination is success (archetype — golem). |
+
+### Persistence
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Continuity](terminology/entries/continuity.md)** | $\mathcal{C}_t$ | Whether the agent maintains coherent identity through time — $\mathcal{C}_t$ extends, $M_t$ has temporal depth. |
+| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
+| **[Operational](terminology/entries/operational-persistence.md)** | $\Delta\rho^\ast = \alpha R - \rho$ | Whether the agent is currently within the guaranteed region — adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$. |
+| **[Structural](terminology/entries/structural-persistence.md)** | $\alpha > \rho / R$ | The correction machinery's *capacity* to maintain bounded mismatch — $\alpha > \rho / R$. |
 
 
 ## Core Quantities
@@ -113,8 +124,13 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 | **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
-| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
+
+### Persistence
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
 
 
 ## Epistemic Status Values
@@ -183,16 +199,6 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Coupled Update Dynamics](terminology/entries/coupled-update-dynamics.md)** | $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade. |
 | **[Experiential Training](terminology/entries/experiential-training.md)** |  | A training paradigm shift from batch prediction to structured, continuous causal experience — embedding the agent in a temporally consistent environment with genuine closed-loop feedback to build robust logogenic agents. |
-
-
-## Persistence
-
-| Term | Notation | Brief |
-|------|----------|-------|
-| **[Continuity](terminology/entries/continuity.md)** | $\mathcal{C}_t$ | Whether the agent maintains coherent identity through time — $\mathcal{C}_t$ extends, $M_t$ has temporal depth. |
-| **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
-| **[Operational](terminology/entries/operational-persistence.md)** | $\Delta\rho^\ast = \alpha R - \rho$ | Whether the agent is currently within the guaranteed region — adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$. |
-| **[Structural](terminology/entries/structural-persistence.md)** | $\alpha > \rho / R$ | The correction machinery's *capacity* to maintain bounded mismatch — $\alpha > \rho / R$. |
 
 
 ## Promotion Stages and Gates

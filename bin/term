@@ -392,8 +392,7 @@ class Renderer
   TAG_DISPLAY_NAMES = {
     "cycle_phases"        => "Cycle Phases",
     "agent_classes"       => "Agent Classes",
-    "persistence"         => "Persistence",
-    "continuity_stance"   => "Continuity Stance",
+    "continuity"          => "Continuity",
     "core_quantities"     => "Core Quantities",
     "structural_concepts" => "Structural Concepts",
     "diagnostic"          => "Diagnostics",
