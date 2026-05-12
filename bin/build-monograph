@@ -236,166 +236,30 @@ end
 # memos) never reaches any rendering stage. Authors opt out of the PDF
 # by wrapping content in `<!-- ... -->`.
 
-def assemble_body(spec, stage, variant:)
-  segments_dir = stage / 'segments'
-  FileUtils.rm_rf(segments_dir)
-  FileUtils.mkdir_p(segments_dir)
+def assemble_and_typeset(stage, variant:)
+  # Stage 2 + Stage 3 combined: Mono::Assemble reads the index + chunks
+  # and stitches the canonical per-volume markdown; Mono::Typeset feeds
+  # that through Kramdown::Converter::AsfVolumeLatex to produce body.tex.
+  # Both artifacts are returned so the markdown can be written out as the
+  # `mono/<slug>-v<sem>.md` deliverable.
+  assembled_md = Mono::Assemble.assemble(stage: stage)
+  body_tex     = Mono::Typeset.typeset(assembled_md, variant: variant)
+  (stage / 'body.tex').write(body_tex)
+  assembled_md
+end
 
-  body                  = []
-  frontmatter_md        = []  # raw markdown for volume preface
-  preface_md            = []  # raw markdown for the current Part's preface
-  stats                 = { rendered: 0, missing: 0, gaps: 0, errors: 0 }
-
-  in_frontmatter        = false
-  in_preface            = false
-  appendix_emitted      = false
-  volume_preface_title  = 'Preface'  # default; overridden by H2 info-suffix
-
-  # Flush the current preface buffer into body.tex via the fragment
-  # renderer. Called on every transition that closes a preface (entering
-  # a Chapter, a new Part, the Appendices, or end-of-walk). The closure
-  # mutates preface_md.clear and in_preface so the state machine resets
-  # before the next preface is read.
-  flush_preface = -> {
-    unless preface_md.empty?
-      md = preface_md.join("\n\n").strip
-      body << Mono::SegmentRenderer.render_fragment(md, variant: variant) unless md.empty?
-      preface_md.clear
-    end
-    in_preface = false
+def collect_stats(stage)
+  # Counts come from the Stage-1 manifest so we don't re-walk OUTLINE.
+  index_path = stage / 'index.md'
+  index = YAML.safe_load((index_path.read.split("---\n", 3)[1] || ''),
+                         permitted_classes: [Symbol]) || {}
+  entries = index['entries'] || []
+  {
+    rendered: entries.count { |e| e['kind'] == 'segment_chunk' },
+    missing:  entries.count { |e| e['kind'] == 'missing' },
+    gaps:     entries.count { |e| e['kind'] == 'gap' },
+    errors:   0,
   }
-
-  Mono::OutlineWalker.walk(spec[:outline]).each do |item|
-    case item[:kind]
-    when :volume
-      # Volume title is informational here — used by the title-page macros
-      # (\volumetitle) but doesn't render an inline heading.
-      next
-
-    when :part
-      in_frontmatter = false
-      flush_preface.call
-      body << "\\part{#{escape_latex(item[:title])}}"
-
-    when :appendices
-      in_frontmatter = false
-      flush_preface.call
-      # First appendix part: emit LaTeX's \appendix (resets chapter
-      # counter, switches \thechapter to \Alph). Then override
-      # \thechapter to \AlphAlph so chapters past Z (AAD's Details
-      # alone has >26) keep advancing as AA, AB, … instead of erroring.
-      unless appendix_emitted
-        body << "\\appendix"
-        body << "\\renewcommand{\\thechapter}{\\AlphAlph{\\value{chapter}}}"
-        # Activate the chapter→section ToC downshift for the rest of the
-        # document — see \asfAppendixToCremap in common/preamble/environments.
-        # Must be global (not group-scoped) because KOMA-Script defers the
-        # \chapter-time \addcontentsline past local groups.
-        body << "\\asfAppendixToCremap"
-        appendix_emitted = true
-      end
-      # Each *Appendices* group is its own \part; the "Appendices: "
-      # prefix surfaces the role explicitly in the running heads and
-      # ToC. Individual appendix segments inside render as \chapter
-      # each via segment_renderer's :appendices container branch.
-      body << "\\part{Appendices: #{escape_latex(item[:title])}}"
-
-    when :preface
-      if item[:level] == 2
-        # Volume-level preface — replaces the older Frontmatter role.
-        # Renders as an unnumbered chapter (\addchap) in \frontmatter
-        # scope, with its own ToC entry and page break.
-        in_frontmatter = true
-        suffix = item[:title].to_s.strip
-        volume_preface_title = suffix.empty? ? 'Preface' : suffix
-      else
-        # Part-level preface — inline preamble for a Part; no separate
-        # heading, no ToC entry.
-        in_preface = true
-      end
-
-    when :chapter
-      flush_preface.call
-      if item[:title]
-        body << "\\chapter{#{escape_latex(item[:title])}}"
-      elsif !item[:implicit]
-        body << "\\chapter*{}"
-      end
-
-    when :prose, :scope
-      # The walker strips outer `*…*` on single-line scope items already;
-      # render_fragment additionally handles multi-line paragraph-wrap
-      # italics. Both routes converge here: prose/scope contribute raw
-      # markdown text to whichever buffer is currently open.
-      content = item[:content]
-      if in_frontmatter
-        frontmatter_md << content
-      elsif in_preface
-        preface_md << content
-      else
-        # In-chapter prose (between segment tables, etc.) — render
-        # through the fragment pipeline so markdown processes correctly.
-        body << Mono::SegmentRenderer.render_fragment(content, variant: variant)
-      end
-
-    when :image
-      # SVG → PDF pipeline not yet wired; images are dropped silently
-      # (the dependency-graph SVGs in OUTLINE.md will surface here once
-      # rsvg-convert is invoked for them like it is for cover artwork).
-      next
-
-    when :segment
-      slug = item[:slug]
-      begin
-        tex = Mono::SegmentRenderer.render(
-          item[:path],
-          variant:   variant,
-          container: item[:container] || :part,
-        )
-        (segments_dir / "#{slug}.tex").write(tex)
-        body << "\\input{segments/#{slug}}"
-        stats[:rendered] += 1
-      rescue StandardError => e
-        warn "render failed: #{slug}: #{e.class}: #{e.message}"
-        body << "\\par\\textbf{[Render error: #{slug}]}\\par"
-        stats[:errors] += 1
-      end
-
-    when :missing
-      type_label = Kramdown::Converter::AsfLatex::TYPE_LABEL[item[:type].downcase] || item[:type]
-      macro = item[:container] == :appendices ? 'missingappendixchapter' : 'missingsegment'
-      body << "\\#{macro}{#{escape_latex(type_label)}}" \
-              "{#{escape_latex(item[:slug])}}" \
-              "{#{escape_latex(item[:claim])}}"
-      stats[:missing] += 1
-
-    when :gap
-      body << "\\outlinegap{#{escape_latex(item[:description])}}"
-      stats[:gaps] += 1
-    end
-  end
-
-  # Flush any trailing preface at end-of-walk (defensive — if the outline
-  # ends without a Chapter or new Part to trigger flush_preface).
-  flush_preface.call
-
-  # Volume frontmatter renders to its own file; main.tex inputs it in
-  # \frontmatter scope (after cover, before \mainmatter). The preface
-  # heading uses \addchap (KOMA-Script's unnumbered chapter with ToC
-  # entry) so the volume-level preface gets a proper page break, heading,
-  # and ToC line — distinguishing it from the cover and the part-level
-  # prefaces that follow inside \mainmatter.
-  fm_tex = ''
-  unless frontmatter_md.empty?
-    md = frontmatter_md.join("\n\n").strip
-    unless md.empty?
-      fm_tex = "\\addchap{#{escape_latex(volume_preface_title)}}\n\n"
-      fm_tex += Mono::SegmentRenderer.render_fragment(md, variant: variant)
-    end
-  end
-  (stage / 'frontmatter.tex').write(fm_tex)
-  (stage / 'body.tex').write(body.join("\n") + "\n")
-  stats
 end
 
 # Minimal LaTeX escape for outline-derived strings (NOT for segment body
@@ -467,30 +331,16 @@ def copy_outputs(spec, stage, stem)
   dst_pdf
 end
 
-# Stage 2 (assemble) — read the index + chunks produced by Stage 1, stitch
-# them into a single canonical per-volume markdown with cross-refs resolved,
-# and write it to mono/<stem>.md as a parallel artifact to the PDF. See
-# msc/markdown-first-pipeline.md.
-def emit_markdown_artifact(stage, stem)
+# Copy the assembled markdown to mono/<stem>.md as the citable artifact.
+# The text was already produced by Stage 2 (Mono::Assemble) during the
+# body.tex generation; we just persist it under the released filename.
+def emit_markdown_artifact(stem, assembled_md)
   dst_md = MONO_DIR / "#{stem}.md"
   FileUtils.cp(dst_md, MONO_DIR / "#{stem}.prior.md") if dst_md.exist?
-  text = Mono::Assemble.assemble(stage: stage)
-  dst_md.write(text)
+  dst_md.write(assembled_md)
   dst_md
 end
 
-# Stage 3 (typeset) — convert the assembled markdown to LaTeX. Currently
-# emitted as a side-by-side artifact (body-typeset.tex in the build stage)
-# so the typeset module is exercised on every build; the legacy direct-walk
-# LaTeX path still drives the PDF compile while Stage 3's subhead and
-# wide-section transitions are being fleshed out. Once typeset's output
-# matches or improves on the legacy output, the switchover replaces
-# assemble_body with this.
-def emit_typeset_artifact(stage, variant:)
-  assembled_md = Mono::Assemble.assemble(stage: stage)
-  tex = Mono::Typeset.typeset(assembled_md, variant: variant)
-  (stage / 'body-typeset.tex').write(tex)
-end
 
 def summarize_errors(stage, stem)
   log = stage / "#{stem}.log"
@@ -524,29 +374,29 @@ def build_volume(volume_id, variant:, toc_override: nil)
   toc_enabled = toc_override.nil? ? spec[:toc_enabled] : toc_override
   write_build_info(stage, spec, cover_rel: cover_rel, toc_enabled: toc_enabled)
 
-  # Stage 1 (ingest): source-outline + source-segments → index.md + chunks/.
-  # See msc/markdown-first-pipeline.md. Currently produced as a side artifact
-  # for verification; the LaTeX path below still walks OUTLINE directly.
-  # Stage 2 (assemble) and Stage 3 (typeset) replace that direct walk.
-  warn "[#{spec[:slug]}] ingesting (variant: #{variant})…"
-  index_path = Mono::Ingest.ingest(spec.merge(toc_enabled: toc_enabled),
-                                   stage: stage, variant: variant)
-  warn "[#{spec[:slug]}]   → #{index_path.relative_path_from(ROOT_DIR)}"
+  # Three-stage markdown-first pipeline — see msc/markdown-first-pipeline.md.
+  #
+  #   Stage 1 (ingest)   : OUTLINE + segments → index.md + chunks/
+  #   Stage 2 (assemble) : chunks + index     → assembled markdown
+  #   Stage 3 (typeset)  : assembled markdown → body.tex (LaTeX)
+  #
+  # Output: mono/<slug>-v<sem>.{pdf,md} as parallel deliverables.
 
-  warn "[#{spec[:slug]}] assembling LaTeX body (variant: #{variant}, toc: #{toc_enabled ? 'on' : 'off'})…"
-  stats = assemble_body(spec, stage, variant: variant)
+  warn "[#{spec[:slug]}] ingesting (variant: #{variant})…"
+  Mono::Ingest.ingest(spec.merge(toc_enabled: toc_enabled),
+                      stage: stage, variant: variant)
+
+  warn "[#{spec[:slug]}] assembling + typesetting (variant: #{variant}, toc: #{toc_enabled ? 'on' : 'off'})…"
+  assembled_md = assemble_and_typeset(stage, variant: variant)
+  stats = collect_stats(stage)
   warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
        "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
+
   warn "[#{spec[:slug]}] compiling #{stem}…"
   run_lualatex(stage, stem)
   pdf = copy_outputs(spec, stage, stem)
   summarize_errors(stage, stem)
-  md = emit_markdown_artifact(stage, stem)
-  begin
-    emit_typeset_artifact(stage, variant: variant)
-  rescue StandardError => e
-    warn "[#{spec[:slug]}] typeset (Stage 3 side-by-side) failed: #{e.class}: #{e.message}"
-  end
+  md = emit_markdown_artifact(stem, assembled_md)
   warn "[#{spec[:slug]}] → #{pdf.relative_path_from(ROOT_DIR)}"
   warn "[#{spec[:slug]}] → #{md.relative_path_from(ROOT_DIR)}" if md
 end
