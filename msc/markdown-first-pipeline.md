@@ -1,6 +1,6 @@
 # Markdown-First Build Pipeline — Design
 
-*Design document for the build-pipeline restructure proposed during the 2026-05-12 monograph-build session. Status: design, not yet implemented. Once the implementation lands and reviews well, the load-bearing pieces migrate to FORMAT.md (the chunk contract) and the rest can sunset.*
+*Design document for the build-pipeline restructure proposed during the 2026-05-12 monograph-build session. Implementation state (current as of commits `be33269`, `62b2e1e`, and the in-flight Stage 3 work): Stage 1 (ingest) and Stage 2 (assemble) committed and producing the markdown artifact across all four volumes; Stage 3 (typeset) committed as a side-by-side artifact emitter — the LaTeX output is correct for the common cases but a few segment-internal subhead transitions remain before the legacy path can be retired. See FORMAT-TODO §priority for the switchover punch list.*
 
 ## Why this exists
 

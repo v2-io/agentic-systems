@@ -44,6 +44,7 @@ require 'segment_renderer'
 require 'outline_walker'
 require 'ingest'
 require 'assemble'
+require 'typeset'
 
 # ── Volume registry ─────────────────────────────────────────────────────────
 
@@ -478,6 +479,19 @@ def emit_markdown_artifact(stage, stem)
   dst_md
 end
 
+# Stage 3 (typeset) — convert the assembled markdown to LaTeX. Currently
+# emitted as a side-by-side artifact (body-typeset.tex in the build stage)
+# so the typeset module is exercised on every build; the legacy direct-walk
+# LaTeX path still drives the PDF compile while Stage 3's subhead and
+# wide-section transitions are being fleshed out. Once typeset's output
+# matches or improves on the legacy output, the switchover replaces
+# assemble_body with this.
+def emit_typeset_artifact(stage, variant:)
+  assembled_md = Mono::Assemble.assemble(stage: stage)
+  tex = Mono::Typeset.typeset(assembled_md, variant: variant)
+  (stage / 'body-typeset.tex').write(tex)
+end
+
 def summarize_errors(stage, stem)
   log = stage / "#{stem}.log"
   return unless log.exist?
@@ -528,6 +542,11 @@ def build_volume(volume_id, variant:, toc_override: nil)
   pdf = copy_outputs(spec, stage, stem)
   summarize_errors(stage, stem)
   md = emit_markdown_artifact(stage, stem)
+  begin
+    emit_typeset_artifact(stage, variant: variant)
+  rescue StandardError => e
+    warn "[#{spec[:slug]}] typeset (Stage 3 side-by-side) failed: #{e.class}: #{e.message}"
+  end
   warn "[#{spec[:slug]}] → #{pdf.relative_path_from(ROOT_DIR)}"
   warn "[#{spec[:slug]}] → #{md.relative_path_from(ROOT_DIR)}" if md
 end
