@@ -754,6 +754,29 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   # more aggressively; larger keeps more tables narrow.
   NARROW_AREA_ESCAPE_SLACK = 1.2
 
+  # TODO (narrow-direction adaptation): the converse of the escape
+  # logic — a wide-area table whose content would comfortably fit at
+  # body width could be narrowed to match the surrounding prose
+  # column. Joseph 2026-05-12 noted Table 7.2 as an example. Rare
+  # enough to defer; the structural shape is the same as escape but
+  # in reverse — track in_widesection, check if E(max(per-col)) is
+  # well under narrow-width budget, and emit \linewidth in a
+  # specialty wrapper that overrides the surrounding widesection
+  # geometry. Tabularx-inside-a-non-wide-tcolorbox would be the
+  # cleanest implementation; needs care so widesection's wider
+  # \linewidth doesn't carry through and re-widen.
+
+  # TODO (snap-to-content-width): when a column's normalized weight
+  # is just slightly less than ONE of the actual cell widths within
+  # the column (within some epsilon), snap up to that cell width to
+  # avoid wrapping just a few characters. Eliminates the case where
+  # a single cell wraps at "near" the column boundary and looks
+  # like a layout glitch. Joseph 2026-05-12. Concretely: for each
+  # column, compute the rendered cell widths under the current
+  # weight; if any cell wraps to N+1 lines when an epsilon-larger
+  # column would keep it at N lines, expand the column by epsilon.
+  # Renormalize so total weight still equals n_cols.
+
   # Decide whether a narrow-area table should escape to wide-area-width.
   # The signal is the longest atomic token (math expression or inline-
   # code span) in any column — these don't wrap, so if any column has

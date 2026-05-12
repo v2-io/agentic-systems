@@ -280,51 +280,94 @@ Implementation:
   - ✅ **Stage 3 (typeset)** — `common/lib/typeset.rb` converts assembled markdown to LaTeX via `Kramdown::Converter::AsfVolumeLatex`. Role-prefix italic on H2/H3 maps to `\addchap` / `\part` / `\chapter` / appendix-with-`\AlphAlph`; segment headers with metadata block become `\segmenthead` / `\segmentappendixchapter`. Segment-internal subhead transitions (epigraph open/close, wide-section for Discussion/Findings, workingnotes wrapper) use level-aware wrapper closing so nested H6 subheads inside Working Notes don't prematurely close the wrapper. `\mainmatter` boundary emitted exactly once on the first `*Part*` / `*Appendices*` crossing. Resolved cross-refs `[Type N.M](#slug)` route through `\cref{seg:slug}` for bare-number rendering. HTML anchors suppressed. `main.tex` simplified to `\input{body}` (typeset output handles frontmatter / mainmatter scope transitions internally).
   - Verified end-to-end across all four volumes: AAD 489p (vs prior 489p), TST 56p (vs 55p), LogA 61p (vs 61p), ELI 53p (vs 54p). The ±1-page deltas are layout-level (slight spacing differences around section transitions); no fatal LaTeX errors; wrapper begin/end pairs all balance.
 
-- ⬜ **Incremental rebuild (per-chunk hash cache)** — the index.md frontmatter records source hashes for every chunk, but ingest still re-emits all chunks on every build. The next pass should: (a) read the prior index.md if present, (b) for each segment-chunk entry, compare current source-file hash to recorded hash, (c) skip regeneration when unchanged. Same discipline at the outline level for the index itself. Stage 1 of the pipeline already supports this architecturally — it's an implementation pass, not a redesign.
+**Distinct from the broader doc/schema work:**
 
 - ⬜ **Distinct schema for Discussion-type segments (FORMAT.md update)** — claims and discussions need a structural distinction in FORMAT.md. Claim segments carry Formal Expression / Epistemic Status / Discussion / Findings subheads because those are the load-bearing parts of an epistemic-architecture claim. Discussion segments — chapter intros, scope meta-discussion, meta-segments like the M-series — don't need Formal Expression or Epistemic Status sections; they're not propositions defending themselves, they're orientation prose. The current schema asks them to fake those subheads with placeholder content. FORMAT.md should split: claim schema (current) vs discussion schema (just body, with the subheads optional rather than required). Joseph 2026-05-12.
+- ⬜ **Incremental rebuild (per-chunk hash cache)** — the index.md frontmatter records source hashes for every chunk, but ingest still re-emits all chunks on every build. The next pass should: (a) read the prior index.md if present, (b) for each segment-chunk entry, compare current source-file hash to recorded hash, (c) skip regeneration when unchanged. Same discipline at the outline level for the index itself. Stage 1 of the pipeline already supports this architecturally — it's an implementation pass, not a redesign.
 - ⬜ Phase 1d — xr-hyper cross-volume refs, sibling-volume citations
-- ⬜ Phase 1e — smart-rebuild hash cache
-- ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep (vocabulary alignment)
+- ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep (vocabulary alignment with the role-prefix / native-hierarchy / chunk-format conventions)
 - ⬜ Phase 3 — chapter introduction across Parts II/III/IV of AAD + other components
 - ⬜ Phase 4 — cross-ref hygiene sweep
 - ⬜ Phase 5 — FORMAT-compliance linter sweep
-- ⬜ Phase 6 — table dynamic-shrinking, backmatter design, title-page typography, per-volume preface
+- ⬜ Phase 6 — backmatter design, title-page typography, per-volume preface, dependency-graph SVG → PDF pipeline for image rendering
 
-**Tighter typography candidates surfaced during the 1c/1a cycle:**
-- Status badges + stage glyphs on appendix-chapter headings are emitted by `\segmentappendixchapter` but currently render in a plain indicator strip below kaobook's chapter glyph — could be promoted into the chapter heading itself once a tighter visual register is decided.
-- Appendix-chapter ToC entries now use the `\chapter[short]{rich}` two-arg form so the ToC stays compact (clean title only, no italic type prefix). If further compression is wanted, the next step is a custom `\l@appendixchapter` style.
+**Table rendering deferred items** (logged in source-level TODOs at `common/lib/segment_renderer.rb` `convert_table`):
+- Narrow-direction adaptation: a wide-area table whose content would fit body width could be narrowed to match the surrounding prose column (Table 7.2 example, rare enough to defer).
+- Snap-to-content-width: when a column's normalized weight is just slightly under one of the actual cell widths (within an epsilon), snap up to that cell width to avoid wrapping by just a few characters.
+- Source-side math reflow: a handful of display equations (e.g., the 254.9pt one at AAD line 7506) are inherently wider than the page and don't break naturally. Author-side line-break decisions needed — `\\` or `aligned` blocks in the source.
 
-## Handoff Notes (for the next session)
+**Tighter typography candidates:**
+- Status badges + stage glyphs on appendix-chapter headings render as a small indicator strip below kaobook's chapter glyph — could be promoted into the chapter heading itself once a tighter visual register is decided.
+- Appendix-chapter ToC entries use the `\chapter[short]{rich}` two-arg form so the ToC stays compact. If further compression is wanted, a custom `\l@appendixchapter` style is the next step.
+- Cover artwork for TST / LogA / ELI not yet authored (AAD's cover lives at `01-aad-core/AAD-cover.svg`).
+- Title page is minimal — proper layout per the frontmatter sequence spec (Cover → Title + Copyright → ToC) is Phase 6.
 
-**Where to pick up:** the four-volume build is working. `bin/build-monograph aad` (or `01`/`tst`/`02`/etc.) builds one volume; `bin/build-monograph --all` builds all four. Outputs land in `mono/<slug>-v<M>.<m>.<p>.pdf` with persisted `.aux` in each `<component>/<slug>.aux`.
+---
 
-**Suggested next phases in order:**
+## Handoff Notes (current as of end of 2026-05-12)
 
-1. **Phase 1a — Per-volume ToC.** Quick win; just adds `\tableofcontents` in `common/main.tex` after frontmatter. Decide depth (probably 3 — through Section). Adds a `toc: false` opt-out signal to `mono-meta.yaml`.
-2. **Phase 1d — xr-hyper cross-volume refs.** The `.aux` files are now persisted per volume; wire `xr-hyper` in `common/preamble/` so each volume's preamble registers its three siblings. Fallback citation form when sibling `.aux` is stale or missing.
-3. **Phase 1e — Smart rebuild.** Per-volume input-hash cache so `bin/build-monograph aad` skips when nothing AAD-relevant changed. Implementation candidate: hash over `<component>/src/**` + `<component>/OUTLINE.md` + `<component>/mono-meta.yaml` + `common/**` + sibling-`.aux` digests, cached at `mono/.build/<slug>/.input-hash`.
-4. **Phase 3 — Chapter introduction in OUTLINEs.** Parts II/III/IV of AAD already chapterized in source by Joseph (or in progress); same convention for TST / LogA / ELI components. The walker's implicit-Chapter default handles unchapterized parts gracefully meanwhile.
+**State of the build:** all four volumes build cleanly via `bin/build-monograph --all`. The markdown-first pipeline is the sole source path; each volume produces both `mono/<slug>-v<sem>.pdf` and `mono/<slug>-v<sem>.md` as canonical artifacts. The PDF compiles and matches the assembled markdown structure.
 
-**Known unfinished business:**
+**Vocabulary worth holding (Joseph 2026-05-12):** "narrow-area" = anywhere the Tufte-style wide right margin is in play (body column + free margin column to the right). "Wide-area" = anywhere the text already spans the full segment band (Discussion / Findings sections via the `segmentwidesection` wrapper; the segmentrulewidth = textwidth + sep + marginparwidth). Tables, working-notes boxes, and segment-header rules all interact with this distinction; keep the vocabulary when reasoning about width-related rendering choices.
 
-- Title page is minimal — needs proper layout per the frontmatter sequence spec (Cover → Title+Copyright → ToC). The macros `\volumetitle` / `\buildsha` etc. are available; just no layout uses them yet.
-- Cover artwork for TST / LogA / ELI not authored.
-- Old AAD-specific tints in segment headers are mapped per-type and working; if FORMAT.md changes the 19-type list, the tint mapping (`common/preamble/environments.tex` `\setheadertint`) needs to stay in sync.
-- Table dynamic-shrinking: tables that overflow currently stay overflowing rather than auto-shrinking. Captured as a deferred Phase 6 item.
+**Pipeline shape:**
 
-**Files to know about:**
+```
+source-outline + source-segments
+  │
+  │ Stage 1 (Mono::Ingest)
+  ▼
+mono/.build/<slug>/{index.md, chunks/*.md}
+  │
+  │ Stage 2 (Mono::Assemble)
+  ▼
+mono/<slug>-v<sem>.md   ← canonical citable artifact
+  │
+  │ Stage 3 (Mono::Typeset → AsfVolumeLatex)
+  ▼
+body.tex → LuaLaTeX → mono/<slug>-v<sem>.pdf
+```
 
-- `common/main.tex` — LaTeX entrypoint template (per-volume)
-- `common/preamble/*.tex` — preamble fragments (setup / environments / status-badges / eq-tags)
-- `common/lib/segment_renderer.rb` — kramdown subclass for segment markdown → LaTeX
-- `common/lib/outline_walker.rb` — role-prefix-aware OUTLINE parser
-- `bin/build-monograph` — main build script
-- `bin/output-version` — per-volume semver utility (operates on `mono-meta.yaml`)
-- `FORMAT-TODO.md` — this file; the live plan
-- `<component>/mono-meta.yaml` — per-volume metadata (title, slug, version, cover)
+The design doc at [`msc/markdown-first-pipeline.md`](msc/markdown-first-pipeline.md) covers the chunk-format contract, the index-file format, and the architectural commitments.
+
+**Suggested next moves in order of impact:**
+
+1. **Phase 2 doc sweep.** FORMAT.md and CLAUDE.md still reference the pre-restructure structure in places. Update vocabulary: Volume / Part / Chapter / Section (= Segment); the chunk format; the markdown-first pipeline; the narrow-area / wide-area distinction. Most useful for de-novo audits and future-agent onboarding.
+2. **Discussion-segment schema split** in FORMAT.md (logged above). Pairs naturally with Phase 2 since both touch FORMAT.md.
+3. **Phase 1d xr-hyper cross-volume refs.** The `.aux` files are persisted per volume; the cross-volume refs from segments to sibling-volume slugs would resolve cleanly with `xr-hyper` wired into the preamble.
+4. **Phase 1e incremental rebuild.** Per-chunk hashes are already in the index; ingest just needs to read the prior index and skip regeneration when source-hash matches.
+5. **Phase 3 chapter introduction across Parts II/III/IV.** AAD Part I is fully chapterized; same convention for the rest of AAD and the other components. The walker's implicit-Chapter default handles unchapterized parts gracefully meanwhile.
+
+**Files worth knowing about (current layout):**
+
+- `bin/build-monograph` — three-stage pipeline orchestrator
+- `bin/output-version <slug> show|bump <patch|minor|major>` — per-volume semver utility (operates on `mono-meta.yaml`)
+- `common/main.tex` — LaTeX entrypoint template (single `\input{body}` since Stage 3 emits the whole pipeline-result into body.tex)
+- `common/preamble/*.tex` — preamble fragments (`setup`, `environments`, `status-badges`, `eq-tags`)
+- `common/lib/outline_walker.rb` — role-prefix-aware OUTLINE parser; HTML-comment stripping at file-read
+- `common/lib/ingest.rb` — Stage 1; chunk and index emission with hash recording
+- `common/lib/assemble.rb` — Stage 2; chunk stitching with cross-ref resolution
+- `common/lib/typeset.rb` — Stage 3; `Kramdown::Converter::AsfVolumeLatex`
+- `common/lib/segment_renderer.rb` — `Kramdown::Converter::AsfLatex` (base class with shared converter logic; AsfVolumeLatex inherits)
+- `<component>/mono-meta.yaml` — per-volume metadata (title, slug, version, cover, toc)
 - `<component>/<slug>.aux` — persisted aux for Phase 1d xr-refs (committed)
+- `mono/.build/<slug>/{index.md, chunks/*.md}` — Stage 1 output (gitignored)
+- `msc/markdown-first-pipeline.md` — design doc; load-bearing reference for the chunked-intermediate architecture
+
+**In-source TODOs to know about** (for the next agent who touches table rendering):
+
+- `common/lib/segment_renderer.rb`:
+  - `convert_table` block: narrow-direction adaptation + snap-to-content-width epsilon (logged TODOs in the file)
+  - Math source-length over-estimation: `cell_visual_length` does a reasonable job stripping LaTeX commands, but the heuristic could be refined further with sublinear (sqrt) weighting on the column-share computation if math/prose imbalance returns
+- `common/lib/ingest.rb`:
+  - Incremental rebuild via per-chunk hash comparison (architecture in place, implementation pending)
+  - Math-pipe substitution timing (chunks carry `\vert`/`\Vert` instead of `|`; revisit if downstream non-LaTeX renderers want raw pipes)
+- `common/lib/typeset.rb`:
+  - AsfVolumeLatex / AsfLatex inheritance coupling — a `KramdownHelpers` mixin would be a flatter design
+  - Chunk-format contract expressed in two places (emission in ingest.rb, parsing in typeset.rb's `preprocess_metadata_blocks`); extract to `Mono::ChunkFormat` when changes become coupled
+- `common/lib/assemble.rb`:
+  - `**Status**: missing` conflates epistemic-status with existence-status; split when a second existence-state appears
 
 ## Status
 
-Created 2026-05-11 (v1: single-monograph plan); rewritten 2026-05-12 (v2: four-volume plan); progress-snapshot added 2026-05-12 mid-cycle. Phase 1c landed; Phase 1b (volume split) is the immediate next substantive step.
+Created 2026-05-11 (v1: single-monograph plan); rewritten 2026-05-12 (v2: four-volume plan); markdown-first restructure landed end-of-day 2026-05-12 (Stages 1+2+3 across commits `be33269`, `62b2e1e`, `610b549`, `c448a00`, `e84cd80`); table-rendering cycles completed 2026-05-12 (commits `ba74d61`, `9208651`, `9159969`, `ebaf24d`); Discussion-as-chapter-intro feature landed `8da83cd`. The four-volume build is functional, the markdown-first pipeline is the sole source path, and all tables render cleanly per Joseph's review.

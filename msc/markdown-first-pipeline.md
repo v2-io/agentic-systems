@@ -1,6 +1,12 @@
 # Markdown-First Build Pipeline — Design
 
-*Design document for the build-pipeline restructure proposed during the 2026-05-12 monograph-build session. Implementation state (current as of commits `be33269`, `62b2e1e`, and the in-flight Stage 3 work): Stage 1 (ingest) and Stage 2 (assemble) committed and producing the markdown artifact across all four volumes; Stage 3 (typeset) committed as a side-by-side artifact emitter — the LaTeX output is correct for the common cases but a few segment-internal subhead transitions remain before the legacy path can be retired. See FORMAT-TODO §priority for the switchover punch list.*
+*Design document for the build-pipeline restructure proposed during the 2026-05-12 monograph-build session.*
+
+**Implementation status (current as of end of 2026-05-12):** *all three stages landed and shipping. The markdown-first pipeline is now the sole source path for both PDF and the `.md` artifact across all four volumes.*
+
+*Stage 1 (ingest) at commit `be33269`; Stage 2 (assemble) at `62b2e1e`; Stage 3 typeset module + AsfVolumeLatex converter at `610b549`; Stage 3 end-to-end compile + math-pipe / missing-segment / double-escape fixes at `c448a00`; Stage 3 switchover (legacy direct-walk LaTeX path retired) at `e84cd80`. Subsequent rendering refinements (chapter heading restyle, subhead dispatch, working-notes width, orphan suppression, table column adaptation, Discussion-as-chapter-intro) at `9208651`, `ba74d61`, `9159969`, `ebaf24d`, `8da83cd`.*
+
+*This doc is retained as the architectural anchor — the chunk-format contract, the index-file format, and the architectural commitments are all here. When future tooling consumes chunks (HTML/EPUB renderer, search index, LSP-for-segments), this is the reference. The seven Open Questions section below is preserved with the decisions Joseph made captured inline.*
 
 ## Why this exists
 
