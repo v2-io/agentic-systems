@@ -23,6 +23,20 @@
 % the equation that immediately follows. (kaobook's \marginnote works in
 % both horizontal and vertical modes.)
 
+% kaobook redefines \marginnote with signature \marginnote[<offset>]{<text>}
+% — the offset is the FIRST optional argument, not the third one the
+% upstream marginnote package documents. (See kao.sty:478. An earlier
+% attempt that used the standard signature wrote `[5mm]` past the macro
+% and the literal text leaked into the body.)
+%
+% Offset prefix `*` means "multiple of baselineskip"; bare offsets are
+% absolute dimensions. We push down ~2 baselineskips so the marginnote
+% lands near the display equation that the renderer's lazy-emit logic
+% has placed it adjacent to in the source stream. This is heuristic —
+% the actual distance from "eqtag emission point" to "equation first
+% line" varies (more when the eqtag follows a subhead with no prose
+% between; less when it follows a prose paragraph) — but *2 covers the
+% common case decently.
 \NewDocumentCommand{\eqtag}{m}{%
-  \marginnote{\footnotesize\sffamily\color{status-soft}#1}%
+  \marginnote[*2]{\footnotesize\sffamily\color{status-soft}#1}%
 }

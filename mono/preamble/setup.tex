@@ -35,10 +35,13 @@
 % fonts. STIX Two Math ships with macOS (we use the system copy) and is also
 % available via the stix2-otf TL package on Linux.
 %----------------------------------------------------------------------------
+% Italic text gets a muted teal tint so emphasis and term-introduction
+% reads as a quiet visual register, distinct from body-bold.
 \setmainfont{EB Garamond}[
-  Ligatures        = {TeX, Common},
-  Numbers          = OldStyle,
-  SmallCapsFeatures= {LetterSpace=4},
+  Ligatures         = {TeX, Common},
+  Numbers           = OldStyle,
+  SmallCapsFeatures = {LetterSpace=4},
+  ItalicFeatures    = {Color=5A787C},
 ]
 \setsansfont{Roboto Light}[
   Ligatures   = TeX,
@@ -46,8 +49,20 @@
   BoldFont    = {Roboto Medium},
   ItalicFont  = {Roboto Light Italic},
 ]
-% Monospace: kaobook will leave Libertinus Mono via modern fontmethod; we
-% keep it for now and revisit when we render code blocks.
+% Monospace: Fira Mono — narrower and cleaner than the Libertinus Mono
+% kaobook defaults to; reads well for inline code spans and slug names
+% (`#some-slug-name`) that appear frequently in segment prose.
+%
+% Scale and negative LetterSpace tighten the spread (Fira Mono is wide
+% by default at MatchLowercase). Color is a muted olive — the same
+% "quiet typographic register" approach as italics; mono content reads
+% as a sibling channel rather than competing with body bold.
+\setmonofont{Fira Mono}[
+  Ligatures   = TeX,
+  Scale       = 0.85,
+  LetterSpace = -4,
+  Color       = 6B7660,
+]
 
 \setmathfont{STIX Two Math}
 
@@ -72,11 +87,54 @@
 \usepackage{xstring}
 
 %----------------------------------------------------------------------------
+% wasysym — provides \CIRCLE and \Circle (size-paired filled and empty
+% circle glyphs) for the segment-stage indicator. Earlier attempts to use
+% raw Unicode ●/○ ran into EB Garamond's missing-glyph fallback and a
+% font-subset failure on the system STIX Two Text.
+%----------------------------------------------------------------------------
+\usepackage{wasysym}
+
+%----------------------------------------------------------------------------
+% changepage — adjustwidth* environment with signed margin offsets, used
+% by \segmentepigraph to extend into the margin column when centering on
+% \segmentrulewidth (positive arg indents inward; negative extends past).
+%----------------------------------------------------------------------------
+\usepackage{changepage}
+
+%----------------------------------------------------------------------------
 % Vertical-space reservation — \needspace{N\baselineskip} prevents a
 % segment header from being orphaned at page bottom by forcing a page
 % break first when the requested space isn't available.
 %----------------------------------------------------------------------------
 \usepackage{needspace}
+
+%----------------------------------------------------------------------------
+% Tables — tabularx + X columns wrap content to fit \linewidth, so cells
+% with long prose break naturally instead of overflowing the page. We
+% deliberately avoid xltabular (longtable-based, supports page breaks)
+% because its grouping collides with kaobook's margin-note machinery
+% (\cmrsideswitch from booktabs becomes undefined at \end{xltabular}
+% inside kaobook's pagestyle). Tables therefore don't break across pages;
+% any genuinely tall table needs source-side splitting.
+% booktabs gives us the Tufte-style rule register; array gives the
+% column-modifier prefixes for raggedright/centering/raggedleft X.
+% caption + \captionof let us emit a numbered caption above each table
+% without forcing it into a `table` float (which would re-flow).
+%----------------------------------------------------------------------------
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}      % for >{\raggedright\arraybackslash}X column types
+\usepackage{caption}
+
+%----------------------------------------------------------------------------
+% Equation + table numbering — both reset per chapter and display with
+% roman chapter numerals to match the segment numbering register (e.g.,
+% Definition I.4 followed by equation (I.5)).
+%----------------------------------------------------------------------------
+\numberwithin{equation}{chapter}
+\numberwithin{table}{chapter}
+\renewcommand{\theequation}{\Roman{chapter}.\arabic{equation}}
+\renewcommand{\thetable}{\Roman{chapter}.\arabic{table}}
 
 %----------------------------------------------------------------------------
 % Color palette
@@ -92,8 +150,25 @@
 \definecolor{status-exact}   {HTML}{2E5A88}  % blue-ish; settled
 \definecolor{status-soft}    {HTML}{8B6914}  % muted gold; heuristic/qualitative
 \definecolor{status-tentative}{HTML}{8B4A2F} % muted rust; sketch/discussion-grade
+\definecolor{link-navy}      {HTML}{1F3A6F}  % cross-refs, citations, URLs
 
 % \pagecolor{paper-cream}  % uncomment for cream paper
+
+%----------------------------------------------------------------------------
+% Hyperref color discipline — all cross-refs, citations, and URLs read
+% in navy blue. Applied via \hypersetup at \AtBeginDocument so it wins
+% over kaobook's own hypersetup calls (kaorefs/kaobiblio set their own
+% colors during their own \AtBeginDocument hooks).
+%----------------------------------------------------------------------------
+\AtBeginDocument{%
+  \hypersetup{
+    colorlinks = true,
+    linkcolor  = link-navy,
+    citecolor  = link-navy,
+    urlcolor   = link-navy,
+    filecolor  = link-navy,
+  }%
+}
 
 %----------------------------------------------------------------------------
 % That's it for the base preamble. Segment environments, status badges, and

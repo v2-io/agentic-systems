@@ -115,6 +115,14 @@ class Kramdown::Parser::AsfSegment < Kramdown::Parser::Kramdown
   # stricter discipline so cross-refs at paragraph starts survive.
   ATX_HEADER_START = /^(?<level>\#{1,6})[\t ]+(?<contents>[^ \t].*)\n/
 
+  # Obsidian-style callout: a blockquote whose first line is `[!type]`
+  # (optionally with title following, and an optional anchor `^name`).
+  # We claim these before the standard :blockquote parser so the type and
+  # title round-trip to the converter as attributes instead of leaking
+  # into the body as literal text.
+  CALLOUT_START = /^#{OPT_SPACE}>[ \t]*\[!(?<type>\w+)\][+-]?/
+  CALLOUT_MARKER_LINE = /\A\[!(?<type>\w+)\][+-]?[ \t]*(?<title>.*?)\s*(?:\n|\z)/m
+
   # Single-dollar inline math (e.g., `$x = y$`). Upstream only recognizes
   # `$$...$$`. The negative lookarounds keep us out of $$...$$'s lane.
   SINGLE_DOLLAR_MATH = /(?<!\$)\$(?!\$)([^$\n]+?)\$(?!\$)/
@@ -135,6 +143,13 @@ class Kramdown::Parser::AsfSegment < Kramdown::Parser::Kramdown
     super
     @span_parsers.unshift(:single_dollar_math) unless @span_parsers.include?(:single_dollar_math)
     @block_parsers.unshift(:eq_tag) unless @block_parsers.include?(:eq_tag)
+    # Callout parser sits just before the default :blockquote parser so the
+    # `> [!type]` form gets recognized before falling through to a plain
+    # blockquote with literal `[!type]` text inside.
+    unless @block_parsers.include?(:callout)
+      bq_idx = @block_parsers.index(:blockquote) || 0
+      @block_parsers.insert(bq_idx, :callout)
+    end
   end
 
   # Override the inherited parse_atx_header. parse_blocks first matches the
@@ -172,6 +187,34 @@ class Kramdown::Parser::AsfSegment < Kramdown::Parser::Kramdown
   end
   # rubocop:enable Naming/PredicateMethod
   define_parser(:eq_tag, EQ_TAG_LINE)
+
+  # Slurp the contiguous `> ...` lines (same algorithm as parse_blockquote),
+  # peel off the [!type] marker line, attach type/title as element
+  # attributes, then recurse on the remainder so embedded tables, lists,
+  # math etc. parse normally.
+  # rubocop:disable Naming/PredicateMethod
+  def parse_callout
+    start_line = @src.current_line_number
+    raw        = @src.scan(self.class::PARAGRAPH_MATCH)
+    raw << @src.scan(self.class::PARAGRAPH_MATCH) until @src.match?(self.class::LAZY_END)
+    raw.gsub!(self.class::BLOCKQUOTE_START, '')
+
+    marker = raw.match(CALLOUT_MARKER_LINE)
+    return false unless marker
+
+    type  = marker[:type].downcase
+    title = marker[:title].to_s.strip
+    body  = raw[marker[0].length..]
+
+    el = new_block_el(:callout, nil, nil, location: start_line)
+    el.attr['data-callout-type']  = type
+    el.attr['data-callout-title'] = title unless title.empty?
+    @tree.children << el
+    parse_blocks(el, body)
+    true
+  end
+  # rubocop:enable Naming/PredicateMethod
+  define_parser(:callout, CALLOUT_START)
 end
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -221,15 +264,32 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     @segment_head_emitted = false
     @section_depth = 0
     @in_working_notes = false
+    @in_epigraph     = false
+    @in_widesection  = false
+    @pending_eqtag   = nil
+    @eq_count        = 0
+    @table_count     = 0
   end
+
+  # H2 sections that render full-width (body + margin column) rather
+  # than constrained to the body column — the Discussion and Findings
+  # sections expand to the full segment band so they read as the wider
+  # interpretive register, distinct from the formal-derivation content
+  # of Formal Expression / Epistemic Status above them.
+  WIDE_SECTION_TITLES = %w[Discussion Findings].freeze
+
+  # Per-segment slug, used to build cross-ref labels for equations and
+  # tables. Empty when the frontmatter doesn't specify a slug (shouldn't
+  # happen for well-formed segments, but we don't want to crash on it).
+  def segment_slug = (@frontmatter['slug'] || '').to_s
 
   # ── Element converters ────────────────────────────────────────────────
 
   def convert_root(el, opts)
     body = inner(el, opts)
-    # Close a still-open working notes box at end of segment (FORMAT
-    # discipline says Working Notes is the trailing section, so the env
-    # remains open through every subsequent paragraph).
+    body += flush_pending_eqtag
+    body += "\\end{segmentepigraph}\n" if @in_epigraph
+    body += "\\end{segmentwidesection}\n" if @in_widesection
     body += "\\end{workingnotes}\n" if @in_working_notes
     body + segment_close
   end
@@ -242,14 +302,25 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     title = inner(el, opts).strip
     if !@segment_head_emitted
       @segment_head_emitted = true
-      return segment_open(title)
+      @in_epigraph = true
+      return "#{segment_open(title)}\\begin{segmentepigraph}\n"
     end
 
-    # If a new H2 starts while we're inside Working Notes (rare — FORMAT
-    # puts WN last — but possible), close the box first.
-    prefix = ''
+    # If a new H2 starts while we're inside the epigraph zone, a wide
+    # section, or Working Notes, close those wrappers first. Also flush
+    # any pending eqtag so it doesn't leak into the next section as a
+    # stray marginnote.
+    prefix = flush_pending_eqtag
+    if @in_epigraph && el.options[:level] <= 2
+      prefix += "\\end{segmentepigraph}\n\n"
+      @in_epigraph = false
+    end
+    if @in_widesection && el.options[:level] <= 2
+      prefix += "\\end{segmentwidesection}\n\n"
+      @in_widesection = false
+    end
     if @in_working_notes && el.options[:level] <= 2
-      prefix = "\\end{workingnotes}\n\n"
+      prefix += "\\end{workingnotes}\n\n"
       @in_working_notes = false
     end
 
@@ -260,7 +331,15 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
 
     case el.options[:level]
     when 2
-      "#{prefix}\\segmentsubhead{#{title}}\n\n"
+      # Discussion / Findings get a full-width wrapper opened AFTER the
+      # subhead label so the section content can extend into the margin
+      # column. Other H2s render at body column width as before.
+      if WIDE_SECTION_TITLES.include?(title)
+        @in_widesection = true
+        "#{prefix}\\segmentsubhead{#{title}}\n\n\\begin{segmentwidesection}\n"
+      else
+        "#{prefix}\\segmentsubhead{#{title}}\n\n"
+      end
     when 3
       # H3 bold inline leader — same orphan discipline as the H2 subhead,
       # just less greedy on the reserved space since it sits inline with
@@ -272,8 +351,37 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     end
   end
 
+  # Equation-level tags are emitted lazily: the source puts `*[Tag]*` in
+  # its own paragraph BEFORE the equation it labels, but \marginnote
+  # attaches at the position where it's called — which leaves the tag
+  # floating a line or two above the equation it tags. We hold the tag
+  # content in @pending_eqtag and flush it next to the equation itself
+  # (convert_math, block category). If no equation follows, the tag
+  # falls back to its source-position emission at end-of-segment or when
+  # a new eq_tag arrives.
   def convert_eq_tag(el, _opts)
-    "\\eqtag{#{escape_eq_tag(el.value)}}\n"
+    out = flush_pending_eqtag
+    @pending_eqtag = el.value
+    out
+  end
+
+  def flush_pending_eqtag
+    return '' unless @pending_eqtag
+
+    rendered = "\\eqtag{#{escape_eq_tag(@pending_eqtag)}}\n"
+    @pending_eqtag = nil
+    rendered
+  end
+
+  # Obsidian callouts → styled tcolorbox via the LaTeX `callout` env.
+  # Type and title are emitted as macro args so the LaTeX side controls
+  # color/icon per type (warning/note/info/...).
+  def convert_callout(el, opts)
+    type  = el.attr['data-callout-type'] || 'note'
+    title = el.attr['data-callout-title'] || ''
+    "\\begin{callout}{#{type}}{#{process_prose(title)}}\n" \
+      "#{inner(el, opts)}" \
+      "\\end{callout}\n\n"
   end
 
   # Paragraphs — rewrite #slug cross-refs as we emit text. Also detect
@@ -287,7 +395,11 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
              "\\textbf{#{process_prose(title)}:}\\par\\nobreak\\smallskip\\nopagebreak[4]\n"
     end
     rewritten = inner(el, opts)
-    "#{rewritten}\n\n"
+    # Flush any eqtag we held into this paragraph but didn't consume via
+    # a display equation — emit at end-of-paragraph rather than holding
+    # further, so the marginnote stays close to its source position
+    # instead of leaking forward to the next H2 / segment boundary.
+    "#{rewritten}#{flush_pending_eqtag}\n\n"
   end
 
   # A paragraph qualifies as a leader when its sole child is a :strong
@@ -349,8 +461,21 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     value = el.value.dup
     MATH_COMPAT_SHIMS.each { |pat, rep| value.gsub!(pat, rep) }
     if el.options[:category] == :block
-      "\\begin{equation*}\n#{value}\n\\end{equation*}\n"
+      # Display equation — numbered (`equation`, not `equation*`) with a
+      # cross-ref label of the form eq:<slug>-<n> for stable referencing.
+      # The number itself reads as e.g. `(I.4)` via \numberwithin in the
+      # preamble. Any pending eqtag flushes inline with the equation so
+      # the marginnote aligns with the equation's first line.
+      @eq_count += 1
+      tag = ''
+      if @pending_eqtag
+        tag = "\\eqtag{#{escape_eq_tag(@pending_eqtag)}}%\n"
+        @pending_eqtag = nil
+      end
+      label = segment_slug.empty? ? '' : "\\label{eq:#{segment_slug}-#{@eq_count}}"
+      "#{tag}\\begin{equation}\n#{label}#{value}\n\\end{equation}\n"
     else
+      # Inline math doesn't consume the pending eqtag.
       "$#{value}$"
     end
   end
@@ -359,6 +484,94 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   def convert_html_element(_el, _opts) = ''
   def convert_xml_comment(_el, _opts)  = ''
   def convert_blank(_el, _opts)        = "\n"
+
+  # Tables — kramdown's default emits longtable{|l|l|l|} which doesn't
+  # wrap, so any cell wider than its column overflows the page. We swap
+  # in xltabular (longtable + tabularx, page-breakable AND wrap-on-width).
+  # Columns become `X` (equal-share wrapping), alignment-aware via the
+  # array-package column-modifier prefix.
+  #
+  # Width is \segmentrulewidth (body + margin gutter + margin), matching
+  # the segment header rules and the Working Notes box so tables read as
+  # full-width artifacts. (The earlier xltabular attempt at this width
+  # conflicted with kaobook's margin-note machinery via booktabs' internal
+  # \cmrsideswitch; plain tabularx avoids that path entirely.)
+  #
+  # Tufte-ish styling: heavier outer rules (\toprule[1pt]/\bottomrule[1pt]),
+  # thinner header separator (default \midrule), italic header row,
+  # generous row spacing (\arraystretch=1.25), no vertical rules.
+  #
+  # \begingroup/\endgroup scopes \arraystretch and \small — wrapping in
+  # `{ ... }` around \begin{xltabular} collides with xltabular's own
+  # grouping (the original "Extra endgroup" cascade).
+  def convert_table(el, opts)
+    aligns = el.options[:alignment] || []
+    cols   = aligns.map { |a| column_spec(a) }.join
+    shrink = aligns.size >= 4 ? "\\small\n" : ''
+    @table_count += 1
+    caption_text = (el.attr['caption'] || el.attr['data-caption'] || '').to_s
+    caption_arg  = caption_text.empty? ? '{}' : "{#{process_prose(caption_text)}}"
+    label        = segment_slug.empty? ? '' : "\\label{tbl:#{segment_slug}-#{@table_count}}"
+    # Orphan/widow protection for the caption-then-table pair: reserve
+    # enough space to hold caption + a few rows. \nopagebreak between
+    # caption and tabularx forbids a break in that gap; if the table is
+    # taller than the remaining space, the whole thing migrates to the
+    # next page rather than splitting the caption from its rows.
+    "\\par\\medskip\n" \
+      "\\needspace{8\\baselineskip}\n" \
+      "\\begingroup\n" \
+      "\\renewcommand{\\arraystretch}{1.25}%\n" \
+      "#{shrink}" \
+      "\\captionof{table}#{caption_arg}#{label}\\par\\smallskip\n" \
+      "\\nopagebreak[4]\n" \
+      "\\begin{tabularx}{\\segmentrulewidth}{#{cols}}\n" \
+      "\\toprule[1pt]\\addlinespace[2pt]\n" \
+      "#{inner(el, opts)}" \
+      "\\addlinespace[2pt]\\bottomrule[1pt]\n" \
+      "\\end{tabularx}\n" \
+      "\\endgroup\n\\par\\medskip\n\n"
+  end
+
+  COLUMN_SPEC = {
+    left:    '>{\\raggedright\\arraybackslash}X',
+    right:   '>{\\raggedleft\\arraybackslash}X',
+    center:  '>{\\centering\\arraybackslash}X',
+    default: '>{\\raggedright\\arraybackslash}X',
+  }.freeze
+
+  def column_spec(align)
+    COLUMN_SPEC[align] || COLUMN_SPEC[:default]
+  end
+
+  # Italic header row — the Tufte register for column labels. We render
+  # each header cell with \emph rather than wrapping the whole row, so
+  # cell-level math/markup inside headers still parses normally.
+  def convert_thead(el, opts)
+    rows = el.children.map do |tr|
+      next unless tr.type == :tr
+
+      cells = tr.children.map { |td| "\\emph{#{inner(td, opts).strip}}" }
+      "#{cells.join(' & ')} \\\\\n"
+    end.compact
+    "#{rows.join}\\midrule\n"
+  end
+
+  def convert_tbody(el, opts)
+    inner(el, opts)
+  end
+
+  def convert_tfoot(el, opts)
+    inner(el, opts)
+  end
+
+  def convert_tr(el, opts)
+    cells = el.children.map { |c| send("convert_#{c.type}", c, opts).strip }
+    "#{cells.join(' & ')} \\\\\n"
+  end
+
+  def convert_td(el, opts)
+    inner(el, opts).strip
+  end
 
   # ── Segment header / footer ───────────────────────────────────────────
 
@@ -371,15 +584,13 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     # Most segments write the H1 as "Type: Title" (FORMAT-recommended human
     # form). Strip the redundant type prefix — \segmenthead already shows it.
     clean = title.sub(/\A#{Regexp.escape(label)}:\s*/, '')
+    # Stage glyph appears on the far right of the header strip in review
+    # mode; public-variant builds suppress it by passing the empty string.
+    stage_arg = @variant == :review ? stage : ''
 
     parts = []
-    parts << "\\segmenthead{#{label}}{#{escape_text(clean)}}{#{status}}"
+    parts << "\\segmenthead{#{label}}{#{escape_text(clean)}}{#{status}}{#{stage_arg}}"
     parts << "\\label{seg:#{slug}}" unless slug.empty?
-    # In review mode, surface the stage frontmatter as marginalia so
-    # reviewers see the promotion state alongside the segment itself.
-    if @variant == :review && !stage.empty?
-      parts << "\\segmentstage{#{stage}}"
-    end
     parts << ''
     parts.join("\n")
   end

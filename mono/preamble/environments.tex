@@ -25,14 +25,21 @@
 % in the counter format aligns the body convention with the head.)
 \renewcommand{\thesegment}{\Roman{chapter}.\arabic{segment}}
 
-% Internal section subheads — \segmentsubhead{Formal Expression}, etc.
-% Orphan policy: reserve enough vertical space to hold the subhead and a
-% few lines of the section that follows, and discourage a break right
-% after, so "Formal Expression" never lands at page bottom alone.
+% Internal section subheads — Formal Expression / Epistemic Status /
+% Discussion / Findings. Each renders as a full-width thin rule across
+% the segment band, with the subhead label right-aligned beneath. The
+% rule does the visual section break; the right-aligned label names it
+% quietly without competing with body text for the reader's eye.
+%
+% Orphan policy: reserve vertical space for the rule, the label, and a
+% few lines of the section that follows; discourage a break in between.
 \NewDocumentCommand{\segmentsubhead}{m}{%
   \needspace{5\baselineskip}%
   \par\medskip%
-  \noindent{\sffamily\bfseries #1}\par\nobreak\smallskip%
+  \noindent\textcolor{rule-gray}{\rule{\segmentrulewidth}{0.3pt}}\par%
+  \nobreak\smallskip%
+  \noindent\makebox[\segmentrulewidth][r]{\sffamily\bfseries #1}\par%
+  \nobreak\smallskip%
   \nopagebreak[4]%
 }
 
@@ -52,32 +59,119 @@
 % empty string when frontmatter has no `status:` set, which suppresses the
 % badge via the IfStrEq below.
 %
+% Segment-header palette — eight pastel tints across the 19 segment
+% types. Updated from a more saturated first cut to a subtler pastel set;
+% hex values estimated from a reference image and rounded to neat values.
+\definecolor{tint-1}{HTML}{DDE2D2}  % pale sage
+\definecolor{tint-2}{HTML}{D2D7DC}  % pale gray-blue
+\definecolor{tint-3}{HTML}{DCD9D7}  % warm pale gray
+\definecolor{tint-4}{HTML}{D5E5D7}  % pale mint
+\definecolor{tint-5}{HTML}{CFE0EC}  % pale sky
+\definecolor{tint-6}{HTML}{F2EAD0}  % pale cream
+\definecolor{tint-7}{HTML}{F4DECF}  % pale peach
+\definecolor{tint-8}{HTML}{F1D5DA}  % pale pink
+
+% Live alias the segmenthead box reads from; \setheadertint{Label} updates
+% it before each segment is drawn so each tcolorbox sees its own color.
+\colorlet{header-tint}{tint-1}
+
+% Dispatch by type-label (the human-readable form passed to \segmenthead's
+% first argument): Definition, Result, Derivation, etc. Order follows the
+% palette mapping Joseph chose for the live corpus distribution; the two
+% currently-unused FORMAT types (Corollary, Aside) take sensible defaults
+% (Corollary→Result family, Aside→Detail family) so they Just Work when
+% they land in source.
+% Mid-gray used for the bullet between type-label and title in segment
+% headers. Light enough to feel like punctuation, dark enough to be
+% clearly visible (the rule-gray we previously used was effectively
+% invisible against the tinted backgrounds).
+\definecolor{bullet-mid}{HTML}{666666}
+
+% Stage glyph — promotion-stage indicator on the far right of the segment
+% header strip in review mode. Five filled/empty dots map to the five
+% post-`old` promotion stages from FORMAT.md. `missing`/`old` yield no
+% glyph (those segments don't reach \segmenthead anyway — they go
+% through \missingsegment).
+% \CIRCLE (filled) and \Circle (empty) from wasysym are size-paired and
+% reliably available — both render at the same baseline size, unlike
+% \textbullet/\textcircled{} or the EB-Garamond-missing Unicode ●/○.
+\NewDocumentCommand{\stageglyph}{m}{%
+  {\color{bullet-mid}\footnotesize\IfStrEqCase{#1}{%
+    {draft}           {\CIRCLE\,\Circle\,\Circle\,\Circle\,\Circle}%
+    {deps-verified}   {\CIRCLE\,\CIRCLE\,\Circle\,\Circle\,\Circle}%
+    {claims-verified} {\CIRCLE\,\CIRCLE\,\CIRCLE\,\Circle\,\Circle}%
+    {format-clean}    {\CIRCLE\,\CIRCLE\,\CIRCLE\,\CIRCLE\,\Circle}%
+    {candidate}       {\CIRCLE\,\CIRCLE\,\CIRCLE\,\CIRCLE\,\CIRCLE}%
+  }[]}%
+}
+
+\NewDocumentCommand{\setheadertint}{m}{%
+  \IfStrEqCase{#1}{%
+    {Definition}      {\colorlet{header-tint}{tint-1}}%
+    {Formulation}     {\colorlet{header-tint}{tint-2}}%
+    {Detail}          {\colorlet{header-tint}{tint-2}}%
+    {Discussion}      {\colorlet{header-tint}{tint-3}}%
+    {Measurement}     {\colorlet{header-tint}{tint-3}}%
+    {Derived}         {\colorlet{header-tint}{tint-4}}%
+    {Derivation}      {\colorlet{header-tint}{tint-4}}%
+    {Postulate}       {\colorlet{header-tint}{tint-4}}%
+    {Scope}           {\colorlet{header-tint}{tint-5}}%
+    {Normative}       {\colorlet{header-tint}{tint-5}}%
+    {Hypothesis}      {\colorlet{header-tint}{tint-6}}%
+    {Result}          {\colorlet{header-tint}{tint-7}}%
+    {Observation}     {\colorlet{header-tint}{tint-7}}%
+    {Worked Example}  {\colorlet{header-tint}{tint-7}}%
+    {Empirical}       {\colorlet{header-tint}{tint-7}}%
+    {Corollary}       {\colorlet{header-tint}{tint-7}}%  unused; share Result
+    {Sketch}          {\colorlet{header-tint}{tint-8}}%
+    {Proposed Schema} {\colorlet{header-tint}{tint-8}}%
+    {Aside}           {\colorlet{header-tint}{tint-2}}%  unused; share Detail
+  }[\colorlet{header-tint}{tint-1}]%
+}
+
 % Title is set large + bold (upright) so it reads with weight comparable
 % to inline body-bold cues like "Lemma 1." or "Proof." — competing with
 % the prose rather than looking decorative.
 %
 % Upper rule is 2.5x thicker and ~black, lower rule stays thin and gray —
 % the asymmetry pulls the eye to the segment opening and lets the closing
-% rule fade to a quiet separator.
+% rule fade to a quiet separator. Between the rules: a tcolorbox holding
+% the type-label + status-badge + title line on a soft tinted background.
 %
 % Orphan/widow policy: \needspace asks for enough vertical space to hold
 % the header + a few lines of the first paragraph; if it's not available,
 % LaTeX breaks the page first and the segment opens on the next page with
 % its body intact. \nopagebreak after the bottom rule discourages a break
 % between header and the paragraph that follows.
-\NewDocumentCommand{\segmenthead}{m m m}{%
+% Fourth arg is the segment's `stage:` frontmatter value, used in review
+% mode for the dot-progression glyph on the far right of the header strip.
+% Empty string elides it (public-variant builds, or stage-less segments).
+\NewDocumentCommand{\segmenthead}{m m m m}{%
   \needspace{10\baselineskip}%
   \refstepcounter{segment}%
+  \setheadertint{#1}%
   \par\medskip%
-  \noindent\rule{\segmentrulewidth}{0.75pt}\par%
-  \nobreak\smallskip%
-  \noindent%
+  \noindent\begin{tcolorbox}[
+    enhanced,
+    width            = \segmentrulewidth,
+    colback          = header-tint,
+    boxrule          = 0pt,
+    arc              = 0pt,
+    left             = 8pt, right  = 8pt,
+    top              = 6pt, bottom = 6pt,
+    before skip      = 0pt, after skip = 0pt,
+    % Both rules black; top 2x the bottom so the eye registers the
+    % segment-opening edge over the closing edge while both stay clearly
+    % visible against the tinted background.
+    borderline north = {1.5pt}{0pt}{black},
+    borderline south = {0.75pt}{0pt}{black},
+  ]
   {\sffamily\bfseries #1~\thesegment}%
   \IfStrEq{#3}{}{}{\statusbadge{#3}}%
-  \nobreak\quad\textcolor{rule-gray}{\textbullet}\quad%
+  \nobreak\quad\textcolor{bullet-mid}{\textbullet}\quad%
   {\large\bfseries #2}.%
-  \par\nobreak\smallskip%
-  \noindent\textcolor{rule-gray}{\rule{\segmentrulewidth}{0.3pt}}\par%
+  \IfStrEq{#4}{}{}{\hfill\stageglyph{#4}}%
+  \end{tcolorbox}\par%
   \nobreak\medskip%
   \nopagebreak[4]%
 }
@@ -90,13 +184,10 @@
   \par\medskip%
 }
 
-% Stage marker — review-mode only. Surfaces the `stage:` frontmatter field
-% (draft / deps-verified / claims-verified / format-clean / candidate) as a
-% small marginal note. The kramdown emitter only calls this in :review
-% variant; :public elides it entirely.
-\NewDocumentCommand{\segmentstage}{m}{%
-  \marginnote{\footnotesize\sffamily\color{status-tentative}stage: #1}%
-}
+% (Stage display moved into the segment header strip as a dot glyph;
+% see \stageglyph and \segmenthead's fourth argument. This command kept
+% only for backward compatibility in case any caller still emits it.)
+\NewDocumentCommand{\segmentstage}{m}{}
 
 % Missing-segment placeholder — for slugs listed in OUTLINE.md but without
 % a corresponding src/ file. Generates a TOC entry and a visible marker so
@@ -107,17 +198,20 @@
   % #1 = type label, #2 = slug, #3 = claim text (from the outline table)
   \needspace{8\baselineskip}%
   \refstepcounter{segment}%
+  % Emit the seg: label even though the segment isn't written — cross-refs
+  % from other segments still resolve to a number rather than ??.
+  \label{seg:#2}%
   \par\medskip%
   \noindent{\color{status-tentative}\rule{\segmentrulewidth}{0.75pt}}\par%
   \nobreak\smallskip%
   \noindent%
   {\sffamily\bfseries\color{status-tentative} #1~\thesegment}%
-  \quad\textcolor{rule-gray}{\textbullet}\quad%
+  \quad\textcolor{bullet-mid}{\textbullet}\quad%
   {\large\bfseries\color{status-tentative} #3}.%
   \par\nobreak\smallskip%
   \noindent\emph{Segment \texttt{#2} not yet written.}\par%
   \nobreak\smallskip%
-  \noindent\textcolor{rule-gray}{\rule{\segmentrulewidth}{0.3pt}}\par%
+  \noindent{\color{status-tentative}\rule{\segmentrulewidth}{0.75pt}}\par%
   \nobreak\medskip%
 }
 
@@ -127,6 +221,117 @@
   \par\medskip%
   \noindent\textcolor{status-tentative}{\textbf{[Gap]}}~\emph{#1}\par%
   \medskip%
+}
+
+% Segment epigraph — summary block between the segment title and the
+% first \segmentsubhead ("Formal Expression"). Slightly smaller, justified,
+% centered horizontally on the full segment band (\segmentrulewidth).
+%
+% Implementation: capture the body into an lrbox, then place it inside a
+% \makebox of width \segmentrulewidth with center-alignment. The \makebox
+% is rendered \noindent so it begins flush with the body column's left
+% edge; its visual extent then runs from x=0 to x=\segmentrulewidth, with
+% the inner parbox (width 0.7 * segmentrulewidth) horizontally centered.
+%
+% Why not adjustwidth*: on chapter-first pages the kao chapter style
+% transitions through \pagelayout{wide}, leaving the page in a state
+% where adjustwidth* samples wider dimensions than the surrounding body
+% prose actually uses, and the epigraph then extends past the page's
+% left edge. \makebox doesn't sample those page-state dimensions; the
+% positioning is fully determined by the explicit width we hand it.
+\newsavebox{\segepibox}
+
+\NewDocumentEnvironment{segmentepigraph}{}{%
+  \par\smallskip%
+  \begin{lrbox}{\segepibox}%
+  \begin{minipage}{0.7\segmentrulewidth}%
+  \small%
+  % A bit of parskip so multi-paragraph epigraphs breathe — minipage
+  % defaults to \parskip=0 which is too tight when the summary runs to
+  % two or three paragraphs.
+  \setlength{\parskip}{0.8\baselineskip}%
+  \setlength{\parindent}{0pt}%
+  \noindent\ignorespaces%
+}{%
+  \par%
+  \end{minipage}%
+  \end{lrbox}%
+  \noindent\makebox[\segmentrulewidth][c]{\usebox{\segepibox}}%
+  \par\medskip%
+}
+
+% Wide-section wrapper — for Discussion and Findings, where the section
+% content extends to the full segment band (body + margin gutter +
+% margin column). No background, no rule; just a wider text area.
+% tcolorbox's `blanker` skin gives us width control without decoration.
+%
+% Parskip is bumped inside the wrapper so multi-paragraph commentary in
+% Discussion / Findings (which is interpretive prose, often several
+% paragraphs of explanation) reads with proper breathing room between
+% paragraphs rather than the body-default tight stacking.
+\NewDocumentEnvironment{segmentwidesection}{}{%
+  \par\medskip%
+  \begin{tcolorbox}[
+    blanker, breakable,
+    width        = \segmentrulewidth,
+    left         = 0pt, right  = 0pt,
+    top          = 0pt, bottom = 0pt,
+    before skip  = 0pt, after skip = 0pt,
+  ]%
+  \setlength{\parskip}{0.8\baselineskip}%
+  \setlength{\parindent}{0pt}%
+}{%
+  \end{tcolorbox}%
+  \par\medskip%
+}
+
+% Callouts — Obsidian-style `> [!type] title` blocks. We tint by type
+% (warning/note/info/tip/danger), set a thin colored left border, and
+% render the title in bold. Body content (paragraphs, lists, tables) gets
+% the small/dim register so the callout reads as a contextual note rather
+% than competing with body prose.
+\definecolor{callout-warning-bg}    {HTML}{FDF5D9}
+\definecolor{callout-warning-rule}  {HTML}{C49A2E}
+\definecolor{callout-note-bg}       {HTML}{E7F0FB}
+\definecolor{callout-note-rule}     {HTML}{3D6FB5}
+\definecolor{callout-tip-bg}        {HTML}{E6F4EA}
+\definecolor{callout-tip-rule}      {HTML}{3A8050}
+\definecolor{callout-danger-bg}     {HTML}{FBE6E6}
+\definecolor{callout-danger-rule}   {HTML}{B53A3A}
+
+\NewDocumentCommand{\calloutpalette}{m}{%
+  \IfStrEqCase{#1}{%
+    {warning}{\colorlet{callout-bg}{callout-warning-bg}\colorlet{callout-rule}{callout-warning-rule}}%
+    {note}   {\colorlet{callout-bg}{callout-note-bg}   \colorlet{callout-rule}{callout-note-rule}}%
+    {info}   {\colorlet{callout-bg}{callout-note-bg}   \colorlet{callout-rule}{callout-note-rule}}%
+    {tip}    {\colorlet{callout-bg}{callout-tip-bg}    \colorlet{callout-rule}{callout-tip-rule}}%
+    {danger} {\colorlet{callout-bg}{callout-danger-bg} \colorlet{callout-rule}{callout-danger-rule}}%
+  }[\colorlet{callout-bg}{callout-note-bg}\colorlet{callout-rule}{callout-note-rule}]%
+}
+
+% \begin{callout}{type}{title}  ...body...  \end{callout}
+\NewDocumentEnvironment{callout}{m m}{%
+  \calloutpalette{#1}%
+  \par\medskip%
+  \begin{tcolorbox}[
+    enhanced, breakable,
+    width        = \segmentrulewidth,
+    colback      = callout-bg,
+    colframe     = callout-bg,
+    colupper     = bullet-mid,
+    fontupper    = \small,
+    boxrule      = 0pt,
+    arc          = 0pt,
+    left         = 12pt, right  = 12pt,
+    top          = 8pt,  bottom = 8pt,
+    before skip  = 0pt,  after skip = 0pt,
+    borderline west = {2.5pt}{0pt}{callout-rule},
+  ]%
+  {\sffamily\bfseries\color{callout-rule}\MakeUppercase{#1}%
+   \IfStrEq{#2}{}{}{\quad\normalcolor #2}}\par\smallskip%
+}{%
+  \end{tcolorbox}%
+  \par\medskip%
 }
 
 % Working Notes — review-mode-only environment for the trailing ## Working
