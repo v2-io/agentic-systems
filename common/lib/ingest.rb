@@ -167,6 +167,15 @@ module Mono
         @section_n      = 0   # 1-based, resets per chapter (per-chapter segment counter)
         @appendix_n     = 0   # 1-based, ticks across appendix segments
         @in_appendix    = false
+
+        # TODO: incremental rebuild. Each chunk's hash is recorded in
+        # the index.md frontmatter under `entries[*].hash`. A future
+        # pass should: read the prior index.md if present, compare
+        # each current source-file's hash to the recorded value, and
+        # skip regeneration when unchanged. Same discipline at the
+        # outline level (compare outline_hash) for the index itself.
+        # The architecture supports it — implementation pass, not a
+        # redesign.
       end
 
       # Process a single walker event.
@@ -381,6 +390,15 @@ module Mono
         # expression like `$\lVert x \rVert = |y| \cdot |z|$` into
         # spurious table columns when the chunk is later processed in
         # the assembled-markdown context.
+        #
+        # TODO: this substitution at ingest time means the chunk files
+        # carry `\vert` instead of raw `|` in math, which is slightly less
+        # natural for a human reading a chunk on its own. An alternative
+        # is to keep `|` in chunks (closer to author source) and apply the
+        # substitution at typeset time only. The trade-off is between
+        # chunk-as-print-ready and chunk-as-author-source. Revisit if
+        # someone reading chunks complains, or if a downstream renderer
+        # other than LaTeX wants the original pipe form.
         body = Mono::SegmentRenderer.preprocess_math_pipes(body)
 
         # Pull title out of the (bumped) first heading so the chunk's

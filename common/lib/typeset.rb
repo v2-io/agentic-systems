@@ -79,6 +79,12 @@ module Mono
     #   {: .segment slug="def-agent-environment" type="Definition" status="exact" stage="deps-verified" label="1.1" container="section"}
     #
     #   [body]
+    # TODO: the chunk-format contract is now expressed in TWO places — the
+    # bolded-key emission in ingest.rb (build_segment_chunk / build_preface_chunk)
+    # and the regex-driven parse here. They have to move together when a key
+    # is added or its rendering changes. Consider extracting the contract
+    # into a small module (Mono::ChunkFormat) with emit + parse functions so
+    # the coupling is mechanical rather than convention-based.
     def preprocess_metadata_blocks(text)
       lines = text.split("\n", -1)
       out = []
@@ -138,6 +144,15 @@ end
 # inherit math, callouts, eq-tag, list, table, and prose handling. Overrides
 # the header / link / HTML conversion paths for the volume-context rules.
 # ──────────────────────────────────────────────────────────────────────────
+#
+# TODO: revisit the AsfLatex inheritance. Most shared behavior is utility
+# (math handling, eq-tags, callouts, lists, tables, prose escaping) — a
+# Mono::KramdownHelpers module that both AsfLatex and AsfVolumeLatex
+# `include` would be a flatter, more honest design. Inheritance currently
+# pulls along segment-mode state (@segment_head_emitted, @in_epigraph)
+# that's redundant when convert_header is fully overridden in volume mode.
+# Refactor when the volume-mode converter grows enough to feel coupled to
+# parent-class implementation details rather than to shared behavior.
 
 class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
   # Kramdown's `to_<format>` dispatch routes `to_asf_volume_latex` to

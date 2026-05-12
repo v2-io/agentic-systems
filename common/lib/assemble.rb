@@ -185,6 +185,14 @@ module Mono
       # constructs that mangle the LaTeX `\missingsegment` macro arg.
       # Full claim text appears in the body marker below.
       heading = "#{'#' * level} #{entry['type']}: `##{entry['slug']}` *(missing)*"
+      # TODO: `**Status**: missing` conflates two things — the segment's
+      # epistemic status (FORMAT's exact / robust qualitative / heuristic /
+      # conditional taxonomy) and its existence-status (written / unwritten /
+      # deprecated). Cleaner to split into separate keys (Status carries the
+      # epistemic value as today; a new key like `**Existence**: missing` or
+      # `**File**: missing` carries the existence axis). Revisit when a new
+      # existence-state appears (e.g., `deprecated`, `withdrawn`) or when
+      # the downstream renderers want to disambiguate them.
       metadata = [
         "**Slug**: `#{entry['slug']}`",
         "**Type**: #{entry['type']}",
