@@ -125,6 +125,17 @@ def assemble_body(stage, variant:)
   body  = []
   stats = { rendered: 0, missing: 0, gaps: 0, errors: 0 }
 
+  # The merged build (one PDF) concatenates all four components. Each
+  # component's walker drives its own *Volume / *Part / *Chapter
+  # structure; in the merged PDF, each component's *Volume gets a
+  # kaobook \part wrapper (using the component-title from COMPONENTS)
+  # so the four theories remain distinguishable. Walker's :part items
+  # then become \chapter level, walker's :chapter items become
+  # \section level. When Phase 1d splits the PDFs into four volumes,
+  # this outer wrapping disappears and walker's :part becomes a real
+  # \part.
+  appendix_active = false # tracks \appendix-mode globally across components
+
   COMPONENTS.each do |comp|
     outline = ROOT_DIR / comp[:dir] / 'OUTLINE.md'
     unless outline.exist?
@@ -132,39 +143,78 @@ def assemble_body(stage, variant:)
       next
     end
 
+    # Component wrapper — temporary outer \part until volume split lands.
     body << ''
     body << "\\pagelayout{wide}"
     body << "\\addpart{#{escape_latex(comp[:title])}}"
     body << "\\pagelayout{margin}"
     body << ''
 
-    first_section_seen = false
+    seen_part_or_chapter = false # gate prose emission to after structure starts
+
     Mono::OutlineWalker.walk(outline).each do |item|
       case item[:kind]
-      when :section
-        # Skip the H1 component title (we already emitted the part).
-        next if item[:level] == 1
-        cmd = case item[:level]
-              when 2 then 'chapter'
-              when 3 then 'section'
-              when 4 then 'subsection'
-              else 'subsubsection'
-              end
-        body << "\\#{cmd}{#{escape_latex(item[:title])}}"
-        first_section_seen = true
+      when :volume
+        # Volume title is informational in the merged build (we use the
+        # component-title for the outer \part). Skip emission.
+        next
+
+      when :frontmatter
+        # Frontmatter content (TOC, preface, etc.) renders as prose
+        # within the wrapping outer \part. Proper \frontmatter /
+        # \mainmatter directives land when volume split is implemented.
+        next
+
+      when :part
+        # Walker's *Part* renders as a kaobook \chapter in the merged
+        # build (since the component is already an outer \part). Will
+        # become a real \part in the per-volume build.
+        body << "\\chapter{#{escape_latex(item[:title])}}"
+        seen_part_or_chapter = true
+
+      when :appendices
+        # *Appendices* transitions LaTeX into appendix mode (chapter
+        # numbering switches to letters) at first occurrence; subsequent
+        # appendices groups in the same component just open another
+        # \chapter without re-issuing \appendix.
+        unless appendix_active
+          body << "\\appendix"
+          appendix_active = true
+        end
+        body << "\\chapter{#{escape_latex(item[:title])}}"
+        seen_part_or_chapter = true
+
+      when :preface
+        # Preface is unheaded content; the walker's :preface item is
+        # just a marker. Surrounding :prose / :scope items render the
+        # preface body.
+        next
+
+      when :chapter
+        # Walker's *Chapter* becomes a kaobook \section in the merged
+        # build. Real \chapter when volume split lands.
+        if item[:title]
+          body << "\\section{#{escape_latex(item[:title])}}"
+        elsif !item[:implicit]
+          # Explicit *Chapter* with no title — emit unnumbered section
+          body << "\\section*{}"
+        end
+        # Implicit chapters emit nothing; the segments that follow
+        # appear directly under the enclosing *Part* / chapter.
 
       when :scope
-        # Italic scope paragraphs surface under section headers.
         body << "\\begin{quote}\\itshape #{escape_latex(item[:content])}\\end{quote}"
 
       when :prose
         next if skip_prose?(item[:content])
-        # Only emit prose AFTER we've seen the first section — preamble
-        # prose under the H1 is FORMAT-meta and rarely useful in the
-        # rendered output.
-        next unless first_section_seen
+        next unless seen_part_or_chapter
         body << escape_latex(item[:content])
         body << ''
+
+      when :image
+        # Image references (dependency graphs etc.) — currently skipped;
+        # placeholders for when we wire SVG → PDF embedding.
+        next
 
       when :segment
         slug = item[:slug]
@@ -199,18 +249,21 @@ end
 
 # Minimal LaTeX escape for outline-derived strings (NOT for segment body
 # content, which goes through the kramdown converter's own escape).
+# Block form to avoid Ruby gsub's back-reference interpretation of `\&`
+# in the replacement string (the previous string-replacement form
+# silently round-tripped `&` to `&`).
 def escape_latex(text)
   text.to_s
-      .gsub('\\', '\\textbackslash{}')
-      .gsub('&',  '\\&')
-      .gsub('%',  '\\%')
-      .gsub('$',  '\\$')
-      .gsub('#',  '\\#')
-      .gsub('_',  '\\_')
-      .gsub('{',  '\\{')
-      .gsub('}',  '\\}')
-      .gsub('~',  '\\textasciitilde{}')
-      .gsub('^',  '\\textasciicircum{}')
+      .gsub('\\') { '\textbackslash{}' }
+      .gsub('&')  { '\&' }
+      .gsub('%')  { '\%' }
+      .gsub('$')  { '\$' }
+      .gsub('#')  { '\#' }
+      .gsub('_')  { '\_' }
+      .gsub('{')  { '\{' }
+      .gsub('}')  { '\}' }
+      .gsub('~')  { '\textasciitilde{}' }
+      .gsub('^')  { '\textasciicircum{}' }
 end
 
 def run_lualatex(stage, stem)
