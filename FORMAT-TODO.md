@@ -48,20 +48,22 @@ Kaobook native, no custom counters:
 
 ## Per-Volume Metadata: `mono-meta.yaml`
 
-Each volume directory (`0N-*/`) carries a `mono-meta.yaml` declaring its display title, short tag, cover image, outline entrypoint, etc. The build script reads it to drive volume-specific behavior; defaults kick in for any missing keys.
+Each volume directory (`0N-*/`) carries a `mono-meta.yaml` declaring its display title, short tag, cover image, outline entrypoint, and version. The build script reads it to drive volume-specific behavior; defaults kick in for any missing keys.
 
 **Schema** (loose; extend as needs surface):
 
 ```yaml
 title:       "AAD: Adaptation and Actuation Dynamics"   # full display title
 short_title: AAD                                        # running heads, refs, filenames
-slug:        aad                                        # bin/output-version target id
-version:     0.1.0                                      # per-volume semver (when 1d lands)
+slug:        aad                                        # bin/build-monograph + output-version id
+major:       0
+minor:       1
+patch:       0
 outline:     OUTLINE.md                                 # entrypoint, relative to dir
 cover_svg:   AAD-cover.svg                              # full-page cover image
 ```
 
-Currently the schema is mid-flight: AAD's file has `title` / `short_title` / `cover_svg`; the others carry `title` / `short_title` / `slug` / `version`. Reconcile to one shape during Phase 1b/1d work.
+Version components are explicit (`major` / `minor` / `patch` as separate keys, not a single `version: 0.1.0` string) so `bin/output-version` can read/write them cleanly. The canonical version lives here; no separate `VERSION` file.
 
 ---
 
@@ -106,11 +108,11 @@ The build script handles the discovery: if a sibling `.aux` exists, use xr-hyper
 
 Each Volume has its own semantic version, independent of the others. AAD can be v1.0 (stable, citable) while LogA is at v0.3 (still evolving).
 
-- **`bin/output-version <volume-id> bump <patch|minor|major>`** utility — increments the version, resetting lesser components to zero. `<volume-id>` is the `01`/`02`/`03`/`04` prefix (or the slug `aad`/`tst`/`loga`/`eli` — TBD during implementation).
-- VERSION files live in each component directory (`01-aad-core/VERSION` etc.).
-- **Build stem**: `<volume-id>-v<semver>.pdf` (e.g., `aad-v0.1.0.pdf`) — *no `+<sha>` suffix in filename.* Filename = the released version.
+- **`bin/output-version <volume-id> bump <patch|minor|major>`** utility — increments the version (resetting lesser components to zero) by editing the volume's `mono-meta.yaml` directly. `<volume-id>` is the `01`/`02`/`03`/`04` prefix or the slug `aad`/`tst`/`loga`/`eli`.
+- Version lives in each component's `mono-meta.yaml` (`major` / `minor` / `patch` keys). No separate `VERSION` file.
+- **Build stem**: `<short-title-lower>-v<major>.<minor>.<patch>.pdf` (e.g., `aad-v0.1.0.pdf`) in `mono/`. Filename = the released version.
 - **Git short-SHA shown in volume frontmatter** (and PDF metadata), not the filename. Frontmatter reads e.g. "Build: v0.1.0 · `758cd89` · 2026-05-12" so the build is traceable without polluting the filename.
-- For incremental builds during development (no version bump), the stem stays as the last released version; the frontmatter SHA distinguishes which build the reader is looking at. If we need a workspace-dirty marker for development builds, frontmatter can show `758cd89-dirty` or similar.
+- For incremental builds during development (no version bump), the stem stays as the last released version; the frontmatter SHA distinguishes which build the reader is looking at. Workspace-dirty marker (`758cd89-dirty`) when the working tree has uncommitted changes.
 
 ---
 
@@ -147,11 +149,12 @@ Phases assume each predecessor has landed. Phase 1a (ToC) is independent and can
 
 ### Phase 1b — Volume Split (Build Pipeline)
 
-- [ ] Build script accepts `--volume <id>` to build one volume; `--all` to build the four
-- [ ] Each Volume's build reads its `<component>/OUTLINE.md` as entrypoint
-- [ ] Output: `<vol>-v<semver>.pdf` in repo root or per-component dir
-- [ ] Per-volume `VERSION` files; per-volume `.aux` retention
-- [ ] `bin/output-version <vol> bump <level>` utility
+- [ ] **Restructure mono/ as output-only.** mono/ holds PDFs, markdowns (when emission lands), `.build/` staging, README, .gitignore. Move build infrastructure (`main.tex`, `preamble/`, `lib/`, `vendor/`) into a new `common/` directory.
+- [ ] **CLI shape**: `bin/build-monograph aad` (or `01`, `tst`, `02`, etc.) builds one volume; `bin/build-monograph --all` builds all four in dep order. Bare invocation defaults to `--all`. No `--volume` flag — the positional arg is the volume id.
+- [ ] **Per-volume PDF output** at `mono/<short-title>-v<major>.<minor>.<patch>.pdf`.
+- [ ] Each Volume's build reads its `<component>/OUTLINE.md` as entrypoint and its `<component>/mono-meta.yaml` for version + cover + title.
+- [ ] **Per-volume `.aux` retention**: on successful build, copy the volume's `.aux` out of `.build/` into the volume's component dir (e.g., `01-aad-core/aad.aux`); sibling builds read these for Phase 1d xr-refs.
+- [ ] Version + frontmatter wiring: `bin/output-version` reads/writes `mono-meta.yaml`; the build-info stamp continues using `\buildsemver` (constructed from `major.minor.patch`) / `\buildsha` / `\builddate`.
 
 ### Phase 1c — Native LaTeX Hierarchy (Renderer)
 
@@ -218,6 +221,7 @@ Implementation:
 
 ### Phase 6 — Deferred / Optional
 
+- [ ] **Table dynamic-shrinking heuristic** — most tables don't shrink to fit content even when they could; auto-detect overflow and scale (via `\resizebox` or stepping `\footnotesize → \scriptsize` for very wide tables). Goal: more tables fit on one page without per-table source intervention.
 - [ ] **Backmatter design** — bibliography, index, colophon; full layout and content discussion deferred to a later session
 - [ ] **Title-page typographic design** — current implementation is the minimum (title + author + build-info); proper typography for license block, citation form, etc. deferred
 - [ ] **Per-volume preface** — short reader-orienting text at the start of each Volume (between ToC and Part I); tone is conversational, framework-positioning
