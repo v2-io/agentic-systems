@@ -1,5 +1,5 @@
 # *Volume* TST: Temporal Software Theory
-## *Frontmatter*
+## *Preface*
 
 Software development as an agentic domain — grounded in AAD's formal machinery, restored to its original status as a consequential body of research in its own right.
 

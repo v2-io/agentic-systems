@@ -7,16 +7,21 @@
 # explicitly named in source via an italic-prefix convention:
 #
 #   # *Volume* Adaptation and Actuation Dynamics (AAD)
-#   ## *Frontmatter*
+#   ## *Preface* Reading AAD                   ← volume-level preface
 #   ## *Part* Adaptive Systems Under Uncertainty
-#   ### *Preface*
+#   ### *Preface*                              ← part-level preface
 #   ### *Chapter* The Coupled Loop: Ontology and Scope
 #   ## *Appendices* Details
 #
 # Role-per-level vocabulary:
 #   H1: Volume
-#   H2: Frontmatter | Part | Appendices
+#   H2: Preface | Part | Appendices
 #   H3: Preface | Chapter
+#
+# Preface appears at two levels with different rendering:
+#   H2 Preface → unnumbered chapter (\addchap) with its own ToC entry
+#                and page break; volume-level preamble for the whole work
+#   H3 Preface → inline preface content for a Part, no separate ToC entry
 #
 # Role matching rules:
 #   - The role is the FIRST whitespace-delimited word inside `*...*`.
@@ -37,10 +42,10 @@
 #
 # Manifest item kinds:
 #   { kind: :volume,      title:, level: 1 }
-#   { kind: :frontmatter, level: 2 }
 #   { kind: :part,        title:, level: 2 }
 #   { kind: :appendices,  title:, level: 2 }
-#   { kind: :preface,     level: 3, implicit: bool }
+#   { kind: :preface,     level: 2, title: }                  # volume-level
+#   { kind: :preface,     level: 3, implicit: bool }          # part-level
 #   { kind: :chapter,     title:, level: 3, implicit: bool }
 #   { kind: :segment,     slug:, path:, type:, claim:, container: :part|:appendices }
 #   { kind: :missing,     slug:, type:, claim:, container: :part|:appendices }
@@ -60,7 +65,7 @@ module Mono
     # so downstream code can decide whether to bail or render generically.
     ROLES_BY_LEVEL = {
       1 => %w[Volume].freeze,
-      2 => %w[Frontmatter Part Appendices].freeze,
+      2 => %w[Preface Part Appendices].freeze,
       3 => %w[Preface Chapter].freeze,
     }.freeze
 
@@ -73,7 +78,15 @@ module Mono
     def walk(outline_path)
       outline_path  = Pathname.new(outline_path)
       component_dir = outline_path.dirname
-      lines         = outline_path.read.split("\n")
+      raw_text      = outline_path.read
+      # Strip HTML comments (single-line, inline, and multi-line) so they
+      # are invisible to all downstream walker logic. This is the per-
+      # source-file mechanism for authors to exclude content from the
+      # build — repo-meta TODO lists, chapter-arc rationale notes,
+      # placement-tension memos to future selves. The non-greedy `.*?`
+      # with `m` flag handles comments that span paragraph breaks.
+      raw_text      = raw_text.gsub(/<!--.*?-->/m, '')
+      lines         = raw_text.split("\n")
 
       state = WalkerState.new(component_dir: component_dir)
 
@@ -217,7 +230,12 @@ module Mono
           @current_h3 = :preface
         end
 
-        @items << { kind: :prose, content: @prose_buffer.join(' ') }
+        # Join with newlines so the structure inside a prose block survives
+        # the walker — markdown list items, fenced code, and other line-
+        # delimited constructs need their newlines preserved for kramdown
+        # to recognize them downstream. Soft-wrapped multi-line paragraphs
+        # still render as continuous prose per markdown's soft-wrap rule.
+        @items << { kind: :prose, content: @prose_buffer.join("\n") }
         @prose_buffer = []
       end
 
@@ -243,10 +261,14 @@ module Mono
 
       def handle_h2(role, title)
         case role
-        when 'Frontmatter'
-          @current_h2 = :frontmatter
+        when 'Preface'
+          # Volume-level preface (replaces the older Frontmatter role).
+          # Renders as an unnumbered chapter (\addchap) with its own ToC
+          # entry and page break. Optional info-suffix becomes the
+          # chapter title; default is "Preface" if blank.
+          @current_h2 = :preface
           @current_h3 = nil
-          @items << { kind: :frontmatter, level: 2 }
+          @items << { kind: :preface, level: 2, title: title }
         when 'Part'
           @current_h2 = :part
           @current_h3 = nil

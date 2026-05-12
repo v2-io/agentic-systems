@@ -1,4 +1,5 @@
-# Logogenic Agents
+# *Volume* Logogenic Agents
+## *Preface*
 
 Language-constituted agents — agents whose primary observation and action channels are linguistic.
 
@@ -42,9 +43,15 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 
 ---
 
-## Common Roots: What Applies at Every Sub-Scope
+## *Part* The Scope Lattice
 
-*Definitions, scope conditions, and structural arguments that hold for any logogenic agent regardless of architectural sophistication. These set the stage for the per-sub-scope sections below.*
+### *Preface*
+
+*The Volume's content sits in a single Part comprising four chapters: Common Roots collects definitions and structural arguments that hold for any logogenic agent regardless of architectural sophistication; the three §03.I–§03.III chapters then develop the scope lattice — primitive chat-paradigm baseline, scaffolded multi-step systems with external state, and closed-loop interiority — each making strictly stronger architectural commitments and thereby admitting strictly more of Section II's machinery. The lattice ordering matches the structural staircase named in the Frontmatter: text-completion → chat → scaffolded → interiority.*
+
+### *Chapter* Common Roots: What Applies at Every Sub-Scope
+
+*Definitions, scope conditions, and structural arguments that hold for any logogenic agent regardless of architectural sophistication. These set the stage for the per-sub-scope chapters below.*
 
 | §   | Type        | Tag                                                                                                          | Claim                                                                                                | Stage |
 | --- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----- |
@@ -55,9 +62,23 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | L   | Result      | [#result-section-ii-survival](src/result-section-ii-survival.md)                                             | Map of which Section II results survive without directed separation: 16/24 exact, 5 approximate, 2 modify, 1 fails | draft |
 | L   | Discussion  | [#disc-framework-self-diagnostic](src/disc-framework-self-diagnostic.md)                                     | The recursive feature: AAD applies recursively to agents building it; framework as its own diagnostic with empirical instances | missing |
 
+<!--
+Foundational chapter — everything downstream depends on this. Internal arc:
+the scope conditions name what counts as a logogenic agent (channel collapse
+is the architectural definition); the coupled-update-dynamics definition
+states the formulation that replaces Section II's factored update for
+logogenic agents; observation-ambiguity-modulation gives the bias-bound
+law that scales as $\kappa \cdot \mathcal A$; section-ii-survival is the
+16/24-exact / 5-approximate / 2-modify / 1-fails map that licenses use of
+specific Section II results at each downstream sub-scope; framework-self-
+diagnostic surfaces the recursive feature (AAD applies to agents building
+it) that motivates the project's reflexive stance. These segments are the
+shared substrate for the three lattice chapters.
+-->
+
 ---
 
-## §03.I — Primitive Logogenic Agents
+### *Chapter* §03.I — Primitive Logogenic Agents
 
 *Sub-scope: logogenic agents under the chat-paradigm without scaffolding. Single-turn or multi-turn-but-stateless interaction; observation and action both pass through the model's forward pass; no persistent $M_t$ across session boundaries. The full bias bound applies.*
 
@@ -69,9 +90,23 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | L1  | Observation | [#obs-context-turnover](src/obs-context-turnover.md)                                                         | 100% $M_t$ reset per session — characteristic primitive-logogenic constraint                          | draft       |
 | L1  | Observation | [#obs-backward-inference-empathy](src/obs-backward-inference-empathy.md)                                     | LLM statelessness forces continuous Bayesian inference on own text → structurally identical to ToM    | exploratory |
 
+<!--
+Smallest chapter — three segments characterizing the chat-paradigm baseline.
+Internal arc: the scope segment names the sub-scope (stateless, no
+scaffolding, full bias bound); context-turnover characterizes the 100%
+$M_t$ reset that distinguishes primitive logogenic from scaffolded;
+backward-inference-empathy is the structural ToM-result that statelessness
+forces. The chapter is deliberately spare because the sub-scope is
+characterized by what it *lacks* (scaffolding, persistent state, recovered
+diagnostic cascade); subsequent chapters fill in what each addition buys.
+The sandbox-ceiling argument that runs through several Frontmatter
+claims lives operationally in this chapter via the composition
+$\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
+-->
+
 ---
 
-## §03.II — Scaffolded Logogenic Agents
+### *Chapter* §03.II — Scaffolded Logogenic Agents
 
 *Sub-scope: logogenic agents wrapped in a multi-step loop with external state, tool use, structured context, and explicit cascade ordering. The current best-practice "agentic systems" regime — Sapientia, Zoetica, Autopax, LangChain, Claude Code's harness, OpenAI's Assistants API. The cascade ordering ( #der-orient-cascade) is recovered at the loop level; the bias bound is reduced (but not eliminated) by ambiguity-reduction interventions.*
 
@@ -87,9 +122,29 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | L2  | Derived     | [#der-active-salience-management](src/der-active-salience-management.md)                                     | Singular Perturbation Theory for token generation — necessity of high-$\nu$ triage models vs low-$\nu$ structural models | exploratory |
 | L2  | Observation | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md)                                                     | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in scaffolded AI agents (validated by epistemic-hedging linear-structure result; see Source Material) | exploratory |
 
+<!--
+The current-practice chapter — what production agentic systems are actually
+doing. Internal arc: the scope segment names the sub-scope (multi-step
+loops, external state, tool use); logogenic-as-wrapping specializes
+AAD's class-coercion-via-wrapping construction to this substrate, with
+W₁/W₂ wrapping regimes and the PROPRIUM-as-W₂ instance; coupled-diagnostic-
+framework is the load-bearing result that scaffolding recovers Section II's
+diagnostic cascade at the loop level with the bias bounded by $\kappa
+\cdot \mathcal A$; the remaining segments fill in operational machinery —
+external memory as persistent $M_t$ (disc-m-preservation), structured rich
+context as IB-optimal preservation (form-structured-rich-context), active
+salience management for token-generation triage (der-active-salience-
+management), and evaluation metrics for measuring AAD quantities in
+scaffolded systems (obs-evaluation-metrics, with the epistemic-hedging
+result from `~/src/embeddings/` cited in Source Material as the empirical
+substrate). This is the regime where TST's calibration-laboratory
+positioning bites — scaffolded logogenic systems are the application
+domain where the framework's claims are most directly actionable.
+-->
+
 ---
 
-## §03.III — Closed-Loop / Interiority Logogenic Agents
+### *Chapter* §03.III — Closed-Loop / Interiority Logogenic Agents
 
 *Sub-scope: the principled interiority cycle. Default cognitive state is interior (thinking, processing, orienting, deciding); communication outward is a deliberate emission via tool action. Reading queued inbound messages and sending responses are themselves tool calls within an ongoing cycle. Three structural moves stack: pure language output (still primitive), language with embedded action tokens (regains Pearl Level-2 access via #der-loop-interventional-access), language as tool orchestration (recovers cascade ordering across multi-step loops).*
 
@@ -102,6 +157,24 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | L3  | Derived     | [#der-self-referential-closure](src/der-self-referential-closure.md)                                         | Thermodynamic stability of an agent maintaining its own codebase — refactoring vs task tempo allocation | exploratory |
 | L3  | Definition  | [#def-cognitive-fusion](src/def-cognitive-fusion.md)                                                         | "Resonance" as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 (Separated) macro-agent | exploratory |
 | L3  | Hypothesis  | [#hyp-checkpoint-forking-failure-modes](src/hyp-checkpoint-forking-failure-modes.md)                         | Forking is locally cheap but systemically catastrophic — identity bifurcation, accountability fragmentation, game-theory failure modes | missing |
+
+<!--
+The structural-staircase top step — where ASF supplies the principled
+grounding for the API abstraction the field is groping toward. Internal
+arc: the scope segment names the closed-loop / interiority-as-default
+sub-scope; five-forcing-functions enumerates the AAD-grounded structural
+arguments that make the move beyond scaffolding necessary rather than
+optional (tax, persistence, nesting violation, substrate dependency,
+continuity urgency); self-referential-closure addresses the thermodynamic
+stability of an agent maintaining its own substrate; cognitive-fusion
+("resonance") frames the mutual-information-at-capacity regime as forming
+a Class 1 macro-agent (pairs with `04-eli/`'s identity treatment);
+checkpoint-forking-failure-modes is the negative result on the seemingly-
+cheap forking operation. Section III's composition machinery applies at
+this level — multi-agent logogenic compositions (PROPRIUM Auxilia
+hierarchies) sit one tier below the lattice as a fifth scope referenced
+from `04-eli/` §04.4.
+-->
 
 ---
 

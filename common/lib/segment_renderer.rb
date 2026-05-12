@@ -52,6 +52,7 @@ module Mono
       raw = File.read(path)
       front, body = split_frontmatter(raw)
       body = strip_working_notes(body) if variant == :public
+      body = strip_html_comments(body)
       body = preprocess_math_pipes(body)
 
       doc = Kramdown::Document.new(
@@ -64,6 +65,74 @@ module Mono
         asf_container:   container,
       )
       doc.to_asf_latex
+    end
+
+    # Render a raw markdown fragment (no segment frontmatter / no segment
+    # chrome) — used by build-monograph for volume frontmatter and Part
+    # preface content. Same kramdown pipeline as render() so math, cross-
+    # refs, bold/italic, links, callouts, lists all process correctly,
+    # but no \segmenthead / \segmentfoot / segment-counter advance.
+    def render_fragment(text, variant: :review)
+      text = strip_html_comments(text)
+      text = strip_paragraph_italic_wrap(text)
+      text = ensure_list_blank_line(text)
+      text = preprocess_math_pipes(text)
+
+      doc = Kramdown::Document.new(
+        text,
+        input: 'AsfSegment',
+        asf_frontmatter: {},
+        asf_variant:     variant,
+        asf_mode:        :fragment,
+      )
+      doc.to_asf_latex
+    end
+
+    # Strip HTML comments — single-line, inline, and multi-line. Pairs
+    # with the same discipline applied at the walker for OUTLINE.md; both
+    # places need it because segment files can also carry repo-meta
+    # commentary that shouldn't reach the rendered PDF.
+    def strip_html_comments(text)
+      text.gsub(/<!--.*?-->/m, '')
+    end
+
+    # Kramdown (strict) requires a blank line before a list when the list
+    # follows a non-list line — otherwise the list-marker lines are absorbed
+    # into the preceding paragraph and render as inline text. Authors often
+    # omit the blank line ("**TODO**:\n- item 1\n- item 2"), so this fixup
+    # inserts it. List-to-list line transitions are left alone (a blank
+    # line between sibling items would split the list).
+    LIST_MARKER_RE = /\A\s*([-*+]|\d+\.)\s/
+    def ensure_list_blank_line(text)
+      lines  = text.split("\n", -1)
+      result = []
+      lines.each_with_index do |line, i|
+        prev = i.positive? ? lines[i - 1] : nil
+        if line.match?(LIST_MARKER_RE) && prev && !prev.strip.empty? && !prev.match?(LIST_MARKER_RE)
+          result << ''
+        end
+        result << line
+      end
+      result.join("\n")
+    end
+
+    # Obsidian-style "wrap the whole paragraph in `*…*` to italicize it"
+    # is an authoring tic — readable on the source side, but in the
+    # printed PDF we don't want long stretches of all-italic prose. For
+    # each paragraph, if it's entirely wrapped in a SINGLE asterisk on
+    # each end (not the `**…**` bold form), strip the outer asterisks.
+    # Internal `*emphasis*` and `**bold**` still pass to kramdown
+    # unchanged and render as expected.
+    def strip_paragraph_italic_wrap(text)
+      text.split(/\n[ \t]*\n/).map do |para|
+        stripped = para.strip
+        if stripped.match?(/\A\*(?!\*).*(?<!\*)\*\z/m) &&
+           !stripped.start_with?('**') && !stripped.end_with?('**')
+          stripped.sub(/\A\*/, '').sub(/\*\z/, '')
+        else
+          para
+        end
+      end.join("\n\n")
     end
 
     # ── Helpers ────────────────────────────────────────────────────────────
@@ -270,7 +339,14 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     @frontmatter   = options[:asf_frontmatter] || {}
     @variant       = options[:asf_variant] || :public
     @container     = options[:asf_container] || :part
-    @segment_head_emitted = false
+    # :segment (default) — emit \segmenthead at first header, \segmentfoot
+    # at end; treat first header as segment title, subsequent as subheads.
+    # :fragment — no segment chrome; first header is just a subhead like
+    # any other. Used by render_fragment for frontmatter / preface prose.
+    @mode          = options[:asf_mode] || :segment
+    # In fragment mode pre-set "head emitted" so the first H1/H2 doesn't
+    # trigger the segment_open path.
+    @segment_head_emitted = @mode == :fragment
     @section_depth = 0
     @in_working_notes = false
     @in_epigraph     = false
@@ -300,7 +376,9 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     body += "\\end{segmentepigraph}\n" if @in_epigraph
     body += "\\end{segmentwidesection}\n" if @in_widesection
     body += "\\end{workingnotes}\n" if @in_working_notes
-    body + segment_close
+    # In fragment mode we skip segment_close — there's no segment
+    # boundary to demarcate.
+    @mode == :fragment ? body : body + segment_close
   end
 
   # First header in the document is the segment title; subsequent headers

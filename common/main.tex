@@ -68,6 +68,11 @@
   \tableofcontents
 \fi
 
+% Volume frontmatter — substantive preface prose from the `## *Frontmatter*`
+% section of OUTLINE.md, rendered via SegmentRenderer.render_fragment.
+% Empty file is valid (no frontmatter content, or it was all HTML-commented).
+\input{frontmatter}
+
 \mainmatter
 \setchapterstyle{kao}
 

@@ -210,33 +210,57 @@ def stage_cover_pdf(spec, stage)
 end
 
 # ── Body assembly (one volume) ──────────────────────────────────────────────
-
-# Outline-prose lines that are repo-meta, not part of the reader-facing
-# theory. Skipped during body assembly.
-PROSE_NOISE = [
-  /\AWorking draft\./, /\ASee\s+`?FORMAT\.md/, /\ASee\s+`?NOTATION\.md/,
-  /\A!\[/, /\AEvery slug is linked/, /\AThe build tool/,
-].freeze
-
-def skip_prose?(content)
-  PROSE_NOISE.any? { |re| content.match?(re) }
-end
+#
+# Volume content from OUTLINE.md falls into three buckets:
+#
+#   1. Volume frontmatter (between `## *Frontmatter*` and the first
+#      `## *Part*`) — accumulated as raw markdown, rendered through
+#      SegmentRenderer.render_fragment, written to frontmatter.tex.
+#      main.tex inputs it in \frontmatter scope so it sits between the
+#      cover, ToC, and \mainmatter.
+#
+#   2. Part preface (between `### *Preface*` or implicit preface start
+#      and the first `### *Chapter*`) — accumulated as raw markdown,
+#      rendered through the same path, emitted inline between \part{...}
+#      and \chapter{...}.
+#
+#   3. Mainmatter content — chapters, segments, between-segment prose
+#      (rare; usually authored as HTML comments and stripped by the
+#      walker). Renders into body.tex.
+#
+# HTML comments are stripped at the walker level (file-read time) so
+# repo-meta content (TODO lists, chapter-arc rationale notes, placement
+# memos) never reaches any rendering stage. Authors opt out of the PDF
+# by wrapping content in `<!-- ... -->`.
 
 def assemble_body(spec, stage, variant:)
   segments_dir = stage / 'segments'
   FileUtils.rm_rf(segments_dir)
   FileUtils.mkdir_p(segments_dir)
 
-  body  = []
-  stats = { rendered: 0, missing: 0, gaps: 0, errors: 0 }
+  body                  = []
+  frontmatter_md        = []  # raw markdown for volume preface
+  preface_md            = []  # raw markdown for the current Part's preface
+  stats                 = { rendered: 0, missing: 0, gaps: 0, errors: 0 }
 
-  # Cover-pdf inclusion moved out of body.tex into main.tex frontmatter
-  # via \volumecoverpath (set in build-info.tex). The build-info macro
-  # is the cleaner home: it keeps body.tex purely about mainmatter content
-  # and lets the ToC slot naturally between cover and parts.
-  in_part           = false
-  seen_part_or_chap = false
-  appendix_emitted  = false
+  in_frontmatter        = false
+  in_preface            = false
+  appendix_emitted      = false
+  volume_preface_title  = 'Preface'  # default; overridden by H2 info-suffix
+
+  # Flush the current preface buffer into body.tex via the fragment
+  # renderer. Called on every transition that closes a preface (entering
+  # a Chapter, a new Part, the Appendices, or end-of-walk). The closure
+  # mutates preface_md.clear and in_preface so the state machine resets
+  # before the next preface is read.
+  flush_preface = -> {
+    unless preface_md.empty?
+      md = preface_md.join("\n\n").strip
+      body << Mono::SegmentRenderer.render_fragment(md, variant: variant) unless md.empty?
+      preface_md.clear
+    end
+    in_preface = false
+  }
 
   Mono::OutlineWalker.walk(spec[:outline]).each do |item|
     case item[:kind]
@@ -245,18 +269,14 @@ def assemble_body(spec, stage, variant:)
       # (\volumetitle) but doesn't render an inline heading.
       next
 
-    when :frontmatter
-      # \frontmatter handled at the main.tex template level; the walker
-      # marker just delimits scope. Subsequent prose / image items inside
-      # *Frontmatter* render as front-matter content.
-      next
-
     when :part
+      in_frontmatter = false
+      flush_preface.call
       body << "\\part{#{escape_latex(item[:title])}}"
-      in_part = true
-      seen_part_or_chap = true
 
     when :appendices
+      in_frontmatter = false
+      flush_preface.call
       # First appendix part: emit LaTeX's \appendix (resets chapter
       # counter, switches \thechapter to \Alph). Then override
       # \thechapter to \AlphAlph so chapters past Z (AAD's Details
@@ -276,33 +296,49 @@ def assemble_body(spec, stage, variant:)
       # ToC. Individual appendix segments inside render as \chapter
       # each via segment_renderer's :appendices container branch.
       body << "\\part{Appendices: #{escape_latex(item[:title])}}"
-      in_part = true
-      seen_part_or_chap = true
 
     when :preface
-      # Preface body is rendered by the :prose/:scope items that follow.
-      next
+      if item[:level] == 2
+        # Volume-level preface — replaces the older Frontmatter role.
+        # Renders as an unnumbered chapter (\addchap) in \frontmatter
+        # scope, with its own ToC entry and page break.
+        in_frontmatter = true
+        suffix = item[:title].to_s.strip
+        volume_preface_title = suffix.empty? ? 'Preface' : suffix
+      else
+        # Part-level preface — inline preamble for a Part; no separate
+        # heading, no ToC entry.
+        in_preface = true
+      end
 
     when :chapter
+      flush_preface.call
       if item[:title]
         body << "\\chapter{#{escape_latex(item[:title])}}"
-        seen_part_or_chap = true
       elsif !item[:implicit]
         body << "\\chapter*{}"
       end
 
-    when :scope
-      body << "\\begin{quote}\\itshape #{escape_latex(item[:content])}\\end{quote}"
-
-    when :prose
-      next if skip_prose?(item[:content])
-      next unless seen_part_or_chap
-      body << escape_latex(item[:content])
-      body << ''
+    when :prose, :scope
+      # The walker strips outer `*…*` on single-line scope items already;
+      # render_fragment additionally handles multi-line paragraph-wrap
+      # italics. Both routes converge here: prose/scope contribute raw
+      # markdown text to whichever buffer is currently open.
+      content = item[:content]
+      if in_frontmatter
+        frontmatter_md << content
+      elsif in_preface
+        preface_md << content
+      else
+        # In-chapter prose (between segment tables, etc.) — render
+        # through the fragment pipeline so markdown processes correctly.
+        body << Mono::SegmentRenderer.render_fragment(content, variant: variant)
+      end
 
     when :image
-      # Image references (dependency graphs etc.) — embed once SVG → PDF
-      # pipeline lands. Currently skipped.
+      # SVG → PDF pipeline not yet wired; images are dropped silently
+      # (the dependency-graph SVGs in OUTLINE.md will surface here once
+      # rsvg-convert is invoked for them like it is for cover artwork).
       next
 
     when :segment
@@ -336,6 +372,25 @@ def assemble_body(spec, stage, variant:)
     end
   end
 
+  # Flush any trailing preface at end-of-walk (defensive — if the outline
+  # ends without a Chapter or new Part to trigger flush_preface).
+  flush_preface.call
+
+  # Volume frontmatter renders to its own file; main.tex inputs it in
+  # \frontmatter scope (after cover, before \mainmatter). The preface
+  # heading uses \addchap (KOMA-Script's unnumbered chapter with ToC
+  # entry) so the volume-level preface gets a proper page break, heading,
+  # and ToC line — distinguishing it from the cover and the part-level
+  # prefaces that follow inside \mainmatter.
+  fm_tex = ''
+  unless frontmatter_md.empty?
+    md = frontmatter_md.join("\n\n").strip
+    unless md.empty?
+      fm_tex = "\\addchap{#{escape_latex(volume_preface_title)}}\n\n"
+      fm_tex += Mono::SegmentRenderer.render_fragment(md, variant: variant)
+    end
+  end
+  (stage / 'frontmatter.tex').write(fm_tex)
   (stage / 'body.tex').write(body.join("\n") + "\n")
   stats
 end
@@ -409,6 +464,17 @@ def copy_outputs(spec, stage, stem)
   dst_pdf
 end
 
+# Consolidated per-volume markdown — temporarily disabled while the
+# pipeline is being restructured to markdown-first (see FORMAT-TODO.md
+# "Markdown-first restructure"). The previous Python bin/build that
+# produced this artifact is being replaced by a native Ruby
+# Mono::MarkdownEmitter that will be the single source for both the
+# .md artifact and the LaTeX-generating kramdown pass.
+def emit_markdown_artifact(_spec, _stem, variant:)
+  _ = variant  # silence unused-arg warnings until the new emitter lands
+  nil
+end
+
 def summarize_errors(stage, stem)
   log = stage / "#{stem}.log"
   return unless log.exist?
@@ -448,7 +514,9 @@ def build_volume(volume_id, variant:, toc_override: nil)
   run_lualatex(stage, stem)
   pdf = copy_outputs(spec, stage, stem)
   summarize_errors(stage, stem)
+  md = emit_markdown_artifact(spec, stem, variant: variant)
   warn "[#{spec[:slug]}] → #{pdf.relative_path_from(ROOT_DIR)}"
+  warn "[#{spec[:slug]}] → #{md.relative_path_from(ROOT_DIR)}" if md
 end
 
 # ── Main ────────────────────────────────────────────────────────────────────
