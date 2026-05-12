@@ -42,6 +42,7 @@ BUILD_DIR   = MONO_DIR / '.build'
 $LOAD_PATH.unshift(LIB_DIR.to_s)
 require 'segment_renderer'
 require 'outline_walker'
+require 'ingest'
 
 # ── Volume registry ─────────────────────────────────────────────────────────
 
@@ -506,7 +507,17 @@ def build_volume(volume_id, variant:, toc_override: nil)
   cover_rel = stage_cover_pdf(spec, stage) || ''
   toc_enabled = toc_override.nil? ? spec[:toc_enabled] : toc_override
   write_build_info(stage, spec, cover_rel: cover_rel, toc_enabled: toc_enabled)
-  warn "[#{spec[:slug]}] assembling (variant: #{variant}, toc: #{toc_enabled ? 'on' : 'off'})…"
+
+  # Stage 1 (ingest): source-outline + source-segments → index.md + chunks/.
+  # See msc/markdown-first-pipeline.md. Currently produced as a side artifact
+  # for verification; the LaTeX path below still walks OUTLINE directly.
+  # Stage 2 (assemble) and Stage 3 (typeset) replace that direct walk.
+  warn "[#{spec[:slug]}] ingesting (variant: #{variant})…"
+  index_path = Mono::Ingest.ingest(spec.merge(toc_enabled: toc_enabled),
+                                   stage: stage, variant: variant)
+  warn "[#{spec[:slug]}]   → #{index_path.relative_path_from(ROOT_DIR)}"
+
+  warn "[#{spec[:slug]}] assembling LaTeX body (variant: #{variant}, toc: #{toc_enabled ? 'on' : 'off'})…"
   stats = assemble_body(spec, stage, variant: variant)
   warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
        "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
