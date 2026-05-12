@@ -652,23 +652,24 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     # Findings sections are wide-area via the \begin{segmentwidesection}
     # wrapper.
     #
-    # Width is always \linewidth — adapts naturally: in narrow-area
-    # \linewidth is the body column; in wide-area it's the full segment
-    # band (the surrounding tcolorbox sets it that way). Picking
-    # \segmentrulewidth explicitly per-table previously caused narrow-
-    # area tables to overshoot the page edge, so the per-table
-    # "extend into the margin" decision is currently OFF.
+    # Width choice:
+    # - wide-area (@in_widesection): \linewidth (which equals
+    #   \segmentrulewidth via the surrounding tcolorbox). Stays wide.
+    # - narrow-area with content that doesn't fit body-width:
+    #   \segmentrulewidth — escape into the margin column.
+    # - narrow-area with content that wraps naturally at body width:
+    #   \linewidth (body column).
     #
-    # TODO (total-width adaptation): narrow-area tables with content
-    # density above some threshold should escape to wide-area-width.
-    # Earlier heuristic regressed wide-area tables by re-applying the
-    # extension on top of an already-wide context, causing visible
-    # overflows. The fix is conditioning the heuristic on context —
-    # only narrow-area tables can opt in to wide-area-width — but the
-    # converter doesn't currently know its context at table-emission
-    # time. Adding that context (track @in_widesection here, just like
-    # in typeset.rb) is the unblock.
-    table_w = '\\linewidth'
+    # The escape condition (table_should_escape_narrow?) fires only
+    # in narrow-area, so a wide-area table can never accidentally
+    # double-escape and overshoot the page.
+    table_w = if @in_widesection
+                '\\linewidth'
+              elsif table_should_escape_narrow?(el, aligns.size)
+                '\\segmentrulewidth'
+              else
+                '\\linewidth'
+              end
     # Table body always renders one size smaller (\footnotesize) so wider
     # tables fit; the header row gets bumped back up to \small via
     # convert_thead so it stays readable.
@@ -713,23 +714,65 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     ">{\\hsize=#{format('%.3f', weight)}\\hsize#{align_cmd}\\arraybackslash}X"
   end
 
-  # Math expressions don't wrap. The collect_text fix makes math
-  # contribute to cell length at all (previously :math nodes were
-  # invisible to the column-share computation, so math-bearing cells
-  # counted as zero-length). atomic_token_lengths additionally treats
-  # each `$…$` span as one indivisible word for the floor calculation,
-  # so a math expression's column gets at least enough width to
-  # render the expression on one line without forced overflow.
+  # Approximate rendered length for column-weight purposes. Markdown
+  # source over-counts math heavily: a 4-char command like `\hat`
+  # renders as one glyph; `\mathbb{R}` is 10 source chars for one
+  # blackboard letter; `\frac{n}{n+\kappa}` is 18 source chars for a
+  # vertically-stacked 5-char-wide fraction. Counting source chars
+  # 1-to-1 against prose chars made math columns get runaway weight
+  # and crushed neighboring prose columns.
   #
-  # An earlier multiplier (1.6×) up-weighted math content beyond its
-  # source-length contribution to nudge math columns wider. In
-  # practice it caused runaway weights for long math expressions —
-  # squeezing label / status columns below their viable widths and
-  # forcing "De-/rived" style hyphenation. Multiplier reverted to 1.0
-  # so math counts the same as text per character; atomic-token floor
-  # alone handles the no-wrap discipline.
+  # The strip pass removes:
+  # - `\command` and `\letter+` sequences (collapse to single space —
+  #   the command itself renders as a glyph or controls layout, not
+  #   horizontal text width)
+  # - braces `{` / `}` (grouping syntax; non-rendered)
+  # - math/code delimiters `$` and backticks
+  # - duplicate whitespace
+  # The remaining char-count tracks rendered width much more closely
+  # than the raw source length did.
+  CMD_RE         = /\\[a-zA-Z]+\*?/
+  BRACE_RE       = /[{}]/
+  DELIM_RE       = /[$`]/
+  WHITESPACE_RE  = /\s+/
   def cell_visual_length(text)
-    text.to_s.length
+    s = text.to_s
+    s = s.gsub(CMD_RE, ' ').gsub(BRACE_RE, '').gsub(DELIM_RE, '').gsub(WHITESPACE_RE, ' ').strip
+    s.length
+  end
+
+  # Approximate body-column width in characters at footnotesize. Used
+  # to decide whether a narrow-area table's content needs to escape
+  # into the margin column. \textwidth ≈ 337pt, footnotesize ≈ 13 chars
+  # per inch → roughly 56 chars wide. Tune by inspecting tables that
+  # should/shouldn't escape.
+  NARROW_AREA_CHARS = 56
+
+  # Slack factor on the per-column budget — only escape when an atomic
+  # token exceeds the per-column-budget × this factor. 1.2 = a 20%
+  # cushion before the table is forced wider. Smaller value escapes
+  # more aggressively; larger keeps more tables narrow.
+  NARROW_AREA_ESCAPE_SLACK = 1.2
+
+  # Decide whether a narrow-area table should escape to wide-area-width.
+  # The signal is the longest atomic token (math expression or inline-
+  # code span) in any column — these don't wrap, so if any column has
+  # an atomic token wider than the body's per-column budget, the
+  # table will visibly overflow at body width and benefits from the
+  # wider register. Prose-heavy tables wrap naturally and stay narrow.
+  def table_should_escape_narrow?(table_el, n_cols)
+    return false if n_cols.zero?
+    body_per_col = NARROW_AREA_CHARS.to_f / n_cols
+    threshold = body_per_col * NARROW_AREA_ESCAPE_SLACK
+    collect_table_cells(table_el).each do |row|
+      row.each_with_index do |cell, i|
+        next if i >= n_cols
+        atomic_token_lengths(cell.to_s).each do |len|
+          return true if len > threshold
+        end
+      end
+    end
+    false
   end
 
   # Approximate chars-per-table-row at body width / footnotesize. Used
