@@ -85,23 +85,37 @@ module Mono
         idx += 1
       end
 
-      in_table = false
+      in_table = false        # true once we've crossed the header→separator boundary
+      table_header_seen = false # tracks whether we've consumed the header row of the current table
       while idx < lines.length
         line     = lines[idx]
         stripped = line.strip
         cells    = parse_table_row(line)
 
         if cells
-          in_table = true
-          unless separator_row?(cells)
+          if separator_row?(cells)
+            # The separator row marks the boundary between header and
+            # body in a markdown table; consume and flip the state so
+            # subsequent rows are treated as data.
+            in_table = true
+          elsif !table_header_seen
+            # First non-separator row inside a table block is the header
+            # row (column labels). Skip it.
+            table_header_seen = true
+          else
+            # Data row.
             state.handle_table_row(cells)
           end
           idx += 1
           next
         end
 
-        # We just exited a table block.
-        in_table = false if in_table
+        # We just exited a table block; reset header tracking for the
+        # next table.
+        if in_table || table_header_seen
+          in_table = false
+          table_header_seen = false
+        end
 
         if (header = parse_header(stripped))
           state.handle_header(header)
