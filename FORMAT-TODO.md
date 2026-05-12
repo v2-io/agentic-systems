@@ -1,184 +1,196 @@
-# FORMAT-TODO.md — Hierarchy, Naming, Numbering, and Compliance Sweep
+# FORMAT-TODO.md — Volume Split, Hierarchy, Numbering, and Compliance Sweep
 
-*Live plan for the cross-cutting cleanup decided 2026-05-11 over the monograph-build conversation. PRACTICA.md is the parent navigator; this file owns the detail.*
+*Live plan for the cross-cutting cleanup decided over the monograph-build conversation 2026-05-11 / 2026-05-12. PRACTICA.md is the parent navigator; this file owns the detail. Supersedes the single-monograph plan from 2026-05-11 (preserved in git history at `5460fa9`).*
 
-The work spans the build pipeline (renderer, counter resets, cross-ref rendering), the project documentation (FORMAT.md, CLAUDE.md, OUTLINE.md), the source corpus (segment files, cross-ref hygiene, FORMAT compliance), and a final pass to bring the corpus into compliance with the decided convention. The order of operations matters: numbering/vocabulary lands first; source-side cleanup follows.
+The framework ships as **four independent volumes**, one PDF per Part of the prior structure (AAD / TST / LogA / ELI). The earlier "everything in one ~600pp PDF" approach hit predictable limits — too big to digest, too unstable to cite when later volumes are still evolving, too slow to build during iteration. Volumes solve all four problems and let us drop back onto **kaobook's native hierarchy** instead of fighting it with custom counter machinery.
 
 ---
 
 ## The Decided Hierarchy
 
-A ubiquitous shared vocabulary across source, tooling, and prose. Each level has exactly one canonical name.
+A ubiquitous shared vocabulary across source, tooling, and prose. Native LaTeX / kaobook semantics throughout.
 
-| Level | Name | What it is | Examples |
+| Level | Kaobook env | What it is | Examples |
 |---|---|---|---|
-| 1 | **Book** | the whole monograph | "the ASF book" |
-| 2 | **Part** | one of the four theories | AAD, TST, LogA, ELI |
-| 3 | **Chapter** | a scope-boundary within a Part | "Adaptive Systems Under Uncertainty"; "Common Roots"; each appendix-group is a Chapter |
-| 4 | **Segment** | a numbered claim unit | Definition, Result, Derivation, Hypothesis, Scope, … (any of the 19 FORMAT types) |
-| 5 | **Subclaim** | rare named sub-item *inside* a Segment | Corollary, "Linear case", "Scalar specialization" |
-| 6 | **Field** | a structural section *inside* a Segment | Formal Expression, Epistemic Status, Discussion, Findings, Working Notes |
-| 7 | **Atom** | a numbered named thing *inside* a Field | equation, table, figure, named-formula |
+| **Volume** (= Book) | `\documentclass{kaobook}` | One of the four theories, shipped as its own PDF | AAD, TST, LogA, ELI |
+| **Part** | `\part` | A scope-boundary within a Volume; 1–5 per volume | "Adaptive Systems Under Uncertainty"; "Appendices: Details" |
+| **Chapter** | `\chapter` | A grouping of segments within a Part; ~15 segments each (range ~5–25) | "Foundations"; "Mismatch & Gain"; "Persistence & Structural Adaptation" |
+| **Section** (= Segment) | `\section` | A numbered claim unit; the 19 FORMAT types | Definition, Result, Derivation, Hypothesis, … |
+| **Subsection** (= Field) | `\subsection` | A structural section *inside* a Segment | Formal Expression, Epistemic Status, Discussion, Findings, Working Notes |
+| **Subsubsection** | `\subsubsection` | A named area *inside* a Subsection | "Search Log" inside Findings, "Linear case" inside Formal Expression |
 
-**Two name shifts from prior usage:**
+**Atoms** (equations, tables, figures, named formulas) sit *within* Subsections and are numbered by kaobook's native counters.
 
-- **"Section" → "Chapter"**: "Section" was overloaded with LaTeX's `\section` (the level below `\chapter`), and the build emits these as `\chapter`. Calling them Chapters everywhere removes the collision and matches what they typographically are.
-- **"Subsection" / "Subsubsection" → "Field" / "Subclaim"**: the things inside a Segment aren't really sections — they're either fixed-name structural *Fields* (Formal Expression, etc.) or named *Subclaims* (Corollary, named cases). Two different concepts that were conflated.
+**Vocabulary discipline:**
+- "Volume" is the published artifact (one PDF). "Book" is the conceptual unit. They are interchangeable in casual prose; "Volume" is preferred when emphasizing the publication.
+- The four-Volume structure means each Volume's *Part* level is what we previously called a "Section" of the monograph.
+- The new **Chapter** level fills the grouping gap between Part and Segment — readers got from "scope boundary" to "Definition I.1" with no organizing intermediate.
 
 ---
 
 ## The Numbering Scheme
 
-- **Parts** — Roman (I–IV), kaobook default. Visible on Part-page dividers and running headers. *Not* part of segment cross-ref display.
-- **Chapters** — arabic, **reset per Part**. AAD has Chapters 1–5 (3 substantive sections + 2 appendix-groups); TST has Chapter 1; LogA has Chapters 1–5; ELI has Chapters 1–5. Cross-ref display: `Chapter II.2` (Part Roman + Chapter arabic).
-- **Segments** — arabic, **reset per Chapter**. Cross-ref display: `Definition II.2.4` (Part.Chapter.Segment). The Part prefix matters because segments are referenced across Parts.
-- **Subclaims** — arabic, **reset per Segment**. Cross-ref display: `Corollary II.2.4(c)` or similar. Rare in practice.
-- **Fields** — *unnumbered*. Fixed names by FORMAT discipline; a number adds nothing.
-- **Atoms** (equations, tables, figures) — separate counters per atom-type, **reset per Segment** (not per Chapter). Display: `(II.2.4-1)`, `Table II.2.4-1`. The per-segment reset is deliberate: atoms are always tied to a Segment (there are no chapter-level atoms in source), so resetting per-segment keeps atom IDs stable as segment ordering changes within a chapter.
+Kaobook native, no custom counters:
 
-### Named-formula atoms
+- **Part**: Roman (I–N) per volume, kaobook default
+- **Chapter**: arabic, reset per Part (Part I → Chapters 1, 2, 3; Part II → Chapters 1, 2; etc.)
+- **Section** (= Segment): arabic, reset per Chapter; cross-ref display via cleveref → `Section 1.2.3` or just `1.2.3` depending on context
+- **Subsection / Subsubsection**: native, generally not cross-referenced
+- **Atoms**: equation/table/figure counters; **reset per Section** so atom IDs stay stable under segment-internal reordering. Display: `(1.2.3.1)` or just `(1.2.3-1)` — TBD during implementation
 
-Most equations in the corpus already carry a **name** inside their epistemic-label tag:
+**Named-atom evergreen cross-refs**: the name token from `*[Type (name, from ...)]*` eq-tags is the atom's intrinsic identity. The renderer extracts that name and emits `\label{atom:<name>}` on the equation so `#<name>` resolves directly, independent of positional numbering. Same convention applies to named definitions, derived items, etc.
 
-```
-*[Derived (structural-persistence, from sector-persistence-template)]*
-
-$$\alpha > \rho/R$$
-```
-
-The `structural-persistence` token is a de-facto stable name for the equation that follows. It is the *intrinsic* identity of the formula — meaningful, author-chosen, and (unlike a positional number) preserved across reordering. The build should extract that name and emit `\label{atom:structural-persistence}` on the equation, so a source-side cross-ref like `#structural-persistence` resolves directly to it.
-
-This generalizes to all atom types where the author has supplied a name in the tag:
-- `*[Definition (name, ...)]*` → label on the following definitional equation
-- `*[Derived (name, from ...)]*` → label on the derived equation
-- `*[Hypothesis (name)]*` → label on the hypothesis equation
-- etc.
-
-Named-formula labels then become the **primary, evergreen** cross-ref target for equations. Positional `\label{eq:<slug>-<n>}` labels stay as a fallback for unnamed equations but should be considered a degraded surface that source-side cleanup gradually replaces.
+**Cross-reference evergreen-ness principle**: cross-refs always target intrinsic identity (slug for segments, name for atoms), never positional numbers. The renderer produces the rendered number at compile time; the source never hardcodes one.
 
 ---
 
-## Cross-reference evergreen-ness
+## Cross-Volume References
 
-The unifying principle behind the numbering and labeling scheme:
+Volumes are standalone PDFs but routinely reference each other. Two-tier strategy:
 
-> **Cross-references target intrinsic identity, not positional accident.**
+1. **Primary (when all volumes are built together)**: `xr-hyper` package reads sibling volumes' `.aux` files and produces clickable cross-PDF links with proper section numbers. `.aux` files are version-controlled so they're available to any volume's build.
+2. **Fallback (when sibling `.aux` files aren't present)**: cross-volume refs render as a bibliography-style citation pointing to the sibling volume by its DOI / citation key — e.g., "see Wecker (2026), §1.2.3" — so a reader with only one volume in hand gets a usable reference. Each volume publishes a standard bibliography entry for itself, citable by sibling volumes.
 
-A segment's slug, a named atom's name, a subclaim's name — these are stable across reordering, renaming-resistant, and meaningful. A positional counter (segment 17 of chapter II, equation 3 of segment 17) is not — it shifts when content moves.
+The build script handles the discovery: if a sibling `.aux` exists, use xr-hyper; otherwise fall through to the bibliography form.
 
-The conventions:
-- **Always** cross-ref by `#slug-name` (segments) or `#atom-name` (named atoms) when a stable name is available
-- **Never** rely on a rendered number ("see Definition II.2.4") for the cross-ref itself — the rendered number is *display only*, derived at render time, not part of the source-of-truth reference
-- **Fall back** to positional atom labels (`#<segment-slug>-eq-1`) only for unnamed atoms, and treat that as a smell to be cleaned up
-
-The renderer's job is to make `#<name>` resolve to the right rendered number at compile time. The author's job is to give every reference target a name worth referencing by.
+**Bibliography, other frontmatter, other backmatter**: full design deferred to a later discussion. Captured here as a TODO so it doesn't get lost.
 
 ---
 
-## Implementation plan, in order
+## Versioning Per Volume
 
-The phases are sequenced so each one assumes the previous has landed.
+Each Volume has its own semantic version, independent of the others. AAD can be v1.0 (stable, citable) while LogA is at v0.3 (still evolving).
 
-### Phase 1a — Build feature: Table of Contents
+- **`bin/output-version <volume-id> bump <patch|minor|major>`** utility — increments the version, resetting lesser components to zero. `<volume-id>` is the `01`/`02`/`03`/`04` prefix (or the slug `aad`/`tst`/`loga`/`eli` — TBD during implementation).
+- VERSION files live in each component directory (`01-aad-core/VERSION` etc.).
+- **Build stem**: `<volume-id>-v<semver>.pdf` (e.g., `aad-v0.1.0.pdf`) — *no `+<sha>` suffix in filename.* Filename = the released version.
+- **Git short-SHA shown in volume frontmatter** (and PDF metadata), not the filename. Frontmatter reads e.g. "Build: v0.1.0 · `758cd89` · 2026-05-12" so the build is traceable without polluting the filename.
+- For incremental builds during development (no version bump), the stem stays as the last released version; the frontmatter SHA distinguishes which build the reader is looking at. If we need a workspace-dirty marker for development builds, frontmatter can show `758cd89-dirty` or similar.
 
-Adding a ToC is the obvious immediate next build-feature after planning. Independent of the numbering/vocabulary work below, so worth landing first as a quick win.
+---
 
-- [ ] Add a ToC to the build, placed in the front-matter (after the title page, before Chapter 1)
-- [ ] Use kaobook's `\tableofcontents` machinery — already present, just not invoked
-- [ ] Add a flag / signal to disable: either a build-script `--no-toc` option, or a special signal in the master `OUTLINE.md` (e.g., a frontmatter key) that the builder reads
-- [ ] Confirm that Part / Chapter entries render with their numbering; Segment entries appear at the Chapter level (or one deeper) — depending on `secnumdepth` choice
+## Smart Rebuilds
 
-### Phase 1 — Pipeline (build/renderer)
+A Volume rebuilds only when something it depends on changed. Sources of change:
 
-**Counters and cross-ref formats:**
-- [ ] Reset the kaobook `chapter` counter at each `\part`, so Chapter numbers run 1…N within each Part rather than continuing across all Parts.
-- [ ] Change `\thesegment` from `\Roman{chapter}.\arabic{segment}` to display the full Part-prefixed form (`\Roman{part}.\arabic{chapter}.\arabic{segment}` or equivalent). Cross-refs then read `Definition I.2.4`.
-- [ ] Add a per-segment `atom` counter (or per-atom-type counters). Reset on each segment open.
-- [ ] Switch equation and table counters to atom-style: reset per segment, display as `<seg>-<n>` suffix (e.g., `(I.2.4-1)`).
-- [ ] Update `\crefformat{segment}` (and equation/table) to use the new format. Verify `#1` (stored label value) is used, not `\thesegment` at cref-time — already fixed for segments; double-check for equation/table.
-- [ ] Renderer state: track current Part, Chapter, Segment for any places where these need to be available at LaTeX-emit time.
+- **Source files** of the Volume's component dir (`<component>/src/*.md`, `<component>/OUTLINE.md`)
+- **Shared build infrastructure** (`mono/preamble/`, `mono/lib/`, `bin/build-monograph`) — these affect every Volume
+- **Bibliography database** (when it lands)
+- **Sibling volumes' `.aux` files** (for xr cross-references)
+- **Explicit version bump** via `bin/output-version`
+- **`--force` flag** for cases where the cache is wrong or the user wants to be sure (especially after preamble/script edits — even though those should trigger by themselves via shared-infrastructure detection)
 
-**Source-side title handling:**
-- [ ] In the outline-walker, when emitting `\chapter{...}`, strip leading manual numbering from the title string (`I. Adaptive Systems...` → `Adaptive Systems...`, `§03.I — Primitive...` → `Primitive Logogenic Agents`, `§04.1 — Identity` → `Identity`). The kaobook chapter counter provides the number; the title is just the name.
+Implementation candidates:
+- **`latexmk`**: detects file changes and reruns lualatex/biber as needed. Standard, robust.
+- **Per-volume hash cache**: build script computes a content hash over the volume's inputs (source files + shared infra + biblio); skips rebuild if hash unchanged. Simpler than latexmk for our needs.
+- **`\includeonly` / kaobook subfiles**: for chapter-level incremental compile *within* a volume. Useful during heavy editing of one chapter. Possibly overkill for now; revisit if per-volume builds get slow.
 
-**Atom-type guards:**
-- [ ] Confirm `\refstepcounter{atom-counter}` happens once per atom emission, with `\label{eq:<slug>-<n>}` / `\label{tbl:<slug>-<n>}` immediately after.
+Probably start with the per-volume hash cache (simpler, fits our build script), and add latexmk-style or `\includeonly` later if needed.
 
-**Named-formula labels (the evergreen path):**
-- [ ] Parser: extract the *name* token from `*[Type (name, from ...)]*` eq-tags. First parenthesized token before any comma is the name.
-- [ ] Renderer: when emitting a display equation that has a pending eq-tag with a name, emit `\label{atom:<name>}` *in addition to* the positional `\label{eq:<slug>-<n>}`. The named label is the primary cross-ref target; the positional one is a fallback.
-- [ ] Cross-ref resolution: `#<name>` in source resolves to `\cref{atom:<name>}` if such a label exists; else falls through to the existing `\cref{seg:<name>}` segment lookup.
-- [ ] Apply the same pattern to named definitions, named hypotheses, etc. — any atom that carries a name in its tag.
+---
+
+## Implementation Plan, by Phase
+
+Phases assume each predecessor has landed. Phase 1a (ToC) is independent and can land first.
+
+### Phase 1a — Per-Volume Table of Contents
+
+- [ ] Each Volume's build emits a ToC in front-matter
+- [ ] Native kaobook `\tableofcontents`
+- [ ] Decide `secnumdepth` (probably 3 — through Section/Segment, not deeper)
+- [ ] `--no-toc` flag and/or `toc: false` signal in OUTLINE.md frontmatter to suppress
+
+### Phase 1b — Volume Split (Build Pipeline)
+
+- [ ] Build script accepts `--volume <id>` to build one volume; `--all` to build the four
+- [ ] Each Volume's build reads its `<component>/OUTLINE.md` as entrypoint
+- [ ] Output: `<vol>-v<semver>.pdf` in repo root or per-component dir
+- [ ] Per-volume `VERSION` files; per-volume `.aux` retention
+- [ ] `bin/output-version <vol> bump <level>` utility
+
+### Phase 1c — Native LaTeX Hierarchy (Renderer)
+
+- [ ] Map outline H2 → `\part`, H3 → `\chapter`, segment → `\section`
+- [ ] Drop the custom `\segment` counter and `\thesegment` overrides
+- [ ] Migrate per-segment-type rendering (tints, status badges, stage glyphs, header strip) onto a `\segheading` macro that wraps `\section` with the styling
+- [ ] Update cleveref formats to use native section counters (`Section 1.2.3` etc.)
+- [ ] Atoms (equation/table/figure) — reset per Section, named-atom labels via `*[Type (name, ...)]*` extraction
+
+### Phase 1d — Cross-Volume References
+
+- [ ] `xr-hyper` integration in each Volume's preamble, configured to read sibling Volumes' `.aux` files
+- [ ] `.aux` files persisted and version-controlled (`<component>/<vol>.aux`)
+- [ ] Cross-volume ref fallback: when sibling `.aux` not present, render as bibliography citation
+- [ ] Each Volume publishes a standard bibliography entry for itself (for sibling-volume citations to consume)
+
+### Phase 1e — Smart Rebuild
+
+- [ ] Per-volume input hash cache (source files + shared infra + biblio + sibling-aux digests)
+- [ ] Skip lualatex run when hash unchanged
+- [ ] `--force` flag bypasses the cache
+- [ ] Version-bump always triggers rebuild
 
 ### Phase 2 — Documentation
 
-- [ ] Update `FORMAT.md` to use the new vocabulary throughout (Section → Chapter; subsections → Fields and Subclaims). Update the segment-cadence diagram. Update the numbering examples (`Definition I.3` → `Definition I.2.4` in the canonical example).
-- [ ] Update `CLAUDE.md`'s vocabulary references where it references the hierarchy.
-- [ ] This file (`FORMAT-TODO.md`) becomes the active checklist; once Phase 2 lands, the *decisions* migrate into FORMAT.md and this file shifts to tracking remaining sweep work.
+- [ ] Update `FORMAT.md` with new vocabulary (Volume / Part / Chapter / Section / Subsection / Subsubsection) and the named-atom evergreen cross-ref convention
+- [ ] Update `CLAUDE.md` references to the hierarchy
+- [ ] Decision-record: this file is the live record until docs catch up
 
-### Phase 3 — OUTLINE files
+### Phase 3 — OUTLINEs (Source-side Structural Work)
 
-- [ ] Master `OUTLINE.md`: confirm Part structure (already clean).
-- [ ] `01-aad-core/OUTLINE.md`: strip `I. / II. / III.` prefixes from H2 chapter titles. Keep the "Appendices: Details" and "Appendices: Operational Domains" names as-is (they become numbered Chapters automatically).
-- [ ] `02-tst-core/OUTLINE.md`: already trimmed (Prior Work cut). Verify the single chapter renders correctly.
-- [ ] `03-logogenic-agents/OUTLINE.md`: strip `§03.I —` / `§03.II —` / `§03.III —` prefixes. Keep "Common Roots" name as-is.
-- [ ] `04-eli/OUTLINE.md`: strip `§04.1 —` / `§04.2 —` / `§04.3 —` / `§04.4 —` prefixes. Keep "Common Roots" name as-is.
-- [ ] Section letter codes in tables (`| S |` / `| I |` / `| E1 |` / `| L1 |` etc.): decide whether to normalize. *Optional* — they're authoring shorthand; the renderer doesn't consume them. Defer unless they become a stumbling block during the source-side sweep.
+- [ ] In each component `OUTLINE.md`, introduce H3 chapter headings between Part-level H2s and segment tables. Joseph chooses the chapter groupings (with build-side help on dependency-cluster analysis if useful)
+- [ ] For Parts with only one Chapter, the source can use a placeholder H3 ("Chapter 1: All segments") until proper grouping is decided
+- [ ] Strip manual numbering from Part and Chapter titles (LaTeX numbers them now)
+- [ ] Decide whether table section-codes (`| S |` / `| I |` / `| E1 |` / `| L1 |`) get normalized — optional, defer if not blocking
 
 ### Phase 4 — Source segments: cross-ref hygiene
 
-- [ ] **Class A** broken refs (`#slug-name` where the slug doesn't match any segment file): per ref, decide whether the slug needs to be fixed (typo / stale rename) or the target is genuinely missing (and the ref should be replaced with a TODO marker or a prose description). Class A is mechanical and can be largely automated against the slug list.
-- [ ] **Class B** inline pseudo-refs (`Prop A.1`, `Constraint C3`, `Step 4` in derivations): these are author-typed prose, not first-class labels. Decide per-segment whether to (a) promote to first-class Subclaims with proper labels, (b) leave as prose and accept that they're not clickable, or (c) introduce a structured Subclaim convention only where the reference target sits in a different segment.
-- [ ] Verify `\cref` round-trip: for each rendered `\cref`, confirm the click navigates to the segment whose number it displays. (The crefformat fix landed; this is a sweep to confirm.)
-- [ ] **Named-atom cross-ref audit**: for each `*[Type (name, ...)]*` tag in source, confirm the name is unique within its segment (or globally if cross-segment named refs exist) and that `#name` correctly resolves to the labeled atom.
+- [ ] **Class A** broken slug refs: validate every `#slug-name`, fix typos / stale renames, mark genuinely missing targets
+- [ ] **Class B** inline pseudo-refs (`Prop A.1`, `Step 4`): decide promote-to-named-atom vs. leave-as-prose per case
+- [ ] **Named-atom cross-ref audit**: confirm names from `*[Type (name, ...)]*` tags are unique within their segment / volume scope; verify `#name` resolves to the right atom
+- [ ] **Cross-volume cross-ref audit**: identify refs that target a sibling Volume; verify they resolve via xr-hyper
 
-### Phase 5 — Source segments: FORMAT compliance
+### Phase 5 — Source segments: FORMAT compliance (linter)
 
-The linter (`bin/lint-md`) catalogued 200+ FORMAT violations across the corpus. Most are GFM/Obsidian-rendering hygiene that the LaTeX renderer's shims absorb, but the source should still come into compliance for round-trip fidelity.
+- [ ] `bin/lint-md --fix` for auto-fixable categories (hard-wraps, emphasis-underscores)
+- [ ] Manual / agent-driven sweep for math compatibility (`|`/`\|`/`<`/`>`/`*` in math)
+- [ ] `\text` outside `$` per-instance review
+- [ ] Other linter findings (~200+ total)
 
-Linter findings (totals at time of writing):
-- 203 `\text` outside `$` delimiters
-- 142 hard-wraps (auto-fixable)
-- 72 bare `|` in math (use `\vert` / `\lvert`/`\rvert`)
-- 55 raw `>` in math (use `\gt`)
-- 50 raw `<` in math (use `\lt`)
-- 49+34 `$$` display-math blank-line issues
-- 41 emphasis-vulnerable underscores (auto-fixable)
-- 16 bare `*` in inline math (use `\ast`)
-- 11 `\|` in math (use `\Vert`)
+### Phase 6 — Deferred / Optional
 
-Plan:
-- [ ] Run `bin/lint-md --fix` for the auto-fixable categories (hard-wraps, emphasis-underscores, etc.).
-- [ ] Manual sweep for the math-compatibility categories (`|`/`\|`/`<`/`>`/`*` in math). Most are mechanical; delegating to a sub-agent is appropriate.
-- [ ] Address `\text` outside `$` — these are usually math commands that escaped their delimiters; per-instance review.
-
-### Phase 6 — Optional polish
-
-- [ ] Section letter codes in tables — normalize if Phase 3 didn't already do it.
-- [ ] Slug rename audit — separate concern from numbering; lives under the broader naming-cycle work, not here.
-- [ ] Subclaim structural convention — if Phase 4 surfaces a strong case for first-class Subclaim labels (e.g., for AAD's Appendix derivations like "Prop A.1", "Prop DA.2"), spec out the convention and apply.
+- [ ] **Bibliography, frontmatter, backmatter** design — full discussion deferred to a later session
+- [ ] **Per-volume preamble / preface** — short reader-orienting text at the start of each Volume; tone is conversational, framework-positioning
+- [ ] **Companion PDFs** — specialized cuts (selected chapters, theme-based) for particular audiences; future work
+- [ ] **`\includeonly` chapter-incremental builds** — only if per-volume builds become uncomfortably slow
+- [ ] **Section letter codes** normalization in OUTLINE tables
+- [ ] **Slug rename audit** — separate concern, naming-cycle work
 
 ---
 
 ## Sequencing notes
 
-- **Phase 1 lands before any source-side sweep.** Cross-ref cleanup against the wrong numbering scheme is wasted work.
-- **Phase 3 (strip manual chapter numbering) lands with or just after Phase 1.** The two are coupled — if we strip without Phase 1's counter changes, the rendered output loses numbers entirely; if we add the counter without stripping, we get doubled "I. I. Adaptive Systems..." in rendering.
-- **Phases 4 and 5 can be delegated to a sub-agent** once Phase 1–3 are stable. The agent's brief should be: "verify and normalize per FORMAT.md; report broken refs that need human judgment."
-- **Phase 6 is optional**, after Phases 1–5 have settled the corpus.
+- **Phase 1a (ToC)** is independent and lands first as a quick win.
+- **Phase 1b (volume split) and 1c (native hierarchy) land together** — they're tightly coupled; splitting volumes without dropping the custom counter machinery is more work than doing both at once.
+- **Phase 1d (xr cross-refs) follows 1b** — once volumes exist, cross-volume refs become a thing.
+- **Phase 1e (smart rebuild)** can land anytime after 1b/1c — it's an optimization, not a correctness fix.
+- **Phase 2 (docs)** can run in parallel with Phase 3 once Phase 1 lands.
+- **Phase 3 (chapter introduction)** can run in parallel for each component; Joseph drives one component while a sub-agent could draft the strawman for others.
+- **Phases 4 and 5 (cross-ref + FORMAT cleanup)** delegate cleanly to an agent once Phase 3 stabilizes the source structure.
 
 ---
 
 ## What this plan does NOT change
 
-- Slug names themselves (the canonical segment IDs) — that's the naming-cycle work, tracked elsewhere
+- Slug names themselves (canonical segment IDs)
 - The substance of segment content
 - The segment promotion stages (FORMAT.md §Promotion Workflow)
-- The four-Part top-level structure (AAD / TST / LogA / ELI) — Joseph's hierarchy decision
-- Existing cross-ref slug syntax (`#slug-name`) — the surface convention stays; only the rendering and counter behavior changes
+- The four-Volume top-level structure (decided)
+- Existing cross-ref slug syntax (`#slug-name`) — the surface convention stays; only what it resolves to changes
+- The kaobook visual register already built (tints, status badges, eq-tag marginnotes, Working Notes panels, Tufte tables, italic teal, mono olive, navy refs) — 100% portable to the new structure
 
 ---
 
 ## Status
 
-Created 2026-05-11. Currently Phase 0 — plan written. Phase 1a (ToC) lands as the immediate quick win; Phase 1 (numbering/renderer) is the substantive work that gates everything downstream.
+Created 2026-05-11 (v1: single-monograph plan); rewritten 2026-05-12 (v2: four-volume plan). Currently Phase 0 — plan written. Phase 1a (ToC) is the immediate quick win. Phase 1b/1c (volume split + native hierarchy) is the substantive work that lets everything downstream land.
