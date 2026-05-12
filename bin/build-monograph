@@ -43,6 +43,7 @@ $LOAD_PATH.unshift(LIB_DIR.to_s)
 require 'segment_renderer'
 require 'outline_walker'
 require 'ingest'
+require 'assemble'
 
 # ── Volume registry ─────────────────────────────────────────────────────────
 
@@ -465,15 +466,16 @@ def copy_outputs(spec, stage, stem)
   dst_pdf
 end
 
-# Consolidated per-volume markdown — temporarily disabled while the
-# pipeline is being restructured to markdown-first (see FORMAT-TODO.md
-# "Markdown-first restructure"). The previous Python bin/build that
-# produced this artifact is being replaced by a native Ruby
-# Mono::MarkdownEmitter that will be the single source for both the
-# .md artifact and the LaTeX-generating kramdown pass.
-def emit_markdown_artifact(_spec, _stem, variant:)
-  _ = variant  # silence unused-arg warnings until the new emitter lands
-  nil
+# Stage 2 (assemble) — read the index + chunks produced by Stage 1, stitch
+# them into a single canonical per-volume markdown with cross-refs resolved,
+# and write it to mono/<stem>.md as a parallel artifact to the PDF. See
+# msc/markdown-first-pipeline.md.
+def emit_markdown_artifact(stage, stem)
+  dst_md = MONO_DIR / "#{stem}.md"
+  FileUtils.cp(dst_md, MONO_DIR / "#{stem}.prior.md") if dst_md.exist?
+  text = Mono::Assemble.assemble(stage: stage)
+  dst_md.write(text)
+  dst_md
 end
 
 def summarize_errors(stage, stem)
@@ -525,7 +527,7 @@ def build_volume(volume_id, variant:, toc_override: nil)
   run_lualatex(stage, stem)
   pdf = copy_outputs(spec, stage, stem)
   summarize_errors(stage, stem)
-  md = emit_markdown_artifact(spec, stem, variant: variant)
+  md = emit_markdown_artifact(stage, stem)
   warn "[#{spec[:slug]}] → #{pdf.relative_path_from(ROOT_DIR)}"
   warn "[#{spec[:slug]}] → #{md.relative_path_from(ROOT_DIR)}" if md
 end

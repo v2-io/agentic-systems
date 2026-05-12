@@ -190,9 +190,10 @@ module Mono
         flush_buffer!
       end
 
-      # Render the index.md content: YAML frontmatter (volume meta + counters
-      # + outline-hash for incremental rebuild) plus a markdown body that lists
-      # entries in assembly order.
+      # Render the index.md content. Structured manifest lives in the YAML
+      # frontmatter under `entries:` (Stage 2 consumes this); the markdown
+      # body is a human-readable summary of the same data so anyone opening
+      # `index.md` can read the volume structure at a glance.
       def render_index
         outline_hash = Digest::SHA256.hexdigest(@spec[:outline].read)[0, 12]
         fm = {
@@ -212,15 +213,18 @@ module Mono
             'chapters'   => @chapter_n,
             'appendices' => @appendix_n,
           },
+          'entries' => @manifest.map { |e| entry_to_yaml_hash(e) },
         }
-        yaml = fm.map { |k, v| render_yaml_field(k, v) }.join
+        require 'yaml' unless defined?(YAML)
+        yaml = YAML.dump(fm)
+        yaml = yaml.sub(/\A---\s*\n/, '')  # strip leading --- so we add our own
 
         body = []
         body << "# Build Index — #{@spec[:title]}"
         body << ''
-        body << 'Generated assembly manifest. Each chunk entry carries the'
-        body << 'source-of-truth hash; Stage 1 (ingest) skips regenerating a'
-        body << "chunk whose source hash matches the recorded value."
+        body << 'Generated assembly manifest. The machine-readable structure'
+        body << 'lives in the YAML frontmatter under `entries:`; the summary'
+        body << 'below mirrors it for human inspection.'
         body << ''
         @manifest.each { |entry| render_manifest_entry(entry, body) }
 
@@ -229,18 +233,17 @@ module Mono
 
       private
 
-      def render_yaml_field(key, val)
-        case val
-        when nil    then "#{key}:\n"
-        when true, false then "#{key}: #{val}\n"
-        when Integer then "#{key}: #{val}\n"
-        when String  then "#{key}: #{val.include?(':') ? val.inspect : val}\n"
-        when Hash
-          rendered = val.map { |k, v| "  #{k}: #{v}\n" }.join
-          "#{key}:\n#{rendered}"
-        else
-          "#{key}: #{val.inspect}\n"
+      # Convert a manifest entry to a hash with string keys, suitable for
+      # YAML serialization. Stage 2 reads these back. Keys are stable;
+      # adding a new key here means Stage 2 (and downstream renderers)
+      # can rely on its presence.
+      def entry_to_yaml_hash(entry)
+        h = { 'kind' => entry[:kind].to_s }
+        entry.each do |k, v|
+          next if k == :kind
+          h[k.to_s] = v.is_a?(Pathname) ? v.to_s : v
         end
+        h
       end
 
       def render_manifest_entry(entry, body)
@@ -353,8 +356,7 @@ module Mono
       def handle_segment(item)
         flush_buffer!
         path = item[:path]
-        type_key = item[:type].to_s.downcase
-        type_label = TYPE_LABEL[type_key] || item[:type].to_s.capitalize
+        type_label = normalize_type_label(item[:type])
 
         container = item[:container] == :appendices ? 'appendix-chapter' : 'section'
         label = if container == 'appendix-chapter'
@@ -412,8 +414,7 @@ module Mono
 
       def handle_missing(item)
         flush_buffer!
-        type_key = item[:type].to_s.downcase
-        type_label = TYPE_LABEL[type_key] || item[:type].to_s.capitalize
+        type_label = normalize_type_label(item[:type])
         container = item[:container] == :appendices ? 'appendix-chapter' : 'section'
         label = if container == 'appendix-chapter'
                   @appendix_n += 1
@@ -446,24 +447,37 @@ module Mono
         md = buf[:lines].join("\n\n").strip
         return if md.empty?
 
+        # `explicit_title` is the H2/H3 info-suffix the author wrote (or
+        # nil when the heading is bare `## *Preface*`); the chunk's
+        # `**Title**:` metadata records it only when set, so the assembler
+        # can emit `## *Preface*` without a redundant suffix when the
+        # author didn't provide one. `display_title` is what shows up as
+        # the chunk's H1 — defaulted to "Preface" for the volume-preface
+        # chunk since a chunk file needs *some* H1 to scan as standalone.
         case buf[:kind]
         when :volume_preface
           chunk_name = 'volume-preface.md'
           role = 'volume-preface'
-          title = buf[:title] || 'Preface'
+          explicit_title = buf[:title]
+          display_title  = explicit_title || 'Preface'
         when :part_preface
           chunk_name = "part-#{@part_n}-preface.md"
           role = 'part-preface'
-          title = nil
+          explicit_title = buf[:title]
+          display_title  = nil
         when :chapter_rationale
           chunk_name = "chapter-#{buf[:chapter_n]}-rationale.md"
           role = 'chapter-rationale'
-          title = nil
+          explicit_title = nil
+          display_title  = nil
         else
           return
         end
 
-        chunk_text = build_preface_chunk(body: md, role: role, title: title)
+        chunk_text = build_preface_chunk(
+          body: md, role: role,
+          display_title: display_title, explicit_title: explicit_title,
+        )
         chunk_path = @chunks_dir / chunk_name
         chunk_path.write(chunk_text)
         hash = Digest::SHA256.hexdigest(chunk_text)[0, 12]
@@ -501,12 +515,12 @@ module Mono
         body_with_meta
       end
 
-      def build_preface_chunk(body:, role:, title:)
+      def build_preface_chunk(body:, role:, display_title:, explicit_title:)
         meta = ["**Role**: #{role}"]
-        meta << "**Title**: #{title}" if title
+        meta << "**Title**: #{explicit_title}" if explicit_title
 
-        if title && role == 'volume-preface'
-          "# #{title}\n\n#{meta.join("\n")}\n\n#{body}\n"
+        if display_title && role == 'volume-preface'
+          "# #{display_title}\n\n#{meta.join("\n")}\n\n#{body}\n"
         else
           "#{meta.join("\n")}\n\n#{body}\n"
         end
@@ -520,6 +534,17 @@ module Mono
         slugs = []
         outline_path.read.scan(/\[#([\w-]+)\]\(/) { |m| slugs << m[0] }
         slugs.uniq
+      end
+
+      # Normalize the type string from an outline row. OUTLINE.md cells
+      # like "Derived + Scope" or "Discussion + Hypothesis" announce a
+      # segment that fills two roles; for label/display purposes we use
+      # the primary (leftmost) type. `worked example`/`Worked Example`
+      # case variants normalize through TYPE_LABEL.
+      def normalize_type_label(raw)
+        primary = raw.to_s.split('+').first.to_s.strip
+        key = primary.downcase
+        TYPE_LABEL[key] || primary.split.map(&:capitalize).join(' ')
       end
 
       def read_segment_status(source)
