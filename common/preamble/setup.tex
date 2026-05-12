@@ -134,14 +134,32 @@
 \usepackage{caption}
 
 %----------------------------------------------------------------------------
-% Equation + table numbering — both reset per chapter and display with
-% roman chapter numerals to match the segment numbering register (e.g.,
-% Definition I.4 followed by equation (I.5)).
+% Equation + table numbering — both reset per chapter. Display is
+% \thechapter.\arabic — kaobook's default arabic chapter, so "(3.5)" and
+% "Table 3.1" sit alongside "Definition 3.4". Section / equation / table /
+% segment numerals all read as a single arabic family across the volume.
 %----------------------------------------------------------------------------
 \numberwithin{equation}{chapter}
 \numberwithin{table}{chapter}
-\renewcommand{\theequation}{\Roman{chapter}.\arabic{equation}}
-\renewcommand{\thetable}{\Roman{chapter}.\arabic{table}}
+
+%----------------------------------------------------------------------------
+% \AlphAlph — \Alph with overflow protection. Standard \Alph errors at
+% values > 26 (Latin alphabet only). \AlphAlph gives A–Z for 1–26, then
+% AA–AZ, BA–BZ, … for 27 onward. Used by appendix-chapter numbering, where
+% AAD's Details appendix alone has more than 26 chapter-level entries.
+%
+% Formula: for n in [27, 26+26²], chunk = (n-1) ÷ 26, rem = ((n-1) mod 26)+1,
+% emitted as \@Alph{chunk}\@Alph{rem}. \numexpr handles the integer math.
+%----------------------------------------------------------------------------
+\makeatletter
+\newcommand{\AlphAlph}[1]{%
+  \ifnum#1<27%
+    \@Alph{#1}%
+  \else
+    \@Alph{\numexpr(#1-1)/26\relax}\@Alph{\numexpr#1-26*((#1-1)/26)\relax}%
+  \fi
+}
+\makeatother
 
 %----------------------------------------------------------------------------
 % Color palette

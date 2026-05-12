@@ -258,13 +258,15 @@ Implementation:
 ## Progress Snapshot (2026-05-12, end-of-day)
 
 **Landed (committed):**
+- ✅ Phase 1a (per-volume ToC) — `\tableofcontents` emitted in `\frontmatter` scope from `common/main.tex`; `secnumdepth = 3` (parts/chapters/sections all numbered); `tocdepth = 3`; opt-out via `mono-meta.yaml` `toc: false` and CLI `--no-toc`; build-info macro `\ifvolumetoc` gates the emission
 - ✅ Phase 1b (volume split) — `bin/build-monograph <volume>` and `--all`; each volume builds to `mono/<slug>-v<M>.<m>.<p>.pdf`; per-volume `.aux` persisted to `<component>/<slug>.aux` for Phase 1d
-- ✅ Phase 1c (native kaobook hierarchy) — `outline_walker.rb` parses role-prefix convention; build pipeline emits `\part` / `\chapter` / `\section` natively; custom `\segment` counter retired
+- ✅ Phase 1c (native kaobook hierarchy) — `outline_walker.rb` parses role-prefix convention; build pipeline emits `\part` / `\chapter` / `\section` natively. Section-level segments drive off kaobook's native `section` counter (custom `\segment` counter retired); appendix segments render as `\chapter` via `\segmentappendixchapter` so an appendix segment *is* its chapter (the FORMAT-TODO design). `\appendix` resets the chapter counter and our `\thechapter` override uses `\AlphAlph` so appendix chapters are A, B, …, Z, AA, AB, … with overflow protection. Cleveref formats overridden for both `section` and `chapter` counters so `\cref{seg:foo}` renders as a bare number (matching the existing prose convention "see Definition #def-foo" → "see Definition 1.4" or "see Derivation A").
 - ✅ Directory restructure: `mono/` is output-only; `common/` holds main.tex / preamble / lib / vendor / kaobook
-- ✅ `mono-meta.yaml` schema landed (`title` / `short_title` / `slug` / `major`/`minor`/`patch` / `outline` / `cover_svg`)
+- ✅ `mono-meta.yaml` schema landed (`title` / `short_title` / `slug` / `major`/`minor`/`patch` / `outline` / `cover_svg` / `toc`)
 - ✅ `bin/output-version <slug> show|bump <patch|minor|major>` operates on `mono-meta.yaml` directly
-- ✅ Cover-page rendering (rsvg-convert) — AAD cover working; other volumes need covers authored
-- ✅ Build-info stamp (`\buildsemver` / `\buildsha` / `\builddate` / `\volumetitle` / `\volumeshorttitle` / `\volumeslug`); dirty-tree detection
+- ✅ Cover-page rendering (rsvg-convert) — AAD cover working; other volumes need covers authored. Cover-page emission lifted out of `body.tex` into `main.tex` frontmatter via the `\volumecoverpath` build-info macro, so the frontmatter sequence is cover → ToC → mainmatter.
+- ✅ Build-info stamp (`\buildsemver` / `\buildsha` / `\builddate` / `\volumetitle` / `\volumeshorttitle` / `\volumeslug` / `\volumecoverpath` / `\ifvolumetoc`); dirty-tree detection
+- ✅ All-arabic numbering register — chapters and chapter-prefixed equation/table/section references render as arabic (`3.5`, `Table 3.1`, `Definition 3.4`). Parts retain Roman (kaobook default, standard convention).
 
 **Mid-flight:**
 - 🚧 AAD's `OUTLINE.md` reorganized into the role-prefix convention with chapters; Parts II/III/IV awaiting source-side reorganization (current implicit-Chapter default lets them build)
@@ -272,7 +274,6 @@ Implementation:
 - 🚧 Build-info macros declared but the title page that consumes them is minimal — proper title-page+copyright layout pending (Phase 6)
 
 **Not yet started:**
-- ⬜ Phase 1a — ToC per volume
 - ⬜ Phase 1d — xr-hyper cross-volume refs, sibling-volume citations
 - ⬜ Phase 1e — smart-rebuild hash cache
 - ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep (vocabulary alignment)
@@ -280,6 +281,10 @@ Implementation:
 - ⬜ Phase 4 — cross-ref hygiene sweep
 - ⬜ Phase 5 — FORMAT-compliance linter sweep
 - ⬜ Phase 6 — table dynamic-shrinking, backmatter design, title-page typography, per-volume preface
+
+**Tighter typography candidates surfaced during the 1c/1a cycle:**
+- Status badges + stage glyphs on appendix-chapter headings are emitted by `\segmentappendixchapter` but currently render in a plain indicator strip below kaobook's chapter glyph — could be promoted into the chapter heading itself once a tighter visual register is decided.
+- Appendix-chapter ToC entries now use the `\chapter[short]{rich}` two-arg form so the ToC stays compact (clean title only, no italic type prefix). If further compression is wanted, the next step is a custom `\l@appendixchapter` style.
 
 ## Handoff Notes (for the next session)
 

@@ -41,7 +41,14 @@ module Mono
     module_function
 
     # Top-level entry point. Reads a segment file, returns a LaTeX fragment.
-    def render(path, variant: :public)
+    #
+    # `container:` is the outline walker's classification of where this
+    # segment lives — :part (default; renders as a \segmenthead-style
+    # section) or :appendices (renders as a \segmentappendixchapter — a
+    # native \chapter, since appendix segments are themselves chapter-
+    # level entities per the four-volume hierarchy). build-monograph
+    # passes item[:container] through.
+    def render(path, variant: :public, container: :part)
       raw = File.read(path)
       front, body = split_frontmatter(raw)
       body = strip_working_notes(body) if variant == :public
@@ -54,6 +61,7 @@ module Mono
         # with the right type/status/title without re-parsing.
         asf_frontmatter: front,
         asf_variant:     variant,
+        asf_container:   container,
       )
       doc.to_asf_latex
     end
@@ -261,6 +269,7 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     super
     @frontmatter   = options[:asf_frontmatter] || {}
     @variant       = options[:asf_variant] || :public
+    @container     = options[:asf_container] || :part
     @segment_head_emitted = false
     @section_depth = 0
     @in_working_notes = false
@@ -586,14 +595,20 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     stage  = @frontmatter['stage'].to_s
     label  = TYPE_LABEL[type] || type.capitalize
     # Most segments write the H1 as "Type: Title" (FORMAT-recommended human
-    # form). Strip the redundant type prefix — \segmenthead already shows it.
+    # form). Strip the redundant type prefix — the header macro re-emits it.
     clean = title.sub(/\A#{Regexp.escape(label)}:\s*/, '')
     # Stage glyph appears on the far right of the header strip in review
     # mode; public-variant builds suppress it by passing the empty string.
     stage_arg = @variant == :review ? stage : ''
 
+    # Container dispatch: appendix segments are themselves chapters per the
+    # four-volume hierarchy; in-part segments are sections. \label{seg:slug}
+    # always lands on the line after the heading so cross-refs resolve to
+    # the right counter (chapter for appendix, section for in-part).
+    macro = @container == :appendices ? 'segmentappendixchapter' : 'segmenthead'
+
     parts = []
-    parts << "\\segmenthead{#{label}}{#{escape_text(clean)}}{#{status}}{#{stage_arg}}"
+    parts << "\\#{macro}{#{label}}{#{escape_text(clean)}}{#{status}}{#{stage_arg}}"
     parts << "\\label{seg:#{slug}}" unless slug.empty?
     parts << ''
     parts.join("\n")

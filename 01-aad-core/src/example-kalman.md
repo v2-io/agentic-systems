@@ -18,7 +18,7 @@ depends:
 stage: draft
 ---
 
-# Worked-example: Worked Example — 1D Active Tracking (Kalman Domain)
+# Worked Example: 1D Active Tracking (Kalman Domain)
 
 Every AAD quantity has an exact Kalman-filter counterpart. This is a *validation* of the formal chain — all quantities are computable in closed form.
 

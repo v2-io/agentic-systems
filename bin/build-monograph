@@ -74,6 +74,11 @@ def load_volume_spec(volume_id)
   minor = meta['minor'] || 0
   patch = meta['patch'] || 0
 
+  # toc: per-volume opt-out, defaults to true. Anything explicitly falsy
+  # in the YAML suppresses the ToC for this volume. CLI `--no-toc`
+  # overrides this for one-off builds.
+  toc_enabled = meta.fetch('toc', true) != false
+
   {
     dir:          entry[:dir],
     comp_dir:     comp_dir,
@@ -86,6 +91,7 @@ def load_volume_spec(volume_id)
     semver:       "#{major}.#{minor}.#{patch}",
     outline:      comp_dir / (meta['outline'] || 'OUTLINE.md'),
     cover_svg:    meta['cover_svg'] ? (comp_dir / meta['cover_svg']) : nil,
+    toc_enabled:  toc_enabled,
     meta_path:    meta_path,
   }
 end
@@ -109,17 +115,26 @@ end
 def parse_args(argv)
   args = argv.dup
   variant = :review
+  toc_override = nil
   if (i = args.index('--public'))
     args.delete_at(i)
     variant = :public
   end
+  if (i = args.index('--no-toc'))
+    args.delete_at(i)
+    toc_override = false
+  end
   if args.include?('--all')
-    return { volumes: VOLUME_REGISTRY.map { |e| e[:id_aliases].first }, variant: variant }
+    return {
+      volumes: VOLUME_REGISTRY.map { |e| e[:id_aliases].first },
+      variant: variant,
+      toc_override: toc_override,
+    }
   end
   abort usage_message('no volume specified (try `aad` or `--all`)') if args.empty?
   abort usage_message("unexpected args: #{args[1..].join(' ')}") if args.size > 1
 
-  { volumes: [args.first.downcase], variant: variant }
+  { volumes: [args.first.downcase], variant: variant, toc_override: toc_override }
 end
 
 # ── Git / build-info ────────────────────────────────────────────────────────
@@ -136,10 +151,11 @@ def working_tree_dirty?
   !out.strip.empty?
 end
 
-def write_build_info(stage, spec)
+def write_build_info(stage, spec, cover_rel:, toc_enabled:)
   sha = short_sha
   sha = "#{sha}-dirty" if working_tree_dirty?
   date = Time.now.utc.strftime('%Y-%m-%d')
+  toc_flag = toc_enabled ? '\\volumetoctrue' : '\\volumetocfalse'
   (stage / 'build-info.tex').write(<<~TEX)
     \\newcommand{\\buildsemver}{#{spec[:semver]}}
     \\newcommand{\\buildsha}{#{sha}}
@@ -147,6 +163,14 @@ def write_build_info(stage, spec)
     \\newcommand{\\volumetitle}{#{escape_latex(spec[:title])}}
     \\newcommand{\\volumeshorttitle}{#{escape_latex(spec[:short_title])}}
     \\newcommand{\\volumeslug}{#{spec[:slug]}}
+    % Cover-page relative path inside the build stage, or empty if no
+    % cover artwork is configured (or rsvg-convert failed). main.tex
+    % checks emptiness before \\includepdf.
+    \\newcommand{\\volumecoverpath}{#{cover_rel}}
+    % ToC opt-in/out — set by mono-meta.yaml `toc:` (default true) and
+    % CLI --no-toc. main.tex reads \\ifvolumetoc to decide.
+    \\newif\\ifvolumetoc
+    #{toc_flag}
   TEX
 end
 
@@ -206,15 +230,13 @@ def assemble_body(spec, stage, variant:)
   body  = []
   stats = { rendered: 0, missing: 0, gaps: 0, errors: 0 }
 
-  cover_pdf_rel = stage_cover_pdf(spec, stage)
-  if cover_pdf_rel
-    body << "\\includepdf[pages=1,fitpaper=true]{#{cover_pdf_rel}}"
-    body << ''
-  end
-
-  appendix_active   = false
+  # Cover-pdf inclusion moved out of body.tex into main.tex frontmatter
+  # via \volumecoverpath (set in build-info.tex). The build-info macro
+  # is the cleaner home: it keeps body.tex purely about mainmatter content
+  # and lets the ToC slot naturally between cover and parts.
   in_part           = false
   seen_part_or_chap = false
+  appendix_emitted  = false
 
   Mono::OutlineWalker.walk(spec[:outline]).each do |item|
     case item[:kind]
@@ -235,15 +257,25 @@ def assemble_body(spec, stage, variant:)
       seen_part_or_chap = true
 
     when :appendices
-      unless appendix_active
+      # First appendix part: emit LaTeX's \appendix (resets chapter
+      # counter, switches \thechapter to \Alph). Then override
+      # \thechapter to \AlphAlph so chapters past Z (AAD's Details
+      # alone has >26) keep advancing as AA, AB, … instead of erroring.
+      unless appendix_emitted
         body << "\\appendix"
-        appendix_active = true
+        body << "\\renewcommand{\\thechapter}{\\AlphAlph{\\value{chapter}}}"
+        # Activate the chapter→section ToC downshift for the rest of the
+        # document — see \asfAppendixToCremap in common/preamble/environments.
+        # Must be global (not group-scoped) because KOMA-Script defers the
+        # \chapter-time \addcontentsline past local groups.
+        body << "\\asfAppendixToCremap"
+        appendix_emitted = true
       end
-      # In the four-volume hierarchy, each *Appendices* group is its own
-      # \part (Appendices: Details, Appendices: Operational Domains).
-      # Individual appendix segments inside render as \chapter each — see
-      # the :segment branch.
-      body << "\\part{#{escape_latex(item[:title])}}"
+      # Each *Appendices* group is its own \part; the "Appendices: "
+      # prefix surfaces the role explicitly in the running heads and
+      # ToC. Individual appendix segments inside render as \chapter
+      # each via segment_renderer's :appendices container branch.
+      body << "\\part{Appendices: #{escape_latex(item[:title])}}"
       in_part = true
       seen_part_or_chap = true
 
@@ -276,7 +308,11 @@ def assemble_body(spec, stage, variant:)
     when :segment
       slug = item[:slug]
       begin
-        tex = Mono::SegmentRenderer.render(item[:path], variant: variant)
+        tex = Mono::SegmentRenderer.render(
+          item[:path],
+          variant:   variant,
+          container: item[:container] || :part,
+        )
         (segments_dir / "#{slug}.tex").write(tex)
         body << "\\input{segments/#{slug}}"
         stats[:rendered] += 1
@@ -288,7 +324,8 @@ def assemble_body(spec, stage, variant:)
 
     when :missing
       type_label = Kramdown::Converter::AsfLatex::TYPE_LABEL[item[:type].downcase] || item[:type]
-      body << "\\missingsegment{#{escape_latex(type_label)}}" \
+      macro = item[:container] == :appendices ? 'missingappendixchapter' : 'missingsegment'
+      body << "\\#{macro}{#{escape_latex(type_label)}}" \
               "{#{escape_latex(item[:slug])}}" \
               "{#{escape_latex(item[:claim])}}"
       stats[:missing] += 1
@@ -393,13 +430,17 @@ end
 
 # ── Per-volume build ────────────────────────────────────────────────────────
 
-def build_volume(volume_id, variant:)
+def build_volume(volume_id, variant:, toc_override: nil)
   spec = load_volume_spec(volume_id)
   abort "outline not found for #{volume_id}: #{spec[:outline]}" unless spec[:outline].exist?
 
   stage, stem = stage_sources(spec)
-  write_build_info(stage, spec)
-  warn "[#{spec[:slug]}] assembling (variant: #{variant})…"
+  # Cover and ToC are resolved before build-info.tex is written so main.tex
+  # can render them in frontmatter scope, before \mainmatter and \input{body}.
+  cover_rel = stage_cover_pdf(spec, stage) || ''
+  toc_enabled = toc_override.nil? ? spec[:toc_enabled] : toc_override
+  write_build_info(stage, spec, cover_rel: cover_rel, toc_enabled: toc_enabled)
+  warn "[#{spec[:slug]}] assembling (variant: #{variant}, toc: #{toc_enabled ? 'on' : 'off'})…"
   stats = assemble_body(spec, stage, variant: variant)
   warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
        "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
@@ -422,7 +463,7 @@ def main
   patch_kao_sty
   FileUtils.mkdir_p(MONO_DIR)
   opts[:volumes].each do |vol|
-    build_volume(vol, variant: opts[:variant])
+    build_volume(vol, variant: opts[:variant], toc_override: opts[:toc_override])
   end
 end
 

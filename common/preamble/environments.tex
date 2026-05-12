@@ -1,9 +1,9 @@
-% mono/preamble/environments.tex
+% common/preamble/environments.tex
 %
 % Segment environments — the visual register for the 19 segment types
 % defined in FORMAT.md. Architecture:
 %
-%   \segmenthead{<Type Label>}{<Title>}{<status>}
+%   \segmenthead{<Type Label>}{<Title>}{<status>}{<stage>}
 %      ... segment body ...
 %   \segmentfoot
 %
@@ -13,41 +13,42 @@
 % grows a 20th type, the build pipeline maps it to the right label and the
 % rendering needs no change here.
 %
-% Numbering uses a single shared counter per chapter (matches the existing
-% bin/build markdown behavior: "Definition I.3", "Result II.7", etc.). The
-% counter is named 'segment' rather than 'claim' (per FORMAT's vocabulary —
-% segments hold claims; not all segments contain a single claim).
+% Numbering rides kaobook's native section counter (reset per chapter).
+% Display is kaobook's default arabic-chapter.arabic-section — "Definition
+% 1.4, Result 5.7". The custom \segment counter the build used pre-Phase-1c
+% is retired; everything now hangs off \section / \thesection.
 
-\newcounter{segment}[chapter]
-% FORMAT.md uses "Definition I.3, Result II.7" with roman chapter numerals;
-% match it here. (kaobook's kao chapter style already renders the BIG margin
-% chapter glyph in roman, but \thechapter itself is arabic — \Roman{chapter}
-% in the counter format aligns the body convention with the head.)
-\renewcommand{\thesegment}{\Roman{chapter}.\arabic{segment}}
-
-% cleveref format for our custom `segment` counter. Without this,
-% cleveref doesn't know how to render \cref{seg:...} and falls back to
-% `??` — even though the label resolves and the counter is correct.
+% cleveref format for kaobook's native `section` counter — overrides what
+% kaorefs sets so \cref{seg:foo} renders as a bare number (matching the
+% existing prose convention "see Definition #def-foo" → "see Definition
+% I.4", with the type word supplied by the author in source).
 %
-% IMPORTANT: cleveref's format placeholder for the stored label value
-% is `#1`, NOT `\thesegment`. Using `\thesegment` would expand at cref-
-% TIME (giving the current counter value) instead of label-TIME (the
-% value that was recorded when \label was emitted). Every cref would
-% then render the same most-recent counter — sending all clicks to the
-% wrong segment regardless of which label they targeted. `#2#1#3` is
-% the canonical "hyperref-open + value + hyperref-close" idiom.
+% IMPORTANT: cleveref's format placeholder for the stored label value is
+% `#1`, NOT `\thesection`. Using `\thesection` would expand at cref-TIME
+% (current counter value) instead of label-TIME (the value recorded when
+% \label was emitted). `#2#1#3` is the canonical "hyperref-open + value +
+% hyperref-close" idiom.
 %
-% Format prints just the counter value (`I.4`, `II.7`, …) with no type
-% prefix. Authors include the type word in source — "see Definition
-% #def-foo" — and the cref expands to the number alone, avoiding the
-% doubling that a fixed prefix would cause across 19 segment types.
+% Registered inside \AtBeginDocument so we run after kaorefs's own hooks
+% and our format wins.
 \AtBeginDocument{%
-  \crefformat{segment}{#2#1#3}%
-  \Crefformat{segment}{#2#1#3}%
-  \crefrangeformat{segment}{#3#1#4--#5#2#6}%
-  \Crefrangeformat{segment}{#3#1#4--#5#2#6}%
-  \crefmultiformat{segment}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
-  \Crefmultiformat{segment}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  \crefformat{section}{#2#1#3}%
+  \Crefformat{section}{#2#1#3}%
+  \crefrangeformat{section}{#3#1#4--#5#2#6}%
+  \Crefrangeformat{section}{#3#1#4--#5#2#6}%
+  \crefmultiformat{section}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  \Crefmultiformat{section}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  % Appendix segments are chapters; \cref{seg:foo} where seg:foo labels an
+  % appendix chapter would otherwise pick up kaorefs's default "Chapter X"
+  % rendering and produce awkward prose like "see Derivation Chapter A".
+  % Mirror the section convention — bare number — so chapter and section
+  % cross-refs read identically in running text.
+  \crefformat{chapter}{#2#1#3}%
+  \Crefformat{chapter}{#2#1#3}%
+  \crefrangeformat{chapter}{#3#1#4--#5#2#6}%
+  \Crefrangeformat{chapter}{#3#1#4--#5#2#6}%
+  \crefmultiformat{chapter}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  \Crefmultiformat{chapter}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
 }
 
 % Internal section subheads — Formal Expression / Epistemic Status /
@@ -172,9 +173,20 @@
 % Fourth arg is the segment's `stage:` frontmatter value, used in review
 % mode for the dot-progression glyph on the far right of the header strip.
 % Empty string elides it (public-variant builds, or stage-less segments).
+% \segmenthead drives off kaobook's native section counter:
+%   \refstepcounter{section} — increments + creates the anchor target for
+%     \label{seg:...}, which segment_renderer.rb emits immediately after.
+%   \sectionmark — populates the running head with the segment title.
+%   \addcontentsline — emits the ToC entry. We compose it manually rather
+%     than via \section{...} because kaobook's \section would render its
+%     own heading above our tinted box (double header). The contentsline
+%     uses \protect\numberline{\thesection} so cleveref and the ToC both
+%     see the formatted "I.4"-style number.
 \NewDocumentCommand{\segmenthead}{m m m m}{%
   \needspace{10\baselineskip}%
-  \refstepcounter{segment}%
+  \refstepcounter{section}%
+  \sectionmark{#2}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}\textit{#1}: #2}%
   \setheadertint{#1}%
   \par\medskip%
   \noindent\begin{tcolorbox}[
@@ -192,7 +204,7 @@
     borderline north = {1.5pt}{0pt}{black},
     borderline south = {0.75pt}{0pt}{black},
   ]
-  {\sffamily\bfseries #1~\thesegment}%
+  {\sffamily\bfseries #1~\thesection}%
   \IfStrEq{#3}{}{}{\statusbadge{#3}}%
   \nobreak\quad\textcolor{bullet-mid}{\textbullet}\quad%
   {\large\bfseries #2}.%
@@ -210,6 +222,79 @@
   \par\medskip%
 }
 
+% Appendix-segment chapter opener.
+%
+% Per the four-volume hierarchy decision (FORMAT-TODO §The Decided
+% Hierarchy): appendix segments render directly as \chapter under an
+% \appendix\part{...} group — no intermediate Chapter level inside
+% Appendices. An appendix segment IS the chapter.
+%
+% This routes through kaobook's native \chapter so the chapter counter
+% advances, kaobook's chapter style (the big margin glyph + title block)
+% renders, and the ToC entry is created automatically. The type label is
+% folded into the chapter title so the segment's role stays visible in
+% the heading and ToC ("Derivation: Sector Condition Derivation" rather
+% than a bare descriptive title that hides whether the segment is a
+% Derivation, Discussion, or Worked Example).
+%
+% Status badge + stage glyph render as a small indicator strip beneath
+% the kaobook chapter heading, in the same register the section-level
+% \segmenthead uses but without the tinted box (the chapter glyph is
+% the visual anchor here; the strip is supplementary). Empty #3 / #4 are
+% honored — public-variant builds suppress the stage glyph that way.
+%
+% Cross-references: segment_renderer.rb emits \label{seg:<slug>} on the
+% line after this macro, which captures the chapter counter via the
+% standard \chapter → \refstepcounter{chapter} chain.
+% Appendix-region ToC downshift: route the auto \addcontentsline call
+% that \chapter emits at chapter level through \l@section instead, so
+% appendix-chapter ToC entries inherit section-style indent / weight /
+% line density and read as a continuation of the segment register
+% rather than as a parallel block of bold chapter rows. The body
+% chapter heading itself is unaffected (kao margin glyph + title
+% render normally).
+%
+% Implementation: globally redefine \addcontentsline once \appendix
+% has fired (via \asfAppendixToCremap below, called by the build
+% script). KOMA-Script defers the \chapter-time \addcontentsline call
+% past any local group, so the rebind has to be global to take effect.
+% Part-level lines are preserved (only chapter→section is redirected).
+%
+% This wrapper exists once; build-monograph emits \asfAppendixToCremap
+% on the same line as \appendix, before the first appendix \part.
+% Names without `@` so the macro can be invoked safely from body.tex
+% (where `@` is not a letter category code).
+\NewDocumentCommand{\asfAppendixToCremap}{}{%
+  \let\asfOrigAddCL\addcontentsline%
+  \renewcommand{\addcontentsline}[3]{%
+    \def\asfTmpa{##2}\def\asfTmpb{chapter}%
+    \ifx\asfTmpa\asfTmpb%
+      \asfOrigAddCL{##1}{section}{##3}%
+    \else%
+      \asfOrigAddCL{##1}{##2}{##3}%
+    \fi%
+  }%
+}
+
+\NewDocumentCommand{\segmentappendixchapter}{m m m m}{%
+  % Body heading is a full kaobook chapter (margin glyph + title); the
+  % auto-emitted ToC line is rerouted to section level by the global
+  % \asfAppendixToCremap rebind that fires once at \appendix time.
+  \chapter[\textit{#1}: #2]{\textit{#1}: #2}%
+  % Indicator strip — italic type label is redundant with the chapter
+  % title but provides anchoring; status + stage carry the new info.
+  \IfStrEq{#3}{}{%
+    \IfStrEq{#4}{}{}{%
+      \par\noindent\hfill\stageglyph{#4}\par\medskip%
+    }%
+  }{%
+    \par\noindent%
+    \statusbadge{#3}%
+    \IfStrEq{#4}{}{}{\hfill\stageglyph{#4}}%
+    \par\medskip%
+  }%
+}
+
 % (Stage display moved into the segment header strip as a dot glyph;
 % see \stageglyph and \segmenthead's fourth argument. This command kept
 % only for backward compatibility in case any caller still emits it.)
@@ -222,8 +307,13 @@
 % break is consistent for landed and missing segments.
 \NewDocumentCommand{\missingsegment}{m m m}{%
   % #1 = type label, #2 = slug, #3 = claim text (from the outline table)
+  % ToC entry uses the slug rather than the claim text (claims are often
+  % paragraph-length and would render unreadably as a ToC line); the
+  % full claim appears in the visible marker below.
   \needspace{8\baselineskip}%
-  \refstepcounter{segment}%
+  \refstepcounter{section}%
+  \sectionmark{\##2}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}\textit{#1}: \texttt{\##2} \textnormal{\textit{(missing)}}}%
   % Emit the seg: label even though the segment isn't written — cross-refs
   % from other segments still resolve to a number rather than ??.
   \label{seg:#2}%
@@ -231,11 +321,37 @@
   \noindent{\color{status-tentative}\rule{\segmentrulewidth}{0.75pt}}\par%
   \nobreak\smallskip%
   \noindent%
-  {\sffamily\bfseries\color{status-tentative} #1~\thesegment}%
+  {\sffamily\bfseries\color{status-tentative} #1~\thesection}%
   \quad\textcolor{bullet-mid}{\textbullet}\quad%
-  {\large\bfseries\color{status-tentative} #3}.%
+  {\large\bfseries\color{status-tentative} \texttt{\##2}}.%
   \par\nobreak\smallskip%
   \noindent\emph{Segment \texttt{#2} not yet written.}\par%
+  \par\smallskip%
+  \IfStrEq{#3}{}{}{\noindent\textit{Claim:} #3\par\nobreak\smallskip}%
+  \noindent{\color{status-tentative}\rule{\segmentrulewidth}{0.75pt}}\par%
+  \nobreak\medskip%
+}
+
+% Missing appendix-chapter placeholder — appendix segments listed in
+% OUTLINE.md without a corresponding src/ file. Mirrors \missingsegment
+% but for the chapter level (appendix segments are chapters), so the
+% missing placeholder advances the chapter counter rather than orphaning
+% itself under whatever section last fired. Renders a \chapter with the
+% claim text as title and a marker block underneath.
+\NewDocumentCommand{\missingappendixchapter}{m m m}{%
+  % #1 = type label, #2 = slug, #3 = claim text (from the outline table)
+  % Chapter title uses the slug (stable, short identifier) rather than the
+  % claim text — claim columns in OUTLINE.md are often paragraph-length
+  % and would spill into the ToC unreadably. The full claim renders in
+  % the body marker below the chapter heading.
+  \chapter[\textit{#1}: \texttt{\##2} \textnormal{\textit{(missing)}}]{\textit{#1}: \texttt{\##2} \textnormal{\textit{(missing)}}}%
+  \label{seg:#2}%
+  \par\medskip%
+  \noindent{\color{status-tentative}\rule{\segmentrulewidth}{0.75pt}}\par%
+  \nobreak\smallskip%
+  \noindent\emph{Segment \texttt{#2} not yet written.}\par%
+  \par\smallskip%
+  \noindent\textit{Claim:} #3\par%
   \nobreak\smallskip%
   \noindent{\color{status-tentative}\rule{\segmentrulewidth}{0.75pt}}\par%
   \nobreak\medskip%
