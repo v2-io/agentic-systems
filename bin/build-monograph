@@ -342,23 +342,59 @@ def emit_markdown_artifact(stem, assembled_md)
 end
 
 
+# Overfull-hbox sizes that are systematic widesection / workingnotes
+# false positives (segmentrulewidth ≈ textwidth + this offset). See the
+# inline note in summarize_errors. Tune by inspecting unique recurring
+# values in the log — if a new structural environment appears with a
+# different offset, add it here.
+WIDESECTION_FALSE_POSITIVE_PT = [163.35951, 153.35951, 162.82196].freeze
+
 def summarize_errors(stage, stem)
   log = stage / "#{stem}.log"
   return unless log.exist?
 
-  errors = []
+  errors   = []
+  overfull = []  # [[overshoot_pt, line], …]
   log.each_line do |line|
     case line
     when /^! /, /^.+?:\d+: /
       errors << line.strip
+    when /^Overfull \\hbox \(([\d.]+)pt too wide\)/
+      pt = Regexp.last_match(1).to_f
+      # Filter widesection / workingnotes false positives: tcolorbox
+      # content there is intentionally \segmentrulewidth wide, which is
+      # ≈163.4pt past \textwidth in kaobook's default geometry. TeX
+      # logs every wider-than-textwidth hbox as overfull even though
+      # it's contained in the wider tcolorbox on the page. The exact
+      # values (163.35951, 153.35951, 162.82196) are constant
+      # signatures of this geometry; filter them so the real overflow
+      # signal isn't drowned out. Tolerance ±0.6pt covers tiny
+      # per-line variation.
+      next if WIDESECTION_FALSE_POSITIVE_PT.any? { |fp| (pt - fp).abs < 0.6 }
+      overfull << [pt, line.strip]
     end
   end
-  return if errors.empty?
 
-  warn ''
-  warn "LaTeX errors (#{errors.size}):"
-  errors.first(20).each { |e| warn "  #{e}" }
-  warn "  ... (#{errors.size - 20} more)" if errors.size > 20
+  if !errors.empty?
+    warn ''
+    warn "LaTeX errors (#{errors.size}):"
+    errors.first(20).each { |e| warn "  #{e}" }
+    warn "  ... (#{errors.size - 20} more)" if errors.size > 20
+  end
+
+  # Overfull \hbox warnings — content extending past its column. Sub-1pt
+  # overshoots are usually invisible; the threshold filters those out so
+  # the report focuses on the visible-overflow cases (Joseph's "extending
+  # past the right margin" complaint).
+  visible = overfull.select { |pt, _| pt >= 1.0 }
+  unless visible.empty?
+    warn ''
+    warn "Overfull \\hbox warnings (#{visible.size}, ≥1pt; #{overfull.size - visible.size} sub-pt suppressed):"
+    visible.sort_by { |pt, _| -pt }.first(15).each do |pt, line|
+      warn "  +#{format('%.1f', pt)}pt: #{line}"
+    end
+    warn "  ... (#{visible.size - 15} more)" if visible.size > 15
+  end
 end
 
 # ── Per-volume build ────────────────────────────────────────────────────────

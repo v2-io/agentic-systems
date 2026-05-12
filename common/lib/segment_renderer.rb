@@ -575,8 +575,19 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   # Tables — kramdown's default emits longtable{|l|l|l|} which doesn't
   # wrap, so any cell wider than its column overflows the page. We swap
   # in xltabular (longtable + tabularx, page-breakable AND wrap-on-width).
-  # Columns become `X` (equal-share wrapping), alignment-aware via the
-  # array-package column-modifier prefix.
+  # Columns are X (auto-wrap), alignment-aware via the array-package
+  # column-modifier prefix, with per-column weights from
+  # table_column_weights so a long-prose column gets more horizontal
+  # share than a single-word-label column.
+  #
+  # Width is \linewidth — adapts to context. In a plain segment section
+  # (Formal Expression, Epistemic Status), \linewidth is the body
+  # column. Inside a \begin{segmentwidesection} (Discussion / Findings),
+  # \linewidth is the full segment band (body + margin column). Using
+  # \segmentrulewidth here unconditionally would push every table out
+  # into the margin column, overflowing the page in plain-section
+  # contexts. \linewidth is the right semantics: "as wide as my
+  # current text column."
   #
   # TODO: dynamic column widths. Right now every X column gets equal
   # width via tabularx's default distribution, which wastes space when
@@ -616,8 +627,10 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   # `{ ... }` around \begin{xltabular} collides with xltabular's own
   # grouping (the original "Extra endgroup" cascade).
   def convert_table(el, opts)
-    aligns = el.options[:alignment] || []
-    cols   = aligns.map { |a| column_spec(a) }.join
+    aligns  = el.options[:alignment] || []
+    weights = table_column_weights(el, aligns.size)
+    cols    = aligns.each_with_index.map { |a, i| column_spec(a, weights[i]) }.join
+    table_w = table_width_choice(el, aligns.size)
     # Table body always renders one size smaller (\footnotesize) so wider
     # tables fit; the header row gets bumped back up to \small via
     # convert_thead so it stays readable.
@@ -637,7 +650,7 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
       "\\footnotesize\n" \
       "\\captionof{table}#{caption_arg}#{label}\\par\\smallskip\n" \
       "\\nopagebreak[4]\n" \
-      "\\begin{tabularx}{\\segmentrulewidth}{#{cols}}\n" \
+      "\\begin{tabularx}{#{table_w}}{#{cols}}\n" \
       "\\toprule[1pt]\\addlinespace[2pt]\n" \
       "#{inner(el, opts)}" \
       "\\addlinespace[2pt]\\bottomrule[1pt]\n" \
@@ -645,15 +658,131 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
       "\\endgroup\n\\par\\medskip\n\n"
   end
 
-  COLUMN_SPEC = {
-    left:    '>{\\raggedright\\arraybackslash}X',
-    right:   '>{\\raggedleft\\arraybackslash}X',
-    center:  '>{\\centering\\arraybackslash}X',
-    default: '>{\\raggedright\\arraybackslash}X',
+  ALIGN_CMD = {
+    left:    '\\raggedright',
+    right:   '\\raggedleft',
+    center:  '\\centering',
+    default: '\\raggedright',
   }.freeze
 
-  def column_spec(align)
-    COLUMN_SPEC[align] || COLUMN_SPEC[:default]
+  # Emit a tabularx X column with weight-scaled \hsize so columns can
+  # vary in width by content. Weight 1.0 is "default X share"; a row of
+  # weights summing to N (column count) yields the same total table
+  # width as N equal Xs would. Per-column weights computed by
+  # table_column_weights from avg non-blank cell length.
+  def column_spec(align, weight = 1.0)
+    align_cmd = ALIGN_CMD[align] || ALIGN_CMD[:default]
+    ">{\\hsize=#{format('%.3f', weight)}\\hsize#{align_cmd}\\arraybackslash}X"
+  end
+
+  # Width threshold (in weighted characters of source-side cell content,
+  # summed over the per-column max) above which a table extends into the
+  # margin column via \segmentrulewidth instead of staying at \linewidth
+  # (body width in plain segment sections). Empirically tuned to put
+  # AAD's "Domain instantiations" table (sum ≈ 110) at body width and
+  # math-heavy or long-prose tables at the wider register. Watch the
+  # Overfull \hbox warnings in the build log to see whether the
+  # threshold is letting borderline tables overflow.
+  TABLE_WIDE_THRESHOLD_CHARS = 100
+
+  # Math expressions don't wrap — LaTeX renders them as atomic boxes,
+  # and when the cell is narrower than the math width, the math
+  # overflows past the column boundary visibly. So math content needs
+  # absolute horizontal width and should be weighted up when deciding
+  # whether a table is too dense for body width. The 1.6 multiplier is
+  # rough — math source `$\foo$` tends to be longer than rendered
+  # width (commands shorten to glyphs) but the no-wrap discipline
+  # means we still want to over-allocate width on math-heavy columns.
+  MATH_WIDTH_MULTIPLIER = 1.6
+
+  def cell_visual_length(text)
+    base = text.length
+    math_chars = text.to_s.scan(/\$[^$]+\$/).sum { |m| m.length }
+    base + (math_chars * (MATH_WIDTH_MULTIPLIER - 1.0)).round
+  end
+
+  # Pick the LaTeX width macro for the tabularx environment based on
+  # the table's natural content width. \linewidth adapts to context
+  # (body column in plain sections; full segment band inside a
+  # \begin{segmentwidesection} for Discussion / Findings). The
+  # \segmentrulewidth override extends into the margin column when the
+  # table is content-dense enough that body width would crush it.
+  def table_width_choice(table_el, n_cols)
+    return '\\linewidth' if n_cols.zero?
+    per_column_max = Array.new(n_cols, 0)
+    collect_table_cells(table_el).each do |row|
+      row.each_with_index do |cell, i|
+        next if i >= n_cols
+        len = cell_visual_length(cell)
+        per_column_max[i] = len if len > per_column_max[i]
+      end
+    end
+    per_column_max.sum > TABLE_WIDE_THRESHOLD_CHARS ? '\\segmentrulewidth' : '\\linewidth'
+  end
+
+  # Approximate chars-per-table-row at body width / footnotesize. Used
+  # to convert a column's longest single word into a weight floor — the
+  # column has to be wide enough to fit that word without LaTeX falling
+  # back to hyphenation ("Sepa-/rated"). 60 is empirical; tune by the
+  # overfull-hbox warnings.
+  TYPICAL_TABLE_CHARS = 60
+
+  # Linear weighting by average non-blank cell length per column, with
+  # a per-column floor based on the longest single word in the column.
+  # Headers count as cells (they too need fit-width). Math content
+  # weights via cell_visual_length (math is atomic — its rendered
+  # width can't be broken across lines, so we over-allocate for it).
+  #
+  # The word-floor pass: each column's weight is bumped to at least
+  # max_word × n_cols / TYPICAL_TABLE_CHARS so a short-avg column whose
+  # body contains a 9-char word like "Separated" doesn't get squeezed
+  # below its natural minimum. After flooring, weights are renormalized
+  # so the row still sums to n_cols (tabularx's expected distribution).
+  def table_column_weights(table_el, n_cols)
+    return [] if n_cols.zero?
+    per_column = Array.new(n_cols) { { lens: [], max_word: 0 } }
+    collect_table_cells(table_el).each do |row|
+      row.each_with_index do |cell_text, idx|
+        next if idx >= n_cols
+        text = cell_text.to_s.strip
+        next if text.empty?
+        per_column[idx][:lens] << cell_visual_length(text)
+        word_max = text.split(/\s+/).map { |w| cell_visual_length(w) }.max || 0
+        per_column[idx][:max_word] = word_max if word_max > per_column[idx][:max_word]
+      end
+    end
+
+    avgs  = per_column.map { |c| c[:lens].empty? ? 0.0 : c[:lens].sum.to_f / c[:lens].size }
+    total = avgs.sum
+    initial = total.zero? ? Array.new(n_cols, 1.0) : avgs.map { |a| a / total * n_cols }
+
+    floors  = per_column.map { |c| c[:max_word].to_f * n_cols / TYPICAL_TABLE_CHARS }
+    floored = initial.zip(floors).map { |w, f| [w, f].max }
+    sum     = floored.sum
+    sum.zero? ? Array.new(n_cols, 1.0) : floored.map { |w| w / sum * n_cols }
+  end
+
+  # Walk a :table element and return an array of rows, each an array
+  # of cell text content (post-collect_text strip). Handles both the
+  # :thead/:tbody-wrapped form and the flat :tr children form that
+  # kramdown can produce.
+  def collect_table_cells(table_el)
+    rows = []
+    return rows if table_el.children.nil?
+    table_el.children.each do |child|
+      case child.type
+      when :thead, :tbody
+        child.children.each { |tr| rows << row_cells(tr) }
+      when :tr
+        rows << row_cells(child)
+      end
+    end
+    rows
+  end
+
+  def row_cells(tr_el)
+    return [] if tr_el.children.nil?
+    tr_el.children.map { |c| collect_text(c) }
   end
 
   # Italic header row — the Tufte register for column labels. We render

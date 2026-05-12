@@ -477,6 +477,16 @@
   ]%
   \setlength{\parskip}{0.8\baselineskip}%
   \setlength{\parindent}{0pt}%
+  % The widesection content is intentionally wider than \textwidth (it
+  % extends into the margin column). TeX's outer page boxing still
+  % expects \textwidth, so it would flood the log with Overfull \hbox
+  % warnings for every paragraph that's naturally wider than body
+  % column. Bump \hfuzz to absorb the expected widening (the margin
+  % column ≈ 163pt past textwidth in kaobook's default geometry) so the
+  % real overflow signal — content extending past the printable area —
+  % isn't drowned out. 180pt gives a small safety margin past the
+  % expected 163.4pt widesection delta.
+  \hfuzz=180pt%
 }{%
   \end{tcolorbox}%
   \par\medskip%
@@ -563,6 +573,9 @@
     top          = 10pt, bottom = 10pt,
     before skip  = 0pt,  after skip = 0pt,
   ]%
+  % Same expected-widening absorption as \segmentwidesection — content
+  % inside the workingnotes box is naturally wider than \textwidth.
+  \hfuzz=180pt%
   {\sffamily\bfseries Working Notes.}\par\smallskip%
 }{%
   \end{tcolorbox}%
