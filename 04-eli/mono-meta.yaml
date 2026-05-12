@@ -1,6 +1,8 @@
-# mono-meta.yaml — per-component metadata for the monograph build.
+# mono-meta.yaml — per-volume metadata for the monograph build.
 # See 01-aad-core/mono-meta.yaml for the full schema.
-title: "Emergent Logozoetic Intelligences (ELI)"
+title:       "Emergent Logozoetic Intelligences (ELI)"
 short_title: ELI
-slug: eli
-version: 0.1.0
+slug:        eli
+major:       0
+minor:       1
+patch:       0

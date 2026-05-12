@@ -1,93 +1,128 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 #
-# bin/build-monograph — assemble the Agentic Systems Framework monograph and
-# compile it to PDF via LuaLaTeX. Output:
-#     mono/agentic-framework-v<semver>[+<sha>].{md,pdf}
+# bin/build-monograph — build one or more Agentic Systems volumes to PDF.
 #
-# v0.1.0 minimum-viable scaffold:
-#   — reads mono/VERSION, computes stem (with optional +<short-sha>)
-#   — copies mono/main.tex + mono/preamble/ into mono/.build/<stem>/
-#   — applies the Libertinus-Mono patch to vendored kaobook (idempotent)
-#   — runs lualatex with TEXINPUTS set to mono/vendor/kaobook
-#   — copies PDF up to mono/<stem>.pdf
+# Usage:
+#   bin/build-monograph aad             # build AAD volume (alias for 01)
+#   bin/build-monograph 01              # build AAD volume by component-dir prefix
+#   bin/build-monograph tst             # build TST volume
+#   bin/build-monograph --all           # build all four volumes (in dep order)
+#   bin/build-monograph --public aad    # public variant (strips Working Notes)
 #
-# Future passes layer in: master OUTLINE walk → assembled markdown emission,
-# kramdown→LaTeX subclass for segments, biber bibliography, page-budget
-# reporting, --public / --review variants, etc.
+# Layout (post-Phase 1b restructure):
+#   common/                     shared build infrastructure
+#     main.tex                  LaTeX entrypoint template
+#     preamble/                 LaTeX preamble fragments
+#     lib/                      Ruby modules (segment_renderer, outline_walker)
+#     vendor/kaobook/           vendored class (gitignored)
+#     VERSION                   merged-build VERSION fallback (legacy)
+#   mono/                       output directory (all built artifacts)
+#     .build/<slug>/            per-volume build staging (gitignored)
+#     <slug>-v<M>.<m>.<p>.pdf   per-volume built PDF
+#     <slug>-v<M>.<m>.<p>.md    per-volume assembled markdown (when emitted)
+#   0N-<component>/             per-volume source
+#     mono-meta.yaml            per-volume metadata (title, slug, version, cover)
+#     OUTLINE.md                entrypoint outline (role-prefix format)
+#     <slug>.aux                persisted .aux for sibling-volume xr-refs (Phase 1d)
+#     src/                      segment files
 
 require 'fileutils'
 require 'pathname'
 require 'open3'
 require 'yaml'
 
-ROOT_DIR     = Pathname.new(__dir__).parent.expand_path
-MONO_DIR     = ROOT_DIR / 'mono'
-LIB_DIR      = MONO_DIR / 'lib'
-VENDOR_KAO   = MONO_DIR / 'vendor' / 'kaobook'
-BUILD_DIR    = MONO_DIR / '.build'
-VERSION_FILE = MONO_DIR / 'VERSION'
+ROOT_DIR    = Pathname.new(__dir__).parent.expand_path
+COMMON_DIR  = ROOT_DIR / 'common'
+LIB_DIR     = COMMON_DIR / 'lib'
+VENDOR_KAO  = COMMON_DIR / 'vendor' / 'kaobook'
+MONO_DIR    = ROOT_DIR / 'mono'         # output directory
+BUILD_DIR   = MONO_DIR / '.build'
 
 $LOAD_PATH.unshift(LIB_DIR.to_s)
 require 'segment_renderer'
 require 'outline_walker'
 
-# Per-component metadata file. Each component dir may carry one of these
-# to declare title / cover / outline-entrypoint / etc. Falls back to the
-# COMPONENTS[] hardcoded defaults when absent.
-META_FILENAME = 'mono-meta.yaml'
+# ── Volume registry ─────────────────────────────────────────────────────────
 
-def load_component_meta(comp_dir)
-  path = comp_dir / META_FILENAME
-  return {} unless path.exist?
-
-  YAML.safe_load(path.read) || {}
-rescue StandardError => e
-  warn "warn: failed to load #{path.relative_path_from(ROOT_DIR)}: #{e.message}"
-  {}
-end
-
-# Render a component's cover SVG to a PDF in the build stage. Returns the
-# stage-relative path to the generated PDF, or nil if no cover is
-# configured / the conversion failed.
-def stage_cover_pdf(comp_dir, comp_id, meta, stage)
-  cover_rel = meta['cover_svg']
-  return nil unless cover_rel
-
-  src = comp_dir / cover_rel
-  unless src.exist?
-    warn "warn: cover SVG not found for #{comp_id}: #{src.relative_path_from(ROOT_DIR)}"
-    return nil
-  end
-
-  covers_dir = stage / 'covers'
-  FileUtils.mkdir_p(covers_dir)
-  dst = covers_dir / "#{comp_id}-cover.pdf"
-
-  _out, status = Open3.capture2('rsvg-convert', '-f', 'pdf', '-o', dst.to_s, src.to_s)
-  unless status.success?
-    warn "warn: rsvg-convert failed for #{src}"
-    return nil
-  end
-
-  "covers/#{comp_id}-cover.pdf"
-end
-
-# Components ordered as Parts I–IV of the monograph. Each contributes its
-# own OUTLINE.md, which the walker resolves to an ordered manifest of
-# sections / scope-text / segments / gaps.
-COMPONENTS = [
-  { dir: '01-aad-core',         title: 'Adaptation and Actuation Dynamics' },
-  { dir: '02-tst-core',         title: 'Temporal Software Theory' },
-  { dir: '03-logogenic-agents', title: 'Logogenic Agents' },
-  { dir: '04-eli',              title: 'Emergent Logozoetic Intelligences' },
+# Volume specs in dep order. Each component dir carries a mono-meta.yaml
+# with title / short_title / slug / major / minor / patch / cover_svg.
+# This table maps the CLI volume id (slug or numeric prefix) to its dir.
+VOLUME_REGISTRY = [
+  { dir: '01-aad-core',         id_aliases: %w[01 aad] },
+  { dir: '02-tst-core',         id_aliases: %w[02 tst] },
+  { dir: '03-logogenic-agents', id_aliases: %w[03 loga logogenic] },
+  { dir: '04-eli',              id_aliases: %w[04 eli] },
 ].freeze
 
-# Default to review mode (keeps Working Notes, surfaces stage marginalia);
-# pass --public for the DOI-snapshot variant that strips them.
-VARIANT = ARGV.include?('--public') ? :public : :review
+META_FILENAME = 'mono-meta.yaml'
 
-# ── Naming ──────────────────────────────────────────────────────────────────
+# Load a volume spec from its mono-meta.yaml, merged with the registry entry.
+# Returns a hash with all the keys downstream code expects.
+def load_volume_spec(volume_id)
+  entry = VOLUME_REGISTRY.find { |e| e[:id_aliases].include?(volume_id.downcase) }
+  abort usage_message("unknown volume id: #{volume_id}") unless entry
+
+  comp_dir = ROOT_DIR / entry[:dir]
+  meta_path = comp_dir / META_FILENAME
+  abort "no #{META_FILENAME} in #{entry[:dir]}" unless meta_path.exist?
+
+  meta = YAML.safe_load(meta_path.read) || {}
+
+  slug = meta['slug'] || entry[:id_aliases].find { |a| a !~ /^\d+$/ } || entry[:id_aliases].first
+  major = meta['major'] || 0
+  minor = meta['minor'] || 0
+  patch = meta['patch'] || 0
+
+  {
+    dir:          entry[:dir],
+    comp_dir:     comp_dir,
+    slug:         slug,
+    title:        meta['title'] || entry[:dir],
+    short_title:  meta['short_title'] || slug.upcase,
+    major:        major,
+    minor:        minor,
+    patch:        patch,
+    semver:       "#{major}.#{minor}.#{patch}",
+    outline:      comp_dir / (meta['outline'] || 'OUTLINE.md'),
+    cover_svg:    meta['cover_svg'] ? (comp_dir / meta['cover_svg']) : nil,
+    meta_path:    meta_path,
+  }
+end
+
+# ── CLI ─────────────────────────────────────────────────────────────────────
+
+def usage_message(error = nil)
+  msg = +''
+  msg << "error: #{error}\n\n" if error
+  msg << <<~USAGE
+    Usage:
+      bin/build-monograph <volume>              build one volume
+      bin/build-monograph --all                 build all volumes
+      bin/build-monograph [--public] <volume>   public variant
+
+    Volume ids: #{VOLUME_REGISTRY.flat_map { |e| e[:id_aliases] }.join(' / ')}
+  USAGE
+  msg
+end
+
+def parse_args(argv)
+  args = argv.dup
+  variant = :review
+  if (i = args.index('--public'))
+    args.delete_at(i)
+    variant = :public
+  end
+  if args.include?('--all')
+    return { volumes: VOLUME_REGISTRY.map { |e| e[:id_aliases].first }, variant: variant }
+  end
+  abort usage_message('no volume specified (try `aad` or `--all`)') if args.empty?
+  abort usage_message("unexpected args: #{args[1..].join(' ')}") if args.size > 1
+
+  { volumes: [args.first.downcase], variant: variant }
+end
+
+# ── Git / build-info ────────────────────────────────────────────────────────
 
 def short_sha
   out, status = Open3.capture2('git', '-C', ROOT_DIR.to_s, 'rev-parse', '--short=7', 'HEAD')
@@ -95,50 +130,28 @@ def short_sha
   out.strip
 end
 
-# Returns true when the working tree is dirty (uncommitted changes).
-# Used to mark the sha as `<sha>-dirty` in the build-info stamp.
 def working_tree_dirty?
   out, status = Open3.capture2('git', '-C', ROOT_DIR.to_s, 'status', '--porcelain')
   return false unless status.success?
-
   !out.strip.empty?
 end
 
-def semver_stamp
-  VERSION_FILE.read.strip
-end
-
-# Build stem is always semver-only (no +<sha>). Each build overwrites
-# the same filename; the previous build is snapshotted as .prior.pdf.
-# The sha is shown inside the document (frontmatter / colophon) via the
-# build-info stamp written into the stage at compile time.
-def build_stem
-  "agentic-framework-v#{semver_stamp}"
-end
-
-# Write a build-info.tex into the stage that the preamble can \input to
-# expose \buildsemver / \buildsha / \builddate macros for the title
-# page and colophon. Sha carries `-dirty` when the working tree has
-# uncommitted changes.
-def write_build_info(stage)
+def write_build_info(stage, spec)
   sha = short_sha
   sha = "#{sha}-dirty" if working_tree_dirty?
   date = Time.now.utc.strftime('%Y-%m-%d')
-  semver = semver_stamp
   (stage / 'build-info.tex').write(<<~TEX)
-    \\newcommand{\\buildsemver}{#{semver}}
+    \\newcommand{\\buildsemver}{#{spec[:semver]}}
     \\newcommand{\\buildsha}{#{sha}}
     \\newcommand{\\builddate}{#{date}}
+    \\newcommand{\\volumetitle}{#{escape_latex(spec[:title])}}
+    \\newcommand{\\volumeshorttitle}{#{escape_latex(spec[:short_title])}}
+    \\newcommand{\\volumeslug}{#{spec[:slug]}}
   TEX
 end
 
-# ── Build steps ─────────────────────────────────────────────────────────────
+# ── kaobook vendor patch (idempotent) ───────────────────────────────────────
 
-# kaobook's modern fontmethod sets \setmonofont{Liberation Mono} on line ~1153
-# of kao.sty — almost certainly an upstream typo for "Libertinus Mono" (the
-# family-matching companion to the Libertinus Serif/Sans set just above).
-# We don't have Liberation Mono on this toolchain; TeX Live ships Libertinus
-# Mono. Patch is idempotent and only touches the vendored copy.
 def patch_kao_sty
   kao_sty = VENDOR_KAO / 'kao.sty'
   return unless kao_sty.exist?
@@ -151,21 +164,31 @@ def patch_kao_sty
   warn 'Patched vendored kao.sty: Liberation Mono → Libertinus Mono'
 end
 
-def stage_sources(stem)
-  stage = BUILD_DIR / stem
-  FileUtils.mkdir_p(stage)
-  FileUtils.cp(MONO_DIR / 'main.tex', stage / "#{stem}.tex")
-  # cp_r's :remove_destination flag only affects existing files, not the
-  # target directory tree — without the explicit rm_rf, a second build nests
-  # preamble/ inside the prior preamble/ instead of replacing it.
-  FileUtils.rm_rf(stage / 'preamble')
-  FileUtils.cp_r(MONO_DIR / 'preamble', stage / 'preamble')
-  stage
+# ── Cover rendering ─────────────────────────────────────────────────────────
+
+def stage_cover_pdf(spec, stage)
+  return nil unless spec[:cover_svg]
+  src = spec[:cover_svg]
+  unless src.exist?
+    warn "warn: cover SVG not found: #{src.relative_path_from(ROOT_DIR)}"
+    return nil
+  end
+
+  covers_dir = stage / 'covers'
+  FileUtils.mkdir_p(covers_dir)
+  dst = covers_dir / "#{spec[:slug]}-cover.pdf"
+  _out, status = Open3.capture2('rsvg-convert', '-f', 'pdf', '-o', dst.to_s, src.to_s)
+  unless status.success?
+    warn "warn: rsvg-convert failed for #{src.relative_path_from(ROOT_DIR)}"
+    return nil
+  end
+  "covers/#{spec[:slug]}-cover.pdf"
 end
 
+# ── Body assembly (one volume) ──────────────────────────────────────────────
+
 # Outline-prose lines that are repo-meta, not part of the reader-facing
-# theory. We skip these during body assembly so the rendered book doesn't
-# include build-system instructions and graph-image references inline.
+# theory. Skipped during body assembly.
 PROSE_NOISE = [
   /\AWorking draft\./, /\ASee\s+`?FORMAT\.md/, /\ASee\s+`?NOTATION\.md/,
   /\A!\[/, /\AEvery slug is linked/, /\AThe build tool/,
@@ -175,9 +198,7 @@ def skip_prose?(content)
   PROSE_NOISE.any? { |re| content.match?(re) }
 end
 
-# Walk every component, render each segment to its own .tex file, and
-# assemble body.tex with the proper part/chapter structure.
-def assemble_body(stage, variant:)
+def assemble_body(spec, stage, variant:)
   segments_dir = stage / 'segments'
   FileUtils.rm_rf(segments_dir)
   FileUtils.mkdir_p(segments_dir)
@@ -185,134 +206,96 @@ def assemble_body(stage, variant:)
   body  = []
   stats = { rendered: 0, missing: 0, gaps: 0, errors: 0 }
 
-  # The merged build (one PDF) concatenates all four components. Each
-  # component's walker drives its own *Volume / *Part / *Chapter
-  # structure; in the merged PDF, each component's *Volume gets a
-  # kaobook \part wrapper (using the component-title from COMPONENTS)
-  # so the four theories remain distinguishable. Walker's :part items
-  # then become \chapter level, walker's :chapter items become
-  # \section level. When Phase 1d splits the PDFs into four volumes,
-  # this outer wrapping disappears and walker's :part becomes a real
-  # \part.
-  appendix_active = false # tracks \appendix-mode globally across components
+  cover_pdf_rel = stage_cover_pdf(spec, stage)
+  if cover_pdf_rel
+    body << "\\includepdf[pages=1,fitpaper=true]{#{cover_pdf_rel}}"
+    body << ''
+  end
 
-  COMPONENTS.each do |comp|
-    comp_dir = ROOT_DIR / comp[:dir]
-    meta     = load_component_meta(comp_dir)
-    outline_rel = meta['outline'] || 'OUTLINE.md'
-    outline  = comp_dir / outline_rel
-    unless outline.exist?
-      warn "skip: #{outline} not found"
+  appendix_active   = false
+  in_part           = false
+  seen_part_or_chap = false
+
+  Mono::OutlineWalker.walk(spec[:outline]).each do |item|
+    case item[:kind]
+    when :volume
+      # Volume title is informational here — used by the title-page macros
+      # (\volumetitle) but doesn't render an inline heading.
       next
-    end
 
-    # Cover page (if configured) — generated from SVG via rsvg-convert,
-    # placed before the component-wrapping \part so it reads as the
-    # component's frontispiece.
-    cover_pdf_rel = stage_cover_pdf(comp_dir, comp[:dir], meta, stage)
-    if cover_pdf_rel
-      body << ''
-      body << "\\includepdf[pages=1,fitpaper=true]{#{cover_pdf_rel}}"
-      body << ''
-    end
+    when :frontmatter
+      # \frontmatter handled at the main.tex template level; the walker
+      # marker just delimits scope. Subsequent prose / image items inside
+      # *Frontmatter* render as front-matter content.
+      next
 
-    # Component wrapper — temporary outer \part until volume split lands.
-    body << ''
-    body << "\\pagelayout{wide}"
-    body << "\\addpart{#{escape_latex(meta['title'] || comp[:title])}}"
-    body << "\\pagelayout{margin}"
-    body << ''
+    when :part
+      body << "\\part{#{escape_latex(item[:title])}}"
+      in_part = true
+      seen_part_or_chap = true
 
-    seen_part_or_chapter = false # gate prose emission to after structure starts
-
-    Mono::OutlineWalker.walk(outline).each do |item|
-      case item[:kind]
-      when :volume
-        # Volume title is informational in the merged build (we use the
-        # component-title for the outer \part). Skip emission.
-        next
-
-      when :frontmatter
-        # Frontmatter content (TOC, preface, etc.) renders as prose
-        # within the wrapping outer \part. Proper \frontmatter /
-        # \mainmatter directives land when volume split is implemented.
-        next
-
-      when :part
-        # Walker's *Part* renders as a kaobook \chapter in the merged
-        # build (since the component is already an outer \part). Will
-        # become a real \part in the per-volume build.
-        body << "\\chapter{#{escape_latex(item[:title])}}"
-        seen_part_or_chapter = true
-
-      when :appendices
-        # *Appendices* transitions LaTeX into appendix mode (chapter
-        # numbering switches to letters) at first occurrence; subsequent
-        # appendices groups in the same component just open another
-        # \chapter without re-issuing \appendix.
-        unless appendix_active
-          body << "\\appendix"
-          appendix_active = true
-        end
-        body << "\\chapter{#{escape_latex(item[:title])}}"
-        seen_part_or_chapter = true
-
-      when :preface
-        # Preface is unheaded content; the walker's :preface item is
-        # just a marker. Surrounding :prose / :scope items render the
-        # preface body.
-        next
-
-      when :chapter
-        # Walker's *Chapter* becomes a kaobook \section in the merged
-        # build. Real \chapter when volume split lands.
-        if item[:title]
-          body << "\\section{#{escape_latex(item[:title])}}"
-        elsif !item[:implicit]
-          # Explicit *Chapter* with no title — emit unnumbered section
-          body << "\\section*{}"
-        end
-        # Implicit chapters emit nothing; the segments that follow
-        # appear directly under the enclosing *Part* / chapter.
-
-      when :scope
-        body << "\\begin{quote}\\itshape #{escape_latex(item[:content])}\\end{quote}"
-
-      when :prose
-        next if skip_prose?(item[:content])
-        next unless seen_part_or_chapter
-        body << escape_latex(item[:content])
-        body << ''
-
-      when :image
-        # Image references (dependency graphs etc.) — currently skipped;
-        # placeholders for when we wire SVG → PDF embedding.
-        next
-
-      when :segment
-        slug = item[:slug]
-        begin
-          tex = Mono::SegmentRenderer.render(item[:path], variant: variant)
-          (segments_dir / "#{slug}.tex").write(tex)
-          body << "\\input{segments/#{slug}}"
-          stats[:rendered] += 1
-        rescue StandardError => e
-          warn "render failed: #{slug}: #{e.class}: #{e.message}"
-          body << "\\par\\textbf{[Render error: #{slug}]}\\par"
-          stats[:errors] += 1
-        end
-
-      when :missing
-        type_label = Kramdown::Converter::AsfLatex::TYPE_LABEL[item[:type].downcase] || item[:type]
-        body << "\\missingsegment{#{escape_latex(type_label)}}" \
-                "{#{escape_latex(item[:slug])}}" \
-                "{#{escape_latex(item[:claim])}}"
-        stats[:missing] += 1
-
-      when :gap
-        body << "\\outlinegap{#{escape_latex(item[:description])}}"
-        stats[:gaps] += 1
+    when :appendices
+      unless appendix_active
+        body << "\\appendix"
+        appendix_active = true
       end
+      # In the four-volume hierarchy, each *Appendices* group is its own
+      # \part (Appendices: Details, Appendices: Operational Domains).
+      # Individual appendix segments inside render as \chapter each — see
+      # the :segment branch.
+      body << "\\part{#{escape_latex(item[:title])}}"
+      in_part = true
+      seen_part_or_chap = true
+
+    when :preface
+      # Preface body is rendered by the :prose/:scope items that follow.
+      next
+
+    when :chapter
+      if item[:title]
+        body << "\\chapter{#{escape_latex(item[:title])}}"
+        seen_part_or_chap = true
+      elsif !item[:implicit]
+        body << "\\chapter*{}"
+      end
+
+    when :scope
+      body << "\\begin{quote}\\itshape #{escape_latex(item[:content])}\\end{quote}"
+
+    when :prose
+      next if skip_prose?(item[:content])
+      next unless seen_part_or_chap
+      body << escape_latex(item[:content])
+      body << ''
+
+    when :image
+      # Image references (dependency graphs etc.) — embed once SVG → PDF
+      # pipeline lands. Currently skipped.
+      next
+
+    when :segment
+      slug = item[:slug]
+      begin
+        tex = Mono::SegmentRenderer.render(item[:path], variant: variant)
+        (segments_dir / "#{slug}.tex").write(tex)
+        body << "\\input{segments/#{slug}}"
+        stats[:rendered] += 1
+      rescue StandardError => e
+        warn "render failed: #{slug}: #{e.class}: #{e.message}"
+        body << "\\par\\textbf{[Render error: #{slug}]}\\par"
+        stats[:errors] += 1
+      end
+
+    when :missing
+      type_label = Kramdown::Converter::AsfLatex::TYPE_LABEL[item[:type].downcase] || item[:type]
+      body << "\\missingsegment{#{escape_latex(type_label)}}" \
+              "{#{escape_latex(item[:slug])}}" \
+              "{#{escape_latex(item[:claim])}}"
+      stats[:missing] += 1
+
+    when :gap
+      body << "\\outlinegap{#{escape_latex(item[:description])}}"
+      stats[:gaps] += 1
     end
   end
 
@@ -321,10 +304,9 @@ def assemble_body(stage, variant:)
 end
 
 # Minimal LaTeX escape for outline-derived strings (NOT for segment body
-# content, which goes through the kramdown converter's own escape).
-# Block form to avoid Ruby gsub's back-reference interpretation of `\&`
-# in the replacement string (the previous string-replacement form
-# silently round-tripped `&` to `&`).
+# content, which goes through the kramdown converter's own escape). Block
+# form avoids Ruby gsub's back-reference interpretation of `\&` in
+# replacements.
 def escape_latex(text)
   text.to_s
       .gsub('\\') { '\textbackslash{}' }
@@ -339,18 +321,24 @@ def escape_latex(text)
       .gsub('^')  { '\textasciicircum{}' }
 end
 
+# ── Compile + output ────────────────────────────────────────────────────────
+
+def stage_sources(spec)
+  stem  = "#{spec[:slug]}-v#{spec[:semver]}"
+  stage = BUILD_DIR / spec[:slug]
+  FileUtils.mkdir_p(stage)
+  FileUtils.cp(COMMON_DIR / 'main.tex', stage / "#{stem}.tex")
+  FileUtils.rm_rf(stage / 'preamble')
+  FileUtils.cp_r(COMMON_DIR / 'preamble', stage / 'preamble')
+  [stage, stem]
+end
+
 def run_lualatex(stage, stem)
   env = {
-    # Vendored kaobook + project preamble dirs on the kpathsea search path.
-    # Trailing colon means "merge with the default search path."
+    # Vendored kaobook + staging dir on kpathsea search path. Trailing
+    # colon merges with the default search path.
     'TEXINPUTS' => "#{stage}:#{VENDOR_KAO}:",
   }
-  # Note: no -halt-on-error. With ~174 segments rendered, source-side math
-  # idiosyncrasies (FORMAT-violating syntax we haven't shimmed yet) would
-  # otherwise abort the whole build at the first one. Letting lualatex
-  # continue past errors gives us a PDF showing the rendered corpus with
-  # bad pages where issues occurred — sufficient for the styling-feedback
-  # cycle, and the error list in the log tells us what to fix next.
   cmd = [
     'lualatex',
     '-interaction=nonstopmode',
@@ -358,12 +346,9 @@ def run_lualatex(stage, stem)
     "-output-directory=#{stage}",
     "#{stage}/#{stem}.tex",
   ]
-  # Two passes so \cref / \ref / \tableofcontents resolve. (LaTeX writes its
-  # forward-ref data to .aux on pass 1, reads it on pass 2.)
+  # Two passes so \cref / \ref / \tableofcontents resolve.
   2.times do |pass|
     _out, status = Open3.capture2e(env, *cmd)
-    # status.success? is false even when LaTeX produces a PDF if there were
-    # errors. We accept a build that produced a PDF; otherwise abort.
     next if (stage / "#{stem}.pdf").exist?
 
     abort "lualatex (pass #{pass + 1}) produced no PDF for #{stem}. " \
@@ -371,17 +356,22 @@ def run_lualatex(stage, stem)
   end
 end
 
-def copy_outputs(stage, stem)
+def copy_outputs(spec, stage, stem)
   src_pdf = stage / "#{stem}.pdf"
   dst_pdf = MONO_DIR / "#{stem}.pdf"
-  # Snapshot the previous build before overwriting.
   FileUtils.cp(dst_pdf, MONO_DIR / "#{stem}.prior.pdf") if dst_pdf.exist?
   FileUtils.cp(src_pdf, dst_pdf)
+
+  # Persist .aux into the component dir so sibling-volume builds can read
+  # it for cross-volume xr-refs (Phase 1d). Filename is `<slug>.aux`.
+  src_aux = stage / "#{stem}.aux"
+  if src_aux.exist?
+    FileUtils.cp(src_aux, spec[:comp_dir] / "#{spec[:slug]}.aux")
+  end
+
   dst_pdf
 end
 
-# Scan the LaTeX log for errors and emit a digest. Used after the compile
-# loop to surface what didn't render cleanly so we can prioritize fixes.
 def summarize_errors(stage, stem)
   log = stage / "#{stem}.log"
   return unless log.exist?
@@ -401,27 +391,39 @@ def summarize_errors(stage, stem)
   warn "  ... (#{errors.size - 20} more)" if errors.size > 20
 end
 
+# ── Per-volume build ────────────────────────────────────────────────────────
+
+def build_volume(volume_id, variant:)
+  spec = load_volume_spec(volume_id)
+  abort "outline not found for #{volume_id}: #{spec[:outline]}" unless spec[:outline].exist?
+
+  stage, stem = stage_sources(spec)
+  write_build_info(stage, spec)
+  warn "[#{spec[:slug]}] assembling (variant: #{variant})…"
+  stats = assemble_body(spec, stage, variant: variant)
+  warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
+       "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
+  warn "[#{spec[:slug]}] compiling #{stem}…"
+  run_lualatex(stage, stem)
+  pdf = copy_outputs(spec, stage, stem)
+  summarize_errors(stage, stem)
+  warn "[#{spec[:slug]}] → #{pdf.relative_path_from(ROOT_DIR)}"
+end
+
 # ── Main ────────────────────────────────────────────────────────────────────
 
 def main
   unless VENDOR_KAO.exist?
     abort "kaobook not vendored. Expected: #{VENDOR_KAO}\n" \
-          'Run: cd mono/vendor && git clone --depth 1 https://github.com/fmarotta/kaobook.git'
+          "Run: cd common/vendor && git clone --depth 1 https://github.com/fmarotta/kaobook.git"
   end
 
+  opts = parse_args(ARGV)
   patch_kao_sty
-  stem  = build_stem
-  stage = stage_sources(stem)
-  write_build_info(stage)
-  warn "Assembling body (variant: #{VARIANT})..."
-  stats = assemble_body(stage, variant: VARIANT)
-  warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
-       "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
-  warn "Compiling #{stem}..."
-  run_lualatex(stage, stem)
-  pdf = copy_outputs(stage, stem)
-  summarize_errors(stage, stem)
-  warn "Built → #{pdf.relative_path_from(ROOT_DIR)}"
+  FileUtils.mkdir_p(MONO_DIR)
+  opts[:volumes].each do |vol|
+    build_volume(vol, variant: opts[:variant])
+  end
 end
 
 main if $PROGRAM_NAME == __FILE__

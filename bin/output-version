@@ -1,59 +1,57 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 #
-# bin/output-version — semantic version utility for the monograph build.
+# bin/output-version — per-volume semantic-version utility for the
+# monograph build. Operates directly on each volume's mono-meta.yaml,
+# reading/writing the `major` / `minor` / `patch` keys.
 #
 # Usage:
-#   bin/output-version show              # print current version
-#   bin/output-version bump patch        # 0.1.0 → 0.1.1
-#   bin/output-version bump minor        # 0.1.5 → 0.2.0
-#   bin/output-version bump major        # 0.7.3 → 1.0.0
-#   bin/output-version <volume-id> show          # per-volume variant (Phase 1d)
-#   bin/output-version <volume-id> bump <level>
+#   bin/output-version <volume-id> show
+#   bin/output-version <volume-id> bump patch    # 0.1.0 → 0.1.1
+#   bin/output-version <volume-id> bump minor    # 0.1.5 → 0.2.0
+#   bin/output-version <volume-id> bump major    # 0.7.3 → 1.0.0
 #
-# Currently operates on mono/VERSION (the merged-build version). When
-# the volume split lands (Phase 1d in FORMAT-TODO.md), each component
-# directory carries its own VERSION file and the <volume-id> arg
-# (`01`/`02`/`aad`/`tst`/etc.) selects which.
+# <volume-id> is the slug (`aad`/`tst`/`loga`/`eli`) or the component-dir
+# prefix (`01`/`02`/`03`/`04`).
 
 require 'pathname'
+require 'yaml'
 
 ROOT_DIR = Pathname.new(__dir__).parent.expand_path
-MONO_DIR = ROOT_DIR / 'mono'
+META_FILENAME = 'mono-meta.yaml'
 
-# Volume-id → VERSION file path. Per-volume files take precedence over
-# the merged mono/VERSION fallback.
 VOLUME_DIRS = {
-  '01' => '01-aad-core', 'aad' => '01-aad-core',
-  '02' => '02-tst-core', 'tst' => '02-tst-core',
-  '03' => '03-logogenic-agents', 'loga' => '03-logogenic-agents',
-  '04' => '04-eli', 'eli' => '04-eli',
+  '01' => '01-aad-core',         'aad' => '01-aad-core',
+  '02' => '02-tst-core',         'tst' => '02-tst-core',
+  '03' => '03-logogenic-agents', 'loga' => '03-logogenic-agents', 'logogenic' => '03-logogenic-agents',
+  '04' => '04-eli',              'eli' => '04-eli',
 }.freeze
 
-def version_path_for(volume_id)
-  return MONO_DIR / 'VERSION' if volume_id.nil?
-
+def meta_path_for(volume_id)
   dir = VOLUME_DIRS[volume_id.downcase]
-  abort "unknown volume id: #{volume_id} (expected one of: " \
+  abort "unknown volume id: #{volume_id.inspect} (expected one of: " \
         "#{VOLUME_DIRS.keys.uniq.join(', ')})" unless dir
 
-  per_volume = ROOT_DIR / dir / 'VERSION'
-  return per_volume if per_volume.exist?
-
-  # Fall back to merged version file while per-volume files don't yet
-  # exist — but warn so the user knows where the bump landed.
-  warn "no #{per_volume.relative_path_from(ROOT_DIR)}; operating on " \
-       "#{(MONO_DIR / 'VERSION').relative_path_from(ROOT_DIR)} instead"
-  MONO_DIR / 'VERSION'
+  path = ROOT_DIR / dir / META_FILENAME
+  abort "no #{path.relative_path_from(ROOT_DIR)}" unless path.exist?
+  path
 end
 
-def parse_semver(str)
-  m = str.match(/\A(\d+)\.(\d+)\.(\d+)\z/) or abort "not semver: #{str.inspect}"
-  [m[1].to_i, m[2].to_i, m[3].to_i]
+def read_version(path)
+  meta = YAML.safe_load(path.read) || {}
+  [meta['major'] || 0, meta['minor'] || 0, meta['patch'] || 0]
 end
 
-def bump(semver, level)
-  major, minor, patch = semver
+def write_version(path, major, minor, patch)
+  text = path.read
+  text = text.sub(/^major:\s*\d+/, "major:       #{major}")
+  text = text.sub(/^minor:\s*\d+/, "minor:       #{minor}")
+  text = text.sub(/^patch:\s*\d+/, "patch:       #{patch}")
+  path.write(text)
+end
+
+def bump(version, level)
+  major, minor, patch = version
   case level
   when 'patch' then [major, minor, patch + 1]
   when 'minor' then [major, minor + 1, 0]
@@ -62,35 +60,29 @@ def bump(semver, level)
   end
 end
 
-# ── CLI ─────────────────────────────────────────────────────────────
+# ── CLI ─────────────────────────────────────────────────────────────────────
 
 args = ARGV.dup
-volume_id = nil
-# First arg might be a volume id; if so, shift it off
-if args.first && VOLUME_DIRS.key?(args.first.downcase)
-  volume_id = args.shift
-end
+abort 'usage: bin/output-version <volume> show|bump <patch|minor|major>' if args.empty?
+
+volume_id = args.shift
+path = meta_path_for(volume_id)
+current = read_version(path)
+current_str = current.join('.')
 
 cmd = args.shift || 'show'
 
-path    = version_path_for(volume_id)
-current = path.read.strip
-target  = "#{volume_id || 'monograph'}"
-
 case cmd
 when 'show'
-  puts current
+  puts current_str
 
 when 'bump'
   level = args.shift
-  abort 'usage: bin/output-version [volume] bump <patch|minor|major>' unless level
-
-  new_version = bump(parse_semver(current), level).join('.')
-  path.write("#{new_version}\n")
-  puts "#{target}: #{current} → #{new_version}"
+  abort 'usage: bin/output-version <volume> bump <patch|minor|major>' unless level
+  new_version = bump(current, level)
+  write_version(path, *new_version)
+  puts "#{volume_id}: #{current_str} → #{new_version.join('.')}"
 
 else
-  abort 'usage:' \
-        "  bin/output-version [volume] show\n" \
-        "  bin/output-version [volume] bump <patch|minor|major>"
+  abort 'usage: bin/output-version <volume> show|bump <patch|minor|major>'
 end

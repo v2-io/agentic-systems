@@ -25,6 +25,45 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+## 2026-05-11 / 2026-05-12
+
+### Monograph build pipeline: from zero to four-volume kaobook output
+
+Two intensive sessions building out a publication pipeline for the framework. Starting from no build infrastructure at all and ending with all four parts of the framework rendering as standalone PDFs in a Tufte-flavored typography on kaobook.
+
+**Cycle shape.** The work proceeded in three arcs: (1) get *anything* rendering — a minimal kaobook compile with our chosen typography (EB Garamond / Roboto Light / STIX Two Math); (2) get the *full corpus* rendering — a kramdown subclass that reads our segment cadence and produces the full ~600pp monograph as a single PDF; (3) refactor that single-PDF prototype into **four independent volumes** (AAD / TST / LogA / ELI) once the size and stability arguments for splitting became clear.
+
+**Key decisions that landed:**
+
+- **Four volumes, not one monograph.** The framework ships as `aad-v0.1.0.pdf` / `tst-v0.1.0.pdf` / `loga-v0.1.0.pdf` / `eli-v0.1.0.pdf` — separate PDFs from the same source corpus. Why volumes: 600+ pages is too big to digest; earlier volumes stabilize while later ones evolve; preprint archives prefer per-paper submission; faster builds during iteration; and the volume split lets us use **kaobook's native hierarchy** (Book → Part → Chapter → Section → Subsection → Subsubsection) instead of fighting it with a custom `\segment` counter.
+- **Tufte-flavored typography on kaobook.** Wide-margin layout, sidenotes for equation-level epistemic tags, italic-teal emphasis (`#5A787C`), olive monospace for inline slugs (`#6B7660` Fira Mono), navy cross-refs (`#1F3A6F`), per-type pastel tints in segment header strips (eight-color palette mapped across the 19 segment types). Mathematical core renders in STIX Two Math.
+- **`mono/` is output-only; `common/` is build infrastructure.** PDFs, markdowns, and `.build/` staging live in `mono/`. The LaTeX entrypoint, preamble fragments, Ruby renderer, and vendored kaobook live in `common/`. Build script (`bin/build-monograph`) is at the repo root.
+- **Per-volume metadata via `mono-meta.yaml`.** Each `0N-*/` carries `title` / `short_title` / `slug` / `major`/`minor`/`patch` / `outline` / `cover_svg`. The build script reads this; `bin/output-version <slug> bump patch|minor|major` reads and writes the version components directly.
+- **OUTLINE.md role-prefix convention.** Each H1/H2/H3 carries an italic role token: `# *Volume* AAD`, `## *Part* Adaptive Systems Under Uncertainty`, `### *Chapter* The Reality Model`, `## *Appendices* Details`. The walker validates the prefix against the level (Volume / Frontmatter / Part / Appendices / Preface / Chapter), with implicit-Chapter defaults for parts that haven't been chapterized yet. Source reads well; tooling reads cleanly.
+- **Native kaobook hierarchy.** `\part` / `\chapter` / `\section` / `\subsection` / `\subsubsection` — no custom counter machinery. Equations, tables, figures number per kaobook native. Cross-refs use cleveref.
+- **Cross-volume references** via `xr-hyper` (planned Phase 1d): each volume's `.aux` file is persisted (`<component>/<slug>.aux`) so sibling builds can read it for cross-PDF clickable links. Fallback to bibliography-style citation for standalone reading.
+- **Build-info stamp.** `\buildsemver` / `\buildsha` / `\builddate` macros injected via `build-info.tex` so the title page / colophon can render build provenance. Filename is semver-only; the sha lives inside the document (with `-dirty` suffix for working-tree-dirty builds).
+- **Cover SVG support.** `cover_svg: AAD-cover.svg` in `mono-meta.yaml` triggers `rsvg-convert` to render the SVG to PDF and `\includepdf` it as the volume's first page.
+- **Evergreen cross-references** as a discipline: cross-refs target intrinsic identity (slug for segments, named-tag token for equations), never positional numbers. The named-formula label extraction (`*[Type (name, from ...)]*` → `\label{atom:<name>}`) is queued for Phase 1c-tail work.
+
+**Active TODO** lives in [`FORMAT-TODO.md`](FORMAT-TODO.md) — six-phase plan covering ToC, volume split (now landed), native hierarchy (now landed), cross-volume refs, smart rebuild, FORMAT.md doc updates, OUTLINE chapter introduction for Parts II/III/IV, cross-ref hygiene sweep, and FORMAT-compliance linter sweep. The Progress Snapshot at the top of FORMAT-TODO tracks ✅ landed / 🚧 mid-flight / ⬜ not started.
+
+**Commits in this arc** (newest first):
+- Phase 1b — volume split, mono→common restructure, per-volume CLI, `.aux` retention
+- `b150a90` Plan refinements (mono/output-only, common/, major-minor-patch, positional CLI)
+- `082e6a9` Phase 1c tail (mono-meta.yaml, covers, build-info stamp, AAD outline reorg)
+- `d0ccf36` Walker fix: skip table header rows
+- `a24b3f2` Build pipeline → native kaobook hierarchy via walker roles
+- `1cbf4e1` Outline walker → role-prefix convention
+- `6e13b1b` Replan: four-volume split, kaobook-native hierarchy
+- `5460fa9` Plan v1: single-monograph (superseded)
+- `0128bdf` Cut TST Prior Work section → `_obs/`
+- `e15e2c7` Segment styling round 3 (per-type tints, eq+table numbering, wide sections, typographic register)
+- `0c02161` Segment styling round 2 (title weight, rule contrast, orphans, working-notes panel)
+- `d9718ec` Initial monograph build pipeline scaffold
+
+---
+
 ## 2026-05-10
 
 ### C4 terminology canonicalize batch landed: 58 FORMAT.md process-vocabulary entries + no-drift links

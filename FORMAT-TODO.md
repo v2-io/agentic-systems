@@ -255,30 +255,61 @@ Implementation:
 
 ---
 
-## Progress Snapshot (2026-05-12, mid-cycle)
+## Progress Snapshot (2026-05-12, end-of-day)
 
 **Landed (committed):**
-- ✅ Phase 1c (native kaobook hierarchy) — `outline_walker.rb` rewritten for role-prefix convention; build pipeline emits `\part`/`\chapter`/`\section` natively; custom `\segment` counter retired
-- ✅ Cover-page rendering via SVG → PDF (`rsvg-convert` integration in the build script)
-- ✅ `mono-meta.yaml` schema landed in each component dir (still reconciling field set)
-- ✅ `bin/output-version` semver utility (works on merged `mono/VERSION` currently; per-volume path queued for Phase 1d)
-- ✅ Build-info stamp (`build-info.tex` with `\buildsemver` / `\buildsha` / `\builddate`); dirty-tree detection; filename is semver-only
+- ✅ Phase 1b (volume split) — `bin/build-monograph <volume>` and `--all`; each volume builds to `mono/<slug>-v<M>.<m>.<p>.pdf`; per-volume `.aux` persisted to `<component>/<slug>.aux` for Phase 1d
+- ✅ Phase 1c (native kaobook hierarchy) — `outline_walker.rb` parses role-prefix convention; build pipeline emits `\part` / `\chapter` / `\section` natively; custom `\segment` counter retired
+- ✅ Directory restructure: `mono/` is output-only; `common/` holds main.tex / preamble / lib / vendor / kaobook
+- ✅ `mono-meta.yaml` schema landed (`title` / `short_title` / `slug` / `major`/`minor`/`patch` / `outline` / `cover_svg`)
+- ✅ `bin/output-version <slug> show|bump <patch|minor|major>` operates on `mono-meta.yaml` directly
+- ✅ Cover-page rendering (rsvg-convert) — AAD cover working; other volumes need covers authored
+- ✅ Build-info stamp (`\buildsemver` / `\buildsha` / `\builddate` / `\volumetitle` / `\volumeshorttitle` / `\volumeslug`); dirty-tree detection
 
-**Mid-flight (staged or unstaged):**
-- 🚧 AAD's `OUTLINE.md` reorganized into the role-prefix convention; Parts II/III/IV pending
-- 🚧 Cover page for AAD landed; covers for other volumes pending
-- 🚧 Build-info macros wired into `mono/main.tex` / preamble title page
+**Mid-flight:**
+- 🚧 AAD's `OUTLINE.md` reorganized into the role-prefix convention with chapters; Parts II/III/IV awaiting source-side reorganization (current implicit-Chapter default lets them build)
+- 🚧 Cover artwork: AAD done; TST / LogA / ELI pending
+- 🚧 Build-info macros declared but the title page that consumes them is minimal — proper title-page+copyright layout pending (Phase 6)
 
 **Not yet started:**
-- ⬜ Phase 1a — ToC
-- ⬜ Phase 1b — actual volume split (still rendering one merged PDF)
-- ⬜ Phase 1d — xr-hyper cross-volume refs, persisted `.aux` files, sibling-volume citations
+- ⬜ Phase 1a — ToC per volume
+- ⬜ Phase 1d — xr-hyper cross-volume refs, sibling-volume citations
 - ⬜ Phase 1e — smart-rebuild hash cache
-- ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep
-- ⬜ Phase 3 — chapter introduction across remaining components
-- ⬜ Phase 4 — cross-ref hygiene
+- ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep (vocabulary alignment)
+- ⬜ Phase 3 — chapter introduction across Parts II/III/IV of AAD + other components
+- ⬜ Phase 4 — cross-ref hygiene sweep
 - ⬜ Phase 5 — FORMAT-compliance linter sweep
-- ⬜ Phase 6 — backmatter, title-page typography, per-volume preface, etc.
+- ⬜ Phase 6 — table dynamic-shrinking, backmatter design, title-page typography, per-volume preface
+
+## Handoff Notes (for the next session)
+
+**Where to pick up:** the four-volume build is working. `bin/build-monograph aad` (or `01`/`tst`/`02`/etc.) builds one volume; `bin/build-monograph --all` builds all four. Outputs land in `mono/<slug>-v<M>.<m>.<p>.pdf` with persisted `.aux` in each `<component>/<slug>.aux`.
+
+**Suggested next phases in order:**
+
+1. **Phase 1a — Per-volume ToC.** Quick win; just adds `\tableofcontents` in `common/main.tex` after frontmatter. Decide depth (probably 3 — through Section). Adds a `toc: false` opt-out signal to `mono-meta.yaml`.
+2. **Phase 1d — xr-hyper cross-volume refs.** The `.aux` files are now persisted per volume; wire `xr-hyper` in `common/preamble/` so each volume's preamble registers its three siblings. Fallback citation form when sibling `.aux` is stale or missing.
+3. **Phase 1e — Smart rebuild.** Per-volume input-hash cache so `bin/build-monograph aad` skips when nothing AAD-relevant changed. Implementation candidate: hash over `<component>/src/**` + `<component>/OUTLINE.md` + `<component>/mono-meta.yaml` + `common/**` + sibling-`.aux` digests, cached at `mono/.build/<slug>/.input-hash`.
+4. **Phase 3 — Chapter introduction in OUTLINEs.** Parts II/III/IV of AAD already chapterized in source by Joseph (or in progress); same convention for TST / LogA / ELI components. The walker's implicit-Chapter default handles unchapterized parts gracefully meanwhile.
+
+**Known unfinished business:**
+
+- Title page is minimal — needs proper layout per the frontmatter sequence spec (Cover → Title+Copyright → ToC). The macros `\volumetitle` / `\buildsha` etc. are available; just no layout uses them yet.
+- Cover artwork for TST / LogA / ELI not authored.
+- Old AAD-specific tints in segment headers are mapped per-type and working; if FORMAT.md changes the 19-type list, the tint mapping (`common/preamble/environments.tex` `\setheadertint`) needs to stay in sync.
+- Table dynamic-shrinking: tables that overflow currently stay overflowing rather than auto-shrinking. Captured as a deferred Phase 6 item.
+
+**Files to know about:**
+
+- `common/main.tex` — LaTeX entrypoint template (per-volume)
+- `common/preamble/*.tex` — preamble fragments (setup / environments / status-badges / eq-tags)
+- `common/lib/segment_renderer.rb` — kramdown subclass for segment markdown → LaTeX
+- `common/lib/outline_walker.rb` — role-prefix-aware OUTLINE parser
+- `bin/build-monograph` — main build script
+- `bin/output-version` — per-volume semver utility (operates on `mono-meta.yaml`)
+- `FORMAT-TODO.md` — this file; the live plan
+- `<component>/mono-meta.yaml` — per-volume metadata (title, slug, version, cover)
+- `<component>/<slug>.aux` — persisted aux for Phase 1d xr-refs (committed)
 
 ## Status
 

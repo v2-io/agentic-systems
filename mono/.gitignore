@@ -1,10 +1,6 @@
-vendor/
 .build/
 *.prior.pdf
-# Build artifacts. Filename format is now semver-only (sha lives inside
-# the doc via build-info.tex); previously was `v<semver>+<sha>.pdf`.
-# Track a PDF only when it's a tagged release worth pinning.
-agentic-framework-v*.pdf
-agentic-framework-v*.md
+# All built artifacts. Filename format is `<short-title>-v<major>.<minor>.<patch>.{pdf,md}`.
+# Track a PDF or MD only when it's a tagged release worth pinning.
 *-v*.pdf
 *-v*.md
