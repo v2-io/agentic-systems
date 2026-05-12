@@ -1,0 +1,43 @@
+---
+slug: causal-access-intro
+type: discussion
+status: discussion-grade
+depends:
+  - def-value-object
+  - def-strategy-dimension
+stage: draft
+---
+
+# Chapter Introduction: Causal Access and the Planning Decision
+
+A purposeful agent needs to choose actions by their consequences. This chapter develops the substrate that makes that possible — the feedback loop is itself a Level-2 causal data engine — together with what the data is good for, how much information each action provides, and when it's worth investing in explicit strategy at all.
+
+The setup from Chapter 1 forces the question. The value object $Q_O(M_t, a; \pi_{\text{cont}}, N_h)$ tells the agent how good an action's expected consequences are, conditional on the agent's model and continuation policy. Computing $Q_O$ requires evaluating $P(o \mid do(a), M_t)$ — an interventional query, Pearl Level 2. By Bareinboim's causal hierarchy theorem (Bareinboim–Correa–Ibeling–Icard 2022), Level-2 quantities cannot in general be computed from Level-1 (associational) data alone. So a purposeful agent that has to *learn* its action consequences during operation — most agents — faces a problem: where does Level-2 data come from?
+
+The answer is structurally elegant, and one of AAD's distinctive contributions. The agent is running an adaptive cycle. It chooses an action $a_t$; it observes a consequence $o_{t+1}$; the consequence is the *response* to its action, not a passive observation of a system that happened to do something. By the temporal-ordering postulate, $a_t$ causally precedes $o_{t+1}$, and $a_t$ was selected by the agent rather than determined by the same processes that determined $o_{t+1}$. That makes the pair $(a_t, o_{t+1})$ interventional in character — Level-2 data, generated automatically by the cycle the agent was already running. Purposeful agents don't need a separate causal-inference module; the cycle they run for adaptation also produces the data they need for planning. It is also why reinforcement-learning agents that just thrash around in a loop can eventually learn complex control policies without any explicit causal reasoning module — the loop is doing the causal heavy lifting.
+
+The chapter is careful not to overclaim from this. Data generated under intervention is not the same as cleanly identified causal effects. Confounding within a single time step, delayed outcomes, partial observability, and selection bias from the agent's own policy all interfere with the leap from "I have interventional data" to "I have an unbiased estimate of $P(o \mid do(a))$." This is the tragedy of agency in a confounded world: an agent acts, observes a terrible outcome, assumes its action caused it — when often there was a hidden confounder (the agent was already tired, or the environment was already shifting) and the causal lesson the agent learned is exactly wrong. The three admissibility regimes — A (intervention-rich domains like software, with clean attribution), B (partial intervention with self-selection), C (observational with confounding) — say honestly what each regime supports. This is the same scope discipline AAD applies elsewhere: the result holds, but the conditions under which it operationally works are spelled out.
+
+The chapter also closes off a class of agents the rest of Section II is not about. Pre-compiled controllers — PID, LQR, hardcoded reactive policies — sit in agency scope (they act with effect) but outside the *learning-agent scope* this chapter introduces. Their causal mapping was supplied externally by a designer who had Level-2 access; the agent itself never has to figure out how its actions affect the world. A pre-compiled agent acts, but it never wonders. It experiences aporia about what state the world is in, never about how the world works. Section II's machinery is for agents that wonder.
+
+CIY (causal information yield) is the next move, and the chapter is honest about it too. CIY measures how distinguishable an action's outcome distribution is from alternatives — not quite the same thing as expected information gain. An action can be highly distinguishable without teaching an agent anything new (the agent already knows what each action does); an action can be informative without being distinguishable (the agent learns something subtle). CIY and EIG coincide when the agent is uncertain and diverge when it's confident; AAD uses CIY as a tractable surrogate for EIG, with the $\lambda(M_t)$ weighting compensating for the gap. The unified policy objective
+
+$$\pi^\ast(M_t) = \arg\max_a \big[\mathbb E[\text{value}(a) \mid M_t] + \lambda(M_t) \cdot \text{CIY}(a;\, M_t)\big]$$
+
+ties exploration and exploitation together: when model uncertainty is high, $\lambda$ scales up and the agent invests in learning; when uncertainty is low, $\lambda$ scales down and the agent exploits. This is what RL's exploration-vs-exploitation tradeoff looks like when you derive it from the causal hierarchy instead of asserting it as design.
+
+The chapter closes with a normative move: when is explicit strategy worth maintaining at all? Planning has costs (construct, evaluate, maintain) and benefits (avoid expensive exploration, lower repair costs from mistakes); the threshold form
+
+$$C_{\text{plan}} + C_{\text{maintain}} < C_{\text{explore}} + C_{\text{repair}}$$
+
+says when the trade favors plans over pure loop-based learning. This isn't a derivation — it's a design criterion grounded in the persistence condition's preference for adaptive margin. Agents that pay tempo for plans they don't need are wasting margin; agents that explore expensively for plans that would have helped are wasting it differently. The strategy machinery that follows in Chapter 3 is justified by this calculus, not assumed.
+
+The flow of the chapter: Bareinboim's hierarchy meets the value object ( #der-causal-hierarchy-requirement) → the loop as Level-2 engine ( #der-loop-interventional-access) → CIY admissibility regimes ( #scope-ciy-observational-proxy) → unified policy objective ( #disc-ciy-unified-objective) → explicit-strategy cost-benefit ( #norm-explicit-strategy-condition). Five segments answering: what does planning need, where does it come from, when is it usable, what objective does it feed, and is it worth it?
+
+## Working Notes
+
+- This is a chapter-introduction segment; it bridges Chapter 1's lift to $X_t = (M_t, G_t)$ to Chapter 3's formal strategy machinery, by establishing what planning needs and what data substrate is available. It carries no formal claim of its own.
+- The "loop as Level-2 engine" framing is the chapter's central architectural move and one of AAD's genuinely novel contributions. The intro states it explicitly rather than hiding it as a technical consequence.
+- The "tragedy of agency in a confounded world" framing comes from Gemini's first-encounter reaction to #der-loop-interventional-access — it captures the honest-scope nuance better than the original abstract phrasing.
+- The pre-compiled / learning-agent distinction is small in segment terms but architecturally large — it carves a class of classical-control agents out of Section II's active concerns. The "acts but never wonders" framing is meant to surface why the cut is meaningful rather than bureaucratic.
+- The CIY/EIG honesty is one of those moves that's easy to gloss over but actually matters: CIY is a tractable surrogate, not the quantity AAD would derive if it could; the surrogate's gap is explicit.
