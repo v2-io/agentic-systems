@@ -502,10 +502,24 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   end
 
   # Recursively collect text-node values from an element's subtree.
+  # Walk an element subtree and return its text content. Crucially,
+  # MATH and CODESPAN nodes carry their content in `.value` (not in
+  # children) and are otherwise invisible to a naive children-only
+  # walk. For the table column-width heuristics they must contribute —
+  # a cell that's just `$K_t = P_{t|t-1} H^T (...)^{-1}$` is wide and
+  # atomic, and the column has to accommodate it. Returning the source
+  # form with delimiters keeps the atomic-token regex in
+  # atomic_token_lengths able to recognize the math span as one unit.
   def collect_text(el)
-    return el.value.to_s if el.type == :text
-
-    el.children.map { |c| collect_text(c) }.join
+    case el.type
+    when :text       then el.value.to_s
+    when :math       then "$#{el.value}$"
+    when :codespan   then "`#{el.value}`"
+    when :smart_quote then el.value.to_s
+    else
+      return '' if el.children.nil?
+      el.children.map { |c| collect_text(c) }.join
+    end
   end
 
   # Text nodes — escape LaTeX specials AND rewrite cross-refs.
@@ -630,7 +644,31 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     aligns  = el.options[:alignment] || []
     weights = table_column_weights(el, aligns.size)
     cols    = aligns.each_with_index.map { |a, i| column_spec(a, weights[i]) }.join
-    table_w = table_width_choice(el, aligns.size)
+    # Vocabulary (Joseph 2026-05-12): a "narrow-area" is anywhere the
+    # Tufte-style wide right margin is in play — body text in plain
+    # sections sits in the narrower column with the margin column free
+    # to the right. A "wide-area" is anywhere the text already spans
+    # the full segment band, with both page margins equal — Discussion /
+    # Findings sections are wide-area via the \begin{segmentwidesection}
+    # wrapper.
+    #
+    # Width is always \linewidth — adapts naturally: in narrow-area
+    # \linewidth is the body column; in wide-area it's the full segment
+    # band (the surrounding tcolorbox sets it that way). Picking
+    # \segmentrulewidth explicitly per-table previously caused narrow-
+    # area tables to overshoot the page edge, so the per-table
+    # "extend into the margin" decision is currently OFF.
+    #
+    # TODO (total-width adaptation): narrow-area tables with content
+    # density above some threshold should escape to wide-area-width.
+    # Earlier heuristic regressed wide-area tables by re-applying the
+    # extension on top of an already-wide context, causing visible
+    # overflows. The fix is conditioning the heuristic on context —
+    # only narrow-area tables can opt in to wide-area-width — but the
+    # converter doesn't currently know its context at table-emission
+    # time. Adding that context (track @in_widesection here, just like
+    # in typeset.rb) is the unblock.
+    table_w = '\\linewidth'
     # Table body always renders one size smaller (\footnotesize) so wider
     # tables fit; the header row gets bumped back up to \small via
     # convert_thead so it stays readable.
@@ -675,49 +713,23 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     ">{\\hsize=#{format('%.3f', weight)}\\hsize#{align_cmd}\\arraybackslash}X"
   end
 
-  # Width threshold (in weighted characters of source-side cell content,
-  # summed over the per-column max) above which a table extends into the
-  # margin column via \segmentrulewidth instead of staying at \linewidth
-  # (body width in plain segment sections). Empirically tuned to put
-  # AAD's "Domain instantiations" table (sum ≈ 110) at body width and
-  # math-heavy or long-prose tables at the wider register. Watch the
-  # Overfull \hbox warnings in the build log to see whether the
-  # threshold is letting borderline tables overflow.
-  TABLE_WIDE_THRESHOLD_CHARS = 100
-
-  # Math expressions don't wrap — LaTeX renders them as atomic boxes,
-  # and when the cell is narrower than the math width, the math
-  # overflows past the column boundary visibly. So math content needs
-  # absolute horizontal width and should be weighted up when deciding
-  # whether a table is too dense for body width. The 1.6 multiplier is
-  # rough — math source `$\foo$` tends to be longer than rendered
-  # width (commands shorten to glyphs) but the no-wrap discipline
-  # means we still want to over-allocate width on math-heavy columns.
-  MATH_WIDTH_MULTIPLIER = 1.6
-
+  # Math expressions don't wrap. The collect_text fix makes math
+  # contribute to cell length at all (previously :math nodes were
+  # invisible to the column-share computation, so math-bearing cells
+  # counted as zero-length). atomic_token_lengths additionally treats
+  # each `$…$` span as one indivisible word for the floor calculation,
+  # so a math expression's column gets at least enough width to
+  # render the expression on one line without forced overflow.
+  #
+  # An earlier multiplier (1.6×) up-weighted math content beyond its
+  # source-length contribution to nudge math columns wider. In
+  # practice it caused runaway weights for long math expressions —
+  # squeezing label / status columns below their viable widths and
+  # forcing "De-/rived" style hyphenation. Multiplier reverted to 1.0
+  # so math counts the same as text per character; atomic-token floor
+  # alone handles the no-wrap discipline.
   def cell_visual_length(text)
-    base = text.length
-    math_chars = text.to_s.scan(/\$[^$]+\$/).sum { |m| m.length }
-    base + (math_chars * (MATH_WIDTH_MULTIPLIER - 1.0)).round
-  end
-
-  # Pick the LaTeX width macro for the tabularx environment based on
-  # the table's natural content width. \linewidth adapts to context
-  # (body column in plain sections; full segment band inside a
-  # \begin{segmentwidesection} for Discussion / Findings). The
-  # \segmentrulewidth override extends into the margin column when the
-  # table is content-dense enough that body width would crush it.
-  def table_width_choice(table_el, n_cols)
-    return '\\linewidth' if n_cols.zero?
-    per_column_max = Array.new(n_cols, 0)
-    collect_table_cells(table_el).each do |row|
-      row.each_with_index do |cell, i|
-        next if i >= n_cols
-        len = cell_visual_length(cell)
-        per_column_max[i] = len if len > per_column_max[i]
-      end
-    end
-    per_column_max.sum > TABLE_WIDE_THRESHOLD_CHARS ? '\\segmentrulewidth' : '\\linewidth'
+    text.to_s.length
   end
 
   # Approximate chars-per-table-row at body width / footnotesize. Used
@@ -747,7 +759,7 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
         text = cell_text.to_s.strip
         next if text.empty?
         per_column[idx][:lens] << cell_visual_length(text)
-        word_max = text.split(/\s+/).map { |w| cell_visual_length(w) }.max || 0
+        word_max = atomic_token_lengths(text).max || 0
         per_column[idx][:max_word] = word_max if word_max > per_column[idx][:max_word]
       end
     end
@@ -760,6 +772,54 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     floored = initial.zip(floors).map { |w, f| [w, f].max }
     sum     = floored.sum
     sum.zero? ? Array.new(n_cols, 1.0) : floored.map { |w| w / sum * n_cols }
+  end
+
+  # Atomic tokens for the word-floor calculation. Math spans (`$…$`) are
+  # ONE token because rendered math doesn't break at internal spaces —
+  # `$K_t = P_{t|t-1} H^T \cdot R^{-1}$` is a single horizontal box that
+  # has to fit on one line. Earlier word-floor logic split on every
+  # whitespace and saw the math as many short tokens, so the column got
+  # squeezed below the math's actual width and tabularx forced it to
+  # overflow. Inline-code spans (`` ` `` … `` ` ``) behave the same way
+  # — atomic at typesetting time — so they get the same treatment.
+  ATOMIC_TOKEN_PATTERNS = [
+    /\$[^$]+\$/,           # inline math
+    /`[^`]+`/,             # inline code
+  ].freeze
+
+  # Atomic tokens contribute less aggressively to the column floor
+  # than prose words: a math expression overflowing its column by a
+  # few characters is visually noticeable but recoverable; a prose
+  # word getting forced-hyphenated ("Sepa-/rated") is uglier and less
+  # repairable. The 0.6 scale lets math claim significant column
+  # share without dominating short-prose-companion columns into
+  # forced hyphenation. Tune by inspecting both math-heavy and
+  # short-label-heavy tables.
+  #
+  # TODO (column-proportionality refinement): math source length over-
+  # estimates rendered visual length because LaTeX commands like
+  # `\hat`, `\sum`, `\mathbb` are 4+ source chars that render as a
+  # single glyph. A more accurate visual-length estimator would count
+  # only backslash-led commands, dots, digits, and visible letters —
+  # not the bracing/scoping overhead. Sublinear weighting (sqrt of
+  # length) is also worth a pass: linear over-weights very long
+  # cells; sqrt would soften the long-tail influence without losing
+  # the qualitative "this column has more content" signal. Discuss
+  # before changing; column proportionality and total-width
+  # adaptation should evolve in separate cycles per Joseph's note.
+  ATOMIC_FLOOR_SCALE = 0.6
+
+  def atomic_token_lengths(text)
+    atomic = []
+    remainder = text.dup
+    ATOMIC_TOKEN_PATTERNS.each do |pat|
+      remainder.scan(pat) do |m|
+        atomic << (cell_visual_length(m) * ATOMIC_FLOOR_SCALE).round
+      end
+      remainder = remainder.gsub(pat, ' ')
+    end
+    word_lens = remainder.split(/\s+/).reject(&:empty?).map { |w| cell_visual_length(w) }
+    atomic + word_lens
   end
 
   # Walk a :table element and return an array of rows, each an array

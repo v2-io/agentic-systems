@@ -364,6 +364,7 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     role = role_marker(el)
     case role
     when 'Chapter'
+      @just_chaptered = true
       "#{close_open_wrappers(current_level: 3)}\\chapter{#{heading_title_after_role(el, opts)}}\n\n"
     when 'Preface'
       close_open_wrappers(current_level: 3)   # part-level preface — prose flows after
