@@ -70,6 +70,57 @@
   \nopagebreak[4]%
 }
 
+% Custom override of the kao chapter style. Adds "Chapter" / "Appendix"
+% small italic word above the scaled chapter number/letter, drops the
+% trailing \autodot. Must be called AFTER \setchapterstyle{kao} since
+% kao's \chapterstylekao \renewcommands \chapterformat itself — our
+% override has to land after kao's reset.
+%
+% KOMA-Script's \appendix swaps \@chapapp from \chaptername to
+% \appendixname (the localized "Chapter" / "Appendix" pair). Reading
+% \@chapapp at chapter-rendering time picks up the current value — so
+% appendix chapters render "Appendix" automatically without needing a
+% separate appendix-format path. \chaptername alone DOESN'T flip;
+% that's why an earlier attempt put "Chapter" everywhere.
+%
+% Wrapped in \makeatletter / \makeatother because @ isn't a letter at
+% body-time when \asfChapterFormat is called; defining the macro under
+% letter-catcode captures \@chapapp as a known control sequence so
+% expansion later doesn't care what @'s catcode is.
+%
+% The tabular bottom-alignment places the scaled number row at the
+% baseline of the parbox chapterlinesformat wraps us in, so the small
+% word sits visually above the big glyph without disturbing the kao
+% layout's vertical-rule alignment.
+\makeatletter
+\NewDocumentCommand{\asfChapterFormat}{}{%
+  \renewcommand*{\chapterformat}{%
+    \mbox{\begin{tabular}[b]{@{}l@{}}%
+      {\sffamily\itshape\fontsize{11pt}{13pt}\selectfont\@chapapp}\\[1pt]%
+      {\scalebox{2.85}{\thechapter}}%
+    \end{tabular}}%
+  }%
+}
+\makeatother
+
+% Working-notes-internal subhead. Same visual register as \segmentsubhead
+% but sized to \linewidth (the workingnotes tcolorbox's content area)
+% instead of \segmentrulewidth (body + margin column). Without this
+% fallback the segment-level makebox extends past the right edge of the
+% workingnotes box, since the box has 12pt left/right padding that
+% \segmentrulewidth doesn't account for. Slightly smaller font matches
+% the workingnotes body register (which is \small).
+\NewDocumentCommand{\workingnotessubhead}{m}{%
+  \needspace{3\baselineskip}%
+  \par\medskip%
+  \noindent\textcolor{rule-gray}{\rule{\linewidth}{0.3pt}}\par%
+  \nobreak\nointerlineskip%
+  \vskip-0.4\baselineskip%
+  \noindent\makebox[\linewidth][r]{\sffamily\bfseries\small #1}\par%
+  \nobreak\smallskip%
+  \nopagebreak[4]%
+}
+
 % Width that spans body + margin gutter + margin column. kaobook's body
 % column is \textwidth and the margin column sits to its right with
 % \marginparsep gap and \marginparwidth width. We compute the union so

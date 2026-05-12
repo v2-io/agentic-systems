@@ -123,6 +123,21 @@ module Mono
       idx ? "#{text[0...idx].rstrip}\n" : text
     end
 
+    # Drop H2 sections that have no body content between their heading
+    # line and the next H2-or-shallower header. Common case: many
+    # appendix segments leave `## Formal Expression` empty because the
+    # whole appendix body IS a derivation; the empty subhead reads as
+    # visual noise. Multi-pass via the gsub loop so consecutive empty
+    # H2s all go in one call.
+    EMPTY_H2_RE = /^\#{2}[ \t]+[^\n]*\n+(?=\#{1,2}[ \t]|\Z)/
+    def drop_empty_h2_sections(text)
+      loop do
+        new_text = text.gsub(EMPTY_H2_RE, '')
+        return new_text if new_text == text
+        text = new_text
+      end
+    end
+
     # Rewrite file-path links to internal anchor links where the path
     # resolves to a known slug. `[label](path/to/foo.md)` becomes
     # `[label](#foo)` when `foo` is a known slug in the volume.
@@ -379,6 +394,7 @@ module Mono
         source = path.read
         body = Mono::Ingest.strip_yaml_frontmatter(source)
         body = Mono::Ingest.strip_working_notes(body) if @variant == :public
+        body = Mono::Ingest.drop_empty_h2_sections(body)
 
         # Header bumping: segment's authored H1 → H4 (main-matter section) or
         # H3 (appendix chapter). Subheadings follow proportionally.

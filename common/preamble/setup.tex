@@ -82,6 +82,22 @@
 \usepackage{microtype}
 
 %----------------------------------------------------------------------------
+% Widow / orphan suppression.
+%
+% Widow = last line of a paragraph stranded at the top of the next page
+% Orphan (LaTeX "club") = first line of a paragraph stranded at the bottom
+% of the previous page
+%
+% Penalty 10000 effectively forbids LaTeX from breaking there. The cost
+% is occasional extra whitespace at page bottoms when LaTeX has to pull
+% an orphan down or push a widow forward; we accept that for cleaner
+% paragraph integrity. Single-sentence stragglers at the top of a fresh
+% page read as broken; the whitespace trade-off is the right one.
+%----------------------------------------------------------------------------
+\widowpenalty=10000
+\clubpenalty=10000
+
+%----------------------------------------------------------------------------
 % String predicates — used by segment-environment and status-badge logic.
 %----------------------------------------------------------------------------
 \usepackage{xstring}

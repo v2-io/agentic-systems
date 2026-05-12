@@ -240,18 +240,49 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     prefix
   end
 
+  # Dispatch a segment-internal subhead by level *relative to the
+  # segment header*. The segment header's authored H1 maps to "level
+  # 0" in the segment's internal hierarchy; H2s (Formal Expression,
+  # Epistemic Status, Discussion, Findings, Working Notes) → relative
+  # 1; H3s (named sub-discussions inside a section like "Strong
+  # Monotonicity as the Hinge…") → relative 2; H4+ → relative 3.
+  #
+  # This mirrors the legacy segment_renderer (per-segment :segment
+  # mode) which dispatched: H2 → \segmentsubhead, H3 → bold inline
+  # leader, H4+ → italic inline leader. Before this fix, the typeset
+  # path was emitting \segmentsubhead for every segment-internal
+  # header level, causing long H3 leaders to render as full-width
+  # right-aligned labels that overflowed the page.
   def handle_subhead_with_state(title, level: 5)
-    prefix = close_open_wrappers(current_level: level)
-    if title == 'Working Notes'
-      @in_working_notes = true
-      @workingnotes_level = level
-      "#{prefix}\\begin{workingnotes}\n"
-    elsif WIDE_SECTION_TITLES.include?(title)
-      @in_widesection = true
-      @widesection_level = level
-      "#{prefix}\\segmentsubhead{#{title}}\n\n\\begin{segmentwidesection}\n"
+    prefix    = close_open_wrappers(current_level: level)
+    relative  = @current_segment_header_level ? (level - @current_segment_header_level) : 1
+    case relative
+    when 1
+      # Segment-source H2 — subhead, with optional wide-section /
+      # workingnotes wrappers.
+      if title == 'Working Notes'
+        @in_working_notes  = true
+        @workingnotes_level = level
+        "#{prefix}\\begin{workingnotes}\n"
+      elsif WIDE_SECTION_TITLES.include?(title)
+        @in_widesection    = true
+        @widesection_level = level
+        "#{prefix}\\segmentsubhead{#{title}}\n\n\\begin{segmentwidesection}\n"
+      elsif @in_working_notes
+        "#{prefix}\\workingnotessubhead{#{title}}\n\n"
+      else
+        "#{prefix}\\segmentsubhead{#{title}}\n\n"
+      end
+    when 2
+      # Segment-source H3 — bold inline leader. Reads as the start of
+      # a paragraph, not a section break. Same orphan discipline as
+      # the H2 subhead but less greedy on reserved vertical space.
+      "#{prefix}\\needspace{3\\baselineskip}" \
+        "\\par\\medskip\\noindent\\textbf{#{title}.}\\quad "
     else
-      "#{prefix}\\segmentsubhead{#{title}}\n\n"
+      # Segment-source H4+ — italic inline leader. Even quieter than
+      # the H3 leader; same paragraph-start treatment.
+      "#{prefix}\\par\\noindent\\textit{#{title}.}\\quad "
     end
   end
 
@@ -316,10 +347,15 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
   # main.tex; the first \part or first \appendices group flips us into
   # \mainmatter. After this, subsequent parts/appendices don't repeat
   # the switch.
+  #
+  # \asfChapterFormat customizes the kao chapter glyph (small italic
+  # "Chapter"/"Appendix" word above the scaled number, no autodot) and
+  # has to be emitted AFTER \setchapterstyle{kao} because kao's style
+  # command overwrites \chapterformat itself.
   def mainmatter_marker
     return '' if @mainmatter_emitted
     @mainmatter_emitted = true
-    "\\mainmatter\n\\setchapterstyle{kao}\n\n"
+    "\\mainmatter\n\\setchapterstyle{kao}\n\\asfChapterFormat\n\n"
   end
 
   # ── H3 dispatch ─────────────────────────────────────────────────────
@@ -376,6 +412,10 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     # we're entering a fresh segment, anything from the previous one
     # must terminate.
     prefix = close_open_wrappers
+    # Track the segment-header's absolute level so handle_subhead_with_state
+    # can compute the segment-relative depth (subheads = +1, sub-subheads
+    # = +2, etc.) and dispatch to the right LaTeX subhead form.
+    @current_segment_header_level = (level == :appendix ? 3 : 4)
     # type_label / clean_title are already-rendered LaTeX (from kramdown's
     # inner(el, opts) for the title; from el.attr for the metadata block).
     # Don't double-escape — pass through verbatim.

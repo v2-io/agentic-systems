@@ -578,6 +578,30 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   # Columns become `X` (equal-share wrapping), alignment-aware via the
   # array-package column-modifier prefix.
   #
+  # TODO: dynamic column widths. Right now every X column gets equal
+  # width via tabularx's default distribution, which wastes space when
+  # one column has long prose and the others are short labels (e.g., the
+  # "Channel k / Rate / Noise" pattern: short label / medium descriptor /
+  # short noise level). Proposed direction — measure each column's max
+  # content length (in chars, weighted by header vs body), normalize to
+  # weights summing to N (the column count), and emit weighted columns
+  # via tabularx's \hsize trick:
+  #
+  #   \newcolumntype{R}[1]{>{\hsize=#1\hsize\raggedright\arraybackslash}X}
+  #   \begin{tabularx}{...}{R{0.4}R{1.2}R{1.4}} ...
+  #
+  # The renderer scans el.children for the header row + body rows,
+  # computes per-column max content (collect_text length plus padding
+  # for math/code), normalizes against the table's column count, and
+  # emits the weighted spec. Headers and short fixed-vocabulary cells
+  # (single words, numbers) get extra weight floor so a single-word
+  # column stays its natural width rather than being squeezed by long
+  # prose elsewhere. Worth slowing down on this — touches every table
+  # in the corpus, getting it wrong is visible everywhere. Discuss
+  # with Joseph before implementing; the measurement heuristic in
+  # particular is taste-driven (when does long-but-uniform content
+  # earn a fixed-width treatment, when does it earn extra wrap room).
+  #
   # Width is \segmentrulewidth (body + margin gutter + margin), matching
   # the segment header rules and the Working Notes box so tables read as
   # full-width artifacts. (The earlier xltabular attempt at this width
