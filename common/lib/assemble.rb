@@ -179,7 +179,12 @@ module Mono
     def render_missing(entry)
       level = entry['container'] == 'appendix-chapter' ? 3 : 4
       anchor = entry['slug'] ? %(<a id="#{entry['slug']}"></a>\n\n) : ''
-      heading = "#{'#' * level} #{entry['type']}: #{entry['claim'].to_s.empty? ? entry['slug'] : entry['claim']} *(missing)*"
+      # Use the slug (stable, short) in the heading rather than the claim
+      # text — claim columns in OUTLINE.md are often paragraph-length and
+      # would (a) spill into the ToC unreadably, (b) carry markdown
+      # constructs that mangle the LaTeX `\missingsegment` macro arg.
+      # Full claim text appears in the body marker below.
+      heading = "#{'#' * level} #{entry['type']}: `##{entry['slug']}` *(missing)*"
       metadata = [
         "**Slug**: `#{entry['slug']}`",
         "**Type**: #{entry['type']}",
@@ -187,7 +192,9 @@ module Mono
         "**Container**: #{entry['container']}",
         '**Status**: missing',
       ]
-      stub = "*Segment `#{entry['slug']}` not yet written.*"
+      stub  = "*Segment `#{entry['slug']}` not yet written.*"
+      claim = entry['claim'].to_s.strip
+      stub += "\n\n*Claim:* #{claim}" unless claim.empty?
       "#{anchor}#{heading}\n\n#{metadata.join("\n")}\n\n#{stub}\n"
     end
 

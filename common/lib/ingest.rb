@@ -376,6 +376,12 @@ module Mono
         bump_offset = container == 'appendix-chapter' ? 2 : 3
         body = Mono::Ingest.bump_headers(body, bump_offset)
         body = Mono::Ingest.rewrite_local_links(body, @known_slugs)
+        # Inside-math pipe substitution — `|` and `\|` become `\vert` /
+        # `\Vert` so kramdown's table parser doesn't carve a math
+        # expression like `$\lVert x \rVert = |y| \cdot |z|$` into
+        # spurious table columns when the chunk is later processed in
+        # the assembled-markdown context.
+        body = Mono::SegmentRenderer.preprocess_math_pipes(body)
 
         # Pull title out of the (bumped) first heading so the chunk's
         # metadata block can sit right under it. The kramdown converter

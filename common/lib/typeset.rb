@@ -148,9 +148,12 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
   TYPE_LABEL_REVERSE = Mono::SegmentRenderer.const_defined?(:TYPE_LABEL) ? Mono::SegmentRenderer::TYPE_LABEL.invert : {}
 
   def convert_root(el, opts)
-    # No segment chrome at root (no segment_open / segment_close).
+    # No segment chrome at root (no segment_open / segment_close). But any
+    # wrappers (epigraph / widesection / workingnotes) that the last
+    # segment left open need to close at end-of-document so the LaTeX is
+    # well-formed.
     body = inner(el, opts)
-    body += flush_pending_eqtag
+    body += close_open_wrappers
     body
   end
 
@@ -172,8 +175,68 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     when 1 then ''                                # suppress volume title
     when 2 then handle_h2(el, opts)
     when 3 then handle_h3(el, opts)
-    when 4 then handle_h4_segment(el, opts)
-    else        handle_subhead(inner(el, opts).strip)
+    when 4 then handle_h4(el, opts)
+    else        handle_subhead_with_state(inner(el, opts).strip, level: level)
+    end
+  end
+
+  # ── Segment-internal state machine (epigraph / widesection / workingnotes) ──
+  #
+  # Segment-internal subheads come from a segment's authored H2:
+  #   - "Formal Expression", "Epistemic Status" → regular subhead
+  #   - "Discussion", "Findings" → subhead + full-width wrapper
+  #   - "Working Notes" → opens the workingnotes env (review variant only;
+  #     :public ingest strips Working Notes upstream)
+  #
+  # In the assembled markdown the segment's authored H2 lands at H5
+  # (main-matter) or H4 (appendix). When we cross any of these
+  # subheads, OR a new segment header, OR a structural H2/H3, we
+  # close any wrappers still open from the previous segment's section.
+  # The first paragraph after a segment header opens a segmentepigraph
+  # (the summary block); the first subhead inside the segment closes it.
+
+  # Close any open wrappers whose level-of-origin is at or shallower than
+  # `current_level`. A nil current_level (end of document, or a brand-new
+  # segment header) closes every open wrapper unconditionally.
+  #
+  # The level discipline mirrors the segment-mode parent's `level <= 2`
+  # guard: a wrapper opened by a section-grade subhead (H5 main-matter,
+  # H4 appendix) survives nested H6/H5 subheads inside it. Working Notes
+  # in particular has H3 children (Open question / Strengthening attempt
+  # / …) that get bumped to H6 in main-matter context; those must not
+  # close the workingnotes wrapper.
+  def close_open_wrappers(current_level: nil)
+    prefix = +''
+    prefix << flush_pending_eqtag
+    if @in_epigraph
+      # Epigraph always closes on any new header — it's strictly the
+      # "summary right after the segment header" zone.
+      prefix << "\\end{segmentepigraph}\n\n"
+      @in_epigraph = false
+    end
+    if @in_widesection && (current_level.nil? || current_level <= @widesection_level)
+      prefix << "\\end{segmentwidesection}\n\n"
+      @in_widesection = false
+    end
+    if @in_working_notes && (current_level.nil? || current_level <= @workingnotes_level)
+      prefix << "\\end{workingnotes}\n\n"
+      @in_working_notes = false
+    end
+    prefix
+  end
+
+  def handle_subhead_with_state(title, level: 5)
+    prefix = close_open_wrappers(current_level: level)
+    if title == 'Working Notes'
+      @in_working_notes = true
+      @workingnotes_level = level
+      "#{prefix}\\begin{workingnotes}\n"
+    elsif WIDE_SECTION_TITLES.include?(title)
+      @in_widesection = true
+      @widesection_level = level
+      "#{prefix}\\segmentsubhead{#{title}}\n\n\\begin{segmentwidesection}\n"
+    else
+      "#{prefix}\\segmentsubhead{#{title}}\n\n"
     end
   end
 
@@ -208,12 +271,13 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
 
   def handle_h2(el, opts)
     role = role_marker(el)
+    prefix = close_open_wrappers(current_level: 2)
     case role
     when 'Preface'
       info = heading_title_after_role(el, opts)
-      info.empty? ? "\\addchap{Preface}\n\n" : "\\addchap{#{info}}\n\n"
+      "#{prefix}" + (info.empty? ? "\\addchap{Preface}\n\n" : "\\addchap{#{info}}\n\n")
     when 'Appendices'
-      out = +''
+      out = +prefix
       out << mainmatter_marker
       unless @appendix_emitted
         out << "\\appendix\n"
@@ -224,11 +288,10 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
       out << "\\part{Appendices: #{heading_title_after_role(el, opts)}}\n\n"
       out
     when 'Part'
-      "#{mainmatter_marker}\\part{#{heading_title_after_role(el, opts)}}\n\n"
+      "#{prefix}#{mainmatter_marker}\\part{#{heading_title_after_role(el, opts)}}\n\n"
     else
-      # No role marker — render as regular section subhead. (Shouldn't
-      # happen in a well-formed assembled markdown but we tolerate it.)
-      handle_subhead(inner(el, opts).strip)
+      # No role marker — defensive fallback
+      "#{prefix}\\segmentsubhead{#{inner(el, opts).strip}}\n\n"
     end
   end
 
@@ -250,58 +313,62 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     role = role_marker(el)
     case role
     when 'Chapter'
-      "\\chapter{#{heading_title_after_role(el, opts)}}\n\n"
+      "#{close_open_wrappers(current_level: 3)}\\chapter{#{heading_title_after_role(el, opts)}}\n\n"
     when 'Preface'
-      ''  # part-level preface marker — prose flows after
+      close_open_wrappers(current_level: 3)   # part-level preface — prose flows after
     else
-      # No role marker; might be an appendix-segment header
+      # No role marker; might be an appendix-segment header (with .segment
+      # IAL) — in-part appendix segments are H3 because they're chapter-
+      # level entities.
       if el.attr['class']&.include?('segment')
-        title = inner(el, opts).strip
-        emit_segment_header(el, title, level: :appendix)
+        emit_segment_header(el, opts, level: :appendix)
       else
-        handle_subhead(inner(el, opts).strip)
+        handle_subhead_with_state(inner(el, opts).strip, level: 3)
       end
     end
   end
 
   # ── H4 dispatch ─────────────────────────────────────────────────────
 
-  def handle_h4_segment(el, opts)
-    title = inner(el, opts).strip
+  # H4 can be EITHER an in-part segment header (with .segment IAL) OR a
+  # subhead within an appendix segment (whose H1 was bumped to H3, so
+  # the segment's authored H2 lands at H4). Disambiguate by IAL.
+  def handle_h4(el, opts)
     if el.attr['class']&.include?('segment')
-      emit_segment_header(el, title, level: :section)
+      emit_segment_header(el, opts, level: :section)
     else
-      handle_subhead(title)
+      handle_subhead_with_state(inner(el, opts).strip, level: 4)
     end
   end
 
-  def emit_segment_header(el, title, level:)
+  # Emit the segment-header LaTeX + open the segmentepigraph for the
+  # summary paragraph that follows. Closes any open wrappers from the
+  # previous segment first.
+  def emit_segment_header(el, opts, level:)
     a = el.attr
     type_label = a['type'].to_s
     slug   = a['slug'].to_s
     status = a['status'].to_s
     stage  = @variant == :review ? a['stage'].to_s : ''
+    title  = inner(el, opts).strip
 
     # Strip the redundant "Type: " prefix from the heading text — \segmenthead
     # already renders the type-label as part of its chrome.
     clean_title = title.sub(/\A#{Regexp.escape(type_label)}:\s*/, '')
 
     macro = level == :appendix ? 'segmentappendixchapter' : 'segmenthead'
-    out = +"\\#{macro}{#{escape_arg(type_label)}}{#{escape_arg(clean_title)}}{#{status}}{#{stage}}\n"
+    # New segment header closes ALL open wrappers regardless of level —
+    # we're entering a fresh segment, anything from the previous one
+    # must terminate.
+    prefix = close_open_wrappers
+    # type_label / clean_title are already-rendered LaTeX (from kramdown's
+    # inner(el, opts) for the title; from el.attr for the metadata block).
+    # Don't double-escape — pass through verbatim.
+    out = +"#{prefix}\\#{macro}{#{type_label}}{#{clean_title}}{#{status}}{#{stage}}\n"
     out << "\\label{seg:#{slug}}\n" unless slug.empty?
-    out << "\n"
+    out << "\\begin{segmentepigraph}\n"
+    @in_epigraph = true
     out
-  end
-
-  # ── Subhead (segment-internal H5 / H4 / etc.) ───────────────────────
-
-  def handle_subhead(title)
-    if WIDE_SECTION_TITLES.include?(title)
-      @in_widesection = true
-      "\\segmentsubhead{#{title}}\n\n\\begin{segmentwidesection}\n"
-    else
-      "\\segmentsubhead{#{title}}\n\n"
-    end
   end
 
   # ── Role-prefix extraction ──────────────────────────────────────────
