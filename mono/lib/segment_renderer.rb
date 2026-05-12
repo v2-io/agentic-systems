@@ -507,7 +507,9 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   def convert_table(el, opts)
     aligns = el.options[:alignment] || []
     cols   = aligns.map { |a| column_spec(a) }.join
-    shrink = aligns.size >= 4 ? "\\small\n" : ''
+    # Table body always renders one size smaller (\footnotesize) so wider
+    # tables fit; the header row gets bumped back up to \small via
+    # convert_thead so it stays readable.
     @table_count += 1
     caption_text = (el.attr['caption'] || el.attr['data-caption'] || '').to_s
     caption_arg  = caption_text.empty? ? '{}' : "{#{process_prose(caption_text)}}"
@@ -521,7 +523,7 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
       "\\needspace{8\\baselineskip}\n" \
       "\\begingroup\n" \
       "\\renewcommand{\\arraystretch}{1.25}%\n" \
-      "#{shrink}" \
+      "\\footnotesize\n" \
       "\\captionof{table}#{caption_arg}#{label}\\par\\smallskip\n" \
       "\\nopagebreak[4]\n" \
       "\\begin{tabularx}{\\segmentrulewidth}{#{cols}}\n" \
@@ -545,12 +547,14 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
 
   # Italic header row — the Tufte register for column labels. We render
   # each header cell with \emph rather than wrapping the whole row, so
-  # cell-level math/markup inside headers still parses normally.
+  # cell-level math/markup inside headers still parses normally. Each
+  # cell is also bumped one size up (\small) from the table-default
+  # \footnotesize, so headers stay readable while body content shrinks.
   def convert_thead(el, opts)
     rows = el.children.map do |tr|
       next unless tr.type == :tr
 
-      cells = tr.children.map { |td| "\\emph{#{inner(td, opts).strip}}" }
+      cells = tr.children.map { |td| "{\\small\\emph{#{inner(td, opts).strip}}}" }
       "#{cells.join(' & ')} \\\\\n"
     end.compact
     "#{rows.join}\\midrule\n"
@@ -623,9 +627,14 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     str.gsub(ESCAPE_RE, ESCAPE_MAP)
   end
 
-  # Equation tag content (between brackets) gets the same escape, with `#`
-  # escaped explicitly since we don't need to find cross-refs inside it.
+  # Equation tag content gets per-segment escape, with `$...$` math spans
+  # preserved verbatim — escape_text's underscore-rewrite would otherwise
+  # turn `$M_t$` into `$M\_t$` and break the subscript. `#` outside math
+  # is escaped (we don't look for cross-refs inside eq-tag content).
   def escape_eq_tag(str)
-    escape_text(str).gsub('#', '\\#')
+    parts = str.split(/(\$[^$\n]+?\$)/)
+    parts.map.with_index do |part, idx|
+      idx.odd? ? part : escape_text(part).gsub('#', '\\#')
+    end.join
   end
 end

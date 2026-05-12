@@ -19,6 +19,7 @@
 require 'fileutils'
 require 'pathname'
 require 'open3'
+require 'yaml'
 
 ROOT_DIR     = Pathname.new(__dir__).parent.expand_path
 MONO_DIR     = ROOT_DIR / 'mono'
@@ -30,6 +31,47 @@ VERSION_FILE = MONO_DIR / 'VERSION'
 $LOAD_PATH.unshift(LIB_DIR.to_s)
 require 'segment_renderer'
 require 'outline_walker'
+
+# Per-component metadata file. Each component dir may carry one of these
+# to declare title / cover / outline-entrypoint / etc. Falls back to the
+# COMPONENTS[] hardcoded defaults when absent.
+META_FILENAME = 'mono-meta.yaml'
+
+def load_component_meta(comp_dir)
+  path = comp_dir / META_FILENAME
+  return {} unless path.exist?
+
+  YAML.safe_load(path.read) || {}
+rescue StandardError => e
+  warn "warn: failed to load #{path.relative_path_from(ROOT_DIR)}: #{e.message}"
+  {}
+end
+
+# Render a component's cover SVG to a PDF in the build stage. Returns the
+# stage-relative path to the generated PDF, or nil if no cover is
+# configured / the conversion failed.
+def stage_cover_pdf(comp_dir, comp_id, meta, stage)
+  cover_rel = meta['cover_svg']
+  return nil unless cover_rel
+
+  src = comp_dir / cover_rel
+  unless src.exist?
+    warn "warn: cover SVG not found for #{comp_id}: #{src.relative_path_from(ROOT_DIR)}"
+    return nil
+  end
+
+  covers_dir = stage / 'covers'
+  FileUtils.mkdir_p(covers_dir)
+  dst = covers_dir / "#{comp_id}-cover.pdf"
+
+  _out, status = Open3.capture2('rsvg-convert', '-f', 'pdf', '-o', dst.to_s, src.to_s)
+  unless status.success?
+    warn "warn: rsvg-convert failed for #{src}"
+    return nil
+  end
+
+  "covers/#{comp_id}-cover.pdf"
+end
 
 # Components ordered as Parts I–IV of the monograph. Each contributes its
 # own OUTLINE.md, which the walker resolves to an ordered manifest of
@@ -53,23 +95,41 @@ def short_sha
   out.strip
 end
 
-# Returns true when HEAD is exactly tagged 'v<semver>'. In that case the
-# release artifact carries no +sha suffix — it *is* the release.
-def head_at_release_tag?(semver)
-  tag = "v#{semver}"
-  _out, _err, status = Open3.capture3('git', '-C', ROOT_DIR.to_s,
-                                      'describe', '--exact-match', '--tags',
-                                      '--match', tag, 'HEAD')
-  status.success?
+# Returns true when the working tree is dirty (uncommitted changes).
+# Used to mark the sha as `<sha>-dirty` in the build-info stamp.
+def working_tree_dirty?
+  out, status = Open3.capture2('git', '-C', ROOT_DIR.to_s, 'status', '--porcelain')
+  return false unless status.success?
+
+  !out.strip.empty?
 end
 
+def semver_stamp
+  VERSION_FILE.read.strip
+end
+
+# Build stem is always semver-only (no +<sha>). Each build overwrites
+# the same filename; the previous build is snapshotted as .prior.pdf.
+# The sha is shown inside the document (frontmatter / colophon) via the
+# build-info stamp written into the stage at compile time.
 def build_stem
-  semver = VERSION_FILE.read.strip
-  if head_at_release_tag?(semver)
-    "agentic-framework-v#{semver}"
-  else
-    "agentic-framework-v#{semver}+#{short_sha}"
-  end
+  "agentic-framework-v#{semver_stamp}"
+end
+
+# Write a build-info.tex into the stage that the preamble can \input to
+# expose \buildsemver / \buildsha / \builddate macros for the title
+# page and colophon. Sha carries `-dirty` when the working tree has
+# uncommitted changes.
+def write_build_info(stage)
+  sha = short_sha
+  sha = "#{sha}-dirty" if working_tree_dirty?
+  date = Time.now.utc.strftime('%Y-%m-%d')
+  semver = semver_stamp
+  (stage / 'build-info.tex').write(<<~TEX)
+    \\newcommand{\\buildsemver}{#{semver}}
+    \\newcommand{\\buildsha}{#{sha}}
+    \\newcommand{\\builddate}{#{date}}
+  TEX
 end
 
 # ── Build steps ─────────────────────────────────────────────────────────────
@@ -137,16 +197,29 @@ def assemble_body(stage, variant:)
   appendix_active = false # tracks \appendix-mode globally across components
 
   COMPONENTS.each do |comp|
-    outline = ROOT_DIR / comp[:dir] / 'OUTLINE.md'
+    comp_dir = ROOT_DIR / comp[:dir]
+    meta     = load_component_meta(comp_dir)
+    outline_rel = meta['outline'] || 'OUTLINE.md'
+    outline  = comp_dir / outline_rel
     unless outline.exist?
       warn "skip: #{outline} not found"
       next
     end
 
+    # Cover page (if configured) — generated from SVG via rsvg-convert,
+    # placed before the component-wrapping \part so it reads as the
+    # component's frontispiece.
+    cover_pdf_rel = stage_cover_pdf(comp_dir, comp[:dir], meta, stage)
+    if cover_pdf_rel
+      body << ''
+      body << "\\includepdf[pages=1,fitpaper=true]{#{cover_pdf_rel}}"
+      body << ''
+    end
+
     # Component wrapper — temporary outer \part until volume split lands.
     body << ''
     body << "\\pagelayout{wide}"
-    body << "\\addpart{#{escape_latex(comp[:title])}}"
+    body << "\\addpart{#{escape_latex(meta['title'] || comp[:title])}}"
     body << "\\pagelayout{margin}"
     body << ''
 
@@ -339,6 +412,7 @@ def main
   patch_kao_sty
   stem  = build_stem
   stage = stage_sources(stem)
+  write_build_info(stage)
   warn "Assembling body (variant: #{VARIANT})..."
   stats = assemble_body(stage, variant: VARIANT)
   warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \

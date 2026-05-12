@@ -1,0 +1,16 @@
+# mono-meta.yaml — per-component metadata for the monograph build.
+#
+# Schema (loose; extend as needs surface):
+#   title       — full display title for the volume
+#   short_title — short tag used in running heads, references, filenames
+#   outline     — entrypoint outline file (relative to this directory);
+#                 defaults to OUTLINE.md
+#   cover_svg   — full-page cover image (relative to this directory);
+#                 the build converts it to PDF via rsvg-convert and
+#                 emits it as the cover page for the component
+#
+# All keys are optional. Components without a meta file fall back to
+# the COMPONENTS[] hardcoded defaults in bin/build-monograph.
+title: "AAD: Adaptation and Actuation Dynamics"
+short_title: AAD
+cover_svg: AAD-cover.svg

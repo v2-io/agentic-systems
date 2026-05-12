@@ -21,6 +21,8 @@ A ubiquitous shared vocabulary across source, tooling, and prose. Native LaTeX /
 
 **Atoms** (equations, tables, figures, named formulas) sit *within* Subsections and are numbered by kaobook's native counters.
 
+**Appendices** are an exception to the Part→Chapter→Section nesting: each appendix segment renders directly as a `\chapter` under an `\appendix\part{...}` group. There is no intermediate Chapter level inside Appendices — an appendix segment *is* a chapter-level entity, independent. Multiple `## *Appendices* <name>` groups per volume are allowed (AAD has two: "Details" and "Operational Domains").
+
 **Vocabulary discipline:**
 - "Volume" is the published artifact (one PDF). "Book" is the conceptual unit. They are interchangeable in casual prose; "Volume" is preferred when emphasizing the publication.
 - The four-Volume structure means each Volume's *Part* level is what we previously called a "Section" of the monograph.
@@ -41,6 +43,49 @@ Kaobook native, no custom counters:
 **Named-atom evergreen cross-refs**: the name token from `*[Type (name, from ...)]*` eq-tags is the atom's intrinsic identity. The renderer extracts that name and emits `\label{atom:<name>}` on the equation so `#<name>` resolves directly, independent of positional numbering. Same convention applies to named definitions, derived items, etc.
 
 **Cross-reference evergreen-ness principle**: cross-refs always target intrinsic identity (slug for segments, name for atoms), never positional numbers. The renderer produces the rendered number at compile time; the source never hardcodes one.
+
+---
+
+## Per-Volume Metadata: `mono-meta.yaml`
+
+Each volume directory (`0N-*/`) carries a `mono-meta.yaml` declaring its display title, short tag, cover image, outline entrypoint, etc. The build script reads it to drive volume-specific behavior; defaults kick in for any missing keys.
+
+**Schema** (loose; extend as needs surface):
+
+```yaml
+title:       "AAD: Adaptation and Actuation Dynamics"   # full display title
+short_title: AAD                                        # running heads, refs, filenames
+slug:        aad                                        # bin/output-version target id
+version:     0.1.0                                      # per-volume semver (when 1d lands)
+outline:     OUTLINE.md                                 # entrypoint, relative to dir
+cover_svg:   AAD-cover.svg                              # full-page cover image
+```
+
+Currently the schema is mid-flight: AAD's file has `title` / `short_title` / `cover_svg`; the others carry `title` / `short_title` / `slug` / `version`. Reconcile to one shape during Phase 1b/1d work.
+
+---
+
+## Volume Frontmatter Sequence
+
+Every Volume's frontmatter renders in this fixed order:
+
+1. **Cover** — from the volume's `cover_svg` (declared in `mono-meta.yaml`); rendered via `rsvg-convert` to a single-page PDF and `\includepdf`-ed as the first page. Volumes without a configured cover skip this step.
+2. **Title page + Copyright** (combined on one page) — full title, author(s), license declaration (CC BY-SA — All Rights Reserved unless reassigned), citation block (canonical citation form for sibling-volume cross-references), and build-info stamp (`\buildsemver` / `\buildsha` / `\builddate` injected by the build script via `build-info.tex`).
+3. **Table of Contents** — kaobook `\tableofcontents`, depth TBD (probably through Section so segments appear by name). Suppressible via `--no-toc` flag or `toc: false` in `mono-meta.yaml`.
+
+Backmatter (bibliography, index, colophon) and the Title-page typographic design are deferred to a later session (see Phase 6).
+
+---
+
+## Build-Info Stamp
+
+The build script emits `build-info.tex` into the staging directory on every build, defining:
+
+- `\buildsemver` — semver from the volume's VERSION file
+- `\buildsha` — current git short-sha, with `-dirty` suffix when the working tree has uncommitted changes
+- `\builddate` — ISO date (YYYY-MM-DD)
+
+The preamble inputs this file early so the title page / colophon can render the build provenance. Filename of the PDF carries semver only — `<short-title>-v<semver>.pdf`. Each build overwrites the same file; the previous build is snapshotted as `.prior.pdf` before being overwritten.
 
 ---
 
@@ -116,19 +161,33 @@ Phases assume each predecessor has landed. Phase 1a (ToC) is independent and can
 - [ ] Update cleveref formats to use native section counters (`Section 1.2.3` etc.)
 - [ ] Atoms (equation/table/figure) — reset per Section, named-atom labels via `*[Type (name, ...)]*` extraction
 
-### Phase 1d — Cross-Volume References
+### Phase 1d — Cross-Volume References + Persisted `.aux`
 
 - [ ] `xr-hyper` integration in each Volume's preamble, configured to read sibling Volumes' `.aux` files
-- [ ] `.aux` files persisted and version-controlled (`<component>/<vol>.aux`)
-- [ ] Cross-volume ref fallback: when sibling `.aux` not present, render as bibliography citation
-- [ ] Each Volume publishes a standard bibliography entry for itself (for sibling-volume citations to consume)
+- [ ] **`.aux` files persisted and version-controlled** — each successful Volume build copies its `.aux` (and any auxiliary metadata cleveref needs) out of `.build/` into the volume directory (e.g., `01-aad-core/aad.aux`) and that artifact is committed. Sibling builds read these committed `.aux` files for cross-volume label resolution.
+- [ ] Cross-volume ref fallback: when sibling `.aux` not present (or version-mismatched), render as bibliography citation pointing to the sibling volume's canonical citation form
+- [ ] Each Volume publishes a standard bibliography entry for itself (declared in `mono-meta.yaml` or a sibling `cite-self.bib`) so sibling-volume citations consume it
+- [ ] `.aux` staleness detection: warn or error when a sibling `.aux` was written against a different sibling-volume semver than the one being referenced
 
 ### Phase 1e — Smart Rebuild
 
-- [ ] Per-volume input hash cache (source files + shared infra + biblio + sibling-aux digests)
-- [ ] Skip lualatex run when hash unchanged
-- [ ] `--force` flag bypasses the cache
-- [ ] Version-bump always triggers rebuild
+Per-volume hash cache so a Volume rebuilds only when its inputs actually changed. Triggers:
+
+- Source files inside the Volume's component dir (`<component>/src/**`, `<component>/OUTLINE.md`, `<component>/mono-meta.yaml`)
+- Shared build infrastructure (`mono/preamble/**`, `mono/lib/**`, `bin/build-monograph`, `bin/output-version`)
+- Bibliography database (when it lands in Phase 6)
+- Sibling Volumes' persisted `.aux` files (xr cross-refs may change)
+- VERSION file change (always rebuilds, regardless of source-hash)
+- `--force` flag (manual override)
+
+Implementation:
+
+- [ ] Per-volume input-set definition — what files contribute to the hash
+- [ ] Hash computation + cache (`mono/.build/<volume>/.input-hash`)
+- [ ] Skip-when-unchanged path in the build script
+- [ ] `--force` flag plumbed through
+- [ ] Version-bump triggers unconditional rebuild
+- [ ] `bin/build-monograph --all` builds dirty volumes in dependency order (so a downstream volume rebuild can see the upstream volume's freshly-written `.aux`)
 
 ### Phase 2 — Documentation
 
@@ -159,8 +218,9 @@ Phases assume each predecessor has landed. Phase 1a (ToC) is independent and can
 
 ### Phase 6 — Deferred / Optional
 
-- [ ] **Bibliography, frontmatter, backmatter** design — full discussion deferred to a later session
-- [ ] **Per-volume preamble / preface** — short reader-orienting text at the start of each Volume; tone is conversational, framework-positioning
+- [ ] **Backmatter design** — bibliography, index, colophon; full layout and content discussion deferred to a later session
+- [ ] **Title-page typographic design** — current implementation is the minimum (title + author + build-info); proper typography for license block, citation form, etc. deferred
+- [ ] **Per-volume preface** — short reader-orienting text at the start of each Volume (between ToC and Part I); tone is conversational, framework-positioning
 - [ ] **Companion PDFs** — specialized cuts (selected chapters, theme-based) for particular audiences; future work
 - [ ] **`\includeonly` chapter-incremental builds** — only if per-volume builds become uncomfortably slow
 - [ ] **Section letter codes** normalization in OUTLINE tables
@@ -191,6 +251,31 @@ Phases assume each predecessor has landed. Phase 1a (ToC) is independent and can
 
 ---
 
+## Progress Snapshot (2026-05-12, mid-cycle)
+
+**Landed (committed):**
+- ✅ Phase 1c (native kaobook hierarchy) — `outline_walker.rb` rewritten for role-prefix convention; build pipeline emits `\part`/`\chapter`/`\section` natively; custom `\segment` counter retired
+- ✅ Cover-page rendering via SVG → PDF (`rsvg-convert` integration in the build script)
+- ✅ `mono-meta.yaml` schema landed in each component dir (still reconciling field set)
+- ✅ `bin/output-version` semver utility (works on merged `mono/VERSION` currently; per-volume path queued for Phase 1d)
+- ✅ Build-info stamp (`build-info.tex` with `\buildsemver` / `\buildsha` / `\builddate`); dirty-tree detection; filename is semver-only
+
+**Mid-flight (staged or unstaged):**
+- 🚧 AAD's `OUTLINE.md` reorganized into the role-prefix convention; Parts II/III/IV pending
+- 🚧 Cover page for AAD landed; covers for other volumes pending
+- 🚧 Build-info macros wired into `mono/main.tex` / preamble title page
+
+**Not yet started:**
+- ⬜ Phase 1a — ToC
+- ⬜ Phase 1b — actual volume split (still rendering one merged PDF)
+- ⬜ Phase 1d — xr-hyper cross-volume refs, persisted `.aux` files, sibling-volume citations
+- ⬜ Phase 1e — smart-rebuild hash cache
+- ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep
+- ⬜ Phase 3 — chapter introduction across remaining components
+- ⬜ Phase 4 — cross-ref hygiene
+- ⬜ Phase 5 — FORMAT-compliance linter sweep
+- ⬜ Phase 6 — backmatter, title-page typography, per-volume preface, etc.
+
 ## Status
 
-Created 2026-05-11 (v1: single-monograph plan); rewritten 2026-05-12 (v2: four-volume plan). Currently Phase 0 — plan written. Phase 1a (ToC) is the immediate quick win. Phase 1b/1c (volume split + native hierarchy) is the substantive work that lets everything downstream land.
+Created 2026-05-11 (v1: single-monograph plan); rewritten 2026-05-12 (v2: four-volume plan); progress-snapshot added 2026-05-12 mid-cycle. Phase 1c landed; Phase 1b (volume split) is the immediate next substantive step.

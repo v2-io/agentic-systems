@@ -102,6 +102,13 @@
 \usepackage{changepage}
 
 %----------------------------------------------------------------------------
+% pdfpages — \includepdf places a PDF page (or pages) into the document.
+% Used to render per-component cover pages from SVG (the build converts
+% the SVG to PDF via rsvg-convert before compile).
+%----------------------------------------------------------------------------
+\usepackage{pdfpages}
+
+%----------------------------------------------------------------------------
 % Vertical-space reservation — \needspace{N\baselineskip} prevents a
 % segment header from being orphaned at page bottom by forcing a page
 % break first when the requested space isn't available.

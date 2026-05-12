@@ -1,7 +1,10 @@
 vendor/
 .build/
 *.prior.pdf
-# Incremental-build artifacts (+<sha> suffix). Release artifacts have no
-# +<sha> and can be tracked when a tagged build lands.
-agentic-framework-v*+*.pdf
-agentic-framework-v*+*.md
+# Build artifacts. Filename format is now semver-only (sha lives inside
+# the doc via build-info.tex); previously was `v<semver>+<sha>.pdf`.
+# Track a PDF only when it's a tagged release worth pinning.
+agentic-framework-v*.pdf
+agentic-framework-v*.md
+*-v*.pdf
+*-v*.md

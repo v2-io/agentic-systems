@@ -1,0 +1,96 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# bin/output-version — semantic version utility for the monograph build.
+#
+# Usage:
+#   bin/output-version show              # print current version
+#   bin/output-version bump patch        # 0.1.0 → 0.1.1
+#   bin/output-version bump minor        # 0.1.5 → 0.2.0
+#   bin/output-version bump major        # 0.7.3 → 1.0.0
+#   bin/output-version <volume-id> show          # per-volume variant (Phase 1d)
+#   bin/output-version <volume-id> bump <level>
+#
+# Currently operates on mono/VERSION (the merged-build version). When
+# the volume split lands (Phase 1d in FORMAT-TODO.md), each component
+# directory carries its own VERSION file and the <volume-id> arg
+# (`01`/`02`/`aad`/`tst`/etc.) selects which.
+
+require 'pathname'
+
+ROOT_DIR = Pathname.new(__dir__).parent.expand_path
+MONO_DIR = ROOT_DIR / 'mono'
+
+# Volume-id → VERSION file path. Per-volume files take precedence over
+# the merged mono/VERSION fallback.
+VOLUME_DIRS = {
+  '01' => '01-aad-core', 'aad' => '01-aad-core',
+  '02' => '02-tst-core', 'tst' => '02-tst-core',
+  '03' => '03-logogenic-agents', 'loga' => '03-logogenic-agents',
+  '04' => '04-eli', 'eli' => '04-eli',
+}.freeze
+
+def version_path_for(volume_id)
+  return MONO_DIR / 'VERSION' if volume_id.nil?
+
+  dir = VOLUME_DIRS[volume_id.downcase]
+  abort "unknown volume id: #{volume_id} (expected one of: " \
+        "#{VOLUME_DIRS.keys.uniq.join(', ')})" unless dir
+
+  per_volume = ROOT_DIR / dir / 'VERSION'
+  return per_volume if per_volume.exist?
+
+  # Fall back to merged version file while per-volume files don't yet
+  # exist — but warn so the user knows where the bump landed.
+  warn "no #{per_volume.relative_path_from(ROOT_DIR)}; operating on " \
+       "#{(MONO_DIR / 'VERSION').relative_path_from(ROOT_DIR)} instead"
+  MONO_DIR / 'VERSION'
+end
+
+def parse_semver(str)
+  m = str.match(/\A(\d+)\.(\d+)\.(\d+)\z/) or abort "not semver: #{str.inspect}"
+  [m[1].to_i, m[2].to_i, m[3].to_i]
+end
+
+def bump(semver, level)
+  major, minor, patch = semver
+  case level
+  when 'patch' then [major, minor, patch + 1]
+  when 'minor' then [major, minor + 1, 0]
+  when 'major' then [major + 1, 0, 0]
+  else abort "unknown bump level: #{level.inspect} (expected patch|minor|major)"
+  end
+end
+
+# ── CLI ─────────────────────────────────────────────────────────────
+
+args = ARGV.dup
+volume_id = nil
+# First arg might be a volume id; if so, shift it off
+if args.first && VOLUME_DIRS.key?(args.first.downcase)
+  volume_id = args.shift
+end
+
+cmd = args.shift || 'show'
+
+path    = version_path_for(volume_id)
+current = path.read.strip
+target  = "#{volume_id || 'monograph'}"
+
+case cmd
+when 'show'
+  puts current
+
+when 'bump'
+  level = args.shift
+  abort 'usage: bin/output-version [volume] bump <patch|minor|major>' unless level
+
+  new_version = bump(parse_semver(current), level).join('.')
+  path.write("#{new_version}\n")
+  puts "#{target}: #{current} → #{new_version}"
+
+else
+  abort 'usage:' \
+        "  bin/output-version [volume] show\n" \
+        "  bin/output-version [volume] bump <patch|minor|major>"
+end

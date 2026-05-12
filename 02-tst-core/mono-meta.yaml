@@ -1,0 +1,6 @@
+# mono-meta.yaml — per-component metadata for the monograph build.
+# See 01-aad-core/mono-meta.yaml for the full schema.
+title: "TST: Temporal Software Theory"
+short_title: TST
+slug: tst
+version: 0.1.0

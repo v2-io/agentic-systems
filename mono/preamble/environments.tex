@@ -25,6 +25,31 @@
 % in the counter format aligns the body convention with the head.)
 \renewcommand{\thesegment}{\Roman{chapter}.\arabic{segment}}
 
+% cleveref format for our custom `segment` counter. Without this,
+% cleveref doesn't know how to render \cref{seg:...} and falls back to
+% `??` — even though the label resolves and the counter is correct.
+%
+% IMPORTANT: cleveref's format placeholder for the stored label value
+% is `#1`, NOT `\thesegment`. Using `\thesegment` would expand at cref-
+% TIME (giving the current counter value) instead of label-TIME (the
+% value that was recorded when \label was emitted). Every cref would
+% then render the same most-recent counter — sending all clicks to the
+% wrong segment regardless of which label they targeted. `#2#1#3` is
+% the canonical "hyperref-open + value + hyperref-close" idiom.
+%
+% Format prints just the counter value (`I.4`, `II.7`, …) with no type
+% prefix. Authors include the type word in source — "see Definition
+% #def-foo" — and the cref expands to the number alone, avoiding the
+% doubling that a fixed prefix would cause across 19 segment types.
+\AtBeginDocument{%
+  \crefformat{segment}{#2#1#3}%
+  \Crefformat{segment}{#2#1#3}%
+  \crefrangeformat{segment}{#3#1#4--#5#2#6}%
+  \Crefrangeformat{segment}{#3#1#4--#5#2#6}%
+  \crefmultiformat{segment}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  \Crefmultiformat{segment}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+}
+
 % Internal section subheads — Formal Expression / Epistemic Status /
 % Discussion / Findings. Each renders as a full-width thin rule across
 % the segment band, with the subhead label right-aligned beneath. The
@@ -37,7 +62,8 @@
   \needspace{5\baselineskip}%
   \par\medskip%
   \noindent\textcolor{rule-gray}{\rule{\segmentrulewidth}{0.3pt}}\par%
-  \nobreak\smallskip%
+  \nobreak\nointerlineskip%
+  \vskip-0.4\baselineskip%
   \noindent\makebox[\segmentrulewidth][r]{\sffamily\bfseries #1}\par%
   \nobreak\smallskip%
   \nopagebreak[4]%
@@ -242,7 +268,11 @@
 \newsavebox{\segepibox}
 
 \NewDocumentEnvironment{segmentepigraph}{}{%
-  \par\smallskip%
+  % \medskip leading (was \smallskip) so the gap above the epigraph
+  % matches the gap above the header and the gap below the epigraph
+  % (header→epigraph and epigraph→first-subhead now both read as
+  % section-level breaks rather than tightly-stacked content).
+  \par\medskip%
   \begin{lrbox}{\segepibox}%
   \begin{minipage}{0.7\segmentrulewidth}%
   \small%

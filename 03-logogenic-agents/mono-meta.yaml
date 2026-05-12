@@ -1,0 +1,6 @@
+# mono-meta.yaml — per-component metadata for the monograph build.
+# See 01-aad-core/mono-meta.yaml for the full schema.
+title: "Logogenic Agents"
+short_title: LogA
+slug: loga
+version: 0.1.0
