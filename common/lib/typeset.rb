@@ -254,6 +254,12 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
   # header level, causing long H3 leaders to render as full-width
   # right-aligned labels that overflowed the page.
   def handle_subhead_with_state(title, level: 5)
+    # Chapter-intro Discussion mode: all internal subheads suppressed
+    # so the segment body flows as continuous chapter prose. The named
+    # H2s (Formal Expression, Epistemic Status, Discussion) become
+    # invisible paragraph breaks; the prose under each still renders.
+    return "\\par\\medskip\n" if @suppress_segment_chrome
+
     prefix    = close_open_wrappers(current_level: level)
     relative  = @current_segment_header_level ? (level - @current_segment_header_level) : 1
     case relative
@@ -396,6 +402,16 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
   # Emit the segment-header LaTeX + open the segmentepigraph for the
   # summary paragraph that follows. Closes any open wrappers from the
   # previous segment first.
+  #
+  # Special case (chapter-intro mode): when this is the FIRST segment
+  # immediately following a `\chapter{...}` AND its type is
+  # `discussion`, all segment chrome is suppressed — no \segmenthead,
+  # no epigraph wrapper, no subhead labels for the segment's internal
+  # H2s. The body content flows as plain chapter prose, treating the
+  # Discussion segment as the chapter's introduction. The \label
+  # survives so cross-refs to the segment's slug still resolve. The
+  # @suppress_segment_chrome flag carries through until the next
+  # segment header arrives (which clears it).
   def emit_segment_header(el, opts, level:)
     a = el.attr
     type_label = a['type'].to_s
@@ -408,15 +424,30 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     # already renders the type-label as part of its chrome.
     clean_title = title.sub(/\A#{Regexp.escape(type_label)}:\s*/, '')
 
+    # Track the segment-header's absolute level so handle_subhead_with_state
+    # can compute the segment-relative depth (subheads = +1, sub-subheads
+    # = +2, etc.) and dispatch to the right LaTeX subhead form.
+    @current_segment_header_level = (level == :appendix ? 3 : 4)
+
+    # Chapter-intro Discussion: emit just the label (for cross-refs)
+    # and let the segment body render as plain chapter prose.
+    if @just_chaptered && type_label.downcase == 'discussion'
+      @suppress_segment_chrome = true
+      @just_chaptered = false
+      prefix = close_open_wrappers
+      out = +prefix
+      out << "\\label{seg:#{slug}}\n\n" unless slug.empty?
+      return out
+    end
+
+    @suppress_segment_chrome = false
+    @just_chaptered = false
+
     macro = level == :appendix ? 'segmentappendixchapter' : 'segmenthead'
     # New segment header closes ALL open wrappers regardless of level —
     # we're entering a fresh segment, anything from the previous one
     # must terminate.
     prefix = close_open_wrappers
-    # Track the segment-header's absolute level so handle_subhead_with_state
-    # can compute the segment-relative depth (subheads = +1, sub-subheads
-    # = +2, etc.) and dispatch to the right LaTeX subhead form.
-    @current_segment_header_level = (level == :appendix ? 3 : 4)
     # type_label / clean_title are already-rendered LaTeX (from kramdown's
     # inner(el, opts) for the title; from el.attr for the metadata block).
     # Don't double-escape — pass through verbatim.

@@ -281,6 +281,8 @@ Implementation:
   - Verified end-to-end across all four volumes: AAD 489p (vs prior 489p), TST 56p (vs 55p), LogA 61p (vs 61p), ELI 53p (vs 54p). The ±1-page deltas are layout-level (slight spacing differences around section transitions); no fatal LaTeX errors; wrapper begin/end pairs all balance.
 
 - ⬜ **Incremental rebuild (per-chunk hash cache)** — the index.md frontmatter records source hashes for every chunk, but ingest still re-emits all chunks on every build. The next pass should: (a) read the prior index.md if present, (b) for each segment-chunk entry, compare current source-file hash to recorded hash, (c) skip regeneration when unchanged. Same discipline at the outline level for the index itself. Stage 1 of the pipeline already supports this architecturally — it's an implementation pass, not a redesign.
+
+- ⬜ **Distinct schema for Discussion-type segments (FORMAT.md update)** — claims and discussions need a structural distinction in FORMAT.md. Claim segments carry Formal Expression / Epistemic Status / Discussion / Findings subheads because those are the load-bearing parts of an epistemic-architecture claim. Discussion segments — chapter intros, scope meta-discussion, meta-segments like the M-series — don't need Formal Expression or Epistemic Status sections; they're not propositions defending themselves, they're orientation prose. The current schema asks them to fake those subheads with placeholder content. FORMAT.md should split: claim schema (current) vs discussion schema (just body, with the subheads optional rather than required). Joseph 2026-05-12.
 - ⬜ Phase 1d — xr-hyper cross-volume refs, sibling-volume citations
 - ⬜ Phase 1e — smart-rebuild hash cache
 - ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep (vocabulary alignment)
