@@ -505,15 +505,15 @@ Three 2026-04-25 spikes appropriately spike-resident but not catalogued in INDEX
 - [ ] **`spike-fep-suboptimal-approximation`** (2026-04-25 — attempt to derive Friston's EFE from AAD Lagrangian). Self-recommends small Discussion addendum in `#disc-ciy-unified-objective` after causal-IB settles.
 - [ ] **`spike-message-passing-credit-assignment`** (2026-04-25 — flagged for VMP → loopy-BP/EP rewrite before promotion to `#deriv-factor-graph-credit-assignment`).
 
-### Group IV — Zombies safe to archive (next housekeeping cycle)
+### Group IV — Zombies (status: executed 2026-05-12 (late), except attention-pair)
 
-Spikes that predate or are explicitly superseded by current discipline. Safe to move to `spikes/.integrated/` with a brief superseding note. No content leakage to address.
-
-- [ ] **`spike-causal-level-4` + `spike-causal-level-4-formal`** — superseded by Pearl-adoption discipline; AAD explicitly does not extend Pearl's three-level hierarchy. Archive with "superseded 2026-04-22 by prior-art integration discipline; Pearl hierarchy adopted as-is in `#def-pearl-causal-hierarchy`."
-- [ ] **`spike-purposeful-agent-derivation` + `spike-v2-purposeful-agent` + `spike-v3-purposeful-agent`** — Section II porting complete; pure archaeology of the v1 → v2 → v3 derivation arc that produced the entire Section II corpus.
-- [ ] **`spike-hafez-integration-audit`** — primary recommendation (write `#prior-art-positioning` segment) explicitly superseded by `feedback_prior_art_integration.md` discipline; $H_b$ gap addressed by `#der-agent-opacity`. Archive with note.
-- [ ] **`spike-soc-composition`** — author explicitly parked at "speculation-grade; do not promote without substantial mathematical work."
+- [x] **`spike-causal-level-4` + `spike-causal-level-4-formal`** — archived to `spikes/.integrated/` (superseded 2026-04-22 by prior-art integration discipline; Pearl hierarchy adopted as-is in `#def-pearl-causal-hierarchy`).
+- [x] **`spike-purposeful-agent-derivation` + `spike-v2-purposeful-agent` + `spike-v3-purposeful-agent`** — archived (Section II porting complete; pure archaeology of the v1 → v2 → v3 arc that produced the entire Section II corpus).
+- [x] **`spike-hafez-integration-audit`** — archived (`#prior-art-positioning` recommendation officially rejected per `feedback_prior_art_integration.md` discipline; $H_b$ gap addressed by `#der-agent-opacity`).
+- [x] **`spike-soc-composition`** — archived (author explicitly parked at speculation-grade).
 - [ ] **`spike-attention-causal-graphs` + `spike-attention-governance`** — 2026-03-13 pre-AAD-restructure artifacts. INDEX flags both as "Exploratory; not yet promoted." Strong zombie candidates if attention/observation-allocation is not currently in AAD scope; needs Joseph's judgment on framework-scope.
+
+**Bulk-archive context:** the 2026-05-12 (late) bulk-archive batch moved 64 spike files in total — 7 zombies + 57 LANDED-and-archivable (the default-case spikes whose substance is in segments per INDEX-cited commit hashes). Per-file audit trail in `spikes/.integrated/MANIFEST-2026-05-12.md`. The `spikes/` root went from 99 spike-*.md files to 37 (the 12 Group-I LANDED-but-leakage + 8 Group-II Tier-2-backlog + 3 Group-III now-catalogued + 6 Group-V open-active-research + 2 attention-pair-pending-judgment + a few UNCLEAR items that needed Joseph's judgment).
 
 ### Group V — Open active research (appropriately spike-resident, no action)
 
