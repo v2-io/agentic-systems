@@ -346,9 +346,11 @@ def run_lualatex(stage, stem, vendor_extra: nil)
     "-output-directory=#{stage}",
     "#{stage}/#{stem}.tex",
   ]
-  # Two passes so \cref / \ref / \tableofcontents resolve.
+  # Two passes so \cref / \ref / \tableofcontents resolve. Run with CWD =
+  # repo root so fontspec's `Path = ./mono/<target>/fonts/...` relative
+  # paths resolve to repo-vendored font files (Garamond Premier Pro, etc.).
   2.times do |pass|
-    _out, status = Open3.capture2e(env, *cmd)
+    _out, status = Open3.capture2e(env, *cmd, chdir: ROOT_DIR.to_s)
     next if (stage / "#{stem}.pdf").exist?
 
     abort "lualatex (pass #{pass + 1}) produced no PDF for #{stem}. " \

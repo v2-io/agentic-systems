@@ -12,8 +12,10 @@
 \documentclass[
   fontsize         = 10pt,
   paper            = letter,
-  twoside          = false,    % single-sided during iteration; predictable margins
-  open             = any,
+  twoside          = true,
+  open             = right,    % chapters open on right (recto) — twoside convention
+  DIV              = 12,       % wider body column (KOMA default ≈ 10–11)
+  BCOR             = 10mm,     % binding correction reserved on inner edge
   numbers          = noenddot,
   toc              = listof,
   toc              = bibliography,

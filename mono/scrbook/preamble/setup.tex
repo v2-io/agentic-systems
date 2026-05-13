@@ -33,23 +33,123 @@
 % To swap fonts: replace the three blocks below. fontspec finds OS fonts via
 % fontconfig and TeX Live fonts via its texmf tree; either source works.
 %----------------------------------------------------------------------------
-\setmainfont{STIX Two Text}[
-  Ligatures = {TeX, Common},
+% ── Body serif: Adobe Garamond Premier Pro + Joseph's modified Alt ──
+%
+% Joseph licensed the Adobe Garamond Premier Pro family (~36 OTFs covering
+% the optical-size design — caption / text / subhead / display — across
+% upright/italic/medium/semibold/bold). He then made GaramondPremrProAlt
+% (a FontForge-edited version of the text-optical-size regular weight)
+% with revised dash, question mark, and tighter kerning around quote /
+% punctuation pairs (e.g. .", ?', etc.). Source files (*.sfd) live under
+% ~/src/_ref/axiomata/ and ~/src/_ref/backup-simplex-stuff/.
+%
+% Setup convention:
+%   - Body upright: GaramondPremrProAlt (Joseph's modifications)
+%   - Italic / Bold / Bold-Italic: Adobe stock garamondpremrpro-{it,bd,bdit}
+%   - Optical sizing via SizeFeatures: caption (≤ 8.9pt), text (8.9-14.9pt,
+%     designed at 11pt), subhead (14.9-22.9pt), display (≥ 22.9pt)
+%   - HarfBuzz renderer for thorough OpenType + kerning resolution
+%   - lining figures + oldstyle numbers per gpp-norm intent
+%
+% Path is repo-root-relative; bin/build-monograph runs lualatex with
+% chdir=ROOT_DIR so this resolves to mono/scrbook/fonts/garamond/ in the
+% checked-out source tree. Font files are committed under
+% mono/scrbook/fonts/garamond/.
+%
+% Fallback chain for missing-glyph coverage MUST be registered BEFORE
+% \setmainfont references it via RawFeature={fallback=...}. luaotfload's
+% add_fallback registers a named font list; fontspec consults the chain
+% when the primary font lacks a glyph. Order matters: search the most-
+% aesthetically-coordinated fallback first (Noto Serif pairs with Garamond),
+% then broader-coverage fonts (FreeSerif covers most BMP + supplemental
+% planes; DejaVu Sans is the catch-all for symbols / extended Latin).
+\directlua{
+  if luaotfload and luaotfload.add_fallback then
+    luaotfload.add_fallback('serif-fallback', {
+      'NotoSerif:mode=harf;script=latn;language=dflt;',
+      'FreeSerif:mode=harf;script=latn;language=dflt;',
+      'DejaVuSans:mode=harf;script=latn;language=dflt;',
+    })
+  end
+}
+
+\setmainfont{GaramondPremrProAlt}[
+  Path               = ./mono/scrbook/fonts/garamond/,
+  Extension          = .otf,
+  Renderer           = HarfBuzz,
+  Ligatures          = {TeX, Common},
+  Numbers            = {Proportional, OldStyle},
+  RawFeature         = {fallback=serif-fallback},
+  ItalicFont         = garamondpremrpro-it,
+  BoldFont           = garamondpremrpro-bd,
+  BoldItalicFont     = garamondpremrpro-bdit,
+  % Optical-size dispatch — fontspec swaps the file based on requested
+  % point size. Ranges follow Adobe's design-intent boundaries (preserved
+  % from Joseph's original tuftish-fonts setup). The body range is the
+  % default (no override); other ranges swap in the corresponding optical
+  % variants for upright + italic + bold + bold-italic.
+  SizeFeatures = {
+    {Size = -8.9,
+     Font           = garamondpremrpro-capt,
+     ItalicFont     = garamondpremrpro-itcapt,
+     BoldFont       = garamondpremrpro-bdcapt,
+     BoldItalicFont = garamondpremrpro-bditcapt},
+    {Size = 8.9-14.9},  % body — defaults from outer setmainfont
+    {Size = 14.9-22.9,
+     Font           = garamondpremrpro-subh,
+     ItalicFont     = garamondpremrpro-itsubh,
+     BoldFont       = garamondpremrpro-bdsubh,
+     BoldItalicFont = garamondpremrpro-bditsubh},
+    {Size = 22.9-,
+     Font           = garamondpremrpro-disp,
+     ItalicFont     = garamondpremrpro-itdisp,
+     BoldFont       = garamondpremrpro-bddisp,
+     BoldItalicFont = garamondpremrpro-bditdisp},
+  },
 ]
+% Math font — STIX Two Math. Garamond Premier Pro has no coordinated math
+% companion; STIX Two Math renders Greek + symbols cleanly enough alongside
+% most modern serifs and is the standard choice for math monographs whose
+% body family lacks a math sibling.
 \setmathfont{STIX Two Math}
 
-% Sans-serif: only used by KOMA scrbook for chapter / section / subsection
-% headings. Latin Modern Sans is the safe portable default; matches the
-% serif body weight reasonably well without pulling in a third family.
-\setsansfont{Latin Modern Sans}[
-  Ligatures = TeX,
-  Scale     = MatchLowercase,
+% Sans-serif: Inter — used by KOMA scrbook for chapter / section /
+% subsection headings. Variable font; same recipe as Lora — explicit
+% file-path + axis instances per style, HarfBuzz renderer for the
+% +axis feature to take effect.
+% Inter's filenames embed a literal comma (Inter-VariableFont_opsz,wght.ttf).
+% fontspec's option parser splits values on commas, so comma-bearing values
+% MUST be brace-quoted ({...}); backslash-escaping (\,) is interpreted as
+% the thinspace command and corrupts the filename — which then leaks
+% fontspec's internal identifier strings as visible content on the title
+% page when font resolution fires (the Inter \maketitle / \publishers
+% rendering was the canary).
+\setsansfont{Inter-VariableFont_opsz,wght}[
+  Path               = /Library/Fonts/,
+  Extension          = .ttf,
+  Renderer           = HarfBuzz,
+  Ligatures          = TeX,
+  Scale              = MatchLowercase,
+  ItalicFont         = {Inter-Italic-VariableFont_opsz,wght},
+  BoldFont           = {Inter-VariableFont_opsz,wght},
+  BoldItalicFont     = {Inter-Italic-VariableFont_opsz,wght},
+  UprightFeatures    = {RawFeature={+axis={wght=400}}},
+  BoldFeatures       = {RawFeature={+axis={wght=700}}},
+  ItalicFeatures     = {RawFeature={+axis={wght=400}}},
+  BoldItalicFeatures = {RawFeature={+axis={wght=700}}},
 ]
 
-% Monospace: Latin Modern Mono — narrow enough to sit comfortably in inline
-% code spans (slug names, file paths) without crowding surrounding prose.
-\setmonofont{Latin Modern Mono}[
-  Scale = MatchLowercase,
+% Monospace (technically proportional): FiraCode Nerd Font Propo — variable-
+% width variant with Nerd Font icon glyphs preserved. Inline \texttt{} content
+% (slug names, file paths, identifiers) reads with FiraCode's distinctive
+% character forms without the cramped fixed-cell feel of true monospace,
+% while keeping the code-like aesthetic register. Locally installed via
+% ~/Library/Fonts/ — fontspec finds it through fontconfig.
+\setmonofont{FiraCode Nerd Font}[
+  Scale       = MatchLowercase,
+  LetterSpace = -5,           % tighten the inter-character gap; FiraCode reads
+                              % loose by default at small sizes. Negative values
+                              % pull characters closer; tune by feel.
 ]
 
 %----------------------------------------------------------------------------
