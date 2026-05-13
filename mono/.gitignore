@@ -1,4 +1,5 @@
 .build/
+.build-scrbook/
 *.prior.pdf
 # All built artifacts. Filename format is `<short-title>-v<major>.<minor>.<patch>.{pdf,md}`.
 # Track a PDF or MD only when it's a tagged release worth pinning.

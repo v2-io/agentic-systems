@@ -1,0 +1,191 @@
+% common-scrbook/preamble/segment.tex
+%
+% Segment-level commands for the scrbook target. The kramdown converter
+% (Mono::TypesetScrbook / AsfScrbookLatex) emits \segmenthead /
+% \segmentappendixchapter at segment boundaries and \segmentfield at each
+% segment-internal field heading (Formal Expression, Epistemic Status,
+% Discussion, etc.). This file defines those commands as vanilla scrbook
+% structures — no Tufte machinery, no tinted boxes, no margin notes.
+%
+% Status and stage arguments are present in the macro signatures (so the
+% emitter doesn't need a separate scrbook code path) but ignored visually:
+% scrbook's promise is "the legible read," and per-segment epistemic
+% metadata lives in the chunk-format / assembled markdown for anyone who
+% wants it. Don't decorate the page with discipline metadata.
+
+%----------------------------------------------------------------------------
+% \segmentrulewidth — referenced by AsfLatex's table converter when a
+% narrow-area table needs to escape into the margin column. The kaobook
+% target defines this as \textwidth + \marginparsep + \marginparwidth
+% (body + margin gutter + margin column) so escaping tables visibly step
+% into the Tufte margin. In scrbook there's no margin column to step
+% into, so we collapse to \textwidth — escaping tables stay at body width
+% and the per-column-weight heuristic in segment_renderer.rb still
+% distributes columns sensibly across the body band.
+%----------------------------------------------------------------------------
+\newcommand{\segmentrulewidth}{\textwidth}
+
+%----------------------------------------------------------------------------
+% \segmenthead{Type}{Title}{Status}{Stage}
+%
+% In-part segment header. Renders as a vanilla \section, with the Type
+% rendered as an italic genus marker preceding the title. Reads in the ToC
+% and on the page as:
+%
+%     1.1  Definition: Agent-Environment Coupling
+%
+% with "Definition:" italicized — quiet but informative. Status and stage
+% arguments are accepted but unused in this target.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\segmenthead}{m m m m}{%
+  \section[\textit{#1:} #2]{\textit{#1:}~#2}%
+}
+
+%----------------------------------------------------------------------------
+% \segmentappendixchapter{Type}{Title}{Status}{Stage}
+%
+% Appendix-segment header — appendix segments are chapter-level entities
+% per the four-volume hierarchy decision. Same italic-prefix discipline
+% as \segmenthead, just at chapter level. Numbering follows scrbook's
+% native \appendix machinery (A, B, C, …).
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\segmentappendixchapter}{m m m m}{%
+  \chapter[\textit{#1:} #2]{\textit{#1:}~#2}%
+}
+
+%----------------------------------------------------------------------------
+% \segmentfield{Title}
+%
+% Segment-internal field marker — Formal Expression / Epistemic Status /
+% Discussion / Findings. NOT a numbered \subsection (would inflate the
+% ToC and read as 1.1.1, 1.1.2, …, which is the wrong visual register
+% for what's structurally a labeling cue). Renders as a small italic-bold
+% standalone leader, with a thin rule's worth of breathing room above
+% and below.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\segmentfield}{m}{%
+  \par\medskip%
+  \needspace{3\baselineskip}%
+  \noindent\textit{\textbf{#1.}}\par%
+  \nopagebreak[4]\nobreak\smallskip%
+}
+
+% Backward compatibility: AsfLatex (the base class shared with the kaobook
+% converter) emits \segmentsubhead in segment-mode rendering. The volume-
+% mode AsfScrbookLatex overrides convert_header so this isn't invoked from
+% the assembled-markdown path, but defining it as an alias keeps any future
+% segment-mode call from erroring out.
+\let\segmentsubhead\segmentfield
+
+%----------------------------------------------------------------------------
+% \workingnotessubhead{Title}
+%
+% Sub-question heading inside the workingnotes environment. Same visual
+% register as \segmentfield but expected to appear inside the working-notes
+% box (defined in environments.tex). The workingnotes box already shifts
+% the body to \small, so this leader is small + italic to match.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\workingnotessubhead}{m}{%
+  \par\medskip%
+  \needspace{2\baselineskip}%
+  \noindent\textit{\textbf{#1.}}\par%
+  \nopagebreak[4]\nobreak\smallskip%
+}
+
+%----------------------------------------------------------------------------
+% \eqtag{Tag-content}
+%
+% Equation-level tag — emitted by the kramdown converter immediately
+% before the equation it labels. Source markdown looks like:
+%
+%     *[Derived (sector-condition, from prior-slug)]*
+%
+%     $$ \alpha > \rho/R $$
+%
+% The kaobook target renders this as a margin annotation; scrbook has no
+% Tufte margin column, so we render inline as a small italic standalone
+% paragraph leader. It sits directly above the equation, naming what the
+% next display object is.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\eqtag}{m}{%
+  \par\smallskip%
+  \noindent{\small\itshape #1.}\par%
+  \nopagebreak[4]%
+}
+
+%----------------------------------------------------------------------------
+% \externalref{Slug}
+%
+% Cross-reference fallback for slugs that don't have a \label in this
+% volume — typically references into sibling volumes (e.g., AAD segments
+% referenced from the ELI volume). The kaobook target's xr-hyper plumbing
+% (Workstream B) will eventually resolve these to numbered cross-volume
+% refs; until then, we render the slug itself in monospace so the reader
+% sees a legible pointer rather than LaTeX's `??` undefined-ref marker.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\externalref}{m}{\texttt{\##1}}
+
+%----------------------------------------------------------------------------
+% \statusbadge{Status} / \stageglyph{Stage}
+%
+% Visual chrome from the kaobook target — explicitly no-op here. The
+% emitter still calls them (so the IAL parser doesn't need a target-aware
+% branch), but they produce nothing in scrbook.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\statusbadge}{m}{}
+\NewDocumentCommand{\stageglyph}{m}{}
+\NewDocumentCommand{\segmentstage}{m}{}
+\NewDocumentCommand{\segmentfoot}{}{\par\medskip}
+
+%----------------------------------------------------------------------------
+% \missingsegment{Type}{Slug}{Claim}
+%
+% Placeholder for slugs listed in OUTLINE.md without a corresponding src/
+% file. Renders as a real \section so the ToC reflects the gap, plus a
+% visible body marker so a reader scanning the chapter sees what's
+% missing rather than missing the gap entirely.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\missingsegment}{m m m}{%
+  \section[\textit{#1:} \texttt{\##2} (missing)]{\textit{#1:} \texttt{\##2} \emph{(missing)}}%
+  \label{seg:#2}%
+  \par\smallskip%
+  \noindent\emph{Segment \texttt{#2} not yet written.}\par%
+  \IfStrEq{#3}{}{}{\smallskip\noindent\textit{Claim:} #3\par}%
+  \medskip%
+}
+
+%----------------------------------------------------------------------------
+% \missingappendixchapter{Type}{Slug}{Claim}
+%
+% Same pattern as \missingsegment but at chapter level — for missing
+% appendix segments, since appendix segments are chapters in our
+% hierarchy.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\missingappendixchapter}{m m m}{%
+  \chapter[\textit{#1:} \texttt{\##2} (missing)]{\textit{#1:} \texttt{\##2} \emph{(missing)}}%
+  \label{seg:#2}%
+  \par\smallskip%
+  \noindent\emph{Segment \texttt{#2} not yet written.}\par%
+  \IfStrEq{#3}{}{}{\smallskip\noindent\textit{Claim:} #3\par}%
+  \medskip%
+}
+
+%----------------------------------------------------------------------------
+% \outlinegap{Description}
+%
+% Gap marker — for --GAP-- entries in OUTLINE tables (theory not yet
+% developed; no slug, just a description of the open question). Renders
+% as a flagged inline notice rather than a structural heading.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\outlinegap}{m}{%
+  \par\medskip%
+  \noindent\textbf{[Gap]}~\emph{#1}\par%
+  \medskip%
+}
+
+%----------------------------------------------------------------------------
+% Stub macros referenced by main.tex / kaobook converter that have no
+% scrbook analog. Define as no-ops so the converter is target-agnostic.
+%----------------------------------------------------------------------------
+\NewDocumentCommand{\asfChapterFormat}{}{}
+\NewDocumentCommand{\asfAppendixToCremap}{}{}

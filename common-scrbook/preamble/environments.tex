@@ -1,0 +1,102 @@
+% common-scrbook/preamble/environments.tex
+%
+% Block environments for the scrbook target — workingnotes, callout, and
+% pass-through stubs for the kaobook target's wrappers (segmentepigraph,
+% segmentwidesection) so the kramdown converter is target-agnostic.
+
+%----------------------------------------------------------------------------
+% mdframed — used by workingnotes and callout. Loaded with the framemethod
+% set to default (TikZ would give richer borders but isn't needed for the
+% restrained register the scrbook target wants).
+%----------------------------------------------------------------------------
+\usepackage[framemethod=default]{mdframed}
+
+%----------------------------------------------------------------------------
+% Working Notes — review-mode-only environment for the trailing
+% ## Working Notes section of each segment. Stage-1 ingest already strips
+% the section in --public, so no LaTeX-side conditional is needed here.
+%
+% Visual register: thin rule above and below, subtle warm-gray foreground,
+% \small body. Reads as set-aside workshop content — unmistakably distinct
+% from finished argument, but not so visually heavy that it dominates the
+% segment when it's present.
+%----------------------------------------------------------------------------
+\newmdenv[
+  topline       = true,
+  bottomline    = true,
+  rightline     = false,
+  leftline      = false,
+  linewidth     = 0.4pt,
+  linecolor     = wn-rule,
+  innertopmargin    = 8pt,
+  innerbottommargin = 8pt,
+  innerleftmargin   = 0pt,
+  innerrightmargin  = 0pt,
+  skipabove     = \medskipamount,
+  skipbelow     = \medskipamount,
+  fontcolor     = wn-fg,
+  % font option drives mdframed to apply the size/weight to the body via
+  % its own group, which propagates across paragraph breaks and survives
+  % the page-split that kills inline `\small` near the env's begin.
+  font          = \small,
+]{workingnotesframe}
+
+\newenvironment{workingnotes}{%
+  \begin{workingnotesframe}%
+  \noindent\textit{\textbf{Working Notes.}}\par\smallskip%
+}{%
+  \end{workingnotesframe}%
+}
+
+%----------------------------------------------------------------------------
+% Callouts — Obsidian-style `> [!type] title` blocks. Type vocabulary:
+% warning / note / info / tip / danger. For the scrbook target we render
+% all of them with the same restrained left-bar treatment, distinguished
+% only by the type label in bold uppercase. Bright per-type tints would
+% compete with the body register; the visual hierarchy stays quiet.
+%----------------------------------------------------------------------------
+\newmdenv[
+  topline       = false,
+  bottomline    = false,
+  rightline     = false,
+  leftline      = true,
+  linewidth     = 2pt,
+  linecolor     = callout-rule,
+  innertopmargin    = 4pt,
+  innerbottommargin = 4pt,
+  innerleftmargin   = 10pt,
+  innerrightmargin  = 0pt,
+  skipabove     = \medskipamount,
+  skipbelow     = \medskipamount,
+]{calloutframe}
+
+\NewDocumentEnvironment{callout}{m m}{%
+  \begin{calloutframe}%
+  \small%
+  \noindent\textbf{\MakeUppercase{#1}}%
+  \IfStrEq{#2}{}{}{\quad #2}%
+  \par\smallskip%
+}{%
+  \end{calloutframe}%
+}
+
+%----------------------------------------------------------------------------
+% Pass-through stubs for kaobook-target wrappers. The base AsfLatex
+% converter (segment-mode) emits these; AsfScrbookLatex's volume-mode
+% override doesn't, but a future segment-mode call (e.g., for a snippet
+% rendered with render_fragment) might. Defined as identity so they don't
+% break compilation if invoked.
+%----------------------------------------------------------------------------
+\NewDocumentEnvironment{segmentepigraph}{}{%
+  \par\medskip%
+  \begingroup%
+  \small\itshape%
+}{%
+  \par%
+  \endgroup%
+  \par\medskip%
+}
+
+\NewDocumentEnvironment{segmentwidesection}{}{%
+}{%
+}

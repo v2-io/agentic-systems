@@ -1,0 +1,172 @@
+% common-scrbook/preamble/setup.tex
+%
+% Base preamble for the scrbook target. Loaded by main.tex after
+% \documentclass{scrbook}. Establishes language, math, fonts, hyperlinks,
+% cross-references, and color palette. Segment-specific commands
+% (\segmenthead, \eqtag, \segmentfield) and environments (workingnotes,
+% callout) live in segment.tex / environments.tex.
+
+%----------------------------------------------------------------------------
+% Language & quoting
+%----------------------------------------------------------------------------
+\usepackage[english]{babel}
+\usepackage[english=american]{csquotes}
+
+%----------------------------------------------------------------------------
+% Math — amsmath family, mathtools (which patches several amsmath rough
+% edges), then the unicode-math layer for fontspec-driven math fonts.
+%----------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{unicode-math}
+
+%----------------------------------------------------------------------------
+% Fonts.
+%
+% Default is STIX Two — a single coordinated text + math family that ships
+% with current TeX Live and renders with the visual register of a classical
+% mathematical monograph (the AMS GSM series, Folland's Real Analysis,
+% Lang's Algebra). Both faces are open-source and machine-portable.
+%
+% To swap fonts: replace the three blocks below. fontspec finds OS fonts via
+% fontconfig and TeX Live fonts via its texmf tree; either source works.
+%----------------------------------------------------------------------------
+\setmainfont{STIX Two Text}[
+  Ligatures = {TeX, Common},
+]
+\setmathfont{STIX Two Math}
+
+% Sans-serif: only used by KOMA scrbook for chapter / section / subsection
+% headings. Latin Modern Sans is the safe portable default; matches the
+% serif body weight reasonably well without pulling in a third family.
+\setsansfont{Latin Modern Sans}[
+  Ligatures = TeX,
+  Scale     = MatchLowercase,
+]
+
+% Monospace: Latin Modern Mono — narrow enough to sit comfortably in inline
+% code spans (slug names, file paths) without crowding surrounding prose.
+\setmonofont{Latin Modern Mono}[
+  Scale = MatchLowercase,
+]
+
+%----------------------------------------------------------------------------
+% GFM/Obsidian math-compat macros — same shims as the kaobook target.
+% Source segments use \lt and \gt because raw < and > break GitHub's math
+% renderer (interpreted as HTML tags). LaTeX math knows neither — define
+% them as the obvious operators.
+%----------------------------------------------------------------------------
+\providecommand{\lt}{<}
+\providecommand{\gt}{>}
+
+%----------------------------------------------------------------------------
+% Microtypography
+%----------------------------------------------------------------------------
+\usepackage{microtype}
+
+%----------------------------------------------------------------------------
+% Widow / orphan suppression. Same discipline as the kaobook target — a
+% stranded single line at top or bottom of a page reads as broken; the
+% occasional extra whitespace is the right trade.
+%----------------------------------------------------------------------------
+\widowpenalty=10000
+\clubpenalty=10000
+
+%----------------------------------------------------------------------------
+% String predicates — used by segment.tex for the eq-tag dispatch and any
+% conditional rendering.
+%----------------------------------------------------------------------------
+\usepackage{xstring}
+
+%----------------------------------------------------------------------------
+% Color palette. Modest by design — link/cross-ref navy, a quiet rule-gray,
+% a muted sand for the working-notes register. No status-tier colors:
+% scrbook target drops the status badges entirely.
+%----------------------------------------------------------------------------
+\usepackage{xcolor}
+\definecolor{rule-gray}      {HTML}{B8B8B8}
+\definecolor{link-navy}      {HTML}{1F3A6F}
+\definecolor{wn-rule}        {HTML}{8C8676}
+\definecolor{wn-fg}          {HTML}{6E6354}
+\definecolor{callout-rule}   {HTML}{6B7B95}
+
+%----------------------------------------------------------------------------
+% pdfpages — for the cover page (rsvg-convert produces a single-page PDF
+% that we \includepdf at the very front).
+%----------------------------------------------------------------------------
+\usepackage{pdfpages}
+
+%----------------------------------------------------------------------------
+% needspace — \needspace{N\baselineskip} prevents a heading from being
+% orphaned at page bottom by forcing a page break first when N lines aren't
+% available below.
+%----------------------------------------------------------------------------
+\usepackage{needspace}
+
+%----------------------------------------------------------------------------
+% Tables — same toolkit as the kaobook target so AsfLatex's table converter
+% (in segment_renderer.rb) renders identically here.
+%----------------------------------------------------------------------------
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+
+%----------------------------------------------------------------------------
+% Equation + table numbering reset per chapter — same convention as the
+% kaobook target (3.5, 3.6, …, then 4.1 in next chapter).
+%----------------------------------------------------------------------------
+\numberwithin{equation}{chapter}
+\numberwithin{table}{chapter}
+
+%----------------------------------------------------------------------------
+% Hyperlinks + cross-references. hyperref must load late (it patches many
+% other packages). cleveref must load AFTER hyperref so its \cref renders
+% as a clickable link.
+%----------------------------------------------------------------------------
+\usepackage[
+  colorlinks = true,
+  linkcolor  = link-navy,
+  citecolor  = link-navy,
+  urlcolor   = link-navy,
+  filecolor  = link-navy,
+  pdfborder  = {0 0 0},
+]{hyperref}
+
+\usepackage[capitalize,noabbrev]{cleveref}
+
+% Cross-ref display: bare number for sections and chapters. Resolved cross-
+% refs in the assembled markdown look like `[Definition 1.4](#def-foo)`;
+% the converter emits `\cref{seg:def-foo}`. We want LaTeX to produce the
+% number "1.4" — the type word ("Definition") was kept in the markdown's
+% visible link text and survives in source prose like "see Definition
+% \cref{seg:def-foo}".
+%
+% IMPORTANT: cleveref's format placeholder for the stored label value is
+% `#1`, NOT `\thesection`. `#2#1#3` is the canonical
+% "hyperref-open + value + hyperref-close" idiom.
+\AtBeginDocument{%
+  \crefformat{section}{#2#1#3}%
+  \Crefformat{section}{#2#1#3}%
+  \crefrangeformat{section}{#3#1#4--#5#2#6}%
+  \Crefrangeformat{section}{#3#1#4--#5#2#6}%
+  \crefmultiformat{section}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  \Crefmultiformat{section}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  % Appendix segments are chapters; mirror the section convention so
+  % chapter and section cross-refs read identically in running text.
+  \crefformat{chapter}{#2#1#3}%
+  \Crefformat{chapter}{#2#1#3}%
+  \crefrangeformat{chapter}{#3#1#4--#5#2#6}%
+  \Crefrangeformat{chapter}{#3#1#4--#5#2#6}%
+  \crefmultiformat{chapter}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+  \Crefmultiformat{chapter}{#2#1#3}{, #2#1#3}{, #2#1#3}{, #2#1#3}%
+}
+
+%----------------------------------------------------------------------------
+% \ifdefempty — used by main.tex to detect empty cover-path. Provided by
+% etoolbox, which KOMA pulls in transitively, but load explicitly so the
+% conditional always resolves.
+%----------------------------------------------------------------------------
+\usepackage{etoolbox}
