@@ -394,6 +394,90 @@ class Kramdown::Converter::AsfScrbookLatex < Kramdown::Converter::AsfLatex
     @known_segment_slugs ||= {}
     @known_segment_slugs[slug] = true
   end
+
+  # ── Tables: xltabular override ──────────────────────────────────────
+  #
+  # The base AsfLatex.convert_table emits a tabularx environment, which
+  # cannot split across pages — tall tables either get pushed whole to
+  # the next page (acceptable for short overflows) or visibly overflow
+  # the bottom margin (bad). The kaobook target accepts that cost
+  # because xltabular's grouping collides with kao's margin-note
+  # machinery (see segment_renderer.rb's convert_table comment).
+  #
+  # In the scrbook target there's no such conflict. xltabular gives us
+  # both width-aware columns (tabularx-side) AND page-break support
+  # (longtable-side). The caption goes inside the env via \caption\\,
+  # \endfirsthead emits the caption-plus-header on first occurrence,
+  # \endhead repeats just the header on continuation pages, and \endfoot
+  # places \bottomrule before each break — so the table reads as one
+  # bounded artifact across whatever page count it spans.
+  def convert_table(el, opts)
+    aligns  = el.options[:alignment] || []
+    weights = table_column_weights(el, aligns.size)
+    cols    = aligns.each_with_index.map { |a, i| column_spec(a, weights[i]) }.join
+
+    # Width is \linewidth in scrbook (single-column body, no margin to
+    # escape into). The kaobook escape-to-margin machinery is moot here
+    # since \segmentrulewidth degenerates to \textwidth in this target.
+    table_w = '\\linewidth'
+
+    @table_count += 1
+    caption_text = (el.attr['caption'] || el.attr['data-caption'] || '').to_s
+    label        = segment_slug.empty? ? '' : "\\label{tbl:#{segment_slug}-#{@table_count}}"
+
+    # Render header rows separately (without the trailing \midrule that
+    # convert_thead would normally append) so we can place them inside
+    # \endfirsthead and \endhead blocks for repetition on continuation
+    # pages. The header-cell formatting (small italic) mirrors the base
+    # convert_thead — keep it in sync.
+    thead = el.children.find { |c| c.type == :thead }
+    tbody = el.children.find { |c| c.type == :tbody }
+    header_block = if thead
+      thead.children.filter_map do |tr|
+        next unless tr.type == :tr
+        cells = tr.children.map { |td| "{\\small\\emph{#{inner(td, opts).strip}}}" }
+        "#{cells.join(' & ')} \\\\\n"
+      end.join
+    else
+      ''
+    end
+    body_block = tbody ? inner(tbody, opts) : ''
+
+    # Always emit \caption (the un-starred form) so the "Table N.M" identifier
+    # appears in the rendered output, even when no descriptive caption text
+    # is provided. The earlier \caption*{} fallback for the no-text case
+    # suppressed the table number too — we want the number visible regardless.
+    # When caption_text is empty, \caption{} renders just "Table N.M." which
+    # is the right register: presence-of-table without imposed prose.
+    caption_line = "\\caption{#{process_prose(caption_text)}}#{label}\\\\\n"
+    # TODO: Tabular figures inside tables — Joseph 2026-05-13. When a table's
+    # cells carry numerical data (the "Quantitative illustration…" pattern),
+    # switch to Numbers=Tabular so the columns align. Deferred: needs a
+    # markdown-side signal (e.g., a class attribute on the table or a
+    # `caption: ...` frontmatter cue) so we know which tables qualify, then
+    # `\addfontfeatures{Numbers=Tabular}` inside the begingroup scope.
+
+    head_block = +''
+    head_block << "\\toprule[1pt]\\addlinespace[2pt]\n"
+    head_block << header_block
+    head_block << "\\midrule\n" unless header_block.empty?
+
+    "\\par\\medskip\n" \
+      "\\begingroup\n" \
+      "\\renewcommand{\\arraystretch}{1.25}%\n" \
+      "\\footnotesize\n" \
+      "\\begin{xltabular}{#{table_w}}{#{cols}}\n" \
+      "#{caption_line}" \
+      "#{head_block}" \
+      "\\endfirsthead\n" \
+      "#{head_block}" \
+      "\\endhead\n" \
+      "\\addlinespace[2pt]\\bottomrule[1pt]\n" \
+      "\\endfoot\n" \
+      "#{body_block}" \
+      "\\end{xltabular}\n" \
+      "\\endgroup\n\\par\\medskip\n\n"
+  end
 end
 
 # Wire kramdown's `to_<format>` dispatch for the new converter.

@@ -78,7 +78,18 @@
   Extension          = .otf,
   Renderer           = HarfBuzz,
   Ligatures          = {TeX, Common},
-  Numbers            = {Proportional, OldStyle},
+  Numbers            = {Proportional, Lining},  % uppercase / all same height —
+                                                 % more authoritative for
+                                                 % technical / numbered
+                                                 % content (table numbers,
+                                                 % equation numbers, page
+                                                 % numbers, dates in prose).
+                                                 % Tabular spacing for
+                                                 % numerical table cells is
+                                                 % a deferred separate
+                                                 % capability — see TODO in
+                                                 % bin/lib/typeset_scrbook.rb
+                                                 % convert_table.
   RawFeature         = {fallback=serif-fallback},
   ItalicFont         = garamondpremrpro-it,
   BoldFont           = garamondpremrpro-bd,
@@ -210,9 +221,19 @@
 % (in segment_renderer.rb) renders identically here.
 %----------------------------------------------------------------------------
 \usepackage{tabularx}
+\usepackage{xltabular}    % longtable + tabularx — page-breakable, width-aware.
+                          % Used by AsfScrbookLatex's convert_table override
+                          % (the kaobook target sticks with plain tabularx
+                          % because xltabular collides with kaobook's
+                          % margin-note machinery, see segment_renderer.rb).
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{caption}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+% Caption registers under the table (LongTable convention via \caption inside
+% the env still places it where \caption is called). We emit \caption as the
+% first line of xltabular content, so the caption appears ABOVE the table
+% header — consistent with the kaobook target's \captionof{table}{...} above.
 
 %----------------------------------------------------------------------------
 % Equation + table numbering reset per chapter — same convention as the
