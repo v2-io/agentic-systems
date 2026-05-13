@@ -1,7 +1,11 @@
-.build/
+.build-kaobook/
 .build-scrbook/
 *.prior.pdf
-# All built artifacts. Filename format is `<short-title>-v<major>.<minor>.<patch>.{pdf,md}`.
+# All built artifacts. Filename format is
+#   `<short-title>-v<major>.<minor>.<patch>{k,s}.pdf`  (PDF, target-suffixed)
+#   `<short-title>-v<major>.<minor>.<patch>.md`        (assembled markdown, target-agnostic)
+# The trailing single-letter suffix on the PDF distinguishes the kaobook (k)
+# and scrbook (s) renderings of the same canonical assembled markdown.
 # Track a PDF or MD only when it's a tagged release worth pinning.
 *-v*.pdf
 *-v*.md

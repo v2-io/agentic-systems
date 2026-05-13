@@ -3,31 +3,50 @@
 #
 # bin/build-monograph — build one or more Agentic Systems volumes to PDF.
 #
-# Usage:
-#   bin/build-monograph aad             # build AAD volume (alias for 01)
-#   bin/build-monograph 01              # build AAD volume by component-dir prefix
-#   bin/build-monograph tst             # build TST volume
-#   bin/build-monograph --all           # build all four volumes (in dep order)
-#   bin/build-monograph --public aad    # public variant (strips Working Notes)
+# Two render targets share the markdown-first pipeline (Stages 1+2 are
+# target-agnostic; Stage 3 dispatches per target):
 #
-# Layout (post-Phase 1b restructure):
-#   mono/                       monograph build infrastructure + output
-#     common/                   shared build infrastructure (kaobook target)
-#       main.tex                LaTeX entrypoint template
-#       preamble/               LaTeX preamble fragments
-#       lib/                    Ruby modules (segment_renderer, outline_walker, ingest, …)
-#       vendor/kaobook/         vendored class (gitignored)
-#       VERSION                 merged-build VERSION fallback (legacy)
-#     common-scrbook/           sister target — vanilla KOMA scrbook (see bin/build-scrbook)
-#     .build/<slug>/            per-volume build staging (gitignored, kaobook)
-#     .build-scrbook/<slug>/    per-volume build staging (gitignored, scrbook)
-#     <slug>-v<M>.<m>.<p>.pdf   per-volume built PDF
-#     <slug>-v<M>.<m>.<p>.md    per-volume assembled markdown (when emitted)
-#   0N-<component>/             per-volume source
-#     mono-meta.yaml            per-volume metadata (title, slug, version, cover)
-#     OUTLINE.md                entrypoint outline (role-prefix format)
-#     <slug>.aux                persisted .aux for sibling-volume xr-refs (Phase 1d)
-#     src/                      segment files
+#   --target scrbook   (default) vanilla KOMA scrbook — classical math
+#                                 monograph register; no Tufte machinery,
+#                                 single column, no per-segment chrome
+#   --target kaobook              kaobook-styled with Tufte margin notes,
+#                                 status badges, segment-tinted boxes
+#
+# Usage:
+#   bin/build-monograph aad                      build AAD volume (scrbook)
+#   bin/build-monograph 01                       same, by component-dir prefix
+#   bin/build-monograph aad --target kaobook     kaobook variant
+#   bin/build-monograph --all                    all four volumes (scrbook)
+#   bin/build-monograph --all --target kaobook   all four (kaobook)
+#   bin/build-monograph --public aad             public variant (strips Working Notes)
+#   bin/build-monograph --no-toc aad             suppress table of contents
+#
+# Layout:
+#   bin/
+#     build-monograph             this script
+#     lib/                        shared Ruby pipeline
+#       outline_walker.rb         OUTLINE.md parser
+#       segment_renderer.rb       AsfLatex base converter (math, lists, tables, …)
+#       ingest.rb                 Stage 1: source → chunks/ + index.md
+#       assemble.rb               Stage 2: chunks + index → assembled markdown
+#       typeset.rb                Stage 3 (kaobook): Mono::Typeset
+#       typeset_scrbook.rb        Stage 3 (scrbook): Mono::TypesetScrbook
+#   mono/
+#     kaobook/                    kaobook target — main.tex, preamble/, vendor/kaobook/
+#     scrbook/                    scrbook target — main.tex, preamble/
+#     .build-kaobook/<slug>/      kaobook stage (gitignored)
+#     .build-scrbook/<slug>/      scrbook stage (gitignored)
+#     <slug>-v<sem>k.pdf          kaobook artifact
+#     <slug>-v<sem>s.pdf          scrbook artifact
+#     <slug>-v<sem>.md            assembled markdown (target-agnostic;
+#                                 Stage 2's output, byte-identical for both
+#                                 targets — whichever build runs writes it)
+#   0N-<component>/
+#     mono-meta.yaml              per-volume metadata (title, slug, version, cover)
+#     OUTLINE.md                  entrypoint outline
+#     <slug>.aux                  persisted .aux for sibling-volume xr-refs
+#                                 (kaobook target only; scrbook doesn't yet
+#                                 do cross-volume refs)
 
 require 'fileutils'
 require 'pathname'
@@ -35,11 +54,8 @@ require 'open3'
 require 'yaml'
 
 ROOT_DIR    = Pathname.new(__dir__).parent.expand_path
-MONO_DIR    = ROOT_DIR / 'mono'         # output directory + build infrastructure
-COMMON_DIR  = MONO_DIR / 'common'
-LIB_DIR     = COMMON_DIR / 'lib'
-VENDOR_KAO  = COMMON_DIR / 'vendor' / 'kaobook'
-BUILD_DIR   = MONO_DIR / '.build'
+LIB_DIR     = Pathname.new(__dir__).expand_path / 'lib'
+MONO_DIR    = ROOT_DIR / 'mono'
 
 $LOAD_PATH.unshift(LIB_DIR.to_s)
 require 'segment_renderer'
@@ -47,6 +63,40 @@ require 'outline_walker'
 require 'ingest'
 require 'assemble'
 require 'typeset'
+require 'typeset_scrbook'
+
+# ── Target registry ─────────────────────────────────────────────────────────
+#
+# Each render target is a small spec naming where its LaTeX template lives
+# (under mono/), what build-stage subdir to use, what kramdown converter to
+# call for Stage 3, and a few capability flags. Adding a third target is a
+# matter of adding an entry here plus a Mono::Typeset… module + LaTeX tree.
+#
+# `short` is the one-letter PDF filename suffix (`<slug>-v<sem>k.pdf` /
+# `<slug>-v<sem>s.pdf`) so the two targets' artifacts coexist in mono/
+# without colliding.
+
+TARGETS = {
+  'scrbook' => {
+    short:           's',
+    common_dir:      'scrbook',
+    build_dir_name:  '.build-scrbook',
+    typeset_module:  'Mono::TypesetScrbook',
+    needs_vendor:    false,
+    persists_aux:    false,
+  },
+  'kaobook' => {
+    short:           'k',
+    common_dir:      'kaobook',
+    build_dir_name:  '.build-kaobook',
+    typeset_module:  'Mono::Typeset',
+    needs_vendor:    true,
+    persists_aux:    true,
+  },
+}.freeze
+
+DEFAULT_TARGET = 'scrbook'
+META_FILENAME  = 'mono-meta.yaml'
 
 # ── Volume registry ─────────────────────────────────────────────────────────
 
@@ -60,10 +110,6 @@ VOLUME_REGISTRY = [
   { dir: '04-eli',              id_aliases: %w[04 eli] },
 ].freeze
 
-META_FILENAME = 'mono-meta.yaml'
-
-# Load a volume spec from its mono-meta.yaml, merged with the registry entry.
-# Returns a hash with all the keys downstream code expects.
 def load_volume_spec(volume_id)
   entry = VOLUME_REGISTRY.find { |e| e[:id_aliases].include?(volume_id.downcase) }
   abort usage_message("unknown volume id: #{volume_id}") unless entry
@@ -79,9 +125,6 @@ def load_volume_spec(volume_id)
   minor = meta['minor'] || 0
   patch = meta['patch'] || 0
 
-  # toc: per-volume opt-out, defaults to true. Anything explicitly falsy
-  # in the YAML suppresses the ToC for this volume. CLI `--no-toc`
-  # overrides this for one-off builds.
   toc_enabled = meta.fetch('toc', true) != false
 
   {
@@ -108,11 +151,17 @@ def usage_message(error = nil)
   msg << "error: #{error}\n\n" if error
   msg << <<~USAGE
     Usage:
-      bin/build-monograph <volume>              build one volume
-      bin/build-monograph --all                 build all volumes
-      bin/build-monograph [--public] <volume>   public variant
+      bin/build-monograph <volume>                    build one volume (scrbook target)
+      bin/build-monograph <volume> --target <name>    pick render target
+      bin/build-monograph --all                       build all volumes
+      bin/build-monograph --public <volume>           public variant (strips Working Notes)
+      bin/build-monograph --no-toc <volume>           suppress table of contents
 
     Volume ids: #{VOLUME_REGISTRY.flat_map { |e| e[:id_aliases] }.join(' / ')}
+    Targets:    #{TARGETS.keys.join(' / ')}  (default: #{DEFAULT_TARGET})
+
+    Output:     mono/<slug>-v<sem>{k,s}.pdf  (k=kaobook, s=scrbook)
+                mono/<slug>-v<sem>.md        (target-agnostic assembled markdown)
   USAGE
   msg
 end
@@ -121,6 +170,8 @@ def parse_args(argv)
   args = argv.dup
   variant = :review
   toc_override = nil
+  target = DEFAULT_TARGET
+
   if (i = args.index('--public'))
     args.delete_at(i)
     variant = :public
@@ -129,17 +180,23 @@ def parse_args(argv)
     args.delete_at(i)
     toc_override = false
   end
+  if (i = args.index('--target'))
+    args.delete_at(i)
+    target = args.delete_at(i)
+    abort usage_message("unknown target: #{target}") unless TARGETS.key?(target)
+  end
   if args.include?('--all')
     return {
-      volumes: VOLUME_REGISTRY.map { |e| e[:id_aliases].first },
-      variant: variant,
+      volumes:      VOLUME_REGISTRY.map { |e| e[:id_aliases].first },
+      target:       target,
+      variant:      variant,
       toc_override: toc_override,
     }
   end
   abort usage_message('no volume specified (try `aad` or `--all`)') if args.empty?
   abort usage_message("unexpected args: #{args[1..].join(' ')}") if args.size > 1
 
-  { volumes: [args.first.downcase], variant: variant, toc_override: toc_override }
+  { volumes: [args.first.downcase], target: target, variant: variant, toc_override: toc_override }
 end
 
 # ── Git / build-info ────────────────────────────────────────────────────────
@@ -179,10 +236,26 @@ def write_build_info(stage, spec, cover_rel:, toc_enabled:)
   TEX
 end
 
+# Minimal LaTeX escape for outline-derived strings (NOT for segment body
+# content, which goes through the kramdown converter's own escape).
+def escape_latex(text)
+  text.to_s
+      .gsub('\\') { '\textbackslash{}' }
+      .gsub('&')  { '\&' }
+      .gsub('%')  { '\%' }
+      .gsub('$')  { '\$' }
+      .gsub('#')  { '\#' }
+      .gsub('_')  { '\_' }
+      .gsub('{')  { '\{' }
+      .gsub('}')  { '\}' }
+      .gsub('~')  { '\textasciitilde{}' }
+      .gsub('^')  { '\textasciicircum{}' }
+end
+
 # ── kaobook vendor patch (idempotent) ───────────────────────────────────────
 
-def patch_kao_sty
-  kao_sty = VENDOR_KAO / 'kao.sty'
+def patch_kao_sty(vendor_path)
+  kao_sty = vendor_path / 'kao.sty'
   return unless kao_sty.exist?
 
   text = kao_sty.read
@@ -214,44 +287,27 @@ def stage_cover_pdf(spec, stage)
   "covers/#{spec[:slug]}-cover.pdf"
 end
 
-# ── Body assembly (one volume) ──────────────────────────────────────────────
+# ── Body assembly + typeset ─────────────────────────────────────────────────
 #
-# Volume content from OUTLINE.md falls into three buckets:
+# Stage 1 (Mono::Ingest) walks OUTLINE + segments → chunks/ + index.md.
+# Stage 2 (Mono::Assemble) stitches chunks per index, resolves cross-refs
+# → assembled markdown text. Stage 3 (target-specific Mono::Typeset…)
+# kramdown-converts the assembled markdown to body.tex.
 #
-#   1. Volume frontmatter (between `## *Frontmatter*` and the first
-#      `## *Part*`) — accumulated as raw markdown, rendered through
-#      SegmentRenderer.render_fragment, written to frontmatter.tex.
-#      main.tex inputs it in \frontmatter scope so it sits between the
-#      cover, ToC, and \mainmatter.
-#
-#   2. Part preface (between `### *Preface*` or implicit preface start
-#      and the first `### *Chapter*`) — accumulated as raw markdown,
-#      rendered through the same path, emitted inline between \part{...}
-#      and \chapter{...}.
-#
-#   3. Mainmatter content — chapters, segments, between-segment prose
-#      (rare; usually authored as HTML comments and stripped by the
-#      walker). Renders into body.tex.
-#
-# HTML comments are stripped at the walker level (file-read time) so
-# repo-meta content (TODO lists, chapter-arc rationale notes, placement
-# memos) never reaches any rendering stage. Authors opt out of the PDF
-# by wrapping content in `<!-- ... -->`.
+# Both targets call the same Stages 1+2; only the Stage 3 module differs.
+# The assembled markdown is byte-identical between targets — it's the
+# canonical artifact, written to mono/<slug>-v<sem>.md regardless of which
+# target ran.
 
-def assemble_and_typeset(stage, variant:)
-  # Stage 2 + Stage 3 combined: Mono::Assemble reads the index + chunks
-  # and stitches the canonical per-volume markdown; Mono::Typeset feeds
-  # that through Kramdown::Converter::AsfVolumeLatex to produce body.tex.
-  # Both artifacts are returned so the markdown can be written out as the
-  # `mono/<slug>-v<sem>.md` deliverable.
+def assemble_and_typeset(stage, target_spec, variant:)
   assembled_md = Mono::Assemble.assemble(stage: stage)
-  body_tex     = Mono::Typeset.typeset(assembled_md, variant: variant)
+  typeset_mod  = Object.const_get(target_spec[:typeset_module])
+  body_tex     = typeset_mod.typeset(assembled_md, variant: variant)
   (stage / 'body.tex').write(body_tex)
   assembled_md
 end
 
 def collect_stats(stage)
-  # Counts come from the Stage-1 manifest so we don't re-walk OUTLINE.
   index_path = stage / 'index.md'
   index = YAML.safe_load((index_path.read.split("---\n", 3)[1] || ''),
                          permitted_classes: [Symbol]) || {}
@@ -264,42 +320,25 @@ def collect_stats(stage)
   }
 end
 
-# Minimal LaTeX escape for outline-derived strings (NOT for segment body
-# content, which goes through the kramdown converter's own escape). Block
-# form avoids Ruby gsub's back-reference interpretation of `\&` in
-# replacements.
-def escape_latex(text)
-  text.to_s
-      .gsub('\\') { '\textbackslash{}' }
-      .gsub('&')  { '\&' }
-      .gsub('%')  { '\%' }
-      .gsub('$')  { '\$' }
-      .gsub('#')  { '\#' }
-      .gsub('_')  { '\_' }
-      .gsub('{')  { '\{' }
-      .gsub('}')  { '\}' }
-      .gsub('~')  { '\textasciitilde{}' }
-      .gsub('^')  { '\textasciicircum{}' }
-end
-
 # ── Compile + output ────────────────────────────────────────────────────────
 
-def stage_sources(spec)
-  stem  = "#{spec[:slug]}-v#{spec[:semver]}"
-  stage = BUILD_DIR / spec[:slug]
+def stage_sources(spec, target_spec, build_dir)
+  # Stem includes the target's one-letter suffix so kaobook and scrbook
+  # PDFs coexist in mono/ without colliding (`aad-v0.1.0k.pdf` vs
+  # `aad-v0.1.0s.pdf`).
+  stem  = "#{spec[:slug]}-v#{spec[:semver]}#{target_spec[:short]}"
+  stage = build_dir / spec[:slug]
   FileUtils.mkdir_p(stage)
-  FileUtils.cp(COMMON_DIR / 'main.tex', stage / "#{stem}.tex")
+  common_dir = MONO_DIR / target_spec[:common_dir]
+  FileUtils.cp(common_dir / 'main.tex', stage / "#{stem}.tex")
   FileUtils.rm_rf(stage / 'preamble')
-  FileUtils.cp_r(COMMON_DIR / 'preamble', stage / 'preamble')
+  FileUtils.cp_r(common_dir / 'preamble', stage / 'preamble')
   [stage, stem]
 end
 
-def run_lualatex(stage, stem)
-  env = {
-    # Vendored kaobook + staging dir on kpathsea search path. Trailing
-    # colon merges with the default search path.
-    'TEXINPUTS' => "#{stage}:#{VENDOR_KAO}:",
-  }
+def run_lualatex(stage, stem, vendor_extra: nil)
+  texinputs = vendor_extra ? "#{stage}:#{vendor_extra}:" : "#{stage}:"
+  env = { 'TEXINPUTS' => texinputs }
   cmd = [
     'lualatex',
     '-interaction=nonstopmode',
@@ -317,38 +356,44 @@ def run_lualatex(stage, stem)
   end
 end
 
-def copy_outputs(spec, stage, stem)
+def copy_outputs(spec, target_spec, stage, stem)
   src_pdf = stage / "#{stem}.pdf"
   dst_pdf = MONO_DIR / "#{stem}.pdf"
   FileUtils.cp(dst_pdf, MONO_DIR / "#{stem}.prior.pdf") if dst_pdf.exist?
   FileUtils.cp(src_pdf, dst_pdf)
 
-  # Persist .aux into the component dir so sibling-volume builds can read
-  # it for cross-volume xr-refs (Phase 1d). Filename is `<slug>.aux`.
-  src_aux = stage / "#{stem}.aux"
-  if src_aux.exist?
-    FileUtils.cp(src_aux, spec[:comp_dir] / "#{spec[:slug]}.aux")
+  # Persist .aux into the component dir so sibling-volume kaobook builds
+  # can read it for cross-volume xr-refs (Phase 1d). Filename is
+  # `<slug>.aux`. Only the kaobook target writes this — scrbook is not yet
+  # a cross-volume citation source, and writing it would risk both targets
+  # racing over the same path.
+  if target_spec[:persists_aux]
+    src_aux = stage / "#{stem}.aux"
+    if src_aux.exist?
+      FileUtils.cp(src_aux, spec[:comp_dir] / "#{spec[:slug]}.aux")
+    end
   end
 
   dst_pdf
 end
 
-# Copy the assembled markdown to mono/<stem>.md as the citable artifact.
-# The text was already produced by Stage 2 (Mono::Assemble) during the
-# body.tex generation; we just persist it under the released filename.
-def emit_markdown_artifact(stem, assembled_md)
-  dst_md = MONO_DIR / "#{stem}.md"
-  FileUtils.cp(dst_md, MONO_DIR / "#{stem}.prior.md") if dst_md.exist?
+# Persist the assembled markdown to mono/<slug>-v<sem>.md as the citable
+# artifact. Filename has no target suffix — Stage 2's output is identical
+# regardless of target. Both kaobook and scrbook builds write the same
+# bytes; whichever ran most recently wins (idempotent).
+def emit_markdown_artifact(spec, assembled_md)
+  md_stem = "#{spec[:slug]}-v#{spec[:semver]}"
+  dst_md  = MONO_DIR / "#{md_stem}.md"
+  FileUtils.cp(dst_md, MONO_DIR / "#{md_stem}.prior.md") if dst_md.exist?
   dst_md.write(assembled_md)
   dst_md
 end
 
-
 # Overfull-hbox sizes that are systematic widesection / workingnotes
-# false positives (segmentrulewidth ≈ textwidth + this offset). See the
-# inline note in summarize_errors. Tune by inspecting unique recurring
-# values in the log — if a new structural environment appears with a
-# different offset, add it here.
+# false positives in the kaobook target (segmentrulewidth ≈ textwidth +
+# this offset). See the inline note in summarize_errors. Tune by inspecting
+# unique recurring values in the log — if a new structural environment
+# appears with a different offset, add it here.
 WIDESECTION_FALSE_POSITIVE_PT = [163.35951, 153.35951, 162.82196].freeze
 
 def summarize_errors(stage, stem)
@@ -363,15 +408,16 @@ def summarize_errors(stage, stem)
       errors << line.strip
     when /^Overfull \\hbox \(([\d.]+)pt too wide\)/
       pt = Regexp.last_match(1).to_f
-      # Filter widesection / workingnotes false positives: tcolorbox
-      # content there is intentionally \segmentrulewidth wide, which is
-      # ≈163.4pt past \textwidth in kaobook's default geometry. TeX
-      # logs every wider-than-textwidth hbox as overfull even though
-      # it's contained in the wider tcolorbox on the page. The exact
-      # values (163.35951, 153.35951, 162.82196) are constant
-      # signatures of this geometry; filter them so the real overflow
-      # signal isn't drowned out. Tolerance ±0.6pt covers tiny
-      # per-line variation.
+      # Filter widesection / workingnotes false positives in the kaobook
+      # target: tcolorbox content there is intentionally
+      # \segmentrulewidth wide, which is ≈163.4pt past \textwidth in
+      # kaobook's default geometry. TeX logs every wider-than-textwidth
+      # hbox as overfull even though it's contained in the wider tcolorbox
+      # on the page. The exact values (163.35951, 153.35951, 162.82196)
+      # are constant signatures of this geometry; filter them so the real
+      # overflow signal isn't drowned out. Tolerance ±0.6pt covers tiny
+      # per-line variation. (The scrbook target has no widesection
+      # wrapper, so these false positives don't occur there.)
       next if WIDESECTION_FALSE_POSITIVE_PT.any? { |fp| (pt - fp).abs < 0.6 }
       overfull << [pt, line.strip]
     end
@@ -386,8 +432,7 @@ def summarize_errors(stage, stem)
 
   # Overfull \hbox warnings — content extending past its column. Sub-1pt
   # overshoots are usually invisible; the threshold filters those out so
-  # the report focuses on the visible-overflow cases (Joseph's "extending
-  # past the right margin" complaint).
+  # the report focuses on the visible-overflow cases.
   visible = overfull.select { |pt, _| pt >= 1.0 }
   unless visible.empty?
     warn ''
@@ -401,57 +446,57 @@ end
 
 # ── Per-volume build ────────────────────────────────────────────────────────
 
-def build_volume(volume_id, variant:, toc_override: nil)
-  spec = load_volume_spec(volume_id)
+def build_volume(volume_id, target:, variant:, toc_override: nil)
+  spec        = load_volume_spec(volume_id)
+  target_spec = TARGETS.fetch(target)
   abort "outline not found for #{volume_id}: #{spec[:outline]}" unless spec[:outline].exist?
 
-  stage, stem = stage_sources(spec)
-  # Cover and ToC are resolved before build-info.tex is written so main.tex
-  # can render them in frontmatter scope, before \mainmatter and \input{body}.
+  build_dir = MONO_DIR / target_spec[:build_dir_name]
+  vendor_extra = nil
+  if target_spec[:needs_vendor]
+    vendor_path = MONO_DIR / target_spec[:common_dir] / 'vendor' / 'kaobook'
+    unless vendor_path.exist?
+      abort "kaobook not vendored. Expected: #{vendor_path}\n" \
+            "Run: cd mono/kaobook/vendor && git clone --depth 1 https://github.com/fmarotta/kaobook.git"
+    end
+    patch_kao_sty(vendor_path)
+    vendor_extra = vendor_path.to_s
+  end
+
+  stage, stem = stage_sources(spec, target_spec, build_dir)
   cover_rel = stage_cover_pdf(spec, stage) || ''
   toc_enabled = toc_override.nil? ? spec[:toc_enabled] : toc_override
   write_build_info(stage, spec, cover_rel: cover_rel, toc_enabled: toc_enabled)
 
-  # Three-stage markdown-first pipeline — see msc/markdown-first-pipeline.md.
-  #
-  #   Stage 1 (ingest)   : OUTLINE + segments → index.md + chunks/
-  #   Stage 2 (assemble) : chunks + index     → assembled markdown
-  #   Stage 3 (typeset)  : assembled markdown → body.tex (LaTeX)
-  #
-  # Output: mono/<slug>-v<sem>.{pdf,md} as parallel deliverables.
-
-  warn "[#{spec[:slug]}] ingesting (variant: #{variant})…"
+  warn "[#{spec[:slug]}/#{target}] ingesting (variant: #{variant})…"
   Mono::Ingest.ingest(spec.merge(toc_enabled: toc_enabled),
                       stage: stage, variant: variant)
 
-  warn "[#{spec[:slug]}] assembling + typesetting (variant: #{variant}, toc: #{toc_enabled ? 'on' : 'off'})…"
-  assembled_md = assemble_and_typeset(stage, variant: variant)
+  warn "[#{spec[:slug]}/#{target}] assembling + typesetting (toc: #{toc_enabled ? 'on' : 'off'})…"
+  assembled_md = assemble_and_typeset(stage, target_spec, variant: variant)
   stats = collect_stats(stage)
   warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
        "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
 
-  warn "[#{spec[:slug]}] compiling #{stem}…"
-  run_lualatex(stage, stem)
-  pdf = copy_outputs(spec, stage, stem)
+  warn "[#{spec[:slug]}/#{target}] compiling #{stem}…"
+  run_lualatex(stage, stem, vendor_extra: vendor_extra)
+  pdf = copy_outputs(spec, target_spec, stage, stem)
   summarize_errors(stage, stem)
-  md = emit_markdown_artifact(stem, assembled_md)
-  warn "[#{spec[:slug]}] → #{pdf.relative_path_from(ROOT_DIR)}"
-  warn "[#{spec[:slug]}] → #{md.relative_path_from(ROOT_DIR)}" if md
+  md = emit_markdown_artifact(spec, assembled_md)
+  warn "[#{spec[:slug]}/#{target}] → #{pdf.relative_path_from(ROOT_DIR)}"
+  warn "[#{spec[:slug]}/#{target}] → #{md.relative_path_from(ROOT_DIR)}"
 end
 
 # ── Main ────────────────────────────────────────────────────────────────────
 
 def main
-  unless VENDOR_KAO.exist?
-    abort "kaobook not vendored. Expected: #{VENDOR_KAO}\n" \
-          "Run: cd mono/common/vendor && git clone --depth 1 https://github.com/fmarotta/kaobook.git"
-  end
-
   opts = parse_args(ARGV)
-  patch_kao_sty
   FileUtils.mkdir_p(MONO_DIR)
   opts[:volumes].each do |vol|
-    build_volume(vol, variant: opts[:variant], toc_override: opts[:toc_override])
+    build_volume(vol,
+                 target:       opts[:target],
+                 variant:      opts[:variant],
+                 toc_override: opts[:toc_override])
   end
 end
 
