@@ -1,14 +1,26 @@
-# FORMAT-TODO.md — Volume Split, Hierarchy, Numbering, and Compliance Sweep
+# FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes
 
-*Live plan for the cross-cutting cleanup decided over the monograph-build conversation 2026-05-11 / 2026-05-12. PRACTICA.md is the parent navigator; this file owns the detail. Supersedes the single-monograph plan from 2026-05-11 (preserved in git history at `5460fa9`).*
+*Active plan for the conventions-and-infrastructure layer that sits on top of the four-volume markdown-first build pipeline. Parent navigator: PRACTICA. The foundation (volume split, native kaobook hierarchy, markdown-first pipeline, persisted .aux per volume) landed end-of-day 2026-05-12 — see [CHANGELOG](CHANGELOG.md) entry "Monograph build pipeline: from zero to four-volume kaobook output." This file was refocused 2026-05-13 around the next-cycle cross-cutting work: bibliography + citation system, cross-reference / footnote / sidenote / margin-note conventions, and the imported-vs-AAD-native structural distinction.*
 
-The framework ships as **four independent volumes**, one PDF per Part of the prior structure (AAD / TST / LogA / ELI). The earlier "everything in one ~600pp PDF" approach hit predictable limits — too big to digest, too unstable to cite when later volumes are still evolving, too slow to build during iteration. Volumes solve all four problems and let us drop back onto **kaobook's native hierarchy** instead of fighting it with custom counter machinery.
+## Status
+
+The four-volume build is functional and shipping. All four volumes (`aad`, `tst`, `loga`, `eli`) build cleanly via `bin/build-monograph --all`; markdown-first pipeline produces both `mono/<slug>-v<sem>.pdf` and `mono/<slug>-v<sem>.md` as parallel canonical artifacts; persisted `<component>/<slug>.aux` files are committed for cross-volume xr-refs.
+
+The active work below decomposes into three workstreams:
+
+- **Workstream A — Citation system.** Bibliography database, `bin/refs` machinery, `\cite{key}` source form, citation-status field for blind-review handling, anonymization scanner. ASF currently has no structured bibliography — segments carry full author-year-title prose with no `\cite{}` machinery — so this is the largest single workstream.
+- **Workstream B — Cross-references, footnotes, sidenotes, margin-notes.** Obsidian `[[#^anchor]]` form, equation-anchor labels, footnote conventions (zero usage anywhere currently), sidenote (numbered Tufte-style) and margin-note (un-numbered) disciplines, `xr-hyper` for cross-volume refs.
+- **Workstream C — Discipline + structural distinctions.** AAD-specific vs imported (Pearl, etc.) cue, Discussion-segment schema split, auto-cross-ref formula sweep in appendices, FORMAT.md doc sweep, chapter introduction across remaining Parts, FORMAT-compliance linter sweep.
+
+Several architectural decisions are awaiting resolution; those are listed before the workstreams so the answers can flow into the right items as they land.
 
 ---
 
-## The Decided Hierarchy
+## Foundational facts (settled; reference for future work)
 
-A ubiquitous shared vocabulary across source, tooling, and prose. Native LaTeX / kaobook semantics throughout.
+These were decided over the 2026-05-11 / 12 conversation and landed in the build pipeline. Re-decision is not on the table; the items below build on them.
+
+### The hierarchy
 
 | Level | Kaobook env | What it is | Examples |
 |---|---|---|---|
@@ -19,355 +31,216 @@ A ubiquitous shared vocabulary across source, tooling, and prose. Native LaTeX /
 | **Subsection** (= Field) | `\subsection` | A structural section *inside* a Segment | Formal Expression, Epistemic Status, Discussion, Findings, Working Notes |
 | **Subsubsection** | `\subsubsection` | A named area *inside* a Subsection | "Search Log" inside Findings, "Linear case" inside Formal Expression |
 
-**Atoms** (equations, tables, figures, named formulas) sit *within* Subsections and are numbered by kaobook's native counters.
+Atoms (equations, tables, figures, named formulas) sit *within* Subsections and are numbered by kaobook's native counters.
 
-**Appendices** are an exception to the Part→Chapter→Section nesting: each appendix segment renders directly as a `\chapter` under an `\appendix\part{...}` group. There is no intermediate Chapter level inside Appendices — an appendix segment *is* a chapter-level entity, independent. Multiple `## *Appendices* <name>` groups per volume are allowed (AAD has two: "Details" and "Operational Domains").
+**Appendices:** each appendix segment renders directly as a `\chapter` under an `\appendix\part{...}` group. There is no intermediate Chapter level inside Appendices — an appendix segment IS a chapter-level entity. Multiple `## *Appendices* <name>` groups per volume allowed (AAD has two: "Details" and "Operational Domains").
 
-**Vocabulary discipline:**
-- "Volume" is the published artifact (one PDF). "Book" is the conceptual unit. They are interchangeable in casual prose; "Volume" is preferred when emphasizing the publication.
-- The four-Volume structure means each Volume's *Part* level is what we previously called a "Section" of the monograph.
-- The new **Chapter** level fills the grouping gap between Part and Segment — readers got from "scope boundary" to "Definition I.1" with no organizing intermediate.
-
----
-
-## The Numbering Scheme
+### The numbering scheme
 
 Kaobook native, no custom counters:
 
-- **Part**: Roman (I–N) per volume, kaobook default
-- **Chapter**: arabic, reset per Part (Part I → Chapters 1, 2, 3; Part II → Chapters 1, 2; etc.)
-- **Section** (= Segment): arabic, reset per Chapter; cross-ref display via cleveref → `Section 1.2.3` or just `1.2.3` depending on context
-- **Subsection / Subsubsection**: native, generally not cross-referenced
-- **Atoms**: equation/table/figure counters; **reset per Section** so atom IDs stay stable under segment-internal reordering. Display: `(1.2.3.1)` or just `(1.2.3-1)` — TBD during implementation
+- **Part:** Roman (I–N) per volume, kaobook default.
+- **Chapter:** arabic, reset per Part.
+- **Section** (= Segment): arabic, reset per Chapter; cross-ref display via cleveref → `Section 1.2.3` or just `1.2.3` depending on context.
+- **Subsection / Subsubsection:** native, generally not cross-referenced.
+- **Atoms:** equation/table/figure counters; reset per Section so atom IDs stay stable under segment-internal reordering.
+- **Named-atom evergreen cross-refs:** `*[Type (name, from ...)]*` → `\label{atom:<name>}` so `#<name>` resolves directly, independent of positional numbering. *Author-side parsing in place; LaTeX-side `\label{atom:...}` emission queued — see Workstream B item 7.*
 
-**Named-atom evergreen cross-refs**: the name token from `*[Type (name, from ...)]*` eq-tags is the atom's intrinsic identity. The renderer extracts that name and emits `\label{atom:<name>}` on the equation so `#<name>` resolves directly, independent of positional numbering. Same convention applies to named definitions, derived items, etc.
+**Cross-reference evergreen-ness principle:** cross-refs always target intrinsic identity (slug for segments, name for atoms), never positional numbers. The renderer produces the rendered number at compile time; the source never hardcodes one.
 
-**Cross-reference evergreen-ness principle**: cross-refs always target intrinsic identity (slug for segments, name for atoms), never positional numbers. The renderer produces the rendered number at compile time; the source never hardcodes one.
-
----
-
-## Per-Volume Metadata: `mono-meta.yaml`
-
-Each volume directory (`0N-*/`) carries a `mono-meta.yaml` declaring its display title, short tag, cover image, outline entrypoint, and version. The build script reads it to drive volume-specific behavior; defaults kick in for any missing keys.
-
-**Schema** (loose; extend as needs surface):
+### Per-volume metadata: `mono-meta.yaml`
 
 ```yaml
-title:       "AAD: Adaptation and Actuation Dynamics"   # full display title
-short_title: AAD                                        # running heads, refs, filenames
-slug:        aad                                        # bin/build-monograph + output-version id
+title:       "AAD: Adaptation and Actuation Dynamics"
+short_title: AAD
+slug:        aad
 major:       0
 minor:       1
 patch:       0
-outline:     OUTLINE.md                                 # entrypoint, relative to dir
-cover_svg:   AAD-cover.svg                              # full-page cover image
+outline:     OUTLINE.md
+cover_svg:   AAD-cover.svg
+toc:         true
 ```
 
-Version components are explicit (`major` / `minor` / `patch` as separate keys, not a single `version: 0.1.0` string) so `bin/output-version` can read/write them cleanly. The canonical version lives here; no separate `VERSION` file.
+Version components are explicit (`major` / `minor` / `patch` as separate keys, not a single `version: 0.1.0` string) so `bin/output-version` can read/write them cleanly. Each Volume has its own semver, independent of siblings — AAD can be v1.0 (stable, citable) while LogA is at v0.3 (still evolving). The canonical version lives here; no separate `VERSION` file.
 
----
-
-## Volume Frontmatter Sequence
+### Volume frontmatter sequence
 
 Every Volume's frontmatter renders in this fixed order:
 
-1. **Cover** — from the volume's `cover_svg` (declared in `mono-meta.yaml`); rendered via `rsvg-convert` to a single-page PDF and `\includepdf`-ed as the first page. Volumes without a configured cover skip this step.
-2. **Title page + Copyright** (combined on one page) — full title, author(s), license declaration (CC BY-SA — All Rights Reserved unless reassigned), citation block (canonical citation form for sibling-volume cross-references), and build-info stamp (`\buildsemver` / `\buildsha` / `\builddate` injected by the build script via `build-info.tex`).
-3. **Table of Contents** — kaobook `\tableofcontents`, depth TBD (probably through Section so segments appear by name). Suppressible via `--no-toc` flag or `toc: false` in `mono-meta.yaml`.
+1. **Cover** — from `cover_svg`; rendered via `rsvg-convert` to a single-page PDF and `\includepdf`-ed as the first page. Volumes without a configured cover skip this step.
+2. **Title page + Copyright** (combined on one page) — full title, author(s), license declaration, citation block (canonical citation form for sibling-volume cross-references), and build-info stamp.
+3. **Table of Contents** — kaobook `\tableofcontents`, `secnumdepth = 3`, `tocdepth = 3`. Suppressible via `--no-toc` flag or `toc: false` in `mono-meta.yaml`.
 
-Backmatter (bibliography, index, colophon) and the Title-page typographic design are deferred to a later session (see Phase 6).
+Backmatter (bibliography, index, colophon) and proper title-page typographic design are deferred (see *Deferred* below).
 
----
+### Build-info stamp
 
-## Build-Info Stamp
+`build-info.tex` is emitted on every build, defining:
 
-The build script emits `build-info.tex` into the staging directory on every build, defining:
-
-- `\buildsemver` — semver from the volume's VERSION file
-- `\buildsha` — current git short-sha, with `-dirty` suffix when the working tree has uncommitted changes
+- `\buildsemver` — semver from `mono-meta.yaml`
+- `\buildsha` — current git short-sha, with `-dirty` suffix when working tree has uncommitted changes
 - `\builddate` — ISO date (YYYY-MM-DD)
+- `\volumetitle` / `\volumeshorttitle` / `\volumeslug` / `\volumecoverpath` / `\ifvolumetoc`
 
-The preamble inputs this file early so the title page / colophon can render the build provenance. Filename of the PDF carries semver only — `<short-title>-v<semver>.pdf`. Each build overwrites the same file; the previous build is snapshotted as `.prior.pdf` before being overwritten.
+Filename of the PDF carries semver only — `<slug>-v<semver>.pdf`. SHA + date appear in volume frontmatter.
 
----
+### Vocabulary worth holding
 
-## Cross-Volume References
+- **Volume** = the published artifact (one PDF). **Book** = the conceptual unit. Interchangeable in casual prose; "Volume" preferred when emphasizing the publication.
+- **Narrow-area** = anywhere the Tufte-style wide right margin is in play (body column + free margin column to the right). **Wide-area** = anywhere the text spans the full segment band (Discussion / Findings sections via the `segmentwidesection` wrapper). Tables, working-notes boxes, and segment-header rules all interact with this distinction.
 
-Volumes are standalone PDFs but routinely reference each other. Two-tier strategy:
+### What the foundation does NOT change
 
-1. **Primary (when all volumes are built together)**: `xr-hyper` package reads sibling volumes' `.aux` files and produces clickable cross-PDF links with proper section numbers. `.aux` files are version-controlled so they're available to any volume's build.
-2. **Fallback (when sibling `.aux` files aren't present)**: cross-volume refs render as a bibliography-style citation pointing to the sibling volume by its DOI / citation key — e.g., "see Wecker (2026), §1.2.3" — so a reader with only one volume in hand gets a usable reference. Each volume publishes a standard bibliography entry for itself, citable by sibling volumes.
-
-The build script handles the discovery: if a sibling `.aux` exists, use xr-hyper; otherwise fall through to the bibliography form.
-
-**Bibliography, other frontmatter, other backmatter**: full design deferred to a later discussion. Captured here as a TODO so it doesn't get lost.
-
----
-
-## Versioning Per Volume
-
-Each Volume has its own semantic version, independent of the others. AAD can be v1.0 (stable, citable) while LogA is at v0.3 (still evolving).
-
-- **`bin/output-version <volume-id> bump <patch|minor|major>`** utility — increments the version (resetting lesser components to zero) by editing the volume's `mono-meta.yaml` directly. `<volume-id>` is the `01`/`02`/`03`/`04` prefix or the slug `aad`/`tst`/`loga`/`eli`.
-- Version lives in each component's `mono-meta.yaml` (`major` / `minor` / `patch` keys). No separate `VERSION` file.
-- **Build stem**: `<short-title-lower>-v<major>.<minor>.<patch>.pdf` (e.g., `aad-v0.1.0.pdf`) in `mono/`. Filename = the released version.
-- **Git short-SHA shown in volume frontmatter** (and PDF metadata), not the filename. Frontmatter reads e.g. "Build: v0.1.0 · `758cd89` · 2026-05-12" so the build is traceable without polluting the filename.
-- For incremental builds during development (no version bump), the stem stays as the last released version; the frontmatter SHA distinguishes which build the reader is looking at. Workspace-dirty marker (`758cd89-dirty`) when the working tree has uncommitted changes.
-
----
-
-## Smart Rebuilds
-
-A Volume rebuilds only when something it depends on changed. Sources of change:
-
-- **Source files** of the Volume's component dir (`<component>/src/*.md`, `<component>/OUTLINE.md`)
-- **Shared build infrastructure** (`mono/preamble/`, `mono/lib/`, `bin/build-monograph`) — these affect every Volume
-- **Bibliography database** (when it lands)
-- **Sibling volumes' `.aux` files** (for xr cross-references)
-- **Explicit version bump** via `bin/output-version`
-- **`--force` flag** for cases where the cache is wrong or the user wants to be sure (especially after preamble/script edits — even though those should trigger by themselves via shared-infrastructure detection)
-
-Implementation candidates:
-- **`latexmk`**: detects file changes and reruns lualatex/biber as needed. Standard, robust.
-- **Per-volume hash cache**: build script computes a content hash over the volume's inputs (source files + shared infra + biblio); skips rebuild if hash unchanged. Simpler than latexmk for our needs.
-- **`\includeonly` / kaobook subfiles**: for chapter-level incremental compile *within* a volume. Useful during heavy editing of one chapter. Possibly overkill for now; revisit if per-volume builds get slow.
-
-Probably start with the per-volume hash cache (simpler, fits our build script), and add latexmk-style or `\includeonly` later if needed.
-
----
-
-## Implementation Plan, by Phase
-
-Phases assume each predecessor has landed. Phase 1a (ToC) is independent and can land first.
-
-### Phase 1a — Per-Volume Table of Contents
-
-- [ ] Each Volume's build emits a ToC in front-matter
-- [ ] Native kaobook `\tableofcontents`
-- [ ] Decide `secnumdepth` (probably 3 — through Section/Segment, not deeper)
-- [ ] `--no-toc` flag and/or `toc: false` signal in OUTLINE.md frontmatter to suppress
-
-### Phase 1b — Volume Split (Build Pipeline)
-
-- [ ] **Restructure mono/ as output-only.** mono/ holds PDFs, markdowns (when emission lands), `.build/` staging, README, .gitignore. Move build infrastructure (`main.tex`, `preamble/`, `lib/`, `vendor/`) into a new `common/` directory.
-- [ ] **CLI shape**: `bin/build-monograph aad` (or `01`, `tst`, `02`, etc.) builds one volume; `bin/build-monograph --all` builds all four in dep order. Bare invocation defaults to `--all`. No `--volume` flag — the positional arg is the volume id.
-- [ ] **Per-volume PDF output** at `mono/<short-title>-v<major>.<minor>.<patch>.pdf`.
-- [ ] Each Volume's build reads its `<component>/OUTLINE.md` as entrypoint and its `<component>/mono-meta.yaml` for version + cover + title.
-- [ ] **Per-volume `.aux` retention**: on successful build, copy the volume's `.aux` out of `.build/` into the volume's component dir (e.g., `01-aad-core/aad.aux`); sibling builds read these for Phase 1d xr-refs.
-- [ ] Version + frontmatter wiring: `bin/output-version` reads/writes `mono-meta.yaml`; the build-info stamp continues using `\buildsemver` (constructed from `major.minor.patch`) / `\buildsha` / `\builddate`.
-
-### Phase 1c — Native LaTeX Hierarchy (Renderer)
-
-- [ ] Map outline H2 → `\part`, H3 → `\chapter`, segment → `\section`
-- [ ] Drop the custom `\segment` counter and `\thesegment` overrides
-- [ ] Migrate per-segment-type rendering (tints, status badges, stage glyphs, header strip) onto a `\segheading` macro that wraps `\section` with the styling
-- [ ] Update cleveref formats to use native section counters (`Section 1.2.3` etc.)
-- [ ] Atoms (equation/table/figure) — reset per Section, named-atom labels via `*[Type (name, ...)]*` extraction
-
-### Phase 1d — Cross-Volume References + Persisted `.aux`
-
-- [ ] `xr-hyper` integration in each Volume's preamble, configured to read sibling Volumes' `.aux` files
-- [ ] **`.aux` files persisted and version-controlled** — each successful Volume build copies its `.aux` (and any auxiliary metadata cleveref needs) out of `.build/` into the volume directory (e.g., `01-aad-core/aad.aux`) and that artifact is committed. Sibling builds read these committed `.aux` files for cross-volume label resolution.
-- [ ] Cross-volume ref fallback: when sibling `.aux` not present (or version-mismatched), render as bibliography citation pointing to the sibling volume's canonical citation form
-- [ ] Each Volume publishes a standard bibliography entry for itself (declared in `mono-meta.yaml` or a sibling `cite-self.bib`) so sibling-volume citations consume it
-- [ ] `.aux` staleness detection: warn or error when a sibling `.aux` was written against a different sibling-volume semver than the one being referenced
-
-### Phase 1e — Smart Rebuild
-
-Per-volume hash cache so a Volume rebuilds only when its inputs actually changed. Triggers:
-
-- Source files inside the Volume's component dir (`<component>/src/**`, `<component>/OUTLINE.md`, `<component>/mono-meta.yaml`)
-- Shared build infrastructure (`mono/preamble/**`, `mono/lib/**`, `bin/build-monograph`, `bin/output-version`)
-- Bibliography database (when it lands in Phase 6)
-- Sibling Volumes' persisted `.aux` files (xr cross-refs may change)
-- VERSION file change (always rebuilds, regardless of source-hash)
-- `--force` flag (manual override)
-
-Implementation:
-
-- [ ] Per-volume input-set definition — what files contribute to the hash
-- [ ] Hash computation + cache (`mono/.build/<volume>/.input-hash`)
-- [ ] Skip-when-unchanged path in the build script
-- [ ] `--force` flag plumbed through
-- [ ] Version-bump triggers unconditional rebuild
-- [ ] `bin/build-monograph --all` builds dirty volumes in dependency order (so a downstream volume rebuild can see the upstream volume's freshly-written `.aux`)
-
-### Phase 2 — Documentation
-
-- [ ] Update `FORMAT.md` with new vocabulary (Volume / Part / Chapter / Section / Subsection / Subsubsection) and the named-atom evergreen cross-ref convention
-- [ ] Update `CLAUDE.md` references to the hierarchy
-- [ ] Decision-record: this file is the live record until docs catch up
-
-### Phase 3 — OUTLINEs (Source-side Structural Work)
-
-- [ ] In each component `OUTLINE.md`, introduce H3 chapter headings between Part-level H2s and segment tables. Joseph chooses the chapter groupings (with build-side help on dependency-cluster analysis if useful)
-- [ ] For Parts with only one Chapter, the source can use a placeholder H3 ("Chapter 1: All segments") until proper grouping is decided
-- [ ] Strip manual numbering from Part and Chapter titles (LaTeX numbers them now)
-- [ ] Decide whether table section-codes (`| S |` / `| I |` / `| E1 |` / `| L1 |`) get normalized — optional, defer if not blocking
-
-### Phase 4 — Source segments: cross-ref hygiene
-
-- [ ] **Class A** broken slug refs: validate every `#slug-name`, fix typos / stale renames, mark genuinely missing targets
-- [ ] **Class B** inline pseudo-refs (`Prop A.1`, `Step 4`): decide promote-to-named-atom vs. leave-as-prose per case
-- [ ] **Named-atom cross-ref audit**: confirm names from `*[Type (name, ...)]*` tags are unique within their segment / volume scope; verify `#name` resolves to the right atom
-- [ ] **Cross-volume cross-ref audit**: identify refs that target a sibling Volume; verify they resolve via xr-hyper
-
-### Phase 5 — Source segments: FORMAT compliance (linter)
-
-- [ ] `bin/lint-md --fix` for auto-fixable categories (hard-wraps, emphasis-underscores)
-- [ ] Manual / agent-driven sweep for math compatibility (`|`/`\|`/`<`/`>`/`*` in math)
-- [ ] `\text` outside `$` per-instance review
-- [ ] Other linter findings (~200+ total)
-
-### Phase 6 — Deferred / Optional
-
-- [ ] **Table dynamic-shrinking heuristic** — most tables don't shrink to fit content even when they could; auto-detect overflow and scale (via `\resizebox` or stepping `\footnotesize → \scriptsize` for very wide tables). Goal: more tables fit on one page without per-table source intervention.
-- [ ] **Backmatter design** — bibliography, index, colophon; full layout and content discussion deferred to a later session
-- [ ] **Title-page typographic design** — current implementation is the minimum (title + author + build-info); proper typography for license block, citation form, etc. deferred
-- [ ] **Per-volume preface** — short reader-orienting text at the start of each Volume (between ToC and Part I); tone is conversational, framework-positioning
-- [ ] **Companion PDFs** — specialized cuts (selected chapters, theme-based) for particular audiences; future work
-- [ ] **`\includeonly` chapter-incremental builds** — only if per-volume builds become uncomfortably slow
-- [ ] **Section letter codes** normalization in OUTLINE tables
-- [ ] **Slug rename audit** — separate concern, naming-cycle work
-
----
-
-## Sequencing notes
-
-- **Phase 1a (ToC)** is independent and lands first as a quick win.
-- **Phase 1b (volume split) and 1c (native hierarchy) land together** — they're tightly coupled; splitting volumes without dropping the custom counter machinery is more work than doing both at once.
-- **Phase 1d (xr cross-refs) follows 1b** — once volumes exist, cross-volume refs become a thing.
-- **Phase 1e (smart rebuild)** can land anytime after 1b/1c — it's an optimization, not a correctness fix.
-- **Phase 2 (docs)** can run in parallel with Phase 3 once Phase 1 lands.
-- **Phase 3 (chapter introduction)** can run in parallel for each component; Joseph drives one component while a sub-agent could draft the strawman for others.
-- **Phases 4 and 5 (cross-ref + FORMAT cleanup)** delegate cleanly to an agent once Phase 3 stabilizes the source structure.
-
----
-
-## What this plan does NOT change
-
-- Slug names themselves (canonical segment IDs)
+- Slug names (canonical segment IDs)
 - The substance of segment content
-- The segment promotion stages (FORMAT.md §Promotion Workflow)
-- The four-Volume top-level structure (decided)
-- Existing cross-ref slug syntax (`#slug-name`) — the surface convention stays; only what it resolves to changes
-- The kaobook visual register already built (tints, status badges, eq-tag marginnotes, Working Notes panels, Tufte tables, italic teal, mono olive, navy refs) — 100% portable to the new structure
+- Segment promotion stages (FORMAT.md §Promotion Workflow)
+- The four-Volume top-level structure
+- The `#slug-name` cross-ref surface convention (only what it resolves to changed)
+- The kaobook visual register (tints, status badges, eq-tag marginnotes, Working Notes panels, Tufte tables, italic teal, mono olive, navy refs)
 
 ---
 
-## Progress Snapshot (2026-05-12, end-of-day)
+## Open architectural questions (awaiting decision)
 
-**Landed (committed):**
-- ✅ Phase 1a (per-volume ToC) — `\tableofcontents` emitted in `\frontmatter` scope from `common/main.tex`; `secnumdepth = 3` (parts/chapters/sections all numbered); `tocdepth = 3`; opt-out via `mono-meta.yaml` `toc: false` and CLI `--no-toc`; build-info macro `\ifvolumetoc` gates the emission
-- ✅ Phase 1b (volume split) — `bin/build-monograph <volume>` and `--all`; each volume builds to `mono/<slug>-v<M>.<m>.<p>.pdf`; per-volume `.aux` persisted to `<component>/<slug>.aux` for Phase 1d
-- ✅ Phase 1c (native kaobook hierarchy) — `outline_walker.rb` parses role-prefix convention; build pipeline emits `\part` / `\chapter` / `\section` natively. Section-level segments drive off kaobook's native `section` counter (custom `\segment` counter retired); appendix segments render as `\chapter` via `\segmentappendixchapter` so an appendix segment *is* its chapter (the FORMAT-TODO design). `\appendix` resets the chapter counter and our `\thechapter` override uses `\AlphAlph` so appendix chapters are A, B, …, Z, AA, AB, … with overflow protection. Cleveref formats overridden for both `section` and `chapter` counters so `\cref{seg:foo}` renders as a bare number (matching the existing prose convention "see Definition #def-foo" → "see Definition 1.4" or "see Derivation A").
-- ✅ Directory restructure: `mono/` is output-only; `common/` holds main.tex / preamble / lib / vendor / kaobook
-- ✅ `mono-meta.yaml` schema landed (`title` / `short_title` / `slug` / `major`/`minor`/`patch` / `outline` / `cover_svg` / `toc`)
-- ✅ `bin/output-version <slug> show|bump <patch|minor|major>` operates on `mono-meta.yaml` directly
-- ✅ Cover-page rendering (rsvg-convert) — AAD cover working; other volumes need covers authored. Cover-page emission lifted out of `body.tex` into `main.tex` frontmatter via the `\volumecoverpath` build-info macro, so the frontmatter sequence is cover → ToC → mainmatter.
-- ✅ Build-info stamp (`\buildsemver` / `\buildsha` / `\builddate` / `\volumetitle` / `\volumeshorttitle` / `\volumeslug` / `\volumecoverpath` / `\ifvolumetoc`); dirty-tree detection
-- ✅ All-arabic numbering register — chapters and chapter-prefixed equation/table/section references render as arabic (`3.5`, `Table 3.1`, `Definition 3.4`). Parts retain Roman (kaobook default, standard convention).
+Resolutions feed into the workstream items below. Listed in the order they unblock the most work.
 
-**Mid-flight:**
-- 🚧 AAD's `OUTLINE.md` reorganized into the role-prefix convention with chapters; Parts II/III/IV awaiting source-side reorganization (current implicit-Chapter default lets them build)
-- 🚧 Cover artwork: AAD done; TST / LogA / ELI pending
-- 🚧 Build-info macros declared but the title page that consumes them is minimal — proper title-page+copyright layout pending (Phase 6)
+1. **Where does the bib database live?**
+   - Path A: `~/src/agentic-systems/refs/` (ASF-owned)
+   - Path B: `~/src/refs/` (shared parent, both projects read; single source of truth)
+   - Path C: ASF references `~/src/neurips/refs/` directly (couples ASF to NeurIPS)
 
-**Not yet started:**
-- ✅ **Markdown-first restructure (landed across Stages 1–3)** — design at [`msc/markdown-first-pipeline.md`](msc/markdown-first-pipeline.md). The pipeline runs as a chunked intermediate flow: `source-outline + source-segments → index + chunks → assembled markdown → LaTeX → PDF`. The duplication between the (retired Python) `bin/build` and the Ruby `build-monograph` walks is gone; the assembled markdown is the canonical citable artifact and the PDF is one rendering of it.
-  - ✅ **Stage 1 (ingest)** — `common/lib/ingest.rb` walks `OUTLINE.md` and produces `mono/.build/<slug>/{index.md, chunks/*.md}`. Each chunk is print-ready markdown with the documented metadata-block contract. Per-section academic numbering native; appendix chapter letters via `\AlphAlph`. Source hashes recorded for incremental-rebuild support (not yet implemented; the per-chunk hashing is in place for the next pass).
-  - ✅ **Stage 2 (assemble)** — `common/lib/assemble.rb` stitches index + chunks into the canonical per-volume markdown at `mono/<slug>-v<sem>.md`. Cross-refs resolved to `[Type N.M](#slug)` anchor links. The Python `bin/build` legacy moved to `_obs/bin-build-superseded-2026-05-12.py`.
-  - ✅ **Stage 3 (typeset)** — `common/lib/typeset.rb` converts assembled markdown to LaTeX via `Kramdown::Converter::AsfVolumeLatex`. Role-prefix italic on H2/H3 maps to `\addchap` / `\part` / `\chapter` / appendix-with-`\AlphAlph`; segment headers with metadata block become `\segmenthead` / `\segmentappendixchapter`. Segment-internal subhead transitions (epigraph open/close, wide-section for Discussion/Findings, workingnotes wrapper) use level-aware wrapper closing so nested H6 subheads inside Working Notes don't prematurely close the wrapper. `\mainmatter` boundary emitted exactly once on the first `*Part*` / `*Appendices*` crossing. Resolved cross-refs `[Type N.M](#slug)` route through `\cref{seg:slug}` for bare-number rendering. HTML anchors suppressed. `main.tex` simplified to `\input{body}` (typeset output handles frontmatter / mainmatter scope transitions internally).
-  - Verified end-to-end across all four volumes: AAD 489p (vs prior 489p), TST 56p (vs 55p), LogA 61p (vs 61p), ELI 53p (vs 54p). The ±1-page deltas are layout-level (slight spacing differences around section transitions); no fatal LaTeX errors; wrapper begin/end pairs all balance.
+   Trade-offs: Path A is simplest to start; Path B is the single-source-of-truth ideal; Path C couples ASF to NeurIPS. Lean B; A is the safe fallback.
 
-**Distinct from the broader doc/schema work:**
+   **Unblocks:** Workstream A items A1–A5.
 
-- ⬜ **Distinct schema for Discussion-type segments (FORMAT.md update)** — claims and discussions need a structural distinction in FORMAT.md. Claim segments carry Formal Expression / Epistemic Status / Discussion / Findings subheads because those are the load-bearing parts of an epistemic-architecture claim. Discussion segments — chapter intros, scope meta-discussion, meta-segments like the M-series — don't need Formal Expression or Epistemic Status sections; they're not propositions defending themselves, they're orientation prose. The current schema asks them to fake those subheads with placeholder content. FORMAT.md should split: claim schema (current) vs discussion schema (just body, with the subheads optional rather than required). Joseph 2026-05-12.
-- ⬜ **Incremental rebuild (per-chunk hash cache)** — the index.md frontmatter records source hashes for every chunk, but ingest still re-emits all chunks on every build. The next pass should: (a) read the prior index.md if present, (b) for each segment-chunk entry, compare current source-file hash to recorded hash, (c) skip regeneration when unchanged. Same discipline at the outline level for the index itself. Stage 1 of the pipeline already supports this architecturally — it's an implementation pass, not a redesign.
-- ⬜ Phase 1d — xr-hyper cross-volume refs, sibling-volume citations
-- ⬜ Phase 2 — FORMAT.md / CLAUDE.md doc sweep (vocabulary alignment with the role-prefix / native-hierarchy / chunk-format conventions)
-- ⬜ Phase 3 — chapter introduction across Parts II/III/IV of AAD + other components
-- ⬜ Phase 4 — cross-ref hygiene sweep
-- ⬜ Phase 5 — FORMAT-compliance linter sweep
-- ⬜ Phase 6 — backmatter design, title-page typography, per-volume preface, dependency-graph SVG → PDF pipeline for image rendering
+2. **How to mark imported-vs-AAD-native content?**
+   - Option α: `origin: imported|aad-native|recapitulation` frontmatter field + visual cue at render-time
+   - Option β: Distinct segment type `recapitulation` (orthogonal to `definition` / etc.)
+   - Option γ: Convention-only in Epistemic Status framing, no machinery
 
-**Table rendering deferred items** (logged in source-level TODOs at `common/lib/segment_renderer.rb` `convert_table`):
-- Narrow-direction adaptation: a wide-area table whose content would fit body width could be narrowed to match the surrounding prose column (Table 7.2 example, rare enough to defer).
-- Snap-to-content-width: when a column's normalized weight is just slightly under one of the actual cell widths (within an epsilon), snap up to that cell width to avoid wrapping by just a few characters.
-- Source-side math reflow: a handful of display equations (e.g., the 254.9pt one at AAD line 7506) are inherently wider than the page and don't break naturally. Author-side line-break decisions needed — `\\` or `aligned` blocks in the source.
+   Most use cases are imports-within-otherwise-AAD-segments (one segment isn't purely imported), which leans α.
 
-**Tighter typography candidates:**
-- Status badges + stage glyphs on appendix-chapter headings render as a small indicator strip below kaobook's chapter glyph — could be promoted into the chapter heading itself once a tighter visual register is decided.
-- Appendix-chapter ToC entries use the `\chapter[short]{rich}` two-arg form so the ToC stays compact. If further compression is wanted, a custom `\l@appendixchapter` style is the next step.
-- Cover artwork for TST / LogA / ELI not yet authored (AAD's cover lives at `01-aad-core/AAD-cover.svg`).
-- Title page is minimal — proper layout per the frontmatter sequence spec (Cover → Title + Copyright → ToC) is Phase 6.
+   **Unblocks:** Workstream C item C12.
+
+3. **Sidenote source-side convention.**
+   - Pandoc inline-footnote: `^[content here]` (cleanest; defines content at call site)
+   - Mark + definition-elsewhere: `^[1]` ... separate definition
+   - Magic-comment: `<!-- sidenote: content -->`
+
+   Lean toward pandoc inline-footnote for source-locality.
+
+   **Unblocks:** Workstream B item B9.
+
+4. **Cross-volume xr-refs fallback form.**
+   When sibling `.aux` is missing or version-mismatched, render as:
+   - "see Wecker (2026), AAD §1.2.3" (bibliography-form)
+   - `[AAD #def-foo]` (placeholder, marked for human review)
+   - Soft cross-reference like the in-review handling in Workstream A
+
+   Each volume's canonical citation form needs declaring (in `mono-meta.yaml`) for whichever form is chosen.
+
+   **Unblocks:** Workstream B item B11.
+
+5. **Migration sweep scope.**
+   ~200+ prose citations exist in ASF segments. Options:
+   - Full sweep (one Joseph-author session per ambiguous-key resolution; many sessions)
+   - Incremental (convert as segments are touched for other reasons; drift risk)
+   - Hybrid (full sweep on high-traffic segments, incremental on the rest)
+
+   Lean hybrid.
+
+   **Unblocks:** Workstream A item A3 phasing.
 
 ---
 
-## Handoff Notes (current as of end of 2026-05-12)
+## Workstream A — Citation system
 
-**State of the build:** all four volumes build cleanly via `bin/build-monograph --all`. The markdown-first pipeline is the sole source path; each volume produces both `mono/<slug>-v<sem>.pdf` and `mono/<slug>-v<sem>.md` as canonical artifacts. The PDF compiles and matches the assembled markdown structure.
+Goal: ASF parity with the NeurIPS workspace's citation discipline (`~/src/neurips/refs/entries/*.yml` + `bin/refs` + `\cite{key}` source form), extended with a citation-status field for the blind-review case.
 
-**Vocabulary worth holding (Joseph 2026-05-12):** "narrow-area" = anywhere the Tufte-style wide right margin is in play (body column + free margin column to the right). "Wide-area" = anywhere the text already spans the full segment band (Discussion / Findings sections via the `segmentwidesection` wrapper; the segmentrulewidth = textwidth + sep + marginparwidth). Tables, working-notes boxes, and segment-header rules all interact with this distinction; keep the vocabulary when reasoning about width-related rendering choices.
+- [ ] **A1. Establish the bib database location.** Pending open question 1. Seed from the NeurIPS database + the prose citations currently in ASF segments. YAML schema: bibkey, full citation, DOI, publication date, found date (when ASF first cited), verification date (when last checked against primary source), local PDF path (if any), citation-status (`pre-publication` / `in-review` / `preprint` / `published` / `withdrawn`), citation-domain (AAD / TST / LOGA / ELI / cross).
+- [ ] **A2. Stand up `bin/refs` for ASF.** Port from NeurIPS (`add` / `verify` / `lint` / `search`); extend with the citation-status field for in-review handling. Conditional rendering: when the citing volume is itself anonymized, in-review citations render as soft "Wecker, in preparation" or local-source pointer; otherwise full citation. Same machinery covers the future case where ASF papers themselves go to blind-review venues.
+- [ ] **A3. Run `bin/migrate-cites` across ASF segments.** ~200+ prose citations. Phasing per open question 5. Each ambiguous match (`[Hintikka 1991]` → multiple bib entries) flags for Joseph-author resolution.
+- [ ] **A4. Wire biblatex / natbib into `common/main.tex`.** The `% kaobiblio loaded once we wire biblatex (task 7)` comment at `common/main.tex:31` is the marker. Match NeurIPS's bracketed-superscript natbib config (`super,sort&compress`) for source-form `\cite{key}` / `\citet{key}` / `\citep{key}` rendering with postnotes. Bibliography position in volume frontmatter / backmatter to be decided alongside backmatter design (deferred).
+- [ ] **A5. Anonymization scanner (`refs/deny-list.yml`).** Port from NeurIPS. Relevant for the future when ASF papers themselves go to blind-review venues; also prevents accidental ASF self-citation in NeurIPS submissions.
 
-**Pipeline shape:**
+---
 
-```
-source-outline + source-segments
-  │
-  │ Stage 1 (Mono::Ingest)
-  ▼
-mono/.build/<slug>/{index.md, chunks/*.md}
-  │
-  │ Stage 2 (Mono::Assemble)
-  ▼
-mono/<slug>-v<sem>.md   ← canonical citable artifact
-  │
-  │ Stage 3 (Mono::Typeset → AsfVolumeLatex)
-  ▼
-body.tex → LuaLaTeX → mono/<slug>-v<sem>.pdf
-```
+## Workstream B — Cross-refs, footnotes, sidenotes, margin-notes
 
-The design doc at [`msc/markdown-first-pipeline.md`](msc/markdown-first-pipeline.md) covers the chunk-format contract, the index-file format, and the architectural commitments.
+Goal: Adopt NeurIPS's cross-reference / footnote conventions for ASF, then extend with sidenote + general-purpose margin-note disciplines beyond the equation-tag-only current state. Wire `xr-hyper` for cross-volume references.
 
-**Suggested next moves in order of impact:**
+- [ ] **B6. Add Obsidian `[[#^anchor]]` cross-ref form.** In addition to bare `#slug`. Cleveref typed-noun rendering ("Theorem 1.1", "Section 2"). `^eq-name` for equations routes to `\eqref{}` for parenthesized numbers. Coexists with `#slug` (which stays as the segment-level cross-ref); `[[#^anchor]]` extends the system to atom-level refs.
+- [ ] **B7. Land `\label{atom:<name>}` emission.** Phase 1c-tail completion from the prior plan. The author-side parsing of `*[Type (name, from ...)]*` is in place; the LaTeX-side `\label` emission isn't. Once landed, named-atom evergreen cross-refs work end-to-end and unblock C15 (auto-cross-ref formula sweep).
+- [ ] **B8. Specify footnote convention in FORMAT.md.** Both `[^anchor]` markdown form and `\footnote{...}` raw-TeX form per NeurIPS AUTHORING.md §2.4. Currently zero footnote usage anywhere in ASF segments — convention establishment is the work.
+- [ ] **B9. Sidenote convention (Tufte-style numbered margin note).** Pending open question 3. Source-side convention TBD; renders to `\sidenote{...}` LaTeX macro using kaobook's machinery. Distinct from the un-numbered margin-note (B10): a sidenote carries a number that ties to its in-line callout, a margin-note just appears in the margin.
+- [ ] **B10. Generalize `\marginnote{...}` discipline.** Currently used only for equation-tag emission via `\eqtag{...}`. Extend to author-driven margin annotation with a source-side convention (TBD). The un-numbered "just there in the margin" form Joseph distinguished from sidenotes.
+- [ ] **B11. Wire `xr-hyper` into preamble.** Phase 1d. The `.aux` files are persisted (`01-aad-core/aad.aux` etc.); `xr-hyper` reads sibling-volume `.aux` for cross-volume label resolution. Fallback form pending open question 4. `.aux` staleness detection: warn or error when a sibling `.aux` was written against a different sibling-volume semver than the one being referenced.
 
-1. **Phase 2 doc sweep.** FORMAT.md and CLAUDE.md still reference the pre-restructure structure in places. Update vocabulary: Volume / Part / Chapter / Section (= Segment); the chunk format; the markdown-first pipeline; the narrow-area / wide-area distinction. Most useful for de-novo audits and future-agent onboarding.
-2. **Discussion-segment schema split** in FORMAT.md (logged above). Pairs naturally with Phase 2 since both touch FORMAT.md.
-3. **Phase 1d xr-hyper cross-volume refs.** The `.aux` files are persisted per volume; the cross-volume refs from segments to sibling-volume slugs would resolve cleanly with `xr-hyper` wired into the preamble.
-4. **Phase 1e incremental rebuild.** Per-chunk hashes are already in the index; ingest just needs to read the prior index and skip regeneration when source-hash matches.
-5. **Phase 3 chapter introduction across Parts II/III/IV.** AAD Part I is fully chapterized; same convention for the rest of AAD and the other components. The walker's implicit-Chapter default handles unchapterized parts gracefully meanwhile.
+---
 
-**Files worth knowing about (current layout):**
+## Workstream C — Discipline + structural distinctions
+
+Goal: The conventions that distinguish *what* segments are doing (AAD-internal vs imported, claim vs discussion, in-flight vs settled) from how they render. Plus the documentation + sweep work that catches up the corpus to the new conventions.
+
+- [ ] **C12. AAD-specific vs imported distinction.** Pending open question 2. Lightweight visual or structural cue at frontmatter / segment-type / Epistemic-Status level. Especially for segments like `def-pearl-causal-hierarchy` where the content is explicitly external (Pearl 2009; Bareinboim et al. 2022). The Pearl-hierarchy Part I → Part II move (TODO line 362) is one specific instance; this item generalizes it.
+- [ ] **C13. Citation-status field on `refs/entries/`.** (`pre-publication` / `in-review` / `preprint` / `published` / `withdrawn`). Build conditionally renders soft cross-references for `in-review` status when the citing volume is itself under blind review; otherwise renders full citation. Subsumes part of A2 — the field is declared in A1, the conditional-rendering machinery lands here.
+- [ ] **C14. Discussion-segment schema split in FORMAT.md.** Already flagged. Claim-segment schema (Formal Expression / Epistemic Status / Discussion / Findings required) vs discussion-segment schema (body-only, subheads optional). The Discussion-as-chapter-intro renderer mode (commit `8da83cd`) suppresses subheads at render-time; the source still has them. FORMAT.md should split the schema so authors don't have to fake it.
+- [ ] **C15. Auto-cross-ref formula sweep in appendices.** Phase 4 of the prior plan. Many manual "Prop A.1" / "(7) above" / "Step 4" / "as shown in (12)" references still exist in appendix segments. Once B7 lands (named-atom labels), this sweep replaces manual cross-refs with `[[#^name]]` form and the renderer produces the rendered number.
+- [ ] **C16. FORMAT.md doc sweep.** Vocabulary alignment with the conventions landed in foundation work + added through workstreams A/B/C. The narrow-area / wide-area vocabulary, the chunk format, the markdown-first pipeline, the new citation conventions, the cross-reference convention extensions — all need representation in FORMAT.md so de-novo audits and future-agent onboarding hit the right discipline. Pairs naturally with C14 (both touch FORMAT.md). CLAUDE.md gets the parallel sweep.
+- [ ] **C17. Chapter introduction across Parts II/III/IV (AAD + other components).** AAD Part I is fully chapterized; AAD Parts II/III/IV use the walker's implicit-Chapter default. Same convention for the rest of AAD and for TST / LogA / ELI's outlines. Joseph chooses chapter groupings (with build-side help on dependency-cluster analysis if useful). For Parts with only one Chapter, the source can use a placeholder H3 ("Chapter 1: All segments") until proper grouping is decided.
+- [ ] **C18. FORMAT-compliance linter sweep.** Phase 5 of the prior plan. `bin/lint-md --fix` for auto-fixable categories (hard-wraps, emphasis-underscores, `_` in `\text{}`); manual / agent-driven sweep for the rest (math compatibility issues — `|` / `\|` / `<` / `>` / `*` in math; `\text` outside `$`; etc.). ~200+ findings across the corpus.
+
+---
+
+## Deferred / outside-scope
+
+Items previously tracked but not blocking the three workstreams. Lifted out so the active layout reads cleanly.
+
+- **Backmatter design** — bibliography rendering layout, index, colophon. Surfaces during Workstream A landing (the bibliography position in the ToC + page-break treatment); design discussion deferred to a later session.
+- **Title-page typographic design** — current minimum (title + author + build-info stamp); proper layout for license block, citation form, etc. deferred.
+- **Per-volume preface** — short reader-orienting text at the start of each Volume (between ToC and Part I); tone is conversational, framework-positioning.
+- **Companion PDFs** — specialized cuts (selected chapters, theme-based) for particular audiences.
+- **Smart rebuild (per-volume hash cache)** — Phase 1e from the prior plan. The index.md frontmatter records source hashes for every chunk, but ingest still re-emits all chunks on every build. Architecture in place; implementation pass pending. Lower priority than A/B/C since the build is already fast enough.
+- **`\includeonly` chapter-incremental builds** — only if per-volume builds become uncomfortably slow.
+- **Section letter codes normalization in OUTLINE tables** — optional tidying.
+- **Slug rename audit** — separate concern, naming-cycle work; lives at PRACTICA §"Names & Lexicon" and `msc/naming/`.
+- **Cover artwork for TST / LogA / ELI** — AAD's cover lives at `01-aad-core/AAD-cover.svg`; siblings need authoring.
+- **Dependency-graph SVG → PDF pipeline for image rendering** — separate piece similar to cover artwork; `rsvg-convert` invocation.
+- **Table-rendering polish** — narrow-direction adaptation, snap-to-content-width epsilon, source-side math reflow for inherently-wider-than-page equations. In-source TODOs at `common/lib/segment_renderer.rb` `convert_table` block. The current rendering handles the common cases; these are residual edge-case improvements.
+- **Tighter typography candidates** — status badges / stage glyphs on appendix-chapter headings (currently a small indicator strip below the chapter glyph); `\l@appendixchapter` style for tighter ToC entries; etc. Cosmetic.
+- **In-source TODOs in `common/lib/`** — `AsfLatex` / `AsfVolumeLatex` inheritance vs mixin design; chunk-format contract expressed in two places (extract to `Mono::ChunkFormat`); `**Status**: missing` conflating epistemic-status with existence-status. Pick up when those modules need touching for other reasons.
+
+---
+
+## Files worth knowing about (current layout)
 
 - `bin/build-monograph` — three-stage pipeline orchestrator
 - `bin/output-version <slug> show|bump <patch|minor|major>` — per-volume semver utility (operates on `mono-meta.yaml`)
-- `common/main.tex` — LaTeX entrypoint template (single `\input{body}` since Stage 3 emits the whole pipeline-result into body.tex)
+- `bin/lint-md` — markdown-convention linter (~880 lines; math-compat, voice, formatting)
+- `bin/lint-outline` — outline + segment dependency linter (~640 lines; deps, cross-refs, orphans)
+- `common/main.tex` — LaTeX entrypoint template (single `\input{body}` since Stage 3 emits the whole pipeline result into `body.tex`)
 - `common/preamble/*.tex` — preamble fragments (`setup`, `environments`, `status-badges`, `eq-tags`)
 - `common/lib/outline_walker.rb` — role-prefix-aware OUTLINE parser; HTML-comment stripping at file-read
-- `common/lib/ingest.rb` — Stage 1; chunk and index emission with hash recording
+- `common/lib/ingest.rb` — Stage 1; chunk + index emission with hash recording
 - `common/lib/assemble.rb` — Stage 2; chunk stitching with cross-ref resolution
 - `common/lib/typeset.rb` — Stage 3; `Kramdown::Converter::AsfVolumeLatex`
-- `common/lib/segment_renderer.rb` — `Kramdown::Converter::AsfLatex` (base class with shared converter logic; AsfVolumeLatex inherits)
+- `common/lib/segment_renderer.rb` — `Kramdown::Converter::AsfLatex` (base class)
 - `<component>/mono-meta.yaml` — per-volume metadata (title, slug, version, cover, toc)
-- `<component>/<slug>.aux` — persisted aux for Phase 1d xr-refs (committed)
+- `<component>/<slug>.aux` — persisted `.aux` for cross-volume xr-refs (committed)
 - `mono/.build/<slug>/{index.md, chunks/*.md}` — Stage 1 output (gitignored)
-- `msc/markdown-first-pipeline.md` — design doc; load-bearing reference for the chunked-intermediate architecture
+- `mono/<slug>-v<sem>.{pdf,md}` — released artifacts
+- `msc/markdown-first-pipeline.md` — design doc; load-bearing reference for the chunk-format contract
 
-**In-source TODOs to know about** (for the next agent who touches table rendering):
+NeurIPS workspace cross-references (the conventions Workstream A and parts of B port from):
 
-- `common/lib/segment_renderer.rb`:
-  - `convert_table` block: narrow-direction adaptation + snap-to-content-width epsilon (logged TODOs in the file)
-  - Math source-length over-estimation: `cell_visual_length` does a reasonable job stripping LaTeX commands, but the heuristic could be refined further with sublinear (sqrt) weighting on the column-share computation if math/prose imbalance returns
-- `common/lib/ingest.rb`:
-  - Incremental rebuild via per-chunk hash comparison (architecture in place, implementation pending)
-  - Math-pipe substitution timing (chunks carry `\vert`/`\Vert` instead of `|`; revisit if downstream non-LaTeX renderers want raw pipes)
-- `common/lib/typeset.rb`:
-  - AsfVolumeLatex / AsfLatex inheritance coupling — a `KramdownHelpers` mixin would be a flatter design
-  - Chunk-format contract expressed in two places (emission in ingest.rb, parsing in typeset.rb's `preprocess_metadata_blocks`); extract to `Mono::ChunkFormat` when changes become coupled
-- `common/lib/assemble.rb`:
-  - `**Status**: missing` conflates epistemic-status with existence-status; split when a second existence-state appears
+- `~/src/neurips/AUTHORING.md` — the per-paper-agent rules; covers citations / cross-refs / footnotes / theorem callouts / anonymization in detail
+- `~/src/neurips/refs/entries/*.yml` — canonical bib database (hundreds of entries)
+- `~/src/neurips/refs/deny-list.yml` — anonymization vocabulary
+- `~/src/neurips/bin/refs` — bib management CLI
+- `~/src/neurips/bin/migrate-cites` — `[Author Year]` → `\cite{key}` sweeper
+- `~/src/neurips/common/neurips_2026.sty` — sty file (canonical; do not modify)
 
-## Status
+---
 
-Created 2026-05-11 (v1: single-monograph plan); rewritten 2026-05-12 (v2: four-volume plan); markdown-first restructure landed end-of-day 2026-05-12 (Stages 1+2+3 across commits `be33269`, `62b2e1e`, `610b549`, `c448a00`, `e84cd80`); table-rendering cycles completed 2026-05-12 (commits `ba74d61`, `9208651`, `9159969`, `ebaf24d`); Discussion-as-chapter-intro feature landed `8da83cd`. The four-volume build is functional, the markdown-first pipeline is the sole source path, and all tables render cleanly per Joseph's review.
+*Created 2026-05-11 (v1: single-monograph plan); rewritten 2026-05-12 (v2: four-volume plan); foundation work landed end-of-day 2026-05-12; this file refocused 2026-05-13 around the cross-cutting conventions (citations / cross-refs / footnotes / sidenotes / margin-notes / discipline). Foundation history is captured in [CHANGELOG](CHANGELOG.md) entry "Monograph build pipeline: from zero to four-volume kaobook output" (2026-05-11 / 2026-05-12).*
