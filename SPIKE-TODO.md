@@ -176,9 +176,9 @@ After each segment landing:
 | AAD-7 | [x] | [x] (self) | [x] | [x] | [x] | n/a | `011d3cb` |
 | AAD-5 | [x] | [x] (self) | [x] | [x] | [x] | [x] (Paper 3 chart-rescaling no-go ref) | `9bd22ca` |
 | AAD-1 | [x] (partial — see TODO note) | [x] (self) | n/a (no spike) | [x] | [x] | n/a | `6c24bed` |
-| ELI-8 | [x] | [x] (verification agent — surgical fixes applied) | [x] | [x] | [x] | [x] (Paper 2 IB parallel ref) | pending commit |
-| CHANGELOG narrative | [ ] | — | — | — | — | — | — |
-| `SPIKE-TODO.md` (this file) → cycle archive? | Decision at cycle end | — | — | — | — | — | — |
+| ELI-8 | [x] | [x] (verification agent — surgical fixes applied) | [x] | [x] | [x] | [x] (Paper 2 IB parallel ref) | `022db01` |
+| CHANGELOG narrative | [x] | — | — | — | — | — | pending commit |
+| `SPIKE-TODO.md` (this file) → cycle archive? | Decision at cycle end (deferred to Joseph) | — | — | — | — | — | — |
 
 **On this file's own fate:** Once all three spikes are landed and CHANGELOG narrative is written, `SPIKE-TODO.md` itself is a cycle artifact whose substance is in CHANGELOG + segment Working Notes. It can be moved to a cycle-artifacts archive (e.g., `msc/cycle-archives/spike-todo-2026-05-12.md` or similar) at cycle close. Decision deferred to Joseph at that point.
 
