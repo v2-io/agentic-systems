@@ -237,6 +237,48 @@ Newly surfaced. `#disc-independence-audit` Working Notes flag the idea: score an
 
 **Independence: high.** New segment packaging the six-assumption scoring instrument; cross-refs into `#disc-independence-audit` are read-only. Safe to parallelize with any other active work. The C-BP1 prereq is about layer-convention stability, not file conflict.
 
+### D.9 SP-22 — Operator-family Tier-2 backlog architectural decision (2026-05-12 spike-audit surfaced)
+
+Newly surfaced from the 2026-05-12 spike-audit triage. A coherent cluster of nine 2026-04-22 to 2026-04-24 Tier-2/3 spikes targets candidate appendix segments / meta-segments in the operator-family / dissipativity-template / sector-template territory. Each spike carries substantive math ready to land; the unresolved architectural question is *whether they land as separate appendix segments (one per spike's Tier-2/3 product) or as a unified operator-family meta-segment, or whether some are subsumed by existing meta-segments*. Authoring without that decision risks parallel half-segments covering overlapping territory; deciding without scoping the spikes risks abstract-over-concrete framing. Investigation-first scoping is owed before authoring.
+
+**Bundle members (nine spikes currently in `spikes/` root, all PENDING-in-INDEX or Tier-2 marked):**
+
+- `spike-passivity-composition.md` (B2; Willems passivity for heterogeneous Kalman+PID composition; flagged paired with B1) — targets candidate `#dissipativity-template` appendix
+- `spike-pid-a2prime.md` (B3; PID A2' via SPR/KYP positive-real; explicit $\alpha_{\text{PID}}$) — targets either α-list refresh in `#deriv-sector-condition` or new appendix `#deriv-pid-a2prime`
+- `spike-operator-sector-unification.md` (C1; 2-instance + 1-consequence partial unification under monotone-operator primitive) — INDEX recommendation "land content, DO NOT elevate to fourth meta-pattern"
+- `spike-update-operator-sector.md` (A4; (O-A2') operator sector condition; surfaces candidate 4th-adjacent-instance for `#additive-coordinate-forcing`) — targets candidate `#update-operator-sector` appendix or subsumption under C1
+- `spike-jacobian-b1-strengthening.md` (mixed-lift; Tier-1 transparency note landed; moderate / strong options for (PI)+heredity+CM2-M pending) — Tier 2/3
+- `spike-kl-to-state-distance-template-extraction-2026-04-24.md` (narrow template `#posterior-displacement-template`; contingent on ≥1 forward-looking client materializing — *has now happened* via `#deriv-observation-ambiguity-bias-bound` + Fisher-local update gain) — activation conditions met; Tier 3
+- `spike-neutral-drift-endogenous-coupling-strengthening-2026-04-24.md` (Instance-4 candidate at agent-internal architecture layer; $\gamma$ estimable from cross-covariance) — Tier 2/3
+- `spike-l1-evidence-axiom.md` (Block Structure subsection in `#deriv-edge-update-natural-parameter`) — Tier 2
+- `spike-bridge-lemma-nonlinear-strengthening-2026-04-24.md` §7.2 passivity / dissipativity (Tier 2 math ready; INDEX targets `#dissipativity-template` appendix + Class 1/2/3 port-structure addition to `#der-directed-separation`)
+
+Plus the related closed-spikes already landed in segments but with their own Tier-2 follow-on questions:
+
+- `spike-rho-factorization` (obstruction; partially landed in `#internal-external-decomposition` via Path-1 fallback) + `spike-rho-additive-variance-strengthening-2026-04-24` (variance-additive (AV) theorem under (S1)-(S4)) — paired Tier-2 work targeting candidate `#rho-decomposition` appendix + adjacent case in `#additive-coordinate-forcing`
+
+**The decision question.** Three plausible architectures:
+
+(α) **Separate appendix segments, one per spike's Tier-2/3 product.** Each spike lands as its own focused appendix (`#deriv-passivity-composition`, `#deriv-pid-a2prime`, etc.). Pros: clean scope per segment; easier promotion gates; matches existing AAD discipline. Cons: ~9 new appendices in `01-aad-core/` (the appendix section is already crowded); some segments would carry overlapping operator-family content (e.g., passivity-composition and operator-sector-unification both invoke Bauschke-Combettes operator classes); cross-references would multiply.
+
+(β) **Unified `#operator-family-template` meta-segment** (parallel to `#result-sector-persistence-template`, `#result-contraction-template`, and the candidate `#dissipativity-template` of SP-15). Single appendix covering the operator-family classification (proximal / firmly-nonexpansive / cocoercive / strongly-monotone per Bauschke-Combettes), with per-spike content as sub-sections or worked-example instances. Pros: matches the SP-15 template-family naming proposal; avoids segment proliferation; the C1 spike's INDEX recommendation ("land content, DO NOT elevate to fourth meta-pattern") suggests this is one segment, not four. Cons: a single large appendix is harder to promote through gates than smaller focused ones; the meta-segment shape requires a unifying argument that not all nine spikes converge on.
+
+(γ) **Hybrid: 2–3 new meta/family segments + selective subsumption** by existing meta-segments. E.g., (i) one `#dissipativity-template` appendix absorbing passivity-composition + bridge-lemma §7.2 + parts of operator-sector-unification; (ii) one `#rho-decomposition` appendix absorbing rho-factorization + rho-additive-variance; (iii) PID A2' and update-operator-sector subsumed as α-list refreshes in `#deriv-sector-condition`; (iv) jacobian-b1 moderate landing as a refinement of `#additive-coordinate-forcing`'s 4th instance; (v) kl-to-state-distance landed as the `#posterior-displacement-template` (this is the SP-10 territory currently in §E.2 Wait); (vi) l1-evidence-axiom landed as a Block Structure subsection in `#deriv-edge-update-natural-parameter` per its INDEX recommendation. Pros: each landing follows its INDEX-stated target; the cluster avoids both extremes; subsumption decisions are per-spike rather than batch. Cons: requires the investigation-first scoping to make the per-spike decisions explicitly; the result is not a clean architectural pattern but a triage outcome.
+
+**Architectural-decision-first, authoring-second.** The right shape for this work is *not* to begin authoring a `#dissipativity-template` or `#operator-family-template` segment without first deciding among (α)/(β)/(γ). The decision benefits from a focused scoping pass that reads the nine spikes together (a few hours of work; could be a single agent or a Joseph-driven session) and produces a per-spike-landing-target table. Once that table exists, authoring is bounded.
+
+**Connection to existing PROPOSALS items.**
+
+- SP-15 (template-family naming for sector / contraction / dissipativity trio, §D.7) names the trio but not the operator-family / rho / sector-condition refinement work. SP-22 expands the architectural-decision scope from "naming" to "where each Tier-2 piece lands."
+- SP-10 (`#posterior-displacement-template` extraction, §E.2 Wait) is a member of the cluster; its activation conditions are now met per the spike-audit triage (forward-looking clients have materialized via `#deriv-observation-ambiguity-bias-bound` + Fisher-local landing). Suggest moving SP-10 from §E.2 (Wait) to (β)/(γ) bundle decision once SP-22 scoping completes.
+- Bundle 1 (Framework-face reframe) might touch the meta-segment surface if (β) is taken; coordinate timing.
+
+**Primary aspect: scope-honesty + segment-architecture coherence. Secondary: throughput — clearing the Tier-2 backlog frees promotion energy for Section III work.** **Value: +6 (framework: nine ready-to-land math pieces, freed throughput; paper: marginal — the operator-family material is appendix-tier rather than paper-front).**
+
+**Independence: low for the bundle as a unit; medium for the scoping decision.** The scoping pass itself is read-only and parallelizable with most other work. The subsequent authoring (whichever architecture is chosen) touches `01-aad-core/src/` appendix territory and at least one meta-segment surface; depending on the decision, conflicts with Bundle 1's framework-face reframe if (β) is taken simultaneously. Serialize authoring with Bundle 1; scoping can run in parallel.
+
+**Provenance.** SP-22 — surfaced 2026-05-12 from the spike-audit triage's Group II "Tier-2 backlog cluster" finding. The triage flagged the architectural-decision pending without proposing a resolution; this proposal places it in the portfolio for investigation-first scoping.
+
 ---
 
 ## §E. Wait — explicitly gated

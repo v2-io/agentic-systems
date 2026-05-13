@@ -495,7 +495,7 @@ A coherent cluster of 2026-04-22 to 2026-04-24 Tier-2/3-queued spikes that the 2
 - [ ] **`spike-neutral-drift-endogenous-coupling-strengthening-2026-04-24`** (Instance-4 candidate at agent-internal architecture layer; γ estimable from cross-covariance) — Tier 2/3
 - [ ] **`spike-l1-evidence-axiom`** (Block Structure subsection in `#deriv-edge-update-natural-parameter`) — Tier 2
 
-**Architectural decision needed**: do these land as separate meta-segments, or under a unified operator-family appendix, or as additions to existing segments? Worth raising as a PROPOSALS entry rather than triaging one-by-one.
+**Architectural decision needed**: do these land as separate meta-segments, or under a unified operator-family appendix, or as additions to existing segments? **Raised as `PROPOSALS.md` §D.9 SP-22** (2026-05-12 spike-audit surfaced; investigation-first scoping owed before authoring; three plausible architectures (α) separate appendices / (β) unified `#operator-family-template` meta-segment / (γ) hybrid + selective subsumption). The scoping pass itself is read-only and parallelizable; subsequent authoring serializes with Bundle 1 (Framework-face reframe) if (β) is taken.
 
 ### Group III — Untracked spikes needing INDEX entries
 
