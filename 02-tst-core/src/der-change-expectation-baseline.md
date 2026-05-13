@@ -8,7 +8,7 @@ depends:
 
 # Derived: Change Expectation Baseline
 
-Absent specific information about a software system's future, the best prediction for remaining feature count equals the observed past feature count. This is not a heuristic — it is the mathematical consequence of maximum ignorance. Any deviation requires information that justifies it.
+Absent specific information about a software system's future, the uninformed median baseline for remaining feature count equals the observed past feature count. This is not a heuristic — it is the mathematical consequence of maximum ignorance under Jeffreys' prior. Under proper informative priors with finite first moment the *expected* count is the prediction; the uninformed baseline gives a *median* prediction (the Pareto(1) distribution that falls out of Jeffreys has undefined mean). The baseline preserves accountability: any deviation from $\hat{n}_{\text{future}} = n_{\text{past}}$ requires information that justifies it.
 
 ## Formal Expression
 

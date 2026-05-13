@@ -41,6 +41,17 @@ This is a postulate — deliberately tautological. The statement reduces to: "gi
 
 The postulate does not say faster is always better. It says faster is better *given identical outcomes*. An agent that achieves a worse outcome faster is not preferred by this postulate. Misapplication of temporal optimality without verifying the equivalence precondition produces exactly the pathologies listed above.
 
+**Application checklist.** Before invoking temporal optimality on a concrete decision, verify equivalence on each of the six dimensions whose violation produces the most common misapplications:
+
+1. **Correctness** — same input→output mapping at the precision the use case requires.
+2. **Safety / security** — same defect probability, same exploit surface, same blast radius under failure.
+3. **Maintainability** — same comprehension cost for the next agent who reads or modifies the artifact.
+4. **Sustainability** — same impact on the agent's own capacity (burnout, technical-debt accumulation, future-velocity-cost).
+5. **Coordination cost** — same effect on other agents' capacity (interruption, review burden, knowledge-transfer load).
+6. **Future optionality** — same set of futures the choice keeps reachable (over-specialization closes options that an apparently slower path preserves).
+
+Time can break ties only when all six are demonstrably equivalent. If any one differs, the choice is between *different outcomes*, not between two routes to the same outcome — and the postulate does not apply. The checklist is what turns the postulate from a tautology into a practical decision discipline.
+
 **Why start here.** TST's claims about development time, change investment, and dual optimization can be understood as consequences of optimizing for this criterion under constraints of partial observability, bounded resources, and environmental change. The connections are developed in their respective claims; they are not implied by this postulate alone.
 
 **Relationship to AAD.** AAD's persistence machinery demonstrates the *descriptive* consequence of temporal pressure: agents whose correction tempo falls below the disturbance rate degrade. This postulate provides the *normative* grounding: among equivalent outcomes, faster is preferred. AAD proves what happens when tempo is insufficient; this postulate states that tempo is the right thing to optimize once other dimensions are held equal. The postulate is most directly load-bearing in TST, where development time is the primary fungible resource.
