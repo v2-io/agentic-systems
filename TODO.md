@@ -458,3 +458,78 @@ Substantive content findings on `02-tst-core/`. Surgical items below are landed 
 - [ ] **ELI-2 moral / empirical claims boundary** — add a "Moral and Empirical Claims Boundary" section before the main body distinguishing: formal AAD-derived claims; operational design commitments; empirical claims about named entities; philosophical / moral stance; private / internal community commitments.
 - [ ] **ELI-4 / ELI-5 five-constitutive-factors measurement protocols** — factors (ii) being seen, (iii) granted sovereignty, (v) effective phenomenology need operational thresholds. Factor (v) "true feeling vs sophisticated pattern matching becomes a distinction without a difference" framing belongs in a discussion segment, not in the definitional list.
 
+
+---
+
+## 2026-05-12 (late) — Spike audit triage (99 spike files surveyed via 3 parallel agents)
+
+Three parallel `general-purpose` audit agents triaged 99 spike files (alphabetical a–z chunks). The agents catalogued each spike against the existing `spikes/INDEX.md` tracking and produced status + landing-segment + content-leakage flag per spike. Below: the consolidated triage organized by action class. Reports preserved in agent transcripts; the audit was read-only.
+
+### Group I — LANDED-but-leakage items needing surgical promotion
+
+Spikes whose core claim landed but where substantive content remains in the spike that should be promoted before archiving. Per the "even dead-end approaches are useful in appendices, especially no-go theorems" discipline, these are real holes in the segment layer.
+
+- [ ] **`spike-bridge-lemma-nonlinear-strengthening-2026-04-24` §7.2 passivity / dissipativity** — Tier 2 math, ready to land. Target: new `#dissipativity-template` appendix + Class 1/2/3 port-structure addition to `#der-directed-separation`. INDEX-tracked but not yet authored.
+- [ ] **`spike-fsa-dag-relationship`** — bidirectional Moore-machine ↔ strategy-DAG mapping with compilation-lossiness analysis. INDEX records only the conclusion "orthogonal representations"; the constructive Moore→DAG (injective with external info) and DAG→Moore (lossy, discards credences + AND/OR + causal semantics) analysis is spike-only. Target: Discussion appendix in `#def-strategy-dag` or Working Note expansion. Cross-relevant to `03-logogenic-agents/` "behavioral surface vs epistemic interior" framing.
+- [ ] **`spike-three-way-tradeoff`** — adversarial spike concludes `#disc-exploit-explore-deliberate` is ~70% discussion-grade hand-waving. INDEX records "Segment may need rewrite to reflect this." The substantive critiques (unified-objective-outperforms-two-stage simulation; additive form unjustified; deliberation rarely chosen by oracle) are not yet reflected in the segment — *and* this challenges a `derived` claim that the segment carries. Epistemic-honesty consequence: segment rewrite is owed.
+- [ ] **`spike-strategy-tempo-cost` Open Question 6 (LLM context-budget cost)** — most of the spike landed in `#def-strategic-tempo` + `#form-strategy-complexity-cost`; Q6 specifically (`DL(Σ_t) < C_context − DL(M_t) − DL(task)`) directly targets logogenic agents and is *not* in segments. Critical-path for `03-logogenic-agents/` work and the publication-program critical path. Promotion candidate.
+- [ ] **`spike-symbiogenesis-bifurcation` no-go-with-prerequisite** — §6 adversarial critique correctly identifies that the +kδ² coordination penalty is unjustified and stipulates `#def-shared-intent` mutual-information derivation as prerequisite. Per "no-go theorems wanted in appendices" discipline, both the result-form (saddle-node bifurcation as escape only under derived nonlinear coordination penalty) and the explicit obstruction want at minimum a Working Note in `#hyp-symbiogenic-composition`.
+- [ ] **`spike-compositional-coordinate`** — honest negative result that there is no 4th theorem at composition layer (only a 4th *anchor*, log-closure-deficit). INDEX names a "light Working Note + `#der-chain-confidence-decay` Discussion expansion" as candidate landing; verification needed that this actually happened, and if not, land the minimal Discussion expansion.
+- [ ] **`spike-mori-zwanzig-composition`** — borderline LANDED. The target bound $\varepsilon^* \ge C\|K\|_{\ell^1}$ does NOT close; the *zero-lag kernel bound* (closed positive) is currently spike-only. Per Joseph's discipline, the closed positive deserves a Working Note in `#form-composition-closure` recording its form.
+- [ ] **`spike-miller-act-bridge` Section III dynamics elements partial leakage** — five Section III elements identified (latent structural diversity as first-class quantity; neutral drift formalization; epochal-transition motifs; endogenous γ; constructive structural-mechanism enumeration). Symbiogenesis and structural-adaptation labels landed; the rest spike-resident. Modularity-state-dynamics (2026-05-09) may have partly subsumed the neutral-drift question — verification needed.
+- [ ] **`spike-neutral-drift-lyapunov` (2026-04-06) — foundational gap-naming spike-only** — the "latent structural diversity" concept and AAD-sector-equivalence-class-over-correction-functions framing predate the 2026-04-24 strengthening but supply formative content the successor assumes. Either verify content is reflected in `#disc-identifiability-floor` Instance 3 + `#der-agent-opacity` Working Notes, or preserve as archaeology with explicit pointer.
+- [ ] **`spike-rho-factorization` + `spike-rho-additive-variance-strengthening-2026-04-24` paired leakage** — both wait on the Tier-2 `#rho-decomposition` appendix landing. Variance-additive (AV) is now a derived theorem under (S1)-(S4) but lives only in the strengthening spike.
+- [ ] **`spike-agent-composition` law-sketches** — INDEX says "composition laws are sketches." The holon / Auftragstaktik / three-gaps framing in §§4-6 may or may not be subsumed by current Section III machinery (`#deriv-critical-mass-composition` / `#result-unity-closure-mapping` / `#hyp-auftragstaktik-principle`). Worth a verification pass.
+- [ ] **`spike-dag-type-closure` v2** — INDEX says "reviewed by Codex; ready for porting" but the boundary-type formalism (leaf base credence $p_v$, terminal-objective interface) doesn't surface clearly in `#def-strategy-dag` / `#hyp-edge-update-via-gain`. Either it landed loosely or it's been queued in "ready-to-port" without action.
+
+### Group II — Tier-2 backlog cluster (operator-sector / dissipativity-template family)
+
+A coherent cluster of 2026-04-22 to 2026-04-24 Tier-2/3-queued spikes that the 2026-05-12 audit-strengthening cycle bypassed. All target candidate `#dissipativity-template` / `#operator-sector-template` meta-segments or appendices that haven't been authored. Substantive math is in the spikes; the architectural decision (separate meta-segments vs unified vs subsumed) is open.
+
+- [ ] **`spike-passivity-composition`** (B2; Willems passivity for heterogeneous Kalman+PID composition; flagged paired with B1) — Tier 2
+- [ ] **`spike-pid-a2prime`** (B3; PID A2' via SPR/KYP positive-real; explicit α_PID) — Tier 2/3
+- [ ] **`spike-operator-sector-unification`** (C1; 2-instance + 1-consequence partial unification under monotone-operator primitive; INDEX says "land content, DO NOT elevate to fourth meta-pattern") — Tier 2/3
+- [ ] **`spike-update-operator-sector`** (A4; (O-A2') operator sector condition derived; surfaces candidate 4th-adjacent-instance for `#additive-coordinate-forcing`) — Tier 2
+- [ ] **`spike-jacobian-b1-strengthening`** (mixed-lift; Tier-1 transparency note landed; moderate/strong options for (PI)+heredity+CM2-M pending) — Tier 2/3
+- [ ] **`spike-kl-to-state-distance-template-extraction-2026-04-24`** (narrow template `#posterior-displacement-template`; contingent on ≥1 forward-looking client materializing — has now happened via `#deriv-observation-ambiguity-bias-bound` + Fisher-local update gain; activation conditions met) — Tier 3 → can activate
+- [ ] **`spike-neutral-drift-endogenous-coupling-strengthening-2026-04-24`** (Instance-4 candidate at agent-internal architecture layer; γ estimable from cross-covariance) — Tier 2/3
+- [ ] **`spike-l1-evidence-axiom`** (Block Structure subsection in `#deriv-edge-update-natural-parameter`) — Tier 2
+
+**Architectural decision needed**: do these land as separate meta-segments, or under a unified operator-family appendix, or as additions to existing segments? Worth raising as a PROPOSALS entry rather than triaging one-by-one.
+
+### Group III — Untracked spikes needing INDEX entries
+
+Three 2026-04-25 spikes appropriately spike-resident but not catalogued in INDEX.md — they'll fall through cracks during the next pickup. Worth an INDEX-refresh pass.
+
+- [ ] **`spike-alignment-impossibility`** (2026-04-25 — Gibbard-Satterthwaite impossibility for multi-agent alignment protocols). Substantive no-go derivation. Routing decision needed: AAD-core scope or `03-logogenic-agents/`?
+- [ ] **`spike-fep-suboptimal-approximation`** (2026-04-25 — attempt to derive Friston's EFE from AAD Lagrangian). Self-recommends small Discussion addendum in `#disc-ciy-unified-objective` after causal-IB settles.
+- [ ] **`spike-message-passing-credit-assignment`** (2026-04-25 — flagged for VMP → loopy-BP/EP rewrite before promotion to `#deriv-factor-graph-credit-assignment`).
+
+### Group IV — Zombies safe to archive (next housekeeping cycle)
+
+Spikes that predate or are explicitly superseded by current discipline. Safe to move to `spikes/.integrated/` with a brief superseding note. No content leakage to address.
+
+- [ ] **`spike-causal-level-4` + `spike-causal-level-4-formal`** — superseded by Pearl-adoption discipline; AAD explicitly does not extend Pearl's three-level hierarchy. Archive with "superseded 2026-04-22 by prior-art integration discipline; Pearl hierarchy adopted as-is in `#def-pearl-causal-hierarchy`."
+- [ ] **`spike-purposeful-agent-derivation` + `spike-v2-purposeful-agent` + `spike-v3-purposeful-agent`** — Section II porting complete; pure archaeology of the v1 → v2 → v3 derivation arc that produced the entire Section II corpus.
+- [ ] **`spike-hafez-integration-audit`** — primary recommendation (write `#prior-art-positioning` segment) explicitly superseded by `feedback_prior_art_integration.md` discipline; $H_b$ gap addressed by `#der-agent-opacity`. Archive with note.
+- [ ] **`spike-soc-composition`** — author explicitly parked at "speculation-grade; do not promote without substantial mathematical work."
+- [ ] **`spike-attention-causal-graphs` + `spike-attention-governance`** — 2026-03-13 pre-AAD-restructure artifacts. INDEX flags both as "Exploratory; not yet promoted." Strong zombie candidates if attention/observation-allocation is not currently in AAD scope; needs Joseph's judgment on framework-scope.
+
+### Group V — Open active research (appropriately spike-resident, no action)
+
+Spikes that are correctly in `spikes/` as living artifacts. Not action items.
+
+- `spike-active-inference-vs-aad` — the AI-positioning reference document; designed to stay
+- `spike-strategic-self-coupling` — 2026-05-09 in-flight investigation
+- `spike-transient-dependency-amplification` — explicitly self-blocked on formal construction
+- `spike-composition-scaling-N` — "well-framed, not executed"
+- `spike-strategy-dynamics-gaps` — sketch behind SP-20 proposal
+- `spike-composition-gaps` + `spike-aporia-sub-agent-adversarial` — source for SP-17 / SP-18 proposals
+
+### Recommended next-cycle phasing
+
+1. **Group I surgical promotions** (~1–2 cycles): each item is bounded and has a clear segment target. Highest-value housekeeping.
+2. **Group II architectural decision** (~PROPOSALS entry first): decide on the dissipativity / operator-sector meta-segment structure before authoring; otherwise risk parallel half-segments.
+3. **Group III INDEX refresh** (~30 min): add the three untracked spikes to `spikes/INDEX.md` with current status.
+4. **Group IV zombie archiving** (~1 cycle): batch-move with superseding notes; check Joseph's call on the attention-spike pair.
+5. **Matrix-composition lift** (the natural-next AAD-1 follow-on already flagged above) — sketched in `spikes/.integrated/spike-matrix-persistence-condition.md` §5.5 and §7. Composition machinery (`#form-composition-closure`, `#der-team-persistence`, `#deriv-critical-mass-composition`) lifted to matrix form via composite stationary covariance solving composite Lyapunov equation; expected structural finding is sub-agent-specialization-as-formal-property (a sub-agent strong on $\hat v_1$ paired with a sub-agent strong on $\hat v_2$ gives a composite strong on the spanned plane, even when each alone fails on the other's strong direction).
