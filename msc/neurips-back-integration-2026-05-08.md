@@ -226,15 +226,17 @@ Several spike-report-grade investigations from the NeurIPS sprint are not yet in
 
 Three phases, ordered by least-effort-highest-leverage. Joseph's call on whether to pursue any of them and in what order.
 
+> **Progress (2026-05-12 cycle, commit `b2440d3`).** Phase A item 5 (cross-references in source segments) is essentially landed: 13 segments now carry Working Notes cross-references following the established pattern from the 2026-05-12 ELI-8 and AAD-5 cycles. Per-segment landings: Paper 1 in `deriv-causal-ib-exploration` + `deriv-causal-ib-lmi`; Paper 2 in `def-satisfaction-gap` + `def-control-regret` + `der-loop-interventional-access` + `schema-strategy-persistence` + `def-strategic-tempo` + `deriv-strategy-cost-regret-bound`; Paper 3 in `deriv-observation-ambiguity-bias-bound` + `der-directed-separation` + `scope-channel-collapse` + `scope-observation-ambiguity-modulation`; multi-paper in `scope-agent-identity`. The cross-references are bounded surgical additions naming the specific theorem/lemma each paper carries; substantive segment-level absorption (Phase B) remains. Phase A items 1–4 (catalog updates + INDEX cross-refs) remain pending — and per Joseph 2026-05-12, the *catalog updates themselves are likely premature*: integrating into segments first, then reflecting in any catalog after, is the load-bearing direction. (`msc/FINDINGS-RANKED-DRAFT.md` is a working scratch file, not theory canon — see project memory `reference_findings_canonical_source.md`.)
+
 ### Phase A — minimum-viable back-integration (~1 week)
 
 The minimal set that prevents knowledge decay and keeps ASF coherent with the published papers.
 
-1. Update `msc/FINDINGS-RANKED-DRAFT.md` Tier-1 #4, #7, #8 entries with the conditional-theorem upgrades. References to Papers 1/2/3 added.
-2. Add CS1 entry update naming Paper 2 as the formalization.
-3. Add M1 F4 instance entry (chart-rescaling no-go).
-4. Add `spikes/INDEX.md` cross-reference entries pointing at the NeurIPS spike directories.
-5. Add cross-references in the high-traffic source segments: `#deriv-causal-ib-exploration`, `#deriv-causal-ib-lmi`, `#deriv-observation-ambiguity-bias-bound`, `#scope-observation-ambiguity-modulation`, `#scope-agent-identity`, `#schema-strategy-persistence`. Each gets a short "see also: NeurIPS submission Paper N for the formalized theorem with named hypotheses" line.
+1. Update `msc/FINDINGS-RANKED-DRAFT.md` Tier-1 #4, #7, #8 entries with the conditional-theorem upgrades. References to Papers 1/2/3 added. *Pending — and re-scoped per the progress note above; only meaningful after Phase B segment-level absorption has landed.*
+2. Add CS1 entry update naming Paper 2 as the formalization. *Pending; same re-scoping.*
+3. Add M1 F4 instance entry (chart-rescaling no-go). *Pending — `#disc-identifiability-floor` is the canonical home for the M1 instance table; the entry would belong there as a primary segment edit, not in the catalog.*
+4. Add `spikes/INDEX.md` cross-reference entries pointing at the NeurIPS spike directories. *Pending.*
+5. Add cross-references in the high-traffic source segments: `#deriv-causal-ib-exploration`, `#deriv-causal-ib-lmi`, `#deriv-observation-ambiguity-bias-bound`, `#scope-observation-ambiguity-modulation`, `#scope-agent-identity`, `#schema-strategy-persistence`. Each gets a short "see also: NeurIPS submission Paper N for the formalized theorem with named hypotheses" line. *Landed 2026-05-12 (commit `b2440d3`); broader than originally scoped — 13 segments instead of 6.*
 
 ### Phase B — segment-level absorption (~3-4 weeks)
 
