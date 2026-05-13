@@ -217,7 +217,7 @@ $$\boldsymbol{\delta}_\Sigma^T \mathbf{F} = \frac{(1-\varepsilon)\,\delta_1^2}{n
 
 *[Derived (optimal exploration rate)]*
 
-$$\varepsilon^\ast = \frac{n_1+1}{n_1+n_2+2}, \qquad \alpha_\Sigma^\ast = \frac{1}{n_1+n_2+2}$$
+$$\varepsilon^\ast = \frac{n_2+1}{n_1+n_2+2}, \qquad \alpha_\Sigma^\ast = \frac{1}{n_1+n_2+2}$$
 
 For equal experience ($n_1 = n_2$): $\varepsilon^\ast = 1/2$ (equal allocation). For unequal experience, $\varepsilon^\ast$ allocates more trials to the arm with higher $n$ (lower gain) to equalize correction rates.
 
@@ -324,7 +324,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 
 **B.5b applies.** The Jacobian $\mathbf{J} = (s_{G_{\text{sub}}},\; \hat p_C(1 - \hat p_{A_2}),\; \hat p_C(1 - \hat p_{A_1}))^T$ is non-negative (monotone AND/OR). Corrections are componentwise (each leaf updates independently). Therefore $\alpha_s = \alpha_c = \alpha_\Sigma$ — the strategy-plan-confidence error inherits the sector condition with no penalty.
 
-**Optimal exploration.** Equalizing the action terms: $\varepsilon^\ast = (n_{A_1}+1)/(n_{A_1}+n_{A_2}+2)$, giving $\alpha_\Sigma^\ast = \min(1/(n_C+1),\;\theta_C/(n_{A_1}+n_{A_2}+2))$.
+**Optimal exploration.** Equalizing the action terms: $\varepsilon^\ast = (n_{A_2}+1)/(n_{A_1}+n_{A_2}+2)$, giving $\alpha_\Sigma^\ast = \min(1/(n_C+1),\;\theta_C/(n_{A_1}+n_{A_2}+2))$.
 
 **L0 comparison.** An L0 model of the same scenario (no $C$ node, marginal probabilities $\theta_k = \theta_C \cdot \theta_{k\mid C}$) has $\alpha_\Sigma^{L0} = \min((1-\varepsilon)/(n_1+1),\;\varepsilon/(n_2+1))$ and reference value $\Phi^{L0} = 1 - (1-\theta_1)(1-\theta_2)$. The L0 sector parameter is *higher* (no $\theta_C$ attenuation) but $\Phi^{L0}$ systematically overestimates actual plan success. L1 persistence is harder (lower $\alpha_\Sigma$) but calibration is honest ($\Phi^{L1}$ matches reality). The tradeoff: L0 is easier to maintain but calibrates to a biased target; L1 is harder to maintain but calibrates to truth.
 
@@ -615,7 +615,7 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 | **B.3** Non-identifiability of $(\theta_1,\theta_2)$ from $y_G$ alone | Product $\Phi = \theta_1\theta_2$ symmetry in observation channel | Proved |
 | **B.4(a)** Pure-greedy OR ($\varepsilon=0$) violates sector condition | Counterexample at $\delta_1 = 0,\,\delta_2 \neq 0$ | Derived as refutation |
 | **B.4(b)** $\varepsilon$-greedy sector parameter $\min((1-\varepsilon)/(n_1+1),\; \varepsilon/(n_2+1))$ | Policy-weighted correction; sector product algebra | Proved (conditional on Beta-Bernoulli + $\varepsilon$-greedy) |
-| **B.4** Optimal exploration $\varepsilon^\ast = (n_1+1)/(n_1+n_2+2)$ | Term-equalization in $\min$ | Derived |
+| **B.4** Optimal exploration $\varepsilon^\ast = (n_2+1)/(n_1+n_2+2)$ | Term-equalization in $\min$ | Derived |
 | **B.4** Minimum exploration rate (SA3 requirement) $\varepsilon \gt \rho_\Sigma(n_{\max}+1)/R_\Sigma$ | Substitution into persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ | Derived |
 | **B.5a** Linear credence-to-value transfer $\alpha_s = \alpha_c$ (Jacobian cancels) | Algebraic cancellation of $\mathbf{J}\mathbf{J}^T$ | Proved (exact, DAG-structure independent) |
 | **B.5b** Componentwise nonlinear transfer $\alpha_s = \alpha_c$ | Per-component sector bound + monotone AND/OR ($\mathbf{J}\geq 0$) | Proved (conditional on componentwise update + non-negative Jacobian) |

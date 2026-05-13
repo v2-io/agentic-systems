@@ -359,6 +359,35 @@ For the next agent picking up this work:
 
 ---
 
+## 2026-05-10 — Audit-findings intake: 451729 (Sonnet 4.6, 1M context)
+
+De-novo theory audit covering Section I (29/29), Section II (29/29), Section III (16/21), 7 key Appendix A derivations, plus TST and logogenic samples. Math hand-verified for all load-bearing claims in Sections I–II; adversarial exponents and composition machinery spot-checked in Section III. Report at [`audits/audit-451729-FINAL-2026-05-10.md`](audits/audit-451729-FINAL-2026-05-10.md); working artifacts at [`msc/AUDIT-WORKING-451729/`](msc/AUDIT-WORKING-451729/).
+
+**Most of the audit's structural concerns were already known/addressed through other channels by the time of intake** (segment-flagged gaps, prior TODO entries, in-flight work). Disposition below.
+
+**Surgical (landed in this intake):**
+
+- [x] **Finding 1 — Prop B.4 optimal-exploration-rate subscript transposition** — fixed at three sites in `01-aad-core/src/deriv-edge-credence-dynamics.md`: line 220 (Prop B.4 main formula), line 327 (Prop B.6 nested $A_1$/$A_2$ case — same transposition pattern, sonnet caught only the main one), line 618 (Verified Claims table). Correct form: $\varepsilon^\ast = (n_2+1)/(n_1+n_2+2)$ where arm 1 is greedy. The verbal description ("allocates more trials to the arm with higher $n$") was correct throughout; only the formulas had the transposition. Equal-experience case ($\varepsilon^\ast = 1/2$ at $n_1 = n_2$) is unaffected. No downstream segments cite the wrong formula by-form (verified by grep). Prop B.7's structure is different (five-way gating, no analogous single-formula optimal-ε); no inherited transposition there.
+
+**Open (non-surgical):**
+
+- [ ] **D.3 — schema-strategy-persistence forgetting-rate exact form** — segment uses approximation $\alpha_\Sigma^{ss} \approx 1 - \lambda$ silently throughout (lines 50, 99, 117 of `schema-strategy-persistence.md`); exact form from $1/(n_{\text{eff}}+1)$ with $n_{\text{eff}} = 1/(1-\lambda)$ is $(1-\lambda)/(2-\lambda)$. Approximation is good for $\lambda$ near 1 but ~33% off at $\lambda = 0.5$. Strengthen-first move: state the exact form, derive the persistence threshold from it, retain $1-\lambda$ as the high-$\lambda$ asymptote with explicit scope. Touches Findings Brief (auto-extracted), Epistemic Status, and the persistence threshold inequality form. ~10–15 lines across the segment.
+- [ ] **D.1 — promotion-readiness sweep on conservatively-staged appendix segments** — `deriv-recursive-update`, `deriv-sector-condition`, `der-gain-sector-bridge`, `deriv-edge-credence-dynamics`, `deriv-graph-structure-uniqueness`, `form-strategy-complexity-cost`, `schema-strategy-persistence`, `form-consolidation-dynamics` are at `stage: draft` despite complete formal content + "What Is Derived vs. What Is Chosen" tables + no Working-Notes blocking promotion. Either real unresolved issues should be surfaced, or a promotion sweep would improve corpus self-description. Needs Joseph's judgment on whether to sweep or to surface case-by-case.
+
+**Already addressed through other channels (no new TODO needed):**
+
+- D.2 (`result-unity-closure-mapping` joint $(U_O, U_\Sigma) \to \varepsilon_a$ form sketched, $f_1$ and $g$ functional forms not derived) — already explicitly flagged in the segment at line 89 ("formula is a *sketch* — leading structure is derived; precise forms of $f_1$ and $g$ are mechanical extensions not fully computed here") and Working Notes line 107 ("Joint $(U_O, U_\Sigma)$ derivation. The exact $f_1$ and $g$ functional forms require a full joint-LQR vs independent-LQR comparison. Mechanical but deferred.").
+- F.3 (`form-consolidation-dynamics` stability-upper-bound open) — already in TODO §"Open theory items (MEDIUM)" line 166 from Spike F's lower-bound-only result. Audit converges on a known open item.
+
+**Framing suggestions (fold into existing PRACTICA areas):**
+
+- F.1 (README and OUTLINE preambles could elevate the practical-diagnostic contributions — two-condition decomposition of persistence, satisfaction-gap × control-regret 2×2, forgetting prerequisite, adversarial squared law — alongside the integration framing) — folds into PRACTICA §"🌟 Findings" (segments → README summary chain) and the per-role README rework already queued.
+- F.2 (Correlation Hierarchy L0/L1/L1'/L2 cascade as standalone exposition) — folds into PRACTICA Pedagogy area; consider as a candidate "narrative segment" per the 2026-05-09 register-allowance noted in PRACTICA §"Cycle priority order".
+
+**Audit's process-feedback (G.1–G.4)** — captured in the audit report; not actionable as code/segment edits.
+
+---
+
 ## 2026-05-12 — In-flight: Move def-pearl-causal-hierarchy from Part I Ch.1 → Part II Ch.2 (recapitulation-of-external-result pattern)
 
 **Motivation.** Pearl's causal hierarchy is an *imported* framework (Bareinboim, Correa, Ibeling & Icard 2022; Pearl 2009), not AAD-native ontology. Its current placement in Part I Ch.1 alongside def-agent-environment / def-chronica / etc. makes it look like foundational AAD machinery when it isn't. Its first heavy use is at the head of Part II Ch.2 (#der-causal-hierarchy-requirement, #der-loop-interventional-access). The pattern: light external citation in Part I where the existence of the hierarchy needs to be acknowledged; full AAD recapitulation at the point of deployment in Part II Ch.2.
