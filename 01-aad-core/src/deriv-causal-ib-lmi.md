@@ -158,7 +158,7 @@ The agent's total exploration shadow price is $\Lambda_{\text{info}} + \Lambda_{
 
 ## Working Notes
 
-- **Tensor adaptive tempo.** `#def-adaptive-tempo` is currently scalar; the LMI repair requires tensor-valued $\mathcal T$ tracking per-direction rates for full alignment with this segment and with `#deriv-fisher-whitened-update-rule` and `#deriv-adaptive-gain-dynamics`. Queued in TODO.
+- **Tensor adaptive tempo.** `#def-adaptive-tempo` now carries a Tensor extension sub-block ($\mathcal T = \sum_k \nu^{(k)} K^{(k)}$ with $K^{(k)} = (H_M + H_L^{(k)})^{-1} H_L^{(k)}$ from `#deriv-fisher-local-update-gain`) that gives the per-direction primitive this segment's LMI machinery needs. Promotion of the scalar persistence and adversarial-tempo results to invoke the tensor form directly (rather than per-coordinate scalars) remains queued — flagged in `TODO.md` under follow-on cycle work; the per-direction primitive is in place even if downstream summary results still read in scalar.
 - **Worked 2D example.** A concrete 2D drift environment showing $\text{Tr}(\Lambda \mathcal I_o)$ distinguishing wall-channel from drift-channel actions would sharpen the blank-wall resolution. Queued.
 - **2D simulation.** Generalization of `spikes/track-b-nonlinear-sims/variants/variant_causal_ib.py` to 2D with separable drifting/non-drifting subspaces would empirically validate the matrix Lagrangian's directional discrimination. Queued.
 - **EIG vs FIM gap.** For non-Gaussian or non-local observation models, FIM diverges from EIG. The CIY-vs-EIG concern in `#disc-ciy-unified-objective` Epistemic Status persists; the matrix lift removes the CIY-$U_o$ surrogate but not the CIY-EIG surrogate.

@@ -174,8 +174,8 @@ After each segment landing:
 | Stage | Promoted | Verified | Spike → `.integrated/` | INDEX updated | TODO reconciled | NeurIPS doc marked | Commit |
 |---|---|---|---|---|---|---|---|
 | AAD-7 | [x] | [x] (self) | [x] | [x] | [x] | n/a | `011d3cb` |
-| AAD-5 | [x] | [x] (self) | [x] | [x] | [x] | [x] (Paper 3 chart-rescaling no-go ref) | pending commit |
-| AAD-1 | [ ] | [ ] (self) | n/a (no spike) | [ ] | [ ] | n/a | — |
+| AAD-5 | [x] | [x] (self) | [x] | [x] | [x] | [x] (Paper 3 chart-rescaling no-go ref) | `9bd22ca` |
+| AAD-1 | [x] (partial — see TODO note) | [x] (self) | n/a (no spike) | [x] | [x] | n/a | pending commit |
 | ELI-8 | [ ] | [ ] (verification agent) | [ ] | [ ] | [ ] | [ ] (Paper 2 IB parallel ref) | — |
 | CHANGELOG narrative | [ ] | — | — | — | — | — | — |
 | `SPIKE-TODO.md` (this file) → cycle archive? | Decision at cycle end | — | — | — | — | — | — |
