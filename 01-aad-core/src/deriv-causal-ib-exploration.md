@@ -53,7 +53,8 @@ $$\mathcal{L} = \mathbb{E}[Q_O(a)] - \lambda' \cdot (\mathbb{E}[U_o(a)] - U_o^{\
 The shadow price $\lambda'$ scales as $1 / (U_o^{\max} - \mathbb{E}[U_o])$. At the boundary, $\lambda' \propto 1/U_o^{\max}$, yielding:
 $$\lambda' \propto \frac{\rho^{\text{eff}}}{(R c_{\min} - \rho^{\text{eff}}) \cdot U_M}$$
 
-To align this with the CIY objective, we invoke the structural assumption that Causal Information Yield is inversely proportional to observation ambiguity: $\text{CIY}(a) \propto 1/U_o(a)$. 
+To align this with the CIY objective, we invoke the structural assumption that Causal Information Yield is inversely proportional to observation ambiguity: $\text{CIY}(a) \propto 1/U_o(a)$. This scalar reciprocal mapping is a heuristic placeholder: the mathematically clean correspondence between the survival-imperative Lagrangian and the CIY/EIG objective is the LMI / matrix-valued lift in `#deriv-causal-ib-lmi`, where the Fisher Information Matrix and a positive-semidefinite Lagrange multiplier $\Lambda$ replace the scalar substitution below. Readers tracking exactness rather than directional fidelity should treat the rest of this section as the scalar shadow of that LMI derivation; the *honest limit* sub-section below and `#deriv-causal-ib-lmi` together carry the formal load.
+
 Transforming the Lagrangian penalty from $U_o$ to $1/U_o$ (which introduces a non-linear mapping of the multiplier, operating-point dependent), the equivalent survival weight on CIY becomes:
 $$\lambda_{\text{surv}}(M_t) \propto \frac{\rho^{\text{eff}}}{(R c_{\min} - \rho^{\text{eff}}) \cdot U_M}$$
 

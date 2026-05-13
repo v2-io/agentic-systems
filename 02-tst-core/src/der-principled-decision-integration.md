@@ -26,7 +26,12 @@ where total expected time given choice $C$ is:
 
 $$E[T \mid C] = t_0(C) + \sum_{i} \lambda(F_i) \cdot \left[ t_{\text{comp}}(F_i \mid C) + t_{\text{impl}}(F_i \mid C) \right]$$
 
-Here $\lambda(F_i)$ is the *expected count* of feature type $F_i$ over the relevant horizon — an intensity, not a probability. The total expected feature count is $\sum_i \lambda(F_i) = \hat n_{\text{future}}$ (the median prediction from #der-change-expectation-baseline), so $\hat n_{\text{future}}$ is an emergent property of the feature-type decomposition, not a separate multiplier.
+Here $\lambda(F_i)$ is the **per-type horizon intensity** for feature type $F_i$ — an intensity, not a probability. Its interpretation depends on the agent's prior over horizon length:
+
+- **Under any prior with finite first moment** (empirical roadmap data; exponential or geometric lifetime; explicit horizon truncation; any proper informative prior), $\lambda(F_i)$ *is* the expected count of type-$i$ features and the decomposition above is an exact expected-utility optimization. This is the strongest reading and the operationally appropriate one when the agent has substantive information about the project's lifetime distribution.
+- **Under the uninformed Jeffreys baseline of #der-change-expectation-baseline**, the Pareto(1) lifetime distribution has undefined first moment; $\lambda(F_i)$ then has the weaker reading as a *median scenario weight* and the decomposition is the *median-case* analogue of an expected-utility rule. This is the reading that applies when the agent has no information beyond the project's elapsed history.
+
+In both readings, $\sum_i \lambda(F_i) = \hat n_{\text{future}}$ (an expectation under the finite-first-moment priors; a median under the Jeffreys baseline), so $\hat n_{\text{future}}$ is an emergent property of the per-type decomposition rather than a separate multiplier. The integration framework is therefore strongest under informative-prior conditions and degrades gracefully — to median-case decision-making rather than to a contradiction — under uninformed-baseline conditions.
 
 This is the general form of #der-dual-optimization. Where dual-optimization uses a single "typical future feature" $F_{\text{typical}}$ with count $\hat n_{\text{future}}$, this decomposes that count across feature types:
 
