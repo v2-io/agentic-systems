@@ -5,7 +5,6 @@ status: discussion-grade
 depends:
   - obs-software-epistemic-properties
   - scope-developer-agent
-  - def-pearl-causal-hierarchy
   - post-causal-structure
   - def-causal-information-yield
   - def-system-coupling
@@ -23,7 +22,7 @@ Git history contains interventional data: each commit is a developer interventio
 
 *[Hypothesis (git-as-intervention)]*
 
-Each git commit is an intervention in the sense of #def-pearl-causal-hierarchy (Level 2):
+Each git commit is an intervention in Pearl's Level-2 sense (Pearl 2009, *Causality*, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022; AAD's recapitulation at #def-pearl-causal-hierarchy in Part II Ch.2):
 
 $$\text{commit } c = do(\text{change files } \{f_1, \ldots, f_m\})$$
 

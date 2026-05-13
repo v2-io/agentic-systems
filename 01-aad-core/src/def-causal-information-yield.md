@@ -3,7 +3,6 @@ slug: def-causal-information-yield
 type: definition
 status: exact
 depends:
-  - def-pearl-causal-hierarchy
   - der-action-selection
   - def-mismatch-signal
 stage: deps-verified
@@ -23,7 +22,7 @@ $$\text{CIY}(a;\, M) = \mathbb{E}_{a' \sim q(\cdot \mid M)}\!\left[D_{\mathrm{KL
 
 where $q(\cdot \mid M)$ is a reference distribution over comparator actions (uniform, policy-induced, or task-specific). This measures how strongly the action changes the interventional distribution of outcomes relative to alternatives.
 
-$\text{CIY} \geq 0$ by construction (expectation of KL divergences). $\text{CIY} = 0$ for a passive observer or an agent whose actions don't affect outcome distributions. $\text{CIY} \gt 0$ when actions causally alter what is observed — exactly what distinguishes Level 2 from Level 1 epistemic access ( #def-pearl-causal-hierarchy).
+The $do(\cdot)$ operator is Pearl's standard intervention notation (Pearl 2009, *Causality*, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022); the AAD recapitulation lives at #def-pearl-causal-hierarchy in Part II Ch.2, where the framework deploys the hierarchy operationally. $\text{CIY} \geq 0$ by construction (expectation of KL divergences). $\text{CIY} = 0$ for a passive observer or an agent whose actions don't affect outcome distributions. $\text{CIY} \gt 0$ when actions causally alter what is observed — exactly what distinguishes Pearl's Level 2 (interventional) from Level 1 (associational) epistemic access.
 
 ## Epistemic Status
 

@@ -356,3 +356,20 @@ For the next agent picking up this work:
 ---
 
 *Cycle-by-cycle history of audit-findings, spike promotions, and architectural moves: see [`CHANGELOG.md`](CHANGELOG.md) (post-2026-04-24) and [`LOG.md`](LOG.md) (frozen pre-2026-04-24). Per-spike disposition: [`spikes/INDEX.md`](spikes/INDEX.md). Original audit-finding characterizations: `audits/pending-findings-YYYY-MM-DD.md`.*
+
+---
+
+## 2026-05-12 — In-flight: Move def-pearl-causal-hierarchy from Part I Ch.1 → Part II Ch.2 (recapitulation-of-external-result pattern)
+
+**Motivation.** Pearl's causal hierarchy is an *imported* framework (Bareinboim, Correa, Ibeling & Icard 2022; Pearl 2009), not AAD-native ontology. Its current placement in Part I Ch.1 alongside def-agent-environment / def-chronica / etc. makes it look like foundational AAD machinery when it isn't. Its first heavy use is at the head of Part II Ch.2 (#der-causal-hierarchy-requirement, #der-loop-interventional-access). The pattern: light external citation in Part I where the existence of the hierarchy needs to be acknowledged; full AAD recapitulation at the point of deployment in Part II Ch.2.
+
+**Steps:**
+1. Revise `01-aad-core/src/def-pearl-causal-hierarchy.md` to frame the segment explicitly as a *recapitulation* of an external result for AAD's purposes (not a fresh primary definition). Keep the L1/L2/L3 content and the AAD-specific interpretive material; adjust the title, one-sentence summary, and epistemic-status framing to be honest about the import.
+2. Update `01-aad-core/src/def-causal-information-yield.md` — change depends list (remove `def-pearl-causal-hierarchy`), and ensure prose uses Bareinboim/Pearl citation + forward-pointer pattern for the do-notation rather than depending on a Part I segment.
+3. Update `02-tst-core/src/obs-software-epistemic-properties.md` — same citation + forward-pointer treatment in depends and prose.
+4. `grep` for any other depends entries on `def-pearl-causal-hierarchy` across the corpus and update similarly.
+5. Update `01-aad-core/OUTLINE.md`: remove the def-pearl-causal-hierarchy row from Part I Ch.1 ("The Coupled Loop: Ontology and Scope"); add it to Part II Ch.2 ("Causal Access and the Planning Decision") immediately before #der-causal-hierarchy-requirement.
+6. Lightly revise `01-aad-core/src/the-cycle-in-motion-intro.md` — the CIY-placement paragraph can become declarative rather than apologetic (CIY is in Part I Ch.3 because action-scoring is where causality enters the dynamics; the do-notation it uses is external Pearl, recapitulated in Part II Ch.2 where the framework deploys it operationally).
+
+**Result expected.** Part I Ch.1 ends cleanly with post-causal-structure (AAD's own temporal-ordering postulate). Pearl's hierarchy lives at its point of deployment in Part II Ch.2 as a recapitulation. CIY's Part I placement is no longer apologetic about an out-of-place dependency. Cross-volume citation discipline (TST referencing AAD) follows the same external-citation + forward-pointer pattern.
+

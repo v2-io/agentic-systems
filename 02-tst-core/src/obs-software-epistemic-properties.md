@@ -4,7 +4,6 @@ type: observation
 status: discussion-grade
 depends:
   - scope-evolving-software
-  - def-pearl-causal-hierarchy
   - def-observation-function
   - def-adaptive-tempo
 stage: draft
@@ -28,7 +27,7 @@ $$U_o^{\text{(code)}} = f(\text{agent bandwidth}) \quad \text{not} \quad f(\text
 
 *Consequence:* The observation uncertainty $U_o$ for code-reading channels is under the agent's (and previous agents') partial control — unlike most domains where $U_o$ is set by physics. This enables P6 below. The corresponding claim does not generalize to non-codebase channels, where $U_o$ behaves as in other domains.
 
-**P2. Executable counterfactuals (scoped Level 3 access).** Version control provides literal Pearl Level 3 counterfactual execution ( #def-pearl-causal-hierarchy) for a specific and well-defined class of questions: **code-internal counterfactuals with deterministic outcomes.** For questions of the form "what would the test suite report if implementation X had been chosen instead of Y, holding the test suite and environment fixed?", `git checkout` plus re-implementation plus test execution is not a proxy — it is literal counterfactual realization with ground-truth verification. The domain is the codebase itself; the intervention is on code; the outcome is on code behavior; the verification is the test suite.
+**P2. Executable counterfactuals (scoped Level 3 access).** Version control provides literal Pearl Level 3 counterfactual execution (Pearl 2009, *Causality*, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022; AAD's recapitulation at #def-pearl-causal-hierarchy in Part II Ch.2) for a specific and well-defined class of questions: **code-internal counterfactuals with deterministic outcomes.** For questions of the form "what would the test suite report if implementation X had been chosen instead of Y, holding the test suite and environment fixed?", `git checkout` plus re-implementation plus test execution is not a proxy — it is literal counterfactual realization with ground-truth verification. The domain is the codebase itself; the intervention is on code; the outcome is on code behavior; the verification is the test suite.
 
 This literal Level 3 access fails for a complementary class: **counterfactuals crossing the agent-environment boundary** — questions about what feature sequence the team would have produced, how the market would have responded, or how a different developer would have proceeded. These are path-dependent on external events that cannot be replayed. For this second class, `git checkout` is a strong executable proxy, not literal Level 3.
 

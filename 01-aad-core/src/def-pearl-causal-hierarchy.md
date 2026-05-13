@@ -8,13 +8,13 @@ depends:
 stage: deps-verified
 ---
 
-# Definition: Pearl's Causal Hierarchy
+# Definition: Pearl's Causal Hierarchy (Recapitulation)
 
-Three levels of causal reasoning emerge from the causal structure of the feedback loop: association ("what if I observe?"), intervention ("what if I do?"), and counterfactual ("what if I had done differently?"). The binary action requirement ( #scope-agency) ensures at least Level 2 access is structurally available.
+AAD adopts Pearl's three-level hierarchy of causal reasoning — association, intervention, counterfactual — as the vocabulary for distinguishing kinds of epistemic access within the feedback loop. This segment recapitulates the hierarchy at the level of detail AAD's derivations deploy, with the canonical sources (Pearl 2009, *Causality*, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022, in *Probabilistic and Causal Inference: The Works of Judea Pearl*) carrying the underlying theory. The binary action requirement of #scope-agency ensures at least Level 2 access is structurally available; the chapter that follows is what deploys the hierarchy as operational machinery.
 
 ## Formal Expression
 
-*[Definition (pearl-causal-hierarchy)]*
+*[Definition (pearl-causal-hierarchy, recapitulating Pearl 2009 and Bareinboim et al. 2022)]*
 
 **Level 1 — Associational**: $P(o_t \mid \mathcal{C}_{\lt t})$
 
@@ -38,7 +38,9 @@ This requires the model to simulate alternative histories — running the causal
 
 ## Epistemic Status
 
-This is *definitional* — it names three modes of epistemic access that are structurally available within the feedback loop, following Pearl's causal hierarchy (Pearl 2009; Bareinboim et al. 2022). The hierarchy itself is a well-established result in causal inference. AAD's contribution is grounding it in the temporal structure of the agent-environment coupling rather than in abstract graphical models.
+*Recapitulation of an external result.* The three-level hierarchy and the strict-non-collapse theorem (Bareinboim, Correa, Ibeling & Icard 2022, Theorem 1: Level-2 quantities cannot in general be computed from Level-1 data alone; Level-3 quantities cannot in general be computed from Level-2 alone) are well-established results in causal-inference theory. They live within AAD's segment set because subsequent derivations deploy them as machinery: #der-causal-hierarchy-requirement applies the non-collapse theorem to the value-object's $do(\cdot)$ query and concludes that purposeful agents who must *learn* their action consequences need Level-2 access; #der-loop-interventional-access shows that the feedback loop is itself a Level-2 data engine; the no-go in #der-causal-insufficiency-detection, the strategy-DAG-as-causal-DAG framing in #def-strategy-dag, and the causal-information appendices ( #deriv-causal-ib-exploration, #deriv-causal-ib-lmi) all operate on the hierarchy. Where Part I segments and TST segments only need to *reference* the hierarchy (cite its existence and the do-operator notation) rather than deploy it, external citation to Pearl 2009 / Bareinboim et al. 2022 suffices; the AAD recapitulation here is what those external citations point to when the reader wants the in-framework vocabulary.
+
+AAD's *distinctive contribution* is not the hierarchy itself but its grounding: the loop-as-Level-2-engine result ( #der-loop-interventional-access), the regime-indexed identification-strength framing ( #scope-edge-update-causal-validity), and the application throughout Section II's strategy-revision machinery. The recapitulation here is in service of those moves, not a primary AAD result.
 
 ## Discussion
 
@@ -60,3 +62,8 @@ This is *definitional* — it names three modes of epistemic access that are str
 | Military (Boyd) | Pattern recognition | Probe/feint → observe response | "What if we had attacked from the flank?" |
 | Software developer | "I think this function does X" | Run test → observe result | `git checkout` + alternative implementation |
 | Immune system | Antigen pattern matching | Antibody → pathogen response | Not exercised (no counterfactual reasoning) |
+
+## Working Notes
+
+- This segment is positioned in Part II Ch.2 ("Causal Access and the Planning Decision") as of the 2026-05-12 relocation. It previously lived in Part I Ch.1 alongside AAD's own ontological commitments, which mis-framed it as foundational AAD machinery rather than as an imported framework recapitulated for AAD's purposes. The relocation places it at the head of the chapter that deploys it operationally.
+- Part I segments that previously depended on this segment in their `depends:` frontmatter (`def-causal-information-yield`) now reference Pearl 2009 / Bareinboim 2022 via external citation with a forward pointer to this recapitulation. TST segments do the same. The relocation thus introduces no dangling dependencies; what changes is the rhetorical posture (imported framework, lightly cited where mentioned, recapitulated where deployed) and the OUTLINE position (Part II Ch.2 rather than Part I Ch.1).
