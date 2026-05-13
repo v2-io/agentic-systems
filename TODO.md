@@ -530,9 +530,11 @@ A coherent cluster of 2026-04-22 to 2026-04-24 Tier-2/3-queued spikes that the 2
 
 Three 2026-04-25 spikes appropriately spike-resident but not catalogued in INDEX.md — they'll fall through cracks during the next pickup. Worth an INDEX-refresh pass.
 
-- [ ] **`spike-alignment-impossibility`** (2026-04-25 — Gibbard-Satterthwaite impossibility for multi-agent alignment protocols). Substantive no-go derivation. Routing decision needed: AAD-core scope or `03-logogenic-agents/`?
-- [ ] **`spike-fep-suboptimal-approximation`** (2026-04-25 — attempt to derive Friston's EFE from AAD Lagrangian). Self-recommends small Discussion addendum in `#disc-ciy-unified-objective` after causal-IB settles.
-- [ ] **`spike-message-passing-credit-assignment`** (2026-04-25 — flagged for VMP → loopy-BP/EP rewrite before promotion to `#deriv-factor-graph-credit-assignment`).
+**INDEX refresh landed (commit `f9dc9d2`).** All three spikes are now catalogued in `spikes/INDEX.md` lines 25–33 under the section "2026-04-25 cluster — UNCATALOGUED-PRE-2026-05-12 (entries surfaced by spike-audit triage)" with current status. The three substantive routing decisions remain (each marked OPEN in the INDEX with the work each implies); they belong with the corresponding open theory items rather than under "INDEX hygiene."
+
+- [x] ~~**`spike-alignment-impossibility`** (2026-04-25 — Gibbard-Satterthwaite impossibility for multi-agent alignment protocols).~~ INDEX-catalogued. **Routing decision still open**: AAD-core scope (mechanism-design impossibility as candidate adjacent-floor instance per `#disc-identifiability-floor`) or `03-logogenic-agents/` scope (LLM-agent alignment specifically).
+- [x] ~~**`spike-fep-suboptimal-approximation`** (2026-04-25 — attempt to derive Friston's EFE from AAD Lagrangian).~~ INDEX-catalogued. **Author-flagged**: small Discussion addendum in `#disc-ciy-unified-objective` after causal-IB settles.
+- [x] ~~**`spike-message-passing-credit-assignment`** (2026-04-25 — flagged for VMP → loopy-BP/EP rewrite before promotion to `#deriv-factor-graph-credit-assignment`).~~ INDEX-catalogued. **Rewrite pending** before promotion.
 
 ### Group IV — Zombies (status: executed 2026-05-12 (late), except attention-pair)
 
