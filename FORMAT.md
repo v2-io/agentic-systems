@@ -5,6 +5,55 @@ How to write and maintain AAD claim segment files.
 > **No-drift discipline.** Key process terms used throughout this file are cross-linked to entries in [`terminology/entries/`](terminology/entries/). If a term's meaning changes, update both FORMAT.md and the corresponding terminology entry — they must stay in sync. Format conventions live here; concise definitions and the canonical prose vocabulary live in the entries (and are auto-rendered into [`LEXICON.md`](LEXICON.md)).
 
 
+## Audiences and Render Targets
+
+Every convention in this document is a trade-off across six consumer-purpose-format-platform combinations. Naming them up front prevents the trade-offs from getting re-decided per-section.
+
+| Consumer | Purpose                                            | Format/Form   | Platform   |
+| -------- | -------------------------------------------------- | ------------- | ---------- |
+| Human    | Authoring & Editing                                | Sources       | Obsidian   |
+| Agent    | Authoring & Editing                                | Sources       | Raw        |
+| Human    | Investigating & Contributing                       | Sources       | Github     |
+| Agent    | Investigating, Using, Understanding                | Intermediates | Raw        |
+| Human    | Formal Reviewing, Archiving, Citing, Understanding | Finals        | PDF Viewer |
+| Agent    | Formal Reviewing, Archiving, Citing                | Finals        | PDFtoText  |
+
+**Three formats:**
+
+- **Sources** — per-segment markdown files in `<component>/src/`. Authoring substrate; lives under git; rendered live by Obsidian and on GitHub.
+- **Intermediates** — assembled per-volume markdown at `mono/<slug>-v<sem>.md`. Build-output; canonical citable artifact; what an agent ingests when reasoning about a whole volume; cross-references resolved at this stage.
+- **Finals** — `mono/<slug>-v<sem>.pdf`. Build-output; the publication artifact; what reviewers and archivists consume.
+
+The source form is the most-constrained: it must satisfy four audiences (human + agent authoring, human + agent investigating) across three platforms (Obsidian, GitHub, raw text) simultaneously. Conventions are evaluated against all four cells, not just one. Intermediates and finals are build-managed — authors write source; the pipeline produces both. Conventions for intermediate / final rendering live downstream and are usually a matter of how the renderer chooses to resolve a source convention.
+
+
+## Equation Render Constraints
+
+Both display and inline equations must render correctly in three platforms (two source-side, one final):
+
+- **GitHub source view** (MathJax): strict — see *Math Formatting* §Compatibility Notes below.
+- **Obsidian source view** (MathJax variant): more permissive than GitHub but with its own quirks (same section).
+- **LaTeX / PDF final** (LuaLaTeX + STIX Two Math): authoritative; raw LaTeX passes through.
+
+The render-platform constraint generates the careful conventions in *Math Formatting* below (no spaces inside `$..$`, `\vert` for pipes, `\lt`/`\gt` for inequalities, `\ast` for asterisks, etc.) — these are not stylistic preferences; they are the dimensions in which Obsidian and GitHub disagree with each other and with LaTeX.
+
+A display equation may carry up to seven distinct attributes, each independent in principle. Common case: an equation carries 0–2 of these (typically just an epistemic strength label). Rich case (appendix derivations, recapitulations of external results): 4+ attributes simultaneously. The eq-tag syntax has to handle both cases without forcing rich-case authors into a separate syntax tree.
+
+| Attribute | Cardinality | Role |
+|---|---|---|
+| **Reference number** | 0–1 | Auto from kaobook native counter, evergreen — source carries no number |
+| **Epistemic strength label** | 0–1 | `*[Derived]*` / `*[Hypothesis]*` etc. — distinguishes derived / chosen / assumed |
+| **Epistemic note** | 0–N (usually 0–1) | "from #foo, conditional on bar" — scope conditions and dependency context |
+| **Reference tag** | 0–1 | Kebab-case identifier for evergreen `#name` cross-refs (independent of positional number) |
+| **English / prose name** | 0–1 (plus informal aliases) | Human-readable name styled distinctly at final render |
+| **External provenance / citation** | 0–N (usually 0–1) | Bibliographic citation for imported / recapitulated content |
+| **Internal provenance / cross-reference** | 0–N (usually 0–1, rarely 2+) | `#slug` for segment-level link, atom-level link for intra-volume reference |
+
+The current eq-tag syntax `*[Type (name, from ...)]*` compresses the first four attributes positionally. Citation and cross-reference attributes currently live in the surrounding prose. The full syntax for handling all seven attributes uniformly is under design — see [FORMAT-TODO.md](FORMAT-TODO.md) Workstream B.
+
+Inline equations carry the same render-platform constraint but do not carry eq-tag attributes (the margin-note infrastructure that emits `\eqtag{...}` operates on the equation immediately following the tag paragraph, which is a display-equation pattern).
+
+
 ## Line Wrapping
 
 Do not hard-wrap lines. Let renderers (GitHub, Obsidian, editors) handle wrapping. One sentence or clause per line is fine for diff-friendliness, but do not insert line breaks at a fixed column width.
