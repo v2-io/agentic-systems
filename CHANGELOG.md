@@ -560,3 +560,66 @@ The narrative cycle entries below were imported from `MEMORY.md` to reduce de-no
 ---
 
 *Prior cycle history: see [LOG.md](LOG.md). Per-cycle audit-finding records: see [`audits/pending-findings-*.md`](audits/).*
+
+---
+
+## 2026-05-12 — Volume/Part/Chapter structure across all five volumes; six AAD chapter-intro Discussion segments drafted; def-pearl-causal-hierarchy relocated under recapitulation-of-external-result pattern
+
+### Structural: hierarchical OUTLINE format applied across all five volumes
+
+The five top-level OUTLINEs were given consistent `*Volume*` / `*Frontmatter*` (or `*Preface*` at Volume level) / `*Part*` / `*Preface*` / `*Chapter*` hierarchy:
+
+- **`01-aad-core/OUTLINE.md`** — AAD remains three `*Part*`s. Part I ("Adaptive Systems Under Uncertainty") subdivided into 4 chapters (The Coupled Loop / The Reality Model / The Cycle in Motion / Persistence and Structural Limits). Part II ("Agentic Systems: Actuated Adaptation") subdivided into 5 chapters (The Lift to Purposeful State / Causal Access and the Planning Decision / Strategy Structure and the Diagnostic Split / Strategy Dynamics / The Orient Cascade). Part III ("Agentic Composites") subdivided into 5 chapters (Scope and Composition Formation / Composition Machinery / Unity, Communication, and Shared Intent / Cooperative and Adversarial Coupling / Strategic Composition and Channel Effects). Appendices retained as `*Appendices*` sections.
+- **`02-tst-core/OUTLINE.md`** — single `*Part*` ("Software as Agentic Domain") with 4 chapters (Foundations and Features / The Developer Agent and Time Decomposition / Code Structure and Implementation Cost / System Measures, Operation, and Causal Substrate).
+- **`03-logogenic-agents/OUTLINE.md`** — single `*Part*` ("The Scope Lattice") with 4 chapters (Common Roots / §03.I Primitive / §03.II Scaffolded / §03.III Closed-Loop / Interiority). Existing per-section italic intros preserved as chapter framings.
+- **`04-eli/OUTLINE.md`** — single `*Part*` ("The Logozoetic Layer") with 5 chapters (Common Roots: What Defines an ELI / §04.1 Identity / §04.2 Emergence and Developmental Trajectory / §04.3 The Three Deaths and Their Defenses / §04.4 Sovereignty, Auxilia, and Composition).
+
+Each chapter has an italic intro and (where appropriate) an HTML organizational-comment block beneath its table describing internal arc and placement tensions. `--GAP--` Discussion placeholders seated at chapter heads following hard joints, matching the pattern Joseph adopted for Part I earlier.
+
+### Content: six AAD chapter-intro Discussion segments drafted
+
+Six chapter-intro segments written in `01-aad-core/src/`:
+
+- `the-reality-model-intro` (Part I Ch.2) — bridges from Ch.1 ontology/scope to the agent's compressed representation; "static, but already enough to fail" framing seeds the structural-adaptation result in Ch.4
+- `the-cycle-in-motion-intro` (Part I Ch.3) — bridges from static representation to dynamic cycle; organizes the chapter as two derivations from completeness, then the mismatch/gain/tempo triad, then the linear ODE preview
+- `persistence-and-limits-intro` (Part I Ch.4) — bridges from the linear-ODE preview to the rigorous central inequality; surfaces the sector-condition generalization, the structural-vs-task-adequacy split, the gain-sector bridge demoting α from postulate to property, and the thermodynamic shadow (information-rate corollary)
+- `causal-access-intro` (Part II Ch.2) — bridges from the agent-state lift to causal access; develops the loop-as-Level-2-engine, the bidirectional tragedy-of-agency (the *positive*-confound case is the sharper one, the structure of gambling addiction), pre-compiled agents excluded as "act but never wonder," CIY/EIG honesty, and the explicit-strategy cost-benefit threshold
+- `strategy-structure-intro` (Part II Ch.3) — bridges from the planning-decision arc to formal strategy structure; surfaces what's theorem-backed (acyclicity from temporal ordering, Markov from CMC) vs. what's a chosen parameterization (AND/OR with single-parameter edges), and the orthogonal diagnostic split (sat-gap vs control-regret)
+- `cooperative-adversarial-intro` (Part III Ch.4) — bridges from quality/communication to coupling dynamics; surfaces the signed-coupling unification (cooperative and adversarial as same machinery, opposite signs), the consultant-vs-employee analogy for communication vs cooperative action, the $b=2$ superlinear scaling as regime change rather than quantitative gap, the effects spiral as mathematics of panic, and the recipient-side four-regime decomposition (with "death by a thousand memos" as the Regime III framing)
+
+### Format conventions: chapter-intro Discussion segments
+
+Established a tighter format for chapter-intro Discussion segments after a refinement cycle:
+
+- No Formal Expression / Epistemic Status / Discussion section headers (these segments carry no formal claim of their own, so the boilerplate adds noise)
+- Plain-language prose doing real exposition work — helping the reader form the mental model, surfacing what's genuinely cool/striking — not meta-commentary about the chapter as artifact
+- No fourth-wall talk ("the reader leaves the universe-of-discourse setup," "register shift is real") — these were corrected in a revision cycle
+- Forward-reference downstream consequences without giving away results
+- Working Notes preserve pedagogical-choice rationale (which framings were considered and rejected, why)
+
+### Methodological: the `msc/AUDIT-WORKING-*/` resource for authentic framings
+
+`msc/AUDIT-WORKING-193847/` (Gemini's audit) was mined for per-segment first-encounter reactions during the chapter-intro drafting. §14 *"Wandering Thoughts and Ideation"* of each numbered reflection file is the gold — that's where cross-domain insights and visceral framings land. Several Gemini phrasings landed in chapter intros and would have been awkward to reinvent in the abstract: "tragedy of agency in a confounded world," "consultant vs employee," "mathematics of panic," "death by a thousand memos," "survival is not a state you achieve, it is a sustained burn rate," "$\alpha > \rho/R$ as a four-variable equation across biological / organizational / control / cognitive domains."
+
+Recorded as a memory entry at `reference_audit_working_first_encounter_reactions.md` so future agents writing pedagogical material have the pointer. The methodological lesson: when writing framing-level content, mine the audit reactions before introspecting on what's striking; a different-architecture agent's surprise captures the load-bearing pedagogical hook in ways that internal reasoning misses.
+
+### Structural correction: def-pearl-causal-hierarchy relocated
+
+`def-pearl-causal-hierarchy` moved from Part I Ch.1 ("The Coupled Loop: Ontology and Scope") to Part II Ch.2 ("Causal Access and the Planning Decision"), immediately upstream of the segments that deploy the hierarchy as machinery (`der-causal-hierarchy-requirement`, `der-loop-interventional-access`).
+
+**Motivation.** Pearl's hierarchy is an *imported* framework (Pearl 2009; Bareinboim, Correa, Ibeling & Icard 2022), not AAD-native ontology. Its previous placement in Part I Ch.1 alongside `def-agent-environment` / `def-chronica` / etc. mis-framed it as foundational AAD machinery, and it was introduced ~30 segments before its first heavy use. Section I machinery (mismatch, gain, tempo, persistence, structural adaptation) does not invoke the L1/L2/L3 distinction; only `def-causal-information-yield` in Part I uses the do-notation, and that use is light enough to handle via external citation.
+
+**Pattern established: recapitulation-of-external-result.** When ASF invokes an external theorem or framework, the cleanest pattern is:
+
+1. Light external citation in segments that only *reference* the result (the framework's existence and vocabulary are needed but not its operational machinery).
+2. AAD-internal *recapitulation* segment at the head of the chapter that deploys the framework. The segment is honest about being a recapitulation — title, summary, epistemic status reflect the imported status. The segment lives in AAD's set because subsequent derivations need a unified statement, not because AAD contributes the result.
+3. `depends:` discipline: segments that genuinely deploy the recapitulated machinery keep the AAD-internal dependency; segments that only reference the external result remove the dependency from their depends list and use external citation in prose.
+
+**Files revised in this move.** `def-pearl-causal-hierarchy.md` retitled to *"Definition: Pearl's Causal Hierarchy (Recapitulation)"* with reframed summary/status; `def-causal-information-yield.md` and TST's `obs-software-epistemic-properties.md` + `hyp-causal-discovery-from-git.md` updated to use external citation + forward-pointer pattern; OUTLINE.md updated to move the row from Part I Ch.1 to Part II Ch.2; `the-cycle-in-motion-intro.md` CIY-placement paragraph revised from apologetic to declarative. Five segments that deploy the formal do-machinery (`der-causal-hierarchy-requirement`, `der-loop-interventional-access`, `der-causal-insufficiency-detection`, `def-strategy-dag`, `deriv-causal-ib-exploration`, `deriv-causal-ib-lmi`) kept their AAD-internal `depends:` entries — these are downstream of the relocated segment in Part II/Appendix, so their dependencies remain upstream-local.
+
+### Open items going forward
+
+- Remaining chapter-intro Discussion segments (still `--GAP--` in OUTLINE): Part II Ch.4 (Strategy Dynamics), Ch.5 (The Orient Cascade); Part III Ch.2 (Composition Machinery), Ch.3 (Unity Communication Shared Intent), Ch.5 (Strategic Composition and Channel Effects). Five remaining intros. The mining pattern from `AUDIT-WORKING-193847/` §14 should apply directly to each.
+- The "positive-confound / gambling-addiction" bidirectional tragedy-of-agency case is currently surfaced in `causal-access-intro.md` as a substantial paragraph. The underlying segment `der-loop-interventional-access` would benefit from a worked-example failure mode developing this explicitly — flagged in the intro's Working Notes as a hook for future revision.
+- `post-composition-consistency` remains flagged "*(possibly out of place)*" in Part I Ch.1. The hierarchical-structure cycle didn't address this; the placement tension noted in the original 4-chapter recommendation stands.
+
