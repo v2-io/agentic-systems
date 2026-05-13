@@ -64,9 +64,11 @@ The continuation IS the optimal policy — a fixed-point equation. $A_O^{\text{B
 
 *[Derived (convention-monotonicity)]*
 
-For any model $M_t$, horizon $N_h$, and policy class $\Pi$:
+For any single fixed model $M_t$, horizon $N_h$, and policy class $\Pi$ (i.e., the static-evaluation form: $M_t$ frozen at the decision point, $\Pi$ unchanged across the comparison):
 
 $$A_O^{(1)}(M_t;\, \Pi, N_h) \leq A_O^{\text{RH}}(M_t;\, \Pi, N_r, N_h) \leq A_O^{\text{B}}(M_t;\, \Pi, N_h)$$
+
+**Preconditions on the inequality:** $M_t$ fixed (the comparison evaluates each convention against the *same* model), $\Pi$ fixed (the policy class is the same admissible set across all three conventions; nested $\Pi^{(1)} \subseteq \Pi^{\text{RH}} \subseteq \Pi^{\text{B}}$ would be a different result), $N_h$ fixed (the planning horizon is shared). Replanning *with updated $M_t$* (the deployment behavior of C2) is a different object than the static $A_O^{\text{RH}}$ defined here and the inequality does not automatically transfer — see the "Assumptions held fixed" paragraph below the derivation for the explicit caveat.
 
 **Derivation.** Fix the model $M_t$, policy class $\Pi$, and horizon $N_h$. Each convention evaluates the best first action under a different continuation rule, holding these fixed:
 
