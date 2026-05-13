@@ -46,6 +46,8 @@ The papers in `~/src/neurips/` extracted three ASF results, refined them under a
 
 ### Paper 2: `02-unified-convergence-rl` ←→ AAD source segments
 
+*[Back-integration progress, 2026-05-12: ELI-8 cycle landed `#deriv-identity-sufficiency-rate-bound` which carries a Working Note cross-reference to Paper 2's IB-Lagrangian instantiation in `#form-information-bottleneck` — the rate-distortion structure of $S_{\text{id}}$ parallels Paper 2's IB strengthening, both M3 instances of the additive-coordinate-forcing family. The cross-reference is in place; Paper 2's other source-segment touchpoints (`#def-satisfaction-gap` + `#def-control-regret` two-gap diagnostic; `#schema-strategy-persistence` + `#def-strategic-tempo` strategic tempo with forgetting prerequisite; `#deriv-strategy-cost-regret-bound` $\pi^*$-first reverse-KL direction-forcing) have not yet received Phase A cross-references.]*
+
 **Paper title:** *A Unified Convergence Theory for Non-Stationary Reinforcement Learning*
 
 **Catalog finding:** Cross-Segment CS1 (Unified RL Convergence Theory Under Non-Stationarity).
