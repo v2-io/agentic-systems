@@ -11,14 +11,16 @@
 #   bin/build-monograph --public aad    # public variant (strips Working Notes)
 #
 # Layout (post-Phase 1b restructure):
-#   common/                     shared build infrastructure
-#     main.tex                  LaTeX entrypoint template
-#     preamble/                 LaTeX preamble fragments
-#     lib/                      Ruby modules (segment_renderer, outline_walker)
-#     vendor/kaobook/           vendored class (gitignored)
-#     VERSION                   merged-build VERSION fallback (legacy)
-#   mono/                       output directory (all built artifacts)
-#     .build/<slug>/            per-volume build staging (gitignored)
+#   mono/                       monograph build infrastructure + output
+#     common/                   shared build infrastructure (kaobook target)
+#       main.tex                LaTeX entrypoint template
+#       preamble/               LaTeX preamble fragments
+#       lib/                    Ruby modules (segment_renderer, outline_walker, ingest, …)
+#       vendor/kaobook/         vendored class (gitignored)
+#       VERSION                 merged-build VERSION fallback (legacy)
+#     common-scrbook/           sister target — vanilla KOMA scrbook (see bin/build-scrbook)
+#     .build/<slug>/            per-volume build staging (gitignored, kaobook)
+#     .build-scrbook/<slug>/    per-volume build staging (gitignored, scrbook)
 #     <slug>-v<M>.<m>.<p>.pdf   per-volume built PDF
 #     <slug>-v<M>.<m>.<p>.md    per-volume assembled markdown (when emitted)
 #   0N-<component>/             per-volume source
@@ -33,10 +35,10 @@ require 'open3'
 require 'yaml'
 
 ROOT_DIR    = Pathname.new(__dir__).parent.expand_path
-COMMON_DIR  = ROOT_DIR / 'common'
+MONO_DIR    = ROOT_DIR / 'mono'         # output directory + build infrastructure
+COMMON_DIR  = MONO_DIR / 'common'
 LIB_DIR     = COMMON_DIR / 'lib'
 VENDOR_KAO  = COMMON_DIR / 'vendor' / 'kaobook'
-MONO_DIR    = ROOT_DIR / 'mono'         # output directory
 BUILD_DIR   = MONO_DIR / '.build'
 
 $LOAD_PATH.unshift(LIB_DIR.to_s)
@@ -442,7 +444,7 @@ end
 def main
   unless VENDOR_KAO.exist?
     abort "kaobook not vendored. Expected: #{VENDOR_KAO}\n" \
-          "Run: cd common/vendor && git clone --depth 1 https://github.com/fmarotta/kaobook.git"
+          "Run: cd mono/common/vendor && git clone --depth 1 https://github.com/fmarotta/kaobook.git"
   end
 
   opts = parse_args(ARGV)

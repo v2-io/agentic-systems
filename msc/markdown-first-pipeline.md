@@ -282,7 +282,7 @@ Stage 1 checks invalidation:
 
 Stage 2 always re-runs (it's fast — stitching markdown is microseconds per chunk). It produces the assembled markdown deterministically.
 
-Stage 3 invalidation: the LaTeX compile re-runs if the assembled markdown changed, OR if any preamble file (`common/preamble/*.tex`) changed, OR if the version was bumped. Detected via a top-level build hash.
+Stage 3 invalidation: the LaTeX compile re-runs if the assembled markdown changed, OR if any preamble file (`mono/common/preamble/*.tex`) changed, OR if the version was bumped. Detected via a top-level build hash.
 
 A `--force` flag bypasses all incremental checks (for cases where the cache is wrong).
 

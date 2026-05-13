@@ -18,7 +18,7 @@
 # visual register: classical math monograph (vanilla \section / \chapter /
 # \part hierarchy, no Tufte margin notes, no segment-tinted boxes, no
 # status badges). Same source content, different typographic register.
-# See common-scrbook/ for the LaTeX template + preamble.
+# See mono/common-scrbook/ for the LaTeX template + preamble.
 
 require 'fileutils'
 require 'pathname'
@@ -26,10 +26,10 @@ require 'open3'
 require 'yaml'
 
 ROOT_DIR    = Pathname.new(__dir__).parent.expand_path
-COMMON_DIR  = ROOT_DIR / 'common-scrbook'
-LIB_DIR     = ROOT_DIR / 'common' / 'lib'  # shared with build-monograph
-MONO_DIR    = ROOT_DIR / 'mono'            # shared output directory
-BUILD_DIR   = MONO_DIR / '.build-scrbook'  # separate from kaobook stage
+MONO_DIR    = ROOT_DIR / 'mono'                  # shared output + build infrastructure
+COMMON_DIR  = MONO_DIR / 'common-scrbook'        # scrbook entrypoint + preamble
+LIB_DIR     = MONO_DIR / 'common' / 'lib'        # Ruby modules (shared with build-monograph)
+BUILD_DIR   = MONO_DIR / '.build-scrbook'        # separate from kaobook stage
 
 $LOAD_PATH.unshift(LIB_DIR.to_s)
 require 'segment_renderer'
@@ -41,7 +41,7 @@ require 'typeset_scrbook'
 # ── Volume registry ─────────────────────────────────────────────────────────
 #
 # Mirror of build-monograph's registry. Kept in sync by hand for now;
-# extract to common/lib/volume_registry.rb if a third target lands.
+# extract to mono/common/lib/volume_registry.rb if a third target lands.
 VOLUME_REGISTRY = [
   { dir: '01-aad-core',         id_aliases: %w[01 aad] },
   { dir: '02-tst-core',         id_aliases: %w[02 tst] },

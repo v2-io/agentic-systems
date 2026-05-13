@@ -161,7 +161,7 @@ Goal: ASF parity with the NeurIPS workspace's citation discipline (`~/src/neurip
 - [ ] **A1. Establish the bib database location.** Pending open question 1. Seed from the NeurIPS database + the prose citations currently in ASF segments. YAML schema: bibkey, full citation, DOI, publication date, found date (when ASF first cited), verification date (when last checked against primary source), local PDF path (if any), citation-status (`pre-publication` / `in-review` / `preprint` / `published` / `withdrawn`), citation-domain (AAD / TST / LOGA / ELI / cross).
 - [ ] **A2. Stand up `bin/refs` for ASF.** Port from NeurIPS (`add` / `verify` / `lint` / `search`); extend with the citation-status field for in-review handling. Conditional rendering: when the citing volume is itself anonymized, in-review citations render as soft "Wecker, in preparation" or local-source pointer; otherwise full citation. Same machinery covers the future case where ASF papers themselves go to blind-review venues.
 - [ ] **A3. Run `bin/migrate-cites` across ASF segments.** ~200+ prose citations. Phasing per open question 5. Each ambiguous match (`[Hintikka 1991]` → multiple bib entries) flags for Joseph-author resolution.
-- [ ] **A4. Wire biblatex / natbib into `common/main.tex`.** The `% kaobiblio loaded once we wire biblatex (task 7)` comment at `common/main.tex:31` is the marker. Match NeurIPS's bracketed-superscript natbib config (`super,sort&compress`) for source-form `\cite{key}` / `\citet{key}` / `\citep{key}` rendering with postnotes. Bibliography position in volume frontmatter / backmatter to be decided alongside backmatter design (deferred).
+- [ ] **A4. Wire biblatex / natbib into `mono/common/main.tex`.** The `% kaobiblio loaded once we wire biblatex (task 7)` comment at `mono/common/main.tex:31` is the marker. Match NeurIPS's bracketed-superscript natbib config (`super,sort&compress`) for source-form `\cite{key}` / `\citet{key}` / `\citep{key}` rendering with postnotes. Bibliography position in volume frontmatter / backmatter to be decided alongside backmatter design (deferred).
 - [ ] **A5. Anonymization scanner (`refs/deny-list.yml`).** Port from NeurIPS. Relevant for the future when ASF papers themselves go to blind-review venues; also prevents accidental ASF self-citation in NeurIPS submissions.
 
 ---
@@ -207,9 +207,9 @@ Items previously tracked but not blocking the three workstreams. Lifted out so t
 - **Slug rename audit** — separate concern, naming-cycle work; lives at PRACTICA §"Names & Lexicon" and `msc/naming/`.
 - **Cover artwork for TST / LogA / ELI** — AAD's cover lives at `01-aad-core/AAD-cover.svg`; siblings need authoring.
 - **Dependency-graph SVG → PDF pipeline for image rendering** — separate piece similar to cover artwork; `rsvg-convert` invocation.
-- **Table-rendering polish** — narrow-direction adaptation, snap-to-content-width epsilon, source-side math reflow for inherently-wider-than-page equations. In-source TODOs at `common/lib/segment_renderer.rb` `convert_table` block. The current rendering handles the common cases; these are residual edge-case improvements.
+- **Table-rendering polish** — narrow-direction adaptation, snap-to-content-width epsilon, source-side math reflow for inherently-wider-than-page equations. In-source TODOs at `mono/common/lib/segment_renderer.rb` `convert_table` block. The current rendering handles the common cases; these are residual edge-case improvements.
 - **Tighter typography candidates** — status badges / stage glyphs on appendix-chapter headings (currently a small indicator strip below the chapter glyph); `\l@appendixchapter` style for tighter ToC entries; etc. Cosmetic.
-- **In-source TODOs in `common/lib/`** — `AsfLatex` / `AsfVolumeLatex` inheritance vs mixin design; chunk-format contract expressed in two places (extract to `Mono::ChunkFormat`); `**Status**: missing` conflating epistemic-status with existence-status. Pick up when those modules need touching for other reasons.
+- **In-source TODOs in `mono/common/lib/`** — `AsfLatex` / `AsfVolumeLatex` inheritance vs mixin design; chunk-format contract expressed in two places (extract to `Mono::ChunkFormat`); `**Status**: missing` conflating epistemic-status with existence-status. Pick up when those modules need touching for other reasons.
 
 ---
 
@@ -219,13 +219,13 @@ Items previously tracked but not blocking the three workstreams. Lifted out so t
 - `bin/output-version <slug> show|bump <patch|minor|major>` — per-volume semver utility (operates on `mono-meta.yaml`)
 - `bin/lint-md` — markdown-convention linter (~880 lines; math-compat, voice, formatting)
 - `bin/lint-outline` — outline + segment dependency linter (~640 lines; deps, cross-refs, orphans)
-- `common/main.tex` — LaTeX entrypoint template (single `\input{body}` since Stage 3 emits the whole pipeline result into `body.tex`)
-- `common/preamble/*.tex` — preamble fragments (`setup`, `environments`, `status-badges`, `eq-tags`)
-- `common/lib/outline_walker.rb` — role-prefix-aware OUTLINE parser; HTML-comment stripping at file-read
-- `common/lib/ingest.rb` — Stage 1; chunk + index emission with hash recording
-- `common/lib/assemble.rb` — Stage 2; chunk stitching with cross-ref resolution
-- `common/lib/typeset.rb` — Stage 3; `Kramdown::Converter::AsfVolumeLatex`
-- `common/lib/segment_renderer.rb` — `Kramdown::Converter::AsfLatex` (base class)
+- `mono/common/main.tex` — LaTeX entrypoint template (single `\input{body}` since Stage 3 emits the whole pipeline result into `body.tex`)
+- `mono/common/preamble/*.tex` — preamble fragments (`setup`, `environments`, `status-badges`, `eq-tags`)
+- `mono/common/lib/outline_walker.rb` — role-prefix-aware OUTLINE parser; HTML-comment stripping at file-read
+- `mono/common/lib/ingest.rb` — Stage 1; chunk + index emission with hash recording
+- `mono/common/lib/assemble.rb` — Stage 2; chunk stitching with cross-ref resolution
+- `mono/common/lib/typeset.rb` — Stage 3; `Kramdown::Converter::AsfVolumeLatex`
+- `mono/common/lib/segment_renderer.rb` — `Kramdown::Converter::AsfLatex` (base class)
 - `<component>/mono-meta.yaml` — per-volume metadata (title, slug, version, cover, toc)
 - `<component>/<slug>.aux` — persisted `.aux` for cross-volume xr-refs (committed)
 - `mono/.build/<slug>/{index.md, chunks/*.md}` — Stage 1 output (gitignored)
