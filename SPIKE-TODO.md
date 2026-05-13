@@ -21,7 +21,9 @@ The integration discipline this cycle commits to, in response to the prior proje
 
 ## NeurIPS back-integration coordination
 
-A separate planning document, `msc/neurips-back-integration-2026-05-08.md`, surveys the back-integration of three NeurIPS 2026 paper extractions into ASF. **Do not move that doc to `msc/.integrated/`** until the full Phase A/B/C back-integration completes — it's a forward-work plan, not a reasoning trail. The current cycle consumes only the portions relevant to the three spikes:
+A separate planning document, `msc/neurips-back-integration-2026-05-08.md`, surveys the back-integration of three NeurIPS 2026 paper extractions into ASF. **Do not move that doc to `msc/.integrated/`** until the full Phase A/B/C back-integration completes — it's a forward-work plan, not a reasoning trail. **However, mark progress in that doc as cross-references land in this cycle** — light edits annotating which back-integration items this cycle picks up (e.g., AAD-5's cross-reference to Paper 3's chart-rescaling no-go; ELI-8's cross-reference to Paper 2's IB parallel) and which remain for Phase A/B/C. Future agents picking up the back-integration will read the doc and see what's already wired; without progress-marking the doc misleadingly suggests nothing is done.
+
+The current cycle consumes only the portions relevant to the three spikes:
 
 - **AAD-5 ↔ Paper 3** (`~/src/neurips/03-llm-hallucinate-bound/`): Paper 3's chart-rescaling no-go on Euclidean chart norms is *the* no-go that forces (PI) to be load-bearing for any universal-constant claim. AAD-5's natural-gradient direction inherits this forcing — the new appendix segment `#deriv-fisher-local-update-gain` should cite Paper 3's no-go as the structural backing for "(PI) is necessary, not optional." Paper 3 also introduces the **(PI)+(R)+(K) axiom triple** at full Markov-morphism strength; AAD-5's derivation depends on **(PI) only**, so the new segment's Epistemic Status should explicitly scope "depends on (PI); does not invoke (R) or (K)." When NeurIPS Phase B adds (R) and (K) to `#scope-agent-identity`, AAD-5's segment stays scoped to (PI) until a future cycle explicitly extends it.
 - **AAD-7 ↔ Paper 2** (`~/src/neurips/02-unified-convergence-rl/`): Paper 2's (C1)-(C2)-(C3) sequential-ignorability framework explicitly notes that goal-conditioned LLM policies violate (C2). AAD-7's edit at `#scope-composite-agent` line 69 is independent but related; coordinate language only if NeurIPS Phase B's `#scope-agent-identity` strengthening touches the same scope-condition paragraph.
@@ -37,9 +39,10 @@ NeurIPS source-paper paths for reference during integration (each has its own `s
 
 1. **AAD-7 first** (~30 min — surgical, lowest-risk, validates workflow). Four edits across two segments + one Working Note for the γ'-attempt no-go. Good candidate for **background general-purpose agent** with peer-voice brief.
 2. **AAD-5 second** (~1–2 hours — new appendix segment + Epistemic Status rewrite + two cross-reference satellite touches + OUTLINE update). Math voice matters; can be a **background agent** with careful brief, or done in foreground.
-3. **ELI-8 third** (~2–3 hours — substantial rewrite + two new segments + content lift). Done in foreground; **verification agent before commit**.
+3. **AAD-1 third — unlocked by AAD-5's primitive** (~1–2 hours — tensor-tempo extension citing AAD-5's matrix gain $K = (H_M+H_L)^{-1}H_L$ as the per-coordinate primitive). Scope expansion approved by Joseph 2026-05-12 in response to the wild-idea forward-pointer in my SPIKE-TODO draft. See dedicated section below.
+4. **ELI-8 fourth** (~2–3 hours — substantial rewrite + two new segments + content lift). Done in foreground; **verification agent before commit**.
 
-Each commit lands a spike's full landing — the segment edits + INDEX update + TODO reconciliation + spike move to `spikes/.integrated/` — so each commit is self-contained.
+Each commit lands a stage's full work — the segment edits + INDEX update + TODO reconciliation + (where applicable) spike move to `spikes/.integrated/` + NeurIPS doc progress-marking where cross-references land — so each commit is self-contained.
 
 ## AAD-7 — Strategic equilibrium wording precision
 
@@ -96,6 +99,28 @@ Status: [ ] pending
 
 Status: [ ] pending
 
+## AAD-1 — Tensor adaptive tempo (unlocked by AAD-5's matrix gain primitive)
+
+**Origin:** Open audit-finding in `TODO.md` Group (b) noting that `#def-adaptive-tempo`'s scalar form is too narrow for anisotropic gains, Fisher-whitened updates, LMI causal-IB, per-dimension persistence, and per-direction adversarial pressure. The tensor-tempo TODO at mono line 13003 (the LMI causal-IB appendix) and per-dimension repair at `#result-per-dimension-persistence` already acknowledge this. **No prior spike** — this stage executes the strengthening directly using AAD-5's promoted primitive.
+
+**Why it lands in this cycle:** AAD-5's new appendix `#deriv-fisher-local-update-gain` derives the matrix gain operator $K = (H_M + H_L)^{-1} H_L$ as the natural object, with scalar $\eta^\ast = U_M/(U_M + U_o)$ as the commuting-basis collapse. That matrix object *is* the per-coordinate primitive that tensor tempo needs — $\mathcal T = \nu \cdot K$ as a matrix product, with the existing scalar $\mathcal T = \nu \cdot \eta^\ast$ recovered in the shared-eigenbasis limit. Once AAD-5 lands, the tensor-tempo extension is a short follow-on, not a separate research cycle.
+
+| Item | Lands as | Destination |
+|---|---|---|
+| Tensor adaptive tempo $\mathcal T = \nu \cdot K$ with $K$ the AAD-5 matrix gain; scalar $\mathcal T = \nu \cdot \eta^\ast$ as commuting-basis collapse | Extension to `#def-adaptive-tempo` Formal Expression — new sub-block "Tensor extension under Fisher-local invariance regime" citing `#deriv-fisher-local-update-gain` | `01-aad-core/src/def-adaptive-tempo.md` |
+| Sub-scope statement: scalar form is exact for isotropic + nonredundant-channel + scalar-Hessian cases; tensor form is exact in the Fisher-local invariance regime; outside, the qualitative relationship $\mathcal T \uparrow$ with frequency $\nu$ and gain $\eta^\ast$ is preserved | `#def-adaptive-tempo` Epistemic Status | Same |
+| Cross-reference satellite edits — segments that currently invoke scalar $\mathcal T$ where tensor $\mathcal T$ would be exact get a scope tag | `#deriv-fisher-whitened-update-rule`, `#deriv-causal-ib-lmi`, `#result-per-dimension-persistence`, `#deriv-adaptive-gain-dynamics` each gain a brief "tensor $\mathcal T$ when prior/likelihood do not share eigenbasis; see `#def-adaptive-tempo` Tensor extension" pointer | Multiple segments |
+| Downstream propagation: `#result-persistence-condition`, `#result-sector-condition-stability`, adversarial-tempo results | Scope-tag in their existing Discussions naming "scalar / isotropic / nonredundant-channel scope; tensor lift via `#def-adaptive-tempo` Tensor extension" | Multiple segments |
+| OUTLINE row update if a new appendix segment is judged necessary (e.g., if the tensor-extension content is large enough to be its own appendix `#def-adaptive-tempo-tensor`) | OUTLINE entry | `01-aad-core/OUTLINE.md` |
+
+**Implementation decision (one judgment call to make at execution time):** keep the tensor extension as a sub-block in `#def-adaptive-tempo`, or factor it out as a separate appendix segment `#def-adaptive-tempo-tensor` parallel to how AAD-5 separates `#emp-update-gain` (the empirical-claim layer) from `#deriv-fisher-local-update-gain` (the derived layer). The factoring choice depends on how much content the tensor extension carries; if it's a single paragraph + scope tag, in-segment. If it grows past ~30 lines with its own derivation + downstream propagation table, separate appendix.
+
+**Workflow:** Background general-purpose agent, briefed after AAD-5 lands so it can cite the now-existing `#deriv-fisher-local-update-gain` segment.
+
+**Commit:** "AAD-1 tensor adaptive tempo landed; #def-adaptive-tempo gains tensor extension citing #deriv-fisher-local-update-gain primitive"
+
+Status: [ ] pending (blocked on AAD-5 landing)
+
 ## ELI-8 — Identity sufficiency formalization
 
 **Spike:** `spikes/spike-identity-sufficiency-formalization.md`. Completion state: succeed-at-claim + rate-distortion bonus + relational joint-space construction preserves bidirectionality.
@@ -146,19 +171,22 @@ After each segment landing:
 
 ## Tracking — to be updated on each commit
 
-| Spike | Promoted | Verified | Spike → `.integrated/` | INDEX updated | TODO reconciled | Commit |
-|---|---|---|---|---|---|---|
-| AAD-7 | [ ] | [ ] (self) | [ ] | [ ] | [ ] | — |
-| AAD-5 | [ ] | [ ] (self) | [ ] | [ ] | [ ] | — |
-| ELI-8 | [ ] | [ ] (verification agent) | [ ] | [ ] | [ ] | — |
-| CHANGELOG narrative | [ ] | — | — | — | — | — |
-| `SPIKE-TODO.md` (this file) → `.integrated/`? | Decision at cycle end | — | — | — | — | — |
+| Stage | Promoted | Verified | Spike → `.integrated/` | INDEX updated | TODO reconciled | NeurIPS doc marked | Commit |
+|---|---|---|---|---|---|---|---|
+| AAD-7 | [x] | [x] (self) | [x] | [x] | [x] | n/a | pending commit |
+| AAD-5 | [ ] | [ ] (self) | [ ] | [ ] | [ ] | [ ] (Paper 3 chart-rescaling no-go ref) | — |
+| AAD-1 | [ ] | [ ] (self) | n/a (no spike) | [ ] | [ ] | n/a | — |
+| ELI-8 | [ ] | [ ] (verification agent) | [ ] | [ ] | [ ] | [ ] (Paper 2 IB parallel ref) | — |
+| CHANGELOG narrative | [ ] | — | — | — | — | — | — |
+| `SPIKE-TODO.md` (this file) → cycle archive? | Decision at cycle end | — | — | — | — | — | — |
 
 **On this file's own fate:** Once all three spikes are landed and CHANGELOG narrative is written, `SPIKE-TODO.md` itself is a cycle artifact whose substance is in CHANGELOG + segment Working Notes. It can be moved to a cycle-artifacts archive (e.g., `msc/cycle-archives/spike-todo-2026-05-12.md` or similar) at cycle close. Decision deferred to Joseph at that point.
 
 ## Open routing decisions
 
-None blocking. Two flagged but resolved (Joseph 2026-05-12):
+None blocking. Resolved (Joseph 2026-05-12):
 
-- *Substrate-transfer-asymmetry no-go routing.* Resolved: new segment `#hyp-substrate-transfer-asymmetry` (option 1), not Discussion or Working Note.
-- *NeurIPS doc fate.* Resolved: stays in `msc/` until full Phase A/B/C back-integration completes; not part of the current cycle's `.integrated/` moves.
+- *Substrate-transfer-asymmetry no-go routing.* New segment `#hyp-substrate-transfer-asymmetry` (option 1), not Discussion or Working Note.
+- *NeurIPS doc fate.* Stays in `msc/` until full Phase A/B/C back-integration completes; not part of the current cycle's `.integrated/` moves. Progress-marking via light edits is in scope for this cycle as cross-references land.
+- *Cycle scope expansion via AAD-1.* AAD-5's matrix gain primitive unblocks AAD-1 tensor adaptive tempo; the tensor-tempo extension lands in this cycle as Stage 3, between AAD-5 and ELI-8. AAD-1 is currently OPEN in `TODO.md` Group (b); its landing here pulls it off the open list.
+- *ELI-8 diff-voice cleanup as part of the rewrite.* The existing `#def-identity-sufficiency` Discussion carries "audit §12 §14 lift" / "audit §11 §14 lift" parentheticals; per `feedback_segment_voice_not_diff_voice.md`, those are removed in the rewrite. Substance is preserved; the diff narration goes.
