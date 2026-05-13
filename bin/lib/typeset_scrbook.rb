@@ -59,8 +59,15 @@ module Mono
       # — so reuse the kaobook converter's preprocessor verbatim. If the
       # contract ever diverges, factor preprocess_metadata_blocks into a
       # shared Mono::ChunkFormat module.
+      # Scan for known slugs BEFORE preprocess_metadata_blocks runs — the
+      # preprocessor transforms `**Slug**: foo` lines into kramdown IAL
+      # syntax (`{: .segment slug="foo"}`), and scan_known_slugs's regex
+      # only recognizes the original metadata-block form. Scanning after
+      # preprocessing returns an empty set, which causes postprocess_latex
+      # to fall back EVERY cross-ref to \externalref — losing all in-volume
+      # \cref-rendered (and hyperref-coloured) cross-references.
+      known_slugs = scan_known_slugs(markdown_text)
       text = Mono::Typeset.preprocess_metadata_blocks(markdown_text)
-      known_slugs = scan_known_slugs(text)
       doc = Kramdown::Document.new(
         text,
         input: 'AsfSegment',
