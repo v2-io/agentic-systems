@@ -173,8 +173,8 @@ After each segment landing:
 
 | Stage | Promoted | Verified | Spike → `.integrated/` | INDEX updated | TODO reconciled | NeurIPS doc marked | Commit |
 |---|---|---|---|---|---|---|---|
-| AAD-7 | [x] | [x] (self) | [x] | [x] | [x] | n/a | pending commit |
-| AAD-5 | [ ] | [ ] (self) | [ ] | [ ] | [ ] | [ ] (Paper 3 chart-rescaling no-go ref) | — |
+| AAD-7 | [x] | [x] (self) | [x] | [x] | [x] | n/a | `011d3cb` |
+| AAD-5 | [x] | [x] (self) | [x] | [x] | [x] | [x] (Paper 3 chart-rescaling no-go ref) | pending commit |
 | AAD-1 | [ ] | [ ] (self) | n/a (no spike) | [ ] | [ ] | n/a | — |
 | ELI-8 | [ ] | [ ] (verification agent) | [ ] | [ ] | [ ] | [ ] (Paper 2 IB parallel ref) | — |
 | CHANGELOG narrative | [ ] | — | — | — | — | — | — |
