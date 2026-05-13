@@ -9,18 +9,18 @@ How to write and maintain AAD claim segment files.
 
 Every convention in this document is a trade-off across six consumer-purpose-format-platform combinations. Naming them up front prevents the trade-offs from getting re-decided per-section.
 
-| Consumer | Purpose                                            | Format/Form   | Platform   |
-| -------- | -------------------------------------------------- | ------------- | ---------- |
-| Human    | Authoring & Editing                                | Sources       | Obsidian   |
-| Agent    | Authoring & Editing                                | Sources       | Raw        |
-| Human    | Investigating & Contributing                       | Sources       | Github     |
-| Agent    | Investigating, Using, Understanding                | Intermediates | Raw        |
-| Human    | Formal Reviewing, Archiving, Citing, Understanding | Finals        | PDF Viewer |
-| Agent    | Formal Reviewing, Archiving, Citing                | Finals        | PDFtoText  |
+| Consumer | Purpose                                            | Format/Form   | Platform                                       |
+| -------- | -------------------------------------------------- | ------------- | ---------------------------------------------- |
+| Human    | Authoring & Editing                                | Sources       | Obsidian                                       |
+| Agent    | Authoring & Editing                                | Sources       | Raw                                            |
+| Human    | Investigating & Contributing                       | Sources       | Github                                         |
+| Agent    | Investigating, Using, Understanding                | Intermediates | Raw                                            |
+| Human    | Formal Reviewing, Archiving, Citing, Understanding | Finals        | PDF Viewer                                     |
+| Agent    | Formal Reviewing, Archiving, Citing                | Finals        | `pdftotext -layout -clip` and `pdftotext -raw` |
 
 **Three formats:**
 
-- **Sources** — per-segment markdown files in `<component>/src/`. Authoring substrate; lives under git; rendered live by Obsidian and on GitHub.
+- **Sources** — tracking files, misc markdown artifacts, outlines, and (especially) per-segment markdown files in `<component>/src/`. Authoring substrate; lives under git; rendered live by Obsidian and on GitHub.
 - **Intermediates** — assembled per-volume markdown at `mono/<slug>-v<sem>.md`. Build-output; canonical citable artifact; what an agent ingests when reasoning about a whole volume; cross-references resolved at this stage.
 - **Finals** — `mono/<slug>-v<sem>.pdf`. Build-output; the publication artifact; what reviewers and archivists consume.
 
@@ -54,9 +54,41 @@ The current eq-tag syntax `*[Type (name, from ...)]*` compresses the first four 
 Inline equations carry the same render-platform constraint but do not carry eq-tag attributes (the margin-note infrastructure that emits `\eqtag{...}` operates on the equation immediately following the tag paragraph, which is a display-equation pattern).
 
 
+## Reference Kinds
+
+ASF segments carry several kinds of references: internal cross-references between segments and named atoms, cross-volume references between sibling Volumes, external citations to published and pre-publication work, self-citations between ASF and its own derived publications, and content annotations (footnotes / sidenotes / margin-notes) that aren't references per se but sit in the same family. Each kind has its own *identity* (what the reference targets), *scope* (where it can reach), and rendering across the source / intermediate / final formats from *Audiences and Render Targets* above.
+
+**Source-form is target-agnostic.** The same `\cite{key}` or `#slug-name` in source renders differently in scrbook vs kaobook vs future paper-format targets, but the source convention itself is the same. What a source form *resolves to* in each render target is target-specific implementation; current renderings, gaps, and trade-offs live in [FORMAT-TODO](FORMAT-TODO.md) Workstreams A and B.
+
+**Many cells below are currently planned rather than working.** Source-form conventions like `#slug-name` exist in segments today but don't always navigate (e.g., Obsidian segment-slug navigation is currently non-functional even though the convention has been in place). The taxonomy below is foundational; the platform-by-platform render reality is implementation-tracked in FORMAT-TODO.
+
+| Kind | Identity / Target | Scope | Source form | Final form |
+|---|---|---|---|---|
+| **Segment-level cross-reference** | segment slug | intra-volume | `#slug-name` (prose) or `[#slug-name](slug-name.md)` (linkable) | `\cref{seg:slug}` — e.g., "Definition 1.4" |
+| **Atom-level cross-reference** | atom name (kebab-case) | intra-volume | `*[Type (name, …)]*` defines; `[[#^name]]` cites *(planned)* | `\cref{atom:name}` or `\eqref{name}` — e.g., "(1.4.2)" |
+| **Cross-volume reference** | `volume:slug` or `volume:atom-name` | cross-volume | source form *(TBD — currently inline prose)* | `xr-hyper` resolved when sibling `.aux` available; bibliography-form fallback when not |
+| **External published citation** | bibkey in `~/src/relata/` | external | `\cite{key}` / `\citet{key}` / `\citep{key}` *(planned — currently full author-year prose)* | bracketed-superscript natbib — e.g., "⁽¹⁰⁾" |
+| **External in-review / preprint citation** | bibkey + citation-status field | external (status-gated) | same `\cite{key}` — status lives in the relata entry, not in source | full citation if published/preprint; soft "in preparation" or local-source pointer if in-review and current build is anonymized |
+| **Self-citation (cross-project)** | bibkey + self-flag | external + anonymization-gated | same `\cite{key}` — gating by build target | full citation in normal builds; suppressed or rephrased third-person in anonymized builds |
+| **Footnote** | n/a — content placement | intra-segment | `[^anchor]` markdown or `\footnote{…}` raw-TeX | `\footnote{…}` numbered at page bottom |
+| **Sidenote** *(numbered Tufte-style margin annotation)* | n/a — content placement | intra-segment | source form *(TBD)* | `\sidenote{…}` numbered margin annotation, with in-line callout number |
+| **Margin-note** *(un-numbered, just-in-margin)* | n/a — content placement | intra-segment | currently auto-emitted from eq-tag paragraphs only; author-driven form *(TBD)* | `\marginnote{…}` un-numbered margin annotation |
+
+**Scope vocabulary** (used in the table and elsewhere):
+
+- **intra-segment** — the reference, annotation, or content-placement targets a location inside the same segment. Footnotes / sidenotes / margin-notes operate here.
+- **intra-volume** — the reference targets a location inside the same Volume. Segment-level and atom-level cross-references operate here today.
+- **cross-volume** — the reference targets a location in a sibling Volume (AAD ↔ TST ↔ LogA ↔ ELI). Resolution depends on sibling-volume `.aux` availability; fallback rendering ensures stand-alone reading still works.
+- **external** — the reference targets work outside ASF. Bibliography database is the source of truth; build-managed snapshots inside the ASF repo keep ASF self-contained for readers without access to the shared database. Self-citations and in-review citations are special cases of external citation with anonymization / status gating.
+
+**Build-managed snapshots — the self-containment principle.** External citations resolve through a build-managed snapshot mechanism: the bibliography database lives at a shared location (currently planned as `~/src/relata/` for cross-project sharing with the NeurIPS workspace), but each volume's build extracts the entries the volume actually cites into a snapshot file inside the ASF repo, and the snapshot is committed. ASF stays self-contained — a future reader can read any volume without access to the shared database. The snapshot is build-managed (regenerated whenever cited entries change); authors never hand-edit it.
+
+**Intermediate form — uniform resolution.** The intermediate format (the assembled per-volume markdown at `mono/<slug>-v<sem>.md` consumed by agent investigators) resolves all cross-references and external citations to their inline rendered form aggressively, so an agent reading the assembled markdown sees fully-resolved links and citations rather than unresolved markers. Implementation specifics (which kinds resolve at which stage, what the rendered inline form looks like) live in FORMAT-TODO.
+
+
 ## Line Wrapping
 
-Do not hard-wrap lines. Let renderers (GitHub, Obsidian, editors) handle wrapping. One sentence or clause per line is fine for diff-friendliness, but do not insert line breaks at a fixed column width.
+Do not hard-wrap lines just to artificially impose reading width. Let renderers (GitHub, Obsidian, editors) handle wrapping. One sentence or clause per line is fine for diff-friendliness, especially with long paragraphs or paragraphs with lots of inline mathematics, but do not insert line breaks at a fixed column width. Think logical chunks and not line-length.
 
 
 ## File Organization
