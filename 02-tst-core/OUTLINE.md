@@ -30,6 +30,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | S | Definition | | [#def-feature](src/def-feature.md) | Unit of coherent change | draft |
 | S | Result | | [#result-specification-bound](src/result-specification-bound.md) | Can't implement unspecified; includes communication bottleneck corollary | draft |
 | S | Derived | | [#der-change-expectation-baseline](src/der-change-expectation-baseline.md) | Median future ≈ observed past; includes investment scale form | draft |
+| S | Discussion | | [#impl-foundations-features](src/impl-foundations-features.md) | Chapter additional implications & discussion: software as calibration laboratory (#12), specification bound as persistence-bandwidth at spec layer (#32), temporal optimality grounding (#53), domain-generalization transfer theorem candidate (#41) | draft |
 
 <!--
 Internal arc: the normative postulate (temporal optimality) sets TST's
@@ -56,6 +57,7 @@ the dual optimization.
 | S | Derived | | [#der-change-investment](src/der-change-investment.md) | When extra time now pays off | draft |
 | S | Discussion + Hypothesis | | [#der-code-quality-as-observation-infrastructure](src/der-code-quality-as-observation-infrastructure.md) | Code quality $\to U_o \to \eta^\ast \to \mathcal{T}$ | draft |
 | | --GAP-- | | | Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$ | |
+| S | Discussion | | [#impl-developer-agent](src/impl-developer-agent.md) | Chapter additional implications & discussion: AI-maintained-code regime as normal-case for comprehension dominance (#16), persistence-threshold bifurcation from $Q \to U_o \to \eta^\ast \to \mathcal T$ chain (#17), multi-channel developer tempo decomposition | draft |
 
 <!--
 Instantiates AAD's actuated-agent machinery in software. Internal arc: the
@@ -83,6 +85,7 @@ channel machinery.
 | S | Definition | | [#def-discontinuity-distance](src/def-discontinuity-distance.md) | Lexical < file < module < svc | draft |
 | S | Derived + Hypothesis | | [#der-change-proximity-principle](src/der-change-proximity-principle.md) | Closer changes → less time | draft |
 | S | Hypothesis | | [#hyp-exponential-cognitive-load](src/hyp-exponential-cognitive-load.md) | Context-switch cost compounds? | draft |
+| S | Discussion | | [#impl-code-structure](src/impl-code-structure.md) | Chapter additional implications & discussion: joint structural-mechanics composition (alignment + size + proximity + discontinuity) as operational substrate for Ch.2's dual-optimization, exponential cognitive load with structure-dependent refinement (#48), atomic changeset as Pearl-Level-2 interventional substrate, chain-confidence-decay anchor at the depth-fragility level | draft |
 
 <!--
 Structural mechanics of code that govern implementation cost. Internal arc:
@@ -111,6 +114,7 @@ this chapter develops the structural *mechanics* that determine the times.
 | S | Scope | | [#scope-continuous-operation](src/scope-continuous-operation.md) | Include $P(\text{fail}) \times T_{\text{recovery}}$ | draft |
 | S | Hypothesis | | [#hyp-causal-discovery-from-git](src/hyp-causal-discovery-from-git.md) | Git as interventional data | draft |
 | | --GAP-- | | | Software persistence: the unmaintainability threshold formalized | |
+| S | Discussion | | [#impl-system-measures](src/impl-system-measures.md) | Chapter additional implications & discussion: coupling/coherence as system-level diagnostic infrastructure, OKR-as-observability-engineering generalization across multi-agent systems (#42), interventional vs associational reading of git (#49), operational availability as persistence-bandwidth-floor analog, domain-generalization transfer theorem candidate (#41), TST volume closes here | draft |
 
 <!--
 System-level synthesis plus operational and meta-level extensions. Internal

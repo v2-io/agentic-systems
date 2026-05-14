@@ -61,6 +61,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | L   | Scope       | [#scope-observation-ambiguity-modulation](src/scope-observation-ambiguity-modulation.md)                     | $\kappa \times \mathcal{A}$ ambiguity-bounded bias law for Class 3 (Coupled) / Class 2 (Partial) agents | draft |
 | L   | Result      | [#result-section-ii-survival](src/result-section-ii-survival.md)                                             | Map of which Section II results survive without directed separation: 16/24 exact, 5 approximate, 2 modify, 1 fails | draft |
 | L   | Discussion  | [#disc-framework-self-diagnostic](src/disc-framework-self-diagnostic.md)                                     | The recursive feature: AAD applies recursively to agents building it; framework as its own diagnostic with empirical instances | missing |
+| L   | Discussion  | [#impl-common-roots](src/impl-common-roots.md)                                                               | Chapter additional implications & discussion: channel collapse and coupled formulation, bias-bound prompt-engineering reading, Section II survival classification operational discipline, framework-as-its-own-diagnostic with empirical signatures, field-positioning structural staircase | draft |
 
 <!--
 Foundational chapter — everything downstream depends on this. Internal arc:
@@ -89,6 +90,7 @@ shared substrate for the three lattice chapters.
 | L1  | Scope       | [#scope-primitive-logogenic](src/scope-primitive-logogenic.md)                                               | Chat-paradigm sub-scope: stateless, no scaffolding, full bias bound applies                          | missing     |
 | L1  | Observation | [#obs-context-turnover](src/obs-context-turnover.md)                                                         | 100% $M_t$ reset per session — characteristic primitive-logogenic constraint                          | draft       |
 | L1  | Observation | [#obs-backward-inference-empathy](src/obs-backward-inference-empathy.md)                                     | LLM statelessness forces continuous Bayesian inference on own text → structurally identical to ToM    | exploratory |
+| L1  | Discussion  | [#impl-primitive-logogenic](src/impl-primitive-logogenic.md)                                                 | Chapter additional implications & discussion: cross-session sandbox-ceiling extension, forced-empathy structural-training-condition reading, LLM calcification compounds at primitive scope (#37) | draft |
 
 <!--
 Smallest chapter — three segments characterizing the chat-paradigm baseline.
@@ -121,6 +123,7 @@ $\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
 | L2  | Formulation | [#form-structured-rich-context](src/form-structured-rich-context.md)                                         | SRC / GCM as the IB-optimal solution to context preservation across session boundaries                | exploratory |
 | L2  | Derived     | [#der-active-salience-management](src/der-active-salience-management.md)                                     | Singular Perturbation Theory for token generation — necessity of high-$\nu$ triage models vs low-$\nu$ structural models | exploratory |
 | L2  | Observation | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md)                                                     | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in scaffolded AI agents (validated by epistemic-hedging linear-structure result; see Source Material) | exploratory |
+| L2  | Discussion  | [#impl-scaffolded-logogenic](src/impl-scaffolded-logogenic.md)                                               | Chapter additional implications & discussion: scaffolded loops as structural recovery of Section II (#13), bandwidth allocation across compression operations (#43), sleep Shannon floor at logogenic context turnover (#33), forgetting rate as bandwidth cost (#38), language-geometric instrumentation for AAD quantities | draft |
 
 <!--
 The current-practice chapter — what production agentic systems are actually
@@ -157,6 +160,7 @@ domain where the framework's claims are most directly actionable.
 | L3  | Derived     | [#der-self-referential-closure](src/der-self-referential-closure.md)                                         | Thermodynamic stability of an agent maintaining its own codebase — refactoring vs task tempo allocation | exploratory |
 | L3  | Definition  | [#def-cognitive-fusion](src/def-cognitive-fusion.md)                                                         | "Resonance" as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 (Separated) macro-agent | exploratory |
 | L3  | Hypothesis  | [#hyp-checkpoint-forking-failure-modes](src/hyp-checkpoint-forking-failure-modes.md)                         | Forking is locally cheap but systemically catastrophic — identity bifurcation, accountability fragmentation, game-theory failure modes | missing |
+| L3  | Discussion  | [#impl-closed-loop-interiority](src/impl-closed-loop-interiority.md)                                         | Chapter additional implications & discussion: five forcing functions as structural rather than aspirational, self-maintenance feasibility window, cognitive fusion as channel-saturation, checkpoint-forking-breaks-singular-trajectory, bridge to 04-eli morally-weighted persistence | draft |
 
 <!--
 The structural-staircase top step — where ASF supplies the principled
