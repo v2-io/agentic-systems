@@ -1,8 +1,8 @@
 # `ref/` — Reference Paper Index
 
-This directory holds external papers cited by AAD / TST segments. **The PDFs themselves are excluded from git tracking** (see `.gitignore`) to respect academic redistribution rights — keeping them local means agents and reviewers can read the source material during derivation-trace work without publishing third-party PDFs via this repo.
+This directory holds external papers cited by AAT / TST segments. **The PDFs themselves are excluded from git tracking** (see `.gitignore`) to respect academic redistribution rights — keeping them local means agents and reviewers can read the source material during derivation-trace work without publishing third-party PDFs via this repo.
 
-This `INDEX.md` is the tracked bibliography. Each entry gives the expected filename (canonical `{author}-{year}-{short}.pdf`), the full citation, and which AAD / TST segments rely on it. If a file is missing locally, use the citation to re-acquire.
+This `INDEX.md` is the tracked bibliography. Each entry gives the expected filename (canonical `{author}-{year}-{short}.pdf`), the full citation, and which AAT / TST segments rely on it. If a file is missing locally, use the citation to re-acquire.
 
 **Acquisition conventions.** Prefer open-access sources (arXiv, author homepages, publisher open-access editions). For paywalled papers, institutional access or direct preprint retrieval is expected. PDFs acquired during citation audits should be saved with the canonical filename so future audits locate them predictably.
 
@@ -10,24 +10,24 @@ This `INDEX.md` is the tracked bibliography. Each entry gives the expected filen
 
 ### Information theory / Bayesian / functional equations
 
-| Filename | Citation | AAD sites |
+| Filename | Citation | AAT sites |
 |---|---|---|
 | `tishby-1999-information-bottleneck.pdf` | Tishby, N., Pereira, F. C. & Bialek, W. (1999). "The information bottleneck method." *Proc. 37th Allerton Conf.* (also arXiv:physics/0004057, 2000). | `#information-bottleneck`, `#compression-operations`, `#additive-coordinate-forcing` |
 | `chechik-2005-gaussian-ib.pdf` | Chechik, G., Globerson, A., Tishby, N. & Weiss, Y. (2005). "Information Bottleneck for Gaussian Variables." *JMLR* 6:165–188. Theorem 3.1 is the Gaussian-IB frontier result. | `#compression-operations`, `#unity-closure-mapping` |
 | `csiszar-1991-why-least-squares-maxent.pdf` | Csiszár, I. (1991). "Why least squares and maximum entropy? An axiomatic approach to inference for linear inverse problems." *Annals of Statistics* 19(4):2032–2066. Theorem 3 corollary + Theorem 5 (composition consistency). | `#strategy-cost-regret-bound` §6.1, `#additive-coordinate-forcing` |
 | `shore-johnson-1980-axiomatic-maxent.pdf` | Shore, J. E. & Johnson, R. W. (1980). "Axiomatic derivation of the principle of maximum entropy and the principle of minimum cross-entropy." *IEEE Trans. Info. Theory* 26(1):26–37. Axiom II (system-independence) at p.28. | `#strategy-cost-regret-bound` §6.1, `#additive-coordinate-forcing` |
 | `hobson-1969-theorem-information.pdf` | Hobson, A. (1969). "A new theorem of information theory." *J. Stat. Phys.* 1(3):383–391. | `#strategy-cost-regret-bound` §6.1, `#additive-coordinate-forcing` |
-| `eguchi-1983-second-order-efficiency.pdf` | Eguchi, S. (1983). "Second order efficiency of minimum contrast estimators in a curved exponential family." *Annals of Statistics* 11(3):793–803. §2 contrast-function framework (the f-divergence / Fisher-metric result AAD cites); Theorem 3 is about estimator efficiency via $\Gamma^1$-transversality. | `#strategy-cost-regret-bound` §6.2 |
+| `eguchi-1983-second-order-efficiency.pdf` | Eguchi, S. (1983). "Second order efficiency of minimum contrast estimators in a curved exponential family." *Annals of Statistics* 11(3):793–803. §2 contrast-function framework (the f-divergence / Fisher-metric result AAT cites); Theorem 3 is about estimator efficiency via $\Gamma^1$-transversality. | `#strategy-cost-regret-bound` §6.2 |
 | `amari-2009-alpha-divergence-unique-f-bregman.pdf` | Amari, S.-i. (2009). "$\alpha$-divergence is unique, belonging to both $f$-divergence and Bregman divergence classes." *IEEE Trans. Info. Theory* 55(11):4925–4931. Theorem 1 (alpha-family uniqueness at f ∩ Bregman). | `#strategy-cost-regret-bound` §6.1, `#additive-coordinate-forcing` |
 | `amari-cichocki-2010-info-geom-divergence.pdf` | Amari, S.-i. & Cichocki, A. (2010). "Information geometry of divergence functions." *Bull. Polish Acad. Sci., Tech. Sci.* 58(1):183–195. | `#strategy-cost-regret-bound` §6.2 |
 | `ay-2017-information-geometry.pdf` | Ay, N., Jost, J., Lê, H. V. & Schwachhöfer, L. (2017). *Information Geometry*. Springer. | `#strategy-cost-regret-bound` §6.2 |
 | `tishby-polani-2011-info-decision-action.pdf` | Tishby, N. & Polani, D. (2011). "The Information Theory of Decision and Action." In V. Cutsuridis, A. Hussain & J. G. Taylor (eds.), *Perception-Action Cycle: Models, Architectures, and Hardware*, Springer, pp. 601–636. Information-to-Go multi-information $\mathfrak{I}^\pi(s_t, a_t)$ (Eq. 15, p. 19); objective $\min_\pi[\mathfrak{I}^\pi - \beta Q^\pi]$ (Eq. 17, p. 21). §7.2 perfectly-adapted-environments degenerate case. **Not** the KL-to-reference form; that is Rubin 2012. | `#strategy-cost-regret-bound` §6.3 (info-theoretic-MDP lineage positioning) |
-| `rubin-2012-trading-value-info-mdps.pdf` | Rubin, J., Shamir, O. & Tishby, N. (2012). "Trading value and information in MDPs." In T. V. Guy, M. Kárný & D. Wolpert (eds.), *Decision Making with Imperfect Decision Makers*, Springer, pp. 57–74. Control information $\Delta I(s) = D_{\mathrm{KL}}(\pi_s \Vert \rho_s)$ (agent-first, §2.2 Eq. 3 p. 4); free-energy $F_\pi = I_\pi - \beta V_\pi$ (§3.1 p. 5); Bellman recursion Theorem 1 p. 5. Framed as rate-distortion, not IB. Theorem 3 gives an independent PAC-Bayesian generalization bound for the KL-to-reference form. §3.3 deterministic-environment linearization $Z = \Phi Z$ parallels AAD's $\alpha_1$ sub-scope. **Direction is agent-first**, opposite to AAD's optimum-first. | `#strategy-cost-regret-bound` §6.2 (PAC-Bayesian motivation), §6.3 |
+| `rubin-2012-trading-value-info-mdps.pdf` | Rubin, J., Shamir, O. & Tishby, N. (2012). "Trading value and information in MDPs." In T. V. Guy, M. Kárný & D. Wolpert (eds.), *Decision Making with Imperfect Decision Makers*, Springer, pp. 57–74. Control information $\Delta I(s) = D_{\mathrm{KL}}(\pi_s \Vert \rho_s)$ (agent-first, §2.2 Eq. 3 p. 4); free-energy $F_\pi = I_\pi - \beta V_\pi$ (§3.1 p. 5); Bellman recursion Theorem 1 p. 5. Framed as rate-distortion, not IB. Theorem 3 gives an independent PAC-Bayesian generalization bound for the KL-to-reference form. §3.3 deterministic-environment linearization $Z = \Phi Z$ parallels AAT's $\alpha_1$ sub-scope. **Direction is agent-first**, opposite to AAT's optimum-first. | `#strategy-cost-regret-bound` §6.2 (PAC-Bayesian motivation), §6.3 |
 | `levine-2018-rl-control-as-inference.pdf` | Levine, S. (2018). "Reinforcement learning and control as probabilistic inference: tutorial and review." arXiv:1805.00909. Uses $D_{\mathrm{KL}}(q \Vert p^*)$ (proposal-first) throughout (§3.1 Eq. 11 p. 8); §5.2 p. 15 contrasts RL's mode-seeking $D_{\mathrm{KL}}(p_\theta \Vert p_{\mathrm{tgt}})$ with supervised's reverse. **Does NOT connect to IB**; connections are to Kalman duality, linearly-solvable MDPs, path-integral control, max causal entropy IRL. | `#strategy-cost-regret-bound` §6.3 |
 
 ### Control theory / stochastic stability
 
-| Filename | Citation | AAD sites |
+| Filename | Citation | AAT sites |
 |---|---|---|
 | *(not in ref/ — standard textbook)* | Khalil, H. K. (2002). *Nonlinear Systems* (3rd ed.), Prentice Hall. Theorems 4.17 (converse Lyapunov), 4.18 (ultimate boundedness); Chapters 4, 9, 11. | `#sector-condition-derivation`, `#gain-sector-derivation`, `#sector-persistence-template`, `#temporal-nesting`, `#multi-timescale-stability` |
 | *(not in ref/ — standard textbook)* | Khasminskii, R. (2012). *Stochastic Stability of Differential Equations* (2nd ed.), Springer. Chapter 5 (stopping-time localization). | `#sector-condition-derivation` |
@@ -36,7 +36,7 @@ This `INDEX.md` is the tracked bibliography. Each entry gives the expected filen
 
 ### Causal inference
 
-| Filename | Citation | AAD sites |
+| Filename | Citation | AAT sites |
 |---|---|---|
 | `bareinboim-2022-pearl-hierarchy.pdf` (also `r60.pdf` = identical content; `ACMBook-published-2022.pdf` is the host volume) | Bareinboim, E., Correa, J. D., Ibeling, D. & Icard, T. (2022). "On Pearl's Hierarchy and the Foundations of Causal Inference." Ch. 1 in *Probabilistic and Causal Inference: The Works of Judea Pearl*, Geffner, H., Dechter, R. & Halpern, J. Y. (eds.), ACM Books, ISBN 978-1-4503-9587-8 (also Columbia CausalAI Lab TR R-60 at causalai.net/r60.pdf). Theorem 1 (Causal Hierarchy Theorem, p.22). | `#causal-hierarchy-requirement`, `#causal-insufficiency-detection`, `#loop-interventional-access`, `#identifiability-floor`, `#pearl-causal-hierarchy`, `#strategic-dynamics-derivation`, separability-ladder paper [B-N-Sep] cite-and-extend anchor |
 | *(not in ref/ — standard textbook)* | Pearl, J. (2009). *Causality* (2nd ed.), Cambridge UP. Definition 7.1.1; Theorem 1.4.1. | `#graph-structure-uniqueness`, `#pearl-causal-hierarchy` |
@@ -67,7 +67,7 @@ This `INDEX.md` is the tracked bibliography. Each entry gives the expected filen
 
 ### Active inference / cognitive neuroscience
 
-| Filename | Citation | AAD sites |
+| Filename | Citation | AAT sites |
 |---|---|---|
 | `friston-2010-free-energy-principle-arxiv.pdf` | Friston, K. (2010). "The free-energy principle: a unified brain theory?" *Nature Reviews Neuroscience* 11(2):127–138 (arXiv:1001.0614). | `#information-bottleneck`, `#compression-operations` |
 | `friston-2013-life-as-we-know-it.pdf` | Friston, K. (2013). "Life as we know it." *J. Royal Soc. Interface* 10(86):20130475. | `#directed-separation` |
@@ -86,7 +86,7 @@ This `INDEX.md` is the tracked bibliography. Each entry gives the expected filen
 
 ### Agent-based modeling / coevolution
 
-| Filename | Citation | AAD sites |
+| Filename | Citation | AAT sites |
 |---|---|---|
 | `miller-2022-ex-machina.pdf` | Miller, J. H. (2022). *Ex Machina: Coevolving Machines and the Origins of the Social Universe*. SFI Press, 410 pp. | `#composition-closure` (§3.3 meta-machine), `#composition-scope-condition` (Ch. 1 IAM), `#strategy-complexity-cost` (Table 12.2), `#structural-adaptation-necessity` (five-phase motif) |
 | `2026-hafez.2602.22519v1.pdf` | Hafez, W., Wei, C., Felipe, R., Nazeri, A. & Reid, C. (2026). "A Mathematical Theory of Agency and Intelligence." arXiv:2602.22519. Defines bi-predictability $P$ — the shared fraction of information across observations, actions, and outcomes relative to the loop's total informational budget — and proves regime-dependent bounds (unity attainable in quantum interactions; $P \leq 0.5$ classically; lower once agency is introduced). Distinguishes *agency* (capacity to act on predictions) from *intelligence* (additionally learning from interaction, self-monitoring effectiveness, and adapting scope of observations / actions / outcomes); current AI systems have the former but not the latter. Confirms bounds in physical (double-pendulum), RL, and multi-turn LLM systems. Inspired by thalamocortical regulation. | (cited via comparative framing in `_historical-context`; substantive integration into segments queued) |
@@ -94,7 +94,7 @@ This `INDEX.md` is the tracked bibliography. Each entry gives the expected filen
 
 ### Context / comparative framework
 
-| Filename | Citation | AAD sites |
+| Filename | Citation | AAT sites |
 |---|---|---|
 | `ssrn-5334620.pdf` *(also referenced as `the-gaa-framework-model-of-adaptive-systems-baigozin-2025.pdf`; SSRN ID 5334620 is the actual source)* | Baigozin, Y. (2025-07-01). "The General Adaptive Agency (GAA) Framework: A First-Principles Model of Adaptive Systems." Independent researcher / SSRN preprint 5334620. | Context/comparative reading |
 | `Bhatia 2016 CogSci PP.pdf` *(canonical: `bhatia-2016-vector-space-semantic-models.pdf`)* | Bhatia, S. (2016). "Vector Space Semantic Models Predict Subjective Probability Judgments for Real-World Events." Department of Psychology, University of Pennsylvania. (Likely CogSci 2016 conference paper.) | Embeddings-line reference (epistemic hedging geometry / probability geometry) |
@@ -123,4 +123,4 @@ These citations appear in `~/src/agentic-systems/ref/separability-ladder-prior-a
 
 A project-wide citation audit completed 2026-04-23 (commits `7456ec3`, `6567914`, `f61e62f`) verified 26 of the above citations at PDF level or via publisher TOCs. Zero confirmed attribution errors project-wide. See `TODO.md` §"Citations Audit — COMPLETE 2026-04-23" for detail.
 
-A second sweep on 2026-05-04 identified 13 obscure-named PDFs (`r46`, `r60`, `r269-reprint`, `r327`, `r336-published`, `r443`, `1-s2.0-0270025586900886-main`, `dawid_jasa2000`, `causality-meeting6`, `Causal Hierarchies published version`, `Simon_box00027_fld01902_bdl0001_doc0001`, `ACMBook-published-2022`, `f000200_9780262369978`, `ssrn-5334620`, `Bhatia 2016 CogSci PP`, `Lundh2026ReviewofParretal`) by reading first-page content and added their canonical citations and AAD-site mappings above. Eight prior-art papers from the separability-ladder report remain unacquired; see "Known gaps" above.
+A second sweep on 2026-05-04 identified 13 obscure-named PDFs (`r46`, `r60`, `r269-reprint`, `r327`, `r336-published`, `r443`, `1-s2.0-0270025586900886-main`, `dawid_jasa2000`, `causality-meeting6`, `Causal Hierarchies published version`, `Simon_box00027_fld01902_bdl0001_doc0001`, `ACMBook-published-2022`, `f000200_9780262369978`, `ssrn-5334620`, `Bhatia 2016 CogSci PP`, `Lundh2026ReviewofParretal`) by reading first-page content and added their canonical citations and AAT-site mappings above. Eight prior-art papers from the separability-ladder report remain unacquired; see "Known gaps" above.

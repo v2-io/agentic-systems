@@ -8,7 +8,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 ### Known Fragilities — what falls outside formal scope
 
 - Missing commitment / resource / temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs, GUC Class 3: Coupled) — handled as architectural scope (Class 3 Coupled exit), not approximation
+- Directed separation violated by goal-conditioned agents at the component level (LLMs, GUC Class 3: Coupled) — addressed constructively via the wrapping construction (`#der-class-coercion-via-wrapping` and its logogenic specialization `#der-logogenic-as-wrapping`), which gives GUC Class 1 (Separated) status at the wrapper level by structural commitment of goal-blind belief-update queries, with leakage rate bounded structurally (W₁) or behaviorally (W₂). Strict-W₁ implementation (e.g., via PROPRIUM's auxilia hierarchy) is more theoretically clean; partial-W₂ implementation (e.g., output-structuring with typed parsed response — what shoshin currently does) is more common in practice. The cost of class coercion is paid in Brooks's-Law tempo overhead (more component calls per macro-step) and a residual leakage rate from pretraining-induced query-content / goal-content correlation.
 
 *Source: [`CLAUDE.md`](CLAUDE.md).*
 
@@ -34,18 +34,27 @@ This section surfaces what the framework currently acknowledges as open at the o
 - D.6 O-BP12 — Resource budget $B_t$ as master variable
 - D.7 SP-15 — Template-family naming (sector / contraction / dissipativity trio)
 - D.8 SP-16 — Independence-audit as empirical profiling instrument
+- D.9 SP-22 — Operator-family Tier-2 backlog architectural decision (2026-05-12 spike-audit surfaced)
 
 *Full portfolio with merits, scope, and prior reasoning: [`PROPOSALS.md`](PROPOSALS.md).*
 
 ### Component-level GAPs
 
 **`01-aat-core`:**
+- Discussion
+- Discussion
+- Discussion
+- Discussion
+- Discussion
 - Latent structural diversity: variation in correction architectures invisible to persistence analysis, consequential under regime change
 - Endogenous coupling: γ as function of population composition, not exogenous parameter; coupling emergence threshold
 - Composition transition dynamics: epochal stability → latent diversification → niche emergence → cascading restructuring → re-equilibration (adopts Miller 2022's extreme transition motif)
 - Computational thresholds for social behavior: minimum agent complexity and interaction depth for composition dynamics (adopts Miller 2022's ICE framework; grounds #form-strategy-complexity-cost)
 
 **`02-tst-core`:**
+- Discussion
 - Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$
+- Discussion
+- Discussion
 - Software persistence: the unmaintainability threshold formalized
 

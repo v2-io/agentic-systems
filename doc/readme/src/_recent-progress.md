@@ -5,21 +5,21 @@
 
 The 3 most recent cycle narratives. Full record at [`CHANGELOG.md`](CHANGELOG.md); pre-2026-04-24 archaeology at [`LOG.md`](LOG.md).
 
-### Zenodo release prep (v0.1.0): .zenodo.json + LICENSE + CITATION.cff; worktree cleanup; sub-agent authorization discipline
+### Operator-family unification — the certificate spine: two segments, a sharp plural no-go, and a respectful-pedagogy preamble
 
-*2026-05-02*
+*2026-05-14*
 
-**Release-prep metadata landed.** Three files added at the repo root for the first Zenodo deposit: `.zenodo.json` carries the upload metadata (title, multi-paragraph HTML description, creators with ORCID, keywords, `upload_type: publication` / `publication_type: workingpaper`, CC-BY-4.0, working-draft notes); `LICENSE` is the canonical Creative Commons Attribution 4.0 International legalcode text fetched verbatim from creativecommons.org (byte-identical to `legalcode.txt`); `CITATION.cff` is CFF v1.2.0 with `type: dataset`, ORCID-linked author, license CC-BY-4.0, repository URL, and placeholder `version: 0.1.0` / `date-released: 2026-05-02` matching the tag.
+The deep "real-deal" push of the long-standing C1 question (does an operator-sector abstraction unify AAT's cross-sectional machinery?). The predecessor `spikes/.integrated/spike-operator-sector-unification.md` had returned an honest "2-instance-plus-1-consequence / do not elevate to a fourth meta-pattern" verdict; Joseph asked for the question to be pushed until either a revealing no-go or the unifying mechanism. Prior work was gathered first via scoped `memorata-search` (the jacobian-b1 (SOC) curvature-axiom verdict, the Mori–Zwanzig composition spike, the O-BP10 naming-cycle history). The push ran as a directory spike `spikes/spike-operator-family-unification/` (00-brief → 01-L1 → 02-L3 → 03-L4 → 99-verdict → 04-spine-authoring-brief).
 
-### R2 aggregator + score-card + patterns view; role-encounter over-engineering and reframe; Phase 2 embedding spike
+### Spike-INDEX refresh + verification-and-archive cleanup pass
 
-*2026-05-01*
+*2026-05-14*
 
-**R2 naming aggregator landed** as `bin/naming-r2-aggregate.rb` producing three outputs: a single-table score-card (`msc/naming/r2-aggregate-table.md`) sorted by `max(score/n)` descending, a per-target detail view with full vote breakdown (`msc/naming/r2-aggregate-detail.md`), and a cross-cutting patterns doc (`msc/naming/r2-patterns.md`) with categorical groupings (defended keeps / rename signals / add-alias landings / contested / negative) and coordination flags (Greek-vocabulary cluster, math-symbol add-alias pattern, Class-N taxonomy, Pearl hierarchy). Substance factor evolved through ~6 refinement iterations from a discrete-tier shape to a smooth `(0.7 + 0.3 × effort) × (1.0 + novelty)` with 1.2× multipliers for top-pick and canonicalize votes. Top-pick multiplier is data-justified — benchmark showed it acts as tiebreaker in 20/20 multi-+2-per-target cases. R1 cohort folded in as one synthetic voter on the R2 scale. Filters: ≥2 R2 voters AND alternatives proposed (excludes 16 uncontested keeps where no alternative was offered at any phase). Commits `21ef4a5`, `7abdb7a`, `3dbc0aa`, `45bd00e`. Coverage: 122 multi-R2-voter targets out of 629; ~40% have a metadata anchor in the naming-context-map (139 by master-list `segment_link` + 110 by grep first-mention).
+A small but high-leverage hygiene cycle picking up after the 2026-05-12 (late) spike-audit triage. The triage left `spikes/INDEX.md` with significant drift: 71 path references still wrote `spikes/spike-X.md` for spikes moved to `.integrated/` in the bulk-archive event, and several spikes never got INDEX rows in the first place. The cycle ran in three phases.
 
-### CLAUDE-2.md sunset; PRACTICA navigator; catalog extraction
+### Partial-cycle landing of the modularity-state-dynamics cycle (Moves 2 and 5 only)
 
-*2026-04-28*
+*2026-05-14*
 
-Three interlocking documentation moves landed.
+Joseph's pushback on the deferral framing ("any reason *not* to add Miller's Table or M4?") triggered an honest re-look at both questions. Two findings.
 

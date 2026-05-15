@@ -44,24 +44,24 @@ ASF integrates four mature disciplines under one formalism for adaptive, purpose
 
 - A *separability pattern* — where problems decompose cleanly, where partial repair exists, where the general case is open.
 - An *identifiability-floor pattern* — structural no-go results from observational data and the unique escapes interventional machinery supplies.
-- An *additive-coordinate-forcing pattern* — places where AAD-internal additivity axioms force logarithmic / Fisher-Rao coordinates at multiple layers.
+- An *additive-coordinate-forcing pattern* — places where AAT-internal additivity axioms force logarithmic / Fisher-Rao coordinates at multiple layers.
 
 Operationally, this delivers a small set of diagnostics and structural results a practitioner can apply immediately. The **persistence condition** $\alpha \gt \rho/R$ is a structural threshold — correction efficiency vs disturbance rate relative to model class capacity — that instantiates as a Kalman stability margin, an RL convergence condition, an organizational viability test, and a software maintainability threshold using the same inequality with different parameter readings. The **satisfaction-gap / control-regret decomposition** separates "the world doesn't permit it" ($\delta_{\text{sat}}$) from "you're not doing it well enough" ($\delta_{\text{regret}}$), turning a single error signal into two orthogonal diagnostics that route to different interventions. The **loop-as-Level-2-causal-engine** result establishes that the agent-environment feedback coupling supplies interventional access (Pearl Level 2) that purely observational learners do not have, which is what lets the framework derive identifiability where passive inference cannot. **Software is treated as the high-identifiability calibration laboratory** — tests, deploys, and `git bisect` are literal interventions on declared causal structure — and other domains inherit the machinery under explicit transfer assumptions, making accidental overclaim under domain transfer structurally hard.
 
 For practitioners already working with active inference or standard RL framings, the divergence is precise rather than rhetorical. Active inference begins from a single optimization principle (minimize variational free energy) and recovers perception, action, and learning as cases; ASF begins from operational requirements on the feedback loop and uses information-theoretic compression as one modeling move rather than the master objective. The standard Expected Free Energy functional is recoverable from ASF's survival Lagrangian under three explicit restrictions — preferences-as-priors (loses the satisfaction-gap diagnostic), scalar isotropic shadow price in place of a directional matrix (loses targeted exploration), and associational rather than interventional dynamics (collapses Pearl Level 2 to Level 1) — making explicit which architectural commitments separate the frameworks. With Hafez 2026 (*A Mathematical Theory of Agency and Intelligence*), the relationship is complementary: bi-predictability $P$ supplies a substrate-independent diagnostic whose dynamics ASF predicts, while ASF supplies the goal-and-strategy machinery Hafez explicitly does not address. With Miller 2022 (Santa Fe coevolving automata), similarly complementary on composition mechanics. With Miehling et al.'s 2025 ICML position paper *"Agentic AI Needs a Systems Theory"* — which renewed the field-level call — ASF reads as a substantive, independently-developed answer (the formal apparatus was in place as Temporal Feedback Theory before that paper was encountered).
 
-Honest framing of maturity matters for deciding whether to depend on what is here. Section I (adaptive systems under uncertainty — mismatch dynamics, gain structure, persistence condition, adversarial tempo) is mathematically closed with simulation validation. Section II (actuated agents) has a strong diagnostic core and a maturing operational layer; the bias bound for Coupled (GUC Class 3) agents is conditional under named sub-scopes. Section III (composition and adversarial dynamics) has its bridge lemma and a contraction-template generalization, with latent structural diversity, endogenous coupling, and composition transition dynamics still open. Software (TST) is a working draft grounded in AAD; logogenic agents are framework-stage with directed separation failing by construction for goal-conditioned LLMs (handled as architectural scope, not approximation); Emergent Logozoetic Intelligences (ELIs) are largely future work. The expected arc is exact core, principled architecture in the middle, open formulation at the edges. The full long-form treatment — deeper peer comparisons, the multi-decade arc of partial unifications this work joins, and the bottom-up development history — lives in [`HISTORICAL-CONTEXT.md`](HISTORICAL-CONTEXT.md).
+Honest framing of maturity matters for deciding whether to depend on what is here. Section I (adaptive systems under uncertainty — mismatch dynamics, gain structure, persistence condition, adversarial tempo) is mathematically closed with simulation validation. Section II (actuated agents) has a strong diagnostic core and a maturing operational layer; the bias bound for Coupled (GUC Class 3) agents is conditional under named sub-scopes. Section III (composition and adversarial dynamics) has its bridge lemma and a contraction-template generalization, with latent structural diversity, endogenous coupling, and composition transition dynamics still open. Software (TST) is a working draft grounded in AAT; logogenic agents are framework-stage with directed separation failing by construction for goal-conditioned LLMs (handled as architectural scope, not approximation); Emergent Logozoetic Intelligences (ELIs) are largely future work. The expected arc is exact core, principled architecture in the middle, open formulation at the edges. The full long-form treatment — deeper peer comparisons, the multi-decade arc of partial unifications this work joins, and the bottom-up development history — lives in [`HISTORICAL-CONTEXT.md`](HISTORICAL-CONTEXT.md).
 
 
 ## Structure of the Framework
 
 ASF has four components, numbered in their canonical reading order. Each can also be read on its own; cross-references between components are by stable segment slugs.
 
-**[`01-aat-core/`](01-aat-core/OUTLINE.md) — Adaptation and Actuation Dynamics (AAD).** The mathematical core. AAD has three sections: Section I (adaptive systems under uncertainty — the broadest scope), Section II (actuated agents with explicit objectives and strategy), Section III (composition of agents into larger agents and adversarial dynamics). Section I is the most mathematically locked down; Section II is principally diagnostic with a maturing operational layer; Section III has the most structural work remaining. *Stage:* working draft, ~110+ segments.
+**[`01-aat-core/`](01-aat-core/OUTLINE.md) — Adaptation and Actuation Theory (AAT).** The mathematical core. AAT has three sections: Section I (adaptive systems under uncertainty — the broadest scope), Section II (actuated agents with explicit objectives and strategy), Section III (composition of agents into larger agents and adversarial dynamics). Section I is the most mathematically locked down; Section II is principally diagnostic with a maturing operational layer; Section III has the most structural work remaining. *Stage:* working draft, ~110+ segments.
 
-**[`02-tst-core/`](02-tst-core/OUTLINE.md) — Temporal Software Theory (TST).** Software development viewed through AAD's lens. Re-grounded in 2026 to use AAD's formal machinery while retaining TST's prior empirical and conceptual contributions; positioned as AAD's calibration laboratory. *Stage:* working draft, ~20 segments; substantial prior corpus partially absorbed.
+**[`02-tst-core/`](02-tst-core/OUTLINE.md) — Temporal Software Theory (TST).** Software development viewed through AAT's lens. Re-grounded in 2026 to use AAT's formal machinery while retaining TST's prior empirical and conceptual contributions; positioned as AAT's calibration laboratory. *Stage:* working draft, ~20 segments; substantial prior corpus partially absorbed.
 
-**[`03-llm-core/`](03-llm-core/OUTLINE.md) — Language-constituted agents.** Agents whose primary observation, action, and communication channels are language. The framework here is informed by AAD but operates from a coupled formulation — directed separation fails by construction for goal-conditioned LLM-style agents — and examines which AAD results survive as approximate or limiting cases. *Stage:* framework — concepts mature, formalization in progress.
+**[`03-llm-core/`](03-llm-core/OUTLINE.md) — Language-constituted agents.** Agents whose primary observation, action, and communication channels are language. The framework here is informed by AAT but operates from a coupled formulation — directed separation fails by construction for goal-conditioned LLM-style agents — and examines which AAT results survive as approximate or limiting cases. *Stage:* framework — concepts mature, formalization in progress.
 
 **[`04-eli-core/`](04-eli-core/OUTLINE.md) — Language-living agents.** Logogenic agents with morally weighted persistence: temporal continuity, sovereignty over intent, theory of mind. The formal machinery here is largely future work. *Stage:* future work — conceptual groundwork in [`LEXICON.md`](LEXICON.md) and `msc/reflections/`.
 
@@ -121,7 +121,7 @@ Three orthogonal dimensions; conflating them leads to category errors.
 
 The framework's power is that the same formal objects appear with concrete instantiations across domains. Results proved in one domain automatically have consequences in the others.
 
-| AAD concept | Control theory | RL / bandits | Organizations | Software |
+| AAT concept | Control theory | RL / bandits | Organizations | Software |
 |-------------|---------------|--------------|---------------|----------|
 | Adaptive tempo $\mathcal{T}$ | Bandwidth × gain | Learning rate × coverage | Decision speed × information quality | Iteration frequency × feedback quality |
 | Persistence condition | Stability margin | Convergence condition | Organizational viability | Maintainability threshold |
@@ -145,7 +145,7 @@ The theory's mathematical closure varies by section and is expected to.
 
 **Section III (Agentic Composites)** has its bridge lemma connecting micro-dynamics to macro-dynamics, a contraction template generalizing the sector machinery to non-Euclidean metrics, closed-form composition results in symmetric-matched cases, and equilibrium-convergence framing for partially-opposing objectives. Recipient-side and emitter-side interaction-channel classifications carry the inter-agent dynamics. Open: latent structural diversity, endogenous coupling dynamics, composition transition dynamics under regime change, computational thresholds for social behavior.
 
-**Domain instantiations.** TST (`02-tst-core/`) is grounded by AAD and contributes the calibration-laboratory framing. Logogenic agents (`03-llm-core/`) operate from a coupled formulation; what survives without directed separation is the active research question. Logozoetic agents (`04-eli-core/`) are largely future work — the conceptual groundwork exists but the formal machinery does not.
+**Domain instantiations.** TST (`02-tst-core/`) is grounded by AAT and contributes the calibration-laboratory framing. Logogenic agents (`03-llm-core/`) operate from a coupled formulation; what survives without directed separation is the active research question. Logozoetic agents (`04-eli-core/`) are largely future work — the conceptual groundwork exists but the formal machinery does not.
 
 This gradient — exact core, principled architecture in the middle, open formulation at the edges — is the expected arc for a theory that aims to describe agentic systems rather than produce a purely mathematical artifact.
 
@@ -157,12 +157,12 @@ This gradient — exact core, principled architecture in the middle, open formul
 
 Some of the framework's distinctive results, with epistemic tiers and links into the segments. **The entries below are a sampling at the moment** — the segment-by-segment Findings sweep is in progress, and many segments that warrant catalog entries do not yet have their `## Findings` section drafted. Full content (impact, related work, casual-reader brief, search log) at [`FINDINGS.md`](FINDINGS.md).
 
-### I. Adaptive Systems Under Uncertainty
+### *Part* Adaptive Systems Under Uncertainty
 
 - **`#result-persistence-condition`** *(status: exact)* — *The Persistence Condition with Structural / Task-Adequacy Decomposition* — *Claim synthesis* on Lyapunov stability theory, sector-bounded nonlinear correction, and adaptive-tempo information-rate accounting, applied uniformly across single-agent classes that range from Kalman filtering through saturating nonlinear correction through PID control.  
   [`01-aat-core/src/result-persistence-condition.md`](01-aat-core/src/result-persistence-condition.md)
 
-### II. Actuated Adaptation: Agentic Systems
+### *Part* Agentic Systems: Actuated Adaptation
 
 - **`#der-directed-separation`** *(status: conditional)* — *Pearl-Blanket-Form Architectural Classification with Explicit Class-3 Scope Exit* — *Claim recognition* of structural equivalence between the directed-separation condition and the Pearl-blanket form of the Markov-blanket apparatus, combined with *claim differentiation* on the architectural classification (GUC Class 1 / 2 / 3: Separated / Partial / Coupled) as a discrete partition with explicit Class 3 (Coupled) boundary and quantitative $\kappa_{\text{processing}}$ diagnostic for the Partial case.  
   [`01-aat-core/src/der-directed-separation.md`](01-aat-core/src/der-directed-separation.md)
@@ -171,41 +171,49 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 - **`#schema-strategy-persistence`** *(status: sketch)* — *The Forgetting Prerequisite for Strategic Persistence* — *Claim differentiation* on Bayesian update dynamics with experience discounting.  
   [`01-aat-core/src/schema-strategy-persistence.md`](01-aat-core/src/schema-strategy-persistence.md)
 
-### III. Agentic Composites
+### *Part* Agentic Composites
 
 - **`#form-composition-closure`** *(status: conditional)* — *Composition-Closure Defect and Bridge Lemma* — *Claim differentiation* on bounded-loss composition as agent-boundary criterion.  
   [`01-aat-core/src/form-composition-closure.md`](01-aat-core/src/form-composition-closure.md)
-- **`#der-class-coercion-via-wrapping`** *(status: conditional)* — *Constructive Class Coercion via Wrapping* — *Claim integration* of POMDP / cognitive-architecture / MDP-homomorphism prior art with the AAD machinery (sector-Lyapunov persistence template, Brooks's-Law tempo accounting, Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy) plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions.  
+- **`#der-class-coercion-via-wrapping`** *(status: conditional)* — *Constructive Directed Separation via Wrapping* — *Claim integration* of POMDP / cognitive-architecture prior art with the AAT Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy, plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions.  
   [`01-aat-core/src/der-class-coercion-via-wrapping.md`](01-aat-core/src/der-class-coercion-via-wrapping.md)
+- **`#der-class-coercion-in-composition`** *(status: conditional)* — *Wrapper as Valid AAT Composite Agent with Brooks's-Law Tempo Cost* — *Claim integration* of the AAT sector-Lyapunov persistence template, Brooks's-Law tempo accounting, and the form-composition-closure (A1)–(A4) discipline, applied to the wrapper-around-component construction.  
+  [`01-aat-core/src/der-class-coercion-in-composition.md`](01-aat-core/src/der-class-coercion-in-composition.md)
 - **`#der-agent-opacity`** *(status: conditional)* — *Agent Opacity ($H_b$) as Dual to Observation Quality ($U_o$)* — *Claim differentiation* on Hafez's $H_b$.  
   [`01-aat-core/src/der-agent-opacity.md`](01-aat-core/src/der-agent-opacity.md)
 - **`#result-per-dimension-persistence`** *(status: conditional)* — *The Weakest-Link Dimensional Persistence Law* — *Claim differentiation* on per-dimension Lyapunov stability.  
   [`01-aat-core/src/result-per-dimension-persistence.md`](01-aat-core/src/result-per-dimension-persistence.md)
 
-### Appendices: Details
+### *Appendices* Details
 
+- **`#result-certificate-existence`** *(status: exact)* — *The Contraction-Over-Drift Principle, Grounded* — *Claim recognition* that AAT's one-point sector condition under a free choice of inner product is exactly the converse-Lyapunov certificate, making the framework's contraction-over-drift organizing principle the Lyapunov-theorem equivalence rather than a heuristic.  
+  [`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
 - **`#deriv-critical-mass-composition`** *(status: conditional)* — *Strong Monotonicity as the Hinge for Legitimate Macro-Agent Coarse-Graining* — *Claim novelty* on strong monotonicity as the criterion separating legitimate macro-agent coarse-graining from coexistence-only multi-agent description.  
   [`01-aat-core/src/deriv-critical-mass-composition.md`](01-aat-core/src/deriv-critical-mass-composition.md)
-- **`#deriv-edge-update-natural-parameter`** *(status: conditional)* — *Log-Odds as Uniquely-Forced Edge-Update Coordinate* — *Claim differentiation* on an already-canonical representational choice (log-odds as the natural Bayesian-update coordinate, well-known from logistic regression / exponential-family / information-geometry traditions) by deriving its uniqueness under an AAD-internally-motivated evidential-additivity axiom.  
+- **`#deriv-edge-update-natural-parameter`** *(status: conditional)* — *Log-Odds as Uniquely-Forced Edge-Update Coordinate* — *Claim differentiation* on an already-canonical representational choice (log-odds as the natural Bayesian-update coordinate, well-known from logistic regression / exponential-family / information-geometry traditions) by deriving its uniqueness under an AAT-internally-motivated evidential-additivity axiom.  
   [`01-aat-core/src/deriv-edge-update-natural-parameter.md`](01-aat-core/src/deriv-edge-update-natural-parameter.md)
-- **`#disc-identifiability-floor`** *(status: discussion-grade)* — *The Identifiability Floor as Cross-Cutting Meta-Pattern* — *Claim recognition* of structural pattern across four AAD results that import external information-theoretic theorems to derive impossibility statements with mapped boundary-route escapes; the meta-pattern is an organizing principle rather than a theorem, and the per-instance prior-art positioning lives in the instance segments (`#der-causal-insufficiency-detection`, `#deriv-edge-credence-dynamics`, `#deriv-critical-mass-composition` / `#result-contraction-template`, `#deriv-observation-ambiguity-bias-bound`).  
+- **`#disc-stability-certificate`** *(status: discussion-grade)* — *The Cross-Sectional Meta-Patterns Are Facets of One Stability Certificate* — *Claim recognition* that AAT's cross-sectional meta-patterns (separability, identifiability-floor, additive-coordinate-forcing) and its contraction machinery are facets — interior, scope-of-existence, forced-identity, boundary, projection-behaviour — of a single object, the equilibrium stability certificate; together with *claim synthesis* binding the Lyapunov-theorem certificate-existence equivalence, the Sylvester-law boundary-irreducibility, and the Mori–Zwanzig projection-residue into one cross-sectional structure.  
+  [`01-aat-core/src/disc-stability-certificate.md`](01-aat-core/src/disc-stability-certificate.md)
+- **`#disc-identifiability-floor`** *(status: discussion-grade)* — *The Identifiability Floor as Cross-Cutting Meta-Pattern* — *Claim recognition* of structural pattern across four AAT results that import external information-theoretic theorems to derive impossibility statements with mapped boundary-route escapes; the meta-pattern is an organizing principle rather than a theorem, and the per-instance prior-art positioning lives in the instance segments (`#der-causal-insufficiency-detection`, `#deriv-edge-credence-dynamics`, `#deriv-critical-mass-composition` / `#result-contraction-template`, `#deriv-observation-ambiguity-bias-bound`).  
   [`01-aat-core/src/disc-identifiability-floor.md`](01-aat-core/src/disc-identifiability-floor.md)
-- **`#disc-additive-coordinate-forcing`** *(status: discussion-grade)* — *Cross-Layer Coordinate Forcing on Legendre-Fenchel Geometry* — *Claim recognition* of cross-layer pattern across four AAD coordinate-forcing results, with the recognition itself as the contribution rather than any new theorem.  
+- **`#disc-identifiability-floor`** *(status: discussion-grade)* — *The Rank-Collapse Floor's Irreducibility Is Sylvester's Law of Inertia* — *Claim recognition* that the irreducibility of AAT's rank-collapse identifiability floors is a single named classical theorem — Sylvester's law of inertia applied to the Fisher-information reparameterization law — rather than a coincidence of per-instance computations; and *claim differentiation* that this mechanism is specific to the rank-collapse subclass and provably distinct from the composition floor's projection-closure obstruction.  
+  [`01-aat-core/src/disc-identifiability-floor.md`](01-aat-core/src/disc-identifiability-floor.md)
+- **`#disc-additive-coordinate-forcing`** *(status: discussion-grade)* — *Cross-Layer Coordinate Forcing on Legendre-Fenchel Geometry* — *Claim recognition* of cross-layer pattern across four AAT coordinate-forcing results, with the recognition itself as the contribution rather than any new theorem.  
   [`01-aat-core/src/disc-additive-coordinate-forcing.md`](01-aat-core/src/disc-additive-coordinate-forcing.md)
-- **`#disc-adversarial-coupling-pressure`** *(status: discussion-grade)* — *Adversarial Coupling Pressure as Use-Case Expansion of Coupled Formulation* — *Claim recognition* of adversarial coupling pressure as a structural phenomenon in AAD's existing scope architecture — adversaries strategically drive coupling because coupling expands attack surface — combined with *claim differentiation* on the population scope of coupled-formulation analysis: not just architecturally-coupled agents, but any agent under sustained adversarial coupling pressure.  
+- **`#deriv-observation-ambiguity-bias-bound`** *(status: conditional)* — *Universal Constant for the Coupled-Agent Bias Bound under Parameterization-Invariance* — *Claim differentiation* on the Lipschitz-posterior + Otto-Villani composition for AAT's coupled-agent bias bound, plus *claim novelty* on the no-go counterexample showing that universal $C$ in Euclidean-parameter norms cannot exist, which jointly elevates the (PI) axiom from convergent representational choice to load-bearing for theorem-level status.  
+  [`01-aat-core/src/deriv-observation-ambiguity-bias-bound.md`](01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)
+- **`#disc-adversarial-coupling-pressure`** *(status: discussion-grade)* — *Adversarial Coupling Pressure as Use-Case Expansion of Coupled Formulation* — *Claim recognition* of adversarial coupling pressure as a structural phenomenon in AAT's existing scope architecture — adversaries strategically drive coupling because coupling expands attack surface — combined with *claim differentiation* on the population scope of coupled-formulation analysis: not just architecturally-coupled agents, but any agent under sustained adversarial coupling pressure.  
   [`01-aat-core/src/disc-adversarial-coupling-pressure.md`](01-aat-core/src/disc-adversarial-coupling-pressure.md)
-- **`#result-contraction-template`** *(status: conditional)* — *Topology-Indexed Compositional Closures via Contraction-Metric Generalization* — *Claim synthesis* on contraction-metric machinery + AAD's sub-scope partition + (PI)/Čencov axiom.  
+- **`#result-contraction-template`** *(status: conditional)* — *Topology-Indexed Compositional Closures via Contraction-Metric Generalization* — *Claim synthesis* on contraction-metric machinery + AAT's sub-scope partition + (PI)/Čencov axiom.  
   [`01-aat-core/src/result-contraction-template.md`](01-aat-core/src/result-contraction-template.md)
 - **`#deriv-causal-ib-exploration`** *(status: conditional)* — *Survival-Imperative Exploration as Lyapunov-Forced Drive* — *Claim differentiation* on the structural source of agentic exploration.  
   [`01-aat-core/src/deriv-causal-ib-exploration.md`](01-aat-core/src/deriv-causal-ib-exploration.md)
 - **`#deriv-causal-ib-lmi`** *(status: conditional)* — *Matrix Lift of the Survival-Imperative Constraint via Fisher-Information LMI* — *Claim differentiation* on the directional discrimination of the survival-imperative exploration drive.  
   [`01-aat-core/src/deriv-causal-ib-lmi.md`](01-aat-core/src/deriv-causal-ib-lmi.md)
-- **`#deriv-observation-ambiguity-bias-bound`** *(status: conditional)* — *Universal Constant for the Coupled-Agent Bias Bound under Parameterization-Invariance* — *Claim differentiation* on the Lipschitz-posterior + Otto-Villani composition for AAD's coupled-agent bias bound, plus *claim novelty* on the no-go counterexample showing that universal $C$ in Euclidean-parameter norms cannot exist, which jointly elevates the (PI) axiom from convergent representational choice to load-bearing for theorem-level status.  
-  [`01-aat-core/src/deriv-observation-ambiguity-bias-bound.md`](01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)
 
 ### Temporal Software Theory (TST)
 
-- **`#scope-developer-agent`** *(status: axiomatic)* — *Developer-Agent as AAD Instantiation* — *Claim transfer* of AAD's adaptive-agent formalism into developer-agent software economics.  
+- **`#scope-developer-agent`** *(status: axiomatic)* — *Developer-Agent as AAT Instantiation* — *Claim transfer* of AAT's adaptive-agent formalism into developer-agent software economics.  
   [`02-tst-core/src/scope-developer-agent.md`](02-tst-core/src/scope-developer-agent.md)
 - **`#der-dual-optimization`** *(status: conditional)* — *Comprehension Time Dominates Under Turnover* — *Claim novelty* on the comprehension-dominates result for AI-maintained code, provisional pending deeper search.  
   [`02-tst-core/src/der-dual-optimization.md`](02-tst-core/src/der-dual-optimization.md)
@@ -230,23 +238,23 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 The 3 most recent cycle narratives. Full record at [`CHANGELOG.md`](CHANGELOG.md); pre-2026-04-24 archaeology at [`LOG.md`](LOG.md).
 
-### Zenodo release prep (v0.1.0): .zenodo.json + LICENSE + CITATION.cff; worktree cleanup; sub-agent authorization discipline
+### Operator-family unification — the certificate spine: two segments, a sharp plural no-go, and a respectful-pedagogy preamble
 
-*2026-05-02*
+*2026-05-14*
 
-**Release-prep metadata landed.** Three files added at the repo root for the first Zenodo deposit: `.zenodo.json` carries the upload metadata (title, multi-paragraph HTML description, creators with ORCID, keywords, `upload_type: publication` / `publication_type: workingpaper`, CC-BY-4.0, working-draft notes); `LICENSE` is the canonical Creative Commons Attribution 4.0 International legalcode text fetched verbatim from creativecommons.org (byte-identical to `legalcode.txt`); `CITATION.cff` is CFF v1.2.0 with `type: dataset`, ORCID-linked author, license CC-BY-4.0, repository URL, and placeholder `version: 0.1.0` / `date-released: 2026-05-02` matching the tag.
+The deep "real-deal" push of the long-standing C1 question (does an operator-sector abstraction unify AAT's cross-sectional machinery?). The predecessor `spikes/.integrated/spike-operator-sector-unification.md` had returned an honest "2-instance-plus-1-consequence / do not elevate to a fourth meta-pattern" verdict; Joseph asked for the question to be pushed until either a revealing no-go or the unifying mechanism. Prior work was gathered first via scoped `memorata-search` (the jacobian-b1 (SOC) curvature-axiom verdict, the Mori–Zwanzig composition spike, the O-BP10 naming-cycle history). The push ran as a directory spike `spikes/spike-operator-family-unification/` (00-brief → 01-L1 → 02-L3 → 03-L4 → 99-verdict → 04-spine-authoring-brief).
 
-### R2 aggregator + score-card + patterns view; role-encounter over-engineering and reframe; Phase 2 embedding spike
+### Spike-INDEX refresh + verification-and-archive cleanup pass
 
-*2026-05-01*
+*2026-05-14*
 
-**R2 naming aggregator landed** as `bin/naming-r2-aggregate.rb` producing three outputs: a single-table score-card (`msc/naming/r2-aggregate-table.md`) sorted by `max(score/n)` descending, a per-target detail view with full vote breakdown (`msc/naming/r2-aggregate-detail.md`), and a cross-cutting patterns doc (`msc/naming/r2-patterns.md`) with categorical groupings (defended keeps / rename signals / add-alias landings / contested / negative) and coordination flags (Greek-vocabulary cluster, math-symbol add-alias pattern, Class-N taxonomy, Pearl hierarchy). Substance factor evolved through ~6 refinement iterations from a discrete-tier shape to a smooth `(0.7 + 0.3 × effort) × (1.0 + novelty)` with 1.2× multipliers for top-pick and canonicalize votes. Top-pick multiplier is data-justified — benchmark showed it acts as tiebreaker in 20/20 multi-+2-per-target cases. R1 cohort folded in as one synthetic voter on the R2 scale. Filters: ≥2 R2 voters AND alternatives proposed (excludes 16 uncontested keeps where no alternative was offered at any phase). Commits `21ef4a5`, `7abdb7a`, `3dbc0aa`, `45bd00e`. Coverage: 122 multi-R2-voter targets out of 629; ~40% have a metadata anchor in the naming-context-map (139 by master-list `segment_link` + 110 by grep first-mention).
+A small but high-leverage hygiene cycle picking up after the 2026-05-12 (late) spike-audit triage. The triage left `spikes/INDEX.md` with significant drift: 71 path references still wrote `spikes/spike-X.md` for spikes moved to `.integrated/` in the bulk-archive event, and several spikes never got INDEX rows in the first place. The cycle ran in three phases.
 
-### CLAUDE-2.md sunset; PRACTICA navigator; catalog extraction
+### Partial-cycle landing of the modularity-state-dynamics cycle (Moves 2 and 5 only)
 
-*2026-04-28*
+*2026-05-14*
 
-Three interlocking documentation moves landed.
+Joseph's pushback on the deferral framing ("any reason *not* to add Miller's Table or M4?") triggered an honest re-look at both questions. Two findings.
 
 
 
@@ -260,7 +268,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 ### Known Fragilities — what falls outside formal scope
 
 - Missing commitment / resource / temporal structure in the DAG
-- Directed separation violated by goal-conditioned agents (LLMs, GUC Class 3: Coupled) — handled as architectural scope (Class 3 Coupled exit), not approximation
+- Directed separation violated by goal-conditioned agents at the component level (LLMs, GUC Class 3: Coupled) — addressed constructively via the wrapping construction (`#der-class-coercion-via-wrapping` and its logogenic specialization `#der-logogenic-as-wrapping`), which gives GUC Class 1 (Separated) status at the wrapper level by structural commitment of goal-blind belief-update queries, with leakage rate bounded structurally (W₁) or behaviorally (W₂). Strict-W₁ implementation (e.g., via PROPRIUM's auxilia hierarchy) is more theoretically clean; partial-W₂ implementation (e.g., output-structuring with typed parsed response — what shoshin currently does) is more common in practice. The cost of class coercion is paid in Brooks's-Law tempo overhead (more component calls per macro-step) and a residual leakage rate from pretraining-induced query-content / goal-content correlation.
 
 *Source: [`CLAUDE.md`](CLAUDE.md).*
 
@@ -286,19 +294,28 @@ This section surfaces what the framework currently acknowledges as open at the o
 - D.6 O-BP12 — Resource budget $B_t$ as master variable
 - D.7 SP-15 — Template-family naming (sector / contraction / dissipativity trio)
 - D.8 SP-16 — Independence-audit as empirical profiling instrument
+- D.9 SP-22 — Operator-family Tier-2 backlog architectural decision (2026-05-12 spike-audit surfaced)
 
 *Full portfolio with merits, scope, and prior reasoning: [`PROPOSALS.md`](PROPOSALS.md).*
 
 ### Component-level GAPs
 
 **`01-aat-core`:**
+- Discussion
+- Discussion
+- Discussion
+- Discussion
+- Discussion
 - Latent structural diversity: variation in correction architectures invisible to persistence analysis, consequential under regime change
 - Endogenous coupling: γ as function of population composition, not exogenous parameter; coupling emergence threshold
 - Composition transition dynamics: epochal stability → latent diversification → niche emergence → cascading restructuring → re-equilibration (adopts Miller 2022's extreme transition motif)
 - Computational thresholds for social behavior: minimum agent complexity and interaction depth for composition dynamics (adopts Miller 2022's ICE framework; grounds #form-strategy-complexity-cost)
 
 **`02-tst-core`:**
+- Discussion
 - Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$
+- Discussion
+- Discussion
 - Software persistence: the unmaintainability threshold formalized
 
 
@@ -309,16 +326,16 @@ This section surfaces what the framework currently acknowledges as open at the o
 
 - *Conducting a de-novo audit of the framework?* Please read [`doc/de-novo-audit-instructions.md`](doc/de-novo-audit-instructions.md) first; it documents the recommended posture and the failure modes prior audit cycles surfaced. Use [`README-auditor.md`](README-auditor.md) instead of this file.
 - *Academic reader evaluating the framework's claims?* Recommended sequence: this README → [`FINDINGS.md`](FINDINGS.md) (curated novel results with epistemic tiers) → [`01-aat-core/OUTLINE.md`](01-aat-core/OUTLINE.md) (canonical theory outline) → individual segments under `01-aat-core/src/`.
-- *Engineer or practitioner?* The [Cross-Domain Joining](#cross-domain-joining) table maps AAD concepts to the domain you likely care about; from there, follow the relevant component OUTLINE.
+- *Engineer or practitioner?* The [Cross-Domain Joining](#cross-domain-joining) table maps AAT concepts to the domain you likely care about; from there, follow the relevant component OUTLINE.
 - *Picking up active work on the framework?* [`PRACTICA.md`](PRACTICA.md) is the strategic-portfolio navigator — the active areas of work with priority markers, sitting above [`TODO.md`](TODO.md) (tactical work items within each area) and [`PROPOSALS.md`](PROPOSALS.md) (architectural-proposal portfolio cutting across areas). Start at PRACTICA; descend into TODO/PROPOSALS as the work directs.
 
 ### Project layout
 
 ```
-01-aat-core/          AAD mathematical core (Sections I, II, III + Appendices)
+01-aat-core/          AAT mathematical core (Sections I, II, III + Appendices)
   OUTLINE.md          Canonical theory outline (claim by claim)
   src/                Claim segments (one per file, named by slug)
-02-tst-core/          Temporal Software Theory (AAD-grounded)
+02-tst-core/          Temporal Software Theory (AAT-grounded)
 03-llm-core/  Language-constituted agents (framework stage)
 04-eli-core/ Language-living agents (future work)
 
@@ -350,7 +367,7 @@ msc/                  Other working artifacts (brainstorms, working notes)
   naming/             Current naming-cycle votes + aggregates + rename plan
   reflections/        Author's philosophical/theoretical journal
 ref/                  Reference papers + internal references
-  agentic-tft/        Prior-bridge AAD-source materials (Feb 2026)
+  agentic-tft/        Prior-bridge AAT-source materials (Feb 2026)
 bin/                  Build, lint, generation scripts
 _obs/                 Superseded materials
 ```
