@@ -129,7 +129,7 @@ Friction often comes from mixing layers. Note explicitly which layer a decision 
 
 ### Acronym discipline
 
-Every new acronym carries a maintenance cost: future readers must memorize it; collisions with adjacent literatures must be checked (recall the ACT → AAT rename forced by the AI Consciousness Test collision); tooling must reference it consistently. Coin new acronyms only when (a) the expanded form will be used 10+ times in nearby prose, (b) the acronym survives the communal-imagination test on its own (without expansion), and (c) the AI/ML / control / cognitive-science literatures have been spot-checked for collisions. When in doubt: don't add an acronym; the unrolled phrase compounds less interest than a forgettable initialism.
+Every new acronym carries a maintenance cost: future readers must memorize it; collisions with adjacent literatures must be checked (recall the ACT → AAD rename forced by the AI Consciousness Test collision); tooling must reference it consistently. Coin new acronyms only when (a) the expanded form will be used 10+ times in nearby prose, (b) the acronym survives the communal-imagination test on its own (without expansion), and (c) the AI/ML / control / cognitive-science literatures have been spot-checked for collisions. When in doubt: don't add an acronym; the unrolled phrase compounds less interest than a forgettable initialism.
 
 **Rule of thumb:** if a name (or paraphrase) would be used repeatedly in a conversation about the theory, it's eligible.
 
