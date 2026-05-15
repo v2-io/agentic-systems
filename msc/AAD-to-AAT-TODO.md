@@ -127,29 +127,35 @@ ASF/AAD layering is an easy cross-wire.
 
 ### 2.1 What changes
 
-Everything that is live, canonical, working, *and* the active-archaeology
-corpus (`msc/` (incl. `msc/naming/`), `spikes/`, `audits/`,
-`msc/AUDIT-WORKING-*`) — see §2.2. Decision (Joseph, 2026-05-15):
-**"rename everything is fine. We have git."** with the **2026-05-15
-refinement: `_obs/` and `releases/` are NOT renamed.** `_obs/` is
-superseded archaeology and `releases/` are frozen tagged-release
-snapshots — both are honest records of the framework *as named at the
-time*, exactly the ACT→AAD precedent's `_obs/` freeze. Net policy:
-sweep the working/active corpus for vocabulary coherence; freeze the
-two genuinely-frozen trees + the §2.3 name-decision kernel. Rationale
-holds: git preserves pre-rename state; a split AAD/AAT vocabulary in
-*live and working* files is the real future-agent hazard, whereas
-`_obs/`/`releases/` are never consulted as current.
+Rename everything live/working; freeze pure archaeology/journal;
+disclose-don't-rename two low-value archive trees. Decision is Joseph's
+**2026-05-15 refined disposition** (verbatim priority table below — the
+key correction over the earlier "rename everything": **`spikes/` is
+mostly *active* — only `spikes/.integrated/` is archaeology** — the
+non-integrated spikes still require integration into the theory, so
+they must speak current vocabulary; and `msc/reflections/` is the
+author's journal, frozen like `_obs/`).
 
-### 2.2 The buckets (from the 2026-05-15 inventory)
+### 2.2 Disposition by tree (Joseph 2026-05-15, priority-ordered)
 
-| Bucket | Files w/ `\bAAD\b` | Disposition |
+| Tree | Priority to rename | Action |
 |---|---|---|
-| Live/canonical (top-level docs, `01-aad-core/`, `02/03/04`, `terminology/`, `bin/`, `mono/`, `doc/`, `ref/` internal, publication metadata) | ~302 | **Rename** |
-| Active-archaeology/working (`msc/naming/` ≈485, `spikes/` ≈136, `audits/`, `msc/AUDIT-WORKING-*`) | ~621 | **Rename** (except §2.3 kernel) |
-| `_obs/` | 22 files / 1,306 occ | **FROZEN — do not rename** (Joseph 2026-05-15) |
-| `releases/` | 2 files / 40 occ | **FROZEN — do not rename** (Joseph 2026-05-15) |
-| **Totals** | **947** files / **14,388** `AAD` tokens; swept ≈ **920** files / **13,042** occ; frozen 24 files + §2.3 kernel | |
+| `spikes/**/*.md` (≠ `.integrated`) | **HIGH** — active, awaiting theory integration | **RENAME** |
+| `msc/*.md` toplevels + active subdirs (`domain-unification-*`, `logogenic-encounter-*`) | **HIGH** — active working docs | **RENAME** |
+| `spikes/.integrated/**` | fine either way | **FREEZE** (absorbed reasoning-trails; archived-spikes-not-live discipline) |
+| `audits/**` (incl. `.integrated/`) | medium (big backlog; many processed) | **DISCLOSE, don't rename** — note in new `audits/README.md` |
+| `msc/naming/**` | low (naming-cycle archive) | **DISCLOSE, don't rename** — note in new `msc/naming/README.md` (subsumes the old §2.3 kernel — name-decision records stay literal here by construction) |
+| `msc/AUDIT-WORKING-*/**` | low (per-cycle audit intermediates) | **FREEZE** (history; git has it) |
+| `msc/reflections/**` | best not | **FREEZE** (author's philosophical journal) |
+| `_obs/`, `releases/` | best not | **FREEZE** (superseded / tagged-release snapshots) |
+| `msc/AAD-to-AAT-TODO.md` | n/a | **KERNEL** — literal-AAD always (this plan) |
+
+Approx volumes (in-scope `\bAAD\b`, 2026-05-15): RENAME ≈ live/canonical
+~302 + `spikes`(non-`.integrated`) ~1,335 + `msc` active ~1,300; FREEZE/
+DISCLOSE retains AAD legitimately in `_obs` 1,306 · `msc/naming` 5,939 ·
+`spikes/.integrated` 1,201 · `audits` 460 · `msc/AUDIT-WORKING-*` ~600 ·
+`msc/reflections` 91 · `releases` 40. These are *expected residual*, not
+defects (see Stage 10 — verification is scoped to the RENAME set only).
 
 Other counts pinned for verification (2026-05-15):
 
@@ -170,16 +176,25 @@ Other counts pinned for verification (2026-05-15):
 
 **Verification mechanics (learned at Stage 0 — apply at every grep/sweep):**
 
-- **Always exclude the FROZEN+KERNEL set** from both sweeps *and*
-  count-verification (the plan doc alone otherwise inflates every count).
-  *Use the `:(exclude)` LONG form* — the `:!path` short form **fails**
-  with "Unimplemented pathspec magic" on this git (verified 2026-05-15).
-  Canonical pathspec, verbatim:
+- **Always exclude the NON-RENAME set** from sweeps *and*
+  count-verification (per §2.2: frozen + disclosed + kernel). *Use the
+  `:(exclude)` LONG form* — the `:!path` short form **fails** with
+  "Unimplemented pathspec magic" on this git (verified 2026-05-15).
+  For sweeps prefer the `git ls-files -z | grep -zvE | xargs -0`
+  builder (below) with this ERE; for git-grep verification use the
+  matching `:(exclude)` pathspecs. Canonical NON-RENAME ERE
+  (anchored at path start), verbatim:
   ```
-  ':(exclude)_obs' ':(exclude)releases' ':(exclude)msc/AAD-to-AAT-TODO.md' ':(exclude)msc/naming/name-transition-aad.md' ':(exclude)msc/naming/collision-check-brief.md'
+  ^(_obs/|releases/|audits/|msc/naming/|msc/reflections/|msc/AUDIT-WORKING-|spikes/\.integrated/|msc/AAD-to-AAT-TODO\.md$)
   ```
-  (the `_obs` blanket subsumes the former
-  `_obs/2026-03-13-hypothetical-theory-choice.md` kernel entry — §2.3.)
+  git-grep form:
+  ```
+  ':(exclude)_obs' ':(exclude)releases' ':(exclude)audits' ':(exclude)msc/naming' ':(exclude)msc/reflections' ':(exclude)msc/AUDIT-WORKING-*' ':(exclude)spikes/.integrated' ':(exclude)msc/AAD-to-AAT-TODO.md'
+  ```
+  (`msc/naming` not-renamed subsumes the old §2.3 kernel —
+  `name-transition-aad.md` / `collision-check-brief.md` stay literal by
+  construction; `_obs` subsumes the old hypothetical-theory-choice
+  entry. `audits` whole subsumes `audits/.integrated`.)
 - **Sweep file-list builder — zsh-safe + NUL-safe + slurp.** zsh does
   *not* word-split unquoted `$vars` (bash does); never `for f in $LIST`.
   Build the list and pipe; never interpolate a space-joined string as
@@ -216,31 +231,18 @@ Other counts pinned for verification (2026-05-15):
    | grep -vE '^[+-]\s*$'        # must be empty
   ```
 
-### 2.3 Exemption kernel — keep "AAD" literal (do NOT sweep)
+### 2.3 Kernel — collapsed into §2.2
 
-Criterion: *the file's purpose is to deliberate or record the choice of
-the literal string "AAD" against alternatives.* Sweeping these makes the
-historical record false (e.g. "ACT → AAD" would read "ACT → AAT", which
-never happened). Joseph bounded this at "maybe 2 or 3 including AAD
-itself" — keep it that tight.
-
-Proposed kernel (confirm/trim by eyeballing at Stage 7 — cheap, ~3 files):
-
-- `msc/naming/name-transition-aad.md` — the ACT → AAD decision record +
-  its rejected-candidates table. Filename also stays.
-- `msc/naming/collision-check-brief.md` — the collision research that
-  *produced* AAD as the answer.
-- `msc/AAD-to-AAT-TODO.md` — **this file** (self-exempt; documents the
-  AAD → AAT transition, so "AAD" is the object under discussion).
-- *(`_obs/2026-03-13-hypothetical-theory-choice.md` — the original
-  name-deliberation — was a kernel entry; now subsumed by the blanket
-  `_obs/` freeze (§2.1), so it needs no separate exemption.)*
-
-Not in the kernel (these get swept normally): the `msc/naming/_archive/`
-vote aggregates and brainstorms — they voted on *segment-slug* names, not
-on "AAD"; their only `AAD` hits are the document's framework-label
-header, which correctly becomes `AAT` (at read time the framework *is*
-AAT).
+The earlier "name-decision kernel" (`name-transition-aad.md`,
+`collision-check-brief.md`, the original hypothetical-theory-choice
+note) is **subsumed by the §2.2 disposition**: `msc/naming/` is
+not-renamed (disclosed), so those records stay literal-AAD by
+construction; `_obs/` is frozen. The only surviving explicit kernel is
+**`msc/AAD-to-AAT-TODO.md` (this plan)** — literal-AAD always, since it
+documents the transition. No separate eyeball-confirm step is needed
+(the structural exclusion handles it); the discipline reason is
+preserved here: sweeping a name-decision record would make it falsely
+read "ACT → AAT", which never happened.
 
 ### 2.4 Manual-edit exceptions (mechanical pass would produce a falsehood)
 
@@ -515,28 +517,47 @@ Two coherent, independently-revertible commits within the branch
   has no `\bAAD\b` (except none expected).
 - Commit: `Rename AAD→AAT: build scripts + regenerate README/LEXICON/FINDINGS/monograph`
 
-### Stage 7 — Active-archaeology bulk sweep
-- Scope: `msc/` (incl. `msc/naming/`, `msc/AUDIT-WORKING-*`,
-  `msc/reflections/`), `spikes/`, `audits/` (incl. `audits/.integrated/`).
-- **NOT in scope (FROZEN, Joseph 2026-05-15):** `_obs/`, `releases/` —
-  do not touch. Use the canonical FROZEN+KERNEL pathspec (§2.2
-  mechanics) so the sweep and verify both skip them automatically.
-- Rules 1–3 (name) + 4a (dir path-tokens). The §2.3 kernel files are
-  excluded by the same pathspec — eyeball those ~3 first and
-  confirm/trim with Joseph (he bounded it at 2–3).
-- Verify: `git grep -l '\bAAD\b' -- <FROZEN+KERNEL pathspec>` and the
-  phrase grep return **empty** (kernel/_obs/releases excluded by
-  pathspec, so they don't appear; deferred HISTORICAL-CONTEXT clause is
-  handled wholly at Stage 8).
-- Commit: `Rename AAD→AAT: active-archaeology sweep (msc/naming, spikes, audits) — _obs/releases frozen, name-decision kernel exempt`
+### Stage 7 — Active spikes + active msc sweep (refined scope, Joseph 2026-05-15)
+- **RENAME (Rules 1–3 name + 4a dir-tokens):**
+  - `spikes/**/*.md` and `spikes/*.md` **except** `spikes/.integrated/`
+    (HIGH — active spikes awaiting theory integration)
+  - `msc/*.md` toplevels **and** active subdirs
+    (`msc/domain-unification-*/`, `msc/logogenic-encounter-*/`) — HIGH
+  - Builder: `git ls-files -z -- 'spikes/*.md' 'spikes/**/*.md' 'msc/*.md' 'msc/**/*.md' | grep -zvE '^(spikes/\.integrated/|msc/naming/|msc/reflections/|msc/AUDIT-WORKING-|msc/AAD-to-AAT-TODO\.md$)' | xargs -0 perl -0777 -i -pe '<Rule1+2+3 subs>'`
+- **DISCLOSE, don't rename** — create two small READMEs (new files,
+  written in current AAT voice) so an agent reading the archive
+  mentally substitutes:
+  - `audits/README.md` — "the framework was renamed AAD→AAT 2026-05-15;
+    this audit corpus is historical and retains 'AAD' as written at the
+    time — read it as 'AAT'. Canonical record: CHANGELOG /
+    HISTORICAL-CONTEXT / CLAUDE.md."
+  - `msc/naming/README.md` — same stanza (also explicitly: the
+    name-decision records here, esp. `name-transition-aad.md`, *must*
+    stay literal-AAD — renaming would falsely read "ACT→AAT").
+- **FREEZE (no edit):** `spikes/.integrated/`, `msc/AUDIT-WORKING-*`,
+  `msc/reflections/`, `_obs/`, `releases/` — canonical record is
+  CHANGELOG/HISTORICAL-CONTEXT/CLAUDE.md; no per-tree note needed.
+- Verify (diff-purity + slurp-aware) over the RENAME set only; the
+  NON-RENAME ERE (§2.2) is the allowed-residual boundary.
+- Commits: (a) `Rename AAD→AAT: active spikes + active msc working docs (Stage 7)`; (b) `Disclose AAD→AAT rename in audits/ and msc/naming/ READMEs (archive trees not swept)`
 
-### Stage 8 — Lineage note + CHANGELOG
-- `HISTORICAL-CONTEXT.md` line-92 clause: manual replacement per §2.4
-  (the brief two-hop lineage note).
-- `CHANGELOG.md`: new cycle entry — what changed, the exemption kernel,
-  the styled-`&` title-page decision, what regenerated, and Joseph's
-  one-line rationale (he supplies the "why"; do not invent it).
-- Commit: `Rename AAD→AAT: HISTORICAL-CONTEXT lineage note + CHANGELOG entry`
+### Stage 8 — Lineage (CLAUDE.md + HISTORICAL-CONTEXT) + CHANGELOG
+The lineage must be **baseline knowledge for all agents** (Joseph
+2026-05-15) — so three places, not two:
+- **`CLAUDE.md` *Naming note*** (~the line that currently records only
+  ACT→AAD, 2026-04-16): extend to the full chain — ACT → (AAD, Apr
+  2026, AI-Consciousness-Test collision) → **AAT (May 2026)**; keep the
+  pointer to `msc/naming/name-transition-aad.md`. This is the
+  agent-facing baseline.
+- **`HISTORICAL-CONTEXT.md`** line-92 clause: manual replacement per
+  §2.4 (the brief multi-hop lineage note).
+- **`CHANGELOG.md`**: new cycle entry — scope (the §2.2 disposition),
+  the styled-`&` title-page decision, `.aux`/`--all` regeneration, the
+  two disclosure READMEs, and Joseph's verbatim rationale (recorded in
+  §1: *"Upgrading terminology to Theory now that it has substantial
+  claims and novelty, … freeing 'Adaptation and Actuation Dynamics' for
+  a very dry and generic textbook."*).
+- Commit: `Rename AAD→AAT: lineage in CLAUDE.md + HISTORICAL-CONTEXT + CHANGELOG entry`
 
 ### Stage 9 — Auto-memory (outside git)
 - `~/.claude/projects/-Users-josephwecker-v2-src-agentic-systems/memory/*.md`
