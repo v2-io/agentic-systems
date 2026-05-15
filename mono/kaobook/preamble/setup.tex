@@ -162,7 +162,7 @@
 % \AlphAlph — \Alph with overflow protection. Standard \Alph errors at
 % values > 26 (Latin alphabet only). \AlphAlph gives A–Z for 1–26, then
 % AA–AZ, BA–BZ, … for 27 onward. Used by appendix-chapter numbering, where
-% AAD's Details appendix alone has more than 26 chapter-level entries.
+% AAT's Details appendix alone has more than 26 chapter-level entries.
 %
 % Formula: for n in [27, 26+26²], chunk = (n-1) ÷ 26, rem = ((n-1) mod 26)+1,
 % emitted as \@Alph{chunk}\@Alph{rem}. \numexpr handles the integer math.
