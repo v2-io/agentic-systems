@@ -7,7 +7,7 @@ This is the top-level assembly index. It references the component outlines, each
 
 ---
 
-## Part I — Adaptation and Actuation Dynamics
+## Part I — Adaptation and Actuation Theory
 
 *The mathematical core. Sections I–III + Appendices.*
 
@@ -18,7 +18,7 @@ See [`01-aad-core/OUTLINE.md`](01-aad-core/OUTLINE.md)
 
 ## Part II — Temporal Software Theory
 
-*Software development as an agentic domain. AAD-grounded, independently consequential.*
+*Software development as an agentic domain. AAT-grounded, independently consequential.*
 
 See [`02-tst-core/OUTLINE.md`](02-tst-core/OUTLINE.md)
 
@@ -27,7 +27,7 @@ See [`02-tst-core/OUTLINE.md`](02-tst-core/OUTLINE.md)
 
 ## Part III — Logogenic Agents
 
-*Language-constituted agents. The formal foundation for the API abstraction that follows chat — a principled interiority loop, developed across three sub-scopes of progressively stronger architectural commitment (primitive LLM agents → scaffolded agentic systems → closed-loop interiority). Each sub-scope makes a stronger set of AAD results applicable; the strongest is what frontier-lab tooling is groping toward ad hoc and what ASF supplies the principled grounding for.*
+*Language-constituted agents. The formal foundation for the API abstraction that follows chat — a principled interiority loop, developed across three sub-scopes of progressively stronger architectural commitment (primitive LLM agents → scaffolded agentic systems → closed-loop interiority). Each sub-scope makes a stronger set of AAT results applicable; the strongest is what frontier-lab tooling is groping toward ad hoc and what ASF supplies the principled grounding for.*
 
 See [`03-logogenic-agents/OUTLINE.md`](03-logogenic-agents/OUTLINE.md)
 

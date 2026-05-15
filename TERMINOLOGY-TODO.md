@@ -86,7 +86,7 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
 [Rationale](msc/naming/naming-rename-plan.md#canonicalize-with-nuance-flagged--additions-2026-05-04-batch-3).
 
-- [ ] **epistemic opacity** — auditor-flagged philosophy-of-mind baggage (`epistemic opacity` carries phenomenology / qualia connotations from philosophy-of-mind that AAD does not adopt). Canonicalize stands; LEXICON entry should briefly note the baggage and clarify AAD's narrower meaning (informational rather than phenomenological).
+- [ ] **epistemic opacity** — auditor-flagged philosophy-of-mind baggage (`epistemic opacity` carries phenomenology / qualia connotations from philosophy-of-mind that AAT does not adopt). Canonicalize stands; LEXICON entry should briefly note the baggage and clarify AAT's narrower meaning (informational rather than phenomenological).
 
 ### C10. Clean canonicalize — batch 4 (2 entries)
 
@@ -109,7 +109,7 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
 [Rationale](msc/naming/naming-rename-plan.md#adopted-standard-canonicalize--accept-term-cite-prior-art-on-first-encounter-2026-05-04-batch-f2).
 
-These pass Criterion 9 via route (d): accept the term and discipline first-encounter cite of the prior-art reference. AAD-distinctive content lives in *what AAD does within the term*, not in re-coining the scope.
+These pass Criterion 9 via route (d): accept the term and discipline first-encounter cite of the prior-art reference. AAT-distinctive content lives in *what AAT does within the term*, not in re-coining the scope.
 
 Each item: LEXICON entry + first-encounter cite added to the source segment (in Discussion or opening prose, per FORMAT.md §Findings — Related Work).
 
@@ -123,7 +123,7 @@ Each item: LEXICON entry + first-encounter cite added to the source segment (in 
 
 [Rationale](msc/naming/naming-rename-plan.md#clean-canonicalize--additions-2026-05-04-batch-g--late-confirmed-reconciliation).
 
-- [ ] **cycle vs loop** — canonicalize the *pair-distinction* itself as load-bearing AAD vocabulary. The pair, not either word alone, is the citation handle. LEXICON's existing Cycle Phases table already carries the loop/cycle gloss — verify present in the right shape and remove this row.
+- [ ] **cycle vs loop** — canonicalize the *pair-distinction* itself as load-bearing AAT vocabulary. The pair, not either word alone, is the citation handle. LEXICON's existing Cycle Phases table already carries the loop/cycle gloss — verify present in the right shape and remove this row.
 
 ---
 

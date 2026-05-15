@@ -1,6 +1,6 @@
 # FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes
 
-*Active plan for the conventions-and-infrastructure layer that sits on top of the four-volume markdown-first build pipeline. Parent navigator: PRACTICA. The foundation (volume split, native kaobook hierarchy, markdown-first pipeline, persisted .aux per volume) landed end-of-day 2026-05-12 — see [CHANGELOG](CHANGELOG.md) entry "Monograph build pipeline: from zero to four-volume kaobook output." This file was refocused 2026-05-13 around the next-cycle cross-cutting work: bibliography + citation system, cross-reference / footnote / sidenote / margin-note conventions, and the imported-vs-AAD-native structural distinction.*
+*Active plan for the conventions-and-infrastructure layer that sits on top of the four-volume markdown-first build pipeline. Parent navigator: PRACTICA. The foundation (volume split, native kaobook hierarchy, markdown-first pipeline, persisted .aux per volume) landed end-of-day 2026-05-12 — see [CHANGELOG](CHANGELOG.md) entry "Monograph build pipeline: from zero to four-volume kaobook output." This file was refocused 2026-05-13 around the next-cycle cross-cutting work: bibliography + citation system, cross-reference / footnote / sidenote / margin-note conventions, and the imported-vs-AAT-native structural distinction.*
 
 ## Status
 
@@ -12,7 +12,7 @@ The active work below decomposes into three workstreams:
 
 - **Workstream A — Citation system.** Database + CLI substantially landed; ASF segment migration + build-pipeline wiring + conditional-rendering remain.
 - **Workstream B — Cross-references, footnotes, sidenotes, margin-notes.** Obsidian `[[#^anchor]]` form, equation-anchor labels, footnote conventions (zero usage anywhere currently), sidenote (numbered Tufte-style) and margin-note (un-numbered) disciplines, `xr-hyper` for cross-volume refs. Mostly unchanged since 2026-05-13.
-- **Workstream C — Discipline + structural distinctions.** AAD-specific vs imported (Pearl, etc.) cue, Discussion-segment schema split, auto-cross-ref formula sweep in appendices, FORMAT.md doc sweep, chapter introduction across remaining Parts, FORMAT-compliance linter sweep. Mostly unchanged since 2026-05-13.
+- **Workstream C — Discipline + structural distinctions.** AAT-specific vs imported (Pearl, etc.) cue, Discussion-segment schema split, auto-cross-ref formula sweep in appendices, FORMAT.md doc sweep, chapter introduction across remaining Parts, FORMAT-compliance linter sweep. Mostly unchanged since 2026-05-13.
 
 Several architectural decisions are awaiting resolution; those are listed before the workstreams so the answers can flow into the right items as they land. **Open question 1 (bib database location) resolved 2026-05-14: `~/src/relata/`.**
 
@@ -26,7 +26,7 @@ These were decided over the 2026-05-11 / 12 conversation and landed in the build
 
 | Level | Kaobook env | What it is | Examples |
 |---|---|---|---|
-| **Volume** (= Book) | `\documentclass{kaobook}` | One of the four theories, shipped as its own PDF | AAD, TST, LogA, ELI |
+| **Volume** (= Book) | `\documentclass{kaobook}` | One of the four theories, shipped as its own PDF | AAT, TST, LogA, ELI |
 | **Part** | `\part` | A scope-boundary within a Volume; 1–5 per volume | "Adaptive Systems Under Uncertainty"; "Appendices: Details" |
 | **Chapter** | `\chapter` | A grouping of segments within a Part; ~15 segments each (range ~5–25) | "Foundations"; "Mismatch & Gain"; "Persistence & Structural Adaptation" |
 | **Section** (= Segment) | `\section` | A numbered claim unit; the 19 FORMAT types | Definition, Result, Derivation, Hypothesis, … |
@@ -35,7 +35,7 @@ These were decided over the 2026-05-11 / 12 conversation and landed in the build
 
 Atoms (equations, tables, figures, named formulas) sit *within* Subsections and are numbered by kaobook's native counters.
 
-**Appendices:** each appendix segment renders directly as a `\chapter` under an `\appendix\part{...}` group. There is no intermediate Chapter level inside Appendices — an appendix segment IS a chapter-level entity. Multiple `## *Appendices* <name>` groups per volume allowed (AAD has two: "Details" and "Operational Domains").
+**Appendices:** each appendix segment renders directly as a `\chapter` under an `\appendix\part{...}` group. There is no intermediate Chapter level inside Appendices — an appendix segment IS a chapter-level entity. Multiple `## *Appendices* <name>` groups per volume allowed (AAT has two: "Details" and "Operational Domains").
 
 ### The numbering scheme
 
@@ -53,18 +53,18 @@ Kaobook native, no custom counters:
 ### Per-volume metadata: `mono-meta.yaml`
 
 ```yaml
-title:       "AAD: Adaptation and Actuation Dynamics"
-short_title: AAD
+title:       "AAT: Adaptation and Actuation Theory"
+short_title: AAT
 slug:        aad
 major:       0
 minor:       1
 patch:       0
 outline:     OUTLINE.md
-cover_svg:   AAD-cover.svg
+cover_svg:   AAT-cover.svg
 toc:         true
 ```
 
-Version components are explicit (`major` / `minor` / `patch` as separate keys, not a single `version: 0.1.0` string) so `bin/output-version` can read/write them cleanly. Each Volume has its own semver, independent of siblings — AAD can be v1.0 (stable, citable) while LogA is at v0.3 (still evolving). The canonical version lives here; no separate `VERSION` file.
+Version components are explicit (`major` / `minor` / `patch` as separate keys, not a single `version: 0.1.0` string) so `bin/output-version` can read/write them cleanly. Each Volume has its own semver, independent of siblings — AAT can be v1.0 (stable, citable) while LogA is at v0.3 (still evolving). The canonical version lives here; no separate `VERSION` file.
 
 ### Volume frontmatter sequence
 
@@ -109,12 +109,12 @@ Resolutions feed into the workstream items below. Listed in the order they unblo
 
 1. ~~**Where does the bib database live?**~~ **RESOLVED 2026-05-14: `~/src/relata/`** — Path B (shared parent, both projects read; single source of truth). Renamed from "refs" to "relata" (Latin for "things related/narrated") to avoid the git/code overload of `refs/`. Established as its own git repo with the ported `bin/refs` → `bin/relata` CLI. Currently held as a strictly private repo per the `[private-repo assumption]` callouts in `~/src/relata/README.md` (PDFs are committed; if the repo ever goes public, gitignore the `pdfs/` directory and add a side-channel sync mechanism). All Workstream A items below now reference `~/src/relata/` rather than the abstract "bib database."
 
-2. **How to mark imported-vs-AAD-native content?**
+2. **How to mark imported-vs-AAT-native content?**
    - Option α: `origin: imported|aad-native|recapitulation` frontmatter field + visual cue at render-time
    - Option β: Distinct segment type `recapitulation` (orthogonal to `definition` / etc.)
    - Option γ: Convention-only in Epistemic Status framing, no machinery
 
-   Most use cases are imports-within-otherwise-AAD-segments (one segment isn't purely imported), which leans α.
+   Most use cases are imports-within-otherwise-AAT-segments (one segment isn't purely imported), which leans α.
 
    **Unblocks:** Workstream C item C12.
 
@@ -129,8 +129,8 @@ Resolutions feed into the workstream items below. Listed in the order they unblo
 
 4. **Cross-volume xr-refs fallback form.**
    When sibling `.aux` is missing or version-mismatched, render as:
-   - "see Wecker (2026), AAD §1.2.3" (bibliography-form)
-   - `[AAD #def-foo]` (placeholder, marked for human review)
+   - "see Wecker (2026), AAT §1.2.3" (bibliography-form)
+   - `[AAT #def-foo]` (placeholder, marked for human review)
    - Soft cross-reference like the in-review handling in Workstream A
 
    Each volume's canonical citation form needs declaring (in `mono-meta.yaml`) for whichever form is chosen.
@@ -177,14 +177,14 @@ Goal: Adopt NeurIPS's cross-reference / footnote conventions for ASF, then exten
 
 ## Workstream C — Discipline + structural distinctions
 
-Goal: The conventions that distinguish *what* segments are doing (AAD-internal vs imported, claim vs discussion, in-flight vs settled) from how they render. Plus the documentation + sweep work that catches up the corpus to the new conventions.
+Goal: The conventions that distinguish *what* segments are doing (AAT-internal vs imported, claim vs discussion, in-flight vs settled) from how they render. Plus the documentation + sweep work that catches up the corpus to the new conventions.
 
-- [ ] **C12. AAD-specific vs imported distinction.** Pending open question 2. Lightweight visual or structural cue at frontmatter / segment-type / Epistemic-Status level. Especially for segments like `def-pearl-causal-hierarchy` where the content is explicitly external (Pearl 2009; Bareinboim et al. 2022). The Pearl-hierarchy Part I → Part II move (TODO line 362) is one specific instance; this item generalizes it.
+- [ ] **C12. AAT-specific vs imported distinction.** Pending open question 2. Lightweight visual or structural cue at frontmatter / segment-type / Epistemic-Status level. Especially for segments like `def-pearl-causal-hierarchy` where the content is explicitly external (Pearl 2009; Bareinboim et al. 2022). The Pearl-hierarchy Part I → Part II move (TODO line 362) is one specific instance; this item generalizes it.
 - [x] ~~**C13. Citation-status field on `relata/entries/`.**~~ **Schema landed 2026-05-14.** `citation_status` field with values `pre-publication` / `in-review` / `preprint` / `published` / `withdrawn` / `accepted-not-yet-published`; companion fields `citation_status_venue` (e.g., "NeurIPS 2026") and `citation_status_updated` (ISO date). Documented in `~/src/relata/README.md` Schema section. Conditional-rendering machinery (the consumption side) is now A6 in Workstream A — the field exists and is populated; the build pipelines that read it don't exist yet.
 - [ ] **C14. Discussion-segment schema split in FORMAT.md.** Already flagged. Claim-segment schema (Formal Expression / Epistemic Status / Discussion / Findings required) vs discussion-segment schema (body-only, subheads optional). The Discussion-as-chapter-intro renderer mode (commit `8da83cd`) suppresses subheads at render-time; the source still has them. FORMAT.md should split the schema so authors don't have to fake it.
 - [ ] **C15. Auto-cross-ref formula sweep in appendices.** Phase 4 of the prior plan. Many manual "Prop A.1" / "(7) above" / "Step 4" / "as shown in (12)" references still exist in appendix segments. Once B7 lands (named-atom labels), this sweep replaces manual cross-refs with `[[#^name]]` form and the renderer produces the rendered number.
 - [ ] **C16. FORMAT.md doc sweep.** Vocabulary alignment with the conventions landed in foundation work + added through workstreams A/B/C. The narrow-area / wide-area vocabulary, the chunk format, the markdown-first pipeline, the new citation conventions, the cross-reference convention extensions — all need representation in FORMAT.md so de-novo audits and future-agent onboarding hit the right discipline. Pairs naturally with C14 (both touch FORMAT.md). CLAUDE.md gets the parallel sweep.
-- [ ] **C17. Chapter introduction across Parts II/III/IV (AAD + other components).** AAD Part I is fully chapterized; AAD Parts II/III/IV use the walker's implicit-Chapter default. Same convention for the rest of AAD and for TST / LogA / ELI's outlines. Joseph chooses chapter groupings (with build-side help on dependency-cluster analysis if useful). For Parts with only one Chapter, the source can use a placeholder H3 ("Chapter 1: All segments") until proper grouping is decided.
+- [ ] **C17. Chapter introduction across Parts II/III/IV (AAT + other components).** AAT Part I is fully chapterized; AAT Parts II/III/IV use the walker's implicit-Chapter default. Same convention for the rest of AAT and for TST / LogA / ELI's outlines. Joseph chooses chapter groupings (with build-side help on dependency-cluster analysis if useful). For Parts with only one Chapter, the source can use a placeholder H3 ("Chapter 1: All segments") until proper grouping is decided.
 - [ ] **C18. FORMAT-compliance linter sweep.** Phase 5 of the prior plan. `bin/lint-md --fix` for auto-fixable categories (hard-wraps, emphasis-underscores, `_` in `\text{}`); manual / agent-driven sweep for the rest (math compatibility issues — `|` / `\|` / `<` / `>` / `*` in math; `\text` outside `$`; etc.). ~200+ findings across the corpus.
 
 ---
@@ -201,7 +201,7 @@ Items previously tracked but not blocking the three workstreams. Lifted out so t
 - **`\includeonly` chapter-incremental builds** — only if per-volume builds become uncomfortably slow.
 - **Section letter codes normalization in OUTLINE tables** — optional tidying.
 - **Slug rename audit** — separate concern, naming-cycle work; lives at PRACTICA §"Names & Lexicon" and `msc/naming/`.
-- **Cover artwork for TST / LogA / ELI** — AAD's cover lives at `01-aad-core/AAD-cover.svg`; siblings need authoring.
+- **Cover artwork for TST / LogA / ELI** — AAT's cover lives at `01-aad-core/AAT-cover.svg`; siblings need authoring.
 - **Dependency-graph SVG → PDF pipeline for image rendering** — separate piece similar to cover artwork; `rsvg-convert` invocation.
 - **Table-rendering polish** — narrow-direction adaptation, snap-to-content-width epsilon, source-side math reflow for inherently-wider-than-page equations. In-source TODOs at `bin/lib/segment_renderer.rb` `convert_table` block. The current rendering handles the common cases; these are residual edge-case improvements.
 - **Tighter typography candidates** — status badges / stage glyphs on appendix-chapter headings (currently a small indicator strip below the chapter glyph); `\l@appendixchapter` style for tighter ToC entries; etc. Cosmetic.
