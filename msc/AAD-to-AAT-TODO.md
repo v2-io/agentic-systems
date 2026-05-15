@@ -198,9 +198,23 @@ Other counts pinned for verification (2026-05-15):
   wrapped phrase — Rule 1): verify with
   `perl -0777 -ne 'print scalar(()=/Adaptation\s+and\s+Actuation\s+Dynamics/g)'`
   plus a stray-`Actuation\s+Dynamics` check, never a bare line `grep`.
-- Counts reconcile exactly with the set excluded (AAD 14,388;
-  dir-tokens 4,536 / 844 / 372 / 138 / 1,116; AAT 0) — confirmed
-  2026-05-15, no material repo drift since planning.
+- **Diff-purity is the verification invariant, NOT count-comparison.**
+  Planning-time counts (AAD 14,388; dir-tokens 4,536/844/372/138/1,116)
+  are *superseded after Stage 1* — the repo legitimately changes each
+  stage (commits, generated-artifact deletions, the plan doc itself),
+  so a count mismatch is expected and is *not* a defect signal. The
+  real correctness check, run every content stage: take the stage diff
+  (FROZEN+KERNEL excluded) and confirm **every** changed `+`/`-` line
+  is explained by the stage's intended token flip(s) plus an
+  enumerated short list of targeted edits — zero non-conforming lines.
+  This caught nothing-bad and *proved* Stages 2a/2b clean where a
+  count delta would have raised a false alarm. Pattern:
+  ```
+  git diff <FROZEN+KERNEL excludes> | grep -E '^[+-]' \
+   | grep -vE '^(\+\+\+|---)' | grep -vE '<intended tokens>' \
+   | grep -vE '<enumerated targeted-edit lines>' \
+   | grep -vE '^[+-]\s*$'        # must be empty
+  ```
 
 ### 2.3 Exemption kernel — keep "AAD" literal (do NOT sweep)
 
