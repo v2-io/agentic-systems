@@ -146,7 +146,9 @@ and the rename falsifies *no* historical voting except the tiny kernel in
 
 Other counts pinned for verification (2026-05-15):
 
-- full phrase `Adaptation and Actuation Dynamics` = **172**
+- full phrase `Adaptation and Actuation Dynamics` = **172 matching
+  lines / 206 raw occurrences** (a line may carry it twice; use the
+  same counting flag at verify-time — `-o` for occurrences)
 - `AAT` currently present = **0** (clean target namespace)
 - directory path-tokens to sweep (harmonization, §1.2):
   - `01-aad-core` → `01-aat-core`: **4,536** occ / **292** files
@@ -158,6 +160,21 @@ Other counts pinned for verification (2026-05-15):
 - target dir namespace (`01-aat-core` / `03-llm-core` / `04-eli-core`)
   verified clean — the `03-llm` greps were all the unrelated NeurIPS
   sibling path `03-llm-hallucinate-bound/`, not a collision.
+
+**Verification mechanics (learned at Stage 0 — apply at every grep/sweep):**
+
+- **Always exclude the §2.3 kernel pathspec** from both sweeps *and*
+  count-verification, or the plan doc alone inflates every count
+  (it is dense with AAD/AAT/dir-tokens by nature). Kernel pathspec:
+  `':!msc/AAD-to-AAT-TODO.md' ':!msc/naming/name-transition-aad.md'
+  ':!msc/naming/collision-check-brief.md'
+  ':!_obs/2026-03-13-hypothetical-theory-choice.md'`
+- **Word-boundary regex:** `git grep -o '\bAAD\b'` (POSIX basic) is
+  reliable; `git grep -oE '\bAAD\b'` silently returns **0** (git `-E`
+  does not honor `\b`). Never verify AAD/AAT residue with `-E \b`.
+- Counts reconcile exactly with the kernel excluded (AAD 14,388;
+  dir-tokens 4,536 / 844 / 372 / 138 / 1,116; AAT 0) — confirmed
+  2026-05-15, no material repo drift since planning.
 
 ### 2.3 Exemption kernel — keep "AAD" literal (do NOT sweep)
 
