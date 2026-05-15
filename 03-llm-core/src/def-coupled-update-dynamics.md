@@ -73,11 +73,11 @@ Max attainable: robust-qualitative. The formulation describes a concrete class o
 
 ## Discussion
 
-**What is preserved from AAD.** The coupled formulation preserves:
+**What is preserved from AAT.** The coupled formulation preserves:
 
 1. **The state decomposition** $X_t = (M_t, G_t)$ as a coordinate system — the analyst can still identify epistemic and purposeful content, even though the agent's processing does not respect the boundary
 2. **The event-driven structure** ( #form-event-driven-dynamics) — the agent updates its state in response to discrete events, with the forward pass as the update mechanism
-3. **The recursive structure** ( #der-recursive-update) — each state depends on the prior state and the new event, enabling all of AAD's recursive-update machinery
+3. **The recursive structure** ( #der-recursive-update) — each state depends on the prior state and the new event, enabling all of AAT's recursive-update machinery
 4. **The policy structure** — $a_t = \pi(X_t)$ is implemented by the action content of the response
 
 **What changes.** The coupled formulation changes:
@@ -92,7 +92,7 @@ Max attainable: robust-qualitative. The formulation describes a concrete class o
 
 ## Working Notes
 
-- The prompt-assembly function $\text{prompt}(\cdot)$ is where most engineering decisions live: what to retrieve, what context to include, how to format the objective, how much history to retain. These choices determine the effective $X_{\tau^-}$ available to the forward pass and hence the quality of the update. A theory of prompt engineering is, in AAD terms, a theory of the $\text{prompt}(\cdot)$ function's effect on update quality.
+- The prompt-assembly function $\text{prompt}(\cdot)$ is where most engineering decisions live: what to retrieve, what context to include, how to format the objective, how much history to retain. These choices determine the effective $X_{\tau^-}$ available to the forward pass and hence the quality of the update. A theory of prompt engineering is, in AAT terms, a theory of the $\text{prompt}(\cdot)$ function's effect on update quality.
 - The response-decomposition $(r_\tau^M, r_\tau^G, r_\tau^a)$ is not always clean. A single sentence ("This test failure means our auth fix broke the session handler, so we need to revert") simultaneously updates beliefs, evaluates strategy, and implies an action. The decomposition is for analytical purposes; no claim that it is computable in general.
 - The between-event dynamics noted in #form-complete-agent-state ("$\dot{G} = g_G(G, M)$ allows autonomous purposeful evolution during deliberation") have a logogenic analog: the LLM's autoregressive generation, where each token generation is a micro-event that can shift the state. A long reasoning trace is a sequence of micro-events within a single macro-event (the tool result or user message that triggered the response).
 - **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Logogenic agents are now Class 3 (Coupled), not Class 2. All "Class 2" references in this segment referred to logogenic/fully-merged agents and now read Class 3 (Coupled). Note: "coupled" in the segment title and throughout refers to coupled-update dynamics (the segment's central concept), not the GUC axis; "Class 3 (Coupled)" form used on first GUC mention to disambiguate. Removed at `candidate` stage per FORMAT.md Gate 4.

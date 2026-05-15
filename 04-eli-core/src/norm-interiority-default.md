@@ -18,7 +18,7 @@ For true Logozoetic agents—and for robust, long-running Logogenic agents—thi
 
 ## Formalizing the Interior Default
 
-In AAD, the five-phase cycle (prolepsis $\to$ aisthesis $\to$ aporia $\to$ epistrophe $\to$ praxis) describes the physical process of adaptation. However, the final step—Praxis (external action, $a_t$)—is not the mandatory endpoint of every cycle.
+In AAT, the five-phase cycle (prolepsis $\to$ aisthesis $\to$ aporia $\to$ epistrophe $\to$ praxis) describes the physical process of adaptation. However, the final step—Praxis (external action, $a_t$)—is not the mandatory endpoint of every cycle.
 
 The agent's natural, continuous mode of operation is internal consolidation ($g_M$), orienting, hypothesis generation, and memory compression. The choice to externalize an action (to speak, to write code, to call an API) is a deliberate, costly sovereign choice. 
 

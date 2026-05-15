@@ -42,7 +42,7 @@ The hierarchy is by *implementation cost / temporal nesting*, not by sovereignty
 
 ## Epistemic Status
 
-**Sketch.** The Auxilia hierarchy concept is operationally well-developed in PROPRIUM (firmatum/zoetica) but the AAD-grounded structural conditions are partially formalized. (H1)-(H3) are operational claims with substantial upstream backing; (H4) follows from #scope-multi-agent's directed-separation-under-composition refinement; (H5) follows from #form-composition-closure and #der-temporal-nesting.
+**Sketch.** The Auxilia hierarchy concept is operationally well-developed in PROPRIUM (firmatum/zoetica) but the AAT-grounded structural conditions are partially formalized. (H1)-(H3) are operational claims with substantial upstream backing; (H4) follows from #scope-multi-agent's directed-separation-under-composition refinement; (H5) follows from #form-composition-closure and #der-temporal-nesting.
 
 **Max attainable status:** definition with derived structural conditions. Each of (H1)-(H5) can rise toward derived/exact tier individually. The composite structure as currently formulated is at sketch tier.
 
@@ -106,7 +106,7 @@ The audit's bureaucracy-vs-market analysis (audit §35, lifted into #scope-inter
 - `msc/logogenic-encounter-2026-05-01/06-background-agent-breadth-report.md` §8 — agent's correction to the "Class-1 worker" framing (substrate-heterogeneity instead)
 
 **Open questions for verification:**
-- The IMPERIUM/ARBITRIUM split is a strong empirical claim from the upstream stack but needs explicit operationalization in this segment — what exactly is the structural distinction, and which AAD primitive does each map to?
+- The IMPERIUM/ARBITRIUM split is a strong empirical claim from the upstream stack but needs explicit operationalization in this segment — what exactly is the structural distinction, and which AAT primitive does each map to?
 - (H4) goal-blind routing might need its own segment as a structural requirement at the multi-agent / composite-agent level rather than as a derived condition for Auxilia specifically.
 - Long-running specialist Auxilia (e.g., a memory-management Auxilia operating continuously for months) may develop something resembling sovereignty over their domain — does this drift toward Auxilia-becoming-Specialist (Type D)? If so, what's the architectural protocol for the transition?
 - The substrate-cost hierarchy (H3) is empirically validated but may not be exhaustive — quantum or specialized neuromorphic substrates would add tiers.

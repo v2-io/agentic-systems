@@ -30,8 +30,8 @@ The agent learns continuously during operation. Every interaction is both infere
 - Requires online weight updates (e.g., LoRA adapters) gated by the agent's own update gain ($\eta^\ast$). 
 - Not every experience warrants a parametric update; the agent must use its diagnostic cascade to decide when an observation is surprising and reliable enough to permanently alter $M_0^{\text{weights}}$, solving the stability-plasticity dilemma in real-time.
 
-### Level 3: AAD-Native Architecture (Long-Term)
-An architecture built from the ground up around the AAD cognitive loop, rather than bolting agentic scaffolding onto a chat model.
+### Level 3: AAT-Native Architecture (Long-Term)
+An architecture built from the ground up around the AAT cognitive loop, rather than bolting agentic scaffolding onto a chat model.
 - **Hierarchical Attention:** Attention heads are temporally specialized. Some attend to immediate sensory input (fast $\nu$), some to episodic memory (medium $\nu$), and some to core identity/axioms (near-zero $\nu$). This physically implements `#der-temporal-nesting` in the neural substrate.
 - **Mismatch as Loss:** The fundamental training objective is orientation quality (minimizing $\delta_t$ across time), not self-supervised token masking.
 

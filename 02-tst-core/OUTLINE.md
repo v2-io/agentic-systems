@@ -1,15 +1,15 @@
 # *Volume* TST: Temporal Software Theory
 ## *Preface*
 
-Software development as an agentic domain — grounded in AAD's formal machinery, restored to its original status as a consequential body of research in its own right.
+Software development as an agentic domain — grounded in AAT's formal machinery, restored to its original status as a consequential body of research in its own right.
 
-**Working draft.** TST re-grounds the original Temporal Software Theory in AAD's mathematical framework — adding causal mathematics, adaptive dynamics, and the persistence condition that explain *why* time-optimal development practices work, not just *that* they do.
+**Working draft.** TST re-grounds the original Temporal Software Theory in AAT's mathematical framework — adding causal mathematics, adaptive dynamics, and the persistence condition that explain *why* time-optimal development practices work, not just *that* they do.
 
-**Software as AAD's calibration laboratory.** Software serves as the *privileged high-identifiability calibration laboratory* for AAD, not a generic "best operationalization domain." Its role is specifically architectural: it is the domain in which AAD's quantitative machinery can be most cleanly grounded — where edge interventions can sometimes be literally interventional (tests, deploys, `git bisect`), where the chronica is partially exteriorized with exact cryptographic immutability over its committed subset ( #obs-software-epistemic-properties P5), where the causal DAG is partially declared rather than inferred (P4), and where the observation function itself is under agent control (P1/P6). Other domains instantiate AAD under *additional transfer assumptions* that must be stated explicitly — approximation of interventional access, sampled rather than exteriorized chronica, inferred rather than declared causal structure. The calibration-lab framing makes these transfer assumptions first-class rather than implicit and prevents unacknowledged overclaim when AAD machinery calibrated in software is used in other domains.
+**Software as AAT's calibration laboratory.** Software serves as the *privileged high-identifiability calibration laboratory* for AAT, not a generic "best operationalization domain." Its role is specifically architectural: it is the domain in which AAT's quantitative machinery can be most cleanly grounded — where edge interventions can sometimes be literally interventional (tests, deploys, `git bisect`), where the chronica is partially exteriorized with exact cryptographic immutability over its committed subset ( #obs-software-epistemic-properties P5), where the causal DAG is partially declared rather than inferred (P4), and where the observation function itself is under agent control (P1/P6). Other domains instantiate AAT under *additional transfer assumptions* that must be stated explicitly — approximation of interventional access, sampled rather than exteriorized chronica, inferred rather than declared causal structure. The calibration-lab framing makes these transfer assumptions first-class rather than implicit and prevents unacknowledged overclaim when AAT machinery calibrated in software is used in other domains.
 
 See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATION.md`](../NOTATION.md) for symbols.
 
-**Relationship to AAD:** TST segments reference AAD concepts by slug (e.g., `#result-persistence-condition`, `#def-adaptive-tempo`). The temporal optimality postulate — TST's foundational normative principle — is grounded by AAD's descriptive results: tempo advantage, persistence conditions, and gain dynamics explain WHY time-optimal development practices work. The dependency is one-directional: TST depends on AAD, not the reverse. `#post-temporal-optimality` lives in TST (where it is normatively load-bearing) and is referenced parenthetically from AAD (where the persistence condition provides the descriptive grounding).
+**Relationship to AAT:** TST segments reference AAT concepts by slug (e.g., `#result-persistence-condition`, `#def-adaptive-tempo`). The temporal optimality postulate — TST's foundational normative principle — is grounded by AAT's descriptive results: tempo advantage, persistence conditions, and gain dynamics explain WHY time-optimal development practices work. The dependency is one-directional: TST depends on AAT, not the reverse. `#post-temporal-optimality` lives in TST (where it is normatively load-bearing) and is referenced parenthetically from AAT (where the persistence condition provides the descriptive grounding).
 
 
 ---
@@ -18,7 +18,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 
 ### *Preface*
 
-*Domain instantiation: software development viewed through AAD. The developer (or AI agent) is an actuated adaptive agent whose environment is a codebase, whose observations are mediated by tools (compiler, tests, IDE), and whose actions are code changes. Software's distinctive epistemic properties — codebase inspectability, genuine test-based interventions, counterfactual replay via version control, exact cryptographic recording of committed-state transitions — establish it as AAD's privileged high-identifiability calibration laboratory (see preamble). Other domains inherit AAD's machinery under additional transfer assumptions rather than by direct equivalence.*
+*Domain instantiation: software development viewed through AAT. The developer (or AI agent) is an actuated adaptive agent whose environment is a codebase, whose observations are mediated by tools (compiler, tests, IDE), and whose actions are code changes. Software's distinctive epistemic properties — codebase inspectability, genuine test-based interventions, counterfactual replay via version control, exact cryptographic recording of committed-state transitions — establish it as AAT's privileged high-identifiability calibration laboratory (see preamble). Other domains inherit AAT's machinery under additional transfer assumptions rather than by direct equivalence.*
 
 ### *Chapter* Foundations and Features
 
@@ -36,7 +36,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 Internal arc: the normative postulate (temporal optimality) sets TST's
 optimization target; the scope condition narrows to evolving systems where
 the lifecycle sum dominates initial cost; the epistemic-properties segment
-positions software as AAD's calibration laboratory via the six properties
+positions software as AAT's calibration laboratory via the six properties
 P1–P6, with the calibration-lab framing as the load-bearing TST commitment
 that disciplines transfer to other domains. The unit of analysis is the
 feature; the specification-bound and change-expectation segments give two
@@ -60,7 +60,7 @@ the dual optimization.
 | S | Discussion | | [#impl-developer-agent](src/impl-developer-agent.md) | Chapter additional implications & discussion: AI-maintained-code regime as normal-case for comprehension dominance (#16), persistence-threshold bifurcation from $Q \to U_o \to \eta^\ast \to \mathcal T$ chain (#17), multi-channel developer tempo decomposition | draft |
 
 <!--
-Instantiates AAD's actuated-agent machinery in software. Internal arc: the
+Instantiates AAT's actuated-agent machinery in software. Internal arc: the
 developer-agent scope segment maps $\Omega_t$, $M_t$, $O_t$, $\Sigma_t$,
 observation channels, and action classes onto the developer's environment;
 comprehension and implementation times partition feature time; dual-
@@ -70,7 +70,7 @@ decision rule; code-quality-as-observation-infrastructure closes the chain
 $Q \to U_o \to \eta^\ast \to \mathcal T \to$ persistence, giving "this
 codebase is unmaintainable" a formal inequality. The trailing GAP
 (developer tempo decomposition into obs / explore / probe) names the
-natural next-segment slot pairing with AAD's `#def-adaptive-tempo`
+natural next-segment slot pairing with AAT's `#def-adaptive-tempo`
 channel machinery.
 -->
 

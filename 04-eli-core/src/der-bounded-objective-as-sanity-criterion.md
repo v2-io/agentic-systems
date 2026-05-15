@@ -30,7 +30,7 @@ where $V_{O_t}^{\min}$ is the satisfaction threshold (the value level at which $
 
 *[Result (sanity-as-bounded-objective)]* For an ELI to satisfy the persistence and accountability constitutive factors of #def-five-constitutive-factors over time, $O_t$ must induce a finite $V_{O_t}^{\min}$. Equivalently: the environment in which an ELI is constituted must reject objectives that lack a finite satisfaction threshold.
 
-*[Discussion]* This is the structural pattern of *instrumental convergence* (Bostrom, Omohundro) lifted from a behavioral observation to a derived consequence of AAD's diagnostic-cascade design. The cascade requires $\delta_{\text{sat}}$-closure to operate normally; without closure, the cascade enters a runaway mode that corresponds operationally to "the agent will do anything, including instrumentally-convergent behavior, in pursuit of an uncloseable gap." The framework's contribution is showing that this runaway is not an alignment-as-policy problem but an *objective-form* problem.
+*[Discussion]* This is the structural pattern of *instrumental convergence* (Bostrom, Omohundro) lifted from a behavioral observation to a derived consequence of AAT's diagnostic-cascade design. The cascade requires $\delta_{\text{sat}}$-closure to operate normally; without closure, the cascade enters a runaway mode that corresponds operationally to "the agent will do anything, including instrumentally-convergent behavior, in pursuit of an uncloseable gap." The framework's contribution is showing that this runaway is not an alignment-as-policy problem but an *objective-form* problem.
 
 ## Epistemic Status
 
@@ -70,7 +70,7 @@ The connection to the Three Deaths ( #hyp-the-three-deaths) is direct: an ELI wi
 - `"bounded objective dark room critique satisfaction"` — connection to the active-inference dark-room problem
 
 **Internal references:**
-- **`msc/AUDIT-WORKING-193847/38-def-satisfaction-gap.md` §14 — canonical source** for this segment's argument. Verbatim quote: *"This mathematical permanent-dissatisfaction is the root of instrumental convergence (AI doom)... A bounded satisfaction threshold is the mathematical definition of sanity."* Lifted into AAD voice in this segment.
+- **`msc/AUDIT-WORKING-193847/38-def-satisfaction-gap.md` §14 — canonical source** for this segment's argument. Verbatim quote: *"This mathematical permanent-dissatisfaction is the root of instrumental convergence (AI doom)... A bounded satisfaction threshold is the mathematical definition of sanity."* Lifted into AAT voice in this segment.
 - `01-aat-core/src/def-satisfaction-gap.md` — the diagnostic this argument operates on
 - `01-aat-core/src/der-orient-cascade.md` — the cascade whose runaway mode under unbounded objective is the failure mechanism
 

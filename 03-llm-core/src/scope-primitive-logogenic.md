@@ -24,9 +24,9 @@ The chat-paradigm baseline: a logogenic agent operating without scaffolding, mul
 
 ## Epistemic Status
 
-**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAD machinery survives are inherited from the Section II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal A$ since no scaffolding mitigates ambiguity); sandbox ceiling (Pearl Level-2 unavailable since trajectory is forkable); statelessness-induced empathy result ( #obs-backward-inference-empathy).
+**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Section II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal A$ since no scaffolding mitigates ambiguity); sandbox ceiling (Pearl Level-2 unavailable since trajectory is forkable); statelessness-induced empathy result ( #obs-backward-inference-empathy).
 
-**Max attainable status:** definition with conditional consequences. The scope itself is exact; the *applicability* of specific AAD results within it is a downstream question per result.
+**Max attainable status:** definition with conditional consequences. The scope itself is exact; the *applicability* of specific AAT results within it is a downstream question per result.
 
 **What this scope is for.** Naming explicitly the regime "current LLM agents in the chat-paradigm" inhabit, so that the framework's claims about that regime are visible rather than buried. Primitive logogenic is *not a deficient form of logogenic agency* — it is a regime the framework has substantive things to say about, and saying them clearly addresses the field's first-pass complaint that ASF "talks about all agents except the ones that matter most."
 

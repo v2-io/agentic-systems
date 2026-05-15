@@ -102,7 +102,7 @@ This segment specializes the class-coercion theorem within `#scope-scaffolded-lo
 
 **Impact:** Specializes `#der-class-coercion-via-wrapping` to the logogenic-substrate case relevant for `03-llm-core/`. Identifies PROPRIUM-as-implemented as W₂ (partial wrapping) and the auxilia hierarchy as the candidate W₁ realization, providing a concrete refinement path. Connects `#scope-scaffolded-logogenic`'s loop-level cascade-recovery claim to the structural directed-separation guarantee that strict wrapping provides. Clarifies that ELI-specific content (sovereignty, accountability, identity factors, substrate-independence in `04-eli-core/`) is added structure beyond class coercion — the wrapping construction is the substrate; ELI work is what runs on it.
 
-**Novelty Claim:** *Claim integration* of the class-coercion theorem with the scaffolded-logogenic regime. The W₁ / W₂ design distinction is the AAD-vocabulary reading of what existing scaffolded-LLM frameworks already do (or could do). The PROPRIUM-as-W₂ characterization and the auxilia-as-W₁ realization are descriptive integrations of the operational architecture into the class-coercion framework, not novelty claims.
+**Novelty Claim:** *Claim integration* of the class-coercion theorem with the scaffolded-logogenic regime. The W₁ / W₂ design distinction is the AAT-vocabulary reading of what existing scaffolded-LLM frameworks already do (or could do). The PROPRIUM-as-W₂ characterization and the auxilia-as-W₁ realization are descriptive integrations of the operational architecture into the class-coercion framework, not novelty claims.
 
 **Related Work:**
 

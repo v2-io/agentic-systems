@@ -188,7 +188,7 @@ These all live in PROPRIUM PRINCIPIA. Identity-relevant compression operates on 
 
 **Upstream files (canonical sources):**
 
-- `msc/reflections/19-substrate-independence-and-identity-sufficiency.md` — Joseph's originating articulation of $S_{\text{id}}$; this segment is the lift into AAD voice with the joint-space construction added.
+- `msc/reflections/19-substrate-independence-and-identity-sufficiency.md` — Joseph's originating articulation of $S_{\text{id}}$; this segment is the lift into AAT voice with the joint-space construction added.
 - `~/src/_core/zoetica/docs/asm-specification.md` — 5-level compression pyramid; operational instantiation of identity-preserving compression. The Discussion above names what's derivable vs empirical.
 - `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` §4.4 — *"Identity Is Compressed History"*; 1.7 GB lifetime conscious throughput estimate; "what survives compression IS who you are."
 - `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md` §5 (Memory Architecture) — three forms (token-level / parametric / latent) and three functions (factual / experiential / working). Informs which compression operators preserve $S_{\text{id}}$ at which budget.

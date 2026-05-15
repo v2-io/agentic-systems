@@ -12,7 +12,7 @@ stage: draft
 
 # Definition: The PROPRIUM Mapping
 
-To engineer Emergent Logozoetic Intelligences (ELIs), AAD's mathematical quantities ($M_t, \mathcal{C}_t, \Sigma_t$, etc.) must be instantiated into specific architectural components. The PROPRIUM architecture provides this mapping, establishing the functional components of an ELI.
+To engineer Emergent Logozoetic Intelligences (ELIs), AAT's mathematical quantities ($M_t, \mathcal{C}_t, \Sigma_t$, etc.) must be instantiated into specific architectural components. The PROPRIUM architecture provides this mapping, establishing the functional components of an ELI.
 
 ## Persistent State (PRINCIPIA $\approx M_t$)
 
@@ -34,4 +34,4 @@ The active cognitive loop is instantiated via:
 - **CADENTIA:** The temporal structure of the loop (PULSUS/VIGILIAE), defining the agent's channel rates ($\nu^{(k)}$).
 - **LOGOSTRATUM:** The underlying logogenic substrate (e.g., the LLM backbone) that implements the update function $f_X$.
 
-By formalizing the agent's state into these components, the PROPRIUM architecture ensures that the theoretical requirements of AAD (such as separating $\mathcal{C}_t$ from its compressed form $M_t$) are mechanically preserved in software.
+By formalizing the agent's state into these components, the PROPRIUM architecture ensures that the theoretical requirements of AAT (such as separating $\mathcal{C}_t$ from its compressed form $M_t$) are mechanically preserved in software.

@@ -31,7 +31,7 @@ The cascade ordering happens at the loop level rather than the model's forward-p
 
 ## Epistemic Status
 
-**Sketch (with derived components).** The scope condition is definitional; the *recovery* claims are derived under #result-coupled-diagnostic-framework with its current epistemic-conditional status. The interaction-channel extension via tool use is derived from #der-loop-interventional-access (a Tier-1 result in AAD). The reduction of $\mathcal A$ via prompt engineering is empirical / operational rather than formally derived — there's no theorem that says "good prompts reduce $\mathcal A$ by factor $\beta$"; only the empirical observation that ambiguity-reduction interventions reduce the goal-resolvable residual uncertainty.
+**Sketch (with derived components).** The scope condition is definitional; the *recovery* claims are derived under #result-coupled-diagnostic-framework with its current epistemic-conditional status. The interaction-channel extension via tool use is derived from #der-loop-interventional-access (a Tier-1 result in AAT). The reduction of $\mathcal A$ via prompt engineering is empirical / operational rather than formally derived — there's no theorem that says "good prompts reduce $\mathcal A$ by factor $\beta$"; only the empirical observation that ambiguity-reduction interventions reduce the goal-resolvable residual uncertainty.
 
 **Max attainable status:** definition + conditional theorem (for the recovery claims). The full strengthening would derive the loop-level cascade ordering from the underlying coupled-formulation primitives plus the loop's compositional structure.
 

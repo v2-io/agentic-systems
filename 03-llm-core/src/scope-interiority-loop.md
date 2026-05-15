@@ -32,7 +32,7 @@ The principled interiority cycle as the operational unit of work. Default cognit
 
 **What this scope is for.** Naming explicitly the architecture the field is converging toward ad hoc and supplying ASF as the principled grounding. The convergent independent work at frontier labs (Anthropic memory files / skills / parallel tools / thinking blocks / scheduled background work / code execution; OpenAI Assistants API; Google agentic frameworks) is arrival at *pieces* of this architecture without yet articulating it as a unified abstraction.
 
-**What would strengthen this:** explicit derivation of the closed-loop architecture from AAD primitives + the forcing functions, showing the architecture is the *unique* (or at least *minimal*) solution that satisfies the constraints; concrete migration-protocol specification for moving from §03.II to §03.III in production systems.
+**What would strengthen this:** explicit derivation of the closed-loop architecture from AAT primitives + the forcing functions, showing the architecture is the *unique* (or at least *minimal*) solution that satisfies the constraints; concrete migration-protocol specification for moving from §03.II to §03.III in production systems.
 
 **What would soften this:** demonstration that some specific scaffolded architecture *can* satisfy the persistence threshold and temporal nesting at scale (would weaken F2/F3 and reduce the necessity argument); evidence that interiority-as-default doesn't actually improve the relevant outcomes vs externality-as-default (would weaken the operational case).
 

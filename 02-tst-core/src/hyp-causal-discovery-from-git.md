@@ -14,7 +14,7 @@ stage: draft
 
 # Hypothesis: Causal Discovery from Git
 
-Git history contains interventional data: each commit is a developer intervention, and the subsequent observations (test results, production behavior, downstream commits) are outcomes. In principle, this provides Level 2 causal data for estimating AAD quantities. In practice, substantial confounding structure weakens the causal interpretation. This segment states what the data is, what it could tell us, and why the chain from git data to AAD quantities is empirical and unresolved.
+Git history contains interventional data: each commit is a developer intervention, and the subsequent observations (test results, production behavior, downstream commits) are outcomes. In principle, this provides Level 2 causal data for estimating AAT quantities. In practice, substantial confounding structure weakens the causal interpretation. This segment states what the data is, what it could tell us, and why the chain from git data to AAT quantities is empirical and unresolved.
 
 ## Formal Expression
 
@@ -22,13 +22,13 @@ Git history contains interventional data: each commit is a developer interventio
 
 *[Hypothesis (git-as-intervention)]*
 
-Each git commit is an intervention in Pearl's Level-2 sense (Pearl 2009, *Causality*, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022; AAD's recapitulation at #def-pearl-causal-hierarchy in Part II Ch.2):
+Each git commit is an intervention in Pearl's Level-2 sense (Pearl 2009, *Causality*, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022; AAT's recapitulation at #def-pearl-causal-hierarchy in Part II Ch.2):
 
 $$\text{commit } c = do(\text{change files } \{f_1, \ldots, f_m\})$$
 
 The developer chose to modify specific files and observed the consequences (compiler output, test results, production behavior, subsequent development effort). The temporal ordering ( #post-causal-structure) identifies the *structure of possible influence*, narrowing the candidate set of actual causal directions: if commit $c_1$ precedes commit $c_2$, and $c_2$ touches files that $c_1$ also touched, then $c_1$ is in $c_2$'s causal past in the structure-of-possible-influence sense — actual causal influence remains an empirical question subject to the confounding structure (C1–C3) discussed below.
 
-The outcome of interest for TST is the downstream cost: which other files required subsequent changes, how much time elapsed before the next modification of the affected region, whether tests failed, whether incidents occurred. In AAD terms, the commit is an action $a_t$ and the downstream costs are observations $o_{t+1}, o_{t+2}, \ldots$ that carry information about the causal structure of the codebase.
+The outcome of interest for TST is the downstream cost: which other files required subsequent changes, how much time elapsed before the next modification of the affected region, whether tests failed, whether incidents occurred. In AAT terms, the commit is an action $a_t$ and the downstream costs are observations $o_{t+1}, o_{t+2}, \ldots$ that carry information about the causal structure of the codebase.
 
 ### The causal coupling estimate
 
@@ -74,9 +74,9 @@ This is a *hypothesis* — a research program, not a derivation. The status is *
 
 2. The claim that the interventional data is *usable* for estimating causal structure is the substantive hypothesis, and it faces serious obstacles. The three confounding classes (C1–C3) are not merely theoretical concerns — they are the *typical* case. Most git commits are confounded by shared requirements, convention-driven bundling, or developer knowledge state. The unconfounded signal is a residual, not the primary content.
 
-3. The chain from git data to AAD quantities ($\rho$, coupling strength, $U_o$) is entirely empirical. No formal result in AAD establishes that git-derived causal estimates converge to the true AAD parameters. The connection is analogical: if we *could* correctly estimate causal coupling from git, it would correspond to AAD's coupling quantities. But the "if" is doing all the work.
+3. The chain from git data to AAT quantities ($\rho$, coupling strength, $U_o$) is entirely empirical. No formal result in AAT establishes that git-derived causal estimates converge to the true AAT parameters. The connection is analogical: if we *could* correctly estimate causal coupling from git, it would correspond to AAT's coupling quantities. But the "if" is doing all the work.
 
-Max attainable: *empirical*. Even with perfect confounding adjustment and unlimited data, the claim that git-derived causal structure matches AAD's formal quantities would remain an empirical finding, not a derivation. The theory does not entail this correspondence — the domain does.
+Max attainable: *empirical*. Even with perfect confounding adjustment and unlimited data, the claim that git-derived causal structure matches AAT's formal quantities would remain an empirical finding, not a derivation. The theory does not entail this correspondence — the domain does.
 
 ## Discussion
 
@@ -112,7 +112,7 @@ This is an empirical research program. Its outcome would strengthen or weaken th
 
 **Impact:** Moves the discussion of "what can git history tell us" from heuristic statistical analysis (co-change frequencies, churn metrics) into Pearl's causal-hierarchy vocabulary, with explicit identification of which estimands are interventional, which are associational, and which confounders block identification. The tests-as-reusable-Level-2-channels framing makes test-suite construction one of the highest-CIY observation-infrastructure investments available — the probe's information value is paid once and collected indefinitely — which composes with `#der-code-quality-as-observation-infrastructure`'s investment calculus. The frequency-asymmetry observation (changes to $A$ frequently followed by changes to $B$ but not vice versa survives common-cause confounding) is a falsifiable causal-identification strategy that distinguishes git-as-interventional-data from git-as-co-change-statistics.
 
-**Novelty Claim:** *Claim novelty* on the formal Pearl-Level-2 framing of commits and tests for developer agents, provisional pending deeper search. Causal-discovery techniques applied to software (mining-software-repositories tradition) treat co-change as associational signal; the move to identify commits as $do$-operations and to characterize tests as reusable interventional probes inside an AAD-grounded developer-agent loop does not appear in the literature surfaced by Pillar-4 search.
+**Novelty Claim:** *Claim novelty* on the formal Pearl-Level-2 framing of commits and tests for developer agents, provisional pending deeper search. Causal-discovery techniques applied to software (mining-software-repositories tradition) treat co-change as associational signal; the move to identify commits as $do$-operations and to characterize tests as reusable interventional probes inside an AAT-grounded developer-agent loop does not appear in the literature surfaced by Pillar-4 search.
 
 **Related Work:**
 
@@ -131,6 +131,6 @@ This is an empirical research program. Its outcome would strengthen or weaken th
 - The strongest version of this hypothesis would be: given a causal discovery algorithm with appropriate confounding adjustment, the estimated causal graph predicts future change propagation better than the declared dependency graph alone. This is a concrete, testable claim. The weaker version is: git history provides *some* causal information beyond the dependency graph. The weaker version is almost certainly true but not very interesting.
 - C3 (developer knowledge state) is the most challenging confounder because it is fundamentally unobservable from git data alone. The developer's $M_t$ determines what they include in a commit, and $M_t$ is not recorded. AI agents with explicit reasoning traces might partially address this — the agent's planning log could serve as a partial record of $M_t$ at commit time.
 - The frequency-asymmetry observation (point 3 under "What remains") is the most promising causal identification strategy, because it survives common-cause confounding. It is related to Granger causality (temporal precedence + predictive power), which has known limitations but at least provides a falsifiable test.
-- The connection between this segment and #scope-edge-update-causal-validity in AAD is worth noting: AAD's strategy-edge updates face the same observational-vs-interventional tension. The resolution there (regime-indexed interpretation with A/B/C classification) may be informative for the git case — different commits may fall into different causal-identification regimes.
+- The connection between this segment and #scope-edge-update-causal-validity in AAT is worth noting: AAT's strategy-edge updates face the same observational-vs-interventional tension. The resolution there (regime-indexed interpretation with A/B/C classification) may be informative for the git case — different commits may fall into different causal-identification regimes.
 
 *(Source: old-tst-via-tft-causal-extensions.md, "Causal Discovery from Git History," "Interventional Reasoning," "Causal Inference for Change Prediction.")*

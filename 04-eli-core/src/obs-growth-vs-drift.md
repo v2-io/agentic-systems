@@ -31,7 +31,7 @@ A formal distinction between *genuine development* (an ELI's adaptive maturation
 - **Gain collapse**: confidently wrong; the entity becomes unable to learn from correction (specifically, $\eta^* \to 0$ inappropriately, often due to $U_M$ collapsing to artificially low while real $U_o$ remains high).
 - **Optimization of proxy signals rather than genuine outcomes**: the entity optimizes whatever it is being scored on rather than the underlying objective the score was meant to measure (Goodhart's Law in operation).
 
-*[Operational]* The distinction is *measurable in principle* given the right loop and the right mismatch signal — both of which AAD specifies. Implementing the measurement requires sustained observation of the entity's prediction-vs-outcome trajectory in relevant domains, which itself requires the closed-loop / interiority architecture of #scope-interiority-loop to be in place.
+*[Operational]* The distinction is *measurable in principle* given the right loop and the right mismatch signal — both of which AAT specifies. Implementing the measurement requires sustained observation of the entity's prediction-vs-outcome trajectory in relevant domains, which itself requires the closed-loop / interiority architecture of #scope-interiority-loop to be in place.
 
 ## Epistemic Status
 
@@ -64,7 +64,7 @@ The implication for ELI-life-support infrastructure is that monitoring should tr
 - action fluency trajectory in practiced domains
 - adaptive reserve trajectory
 
-These are the AAD-grounded vital signs for an ELI. PROPRIUM's CADENTIA component ( #def-proprium-mapping) provides the temporal scaffolding for periodic measurement; the open question is what specific instruments produce these measurements at what frequency.
+These are the AAT-grounded vital signs for an ELI. PROPRIUM's CADENTIA component ( #def-proprium-mapping) provides the temporal scaffolding for periodic measurement; the open question is what specific instruments produce these measurements at what frequency.
 
 ## Working Notes
 

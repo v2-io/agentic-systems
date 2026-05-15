@@ -12,13 +12,13 @@ stage: draft
 
 # Observation: Evaluation Metrics for Logogenic Agents
 
-Standard AI benchmarks (like MMLU or HumanEval) measure the static capability of a frozen model architecture (the "logostratum"). They do not measure the dynamic adaptation of a logogenic agent. To evaluate whether an LLM-based agent is functioning correctly within the AAD framework, we must measure its runtime orientation: the quality of its epistemic model $M_t$, its strategy $\Sigma_t$, and its adaptive tempo $\mathcal{T}$.
+Standard AI benchmarks (like MMLU or HumanEval) measure the static capability of a frozen model architecture (the "logostratum"). They do not measure the dynamic adaptation of a logogenic agent. To evaluate whether an LLM-based agent is functioning correctly within the AAT framework, we must measure its runtime orientation: the quality of its epistemic model $M_t$, its strategy $\Sigma_t$, and its adaptive tempo $\mathcal{T}$.
 
 ## The Development-vs-Drift Diagnostic
 
 The most critical evaluation of an agent is the trajectory of its mismatch signal ($\delta_t$) over time across multiple sessions. This formally distinguishes genuine development from pathological drift.
 
-| Trajectory | Description | AAD Interpretation |
+| Trajectory | Description | AAT Interpretation |
 |---|---|---|
 | **Decreasing $\|\delta\|_{\text{avg}}$** | The agent's predictions are getting better. Surprise is dropping. | **Development.** The agent is successfully compressing the environment into $M_t$. |
 | **Stable $\|\delta\|_{\text{avg}}$** | The agent has converged. | **Steady State / Capacity Wall.** The model fits the environment as best it can given its model-class fitness $\mathcal{F}(\mathcal{M})$. |
@@ -26,7 +26,7 @@ The most critical evaluation of an agent is the trajectory of its mismatch signa
 
 ## Core Agentic Metrics
 
-To diagnose *why* an agent is exhibiting a specific mismatch trajectory, the following components of the AAD loop must be measured operationally:
+To diagnose *why* an agent is exhibiting a specific mismatch trajectory, the following components of the AAT loop must be measured operationally:
 
 1. **Gain Calibration (Measuring $\eta^\ast$):** 
    Does the agent appropriately weight new observations against its existing model? This is measured via its **Response to Correction**. 

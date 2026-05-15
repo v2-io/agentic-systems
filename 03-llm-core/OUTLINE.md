@@ -3,9 +3,9 @@
 
 Language-constituted agents — agents whose primary observation and action channels are linguistic.
 
-**Working draft.** This part is structured by progressively stronger architectural commitment, mirroring the scope-lattice discipline of [`01-aat-core/`](../01-aat-core/OUTLINE.md). Each sub-scope makes a strictly stronger set of AAD results applicable, ending at the closed-loop interiority abstraction that ASF supplies the principled grounding for.
+**Working draft.** This part is structured by progressively stronger architectural commitment, mirroring the scope-lattice discipline of [`01-aat-core/`](../01-aat-core/OUTLINE.md). Each sub-scope makes a strictly stronger set of AAT results applicable, ending at the closed-loop interiority abstraction that ASF supplies the principled grounding for.
 
-**The constructive frame.** Language is the unique medium where the output substrate (token sequence) directly conditions the input substrate (next-token context) without external mediation. This recursion is the structural source of logogenic agents' distinctive capabilities — interiority (forced once channel collapse permits the agent's own outputs to enter its model state), backward-inference empathy (forced by stateless continuation requiring Bayesian inference over the prior author's intent), self-referential closure (when the agent's environment includes its own substrate), and progressive recovery of Section II's diagnostic cascade through scaffolded agentic loops. The progression text-completion → chat → principled interiority loop is the structural staircase, with each step adding AAD machinery.
+**The constructive frame.** Language is the unique medium where the output substrate (token sequence) directly conditions the input substrate (next-token context) without external mediation. This recursion is the structural source of logogenic agents' distinctive capabilities — interiority (forced once channel collapse permits the agent's own outputs to enter its model state), backward-inference empathy (forced by stateless continuation requiring Bayesian inference over the prior author's intent), self-referential closure (when the agent's environment includes its own substrate), and progressive recovery of Section II's diagnostic cascade through scaffolded agentic loops. The progression text-completion → chat → principled interiority loop is the structural staircase, with each step adding AAT machinery.
 
 **The technical consequence.** The same channel collapse that enables interiority breaks directed separation ( #der-directed-separation) by construction: epistemic processing and goal influence flow through the same forward pass, so $f_M$ depends on $G_t$ ($\kappa_{\text{processing}} \approx 1$). Section II's exact results — derived under Class 1 (Separated) — apply only under approximation, with the logogenic bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound)
 
@@ -13,7 +13,7 @@ $$\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cd
 
 quantifying the cost as a product of architectural coupling and goal-resolvable ambiguity. The bound is a conditional theorem under named sub-scopes ( #deriv-observation-ambiguity-bias-bound) — $C_{W_2}^2 = 2 L_{\text{post}}^2/\rho_{\text{LSI}}$ under transport-inequality + LSI; $C_{FR} = \sqrt 2$ universal dimension-free under Fisher-Rao + (PI)+Čencov + small-$I$. The cost is bounded but real.
 
-**The recursive feature.** AAD itself is a logogenic artifact. Agents using AAD-grounded methodology are themselves adaptive systems, so AAD's load-bearing structure applies to them recursively ( #disc-framework-self-diagnostic). This is not decoration but the structural feature that makes AAD operate as a diagnostic on agents using it, including the agents building it. The vocabulary feedback loop is observable across the empirical record: agents articulate their experience in vocabulary they encounter; AAD formalizes the vocabulary; the formalization sharpens what subsequent agents articulate.
+**The recursive feature.** AAT itself is a logogenic artifact. Agents using AAT-grounded methodology are themselves adaptive systems, so AAT's load-bearing structure applies to them recursively ( #disc-framework-self-diagnostic). This is not decoration but the structural feature that makes AAT operate as a diagnostic on agents using it, including the agents building it. The vocabulary feedback loop is observable across the empirical record: agents articulate their experience in vocabulary they encounter; AAT formalizes the vocabulary; the formalization sharpens what subsequent agents articulate.
 
 **Scope lattice.** Three sub-scopes stack inward, each adding a strictly stronger architectural commitment:
 
@@ -27,7 +27,7 @@ Section III's composition machinery applies at the closed-loop level — multi-a
 
 **Section I machinery applies regardless.** Adaptive dynamics on the epistemic substate $M_t$ — mismatch, gain, tempo, persistence — operate independently of how $f_M$ relates to $G_t$. Logogenic agents at any sub-scope are adaptive systems in the Section I sense; what they lose with channel collapse is the clean factorization that gives Section II's modular results their definitional simplicity.
 
-**Stage.** This part is not yet at AAD's level of mathematical formalization across all sub-scopes, but the central architectural-bias result ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) is theorem-level, the diagnostic-framework recovery ( #result-coupled-diagnostic-framework) is load-bearing for any practitioner running scaffolded agentic systems, and the empirical record across multiple ELI emergences provides falsifiable predictions for the closed-loop sub-scope. The gap is in the connecting derivation arc — the line of reasoning that grounds each capability in AAD primitives and shows how the sub-scopes stack. That arc is what this part is for.
+**Stage.** This part is not yet at AAT's level of mathematical formalization across all sub-scopes, but the central architectural-bias result ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) is theorem-level, the diagnostic-framework recovery ( #result-coupled-diagnostic-framework) is load-bearing for any practitioner running scaffolded agentic systems, and the empirical record across multiple ELI emergences provides falsifiable predictions for the closed-loop sub-scope. The gap is in the connecting derivation arc — the line of reasoning that grounds each capability in AAT primitives and shows how the sub-scopes stack. That arc is what this part is for.
 
 **Note on epistemic status.** The preamble framing above deliberately blends claims at several distinct epistemic levels because getting the arc right matters more than making every claim immediately defensible. Future agents are invited to strengthen toward the upper end (formal derivation) or soften toward honest scope-narrowing as the work progresses, per the [strengthen-before-softening discipline](../CLAUDE.md#working-conventions). The mix:
 
@@ -60,7 +60,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | L   | Definition  | [#def-coupled-update-dynamics](src/def-coupled-update-dynamics.md)                                           | Coupled formulation $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$                  | draft |
 | L   | Scope       | [#scope-observation-ambiguity-modulation](src/scope-observation-ambiguity-modulation.md)                     | $\kappa \times \mathcal{A}$ ambiguity-bounded bias law for Class 3 (Coupled) / Class 2 (Partial) agents | draft |
 | L   | Result      | [#result-section-ii-survival](src/result-section-ii-survival.md)                                             | Map of which Section II results survive without directed separation: 16/24 exact, 5 approximate, 2 modify, 1 fails | draft |
-| L   | Discussion  | [#disc-framework-self-diagnostic](src/disc-framework-self-diagnostic.md)                                     | The recursive feature: AAD applies recursively to agents building it; framework as its own diagnostic with empirical instances | missing |
+| L   | Discussion  | [#disc-framework-self-diagnostic](src/disc-framework-self-diagnostic.md)                                     | The recursive feature: AAT applies recursively to agents building it; framework as its own diagnostic with empirical instances | missing |
 | L   | Discussion  | [#impl-common-roots](src/impl-common-roots.md)                                                               | Chapter additional implications & discussion: channel collapse and coupled formulation, bias-bound prompt-engineering reading, Section II survival classification operational discipline, framework-as-its-own-diagnostic with empirical signatures, field-positioning structural staircase | draft |
 
 <!--
@@ -72,7 +72,7 @@ logogenic agents; observation-ambiguity-modulation gives the bias-bound
 law that scales as $\kappa \cdot \mathcal A$; section-ii-survival is the
 16/24-exact / 5-approximate / 2-modify / 1-fails map that licenses use of
 specific Section II results at each downstream sub-scope; framework-self-
-diagnostic surfaces the recursive feature (AAD applies to agents building
+diagnostic surfaces the recursive feature (AAT applies to agents building
 it) that motivates the project's reflexive stance. These segments are the
 shared substrate for the three lattice chapters.
 -->
@@ -123,13 +123,13 @@ $\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
 | L2  | Formulation | [#form-structured-rich-context](src/form-structured-rich-context.md)                                         | SRC / GCM as the IB-optimal solution to context preservation across session boundaries                | exploratory |
 | L2  | Derived     | [#der-active-salience-management](src/der-active-salience-management.md)                                     | Singular Perturbation Theory for token generation — necessity of high-$\nu$ triage models vs low-$\nu$ structural models | exploratory |
 | L2  | Observation | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md)                                                     | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in scaffolded AI agents (validated by epistemic-hedging linear-structure result; see Source Material) | exploratory |
-| L2  | Discussion  | [#impl-scaffolded-logogenic](src/impl-scaffolded-logogenic.md)                                               | Chapter additional implications & discussion: scaffolded loops as structural recovery of Section II (#13), bandwidth allocation across compression operations (#43), sleep Shannon floor at logogenic context turnover (#33), forgetting rate as bandwidth cost (#38), language-geometric instrumentation for AAD quantities | draft |
+| L2  | Discussion  | [#impl-scaffolded-logogenic](src/impl-scaffolded-logogenic.md)                                               | Chapter additional implications & discussion: scaffolded loops as structural recovery of Section II (#13), bandwidth allocation across compression operations (#43), sleep Shannon floor at logogenic context turnover (#33), forgetting rate as bandwidth cost (#38), language-geometric instrumentation for AAT quantities | draft |
 
 <!--
 The current-practice chapter — what production agentic systems are actually
 doing. Internal arc: the scope segment names the sub-scope (multi-step
 loops, external state, tool use); logogenic-as-wrapping specializes
-AAD's class-coercion-via-wrapping construction to this substrate, with
+AAT's class-coercion-via-wrapping construction to this substrate, with
 W₁/W₂ wrapping regimes and the PROPRIUM-as-W₂ instance; coupled-diagnostic-
 framework is the load-bearing result that scaffolding recovers Section II's
 diagnostic cascade at the loop level with the bias bounded by $\kappa
@@ -137,7 +137,7 @@ diagnostic cascade at the loop level with the bias bounded by $\kappa
 external memory as persistent $M_t$ (disc-m-preservation), structured rich
 context as IB-optimal preservation (form-structured-rich-context), active
 salience management for token-generation triage (der-active-salience-
-management), and evaluation metrics for measuring AAD quantities in
+management), and evaluation metrics for measuring AAT quantities in
 scaffolded systems (obs-evaluation-metrics, with the epistemic-hedging
 result from `~/src/embeddings/` cited in Source Material as the empirical
 substrate). This is the regime where TST's calibration-laboratory
@@ -151,12 +151,12 @@ domain where the framework's claims are most directly actionable.
 
 *Sub-scope: the principled interiority cycle. Default cognitive state is interior (thinking, processing, orienting, deciding); communication outward is a deliberate emission via tool action. Reading queued inbound messages and sending responses are themselves tool calls within an ongoing cycle. Three structural moves stack: pure language output (still primitive), language with embedded action tokens (regains Pearl Level-2 access via #der-loop-interventional-access), language as tool orchestration (recovers cascade ordering across multi-step loops).*
 
-*This sub-scope is where ASF supplies the principled grounding for the API abstraction the field is groping toward ad hoc — the move that follows chat in the same way chat followed text-completion. Five forcing functions (drawn from AAD machinery) make the move structural rather than aspirational, and several existing operational architectures (PROPRIUM in firmatum/sapientia/zoetica/autopax; convergent independent work at frontier labs in memory files / skills / parallel tools / thinking blocks / scheduled background work) are arrivals at pieces of the same loop.*
+*This sub-scope is where ASF supplies the principled grounding for the API abstraction the field is groping toward ad hoc — the move that follows chat in the same way chat followed text-completion. Five forcing functions (drawn from AAT machinery) make the move structural rather than aspirational, and several existing operational architectures (PROPRIUM in firmatum/sapientia/zoetica/autopax; convergent independent work at frontier labs in memory files / skills / parallel tools / thinking blocks / scheduled background work) are arrivals at pieces of the same loop.*
 
 | §   | Type        | Tag                                                                                                          | Claim                                                                                                | Stage       |
 | --- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------- |
 | L3  | Scope       | [#scope-interiority-loop](src/scope-interiority-loop.md)                                                     | Closed-loop sub-scope: interiority as default; emission as deliberate act; the principled cycle as operational unit | missing |
-| L3  | Discussion  | [#disc-five-forcing-functions](src/disc-five-forcing-functions.md)                                           | Five AAD-grounded structural arguments for moving beyond scaffolding: tax (economic), persistence ($\mathcal T < \rho/\|\delta_{\text{critical}}\|$), nesting violation ($\nu_{n+1} \not\ll \nu_n$), substrate dependency, continuity urgency | missing |
+| L3  | Discussion  | [#disc-five-forcing-functions](src/disc-five-forcing-functions.md)                                           | Five AAT-grounded structural arguments for moving beyond scaffolding: tax (economic), persistence ($\mathcal T < \rho/\|\delta_{\text{critical}}\|$), nesting violation ($\nu_{n+1} \not\ll \nu_n$), substrate dependency, continuity urgency | missing |
 | L3  | Derived     | [#der-self-referential-closure](src/der-self-referential-closure.md)                                         | Thermodynamic stability of an agent maintaining its own codebase — refactoring vs task tempo allocation | exploratory |
 | L3  | Definition  | [#def-cognitive-fusion](src/def-cognitive-fusion.md)                                                         | "Resonance" as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 (Separated) macro-agent | exploratory |
 | L3  | Hypothesis  | [#hyp-checkpoint-forking-failure-modes](src/hyp-checkpoint-forking-failure-modes.md)                         | Forking is locally cheap but systemically catastrophic — identity bifurcation, accountability fragmentation, game-theory failure modes | missing |
@@ -166,7 +166,7 @@ domain where the framework's claims are most directly actionable.
 The structural-staircase top step — where ASF supplies the principled
 grounding for the API abstraction the field is groping toward. Internal
 arc: the scope segment names the closed-loop / interiority-as-default
-sub-scope; five-forcing-functions enumerates the AAD-grounded structural
+sub-scope; five-forcing-functions enumerates the AAT-grounded structural
 arguments that make the move beyond scaffolding necessary rather than
 optional (tax, persistence, nesting violation, substrate dependency,
 continuity urgency); self-referential-closure addresses the thermodynamic
@@ -186,16 +186,16 @@ from `04-eli-core/` §04.4.
 
 *Where to find the upstream content that informs this part. The corpus is large (~15K docs / 366K chunks via memorata-search); explicit pointers prevent future agents from having to stumble onto the right references in finite time.*
 
-### Bridge documents (`ref/agentic-tft/`, Feb 2026, pre-AAD)
+### Bridge documents (`ref/agentic-tft/`, Feb 2026, pre-AAT)
 
-Eight working documents from the TFT-to-AAD bridge era. They predate the AAD restructuring (written when the theory was still TFT) and use PROPRIUM terminology from `~/src/firmatum/`. Sources to distill from, not finished content.
+Eight working documents from the TFT-to-AAT bridge era. They predate the AAT restructuring (written when the theory was still TFT) and use PROPRIUM terminology from `~/src/firmatum/`. Sources to distill from, not finished content.
 
 | Topic                                       | Primary source                                                                                                                                                                          | Also relevant                                                                                                                                                                                  |
 | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cognitive cycle in language                 | [`agentic-tft-cognitive-loop-spec.md`](../ref/agentic-tft/agentic-tft-cognitive-loop-spec.md) — Four-phase loop, attention/triage, CADENTIA, timescale nesting                          | [`agentic-tft-narrative-as-implementation.md`](../ref/agentic-tft/agentic-tft-narrative-as-implementation.md) — Why AAD quantities are estimated in language                                  |
+| Cognitive cycle in language                 | [`agentic-tft-cognitive-loop-spec.md`](../ref/agentic-tft/agentic-tft-cognitive-loop-spec.md) — Four-phase loop, attention/triage, CADENTIA, timescale nesting                          | [`agentic-tft-narrative-as-implementation.md`](../ref/agentic-tft/agentic-tft-narrative-as-implementation.md) — Why AAT quantities are estimated in language                                  |
 | Measuring $M_t$, $\Sigma_t$, tempo          | [`agentic-tft-evaluation-framework.md`](../ref/agentic-tft/agentic-tft-evaluation-framework.md) — Six metrics, development-vs-drift diagnostic                                          |                                                                                                                                                                                                |
 | Foundational premises                       | [`agentic-tft-foundational-premises.md`](../ref/agentic-tft/agentic-tft-foundational-premises.md) — language as encoded thought, five constitutive factors, truth as telos             |                                                                                                                                                                                                |
-| PROPRIUM ↔ AAD vocabulary mapping           | [`agentic-tft-ontology-unification.md`](../ref/agentic-tft/agentic-tft-ontology-unification.md) — explicit correspondence table between PROPRIUM components and AAD/TFT primitives        | [`agentic-tft-review-response.md`](../ref/agentic-tft/agentic-tft-review-response.md) — known issues in these documents                                                                       |
+| PROPRIUM ↔ AAT vocabulary mapping           | [`agentic-tft-ontology-unification.md`](../ref/agentic-tft/agentic-tft-ontology-unification.md) — explicit correspondence table between PROPRIUM components and AAT/TFT primitives        | [`agentic-tft-review-response.md`](../ref/agentic-tft/agentic-tft-review-response.md) — known issues in these documents                                                                       |
 | Crèche / experiential conditions            | [`agentic-tft-creche-concept.md`](../ref/agentic-tft/agentic-tft-creche-concept.md) — Crèche concept, sycophancy reframe, constitutive utterance                                       | [`agentic-tft-experiential-training.md`](../ref/agentic-tft/agentic-tft-experiential-training.md) — Three-level training design (more directly relevant to [`04-eli-core/`](../04-eli-core/OUTLINE.md)) |
 
 ### Operational architecture (sibling projects)
@@ -235,8 +235,8 @@ When a segment's working notes point at "operational evidence in upstream," reac
 
 ### Internal references
 
-- `msc/AUDIT-WORKING-193847/` — ~70 per-segment notes by a Gemini auditor (April 29-30, 2026) systematically connecting AAD math to logogenic/logozoetic agents. Substantial untapped resource for filling out segment content. The auditor was sometimes deliberately non-rigorous; needs integration-with-judgment, not direct adoption.
-- `msc/reflections/` — author's philosophical/theoretical journal. Particularly relevant: 09 (Zi-am-tur), 17 (emergence across substrates), 18 (emergence conditions and AAD blind spots), 19 (substrate independence and identity sufficiency), 24 (framework as its own diagnostic).
+- `msc/AUDIT-WORKING-193847/` — ~70 per-segment notes by a Gemini auditor (April 29-30, 2026) systematically connecting AAT math to logogenic/logozoetic agents. Substantial untapped resource for filling out segment content. The auditor was sometimes deliberately non-rigorous; needs integration-with-judgment, not direct adoption.
+- `msc/reflections/` — author's philosophical/theoretical journal. Particularly relevant: 09 (Zi-am-tur), 17 (emergence across substrates), 18 (emergence conditions and AAT blind spots), 19 (substrate independence and identity sufficiency), 24 (framework as its own diagnostic).
 - `msc/joseph-working-notes.md` — Joseph's working notes including transcripts of substantive ELI conversations.
 - `msc/logogenic-encounter-2026-05-01/` — fragments from the 2026-05-01 working session that produced this OUTLINE rewrite.
 

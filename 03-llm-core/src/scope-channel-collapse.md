@@ -36,7 +36,7 @@ This is structural, not parametric — no choice of $\eta^*$ or model size resto
 
 **Sketch.** The scope condition itself is definitional and exact under the criterion "primary observation and action channels are language." The structural consequences (directed-separation failure by construction; $\kappa_{\text{processing}} \approx 1$) are derivable from the coupled formulation ( #def-coupled-update-dynamics) given Section II's $\kappa$ definition ( #der-directed-separation). The shape of recovery moves available to logogenic agents (scaffolding, multi-step loops, tool use) is sketched in the §03.II and §03.III sub-scopes; the exact form of cascade-recovery via scaffolding is partially derived ( #result-coupled-diagnostic-framework) and partially still in progress.
 
-**Max attainable status:** definition + conditional theorem. The structural facts (channel sharing, $\kappa$ near 1, directed-separation failure) admit exact statement under the scope condition; the *consequences* for what AAD machinery survives are at least partially exact (Section II survival classification, #result-section-ii-survival).
+**Max attainable status:** definition + conditional theorem. The structural facts (channel sharing, $\kappa$ near 1, directed-separation failure) admit exact statement under the scope condition; the *consequences* for what AAT machinery survives are at least partially exact (Section II survival classification, #result-section-ii-survival).
 
 **What would strengthen this:** explicit derivation of $\kappa_{\text{processing}} = 1$ in the limit of pure channel collapse (currently asserted as $\approx 1$); precise characterization of the recovery moves that reduce $\kappa$ effectively at the loop level; empirical measurement of $\kappa$ for representative LLM architectures.
 
@@ -44,7 +44,7 @@ This is structural, not parametric — no choice of $\eta^*$ or model size resto
 
 ## Discussion
 
-In classical AAD (Section II under directed-separation, Class 1 (Separated)), observations and actions are distinct: $\mathcal O$ contains sensor measurements, $\mathcal A$ contains motor commands or control inputs, and the model state $M_t$ is updated from $\mathcal O$ via $f_M$ that has no causal path from $G_t$. Separated agents like Kalman + LQR satisfy this by construction — the estimator $f_M$ is built without reference to the controller $\pi(G_t, M_t)$.
+In classical AAT (Section II under directed-separation, Class 1 (Separated)), observations and actions are distinct: $\mathcal O$ contains sensor measurements, $\mathcal A$ contains motor commands or control inputs, and the model state $M_t$ is updated from $\mathcal O$ via $f_M$ that has no causal path from $G_t$. Separated agents like Kalman + LQR satisfy this by construction — the estimator $f_M$ is built without reference to the controller $\pi(G_t, M_t)$.
 
 In a logogenic agent, this clean factorization breaks because the LLM's forward pass is *one operation* that produces tokens which serve simultaneously as model update (via attention over the prompt's prior context) and as candidate action (via decoding). There is no intermediate stage where the model state could be "extracted" before the goal-conditioning influences it.
 

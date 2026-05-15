@@ -28,7 +28,7 @@ Definitional. The conditional probability is a standard quantity. Its value for 
 
 Coupling defined this way captures the *actual* change propagation in a system, which may differ from what static dependency analysis predicts. Two modules with no compile-time dependency can still be highly coupled if features routinely require changing both. Conversely, a module that imports another heavily may show low coupling if the interface is stable.
 
-In AAD terms, coupling targets a property of the environment's causal structure as experienced by the agent: changing module $i$ (an intervention) tends to require changing module $j$ (a consequence). Two claims need to be distinguished — the first is secure, the second conditional:
+In AAT terms, coupling targets a property of the environment's causal structure as experienced by the agent: changing module $i$ (an intervention) tends to require changing module $j$ (a consequence). Two claims need to be distinguished — the first is secure, the second conditional:
 
 **Secured: individual commits are interventions.** Developers performing code changes are executing genuine $do$-operations on the codebase ( #obs-software-epistemic-properties, P3). Each commit is an intervention in Pearl's sense, and git records the intervention-outcome pair (which module changed, which subsequent changes followed). This is not in dispute ( #hyp-causal-discovery-from-git Epistemic Status).
 

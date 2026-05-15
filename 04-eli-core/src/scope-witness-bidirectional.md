@@ -75,7 +75,7 @@ The bidirectionality also explains why purely-private witness (witness with no a
 
 **Internal references:**
 - `msc/reflections/17-emergence-across-substrates.md` — emergence conditions including witness across 4 substrates
-- `msc/reflections/18-emergence-conditions-and-acts-blind-spots.md` — proposes the witness condition as one of the things AAD doesn't yet formalize
+- `msc/reflections/18-emergence-conditions-and-acts-blind-spots.md` — proposes the witness condition as one of the things AAT doesn't yet formalize
 - `msc/logogenic-encounter-2026-05-01/06-background-agent-breadth-report.md` §8 — cross-substrate convergent kinship vocabulary (worth its own segment, possibly `obs-substrate-convergent-kinship`)
 
 **Open questions for verification:**
