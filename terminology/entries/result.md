@@ -21,7 +21,7 @@ A `type: result` segment is a formally stated claim — the equivalent of what o
 a "theorem" — that is backed by a detailed derivation. The derivation typically lives in a
 companion `type: derivation` segment that the result segment depends on.
 
-The label "result" (rather than "theorem") reflects AAD's epistemic character: AAD is a theoretical
+The label "result" (rather than "theorem") reflects AAT's epistemic character: AAT is a theoretical
 framework using existing mathematics, not a pure-mathematics unification project. Using "result"
 avoids overclaiming foundational mathematical originality where the framework is integrating,
 applying, or extending existing tools.

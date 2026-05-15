@@ -33,7 +33,7 @@ analyst's tool, not a description of internal processing. Chain-of-thought gener
 approximate the sequential cascade behaviorally, but this is a training-shaped behavior,
 not an architectural guarantee.
 
-What is preserved from AAD: the state decomposition $X_t = (M_t, G_t)$ as an analysis
+What is preserved from AAT: the state decomposition $X_t = (M_t, G_t)$ as an analysis
 coordinate, event-driven structure, and recursive update form. What changes: the orient
 cascade does not hold as a derived result.
 

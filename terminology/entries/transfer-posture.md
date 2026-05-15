@@ -26,7 +26,7 @@ Prose form: *"Claim transfer of X into Y"* where X names the source machinery an
 target domain. This phrasing makes the direction of transfer explicit and positions the finding
 accurately: the value is in seeing that the machinery applies and formally establishing that it does.
 
-The transfer posture is common in frameworks like AAD that are explicitly integrative: many
+The transfer posture is common in frameworks like AAT that are explicitly integrative: many
 findings involve taking tools from control theory, causal inference, or information theory and
 formally applying them to agent dynamics. The posture is honest — it does not claim to have
 invented the tool, only to have recognized and established its application in a new domain.

@@ -3,7 +3,7 @@ slug: class-coercion
 schema_version: 1
 term: class coercion
 name: Class coercion (via wrapping)
-brief: Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation.
+brief: Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAT by embedding it in an external scaffold whose type signatures enforce directed separation.
 layer: prose-symbol
 status: canon
 tags: [structural_concepts, composition]

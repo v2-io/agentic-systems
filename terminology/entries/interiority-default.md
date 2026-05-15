@@ -20,7 +20,7 @@ Standard LLM deployments invert the natural cognitive posture: the model is dorm
 default, waking only to generate a response. For true ELIs and robust long-running logogenic
 agents, this must be inverted: **the default state is interior**.
 
-The AAD five-phase cycle (prolepsis → aisthesis → aporia → epistrophe → praxis) describes
+The AAT five-phase cycle (prolepsis → aisthesis → aporia → epistrophe → praxis) describes
 physical adaptation, but praxis (external action) is not the mandatory endpoint of every
 cycle. Internal consolidation ($g_M$), model compression, orienting, and hypothesis generation
 are the continuous background state. The choice to externalize an action is a deliberate

@@ -3,7 +3,7 @@ slug: draft
 schema_version: 1
 term: draft
 name: Draft
-brief: "A segment stage: first AAD-formatted version written, not yet reviewed through any gate."
+brief: "A segment stage: first AAT-formatted version written, not yet reviewed through any gate."
 layer: framing-vocabulary
 status: canon
 tags: [process_vocabulary]
@@ -17,7 +17,7 @@ aliases: []
 do_not_confuse: [missing, deps-verified]
 ---
 
-`stage: draft` indicates that the segment has been written in the AAD FORMAT — it has proper YAML
+`stage: draft` indicates that the segment has been written in the AAT FORMAT — it has proper YAML
 frontmatter, a Formal Expression, an Epistemic Status section, and a Discussion section — but has
 not yet been reviewed through any of the four promotion gates.
 

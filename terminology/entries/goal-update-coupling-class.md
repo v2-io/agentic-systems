@@ -23,7 +23,7 @@ much an agent's epistemic update $f_M$ is entangled with its goal state $G_t$ �
 property, not a parametric quantity to be tuned.
 
 Three values, running cleanest → middle → worst (aligned with the numbering convention across all six
-AAD taxonomy ladders; see the meta-pattern at
+AAT taxonomy ladders; see the meta-pattern at
 [`#disc-separability-pattern`](../../01-aat-core/src/disc-separability-pattern.md)):
 
 | Class | Name | Property |

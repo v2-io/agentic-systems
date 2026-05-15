@@ -18,7 +18,7 @@ do_not_confuse: []
 
 The outermost of the three epistemic rings. A segment belongs here when triage question 3
 ("what observation would falsify this?") has a concrete answer — the claim depends on the world,
-not just the formalism. This is not a demotion: these segments are where AAD becomes falsifiable
+not just the formalism. This is not a demotion: these segments are where AAT becomes falsifiable
 and useful. Review focus: stating falsifiable predictions, connecting to validation, and resisting
 the temptation to dress empirical claims as derivations.
 

@@ -32,8 +32,8 @@ prediction failures, not just next-token perplexity.
 operation. Online weight updates (e.g., LoRA adapters) gated by the agent's own update gain
 $\eta^\ast$. Requires solving the stability-plasticity dilemma in real-time.
 
-**Level 3 — AAD-Native Architecture (long-term)**: architecture built from the ground up around
-the AAD cognitive loop. Hierarchical attention with temporally specialized heads; mismatch as
+**Level 3 — AAT-Native Architecture (long-term)**: architecture built from the ground up around
+the AAT cognitive loop. Hierarchical attention with temporally specialized heads; mismatch as
 the fundamental training objective rather than self-supervised token masking.
 
 *Epistemic status: discussion-grade hypothesis. Highly plausible but requires empirical

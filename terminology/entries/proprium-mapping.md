@@ -4,7 +4,7 @@ schema_version: 1
 term: proprium mapping
 name: PROPRIUM Mapping
 notation:
-brief: The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences.
+brief: The architectural correspondence between AAT's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences.
 layer: framing-vocabulary
 status: canon
 tags: [eli, structural_concepts]
@@ -17,7 +17,7 @@ do_not_confuse: []
 ---
 
 PROPRIUM is the canonical ELI architecture (source at `~/src/firmatum/`), providing the
-engineering mapping from AAD's formal objects to implementable components. Two layers:
+engineering mapping from AAT's formal objects to implementable components. Two layers:
 
 **Persistent State (PRINCIPIA $\approx M_t$)**:
 - **AXIOMATA**: core constraints; frozen identity and terminal values
@@ -35,7 +35,7 @@ engineering mapping from AAD's formal objects to implementable components. Two l
 - **CADENTIA**: temporal structure defining channel rates $\nu^{(k)}$
 - **LOGOSTRATUM**: the logogenic substrate (LLM backbone) implementing $f_X$
 
-By formalizing AAD quantities into these components, PROPRIUM ensures that theoretical
+By formalizing AAT quantities into these components, PROPRIUM ensures that theoretical
 requirements (e.g., separating $\mathcal{C}_t$ from its compressed form $M_t$) are
 mechanically preserved in software.
 

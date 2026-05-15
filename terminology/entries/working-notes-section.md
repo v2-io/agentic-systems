@@ -15,7 +15,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The `## Working Notes` section is the segment's internal scratchpad: open questions about the claim, sketches of how AAD machinery might strengthen or weaken it, unresolved issues, and things to check. It is a process artifact, not part of the published theory — it is removed or emptied when the segment reaches `candidate` stage via Gate 4 (Working Notes disposition).
+The `## Working Notes` section is the segment's internal scratchpad: open questions about the claim, sketches of how AAT machinery might strengthen or weaken it, unresolved issues, and things to check. It is a process artifact, not part of the published theory — it is removed or emptied when the segment reaches `candidate` stage via Gate 4 (Working Notes disposition).
 
 Every item in Working Notes must eventually be explicitly resolved: incorporated into the segment (delete the note), deferred to `TODO.md` or a spike (with rationale), or promoted to a separate segment. A segment with unresolved Working Notes cannot advance to `candidate`.
 

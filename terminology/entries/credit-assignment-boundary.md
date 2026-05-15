@@ -16,7 +16,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-AAD's version of the temporal credit assignment problem applied to strategy DAGs: given an
+AAT's version of the temporal credit assignment problem applied to strategy DAGs: given an
 observed outcome at the root (and possibly some intermediate nodes), produce per-edge signals
 that drive credences toward truth. The segment characterizes the structure of this problem
 rather than solving it.

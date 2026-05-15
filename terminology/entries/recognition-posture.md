@@ -25,13 +25,13 @@ The claim is not "we proved X" but "we noticed that X and Y have the same struct
 Prose form: *"Claim recognition of structural equivalence (or pattern) between X and Y"* where X
 and Y name what is being recognized as equivalent or co-structured.
 
-Recognition claims can be genuinely load-bearing: the meta-segments in AAD (`#disc-separability-pattern`,
+Recognition claims can be genuinely load-bearing: the meta-segments in AAT (`#disc-separability-pattern`,
 `#disc-identifiability-floor`, `#disc-additive-coordinate-forcing`) carry recognition findings —
 their contribution is naming the cross-segment structure that gives the theory its architectural
 coherence. The recognition posture is the honest claim for such segments.
 
 The posture also covers cases where a prior external result is recognized as being the same as
-an AAD result derived independently. Such convergent recognition should be in the Related Work
+an AAT result derived independently. Such convergent recognition should be in the Related Work
 field as *convergent independent*, and the Novelty Claim should note the recognition honestly.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §Findings — Novelty Claim.
