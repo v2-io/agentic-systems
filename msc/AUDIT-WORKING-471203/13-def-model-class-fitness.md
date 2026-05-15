@@ -64,7 +64,7 @@ The class-vs-instance distinction makes "your model class is wrong" a *first-cla
 
 The class-vs-instance distinction maps cleanly onto an interesting empirical question for logogenic agents: when an LLM gets things persistently wrong, is it a *parameter problem* (needs more training data, more inference compute, better prompting) or a *class problem* (needs a different architecture, different model size, different objective)? AAD's diagnostic distinction lifts this from "intuitive" to "structural" — the persistent-mismatch-despite-learning signature is in principle measurable.
 
-For the `04-logozoetic-agents/` proposed `#norm-honest-activation` ("deceptive prompts mathematically guarantee gain collapse") — if I'm reading the title right, the claim is that lying-to-the-agent breaks the gain mechanism. That would be a class-fitness statement of a sort: the agent's model class (which presumably assumes honest input) is structurally inadequate when input is deceptive. The cleanest formal hook for that claim probably runs through this segment's machinery.
+For the `04-eli-core/` proposed `#norm-honest-activation` ("deceptive prompts mathematically guarantee gain collapse") — if I'm reading the title right, the claim is that lying-to-the-agent breaks the gain mechanism. That would be a class-fitness statement of a sort: the agent's model class (which presumably assumes honest input) is structurally inadequate when input is deceptive. The cleanest formal hook for that claim probably runs through this segment's machinery.
 
 A naming-brainstorm seed: "model class fitness" is fine. "Best achievable sufficiency" is the gloss; "Class-Capacity Ceiling" is more evocative. Tentative.
 

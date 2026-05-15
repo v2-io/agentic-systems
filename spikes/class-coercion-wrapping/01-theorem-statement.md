@@ -296,7 +296,7 @@ Recommended segment-level landings (subject to sub-spike I prior-art results, wh
 - **New segment** `01-aat-core/src/der-class-coercion-via-wrapping.md` (or `result-class-coercion-via-wrapping.md`) — statement, proof, conditions, costs.
 - **Update** `#hyp-directed-separation-under-composition` to cite the constructive result.
 - **Update** `#der-directed-separation` Discussion section to describe the wrapping route (and the cost of taking it).
-- **Cross-component reference** in `03-logogenic-agents/` and `04-eli/` segments — PROPRIUM as canonical instance (sub-spike H).
+- **Cross-component reference** in `03-llm-core/` and `04-eli-core/` segments — PROPRIUM as canonical instance (sub-spike H).
 - **Discussion-level integration** in `#der-tempo-composition` connecting the Brooks's-Law form to the wrapping construction.
 
 ## 9. Self-review

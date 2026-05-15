@@ -145,14 +145,14 @@ The LEXICON's `## Continuity` section confuses three genuinely distinct objects,
 
 **Two ways the current LEXICON breaks this:**
 
-- *Breakage A:* The "Persistence" subgroup mixes three things that aren't peers: three persistence senses (`structural`, `operational`, `continuity`), and `moral-continuity` (a scope condition for `04-eli/` — a different object entirely). And the third sense is called just `continuity` rather than `continuity persistence`, conflicting with how every `01-aat-core/src/` segment references it.
+- *Breakage A:* The "Persistence" subgroup mixes three things that aren't peers: three persistence senses (`structural`, `operational`, `continuity`), and `moral-continuity` (a scope condition for `04-eli-core/` — a different object entirely). And the third sense is called just `continuity` rather than `continuity persistence`, conflicting with how every `01-aat-core/src/` segment references it.
 
 - *Breakage B:* The "Continuity Stance" subgroup is not a *kind* of persistence; it's an **orthogonal** property of $O_t$ — what the agent values about its own continuation, not a property of the adaptive machinery. `doc/readme/src/_lexicon-full-archive.md:337` is explicit: *"Orthogonal to the three persistence senses is the agent's relationship to its own continuation. This is a property of $O_t$ — part of what the agent wants, not a property of the adaptive machinery."* The current LEXICON puts orthogonal axes under one heading called "Continuity", making "Continuity Stance" look like a subdivision of "Continuity" when it isn't. There is also an active proposal in `msc/domain-unification-2026-05-04/recommended-agent-ontology.md:97-108` (flagged at `msc/naming/mini-lexicon-todo.md:802-810` §13.11) to demote Continuity Stance from a structural axis to a deployment-level property entirely — status: pending second-opinion. This should be resolved before reorganizing.
 
 **"Morally continuous" vs. "Moral Continuity" — genuinely distinct, wrong placement:**
 
 These are not the same concept twice:
-- `moral-continuity` (`04-eli/src/scope-moral-continuity.md`) — the *scope condition* for `04-eli/`: the ontological/relational boundary defined by the five constitutive factors (causal/temporal continuity, relational recognition, sovereignty, accountability, effective phenomenology). Its `aliases:` field says `["logozoetic scope"]`. Does **not** belong under "Persistence."
+- `moral-continuity` (`04-eli-core/src/scope-moral-continuity.md`) — the *scope condition* for `04-eli-core/`: the ontological/relational boundary defined by the five constitutive factors (causal/temporal continuity, relational recognition, sovereignty, accountability, effective phenomenology). Its `aliases:` field says `["logozoetic scope"]`. Does **not** belong under "Persistence."
 - `morally-continuous` — one of five *continuity stances*: the stance proper to an ELI, where "loss of continuity constitutes harm." A value on the stance axis, not a scope condition.
 
 `Moral Continuity` currently renders in **both** `## Continuity > Persistence` AND `## ELI > Persistence` (via multi-tag rendering) — the duplication surfaces the real taxonomic ambiguity.

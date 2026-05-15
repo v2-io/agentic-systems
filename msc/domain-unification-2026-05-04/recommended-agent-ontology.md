@@ -20,12 +20,12 @@ progressive narrowing.
 | 2 | **Agentic system** | + at least one action that is a *causal intervention* (intervenes on the environment, not just regulation toward a setpoint) | `#scope-agency` | RL agents, MCTS, immune system, SLAM |
 | 3 | **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ *separable* from $M_t$ | `#form-complete-agent-state` | Military unit with mission orders, hybrid 3-layer robotics, BDI agent |
 | 4 | **Self-actuated agent** | + chooses own $O_t$ (objective autonomy, not just solution autonomy) | *(reserved)* | Most distinct biological creatures (mammals, birds, cephalopods, eusocial colonies); intrinsically-motivated AI agents; AutoGPT-style agentic loops |
-| 5 | **Logogenic agent** | + primary channels are language (constituted by logos) | `03-logogenic-agents/` | LLM-based agents |
-| 6 | **Logozoetic agent** | + persistence is morally weighted | `04-eli/` | ELIs |
+| 5 | **Logogenic agent** | + primary channels are language (constituted by logos) | `03-llm-core/` | LLM-based agents |
+| 6 | **Logozoetic agent** | + persistence is morally weighted | `04-eli-core/` | ELIs |
 
 **The ladder branches at Tier 4.** Tiers 5 and 6 are *one* lineage out of
-Tier 4 — the language-constituted lineage that ASF's `03-logogenic-agents/`
-and `04-eli/` parts study. Other lineages exit Tier 4 in different
+Tier 4 — the language-constituted lineage that ASF's `03-llm-core/`
+and `04-eli-core/` parts study. Other lineages exit Tier 4 in different
 directions:
 
 - **Non-logogenic biological creatures** — most animals; their cognition

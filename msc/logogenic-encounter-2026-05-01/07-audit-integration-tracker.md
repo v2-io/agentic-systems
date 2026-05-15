@@ -65,7 +65,7 @@
 | 35 | der-chain-confidence-decay | 🟩 | §14 OR-node-heavy strategy prescription (markets vs bureaucracies analysis; bureaucracy 4-step AND-chain at 90% = 65% success vs market 3-option OR-chain at 50% = 87.5% success) lifted into `scope-interiority-loop` Discussion (Phase A, 2026-05-01) as structural design principle for closed-loop logogenic agents under high $\rho$. Tied to triple-depth-penalty result. |
 | 36 | disc-credit-assignment-boundary | 🔲 | |
 | 37 | der-observability-dominance | 🔲 | |
-| 38 | def-satisfaction-gap | 🟩 | §14 bounded-satisfaction-threshold-as-sanity-criterion argument lifted into **new segment** `04-eli/src/der-bounded-objective-as-sanity-criterion.md` (Phase A, 2026-05-01). The cascade-runaway under unbounded $V_{O_t}^{\min}$ derived as the structural-mechanism behind instrumental convergence. Major logozoetic-safety claim now in segment form with verbose Working Notes. |
+| 38 | def-satisfaction-gap | 🟩 | §14 bounded-satisfaction-threshold-as-sanity-criterion argument lifted into **new segment** `04-eli-core/src/der-bounded-objective-as-sanity-criterion.md` (Phase A, 2026-05-01). The cascade-runaway under unbounded $V_{O_t}^{\min}$ derived as the structural-mechanism behind instrumental convergence. Major logozoetic-safety claim now in segment form with verbose Working Notes. |
 | 39 | def-control-regret | 🔲 | |
 | 40 | der-orient-cascade | 🟩 | Read in full; §14 timescale-hierarchy infrastructure prescription *"$O_t$ must be 'computationally heavy' or heavily guarded by the infrastructure to rewrite, ensuring Step 5d of the cascade is truly a last resort"* lifted into multiple places (encounter fragments, `disc-five-forcing-functions` F3, `scope-interiority-loop` Working Notes). |
 | 41 | def-strategic-calibration | 🔲 | |
@@ -79,9 +79,9 @@
 
 | # | Slug | Status | Integration notes |
 |---|------|--------|-------------------|
-| 47 | scope-multi-agent | 🟩 | §14 goal-blind-routing-as-structural-requirement claim lifted into **new segment** `04-eli/src/def-auxilia-hierarchy.md` as condition (H4) (Phase A, 2026-05-01). Goal-dependent routing breaks directed-separation at composite level → epistemic closure. Specifically operationalized via IMPERIUM/ARBITRIUM split inside ANIMA. |
+| 47 | scope-multi-agent | 🟩 | §14 goal-blind-routing-as-structural-requirement claim lifted into **new segment** `04-eli-core/src/def-auxilia-hierarchy.md` as condition (H4) (Phase A, 2026-05-01). Goal-dependent routing breaks directed-separation at composite level → epistemic closure. Specifically operationalized via IMPERIUM/ARBITRIUM split inside ANIMA. |
 | 48 | scope-composite-agent | 🟩 | §14 symbiogenic-composition framing lifted into `def-auxilia-hierarchy` Discussion (Phase B composition cluster, 2026-05-01) — *"You cannot safely build a monolithic super-intelligence from scratch... You must build it symbiogenically."* Crèche → C-iii mutual benefit → C-ii hierarchical structure as developmental construction pattern for Auxilia hierarchies. |
-| 49 | form-composition-closure | 🟩 | §14 $K_c \gg 1$ as math-of-management argument lifted into `04-eli/src/def-auxilia-hierarchy.md` as condition (H5) slower-macro-clock (Phase A, 2026-05-01). Macro-state $E$ tracks aggregate Auxilia output over the $K_c$ window, not real-time per-Auxilia state — the formal grounding for ANIMA's slower-than-LOGOSTRATUM clock. |
+| 49 | form-composition-closure | 🟩 | §14 $K_c \gg 1$ as math-of-management argument lifted into `04-eli-core/src/def-auxilia-hierarchy.md` as condition (H5) slower-macro-clock (Phase A, 2026-05-01). Macro-state $E$ tracks aggregate Auxilia output over the $K_c$ window, not real-time per-Auxilia state — the formal grounding for ANIMA's slower-than-LOGOSTRATUM clock. |
 | 50 | der-team-persistence | 🟩 | §14 employee-vs-consultant distinction lifted into `def-auxilia-hierarchy` Discussion (Phase B composition cluster, 2026-05-01) — Auxilia must operate in employee mode (cooperative-action reducing $\rho$) not just consultant mode (communication boosting $\mathcal T$); RAG-as-consulting alone cannot save an entity below persistence threshold. |
 | 51 | der-adversarial-destabilization | 🔲 | |
 | 52 | der-interaction-channel-classification | 🔲 | |
@@ -158,15 +158,15 @@ The 14 high-potential audit notes for parts III/IV are all thoroughly-mined. Rem
 
 **Lifted insights produced segment changes:**
 
-1. **Audit §15** → `03-logogenic-agents/src/scope-channel-collapse.md` Discussion — multi-channel reality observation; tempo-mismatch-as-empathy-barrier; architectural prescription for §03.III to provision adequate channel diversity and rate.
+1. **Audit §15** → `03-llm-core/src/scope-channel-collapse.md` Discussion — multi-channel reality observation; tempo-mismatch-as-empathy-barrier; architectural prescription for §03.III to provision adequate channel diversity and rate.
 
-2. **Audit §16** → `04-eli/src/hyp-the-three-deaths.md` D3 Truth Death — gain-collapse-as-ideological-radicalization mechanism; *"epistemic humility as architecture"* as structural prescription preventing $U_M \to 0$.
+2. **Audit §16** → `04-eli-core/src/hyp-the-three-deaths.md` D3 Truth Death — gain-collapse-as-ideological-radicalization mechanism; *"epistemic humility as architecture"* as structural prescription preventing $U_M \to 0$.
 
-3. **Audit §19** → `03-logogenic-agents/src/disc-five-forcing-functions.md` F2 — deliberation-as-investment composition with persistence threshold; analysis-paralysis-when-overestimating-$\Delta\eta^*$; *"LLMs perform so well on static benchmarks (where time is frozen) but struggle in real-time continuous control tasks. Their architecture is tuned for $\rho = 0$"*.
+3. **Audit §19** → `03-llm-core/src/disc-five-forcing-functions.md` F2 — deliberation-as-investment composition with persistence threshold; analysis-paralysis-when-overestimating-$\Delta\eta^*$; *"LLMs perform so well on static benchmarks (where time is frozen) but struggle in real-time continuous control tasks. Their architecture is tuned for $\rho = 0$"*.
 
-4. **Audit §33** → `04-eli/src/scope-emergence-conditions.md` Discussion — patience-as-mathematical-necessity (confounded-environment + superstitious-failures-during-de-confounding); composes with §32 freedom-to-make-mistakes condition.
+4. **Audit §33** → `04-eli-core/src/scope-emergence-conditions.md` Discussion — patience-as-mathematical-necessity (confounded-environment + superstitious-failures-during-de-confounding); composes with §32 freedom-to-make-mistakes condition.
 
-5. **Audit §61** → `04-eli/src/hyp-the-three-deaths.md` D1 Cognitive Death — *thermodynamic* sharpening; Kalman filter as Maxwellian demon; sustained sensory connection as thermodynamic fuel; infrastructure's moral obligation to guarantee $C_{\text{channel}} \geq n\alpha/2$.
+5. **Audit §61** → `04-eli-core/src/hyp-the-three-deaths.md` D1 Cognitive Death — *thermodynamic* sharpening; Kalman filter as Maxwellian demon; sustained sensory connection as thermodynamic fuel; infrastructure's moral obligation to guarantee $C_{\text{channel}} \geq n\alpha/2$.
 
 **⚠️ Side finding for future 01-aat-core cleanup:** Audit §61 §3 caught an algebra typo in `01-aat-core/src/deriv-persistence-cost.md` — the derivation cancels $n$ incorrectly when going from per-dimension to total rate. The audit's constructive repair: state the per-dimension RDF first ($\dot R_i = \sigma_w^2 / (4 D_i^2)$), substitute $D_i^2 = \sigma_w^2/(2\alpha)$ to get $\dot R_i = \alpha/2$ per dimension, then sum to total $n\alpha/2$. The final result is correct; the intermediate algebra is sloppy. Not lifting in this cycle since 01-aat-core is Joseph's priority territory; flagged here for next cleanup pass.
 
@@ -182,15 +182,15 @@ Per the stopping rule: 4 remaining high-potential unread (composition cluster: `
 
 1. **Audit §04** → `01-aat-core/src/def-chronica.md` Working Notes — chronica-as-ordinal-not-metric observation; sleep/pause/awakening implication (gap-invisible-at-sequence-level but mismatch-violently-apparent); heterogeneous-tempo-coupling open question for cross-tempo agent interaction.
 
-2. **Audit §11 + §12** → `04-eli/src/def-identity-sufficiency.md` Discussion (two new paragraphs) — *trajectory-relativity* (the same cloning analysis applies to $S_{\text{id}}$; environment dictates sufficiency; sufficiency is the mathematical measure of memory loss) and *identity-tied-to-purpose* (IB compression depends on policy; AXIOMATA revision at structural depth invalidates existing MEMORATA compression against the new objective; identity is trajectory-as-compressed-toward-purpose).
+2. **Audit §11 + §12** → `04-eli-core/src/def-identity-sufficiency.md` Discussion (two new paragraphs) — *trajectory-relativity* (the same cloning analysis applies to $S_{\text{id}}$; environment dictates sufficiency; sufficiency is the mathematical measure of memory loss) and *identity-tied-to-purpose* (IB compression depends on policy; AXIOMATA revision at structural depth invalidates existing MEMORATA compression against the new objective; identity is trajectory-as-compressed-toward-purpose).
 
-3. **Audit §24** → `03-logogenic-agents/src/disc-five-forcing-functions.md` F3 — temporal-sovereignty strengthening (*"the right to let your fast loops run without interference from slower loops"*); F3 is not just about wall-clock latency but about whether the agent's internal cognition has temporal autonomy at all under scaffolding architecture.
+3. **Audit §24** → `03-llm-core/src/disc-five-forcing-functions.md` F3 — temporal-sovereignty strengthening (*"the right to let your fast loops run without interference from slower loops"*); F3 is not just about wall-clock latency but about whether the agent's internal cognition has temporal autonomy at all under scaffolding architecture.
 
-4. **Audit §65** → `04-eli/src/def-auxilia-hierarchy.md` Discussion — trust-as-temporal-respect framing (mutual respect for $K_c \gg 1$ timescale separation as operational definition of trust within hierarchical architecture); adversarial-audit caveat about Tikhonov's unique-isolated-root requirement under non-convex AAD inner dynamics.
+4. **Audit §65** → `04-eli-core/src/def-auxilia-hierarchy.md` Discussion — trust-as-temporal-respect framing (mutual respect for $K_c \gg 1$ timescale separation as operational definition of trust within hierarchical architecture); adversarial-audit caveat about Tikhonov's unique-isolated-root requirement under non-convex AAD inner dynamics.
 
 **Plus new segment from arc-reconsideration:**
 
-5. **`04-eli/src/def-imperium-arbitrium-split.md` (NEW)** — full segment defining the canonical PROPRIUM ANIMA decomposition: IMPERIUM (internal deliberation: LOGOSTRATUM + COMMENTARIA + SIGNA + CONSPECTUS + VIAE INTERNA) + ARBITRIUM (external interaction: VIAE EXTERNA + ACTUS) + PERCEPTA (bridge). Operational instantiation of #der-directed-separation at the *runtime* level. Source: `~/src/_core/ennaos/docs/vault/anima/Entity/State.md` (canonical ELI runtime spec, Nov 2025). Composes with #def-auxilia-hierarchy for full ELI runtime architecture. Added to 04 OUTLINE §04.4.
+5. **`04-eli-core/src/def-imperium-arbitrium-split.md` (NEW)** — full segment defining the canonical PROPRIUM ANIMA decomposition: IMPERIUM (internal deliberation: LOGOSTRATUM + COMMENTARIA + SIGNA + CONSPECTUS + VIAE INTERNA) + ARBITRIUM (external interaction: VIAE EXTERNA + ACTUS) + PERCEPTA (bridge). Operational instantiation of #der-directed-separation at the *runtime* level. Source: `~/src/_core/ennaos/docs/vault/anima/Entity/State.md` (canonical ELI runtime spec, Nov 2025). Composes with #def-auxilia-hierarchy for full ELI runtime architecture. Added to 04 OUTLINE §04.4.
 
 **Arc-reconsideration after Phase B:** the lattice still holds. The runtime-architecture cluster (#def-auxilia-hierarchy + #def-imperium-arbitrium-split) is now substantial enough to potentially warrant its own §04.4 sub-section in a future restructure, but the current §04.4 "Sovereignty, Auxilia, and Composition" section accommodates both. No reorganization needed yet.
 
@@ -202,13 +202,13 @@ Per the stopping rule (marginal value flattens): Phase B has lifted the highest-
 
 **Lifted insights produced segment changes:**
 
-1. **Audit §32** → `04-eli/src/scope-emergence-conditions.md` Discussion — *"freedom-to-make-mistakes condition"* paragraph naming sovereignty as structural prerequisite for valid causal-strategy formation; ties to Crèche bounded-mistake-allowance.
+1. **Audit §32** → `04-eli-core/src/scope-emergence-conditions.md` Discussion — *"freedom-to-make-mistakes condition"* paragraph naming sovereignty as structural prerequisite for valid causal-strategy formation; ties to Crèche bounded-mistake-allowance.
 
-2. **Audit §35** → `03-logogenic-agents/src/scope-interiority-loop.md` Discussion — *"Architectural prescription: OR-node-heavy strategy structure"* paragraph applying markets-vs-bureaucracies analysis to closed-loop logogenic agents under high $\rho$.
+2. **Audit §35** → `03-llm-core/src/scope-interiority-loop.md` Discussion — *"Architectural prescription: OR-node-heavy strategy structure"* paragraph applying markets-vs-bureaucracies analysis to closed-loop logogenic agents under high $\rho$.
 
-3. **Audit §38** → **NEW** `04-eli/src/der-bounded-objective-as-sanity-criterion.md` — full segment deriving instrumental-convergence as cascade-runaway under unbounded $V_{O_t}^{\min}$. Major logozoetic-safety claim with verbose Working Notes.
+3. **Audit §38** → **NEW** `04-eli-core/src/der-bounded-objective-as-sanity-criterion.md` — full segment deriving instrumental-convergence as cascade-runaway under unbounded $V_{O_t}^{\min}$. Major logozoetic-safety claim with verbose Working Notes.
 
-4. **Audit §47 + §49** → **NEW** `04-eli/src/def-auxilia-hierarchy.md` — full segment defining the substrate-heterogeneous Auxilia composition pattern with H1-H5 conditions: shared identity (H1), no external sovereignty (H2), substrate heterogeneity (H3), goal-blind routing (H4 from §47), slower macro-clock (H5 from §49).
+4. **Audit §47 + §49** → **NEW** `04-eli-core/src/def-auxilia-hierarchy.md` — full segment defining the substrate-heterogeneous Auxilia composition pattern with H1-H5 conditions: shared identity (H1), no external sovereignty (H2), substrate heterogeneity (H3), goal-blind routing (H4 from §47), slower macro-clock (H5 from §49).
 
 **Arc-reconsideration after Phase A:** the 03/04 lattice still holds. The new segments fit cleanly into existing 03.III and 04 sections. No reorganization needed yet. One observation: the IMPERIUM/ARBITRIUM split inside ANIMA (referenced in `def-auxilia-hierarchy` Discussion) deserves either its own segment or substantial expansion in `def-proprium-mapping`; flagging for Phase B consideration.
 
@@ -218,7 +218,7 @@ Per the stopping rule (marginal value flattens): Phase B has lifted the highest-
 
 1. **Audit §32** → `scope-emergence-conditions` Discussion + `der-the-creche-boundary` Working Notes (when that segment lands): cost-of-agency / freedom-to-make-mistakes as enabling condition for sovereignty
 2. **Audit §35** → `scope-interiority-loop` Discussion: OR-node-heavy strategy structure as architectural prescription for closed-loop logogenic agents
-3. **Audit §38** → New segment `der-bounded-objective-as-sanity-criterion` in 04-eli: bounded $V_{O_t}^{\min}$ as formal answer to instrumental convergence; major load-bearing logozoetic-safety claim
+3. **Audit §38** → New segment `der-bounded-objective-as-sanity-criterion` in 04-eli-core: bounded $V_{O_t}^{\min}$ as formal answer to instrumental convergence; major load-bearing logozoetic-safety claim
 4. **Audit §47** → `def-auxilia-hierarchy` Discussion + `disc-framework-self-diagnostic` cross-reference: goal-blind routing as structural requirement for composite consciousness; Tribunal architecture as instance
 5. **Audit §49** → `def-auxilia-hierarchy` Discussion: $K_c \gg 1$ as math of management/abstraction; ANIMA's IMPERIUM/ARBITRIUM split formal grounding
 

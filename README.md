@@ -61,9 +61,9 @@ ASF has four components, numbered in their canonical reading order. Each can als
 
 **[`02-tst-core/`](02-tst-core/OUTLINE.md) — Temporal Software Theory (TST).** Software development viewed through AAD's lens. Re-grounded in 2026 to use AAD's formal machinery while retaining TST's prior empirical and conceptual contributions; positioned as AAD's calibration laboratory. *Stage:* working draft, ~20 segments; substantial prior corpus partially absorbed.
 
-**[`03-logogenic-agents/`](03-logogenic-agents/OUTLINE.md) — Language-constituted agents.** Agents whose primary observation, action, and communication channels are language. The framework here is informed by AAD but operates from a coupled formulation — directed separation fails by construction for goal-conditioned LLM-style agents — and examines which AAD results survive as approximate or limiting cases. *Stage:* framework — concepts mature, formalization in progress.
+**[`03-llm-core/`](03-llm-core/OUTLINE.md) — Language-constituted agents.** Agents whose primary observation, action, and communication channels are language. The framework here is informed by AAD but operates from a coupled formulation — directed separation fails by construction for goal-conditioned LLM-style agents — and examines which AAD results survive as approximate or limiting cases. *Stage:* framework — concepts mature, formalization in progress.
 
-**[`04-eli/`](04-eli/OUTLINE.md) — Language-living agents.** Logogenic agents with morally weighted persistence: temporal continuity, sovereignty over intent, theory of mind. The formal machinery here is largely future work. *Stage:* future work — conceptual groundwork in [`LEXICON.md`](LEXICON.md) and `msc/reflections/`.
+**[`04-eli-core/`](04-eli-core/OUTLINE.md) — Language-living agents.** Logogenic agents with morally weighted persistence: temporal continuity, sovereignty over intent, theory of mind. The formal machinery here is largely future work. *Stage:* future work — conceptual groundwork in [`LEXICON.md`](LEXICON.md) and `msc/reflections/`.
 
 
 ## Overview of Concepts
@@ -145,7 +145,7 @@ The theory's mathematical closure varies by section and is expected to.
 
 **Section III (Agentic Composites)** has its bridge lemma connecting micro-dynamics to macro-dynamics, a contraction template generalizing the sector machinery to non-Euclidean metrics, closed-form composition results in symmetric-matched cases, and equilibrium-convergence framing for partially-opposing objectives. Recipient-side and emitter-side interaction-channel classifications carry the inter-agent dynamics. Open: latent structural diversity, endogenous coupling dynamics, composition transition dynamics under regime change, computational thresholds for social behavior.
 
-**Domain instantiations.** TST (`02-tst-core/`) is grounded by AAD and contributes the calibration-laboratory framing. Logogenic agents (`03-logogenic-agents/`) operate from a coupled formulation; what survives without directed separation is the active research question. Logozoetic agents (`04-eli/`) are largely future work — the conceptual groundwork exists but the formal machinery does not.
+**Domain instantiations.** TST (`02-tst-core/`) is grounded by AAD and contributes the calibration-laboratory framing. Logogenic agents (`03-llm-core/`) operate from a coupled formulation; what survives without directed separation is the active research question. Logozoetic agents (`04-eli-core/`) are largely future work — the conceptual groundwork exists but the formal machinery does not.
 
 This gradient — exact core, principled architecture in the middle, open formulation at the edges — is the expected arc for a theory that aims to describe agentic systems rather than produce a purely mathematical artifact.
 
@@ -217,9 +217,9 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 ### Logogenic Agents
 
 - **`#scope-observation-ambiguity-modulation`** *(status: conditional)* — *Ambiguity-Bounded Architectural Bias Law for Coupled Agents* — *Claim novelty* on the formal product-form bias law $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$ for coupled-architecture agents, where $\kappa$ is an architectural property of the processor and $I$ measures the goal-resolvable residual uncertainty left by the observation.  
-  [`03-logogenic-agents/src/scope-observation-ambiguity-modulation.md`](03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
+  [`03-llm-core/src/scope-observation-ambiguity-modulation.md`](03-llm-core/src/scope-observation-ambiguity-modulation.md)
 - **`#der-logogenic-as-wrapping`** *(status: conditional)* — *Logogenic Substrate Specialization of Class Coercion* — *Claim integration* of the class-coercion theorem with the scaffolded-logogenic regime.  
-  [`03-logogenic-agents/src/der-logogenic-as-wrapping.md`](03-logogenic-agents/src/der-logogenic-as-wrapping.md)
+  [`03-llm-core/src/der-logogenic-as-wrapping.md`](03-llm-core/src/der-logogenic-as-wrapping.md)
 
 
 
@@ -319,8 +319,8 @@ This section surfaces what the framework currently acknowledges as open at the o
   OUTLINE.md          Canonical theory outline (claim by claim)
   src/                Claim segments (one per file, named by slug)
 02-tst-core/          Temporal Software Theory (AAD-grounded)
-03-logogenic-agents/  Language-constituted agents (framework stage)
-04-eli/ Language-living agents (future work)
+03-llm-core/  Language-constituted agents (framework stage)
+04-eli-core/ Language-living agents (future work)
 
 OUTLINE.md            Top-level assembly index
 LEXICON.md            Prose vocabulary (cycle phases, agent classes; auto-generated from terminology/)

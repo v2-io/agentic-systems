@@ -1,4 +1,4 @@
-# Reflection: 03-logogenic-agents sample (4 segments)
+# Reflection: 03-llm-core sample (4 segments)
 
 Covers `#scope-logogenic-agent`, `#obs-context-turnover`, `#def-coupled-update-dynamics`, `#disc-m-preservation`. The framework's treatment of LLM agents — domain where directed separation fails by construction.
 
@@ -45,4 +45,4 @@ The "what survives without directed separation" framing is exactly right for the
 
 ## Continuing
 
-Sampling 04-logozoetic-agents next: `#scope-moral-continuity`, `#def-proprium-mapping`, plus 1-2 of the proposed-additions to see the speculative content.
+Sampling 04-eli-core next: `#scope-moral-continuity`, `#def-proprium-mapping`, plus 1-2 of the proposed-additions to see the speculative content.

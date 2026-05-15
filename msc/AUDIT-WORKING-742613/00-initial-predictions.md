@@ -24,9 +24,9 @@ It begins with adaptive systems under uncertainty, narrows to actuated/purposefu
 2. TST (`02-tst-core`) is a software-domain instantiation and calibration laboratory.
 It depends directionally on AAD and should not feed mathematical commitments back into AAD except as validation / operationalization.
 
-3. Logogenic agents (`03-logogenic-agents`) handle language-constituted agents, especially current LLM/code agents where directed separation fails and Section II's modular-agent exact results become approximate or require modification.
+3. Logogenic agents (`03-llm-core`) handle language-constituted agents, especially current LLM/code agents where directed separation fails and Section II's modular-agent exact results become approximate or require modification.
 
-4. Logozoetic agents (`04-logozoetic-agents`) are future work: morally weighted persistence for language-living agents with temporal continuity, sovereignty, and theory of mind.
+4. Logozoetic agents (`04-eli-core`) are future work: morally weighted persistence for language-living agents with temporal continuity, sovereignty, and theory of mind.
 There are no formal segments yet.
 
 Within AAD, I expect the load-bearing spine to be:

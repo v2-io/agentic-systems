@@ -7,7 +7,7 @@
 **3. Math verification:** The expression $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$ is a spectacular piece of information theory. It formally bounds the "hallucination" or "sycophancy" of an LLM. The bias is zero if the observation $e_\tau$ is completely unambiguous ($I=0$), or if the agent is objective ($\kappa=0$). 
 The note that strategy persistence degrades as $O(\kappa^2)$ rather than $O(\kappa)$ (because the bias must both enter the signal and survive sector-condition averaging) is an incredibly deep, correct observation about nonlinear control systems.
 
-**4. What direction will the theory take next?** The next segment in `03-logogenic-agents/OUTLINE.md` is `result-coupled-diagnostic-framework.md`.
+**4. What direction will the theory take next?** The next segment in `03-llm-core/OUTLINE.md` is `result-coupled-diagnostic-framework.md`.
 
 **5. What errors should I watch for?** 
 - **Finding (Severe Editorial Bloat / Narrative Tangling):** The "Epistemic Status" and "Working Notes" sections contain massive, dense paragraphs detailing the exact derivation of the constant $C$ (Track 1 Wasserstein vs Track 2 Fisher-Rao). This is fascinating math, but it explicitly references files in `01-aat-core` (`deriv-bias-bound.md` and `disc-additive-coordinate-forcing.md`) that *were not present in the 01-aat-core OUTLINE* and that I therefore didn't read. This implies the repository is heavily fragmented and the OUTLINEs are out of sync with the actual file tree. This is a major structural defect.

@@ -44,7 +44,7 @@ The PROPRIUM operational architecture (`~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md`,
 
 In Section I, `def-chronica` covers both — the chronica is the singular causal trajectory, abstracted from implementation-side noise. This abstraction is fine for general adaptive-systems theory, where a single observation-action sequence is the natural object.
 
-When part [`03-logogenic-agents/`](../../03-logogenic-agents/OUTLINE.md) gets into logogenic implementation specifics — and especially the closed-loop / interiority sub-scope ([`scope-interiority-loop`](../../03-logogenic-agents/src/scope-interiority-loop.md)) where the substrate-mediation layer (INTERPRES) becomes load-bearing — the TRACTUS/CHRONICA distinction may need first-class treatment.
+When part [`03-llm-core/`](../../03-llm-core/OUTLINE.md) gets into logogenic implementation specifics — and especially the closed-loop / interiority sub-scope ([`scope-interiority-loop`](../../03-llm-core/src/scope-interiority-loop.md)) where the substrate-mediation layer (INTERPRES) becomes load-bearing — the TRACTUS/CHRONICA distinction may need first-class treatment.
 
 **Joseph's framing on the open question (2026-05-01):** *"whether or not def-chronica needs that distinction at this stage or when we get into logogenic agent implementation issues is the open question you should probably document."*
 

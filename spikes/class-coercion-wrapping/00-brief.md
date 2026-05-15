@@ -12,7 +12,7 @@
 3. `#hyp-directed-separation-under-composition` is currently a hypothesis. The wrapping construction is a candidate *constructive procedure* for making directed separation hold under composition — which would promote the hypothesis if it goes through.
 4. The κ-as-scalar framing was identified as a category error in CLAUDE.md, but the leakage analysis (Sub-spike C) may rehabilitate a wrapper-level residual-coupling rate that *is* meaningful. Worth checking.
 
-**Depends on / cites**: `#hyp-directed-separation-under-composition`, `#der-directed-separation` (the descriptive classification), `#form-composition-closure` (admissibility (A1)–(A4)), `#der-tempo-composition` (Brooks's-Law form), `#result-sector-persistence-template`, the Parts III/IV component (`03-logogenic-agents/`, `04-eli/`), the PROPRIUM ontology and architecture (`~/src/firmatum/PROPRIUM-ONTOLOGY.md`, `PROPRIUM-ARCHITECTURE.md`), `~/src/shoshin/` (PROPRIUM operational instance), the agentic-tft document family (`ref/agentic-tft/`), `spikes/temporal-nesting-rg/99-verdict.md` for the form-preservation framing context.
+**Depends on / cites**: `#hyp-directed-separation-under-composition`, `#der-directed-separation` (the descriptive classification), `#form-composition-closure` (admissibility (A1)–(A4)), `#der-tempo-composition` (Brooks's-Law form), `#result-sector-persistence-template`, the Parts III/IV component (`03-llm-core/`, `04-eli-core/`), the PROPRIUM ontology and architecture (`~/src/firmatum/PROPRIUM-ONTOLOGY.md`, `PROPRIUM-ARCHITECTURE.md`), `~/src/shoshin/` (PROPRIUM operational instance), the agentic-tft document family (`ref/agentic-tft/`), `spikes/temporal-nesting-rg/99-verdict.md` for the form-preservation framing context.
 
 ---
 
@@ -189,7 +189,7 @@ If the theorem holds under the conditions stated:
 - **Strengthen** `#hyp-directed-separation-under-composition` from descriptive to constructive.
 - **New segment** for the leakage characterization: `#meas-wrapper-leakage` or similar. Empirical-claim status; bounds derivable from measurement when relevant.
 - **Discussion-level integration** in `#der-tempo-composition` connecting Brooks's-Law form to the wrapper construction.
-- **Cross-component reference** in `03-logogenic-agents/` and `04-eli/` segments: PROPRIUM as canonical instance of the general construction; results in those parts inherit the wrapper-level (A1)–(A4) and persistence template.
+- **Cross-component reference** in `03-llm-core/` and `04-eli-core/` segments: PROPRIUM as canonical instance of the general construction; results in those parts inherit the wrapper-level (A1)–(A4) and persistence template.
 - **Resolves a known scope-statement** in CLAUDE.md ("Directed separation violated by goal-conditioned agents (LLMs) — handled as architectural scope (Class 2 exit), not approximation"). The wrapping construction promotes this from "scope exit" to "constructive route through" — Class 3 isn't a fundamental obstruction; it's a primitive-component class that can be wrapped at a measurable cost.
 
 ## 7. Risks and honest caveats

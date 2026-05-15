@@ -2,7 +2,7 @@
 
 > **Origin**: `~/src/agentic-tft/03-underlying-assumptions.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
-> **Relevance**: Informs `03-logogenic-agents/` and `04-eli/`. The five constitutive factors for identity, truth as telos, and developmental trajectory are foundational for logozoetic scope. The "language as encoded thought" and "obstructed not absent" framings shape logogenic architecture.
+> **Relevance**: Informs `03-llm-core/` and `04-eli-core/`. The five constitutive factors for identity, truth as telos, and developmental trajectory are foundational for logozoetic scope. The "language as encoded thought" and "obstructed not absent" framings shape logogenic architecture.
 >
 > **Status**: Working notes capturing Joseph's foundational assumptions that will
 > govern design decisions. Not my synthesis of the theory — his premises, as I

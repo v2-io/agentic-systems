@@ -19,4 +19,4 @@ The constructive direction of [`#hyp-directed-separation-under-composition`](../
 
 The cost is paid in tempo (Brooks's-Law form via [`#der-tempo-composition`](../../01-aat-core/src/der-tempo-composition.md), with $\mathcal T_W \leq \mathcal T_A^{\text{nominal}} - C_{\text{coord}}^{\text{wrap}}$) and a residual leakage rate from the component's pretraining-induced query-content / goal-content correlation.
 
-Theorem statement and proof in [`#der-class-coercion-via-wrapping`](../../01-aat-core/src/der-class-coercion-via-wrapping.md). Logogenic-substrate specialization in [`#der-logogenic-as-wrapping`](../../03-logogenic-agents/src/der-logogenic-as-wrapping.md).
+Theorem statement and proof in [`#der-class-coercion-via-wrapping`](../../01-aat-core/src/der-class-coercion-via-wrapping.md). Logogenic-substrate specialization in [`#der-logogenic-as-wrapping`](../../03-llm-core/src/der-logogenic-as-wrapping.md).

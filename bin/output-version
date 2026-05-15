@@ -23,8 +23,8 @@ META_FILENAME = 'mono-meta.yaml'
 VOLUME_DIRS = {
   '01' => '01-aat-core',         'aad' => '01-aat-core',
   '02' => '02-tst-core',         'tst' => '02-tst-core',
-  '03' => '03-logogenic-agents', 'loga' => '03-logogenic-agents', 'logogenic' => '03-logogenic-agents',
-  '04' => '04-eli',              'eli' => '04-eli',
+  '03' => '03-llm-core', 'loga' => '03-llm-core', 'logogenic' => '03-llm-core',
+  '04' => '04-eli-core',              'eli' => '04-eli-core',
 }.freeze
 
 def meta_path_for(volume_id)

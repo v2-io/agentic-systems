@@ -6,7 +6,7 @@
 
 **3. Math verification:** The segment is explicitly `discussion-grade`. The reconstruction error $\epsilon_{\text{recon}} = d(M_k^-, M_{k+1}^+)$ and the bounds $S(M_{k+1}^+) \geq S_{\text{min}}$ are solid conceptual formalisms. The accumulation equation $\epsilon_{\text{recon}}^{(n)} = \sum \Delta\epsilon_k$ is a standard additive drift model. The requirement $\mathbb{E}[\Delta\epsilon_k] \leq \mathbb{E}[\Delta I_k]$ (information gain must outpace inter-session information loss) is a perfect thermodynamic analogy for memory.
 
-**4. What direction will the theory take next?** The next segment is `scope-observation-ambiguity-modulation.md`, which is the final segment in the `03-logogenic-agents/OUTLINE.md` sequence.
+**4. What direction will the theory take next?** The next segment is `scope-observation-ambiguity-modulation.md`, which is the final segment in the `03-llm-core/OUTLINE.md` sequence.
 
 **5. What errors should I watch for?** The equation $S(M_{k+1}^+) \leq \min(1, S_{\text{ext}} + S_{\text{prompt}} + S_{\text{prior}} - S_{\text{overlap}})$ is noted as an "informal bound." In rigorous information theory, you can't just add sufficiencies together like this (mutual information is sub-additive but the exact form depends heavily on the joint distribution). The text is honest about this limitation.
 

@@ -9,8 +9,8 @@
 - [ ] Principle Theory, Structure, & Dependency Graphs (via feedback & audits)
   1. [AAT OUTLINE](01-aat-core/OUTLINE.md),  Segment Refinement & Promotion
   2. [TST OUTLINE](02-tst-core/OUTLINE.md), Segment Refinement & Promotion
-  3. [LOGOGENIC OUTLINE](03-logogenic-agents/OUTLINE.md), Segment Refinement & Promotion
-  4. [ELI OUTLINE](04-eli/OUTLINE.md), Segment Refinement & Promotion
+  3. [LOGOGENIC OUTLINE](03-llm-core/OUTLINE.md), Segment Refinement & Promotion
+  4. [ELI OUTLINE](04-eli-core/OUTLINE.md), Segment Refinement & Promotion
 - [ ] 🌟 **Parts III + IV iteration (active 2026-05-01)** — multi-section lattice landed (03.I primitive / 03.II scaffolded / 03.III closed-loop); 04 renamed to ELI; 14 new structural stubs; 24/75 Gemini-auditor notes integrated; embeddings paper cross-pollinated. Lingering items + pickup guidance in [TODO.md § "Parts III + IV active work"](TODO.md#-parts-iii--iv-active-work-encounter-cycle-2026-05-01); cycle working dir at [`msc/logogenic-encounter-2026-05-01/`](msc/logogenic-encounter-2026-05-01/).
 
 ### 🌟 Cycle priority order (added 2026-05-09)
@@ -22,7 +22,7 @@ Following the class-coercion-via-wrapping landing and the convergence finding wi
 3. **Multi-timescale stability promotion** — `#sketch-multi-timescale-stability` from sketch to derived via template-stacking + Tikhonov + Chen-Goldenfeld-Oono. Highest-leverage standalone Section III piece; supports `#def-auxilia-hierarchy`'s (H5) macro-clock requirement.
 4. **Parts III/IV scope segments + Three Deaths formal grounding** — land missing scope segments (`scope-channel-collapse`, `scope-primitive-logogenic`, `scope-scaffolded-logogenic`, `scope-interiority-loop`) and ground `#hyp-the-three-deaths` in AAT primitives. Now potentially **normative-explicit**: framework's structural maturity supports normatively-grounded claims (Three Deaths as harms, five constitutive factors as worth-conditions) where the descriptive formalism backs them. The "no normative claims" discipline that has been protective during formalization can relax where structural backing is available, with the same epistemic discipline applied (claims conditional on backing; backing named explicitly).
 5. **Class-3 closure-defect dynamics analysis** — Move F from `spikes/temporal-nesting-rg/99-verdict.md`. Tests directed-separation-as-graded-order-parameter view (the dynamics-side complement to W₀/W₂/W₁'s structural taxonomy). Separate spike when Parts III/IV is mature enough to motivate it.
-6. **Identity-through-substrate-transitions** — connect `obs-substrate-independence` / `def-identity-sufficiency` / `def-five-constitutive-factors` to the persistence template across substrate changes. Anticipated segment `#der-substrate-independent-persistence` added to `04-eli/OUTLINE.md` as missing.
+6. **Identity-through-substrate-transitions** — connect `obs-substrate-independence` / `def-identity-sufficiency` / `def-five-constitutive-factors` to the persistence template across substrate changes. Anticipated segment `#der-substrate-independent-persistence` added to `04-eli-core/OUTLINE.md` as missing.
 
 Order is recommended; bundle adjustments per cycle. Item 1 (naming refactor) is currently in progress on a parallel agent thread.
 

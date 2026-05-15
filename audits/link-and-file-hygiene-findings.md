@@ -187,7 +187,7 @@ Classification: stale prose; links are already correct.
 
 | File | Line(s) | Issue |
 | --- | ---: | --- |
-| `03-logogenic-agents/OUTLINE.md` | 38, 40 | Says the working documents are "in `msc/`", but the table links to `../ref/agentic-tft/...`. |
+| `03-llm-core/OUTLINE.md` | 38, 40 | Says the working documents are "in `msc/`", but the table links to `../ref/agentic-tft/...`. |
 
 Recommendation:
 
@@ -202,7 +202,7 @@ Classification: current-doc drift.
 | File | Line(s) | Issue |
 | --- | ---: | --- |
 | `LEXICON.md` | 3 | Links to `README.md#lexicon`, but `README.md` has no `#lexicon` heading. |
-| `LEXICON.md` | 29-30 | Describes Logogenic/Logozoetic AAD as "Section V"; current top-level structure uses `03-logogenic-agents/` and `04-logozoetic-agents/`. |
+| `LEXICON.md` | 29-30 | Describes Logogenic/Logozoetic AAD as "Section V"; current top-level structure uses `03-llm-core/` and `04-eli-core/`. |
 | `01-aat-core/src/scope-agent-identity.md` | 57 | Refers readers to "Section V" for AI/logogenic agents. |
 | `02-tst-core/src/der-dual-optimization.md` | 93 | Refers to "Section V" for logogenic agents. |
 
@@ -210,8 +210,8 @@ Recommendation:
 
 - Retarget the README link to `README.md#overview-of-concepts` or remove it and
   describe `LEXICON.md` as the canonical full lexicon.
-- Replace current-doc "Section V" references with `03-logogenic-agents/`,
-  `04-logozoetic-agents/`, or "the logogenic/logozoetic parts", depending on
+- Replace current-doc "Section V" references with `03-llm-core/`,
+  `04-eli-core/`, or "the logogenic/logozoetic parts", depending on
   the local context.
 
 Historical note:
@@ -350,7 +350,7 @@ These references should generally not be mass-edited:
 
 1. Fix active navigation and process docs:
    `CLAUDE.md`, `CHANGELOG.md`, `doc/de-novo-audit-instructions.md`,
-   `doc/readme/src/_auditor-instructions.md`, `03-logogenic-agents/OUTLINE.md`,
+   `doc/readme/src/_auditor-instructions.md`, `03-llm-core/OUTLINE.md`,
    `LEXICON.md`, `PRACTICA.md`, and `FORMAT.md`.
 2. Rebuild README outputs with `bin/build-readme` and confirm with
    `bin/build-readme --check`.

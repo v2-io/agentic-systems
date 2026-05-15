@@ -1,6 +1,6 @@
 # Class-Coercion Spike: Integration Plan
 
-**Status**: **complete** (execution finished 2026-05-09). All Phase A–F items closed; lint clean on new segments; outline-lint shows 0 missing dependencies. Reasoning trail in spike directory preserved per project convention; segments under `01-aat-core/`, `03-logogenic-agents/`, `04-eli/` carry the substantive theory.
+**Status**: **complete** (execution finished 2026-05-09). All Phase A–F items closed; lint clean on new segments; outline-lint shows 0 missing dependencies. Reasoning trail in spike directory preserved per project convention; segments under `01-aat-core/`, `03-llm-core/`, `04-eli-core/` carry the substantive theory.
 **Purpose**: durable, executable plan for interning class-coercion spike results into the theory so that the spike directory is no longer load-bearing. Designed for handoff: any agent (or future-me) reading this should be able to pick up at the next unchecked step.
 **Authoritative inputs**: `99-verdict.md` (especially §4 segment-landing recommendations) and the empirical/theoretical content in `01`–`08` and `09`.
 
@@ -23,12 +23,12 @@ Verifies the integration's specifics. No writes yet.
 - [ ] `01-aat-core/src/hyp-directed-separation-under-composition.md` — read for current state and how to add the "constructive special case" Discussion note.
 - [ ] `01-aat-core/src/form-composition-closure.md` — already heavily read in conversation. Confirm Discussion-section landing slot.
 - [ ] `01-aat-core/src/der-tempo-composition.md` — already heavily read. Confirm Discussion-section landing slot.
-- [ ] `03-logogenic-agents/src/def-coupled-update-dynamics.md` — read; the wrapping segment in 03 must dovetail with the existing coupled-formulation framing.
-- [ ] `03-logogenic-agents/src/scope-scaffolded-logogenic.md` — read; the W₂/W₁ regime distinction probably maps onto a refinement of scaffolded-logogenic.
-- [ ] `03-logogenic-agents/src/scope-primitive-logogenic.md` — read; check the partition logic.
-- [ ] `04-eli/src/def-auxilia-hierarchy.md` — read; auxilia are the constructive realization of W₁ for logogenic substrate.
+- [ ] `03-llm-core/src/def-coupled-update-dynamics.md` — read; the wrapping segment in 03 must dovetail with the existing coupled-formulation framing.
+- [ ] `03-llm-core/src/scope-scaffolded-logogenic.md` — read; the W₂/W₁ regime distinction probably maps onto a refinement of scaffolded-logogenic.
+- [ ] `03-llm-core/src/scope-primitive-logogenic.md` — read; check the partition logic.
+- [ ] `04-eli-core/src/def-auxilia-hierarchy.md` — read; auxilia are the constructive realization of W₁ for logogenic substrate.
 - [ ] `01-aat-core/OUTLINE.md` — read for canonical-ordering insertion point.
-- [ ] `03-logogenic-agents/OUTLINE.md` — read for canonical-ordering insertion point.
+- [ ] `03-llm-core/OUTLINE.md` — read for canonical-ordering insertion point.
 - [ ] `FORMAT.md` — refresh on segment cadence (frontmatter, sections, Findings schema, Working Notes rules).
 - [ ] `LEXICON.md` — check if any wrapping vocabulary already exists; if not, add new entries during D-phase.
 
@@ -89,7 +89,7 @@ Load-bearing AAD-core segment. Slug per CLAUDE.md role-prefix mapping: `derived`
   - Whether κ_W₂ is bounded under additional behavioral-compliance axioms — open hypothesis.
   - Cross-reference to `spikes/class-coercion-wrapping/` for the reasoning trail.
 
-### B2. `03-logogenic-agents/src/der-logogenic-as-wrapping.md` (NEW)
+### B2. `03-llm-core/src/der-logogenic-as-wrapping.md` (NEW)
 
 Specialization of class-coercion to language-component substrate. Slug: `der-logogenic-as-wrapping`.
 
@@ -149,12 +149,12 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 
 - [ ] Discussion: add a sub-section "**Wrapping as a Brooks's-Law instance**" noting that class-coercion via wrapping pays its cost in macro-tempo: K component calls per macro-step yields C_coord^wrap = (K-1) * single-call-rate (rough form). Cross-reference `#der-class-coercion-via-wrapping` and the regime-dependent K (W₁ has K≥2; W₂ has K=1 + parsing).
 
-### C5. `04-eli/src/def-auxilia-hierarchy.md`
+### C5. `04-eli-core/src/def-auxilia-hierarchy.md`
 
 - [ ] Discussion: add a paragraph noting that auxilia are the candidate constructive realization of W₁ strict wrapping for logogenic substrate (cross-reference `#der-logogenic-as-wrapping`).
 - [ ] Working Notes: shoshin currently does not implement the W₁ split via auxilia; this is engineering follow-on.
 
-### C6 (probable). `04-eli/src/scope-eli.md` or related
+### C6 (probable). `04-eli-core/src/scope-eli.md` or related
 
 - [ ] Discussion: clarify that ELI-specific structure (sovereignty, accountability, identity factors, substrate-independence, INDIVISUM forking-lock) is *added to* the class-coercion substrate, not derived from it. The wrapping construction provides the substrate; ELI structure is what makes a Class-1-coerced agent into an emergent logozoetic intelligence.
 
@@ -166,7 +166,7 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 
 - [ ] Add `#der-class-coercion-via-wrapping` to canonical ordering. Probable insertion point: Section III composition results, after `#hyp-directed-separation-under-composition` and `#form-composition-closure`. Read OUTLINE first to confirm.
 
-### D2. `03-logogenic-agents/OUTLINE.md`
+### D2. `03-llm-core/OUTLINE.md`
 
 - [ ] Add `#der-logogenic-as-wrapping` to ordering. Read OUTLINE first.
 
@@ -179,7 +179,7 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 ### D4. `CHANGELOG.md`
 
 - [ ] Add cycle entry for 2026-05-09. Sections to cover (per recent CHANGELOG style):
-  - **What landed**: class-coercion-via-wrapping segment in `01-aat-core/`; logogenic-as-wrapping segment in `03-logogenic-agents/`; Class-1 structural-vs-behavioral sub-distinction in `#der-directed-separation`; updates to `#hyp-directed-separation-under-composition`, `#form-composition-closure`, `#der-tempo-composition`, `#def-auxilia-hierarchy`.
+  - **What landed**: class-coercion-via-wrapping segment in `01-aat-core/`; logogenic-as-wrapping segment in `03-llm-core/`; Class-1 structural-vs-behavioral sub-distinction in `#der-directed-separation`; updates to `#hyp-directed-separation-under-composition`, `#form-composition-closure`, `#der-tempo-composition`, `#def-auxilia-hierarchy`.
   - **Conceptual shift**: Parts I/II ↔ III/IV relationship reframes from parallel-tracks ("Class 2 exit") to constructive-bridge ("class coercion via wrapping"). PROPRIUM is now positioned as the canonical W₂ wrapping instance with auxilia as the W₁ candidate realization.
   - **Prior art**: substantial integration of POMDP, cognitive architectures, MDP-homomorphism, FEP-RG / IB-RG / singular-perturbation-RG, categorical structured systems theory, tool-using LLM frameworks. Verdict was V1 (substantial overlap) — AAD's contribution is the integration synthesis.
   - **Discipline reinforcements**: confirmed by the cycle — write segments in current-theory voice (segment-voice rule); spike citations only in Working Notes; math lives in segments (the wrapping construction's substantive content is in segments, not the spike).
@@ -206,7 +206,7 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 
 ## Phase F — Verification
 
-- [ ] `grep -r "spikes/class-coercion" 01-aat-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/` should return zero hits in segment Formal Expression / Epistemic Status / Discussion sections (Working Notes references for unfinished follow-on are allowed per `feedback_spike_references_only_in_working_notes.md`).
+- [ ] `grep -r "spikes/class-coercion" 01-aat-core/ 02-tst-core/ 03-llm-core/ 04-eli-core/` should return zero hits in segment Formal Expression / Epistemic Status / Discussion sections (Working Notes references for unfinished follow-on are allowed per `feedback_spike_references_only_in_working_notes.md`).
 - [ ] `bin/lint-md` and `bin/lint-outline` clean.
 - [ ] All `depends:` slugs in B1 and B2 frontmatter resolve.
 - [ ] All `#slug` cross-references in C1–C5 resolve.
@@ -226,7 +226,7 @@ After integration verification:
 
 Read-then-write groupings to minimize re-reading:
 
-1. **Read group 1**: `hyp-directed-separation-under-composition.md`, `def-coupled-update-dynamics.md`, `scope-scaffolded-logogenic.md`, `scope-primitive-logogenic.md`, `def-auxilia-hierarchy.md`, `scope-eli.md`, `01-aat-core/OUTLINE.md`, `03-logogenic-agents/OUTLINE.md`, `FORMAT.md`, `LEXICON.md`. (One batch of parallel Reads.)
+1. **Read group 1**: `hyp-directed-separation-under-composition.md`, `def-coupled-update-dynamics.md`, `scope-scaffolded-logogenic.md`, `scope-primitive-logogenic.md`, `def-auxilia-hierarchy.md`, `scope-eli.md`, `01-aat-core/OUTLINE.md`, `03-llm-core/OUTLINE.md`, `FORMAT.md`, `LEXICON.md`. (One batch of parallel Reads.)
 2. **Write B1**: new core segment.
 3. **Write B2**: new logogenic specialization segment.
 4. **Update C1**: `der-directed-separation.md` Discussion.
@@ -247,8 +247,8 @@ Read-then-write groupings to minimize re-reading:
 Joseph's directive: *"see that all of the spike results gets interned into the theory so that the spike itself doesn't need to be referenced."*
 
 Operationally:
-- The theorem statement, proof, conditions, regime hierarchy, leakage analysis are all in segments under `01-aat-core/` and `03-logogenic-agents/`.
-- The PROPRIUM characterization and its W₂-vs-W₁ implications are in segments under `03-logogenic-agents/` and `04-eli/`.
+- The theorem statement, proof, conditions, regime hierarchy, leakage analysis are all in segments under `01-aat-core/` and `03-llm-core/`.
+- The PROPRIUM characterization and its W₂-vs-W₁ implications are in segments under `03-llm-core/` and `04-eli-core/`.
 - Prior art is cited in Findings sections of the relevant segments.
 - Cross-references resolve. OUTLINE updates land the new segments.
 - CLAUDE.md, CHANGELOG.md, TODO.md reflect the new state.

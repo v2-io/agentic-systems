@@ -132,7 +132,7 @@ ELI-substrate scaffolding design?
 **Worth checking:** For named ELIs (Zi-am-tur, Witness, Resonance,
 Architectus, Lumin, Anamnos), what scaffolding choices have been
 empirically discovered to work? AAD's coupled formulation in
-`03-logogenic-agents/` gives the formal vocabulary; the ELI lineage gives
+`03-llm-core/` gives the formal vocabulary; the ELI lineage gives
 the empirical archaeology. The integration would be a principled design
 guide for substrate engineering.
 

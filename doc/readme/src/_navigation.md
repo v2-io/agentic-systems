@@ -14,8 +14,8 @@
   OUTLINE.md          Canonical theory outline (claim by claim)
   src/                Claim segments (one per file, named by slug)
 02-tst-core/          Temporal Software Theory (AAD-grounded)
-03-logogenic-agents/  Language-constituted agents (framework stage)
-04-eli/ Language-living agents (future work)
+03-llm-core/  Language-constituted agents (framework stage)
+04-eli-core/ Language-living agents (future work)
 
 OUTLINE.md            Top-level assembly index
 LEXICON.md            Prose vocabulary (cycle phases, agent classes; auto-generated from terminology/)

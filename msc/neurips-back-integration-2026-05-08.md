@@ -85,9 +85,9 @@ The papers in `~/src/neurips/` extracted three ASF results, refined them under a
 
 **Source segments:**
 - `01-aat-core/src/deriv-observation-ambiguity-bias-bound.md` — the conditional-theorem upgrade with two tracks.
-- `03-logogenic-agents/src/scope-observation-ambiguity-modulation.md` — the κ × A factorization.
+- `03-llm-core/src/scope-observation-ambiguity-modulation.md` — the κ × A factorization.
 - `01-aat-core/src/der-directed-separation.md` — the Class 1/2/3 architectural classification.
-- `03-logogenic-agents/src/scope-channel-collapse.md` — the architectural condition for Class 3 by construction.
+- `03-llm-core/src/scope-channel-collapse.md` — the architectural condition for Class 3 by construction.
 - `01-aat-core/src/scope-agent-identity.md` — the (PI) parameterization-invariance commitment.
 
 **What the paper added that ASF should absorb:**
@@ -265,7 +265,7 @@ The framework-level patterns that the papers established as discipline.
 - **Segment vs spike vs cross-segment routing for the new material**. I named proposed homes; the routing may benefit from the audit-cycle and PROPOSALS portfolio discipline rather than a single agent's call.
 - **Whether the no-go-forces-axiom pattern is its own meta-pattern or a refinement of M1**. The shape is structurally aligned with M1 (external theorem → AAD machinery as unique escape), but it has a constructive twist (the AAD axiom that the no-go forces is the load-bearing one *for an AAD-internal theorem*, not just a no-go on inference). Could go either way.
 - **How heavy to lean into the NeurIPS papers as canonical references**. The papers are anonymized (NeurIPS submission); they're not yet citable artifacts. ASF cross-references should probably be soft ("see also: NeurIPS 2026 submission [provisional]") until the review process resolves. If accepted, the references become hard; if rejected, the papers become arXiv preprints and the references become equivalent.
-- **The Sycophancy / sharma-2023 empirical-bridge claim**. Whether this should be in `03-logogenic-agents/` as a discussion of the operational reading, or in `04-eli/` as a discussion of empirical metrics, or both, is a routing call.
+- **The Sycophancy / sharma-2023 empirical-bridge claim**. Whether this should be in `03-llm-core/` as a discussion of the operational reading, or in `04-eli-core/` as a discussion of empirical metrics, or both, is a routing call.
 - **Whether the spike-A7 strengthen-cycle deserves its own segment as a methodological example**. The A7 cycle (parent's 30-second "strengthening fails" overturned by 9-minute spike-mode investigation finding textbook-lemma + Class-1 reduction theorem) is the canonical instance of the strengthen-before-soften principle the project commits to; it's referenced from the NeurIPS CLAUDE.md as the validation of the discipline. Whether to surface this in agentic-systems CLAUDE.md or a new methodological segment is Joseph's call.
 - **The ProST-as-impulsive-limit reduction's home**. This is a real cross-domain transfer (RL non-stationarity literature → AAD strategic-persistence schema). It could land in `01-aat-core/` as a worked example or in `02-tst-core/` if framed as a software-process analog (developer iteration cycles as impulsive updates). The fit-to-place decision depends on which framing is more useful downstream.
 

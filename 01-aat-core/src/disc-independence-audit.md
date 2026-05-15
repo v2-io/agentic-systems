@@ -32,7 +32,7 @@ Six load-bearing independence assumptions in AAD, each paired with its failure r
 
 **Diagnostic signal:** $\kappa_{\text{processing}} = I(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})/H(G_t \mid e_\tau, M_{\tau^-})$. Zero for Separated agents; near one for Coupled; intermediate for Partial.
 
-**Repair operation:** Class 2 (Partial) approximation quality scales with $\kappa_{\text{processing}}$. Class 3 (Coupled) agents require the coupled formulation $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without $(M_t, G_t)$ decomposition — the scope of `03-logogenic-agents/`. At the system level, Class 3 (Coupled) components can be wrapped in modular topology (separate observation processing, external monitoring — see `#der-directed-separation` Working Notes on the IDT pattern).
+**Repair operation:** Class 2 (Partial) approximation quality scales with $\kappa_{\text{processing}}$. Class 3 (Coupled) agents require the coupled formulation $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without $(M_t, G_t)$ decomposition — the scope of `03-llm-core/`. At the system level, Class 3 (Coupled) components can be wrapped in modular topology (separate observation processing, external monitoring — see `#der-directed-separation` Working Notes on the IDT pattern).
 
 ### 2. Causal sufficiency: no latent common causes among strategy nodes
 

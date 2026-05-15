@@ -431,7 +431,7 @@ Ordered by what carries the most theoretical consequence, not by effort.
 
 *Effort estimate*: One paragraph. Low.
 
-*Load-bearing*: Low at the theoretical core; moderate for `03-logogenic-agents/` framing, where population-layer dynamics will become directly relevant.
+*Load-bearing*: Low at the theoretical core; moderate for `03-llm-core/` framing, where population-layer dynamics will become directly relevant.
 
 ### 10.6 Do NOT: new segment on "latent structural diversity"
 

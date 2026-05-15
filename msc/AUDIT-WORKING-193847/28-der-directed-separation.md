@@ -13,7 +13,7 @@ The conditional mutual information metric $\kappa_{\text{processing}} = \frac{I(
 Now that the coupling structure between $M_t$ and $G_t$ is defined, the theory needs to define exactly what is inside $G_t$. I know from the OUTLINE and earlier references that $G_t$ splits into $O_t$ (Objective) and $\Sigma_t$ (Strategy). I predict `#def-strategy-dimension` or `#form-objective-functional` will follow to formalize this split.
 
 **5. What errors should I now watch for?**
-I must be hyper-vigilant about downstream theorems applying Class 1 results to Class 2 agents (like LLMs). The text is explicitly scope-honest here: Class 2 fails directed separation by construction, and Section II's exact results do not apply to them. They must be handed off to `03-logogenic-agents/`.
+I must be hyper-vigilant about downstream theorems applying Class 1 results to Class 2 agents (like LLMs). The text is explicitly scope-honest here: Class 2 fails directed separation by construction, and Section II's exact results do not apply to them. They must be handed off to `03-llm-core/`.
 
 **6. Predictions for next segments.**
 `#form-objective-functional` or `#def-strategy-dimension` will dissect $G_t$.

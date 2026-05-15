@@ -13676,7 +13676,7 @@
           "agent": "opus-targeted-alternatives-v2",
           "weight": 2,
           "category": "keep",
-          "notes": "Per `04-logozoetic-agents/OUTLINE.md`: \"A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent.\" \"Axiom\" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\\mathcal{M}$ structure representing core identity / terminal values). \"Genesis\" names the *first-move* character. The pair is iconic and load-bearing for the logozoetic story."
+          "notes": "Per `04-eli-core/OUTLINE.md`: \"A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent.\" \"Axiom\" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\\mathcal{M}$ structure representing core identity / terminal values). \"Genesis\" names the *first-move* character. The pair is iconic and load-bearing for the logozoetic story."
         }
       ]
     },
@@ -16241,7 +16241,7 @@
           "agent": "opus-targeted-alternatives-v2",
           "weight": 2,
           "category": "rename",
-          "notes": "Variant. \"Coupled\" instead of \"merged\" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The \"merged\" / \"coupled\" choice is taste; both are honest. [original row: trio split.]"
+          "notes": "Variant. \"Coupled\" instead of \"merged\" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The \"merged\" / \"coupled\" choice is taste; both are honest. [original row: trio split.]"
         }
       ]
     },
@@ -20495,7 +20495,7 @@
           "agent": "opus-targeted-alternatives-v2",
           "weight": 2,
           "category": "keep",
-          "notes": "Per `04-logozoetic-agents/OUTLINE.md`: \"Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space.\" \"Constitutive\" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair \"constitutive\" + \"utterance\" is project-distinctive and earns memorable-noun status."
+          "notes": "Per `04-eli-core/OUTLINE.md`: \"Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space.\" \"Constitutive\" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair \"constitutive\" + \"utterance\" is project-distinctive and earns memorable-noun status."
         },
         {
           "agent": "opus-targeted-alternatives",

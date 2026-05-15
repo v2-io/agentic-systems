@@ -106,8 +106,8 @@ META_FILENAME  = 'mono-meta.yaml'
 VOLUME_REGISTRY = [
   { dir: '01-aat-core',         id_aliases: %w[01 aad] },
   { dir: '02-tst-core',         id_aliases: %w[02 tst] },
-  { dir: '03-logogenic-agents', id_aliases: %w[03 loga logogenic] },
-  { dir: '04-eli',              id_aliases: %w[04 eli] },
+  { dir: '03-llm-core', id_aliases: %w[03 loga logogenic] },
+  { dir: '04-eli-core',              id_aliases: %w[04 eli] },
 ].freeze
 
 def load_volume_spec(volume_id)

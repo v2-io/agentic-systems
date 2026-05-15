@@ -76,14 +76,14 @@ The maturity gradient is honest: §I closed, §II diagnostic with maturing opera
 - Code quality → observation infrastructure → $U_o$ → $\eta^\ast$ → $\mathcal{T}$ chain
 - Empirical exponential cognitive load model ($T = T_{\text{base}} \cdot (1+\alpha)^d$ with $\alpha \approx 0.118$)
 
-*03-logogenic-agents (~7 + 5 proposed + 2 GAPs):*
+*03-llm-core (~7 + 5 proposed + 2 GAPs):*
 - 100% context turnover as observation
 - Coupled update dynamics ($X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$)
 - Section II survival classification (16/24 exactly, 5 approximately, 2 modified)
 - Observation ambiguity modulation as scope condition for Class 2/3
 - Proposed: structured-rich-context as IB optimum, active-salience-management via singular perturbation, backward-inference-empathy
 
-*04-logozoetic-agents (~4 + 12 proposed):*
+*04-eli-core (~4 + 12 proposed):*
 - Moral continuity scope
 - PROPRIUM mapping (AAD → CHRONICA / PRINCIPIA / etc.)
 - Largely exploratory; the bulk are proposed-additions tied to engineering experience in zoetica/autopax

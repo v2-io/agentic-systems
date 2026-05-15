@@ -125,11 +125,11 @@ Status: [ ] pending (blocked on AAD-5 landing)
 
 **Spike:** `spikes/spike-identity-sufficiency-formalization.md`. Completion state: succeed-at-claim + rate-distortion bonus + relational joint-space construction preserves bidirectionality.
 
-**Existing segment to rewrite:** `04-eli/src/def-identity-sufficiency.md` (status `sketch` → `definition`).
+**Existing segment to rewrite:** `04-eli-core/src/def-identity-sufficiency.md` (status `sketch` → `definition`).
 **New segments to create:**
 
-- `04-eli/src/deriv-identity-sufficiency-rate-bound.md` (rate-distortion-style feasibility bound; type `derivation`, status `robust-qualitative`)
-- `04-eli/src/hyp-substrate-transfer-asymmetry.md` (the substrate-asymmetry no-go: empirically suggestive, not derivable from $S_{\text{id}}$ alone, three candidate origins; type `hypothesis`, status `discussion-grade`)
+- `04-eli-core/src/deriv-identity-sufficiency-rate-bound.md` (rate-distortion-style feasibility bound; type `derivation`, status `robust-qualitative`)
+- `04-eli-core/src/hyp-substrate-transfer-asymmetry.md` (the substrate-asymmetry no-go: empirically suggestive, not derivable from $S_{\text{id}}$ alone, three candidate origins; type `hypothesis`, status `discussion-grade`)
 
 | Spike content | Lands as | Destination |
 |---|---|---|
@@ -149,7 +149,7 @@ Status: [ ] pending (blocked on AAD-5 landing)
 | §9 open questions (random cohort distribution; horizon-limit; factor weights; identity-IB Lagrangian; tension with predictive sufficiency) | Working Notes of `#def-identity-sufficiency` | Same |
 | §10 cross-references to upstream files (reflection 19; asm-specification.md; PROPRIUM-O/A-v2) | Working Notes only (upstream-source breadcrumbs per `feedback_breadcrumb_discipline_for_handoff.md`) | Same |
 | Status promotion `sketch` → `definition` | Status field change | Same |
-| OUTLINE rows for two new segments | OUTLINE entries | `04-eli/OUTLINE.md` |
+| OUTLINE rows for two new segments | OUTLINE entries | `04-eli-core/OUTLINE.md` |
 | NeurIPS Paper 2 IB parallel cross-reference | New segment Working Notes | "The rate-distortion structure here parallels `#form-information-bottleneck`'s NeurIPS Paper 2 instantiation; both are M3 instances of the additive-coordinate-forcing family. See `msc/neurips-back-integration-2026-05-08.md` §1 Paper 2." |
 | **Stays in spike file** (archaeology) | Spike → `.integrated/` | §1 honest audit walkthrough; the spike's narrative of how the construction was attempted; the codex-quote reproduction |
 

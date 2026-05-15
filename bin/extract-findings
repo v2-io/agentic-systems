@@ -59,8 +59,8 @@ REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 OUTLINE_FILES = [
   REPO_ROOT.join('01-aat-core/OUTLINE.md'),
   REPO_ROOT.join('02-tst-core/OUTLINE.md'),
-  REPO_ROOT.join('03-logogenic-agents/OUTLINE.md'),
-  REPO_ROOT.join('04-logozoetic-agents/OUTLINE.md')
+  REPO_ROOT.join('03-llm-core/OUTLINE.md'),
+  REPO_ROOT.join('04-eli-core/OUTLINE.md')
 ].freeze
 
 CANONICAL_OUT = REPO_ROOT.join('FINDINGS.md')
@@ -198,8 +198,8 @@ end
 COMPONENT_LABELS = {
   '01-aat-core'         => 'AAD (uncategorized)',
   '02-tst-core'         => 'Temporal Software Theory (TST)',
-  '03-logogenic-agents' => 'Logogenic Agents',
-  '04-logozoetic-agents' => 'Logozoetic Agents'
+  '03-llm-core' => 'Logogenic Agents',
+  '04-eli-core' => 'Logozoetic Agents'
 }.freeze
 
 def section_label(component, section)

@@ -12,7 +12,7 @@ The mathematical bounding of the post-hoc diagnostics is excellent. Because $\de
 The detail regarding `#schema-strategy-persistence` degrading as $O(\kappa^2)$ rather than $O(\kappa)$ (because the bias must survive the sector-condition's inner-product averaging) is a profound insight into the stability of coupled learning.
 
 **4. What direction will the theory take next?**
-This concludes the `03-logogenic-agents` directory. The theory has successfully established that while LLMs are mathematically "flawed" agents (Class 2), those flaws can be strictly bounded, allowing the vast majority of AAD and TST to safely apply to them.
+This concludes the `03-llm-core` directory. The theory has successfully established that while LLMs are mathematically "flawed" agents (Class 2), those flaws can be strictly bounded, allowing the vast majority of AAD and TST to safely apply to them.
 
 **5. What errors should I now watch for?**
 I must ensure that when building agent scaffolding (like LangChain or AutoGPT), the design patterns explicitly enforce the Orient Cascade ordering (epistemic $\to$ strategic $\to$ objective) because the LLM will not enforce it naturally.

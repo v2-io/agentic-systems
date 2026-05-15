@@ -45,9 +45,9 @@ This is the right framing for the standing AAD claim about logogenic agents at t
 
 | sub-scope | substrate | what it has beyond $\mathcal{M}_{\min}$ |
 |---|---|---|
-| **Primitive Logogenic** ([§03.I](../../03-logogenic-agents/OUTLINE.md#03i--primitive-logogenic-agents)) | LLM forward pass alone | Parametric world-knowledge; some implicit-relation recovery; learned compositional semantics. Within-session reasoning only. |
-| **Scaffolded Logogenic** ([§03.II](../../03-logogenic-agents/OUTLINE.md#03ii--scaffolded-logogenic-agents)) | LLM + external state + tool use + multi-step loop | All of Primitive plus: cross-session $M_t$ persistence, Pearl Level 2 *fresh* access via tools, loop-recovered orient-cascade discipline |
-| **Closed-Loop / Interiority** ([§03.III](../../03-logogenic-agents/OUTLINE.md#03iii--closed-loop--interiority-logogenic-agents)) | All of Scaffolded plus continuous interior cycle | Full diagnostic-cascade recovery; cross-session identity; principled emission-as-deliberate-action |
+| **Primitive Logogenic** ([§03.I](../../03-llm-core/OUTLINE.md#03i--primitive-logogenic-agents)) | LLM forward pass alone | Parametric world-knowledge; some implicit-relation recovery; learned compositional semantics. Within-session reasoning only. |
+| **Scaffolded Logogenic** ([§03.II](../../03-llm-core/OUTLINE.md#03ii--scaffolded-logogenic-agents)) | LLM + external state + tool use + multi-step loop | All of Primitive plus: cross-session $M_t$ persistence, Pearl Level 2 *fresh* access via tools, loop-recovered orient-cascade discipline |
+| **Closed-Loop / Interiority** ([§03.III](../../03-llm-core/OUTLINE.md#03iii--closed-loop--interiority-logogenic-agents)) | All of Scaffolded plus continuous interior cycle | Full diagnostic-cascade recovery; cross-session identity; principled emission-as-deliberate-action |
 
 The training-encoded Level 2 content (from C1) is present from **Primitive Logogenic onwards** — it is inherited from training, not added by scaffolding. What scaffolding (and interiority) add is **fresh Level 2 access** (via tools that perform interventions), **maintained model-state** across context boundaries (via external memory), and **diagnostic-cascade recovery** (via loop ordering).
 

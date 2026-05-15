@@ -211,7 +211,7 @@ Promotion route: formalize a narrow software sub-scope, define $\widehat J_F$, p
 
 ## 9. Recommended Moves
 
-- Keep the concept as a Working Note in `03-logogenic-agents/src/result-coupled-diagnostic-framework.md`.
+- Keep the concept as a Working Note in `03-llm-core/src/result-coupled-diagnostic-framework.md`.
 - Do not replace `#hyp-exponential-cognitive-load` yet; use this spike to refine its Working Notes toward dependency-structure sensitivity.
 - Treat a future `02-tst-core/src/der-transient-dependency-amplification.md` as blocked on a formal construction of $J_F$ and a proved checkpoint-coverage condition.
 

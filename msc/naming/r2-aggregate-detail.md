@@ -2579,7 +2579,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#scope-logogenic-agent` (Logogenic; depends on `#def-agent-spectrum`, `#form-complete-agent-state`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language.
 
-*Segment:* [`03-logogenic-agents/src/scope-logogenic-agent.md`](../../03-logogenic-agents/src/scope-logogenic-agent.md)
+*Segment:* [`03-llm-core/src/scope-logogenic-agent.md`](../../03-llm-core/src/scope-logogenic-agent.md)
 
 *R2 voters:* 2 (2 architectures: gemini, opus)
 
@@ -4031,11 +4031,11 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 **Candidate: `Coupled`**
 - *R1 synthetic:* **+1** — n=1, mean=2.00, weights=[+2], categories={rename:1}
-  > Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
+  > Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
 
 - *R2 votes:*
   - **opus-r2b** (opus): +1 *add-alias* — novelty=0.68, len=296, **subst=1.68**
-    > "Coupled" pairs with `def-coupled-update-dynamics` in 03-logogenic-agents and emphasizes the dynamic-coupling sense. Marginal preference between "merged" and "coupled" — they pick out the same architectures. "Merged" is the segment's word; "coupled" is the logogenic-agents word. Both are honest.
+    > "Coupled" pairs with `def-coupled-update-dynamics` in 03-llm-core and emphasizes the dynamic-coupling sense. Marginal preference between "merged" and "coupled" — they pick out the same architectures. "Merged" is the segment's word; "coupled" is the logogenic-agents word. Both are honest.
   - **opus-r2c** (opus): +1 ★ *add-alias* — novelty=0.84, len=464, **subst=2.21**
     > Strong alternative — "coupled" is the term `def-coupled-update-dynamics` already uses for the formulation. "Coupled" carries the dynamical-systems sense (the substates are coupled in the update equation), which is technically more precise than "merged" (which is colloquial). Both work. Slight top-pick on "coupled" because the segment-naming consistency matters — `def-coupled-update-dynamics` would pair more naturally with "coupled agents" than "merged agents."
 

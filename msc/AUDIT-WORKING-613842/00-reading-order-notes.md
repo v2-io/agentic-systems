@@ -6,7 +6,7 @@ I computed a corpus-wide dependency graph across active non-`old-*` segments in:
 
 - `01-aat-core/src/`
 - `02-tst-core/src/`
-- `03-logogenic-agents/src/`
+- `03-llm-core/src/`
 
 Result:
 
@@ -49,11 +49,11 @@ This preserves first-pass honesty while acknowledging that the repo's own depend
 
 ## Other ordering notes
 
-`03-logogenic-agents/OUTLINE.md` has at least one explicit row-order violation:
+`03-llm-core/OUTLINE.md` has at least one explicit row-order violation:
 `#result-coupled-diagnostic-framework` appears before `#scope-observation-ambiguity-modulation` despite depending on it.
 I will read those in dependency order, not outline order.
 
-The component-local `bin/lint-outline` reports many "missing" dependencies in `02-tst-core/` and `03-logogenic-agents/`, but those are cross-component references rather than true corpus-level missing files.
+The component-local `bin/lint-outline` reports many "missing" dependencies in `02-tst-core/` and `03-llm-core/`, but those are cross-component references rather than true corpus-level missing files.
 So for audit purposes:
 
 - corpus-wide dependency analysis is the authoritative graph

@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [eli, structural_concepts]
 source_type: asf
-primary_source: 04-eli/src/def-proprium-mapping.md
-first_asf_mention: 04-eli/src/def-proprium-mapping.md
+primary_source: 04-eli-core/src/def-proprium-mapping.md
+first_asf_mention: 04-eli-core/src/def-proprium-mapping.md
 see_also: [eli, moral-continuity, logogenic-agent, chronica, interiority-default]
 aliases: ["PROPRIUM architecture"]
 do_not_confuse: []
@@ -39,6 +39,6 @@ By formalizing AAD quantities into these components, PROPRIUM ensures that theor
 requirements (e.g., separating $\mathcal{C}_t$ from its compressed form $M_t$) are
 mechanically preserved in software.
 
-Defined in [`#def-proprium-mapping`](../../04-eli/src/def-proprium-mapping.md). Source
+Defined in [`#def-proprium-mapping`](../../04-eli-core/src/def-proprium-mapping.md). Source
 architecture documents at `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` and
 `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md`.

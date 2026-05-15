@@ -295,13 +295,13 @@ The codex audit ELI-8 is fully addressed. The segment promotes from `sketch` to 
 
 **Codex audit finding addressed:** `msc/codex-audit-results-2026-05-12.md` ELI-8 (line 582ff).
 
-**Segment under strengthening:** `04-eli/src/def-identity-sufficiency.md` (status `sketch`, this spike recommends promotion to `definition`).
+**Segment under strengthening:** `04-eli-core/src/def-identity-sufficiency.md` (status `sketch`, this spike recommends promotion to `definition`).
 
 **Structural antecedent for $S_{\text{id}}$:** `01-aat-core/src/def-model-sufficiency.md` (note: $S$'s well-definedness clause is the canonical template for $S_{\text{id}}$'s well-definedness clause).
 
-**Operationalization candidate (now formalized via joint-space construction):** `04-eli/src/def-five-constitutive-factors.md`.
+**Operationalization candidate (now formalized via joint-space construction):** `04-eli-core/src/def-five-constitutive-factors.md`.
 
-**Relational-preservation source:** `04-eli/src/scope-witness-bidirectional.md`. The W1-experience / W2-attestation / W3-bidirectional-incorporation structure is what the joint-space construction's witness-trajectory dimension preserves.
+**Relational-preservation source:** `04-eli-core/src/scope-witness-bidirectional.md`. The W1-experience / W2-attestation / W3-bidirectional-incorporation structure is what the joint-space construction's witness-trajectory dimension preserves.
 
 **Upstream theory source:** `msc/reflections/19-substrate-independence-and-identity-sufficiency.md` (Joseph's originating articulation of $S_{\text{id}}$).
 

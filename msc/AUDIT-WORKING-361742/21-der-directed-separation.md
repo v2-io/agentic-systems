@@ -23,7 +23,7 @@ The term is precisely right:
 - "Directed" = asymmetric information flow (f_M is goal-blind; f_G depends on M_t)
 - "Separation" = Pearl d-separation lineage
 
-Additional confirmation: The Findings brief confirms this is the upstream commitment that lets 03-logogenic-agents/ start from a coupled formulation rather than treating coupled agents as failed Class 1 agents.
+Additional confirmation: The Findings brief confirms this is the upstream commitment that lets 03-llm-core/ start from a coupled formulation rather than treating coupled agents as failed Class 1 agents.
 
 ## Key terms surfaced
 
@@ -39,6 +39,6 @@ Additional confirmation: The Findings brief confirms this is the upstream commit
 
 ## What's excellent here
 
-The explicit Class 2 scope exit is architecturally crucial. Rather than treating LLMs as approximate Class 1 agents, the theory cleanly says: LLMs need the coupled formulation, which is the territory of 03-logogenic-agents/. This is the scope honesty the Bruineberg critique identifies as missing in the Friston-blanket literature.
+The explicit Class 2 scope exit is architecturally crucial. Rather than treating LLMs as approximate Class 1 agents, the theory cleanly says: LLMs need the coupled formulation, which is the territory of 03-llm-core/. This is the scope honesty the Bruineberg critique identifies as missing in the Friston-blanket literature.
 
 The IDT (Information Digital Twin) empirical result is important: 89% vs 44% perturbation detection shows modular monitoring of internally-merged agents is both feasible and effective. Engineering design for Class 2 agents is possible at the system level even when component-level κ is high.

@@ -31,7 +31,7 @@ Read these to ground your votes:
 - `CLAUDE.md`, `TODO.md`, `OUTLINE.md` (and `01-aat-core/OUTLINE.md`)
 - `FORMAT.md`, `NOTATION.md`, `LEXICON.md`, `README.md`
 - `PROPOSALS.md` — current architectural portfolio. Read for context, not for naming cues.
-- Segment files under `01-aat-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/` — sample widely; do not just scan slugs.
+- Segment files under `01-aat-core/src/`, `02-tst-core/src/`, `03-llm-core/src/`, `04-eli-core/src/` — sample widely; do not just scan slugs.
 - Your own judgment about what a skilled-reader-six-months-later would struggle to parse aloud.
 
 ## Architectural invariants — NOT vote targets

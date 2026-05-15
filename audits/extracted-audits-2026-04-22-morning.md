@@ -21,7 +21,7 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 
 > Codex:
 >
-> • I audited the current source corpus in `01-aat-core/src`, active `02-tst-core/src`, and `03-logogenic-agents/src`, and only then checked `msc/` for additional context on issues that already cleared the burden of proof in source. I did not count candidates the repo already narrows well in current source, including the DAG sufficiency-vs-necessity caveat, the unity-dimensions update-homogeneity gap, and the observation-ambiguity architecture-contamination issue.
+> • I audited the current source corpus in `01-aat-core/src`, active `02-tst-core/src`, and `03-llm-core/src`, and only then checked `msc/` for additional context on issues that already cleared the burden of proof in source. I did not count candidates the repo already narrows well in current source, including the DAG sufficiency-vs-necessity caveat, the unity-dimensions update-homogeneity gap, and the observation-ambiguity architecture-contamination issue.
 >
 > 1. **Section II silently shifts from agency scope to a narrower learning-purposeful scope.**
 >    Problematic passage: `01-aat-core/src/causal-hierarchy-requirement.md:30` says "We restrict attention to learning purposeful agents …" and then "All remaining Section II results operate within learning-agent scope."
@@ -172,9 +172,9 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 >
 > **Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 >
-> > "**Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (#directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-logogenic-agents/`… This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II."
+> > "**Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (#directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-llm-core/`… This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II."
 >
-> **Strongest mitigating passage** (`03-logogenic-agents/src/section-ii-survival.md` §Scorecard and §Discussion):
+> **Strongest mitigating passage** (`03-llm-core/src/section-ii-survival.md` §Scorecard and §Discussion):
 >
 > > "Exact: 15.5/24, Approximate: 5.5/24, Modified: 2/24, Fails: 1/24… Section II's *conceptual architecture* applies to Class 2 agents (16/24 exact survival is a claim about this), but Section II's *operational deployment* on Class 2 agents requires additional instrumentation…"
 >

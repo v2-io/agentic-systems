@@ -185,8 +185,8 @@ Scope (Joseph-confirmed):
 **Files edited (49 total across all 4 components):**
 - 22 in `01-aat-core/src/`
 - 21 in `02-tst-core/src/`
-- 2 in `03-logogenic-agents/src/`
-- 4 in `04-logozoetic-agents/src/`
+- 2 in `03-llm-core/src/`
+- 4 in `04-eli-core/src/`
 
 **Trailer removals:** 49 "Descended from..." lines deleted across 49 files.
 
@@ -214,7 +214,7 @@ Scope (Joseph-confirmed):
 
 ### N.3 — Wider-scan observation from the cleanup agent
 
-A broader scan for related lineage patterns (`prior TFT`, `TFT corpus`, `in TFT`, bare `TFT` in non-`old-*` src, `predecessor`, `absorbed from`, `before AAD`) returned **no surviving lineage breadcrumbs** in any non-`old-*` segment file. The cleanup is comprehensive — the framework's segment-set in `01-aat-core/src/`, `03-logogenic-agents/src/`, and `04-logozoetic-agents/src/` is now lineage-clean.
+A broader scan for related lineage patterns (`prior TFT`, `TFT corpus`, `in TFT`, bare `TFT` in non-`old-*` src, `predecessor`, `absorbed from`, `before AAD`) returned **no surviving lineage breadcrumbs** in any non-`old-*` segment file. The cleanup is comprehensive — the framework's segment-set in `01-aat-core/src/`, `03-llm-core/src/`, and `04-eli-core/src/` is now lineage-clean.
 
 The TST-T-XX / TST-D-XX inline references in `02-tst-core/src/*.md` (4 instances Joseph deferred) remain for a future pass when TST sketch-stage segments mature. The lineage-trailer cleanup in `02-tst-core/src/` is done; only the inline references within prose remain.
 

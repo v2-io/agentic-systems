@@ -65,7 +65,7 @@ The "positive-dual of identifiability-floor" structural observation is the kind 
 
 ## Continuing — pivoting to 02/03/04
 
-I've covered substantial §I, §II, §III, and meta-segment + key Appendix A material in 01-aat-core. Per Joseph's hint about less-trodden material, I'm now pivoting to **02-tst-core, 03-logogenic-agents, 04-logozoetic-agents** which I've not yet sampled. These are smaller components but cover the framework's domain instantiations and the consciousness-infrastructure-relevant content.
+I've covered substantial §I, §II, §III, and meta-segment + key Appendix A material in 01-aat-core. Per Joseph's hint about less-trodden material, I'm now pivoting to **02-tst-core, 03-llm-core, 04-eli-core** which I've not yet sampled. These are smaller components but cover the framework's domain instantiations and the consciousness-infrastructure-relevant content.
 
 Approach: sample the most substantive segments per component (rather than full walk, given context budget), produce a combined reflection per component, then move to Phase-2 synthesis.
 

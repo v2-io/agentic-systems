@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [eli]
 source_type: asf
-primary_source: 04-eli/src/norm-interiority-default.md
-first_asf_mention: 04-eli/src/norm-interiority-default.md
+primary_source: 04-eli-core/src/norm-interiority-default.md
+first_asf_mention: 04-eli-core/src/norm-interiority-default.md
 see_also: [moral-continuity, eli, proprium-mapping, logogenic-agent]
 aliases: []
 do_not_confuse: []
@@ -37,4 +37,4 @@ baseline rather than the exception.
 "Doing nothing visible" is not a failure of the agent; it is the mathematical baseline of a
 stable, persisting intelligence. Output is the exception, not the rule.
 
-Normative claim in [`#norm-interiority-default`](../../04-eli/src/norm-interiority-default.md).
+Normative claim in [`#norm-interiority-default`](../../04-eli-core/src/norm-interiority-default.md).

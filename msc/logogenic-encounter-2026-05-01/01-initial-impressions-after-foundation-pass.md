@@ -4,7 +4,7 @@
 
 ## What's already written for parts 3 and 4
 
-**03-logogenic-agents OUTLINE.md** carries:
+**03-llm-core OUTLINE.md** carries:
 
 - 8 main slugs at `draft` (or `exploratory`) stage: `scope-logogenic-agent`, `obs-context-turnover`, `def-coupled-update-dynamics`, `result-section-ii-survival`, `result-coupled-diagnostic-framework`, `disc-m-preservation`, `scope-observation-ambiguity-modulation`, `obs-evaluation-metrics`, `hyp-experiential-training`.
 - 5 proposed additions (all `exploratory`):
@@ -15,7 +15,7 @@
   - `der-self-referential-closure` — thermodynamic stability of agent maintaining own codebase
 - 2 explicit GAPs: language-specific orient cascade; self-referential closure (AAD agent on AAD codebase)
 
-**04-eli OUTLINE.md** carries:
+**04-eli-core OUTLINE.md** carries:
 
 - 4 main slugs at `draft` / `exploratory`: `scope-moral-continuity`, `def-proprium-mapping`, `obs-developmental-trajectory`, `norm-interiority-default`
 - 12 proposed additions (all `exploratory`), several genuinely substantive:

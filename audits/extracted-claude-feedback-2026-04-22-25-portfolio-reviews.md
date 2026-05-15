@@ -239,7 +239,7 @@ In all four sessions, Joseph engaged immediately with substantive follow-up — 
 >
 > I have **not yet first-hand verified**:
 > - **F-V1** (variance-gap math in `deriv-discrete-sector-condition.md`) — audit's re-derivation and numerical sanity check ($\nu=10$ gap ≈ 0.053, $\nu=100$ gap ≈ 0.005, ten-fold → ten-fold) are convincing but I haven't checked the segment's own derivation chain
-> - **F-V5** (TST/logogenic-agents integration debt) — flagged with medium-high confidence by the audit because the audit author didn't first-hand read `03-logogenic-agents/`. I should read those segments to confirm before treating it as actionable
+> - **F-V5** (TST/logogenic-agents integration debt) — flagged with medium-high confidence by the audit because the audit author didn't first-hand read `03-llm-core/`. I should read those segments to confirm before treating it as actionable
 > - **P-V1, P-V2, P-V3** (the three partial findings) — moderate effort to verify
 >
 > ## Proposed routing
@@ -250,14 +250,14 @@ In all four sessions, Joseph engaged immediately with substantive follow-up — 
 > | F-V2 | Cross-segment contradiction | Editorial: rewrite scope-multi-agent §Discussion para about adversarial pairs to defer to C-iv | Yes |
 > | F-V3 | Internal tension | **Tied to F8 + B7** — needs your Option A/B decision before edit | No — your call |
 > | F-V4 | Math error in worked example | Editorial: replace the zero-sum worked example with corrected version (Φ = a_A + a_B, NE at (1,1)) | Yes |
-> | F-V5 | Integration debt TST↔logogenic | Needs first-hand read of `03-logogenic-agents/` first to scope properly | Partial — research first |
+> | F-V5 | Integration debt TST↔logogenic | Needs first-hand read of `03-llm-core/` first to scope properly | Partial — research first |
 > | B7 | Architectural proposal | New PROPOSALS.md §G entry SP-21 — split routes into distinct ontologies | No — needs your scoping |
 >
 > The three partial findings (P-V1, P-V2, P-V3) are smaller; P-V3 is editorial (one sentence in `hyp-causal-discovery-from-git.md`); P-V1/P-V2 may benefit from a careful re-pass on discrete-vs-continuous accounting alongside F-V1.
 >
 > ## What I'd recommend doing now (ordered)
 >
-> 1. **Quick verification batch** — I do first-hand: F-V1's math against current segment text, scan the three partial findings, briefly read `03-logogenic-agents/` for F-V5. ~20 min of my time. This is verification I shouldn't delegate (per the audit instructions §3.1, delegation of comprehension is an anti-pattern).
+> 1. **Quick verification batch** — I do first-hand: F-V1's math against current segment text, scan the three partial findings, briefly read `03-llm-core/` for F-V5. ~20 min of my time. This is verification I shouldn't delegate (per the audit instructions §3.1, delegation of comprehension is an anti-pattern).
 >
 > 2. **Create `msc/pending-findings-2026-04-25.md`** capturing the 5+3 findings with their current-src status and confidence levels — consistent with the dated-pending-findings convention you have for prior cycles.
 >

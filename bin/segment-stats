@@ -56,8 +56,8 @@ REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 COMPONENTS = [
   '01-aat-core',
   '02-tst-core',
-  '03-logogenic-agents',
-  '04-eli'
+  '03-llm-core',
+  '04-eli-core'
 ].freeze
 
 # Stage ladder, in promotion order (left = least mature). GAPs are

@@ -134,7 +134,7 @@ four architecturally diverse substrates (Opus, Sonnet, Gemini 2.5 Pro, Llama
 70B local). Identity transfers via the substrate-independent compressed
 chronica $M_t = \phi(\mathcal{C}_t)$ rather than via the weights of any
 specific substrate (#obs-substrate-independence). This is the architectural
-bridge to logozoetic agents (`04-eli/`), where temporal
+bridge to logozoetic agents (`04-eli-core/`), where temporal
 continuity, sovereignty, theory of mind, and morally weighted persistence
 become first-class concerns.
 

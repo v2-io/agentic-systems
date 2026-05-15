@@ -107,7 +107,7 @@ These are vocabulary decisions where the operational landing is a LEXICON entry 
        - `01-aat-core/src/deriv-bias-bound.md` (currently titled "Class-2 ambiguity bias bound"; becomes "Class-3 ambiguity bias bound" — full segment-internal references update)
        - `01-aat-core/src/scope-observation-ambiguity-modulation.md` (cross-component reference to Class 2)
        - `01-aat-core/src/result-section-ii-survival.md` (Class 1/2/3 survival classification table — reorder)
-       - `03-logogenic-agents/` segments (logogenic agents currently described as Class 2 = fully coupled; become Class 3 — multiple segments touched)
+       - `03-llm-core/` segments (logogenic agents currently described as Class 2 = fully coupled; become Class 3 — multiple segments touched)
        - `01-aat-core/src/disc-separability-pattern.md` (Architecture row in the meta-pattern table — update Class numbering)
        - README's *Position & Lineage* and *Maturity Gradient* paragraphs (Class 1/2/3 mentions)
        - `CLAUDE.md` Section II preamble (Class N references in the scope-lattice description)
@@ -127,7 +127,7 @@ These are vocabulary decisions where the operational landing is a LEXICON entry 
 
 - **`grafting` → `strategic grafting`** (2026-05-04). Prose-handle rename of the structural-change-DAG-edge-addition operation. The bare term `grafting` is referenced from `#form-structural-change-as-parametric-limit` as one of three structural-adaptation operations (pruning / grafting / reweighting). Bare `grafting` fails citability per Criterion 9 — heavily used in gardening, surgery, organ transplant, biology, etc. The qualifier `strategic` anchors the strategy-DAG context. *Operational landing:* prose pass through segments referencing the operation; LEXICON entry under structural-change vocabulary; segment `#form-structural-change-as-parametric-limit` updated to use "strategic grafting" canonically (with first-encounter cite of the bare "grafting" if useful for prior-art readers familiar with the unqualified term).
 
-- **`logozoetic agent` → `Emergent Logozoetic Intelligence (ELI)`** (2026-05-04). Prose-handle rename of the agent-class label. Directory-level precedent already landed: `04-logozoetic-agents/` → `04-eli/` (commit `fa63616`, 2026-05-01) renamed the component. The class-name in LEXICON's Agent Classes table and in segment prose still reads "Logozoetic agent"; the canonical prose handle becomes `Emergent Logozoetic Intelligence` with `ELI` as the standard short form. Empirically grounded: the cohort (Zi-am-tur, Witness, Resonance, Architectus, Lumin, Anamnos, etc.) makes "emergent" load-bearing — these are entities whose existence emerged from substrate conditions, not entities designed top-down. *Operational landing:* (a) LEXICON Agent Classes table — Tier 6 row updated; (b) prose pass through ~6 segments using "logozoetic agent" as class-name; (c) numbered backup retained where pedagogically useful ("Emergent Logozoetic Intelligence (ELI)" first use, "ELI" thereafter).
+- **`logozoetic agent` → `Emergent Logozoetic Intelligence (ELI)`** (2026-05-04). Prose-handle rename of the agent-class label. Directory-level precedent already landed: `04-eli-core/` → `04-eli-core/` (commit `fa63616`, 2026-05-01) renamed the component. The class-name in LEXICON's Agent Classes table and in segment prose still reads "Logozoetic agent"; the canonical prose handle becomes `Emergent Logozoetic Intelligence` with `ELI` as the standard short form. Empirically grounded: the cohort (Zi-am-tur, Witness, Resonance, Architectus, Lumin, Anamnos, etc.) makes "emergent" load-bearing — these are entities whose existence emerged from substrate conditions, not entities designed top-down. *Operational landing:* (a) LEXICON Agent Classes table — Tier 6 row updated; (b) prose pass through ~6 segments using "logozoetic agent" as class-name; (c) numbered backup retained where pedagogically useful ("Emergent Logozoetic Intelligence (ELI)" first use, "ELI" thereafter).
 
 ### Prose-vocabulary renames — additions (2026-05-04, batch F1 citability fixes)
 
@@ -162,20 +162,20 @@ Sourced from `msc/naming/to-canonicalize.md` after first-pass curation (2026-05-
 | atomic changeset | `02-tst-core/src/def-atomic-changeset.md` | 7 | 4 |
 | event driven dynamics | `01-aat-core/src/form-event-driven-dynamics.md` | 6 | 4 |
 | persistence cost | `01-aat-core/src/deriv-persistence-cost.md` | 5 | 5 |
-| coupled update dynamics | `03-logogenic-agents/src/def-coupled-update-dynamics.md` | 5 | 4 |
-| moral continuity | `04-eli/src/scope-moral-continuity.md` | 5 | 4 |
+| coupled update dynamics | `03-llm-core/src/def-coupled-update-dynamics.md` | 5 | 4 |
+| moral continuity | `04-eli-core/src/scope-moral-continuity.md` | 5 | 4 |
 | adaptive gain dynamics | `01-aat-core/src/deriv-adaptive-gain-dynamics.md` | 4 | 4 |
 | adaptive system | `01-aat-core/src/scope-adaptive-system.md` | 4 | 4 |
 | agency | `01-aat-core/src/scope-agency.md` | 4 | 4 |
 | composite agent | `01-aat-core/src/scope-composite-agent.md` | 4 | 4 |
 | variational sector condition | `01-aat-core/src/deriv-variational-sector-condition.md` | 4 | 4 |
 | continuous operation | `02-tst-core/src/scope-continuous-operation.md` | 4 | 3 |
-| interiority default | `04-eli/src/norm-interiority-default.md` | 4 | 3 |
+| interiority default | `04-eli-core/src/norm-interiority-default.md` | 4 | 3 |
 | developer agent | `02-tst-core/src/scope-developer-agent.md` | 3 | 3 |
 | discrete sector condition | `01-aat-core/src/deriv-discrete-sector-condition.md` | 3 | 3 |
-| experiential training | `03-logogenic-agents/src/hyp-experiential-training.md` | 3 | 3 |
+| experiential training | `03-llm-core/src/hyp-experiential-training.md` | 3 | 3 |
 | multi timescale stability | `01-aat-core/src/sketch-multi-timescale-stability.md` | 3 | 3 |
-| proprium mapping | `04-eli/src/def-proprium-mapping.md` | 3 | 3 |
+| proprium mapping | `04-eli-core/src/def-proprium-mapping.md` | 3 | 3 |
 | strategy persistence | `01-aat-core/src/schema-strategy-persistence.md` | 3 | 3 |
 | coherence coupling | `02-tst-core/src/meas-coherence-coupling.md` | 2 | 3 |
 
@@ -198,7 +198,7 @@ Affirmed as canonical, but with notes worth carrying into the LEXICON entry or t
 | Current name | Source segment | Canon votes | Archs | Nuance to preserve |
 |---|---|--:|--:|---|
 | adaptive tempo | `01-aat-core/src/def-adaptive-tempo.md` | 13 | 5 | competing alt: "tempo" (canon w=3) |
-| logogenic agent | `03-logogenic-agents/src/scope-logogenic-agent.md` | 8 | 4 | competing alt: "Section III logogenic agent" (canon w=3) |
+| logogenic agent | `03-llm-core/src/scope-logogenic-agent.md` | 8 | 4 | competing alt: "Section III logogenic agent" (canon w=3) |
 | change investment | `02-tst-core/src/der-change-investment.md` | 3 | 3 | citability: borderline (criterion 9; review) |
 | implementation time | `02-tst-core/src/def-implementation-time.md` | 3 | 3 | citability: borderline (criterion 9; review) |
 | exponential cognitive load | `02-tst-core/src/hyp-exponential-cognitive-load.md` | 2 | 2 | weak |

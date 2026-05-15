@@ -20,13 +20,13 @@ This note is a repo-wide naming-debt scan intended to separate actionable cleanu
 | `02-tst-core/src/code-quality-as-observation-infrastructure.md` | dependency on `developer-as-act-agent` | Dependency graph will go stale if only the primary file is renamed. | Update dependency/cross-reference in the same change. |
 | `02-tst-core/src/causal-discovery-from-git.md` | dependency on `developer-as-act-agent` | Same reason: downstream reference to stale slug. | Update in the same change. |
 | `02-tst-core/src/software-scope.md` | working-notes mention of `#developer-as-act-agent` | Lower-priority than canonical links, but still semi-live. | Update if the notes are meant to stay current; otherwise leave as historical commentary. |
-| `03-logogenic-agents/src/ai-agent-as-act-agent.md` | file slug and definition label still use `act-agent` while the H1 already says `AI Agent as AAD Agent` | Same pattern as the developer segment, and this one is especially visible because it is the entry point to the section. | Rename the file, frontmatter slug, and formal label together after the alias decision between `aad-agent` and `adaptive-agent`. |
-| `03-logogenic-agents/OUTLINE.md` | `[#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md)` | The canonical section outline still points to the stale slug. | Update the link target and displayed slug after the file rename lands. |
-| `03-logogenic-agents/src/section-ii-survival.md` | dependency and prose refs to `ai-agent-as-act-agent` | Core cross-reference in a live section result. | Update in the same change. |
-| `03-logogenic-agents/src/context-turnover.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
-| `03-logogenic-agents/src/coupled-update-dynamics.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
-| `03-logogenic-agents/src/observation-ambiguity-modulation.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
-| `03-logogenic-agents/src/m-preservation.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
+| `03-llm-core/src/ai-agent-as-act-agent.md` | file slug and definition label still use `act-agent` while the H1 already says `AI Agent as AAD Agent` | Same pattern as the developer segment, and this one is especially visible because it is the entry point to the section. | Rename the file, frontmatter slug, and formal label together after the alias decision between `aad-agent` and `adaptive-agent`. |
+| `03-llm-core/OUTLINE.md` | `[#ai-agent-as-act-agent](src/ai-agent-as-act-agent.md)` | The canonical section outline still points to the stale slug. | Update the link target and displayed slug after the file rename lands. |
+| `03-llm-core/src/section-ii-survival.md` | dependency and prose refs to `ai-agent-as-act-agent` | Core cross-reference in a live section result. | Update in the same change. |
+| `03-llm-core/src/context-turnover.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
+| `03-llm-core/src/coupled-update-dynamics.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
+| `03-llm-core/src/observation-ambiguity-modulation.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
+| `03-llm-core/src/m-preservation.md` | dependency on `ai-agent-as-act-agent` | Same reason. | Update in the same change. |
 
 ## Semi-Live Internal Surfaces
 

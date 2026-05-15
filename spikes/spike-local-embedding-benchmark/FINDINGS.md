@@ -128,7 +128,7 @@ Items 1-5 are load-bearing. Items 6-8 are project-tooling on top.
 
 ### Design
 
-- **Corpus**: 122 segments from `01-aat-core/src/` and `03-logogenic-agents/src/` (excluding `old-*`).
+- **Corpus**: 122 segments from `01-aat-core/src/` and `03-llm-core/src/` (excluding `old-*`).
 - **Granularity**: one embedding per segment. Body variant = title + summary + first ~2500 chars. Terse variant = title + first paragraph (~200-400 chars).
 - **Queries**: 12 hand-curated AAD-specific queries in `queries.json`, each with 1-2 "primary" ground-truth segments + "also" supplementary list.
 - **Metric**: cosine similarity; rank of best primary; MRR; R@5; R@10; median rank.

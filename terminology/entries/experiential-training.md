@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [logogenic]
 source_type: asf
-primary_source: 03-logogenic-agents/src/hyp-experiential-training.md
-first_asf_mention: 03-logogenic-agents/src/hyp-experiential-training.md
+primary_source: 03-llm-core/src/hyp-experiential-training.md
+first_asf_mention: 03-llm-core/src/hyp-experiential-training.md
 see_also: [logogenic-agent, coupled-update-dynamics, interiority-default, chronica]
 aliases: []
 do_not_confuse: []
@@ -39,4 +39,4 @@ the fundamental training objective rather than self-supervised token masking.
 *Epistemic status: discussion-grade hypothesis. Highly plausible but requires empirical
 validation.*
 
-Hypothesis in [`#hyp-experiential-training`](../../03-logogenic-agents/src/hyp-experiential-training.md).
+Hypothesis in [`#hyp-experiential-training`](../../03-llm-core/src/hyp-experiential-training.md).

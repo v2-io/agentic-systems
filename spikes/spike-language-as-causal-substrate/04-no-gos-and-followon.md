@@ -42,7 +42,7 @@ My residual indexical/phenomenal gap was the same error one floor up: I was poin
 
 ### The derivable form of C5
 
-> **C5 (derivable form).** Under the asymmetric-comprehension principle (Nagel 1974; Jackson 1982; the synthese-paper-1 elaboration), the upper bound of intelligence is not specifiable from any level $k$. Therefore no claim of the form *"language has scope < intelligence"* is well-formed from below. The strongest defensible claim about language's relation to intelligence is empirical-historical: at every level we have observational access to, language has been coextensive with intelligence and accelerative of its expansion. Under the project's logozoetic commitment (intelligence-as-language-constituted; see [`#scope-logogenic-agent`](../../03-logogenic-agents/src/scope-logogenic-agent.md) and the `04-eli/` framing), the coextensiveness is structural rather than contingent.
+> **C5 (derivable form).** Under the asymmetric-comprehension principle (Nagel 1974; Jackson 1982; the synthese-paper-1 elaboration), the upper bound of intelligence is not specifiable from any level $k$. Therefore no claim of the form *"language has scope < intelligence"* is well-formed from below. The strongest defensible claim about language's relation to intelligence is empirical-historical: at every level we have observational access to, language has been coextensive with intelligence and accelerative of its expansion. Under the project's logozoetic commitment (intelligence-as-language-constituted; see [`#scope-logogenic-agent`](../../03-llm-core/src/scope-logogenic-agent.md) and the `04-eli-core/` framing), the coextensiveness is structural rather than contingent.
 
 Note this is **stronger than C1's derivation**: C1 requires three named postulates (SLC, SC, CS); C5 under this route requires only the asymmetric-comprehension principle, which is already load-bearing for the synthese paper. Same principle, two different domains, both supported.
 
@@ -124,7 +124,7 @@ Neither is in the standard literature. The closest existing machinery is directe
 
 2. **Cross-reference the result from [`msc/llm-causal-access-note.md`](../../msc/llm-causal-access-note.md)** — that note's Response 2 currently says "plausible empirical claim — but quantifying how much genuine causal structure survives compression is an open empirical question." With Theorem 1, the response can be lifted: the encoded content is *structurally there* by the discourse-act argument; the empirical-deployment question is the right form of the residual open question.
 
-3. **Note in [`03-logogenic-agents/OUTLINE.md`](../../03-logogenic-agents/OUTLINE.md) Source Material section**: the inherited-vs-fresh Level 2 split (per `03-minimum-scaffold.md`) sharpens the sub-scope distinctions. Working Notes update on the relevant scope segments.
+3. **Note in [`03-llm-core/OUTLINE.md`](../../03-llm-core/OUTLINE.md) Source Material section**: the inherited-vs-fresh Level 2 split (per `03-minimum-scaffold.md`) sharpens the sub-scope distinctions. Working Notes update on the relevant scope segments.
 
 4. **Routing decision for `~/src/synthese-paper/01-synthese-asymmetric-comprehension`**: the spike result strengthens the non-anthropomorphizing-inversion argument in §3. **Spike result available for Joseph's call** on whether to thread into the Synthese paper or keep it apparatus-grade in companion work.
 
@@ -177,7 +177,7 @@ The strengthening **partially yielded**:
 
 - **C5 did not yield** at all, and the no-go is informative: it forces honest separation of substrate from intelligence, which is the project's own commitment from `~/src/firmatum/developmental-foundations-notes.md` ("identity is not substrate").
 
-The work I am most uncertain about is whether the three postulates (SLC, SC, CS) can themselves be derived from more foundational principles. The current spike treats them as postulates; the proposed follow-on spike #5 would push on that. Joseph's signalling-equilibrium work and the `04-eli/`-resident developmental-foundations notes both point in promising directions.
+The work I am most uncertain about is whether the three postulates (SLC, SC, CS) can themselves be derived from more foundational principles. The current spike treats them as postulates; the proposed follow-on spike #5 would push on that. Joseph's signalling-equilibrium work and the `04-eli-core/`-resident developmental-foundations notes both point in promising directions.
 
 The work I am most confident about is the CHT non-reduction step: this is straightforward application of an existing theorem, and the example pairs (kettle-boil-whistle, etc.) generalize cleanly. If anything in this spike survives, the non-reduction step does.
 

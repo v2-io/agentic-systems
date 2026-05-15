@@ -25,7 +25,7 @@ I audited `src` first and only then used `msc/` to look for additional material 
 
 3. The mutual-benefit route `(C-iii)` still does not clearly supply the composite objective/state object that downstream composition assumes. Problematic passage: `01-aat-core/src/scope-composite-agent.md:38` defines `(C-iii)` via a relevance variable `Y` and says there is "No explicit common objective," yet `01-aat-core/src/scope-composite-agent.md:50` lets any of `(C-i)/(C-ii)/(C-iii)` establish composite status. Strongest counterevidence in `src`: `01-aat-core/src/form-composition-closure.md:99` narrows downstream requirements by allowing "simpler goal representations" rather than always a full strategy DAG, and `01-aat-core/src/scope-composite-agent.md:70` correctly states that composition applies only where `O_c` is well-defined. Status: still real. Even with the weaker downstream requirement, current `src` does not show how a merely positive-sum `Y` induces the thin `O_c` needed for `G_c`; the issue is under-specification, not just phrasing. Confidence: high.
 
-4. The coupled/logogenic diagnostic story still overstates operational computability. Problematic passage: `03-logogenic-agents/src/result-coupled-diagnostic-framework.md:18` says the diagnostic quantities "can be computed after each coupled update," and `03-logogenic-agents/src/result-coupled-diagnostic-framework.md:40` gives a direct recipe "From `X^(post)`, compute …". Strongest counterevidence in `src`: `03-logogenic-agents/src/result-section-ii-survival.md:127` says statement-level survival is not "operational extractability" and requires separate instrumentation, and `03-logogenic-agents/src/def-coupled-update-dynamics.md:66` says the `M/G` decomposition is post-hoc, analytical, and not generally computable. Status: still real. The framework has the right caveat elsewhere, but this segment still reads like a runtime recipe for quantities that the repo itself treats as analytically reconstructed and instrumentation-dependent. Confidence: high.
+4. The coupled/logogenic diagnostic story still overstates operational computability. Problematic passage: `03-llm-core/src/result-coupled-diagnostic-framework.md:18` says the diagnostic quantities "can be computed after each coupled update," and `03-llm-core/src/result-coupled-diagnostic-framework.md:40` gives a direct recipe "From `X^(post)`, compute …". Strongest counterevidence in `src`: `03-llm-core/src/result-section-ii-survival.md:127` says statement-level survival is not "operational extractability" and requires separate instrumentation, and `03-llm-core/src/def-coupled-update-dynamics.md:66` says the `M/G` decomposition is post-hoc, analytical, and not generally computable. Status: still real. The framework has the right caveat elsewhere, but this segment still reads like a runtime recipe for quantities that the repo itself treats as analytically reconstructed and instrumentation-dependent. Confidence: high.
 
 **Unintegrated `msc/` support**
 
@@ -45,7 +45,7 @@ I audited `src` first and only then used `msc/` to look for additional material 
 
 ## Gemini
 
-Based on a rigorous, de novo audit of the agentic systems framework in the current repository state (primarily focusing on the `src/` directories of `01-aat-core`, `02-tst-core`, `03-logogenic-agents`, and `04-logozoetic-agents`), along with an integration analysis against the `msc/` directory, here are the findings.
+Based on a rigorous, de novo audit of the agentic systems framework in the current repository state (primarily focusing on the `src/` directories of `01-aat-core`, `02-tst-core`, `03-llm-core`, and `04-eli-core`), along with an integration analysis against the `msc/` directory, here are the findings.
 
 ### FIRST PASS: Core Framework Audit
 
@@ -64,8 +64,8 @@ Here are the structural findings evaluated strictly against the current reposito
 - **Confidence:** High.
 
 #### Finding 3: Logogenic Goal-Conditioning Bias Bound is Unproven
-- **Problematic Passage:** In `03-logogenic-agents/src/result-section-ii-survival.md`, the text attempts to bound the bias introduced by LLMs processing goals and observations simultaneously (violating directed separation): *"The bound $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot H(G_t \mid e_\tau, M_{\tau^-})$ deserves formal derivation... Without this, the bound is order-of-magnitude guidance, not a theorem."*
-- **Strongest Counterevidence:** `03-logogenic-agents/src/result-coupled-diagnostic-framework.md` provides a normative workaround: compute diagnostics post-hoc and apply the 2x2 diagnostic table with "awareness that the diagnostics may be biased."
+- **Problematic Passage:** In `03-llm-core/src/result-section-ii-survival.md`, the text attempts to bound the bias introduced by LLMs processing goals and observations simultaneously (violating directed separation): *"The bound $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot H(G_t \mid e_\tau, M_{\tau^-})$ deserves formal derivation... Without this, the bound is order-of-magnitude guidance, not a theorem."*
+- **Strongest Counterevidence:** `03-llm-core/src/result-coupled-diagnostic-framework.md` provides a normative workaround: compute diagnostics post-hoc and apply the 2x2 diagnostic table with "awareness that the diagnostics may be biased."
 - **Status: Still Real.** For Class 2 agents (like modern LLMs), directed separation fails by definition. If the bias bound is merely an unproven heuristical guess, the entire application of AAD's exact Section II machinery to LLMs rests on a foundation that cannot formally guarantee its own accuracy.
 - **Confidence:** High.
 

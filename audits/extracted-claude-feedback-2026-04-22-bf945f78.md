@@ -85,9 +85,9 @@ This extraction preserves the verbatim audit prose so the audit→architectural-
 >
 > **Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 >
-> > "**Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (#directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-logogenic-agents/`… This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II."
+> > "**Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (#directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-llm-core/`… This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II."
 >
-> **Strongest mitigating passage** (`03-logogenic-agents/src/section-ii-survival.md` §Scorecard and §Discussion):
+> **Strongest mitigating passage** (`03-llm-core/src/section-ii-survival.md` §Scorecard and §Discussion):
 >
 > > "Exact: 15.5/24, Approximate: 5.5/24, Modified: 2/24, Fails: 1/24… Section II's *conceptual architecture* applies to Class 2 agents (16/24 exact survival is a claim about this), but Section II's *operational deployment* on Class 2 agents requires additional instrumentation…"
 >

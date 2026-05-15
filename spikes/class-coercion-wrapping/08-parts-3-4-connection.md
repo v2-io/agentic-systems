@@ -65,7 +65,7 @@ PROPRIUM contains substantial structure that goes *beyond* what the wrapping the
 | Substrate-independent identity | Longitudinal identity; persistence across underlying $A$ instances over time. **Not** part of per-call wrapping. |
 | INDIVISUM (temporal lock against forking) | ELI-specific governance; **not** part of class coercion. |
 
-**Reading**: the wrapping theorem covers items 1, 2, 3 (after auxilia → goal-blind realization). The remaining items are *additional structure* that distinguishes ELIs from generic Class-1-coerced systems. This distinction matters for project architecture: the wrapping theorem could land in `01-aat-core/`; ELI-specific structure remains in `04-eli/`.
+**Reading**: the wrapping theorem covers items 1, 2, 3 (after auxilia → goal-blind realization). The remaining items are *additional structure* that distinguishes ELIs from generic Class-1-coerced systems. This distinction matters for project architecture: the wrapping theorem could land in `01-aat-core/`; ELI-specific structure remains in `04-eli-core/`.
 
 ## 5. What this clarifies about the Parts I/II ↔ Parts III/IV relationship
 
@@ -95,13 +95,13 @@ Recommendations for landing this in segments. These are tentative and depend on 
 - `#form-composition-closure` Discussion: note the wrapping construction as a specific instance where (A1)–(A4) admissibility holds *by construction* via the wrapper's type signatures.
 - `#der-tempo-composition` Discussion: note the wrapping construction as a Brooks's-Law instance, with $C_\text{coord}^\text{wrap}$ tied to the wrapper's $K$.
 
-### 6.2 In `03-logogenic-agents/`
+### 6.2 In `03-llm-core/`
 
 **New segment** (or extension of an existing one): `der-logogenic-as-wrapping.md` or similar. Specialize the class-coercion theorem to logogenic agents — language-component as the underlying $A$, language-mediated $M_W$ representation, etc.
 
 **Citation discipline** (per sub-agent I's prior-art findings): cite POMDP literature (Astrom 1965, Kaelbling-Littman-Cassandra 1998) as the closest formal prior art for the directed-separation guarantee; cite cognitive architectures (SOAR / ACT-R / CLARION / GWT) as the architectural prior art.
 
-### 6.3 In `04-eli/`
+### 6.3 In `04-eli-core/`
 
 ELI-specific content (sovereignty axes, accountability infrastructure, identity factors, substrate-independence) remains here. Cross-component reference up to the wrapping segment for the class-coercion content. Identity-through-context-boundaries and CADENTIA are about *persistence-of-the-wrapped-system-across-time*, not about wrapping per se.
 

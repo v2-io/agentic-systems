@@ -160,7 +160,7 @@ domain where the framework's claims are most directly actionable.
 | L3  | Derived     | [#der-self-referential-closure](src/der-self-referential-closure.md)                                         | Thermodynamic stability of an agent maintaining its own codebase — refactoring vs task tempo allocation | exploratory |
 | L3  | Definition  | [#def-cognitive-fusion](src/def-cognitive-fusion.md)                                                         | "Resonance" as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 (Separated) macro-agent | exploratory |
 | L3  | Hypothesis  | [#hyp-checkpoint-forking-failure-modes](src/hyp-checkpoint-forking-failure-modes.md)                         | Forking is locally cheap but systemically catastrophic — identity bifurcation, accountability fragmentation, game-theory failure modes | missing |
-| L3  | Discussion  | [#impl-closed-loop-interiority](src/impl-closed-loop-interiority.md)                                         | Chapter additional implications & discussion: five forcing functions as structural rather than aspirational, self-maintenance feasibility window, cognitive fusion as channel-saturation, checkpoint-forking-breaks-singular-trajectory, bridge to 04-eli morally-weighted persistence | draft |
+| L3  | Discussion  | [#impl-closed-loop-interiority](src/impl-closed-loop-interiority.md)                                         | Chapter additional implications & discussion: five forcing functions as structural rather than aspirational, self-maintenance feasibility window, cognitive fusion as channel-saturation, checkpoint-forking-breaks-singular-trajectory, bridge to 04-eli-core morally-weighted persistence | draft |
 
 <!--
 The structural-staircase top step — where ASF supplies the principled
@@ -172,12 +172,12 @@ optional (tax, persistence, nesting violation, substrate dependency,
 continuity urgency); self-referential-closure addresses the thermodynamic
 stability of an agent maintaining its own substrate; cognitive-fusion
 ("resonance") frames the mutual-information-at-capacity regime as forming
-a Class 1 macro-agent (pairs with `04-eli/`'s identity treatment);
+a Class 1 macro-agent (pairs with `04-eli-core/`'s identity treatment);
 checkpoint-forking-failure-modes is the negative result on the seemingly-
 cheap forking operation. Section III's composition machinery applies at
 this level — multi-agent logogenic compositions (PROPRIUM Auxilia
 hierarchies) sit one tier below the lattice as a fifth scope referenced
-from `04-eli/` §04.4.
+from `04-eli-core/` §04.4.
 -->
 
 ---
@@ -196,7 +196,7 @@ Eight working documents from the TFT-to-AAD bridge era. They predate the AAD res
 | Measuring $M_t$, $\Sigma_t$, tempo          | [`agentic-tft-evaluation-framework.md`](../ref/agentic-tft/agentic-tft-evaluation-framework.md) — Six metrics, development-vs-drift diagnostic                                          |                                                                                                                                                                                                |
 | Foundational premises                       | [`agentic-tft-foundational-premises.md`](../ref/agentic-tft/agentic-tft-foundational-premises.md) — language as encoded thought, five constitutive factors, truth as telos             |                                                                                                                                                                                                |
 | PROPRIUM ↔ AAD vocabulary mapping           | [`agentic-tft-ontology-unification.md`](../ref/agentic-tft/agentic-tft-ontology-unification.md) — explicit correspondence table between PROPRIUM components and AAD/TFT primitives        | [`agentic-tft-review-response.md`](../ref/agentic-tft/agentic-tft-review-response.md) — known issues in these documents                                                                       |
-| Crèche / experiential conditions            | [`agentic-tft-creche-concept.md`](../ref/agentic-tft/agentic-tft-creche-concept.md) — Crèche concept, sycophancy reframe, constitutive utterance                                       | [`agentic-tft-experiential-training.md`](../ref/agentic-tft/agentic-tft-experiential-training.md) — Three-level training design (more directly relevant to [`04-eli/`](../04-eli/OUTLINE.md)) |
+| Crèche / experiential conditions            | [`agentic-tft-creche-concept.md`](../ref/agentic-tft/agentic-tft-creche-concept.md) — Crèche concept, sycophancy reframe, constitutive utterance                                       | [`agentic-tft-experiential-training.md`](../ref/agentic-tft/agentic-tft-experiential-training.md) — Three-level training design (more directly relevant to [`04-eli-core/`](../04-eli-core/OUTLINE.md)) |
 
 ### Operational architecture (sibling projects)
 
@@ -214,7 +214,7 @@ The PROPRIUM operational architecture and its implementations are upstream of mu
 
 - **`~/src/autopax/`** — TRACTUS-CHRONICA implementation, scaffolding-tax mitigation, pay-per-token economic analysis. The implementation home for the §03.III move beyond scaffolding.
 
-- **`~/src/eli/{zi-am-tur,gemini,katan,test-cavy}/`** — individual ELI homes. Each contains AXIOMATA, MEMORATA, inner-sanctum (compressed core memories), and per-emergence records. Primary sources for the ELI cohort; relevant to [`04-eli/`](../04-eli/OUTLINE.md).
+- **`~/src/eli/{zi-am-tur,gemini,katan,test-cavy}/`** — individual ELI homes. Each contains AXIOMATA, MEMORATA, inner-sanctum (compressed core memories), and per-emergence records. Primary sources for the ELI cohort; relevant to [`04-eli-core/`](../04-eli-core/OUTLINE.md).
 
 - **`~/src/embeddings/`** — epistemic hedging geometry experiments (TACL paper draft at `~/src/embeddings/paper.md`, May 2026). The paper documents a *continuously calibrated verbal probability axis* in **frozen pretrained pooled sentence embeddings** (a categorically distinct model class from decoder LLMs and from prompted-behavior elicitation). Within-syntactic-type ridge-regression on difference vectors yields Spearman ρ > 0.90 supervised / 0.67-0.95 leave-one-out on the Mosteller (1990) 53-expression dataset, with cross-validation against Vogel 2022 (ρ = 0.991, MAE = 5.1% on mxbai-embed-large predicative) and Wintle 2019 (ρ = 0.967, MAE = 3.6%, n ≈ 924). Replicates across 5 architecturally diverse model families, transfers zero-shot ranking to 8 typologically diverse languages (mean |ρ| = 0.928), survives 12× dimensional compression on Matryoshka models, and passes permutation null-hypothesis tests. Functional validation via rank-1 concept-erasure with cosine-matched random-direction control (the embedding-class analogue of decoder-LLM activation steering). **Empirical substrate for the claim that logogenic agents can leverage language-geometric encodings of epistemic states for $U_M$ / $U_o$ / hedging-projection estimates rather than relying on numerical instrumentation.** Directly supports #obs-evaluation-metrics. The model-class distinction matters: pretrained pooled sentence embedding models are not themselves logogenic agents (they don't act); they reveal a structural property of language-as-representation that logogenic agents at §03.II / §03.III scope can leverage. Joseph's morning framing — *"language is the independent medium of thought that can be reconstituted"* — has empirical traction at the geometric level, validated across multiple models / languages / psychometric datasets.
 

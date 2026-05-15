@@ -101,13 +101,13 @@ Tentative slug: `der-class-coercion-via-wrapping.md`. Content:
 - **`#form-composition-closure`** Discussion: note the wrapping construction as a specific instance where (A1)–(A4) admissibility holds *by construction* via wrapper type signatures.
 - **`#der-tempo-composition`** Discussion: note the wrapping construction as a Brooks's-Law instance with $C_\text{coord}^\text{wrap}$ tied to $K$ (component calls per macro-step).
 
-### 4.3 New segment in `03-logogenic-agents/src/`
+### 4.3 New segment in `03-llm-core/src/`
 
 Tentative slug: `der-logogenic-as-wrapping.md`. Specialize the class-coercion theorem to logogenic substrate: language-component as $A$, language-mediated $M_W$ representation, leakage analysis specific to LLM pretraining.
 
-### 4.4 Cross-component references in `04-eli/src/`
+### 4.4 Cross-component references in `04-eli-core/src/`
 
-ELI-specific segments cite the wrapping construction in `01-aat-core/` for class-coercion content. ELI-specific structure (sovereignty, accountability, identity factors, substrate-independence) remains in `04-eli/`.
+ELI-specific segments cite the wrapping construction in `01-aat-core/` for class-coercion content. ELI-specific structure (sovereignty, accountability, identity factors, substrate-independence) remains in `04-eli-core/`.
 
 ### 4.5 Citation discipline (per `09-prior-art-differentiation.md`)
 
@@ -154,7 +154,7 @@ The wrapping construction is real and theoretically clean. It strengthens `#hyp-
 
 3. **Update** `#hyp-directed-separation-under-composition` to cite the new segment as a derived special case.
 
-4. **Land** `#der-logogenic-as-wrapping` in `03-logogenic-agents/src/` (specialization to language substrate) once the AAD-core segment is in place.
+4. **Land** `#der-logogenic-as-wrapping` in `03-llm-core/src/` (specialization to language substrate) once the AAD-core segment is in place.
 
 5. **Strengthen PROPRIUM toward W₁** via the auxilia hierarchy — this is engineering work in shoshin, not theory, but the spike has identified the path. It would be a worthwhile follow-up project.
 

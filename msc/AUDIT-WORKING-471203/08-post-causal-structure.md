@@ -86,7 +86,7 @@ The "nominal coupling" regime is the framing I keep coming back to. It says: an 
 - A software engineer running tests — the test doesn't change production, but the choice of *which test* generates contrasting observations on the codebase's state
 - An LLM in a context window — the model's choice of *what to attend to* generates contrasting "observations" of its own context, even though it isn't changing the context
 
-That last case is the structural justification for the framing in `03-logogenic-agents/`'s proposed `#obs-backward-inference-empathy` ("LLM statelessness forces continuous Bayesian inference on own text, which is mathematically identical to Theory of Mind"). If the LLM's attention pattern is a *query choice* (action-on-observation), then the Pearl-Level-2 contrast is real and the framework's interventional machinery applies. This is a much more interesting case than I had initially read it as.
+That last case is the structural justification for the framing in `03-llm-core/`'s proposed `#obs-backward-inference-empathy` ("LLM statelessness forces continuous Bayesian inference on own text, which is mathematically identical to Theory of Mind"). If the LLM's attention pattern is a *query choice* (action-on-observation), then the Pearl-Level-2 contrast is real and the framework's interventional machinery applies. This is a much more interesting case than I had initially read it as.
 
 The framework is doing more pre-positioning here than the segment-text alone reveals. The four-coupling-regimes is a surface-level observation; the structural consequence — that Level-2 access is preserved in the nominal regime — is the part that has teeth for downstream domains.
 

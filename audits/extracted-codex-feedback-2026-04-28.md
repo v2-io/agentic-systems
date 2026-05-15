@@ -42,5 +42,5 @@ Pending — these three items are very minor stale defaults / stale prose, not t
 >   - The old broken CHANGELOG.md project/session links are no longer clickable broken links; they are plain code-styled historical labels now.
 >   - The old TODO.md Archive references are gone from active navigation/instructions; the remaining matches are historical LOG.md/dated CHANGELOG.md prose.
 >   - The stale role-prefix segment links I flagged no longer show up.
->   - LEXICON.md, PRACTICA.md, FORMAT.md, `03-logogenic-agents/OUTLINE.md`, and the audit instructions look corrected.
+>   - LEXICON.md, PRACTICA.md, FORMAT.md, `03-llm-core/OUTLINE.md`, and the audit instructions look corrected.
 >   - A narrow generated-output/root-doc link and anchor pass found 0 active issues across the checked active docs; README partial false positives remain only if checked in raw partial context, which matches the tooling note already in TODO.

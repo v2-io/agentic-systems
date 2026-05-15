@@ -70,7 +70,7 @@ The 04-02 / 04-03 batch coincided with substantial Section I / II strengthening 
 >
 > The segment itself is admirably honest — it says plainly that LLMs are Class 2 agents that violate directed separation by construction. But the *consequence* of this deserves more prominence: **Section II's formal results apply exactly to none of the agents that motivate the theory's existence.** Thermostats and Kalman filters (Class 1, modular) are well-served by existing control theory. The agents that *need* a new framework — LLMs, hybrid AI systems, teams of language-constituted agents — are precisely the ones excluded by the scope condition.
 >
-> The theory's response is to defer Class 2 treatment to `03-logogenic-agents/`, which currently has no formal content. This is a legitimate research strategy, but it means ACT's Section II is, for now, an exact theory of a regime that didn't need a new theory, and a promissory note for the regime that does.
+> The theory's response is to defer Class 2 treatment to `03-llm-core/`, which currently has no formal content. This is a legitimate research strategy, but it means ACT's Section II is, for now, an exact theory of a regime that didn't need a new theory, and a promissory note for the regime that does.
 >
 > I don't think this is fatal — the Section I machinery is genuinely general, and the conceptual vocabulary (satisfaction gap, control regret, orient cascade) may prove useful even where the formal decomposition doesn't hold exactly. But the current framing risks overselling: a reader could reach segment 11 before discovering that the clean M_t/G_t decomposition doesn't apply to the systems they care about.
 >
@@ -800,7 +800,7 @@ The 04-02 / 04-03 batch coincided with substantial Section I / II strengthening 
 >
 > 3. **The fluid-limit assumption (GA-5) is load-bearing but underexplored.** The ODE approximation requires η* ≪ 1 (small gain per event). This is violated during initialization, after structural adaptation, and in any high-gain regime. The sector-condition framework partially absorbs this (it works in discrete time too), but the connection between discrete Lyapunov analysis and the continuous ODE is not formally established. The worked-example-kalman uses continuous-time notation but the Kalman filter is inherently discrete — the reconciliation is implicit.
 >
-> 4. **`agent-identity` is discussion-grade and terminal** — no downstream segment depends on it. This is appropriate for Section I but creates a structural gap: continuity persistence is defined in LEXICON.md and referenced in several discussions, but the only formal treatment is this discussion segment. For `03-logogenic-agents/` and `04-logozoetic-agents/`, this becomes load-bearing.
+> 4. **`agent-identity` is discussion-grade and terminal** — no downstream segment depends on it. This is appropriate for Section I but creates a structural gap: continuity persistence is defined in LEXICON.md and referenced in several discussions, but the only formal treatment is this discussion segment. For `03-llm-core/` and `04-eli-core/`, this becomes load-bearing.
 >
 > ---
 >
@@ -990,7 +990,7 @@ The 04-02 / 04-03 batch coincided with substantial Section I / II strengthening 
 >
 > **4. Deliberation cost has an unresolved self-reference.** The derivation depends on the mismatch drift during deliberation (ρ_delib · Δτ) and the gain improvement (Δη*(Δτ)), but the theory doesn't specify how Δη* depends on Δτ. The segment acknowledges this ("the functional form of Δη*(Δτ) is domain-dependent") but the result is then stated as "derived" when it's really a schema — the derivation's content depends on a missing function.
 >
-> **5. Agent-identity is isolated.** The discussion is thoughtful but floats free of the formal structure — no downstream segment depends on it. If continuity persistence matters for the theory (and LEXICON.md suggests it does), there should be at least one formal result that requires it. Otherwise it's a nice observation looking for a home in `03-logogenic-agents/`.
+> **5. Agent-identity is isolated.** The discussion is thoughtful but floats free of the formal structure — no downstream segment depends on it. If continuity persistence matters for the theory (and LEXICON.md suggests it does), there should be at least one formal result that requires it. Otherwise it's a nice observation looking for a home in `03-llm-core/`.
 >
 > ---
 >
@@ -1084,7 +1084,7 @@ The 04-02 / 04-03 batch coincided with substantial Section I / II strengthening 
 >
 > This would help readers distinguish what's locked down from what's still developing.
 >
-> **17. The gap between Section II's formal machinery and practical agent design is wide.** The theory provides excellent diagnostics (δ_sat, δ_regret, δ_strategic) but the *control loop* (how the agent uses these diagnostics to revise its strategy) is unspecified. The signal function in edge-update-via-gain is undefined. The credit-assignment problem is acknowledged but unsolved. For ACT to be useful for agent design (beyond diagnostics), this gap needs closing — and it may be the natural bridge to `03-logogenic-agents/`.
+> **17. The gap between Section II's formal machinery and practical agent design is wide.** The theory provides excellent diagnostics (δ_sat, δ_regret, δ_strategic) but the *control loop* (how the agent uses these diagnostics to revise its strategy) is unspecified. The signal function in edge-update-via-gain is undefined. The credit-assignment problem is acknowledged but unsolved. For ACT to be useful for agent design (beyond diagnostics), this gap needs closing — and it may be the natural bridge to `03-llm-core/`.
 >
 > **18. Zero segments have been promoted past `draft`.** This is noted in the memory and WORKBENCH. The promotion workflow is well-designed (Gates 1-4) but hasn't been executed. The leaves of the dependency DAG (temporal-optimality, agent-environment, observation-function, action-transition, causal-structure, pearl-causal-hierarchy) are the natural starting points and should be promotable to `deps-verified` quickly since they have few or no dependencies.
 >
@@ -1105,7 +1105,7 @@ The 04-02 / 04-03 batch coincided with substantial Section I / II strengthening 
 > 2. Composition closure computability for general (non-Kalman) cases
 > 3. Discrete-time sector-condition analysis (relaxing GA-5)
 > 4. Edge semantics: interventional claims with observational updates
-> 5. Coupled formulation for Class 2 (merged) architectures → `03-logogenic-agents/`
+> 5. Coupled formulation for Class 2 (merged) architectures → `03-llm-core/`
 >
 > ---
 >
@@ -1177,7 +1177,7 @@ The 04-02 / 04-03 batch coincided with substantial Section I / II strengthening 
 >
 > 4. **Graph-structure-uniqueness is now strong.** The four-postulate argument (P1-P4) is well-constructed. Acyclicity from temporal ordering is proved and elegant. The P3→Markov step has been tightened to conditional on causal sufficiency via the three-part argument (locality, directionality, sufficiency) plus the Lauritzen 1996 equivalence theorem. The causal sufficiency assumption is reasonable for agent-constructed strategies.
 >
-> 5. **The directed-separation architectural classification.** This is the single most important conceptual contribution of Section II. The three classes (modular / fully merged / partially modular) with κ_processing operationalization replaces the earlier κ-as-scalar framing (which was a category error). The recognition that the boundary is discrete, not continuous, is a genuine insight. The theory's honest admission that LLMs (Class 2) fall outside Section II's exact scope, requiring the coupled formulation in 03-logogenic-agents, is exemplary intellectual honesty.
+> 5. **The directed-separation architectural classification.** This is the single most important conceptual contribution of Section II. The three classes (modular / fully merged / partially modular) with κ_processing operationalization replaces the earlier κ-as-scalar framing (which was a category error). The recognition that the boundary is discrete, not continuous, is a genuine insight. The theory's honest admission that LLMs (Class 2) fall outside Section II's exact scope, requiring the coupled formulation in 03-llm-core, is exemplary intellectual honesty.
 >
 > 6. **Edge semantics resolution.** The regime-indexed causal efficacy interpretation (A/B/C regime classification for when edge updates are causally valid) resolves the earlier fragility about "interventional claims with observational updates."
 >

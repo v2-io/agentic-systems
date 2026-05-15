@@ -112,7 +112,7 @@ This is a *non-trivial* claim because:
 
 3. **That the structure is recoverable by causal-discovery algorithms operating on embeddings.** The structure is *preserved* in the IB sense; whether it is *recoverable* by a specific algorithm is a separate computational question.
 
-**Routing**: The cleanest landing for this is a Working Note in [`obs-evaluation-metrics`](../../03-logogenic-agents/src/obs-evaluation-metrics.md) or a paragraph in the [`03-logogenic-agents/OUTLINE.md`](../../03-logogenic-agents/OUTLINE.md) Source Material section — citing the embeddings paper's epistemic-content result as the empirical paradigm and noting the analogous prediction for causal content as a near-term experimental target.
+**Routing**: The cleanest landing for this is a Working Note in [`obs-evaluation-metrics`](../../03-llm-core/src/obs-evaluation-metrics.md) or a paragraph in the [`03-llm-core/OUTLINE.md`](../../03-llm-core/OUTLINE.md) Source Material section — citing the embeddings paper's epistemic-content result as the empirical paradigm and noting the analogous prediction for causal content as a near-term experimental target.
 
 ---
 

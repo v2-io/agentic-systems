@@ -354,9 +354,9 @@ Either option resolves the logical gap; the choice depends on whether (C-iii) sh
 
 **Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 
-> Class 2 (fully merged) agents — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (`#der-directed-separation`) fails by construction. The coupled formulation these agents require is the subject of `03-logogenic-agents/` ... This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II.
+> Class 2 (fully merged) agents — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (`#der-directed-separation`) fails by construction. The coupled formulation these agents require is the subject of `03-llm-core/` ... This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II.
 
-**Strongest mitigating passage.** `03-logogenic-agents/src/result-section-ii-survival.md` (§Scorecard and §Discussion):
+**Strongest mitigating passage.** `03-llm-core/src/result-section-ii-survival.md` (§Scorecard and §Discussion):
 
 > Exact: 15.5/24, Approximate: 5.5/24, Modified: 2/24, Fails: 1/24 ... Section II's *conceptual architecture* applies to Class 2 agents (16/24 exact survival is a claim about this), but Section II's *operational deployment* on Class 2 agents requires additional instrumentation.
 
@@ -443,22 +443,22 @@ Second Codex audit, after the morning audit trio. One finding duplicates Finding
 
 **Problematic passages.**
 
-- `03-logogenic-agents/src/result-section-ii-survival.md` line 37 opens with "16 survive exactly."
-- `03-logogenic-agents/src/result-coupled-diagnostic-framework.md` line 18 says the diagnostic quantities "can be computed after each coupled update."
+- `03-llm-core/src/result-section-ii-survival.md` line 37 opens with "16 survive exactly."
+- `03-llm-core/src/result-coupled-diagnostic-framework.md` line 18 says the diagnostic quantities "can be computed after each coupled update."
 
 **Strongest counterevidence in `src/`.**
 
-- `03-logogenic-agents/src/result-section-ii-survival.md` line 127 explicitly states this is *statement-level*, not operational extractability.
-- `03-logogenic-agents/src/def-coupled-update-dynamics.md` line 66 says the $M / G$ decomposition is *post-hoc and analytical*, not architectural or computable.
+- `03-llm-core/src/result-section-ii-survival.md` line 127 explicitly states this is *statement-level*, not operational extractability.
+- `03-llm-core/src/def-coupled-update-dynamics.md` line 66 says the $M / G$ decomposition is *post-hoc and analytical*, not architectural or computable.
 
 **Why this stands.** The logogenic layer slides from formal well-definedness ("these quantities are defined in the Class 2 setting") to runtime measurability ("these quantities can be computed after each update") before the instrumentation layer has been published into `src/`. Readers who stop at the headline of `section-ii-survival.md` come away thinking LLM agents can run the 2×2 diagnostic directly; readers who continue to line 127 find out they can't without additional instrumentation. Similar issue in the opening of `coupled-diagnostic-framework.md`.
 
-**msc/ lineage.** The missing operational layer for Class 2 agents already exists in `ref/agentic-tft/agentic-tft-evaluation-framework.md` (measurement of $M_t$ / $\Sigma_t$ quality) and `spikes/spike-hafez-integration-audit.md` (modular sidecar monitoring via IDT — bi-predictability $P$, entropy change $\Delta H$ monitored independently of LLM attention). The issue is not conceptual absence in the spike corpus; it is under-integration into `03-logogenic-agents/src/`.
+**msc/ lineage.** The missing operational layer for Class 2 agents already exists in `ref/agentic-tft/agentic-tft-evaluation-framework.md` (measurement of $M_t$ / $\Sigma_t$ quality) and `spikes/spike-hafez-integration-audit.md` (modular sidecar monitoring via IDT — bi-predictability $P$, entropy change $\Delta H$ monitored independently of LLM attention). The issue is not conceptual absence in the spike corpus; it is under-integration into `03-llm-core/src/`.
 
 **Repair direction (two options).**
 
 - **Option A (local):** tighten the opening framing in both segments to lead with "statement-level" qualifiers and make the instrumentation-layer dependency explicit up front, not at line 127. 30–45 min. Fixes the headline slide without changing what the theory provides.
-- **Option B (substantive):** publish the operational layer as new segments in `03-logogenic-agents/src/` — an evaluation-framework segment and an IDT-sidecar segment — drawing from the existing spike material. Substantially more work but closes the gap rather than masking it. 3–5 sessions.
+- **Option B (substantive):** publish the operational layer as new segments in `03-llm-core/src/` — an evaluation-framework segment and an IDT-sidecar segment — drawing from the existing spike material. Substantially more work but closes the gap rather than masking it. 3–5 sessions.
 
 **Subsumed by:** C-BP1 (three-layer separation of defined / causally valid / operationally extractable). If that framing is adopted systematically, the statement-level-vs-operational slide is prevented by convention rather than patched per-segment.
 
@@ -596,13 +596,13 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Problematic passages.**
 
-- `03-logogenic-agents/src/result-coupled-diagnostic-framework.md` line 18: diagnostic quantities "can be computed *after* each coupled update."
+- `03-llm-core/src/result-coupled-diagnostic-framework.md` line 18: diagnostic quantities "can be computed *after* each coupled update."
 - Same segment around line 40: "From $X^{(\text{post})}$, compute …" presents a runtime-recipe phrasing.
 
 **Strongest counterevidence in `src/`.**
 
-- `03-logogenic-agents/src/result-section-ii-survival.md` line 127: statement-level survival is not "operational extractability"; separate instrumentation is required.
-- `03-logogenic-agents/src/def-coupled-update-dynamics.md` line 66: the M/G decomposition is "post-hoc and analytical, not generally computable."
+- `03-llm-core/src/result-section-ii-survival.md` line 127: statement-level survival is not "operational extractability"; separate instrumentation is required.
+- `03-llm-core/src/def-coupled-update-dynamics.md` line 66: the M/G decomposition is "post-hoc and analytical, not generally computable."
 
 **Why this stands.** The recipe-style phrasing in `#result-coupled-diagnostic-framework` reads as runtime-extractable. The same logogenic layer's other segments correctly mark the M/G decomposition as analytical reconstruction. A fresh reader of the diagnostic-framework segment would think the framework is operational; a reader of the companion segments would conclude it requires instrumentation. The repo says both.
 
@@ -639,7 +639,7 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Problematic passage.**
 
-- `03-logogenic-agents/src/result-section-ii-survival.md` line 109: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot H(G_t \mid e_\tau, M_{\tau^-})$
+- `03-llm-core/src/result-section-ii-survival.md` line 109: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot H(G_t \mid e_\tau, M_{\tau^-})$
 - Same segment line 136 (Working Notes): "The bound … deserves formal derivation … Without this, the bound is order-of-magnitude guidance, not a theorem."
 
 **Strongest counterevidence in `src/`.**

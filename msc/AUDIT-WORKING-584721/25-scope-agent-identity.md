@@ -10,7 +10,7 @@
 
 **2. Cross-segment consistency.** Cross-refs to read segments (def-chronica, def-model-sufficiency, def-pearl-causal-hierarchy, der-gain-sector-bridge), forward to disc-additive-coordinate-forcing, der-loop-interventional-access, def-strategy-dag. The (PI) axiom is *defined here* and *propagates outward*; this segment is the source-of-truth.
 
-The "Section V" reference in Discussion uses the legacy naming but has been updated to "see 03-logogenic-agents/" — propagation of the structural reorg landed cleanly here. ✓
+The "Section V" reference in Discussion uses the legacy naming but has been updated to "see 03-llm-core/" — propagation of the structural reorg landed cleanly here. ✓
 
 **3. Math verification (at discretion).** Skip — scope statements aren't theorems. Čencov 1982 cited; I trust the 2026-04-23 citation audit's verification per CLAUDE-2.md.
 
@@ -30,17 +30,17 @@ The `stage: draft` is interesting given how load-bearing this segment is. Probab
 
 **8. What am I now curious about?**
 
-(a) **The type/token distinction's downstream treatment.** "AAD applies to tokens, not types." But "the GPT-4 model" framings are ubiquitous in AI discourse. Aggregated-across-tokens claims would need additional machinery. Curious whether 03-logogenic-agents/ addresses this — type-token is most acute there.
+(a) **The type/token distinction's downstream treatment.** "AAD applies to tokens, not types." But "the GPT-4 model" framings are ubiquitous in AI discourse. Aggregated-across-tokens claims would need additional machinery. Curious whether 03-llm-core/ addresses this — type-token is most acute there.
 
 (b) **(PI) as natural-from-adjacent meta-pattern.** Each of chain-rule-additivity, evidential-additivity, and (PI)/Čencov is a natural-from-adjacent-AAD-commitment axiom that a uniqueness theorem operates on. This is the meta-structure of disc-additive-coordinate-forcing's 1-anchor-3-theorem characterization. Curious to see the meta-segment when I get there (it's an Appendix A Discussion segment).
 
-(c) **The clone problem's empirical force.** Two LLM sessions with identical context but different next-turn inputs become different agents under this scope. This is operationally relevant — it suggests "identical agents" is a vanishingly thin moment in time. Worth seeing whether 03-logogenic-agents pursues this.
+(c) **The clone problem's empirical force.** Two LLM sessions with identical context but different next-turn inputs become different agents under this scope. This is operationally relevant — it suggests "identical agents" is a vanishingly thin moment in time. Worth seeing whether 03-llm-core pursues this.
 
 **9. What new knowledge enabled.** Singular-trajectory scope formalizes identity-via-trajectory. (PI) axiom enables Fisher-metric AAD-internal derivations. Type/token distinction explicit. Clone problem formalized. Model-merging lossy by construction. Loop's interventional access grounded in trajectory singularity, not architecture.
 
 **10. Should the audit process change?** Continuing. Section II begins next; I'll watch whether the trajectory-singularity scope propagates cleanly.
 
-**11. Outline updates.** Section E (calibration): scope-agent-identity is well-shaped, with (PI) propagating cleanly across der-gain-sector-bridge, deriv-bias-bound, result-contraction-template (per CLAUDE-2.md priming). Section D candidate: type/token distinction as meta-architectural commitment that should be visible in 03-logogenic-agents.
+**11. Outline updates.** Section E (calibration): scope-agent-identity is well-shaped, with (PI) propagating cleanly across der-gain-sector-bridge, deriv-bias-bound, result-contraction-template (per CLAUDE-2.md priming). Section D candidate: type/token distinction as meta-architectural commitment that should be visible in 03-llm-core.
 
 **12. How valuable does this segment *feel* to me?**
 

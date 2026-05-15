@@ -20,7 +20,7 @@ The mathematical findings (Gemini F1, F2) became F-V1 / F-V4 in pending-findings
 
 ### Gemini
 
-> Here is the de novo audit of the agentic systems framework based on the current repository state (`01-aat-core/src/`, `02-tst-core/src/`, and `03-logogenic-agents/src/`). The audit focuses exclusively on unacknowledged, un-caveated, or mischaracterized issues where the text makes a strong claim that is contradicted by the mathematics or by other parts of the theory.
+> Here is the de novo audit of the agentic systems framework based on the current repository state (`01-aat-core/src/`, `02-tst-core/src/`, and `03-llm-core/src/`). The audit focuses exclusively on unacknowledged, un-caveated, or mischaracterized issues where the text makes a strong claim that is contradicted by the mathematics or by other parts of the theory.
 >
 > ### Finding 1: Mathematical Error in the Discrete-to-Continuous Variance Gap
 >

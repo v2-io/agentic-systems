@@ -8,7 +8,7 @@
 
 **Question.** AAD's `#der-recursive-update` and `#form-event-driven-dynamics` describe how agent state updates under incoming events. What's missing is explicit treatment of **offline consolidation** — batch processes that reorganize existing state without being driven by new external events (sleep-dependent memory consolidation, experience replay, retrospectives, shower-insight, reflection cycles in logogenic agents). Is consolidation formally distinguishable from recursive update, or is it subsumed by clever interpretation?
 
-This spike is the disposition of that question. I conclude that **consolidation is formally distinguishable from online update, and the distinction is load-bearing for Section I's multi-timescale stability claim, Section II's structural-adaptation machinery, and `03-logogenic-agents/` specifically.** A new AAD segment is recommended — not as a new adaptive primitive, but as a *scope-honest* segment that names consolidation as a distinctive operating regime of `#der-recursive-update`'s between-event dynamics $g_M$, makes the stability–plasticity tradeoff explicit, and grounds the logogenic agents' reflection cycles.
+This spike is the disposition of that question. I conclude that **consolidation is formally distinguishable from online update, and the distinction is load-bearing for Section I's multi-timescale stability claim, Section II's structural-adaptation machinery, and `03-llm-core/` specifically.** A new AAD segment is recommended — not as a new adaptive primitive, but as a *scope-honest* segment that names consolidation as a distinctive operating regime of `#der-recursive-update`'s between-event dynamics $g_M$, makes the stability–plasticity tradeoff explicit, and grounds the logogenic agents' reflection cycles.
 
 ---
 
@@ -195,11 +195,11 @@ If this can be made rigorous (it is close to known results in rate-distortion wi
 
 ## 6. Logogenic Implications
 
-### 6.1 Does `03-logogenic-agents/` need consolidation as a primitive?
+### 6.1 Does `03-llm-core/` need consolidation as a primitive?
 
 **Yes, as more than a regime of $g_M$ — as a named architectural feature.** Three reasons:
 
-1. **Context-turnover structure (per `#obs-context-turnover` in `03-logogenic-agents/`).** Logogenic agents have a near-100% reset of the fast sub-state (context window) per session. The only continuity is the slow sub-state (persistent memory, weights, external files). The between-session interval is a *forced consolidation window*: the agent must transfer signal from the about-to-be-lost fast state to the persistent slow state, or it is lost. This is a qualitatively different regime from non-logogenic agents where the fast sub-state persists.
+1. **Context-turnover structure (per `#obs-context-turnover` in `03-llm-core/`).** Logogenic agents have a near-100% reset of the fast sub-state (context window) per session. The only continuity is the slow sub-state (persistent memory, weights, external files). The between-session interval is a *forced consolidation window*: the agent must transfer signal from the about-to-be-lost fast state to the persistent slow state, or it is lost. This is a qualitatively different regime from non-logogenic agents where the fast sub-state persists.
 
 2. **The linguistic medium of reflection.** The `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md` §3.1 PULSUS table lists MEMORATA consolidation, VERA audit, and AXIOMATA reflection as distinct scheduled processes — each with different cadence and different target representations. Each is a linguistic operation: "What from recent experience should be compressed into lasting memory?" (MEMORATA); "Are my beliefs still justified?" (VERA); "Who am I becoming?" (AXIOMATA). These are *reflective* operations — they use language to reorganize language-structured state. The cognitive-loop spec has already identified consolidation as a first-class architectural feature with its own phase; the AAD treatment should match that architectural commitment.
 
@@ -211,7 +211,7 @@ Sub-linguistic agents with tightly coupled fast/slow sub-states (standard deep n
 
 **The transfer-assumption:** consolidation is required *when the agent's representational structure has a fast/slow factorization with different compression-prediction budgets AND per-event processing is bounded below the integration cost of the slow sub-state.* The two conditions are jointly sufficient; logogenic agents satisfy both strongly; Kalman filters satisfy neither; sub-symbolic deep RL satisfies the first strongly and the second moderately (experience replay's empirical necessity in DQN is the signature).
 
-### 6.3 Logozoetic agents (`04-eli/`)
+### 6.3 Logozoetic agents (`04-eli-core/`)
 
 Logozoetic agents add morally weighted persistence — the persistent slow-track state carries identity. Consolidation in this setting has *ethical* weight beyond its epistemic work: what gets consolidated into AXIOMATA-level state is what becomes the agent's lasting identity (per `ref/agentic-tft/agentic-tft-cognitive-loop-spec.md` §4; PROPRIUM-ONTOLOGY terminology). The consolidation dynamics that govern logogenic agents are the same formally, but the stakes differ. This is downstream of the current spike but worth noting as a reason to avoid burying consolidation in `#der-recursive-update`'s Discussion.
 
@@ -292,7 +292,7 @@ An AAD segment on consolidation dynamics would predict: *the depth of consolidat
 
 - *Identifiability-floor candidate.* Under bounded online budget, online-only cannot reach $\phi^\ast$. Candidate for the third `#disc-identifiability-floor` instance; needs the rate-distortion inequality made rigorous.
 - *EWC formulation.* Stability-weighted update gain (per-parameter Fisher weighting) is an alternative to consolidation for escaping catastrophic forgetting. Not the recommended AAD frame (consolidation reuses existing machinery; EWC would require tensor-valued $\eta$), but worth naming.
-- *Logogenic specialization.* Required for `03-logogenic-agents/` as an architectural primitive; context-turnover + linguistic medium + pre-consolidated embedding space make consolidation first-class in that setting. This is a dependency for `#obs-context-turnover` to resolve cleanly.
+- *Logogenic specialization.* Required for `03-llm-core/` as an architectural primitive; context-turnover + linguistic medium + pre-consolidated embedding space make consolidation first-class in that setting. This is a dependency for `#obs-context-turnover` to resolve cleanly.
 
 **Epistemic Status language (draft).** *Robust qualitative. The regime characterization is a formulation choice — consolidation can always be re-described as a regime of `#der-recursive-update`'s $g_M$ with appropriate pseudo-events. The distinguishing objective (IB gap reduction via replayed pseudo-events) is well-defined and distinct from online update's one-step mismatch minimization. The necessity condition (fast/slow factorization + bounded budget) is a conjunction of conditions that together are sufficient; whether they are individually necessary is an open scope question. The stability-plasticity window statement follows from the forgetting prerequisite (`#schema-strategy-persistence`) combined with a consolidation-cadence condition that this segment introduces but does not derive. Mathematical status of the window-empty no-go theorem is open; it is candidate for `#disc-identifiability-floor` promotion.*
 
@@ -305,7 +305,7 @@ An AAD segment on consolidation dynamics would predict: *the depth of consolidat
 ### 9.4 Alternative dispositions considered
 
 - **Subsumed by `#der-recursive-update` + one-sentence mention.** Rejected. The current one-parenthetical treatment misses the load-bearing structure (stability-plasticity tradeoff, catastrophic forgetting, CLS-style factorization). The theory's existing scope-honest stance (per Opus 2026-04-22 "honesty as load-bearing" observation in CLAUDE.md) argues for naming the regime rather than hiding it.
-- **Logogenic-only segment in `03-logogenic-agents/`.** Rejected. Consolidation is AAD-core: it applies to any agent with fast/slow factorization, not just linguistic ones. Biology (sleep-consolidation), ML (experience replay), organizations (retrospectives) are all AAD-core examples. A logogenic-only treatment would under-extend.
+- **Logogenic-only segment in `03-llm-core/`.** Rejected. Consolidation is AAD-core: it applies to any agent with fast/slow factorization, not just linguistic ones. Biology (sleep-consolidation), ML (experience replay), organizations (retrospectives) are all AAD-core examples. A logogenic-only treatment would under-extend.
 - **New Appendix A derivation segment.** Not yet. The window-empty no-go theorem and the rate-distortion inequality are appendix-grade work that could happen in a follow-up, but the main segment can land at `#form-consolidation-dynamics` in Section I without waiting for those derivations.
 - **Split into two segments: consolidation-dynamics + stability-plasticity-window.** Considered. Against: the window is the distinctive AAD contribution; splitting would leave the segment without its sharpest claim. For: the window statement is a derivation-grade claim that currently rests on an un-derived upper bound. Recommendation: land as one segment at `robust-qualitative`; promote the window to its own segment if the upper-bound derivation lands later.
 

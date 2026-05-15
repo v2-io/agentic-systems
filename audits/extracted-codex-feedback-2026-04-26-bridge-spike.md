@@ -43,7 +43,7 @@ The spike `msc/spike-transient-dependency-amplification.md` is the working artif
 >
 >   I also added a more explicit bridge to TST quantities at `msc/spike-transient-dependency-amplification.md:169`: TST's empirical coupling matrix is not $J_{\pi,k}$, but it can be a structural prior or estimator for it. The spike now names the missing estimator problem instead of handwaving it.
 >
->   I left the logogenic working note in `03-logogenic-agents/src/result-coupled-diagnostic-framework.md:111` cautious because that is canonical text, but the spike itself now contains the stronger mathematical attempt. I also updated `msc/advanced-spike-proposals.md:25` so the catalog points to the strengthened bridge and its remaining obligations.
+>   I left the logogenic working note in `03-llm-core/src/result-coupled-diagnostic-framework.md:111` cautious because that is canonical text, but the spike itself now contains the stronger mathematical attempt. I also updated `msc/advanced-spike-proposals.md:25` so the catalog points to the strengthened bridge and its remaining obligations.
 >
 >   No tests were run; this was a theory/spike edit.
 >

@@ -2,7 +2,7 @@
 
 **1. Predictions vs evidence:** I predicted this segment would argue that for "Class 1" agents, the epistemic update $f_M$ depends only on $M_{t-1}$ and $e_t$, not on $G_t$, establishing "goal-blind epistemology." It does exactly this, laying out a rigorous 3-class topology: Class 1 (Modular), Class 2 (Fully merged, e.g., LLMs), and Class 3 (Partially modular). It provides the formal equations for the decoupled update cascade.
 
-**2. Cross-segment consistency:** Outstanding. It builds cleanly on `#form-complete-agent-state` and heavily structures the rest of Section II by establishing the preconditions for the "orient cascade" (`#der-orient-cascade`). It effectively delegates Class 2 agents to the `03-logogenic-agents` section, which maintains the integrity of AAD's mathematical core.
+**2. Cross-segment consistency:** Outstanding. It builds cleanly on `#form-complete-agent-state` and heavily structures the rest of Section II by establishing the preconditions for the "orient cascade" (`#der-orient-cascade`). It effectively delegates Class 2 agents to the `03-llm-core` section, which maintains the integrity of AAD's mathematical core.
 
 **3. Math verification:** The definition of processing coupling $\kappa_{\text{processing}} = \frac{I(G_t \,;\, M_{\tau^+} \mid e_\tau,\, M_{\tau^-})}{H(G_t \mid e_\tau,\, M_{\tau^-})}$ is a beautiful and rigorous application of information theory. It correctly conditions on the prior model $M_{\tau^-}$ to avoid falsely measuring prior correlations. The empirical estimator $\hat\kappa_{\text{processing}}$ provides a practically computable proxy for black-box testing.
 
@@ -23,7 +23,7 @@
 
 ### Wandering Thoughts and Ideation
 
-The architectural classification (Class 1, 2, 3) is a masterstroke of theoretical positioning. By explicitly naming "Class 2" (Fully merged, where $G_t$ drives $f_M$) and immediately stating that "Section II's exact results do not apply; logogenic agents need the coupled formulation," the framework protects its mathematical core from the messy reality of biological and LLM cognition. It doesn't try to force a square peg into a round hole; it builds a designated box for the square peg (`03-logogenic-agents`).
+The architectural classification (Class 1, 2, 3) is a masterstroke of theoretical positioning. By explicitly naming "Class 2" (Fully merged, where $G_t$ drives $f_M$) and immediately stating that "Section II's exact results do not apply; logogenic agents need the coupled formulation," the framework protects its mathematical core from the messy reality of biological and LLM cognition. It doesn't try to force a square peg into a round hole; it builds a designated box for the square peg (`03-llm-core`).
 
 The equation for $\kappa_{\text{processing}}$ is essentially a formal measure of "motivated reasoning" or "confirmation bias" at the hardware level. If $\kappa = 0$, you are a perfect scientist: your beliefs about the world update based purely on the evidence, regardless of what you want to be true. If $\kappa \approx 1$, you are a pure ideologue (or a Transformer network): your "beliefs" are just downstream projections of your goals. 
 

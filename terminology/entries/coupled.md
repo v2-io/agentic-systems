@@ -42,7 +42,7 @@ The canonical example is a goal-conditioned large language model (LLM), whose fo
 updates belief-relevant content and goal-relevant generation in a single fused computation. There is no
 architectural boundary that makes the belief-update goal-blind; the model's pretraining and
 prompt-conditioning couple them at a fundamental level. Logogenic agents (from
-[`03-logogenic-agents/`](../../03-logogenic-agents/)) are constituted by such components and are
+[`03-llm-core/`](../../03-llm-core/)) are constituted by such components and are
 therefore Coupled at the component level.
 
 Coupled agents can participate in Separated composites via the [class-coercion](class-coercion.md)

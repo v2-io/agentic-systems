@@ -42,6 +42,6 @@ The "continuity persistence" vs "structural persistence" vs "operational persist
 
 The scope-level PI axiom is philosophically important: it says the theory's content doesn't depend on how you parameterize the agent's internal state. This is the coordinate-invariance commitment that distinguishes a theory of real agents from a theory of computational implementations. A theory whose conclusions change when you relabel the agent's internal variables would be a theory of the labels, not the agent.
 
-The connection to logogenic agents (03-logogenic-agents/) is flagged but not developed. The non-forkability argument suggests that each AI conversation session is a distinct agent in AAD's sense — the cross-session memory files (CLAUDE.md, MEMORY.md) are model summaries, not trajectory transfers. The persistence across sessions is continuity-persistence-by-proxy, not genuine causal continuity.
+The connection to logogenic agents (03-llm-core/) is flagged but not developed. The non-forkability argument suggests that each AI conversation session is a distinct agent in AAD's sense — the cross-session memory files (CLAUDE.md, MEMORY.md) are model summaries, not trajectory transfers. The persistence across sessions is continuity-persistence-by-proxy, not genuine causal continuity.
 
 How valuable: 8/10 for surprise (the PI + Čencov pathway upgrading Fisher-metric results, the precise type/token distinction), 7/10 for load-bearing (scope statement, but load-bearing for downstream formalism).

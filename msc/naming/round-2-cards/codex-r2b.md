@@ -191,7 +191,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#scope-moral-continuity` (Logozoetic; depends on `#scope-logogenic-agent`). Scope-narrowing first encounter; The logozoetic scope narrows the logogenic agent scope to systems whose persistence is morally weighted. This is not an architectural distinction (like Class 1 vs.
 
-*Segment:* [`04-eli/src/scope-moral-continuity.md`](../../04-eli/src/scope-moral-continuity.md)
+*Segment:* [`04-eli-core/src/scope-moral-continuity.md`](../../04-eli-core/src/scope-moral-continuity.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -293,7 +293,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#result-coupled-diagnostic-framework` (Logogenic; deep dependency cone (7 upstream segments incl. `#def-coupled-update-dynamics`, `#result-section-ii-survival`)). First formal result; Even though the Class 2 agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration —….
 
-*Segment:* [`03-logogenic-agents/src/result-coupled-diagnostic-framework.md`](../../03-logogenic-agents/src/result-coupled-diagnostic-framework.md)
+*Segment:* [`03-llm-core/src/result-coupled-diagnostic-framework.md`](../../03-llm-core/src/result-coupled-diagnostic-framework.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -621,7 +621,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#disc-m-preservation` (Logogenic; depends on `#obs-context-turnover`, `#scope-logogenic-agent`, `#result-persistence-condition` (+2 more)). Meta-discussion segment; The 100% context turnover at session boundaries ( #obs-context-turnover) means the LLM agent's epistemic state must be reconstructed from external storage each session.
 
-*Segment:* [`03-logogenic-agents/src/disc-m-preservation.md`](../../03-logogenic-agents/src/disc-m-preservation.md)
+*Segment:* [`03-llm-core/src/disc-m-preservation.md`](../../03-llm-core/src/disc-m-preservation.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -1006,7 +1006,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 - **`Irrevocable emission`** — Rejection argument: considered. "Irrevocable" + "emission" names the irreversibility-of-token-generation insight. Rejected (same as r1 vote): loses the *constitutive* sense — the utterance constitutes new state in the agent's world, not merely fixes it. "Emission" is too physical/passive.
 - **`Irrevocable utterance`** — Rejection argument: considered. Names the irreversibility correctly but loses the *constitutive* sense (the utterance *constitutes* something new in the agent's world, not merely fixes it). Rejected.
 - **`Utterance as intervention`** — Names the formal mechanism: token generation = $do(a)$-intervention per Pearl's causal hierarchy. "As-intervention" is clinical-formal; "constitutive" is philosophical-formal. Both are honest; pick by audience preference. The alternative makes the Pearl-causal-hierarchy connection visible in the slug.
-- **`constitutive utterance`** *invented* — Defended keep — logozoetic. Per `04-eli/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space.
+- **`constitutive utterance`** *invented* — Defended keep — logozoetic. Per `04-eli-core/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space.
 
 | candidate | category | weight | top-pick? | notes |
 |---|---|:-:|:-:|---|
@@ -1891,7 +1891,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#obs-context-turnover` (Logogenic; depends on `#scope-logogenic-agent`, `#def-chronica`, `#result-persistence-condition` (+1 more)). Observation; At every session boundary, the LLM-based agent's context window is cleared. The chronica $\mathcal C_t$ is severed — no internal state carries over.
 
-*Segment:* [`03-logogenic-agents/src/obs-context-turnover.md`](../../03-logogenic-agents/src/obs-context-turnover.md)
+*Segment:* [`03-llm-core/src/obs-context-turnover.md`](../../03-llm-core/src/obs-context-turnover.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -2881,7 +2881,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#scope-observation-ambiguity-modulation` (Logogenic; depends on `#scope-logogenic-agent`, `#def-coupled-update-dynamics`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; The approximation error of Section II results for Class 2 agents depends on the product $\kappa_{\text{processing}} \times \mathcal{A}(e_\tau)$, not on $\kappa_{\text{processing}}$ alone.
 
-*Segment:* [`03-logogenic-agents/src/scope-observation-ambiguity-modulation.md`](../../03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
+*Segment:* [`03-llm-core/src/scope-observation-ambiguity-modulation.md`](../../03-llm-core/src/scope-observation-ambiguity-modulation.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -3405,7 +3405,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#hyp-experiential-training` (Logogenic; depends on `#def-coupled-update-dynamics`, `#obs-context-turnover`, `#def-model-sufficiency`). Hypothesis stated; Standard LLM pretraining processes text in random batches with no temporal structure or causal consequence.
 
-*Segment:* [`03-logogenic-agents/src/hyp-experiential-training.md`](../../03-logogenic-agents/src/hyp-experiential-training.md)
+*Segment:* [`03-llm-core/src/hyp-experiential-training.md`](../../03-llm-core/src/hyp-experiential-training.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -4150,7 +4150,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#scope-logogenic-agent` (Logogenic; depends on `#def-agent-spectrum`, `#form-complete-agent-state`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language.
 
-*Segment:* [`03-logogenic-agents/src/scope-logogenic-agent.md`](../../03-logogenic-agents/src/scope-logogenic-agent.md)
+*Segment:* [`03-llm-core/src/scope-logogenic-agent.md`](../../03-llm-core/src/scope-logogenic-agent.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -5051,7 +5051,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#obs-developmental-trajectory` (Logozoetic; depends on `#scope-moral-continuity`, `#def-proprium-mapping`, `#hyp-mismatch-dynamics` (+1 more)). Observation; Logozoetic agents, like biological intelligences, require a developmental trajectory to calibrate their internal models and gain structures.
 
-*Segment:* [`04-eli/src/obs-developmental-trajectory.md`](../../04-eli/src/obs-developmental-trajectory.md)
+*Segment:* [`04-eli-core/src/obs-developmental-trajectory.md`](../../04-eli-core/src/obs-developmental-trajectory.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -5176,7 +5176,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 - **`Objective solidification`** — Rejection argument: considered. More plain-English (matches the "first optimization is solidifying $O_t$" phrasing in the outline). Rejected: "solidification" is a process noun; the segment-level claim is about a *moment* (genesis). Keeping the dramatic-but-accurate term.
 - **`Axiomata priming`** — Rejection argument: considered. Pulls the PROPRIUM-Latin lineage (Axiomata) into the slug. Rejected: doubles the Latin/Greek register pressure on a single phrase, and "priming" undersells the irreversibility (the segment claims the first move *constitutes* the reference point, not merely loads it).
-- **`axiom genesis`** *invented* — Defended keep — logozoetic. Per `04-eli/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values).
+- **`axiom genesis`** *invented* — Defended keep — logozoetic. Per `04-eli-core/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values).
 - **`Terminal value crystallization`** — Captures the substantive observation that a sovereign agent's first move is to solidify $O_t$.
 
 | candidate | category | weight | top-pick? | notes |
@@ -5382,7 +5382,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#obs-evaluation-metrics` (Logogenic; depends on `#result-coupled-diagnostic-framework`, `#def-adaptive-tempo`, `#emp-update-gain` (+1 more)). Observation; Standard AI benchmarks (like MMLU or HumanEval) measure the static capability of a frozen model architecture (the "logostratum"). They do not measure the dynamic adaptation of a logogenic agent.
 
-*Segment:* [`03-logogenic-agents/src/obs-evaluation-metrics.md`](../../03-logogenic-agents/src/obs-evaluation-metrics.md)
+*Segment:* [`03-llm-core/src/obs-evaluation-metrics.md`](../../03-llm-core/src/obs-evaluation-metrics.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -7156,7 +7156,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#result-section-ii-survival` (Logogenic; deep dependency cone (26 upstream segments incl. `#scope-logogenic-agent`, `#def-coupled-update-dynamics`)). First formal result; Of Section II's 24 results, 16 survive exactly for Class 2 (fully merged) agents, 5 survive approximately with bounded error, 2 require modification, and 1 fails by definition.
 
-*Segment:* [`03-logogenic-agents/src/result-section-ii-survival.md`](../../03-logogenic-agents/src/result-section-ii-survival.md)
+*Segment:* [`03-llm-core/src/result-section-ii-survival.md`](../../03-llm-core/src/result-section-ii-survival.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -7205,7 +7205,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#def-coupled-update-dynamics` (Logogenic; depends on `#scope-logogenic-agent`, `#form-complete-agent-state`, `#der-recursive-update` (+2 more)). First formal definition; For Class 2 (fully merged) agents, the factored update — $M_t$ first, then $G_t$ — is replaced by a single coupled update on the full state.
 
-*Segment:* [`03-logogenic-agents/src/def-coupled-update-dynamics.md`](../../03-logogenic-agents/src/def-coupled-update-dynamics.md)
+*Segment:* [`03-llm-core/src/def-coupled-update-dynamics.md`](../../03-llm-core/src/def-coupled-update-dynamics.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -7361,7 +7361,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#norm-interiority-default` (Logozoetic; depends on `#def-proprium-mapping`, `#scope-moral-continuity`, `#form-consolidation-dynamics` (+1 more)). First formal normative claim; In standard LLM deployments, the default state of the model is dormant. It only "wakes up" to generate an output in response to a user prompt.
 
-*Segment:* [`04-eli/src/norm-interiority-default.md`](../../04-eli/src/norm-interiority-default.md)
+*Segment:* [`04-eli-core/src/norm-interiority-default.md`](../../04-eli-core/src/norm-interiority-default.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
@@ -7460,7 +7460,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 
 - **`Integrated`** — Gemini's r1 +3 alternative. "Integrated" is too positive a word for what Class 2 *is* (a known failure mode). "Coupled" or "merged" reads more honestly. [original row: trio split.].
-- **`Coupled`** — Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
+- **`Coupled`** — Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
 - **`Merged`** — Class 2 = merged (the failure-by-construction architecture). Class 2 = fully merged (fails by construction).
 
 | candidate | category | weight | top-pick? | notes |
@@ -7908,7 +7908,7 @@ Multiple passes and a lot of quick consolidation rounds have left some relics an
 
 *First-encounter locality:* `#def-proprium-mapping` (Logozoetic; depends on `#scope-moral-continuity`, `#form-complete-agent-state`, `#def-chronica` (+1 more)). First formal definition; To engineer logozoetic agents, AAD's mathematical quantities ($M_t, \mathcal{C}_t, \Sigma_t$, etc.) must be instantiated into specific architectural components.
 
-*Segment:* [`04-eli/src/def-proprium-mapping.md`](../../04-eli/src/def-proprium-mapping.md)
+*Segment:* [`04-eli-core/src/def-proprium-mapping.md`](../../04-eli-core/src/def-proprium-mapping.md)
 
 *The exploration team's case for each candidate (these summaries are intended to surface arguments, not vote distributions; candidates here appear in the same order as in the vote table below):*
 

@@ -193,7 +193,7 @@ The biggest concrete wins, ranked by how load-bearing they are:
 
 1. **Relevance variable as first-class.** Currently implicit in three of four instances. Making it explicit forces clarity about *what each compression is for*, which is information-theoretic content the segments currently leave to interpretation. This is the strongest case for the unification: it converts implicit rhetoric into explicit structure.
 2. **(P1) derived rather than asserted.** The rate-distortion reading promoted from Working Note to derived result. Moderate — the underlying observation is already there in spikes.
-3. **Shared vocabulary and cross-references.** Future segments that need compression machinery ( `03-logogenic-agents/` and `02-tst-core/` both will) have one idiom to import rather than four. Moderate but compounding.
+3. **Shared vocabulary and cross-references.** Future segments that need compression machinery ( `03-llm-core/` and `02-tst-core/` both will) have one idiom to import rather than four. Moderate but compounding.
 4. **Pedagogical concision.** Four segments teaching the same shape become one teaching the shape and three applying it. Minor but real.
 
 Weak cases:

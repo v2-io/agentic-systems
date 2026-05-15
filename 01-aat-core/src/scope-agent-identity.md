@@ -54,7 +54,7 @@ Within AAD's formalism, identity is not the model state $M_t$ (which can be copi
 - Merging divergent models requires reconciling incompatible causal histories — a lossy operation with no generally optimal solution.
 - Temporal continuity (one unbroken causal thread) is what gives the model's sufficient statistic its meaning.
 
-**Connection to logogenic agents.** The 100% context turnover problem ( #obs-context-turnover — cross-component reference, see `03-logogenic-agents/`) is a special case: each AI agent session starts a new causal trajectory $\mathcal C_t$ from near-zero. External memory (CLAUDE.md, memory files) transfers a *summary* of previous trajectories' models, but not the trajectories themselves. The non-forkability observation frames this not as a deficiency but as a structural feature of causally-embedded agents.
+**Connection to logogenic agents.** The 100% context turnover problem ( #obs-context-turnover — cross-component reference, see `03-llm-core/`) is a special case: each AI agent session starts a new causal trajectory $\mathcal C_t$ from near-zero. External memory (CLAUDE.md, memory files) transfers a *summary* of previous trajectories' models, but not the trajectories themselves. The non-forkability observation frames this not as a deficiency but as a structural feature of causally-embedded agents.
 
 ## Working Notes
 

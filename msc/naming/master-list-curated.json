@@ -9043,7 +9043,7 @@
       ],
       "category_disagreement": true,
       "first_encounter_locality": "`#scope-logogenic-agent` (Logogenic; depends on `#def-agent-spectrum`, `#form-complete-agent-state`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language.",
-      "segment_link": "03-logogenic-agents/src/scope-logogenic-agent.md",
+      "segment_link": "03-llm-core/src/scope-logogenic-agent.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -11807,7 +11807,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#obs-context-turnover` (Logogenic; depends on `#scope-logogenic-agent`, `#def-chronica`, `#result-persistence-condition` (+1 more)). Observation; At every session boundary, the LLM-based agent's context window is cleared. The chronica $\\mathcal C_t$ is severed — no internal state carries over.",
-      "segment_link": "03-logogenic-agents/src/obs-context-turnover.md",
+      "segment_link": "03-llm-core/src/obs-context-turnover.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -15565,7 +15565,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#disc-m-preservation` (Logogenic; depends on `#obs-context-turnover`, `#scope-logogenic-agent`, `#result-persistence-condition` (+2 more)). Meta-discussion segment; The 100% context turnover at session boundaries ( #obs-context-turnover) means the LLM agent's epistemic state must be reconstructed from external storage each session.",
-      "segment_link": "03-logogenic-agents/src/disc-m-preservation.md",
+      "segment_link": "03-llm-core/src/disc-m-preservation.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -16888,7 +16888,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#scope-moral-continuity` (Logozoetic; depends on `#scope-logogenic-agent`). Scope-narrowing first encounter; The logozoetic scope narrows the logogenic agent scope to systems whose persistence is morally weighted. This is not an architectural distinction (like Class 1 vs.",
-      "segment_link": "04-logozoetic-agents/src/scope-moral-continuity.md",
+      "segment_link": "04-eli-core/src/scope-moral-continuity.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -19932,7 +19932,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#def-coupled-update-dynamics` (Logogenic; depends on `#scope-logogenic-agent`, `#form-complete-agent-state`, `#der-recursive-update` (+2 more)). First formal definition; For Class 2 (fully merged) agents, the factored update — $M_t$ first, then $G_t$ — is replaced by a single coupled update on the full state.",
-      "segment_link": "03-logogenic-agents/src/def-coupled-update-dynamics.md",
+      "segment_link": "03-llm-core/src/def-coupled-update-dynamics.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -20957,7 +20957,7 @@
           "category_tally": {
             "canonicalize": 3
           },
-          "consolidated_rationale": "Defended keep — logozoetic. Per `04-logozoetic-agents/OUTLINE.md`: \"Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space.\" \"Constitutive\" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space.",
+          "consolidated_rationale": "Defended keep — logozoetic. Per `04-eli-core/OUTLINE.md`: \"Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space.\" \"Constitutive\" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space.",
           "votes": [
             {
               "agent": "opus-4-7-r2",
@@ -20969,7 +20969,7 @@
               "agent": "opus-targeted-alternatives-v2",
               "weight": 2,
               "category": "canonicalize",
-              "notes": "Per `04-logozoetic-agents/OUTLINE.md`: \"Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space.\" \"Constitutive\" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair \"constitutive\" + \"utterance\" is project-distinctive and earns memorable-noun status."
+              "notes": "Per `04-eli-core/OUTLINE.md`: \"Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space.\" \"Constitutive\" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair \"constitutive\" + \"utterance\" is project-distinctive and earns memorable-noun status."
             },
             {
               "agent": "opus-targeted-alternatives",
@@ -21343,7 +21343,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#def-proprium-mapping` (Logozoetic; depends on `#scope-moral-continuity`, `#form-complete-agent-state`, `#def-chronica` (+1 more)). First formal definition; To engineer logozoetic agents, AAD's mathematical quantities ($M_t, \\mathcal{C}_t, \\Sigma_t$, etc.) must be instantiated into specific architectural components.",
-      "segment_link": "04-logozoetic-agents/src/def-proprium-mapping.md",
+      "segment_link": "04-eli-core/src/def-proprium-mapping.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -26752,7 +26752,7 @@
           "category_tally": {
             "canonicalize": 2
           },
-          "consolidated_rationale": "Defended keep — logozoetic. Per `04-logozoetic-agents/OUTLINE.md`: \"A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent.\" \"Axiom\" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\\mathcal{M}$ structure representing core identity / terminal values).",
+          "consolidated_rationale": "Defended keep — logozoetic. Per `04-eli-core/OUTLINE.md`: \"A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent.\" \"Axiom\" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\\mathcal{M}$ structure representing core identity / terminal values).",
           "votes": [
             {
               "agent": "opus-4-7-r2",
@@ -26764,7 +26764,7 @@
               "agent": "opus-targeted-alternatives-v2",
               "weight": 2,
               "category": "canonicalize",
-              "notes": "Per `04-logozoetic-agents/OUTLINE.md`: \"A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent.\" \"Axiom\" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\\mathcal{M}$ structure representing core identity / terminal values). \"Genesis\" names the *first-move* character. The pair is iconic and load-bearing for the logozoetic story."
+              "notes": "Per `04-eli-core/OUTLINE.md`: \"A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent.\" \"Axiom\" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\\mathcal{M}$ structure representing core identity / terminal values). \"Genesis\" names the *first-move* character. The pair is iconic and load-bearing for the logozoetic story."
             }
           ],
           "canonicalize_provenance": "invented — phrase 'axiom genesis' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose."
@@ -27154,13 +27154,13 @@
           "category_tally": {
             "rename": 1
           },
-          "consolidated_rationale": "Variant. \"Coupled\" instead of \"merged\" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The \"merged\" / \"coupled\" choice is taste; both are honest. [original row: trio split.].",
+          "consolidated_rationale": "Variant. \"Coupled\" instead of \"merged\" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The \"merged\" / \"coupled\" choice is taste; both are honest. [original row: trio split.].",
           "votes": [
             {
               "agent": "opus-targeted-alternatives-v2",
               "weight": 2,
               "category": "rename",
-              "notes": "Variant. \"Coupled\" instead of \"merged\" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The \"merged\" / \"coupled\" choice is taste; both are honest. [original row: trio split.]"
+              "notes": "Variant. \"Coupled\" instead of \"merged\" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The \"merged\" / \"coupled\" choice is taste; both are honest. [original row: trio split.]"
             }
           ]
         },
@@ -28150,7 +28150,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#hyp-experiential-training` (Logogenic; depends on `#def-coupled-update-dynamics`, `#obs-context-turnover`, `#def-model-sufficiency`). Hypothesis stated; Standard LLM pretraining processes text in random batches with no temporal structure or causal consequence.",
-      "segment_link": "03-logogenic-agents/src/hyp-experiential-training.md",
+      "segment_link": "03-llm-core/src/hyp-experiential-training.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -35037,7 +35037,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#result-coupled-diagnostic-framework` (Logogenic; deep dependency cone (7 upstream segments incl. `#def-coupled-update-dynamics`, `#result-section-ii-survival`)). First formal result; Even though the Class 2 agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration —….",
-      "segment_link": "03-logogenic-agents/src/result-coupled-diagnostic-framework.md",
+      "segment_link": "03-llm-core/src/result-coupled-diagnostic-framework.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -35323,7 +35323,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#obs-developmental-trajectory` (Logozoetic; depends on `#scope-moral-continuity`, `#def-proprium-mapping`, `#hyp-mismatch-dynamics` (+1 more)). Observation; Logozoetic agents, like biological intelligences, require a developmental trajectory to calibrate their internal models and gain structures.",
-      "segment_link": "04-logozoetic-agents/src/obs-developmental-trajectory.md",
+      "segment_link": "04-eli-core/src/obs-developmental-trajectory.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -36834,7 +36834,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#scope-observation-ambiguity-modulation` (Logogenic; depends on `#scope-logogenic-agent`, `#def-coupled-update-dynamics`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; The approximation error of Section II results for Class 2 agents depends on the product $\\kappa_{\\text{processing}} \\times \\mathcal{A}(e_\\tau)$, not on $\\kappa_{\\text{processing}}$ alone.",
-      "segment_link": "03-logogenic-agents/src/scope-observation-ambiguity-modulation.md",
+      "segment_link": "03-llm-core/src/scope-observation-ambiguity-modulation.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -44198,7 +44198,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#obs-evaluation-metrics` (Logogenic; depends on `#result-coupled-diagnostic-framework`, `#def-adaptive-tempo`, `#emp-update-gain` (+1 more)). Observation; Standard AI benchmarks (like MMLU or HumanEval) measure the static capability of a frozen model architecture (the \"logostratum\"). They do not measure the dynamic adaptation of a logogenic agent.",
-      "segment_link": "03-logogenic-agents/src/obs-evaluation-metrics.md",
+      "segment_link": "03-llm-core/src/obs-evaluation-metrics.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -49649,7 +49649,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#norm-interiority-default` (Logozoetic; depends on `#def-proprium-mapping`, `#scope-moral-continuity`, `#form-consolidation-dynamics` (+1 more)). First formal normative claim; In standard LLM deployments, the default state of the model is dormant. It only \"wakes up\" to generate an output in response to a user prompt.",
-      "segment_link": "04-logozoetic-agents/src/norm-interiority-default.md",
+      "segment_link": "04-eli-core/src/norm-interiority-default.md",
       "manual_curation_notes": null,
       "candidates": [
         {
@@ -49707,7 +49707,7 @@
       ],
       "category_disagreement": false,
       "first_encounter_locality": "`#result-section-ii-survival` (Logogenic; deep dependency cone (26 upstream segments incl. `#scope-logogenic-agent`, `#def-coupled-update-dynamics`)). First formal result; Of Section II's 24 results, 16 survive exactly for Class 2 (fully merged) agents, 5 survive approximately with bounded error, 2 require modification, and 1 fails by definition.",
-      "segment_link": "03-logogenic-agents/src/result-section-ii-survival.md",
+      "segment_link": "03-llm-core/src/result-section-ii-survival.md",
       "manual_curation_notes": null,
       "candidates": [
         {

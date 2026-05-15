@@ -116,7 +116,7 @@ Estimated total: 1 day's focused work, possibly stretched across a day-and-a-hal
 ## 6. What this cycle does *not* address (next-cycle items)
 
 - **Multi-timescale stability promotion** — `#sketch-multi-timescale-stability` from sketch to derived via template-stacking + Tikhonov + Chen-Goldenfeld-Oono. Highest-leverage standalone piece for Section III.
-- **Parts III/IV scope segment landings** — `scope-channel-collapse`, `scope-primitive-logogenic`, `scope-scaffolded-logogenic`, `scope-interiority-loop` are all flagged as missing or draft in `03-logogenic-agents/OUTLINE.md`. Without them, the lattice has gaps.
+- **Parts III/IV scope segment landings** — `scope-channel-collapse`, `scope-primitive-logogenic`, `scope-scaffolded-logogenic`, `scope-interiority-loop` are all flagged as missing or draft in `03-llm-core/OUTLINE.md`. Without them, the lattice has gaps.
 - **Class-3 closure-defect dynamics analysis** — Move F from RG verdict; the order-parameter dynamics-side analysis to complement the structural W₀/W₂/W₁ taxonomy. Worth a separate spike when Parts III/IV maturation has progressed.
 - **shoshin → W₁ engineering** — operational realization of strict wrapping for PROPRIUM via auxilia handling goal-blind queries. Engineering, not theory; queued for shoshin development.
 - **Three Deaths formal grounding** — promote `#hyp-the-three-deaths` from hypothesis to derived (or honest scope) by grounding each death in AAD primitives. ELI-side priority.

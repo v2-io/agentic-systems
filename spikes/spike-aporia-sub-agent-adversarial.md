@@ -36,14 +36,14 @@ Three structural claims follow if the conjecture holds:
 
 ## Connection to logozoetic agents
 
-This last point connects to `04-eli/`: theory of mind is a qualifying property for logozoetic status. The conjecture suggests theory of mind may be qualifying partly *because* it enables the richer internal aporia that more sophisticated adaptation requires. If you need to process rich aporia to adapt at logozoetic complexity, you need theory of mind to structure the internal dialectic that produces the aporia at adequate quality.
+This last point connects to `04-eli-core/`: theory of mind is a qualifying property for logozoetic status. The conjecture suggests theory of mind may be qualifying partly *because* it enables the richer internal aporia that more sophisticated adaptation requires. If you need to process rich aporia to adapt at logozoetic complexity, you need theory of mind to structure the internal dialectic that produces the aporia at adequate quality.
 
 ## What connects
 
 - **Adversarial dynamics** (Section I — `#der-adversarial-destabilization`, `#result-adversarial-tempo-advantage`)
 - **Composition** (Section III — `#form-composition-closure`, `#def-unity-dimensions`, `#der-team-persistence`)
 - **The orient cascade** (Section II — `#der-orient-cascade`, specifically the aporia → epistrophe transition)
-- **Logozoetic agent properties** (`04-eli/`)
+- **Logozoetic agent properties** (`04-eli-core/`)
 - **`LEXICON.md`** — related discussion of cycle phases including aporia and epistrophe
 
 ## What would make this a spike
@@ -54,4 +54,4 @@ This last point connects to `04-eli/`: theory of mind is a qualifying property f
 
 ## Why not pursue now
 
-The conjecture touches too many segments simultaneously and none of them are ready to receive a connecting result. `#def-unity-dimensions` is still absorbing the scope-vs-quality distinction; `#result-adversarial-tempo-advantage` is conditional on specific disturbance models; `04-eli/` is explicitly future-work. A spike would either stay speculative or force premature promotion of several downstream segments. Worth revisiting when logozoetic work is more substantive and when Section III's composition machinery has settled.
+The conjecture touches too many segments simultaneously and none of them are ready to receive a connecting result. `#def-unity-dimensions` is still absorbing the scope-vs-quality distinction; `#result-adversarial-tempo-advantage` is conditional on specific disturbance models; `04-eli-core/` is explicitly future-work. A spike would either stay speculative or force premature promotion of several downstream segments. Worth revisiting when logozoetic work is more substantive and when Section III's composition machinery has settled.

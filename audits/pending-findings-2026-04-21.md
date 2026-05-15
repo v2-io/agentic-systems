@@ -69,7 +69,7 @@ The below Problem / Repair direction / Estimated effort / Why deferred sections 
 
 ### Original finding
 
-**Problem.** `03-logogenic-agents/src/scope-observation-ambiguity-modulation.md` defines ambiguity $A(e)$ using *hypothetical* $\kappa = 1$ and $\kappa = 0$ processors, then uses that definition downstream. The same segment's §79 concedes that the product form is not derived and the operational definitions are only proposals. The issue: the present variable is *architecture-contaminated* — it is defined by reference to hypothetical agent architectures rather than to a property of the observation stream itself. This makes it operationally muddy and not cleanly identifiable from data.
+**Problem.** `03-llm-core/src/scope-observation-ambiguity-modulation.md` defines ambiguity $A(e)$ using *hypothetical* $\kappa = 1$ and $\kappa = 0$ processors, then uses that definition downstream. The same segment's §79 concedes that the product form is not derived and the operational definitions are only proposals. The issue: the present variable is *architecture-contaminated* — it is defined by reference to hypothetical agent architectures rather than to a property of the observation stream itself. This makes it operationally muddy and not cleanly identifiable from data.
 
 **Confidence**: Medium (Codex). The intuition (that some observations are more ambiguous than others) is right; the operationalization as currently written conflates observation properties with processor properties.
 
@@ -85,7 +85,7 @@ Recast $A(e)$ as a property of the observation event itself — e.g., the condit
 
 ### Why deferred
 
-`observation-ambiguity-modulation` is in `03-logogenic-agents/`, which is framework-stage per CLAUDE.md. Other logogenic segments may make similar architecture-contaminated moves; a single-segment fix may need to be part of a broader logogenic consistency pass. Worth scoping the logogenic-wide review before executing the point fix.
+`observation-ambiguity-modulation` is in `03-llm-core/`, which is framework-stage per CLAUDE.md. Other logogenic segments may make similar architecture-contaminated moves; a single-segment fix may need to be part of a broader logogenic consistency pass. Worth scoping the logogenic-wide review before executing the point fix.
 
 ---
 

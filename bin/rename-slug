@@ -46,15 +46,15 @@ REPO_ROOT = Pathname.new(__dir__).parent.expand_path.freeze
 COMPONENT_SRCS = %w[
   01-aat-core/src
   02-tst-core/src
-  03-logogenic-agents/src
-  04-eli/src
+  03-llm-core/src
+  04-eli-core/src
 ].map { |p| REPO_ROOT / p }.freeze
 
 COMPONENT_OUTLINES = %w[
   01-aat-core/OUTLINE.md
   02-tst-core/OUTLINE.md
-  03-logogenic-agents/OUTLINE.md
-  04-eli/OUTLINE.md
+  03-llm-core/OUTLINE.md
+  04-eli-core/OUTLINE.md
 ].map { |p| REPO_ROOT / p }.freeze
 
 EXCLUDED_DIR_PREFIXES = %w[

@@ -26,7 +26,7 @@ $M_t = \phi(\mathcal{C}_t)$ with $\phi: \mathcal{C}^\ast \to \mathcal{M}$. Well-
 
 ## Errors to watch for
 
-- The "completeness assumption" claim ("any information not in $M_t$ is lost to the agent") is constitutive but doesn't address whether external memory (e.g., notes, persisted state for logogenic agents) is "in $M_t$" or "out." For logogenic agents with external memory stores (PROPRIUM CHRONICA on disk), the boundary between $M_t$ and external storage is structurally important. I expect `#disc-m-preservation` (in `03-logogenic-agents/`) addresses this.
+- The "completeness assumption" claim ("any information not in $M_t$ is lost to the agent") is constitutive but doesn't address whether external memory (e.g., notes, persisted state for logogenic agents) is "in $M_t$" or "out." For logogenic agents with external memory stores (PROPRIUM CHRONICA on disk), the boundary between $M_t$ and external storage is structurally important. I expect `#disc-m-preservation` (in `03-llm-core/`) addresses this.
 - The "degenerate cases" framing of PID as $M_t$-impoverished is clean but mixes definitional content with positioning of a downstream segment (`#def-agent-spectrum`). The mixing is fine.
 
 ## Predictions for next segments

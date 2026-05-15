@@ -35,7 +35,7 @@ What I'll watch: some segments may write the observation as $o_t = h(Ω_t, ε_t)
 
 ## 6. Prediction for Next Segment (def-chronica)
 
-Next: #def-chronica. Prediction: defines C_t as the complete interaction history (o_1, a_1, ..., a_{t-1}, o_t). Will note that C_t is "non-forkable" — the agent has one causal trajectory. This is load-bearing for the 04-eli section (identity as trajectory) but the definition here should be neutral/general. Will probably note that M_t = φ(C_t) is the compression of this history, anticipating #form-agent-model.
+Next: #def-chronica. Prediction: defines C_t as the complete interaction history (o_1, a_1, ..., a_{t-1}, o_t). Will note that C_t is "non-forkable" — the agent has one causal trajectory. This is load-bearing for the 04-eli-core section (identity as trajectory) but the definition here should be neutral/general. Will probably note that M_t = φ(C_t) is the compression of this history, anticipating #form-agent-model.
 
 ## 7. What Would I Change?
 

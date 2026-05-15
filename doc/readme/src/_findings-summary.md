@@ -73,7 +73,7 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 ### Logogenic Agents
 
 - **`#scope-observation-ambiguity-modulation`** *(status: conditional)* — *Ambiguity-Bounded Architectural Bias Law for Coupled Agents* — *Claim novelty* on the formal product-form bias law $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$ for coupled-architecture agents, where $\kappa$ is an architectural property of the processor and $I$ measures the goal-resolvable residual uncertainty left by the observation.  
-  [`03-logogenic-agents/src/scope-observation-ambiguity-modulation.md`](03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
+  [`03-llm-core/src/scope-observation-ambiguity-modulation.md`](03-llm-core/src/scope-observation-ambiguity-modulation.md)
 - **`#der-logogenic-as-wrapping`** *(status: conditional)* — *Logogenic Substrate Specialization of Class Coercion* — *Claim integration* of the class-coercion theorem with the scaffolded-logogenic regime.  
-  [`03-logogenic-agents/src/der-logogenic-as-wrapping.md`](03-logogenic-agents/src/der-logogenic-as-wrapping.md)
+  [`03-llm-core/src/der-logogenic-as-wrapping.md`](03-llm-core/src/der-logogenic-as-wrapping.md)
 

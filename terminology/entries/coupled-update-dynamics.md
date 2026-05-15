@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts, logogenic]
 source_type: asf
-primary_source: 03-logogenic-agents/src/def-coupled-update-dynamics.md
-first_asf_mention: 03-logogenic-agents/src/def-coupled-update-dynamics.md
+primary_source: 03-llm-core/src/def-coupled-update-dynamics.md
+first_asf_mention: 03-llm-core/src/def-coupled-update-dynamics.md
 see_also: [directed-separation, goal-update-coupling-class, coupled, logogenic-agent, orient-cascade]
 aliases: []
 do_not_confuse: [directed-separation]
@@ -37,4 +37,4 @@ What is preserved from AAD: the state decomposition $X_t = (M_t, G_t)$ as an ana
 coordinate, event-driven structure, and recursive update form. What changes: the orient
 cascade does not hold as a derived result.
 
-Defined in [`#def-coupled-update-dynamics`](../../03-logogenic-agents/src/def-coupled-update-dynamics.md).
+Defined in [`#def-coupled-update-dynamics`](../../03-llm-core/src/def-coupled-update-dynamics.md).

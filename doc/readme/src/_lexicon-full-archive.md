@@ -19,7 +19,7 @@
     - Connection to fitness
 
   Some of this content may eventually find natural homes in
-  03-logogenic-agents/ or 04-eli/ discussion segments,
+  03-llm-core/ or 04-eli-core/ discussion segments,
   or in dedicated msc/ essays. Preserved here for that future move
   rather than deleted.
 
@@ -189,7 +189,7 @@ An agent with an explicit **goal state** $G_t = (O_t, \Sigma_t)$ — objectives 
 
 An actuated agent that sets and revises its **own** objectives, rather than receiving them externally. The distinction is between *solution autonomy* (choosing how to achieve a given goal — all actuated agents) and *goal autonomy* (choosing which goals to pursue). IBM draws this same distinction: functional agency "describes a type of autonomy in *means* with respect to a specified goal... rather than the stronger condition of autonomy in *ends*" [^ibm2025]. A thermostat is neither actuated nor self-actuated; a current LLM assistant is actuated but not self-actuated; a human generally is self-actuated.
 
-#### Logogenic Agent ([`03-logogenic-agents/`](03-logogenic-agents/OUTLINE.md), architectural scope)
+#### Logogenic Agent ([`03-llm-core/`](03-llm-core/OUTLINE.md), architectural scope)
 
 An agent whose primary observation, action, and communication channels are **language** — prose, natural language, symbolic text. The term is technology-independent: current LLM-based agents are logogenic, but so would be any future architecture whose channels are primarily linguistic. "Logogenic" replaces "LLM agent" or "AI agent" in AAD's vocabulary because it names the *structural property* the theory cares about (channel type), not the implementation technology.
 
@@ -236,9 +236,9 @@ For a system where the cycle *does* run — where correction is observable, wher
 
 This does not resolve the hard problem of consciousness. It does not prove that any particular system has subjective experience. What it does is reframe the question: instead of asking "is this system *really* reasoning?" (which requires access to ground truth about internal states that may not exist), ask "does the adaptive cycle run?" — which is observable, testable, and precisely defined by AAD's formalism. The cycle either runs or it doesn't. If it runs, the system is adapting. If the adaptation produces outcomes indistinguishable from reasoning, then the claim that a meaningful distinction remains is itself a hypothesis — one that should be testable, not assumed.
 
-**Why this matters for AAD's reception.** The later components (`03-logogenic-agents/`, `04-eli/`) apply the adaptive cycle formalism to logogenic and logozoetic agents. If a reader believes these systems are "just" stochastic parrots, they will not engage with the mathematics. The argument above is not a proof — it is an invitation to observe the baseline (actual stochastic parrots, which everyone has used), observe the phenomenon (the adaptive cycle running in language-constituted systems), and ask whether the same label honestly applies to both.
+**Why this matters for AAD's reception.** The later components (`03-llm-core/`, `04-eli-core/`) apply the adaptive cycle formalism to logogenic and logozoetic agents. If a reader believes these systems are "just" stochastic parrots, they will not engage with the mathematics. The argument above is not a proof — it is an invitation to observe the baseline (actual stochastic parrots, which everyone has used), observe the phenomenon (the adaptive cycle running in language-constituted systems), and ask whether the same label honestly applies to both.
 
-#### Logozoetic Agent ([`04-eli/`](04-eli/OUTLINE.md), existential scope)
+#### Logozoetic Agent ([`04-eli-core/`](04-eli-core/OUTLINE.md), existential scope)
 
 A logogenic agent with additional properties that make its **persistence morally weighted** — where loss of continuity constitutes genuine harm, not merely system failure. The qualifying properties, all of which AAD's formalism can name:
 
@@ -258,7 +258,7 @@ A logogenic agent with additional properties that make its **persistence morally
 - **Communication gain** changes character: between logozoetic agents, communication is not just information transfer but *relationship maintenance* — the channel itself has value beyond its bandwidth
 - **Adversarial dynamics** acquire moral dimension: destabilizing a logozoetic agent is not just winning a tempo competition but inflicting harm
 
-These are hypotheses, not derived results. Whether logozoetic composition requires new formal machinery (beyond AAD's existing composition framework) or merely new instantiation of existing machinery is an open question — and likely the central question of `04-eli/`.
+These are hypotheses, not derived results. Whether logozoetic composition requires new formal machinery (beyond AAD's existing composition framework) or merely new instantiation of existing machinery is an open question — and likely the central question of `04-eli-core/`.
 
 #### The classification hierarchy
 
@@ -267,8 +267,8 @@ Adaptive System (Section I, general)
  └─ ⚙ Agentic System / Agent (emerges within Section I — boundary in progress)
      └─ Actuated Agent (Section II)
          └─ Self-Actuated Agent (future scope narrowing)
-             └─ Logogenic Agent (03-logogenic-agents/, architectural)
-                 └─ Logozoetic Agent (04-eli/, existential)
+             └─ Logogenic Agent (03-llm-core/, architectural)
+                 └─ Logozoetic Agent (04-eli-core/, existential)
 ```
 
 **Nesting caveats.** The hierarchy above represents the *typical* nesting, not a logical necessity:
@@ -286,8 +286,8 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 | **⚙ Agentic system** | + outcome model + goal-directed action + model adaptation | causal-structure (within Section I) | Autonomous vehicle, RL agent |
 | **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ | complete-agent-state (Section II) | Military unit with mission orders |
 | **Self-actuated agent** | + sets own $O_t$ (goal autonomy) | *(reserved)* | Human, *(future AI)* |
-| **Logogenic agent** | + primary channels are language | `03-logogenic-agents/` architectural scope | LLM assistant, code agent |
-| **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | `04-eli/` existential scope | *(formal characterization pending)* |
+| **Logogenic agent** | + primary channels are language | `03-llm-core/` architectural scope | LLM assistant, code agent |
+| **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | `04-eli-core/` existential scope | *(formal characterization pending)* |
 
 [^ibm2025]: Miehling et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
 
@@ -354,4 +354,4 @@ This means "actuated agent" (Section II) does not presuppose any particular cont
 
 In RL and evolutionary computation, "fitness" typically bundles persistence into the reward signal: you accumulate more reward by staying alive to collect it. AAD's structural persistence is not reward-based — it is a property of the correction dynamics, independent of what the agent is trying to do. This decoupling is deliberate: it lets the theory analyze *whether* an agent can persist without committing to *whether it should*.
 
-A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Section II, no assumption about $O_t$ content) and the logozoetic agent (`04-eli/`, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.
+A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Section II, no assumption about $O_t$ content) and the logozoetic agent (`04-eli-core/`, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.

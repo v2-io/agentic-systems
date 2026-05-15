@@ -149,7 +149,7 @@ For Monderer-Shapley potential property: $\partial \Phi/\partial a_B = \partial 
 
 **Affected segment:** `02-tst-core/src/scope-developer-agent.md` (lines 63, 73, 166).
 
-**Counterevidence segments:** `03-logogenic-agents/src/scope-logogenic-agent.md`, `03-logogenic-agents/src/def-coupled-update-dynamics.md`, `03-logogenic-agents/src/obs-context-turnover.md`.
+**Counterevidence segments:** `03-llm-core/src/scope-logogenic-agent.md`, `03-llm-core/src/def-coupled-update-dynamics.md`, `03-llm-core/src/obs-context-turnover.md`.
 
 **Problematic passages** in `scope-developer-agent.md`:
 - Line 63: "For AI agents, $M_t$ is more explicitly representable (context window contents plus persistent storage), making it closer to a directly observable quantity."
@@ -164,7 +164,7 @@ For Monderer-Shapley potential property: $\partial \Phi/\partial a_B = \partial 
 
 The TST scope-developer-agent treats AI agents using standard AAD apparatus (orient cascade as derived; $M_t$ reset to near-zero; "directly observable" $M_t$) without referencing the Class 2 architectural caveat from `der-directed-separation` or the more careful logogenic treatment.
 
-**Status:** real cross-component integration debt. The framework has the Class 2 story in `03-logogenic-agents/`; TST hasn't absorbed it.
+**Status:** real cross-component integration debt. The framework has the Class 2 story in `03-llm-core/`; TST hasn't absorbed it.
 
 **Confidence:** High (verified first-hand 2026-04-25).
 
@@ -253,7 +253,7 @@ These are not findings; they are evidence that the framework's segment-level dis
 
 ## Coverage caveats
 
-The fresh-pass audit read ~45 of 109 AAD-core segments + selected TST. **Not read by the primary audit**: most foundational definitions; most Section III hypotheses (`hyp-directed-separation-under-composition`, `hyp-auftragstaktik-principle`, `hyp-communication-gain`, `obs-gates-advantage`); recently-promoted (`deriv-fisher-whitened-update-rule`, `deriv-l1-update-bias`, `deriv-variational-sector-condition`, `deriv-adaptive-gain-dynamics`); most TST (~20 segments); all of `03-logogenic-agents/` (touched in F-V5 verification this session); all of `04-logozoetic-agents/`. The judgments above are weighted toward AAD-core's load-bearing centers and recently-landed novel results; whether the framework's discipline holds across the unread segments is **Hypothesis**-level rather than **Tested**.
+The fresh-pass audit read ~45 of 109 AAD-core segments + selected TST. **Not read by the primary audit**: most foundational definitions; most Section III hypotheses (`hyp-directed-separation-under-composition`, `hyp-auftragstaktik-principle`, `hyp-communication-gain`, `obs-gates-advantage`); recently-promoted (`deriv-fisher-whitened-update-rule`, `deriv-l1-update-bias`, `deriv-variational-sector-condition`, `deriv-adaptive-gain-dynamics`); most TST (~20 segments); all of `03-llm-core/` (touched in F-V5 verification this session); all of `04-eli-core/`. The judgments above are weighted toward AAD-core's load-bearing centers and recently-landed novel results; whether the framework's discipline holds across the unread segments is **Hypothesis**-level rather than **Tested**.
 
 The improved `msc/de-novo-audit-instructions.md` was written to address the failure modes that produced this coverage gap and the false-negative "zero findings." Future audits running with the improved instructions will have stronger coverage and cross-segment-consistency discipline; redundancy with this batch is expected and acceptable.
 

@@ -33,7 +33,7 @@ SPIKE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SPIKE_DIR.parent.parent
 SRC_DIRS = [
     REPO_ROOT / "01-aat-core" / "src",
-    REPO_ROOT / "03-logogenic-agents" / "src",
+    REPO_ROOT / "03-llm-core" / "src",
 ]
 
 # (model_name, embedding_dim_hint, prefix_style)

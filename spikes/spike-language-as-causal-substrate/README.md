@@ -47,7 +47,7 @@ This spike lifts (2) from plausibility-grade to **derivation-grade under three n
 
 The result composes with (1) to give a sharper statement of AAD's position on logogenic agents:
 
-> *Natural language text carries Pearl Level 2 content structurally, independent of substrate. A logogenic agent — at any of the three sub-scopes in [`03-logogenic-agents/`](../../03-logogenic-agents/OUTLINE.md) — inherits Level 2 access from its training corpus (the language-encoded part) and from its feedback loop (the AAD-loop part). The two contributions are additive in the sense that each grants Level 2 independently; pre-loop substrate already has the language-encoded part. The loop adds **fresh** Level 2 access (interventions the agent itself performs), not Level 2 access *per se*.*
+> *Natural language text carries Pearl Level 2 content structurally, independent of substrate. A logogenic agent — at any of the three sub-scopes in [`03-llm-core/`](../../03-llm-core/OUTLINE.md) — inherits Level 2 access from its training corpus (the language-encoded part) and from its feedback loop (the AAD-loop part). The two contributions are additive in the sense that each grants Level 2 independently; pre-loop substrate already has the language-encoded part. The loop adds **fresh** Level 2 access (interventions the agent itself performs), not Level 2 access *per se*.*
 
 This is a non-trivial refinement of AAD's Pearl-response. It also has implications for the bias-bound machinery ([`#scope-observation-ambiguity-modulation`](../../01-aat-core/src/scope-observation-ambiguity-modulation.md), [`#deriv-observation-ambiguity-bias-bound`](../../01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)): the $\kappa \cdot \mathcal{A}$ bound applies to *fresh* Level 2 access in the loop; the language-encoded Level 2 content is on a different epistemic footing (asserted by a different agent — the speaker — and inherited).
 
@@ -61,7 +61,7 @@ Tentative routing, subject to review:
 
 - **Secondary landing** — Discussion expansion in [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md) noting that the loop's Level-2 contribution is *fresh* Level 2 (on top of language-encoded Level 2), with cross-reference to the new appendix.
 
-- **03-logogenic-agents impact** — the Frontmatter and `#scope-channel-collapse` should both pick up the language-encoded-Level-2 framing, since it sharpens what the sub-scopes inherit from training versus what they gain from each operational addition (scaffolding, interiority).
+- **03-llm-core impact** — the Frontmatter and `#scope-channel-collapse` should both pick up the language-encoded-Level-2 framing, since it sharpens what the sub-scopes inherit from training versus what they gain from each operational addition (scaffolding, interiority).
 
 - **Connection to `~/src/synthese-paper/`** — the `01-synthese-asymmetric-comprehension` paper's §3 non-anthropomorphizing-inversion argument is *strengthened* by this result. The structural inversion is no longer "we can't know they don't reason causally"; it is "the causal content is provably *in* their training data, structurally; the question is faithfulness of generative deployment, not presence of source content."
 

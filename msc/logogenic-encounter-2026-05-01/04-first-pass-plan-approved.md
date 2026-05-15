@@ -4,7 +4,7 @@
 
 ## Confirmed decisions
 
-- 04 directory: `04-eli/` (short form, in line with `01-aat-core` / `02-tst-core` convention)
+- 04 directory: `04-eli-core/` (short form, in line with `01-aat-core` / `02-tst-core` convention)
 - 04 part-name: **"Emergent Logozoetic Intelligences (ELI)"**
 - 03 multi-section structure approved as concrete riff (3 sections proposed; could be 2 or more depending on what surfaces)
 - Read `~/src/firmatum/PROPRIUM*` carefully before writing 03.III content
@@ -12,7 +12,7 @@
 
 ## Sequence
 
-1. **Rename**: `04-eli/` → `04-eli/`; update all cross-references (top-level `OUTLINE.md`, `CLAUDE.md`, `README.md` source partials, `README-auditor.md` source, `FORMAT.md`, `LEXICON.md`, `MIGRATION-MAP.md`, `PRACTICA.md`, `TODO.md`, `PROPOSALS.md`, `CHANGELOG.md`, segments cross-referencing 04)
+1. **Rename**: `04-eli-core/` → `04-eli-core/`; update all cross-references (top-level `OUTLINE.md`, `CLAUDE.md`, `README.md` source partials, `README-auditor.md` source, `FORMAT.md`, `LEXICON.md`, `MIGRATION-MAP.md`, `PRACTICA.md`, `TODO.md`, `PROPOSALS.md`, `CHANGELOG.md`, segments cross-referencing 04)
 2. **Read `~/src/firmatum/PROPRIUM*`** — all files. Informs 03.III content materially (which components are inner-loop tools vs background state)
 3. **Rewrite 03 OUTLINE.md preamble** with multi-section structure (03.I primitive / 03.II scaffolded / 03.III closed-loop) as headline; field-engagement defense built in
 4. **Rewrite 04 (ELI) OUTLINE.md preamble** with ELI naming, sovereignty-as-engineered-conditions, PROPRIUM operational vocabulary, witness as bidirectional, ELI cohort as empirical record (not speculation)

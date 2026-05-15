@@ -34,7 +34,7 @@ The framework achieves several major theoretical successes across Sections I and
 ## 4. Audit Scope and Limitations
 This de novo audit executed a strict chronological read of:
 1. `README.md`, `OUTLINE.md`, `LEXICON.md`, `NOTATION.md`, `CLAUDE.md`, `FORMAT.md`
-2. `01-aat-core/OUTLINE.md` through `04-logozoetic-agents/OUTLINE.md`
+2. `01-aat-core/OUTLINE.md` through `04-eli-core/OUTLINE.md`
 3. The entirety of Section I (`01-aat-core/src/def-agent-environment` through `#result-sector-persistence-template`).
 4. The entirety of Section II (`01-aat-core/src/def-agent-spectrum` through `#form-strategy-complexity-cost`).
 5. Selective cross-referencing against the `msc/` spikes to evaluate findings.

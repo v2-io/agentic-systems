@@ -50,7 +50,7 @@ That reinforces the earlier point: `#der-action-selection` cannot quietly stand 
 
 `#der-directed-separation` is a major load-bearing segment and is notably honest.
 It does not claim universal applicability.
-It classifies architectures, names Class 2 as a genuine failure mode, and routes those cases into `03-logogenic-agents/`.
+It classifies architectures, names Class 2 as a genuine failure mode, and routes those cases into `03-llm-core/`.
 
 `#def-value-object` is ambitious but mostly disciplined.
 It carefully distinguishes:

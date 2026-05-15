@@ -9,7 +9,7 @@ A comprehensive, de novo audit of the 14,123-line Adaptation and Actuation Dynam
 
 *   **GUC Rename Execution:** The transition from the old class numbering to the new (Class 1 Separated / Class 2 Partial / Class 3 Coupled) has been carried out successfully. Spot checks across `#scope-edge-update-causal-validity`, `#der-directed-separation`, and `#deriv-strategic-composition` confirm consistent use of the new terminology, with clear migration notes preserving historical context.
 *   **Missing Segments Handled Correctly:** There are explicit placeholders/missing segments at the end of the document (`#disc-strategic-self-coupling`, `#disc-modularity-state-dynamics`, `#worked-example-cam`). The preface explicitly allows for "missing" status markers (`Stage: missing`), serving as stable intent markers for future components without breaking document compilation.
-*   **Cross-Component Links:** References to external components such as `02-tst-core/`, `03-logogenic-agents/`, and `04-eli/` are well-maintained and clearly scoped.
+*   **Cross-Component Links:** References to external components such as `02-tst-core/`, `03-llm-core/`, and `04-eli-core/` are well-maintained and clearly scoped.
 
 ## 3. Mathematical & Logical Review
 

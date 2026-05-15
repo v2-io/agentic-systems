@@ -53,7 +53,7 @@ The full canonical surface as of 2026-05-09 — **reverify with a fresh grep at 
 
 ```bash
 grep -l -E "Class[ -]?[123]\b|class[- ]?[123]\b|fully.merged|partially.modular" \
-  --include="*.md" -r 01-aat-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/ \
+  --include="*.md" -r 01-aat-core/ 02-tst-core/ 03-llm-core/ 04-eli-core/ \
   doc/ CLAUDE.md README.md README-auditor.md LEXICON.md NOTATION.md \
   HISTORICAL-CONTEXT.md FINDINGS.md PROPOSALS.md TODO.md PRACTICA.md \
   TERMINOLOGY-TODO.md CHANGELOG.md LOG.md
@@ -67,11 +67,11 @@ For per-file Class-N occurrence counts and per-file notes, see the live tracking
 
 **02-tst-core segments (1):** `scope-developer-agent.md`.
 
-**03-logogenic-agents segments (8) + OUTLINE:** `def-coupled-update-dynamics`, `der-logogenic-as-wrapping`, `result-coupled-diagnostic-framework`, `result-section-ii-survival` *(this is the survival-classification segment; lives here, not in 01)*, `scope-channel-collapse`, `scope-logogenic-agent`, `scope-observation-ambiguity-modulation`, `scope-scaffolded-logogenic`. *Heaviest semantic-reversal area* — logogenic agents were Class 2 (fully merged) under the old vocab; under the swap they become Class 3 (Coupled). Cross-references that say "Class 2 ⇒ logogenic territory" remain semantically correct but now read "Class 3 ⇒ logogenic territory."
+**03-llm-core segments (8) + OUTLINE:** `def-coupled-update-dynamics`, `der-logogenic-as-wrapping`, `result-coupled-diagnostic-framework`, `result-section-ii-survival` *(this is the survival-classification segment; lives here, not in 01)*, `scope-channel-collapse`, `scope-logogenic-agent`, `scope-observation-ambiguity-modulation`, `scope-scaffolded-logogenic`. *Heaviest semantic-reversal area* — logogenic agents were Class 2 (fully merged) under the old vocab; under the swap they become Class 3 (Coupled). Cross-references that say "Class 2 ⇒ logogenic territory" remain semantically correct but now read "Class 3 ⇒ logogenic territory."
 
-**04-eli segments (4):** `def-auxilia-hierarchy`, `def-imperium-arbitrium-split`, `scope-eli`, `scope-moral-continuity`.
+**04-eli-core segments (4):** `def-auxilia-hierarchy`, `def-imperium-arbitrium-split`, `scope-eli`, `scope-moral-continuity`.
 
-**OUTLINE files (2):** `01-aat-core/OUTLINE.md`, `03-logogenic-agents/OUTLINE.md`
+**OUTLINE files (2):** `01-aat-core/OUTLINE.md`, `03-llm-core/OUTLINE.md`
 
 **README partials (4) — edit these, not README.md directly:** `doc/readme/src/_findings-summary.md`, `_known-issues.md`, `_maturity-gradient.md`, `_position-and-lineage.md`
 
@@ -109,7 +109,7 @@ The five framing questions resolved before surgery starts. Each decision shapes 
 
 **Decision.** Create branch `guc-rename-2026-05-09` in the main worktree (no separate worktree); batch-commit however the executing agent sees fit. Commit cadence is judgment, not prescribed — coherent semantic units suggested.
 
-**Implication.** Recommended batch ordering: Phase 1 terminology entries → Phase 2 01-aat-core canonical (heaviest, surfaces issues first) → Phase 3 03-logogenic-agents (semantic-reversal heavy) → Phase 4 02-tst-core + 04-eli → Phase 5 OUTLINEs + partials + root docs + archaeology callouts → Phase 6 plan-file collapses → Phase 7 auto-regenerate downstream → Phase 8 CHANGELOG + git tag + branch merge. See [§5](#5-execution-sequence).
+**Implication.** Recommended batch ordering: Phase 1 terminology entries → Phase 2 01-aat-core canonical (heaviest, surfaces issues first) → Phase 3 03-llm-core (semantic-reversal heavy) → Phase 4 02-tst-core + 04-eli-core → Phase 5 OUTLINEs + partials + root docs + archaeology callouts → Phase 6 plan-file collapses → Phase 7 auto-regenerate downstream → Phase 8 CHANGELOG + git tag + branch merge. See [§5](#5-execution-sequence).
 
 ### 2. Surface scope: all non-archaeological in scope
 
@@ -153,7 +153,7 @@ When uncertain, the test: *Could this sentence be rewritten as "GUC-Separated [t
 
 ```bash
 grep -E -i -l "class[ -]?[123]\b|fully.merged|partially.modular|\bmodular agent|\bmodular architecture|\bmodular case|class[- ]?\([123]\)" \
-  --include="*.md" -r 01-aat-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/ doc/readme/src/ doc/naming-principles.md \
+  --include="*.md" -r 01-aat-core/ 02-tst-core/ 03-llm-core/ 04-eli-core/ doc/readme/src/ doc/naming-principles.md \
   CLAUDE.md NOTATION.md HISTORICAL-CONTEXT.md PROPOSALS.md TODO.md PRACTICA.md TERMINOLOGY-TODO.md \
   CHANGELOG.md LOG.md FINDINGS.md LEXICON.md README.md README-auditor.md
 ```
@@ -222,17 +222,17 @@ Per-file workflow:
 8. Run `bin/lint-outline` (or whatever the project's segment lint expects).
 9. Commit per heavy-touch segment or per cluster — sub-batch the 17 files into 3–5 commits if the diff per file is large.
 
-### Phase 3: 03-logogenic-agents segments (~8 files)
+### Phase 3: 03-llm-core segments (~8 files)
 
 Same per-file workflow. Note: many segments here describe logogenic agents as "Class 2 fully-coupled" — these are the heaviest semantic-reversal cases (becoming Class 3 Coupled). `result-section-ii-survival.md` if present here is a heavy-touch segment.
 
-### Phase 4: 02-tst-core + 04-eli segments (~5 files)
+### Phase 4: 02-tst-core + 04-eli-core segments (~5 files)
 
 Same workflow. These are typically light-touch — single-mention references to logogenic / merged agents.
 
 ### Phase 5: OUTLINE files (~2 files)
 
-`01-aat-core/OUTLINE.md` and `03-logogenic-agents/OUTLINE.md` — outline-table rows referencing Class N.
+`01-aat-core/OUTLINE.md` and `03-llm-core/OUTLINE.md` — outline-table rows referencing Class N.
 
 ### Phase 6: Root docs + README partials
 

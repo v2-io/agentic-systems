@@ -38,7 +38,7 @@ Format: short prose tag in `candidate.canonicalize_provenance`. Something like:
 
 > *"invented — phrase not found in segment prose at the time of the vote; the canonicalize classification reflects voter support, not excavation from prose."*
 
-Use `grep` or equivalent to search segment files (`01-aat-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/`) for the candidate phrase. Quoting on word boundaries helps; the corpus uses both formal phrasings and looser working-prose so a slightly fuzzy match counts (case-insensitive, whitespace-tolerant). When in doubt, read the surrounding paragraph to see if it's a substantive use vs an incidental occurrence.
+Use `grep` or equivalent to search segment files (`01-aat-core/src/`, `02-tst-core/src/`, `03-llm-core/src/`, `04-eli-core/src/`) for the candidate phrase. Quoting on word boundaries helps; the corpus uses both formal phrasings and looser working-prose so a slightly fuzzy match counts (case-insensitive, whitespace-tolerant). When in doubt, read the surrounding paragraph to see if it's a substantive use vs an incidental occurrence.
 
 This is more search-heavy than judgment-heavy, but the judgment moment is *what counts as a substantive prose use*. A phrase appearing once in a segment's `depends:` list comment doesn't count; a phrase appearing in Discussion or Epistemic Status as part of an argument does. Use your sense.
 

@@ -2,7 +2,7 @@
 
 > **Origin**: `~/src/agentic-tft/04-narrative-as-implementation.md` (Feb 2026 session, pre-AAD restructuring). TFT references should be read as AAD. PROPRIUM references point to `~/src/firmatum/`.
 >
-> **Relevance**: Key architectural decision for `03-logogenic-agents/`. The argument that AAD quantities (mismatch, gain, tempo) are *estimated in language* by logogenic agents, not computed numerically. Three evidence lines: embedding experiments, language already encoding AAD quantities, causal structure argument. This is what makes logogenic agents' orient cascade different from the generic AAD formulation.
+> **Relevance**: Key architectural decision for `03-llm-core/`. The argument that AAD quantities (mismatch, gain, tempo) are *estimated in language* by logogenic agents, not computed numerically. Three evidence lines: embedding experiments, language already encoding AAD quantities, causal structure argument. This is what makes logogenic agents' orient cascade different from the generic AAD formulation.
 >
 > **Status**: Working notes on a key insight that affects the entire engineering
 > approach. This note captures the realization that for logozoetic agents, the

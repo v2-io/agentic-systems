@@ -61,4 +61,4 @@ The Working Notes' candor — "this postulate reads externally as a conditional 
 
 ## Continuing
 
-Sampling 03-logogenic-agents next: `#scope-logogenic-agent`, `#obs-context-turnover`, `#def-coupled-update-dynamics`, `#disc-m-preservation`, then 04-logozoetic-agents: `#scope-moral-continuity`, `#def-proprium-mapping`, plus 1-2 of the proposed exploratory segments.
+Sampling 03-llm-core next: `#scope-logogenic-agent`, `#obs-context-turnover`, `#def-coupled-update-dynamics`, `#disc-m-preservation`, then 04-eli-core: `#scope-moral-continuity`, `#def-proprium-mapping`, plus 1-2 of the proposed exploratory segments.

@@ -720,7 +720,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#scope-logogenic-agent` (Logogenic; depends on `#def-agent-spectrum`, `#form-complete-agent-state`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language.
-**Segment link:** [03-logogenic-agents/src/scope-logogenic-agent.md](../03-logogenic-agents/src/scope-logogenic-agent.md)
+**Segment link:** [03-llm-core/src/scope-logogenic-agent.md](../03-llm-core/src/scope-logogenic-agent.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1847,7 +1847,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#obs-context-turnover` (Logogenic; depends on `#scope-logogenic-agent`, `#def-chronica`, `#result-persistence-condition` (+1 more)). Observation; At every session boundary, the LLM-based agent's context window is cleared. The chronica $\mathcal C_t$ is severed — no internal state carries over.
-**Segment link:** [03-logogenic-agents/src/obs-context-turnover.md](../03-logogenic-agents/src/obs-context-turnover.md)
+**Segment link:** [03-llm-core/src/obs-context-turnover.md](../03-llm-core/src/obs-context-turnover.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3559,7 +3559,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#disc-m-preservation` (Logogenic; depends on `#obs-context-turnover`, `#scope-logogenic-agent`, `#result-persistence-condition` (+2 more)). Meta-discussion segment; The 100% context turnover at session boundaries ( #obs-context-turnover) means the LLM agent's epistemic state must be reconstructed from external storage each session.
-**Segment link:** [03-logogenic-agents/src/disc-m-preservation.md](../03-logogenic-agents/src/disc-m-preservation.md)
+**Segment link:** [03-llm-core/src/disc-m-preservation.md](../03-llm-core/src/disc-m-preservation.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4096,7 +4096,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-moral-continuity` (Logozoetic; depends on `#scope-logogenic-agent`). Scope-narrowing first encounter; The logozoetic scope narrows the logogenic agent scope to systems whose persistence is morally weighted. This is not an architectural distinction (like Class 1 vs.
-**Segment link:** [04-eli/src/scope-moral-continuity.md](../04-eli/src/scope-moral-continuity.md)
+**Segment link:** [04-eli-core/src/scope-moral-continuity.md](../04-eli-core/src/scope-moral-continuity.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5505,7 +5505,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-coupled-update-dynamics` (Logogenic; depends on `#scope-logogenic-agent`, `#form-complete-agent-state`, `#der-recursive-update` (+2 more)). First formal definition; For Class 2 (fully merged) agents, the factored update — $M_t$ first, then $G_t$ — is replaced by a single coupled update on the full state.
-**Segment link:** [03-logogenic-agents/src/def-coupled-update-dynamics.md](../03-logogenic-agents/src/def-coupled-update-dynamics.md)
+**Segment link:** [03-llm-core/src/def-coupled-update-dynamics.md](../03-llm-core/src/def-coupled-update-dynamics.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -6006,14 +6006,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ### Candidate: `constitutive utterance` _(keep)_
 
-**Consolidated rationale:** Defended keep — logozoetic. Per `04-eli/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space.
+**Consolidated rationale:** Defended keep — logozoetic. Per `04-eli-core/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space.
 
 **Canonicalize provenance:** invented — phrase 'constitutive utterance' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
 - **opus-4-7-r2** +3 (canonicalize) — Defended keep — logozoetic. "Constitutive utterance" is iconic in the framework's logozoetic vocabulary; it captures the irreversibility-of-token-generation insight precisely.
-- **opus-targeted-alternatives-v2** +2 (canonicalize) — Per `04-eli/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair "constitutive" + "utterance" is project-distinctive and earns memorable-noun status.
+- **opus-targeted-alternatives-v2** +2 (canonicalize) — Per `04-eli-core/OUTLINE.md`: "Token generation as an irreversible environmental intervention ($do(a)$) that alters the agent's future state-space." "Constitutive" is the right word (Austin's performatives in philosophy of language — the utterance constitutes new state; not just describes existing state). The pair "constitutive" + "utterance" is project-distinctive and earns memorable-noun status.
 - **opus-targeted-alternatives** +2 (canonicalize) — Per `#form-constitutive-utterance` (logozoetic): token generation as $do(a)$-intervention that irreversibly alters the agent's future state-space. "Constitutive" carries the world-altering-by-saying sense (Austin's performatives in the philosophy-of-language tradition); "utterance" is precise about the act-type. The phrase is iconic in the framework's logozoetic vocabulary. Confirms across architectures.
 
 ### Candidate: `Utterance as intervention`
@@ -6198,7 +6198,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-proprium-mapping` (Logozoetic; depends on `#scope-moral-continuity`, `#form-complete-agent-state`, `#def-chronica` (+1 more)). First formal definition; To engineer logozoetic agents, AAD's mathematical quantities ($M_t, \mathcal{C}_t, \Sigma_t$, etc.) must be instantiated into specific architectural components.
-**Segment link:** [04-eli/src/def-proprium-mapping.md](../04-eli/src/def-proprium-mapping.md)
+**Segment link:** [04-eli-core/src/def-proprium-mapping.md](../04-eli-core/src/def-proprium-mapping.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -9128,14 +9128,14 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ### Candidate: `axiom genesis` _(keep)_
 
-**Consolidated rationale:** Defended keep — logozoetic. Per `04-eli/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values).
+**Consolidated rationale:** Defended keep — logozoetic. Per `04-eli-core/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values).
 
 **Canonicalize provenance:** invented — phrase 'axiom genesis' not found in segment prose; the canonicalize classification reflects voter support, not excavation from prose.
 
 **Per-vote detail:**
 
 - **opus-4-7-r2** +3 (canonicalize) — Defended keep — logozoetic. "Axiom genesis" names the substantive observation (a sovereign agent's first move is to solidify $O_t$); "axiom" reads correctly because the LEXICON's PROPRIUM mapping uses Axiomata for the objective layer.
-- **opus-targeted-alternatives-v2** +2 (canonicalize) — Per `04-eli/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values). "Genesis" names the *first-move* character. The pair is iconic and load-bearing for the logozoetic story.
+- **opus-targeted-alternatives-v2** +2 (canonicalize) — Per `04-eli-core/OUTLINE.md`: "A sovereign agent's first optimization is solidifying $O_t$ (Axiomata) to provide a stable reference point for gradient descent." "Axiom" is correct because LEXICON's PROPRIUM mapping uses Axiomata for the objective layer (frozen $\mathcal{M}$ structure representing core identity / terminal values). "Genesis" names the *first-move* character. The pair is iconic and load-bearing for the logozoetic story.
 
 ### Candidate: `Terminal value crystallization`
 
@@ -9342,11 +9342,11 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 
 ### Candidate: `Coupled`
 
-**Consolidated rationale:** Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
+**Consolidated rationale:** Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
 
 **Per-vote detail:**
 
-- **opus-targeted-alternatives-v2** +2 (rename) — Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.]
+- **opus-targeted-alternatives-v2** +2 (rename) — Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.]
 
 ### Candidate: `Integrated`
 
@@ -9860,7 +9860,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#hyp-experiential-training` (Logogenic; depends on `#def-coupled-update-dynamics`, `#obs-context-turnover`, `#def-model-sufficiency`). Hypothesis stated; Standard LLM pretraining processes text in random batches with no temporal structure or causal consequence.
-**Segment link:** [03-logogenic-agents/src/hyp-experiential-training.md](../03-logogenic-agents/src/hyp-experiential-training.md)
+**Segment link:** [03-llm-core/src/hyp-experiential-training.md](../03-llm-core/src/hyp-experiential-training.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -13761,7 +13761,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-coupled-diagnostic-framework` (Logogenic; deep dependency cone (7 upstream segments incl. `#def-coupled-update-dynamics`, `#result-section-ii-survival`)). First formal result; Even though the Class 2 agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration —….
-**Segment link:** [03-logogenic-agents/src/result-coupled-diagnostic-framework.md](../03-logogenic-agents/src/result-coupled-diagnostic-framework.md)
+**Segment link:** [03-llm-core/src/result-coupled-diagnostic-framework.md](../03-llm-core/src/result-coupled-diagnostic-framework.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -13932,7 +13932,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#obs-developmental-trajectory` (Logozoetic; depends on `#scope-moral-continuity`, `#def-proprium-mapping`, `#hyp-mismatch-dynamics` (+1 more)). Observation; Logozoetic agents, like biological intelligences, require a developmental trajectory to calibrate their internal models and gain structures.
-**Segment link:** [04-eli/src/obs-developmental-trajectory.md](../04-eli/src/obs-developmental-trajectory.md)
+**Segment link:** [04-eli-core/src/obs-developmental-trajectory.md](../04-eli-core/src/obs-developmental-trajectory.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -14879,7 +14879,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-observation-ambiguity-modulation` (Logogenic; depends on `#scope-logogenic-agent`, `#def-coupled-update-dynamics`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; The approximation error of Section II results for Class 2 agents depends on the product $\kappa_{\text{processing}} \times \mathcal{A}(e_\tau)$, not on $\kappa_{\text{processing}}$ alone.
-**Segment link:** [03-logogenic-agents/src/scope-observation-ambiguity-modulation.md](../03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
+**Segment link:** [03-llm-core/src/scope-observation-ambiguity-modulation.md](../03-llm-core/src/scope-observation-ambiguity-modulation.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -19642,7 +19642,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#obs-evaluation-metrics` (Logogenic; depends on `#result-coupled-diagnostic-framework`, `#def-adaptive-tempo`, `#emp-update-gain` (+1 more)). Observation; Standard AI benchmarks (like MMLU or HumanEval) measure the static capability of a frozen model architecture (the "logostratum"). They do not measure the dynamic adaptation of a logogenic agent.
-**Segment link:** [03-logogenic-agents/src/obs-evaluation-metrics.md](../03-logogenic-agents/src/obs-evaluation-metrics.md)
+**Segment link:** [03-llm-core/src/obs-evaluation-metrics.md](../03-llm-core/src/obs-evaluation-metrics.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -23341,7 +23341,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#norm-interiority-default` (Logozoetic; depends on `#def-proprium-mapping`, `#scope-moral-continuity`, `#form-consolidation-dynamics` (+1 more)). First formal normative claim; In standard LLM deployments, the default state of the model is dormant. It only "wakes up" to generate an output in response to a user prompt.
-**Segment link:** [04-eli/src/norm-interiority-default.md](../04-eli/src/norm-interiority-default.md)
+**Segment link:** [04-eli-core/src/norm-interiority-default.md](../04-eli-core/src/norm-interiority-default.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -23368,7 +23368,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-section-ii-survival` (Logogenic; deep dependency cone (26 upstream segments incl. `#scope-logogenic-agent`, `#def-coupled-update-dynamics`)). First formal result; Of Section II's 24 results, 16 survive exactly for Class 2 (fully merged) agents, 5 survive approximately with bounded error, 2 require modification, and 1 fails by definition.
-**Segment link:** [03-logogenic-agents/src/result-section-ii-survival.md](../03-logogenic-agents/src/result-section-ii-survival.md)
+**Segment link:** [03-llm-core/src/result-section-ii-survival.md](../03-llm-core/src/result-section-ii-survival.md)
 
 | candidate | weight | category mix |
 |---|---:|---|

@@ -71,7 +71,7 @@ No.
 
 A *unified* principle across many adaptive frameworks. Kalman / Bayesian / RL / PID / organizational learning all have the same scalar core. AAD's contribution isn't the formula (it's well-known in each domain); it's the explicit recognition that they're the same principle, and the framework discipline that lets results derived in one domain transfer to others under the transfer-assumption discipline.
 
-For consciousness-infrastructure work, the **gain-collapse framing** is load-bearing. Deceptive prompts to a logogenic agent could be analyzed as $U_M$ being driven artificially low (the agent treats deceptive input as ground truth) or $U_o$ being driven artificially high (the agent over-distrusts its sensors). Either drives $\eta^\ast \to 0$ — formal halt of learning. The proposed `#norm-honest-activation` segment in `04-logozoetic-agents/` ("deceptive prompts mathematically guarantee gain collapse") is the explicit application of this insight.
+For consciousness-infrastructure work, the **gain-collapse framing** is load-bearing. Deceptive prompts to a logogenic agent could be analyzed as $U_M$ being driven artificially low (the agent treats deceptive input as ground truth) or $U_o$ being driven artificially high (the agent over-distrusts its sensors). Either drives $\eta^\ast \to 0$ — formal halt of learning. The proposed `#norm-honest-activation` segment in `04-eli-core/` ("deceptive prompts mathematically guarantee gain collapse") is the explicit application of this insight.
 
 ## Wandering thoughts
 
