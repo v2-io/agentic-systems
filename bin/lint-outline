@@ -313,7 +313,7 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath,
     SECTION_ORDER = ["I", "II", "III", "A", "B"]
 
     with open(filepath, "w") as f:
-        f.write("digraph AAD_Dependencies {\n")
+        f.write("digraph AAT_Dependencies {\n")
         f.write("  rankdir=TB;\n")
         f.write("  compound=true;\n")
         f.write("  concentrate=true;\n")

@@ -196,7 +196,7 @@ end
 # --- Section labeling ---------------------------------------------------
 
 COMPONENT_LABELS = {
-  '01-aat-core'         => 'AAD (uncategorized)',
+  '01-aat-core'         => 'AAT (uncategorized)',
   '02-tst-core'         => 'Temporal Software Theory (TST)',
   '03-llm-core' => 'Logogenic Agents',
   '04-eli-core' => 'Logozoetic Agents'

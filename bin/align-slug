@@ -242,7 +242,7 @@ def every_segment_slug
   # — they are prior-work staging awaiting absorption (see MIGRATION-MAP.md),
   # often carry stale-vocabulary `type:` tokens (`Definition` with capital D,
   # `Theorem`, etc.), and are not eligible for the role-prefix discipline
-  # until their content is converted to AAD format.
+  # until their content is converted to AAT format.
   COMPONENT_SRCS.flat_map do |dir|
     next [] unless dir.exist?
     dir.glob('*.md').reject { |p| p.basename.to_s.start_with?('old-') }

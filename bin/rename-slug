@@ -370,7 +370,7 @@ end
 # cross-component dependencies (e.g., `section-ii-survival` in logogenic-agents
 # depends on `directed-separation` in aad-core) that bin/lint-outline cannot
 # resolve because it only sees one component's src/ at a time. Linting the
-# non-AAD outlines would produce noisy false-positive "missing dependency"
+# non-AAT outlines would produce noisy false-positive "missing dependency"
 # reports that are pre-existing and unrelated to any rename. Left as a known
 # gap; address by extending lint-outline to accept cross-component roots.
 def run_lint_outline

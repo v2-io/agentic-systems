@@ -262,7 +262,7 @@ COMPOUND_EXCEPTIONS = %w[
 # matching means `\bai\b` matches `ai-agent` but not `aim` or `rain`. Sorted
 # longest-first so `POMDP` matches before the shorter `MDP`.
 ACRONYMS = %w[
-  POMDP RLHF OODA CMCL AAD ASF TST CIY DAG LMI MDL FEP EFE BDI LLM RAG AGI API CLI URL MDP IB UI KL AI ML RL
+  POMDP RLHF OODA CMCL AAT ASF TST CIY DAG LMI MDL FEP EFE BDI LLM RAG AGI API CLI URL MDP IB UI KL AI ML RL
 ].sort_by { |a| -a.length }.freeze
 
 def canonical(name)

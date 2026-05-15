@@ -2,10 +2,10 @@
 #
 # mono/lib/segment_renderer.rb
 #
-# Render an AAD-formatted segment markdown file to LaTeX.
+# Render an AAT-formatted segment markdown file to LaTeX.
 #
 # Architecture follows neurips/bin/build's pattern (custom kramdown parser
-# + custom converter) but is specialized for AAD's segment cadence as
+# + custom converter) but is specialized for AAT's segment cadence as
 # defined in FORMAT.md:
 #
 #   YAML frontmatter (slug, type, status, depends, stage)
@@ -181,7 +181,7 @@ end
 
 # ──────────────────────────────────────────────────────────────────────────
 # Parser — extends kramdown with: single-dollar inline math; equation-level
-# tag recognition. Both are AAD source-side idioms that kramdown wouldn't
+# tag recognition. Both are AAT source-side idioms that kramdown wouldn't
 # pick up otherwise.
 # ──────────────────────────────────────────────────────────────────────────
 

@@ -6,8 +6,8 @@
 # tagged by their structural role. The role at each header level is
 # explicitly named in source via an italic-prefix convention:
 #
-#   # *Volume* Adaptation and Actuation Dynamics (AAD)
-#   ## *Preface* Reading AAD                   ← volume-level preface
+#   # *Volume* Adaptation and Actuation Theory (AAT)
+#   ## *Preface* Reading AAT                   ← volume-level preface
 #   ## *Part* Adaptive Systems Under Uncertainty
 #   ### *Preface*                              ← part-level preface
 #   ### *Chapter* The Coupled Loop: Ontology and Scope
