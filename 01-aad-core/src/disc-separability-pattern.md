@@ -48,6 +48,8 @@ Each row independently satisfies the three-part shape. The shared shape is not d
 
 The **separability pattern** names the *positive half* of AAD's scope: for each ladder, what succeeds under what conditions. Each separable-core entry is a positive identification claim; each structured-repair entry is a positive identification claim *conditional on* an explicitly-named added mechanism.
 
+This segment is the *scope-of-existence facet* of the stability certificate ( #disc-stability-certificate): a separable-core entry is a region where a certificate exists cleanly, a structured-repair entry is a region where one exists under explicitly-added machinery, and a general-open entry is where no certificate is available without further information. Read through the spine, this segment answers "where does the agent's measuring-stick exist at all"; #disc-identifiability-floor answers "where does it go flat" (boundary facet) and #disc-additive-coordinate-forcing "which stick is forced" (forced-identity facet).
+
 The `#disc-identifiability-floor` names the *negative half*: structural no-go results (impossibility under limited information) that characterize why specific general-open cases remain open. Two floors are currently derived:
 
 - **Instance 1** (on-policy L0-insufficiency detection via Causal Hierarchy Theorem) — forbids L0/L1 distinction from purely on-policy data. The positive counterpart: the **separable core under observable sibling covariance** is the unique broadly-available violation of the no-go's scope, naming what the agent *can* observe to escape the floor.

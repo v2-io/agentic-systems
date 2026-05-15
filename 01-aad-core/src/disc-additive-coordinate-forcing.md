@@ -87,6 +87,8 @@ The three meta-segments form AAD's scope-and-structure meta-architecture:
 
 The three compose. A ladder's separable core typically admits a coordinate-forcing move that makes the clean identification clean; a ladder's general-open case typically sits at an identifiability floor that names the information-theoretic obstruction. Reading any segment through all three meta-lenses surfaces what makes the segment load-bearing.
 
+This segment is the *forced-identity facet* of the stability certificate ( #disc-stability-certificate): it answers "*which* certificate" — whether the metric is forced to a unique form by a uniqueness theorem on an AAD-internal axiom (Čencov forces the Fisher metric, statistical scope only) or merely matched. Read through the spine, the three meta-lenses are the certificate's forced-identity (this segment), scope-of-existence ( #disc-separability-pattern), and boundary ( #disc-identifiability-floor) facets; the certificate exists iff the agent is exponentially stable ( #result-certificate-existence).
+
 ## Epistemic Status
 
 *Discussion-grade* at the meta-pattern level. This segment is a presentational organizing principle: it names a structural shape that AAD runs across four layers. The meta-pattern itself is not derived and carries no theorem of its own.
