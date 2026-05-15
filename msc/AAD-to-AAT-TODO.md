@@ -127,22 +127,29 @@ ASF/AAD layering is an easy cross-wire.
 
 ### 2.1 What changes
 
-Everything that is live, canonical, working, *and* the bulk of
-archaeology — see §2.2. Decision (Joseph, 2026-05-15): **"rename
-everything is fine. We have git."** This is the inverse of the ACT → AAD
-plan, which froze all of `_obs/` and the naming corpus. The reasoning:
-git preserves the pre-rename state perfectly; a split AAD/AAT vocabulary
-across 947 files is a worse legacy for future agents than a clean sweep;
-and the rename falsifies *no* historical voting except the tiny kernel in
-§2.3 (the records whose *subject is the choice of the name "AAD" itself*).
+Everything that is live, canonical, working, *and* the active-archaeology
+corpus (`msc/` (incl. `msc/naming/`), `spikes/`, `audits/`,
+`msc/AUDIT-WORKING-*`) — see §2.2. Decision (Joseph, 2026-05-15):
+**"rename everything is fine. We have git."** with the **2026-05-15
+refinement: `_obs/` and `releases/` are NOT renamed.** `_obs/` is
+superseded archaeology and `releases/` are frozen tagged-release
+snapshots — both are honest records of the framework *as named at the
+time*, exactly the ACT→AAD precedent's `_obs/` freeze. Net policy:
+sweep the working/active corpus for vocabulary coherence; freeze the
+two genuinely-frozen trees + the §2.3 name-decision kernel. Rationale
+holds: git preserves pre-rename state; a split AAD/AAT vocabulary in
+*live and working* files is the real future-agent hazard, whereas
+`_obs/`/`releases/` are never consulted as current.
 
 ### 2.2 The buckets (from the 2026-05-15 inventory)
 
 | Bucket | Files w/ `\bAAD\b` | Disposition |
 |---|---|---|
 | Live/canonical (top-level docs, `01-aad-core/`, `02/03/04`, `terminology/`, `bin/`, `mono/`, `doc/`, `ref/` internal, publication metadata) | ~302 | **Rename** |
-| Archaeology/working (`msc/naming/` ≈485, `spikes/` ≈136, `_obs/`, `audits/`, `msc/AUDIT-WORKING-*`, `releases/`) | ~645 | **Rename** (except §2.3) |
-| **Total** | **947** files / **14,388** `AAD` tokens | |
+| Active-archaeology/working (`msc/naming/` ≈485, `spikes/` ≈136, `audits/`, `msc/AUDIT-WORKING-*`) | ~621 | **Rename** (except §2.3 kernel) |
+| `_obs/` | 22 files / 1,306 occ | **FROZEN — do not rename** (Joseph 2026-05-15) |
+| `releases/` | 2 files / 40 occ | **FROZEN — do not rename** (Joseph 2026-05-15) |
+| **Totals** | **947** files / **14,388** `AAD` tokens; swept ≈ **920** files / **13,042** occ; frozen 24 files + §2.3 kernel | |
 
 Other counts pinned for verification (2026-05-15):
 
@@ -163,12 +170,15 @@ Other counts pinned for verification (2026-05-15):
 
 **Verification mechanics (learned at Stage 0 — apply at every grep/sweep):**
 
-- **Always exclude the §2.3 kernel pathspec** from both sweeps *and*
-  count-verification, or the plan doc alone inflates every count
-  (it is dense with AAD/AAT/dir-tokens by nature). Kernel pathspec:
-  `':!msc/AAD-to-AAT-TODO.md' ':!msc/naming/name-transition-aad.md'
-  ':!msc/naming/collision-check-brief.md'
-  ':!_obs/2026-03-13-hypothetical-theory-choice.md'`
+- **Always exclude the FROZEN+KERNEL pathspec** from both sweeps *and*
+  count-verification (the plan doc alone otherwise inflates every count
+  — it is dense with AAD/AAT/dir-tokens by nature). Canonical pathspec
+  (use verbatim everywhere):
+  `':!_obs' ':!releases' ':!msc/AAD-to-AAT-TODO.md'
+  ':!msc/naming/name-transition-aad.md'
+  ':!msc/naming/collision-check-brief.md'`
+  (the `:!_obs` blanket subsumes the former
+  `_obs/2026-03-13-hypothetical-theory-choice.md` kernel entry — §2.3.)
 - **Word-boundary regex:** `git grep -o '\bAAD\b'` (POSIX basic) is
   reliable; `git grep -oE '\bAAD\b'` silently returns **0** (git `-E`
   does not honor `\b`). Never verify AAD/AAT residue with `-E \b`.
@@ -190,10 +200,11 @@ Proposed kernel (confirm/trim by eyeballing at Stage 7 — cheap, ~3 files):
   its rejected-candidates table. Filename also stays.
 - `msc/naming/collision-check-brief.md` — the collision research that
   *produced* AAD as the answer.
-- `_obs/2026-03-13-hypothetical-theory-choice.md` — original
-  name-deliberation (candidate analysis).
 - `msc/AAD-to-AAT-TODO.md` — **this file** (self-exempt; documents the
   AAD → AAT transition, so "AAD" is the object under discussion).
+- *(`_obs/2026-03-13-hypothetical-theory-choice.md` — the original
+  name-deliberation — was a kernel entry; now subsumed by the blanket
+  `_obs/` freeze (§2.1), so it needs no separate exemption.)*
 
 Not in the kernel (these get swept normally): the `msc/naming/_archive/`
 vote aggregates and brainstorms — they voted on *segment-slug* names, not
@@ -439,18 +450,20 @@ Two coherent, independently-revertible commits within the branch
   has no `\bAAD\b` (except none expected).
 - Commit: `Rename AAD→AAT: build scripts + regenerate README/LEXICON/FINDINGS/monograph`
 
-### Stage 7 — Archaeology bulk sweep
-- `msc/` (incl. `msc/naming/`, `msc/AUDIT-WORKING-*`,
-  `msc/reflections/`), `spikes/`, `_obs/`, `audits/` (incl.
-  `audits/.integrated/`), `releases/`.
-- Rules 1–4, **excluding the §2.3 exemption kernel**. Eyeball the ~3
-  kernel files first and confirm/trim with Joseph (he bounded it at
-  2–3). Add a `.git`-tracked one-liner is *not* needed — the kernel
-  files simply aren't passed to the sweep.
-- Verify: full-repo `git grep -lE '\bAAD\b|Actuation Dynamics'` returns
-  only the kernel files + the deferred HISTORICAL-CONTEXT clause +
-  CHANGELOG-prior-name mentions.
-- Commit: `Rename AAD→AAT: archaeology sweep (naming corpus, spikes, _obs, audits) — name-decision kernel exempt`
+### Stage 7 — Active-archaeology bulk sweep
+- Scope: `msc/` (incl. `msc/naming/`, `msc/AUDIT-WORKING-*`,
+  `msc/reflections/`), `spikes/`, `audits/` (incl. `audits/.integrated/`).
+- **NOT in scope (FROZEN, Joseph 2026-05-15):** `_obs/`, `releases/` —
+  do not touch. Use the canonical FROZEN+KERNEL pathspec (§2.2
+  mechanics) so the sweep and verify both skip them automatically.
+- Rules 1–3 (name) + 4a (dir path-tokens). The §2.3 kernel files are
+  excluded by the same pathspec — eyeball those ~3 first and
+  confirm/trim with Joseph (he bounded it at 2–3).
+- Verify: `git grep -l '\bAAD\b' -- <FROZEN+KERNEL pathspec>` and the
+  phrase grep return **empty** (kernel/_obs/releases excluded by
+  pathspec, so they don't appear; deferred HISTORICAL-CONTEXT clause is
+  handled wholly at Stage 8).
+- Commit: `Rename AAD→AAT: active-archaeology sweep (msc/naming, spikes, audits) — _obs/releases frozen, name-decision kernel exempt`
 
 ### Stage 8 — Lineage note + CHANGELOG
 - `HISTORICAL-CONTEXT.md` line-92 clause: manual replacement per §2.4
@@ -468,12 +481,17 @@ Two coherent, independently-revertible commits within the branch
 - Not a git commit (memory is out-of-repo).
 
 ### Stage 10 — Final verification + merge
-1. Full-repo grep clean except the sanctioned survivors:
-   - `git grep -nE 'Adaptation and Actuation Dynamics'` → only §2.3
-     kernel + CHANGELOG/HISTORICAL-CONTEXT prior-name mentions.
-   - `git grep -nE '\bAAD\b'` → same allowed set.
-   - `git grep -nE '01-aad-core|03-logogenic-agents|04-eli/|04-logozoetic-agents'`
-     → only §2.3 kernel (no stale dir tokens anywhere else).
+1. Grep clean **under the canonical FROZEN+KERNEL pathspec** (§2.2;
+   `_obs/`/`releases/`/kernel legitimately retain AAD and are excluded
+   by pathspec, not expected to be 0 within them). Use **basic** regex
+   (`-o`/`-n` without `-E`) — `-E '\bAAD\b'` silently returns 0:
+   - `git grep -n 'Adaptation and Actuation Dynamics' -- <pathspec>` →
+     empty (HISTORICAL-CONTEXT lineage clause + CHANGELOG prior-name
+     mentions are the *only* sanctioned survivors, and they are written
+     to read correctly, not as the bare phrase).
+   - `git grep -n '\bAAD\b' -- <pathspec>` → empty.
+   - `git grep -nE '01-aad-core|03-logogenic-agents|04-eli/|04-logozoetic-agents' -- <pathspec>`
+     → empty (no stale dir tokens; `-E` is fine here, no `\b`).
    - `bin/build-monograph aat` / `llm` / `eli` all resolve;
      `git grep -n 'build-monograph aad'` → no stale invocations.
 2. `bin/build-monograph aat` end-to-end; PDF title page shows styled
