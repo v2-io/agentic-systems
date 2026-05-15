@@ -40,7 +40,7 @@ This is a *stronger requirement than predictive sufficiency* ( #def-model-suffic
 
 **Continuation convention.** All value queries are conditioned on a specific continuation policy $\pi_{\text{cont}}$ and finite horizon $N_h$. $\pi_{\text{cont}}$ is a *parameter* of the value object, not a derived quantity.
 
-**Canonical default: one-step improvement.** AAD adopts $\pi_{\text{cont}} = \pi_{\text{current}}$ as the canonical continuation convention unless otherwise specified. Under this convention, each action is evaluated assuming current behavior continues afterward — no fixed-point computation, no global optimality assumption. This aligns with AAD's incremental update philosophy ( #emp-update-gain) and makes all AAD diagnostics ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$, $A_O$) comparable across analyses of the same agent over time. It is not a convergence guarantee; it is a shared evaluation frame.
+**Canonical default: one-step improvement.** AAT adopts $\pi_{\text{cont}} = \pi_{\text{current}}$ as the canonical continuation convention unless otherwise specified. Under this convention, each action is evaluated assuming current behavior continues afterward — no fixed-point computation, no global optimality assumption. This aligns with AAT's incremental update philosophy ( #emp-update-gain) and makes all AAT diagnostics ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$, $A_O$) comparable across analyses of the same agent over time. It is not a convergence guarantee; it is a shared evaluation frame.
 
 ### Convention Hierarchy
 
@@ -98,7 +98,7 @@ Since $\delta_{\text{sat}} = V_{O_t}^{\min} - A_O$, higher $A_O$ means lower $\d
 
 The 2×2 diagnostic table ( #def-control-regret) applies under all three conventions with the same structure but different inferential force. Under C1, the "capability limit" quadrant ($\delta_{\text{sat}} \gt 0$, $\delta_{\text{regret}} \approx 0$) means "locally stuck" — the agent may be globally recoverable but cannot see the recovery path. Under C3, the same quadrant means "genuinely infeasible" — no policy in $\Pi$ can achieve the goal. The cascade's inferential force scales with the convention.
 
-**AAD adopts C1 as the canonical default** for three reasons: (1) it requires no fixed-point computation, consistent with the incremental update philosophy ( #emp-update-gain); (2) it makes all AAD diagnostics comparable across analyses of the same agent; (3) it is the most conservative, meaning false "feasible" diagnoses are minimized. Analyses that require stronger diagnostic power should state the convention explicitly. For deployed decision-making systems where "locally stuck but globally recoverable" situations are common, C2 is recommended.
+**AAT adopts C1 as the canonical default** for three reasons: (1) it requires no fixed-point computation, consistent with the incremental update philosophy ( #emp-update-gain); (2) it makes all AAT diagnostics comparable across analyses of the same agent; (3) it is the most conservative, meaning false "feasible" diagnoses are minimized. Analyses that require stronger diagnostic power should state the convention explicitly. For deployed decision-making systems where "locally stuck but globally recoverable" situations are common, C2 is recommended.
 
 Different continuation conventions yield different values for $A_O$, $\delta_{\text{sat}}$, and $\delta_{\text{regret}}$. Diagnostics computed under different conventions are not directly comparable — the convention is part of the measurement, not just the computation. When a specific convergence guarantee is needed (e.g., for #schema-strategy-persistence), the solution concept must be stated explicitly; the one-step improvement default does not provide convergence guarantees.
 
@@ -125,7 +125,7 @@ Note that $\lambda$ now depends on $(M_t, O_t, N_h)$, not just $M_t$. The value 
 - An agent with a safety constraint should explore differently from a utility maximizer
 - Two agents with identical $M_t$ but different objectives should price exploration differently
 
-This extension is structurally motivated but the specific form of $\lambda(M_t, O_t, N_h)$ is not derived within AAD (same status as #disc-ciy-unified-objective's treatment of $\lambda$).
+This extension is structurally motivated but the specific form of $\lambda(M_t, O_t, N_h)$ is not derived within AAT (same status as #disc-ciy-unified-objective's treatment of $\lambda$).
 
 **Connection to #def-model-sufficiency.** $V_O$ is conditioned on $M_t$, not on the true environment state $\Omega_t$. When $S(M_t) \lt 1$, the agent's value estimates are biased — it may over- or underestimate trajectory values because its model is incomplete. The satisfaction gap ( #def-satisfaction-gap) and control regret ( #def-control-regret) are defined in terms of $V_O(M_t, \cdot)$, not $V_O(\Omega_t, \cdot)$, which means they measure the agent's *believed* situation, not the true one. Improving $M_t$ (reducing $\delta_{\text{epistemic}}$) brings the agent's value estimates closer to reality.
 

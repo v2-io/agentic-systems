@@ -17,7 +17,7 @@ Derivation showing that $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the *unique* upd
 
 ## Setup
 
-We work within AAD's scope ( #scope-adaptive-system): an agent coupled to an environment $\Omega$ through observation and action channels, with residual uncertainty.
+We work within AAT's scope ( #scope-adaptive-system): an agent coupled to an environment $\Omega$ through observation and action channels, with residual uncertainty.
 
 **Universe of information at event time $\tau$.** The following information exists (in the broadest ontological sense) at the moment event $e_\tau$ occurs:
 
@@ -156,7 +156,7 @@ An agent with $M_{\tau^-} \supseteq \mathcal{C}_{\tau^-}$ is entirely consistent
 | Property | Source | Strength |
 |---|---|---|
 | Constraint C1 (arrow of time: update depends on $\tau^-$, not future events) | Physical law — not a formulation choice | Postulate (physical) |
-| Constraint C2 (partial observability: update depends on $e_\tau$, not raw $\Omega_\tau$) | Scope definition of AAD | Postulate (scope-defining) |
+| Constraint C2 (partial observability: update depends on $e_\tau$, not raw $\Omega_\tau$) | Scope definition of AAT | Postulate (scope-defining) |
 | Constraint C3 (state completeness: $M_{\tau^-}$ summarizes the agent's relevant past) | Analytical commitment — the definition of $M$ as complete | Definition |
 | Recursive form $M_\tau = f(M_{\tau^-}, e_\tau)$ | C1 + C2 + C3 | Proved (unique form compatible with the three constraints) |
 | Future-dependent updates eliminated | C1 alone | Derived (direct consequence) |
@@ -166,7 +166,7 @@ An agent with $M_{\tau^-} \supseteq \mathcal{C}_{\tau^-}$ is entirely consistent
 | Seven attack counterexamples (simultaneous events, continuous coupling, C3 circularity, shared state, external randomness, time-dependence, full history) | Case-by-case reduction to the recursive form | Proved (each) |
 | C3 is definitional, not eliminative | Analysis of what C3 asserts vs. what it rules out | Discussion-grade (clarifying observation) |
 
-The dividing line: C1 and C2 do genuine *eliminative* work — they rule out physically or scope-excluded update forms. C3 is a *definitional commitment* that forces the Markov structure by making $M$ complete by construction; it cannot be "violated" because any apparent violation means $M$ was misspecified. The recursive form's uniqueness is therefore conditional on the three-constraint set being accepted, not on the constraints being independently inescapable — C3 in particular could be refused (yielding non-Markovian analysis), at the cost of leaving AAD's scope.
+The dividing line: C1 and C2 do genuine *eliminative* work — they rule out physically or scope-excluded update forms. C3 is a *definitional commitment* that forces the Markov structure by making $M$ complete by construction; it cannot be "violated" because any apparent violation means $M$ was misspecified. The recursive form's uniqueness is therefore conditional on the three-constraint set being accepted, not on the constraints being independently inescapable — C3 in particular could be refused (yielding non-Markovian analysis), at the cost of leaving AAT's scope.
 
 ## Epistemic Status
 
@@ -175,7 +175,7 @@ The result is correct but partly definitional. The three constraints have differ
 | Constraint | Character | Can it be violated? |
 |------------|-----------|---------------------|
 | C1 (arrow of time) | Physical law | Not in a classical universe |
-| C2 (partial observability) | Scope definition | Only by leaving AAD's scope |
+| C2 (partial observability) | Scope definition | Only by leaving AAT's scope |
 | C3 (state completeness) | Analytical commitment | Not without redefining $M$ |
 
 C1 and C2 do genuine eliminative work — they rule out update forms that depend on future events or on raw $\Omega$. These are non-trivial constraints.

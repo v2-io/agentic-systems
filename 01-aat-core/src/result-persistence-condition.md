@@ -38,7 +38,7 @@ The steady-state mismatch is small enough for the agent's actions to remain acce
 
 $$R^\ast \lt \lVert\delta_{\text{critical}}\rVert$$
 
-where $\lVert\delta_{\text{critical}}\rVert$ is a domain-specific tolerance threshold — "how wrong can the model be before the agent's actions become harmful or ineffective?" This is set by the application domain, not derived by AAD.
+where $\lVert\delta_{\text{critical}}\rVert$ is a domain-specific tolerance threshold — "how wrong can the model be before the agent's actions become harmful or ineffective?" This is set by the application domain, not derived by AAT.
 
 **Task adequacy is a separate condition from structural persistence.** An agent can be structurally persistent ($R^\ast \lt R$) but task-inadequate ($R^\ast \gt \lVert\delta_{\text{critical}}\rVert$) — the machinery contains mismatch, but not tightly enough for the domain's needs. Conversely, when $\lVert\delta_{\text{critical}}\rVert \lt R$ (the domain's tolerance is stricter than the model class capacity), task adequacy is the binding constraint.
 
@@ -110,7 +110,7 @@ The persistence condition appears in multiple downstream contexts:
 
 - **Structural adaptation** ( #result-structural-adaptation-necessity): When model class fitness $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$, the effective $\alpha$ in the sector condition shrinks, eventually violating persistence. *This connection is developed in #result-structural-adaptation-necessity.*
 
-- **Software maintainability** ( #der-code-quality-as-observation-infrastructure — cross-component reference, see `02-tst-core/`): *[Discussion]* A codebase may become "unmaintainable" when the development team's adaptive tempo falls below the rate of complexity accumulation. The vicious cycle would then be the persistence condition being violated through the agent's own prior actions degrading future $\mathcal{T}$ via $U_o$. *This connection is structurally motivated but not yet formally derived within AAD. It requires formalizing "complexity accumulation rate" as an instance of $\rho$.*
+- **Software maintainability** ( #der-code-quality-as-observation-infrastructure — cross-component reference, see `02-tst-core/`): *[Discussion]* A codebase may become "unmaintainable" when the development team's adaptive tempo falls below the rate of complexity accumulation. The vicious cycle would then be the persistence condition being violated through the agent's own prior actions degrading future $\mathcal{T}$ via $U_o$. *This connection is structurally motivated but not yet formally derived within AAT. It requires formalizing "complexity accumulation rate" as an instance of $\rho$.*
 
 ## Findings
 
@@ -120,7 +120,7 @@ The persistence condition appears in multiple downstream contexts:
 
 **Impact:** This is the framework's central inequality and the load-bearing connection between control-theoretic Lyapunov stability analysis and the broader question of when any adaptive system — thermostat, software team, immune system, RL agent — can maintain coherent function under change. The two-condition decomposition is itself non-obvious and consequential: prior work that conflated "the machinery works" with "the machinery works well enough" produced category errors in domain transfer (a structurally persistent codebase team can be task-inadequate; the remedies differ). The complementary information-rate bound from `#deriv-persistence-cost` ($\dot R \geq n\alpha/2$) shows the threshold has a sustained-cost shadow: two agents with identical persistence guarantees can face wildly different sustained demands.
 
-**Novelty Claim:** *Claim synthesis* on Lyapunov stability theory, sector-bounded nonlinear correction, and adaptive-tempo information-rate accounting, applied uniformly across single-agent classes that range from Kalman filtering through saturating nonlinear correction through PID control. The Lyapunov machinery itself is standard; the synthesis is its use as the central inequality of an integrated agent theory, with the two-condition decomposition (structural / task-adequacy) as the AAD-internal contribution that cleanly separates "the machinery works" from "the machinery works well enough."
+**Novelty Claim:** *Claim synthesis* on Lyapunov stability theory, sector-bounded nonlinear correction, and adaptive-tempo information-rate accounting, applied uniformly across single-agent classes that range from Kalman filtering through saturating nonlinear correction through PID control. The Lyapunov machinery itself is standard; the synthesis is its use as the central inequality of an integrated agent theory, with the two-condition decomposition (structural / task-adequacy) as the AAT-internal contribution that cleanly separates "the machinery works" from "the machinery works well enough."
 
 **Related Work:**
 
@@ -130,5 +130,5 @@ The persistence condition appears in multiple downstream contexts:
 - Wiener 1948 *Cybernetics*; Ashby 1956 *Introduction to Cybernetics*; Conant & Ashby 1970 — *conceptual precursor* — the cybernetic-feedback tradition that frames the "correction must outpace disturbance" intuition without supplying the quantitative inequality.
 
 **Search Log:**
-- 2026-04 (*intuition-only* on broader prior-art): no targeted Undermind-grade search has been conducted on the persistence-condition-as-central-inequality positioning. Pre-search expectation: the Lyapunov-based stability machinery is standard; the AAD-distinctive content is the two-condition decomposition (structural vs task adequacy) and its uniform application across agent classes. A targeted search would query the bounded-rationality / control-theoretic decision-making literature (Ortega-Braun line; Genewein et al.) for prior decompositions of "stability vs adequacy" in adaptive-control settings, and the active-inference literature for the same distinction.
+- 2026-04 (*intuition-only* on broader prior-art): no targeted Undermind-grade search has been conducted on the persistence-condition-as-central-inequality positioning. Pre-search expectation: the Lyapunov-based stability machinery is standard; the AAT-distinctive content is the two-condition decomposition (structural vs task adequacy) and its uniform application across agent classes. A targeted search would query the bounded-rationality / control-theoretic decision-making literature (Ortega-Braun line; Genewein et al.) for prior decompositions of "stability vs adequacy" in adaptive-control settings, and the active-inference literature for the same distinction.
 - 2025 (*targeted*): Khalil 2002 / Khasminskii 2012 / Rockafellar-Wets 1998 confirmed as the formal antecedents for the sector-Lyapunov machinery; the segment cites them inline.

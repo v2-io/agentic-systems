@@ -49,7 +49,7 @@ $$\alpha_{ss} = K_{ss} = \frac{-Q + \sqrt{Q^2 + 4 Q R_{\text{obs}}}}{2 R_{\text{
 
 Limiting behavior: when $Q \gg R_{\text{obs}}$ (fast dynamics, clean observations), $K_{ss} \to 1$; when $Q \ll R_{\text{obs}}$ (slow dynamics, noisy observations), $K_{ss} \approx \sqrt{Q / R_{\text{obs}}}$.
 
-**Connection to AAD quantities.** The adaptive tempo for a single observation channel at rate $\nu$ is $\mathcal{T} = \nu \cdot K_{ss}$, and the sector parameter in the continuous-time framework is $\alpha = \mathcal{T}$. The bridge is trivial in the scalar case: the gain IS the sector parameter.
+**Connection to AAT quantities.** The adaptive tempo for a single observation channel at rate $\nu$ is $\mathcal{T} = \nu \cdot K_{ss}$, and the sector parameter in the continuous-time framework is $\alpha = \mathcal{T}$. The bridge is trivial in the scalar case: the gain IS the sector parameter.
 
 
 ## Proposition B.2: Matrix Kalman Sector Condition
@@ -128,7 +128,7 @@ $$\delta^T F(\delta) \geq \eta^\ast \cdot c_{\min} \lVert\delta\rVert^2 = \alpha
 
 **Statement.** For any agent updating via gradient descent on a differentiable loss $L$ with learning rate $\eta$ and minimizer $M^\ast$ (where $\nabla L(M^\ast) = 0$), there are two distinct results corresponding to the one-point and two-point sector conditions:
 
-**(B.4-i) One-point sector ⇐ strong convexity (one direction only).** The one-point sector condition at $M^\ast$ — equivalent to AAD's GA-3 / A2' as stated in #deriv-sector-condition — is
+**(B.4-i) One-point sector ⇐ strong convexity (one direction only).** The one-point sector condition at $M^\ast$ — equivalent to AAT's GA-3 / A2' as stated in #deriv-sector-condition — is
 
 $$\delta^T F(\delta) \geq \alpha \lVert\delta\rVert^2 \quad \text{for } \lVert\delta\rVert \leq R$$
 
@@ -166,7 +166,7 @@ so the one-point sector holds globally with $\mu = \tfrac{1}{2}$. But $L''(x) = 
 
 **The $\alpha$ factorization (under (B.4-ii)).** The decomposition $\alpha = \eta \cdot \mu$ separates agent design ($\eta$, responsiveness) from environment structure ($\mu$, loss curvature). The adaptive tempo maps as $\alpha \propto \mathcal{T}$: higher gain or steeper curvature means faster mismatch correction.
 
-**Where each direction lands in AAD.** The one-point form is what `#deriv-sector-condition`'s A2' ((A2') applied at $\delta^\ast = 0$) requires for Lyapunov persistence — and what AAD's six persistence-flavored results inherit through `#result-sector-persistence-template` (T2). The two-point / incremental form is what `#form-composition-closure`'s bridge lemma requires (DA2'-inc) for full-update-map contraction at the composite level. Strong convexity sits at the strict end of this scale: it implies both. The one-point ⇏ two-point counterexample above is exactly why AAD distinguishes the two — Lyapunov persistence is available for some agent classes (variational, PID-bounded-plant) where bridge-lemma contraction is not.
+**Where each direction lands in AAT.** The one-point form is what `#deriv-sector-condition`'s A2' ((A2') applied at $\delta^\ast = 0$) requires for Lyapunov persistence — and what AAT's six persistence-flavored results inherit through `#result-sector-persistence-template` (T2). The two-point / incremental form is what `#form-composition-closure`'s bridge lemma requires (DA2'-inc) for full-update-map contraction at the composite level. Strong convexity sits at the strict end of this scale: it implies both. The one-point ⇏ two-point counterexample above is exactly why AAT distinguishes the two — Lyapunov persistence is available for some agent classes (variational, PID-bounded-plant) where bridge-lemma contraction is not.
 
 
 ## Loss Function Classification
@@ -264,7 +264,7 @@ Poisson in natural parameter space. Sector ratio positive at every step, ranging
 
 **Proposition B.3** (Bridge Theorem) is a *conditional derivation*: exact under B1 (directional fidelity). B1 holds by construction for optimal Bayesian updates (the posterior minimizes expected loss, ensuring the correction aligns with the mismatch). For approximate update rules, B1 is a design condition, not a global assumption. The condition is transparent and checkable for specific systems.
 
-**Proposition B.4** (Gradient Equivalence) splits along the one-point / two-point distinction. (B.4-ii) — the iff between strong convexity and the *two-point / incremental* sector condition (DA2'-inc) — is an *exact mathematical equivalence*: bidirectional via Nesterov 2.1.10. (B.4-i) — the relation to AAD's one-point sector A2' as stated in #deriv-sector-condition — is *one-directional only*: strong convexity implies the one-point sector at $M^\ast$, but not conversely. The Codex-style counterexample $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies the one-point sector globally yet has $L''$ negative on intervals, ruling out a converse. The loss-function classification table is read accordingly: rows that supply strong convexity satisfy both forms; rows that supply only one-point sector (none in the current table — strong convexity is the universal column) would not transfer to two-point. The simulation experiments confirm the theoretical predictions across all six loss classes tested; no violations were observed where the theory predicts the sector condition holds.
+**Proposition B.4** (Gradient Equivalence) splits along the one-point / two-point distinction. (B.4-ii) — the iff between strong convexity and the *two-point / incremental* sector condition (DA2'-inc) — is an *exact mathematical equivalence*: bidirectional via Nesterov 2.1.10. (B.4-i) — the relation to AAT's one-point sector A2' as stated in #deriv-sector-condition — is *one-directional only*: strong convexity implies the one-point sector at $M^\ast$, but not conversely. The Codex-style counterexample $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies the one-point sector globally yet has $L''$ negative on intervals, ruling out a converse. The loss-function classification table is read accordingly: rows that supply strong convexity satisfy both forms; rows that supply only one-point sector (none in the current table — strong convexity is the universal column) would not transfer to two-point. The simulation experiments confirm the theoretical predictions across all six loss classes tested; no violations were observed where the theory predicts the sector condition holds.
 
 **Max attainable:** *conditional* for the bridge (B1 is inherent — pathological update rules exist), *exact* for the gradient equivalence in its two-point form (B.4-ii) and *exact one-direction* for its one-point form (B.4-i). The condition cannot be removed: there exist correction functions that violate the sector condition (FM-1 through FM-5), and there exist losses that satisfy the one-point sector at $M^\ast$ without being strongly convex (the Codex-style counterexample), which is why the one-point ⇏ two-point gap is structural rather than a smoothness artifact.
 

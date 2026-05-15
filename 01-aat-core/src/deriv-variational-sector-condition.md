@@ -61,7 +61,7 @@ The $\alpha'$-membership depends on the specific variational scheme:
 
 **Diffusion-posterior / energy-based with uncontrolled MCMC.** No controlled $\varepsilon$ bound; $\varepsilon$ grows with mixing time. Stays firmly in sub-scope $\beta$.
 
-**Active inference (variational free energy).** Conditional α' under exponential-family $q$ + natural-gradient; ε-degraded α' otherwise. This does **not** force V-strong G-BP2 (presentation of AAD as control-theoretic specialization of active inference) — V-medium (KL-divergence-based cognitive cost) remains the appropriate scope commitment per `spikes/spike-active-inference-vs-aad.md`.
+**Active inference (variational free energy).** Conditional α' under exponential-family $q$ + natural-gradient; ε-degraded α' otherwise. This does **not** force V-strong G-BP2 (presentation of AAT as control-theoretic specialization of active inference) — V-medium (KL-divergence-based cognitive cost) remains the appropriate scope commitment per `spikes/spike-active-inference-vs-aad.md`.
 
 ### Sub-scope $\alpha'$ in the A2' partition
 
@@ -106,7 +106,7 @@ This gives the full current picture: {α, α₁, α₂, α₃, α', β}.
 
 **Relationship to `#form-strategy-complexity-cost`.** The G-BP2 V-medium variational form landed in `#form-strategy-complexity-cost` uses KL divergence in the cognitive-cost term. This segment provides the complementary story on the persistence side: KL-bounded VI has ε-fidelity B1 and α' sector condition. The two together characterize the cognitive/persistence tradeoff for variational agents: $\varepsilon$ controls both the cognitive cost (how far from the target) and the persistence degradation (how much sector-constant penalty). Large $\varepsilon$ means cheap-but-persistently-weak; small $\varepsilon$ means expensive-but-persistently-sharp.
 
-**Relationship to `#disc-compression-operations`.** Variational compression is the first of the four AAD compression operations; its α' sector structure gives a concrete persistence guarantee for variational representation of $M_t$. The other three operations (strategy $\Sigma_t$, shared-intent, coarse-graining $\Lambda$) may admit similar ε-fidelity analyses where a KL-bound on the compression is available.
+**Relationship to `#disc-compression-operations`.** Variational compression is the first of the four AAT compression operations; its α' sector structure gives a concrete persistence guarantee for variational representation of $M_t$. The other three operations (strategy $\Sigma_t$, shared-intent, coarse-graining $\Lambda$) may admit similar ε-fidelity analyses where a KL-bound on the compression is available.
 
 **Meta-pattern positioning.**
 - *`#disc-separability-pattern`*: α' sits on the structured-repair tier of the A2'-scope ladder (7th ladder from `#result-contraction-template`), alongside metric-α₂ and α₃. Each represents "sector condition recovered under explicit additional structure."

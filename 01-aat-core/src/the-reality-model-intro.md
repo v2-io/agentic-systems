@@ -11,9 +11,9 @@ stage: draft
 
 # Chapter Introduction: The Reality Model
 
-Having named the objects of the agent–environment coupling and bounded what AAD applies to, we turn to what the agent maintains internally: a compressed model of reality, with measurable adequacy against the chronica it was constructed from.
+Having named the objects of the agent–environment coupling and bounded what AAT applies to, we turn to what the agent maintains internally: a compressed model of reality, with measurable adequacy against the chronica it was constructed from.
 
-An agent navigating uncertainty cannot see the world directly. Whatever it knows about reality, it built from its history of partial observations — the chronica $\mathcal C_t$. Carrying that history around in raw form is infeasible at any scale that matters; finite agents compress, and we want to talk about what they end up with. So we commit to writing the agent's state as $M_t = \phi(\mathcal C_t)$ — a function of history, condensed into something the agent can work with. Every downstream result in AAD — gain, tempo, persistence, structural adaptation — operates on this $M_t$.
+An agent navigating uncertainty cannot see the world directly. Whatever it knows about reality, it built from its history of partial observations — the chronica $\mathcal C_t$. Carrying that history around in raw form is infeasible at any scale that matters; finite agents compress, and we want to talk about what they end up with. So we commit to writing the agent's state as $M_t = \phi(\mathcal C_t)$ — a function of history, condensed into something the agent can work with. Every downstream result in AAT — gain, tempo, persistence, structural adaptation — operates on this $M_t$.
 
 The first useful question to ask of a given compression is how good it is. Sufficiency $S(M_t)$ measures the fraction of the chronica's predictive content that survives: $S = 1$ means the agent has lost nothing by compressing; $S \lt 1$ means it has lost something it might have used. The optimal compression for a given purpose — keep what predicts the future, discard what doesn't — is what Tishby's information bottleneck characterizes, and we adopt that framing directly.
 

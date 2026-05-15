@@ -20,7 +20,7 @@ stage: draft
 
 # Worked Example: 1D Active Tracking (Kalman Domain)
 
-Every AAD quantity has an exact Kalman-filter counterpart. This is a *validation* of the formal chain — all quantities are computable in closed form.
+Every AAT quantity has an exact Kalman-filter counterpart. This is a *validation* of the formal chain — all quantities are computable in closed form.
 
 ## System
 
@@ -128,7 +128,7 @@ The agent is comfortably within its invariant region with substantial adaptive r
 
 ## Mapping Quality Summary
 
-| AAD Concept | Kalman Mapping | Status |
+| AAT Concept | Kalman Mapping | Status |
 |-------------|---------------|--------|
 | Scope | Exact | Definitional |
 | Causal structure + CIY | Exact | Closed-form KL |
@@ -142,10 +142,10 @@ The agent is comfortably within its invariant region with substantial adaptive r
 
 ## Epistemic Status
 
-This is a *worked instantiation*, not a theoretical claim. Every mapping is exact — the Kalman domain is the canonical case where AAD's formal chain has closed-form realizations. The example validates that the formal chain is internally consistent and instantiable.
+This is a *worked instantiation*, not a theoretical claim. Every mapping is exact — the Kalman domain is the canonical case where AAT's formal chain has closed-form realizations. The example validates that the formal chain is internally consistent and instantiable.
 
 ## Working Notes
 
 - This example uses a 1D system. The tensor-tempo extension ( #result-per-dimension-persistence) becomes visible only in multi-dimensional tracking where different state dimensions have different observability.
 - The structural adaptation trigger (constant-velocity → constant-acceleration) is manufactured for the example. A more natural test would be a real tracking system with genuine regime changes.
-- The Kalman filter is provably optimal for the linear-Gaussian case. Every AAD quantity has not just an analog but the *exact optimal* value. This makes it the strongest validation but also the easiest — the real test is non-Kalman domains (see #example-bandit).
+- The Kalman filter is provably optimal for the linear-Gaussian case. Every AAT quantity has not just an analog but the *exact optimal* value. This makes it the strongest validation but also the easiest — the real test is non-Kalman domains (see #example-bandit).

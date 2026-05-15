@@ -20,13 +20,13 @@ stage: draft
 
 # Derived: Interaction-Channel Classification (Recipient-Side)
 
-The same signal from agent $A$ lands on recipient $B$ as one of four qualitatively different things — informative update, magnitude-shock, structural-shock, or ambient noise — determined by three independent boundary conditions stated entirely in $B$'s existing AAD quantities. The emitter-side collapse of this variation into a scalar $\gamma_A \mathcal T_A$ loses information that is load-bearing: the recipient's repair path depends on which regime the event falls into, and "more tempo" vs "different model class" address structurally different failure modes.
+The same signal from agent $A$ lands on recipient $B$ as one of four qualitatively different things — informative update, magnitude-shock, structural-shock, or ambient noise — determined by three independent boundary conditions stated entirely in $B$'s existing AAT quantities. The emitter-side collapse of this variation into a scalar $\gamma_A \mathcal T_A$ loses information that is load-bearing: the recipient's repair path depends on which regime the event falls into, and "more tempo" vs "different model class" address structurally different failure modes.
 
 ## Formal Expression
 
 ### Setup and Notation
 
-Two purposeful agents $A$ and $B$ coupled through a shared environment. $A$'s praxis produces an event $e_\tau^A$ that enters $B$'s observation channel. On $B$'s side the event is processed by the standard AAD machinery: $h_B$ maps the $A$-induced environment state to observation $o_\tau^B$ ( #def-observation-function); mismatch is $\delta_\tau^B = o_\tau^B - \hat o_\tau^B$; update absorbs $\delta_\tau^B$ with gain $\eta_B^\ast = U_{M,B}/(U_{M,B} + U_{o,B})$ ( #emp-update-gain).
+Two purposeful agents $A$ and $B$ coupled through a shared environment. $A$'s praxis produces an event $e_\tau^A$ that enters $B$'s observation channel. On $B$'s side the event is processed by the standard AAT machinery: $h_B$ maps the $A$-induced environment state to observation $o_\tau^B$ ( #def-observation-function); mismatch is $\delta_\tau^B = o_\tau^B - \hat o_\tau^B$; update absorbs $\delta_\tau^B$ with gain $\eta_B^\ast = U_{M,B}/(U_{M,B} + U_{o,B})$ ( #emp-update-gain).
 
 Two event-level quantities enter the classification and must not be conflated:
 
@@ -71,9 +71,9 @@ The event is representable and within capacity but its information content sits 
 
 ### Three Independent Boundaries
 
-The three boundary conditions are structurally independent, each stated in quantities AAD already carries:
+The three boundary conditions are structurally independent, each stated in quantities AAT already carries:
 
-| Boundary | AAD quantities | Failure mode |
+| Boundary | AAT quantities | Failure mode |
 |---|---|---|
 | (I-a) / (II-a): sector-region | $\lVert e\rVert_B$, $R_B$ (from #def-model-class-fitness / #result-sector-persistence-template) | *magnitude* — more capacity cures |
 | (I-b) / (II-b): model-class | $\mathcal I(e)$, $\mathcal F(\mathcal M_B)$, $\mathcal I_{\max}(\mathcal M_B)$ | *class* — structural adaptation cures |
@@ -109,7 +109,7 @@ $A$'s emitted perturbation $\xi_A$ enters $B$'s innovation as $\delta_\tau^B = \
 
 **Case 4 — Heavy-tailed $\xi_A$ with $\mathbb E[\xi_A^2] \sim r$ but kurtosis $\kappa \to \infty$ (expected Regime II-b).** Mean contribution is fine; the problem is the distribution shape. The Kalman filter — Gaussian-optimal — mis-gains: too aggressive for small events, too conservative for genuine large ones. The per-event KL gap $D_{\text{KL}}(P_\text{true} \Vert P_{\mathcal M_B}) \gt 0$ for any heavy-tailed $P_\text{true}$ against Gaussian. By #def-model-class-fitness, $\mathcal F(\mathcal M_B) \lt 1 - \varepsilon$ with $\varepsilon$ lower-bounded by the KL gap; by #result-structural-adaptation-necessity, no parametric update within $\mathcal M_B$ closes the mismatch. Result: Regime II-b — residuals retain non-Gaussian structure (visible in kurtosis tests); repair requires expanding the model class (e.g., Student-$t$ observation model), not more Kalman tuning.
 
-Each case lands where the classification predicts. The derivation transfers to any recipient architecture in which the underlying AAD quantities are well-defined — this is the scope inherited from #result-sector-persistence-template + #def-model-class-fitness + #def-adaptive-tempo.
+Each case lands where the classification predicts. The derivation transfers to any recipient architecture in which the underlying AAT quantities are well-defined — this is the scope inherited from #result-sector-persistence-template + #def-model-class-fitness + #def-adaptive-tempo.
 
 ### Recovery of Emitter-Side Results
 
@@ -142,7 +142,7 @@ Each existing emitter-side result is a restriction of the four-regime decomposit
 
 *Conditional.* Max attainable: *derived* for the classification structure in Class 1 (Separated) architectures; *exact* for the Kalman-over-Kalman worked case in sub-scope $\alpha$; *robust qualitative* for general sub-scope $\beta$ recipients.
 
-The three boundaries are structurally independent and each is stated in an existing AAD quantity, so the four-regime partition is not ad-hoc; it is forced by the structure of the quantities already in the theory. Within Class 1 (Separated; goal-blind epistemic update per #der-directed-separation) and sub-scope $\alpha$ recipients (Kalman / conjugate-Bayesian / exponential-family / strongly-convex-gradient / linear-PD), the Kalman-over-Kalman derivation transfers with A2' derived per #der-gain-sector-bridge, and each case yields the predicted regime by direct substitution. In sub-scope $\beta$ (PID / rule-based / human-judgment), the classification's form transfers but boundary (I-a) requires per-instantiation verification of the sector bound, inheriting from #result-sector-persistence-template's sub-scope $\beta$ caveat.
+The three boundaries are structurally independent and each is stated in an existing AAT quantity, so the four-regime partition is not ad-hoc; it is forced by the structure of the quantities already in the theory. Within Class 1 (Separated; goal-blind epistemic update per #der-directed-separation) and sub-scope $\alpha$ recipients (Kalman / conjugate-Bayesian / exponential-family / strongly-convex-gradient / linear-PD), the Kalman-over-Kalman derivation transfers with A2' derived per #der-gain-sector-bridge, and each case yields the predicted regime by direct substitution. In sub-scope $\beta$ (PID / rule-based / human-judgment), the classification's form transfers but boundary (I-a) requires per-instantiation verification of the sector bound, inheriting from #result-sector-persistence-template's sub-scope $\beta$ caveat.
 
 **Scope limits.** Class 3 (Coupled) recipients are out of formal scope: the coupled epistemic-purposeful update violates #der-directed-separation, so the regime assignment cannot be cleanly computed against $M_B$ alone. This is `03-llm-core/` territory. Class 2 (Partial) recipients inherit with degradation proportional to $\kappa_{\text{processing}}$ (see `spikes/spike-kappa-hb-operationalization.md`): the Regime-I update may be goal-contaminated, and Regime II-b may be misdiagnosed as II-a or III under goal-blind-update failure. Per-event classification is singular-trajectory-indexed by #scope-agent-identity; aggregation over event streams is deferred to #result-sector-persistence-template.
 
@@ -167,7 +167,7 @@ The three boundaries are structurally independent and each is stated in an exist
 - **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Scope-limits paragraph updated (Class 2 fully-merged → Class 3 Coupled; Class 3 partially-modular → Class 2 Partial). What-Is-Derived table updated (Class 3 approximation → Class 2 Partial approximation). The four-regime classification (I / II-a / II-b / III) is recipient-side signal-processing vocabulary — unaffected by the GUC rename. Removed at `candidate` stage per FORMAT.md Gate 4.
 
 - **$\mathcal I_{\max}(\mathcal M_B)$ — replace with sufficient-statistics-span.** The boundary (I-b) uses $\mathcal F(\mathcal M_B) \cdot \mathcal I_{\max}(\mathcal M_B)$ as the class's representational ceiling on per-event information. The cleaner formulation: (I-b) holds iff the event's sufficient statistics for prediction lie in the span of $\mathcal M_B$'s sufficient statistics. For parametric families (exponential families, Gaussian) the explicit form is routine; for non-parametric classes it requires the projection-to-class formalism of #form-information-bottleneck. Worth refining at the next candidacy review.
-- **Four regimes vs finer splits.** The partition is the *coarsest* useful split where each regime has a distinct AAD-machinery response. Regime I could split into within-observability / within-calibration (point update vs structural refinement) as a fifth-regime refinement; Regime II-a could split by transient vs sustained dynamics. These duplicate the structural-adaptation hierarchy and are not pursued here.
+- **Four regimes vs finer splits.** The partition is the *coarsest* useful split where each regime has a distinct AAT-machinery response. Regime I could split into within-observability / within-calibration (point update vs structural refinement) as a fifth-regime refinement; Regime II-a could split by transient vs sustained dynamics. These duplicate the structural-adaptation hierarchy and are not pursued here.
 - **Heavy-tailed derivation rigorization.** The Case-4 argument is informal; a rigorous version would compute the effective Kalman gain under heavy-tailed observation misspecification and show residuals retain signal. This is the robust-filtering territory (Huber, Masreliez) and is standard; the classification does not depend on a specific non-Gaussian family, just on the KL gap being nonzero.
 - **Regime II-b as candidate #disc-identifiability-floor Instance 3.** Under a sustained Regime II-b stream, $B$'s $\rho_B^{\text{eff}}$ degrades at a rate lower-bounded by the KL gap between $\mathcal M_B$ and the true event distribution — a quantitative misspecification-cost floor. This is adjacent to #disc-identifiability-floor's "Misspecification-cost quantification" open extension. Worth a focused spike to formalize.
 - **Connection to active inference.** Regime II-b corresponds to high-surprise events that exceed the agent's generative model — what AI calls "novel generative context." The classification avoids AI's variational-free-energy-as-master commitment (per `spikes/spike-active-inference-vs-aad.md`); it uses only the information-theoretic content of $\mathcal I(e)$, not the variational machinery.

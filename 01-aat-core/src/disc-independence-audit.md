@@ -14,13 +14,13 @@ stage: draft
 
 # Discussion: Independence Audit
 
-AAD's results depend on a recurring modeling move: treat some quantity as independent of another to obtain tractable mathematics, then identify the failure regime where independence breaks and specify the repair. This segment enumerates the independence assumptions used across the theory, their failure regimes, their diagnostic signals, and the repair operations AAD provides. The enumeration makes visible what is *not* an independence assumption — acyclicity of $\Sigma_t$, Cox-derived probability, the Lyapunov machinery of #result-sector-persistence-template — and therefore what survives when a particular independence assumption fails.
+AAT's results depend on a recurring modeling move: treat some quantity as independent of another to obtain tractable mathematics, then identify the failure regime where independence breaks and specify the repair. This segment enumerates the independence assumptions used across the theory, their failure regimes, their diagnostic signals, and the repair operations AAT provides. The enumeration makes visible what is *not* an independence assumption — acyclicity of $\Sigma_t$, Cox-derived probability, the Lyapunov machinery of #result-sector-persistence-template — and therefore what survives when a particular independence assumption fails.
 
 ## Formal Expression
 
 *[Discussion (independence-audit)]*
 
-Six load-bearing independence assumptions in AAD, each paired with its failure regime and repair:
+Six load-bearing independence assumptions in AAT, each paired with its failure regime and repair:
 
 ### 1. Directed separation: $M_t$ update independent of $G_t$
 
@@ -103,21 +103,21 @@ Several results that might appear to depend on independence actually do not:
 - **Sector-persistence template machinery** ( #result-sector-persistence-template) depends only on the sector condition (T2) and bounded disturbance (T3); it does not require any independence assumption on the state variable or correction function.
 - **The DAG structure derivation** (directed edges, acyclicity, representability as a Bayesian network) does not require causal sufficiency — only the *Markov factorization* within the derived structure does.
 
-This is the boundary between AAD's robust results and its conditional ones: robust results survive when the independence assumptions fail; conditional results break and require their specific repair operations.
+This is the boundary between AAT's robust results and its conditional ones: robust results survive when the independence assumptions fail; conditional results break and require their specific repair operations.
 
 ## Epistemic Status
 
-*Robust-qualitative.* Max attainable: *robust-qualitative*. The enumeration is definitional — each independence assumption is stated in a named segment, and the repair operations are either formally specified (causal sufficiency ↔ L1 augmentation) or named open problems (unity-dimension independence). What this segment adds is the cross-cutting view: the six assumptions are the recurring modeling move that distinguishes AAD's exact-tractable results from its conditional results, and the repairs are (mostly) already present in the theory but scattered across segments.
+*Robust-qualitative.* Max attainable: *robust-qualitative*. The enumeration is definitional — each independence assumption is stated in a named segment, and the repair operations are either formally specified (causal sufficiency ↔ L1 augmentation) or named open problems (unity-dimension independence). What this segment adds is the cross-cutting view: the six assumptions are the recurring modeling move that distinguishes AAT's exact-tractable results from its conditional results, and the repairs are (mostly) already present in the theory but scattered across segments.
 
 The enumeration is not exhaustive. Other independence-flavored assumptions exist in specific instantiations (e.g., independent Beta priors across edges in the credit-assignment analysis of #disc-credit-assignment-boundary). The six listed are the load-bearing ones — those whose failure regime the theory has actually characterized and provided a repair for.
 
 ## Discussion
 
-**Why enumerate these in one place.** AAD's theoretical contribution is often described as "integration": bringing control theory, causal inference, information theory, and agent architecture under one framework. Integration *is* achieved largely through the independence assumptions listed above: each is a bridge that lets a module from one discipline plug into a module from another. Directed separation lets control-theoretic Lyapunov analysis operate on the epistemic substate without goal-entanglement. Causal sufficiency lets Pearl's DAG machinery apply to strategy without requiring the agent to model every environmental common cause. Channel independence lets the tempo framework sum over heterogeneous observation modalities.
+**Why enumerate these in one place.** AAT's theoretical contribution is often described as "integration": bringing control theory, causal inference, information theory, and agent architecture under one framework. Integration *is* achieved largely through the independence assumptions listed above: each is a bridge that lets a module from one discipline plug into a module from another. Directed separation lets control-theoretic Lyapunov analysis operate on the epistemic substate without goal-entanglement. Causal sufficiency lets Pearl's DAG machinery apply to strategy without requiring the agent to model every environmental common cause. Channel independence lets the tempo framework sum over heterogeneous observation modalities.
 
-When these bridges fail, the integration does not fail catastrophically — each failure has a characterized repair. But the theory's "exact" claims depend on the bridges holding, and recognizing this is the honest way to present the framework's scope. A reader who understands the six assumptions and their repairs understands where AAD's results apply exactly, where they apply approximately, and where they require structural revision.
+When these bridges fail, the integration does not fail catastrophically — each failure has a characterized repair. But the theory's "exact" claims depend on the bridges holding, and recognizing this is the honest way to present the framework's scope. A reader who understands the six assumptions and their repairs understands where AAT's results apply exactly, where they apply approximately, and where they require structural revision.
 
-**Connection to #disc-approximation-tiering.** The L0/L1 distinction for causal sufficiency (items 2 and 5) is one instance of a meta-pattern: AAD's results are parameterized by approximation level, with proved monotonicity between levels. See #disc-approximation-tiering for the full treatment — the pattern also applies to the C1/C2/C3 value-convention hierarchy and the Tier 1/2/3 bridge-lemma contraction structure.
+**Connection to #disc-approximation-tiering.** The L0/L1 distinction for causal sufficiency (items 2 and 5) is one instance of a meta-pattern: AAT's results are parameterized by approximation level, with proved monotonicity between levels. See #disc-approximation-tiering for the full treatment — the pattern also applies to the C1/C2/C3 value-convention hierarchy and the Tier 1/2/3 bridge-lemma contraction structure.
 
 **What this does NOT say.** The enumeration does not claim the theory's results are fragile or routinely fail. Most independence assumptions hold approximately in most well-behaved domains, and the theory's quantitative predictions are typically within the regime where assumptions apply. The audit is a scope clarification, not a criticism.
 

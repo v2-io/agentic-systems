@@ -24,11 +24,11 @@ An **agent** is an entity satisfying three conditions:
 
 *[Definition (information-loss-boundary)]*
 
-The agent cannot access $\Omega_t$ directly. All contact with the environment is mediated through lossy observation. This is not a simplifying assumption — it is a scope condition. Systems where the agent has direct access to full environment state are outside AAD's scope ( #scope-adaptive-system).
+The agent cannot access $\Omega_t$ directly. All contact with the environment is mediated through lossy observation. This is not a simplifying assumption — it is a scope condition. Systems where the agent has direct access to full environment state are outside AAT's scope ( #scope-adaptive-system).
 
 ## Epistemic Status
 
-This is *definitional* — it establishes the conceptual framework, not a truth-claim. The agent-environment decomposition is a modeling choice that delineates what AAD analyzes. The information-loss boundary is the constitutive commitment: it restricts AAD's scope to systems where the agent faces genuine uncertainty about its environment.
+This is *definitional* — it establishes the conceptual framework, not a truth-claim. The agent-environment decomposition is a modeling choice that delineates what AAT analyzes. The information-loss boundary is the constitutive commitment: it restricts AAT's scope to systems where the agent faces genuine uncertainty about its environment.
 
 ## Discussion
 

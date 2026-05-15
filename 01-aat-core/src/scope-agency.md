@@ -10,7 +10,7 @@ stage: claims-verified
 
 # Scope: Agency
 
-The agency scope narrows AAD's adaptive scope ( #scope-adaptive-system) to systems whose actions carry Pearl-level-2 causal contrast — distinct actions produce distinct interventional outcome distributions. This is the scope required for Sections II (purposeful agents) and III (composition); every segment that relies on the agent acting-with-effect depends on it.
+The agency scope narrows AAT's adaptive scope ( #scope-adaptive-system) to systems whose actions carry Pearl-level-2 causal contrast — distinct actions produce distinct interventional outcome distributions. This is the scope required for Sections II (purposeful agents) and III (composition); every segment that relies on the agent acting-with-effect depends on it.
 
 ## Formal Expression
 
@@ -36,7 +36,7 @@ These are required for the adaptive loop to generate interventional data ( #der-
 **What is in adaptive scope but excluded from agency.**
 
 - **Passive observers** ($\lvert\mathcal A\rvert \lt 2$): Can observe and model, but cannot intervene. #scope-adaptive-system applies; the causal-information and purposeful-agent results do not.
-- **Nominal agents** ($P(o \mid do(a)) = P(o \mid do(a'))$ for all $a, a'$): Have choices that make no difference. Can estimate but cannot learn causal structure. Same as passive observers for AAD's purposes: adaptive only.
+- **Nominal agents** ($P(o \mid do(a)) = P(o \mid do(a'))$ for all $a, a'$): Have choices that make no difference. Can estimate but cannot learn causal structure. Same as passive observers for AAT's purposes: adaptive only.
 
 **Why causal effect matters.** Binary choice ($\lvert\mathcal A\rvert \geq 2$) is necessary but not sufficient. Two actions that produce identical outcome distributions provide no interventional contrast — the agent cannot learn which action produces which effect because the effects are the same. The causal-effect condition ensures at least one meaningful contrast exists, which is what #der-loop-interventional-access needs to generate Level 2 data.
 
