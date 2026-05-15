@@ -170,19 +170,35 @@ Other counts pinned for verification (2026-05-15):
 
 **Verification mechanics (learned at Stage 0 — apply at every grep/sweep):**
 
-- **Always exclude the FROZEN+KERNEL pathspec** from both sweeps *and*
-  count-verification (the plan doc alone otherwise inflates every count
-  — it is dense with AAD/AAT/dir-tokens by nature). Canonical pathspec
-  (use verbatim everywhere):
-  `':!_obs' ':!releases' ':!msc/AAD-to-AAT-TODO.md'
-  ':!msc/naming/name-transition-aad.md'
-  ':!msc/naming/collision-check-brief.md'`
-  (the `:!_obs` blanket subsumes the former
+- **Always exclude the FROZEN+KERNEL set** from both sweeps *and*
+  count-verification (the plan doc alone otherwise inflates every count).
+  *Use the `:(exclude)` LONG form* — the `:!path` short form **fails**
+  with "Unimplemented pathspec magic" on this git (verified 2026-05-15).
+  Canonical pathspec, verbatim:
+  ```
+  ':(exclude)_obs' ':(exclude)releases' ':(exclude)msc/AAD-to-AAT-TODO.md' ':(exclude)msc/naming/name-transition-aad.md' ':(exclude)msc/naming/collision-check-brief.md'
+  ```
+  (the `_obs` blanket subsumes the former
   `_obs/2026-03-13-hypothetical-theory-choice.md` kernel entry — §2.3.)
+- **Sweep file-list builder — zsh-safe + NUL-safe + slurp.** zsh does
+  *not* word-split unquoted `$vars` (bash does); never `for f in $LIST`.
+  Build the list and pipe; never interpolate a space-joined string as
+  one arg:
+  ```
+  git ls-files -z -- '<DIR-or-glob>' \
+   | grep -zvE '^(_obs/|releases/|msc/AAD-to-AAT-TODO\.md$|msc/naming/name-transition-aad\.md$|msc/naming/collision-check-brief\.md$)' \
+   | xargs -0 perl -0777 -i -pe 's/(Adaptation\s+and\s+Actuation\s+)Dynamics/${1}Theory/g; s/\bAAD\b/AAT/g'
+  ```
+  (`-0777` slurp is mandatory for the wrapped-phrase reason in Rule 1;
+  `\bAAD\b` is single-token so slurp-safe too.)
 - **Word-boundary regex:** `git grep -o '\bAAD\b'` (POSIX basic) is
   reliable; `git grep -oE '\bAAD\b'` silently returns **0** (git `-E`
   does not honor `\b`). Never verify AAD/AAT residue with `-E \b`.
-- Counts reconcile exactly with the kernel excluded (AAD 14,388;
+- **Phrase verification is slurp-aware** (per-line `grep` false-0s on
+  wrapped phrase — Rule 1): verify with
+  `perl -0777 -ne 'print scalar(()=/Adaptation\s+and\s+Actuation\s+Dynamics/g)'`
+  plus a stray-`Actuation\s+Dynamics` check, never a bare line `grep`.
+- Counts reconcile exactly with the set excluded (AAD 14,388;
   dir-tokens 4,536 / 844 / 372 / 138 / 1,116; AAT 0) — confirmed
   2026-05-15, no material repo drift since planning.
 
@@ -273,16 +289,34 @@ Rules 1–3 + 5 are the **name** change (AAD→AAT). Rule 4 is the
 **directory harmonization** (orthogonal; §1.2). There is **no**
 standalone `Dynamics → Theory`.
 
-1. **Full phrase** (172 occ): `Adaptation and Actuation Dynamics`
+1. **Full phrase** `Adaptation and Actuation Dynamics`
    → `Adaptation and Actuation Theory`.
    *Safety result (verified 2026-05-15):* every standalone "Dynamics"
    token in the repo that refers to the theory is the tail of this exact
-   phrase (grep of `\b(AAD|the) Dynamics\b` minus the full phrase returned
-   only line-wrapped `Dynamics (AAD)` fragments of the phrase itself).
-   So phrase-only replacement is provably safe and a blanket
+   phrase. So phrase-only replacement is provably safe and a blanket
    `s/Dynamics/Theory/` is **forbidden** (would wreck "dynamical
    systems", "learning dynamics", "strategy dynamics",
    "modularity-state-dynamics", "adversarial dynamics", …).
+
+   > ⚠️ **MUST be slurp-mode, whitespace-preserving (Stage-1 lesson,
+   > 2026-05-15).** The phrase wraps across lines in justified prose
+   > (`…Actuation\n  Dynamics…`). A per-line `perl -pe 's/Adaptation
+   > and Actuation Dynamics/…/'` silently **misses every wrapped
+   > occurrence**, and since the acronym sub *does* fire you get the
+   > self-contradiction *"Adaptation and Actuation Dynamics (AAT)"*.
+   > Canonical command for the phrase, every stage:
+   > ```
+   > perl -0777 -i -pe 's/(Adaptation\s+and\s+Actuation\s+)Dynamics/${1}Theory/g' FILES…
+   > ```
+   > `\s+` between *all* words tolerates a wrap at any gap; the capture
+   > preserves the exact original whitespace (newline+indent) so line
+   > layout is undisturbed; case-sensitive matches only the proper
+   > noun; idempotent (already-fixed text has no "Dynamics" after
+   > "Actuation"). **Verification must also be slurp-aware:** a
+   > per-line `grep` for the phrase reports a false 0 on wrapped
+   > instances — verify with
+   > `perl -0777 -ne 'print scalar(()=/Adaptation\s+and\s+Actuation\s+Dynamics/g)'`
+   > **and** a stray-`Actuation\s+Dynamics` check.
 
 2. **Acronym** (case-sensitive, all-caps): `\bAAD\b` → `AAT`. This covers
    `AAD's`, `AAD-internal`, `AAD-core`, `(AAD)`.
