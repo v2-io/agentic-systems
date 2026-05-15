@@ -3,6 +3,7 @@ slug: disc-stability-certificate
 type: discussion
 status: discussion-grade
 depends:
+  - result-certificate-existence
   - result-sector-persistence-template
   - deriv-sector-condition
 stage: draft
@@ -26,31 +27,11 @@ $$\langle F(e),\,e-e^\ast\rangle_{\mathcal M}\;\ge\;\kappa\,\lVert e-e^\ast\rVer
 
 The certificate is not unique: it is whatever positive-definite form makes the dynamics contract. In the recurring sub-cases it specializes — to the Fisher information for Bayesian agents, to $(P^-)^{-1}$ for Kalman agents, to the loss Hessian for gradient agents, and to a plant-selected Lyapunov metric for linear-Hurwitz or PID agents. These are not four separate stories; they are one object under four certificates.
 
-### The anchor — the certificate exists iff the equilibrium is exponentially stable
+### The anchor
 
-*[Derived (from the Lyapunov theorem; exact, linearized)]*
+*[Result (cited: #result-certificate-existence)]*
 
-At the linearized level (C) reads $\mathcal M J+J^\top\mathcal M\succeq 2\kappa\mathcal M\succ0$, which is a strict Lyapunov inequality for the system matrix $A=-J$. By the Lyapunov theorem (Lyapunov 1892; Khalil, *Nonlinear Systems* 3rd ed., Thm 4.6), the following are equivalent:
-
-1. $A=-J$ is Hurwitz — the linearized error dynamics is exponentially stable;
-2. there exist $\mathcal M\succ0$, $\kappa\gt0$ with $\mathcal M J+J^\top\mathcal M\succeq2\kappa\mathcal M$ — a one-point sector condition in *some* inner product;
-3. for every $Q\succ0$ there is a unique $\mathcal M\succ0$ with $\mathcal M J+J^\top\mathcal M=Q$.
-
-So "operator-sector in *some* inner product" and "the equilibrium is exponentially stable" are **the same statement**, with the certificate $\mathcal M$ as the converse-Lyapunov witness. This is an equivalence, not an analogy: the slogan *an adaptive system is an operator whose contraction rate exceeds its disturbance rate* is, modulo the disturbance-to-ultimate-bound step proved in #deriv-sector-condition and #result-sector-persistence-template, the Lyapunov characterization of self-correction. The locally-nonlinear form adds only the standard second-order remainder condition (Lyapunov's indirect method): (C) holds on $\mathcal B_R$ iff the linearization is exponentially stable *and* the remainder is dominated on the ball — the same radius condition the contraction-template Tier-2 degradation already names.
-
-### The certificate-strength ladder
-
-*[Derived (ordering of conditions; exact)]*
-
-The certificate admits three strictly-ordered strengths, all on the one object:
-
-| Rung | Condition | Equivalent to | Certificate is |
-|---|---|---|---|
-| R0 | one-point (C), some $\mathcal M$, local | $A=-J$ Hurwitz + remainder dominated | converse-Lyapunov $\mathcal M$ (exists; generally not forced) |
-| R1 | incremental (two-point) $\mathcal M$-strong-monotonicity on $\mathcal B_R$ | global $\mathcal M$-strong-monotone (cocoercive class) | curvature-like $\mathcal M$ (potential sub-case) |
-| R2 | R1 with $\mathcal M$ *forced* by a uniqueness theorem on an AAD-internal axiom | natural-gradient in the Čencov-unique Fisher metric | Fisher metric (Čencov-forced) |
-
-R0 ⟸ R1 ⟸ R2 strictly. R0 is the *widest* rung — it reaches the plant-Lyapunov cases (linear-Hurwitz-non-symmetric, PID) where no potential exists; R1 is the cocoercive/proximal class where a variational structure is available; R2 is the uniqueness-theorem-forced statistical case. The widest rung is not a weakness: it is exactly the reach the narrower rungs cannot give.
+The object is load-bearing only because its existence is not a definition but an equivalence: **a stability certificate exists iff the agent is exponentially stable about its target** — operator-sector in *some* inner product and exponential stability are the same statement, with the certificate as the converse-Lyapunov witness, and the certificate admits a strict strength ladder R0 ⟸ R1 ⟸ R2 (widest one-point/local; cocoercive; Čencov-forced). This is the segment-level form of the contraction-over-drift organizing principle. The equivalence, the ladder, and the proof are stated and derived exactly in #result-certificate-existence; this spine cites that result and builds the cross-sectional reading on it rather than re-deriving it.
 
 ### The four facets
 
@@ -122,7 +103,7 @@ Max attainable: *discussion-grade* for the organizing claim (it is a presentatio
 ## Working Notes
 
 - **Provenance.** The certificate-spine recognition, the L1 anchor equivalence, the Sylvester boundary mechanism, and the broken-integrability-triad result were worked out in `spikes/spike-operator-family-unification/` (`01-`/`02-`/`03-`/`99-verdict.md`); the assembly brief for this segment is `04-spine-authoring-brief.md` there. The predecessor C1 spike `spikes/.integrated/spike-operator-sector-unification.md` reached "2-instance-plus-1-consequence" and the prior co-owner gate "do not elevate unless O-BP10 surfaces at segment level"; this segment is that surfacing (the anchor equivalence). Pointer retained for the reasoning trail; remove at `candidate` stage.
-- **Dependency rationale (for Gate-1 audit).** `depends:` lists only `result-sector-persistence-template` and `deriv-sector-condition` — the machinery the anchor equivalence genuinely consumes. #disc-identifiability-floor, #disc-separability-pattern, #disc-additive-coordinate-forcing, and #form-composition-closure are **cross-referenced as facets, not depended on**: per FORMAT.md Gate 1, a dependency is genuine only when the segment uses the referenced segment's definitions/results, not when it is recognized or related in Discussion. The spine *recognizes* the meta-segments as facets of one object; it does not consume their definitions to make its anchor claim. This is also why the spine is correctly placed *before* them in OUTLINE (it is the object they are facets of, so it reads first) without an ordering violation — the facet relationship is lateral recognition, not a dependency edge. Treat the facet `#…` references as expected forward/lateral cross-refs (FORMAT.md §Cross-References).
+- **Dependency rationale (for Gate-1 audit).** `depends:` lists `result-certificate-existence` (the anchor equivalence this spine builds the cross-sectional reading on — a genuine dependency, consumed not merely recognized) plus `result-sector-persistence-template` and `deriv-sector-condition` (the persistence machinery the anchor's drift half rests on). #disc-identifiability-floor, #disc-separability-pattern, #disc-additive-coordinate-forcing, and #form-composition-closure are **cross-referenced as facets, not depended on**: per FORMAT.md Gate 1, a dependency is genuine only when the segment uses the referenced segment's definitions/results, not when it is recognized or related in Discussion. The spine *recognizes* the meta-segments as facets of one object; it does not consume their definitions to make its claim. This is why the spine is correctly placed *before the three meta-segments* in OUTLINE (it is the object they are facets of, so it reads first) without an ordering violation — the facet relationship is lateral recognition, not a dependency edge — while being placed *after* `#result-certificate-existence` (a genuine dependency, which therefore precedes it). Treat the facet `#…` references as expected forward/lateral cross-refs (FORMAT.md §Cross-References).
 - **Provisional slug.** `disc-stability-certificate`. Alternative considered: `disc-certificate-cone` (names the geometry rather than the object). Subject-noun discipline favours the object ("the stability certificate"); the cone/interior/boundary is what the segment *says about* it. Route through the naming pipeline if a better name surfaces; the spike verdict floated both.
 - **Provisional OUTLINE position.** Placed in `## *Appendices* Details` immediately before #disc-identifiability-floor, as the lead of the four-row meta-segment cluster (spine → M1 → M2 → M3). Provisional because: (a) the meta-segments may eventually warrant their own chapter rather than Appendix-A residence; (b) if the OUTLINE preamble is reframed to lead with the spine, the cluster likely moves to a more prominent position. Both are propagation steps below, not landed here.
 - **Propagation plan (ordered by commitment; steps 6–7 are framework-voice keystones gated on Joseph, not auto-executed):**
