@@ -195,12 +195,6 @@ Status (updated 2026-05-09): R1 + R2 voting cohorts closed; manual canonicalize-
 - Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).
 - Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).
 
-**Mechanical follow-ups (no voting needed):**
-
-- ~135 segments still embed pre-rename slug names inside `*[Type (slug)]*` formal tags. Mechanical to detect; content cleanup pass.
-- Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).
-- Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).
-
 Detail in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) (renamed from `naming-pilot-rename-plan.md` on 2026-05-04 to reflect the broadened scope from role-prefix-pilot mapping to all naming decisions); principles in [`doc/naming-principles.md`](doc/naming-principles.md); Round-1 vote archaeology in `msc/naming/naming-votes/` and `msc/naming/naming-aggregate-*`.
 
 
@@ -373,48 +367,11 @@ For the next agent picking up this work:
 
 ---
 
-## 2026-05-10 — Audit-findings intake: 451729 (Sonnet 4.6, 1M context)
+## 2026-05-10 — Audit-findings intake: 451729 — remaining open item
 
-De-novo theory audit covering Section I (29/29), Section II (29/29), Section III (16/21), 7 key Appendix A derivations, plus TST and logogenic samples. Math hand-verified for all load-bearing claims in Sections I–II; adversarial exponents and composition machinery spot-checked in Section III. Report at [`audits/audit-451729-FINAL-2026-05-10.md`](audits/audit-451729-FINAL-2026-05-10.md); working artifacts at [`msc/AUDIT-WORKING-451729/`](msc/AUDIT-WORKING-451729/).
+Cycle's intake-and-disposition narrative is in [CHANGELOG 2026-05-10 / 2026-05-12](CHANGELOG.md); audit report at [`audits/audit-451729-FINAL-2026-05-10.md`](audits/audit-451729-FINAL-2026-05-10.md). One non-surgical open item carried forward:
 
-**Most of the audit's structural concerns were already known/addressed through other channels by the time of intake** (segment-flagged gaps, prior TODO entries, in-flight work). Disposition below.
-
-**Surgical (landed in this intake):**
-
-- [x] **Finding 1 — Prop B.4 optimal-exploration-rate subscript transposition** — fixed at three sites in `01-aad-core/src/deriv-edge-credence-dynamics.md`: line 220 (Prop B.4 main formula), line 327 (Prop B.6 nested $A_1$/$A_2$ case — same transposition pattern, sonnet caught only the main one), line 618 (Verified Claims table). Correct form: $\varepsilon^\ast = (n_2+1)/(n_1+n_2+2)$ where arm 1 is greedy. The verbal description ("allocates more trials to the arm with higher $n$") was correct throughout; only the formulas had the transposition. Equal-experience case ($\varepsilon^\ast = 1/2$ at $n_1 = n_2$) is unaffected. No downstream segments cite the wrong formula by-form (verified by grep). Prop B.7's structure is different (five-way gating, no analogous single-formula optimal-ε); no inherited transposition there.
-
-**Open (non-surgical):**
-
-- [x] ~~**D.3 — schema-strategy-persistence forgetting-rate exact form**~~ — **Landed 2026-05-12 (commit `b9b146c`).** Strengthen-first edit: exact form $(1-\lambda)/(2-\lambda)$ now primary throughout `schema-strategy-persistence.md`; linear form $1-\lambda$ retained as slow-forgetting asymptote with explicit scope. Hard ceiling at $\rho_\Sigma \ge R_\Sigma/2$ (no $\lambda$ satisfies exact prerequisite) surfaced — was hidden by the approximation. Adjacent line in `deriv-edge-credence-dynamics.md` updated for consistency. Working Note documenting the move added with audit-451729 §D.3 attribution.
 - [ ] **D.1 — promotion-readiness sweep on conservatively-staged appendix segments** — `deriv-recursive-update`, `deriv-sector-condition`, `der-gain-sector-bridge`, `deriv-edge-credence-dynamics`, `deriv-graph-structure-uniqueness`, `form-strategy-complexity-cost`, `schema-strategy-persistence`, `form-consolidation-dynamics` are at `stage: draft` despite complete formal content + "What Is Derived vs. What Is Chosen" tables + no Working-Notes blocking promotion. Either real unresolved issues should be surfaced, or a promotion sweep would improve corpus self-description. Needs Joseph's judgment on whether to sweep or to surface case-by-case.
-
-**Already addressed through other channels (no new TODO needed):**
-
-- D.2 (`result-unity-closure-mapping` joint $(U_O, U_\Sigma) \to \varepsilon_a$ form sketched, $f_1$ and $g$ functional forms not derived) — already explicitly flagged in the segment at line 89 ("formula is a *sketch* — leading structure is derived; precise forms of $f_1$ and $g$ are mechanical extensions not fully computed here") and Working Notes line 107 ("Joint $(U_O, U_\Sigma)$ derivation. The exact $f_1$ and $g$ functional forms require a full joint-LQR vs independent-LQR comparison. Mechanical but deferred.").
-- F.3 (`form-consolidation-dynamics` stability-upper-bound open) — already in TODO §"Open theory items (MEDIUM)" line 166 from Spike F's lower-bound-only result. Audit converges on a known open item.
-
-**Framing suggestions (fold into existing PRACTICA areas):**
-
-- F.1 (README and OUTLINE preambles could elevate the practical-diagnostic contributions — two-condition decomposition of persistence, satisfaction-gap × control-regret 2×2, forgetting prerequisite, adversarial squared law — alongside the integration framing) — folds into PRACTICA §"🌟 Findings" (segments → README summary chain) and the per-role README rework already queued.
-- F.2 (Correlation Hierarchy L0/L1/L1'/L2 cascade as standalone exposition) — folds into PRACTICA Pedagogy area; consider as a candidate "narrative segment" per the 2026-05-09 register-allowance noted in PRACTICA §"Cycle priority order".
-
-**Audit's process-feedback (G.1–G.4)** — captured in the audit report; not actionable as code/segment edits.
-
----
-
-## 2026-05-12 — In-flight: Move def-pearl-causal-hierarchy from Part I Ch.1 → Part II Ch.2 (recapitulation-of-external-result pattern)
-
-**Motivation.** Pearl's causal hierarchy is an *imported* framework (Bareinboim, Correa, Ibeling & Icard 2022; Pearl 2009), not AAD-native ontology. Its current placement in Part I Ch.1 alongside def-agent-environment / def-chronica / etc. makes it look like foundational AAD machinery when it isn't. Its first heavy use is at the head of Part II Ch.2 (#der-causal-hierarchy-requirement, #der-loop-interventional-access). The pattern: light external citation in Part I where the existence of the hierarchy needs to be acknowledged; full AAD recapitulation at the point of deployment in Part II Ch.2.
-
-**Steps:**
-1. Revise `01-aad-core/src/def-pearl-causal-hierarchy.md` to frame the segment explicitly as a *recapitulation* of an external result for AAD's purposes (not a fresh primary definition). Keep the L1/L2/L3 content and the AAD-specific interpretive material; adjust the title, one-sentence summary, and epistemic-status framing to be honest about the import.
-2. Update `01-aad-core/src/def-causal-information-yield.md` — change depends list (remove `def-pearl-causal-hierarchy`), and ensure prose uses Bareinboim/Pearl citation + forward-pointer pattern for the do-notation rather than depending on a Part I segment.
-3. Update `02-tst-core/src/obs-software-epistemic-properties.md` — same citation + forward-pointer treatment in depends and prose.
-4. `grep` for any other depends entries on `def-pearl-causal-hierarchy` across the corpus and update similarly.
-5. Update `01-aad-core/OUTLINE.md`: remove the def-pearl-causal-hierarchy row from Part I Ch.1 ("The Coupled Loop: Ontology and Scope"); add it to Part II Ch.2 ("Causal Access and the Planning Decision") immediately before #der-causal-hierarchy-requirement.
-6. Lightly revise `01-aad-core/src/the-cycle-in-motion-intro.md` — the CIY-placement paragraph can become declarative rather than apologetic (CIY is in Part I Ch.3 because action-scoring is where causality enters the dynamics; the do-notation it uses is external Pearl, recapitulated in Part II Ch.2 where the framework deploys it operationally).
-
-**Result expected.** Part I Ch.1 ends cleanly with post-causal-structure (AAD's own temporal-ordering postulate). Pearl's hierarchy lives at its point of deployment in Part II Ch.2 as a recapitulation. CIY's Part I placement is no longer apologetic about an out-of-place dependency. Cross-volume citation discipline (TST referencing AAD) follows the same external-citation + forward-pointer pattern.
 
 ---
 
@@ -519,11 +476,11 @@ Spikes whose core claim landed but where substantive content remains in the spik
 - [x] **`spike-symbiogenesis-bifurcation` no-go-with-prerequisite** — landed as Working Note in `#hyp-symbiogenic-composition` recording the saddle-node-bifurcation form (threshold $\rho_c = \alpha_{\text{auto}}^2/(4k)$) as conditional on derivation of the $+k\delta^2$ coordination penalty from `#def-shared-intent`; the conditional status itself is the load-bearing structural fact. Spike archived to `spikes/.integrated/`.
 - [x] **`spike-compositional-coordinate`** — landed as Working Note in `#disc-additive-coordinate-forcing` recording the structural conclusion: `#additive-coordinate-forcing` is architecturally a single-agent family (chain/divergence/update indexing three layers of a single agent's internal machinery); composition lives in a different structural family (monotonicity under composition / bridge-lemma shape from `#form-composition-closure`). The fourth-theorem attempt closed negative; the anchor-style log-closure-deficit reads as a mathematical consequence of operator-norm sub-multiplicativity, not a Cauchy-FE-forced theorem. Spike archived to `spikes/.integrated/`.
 - [x] **`spike-mori-zwanzig-composition`** — landed as Working Note in `#form-composition-closure` recording the asymmetric closure: upper-bound direction $\varepsilon^\ast \le C\|K\|$ closes under (i) stationary $\pi$, (ii) compatibility of AAD's $\Lambda$ with MZ's Hilbert-space $P$, (iii) bounded $\|K\|$; named lower bound $\varepsilon^\ast \ge C'\|K\|$ does NOT close because $\Lambda$ and $P$ are different objects (state-space coarse-graining vs Hilbert-space projection on observables). MZ memory-kernel decay is *sufficient* but not *necessary* for small $\varepsilon^\ast$. Spike archived to `spikes/.integrated/`.
-- [ ] **`spike-miller-act-bridge` Section III dynamics elements partial leakage** — five Section III elements identified (latent structural diversity as first-class quantity; neutral drift formalization; epochal-transition motifs; endogenous γ; constructive structural-mechanism enumeration). Symbiogenesis and structural-adaptation labels landed; the rest spike-resident. Modularity-state-dynamics (2026-05-09) may have partly subsumed the neutral-drift question — verification needed.
-- [ ] **`spike-neutral-drift-lyapunov` (2026-04-06) — foundational gap-naming spike-only** — the "latent structural diversity" concept and AAD-sector-equivalence-class-over-correction-functions framing predate the 2026-04-24 strengthening but supply formative content the successor assumes. Either verify content is reflected in `#disc-identifiability-floor` Instance 3 + `#der-agent-opacity` Working Notes, or preserve as archaeology with explicit pointer.
-- [ ] **`spike-rho-factorization` + `spike-rho-additive-variance-strengthening-2026-04-24` paired leakage** — both wait on the Tier-2 `#rho-decomposition` appendix landing. Variance-additive (AV) is now a derived theorem under (S1)-(S4) but lives only in the strengthening spike.
-- [ ] **`spike-agent-composition` law-sketches** — INDEX says "composition laws are sketches." The holon / Auftragstaktik / three-gaps framing in §§4-6 may or may not be subsumed by current Section III machinery (`#deriv-critical-mass-composition` / `#result-unity-closure-mapping` / `#hyp-auftragstaktik-principle`). Worth a verification pass.
-- [ ] **`spike-dag-type-closure` v2** — INDEX says "reviewed by Codex; ready for porting" but the boundary-type formalism (leaf base credence $p_v$, terminal-objective interface) doesn't surface clearly in `#def-strategy-dag` / `#hyp-edge-update-via-gain`. Either it landed loosely or it's been queued in "ready-to-port" without action.
+- [x] **`spike-miller-act-bridge` Section III dynamics elements partial leakage** — verified 2026-05-14 + archived. Concept-level integration complete across six segments (`#result-structural-adaptation-necessity` Discussion, `#impl-strategic-composition` gap list, `#disc-separability-pattern`, `#scope-agent-identity`, `#hyp-symbiogenic-composition`, `#form-structural-change-as-parametric-limit`). Miller's Table 12.2 *also* landed already — in `#form-strategy-complexity-cost` Discussion §"Computational compression from interaction horizon (Miller 2022)" with explicit layer-distinction between Moore-machine behavioral-surface enumeration and AAD's epistemic-interior $d^\ast$; the table is reproduced and Miller 2022 is properly cited. Modularity-state-dynamics (2026-05-09) is *adjacent* but does not subsume Miller's mechanism (different layer: M4 is agent-architecture coupling; Miller's is population-level drift). **No remaining spike-resident leakage at the level the spike itself identified.** Formal Section III dynamics segments (latent-structural-diversity-as-derived; endogenous-γ-as-derived; extreme-transition-motif-as-formal-theorem) remain open Section III gaps, properly flagged in `#impl-strategic-composition` rather than as spike leakage. Detailed verification + archive note in INDEX row.
+- [x] **`spike-neutral-drift-lyapunov` (2026-04-06)** — verified 2026-05-14 + archived. Conclusion (*latent structural diversity is needed as composition-level concept*) landed in `#result-structural-adaptation-necessity` Discussion + five-segment gap-acknowledgment list. Phase-by-phase analytical content (Phase 1 clean / Phases 2-3 invisible / Phase 4 partial / Phase 5 clean) is appropriate reasoning-trail content. INDEX row carries the absorption details.
+- [ ] **`spike-rho-factorization` + `spike-rho-additive-variance-strengthening-2026-04-24` paired leakage** — both wait on the Tier-2 `#rho-decomposition` appendix landing. Variance-additive (AV) is now a derived theorem under (S1)-(S4) but lives only in the strengthening spike. (See PROPOSALS §D.9 SP-22 for the operator-family architectural-decision dependency; the ρ-decomposition appendix sits inside that decision.)
+- [x] **`spike-agent-composition` law-sketches** — verified 2026-05-14 + archived. FULLY ABSORBED: Consistency Argument → `#post-composition-consistency` (postulate, axiomatic); composite-agent / tempo / persistence / directed-separation machinery → Section III segments (`#form-composition-closure`, `#der-tempo-composition`, `#der-team-persistence`, `#der-directed-separation`); four unity dimensions → `#def-unity-dimensions`; Clausewitz's three gaps → `#def-unity-dimensions` Discussion; Auftragstaktik → `#hyp-auftragstaktik-principle`; holon term → `#post-composition-consistency` Discussion (with hedge). INDEX row carries the full crosswalk.
+- [x] **`spike-dag-type-closure` v2** — verified 2026-05-14 + archived. INDEX previously said "ready for porting"; the porting **did** happen — leaf base credence, terminal satisfaction conditions, well-formedness with ε tolerance, $\hat P_\Sigma$, scope of terminal construction, and edge-credence presentation coordinates are all in `#def-strategy-dag`. Open question on $\delta_\text{align}$ as a fourth diagnostic is tracked at line 195 of that segment. INDEX row carries the line-by-line crosswalk.
 
 ### Group II — Tier-2 backlog cluster (operator-sector / dissipativity-template family)
 

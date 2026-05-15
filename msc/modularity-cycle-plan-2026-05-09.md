@@ -147,3 +147,43 @@ The cycle's success criterion: future agents reading the framework cold can find
 - `msc/FINDINGS-RANKED-DRAFT.md` — receives M4 entry once Move 4 segment lands
 
 This plan is self-contained for handoff: an agent picking it up cold should be able to execute it from this file, the spike directories, and the segment files referenced above.
+
+---
+
+## 8. Execution status (2026-05-14 partial-cycle landing)
+
+A small follow-on cycle (2026-05-14) landed the three additive / low-architectural-commitment moves and deliberately deferred the two new-segment-authoring moves pending Joseph's §5.1 decision and the prior-art reading work required for Move 3.
+
+### Landed in the 2026-05-14 cycle
+
+- **Move 1** — already done 2026-05-09 per PRACTICA cycle priority item 2 marked [DONE]. `#disc-adversarial-coupling-pressure` registered in OUTLINE.md (placement (b) per the recommendation — meta-segment alongside `#disc-separability-pattern`/`#disc-identifiability-floor`).
+- **Move 2** — *landed 2026-05-14.* Discussion subsection "Wrapping as a truthification mechanism" added to `#der-class-coercion-via-wrapping`, recognizing the wrapping construction as the rigorous formal version of what `#disc-adversarial-coupling-pressure` §"Defensive scaffolding as composition" gestures at informally. Cross-references the W₀/W₂/W₁ regime hierarchy as graded characterization of truthification application + the (queued) M4 meta-segment. Marked forward-reference per FORMAT.md.
+- **Move 5** — *landed 2026-05-14.* Discussion paragraph "**Bounded-signaling assumption.**" added to `#der-directed-separation`. Names the assumption $G_t \to$ world only via $a_t = \pi(M_t, G_t)$, with operational-failure cases (behavioral leakage rich relative to action coarseness — prosody, micro-behavior, attention patterns, response latency). Cross-references `#disc-adversarial-coupling-pressure` for the adversarial-saturation case where this leakage is exploited.
+
+### Deferred in the 2026-05-14 cycle: Moves 3 and 4
+
+**Move 3 — `disc-strategic-self-coupling` segment authoring.** Deferred. Three substantive gates:
+
+1. **Real prior-art reading work** required (per §5.3 recommendation): Schelling 1960 *Strategy of Conflict* (commitment devices), Ainslie 1992/2001 (intertemporal bargaining / willpower), Akerlof-Kranton 2000/2010 (identity economics), Frank 1988 *Passions Within Reason* (emotions as commitment). Even at segment-grade depth (one-line characterizations + citations), this is ~2-3 hours focused work, not 15-minute additive surgery.
+2. **Non-monotonicity question.** The spike notes that $\mathcal{A}(\kappa_t)$ is plausibly non-monotone — initial coupling enables credibility-dependent actions; sustained over-coupling forecloses reality-dependent actions. Segment should state this honestly as an open question rather than committing to monotonicity prematurely. Working out the right framing requires substantive judgment, not a mechanical landing.
+3. **Structural-parallelism with `#disc-adversarial-coupling-pressure`** requires reading that segment carefully and writing the sibling at matching grade, mechanism table, and rhetorical register. Spike §5 names (P1)–(P4) candidate products; (P1) is the primary segment, the others are appendix-grade companions.
+
+**Move 4 — `disc-modularity-state-dynamics` meta-segment authoring.** Deferred. Three substantive gates:
+
+1. **§5.1 decision-pending — Joseph's architectural commitment to M4.** The three M-section meta-patterns (M1 identifiability-floor / M2 separability-pattern / M3 additive-coordinate-forcing) are load-bearing for AAD's structural identity. Adding a fourth commits the framework to four meta-patterns as the canonical reading. The plan author flagged this deliberately as a sit-with-it-before-committing decision. The convergence finding (multiple Opus instances independently arriving at the modularity-state-dynamics pattern from different angles) is structural evidence that the pattern is *in the framework*, but committing to a fourth M-section label is a choice about AAD's analytical-surface vocabulary that wants Joseph's call.
+2. **Move 4 depends on Move 3 landing first.** The meta-segment structurally needs to point at three primary segments — one per operation: truthification (instantiated in `#disc-adversarial-coupling-pressure` §"Defensive scaffolding" + `#der-class-coercion-via-wrapping` after Move 2), strategic self-coupling (Move 3 — not yet authored), adversarial coupling pressure (`#disc-adversarial-coupling-pressure`). Landing M4 standalone before Move 3 would create a meta-segment cross-referencing a sibling that doesn't exist.
+3. **Recognition-and-integration posture** (per §7) — the meta-segment's value is *recognition* of the pattern explicitly. Recognition wants the three operation segments cleanly authored first, so the meta-segment integrates rather than over-asserts.
+
+### Discipline observation surfaced en route
+
+The 2026-05-14 cycle surfaced a **content-discipline issue** that the M4-related cross-references in `#impl-composition-machinery` (lines 67–69) and `#impl-strategic-composition` (line 82) read as if M4 is canonical — the segments describe what the M4 meta-segment "positions" and "names" without flagging that the segment file doesn't exist yet. CLAUDE.md's prior framing in §"Key Architectural Decisions" §7 listed `#disc-modularity-state-dynamics` alongside the other three M-sections "directly" without marking it queued. This is a case where the parallel-collaborator naming work was load-bearing enough that downstream cross-references treat the concept as canonical-by-reference, but the segment file itself never landed.
+
+The 2026-05-14 cycle fixed CLAUDE.md to honestly reflect M4's pending status (matching OUTLINE.md's `missing` flag and PRACTICA's queued framing). The impl-segment forward-references remain valid per FORMAT.md — forward references are expected; the discipline that wants attention is that *content claims about a forward-referenced segment* (e.g., "the M4 meta-segment positions modularity as a contested property under three operations") read as if the segment is canonical. When Move 4 lands, those content claims become honest by-reference; until then, they are AAD's collective stance described by anticipation. Not a defect, but worth marking.
+
+### What happens when the Moves 3 and 4 cycle lands
+
+When Joseph green-lights the M4 architectural commitment and the prior-art reading work happens:
+
+1. Authoring goes in plan-order: Move 3 first (substantive segment), then Move 4 (meta-segment that integrates Move 3 + the existing adversarial-coupling-pressure + the truthification mechanism that already lives across `#der-class-coercion-via-wrapping` and `#disc-adversarial-coupling-pressure` §"Defensive scaffolding").
+2. The Move 2 + Move 5 landings from the 2026-05-14 cycle are *already-aligned* with what the meta-segment will reference — the truthification-mechanism subsection in `#der-class-coercion-via-wrapping` already cross-refs M4 as forward-reference, and the bounded-signaling assumption in `#der-directed-separation` is the structural assumption that the adversarial-pressure leg of M4 depends on.
+3. Future CHANGELOG entry should note the partial-execution structure: the cycle splits naturally into a discipline-aware-additive sub-cycle (Moves 1, 2, 5; ~hour-scale) and a substantive-new-segments sub-cycle (Moves 3, 4; ~day-scale plus §5.1 decision gate).
