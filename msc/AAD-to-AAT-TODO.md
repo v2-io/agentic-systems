@@ -284,13 +284,53 @@ read "ACT → AAT", which never happened.
   > "AI Consciousness Test" collision; refined to **Adaptation and
   > Actuation Theory (AAT)** in May 2026 — see CHANGELOG).*
 
-  This single clause is the **only** place the old "AAD" name survives in
-  live prose, and it is deliberate (the "very very brief note in
+  This clause is one of a small set of places the old "AAD" name
+  survives in live prose, deliberately (the "very very brief note in
   HISTORICAL-CONTEXT" from the brief).
 
-- **`CHANGELOG.md`** — add a new cycle entry narrating the rename (scope,
-  the exemption kernel, the styled-`&` decision, what regenerated). This
-  is the second sanctioned place "AAD" appears as the prior name.
+- **`CHANGELOG.md`** — add a new cycle entry narrating the rename. The
+  second sanctioned place "AAD" appears as the prior name. **But the
+  CHANGELOG *body* is frozen** (its own line-14 callout: cycle entries
+  "are frozen and not retroactively edited"; renames get a rosetta
+  note, not a sweep). Treatment: restore the body wholesale from
+  pre-migration; add only the new forward entry; **no rosetta callout**
+  — AAD→AAT is a clean terminal-word swap, not a high-risk semantic
+  inversion like the GUC Class 2↔3 swap that earned GUC its prominent
+  callout (Joseph's proportionality calibration, 2026-05-15); the
+  `CLAUDE.md` *Naming note* is the proportionate rosetta.
+
+> ### ⚠️ The historical-naming-statement defect class (load-bearing — discovered Stage 9, 2026-05-15)
+>
+> §2.4 was originally scoped too narrowly (only the line-92 case). The
+> general principle: **a mechanical sweep cannot distinguish "AAD / an
+> old dir name used *as the current referent*" (rename it) from "…used
+> *as the subject of a historical statement about the name itself*"
+> (must stay literal).** Swept, the latter becomes a tautology
+> (`04-eli-core/ → 04-eli-core/`) or an untruth (`ACT → AAT` for the
+> AI-Consciousness-Test-forced rename, which produced AAD). This is the
+> *same* principle as the kernel and the LOG/`_obs` freeze, but it also
+> appears as **isolated clauses inside otherwise-current files**, which
+> the tree-level FROZEN/NON-RENAME exclusion does not catch.
+>
+> **Two file *categories* are frozen historical records and must be
+> restored wholesale, never swept** (generalize the CHANGELOG
+> treatment): CHANGELOG body, and **`terminology/decisions/**`**
+> (append-only timestamped decision audit-trail — a 2026-05-09 record
+> saying "AAD" is accurate as-written). **Isolated historical clauses
+> in current files get a surgical manual fix** restoring the prior
+> name: found this cycle in `doc/naming-principles.md` (the ACT→AAD
+> collision reference), `terminology/entries/eli.md` `internal_note`,
+> `msc/logogenic-encounter-2026-05-01/04-…-plan-approved.md`, and
+> `TODO.md` (whose bin/rename-slug item was *also* incidentally
+> resolved by the Stage-2 harmonization → mark resolved, don't just
+> de-tautologize a dead item). `MEMORY.md:9` (out-of-git) likewise.
+>
+> **Detection sweep (run before declaring done — Stage 10 includes
+> it):** for tautological dir-renames
+> `(01-aat-core|03-llm-core|04-eli-core)[^a-z0-9]{1,12}(→|->| to | from )[^a-z0-9]{1,4}(01-aat-core|03-llm-core|04-eli-core)`;
+> for false name-history `ACT[^a-z]{1,8}(to |→|-> ?)?\(?AAT` (outside
+> the sanctioned `CLAUDE.md`/`HISTORICAL-CONTEXT.md`/CHANGELOG-new-entry
+> trio). Both must return 0 over the live corpus.
 
 ### 2.5 Out-of-repo touch-points (handled, but flagged separately)
 
