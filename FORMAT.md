@@ -95,7 +95,7 @@ Do not hard-wrap lines just to artificially impose reading width. Let renderers 
 
 - **Segment files** live in `src/` — one claim per file.
 - **Filename = slug**: `src/{slug}.md`. No numbering in filenames.
-- **Canonical ordering** lives in each component's `OUTLINE.md` (e.g., `01-aad-core/OUTLINE.md`), not in filenames. The ordering will change as the theory develops; the slug is the stable identity.
+- **Canonical ordering** lives in each component's `OUTLINE.md` (e.g., `01-aat-core/OUTLINE.md`), not in filenames. The ordering will change as the theory develops; the slug is the stable identity.
 - **Cross-references** use `#slug-name` — everywhere, always.
 
 ### Segment-set principle (load-bearing for tooling)
@@ -249,7 +249,7 @@ This is a standing check rather than a gate because spike→segment compression 
 Math derived in a spike must land in a segment — never reside only in `spikes/spike-*.md`. Two destinations:
 
 1. **An existing segment**, if the new math tightens, replaces, or extends that segment's content.
-2. **A new appendix segment** (more likely for novel derivations with their own claim identity) — added to `01-aad-core/src/` (typically `appendix-*` or a similarly named slug) and recorded in `01-aad-core/OUTLINE.md` under the appendix section.
+2. **A new appendix segment** (more likely for novel derivations with their own claim identity) — added to `01-aat-core/src/` (typically `appendix-*` or a similarly named slug) and recorded in `01-aat-core/OUTLINE.md` under the appendix section.
 
 Spikes record the *attempt*, the *failed branches*, the *reasoning trail*, and pointers to where the resulting math lives. They are not the home for load-bearing derivations. The project's canonical form is the segment set: future agents and reviewers find results by looking at segments, not by archaeology through spikes; math that stays only in a spike cannot be cross-referenced, is not validated by `bin/lint-outline`, does not appear in OUTLINE.md, and is invisible to the theory.
 
@@ -541,8 +541,8 @@ Inline tags before equations mark their epistemic status. These follow TFT conve
 
 - **In running text**: `#slug-name` — readable, grep-able, meaningful
 - **As links from src/ files** (within the same component): `[#slug-name](slug-name.md)` (relative)
-- **As links from a component-root outline** (e.g., `01-aad-core/OUTLINE.md`): `[#slug-name](src/slug-name.md)`
-- **As links from a repo-root file** (e.g., `OUTLINE.md`, `README.md`, `LEXICON.md`): include the component prefix, e.g., `[#slug-name](01-aad-core/src/slug-name.md)`
+- **As links from a component-root outline** (e.g., `01-aat-core/OUTLINE.md`): `[#slug-name](src/slug-name.md)`
+- **As links from a repo-root file** (e.g., `OUTLINE.md`, `README.md`, `LEXICON.md`): include the component prefix, e.g., `[#slug-name](01-aat-core/src/slug-name.md)`
 
 Both forms work in GitHub and Obsidian. The plain `#slug-name` form is preferred in running prose where clickability is less important than readability.
 

@@ -3,10 +3,10 @@
 **Status:** Working draft, exploratory. Joseph-anointed paper-candidate per 2026-05-04 conversation. Subsumes the *B-N-Sep* portfolio entry from `~/src/ops/papers/03-asf-tier2-and-cross-segment.md` so the agentic-systems repo carries the canonical home for the paper proposal; the ops entry can be retained as a portfolio pointer or trimmed.
 
 **Cross-references:**
-- **Source segment:** [`01-aad-core/src/disc-separability-pattern.md`](../01-aad-core/src/disc-separability-pattern.md) — *(queued rename: `discussion-separability-pattern` → `discussion-separability-ladder`, see naming-rename-plan)*
+- **Source segment:** [`01-aat-core/src/disc-separability-pattern.md`](../01-aat-core/src/disc-separability-pattern.md) — *(queued rename: `discussion-separability-pattern` → `discussion-separability-ladder`, see naming-rename-plan)*
 - **Prior-art search report:** [`ref/separability-ladder-prior-art-report.md`](../ref/separability-ladder-prior-art-report.md) — Undermind, 31-paper full-text sweep, 2026-05-04
 - **Naming-cycle queue:** [`msc/naming/naming-rename-plan.md`](naming/naming-rename-plan.md) §"Deferred to refined Round 1 / Round 2" + §"Pending subject-noun renames — surfaced post-R2"
-- **Companion meta-segments:** [`#disc-identifiability-floor`](../01-aad-core/src/disc-identifiability-floor.md) (negative-half complement); [`#disc-additive-coordinate-forcing`](../01-aad-core/src/disc-additive-coordinate-forcing.md) (constructive half — meta-architectural triad partner)
+- **Companion meta-segments:** [`#disc-identifiability-floor`](../01-aat-core/src/disc-identifiability-floor.md) (negative-half complement); [`#disc-additive-coordinate-forcing`](../01-aat-core/src/disc-additive-coordinate-forcing.md) (constructive half — meta-architectural triad partner)
 
 ---
 

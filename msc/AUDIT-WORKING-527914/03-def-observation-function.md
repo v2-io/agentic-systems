@@ -1,6 +1,6 @@
 # 03 - def-observation-function
 
-Segment: `01-aad-core/src/def-observation-function.md` (`#def-observation-function`)
+Segment: `01-aat-core/src/def-observation-function.md` (`#def-observation-function`)
 
 Dependencies: `def-agent-environment`, `def-action-transition`, both read. Dependency-order check passes.
 

@@ -22,11 +22,11 @@ The papers in `~/src/neurips/` extracted three ASF results, refined them under a
 **Catalog finding:** Tier 1 #4 (Tragedy of the Confident Agent — two exploration drives at opposite ends of $U_M$).
 
 **Source segments:**
-- `01-aad-core/src/deriv-causal-ib-exploration.md` — the scalar survival-imperative exploration drive.
-- `01-aad-core/src/deriv-causal-ib-lmi.md` — the matrix lift via Linear Matrix Inequality on the Fisher Information Matrix.
-- `01-aad-core/src/result-persistence-condition.md` — the underlying $\alpha > \rho/R$ inequality.
-- `01-aad-core/src/result-sector-condition-stability.md` — the sector-Lyapunov machinery.
-- `01-aad-core/src/scope-agent-identity.md` — the singular-trajectory commitment.
+- `01-aat-core/src/deriv-causal-ib-exploration.md` — the scalar survival-imperative exploration drive.
+- `01-aat-core/src/deriv-causal-ib-lmi.md` — the matrix lift via Linear Matrix Inequality on the Fisher Information Matrix.
+- `01-aat-core/src/result-persistence-condition.md` — the underlying $\alpha > \rho/R$ inequality.
+- `01-aat-core/src/result-sector-condition-stability.md` — the sector-Lyapunov machinery.
+- `01-aat-core/src/scope-agent-identity.md` — the singular-trajectory commitment.
 
 **What the paper added that ASF should absorb:**
 
@@ -53,11 +53,11 @@ The papers in `~/src/neurips/` extracted three ASF results, refined them under a
 **Catalog finding:** Cross-Segment CS1 (Unified RL Convergence Theory Under Non-Stationarity).
 
 **Source segments:**
-- `01-aad-core/src/def-satisfaction-gap.md` + `def-control-regret.md` — the two-gap diagnostic (Component 1).
-- `01-aad-core/src/scope-agent-identity.md` — Loop-as-Causal-Engine (Component 4).
-- `01-aad-core/src/der-loop-interventional-access.md` — closed-loop interventional access (Component 4).
-- `01-aad-core/src/schema-strategy-persistence.md` + `def-strategic-tempo.md` — strategic tempo with forgetting prerequisite (Component 3).
-- `01-aad-core/src/deriv-strategy-cost-regret-bound.md` — the $\pi^*$-first reverse-KL direction-forcing (Component 2).
+- `01-aat-core/src/def-satisfaction-gap.md` + `def-control-regret.md` — the two-gap diagnostic (Component 1).
+- `01-aat-core/src/scope-agent-identity.md` — Loop-as-Causal-Engine (Component 4).
+- `01-aat-core/src/der-loop-interventional-access.md` — closed-loop interventional access (Component 4).
+- `01-aat-core/src/schema-strategy-persistence.md` + `def-strategic-tempo.md` — strategic tempo with forgetting prerequisite (Component 3).
+- `01-aat-core/src/deriv-strategy-cost-regret-bound.md` — the $\pi^*$-first reverse-KL direction-forcing (Component 2).
 
 **What the paper added that ASF should absorb:**
 
@@ -84,11 +84,11 @@ The papers in `~/src/neurips/` extracted three ASF results, refined them under a
 **Catalog finding:** Tier 1 #8 (Logogenic Bias Bound, $\kappa \times \mathcal{A}$ as conditional theorem).
 
 **Source segments:**
-- `01-aad-core/src/deriv-observation-ambiguity-bias-bound.md` — the conditional-theorem upgrade with two tracks.
+- `01-aat-core/src/deriv-observation-ambiguity-bias-bound.md` — the conditional-theorem upgrade with two tracks.
 - `03-logogenic-agents/src/scope-observation-ambiguity-modulation.md` — the κ × A factorization.
-- `01-aad-core/src/der-directed-separation.md` — the Class 1/2/3 architectural classification.
+- `01-aat-core/src/der-directed-separation.md` — the Class 1/2/3 architectural classification.
 - `03-logogenic-agents/src/scope-channel-collapse.md` — the architectural condition for Class 3 by construction.
-- `01-aad-core/src/scope-agent-identity.md` — the (PI) parameterization-invariance commitment.
+- `01-aat-core/src/scope-agent-identity.md` — the (PI) parameterization-invariance commitment.
 
 **What the paper added that ASF should absorb:**
 
@@ -163,7 +163,7 @@ Material in the papers that doesn't have a clean home in existing segments. Eith
 | Wei-Luo MASTER B_T/V_T wrapping | Either expansion of `#schema-strategy-persistence` or new `#deriv-variation-regime-bow-wrapping` | Domain instantiation of the two-track separability |
 | Class 1 reduction to Stuart-school | Strengthening of `#deriv-observation-ambiguity-bias-bound` (Track 1 hypothesis space sub-cases) | A7 spike report is the substrate |
 | Structural-class theorem on gain-decay updates | Strengthening of `#schema-strategy-persistence` | Real new structural finding |
-| ProST-as-impulsive-limit reduction | Domain segment in `02-tst-core/` or as a worked example in `01-aad-core/src/example-*` | Cross-domain transfer instance |
+| ProST-as-impulsive-limit reduction | Domain segment in `02-tst-core/` or as a worked example in `01-aat-core/src/example-*` | Cross-domain transfer instance |
 | Coupled-class autoregressive lemma | Expansion of `#scope-channel-collapse` and `#der-directed-separation` Class 3 examples | The induction-on-depth proof + broader architecture coverage |
 | Owhadi-Scovel-Sullivan brittleness distinction | Discussion under `#disc-identifiability-floor` F4 instance | Useful for adjacent-but-distinct framing |
 | Sycophancy as binary-uniform two-goal probe | Discussion under `#scope-observation-ambiguity-modulation` and/or in §06 ELI Sources of Operational Reference | Direct empirical-bridge claim |
@@ -267,7 +267,7 @@ The framework-level patterns that the papers established as discipline.
 - **How heavy to lean into the NeurIPS papers as canonical references**. The papers are anonymized (NeurIPS submission); they're not yet citable artifacts. ASF cross-references should probably be soft ("see also: NeurIPS 2026 submission [provisional]") until the review process resolves. If accepted, the references become hard; if rejected, the papers become arXiv preprints and the references become equivalent.
 - **The Sycophancy / sharma-2023 empirical-bridge claim**. Whether this should be in `03-logogenic-agents/` as a discussion of the operational reading, or in `04-eli/` as a discussion of empirical metrics, or both, is a routing call.
 - **Whether the spike-A7 strengthen-cycle deserves its own segment as a methodological example**. The A7 cycle (parent's 30-second "strengthening fails" overturned by 9-minute spike-mode investigation finding textbook-lemma + Class-1 reduction theorem) is the canonical instance of the strengthen-before-soften principle the project commits to; it's referenced from the NeurIPS CLAUDE.md as the validation of the discipline. Whether to surface this in agentic-systems CLAUDE.md or a new methodological segment is Joseph's call.
-- **The ProST-as-impulsive-limit reduction's home**. This is a real cross-domain transfer (RL non-stationarity literature → AAD strategic-persistence schema). It could land in `01-aad-core/` as a worked example or in `02-tst-core/` if framed as a software-process analog (developer iteration cycles as impulsive updates). The fit-to-place decision depends on which framing is more useful downstream.
+- **The ProST-as-impulsive-limit reduction's home**. This is a real cross-domain transfer (RL non-stationarity literature → AAD strategic-persistence schema). It could land in `01-aat-core/` as a worked example or in `02-tst-core/` if framed as a software-process analog (developer iteration cycles as impulsive updates). The fit-to-place decision depends on which framing is more useful downstream.
 
 ---
 

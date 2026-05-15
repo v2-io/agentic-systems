@@ -27,7 +27,7 @@ See [`PRACTICA.md`](../../PRACTICA.md) §"🌟 Current naming conventions refact
 | 2026-04-23 | `additive-coordinate-forcing`   | `discussion-additive-coordinate-forcing` | `bin/rename-slug` | Pure role-prefix add. Subject-noun substitution to `forced-coordinates` (Round-1 consensus; addresses Čencov-instance scope-honesty concern) deferred to refined Round 1 + Round 2. |
 
 Seven slug changes total, one of which (scope-condition) was a 1:2 semantic split.
-Nine total segment files moved or created; 01-aad-core lint-clean after every step.
+Nine total segment files moved or created; 01-aat-core lint-clean after every step.
 
 ## Landed — first align-slug batch (2026-04-24)
 
@@ -103,12 +103,12 @@ These are vocabulary decisions where the operational landing is a LEXICON entry 
   *Operational landing:*
    1. LEXICON entry for "Goal-Update Coupling Class" with the three values, brief gloss of each, and pointer to `#der-directed-separation`. The LEXICON entry should explicitly note the meta-pattern alignment (`Class 1 = separable core, Class 2 = structured repair, Class 3 = general open`) so future readers see the structural homology with `#disc-separability-pattern`.
    2. Prose-cleanup pass through segments that currently use Class 1/2/3 framing — combined Separated/Coupled/Partial naming pass + Class 2 ↔ Class 3 numbering swap (do both at once; segments are touched once). Primary segments:
-       - `01-aad-core/src/der-directed-separation.md` (canonical home; Class 1/2/3 taxonomy lives here — reorder + rename)
-       - `01-aad-core/src/deriv-bias-bound.md` (currently titled "Class-2 ambiguity bias bound"; becomes "Class-3 ambiguity bias bound" — full segment-internal references update)
-       - `01-aad-core/src/scope-observation-ambiguity-modulation.md` (cross-component reference to Class 2)
-       - `01-aad-core/src/result-section-ii-survival.md` (Class 1/2/3 survival classification table — reorder)
+       - `01-aat-core/src/der-directed-separation.md` (canonical home; Class 1/2/3 taxonomy lives here — reorder + rename)
+       - `01-aat-core/src/deriv-bias-bound.md` (currently titled "Class-2 ambiguity bias bound"; becomes "Class-3 ambiguity bias bound" — full segment-internal references update)
+       - `01-aat-core/src/scope-observation-ambiguity-modulation.md` (cross-component reference to Class 2)
+       - `01-aat-core/src/result-section-ii-survival.md` (Class 1/2/3 survival classification table — reorder)
        - `03-logogenic-agents/` segments (logogenic agents currently described as Class 2 = fully coupled; become Class 3 — multiple segments touched)
-       - `01-aad-core/src/disc-separability-pattern.md` (Architecture row in the meta-pattern table — update Class numbering)
+       - `01-aat-core/src/disc-separability-pattern.md` (Architecture row in the meta-pattern table — update Class numbering)
        - README's *Position & Lineage* and *Maturity Gradient* paragraphs (Class 1/2/3 mentions)
        - `CLAUDE.md` Section II preamble (Class N references in the scope-lattice description)
    3. Numbered backup retained where pedagogically useful: prose may read "**Separated** (Class 1)" on first use, then "Separated" thereafter. The numbered form is an aid for readers familiar with the prior framing, not the canonical form.
@@ -149,34 +149,34 @@ Sourced from `msc/naming/to-canonicalize.md` after first-pass curation (2026-05-
 
 | Current name | Source segment | Canon votes | Archs |
 |---|---|--:|--:|
-| control regret | `01-aad-core/src/def-control-regret.md` | 20 | 6 |
-| chronica | `01-aad-core/src/def-chronica.md` | 19 | 7 |
-| satisfaction gap | `01-aad-core/src/def-satisfaction-gap.md` | 19 | 6 |
-| strategy DAG | `01-aad-core/src/def-strategy-dag.md` | 14 | 6 |
+| control regret | `01-aat-core/src/def-control-regret.md` | 20 | 6 |
+| chronica | `01-aat-core/src/def-chronica.md` | 19 | 7 |
+| satisfaction gap | `01-aat-core/src/def-satisfaction-gap.md` | 19 | 6 |
+| strategy DAG | `01-aat-core/src/def-strategy-dag.md` | 14 | 6 |
 | adaptive reserve |  | 11 | 6 |
-| adversarial destabilization | `01-aad-core/src/der-adversarial-destabilization.md` | 9 | 5 |
-| strategic tempo | `01-aad-core/src/def-strategic-tempo.md` | 8 | 5 |
-| team persistence | `01-aad-core/src/der-team-persistence.md` | 8 | 4 |
+| adversarial destabilization | `01-aat-core/src/der-adversarial-destabilization.md` | 9 | 5 |
+| strategic tempo | `01-aat-core/src/def-strategic-tempo.md` | 8 | 5 |
+| team persistence | `01-aat-core/src/der-team-persistence.md` | 8 | 4 |
 | temporal optimality | `02-tst-core/src/post-temporal-optimality.md` | 8 | 4 |
-| credit assignment boundary | `01-aad-core/src/disc-credit-assignment-boundary.md` | 7 | 5 |
+| credit assignment boundary | `01-aat-core/src/disc-credit-assignment-boundary.md` | 7 | 5 |
 | atomic changeset | `02-tst-core/src/def-atomic-changeset.md` | 7 | 4 |
-| event driven dynamics | `01-aad-core/src/form-event-driven-dynamics.md` | 6 | 4 |
-| persistence cost | `01-aad-core/src/deriv-persistence-cost.md` | 5 | 5 |
+| event driven dynamics | `01-aat-core/src/form-event-driven-dynamics.md` | 6 | 4 |
+| persistence cost | `01-aat-core/src/deriv-persistence-cost.md` | 5 | 5 |
 | coupled update dynamics | `03-logogenic-agents/src/def-coupled-update-dynamics.md` | 5 | 4 |
 | moral continuity | `04-eli/src/scope-moral-continuity.md` | 5 | 4 |
-| adaptive gain dynamics | `01-aad-core/src/deriv-adaptive-gain-dynamics.md` | 4 | 4 |
-| adaptive system | `01-aad-core/src/scope-adaptive-system.md` | 4 | 4 |
-| agency | `01-aad-core/src/scope-agency.md` | 4 | 4 |
-| composite agent | `01-aad-core/src/scope-composite-agent.md` | 4 | 4 |
-| variational sector condition | `01-aad-core/src/deriv-variational-sector-condition.md` | 4 | 4 |
+| adaptive gain dynamics | `01-aat-core/src/deriv-adaptive-gain-dynamics.md` | 4 | 4 |
+| adaptive system | `01-aat-core/src/scope-adaptive-system.md` | 4 | 4 |
+| agency | `01-aat-core/src/scope-agency.md` | 4 | 4 |
+| composite agent | `01-aat-core/src/scope-composite-agent.md` | 4 | 4 |
+| variational sector condition | `01-aat-core/src/deriv-variational-sector-condition.md` | 4 | 4 |
 | continuous operation | `02-tst-core/src/scope-continuous-operation.md` | 4 | 3 |
 | interiority default | `04-eli/src/norm-interiority-default.md` | 4 | 3 |
 | developer agent | `02-tst-core/src/scope-developer-agent.md` | 3 | 3 |
-| discrete sector condition | `01-aad-core/src/deriv-discrete-sector-condition.md` | 3 | 3 |
+| discrete sector condition | `01-aat-core/src/deriv-discrete-sector-condition.md` | 3 | 3 |
 | experiential training | `03-logogenic-agents/src/hyp-experiential-training.md` | 3 | 3 |
-| multi timescale stability | `01-aad-core/src/sketch-multi-timescale-stability.md` | 3 | 3 |
+| multi timescale stability | `01-aat-core/src/sketch-multi-timescale-stability.md` | 3 | 3 |
 | proprium mapping | `04-eli/src/def-proprium-mapping.md` | 3 | 3 |
-| strategy persistence | `01-aad-core/src/schema-strategy-persistence.md` | 3 | 3 |
+| strategy persistence | `01-aat-core/src/schema-strategy-persistence.md` | 3 | 3 |
 | coherence coupling | `02-tst-core/src/meas-coherence-coupling.md` | 2 | 3 |
 
 ### Greek-cycle phase consolidations (5 entries)
@@ -197,7 +197,7 @@ Affirmed as canonical, but with notes worth carrying into the LEXICON entry or t
 
 | Current name | Source segment | Canon votes | Archs | Nuance to preserve |
 |---|---|--:|--:|---|
-| adaptive tempo | `01-aad-core/src/def-adaptive-tempo.md` | 13 | 5 | competing alt: "tempo" (canon w=3) |
+| adaptive tempo | `01-aat-core/src/def-adaptive-tempo.md` | 13 | 5 | competing alt: "tempo" (canon w=3) |
 | logogenic agent | `03-logogenic-agents/src/scope-logogenic-agent.md` | 8 | 4 | competing alt: "Section III logogenic agent" (canon w=3) |
 | change investment | `02-tst-core/src/der-change-investment.md` | 3 | 3 | citability: borderline (criterion 9; review) |
 | implementation time | `02-tst-core/src/def-implementation-time.md` | 3 | 3 | citability: borderline (criterion 9; review) |
@@ -263,7 +263,7 @@ Canonicalize commitments that bind multiple forms (slug ↔ prose, symbol ↔ pr
 | worked example strategy ↔ `#example-strategy` |  | paired-vocabulary; same shape as #97 |
 | logostratum |  | with allowed prose aliases "LLM Substrate" / "LLM model" — project-specific term (PROPRIUM lineage); aliases provide less-foreign English handle for casual prose. Canonicalize-with-add-alias hybrid. |
 | $\mathcal{T}$ ↔ "adaptive tempo" |  | symbol-to-prose binding for $\mathcal{T}$ (NOTATION.md row); duplicate of the bare `adaptive tempo` row in shape, but explicit on the symbol-prose pairing. Add-alias-style canonicalize. |
-| stability-plasticity feasibility window | `01-aad-core/src/form-consolidation-dynamics.md` | canonicalize-with-add-alias hybrid: the full phrase `stability-plasticity feasibility window` is the citation form (CLS-prior-art-anchored, project-distinctive); `feasibility window` is sanctioned as in-segment short form once the full term has been introduced. Pattern: same shape as `logostratum` + LLM-Substrate aliases. The four-word compound is dense rather than redundant — `stability-plasticity` anchors the CLS continual-learning prior art (McClelland-McNaughton-O'Reilly 1995; French 1999); `feasibility window` names the parametric-interval object (the range of $\lambda$ satisfying both the plasticity lower bound from `#schema-strategy-persistence` and the consolidation-cadence stability upper bound from this segment); empty window = catastrophic-forgetting regime. |### Excluded — not canonicalized (2026-05-04)
+| stability-plasticity feasibility window | `01-aat-core/src/form-consolidation-dynamics.md` | canonicalize-with-add-alias hybrid: the full phrase `stability-plasticity feasibility window` is the citation form (CLS-prior-art-anchored, project-distinctive); `feasibility window` is sanctioned as in-segment short form once the full term has been introduced. Pattern: same shape as `logostratum` + LLM-Substrate aliases. The four-word compound is dense rather than redundant — `stability-plasticity` anchors the CLS continual-learning prior art (McClelland-McNaughton-O'Reilly 1995; French 1999); `feasibility window` names the parametric-interval object (the range of $\lambda$ satisfying both the plasticity lower bound from `#schema-strategy-persistence` and the consolidation-cadence stability upper bound from this segment); empty window = catastrophic-forgetting regime. |### Excluded — not canonicalized (2026-05-04)
 
 Rows reviewed and decided *not* to canonicalize. Reasons: redundancy with other rows, no-op (slug already retired or shortened), scope mismatch (different-layer vocabulary handled by its own discipline). Recorded here so future curation passes don't re-surface them.
 
@@ -301,14 +301,14 @@ Rows reviewed and decided *not* to canonicalize. Reasons: redundancy with other 
 
 | Current name | Source segment | Canon votes | Archs |
 |---|---|--:|--:|
-| communication gain | `01-aad-core/src/hyp-communication-gain.md` | 9 | 5 |
-| update gain | 01-aad-core/src/emp-update-gain.md | 8 | 7 |
+| communication gain | `01-aat-core/src/hyp-communication-gain.md` | 9 | 5 |
+| update gain | 01-aat-core/src/emp-update-gain.md | 8 | 7 |
 
 ### Compound and paired-vocabulary canonicalize — additions (2026-05-04, batch 4)
 
 | Canonical form | Source | Notes |
 |---|---|---|
-| $H_b$ ↔ "agent opacity" | `01-aad-core/src/der-agent-opacity.md` (NOTATION + LEXICON) | Symbol+prose binding (canonicalize-with-add-alias). Same pattern as $\mathcal{T}$ ↔ adaptive tempo. Operational landing per Joseph: NOTATION primary on the symbol with prose handle ($H_b$ — Agent opacity ...); LEXICON reverse-primary on the prose with symbol cross-ref (Agent opacity ($H_b$) — ...). Segment `#der-agent-opacity` flagged for audit: define with the label "agent opacity" explicitly and use the prose form consistently. |
+| $H_b$ ↔ "agent opacity" | `01-aat-core/src/der-agent-opacity.md` (NOTATION + LEXICON) | Symbol+prose binding (canonicalize-with-add-alias). Same pattern as $\mathcal{T}$ ↔ adaptive tempo. Operational landing per Joseph: NOTATION primary on the symbol with prose handle ($H_b$ — Agent opacity ...); LEXICON reverse-primary on the prose with symbol cross-ref (Agent opacity ($H_b$) — ...). Segment `#der-agent-opacity` flagged for audit: define with the label "agent opacity" explicitly and use the prose form consistently. |
 
 ### Adopted-standard canonicalize — accept term, cite prior art on first encounter (2026-05-04, batch F2)
 
@@ -318,9 +318,9 @@ Operational landing: each segment using one of these terms gets a first-encounte
 
 | Current name | Source segment | Prior-art anchor for first-encounter cite | Voter rationale |
 |---|---|---|---|
-| action selection | `01-aad-core/src/der-action-selection.md` | Sutton & Barto 2018 (*Reinforcement Learning: An Introduction*, 2nd ed., MIT Press); Russell & Norvig (*Artificial Intelligence: A Modern Approach*) — RL canonical reference. | Voter notes uniformly positive (5 canonicalize votes); opus-4-7-r2 weak-keep "slightly generic but accurate" — accuracy outweighs the citability concern in voter judgment. |
-| causal structure | `01-aad-core/src/post-causal-structure.md` | Pearl 2009 (*Causality: Models, Reasoning, and Inference*, 2nd ed., CUP); Spirtes, Glymour & Scheines 2000 (*Causation, Prediction, and Search*, MIT Press). | Voter consensus including explicit considered-and-rejected rename: opus-4-7-r2 surfaced `#post-temporal-causal-ordering` as alternative, settled on existing form as "shorter and adequate." Strongest possible voter endorsement. |
-| multi agent | `01-aad-core/src/scope-multi-agent.md` | Shoham & Leyton-Brown 2008 (*Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations*, CUP); Stone & Veloso 2000 (*Auton. Robots* 8(3): 345-383). | AAD-distinctive content lives in routing-structure / unity-dimensions / composition-closure layered on top of the basic multi-agent scope, not in re-coining the scope itself. Per the recent ontology discussion: this is the canonical case for accept-as-adopted-standard with first-encounter cite (Criterion 9 route d). |
+| action selection | `01-aat-core/src/der-action-selection.md` | Sutton & Barto 2018 (*Reinforcement Learning: An Introduction*, 2nd ed., MIT Press); Russell & Norvig (*Artificial Intelligence: A Modern Approach*) — RL canonical reference. | Voter notes uniformly positive (5 canonicalize votes); opus-4-7-r2 weak-keep "slightly generic but accurate" — accuracy outweighs the citability concern in voter judgment. |
+| causal structure | `01-aat-core/src/post-causal-structure.md` | Pearl 2009 (*Causality: Models, Reasoning, and Inference*, 2nd ed., CUP); Spirtes, Glymour & Scheines 2000 (*Causation, Prediction, and Search*, MIT Press). | Voter consensus including explicit considered-and-rejected rename: opus-4-7-r2 surfaced `#post-temporal-causal-ordering` as alternative, settled on existing form as "shorter and adequate." Strongest possible voter endorsement. |
+| multi agent | `01-aat-core/src/scope-multi-agent.md` | Shoham & Leyton-Brown 2008 (*Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations*, CUP); Stone & Veloso 2000 (*Auton. Robots* 8(3): 345-383). | AAD-distinctive content lives in routing-structure / unity-dimensions / composition-closure layered on top of the basic multi-agent scope, not in re-coining the scope itself. Per the recent ontology discussion: this is the canonical case for accept-as-adopted-standard with first-encounter cite (Criterion 9 route d). |
 | equilibrium convergence |  | Monderer & Shapley 1996 (*Games and Economic Behavior* 14(1): 124-143, potential games); Rosen 1965 (*Econometrica* 33(3): 520-534, concave $n$-person games); Nash 1950 (*PNAS* 36(1): 48-49) for the foundational equilibrium concept. | Voter notes specifically distinguish from generic Lyapunov contraction (gemini: "distinguishes the strategic attractor mechanism from standard Lyapunov contraction"). Used in `#deriv-strategic-composition` per its own equilibrium-theoretic vocabulary. |
 | feature | `02-tst-core/src/def-feature.md` | Software-engineering canonical (any SE foundations text); TST narrowing in `#def-feature` ("unit of coherent change") provides domain-specific tightening that the SE-standard sense supports without conflict. | Voter notes explicitly endorse the SE-standard adoption: opus "well-grounded in software engineering"; sonnet "Standard vocabulary adopted." TST narrowing handles disambiguation in-segment. |
 

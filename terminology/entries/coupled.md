@@ -11,8 +11,8 @@ tags:
 - structural_concepts
 - agent_classes
 source_type: asf
-primary_source: 01-aad-core/src/der-directed-separation.md
-first_asf_mention: 01-aad-core/src/der-directed-separation.md
+primary_source: 01-aat-core/src/der-directed-separation.md
+first_asf_mention: 01-aat-core/src/der-directed-separation.md
 see_also:
 - goal-update-coupling-class
 - directed-separation

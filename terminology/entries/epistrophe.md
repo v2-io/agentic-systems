@@ -10,7 +10,7 @@ status: canon
 tags: [cycle_phases, greek_vocabulary]
 source_type: external
 primary_source: "Greek philosophical vocabulary (Neoplatonic: turning-back, conversion)"
-first_asf_mention: 01-aad-core/src/deriv-recursive-update.md
+first_asf_mention: 01-aat-core/src/deriv-recursive-update.md
 see_also: [prolepsis, aisthesis, aporia, praxis, update-gain]
 aliases: ["ἐπιστροφή"]
 do_not_confuse: []
@@ -22,7 +22,7 @@ mismatch, weighted by the update gain $\eta^\ast$. Etymologically Greek for
 reality showed.
 
 See
-[`#deriv-recursive-update`](../../01-aad-core/src/deriv-recursive-update.md)
+[`#deriv-recursive-update`](../../01-aat-core/src/deriv-recursive-update.md)
 for the update law and
-[`#emp-update-gain`](../../01-aad-core/src/emp-update-gain.md) for the gain
+[`#emp-update-gain`](../../01-aat-core/src/emp-update-gain.md) for the gain
 itself.

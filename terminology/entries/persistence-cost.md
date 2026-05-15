@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities, structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/deriv-persistence-cost.md
-first_asf_mention: 01-aad-core/src/deriv-persistence-cost.md
+primary_source: 01-aat-core/src/deriv-persistence-cost.md
+first_asf_mention: 01-aat-core/src/deriv-persistence-cost.md
 see_also: [adaptive-reserve, adaptive-tempo, structural-persistence, adaptive-system]
 aliases: []
 do_not_confuse: []
@@ -36,4 +36,4 @@ The result has a thermodynamic reading (Still et al. 2012): each nat of informat
 signal costs at least $k_BT$ of dissipation, so persistence at sector constant $\alpha$ in $n$
 dimensions costs at least $n\alpha k_BT/(2\ln 2)$ of thermodynamic dissipation per unit time.
 
-Derived in [`#deriv-persistence-cost`](../../01-aad-core/src/deriv-persistence-cost.md).
+Derived in [`#deriv-persistence-cost`](../../01-aat-core/src/deriv-persistence-cost.md).

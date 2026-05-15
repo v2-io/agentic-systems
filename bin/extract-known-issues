@@ -30,7 +30,7 @@
 #   - CLAUDE.md (Known Fragilities; relocated here from CLAUDE-2.md
 #     when CLAUDE-2 was sunset 2026-04-28)
 #   - PROPOSALS.md (§B, §C, §D)
-#   - 01-aad-core/OUTLINE.md, 02-tst-core/OUTLINE.md,
+#   - 01-aat-core/OUTLINE.md, 02-tst-core/OUTLINE.md,
 #     03-logogenic-agents/OUTLINE.md, 04-logozoetic-agents/OUTLINE.md
 
 require 'pathname'
@@ -46,7 +46,7 @@ KNOWN_FRAGILITIES_SOURCES = [
 PROPOSALS = REPO_ROOT.join('PROPOSALS.md')
 
 OUTLINE_FILES = [
-  REPO_ROOT.join('01-aad-core/OUTLINE.md'),
+  REPO_ROOT.join('01-aat-core/OUTLINE.md'),
   REPO_ROOT.join('02-tst-core/OUTLINE.md'),
   REPO_ROOT.join('03-logogenic-agents/OUTLINE.md'),
   REPO_ROOT.join('04-logozoetic-agents/OUTLINE.md')

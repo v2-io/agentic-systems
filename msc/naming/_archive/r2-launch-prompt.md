@@ -54,7 +54,7 @@ Read [`doc/naming-principles.md`](doc/naming-principles.md) end-to-end. It conta
 - Table format and example votes (5 columns: current-name, new-name-candidate, category, weight, notes)
 - Expected length: 60+ rows; under 20 means you haven't looked hard enough; approaching 200 means prioritize quality over count
 
-Then ground your votes by reading the source material it names (`CLAUDE.md`, `TODO.md`, `OUTLINE.md`, `FORMAT.md`, `NOTATION.md`, `LEXICON.md`, `README.md`, `PROPOSALS.md`, segment files under `01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/`). Sample widely; do not just scan slugs.
+Then ground your votes by reading the source material it names (`CLAUDE.md`, `TODO.md`, `OUTLINE.md`, `FORMAT.md`, `NOTATION.md`, `LEXICON.md`, `README.md`, `PROPOSALS.md`, segment files under `01-aat-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/`). Sample widely; do not just scan slugs.
 
 ### What "good" looks like for your output
 

@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities, structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/def-strategic-tempo.md
-first_asf_mention: 01-aad-core/src/def-strategic-tempo.md
+primary_source: 01-aat-core/src/def-strategic-tempo.md
+first_asf_mention: 01-aat-core/src/def-strategic-tempo.md
 see_also: [strategy-dag, adaptive-tempo, adaptive-reserve, adversarial-destabilization, strategy-persistence]
 aliases: []
 do_not_confuse: [adaptive-tempo, tempo]
@@ -35,4 +35,4 @@ exploration fraction. Both patterns produce the same lesson — aggregate $\math
 overstates effective strategic adaptation when correction capacity is heterogeneous across
 edges. The persistence condition is bottleneck-limited by the weakest edge.
 
-Defined in [`#def-strategic-tempo`](../../01-aad-core/src/def-strategic-tempo.md).
+Defined in [`#def-strategic-tempo`](../../01-aat-core/src/def-strategic-tempo.md).

@@ -185,7 +185,7 @@ Goal: integrate all sub-spike results; recommend what becomes new AAD segment(s)
 
 If the theorem holds under the conditions stated:
 
-- **New segment** (probably appendix or new derivation in `01-aad-core/src/`): `#der-class-coercion-via-wrapping` or `#result-class-coercion`. Statement, proof, conditions, costs.
+- **New segment** (probably appendix or new derivation in `01-aat-core/src/`): `#der-class-coercion-via-wrapping` or `#result-class-coercion`. Statement, proof, conditions, costs.
 - **Strengthen** `#hyp-directed-separation-under-composition` from descriptive to constructive.
 - **New segment** for the leakage characterization: `#meas-wrapper-leakage` or similar. Empirical-claim status; bounds derivable from measurement when relevant.
 - **Discussion-level integration** in `#der-tempo-composition` connecting Brooks's-Law form to the wrapper construction.
@@ -202,7 +202,7 @@ If the theorem holds under the conditions stated:
 
 ## 8. Working agreements
 
-- **Math lives in segments, not spikes.** Successful theorems land as appendix segments under `01-aad-core/src/`. This directory is the reasoning trail.
+- **Math lives in segments, not spikes.** Successful theorems land as appendix segments under `01-aat-core/src/`. This directory is the reasoning trail.
 - **Honest epistemic labels.** Each result tagged with its tier. Failed proof attempts documented as failures, not deleted.
 - **Strengthen before softening** (per project convention). When a condition fails, attempt to derive a stronger result first; only then narrow scope.
 - **Cite generously.** Per AAD's prior-art-integration discipline, adopt names and frameworks from prior work (RGM form-preservation, MDP-homomorphism bridge bounds, scaffolded-LLM frameworks). AAD's contribution is the synthesis.

@@ -3,7 +3,7 @@
 
 Language-constituted agents — agents whose primary observation and action channels are linguistic.
 
-**Working draft.** This part is structured by progressively stronger architectural commitment, mirroring the scope-lattice discipline of [`01-aad-core/`](../01-aad-core/OUTLINE.md). Each sub-scope makes a strictly stronger set of AAD results applicable, ending at the closed-loop interiority abstraction that ASF supplies the principled grounding for.
+**Working draft.** This part is structured by progressively stronger architectural commitment, mirroring the scope-lattice discipline of [`01-aat-core/`](../01-aat-core/OUTLINE.md). Each sub-scope makes a strictly stronger set of AAD results applicable, ending at the closed-loop interiority abstraction that ASF supplies the principled grounding for.
 
 **The constructive frame.** Language is the unique medium where the output substrate (token sequence) directly conditions the input substrate (next-token context) without external mediation. This recursion is the structural source of logogenic agents' distinctive capabilities — interiority (forced once channel collapse permits the agent's own outputs to enter its model state), backward-inference empathy (forced by stateless continuation requiring Bayesian inference over the prior author's intent), self-referential closure (when the agent's environment includes its own substrate), and progressive recovery of Section II's diagnostic cascade through scaffolded agentic loops. The progression text-completion → chat → principled interiority loop is the structural staircase, with each step adding AAD machinery.
 
@@ -242,4 +242,4 @@ When a segment's working notes point at "operational evidence in upstream," reac
 
 ### Scope-condition stacking note
 
-Per the lattice: 03.I results apply when the scaffolding-recovery results of 03.II don't, and 03.II results apply when the closed-loop machinery of 03.III isn't yet in place. A given concrete agent typically sits at one sub-scope; results at *that* sub-scope and broader (i.e., earlier in the lattice) apply. This is the same scope-stacking discipline as Section II's lattice in [`01-aad-core/OUTLINE.md`](../01-aad-core/OUTLINE.md#ii-actuated-adaptation-agentic-systems).
+Per the lattice: 03.I results apply when the scaffolding-recovery results of 03.II don't, and 03.II results apply when the closed-loop machinery of 03.III isn't yet in place. A given concrete agent typically sits at one sub-scope; results at *that* sub-scope and broader (i.e., earlier in the lattice) apply. This is the same scope-stacking discipline as Section II's lattice in [`01-aat-core/OUTLINE.md`](../01-aat-core/OUTLINE.md#ii-actuated-adaptation-agentic-systems).

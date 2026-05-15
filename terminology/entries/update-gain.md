@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/emp-update-gain.md
-first_asf_mention: 01-aad-core/src/emp-update-gain.md
+primary_source: 01-aat-core/src/emp-update-gain.md
+first_asf_mention: 01-aat-core/src/emp-update-gain.md
 see_also: [mismatch, epistrophe, adaptive-tempo, communication-gain]
 aliases: []
 do_not_confuse: []
@@ -22,5 +22,5 @@ $\eta^\ast$ when the model is unsure relative to the evidence (trust reality);
 low when the model is confident relative to noisy evidence (trust the model).
 
 Source-of-truth at
-[`#emp-update-gain`](../../01-aad-core/src/emp-update-gain.md); recursive form
-at [`#deriv-recursive-update`](../../01-aad-core/src/deriv-recursive-update.md).
+[`#emp-update-gain`](../../01-aat-core/src/emp-update-gain.md); recursive form
+at [`#deriv-recursive-update`](../../01-aat-core/src/deriv-recursive-update.md).

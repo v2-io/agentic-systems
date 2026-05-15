@@ -1,6 +1,6 @@
 # 13 - def-model-class-fitness
 
-Segment: `01-aad-core/src/def-model-class-fitness.md` (`#def-model-class-fitness`)
+Segment: `01-aat-core/src/def-model-class-fitness.md` (`#def-model-class-fitness`)
 
 Dependencies: `def-model-sufficiency`, already read. Dependency-order check passes.
 

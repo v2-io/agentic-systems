@@ -1,6 +1,6 @@
 # 04 - def-chronica
 
-Segment: `01-aad-core/src/def-chronica.md` (`#def-chronica`)
+Segment: `01-aat-core/src/def-chronica.md` (`#def-chronica`)
 
 Dependencies: `def-agent-environment`, `def-observation-function`, `def-action-transition`, all read. Dependency-order check passes.
 

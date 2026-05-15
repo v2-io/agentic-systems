@@ -353,7 +353,7 @@ This instance is structurally distinct from Instance 2 (which is about identifyi
 
 Three options:
 
-**R1 (preferred): New segment `#deriv-fisher-whitened-update-rule`.** Create `01-aad-core/src/deriv-fisher-whitened-update-rule.md` as a derived segment stating:
+**R1 (preferred): New segment `#deriv-fisher-whitened-update-rule`.** Create `01-aat-core/src/deriv-fisher-whitened-update-rule.md` as a derived segment stating:
 
 1. The problem: under correlated evidence, the evidential-additivity-forced log-odds update diverges from the natural-gradient direction (§3).
 2. The AAD-internal derivation: Fisher whitening is forced by either B1 parameterization-invariance or Lyapunov-coordinate-matching (§4).

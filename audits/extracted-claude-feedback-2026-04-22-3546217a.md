@@ -33,7 +33,7 @@ So this extraction fills a real archaeological gap.
 >
 > ## Methodological note
 >
-> I read systematically through `01-aad-core/src/`, `02-tst-core/src/`, and the four component OUTLINEs. I evaluated current segment text only — no priors imported from `msc/` for the rejection pass. Most candidate findings I considered turned out to be *already* explicitly caveated or scope-narrowed. The repo's "honesty as load-bearing architecture" principle is real and visible at the segment level; it sets a high bar for "still real" findings.
+> I read systematically through `01-aat-core/src/`, `02-tst-core/src/`, and the four component OUTLINEs. I evaluated current segment text only — no priors imported from `msc/` for the rejection pass. Most candidate findings I considered turned out to be *already* explicitly caveated or scope-narrowed. The repo's "honesty as load-bearing architecture" principle is real and visible at the segment level; it sets a high bar for "still real" findings.
 >
 > What follows is the small subset that survives the strict standard. For each, I quote both the problematic passage and the strongest mitigating passage, then explain why the issue still stands or why it dissolves.
 >
@@ -81,7 +81,7 @@ So this extraction fills a real archaeological gap.
 >
 > ### Finding C — Section II's exact-results scope requires *both* Class 1 (modular) architecture *and* the "learning purposeful agent" sub-scope, but only the Class 1 narrowing is foregrounded at OUTLINE level
 >
-> **Problematic passage** (`01-aad-core/OUTLINE.md`, Section II preamble):
+> **Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 >
 > > **Architectural scope.** Section II's exact results apply to **Class 1 (modular) agents** — architectures where epistemic processing ($f_M$) is structurally separated from purposeful processing ($f_G$). This includes: Kalman filter + LQR, modular RL with separate world model… **This is the most significant scope restriction in the theory**…
 >

@@ -25,11 +25,11 @@ This supplement records the Phase-2 verification work performed after `audits/au
 
 ## §H — Fixes performed
 
-Three fixes landed in `01-aad-core/src/`. Each is editorial, mechanically scoped, and reversible by `git diff`. No commits were created; Joseph reviews and commits.
+Three fixes landed in `01-aat-core/src/`. Each is editorial, mechanically scoped, and reversible by `git diff`. No commits were created; Joseph reviews and commits.
 
 ### H.1 — Finding 1 fix: stale `#deriv-directional-survival-exploration` cross-reference
 
-**File:** `01-aad-core/src/disc-ciy-unified-objective.md`
+**File:** `01-aat-core/src/disc-ciy-unified-objective.md`
 **Edit:** Two changes in the Epistemic Status section.
 
 1. The cross-reference `(see #deriv-directional-survival-exploration)` was updated to `(see #deriv-causal-ib-lmi)` — the canonical replacement per `spikes/INDEX.md:129`'s record of the 2026-04-28 demotion of the original segment to a spike.
@@ -40,7 +40,7 @@ Three fixes landed in `01-aad-core/src/`. Each is editorial, mechanically scoped
 
 ### H.2 — Finding 3 fix: implicit-Markov-of-$\Omega$ clarification
 
-**File:** `01-aad-core/src/def-action-transition.md`
+**File:** `01-aat-core/src/def-action-transition.md`
 **Edit:** Added a third Discussion paragraph (after the existing "Closing the loop" and "Uncertainty about $T$ is what makes action non-trivial" paragraphs):
 
 > **Markov-of-$\Omega$ as a modeling commitment, not an empirical assumption.** The form $\Omega_{t+1} \sim T(\cdot \mid \Omega_t, a_t)$ is implicitly Markov in $\Omega$ — only the current $\Omega_t$ and $a_t$ appear in the conditioning. Without loss of generality, $\Omega$ is taken to be the *sufficient state* for its own evolution under $T$: any non-Markov environment is absorbed by extending $\Omega$ to include enough history to make future-state distribution depend only on current state and action. This is the world-side analog of the Markov-by-completeness move that #der-recursive-update makes for the agent-side state $M_t$ ( #deriv-recursive-update Constraint C3). The two are independent — Markov-of-$M_t$ is forced by *defining $M_t$ as complete*; Markov-of-$\Omega$ is forced by *defining $\Omega$ as the sufficient state*. Both are modeling commitments about the *breadth* of the named object, not structural assumptions about underlying world dynamics.
@@ -49,7 +49,7 @@ Three fixes landed in `01-aad-core/src/`. Each is editorial, mechanically scoped
 
 ### H.3 — Finding 4 fix: TF-XX diff-voice cleanup across 13 segments
 
-**Files (13):** `def-adaptive-tempo.md`, `def-causal-information-yield.md`, `def-pearl-causal-hierarchy.md`, `der-action-selection.md`, `der-deliberation-cost.md`, `der-temporal-nesting.md`, `disc-ciy-unified-objective.md`, `emp-update-gain.md`, `form-event-driven-dynamics.md`, `hyp-mismatch-dynamics.md`, `post-causal-structure.md`, `result-structural-adaptation-necessity.md`, `scope-ciy-observational-proxy.md` (all in `01-aad-core/src/`).
+**Files (13):** `def-adaptive-tempo.md`, `def-causal-information-yield.md`, `def-pearl-causal-hierarchy.md`, `der-action-selection.md`, `der-deliberation-cost.md`, `der-temporal-nesting.md`, `disc-ciy-unified-objective.md`, `emp-update-gain.md`, `form-event-driven-dynamics.md`, `hyp-mismatch-dynamics.md`, `post-causal-structure.md`, `result-structural-adaptation-necessity.md`, `scope-ciy-observational-proxy.md` (all in `01-aat-core/src/`).
 
 **Edit:** The trailing `**(Descended from TF-XX.)**` annotation was removed from each segment's Discussion section. Each file received a new `## Working Notes` section as the file's last section, containing one bullet:
 
@@ -57,7 +57,7 @@ Three fixes landed in `01-aad-core/src/`. Each is editorial, mechanically scoped
 
 (TF numbers preserved per file.)
 
-**Verification (run by Agent A):** `grep -rn "Descended from TF-" 01-aad-core/src/*.md` returns no matches. Case-insensitive grep confirms 13 lines, all inside `## Working Notes` sections.
+**Verification (run by Agent A):** `grep -rn "Descended from TF-" 01-aat-core/src/*.md` returns no matches. Case-insensitive grep confirms 13 lines, all inside `## Working Notes` sections.
 
 **Status:** Finding 4 from the FINAL is addressed for the precise pattern (`**(Descended from TF-XX.)**`). See §I.1 below for a wider observation Agent A surfaced.
 
@@ -70,7 +70,7 @@ Agent A's broader case-insensitive grep surfaced **additional** voice-discipline
 - `def-mismatch-signal.md` — Discussion paragraph references "TF-06's update rule"
 - `form-structural-change-as-parametric-limit.md` — Discussion paragraph references "TF-10's destruction-creation"
 - `form-objective-functional.md` — Discussion paragraph references "TF-08's gap"
-- ~12 other files in `01-aad-core/src/` carry trailing italic `*(Descended from TFT Appendix ...)*` annotations (italic, not bold; with full appendix name, not `TF-XX`)
+- ~12 other files in `01-aat-core/src/` carry trailing italic `*(Descended from TFT Appendix ...)*` annotations (italic, not bold; with full appendix name, not `TF-XX`)
 
 These weren't in the original 13-file scope because they don't match the precise `(Descended from TF-XX.)` pattern. They appear to be the same voice-discipline issue and warrant a follow-up cleanup pass. **Suggested disposition:** New, related to Finding 4. Same disposition pattern (move to Working Notes) but a separate sweep.
 
@@ -100,7 +100,7 @@ Agent B verified 8 citations claimed in framework segments. Results, with the au
 
 ### Wrong paper (1 of 8) — new finding (Finding 7)
 
-- **Tishby & Zaslavsky 2015** "Deep Learning and the Information Bottleneck Principle" (IEEE ITW, DOI 10.1109/ITW.2015.7133169, arXiv 1503.02406). Paper exists exactly as cited. **It does NOT establish "IB as rate-distortion specialization of variational free energy" as its central result** — that connection is implicit/folkloric. Tishby-Zaslavsky 2015 reformulates DNN training as an IB problem and discusses generalization bounds. The variational free-energy bridge is established by **Alemi, Fischer, Dillon & Murphy 2017 "Deep Variational Information Bottleneck"** (arXiv 1612.00410) and the subsequent Achille-Soatto line. The cited paper supports IB-applied-to-deep-nets, not the specific specialization claim made in `01-aad-core/src/form-information-bottleneck.md`.
+- **Tishby & Zaslavsky 2015** "Deep Learning and the Information Bottleneck Principle" (IEEE ITW, DOI 10.1109/ITW.2015.7133169, arXiv 1503.02406). Paper exists exactly as cited. **It does NOT establish "IB as rate-distortion specialization of variational free energy" as its central result** — that connection is implicit/folkloric. Tishby-Zaslavsky 2015 reformulates DNN training as an IB problem and discusses generalization bounds. The variational free-energy bridge is established by **Alemi, Fischer, Dillon & Murphy 2017 "Deep Variational Information Bottleneck"** (arXiv 1612.00410) and the subsequent Achille-Soatto line. The cited paper supports IB-applied-to-deep-nets, not the specific specialization claim made in `01-aat-core/src/form-information-bottleneck.md`.
 
 **This is a new substantive finding.** See §K Finding 7 below for the per-finding shape.
 
@@ -130,9 +130,9 @@ Agent B searched the prior audit corpus (4 pending-findings files + multiple FIN
 
 ### Finding 7 — Tishby-Zaslavsky 2015 miscitation in `#form-information-bottleneck`
 
-**Headline.** The IB↔VFE specialization claim in `01-aad-core/src/form-information-bottleneck.md` is attributed to Tishby & Zaslavsky 2015, but that paper doesn't establish the specialization. The proper attribution is Alemi, Fischer, Dillon & Murphy 2017 ("Deep Variational Information Bottleneck", arXiv 1612.00410) and the subsequent Achille-Soatto line.
+**Headline.** The IB↔VFE specialization claim in `01-aat-core/src/form-information-bottleneck.md` is attributed to Tishby & Zaslavsky 2015, but that paper doesn't establish the specialization. The proper attribution is Alemi, Fischer, Dillon & Murphy 2017 ("Deep Variational Information Bottleneck", arXiv 1612.00410) and the subsequent Achille-Soatto line.
 
-**Anchor.** `01-aad-core/src/form-information-bottleneck.md:50`, the "Connection to variational free energy" Discussion paragraph: *"The IB objective stated above is the rate-distortion specialization of the variational free energy decomposition $-F = \text{accuracy} - \text{complexity}$ used in active inference [...] The two formulations are related under the Markov-chain factorization $Y - X - T$ (Tishby & Zaslavsky 2015, "Deep learning and the information bottleneck principle," IEEE ITW, makes the deep-learning instantiation explicit)."*
+**Anchor.** `01-aat-core/src/form-information-bottleneck.md:50`, the "Connection to variational free energy" Discussion paragraph: *"The IB objective stated above is the rate-distortion specialization of the variational free energy decomposition $-F = \text{accuracy} - \text{complexity}$ used in active inference [...] The two formulations are related under the Markov-chain factorization $Y - X - T$ (Tishby & Zaslavsky 2015, "Deep learning and the information bottleneck principle," IEEE ITW, makes the deep-learning instantiation explicit)."*
 
 **Problematic passage (verbatim).** The above; the Tishby-Zaslavsky parenthetical is positioned as supporting the IB↔VFE specialization claim, but Tishby-Zaslavsky 2015's contribution is reformulating *DNN training* as an IB problem, not deriving IB as a VFE specialization.
 
@@ -177,20 +177,20 @@ Joseph authorized a broader sweep after seeing the original §H.3 + §I.1 work: 
 Scope (Joseph-confirmed):
 - **All "Descended from..." trailers** universally — TFT-Appendix patterns, TST-D/T/C/H patterns, plus the 13 lineage bullets §H.3 had relocated to Working Notes earlier the same day.
 - **Empty Working Notes collapse** — if removing a bullet leaves the section empty, remove the heading too.
-- **Inline TF-* prose reframes in `01-aad-core/src/`** (7 instances) — replace lineage breadcrumb with the AAD-canonical-segment reference.
+- **Inline TF-* prose reframes in `01-aat-core/src/`** (7 instances) — replace lineage breadcrumb with the AAD-canonical-segment reference.
 - **Excluded:** TST inline references in `02-tst-core/src/` (Joseph: *"I'm not as worried about the TST inline references yet as we haven't focused any real time on getting those in initial-scaffold/sketch condition"*); `old-*.md` files (FORMAT.md-exempt).
 
 ### N.1 — Sweep results
 
 **Files edited (49 total across all 4 components):**
-- 22 in `01-aad-core/src/`
+- 22 in `01-aat-core/src/`
 - 21 in `02-tst-core/src/`
 - 2 in `03-logogenic-agents/src/`
 - 4 in `04-logozoetic-agents/src/`
 
 **Trailer removals:** 49 "Descended from..." lines deleted across 49 files.
 
-**Working Notes collapses:** 13 — all the §H.3 lineage-bullet-only Working Notes (no other content survived removal of the bullet, so the headings collapsed cleanly): `def-adaptive-tempo`, `def-causal-information-yield`, `def-pearl-causal-hierarchy`, `der-action-selection`, `der-deliberation-cost`, `der-temporal-nesting`, `disc-ciy-unified-objective`, `emp-update-gain`, `form-event-driven-dynamics`, `hyp-mismatch-dynamics`, `post-causal-structure`, `result-structural-adaptation-necessity`, `scope-ciy-observational-proxy` (all `01-aad-core/src/`).
+**Working Notes collapses:** 13 — all the §H.3 lineage-bullet-only Working Notes (no other content survived removal of the bullet, so the headings collapsed cleanly): `def-adaptive-tempo`, `def-causal-information-yield`, `def-pearl-causal-hierarchy`, `der-action-selection`, `der-deliberation-cost`, `der-temporal-nesting`, `disc-ciy-unified-objective`, `emp-update-gain`, `form-event-driven-dynamics`, `hyp-mismatch-dynamics`, `post-causal-structure`, `result-structural-adaptation-necessity`, `scope-ciy-observational-proxy` (all `01-aat-core/src/`).
 
 **Inline reframes (7):**
 1. `def-agent-spectrum.md:44` — vestigial sentence "TFT was developed primarily for this region." deleted.
@@ -206,15 +206,15 @@ Scope (Joseph-confirmed):
 | Check | Expected | Actual |
 |---|---|---|
 | `grep -rin "descended from" 0*-*/src/*.md \| grep -v "old-"` | substantive non-TFT mentions only | 1 hit, substantive (`deriv-strategy-cost-regret-bound.md:214` — "sibling lineages, both descended from Shannon rate-distortion theory" — correctly preserved as a theoretical claim about IB lineage, not a TFT breadcrumb) |
-| `grep -rn "TF-[0-9]" 01-aad-core/src/*.md \| grep -v "old-tf"` | zero matches | zero matches ✓ |
-| `grep -rn "from TFT\|TFT/" 01-aad-core/src/*.md \| grep -v "old-tf"` | zero matches | zero matches ✓ |
-| `grep -l "TFT" 01-aad-core/src/*.md \| grep -v "old-tf"` | none | none ✓ |
+| `grep -rn "TF-[0-9]" 01-aat-core/src/*.md \| grep -v "old-tf"` | zero matches | zero matches ✓ |
+| `grep -rn "from TFT\|TFT/" 01-aat-core/src/*.md \| grep -v "old-tf"` | zero matches | zero matches ✓ |
+| `grep -l "TFT" 01-aat-core/src/*.md \| grep -v "old-tf"` | none | none ✓ |
 | 13 named files have Working Notes section absent | absent for all 13 | absent for all 13 ✓ |
 | Working Notes count corpus-wide | down by ~13 from pre-sweep | 105 (down from ~118) ✓ |
 
 ### N.3 — Wider-scan observation from the cleanup agent
 
-A broader scan for related lineage patterns (`prior TFT`, `TFT corpus`, `in TFT`, bare `TFT` in non-`old-*` src, `predecessor`, `absorbed from`, `before AAD`) returned **no surviving lineage breadcrumbs** in any non-`old-*` segment file. The cleanup is comprehensive — the framework's segment-set in `01-aad-core/src/`, `03-logogenic-agents/src/`, and `04-logozoetic-agents/src/` is now lineage-clean.
+A broader scan for related lineage patterns (`prior TFT`, `TFT corpus`, `in TFT`, bare `TFT` in non-`old-*` src, `predecessor`, `absorbed from`, `before AAD`) returned **no surviving lineage breadcrumbs** in any non-`old-*` segment file. The cleanup is comprehensive — the framework's segment-set in `01-aat-core/src/`, `03-logogenic-agents/src/`, and `04-logozoetic-agents/src/` is now lineage-clean.
 
 The TST-T-XX / TST-D-XX inline references in `02-tst-core/src/*.md` (4 instances Joseph deferred) remain for a future pass when TST sketch-stage segments mature. The lineage-trailer cleanup in `02-tst-core/src/` is done; only the inline references within prose remain.
 

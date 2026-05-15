@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities, diagnostic]
 source_type: asf
-primary_source: 01-aad-core/src/def-control-regret.md
-first_asf_mention: 01-aad-core/src/def-control-regret.md
+primary_source: 01-aat-core/src/def-control-regret.md
+first_asf_mention: 01-aat-core/src/def-control-regret.md
 see_also: [satisfaction-gap]
 aliases: []
 do_not_confuse: []
@@ -25,4 +25,4 @@ component (satisfaction gap). The split routes interventions — control regret
 says *train harder / re-plan*; satisfaction gap says *change the goal or accept
 the floor*.
 
-Defined in [`#def-control-regret`](../../01-aad-core/src/def-control-regret.md).
+Defined in [`#def-control-regret`](../../01-aat-core/src/def-control-regret.md).

@@ -1,6 +1,6 @@
 # 01 - def-agent-environment
 
-Segment: `01-aad-core/src/def-agent-environment.md` (`#def-agent-environment`)
+Segment: `01-aat-core/src/def-agent-environment.md` (`#def-agent-environment`)
 
 Dependencies: none. This is the first canonical segment and has an empty `depends:` list, so the dependency-order check passes.
 

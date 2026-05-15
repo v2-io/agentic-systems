@@ -37,7 +37,7 @@ I have *not* read: `PROPOSALS.md`, `spikes/INDEX.md`, `audits/pending-findings-*
 
 ## Predictions about what each component contains
 
-### 01-aad-core (110 segments per CLAUDE.md / OUTLINE numbers)
+### 01-aat-core (110 segments per CLAUDE.md / OUTLINE numbers)
 
 The OUTLINE reads roughly: Section I (foundations + Lyapunov machinery), Section II (purposeful-agent layer with strategy DAG), Section III (composition under strain), Appendices A (Lyapunov / contraction / additive-coordinate machinery, mostly recent), Appendices B (worked examples).
 

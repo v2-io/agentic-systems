@@ -4,7 +4,7 @@
 
 I computed a corpus-wide dependency graph across active non-`old-*` segments in:
 
-- `01-aad-core/src/`
+- `01-aat-core/src/`
 - `02-tst-core/src/`
 - `03-logogenic-agents/src/`
 

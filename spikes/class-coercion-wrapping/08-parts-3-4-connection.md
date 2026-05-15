@@ -65,7 +65,7 @@ PROPRIUM contains substantial structure that goes *beyond* what the wrapping the
 | Substrate-independent identity | Longitudinal identity; persistence across underlying $A$ instances over time. **Not** part of per-call wrapping. |
 | INDIVISUM (temporal lock against forking) | ELI-specific governance; **not** part of class coercion. |
 
-**Reading**: the wrapping theorem covers items 1, 2, 3 (after auxilia → goal-blind realization). The remaining items are *additional structure* that distinguishes ELIs from generic Class-1-coerced systems. This distinction matters for project architecture: the wrapping theorem could land in `01-aad-core/`; ELI-specific structure remains in `04-eli/`.
+**Reading**: the wrapping theorem covers items 1, 2, 3 (after auxilia → goal-blind realization). The remaining items are *additional structure* that distinguishes ELIs from generic Class-1-coerced systems. This distinction matters for project architecture: the wrapping theorem could land in `01-aat-core/`; ELI-specific structure remains in `04-eli/`.
 
 ## 5. What this clarifies about the Parts I/II ↔ Parts III/IV relationship
 
@@ -85,7 +85,7 @@ The honest framing is even better: most of what Parts III/IV add (sovereignty, a
 
 Recommendations for landing this in segments. These are tentative and depend on the verdict (`99-verdict.md`).
 
-### 6.1 In `01-aad-core/`
+### 6.1 In `01-aat-core/`
 
 **New segment**: `der-class-coercion-via-wrapping.md` (or `result-class-coercion-via-wrapping.md`). Statement and proof of Theorem 1. Sub-results for the approximate version (Theorem 2 with leakage). Conditions C1–C3 explicit.
 

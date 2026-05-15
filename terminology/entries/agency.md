@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [agent_classes, structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/scope-agency.md
-first_asf_mention: 01-aad-core/src/scope-agency.md
+primary_source: 01-aat-core/src/scope-agency.md
+first_asf_mention: 01-aat-core/src/scope-agency.md
 see_also: [adaptive-system, actuated-agent, composite-agent, directed-separation]
 aliases: []
 do_not_confuse: [adaptive-system]
@@ -35,4 +35,4 @@ Every downstream segment that asserts "the agent can act" depends on this scope.
 purposeful-agent machinery ($O_t$, $\Sigma_t$, orient cascade) and the composition theory are
 non-vacuous only within agency scope.
 
-Scope defined in [`#scope-agency`](../../01-aad-core/src/scope-agency.md).
+Scope defined in [`#scope-agency`](../../01-aat-core/src/scope-agency.md).

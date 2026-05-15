@@ -70,7 +70,7 @@ This spike successfully bridges social choice theory and AAD's agent interaction
 *Fix:* This critique reveals a massive, hidden insight. To align heterogeneous AI agents, they *must* have a transferable currency (e.g., trading compute tokens, API budget, or context window space). Without a computable currency for VCG side-payments, Gibbard-Satterthwaite holds and deception is mathematically guaranteed. This transforms the spike from a depressing impossibility result into a prescriptive engineering requirement for multi-agent operating systems: they must have a native token economy to be safe.
 
 **Promotion Plan:**
-- Rather than promoting this as a pure "No-Go" theorem in `#disc-identifiability-floor`, it should be promoted to `01-aad-core/src/deriv-mechanism-design-alignment.md` (or similar).
+- Rather than promoting this as a pure "No-Go" theorem in `#disc-identifiability-floor`, it should be promoted to `01-aat-core/src/deriv-mechanism-design-alignment.md` (or similar).
 - The segment should state the Gibbard-Satterthwaite boundary, and then derive the necessity of VCG mechanisms and Transferable Utility (side-payments) as the mathematically required structured repair.
 - This will open up a completely new axis of research in AAD regarding inter-agent economics and the thermodynamics of compute-token transfer.
 

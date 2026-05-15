@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/deriv-variational-sector-condition.md
-first_asf_mention: 01-aad-core/src/deriv-variational-sector-condition.md
+primary_source: 01-aat-core/src/deriv-variational-sector-condition.md
+first_asf_mention: 01-aat-core/src/deriv-variational-sector-condition.md
 see_also: [sector-condition, adaptive-system, adaptive-gain-dynamics]
 aliases: ["ε-fidelity sector condition"]
 do_not_confuse: [sector-condition]
@@ -39,4 +39,4 @@ sub-scope $\alpha$ (exact, via Khan & Lin 2017). Uncontrolled-$\varepsilon$ agen
 The $\varepsilon$-$\alpha'$ tradeoff: large $\varepsilon$ means cheap-but-persistently-weak;
 small $\varepsilon$ means expensive-but-persistently-sharp.
 
-Derived in [`#deriv-variational-sector-condition`](../../01-aad-core/src/deriv-variational-sector-condition.md).
+Derived in [`#deriv-variational-sector-condition`](../../01-aat-core/src/deriv-variational-sector-condition.md).

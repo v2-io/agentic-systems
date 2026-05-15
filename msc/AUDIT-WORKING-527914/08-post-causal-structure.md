@@ -1,6 +1,6 @@
 # 08 - post-causal-structure
 
-Segment: `01-aad-core/src/post-causal-structure.md` (`#post-causal-structure`)
+Segment: `01-aat-core/src/post-causal-structure.md` (`#post-causal-structure`)
 
 Dependencies: `def-agent-environment`, `def-chronica`, both read. Dependency-order check passes.
 

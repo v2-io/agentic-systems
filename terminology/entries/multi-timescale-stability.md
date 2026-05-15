@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/sketch-multi-timescale-stability.md
-first_asf_mention: 01-aad-core/src/sketch-multi-timescale-stability.md
+primary_source: 01-aat-core/src/sketch-multi-timescale-stability.md
+first_asf_mention: 01-aat-core/src/sketch-multi-timescale-stability.md
 see_also: [adaptive-gain-dynamics, sector-condition, adaptive-system, structural-persistence]
 aliases: []
 do_not_confuse: []
@@ -38,4 +38,4 @@ separated, regardless of how many levels exist.
 Khalil); the application to AAD's nested adaptive levels is new but follows the pattern.
 Formalizing it requires specifying $G^{(k)}$ for structural adaptation levels — an open problem.
 
-Sketched in [`#sketch-multi-timescale-stability`](../../01-aad-core/src/sketch-multi-timescale-stability.md).
+Sketched in [`#sketch-multi-timescale-stability`](../../01-aat-core/src/sketch-multi-timescale-stability.md).

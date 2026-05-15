@@ -35,7 +35,7 @@ A useful test: would the rationale read fairly if an R2 voter who *disagreed wit
 - `msc/naming/master-list-curated.json` — the data you're filling. Each `current` → `candidates[]` → `votes[]`.
 - `segment_link` per current (where populated) — go read the segment for technical context. The exploration team often referred to segment-internal commitments that won't make sense without the segment in front of you.
 - `msc/naming/naming-votes/` — the 19 original voting files from the exploration team. Voters often included broader context in surrounding rationale that didn't make it into a single candidate's `notes`. Look there when a vote feels under-explained.
-- `LEXICON.md`, `NOTATION.md`, `CLAUDE.md`, the segment files in `01-aad-core/src/`, `02-tst-core/src/`, etc. — the framework's own canonical references.
+- `LEXICON.md`, `NOTATION.md`, `CLAUDE.md`, the segment files in `01-aat-core/src/`, `02-tst-core/src/`, etc. — the framework's own canonical references.
 - `doc/naming-principles.md` — the principles the exploration team was working from.
 
 If a voter's intent is unclear, read more. The exploration team was writing in framework-internal vocabulary; you'll want that vocabulary in your hands.

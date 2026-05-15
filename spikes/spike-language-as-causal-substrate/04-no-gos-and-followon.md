@@ -104,7 +104,7 @@ The two-pass correction trail is methodologically worth preserving. Both errors 
 1. A formal definition of $I_{\text{causal}}$ on discourse-DAG structure.
 2. A theorem connecting that quantity to algorithmic-information asymmetry.
 
-Neither is in the standard literature. The closest existing machinery is directed information (Massey 1990) and the project's own [`#deriv-causal-ib-lmi`](../../01-aad-core/src/deriv-causal-ib-lmi.md). **Bridging these to discourse-DAG causal content is real follow-on work** — non-trivial but tractable.
+Neither is in the standard literature. The closest existing machinery is directed information (Massey 1990) and the project's own [`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md). **Bridging these to discourse-DAG causal content is real follow-on work** — non-trivial but tractable.
 
 ### C4 — causal-IB consequence
 
@@ -120,7 +120,7 @@ Neither is in the standard literature. The closest existing machinery is directe
 
 ### Immediate (this spike's commits, before parking)
 
-1. **Decide promotion target for Theorem 1.** Candidate slug `#deriv-pearl-level2-language-encoding` or `#deriv-discourse-pearl-encoding`, appendix-grade under [`01-aad-core/src/`](../../01-aad-core/src/). Joseph's call. **Until promoted, the result is spike-resident.**
+1. **Decide promotion target for Theorem 1.** Candidate slug `#deriv-pearl-level2-language-encoding` or `#deriv-discourse-pearl-encoding`, appendix-grade under [`01-aat-core/src/`](../../01-aat-core/src/). Joseph's call. **Until promoted, the result is spike-resident.**
 
 2. **Cross-reference the result from [`msc/llm-causal-access-note.md`](../../msc/llm-causal-access-note.md)** — that note's Response 2 currently says "plausible empirical claim — but quantifying how much genuine causal structure survives compression is an open empirical question." With Theorem 1, the response can be lifted: the encoded content is *structurally there* by the discourse-act argument; the empirical-deployment question is the right form of the residual open question.
 

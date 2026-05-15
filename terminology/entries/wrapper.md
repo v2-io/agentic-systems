@@ -8,8 +8,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts, composition]
 source_type: asf
-primary_source: 01-aad-core/src/der-class-coercion-via-wrapping.md
-first_asf_mention: 01-aad-core/src/der-class-coercion-via-wrapping.md
+primary_source: 01-aat-core/src/der-class-coercion-via-wrapping.md
+first_asf_mention: 01-aat-core/src/der-class-coercion-via-wrapping.md
 see_also: [class-coercion, wrapping-regime, directed-separation]
 aliases: ["wrapping", "wrapping construction"]
 do_not_confuse: []
@@ -19,4 +19,4 @@ The structural object that performs class coercion (see [`class-coercion`](class
 
 Wrappers can be more elaborate than the bare-minimum form — multi-component typed $M_W$ (e.g., PROPRIUM's VERA / MEMORATA / CONSORTIA / PERCEPTA / CHRONICA), multi-layered typed $G_W$ (AXIOMATA / OPERATA / PRAXES), substrate-heterogeneous query handling (auxilia hierarchy at varying cost-tiers per [`#def-auxilia-hierarchy`](../../04-eli/src/def-auxilia-hierarchy.md)). The bare-minimum form is what the class-coercion theorem requires; the elaborations are domain-specific structure.
 
-Defined and analyzed in [`#der-class-coercion-via-wrapping`](../../01-aad-core/src/der-class-coercion-via-wrapping.md).
+Defined and analyzed in [`#der-class-coercion-via-wrapping`](../../01-aat-core/src/der-class-coercion-via-wrapping.md).

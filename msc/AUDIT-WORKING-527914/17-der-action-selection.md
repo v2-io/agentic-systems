@@ -1,6 +1,6 @@
 # 17 - der-action-selection
 
-Segment: `01-aad-core/src/der-action-selection.md` (`#der-action-selection`)
+Segment: `01-aat-core/src/der-action-selection.md` (`#der-action-selection`)
 
 Dependencies: `form-agent-model`, `der-recursive-update`, both read. Dependency-order check passes.
 

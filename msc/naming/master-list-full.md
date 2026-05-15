@@ -16,7 +16,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-control-regret` (Section II; depends on `#def-value-object`, `#def-satisfaction-gap`). First formal definition; Control regret measures the gap between the best available one-step policy improvement and the agent's current policy, under the current model and horizon.
-**Segment link:** [01-aad-core/src/def-control-regret.md](../01-aad-core/src/def-control-regret.md)
+**Segment link:** [01-aat-core/src/def-control-regret.md](../01-aat-core/src/def-control-regret.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -70,7 +70,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-satisfaction-gap` (Section II; depends on `#def-value-object`, `#form-objective-functional`). First formal definition; The satisfaction gap measures the distance between what the objective requires and what the best available one-step policy improvement can deliver, under the current model and horizon.
-**Segment link:** [01-aad-core/src/def-satisfaction-gap.md](../01-aad-core/src/def-satisfaction-gap.md)
+**Segment link:** [01-aat-core/src/def-satisfaction-gap.md](../01-aat-core/src/def-satisfaction-gap.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -123,7 +123,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#der-orient-cascade` (Section II; deep dependency cone (12 upstream segments incl. `#der-directed-separation`, `#def-mismatch-signal`)). First formal derivation; For actuated agents, epistrophe (the corrective phase of the cycle) expands into a multi-step cascade.
-**Segment link:** [01-aad-core/src/der-orient-cascade.md](../01-aad-core/src/der-orient-cascade.md)
+**Segment link:** [01-aat-core/src/der-orient-cascade.md](../01-aat-core/src/der-orient-cascade.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -240,7 +240,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#der-directed-separation` (Section II; depends on `#form-complete-agent-state`, `#der-recursive-update`, `#scope-agency`). First formal derivation; The epistemic update function $f_M$ is goal-blind: it processes incoming events without reference to the agent's objectives or strategy.
-**Segment link:** [01-aad-core/src/der-directed-separation.md](../01-aad-core/src/der-directed-separation.md)
+**Segment link:** [01-aat-core/src/der-directed-separation.md](../01-aat-core/src/der-directed-separation.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -306,7 +306,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#disc-identifiability-floor` (Appendix A; depends on `#der-causal-insufficiency-detection`, `#deriv-strategic-dynamics`, `#der-causal-hierarchy-requirement` (+1 more)). Meta-discussion segment; AAD has derived a class of structural impossibility results — *floors below which* identification or detection is impossible from limited information.
-**Segment link:** [01-aad-core/src/disc-identifiability-floor.md](../01-aad-core/src/disc-identifiability-floor.md)
+**Segment link:** [01-aat-core/src/disc-identifiability-floor.md](../01-aat-core/src/disc-identifiability-floor.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -487,7 +487,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-information-bottleneck` (Section I; depends on `#form-agent-model`, `#def-action-transition`). Formal model first introduced; Optimal model compression balances retained history against predictive power; the information bottleneck objective provides a principled framework for understanding this trade-off.
-**Segment link:** [01-aad-core/src/form-information-bottleneck.md](../01-aad-core/src/form-information-bottleneck.md)
+**Segment link:** [01-aat-core/src/form-information-bottleneck.md](../01-aat-core/src/form-information-bottleneck.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -531,7 +531,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-chronica` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-action-transition`). First formal definition; The interaction history $\mathcal C_t$ is the complete, singular causal record of the agent's observations and actions. Everything the agent can ever know must be constructed from this sequence.
-**Segment link:** [01-aad-core/src/def-chronica.md](../01-aad-core/src/def-chronica.md)
+**Segment link:** [01-aat-core/src/def-chronica.md](../01-aat-core/src/def-chronica.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -585,7 +585,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-strategy-dag` (Section II; depends on `#scope-and-or`, `#post-causal-structure`, `#def-pearl-causal-hierarchy` (+2 more)). First formal definition; The strategy $\Sigma_t$ is a directed acyclic graph with probabilistic edges and AND/OR combination semantics.
-**Segment link:** [01-aad-core/src/def-strategy-dag.md](../01-aad-core/src/def-strategy-dag.md)
+**Segment link:** [01-aat-core/src/def-strategy-dag.md](../01-aat-core/src/def-strategy-dag.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -622,7 +622,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-chain-confidence-decay` (Section II; depends on `#def-strategy-dimension`). First formal derivation; Confidence in a multi-step strategy decays monotonically with depth.
-**Segment link:** [01-aad-core/src/der-chain-confidence-decay.md](../01-aad-core/src/der-chain-confidence-decay.md)
+**Segment link:** [01-aat-core/src/der-chain-confidence-decay.md](../01-aat-core/src/der-chain-confidence-decay.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -666,7 +666,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#result-persistence-condition` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#result-sector-condition-stability` (+1 more)). First formal result; An agent persists when two independent conditions hold: the correction machinery can contain mismatch within its operating region (*structural persistence*), and the resulting steady-state mismatch is….
-**Segment link:** [01-aad-core/src/result-persistence-condition.md](../01-aad-core/src/result-persistence-condition.md)
+**Segment link:** [01-aat-core/src/result-persistence-condition.md](../01-aat-core/src/result-persistence-condition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -771,7 +771,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#hyp-symbiogenic-composition` (Section III; depends on `#scope-composite-agent`, `#form-objective-functional`, `#def-strategy-dimension` (+1 more)). Hypothesis stated; Symbiogenesis is an asymmetric composition mechanism in which one agent (the *host*) integrates another (the *endosymbiont*) as a specialized sub-component, with the endosymbiont's objective gradually….
-**Segment link:** [01-aad-core/src/hyp-symbiogenic-composition.md](../01-aad-core/src/hyp-symbiogenic-composition.md)
+**Segment link:** [01-aat-core/src/hyp-symbiogenic-composition.md](../01-aat-core/src/hyp-symbiogenic-composition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -823,7 +823,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#disc-additive-coordinate-forcing` (Appendix A; depends on `#der-chain-confidence-decay`, `#deriv-strategy-cost-regret-bound`, `#deriv-edge-update-natural-parameter`). Meta-discussion segment; AAD carries a family of structurally connected uniqueness results in which a coordinate is **forced by a uniqueness theorem operating on an independently-motivated AAD-internal axiom**.
-**Segment link:** [01-aad-core/src/disc-additive-coordinate-forcing.md](../01-aad-core/src/disc-additive-coordinate-forcing.md)
+**Segment link:** [01-aat-core/src/disc-additive-coordinate-forcing.md](../01-aat-core/src/disc-additive-coordinate-forcing.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -971,7 +971,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-sector-persistence-template` (Appendix A; depends on `#deriv-sector-condition`). First formal result; Any state variable evolving under bounded-correction dynamics with bounded disturbance admits the same Lyapunov persistence argument.
-**Segment link:** [01-aad-core/src/result-sector-persistence-template.md](../01-aad-core/src/result-sector-persistence-template.md)
+**Segment link:** [01-aat-core/src/result-sector-persistence-template.md](../01-aat-core/src/result-sector-persistence-template.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1055,7 +1055,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-adversarial-destabilization` (Section III; depends on `#result-sector-condition-stability`, `#deriv-sector-condition`, `#result-sector-persistence-template` (+1 more)). First formal derivation; When two agents are coupled such that one's praxis contributes to the other's disturbance rate, the faster agent can generate aporia in the target faster than the target's epistrophe can resolve it —….
-**Segment link:** [01-aad-core/src/der-adversarial-destabilization.md](../01-aad-core/src/der-adversarial-destabilization.md)
+**Segment link:** [01-aat-core/src/der-adversarial-destabilization.md](../01-aat-core/src/der-adversarial-destabilization.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1087,7 +1087,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-agent-spectrum` (Section II; depends on `#def-agent-environment`, `#form-agent-model`). First formal definition; Two independent dimensions — model richness and objective richness — create a spectrum from reactive systems through purposeful agents. These are regions of a continuum, not discrete categories.
-**Segment link:** [01-aad-core/src/def-agent-spectrum.md](../01-aad-core/src/def-agent-spectrum.md)
+**Segment link:** [01-aat-core/src/def-agent-spectrum.md](../01-aat-core/src/def-agent-spectrum.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1247,7 +1247,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#disc-separability-pattern` (Appendix A; deep dependency cone (8 upstream segments incl. `#def-strategy-dag`, `#def-value-object`)). Meta-discussion segment; AAD consistently runs a three-part epistemic posture across state spaces that admit no tractable exact treatment in general: name the **separable core** where identification is clean, name the….
-**Segment link:** [01-aad-core/src/disc-separability-pattern.md](../01-aad-core/src/disc-separability-pattern.md)
+**Segment link:** [01-aat-core/src/disc-separability-pattern.md](../01-aat-core/src/disc-separability-pattern.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1343,7 +1343,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-shared-intent` (Section III; depends on `#def-unity-dimensions`, `#form-information-bottleneck`, `#form-objective-functional`). First formal definition; When sub-agents within a composite must coordinate, they face a communication problem: transmitting the full objective $O_t$ and strategy $\Sigma_t$ is expensive (high bandwidth, high latency), but….
-**Segment link:** [01-aad-core/src/def-shared-intent.md](../01-aad-core/src/def-shared-intent.md)
+**Segment link:** [01-aat-core/src/def-shared-intent.md](../01-aat-core/src/def-shared-intent.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1444,7 +1444,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-adaptive-tempo` (Section I; depends on `#emp-update-gain`, `#form-event-driven-dynamics`). First formal definition; The effective rate at which an agent acquires useful information from its environment — the product of observation frequency and update quality across all channels.
-**Segment link:** [01-aad-core/src/def-adaptive-tempo.md](../01-aad-core/src/def-adaptive-tempo.md)
+**Segment link:** [01-aat-core/src/def-adaptive-tempo.md](../01-aat-core/src/def-adaptive-tempo.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1500,7 +1500,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-agent-opacity` (Section III; deep dependency cone (7 upstream segments incl. `#scope-agent-identity`, `#der-interaction-channel-classification`)). First formal derivation; Alongside AAD's heavily formalized *forward* observation quality (how well the agent sees the world — observation ambiguity, model-class fitness, identifiability floor on what the agent can infer),….
-**Segment link:** [01-aad-core/src/der-agent-opacity.md](../01-aad-core/src/der-agent-opacity.md)
+**Segment link:** [01-aat-core/src/der-agent-opacity.md](../01-aat-core/src/der-agent-opacity.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1583,7 +1583,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-causal-information-yield` (Section I; depends on `#def-pearl-causal-hierarchy`, `#der-action-selection`, `#def-mismatch-signal`). First formal definition; Actions don't merely select among outcomes — they produce characteristically different outcome distributions depending on the causal structure.
-**Segment link:** [01-aad-core/src/def-causal-information-yield.md](../01-aad-core/src/def-causal-information-yield.md)
+**Segment link:** [01-aat-core/src/def-causal-information-yield.md](../01-aat-core/src/def-causal-information-yield.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1636,7 +1636,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#form-composition-closure` (Section III; deep dependency cone (9 upstream segments incl. `#post-composition-consistency`, `#scope-composite-agent`)). Formal model first introduced; We define a group of interacting agents as a valid composite macro-agent when its closed-loop dynamics approximately commute with coarse-graining — that is, when projecting micro-states to….
-**Segment link:** [01-aad-core/src/form-composition-closure.md](../01-aad-core/src/form-composition-closure.md)
+**Segment link:** [01-aat-core/src/form-composition-closure.md](../01-aat-core/src/form-composition-closure.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1697,7 +1697,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#hyp-auftragstaktik-principle` (Section III; depends on `#def-shared-intent`, `#def-unity-dimensions`, `#def-adaptive-tempo`). Hypothesis stated; For a composite agent with limited communication bandwidth, the optimal allocation prioritizes sharing objectives over strategies over models.
-**Segment link:** [01-aad-core/src/hyp-auftragstaktik-principle.md](../01-aad-core/src/hyp-auftragstaktik-principle.md)
+**Segment link:** [01-aat-core/src/hyp-auftragstaktik-principle.md](../01-aat-core/src/hyp-auftragstaktik-principle.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1792,7 +1792,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#hyp-communication-gain` (Section III; depends on `#emp-update-gain`, `#scope-multi-agent`). Hypothesis stated; When an agent incorporates information from another agent (rather than from direct observation), the optimal update gain extends the uncertainty ratio with additional terms for source quality and….
-**Segment link:** [01-aad-core/src/hyp-communication-gain.md](../01-aad-core/src/hyp-communication-gain.md)
+**Segment link:** [01-aat-core/src/hyp-communication-gain.md](../01-aat-core/src/hyp-communication-gain.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1886,7 +1886,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-contraction-template` (Appendix A; depends on `#result-sector-persistence-template`, `#deriv-sector-condition`, `#der-gain-sector-bridge` (+3 more)). First formal result; `#result-sector-persistence-template` states AAD's persistence arguments with a Euclidean sector condition (T2) matched to a quadratic Lyapunov in Euclidean norm.
-**Segment link:** [01-aad-core/src/result-contraction-template.md](../01-aad-core/src/result-contraction-template.md)
+**Segment link:** [01-aat-core/src/result-contraction-template.md](../01-aat-core/src/result-contraction-template.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1925,7 +1925,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-deliberation-cost` (Section I; depends on `#der-action-selection`, `#emp-update-gain`, `#def-adaptive-tempo` (+1 more)). First formal derivation; Explicit deliberation improves action quality by using the model for internal simulation before acting — pausing praxis to improve upcoming epistrophe.
-**Segment link:** [01-aad-core/src/der-deliberation-cost.md](../01-aad-core/src/der-deliberation-cost.md)
+**Segment link:** [01-aat-core/src/der-deliberation-cost.md](../01-aat-core/src/der-deliberation-cost.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -1993,7 +1993,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#der-observability-dominance` (Section II; depends on `#def-strategy-dag`, `#emp-update-gain`). First formal derivation; Unobservable strategy edges cannot be updated — the gain principle drives their update rate to zero.
-**Segment link:** [01-aad-core/src/der-observability-dominance.md](../01-aad-core/src/der-observability-dominance.md)
+**Segment link:** [01-aat-core/src/der-observability-dominance.md](../01-aat-core/src/der-observability-dominance.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2036,7 +2036,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-pearl-causal-hierarchy` (Section I; depends on `#post-causal-structure`, `#scope-agency`). First formal definition; Three levels of causal reasoning emerge from the causal structure of the feedback loop: association ("what if I observe?"), intervention ("what if I do?"), and counterfactual ("what if I had done….
-**Segment link:** [01-aad-core/src/def-pearl-causal-hierarchy.md](../01-aad-core/src/def-pearl-causal-hierarchy.md)
+**Segment link:** [01-aat-core/src/def-pearl-causal-hierarchy.md](../01-aat-core/src/def-pearl-causal-hierarchy.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2089,7 +2089,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-team-persistence` (Section III; depends on `#result-persistence-condition`, `#result-sector-condition-stability`, `#result-sector-persistence-template` (+2 more)). First formal derivation; Teams persist where individuals cannot through two physically distinct cooperative mechanisms: communication (allies share observations that improve correction) and action (allies act in the shared….
-**Segment link:** [01-aad-core/src/der-team-persistence.md](../01-aad-core/src/der-team-persistence.md)
+**Segment link:** [01-aat-core/src/der-team-persistence.md](../01-aat-core/src/der-team-persistence.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2120,7 +2120,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#disc-credit-assignment-boundary` (Section II; deep dependency cone (7 upstream segments incl. `#def-strategy-dag`, `#hyp-edge-update-via-gain`)). Meta-discussion segment; The strategy-revision loop requires assigning credit for observed outcomes to specific edges in the strategy DAG — decomposing "the plan partially worked" into "step 3 failed, step 5 was irrelevant,….
-**Segment link:** [01-aad-core/src/disc-credit-assignment-boundary.md](../01-aad-core/src/disc-credit-assignment-boundary.md)
+**Segment link:** [01-aat-core/src/disc-credit-assignment-boundary.md](../01-aat-core/src/disc-credit-assignment-boundary.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2211,7 +2211,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#disc-approximation-tiering` (Appendix A; depends on `#def-strategy-dag`, `#def-value-object`, `#form-composition-closure`). Meta-discussion segment; AAD uses a recurring meta-pattern for handling intractability: when a problem admits no tractable exact treatment in general, introduce a tiered hierarchy of approximations with proved monotonicity….
-**Segment link:** [01-aad-core/src/disc-approximation-tiering.md](../01-aad-core/src/disc-approximation-tiering.md)
+**Segment link:** [01-aat-core/src/disc-approximation-tiering.md](../01-aat-core/src/disc-approximation-tiering.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2439,7 +2439,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-recursive-update` (Section I; depends on `#form-agent-model`, `#form-event-driven-dynamics`, `#deriv-recursive-update`). First formal derivation; Agent state updates (epistrophe — the corrective turning toward reality) must be recursive: the new model state is a function of the previous model state and the incoming event, not of the full….
-**Segment link:** [01-aad-core/src/der-recursive-update.md](../01-aad-core/src/der-recursive-update.md)
+**Segment link:** [01-aat-core/src/der-recursive-update.md](../01-aat-core/src/der-recursive-update.md)
 **Manual curation notes:** Concept-name vote → der- (result-statement) segment, not deriv- (appendix derivation). der-recursive-update is the concept being named; deriv-recursive-update is the proof.
 
 | candidate | weight | category mix |
@@ -2479,7 +2479,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-agent-identity` (Section I; depends on `#def-chronica`, `#def-model-sufficiency`). Scope-narrowing first encounter; AAD applies to agents instantiated on singular causal trajectories.
-**Segment link:** [01-aad-core/src/scope-agent-identity.md](../01-aad-core/src/scope-agent-identity.md)
+**Segment link:** [01-aat-core/src/scope-agent-identity.md](../01-aat-core/src/scope-agent-identity.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2667,7 +2667,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-consolidation-dynamics` (Section II; deep dependency cone (9 upstream segments incl. `#der-recursive-update`, `#deriv-recursive-update`)). Formal model first introduced; Consolidation is a regime of the between-event dynamics $g_M$ of #der-recursive-update in which the agent applies Markov updates driven by replayed or internally-generated pseudo-events, with….
-**Segment link:** [01-aad-core/src/form-consolidation-dynamics.md](../01-aad-core/src/form-consolidation-dynamics.md)
+**Segment link:** [01-aat-core/src/form-consolidation-dynamics.md](../01-aat-core/src/form-consolidation-dynamics.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2708,7 +2708,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-critical-mass-composition` (Appendix A; deep dependency cone (8 upstream segments incl. `#form-composition-closure`, `#scope-composite-agent`)). First formal derivation; The composite sector constant $\alpha_c$ is derived — not merely bounded from below — for the symmetric-matched-Tier-1 two-agent case, yielding a closed-form critical-mass inequality in which the sign….
-**Segment link:** [01-aad-core/src/deriv-critical-mass-composition.md](../01-aad-core/src/deriv-critical-mass-composition.md)
+**Segment link:** [01-aat-core/src/deriv-critical-mass-composition.md](../01-aat-core/src/deriv-critical-mass-composition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2746,7 +2746,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#disc-exploit-explore-deliberate` (Section II; depends on `#disc-ciy-unified-objective`, `#der-deliberation-cost`, `#norm-explicit-strategy-condition` (+2 more)). Meta-discussion segment; At each decision point, an actuated agent with explicit strategy $\Sigma_t$ faces a three-way allocation of its finite cycle budget across exploit (take the currently-best action), explore (take an….
-**Segment link:** [01-aad-core/src/disc-exploit-explore-deliberate.md](../01-aad-core/src/disc-exploit-explore-deliberate.md)
+**Segment link:** [01-aat-core/src/disc-exploit-explore-deliberate.md](../01-aat-core/src/disc-exploit-explore-deliberate.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2803,7 +2803,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-gain-sector-bridge` (Section I; depends on `#emp-update-gain`, `#def-mismatch-signal`, `#deriv-sector-condition` (+1 more)). First formal derivation; The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at….
-**Segment link:** [01-aad-core/src/der-gain-sector-bridge.md](../01-aad-core/src/der-gain-sector-bridge.md)
+**Segment link:** [01-aat-core/src/der-gain-sector-bridge.md](../01-aat-core/src/der-gain-sector-bridge.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2860,7 +2860,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-loop-interventional-access` (Section II; depends on `#der-causal-hierarchy-requirement`, `#der-recursive-update`, `#post-causal-structure` (+1 more)). First formal derivation; An agent in the feedback loop generates interventional data by construction: the agent's action $a_t$ causally precedes the next observation $o_{t+1}$, and the mismatch conditioned on $a_t$ carries….
-**Segment link:** [01-aad-core/src/der-loop-interventional-access.md](../01-aad-core/src/der-loop-interventional-access.md)
+**Segment link:** [01-aat-core/src/der-loop-interventional-access.md](../01-aat-core/src/der-loop-interventional-access.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -2989,7 +2989,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-adversarial-tempo-advantage` (Section III; depends on `#hyp-mismatch-dynamics`, `#der-adversarial-destabilization`, `#result-persistence-condition`). First formal result; Under adversarial coupling where one agent's actions contribute to the other's disturbance rate, the steady-state mismatch ratio scales superlinearly with the tempo ratio.
-**Segment link:** [01-aad-core/src/result-adversarial-tempo-advantage.md](../01-aad-core/src/result-adversarial-tempo-advantage.md)
+**Segment link:** [01-aat-core/src/result-adversarial-tempo-advantage.md](../01-aat-core/src/result-adversarial-tempo-advantage.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3066,7 +3066,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-complete-agent-state` (Section II; depends on `#form-agent-model`, `#scope-agency`, `#der-recursive-update`). Formal model first introduced; To treat agents with purpose, the internal state lifts from $M_t$ alone to $X_t = (M_t, G_t)$, separating epistemic content (beliefs about reality) from purposeful content (what the agent wants and….
-**Segment link:** [01-aad-core/src/form-complete-agent-state.md](../01-aad-core/src/form-complete-agent-state.md)
+**Segment link:** [01-aat-core/src/form-complete-agent-state.md](../01-aat-core/src/form-complete-agent-state.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3106,7 +3106,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-detection-latency` (Appendix A; depends on `#deriv-edge-update-natural-parameter`, `#disc-credit-assignment-boundary`, `#schema-strategy-persistence` (+1 more)). First formal derivation; For a Beta-Bernoulli strategy-edge agent without forgetting, the expected number of cycles required to detect a within-class regime change of observable footprint $\varepsilon$ scales as….
-**Segment link:** [01-aad-core/src/deriv-detection-latency.md](../01-aad-core/src/deriv-detection-latency.md)
+**Segment link:** [01-aat-core/src/deriv-detection-latency.md](../01-aat-core/src/deriv-detection-latency.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3182,7 +3182,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#post-composition-consistency` (Section I; depends on `#scope-agency`). Foundational postulate; AAD's predictions must be compatible across levels of description.
-**Segment link:** [01-aad-core/src/post-composition-consistency.md](../01-aad-core/src/post-composition-consistency.md)
+**Segment link:** [01-aat-core/src/post-composition-consistency.md](../01-aat-core/src/post-composition-consistency.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3605,7 +3605,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-persistence-cost` (Appendix A; deep dependency cone (8 upstream segments incl. `#result-persistence-condition`, `#result-sector-condition-stability`)). First formal derivation; AAD's persistence machinery establishes that under the sector condition, mismatch stays bounded. It does not quantify the *sustained rate of effort* an agent must expend to hold that bound.
-**Segment link:** [01-aad-core/src/deriv-persistence-cost.md](../01-aad-core/src/deriv-persistence-cost.md)
+**Segment link:** [01-aat-core/src/deriv-persistence-cost.md](../01-aat-core/src/deriv-persistence-cost.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3634,7 +3634,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-strategic-calibration` (Section II; depends on `#def-strategy-dag`, `#def-value-object`). First formal definition; The strategic calibration residual measures whether the strategy's causal model is correct: are the edges in $\Sigma_t$ accurate predictors of how much value each step actually produces?.
-**Segment link:** [01-aad-core/src/def-strategic-calibration.md](../01-aad-core/src/def-strategic-calibration.md)
+**Segment link:** [01-aat-core/src/def-strategic-calibration.md](../01-aat-core/src/def-strategic-calibration.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3685,7 +3685,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-strategic-composition` (Section III; deep dependency cone (9 upstream segments incl. `#post-composition-consistency`, `#scope-composite-agent`)). First formal derivation; When two or more AAD agents interact through a shared environment with **partially-opposing objectives** $\{O_t^{(i)}\}$, the composition-level question is not "does the trajectory contract to zero….
-**Segment link:** [01-aad-core/src/deriv-strategic-composition.md](../01-aad-core/src/deriv-strategic-composition.md)
+**Segment link:** [01-aat-core/src/deriv-strategic-composition.md](../01-aat-core/src/deriv-strategic-composition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3743,7 +3743,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-strategic-tempo` (Section II; depends on `#def-adaptive-tempo`, `#hyp-edge-update-via-gain`, `#def-strategy-dag` (+2 more)). First formal definition; The effective rate at which an agent acquires useful revisions to its strategy $\Sigma_t$ --- the sum of per-edge correction capacities across the strategy DAG, weighted by each edge's causal….
-**Segment link:** [01-aad-core/src/def-strategic-tempo.md](../01-aad-core/src/def-strategic-tempo.md)
+**Segment link:** [01-aat-core/src/def-strategic-tempo.md](../01-aat-core/src/def-strategic-tempo.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3889,7 +3889,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-agent-environment` (Section I; no upstream dependencies). First formal definition; An agent is an entity that receives observations from an environment, maintains internal state, and produces actions that affect the environment.
-**Segment link:** [01-aad-core/src/def-agent-environment.md](../01-aad-core/src/def-agent-environment.md)
+**Segment link:** [01-aat-core/src/def-agent-environment.md](../01-aat-core/src/def-agent-environment.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -3963,7 +3963,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#disc-independence-audit` (Appendix A; depends on `#der-directed-separation`, `#def-strategy-dag`, `#def-adaptive-tempo` (+3 more)). Meta-discussion segment; AAD's results depend on a recurring modeling move: treat some quantity as independent of another to obtain tractable mathematics, then identify the failure regime where independence breaks and specify….
-**Segment link:** [01-aad-core/src/disc-independence-audit.md](../01-aad-core/src/disc-independence-audit.md)
+**Segment link:** [01-aat-core/src/disc-independence-audit.md](../01-aat-core/src/disc-independence-audit.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4001,7 +4001,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-mismatch-signal` (Section I; depends on `#form-agent-model`, `#def-observation-function`, `#def-action-transition`). First formal definition; The discrepancy between the model's prediction and the actual observation — the formal expression of *aporia* (productive perplexity).
-**Segment link:** [01-aad-core/src/def-mismatch-signal.md](../01-aad-core/src/def-mismatch-signal.md)
+**Segment link:** [01-aat-core/src/def-mismatch-signal.md](../01-aat-core/src/def-mismatch-signal.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4046,7 +4046,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-model-sufficiency` (Section I; depends on `#form-agent-model`, `#form-information-bottleneck`, `#def-action-transition`). First formal definition; The fraction of predictive information the model retains relative to the full interaction history; $S = 1$ means the model is a sufficient statistic for prediction, $S \lt 1$ means predictive….
-**Segment link:** [01-aad-core/src/def-model-sufficiency.md](../01-aad-core/src/def-model-sufficiency.md)
+**Segment link:** [01-aat-core/src/def-model-sufficiency.md](../01-aat-core/src/def-model-sufficiency.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4124,7 +4124,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#deriv-sector-condition` (Appendix A; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`). First formal derivation; Complete Lyapunov derivations of bounded mismatch and adaptive reserve for the sector-condition results stated in #result-sector-condition-stability.
-**Segment link:** [01-aad-core/src/deriv-sector-condition.md](../01-aad-core/src/deriv-sector-condition.md)
+**Segment link:** [01-aat-core/src/deriv-sector-condition.md](../01-aat-core/src/deriv-sector-condition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4193,7 +4193,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#der-causal-insufficiency-detection` (Section II; depends on `#result-structural-adaptation-necessity`, `#def-strategy-dag`, `#der-loop-interventional-access` (+3 more)). First formal derivation; An agent operating at L0 of the Correlation Hierarchy ( #def-strategy-dag) faces a structural impossibility: under purely on-policy execution, no detection mechanism can distinguish an L0-insufficient….
-**Segment link:** [01-aad-core/src/der-causal-insufficiency-detection.md](../01-aad-core/src/der-causal-insufficiency-detection.md)
+**Segment link:** [01-aat-core/src/der-causal-insufficiency-detection.md](../01-aat-core/src/der-causal-insufficiency-detection.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4332,7 +4332,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-mismatch-decomposition` (Section I; depends on `#def-mismatch-signal`, `#def-observation-function`, `#def-action-transition` (+2 more)). First formal result; Expected squared mismatch decomposes into reducible model error and irreducible observation noise. The model can improve the first term; the second is a property of the channel.
-**Segment link:** [01-aad-core/src/result-mismatch-decomposition.md](../01-aad-core/src/result-mismatch-decomposition.md)
+**Segment link:** [01-aat-core/src/result-mismatch-decomposition.md](../01-aat-core/src/result-mismatch-decomposition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4370,7 +4370,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-model-class-fitness` (Section I; depends on `#def-model-sufficiency`). First formal definition; The best achievable sufficiency within a model class.
-**Segment link:** [01-aad-core/src/def-model-class-fitness.md](../01-aad-core/src/def-model-class-fitness.md)
+**Segment link:** [01-aat-core/src/def-model-class-fitness.md](../01-aat-core/src/def-model-class-fitness.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4407,7 +4407,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-objective-functional` (Section II; depends on `#form-complete-agent-state`). Formal model first introduced; The objective $O_t$ is the component of $G_t$ that specifies what the agent wants — the evaluation criterion for trajectories.
-**Segment link:** [01-aad-core/src/form-objective-functional.md](../01-aad-core/src/form-objective-functional.md)
+**Segment link:** [01-aat-core/src/form-objective-functional.md](../01-aat-core/src/form-objective-functional.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4601,7 +4601,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-agency` (Section I; depends on `#scope-adaptive-system`, `#def-action-transition`). Scope-narrowing first encounter; The agency scope narrows AAD's adaptive scope ( #scope-adaptive-system) to systems whose actions carry Pearl-level-2 causal contrast — distinct actions produce distinct interventional outcome….
-**Segment link:** [01-aad-core/src/scope-agency.md](../01-aad-core/src/scope-agency.md)
+**Segment link:** [01-aat-core/src/scope-agency.md](../01-aat-core/src/scope-agency.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4628,7 +4628,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-agent-model` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-chronica`). Formal model first introduced; The agent's compressed representation of how the world works, mapping interaction history to model space.
-**Segment link:** [01-aad-core/src/form-agent-model.md](../01-aad-core/src/form-agent-model.md)
+**Segment link:** [01-aat-core/src/form-agent-model.md](../01-aat-core/src/form-agent-model.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -4813,7 +4813,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-causal-hierarchy-requirement` (Section II; depends on `#def-value-object`, `#def-pearl-causal-hierarchy`, `#scope-agency`). First formal derivation; Evaluating the action-value $Q_O$ requires answering "what happens if I *do* action $a$?" — a Level 2 (interventional) query in Pearl's causal hierarchy.
-**Segment link:** [01-aad-core/src/der-causal-hierarchy-requirement.md](../01-aad-core/src/der-causal-hierarchy-requirement.md)
+**Segment link:** [01-aat-core/src/der-causal-hierarchy-requirement.md](../01-aat-core/src/der-causal-hierarchy-requirement.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5136,7 +5136,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-event-driven-dynamics` (Section I; depends on `#post-causal-structure`, `#def-observation-function`, `#def-action-transition` (+1 more)). Formal model first introduced; The coupling between agent and environment occurs through discrete events — observations arriving and actions completing — at potentially variable and heterogeneous rates.
-**Segment link:** [01-aad-core/src/form-event-driven-dynamics.md](../01-aad-core/src/form-event-driven-dynamics.md)
+**Segment link:** [01-aat-core/src/form-event-driven-dynamics.md](../01-aat-core/src/form-event-driven-dynamics.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5213,7 +5213,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#deriv-graph-structure-uniqueness` (Appendix A; depends on `#def-strategy-dag`, `#der-chain-confidence-decay`, `#norm-explicit-strategy-condition` (+1 more)). First formal derivation; Operational requirements on the agent's representation — directed temporal ordering, probabilistic uncertainty, and the ability to test strategy components — are *sufficient* for the strategy to be a….
-**Segment link:** [01-aad-core/src/deriv-graph-structure-uniqueness.md](../01-aad-core/src/deriv-graph-structure-uniqueness.md)
+**Segment link:** [01-aat-core/src/deriv-graph-structure-uniqueness.md](../01-aat-core/src/deriv-graph-structure-uniqueness.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5291,7 +5291,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-interaction-channel-classification` (Section III; deep dependency cone (12 upstream segments incl. `#def-observation-function`, `#def-mismatch-signal`)). First formal derivation; The same signal from agent $A$ lands on recipient $B$ as one of four qualitatively different things — informative update, magnitude-shock, structural-shock, or ambient noise — determined by three….
-**Segment link:** [01-aad-core/src/der-interaction-channel-classification.md](../01-aad-core/src/der-interaction-channel-classification.md)
+**Segment link:** [01-aat-core/src/der-interaction-channel-classification.md](../01-aat-core/src/der-interaction-channel-classification.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5415,7 +5415,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-adaptive-system` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-chronica`). Scope-narrowing first encounter; AAD's broadest scope: any system that observes an uncertain environment supports Section I's adaptive machinery.
-**Segment link:** [01-aad-core/src/scope-adaptive-system.md](../01-aad-core/src/scope-adaptive-system.md)
+**Segment link:** [01-aat-core/src/scope-adaptive-system.md](../01-aat-core/src/scope-adaptive-system.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5478,7 +5478,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-composite-agent` (Section III; depends on `#scope-agency`, `#scope-multi-agent`, `#form-objective-functional`). Scope-narrowing first encounter; A set of purposeful sub-agents, each satisfying #scope-agency, constitutes a *composite agent* only when their objectives exhibit sufficient teleological alignment to define a coherent composite….
-**Segment link:** [01-aad-core/src/scope-composite-agent.md](../01-aad-core/src/scope-composite-agent.md)
+**Segment link:** [01-aat-core/src/scope-composite-agent.md](../01-aat-core/src/scope-composite-agent.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5543,7 +5543,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#hyp-mismatch-dynamics` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#deriv-sector-condition`). Hypothesis stated; The evolution of model-reality mismatch over time is governed by the balance between the agent's corrective capacity (tempo) and the rate of environmental change (disturbance).
-**Segment link:** [01-aad-core/src/hyp-mismatch-dynamics.md](../01-aad-core/src/hyp-mismatch-dynamics.md)
+**Segment link:** [01-aat-core/src/hyp-mismatch-dynamics.md](../01-aat-core/src/hyp-mismatch-dynamics.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5580,7 +5580,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-sector-condition-stability` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#deriv-sector-condition` (+1 more)). First formal result; An agent's mismatch remains bounded if its correction function satisfies a sector condition (points inward with at least baseline efficiency) and the effective correction strength exceeds the….
-**Segment link:** [01-aad-core/src/result-sector-condition-stability.md](../01-aad-core/src/result-sector-condition-stability.md)
+**Segment link:** [01-aat-core/src/result-sector-condition-stability.md](../01-aat-core/src/result-sector-condition-stability.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5652,7 +5652,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-structural-adaptation-necessity` (Section I; depends on `#def-model-sufficiency`, `#def-model-class-fitness`, `#result-mismatch-decomposition` (+1 more)). First formal result; When model class fitness is insufficient — when no model in the current class can adequately represent reality — no amount of parametric adaptation can close the mismatch floor.
-**Segment link:** [01-aad-core/src/result-structural-adaptation-necessity.md](../01-aad-core/src/result-structural-adaptation-necessity.md)
+**Segment link:** [01-aat-core/src/result-structural-adaptation-necessity.md](../01-aat-core/src/result-structural-adaptation-necessity.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5795,7 +5795,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#emp-update-gain` (Section I; depends on `#def-mismatch-signal`, `#def-observation-function`). Empirical claim; The optimal weight an agent assigns to new observations when updating its model — the rate of *epistrophe* (turning toward reality).
-**Segment link:** [01-aad-core/src/emp-update-gain.md](../01-aad-core/src/emp-update-gain.md)
+**Segment link:** [01-aat-core/src/emp-update-gain.md](../01-aat-core/src/emp-update-gain.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -5941,7 +5941,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#post-causal-structure` (Section I; depends on `#def-agent-environment`, `#def-chronica`). Foundational postulate; The agent-environment interaction has irreducible causal structure grounded in the temporal ordering of events. Actions precede their consequences; observations follow from the state they observe.
-**Segment link:** [01-aad-core/src/post-causal-structure.md](../01-aad-core/src/post-causal-structure.md)
+**Segment link:** [01-aat-core/src/post-causal-structure.md](../01-aat-core/src/post-causal-structure.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -6082,7 +6082,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#hyp-edge-update-via-gain` (Section II; depends on `#def-strategy-dag`, `#emp-update-gain`, `#def-mismatch-signal` (+2 more)). Hypothesis stated; The uncertainty-ratio gain principle ( #emp-update-gain) extends from epistemic updates to strategy-edge updates: edge credences revise in proportion to the ratio of edge uncertainty to observation….
-**Segment link:** [01-aad-core/src/hyp-edge-update-via-gain.md](../01-aad-core/src/hyp-edge-update-via-gain.md)
+**Segment link:** [01-aat-core/src/hyp-edge-update-via-gain.md](../01-aat-core/src/hyp-edge-update-via-gain.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -6294,7 +6294,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-temporal-nesting` (Section I; depends on `#def-adaptive-tempo`, `#result-structural-adaptation-necessity`). First formal derivation; An agent's adaptive processes stratify naturally by timescale, with each level operating on the quasi-steady-state output of the level below.
-**Segment link:** [01-aad-core/src/der-temporal-nesting.md](../01-aad-core/src/der-temporal-nesting.md)
+**Segment link:** [01-aat-core/src/der-temporal-nesting.md](../01-aat-core/src/der-temporal-nesting.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -6340,7 +6340,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-value-object` (Section II; depends on `#form-objective-functional`, `#form-agent-model`, `#der-directed-separation` (+1 more)). First formal definition; The horizon- and policy-conditioned value object $V_O$ turns the abstract objective functional $V_{O_t}$ into a decision-making tool: "given what I believe, what I plan to do next, and how far I'm….
-**Segment link:** [01-aad-core/src/def-value-object.md](../01-aad-core/src/def-value-object.md)
+**Segment link:** [01-aat-core/src/def-value-object.md](../01-aat-core/src/def-value-object.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -6404,7 +6404,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-variational-sector-condition` (Appendix A; depends on `#deriv-sector-condition`, `#result-sector-persistence-template`, `#der-gain-sector-bridge` (+2 more)). First formal derivation; Variational / approximate-posterior agents (VI, amortized VI, active-inference-style variational free energy) currently sit in A2' sub-scope $\beta$ per `#deriv-sector-condition`: their correction….
-**Segment link:** [01-aad-core/src/deriv-variational-sector-condition.md](../01-aad-core/src/deriv-variational-sector-condition.md)
+**Segment link:** [01-aat-core/src/deriv-variational-sector-condition.md](../01-aat-core/src/deriv-variational-sector-condition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -6623,7 +6623,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-action-selection` (Section I; depends on `#form-agent-model`, `#der-recursive-update`). First formal derivation; Praxis (informed action) is a function of the model.
-**Segment link:** [01-aad-core/src/der-action-selection.md](../01-aad-core/src/der-action-selection.md)
+**Segment link:** [01-aat-core/src/der-action-selection.md](../01-aat-core/src/der-action-selection.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -6651,7 +6651,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-adaptive-gain-dynamics` (Appendix A; deep dependency cone (7 upstream segments incl. `#emp-update-gain`, `#der-gain-sector-bridge`)). First formal derivation; AAD's gain structure ( #emp-update-gain, #der-gain-sector-bridge) derives the optimal gain $\eta^\ast$ per regime — the gain is a function of the noise model, chosen to minimize one-step mismatch….
-**Segment link:** [01-aad-core/src/deriv-adaptive-gain-dynamics.md](../01-aad-core/src/deriv-adaptive-gain-dynamics.md)
+**Segment link:** [01-aat-core/src/deriv-adaptive-gain-dynamics.md](../01-aat-core/src/deriv-adaptive-gain-dynamics.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -7644,7 +7644,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#norm-explicit-strategy-condition` (Section II; depends on `#def-strategy-dimension`, `#der-causal-hierarchy-requirement`). First formal normative claim; An agent benefits from maintaining an explicit strategy $\Sigma_t$ when the cost of planning is less than the cost of learning through exploration alone.
-**Segment link:** [01-aad-core/src/norm-explicit-strategy-condition.md](../01-aad-core/src/norm-explicit-strategy-condition.md)
+**Segment link:** [01-aat-core/src/norm-explicit-strategy-condition.md](../01-aat-core/src/norm-explicit-strategy-condition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -9223,7 +9223,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-bias-bound` (Appendix A; depends on `#scope-agent-identity`, `#disc-additive-coordinate-forcing`, `#der-directed-separation` (+2 more)). First formal derivation; The observation-ambiguity bias bound carried by Class-2 (fully-coupled) agents in the logogenic-agents scope — $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;….
-**Segment link:** [01-aad-core/src/deriv-bias-bound.md](../01-aad-core/src/deriv-bias-bound.md)
+**Segment link:** [01-aat-core/src/deriv-bias-bound.md](../01-aat-core/src/deriv-bias-bound.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -9694,7 +9694,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#hyp-directed-separation-under-composition` (Section III; depends on `#der-directed-separation`, `#scope-multi-agent`, `#form-composition-closure`). Hypothesis stated; When individual agents satisfy directed separation ( #der-directed-separation), does the composite macro-agent also satisfy it?.
-**Segment link:** [01-aad-core/src/hyp-directed-separation-under-composition.md](../01-aad-core/src/hyp-directed-separation-under-composition.md)
+**Segment link:** [01-aat-core/src/hyp-directed-separation-under-composition.md](../01-aat-core/src/hyp-directed-separation-under-composition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -9964,7 +9964,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-l1-update-bias` (Appendix A; depends on `#disc-credit-assignment-boundary`, `#deriv-edge-update-natural-parameter`, `#deriv-strategic-dynamics` (+2 more)). First formal derivation; Under L1' correlated-evidence regimes with unobservable common cause, the default log-odds edge-update ( #deriv-edge-update-natural-parameter) converges to a **biased fixed point** — edges settle at….
-**Segment link:** [01-aad-core/src/deriv-l1-update-bias.md](../01-aad-core/src/deriv-l1-update-bias.md)
+**Segment link:** [01-aat-core/src/deriv-l1-update-bias.md](../01-aat-core/src/deriv-l1-update-bias.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -10084,7 +10084,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-multi-agent` (Section III; depends on `#scope-agency`, `#post-composition-consistency`). Scope-narrowing first encounter; Section III applies wherever multiple agents satisfying the scope condition interact through a shared environment.
-**Segment link:** [01-aad-core/src/scope-multi-agent.md](../01-aad-core/src/scope-multi-agent.md)
+**Segment link:** [01-aat-core/src/scope-multi-agent.md](../01-aat-core/src/scope-multi-agent.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -10110,7 +10110,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** yes
 
 **First-encounter locality:** `#def-observation-function` (Section I; depends on `#def-agent-environment`, `#def-action-transition`). First formal definition; Observations (aisthesis — raw contact with reality) are lossy, possibly noisy functions of environment state, prior action, and perceptual noise.
-**Segment link:** [01-aad-core/src/def-observation-function.md](../01-aad-core/src/def-observation-function.md)
+**Segment link:** [01-aat-core/src/def-observation-function.md](../01-aat-core/src/def-observation-function.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -10170,7 +10170,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-per-dimension-persistence` (Section III; depends on `#result-persistence-condition`, `#def-adaptive-tempo`, `#deriv-sector-condition`). First formal result; The scalar persistence condition overestimates adaptive capacity when the agent's correction gain varies across dimensions.
-**Segment link:** [01-aad-core/src/result-per-dimension-persistence.md](../01-aad-core/src/result-per-dimension-persistence.md)
+**Segment link:** [01-aat-core/src/result-per-dimension-persistence.md](../01-aat-core/src/result-per-dimension-persistence.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -10410,7 +10410,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-strategic-dynamics` (Appendix A; depends on `#schema-strategy-persistence`, `#hyp-edge-update-via-gain`, `#deriv-sector-condition` (+1 more)). First formal derivation; Complete verification that specific strategy update dynamics satisfy the sector condition from #deriv-sector-condition, backing the schema proposed in #schema-strategy-persistence.
-**Segment link:** [01-aad-core/src/deriv-strategic-dynamics.md](../01-aad-core/src/deriv-strategic-dynamics.md)
+**Segment link:** [01-aat-core/src/deriv-strategic-dynamics.md](../01-aat-core/src/deriv-strategic-dynamics.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -10435,7 +10435,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-strategy-complexity-cost` (Section II; deep dependency cone (7 upstream segments incl. `#def-strategic-tempo`, `#form-information-bottleneck`)). Formal model first introduced; The complexity cost of maintaining an explicit strategy $\Sigma_t$, formulated via minimum description length and the information bottleneck principle --- connecting DAG structure to the maintenance….
-**Segment link:** [01-aad-core/src/form-strategy-complexity-cost.md](../01-aad-core/src/form-strategy-complexity-cost.md)
+**Segment link:** [01-aat-core/src/form-strategy-complexity-cost.md](../01-aat-core/src/form-strategy-complexity-cost.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -10506,7 +10506,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-strategy-dimension` (Section II; depends on `#form-complete-agent-state`, `#form-objective-functional`). First formal definition; The purposeful substate $G_t$ decomposes into two structurally distinct components: $O_t$ (the objective — what the agent wants) and $\Sigma_t$ (the strategy — the agent's theory of how its actions….
-**Segment link:** [01-aad-core/src/def-strategy-dimension.md](../01-aad-core/src/def-strategy-dimension.md)
+**Segment link:** [01-aat-core/src/def-strategy-dimension.md](../01-aat-core/src/def-strategy-dimension.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -10666,7 +10666,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#der-tempo-composition` (Section III; depends on `#form-composition-closure`, `#result-sector-persistence-template`, `#def-adaptive-tempo`). First formal derivation; The adaptive tempo of a composite agent is bounded from above by the sum of its sub-agents' tempos.
-**Segment link:** [01-aad-core/src/der-tempo-composition.md](../01-aad-core/src/der-tempo-composition.md)
+**Segment link:** [01-aat-core/src/der-tempo-composition.md](../01-aat-core/src/der-tempo-composition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -11070,7 +11070,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-and-or` (Section II; depends on `#def-strategy-dimension`, `#der-chain-confidence-decay`). Scope-narrowing first encounter; We restrict to environments where the causal combination of strategy steps is approximately conjunctive (AND: all parents required) or disjunctive (OR: any parent sufficient), without strong….
-**Segment link:** [01-aad-core/src/scope-and-or.md](../01-aad-core/src/scope-and-or.md)
+**Segment link:** [01-aat-core/src/scope-and-or.md](../01-aat-core/src/scope-and-or.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -11308,7 +11308,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-discrete-sector-condition` (Appendix A; depends on `#deriv-sector-condition`, `#emp-update-gain`, `#der-gain-sector-bridge` (+1 more)). First formal derivation; Discrete-time analogs of Props A.1, A.1S, and A.2 via contraction mapping, closing the fluid-limit gap (GA-5) between the event-driven dynamics ( #form-event-driven-dynamics) and the continuous-time….
-**Segment link:** [01-aad-core/src/deriv-discrete-sector-condition.md](../01-aad-core/src/deriv-discrete-sector-condition.md)
+**Segment link:** [01-aat-core/src/deriv-discrete-sector-condition.md](../01-aat-core/src/deriv-discrete-sector-condition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -11334,7 +11334,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-edge-update-causal-validity` (Section II; depends on `#hyp-edge-update-via-gain`, `#def-causal-information-yield`, `#der-loop-interventional-access` (+2 more)). Scope-narrowing first encounter; The gain-based edge update ( #hyp-edge-update-via-gain) revises edge credences $p_{ij}$ --- causal efficacy estimates whose identification strength varies with the data regime ( #def-strategy-dag).
-**Segment link:** [01-aad-core/src/scope-edge-update-causal-validity.md](../01-aad-core/src/scope-edge-update-causal-validity.md)
+**Segment link:** [01-aat-core/src/scope-edge-update-causal-validity.md](../01-aat-core/src/scope-edge-update-causal-validity.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -11472,7 +11472,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#detail-operationalization` (Appendix B; deep dependency cone (7 upstream segments incl. `#def-mismatch-signal`, `#emp-update-gain`)). First formal appendix detail; Estimation recipes for core AAD quantities, bridging the measurement gap between formal objects and practical deployment.
-**Segment link:** [01-aad-core/src/detail-operationalization.md](../01-aad-core/src/detail-operationalization.md)
+**Segment link:** [01-aat-core/src/detail-operationalization.md](../01-aat-core/src/detail-operationalization.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -11609,7 +11609,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#schema-strategy-persistence` (Section II; depends on `#result-sector-condition-stability`, `#result-sector-persistence-template`, `#def-strategic-calibration` (+1 more)). First formal proposed schema; The sector-persistence template ( #result-sector-persistence-template) proves bounded state for any system with a state variable, a correction function satisfying the sector condition, and bounded….
-**Segment link:** [01-aad-core/src/schema-strategy-persistence.md](../01-aad-core/src/schema-strategy-persistence.md)
+**Segment link:** [01-aat-core/src/schema-strategy-persistence.md](../01-aat-core/src/schema-strategy-persistence.md)
 **Manual curation notes:** Shared segment_link with sibling current; this row votes on the term, sibling votes on whether to drop the schema- prefix from the slug (sibling: "strategy persistence schema")
 
 | candidate | weight | category mix |
@@ -11880,7 +11880,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#result-unity-closure-mapping` (Section III; depends on `#def-unity-dimensions`, `#form-composition-closure`, `#form-information-bottleneck`). First formal result; Unity dimensions parametrize rate-distortion curves for closure-defect components, not point-valued predictors.
-**Segment link:** [01-aad-core/src/result-unity-closure-mapping.md](../01-aad-core/src/result-unity-closure-mapping.md)
+**Segment link:** [01-aat-core/src/result-unity-closure-mapping.md](../01-aat-core/src/result-unity-closure-mapping.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -12174,7 +12174,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#example-strategy` (Appendix B; deep dependency cone (19 upstream segments incl. `#scope-agency`, `#post-causal-structure`)). First formal worked example; AAD's Section II machinery — objectives, strategy DAGs, the orient cascade, satisfaction gap, control regret, chain confidence decay, observability dominance, and edge update via gain — is exercised….
-**Segment link:** [01-aad-core/src/example-strategy.md](../01-aad-core/src/example-strategy.md)
+**Segment link:** [01-aat-core/src/example-strategy.md](../01-aat-core/src/example-strategy.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -12496,7 +12496,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#disc-ciy-unified-objective` (Section II; depends on `#def-causal-information-yield`, `#scope-ciy-observational-proxy`, `#def-value-object` (+1 more)). Meta-discussion segment; The exploration-exploitation tension can be expressed as a single policy objective that jointly maximizes expected value and a causal information surrogate.
-**Segment link:** [01-aad-core/src/disc-ciy-unified-objective.md](../01-aad-core/src/disc-ciy-unified-objective.md)
+**Segment link:** [01-aat-core/src/disc-ciy-unified-objective.md](../01-aat-core/src/disc-ciy-unified-objective.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -12696,7 +12696,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#def-action-transition` (Section I; depends on `#def-agent-environment`). First formal definition; Actions affect the environment through a transition function that is unknown to the agent and possibly stochastic.
-**Segment link:** [01-aad-core/src/def-action-transition.md](../01-aad-core/src/def-action-transition.md)
+**Segment link:** [01-aat-core/src/def-action-transition.md](../01-aat-core/src/def-action-transition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -14029,7 +14029,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-edge-update-natural-parameter` (Appendix A; depends on `#def-strategy-dag`, `#hyp-edge-update-via-gain`, `#der-chain-confidence-decay` (+1 more)). First formal derivation; The log-odds coordinate $\lambda_{ij} = \log(p_{ij} / (1 - p_{ij}))$ is the unique parameterization (up to positive affine transformation) on which independent Bernoulli evidence updates edge….
-**Segment link:** [01-aad-core/src/deriv-edge-update-natural-parameter.md](../01-aad-core/src/deriv-edge-update-natural-parameter.md)
+**Segment link:** [01-aat-core/src/deriv-edge-update-natural-parameter.md](../01-aat-core/src/deriv-edge-update-natural-parameter.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -14561,7 +14561,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#detail-linear-ode-approximation` (Appendix A; depends on `#hyp-mismatch-dynamics`, `#def-adaptive-tempo`, `#result-sector-condition-stability` (+2 more)). First formal appendix detail; The full linear treatment of mismatch dynamics: scalar and vector forms, steady-state solutions under both disturbance models, transient behavior, convergence rate, validity conditions, breakdown….
-**Segment link:** [01-aad-core/src/detail-linear-ode-approximation.md](../01-aad-core/src/detail-linear-ode-approximation.md)
+**Segment link:** [01-aat-core/src/detail-linear-ode-approximation.md](../01-aat-core/src/detail-linear-ode-approximation.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -14827,7 +14827,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#sketch-multi-timescale-stability` (Appendix A; depends on `#result-sector-condition-stability`, `#der-temporal-nesting`). First formal sketch; When adaptive processes operate at $N$ nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs.
-**Segment link:** [01-aad-core/src/sketch-multi-timescale-stability.md](../01-aad-core/src/sketch-multi-timescale-stability.md)
+**Segment link:** [01-aat-core/src/sketch-multi-timescale-stability.md](../01-aat-core/src/sketch-multi-timescale-stability.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -15453,7 +15453,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#form-structural-change-as-parametric-limit` (Section II; depends on `#def-strategy-dag`, `#result-structural-adaptation-necessity`). Formal model first introduced; In the probabilistic DAG, "structural" changes to $\Sigma_t$ are continuous operations on edge weights and node sets — not a separate mechanism.
-**Segment link:** [01-aad-core/src/form-structural-change-as-parametric-limit.md](../01-aad-core/src/form-structural-change-as-parametric-limit.md)
+**Segment link:** [01-aat-core/src/form-structural-change-as-parametric-limit.md](../01-aat-core/src/form-structural-change-as-parametric-limit.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -18703,7 +18703,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#scope-ciy-observational-proxy` (Section II; depends on `#def-causal-information-yield`, `#der-loop-interventional-access`). Scope-narrowing first encounter; When and how causal information yield can be approximated from observational data rather than interventional experiments.
-**Segment link:** [01-aad-core/src/scope-ciy-observational-proxy.md](../01-aad-core/src/scope-ciy-observational-proxy.md)
+**Segment link:** [01-aat-core/src/scope-ciy-observational-proxy.md](../01-aat-core/src/scope-ciy-observational-proxy.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -19676,7 +19676,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-fisher-whitened-update-rule` (Appendix A; depends on `#disc-credit-assignment-boundary`, `#deriv-edge-update-natural-parameter`, `#der-gain-sector-bridge` (+2 more)). First formal derivation; Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#deriv-edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural….
-**Segment link:** [01-aad-core/src/deriv-fisher-whitened-update-rule.md](../01-aad-core/src/deriv-fisher-whitened-update-rule.md)
+**Segment link:** [01-aat-core/src/deriv-fisher-whitened-update-rule.md](../01-aat-core/src/deriv-fisher-whitened-update-rule.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -19884,7 +19884,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#internal-external-decomposition` (Appendix A; depends on `#result-persistence-condition`, `#hyp-mismatch-dynamics`, `#def-adaptive-tempo` (+1 more)). First formal derivation; The persistence condition ($\alpha R \gt \rho$) provides a binary survival threshold.
-**Segment link:** [01-aad-core/src/internal-external-decomposition.md](../01-aad-core/src/internal-external-decomposition.md)
+**Segment link:** [01-aat-core/src/internal-external-decomposition.md](../01-aat-core/src/internal-external-decomposition.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -20455,7 +20455,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#deriv-strategy-cost-regret-bound` (Appendix A; depends on `#form-strategy-complexity-cost`, `#def-value-object`, `#form-objective-functional` (+2 more)). First formal derivation; The variational form of the strategy-cost objective ( #form-strategy-complexity-cost) carries a $D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})$ relevance term.
-**Segment link:** [01-aad-core/src/deriv-strategy-cost-regret-bound.md](../01-aad-core/src/deriv-strategy-cost-regret-bound.md)
+**Segment link:** [01-aat-core/src/deriv-strategy-cost-regret-bound.md](../01-aat-core/src/deriv-strategy-cost-regret-bound.md)
 
 | candidate | weight | category mix |
 |---|---:|---|
@@ -20488,7 +20488,7 @@ Per-current sections with enrichment fields surfaced where populated. Within eac
 **Category disagreement on top finalist:** no
 
 **First-encounter locality:** `#schema-strategy-persistence` (Section II; depends on `#result-sector-condition-stability`, `#result-sector-persistence-template`, `#def-strategic-calibration` (+1 more)). First formal proposed schema; The sector-persistence template ( #result-sector-persistence-template) proves bounded state for any system with a state variable, a correction function satisfying the sector condition, and bounded….
-**Segment link:** [01-aad-core/src/schema-strategy-persistence.md](../01-aad-core/src/schema-strategy-persistence.md)
+**Segment link:** [01-aat-core/src/schema-strategy-persistence.md](../01-aat-core/src/schema-strategy-persistence.md)
 **Manual curation notes:** Shared segment_link with sibling current; this row votes on whether to drop the schema- prefix from the slug, sibling votes on the term (sibling: "strategy persistence")
 
 | candidate | weight | category mix |

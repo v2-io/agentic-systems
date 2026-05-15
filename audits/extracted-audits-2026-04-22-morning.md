@@ -21,32 +21,32 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 
 > Codex:
 >
-> • I audited the current source corpus in `01-aad-core/src`, active `02-tst-core/src`, and `03-logogenic-agents/src`, and only then checked `msc/` for additional context on issues that already cleared the burden of proof in source. I did not count candidates the repo already narrows well in current source, including the DAG sufficiency-vs-necessity caveat, the unity-dimensions update-homogeneity gap, and the observation-ambiguity architecture-contamination issue.
+> • I audited the current source corpus in `01-aat-core/src`, active `02-tst-core/src`, and `03-logogenic-agents/src`, and only then checked `msc/` for additional context on issues that already cleared the burden of proof in source. I did not count candidates the repo already narrows well in current source, including the DAG sufficiency-vs-necessity caveat, the unity-dimensions update-homogeneity gap, and the observation-ambiguity architecture-contamination issue.
 >
 > 1. **Section II silently shifts from agency scope to a narrower learning-purposeful scope.**
->    Problematic passage: `01-aad-core/src/causal-hierarchy-requirement.md:30` says "We restrict attention to learning purposeful agents …" and then "All remaining Section II results operate within learning-agent scope."
->    Strongest counterevidence in src: `01-aad-core/src/scope-condition.md:31` says Section II's purposeful machinery becomes non-vacuous at $S_{\text{agency}}$, and `01-aad-core/src/agent-spectrum.md:46` presents Section II as the right column of actuated agents generally.
+>    Problematic passage: `01-aat-core/src/causal-hierarchy-requirement.md:30` says "We restrict attention to learning purposeful agents …" and then "All remaining Section II results operate within learning-agent scope."
+>    Strongest counterevidence in src: `01-aat-core/src/scope-condition.md:31` says Section II's purposeful machinery becomes non-vacuous at $S_{\text{agency}}$, and `01-aat-core/src/agent-spectrum.md:46` presents Section II as the right column of actuated agents generally.
 >    Assessment: still real.
 >    Confidence: high.
 >    Why: the narrowing itself is defensible, but it is not integrated as a named Section II-wide sub-scope, so the repo still oscillates between "Section II applies to actuated agents" and "Section II applies to learning purposeful agents."
 >    msc context not yet integrated enough: `msc/analysis-2026-04-06.md:265`, `msc/spike-purposeful-agent-derivation.md:648`.
 > 2. **The loop is still framed as giving Level 2 access more strongly than the repo's own identification conditions warrant.**
->    Problematic passage: `01-aad-core/src/loop-interventional-access.md:14` says agency-scope agents "gain Level 2 access … through the loop itself," and `01-aad-core/src/loop-interventional-access.md:38` calls the loop "a Level 2 engine."
->    Strongest counterevidence in src: `01-aad-core/src/edge-update-causal-validity.md:26` says intervention-produced data does not automatically yield clean causal identification, and `01-aad-core/src/value-object.md:36` says the remaining requirement is that $M_t$ must actually support $P(o \mid do(a), M_t)$.
+>    Problematic passage: `01-aat-core/src/loop-interventional-access.md:14` says agency-scope agents "gain Level 2 access … through the loop itself," and `01-aat-core/src/loop-interventional-access.md:38` calls the loop "a Level 2 engine."
+>    Strongest counterevidence in src: `01-aat-core/src/edge-update-causal-validity.md:26` says intervention-produced data does not automatically yield clean causal identification, and `01-aat-core/src/value-object.md:36` says the remaining requirement is that $M_t$ must actually support $P(o \mid do(a), M_t)$.
 >    Assessment: still real.
 >    Confidence: medium.
 >    Why: the source correctly distinguishes "data generated under intervention" from "identified do-estimates," but the headline language still collapses that distinction too often; in Pearl terms, many agents here have intervention-produced data with regime-dependent identifiability, not unconditional Level 2 knowledge.
 >    msc context not yet integrated enough: `msc/spike-purposeful-agent-derivation.md:646`.
 > 3. **The practical timescale-separation heuristic in composition still outruns the currently verified bridge conditions.**
->    Problematic passage: `01-aad-core/src/composition-consistency.md:38` calls $\tau_{\text{eq}} \ll \tau_{\text{ext}}$ a "reliable practical test" and says the gap between passing that heuristic and meeting Tier 1 conditions is small in common settings.
->    Strongest counterevidence in src: `01-aad-core/src/composition-closure.md:149` says the general case still has open computability and problem-specification choices, `01-aad-core/src/composition-closure.md:151` makes bridge transfer conditional on the stronger incremental sector bound, and `01-aad-core/src/composition-closure.md:199` still asks for a richer purposeful-agent toy case.
+>    Problematic passage: `01-aat-core/src/composition-consistency.md:38` calls $\tau_{\text{eq}} \ll \tau_{\text{ext}}$ a "reliable practical test" and says the gap between passing that heuristic and meeting Tier 1 conditions is small in common settings.
+>    Strongest counterevidence in src: `01-aat-core/src/composition-closure.md:149` says the general case still has open computability and problem-specification choices, `01-aat-core/src/composition-closure.md:151` makes bridge transfer conditional on the stronger incremental sector bound, and `01-aat-core/src/composition-closure.md:199` still asks for a richer purposeful-agent toy case.
 >    Assessment: still real.
 >    Confidence: high.
 >    Why: the repo has substantially tightened Section III, but the exact bridge is still proved only for restricted classes, while the "common organizational settings" language generalizes beyond the current purposeful-composite evidence base.
 >    msc context not yet integrated enough: `msc/spike-bridge-lemma-contraction.md:457`, `msc/working-composition-admissibility.md:454`.
 > 4. **TST still overstates git as a complete/clean operational record for AAD quantities.**
 >    Problematic passage: `02-tst-core/src/software-epistemic-properties.md:56` says git gives "Exact exteriorized chronica," `:58` says git's scope matches chronica "precisely," and `:62` says environment-side AAD quantities are estimable from the historical record "without the sampling and recall biases that afflict other domains."
->    Strongest counterevidence in src: `01-aad-core/src/chronica.md:15` defines $\mathcal C_t$ as the complete record of observations and actions, `02-tst-core/src/developer-as-act-agent.md:89` lists many software observation channels not captured by git, and `02-tst-core/src/causal-discovery-from-git.md:18` explicitly says the git-to-AAD chain is "empirical and unresolved."
+>    Strongest counterevidence in src: `01-aat-core/src/chronica.md:15` defines $\mathcal C_t$ as the complete record of observations and actions, `02-tst-core/src/developer-as-act-agent.md:89` lists many software observation channels not captured by git, and `02-tst-core/src/causal-discovery-from-git.md:18` explicitly says the git-to-AAD chain is "empirical and unresolved."
 >    Assessment: still real.
 >    Confidence: high.
 >    Why: git records committed state transitions exactly; it does not record the full software chronica, and its causal use remains materially confounded by shared requirements, bundling conventions, and developer knowledge state.
@@ -62,11 +62,11 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 > ### Finding 1: Unbounded Gradient Updates in Credit Assignment
 >
 > - **Problematic Passage:**
->   In `01-aad-core/src/credit-assignment-boundary.md`, the default signal function is defined as:
+>   In `01-aat-core/src/credit-assignment-boundary.md`, the default signal function is defined as:
 >   $$\text{signal}_k(o_t) = p_k + \iota_k \cdot \frac{J_k \cdot (y_G - \hat P_\Sigma)}{\lVert\mathbf{J}\rVert^2}$$
 >   Because this updates a probability $p_k \in [0, 1]$, the formula is mathematically unstable. The denominator $\lVert\mathbf{J}\rVert^2$ (the squared norm of the Jacobian) can become arbitrarily small, especially in deep or highly contingent AND/OR DAGs where edge sensitivities decay toward zero. When $\lVert\mathbf{J}\rVert^2 \to 0$, the signal magnitude explodes to $\pm \infty$. When applied to the update rule $p_k^{\text{new}} = p_k + \eta \cdot (\text{signal} - p_k)$, this will violently push the credences outside the valid $[0, 1]$ probability domain.
 > - **Strongest Counterevidence in `src/`:**
->   In `01-aad-core/src/edge-update-via-gain.md`, the theory admits that the gradient candidate "inherits $\hat P_\Sigma$'s overestimation bias under correlated failures" and "requires further validation." However, there is no mention of domain bounds or division-by-zero instability.
+>   In `01-aat-core/src/edge-update-via-gain.md`, the theory admits that the gradient candidate "inherits $\hat P_\Sigma$'s overestimation bias under correlated failures" and "requires further validation." However, there is no mention of domain bounds or division-by-zero instability.
 > - **Status:** **Still real.** The formula as written in the core theory is mechanically broken for bounded probability parameters. It lacks a link function (like a logit transform) or a clipping mechanism.
 > - **Confidence Level:** High.
 >
@@ -75,7 +75,7 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 > ### Finding 2: Degenerate Mutual Information in Strategy IB Objective
 >
 > - **Problematic Passage:**
->   In `01-aad-core/src/strategy-complexity-cost.md`, the theoretical Information Bottleneck objective is defined as:
+>   In `01-aat-core/src/strategy-complexity-cost.md`, the theoretical Information Bottleneck objective is defined as:
 >   $$\Sigma_t^\ast = \arg\min_{\Sigma_t} \left[\, I(\mathcal C_t;\, \Sigma_t) - \beta_\Sigma \cdot I(\Sigma_t;\, \pi^\ast \mid M_t)\right]$$
 >   Under standard Shannon information theory, the optimal policy $\pi^\ast$ is fully determined by the complete epistemic state $M_t$. Because $\pi^\ast$ is a deterministic function of $M_t$, conditioning on $M_t$ makes $\pi^\ast$ a constant. The mutual information between any variable ($\Sigma_t$) and a constant is strictly zero. Therefore, $I(\Sigma_t;\, \pi^\ast \mid M_t) = 0$, causing the entire objective to degenerate into $\arg\min \operatorname{DL}(\Sigma_t)$, which trivially yields an empty strategy.
 > - **Strongest Counterevidence in `src/`:**
@@ -126,7 +126,7 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 >
 > ## Finding 1 — `#causal-insufficiency-detection`: the ±ρ residual is asserted as universal but vanishes under rational on-policy execution
 >
-> **Problematic passage** (`01-aad-core/src/causal-insufficiency-detection.md` lines 21–33):
+> **Problematic passage** (`01-aat-core/src/causal-insufficiency-detection.md` lines 21–33):
 >
 > > "After edge credences converge (p̂ₖ ≈ θₖ, low gain), the plan-confidence error δ_s ≈ 0… The **L0 residual** — the gap between the independence-model reference value and actual success — converges to: Φ^L0 − ȳ_G ⟶ { +ρ OR-heavy; −ρ AND-heavy }… **Detection criterion.** A persistently nonzero L0 residual after edge-credence convergence is a strong indicator of causal insufficiency."
 >
@@ -170,7 +170,7 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 >
 > ## Finding 3 — The Section II preamble's Class 2 framing understates what `#section-ii-survival` actually establishes
 >
-> **Problematic passage** (`01-aad-core/OUTLINE.md`, Section II preamble):
+> **Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 >
 > > "**Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (#directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-logogenic-agents/`… This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II."
 >
@@ -319,7 +319,7 @@ Items here became Findings 1–11 in `audits/pending-findings-2026-04-22.md`. By
 >
 > 1. **Execute the repair for `#causal-insufficiency-detection`** per `msc/pending-findings-2026-04-22.md`. It's the only live-and-unresolved issue in this audit. Effort: 60–90 min as logged.
 > 2. **Reconcile `#composition-scope-condition` and `#composition-closure`** on whether (C-iii)-only composites admit (A1). Either restrict (A1)'s scope explicitly or treat (C-iii) as a route to a weaker closure concept. Pick one.
-> 3. **Rewrite the Section II preamble** in `01-aad-core/OUTLINE.md` to carry the survival-classification framing instead of the "requires work beyond" framing. The substance is elsewhere; the outline should reflect it.
+> 3. **Rewrite the Section II preamble** in `01-aat-core/OUTLINE.md` to carry the survival-classification framing instead of the "requires work beyond" framing. The substance is elsewhere; the outline should reflect it.
 > 4. **Consider whether `#information-bottleneck` frontmatter still matches its role** after `#compression-operations` landed.
 > 5. **Consider whether the sector-persistence-template reframe should be promoted to an organizing principle** in the OUTLINE preamble — it already carries more weight than it is advertised for.
 >

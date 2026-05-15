@@ -2378,7 +2378,7 @@ Groups are sorted by their *top alternative's* aggregate weight (descending). Wi
 - `(PI)` — **opus-1m (+3):** Good abbreviation with named expansion; works in both forms. Keep.
 - `(PI) / parameterization invariance` — **opus-4-7-b (+1):** The parenthesized-two-letter-tag convention works (compare GA-1, MG-1, P1). But the *full English phrase* "parameterization invariance" should be used on first mention in each segment before falling back to (PI). The four-primary-instances table in `#additive-coordinate-forcing` does this correctly; check that other citing segments follow suit.
 
-## `01-aad-core/OUTLINE.md`
+## `01-aat-core/OUTLINE.md`
 
 | candidate | aggregate | votes |
 |---|---:|---|
@@ -5301,7 +5301,7 @@ Groups are sorted by their *top alternative's* aggregate weight (descending). Wi
 
 - `Predictive sufficiency` — **gemini-2 (+1):** Clarifies that it's about how much predictive information is retained, not structural sufficiency.
 
-## `OUTLINE.md (01-aad-core) preamble`
+## `OUTLINE.md (01-aat-core) preamble`
 
 | candidate | aggregate | votes |
 |---|---:|---|

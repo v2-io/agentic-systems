@@ -3,7 +3,7 @@
 **Status**: derived — verdict V2/V3 boundary, leaning V3 with a constructive V2-rescue path documented.
 **Date**: 2026-05-09
 **Brief**: `00-brief.md` §5 RG-0c.
-**Depends on**: `01-aad-core/src/def-strategy-dag.md`, `01-aad-core/src/def-strategy-dimension.md`, `01-aad-core/src/form-objective-functional.md`, `01-aad-core/src/def-value-object.md`, `01-aad-core/src/def-satisfaction-gap.md`, `01-aad-core/src/form-complete-agent-state.md`, `01-aad-core/src/form-structural-change-as-parametric-limit.md`, `01-aad-core/src/example-strategy.md`, `02-prior-art-rg-ib-fep.md`.
+**Depends on**: `01-aat-core/src/def-strategy-dag.md`, `01-aat-core/src/def-strategy-dimension.md`, `01-aat-core/src/form-objective-functional.md`, `01-aat-core/src/def-value-object.md`, `01-aat-core/src/def-satisfaction-gap.md`, `01-aat-core/src/form-complete-agent-state.md`, `01-aat-core/src/form-structural-change-as-parametric-limit.md`, `01-aat-core/src/example-strategy.md`, `02-prior-art-rg-ib-fep.md`.
 
 ---
 
@@ -336,14 +336,14 @@ If `99-verdict.md` decides to proceed with the RG framing on the strength of (i)
 
 ## Source segments cited verbatim
 
-- `01-aad-core/src/def-strategy-dag.md` (Source constraint, Terminal satisfaction conditions, Well-formedness, Strategy self-assessment, Working Notes)
-- `01-aad-core/src/def-strategy-dimension.md` (Formal Expression, "the decomposition resolves a type error")
-- `01-aad-core/src/form-objective-functional.md` (Definition of $V_{O_t}$, Satisfaction threshold, Epistemic Status — scope restriction)
-- `01-aad-core/src/def-value-object.md` (Convention Hierarchy, Monotonicity)
-- `01-aad-core/src/def-satisfaction-gap.md` (Definition of $A_O$, Convention dependence)
-- `01-aad-core/src/form-complete-agent-state.md` (Formal Expression, Discussion — backward compatibility)
-- `01-aad-core/src/form-structural-change-as-parametric-limit.md` (Formal Expression — six operations)
-- `01-aad-core/src/example-strategy.md` (Section II Chain Instantiation — AND/OR DAG, plan confidence calculation)
+- `01-aat-core/src/def-strategy-dag.md` (Source constraint, Terminal satisfaction conditions, Well-formedness, Strategy self-assessment, Working Notes)
+- `01-aat-core/src/def-strategy-dimension.md` (Formal Expression, "the decomposition resolves a type error")
+- `01-aat-core/src/form-objective-functional.md` (Definition of $V_{O_t}$, Satisfaction threshold, Epistemic Status — scope restriction)
+- `01-aat-core/src/def-value-object.md` (Convention Hierarchy, Monotonicity)
+- `01-aat-core/src/def-satisfaction-gap.md` (Definition of $A_O$, Convention dependence)
+- `01-aat-core/src/form-complete-agent-state.md` (Formal Expression, Discussion — backward compatibility)
+- `01-aat-core/src/form-structural-change-as-parametric-limit.md` (Formal Expression — six operations)
+- `01-aat-core/src/example-strategy.md` (Section II Chain Instantiation — AND/OR DAG, plan confidence calculation)
 
 ## Prior-art neighbors (to cite if RG-2 is promoted)
 

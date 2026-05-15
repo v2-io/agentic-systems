@@ -171,7 +171,7 @@ Goal: Adopt NeurIPS's cross-reference / footnote conventions for ASF, then exten
 - [ ] **B8. Specify footnote convention in FORMAT.md.** Both `[^anchor]` markdown form and `\footnote{...}` raw-TeX form per NeurIPS AUTHORING.md §2.4. Currently zero footnote usage anywhere in ASF segments — convention establishment is the work.
 - [ ] **B9. Sidenote convention (Tufte-style numbered margin note).** Pending open question 3. Source-side convention TBD; renders to `\sidenote{...}` LaTeX macro using kaobook's machinery. Distinct from the un-numbered margin-note (B10): a sidenote carries a number that ties to its in-line callout, a margin-note just appears in the margin.
 - [ ] **B10. Generalize `\marginnote{...}` discipline.** Currently used only for equation-tag emission via `\eqtag{...}`. Extend to author-driven margin annotation with a source-side convention (TBD). The un-numbered "just there in the margin" form Joseph distinguished from sidenotes.
-- [ ] **B11. Wire `xr-hyper` into preamble.** Phase 1d. The `.aux` files are persisted (`01-aad-core/aad.aux` etc.); `xr-hyper` reads sibling-volume `.aux` for cross-volume label resolution. Fallback form pending open question 4. `.aux` staleness detection: warn or error when a sibling `.aux` was written against a different sibling-volume semver than the one being referenced.
+- [ ] **B11. Wire `xr-hyper` into preamble.** Phase 1d. The `.aux` files are persisted (`01-aat-core/aad.aux` etc.); `xr-hyper` reads sibling-volume `.aux` for cross-volume label resolution. Fallback form pending open question 4. `.aux` staleness detection: warn or error when a sibling `.aux` was written against a different sibling-volume semver than the one being referenced.
 
 ---
 
@@ -201,7 +201,7 @@ Items previously tracked but not blocking the three workstreams. Lifted out so t
 - **`\includeonly` chapter-incremental builds** — only if per-volume builds become uncomfortably slow.
 - **Section letter codes normalization in OUTLINE tables** — optional tidying.
 - **Slug rename audit** — separate concern, naming-cycle work; lives at PRACTICA §"Names & Lexicon" and `msc/naming/`.
-- **Cover artwork for TST / LogA / ELI** — AAT's cover lives at `01-aad-core/AAT-cover.svg`; siblings need authoring.
+- **Cover artwork for TST / LogA / ELI** — AAT's cover lives at `01-aat-core/AAT-cover.svg`; siblings need authoring.
 - **Dependency-graph SVG → PDF pipeline for image rendering** — separate piece similar to cover artwork; `rsvg-convert` invocation.
 - **Table-rendering polish** — narrow-direction adaptation, snap-to-content-width epsilon, source-side math reflow for inherently-wider-than-page equations. In-source TODOs at `bin/lib/segment_renderer.rb` `convert_table` block. The current rendering handles the common cases; these are residual edge-case improvements.
 - **Tighter typography candidates** — status badges / stage glyphs on appendix-chapter headings (currently a small indicator strip below the chapter glyph); `\l@appendixchapter` style for tighter ToC entries; etc. Cosmetic.

@@ -21,7 +21,7 @@ ROOT_DIR = Pathname.new(__dir__).parent.expand_path
 META_FILENAME = 'mono-meta.yaml'
 
 VOLUME_DIRS = {
-  '01' => '01-aad-core',         'aad' => '01-aad-core',
+  '01' => '01-aat-core',         'aad' => '01-aat-core',
   '02' => '02-tst-core',         'tst' => '02-tst-core',
   '03' => '03-logogenic-agents', 'loga' => '03-logogenic-agents', 'logogenic' => '03-logogenic-agents',
   '04' => '04-eli',              'eli' => '04-eli',

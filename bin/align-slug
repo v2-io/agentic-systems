@@ -58,7 +58,7 @@ require 'pathname'
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path.freeze
 
 COMPONENT_SRCS = %w[
-  01-aad-core/src
+  01-aat-core/src
   02-tst-core/src
   03-logogenic-agents/src
   04-logozoetic-agents/src

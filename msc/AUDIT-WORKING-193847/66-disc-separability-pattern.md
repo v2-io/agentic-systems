@@ -20,7 +20,7 @@ If AAD's core claim is that it provides "structural repair" for when separabilit
 *Constructive repair:* The text should distinguish between "Internal Repairs" (where AAD provides the mathematical fix, like the L1' mixture form) and "External Admissions" (where AAD defines the boundary and imports a known solution from another field). This would sharpen the "Structured Repair" column by separating AAD's novel contributions from its successful integrations.
 
 **4. What direction will the theory take next?**
-This completes the `01-aad-core` audit. The next logical step is `02-tst-core`, which the text explicitly mentions is an instance of the separability pattern (Software as the separable core).
+This completes the `01-aat-core` audit. The next logical step is `02-tst-core`, which the text explicitly mentions is an instance of the separability pattern (Software as the separable core).
 
 **5. What errors should I now watch for?**
 I must watch for the assumption that a "Structured Repair" is always available. The "General Open" column is the most important one: it is the mathematical "No-Go" zone where the framework honestly admits it has no tractable answers. 

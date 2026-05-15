@@ -19,11 +19,11 @@ I audited `src` first and only then used `msc/` to look for additional material 
 
 **Findings**
 
-1. Section II's headline scope is still broader than its actual theorem scope. Problematic passage: `01-aad-core/src/scope-agency.md:14` says adding causal action "unlocks the interventional and purposeful results of Sections II and III," and `01-aad-core/src/def-agent-spectrum.md:30` calls actuated agents "the full scope of AAD." Strongest counterevidence in `src`: `01-aad-core/src/der-causal-hierarchy-requirement.md:30` explicitly narrows to "learning purposeful agents," and `01-aad-core/src/der-directed-separation.md:84` says exact Section II results apply to Class 1 while Class 2 requires the coupled formulation. Status: still real. The caveats exist, but they are scattered; the repo still lacks one stable Section II entry statement naming the true intersection of agency scope, learning-agent scope, and architectural scope. Confidence: high.
+1. Section II's headline scope is still broader than its actual theorem scope. Problematic passage: `01-aat-core/src/scope-agency.md:14` says adding causal action "unlocks the interventional and purposeful results of Sections II and III," and `01-aat-core/src/def-agent-spectrum.md:30` calls actuated agents "the full scope of AAD." Strongest counterevidence in `src`: `01-aat-core/src/der-causal-hierarchy-requirement.md:30` explicitly narrows to "learning purposeful agents," and `01-aat-core/src/der-directed-separation.md:84` says exact Section II results apply to Class 1 while Class 2 requires the coupled formulation. Status: still real. The caveats exist, but they are scattered; the repo still lacks one stable Section II entry statement naming the true intersection of agency scope, learning-agent scope, and architectural scope. Confidence: high.
 
-2. Section III still leans too hard on the timescale heuristic relative to what the composition machinery presently proves. Problematic passage: `01-aad-core/src/post-composition-consistency.md:38` calls timescale separation "a reliable practical test" and says the gap to Tier 1 is "small in common settings." Strongest counterevidence in `src`: `01-aad-core/src/form-composition-closure.md:151` says the bridge lemma needs the stronger incremental sector bound, not just A4, and `01-aad-core/src/der-tempo-composition.md:30` says the closure-defect-to-overhead link is still a sketch and may miss additional coordination costs. Status: still real. The local caveats are honest, but `composition-consistency` still speaks as if the practical/theorem gap is minor in ordinary cases without matching derivational support. Confidence: high.
+2. Section III still leans too hard on the timescale heuristic relative to what the composition machinery presently proves. Problematic passage: `01-aat-core/src/post-composition-consistency.md:38` calls timescale separation "a reliable practical test" and says the gap to Tier 1 is "small in common settings." Strongest counterevidence in `src`: `01-aat-core/src/form-composition-closure.md:151` says the bridge lemma needs the stronger incremental sector bound, not just A4, and `01-aat-core/src/der-tempo-composition.md:30` says the closure-defect-to-overhead link is still a sketch and may miss additional coordination costs. Status: still real. The local caveats are honest, but `composition-consistency` still speaks as if the practical/theorem gap is minor in ordinary cases without matching derivational support. Confidence: high.
 
-3. The mutual-benefit route `(C-iii)` still does not clearly supply the composite objective/state object that downstream composition assumes. Problematic passage: `01-aad-core/src/scope-composite-agent.md:38` defines `(C-iii)` via a relevance variable `Y` and says there is "No explicit common objective," yet `01-aad-core/src/scope-composite-agent.md:50` lets any of `(C-i)/(C-ii)/(C-iii)` establish composite status. Strongest counterevidence in `src`: `01-aad-core/src/form-composition-closure.md:99` narrows downstream requirements by allowing "simpler goal representations" rather than always a full strategy DAG, and `01-aad-core/src/scope-composite-agent.md:70` correctly states that composition applies only where `O_c` is well-defined. Status: still real. Even with the weaker downstream requirement, current `src` does not show how a merely positive-sum `Y` induces the thin `O_c` needed for `G_c`; the issue is under-specification, not just phrasing. Confidence: high.
+3. The mutual-benefit route `(C-iii)` still does not clearly supply the composite objective/state object that downstream composition assumes. Problematic passage: `01-aat-core/src/scope-composite-agent.md:38` defines `(C-iii)` via a relevance variable `Y` and says there is "No explicit common objective," yet `01-aat-core/src/scope-composite-agent.md:50` lets any of `(C-i)/(C-ii)/(C-iii)` establish composite status. Strongest counterevidence in `src`: `01-aat-core/src/form-composition-closure.md:99` narrows downstream requirements by allowing "simpler goal representations" rather than always a full strategy DAG, and `01-aat-core/src/scope-composite-agent.md:70` correctly states that composition applies only where `O_c` is well-defined. Status: still real. Even with the weaker downstream requirement, current `src` does not show how a merely positive-sum `Y` induces the thin `O_c` needed for `G_c`; the issue is under-specification, not just phrasing. Confidence: high.
 
 4. The coupled/logogenic diagnostic story still overstates operational computability. Problematic passage: `03-logogenic-agents/src/result-coupled-diagnostic-framework.md:18` says the diagnostic quantities "can be computed after each coupled update," and `03-logogenic-agents/src/result-coupled-diagnostic-framework.md:40` gives a direct recipe "From `X^(post)`, compute …". Strongest counterevidence in `src`: `03-logogenic-agents/src/result-section-ii-survival.md:127` says statement-level survival is not "operational extractability" and requires separate instrumentation, and `03-logogenic-agents/src/def-coupled-update-dynamics.md:66` says the `M/G` decomposition is post-hoc, analytical, and not generally computable. Status: still real. The framework has the right caveat elsewhere, but this segment still reads like a runtime recipe for quantities that the repo itself treats as analytically reconstructed and instrumentation-dependent. Confidence: high.
 
@@ -45,21 +45,21 @@ I audited `src` first and only then used `msc/` to look for additional material 
 
 ## Gemini
 
-Based on a rigorous, de novo audit of the agentic systems framework in the current repository state (primarily focusing on the `src/` directories of `01-aad-core`, `02-tst-core`, `03-logogenic-agents`, and `04-logozoetic-agents`), along with an integration analysis against the `msc/` directory, here are the findings.
+Based on a rigorous, de novo audit of the agentic systems framework in the current repository state (primarily focusing on the `src/` directories of `01-aat-core`, `02-tst-core`, `03-logogenic-agents`, and `04-logozoetic-agents`), along with an integration analysis against the `msc/` directory, here are the findings.
 
 ### FIRST PASS: Core Framework Audit
 
 Here are the structural findings evaluated strictly against the current repository state (`src/`):
 
 #### Finding 1: The L1 Repair Mechanism Lacks Formal Persistence Guarantees
-- **Problematic Passage:** The framework handles causal insufficiency (correlated failures) by augmenting the DAG with common-cause nodes (L1 repair). However, `01-aad-core/src/example-L1.md` states: *"Sector-condition verification for L1' has not been derived... the full transfer through B.5b is an open item."*
-- **Strongest Counterevidence:** `01-aad-core/src/deriv-graph-structure-uniqueness.md` argues: *"The Correlation Hierarchy... provides the practical framework... L0 formal results transfer to correctly constructed L1 DAGs."* Furthermore, `orient-cascade.md` formally relies on L1 augmentation as the structural repair mechanism in step 5b.
+- **Problematic Passage:** The framework handles causal insufficiency (correlated failures) by augmenting the DAG with common-cause nodes (L1 repair). However, `01-aat-core/src/example-L1.md` states: *"Sector-condition verification for L1' has not been derived... the full transfer through B.5b is an open item."*
+- **Strongest Counterevidence:** `01-aat-core/src/deriv-graph-structure-uniqueness.md` argues: *"The Correlation Hierarchy... provides the practical framework... L0 formal results transfer to correctly constructed L1 DAGs."* Furthermore, `orient-cascade.md` formally relies on L1 augmentation as the structural repair mechanism in step 5b.
 - **Status: Still Real.** The framework leans heavily on L1/L1' as the "practical default" to save the DAG's Markov property from causal insufficiency. Claiming that L0 results transfer to L1 while explicitly noting in a worked example that the transfer is "an open item" and "not derived" means a load-bearing pillar of the strategy layer lacks the Lyapunov stability guarantees of the base theory.
 - **Confidence:** High.
 
 #### Finding 2: Additive Communication Gain is Naive to Adversarial Game Theory
-- **Problematic Passage:** `01-aad-core/src/hyp-communication-gain.md` defines an additive model for trust and communication noise, but admits: *"The additive model captures the defender's response to detected misalignment; it does not model the attacker's optimization over the defender's trust dynamics."*
-- **Strongest Counterevidence:** `01-aad-core/src/der-team-persistence.md` explicitly calls out the limitations of channel independence and notes that adversarial dynamics are a recognized sub-domain of Section III.
+- **Problematic Passage:** `01-aat-core/src/hyp-communication-gain.md` defines an additive model for trust and communication noise, but admits: *"The additive model captures the defender's response to detected misalignment; it does not model the attacker's optimization over the defender's trust dynamics."*
+- **Strongest Counterevidence:** `01-aat-core/src/der-team-persistence.md` explicitly calls out the limitations of channel independence and notes that adversarial dynamics are a recognized sub-domain of Section III.
 - **Status: Still Real.** While the text recognizes the limitation, Section III explicitly claims to cover "adversarial dynamics." Providing a formulation for communication gain that structurally ignores an optimizing adversary leaves a massive theoretical hole in any multi-agent adversarial application.
 - **Confidence:** High.
 
@@ -70,13 +70,13 @@ Here are the structural findings evaluated strictly against the current reposito
 - **Confidence:** High.
 
 #### Finding 4: Causal Sufficiency Necessity is Unproven
-- **Problematic Passage:** `01-aad-core/src/deriv-graph-structure-uniqueness.md` notes: *"The necessity direction — no non-DAG structure... can satisfy P1–P4 plus causal sufficiency — is not established here."*
+- **Problematic Passage:** `01-aat-core/src/deriv-graph-structure-uniqueness.md` notes: *"The necessity direction — no non-DAG structure... can satisfy P1–P4 plus causal sufficiency — is not established here."*
 - **Strongest Counterevidence:** The same file immediately mitigates this: *"For practical purposes this gap is unimportant because the proved sufficiency gives a rigorous grounding for the DAG structure... must-if-sufficient-via-this-route."*
 - **Status: Already Caveated.** The text correctly lowers its epistemic claim to sufficiency rather than necessity.
 - **Confidence:** High.
 
 #### Finding 5: Composition Closure Contraction Assumption
-- **Problematic Passage:** `01-aad-core/src/form-composition-closure.md` states: *"the bridge from sector-bounded correction to full-update-map contraction requires an assumption beyond (A4)..."*
+- **Problematic Passage:** `01-aat-core/src/form-composition-closure.md` states: *"the bridge from sector-bounded correction to full-update-map contraction requires an assumption beyond (A4)..."*
 - **Strongest Counterevidence:** The same file resolves this via a late-breaking update: *"CHARACTERIZED 2026-04-06... The precise additional condition is the incremental sector bound (DA2'a-inc)... Three agent tiers emerge..."*
 - **Status: Already Caveated/Resolved.** The framework explicitly categorizes agents into Tier 1, 2, and 3 based on this exact mathematical gap.
 - **Confidence:** High.
@@ -122,7 +122,7 @@ Three legitimate findings survive the burden-of-proof test. One is subtle and I 
 
 **Confidence: medium-high. Still real. Not tracked in TODO.**
 
-Problematic passage at `01-aad-core/src/form-strategy-complexity-cost.md:42`:
+Problematic passage at `01-aat-core/src/form-strategy-complexity-cost.md:42`:
 
 $$\Sigma_t^\ast = \arg\min_{\Sigma_t} \left[\, I(\mathcal C_t;\, \Sigma_t) \;+\; \beta_\Sigma \cdot D_{\mathrm{KL}}\bigl(Q_{\Sigma_t}(\pi \mid M_t) \,\big\Vert\, \pi^\ast(\cdot \mid M_t)\bigr)\right]$$
 
@@ -162,7 +162,7 @@ The frontmatter appears to use "exact" in the sense "the mapping is well-defined
 
 **Confidence: medium. Ambiguous. Not tracked.**
 
-Problematic passage at `01-aad-core/src/disc-identifiability-floor.md:4`: `status: robust-qualitative`.
+Problematic passage at `01-aat-core/src/disc-identifiability-floor.md:4`: `status: robust-qualitative`.
 
 Internal Epistemic Status at line 95: "*Robust qualitative.* The meta-pattern itself is a *discussion-grade* observation: two derived instances exist… each is a legitimate no-go via external theorem. Whether the pattern is a *generative principle* — whether future AAD work will systematically encounter and derive more instances — is a *hypothesis* that the adjacent open floors test."
 
@@ -202,7 +202,7 @@ Pragmatic suggestion: a #resource-budget segment with $B_t$ as the master variab
 
 **E. The Cox-parallel for graph-structure is explicitly incomplete — and possibly reachable.** #deriv-graph-structure-uniqueness is sufficiency-only. Cox's theorem is necessary-and-sufficient. The necessity direction for AAD would be: any non-DAG structure satisfying P1–P4 plus causal sufficiency is isomorphic to a DAG. Alternative graphical models (factor graphs, junction trees, chain graphs) encode different independence relations; the question is whether the specific independence relation forced by P1–P4 + causal sufficiency requires DAG semantics. I suspect this is provable via Lauritzen's characterization of Markov properties on different graph classes. It would elevate graph-structure-uniqueness from "as strong as current form permits" to a full Cox-style result.
 
-**F. The framework is Section-I-strong, Section-II-backbone-strong, Section-III-sketch.** The asymmetry is honestly acknowledged in the 01-aad-core/OUTLINE.md preamble. But there's a natural move that could pull Section III up: composition closure is the sector-persistence template applied to a projection defect, which is itself a compression operation, which has the same IB shape as $M_t$, $\Sigma_t$, and shared intent ( #disc-compression-operations gets close to this). If the four compressions are unified under one variational problem, and the six persistence results are unified under one Lyapunov template, then composition emerges as a third application of the same machinery rather than new theory. This is O-BP1 + O-BP2's natural extension.
+**F. The framework is Section-I-strong, Section-II-backbone-strong, Section-III-sketch.** The asymmetry is honestly acknowledged in the 01-aat-core/OUTLINE.md preamble. But there's a natural move that could pull Section III up: composition closure is the sector-persistence template applied to a projection defect, which is itself a compression operation, which has the same IB shape as $M_t$, $\Sigma_t$, and shared intent ( #disc-compression-operations gets close to this). If the four compressions are unified under one variational problem, and the six persistence results are unified under one Lyapunov template, then composition emerges as a third application of the same machinery rather than new theory. This is O-BP1 + O-BP2's natural extension.
 
 **G. Two presentational moves that would be disproportionately valuable.**
 

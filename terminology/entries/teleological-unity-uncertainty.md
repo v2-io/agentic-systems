@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [composition, structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/hyp-communication-gain.md
-first_asf_mention: 01-aad-core/src/hyp-communication-gain.md
+primary_source: 01-aat-core/src/hyp-communication-gain.md
+first_asf_mention: 01-aat-core/src/hyp-communication-gain.md
 see_also: [communication-gain, unity-dimensions]
 aliases: []
 do_not_confuse:
@@ -24,4 +24,4 @@ Connects directly to the project's unity vocabulary: $U_{\text{align},ji}$ is un
 
 The broader question of reframing all four uncertainty terms through the unity vocabulary is queued separately (see `msc/naming/mini-lexicon-todo.md`); this entry lands the prose-name change for the most-overloaded term ($U_{\text{align}}$).
 
-Defined in [`#hyp-communication-gain`](../../01-aad-core/src/hyp-communication-gain.md).
+Defined in [`#hyp-communication-gain`](../../01-aat-core/src/hyp-communication-gain.md).

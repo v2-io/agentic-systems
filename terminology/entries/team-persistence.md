@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/der-team-persistence.md
-first_asf_mention: 01-aad-core/src/der-team-persistence.md
+primary_source: 01-aat-core/src/der-team-persistence.md
+first_asf_mention: 01-aat-core/src/der-team-persistence.md
 see_also: [adversarial-destabilization, adaptive-reserve, adaptive-tempo, strategic-tempo, structural-persistence]
 aliases: []
 do_not_confuse: []
@@ -33,4 +33,4 @@ $\gamma$ coupling structure but with positive sign. Three levers for team persis
 individual correction efficiency $\alpha_i$, increase cooperative disturbance reduction, or
 reduce adversarial coupling.
 
-Derived in [`#der-team-persistence`](../../01-aad-core/src/der-team-persistence.md).
+Derived in [`#der-team-persistence`](../../01-aat-core/src/der-team-persistence.md).

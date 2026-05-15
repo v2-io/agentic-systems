@@ -77,7 +77,7 @@ The **lower bound by causal information content** ($I_{\text{causal}}$ appearing
 
 (ii) A theorem connecting directed information of the discourse-DAG to the algorithmic-complexity-asymmetry of forward vs reverse compression. This theorem would have to do real work — it requires linking the structural causal content (C1's $\mathcal{E}_2$ edges) to a quantity that appears in the compression bound.
 
-This is **not** a no-go in the strong sense. It is a **work-not-yet-done**, and the work has a natural home: extending the existing AAD machinery on causal-IB ([`#deriv-causal-ib-lmi`](../../01-aad-core/src/deriv-causal-ib-lmi.md), which uses directed information / mutual-information-rate machinery) to the discourse-DAG case.
+This is **not** a no-go in the strong sense. It is a **work-not-yet-done**, and the work has a natural home: extending the existing AAD machinery on causal-IB ([`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md), which uses directed information / mutual-information-rate machinery) to the discourse-DAG case.
 
 **Honest summary of C3**: directional asymmetry is derived; quantitative-causal-lower-bound is a follow-on. The empirical signature (reversed-language is harder for LLMs) is consistent with the postulate but does not pin down the constant.
 
@@ -87,7 +87,7 @@ This is **not** a no-go in the strong sense. It is a **work-not-yet-done**, and 
 
 This angle was **already AAD-internal** but unsurfaced — it follows directly from existing AAD machinery applied to linguistic data. The contribution of this spike is to make the connection explicit and route it back to the logogenic-agents OUTLINE.
 
-**Setup**. The AAD segment [`#deriv-causal-ib-lmi`](../../01-aad-core/src/deriv-causal-ib-lmi.md) establishes that under information-bottleneck compression of causally-structured data, the bottleneck-optimal representation preserves the causal structure proportional to its predictive contribution. The setup is general — it applies to any data source with underlying causal structure and any IB-optimal compressor.
+**Setup**. The AAD segment [`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md) establishes that under information-bottleneck compression of causally-structured data, the bottleneck-optimal representation preserves the causal structure proportional to its predictive contribution. The setup is general — it applies to any data source with underlying causal structure and any IB-optimal compressor.
 
 **Instantiation on natural-language data**. Take the data source to be a natural-language corpus and the compressor to be any sequence model trained with a next-token-prediction objective (transformer LLM, RNN-LM, etc.). The IB-optimality of next-token-prediction-trained models is approximate but well-studied (Tishby-Zaslavsky 2015; Saxe et al. 2019; Goldfeld et al. 2019, with caveats).
 

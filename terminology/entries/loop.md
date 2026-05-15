@@ -8,8 +8,8 @@ layer: framing-vocabulary
 status: canon
 tags: [cycle_phases]
 source_type: asf
-primary_source: 01-aad-core/src/scope-adaptive-system.md
-first_asf_mention: 01-aad-core/src/scope-adaptive-system.md
+primary_source: 01-aat-core/src/scope-adaptive-system.md
+first_asf_mention: 01-aat-core/src/scope-adaptive-system.md
 see_also: [cycle, adaptive-system]
 aliases: []
 do_not_confuse: []
@@ -22,5 +22,5 @@ is one *traversal* of the loop; the loop is the *closed pathway* that admits
 many cycles.
 
 See
-[`#scope-adaptive-system`](../../01-aad-core/src/scope-adaptive-system.md) for
+[`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md) for
 the loop as the defining feature of adaptive systems.

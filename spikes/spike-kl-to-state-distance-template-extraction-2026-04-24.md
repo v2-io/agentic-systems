@@ -103,7 +103,7 @@ The outputs occupy different objects. Client A's output is a real number (the se
 
 ## §3. Complete client survey
 
-Beyond the two flagged clients, where else in `01-aad-core/src/` does similar machinery appear?
+Beyond the two flagged clients, where else in `01-aat-core/src/` does similar machinery appear?
 
 ### §3.1 Actual Pinsker-using segments (grep-identified)
 

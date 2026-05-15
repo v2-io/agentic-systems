@@ -19,7 +19,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#result-persistence-condition` *(Result, status: exact)*
 
-[`01-aad-core/src/result-persistence-condition.md`](01-aad-core/src/result-persistence-condition.md)
+[`01-aat-core/src/result-persistence-condition.md`](01-aat-core/src/result-persistence-condition.md)
 
 #### The Persistence Condition with Structural / Task-Adequacy Decomposition
 
@@ -43,7 +43,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#der-directed-separation` *(Derived + Scope, status: conditional)*
 
-[`01-aad-core/src/der-directed-separation.md`](01-aad-core/src/der-directed-separation.md)
+[`01-aat-core/src/der-directed-separation.md`](01-aat-core/src/der-directed-separation.md)
 
 #### Pearl-Blanket-Form Architectural Classification with Explicit Class-3 Scope Exit
 
@@ -67,7 +67,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#der-causal-insufficiency-detection` *(Derived, status: conditional)*
 
-[`01-aad-core/src/der-causal-insufficiency-detection.md`](01-aad-core/src/der-causal-insufficiency-detection.md)
+[`01-aat-core/src/der-causal-insufficiency-detection.md`](01-aat-core/src/der-causal-insufficiency-detection.md)
 
 #### On-Policy L0 Insufficiency Is Structurally Undetectable
 
@@ -93,7 +93,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#schema-strategy-persistence` *(Proposed schema, status: sketch)*
 
-[`01-aad-core/src/schema-strategy-persistence.md`](01-aad-core/src/schema-strategy-persistence.md)
+[`01-aat-core/src/schema-strategy-persistence.md`](01-aat-core/src/schema-strategy-persistence.md)
 
 #### The Forgetting Prerequisite for Strategic Persistence
 
@@ -119,7 +119,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#form-composition-closure` *(Formulation, status: conditional)*
 
-[`01-aad-core/src/form-composition-closure.md`](01-aad-core/src/form-composition-closure.md)
+[`01-aat-core/src/form-composition-closure.md`](01-aat-core/src/form-composition-closure.md)
 
 #### Composition-Closure Defect and Bridge Lemma
 
@@ -147,7 +147,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#der-class-coercion-via-wrapping` *(Derived, status: conditional)*
 
-[`01-aad-core/src/der-class-coercion-via-wrapping.md`](01-aad-core/src/der-class-coercion-via-wrapping.md)
+[`01-aat-core/src/der-class-coercion-via-wrapping.md`](01-aat-core/src/der-class-coercion-via-wrapping.md)
 
 #### Constructive Directed Separation via Wrapping
 
@@ -170,7 +170,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#der-class-coercion-in-composition` *(Derived, status: conditional)*
 
-[`01-aad-core/src/der-class-coercion-in-composition.md`](01-aad-core/src/der-class-coercion-in-composition.md)
+[`01-aat-core/src/der-class-coercion-in-composition.md`](01-aat-core/src/der-class-coercion-in-composition.md)
 
 #### Wrapper as Valid AAD Composite Agent with Brooks's-Law Tempo Cost
 
@@ -194,7 +194,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#der-agent-opacity` *(Derived, status: conditional)*
 
-[`01-aad-core/src/der-agent-opacity.md`](01-aad-core/src/der-agent-opacity.md)
+[`01-aat-core/src/der-agent-opacity.md`](01-aat-core/src/der-agent-opacity.md)
 
 #### Agent Opacity ($H_b$) as Dual to Observation Quality ($U_o$)
 
@@ -220,7 +220,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#result-per-dimension-persistence` *(Result, status: conditional)*
 
-[`01-aad-core/src/result-per-dimension-persistence.md`](01-aad-core/src/result-per-dimension-persistence.md)
+[`01-aat-core/src/result-per-dimension-persistence.md`](01-aat-core/src/result-per-dimension-persistence.md)
 
 #### The Weakest-Link Dimensional Persistence Law
 
@@ -248,7 +248,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#result-certificate-existence` *(Result, status: exact)*
 
-[`01-aad-core/src/result-certificate-existence.md`](01-aad-core/src/result-certificate-existence.md)
+[`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
 
 #### The Contraction-Over-Drift Principle, Grounded
 
@@ -267,7 +267,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#deriv-critical-mass-composition` *(Derivation, status: conditional)*
 
-[`01-aad-core/src/deriv-critical-mass-composition.md`](01-aad-core/src/deriv-critical-mass-composition.md)
+[`01-aat-core/src/deriv-critical-mass-composition.md`](01-aat-core/src/deriv-critical-mass-composition.md)
 
 #### Strong Monotonicity as the Hinge for Legitimate Macro-Agent Coarse-Graining
 
@@ -296,7 +296,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#deriv-edge-update-natural-parameter` *(Derivation, status: conditional)*
 
-[`01-aad-core/src/deriv-edge-update-natural-parameter.md`](01-aad-core/src/deriv-edge-update-natural-parameter.md)
+[`01-aat-core/src/deriv-edge-update-natural-parameter.md`](01-aat-core/src/deriv-edge-update-natural-parameter.md)
 
 #### Log-Odds as Uniquely-Forced Edge-Update Coordinate
 
@@ -318,7 +318,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#disc-stability-certificate` *(Discussion, status: discussion-grade)*
 
-[`01-aad-core/src/disc-stability-certificate.md`](01-aad-core/src/disc-stability-certificate.md)
+[`01-aat-core/src/disc-stability-certificate.md`](01-aat-core/src/disc-stability-certificate.md)
 
 #### The Cross-Sectional Meta-Patterns Are Facets of One Stability Certificate
 
@@ -339,7 +339,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#disc-identifiability-floor` *(Discussion, status: discussion-grade)*
 
-[`01-aad-core/src/disc-identifiability-floor.md`](01-aad-core/src/disc-identifiability-floor.md)
+[`01-aat-core/src/disc-identifiability-floor.md`](01-aat-core/src/disc-identifiability-floor.md)
 
 #### The Identifiability Floor as Cross-Cutting Meta-Pattern
 
@@ -381,7 +381,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#disc-additive-coordinate-forcing` *(Discussion, status: discussion-grade)*
 
-[`01-aad-core/src/disc-additive-coordinate-forcing.md`](01-aad-core/src/disc-additive-coordinate-forcing.md)
+[`01-aat-core/src/disc-additive-coordinate-forcing.md`](01-aat-core/src/disc-additive-coordinate-forcing.md)
 
 #### Cross-Layer Coordinate Forcing on Legendre-Fenchel Geometry
 
@@ -404,7 +404,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#deriv-observation-ambiguity-bias-bound` *(Derivation, status: conditional)*
 
-[`01-aad-core/src/deriv-observation-ambiguity-bias-bound.md`](01-aad-core/src/deriv-observation-ambiguity-bias-bound.md)
+[`01-aat-core/src/deriv-observation-ambiguity-bias-bound.md`](01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)
 
 #### Universal Constant for the Coupled-Agent Bias Bound under Parameterization-Invariance
 
@@ -430,7 +430,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#disc-adversarial-coupling-pressure` *(Discussion, status: discussion-grade)*
 
-[`01-aad-core/src/disc-adversarial-coupling-pressure.md`](01-aad-core/src/disc-adversarial-coupling-pressure.md)
+[`01-aat-core/src/disc-adversarial-coupling-pressure.md`](01-aat-core/src/disc-adversarial-coupling-pressure.md)
 
 #### Adversarial Coupling Pressure as Use-Case Expansion of Coupled Formulation
 
@@ -448,7 +448,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#result-contraction-template` *(Result, status: conditional)*
 
-[`01-aad-core/src/result-contraction-template.md`](01-aad-core/src/result-contraction-template.md)
+[`01-aat-core/src/result-contraction-template.md`](01-aat-core/src/result-contraction-template.md)
 
 #### Topology-Indexed Compositional Closures via Contraction-Metric Generalization
 
@@ -478,7 +478,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#deriv-causal-ib-exploration` *(Derivation, status: conditional)*
 
-[`01-aad-core/src/deriv-causal-ib-exploration.md`](01-aad-core/src/deriv-causal-ib-exploration.md)
+[`01-aat-core/src/deriv-causal-ib-exploration.md`](01-aat-core/src/deriv-causal-ib-exploration.md)
 
 #### Survival-Imperative Exploration as Lyapunov-Forced Drive
 
@@ -501,7 +501,7 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ### `#deriv-causal-ib-lmi` *(Derivation, status: conditional)*
 
-[`01-aad-core/src/deriv-causal-ib-lmi.md`](01-aad-core/src/deriv-causal-ib-lmi.md)
+[`01-aat-core/src/deriv-causal-ib-lmi.md`](01-aat-core/src/deriv-causal-ib-lmi.md)
 
 #### Matrix Lift of the Survival-Imperative Constraint via Fisher-Information LMI
 

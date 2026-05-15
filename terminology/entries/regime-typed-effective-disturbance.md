@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [composition, structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/der-interaction-channel-classification.md
-first_asf_mention: 01-aad-core/src/der-interaction-channel-classification.md
+primary_source: 01-aat-core/src/der-interaction-channel-classification.md
+first_asf_mention: 01-aat-core/src/der-interaction-channel-classification.md
 see_also: [communication-gain, adversarial-destabilization]
 aliases: ["effective disturbance (when regime-typed decomposition is in scope)"]
 do_not_confuse:
@@ -29,6 +29,6 @@ The compound decomposition is:
 
 $$\rho_B^{\text{eff}} = \underbrace{\sum_{\text{II-a}}}_{\text{magnitude}} + \underbrace{\sum_{\text{II-b}}}_{\text{structural floor}} + \underbrace{\sum_{\text{III}}}_{\text{ambient}} - \underbrace{\sum_{\text{I}}}_{\text{informative correction}}$$
 
-Three independent boundaries (I-a, I-b, I-c) in AAD-native quantities define the regime classification — see [`#der-interaction-channel-classification`](../../01-aad-core/src/der-interaction-channel-classification.md).
+Three independent boundaries (I-a, I-b, I-c) in AAD-native quantities define the regime classification — see [`#der-interaction-channel-classification`](../../01-aat-core/src/der-interaction-channel-classification.md).
 
 The bare term *effective disturbance* (without the regime-typed qualifier) remains the standard control-theory handle and is correctly used in segments where the AAD-internal regime decomposition is not in scope (e.g., generic Lyapunov persistence statements, cross-domain transfer discussions).

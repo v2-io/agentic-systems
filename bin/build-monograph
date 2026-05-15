@@ -104,7 +104,7 @@ META_FILENAME  = 'mono-meta.yaml'
 # with title / short_title / slug / major / minor / patch / cover_svg.
 # This table maps the CLI volume id (slug or numeric prefix) to its dir.
 VOLUME_REGISTRY = [
-  { dir: '01-aad-core',         id_aliases: %w[01 aad] },
+  { dir: '01-aat-core',         id_aliases: %w[01 aad] },
   { dir: '02-tst-core',         id_aliases: %w[02 tst] },
   { dir: '03-logogenic-agents', id_aliases: %w[03 loga logogenic] },
   { dir: '04-eli',              id_aliases: %w[04 eli] },

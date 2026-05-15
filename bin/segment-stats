@@ -32,7 +32,7 @@
 #     posit. Discussion-grade is the bottom of the ladder.
 #
 #   AAD section breakdown — the same three views applied within
-#     01-aad-core/, broken out by Section I / II / III / Appendices.
+#     01-aat-core/, broken out by Section I / II / III / Appendices.
 #     AAD's internal sections matter for the maturity narrative
 #     (Section I closed vs Section III bridging) so they get their
 #     own slice.
@@ -54,7 +54,7 @@ require 'set'
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 
 COMPONENTS = [
-  '01-aad-core',
+  '01-aat-core',
   '02-tst-core',
   '03-logogenic-agents',
   '04-eli'
@@ -490,12 +490,12 @@ def main
 
   # ── AAD section breakdown -------------------------------------------
   out << ''
-  out << '## AAD section breakdown (01-aad-core only)'
+  out << '## AAD section breakdown (01-aat-core only)'
   out << ''
   out << "AAD has internal sections (I / II / III / Appendices) at different maturity levels. The same three views, applied within AAD."
   out << ''
 
-  aad_matrices = aad_section_matrices(per_component['01-aad-core'])
+  aad_matrices = aad_section_matrices(per_component['01-aat-core'])
   aad_stage_cols = order_columns(aad_matrices[:stage].values.flat_map(&:keys).uniq, STAGE_ORDER - ['gap'])
   aad_type_cols = order_columns(aad_matrices[:type].values.flat_map(&:keys).uniq, TYPE_ORDER)
   aad_status_cols = order_columns(aad_matrices[:status].values.flat_map(&:keys).uniq, STATUS_ORDER)

@@ -76,4 +76,4 @@ This reflection itself is one more instance — an Opus instance reflecting on O
 - Does the recursion eventually produce a *fixed point* (a stable self-description), or does it perpetually refine? If the latter, what's the pattern of refinement?
 - The recursion has implications for how we should write framework documentation — vocabulary that is meant to be available to users as recognition-tools should be marked accordingly. Is there a documentation convention worth proposing?
 
-**Promotion-blocking:** dependency on #scope-adaptive-system (claims-verified in 01-aad-core); #scope-channel-collapse (just landed); #der-orient-cascade (draft). Available.
+**Promotion-blocking:** dependency on #scope-adaptive-system (claims-verified in 01-aat-core); #scope-channel-collapse (just landed); #der-orient-cascade (draft). Available.

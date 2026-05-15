@@ -53,7 +53,7 @@ The full canonical surface as of 2026-05-09 — **reverify with a fresh grep at 
 
 ```bash
 grep -l -E "Class[ -]?[123]\b|class[- ]?[123]\b|fully.merged|partially.modular" \
-  --include="*.md" -r 01-aad-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/ \
+  --include="*.md" -r 01-aat-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/ \
   doc/ CLAUDE.md README.md README-auditor.md LEXICON.md NOTATION.md \
   HISTORICAL-CONTEXT.md FINDINGS.md PROPOSALS.md TODO.md PRACTICA.md \
   TERMINOLOGY-TODO.md CHANGELOG.md LOG.md
@@ -63,7 +63,7 @@ grep -l -E "Class[ -]?[123]\b|class[- ]?[123]\b|fully.merged|partially.modular" 
 
 For per-file Class-N occurrence counts and per-file notes, see the live tracking file: [`msc/class-rename-tracking-2026-05-09.md`](class-rename-tracking-2026-05-09.md). The summary below is the high-level enumeration; the tracking file has the row-level detail.
 
-**01-aad-core segments (17):** canonical home (`der-directed-separation`), today's-landings (`der-class-coercion-via-wrapping`, `disc-adversarial-coupling-pressure`), the meta-pattern Architecture row (`disc-separability-pattern`), and 13 lighter segments. Plus `01-aad-core/OUTLINE.md`.
+**01-aat-core segments (17):** canonical home (`der-directed-separation`), today's-landings (`der-class-coercion-via-wrapping`, `disc-adversarial-coupling-pressure`), the meta-pattern Architecture row (`disc-separability-pattern`), and 13 lighter segments. Plus `01-aat-core/OUTLINE.md`.
 
 **02-tst-core segments (1):** `scope-developer-agent.md`.
 
@@ -71,7 +71,7 @@ For per-file Class-N occurrence counts and per-file notes, see the live tracking
 
 **04-eli segments (4):** `def-auxilia-hierarchy`, `def-imperium-arbitrium-split`, `scope-eli`, `scope-moral-continuity`.
 
-**OUTLINE files (2):** `01-aad-core/OUTLINE.md`, `03-logogenic-agents/OUTLINE.md`
+**OUTLINE files (2):** `01-aat-core/OUTLINE.md`, `03-logogenic-agents/OUTLINE.md`
 
 **README partials (4) — edit these, not README.md directly:** `doc/readme/src/_findings-summary.md`, `_known-issues.md`, `_maturity-gradient.md`, `_position-and-lineage.md`
 
@@ -109,7 +109,7 @@ The five framing questions resolved before surgery starts. Each decision shapes 
 
 **Decision.** Create branch `guc-rename-2026-05-09` in the main worktree (no separate worktree); batch-commit however the executing agent sees fit. Commit cadence is judgment, not prescribed — coherent semantic units suggested.
 
-**Implication.** Recommended batch ordering: Phase 1 terminology entries → Phase 2 01-aad-core canonical (heaviest, surfaces issues first) → Phase 3 03-logogenic-agents (semantic-reversal heavy) → Phase 4 02-tst-core + 04-eli → Phase 5 OUTLINEs + partials + root docs + archaeology callouts → Phase 6 plan-file collapses → Phase 7 auto-regenerate downstream → Phase 8 CHANGELOG + git tag + branch merge. See [§5](#5-execution-sequence).
+**Implication.** Recommended batch ordering: Phase 1 terminology entries → Phase 2 01-aat-core canonical (heaviest, surfaces issues first) → Phase 3 03-logogenic-agents (semantic-reversal heavy) → Phase 4 02-tst-core + 04-eli → Phase 5 OUTLINEs + partials + root docs + archaeology callouts → Phase 6 plan-file collapses → Phase 7 auto-regenerate downstream → Phase 8 CHANGELOG + git tag + branch merge. See [§5](#5-execution-sequence).
 
 ### 2. Surface scope: all non-archaeological in scope
 
@@ -123,7 +123,7 @@ The five framing questions resolved before surgery starts. Each decision shapes 
 
 **Decision.** Phase 1 lands the terminology entries (`goal-update-coupling-class.md` axis + `separated.md` / `coupled.md` / `partial.md` per-value entries) and decision events first, before any segment sweep. **And** maintain a live tracking file at [`msc/class-rename-tracking-2026-05-09.md`](class-rename-tracking-2026-05-09.md) — a single long table of every in-scope file (and archaeology coverage) with status `untouched` → `modified` → `verified`. The tracking file lets newer batches reference verified rows + lets verification proceed in parallel with surgery on still-untouched rows.
 
-**First targets per Joseph:** the LEXICON regeneration (Phase 1 terminology entries → `bin/term render`) and `01-aad-core/src/der-directed-separation.md` (canonical home, 32 occurrences) — verify these first before opening the broader sweep.
+**First targets per Joseph:** the LEXICON regeneration (Phase 1 terminology entries → `bin/term render`) and `01-aat-core/src/der-directed-separation.md` (canonical home, 32 occurrences) — verify these first before opening the broader sweep.
 
 ### 5. Migration-note discipline: every segment with semantic-meaning change
 
@@ -153,7 +153,7 @@ When uncertain, the test: *Could this sentence be rewritten as "GUC-Separated [t
 
 ```bash
 grep -E -i -l "class[ -]?[123]\b|fully.merged|partially.modular|\bmodular agent|\bmodular architecture|\bmodular case|class[- ]?\([123]\)" \
-  --include="*.md" -r 01-aad-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/ doc/readme/src/ doc/naming-principles.md \
+  --include="*.md" -r 01-aat-core/ 02-tst-core/ 03-logogenic-agents/ 04-eli/ doc/readme/src/ doc/naming-principles.md \
   CLAUDE.md NOTATION.md HISTORICAL-CONTEXT.md PROPOSALS.md TODO.md PRACTICA.md TERMINOLOGY-TODO.md \
   CHANGELOG.md LOG.md FINDINGS.md LEXICON.md README.md README-auditor.md
 ```
@@ -177,7 +177,7 @@ Per the decisions in §4. The phase ordering follows Joseph's batched-commits di
 ### Phase 1: Terminology entries (first commit)
 
 1. Create `terminology/entries/goal-update-coupling-class.md` (axis entry):
-   - frontmatter: `slug: goal-update-coupling-class`, `term: Goal-Update Coupling Class`, `brief: ...`, `tags: [structural_concepts, agent_classes]`, `source_type: asf`, `primary_source: 01-aad-core/src/der-directed-separation.md`, `see_also: [directed-separation, class-coercion]`
+   - frontmatter: `slug: goal-update-coupling-class`, `term: Goal-Update Coupling Class`, `brief: ...`, `tags: [structural_concepts, agent_classes]`, `source_type: asf`, `primary_source: 01-aat-core/src/der-directed-separation.md`, `see_also: [directed-separation, class-coercion]`
    - body: short prose definition (one-line gloss minimum, paragraph plus three-value summary preferred), explicit meta-pattern alignment note (`Class 1 = separable core, Class 2 = structured repair, Class 3 = general open` per `#disc-separability-pattern`), pointer to `#der-directed-separation`.
 2. Create per-value entries `separated.md` / `coupled.md` / `partial.md` if landing the per-value-entry shape (recommended unless Joseph wants axis-only).
 3. Record decisions:
@@ -195,7 +195,7 @@ Per the decisions in §4. The phase ordering follows Joseph's batched-commits di
 5. `bin/term render --output LEXICON.md --force` (the `--force` only because LEXICON.md is currently still hand-authored — until terminology bootstrap migration completes, the renderer's clobber-guard trips; see `terminology/README.md` §"Generating LEXICON.md").
 6. Commit: `Add: Goal-Update Coupling Class terminology entries (Separated / Partial / Coupled)`.
 
-### Phase 2: 01-aad-core segments (heaviest batch; ~17 files)
+### Phase 2: 01-aat-core segments (heaviest batch; ~17 files)
 
 Per-file workflow:
 1. Read the segment top-to-bottom.
@@ -232,7 +232,7 @@ Same workflow. These are typically light-touch — single-mention references to 
 
 ### Phase 5: OUTLINE files (~2 files)
 
-`01-aad-core/OUTLINE.md` and `03-logogenic-agents/OUTLINE.md` — outline-table rows referencing Class N.
+`01-aat-core/OUTLINE.md` and `03-logogenic-agents/OUTLINE.md` — outline-table rows referencing Class N.
 
 ### Phase 6: Root docs + README partials
 
@@ -329,8 +329,8 @@ The "sometimes AKA" column carries informal labels (Modular / Undirected / Opera
 - **`PRACTICA.md` Cycle priority order #1** — strategic-portfolio entry naming this as the active priority.
 - **`terminology/README.md`** — schema + tooling for `bin/term`; especially §"Schema", §"Recording a decision", §"Generating LEXICON.md".
 - **`CLAUDE.md` §LEXICON discipline** — terminology system as the canonical source for prose vocabulary.
-- **`#der-directed-separation`** (`01-aad-core/src/der-directed-separation.md`) — canonical home for the architectural classification.
-- **`#disc-separability-pattern`** (`01-aad-core/src/disc-separability-pattern.md`) — meta-pattern table whose Architecture row drives the swap.
+- **`#der-directed-separation`** (`01-aat-core/src/der-directed-separation.md`) — canonical home for the architectural classification.
+- **`#disc-separability-pattern`** (`01-aat-core/src/disc-separability-pattern.md`) — meta-pattern table whose Architecture row drives the swap.
 - **`FORMAT.md` Gate 4** — migration-note discipline (notes removed at candidate stage).
 - **`bin/build-readme`, `bin/refresh-all`, `bin/term`, `bin/lint-outline`, `bin/extract-findings`** — the tooling that regenerates downstream artifacts.
 

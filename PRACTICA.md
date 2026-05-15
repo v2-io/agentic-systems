@@ -7,7 +7,7 @@
 - [ ] ⭐ [TODO](TODO.md)
 - [ ] [PROPOSALS](PROPOSALS.md)
 - [ ] Principle Theory, Structure, & Dependency Graphs (via feedback & audits)
-  1. [AAT OUTLINE](01-aad-core/OUTLINE.md),  Segment Refinement & Promotion
+  1. [AAT OUTLINE](01-aat-core/OUTLINE.md),  Segment Refinement & Promotion
   2. [TST OUTLINE](02-tst-core/OUTLINE.md), Segment Refinement & Promotion
   3. [LOGOGENIC OUTLINE](03-logogenic-agents/OUTLINE.md), Segment Refinement & Promotion
   4. [ELI OUTLINE](04-eli/OUTLINE.md), Segment Refinement & Promotion

@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/disc-credit-assignment-boundary.md
-first_asf_mention: 01-aad-core/src/disc-credit-assignment-boundary.md
+primary_source: 01-aat-core/src/disc-credit-assignment-boundary.md
+first_asf_mention: 01-aat-core/src/disc-credit-assignment-boundary.md
 see_also: [strategy-dag, strategic-tempo, strategy-persistence]
 aliases: []
 do_not_confuse: []
@@ -44,4 +44,4 @@ The primary practical insight: credit assignment is an **observability design pr
 an algorithm design problem. Strategies with observable intermediates (instrumented plans,
 OKRs, staged rollouts) sidestep the intractability entirely.
 
-Discussed in [`#disc-credit-assignment-boundary`](../../01-aad-core/src/disc-credit-assignment-boundary.md).
+Discussed in [`#disc-credit-assignment-boundary`](../../01-aat-core/src/disc-credit-assignment-boundary.md).

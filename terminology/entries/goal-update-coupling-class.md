@@ -8,8 +8,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, agent_classes]
 source_type: asf
-primary_source: 01-aad-core/src/der-directed-separation.md
-first_asf_mention: 01-aad-core/src/der-directed-separation.md
+primary_source: 01-aat-core/src/der-directed-separation.md
+first_asf_mention: 01-aat-core/src/der-directed-separation.md
 see_also: [directed-separation, class-coercion, wrapping-regime, separated, partial, coupled]
 aliases: ["GUC Class", "GUC axis"]
 do_not_confuse:
@@ -18,13 +18,13 @@ do_not_confuse:
 ---
 
 The **Goal-Update Coupling Class** (GUC Class) is the axis that the directed-separation condition of
-[`#der-directed-separation`](../../01-aad-core/src/der-directed-separation.md) measures. It names how
+[`#der-directed-separation`](../../01-aat-core/src/der-directed-separation.md) measures. It names how
 much an agent's epistemic update $f_M$ is entangled with its goal state $G_t$ — a structural
 property, not a parametric quantity to be tuned.
 
 Three values, running cleanest → middle → worst (aligned with the numbering convention across all six
 AAD taxonomy ladders; see the meta-pattern at
-[`#disc-separability-pattern`](../../01-aad-core/src/disc-separability-pattern.md)):
+[`#disc-separability-pattern`](../../01-aat-core/src/disc-separability-pattern.md)):
 
 | Class | Name | Property |
 |---|---|---|

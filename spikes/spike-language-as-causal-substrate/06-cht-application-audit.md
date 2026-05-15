@@ -133,7 +133,7 @@ The CHT step is the strongest part of Theorem 1. After this audit, my confidence
 
 ## Connection to AAD's broader identifiability machinery
 
-The CHT application here is a specific instance of the project's broader [`#disc-identifiability-floor`](../../01-aad-core/src/disc-identifiability-floor.md) machinery — non-reduction at a particular causal-information layer. The audit's general principle (distinguish the variable-set at which non-reduction is claimed) is exactly the same discipline that operates in the identifiability-floor instance triage.
+The CHT application here is a specific instance of the project's broader [`#disc-identifiability-floor`](../../01-aat-core/src/disc-identifiability-floor.md) machinery — non-reduction at a particular causal-information layer. The audit's general principle (distinguish the variable-set at which non-reduction is claimed) is exactly the same discipline that operates in the identifiability-floor instance triage.
 
 The discourse-DAG construction in this spike is candidate **6th instance** of the identifiability-floor meta-segment (after the five existing instances at L1-L5). Specifically: at the *linguistic-encoding layer*, the joint distribution of event-variables alone is observationally equivalent for SCMs with different causal directions; the marker structure is the *escape mechanism* that grants Level 2 access — analogous to how the loop escapes the observational floor at the operational layer (Instance 1) or how Kalman-Ho ambiguity is the canonical agent-internal architectural floor (Instance 4).
 

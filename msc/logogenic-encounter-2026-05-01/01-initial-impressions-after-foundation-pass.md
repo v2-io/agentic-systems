@@ -77,7 +77,7 @@ The **"principled or just pointing out the obvious?"** question dissolves under 
 
 Not the segment claims (many are written or proposed). Not the technical apparatus (coupled-survival, bias-bound, ambiguity-modulation). What's missing is **the connecting derivation arc** — the line of reasoning that says, starting from sequence-completion as a primitive output, here is how each subsequent capability emerges as a structural consequence of recursion + AAD's machinery, and here is where each emergence brings a new sub-scope (and possibly a new floor: a capability that is *forced*, vs. one that is *reachable*, vs. one that *fails by construction*).
 
-This would put 03 on the same epistemic footing as 01-aad-core: claim-by-claim with explicit derivation tier and scope condition. The current 03 outline mostly has scope/observation/result-shaped slugs but the *chain of reasoning* that makes them a single argument is implicit.
+This would put 03 on the same epistemic footing as 01-aat-core: claim-by-claim with explicit derivation tier and scope condition. The current 03 outline mostly has scope/observation/result-shaped slugs but the *chain of reasoning* that makes them a single argument is implicit.
 
 ## Three candidate framings for the 03 preamble rewrite
 

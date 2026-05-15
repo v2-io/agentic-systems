@@ -15,7 +15,7 @@ I am treating those as spoiler contamination and noting them here so future read
 
 The framework appears to have a strong asymmetry by component:
 
-1. `01-aad-core/` is the load-bearing mathematical body.
+1. `01-aat-core/` is the load-bearing mathematical body.
    Section I looks like the most exact and internally coherent layer: the adaptive loop, mismatch, gain, tempo, sector condition, persistence, and structural adaptation.
    Section II looks like an exact-to-conditional extension for purposeful agents, with the architectural scope restriction doing a large amount of work.
    Section III looks like the most fertile and fragile area: composition, multi-agent interaction, adversariality, and unity-based closure.
@@ -42,7 +42,7 @@ Logogenic Agents then revisits the architecture once the modularity condition br
 
 ## Predictions by component
 
-### `01-aad-core/`
+### `01-aat-core/`
 
 #### Section I
 

@@ -4,7 +4,7 @@
 
 **Date**: 2026-04-22.
 
-**Depends on**: `01-aad-core/OUTLINE.md`; the AAD core segments listed in §B; `msc/architectural-proposals-2026-04-22.md` (G-BP1, G-BP2, G-BP3, O-BP2); `spikes/spike-ib-unification-plan.md` (the precedent the tier-strength analysis parallels); `_obs/02-prior-art-assessment.md` (prior thin engagement with active inference, pre-AAD).
+**Depends on**: `01-aat-core/OUTLINE.md`; the AAD core segments listed in §B; `msc/architectural-proposals-2026-04-22.md` (G-BP1, G-BP2, G-BP3, O-BP2); `spikes/spike-ib-unification-plan.md` (the precedent the tier-strength analysis parallels); `_obs/02-prior-art-assessment.md` (prior thin engagement with active inference, pre-AAD).
 
 **Deliverable**: positioning argument plus per-claim mapping plus tier-strength recommendation on G-BP2, all comparable in shape to the IB-unification spike so Joseph can hold the two scoping decisions side by side.
 

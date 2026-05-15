@@ -34,7 +34,7 @@ The maturity gradient is honest: §I closed, §II diagnostic with maturing opera
 
 **Predictions about each component's contents:**
 
-*01-aad-core, Section I (~29 segments):*
+*01-aat-core, Section I (~29 segments):*
 - I expect a clean derivation of the persistence condition $\alpha > \rho/R$ via Lyapunov sector argument
 - I expect mismatch-decomposition (model error + obs noise) as bias-variance identity
 - I expect optimal update gain to recover Kalman gain in the Gaussian linear case
@@ -43,7 +43,7 @@ The maturity gradient is honest: §I closed, §II diagnostic with maturing opera
 - Adaptive tempo $\mathcal{T} = \nu \cdot \eta^\ast$ defined as a rate
 - Recursive update justified as forced by three constraints (the OUTLINE flagged this as the "strongest result in the theory")
 
-*01-aad-core, Section II (~30 segments):*
+*01-aat-core, Section II (~30 segments):*
 - $X_t = (M_t, G_t)$ split formalized
 - $G_t = (O_t, \Sigma_t)$ split with $\Sigma_t$ as probabilistic AND/OR DAG with single-parameter edges
 - Directed separation as a scope condition (Class 1 / 2 / 3 architecture classification)
@@ -51,7 +51,7 @@ The maturity gradient is honest: §I closed, §II diagnostic with maturing opera
 - Satisfaction gap and control regret as orthogonal diagnostics
 - The graph-structure-uniqueness derivation: 4 postulates + causal sufficiency → Markov DAG (Cox analog)
 
-*01-aad-core, Section III (~17 + GAPs):*
+*01-aat-core, Section III (~17 + GAPs):*
 - Composition closure formulation
 - Adversarial dynamics with tempo advantage (sub-linear / linear / super-linear regimes)
 - Communication gain as trust-weighted Kalman-shaped update
@@ -60,7 +60,7 @@ The maturity gradient is honest: §I closed, §II diagnostic with maturing opera
 - Agent opacity ($H_b$) adopted from Hafez et al. 2026
 - Per-dimension persistence (weakest dimension is bottleneck)
 
-*01-aad-core, Appendices (~28 detail + 6 worked examples):*
+*01-aat-core, Appendices (~28 detail + 6 worked examples):*
 - The 1-anchor-plus-3-theorem additive-coordinate-forcing structure
 - 3 instances of identifiability-floor (CHT, Cramér-Rao, Liberzon)
 - 6-7 ladders in separability pattern

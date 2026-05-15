@@ -11,10 +11,10 @@
 #                 the build converts it to PDF via rsvg-convert and emits
 #                 it as the cover page
 
-title:       "AAD: Adaptation and Actuation Dynamics"
-short_title: AAD
-slug:        aad
+title:       "AAT: Adaptation & Actuation Theory"
+short_title: AAT
+slug:        aat
 major:       0
 minor:       2
 patch:       0
-cover_svg:   AAD-cover.svg
+cover_svg:   AAT-cover.svg

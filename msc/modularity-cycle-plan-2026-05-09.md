@@ -1,7 +1,7 @@
 # Modularity-as-Contested-Property Cycle: Integration Plan
 
 **Status**: drafted 2026-05-09; pending Joseph's decision to execute.
-**Origin**: emerged at the end of the class-coercion-wrapping integration cycle (`spikes/class-coercion-wrapping/INTEGRATION-PLAN.md`) when uncommitted parallel work — `01-aad-core/src/disc-adversarial-coupling-pressure.md` (drafted via different Opus instance during the same session) and `spikes/spike-strategic-self-coupling.md` (sister spike) — was inspected and found to converge structurally with the class-coercion construction.
+**Origin**: emerged at the end of the class-coercion-wrapping integration cycle (`spikes/class-coercion-wrapping/INTEGRATION-PLAN.md`) when uncommitted parallel work — `01-aat-core/src/disc-adversarial-coupling-pressure.md` (drafted via different Opus instance during the same session) and `spikes/spike-strategic-self-coupling.md` (sister spike) — was inspected and found to converge structurally with the class-coercion construction.
 **Posture**: clean theory and unification, integration content. The work is naming a meta-pattern that has emerged across multiple parallel collaborator probes; AAD's contribution is the recognition and integration, not novel content beyond what each segment carries.
 
 ---
@@ -10,9 +10,9 @@
 
 Three pieces of work landed in the repo on 2026-05-09 from independent collaborator probes:
 
-1. **`#der-class-coercion-via-wrapping`** (`01-aad-core/src/`, this Opus instance, integrated). Constructive route from Class-2/3 components to Class-1 composites via external scaffold; W₀/W₂/W₁ regime hierarchy; structural-vs-behavioral leakage bounds.
+1. **`#der-class-coercion-via-wrapping`** (`01-aat-core/src/`, this Opus instance, integrated). Constructive route from Class-2/3 components to Class-1 composites via external scaffold; W₀/W₂/W₁ regime hierarchy; structural-vs-behavioral leakage bounds.
 
-2. **`#disc-adversarial-coupling-pressure`** (`01-aad-core/src/`, parallel Opus instance, **drafted but unregistered in OUTLINE — orphan**). Adversarial pressure as the externally-driven force that drives target coupling; identity-binding / affect / sunk-cost mechanisms; directional diagnostic corruption; orient-cascade inversion; defensive scaffolding (peer review, prediction registers, etc.) as the composite-agent restoration move.
+2. **`#disc-adversarial-coupling-pressure`** (`01-aat-core/src/`, parallel Opus instance, **drafted but unregistered in OUTLINE — orphan**). Adversarial pressure as the externally-driven force that drives target coupling; identity-binding / affect / sunk-cost mechanisms; directional diagnostic corruption; orient-cascade inversion; defensive scaffolding (peer review, prediction registers, etc.) as the composite-agent restoration move.
 
 3. **`spikes/spike-strategic-self-coupling.md`** (parallel Opus instance, scope-defined). Sister spike for the *enabling* polarity of coupling — Schelling commitment devices, Ainslie willpower, Akerlof-Kranton identity economics, Frank emotions-as-commitment. The fixed-$\mathcal A$ assumption surfaced; structural extensions M1 ($\mathcal A(\kappa_t)$), M2 (enabling strategy edges), M3 (reversibility cost) named.
 
@@ -46,7 +46,7 @@ Five concrete moves form the cycle. They are interdependent — each makes the o
 
 ### Move 1: Register `#disc-adversarial-coupling-pressure` in OUTLINE
 
-The segment is currently orphaned (lint-outline flags it as the only orphan in the project). It belongs in `01-aad-core/OUTLINE.md`. Two candidate placements:
+The segment is currently orphaned (lint-outline flags it as the only orphan in the project). It belongs in `01-aat-core/OUTLINE.md`. Two candidate placements:
 
 (a) Under Section II as a discussion-grade adjunct to `#der-directed-separation` (it sits at the architecture-classification layer).
 (b) **Recommended:** as a meta-segment alongside `#disc-separability-pattern` and `#disc-identifiability-floor` (it's a meta-pattern that cuts across Section II and Section III rather than a Section II result proper).
@@ -140,10 +140,10 @@ The cycle's success criterion: future agents reading the framework cold can find
 - `spikes/class-coercion-wrapping/INTEGRATION-PLAN.md` — completed integration plan for that spike
 - `spikes/class-coercion-wrapping/99-verdict.md` — verdict synthesis for that spike
 - `spikes/spike-strategic-self-coupling.md` — sister spike defining (P1)–(P4) candidate segments
-- `01-aad-core/src/disc-adversarial-coupling-pressure.md` — drafted, currently orphan in OUTLINE
-- `01-aad-core/src/der-class-coercion-via-wrapping.md` — landed today
-- `01-aad-core/src/der-directed-separation.md` — receives Move 5 update
-- `01-aad-core/OUTLINE.md` — receives Moves 1 and 4 OUTLINE additions
+- `01-aat-core/src/disc-adversarial-coupling-pressure.md` — drafted, currently orphan in OUTLINE
+- `01-aat-core/src/der-class-coercion-via-wrapping.md` — landed today
+- `01-aat-core/src/der-directed-separation.md` — receives Move 5 update
+- `01-aat-core/OUTLINE.md` — receives Moves 1 and 4 OUTLINE additions
 - `msc/FINDINGS-RANKED-DRAFT.md` — receives M4 entry once Move 4 segment lands
 
 This plan is self-contained for handoff: an agent picking it up cold should be able to execute it from this file, the spike directories, and the segment files referenced above.

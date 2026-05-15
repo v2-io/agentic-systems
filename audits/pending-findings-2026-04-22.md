@@ -64,7 +64,7 @@
 
 ### Problematic passage
 
-`01-aad-core/src/der-causal-insufficiency-detection.md` §"The Detection Principle" (lines 21–43):
+`01-aat-core/src/der-causal-insufficiency-detection.md` §"The Detection Principle" (lines 21–43):
 
 > After edge credences converge ($\hat p_k \approx \theta_k$, low gain), the plan-confidence error $\delta_s \approx 0$ — the agent is well-calibrated within the independence model. The agent also observes actual plan outcomes $y_G \in \{0, 1\}$. The **L0 residual** — the gap between the independence-model reference value and actual success — converges to:
 > $$\Phi^{L0} - \bar{y}_G \longrightarrow \begin{cases} +\rho & \text{OR-heavy strategies (overestimation)} \\ -\rho & \text{AND-heavy strategies (underestimation)} \end{cases}$$
@@ -143,7 +143,7 @@ The segment's current claim is reviewer-flagged as structurally incorrect (not j
 
 **Source:** Gemini audit 2026-04-22, Finding 1. **Confidence:** high.
 
-**Problematic passage** (`01-aad-core/src/disc-credit-assignment-boundary.md`, default signal function):
+**Problematic passage** (`01-aat-core/src/disc-credit-assignment-boundary.md`, default signal function):
 
 $$\text{signal}_k(o_t) = p_k + \iota_k \cdot \frac{J_k \cdot (y_G - \hat P_\Sigma)}{\lVert\mathbf{J}\rVert^2}$$
 
@@ -172,7 +172,7 @@ Updating a probability $p_k \in [0, 1]$. The denominator $\lVert\mathbf{J}\rVert
 
 **Source:** Gemini audit 2026-04-22, Finding 2. **Confidence:** high.
 
-**Problematic passage** (`01-aad-core/src/form-strategy-complexity-cost.md`, theoretical objective):
+**Problematic passage** (`01-aat-core/src/form-strategy-complexity-cost.md`, theoretical objective):
 
 $$\Sigma_t^\ast = \arg\min_{\Sigma_t} \left[\, I(\mathcal C_t;\, \Sigma_t) - \beta_\Sigma \cdot I(\Sigma_t;\, \pi^\ast \mid M_t)\right]$$
 
@@ -201,7 +201,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Source:** Codex audit 2026-04-22, Finding 1. **Confidence:** high.
 
-**Problematic passage** (`01-aad-core/src/der-causal-hierarchy-requirement.md`, around line 30):
+**Problematic passage** (`01-aat-core/src/der-causal-hierarchy-requirement.md`, around line 30):
 
 > We restrict attention to **learning purposeful agents** ... All remaining Section II results operate within learning-agent scope.
 
@@ -214,7 +214,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **msc/ lineage (not yet integrated).** `audits/analysis-2026-04-06.md` (line 265) and `spikes/spike-purposeful-agent-derivation.md` (line 648) contain reasoning about the sub-scope but the integration pass has not happened.
 
-**Repair direction.** Reconciliation pass: name the Section II-wide sub-scope explicitly (e.g., $S_{\text{learning}} \subsetneq S_{\text{agency}}$), amend `#scope-agency`, `#def-agent-spectrum`, and the Section II preamble in `01-aad-core/OUTLINE.md` so the narrowing is declared once and inherited by downstream Section II results. 45–60 min.
+**Repair direction.** Reconciliation pass: name the Section II-wide sub-scope explicitly (e.g., $S_{\text{learning}} \subsetneq S_{\text{agency}}$), amend `#scope-agency`, `#def-agent-spectrum`, and the Section II preamble in `01-aat-core/OUTLINE.md` so the narrowing is declared once and inherited by downstream Section II results. 45–60 min.
 
 **Compound with Finding 9.** This and Finding 9 both touch Section II framing at different layers (Finding 4 inside segments; Finding 9 in OUTLINE preamble). A coordinated pass that rewrites the OUTLINE preamble plus the scope declarations in the inner segments is cheaper than two independent fixes.
 
@@ -230,7 +230,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Source:** Codex audit 2026-04-22, Finding 2. **Confidence:** medium.
 
-**Problematic passage** (`01-aad-core/src/der-loop-interventional-access.md`):
+**Problematic passage** (`01-aat-core/src/der-loop-interventional-access.md`):
 
 > Agency-scope agents gain Level 2 access ... through the loop itself. [line 14]
 >
@@ -259,7 +259,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Source:** Codex audit 2026-04-22, Finding 3. **Confidence:** high.
 
-**Problematic passage** (`01-aad-core/src/post-composition-consistency.md` line 38 and following):
+**Problematic passage** (`01-aat-core/src/post-composition-consistency.md` line 38 and following):
 
 > [$\tau_{\text{eq}} \ll \tau_{\text{ext}}$ is] a reliable practical test ... the gap between passing that heuristic and meeting Tier 1 conditions is small in common settings.
 
@@ -352,7 +352,7 @@ Either option resolves the logical gap; the choice depends on whether (C-iii) sh
 
 **Source:** Opus audit 2026-04-22, Finding 3. **Confidence:** medium-high.
 
-**Problematic passage** (`01-aad-core/OUTLINE.md`, Section II preamble):
+**Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 
 > Class 2 (fully merged) agents — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (`#der-directed-separation`) fails by construction. The coupled formulation these agents require is the subject of `03-logogenic-agents/` ... This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II.
 
@@ -474,7 +474,7 @@ Second Codex audit, after the morning audit trio. One finding duplicates Finding
 
 **Problematic passages.**
 
-- `01-aad-core/src/def-strategy-dag.md` line 20: "L1 ... is the practical default in complex domains," and that L0 results transfer exactly to correctly constructed L1 DAGs.
+- `01-aat-core/src/def-strategy-dag.md` line 20: "L1 ... is the practical default in complex domains," and that L0 results transfer exactly to correctly constructed L1 DAGs.
 - Line 122: "The default assumption in complex environments should be L1, not L0."
 
 **Strongest counterevidence in the same segment.**
@@ -572,17 +572,17 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Problematic passages.**
 
-- `01-aad-core/src/scope-agency.md` line 14: "Adding causal action unlocks the interventional and purposeful results of Sections II and III."
-- `01-aad-core/src/def-agent-spectrum.md` line ~30: actuated agents are "the full scope of AAD."
+- `01-aat-core/src/scope-agency.md` line 14: "Adding causal action unlocks the interventional and purposeful results of Sections II and III."
+- `01-aat-core/src/def-agent-spectrum.md` line ~30: actuated agents are "the full scope of AAD."
 
 **Strongest counterevidence in `src/`.**
 
-- `01-aad-core/src/der-causal-hierarchy-requirement.md` line 30 narrows to "learning purposeful agents" (a strict sub-scope of agency).
-- `01-aad-core/src/der-directed-separation.md` line ~84 says exact Section II results apply to Class 1 architectures only; Class 2 requires the coupled formulation.
+- `01-aat-core/src/der-causal-hierarchy-requirement.md` line 30 narrows to "learning purposeful agents" (a strict sub-scope of agency).
+- `01-aat-core/src/der-directed-separation.md` line ~84 says exact Section II results apply to Class 1 architectures only; Class 2 requires the coupled formulation.
 
 **Why this stands.** The caveats exist but are scattered. No segment carries the full intersection statement: agency-scope ∩ learning-agent-scope ∩ Class-1-architecture. A reader following the headline scope claims in `#scope-agency` and `#def-agent-spectrum` over-generalizes; a reader following the per-segment narrowings has to assemble the intersection themselves.
 
-**Repair direction.** Two options: (a) Add the intersection statement to `#scope-agency` Discussion as the canonical Section II scope statement; (b) Promote a small meta-segment `#section-ii-scope-lattice` (or equivalent) that names the lattice once and is referenced from the Section II preamble in `01-aad-core/OUTLINE.md`. Option (b) is structurally cleaner and supports O-BP8 (scope-lattice naming) below.
+**Repair direction.** Two options: (a) Add the intersection statement to `#scope-agency` Discussion as the canonical Section II scope statement; (b) Promote a small meta-segment `#section-ii-scope-lattice` (or equivalent) that names the lattice once and is referenced from the Section II preamble in `01-aat-core/OUTLINE.md`. Option (b) is structurally cleaner and supports O-BP8 (scope-lattice naming) below.
 
 **Subsumed by:** O-BP8 (explicit scope lattice). Partially subsumed by O-BP1 if the template-as-organizing-principle reframing happens to surface the lattice.
 
@@ -618,12 +618,12 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Problematic passage.**
 
-- `01-aad-core/src/example-L1.md` line ~134: "Sector-condition verification for L1' has not been derived (each conditional sub-plan is an L0 DAG whose sector parameters are known, but their weighted combination introduces a $\theta_C$-dependent factor analogous to Prop B.6's $\theta_C$ gating; the full transfer through B.5b is an open item)."
+- `01-aat-core/src/example-L1.md` line ~134: "Sector-condition verification for L1' has not been derived (each conditional sub-plan is an L0 DAG whose sector parameters are known, but their weighted combination introduces a $\theta_C$-dependent factor analogous to Prop B.6's $\theta_C$ gating; the full transfer through B.5b is an open item)."
 
 **Strongest counterevidence in `src/`.**
 
-- `01-aad-core/src/deriv-edge-credence-dynamics.md` Prop B.7 (added 2026-04-22 commit `4d050c8`): derives the L1' sector transfer for observable common cause with explicit five-way-gating $\alpha_{L1'}$ formula.
-- `01-aad-core/src/def-strategy-dag.md` Correlation Hierarchy (updated same commit): four-row table with L1' sector status now "Derived."
+- `01-aat-core/src/deriv-edge-credence-dynamics.md` Prop B.7 (added 2026-04-22 commit `4d050c8`): derives the L1' sector transfer for observable common cause with explicit five-way-gating $\alpha_{L1'}$ formula.
+- `01-aat-core/src/def-strategy-dag.md` Correlation Hierarchy (updated same commit): four-row table with L1' sector status now "Derived."
 
 **Why this stands.** Mechanical integration gap: F13 strengthening landed Prop B.7 but the cross-segment update to `#example-L1` was queued (per `spikes/spike-finding-13-strengthening.md` §8.4) and not performed. The "open" language is now stale; the example is structurally a B.7 instance (the worked example uses observable $C$, satisfying B.7's scope condition).
 
@@ -661,7 +661,7 @@ Six new findings logged below. The seven candidate findings rescinded by the new
 
 **Problematic passage.**
 
-- `01-aad-core/src/form-strategy-complexity-cost.md` line ~42:
+- `01-aat-core/src/form-strategy-complexity-cost.md` line ~42:
 $$\Sigma_t^\ast = \arg\min_{\Sigma_t} \left[\, I(\mathcal C_t;\, \Sigma_t) \;+\; \beta_\Sigma \cdot D_{\mathrm{KL}}\bigl(Q_{\Sigma_t}(\pi \mid M_t) \,\big\Vert\, \pi^\ast(\cdot \mid M_t)\bigr)\right]$$
 - And the Epistemic Status text (line ~123) claiming "the KL form does not have this degeneracy."
 
@@ -693,7 +693,7 @@ Recommended: option (a), with a brief Discussion paragraph noting the directiona
 
 **Problematic passages.**
 
-- `01-aad-core/src/disc-identifiability-floor.md` line 4: `status: robust-qualitative`.
+- `01-aat-core/src/disc-identifiability-floor.md` line 4: `status: robust-qualitative`.
 - Same segment Epistemic Status (line ~95): "*Robust qualitative.* The meta-pattern itself is a *discussion-grade* observation … Whether the pattern is a *generative principle* … is a *hypothesis* …"
 
 **Why this stands.** The single Epistemic Status paragraph labels the meta-pattern three different ways (robust-qualitative, discussion-grade, hypothesis). The frontmatter chooses (i). Each phrasing is defensible on its own; the missing piece is a single non-contradictory statement.

@@ -131,7 +131,7 @@ These were the candidates *before* the RG reframe surfaced. They remain valid as
 
 ## 8. Working agreements for this spike track
 
-- **Math lives in segments, not spikes** (per project convention). This directory is the reasoning trail. Successful results land as appendix segments or new segments under `01-aad-core/src/`.
+- **Math lives in segments, not spikes** (per project convention). This directory is the reasoning trail. Successful results land as appendix segments or new segments under `01-aat-core/src/`.
 - **Honest epistemic labels.** Each result tagged with its tier (Pattern / Hypothesis / Tested / Proved). Failed strengthening attempts documented as failures, not deleted.
 - **Strengthen before softening** (per project convention). If RG-0a Case B (heterogeneous gains) does not show the predicted $K_c$-invariance, attempt to derive a *stronger* characterization before downgrading to "the framing fails."
 - **Self-contained for handoff.** Future-me or future-agent should be able to pick up cold from any file in this directory.

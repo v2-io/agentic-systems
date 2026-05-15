@@ -5531,7 +5531,7 @@
         "OUTLINE.md"
       ],
       "01 AAD core outline md": [
-        "01-aad-core/OUTLINE.md"
+        "01-aat-core/OUTLINE.md"
       ],
       "02 TST core outline md": [
         "02-tst-core/OUTLINE.md"
@@ -5762,7 +5762,7 @@
         "CLAUDE.md §\"Working Conventions\""
       ],
       "outline md 01 AAD core preamble": [
-        "OUTLINE.md (01-aad-core) preamble"
+        "OUTLINE.md (01-aat-core) preamble"
       ],
       "reading AAD": [
         "\"Reading AAD\""

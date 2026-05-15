@@ -8,7 +8,7 @@
 
 **Predecessor spike:** `spikes/spike-finding-13-l1-default-narrowing.md` — softening repair to `#def-strategy-dag` headline. This spike attempts the harder structural move (derive the L1' transfer) before falling back to softening; the softening repair remains valid as a fallback for the non-derived sub-cases.
 
-**Companion material:** `spikes/spike-L1-worked-example.md`; `01-aad-core/src/example-L1.md` (lines 120-136); `01-aad-core/src/def-strategy-dag.md` (Correlation Hierarchy); `01-aad-core/src/deriv-edge-credence-dynamics.md` (Props B.5, B.5b, B.6); `01-aad-core/src/schema-strategy-persistence.md`; `01-aad-core/src/hyp-edge-update-via-gain.md`; `01-aad-core/src/disc-credit-assignment-boundary.md`.
+**Companion material:** `spikes/spike-L1-worked-example.md`; `01-aat-core/src/example-L1.md` (lines 120-136); `01-aat-core/src/def-strategy-dag.md` (Correlation Hierarchy); `01-aat-core/src/deriv-edge-credence-dynamics.md` (Props B.5, B.5b, B.6); `01-aat-core/src/schema-strategy-persistence.md`; `01-aat-core/src/hyp-edge-update-via-gain.md`; `01-aat-core/src/disc-credit-assignment-boundary.md`.
 
 ---
 

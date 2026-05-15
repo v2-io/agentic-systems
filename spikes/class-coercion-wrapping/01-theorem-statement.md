@@ -293,7 +293,7 @@ The theorem promotes `#hyp-directed-separation-under-composition` from hypothesi
 
 Recommended segment-level landings (subject to sub-spike I prior-art results, which may shift the framing):
 
-- **New segment** `01-aad-core/src/der-class-coercion-via-wrapping.md` (or `result-class-coercion-via-wrapping.md`) — statement, proof, conditions, costs.
+- **New segment** `01-aat-core/src/der-class-coercion-via-wrapping.md` (or `result-class-coercion-via-wrapping.md`) — statement, proof, conditions, costs.
 - **Update** `#hyp-directed-separation-under-composition` to cite the constructive result.
 - **Update** `#der-directed-separation` Discussion section to describe the wrapping route (and the cost of taking it).
 - **Cross-component reference** in `03-logogenic-agents/` and `04-eli/` segments — PROPRIUM as canonical instance (sub-spike H).
@@ -313,7 +313,7 @@ Recommended segment-level landings (subject to sub-spike I prior-art results, wh
 - Whether the data-processing inequality bound in §5 is tight or loose. If the wrapper's $f_M$ is invertible, the bound is tight; for compressing $f_M$, the wrapper-level KL may be strictly less than $\kappa$. Worth a check.
 - Whether the (C1) admissibility condition is the *right* characterization — sub-spike B will tell.
 
-**What I would still want before promoting to a `01-aad-core/src/` segment**:
+**What I would still want before promoting to a `01-aat-core/src/` segment**:
 - Sub-spike B: admissibility characterization.
 - Sub-spike C: leakage bound $\kappa$ characterized in usable terms.
 - Sub-spike F + I: empirical instances + prior-art differentiation, to confirm the construction is well-positioned in the existing literature.

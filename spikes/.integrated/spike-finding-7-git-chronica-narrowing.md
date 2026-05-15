@@ -85,7 +85,7 @@ Only inside the target segment itself:
 - `02-tst-core/src/obs-software-epistemic-properties.md:58` — the "Git's scope matches" sentence (target of this repair).
 - `02-tst-core/src/obs-software-epistemic-properties.md:84` — the Discussion paragraph "exact-chronica status of git applies to environment-side content" (target of this repair).
 
-No other segment file in `01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, or `04-eli/src/` repeats either phrase. The overstatement is contained.
+No other segment file in `01-aat-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, or `04-eli/src/` repeats either phrase. The overstatement is contained.
 
 ### 4b. References to P5 from other segments (need consistency review)
 

@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/def-causal-information-yield.md
-first_asf_mention: 01-aad-core/src/def-causal-information-yield.md
+primary_source: 01-aat-core/src/def-causal-information-yield.md
+first_asf_mention: 01-aat-core/src/def-causal-information-yield.md
 see_also: [strategy-dag, update-gain]
 aliases: ["CIY"]
 do_not_confuse: []
@@ -22,6 +22,6 @@ this action teach me something I couldn't have learned by passive observation?"
 and is the unifying objective for the explore / exploit / deliberate trichotomy.
 
 Defined in
-[`#def-causal-information-yield`](../../01-aad-core/src/def-causal-information-yield.md);
+[`#def-causal-information-yield`](../../01-aat-core/src/def-causal-information-yield.md);
 unified-objective discussion at
-[`#disc-ciy-unified-objective`](../../01-aad-core/src/disc-ciy-unified-objective.md).
+[`#disc-ciy-unified-objective`](../../01-aat-core/src/disc-ciy-unified-objective.md).

@@ -34,7 +34,7 @@ This was a hot multi-day cycle with several agents running in parallel — Gemin
 >    * To Promote: `spike-bias-bound-constant-C-strengthening-2026-04-24.md` (which formally derives the constant $C$ for the LLM epistemic bias bound).
 >    * To Promote: `spike-fenchel-bregman-reframe-additive-coordinate-forcing-2026-04-24.md` (which proves why log-odds is the unique additive coordinate for independent evidence, a result repeatedly promised in the main text but never fully derived).
 >    * To Promote: `spike-bridge-lemma-nonlinear-strengthening-2026-04-24.md` (which hardens the composition closure defect math).
->    * Action: These should be promoted directly into the `01-aad-core/src/` appendices (`deriv-bias-bound.md`, `deriv-additive-coordinate-forcing.md`, etc.) to upgrade the core framework's epistemic status from "conditional" to "exact."
+>    * Action: These should be promoted directly into the `01-aat-core/src/` appendices (`deriv-bias-bound.md`, `deriv-additive-coordinate-forcing.md`, etc.) to upgrade the core framework's epistemic status from "conditional" to "exact."
 >
 >   3. Resolving the "Opacity-Gain Tension"
 >   During my audit of Section I, I flagged a fundamental tension: the optimal update gain $\eta^*$ requires knowing the observation noise $U_o$, but the Observation Function definition explicitly forbids the agent from knowing this distribution.

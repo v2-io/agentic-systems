@@ -80,7 +80,7 @@ I generated the README from the pipeline and committed the replacement. The prio
 
 **Worth reconsidering?** A safer approach would have been to leave the prior README in place and write the generated version to `README-NEW.md` for review. I judged the pipeline credible enough (with 6 pilot Findings populating §10) that replacement was honest. If the new README's framing or specific content reads wrong, reverting to the prior is one `git checkout` away.
 
-### J-9. Sunset of `01-aad-core/README.md`
+### J-9. Sunset of `01-aat-core/README.md`
 
 Deleted (per proposal plan + Joseph's reasoning that per-part READMEs aren't natural waypoints). The other component directories (02/03/04) never had READMEs.
 
@@ -140,11 +140,11 @@ The repo doesn't appear to have CI configured (no `.github/workflows/`). Worth a
 
 ### J-18. Commit cadence
 
-Six commits at natural boundaries: proposal commit; doc/ migration; doc/readme/ scaffolding; pipeline scripts + auditor README + FINDINGS stub; pilot Findings + regenerated README; CLAUDE.md updates + 01-aad-core/README sunset. Plus the CHANGELOG commit (this work). Each commit has a substantive multi-line message describing what landed and why.
+Six commits at natural boundaries: proposal commit; doc/ migration; doc/readme/ scaffolding; pipeline scripts + auditor README + FINDINGS stub; pilot Findings + regenerated README; CLAUDE.md updates + 01-aat-core/README sunset. Plus the CHANGELOG commit (this work). Each commit has a substantive multi-line message describing what landed and why.
 
 ### J-19. The CLAUDE.md commit slip
 
-I composed a commit message describing both the 01-aad-core/README deletion AND CLAUDE.md updates, but only the deletion was staged. Caught immediately, made a follow-up commit. Lesson: `git status` before composing a multi-file commit message; or `git add -A` first when intent is to commit everything pending.
+I composed a commit message describing both the 01-aat-core/README deletion AND CLAUDE.md updates, but only the deletion was staged. Caught immediately, made a follow-up commit. Lesson: `git status` before composing a multi-file commit message; or `git add -A` first when intent is to commit everything pending.
 
 ### J-20. Did not push to remote
 

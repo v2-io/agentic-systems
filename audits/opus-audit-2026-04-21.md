@@ -1,8 +1,8 @@
-# De Novo Audit of `01-aad-core/`
+# De Novo Audit of `01-aat-core/`
 
 **Date:** 2026-04-21
 **Reviewer:** Claude Opus 4.7 (1M context)
-**Scope:** current state of `01-aad-core/src/`, plus integration gaps against `msc/` spikes for the issues that survived the burden-of-proof test
+**Scope:** current state of `01-aat-core/src/`, plus integration gaps against `msc/` spikes for the issues that survived the burden-of-proof test
 
 ## Method
 

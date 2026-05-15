@@ -312,7 +312,7 @@ Three options, ranked:
 
 ### R1 (preferred) — New segment: `#deriv-adaptive-gain-dynamics` + minor edits to three existing segments
 
-Create `01-aad-core/src/deriv-adaptive-gain-dynamics.md` as a derived/result segment stating:
+Create `01-aat-core/src/deriv-adaptive-gain-dynamics.md` as a derived/result segment stating:
 
 1. The augmented-state setup (§2).
 2. Conditions (MG-1)–(MG-4) as the sector-condition analog for adaptive gain.

@@ -535,7 +535,7 @@ The severe / severe-resolvable cases that need concrete action are listed below.
 
 **Issue:** Tomasello's *shared intentionality* (developmental psychology / comparative cognition; Tomasello 2008, 2014) is a cornerstone of human-evolution and great-ape-cognition research. ASF's *shared intent* is a near-rendering of the string. ASF's actual referent (the IB-compressed cross-agent communication object) is narrower and more formalized than Tomasello's developmental capacity; the names are close enough that readers will silently substitute. The collision substantive enough that a one-line cite does not cleanly resolve it.
 
-**Sources:** [collision-check report §22](collision-check-2026-04-29.md). ASF segment: `01-aad-core/src/def-shared-intent.md`.
+**Sources:** [collision-check report §22](collision-check-2026-04-29.md). ASF segment: `01-aat-core/src/def-shared-intent.md`.
 
 **Proposed actions:** Keep the name but add a paragraph-level Discussion-section disambiguation explicitly distinguishing ASF's *shared intent* (the IB-compressed communication object, $O_{\text{shared}}$) from Tomasello's *shared intentionality* (the developmental capacity for joint goals). Different referents; the disambiguation should be on the segment, not just the lexicon.
 

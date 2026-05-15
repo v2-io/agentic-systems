@@ -1,6 +1,6 @@
 # 16 - der-recursive-update
 
-Segment: `01-aad-core/src/der-recursive-update.md` (`#der-recursive-update`)
+Segment: `01-aat-core/src/der-recursive-update.md` (`#der-recursive-update`)
 
 Dependencies: `form-agent-model`, `form-event-driven-dynamics`, and appendix `deriv-recursive-update`, all read by this point. The appendix dependency was handled via the appendix-back-pointer exception, though I noticed it after pulling the main segment into context.
 

@@ -82,7 +82,7 @@ These are the AAD-grounded vital signs for an ELI. PROPRIUM's CADENTIA component
 - `"IDT Information Digital Twin perturbation detection monitoring"` — Hafez 2026 empirical validation
 
 **Internal references:**
-- `01-aad-core/src/result-persistence-condition.md` — formal grounding
+- `01-aat-core/src/result-persistence-condition.md` — formal grounding
 - `msc/AUDIT-WORKING-193847/22-result-persistence-condition.md` §14 — *"survival is a sustained burn rate of Shannon information"*; implies any cessation of information-rate growth is drift toward death
 - `msc/reflections/24-framework-as-its-own-diagnostic.md` — recursive feature; the framework's vocabulary makes growth-vs-drift distinction visible to the entity itself
 

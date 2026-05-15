@@ -8,8 +8,8 @@ layer: framing-vocabulary
 status: canon
 tags: [agent_classes]
 source_type: asf
-primary_source: 01-aad-core/src/scope-adaptive-system.md
-first_asf_mention: 01-aad-core/src/scope-adaptive-system.md
+primary_source: 01-aat-core/src/scope-adaptive-system.md
+first_asf_mention: 01-aat-core/src/scope-adaptive-system.md
 see_also: [agentic-system, actuated-agent, self-actuated-agent, logogenic-agent, eli]
 aliases: []
 do_not_confuse: []
@@ -21,5 +21,5 @@ required at this level — the adaptive cycle (prolepsis → aisthesis → apori
 epistrophe → praxis) is enough to characterize membership.
 
 Scope-defined in
-[`#scope-adaptive-system`](../../01-aad-core/src/scope-adaptive-system.md);
+[`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md);
 this is the Section I boundary.

@@ -1,6 +1,6 @@
 # 15 - deriv-recursive-update
 
-Segment: `01-aad-core/src/deriv-recursive-update.md` (`#deriv-recursive-update`)
+Segment: `01-aat-core/src/deriv-recursive-update.md` (`#deriv-recursive-update`)
 
 Dependencies: `form-agent-model`, `form-event-driven-dynamics`, `post-causal-structure`, `scope-adaptive-system`, `def-observation-function`, all read. Dependency-order check passes. This appendix was read immediately after its main-section back-pointer from `#der-recursive-update`; I had already pulled the main segment into context, so this is a small cadence repair rather than the ideal pre-read jump.
 

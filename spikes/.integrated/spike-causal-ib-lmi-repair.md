@@ -2,7 +2,7 @@
 
 **Status.** Exploratory research spike (repair pass).
 **Date.** 2026-04-25.
-**Pressure Point.** The original derivation in `spikes/spike-causal-information-bottleneck.md` (and promoted to `01-aad-core/src/deriv-causal-ib-exploration.md`) proved that survival forces an exploration drive ($\lambda_{\text{surv}} \propto 1/U_M$) to bound scalar observation noise $U_o$. 
+**Pressure Point.** The original derivation in `spikes/spike-causal-information-bottleneck.md` (and promoted to `01-aat-core/src/deriv-causal-ib-exploration.md`) proved that survival forces an exploration drive ($\lambda_{\text{surv}} \propto 1/U_M$) to bound scalar observation noise $U_o$. 
 
 **The Adversarial Break:** A scalar bound on trace variance allows pathological "exploration." An agent can artificially minimize scalar $U_o$ by repeatedly taking trivial actions with highly certain outcomes (e.g., staring at a blank wall), satisfying the mathematical constraint without ever probing the actual environmental drift $\rho$. To survive multi-dimensional drift, the agent must gather information in the *specific directions* where the environment is changing.
 

@@ -1,6 +1,6 @@
 # 02 - def-action-transition
 
-Segment: `01-aad-core/src/def-action-transition.md` (`#def-action-transition`)
+Segment: `01-aat-core/src/def-action-transition.md` (`#def-action-transition`)
 
 Dependencies: `def-agent-environment`, already read. Dependency-order check passes.
 

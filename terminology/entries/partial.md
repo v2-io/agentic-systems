@@ -12,8 +12,8 @@ tags:
 - structural_concepts
 - agent_classes
 source_type: asf
-primary_source: 01-aad-core/src/der-directed-separation.md
-first_asf_mention: 01-aad-core/src/der-directed-separation.md
+primary_source: 01-aat-core/src/der-directed-separation.md
+first_asf_mention: 01-aat-core/src/der-directed-separation.md
 see_also:
 - goal-update-coupling-class
 - directed-separation
@@ -37,10 +37,10 @@ seq: 2
 
 **Class 2: Partial** is the middle value on the [Goal-Update Coupling Class](goal-update-coupling-class.md)
 axis — the "structured repair" cell in the meta-pattern table of
-[`#disc-separability-pattern`](../../01-aad-core/src/disc-separability-pattern.md). A Partial agent
+[`#disc-separability-pattern`](../../01-aat-core/src/disc-separability-pattern.md). A Partial agent
 has bounded goal-update coupling: $\kappa_{\text{processing}} \in (0, \kappa_{\max})$, where
 $\kappa_{\text{processing}}$ is defined in
-[`#der-directed-separation`](../../01-aad-core/src/der-directed-separation.md) as the processing
+[`#der-directed-separation`](../../01-aat-core/src/der-directed-separation.md) as the processing
 coupling coefficient. The bound is computable, making the residual leakage rate formally tractable.
 
 Partial agents violate directed separation, but not irreducibly. The coupling is present and

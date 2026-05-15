@@ -21,7 +21,7 @@ A few observations on the landscape that bear on how to read what follows:
 
 ### 1. **directed separation** — moderate
 
-ASF segment: `01-aad-core/src/der-directed-separation.md`. The segment itself
+ASF segment: `01-aat-core/src/der-directed-separation.md`. The segment itself
 already names the Pearl-blanket connection, the LQR/Kalman *separation
 principle* adjacency, and treats the Pearl-blanket reading (Bruineberg et al.
 2022) as adopted prior art with citation.
@@ -50,7 +50,7 @@ Sources: [d-Separation Without Tears (Pearl)](https://bayes.cs.ucla.edu/BOOK-2K/
 
 ### 2. **orient cascade** — clean
 
-ASF segment: `01-aad-core/src/der-orient-cascade.md`. The compound is ASF's; it
+ASF segment: `01-aat-core/src/der-orient-cascade.md`. The compound is ASF's; it
 extends Boyd's "Orient" stage (OODA) — the brief explicitly puts compounds-on-
 adopted-bases in scope. A scan of OODA / Boyd literature returns no
 established "orient cascade" usage. Boyd's own theme of orientation as the
@@ -66,7 +66,7 @@ Sources: [OODA loop — Wikipedia](https://en.wikipedia.org/wiki/OODA_loop); [Th
 
 ### 3. **control regret** — moderate
 
-ASF segment: `01-aad-core/src/def-control-regret.md`. ASF's *control regret* is
+ASF segment: `01-aat-core/src/def-control-regret.md`. ASF's *control regret* is
 the gap between the best available one-step policy improvement and the agent's
 current policy, under the current model and horizon — a static one-step
 regret-style quantity scoped to the strategy-revision (control) layer of the
@@ -92,7 +92,7 @@ Sources: [Online bandit learning, regret to policy regret](https://arxiv.org/abs
 
 ### 4. **satisfaction gap** — minor
 
-ASF segment: `01-aad-core/src/def-satisfaction-gap.md`. ASF's *satisfaction
+ASF segment: `01-aat-core/src/def-satisfaction-gap.md`. ASF's *satisfaction
 gap* is the distance between what the objective requires and what the best
 one-step policy improvement can deliver, paired with control regret in the
 2×2 diagnostic.
@@ -111,7 +111,7 @@ Sources: [Satisficing — Wikipedia](https://en.wikipedia.org/wiki/Satisficing);
 
 ### 5. **chronica** — clean
 
-ASF segment: `01-aad-core/src/def-chronica.md`. ASF's *chronica* (lowercase
+ASF segment: `01-aat-core/src/def-chronica.md`. ASF's *chronica* (lowercase
 italic) is a Greek-rooted coinage for the singular causal interaction-history
 record $\mathcal C_t$, deliberately chosen to (a) avoid the $\mathcal H$
 collision with entropy in notation and (b) carry the singular-trajectory
@@ -132,7 +132,7 @@ needed.
 
 ### 6. **identifiability floor** — moderate
 
-ASF segment: `01-aad-core/src/disc-identifiability-floor.md`. ASF's
+ASF segment: `01-aat-core/src/disc-identifiability-floor.md`. ASF's
 *identifiability floor* is the meta-pattern naming hard lower-boundary
 results in causal identification — below the floor, no estimator can
 distinguish certain causal structures without outside help; above it, AAD's
@@ -393,7 +393,7 @@ encounter as the parent intuition. No rename.
 
 ### 16. **mismatch signal** — moderate
 
-ASF segment: `01-aad-core/src/def-mismatch-signal.md`. ASF's *mismatch signal*
+ASF segment: `01-aat-core/src/def-mismatch-signal.md`. ASF's *mismatch signal*
 is $\delta_t$, the discrepancy between the model's prediction and the actual
 observation — flatter than "error," foreshadowing aporia.
 
@@ -418,7 +418,7 @@ in working notes). No rename.
 
 ### 17. **action selection** — moderate
 
-ASF segment: `01-aad-core/src/der-action-selection.md`. ASF's *action
+ASF segment: `01-aat-core/src/der-action-selection.md`. ASF's *action
 selection* is the derived claim that praxis (informed action) is a function of
 the model — $a_t = \pi(M_t, G_t)$.
 
@@ -439,7 +439,7 @@ neuroscience and ASF is using it conventionally. No rename.
 
 ### 18. **recursive update** — moderate
 
-ASF segment: `01-aad-core/src/der-recursive-update.md`. ASF's *recursive
+ASF segment: `01-aat-core/src/der-recursive-update.md`. ASF's *recursive
 update* is the derived claim that state updates must be recursive
 (new model state is a function of the previous model state and the event
 alone).
@@ -458,7 +458,7 @@ estimation in general, Kalman filter as the canonical instance). No rename.
 
 ### 19. **update gain** — moderate
 
-ASF segment: `01-aad-core/src/emp-update-gain.md`. ASF's *update gain* $\eta^\ast$ is the optimal weight an agent assigns to new observations when updating its model — $\eta^\ast = U_M / (U_M + U_o)$.
+ASF segment: `01-aat-core/src/emp-update-gain.md`. ASF's *update gain* $\eta^\ast$ is the optimal weight an agent assigns to new observations when updating its model — $\eta^\ast = U_M / (U_M + U_o)$.
 
 External usage:
 - **Kalman gain** $K$ is *the* established term for exactly this quantity in linear-Gaussian state estimation. The formula $K = P/(P+R)$ is structurally identical to ASF's $U_M/(U_M+U_o)$ in scalar form. The Kalman gain is one of the most cited and pedagogically central quantities in control theory.
@@ -480,7 +480,7 @@ No rename.
 
 ### 20. **agent opacity** — minor
 
-ASF segment: `01-aad-core/src/der-agent-opacity.md`. ASF adopts $H_b^{A|B}$
+ASF segment: `01-aat-core/src/der-agent-opacity.md`. ASF adopts $H_b^{A|B}$
 (backward predictive uncertainty) from Hafez 2026 — the dual of observability
 on the emitter side.
 
@@ -501,7 +501,7 @@ citation; a one-line distinction from the XAI sense is courtesy. No rename.
 
 ### 21. **strategy DAG** — moderate
 
-ASF segment: `01-aad-core/src/def-strategy-dag.md`. ASF's strategy is a
+ASF segment: `01-aat-core/src/def-strategy-dag.md`. ASF's strategy is a
 DAG with probabilistic edges and AND/OR combination semantics.
 
 External usage:
@@ -520,7 +520,7 @@ the structural-formalism prior art (it is in some segments). No rename.
 
 ### 22. **shared intent** — severe
 
-ASF segment: `01-aad-core/src/def-shared-intent.md`. ASF's shared intent is
+ASF segment: `01-aat-core/src/def-shared-intent.md`. ASF's shared intent is
 the IB-compressed cross-agent communication object that gets transmitted
 between sub-agents in a composite.
 
@@ -675,7 +675,7 @@ Anthropic framing tradition is courtesy and probably accurate.
 
 ### 30. **agent identity** — minor
 
-ASF segment: `01-aad-core/src/scope-agent-identity.md`. ASF's *agent
+ASF segment: `01-aat-core/src/scope-agent-identity.md`. ASF's *agent
 identity* is the singular-causal-trajectory scope claim — agents instantiated
 on non-forkable trajectories.
 
@@ -798,7 +798,7 @@ individual term.
 
 ### 36. **separability ladder** — clean
 
-ASF segment: `01-aad-core/src/disc-separability-pattern.md`. ASF's
+ASF segment: `01-aat-core/src/disc-separability-pattern.md`. ASF's
 *separability ladder* names the seven-row ladder (separable-core /
 structured-repair / general-open across seven axes) the meta-segment uses to
 organize the framework's identifiability posture.
@@ -852,7 +852,7 @@ first encounter to acknowledge the parent concept. No rename.
 
 ### 39. **forced coordinate / additive coordinate forcing** — moderate
 
-ASF segment: `01-aad-core/src/disc-additive-coordinate-forcing.md`. ASF's
+ASF segment: `01-aat-core/src/disc-additive-coordinate-forcing.md`. ASF's
 *forced coordinate* names a family of uniqueness results where a coordinate
 is forced by a uniqueness theorem (Cauchy-FE, Fisher-metric, etc.).
 
@@ -916,7 +916,7 @@ first-encounter discipline cites the robust-control lineage. No rename.
 
 ### 43. **causal information yield (CIY)** — clean
 
-ASF segment: `01-aad-core/src/def-causal-information-yield.md`. ASF coinage —
+ASF segment: `01-aat-core/src/def-causal-information-yield.md`. ASF coinage —
 the information gained from causal interventions, distinguishing
 intervention-yield from observational mutual information.
 

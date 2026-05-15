@@ -18,7 +18,7 @@ I am not treating those as prior audit material because the protocol explicitly 
 
 The framework has four components in canonical order:
 
-1. AAD (`01-aad-core`) is the mathematical core.
+1. AAD (`01-aat-core`) is the mathematical core.
 It begins with adaptive systems under uncertainty, narrows to actuated/purposeful agents, then studies multi-agent/composite dynamics and supporting appendices.
 
 2. TST (`02-tst-core`) is a software-domain instantiation and calibration laboratory.

@@ -8,8 +8,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts, composition]
 source_type: asf
-primary_source: 01-aad-core/src/form-structural-change-as-parametric-limit.md
-first_asf_mention: 01-aad-core/src/form-structural-change-as-parametric-limit.md
+primary_source: 01-aat-core/src/form-structural-change-as-parametric-limit.md
+first_asf_mention: 01-aat-core/src/form-structural-change-as-parametric-limit.md
 see_also: [strategy-dag, structural-adaptation]
 aliases: ["grafting"]
 do_not_confuse:
@@ -21,8 +21,8 @@ internal_note: F1 batch citability fix (2026-05-04). Bare 'grafting' is heavily 
 
 The structural-change operation that adds a new edge (causal hypothesis) to the strategy DAG, initialized at a prior credence. Counterpart to pruning (removing an edge). The qualifier *strategic* distinguishes the strategy-DAG operation from the unqualified "grafting" used in adjacent literatures (horticultural, graph-rewriting, decision-tree learning).
 
-Where do new causal hypotheses come from for the agent to graft? Three sources: from $M_t$ (the model suggests a possible path), from external sources via [`#hyp-communication-gain`](../../01-aad-core/src/hyp-communication-gain.md) (another agent suggests an approach), or from exploration via [`#def-causal-information-yield`](../../01-aad-core/src/def-causal-information-yield.md). This is the creative step in strategic revision.
+Where do new causal hypotheses come from for the agent to graft? Three sources: from $M_t$ (the model suggests a possible path), from external sources via [`#hyp-communication-gain`](../../01-aat-core/src/hyp-communication-gain.md) (another agent suggests an approach), or from exploration via [`#def-causal-information-yield`](../../01-aat-core/src/def-causal-information-yield.md). This is the creative step in strategic revision.
 
-Cross-agent strategic grafting (where the source structure originates in another agent and that agent's objective is also absorbed) is the symbiogenic-composition mechanism — see [`#hyp-symbiogenic-composition`](../../01-aad-core/src/hyp-symbiogenic-composition.md). The unilateral within-agent operation is the host-side component of symbiogenesis.
+Cross-agent strategic grafting (where the source structure originates in another agent and that agent's objective is also absorbed) is the symbiogenic-composition mechanism — see [`#hyp-symbiogenic-composition`](../../01-aat-core/src/hyp-symbiogenic-composition.md). The unilateral within-agent operation is the host-side component of symbiogenesis.
 
-Defined in [`#form-structural-change-as-parametric-limit`](../../01-aad-core/src/form-structural-change-as-parametric-limit.md) as one of six $\Sigma_t$ operations (reweighting / $\gamma$ reclassification / pruning / strategic grafting / objective revision / full restructure).
+Defined in [`#form-structural-change-as-parametric-limit`](../../01-aat-core/src/form-structural-change-as-parametric-limit.md) as one of six $\Sigma_t$ operations (reweighting / $\gamma$ reclassification / pruning / strategic grafting / objective revision / full restructure).

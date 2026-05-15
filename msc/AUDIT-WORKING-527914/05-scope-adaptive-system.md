@@ -1,6 +1,6 @@
 # 05 - scope-adaptive-system
 
-Segment: `01-aad-core/src/scope-adaptive-system.md` (`#scope-adaptive-system`)
+Segment: `01-aat-core/src/scope-adaptive-system.md` (`#scope-adaptive-system`)
 
 Dependencies: `def-agent-environment`, `def-observation-function`, `def-chronica`, all read. Dependency-order check passes.
 

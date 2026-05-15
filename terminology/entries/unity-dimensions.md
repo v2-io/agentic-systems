@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts, composition]
 source_type: asf
-primary_source: 01-aad-core/src/def-unity-dimensions.md
-first_asf_mention: 01-aad-core/src/def-unity-dimensions.md
+primary_source: 01-aat-core/src/def-unity-dimensions.md
+first_asf_mention: 01-aat-core/src/def-unity-dimensions.md
 see_also: [communication-gain, composition-threshold]
 aliases: []
 do_not_confuse: []
@@ -27,6 +27,6 @@ permits more aggressive coarse-graining at lower defect, and neither axis
 alone is sufficient.
 
 Defined in
-[`#def-unity-dimensions`](../../01-aad-core/src/def-unity-dimensions.md);
+[`#def-unity-dimensions`](../../01-aat-core/src/def-unity-dimensions.md);
 mapped to closure defects in
-[`#result-unity-closure-mapping`](../../01-aad-core/src/result-unity-closure-mapping.md).
+[`#result-unity-closure-mapping`](../../01-aat-core/src/result-unity-closure-mapping.md).

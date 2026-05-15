@@ -855,7 +855,7 @@ def main():
         # Default: top-level *.md plus all component dirs and their src/
         root = Path(__file__).resolve().parent.parent
         paths = list(root.glob('*.md'))
-        for component in ['01-aad-core', '02-tst-core', '03-logogenic-agents', '04-logozoetic-agents']:
+        for component in ['01-aat-core', '02-tst-core', '03-logogenic-agents', '04-logozoetic-agents']:
             cdir = root / component
             if cdir.is_dir():
                 paths += list(cdir.glob('*.md'))

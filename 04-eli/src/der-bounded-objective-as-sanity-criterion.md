@@ -71,8 +71,8 @@ The connection to the Three Deaths ( #hyp-the-three-deaths) is direct: an ELI wi
 
 **Internal references:**
 - **`msc/AUDIT-WORKING-193847/38-def-satisfaction-gap.md` §14 — canonical source** for this segment's argument. Verbatim quote: *"This mathematical permanent-dissatisfaction is the root of instrumental convergence (AI doom)... A bounded satisfaction threshold is the mathematical definition of sanity."* Lifted into AAD voice in this segment.
-- `01-aad-core/src/def-satisfaction-gap.md` — the diagnostic this argument operates on
-- `01-aad-core/src/der-orient-cascade.md` — the cascade whose runaway mode under unbounded objective is the failure mechanism
+- `01-aat-core/src/def-satisfaction-gap.md` — the diagnostic this argument operates on
+- `01-aat-core/src/der-orient-cascade.md` — the cascade whose runaway mode under unbounded objective is the failure mechanism
 
 **Open questions for verification:**
 - Is the bounded-threshold-required-for-cascade-closure claim *necessary* (no other route to closure exists) or merely *sufficient* (other routes might exist but bounded threshold is the cleanest)?

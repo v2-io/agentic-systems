@@ -28,10 +28,10 @@ Build your list from a *direct* review of the segment files and primary docs (ne
 
 Read these to ground your votes:
 
-- `CLAUDE.md`, `TODO.md`, `OUTLINE.md` (and `01-aad-core/OUTLINE.md`)
+- `CLAUDE.md`, `TODO.md`, `OUTLINE.md` (and `01-aat-core/OUTLINE.md`)
 - `FORMAT.md`, `NOTATION.md`, `LEXICON.md`, `README.md`
 - `PROPOSALS.md` — current architectural portfolio. Read for context, not for naming cues.
-- Segment files under `01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/` — sample widely; do not just scan slugs.
+- Segment files under `01-aat-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/` — sample widely; do not just scan slugs.
 - Your own judgment about what a skilled-reader-six-months-later would struggle to parse aloud.
 
 ## Architectural invariants — NOT vote targets
@@ -116,7 +116,7 @@ For each name you consider, weigh these axes. You do not need to score all of th
 
 5. **Scope honesty.** Does the name over-promise relative to what the concept delivers? If a name suggests more generality, exactness, or novelty than the concept provides, it violates the same scope-honesty commitment that the rest of the framework holds itself to.
 
-   *Special case for meta-segments.* When a segment names a project-wide pattern (the meta-segments under `01-aad-core/src/discussion-*.md`), scope-honesty dominates memorability. A memorable-but-narrow name (e.g., `#cauchy-coordinates` for what is now `#discussion-additive-coordinate-forcing`) is worse than an awkward-but-accurate name (`#discussion-forced-coordinates`) when the narrow name fails to cover one of the four primary instances. The Round-1 lesson: meta-pattern names reach across many segments; over-narrow ones force prose qualifications elsewhere.
+   *Special case for meta-segments.* When a segment names a project-wide pattern (the meta-segments under `01-aat-core/src/discussion-*.md`), scope-honesty dominates memorability. A memorable-but-narrow name (e.g., `#cauchy-coordinates` for what is now `#discussion-additive-coordinate-forcing`) is worse than an awkward-but-accurate name (`#discussion-forced-coordinates`) when the narrow name fails to cover one of the four primary instances. The Round-1 lesson: meta-pattern names reach across many segments; over-narrow ones force prose qualifications elsewhere.
 
 6. **Aging potential.** Some names harden into standard vocabulary; some drift into embarrassment; some become locked in by citation velocity even when better options become available. Names that are too cute age poorly; names that are too clinical never attract citation in the first place.
 

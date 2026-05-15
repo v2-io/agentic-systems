@@ -61,7 +61,7 @@ There are two readings:
 By the analysis above, this is $\mathcal{M}_{\min}$: a parser with entity tracking. Pre-loop LLMs vastly exceed this. **Recovery of training-encoded Level 2 content does not require any agentic scaffolding.** This is a strong, derivable claim under Theorem 1 in `01-derivation.md`.
 
 **Reading 2 — minimum scaffold to *generate fresh* Level 2 content.**
-This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAD's [`#der-loop-interventional-access`](../../01-aad-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
+This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAD's [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
 
 (i) **Agent-self intervention** — agent's own actions cause environmental responses, the environmental response is observed, the action-conditional response is interventional data (the standard AAD-loop case).
 
@@ -69,7 +69,7 @@ This is qualitatively different. To produce new interventional content (not just
 
 (iii) **Observer intervention on agent input** — a higher-level controller manipulates the agent's inputs and observes the agent's outputs. Tested at the level of the controller-on-agent system.
 
-(All three modes are catalogued in [`#disc-identifiability-floor`](../../01-aad-core/src/disc-identifiability-floor.md) and the surrounding instance-triage discussion.)
+(All three modes are catalogued in [`#disc-identifiability-floor`](../../01-aat-core/src/disc-identifiability-floor.md) and the surrounding instance-triage discussion.)
 
 The two readings are **complementary**:
 

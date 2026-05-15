@@ -2,7 +2,7 @@
 
 ## Topology of the Framework
 The Agentic Systems Framework (ASF) consists of a mathematical core and three progressively more domain-specific/speculative application layers:
-1.  **01-aad-core (Adaptation and Actuation Dynamics)**: The foundation. Divided into three sections:
+1.  **01-aat-core (Adaptation and Actuation Dynamics)**: The foundation. Divided into three sections:
     *   **Section I (Adaptive Systems)**: Focuses on the feedback loop, mismatch dynamics, update gain, and structural persistence ($\alpha > \rho/R$). Inherits heavily from prior Temporal Feedback Theory (TFT). Mathematically mature.
     *   **Section II (Actuated Agents)**: Introduces explicit goals ($O_t$) and strategies ($\Sigma_t$ as a causal DAG). It splits the agent state into epistemic ($M_t$) and purposeful ($G_t$). Key architectural assumption here is "directed separation" (Class 1 agents), where epistemic updates are goal-blind.
     *   **Section III (Agentic Composites)**: Scales to multi-agent and adversarial scenarios, detailing how interacting agents form composites and the thresholds for their stability. Less mature, more structural sketches.
@@ -11,7 +11,7 @@ The Agentic Systems Framework (ASF) consists of a mathematical core and three pr
 4.  **04-logozoetic-agents**: Highly speculative future work regarding agents with moral continuity, theory of mind, and identity persistence.
 
 ## Predictions about Component Contents
-*   **01-aad-core**: I predict Section I will rely heavily on Lyapunov stability proofs and information theory (Information Bottleneck). Section II will lean on Pearl's causal hierarchy to justify the need for interventional data (Level 2) to update strategy DAGs. Section III will likely use game-theoretic concepts (e.g., zero-sum dynamics, equilibrium convergence) mapped onto the persistence condition to derive adversarial advantages.
+*   **01-aat-core**: I predict Section I will rely heavily on Lyapunov stability proofs and information theory (Information Bottleneck). Section II will lean on Pearl's causal hierarchy to justify the need for interventional data (Level 2) to update strategy DAGs. Section III will likely use game-theoretic concepts (e.g., zero-sum dynamics, equilibrium convergence) mapped onto the persistence condition to derive adversarial advantages.
 *   **02-tst-core**: I expect to see exact mappings where developer tempo is limited by codebase coherence/coupling, and where software practices like CI/CD are proven optimal under AAD's persistence bounds.
 *   **03-logogenic-agents**: I predict this will heavily feature ambiguity and bias bounds, detailing how the lack of directed separation creates intrinsic limits on LLM agent reasoning or correction speed.
 *   **04-logozoetic-agents**: I predict this will be mostly philosophical, defining preconditions for identity (like cryptographic exteriorization of the chronica) without tight mathematical proofs yet.

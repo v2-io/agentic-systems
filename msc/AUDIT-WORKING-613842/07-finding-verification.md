@@ -6,16 +6,16 @@ This file is the burden-of-proof staging area before the final report. I am keep
 
 ### Problematic passage
 
-- `01-aad-core/src/def-adaptive-tempo.md:19` defines adaptive tempo as an unrestricted equality:
+- `01-aat-core/src/def-adaptive-tempo.md:19` defines adaptive tempo as an unrestricted equality:
   `\mathcal T = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}`.
 - The same segment later says the additive formula assumes informationally independent channels and otherwise overcounts:
-  `01-aad-core/src/def-adaptive-tempo.md:44-48`.
+  `01-aat-core/src/def-adaptive-tempo.md:44-48`.
 
 ### Counterevidence search
 
 - The segment does acknowledge the issue itself; this is not a hidden mathematical flaw.
-- `01-aad-core/src/der-team-persistence.md:32` also inherits the caveat honestly for communication tempo.
-- `01-aad-core/src/result-persistence-condition.md:99` likewise warns that scalar tempo inherits the channel-independence assumption.
+- `01-aat-core/src/der-team-persistence.md:32` also inherits the caveat honestly for communication tempo.
+- `01-aat-core/src/result-persistence-condition.md:99` likewise warns that scalar tempo inherits the channel-independence assumption.
 
 ### Status determination
 
@@ -36,7 +36,7 @@ My current classification is **integration debt / definition-scope mismatch**, n
 
 ### `msc/` diagnosis
 
-- `01-aad-core/src/disc-independence-audit.md:59` explicitly records the repair operation: under correlation, scalar tempo should be treated as an upper bound.
+- `01-aat-core/src/disc-independence-audit.md:59` explicitly records the repair operation: under correlation, scalar tempo should be treated as an upper bound.
 - `audits/pending-findings-2026-04-23.md:164` also appears to have already logged the same concern.
 
 So this is emphatically **not** a novel missing insight. It is a propagation / landing issue: the corpus knows the caveat, but the main definition still reads stronger than the repair.
@@ -45,17 +45,17 @@ So this is emphatically **not** a novel missing insight. It is a propagation / l
 
 ### Problematic passage
 
-- `01-aad-core/src/deriv-sector-condition.md:184-194` states Prop A.1S in region-aware form:
+- `01-aat-core/src/deriv-sector-condition.md:184-194` states Prop A.1S in region-aware form:
   stopped bound, mean-square persistence condition, and non-exit estimate.
-- `01-aad-core/src/deriv-sector-condition.md:242-246` then makes the stopping-time localization explicit.
+- `01-aat-core/src/deriv-sector-condition.md:242-246` then makes the stopping-time localization explicit.
 - Downstream summaries compress this into cleaner global-looking statements:
-  - `01-aad-core/src/result-sector-persistence-template.md:47-49`
-  - `01-aad-core/src/result-sector-condition-stability.md:41`
-  - `01-aad-core/src/result-persistence-condition.md:27-29`
+  - `01-aat-core/src/result-sector-persistence-template.md:47-49`
+  - `01-aat-core/src/result-sector-condition-stability.md:41`
+  - `01-aat-core/src/result-persistence-condition.md:27-29`
 
 ### Counterevidence search
 
-- `01-aad-core/src/result-sector-persistence-template.md:90` explicitly says the Model S case uses the region-aware form and that instantiations inherit the stopping-time localization.
+- `01-aat-core/src/result-sector-persistence-template.md:90` explicitly says the Model S case uses the region-aware form and that instantiations inherit the stopping-time localization.
 - So the framework does know the caveat at the template-discussion level.
 
 ### Status determination
@@ -84,11 +84,11 @@ That is useful context: the current summary compression is not accidental ignora
 
 ### Problematic passage
 
-- `01-aad-core/src/scope-composite-agent.md:46-63` admits (C-iv): strategic composites whose macro-state is defined relative to equilibrium structure `\mathcal E`, not shared objective `O_c`.
-- `01-aad-core/src/scope-multi-agent.md:73` says composite-level machinery applies via both alignment routes and the (C-iv) strategic route.
-- But `01-aad-core/src/form-composition-closure.md:65` still says the framework applies to "the three alignment routes" and ties meaningful composite status to whether `G_c = (O_c, \Sigma_c)` is well-defined.
-- `01-aad-core/src/def-unity-dimensions.md:19` and `:40` still describe scope as a three-route disjunction.
-- Most importantly, `01-aad-core/src/deriv-strategic-composition.md:119`, `:135`, and `:175` say the bridge from strategic composition to `#form-composition-closure`'s closure-defect machinery is still open.
+- `01-aat-core/src/scope-composite-agent.md:46-63` admits (C-iv): strategic composites whose macro-state is defined relative to equilibrium structure `\mathcal E`, not shared objective `O_c`.
+- `01-aat-core/src/scope-multi-agent.md:73` says composite-level machinery applies via both alignment routes and the (C-iv) strategic route.
+- But `01-aat-core/src/form-composition-closure.md:65` still says the framework applies to "the three alignment routes" and ties meaningful composite status to whether `G_c = (O_c, \Sigma_c)` is well-defined.
+- `01-aat-core/src/def-unity-dimensions.md:19` and `:40` still describe scope as a three-route disjunction.
+- Most importantly, `01-aat-core/src/deriv-strategic-composition.md:119`, `:135`, and `:175` say the bridge from strategic composition to `#form-composition-closure`'s closure-defect machinery is still open.
 
 ### Counterevidence search
 

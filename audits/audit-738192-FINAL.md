@@ -12,7 +12,7 @@ Overall, the framework is surprisingly rigorous in tracking its own assumptions.
 
 ## Finding 1: Conflation of Information Bottleneck $\beta$ parameter with environment volatility ($\rho$)
 
-**Location:** `01-aad-core/src/form-information-bottleneck.md`
+**Location:** `01-aat-core/src/form-information-bottleneck.md`
 
 **Quote:**
 > **Dependence on volatility.** The trade-off $\beta$ depends on environment volatility $\rho$:
@@ -35,7 +35,7 @@ Claiming that $\beta$ must be lowered when $\rho$ is high is a double-counting e
 
 ## Finding 2: Misclassification of `git checkout` as a Level 3 Counterfactual
 
-**Location:** `01-aad-core/src/def-pearl-causal-hierarchy.md`
+**Location:** `01-aat-core/src/def-pearl-causal-hierarchy.md`
 
 **Quote:**
 > "Level 3 — Counterfactual ... In software development, `git checkout` provides Level 3 access with ground-truth verification — the agent can literally execute the counterfactual. This is one of software's unique epistemic properties"

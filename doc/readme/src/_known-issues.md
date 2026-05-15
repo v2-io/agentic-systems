@@ -39,7 +39,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 
 ### Component-level GAPs
 
-**`01-aad-core`:**
+**`01-aat-core`:**
 - Latent structural diversity: variation in correction architectures invisible to persistence analysis, consequential under regime change
 - Endogenous coupling: γ as function of population composition, not exogenous parameter; coupling emergence threshold
 - Composition transition dynamics: epochal stability → latent diversification → niche emergence → cascading restructuring → re-equilibration (adopts Miller 2022's extreme transition motif)

@@ -71,7 +71,7 @@ By framing strategy updating as Variational Inference on a Factor Graph, we math
 
 **Promotion Plan:**
 - The mathematical core must be rewritten to use Loopy Belief Propagation or Expectation Propagation rather than Mean-Field VMP.
-- Once fixed, this can be promoted to `01-aad-core/src/deriv-factor-graph-credit-assignment.md`.
+- Once fixed, this can be promoted to `01-aat-core/src/deriv-factor-graph-credit-assignment.md`.
 - This will formally replace the $L^2$ gradient heuristic mentioned in `#def-strategic-calibration` and `#disc-credit-assignment-boundary` with a rigorous, bounded approximate-inference algorithm for computing $\delta_{\text{strategic}}$.
 
 *(End of spike.)*

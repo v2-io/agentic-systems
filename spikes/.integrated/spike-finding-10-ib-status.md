@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-22
 **Source finding:** `audits/pending-findings-2026-04-22.md` Finding 10 (lines 367–389)
-**Target segment:** `01-aad-core/src/form-information-bottleneck.md`
-**Downstream consumer:** `01-aad-core/src/disc-compression-operations.md`
+**Target segment:** `01-aat-core/src/form-information-bottleneck.md`
+**Downstream consumer:** `01-aat-core/src/disc-compression-operations.md`
 **Effort:** ~15 min (smallest item in the 2026-04-22 batch)
 **Status of this spike:** ready for Joseph's review; no segment edits made.
 

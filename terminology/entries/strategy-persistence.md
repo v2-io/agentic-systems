@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/schema-strategy-persistence.md
-first_asf_mention: 01-aad-core/src/schema-strategy-persistence.md
+primary_source: 01-aat-core/src/schema-strategy-persistence.md
+first_asf_mention: 01-aat-core/src/schema-strategy-persistence.md
 see_also: [strategy-dag, strategic-tempo, structural-persistence, adaptive-reserve, sector-condition]
 aliases: []
 do_not_confuse: [structural-persistence, operational-persistence]
@@ -40,4 +40,4 @@ persistence condition: faster forgetting means faster tracking but noisier estim
 Organizational calcification, RL value-function staleness, scientific-paradigm lock-in, and
 the loss-of-edge phenomenon in incumbent firms all instantiate the same dynamic.
 
-Proposed schema in [`#schema-strategy-persistence`](../../01-aad-core/src/schema-strategy-persistence.md).
+Proposed schema in [`#schema-strategy-persistence`](../../01-aat-core/src/schema-strategy-persistence.md).

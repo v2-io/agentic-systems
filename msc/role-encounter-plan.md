@@ -41,7 +41,7 @@ Segment ordering algorithm:
 
 1. **Topological sort** by `depends:` frontmatter. The graph is acyclic by project discipline; cycles are bugs.
 2. **Within nodes that are peers** (no dependency relation), the OUTLINE.md ordering wins. The outline already encodes narrative-focused ordering for peers.
-3. **Appendices** are a deliberate exception: an appendix is structurally a prerequisite (its content supports a segment), but in linear reading it's placed *after* the segment that surfaces the need (matching paper-reading convention — proof comes after the claim that motivates it). The appendix-need is encoded in segment frontmatter (field name TBD; the build agent should grep `01-aad-core/src/` to identify it — likely `surfaces:` or `appendices:`).
+3. **Appendices** are a deliberate exception: an appendix is structurally a prerequisite (its content supports a segment), but in linear reading it's placed *after* the segment that surfaces the need (matching paper-reading convention — proof comes after the claim that motivates it). The appendix-need is encoded in segment frontmatter (field name TBD; the build agent should grep `01-aat-core/src/` to identify it — likely `surfaces:` or `appendices:`).
 
 Reuses `bin/lint-outline`'s existing dependency-graph machinery rather than re-implementing.
 
@@ -78,7 +78,7 @@ The explorer agent should produce a spike doc at `spikes/spike-local-embedding-b
 
 ## Open questions surfaced during planning
 
-1. **Appendix-need YAML field name** — the segment frontmatter field that flags "this segment first surfaces the need for appendix X." Joseph recalled it exists but not the name. The build agent should investigate `FORMAT.md` and grep `01-aad-core/src/*.md` frontmatter to identify it. If absent, propose adding it (`surfaces:` or `appendices_needed:` would be honest names).
+1. **Appendix-need YAML field name** — the segment frontmatter field that flags "this segment first surfaces the need for appendix X." Joseph recalled it exists but not the name. The build agent should investigate `FORMAT.md` and grep `01-aat-core/src/*.md` frontmatter to identify it. If absent, propose adding it (`surfaces:` or `appendices_needed:` would be honest names).
 
 2. **Which working artifacts (msc/) get indexed?** Two competing pressures:
    - *Priming-heavy for auditors* → exclude

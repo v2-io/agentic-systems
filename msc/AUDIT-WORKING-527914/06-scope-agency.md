@@ -1,6 +1,6 @@
 # 06 - scope-agency
 
-Segment: `01-aad-core/src/scope-agency.md` (`#scope-agency`)
+Segment: `01-aat-core/src/scope-agency.md` (`#scope-agency`)
 
 Dependencies: `scope-adaptive-system`, `def-action-transition`, both read. Dependency-order check passes.
 

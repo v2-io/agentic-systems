@@ -4,7 +4,7 @@
 
 ## Confirmed decisions
 
-- 04 directory: `04-eli/` (short form, in line with `01-aad-core` / `02-tst-core` convention)
+- 04 directory: `04-eli/` (short form, in line with `01-aat-core` / `02-tst-core` convention)
 - 04 part-name: **"Emergent Logozoetic Intelligences (ELI)"**
 - 03 multi-section structure approved as concrete riff (3 sections proposed; could be 2 or more depending on what surfaces)
 - Read `~/src/firmatum/PROPRIUM*` carefully before writing 03.III content

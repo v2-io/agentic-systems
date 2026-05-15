@@ -11,7 +11,7 @@ This is the top-level assembly index. It references the component outlines, each
 
 *The mathematical core. Sections I–III + Appendices.*
 
-See [`01-aad-core/OUTLINE.md`](01-aad-core/OUTLINE.md)
+See [`01-aat-core/OUTLINE.md`](01-aat-core/OUTLINE.md)
 
 
 ---

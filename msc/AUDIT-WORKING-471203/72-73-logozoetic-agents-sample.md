@@ -48,7 +48,7 @@ Engineering-grade decomposition, not derived; one of multiple possible architect
 ## Closing the four-component walks
 
 I've now sampled all four components. **Coverage breakdown:**
-- 01-aad-core: ~75 of ~140 segments first-hand. §I full; §II most (skipped tail); §III sample (skipped tail); meta-segments full; sample of substantive Appendix A (recursive-update derivation, gain-sector bridge, persistence-cost, bias-bound); Appendix B not read.
+- 01-aat-core: ~75 of ~140 segments first-hand. §I full; §II most (skipped tail); §III sample (skipped tail); meta-segments full; sample of substantive Appendix A (recursive-update derivation, gain-sector bridge, persistence-cost, bias-bound); Appendix B not read.
 - 02-tst-core: 4 of ~26 segments — postulate + P1-P6 + code-quality-as-observation + git-causal hypothesis (representative sample).
 - 03-logogenic-agents: 4 of ~7 main framework segments (representative).
 - 04-logozoetic-agents: 2 of 4 present segments + observation of OUTLINE-vs-present gap.

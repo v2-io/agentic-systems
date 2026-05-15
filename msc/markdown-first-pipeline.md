@@ -180,7 +180,7 @@ source-hash differs from the recorded value below.
 
 ## Frontmatter
 
-- `volume-preface.md` — *kind: preface*, *source: 01-aad-core/OUTLINE.md §preface*, *hash: a3f29c1d*
+- `volume-preface.md` — *kind: preface*, *source: 01-aat-core/OUTLINE.md §preface*, *hash: a3f29c1d*
 
 ## Part I — Adaptive Systems Under Uncertainty
 

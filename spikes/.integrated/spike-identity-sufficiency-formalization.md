@@ -297,7 +297,7 @@ The codex audit ELI-8 is fully addressed. The segment promotes from `sketch` to 
 
 **Segment under strengthening:** `04-eli/src/def-identity-sufficiency.md` (status `sketch`, this spike recommends promotion to `definition`).
 
-**Structural antecedent for $S_{\text{id}}$:** `01-aad-core/src/def-model-sufficiency.md` (note: $S$'s well-definedness clause is the canonical template for $S_{\text{id}}$'s well-definedness clause).
+**Structural antecedent for $S_{\text{id}}$:** `01-aat-core/src/def-model-sufficiency.md` (note: $S$'s well-definedness clause is the canonical template for $S_{\text{id}}$'s well-definedness clause).
 
 **Operationalization candidate (now formalized via joint-space construction):** `04-eli/src/def-five-constitutive-factors.md`.
 

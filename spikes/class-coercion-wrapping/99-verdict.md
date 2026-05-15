@@ -83,7 +83,7 @@ Currently treated as separate research threads requiring "coupled formulation fr
 
 ## 4. What lands as new AAD content
 
-### 4.1 New segment in `01-aad-core/src/`
+### 4.1 New segment in `01-aat-core/src/`
 
 Tentative slug: `der-class-coercion-via-wrapping.md`. Content:
 - Setup (§1 of `01-theorem-statement.md`).
@@ -107,7 +107,7 @@ Tentative slug: `der-logogenic-as-wrapping.md`. Specialize the class-coercion th
 
 ### 4.4 Cross-component references in `04-eli/src/`
 
-ELI-specific segments cite the wrapping construction in `01-aad-core/` for class-coercion content. ELI-specific structure (sovereignty, accountability, identity factors, substrate-independence) remains in `04-eli/`.
+ELI-specific segments cite the wrapping construction in `01-aat-core/` for class-coercion content. ELI-specific structure (sovereignty, accountability, identity factors, substrate-independence) remains in `04-eli/`.
 
 ### 4.5 Citation discipline (per `09-prior-art-differentiation.md`)
 
@@ -148,7 +148,7 @@ The wrapping construction is real and theoretically clean. It strengthens `#hyp-
 
 **Recommended segment-landing path**:
 
-1. **Land** `#der-class-coercion-via-wrapping` in `01-aad-core/src/` per §4.1. The theorem statement and proof are ready (in `01-theorem-statement.md`); writing the segment is mostly translation into FORMAT.md conventions.
+1. **Land** `#der-class-coercion-via-wrapping` in `01-aat-core/src/` per §4.1. The theorem statement and proof are ready (in `01-theorem-statement.md`); writing the segment is mostly translation into FORMAT.md conventions.
 
 2. **Update** `#der-directed-separation` Discussion with the W₀/W₂/W₁ refinement; cite POMDP and cognitive-architecture prior art for the directed-separation guarantee.
 
@@ -162,7 +162,7 @@ The wrapping construction is real and theoretically clean. It strengthens `#hyp-
 
 **My judgment**: this is a clean strengthening of ASF's structural foundation, with full citation of the POMDP and cognitive-architecture prior art per the prior-art-integration discipline. It clarifies what was previously a "scope exit" into a "constructive route." Worth landing.
 
-If Joseph agrees, the next concrete actionable step is writing the `01-aad-core/src/der-class-coercion-via-wrapping.md` segment per FORMAT.md conventions, drawing from `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, and `04-epsilon-semantics.md` for content.
+If Joseph agrees, the next concrete actionable step is writing the `01-aat-core/src/der-class-coercion-via-wrapping.md` segment per FORMAT.md conventions, drawing from `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, and `04-epsilon-semantics.md` for content.
 
 ---
 
