@@ -25,6 +25,18 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+## 2026-05-15
+
+### Rename: Adaptation and Actuation Dynamics (AAD) → Adaptation and Actuation Theory (AAT); four-volume directory harmonization
+
+The mathematical core was renamed **AAD → AAT** — only the genus word changed (*Dynamics → Theory*; acronym *D → T*). Rationale (Joseph, verbatim): *"Upgrading terminology to Theory now that it has substantial claims and novelty, allowing the term Adaptation and Actuation Dynamics to be freed up for a very dry and generic textbook."* The forward half matters: the old phrase is *vacated for reuse*, not retired. The umbrella **ASF** and the prior 2026-04-16 ACT→AAD lineage are unchanged.
+
+Co-executed: **volume-directory harmonization** to a uniform `NN-{slug}-core` layout — `01-aad-core`→`01-aat-core` (slug `aad`→`aat`), `03-logogenic-agents`→`03-llm-core` (slug `loga`→`llm`; display name "Logogenic Agents" unchanged), `04-eli`→`04-eli-core`; `02-tst-core` already conformed; the dangling pre-2026-05-01 `04-logozoetic-agents` path token was cleaned to `04-eli-core` in the same pass.
+
+Disposition (Joseph's refined priority): **renamed** = all live/canonical + active `spikes/` (≠`.integrated`) + active `msc/` working docs. **Frozen** (retain "AAD" as written-at-the-time — a historical record) = `_obs/`, `releases/`, `LOG.md`, `msc/reflections/`, `msc/AUDIT-WORKING-*`, `spikes/.integrated/`. **Disclosed-not-swept** = `audits/`, `msc/naming/` (new orientation READMEs added; the name-decision records `msc/naming/name-transition-aad.md` and `collision-check-brief.md` keep "AAD" literal — sweeping would falsely read "ACT→AAT"). *Path* tokens (`01-aat-core/` etc.) were harmonized repo-wide **including** frozen trees — a path is where a file lives now, not a historical claim, so updating it keeps archaeology cross-references resolving; only the *name* freeze carries historical-record meaning.
+
+Styled `&`: the canonical/default name uses "and"; the ampersand form "Adaptation & Actuation Theory" is reserved for PDF title-page sources only (`01-aat-core/mono-meta.yaml` `title:`, `01-aat-core/OUTLINE.md` `# *Volume*`, the cover SVG). Regeneration: `bin/term render` (LEXICON), `bin/refresh-all` (README/FINDINGS/auto-partials), `bin/build-monograph --all` (monograph + every per-volume `.aux`; `--all` is required because the `.aux` enable cross-monograph `xr` linking and must rebuild together). Full staged plan, mechanics, and verification discipline (slurp-mode wrapped-phrase handling, diff-purity invariant, the FROZEN/NON-RENAME exclusion set, the stage-coverage gaps found and closed): [`msc/AAD-to-AAT-TODO.md`](msc/AAD-to-AAT-TODO.md). Lineage is also recorded in `CLAUDE.md` (*Naming note*) and `HISTORICAL-CONTEXT.md` as baseline knowledge for all agents.
+
 ## 2026-05-14
 
 ### Operator-family unification — the certificate spine: two segments, a sharp plural no-go, and a respectful-pedagogy preamble
