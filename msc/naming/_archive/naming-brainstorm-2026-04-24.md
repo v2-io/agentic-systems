@@ -255,7 +255,7 @@ Things I cannot decide alone.
 
 5. **Is there a *named* Greek-vocabulary commitment you want to make explicit, or should it remain implicit?** The project's aesthetic coherence around Greek roots is real; whether to document it is a style call.
 
-6. **Did I miss anything big?** I deliberately stayed inside the 01-aad-core / 02-tst-core / LEXICON / OUTLINE landscape. If there are naming landmines in 03-logogenic-agents or 04-eli that I didn't surface, those are the areas most likely to need a second pass.
+6. **Did I miss anything big?** I deliberately stayed inside the 01-aat-core / 02-tst-core / LEXICON / OUTLINE landscape. If there are naming landmines in 03-llm-core or 04-eli-core that I didn't surface, those are the areas most likely to need a second pass.
 
 ## 13. Epistemic status of this paper
 

@@ -27,7 +27,7 @@ I searched for score-function, likelihood-increasing direction, Gaussian-error e
 
 Assessment: this appears to be a new durable finding. A prior audit reflection in `msc/AUDIT-WORKING-849201/17-def-mismatch-signal.md` praised the score-function formulation rather than flagging the sign, so this was probably missed rather than tracked elsewhere.
 
-Recommended repair: in `01-aad-core/src/def-mismatch-signal.md`, either remove the minus sign or redefine the prose so the object is explicitly a negative-gradient / loss-gradient direction. Given the current prose says likelihood-increasing and Gaussian-error-equivalent, the cleaner repair is:
+Recommended repair: in `01-aat-core/src/def-mismatch-signal.md`, either remove the minus sign or redefine the prose so the object is explicitly a negative-gradient / loss-gradient direction. Given the current prose says likelihood-increasing and Gaussian-error-equivalent, the cleaner repair is:
 
 ```tex
 \tilde{\delta}_t = \nabla_M \log P(o_t \mid M_{t-1}, a_{t-1})
@@ -57,11 +57,11 @@ This issue is already well understood elsewhere in the repo, but not propagated 
 
 Evidence:
 
-- `01-aad-core/src/result-sector-persistence-template.md:70-72` correctly says AAD's sector condition is one-point anchoring and is strictly weaker than full two-point strong monotonicity.
+- `01-aat-core/src/result-sector-persistence-template.md:70-72` correctly says AAD's sector condition is one-point anchoring and is strictly weaker than full two-point strong monotonicity.
 - `TODO.md:181` records the operator-sector unification as one-point reduction of strong monotonicity and identifies AAD's one-point anchoring as distinctive.
 - `spikes/spike-jacobian-b1-strengthening.md:114-120`, `:195`, `:538`, and `:558` explicitly discuss the gap between one-point sector and incremental / two-point strong monotonicity.
 
-Assessment: not new as a conceptual distinction. It is still a real source bug because `01-aad-core/src/deriv-gain-sector.md` and `01-aad-core/src/der-gain-sector-bridge.md` retain "iff / equivalence" language. The current source simultaneously contains the correct distinction in `#result-sector-persistence-template` and the false equivalence in the gain bridge.
+Assessment: not new as a conceptual distinction. It is still a real source bug because `01-aat-core/src/deriv-gain-sector.md` and `01-aat-core/src/der-gain-sector-bridge.md` retain "iff / equivalence" language. The current source simultaneously contains the correct distinction in `#result-sector-persistence-template` and the false equivalence in the gain bridge.
 
 Recommended repair: replace the iff with:
 
@@ -77,10 +77,10 @@ This is already represented as a caveat in several source locations.
 
 Evidence:
 
-- `01-aad-core/src/def-adaptive-tempo.md:44-50` says additive scalar tempo overcounts correlated channels and fails under anisotropic correction.
-- `01-aad-core/src/disc-independence-audit.md:59` states the additive formula is an upper bound, with equality iff channels are informationally independent.
-- `01-aad-core/src/result-persistence-condition.md:99` carries the caveat into persistence.
-- `01-aad-core/src/der-team-persistence.md:32` and `01-aad-core/src/der-tempo-composition.md:94` propagate the multi-agent caveat.
+- `01-aat-core/src/def-adaptive-tempo.md:44-50` says additive scalar tempo overcounts correlated channels and fails under anisotropic correction.
+- `01-aat-core/src/disc-independence-audit.md:59` states the additive formula is an upper bound, with equality iff channels are informationally independent.
+- `01-aat-core/src/result-persistence-condition.md:99` carries the caveat into persistence.
+- `01-aat-core/src/der-team-persistence.md:32` and `01-aat-core/src/der-tempo-composition.md:94` propagate the multi-agent caveat.
 - `PROPOSALS.md:234` proposes an "independence profile" that explicitly includes channel independence and scalar-tempo appropriateness.
 
 Assessment: the caveat is not new. The finding is that the caveat is not integrated into the formal/status layer. `#def-adaptive-tempo` is still `status: exact` and presents the additive scalar expression as the definition rather than as nominal tempo under independence/isotropy assumptions.
@@ -99,10 +99,10 @@ This is already handled in later source, but not back-propagated cleanly.
 
 Evidence:
 
-- `01-aad-core/src/form-complete-agent-state.md:36` defines `a_t = \pi(M_t,G_t)`.
-- `01-aad-core/src/form-complete-agent-state.md:52` explicitly says `#der-action-selection` is superseded by `a_t = \pi(M_t,G_t)` after the state lift, with `a_t=\pi(M_t)` surviving for Section I agents where `G_t=\emptyset`.
-- `01-aad-core/src/def-model-sufficiency.md:40` already uses the later `\pi(M_t,G_t)` standard.
-- `01-aad-core/src/def-value-object.md:33-39` treats goal/objective and continuation policy as fixed parameters for the value query, which is compatible with the richer policy state when scoped carefully.
+- `01-aat-core/src/form-complete-agent-state.md:36` defines `a_t = \pi(M_t,G_t)`.
+- `01-aat-core/src/form-complete-agent-state.md:52` explicitly says `#der-action-selection` is superseded by `a_t = \pi(M_t,G_t)` after the state lift, with `a_t=\pi(M_t)` surviving for Section I agents where `G_t=\emptyset`.
+- `01-aat-core/src/def-model-sufficiency.md:40` already uses the later `\pi(M_t,G_t)` standard.
+- `01-aat-core/src/def-value-object.md:33-39` treats goal/objective and continuation policy as fixed parameters for the value query, which is compatible with the richer policy state when scoped carefully.
 
 Assessment: known supersession / integration debt. The formal claim in `#der-action-selection` should be restated as `a_t=\pi(X_t)` for complete internal state, with `X_t=M_t` only in the Section I / no-purposeful-substate case.
 
@@ -139,10 +139,10 @@ This tension is already conceptually visible in source.
 
 Evidence:
 
-- `01-aad-core/src/def-agent-environment.md:11` and `:23` define agents as producing actions that affect the environment.
-- `01-aad-core/src/scope-adaptive-system.md:41` explicitly includes passive observers / nominal agents in adaptive scope.
-- `01-aad-core/src/post-causal-structure.md:36-38` says zero-coupling systems remain inside adaptive scope if they observe under residual uncertainty.
-- `01-aad-core/src/def-agent-spectrum.md:44` says passive trackers, including passive Bayesian learners with no action choices, are fully within Section I's scope.
+- `01-aat-core/src/def-agent-environment.md:11` and `:23` define agents as producing actions that affect the environment.
+- `01-aat-core/src/scope-adaptive-system.md:41` explicitly includes passive observers / nominal agents in adaptive scope.
+- `01-aat-core/src/post-causal-structure.md:36-38` says zero-coupling systems remain inside adaptive scope if they observe under residual uncertainty.
+- `01-aat-core/src/def-agent-spectrum.md:44` says passive trackers, including passive Bayesian learners with no action choices, are fully within Section I's scope.
 - Prior audit notes also noticed this: `msc/AUDIT-WORKING-584721/01-section-i-leaves.md:19` and `msc/AUDIT-WORKING-742613/04-scope-adaptive-system.md`.
 
 Assessment: this is not a newly discovered conceptual requirement. It is a terminology/primitive integration problem. The theory wants a broad "adaptive system" primitive and a narrower "agency" primitive, but the first foundational definition uses action-affecting "agent" language too early.

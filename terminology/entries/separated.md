@@ -11,8 +11,8 @@ tags:
 - structural_concepts
 - agent_classes
 source_type: asf
-primary_source: 01-aad-core/src/der-directed-separation.md
-first_asf_mention: 01-aad-core/src/der-directed-separation.md
+primary_source: 01-aat-core/src/der-directed-separation.md
+first_asf_mention: 01-aat-core/src/der-directed-separation.md
 see_also:
 - goal-update-coupling-class
 - directed-separation
@@ -33,7 +33,7 @@ seq: 1
 **Class 1: Separated** is the cleanest value on the [Goal-Update Coupling Class](goal-update-coupling-class.md)
 axis. A Separated agent's epistemic update $f_M$ is goal-blind by construction: it takes no $G_t$
 argument, and the directed-separation condition of
-[`#der-directed-separation`](../../01-aad-core/src/der-directed-separation.md) holds structurally.
+[`#der-directed-separation`](../../01-aat-core/src/der-directed-separation.md) holds structurally.
 
 The "by construction" qualifier matters. A Separated agent may be tightly integrated at the system
 level — what distinguishes it is that the belief-update computation is architecturally forbidden from

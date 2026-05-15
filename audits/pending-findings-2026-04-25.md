@@ -37,8 +37,8 @@ The primary audit's "zero findings" was a false negative caused by charitable re
 ## F-V1: Discrete-to-continuous Model S variance gap mis-stated
 
 **Affected segments:**
-- `01-aad-core/src/deriv-discrete-sector-condition.md` §"Recovery of continuous result" (line 147) and §"Fluid Limit Theorem" (line 163)
-- `01-aad-core/src/detail-linear-ode-approximation.md` §6 "Discrete-time connection" (line 154) and Epistemic Status (line 186)
+- `01-aat-core/src/deriv-discrete-sector-condition.md` §"Recovery of continuous result" (line 147) and §"Fluid Limit Theorem" (line 163)
+- `01-aat-core/src/detail-linear-ode-approximation.md` §6 "Discrete-time connection" (line 154) and Epistemic Status (line 186)
 
 **Problematic passage** (`deriv-discrete-sector-condition.md` line 147): "The discrete-to-continuous gap for Model S variance is $O((\eta^\ast)^2 c^2_{\max})$ — the $(\eta^\ast)^2 \lVert F_d\rVert^2$ term that vanishes in the fluid limit."
 
@@ -67,8 +67,8 @@ $$V_{ss} - V_c \approx \frac{n\sigma_w^2 c^2_{\max}}{4 c^2_{\min} \nu} = O(1/\nu
 ## F-V2: `scope-multi-agent` excludes adversarial pairs; `scope-composite-agent` admits them via C-iv
 
 **Affected segments:**
-- `01-aad-core/src/scope-multi-agent.md` lines 67–73 (Discussion §"The adversarial case is one end of a spectrum — but not a composite.")
-- `01-aad-core/src/scope-composite-agent.md` lines 38–52 (C-iii and C-iv definitions) and line 89 (Discussion).
+- `01-aat-core/src/scope-multi-agent.md` lines 67–73 (Discussion §"The adversarial case is one end of a spectrum — but not a composite.")
+- `01-aat-core/src/scope-composite-agent.md` lines 38–52 (C-iii and C-iv definitions) and line 89 (Discussion).
 
 **Problematic passage** (scope-multi-agent.md:67–73): "**The adversarial case is one end of a spectrum — but not a composite.** Agents whose objectives conflict are multi-agent systems with negative teleological unity ( #def-unity-dimensions) and thus do not satisfy #scope-composite-agent: the absence of shared purpose means no composite agent exists.... Adversarial pairs are *excluded* from this scope."
 
@@ -88,7 +88,7 @@ The two segments directly contradict. Route C-iv was added in the 2026-04-23 Gap
 
 ## F-V3: C-iii mutual-benefit composites lack coherent $G_c = (O_c, \Sigma_c)$
 
-**Affected segment:** `01-aad-core/src/scope-composite-agent.md` lines 38–44 (C-iii) and line 79 (Discussion).
+**Affected segment:** `01-aat-core/src/scope-composite-agent.md` lines 38–44 (C-iii) and line 79 (Discussion).
 
 **Problematic passage** (lines 38–44): "**(C-iii) Mutual-benefit alignment**... Weakest route. *No explicit common objective*, but interactions are positive-sum in some dimension. Symbiotic coexistence; commensal ecologies; trading partners who share no goals beyond mutual benefit."
 
@@ -114,7 +114,7 @@ The two paths are not exclusive — Path A gives a working interim fix; Path B i
 
 ## F-V4: Sign error in zero-sum worked example
 
-**Affected segment:** `01-aad-core/src/deriv-strategic-composition.md` lines 70–76.
+**Affected segment:** `01-aat-core/src/deriv-strategic-composition.md` lines 70–76.
 
 **Problematic passage** (verified 2026-04-25):
 > Two agents $A, B$ with scalar actions $a_i \in [-1, 1]$ and state $s_{t+1} = s_t + a_A - a_B + w_t$, $w_t \sim \mathcal N(0, \sigma^2)$. Objectives $O_t^{(A)}(s) = s$, $O_t^{(B)}(s) = -s$ (zero-sum).
@@ -149,7 +149,7 @@ For Monderer-Shapley potential property: $\partial \Phi/\partial a_B = \partial 
 
 **Affected segment:** `02-tst-core/src/scope-developer-agent.md` (lines 63, 73, 166).
 
-**Counterevidence segments:** `03-logogenic-agents/src/scope-logogenic-agent.md`, `03-logogenic-agents/src/def-coupled-update-dynamics.md`, `03-logogenic-agents/src/obs-context-turnover.md`.
+**Counterevidence segments:** `03-llm-core/src/scope-logogenic-agent.md`, `03-llm-core/src/def-coupled-update-dynamics.md`, `03-llm-core/src/obs-context-turnover.md`.
 
 **Problematic passages** in `scope-developer-agent.md`:
 - Line 63: "For AI agents, $M_t$ is more explicitly representable (context window contents plus persistent storage), making it closer to a directly observable quantity."
@@ -164,7 +164,7 @@ For Monderer-Shapley potential property: $\partial \Phi/\partial a_B = \partial 
 
 The TST scope-developer-agent treats AI agents using standard AAD apparatus (orient cascade as derived; $M_t$ reset to near-zero; "directly observable" $M_t$) without referencing the Class 2 architectural caveat from `der-directed-separation` or the more careful logogenic treatment.
 
-**Status:** real cross-component integration debt. The framework has the Class 2 story in `03-logogenic-agents/`; TST hasn't absorbed it.
+**Status:** real cross-component integration debt. The framework has the Class 2 story in `03-llm-core/`; TST hasn't absorbed it.
 
 **Confidence:** High (verified first-hand 2026-04-25).
 
@@ -179,7 +179,7 @@ Estimated: ~30–45 minutes. Should be done by an agent that has read both TST a
 
 ## P-V1 (partial): "Not a discretization artifact" framing too strong in `result-adversarial-tempo-advantage`
 
-**Affected segment:** `01-aad-core/src/result-adversarial-tempo-advantage.md` Working Notes.
+**Affected segment:** `01-aat-core/src/result-adversarial-tempo-advantage.md` Working Notes.
 
 **Audit characterization** (Gemini, captured 2026-04-25): The Working Notes attribute the simulation $b = 1.481$ vs $b = 3/2$ gap to non-artifact precision. In fact, the discrete steady-state ratio carries a correction factor proportional to $\sqrt{(2c_{\min} - \eta^\ast_A c^2_{\max})/(2c_{\min} - \eta^\ast_B c^2_{\max})}$ that gives values slightly below 3/2 when $\eta^\ast_A > \eta^\ast_B$. 1.481 is consistent with this correction, not just numerical noise around 1.5. The framework's *asymptotic-scaling* claim (3/2 in the fluid limit) is correct; the *dismissal* of the 0.019 gap is too quick.
 
@@ -193,7 +193,7 @@ Compounded with F-V1, this suggests the framework's discrete-vs-continuous accou
 
 ## P-V2 (partial): "Linear projections of linear dynamics are exact" loose framing in `result-unity-closure-mapping`
 
-**Affected segment:** `01-aad-core/src/result-unity-closure-mapping.md`.
+**Affected segment:** `01-aat-core/src/result-unity-closure-mapping.md`.
 
 **Audit characterization** (Gemini, captured 2026-04-25): The same segment qualifies the claim with three exceptions (inconsistent projection, nonlinear micro-dynamics, heterogeneous update rules), but the punchline as stated overgeneralizes to cases where the projection's range is non-invariant under the dynamics matrix in ways the three bullets don't fully cover (cross-correlation in dynamics, anisotropic noise scales). `form-composition-closure.md`'s Mori-Zwanzig zero-lag bound $\varepsilon^\ast \geq \|Q_\Lambda U P_\Lambda\|_{\text{op}}$ correctly handles the general non-invariant-subspace case. The framework has the right machinery; the unity-closure-mapping segment's punchline could be tightened.
 
@@ -205,7 +205,7 @@ Compounded with F-V1, this suggests the framework's discrete-vs-continuous accou
 
 ## P-V3: `hyp-causal-discovery-from-git` "causal direction for free" overstates `post-causal-structure`
 
-**Affected segment:** `01-aad-core/src/hyp-causal-discovery-from-git.md` line 30.
+**Affected segment:** `01-aat-core/src/hyp-causal-discovery-from-git.md` line 30.
 
 **Problematic passage:** "the temporal ordering provides causal direction for free."
 
@@ -253,7 +253,7 @@ These are not findings; they are evidence that the framework's segment-level dis
 
 ## Coverage caveats
 
-The fresh-pass audit read ~45 of 109 AAD-core segments + selected TST. **Not read by the primary audit**: most foundational definitions; most Section III hypotheses (`hyp-directed-separation-under-composition`, `hyp-auftragstaktik-principle`, `hyp-communication-gain`, `obs-gates-advantage`); recently-promoted (`deriv-fisher-whitened-update-rule`, `deriv-l1-update-bias`, `deriv-variational-sector-condition`, `deriv-adaptive-gain-dynamics`); most TST (~20 segments); all of `03-logogenic-agents/` (touched in F-V5 verification this session); all of `04-logozoetic-agents/`. The judgments above are weighted toward AAD-core's load-bearing centers and recently-landed novel results; whether the framework's discipline holds across the unread segments is **Hypothesis**-level rather than **Tested**.
+The fresh-pass audit read ~45 of 109 AAD-core segments + selected TST. **Not read by the primary audit**: most foundational definitions; most Section III hypotheses (`hyp-directed-separation-under-composition`, `hyp-auftragstaktik-principle`, `hyp-communication-gain`, `obs-gates-advantage`); recently-promoted (`deriv-fisher-whitened-update-rule`, `deriv-l1-update-bias`, `deriv-variational-sector-condition`, `deriv-adaptive-gain-dynamics`); most TST (~20 segments); all of `03-llm-core/` (touched in F-V5 verification this session); all of `04-eli-core/`. The judgments above are weighted toward AAD-core's load-bearing centers and recently-landed novel results; whether the framework's discipline holds across the unread segments is **Hypothesis**-level rather than **Tested**.
 
 The improved `msc/de-novo-audit-instructions.md` was written to address the failure modes that produced this coverage gap and the false-negative "zero findings." Future audits running with the improved instructions will have stronger coverage and cross-segment-consistency discipline; redundancy with this batch is expected and acceptable.
 

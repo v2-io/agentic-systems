@@ -85,7 +85,7 @@ This suggests that the emergence of hierarchies or firms can be modeled as a dyn
 *Fix:* We must look at `#def-shared-intent` (the Information Bottleneck for communication). If Agent A's state is perturbed by mismatch $\delta_A$, its compressed message to B is distorted. Agent B decodes this using its own perturbed model $\delta_B$. The joint error is proportional to the cross-correlation $\delta_A \times \delta_B$. If the agents are roughly symmetric ($\delta_A \approx \delta_B \approx \delta$), the communication error is exactly quadratic ($\propto \delta^2$). By deriving the constant $k$ directly from the mutual information loss in `#def-shared-intent`, the bifurcation becomes a rigorous, derived consequence of the AAD framework, not a tacked-on macro-model.
 
 **Promotion Plan:**
-- Before promoting to `01-aad-core/src/deriv-symbiogenic-bifurcation.md`, the $k\delta^2$ term must be formally derived from the shared-intent communication channel.
+- Before promoting to `01-aat-core/src/deriv-symbiogenic-bifurcation.md`, the $k\delta^2$ term must be formally derived from the shared-intent communication channel.
 - This will require modifying `#der-tempo-composition` to explicitly note that $C_{\text{coord}}$ contains non-linear terms that dominate at high mismatch, which is the physical mechanism driving the phase transition.
 
 *(End of spike.)*

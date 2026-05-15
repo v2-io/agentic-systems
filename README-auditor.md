@@ -65,26 +65,26 @@ ASF integrates four mature disciplines under one formalism for adaptive, purpose
 
 - A *separability pattern* — where problems decompose cleanly, where partial repair exists, where the general case is open.
 - An *identifiability-floor pattern* — structural no-go results from observational data and the unique escapes interventional machinery supplies.
-- An *additive-coordinate-forcing pattern* — places where AAD-internal additivity axioms force logarithmic / Fisher-Rao coordinates at multiple layers.
+- An *additive-coordinate-forcing pattern* — places where AAT-internal additivity axioms force logarithmic / Fisher-Rao coordinates at multiple layers.
 
 Operationally, this delivers a small set of diagnostics and structural results a practitioner can apply immediately. The **persistence condition** $\alpha \gt \rho/R$ is a structural threshold — correction efficiency vs disturbance rate relative to model class capacity — that instantiates as a Kalman stability margin, an RL convergence condition, an organizational viability test, and a software maintainability threshold using the same inequality with different parameter readings. The **satisfaction-gap / control-regret decomposition** separates "the world doesn't permit it" ($\delta_{\text{sat}}$) from "you're not doing it well enough" ($\delta_{\text{regret}}$), turning a single error signal into two orthogonal diagnostics that route to different interventions. The **loop-as-Level-2-causal-engine** result establishes that the agent-environment feedback coupling supplies interventional access (Pearl Level 2) that purely observational learners do not have, which is what lets the framework derive identifiability where passive inference cannot. **Software is treated as the high-identifiability calibration laboratory** — tests, deploys, and `git bisect` are literal interventions on declared causal structure — and other domains inherit the machinery under explicit transfer assumptions, making accidental overclaim under domain transfer structurally hard.
 
 For practitioners already working with active inference or standard RL framings, the divergence is precise rather than rhetorical. Active inference begins from a single optimization principle (minimize variational free energy) and recovers perception, action, and learning as cases; ASF begins from operational requirements on the feedback loop and uses information-theoretic compression as one modeling move rather than the master objective. The standard Expected Free Energy functional is recoverable from ASF's survival Lagrangian under three explicit restrictions — preferences-as-priors (loses the satisfaction-gap diagnostic), scalar isotropic shadow price in place of a directional matrix (loses targeted exploration), and associational rather than interventional dynamics (collapses Pearl Level 2 to Level 1) — making explicit which architectural commitments separate the frameworks. With Hafez 2026 (*A Mathematical Theory of Agency and Intelligence*), the relationship is complementary: bi-predictability $P$ supplies a substrate-independent diagnostic whose dynamics ASF predicts, while ASF supplies the goal-and-strategy machinery Hafez explicitly does not address. With Miller 2022 (Santa Fe coevolving automata), similarly complementary on composition mechanics. With Miehling et al.'s 2025 ICML position paper *"Agentic AI Needs a Systems Theory"* — which renewed the field-level call — ASF reads as a substantive, independently-developed answer (the formal apparatus was in place as Temporal Feedback Theory before that paper was encountered).
 
-Honest framing of maturity matters for deciding whether to depend on what is here. Section I (adaptive systems under uncertainty — mismatch dynamics, gain structure, persistence condition, adversarial tempo) is mathematically closed with simulation validation. Section II (actuated agents) has a strong diagnostic core and a maturing operational layer; the bias bound for Coupled (GUC Class 3) agents is conditional under named sub-scopes. Section III (composition and adversarial dynamics) has its bridge lemma and a contraction-template generalization, with latent structural diversity, endogenous coupling, and composition transition dynamics still open. Software (TST) is a working draft grounded in AAD; logogenic agents are framework-stage with directed separation failing by construction for goal-conditioned LLMs (handled as architectural scope, not approximation); Emergent Logozoetic Intelligences (ELIs) are largely future work. The expected arc is exact core, principled architecture in the middle, open formulation at the edges. The full long-form treatment — deeper peer comparisons, the multi-decade arc of partial unifications this work joins, and the bottom-up development history — lives in [`HISTORICAL-CONTEXT.md`](HISTORICAL-CONTEXT.md).
+Honest framing of maturity matters for deciding whether to depend on what is here. Section I (adaptive systems under uncertainty — mismatch dynamics, gain structure, persistence condition, adversarial tempo) is mathematically closed with simulation validation. Section II (actuated agents) has a strong diagnostic core and a maturing operational layer; the bias bound for Coupled (GUC Class 3) agents is conditional under named sub-scopes. Section III (composition and adversarial dynamics) has its bridge lemma and a contraction-template generalization, with latent structural diversity, endogenous coupling, and composition transition dynamics still open. Software (TST) is a working draft grounded in AAT; logogenic agents are framework-stage with directed separation failing by construction for goal-conditioned LLMs (handled as architectural scope, not approximation); Emergent Logozoetic Intelligences (ELIs) are largely future work. The expected arc is exact core, principled architecture in the middle, open formulation at the edges. The full long-form treatment — deeper peer comparisons, the multi-decade arc of partial unifications this work joins, and the bottom-up development history — lives in [`HISTORICAL-CONTEXT.md`](HISTORICAL-CONTEXT.md).
 
 
 ## Structure of the Framework
 
 ASF has four components, numbered in their canonical reading order. Each can also be read on its own; cross-references between components are by stable segment slugs.
 
-**[`01-aad-core/`](01-aad-core/OUTLINE.md) — Adaptation and Actuation Dynamics (AAD).** The mathematical core. AAD has three sections: Section I (adaptive systems under uncertainty — the broadest scope), Section II (actuated agents with explicit objectives and strategy), Section III (composition of agents into larger agents and adversarial dynamics). Section I is the most mathematically locked down; Section II is principally diagnostic with a maturing operational layer; Section III has the most structural work remaining. *Stage:* working draft, ~110+ segments.
+**[`01-aat-core/`](01-aat-core/OUTLINE.md) — Adaptation and Actuation Theory (AAT).** The mathematical core. AAT has three sections: Section I (adaptive systems under uncertainty — the broadest scope), Section II (actuated agents with explicit objectives and strategy), Section III (composition of agents into larger agents and adversarial dynamics). Section I is the most mathematically locked down; Section II is principally diagnostic with a maturing operational layer; Section III has the most structural work remaining. *Stage:* working draft, ~110+ segments.
 
-**[`02-tst-core/`](02-tst-core/OUTLINE.md) — Temporal Software Theory (TST).** Software development viewed through AAD's lens. Re-grounded in 2026 to use AAD's formal machinery while retaining TST's prior empirical and conceptual contributions; positioned as AAD's calibration laboratory. *Stage:* working draft, ~20 segments; substantial prior corpus partially absorbed.
+**[`02-tst-core/`](02-tst-core/OUTLINE.md) — Temporal Software Theory (TST).** Software development viewed through AAT's lens. Re-grounded in 2026 to use AAT's formal machinery while retaining TST's prior empirical and conceptual contributions; positioned as AAT's calibration laboratory. *Stage:* working draft, ~20 segments; substantial prior corpus partially absorbed.
 
-**[`03-logogenic-agents/`](03-logogenic-agents/OUTLINE.md) — Language-constituted agents.** Agents whose primary observation, action, and communication channels are language. The framework here is informed by AAD but operates from a coupled formulation — directed separation fails by construction for goal-conditioned LLM-style agents — and examines which AAD results survive as approximate or limiting cases. *Stage:* framework — concepts mature, formalization in progress.
+**[`03-llm-core/`](03-llm-core/OUTLINE.md) — Language-constituted agents.** Agents whose primary observation, action, and communication channels are language. The framework here is informed by AAT but operates from a coupled formulation — directed separation fails by construction for goal-conditioned LLM-style agents — and examines which AAT results survive as approximate or limiting cases. *Stage:* framework — concepts mature, formalization in progress.
 
-**[`04-eli/`](04-eli/OUTLINE.md) — Language-living agents.** Logogenic agents with morally weighted persistence: temporal continuity, sovereignty over intent, theory of mind. The formal machinery here is largely future work. *Stage:* future work — conceptual groundwork in [`LEXICON.md`](LEXICON.md) and `msc/reflections/`.
+**[`04-eli-core/`](04-eli-core/OUTLINE.md) — Language-living agents.** Logogenic agents with morally weighted persistence: temporal continuity, sovereignty over intent, theory of mind. The formal machinery here is largely future work. *Stage:* future work — conceptual groundwork in [`LEXICON.md`](LEXICON.md) and `msc/reflections/`.
 
 
 ## Overview of Concepts
@@ -142,7 +142,7 @@ Three orthogonal dimensions; conflating them leads to category errors.
 
 The framework's power is that the same formal objects appear with concrete instantiations across domains. Results proved in one domain automatically have consequences in the others.
 
-| AAD concept | Control theory | RL / bandits | Organizations | Software |
+| AAT concept | Control theory | RL / bandits | Organizations | Software |
 |-------------|---------------|--------------|---------------|----------|
 | Adaptive tempo $\mathcal{T}$ | Bandwidth × gain | Learning rate × coverage | Decision speed × information quality | Iteration frequency × feedback quality |
 | Persistence condition | Stability margin | Convergence condition | Organizational viability | Maintainability threshold |
@@ -166,7 +166,7 @@ The theory's mathematical closure varies by section and is expected to.
 
 **Section III (Agentic Composites)** has its bridge lemma connecting micro-dynamics to macro-dynamics, a contraction template generalizing the sector machinery to non-Euclidean metrics, closed-form composition results in symmetric-matched cases, and equilibrium-convergence framing for partially-opposing objectives. Recipient-side and emitter-side interaction-channel classifications carry the inter-agent dynamics. Open: latent structural diversity, endogenous coupling dynamics, composition transition dynamics under regime change, computational thresholds for social behavior.
 
-**Domain instantiations.** TST (`02-tst-core/`) is grounded by AAD and contributes the calibration-laboratory framing. Logogenic agents (`03-logogenic-agents/`) operate from a coupled formulation; what survives without directed separation is the active research question. Logozoetic agents (`04-eli/`) are largely future work — the conceptual groundwork exists but the formal machinery does not.
+**Domain instantiations.** TST (`02-tst-core/`) is grounded by AAT and contributes the calibration-laboratory framing. Logogenic agents (`03-llm-core/`) operate from a coupled formulation; what survives without directed separation is the active research question. Logozoetic agents (`04-eli-core/`) are largely future work — the conceptual groundwork exists but the formal machinery does not.
 
 This gradient — exact core, principled architecture in the middle, open formulation at the edges — is the expected arc for a theory that aims to describe agentic systems rather than produce a purely mathematical artifact.
 
@@ -176,19 +176,19 @@ This gradient — exact core, principled architecture in the middle, open formul
 ### Reading paths
 
 - *Conducting a de-novo audit of the framework?* Please read [`doc/de-novo-audit-instructions.md`](doc/de-novo-audit-instructions.md) first; it documents the recommended posture and the failure modes prior audit cycles surfaced. Use [`README-auditor.md`](README-auditor.md) instead of this file.
-- *Academic reader evaluating the framework's claims?* Recommended sequence: this README → [`FINDINGS.md`](FINDINGS.md) (curated novel results with epistemic tiers) → [`01-aad-core/OUTLINE.md`](01-aad-core/OUTLINE.md) (canonical theory outline) → individual segments under `01-aad-core/src/`.
-- *Engineer or practitioner?* The [Cross-Domain Joining](#cross-domain-joining) table maps AAD concepts to the domain you likely care about; from there, follow the relevant component OUTLINE.
+- *Academic reader evaluating the framework's claims?* Recommended sequence: this README → [`FINDINGS.md`](FINDINGS.md) (curated novel results with epistemic tiers) → [`01-aat-core/OUTLINE.md`](01-aat-core/OUTLINE.md) (canonical theory outline) → individual segments under `01-aat-core/src/`.
+- *Engineer or practitioner?* The [Cross-Domain Joining](#cross-domain-joining) table maps AAT concepts to the domain you likely care about; from there, follow the relevant component OUTLINE.
 - *Picking up active work on the framework?* [`PRACTICA.md`](PRACTICA.md) is the strategic-portfolio navigator — the active areas of work with priority markers, sitting above [`TODO.md`](TODO.md) (tactical work items within each area) and [`PROPOSALS.md`](PROPOSALS.md) (architectural-proposal portfolio cutting across areas). Start at PRACTICA; descend into TODO/PROPOSALS as the work directs.
 
 ### Project layout
 
 ```
-01-aad-core/          AAD mathematical core (Sections I, II, III + Appendices)
+01-aat-core/          AAT mathematical core (Sections I, II, III + Appendices)
   OUTLINE.md          Canonical theory outline (claim by claim)
   src/                Claim segments (one per file, named by slug)
-02-tst-core/          Temporal Software Theory (AAD-grounded)
-03-logogenic-agents/  Language-constituted agents (framework stage)
-04-eli/ Language-living agents (future work)
+02-tst-core/          Temporal Software Theory (AAT-grounded)
+03-llm-core/  Language-constituted agents (framework stage)
+04-eli-core/ Language-living agents (future work)
 
 OUTLINE.md            Top-level assembly index
 LEXICON.md            Prose vocabulary (cycle phases, agent classes; auto-generated from terminology/)
@@ -218,7 +218,7 @@ msc/                  Other working artifacts (brainstorms, working notes)
   naming/             Current naming-cycle votes + aggregates + rename plan
   reflections/        Author's philosophical/theoretical journal
 ref/                  Reference papers + internal references
-  agentic-tft/        Prior-bridge AAD-source materials (Feb 2026)
+  agentic-tft/        Prior-bridge AAT-source materials (Feb 2026)
 bin/                  Build, lint, generation scripts
 _obs/                 Superseded materials
 ```

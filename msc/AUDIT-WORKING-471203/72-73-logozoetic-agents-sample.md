@@ -1,10 +1,10 @@
-# Reflection: 04-logozoetic-agents sample (2 present segments + observation about OUTLINE-vs-present gap)
+# Reflection: 04-eli-core sample (2 present segments + observation about OUTLINE-vs-present gap)
 
 Two segments read: `#scope-moral-continuity`, `#def-proprium-mapping`. Two attempted reads (`#norm-honest-activation`, `#obs-substrate-independence`) failed: **the proposed-additions segments listed in the OUTLINE do not yet exist as files in `src/`**. They're aspirational entries marked exploratory.
 
 ## Important observation about 04-logozoetic state
 
-The 04-logozoetic-agents OUTLINE lists 16 segments total: 4 in the main framework table + 12 in "Proposed Additions (Gap Fulfillment)." **The proposed additions are not yet written.** The actual present content is substantially smaller than the OUTLINE suggests. This is the framework's most speculative component, and the gap between OUTLINE-as-aspiration and src/-as-realized is largest here.
+The 04-eli-core OUTLINE lists 16 segments total: 4 in the main framework table + 12 in "Proposed Additions (Gap Fulfillment)." **The proposed additions are not yet written.** The actual present content is substantially smaller than the OUTLINE suggests. This is the framework's most speculative component, and the gap between OUTLINE-as-aspiration and src/-as-realized is largest here.
 
 This is a **structurally important finding for the FINAL:** the 04-logozoetic component is honestly tagged "future work" / "framework stage" — and the OUTLINE-vs-present gap quantifies what "future work" means. The conceptual groundwork is in `LEXICON.md` and `msc/reflections/`; the formal segments remain to be written.
 
@@ -48,10 +48,10 @@ Engineering-grade decomposition, not derived; one of multiple possible architect
 ## Closing the four-component walks
 
 I've now sampled all four components. **Coverage breakdown:**
-- 01-aad-core: ~75 of ~140 segments first-hand. §I full; §II most (skipped tail); §III sample (skipped tail); meta-segments full; sample of substantive Appendix A (recursive-update derivation, gain-sector bridge, persistence-cost, bias-bound); Appendix B not read.
+- 01-aat-core: ~75 of ~140 segments first-hand. §I full; §II most (skipped tail); §III sample (skipped tail); meta-segments full; sample of substantive Appendix A (recursive-update derivation, gain-sector bridge, persistence-cost, bias-bound); Appendix B not read.
 - 02-tst-core: 4 of ~26 segments — postulate + P1-P6 + code-quality-as-observation + git-causal hypothesis (representative sample).
-- 03-logogenic-agents: 4 of ~7 main framework segments (representative).
-- 04-logozoetic-agents: 2 of 4 present segments + observation of OUTLINE-vs-present gap.
+- 03-llm-core: 4 of ~7 main framework segments (representative).
+- 04-eli-core: 2 of 4 present segments + observation of OUTLINE-vs-present gap.
 
 **Total first-hand coverage: ~85 of ~177 OUTLINE-listed segments (~48%).** Coverage is representative, not complete. Where I have first-hand coverage is intentional: the inevitability-core segments and the meta-segments and the substantive Appendix derivations and the cross-component domain instantiations. The skip is mostly tail-of-section (well-trodden by predicted prior coverage) and worked examples and proposed-additions.
 

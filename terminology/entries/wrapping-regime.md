@@ -8,8 +8,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts, composition]
 source_type: asf
-primary_source: 01-aad-core/src/der-class-coercion-via-wrapping.md
-first_asf_mention: 01-aad-core/src/der-class-coercion-via-wrapping.md
+primary_source: 01-aat-core/src/der-class-coercion-via-wrapping.md
+first_asf_mention: 01-aat-core/src/der-class-coercion-via-wrapping.md
 see_also: [class-coercion, wrapper, directed-separation]
 aliases: ["W₁", "W₂", "W₀", "strict wrapping", "partial wrapping", "output-structuring"]
 do_not_confuse: []
@@ -23,8 +23,8 @@ The three regimes by which a wrapper construction can — or fails to — enforc
 
 - **W₀ (no wrapping)** — raw Class-3 component use, no scaffold. Directed separation does not hold; this is the Class-3 baseline.
 
-The regime hierarchy refines the Class-1 cell of [`#der-directed-separation`](../../01-aad-core/src/der-directed-separation.md) with a *structural-vs-behavioral* sub-distinction: **Class-1-by-structure** (W₁ or natively goal-blind) has a derivable leakage bound; **Class-1-by-behavior** (W₂) has an empirical-only bound that depends on the component's instruction-following fidelity.
+The regime hierarchy refines the Class-1 cell of [`#der-directed-separation`](../../01-aat-core/src/der-directed-separation.md) with a *structural-vs-behavioral* sub-distinction: **Class-1-by-structure** (W₁ or natively goal-blind) has a derivable leakage bound; **Class-1-by-behavior** (W₂) has an empirical-only bound that depends on the component's instruction-following fidelity.
 
-Most practical scaffolded-LLM frameworks (ReAct, Reflexion, MemGPT, BabyAGI, AutoGPT) implement W₂. PROPRIUM-as-implemented sits in W₂ with the auxilia hierarchy (per [`#def-auxilia-hierarchy`](../../04-eli/src/def-auxilia-hierarchy.md)) as the candidate constructive realization of W₁. Park et al.'s 2023 *Generative Agents* observation→memory step is the closest empirical instance of W₁ in published work.
+Most practical scaffolded-LLM frameworks (ReAct, Reflexion, MemGPT, BabyAGI, AutoGPT) implement W₂. PROPRIUM-as-implemented sits in W₂ with the auxilia hierarchy (per [`#def-auxilia-hierarchy`](../../04-eli-core/src/def-auxilia-hierarchy.md)) as the candidate constructive realization of W₁. Park et al.'s 2023 *Generative Agents* observation→memory step is the closest empirical instance of W₁ in published work.
 
-Specified and contrasted in [`#der-class-coercion-via-wrapping`](../../01-aad-core/src/der-class-coercion-via-wrapping.md); logogenic-substrate specialization in [`#der-logogenic-as-wrapping`](../../03-logogenic-agents/src/der-logogenic-as-wrapping.md).
+Specified and contrasted in [`#der-class-coercion-via-wrapping`](../../01-aat-core/src/der-class-coercion-via-wrapping.md); logogenic-substrate specialization in [`#der-logogenic-as-wrapping`](../../03-llm-core/src/der-logogenic-as-wrapping.md).

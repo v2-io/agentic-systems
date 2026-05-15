@@ -20,7 +20,7 @@ Format: short prose tag identifying the segment and where in the dependency chai
 
 The locality tag is doing two jobs: (a) where in the OUTLINE order, and (b) what the segment introduces that's load-bearing for the name. Both are short, both ground the R2 voter in the *first* encounter.
 
-Use `01-aad-core/OUTLINE.md`, `02-tst-core/OUTLINE.md`, etc. for canonical ordering. The segment frontmatter `depends:` list tells you what comes before. You can also read segments to see how the concept gets used the first time — that often surfaces what the *first-encounter feel* would be.
+Use `01-aat-core/OUTLINE.md`, `02-tst-core/OUTLINE.md`, etc. for canonical ordering. The segment frontmatter `depends:` list tells you what comes before. You can also read segments to see how the concept gets used the first time — that often surfaces what the *first-encounter feel* would be.
 
 For currents without a `segment_link` (concept clusters, math-symbol rows, framing-level concepts) — leave `first_encounter_locality` null. The locality lens doesn't apply.
 
@@ -38,7 +38,7 @@ Format: short prose tag in `candidate.canonicalize_provenance`. Something like:
 
 > *"invented — phrase not found in segment prose at the time of the vote; the canonicalize classification reflects voter support, not excavation from prose."*
 
-Use `grep` or equivalent to search segment files (`01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, `04-eli/src/`) for the candidate phrase. Quoting on word boundaries helps; the corpus uses both formal phrasings and looser working-prose so a slightly fuzzy match counts (case-insensitive, whitespace-tolerant). When in doubt, read the surrounding paragraph to see if it's a substantive use vs an incidental occurrence.
+Use `grep` or equivalent to search segment files (`01-aat-core/src/`, `02-tst-core/src/`, `03-llm-core/src/`, `04-eli-core/src/`) for the candidate phrase. Quoting on word boundaries helps; the corpus uses both formal phrasings and looser working-prose so a slightly fuzzy match counts (case-insensitive, whitespace-tolerant). When in doubt, read the surrounding paragraph to see if it's a substantive use vs an incidental occurrence.
 
 This is more search-heavy than judgment-heavy, but the judgment moment is *what counts as a substantive prose use*. A phrase appearing once in a segment's `depends:` list comment doesn't count; a phrase appearing in Discussion or Epistemic Status as part of an argument does. Use your sense.
 
@@ -54,7 +54,7 @@ The `canonicalize_provenance` is more substantive. The project's naming-principl
 
 - `msc/naming/master-list-curated.json` — the data you're filling. Both fields are currently null.
 - `*/OUTLINE.md` — the canonical ordering for each component.
-- The segment files in `01-aad-core/src/`, `02-tst-core/src/`, etc. — frontmatter for `depends:`, body for prose.
+- The segment files in `01-aat-core/src/`, `02-tst-core/src/`, etc. — frontmatter for `depends:`, body for prose.
 - `msc/naming/master-list-full.md` — the human-readable view; useful for cross-checking your work as you go.
 - `LEXICON.md`, `NOTATION.md`, `CLAUDE.md`, `doc/naming-principles.md` — reference background.
 

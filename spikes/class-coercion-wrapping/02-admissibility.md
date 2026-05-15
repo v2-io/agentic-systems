@@ -119,7 +119,7 @@ What partial results might be available?
 
 **Salvage attempt 3: goal-blind extraction via auxiliary head.** Train or distill a separate goal-blind component (e.g., "predict the next observation regardless of goal") that lives alongside the goal-conditioned one. This converts Class C into Class A* by adding capability — a different construction, not pure wrapping.
 
-**Salvage attempt 4: accept Class-3 status and use AAD's existing scope-restricted machinery.** If wrapping doesn't work, the system remains Class-3, and AAD's results apply only with the corresponding scope restrictions. This is what CLAUDE.md's existing "Class 2 exit" framing acknowledges.
+**Salvage attempt 4: accept Class-3 status and use AAT's existing scope-restricted machinery.** If wrapping doesn't work, the system remains Class-3, and AAT's results apply only with the corresponding scope restrictions. This is what CLAUDE.md's existing "Class 2 exit" framing acknowledges.
 
 For Class-C, the honest answer is: the basic theorem doesn't apply, and salvage attempts cost something (information loss, computation, additional training). Whether any salvage is worthwhile depends on the application.
 
@@ -131,7 +131,7 @@ For Class-C, the honest answer is: the basic theorem doesn't apply, and salvage 
 
 **Quality-vs-separation tradeoff**: Within Class B, the wrapper trades $f_M$ information against leakage rate $\kappa$. This is a real engineering tradeoff and will be quantified in sub-spike C.
 
-**Connections to existing AAD**:
+**Connections to existing AAT**:
 - Strengthens the architecture-class taxonomy in `#der-directed-separation` by introducing the *operational* Class-B distinction (admits goal-blind mode but isn't natively goal-blind).
 - Connects to `#hyp-directed-separation-under-composition` — the hypothesis is restricted to admissible components; Class-C components remain genuinely scope-out.
 

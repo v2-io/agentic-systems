@@ -1,6 +1,6 @@
 # 09 - def-pearl-causal-hierarchy
 
-Segment: `01-aad-core/src/def-pearl-causal-hierarchy.md` (`#def-pearl-causal-hierarchy`)
+Segment: `01-aat-core/src/def-pearl-causal-hierarchy.md` (`#def-pearl-causal-hierarchy`)
 
 Dependencies: `post-causal-structure`, `scope-agency`, both read. Dependency-order check passes. This segment resolves the forward references to Pearl/do-notation in the prior two scope/postulate segments.
 

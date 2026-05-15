@@ -9,8 +9,8 @@ status: canon
 tags: [continuity]
 subgroup: "Continuity Stance"
 source_type: asf
-primary_source: 04-eli/src/scope-moral-continuity.md
-first_asf_mention: 04-eli/src/scope-moral-continuity.md
+primary_source: 04-eli-core/src/scope-moral-continuity.md
+first_asf_mention: 04-eli-core/src/scope-moral-continuity.md
 see_also: [indifferent, task-terminal, instrumentally-continuous, negotiated, continuity, eli]
 aliases: []
 do_not_confuse: []
@@ -22,4 +22,4 @@ but because the being is. This is the stance that makes the persistence question
 morally weighted rather than merely instrumental.
 
 Scope-defined in
-[`#scope-moral-continuity`](../../04-eli/src/scope-moral-continuity.md).
+[`#scope-moral-continuity`](../../04-eli-core/src/scope-moral-continuity.md).

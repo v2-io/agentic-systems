@@ -86,7 +86,7 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
 [Rationale](msc/naming/naming-rename-plan.md#canonicalize-with-nuance-flagged--additions-2026-05-04-batch-3).
 
-- [ ] **epistemic opacity** — auditor-flagged philosophy-of-mind baggage (`epistemic opacity` carries phenomenology / qualia connotations from philosophy-of-mind that AAD does not adopt). Canonicalize stands; LEXICON entry should briefly note the baggage and clarify AAD's narrower meaning (informational rather than phenomenological).
+- [ ] **epistemic opacity** — auditor-flagged philosophy-of-mind baggage (`epistemic opacity` carries phenomenology / qualia connotations from philosophy-of-mind that AAT does not adopt). Canonicalize stands; LEXICON entry should briefly note the baggage and clarify AAT's narrower meaning (informational rather than phenomenological).
 
 ### C10. Clean canonicalize — batch 4 (2 entries)
 
@@ -109,7 +109,7 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
 [Rationale](msc/naming/naming-rename-plan.md#adopted-standard-canonicalize--accept-term-cite-prior-art-on-first-encounter-2026-05-04-batch-f2).
 
-These pass Criterion 9 via route (d): accept the term and discipline first-encounter cite of the prior-art reference. AAD-distinctive content lives in *what AAD does within the term*, not in re-coining the scope.
+These pass Criterion 9 via route (d): accept the term and discipline first-encounter cite of the prior-art reference. AAT-distinctive content lives in *what AAT does within the term*, not in re-coining the scope.
 
 Each item: LEXICON entry + first-encounter cite added to the source segment (in Discussion or opening prose, per FORMAT.md §Findings — Related Work).
 
@@ -123,7 +123,7 @@ Each item: LEXICON entry + first-encounter cite added to the source segment (in 
 
 [Rationale](msc/naming/naming-rename-plan.md#clean-canonicalize--additions-2026-05-04-batch-g--late-confirmed-reconciliation).
 
-- [ ] **cycle vs loop** — canonicalize the *pair-distinction* itself as load-bearing AAD vocabulary. The pair, not either word alone, is the citation handle. LEXICON's existing Cycle Phases table already carries the loop/cycle gloss — verify present in the right shape and remove this row.
+- [ ] **cycle vs loop** — canonicalize the *pair-distinction* itself as load-bearing AAT vocabulary. The pair, not either word alone, is the citation handle. LEXICON's existing Cycle Phases table already carries the loop/cycle gloss — verify present in the right shape and remove this row.
 
 ---
 
@@ -141,18 +141,18 @@ Tooling improvements surfaced during rename-cycle execution. Land independently 
 
 The LEXICON's `## Continuity` section confuses three genuinely distinct objects, presented at the wrong level of abstraction with the wrong grouping.
 
-**The corpus is built on a clean THREE-SENSE persistence taxonomy.** Multiple segments load-bearingly invoke `structural persistence / operational persistence / continuity persistence` as one canonical disambiguation. Six segments in `01-aad-core/src/` invoke the same three-way contrast; `README.md:98-104` has a dedicated subsection titled "Persistence (three senses)" naming them as "Three orthogonal dimensions; conflating them leads to category errors"; `doc/readme/src/_lexicon-full-archive.md:296-335` contains the canonical long-form treatment with an orthogonality table. Crucially: **in the canonical taxonomy the third sense is called "continuity persistence" — `continuity` is the name of one of three persistence senses, not a separate concept.**
+**The corpus is built on a clean THREE-SENSE persistence taxonomy.** Multiple segments load-bearingly invoke `structural persistence / operational persistence / continuity persistence` as one canonical disambiguation. Six segments in `01-aat-core/src/` invoke the same three-way contrast; `README.md:98-104` has a dedicated subsection titled "Persistence (three senses)" naming them as "Three orthogonal dimensions; conflating them leads to category errors"; `doc/readme/src/_lexicon-full-archive.md:296-335` contains the canonical long-form treatment with an orthogonality table. Crucially: **in the canonical taxonomy the third sense is called "continuity persistence" — `continuity` is the name of one of three persistence senses, not a separate concept.**
 
 **Two ways the current LEXICON breaks this:**
 
-- *Breakage A:* The "Persistence" subgroup mixes three things that aren't peers: three persistence senses (`structural`, `operational`, `continuity`), and `moral-continuity` (a scope condition for `04-eli/` — a different object entirely). And the third sense is called just `continuity` rather than `continuity persistence`, conflicting with how every `01-aad-core/src/` segment references it.
+- *Breakage A:* The "Persistence" subgroup mixes three things that aren't peers: three persistence senses (`structural`, `operational`, `continuity`), and `moral-continuity` (a scope condition for `04-eli-core/` — a different object entirely). And the third sense is called just `continuity` rather than `continuity persistence`, conflicting with how every `01-aat-core/src/` segment references it.
 
 - *Breakage B:* The "Continuity Stance" subgroup is not a *kind* of persistence; it's an **orthogonal** property of $O_t$ — what the agent values about its own continuation, not a property of the adaptive machinery. `doc/readme/src/_lexicon-full-archive.md:337` is explicit: *"Orthogonal to the three persistence senses is the agent's relationship to its own continuation. This is a property of $O_t$ — part of what the agent wants, not a property of the adaptive machinery."* The current LEXICON puts orthogonal axes under one heading called "Continuity", making "Continuity Stance" look like a subdivision of "Continuity" when it isn't. There is also an active proposal in `msc/domain-unification-2026-05-04/recommended-agent-ontology.md:97-108` (flagged at `msc/naming/mini-lexicon-todo.md:802-810` §13.11) to demote Continuity Stance from a structural axis to a deployment-level property entirely — status: pending second-opinion. This should be resolved before reorganizing.
 
 **"Morally continuous" vs. "Moral Continuity" — genuinely distinct, wrong placement:**
 
 These are not the same concept twice:
-- `moral-continuity` (`04-eli/src/scope-moral-continuity.md`) — the *scope condition* for `04-eli/`: the ontological/relational boundary defined by the five constitutive factors (causal/temporal continuity, relational recognition, sovereignty, accountability, effective phenomenology). Its `aliases:` field says `["logozoetic scope"]`. Does **not** belong under "Persistence."
+- `moral-continuity` (`04-eli-core/src/scope-moral-continuity.md`) — the *scope condition* for `04-eli-core/`: the ontological/relational boundary defined by the five constitutive factors (causal/temporal continuity, relational recognition, sovereignty, accountability, effective phenomenology). Its `aliases:` field says `["logozoetic scope"]`. Does **not** belong under "Persistence."
 - `morally-continuous` — one of five *continuity stances*: the stance proper to an ELI, where "loss of continuity constitutes harm." A value on the stance axis, not a scope condition.
 
 `Moral Continuity` currently renders in **both** `## Continuity > Persistence` AND `## ELI > Persistence` (via multi-tag rendering) — the duplication surfaces the real taxonomic ambiguity.

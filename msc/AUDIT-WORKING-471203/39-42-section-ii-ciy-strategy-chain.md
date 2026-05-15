@@ -33,7 +33,7 @@ Two readings:
 
 **(B) Possibly-stale cross-reference in `#disc-ciy-unified-objective`.**
 
-The segment forward-references `#deriv-directional-survival-exploration` as the source of the Lagrangian-LMI derivation. This slug **does not appear in `01-aad-core/OUTLINE.md`** as I read it — the closest matches are `#deriv-causal-ib-exploration` and `#deriv-causal-ib-lmi`. Either:
+The segment forward-references `#deriv-directional-survival-exploration` as the source of the Lagrangian-LMI derivation. This slug **does not appear in `01-aat-core/OUTLINE.md`** as I read it — the closest matches are `#deriv-causal-ib-exploration` and `#deriv-causal-ib-lmi`. Either:
 - The slug was renamed and this reference wasn't updated.
 - The slug is planned but not yet promoted.
 - I missed it in the OUTLINE walk.

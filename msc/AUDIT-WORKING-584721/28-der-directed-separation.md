@@ -39,11 +39,11 @@ The IDT sidecar pattern (Hafez 2026) buried in Working Notes deserves Discussion
 
 (b) **IDT sidecar as Class-2-engineering pattern.** Hafez 2026's modular external monitor on the $(S,A,S')$ stream achieves 89% vs 44% perturbation detection. So even Class 2 agents internally can be wrapped in Class 1 monitoring infrastructure. This is alignment-relevant: even if I can't audit an LLM's beliefs directly, I can monitor its behavior modularly. The framework gives a principled path for this.
 
-(c) **System-vs-component-level analysis.** Critical distinction the segment surfaces: the LLM is Class 2 internally, but the *agent system* (LLM + tools + memory + monitoring) can be Class 1 at the system level. The framework's analysis applies at whichever level you draw the agent-environment boundary. Worth explicit treatment in 03-logogenic-agents.
+(c) **System-vs-component-level analysis.** Critical distinction the segment surfaces: the LLM is Class 2 internally, but the *agent system* (LLM + tools + memory + monitoring) can be Class 1 at the system level. The framework's analysis applies at whichever level you draw the agent-environment boundary. Worth explicit treatment in 03-llm-core.
 
 (d) **The Pearl-blanket / Friston-blanket distinction.** AAD adopts the conditional-independence statement (Pearl) but refuses the metaphysical demarcation (Friston). The segment cites Bruineberg et al. 2022's "Emperor's New Markov Blankets" critique. This is one of AAD's clearest scope-honesty moves: take the formal apparatus, refuse the contested ontology. Defensible position.
 
-**9. What new knowledge enabled.** Class 1/2/3 classification with concrete examples. κ_processing as operational measure (CMI definition + behavioral estimator). Composite class as function of sub-agent class + scope route. Pearl-vs-Friston-blanket positioning. IDT sidecar as engineering pattern. Class 2 scope exit explicit (handed to 03-logogenic-agents).
+**9. What new knowledge enabled.** Class 1/2/3 classification with concrete examples. κ_processing as operational measure (CMI definition + behavioral estimator). Composite class as function of sub-agent class + scope route. Pearl-vs-Friston-blanket positioning. IDT sidecar as engineering pattern. Class 2 scope exit explicit (handed to 03-llm-core).
 
 **10. Should the audit process change?** Continuing. I notice the segment's depth justifies a longer reflection per Joseph's "texture" guidance.
 
@@ -51,7 +51,7 @@ The IDT sidecar pattern (Hafez 2026) buried in Working Notes deserves Discussion
 
 Section D candidates: 
 - IDT sidecar as engineering pattern for Class 2 agents (might warrant promotion from Working Notes to Discussion).
-- System-vs-component-level analysis distinction (worth explicit treatment in 03-logogenic-agents).
+- System-vs-component-level analysis distinction (worth explicit treatment in 03-llm-core).
 - Distribution-independent structural coupling measure for Class 3 (possible extension).
 
 **12. How valuable does this segment *feel* to me?**
@@ -73,7 +73,7 @@ Multiple research communities benefit:
 - **Engineers building agent systems:** IDT pattern principle — even for Class 2 components, build Class 1 monitoring as sidecars on the $(S,A,S')$ stream. Hafez's 89%/44% is empirical support.
 - **Composite-architecture researchers:** composite class as a function of sub-agent class + scope route. A formal handle on "what happens when I compose an LLM with a Kalman filter?" Mixed-class composite analysis.
 
-**Most distinctive contribution:** architectural classification with explicit scope-exit for LLMs. This is honest scope-narrowing rather than fake universality. The combination of "Section II works for Class 1" + "Class 2 needs the coupled formulation in 03-logogenic-agents" is structurally honest in a way much of AI literature isn't.
+**Most distinctive contribution:** architectural classification with explicit scope-exit for LLMs. This is honest scope-narrowing rather than fake universality. The combination of "Section II works for Class 1" + "Class 2 needs the coupled formulation in 03-llm-core" is structurally honest in a way much of AI literature isn't.
 
 Negative-contribution check: the Friston-blanket refusal is contested but defensibly argued (Bruineberg 2022 cited). Nothing defective.
 

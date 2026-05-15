@@ -49,7 +49,7 @@ The Findings (KL-form non-degeneracy claim is misleading; `#scope-developer-agen
 >
 > ### Problematic passage
 >
-> `01-aad-core/src/strategy-complexity-cost.md:42`:
+> `01-aat-core/src/strategy-complexity-cost.md:42`:
 >
 > $$\Sigma_t^\ast = \arg\min_{\Sigma_t} \left[\, I(\mathcal C_t;\, \Sigma_t) \;+\; \beta_\Sigma \cdot D_{\mathrm{KL}}\bigl(Q_{\Sigma_t}(\pi \mid M_t) \,\big\Vert\, \pi^\ast(\cdot \mid M_t)\bigr)\right]$$
 >
@@ -123,7 +123,7 @@ The Findings (KL-form non-degeneracy claim is misleading; `#scope-developer-agen
 >
 > ### Problematic passage
 >
-> `01-aad-core/src/identifiability-floor.md:4`: `status: robust-qualitative`.
+> `01-aat-core/src/identifiability-floor.md:4`: `status: robust-qualitative`.
 >
 > Internal Epistemic Status at line 95:
 >
@@ -209,7 +209,7 @@ The Findings (KL-form non-degeneracy claim is misleading; `#scope-developer-agen
 >
 > ### F. The framework is Section-I-strong, Section-II-backbone-strong, Section-III-sketch
 >
-> The asymmetry is honestly acknowledged in the `01-aad-core/OUTLINE.md` preamble. But there's a natural move that could pull Section III up: **composition closure is the sector-persistence template applied to a projection defect, which is itself a compression operation, which has the same IB shape as $M_t$, $\Sigma_t$, and shared intent** (`#compression-operations` gets close to this). If the four compressions are unified under one variational problem, and the six persistence results are unified under one Lyapunov template, then composition emerges as *a third application of the same machinery* rather than new theory. This is O-BP1 + O-BP2's natural extension.
+> The asymmetry is honestly acknowledged in the `01-aat-core/OUTLINE.md` preamble. But there's a natural move that could pull Section III up: **composition closure is the sector-persistence template applied to a projection defect, which is itself a compression operation, which has the same IB shape as $M_t$, $\Sigma_t$, and shared intent** (`#compression-operations` gets close to this). If the four compressions are unified under one variational problem, and the six persistence results are unified under one Lyapunov template, then composition emerges as *a third application of the same machinery* rather than new theory. This is O-BP1 + O-BP2's natural extension.
 >
 > ### G. Two presentational moves that would be disproportionately valuable
 >

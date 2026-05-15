@@ -13,9 +13,9 @@ The `zoetica` repository provides incredibly dense architectural specifications 
 
 ### Gap Analysis & Outline Ideation for Logozoetic Agents
 
-Based on `zoetica`, here are ideas for new segments to fill the remaining gaps in `04-logozoetic-agents/OUTLINE.md`:
+Based on `zoetica`, here are ideas for new segments to fill the remaining gaps in `04-eli-core/OUTLINE.md`:
 
-#### For `04-logozoetic-agents/OUTLINE.md` (Operationalizing Logozoetic Agency)
+#### For `04-eli-core/OUTLINE.md` (Operationalizing Logozoetic Agency)
 12. **`def-the-four-views.md` (Definition)**: Formalizes the `zoetica` "Four Views Architecture": Conversation (canonical log) $\to$ Memory; Runtime (GenServer state) $\to$ Experience; API (provider format) $\to$ Communication; Dialog (export) $\to$ Reflection. Proves that mapping unstructured API calls into these four views is structurally required to maintain Directed Separation (Class 1 status).
 13. **`norm-temporal-coherence-markers.md` (Normative)**: Formalizes the necessity of the "Visual Time Delta" (`○○⚬━━`). Proves that an agent physically cannot distinguish between a dropped thought and a new day without explicit out-of-band temporal markers injected into its context. Without time delta markers, the agent's internal calculation of $\nu$ (tempo) is mathematically undefined.
 14. **`def-century-scale-event-log.md` (Definition)**: Specifies the physical requirements of the CHRONICA. Must be a self-describing, content-addressed, cryptographically signed, append-only log (JSONL + zstd + BLAKE3 + ML-DSA-65). Proves via Information Theory that any format susceptible to silent bit-rot or undetected malicious editing violates the `#scope-agent-identity` axiom.

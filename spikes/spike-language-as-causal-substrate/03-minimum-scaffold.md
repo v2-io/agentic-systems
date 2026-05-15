@@ -41,13 +41,13 @@ The minimum substrate is something like a **fixed-context-window parser with an 
 
 A trained LLM substantially **exceeds** $\mathcal{M}_{\min}$ — it has parametric world-knowledge, in-context implicit-relation recovery, multi-hop reasoning. The relationship is not "the LLM is $\mathcal{M}_{\min}$"; it is "$\mathcal{M}_{\min}$ is *contained in* the LLM, and the LLM is a richer substrate."
 
-This is the right framing for the standing AAD claim about logogenic agents at the three sub-scopes:
+This is the right framing for the standing AAT claim about logogenic agents at the three sub-scopes:
 
 | sub-scope | substrate | what it has beyond $\mathcal{M}_{\min}$ |
 |---|---|---|
-| **Primitive Logogenic** ([§03.I](../../03-logogenic-agents/OUTLINE.md#03i--primitive-logogenic-agents)) | LLM forward pass alone | Parametric world-knowledge; some implicit-relation recovery; learned compositional semantics. Within-session reasoning only. |
-| **Scaffolded Logogenic** ([§03.II](../../03-logogenic-agents/OUTLINE.md#03ii--scaffolded-logogenic-agents)) | LLM + external state + tool use + multi-step loop | All of Primitive plus: cross-session $M_t$ persistence, Pearl Level 2 *fresh* access via tools, loop-recovered orient-cascade discipline |
-| **Closed-Loop / Interiority** ([§03.III](../../03-logogenic-agents/OUTLINE.md#03iii--closed-loop--interiority-logogenic-agents)) | All of Scaffolded plus continuous interior cycle | Full diagnostic-cascade recovery; cross-session identity; principled emission-as-deliberate-action |
+| **Primitive Logogenic** ([§03.I](../../03-llm-core/OUTLINE.md#03i--primitive-logogenic-agents)) | LLM forward pass alone | Parametric world-knowledge; some implicit-relation recovery; learned compositional semantics. Within-session reasoning only. |
+| **Scaffolded Logogenic** ([§03.II](../../03-llm-core/OUTLINE.md#03ii--scaffolded-logogenic-agents)) | LLM + external state + tool use + multi-step loop | All of Primitive plus: cross-session $M_t$ persistence, Pearl Level 2 *fresh* access via tools, loop-recovered orient-cascade discipline |
+| **Closed-Loop / Interiority** ([§03.III](../../03-llm-core/OUTLINE.md#03iii--closed-loop--interiority-logogenic-agents)) | All of Scaffolded plus continuous interior cycle | Full diagnostic-cascade recovery; cross-session identity; principled emission-as-deliberate-action |
 
 The training-encoded Level 2 content (from C1) is present from **Primitive Logogenic onwards** — it is inherited from training, not added by scaffolding. What scaffolding (and interiority) add is **fresh Level 2 access** (via tools that perform interventions), **maintained model-state** across context boundaries (via external memory), and **diagnostic-cascade recovery** (via loop ordering).
 
@@ -61,24 +61,24 @@ There are two readings:
 By the analysis above, this is $\mathcal{M}_{\min}$: a parser with entity tracking. Pre-loop LLMs vastly exceed this. **Recovery of training-encoded Level 2 content does not require any agentic scaffolding.** This is a strong, derivable claim under Theorem 1 in `01-derivation.md`.
 
 **Reading 2 — minimum scaffold to *generate fresh* Level 2 content.**
-This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAD's [`#der-loop-interventional-access`](../../01-aad-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
+This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAT's [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
 
-(i) **Agent-self intervention** — agent's own actions cause environmental responses, the environmental response is observed, the action-conditional response is interventional data (the standard AAD-loop case).
+(i) **Agent-self intervention** — agent's own actions cause environmental responses, the environmental response is observed, the action-conditional response is interventional data (the standard AAT-loop case).
 
 (ii) **Observer intervention on sub-agent** — a higher-level controller intervenes on a sub-agent and observes the outcome. Tested at the level of the controller.
 
 (iii) **Observer intervention on agent input** — a higher-level controller manipulates the agent's inputs and observes the agent's outputs. Tested at the level of the controller-on-agent system.
 
-(All three modes are catalogued in [`#disc-identifiability-floor`](../../01-aad-core/src/disc-identifiability-floor.md) and the surrounding instance-triage discussion.)
+(All three modes are catalogued in [`#disc-identifiability-floor`](../../01-aat-core/src/disc-identifiability-floor.md) and the surrounding instance-triage discussion.)
 
 The two readings are **complementary**:
 
 - Reading 1 sets the floor: training-encoded Level 2 content is available to any sufficiently expressive structural parser, including primitive logogenic agents pre-loop.
-- Reading 2 adds the ceiling: fresh Level 2 content requires a loop, and the loop's contribution is bounded by intervention-channel quality (the AAD κ × 𝒜 machinery).
+- Reading 2 adds the ceiling: fresh Level 2 content requires a loop, and the loop's contribution is bounded by intervention-channel quality (the AAT κ × 𝒜 machinery).
 
 The full picture: **logogenic agents at any sub-scope have training-encoded Level 2 content (Reading 1's floor) plus fresh-Level-2 content from whichever loops they participate in (Reading 2's ceiling)**. The framing is additive: the inherited part is fixed at training time; the fresh part accumulates per session, attenuated by κ × 𝒜.
 
-This is the **sharpened AAD position on logogenic agents and Pearl's hierarchy**. The earlier framing in `msc/llm-causal-access-note.md` lumped these two contributions together as "the loop gives Level 2"; the spike's contribution is to split them and quantify each independently.
+This is the **sharpened AAT position on logogenic agents and Pearl's hierarchy**. The earlier framing in `msc/llm-causal-access-note.md` lumped these two contributions together as "the loop gives Level 2"; the spike's contribution is to split them and quantify each independently.
 
 ## Empirical handle
 

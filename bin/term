@@ -329,7 +329,7 @@ end
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SegmentScanner — finds #slug-style segment references in segment markdown
-# under {01-aad-core,02-tst-core,03-logogenic-agents,04-eli}/src/. Used by
+# under {01-aat-core,02-tst-core,03-llm-core,04-eli-core}/src/. Used by
 # `bin/term lint` for orphan-detection (term in store but no segment refs)
 # and reverse-orphan-detection (segments invoke a term that has no entry).
 #
@@ -338,7 +338,7 @@ end
 # ─────────────────────────────────────────────────────────────────────────────
 
 class SegmentScanner
-  SEGMENT_DIRS = %w[01-aad-core/src 02-tst-core/src 03-logogenic-agents/src 04-eli/src].freeze
+  SEGMENT_DIRS = %w[01-aat-core/src 02-tst-core/src 03-llm-core/src 04-eli-core/src].freeze
 
   # `#slug-form` references — slugs are lowercase letters, digits, hyphens.
   # Captures the slug (without the leading `#`).

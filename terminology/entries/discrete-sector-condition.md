@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/deriv-discrete-sector-condition.md
-first_asf_mention: 01-aad-core/src/deriv-discrete-sector-condition.md
+primary_source: 01-aat-core/src/deriv-discrete-sector-condition.md
+first_asf_mention: 01-aat-core/src/deriv-discrete-sector-condition.md
 see_also: [sector-condition, adaptive-system, event-driven-dynamics, adaptive-reserve]
 aliases: ["DA2'"]
 do_not_confuse: [sector-condition]
@@ -31,4 +31,4 @@ Three propositions follow directly: **DA.1** (bounded mismatch, deterministic: $
 
 **Significance**: closes the fluid-limit gap (GA-5) between event-driven dynamics and continuous-time Lyapunov analysis. The discrete and continuous frameworks now form a complete, bridged pair.
 
-Derived in [`#deriv-discrete-sector-condition`](../../01-aad-core/src/deriv-discrete-sector-condition.md).
+Derived in [`#deriv-discrete-sector-condition`](../../01-aat-core/src/deriv-discrete-sector-condition.md).

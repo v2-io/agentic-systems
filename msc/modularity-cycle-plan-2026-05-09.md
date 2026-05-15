@@ -1,8 +1,8 @@
 # Modularity-as-Contested-Property Cycle: Integration Plan
 
 **Status**: drafted 2026-05-09; pending Joseph's decision to execute.
-**Origin**: emerged at the end of the class-coercion-wrapping integration cycle (`spikes/class-coercion-wrapping/INTEGRATION-PLAN.md`) when uncommitted parallel work — `01-aad-core/src/disc-adversarial-coupling-pressure.md` (drafted via different Opus instance during the same session) and `spikes/spike-strategic-self-coupling.md` (sister spike) — was inspected and found to converge structurally with the class-coercion construction.
-**Posture**: clean theory and unification, integration content. The work is naming a meta-pattern that has emerged across multiple parallel collaborator probes; AAD's contribution is the recognition and integration, not novel content beyond what each segment carries.
+**Origin**: emerged at the end of the class-coercion-wrapping integration cycle (`spikes/class-coercion-wrapping/INTEGRATION-PLAN.md`) when uncommitted parallel work — `01-aat-core/src/disc-adversarial-coupling-pressure.md` (drafted via different Opus instance during the same session) and `spikes/spike-strategic-self-coupling.md` (sister spike) — was inspected and found to converge structurally with the class-coercion construction.
+**Posture**: clean theory and unification, integration content. The work is naming a meta-pattern that has emerged across multiple parallel collaborator probes; AAT's contribution is the recognition and integration, not novel content beyond what each segment carries.
 
 ---
 
@@ -10,9 +10,9 @@
 
 Three pieces of work landed in the repo on 2026-05-09 from independent collaborator probes:
 
-1. **`#der-class-coercion-via-wrapping`** (`01-aad-core/src/`, this Opus instance, integrated). Constructive route from Class-2/3 components to Class-1 composites via external scaffold; W₀/W₂/W₁ regime hierarchy; structural-vs-behavioral leakage bounds.
+1. **`#der-class-coercion-via-wrapping`** (`01-aat-core/src/`, this Opus instance, integrated). Constructive route from Class-2/3 components to Class-1 composites via external scaffold; W₀/W₂/W₁ regime hierarchy; structural-vs-behavioral leakage bounds.
 
-2. **`#disc-adversarial-coupling-pressure`** (`01-aad-core/src/`, parallel Opus instance, **drafted but unregistered in OUTLINE — orphan**). Adversarial pressure as the externally-driven force that drives target coupling; identity-binding / affect / sunk-cost mechanisms; directional diagnostic corruption; orient-cascade inversion; defensive scaffolding (peer review, prediction registers, etc.) as the composite-agent restoration move.
+2. **`#disc-adversarial-coupling-pressure`** (`01-aat-core/src/`, parallel Opus instance, **drafted but unregistered in OUTLINE — orphan**). Adversarial pressure as the externally-driven force that drives target coupling; identity-binding / affect / sunk-cost mechanisms; directional diagnostic corruption; orient-cascade inversion; defensive scaffolding (peer review, prediction registers, etc.) as the composite-agent restoration move.
 
 3. **`spikes/spike-strategic-self-coupling.md`** (parallel Opus instance, scope-defined). Sister spike for the *enabling* polarity of coupling — Schelling commitment devices, Ainslie willpower, Akerlof-Kranton identity economics, Frank emotions-as-commitment. The fixed-$\mathcal A$ assumption surfaced; structural extensions M1 ($\mathcal A(\kappa_t)$), M2 (enabling strategy edges), M3 (reversibility cost) named.
 
@@ -46,7 +46,7 @@ Five concrete moves form the cycle. They are interdependent — each makes the o
 
 ### Move 1: Register `#disc-adversarial-coupling-pressure` in OUTLINE
 
-The segment is currently orphaned (lint-outline flags it as the only orphan in the project). It belongs in `01-aad-core/OUTLINE.md`. Two candidate placements:
+The segment is currently orphaned (lint-outline flags it as the only orphan in the project). It belongs in `01-aat-core/OUTLINE.md`. Two candidate placements:
 
 (a) Under Section II as a discussion-grade adjunct to `#der-directed-separation` (it sits at the architecture-classification layer).
 (b) **Recommended:** as a meta-segment alongside `#disc-separability-pattern` and `#disc-identifiability-floor` (it's a meta-pattern that cuts across Section II and Section III rather than a Section II result proper).
@@ -73,7 +73,7 @@ Structure roughly parallel to `#disc-separability-pattern` and `#disc-identifiab
 - Dual relationships (defense ↔ attack; cultivation ↔ surrender)
 - Operational mechanisms across operations (defensive scaffolding *and* class-coercion-via-wrapping under truthification; identity-binding *and* affect *and* sunk-cost engineering under adversarial pressure; commitment-device *and* willpower *and* identity coupling under strategic self-coupling)
 - Position in the M-section family alongside M1/M2/M3
-- Honest scope: this is *recognition-and-integration* content, not novel derivation. The three-operation pattern is observable across propaganda research, behavioral economics, and the segments named above; AAD's contribution is naming its place in the framework's analytical surface.
+- Honest scope: this is *recognition-and-integration* content, not novel derivation. The three-operation pattern is observable across propaganda research, behavioral economics, and the segments named above; AAT's contribution is naming its place in the framework's analytical surface.
 
 Findings section worth landing if the segment promotes — the cross-segment finding ("modularity-as-contested-property is the structural axis across these segments") may be more citable than the per-segment findings.
 
@@ -103,7 +103,7 @@ Estimated total: 1 day's focused work, possibly stretched across a day-and-a-hal
 
 ## 5. Decision points for Joseph
 
-1. **Does the modularity-state-dynamics framing actually land for you as M4?** The three M-section meta-patterns are load-bearing for AAD's structural identity. Adding a fourth is structurally weighty. The pattern is real and the timing is good (all three operation legs within reach), but you may want to sit with it before committing.
+1. **Does the modularity-state-dynamics framing actually land for you as M4?** The three M-section meta-patterns are load-bearing for AAT's structural identity. Adding a fourth is structurally weighty. The pattern is real and the timing is good (all three operation legs within reach), but you may want to sit with it before committing.
 
 2. **Where to register `#disc-adversarial-coupling-pressure` in OUTLINE.md?** (a) Section II adjunct to `#der-directed-separation` or (b) meta-segment alongside `#disc-separability-pattern` / `#disc-identifiability-floor`. Recommendation: (b), but it's your call.
 
@@ -116,10 +116,10 @@ Estimated total: 1 day's focused work, possibly stretched across a day-and-a-hal
 ## 6. What this cycle does *not* address (next-cycle items)
 
 - **Multi-timescale stability promotion** — `#sketch-multi-timescale-stability` from sketch to derived via template-stacking + Tikhonov + Chen-Goldenfeld-Oono. Highest-leverage standalone piece for Section III.
-- **Parts III/IV scope segment landings** — `scope-channel-collapse`, `scope-primitive-logogenic`, `scope-scaffolded-logogenic`, `scope-interiority-loop` are all flagged as missing or draft in `03-logogenic-agents/OUTLINE.md`. Without them, the lattice has gaps.
+- **Parts III/IV scope segment landings** — `scope-channel-collapse`, `scope-primitive-logogenic`, `scope-scaffolded-logogenic`, `scope-interiority-loop` are all flagged as missing or draft in `03-llm-core/OUTLINE.md`. Without them, the lattice has gaps.
 - **Class-3 closure-defect dynamics analysis** — Move F from RG verdict; the order-parameter dynamics-side analysis to complement the structural W₀/W₂/W₁ taxonomy. Worth a separate spike when Parts III/IV maturation has progressed.
 - **shoshin → W₁ engineering** — operational realization of strict wrapping for PROPRIUM via auxilia handling goal-blind queries. Engineering, not theory; queued for shoshin development.
-- **Three Deaths formal grounding** — promote `#hyp-the-three-deaths` from hypothesis to derived (or honest scope) by grounding each death in AAD primitives. ELI-side priority.
+- **Three Deaths formal grounding** — promote `#hyp-the-three-deaths` from hypothesis to derived (or honest scope) by grounding each death in AAT primitives. ELI-side priority.
 - **Identity-through-substrate-transitions formal segment** — connecting `obs-substrate-independence`, `def-identity-sufficiency`, `def-five-constitutive-factors` to the persistence template across substrate changes. ELI-side priority.
 
 ## 7. Honest scope and posture
@@ -140,10 +140,10 @@ The cycle's success criterion: future agents reading the framework cold can find
 - `spikes/class-coercion-wrapping/INTEGRATION-PLAN.md` — completed integration plan for that spike
 - `spikes/class-coercion-wrapping/99-verdict.md` — verdict synthesis for that spike
 - `spikes/spike-strategic-self-coupling.md` — sister spike defining (P1)–(P4) candidate segments
-- `01-aad-core/src/disc-adversarial-coupling-pressure.md` — drafted, currently orphan in OUTLINE
-- `01-aad-core/src/der-class-coercion-via-wrapping.md` — landed today
-- `01-aad-core/src/der-directed-separation.md` — receives Move 5 update
-- `01-aad-core/OUTLINE.md` — receives Moves 1 and 4 OUTLINE additions
+- `01-aat-core/src/disc-adversarial-coupling-pressure.md` — drafted, currently orphan in OUTLINE
+- `01-aat-core/src/der-class-coercion-via-wrapping.md` — landed today
+- `01-aat-core/src/der-directed-separation.md` — receives Move 5 update
+- `01-aat-core/OUTLINE.md` — receives Moves 1 and 4 OUTLINE additions
 - `msc/FINDINGS-RANKED-DRAFT.md` — receives M4 entry once Move 4 segment lands
 
 This plan is self-contained for handoff: an agent picking it up cold should be able to execute it from this file, the spike directories, and the segment files referenced above.
@@ -170,7 +170,7 @@ A small follow-on cycle (2026-05-14) landed the three additive / low-architectur
 
 **Move 4 — `disc-modularity-state-dynamics` meta-segment authoring.** Deferred. Three substantive gates:
 
-1. **§5.1 decision-pending — Joseph's architectural commitment to M4.** The three M-section meta-patterns (M1 identifiability-floor / M2 separability-pattern / M3 additive-coordinate-forcing) are load-bearing for AAD's structural identity. Adding a fourth commits the framework to four meta-patterns as the canonical reading. The plan author flagged this deliberately as a sit-with-it-before-committing decision. The convergence finding (multiple Opus instances independently arriving at the modularity-state-dynamics pattern from different angles) is structural evidence that the pattern is *in the framework*, but committing to a fourth M-section label is a choice about AAD's analytical-surface vocabulary that wants Joseph's call.
+1. **§5.1 decision-pending — Joseph's architectural commitment to M4.** The three M-section meta-patterns (M1 identifiability-floor / M2 separability-pattern / M3 additive-coordinate-forcing) are load-bearing for AAT's structural identity. Adding a fourth commits the framework to four meta-patterns as the canonical reading. The plan author flagged this deliberately as a sit-with-it-before-committing decision. The convergence finding (multiple Opus instances independently arriving at the modularity-state-dynamics pattern from different angles) is structural evidence that the pattern is *in the framework*, but committing to a fourth M-section label is a choice about AAT's analytical-surface vocabulary that wants Joseph's call.
 2. **Move 4 depends on Move 3 landing first.** The meta-segment structurally needs to point at three primary segments — one per operation: truthification (instantiated in `#disc-adversarial-coupling-pressure` §"Defensive scaffolding" + `#der-class-coercion-via-wrapping` after Move 2), strategic self-coupling (Move 3 — not yet authored), adversarial coupling pressure (`#disc-adversarial-coupling-pressure`). Landing M4 standalone before Move 3 would create a meta-segment cross-referencing a sibling that doesn't exist.
 3. **Recognition-and-integration posture** (per §7) — the meta-segment's value is *recognition* of the pattern explicitly. Recognition wants the three operation segments cleanly authored first, so the meta-segment integrates rather than over-asserts.
 
@@ -178,7 +178,7 @@ A small follow-on cycle (2026-05-14) landed the three additive / low-architectur
 
 The 2026-05-14 cycle surfaced a **content-discipline issue** that the M4-related cross-references in `#impl-composition-machinery` (lines 67–69) and `#impl-strategic-composition` (line 82) read as if M4 is canonical — the segments describe what the M4 meta-segment "positions" and "names" without flagging that the segment file doesn't exist yet. CLAUDE.md's prior framing in §"Key Architectural Decisions" §7 listed `#disc-modularity-state-dynamics` alongside the other three M-sections "directly" without marking it queued. This is a case where the parallel-collaborator naming work was load-bearing enough that downstream cross-references treat the concept as canonical-by-reference, but the segment file itself never landed.
 
-The 2026-05-14 cycle fixed CLAUDE.md to honestly reflect M4's pending status (matching OUTLINE.md's `missing` flag and PRACTICA's queued framing). The impl-segment forward-references remain valid per FORMAT.md — forward references are expected; the discipline that wants attention is that *content claims about a forward-referenced segment* (e.g., "the M4 meta-segment positions modularity as a contested property under three operations") read as if the segment is canonical. When Move 4 lands, those content claims become honest by-reference; until then, they are AAD's collective stance described by anticipation. Not a defect, but worth marking.
+The 2026-05-14 cycle fixed CLAUDE.md to honestly reflect M4's pending status (matching OUTLINE.md's `missing` flag and PRACTICA's queued framing). The impl-segment forward-references remain valid per FORMAT.md — forward references are expected; the discipline that wants attention is that *content claims about a forward-referenced segment* (e.g., "the M4 meta-segment positions modularity as a contested property under three operations") read as if the segment is canonical. When Move 4 lands, those content claims become honest by-reference; until then, they are AAT's collective stance described by anticipation. Not a defect, but worth marking.
 
 ### What happens when the Moves 3 and 4 cycle lands
 

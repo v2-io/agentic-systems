@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/def-model-class-fitness.md
-first_asf_mention: 01-aad-core/src/def-model-class-fitness.md
+primary_source: 01-aat-core/src/def-model-class-fitness.md
+first_asf_mention: 01-aat-core/src/def-model-class-fitness.md
 see_also: [model-sufficiency, structural-adaptation]
 aliases: []
 do_not_confuse: []
@@ -22,4 +22,4 @@ class-expressivity ceiling — no amount of parameter learning can do better
 without [structural adaptation](structural-adaptation.md) (changing the class).
 
 Defined in
-[`#def-model-class-fitness`](../../01-aad-core/src/def-model-class-fitness.md).
+[`#def-model-class-fitness`](../../01-aat-core/src/def-model-class-fitness.md).

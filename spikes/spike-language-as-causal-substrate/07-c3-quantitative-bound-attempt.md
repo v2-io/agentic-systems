@@ -37,7 +37,7 @@ The bound would say: the reverse text's compressibility lags the forward text's 
 
 ## Why this is the right target
 
-The connection to AAD's [`#deriv-causal-ib-lmi`](../../01-aad-core/src/deriv-causal-ib-lmi.md) is structural. The causal-IB machinery quantifies how much causal information must be preserved by an IB-optimal compressor of causally-structured data, in terms of directed-information rate. The discourse case is a natural instantiation:
+The connection to AAT's [`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md) is structural. The causal-IB machinery quantifies how much causal information must be preserved by an IB-optimal compressor of causally-structured data, in terms of directed-information rate. The discourse case is a natural instantiation:
 
 - Replace generic "causally-structured data" with "natural language text with discourse-DAG $\mathcal D(T)$."
 - Replace generic "directed-information rate" with $\mathcal{I}_c(\mathcal D(T))$.
@@ -93,7 +93,7 @@ A precisely-specified open theorem is more valuable than a vague gesture at a fu
 
 2. **A candidate definition** — directed information summed over Level-2 edges, with (P1), (P2) satisfied by construction.
 
-3. **A specific missing step** — (P3) verification, with clear methodological scaffolding (LM-information-theoretic literature; the AAD `#deriv-causal-ib-lmi` machinery as the bridge).
+3. **A specific missing step** — (P3) verification, with clear methodological scaffolding (LM-information-theoretic literature; the AAT `#deriv-causal-ib-lmi` machinery as the bridge).
 
 4. **A negative result for the easy approach** — pure $K$-complexity asymmetry doesn't capture the right structure (reversal is constant-program-cost so $K(T) = K(T^{\text{rev}}) \pm O(1)$). Any closure must work with cross-entropy under a model class, not pure $K$.
 

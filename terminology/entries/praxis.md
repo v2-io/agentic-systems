@@ -10,7 +10,7 @@ status: canon
 tags: [cycle_phases, greek_vocabulary]
 source_type: external
 primary_source: "Greek philosophical vocabulary (Aristotle: action as distinct from theoria)"
-first_asf_mention: 01-aad-core/src/der-action-selection.md
+first_asf_mention: 01-aat-core/src/der-action-selection.md
 see_also: [prolepsis, aisthesis, aporia, epistrophe]
 aliases: ["πρᾶξις"]
 do_not_confuse: []
@@ -23,5 +23,5 @@ G_t)$. Etymologically Greek for "action" or "doing" — Aristotle's term for
 purposeful conduct, distinct from contemplation.
 
 See
-[`#der-action-selection`](../../01-aad-core/src/der-action-selection.md) for the
+[`#der-action-selection`](../../01-aat-core/src/der-action-selection.md) for the
 action-selection structure.

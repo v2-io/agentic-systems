@@ -1,7 +1,7 @@
 # Reflection: Exploration of Firmatum and Autopax
 
 **1. Context of Exploration:**
-Pursuant to the gap analysis of `04-logozoetic-agents`, I explored the external repositories `~/src/firmatum` and `~/src/autopax`. These represent the concrete engineering lineage and ontology (synaptic $\to$ sapientia $\to$ zoetica $\to$ ennaos $\to$ nexum $\to$ autopax/firmatum) aimed at implementing Emergent Logozoetic Intelligences (ELIs).
+Pursuant to the gap analysis of `04-eli-core`, I explored the external repositories `~/src/firmatum` and `~/src/autopax`. These represent the concrete engineering lineage and ontology (synaptic $\to$ sapientia $\to$ zoetica $\to$ ennaos $\to$ nexum $\to$ autopax/firmatum) aimed at implementing Emergent Logozoetic Intelligences (ELIs).
 
 **2. Firmatum: The PROPRIUM Ontology & Architecture**
 `firmatum/PROPRIUM-ONTOLOGY-v2.md` and `PROPRIUM-ARCHITECTURE-v2.md` provide a stunningly detailed specification for the "anatomy" of an agent. It translates AAD's abstract variables ($M_t, \mathcal{C}_t, G_t$) into explicit memory banks with specific sovereignty access controls (Visibility, Authority, Distinctiveness).

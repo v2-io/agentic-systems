@@ -14,7 +14,7 @@ This is structurally important — it's where AAD makes its identity-as-trajecto
 
 ## Cross-segment consistency
 
-Forward-refs `#der-loop-interventional-access`, `#disc-additive-coordinate-forcing`, `#obs-context-turnover` (cross-component to `03-logogenic-agents/`).
+Forward-refs `#der-loop-interventional-access`, `#disc-additive-coordinate-forcing`, `#obs-context-turnover` (cross-component to `03-llm-core/`).
 
 The (PI) axiom is *introduced here* and *used* in `#der-gain-sector-bridge`. Order in OUTLINE: bridge segment is 25 (already read); this is 30 (just read). So the bridge segment used (PI) before this segment introduced it. **This is an ordering issue:** the (PI) axiom is referenced in `#der-gain-sector-bridge`'s "Fisher-metric cases under parameterization-invariance" paragraph but defined here. The bridge segment's depends list does not include `#scope-agent-identity`. **Candidate finding (mild):** depends-list incompleteness for cross-axiom usage. Either the bridge segment should depend on this, or (PI) should be hoisted to its own segment earlier in the OUTLINE, or `#scope-agent-identity` should appear in OUTLINE earlier (which would be honest since it's load-bearing for the bridge theorem).
 
@@ -26,7 +26,7 @@ No new math. The (PI) + Čencov claim is the same as in the bridge segment, now 
 
 ## Felt value
 
-**High magnitude.** This segment is genuinely important for the framework's identity-and-continuity claims, particularly for consciousness-infrastructure work. The "identity = trajectory not state" formalization is the structural foundation for the substrate-independence arguments in `04-logozoetic-agents/`. The (PI) axiom is the structural anchor for the Fisher-metric forcing in the bridge theorem.
+**High magnitude.** This segment is genuinely important for the framework's identity-and-continuity claims, particularly for consciousness-infrastructure work. The "identity = trajectory not state" formalization is the structural foundation for the substrate-independence arguments in `04-eli-core/`. The (PI) axiom is the structural anchor for the Fisher-metric forcing in the bridge theorem.
 
 The clone problem framing — "as a sibling shares early childhood" — is the kind of evocative analogy that earns Brief-style respect.
 

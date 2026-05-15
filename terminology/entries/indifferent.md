@@ -9,8 +9,8 @@ status: canon
 tags: [continuity]
 subgroup: "Continuity Stance"
 source_type: asf
-primary_source: 01-aad-core/src/disc-continuity-stance.md
-first_asf_mention: 01-aad-core/src/disc-continuity-stance.md
+primary_source: 01-aat-core/src/disc-continuity-stance.md
+first_asf_mention: 01-aat-core/src/disc-continuity-stance.md
 see_also: [task-terminal, instrumentally-continuous, morally-continuous, negotiated, continuity]
 aliases: []
 do_not_confuse: []

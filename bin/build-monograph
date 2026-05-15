@@ -13,7 +13,7 @@
 #                                 status badges, segment-tinted boxes
 #
 # Usage:
-#   bin/build-monograph aad                      build AAD volume (scrbook)
+#   bin/build-monograph aad                      build AAT volume (scrbook)
 #   bin/build-monograph 01                       same, by component-dir prefix
 #   bin/build-monograph aad --target kaobook     kaobook variant
 #   bin/build-monograph --all                    all four volumes (scrbook)
@@ -104,10 +104,10 @@ META_FILENAME  = 'mono-meta.yaml'
 # with title / short_title / slug / major / minor / patch / cover_svg.
 # This table maps the CLI volume id (slug or numeric prefix) to its dir.
 VOLUME_REGISTRY = [
-  { dir: '01-aad-core',         id_aliases: %w[01 aad] },
+  { dir: '01-aat-core',         id_aliases: %w[01 aat] },
   { dir: '02-tst-core',         id_aliases: %w[02 tst] },
-  { dir: '03-logogenic-agents', id_aliases: %w[03 loga logogenic] },
-  { dir: '04-eli',              id_aliases: %w[04 eli] },
+  { dir: '03-llm-core', id_aliases: %w[03 llm loga logogenic] },
+  { dir: '04-eli-core',              id_aliases: %w[04 eli] },
 ].freeze
 
 def load_volume_spec(volume_id)

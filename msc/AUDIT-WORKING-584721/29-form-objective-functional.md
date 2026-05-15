@@ -25,7 +25,7 @@
 
 **8. What am I now curious about?**
 
-The "trajectory functional is real-valued" assumption. Many real-world AI systems have multi-objective structure (safety + capability + helpfulness for LLMs). The AND-node workaround handles hard constraints; Pareto tradeoffs within feasibility require vector-valued extension. Curious whether 03-logogenic-agents discusses this — LLM alignment literature treats safety/helpfulness as a multi-objective problem, which AAD's scalar-comparability would commit to scalarizing.
+The "trajectory functional is real-valued" assumption. Many real-world AI systems have multi-objective structure (safety + capability + helpfulness for LLMs). The AND-node workaround handles hard constraints; Pareto tradeoffs within feasibility require vector-valued extension. Curious whether 03-llm-core discusses this — LLM alignment literature treats safety/helpfulness as a multi-objective problem, which AAD's scalar-comparability would commit to scalarizing.
 
 The timescale-separation argument for scalarization is interesting: "the conflict is typically resolved at a slower timescale than strategy revision." This delegates the scalarization to a slower process (the principal, the operator, the value system). For self-actuated agents (where $O_t$ is set by the agent itself), this raises a meta-level question about how the scalarization is itself produced. AAD doesn't resolve this — `Self-Actuated Agent` is reserved per LEXICON.md.
 

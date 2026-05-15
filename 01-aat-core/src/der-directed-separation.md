@@ -1,0 +1,173 @@
+---
+slug: der-directed-separation
+type: derived
+status: conditional
+depends:
+  - form-complete-agent-state
+  - der-recursive-update
+  - scope-agency
+stage: draft
+---
+
+# Derived: Directed Separation
+
+The epistemic update function $f_M$ is goal-blind: it processes incoming events without reference to the agent's objectives or strategy. The purposeful update $f_G$ depends on the updated epistemic state. Action couples all substates. This directed asymmetry — epistemic update is independent of purpose; purposeful update depends on epistemic state — is the structural backbone of the theory.
+
+## Formal Expression
+
+*[Derived (directed-separation, from complete-agent-state + scope condition)]*
+
+**The update functions:**
+
+$$M_{\tau^+} = f_M(M_{\tau^-}, e_\tau) \qquad \text{(no } G_t \text{ argument)}$$
+
+$$G_{\tau^+} = f_G(G_{\tau^-}, M_{\tau^+}, e_\tau) \qquad \text{(depends on updated } M_t \text{)}$$
+
+**The policy:**
+
+$$a_t = \pi(M_t, G_t) \qquad \text{(couples all substates)}$$
+
+The three lines encode the full coupling structure:
+- $f_M$ determines how the agent updates beliefs — independently of what it wants
+- $f_G$ determines how the agent revises purpose — in light of what it now believes
+- $\pi$ determines what the agent does — based on both what it knows and what it wants
+
+*[Scope Condition (directed-separation-scope)]*
+
+The claim "$f_M$ has no $G_t$ argument" requires that the epistemic update is **goal-blind conditional on the realized event**. This holds when:
+
+1. The observation mechanism $h$ may be action-dependent ( #scope-agency allows this), but $f_M$ processes whatever event arrives without reference to why the agent sought that event
+2. The agent does not use its goals to filter, weight, or interpret observations differently — no goal-dependent attention thresholds or confirmation bias baked into $f_M$
+
+If the agent's goals influence the *observation mechanism* (goal-directed sensing, attention allocation, query selection), the **event that arrives** depends on $G_t$ through $\pi \to a_t \to e_\tau$. But $f_M$ still processes the event goal-blindly. The directed separation is about the **processing** of events, not the **selection** of events.
+
+### Architectural classification
+
+*[Scope Condition (directed-separation-architecture)]*
+
+> [!warning]
+> **Goal-Update Coupling Class numbering changed 2026-05-09.** Anything older than git tag `pre-guc-rename-2026-05-09` uses the old Class numbering:
+>
+> | historical | actual current     | sometimes AKA  |
+> | ---------- | ------------------ | -------------- |
+> | Class 1    | GUC Class 1: Separated | Modular        |
+> | Class 2    | GUC Class 3: Coupled   | Undirected     |
+> | Class 3    | GUC Class 2: Partial   | Operational    |
+
+Whether directed separation holds is determined by the agent's **processing topology** — specifically, whether $G_t$ is causally upstream of $f_M$ in the agent's internal processing graph. This is a structural property of the architecture, not a tunable parameter.
+
+| Class | Topology | Directed separation | Examples |
+|-------|----------|----|----|
+| **1. Separated** | Separate estimator and planner, connected through state-estimate interface | Holds by construction — estimator has no causal path from $G_t$ | Kalman filter + LQR; Separated RL with separate world model; military intelligence separated from operations |
+| **2. Partial** | Some shared infrastructure, some separate pathways | Holds for modular stages, fails for merged stages | Biological cortex (shared sensory areas, separate prefrontal); hybrid AI with separate preprocessing |
+| **3. Coupled** | Single mechanism handles both epistemic and strategic processing | Fails by construction — $G_t$ is causally upstream of every computation | Transformer LLM (attention processes goals and observations together); potentially human cognition (motivated reasoning) |
+
+**Operationalization.** The degree of coupling in Partial architectures (Class 2) can be quantified as:
+
+*[Definition (processing-coupling)]*
+
+$$\kappa_{\text{processing}} = \frac{I(G_t \,;\, M_{\tau^+} \mid e_\tau,\, M_{\tau^-})}{H(G_t \mid e_\tau,\, M_{\tau^-})}$$
+
+where $I(\cdot;\cdot\mid\cdot)$ is conditional mutual information and $H(\cdot\mid\cdot)$ is conditional entropy. The conditioning on $M_{\tau^-}$ is essential: without it, prior correlation between goals and model state (which exists even in Separated agents) inflates the measure. The quantity captures *extra* goal information entering the epistemic update beyond what was already in the prior model — information that flows through shared causal paths in the processing infrastructure (paths that bypass the event $e_\tau$).
+
+- $\kappa_{\text{processing}} = 0$: Class 1 (Separated). No information about $G_t$ reaches $M_{\tau^+}$ except through $e_\tau$.
+- $\kappa_{\text{processing}} \approx 1$: Class 3 (Coupled). Nearly all goal information is available to the epistemic update.
+- $0 \lt \kappa_{\text{processing}} \lt 1$: Class 2 (Partial). The value depends on the architecture's interface design.
+
+**Distribution dependence.** $\kappa_{\text{processing}}$ is a distribution-dependent measure: it quantifies how much goal-information actually flows through the shared pathways under a given distribution of tasks, goals, and events. It does not directly measure whether pathways *exist* — that is the architectural classification (Class 1/2/3), which is structural and distribution-independent. A Class 1 (Separated) agent has $\kappa = 0$ under ALL distributions (no pathway exists). A Class 3 (Coupled) agent has high $\kappa$ under most distributions (pathways exist and are used). A Class 2 (Partial) agent's $\kappa$ varies with the task distribution — the same hybrid architecture may exhibit low coupling on familiar tasks (where the modular stages handle most processing) and high coupling on novel tasks (where goal-conditioned downstream reasoning dominates). The classification is the primary tool; the operationalization is a diagnostic for Class 2 (Partial) agents where the degree of coupling is architecturally ambiguous.
+
+**Empirical estimator for $\kappa_{\text{processing}}$.** The formal conditional-mutual-information definition is not computable in closed form for real architectures. A behavioral estimator probes the processor directly: present the same event $e$ to the *agent under test* under two or more distinct goal states, and measure how much the epistemic component of the response diverges. For a representative event set $\mathcal{E}_{\text{test}}$ and a sampled pair $G_1, G_2$:
+
+$$\hat\kappa_{\text{processing}} = \frac{1}{\lvert\mathcal{E}_{\text{test}}\rvert} \sum_{e \in \mathcal{E}_{\text{test}}} \frac{d\big(M_{\tau^+}^{(G_1)}(e),\; M_{\tau^+}^{(G_2)}(e)\big)}{d_{\text{max}}(e)}$$
+
+where $M_{\tau^+}^{(G_k)}(e)$ is the epistemic content of the agent's response to event $e$ under goal state $G_k$, $d(\cdot,\cdot)$ is a distance on the epistemic content (e.g., semantic similarity of the "what I learned" portion of the response), and $d_{\text{max}}(e)$ normalizes by the maximum observed divergence for event $e$. A Separated agent ($\kappa = 0$) produces identical epistemic content regardless of the goal; a Coupled agent produces systematically goal-dependent epistemic content. This is a processor-probing procedure — it measures how the agent's belief-update dynamics depend on its goal state, and is distinct from estimating observation ambiguity $\mathcal{A}(e)$ ( #scope-observation-ambiguity-modulation), which uses a reference interpreter to measure the goal-resolvability of the observation itself. The two estimators run the same mechanical comparison (same event under different goal-primings) but interpret it differently: $\hat\kappa$ treats the tested model as the agent under study; $\hat{\mathcal{A}}$ treats it as a measurement instrument for the observation's interpretive latitude.
+
+**Why the classification is not a smooth parameter.** The architectural boundary between "has a separable perception module" and "processes everything through goal-conditioned attention" is discrete. Within the Separated class, $\kappa \approx 0$ regardless of task. Within the Coupled class, $\kappa$ is high regardless of prompt design. Only in the Partial class is $\kappa$ genuinely variable and worth parameterizing. This replaces an earlier $\kappa$-as-scalar framing that treated coupling as a smoothly tunable quantity.
+
+**Directed separation as the conservative form of the Markov blanket.** The Markov blanket apparatus from active inference (Friston 2013, "Life as we know it," *J. Royal Soc. Interface* 10; Friston 2019, "A free energy principle for a particular physics," arXiv:1906.10184; Friston, Da Costa et al. 2023, "Path integrals, particular kinds, and strange things," *Phys. Life Rev.* 47) provides the same statistical-conditional-independence machinery the directed-separation condition above invokes. Bruineberg, Dolega, Dewhurst & Baltieri (2022, "The Emperor's New Markov Blankets," *Behav. Brain Sci.* 45) distinguish two readings of the Markov-blanket apparatus in the AI literature: a **Pearl-blanket** reading — the technical conditional-independence statement, well-defined and substantively informative — and a **Friston-blanket** reading — the metaphysical claim that Markov blankets demarcate self-from-other and that every self-organizing system has one ontologically. Bruineberg et al. argue that the Friston-blanket reading overruns what the formalism delivers: the conditional-independence statement does not by itself license the metaphysical demarcation.
+
+AAT's directed-separation condition is structurally a Pearl-blanket move: the architectural classification (Class 1 / Class 2 / Class 3) names the conditional-independence structure of the agent's processing graph, with explicit operational measurement $\kappa_{\mathrm{processing}}$, and admits the structure *fails* by construction for Class 3 (Coupled) architectures (transformer LLMs, where attention processes goals and observations together). The classification's explicit failure mode for Class 3 is the scope honesty Bruineberg et al. argue the Friston-blanket reading lacks. AAT adopts the Pearl-blanket conditional-independence statement as the technical content of directed separation; AAT does not adopt the Friston-blanket metaphysical reading. The architectural classification, the operational $\kappa$, and the explicit Class 3 scope exit (with the coupled formulation handed off to `03-llm-core/`) are AAT's load-bearing additions to the Pearl-blanket form.
+
+Two consequences worth surfacing for reviewers. First: the question "isn't directed separation just the Markov blanket?" has the answer "directed separation is the *Pearl-blanket form*; it is also the architectural-classification refinement that the standard Markov-blanket framing does not produce." Second: AAT's scope honesty about Class 3 (Coupled) (Section II's exact results do not apply; logogenic agents need the coupled formulation) is itself an *answer* to the Bruineberg critique — AAT's apparatus admits where it fails, while the Friston-blanket framing is contested precisely because it does not.
+
+**Implications for theory scope:**
+- **Class 1 (Separated)**: Section II's results apply exactly. The sequential orient cascade is the correct analysis.
+- **Class 3 (Coupled)**: Requires coupled formulation from the start — $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without decomposition. This is the scope of `03-llm-core/`. **Class 3 (Coupled) components can be wrapped into Class-1 composites** via the construction of `#der-class-coercion-via-wrapping` — at the cost of more component calls per macro-step (Brooks's-Law tempo overhead) and a residual leakage rate bounded structurally (in the strict-wrapping regime) or behaviorally (in the partial-wrapping regime).
+- **Class 2 (Partial)**: The sequential cascade is an approximation. Approximation quality depends on $\kappa_{\text{processing}}$ and requires per-architecture error analysis.
+
+### Class-1 by structure vs. Class-1 by behavior
+
+The Class 1 (Separated) cell admits a refinement that matters operationally. Class-1 status can be achieved by either:
+
+- **Class-1 by structure.** The component is natively goal-blind (POMDP belief-state filter, world model, sensory pipeline) or is wrapped via the strict-wrapping (W₁) construction of `#der-class-coercion-via-wrapping`, where separate goal-blind queries to the underlying component update the wrapper's $M_W$. Directed separation holds by structural commitment of the wrapper's type signatures (no $G_W$ argument in the belief-update path), with leakage bounded structurally by the pretraining-distribution mutual information $I(A(q_M); G_W \mid q_M)$.
+
+- **Class-1 by behavior.** The component is Class 3 (Coupled) or Class 2 (Partial) used through partial wrapping (W₂) — one goal-conditioned call per macro-step, response parsed into typed update fields. Structural separation lives at the *write boundary*; the *query boundary* still passes $G_W$ to the component. Directed separation at the wrapper level is *behavioral* — bounded by the component's compliance with the prompted instruction-to-separate, with no structural upper bound.
+
+The class-coercion theorem is what backs the Class-1-by-structure path for Class-2/3 components; the partial-wrapping regime achieves Class-1-by-behavior. The two are distinguishable by inspection: does the belief-update query to the underlying component carry $G_W$ in its input or not? The structural-vs-behavioral distinction is operationally important because behavioral compliance is empirical and adversarially fragile; structural separation is derivable from the wrapper's construction.
+
+**Composite-level class inheritance (from #deriv-strategic-composition).** The Class 1 / 2 / 3 partition above applies to individual agents based on *within-agent* coupling between $f_M$ and $G_t$. Composition introduces a second form of coupling — *across-agent* coupling through the shared environment and cross-agent observation. `#deriv-strategic-composition` provides the structural refinement:
+
+- *Composite of Class 1 (Separated) sub-agents with aligned objectives* (scope route C-i / C-ii / C-iii): Class 1 (Separated) composite. Within-agent modularity + cross-agent alignment preserve directed separation at the composite level. Standard `#form-composition-closure` applies.
+- *Composite of Class 1 (Separated) sub-agents with partially-opposing objectives* (scope route C-iv — strategic composition): **Class 2 (Partial) composite from Class 1 (Separated) sub-agents**. Each sub-agent individually is Separated (its own $f_M^{(i)}$ remains goal-blind with respect to its own $G_t^{(i)}$), but the composite's $(M_c, G_c)$ acquires intrinsic coupling because each sub-agent's $M_t^{(i)}$ includes a model of other sub-agents' policies — which are themselves goal-dependent. Composite-level directed separation fails through across-agent coupling, not within-agent coupling. Strategic composition is the canonical Class 1-sub-agents → Class 2 (Partial) composite case.
+- *Composite of Class 3 (Coupled) sub-agents*: Class 3 (Coupled) composite. Inherits logogenic-agent status; `03-llm-core/` territory regardless of scope route.
+
+Class membership is therefore a property of composites, not just of individual agents, and composite class is a function of sub-agent class **plus** the scope route (alignment vs. strategic). The classification is load-bearing for downstream claims: Class 2 (Partial) composites from strategic composition need equilibrium-theoretic analysis (see `#deriv-strategic-composition`), not the sequential orient cascade.
+
+## Epistemic Status
+
+*Conditional* on the scope condition above. The conditional claim (IF epistemic update is goal-blind, THEN the separation holds) is exact. Whether a particular agent satisfies the condition is determined by its processing architecture (GUC Class 1/2/3).
+
+The architectural classification: **robust qualitative**. The three classes are structurally distinct (Separated vs. Coupled vs. Partial), well-motivated by examples across domains, and supported by a formal operationalization ($\kappa_{\text{processing}}$). The classification replaces the earlier $\kappa$-as-scalar framing, which is documented in `spikes/spike-kappa-topology-insight.md`. The operationalization of $\kappa_{\text{processing}}$ as conditional mutual information is well-defined but typically not computable in closed form for real architectures — it serves as a conceptual anchor rather than a practical measurement tool.
+
+## Discussion
+
+**This is a genuine scope restriction, not a footnote.** An LLM agent's prompt includes the task objective, which shapes how it interprets code, documentation, and error messages. Its $f_M$ is goal-conditioned in practice: the agent reading code with the goal "fix the auth bug" processes the same code differently than one with "add logging." The epistemic update and purposeful evaluation are entangled in the attention mechanism.
+
+**When the approximation is good:**
+- Goal-conditioning affects *attention* (which events to seek) more than *interpretation* (how to process events that arrive)
+- The agent has strong epistemic discipline (updates beliefs based on evidence quality, not goal alignment)
+- The epistemic update is architecturally separated from goal evaluation (e.g., separate model-update and planning modules)
+
+**When the approximation is poor:**
+- The agent exhibits confirmation bias (interpreting ambiguous evidence in goal-consistent ways)
+- Goal-conditioning is deeply embedded in the processing architecture (attention-based models where the query includes intent)
+- The agent's observation channel is strategically controlled by an adversary who knows the agent's goals
+
+**What directed separation buys the theory.** Section I's $M_t$-side quantities — $\delta$, $\eta^\ast$, $\mathcal{T}$, the persistence condition — remain well-defined on $M_t$ regardless of whether directed separation holds. What directed separation provides is the *clean factorized update*: $M_t$ updates independently, then $G_t$ updates in light of the new $M_t$, and the orient cascade resolves sequentially. Without directed separation, the $M_t$ dynamics depend on $G_t$, the update becomes a coupled system, and the sequential orient cascade becomes an approximation of a simultaneous fixed-point problem. The theory still applies — the quantities are well-defined — but the modular Section I → Section II lift becomes a coupled analysis.
+
+**The deeper question.** Goal-conditioned epistemic dynamics — where $f_M$ depends on $G_t$ — is the formal territory of motivated reasoning, confirmation bias, and wishful thinking. A future extension would model these as departures from directed separation: coupling terms in $f_M$ that create richer (and more fragile) dynamics. The current theory treats this as out of scope, which is honest but leaves the most human-like and LLM-like agents as approximate fits.
+
+**Bounded-signaling assumption.** Directed separation as stated above asserts $M_{\tau^+} \perp G_t \mid (M_{\tau^-}, e_\tau)$ on the *belief-update* side — the agent's epistemic update is independent of its goal-state. Symmetrically, on the *action* side, the framework implicitly relies on the channel from $G_t$ to the world running *only* through action choice: $G_t \to \text{world}$ via $a_t = \pi(M_t, G_t)$, with no other observable signal of goal-content. This is the **bounded-signaling assumption** — the action coarseness $\lvert\mathcal{A}\rvert$ upper-bounds the rate at which $G_t$ leaks to observers (sub-agents, environment, adversaries). The assumption holds well for agents whose entire externally-observable behavior is the action sequence (chess engines, programmatic controllers); it fails operationally for agents whose behavioral output is rich relative to the action coarseness — sophisticated $G_t$-inference from prosody, micro-behavior, attention patterns, response latency, hesitation, code-style signatures. When the bounded-signaling assumption fails, an external observer can infer $G_t$ with bit-rate exceeding what the formal $\mathcal{A}$ channel implies; in composition the failure surfaces as the adversarial-coupling-pressure saturation case discussed in `#disc-adversarial-coupling-pressure`, where adversaries exploit the rich-leakage signal to drive target coupling beyond what the architectural classification predicts. The assumption is currently *implicit* throughout the framework (no segment explicitly states it); naming it surfaces a structural condition that distinguishes agents whose externally-observable interface matches the formal $\mathcal{A}$ from agents (most behaviorally-rich agents — humans, LLMs, embodied robots) for whom the formal $\mathcal{A}$ undercounts the actual signaling channel.
+
+## Findings
+
+### Pearl-Blanket-Form Architectural Classification with Explicit Class-3 Scope Exit
+
+**Brief:** Agents partition into three architecture classes by whether goal-state can causally influence belief-update processing: Class 1 (Separated — directed separation holds by construction; e.g., Kalman filter + LQR), Class 3 (Coupled — fails by construction; e.g., transformer LLMs where attention processes goals and observations together), Class 2 (Partial — holds for some processing stages and fails for others; e.g., biological cortex). The classification is structural (architecture-determined) rather than parametric, with a continuous diagnostic $\kappa_{\text{processing}}$ for Class 2 (Partial) cases. The framework adopts the Pearl-blanket reading of the Markov-blanket apparatus (the technical conditional-independence statement) without the contested Friston-blanket metaphysical reading, and provides an explicit scope exit for Class 3 (Coupled) that hands the agents off to a coupled formulation in `03-llm-core/` rather than treating directed separation as an unenforced approximation.
+
+**Impact:** Replaces the prior $\kappa$-as-scalar framing (which treated coupling as smoothly tunable across all architectures) with a discrete architectural classification that admits its own boundary. This is the upstream commitment that lets `03-llm-core/` start from a coupled formulation without decomposition rather than treating Coupled agents as failed Class 1 agents. The explicit Class 3 scope exit is also a methodological move — Bruineberg et al. 2022's critique of the Markov-blanket literature was that the Friston-blanket reading does not admit where its statistical-conditional-independence apparatus fails to license the metaphysical demarcation; the architectural classification's explicit failure mode for Class 3 (Coupled) is the scope honesty Bruineberg et al. argue is missing in the contested reading. Composite-level class inheritance (Class 1 (Separated) sub-agents with partially-opposing objectives → Class 2 (Partial) composite, from `#deriv-strategic-composition`) further extends the classification to multi-agent settings.
+
+**Novelty Claim:** *Claim recognition* of structural equivalence between the directed-separation condition and the Pearl-blanket form of the Markov-blanket apparatus, combined with *claim differentiation* on the architectural classification (GUC Class 1 / 2 / 3: Separated / Partial / Coupled) as a discrete partition with explicit Class 3 (Coupled) boundary and quantitative $\kappa_{\text{processing}}$ diagnostic for the Partial case. The conditional-independence content is the standard Pearl-blanket statement; the contribution is naming the partition, the explicit Class 3 boundary, and the operational $\kappa$ measurement.
+
+**Related Work:**
+
+| ASF concern | Prior-art language | Relationship / Positioning |
+|---|---|---|
+| Pearl vs Friston Markov blanket | Bruineberg, Dolega, Dewhurst & Baltieri 2022, "The Emperor's New Markov Blankets" *BBS* 45:e69 (published 2022, in `ref/`) — distinguishes Pearl-blanket (technical conditional-independence) from Friston-blanket (contested metaphysical demarcation) | *formal antecedent* — Pearl-blanket reading adopted directly; Friston-blanket reading explicitly not adopted. The architectural classification is the AAT-internal extension that names what the Pearl-blanket form is structurally, as a property of the agent's processing graph |
+| Markov blanket apparatus in active inference | Friston 2013 *J. R. Soc. Interface* 10:20130475; Friston 2019 arXiv:1906.10184; Friston, Da Costa et al. 2023 *Phys. Life Rev.* 47 | *adjacent literature* — supplies the conditional-independence machinery that directed-separation invokes; the framework adopts the technical content but does not adopt the metaphysical reading and adds the architectural GUC Class 1/2/3 partition the standard Markov-blanket framing does not produce |
+| Statistical / thermodynamic system boundaries | Parr, Da Costa & Friston 2019 *Phil. Trans. R. Soc. A* 378; Kirchhoff, Parr, Palacios, Friston & Kiverstein 2018 *J. R. Soc. Interface* 15 (published 2019/2018) | *conceptual precursor* — internal/external partition and nested-blanket structure; conceptually related but does not produce an architectural classification by belief-goal coupling, nor a scope exit for fully-Coupled agents |
+| Information Digital Twin sidecar monitoring | Hafez et al. 2026, *Informational Cost of Agency* (separate paper from "A Mathematical Theory of Agency and Intelligence"; the IDT empirical headline) — IDT monitors $(S, A, S')$ stream independently of the agent's internal processing, achieving 89% perturbation detection vs 44% for reward-based monitoring | *empirical instantiation supporting* — concrete demonstration that modular monitoring of internally-Coupled agents (Class 1 sidecar within a Class 3 (Coupled) or Class 2 (Partial) system) is both feasible and effective; engineering-level evidence for the system-vs-component distinction the classification names |
+
+**Search Log:**
+
+- 2026-04 (*nominally comprehensive*, via `ref/Novelty_defense_and_integration.md` Pillar 3): Undermind search confirmed that the Pearl-blanket / Friston-blanket distinction (Bruineberg et al. 2022) is the right adjacent-literature framing and that no equivalent architectural classification of LLM agents by belief-goal coupling appeared in the active-inference, control-as-inference, or bounded-rationality literatures surveyed. The Pillar 3 verdict (*Wholly Novel*, Medium confidence) applies to the integrated κ × A law downstream in `#scope-observation-ambiguity-modulation`; this segment's narrower contribution (the architectural classification and Pearl-blanket-form recognition) is conceptual differentiation over an established formalism rather than wholesale novelty, and inherits the same follow-on targeted search recommendation.
+- 2026-04 (*intuition-only* on extensions): the composite-level class inheritance result (Class 1 (Separated) sub-agents → Class 2 (Partial) composite under partially-opposing objectives, from `#deriv-strategic-composition`) suggests extending the classification to multi-agent settings is a productive direction; whether prior work has named this specific pattern is not searched.
+
+## Working Notes
+
+- The scope condition is more precisely a conditional independence: $M_{\tau^+} \perp G_t \mid (M_{\tau^-}, e_\tau)$. The epistemic update is independent of the purposeful state conditional on the prior epistemic state and the incoming event.
+- Directed separation connects to the orient cascade ( #der-orient-cascade): the cascade's ordering ($M_t$ first, then $G_t$) is forced by the information dependency that directed separation establishes. If $f_M$ depended on $G_t$, the cascade ordering would become a simultaneous fixed-point problem, not a sequential resolution.
+- **Engineering design for Class 3 (Coupled) agents.** An LLM is internally fully Coupled, but the *agent system* (LLM + tools + memory + monitoring) can be designed with modular topology: separate observation processing from goal-directed reasoning, pass compressed state estimates between modules, add an external monitor that observes the $(S, A, S')$ stream independently of the LLM's attention. This creates partially-separated structure at the system level even though the component-level $\kappa$ is high. Hafez et al. (2026) provide a concrete instantiation of this pattern: the **Information Digital Twin (IDT)**, which monitors bi-predictability $P$ and entropy change $\Delta H$ from the $(S, A, S')$ stream as a modular sidecar, independent of the agent's internal processing. The IDT detects perturbations at 89% accuracy versus 44% for reward-based monitoring — empirical evidence that monitoring the information structure of the loop (Level 2 data, #der-loop-interventional-access) outperforms monitoring outcomes alone. For `03-llm-core/`, the IDT pattern validates that modular monitoring of internally-Coupled agents is both feasible and effective.
+- **Implication for logogenic agents**: rather than trying to extend the separated analysis to Coupled agents, `03-llm-core/` should start from the coupled formulation $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without decomposition, and show which Section II results survive as approximate or limiting cases.
+- **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Removed at `candidate` stage per FORMAT.md Gate 4.
+- **Cross-reference to NeurIPS Paper 3.** The Class 3 (Coupled) classification of decoder-only transformer attention is formalized at lemma grade in NeurIPS 2026 Paper 3 ("How Much Can LLMs Hallucinate? An Upper Bound on Goal-Coupling Displacement", `~/src/neurips/03-llm-hallucinate-bound/`, §App-B / `#lem-attention-coupled`): plain decoder-only attention is structurally Coupled by directed-graph reachability — robust to RMSNorm / FlashAttention / causal masking / sliding-window — via induction on layer depth. The paper *extends* the Coupled-class characterization to **linear attention / Mamba / SSMs / RWKV / RetNet / long-convolutions** under a per-source non-degeneracy condition (`#cor-arch-instantiations`) — substantially broader architecture coverage than this segment's transformer-attention example. The Coupled-class connectivity result is the empirical companion to this segment's structural classification: directed separation fails by construction at the architecture level for the named modern autoregressive sequence models. See `msc/neurips-back-integration-2026-05-08.md` §1 Paper 3 entry 6.

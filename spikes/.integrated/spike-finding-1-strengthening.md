@@ -7,7 +7,7 @@ date: 2026-04-22
 
 # Spike: Finding 1 — Strengthening Attempt (No-Go Theorem for On-Policy L0 Insufficiency Detection)
 
-**Status:** Strengthening spike. Attempts to convert `01-aad-core/src/der-causal-insufficiency-detection.md` from "we observe that the residual collapses on-policy" (the softening repair already on file in `spikes/spike-finding-1-l0-residual-repair.md`) into "we *prove* no on-policy mechanism can detect L0 causal insufficiency." If proved, this is a no-go theorem strengthening that materially upgrades the segment.
+**Status:** Strengthening spike. Attempts to convert `01-aat-core/src/der-causal-insufficiency-detection.md` from "we observe that the residual collapses on-policy" (the softening repair already on file in `spikes/spike-finding-1-l0-residual-repair.md`) into "we *prove* no on-policy mechanism can detect L0 causal insufficiency." If proved, this is a no-go theorem strengthening that materially upgrades the segment.
 
 **Date:** 2026-04-22
 
@@ -353,7 +353,7 @@ Each of these can *appear* to add information, but the appearance dissolves unde
 
 ## §6 — Strengthened Segment Revision
 
-The full proposed text of `01-aad-core/src/der-causal-insufficiency-detection.md` follows. Apply by replacing the entire segment.
+The full proposed text of `01-aat-core/src/der-causal-insufficiency-detection.md` follows. Apply by replacing the entire segment.
 
 ```markdown
 ---
@@ -639,7 +639,7 @@ The prior softening repair already characterized downstream impact for the resid
 
 ### Same as prior repair
 
-- `01-aad-core/OUTLINE.md` line 95: minor edit to one-line description. Update to "Detecting latent common causes: no-go theorem for purely on-policy detection; primary mechanism is pairwise sibling covariance under #der-loop-interventional-access."
+- `01-aat-core/OUTLINE.md` line 95: minor edit to one-line description. Update to "Detecting latent common causes: no-go theorem for purely on-policy detection; primary mechanism is pairwise sibling covariance under #der-loop-interventional-access."
 - `#der-orient-cascade` step 4c: still holds; reference to covariance test is now strengthened (covariance test is the unique broadly-available route per the no-go).
 - `#def-strategy-dag` line 124: minor edit to align framing. Suggested: "An agent at L0 cannot detect causal insufficiency from purely on-policy data (no-go theorem in #der-causal-insufficiency-detection): the on-policy observation distribution is identical between L0 worlds (with regime-conditional credences) and L1 worlds (with latent common causes). Detection requires interventional or joint-observability data: pairwise covariance among sibling edges, computed on data from #der-loop-interventional-access plus SA3 exploration, is the canonical AAD detector."
 - `#disc-independence-audit` item 2: still holds; reference to covariance test aligned with primary mechanism.

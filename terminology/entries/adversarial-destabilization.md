@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/der-adversarial-destabilization.md
-first_asf_mention: 01-aad-core/src/der-adversarial-destabilization.md
+primary_source: 01-aat-core/src/der-adversarial-destabilization.md
+first_asf_mention: 01-aat-core/src/der-adversarial-destabilization.md
 see_also: [adaptive-reserve, team-persistence, adaptive-tempo]
 aliases: []
 do_not_confuse: []
@@ -31,6 +31,6 @@ symmetrically and admits two disturbance models: deterministic drift coupling (M
 threshold linear in $\alpha_B$) and stochastic noise coupling (Model S, threshold linear
 in $\sqrt{\alpha_B}$).
 
-Derived in [`#der-adversarial-destabilization`](../../01-aad-core/src/der-adversarial-destabilization.md);
+Derived in [`#der-adversarial-destabilization`](../../01-aat-core/src/der-adversarial-destabilization.md);
 the cooperative counterpart (allies reducing disturbance) lives in
-[`#der-team-persistence`](../../01-aad-core/src/der-team-persistence.md).
+[`#der-team-persistence`](../../01-aat-core/src/der-team-persistence.md).

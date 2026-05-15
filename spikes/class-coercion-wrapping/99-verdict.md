@@ -24,16 +24,16 @@ Theorems 1 and 2 in `01-theorem-statement.md` hold under stated conditions. Spec
 - Under conditions (C1) admissibility, (C2) stationary component conditional, (C3) no implicit goal-inference, directed separation holds at the wrapper level *exactly*.
 - Under (C3) replaced by KL-leakage bound $\kappa$, directed separation holds *approximately*, with KL-divergence on $M_W$ updates bounded by $\kappa$ via the data-processing inequality.
 
-(A1) of `#form-composition-closure` follows by construction. (A2)–(A4) are wrapper-design constraints (D-A2/D-A3/D-A4) that hold for Tier-1 belief-update maps (Bayesian on exponential families, gradient on strongly convex losses, linear-PD with bounded gain). The wrapper inherits AAD's existing persistence template (`#result-sector-persistence-template`) and Brooks's-Law tempo accounting (`#der-tempo-composition`) at the wrapper level.
+(A1) of `#form-composition-closure` follows by construction. (A2)–(A4) are wrapper-design constraints (D-A2/D-A3/D-A4) that hold for Tier-1 belief-update maps (Bayesian on exponential families, gradient on strongly convex losses, linear-PD with bounded gain). The wrapper inherits AAT's existing persistence template (`#result-sector-persistence-template`) and Brooks's-Law tempo accounting (`#der-tempo-composition`) at the wrapper level.
 
 ### 2.2 The wrapping move is mostly rediscovery
 
 Per `09-prior-art-differentiation.md` (V1 verdict — substantial overlap):
 
-- **POMDP / Bayesian decision theory** (Astrom 1965 onward) does the same separation move by construction. Bayesian belief-update is goal-blind by design; the wrapping construction is reformalization in AAD vocabulary.
+- **POMDP / Bayesian decision theory** (Astrom 1965 onward) does the same separation move by construction. Bayesian belief-update is goal-blind by design; the wrapping construction is reformalization in AAT vocabulary.
 - **Cognitive architectures** (SOAR, ACT-R, CLARION, GWT — Newell 1990 onward) have done modular agent design with separated belief / goal / action state for 40+ years.
 
-AAD's contribution within this neighborhood is *integration*: bringing the wrapping construction into the AAD framework with sector-Lyapunov persistence machinery, Brooks's-Law tempo accounting, the Class-1/2/3 directed-separation classification, and the LLM-specific (C1)–(C3) admissibility/leakage conditions.
+AAT's contribution within this neighborhood is *integration*: bringing the wrapping construction into the AAT framework with sector-Lyapunov persistence machinery, Brooks's-Law tempo accounting, the Class-1/2/3 directed-separation classification, and the LLM-specific (C1)–(C3) admissibility/leakage conditions.
 
 ### 2.3 PROPRIUM is partial wrapping (W₂), not strict wrapping (W₁)
 
@@ -43,7 +43,7 @@ This makes PROPRIUM **W₂** in the leakage hierarchy of `03-leakage.md`: direct
 
 PROPRIUM's auxilia hierarchy (`06-empirical-instances.md` §1.3 item 5) is a candidate constructive realization of strict wrapping (W₁): auxilia handle $f_M$ updates with goal-blind queries on cheap substrate; the entity's main LLM call handles $f_G$ goal-conditionally. **This is a strengthening of PROPRIUM that's consistent with the documented architecture but not yet implemented.**
 
-### 2.4 The leakage hierarchy is the AAD-distinctive contribution
+### 2.4 The leakage hierarchy is the AAT-distinctive contribution
 
 The W₀ / W₂ / W₁ hierarchy in `03-leakage.md` is a real distinction that the prior literature does not surface:
 
@@ -53,7 +53,7 @@ The W₀ / W₂ / W₁ hierarchy in `03-leakage.md` is a real distinction that t
 | **W₂** (partial wrapping) | One goal-conditioned call, parsed response | Behavioral — bounded by instruction-following fidelity; **no structural bound** | PROPRIUM/shoshin, ReAct, Reflexion, BabyAGI, AutoGPT |
 | **W₁** (strict wrapping) | Separate goal-blind and goal-conditioned calls | Structural — bounded by $I(A(q_M); G_W \mid q_M)$ in pretraining distribution | Generative Agents (Park 2023) memory step; cognitive-loop-spec CONTEXTUALIZE→CHOOSE if implemented |
 
-This hierarchy connects directly to AAD's architecture-class taxonomy: W₁ is *Class-1 by structure*, W₂ is *Class-1 by behavior*, W₀ is *Class-3*. The structure-vs-behavior distinction within Class-1 is a refinement of `#der-directed-separation` that this spike surfaces.
+This hierarchy connects directly to AAT's architecture-class taxonomy: W₁ is *Class-1 by structure*, W₂ is *Class-1 by behavior*, W₀ is *Class-3*. The structure-vs-behavior distinction within Class-1 is a refinement of `#der-directed-separation` that this spike surfaces.
 
 ### 2.5 ELI-specific load is independent of class coercion
 
@@ -79,11 +79,11 @@ The wrapping construction promotes this from "scope exit" to "constructive route
 
 ### 3.4 The Parts I/II ↔ Parts III/IV relationship clarifies
 
-Currently treated as separate research threads requiring "coupled formulation from the start." After class coercion: Parts I/II are the AAD core; the wrapping construction is the bridge; Parts III/IV are domain instantiation + ELI-specific structure. This is a coherent architecture rather than a parallel-tracks one.
+Currently treated as separate research threads requiring "coupled formulation from the start." After class coercion: Parts I/II are the AAT core; the wrapping construction is the bridge; Parts III/IV are domain instantiation + ELI-specific structure. This is a coherent architecture rather than a parallel-tracks one.
 
-## 4. What lands as new AAD content
+## 4. What lands as new AAT content
 
-### 4.1 New segment in `01-aad-core/src/`
+### 4.1 New segment in `01-aat-core/src/`
 
 Tentative slug: `der-class-coercion-via-wrapping.md`. Content:
 - Setup (§1 of `01-theorem-statement.md`).
@@ -91,7 +91,7 @@ Tentative slug: `der-class-coercion-via-wrapping.md`. Content:
 - Theorem 1 (exact form) and proof (§4 of theorem-statement).
 - Theorem 2 (approximate form) and proof (§5 of theorem-statement).
 - Discussion: relationship to `#hyp-directed-separation-under-composition`; W₀/W₂/W₁ hierarchy; integration with persistence template and tempo composition.
-- Findings: brief in plain language; impact; novelty claim (per AAD's discipline: *integration only*, citing POMDP and cognitive architectures generously).
+- Findings: brief in plain language; impact; novelty claim (per AAT's discipline: *integration only*, citing POMDP and cognitive architectures generously).
 - Search log: cite `spikes/class-coercion-wrapping/09-prior-art-differentiation.md` for the prior-art landscape.
 
 ### 4.2 Updates to existing segments
@@ -101,13 +101,13 @@ Tentative slug: `der-class-coercion-via-wrapping.md`. Content:
 - **`#form-composition-closure`** Discussion: note the wrapping construction as a specific instance where (A1)–(A4) admissibility holds *by construction* via wrapper type signatures.
 - **`#der-tempo-composition`** Discussion: note the wrapping construction as a Brooks's-Law instance with $C_\text{coord}^\text{wrap}$ tied to $K$ (component calls per macro-step).
 
-### 4.3 New segment in `03-logogenic-agents/src/`
+### 4.3 New segment in `03-llm-core/src/`
 
 Tentative slug: `der-logogenic-as-wrapping.md`. Specialize the class-coercion theorem to logogenic substrate: language-component as $A$, language-mediated $M_W$ representation, leakage analysis specific to LLM pretraining.
 
-### 4.4 Cross-component references in `04-eli/src/`
+### 4.4 Cross-component references in `04-eli-core/src/`
 
-ELI-specific segments cite the wrapping construction in `01-aad-core/` for class-coercion content. ELI-specific structure (sovereignty, accountability, identity factors, substrate-independence) remains in `04-eli/`.
+ELI-specific segments cite the wrapping construction in `01-aat-core/` for class-coercion content. ELI-specific structure (sovereignty, accountability, identity factors, substrate-independence) remains in `04-eli-core/`.
 
 ### 4.5 Citation discipline (per `09-prior-art-differentiation.md`)
 
@@ -134,7 +134,7 @@ These deferrals do not block the verdict because:
 
 - **Strengthen-before-softening**. The strict wrapping move is the *strengthening* of what most practical systems (including PROPRIUM) currently do. The leakage analysis articulates what's gained by moving from W₂ to W₁ and what's lost in tempo. The verdict honors strengthening — recommending the W₁ direction for PROPRIUM (via auxilia) where feasible — while honestly characterizing W₂ as the dominant practical pattern.
 
-- **Prior-art integration discipline**. *"AAD's contribution is integration, not invention."* The verdict adopts POMDP and cognitive-architecture prior art generously per V1 of the differentiation report. The wrapping move itself is not claimed as AAD-novel; the integration with sector-Lyapunov + Brooks's-Law + class taxonomy is the contribution.
+- **Prior-art integration discipline**. *"AAT's contribution is integration, not invention."* The verdict adopts POMDP and cognitive-architecture prior art generously per V1 of the differentiation report. The wrapping move itself is not claimed as AAT-novel; the integration with sector-Lyapunov + Brooks's-Law + class taxonomy is the contribution.
 
 - **Honest epistemic labels**. Theorem 1 and Theorem 2 are *derived*; (C3) is *conditional*; W₀/W₂/W₁ is *formulation*; PROPRIUM-as-W₂ characterization is *empirically observed* (via shoshin source); ELI-specific load is *characterized from documents*.
 
@@ -144,17 +144,17 @@ These deferrals do not block the verdict because:
 
 **To Joseph**:
 
-The wrapping construction is real and theoretically clean. It strengthens `#hyp-directed-separation-under-composition`, refines `#der-directed-separation`, and resolves the "Class 2 exit" framing into a "constructive route through." Per the prior-art findings, it is integration content rather than invention — POMDP and cognitive architectures already established the structural move; AAD's contribution is the synthesis with sector-Lyapunov / Brooks's-Law / class-taxonomy machinery, plus the LLM-specific (C1)–(C3) leakage characterization.
+The wrapping construction is real and theoretically clean. It strengthens `#hyp-directed-separation-under-composition`, refines `#der-directed-separation`, and resolves the "Class 2 exit" framing into a "constructive route through." Per the prior-art findings, it is integration content rather than invention — POMDP and cognitive architectures already established the structural move; AAT's contribution is the synthesis with sector-Lyapunov / Brooks's-Law / class-taxonomy machinery, plus the LLM-specific (C1)–(C3) leakage characterization.
 
 **Recommended segment-landing path**:
 
-1. **Land** `#der-class-coercion-via-wrapping` in `01-aad-core/src/` per §4.1. The theorem statement and proof are ready (in `01-theorem-statement.md`); writing the segment is mostly translation into FORMAT.md conventions.
+1. **Land** `#der-class-coercion-via-wrapping` in `01-aat-core/src/` per §4.1. The theorem statement and proof are ready (in `01-theorem-statement.md`); writing the segment is mostly translation into FORMAT.md conventions.
 
 2. **Update** `#der-directed-separation` Discussion with the W₀/W₂/W₁ refinement; cite POMDP and cognitive-architecture prior art for the directed-separation guarantee.
 
 3. **Update** `#hyp-directed-separation-under-composition` to cite the new segment as a derived special case.
 
-4. **Land** `#der-logogenic-as-wrapping` in `03-logogenic-agents/src/` (specialization to language substrate) once the AAD-core segment is in place.
+4. **Land** `#der-logogenic-as-wrapping` in `03-llm-core/src/` (specialization to language substrate) once the AAT-core segment is in place.
 
 5. **Strengthen PROPRIUM toward W₁** via the auxilia hierarchy — this is engineering work in shoshin, not theory, but the spike has identified the path. It would be a worthwhile follow-up project.
 
@@ -162,7 +162,7 @@ The wrapping construction is real and theoretically clean. It strengthens `#hyp-
 
 **My judgment**: this is a clean strengthening of ASF's structural foundation, with full citation of the POMDP and cognitive-architecture prior art per the prior-art-integration discipline. It clarifies what was previously a "scope exit" into a "constructive route." Worth landing.
 
-If Joseph agrees, the next concrete actionable step is writing the `01-aad-core/src/der-class-coercion-via-wrapping.md` segment per FORMAT.md conventions, drawing from `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, and `04-epsilon-semantics.md` for content.
+If Joseph agrees, the next concrete actionable step is writing the `01-aat-core/src/der-class-coercion-via-wrapping.md` segment per FORMAT.md conventions, drawing from `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, and `04-epsilon-semantics.md` for content.
 
 ---
 

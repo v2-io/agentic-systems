@@ -10,7 +10,7 @@
 - `WORKBENCH.md` — composition-closure bridge lemma listed as open
 - `spikes/spike-agent-composition.md` — existing composition spike
 - `audits/2026-03-13-feedback.md` — three-model review naming composition closure as top priority
-- Cognitive-cost and tempo segments in `01-aad-core/src/` — load-bearing for the "optimal-at-critical" conjecture below
+- Cognitive-cost and tempo segments in `01-aat-core/src/` — load-bearing for the "optimal-at-critical" conjecture below
 
 ---
 

@@ -151,7 +151,7 @@
 | NOTATION.md | NOTATION.md | keep | +3 | Symbol reference; name is standard. Keep. |
 | LEXICON.md | LEXICON.md | keep | +3 | Prose vocabulary reference; name is standard. Keep. |
 | OUTLINE.md (root) | OUTLINE.md | rename | +3 | Top-level assembly index; name is standard. Keep. |
-| 01-aad-core/OUTLINE.md | OUTLINE.md | rename | +3 | AAD canonical outline; name is standard. Keep. |
+| 01-aat-core/OUTLINE.md | OUTLINE.md | rename | +3 | AAD canonical outline; name is standard. Keep. |
 | 02-tst-core/OUTLINE.md | OUTLINE.md | rename | +3 | TST outline; name is standard. Keep. |
 | ## Epistemic Status (segment section header) | ## Epistemic Status | rename | +3 | Established in FORMAT.md as public API for outline-filtering. Load-bearing naming. Keep. |
 | ## Formal Expression (segment section header) | ## Formal Expression | rename | +3 | Established in FORMAT.md. Keep. |

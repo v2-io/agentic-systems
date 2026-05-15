@@ -20,12 +20,12 @@ The mathematical findings (Gemini F1, F2) became F-V1 / F-V4 in pending-findings
 
 ### Gemini
 
-> Here is the de novo audit of the agentic systems framework based on the current repository state (`01-aad-core/src/`, `02-tst-core/src/`, and `03-logogenic-agents/src/`). The audit focuses exclusively on unacknowledged, un-caveated, or mischaracterized issues where the text makes a strong claim that is contradicted by the mathematics or by other parts of the theory.
+> Here is the de novo audit of the agentic systems framework based on the current repository state (`01-aat-core/src/`, `02-tst-core/src/`, and `03-llm-core/src/`). The audit focuses exclusively on unacknowledged, un-caveated, or mischaracterized issues where the text makes a strong claim that is contradicted by the mathematics or by other parts of the theory.
 >
 > ### Finding 1: Mathematical Error in the Discrete-to-Continuous Variance Gap
 >
 > **The Problematic Passage:**
-> In `01-aad-core/src/discrete-sector-condition.md` and `01-aad-core/src/linear-ode-approximation.md`, the text claims the discrete-to-continuous gap for the Model S (stochastic) steady-state variance scales as $O((\eta^\ast)^2)$.
+> In `01-aat-core/src/discrete-sector-condition.md` and `01-aat-core/src/linear-ode-approximation.md`, the text claims the discrete-to-continuous gap for the Model S (stochastic) steady-state variance scales as $O((\eta^\ast)^2)$.
 > - In `discrete-sector-condition.md`: "The discrete-to-continuous gap for Model S variance is $O((\eta^\ast)^2 c^2_{\max})$ — the $(\eta^\ast)^2 \lVert F_d\rVert^2$ term that vanishes in the fluid limit."
 > - In `linear-ode-approximation.md`: "For Model S (stochastic): the steady-state variance gap is $O((\eta^\ast)^2 c^2_{\max})$, which equals $O(\eta^\ast c_{\max} / \nu)$ when expressed in terms of the event rate."
 >
@@ -48,11 +48,11 @@ The mathematical findings (Gemini F1, F2) became F-V1 / F-V4 in pending-findings
 > ### Finding 2: Missing AR(1) Exponent Perturbation in Adversarial Tempo
 >
 > **The Problematic Passage:**
-> In `01-aad-core/src/adversarial-tempo-advantage.md`, the text claims the adversarial tempo advantage exponent of $3/2$ holds exactly for the discrete model, dismissing the simulation result of $1.481$:
+> In `01-aat-core/src/adversarial-tempo-advantage.md`, the text claims the adversarial tempo advantage exponent of $3/2$ holds exactly for the discrete model, dismissing the simulation result of $1.481$:
 > "The stochastic exponent ($b = 3/2$) is now derived from both the AR(1) stationary variance (discrete) and the Itô-Lyapunov analysis (continuous... The continuous-time analog (Ornstein-Uhlenbeck) gives the same scaling, confirming the result is not a discretization artifact."
 >
 > **The Strongest Counterevidence Elsewhere in `src/`:**
-> In `01-aad-core/src/adversarial-exponent-regimes.md`, the text admits: "Regime 2: Model S (stochastic noise), coupling-dominant... $b = \frac{3}{2}$ (simulation: 1.481) Derived from the Model S steady state $\lVert\delta\rVert_{\text{rms}} = \sigma_w/\sqrt{2\mathcal{T}}$ (Prop A.1S)."
+> In `01-aat-core/src/adversarial-exponent-regimes.md`, the text admits: "Regime 2: Model S (stochastic noise), coupling-dominant... $b = \frac{3}{2}$ (simulation: 1.481) Derived from the Model S steady state $\lVert\delta\rVert_{\text{rms}} = \sigma_w/\sqrt{2\mathcal{T}}$ (Prop A.1S)."
 >
 > By substituting the discrete steady-state variance (from `discrete-sector-condition.md`) into the mismatch ratio for two coupled agents, the discrete ratio is exactly $\frac{\gamma_A}{\gamma_B} \left(\frac{\mathcal{T}_A}{\mathcal{T}_B}\right)^{3/2} \sqrt{\frac{2 - \eta^\ast_A}{2 - \eta^\ast_B}}$. When Agent A has a higher tempo, it likely has a higher gain ($\eta^\ast_A > \eta^\ast_B$), making the correction factor strictly less than 1. This discrete-time effect mathematically reduces the advantage, perfectly explaining why the simulation yielded an exponent of $1.481$ instead of $1.5$ over a range of tempos.
 >
@@ -66,11 +66,11 @@ The mathematical findings (Gemini F1, F2) became F-V1 / F-V4 in pending-findings
 > ### Finding 3: Over-generalization of Linear Projections of Linear Dynamics
 >
 > **The Problematic Passage:**
-> In `01-aad-core/src/unity-closure-mapping.md`, the text makes a broad claim about state closure defect:
+> In `01-aat-core/src/unity-closure-mapping.md`, the text makes a broad claim about state closure defect:
 > "State closure in linear-Gaussian. For linear-Gaussian micro-dynamics with consistent linear projections $\Lambda_x$ and $\Lambda_o$... the state closure defect vanishes: $\varepsilon_x = 0$ regardless of $U_M$ or compression dimension. Linear projections of linear dynamics are exact."
 >
 > **The Strongest Counterevidence Elsewhere in `src/`:**
-> In `01-aad-core/src/composition-closure.md`, the text explicitly acknowledges the Mori-Zwanzig connection: "The MZ-optimal Markovian macro-dynamics is $f_c^{\text{MZ}} = P_\Lambda U P_\Lambda$... When $f_c^{\text{MZ}} \notin \mathcal M_{\text{adm}}$, the per-step bound $\varepsilon^\ast \geq \lVert Q_\Lambda U P_\Lambda \rVert_{\text{op}}$ holds — a zero-lag memory-kernel bound."
+> In `01-aat-core/src/composition-closure.md`, the text explicitly acknowledges the Mori-Zwanzig connection: "The MZ-optimal Markovian macro-dynamics is $f_c^{\text{MZ}} = P_\Lambda U P_\Lambda$... When $f_c^{\text{MZ}} \notin \mathcal M_{\text{adm}}$, the per-step bound $\varepsilon^\ast \geq \lVert Q_\Lambda U P_\Lambda \rVert_{\text{op}}$ holds — a zero-lag memory-kernel bound."
 >
 > A linear projection of a linear dynamical system only yields an exact (Markovian) linear system if the projection subspace is invariant under the system dynamics matrix $A$ (i.e., $Q_\Lambda U P_\Lambda = 0$). In the two-Kalman case referenced, this worked only because uncoupled identical filters have a dynamics matrix proportional to the identity matrix ($-K I$), which trivially leaves any subspace invariant. For general interacting or non-isotropic linear agents, linear projections are *not* exact; they mix fast and slow modes and yield non-Markovian dynamics with non-zero closure defects.
 >

@@ -26,11 +26,11 @@ The slug `status-empirical` distinguishes this as a frontmatter *status* value f
 that this particular claim sits at the empirical epistemic tier.
 
 `status: empirical` is not a demotion from the framework's perspective — empirical claims are
-where AAD becomes falsifiable and practically useful. The third ring (empirical, heuristic,
+where AAT becomes falsifiable and practically useful. The third ring (empirical, heuristic,
 discussion) is where the theory interfaces with the world. The discipline is ensuring that claims
 labeled `empirical` are genuinely testable and that the available support is honestly stated.
 
 FORMAT.md warns against using "Solid," "Confident," or "Plausible" as tier labels — these are not
-AAD terms. `empirical` is the correct term for data-supported-but-not-derived claims.
+AAT terms. `empirical` is the correct term for data-supported-but-not-derived claims.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`status` — epistemic strength.

@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/result-persistence-condition.md
-first_asf_mention: 01-aad-core/src/result-persistence-condition.md
+primary_source: 01-aat-core/src/result-persistence-condition.md
+first_asf_mention: 01-aat-core/src/result-persistence-condition.md
 see_also: [structural-persistence, operational-persistence, adaptive-tempo, sector-condition]
 aliases: []
 do_not_confuse: []
@@ -23,4 +23,4 @@ the structural guarantee when the reserve is positive; agents track the reserve
 to anticipate when persistence is about to fail.
 
 Stated alongside the persistence condition in
-[`#result-persistence-condition`](../../01-aad-core/src/result-persistence-condition.md).
+[`#result-persistence-condition`](../../01-aat-core/src/result-persistence-condition.md).

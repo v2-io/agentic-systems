@@ -601,7 +601,7 @@ Promote a new segment `#der-agent-opacity` with:
   3. The sign-flip derivation (§5) — the structural reason cooperation and adversarial attack have opposite relationships to predictability.
   4. The emitter-side tempo amplification (§6) — $\mathcal T^{\text{effective}} = \mathcal T \cdot H_b/H_b^{\max}$ under adversarial coupling.
   5. A note on composition-layer readings (§7) — B5 as 1-bit opacity limit; B6 as mutual-opacity tensor gate on sub-scope $\alpha'/\beta'$.
-  6. A scope-limits paragraph — Class 1 primary; Class 3 approximate; Class 2 requires coupled formulation per `03-logogenic-agents/`.
+  6. A scope-limits paragraph — Class 1 primary; Class 3 approximate; Class 2 requires coupled formulation per `03-llm-core/`.
 - **Honest credit.** $H_b$ is Hafez et al. (2026)'s quantity — their definition and empirical motivation (89% IDT detection accuracy via $H_b$) stand unchanged. AAD's contribution: the AAD-internal derivation (§2.2), observer/trajectory/horizon-indexing (§2.4), the sign-flip structural derivation (§5), the emitter-side four-regime classification dual (§4), the composition with `#der-interaction-channel-classification`, the integration with `#disc-identifiability-floor` and `#disc-separability-pattern` (§8), and the closure of `#adversarial-edge-targeting` (§9).
 - **Structural strength.** The segment closes the Hafez integration gap (`spikes/spike-hafez-integration-audit.md` §Gap 1) cleanly. It also pairs naturally with `#der-interaction-channel-classification` as that segment's already-flagged emitter-side companion — both segments together give the full bidirectional inter-agent signaling theory.
 

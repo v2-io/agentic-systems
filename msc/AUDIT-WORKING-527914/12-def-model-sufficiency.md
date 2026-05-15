@@ -1,6 +1,6 @@
 # 12 - def-model-sufficiency
 
-Segment: `01-aad-core/src/def-model-sufficiency.md` (`#def-model-sufficiency`)
+Segment: `01-aat-core/src/def-model-sufficiency.md` (`#def-model-sufficiency`)
 
 Dependencies: `form-agent-model`, `form-information-bottleneck`, `def-action-transition`, all read. Dependency-order check passes.
 

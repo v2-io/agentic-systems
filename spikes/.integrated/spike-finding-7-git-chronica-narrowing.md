@@ -85,7 +85,7 @@ Only inside the target segment itself:
 - `02-tst-core/src/obs-software-epistemic-properties.md:58` — the "Git's scope matches" sentence (target of this repair).
 - `02-tst-core/src/obs-software-epistemic-properties.md:84` — the Discussion paragraph "exact-chronica status of git applies to environment-side content" (target of this repair).
 
-No other segment file in `01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-agents/src/`, or `04-eli/src/` repeats either phrase. The overstatement is contained.
+No other segment file in `01-aat-core/src/`, `02-tst-core/src/`, `03-llm-core/src/`, or `04-eli-core/src/` repeats either phrase. The overstatement is contained.
 
 ### 4b. References to P5 from other segments (need consistency review)
 
@@ -99,7 +99,7 @@ No other segment file in `01-aad-core/src/`, `02-tst-core/src/`, `03-logogenic-a
 
 - `02-tst-core/src/scope-developer-agent.md:115` references `#obs-software-epistemic-properties, P6` for active-channel $U_o$. **No edit needed.**
 
-- `03-logogenic-agents/src/result-section-ii-survival.md:127` ("Implications for logogenic agent engineering") cites `#obs-software-epistemic-properties` P5 explicitly for the *instrumentation-boundary framing*: "The instrumentation-boundary framing in `02-tst-core/`'s `#obs-software-epistemic-properties` P5 is the parallel observation in the software domain: statement-level survival does not imply that the quantities are cheap or automatic to extract." This citation actually *strengthens* under the proposed narrowing — the new wording makes the instrumentation boundary more explicit. **No edit needed.**
+- `03-llm-core/src/result-section-ii-survival.md:127` ("Implications for logogenic agent engineering") cites `#obs-software-epistemic-properties` P5 explicitly for the *instrumentation-boundary framing*: "The instrumentation-boundary framing in `02-tst-core/`'s `#obs-software-epistemic-properties` P5 is the parallel observation in the software domain: statement-level survival does not imply that the quantities are cheap or automatic to extract." This citation actually *strengthens* under the proposed narrowing — the new wording makes the instrumentation boundary more explicit. **No edit needed.**
 
 ### 4c. Adjacent old-source-material file (not a segment, but flagged for archaeology)
 

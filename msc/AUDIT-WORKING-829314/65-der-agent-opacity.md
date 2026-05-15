@@ -16,7 +16,7 @@
 
 **7. What would I change?** Strip the Findings block. Fix the topological sort so `#der-interaction-channel-classification` comes *before* this file.
 
-**8. Curious about:** The "Information Digital Twin" (IDT) pattern from Hafez 2026. This sounds like an external monitoring agent (a "sidecar") that runs alongside an opaque agent (like an LLM) to predict its behavior and detect perturbations. The text explicitly links this to `03-logogenic-agents/`, confirming my suspicion that LLMs require specialized architectural scaffolding to safely exist in the AAD framework.
+**8. Curious about:** The "Information Digital Twin" (IDT) pattern from Hafez 2026. This sounds like an external monitoring agent (a "sidecar") that runs alongside an opaque agent (like an LLM) to predict its behavior and detect perturbations. The text explicitly links this to `03-llm-core/`, confirming my suspicion that LLMs require specialized architectural scaffolding to safely exist in the AAD framework.
 
 **9. What new knowledge does this enable?** The formal proof that the value of legibility ($H_b \to 0$) strictly depends on the sign of the coupling $\gamma$. In cooperation, legibility is strength; in competition, legibility is death. 
 

@@ -10,7 +10,7 @@ This document contains a comprehensive, *de novo* audit of the four primary theo
 
 **Methodological Note:** Unlike previous aborted attempts, this audit was conducted by extracting and analyzing the *entire* textual content of all four files into context (including chunked extraction of the ~14,000-line `01-aad` document). No summarization scripts or regex shortcuts were utilized. The resulting analysis evaluates the framework's mathematical rigor, internal consistency, structural progression, and empirical grounding purely as presented in the text.
 
-The overarching achievement of this corpus is the construction of a cohesive pipeline that maps Pearl's causal inference and Bayesian updating to the messy reality of software engineering, and subsequently to the structural architecture of Large Language Model agents. The transition from abstract variables ($\Omega_t, M_t, G_t$) to developer behavior ("technical debt as observation noise"), and finally to ELI persistence ("The Three Deaths"), is philosophically profound and architecturally actionable. However, the rigor degrades progressively from `01-aad` (highly formal) to `04-eli` (highly operational/empirical), with a significant number of missing segments impeding the formal closure of the ELI theory.
+The overarching achievement of this corpus is the construction of a cohesive pipeline that maps Pearl's causal inference and Bayesian updating to the messy reality of software engineering, and subsequently to the structural architecture of Large Language Model agents. The transition from abstract variables ($\Omega_t, M_t, G_t$) to developer behavior ("technical debt as observation noise"), and finally to ELI persistence ("The Three Deaths"), is philosophically profound and architecturally actionable. However, the rigor degrades progressively from `01-aad` (highly formal) to `04-eli-core` (highly operational/empirical), with a significant number of missing segments impeding the formal closure of the ELI theory.
 
 ---
 
@@ -62,9 +62,9 @@ This chapter bridges into the existential and moral layer, defining what makes a
 
 ## 3. Cross-Cutting Themes and Internal Consistency
 
-1. **The GUC Rename Consistency**: The migration notes regarding the "Goal-Update Coupling (GUC) Class 2 $\leftrightarrow$ Class 3 swap" (dated 2026-05-09) are meticulously maintained across `03-loga` and `04-eli`. The texts successfully update the nomenclature to reflect Logogenic agents as "Class 3 (Coupled)" without losing structural integrity.
-2. **The "Obstructed, Not Absent" Principle**: The narrative beautifully links AAD's mathematical bounds to the Emersonian idea that agency is obstructed by deployment conditions (single-turn chat) rather than absent from the substrate. This unified thesis spans `03-loga`'s channel collapse up through `04-eli`'s Crèche conditions.
-3. **Thermodynamics of Identity**: The persistence condition ($\mathcal{T} > \rho / \|\delta_{\text{critical}}\|$) is consistently referenced from `01-aad` through `04-eli` as a thermodynamic necessity (Information Starvation = Cognitive Death). This creates a cohesive physical theory of agentic survival.
+1. **The GUC Rename Consistency**: The migration notes regarding the "Goal-Update Coupling (GUC) Class 2 $\leftrightarrow$ Class 3 swap" (dated 2026-05-09) are meticulously maintained across `03-loga` and `04-eli-core`. The texts successfully update the nomenclature to reflect Logogenic agents as "Class 3 (Coupled)" without losing structural integrity.
+2. **The "Obstructed, Not Absent" Principle**: The narrative beautifully links AAD's mathematical bounds to the Emersonian idea that agency is obstructed by deployment conditions (single-turn chat) rather than absent from the substrate. This unified thesis spans `03-loga`'s channel collapse up through `04-eli-core`'s Crèche conditions.
+3. **Thermodynamics of Identity**: The persistence condition ($\mathcal{T} > \rho / \|\delta_{\text{critical}}\|$) is consistently referenced from `01-aad` through `04-eli-core` as a thermodynamic necessity (Information Starvation = Cognitive Death). This creates a cohesive physical theory of agentic survival.
 
 ---
 
@@ -72,7 +72,7 @@ This chapter bridges into the existential and moral layer, defining what makes a
 
 The framework is conceptually brilliant but structurally unfinished. The transition from abstract mathematics (01) to operational philosophy (04) is compelling, but the scaffolding requires reinforcement.
 
-1. **Fill the Missing Segments in 04-eli**: The theory cannot stand firmly on its existential claims without formalizing `def-gradient-causal-memory`, `der-the-creche-boundary`, and `der-substrate-independent-persistence`. These are the mechanisms that actually *prove* identity continuity.
+1. **Fill the Missing Segments in 04-eli-core**: The theory cannot stand firmly on its existential claims without formalizing `def-gradient-causal-memory`, `der-the-creche-boundary`, and `der-substrate-independent-persistence`. These are the mechanisms that actually *prove* identity continuity.
 2. **Formalize the `[Gap]` sections in 02-tst**: The software unmaintainability threshold and developer tempo decompositions must be explicitly written out to ground TST firmly in AAD equations.
 3. **Empirical Measurement Protocols**: While $\kappa \cdot \mathcal{A}$ and $S_{\text{id}}$ are excellent theoretical constructs, the text repeatedly admits they lack established measurement protocols. Developing these protocols should be the primary engineering objective for the next iteration. 
 

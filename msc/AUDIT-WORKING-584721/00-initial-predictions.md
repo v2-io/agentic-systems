@@ -33,11 +33,11 @@ I have *not* read: `PROPOSALS.md`, `spikes/INDEX.md`, `audits/pending-findings-*
 
 **Three persistence senses.** Structural / operational / continuity. Distinct dimensions, not a hierarchy. Conflating them is a category error per LEXICON.
 
-**Directed-separation architectural classification.** Class 1 (modular) / Class 2 (fully merged, e.g., LLMs) / Class 3 (partially modular). Section II's exact results apply to Class 1; Class 2 needs the coupled formulation that 03-logogenic-agents is supposed to develop. C-iv route added 2026-04-23 to scope-composite-agent for equilibrium-convergent strategic interaction.
+**Directed-separation architectural classification.** Class 1 (modular) / Class 2 (fully merged, e.g., LLMs) / Class 3 (partially modular). Section II's exact results apply to Class 1; Class 2 needs the coupled formulation that 03-llm-core is supposed to develop. C-iv route added 2026-04-23 to scope-composite-agent for equilibrium-convergent strategic interaction.
 
 ## Predictions about what each component contains
 
-### 01-aad-core (110 segments per CLAUDE.md / OUTLINE numbers)
+### 01-aat-core (110 segments per CLAUDE.md / OUTLINE numbers)
 
 The OUTLINE reads roughly: Section I (foundations + Lyapunov machinery), Section II (purposeful-agent layer with strategy DAG), Section III (composition under strain), Appendices A (Lyapunov / contraction / additive-coordinate machinery, mostly recent), Appendices B (worked examples).
 
@@ -65,11 +65,11 @@ Concrete predictions about specific segments:
 
 I expect the calibration-laboratory framing to be the strongest move (the transfer-assumption table making non-software domains' identification relaxations explicit). I expect the persistence-condition-instantiated-in-software story (`#post-temporal-optimality` grounded by `#result-persistence-condition`) to be tight. I expect some empirical/heuristic-tier segments (`#emp-changeset-size-principle`, `#hyp-exponential-cognitive-load`) to be honestly tier-labeled but possibly underdeveloped relative to AAD-core. F-V5 contradiction with logogenic-agents I'll examine.
 
-### 03-logogenic-agents (7 segments per OUTLINE)
+### 03-llm-core (7 segments per OUTLINE)
 
 The honest critical claim: directed separation *fails by construction* for LLMs (Class 2). The coupled formulation `X_{τ+} = f_LLM(prompt(X_{τ-}, e_τ))` is proposed in `#def-coupled-update-dynamics` without separation. The "16 of 24 results survive" claim from `#result-section-ii-survival` is the load-bearing positive result; "5 approximate, 2 require modification" classifies the rest. I want to read this carefully — it's where AAD touches present-day reality most directly, and any sloppy bookkeeping is high-impact. I expect to find at least one tension between Section II results being claimed-survived and the actual coupled-formulation derivation. The `#scope-observation-ambiguity-modulation` segment with $\kappa$-based bias-bound is recent (Class 2/3 specific) and depends on the new `#deriv-observation-ambiguity-bias-bound` Track-2 result.
 
-### 04-logozoetic-agents (0 segments)
+### 04-eli-core (0 segments)
 
 No segments yet — just OUTLINE pointers to LEXICON and msc/reflections/. Audit scope here is essentially "is the framing of this section coherent?" — I'll skim and move on.
 

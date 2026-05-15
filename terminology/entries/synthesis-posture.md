@@ -20,7 +20,7 @@ do_not_confuse: [novelty-posture, differentiation-posture]
 The synthesis posture is used in the Novelty Claim field when the finding's contribution is
 *integration* — bringing together multiple prior bodies of work in a way that no single prior work
 captures. The claim is not that the individual pieces are new, but that the integration is the
-contribution. AAD itself is a synthesis framework; many of its results carry this posture.
+contribution. AAT itself is a synthesis framework; many of its results carry this posture.
 
 Prose form: *"Claim synthesis on..."* followed by what is being synthesized and what the synthesis
 produces. The "on" phrase names the domain or question being addressed; the body of the sentence

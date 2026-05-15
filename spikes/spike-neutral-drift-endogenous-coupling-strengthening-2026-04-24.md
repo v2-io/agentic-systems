@@ -5,7 +5,7 @@
 **Prior art in-project**: `spikes/spike-neutral-drift-lyapunov.md` (the original framing of the gap); `spikes/spike-miller-act-bridge.md`; `spikes/spike-kappa-hb-operationalization.md`; `spikes/spike-kappa-topology-insight.md`.
 **Segments most relevant to this spike** (post-2026-04-23 state, which is AFTER Gemini's snapshot): `#der-agent-opacity` (new), `#der-interaction-channel-classification` (new), `#deriv-critical-mass-composition` (new), `#scope-agent-identity` with (PI), `#disc-identifiability-floor` (including Instance 3 composition-layer), `#der-loop-interventional-access`, `#def-agent-spectrum`, `#scope-multi-agent`.
 
-**Brief for the reader:** the gap alleged is that AAD's Lyapunov-persistence machinery uses only behavioral observables $(\alpha, \rho, R)$, so two architecturally different agents with identical behavioral signatures in the current regime are formally indistinguishable — AAD is "blind to neutral drift." Coupling coefficients $\gamma$ are treated as exogenous, blocking a model of niche creation. This spike attempts to *strengthen* rather than soften: derive what AAD can see, name the precise observability conditions under which it cannot, and propose segment-level moves.
+**Brief for the reader:** the gap alleged is that AAT's Lyapunov-persistence machinery uses only behavioral observables $(\alpha, \rho, R)$, so two architecturally different agents with identical behavioral signatures in the current regime are formally indistinguishable — AAT is "blind to neutral drift." Coupling coefficients $\gamma$ are treated as exogenous, blocking a model of niche creation. This spike attempts to *strengthen* rather than soften: derive what AAT can see, name the precise observability conditions under which it cannot, and propose segment-level moves.
 
 ---
 
@@ -17,17 +17,17 @@ The allegation rests on a snapshot that predates the 2026-04-23 cycle. Three rec
 - **`#der-interaction-channel-classification`** decomposed recipient-side coupling into four regimes (Informative I / Magnitude-shock II-a / Structural-shock II-b / Ambient III) with boundaries in $(\lVert e\rVert, R, \mathcal I, \mathcal F(\mathcal M), \mathcal I_{\max}, U_o, \nu, c_{\text{floor}})$. Eight quantities, not three.
 - **`#disc-identifiability-floor` Instance 3** (composition-layer, Liberzon 2003): proved a structural no-go — the single bit of coupling sign distinguishing cooperative from adversarial regimes is *unidentifiable from component marginal observation distributions*. Four escapes named: (a) composite-extended loop interventional access; (b) matched-Tier-at-composite; (c) passivity / storage certificate; (d) common contraction metric.
 
-The existence of Instance 3 is the most important pre-existing result for this spike: **AAD has already formalized one version of the gap** (unidentifiable sign of $\gamma$ from marginals), has already named the structural conditions under which identification is recovered, and has already tied those conditions to specific AAD machinery. The question this spike asks is whether the remainder of the "neutral drift" gap — structural variation *within* a contraction-sign class, and the emergence of $\gamma$ itself — admits similar treatment.
+The existence of Instance 3 is the most important pre-existing result for this spike: **AAT has already formalized one version of the gap** (unidentifiable sign of $\gamma$ from marginals), has already named the structural conditions under which identification is recovered, and has already tied those conditions to specific AAT machinery. The question this spike asks is whether the remainder of the "neutral drift" gap — structural variation *within* a contraction-sign class, and the emergence of $\gamma$ itself — admits similar treatment.
 
 The honest accounting at segment level after 2026-04-23:
 
-| Gemini-framed gap | AAD state post-2026-04-23 |
+| Gemini-framed gap | AAT state post-2026-04-23 |
 |---|---|
 | "State space uses only $(\alpha, \rho, R)$" | Segments carry additional first-class behavioral observables: $H_b$ (`#der-agent-opacity`), the four-regime tuple (`#der-interaction-channel-classification`), higher-moment structure (kurtosis diagnostic in `#der-interaction-channel-classification` Case 4), per-edge opacity $H_b^{e\mid B}$. $(\alpha, \rho, R)$ is the sector-condition triple, not the state space. |
 | "Agents with identical $(\alpha, \rho, R)$ are indistinguishable" | FALSE *if* $H_b$ or fluctuation-structure or recipient-regime-distribution is observable; TRUE if all we observe is ultimate-bound statistics on $\lVert\delta\rVert$. The gap was framed too strongly. |
 | "Coupling coefficients $\gamma$ are exogenous" | TRUE at `#deriv-critical-mass-composition`'s promoted closed form; $\gamma$ enters as formulation (C1). Derivation of $\gamma$ from interaction statistics is not promoted. |
-| "AAD cannot model neutral drift" | Partial: neutral drift in the *strict* sense (variation across a behavioral-equivalence class with identical observables at every accessible observer/horizon) is provably invisible by construction, but this is a real no-go. Neutral drift in the *loose* sense (variation in implementation that differs on *some* observer or *some* higher moment) is visible under the 2026-04-23 additions. |
-| "AAD cannot model niche creation" | TRUE at formal segment level; `#scope-multi-agent` permits population-level observables but does not carry population-level dynamics. This is an honest gap. |
+| "AAT cannot model neutral drift" | Partial: neutral drift in the *strict* sense (variation across a behavioral-equivalence class with identical observables at every accessible observer/horizon) is provably invisible by construction, but this is a real no-go. Neutral drift in the *loose* sense (variation in implementation that differs on *some* observer or *some* higher moment) is visible under the 2026-04-23 additions. |
+| "AAT cannot model niche creation" | TRUE at formal segment level; `#scope-multi-agent` permits population-level observables but does not carry population-level dynamics. This is an honest gap. |
 
 ---
 
@@ -93,7 +93,7 @@ The *nontrivial* version is: how much does $H_b^{A\mid B}$ discriminate within t
 
 The `#der-agent-opacity` segment's four-fold indexing — observer, time, horizon, trajectory — gives a structure that the $(\alpha, \rho, R)$ triple lacks: **a pair of agents with identical $(\alpha, \rho, R)$ at the present operating point can differ in $H_b^{A\mid B}$ at future horizons, at finer observers, or at specific points on the trajectory.** The sector condition's equivalence class is a snapshot at the *current disturbance regime and current sector region*; $H_b$ is horizon-indexed, so it sees regime-change *futures* that the sector condition collapses.
 
-**This is the sharpest AAD-native answer to the neutral-drift framing**: the sector condition's equivalence class is defined only on the current $(\alpha, \rho, R)$-scope; horizon-indexed $H_b$ separates agents that differ *on the regime-change that has not yet happened*. Miller's Phases 2–3 (neutral invasion, neutral drift) become visible as $H_b^{A\mid B}(t, \tau_{\text{future}})$ divergence at horizons $\tau$ extending past the scope region where $(\alpha, \rho, R)$ are defined.
+**This is the sharpest AAT-native answer to the neutral-drift framing**: the sector condition's equivalence class is defined only on the current $(\alpha, \rho, R)$-scope; horizon-indexed $H_b$ separates agents that differ *on the regime-change that has not yet happened*. Miller's Phases 2–3 (neutral invasion, neutral drift) become visible as $H_b^{A\mid B}(t, \tau_{\text{future}})$ divergence at horizons $\tau$ extending past the scope region where $(\alpha, \rho, R)$ are defined.
 
 *[Claim-tier: robust qualitative. The horizon-indexing move is definitionally available; whether $H_b$ is practically estimable at horizons where the current regime's predictions don't transfer is an empirical question about observer instrumentation.]*
 
@@ -101,7 +101,7 @@ The `#der-agent-opacity` segment's four-fold indexing — observer, time, horizo
 
 $H_b$ indexes over observers. If *every* observer is restricted to the current-regime filtration — no out-of-regime probing, no interventional access at the boundary — $H_b$ at future horizons is dominated by the observer's prior, not by the agent's internals. The "behavioral equivalence class under Phase 1 regime" still has the original ambiguity; it is only when an out-of-regime observer is admitted (or when the regime naturally shifts via Phases 4–5) that $H_b$ discriminates.
 
-This is a real scope limit: $H_b$ is not magic. It discriminates over the class of observers AAD admits; the class of observers AAD admits is not unbounded.
+This is a real scope limit: $H_b$ is not magic. It discriminates over the class of observers AAT admits; the class of observers AAT admits is not unbounded.
 
 ### B.5 Outcome of B
 
@@ -117,7 +117,7 @@ This is a real scope limit: $H_b$ is not magic. It discriminates over the class 
 
 If two agents have identical $\alpha$ and $R$ but differ in *how* they achieve the sector bound, they should differ in the covariance structure of their mismatch trajectory. The fluctuation-dissipation theorem relates stationary fluctuation statistics to response functions: two systems with identical mean response can differ at second-moment. Green-Kubo relations recover transport coefficients from equilibrium fluctuations.
 
-### C.2 What AAD already has
+### C.2 What AAT already has
 
 *[Claim-tier: exact for the stated construction; robust qualitative in transfer.]*
 
@@ -129,7 +129,7 @@ In the sector-condition *derivation*, moments beyond second are treated as bound
 
 ### C.3 The Fluctuation-Dissipation analog
 
-*[Claim-tier: robust qualitative; the specific FDT form is heuristic because AAD is not in thermodynamic equilibrium.]*
+*[Claim-tier: robust qualitative; the specific FDT form is heuristic because AAT is not in thermodynamic equilibrium.]*
 
 For a Tier-1 agent in Model S with sector constant $\alpha$ and isotropic noise $\sigma_w^2 I$, the steady-state autocovariance of $\delta$ satisfies
 
@@ -139,7 +139,7 @@ $$C_{\delta\delta}(\tau) := \mathbb E[\delta(t)\,\delta(t+\tau)^\top] = \frac{\s
 
 The response function — how $\delta$ changes under a unit perturbation of $w$ — in the linear Gaussian case equals $C_{\delta\delta}(\tau)/\sigma_w^2$, recovering an FDT-analog. Two Tier-1 agents with identical $\alpha$ will have identical $C_{\delta\delta}(\tau)$ at all lags in the linear case; they are then genuinely indistinguishable from autocovariance-only data. **Fluctuation statistics add nothing over $(\alpha, R, \sigma_w^2)$ in the linear case.**
 
-But in the *nonlinear* case — which is the generic case AAD's $\beta$ sub-scope covers — two agents with matched $(\alpha, R)$ can have different lag-structure at second order and beyond. The higher-order spectral moments (bispectrum, trispectrum) carry architectural information the covariance does not.
+But in the *nonlinear* case — which is the generic case AAT's $\beta$ sub-scope covers — two agents with matched $(\alpha, R)$ can have different lag-structure at second order and beyond. The higher-order spectral moments (bispectrum, trispectrum) carry architectural information the covariance does not.
 
 ### C.4 Where this fails
 
@@ -155,7 +155,7 @@ But the honest biological/social neutral-drift scenarios do not work like this. 
 
 ### C.5 Outcome of C
 
-**Partial strengthening with named limit.** Fluctuation structure gives a genuine non-$\alpha$-non-$R$ observable in the nonlinear and higher-moment regimes AAD's $\beta$ sub-scope covers. In the linear-Gaussian regime (AAD's $\alpha_1$ sub-scope, Kalman / exp-family), fluctuation structure collapses to $(\alpha, R, \sigma_w^2)$ and neutral drift is invisible from this direction. The strengthened claim: **neutral drift that is undetectable from fluctuation statistics is necessarily confined to the agent's linear-Gaussian sub-scope; in the generic non-linear sub-scope, higher-moment observables discriminate.**
+**Partial strengthening with named limit.** Fluctuation structure gives a genuine non-$\alpha$-non-$R$ observable in the nonlinear and higher-moment regimes AAT's $\beta$ sub-scope covers. In the linear-Gaussian regime (AAT's $\alpha_1$ sub-scope, Kalman / exp-family), fluctuation structure collapses to $(\alpha, R, \sigma_w^2)$ and neutral drift is invisible from this direction. The strengthened claim: **neutral drift that is undetectable from fluctuation statistics is necessarily confined to the agent's linear-Gaussian sub-scope; in the generic non-linear sub-scope, higher-moment observables discriminate.**
 
 **Segment-level implication.** This content would naturally live in `#result-sector-persistence-template`'s Discussion as a note on *what the template bounds*: $\alpha R$ is a bound on the ultimate mean deviation; higher-moment structure is diagnostic of architecture beyond the template. Alternatively a new appendix `#fluctuation-diagnostics` could make the point at segment level; lightest landing is probably the template Discussion addition.
 
@@ -167,9 +167,9 @@ But the honest biological/social neutral-drift scenarios do not work like this. 
 
 On the manifold of agent types (parameterized update rules), two behaviorally-equivalent agents under the current regime define points on an equivalence class. The Fisher-Rao distance between their trajectory distributions $\mathbb P_A, \mathbb P_{A'}$ — under perturbation, under alternative observers — should be zero for truly equivalent agents and positive for neutral-drift variants.
 
-### D.2 Existing AAD anchoring
+### D.2 Existing AAT anchoring
 
-The 2026-04-23 cycle landed (PI) — parameterization-invariance — in `#scope-agent-identity` and Čencov's uniqueness theorem as the fourth primary instance of `#additive-coordinate-forcing`. The Fisher information metric is therefore the unique (up to affine) AAD-natural metric on statistical-manifold sub-cases of $M_t$. The construction this spike needs is available.
+The 2026-04-23 cycle landed (PI) — parameterization-invariance — in `#scope-agent-identity` and Čencov's uniqueness theorem as the fourth primary instance of `#additive-coordinate-forcing`. The Fisher information metric is therefore the unique (up to affine) AAT-natural metric on statistical-manifold sub-cases of $M_t$. The construction this spike needs is available.
 
 *[Claim-tier: derived for linear-Gaussian and exp-family sub-scope; robust qualitative in transfer.]*
 
@@ -185,13 +185,13 @@ The interesting move is: under what observation channel is $d_{\text{FR}}$ zero?
 
 $d_{\text{FR}} = 0$ iff $\mathbb P_\theta = \mathbb P_{\theta'}$ over the chosen sigma-algebra. For "neutral drift" to make sense, the equivalence class must be defined relative to a specific observation channel $\Sigma$ — otherwise we're just claiming that agents with identical output distributions are identical, which is trivial.
 
-The non-trivial statement is: **the equivalence class under Fisher-Rao distance over channel $\Sigma$ is exactly the set of agents indistinguishable from channel $\Sigma$.** This is a scope condition on the observer, not on the theory. AAD does not decide what channel the observer has access to — it gives the metric conditional on the channel.
+The non-trivial statement is: **the equivalence class under Fisher-Rao distance over channel $\Sigma$ is exactly the set of agents indistinguishable from channel $\Sigma$.** This is a scope condition on the observer, not on the theory. AAT does not decide what channel the observer has access to — it gives the metric conditional on the channel.
 
 ### D.4 Outcome of D
 
-**Tautological strengthening; non-trivial reframe.** Fisher-Rao gives AAD the correct metric for measuring neutral drift *once the observation channel is fixed*. The neutral-drift problem is then precisely the problem of *which observation channel* an observer has. This dovetails with `#der-agent-opacity`'s observer-indexing: neutral drift is invisibility under the observer's filtration, and filtration-expansion (adding horizon, moments, or interventions) is the only escape.
+**Tautological strengthening; non-trivial reframe.** Fisher-Rao gives AAT the correct metric for measuring neutral drift *once the observation channel is fixed*. The neutral-drift problem is then precisely the problem of *which observation channel* an observer has. This dovetails with `#der-agent-opacity`'s observer-indexing: neutral drift is invisibility under the observer's filtration, and filtration-expansion (adding horizon, moments, or interventions) is the only escape.
 
-**Segment-level implication.** The Čencov / Fisher-Rao apparatus is already in AAD via `#additive-coordinate-forcing` Instance 4; the *observer-conditioned* form of neutral-drift identification is implicit. Surfacing it could happen as an `#der-agent-opacity` Discussion extension or (more cleanly) as a new Discussion paragraph in `#disc-identifiability-floor` where the structural-drift-invisibility theme would then sit alongside Instance 3's coupling-sign invisibility.
+**Segment-level implication.** The Čencov / Fisher-Rao apparatus is already in AAT via `#additive-coordinate-forcing` Instance 4; the *observer-conditioned* form of neutral-drift identification is implicit. Surfacing it could happen as an `#der-agent-opacity` Discussion extension or (more cleanly) as a new Discussion paragraph in `#disc-identifiability-floor` where the structural-drift-invisibility theme would then sit alongside Instance 3's coupling-sign invisibility.
 
 ---
 
@@ -225,7 +225,7 @@ This is the same pattern Instance 1 and Instance 2 already follow. The structura
 
 ### E.4 Outcome of E
 
-**Strong strengthening.** Neutral-drift detection reduces to a Pearl-Level-2 task, which AAD has already equipped itself for via `#der-loop-interventional-access`. The alleged gap becomes a known identifiability-floor instance, with AAD machinery as unique broadly-available escape.
+**Strong strengthening.** Neutral-drift detection reduces to a Pearl-Level-2 task, which AAT has already equipped itself for via `#der-loop-interventional-access`. The alleged gap becomes a known identifiability-floor instance, with AAT machinery as unique broadly-available escape.
 
 **This is the headline strengthening of the spike.** Combined with E's connection to the composition-layer no-go (Instance 3), the two form a natural *pair* of identifiability floors — one at the single-agent architecture layer, one at the composition layer. The single-agent version would be a candidate fourth `#disc-identifiability-floor` instance.
 
@@ -275,7 +275,7 @@ Can population variables be introduced as a compatible secondary layer (meta-mac
 
 ### G.2 What `#scope-agent-identity` actually says
 
-The segment's scope commitment is load-bearing *for predictions about the token agent's dynamics*. It does not forbid a meta-theory in which tokens are distributed and the distribution has its own dynamics — it says AAD's formal apparatus does not presently cover that. The "What the scope excludes" list includes "Agents conceived as type/equivalence-class entities" as out-of-scope without the additional machinery.
+The segment's scope commitment is load-bearing *for predictions about the token agent's dynamics*. It does not forbid a meta-theory in which tokens are distributed and the distribution has its own dynamics — it says AAT's formal apparatus does not presently cover that. The "What the scope excludes" list includes "Agents conceived as type/equivalence-class entities" as out-of-scope without the additional machinery.
 
 So the permissibility question is: can a population-level layer be *added* without contradicting the single-trajectory commitment at the token level? Yes, structurally. Each token agent retains its $\mathcal C_t$; the population is a collection indexed by agents, with its own state variables (composition vector, niche-occupation measure) and its own dynamics (birth, death, variant introduction).
 
@@ -283,26 +283,26 @@ So the permissibility question is: can a population-level layer be *added* witho
 
 *[Claim-tier: sketch; structurally motivated, rigor pending.]*
 
-Define population state $P_t = \{(A_i, \mathcal C_t^{(i)})\}_i$. Each agent is its own AAD agent. The population aggregate supports two kinds of variables:
+Define population state $P_t = \{(A_i, \mathcal C_t^{(i)})\}_i$. Each agent is its own AAT agent. The population aggregate supports two kinds of variables:
 
-- **Ensemble averages of AAD quantities**: $\bar\alpha = \mathbb E_i[\alpha_i]$, $\text{Var}(\alpha) = \text{Var}_i[\alpha_i]$, the architecture-distribution $\mu_t$ over agent types.
+- **Ensemble averages of AAT quantities**: $\bar\alpha = \mathbb E_i[\alpha_i]$, $\text{Var}(\alpha) = \text{Var}_i[\alpha_i]$, the architecture-distribution $\mu_t$ over agent types.
 - **Population dynamics**: birth/death rates, replication mechanism, variant-introduction rate, selection pressure driven by the aggregate outcome.
 
-The population's dynamics are *compatible with* but *not derivable from* the agent-level AAD machinery. Compatible because each agent's per-token dynamics are unchanged; not derivable because the population transition kernel introduces new objects (variation operator, selection kernel) AAD does not supply.
+The population's dynamics are *compatible with* but *not derivable from* the agent-level AAT machinery. Compatible because each agent's per-token dynamics are unchanged; not derivable because the population transition kernel introduces new objects (variation operator, selection kernel) AAT does not supply.
 
 ### G.4 Where this connects to the drift gap
 
 Miller's Phases 2–3 (neutral invasion, neutral drift) are population-level phenomena by construction. Endogenous $\gamma$ emerging from population composition — the Phase 4 niche-creation move — requires population-level variables. Specifically, a dyadic $\gamma_{ij}(P_t)$ that depends on who is in the population beyond the dyad.
 
-At the population layer, Phase 4's niche emergence can be modeled as a bifurcation in $\gamma_{ij}$ as a function of the variant's population fraction — a hypothesis that would be testable (and, under adversarial / evolutionary dynamics, often is). This is a genuinely new result, not AAD-native; but it is *compatible* with AAD rather than requiring a revision of the token-level commitments.
+At the population layer, Phase 4's niche emergence can be modeled as a bifurcation in $\gamma_{ij}$ as a function of the variant's population fraction — a hypothesis that would be testable (and, under adversarial / evolutionary dynamics, often is). This is a genuinely new result, not AAT-native; but it is *compatible* with AAT rather than requiring a revision of the token-level commitments.
 
 ### G.5 The scope-honest framing
 
-The correct segment-level move is to state: *AAD's token-level machinery does not forbid a population-level layer; such a layer, with its own state variables and dynamics, would compose compatibly if each instantiated agent remains on its singular trajectory; specific population dynamics (variant introduction, selection, niche creation) are out of AAD's current formal scope and are the natural subject of a future Section-III extension or a companion component.* This matches the existing scope-honesty posture.
+The correct segment-level move is to state: *AAT's token-level machinery does not forbid a population-level layer; such a layer, with its own state variables and dynamics, would compose compatibly if each instantiated agent remains on its singular trajectory; specific population dynamics (variant introduction, selection, niche creation) are out of AAT's current formal scope and are the natural subject of a future Section-III extension or a companion component.* This matches the existing scope-honesty posture.
 
 ### G.6 Outcome of G
 
-**Permissive strengthening with an explicit scope-gate.** Population layer is admissible, is compatible with singular-trajectory scope, and is the natural home for Phase 4 niche-creation dynamics. AAD does not need to reject the population layer — it needs to state that the population layer is a compatible but not currently formalized extension. This is a segment-level addition to `#scope-agent-identity` or `#scope-multi-agent`, not a theorem.
+**Permissive strengthening with an explicit scope-gate.** Population layer is admissible, is compatible with singular-trajectory scope, and is the natural home for Phase 4 niche-creation dynamics. AAT does not need to reject the population layer — it needs to state that the population layer is a compatible but not currently formalized extension. This is a segment-level addition to `#scope-agent-identity` or `#scope-multi-agent`, not a theorem.
 
 ---
 
@@ -363,19 +363,19 @@ These are explicit to-dos for a follow-up promotion-directed spike.
 ### 9.2 What was not strengthened
 
 - **Neutral drift adversarially constructed to match all finite moments and all interventional responses in the current regime is genuinely invisible.** This is a real no-go, not a softening: no theory grounded in finite observation can see it. The correct response is to name it as a scope limit, not to claim to cover it.
-- **Endogenous $\gamma$ as a derived dynamical variable (not merely estimable from cross-covariance)**: this is not produced in this spike. The step from "cross-covariance gives a sign-preserving scalar estimator of $\gamma$" to "$\gamma$ has its own governing equation" requires population-layer machinery (§7) that is out of token-level AAD's current scope. This is an honest open.
-- **Phase 4 niche-creation as an AAD-derived result**: requires population-layer dynamics, which AAD does not have. The compatibility result in §7 says nothing stronger than "this can be added without contradiction."
+- **Endogenous $\gamma$ as a derived dynamical variable (not merely estimable from cross-covariance)**: this is not produced in this spike. The step from "cross-covariance gives a sign-preserving scalar estimator of $\gamma$" to "$\gamma$ has its own governing equation" requires population-layer machinery (§7) that is out of token-level AAT's current scope. This is an honest open.
+- **Phase 4 niche-creation as an AAT-derived result**: requires population-layer dynamics, which AAT does not have. The compatibility result in §7 says nothing stronger than "this can be added without contradiction."
 
 ### 9.3 What the gap looked like vs. what it actually is
 
-The Gemini-framed gap ("AAD cannot see this agent at all") was overclaimed given the 2026-04-23 state. The honest characterization is:
+The Gemini-framed gap ("AAT cannot see this agent at all") was overclaimed given the 2026-04-23 state. The honest characterization is:
 
 - At the single-agent layer in the linear-Gaussian sub-scope under on-policy observation and bounded horizon: **yes, neutral drift is invisible** — this is provably so and matches what Instance 1 says at the causal layer.
-- Under extended observation (horizon, moments, regime, intervention): **discriminable via existing AAD machinery** — this is the Instance-pattern result.
+- Under extended observation (horizon, moments, regime, intervention): **discriminable via existing AAT machinery** — this is the Instance-pattern result.
 - Adversarial-construction neutral drift matching all accessible channels: **provably invisible, by construction** — honest scope limit.
 - Phase 4 niche creation (endogenous $\gamma$ from population composition): **compatible extension, not currently formalized** — honest open at the population-layer.
 
-This is a more accurate picture than either the original spike's "structurally blind" framing or an overclaiming "AAD sees everything" posture.
+This is a more accurate picture than either the original spike's "structurally blind" framing or an overclaiming "AAT sees everything" posture.
 
 ---
 
@@ -427,25 +427,25 @@ Ordered by what carries the most theoretical consequence, not by effort.
 
 *Segment*: `#scope-agent-identity`, Discussion section.
 
-*Content*: Explicit statement that singular-trajectory scope at the token level is compatible with a meta-theoretic population layer in which tokens are instances with their own dynamics; such a layer is out of AAD's current formal scope and is the natural home for phenomena (Phase 4 niche creation, selection dynamics, variant introduction) that require population-level state. This is already implicit in the existing "What the scope excludes" list; the strengthening move is to make it explicit that the exclusion is a deferred extension, not a rejection.
+*Content*: Explicit statement that singular-trajectory scope at the token level is compatible with a meta-theoretic population layer in which tokens are instances with their own dynamics; such a layer is out of AAT's current formal scope and is the natural home for phenomena (Phase 4 niche creation, selection dynamics, variant introduction) that require population-level state. This is already implicit in the existing "What the scope excludes" list; the strengthening move is to make it explicit that the exclusion is a deferred extension, not a rejection.
 
 *Effort estimate*: One paragraph. Low.
 
-*Load-bearing*: Low at the theoretical core; moderate for `03-logogenic-agents/` framing, where population-layer dynamics will become directly relevant.
+*Load-bearing*: Low at the theoretical core; moderate for `03-llm-core/` framing, where population-layer dynamics will become directly relevant.
 
 ### 10.6 Do NOT: new segment on "latent structural diversity"
 
-The original `spikes/spike-neutral-drift-lyapunov.md` proposed a new AAD concept "latent structural diversity" for correction-architecture variation invisible under current conditions. After the 2026-04-23 cycle, this concept is **not needed as a new segment** — it is fully expressible using `#der-agent-opacity`'s horizon-indexing combined with `#disc-identifiability-floor` Instance 4 (candidate). Creating a separate "latent structural diversity" segment would violate the "prior art integration" convention (adopt/compose existing segments rather than invent NIH concepts).
+The original `spikes/spike-neutral-drift-lyapunov.md` proposed a new AAT concept "latent structural diversity" for correction-architecture variation invisible under current conditions. After the 2026-04-23 cycle, this concept is **not needed as a new segment** — it is fully expressible using `#der-agent-opacity`'s horizon-indexing combined with `#disc-identifiability-floor` Instance 4 (candidate). Creating a separate "latent structural diversity" segment would violate the "prior art integration" convention (adopt/compose existing segments rather than invent NIH concepts).
 
 ---
 
 ## 11. Open questions for the follow-up spike
 
-1. **Single-agent fourth-instance closed form.** The cleanest no-go construction: two Kalman filters with identical innovation-sequence spectra but different state-space realizations (Kalman-Ho canonical form ambiguity). This is classical and citable; lift to the AAD form and check whether the four escape routes compose cleanly. The sharp question: is the horizon-extended-observation escape (b) genuinely distinct from the interventional escape (a), or does horizon-extension in closed-loop dynamics eventually require action-generated data? I suspect they overlap in practice; the formal question is whether passive observation at long horizons under the agent's *original* policy is Level-1 or Level-2 data.
+1. **Single-agent fourth-instance closed form.** The cleanest no-go construction: two Kalman filters with identical innovation-sequence spectra but different state-space realizations (Kalman-Ho canonical form ambiguity). This is classical and citable; lift to the AAT form and check whether the four escape routes compose cleanly. The sharp question: is the horizon-extended-observation escape (b) genuinely distinct from the interventional escape (a), or does horizon-extension in closed-loop dynamics eventually require action-generated data? I suspect they overlap in practice; the formal question is whether passive observation at long horizons under the agent's *original* policy is Level-1 or Level-2 data.
 
-2. **Endogenous-$\gamma$ dynamics as a follow-up to §A.** The cross-covariance estimator is one-shot; the dynamics $\dot\gamma = f(P_t, \delta, \ldots)$ requires either a population layer or a slow-fast decomposition within a single-agent-with-slow-coupling-variable formulation. The latter is a candidate next spike — take $\gamma$ as a slow state variable on its own time scale, check whether AAD's `#deriv-adaptive-gain-dynamics` machinery (meta-gain conditions MG-1–MG-4) transfers.
+2. **Endogenous-$\gamma$ dynamics as a follow-up to §A.** The cross-covariance estimator is one-shot; the dynamics $\dot\gamma = f(P_t, \delta, \ldots)$ requires either a population layer or a slow-fast decomposition within a single-agent-with-slow-coupling-variable formulation. The latter is a candidate next spike — take $\gamma$ as a slow state variable on its own time scale, check whether AAT's `#deriv-adaptive-gain-dynamics` machinery (meta-gain conditions MG-1–MG-4) transfers.
 
-3. **Fluctuation-FDT anchoring in nonequilibrium regimes.** The FDT analog in §3 is cleanest in Ornstein-Uhlenbeck steady state. AAD's $\beta$ sub-scope includes agents far from this regime. Whether a nonequilibrium-FDT (Crooks, Jarzynski) form applies at the rigor level of the existing sector-persistence template is not obvious; heuristic use in Discussion is safe, derivation-layer claims are not.
+3. **Fluctuation-FDT anchoring in nonequilibrium regimes.** The FDT analog in §3 is cleanest in Ornstein-Uhlenbeck steady state. AAT's $\beta$ sub-scope includes agents far from this regime. Whether a nonequilibrium-FDT (Crooks, Jarzynski) form applies at the rigor level of the existing sector-persistence template is not obvious; heuristic use in Discussion is safe, derivation-layer claims are not.
 
 4. **Mechanism-design as fifth-instance candidate.** `#disc-identifiability-floor` Working Notes already flags Gibbard-Satterthwaite / Myerson-Satterthwaite / Arrow as candidate fourth instance. The interaction with the architecture-within-behavior-class instance identified here needs coordination — whether these are parallel fourth-instance candidates, or one subsumes the other, or they target genuinely different layers, deserves explicit treatment before either is promoted.
 

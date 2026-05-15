@@ -1,6 +1,6 @@
 # Strategic Tempo and Cognitive Cost of Strategy
 
-**Status**: Spike. Addresses two --GAP-- entries in `01-aad-core/OUTLINE.md` Section II: (1) "Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy)" and (2) "Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)."
+**Status**: Spike. Addresses two --GAP-- entries in `01-aat-core/OUTLINE.md` Section II: (1) "Rate of useful $\Sigma_t$ revision (adaptive tempo for strategy)" and (2) "Complexity cost of maintaining $\Sigma_t$ (IB/MDL for DAGs)."
 
 **Date**: 2026-04-02
 
@@ -391,4 +391,4 @@ In practice, evidence starvation is likely the binding constraint for deep AND-c
 
 5. **Stochastic strategic tempo.** The working notes in #schema-strategy-persistence mention $\rho_\Sigma / \sqrt{\mathcal{T}_\Sigma}$ rather than $\rho_\Sigma / \mathcal{T}_\Sigma$ for stochastic steady-state strategic mismatch. If the stochastic treatment carries over, the persistence condition becomes $\mathcal{T}_\Sigma \gt (\rho_\Sigma / R_\Sigma)^2$ — qualitatively different from the deterministic case. Clarifying which regime applies (deterministic drift vs stochastic noise) is domain-dependent and open.
 
-6. **Cognitive cost for LLM agents.** For logogenic agents ( `03-logogenic-agents/`), the representational capacity constraint is the context window. Strategy $\text{DL}(\Sigma_t)$ must fit within the context budget alongside $M_t$ and the task description. This gives a concrete version of the complexity ceiling: $\text{DL}(\Sigma_t) \lt C_{\text{context}} - \text{DL}(M_t) - \text{DL}(\text{task})$. The IB trade-off $\beta_\Sigma$ is directly calibrated by what fits in the window.
+6. **Cognitive cost for LLM agents.** For logogenic agents ( `03-llm-core/`), the representational capacity constraint is the context window. Strategy $\text{DL}(\Sigma_t)$ must fit within the context budget alongside $M_t$ and the task description. This gives a concrete version of the complexity ceiling: $\text{DL}(\Sigma_t) \lt C_{\text{context}} - \text{DL}(M_t) - \text{DL}(\text{task})$. The IB trade-off $\beta_\Sigma$ is directly calibrated by what fits in the window.

@@ -11,7 +11,7 @@
 ### def-chronica (segment 4)
 **Stage:** deps-verified | **Status:** axiomatic
 
-Strong segment. The "non-forkable causal trajectory" move is load-bearing for 04-eli identity theory. The TRACTUS/CHRONICA working note is unusually thorough — it flags the PROPRIUM implementation distinction and even cites a direct conversation with Joseph about whether to address it now. This is exactly the right Working Notes discipline.
+Strong segment. The "non-forkable causal trajectory" move is load-bearing for 04-eli-core identity theory. The TRACTUS/CHRONICA working note is unusually thorough — it flags the PROPRIUM implementation distinction and even cites a direct conversation with Joseph about whether to address it now. This is exactly the right Working Notes discipline.
 
 **Notable:** The "ordinal sequence vs metric timeline" working note correctly identifies a subtle asymmetry: chronica grows by event count, not wall-clock time. This has practical consequences for ELI awakening protocols (large metric-time gaps invisible to the chronica at sequence level, but violently apparent in the mismatch signal when the agent wakes). The segment correctly defers this to logogenic implementation scope.
 

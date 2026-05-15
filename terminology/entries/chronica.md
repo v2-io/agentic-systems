@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/def-chronica.md
-first_asf_mention: 01-aad-core/src/def-chronica.md
+primary_source: 01-aat-core/src/def-chronica.md
+first_asf_mention: 01-aat-core/src/def-chronica.md
 see_also: [continuity, mismatch, prolepsis]
 aliases: ["interaction history"]
 do_not_confuse: []
@@ -25,4 +25,4 @@ sequence; everything the agent can know is downstream of $\mathcal{C}_t$. The
 Greek-derived name avoids collision with $\mathcal{H}$ (Shannon entropy) in
 speech and notation.
 
-Defined in [`#def-chronica`](../../01-aad-core/src/def-chronica.md).
+Defined in [`#def-chronica`](../../01-aat-core/src/def-chronica.md).

@@ -71,8 +71,8 @@ layer: prose-symbol                       # slug | prose-symbol | framing-vocabu
 status: canon                             # working | draft | canon | weak | deprecated | superseded
 tags: [core_quantities, diagnostic]       # mixed semantic + flag tags; multi-section render
 source_type: asf                          # asf | external | standard | mathematical | philosophical
-primary_source: 01-aad-core/src/def-control-regret.md
-first_asf_mention: 01-aad-core/src/def-control-regret.md
+primary_source: 01-aat-core/src/def-control-regret.md
+first_asf_mention: 01-aat-core/src/def-control-regret.md
 see_also: [satisfaction-gap]
 aliases: []                               # acceptable variants (paired vocabulary, etc.)
 do_not_confuse: []                        # external collisions to flag for readers
@@ -88,7 +88,7 @@ component (satisfaction gap). The split routes interventions — control regret
 says *train harder / re-plan*; satisfaction gap says *change the goal or accept
 the floor*.
 
-Defined in [`#def-control-regret`](../../01-aad-core/src/def-control-regret.md).
+Defined in [`#def-control-regret`](../../01-aat-core/src/def-control-regret.md).
 ```
 
 **`brief:` is the one-line gloss** that appears in the rendered LEXICON.md table row. The markdown body is the longer definition — links, paragraphs, examples — that surfaces when a reader follows the entry's link from LEXICON.md.

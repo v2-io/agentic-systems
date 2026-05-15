@@ -25,7 +25,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-1: Score-function mismatch sign reversal in `#def-mismatch-signal`
 
 - **Source audit(s):** 742613/F1 (high confidence, math direct). 742613 SUPPLEMENT-PHASE-2-TRIAGE classifies as "Likely new / not durably tracked" after first-hand `msc/`-search. 849201/17-def-mismatch-signal reflection praised the score-function formulation rather than flagging the sign — i.e., this was missed, not noted.
-- **Segment(s):** `01-aad-core/src/def-mismatch-signal.md` (line 33).
+- **Segment(s):** `01-aat-core/src/def-mismatch-signal.md` (line 33).
 - **Finding:** The segment defines $\tilde{\delta}_t = -\nabla_M \log P(o_t \mid M_{t-1}, a_{t-1})$ and prose claims this points "in the direction the model should move to increase the likelihood" and "coincides with $\delta_t$ up to scaling under Gaussian models." For Gaussian $o \sim \mathcal N(M, \sigma^2)$, $\nabla_M \log P = (o - M)/\sigma^2 = \delta/\sigma^2$. The segment's negative sign reverses the stated direction.
 - **Fix:** Either remove the minus sign (define $\tilde{\delta}_t = \nabla_M \log P(o_t \mid M_{t-1}, a_{t-1})$) so prose and Gaussian-equivalence claim match; or keep the minus sign but rename / reframe the object as a negative-log-likelihood gradient (descent direction) and audit downstream usage. Codex's recommended cleaner repair: drop the minus sign.
 - **Effort estimate:** ≤30 min.
@@ -34,7 +34,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-2: Gradient-equivalence iff overstated in `#deriv-gain-sector` and `#der-gain-sector-bridge`
 
 - **Source audit(s):** 742613/F3 (high confidence, math direct). SUPPLEMENT-PHASE-2-TRIAGE classifies as "Known distinction, unrepaired offender" — `#result-sector-persistence-template` lines 70–72 already correctly distinguish one-point sector from full two-point monotonicity, but `#deriv-gain-sector` (lines 127, 133, 157, 261) and `#der-gain-sector-bridge` retain "iff / equivalence" language.
-- **Segment(s):** primary `01-aad-core/src/deriv-gain-sector.md` (Prop B.4, ~line 127ff); secondary `01-aad-core/src/der-gain-sector-bridge.md`.
+- **Segment(s):** primary `01-aat-core/src/deriv-gain-sector.md` (Prop B.4, ~line 127ff); secondary `01-aat-core/src/der-gain-sector-bridge.md`.
 - **Finding:** Prop B.4 claims "GA-3 holds with $(\alpha,R)$ iff $L$ is locally $(\alpha/\eta)$-strongly convex." The reverse direction proves only the $y = M^*$ instance of gradient monotonicity — that is one-point strong monotonicity / star-convex-like inwardness, not full local strong convexity. Codex's 1D counterexample $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies the one-point sector condition but $L''(x)$ is negative on intervals.
 - **Fix:** Replace "iff" with "Local strong convexity is sufficient for GA-3 / one-point sector. GA-3 itself is the weaker one-point condition. Full two-point / incremental monotonicity is needed only where composition or contraction arguments require it." Mirror the `#result-sector-persistence-template` framing already present.
 - **Effort estimate:** 30–60 min (two segments; need to chase any downstream language that leaned on the iff).
@@ -43,7 +43,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-3: Sub-secondary in `#deriv-gain-sector` — exponential-family natural-parameter sector overclaim
 
 - **Source audit(s):** 742613/F3 secondary implication (line 173 cited).
-- **Segment(s):** `01-aad-core/src/deriv-gain-sector.md` (~line 173).
+- **Segment(s):** `01-aat-core/src/deriv-gain-sector.md` (~line 173).
 - **Finding:** The segment treats exponential-family natural parameters as globally exact via $\lambda_{\min}(\text{Fisher})$. Pointwise Fisher PD does not imply uniform global lower bound. For Poisson natural parameter $\theta$, Fisher is $e^\theta$; $\inf_{\theta \in \mathbb R} e^\theta = 0$. Global sector constants need either compact / interior-bounded scope or an explicit uniform Fisher lower bound.
 - **Fix:** Add a one-paragraph scope condition: "Global sector constants in this exponential-family setting require either parameter-domain compactness or an explicit uniform Fisher lower bound; for unbounded natural-parameter domains the sector is local rather than global." Cross-reference `#disc-identifiability-floor` if appropriate.
 - **Effort estimate:** ≤30 min (one paragraph in one segment).
@@ -52,7 +52,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-4: Action-selection result $a_t = \pi(M_t)$ exactness mismatch with later $\pi(M_t, G_t)$
 
 - **Source audit(s):** 742613/F5 (medium-high confidence). SUPPLEMENT-PHASE-2-TRIAGE classifies as "Known supersession, integration debt" — `#form-complete-agent-state` line 36 already defines $a_t = \pi(M_t, G_t)$ and line 52 says `#der-action-selection` is superseded after the state lift. `#def-model-sufficiency` line 40 already uses $\pi(M_t, G_t)$. Integration debt only.
-- **Segment(s):** `01-aad-core/src/der-action-selection.md` (lines 4, 19, 25, 29, 47).
+- **Segment(s):** `01-aat-core/src/der-action-selection.md` (lines 4, 19, 25, 29, 47).
 - **Finding:** Frontmatter says `status: exact`; Formal Expression states $a_t = \pi(M_t)$; segment's own Discussion (line 47) admits the actuated-agent generalization is $\pi(M_t, G_t)$. The exact label fits Section I scope only when $G_t$ is fixed/absent/folded into $M_t$.
 - **Fix:** Either (a) downgrade the Formal-Expression statement to $a_t = \pi(X_t)$ for complete action-relevant state $X_t$ with the Section-I instantiation $X_t = M_t$ explicit; or (b) keep $a_t = \pi(M_t)$ and add a one-sentence "superseded by complete-agent-state lift in `#form-complete-agent-state`" clause to the Formal Expression / Epistemic Status (not just Discussion). Codex's recommended phrasing in SUPPLEMENT.
 - **Effort estimate:** ≤30 min.
@@ -61,7 +61,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-5: Model-sufficiency $S(M_t)$ denominator-zero edge case
 
 - **Source audit(s):** 742613/F8 (medium confidence). SUPPLEMENT-PHASE-2-TRIAGE: "Likely new local well-definedness gap" — no durable tracking found.
-- **Segment(s):** `01-aad-core/src/def-model-sufficiency.md` (lines 19, 23, 25–28); downstream consumers `01-aad-core/src/def-model-class-fitness.md`, `01-aad-core/src/result-structural-adaptation-necessity.md` (no edits required there if the convention lands cleanly upstream).
+- **Segment(s):** `01-aat-core/src/def-model-sufficiency.md` (lines 19, 23, 25–28); downstream consumers `01-aat-core/src/def-model-class-fitness.md`, `01-aat-core/src/result-structural-adaptation-necessity.md` (no edits required there if the convention lands cleanly upstream).
 - **Finding:** $S(M_t) = I(M_t; o_{t+1:\infty} \mid a_{t:\infty}) / I(\mathcal C_t; o_{t+1:\infty} \mid a_{t:\infty})$ has the total-predictive-information of the chronica in the denominator. In saturated-noise / iid / prediction-vacuous regimes the denominator is zero and $S(M_t)$ is undefined; boundary values for $S=1, S=0$ at lines 25–28 are stated unconditionally.
 - **Fix:** Add a well-definedness clause to the Formal Expression / Epistemic Status: "$S(M_t)$ is defined when $I(\mathcal C_t; o_{t+1:\infty} \mid a_{t:\infty}) > 0$. When the denominator is 0, predictive sufficiency is vacuous; the convention is that $S$ is undefined / not applicable rather than $S = 1$ by limit." (The undefined convention is cleaner because downstream `#def-model-class-fitness` / `#result-structural-adaptation-necessity` results assume non-vacuous predictive information.)
 - **Effort estimate:** ≤30 min.
@@ -71,11 +71,11 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 
 - **Source audit(s):** 584721/F-A (high confidence; mechanical violation of FORMAT.md Gate 1, verifiable from frontmatter alone). Cross-audit: 742613/F6 surfaces same class of issues from a different entry point and SUPPLEMENT classifies as "Tooling gap + prior-noted fragments."
 - **Segment(s):**
-  - F-A0 root cause: `01-aad-core/src/def-observation-function.md` — Formal Expression uses $a_{t-1}$, depends list lacks `def-action-transition`.
-  - F-A2: `01-aad-core/src/form-information-bottleneck.md` — uses $a_{t:\infty}$.
-  - F-A3: `01-aad-core/src/def-model-sufficiency.md` — uses $a_{t:\infty}$.
-  - F-A5: `01-aad-core/src/def-mismatch-signal.md` — uses $a_{t-1}$.
-  - F-A6: `01-aad-core/src/result-mismatch-decomposition.md` — uses $a_{t-1}$.
+  - F-A0 root cause: `01-aat-core/src/def-observation-function.md` — Formal Expression uses $a_{t-1}$, depends list lacks `def-action-transition`.
+  - F-A2: `01-aat-core/src/form-information-bottleneck.md` — uses $a_{t:\infty}$.
+  - F-A3: `01-aat-core/src/def-model-sufficiency.md` — uses $a_{t:\infty}$.
+  - F-A5: `01-aat-core/src/def-mismatch-signal.md` — uses $a_{t-1}$.
+  - F-A6: `01-aat-core/src/result-mismatch-decomposition.md` — uses $a_{t-1}$.
 - **Finding:** Five segments use action symbols in Formal Expression without declaring `def-action-transition` in `depends:`. F-A0 is at `stage: deps-verified`; F-A1/F-A4/etc. are at varying stages. Mechanical Gate-1 violations.
 - **Fix:** Add `def-action-transition` to each of the five segments' `depends:` field. (584721 notes that fixing F-A0 may cover F-A2/F-A3/F-A5/F-A6 if the dependency closure is transitive via `form-agent-model`/`def-observation-function`; verify with `bin/lint-outline` after fix.)
 - **Effort estimate:** ≤30 min for all five (frontmatter touches only). Re-run `bin/lint-outline` after.
@@ -84,7 +84,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-7: Depends-list missing `def-chronica` in `#scope-adaptive-system`
 
 - **Source audit(s):** 584721/F-A1 (independent from F-A0). 742613/F6 surfaces the same `scope-adaptive-system → def-chronica` body-level dependency miss as part of "early Section I canonical order is not a clean dependency linearization." Cross-audit convergence.
-- **Segment(s):** `01-aad-core/src/scope-adaptive-system.md` (line 19 uses $\mathcal C_t$).
+- **Segment(s):** `01-aat-core/src/scope-adaptive-system.md` (line 19 uses $\mathcal C_t$).
 - **Finding:** Formal Expression / Discussion uses $\mathcal C_t$ without declaring `def-chronica` in `depends:`. Mechanical Gate-1 violation; lint-clean only because chronica is declared in adjacent transitive deps.
 - **Fix:** Add `def-chronica` to `depends:` field.
 - **Effort estimate:** ≤30 min (single frontmatter line).
@@ -93,7 +93,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-8: Depends-list missing `form-agent-model` in `#form-event-driven-dynamics`
 
 - **Source audit(s):** 584721/F-A4 (independent from F-A0). 742613/F6 also surfaces `form-event-driven-dynamics` formal-expression uses $M_{\tau^-}$ without declaring `form-agent-model`. Cross-audit convergence.
-- **Segment(s):** `01-aad-core/src/form-event-driven-dynamics.md` (lines 32–36, conditioned on $M_{\tau^-}$).
+- **Segment(s):** `01-aat-core/src/form-event-driven-dynamics.md` (lines 32–36, conditioned on $M_{\tau^-}$).
 - **Finding:** Same Gate-1 pattern: Formal Expression uses $M_{\tau^-}$ without declaring `form-agent-model` in `depends:`.
 - **Fix:** Add `form-agent-model` to `depends:` field.
 - **Effort estimate:** ≤30 min.
@@ -102,7 +102,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-9: Wrong slug links `discrete-sector-condition.md` (should be `deriv-discrete-sector-condition.md`)
 
 - **Source audit(s):** 742613/F6 (high confidence; specific). SUPPLEMENT classifies as "tooling gap" — `bin/lint-outline` doesn't body-scan, so this slipped through.
-- **Segment(s):** `01-aad-core/src/hyp-mismatch-dynamics.md` (line 54), `01-aad-core/src/der-gain-sector-bridge.md` (line 127).
+- **Segment(s):** `01-aat-core/src/hyp-mismatch-dynamics.md` (line 54), `01-aat-core/src/der-gain-sector-bridge.md` (line 127).
 - **Finding:** Both segments cite `#deriv-discrete-sector-condition` for the formal justification of the fluid-limit framing. Both link to the wrong slug `discrete-sector-condition.md`. The actual segment is `deriv-discrete-sector-condition.md`.
 - **Fix:** Rename links in both segments. Optionally also `bin/lint-outline`-level enhancement to body-scan slug links — but that's tooling, not a local fix.
 - **Effort estimate:** ≤30 min.
@@ -111,7 +111,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-10: `#form-consolidation-dynamics` undeclared upstream dependencies in Formal Expression
 
 - **Source audit(s):** 742613/F6 (high confidence; specific lines cited).
-- **Segment(s):** `01-aad-core/src/form-consolidation-dynamics.md` (lines 60–62 and 76).
+- **Segment(s):** `01-aat-core/src/form-consolidation-dynamics.md` (lines 60–62 and 76).
 - **Finding:** Formal Expression uses lower-bound from `#schema-strategy-persistence` (line 60–62) and references `#form-structural-change-as-parametric-limit` (line 76) without declaring either in `depends:`. Independent of the `disc-compression-operations` backmatter case (which Codex acknowledges as legitimate appendix-back-pointer territory).
 - **Fix:** Add `schema-strategy-persistence` and `form-structural-change-as-parametric-limit` to `depends:` field; verify dependency-graph orderings via `bin/lint-outline`.
 - **Effort estimate:** ≤30 min.
@@ -120,7 +120,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-11: BH-identity propagation gap in `#disc-ciy-unified-objective`
 
 - **Source audit(s):** 584721/F-D1 (medium-high confidence; depends on CLAUDE-2 priming about BH-identity primary). The 2026-04-24 Tier-1 BH-identity landing is logged in TODO §"2026-04-24 Gemini pressure-point cycle — Tier 1 landing"; the upgrade is real.
-- **Segment(s):** `01-aad-core/src/disc-ciy-unified-objective.md` (Discussion §"Regret-bound connection to the strategy-cost objective").
+- **Segment(s):** `01-aat-core/src/disc-ciy-unified-objective.md` (Discussion §"Regret-bound connection to the strategy-cost objective").
 - **Finding:** Discussion paragraph cites Pinsker's inequality for the strategy-induced regret bound: $R(Q_{\Sigma_t}) \leq V_{\max}\sqrt{\tfrac{1}{2}D_{KL}(\pi^* \Vert Q_{\Sigma_t})}$. Doesn't reference the strictly-sharper Bretagnolle-Huber identity ($D_{KL}(\pi^* \Vert Q) = -\log(1 - TV)$ exact under deterministic $\pi^*$) that landed as primary in `#deriv-strategy-cost-regret-bound` 2026-04-24.
 - **Fix:** One-paragraph Discussion addition: under deterministic $\pi^*$ (the standard regret-bound scope), Bretagnolle-Huber gives the sharper exact form; cross-reference `#deriv-strategy-cost-regret-bound` §4. Retain Pinsker for general / non-deterministic-$\pi^*$ scope.
 - **Effort estimate:** 30–60 min (verify BH-identity primary status in `#deriv-strategy-cost-regret-bound` first; then add Discussion paragraph).
@@ -129,7 +129,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-12: BH-identity cross-reference missing in `#form-strategy-complexity-cost`
 
 - **Source audit(s):** 584721/F-D2 (medium-high confidence). Audit notes the segment's Epistemic Status already discusses linear-vs-square-root-in-KL trade-off and explains why Pinsker is retained for IB-shape alignment, but doesn't reference BH-identity.
-- **Segment(s):** `01-aad-core/src/form-strategy-complexity-cost.md` (Epistemic Status).
+- **Segment(s):** `01-aat-core/src/form-strategy-complexity-cost.md` (Epistemic Status).
 - **Finding:** Segment is aware of the trade-off and explains the Pinsker retention reason, but doesn't cite BH-identity as the available sharper alternative for the deterministic-$\pi^*$ case.
 - **Fix:** One-sentence cross-reference: "For the deterministic-$\pi^*$ case, the sharper Bretagnolle-Huber identity holds (see `#deriv-strategy-cost-regret-bound` §4). Pinsker is retained here for IB-shape alignment under general $\pi^*$."
 - **Effort estimate:** ≤30 min.
@@ -138,7 +138,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-13: Stale `AAD-FULL.md` / "Section IV" reference in `#form-event-driven-dynamics`
 
 - **Source audit(s):** 584721/F-B1 (medium-low confidence; first-hand verification deferred).
-- **Segment(s):** `01-aad-core/src/form-event-driven-dynamics.md` Discussion §"Software-specific channels".
+- **Segment(s):** `01-aat-core/src/form-event-driven-dynamics.md` Discussion §"Software-specific channels".
 - **Finding:** Discussion closes with: *"This decomposition is a Section IV gap (see the three-part tempo decomposition gap in `AAD-FULL.md`)."* "Section IV" was the original location of TST before the 2026-03 restructure to `02-tst-core/`; `AAD-FULL.md` is not in current root.
 - **Fix:** Verify `AAD-FULL.md` does not exist (`ls $REPO/AAD-FULL.md` should return non-existent). Update reference to the current TST location of the three-part tempo gap (likely `02-tst-core/OUTLINE.md` Section S — auditor flags "Developer tempo as $\mathcal T_{\text{obs}} + \mathcal T_{\text{explore}} + \mathcal T_{\text{probe}}$" GAP).
 - **Effort estimate:** ≤30 min.
@@ -147,7 +147,7 @@ These meet all four criteria: local, independent, high-confidence, not in TODO/P
 ### AF-14: Spike-citations outside Working Notes (FORMAT.md violation)
 
 - **Source audit(s):** 738192 implicit; 742613 "Other Observations" (explicit, lines 343–348). Identifies `deriv-sector-condition`, `der-gain-sector-bridge`, `deriv-gain-sector`, `result-structural-adaptation-necessity` as carrying `spikes/spike-*` references outside Working Notes.
-- **Segment(s):** `01-aad-core/src/deriv-sector-condition.md`, `01-aad-core/src/der-gain-sector-bridge.md`, `01-aad-core/src/deriv-gain-sector.md`, `01-aad-core/src/result-structural-adaptation-necessity.md`.
+- **Segment(s):** `01-aat-core/src/deriv-sector-condition.md`, `01-aat-core/src/der-gain-sector-bridge.md`, `01-aat-core/src/deriv-gain-sector.md`, `01-aat-core/src/result-structural-adaptation-necessity.md`.
 - **Finding:** FORMAT.md and `feedback_spike_references_only_in_working_notes.md` say spike citations belong only in Working Notes (and only for unfinished follow-on work — not as backing for promoted content). Multiple promoted segments still carry spike citations in Discussion / Epistemic Status / Formal-Expression-adjacent text.
 - **Fix:** Per segment: identify spike references; move to Working Notes (or remove if the spike content is already in-segment); ensure no Formal-Expression / Epistemic-Status content rests on a spike pointer rather than on segment content. Each segment is independent.
 - **Effort estimate:** 30–60 min per segment if grep-then-relocate is mechanical; 60–90 min combined for the four if working in parallel.
@@ -191,7 +191,7 @@ These are findings the audits propose softening repairs for, where the strengthe
 ### SN-1: Model S local stochastic persistence — Markov-tail-vs-ever-exit error
 
 - **Source audit(s):** 742613/F2 (high confidence; math direct). 742613 SUPPLEMENT classifies as "Partly represented, not correctly integrated."
-- **Segment(s):** `01-aad-core/src/deriv-sector-condition.md` (lines 180, 194, 242, 253, 270, 282); `01-aad-core/src/result-sector-persistence-template.md` (lines 47, 90); `01-aad-core/src/result-persistence-condition.md`.
+- **Segment(s):** `01-aat-core/src/deriv-sector-condition.md` (lines 180, 194, 242, 253, 270, 282); `01-aat-core/src/result-sector-persistence-template.md` (lines 47, 90); `01-aat-core/src/result-persistence-condition.md`.
 - **Finding (substantive):** The current source converts a Markov-fixed-time / stationary tail bound $P(\|\delta(t)\| > R)$ into an infinite-horizon non-exit probability $P(\tau_R < \infty)$. For a non-degenerate OU process $d\delta = -\alpha\delta\,dt + \sigma_w\,dW_t$ on a finite ball, $P(\tau_R < \infty) = 1$ regardless of $\alpha R^2 / \sigma_w^2$. The asymptotic-scaling claim (3/2 in fluid limit) is correct; the *infinite-horizon non-exit* claim is wrong as stated.
 - **Why this is strengthening territory, not local:**
   - The audit proposes softening (state only the stopped bound; require global sector for unstopped mean-square; or use finite-horizon exit probability).
@@ -203,7 +203,7 @@ These are findings the audits propose softening repairs for, where the strengthe
 ### SN-2: Information-Bottleneck $\beta$ vs environment volatility $\rho$ conflation
 
 - **Source audit(s):** 738192/Finding 1 (substantive critique).
-- **Segment(s):** `01-aad-core/src/form-information-bottleneck.md` Discussion §"Dependence on volatility".
+- **Segment(s):** `01-aat-core/src/form-information-bottleneck.md` Discussion §"Dependence on volatility".
 - **Finding (substantive):** Segment claims $\beta$ should be lowered when $\rho$ is high (volatile environments → favor compression). 738192 argues this is a double-counting error: $\beta$ dictates the agent's *preference* trade-off, but $P(\mathcal C_t, o_{t+1:\infty})$ already changes with $\rho$ (past-future MI decreases natively); the optimal $\phi^*$ will discard old information at constant $\beta$. Adjusting $\beta$ should reflect changes in *cost-of-memory-vs-accuracy*, not environment volatility.
 - **Why this is strengthening territory, not local:**
   - Audit's framing is critique-only; doesn't engage whether the segment's claim survives under tightened conditions (e.g., when $\beta$ is the agent's hyperparameter for a fixed compression cost and $\rho$ shifts the IB Pareto frontier — there can be a derived relation between optimal $\beta$ and $\rho$ even though they are conceptually distinct).
@@ -215,7 +215,7 @@ These are findings the audits propose softening repairs for, where the strengthe
 ### SN-3: `git checkout` as Pearl Level 3 counterfactual — overclaim
 
 - **Source audit(s):** 738192/Finding 2 (substantive critique).
-- **Segment(s):** `01-aad-core/src/def-pearl-causal-hierarchy.md` (and downstream `02-tst-core/src/obs-software-epistemic-properties.md` / `02-tst-core/src/scope-developer-agent.md` if propagated).
+- **Segment(s):** `01-aat-core/src/def-pearl-causal-hierarchy.md` (and downstream `02-tst-core/src/obs-software-epistemic-properties.md` / `02-tst-core/src/scope-developer-agent.md` if propagated).
 - **Finding (substantive):** Segment claims `git checkout` provides L3 access "with ground-truth verification — the agent can literally execute the counterfactual." 738192 argues `git checkout` resets codebase state but not external environment / developer mind / external dependencies / time; it's a highly-reproducible L2 intervention, not a true L3 counterfactual. Approaches L3 only under deterministic / stateless / no-evaluator-evolution conditions.
 - **Why this is strengthening territory, not local:**
   - The audit doesn't engage whether the framework has scope conditions under which the L3 claim survives (e.g., pure-function tests with reproducible build environments + deterministic test suites + agent-state-frozen-or-irrelevant). C-BP3's TST-as-calibration-laboratory framing already names environment-dependency relaxations as transfer assumptions.
@@ -226,7 +226,7 @@ These are findings the audits propose softening repairs for, where the strengthe
 ### SN-4: Opacity-Gain Tension in `#def-observation-function` vs `#emp-update-gain`
 
 - **Source audit(s):** 849201/000-FINAL Finding 1. 849201 itself flags as "Known but unfixed" via cross-reference to 742613/02-def-observation-function reflection.
-- **Segment(s):** `01-aad-core/src/def-observation-function.md`, `01-aad-core/src/emp-update-gain.md`.
+- **Segment(s):** `01-aat-core/src/def-observation-function.md`, `01-aat-core/src/emp-update-gain.md`.
 - **Finding (substantive):** `#def-observation-function` strictly states the agent does not know $\varepsilon_t$'s distribution. `#emp-update-gain` defines optimal gain $\eta^* = U_M / (U_M + U_o)$. If the agent cannot know $U_o$ (= var $\varepsilon_t$), $\eta^*$ is uncomputable inside the agent.
 - **Why this is strengthening territory, not local:**
   - 849201 itself flags this as needing either a bridging hypothesis (how is $U_o$ empirically estimated by the agent without violating opacity?) or a softening (relax the opacity axiom).

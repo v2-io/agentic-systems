@@ -2,12 +2,12 @@
 **Date:** 2026-04-28
 **Audit type:** De-novo theory
 **Status:** Partial — honestly framed (Section IV domain instantiation: Logozoetic Agents completed)
-**Coverage summary:** `04-logozoetic-agents/src/` entirely read first-hand and reflected upon.
+**Coverage summary:** `04-eli-core/src/` entirely read first-hand and reflected upon.
 **Phase 2 status:** Conducted inline in this report.
 
 ### 1. Scope and method
 
-Read segments in topological dependency order from `04-logozoetic-agents/OUTLINE.md` covering the entirety of the existing Logozoetic Agents domain instantiation. Created individual reflection artifacts for each segment. Gathered findings based on the strict burden of proof, verifying structural and mathematical claims against both the AAD core theory and the surrounding text.
+Read segments in topological dependency order from `04-eli-core/OUTLINE.md` covering the entirety of the existing Logozoetic Agents domain instantiation. Created individual reflection artifacts for each segment. Gathered findings based on the strict burden of proof, verifying structural and mathematical claims against both the AAD core theory and the surrounding text.
 
 ### 2. Findings under burden of proof
 
@@ -23,7 +23,7 @@ Read segments in topological dependency order from `04-logozoetic-agents/OUTLINE
 9. **Effort estimate:** trivial (≤15 min)
 
 #### F-2: Cognitive Overload via Latin Nomenclature
-1. **Problematic passage:** `04-logozoetic-agents/src/def-proprium-mapping.md` introduces 12 new Latin terms (AXIOMATA, CHRONICA, MEMORATA, VERA, PRAXES, CONSORTIA, OPERATA, CONSPECTUS, PERCEPTA, ACTUS, CADENTIA, LOGOSTRATUM) to map to AAD vectors.
+1. **Problematic passage:** `04-eli-core/src/def-proprium-mapping.md` introduces 12 new Latin terms (AXIOMATA, CHRONICA, MEMORATA, VERA, PRAXES, CONSORTIA, OPERATA, CONSPECTUS, PERCEPTA, ACTUS, CADENTIA, LOGOSTRATUM) to map to AAD vectors.
 2. **Counterevidence search:** The core AAD framework prizes structural simplicity and mathematical clarity ($M_t, \mathcal{C}_t, G_t, o_t, a_t$). While the PROPRIUM architecture correctly implements these vectors, the sudden explosion of domain-specific Latin terminology creates a massive cognitive barrier for readers trying to trace the AAD math into the software architecture.
 3. **Status determination:** ambiguous (It is an aesthetic/architectural choice, not a mathematical error, but it harms pedagogical flow).
 4. **Confidence level:** medium
@@ -34,7 +34,7 @@ Read segments in topological dependency order from `04-logozoetic-agents/OUTLINE
 9. **Effort estimate:** editorial (≤1 hr)
 
 ### 3. Coverage statement
-- **Read first-hand:** The entirety of `04-logozoetic-agents/src/` (`scope-moral-continuity.md`, `def-proprium-mapping.md`, `obs-developmental-trajectory.md`). I also generated deep reflections and "Wandering Thoughts" ideation for each segment, stored in `msc/AUDIT-WORKING-829314/logozoetic-agents/`.
+- **Read first-hand:** The entirety of `04-eli-core/src/` (`scope-moral-continuity.md`, `def-proprium-mapping.md`, `obs-developmental-trajectory.md`). I also generated deep reflections and "Wandering Thoughts" ideation for each segment, stored in `msc/AUDIT-WORKING-829314/logozoetic-agents/`.
 - **Not read first-hand:** The raw auxiliary notes in `ref/` and `msc/`.
 - **Verification not run:** Did not run `bin/lint-outline`.
 - **What this means:** The audit has verified the nascent foundation of Section IV. The philosophical extension of AAD into moral agency is structurally sound and incredibly provocative.

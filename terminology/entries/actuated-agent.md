@@ -8,8 +8,8 @@ layer: framing-vocabulary
 status: canon
 tags: [agent_classes]
 source_type: asf
-primary_source: 01-aad-core/src/form-complete-agent-state.md
-first_asf_mention: 01-aad-core/src/form-complete-agent-state.md
+primary_source: 01-aat-core/src/form-complete-agent-state.md
+first_asf_mention: 01-aat-core/src/form-complete-agent-state.md
 see_also: [adaptive-system, agentic-system, self-actuated-agent, directed-separation]
 aliases: []
 do_not_confuse: []
@@ -21,4 +21,4 @@ of reality. The factoring is what makes the [orient cascade](orient-cascade.md)
 and [directed separation](directed-separation.md) results applicable.
 
 Defined in
-[`#form-complete-agent-state`](../../01-aad-core/src/form-complete-agent-state.md).
+[`#form-complete-agent-state`](../../01-aat-core/src/form-complete-agent-state.md).

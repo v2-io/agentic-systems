@@ -151,7 +151,7 @@ Historical note:
 
 Classification: true broken relative links in current segment files.
 
-`01-aad-core/src/deriv-observation-ambiguity-bias-bound.md` contains many links that omit the current
+`01-aat-core/src/deriv-observation-ambiguity-bias-bound.md` contains many links that omit the current
 role prefixes. Examples:
 
 | Line(s) | Old target | Likely current target |
@@ -166,7 +166,7 @@ role prefixes. Examples:
 | 245 | `gain-sector-bridge.md` | `der-gain-sector-bridge.md` |
 | 253 | `information-bottleneck.md` | `form-information-bottleneck.md` |
 
-`01-aad-core/src/obs-section-i-validation-simulations.md` has the same pattern:
+`01-aat-core/src/obs-section-i-validation-simulations.md` has the same pattern:
 
 | Line(s) | Old target | Likely current target |
 | ---: | --- | --- |
@@ -178,7 +178,7 @@ Recommendation:
 
 - Fix these directly; they appear to be leftovers from the filename role-prefix
   sweep, not historical references.
-- After fixing, run a narrow link check over `01-aad-core/src/*.md` and
+- After fixing, run a narrow link check over `01-aat-core/src/*.md` and
   `bin/lint-outline`.
 
 ### 5. Logogenic OUTLINE Prose Contradicts Its Links
@@ -187,7 +187,7 @@ Classification: stale prose; links are already correct.
 
 | File | Line(s) | Issue |
 | --- | ---: | --- |
-| `03-logogenic-agents/OUTLINE.md` | 38, 40 | Says the working documents are "in `msc/`", but the table links to `../ref/agentic-tft/...`. |
+| `03-llm-core/OUTLINE.md` | 38, 40 | Says the working documents are "in `msc/`", but the table links to `../ref/agentic-tft/...`. |
 
 Recommendation:
 
@@ -202,16 +202,16 @@ Classification: current-doc drift.
 | File | Line(s) | Issue |
 | --- | ---: | --- |
 | `LEXICON.md` | 3 | Links to `README.md#lexicon`, but `README.md` has no `#lexicon` heading. |
-| `LEXICON.md` | 29-30 | Describes Logogenic/Logozoetic AAD as "Section V"; current top-level structure uses `03-logogenic-agents/` and `04-logozoetic-agents/`. |
-| `01-aad-core/src/scope-agent-identity.md` | 57 | Refers readers to "Section V" for AI/logogenic agents. |
+| `LEXICON.md` | 29-30 | Describes Logogenic/Logozoetic AAD as "Section V"; current top-level structure uses `03-llm-core/` and `04-eli-core/`. |
+| `01-aat-core/src/scope-agent-identity.md` | 57 | Refers readers to "Section V" for AI/logogenic agents. |
 | `02-tst-core/src/der-dual-optimization.md` | 93 | Refers to "Section V" for logogenic agents. |
 
 Recommendation:
 
 - Retarget the README link to `README.md#overview-of-concepts` or remove it and
   describe `LEXICON.md` as the canonical full lexicon.
-- Replace current-doc "Section V" references with `03-logogenic-agents/`,
-  `04-logozoetic-agents/`, or "the logogenic/logozoetic parts", depending on
+- Replace current-doc "Section V" references with `03-llm-core/`,
+  `04-eli-core/`, or "the logogenic/logozoetic parts", depending on
   the local context.
 
 Historical note:
@@ -224,7 +224,7 @@ Historical note:
 Classification: low-risk active-doc consistency issue.
 
 `PRACTICA.md:7-13` uses wikilinks such as `[[TODO]]`, `[[PROPOSALS]]`, and
-`[[01-aad-core/OUTLINE|AAD OUTLINE]]`. The rest of the root docs primarily use
+`[[01-aat-core/OUTLINE|AAD OUTLINE]]`. The rest of the root docs primarily use
 GitHub-style markdown links.
 
 Recommendation:
@@ -240,7 +240,7 @@ Classification: current-doc typo/path convention issues.
 | File | Line(s) | Issue |
 | --- | ---: | --- |
 | `FORMAT.md` | 442, 498 | Refers to `notation.md`; actual root file is `NOTATION.md`. |
-| `FORMAT.md` | 460-461 | Example says root-file links use `src/slug-name.md`; from repository root, component segment links need a component prefix such as `01-aad-core/src/...`. |
+| `FORMAT.md` | 460-461 | Example says root-file links use `src/slug-name.md`; from repository root, component segment links need a component prefix such as `01-aat-core/src/...`. |
 | `FORMAT.md` | 467 | The "write X not Y" examples are identical, so the rule is not actionable. |
 
 Recommendation:
@@ -265,7 +265,7 @@ Classification: true structural hygiene findings from tooling.
 | Type | Detail |
 | --- | --- |
 | Ordering violation | `deriv-causal-ib-lmi` depends on `deriv-fisher-whitened-update-rule`; `deriv-causal-ib-lmi` must come after `deriv-fisher-whitened-update-rule` in section A. |
-| Orphan segment | `01-aad-core/src/deriv-directional-survival-exploration.md` exists but is not referenced in the outline. |
+| Orphan segment | `01-aat-core/src/deriv-directional-survival-exploration.md` exists but is not referenced in the outline. |
 
 Recommendation:
 
@@ -277,7 +277,7 @@ Recommendation:
 
 Intentional forward reference:
 
-- `01-aad-core/OUTLINE.md:217` links `src/worked-example-cam.md` and marks it
+- `01-aat-core/OUTLINE.md:217` links `src/worked-example-cam.md` and marks it
   `missing`. Because the outline row explicitly says `missing`, this looks like
   an intentional forward placeholder rather than a broken link to fix in this
   pass.
@@ -350,13 +350,13 @@ These references should generally not be mass-edited:
 
 1. Fix active navigation and process docs:
    `CLAUDE.md`, `CHANGELOG.md`, `doc/de-novo-audit-instructions.md`,
-   `doc/readme/src/_auditor-instructions.md`, `03-logogenic-agents/OUTLINE.md`,
+   `doc/readme/src/_auditor-instructions.md`, `03-llm-core/OUTLINE.md`,
    `LEXICON.md`, `PRACTICA.md`, and `FORMAT.md`.
 2. Rebuild README outputs with `bin/build-readme` and confirm with
    `bin/build-readme --check`.
 3. Fix current segment-local links in
-   `01-aad-core/src/deriv-observation-ambiguity-bias-bound.md` and
-   `01-aad-core/src/obs-section-i-validation-simulations.md`.
+   `01-aat-core/src/deriv-observation-ambiguity-bias-bound.md` and
+   `01-aat-core/src/obs-section-i-validation-simulations.md`.
 4. Resolve the two `bin/lint-outline` findings: the dependency ordering issue
    and the orphan segment.
 5. Decide what the missing `CHANGELOG.md` project/session links should become:

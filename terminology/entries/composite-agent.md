@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [agent_classes, structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/scope-composite-agent.md
-first_asf_mention: 01-aad-core/src/scope-composite-agent.md
+primary_source: 01-aat-core/src/scope-composite-agent.md
+first_asf_mention: 01-aat-core/src/scope-composite-agent.md
 see_also: [agency, adaptive-system, team-persistence, directed-separation]
 aliases: []
 do_not_confuse: [multi-agent-routing-structure]
@@ -33,4 +33,4 @@ Routes (C-i)–(C-iii) are progressively weaker; (C-iv) covers strategic composi
 partially opposing objectives. This parallels the single-agent scopes: before asking whether
 a composite persists, check that it is a composite.
 
-Scope defined in [`#scope-composite-agent`](../../01-aad-core/src/scope-composite-agent.md).
+Scope defined in [`#scope-composite-agent`](../../01-aat-core/src/scope-composite-agent.md).

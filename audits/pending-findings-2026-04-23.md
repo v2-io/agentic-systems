@@ -43,7 +43,7 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 - `README.md` line 12: "from thermostats through military organizations"
 
 **Strongest counter-passages:**
-- `01-aad-core/OUTLINE.md:7` — "Section II's exact results apply to Class 1 (modular) agents"
+- `01-aat-core/OUTLINE.md:7` — "Section II's exact results apply to Class 1 (modular) agents"
 - `#der-directed-separation:97` — "This is a genuine scope restriction, not a footnote"
 
 **Status:** still real. The caveat is present at OUTLINE and segment level, but the repo-entry framing reads broader than the exact theorem surface defended for merged, goal-conditioned agents. A reader lands at README and builds a wider expectation than the theory's exact results support.
@@ -59,7 +59,7 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 **Source:** Codex F2. **Confidence:** high.
 
 **Problematic passages:**
-- `03-logogenic-agents/src/result-section-ii-survival.md:37` — "Of Section II's 24 results, 16 survive exactly..."
+- `03-llm-core/src/result-section-ii-survival.md:37` — "Of Section II's 24 results, 16 survive exactly..."
 - Same segment line 47 — "SURVIVES EXACTLY (16)" table
 
 **Strongest counter-passages** (same segment):
@@ -108,11 +108,11 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 **Source:** Codex F4. **Confidence:** high.
 
 **Problematic passages:**
-- `03-logogenic-agents/src/result-coupled-diagnostic-framework.md:18` — "the diagnostic quantities ... can be computed after each coupled update"
+- `03-llm-core/src/result-coupled-diagnostic-framework.md:18` — "the diagnostic quantities ... can be computed after each coupled update"
 - Same segment line 40 — "From $X^{(post)}$, compute"
 
 **Strongest counter-passages:**
-- `03-logogenic-agents/src/def-coupled-update-dynamics.md:66` — M/G split is "post-hoc and analytical"
+- `03-llm-core/src/def-coupled-update-dynamics.md:66` — M/G split is "post-hoc and analytical"
 - `#result-section-ii-survival:127` — 16/24 exact survival explicitly disclaims "operational extractability"
 - `02-tst-core/src/obs-software-epistemic-properties.md:124` — instrumentation-boundary doctrine
 
@@ -158,7 +158,7 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 
 **Source:** Gemini F3. **Confidence:** high.
 
-**Problematic passage:** `01-aad-core/src/def-adaptive-tempo.md` — additive formula $\mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$.
+**Problematic passage:** `01-aat-core/src/def-adaptive-tempo.md` — additive formula $\mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$.
 
 **Strongest counter-passages** (same segment):
 - Discussion — "additive formula assumes informationally independent channels... When channels are correlated... the additive formula *overcounts* effective tempo"
@@ -210,7 +210,7 @@ Net: **10 consolidated findings** from **15 raw audit findings** (cross-audit ag
 
 **Source:** Opus C. **Confidence:** high.
 
-**Problematic passage:** `01-aad-core/OUTLINE.md` Section II preamble — "**Section II's exact results apply to Class 1 (modular) agents**... **This is the most significant scope restriction in the theory**."
+**Problematic passage:** `01-aat-core/OUTLINE.md` Section II preamble — "**Section II's exact results apply to Class 1 (modular) agents**... **This is the most significant scope restriction in the theory**."
 
 **Strongest counter-passage:** `#der-causal-hierarchy-requirement` Scope Narrowing — "We restrict attention to **learning purposeful agents**... Pre-compiled agents are within agency scope (they have objectives and act on them) but outside learning-agent scope... **All remaining Section II results operate within learning-agent scope** unless explicitly noted otherwise."
 

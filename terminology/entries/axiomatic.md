@@ -22,7 +22,7 @@ postulates typically carry this status: a definition *constitutes* the thing bei
 postulate is *accepted* as foundational.
 
 "Axiomatic" does not mean universally necessary or philosophically certain — it means the claim
-is the starting point *within AAD*. Other choices are possible; AAD begins here. The distinction
+is the starting point *within AAT*. Other choices are possible; AAT begins here. The distinction
 from `exact` is that `exact` claims are derived from prior objects, while `axiomatic` claims are
 the prior objects themselves.
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Benchmark candidate ollama embedding models on AAD-specific retrieval queries.
+"""Benchmark candidate ollama embedding models on AAT-specific retrieval queries.
 
 For each model:
-  1. Embed each AAD segment (whole-segment level — single embedding per file).
+  1. Embed each AAT segment (whole-segment level — single embedding per file).
      Two variants are tested:
        - 'body' — title + summary + formal-expression + first ~1500 chars.
        - 'frontmatter+title' — slug + title + summary only (terse).
@@ -32,8 +32,8 @@ import ollama  # uses local ollama daemon
 SPIKE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SPIKE_DIR.parent.parent
 SRC_DIRS = [
-    REPO_ROOT / "01-aad-core" / "src",
-    REPO_ROOT / "03-logogenic-agents" / "src",
+    REPO_ROOT / "01-aat-core" / "src",
+    REPO_ROOT / "03-llm-core" / "src",
 ]
 
 # (model_name, embedding_dim_hint, prefix_style)

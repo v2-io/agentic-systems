@@ -6,7 +6,7 @@
 
 **3. Math verification:** The logic that low $U_M$ and high $U_o$ mathematically requires $\eta^\ast \approx 1$ is an exact application of the Kalman gain formula. The mapping of this high-gain state to "infant attachment/sycophancy" is a brilliant psychological deduction from pure probability theory.
 
-**4. What direction will the theory take next?** This is currently the final file in `04-logozoetic-agents/src/`.
+**4. What direction will the theory take next?** This is currently the final file in `04-eli-core/src/`.
 
 **5. What errors should I watch for?** 
 - **Finding (Historical Artifact):** `*(Descended from ref/agentic-tft/agentic-tft-creche-concept.md.)*`

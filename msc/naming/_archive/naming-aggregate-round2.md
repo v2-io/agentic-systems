@@ -1428,7 +1428,7 @@ This is the aggregated candidate list from Round 1, sorted most-popular to least
 - `(PI)` — **opus-1m:** Good abbreviation with named expansion; works in both forms. Keep.
 - `(PI) / parameterization invariance` — **opus-4-7-b:** The parenthesized-two-letter-tag convention works (compare GA-1, MG-1, P1). But the *full English phrase* "parameterization invariance" should be used on first mention in each segment before falling back to (PI). The four-primary-instances table in `#additive-coordinate-forcing` does this correctly; check that other citing segments follow suit.
 
-## 186. `01-aad-core/OUTLINE.md`
+## 186. `01-aat-core/OUTLINE.md`
 
 **Alternatives proposed:** `OUTLINE.md`
 
@@ -3179,7 +3179,7 @@ This is the aggregated candidate list from Round 1, sorted most-popular to least
 
 - `Predictive sufficiency` — **gemini-2:** Clarifies that it's about how much predictive information is retained, not structural sufficiency.
 
-## 468. `OUTLINE.md (01-aad-core) preamble`
+## 468. `OUTLINE.md (01-aat-core) preamble`
 
 **Alternatives proposed:** `"Reading AAD"`
 

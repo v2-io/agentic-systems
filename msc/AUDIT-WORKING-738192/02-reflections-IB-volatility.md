@@ -9,7 +9,7 @@ Segments read:
 
 ## 1. Specific Finding: Conflation of IB $\beta$ parameter with environment volatility ($\rho$)
 
-In `01-aad-core/src/form-information-bottleneck.md`, the Discussion/Formal Expression claims:
+In `01-aat-core/src/form-information-bottleneck.md`, the Discussion/Formal Expression claims:
 > **Dependence on volatility.** The trade-off $\beta$ depends on environment volatility $\rho$:
 > - **Volatile environments** (high $\rho$): favor aggressive compression (low $\beta$). Old information decays in relevance quickly, so retaining it wastes capacity.
 > - **Stable environments** (low $\rho$): favor dense retention (high $\beta$). Historical information remains predictive, so discarding it loses value.

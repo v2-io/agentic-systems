@@ -450,7 +450,7 @@ Four promotion options, ranked:
 
 ### R1 (preferred): new meta-segment `#result-contraction-template`, retain `#result-sector-persistence-template`
 
-**Create** `01-aad-core/src/result-contraction-template.md`, type:result, status:conditional, depending on `#deriv-sector-condition`, `#result-sector-persistence-template`, `#der-gain-sector-bridge`. The segment would:
+**Create** `01-aat-core/src/result-contraction-template.md`, type:result, status:conditional, depending on `#deriv-sector-condition`, `#result-sector-persistence-template`, `#der-gain-sector-bridge`. The segment would:
 
 1. State (CT1)–(CT3) as the metric-formulation preconditions.
 2. Derive the ultimate-bound result (CT-D / CT-S) under (M0).

@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities, structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/def-strategy-dag.md
-first_asf_mention: 01-aad-core/src/def-strategy-dag.md
+primary_source: 01-aat-core/src/def-strategy-dag.md
+first_asf_mention: 01-aat-core/src/def-strategy-dag.md
 see_also: [adaptive-system, strategic-tempo, strategy-persistence, credit-assignment-boundary, satisfaction-gap, control-regret]
 aliases: []
 do_not_confuse: []
@@ -32,6 +32,6 @@ latent common causes among nodes); when causal sufficiency fails, $\hat P_\Sigma
 systematically overestimates success (OR-dominated plans) or underestimates it
 (AND-dominated plans) by an error equal to the covariance from shared causes.
 
-Defined in [`#def-strategy-dag`](../../01-aad-core/src/def-strategy-dag.md), which
+Defined in [`#def-strategy-dag`](../../01-aat-core/src/def-strategy-dag.md), which
 includes the Correlation Hierarchy (L0–L2) for handling correlated failures and the
 formal treatment of L1 augmented DAGs.

@@ -1,6 +1,6 @@
 # 14 - form-event-driven-dynamics
 
-Segment: `01-aad-core/src/form-event-driven-dynamics.md` (`#form-event-driven-dynamics`)
+Segment: `01-aat-core/src/form-event-driven-dynamics.md` (`#form-event-driven-dynamics`)
 
 Dependencies: `post-causal-structure`, `def-observation-function`, `def-action-transition`, `form-agent-model`, all read. Dependency-order check passes. The discussion references `#der-recursive-update` and `#def-adaptive-tempo` downstream, but the event formulation is locally understandable.
 

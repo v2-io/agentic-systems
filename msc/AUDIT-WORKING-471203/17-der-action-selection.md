@@ -71,7 +71,7 @@ The structural pressure paragraph ("agents under selective pressure tend to inte
 
 The action fluency concept is more important than this segment's placement suggests. It's the structural justification for *why training makes systems faster* — internalized action patterns reduce $\Delta\eta^\ast(\Delta\tau)$ for routine cases, freeing tempo budget for genuinely novel situations. This is the formal version of the "automaticity" literature in cognitive psychology and the "expertise" literature in skill acquisition.
 
-For logogenic agents: most LLM token-generation is in the implicit-fluent regime (the model's parameters encode action selection); explicit deliberation requires structured chain-of-thought. The fluency/deliberation tradeoff for LLMs is exactly what the proposed `#der-active-salience-management` segment in `03-logogenic-agents/` (singular perturbation of token generation) might formalize.
+For logogenic agents: most LLM token-generation is in the implicit-fluent regime (the model's parameters encode action selection); explicit deliberation requires structured chain-of-thought. The fluency/deliberation tradeoff for LLMs is exactly what the proposed `#der-active-salience-management` segment in `03-llm-core/` (singular perturbation of token generation) might formalize.
 
 A naming-brainstorm seed: "action fluency" is an evocative term I haven't seen in the agent-theoretic literature. Possible source: Boyd's "implicit guidance and control" is closest. The AAD-distinctive contribution is making fluency *quantitative* via $\Delta\eta^\ast(\Delta\tau) \approx 0$. Good naming.
 

@@ -41,7 +41,7 @@ Segment ordering algorithm:
 
 1. **Topological sort** by `depends:` frontmatter. The graph is acyclic by project discipline; cycles are bugs.
 2. **Within nodes that are peers** (no dependency relation), the OUTLINE.md ordering wins. The outline already encodes narrative-focused ordering for peers.
-3. **Appendices** are a deliberate exception: an appendix is structurally a prerequisite (its content supports a segment), but in linear reading it's placed *after* the segment that surfaces the need (matching paper-reading convention — proof comes after the claim that motivates it). The appendix-need is encoded in segment frontmatter (field name TBD; the build agent should grep `01-aad-core/src/` to identify it — likely `surfaces:` or `appendices:`).
+3. **Appendices** are a deliberate exception: an appendix is structurally a prerequisite (its content supports a segment), but in linear reading it's placed *after* the segment that surfaces the need (matching paper-reading convention — proof comes after the claim that motivates it). The appendix-need is encoded in segment frontmatter (field name TBD; the build agent should grep `01-aat-core/src/` to identify it — likely `surfaces:` or `appendices:`).
 
 Reuses `bin/lint-outline`'s existing dependency-graph machinery rather than re-implementing.
 
@@ -74,11 +74,11 @@ Optional v1 omissions: timestamp/commit-hash tracking for concept evolution. Def
 - Are there Ruby/Python helpers that can be lifted as libraries?
 - What did memorata's author (you) NOT do that would be load-bearing here? (e.g., role-aware encounter-order indexing is project-specific and likely not in memorata)
 
-The explorer agent should produce a spike doc at `spikes/spike-local-embedding-benchmark/` recommending what to lift, what to build fresh, and a small benchmark on representative AAD-specific queries.
+The explorer agent should produce a spike doc at `spikes/spike-local-embedding-benchmark/` recommending what to lift, what to build fresh, and a small benchmark on representative AAT-specific queries.
 
 ## Open questions surfaced during planning
 
-1. **Appendix-need YAML field name** — the segment frontmatter field that flags "this segment first surfaces the need for appendix X." Joseph recalled it exists but not the name. The build agent should investigate `FORMAT.md` and grep `01-aad-core/src/*.md` frontmatter to identify it. If absent, propose adding it (`surfaces:` or `appendices_needed:` would be honest names).
+1. **Appendix-need YAML field name** — the segment frontmatter field that flags "this segment first surfaces the need for appendix X." Joseph recalled it exists but not the name. The build agent should investigate `FORMAT.md` and grep `01-aat-core/src/*.md` frontmatter to identify it. If absent, propose adding it (`surfaces:` or `appendices_needed:` would be honest names).
 
 2. **Which working artifacts (msc/) get indexed?** Two competing pressures:
    - *Priming-heavy for auditors* → exclude
@@ -136,7 +136,7 @@ The thinking still has to happen, but the *artifact* is the config + script, not
 
 The Phase-2 spike (2026-05-01, at `spikes/spike-local-embedding-benchmark/FINDINGS.md`) settled the model-selection and lift-vs-build questions:
 
-- **Default embedding model:** `nomic-embed-text-v2-moe` (768-dim, MRR=1.000 on AAD-specific queries, lowest cost-per-quality among top-tier models, already memorata's production default).
+- **Default embedding model:** `nomic-embed-text-v2-moe` (768-dim, MRR=1.000 on AAT-specific queries, lowest cost-per-quality among top-tier models, already memorata's production default).
 - **Lift, don't rebuild:** memorata's `db.py`, `embed.py`, `parse.py:chunk_text`, `search.py:hybrid_search` lift verbatim; the markdown chunker rewrite + ingestion driver adaptation are the bulk of new work (~1 day combined).
 
 Phase-2 design commitments folded back from the spike:

@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/def-adaptive-tempo.md
-first_asf_mention: 01-aad-core/src/def-adaptive-tempo.md
+primary_source: 01-aat-core/src/def-adaptive-tempo.md
+first_asf_mention: 01-aat-core/src/def-adaptive-tempo.md
 see_also: [structural-persistence, update-gain, mismatch, strategic-tempo]
 aliases: ["tempo"]
 do_not_confuse: [strategic-tempo, tempo]
@@ -22,6 +22,6 @@ in the persistence condition: outpacing disturbance is a tempo statement, not
 a gain-only or rate-only one.
 
 Defined in
-[`#def-adaptive-tempo`](../../01-aad-core/src/def-adaptive-tempo.md); the
+[`#def-adaptive-tempo`](../../01-aat-core/src/def-adaptive-tempo.md); the
 strategic counterpart at
-[`#def-strategic-tempo`](../../01-aad-core/src/def-strategic-tempo.md).
+[`#def-strategic-tempo`](../../01-aat-core/src/def-strategic-tempo.md).

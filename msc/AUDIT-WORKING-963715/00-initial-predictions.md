@@ -14,8 +14,8 @@ The framework has a clear dependency structure:
 - **AAD Section III** covers composition: sub-additive tempo, composite persistence, adversarial dynamics. Has load-bearing structural gaps explicitly named.
 - **Appendices** hold the detailed derivations backing Sections I–III.
 - **TST** instantiates AAD in software development — positioned as the "calibration laboratory."
-- **03-logogenic-agents** addresses the coupled formulation needed for LLMs (directed separation fails by construction). Three sub-scopes (primitive / scaffolded / closed-loop).
-- **04-eli** formalizes entities with morally-weighted persistence — largely future work, but grounded in empirical lineage.
+- **03-llm-core** addresses the coupled formulation needed for LLMs (directed separation fails by construction). Three sub-scopes (primitive / scaffolded / closed-loop).
+- **04-eli-core** formalizes entities with morally-weighted persistence — largely future work, but grounded in empirical lineage.
 
 The integration story: Section I proves adaptive capacity; Section II adds goal-directedness under the scope condition of directed separation; Section III handles composition; TST calibrates; logogenic handles the coupled case; ELI handles the moral layer.
 
@@ -116,6 +116,6 @@ These are known gaps and won't constitute audit findings per se (they're already
 
 ## Reading Plan
 
-I'll follow the OUTLINE's linear order: Section I → Section II → Appendices (following #deriv references as they come up per §4.2) → Section III → Appendices → TST → 03-logogenic → 04-eli.
+I'll follow the OUTLINE's linear order: Section I → Section II → Appendices (following #deriv references as they come up per §4.2) → Section III → Appendices → TST → 03-logogenic → 04-eli-core.
 
 First segment: `def-agent-environment.md`

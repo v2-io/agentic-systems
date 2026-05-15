@@ -7,7 +7,7 @@ date: 2026-04-22
 
 # Spike: F20 — KL-direction strengthening via regret bound
 
-**Migration note (2026-04-22).** The load-bearing math (TV bound §3, Pinsker-KL bound §4, direction-forcing argument §5, admissible-divergence family analysis §6, $\beta_\Sigma$ linear-vs-square-root trade-off §7, scope limits §8, extensions §9) has been migrated to appendix segment **#deriv-strategy-cost-regret-bound** (`01-aad-core/src/deriv-strategy-cost-regret-bound.md`). The framework stands complete without this spike — `msc/` is a scratch directory and must not be load-bearing. This spike retains the strengthening-cycle reasoning trail only: how the outcome was reached, what softening options were ruled out, how Outcome B was adjudicated. The segment is the canonical home for the derivation and its supporting analysis.
+**Migration note (2026-04-22).** The load-bearing math (TV bound §3, Pinsker-KL bound §4, direction-forcing argument §5, admissible-divergence family analysis §6, $\beta_\Sigma$ linear-vs-square-root trade-off §7, scope limits §8, extensions §9) has been migrated to appendix segment **#deriv-strategy-cost-regret-bound** (`01-aat-core/src/deriv-strategy-cost-regret-bound.md`). The framework stands complete without this spike — `msc/` is a scratch directory and must not be load-bearing. This spike retains the strengthening-cycle reasoning trail only: how the outcome was reached, what softening options were ruled out, how Outcome B was adjudicated. The segment is the canonical home for the derivation and its supporting analysis.
 
 **Finding.** The V-medium move in `#form-strategy-complexity-cost` (commit `a14682e`) replaced Shannon MI $-\beta_\Sigma I(\Sigma_t; \pi^\ast \mid M_t)$ with $+\beta_\Sigma D_{\mathrm{KL}}(Q_{\Sigma_t} \Vert \pi^\ast)$. Under deterministic $\pi^\ast$, this KL is **infinite** whenever $Q_{\Sigma_t}$ places mass on non-optimal actions. Shannon-zero degeneracy traded for KL-infinity degeneracy — same shape, different value.
 
@@ -167,10 +167,10 @@ Recommendation: **(c).** The direction-of-KL claim is the load-bearing finding; 
 
 ## §11 — Edits to make
 
-1. **`01-aad-core/src/form-strategy-complexity-cost.md`** — update the variational-form paragraph with the regret-bound derivation; update Epistemic Status; change tag from `*[Formulation (strategy-IB-objective)]*` to `*[Formulation (strengthened-by-regret-bound)]*` on the relevance term; downgrade stage to `draft`.
-2. **`01-aad-core/src/disc-compression-operations.md`** — add one paragraph to the "Variational form" subsection noting that the strategy-IB variational form's KL direction is forced by the regret bound; reverse-KL is canonical in the admissible family.
-3. **`01-aad-core/src/disc-exploit-explore-deliberate.md`** — add one Discussion-level cross-reference noting the regret-bound interpretation connects exploit-regret to the strategy-cost objective via $\pi^\ast$-first KL.
-4. **`01-aad-core/src/disc-ciy-unified-objective.md`** — add one Discussion sentence noting that AAD's exploit term $Q_O$ connects to the strategy-cost objective via the regret-bound derivation; this is what "value and information term" shares structurally with EFE without the preferences-as-priors commitment.
+1. **`01-aat-core/src/form-strategy-complexity-cost.md`** — update the variational-form paragraph with the regret-bound derivation; update Epistemic Status; change tag from `*[Formulation (strategy-IB-objective)]*` to `*[Formulation (strengthened-by-regret-bound)]*` on the relevance term; downgrade stage to `draft`.
+2. **`01-aat-core/src/disc-compression-operations.md`** — add one paragraph to the "Variational form" subsection noting that the strategy-IB variational form's KL direction is forced by the regret bound; reverse-KL is canonical in the admissible family.
+3. **`01-aat-core/src/disc-exploit-explore-deliberate.md`** — add one Discussion-level cross-reference noting the regret-bound interpretation connects exploit-regret to the strategy-cost objective via $\pi^\ast$-first KL.
+4. **`01-aat-core/src/disc-ciy-unified-objective.md`** — add one Discussion sentence noting that AAD's exploit term $Q_O$ connects to the strategy-cost objective via the regret-bound derivation; this is what "value and information term" shares structurally with EFE without the preferences-as-priors commitment.
 5. **`spikes/spike-active-inference-vs-aad.md`** §E.6 — update the implementation sketch to note the regret-bound derivation of the KL direction.
 
 ## Working Notes

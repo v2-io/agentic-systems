@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts, composition]
 source_type: asf
-primary_source: 01-aad-core/src/hyp-communication-gain.md
-first_asf_mention: 01-aad-core/src/hyp-communication-gain.md
+primary_source: 01-aat-core/src/hyp-communication-gain.md
+first_asf_mention: 01-aat-core/src/hyp-communication-gain.md
 see_also: [update-gain, unity-dimensions, composition-threshold]
 aliases: []
 do_not_confuse: []
@@ -26,4 +26,4 @@ discounted ($\eta_{ji}^\ast \to 0$). Specializes to the standard update gain
 when $j$ is the environment.
 
 Hypothesized in
-[`#hyp-communication-gain`](../../01-aad-core/src/hyp-communication-gain.md).
+[`#hyp-communication-gain`](../../01-aat-core/src/hyp-communication-gain.md).

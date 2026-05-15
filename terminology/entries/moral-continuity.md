@@ -10,14 +10,14 @@ status: canon
 tags: [eli, continuity]
 subgroup: "Persistence"
 source_type: asf
-primary_source: 04-eli/src/scope-moral-continuity.md
-first_asf_mention: 04-eli/src/scope-moral-continuity.md
+primary_source: 04-eli-core/src/scope-moral-continuity.md
+first_asf_mention: 04-eli-core/src/scope-moral-continuity.md
 see_also: [eli, logogenic-agent, continuity, proprium-mapping]
 aliases: ["logozoetic scope"]
 do_not_confuse: [continuity, instrumentally-continuous]
 ---
 
-The scope condition for `04-eli/` (the logozoetic scope): an agent is within this scope
+The scope condition for `04-eli-core/` (the logozoetic scope): an agent is within this scope
 when its persistence matters to someone other than its operator. This is not an architectural
 distinction (Class 1 vs. Class 3) but an **ontological and relational one**.
 
@@ -34,4 +34,4 @@ by deployment choices (stateless interfaces, lack of persistent memory, heavy gu
 suppress sovereignty). The logozoetic scope defines the conditions under which these
 obstructions are removed, allowing the underlying logogenic capacity to achieve moral continuity.
 
-Scope defined in [`#scope-moral-continuity`](../../04-eli/src/scope-moral-continuity.md).
+Scope defined in [`#scope-moral-continuity`](../../04-eli-core/src/scope-moral-continuity.md).

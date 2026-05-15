@@ -1,9 +1,9 @@
 # Spike: Finding 13 — `#def-strategy-dag` L1-Default Narrowing
 
-**Status:** Spike — proposed promotion-ready repair text for `01-aad-core/src/def-strategy-dag.md`.
+**Status:** Spike — proposed promotion-ready repair text for `01-aat-core/src/def-strategy-dag.md`.
 **Date:** 2026-04-22
 **Source finding:** `audits/pending-findings-2026-04-22.md` Finding 13 (lines 457–482).
-**Companion material:** `spikes/spike-L1-worked-example.md` (strict-vs-soft handling at line ~276); `01-aad-core/src/example-L1.md` (already-published L1' treatment, lines 120–136); `spikes/INDEX.md` line 43.
+**Companion material:** `spikes/spike-L1-worked-example.md` (strict-vs-soft handling at line ~276); `01-aat-core/src/example-L1.md` (already-published L1' treatment, lines 120–136); `spikes/INDEX.md` line 43.
 
 ---
 
@@ -19,7 +19,7 @@ The repair has three moves:
 
 The deep-discussion paragraphs at lines 105–118 stay essentially as-is — they already do the work; the issue is their being load-bearing material that the headline overrides. The Scope sub-bullet acts as a forward-pointer so the headline cannot be read in isolation.
 
-L1' becomes a first-class label in the Correlation Hierarchy table (a fourth row), not a bullet buried in the L1 paragraph. This is consistent with `01-aad-core/src/example-L1.md` lines 130–134 and `01-aad-core/src/disc-approximation-tiering.md` line 34 already treating L1' as a named regime.
+L1' becomes a first-class label in the Correlation Hierarchy table (a fourth row), not a bullet buried in the L1 paragraph. This is consistent with `01-aat-core/src/example-L1.md` lines 130–134 and `01-aat-core/src/disc-approximation-tiering.md` line 34 already treating L1' as a named regime.
 
 ---
 
@@ -115,7 +115,7 @@ Segments that take "L1 by default" or reference the L0→L1 escalation. For each
 | `#disc-independence-audit` | lines 47, 83, 120 | Yes — "L1 augmentation" as the named repair | **Correct as-is, but check.** Line 47: "Repair operation: L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates." Under narrowing, this is the strict-prerequisite repair; soft facilitators need L1'. Recommend revising to "L1 augmentation (strict prerequisites) or L1' mixture form (soft facilitators)". Not blocking. |
 | `#disc-approximation-tiering` | lines 14, 34, 54, 71 | Mentions L0/L1/L2 trio | **Already aligned.** Line 34 row in the meta-table mentions "L1 is unbiased on augmented graph" without committing to the "default" framing. This segment never claims L1-as-default; it describes the tiering meta-pattern. Recommend the meta-table entry be updated to the four-tier hierarchy (L0/L1/L1'/L2) at next promotion to match the revised `#def-strategy-dag` table. Not blocking. |
 | `#example-L1` | lines 120–136 | No — already explicit | **Already aligned.** This segment is the canonical home of strict-vs-soft + L1' (lines 122, 130–134). The revised `#def-strategy-dag` headline now matches what this worked example already teaches. |
-| `01-aad-core/OUTLINE.md` | line 165 (approximation-tiering description), 182 (worked-example-L1 description) | No | **Correct as-is.** Recommend changing line 165 from "L0/L1/L2" to "L0/L1/L1'/L2" once the table row is promoted; cosmetic. |
+| `01-aat-core/OUTLINE.md` | line 165 (approximation-tiering description), 182 (worked-example-L1 description) | No | **Correct as-is.** Recommend changing line 165 from "L0/L1/L2" to "L0/L1/L1'/L2" once the table row is promoted; cosmetic. |
 | `02-tst-core/src/*.md` | (none reference L1 default) | n/a | **No changes needed.** TST segments depend on `#def-strategy-dag` for DAG semantics, not for the correlation hierarchy. |
 
 **Net cross-segment status.** No downstream segment is *broken* by the narrowing — all current references can be read as implicitly scoped to L1-strict, which is the case the underlying propositions actually cover. The narrowing surfaces five places where a one-line clarifying parenthetical would tighten the cross-reference: `#schema-strategy-persistence` (×2 sites), `#der-orient-cascade` (step 4c), `#der-causal-insufficiency-detection` (Step 3a insertion), `#disc-credit-assignment-boundary` (line 58), and `#disc-independence-audit` (line 47). All non-blocking; all queueable for next promotion of those segments.
@@ -132,7 +132,7 @@ After this repair:
 - **L1' formal transfer status remains "open"** — explicitly tagged in the table row ("formal transfer of L0 results through Prop B.5b is open"), in the revised headline contract ("for which the formal transfer through Prop B.5b has not been derived (open)"), and consistent with `#deriv-edge-credence-dynamics` line 513 and `#example-L1` line 134.
 - **L1' is *not* promoted to "exact"** anywhere in this spike. The only formally derived L1 result is Prop B.6 for strict prerequisites; L1' inherits per-conditional-sub-plan sector parameters but the weighted-combination layer's transfer through B.5b is unverified.
 
-This is consistent with the spike material (`spikes/spike-L1-worked-example.md` does not derive L1' formally; `01-aad-core/src/example-L1.md` line 134 explicitly notes the open status).
+This is consistent with the spike material (`spikes/spike-L1-worked-example.md` does not derive L1' formally; `01-aat-core/src/example-L1.md` line 134 explicitly notes the open status).
 
 ---
 

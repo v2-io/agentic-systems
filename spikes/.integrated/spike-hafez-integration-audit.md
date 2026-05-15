@@ -47,9 +47,9 @@
 ### Gap 4: IDT architecture as Class 2 engineering pattern
 **Hafez concept**: The Information Digital Twin monitors P and Delta-H from the (S,A,S') stream as a modular sidecar, independent of the agent's internal processing.
 **AAD connection**: `spike-kappa-topology-insight.md` identifies this as exactly the right architecture for Class 2 agents — adding modular monitoring to an internally merged system. This insight appears only as a Working Note in `directed-separation.md`.
-**Target segment**: `#der-directed-separation` Discussion section (promote from Working Note). Alternatively, the coupled-survival-analysis roadmap for `03-logogenic-agents/` should reference the IDT as a concrete architecture for the monitoring layer.
+**Target segment**: `#der-directed-separation` Discussion section (promote from Working Note). Alternatively, the coupled-survival-analysis roadmap for `03-llm-core/` should reference the IDT as a concrete architecture for the monitoring layer.
 **Integration type**: Architectural correspondence. Hafez's IDT is a concrete instantiation of the monitoring pattern AAD's theory requires for Class 2 agents.
-**Priority**: Medium. Substantive for `03-logogenic-agents/` development. The IDT validates that the modular-sidecar approach works empirically (89% vs 44% perturbation detection).
+**Priority**: Medium. Substantive for `03-llm-core/` development. The IDT validates that the modular-sidecar approach works empirically (89% vs 44% perturbation detection).
 
 ### Gap 5: Bi-predictability and the feedback loop as Level 2 access
 **Hafez concept**: P measures bidirectional coupling. The predictive asymmetry |Delta-H| > 0 is a defining condition of agency.

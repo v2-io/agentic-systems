@@ -1,6 +1,6 @@
 # FORMAT.md — Segment File Conventions
 
-How to write and maintain AAD claim segment files.
+How to write and maintain AAT claim segment files.
 
 > **No-drift discipline.** Key process terms used throughout this file are cross-linked to entries in [`terminology/entries/`](terminology/entries/). If a term's meaning changes, update both FORMAT.md and the corresponding terminology entry — they must stay in sync. Format conventions live here; concise definitions and the canonical prose vocabulary live in the entries (and are auto-rendered into [`LEXICON.md`](LEXICON.md)).
 
@@ -78,7 +78,7 @@ ASF segments carry several kinds of references: internal cross-references betwee
 
 - **intra-segment** — the reference, annotation, or content-placement targets a location inside the same segment. Footnotes / sidenotes / margin-notes operate here.
 - **intra-volume** — the reference targets a location inside the same Volume. Segment-level and atom-level cross-references operate here today.
-- **cross-volume** — the reference targets a location in a sibling Volume (AAD ↔ TST ↔ LogA ↔ ELI). Resolution depends on sibling-volume `.aux` availability; fallback rendering ensures stand-alone reading still works.
+- **cross-volume** — the reference targets a location in a sibling Volume (AAT ↔ TST ↔ LogA ↔ ELI). Resolution depends on sibling-volume `.aux` availability; fallback rendering ensures stand-alone reading still works.
 - **external** — the reference targets work outside ASF. Bibliography database is the source of truth; build-managed snapshots inside the ASF repo keep ASF self-contained for readers without access to the shared database. Self-citations and in-review citations are special cases of external citation with anonymization / status gating.
 
 **Build-managed snapshots — the self-containment principle.** External citations resolve through a build-managed snapshot mechanism: the bibliography database lives at a shared location (currently planned as `~/src/relata/` for cross-project sharing with the NeurIPS workspace), but each volume's build extracts the entries the volume actually cites into a snapshot file inside the ASF repo, and the snapshot is committed. ASF stays self-contained — a future reader can read any volume without access to the shared database. The snapshot is build-managed (regenerated whenever cited entries change); authors never hand-edit it.
@@ -95,14 +95,14 @@ Do not hard-wrap lines just to artificially impose reading width. Let renderers 
 
 - **Segment files** live in `src/` — one claim per file.
 - **Filename = slug**: `src/{slug}.md`. No numbering in filenames.
-- **Canonical ordering** lives in each component's `OUTLINE.md` (e.g., `01-aad-core/OUTLINE.md`), not in filenames. The ordering will change as the theory develops; the slug is the stable identity.
+- **Canonical ordering** lives in each component's `OUTLINE.md` (e.g., `01-aat-core/OUTLINE.md`), not in filenames. The ordering will change as the theory develops; the slug is the stable identity.
 - **Cross-references** use `#slug-name` — everywhere, always.
 
 ### Segment-set principle (load-bearing for tooling)
 
 **Every non-`old-*` file in a component's `src/` directory is a segment and conforms to the cadence below.** This holds even for drafts, missing-stage entries, or segments orphaned from `OUTLINE.md`. The various stages (`missing`, `old`, `draft`, `deps-verified`, `claims-verified`, `format-clean`, `candidate`) describe progress *within* FORMAT, not exemptions from it.
 
-The `old-*` filename prefix is the *only* mechanism for placing a file in `src/` that is exempt from FORMAT. Those are prior-work staging files; they retain their original frontmatter (often with non-AAD `type:` tokens like `Definition`, `Theorem`) until their content is converted. Tooling skips them.
+The `old-*` filename prefix is the *only* mechanism for placing a file in `src/` that is exempt from FORMAT. Those are prior-work staging files; they retain their original frontmatter (often with non-AAT `type:` tokens like `Definition`, `Theorem`) until their content is converted. Tooling skips them.
 
 Other working material — notes, drafts, READMEs, scratch — does **not** belong in `src/`. It lives in `msc/` or at the component root.
 
@@ -148,7 +148,7 @@ depends:
 | [`sketch`](terminology/entries/type-sketch.md) | Outlines an approach or framework; direction identified, rigor pending |
 | [`aside`](terminology/entries/aside.md) | Tangential observation or connection; informative but not load-bearing |
 
-**Why these labels.** The terminology emphasizes that AAD is a *theoretical framework* using existing mathematics, not a pure-mathematics unification project. `postulate` (not `axiom`), `result` (not `theorem`), and `derivation` (not `proof`) avoid the framing that AAD claims foundational mathematical originality where it does not. References to external theorems keep their original names — Cox's theorem, Causal Hierarchy Theorem, Tikhonov's theorem — these are other authors' terms and renaming them would obscure provenance. Segment headings follow suit: `### Derivation`, not `### Proof Sketch`. Equation-level tags use `*[Postulate (slug)]*` and `*[Result (slug)]*`. Historical files (`_obs/`, `msc/`) are not retroactively updated — they preserve the terminology of their era.
+**Why these labels.** The terminology emphasizes that AAT is a *theoretical framework* using existing mathematics, not a pure-mathematics unification project. `postulate` (not `axiom`), `result` (not `theorem`), and `derivation` (not `proof`) avoid the framing that AAT claims foundational mathematical originality where it does not. References to external theorems keep their original names — Cox's theorem, Causal Hierarchy Theorem, Tikhonov's theorem — these are other authors' terms and renaming them would obscure provenance. Segment headings follow suit: `### Derivation`, not `### Proof Sketch`. Equation-level tags use `*[Postulate (slug)]*` and `*[Result (slug)]*`. Historical files (`_obs/`, `msc/`) are not retroactively updated — they preserve the terminology of their era.
 
 ### `status` — epistemic strength
 
@@ -163,7 +163,7 @@ depends:
 | [`discussion-grade`](terminology/entries/discussion-grade.md) | Argued qualitatively or by analogy, not derived |
 | [`sketch`](terminology/entries/status-sketch.md) | Direction identified but formalization incomplete |
 
-Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not AAD terms.
+Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not AAT terms.
 
 ### `depends` — prerequisite slugs
 
@@ -178,8 +178,8 @@ Stage is recorded in segment frontmatter (e.g., `stage: draft`) and in the OUTLI
 | Stage | Meaning | Gate to advance |
 |-------|---------|-----------------|
 | [`missing`](terminology/entries/missing.md) | No segment file exists yet | — |
-| `old` | Content exists only as `old-*` source material, not yet converted | Write AAD-formatted version |
-| [`draft`](terminology/entries/draft.md) | First AAD-formatted version written, not yet reviewed | — |
+| `old` | Content exists only as `old-*` source material, not yet converted | Write AAT-formatted version |
+| [`draft`](terminology/entries/draft.md) | First AAT-formatted version written, not yet reviewed | — |
 | [`deps-verified`](terminology/entries/deps-verified.md) | All dependencies audited | [Dependency audit](terminology/entries/dependency-audit.md) (see below) |
 | [`claims-verified`](terminology/entries/claims-verified.md) | Content reviewed: derivations valid, labels accurate | [Content review](terminology/entries/content-review.md) (see below) |
 | [`format-clean`](terminology/entries/format-clean.md) | Mechanical review passed | [Mechanical review](terminology/entries/mechanical-review.md) (see below) |
@@ -249,7 +249,7 @@ This is a standing check rather than a gate because spike→segment compression 
 Math derived in a spike must land in a segment — never reside only in `spikes/spike-*.md`. Two destinations:
 
 1. **An existing segment**, if the new math tightens, replaces, or extends that segment's content.
-2. **A new appendix segment** (more likely for novel derivations with their own claim identity) — added to `01-aad-core/src/` (typically `appendix-*` or a similarly named slug) and recorded in `01-aad-core/OUTLINE.md` under the appendix section.
+2. **A new appendix segment** (more likely for novel derivations with their own claim identity) — added to `01-aat-core/src/` (typically `appendix-*` or a similarly named slug) and recorded in `01-aat-core/OUTLINE.md` under the appendix section.
 
 Spikes record the *attempt*, the *failed branches*, the *reasoning trail*, and pointers to where the resulting math lives. They are not the home for load-bearing derivations. The project's canonical form is the segment set: future agents and reviewers find results by looking at segments, not by archaeology through spikes; math that stays only in a spike cannot be cross-referenced, is not validated by `bin/lint-outline`, does not appear in OUTLINE.md, and is invisible to the theory.
 
@@ -337,7 +337,7 @@ When a segment carries multiple distinct findings — e.g., one segment-internal
 
 #### Field-by-field guidance
 
-**[Brief](terminology/entries/brief-field.md).** Plain-language paragraph that a thoughtful generalist could read in 30 seconds and come away with an honest sense of what this finding is. The aspiration is the **Feynman criterion** — *if you can't explain it simply, you don't understand it yet.* A genuinely good Brief reaches for the everyday physical or causal analog that carries the load-bearing structure, in language that lets a thoughtful non-specialist *re-derive the qualitative claim from the analog alone*, without ever seeing the symbols. The canonical example for AAD's central inequality is the bathtub: water level is the gap between belief and reality, faucet flow is the rate at which reality is changing, drain rate is the agent's ability to learn, and bathtub size is how wrong the agent can be while still keeping up. Structural persistence is the condition that drain-rate-at-full exceeds faucet-flow; below it the bathtub overflows. A reader who carries that picture away has the Section I result in hand without ever meeting α, ρ, or R. Reach for the analog whose physics or causal structure is *isomorphic* to the finding's load-bearing structure, not merely evocative — the test is whether a reader can predict the qualitative consequences of perturbing the analog and have those predictions hold against the formalism. Use technical language where there is no plain-language equivalent that preserves meaning, but pause to define or anchor it the first time. The Brief is consistently the most-valuable field for external adoption — it is the field that decides whether an interested reader engages further. Do not let it become a translation-of-the-Impact-paragraph; it should stand on its own.
+**[Brief](terminology/entries/brief-field.md).** Plain-language paragraph that a thoughtful generalist could read in 30 seconds and come away with an honest sense of what this finding is. The aspiration is the **Feynman criterion** — *if you can't explain it simply, you don't understand it yet.* A genuinely good Brief reaches for the everyday physical or causal analog that carries the load-bearing structure, in language that lets a thoughtful non-specialist *re-derive the qualitative claim from the analog alone*, without ever seeing the symbols. The canonical example for AAT's central inequality is the bathtub: water level is the gap between belief and reality, faucet flow is the rate at which reality is changing, drain rate is the agent's ability to learn, and bathtub size is how wrong the agent can be while still keeping up. Structural persistence is the condition that drain-rate-at-full exceeds faucet-flow; below it the bathtub overflows. A reader who carries that picture away has the Section I result in hand without ever meeting α, ρ, or R. Reach for the analog whose physics or causal structure is *isomorphic* to the finding's load-bearing structure, not merely evocative — the test is whether a reader can predict the qualitative consequences of perturbing the analog and have those predictions hold against the formalism. Use technical language where there is no plain-language equivalent that preserves meaning, but pause to define or anchor it the first time. The Brief is consistently the most-valuable field for external adoption — it is the field that decides whether an interested reader engages further. Do not let it become a translation-of-the-Impact-paragraph; it should stand on its own.
 
 The same Feynman-criterion aspiration governs framing-level prose elsewhere (README, OUTLINE preambles, paper introductions, pedagogical material). The Brief field happens to be where the aspiration is institutionalized in the schema, but the principle is general: where the framework is meeting a non-specialist reader, the load-bearing structure should be portable to an everyday analog. The bathtub gloss for `#result-persistence-condition` came not from us but from Alan Walton, a mathematician-practitioner working it out himself on first encounter; that the analog could be reconstructed by a sympathetic outside reader without our prompting is itself a useful diagnostic. Where we have not produced the analog ourselves, the segment is not yet at Feynman criterion.
 
@@ -409,7 +409,7 @@ Field ordering is fixed: Brief / Impact / Novelty Claim / Related Work / Search 
 
 ### Working Notes
 
-The `## Working Notes` section is for active development: open questions about the claim, sketches of how AAD machinery might strengthen or weaken it, unresolved issues, things to check. This is *our* working space — what we're thinking about, not what we're asserting. It should be removed or emptied when the segment reaches `candidate` stage. Unlike the Discussion section (which is part of the published theory), Working Notes are process artifacts.
+The `## Working Notes` section is for active development: open questions about the claim, sketches of how AAT machinery might strengthen or weaken it, unresolved issues, things to check. This is *our* working space — what we're thinking about, not what we're asserting. It should be removed or emptied when the segment reaches `candidate` stage. Unlike the Discussion section (which is part of the published theory), Working Notes are process artifacts.
 
 ### Voice and provenance
 
@@ -498,7 +498,7 @@ The current inevitability-core members, with why inevitability is plausible:
 | #der-chain-confidence-decay | log(product) = sum(logs). Pure algebraic identity. |
 | #result-persistence-condition | Given sector conditions, the threshold follows by Lyapunov. |
 | #result-sector-condition-stability + #deriv-sector-condition | Lyapunov stability result applied to mismatch dynamics. |
-| #result-sector-persistence-template | Abstract Lyapunov argument; six AAD results instantiate it. |
+| #result-sector-persistence-template | Abstract Lyapunov argument; six AAT results instantiate it. |
 | #result-structural-adaptation-necessity | Parametric update converges within model class; wrong class forces structural change. |
 | #der-orient-cascade | Resolution order forced by information dependency ( $M_t$ before $\Sigma_t$ before $O_t$ ). |
 | #def-satisfaction-gap / #def-control-regret | Arithmetic once $V_{\text{ideal}}, A_O, V_{\text{current}}$ are defined. Diagnostic value is the insight. |
@@ -513,7 +513,7 @@ The current inevitability-core members, with why inevitability is plausible:
 
 Current members include: #form-complete-agent-state, #form-objective-functional, #def-value-object, #def-strategy-dimension, #def-strategy-dag, #scope-and-or, #form-agent-model, #form-information-bottleneck, #form-event-driven-dynamics, #def-adaptive-tempo, #form-structural-change-as-parametric-limit, #norm-explicit-strategy-condition (normative, not derived), #form-composition-closure (operationalizes #post-composition-consistency but is one formulation among several possible ones), most definitions.
 
-**Empirical, heuristic, discussion (third ring).** Claims whose ceiling is empirical or heuristic — testable against the world but not derivable from the formalism. This is *not* a demotion: these are where AAD becomes falsifiable and useful. Review focus: stating falsifiable predictions, connecting to validation, resisting the temptation to dress empirical claims as derivations.
+**Empirical, heuristic, discussion (third ring).** Claims whose ceiling is empirical or heuristic — testable against the world but not derivable from the formalism. This is *not* a demotion: these are where AAT becomes falsifiable and useful. Review focus: stating falsifiable predictions, connecting to validation, resisting the temptation to dress empirical claims as derivations.
 
 Current members include: #emp-update-gain, #hyp-mismatch-dynamics, #hyp-edge-update-via-gain, #def-strategic-calibration, #hyp-communication-gain, #hyp-conceptual-alignment, #hyp-exponential-cognitive-load, #emp-changeset-size-principle, most TST and logogenic-agent segments, simulation observations.
 
@@ -541,8 +541,8 @@ Inline tags before equations mark their epistemic status. These follow TFT conve
 
 - **In running text**: `#slug-name` — readable, grep-able, meaningful
 - **As links from src/ files** (within the same component): `[#slug-name](slug-name.md)` (relative)
-- **As links from a component-root outline** (e.g., `01-aad-core/OUTLINE.md`): `[#slug-name](src/slug-name.md)`
-- **As links from a repo-root file** (e.g., `OUTLINE.md`, `README.md`, `LEXICON.md`): include the component prefix, e.g., `[#slug-name](01-aad-core/src/slug-name.md)`
+- **As links from a component-root outline** (e.g., `01-aat-core/OUTLINE.md`): `[#slug-name](src/slug-name.md)`
+- **As links from a repo-root file** (e.g., `OUTLINE.md`, `README.md`, `LEXICON.md`): include the component prefix, e.g., `[#slug-name](01-aat-core/src/slug-name.md)`
 
 Both forms work in GitHub and Obsidian. The plain `#slug-name` form is preferred in running prose where clickability is less important than readability.
 
@@ -553,7 +553,7 @@ Both forms work in GitHub and Obsidian. The plain `#slug-name` form is preferred
 
 ## Math Formatting
 
-AAD uses standard LaTeX math that renders in both GitHub and Obsidian.
+AAT uses standard LaTeX math that renders in both GitHub and Obsidian.
 
 - **Inline**: `$...$` — no space after opening `$`, no space before closing `$`
 - **Display**: `$$...$$` — on their own lines, blank line before and after
@@ -579,7 +579,7 @@ GitHub's math renderer is stricter than Obsidian's. To keep both working:
 
 ## Notation Conventions
 
-Follow TFT conventions. See `NOTATION.md` for AAD's symbol reference. The original TFT conventions are in `_obs/old-tf-00-notation-conventions.md`. Key points:
+Follow TFT conventions. See `NOTATION.md` for AAT's symbol reference. The original TFT conventions are in `_obs/old-tf-00-notation-conventions.md`. Key points:
 
 - **Calligraphic** ($\mathcal{M}$, $\mathcal{O}$, $\mathcal{A}$, $\mathcal{C}$, $\mathcal{E}$) for sets and spaces
 - **$\mathcal{T}$** for adaptive tempo (calligraphic to distinguish from temperature)

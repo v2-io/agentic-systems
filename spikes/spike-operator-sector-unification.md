@@ -15,7 +15,7 @@ depends:
 
 # Spike: Operator-Sector Unification Across ODE, Update Map, and Composition Map
 
-**Question.** Does a single sector-condition-on-operators abstraction unify (a) the ODE-level `#result-sector-persistence-template`, (b) the log-odds credit-assignment update operator, and (c) the composition (coarse-graining) map between agents? If yes, the A2'/DA2' α/β partition becomes a property of *operators*, not plants — a fundamental simplification of AAD's load-bearing machinery.
+**Question.** Does a single sector-condition-on-operators abstraction unify (a) the ODE-level `#result-sector-persistence-template`, (b) the log-odds credit-assignment update operator, and (c) the composition (coarse-graining) map between agents? If yes, the A2'/DA2' α/β partition becomes a property of *operators*, not plants — a fundamental simplification of AAT's load-bearing machinery.
 
 **Outcome (up front).** Partial unification. The continuous template and the discrete update machinery share a genuine common structure — both are instances of monotone-operator contraction in a Hilbert-space setting, and A2'/DA2' are exactly the one-point reduction (resp. two-point "incremental" form) of a *strongly monotone operator* condition in the sense of Rockafellar / Bauschke-Combettes. This is the substance of the unification, not just the typography. The composition map, however, plugs into this framework only *after* the bridge-lemma's DA2'-inc condition is imposed on the composite's discrete macro-update; it does not independently motivate the operator-sector primitive. **The honest result is a 2-instance-plus-1-consequence picture**, not a 3-instance symmetric theorem. Sub-scope α/β re-expresses cleanly as an operator-family classification — this part is load-bearing.
 
@@ -23,7 +23,7 @@ depends:
 
 *[Definition (operator-sector primitive, tentative)]*
 
-Let $\mathcal H$ be a real Hilbert space with inner product $\langle\cdot,\cdot\rangle$ and induced norm $\lVert\cdot\rVert$. A (possibly nonlinear) single-valued operator $T : \mathcal D \subseteq \mathcal H \to \mathcal H$ with fixed point $x^\ast \in \mathcal D$ (i.e., $T x^\ast = x^\ast$) satisfies the **AAD operator-sector condition with parameters $(\kappa, R)$** on a ball $\mathcal B_R(x^\ast) = \{x \in \mathcal H : \lVert x - x^\ast\rVert \leq R\}$ iff
+Let $\mathcal H$ be a real Hilbert space with inner product $\langle\cdot,\cdot\rangle$ and induced norm $\lVert\cdot\rVert$. A (possibly nonlinear) single-valued operator $T : \mathcal D \subseteq \mathcal H \to \mathcal H$ with fixed point $x^\ast \in \mathcal D$ (i.e., $T x^\ast = x^\ast$) satisfies the **AAT operator-sector condition with parameters $(\kappa, R)$** on a ball $\mathcal B_R(x^\ast) = \{x \in \mathcal H : \lVert x - x^\ast\rVert \leq R\}$ iff
 
 $$\langle (I - T)(x), x - x^\ast \rangle \geq \kappa \lVert x - x^\ast\rVert^2 \quad \text{for all } x \in \mathcal B_R(x^\ast).$$
 
@@ -144,11 +144,11 @@ Persistence (ultimate bound within $\mathcal B_R$) holds when $\rho_{\text{step}
 
 **Proof sketch.** Apply Bauschke-Combettes Thm 5.14 (averaged operators) in the iteration. The operator $T$ is $\kappa$-strongly monotone at $x^\ast$ under the one-point form; combined with $L$-Lipschitz, a rescaled $T_\theta$ is a Banach contraction with rate $\lambda_{\text{eff}}$. The perturbed iteration then has the stated ultimate bound by the standard affine-contraction argument (Elaydi 2005, Thm 4.14; appears in #deriv-discrete-sector-condition Prop DA.1 proof for the Euclidean case). The continuous-time limit substitutes the infinitesimal-generator relation derived in §2.1. Model S follows via Itô's formula (continuous) or martingale increments (discrete), matching the proofs in #deriv-sector-condition Prop A.1S and #deriv-discrete-sector-condition Prop DA.1S. $\square$
 
-**Epistemic status of the theorem:** exact (mathematical), under the stated conditions. But its novelty relative to existing literature is thin — it is essentially *Banach fixed-point theorem + perturbation* for a strongly monotone operator, which is standard in Rockafellar 1970, Bauschke-Combettes 2017 Thm 5.14–5.16, and every textbook on variational analysis. The AAD contribution is not a new theorem but a unifying **viewpoint**: the template, the discrete update, and the edge update are all the same theorem in three Hilbert-space settings.
+**Epistemic status of the theorem:** exact (mathematical), under the stated conditions. But its novelty relative to existing literature is thin — it is essentially *Banach fixed-point theorem + perturbation* for a strongly monotone operator, which is standard in Rockafellar 1970, Bauschke-Combettes 2017 Thm 5.14–5.16, and every textbook on variational analysis. The AAT contribution is not a new theorem but a unifying **viewpoint**: the template, the discrete update, and the edge update are all the same theorem in three Hilbert-space settings.
 
 ### 3.2 The substance-versus-typography question
 
-**Do all three (B1, B2, B3) AAD state-variable instances share substance, or only shape?**
+**Do all three (B1, B2, B3) AAT state-variable instances share substance, or only shape?**
 
 Here I must be rigorous. The claim "they share a theorem" would be weakened to "they share a theorem's shape" unless the theorem's *proof* — its actual argumentative content — is the same across instances. Checking:
 
@@ -157,7 +157,7 @@ Here I must be rigorous. The claim "they share a theorem" would be weakened to "
 - **Instance B' (edge update).** The proof requires linearizing the sigmoid readout, choosing the Fisher-weighted inner product (or componentwise decomposition), and then invoking Banach contraction in that inner product. **The operator-sector primitive captures the linearized form exactly in the Fisher-weighted inner product.** Beyond linearization, the nonlinear global result requires more machinery — the componentwise Prop B.5b case is pure operator-sector; the coupled Prop B.6 case requires regime-aware weighting (Fisher metric or Prop B.7 five-way gating). ✓ substance-shared under the componentwise/linearized case; partial for the coupled case.
 - **Instance C (composite update).** Same structure as Instance B but on the composite's state space. ✓ substance-shared with B.
 
-**The common substance is: a fixed-point anchor + one-point (or incremental) strong monotonicity + Lipschitz (for discrete) ⇒ contraction + ultimate-bound under perturbation.** This is the monotone-operator / Banach-fixed-point pipeline (Rockafellar 1970, Bauschke-Combettes 2017, Parikh-Boyd 2014). AAD's contribution is recognizing that the sector condition (A2'/DA2') is the one-point reduction of strong monotonicity at the equilibrium, with an optional incremental-form strengthening when full two-point strong monotonicity is available.
+**The common substance is: a fixed-point anchor + one-point (or incremental) strong monotonicity + Lipschitz (for discrete) ⇒ contraction + ultimate-bound under perturbation.** This is the monotone-operator / Banach-fixed-point pipeline (Rockafellar 1970, Bauschke-Combettes 2017, Parikh-Boyd 2014). AAT's contribution is recognizing that the sector condition (A2'/DA2') is the one-point reduction of strong monotonicity at the equilibrium, with an optional incremental-form strengthening when full two-point strong monotonicity is available.
 
 ### 3.3 What the unification does NOT cover
 
@@ -223,13 +223,13 @@ Standard closure results (Bauschke-Combettes 2017 §4, §25; Rockafellar-Wets 19
 
 **(C1) Parallel composition (product).** $T_1 \times T_2$ on $\mathcal H_1 \times \mathcal H_2$ (product Hilbert space with inner product $\langle (x,y), (x',y') \rangle = \langle x,x' \rangle_{\mathcal H_1} + \langle y,y' \rangle_{\mathcal H_2}$). Operator-sector-inc with $\kappa = \min(\kappa_1, \kappa_2)$, same $R$. **Weakest-link** structure — recovers #der-team-persistence's weakest-link bound $\alpha_c \geq \min_i \alpha_i$ from the monotone-operator literature directly.
 
-**(C2) Sequential composition (cascade).** For gradient operators $T_i = I - \eta \nabla f_i$ on the same space $\mathcal H$: $T_2 \circ T_1$ is *not* in general strongly monotone with a clean rate — the composition is only guaranteed to be nonexpansive (rate 1) unless additional structure is imposed. However, for proximal operators, the **Douglas-Rachford / Peaceman-Rachford / ADMM** splitting theorems (Bauschke-Combettes 2017 §26–28) give operator-sector rates for specific cascade structures. For AAD: this is why sequential multi-step dynamics generally require the incremental form (DA2'-inc) rather than just one-point.
+**(C2) Sequential composition (cascade).** For gradient operators $T_i = I - \eta \nabla f_i$ on the same space $\mathcal H$: $T_2 \circ T_1$ is *not* in general strongly monotone with a clean rate — the composition is only guaranteed to be nonexpansive (rate 1) unless additional structure is imposed. However, for proximal operators, the **Douglas-Rachford / Peaceman-Rachford / ADMM** splitting theorems (Bauschke-Combettes 2017 §26–28) give operator-sector rates for specific cascade structures. For AAT: this is why sequential multi-step dynamics generally require the incremental form (DA2'-inc) rather than just one-point.
 
 **(C3) Feedback (fixed-point coupling).** $T(x) = F(x, G(x))$ where $G$ is another agent's update — operator-sector-inc with rate $\kappa_1 - L_2 \gamma$ under Lipschitz $L_2$ of $G$ and coupling strength $\gamma$. This **recovers #der-adversarial-destabilization's coupling-amplified-disturbance formula $\rho_B = \rho_{B,\text{base}} + \gamma_A \mathcal T_A$** when $G$ is an adversary injecting disturbance through its own correction rate.
 
 **(C4) Averaged operators.** $T_\theta = (1 - \theta) I + \theta T$ for $\theta \in (0, 1)$ — preserves operator-sector with $\kappa_\theta = \theta \kappa$. The averaging pipeline is how most practical update operators (exponential smoothing, Polyak averaging, SGD with momentum) satisfy operator-sector even when the base $T$ does not.
 
-### 5.2 How this recovers AAD closure results
+### 5.2 How this recovers AAT closure results
 
 **Team persistence** ( #der-team-persistence): each sub-agent's update is an operator-sector operator on its own state space. Parallel composition (C1) gives composite operator-sector with rate $\min_i \alpha_i$. Cooperative coupling reduces the effective disturbance, not the composite rate — this matches #der-team-persistence's structure of "weakest-link $\alpha_c$, cooperative coupling reduces $\rho_c^{\text{eff}}$".
 
@@ -239,9 +239,9 @@ Standard closure results (Bauschke-Combettes 2017 §4, §25; Rockafellar-Wets 19
 
 **The composition-closure bridge lemma** ( #form-composition-closure): the macro-update $T_c$ satisfies operator-sector-inc iff DA2'-inc holds; the trajectory error $e_m$ lives in a space where $T_c$ is the operator; the closure defect $\varepsilon^\ast \nu_c$ is the effective disturbance. The bridge lemma *is* the operator-sector Lyapunov theorem applied to $T_c$ with an externally-specified disturbance rate.
 
-**Assessment.** Monotone-operator closure theory recovers AAD's closure results for composition as special cases, and names several AAD heuristics (weakest-link, coupling-amplified-disturbance) as instances of general closure theorems. This is a genuine gain — not just cosmetic, because the closure theory supplies the *conditions* under which the closure holds (proximal vs. gradient-only; Lipschitz $\lt 2/\kappa$; averaging factor $\theta$).
+**Assessment.** Monotone-operator closure theory recovers AAT's closure results for composition as special cases, and names several AAT heuristics (weakest-link, coupling-amplified-disturbance) as instances of general closure theorems. This is a genuine gain — not just cosmetic, because the closure theory supplies the *conditions* under which the closure holds (proximal vs. gradient-only; Lipschitz $\lt 2/\kappa$; averaging factor $\theta$).
 
-## 6. Monotone-Operator Lineage: What AAD Adds
+## 6. Monotone-Operator Lineage: What AAT Adds
 
 ### 6.1 What monotone-operator theory already has
 
@@ -254,23 +254,23 @@ Monotone-operator theory (Minty 1962; Browder 1968; Rockafellar 1970; Bauschke-C
 - **Operator splittings.** Douglas-Rachford, forward-backward, ADMM — closure rates for composites.
 - **Variational inequalities.** $\langle A(x), y - x \rangle \geq 0$ for $y \in C$.
 
-All of §2, §3, §5 above is reconstructable from this corpus — AAD's sector-condition framework *is* a specialization of monotone-operator theory to one-point anchoring + Lipschitz.
+All of §2, §3, §5 above is reconstructable from this corpus — AAT's sector-condition framework *is* a specialization of monotone-operator theory to one-point anchoring + Lipschitz.
 
-### 6.2 What AAD adds that the monotone-operator literature doesn't
+### 6.2 What AAT adds that the monotone-operator literature doesn't
 
-This is the key question for the spike's honest assessment. AAD adds:
+This is the key question for the spike's honest assessment. AAT adds:
 
-**(i) The one-point-at-fixed-point anchoring as a strictly weaker, but sufficient, form.** The standard monotone-operator literature works with full (two-point) strong monotonicity. AAD's A2' uses the one-point form at the target. The gap matters because agents in sub-scope β (PID, rule-based) *can* satisfy one-point strong monotonicity at the equilibrium without being fully monotone everywhere — a non-trivial enlargement of the usable class. The one-point form is anchored in AAD's physical semantics (at the target, there is no mismatch, so there is no correction), not in the generic mathematical structure.
+**(i) The one-point-at-fixed-point anchoring as a strictly weaker, but sufficient, form.** The standard monotone-operator literature works with full (two-point) strong monotonicity. AAT's A2' uses the one-point form at the target. The gap matters because agents in sub-scope β (PID, rule-based) *can* satisfy one-point strong monotonicity at the equilibrium without being fully monotone everywhere — a non-trivial enlargement of the usable class. The one-point form is anchored in AAT's physical semantics (at the target, there is no mismatch, so there is no correction), not in the generic mathematical structure.
 
-**(ii) Disturbance decomposition (Model D / Model S) as first-class.** The monotone-operator literature has perturbation theorems (Fazel et al. 2018; Ben-Tal-Nemirovski 2002 robust optimization), but the systematic division between bounded-adversarial and stochastic-zero-mean disturbance (with different scaling in $\alpha$: $1/\alpha$ vs. $1/\sqrt\alpha$) is not standard — it is AAD's contribution. This scaling difference propagates to the adversarial exponent regimes ( #result-adversarial-exponent-regimes: $b=2$ vs $b=3/2$) and is genuinely novel as a *framework* even if the individual Lyapunov bounds are standard.
+**(ii) Disturbance decomposition (Model D / Model S) as first-class.** The monotone-operator literature has perturbation theorems (Fazel et al. 2018; Ben-Tal-Nemirovski 2002 robust optimization), but the systematic division between bounded-adversarial and stochastic-zero-mean disturbance (with different scaling in $\alpha$: $1/\alpha$ vs. $1/\sqrt\alpha$) is not standard — it is AAT's contribution. This scaling difference propagates to the adversarial exponent regimes ( #result-adversarial-exponent-regimes: $b=2$ vs $b=3/2$) and is genuinely novel as a *framework* even if the individual Lyapunov bounds are standard.
 
-**(iii) The identifiability-floor connection.** Operator-sector gives you a contraction rate $\kappa$ assuming the operator is well-defined. But whether $\iota_k \gt 0$ (Regime A), $\iota_k \in (0,1)$ (Regime B), or $\iota_k = 0$ (Regime C) is an *identifiability* question, not an operator-sector question. AAD's combination of operator-sector (dynamics) + identifiability-floor (information-theoretic no-go) is the substantive move; monotone-operator theory alone does not supply this second axis.
+**(iii) The identifiability-floor connection.** Operator-sector gives you a contraction rate $\kappa$ assuming the operator is well-defined. But whether $\iota_k \gt 0$ (Regime A), $\iota_k \in (0,1)$ (Regime B), or $\iota_k = 0$ (Regime C) is an *identifiability* question, not an operator-sector question. AAT's combination of operator-sector (dynamics) + identifiability-floor (information-theoretic no-go) is the substantive move; monotone-operator theory alone does not supply this second axis.
 
-**(iv) Composition consistency and scope condition.** The requirement that the operator-sector structure applies at every level of description that satisfies the scope condition ( #scope-agency, #post-composition-consistency) is not part of the monotone-operator literature — it is AAD's postulate. The operator-family classification enables the consistency argument; monotone-operator theory by itself is indifferent to whether the operator lives at the agent level or the composite level.
+**(iv) Composition consistency and scope condition.** The requirement that the operator-sector structure applies at every level of description that satisfies the scope condition ( #scope-agency, #post-composition-consistency) is not part of the monotone-operator literature — it is AAT's postulate. The operator-family classification enables the consistency argument; monotone-operator theory by itself is indifferent to whether the operator lives at the agent level or the composite level.
 
 **(v) The sub-scope α/β partition.** Monotone-operator theory classifies operators by structural properties (proximal, gradient, cocoercive, firmly nonexpansive), but does not distinguish "operator-sector by construction" from "operator-sector by empirical verification." The α/β labeling is *epistemic*, not mathematical — it tracks which classes of real-world systems give operator-sector structurally vs. as a modeling assumption. This is a scope-honesty move (per CLAUDE.md §7(a)), not a mathematical one.
 
-**Net assessment.** AAD is a specialization + repurposing of monotone-operator theory, not a strict generalization. The AAD-distinctive content is (i) the one-point anchoring (strictly weaker than full strong monotonicity, matched to the fixed-point-at-target semantics), (ii) the Model D / Model S decomposition, (iii) the composition with the identifiability-floor, (iv) the composition-consistency postulate, and (v) the sub-scope labeling. The monotone-operator literature supplies the mathematical machinery; AAD supplies the epistemic architecture and the particular sector-condition anchoring.
+**Net assessment.** AAT is a specialization + repurposing of monotone-operator theory, not a strict generalization. The AAT-distinctive content is (i) the one-point anchoring (strictly weaker than full strong monotonicity, matched to the fixed-point-at-target semantics), (ii) the Model D / Model S decomposition, (iii) the composition with the identifiability-floor, (iv) the composition-consistency postulate, and (v) the sub-scope labeling. The monotone-operator literature supplies the mathematical machinery; AAT supplies the epistemic architecture and the particular sector-condition anchoring.
 
 ## 7. Coupling to Gap A (Correlated-Failure Signal Function)
 
@@ -321,7 +321,7 @@ The operator-sector framing partially addresses this:
 
 **Substance vs. typography.** In an honest reading, the unification unifies the *substance of stability* (the Lyapunov argument) and *the substance of composition* (closure theorems) across ODE/discrete/edge instances, but does not unify the *substance of identifiability* or the *substance of coarse-graining*. The result is an organizational clarification, not a new mathematical theorem.
 
-**Danger avoided:** stating this as "AAD is monotone-operator theory applied to agent dynamics" would overclaim the unification (ignoring identifiability, regime-indexing, composition consistency) and underclaim AAD's framing contribution (the epistemic architecture). The honest framing is: **operator-sector is a shared primitive for AAD's dynamical content; it does not subsume AAD's epistemic content.**
+**Danger avoided:** stating this as "AAT is monotone-operator theory applied to agent dynamics" would overclaim the unification (ignoring identifiability, regime-indexing, composition consistency) and underclaim AAT's framing contribution (the epistemic architecture). The honest framing is: **operator-sector is a shared primitive for AAT's dynamical content; it does not subsume AAT's epistemic content.**
 
 ## 10. Landing Map
 
@@ -335,7 +335,7 @@ Elevate the operator-sector primitive to a new appendix meta-segment that:
 - Recasts the A2'/DA2' α/β partition as operator-family classification (§4).
 - Documents what is NOT unified (projection $\Lambda$, identifiability-floor, regime-indexing) and cross-references the relevant other meta-segments.
 
-This meta-segment sits alongside `#disc-separability-pattern`, `#disc-identifiability-floor`, `#additive-coordinate-forcing` as a fourth AAD meta-pattern — it is AAD's *geometric* meta-pattern, complementary to the separability (positive-half scope), identifiability (negative half), and additive-coordinate (constructive half) meta-patterns.
+This meta-segment sits alongside `#disc-separability-pattern`, `#disc-identifiability-floor`, `#additive-coordinate-forcing` as a fourth AAT meta-pattern — it is AAT's *geometric* meta-pattern, complementary to the separability (positive-half scope), identifiability (negative half), and additive-coordinate (constructive half) meta-patterns.
 
 **Proposed slug:** `#operator-sector-template` or `#operator-sector-geometry`.
 
@@ -345,7 +345,7 @@ This meta-segment sits alongside `#disc-separability-pattern`, `#disc-identifiab
 - `#additive-coordinate-forcing` — coordinate choice (the constructive half).
 - `#operator-sector-template` — geometric unification of the dynamics (the *mechanism* half).
 
-The four meta-segments name AAD's cross-sectional structure: *where* it applies (separability), *what* it cannot reach without information augmentation (identifiability-floor), *which coordinates* are forced (additive-coordinate-forcing), and *by what geometric mechanism* it corrects within scope (operator-sector-template).
+The four meta-segments name AAT's cross-sectional structure: *where* it applies (separability), *what* it cannot reach without information augmentation (identifiability-floor), *which coordinates* are forced (additive-coordinate-forcing), and *by what geometric mechanism* it corrects within scope (operator-sector-template).
 
 ### 10.2 Alternative: minimal landing — edits to existing segments
 
@@ -363,7 +363,7 @@ These edits would close the loop without requiring a new meta-segment; the trade
 If the unification's "not-a-new-theorem" character feels insufficient for a meta-segment, park this spike as a positional document (like `spike-active-inference-vs-aad.md` and `spike-kappa-synthesis.md`) that:
 
 - Records the monotone-operator lineage for future reference.
-- Serves as the source for any "what is AAD's relationship to monotone-operator theory?" question from reviewers.
+- Serves as the source for any "what is AAT's relationship to monotone-operator theory?" question from reviewers.
 - Remains available as the source when the framework needs the unifying viewpoint (e.g., writing an intro for the paper).
 
 ### 10.4 Sibling-spike coordination
@@ -385,7 +385,7 @@ This spike is the *organizing* spike for the operator-sector framework; the two 
 
 - Operator-sector primitive is well-defined and covers the ODE semigroup (Instance A), discrete update map (Instance B), and composite macro-update (Instance C' — the macro dynamics *after* projection).
 - The A2'/DA2' α/β partition recasts cleanly as an operator-family classification (§4). Sub-scope α is exactly the proximal/cocoercive/firmly-nonexpansive class. This is a load-bearing simplification.
-- Closure results for composition (weakest-link, cascade, feedback, averaging) recover from Bauschke-Combettes §4 and §25–28 as special cases, giving AAD access to a much larger existing theorem library than is currently cited.
+- Closure results for composition (weakest-link, cascade, feedback, averaging) recover from Bauschke-Combettes §4 and §25–28 as special cases, giving AAT access to a much larger existing theorem library than is currently cited.
 - The operator-sector framing names Tier 1/2/3 of the bridge lemma as exactly "strongly-monotone globally / locally / not in any natural inner product," giving Gap B a clear structure.
 
 **What did not succeed:**
@@ -395,7 +395,7 @@ This spike is the *organizing* spike for the operator-sector framework; the two 
 - The correlation hierarchy is orthogonal.
 - The derivation of specific $\kappa$ values requires instance-specific plant structure; operator-sector tells us the structure exists, not its value.
 
-**Overall.** The unification is **genuine in the dynamics half of AAD** (operator-sector is the common geometric primitive for A2'/DA2' and their instances) and **explicitly not a unification** in the identifiability/coarse-graining half. This is not a strictly-ambitious 3-instance theorem but a 2-instance-plus-1-consequence organizational clarification. The honest payoff is the recasting of sub-scope α/β as operator-family classification (§4), the composition-closure connection (§5), and the geometric naming of Tier 1/2/3 (§8). These are the load-bearing gains.
+**Overall.** The unification is **genuine in the dynamics half of AAT** (operator-sector is the common geometric primitive for A2'/DA2' and their instances) and **explicitly not a unification** in the identifiability/coarse-graining half. This is not a strictly-ambitious 3-instance theorem but a 2-instance-plus-1-consequence organizational clarification. The honest payoff is the recasting of sub-scope α/β as operator-family classification (§4), the composition-closure connection (§5), and the geometric naming of Tier 1/2/3 (§8). These are the load-bearing gains.
 
 ### Claim tiers
 
@@ -409,8 +409,8 @@ This spike is the *organizing* spike for the operator-sector framework; the two 
 | Macro-update $T_c$ (Instance C') satisfies operator-sector-inc under DA2'-inc (§2.3) | Proved (direct from #form-composition-closure bridge-lemma) |
 | Unifying theorem (§3.1) is standard monotone-operator Lyapunov + perturbation result | Exact (but not novel — Bauschke-Combettes 2017 Thm 5.14–5.16) |
 | Sub-scope α/β recasts cleanly as operator-family classification (§4) | Derived (exact mapping between current plant-based list and operator-family labels) |
-| Closure results (weakest-link, cascade, feedback, averaged) recover AAD composition from Bauschke-Combettes §4, §25–28 (§5) | Derived (direct citation to existing theorems) |
-| AAD-distinctive content over monotone-operator theory: one-point anchoring, Model D/S decomposition, identifiability-floor composition, composition-consistency, α/β labeling (§6) | Discussion-grade (positional claim about what AAD contributes) |
+| Closure results (weakest-link, cascade, feedback, averaged) recover AAT composition from Bauschke-Combettes §4, §25–28 (§5) | Derived (direct citation to existing theorems) |
+| AAT-distinctive content over monotone-operator theory: one-point anchoring, Model D/S decomposition, identifiability-floor composition, composition-consistency, α/β labeling (§6) | Discussion-grade (positional claim about what AAT contributes) |
 | Fisher-whitened operator-sector handles L1' observable-$C$ case cleanly (§7) | Heuristic (needs verification against Prop B.7's five-way gating) |
 | Tier 1/2/3 of bridge lemma = globally-/locally-/non-strongly-monotone (§8) | Derived (re-statement of existing tier structure) |
 | Tier 3 extension via Bregman-divergence monotonicity or mirror-descent geometry is viable (§8) | Hypothesis (open research program) |
@@ -442,4 +442,4 @@ Max attainable for this spike's content: **exact for §1–§5 (operator-sector 
 - Parikh, N., & Boyd, S. (2014). "Proximal algorithms." *Foundations and Trends in Optimization* 1(3), 127–239. Practical monotone-operator pipeline.
 - Elaydi, S. (2005). *An Introduction to Difference Equations* (3rd ed.). Springer. Thm 4.14 (Banach-fixed-point for affine contractions).
 
-AAD cross-references used throughout: #result-sector-persistence-template, #deriv-sector-condition, #der-gain-sector-bridge, #deriv-discrete-sector-condition, #disc-credit-assignment-boundary, #deriv-edge-update-natural-parameter, #form-composition-closure, #deriv-edge-credence-dynamics, #disc-identifiability-floor, #disc-separability-pattern, #additive-coordinate-forcing, #der-team-persistence, #der-adversarial-destabilization, #deriv-critical-mass-composition, #result-unity-closure-mapping, #disc-compression-operations.
+AAT cross-references used throughout: #result-sector-persistence-template, #deriv-sector-condition, #der-gain-sector-bridge, #deriv-discrete-sector-condition, #disc-credit-assignment-boundary, #deriv-edge-update-natural-parameter, #form-composition-closure, #deriv-edge-credence-dynamics, #disc-identifiability-floor, #disc-separability-pattern, #additive-coordinate-forcing, #der-team-persistence, #der-adversarial-destabilization, #deriv-critical-mass-composition, #result-unity-closure-mapping, #disc-compression-operations.

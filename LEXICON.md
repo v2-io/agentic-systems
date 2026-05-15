@@ -18,7 +18,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
-| **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
+| **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAT actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
 | **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 | **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
 | **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
@@ -30,11 +30,11 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
+| **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAT by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
-| **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAD-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAD-native quantities. |
+| **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAT-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAT-native quantities. |
 | **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
 | **[Teleological-unity uncertainty](terminology/entries/teleological-unity-uncertainty.md)** | $U_{\text{align},ji}$ | Agent $i$'s uncertainty about whether $j$'s communications serve $i$'s interests or $j$'s potentially conflicting objectives — uncertainty about $U_O$. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
@@ -85,7 +85,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Model class fitness](terminology/entries/model-class-fitness.md)** | $\mathcal{F}$ | Best achievable sufficiency within the model class ($\mathcal{F} \in [0,1]$). |
 | **[Model sufficiency](terminology/entries/model-sufficiency.md)** | $S$ | How well the current model captures predictive information ($S \in [0,1]$). |
 | **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot{R}_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
-| **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAD-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAD-native quantities. |
+| **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAT-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAT-native quantities. |
 | **[Satisfaction gap](terminology/entries/satisfaction-gap.md)** | $\delta_{\text{sat}}$ | Ideal outcome minus best achievable — "the world doesn't permit it." |
 | **[Strategic Tempo](terminology/entries/strategic-tempo.md)** | $\mathcal{T}_\Sigma$ | The effective rate at which an agent revises its strategy — the sum of per-edge correction capacities weighted by causal identifiability. |
 | **[Strategy DAG](terminology/entries/strategy-dag.md)** | $\Sigma_t = (V_t, E_t, p_t, \gamma_t)$ | The agent's causal plan — a directed acyclic graph whose edges carry the agent's credence that completing one step advances the next. |
@@ -124,7 +124,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 | **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
-| **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
+| **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAT's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 
 ### Persistence
 
@@ -138,7 +138,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Axiomatic](terminology/entries/axiomatic.md)** |  | An epistemic status: foundational or tautological — true by definition or stipulation, not by derivation. |
-| **[Inevitability core](terminology/entries/inevitability-core.md)** |  | The ~15 AAD segments where the goal is mathematical inevitability — given the prior objects, this is the only compatible form. |
+| **[Inevitability core](terminology/entries/inevitability-core.md)** |  | The ~15 AAT segments where the goal is mathematical inevitability — given the prior objects, this is the only compatible form. |
 | **[Canonical formulations ring](terminology/entries/canonical-formulations-ring.md)** |  | The second ring — segments whose form is well-motivated but not uniquely forced; at least one alternative formulation would also fit the prior objects. |
 | **[Exact](terminology/entries/exact.md)** |  | An epistemic status: mathematically validated under stated assumptions — the derivation closes. |
 | **[Empirical/heuristic/discussion ring](terminology/entries/empirical-heuristic-discussion-ring.md)** |  | The third ring — segments whose ceiling is empirical or heuristic; testable against the world but not derivable from the formalism alone. |
@@ -208,7 +208,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Missing](terminology/entries/missing.md)** |  | A segment stage: no segment file exists yet — the slot is claimed in OUTLINE.md but the file has not been written. |
-| **[Draft](terminology/entries/draft.md)** |  | A segment stage: first AAD-formatted version written, not yet reviewed through any gate. |
+| **[Draft](terminology/entries/draft.md)** |  | A segment stage: first AAT-formatted version written, not yet reviewed through any gate. |
 | **[Deps-Verified](terminology/entries/deps-verified.md)** |  | A segment stage: all dependencies have been audited and confirmed correct — reached by passing Gate 1. |
 | **[Claims-Verified](terminology/entries/claims-verified.md)** |  | A segment stage: content reviewed — derivations valid, labels accurate, no known issues with formal expressions — reached by passing Gate 2. |
 | **[Format-Clean](terminology/entries/format-clean.md)** |  | A segment stage: all mechanical checks pass — linter, cross-references, notation, math rendering — reached by passing Gate 3. |
@@ -276,7 +276,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
-| **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAD actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
+| **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAT actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
 
 
 ## Structural Concepts
@@ -290,7 +290,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Adversarial destabilization](terminology/entries/adversarial-destabilization.md)** | $\mathcal{T}_A > \Delta\rho^\ast_B / \gamma_A$ | When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
 | **[Change investment](terminology/entries/change-investment.md)** |  | Accept higher upfront implementation cost when amortized savings across expected future changes exceed it. |
-| **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAD by embedding it in an external scaffold whose type signatures enforce directed separation. |
+| **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAT by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
@@ -307,8 +307,8 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
 | **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot{R}_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
-| **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAD's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
-| **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAD-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAD-native quantities. |
+| **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAT's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
+| **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAT-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAT-native quantities. |
 | **[Sector condition](terminology/entries/sector-condition.md)** |  | Nonlinear correction guarantee enabling Lyapunov stability analysis. |
 | **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
 | **[Strategic Tempo](terminology/entries/strategic-tempo.md)** | $\mathcal{T}_\Sigma$ | The effective rate at which an agent revises its strategy — the sum of per-edge correction capacities weighted by causal identifiability. |
@@ -325,4 +325,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-05-11 from 140 entries._
+_Last rendered 2026-05-15 from 140 entries._

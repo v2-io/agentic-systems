@@ -8,8 +8,8 @@ layer: framing-vocabulary
 status: canon
 tags: [cycle_phases]
 source_type: asf
-primary_source: 01-aad-core/src/scope-adaptive-system.md
-first_asf_mention: 01-aad-core/src/scope-adaptive-system.md
+primary_source: 01-aat-core/src/scope-adaptive-system.md
+first_asf_mention: 01-aat-core/src/scope-adaptive-system.md
 see_also: [loop, prolepsis, aisthesis, aporia, epistrophe, praxis]
 aliases: []
 do_not_confuse: []
@@ -20,5 +20,5 @@ One complete traversal of the [loop](loop.md): prolepsis → aisthesis → apori
 event in which the model can be updated and an action chosen on its basis.
 
 See
-[`#scope-adaptive-system`](../../01-aad-core/src/scope-adaptive-system.md) for
+[`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md) for
 the cycle as the operational unit of an adaptive system.

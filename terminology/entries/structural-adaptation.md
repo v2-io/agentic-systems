@@ -8,8 +8,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/result-structural-adaptation-necessity.md
-first_asf_mention: 01-aad-core/src/result-structural-adaptation-necessity.md
+primary_source: 01-aat-core/src/result-structural-adaptation-necessity.md
+first_asf_mention: 01-aat-core/src/result-structural-adaptation-necessity.md
 see_also: [model-sufficiency, model-class-fitness, mismatch]
 aliases: []
 do_not_confuse: []
@@ -25,4 +25,4 @@ ordinary adaptive cycle operates on $M_t$; structural adaptation operates on
 $\mathcal{M}$.
 
 Derived in
-[`#result-structural-adaptation-necessity`](../../01-aad-core/src/result-structural-adaptation-necessity.md).
+[`#result-structural-adaptation-necessity`](../../01-aat-core/src/result-structural-adaptation-necessity.md).

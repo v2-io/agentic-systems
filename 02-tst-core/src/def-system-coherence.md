@@ -30,7 +30,7 @@ Definitional. Coherence is the dual of #def-system-coupling: coupling measures c
 
 Coherence captures whether a module's internal organization matches its usage patterns. A module with high coherence groups code that changes together, so features that touch the module require understanding only a localized portion. This reduces the $M_t$ construction cost ( #def-comprehension-time) for the agent.
 
-The classic "high cohesion, low coupling" principle in software engineering is the conjunction of high #def-system-coherence and low #def-system-coupling. AAD provides the *why*: high coherence reduces per-feature comprehension cost (fewer context switches), low coupling reduces per-feature changeset size (fewer modules touched). Both minimize total time under #post-temporal-optimality.
+The classic "high cohesion, low coupling" principle in software engineering is the conjunction of high #def-system-coherence and low #def-system-coupling. AAT provides the *why*: high coherence reduces per-feature comprehension cost (fewer context switches), low coupling reduces per-feature changeset size (fewer modules touched). Both minimize total time under #post-temporal-optimality.
 
 ## Working Notes
 

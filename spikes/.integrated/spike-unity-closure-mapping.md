@@ -4,7 +4,7 @@
 
 **Date**: 2026-04-20
 
-**Motivation**: `01-aad-core/src/def-unity-dimensions.md` states "high $U_M$ predicts low $\varepsilon_x$" etc. but admits "the mapping from unity to closure error is not yet formalized." This spike formalizes the mapping in the linear-Gaussian case and — critically — reveals that the correct statement is *not* a direct correspondence but a **rate-distortion relation**: unity dimensions control the *compressibility* of their corresponding state components, which determines the closure-defect curve as projection aggressiveness varies.
+**Motivation**: `01-aat-core/src/def-unity-dimensions.md` states "high $U_M$ predicts low $\varepsilon_x$" etc. but admits "the mapping from unity to closure error is not yet formalized." This spike formalizes the mapping in the linear-Gaussian case and — critically — reveals that the correct statement is *not* a direct correspondence but a **rate-distortion relation**: unity dimensions control the *compressibility* of their corresponding state components, which determines the closure-defect curve as projection aggressiveness varies.
 
 **Depends on**: #form-composition-closure, #def-unity-dimensions, `spikes/spike-composition-correlated-kalman.md`, `spikes/spike-projection-admissibility.md`.
 

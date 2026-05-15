@@ -39,7 +39,7 @@ This extraction preserves the verbatim audit prose so the audit→architectural-
 >
 > ## Finding 1 — `#causal-insufficiency-detection`: the ±ρ residual is asserted as universal but vanishes under rational on-policy execution
 >
-> **Problematic passage** (`01-aad-core/src/causal-insufficiency-detection.md` lines 21–33):
+> **Problematic passage** (`01-aat-core/src/causal-insufficiency-detection.md` lines 21–33):
 >
 > > "After edge credences converge (p̂ₖ ≈ θₖ, low gain), the plan-confidence error δ_s ≈ 0… The **L0 residual** — the gap between the independence-model reference value and actual success — converges to: Φ^L0 − ȳ_G ⟶ { +ρ OR-heavy; −ρ AND-heavy }… **Detection criterion.** A persistently nonzero L0 residual after edge-credence convergence is a strong indicator of causal insufficiency."
 >
@@ -83,11 +83,11 @@ This extraction preserves the verbatim audit prose so the audit→architectural-
 >
 > ## Finding 3 — The Section II preamble's Class 2 framing understates what `#section-ii-survival` actually establishes
 >
-> **Problematic passage** (`01-aad-core/OUTLINE.md`, Section II preamble):
+> **Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 >
-> > "**Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (#directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-logogenic-agents/`… This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II."
+> > "**Class 2 (fully merged) agents** — including transformer-based LLMs where attention processes goals and observations together — fall outside Section II's exact scope because directed separation (#directed-separation) fails by construction. The coupled formulation these agents require is the subject of `03-llm-core/`… This is the most significant scope restriction in the theory: the most important present-day agent class (LLM-based) requires work beyond Section II."
 >
-> **Strongest mitigating passage** (`03-logogenic-agents/src/section-ii-survival.md` §Scorecard and §Discussion):
+> **Strongest mitigating passage** (`03-llm-core/src/section-ii-survival.md` §Scorecard and §Discussion):
 >
 > > "Exact: 15.5/24, Approximate: 5.5/24, Modified: 2/24, Fails: 1/24… Section II's *conceptual architecture* applies to Class 2 agents (16/24 exact survival is a claim about this), but Section II's *operational deployment* on Class 2 agents requires additional instrumentation…"
 >
@@ -232,7 +232,7 @@ This extraction preserves the verbatim audit prose so the audit→architectural-
 >
 > 1. **Execute the repair for `#causal-insufficiency-detection`** per `msc/pending-findings-2026-04-22.md`. It's the only live-and-unresolved issue in this audit. Effort: 60–90 min as logged.
 > 2. **Reconcile `#composition-scope-condition` and `#composition-closure`** on whether (C-iii)-only composites admit (A1). Either restrict (A1)'s scope explicitly or treat (C-iii) as a route to a weaker closure concept. Pick one.
-> 3. **Rewrite the Section II preamble** in `01-aad-core/OUTLINE.md` to carry the survival-classification framing instead of the "requires work beyond" framing. The substance is elsewhere; the outline should reflect it.
+> 3. **Rewrite the Section II preamble** in `01-aat-core/OUTLINE.md` to carry the survival-classification framing instead of the "requires work beyond" framing. The substance is elsewhere; the outline should reflect it.
 > 4. **Consider whether `#information-bottleneck` frontmatter still matches its role** after `#compression-operations` landed.
 > 5. **Consider whether the sector-persistence-template reframe should be promoted to an organizing principle** in the OUTLINE preamble — it already carries more weight than it is advertised for.
 >

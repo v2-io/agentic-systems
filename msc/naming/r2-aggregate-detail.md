@@ -39,7 +39,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#post-composition-consistency` (Section I; depends on `#scope-agency`). Foundational postulate; AAD's predictions must be compatible across levels of description.
 
-*Segment:* [`01-aad-core/src/post-composition-consistency.md`](../../01-aad-core/src/post-composition-consistency.md)
+*Segment:* [`01-aat-core/src/post-composition-consistency.md`](../../01-aat-core/src/post-composition-consistency.md)
 
 *R2 voters:* 3 (2 architectures: codex, opus)
 
@@ -196,7 +196,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#disc-credit-assignment-boundary` (Section II; deep dependency cone (7 upstream segments incl. `#def-strategy-dag`, `#hyp-edge-update-via-gain`)). Meta-discussion segment; The strategy-revision loop requires assigning credit for observed outcomes to specific edges in the strategy DAG — decomposing "the plan partially worked" into "step 3 failed, step 5 was irrelevant,….
 
-*Segment:* [`01-aad-core/src/disc-credit-assignment-boundary.md`](../../01-aad-core/src/disc-credit-assignment-boundary.md)
+*Segment:* [`01-aat-core/src/disc-credit-assignment-boundary.md`](../../01-aat-core/src/disc-credit-assignment-boundary.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -229,7 +229,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-model-sufficiency` (Section I; depends on `#form-agent-model`, `#form-information-bottleneck`, `#def-action-transition`). First formal definition; The fraction of predictive information the model retains relative to the full interaction history; $S = 1$ means the model is a sufficient statistic for prediction, $S \lt 1$ means predictive….
 
-*Segment:* [`01-aad-core/src/def-model-sufficiency.md`](../../01-aad-core/src/def-model-sufficiency.md)
+*Segment:* [`01-aat-core/src/def-model-sufficiency.md`](../../01-aat-core/src/def-model-sufficiency.md)
 
 *R2 voters:* 3 (3 architectures: codex, gemini, sonnet)
 
@@ -301,7 +301,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#result-adversarial-tempo-advantage` (Section III; depends on `#hyp-mismatch-dynamics`, `#der-adversarial-destabilization`, `#result-persistence-condition`). First formal result; Under adversarial coupling where one agent's actions contribute to the other's disturbance rate, the steady-state mismatch ratio scales superlinearly with the tempo ratio.
 
-*Segment:* [`01-aad-core/src/result-adversarial-tempo-advantage.md`](../../01-aad-core/src/result-adversarial-tempo-advantage.md)
+*Segment:* [`01-aat-core/src/result-adversarial-tempo-advantage.md`](../../01-aat-core/src/result-adversarial-tempo-advantage.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -344,7 +344,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#form-complete-agent-state` (Section II; depends on `#form-agent-model`, `#scope-agency`, `#der-recursive-update`). Formal model first introduced; To treat agents with purpose, the internal state lifts from $M_t$ alone to $X_t = (M_t, G_t)$, separating epistemic content (beliefs about reality) from purposeful content (what the agent wants and….
 
-*Segment:* [`01-aad-core/src/form-complete-agent-state.md`](../../01-aad-core/src/form-complete-agent-state.md)
+*Segment:* [`01-aat-core/src/form-complete-agent-state.md`](../../01-aat-core/src/form-complete-agent-state.md)
 
 *R2 voters:* 3 (2 architectures: opus, sonnet)
 
@@ -383,7 +383,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#form-agent-model` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-chronica`). Formal model first introduced; The agent's compressed representation of how the world works, mapping interaction history to model space.
 
-*Segment:* [`01-aad-core/src/form-agent-model.md`](../../01-aad-core/src/form-agent-model.md)
+*Segment:* [`01-aat-core/src/form-agent-model.md`](../../01-aat-core/src/form-agent-model.md)
 
 *R2 voters:* 4 (4 architectures: codex, gemini, opus, sonnet)
 
@@ -455,7 +455,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#form-objective-functional` (Section II; depends on `#form-complete-agent-state`). Formal model first introduced; The objective $O_t$ is the component of $G_t$ that specifies what the agent wants — the evaluation criterion for trajectories.
 
-*Segment:* [`01-aad-core/src/form-objective-functional.md`](../../01-aad-core/src/form-objective-functional.md)
+*Segment:* [`01-aat-core/src/form-objective-functional.md`](../../01-aat-core/src/form-objective-functional.md)
 
 *R2 voters:* 3 (2 architectures: gemini, sonnet)
 
@@ -759,7 +759,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-model-class-fitness` (Section I; depends on `#def-model-sufficiency`). First formal definition; The best achievable sufficiency within a model class.
 
-*Segment:* [`01-aad-core/src/def-model-class-fitness.md`](../../01-aad-core/src/def-model-class-fitness.md)
+*Segment:* [`01-aat-core/src/def-model-class-fitness.md`](../../01-aat-core/src/def-model-class-fitness.md)
 
 *R2 voters:* 3 (3 architectures: codex, gemini, sonnet)
 
@@ -859,7 +859,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-deliberation-cost` (Section I; depends on `#der-action-selection`, `#emp-update-gain`, `#def-adaptive-tempo` (+1 more)). First formal derivation; Explicit deliberation improves action quality by using the model for internal simulation before acting — pausing praxis to improve upcoming epistrophe.
 
-*Segment:* [`01-aad-core/src/der-deliberation-cost.md`](../../01-aad-core/src/der-deliberation-cost.md)
+*Segment:* [`01-aat-core/src/der-deliberation-cost.md`](../../01-aat-core/src/der-deliberation-cost.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -922,7 +922,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#result-persistence-condition` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#result-sector-condition-stability` (+1 more)). First formal result; An agent persists when two independent conditions hold: the correction machinery can contain mismatch within its operating region (*structural persistence*), and the resulting steady-state mismatch is….
 
-*Segment:* [`01-aad-core/src/result-persistence-condition.md`](../../01-aad-core/src/result-persistence-condition.md)
+*Segment:* [`01-aat-core/src/result-persistence-condition.md`](../../01-aat-core/src/result-persistence-condition.md)
 
 *R2 voters:* 3 (3 architectures: gemini, opus, sonnet)
 
@@ -1037,7 +1037,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#deriv-sector-condition` (Appendix A; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`). First formal derivation; Complete Lyapunov derivations of bounded mismatch and adaptive reserve for the sector-condition results stated in #result-sector-condition-stability.
 
-*Segment:* [`01-aad-core/src/deriv-sector-condition.md`](../../01-aad-core/src/deriv-sector-condition.md)
+*Segment:* [`01-aat-core/src/deriv-sector-condition.md`](../../01-aat-core/src/deriv-sector-condition.md)
 
 *R2 voters:* 2 (2 architectures: opus, sonnet)
 
@@ -1108,7 +1108,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-satisfaction-gap` (Section II; depends on `#def-value-object`, `#form-objective-functional`). First formal definition; The satisfaction gap measures the distance between what the objective requires and what the best available one-step policy improvement can deliver, under the current model and horizon.
 
-*Segment:* [`01-aad-core/src/def-satisfaction-gap.md`](../../01-aad-core/src/def-satisfaction-gap.md)
+*Segment:* [`01-aat-core/src/def-satisfaction-gap.md`](../../01-aat-core/src/def-satisfaction-gap.md)
 
 *R2 voters:* 5 (3 architectures: gemini, opus, sonnet)
 
@@ -1329,7 +1329,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#hyp-mismatch-dynamics` (Section I; depends on `#def-adaptive-tempo`, `#def-mismatch-signal`, `#deriv-sector-condition`). Hypothesis stated; The evolution of model-reality mismatch over time is governed by the balance between the agent's corrective capacity (tempo) and the rate of environmental change (disturbance).
 
-*Segment:* [`01-aad-core/src/hyp-mismatch-dynamics.md`](../../01-aad-core/src/hyp-mismatch-dynamics.md)
+*Segment:* [`01-aat-core/src/hyp-mismatch-dynamics.md`](../../01-aat-core/src/hyp-mismatch-dynamics.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -1362,7 +1362,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-pearl-causal-hierarchy` (Section I; depends on `#post-causal-structure`, `#scope-agency`). First formal definition; Three levels of causal reasoning emerge from the causal structure of the feedback loop: association ("what if I observe?"), intervention ("what if I do?"), and counterfactual ("what if I had done….
 
-*Segment:* [`01-aad-core/src/def-pearl-causal-hierarchy.md`](../../01-aad-core/src/def-pearl-causal-hierarchy.md)
+*Segment:* [`01-aat-core/src/def-pearl-causal-hierarchy.md`](../../01-aat-core/src/def-pearl-causal-hierarchy.md)
 
 *R2 voters:* 5 (4 architectures: codex, gemini, opus, sonnet)
 
@@ -1495,7 +1495,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-agent-spectrum` (Section II; depends on `#def-agent-environment`, `#form-agent-model`). First formal definition; Two independent dimensions — model richness and objective richness — create a spectrum from reactive systems through purposeful agents. These are regions of a continuum, not discrete categories.
 
-*Segment:* [`01-aad-core/src/def-agent-spectrum.md`](../../01-aad-core/src/def-agent-spectrum.md)
+*Segment:* [`01-aat-core/src/def-agent-spectrum.md`](../../01-aat-core/src/def-agent-spectrum.md)
 
 *R2 voters:* 4 (3 architectures: gemini, opus, sonnet)
 
@@ -1620,7 +1620,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-orient-cascade` (Section II; deep dependency cone (12 upstream segments incl. `#der-directed-separation`, `#def-mismatch-signal`)). First formal derivation; For actuated agents, epistrophe (the corrective phase of the cycle) expands into a multi-step cascade.
 
-*Segment:* [`01-aad-core/src/der-orient-cascade.md`](../../01-aad-core/src/der-orient-cascade.md)
+*Segment:* [`01-aat-core/src/der-orient-cascade.md`](../../01-aat-core/src/der-orient-cascade.md)
 
 *R2 voters:* 5 (3 architectures: gemini, opus, sonnet)
 
@@ -1808,7 +1808,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-mismatch-signal` (Section I; depends on `#form-agent-model`, `#def-observation-function`, `#def-action-transition`). First formal definition; The discrepancy between the model's prediction and the actual observation — the formal expression of *aporia* (productive perplexity).
 
-*Segment:* [`01-aad-core/src/def-mismatch-signal.md`](../../01-aad-core/src/def-mismatch-signal.md)
+*Segment:* [`01-aat-core/src/def-mismatch-signal.md`](../../01-aat-core/src/def-mismatch-signal.md)
 
 *R2 voters:* 4 (3 architectures: gemini, opus, sonnet)
 
@@ -1868,7 +1868,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-control-regret` (Section II; depends on `#def-value-object`, `#def-satisfaction-gap`). First formal definition; Control regret measures the gap between the best available one-step policy improvement and the agent's current policy, under the current model and horizon.
 
-*Segment:* [`01-aad-core/src/def-control-regret.md`](../../01-aad-core/src/def-control-regret.md)
+*Segment:* [`01-aat-core/src/def-control-regret.md`](../../01-aat-core/src/def-control-regret.md)
 
 *R2 voters:* 5 (3 architectures: gemini, opus, sonnet)
 
@@ -1995,7 +1995,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-chronica` (Section I; depends on `#def-agent-environment`, `#def-observation-function`, `#def-action-transition`). First formal definition; The interaction history $\mathcal C_t$ is the complete, singular causal record of the agent's observations and actions. Everything the agent can ever know must be constructed from this sequence.
 
-*Segment:* [`01-aad-core/src/def-chronica.md`](../../01-aad-core/src/def-chronica.md)
+*Segment:* [`01-aat-core/src/def-chronica.md`](../../01-aat-core/src/def-chronica.md)
 
 *R2 voters:* 5 (4 architectures: codex, gemini, opus, sonnet)
 
@@ -2040,7 +2040,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#result-structural-adaptation-necessity` (Section I; depends on `#def-model-sufficiency`, `#def-model-class-fitness`, `#result-mismatch-decomposition` (+1 more)). First formal result; When model class fitness is insufficient — when no model in the current class can adequately represent reality — no amount of parametric adaptation can close the mismatch floor.
 
-*Segment:* [`01-aad-core/src/result-structural-adaptation-necessity.md`](../../01-aad-core/src/result-structural-adaptation-necessity.md)
+*Segment:* [`01-aat-core/src/result-structural-adaptation-necessity.md`](../../01-aat-core/src/result-structural-adaptation-necessity.md)
 
 *R2 voters:* 2 (1 architectures: sonnet)
 
@@ -2106,7 +2106,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#form-information-bottleneck` (Section I; depends on `#form-agent-model`, `#def-action-transition`). Formal model first introduced; Optimal model compression balances retained history against predictive power; the information bottleneck objective provides a principled framework for understanding this trade-off.
 
-*Segment:* [`01-aad-core/src/form-information-bottleneck.md`](../../01-aad-core/src/form-information-bottleneck.md)
+*Segment:* [`01-aat-core/src/form-information-bottleneck.md`](../../01-aat-core/src/form-information-bottleneck.md)
 
 *R2 voters:* 3 (3 architectures: codex, gemini, opus)
 
@@ -2143,7 +2143,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-adaptive-tempo` (Section I; depends on `#emp-update-gain`, `#form-event-driven-dynamics`). First formal definition; The effective rate at which an agent acquires useful information from its environment — the product of observation frequency and update quality across all channels.
 
-*Segment:* [`01-aad-core/src/def-adaptive-tempo.md`](../../01-aad-core/src/def-adaptive-tempo.md)
+*Segment:* [`01-aat-core/src/def-adaptive-tempo.md`](../../01-aat-core/src/def-adaptive-tempo.md)
 
 *R2 voters:* 4 (3 architectures: gemini, opus, sonnet)
 
@@ -2231,7 +2231,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#emp-update-gain` (Section I; depends on `#def-mismatch-signal`, `#def-observation-function`). Empirical claim; The optimal weight an agent assigns to new observations when updating its model — the rate of *epistrophe* (turning toward reality).
 
-*Segment:* [`01-aad-core/src/emp-update-gain.md`](../../01-aad-core/src/emp-update-gain.md)
+*Segment:* [`01-aat-core/src/emp-update-gain.md`](../../01-aat-core/src/emp-update-gain.md)
 
 *R2 voters:* 3 (3 architectures: gemini, opus, sonnet)
 
@@ -2292,7 +2292,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-causal-information-yield` (Section I; depends on `#def-pearl-causal-hierarchy`, `#der-action-selection`, `#def-mismatch-signal`). First formal definition; Actions don't merely select among outcomes — they produce characteristically different outcome distributions depending on the causal structure.
 
-*Segment:* [`01-aad-core/src/def-causal-information-yield.md`](../../01-aad-core/src/def-causal-information-yield.md)
+*Segment:* [`01-aat-core/src/def-causal-information-yield.md`](../../01-aat-core/src/def-causal-information-yield.md)
 
 *R2 voters:* 3 (2 architectures: gemini, sonnet)
 
@@ -2341,7 +2341,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-agent-opacity` (Section III; deep dependency cone (7 upstream segments incl. `#scope-agent-identity`, `#der-interaction-channel-classification`)). First formal derivation; Alongside AAD's heavily formalized *forward* observation quality (how well the agent sees the world — observation ambiguity, model-class fitness, identifiability floor on what the agent can infer),….
 
-*Segment:* [`01-aad-core/src/der-agent-opacity.md`](../../01-aad-core/src/der-agent-opacity.md)
+*Segment:* [`01-aat-core/src/der-agent-opacity.md`](../../01-aat-core/src/der-agent-opacity.md)
 
 *R2 voters:* 2 (2 architectures: gemini, opus)
 
@@ -2414,7 +2414,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-directed-separation` (Section II; depends on `#form-complete-agent-state`, `#der-recursive-update`, `#scope-agency`). First formal derivation; The epistemic update function $f_M$ is goal-blind: it processes incoming events without reference to the agent's objectives or strategy.
 
-*Segment:* [`01-aad-core/src/der-directed-separation.md`](../../01-aad-core/src/der-directed-separation.md)
+*Segment:* [`01-aat-core/src/der-directed-separation.md`](../../01-aat-core/src/der-directed-separation.md)
 
 *R2 voters:* 5 (3 architectures: gemini, opus, sonnet)
 
@@ -2579,7 +2579,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#scope-logogenic-agent` (Logogenic; depends on `#def-agent-spectrum`, `#form-complete-agent-state`, `#der-directed-separation` (+2 more)). Scope-narrowing first encounter; An LLM-based agent operating through a tool-use loop is a *logogenic agent* in AAD's sense — an actuated agent whose model and strategy are constituted by language.
 
-*Segment:* [`03-logogenic-agents/src/scope-logogenic-agent.md`](../../03-logogenic-agents/src/scope-logogenic-agent.md)
+*Segment:* [`03-llm-core/src/scope-logogenic-agent.md`](../../03-llm-core/src/scope-logogenic-agent.md)
 
 *R2 voters:* 2 (2 architectures: gemini, opus)
 
@@ -2622,7 +2622,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-observability-dominance` (Section II; depends on `#def-strategy-dag`, `#emp-update-gain`). First formal derivation; Unobservable strategy edges cannot be updated — the gain principle drives their update rate to zero.
 
-*Segment:* [`01-aad-core/src/der-observability-dominance.md`](../../01-aad-core/src/der-observability-dominance.md)
+*Segment:* [`01-aat-core/src/der-observability-dominance.md`](../../01-aat-core/src/der-observability-dominance.md)
 
 *R2 voters:* 3 (3 architectures: gemini, opus, sonnet)
 
@@ -2659,7 +2659,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#disc-identifiability-floor` (Appendix A; depends on `#der-causal-insufficiency-detection`, `#deriv-strategic-dynamics`, `#der-causal-hierarchy-requirement` (+1 more)). Meta-discussion segment; AAD has derived a class of structural impossibility results — *floors below which* identification or detection is impossible from limited information.
 
-*Segment:* [`01-aad-core/src/disc-identifiability-floor.md`](../../01-aad-core/src/disc-identifiability-floor.md)
+*Segment:* [`01-aat-core/src/disc-identifiability-floor.md`](../../01-aat-core/src/disc-identifiability-floor.md)
 
 *R2 voters:* 2 (2 architectures: gemini, opus)
 
@@ -2722,7 +2722,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#disc-separability-pattern` (Appendix A; deep dependency cone (8 upstream segments incl. `#def-strategy-dag`, `#def-value-object`)). Meta-discussion segment; AAD consistently runs a three-part epistemic posture across state spaces that admit no tractable exact treatment in general: name the **separable core** where identification is clean, name the….
 
-*Segment:* [`01-aad-core/src/disc-separability-pattern.md`](../../01-aad-core/src/disc-separability-pattern.md)
+*Segment:* [`01-aat-core/src/disc-separability-pattern.md`](../../01-aat-core/src/disc-separability-pattern.md)
 
 *R2 voters:* 3 (2 architectures: gemini, opus)
 
@@ -2907,7 +2907,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-causal-insufficiency-detection` (Section II; depends on `#result-structural-adaptation-necessity`, `#def-strategy-dag`, `#der-loop-interventional-access` (+3 more)). First formal derivation; An agent operating at L0 of the Correlation Hierarchy ( #def-strategy-dag) faces a structural impossibility: under purely on-policy execution, no detection mechanism can distinguish an L0-insufficient….
 
-*Segment:* [`01-aad-core/src/der-causal-insufficiency-detection.md`](../../01-aad-core/src/der-causal-insufficiency-detection.md)
+*Segment:* [`01-aat-core/src/der-causal-insufficiency-detection.md`](../../01-aat-core/src/der-causal-insufficiency-detection.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -3088,7 +3088,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-observation-function` (Section I; depends on `#def-agent-environment`, `#def-action-transition`). First formal definition; Observations (aisthesis — raw contact with reality) are lossy, possibly noisy functions of environment state, prior action, and perceptual noise.
 
-*Segment:* [`01-aad-core/src/def-observation-function.md`](../../01-aad-core/src/def-observation-function.md)
+*Segment:* [`01-aat-core/src/def-observation-function.md`](../../01-aat-core/src/def-observation-function.md)
 
 *R2 voters:* 3 (2 architectures: codex, opus)
 
@@ -3266,7 +3266,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#form-composition-closure` (Section III; deep dependency cone (9 upstream segments incl. `#post-composition-consistency`, `#scope-composite-agent`)). Formal model first introduced; We define a group of interacting agents as a valid composite macro-agent when its closed-loop dynamics approximately commute with coarse-graining — that is, when projecting micro-states to….
 
-*Segment:* [`01-aad-core/src/form-composition-closure.md`](../../01-aad-core/src/form-composition-closure.md)
+*Segment:* [`01-aat-core/src/form-composition-closure.md`](../../01-aat-core/src/form-composition-closure.md)
 
 *R2 voters:* 2 (2 architectures: gemini, opus)
 
@@ -3319,7 +3319,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-gain-sector-bridge` (Section I; depends on `#emp-update-gain`, `#def-mismatch-signal`, `#deriv-sector-condition` (+1 more)). First formal derivation; The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at….
 
-*Segment:* [`01-aad-core/src/der-gain-sector-bridge.md`](../../01-aad-core/src/der-gain-sector-bridge.md)
+*Segment:* [`01-aat-core/src/der-gain-sector-bridge.md`](../../01-aat-core/src/der-gain-sector-bridge.md)
 
 *R2 voters:* 3 (2 architectures: gemini, sonnet)
 
@@ -3456,7 +3456,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-strategy-dimension` (Section II; depends on `#form-complete-agent-state`, `#form-objective-functional`). First formal definition; The purposeful substate $G_t$ decomposes into two structurally distinct components: $O_t$ (the objective — what the agent wants) and $\Sigma_t$ (the strategy — the agent's theory of how its actions….
 
-*Segment:* [`01-aad-core/src/def-strategy-dimension.md`](../../01-aad-core/src/def-strategy-dimension.md)
+*Segment:* [`01-aat-core/src/def-strategy-dimension.md`](../../01-aat-core/src/def-strategy-dimension.md)
 
 *R2 voters:* 3 (2 architectures: gemini, sonnet)
 
@@ -3562,7 +3562,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-temporal-nesting` (Section I; depends on `#def-adaptive-tempo`, `#result-structural-adaptation-necessity`). First formal derivation; An agent's adaptive processes stratify naturally by timescale, with each level operating on the quasi-steady-state output of the level below.
 
-*Segment:* [`01-aad-core/src/der-temporal-nesting.md`](../../01-aad-core/src/der-temporal-nesting.md)
+*Segment:* [`01-aat-core/src/der-temporal-nesting.md`](../../01-aat-core/src/der-temporal-nesting.md)
 
 *R2 voters:* 3 (2 architectures: gemini, sonnet)
 
@@ -3700,7 +3700,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-action-transition` (Section I; depends on `#def-agent-environment`). First formal definition; Actions affect the environment through a transition function that is unknown to the agent and possibly stochastic.
 
-*Segment:* [`01-aad-core/src/def-action-transition.md`](../../01-aad-core/src/def-action-transition.md)
+*Segment:* [`01-aat-core/src/def-action-transition.md`](../../01-aat-core/src/def-action-transition.md)
 
 *R2 voters:* 4 (3 architectures: codex, opus, sonnet)
 
@@ -3743,7 +3743,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#scope-edge-update-causal-validity` (Section II; depends on `#hyp-edge-update-via-gain`, `#def-causal-information-yield`, `#der-loop-interventional-access` (+2 more)). Scope-narrowing first encounter; The gain-based edge update ( #hyp-edge-update-via-gain) revises edge credences $p_{ij}$ --- causal efficacy estimates whose identification strength varies with the data regime ( #def-strategy-dag).
 
-*Segment:* [`01-aad-core/src/scope-edge-update-causal-validity.md`](../../01-aad-core/src/scope-edge-update-causal-validity.md)
+*Segment:* [`01-aat-core/src/scope-edge-update-causal-validity.md`](../../01-aat-core/src/scope-edge-update-causal-validity.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -3808,7 +3808,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-chain-confidence-decay` (Section II; depends on `#def-strategy-dimension`). First formal derivation; Confidence in a multi-step strategy decays monotonically with depth.
 
-*Segment:* [`01-aad-core/src/der-chain-confidence-decay.md`](../../01-aad-core/src/der-chain-confidence-decay.md)
+*Segment:* [`01-aat-core/src/der-chain-confidence-decay.md`](../../01-aat-core/src/der-chain-confidence-decay.md)
 
 *R2 voters:* 2 (2 architectures: gemini, opus)
 
@@ -3862,7 +3862,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-loop-interventional-access` (Section II; depends on `#der-causal-hierarchy-requirement`, `#der-recursive-update`, `#post-causal-structure` (+1 more)). First formal derivation; An agent in the feedback loop generates interventional data by construction: the agent's action $a_t$ causally precedes the next observation $o_{t+1}$, and the mismatch conditioned on $a_t$ carries….
 
-*Segment:* [`01-aad-core/src/der-loop-interventional-access.md`](../../01-aad-core/src/der-loop-interventional-access.md)
+*Segment:* [`01-aat-core/src/der-loop-interventional-access.md`](../../01-aat-core/src/der-loop-interventional-access.md)
 
 *R2 voters:* 2 (2 architectures: gemini, opus)
 
@@ -3985,7 +3985,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#form-event-driven-dynamics` (Section I; depends on `#post-causal-structure`, `#def-observation-function`, `#def-action-transition` (+1 more)). Formal model first introduced; The coupling between agent and environment occurs through discrete events — observations arriving and actions completing — at potentially variable and heterogeneous rates.
 
-*Segment:* [`01-aad-core/src/form-event-driven-dynamics.md`](../../01-aad-core/src/form-event-driven-dynamics.md)
+*Segment:* [`01-aat-core/src/form-event-driven-dynamics.md`](../../01-aat-core/src/form-event-driven-dynamics.md)
 
 *R2 voters:* 2 (2 architectures: codex, gemini)
 
@@ -4031,11 +4031,11 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 **Candidate: `Coupled`**
 - *R1 synthetic:* **+1** — n=1, mean=2.00, weights=[+2], categories={rename:1}
-  > Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-logogenic-agents). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
+  > Variant. "Coupled" instead of "merged" — captures Class 2 as coupled-update-dynamics (per `def-coupled-update-dynamics` in 03-llm-core). Pairs with the segment-name. The "merged" / "coupled" choice is taste; both are honest. [original row: trio split.].
 
 - *R2 votes:*
   - **opus-r2b** (opus): +1 *add-alias* — novelty=0.68, len=296, **subst=1.68**
-    > "Coupled" pairs with `def-coupled-update-dynamics` in 03-logogenic-agents and emphasizes the dynamic-coupling sense. Marginal preference between "merged" and "coupled" — they pick out the same architectures. "Merged" is the segment's word; "coupled" is the logogenic-agents word. Both are honest.
+    > "Coupled" pairs with `def-coupled-update-dynamics` in 03-llm-core and emphasizes the dynamic-coupling sense. Marginal preference between "merged" and "coupled" — they pick out the same architectures. "Merged" is the segment's word; "coupled" is the logogenic-agents word. Both are honest.
   - **opus-r2c** (opus): +1 ★ *add-alias* — novelty=0.84, len=464, **subst=2.21**
     > Strong alternative — "coupled" is the term `def-coupled-update-dynamics` already uses for the formulation. "Coupled" carries the dynamical-systems sense (the substates are coupled in the update equation), which is technically more precise than "merged" (which is colloquial). Both work. Slight top-pick on "coupled" because the segment-naming consistency matters — `def-coupled-update-dynamics` would pair more naturally with "coupled agents" than "merged agents."
 
@@ -4168,7 +4168,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-strategic-calibration` (Section II; depends on `#def-strategy-dag`, `#def-value-object`). First formal definition; The strategic calibration residual measures whether the strategy's causal model is correct: are the edges in $\Sigma_t$ accurate predictors of how much value each step actually produces?.
 
-*Segment:* [`01-aad-core/src/def-strategic-calibration.md`](../../01-aad-core/src/def-strategic-calibration.md)
+*Segment:* [`01-aat-core/src/def-strategic-calibration.md`](../../01-aat-core/src/def-strategic-calibration.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -4268,7 +4268,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#result-per-dimension-persistence` (Section III; depends on `#result-persistence-condition`, `#def-adaptive-tempo`, `#deriv-sector-condition`). First formal result; The scalar persistence condition overestimates adaptive capacity when the agent's correction gain varies across dimensions.
 
-*Segment:* [`01-aad-core/src/result-per-dimension-persistence.md`](../../01-aad-core/src/result-per-dimension-persistence.md)
+*Segment:* [`01-aat-core/src/result-per-dimension-persistence.md`](../../01-aat-core/src/result-per-dimension-persistence.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -4340,7 +4340,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-agent-environment` (Section I; no upstream dependencies). First formal definition; An agent is an entity that receives observations from an environment, maintains internal state, and produces actions that affect the environment.
 
-*Segment:* [`01-aad-core/src/def-agent-environment.md`](../../01-aad-core/src/def-agent-environment.md)
+*Segment:* [`01-aat-core/src/def-agent-environment.md`](../../01-aat-core/src/def-agent-environment.md)
 
 *R2 voters:* 4 (3 architectures: codex, gemini, opus)
 
@@ -4474,7 +4474,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#def-value-object` (Section II; depends on `#form-objective-functional`, `#form-agent-model`, `#der-directed-separation` (+1 more)). First formal definition; The horizon- and policy-conditioned value object $V_O$ turns the abstract objective functional $V_{O_t}$ into a decision-making tool: "given what I believe, what I plan to do next, and how far I'm….
 
-*Segment:* [`01-aad-core/src/def-value-object.md`](../../01-aad-core/src/def-value-object.md)
+*Segment:* [`01-aat-core/src/def-value-object.md`](../../01-aat-core/src/def-value-object.md)
 
 *R2 voters:* 2 (2 architectures: gemini, sonnet)
 
@@ -4579,7 +4579,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#scope-agent-identity` (Section I; depends on `#def-chronica`, `#def-model-sufficiency`). Scope-narrowing first encounter; AAD applies to agents instantiated on singular causal trajectories.
 
-*Segment:* [`01-aad-core/src/scope-agent-identity.md`](../../01-aad-core/src/scope-agent-identity.md)
+*Segment:* [`01-aat-core/src/scope-agent-identity.md`](../../01-aat-core/src/scope-agent-identity.md)
 
 *R2 voters:* 4 (3 architectures: gemini, opus, sonnet)
 
@@ -4676,7 +4676,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#post-causal-structure` (Section I; depends on `#def-agent-environment`, `#def-chronica`). Foundational postulate; The agent-environment interaction has irreducible causal structure grounded in the temporal ordering of events. Actions precede their consequences; observations follow from the state they observe.
 
-*Segment:* [`01-aad-core/src/post-causal-structure.md`](../../01-aad-core/src/post-causal-structure.md)
+*Segment:* [`01-aat-core/src/post-causal-structure.md`](../../01-aat-core/src/post-causal-structure.md)
 
 *R2 voters:* 4 (3 architectures: codex, gemini, opus)
 
@@ -4870,7 +4870,7 @@ Floor at 0.5×weight on pure paraphrase — the act of voting is itself a judgme
 
 *First-encounter locality:* `#der-recursive-update` (Section I; depends on `#form-agent-model`, `#form-event-driven-dynamics`, `#deriv-recursive-update`). First formal derivation; Agent state updates (epistrophe — the corrective turning toward reality) must be recursive: the new model state is a function of the previous model state and the incoming event, not of the full….
 
-*Segment:* [`01-aad-core/src/der-recursive-update.md`](../../01-aad-core/src/der-recursive-update.md)
+*Segment:* [`01-aat-core/src/der-recursive-update.md`](../../01-aat-core/src/der-recursive-update.md)
 
 *R2 voters:* 2 (2 architectures: codex, gemini)
 

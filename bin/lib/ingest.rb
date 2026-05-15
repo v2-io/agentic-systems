@@ -80,7 +80,7 @@ module Mono
     #
     # Mirrors the LaTeX-side \AlphAlph macro (common/preamble/setup.tex).
     # Appendix segments are chapters; their label is the chapter letter.
-    # 1 → A, 26 → Z, 27 → AA, …, 52 → AZ, 53 → BA, … so the AAD Details
+    # 1 → A, 26 → Z, 27 → AA, …, 52 → AZ, 53 → BA, … so the AAT Details
     # appendix (32+ chapters) doesn't overflow.
     def alpha_alph(n)
       return '' if n < 1

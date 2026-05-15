@@ -57,10 +57,10 @@ require 'optparse'
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 
 OUTLINE_FILES = [
-  REPO_ROOT.join('01-aad-core/OUTLINE.md'),
+  REPO_ROOT.join('01-aat-core/OUTLINE.md'),
   REPO_ROOT.join('02-tst-core/OUTLINE.md'),
-  REPO_ROOT.join('03-logogenic-agents/OUTLINE.md'),
-  REPO_ROOT.join('04-logozoetic-agents/OUTLINE.md')
+  REPO_ROOT.join('03-llm-core/OUTLINE.md'),
+  REPO_ROOT.join('04-eli-core/OUTLINE.md')
 ].freeze
 
 CANONICAL_OUT = REPO_ROOT.join('FINDINGS.md')
@@ -196,10 +196,10 @@ end
 # --- Section labeling ---------------------------------------------------
 
 COMPONENT_LABELS = {
-  '01-aad-core'         => 'AAD (uncategorized)',
+  '01-aat-core'         => 'AAT (uncategorized)',
   '02-tst-core'         => 'Temporal Software Theory (TST)',
-  '03-logogenic-agents' => 'Logogenic Agents',
-  '04-logozoetic-agents' => 'Logozoetic Agents'
+  '03-llm-core' => 'Logogenic Agents',
+  '04-eli-core' => 'Logozoetic Agents'
 }.freeze
 
 def section_label(component, section)
@@ -207,7 +207,7 @@ def section_label(component, section)
     section
   elsif section && section.start_with?('Appendices')
     section
-  elsif component == '01-aad-core'
+  elsif component == '01-aat-core'
     section || COMPONENT_LABELS[component]
   else
     COMPONENT_LABELS.fetch(component, component)

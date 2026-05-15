@@ -497,7 +497,7 @@ The severe / severe-resolvable cases that need concrete action are listed below.
 
 ### 11.1 *artificial hippocampus* — severe (rename strongly recommended)
 
-**Issue:** Theodore Berger's lab at USC has an active, FDA-trial-stage hippocampal-prosthesis research program (Hampson et al. 2018+); "artificial hippocampus" is a literal medical device, not a metaphor. Using the term as a canonical name for the externalization-and-rehydration mechanism in `03-logogenic-agents/` / `04-eli/` invites both semantic-import mismatch (neuroengineering readers import the literal device) and territorial step-on (Berger's lab has spent decades on this).
+**Issue:** Theodore Berger's lab at USC has an active, FDA-trial-stage hippocampal-prosthesis research program (Hampson et al. 2018+); "artificial hippocampus" is a literal medical device, not a metaphor. Using the term as a canonical name for the externalization-and-rehydration mechanism in `03-llm-core/` / `04-eli-core/` invites both semantic-import mismatch (neuroengineering readers import the literal device) and territorial step-on (Berger's lab has spent decades on this).
 
 **Sources:** [collision-check report §34](collision-check-2026-04-29.md). Master list already has *externalization reconstruction cycle* (+6) as a non-colliding alternative.
 
@@ -513,7 +513,7 @@ The severe / severe-resolvable cases that need concrete action are listed below.
 
 **Sources:** [collision-check report §14](collision-check-2026-04-29.md).
 
-**Proposed actions:** Rename. Candidates from the master list and the agent's recommendation: *agent fusion*, *system fusion*, *macro-agent fusion*, *resonant fusion* (ties to the Class 1 macro-agent *resonance* framing — see 11.6 below), *channel-saturation fusion*. *Resonant fusion* is the most semantically anchored if the Resonance framing in `03-logogenic-agents/` is canonical.
+**Proposed actions:** Rename. Candidates from the master list and the agent's recommendation: *agent fusion*, *system fusion*, *macro-agent fusion*, *resonant fusion* (ties to the Class 1 macro-agent *resonance* framing — see 11.6 below), *channel-saturation fusion*. *Resonant fusion* is the most semantically anchored if the Resonance framing in `03-llm-core/` is canonical.
 
 **Status:** open; awaits R2-finalist-resolution.
 
@@ -535,7 +535,7 @@ The severe / severe-resolvable cases that need concrete action are listed below.
 
 **Issue:** Tomasello's *shared intentionality* (developmental psychology / comparative cognition; Tomasello 2008, 2014) is a cornerstone of human-evolution and great-ape-cognition research. ASF's *shared intent* is a near-rendering of the string. ASF's actual referent (the IB-compressed cross-agent communication object) is narrower and more formalized than Tomasello's developmental capacity; the names are close enough that readers will silently substitute. The collision substantive enough that a one-line cite does not cleanly resolve it.
 
-**Sources:** [collision-check report §22](collision-check-2026-04-29.md). ASF segment: `01-aad-core/src/def-shared-intent.md`.
+**Sources:** [collision-check report §22](collision-check-2026-04-29.md). ASF segment: `01-aat-core/src/def-shared-intent.md`.
 
 **Proposed actions:** Keep the name but add a paragraph-level Discussion-section disambiguation explicitly distinguishing ASF's *shared intent* (the IB-compressed communication object, $O_{\text{shared}}$) from Tomasello's *shared intentionality* (the developmental capacity for joint goals). Different referents; the disambiguation should be on the segment, not just the lexicon.
 
@@ -547,7 +547,7 @@ The severe / severe-resolvable cases that need concrete action are listed below.
 
 **Issue:** Gordon Allport's *proprium* (Allport 1955, *Becoming*) is the established personality-psychology concept — the central organizing self-function with its seven developmental stages. ASF (via Firmatum upstream) uses the term as the container for the artificial agent's identity infrastructure (CHRONICA, AXIOMATA, sovereignty/visibility/authority dimensions). Spot-check confirms Firmatum source documents (`PROPRIUM-ONTOLOGY.md`, `PROPRIUM-ARCHITECTURE.md`) do not currently cite Allport — closing that citation gap at the segment level resolves the collision.
 
-**Sources:** [collision-check report §13](collision-check-2026-04-29.md). ASF segment: `04-eli/src/def-proprium-mapping.md`.
+**Sources:** [collision-check report §13](collision-check-2026-04-29.md). ASF segment: `04-eli-core/src/def-proprium-mapping.md`.
 
 **Proposed actions:** Add explicit Allport citation on first encounter at the segment level. The semantic distinction (ASF/Firmatum proprium = component taxonomy of artificial-agent identity infrastructure; Allport's proprium = developmental-psychological self-construct) is sufficiently clear once both are named. No rename. Allport's primacy is a 70-year-old uncontested reference — citation is sufficient.
 
@@ -581,11 +581,11 @@ The severe / severe-resolvable cases that need concrete action are listed below.
 
 ### 11.8 *resonance* (Class 1 macro-agent sense) — moderate
 
-**Issue:** Grossberg's Adaptive Resonance Theory (ART, 1976+) uses *resonance* as a specific technical term — bottom-up activation matches top-down expectation, foundational in neural-network learning theory and tied directly to the stability-plasticity dilemma. If "Resonance" is used as a canonical name in `03-logogenic-agents/` for mutual-information saturation between two agents, the ART adjacency wants disambiguation. Pairs with 11.2 — if *cognitive fusion* renames to *resonant fusion*, the *resonance* parent term inherits the same disambiguation requirement.
+**Issue:** Grossberg's Adaptive Resonance Theory (ART, 1976+) uses *resonance* as a specific technical term — bottom-up activation matches top-down expectation, foundational in neural-network learning theory and tied directly to the stability-plasticity dilemma. If "Resonance" is used as a canonical name in `03-llm-core/` for mutual-information saturation between two agents, the ART adjacency wants disambiguation. Pairs with 11.2 — if *cognitive fusion* renames to *resonant fusion*, the *resonance* parent term inherits the same disambiguation requirement.
 
 **Sources:** [collision-check report §A4 (Additional flags)](collision-check-2026-04-29.md).
 
-**Proposed actions:** If "Resonance" is canonical in `03-logogenic-agents/`, cite Grossberg ART on first encounter. Distinguish ASF's mutual-information-saturation meaning from ART's pattern-matching meaning.
+**Proposed actions:** If "Resonance" is canonical in `03-llm-core/`, cite Grossberg ART on first encounter. Distinguish ASF's mutual-information-saturation meaning from ART's pattern-matching meaning.
 
 **Status:** open; depends partly on 11.2 resolution.
 

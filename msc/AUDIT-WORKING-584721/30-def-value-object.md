@@ -24,7 +24,7 @@
 
 **7. What would I change?** The convention-hierarchy section is well-structured: three conventions clearly defined, monotonicity proven, diagnostic implications tabulated, AAD's choice of C1 default justified with three reasons.
 
-The "spikes/spike-coupled-survival-analysis.md §3.4" reference for Class 2 $Q_O$ degradation is appropriate placement (in a parenthetical) but I'd want to verify when I reach 03-logogenic-agents that the formal degradation analysis lands in segments rather than only spike.
+The "spikes/spike-coupled-survival-analysis.md §3.4" reference for Class 2 $Q_O$ degradation is appropriate placement (in a parenthetical) but I'd want to verify when I reach 03-llm-core that the formal degradation analysis lands in segments rather than only spike.
 
 **8. What am I now curious about?**
 

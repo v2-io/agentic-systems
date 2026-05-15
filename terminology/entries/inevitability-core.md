@@ -3,7 +3,7 @@ slug: inevitability-core
 schema_version: 1
 term: inevitability core
 name: Inevitability core
-brief: The ~15 AAD segments where the goal is mathematical inevitability — given the prior objects, this is the only compatible form.
+brief: The ~15 AAT segments where the goal is mathematical inevitability — given the prior objects, this is the only compatible form.
 layer: framing-vocabulary
 status: weak
 tags: [epistemic_vocabulary]

@@ -8,8 +8,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/der-deliberation-cost.md
-first_asf_mention: 01-aad-core/src/der-deliberation-cost.md
+primary_source: 01-aat-core/src/der-deliberation-cost.md
+first_asf_mention: 01-aat-core/src/der-deliberation-cost.md
 see_also: [adaptive-tempo, update-gain, mismatch, causal-information-yield]
 aliases: []
 do_not_confuse: []
@@ -24,4 +24,4 @@ quality exceeds the aporia accumulated during the pause: a quantitative
 think-vs-act threshold.
 
 Derived in
-[`#der-deliberation-cost`](../../01-aad-core/src/der-deliberation-cost.md).
+[`#der-deliberation-cost`](../../01-aat-core/src/der-deliberation-cost.md).

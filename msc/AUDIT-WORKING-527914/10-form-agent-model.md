@@ -1,6 +1,6 @@
 # 10 - form-agent-model
 
-Segment: `01-aad-core/src/form-agent-model.md` (`#form-agent-model`)
+Segment: `01-aat-core/src/form-agent-model.md` (`#form-agent-model`)
 
 Dependencies: `def-agent-environment`, `def-observation-function`, `def-chronica`, all read. Dependency-order check passes.
 

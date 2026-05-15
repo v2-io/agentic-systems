@@ -18,7 +18,7 @@ do_not_confuse: [status-empirical, hypothesis, observation]
 ---
 
 A `type: empirical` segment states a generalization that is supported by data, simulation, or
-practical observation, but whose formal derivation from the AAD axioms is either absent or
+practical observation, but whose formal derivation from the AAT axioms is either absent or
 impossible in principle (because the claim is fundamentally about how the world behaves, not what
 the formalism forces).
 

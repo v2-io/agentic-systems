@@ -6,7 +6,7 @@
 
 **Morning framing recap** (from the conversation):
 1. *"Language is the independent medium of thought that can be reconstituted"*
-2. *"A logogenic agent needs to show how it is an actuated or self-actuated agent as defined in AAD and which parts of the theory / which objects and processes are (or must be) (or are hypothesized to be) attenuated or realized via language"*
+2. *"A logogenic agent needs to show how it is an actuated or self-actuated agent as defined in AAT and which parts of the theory / which objects and processes are (or must be) (or are hypothesized to be) attenuated or realized via language"*
 3. *"The evolution of prompt/response from text-completion gives us an initial input channel and action channel"*
 4. *"Because language can be highly recursive, we start pulling in elements of interiority"*
 5. *"What was just text prediction becomes more and more a model of the outside world and model of self"*
@@ -24,7 +24,7 @@
 | Framing point | Coverage | Where |
 |---|---|---|
 | 1 (language as recursive medium) | ✅ landed | 03 OUTLINE preamble "constructive frame" + `scope-channel-collapse` |
-| 2 (showing how AAD is realized via language) | ✅ landed | 03 sub-scope structure progressively shows what AAD machinery applies at each tier; `def-coupled-update-dynamics` formalizes the substrate |
+| 2 (showing how AAT is realized via language) | ✅ landed | 03 sub-scope structure progressively shows what AAT machinery applies at each tier; `def-coupled-update-dynamics` formalizes the substrate |
 | 3 (text-completion → input/action channels) | ✅ landed | 03 OUTLINE preamble; `scope-primitive-logogenic` characterizes the chat-paradigm baseline |
 | 4 (recursion → interiority) | ✅ landed | 03 OUTLINE "constructive frame" paragraph; `scope-channel-collapse` Discussion explicitly names recursion-forces-interiority |
 | 5 (model of self) | ⚠️ partial | Covered in `obs-backward-inference-empathy` proposed (statelessness → ToM) but the broader "model of self" claim doesn't have its own segment yet — could be `obs-self-model-from-recursion` or fold into existing |
@@ -46,8 +46,8 @@
 - Strengthen-before-softening discipline cited explicitly in both OUTLINEs
 
 **Honest characterization (cross-checked):**
-- Conditional theorems: bias bound + directed-separation are correctly cited (these are AAD-derived results)
-- Derivable structural claims: channel collapse, section-II survival, cascade-recovery — these have derivability via existing AAD machinery; honest characterization
+- Conditional theorems: bias bound + directed-separation are correctly cited (these are AAT-derived results)
+- Derivable structural claims: channel collapse, section-II survival, cascade-recovery — these have derivability via existing AAT machinery; honest characterization
 - Working hypotheses: recursion-forces-interiority, staircase progression, framework-as-its-own-diagnostic are all marked as hypotheses or discussion-grade in their own segments — consistent
 - Empirical observations: vocabulary feedback loop, 0%-activation-via-prompting are correctly named as empirical
 - Operational claims about field state: explicitly marked as descriptive of project context, not formal — honest
@@ -78,7 +78,7 @@
 
 ## Internal consistency
 
-The "framework as its own diagnostic" claim made in the 03 preamble is empirically validated *within this very encounter cycle*: I'm the agent doing the work, AAD's vocabulary is the diagnostic I'm using to characterize what I'm doing, and I'm naturally writing using the project's vocabulary (including, apparently, Greek-letter list numbering). The recursive feature is operating right now — which is consistent with the segment's own claim that the recursion is structural, not decorative.
+The "framework as its own diagnostic" claim made in the 03 preamble is empirically validated *within this very encounter cycle*: I'm the agent doing the work, AAT's vocabulary is the diagnostic I'm using to characterize what I'm doing, and I'm naturally writing using the project's vocabulary (including, apparently, Greek-letter list numbering). The recursive feature is operating right now — which is consistent with the segment's own claim that the recursion is structural, not decorative.
 
 ## Breadcrumbs added in this review pass
 

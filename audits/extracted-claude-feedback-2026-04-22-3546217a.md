@@ -33,7 +33,7 @@ So this extraction fills a real archaeological gap.
 >
 > ## Methodological note
 >
-> I read systematically through `01-aad-core/src/`, `02-tst-core/src/`, and the four component OUTLINEs. I evaluated current segment text only — no priors imported from `msc/` for the rejection pass. Most candidate findings I considered turned out to be *already* explicitly caveated or scope-narrowed. The repo's "honesty as load-bearing architecture" principle is real and visible at the segment level; it sets a high bar for "still real" findings.
+> I read systematically through `01-aat-core/src/`, `02-tst-core/src/`, and the four component OUTLINEs. I evaluated current segment text only — no priors imported from `msc/` for the rejection pass. Most candidate findings I considered turned out to be *already* explicitly caveated or scope-narrowed. The repo's "honesty as load-bearing architecture" principle is real and visible at the segment level; it sets a high bar for "still real" findings.
 >
 > What follows is the small subset that survives the strict standard. For each, I quote both the problematic passage and the strongest mitigating passage, then explain why the issue still stands or why it dissolves.
 >
@@ -81,7 +81,7 @@ So this extraction fills a real archaeological gap.
 >
 > ### Finding C — Section II's exact-results scope requires *both* Class 1 (modular) architecture *and* the "learning purposeful agent" sub-scope, but only the Class 1 narrowing is foregrounded at OUTLINE level
 >
-> **Problematic passage** (`01-aad-core/OUTLINE.md`, Section II preamble):
+> **Problematic passage** (`01-aat-core/OUTLINE.md`, Section II preamble):
 >
 > > **Architectural scope.** Section II's exact results apply to **Class 1 (modular) agents** — architectures where epistemic processing ($f_M$) is structurally separated from purposeful processing ($f_G$). This includes: Kalman filter + LQR, modular RL with separate world model… **This is the most significant scope restriction in the theory**…
 >
@@ -165,7 +165,7 @@ So this extraction fills a real archaeological gap.
 > - **"L1' under unobservable common cause is identifiability-blocked"** — Refuted, not "open." `#strategy-dag` and `#identifiability-floor` Instance 2 give the Cramér-Rao argument and three explicit repair routes.
 > - **"K_c timescale ratio in composition-closure is part of the problem specification, not derived"** — Acknowledged. The 2026-04-22 repair (`#composition-closure` Working Note) made K_c explicit specifically to avoid the previous synchronous-only bug. The honest framing — "K_c is application-specific" — is consistent with `#temporal-nesting`'s singular-perturbation logic.
 > - **"Section III contains five `--GAP--` rows in the OUTLINE"** — These are flagged as gaps in the outline itself; they are not concealed.
-> - **"Logogenic agents are out of formal scope of `#agent-identity` (type-like, not token-like)"** — `#agent-identity` Discussion explicitly addresses the clone problem and frames it as scope, with `03-logogenic-agents/` carrying the framework-stage handoff.
+> - **"Logogenic agents are out of formal scope of `#agent-identity` (type-like, not token-like)"** — `#agent-identity` Discussion explicitly addresses the clone problem and frames it as scope, with `03-llm-core/` carrying the framework-stage handoff.
 > - **"Pre-compiled controllers (PID, LQR) outside learning-agent scope"** — Acknowledged in `#causal-hierarchy-requirement`. (See Finding C above for what *isn't* adequate about this.)
 >
 > ---
@@ -201,7 +201,7 @@ So this extraction fills a real archaeological gap.
 >
 > `#software-epistemic-properties`' transfer-assumption table is one of the most beautiful structural moves in the framework. The pattern: name the AAD-core quantity, the identification condition, the software configuration that satisfies it, and the non-software transfer requirement.
 >
-> This pattern could be generalized to *every* AAD instantiation. A `domain-instantiation-template.md` (or a section of FORMAT.md) could prescribe: any new domain instantiation must produce a transfer-assumption table with rows for each AAD-core identification condition. This would make TST less of an exception and more of an exemplar. Logogenic and logozoetic instantiations could then be evaluated against the same template, and the gap between "what TST does well" and "what 03-logogenic-agents/ doesn't yet do" becomes structural instead of stylistic.
+> This pattern could be generalized to *every* AAD instantiation. A `domain-instantiation-template.md` (or a section of FORMAT.md) could prescribe: any new domain instantiation must produce a transfer-assumption table with rows for each AAD-core identification condition. This would make TST less of an exception and more of an exemplar. Logogenic and logozoetic instantiations could then be evaluated against the same template, and the gap between "what TST does well" and "what 03-llm-core/ doesn't yet do" becomes structural instead of stylistic.
 >
 > ### 3. The framework's "agent identity = singular trajectory" commitment is doing more architectural work than it gets credit for
 >

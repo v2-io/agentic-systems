@@ -50,11 +50,11 @@ Each commit lands a stage's full work — the segment edits + INDEX update + TOD
 
 | Spike content | Lands as | Destination |
 |---|---|---|
-| Edit 1: line 162 "**No equilibrium exists**" replaced with three-tier statement (no pure-strategy Nash / mixed-Nash exists but saddle / CCE in distribution) | Direct edit | `01-aad-core/src/deriv-strategic-composition.md` Honest Limits paragraph |
+| Edit 1: line 162 "**No equilibrium exists**" replaced with three-tier statement (no pure-strategy Nash / mixed-Nash exists but saddle / CCE in distribution) | Direct edit | `01-aat-core/src/deriv-strategic-composition.md` Honest Limits paragraph |
 | Edit 2: "candidate 4th `#disc-identifiability-floor` instance" → "candidate adjacent-floor instance" at lines 137 + 177 | Direct edits (2 occurrences) | Same file |
-| Edit 3: `#scope-composite-agent` line 69 "What fails the scope condition" rewrite | Direct edit | `01-aad-core/src/scope-composite-agent.md` |
-| Edit 4 (optional/recommended): β' macro-state-as-distribution sentence | Direct edit | `01-aad-core/src/deriv-strategic-composition.md` lines 64–68 |
-| γ'-sub-scope strengthening attempt and its closure into β' | Working Note | `01-aad-core/src/deriv-strategic-composition.md` Working Notes — one sentence stating the consideration and conclusion |
+| Edit 3: `#scope-composite-agent` line 69 "What fails the scope condition" rewrite | Direct edit | `01-aat-core/src/scope-composite-agent.md` |
+| Edit 4 (optional/recommended): β' macro-state-as-distribution sentence | Direct edit | `01-aat-core/src/deriv-strategic-composition.md` lines 64–68 |
+| γ'-sub-scope strengthening attempt and its closure into β' | Working Note | `01-aat-core/src/deriv-strategic-composition.md` Working Notes — one sentence stating the consideration and conclusion |
 | **Stays in spike file** (archaeology) | Spike → `.integrated/` | The audit-quote reproduction, the spike's narrative of where the slips happened, the §1 map-of-precision-holds-and-slips, the §4 "What was not changed and why" |
 
 **Workflow:** Background agent. Brief shares the spike file location, points at the four edits + the Working Note, lists the discipline (no diff voice; check final result against `bin/lint-outline`).
@@ -67,7 +67,7 @@ Status: [ ] pending
 
 **Spike:** `spikes/spike-fisher-local-update-gain-derivation.md`. Completion state: succeed-at-claim + boundary scope-strengthening.
 
-**New segment to create:** `01-aad-core/src/deriv-fisher-local-update-gain.md`. Type `derivation`, status `conditional`. Sibling to `#deriv-fisher-whitened-update-rule` (direction) — this gives magnitude.
+**New segment to create:** `01-aat-core/src/deriv-fisher-local-update-gain.md`. Type `derivation`, status `conditional`. Sibling to `#deriv-fisher-whitened-update-rule` (direction) — this gives magnitude.
 
 | Spike content | Lands as | Destination |
 |---|---|---|
@@ -77,16 +77,16 @@ Status: [ ] pending
 | §4 natural-gradient as canonical direction (Observations 1 + 2; (PI)/Čencov motivation) | New segment Discussion | Same |
 | §5 three-route convergence (Laplace / Bregman / Cramér-Rao) with the comparison table | New segment Discussion | Same |
 | §5.2 Bregman-route reconciliation (prior-direction vs natural-gradient reading; two faces of the same posterior shift) | New segment Discussion | Same |
-| §6.1 sibling positioning with `#deriv-fisher-whitened-update-rule` | Cross-reference satellite edit | `01-aad-core/src/deriv-fisher-whitened-update-rule.md` Working Notes gains: "Magnitude derived via companion `#deriv-fisher-local-update-gain` (sibling appendix at the model-parameter-update layer; same (PI)/Čencov framing)" |
-| §6.2 special case of `#deriv-adaptive-gain-dynamics` meta-gain framework | Cross-reference satellite edit | `01-aad-core/src/deriv-adaptive-gain-dynamics.md` Discussion gains: "The deterministic-meta-gain special case where $K = (H_M+H_L)^{-1}H_L$ is read off a known prior precision and observation Fisher is `#deriv-fisher-local-update-gain`; the Mehra-style adaptive case lifts it to a non-degenerate meta-channel." |
+| §6.1 sibling positioning with `#deriv-fisher-whitened-update-rule` | Cross-reference satellite edit | `01-aat-core/src/deriv-fisher-whitened-update-rule.md` Working Notes gains: "Magnitude derived via companion `#deriv-fisher-local-update-gain` (sibling appendix at the model-parameter-update layer; same (PI)/Čencov framing)" |
+| §6.2 special case of `#deriv-adaptive-gain-dynamics` meta-gain framework | Cross-reference satellite edit | `01-aat-core/src/deriv-adaptive-gain-dynamics.md` Discussion gains: "The deterministic-meta-gain special case where $K = (H_M+H_L)^{-1}H_L$ is read off a known prior precision and observation Fisher is `#deriv-fisher-local-update-gain`; the Mehra-style adaptive case lifts it to a non-degenerate meta-channel." |
 | §6.3 downstream tempo/persistence tier-lift | New segment Working Notes only (no Formal/Discussion change in downstream segments at this time) | Same |
 | §7.2 honest limits (outside Fisher-local; non-Bayesian; higher-order; multi-step; estimating $U_o$ via `#deriv-adaptive-gain-dynamics` Case A) | New segment Epistemic Status | Same |
 | §7.3 strengthening-attempt-fallback (qualitative direction universal, quantitative form regime-bound) | New segment Epistemic Status (one paragraph) | Same |
 | §8 obstructions O1–O5 (Amari import; single-observation; matrix vs scalar; step-size boundary; robust-qualitative downstream) | New segment Working Notes | Same |
-| §9.3 rewritten Epistemic Status for `#emp-update-gain` (cite the new appendix) | Surgical replacement | `01-aad-core/src/emp-update-gain.md` Epistemic Status — replaces the May-12 strengthening edit with the cleaner cite-the-appendix form |
+| §9.3 rewritten Epistemic Status for `#emp-update-gain` (cite the new appendix) | Surgical replacement | `01-aat-core/src/emp-update-gain.md` Epistemic Status — replaces the May-12 strengthening edit with the cleaner cite-the-appendix form |
 | §10 open questions (multi-step rate; Edgeworth; variational; multimodal; consolidation connection; **tensor-tempo composition → AAD-1 primitive**) | New segment Working Notes + TODO.md cross-reference | New segment Working Notes carries them. TODO.md §AAD-1 entry gains: "AAD-5's promoted segment `#deriv-fisher-local-update-gain` provides the matrix gain operator $K = (H_M+H_L)^{-1}H_L$ as the per-coordinate primitive that tensor-tempo $\mathcal T = \nu \cdot K$ would naturally cite." |
 | §11 references | New segment References | Same |
-| OUTLINE row | OUTLINE entry | `01-aad-core/OUTLINE.md` — Appendix section, alongside `#deriv-fisher-whitened-update-rule` |
+| OUTLINE row | OUTLINE entry | `01-aat-core/OUTLINE.md` — Appendix section, alongside `#deriv-fisher-whitened-update-rule` |
 | NeurIPS Paper 3 chart-rescaling no-go cross-reference | New segment Working Notes | "The (PI) dependence here is forced by Paper 3's chart-rescaling no-go on Euclidean chart norms; outside (PI) the canonical-direction argument fails. See `msc/neurips-back-integration-2026-05-08.md` §1 Paper 3 #3 and the OUT manifest at `~/src/neurips/03-llm-hallucinate-bound/OUT.llm-hallucinate-neurips-2026.md`." |
 | Scope clarification "(PI) only; not (R), not (K)" | New segment Epistemic Status one-liner | Same |
 | **Stays in spike file** (archaeology) | Spike → `.integrated/` | The §1 problem statement / audit context; the spike's own framing as a strengthening attempt; the §7.3 narrative of why the wider strengthening attempt fell back; the audit-walkthrough |
@@ -107,11 +107,11 @@ Status: [ ] pending
 
 | Item | Lands as | Destination |
 |---|---|---|
-| Tensor adaptive tempo $\mathcal T = \nu \cdot K$ with $K$ the AAD-5 matrix gain; scalar $\mathcal T = \nu \cdot \eta^\ast$ as commuting-basis collapse | Extension to `#def-adaptive-tempo` Formal Expression — new sub-block "Tensor extension under Fisher-local invariance regime" citing `#deriv-fisher-local-update-gain` | `01-aad-core/src/def-adaptive-tempo.md` |
+| Tensor adaptive tempo $\mathcal T = \nu \cdot K$ with $K$ the AAD-5 matrix gain; scalar $\mathcal T = \nu \cdot \eta^\ast$ as commuting-basis collapse | Extension to `#def-adaptive-tempo` Formal Expression — new sub-block "Tensor extension under Fisher-local invariance regime" citing `#deriv-fisher-local-update-gain` | `01-aat-core/src/def-adaptive-tempo.md` |
 | Sub-scope statement: scalar form is exact for isotropic + nonredundant-channel + scalar-Hessian cases; tensor form is exact in the Fisher-local invariance regime; outside, the qualitative relationship $\mathcal T \uparrow$ with frequency $\nu$ and gain $\eta^\ast$ is preserved | `#def-adaptive-tempo` Epistemic Status | Same |
 | Cross-reference satellite edits — segments that currently invoke scalar $\mathcal T$ where tensor $\mathcal T$ would be exact get a scope tag | `#deriv-fisher-whitened-update-rule`, `#deriv-causal-ib-lmi`, `#result-per-dimension-persistence`, `#deriv-adaptive-gain-dynamics` each gain a brief "tensor $\mathcal T$ when prior/likelihood do not share eigenbasis; see `#def-adaptive-tempo` Tensor extension" pointer | Multiple segments |
 | Downstream propagation: `#result-persistence-condition`, `#result-sector-condition-stability`, adversarial-tempo results | Scope-tag in their existing Discussions naming "scalar / isotropic / nonredundant-channel scope; tensor lift via `#def-adaptive-tempo` Tensor extension" | Multiple segments |
-| OUTLINE row update if a new appendix segment is judged necessary (e.g., if the tensor-extension content is large enough to be its own appendix `#def-adaptive-tempo-tensor`) | OUTLINE entry | `01-aad-core/OUTLINE.md` |
+| OUTLINE row update if a new appendix segment is judged necessary (e.g., if the tensor-extension content is large enough to be its own appendix `#def-adaptive-tempo-tensor`) | OUTLINE entry | `01-aat-core/OUTLINE.md` |
 
 **Implementation decision (one judgment call to make at execution time):** keep the tensor extension as a sub-block in `#def-adaptive-tempo`, or factor it out as a separate appendix segment `#def-adaptive-tempo-tensor` parallel to how AAD-5 separates `#emp-update-gain` (the empirical-claim layer) from `#deriv-fisher-local-update-gain` (the derived layer). The factoring choice depends on how much content the tensor extension carries; if it's a single paragraph + scope tag, in-segment. If it grows past ~30 lines with its own derivation + downstream propagation table, separate appendix.
 
@@ -125,11 +125,11 @@ Status: [ ] pending (blocked on AAD-5 landing)
 
 **Spike:** `spikes/spike-identity-sufficiency-formalization.md`. Completion state: succeed-at-claim + rate-distortion bonus + relational joint-space construction preserves bidirectionality.
 
-**Existing segment to rewrite:** `04-eli/src/def-identity-sufficiency.md` (status `sketch` → `definition`).
+**Existing segment to rewrite:** `04-eli-core/src/def-identity-sufficiency.md` (status `sketch` → `definition`).
 **New segments to create:**
 
-- `04-eli/src/deriv-identity-sufficiency-rate-bound.md` (rate-distortion-style feasibility bound; type `derivation`, status `robust-qualitative`)
-- `04-eli/src/hyp-substrate-transfer-asymmetry.md` (the substrate-asymmetry no-go: empirically suggestive, not derivable from $S_{\text{id}}$ alone, three candidate origins; type `hypothesis`, status `discussion-grade`)
+- `04-eli-core/src/deriv-identity-sufficiency-rate-bound.md` (rate-distortion-style feasibility bound; type `derivation`, status `robust-qualitative`)
+- `04-eli-core/src/hyp-substrate-transfer-asymmetry.md` (the substrate-asymmetry no-go: empirically suggestive, not derivable from $S_{\text{id}}$ alone, three candidate origins; type `hypothesis`, status `discussion-grade`)
 
 | Spike content | Lands as | Destination |
 |---|---|---|
@@ -149,7 +149,7 @@ Status: [ ] pending (blocked on AAD-5 landing)
 | §9 open questions (random cohort distribution; horizon-limit; factor weights; identity-IB Lagrangian; tension with predictive sufficiency) | Working Notes of `#def-identity-sufficiency` | Same |
 | §10 cross-references to upstream files (reflection 19; asm-specification.md; PROPRIUM-O/A-v2) | Working Notes only (upstream-source breadcrumbs per `feedback_breadcrumb_discipline_for_handoff.md`) | Same |
 | Status promotion `sketch` → `definition` | Status field change | Same |
-| OUTLINE rows for two new segments | OUTLINE entries | `04-eli/OUTLINE.md` |
+| OUTLINE rows for two new segments | OUTLINE entries | `04-eli-core/OUTLINE.md` |
 | NeurIPS Paper 2 IB parallel cross-reference | New segment Working Notes | "The rate-distortion structure here parallels `#form-information-bottleneck`'s NeurIPS Paper 2 instantiation; both are M3 instances of the additive-coordinate-forcing family. See `msc/neurips-back-integration-2026-05-08.md` §1 Paper 2." |
 | **Stays in spike file** (archaeology) | Spike → `.integrated/` | §1 honest audit walkthrough; the spike's narrative of how the construction was attempted; the codex-quote reproduction |
 

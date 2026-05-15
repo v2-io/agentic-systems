@@ -8,7 +8,7 @@
 - The definition $\mathcal{A}(e_\tau) = \frac{I(G \,;\, \Omega_\tau \mid e_\tau,\, M_{\tau^-})}{H(\Omega_\tau \mid e_\tau,\, M_{\tau^-})}$ is an absolutely pristine information-theoretic ratio. It bounds the ambiguity between 0 (no goal-resolvable uncertainty) and 1 (all residual uncertainty is goal-resolvable).
 - The empirical estimator $\hat{\mathcal{A}}(e_\tau)$ using variance of posterior means ($\mathrm{Var}_k[\hat{\Omega}] / (\mathrm{Var}_k[\hat{\Omega}] + \mathbb{E}_k[\mathrm{Var}])$) is the exact formulation of the Law of Total Variance (explained variance / total variance). This is statistically exact and brilliantly operationalized.
 
-**4. What direction will the theory take next?** This concludes the `03-logogenic-agents` core reading path. The OUTLINE shows several GAP segments remaining, but the defined files are complete.
+**4. What direction will the theory take next?** This concludes the `03-llm-core` core reading path. The OUTLINE shows several GAP segments remaining, but the defined files are complete.
 
 **5. What errors should I watch for?** 
 - **Finding (Severe Editorial Bloat):** The Findings block here is the largest one yet. It contains a 7-row table of related work and a dense search log. This integration debt must be addressed framework-wide.

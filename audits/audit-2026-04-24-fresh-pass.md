@@ -213,9 +213,9 @@ The intuitive framing in the segment ("$A$ pushes up maximally, $B$ pushes down 
 - `coupled-update-dynamics.md`: Class 2 updates are coupled and the orient cascade is no longer architecturally derived.
 - `context-turnover.md`: session-start state is reconstructed from external memory + prompt + weights, not literally near-zero.
 
-The TST scope-developer-agent treats AI agents using standard AAD apparatus (orient cascade, $M_t$ reset, "directly observable" $M_t$) without referencing the Class 2 architectural caveat from `der-directed-separation` or the more careful logogenic treatment. The framework has the Class 2 story in `03-logogenic-agents/`; TST hasn't absorbed it.
+The TST scope-developer-agent treats AI agents using standard AAD apparatus (orient cascade, $M_t$ reset, "directly observable" $M_t$) without referencing the Class 2 architectural caveat from `der-directed-separation` or the more careful logogenic treatment. The framework has the Class 2 story in `03-llm-core/`; TST hasn't absorbed it.
 
-**Status:** real integration debt between TST and logogenic-agents. **Confidence: medium-high** (logogenic-agents passages quoted by Codex; my session did not include first-hand reading of `03-logogenic-agents/` so I'm relying on Codex's quotes for the counterevidence).
+**Status:** real integration debt between TST and logogenic-agents. **Confidence: medium-high** (logogenic-agents passages quoted by Codex; my session did not include first-hand reading of `03-llm-core/` so I'm relying on Codex's quotes for the counterevidence).
 
 ### Partial / milder findings
 
@@ -235,7 +235,7 @@ The fresh pass produced "zero findings." Five-plus findings actually exist. Why 
 
 - **F-V4 (zero-sum example math):** I read `deriv-strategic-composition.md` first-hand. I did not run the math of the worked example — I confirmed the segment's framing was reasonable and moved on. **Worked examples require running the math, not just confirming framing.** The intuitive zero-sum framing ("$A$ pushes up, $B$ pushes down") sounded right; the actual derivative test fails. This is a clear instance of charitable reading where verification was warranted.
 
-- **F-V5 (TST/logogenic integration):** I did not read the logogenic-agents segments at all in this session. My coverage was AAD-core + TST OUTLINE + 2 TST segments. The Class 2 architectural caveats live in `03-logogenic-agents/`, which I marked "not read" in §"What I Did Not Read" but didn't cross-reference for consistency with the TST treatment of AI agents. Codex's discipline of cross-checking TST claims about AI developers against logogenic-agents Class 2 caveats is the right move.
+- **F-V5 (TST/logogenic integration):** I did not read the logogenic-agents segments at all in this session. My coverage was AAD-core + TST OUTLINE + 2 TST segments. The Class 2 architectural caveats live in `03-llm-core/`, which I marked "not read" in §"What I Did Not Read" but didn't cross-reference for consistency with the TST treatment of AI agents. Codex's discipline of cross-checking TST claims about AI developers against logogenic-agents Class 2 caveats is the right move.
 
 The pattern: the auditors did the math first-hand on specific worked examples (Gemini F1, F2; Codex F3) and checked cross-segment consistency more carefully (Codex F1, F2, F5). My reading was charitable rather than verification-mode in places where verification was warranted — particularly on worked examples and on cross-segment consistency around recently-added scope routes. The framework's segment-level discipline holds in most places I read; the cross-segment integration drift around recent additions is real and is where these audits caught what mine missed.
 
@@ -476,7 +476,7 @@ Honest enumeration so the coverage scope is auditable:
 
 **TST not read:** ~20 segments (def-feature, post-temporal-optimality, scope-software, der-* definitions and derivations, hyp-* hypotheses, etc.) plus the `old-tst-*` source material.
 
-**03-logogenic-agents/** not read at all. **04-logozoetic-agents/** not read at all.
+**03-llm-core/** not read at all. **04-eli-core/** not read at all.
 
 **Cross-component:** TODO.md read; PROPOSALS.md not read directly (referenced via TODO.md); LOG.md not read; LEXICON.md not read; root-level OUTLINE.md not read in this session.
 

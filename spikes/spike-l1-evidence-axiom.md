@@ -26,8 +26,8 @@ where $g$ depends only on the observation $y$, and the underlying Bernoulli chan
 
 The independent-evidence axiom is literally false in L1'. If the log-odds coordinate's uniqueness rests on that axiom, what happens structurally when the axiom fails? Two possible outcomes shape the landing:
 
-- **Positive.** An AAD-internally-motivated block-structured additivity axiom (evidence decomposes additively *across* correlation clusters, with some within-cluster coupling) admits a Cauchy-FE-style uniqueness derivation. The forced coordinate becomes *vector-valued* log-odds on a quotient graph — one coordinate per cluster. This would be a genuine third theorem in #additive-coordinate-forcing, matching its 1-anchor-plus-2-theorem shape at a new layer.
-- **Negative.** The axiom is ambiguous between multiple forms, or each form forces a different coordinate, or the relevant axiom is not AAD-internally motivated (it has to be imported from Bayesian-network sufficient-statistic theory or exponential-family naturality). Then the result is a new *instance of the identifiability floor* — name the external theorem (Cauchy-FE on what axiom? Markov-invariance from Čencov? the Aczél-Daróczy system?), name what cannot be forced without importing more than AAD motivates internally, and name the unique escape (observability of $C$ per Prop B.7 — already on the books).
+- **Positive.** An AAT-internally-motivated block-structured additivity axiom (evidence decomposes additively *across* correlation clusters, with some within-cluster coupling) admits a Cauchy-FE-style uniqueness derivation. The forced coordinate becomes *vector-valued* log-odds on a quotient graph — one coordinate per cluster. This would be a genuine third theorem in #additive-coordinate-forcing, matching its 1-anchor-plus-2-theorem shape at a new layer.
+- **Negative.** The axiom is ambiguous between multiple forms, or each form forces a different coordinate, or the relevant axiom is not AAT-internally motivated (it has to be imported from Bayesian-network sufficient-statistic theory or exponential-family naturality). Then the result is a new *instance of the identifiability floor* — name the external theorem (Cauchy-FE on what axiom? Markov-invariance from Čencov? the Aczél-Daróczy system?), name what cannot be forced without importing more than AAT motivates internally, and name the unique escape (observability of $C$ per Prop B.7 — already on the books).
 
 Either outcome is useful. The spike attempts the positive branch with honest accounting; the negative-result branch is structured as the fallback.
 
@@ -40,7 +40,7 @@ This matters for #disc-credit-assignment-boundary, where the default signal func
 - §3 — Within-cluster correlation parameter $\rho$: does it interpolate smoothly between L0 (independent) and a fully-coupled regime? What functional equation governs it?
 - §4 — Relation to Hobson / Csiszár / Shore-Johnson on the divergence side. The sister reverse-KL theorem rests on chain-rule additivity; does a block-wise chain rule hold?
 - §5 — Negative-result branch. What breaks in the positive-result derivation if pushed naively? Shore-Johnson's system-independence axiom is the clearest friction point; this is where the negative branch is strongest.
-- §6 — Does block-additivity motivate AAD-internally? Parallel to the independent-evidence axiom's chain-layer analog.
+- §6 — Does block-additivity motivate AAT-internally? Parallel to the independent-evidence axiom's chain-layer analog.
 - §7 — Lift attempt to L2 (non-latent-common-cause correlation structure).
 - §8 — Candidate landing — new appendix segment, extension of #deriv-edge-update-natural-parameter, or new #disc-identifiability-floor instance.
 - §9 — Epistemic assessment per tier.
@@ -105,7 +105,7 @@ where $G_\alpha : \mathcal{Y}_\alpha \to \mathbb{R}^{k_\alpha}$ depends only on 
 
 Two sub-questions:
 
-(Q1) Is the block-additive axiom AAD-internally motivated, or imported?
+(Q1) Is the block-additive axiom AAT-internally motivated, or imported?
 (Q2) What is the functional-equation consequence — is the coordinate $\Psi$ uniquely forced, and is it logarithmic?
 
 ### §2.2 Step 1 — Inter-cluster structure
@@ -307,30 +307,30 @@ Option (b) is the honest posture. It matches the Cramér-Rao refutation in Prop 
 
 The strongest negative-result formulation. Even in the observable-$C$ case where positive results hold, the block-additivity axiom has a subtle failure mode worth naming.
 
-### §5.1 What "AAD-internally motivated" requires
+### §5.1 What "AAT-internally motivated" requires
 
-Per #additive-coordinate-forcing's 1-anchor-plus-2-theorem characterization: an axiom is AAD-internally motivated if it is an analog (at a new layer) of #der-chain-confidence-decay's chain-rule identity. The existing axioms:
+Per #additive-coordinate-forcing's 1-anchor-plus-2-theorem characterization: an axiom is AAT-internally motivated if it is an analog (at a new layer) of #der-chain-confidence-decay's chain-rule identity. The existing axioms:
 
 - **Chain-rule additivity** (divergence layer): analog of "log-confidence decomposes additively along the DAG" (#der-chain-confidence-decay) at the divergence level.
 - **Evidential additivity** (update layer): analog of the same chain-layer identity, at the update level.
 
 Both are motivated because the chain layer is a mathematical identity via the probability chain rule, and the two theorem-layer axioms apply the *same* decomposition to a new quantity (divergence, credence).
 
-**Block-additivity.** Does the block axiom have an analogous AAD-internal motivation? Candidates:
+**Block-additivity.** Does the block axiom have an analogous AAT-internal motivation? Candidates:
 
 - (C1) "Confidence along a cluster decomposes additively into per-member contributions." This is FALSE for clusters with shared latents — the whole point of L1' is that cluster-members are NOT independent, so their confidences do NOT decompose additively (they decompose multiplicatively conditional on the latent, not per-member additively). So (C1) is NOT the analog.
 - (C2) "Across clusters, confidence decomposes additively (clusters are independent by construction)." This is TRUE and IS the analog. The chain rule operates on causally-independent factors; the block axiom operates on correlation-partition-independent factors. Both say "independent pieces contribute additively on the log scale."
 - (C3) "Within a cluster, given the latent, confidence decomposes additively." This is also TRUE conditionally. The chain rule on a fixed observed $C$-realization gives per-child additivity.
 
-The (C2) motivation is AAD-internal and solid: given the DAG structure, the correlation partition is a structural feature, and independence across clusters follows from the partition's construction. (C3) is also AAD-internal: AAD's DAG factorization is exactly "conditional-independence-along-the-DAG," and conditional on the latent, per-child independence holds.
+The (C2) motivation is AAT-internal and solid: given the DAG structure, the correlation partition is a structural feature, and independence across clusters follows from the partition's construction. (C3) is also AAT-internal: AAT's DAG factorization is exactly "conditional-independence-along-the-DAG," and conditional on the latent, per-child independence holds.
 
-So the block-additivity axiom under observable $C$ is AAD-internally motivated at both the inter-cluster (C2) and intra-cluster (C3) levels. This justifies calling the result a "genuine third theorem" if we land it.
+So the block-additivity axiom under observable $C$ is AAT-internally motivated at both the inter-cluster (C2) and intra-cluster (C3) levels. This justifies calling the result a "genuine third theorem" if we land it.
 
 ### §5.2 Where the motivation fails
 
-Under *unobservable* $C$, the motivation (C3) is vacuous: we cannot condition on $C$ because we never observe it. The axiom becomes "confidence decomposes additively across children" — which is FALSE given the latent coupling. The AAD-internal motivation relies on either observing $C$ or on the chain rule operating in a conditional-independent decomposition that the agent can evaluate.
+Under *unobservable* $C$, the motivation (C3) is vacuous: we cannot condition on $C$ because we never observe it. The axiom becomes "confidence decomposes additively across children" — which is FALSE given the latent coupling. The AAT-internal motivation relies on either observing $C$ or on the chain rule operating in a conditional-independent decomposition that the agent can evaluate.
 
-**The negative-result branch's crisp form.** The block-additivity axiom has AAD-internal motivation in the observable-$C$ regime only. In the unobservable-$C$ regime, there is no AAD-internal axiom that forces a unique coordinate. The positive result is scope-restricted.
+**The negative-result branch's crisp form.** The block-additivity axiom has AAT-internal motivation in the observable-$C$ regime only. In the unobservable-$C$ regime, there is no AAT-internal axiom that forces a unique coordinate. The positive result is scope-restricted.
 
 This exactly parallels the scope restriction on the axiom in #deriv-edge-update-natural-parameter: the evidential-additivity axiom is stated for Bayesian-coherent sub-scope $\alpha$ (per #der-gain-sector-bridge), with non-Bayesian agents in sub-scope $\beta$ outside the uniqueness. Block-additivity under observable $C$ is a Bayesian-coherent extension; under unobservable $C$, the Bayesian posterior itself does not admit the additive form.
 
@@ -356,7 +356,7 @@ The negative-result branch, stated as an #disc-identifiability-floor instance ca
 
 This *converges* with Instance 2 of #disc-identifiability-floor rather than creating a fourth instance. Both obstructions have the same scope boundary (observable vs unobservable $C$), same repair routes, and same strengthened consequence (observability-of-$C$ as load-bearing). The contribution of this spike's negative branch is to show that the structural obstruction appears at *two independent layers* (Cauchy-FE uniqueness at the coordinate level; Cramér-Rao floor at the Fisher-information level) — strengthening the robustness of the floor.
 
-## §6 — AAD-internal motivation check
+## §6 — AAT-internal motivation check
 
 ### §6.1 Is block-additivity under observable $C$ a genuine third theorem in #additive-coordinate-forcing?
 
@@ -369,7 +369,7 @@ The two existing theorems are at the *divergence* layer and the *update* layer. 
 
 **Arguments for "genuine third theorem."**
 
-- (P1) The observable-$C$ block axiom is AAD-internally motivated at both inter-cluster (C2) and intra-cluster (C3) levels (see §5.1). The motivation is the same chain-rule identity applied to a block-wise conditional factorization.
+- (P1) The observable-$C$ block axiom is AAT-internally motivated at both inter-cluster (C2) and intra-cluster (C3) levels (see §5.1). The motivation is the same chain-rule identity applied to a block-wise conditional factorization.
 - (P2) The forced coordinate is logarithmic ($(2K+1)$-dimensional log-odds vector), matching the pattern's logarithmic-coordinate shape.
 - (P3) The reduction to singleton clusters recovers #deriv-edge-update-natural-parameter exactly. So the block version is a *generalization*, not a parallel theorem.
 
@@ -503,7 +503,7 @@ Recommend **minimal landing first**, with full landing deferred unless the #disc
 
 If reviewers judge the extension not worth the segment disruption, park as archaeological:
 
-- §2.3 Case A positive result is *known* in the Bayesian-network literature (exponential-family conjugate updates on factorized likelihoods; standard). AAD's contribution would only be the explicit observation that block-additivity is the update-layer axiom under which the result lives, and the scope boundary at unobservable $C$.
+- §2.3 Case A positive result is *known* in the Bayesian-network literature (exponential-family conjugate updates on factorized likelihoods; standard). AAT's contribution would only be the explicit observation that block-additivity is the update-layer axiom under which the result lives, and the scope boundary at unobservable $C$.
 - §2.3 Case B negative result is *equivalent* to Prop B.7's Cramér-Rao refutation from a different angle. Value is in convergence; novelty is minimal.
 
 The park-decision would retain the spike for the record, noting that (a) log-odds generalizes cleanly to blocks under observable $C$ via per-factor Aczél; (b) the unobservable-$C$ floor is confirmed at the Cauchy-FE layer; (c) $\rho$-interpolation conjecture refuted as stated.
@@ -537,14 +537,14 @@ Land minimal (single subsection extension of #deriv-edge-update-natural-paramete
 
 ### §9.3 What is fragile
 
-- (F1) The "not a third theorem" judgment (§6.1) is a framing call. Reasonable reviewers could argue that a block-axiom uniqueness theorem with a different motivation structure (cluster-factorization AAD-internal motivation vs chain-rule AAD-internal motivation) is genuinely new. The honest read leans extension, but the call is contestable.
+- (F1) The "not a third theorem" judgment (§6.1) is a framing call. Reasonable reviewers could argue that a block-axiom uniqueness theorem with a different motivation structure (cluster-factorization AAT-internal motivation vs chain-rule AAT-internal motivation) is genuinely new. The honest read leans extension, but the call is contestable.
 - (F2) The "not a new floor instance" judgment (§6.2) is similarly a framing call. The dual obstruction strengthens Instance 2; whether that's a standalone floor or a reinforcement of an existing floor depends on taste. The honest read leans reinforcement.
-- (F3) The L2 extension (§7.2) is sketchy. The log-linear coordinate under full-joint observation is standard exponential-family theory, but AAD hasn't systematically treated full-joint observation as a practical regime; the $2^m - 1$ cost makes it mostly aspirational. The extension is formally correct but practically bounded.
+- (F3) The L2 extension (§7.2) is sketchy. The log-linear coordinate under full-joint observation is standard exponential-family theory, but AAT hasn't systematically treated full-joint observation as a practical regime; the $2^m - 1$ cost makes it mostly aspirational. The extension is formally correct but practically bounded.
 - (F4) The quaternary landing (§8.1) — updating #disc-credit-assignment-boundary's default signal function to operate on the block coordinate — has non-trivial downstream effects that weren't worked through here. Specifically: what does the gradient $\mathbf{J}$ look like on a block coordinate? What is the analog of $\iota_k$ (identifiability coefficient) under a $(2K+1)$-dim coordinate? These are not answered in this spike.
 
 ### §9.4 What is open
 
-- (O1) The full-joint observation regime (§7) is a theoretical scope not developed elsewhere in AAD. If the agent observed the full joint vector at every trial, many of the L2 obstructions would lift. Whether this is a meaningful practical scope or purely formal is a separate question; the spike didn't investigate.
+- (O1) The full-joint observation regime (§7) is a theoretical scope not developed elsewhere in AAT. If the agent observed the full joint vector at every trial, many of the L2 obstructions would lift. Whether this is a meaningful practical scope or purely formal is a separate question; the spike didn't investigate.
 - (O2) The "second-layer confirmation" of Instance 2 (§5.4, §6.2) — does the dual Cauchy-FE + Cramér-Rao obstruction point to a deeper unifying obstruction? Is there a single axiomatic statement from which both follow? This is a deep research question that could seed a future spike. Speculative angle: both obstructions arise from *non-translation-commuting posterior updates*; both Cauchy-FE and Cramér-Rao are sensitive to the failure of this property, at different structural layers.
 - (O3) The block-coordinate signal function for #disc-credit-assignment-boundary. Specifically: how does the $\mathbf{J}$-Jacobian generalize to operate on a $(2K+1)$-dim coordinate? What is the corresponding $\iota$ coefficient? How does directional fidelity (B1) look on the block coordinate? These are concrete, work-through-able questions that the quaternary landing opens.
 
@@ -564,8 +564,8 @@ The spike's value is not a new theorem — it is honest scope clarification of a
 ## Working notes
 
 - The full-joint-observation angle (§7) could support a follow-on spike on "when does an agent have access to joint observation structure, and what does that buy?" This is tangent to Prop B.7's Repair (ii) and may be tractable under high-identifiability-calibration-laboratory settings (e.g., software, where intermediate states are observable by construction per TST).
-- The dual-obstruction observation (Cauchy-FE + Cramér-Rao both obstructed at unobservable $C$) invites a deeper unification: is there a single axiomatic obstruction from which both follow? This would promote the identifiability-floor pattern from "external theorems applied to AAD settings" to "a unified obstruction theory within AAD itself." Speculative; outside this spike's scope.
+- The dual-obstruction observation (Cauchy-FE + Cramér-Rao both obstructed at unobservable $C$) invites a deeper unification: is there a single axiomatic obstruction from which both follow? This would promote the identifiability-floor pattern from "external theorems applied to AAT settings" to "a unified obstruction theory within AAT itself." Speculative; outside this spike's scope.
 - The §5.3 R2 (multi-child joint observation) route is the under-explored repair in Prop B.7. The spike's analysis shows it's equivalent to raising the Fisher matrix to rank $2K+1$, which IS full rank on the $(2K+1)$-dim block coordinate. So multi-child joint observation is structurally equivalent to observing $C$ indirectly through its multi-child fingerprint. Whether this can be formalized as "observing a sufficient statistic of $C$" (vs observing $C$ directly) is a mild open question — probably yes under standard sufficient-statistic theory (Fisher 1922; Koopman-Pitman-Darmois).
 - The Shore-Johnson subset-independence axiom (§4.5) is the divergence-layer analog of block-additivity at the observation level. Under observable $C$, it gives the same result as the Aczél per-factor derivation; under unobservable $C$, the axiom is false for the marginal (children aren't independent marginals). This convergence between the update-layer and divergence-layer stories is the strongest evidence that block-additivity under observable $C$ is a real structural feature, not an accidental alignment.
 - If the minimal landing is executed, the Case B obstruction should be stated precisely enough that future spikes on (a) variational-approximation posteriors, (b) mean-field EM, (c) score-matching updates can check whether those families evade the obstruction. Almost certainly they do NOT — variational updates typically don't admit a translation-commuting form either — but that's worth checking explicitly.
-- Historical cross-check: the correspondence between "posterior update has form $T(\phi + U(y))$" and "exponential-family conjugate" is a classical result. Our §2.3 Case B is effectively "mixture models are not exponential families in the natural sense" — a textbook fact. The contribution is making it visible at the Cauchy-FE / additive-coordinate layer of AAD, where it hadn't been stated.
+- Historical cross-check: the correspondence between "posterior update has form $T(\phi + U(y))$" and "exponential-family conjugate" is a classical result. Our §2.3 Case B is effectively "mixture models are not exponential families in the natural sense" — a textbook fact. The contribution is making it visible at the Cauchy-FE / additive-coordinate layer of AAT, where it hadn't been stated.

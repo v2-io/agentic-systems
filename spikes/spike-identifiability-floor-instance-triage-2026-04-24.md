@@ -18,35 +18,35 @@ The meta-segment states the pattern as five elements: *setting / external theore
 
 ### 1.1 Element-level criteria
 
-**(E1) Setting.** A specific AAD inferential task — detect / identify / distinguish — under an *explicitly named information regime* that limits what the agent or observer has access to. The restriction is load-bearing: a setting like "identify $X$ using everything the agent can ever observe" is too broad; a setting like "identify $X$ using on-policy data only, under exploration rate $\varepsilon = 0$, single observation channel" is correctly scoped.
+**(E1) Setting.** A specific AAT inferential task — detect / identify / distinguish — under an *explicitly named information regime* that limits what the agent or observer has access to. The restriction is load-bearing: a setting like "identify $X$ using everything the agent can ever observe" is too broad; a setting like "identify $X$ using on-policy data only, under exploration rate $\varepsilon = 0$, single observation channel" is correctly scoped.
 
 Instances 1–3 all meet (E1): on-policy observation history under sequential short-circuit AND/OR execution (I1); single-channel single-child observation with $C$ unobservable (I2); component-level marginal trajectories with no observation of coupling topology (I3).
 
 **Criterion.** A candidate meets (E1) iff it names both the inferential task and a specific regime that restricts access in a way that makes the no-go sharp.
 
-**(E2) External theorem.** A *published, citable, mature* information-theoretic or formal-science theorem — not derived in AAD — that delivers the impossibility. The external theorem must be doing the work; the AAD content is the *application*, not re-derivation. The theorem is named with its canonical reference.
+**(E2) External theorem.** A *published, citable, mature* information-theoretic or formal-science theorem — not derived in AAT — that delivers the impossibility. The external theorem must be doing the work; the AAT content is the *application*, not re-derivation. The theorem is named with its canonical reference.
 
 Instances 1–3 all meet (E2) explicitly: Bareinboim-Correa-Ibeling-Icard (2022) CHT; Cramér 1946 Cramér-Rao; Liberzon 2003 common-Lyapunov-nonexistence anchored by Dayawansa-Martin 1999 counterexample and Shorten-Wirth-Mason-Wulff-King 2007 review.
 
 **Criterion.** A candidate meets (E2) iff the external theorem is cited with a canonical reference and the no-go is derivable by invoking it, not by re-arguing the no-go from first principles.
 
-**(E3) No-go.** A statement of the form "under the regime in (E1), no [estimator / detector / procedure] can [perform the (E1) task]" that *follows from (E2)* as the AAD-relevant application. The no-go is *exact* in the sense that a specific construction or a specific citable theorem underwrites it — not merely pattern-matched.
+**(E3) No-go.** A statement of the form "under the regime in (E1), no [estimator / detector / procedure] can [perform the (E1) task]" that *follows from (E2)* as the AAT-relevant application. The no-go is *exact* in the sense that a specific construction or a specific citable theorem underwrites it — not merely pattern-matched.
 
 Instances 1–3 all meet (E3) at standards clearly stated. I1 gives an explicit construction ($\mathcal W_{L0}^\ast$ with matched on-policy conditionals). I2 gives the Fisher rank-1 calculation (two-dimensional null space, smallest eigenvalue zero, no SA1-preserving update with sector parameter $\alpha \gt 0$). I3 gives the $\pm \gamma_0$ coupled-system construction with matching marginal disturbance bound $\rho + |\gamma|\mathcal T$.
 
-**Criterion.** A candidate meets (E3) iff the no-go is backed by either (a) an explicit AAD-level counterexample construction, or (b) a direct derivation-step from the external theorem in (E2). Pattern-match alone does not clear the bar.
+**Criterion.** A candidate meets (E3) iff the no-go is backed by either (a) an explicit AAT-level counterexample construction, or (b) a direct derivation-step from the external theorem in (E2). Pattern-match alone does not clear the bar.
 
-**(E4) Boundary characterization.** Explicit escape routes, *each mapped to AAD machinery already in the theory* (or explicitly adjacent machinery with honest credit). The escapes are not a laundry list of "observe more"; they are specific operational mechanisms that match specific AAD segments or established external capabilities.
+**(E4) Boundary characterization.** Explicit escape routes, *each mapped to AAT machinery already in the theory* (or explicitly adjacent machinery with honest credit). The escapes are not a laundry list of "observe more"; they are specific operational mechanisms that match specific AAT segments or established external capabilities.
 
 Instances 1–3 meet (E4) with 5 / 3 / 4 escape routes respectively, each mapped.
 
-**Criterion.** A candidate meets (E4) iff at least two distinct escape routes are named, each mapped either to an existing AAD segment or to a clearly-adjacent external capability. If every escape collapses to a single capability, the candidate does not have real boundary structure; it has a single-step "you need capability $X$" claim, which is weaker than a floor instance.
+**Criterion.** A candidate meets (E4) iff at least two distinct escape routes are named, each mapped either to an existing AAT segment or to a clearly-adjacent external capability. If every escape collapses to a single capability, the candidate does not have real boundary structure; it has a single-step "you need capability $X$" claim, which is weaker than a floor instance.
 
-**(E5) Strengthened consequence.** The floor *elevates* the load-bearing role of AAD machinery named in (E4) — typically from "useful" to "structurally required." This is the positive-content half of the no-go: the machinery the theory has is revealed to be doing load-bearing work it was not previously known to do.
+**(E5) Strengthened consequence.** The floor *elevates* the load-bearing role of AAT machinery named in (E4) — typically from "useful" to "structurally required." This is the positive-content half of the no-go: the machinery the theory has is revealed to be doing load-bearing work it was not previously known to do.
 
 Instances 1–3 meet (E5): `#der-loop-interventional-access` elevated at the causal-sufficiency layer (I1); observability-as-information-augmentation (the "instrument $C$" engineering move) elevated from convenience to prerequisite (I2); `#deriv-critical-mass-composition`, composite-extended `#der-loop-interventional-access`, and `#scope-composite-agent` each elevated to structural-requirement status at the composition layer (I3).
 
-**Criterion.** A candidate meets (E5) iff naming the floor *does new work* for existing AAD machinery — either elevates its status, completes a pattern, or surfaces a role previously implicit.
+**Criterion.** A candidate meets (E5) iff naming the floor *does new work* for existing AAT machinery — either elevates its status, completes a pattern, or surfaces a role previously implicit.
 
 ### 1.2 The five-element test, compactly
 
@@ -55,8 +55,8 @@ Instances 1–3 meet (E5): `#der-loop-interventional-access` elevated at the cau
 | E1 Setting | Named task + named information-restricting regime |
 | E2 External theorem | Cited, published, delivers the no-go |
 | E3 No-go | Explicit construction or direct step from E2 |
-| E4 Boundary characterization | ≥ 2 escape routes, each mapped to AAD or clearly-adjacent machinery |
-| E5 Strengthened consequence | Elevates load-bearing role of existing AAD machinery |
+| E4 Boundary characterization | ≥ 2 escape routes, each mapped to AAT or clearly-adjacent machinery |
+| E5 Strengthened consequence | Elevates load-bearing role of existing AAT machinery |
 
 *Tier of the test itself:* **Discussion-grade**. The five elements are read off Instances 1–3 and are consistent with them by construction; they are not derived from a separate meta-theorem. The test is a reviewer heuristic, not a theorem.
 
@@ -84,10 +84,10 @@ More importantly (see §3.1 below), Candidate 1 is plausibly a *sub-instance* of
 
 | Element | Assessment |
 |---|---|
-| E1 | **Passes.** Task: distinguish two agents $A, A'$ with identical $(\alpha, R)$-summary observable behavior. Regime: on-policy, in-regime, $(\alpha, R)$-summary-only observation — a sharp and natural restriction given AAD's Section II state-summary structure. |
+| E1 | **Passes.** Task: distinguish two agents $A, A'$ with identical $(\alpha, R)$-summary observable behavior. Regime: on-policy, in-regime, $(\alpha, R)$-summary-only observation — a sharp and natural restriction given AAT's Section II state-summary structure. |
 | E2 | **Passes with dual anchor.** Bareinboim et al. 2022 CHT at the agent-as-SCM layer is the primary anchor (treating each agent as an SCM over its state space, two SCMs can agree on Level-1 observation data and disagree on Level-2 interventional data). Kalman-Ho canonical-form non-uniqueness (Kalman 1963; Ho-Kalman 1966) is the sharper anchor for the linear-Gaussian sub-scope. Both are canonically citable. The dual-anchor structure is honest: CHT for general no-go, Kalman-Ho for the tight linear-Gaussian sub-case. |
 | E3 | **Sketch at the top, solid at the sub-scope.** The spike's §8.3 is explicit that a crisp closed-form no-go construction at the level of I1 / I3 exists for the linear-Gaussian sub-case (two Kalman filters with identical innovation-sequence spectra but different state-space realizations — Kalman canonical-form ambiguity, classical). The pattern-level claim is therefore robust-qualitative, *sharper* than I1's general-DAG pattern, and has a crisp closed form in the natural sub-case. |
-| E4 | **Passes.** Four distinct escapes: (a) loop-interventional access; (b) horizon-extended or out-of-regime $H_b$; (c) higher-moment observation in nonlinear sub-scope; (d) architecture instrumentation. Three of four (a/b/c) are mapped to AAD segments (`#der-loop-interventional-access`, `#der-agent-opacity`, `#der-interaction-channel-classification` and the nonlinear sub-scope contraction-template segments). The fourth (d) is clearly adjacent (breaking black-box scope). |
+| E4 | **Passes.** Four distinct escapes: (a) loop-interventional access; (b) horizon-extended or out-of-regime $H_b$; (c) higher-moment observation in nonlinear sub-scope; (d) architecture instrumentation. Three of four (a/b/c) are mapped to AAT segments (`#der-loop-interventional-access`, `#der-agent-opacity`, `#der-interaction-channel-classification` and the nonlinear sub-scope contraction-template segments). The fourth (d) is clearly adjacent (breaking black-box scope). |
 | E5 | **Passes with pattern-level work.** Elevates `#der-loop-interventional-access` to a *third* load-bearing role (after I1 causal-sufficiency and I3 composition) — the headline strengthening claim. Elevates `#der-agent-opacity`'s horizon-indexing and `#der-interaction-channel-classification`'s regime-histogram to "structurally required diagnostic instruments, not optional ones." Adds explicit Discussion scope-limit content to `#result-sector-persistence-template`. |
 
 **Verdict (robust qualitative → exact in linear-Gaussian sub-case).** Candidate 2 clears the five-element test at Instance 1–3 standards. The pattern-level claim is robust qualitative; the linear-Gaussian sub-case (via Kalman canonical-form) is structurally crisp. **This is a genuine sibling of Instances 1–3.**
@@ -116,7 +116,7 @@ More importantly (see §3.1 below), Candidate 1 is plausibly a *sub-instance* of
 |---|---|
 | E1 | **Passes with caveat.** Task: can an outside designer shape sub-agents' $\{O_t^{(i)}\}$ so that the induced strategic equilibrium coincides with a desired joint state. Regime: constraints on the mechanism (dominant-strategy implementability, individual rationality, incentive compatibility, budget balance, etc., case-specific to theorem). |
 | E2 | **Passes but of a structurally different kind.** External theorems: Gibbard-Satterthwaite 1973-75; Myerson-Satterthwaite 1983; Arrow 1951. These are *social-choice / mechanism-design impossibility theorems*, not information-theoretic identifiability theorems. They forbid *implementability* under stated constraints — "no mechanism exists satisfying all of P1..Pn simultaneously" — not "no estimator can identify parameter $\theta$ from data." This is a **different kind of external theorem** from Instances 1–3's CHT / Cramér-Rao / common-Lyapunov-nonexistence. |
-| E3 | **Passes.** Each theorem cited has a canonical derivation; the AAD application is one step: composite-design task under constraint-set $K$ is forbidden by Arrow / G-S / M-S. |
+| E3 | **Passes.** Each theorem cited has a canonical derivation; the AAT application is one step: composite-design task under constraint-set $K$ is forbidden by Arrow / G-S / M-S. |
 | E4 | **Escapes exist, multiple, canonically documented in the mechanism-design literature.** Bayes-Nash in place of dominant-strategy (G-S escape); randomized allocations (Arrow escape via strategy-space restriction); subsidy injection (M-S escape). Also: strategy-space restriction (single-peaked preferences for G-S); domain restriction. The spike-level inventory supplies ≥ 4 escapes. |
 | E5 | **Strengthens `#deriv-strategic-composition`'s sub-scope $\alpha'$ potential-game conditions.** The potential-game machinery (Monderer-Shapley) becomes a structurally load-bearing target for mechanism design — the *positive* structure is exactly what mechanism design must steer sub-agents toward. Reasonable strengthening, though the existing `#deriv-strategic-composition` segment already cross-references this. |
 
@@ -126,7 +126,7 @@ More importantly (see §3.1 below), Candidate 1 is plausibly a *sub-instance* of
 
 (i) **Narrow reading.** `#disc-identifiability-floor` is specifically about *information-theoretic identification*; mechanism-design impossibility is a different no-go family. Promote the mechanism-design instance elsewhere — perhaps a parallel meta-segment `#implementability-floor` or an extended Discussion in `#deriv-strategic-composition` — leaving `#disc-identifiability-floor` at 3 identification-theoretic instances.
 
-(ii) **Broad reading.** `#disc-identifiability-floor` is a general no-go pattern: "setting → external impossibility theorem → AAD-machinery escape → strengthened-consequence." Under this reading, mechanism-design impossibility is a genuine instance at a different layer (multi-agent-aggregation). Promote as fifth instance with an explicit external-theorem-type label ("implementability" vs. "identifiability") in the instance header so readers see the distinction.
+(ii) **Broad reading.** `#disc-identifiability-floor` is a general no-go pattern: "setting → external impossibility theorem → AAT-machinery escape → strengthened-consequence." Under this reading, mechanism-design impossibility is a genuine instance at a different layer (multi-agent-aggregation). Promote as fifth instance with an explicit external-theorem-type label ("implementability" vs. "identifiability") in the instance header so readers see the distinction.
 
 **Recommended disposition:** **Broad reading, with honest labeling.** The five-element pattern does not structurally require the external theorem to be information-theoretic; it requires it to be a *cited, published impossibility result delivering the no-go*. Gibbard-Satterthwaite / Myerson-Satterthwaite / Arrow do this. The label correction is to rename the pattern's external-theorem slot as "external impossibility theorem (information-theoretic or otherwise)" and to tag each instance with its theorem-family. This is a cheap reframe that preserves the pattern while being honest about the character distinction.
 
@@ -214,7 +214,7 @@ The claim needs unpacking because it conflates two different assertions: (a) *th
 
 ### 4.2 What's shared and what isn't
 
-**Shared (robust qualitative):** The broader *family* of escapes is "agent-as-Level-2-data-generator" — at each of the three layers, the agent's embedding in a feedback loop (or under an observer's intervention) converts on-policy observational equivalence into interventional distinguishability. `#der-loop-interventional-access` is the AAD segment that names the underlying capability; the three floor escapes are specific deployments.
+**Shared (robust qualitative):** The broader *family* of escapes is "agent-as-Level-2-data-generator" — at each of the three layers, the agent's embedding in a feedback loop (or under an observer's intervention) converts on-policy observational equivalence into interventional distinguishability. `#der-loop-interventional-access` is the AAT segment that names the underlying capability; the three floor escapes are specific deployments.
 
 **Not shared:**
 - **Who intervenes.** I1: the agent itself (as part of its adaptive loop). I3: an observer external to the composite. I4: an observer external to the single agent.
@@ -247,15 +247,15 @@ This is stronger than the pattern-match-alone claim ("same segment shows up at t
 
 ### 5.1 The dilution concern
 
-The concern is real: if every AAD "you need capability $X$ to identify $Y$" argument gets promoted to a floor instance, the meta-segment becomes a catalog rather than a structural organizing principle. The meta-segment's load-bearing content — its Gate 2 "does this add value beyond the sum of instances?" content — depends on the instances sharing more than pattern-match.
+The concern is real: if every AAT "you need capability $X$ to identify $Y$" argument gets promoted to a floor instance, the meta-segment becomes a catalog rather than a structural organizing principle. The meta-segment's load-bearing content — its Gate 2 "does this add value beyond the sum of instances?" content — depends on the instances sharing more than pattern-match.
 
 ### 5.2 A principled termination criterion
 
 The five-element test (§1) is a principled criterion; the question is whether it is *tight enough* to keep catalog drift out.
 
-**Observation:** The five-element test is not perfectly tight. E4 requires ≥ 2 escapes; E5 requires "elevates load-bearing role of existing AAD machinery." Both are reviewer-judgment calls, not mechanical checks. A sufficiently motivated reviewer could promote many candidates to instances by reading E4 / E5 permissively.
+**Observation:** The five-element test is not perfectly tight. E4 requires ≥ 2 escapes; E5 requires "elevates load-bearing role of existing AAT machinery." Both are reviewer-judgment calls, not mechanical checks. A sufficiently motivated reviewer could promote many candidates to instances by reading E4 / E5 permissively.
 
-**Tighter criterion proposal (robust qualitative recommendation):** *An instance is promotable only if it elevates AAD machinery to a **new** load-bearing role — one not already surfaced by another instance.* Under this tighter criterion:
+**Tighter criterion proposal (robust qualitative recommendation):** *An instance is promotable only if it elevates AAT machinery to a **new** load-bearing role — one not already surfaced by another instance.* Under this tighter criterion:
 
 - I1 elevates `#der-loop-interventional-access` (mode 1: agent-self-intervention).
 - I2 elevates observability-as-information-augmentation.
@@ -265,7 +265,7 @@ The five-element test (§1) is a principled criterion; the question is whether i
 
 Each proposed instance elevates *different* machinery, or a different mode of the same machinery (the three `#der-loop-interventional-access` modes). No instance is redundant with another at the elevation-target layer.
 
-**Under this criterion, the meta-segment has bounded capacity:** growth is limited by the number of distinct load-bearing AAD segments (call this $N_{LB}$, currently on the order of 30–50 depending on how "load-bearing" is counted). In practice, floor-instance growth will be much smaller than $N_{LB}$ because not every load-bearing segment is the unique escape from a specific information-theoretic no-go.
+**Under this criterion, the meta-segment has bounded capacity:** growth is limited by the number of distinct load-bearing AAT segments (call this $N_{LB}$, currently on the order of 30–50 depending on how "load-bearing" is counted). In practice, floor-instance growth will be much smaller than $N_{LB}$ because not every load-bearing segment is the unique escape from a specific information-theoretic no-go.
 
 **Projected growth:** 3 current + 2 new (Candidates 2, 4) = 5 within the next promotion cycle. The "adjacent floors" list in the meta-segment Working Notes flags three more open directions (causal-IB, misspecification cost, tier-switching cost) — plausibly 3 additional instances over the long run. Plausible stable endpoint: 6–8 instances. This is bounded, not unbounded.
 
@@ -337,7 +337,7 @@ Projected long-run floor: 5 + 3 = 8 instances if all three adjacent floors forma
 - *Honest scope flag:* The external theorem is an *implementability* theorem, not an identifiability theorem. This distinguishes it from I1–I3's information-theoretic character. Either (a) explicitly label the pattern as covering both "implementability" and "identifiability" theorem families, or (b) note the distinction in the instance header and keep the pattern unified under "external impossibility theorem."
 - *Escapes:* Bayes-Nash for dominant-strategy; randomized allocations; subsidy injection; domain restriction.
 - *Strengthened consequence:* `#deriv-strategic-composition`'s sub-scope $\alpha'$ potential-game conditions (already cross-referenced in the segment).
-- *Promotion effort:* Moderate — lower than Candidate 2 because the external theorems are one-step citations rather than requiring fresh AAD-level anchor constructions.
+- *Promotion effort:* Moderate — lower than Candidate 2 because the external theorems are one-step citations rather than requiring fresh AAT-level anchor constructions.
 
 **Sub-instance cross-reference: Candidate 1.**
 

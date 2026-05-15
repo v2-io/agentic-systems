@@ -495,9 +495,9 @@ The conditioning on $X_t$ (rather than $M_t$) means the residual is measuring ca
 
 ---
 
-## 7. Minimal Viable Coupled Formulation for 03-logogenic-agents/
+## 7. Minimal Viable Coupled Formulation for 03-llm-core/
 
-Based on this analysis, the minimum new content needed for `03-logogenic-agents/` to have a coherent theory:
+Based on this analysis, the minimum new content needed for `03-llm-core/` to have a coherent theory:
 
 ### 7.1 New Definitions (3 segments)
 
@@ -531,7 +531,7 @@ Three definitions (D1, D2, D3), three results (R1, R2, R3), one scope condition 
 
 ## 8. The Language-Specific Orient Cascade
 
-The key question from `03-logogenic-agents/OUTLINE.md`: "Language-specific orient cascade — what's specific to logogenic agents?"
+The key question from `03-llm-core/OUTLINE.md`: "Language-specific orient cascade — what's specific to logogenic agents?"
 
 ### 8.1 The Forward Pass as Simultaneous Update
 
@@ -615,6 +615,6 @@ The survival analysis reveals a surprisingly optimistic picture for applying AAD
 
 **One result fails by definition** — directed separation itself.
 
-The minimal coupled formulation for `03-logogenic-agents/` requires approximately 7 new segments: 3 definitions, 3 results, and 1 scope condition. The language-specific orient cascade is best understood as a *reasoning discipline* that approximates the cascade's logical structure, with quality depending on training and prompting rather than architecture.
+The minimal coupled formulation for `03-llm-core/` requires approximately 7 new segments: 3 definitions, 3 results, and 1 scope condition. The language-specific orient cascade is best understood as a *reasoning discipline* that approximates the cascade's logical structure, with quality depending on training and prompting rather than architecture.
 
 The deepest insight: for Class 2 agents, the cascade ordering transitions from a *derived consequence* of directed information dependency to a *normative design pattern* that must be enforced through training, prompting, or system-level architecture (e.g., separating observation processing from strategy evaluation at the system level, even though the LLM component is internally merged). This is the bridge between AAD's mathematical core and the engineering of logogenic agent systems.

@@ -6,7 +6,7 @@
 ## Setup
 This simulation tests the hypothesis that purely pragmatic exploitation (maximizing $Q_O$) is a fatal strategy in volatile environments if exploitation generates highly ambiguous observations (high $U_o$).
 
-An AAD agent is placed in an environment with drift rate $\rho = 0.5$ and structural capacity $R = 4.0$. At each step, it chooses between:
+An AAT agent is placed in an environment with drift rate $\rho = 0.5$ and structural capacity $R = 4.0$. At each step, it chooses between:
 - **Exploit:** Yields reward if mismatch is low, but generates extremely noisy observations ($U_o = 100.0$, low Causal Information Yield).
 - **Explore:** Yields zero reward, but generates crisp, unambiguous observations ($U_o = 0.01$, high CIY).
 

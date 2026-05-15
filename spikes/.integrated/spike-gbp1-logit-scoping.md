@@ -15,7 +15,7 @@ Five candidate paths (Paths A–D for strengthening attempts, Path E for honest 
 - **B**: canonical-not-unique, on several convergent grounds that together select log-odds without forcing it,
 - **C**: no principle selects log-odds over other parameterizations; the choice is purely operational.
 
-Parallel secondary question: what scope in `01-aad-core/src/` is touched by G-BP1, and is that scope narrow enough to execute partially, or wide enough to require a full portfolio commitment first?
+Parallel secondary question: what scope in `01-aat-core/src/` is touched by G-BP1, and is that scope narrow enough to execute partially, or wide enough to require a full portfolio commitment first?
 
 ---
 
@@ -219,7 +219,7 @@ If none of Paths A–D gave a principled uniqueness result, the honest outcome w
 
 ### 4.1 Land the strengthening theorem as a new appendix segment
 
-New segment `01-aad-core/src/deriv-edge-update-natural-parameter.md` carries the Path B theorem, the evidential-additivity axiom statement, and the three-layer-of-additivity parallel (chain / divergence / update). Status: *Derived (conditional on evidential-additivity axiom)*, mirroring the reverse-KL uniqueness result.
+New segment `01-aat-core/src/deriv-edge-update-natural-parameter.md` carries the Path B theorem, the evidential-additivity axiom statement, and the three-layer-of-additivity parallel (chain / divergence / update). Status: *Derived (conditional on evidential-additivity axiom)*, mirroring the reverse-KL uniqueness result.
 
 ### 4.2 Apply the Finding 2 local fix in `#disc-credit-assignment-boundary` using log-odds presentation
 

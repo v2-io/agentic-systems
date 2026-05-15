@@ -196,7 +196,7 @@ Two reasons:
 
 ### 6.2 Why this is a *different* meta-pattern
 
-The identifiability-floor shape requires: (task) → (external theorem) → (no-go on the task) → (AAD machinery as escape). The Class-2 scope exit has a different shape: (architectural property) → (structural incompatibility with Section II's *derivation*) → (separate framework needed, namely `03-logogenic-agents/`).
+The identifiability-floor shape requires: (task) → (external theorem) → (no-go on the task) → (AAD machinery as escape). The Class-2 scope exit has a different shape: (architectural property) → (structural incompatibility with Section II's *derivation*) → (separate framework needed, namely `03-llm-core/`).
 
 The difference is subtle but load-bearing:
 

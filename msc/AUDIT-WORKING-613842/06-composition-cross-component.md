@@ -46,7 +46,7 @@ This matters for the final report because one of the instruction appendix's exam
 
 ## Process notes from this pass
 
-- `03-logogenic-agents/OUTLINE.md` still has a row-order dependency violation: `#result-coupled-diagnostic-framework` appears before `#scope-observation-ambiguity-modulation` despite depending on it.
+- `03-llm-core/OUTLINE.md` still has a row-order dependency violation: `#result-coupled-diagnostic-framework` appears before `#scope-observation-ambiguity-modulation` despite depending on it.
 - The global frontmatter graph still contains the 7-segment strategic-tempo SCC noted earlier, so a strict mechanical topo walk remains impossible in the active corpus.
 
 These are process / repo-hygiene issues, not theory findings, but they matter because the new audit instructions currently assume a cleaner dependency surface than the repo actually provides.

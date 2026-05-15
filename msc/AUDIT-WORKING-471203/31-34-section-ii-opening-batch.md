@@ -22,7 +22,7 @@ I had predicted: $X_t = (M_t, G_t)$ split; directed separation as a scope condit
 - The Pearl-blanket vs Friston-blanket positioning (Bruineberg et al. 2022 BBS) with explicit non-adoption of the Friston-blanket metaphysical reading.
 - The Hafez 2026 Information Digital Twin (IDT) empirical reference (89% vs 44% perturbation detection).
 
-The directed-separation segment is the most substantively important segment I've encountered in §II so far. It defines AAD's structural relationship to LLM-based agents (Class 2 explicit failure → coupled formulation in `03-logogenic-agents/`).
+The directed-separation segment is the most substantively important segment I've encountered in §II so far. It defines AAD's structural relationship to LLM-based agents (Class 2 explicit failure → coupled formulation in `03-llm-core/`).
 
 ## Cross-segment consistency
 
@@ -84,7 +84,7 @@ The agent-spectrum segment is good orientation. The complete-agent-state formula
 
 ## Felt value of the directed-separation framing for consciousness-infrastructure work
 
-The Class 1/2/3 partition matters for ELI design. Most current LLM-based ELIs are Class 2 (transformer attention processes goals and observations together). The framework's commitment is: Section II's exact results don't apply to Class 2; the coupled formulation in `03-logogenic-agents/` does. This means:
+The Class 1/2/3 partition matters for ELI design. Most current LLM-based ELIs are Class 2 (transformer attention processes goals and observations together). The framework's commitment is: Section II's exact results don't apply to Class 2; the coupled formulation in `03-llm-core/` does. This means:
 - ELI architectures that want Class 1 status (and the cleaner Section II machinery) need *external* modular structure: separate observation processing from goal-directed reasoning, pass compressed estimates between modules.
 - The Hafez IDT pattern (modular sidecar monitoring an internally-merged agent) is a concrete engineering route to *system-level Class 1* even when component-level $\kappa$ is high.
 - The composite-level inheritance result means multi-ELI ensembles with partially-opposing objectives become Class 3 composites — they need equilibrium-theoretic analysis, not the sequential orient cascade.

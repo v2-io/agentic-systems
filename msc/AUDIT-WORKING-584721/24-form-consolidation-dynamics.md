@@ -46,7 +46,7 @@ First reflection with all 13 prompts. (Prompts 12 and 13 weren't available for r
 
 (c) **Predictive statement testability.** The depth-of-consolidation-needed scales with (a) factorization depth, (b) budget vs integration-cost gap, (c) cross-episode regularity rate vs event-arrival rate. This is operationalizable per architecture. Curious whether downstream segments treat this as a falsifiable scope-indexed claim or as a heuristic.
 
-(d) **The "logogenic primitive status" framing.** The segment says consolidation is a primitive in a stronger sense for logogenic agents because of context turnover. This means the AAD-core treatment plus a logogenic-specific scope condition (forced consolidation between sessions) plus three PULSUS instantiations. Curious whether 03-logogenic-agents/ actually carries this through.
+(d) **The "logogenic primitive status" framing.** The segment says consolidation is a primitive in a stronger sense for logogenic agents because of context turnover. This means the AAD-core treatment plus a logogenic-specific scope condition (forced consolidation between sessions) plus three PULSUS instantiations. Curious whether 03-llm-core/ actually carries this through.
 
 **9. What new knowledge enabled.** Consolidation as named regime of $g_M$. Stability-plasticity feasibility window. Necessity conditions (N1)+(N2). Empty-window = catastrophic-forgetting. Structural adaptation requires consolidation under (N1)+(N2). EWC vs consolidation as alternative escapes. Logogenic primitive status.
 

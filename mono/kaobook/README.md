@@ -1,6 +1,6 @@
 # mono — Monograph build pipeline
 
-Self-published monograph snapshot of the full Agentic Systems framework (AAD + TST + Logogenic + ELI). Output is `agentic-framework-v<semver>[+<sha>].{md,pdf}` — both the assembled markdown and the PDF as first-class artifacts. The `+<sha>` is appended for incremental builds after the release tag.
+Self-published monograph snapshot of the full Agentic Systems framework (AAT + TST + Logogenic + ELI). Output is `agentic-framework-v<semver>[+<sha>].{md,pdf}` — both the assembled markdown and the PDF as first-class artifacts. The `+<sha>` is appended for incremental builds after the release tag.
 
 ## Build
 

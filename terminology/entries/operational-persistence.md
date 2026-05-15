@@ -10,8 +10,8 @@ status: canon
 tags: [continuity]
 subgroup: "Persistence"
 source_type: asf
-primary_source: 01-aad-core/src/result-persistence-condition.md
-first_asf_mention: 01-aad-core/src/result-persistence-condition.md
+primary_source: 01-aat-core/src/result-persistence-condition.md
+first_asf_mention: 01-aat-core/src/result-persistence-condition.md
 see_also: [structural-persistence, continuity, adaptive-reserve]
 aliases: []
 do_not_confuse: []
@@ -24,4 +24,4 @@ by the [adaptive reserve](adaptive-reserve.md) $\Delta\rho^\ast = \alpha R -
 guarantee fails.
 
 Stated alongside structural persistence in
-[`#result-persistence-condition`](../../01-aad-core/src/result-persistence-condition.md).
+[`#result-persistence-condition`](../../01-aat-core/src/result-persistence-condition.md).

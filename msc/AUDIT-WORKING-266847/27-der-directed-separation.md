@@ -10,7 +10,7 @@ The κ_processing operationalization (conditional mutual information of G_t into
 
 This is the most important philosophical clarity in the segment. AAD's directed-separation condition is a Pearl-blanket move: the architectural classification names the conditional-independence structure, admits where it fails (Class 2), and provides an operational measurement. This explicitly avoids the contested Friston-blanket reading (Bruineberg et al. 2022 critique: the Friston reading overruns what the formalism delivers; the conditional-independence statement doesn't license metaphysical demarcation).
 
-AAD's explicit Class 2 scope exit is the answer to Bruineberg's critique: the framework admits where its conditional-independence apparatus fails to license decomposition, then hands Class 2 agents to a coupled formulation (03-logogenic-agents/) rather than treating the separation as an unenforced approximation.
+AAD's explicit Class 2 scope exit is the answer to Bruineberg's critique: the framework admits where its conditional-independence apparatus fails to license decomposition, then hands Class 2 agents to a coupled formulation (03-llm-core/) rather than treating the separation as an unenforced approximation.
 
 ## Naming targets surfaced
 
@@ -43,6 +43,6 @@ The prior framing treated coupling as smoothly tunable. The revision to a discre
 
 The claim about LLMs (goal-conditioned epistemic updates): the example "reading code with goal 'fix auth bug' vs 'add logging'" is empirically verifiable. You could probe this with the behavioral estimator: present the same error message to an LLM under two different task priming contexts, measure how much the epistemic content of the response (what the LLM says it learned about the codebase) diverges. If the estimator shows κ ≈ 1, the LLM is Class 2 on epistemic processing.
 
-The "deeper question" paragraph is honest: goal-conditioned epistemic dynamics (motivated reasoning, confirmation bias) are left as out-of-scope. This is the right scope restriction — not because it's not important, but because the coupled formulation is a different theoretical project (03-logogenic-agents/) that requires its own development.
+The "deeper question" paragraph is honest: goal-conditioned epistemic dynamics (motivated reasoning, confirmation bias) are left as out-of-scope. This is the right scope restriction — not because it's not important, but because the coupled formulation is a different theoretical project (03-llm-core/) that requires its own development.
 
 How valuable: 10/10 for load-bearing (this is THE architectural split in AAD), 9/10 for surprise (the Pearl-blanket recognition + Bruineberg positioning, the composite-level class inheritance, the IDT engineering design).

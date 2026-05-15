@@ -13,7 +13,7 @@ first_asf_mention: doc/DOMAINS.md
 see_also: [adaptive-system, agentic-system]
 aliases: []
 do_not_confuse:
-  - "online/offline (carries deployment-context baggage; not the AAD-canonical axis name)"
+  - "online/offline (carries deployment-context baggage; not the AAT-canonical axis name)"
   - "fixed/adaptive (overloads with Tier 1 *Adaptive system* class)"
 internal_note: Activation tier deferred pending broader four-axis ontology review at `msc/domain-unification-2026-05-04/`. The axis-name commitment lands independently of activation-tier.
 ---

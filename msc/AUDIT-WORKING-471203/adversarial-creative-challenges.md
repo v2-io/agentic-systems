@@ -102,7 +102,7 @@ I noted earlier (segment 18 reflection) that the Greek phase names (prolepsis/ai
 
 **Adversarial creative push:** but maybe the formalism should *make* these distinctions. The cycle currently has no formal *commitment* phase — the moment between "deliberation produces a candidate action" and "action is executed." For agents that face costs of *changing their mind* (humans, organizations), the commitment phase has real cost-benefit structure. AAD has $\delta_{\text{deliberation}}$ but no $\delta_{\text{commitment}}$.
 
-**Strengthening attempt:** add a formal commitment phase between Praxis-decision and Praxis-execution. Could use a $C_t$ (commitment state) variable that increases the cost of action revision. This connects to the proposed `#hyp-the-three-deaths` in 04-logozoetic-agents (Truth Death) and to literature on commitment devices.
+**Strengthening attempt:** add a formal commitment phase between Praxis-decision and Praxis-execution. Could use a $C_t$ (commitment state) variable that increases the cost of action revision. This connects to the proposed `#hyp-the-three-deaths` in 04-eli-core (Truth Death) and to literature on commitment devices.
 
 **Verdict: ★★★ real limit (creative).** The cycle is missing a formal commitment phase. This is structural content that would matter for actuated agents (`#def-strategy-dimension` Working Notes mention this as open). *Action:* §F observation. Possible new segment proposal: `#def-commitment-state` or `#form-commitment-dynamics`.
 
@@ -161,7 +161,7 @@ The chain-rule corollary applied to nested sub-agents gives $\prod_\ell \kappa_\
 
 ### Challenge 13: Class 2 logogenic agents and the coupled-formulation hand-off
 
-The framework explicitly hands off Class 2 (LLM-style) agents to `03-logogenic-agents/` for coupled-formulation analysis. The "16/24 results survive" claim is documented in `spikes/spike-coupled-survival-analysis.md`.
+The framework explicitly hands off Class 2 (LLM-style) agents to `03-llm-core/` for coupled-formulation analysis. The "16/24 results survive" claim is documented in `spikes/spike-coupled-survival-analysis.md`.
 
 **Adversarial probe:** the *most consequential* agents in the world right now are Class 2. AAD's Section II results "apply exactly" to Class 1 — but Class 1 in production is rare (maybe Kalman+LQR; modular RL is still mostly Class 2-ish). The framework's strongest results don't apply to the most important real agents.
 
@@ -217,7 +217,7 @@ Observation arrives upon event; the agent processes. But real agents *choose wha
 
 $\delta_{\text{regret}}$ is a numerical quantity. For human-or-human-like agents, regret has *affective character* — it drives behavior in non-utility-maximizing ways (rumination, avoidance, motivated reasoning). The framework's clean numerical-diagnostic frame may miss real dynamics for embodied / consciousness-bearing agents.
 
-This is where the consciousness-infrastructure agenda might require *more than* the current AAD machinery. The 04-logozoetic-agents content I haven't read yet may engage with this.
+This is where the consciousness-infrastructure agenda might require *more than* the current AAD machinery. The 04-eli-core content I haven't read yet may engage with this.
 
 ### Missing 7: Subjective-time variation
 
@@ -290,7 +290,7 @@ Going to use this as raw material when writing §F (bigger-picture observations)
 
 The most promising avenue for §F-bigger-picture is probably the **commitment-state extension** — adding $C_t$ (commitments) to $G_t = (O_t, \Sigma_t)$, giving $G_t = (O_t, \Sigma_t, C_t)$. This connects to:
 - `#def-strategy-dimension` Working Notes (commitment state flagged as open).
-- `04-logozoetic-agents/`'s `#hyp-the-three-deaths` proposed segment (Truth Death as commitment-violation).
+- `04-eli-core/`'s `#hyp-the-three-deaths` proposed segment (Truth Death as commitment-violation).
 - `#der-deliberation-cost`'s "agent that has decided but not yet executed" — commitment is the structural answer to "decided-not-yet-executed."
 
 If the framework wants to extend toward consciousness-infrastructure work seriously, $C_t$ as a first-class component of $G_t$ is probably necessary. The deliberation cost generalizes naturally to "commitment cost" for breaking commitments mid-execution.

@@ -97,7 +97,7 @@ This derivation bridges the pragmatic-epistemic gap without requiring the Active
 *Fix:* This requires upgrading the KKT Lagrangian from a scalar inequality to a Linear Matrix Inequality (LMI) involving the Fisher Information Matrix. This LMI will mathematically force the agent to choose actions that actively probe the specific dimensions that are drifting, forbidding "blank wall" exploitation.
 
 **Promotion Plan:** 
-- The scalar version was already promoted to `01-aad-core/src/deriv-causal-ib-exploration.md` as a first-order derivation.
+- The scalar version was already promoted to `01-aat-core/src/deriv-causal-ib-exploration.md` as a first-order derivation.
 - To fully formalize the LMI repair, a future update to `#deriv-causal-ib-exploration` should introduce the Fisher Information Matrix constraint. This will also likely require an update to `#def-adaptive-tempo` to handle tensor-valued correction rates properly.
 
 *(End of spike.)*

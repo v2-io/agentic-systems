@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities, diagnostic]
 source_type: asf
-primary_source: 01-aad-core/src/def-satisfaction-gap.md
-first_asf_mention: 01-aad-core/src/def-satisfaction-gap.md
+primary_source: 01-aat-core/src/def-satisfaction-gap.md
+first_asf_mention: 01-aat-core/src/def-satisfaction-gap.md
 see_also: [control-regret]
 aliases: []
 do_not_confuse: []
@@ -24,4 +24,4 @@ interventions: satisfaction gap says *change the goal or accept the floor*;
 control regret says *train harder / re-plan*.
 
 Defined in
-[`#def-satisfaction-gap`](../../01-aad-core/src/def-satisfaction-gap.md).
+[`#def-satisfaction-gap`](../../01-aat-core/src/def-satisfaction-gap.md).

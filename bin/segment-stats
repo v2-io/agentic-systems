@@ -31,9 +31,9 @@
 #     because empirical has data support; hypothesis is unverified
 #     posit. Discussion-grade is the bottom of the ladder.
 #
-#   AAD section breakdown — the same three views applied within
-#     01-aad-core/, broken out by Section I / II / III / Appendices.
-#     AAD's internal sections matter for the maturity narrative
+#   AAT section breakdown — the same three views applied within
+#     01-aat-core/, broken out by Section I / II / III / Appendices.
+#     AAT's internal sections matter for the maturity narrative
 #     (Section I closed vs Section III bridging) so they get their
 #     own slice.
 #
@@ -54,10 +54,10 @@ require 'set'
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 
 COMPONENTS = [
-  '01-aad-core',
+  '01-aat-core',
   '02-tst-core',
-  '03-logogenic-agents',
-  '04-eli'
+  '03-llm-core',
+  '04-eli-core'
 ].freeze
 
 # Stage ladder, in promotion order (left = least mature). GAPs are
@@ -357,10 +357,10 @@ def percent_complete(_component, counts, leading_cells, leading_keys)
   format('%.1f%%', (numerator.to_f / denominator) * 100)
 end
 
-# --- AAD section breakdown --------------------------------------------
+# --- AAT section breakdown --------------------------------------------
 
 # Maps an OUTLINE H2 heading to a short section key (I / II / III / A
-# / B / Appendices) for AAD specifically. Returns nil if the section
+# / B / Appendices) for AAT specifically. Returns nil if the section
 # cannot be classified — the segment is then bucketed as "(unsorted)".
 def aad_section_key(section)
   return '(unsorted)' if section.nil?
@@ -373,7 +373,7 @@ def aad_section_key(section)
   end
 end
 
-# Builds AAD section-level matrices identical in shape to the
+# Builds AAT section-level matrices identical in shape to the
 # component-level matrices.
 def aad_section_matrices(aad_aggregate)
   segments = aad_aggregate[:segments]
@@ -488,23 +488,23 @@ def main
     status_cols
   )
 
-  # ── AAD section breakdown -------------------------------------------
+  # ── AAT section breakdown -------------------------------------------
   out << ''
-  out << '## AAD section breakdown (01-aad-core only)'
+  out << '## AAT section breakdown (01-aat-core only)'
   out << ''
-  out << "AAD has internal sections (I / II / III / Appendices) at different maturity levels. The same three views, applied within AAD."
+  out << "AAT has internal sections (I / II / III / Appendices) at different maturity levels. The same three views, applied within AAT."
   out << ''
 
-  aad_matrices = aad_section_matrices(per_component['01-aad-core'])
+  aad_matrices = aad_section_matrices(per_component['01-aat-core'])
   aad_stage_cols = order_columns(aad_matrices[:stage].values.flat_map(&:keys).uniq, STAGE_ORDER - ['gap'])
   aad_type_cols = order_columns(aad_matrices[:type].values.flat_map(&:keys).uniq, TYPE_ORDER)
   aad_status_cols = order_columns(aad_matrices[:status].values.flat_map(&:keys).uniq, STATUS_ORDER)
 
-  out << render_matrix('AAD-A — Stage', aad_matrices[:stage], aad_stage_cols).gsub('Component', 'Section')
+  out << render_matrix('AAT-A — Stage', aad_matrices[:stage], aad_stage_cols).gsub('Component', 'Section')
   out << ''
-  out << render_matrix('AAD-B — Type', aad_matrices[:type], aad_type_cols).gsub('Component', 'Section')
+  out << render_matrix('AAT-B — Type', aad_matrices[:type], aad_type_cols).gsub('Component', 'Section')
   out << ''
-  out << render_matrix('AAD-C — Epistemic status', aad_matrices[:status], aad_status_cols).gsub('Component', 'Section')
+  out << render_matrix('AAT-C — Epistemic status', aad_matrices[:status], aad_status_cols).gsub('Component', 'Section')
 
   # ── Data-quality footer ----------------------------------------------
   out << ''

@@ -15,7 +15,7 @@ I am treating those as spoiler contamination and noting them here so future read
 
 The framework appears to have a strong asymmetry by component:
 
-1. `01-aad-core/` is the load-bearing mathematical body.
+1. `01-aat-core/` is the load-bearing mathematical body.
    Section I looks like the most exact and internally coherent layer: the adaptive loop, mismatch, gain, tempo, sector condition, persistence, and structural adaptation.
    Section II looks like an exact-to-conditional extension for purposeful agents, with the architectural scope restriction doing a large amount of work.
    Section III looks like the most fertile and fragile area: composition, multi-agent interaction, adversariality, and unity-based closure.
@@ -26,11 +26,11 @@ The framework appears to have a strong asymmetry by component:
    to stand as an independently consequential theory of software development.
    I expect tension between those ambitions, especially where software-specific claims want stronger exactness than the imported AAD scope really permits.
 
-3. `03-logogenic-agents/` looks like a repair layer for the most practically important failure of Section II:
+3. `03-llm-core/` looks like a repair layer for the most practically important failure of Section II:
    modern LLM-like agents violate directed separation by construction.
    I expect this component to be conceptually important but mathematically thinner and more architecturally provisional.
 
-4. `04-logozoetic-agents/` is not yet a theory body.
+4. `04-eli-core/` is not yet a theory body.
    I do not expect findings there beyond framing-level comments about what is and is not yet formalized.
 
 The integration story I expect is:
@@ -42,7 +42,7 @@ Logogenic Agents then revisits the architecture once the modularity condition br
 
 ## Predictions by component
 
-### `01-aad-core/`
+### `01-aat-core/`
 
 #### Section I
 
@@ -128,7 +128,7 @@ I predict TST will have strong intuitive coherence and strong practical bite, bu
 
 Concrete predictions:
 
-1. `#scope-developer-agent` or a nearby TST segment will inherit Section II apparatus too aggressively for AI developer agents, without fully carrying forward the Class 2 caveat from `03-logogenic-agents/`.
+1. `#scope-developer-agent` or a nearby TST segment will inherit Section II apparatus too aggressively for AI developer agents, without fully carrying forward the Class 2 caveat from `03-llm-core/`.
 
 2. `#obs-software-epistemic-properties` will be central to the calibration-lab claim and may overstate exactness or uniqueness in one or more of the six software properties.
 
@@ -138,7 +138,7 @@ Concrete predictions:
 4. The git-as-causal-data story will be useful but fragile.
    I expect important caveats around selection effects, hidden interventions, partial chronica, and the distinction between committed and uncommitted state to matter more than a surface reading suggests.
 
-### `03-logogenic-agents/`
+### `03-llm-core/`
 
 I predict the logogenic component will be honest about being framework-stage rather than theorem-stage.
 The likely issue will not be overclaiming exact math, but under-specifying how much of Section II truly survives once directed separation fails.
@@ -152,7 +152,7 @@ Concrete predictions:
 3. The component may depend heavily on spike context to feel fully motivated.
    If so, I expect a "wanting to spoiler-seek" signal during reading, which itself would count as evidence that the segments are not fully standing on their own yet.
 
-### `04-logozoetic-agents/`
+### `04-eli-core/`
 
 I predict there will be no technical findings here because there are no segments.
 The main possible contribution will be a clean statement in the final audit that this is a conceptual placeholder, not an audited theory body.

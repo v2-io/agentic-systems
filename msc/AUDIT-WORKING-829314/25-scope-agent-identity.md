@@ -2,7 +2,7 @@
 
 **1. Predictions vs evidence:** I predicted this would loop back to `#def-chronica` to establish that an agent is fundamentally defined by its unique, unbroken historical timeline, and that breaking the timeline (cloning) creates a new agent. It does exactly this. It explicitly tackles the "clone problem" and formalizes why model merging is lossy by construction.
 
-**2. Cross-segment consistency:** Outstanding. It references `#def-chronica`, `#def-model-sufficiency`, `#def-pearl-causal-hierarchy`, and `#der-loop-interventional-access`. It beautifully forward-references the `03-logogenic-agents` problem of 100% context turnover (`#obs-context-turnover`), grounding the abstract philosophy in concrete AI engineering.
+**2. Cross-segment consistency:** Outstanding. It references `#def-chronica`, `#def-model-sufficiency`, `#def-pearl-causal-hierarchy`, and `#der-loop-interventional-access`. It beautifully forward-references the `03-llm-core` problem of 100% context turnover (`#obs-context-turnover`), grounding the abstract philosophy in concrete AI engineering.
 
 **3. Math verification:** No new equations to verify, but the logic regarding why $S(M_t)$ is trajectory-indexed is perfectly sound. If $S$ is defined as $1 - I(\mathcal{C}_t ; o \mid M_t) / I(\mathcal{C}_t ; o)$, then changing $\mathcal{C}_t$ fundamentally changes the denominator and numerator. You cannot meaningfully evaluate $S(M_t^{(1)})$ against $\mathcal{C}_t^{(2)}$.
 

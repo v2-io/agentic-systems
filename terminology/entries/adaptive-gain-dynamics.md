@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/deriv-adaptive-gain-dynamics.md
-first_asf_mention: 01-aad-core/src/deriv-adaptive-gain-dynamics.md
+primary_source: 01-aat-core/src/deriv-adaptive-gain-dynamics.md
+first_asf_mention: 01-aat-core/src/deriv-adaptive-gain-dynamics.md
 see_also: [adaptive-system, adaptive-tempo, adaptive-reserve, sector-condition, structural-persistence]
 aliases: []
 do_not_confuse: []
@@ -34,4 +34,4 @@ adaptive Kalman with Mehra estimator lands in $\alpha_2$; RMSProp on strongly-co
 in $\alpha_2$ under design conditions (AMSGrad as $\alpha_2$-preserving repair); MAML outer loop
 lands in $\beta$.
 
-Derived in [`#deriv-adaptive-gain-dynamics`](../../01-aad-core/src/deriv-adaptive-gain-dynamics.md).
+Derived in [`#deriv-adaptive-gain-dynamics`](../../01-aat-core/src/deriv-adaptive-gain-dynamics.md).

@@ -1,6 +1,6 @@
 # 11 - form-information-bottleneck
 
-Segment: `01-aad-core/src/form-information-bottleneck.md` (`#form-information-bottleneck`)
+Segment: `01-aat-core/src/form-information-bottleneck.md` (`#form-information-bottleneck`)
 
 Dependencies: `form-agent-model`, `def-action-transition`, both read. Dependency-order check passes. The segment also references future segments for downstream use, but its applied-IB core is locally well-typed from chronica/model/action context.
 

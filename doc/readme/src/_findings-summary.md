@@ -8,60 +8,60 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 ### *Part* Adaptive Systems Under Uncertainty
 
 - **`#result-persistence-condition`** *(status: exact)* — *The Persistence Condition with Structural / Task-Adequacy Decomposition* — *Claim synthesis* on Lyapunov stability theory, sector-bounded nonlinear correction, and adaptive-tempo information-rate accounting, applied uniformly across single-agent classes that range from Kalman filtering through saturating nonlinear correction through PID control.  
-  [`01-aad-core/src/result-persistence-condition.md`](01-aad-core/src/result-persistence-condition.md)
+  [`01-aat-core/src/result-persistence-condition.md`](01-aat-core/src/result-persistence-condition.md)
 
 ### *Part* Agentic Systems: Actuated Adaptation
 
 - **`#der-directed-separation`** *(status: conditional)* — *Pearl-Blanket-Form Architectural Classification with Explicit Class-3 Scope Exit* — *Claim recognition* of structural equivalence between the directed-separation condition and the Pearl-blanket form of the Markov-blanket apparatus, combined with *claim differentiation* on the architectural classification (GUC Class 1 / 2 / 3: Separated / Partial / Coupled) as a discrete partition with explicit Class 3 (Coupled) boundary and quantitative $\kappa_{\text{processing}}$ diagnostic for the Partial case.  
-  [`01-aad-core/src/der-directed-separation.md`](01-aad-core/src/der-directed-separation.md)
+  [`01-aat-core/src/der-directed-separation.md`](01-aat-core/src/der-directed-separation.md)
 - **`#der-causal-insufficiency-detection`** *(status: conditional)* — *On-Policy L0 Insufficiency Is Structurally Undetectable* — *Claim differentiation* on the framing of why structure-aware exploration is required.  
-  [`01-aad-core/src/der-causal-insufficiency-detection.md`](01-aad-core/src/der-causal-insufficiency-detection.md)
+  [`01-aat-core/src/der-causal-insufficiency-detection.md`](01-aat-core/src/der-causal-insufficiency-detection.md)
 - **`#schema-strategy-persistence`** *(status: sketch)* — *The Forgetting Prerequisite for Strategic Persistence* — *Claim differentiation* on Bayesian update dynamics with experience discounting.  
-  [`01-aad-core/src/schema-strategy-persistence.md`](01-aad-core/src/schema-strategy-persistence.md)
+  [`01-aat-core/src/schema-strategy-persistence.md`](01-aat-core/src/schema-strategy-persistence.md)
 
 ### *Part* Agentic Composites
 
 - **`#form-composition-closure`** *(status: conditional)* — *Composition-Closure Defect and Bridge Lemma* — *Claim differentiation* on bounded-loss composition as agent-boundary criterion.  
-  [`01-aad-core/src/form-composition-closure.md`](01-aad-core/src/form-composition-closure.md)
-- **`#der-class-coercion-via-wrapping`** *(status: conditional)* — *Constructive Directed Separation via Wrapping* — *Claim integration* of POMDP / cognitive-architecture prior art with the AAD Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy, plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions.  
-  [`01-aad-core/src/der-class-coercion-via-wrapping.md`](01-aad-core/src/der-class-coercion-via-wrapping.md)
-- **`#der-class-coercion-in-composition`** *(status: conditional)* — *Wrapper as Valid AAD Composite Agent with Brooks's-Law Tempo Cost* — *Claim integration* of the AAD sector-Lyapunov persistence template, Brooks's-Law tempo accounting, and the form-composition-closure (A1)–(A4) discipline, applied to the wrapper-around-component construction.  
-  [`01-aad-core/src/der-class-coercion-in-composition.md`](01-aad-core/src/der-class-coercion-in-composition.md)
+  [`01-aat-core/src/form-composition-closure.md`](01-aat-core/src/form-composition-closure.md)
+- **`#der-class-coercion-via-wrapping`** *(status: conditional)* — *Constructive Directed Separation via Wrapping* — *Claim integration* of POMDP / cognitive-architecture prior art with the AAT Class 1/2/3 (Separated/Partial/Coupled) directed-separation taxonomy, plus the W₀/W₂/W₁ regime hierarchy that surfaces the structural-vs-behavioral leakage distinction and the LLM-specific (C1)–(C3) admissibility/leakage conditions.  
+  [`01-aat-core/src/der-class-coercion-via-wrapping.md`](01-aat-core/src/der-class-coercion-via-wrapping.md)
+- **`#der-class-coercion-in-composition`** *(status: conditional)* — *Wrapper as Valid AAT Composite Agent with Brooks's-Law Tempo Cost* — *Claim integration* of the AAT sector-Lyapunov persistence template, Brooks's-Law tempo accounting, and the form-composition-closure (A1)–(A4) discipline, applied to the wrapper-around-component construction.  
+  [`01-aat-core/src/der-class-coercion-in-composition.md`](01-aat-core/src/der-class-coercion-in-composition.md)
 - **`#der-agent-opacity`** *(status: conditional)* — *Agent Opacity ($H_b$) as Dual to Observation Quality ($U_o$)* — *Claim differentiation* on Hafez's $H_b$.  
-  [`01-aad-core/src/der-agent-opacity.md`](01-aad-core/src/der-agent-opacity.md)
+  [`01-aat-core/src/der-agent-opacity.md`](01-aat-core/src/der-agent-opacity.md)
 - **`#result-per-dimension-persistence`** *(status: conditional)* — *The Weakest-Link Dimensional Persistence Law* — *Claim differentiation* on per-dimension Lyapunov stability.  
-  [`01-aad-core/src/result-per-dimension-persistence.md`](01-aad-core/src/result-per-dimension-persistence.md)
+  [`01-aat-core/src/result-per-dimension-persistence.md`](01-aat-core/src/result-per-dimension-persistence.md)
 
 ### *Appendices* Details
 
-- **`#result-certificate-existence`** *(status: exact)* — *The Contraction-Over-Drift Principle, Grounded* — *Claim recognition* that AAD's one-point sector condition under a free choice of inner product is exactly the converse-Lyapunov certificate, making the framework's contraction-over-drift organizing principle the Lyapunov-theorem equivalence rather than a heuristic.  
-  [`01-aad-core/src/result-certificate-existence.md`](01-aad-core/src/result-certificate-existence.md)
+- **`#result-certificate-existence`** *(status: exact)* — *The Contraction-Over-Drift Principle, Grounded* — *Claim recognition* that AAT's one-point sector condition under a free choice of inner product is exactly the converse-Lyapunov certificate, making the framework's contraction-over-drift organizing principle the Lyapunov-theorem equivalence rather than a heuristic.  
+  [`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
 - **`#deriv-critical-mass-composition`** *(status: conditional)* — *Strong Monotonicity as the Hinge for Legitimate Macro-Agent Coarse-Graining* — *Claim novelty* on strong monotonicity as the criterion separating legitimate macro-agent coarse-graining from coexistence-only multi-agent description.  
-  [`01-aad-core/src/deriv-critical-mass-composition.md`](01-aad-core/src/deriv-critical-mass-composition.md)
-- **`#deriv-edge-update-natural-parameter`** *(status: conditional)* — *Log-Odds as Uniquely-Forced Edge-Update Coordinate* — *Claim differentiation* on an already-canonical representational choice (log-odds as the natural Bayesian-update coordinate, well-known from logistic regression / exponential-family / information-geometry traditions) by deriving its uniqueness under an AAD-internally-motivated evidential-additivity axiom.  
-  [`01-aad-core/src/deriv-edge-update-natural-parameter.md`](01-aad-core/src/deriv-edge-update-natural-parameter.md)
-- **`#disc-stability-certificate`** *(status: discussion-grade)* — *The Cross-Sectional Meta-Patterns Are Facets of One Stability Certificate* — *Claim recognition* that AAD's cross-sectional meta-patterns (separability, identifiability-floor, additive-coordinate-forcing) and its contraction machinery are facets — interior, scope-of-existence, forced-identity, boundary, projection-behaviour — of a single object, the equilibrium stability certificate; together with *claim synthesis* binding the Lyapunov-theorem certificate-existence equivalence, the Sylvester-law boundary-irreducibility, and the Mori–Zwanzig projection-residue into one cross-sectional structure.  
-  [`01-aad-core/src/disc-stability-certificate.md`](01-aad-core/src/disc-stability-certificate.md)
-- **`#disc-identifiability-floor`** *(status: discussion-grade)* — *The Identifiability Floor as Cross-Cutting Meta-Pattern* — *Claim recognition* of structural pattern across four AAD results that import external information-theoretic theorems to derive impossibility statements with mapped boundary-route escapes; the meta-pattern is an organizing principle rather than a theorem, and the per-instance prior-art positioning lives in the instance segments (`#der-causal-insufficiency-detection`, `#deriv-edge-credence-dynamics`, `#deriv-critical-mass-composition` / `#result-contraction-template`, `#deriv-observation-ambiguity-bias-bound`).  
-  [`01-aad-core/src/disc-identifiability-floor.md`](01-aad-core/src/disc-identifiability-floor.md)
-- **`#disc-identifiability-floor`** *(status: discussion-grade)* — *The Rank-Collapse Floor's Irreducibility Is Sylvester's Law of Inertia* — *Claim recognition* that the irreducibility of AAD's rank-collapse identifiability floors is a single named classical theorem — Sylvester's law of inertia applied to the Fisher-information reparameterization law — rather than a coincidence of per-instance computations; and *claim differentiation* that this mechanism is specific to the rank-collapse subclass and provably distinct from the composition floor's projection-closure obstruction.  
-  [`01-aad-core/src/disc-identifiability-floor.md`](01-aad-core/src/disc-identifiability-floor.md)
-- **`#disc-additive-coordinate-forcing`** *(status: discussion-grade)* — *Cross-Layer Coordinate Forcing on Legendre-Fenchel Geometry* — *Claim recognition* of cross-layer pattern across four AAD coordinate-forcing results, with the recognition itself as the contribution rather than any new theorem.  
-  [`01-aad-core/src/disc-additive-coordinate-forcing.md`](01-aad-core/src/disc-additive-coordinate-forcing.md)
-- **`#deriv-observation-ambiguity-bias-bound`** *(status: conditional)* — *Universal Constant for the Coupled-Agent Bias Bound under Parameterization-Invariance* — *Claim differentiation* on the Lipschitz-posterior + Otto-Villani composition for AAD's coupled-agent bias bound, plus *claim novelty* on the no-go counterexample showing that universal $C$ in Euclidean-parameter norms cannot exist, which jointly elevates the (PI) axiom from convergent representational choice to load-bearing for theorem-level status.  
-  [`01-aad-core/src/deriv-observation-ambiguity-bias-bound.md`](01-aad-core/src/deriv-observation-ambiguity-bias-bound.md)
-- **`#disc-adversarial-coupling-pressure`** *(status: discussion-grade)* — *Adversarial Coupling Pressure as Use-Case Expansion of Coupled Formulation* — *Claim recognition* of adversarial coupling pressure as a structural phenomenon in AAD's existing scope architecture — adversaries strategically drive coupling because coupling expands attack surface — combined with *claim differentiation* on the population scope of coupled-formulation analysis: not just architecturally-coupled agents, but any agent under sustained adversarial coupling pressure.  
-  [`01-aad-core/src/disc-adversarial-coupling-pressure.md`](01-aad-core/src/disc-adversarial-coupling-pressure.md)
-- **`#result-contraction-template`** *(status: conditional)* — *Topology-Indexed Compositional Closures via Contraction-Metric Generalization* — *Claim synthesis* on contraction-metric machinery + AAD's sub-scope partition + (PI)/Čencov axiom.  
-  [`01-aad-core/src/result-contraction-template.md`](01-aad-core/src/result-contraction-template.md)
+  [`01-aat-core/src/deriv-critical-mass-composition.md`](01-aat-core/src/deriv-critical-mass-composition.md)
+- **`#deriv-edge-update-natural-parameter`** *(status: conditional)* — *Log-Odds as Uniquely-Forced Edge-Update Coordinate* — *Claim differentiation* on an already-canonical representational choice (log-odds as the natural Bayesian-update coordinate, well-known from logistic regression / exponential-family / information-geometry traditions) by deriving its uniqueness under an AAT-internally-motivated evidential-additivity axiom.  
+  [`01-aat-core/src/deriv-edge-update-natural-parameter.md`](01-aat-core/src/deriv-edge-update-natural-parameter.md)
+- **`#disc-stability-certificate`** *(status: discussion-grade)* — *The Cross-Sectional Meta-Patterns Are Facets of One Stability Certificate* — *Claim recognition* that AAT's cross-sectional meta-patterns (separability, identifiability-floor, additive-coordinate-forcing) and its contraction machinery are facets — interior, scope-of-existence, forced-identity, boundary, projection-behaviour — of a single object, the equilibrium stability certificate; together with *claim synthesis* binding the Lyapunov-theorem certificate-existence equivalence, the Sylvester-law boundary-irreducibility, and the Mori–Zwanzig projection-residue into one cross-sectional structure.  
+  [`01-aat-core/src/disc-stability-certificate.md`](01-aat-core/src/disc-stability-certificate.md)
+- **`#disc-identifiability-floor`** *(status: discussion-grade)* — *The Identifiability Floor as Cross-Cutting Meta-Pattern* — *Claim recognition* of structural pattern across four AAT results that import external information-theoretic theorems to derive impossibility statements with mapped boundary-route escapes; the meta-pattern is an organizing principle rather than a theorem, and the per-instance prior-art positioning lives in the instance segments (`#der-causal-insufficiency-detection`, `#deriv-edge-credence-dynamics`, `#deriv-critical-mass-composition` / `#result-contraction-template`, `#deriv-observation-ambiguity-bias-bound`).  
+  [`01-aat-core/src/disc-identifiability-floor.md`](01-aat-core/src/disc-identifiability-floor.md)
+- **`#disc-identifiability-floor`** *(status: discussion-grade)* — *The Rank-Collapse Floor's Irreducibility Is Sylvester's Law of Inertia* — *Claim recognition* that the irreducibility of AAT's rank-collapse identifiability floors is a single named classical theorem — Sylvester's law of inertia applied to the Fisher-information reparameterization law — rather than a coincidence of per-instance computations; and *claim differentiation* that this mechanism is specific to the rank-collapse subclass and provably distinct from the composition floor's projection-closure obstruction.  
+  [`01-aat-core/src/disc-identifiability-floor.md`](01-aat-core/src/disc-identifiability-floor.md)
+- **`#disc-additive-coordinate-forcing`** *(status: discussion-grade)* — *Cross-Layer Coordinate Forcing on Legendre-Fenchel Geometry* — *Claim recognition* of cross-layer pattern across four AAT coordinate-forcing results, with the recognition itself as the contribution rather than any new theorem.  
+  [`01-aat-core/src/disc-additive-coordinate-forcing.md`](01-aat-core/src/disc-additive-coordinate-forcing.md)
+- **`#deriv-observation-ambiguity-bias-bound`** *(status: conditional)* — *Universal Constant for the Coupled-Agent Bias Bound under Parameterization-Invariance* — *Claim differentiation* on the Lipschitz-posterior + Otto-Villani composition for AAT's coupled-agent bias bound, plus *claim novelty* on the no-go counterexample showing that universal $C$ in Euclidean-parameter norms cannot exist, which jointly elevates the (PI) axiom from convergent representational choice to load-bearing for theorem-level status.  
+  [`01-aat-core/src/deriv-observation-ambiguity-bias-bound.md`](01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)
+- **`#disc-adversarial-coupling-pressure`** *(status: discussion-grade)* — *Adversarial Coupling Pressure as Use-Case Expansion of Coupled Formulation* — *Claim recognition* of adversarial coupling pressure as a structural phenomenon in AAT's existing scope architecture — adversaries strategically drive coupling because coupling expands attack surface — combined with *claim differentiation* on the population scope of coupled-formulation analysis: not just architecturally-coupled agents, but any agent under sustained adversarial coupling pressure.  
+  [`01-aat-core/src/disc-adversarial-coupling-pressure.md`](01-aat-core/src/disc-adversarial-coupling-pressure.md)
+- **`#result-contraction-template`** *(status: conditional)* — *Topology-Indexed Compositional Closures via Contraction-Metric Generalization* — *Claim synthesis* on contraction-metric machinery + AAT's sub-scope partition + (PI)/Čencov axiom.  
+  [`01-aat-core/src/result-contraction-template.md`](01-aat-core/src/result-contraction-template.md)
 - **`#deriv-causal-ib-exploration`** *(status: conditional)* — *Survival-Imperative Exploration as Lyapunov-Forced Drive* — *Claim differentiation* on the structural source of agentic exploration.  
-  [`01-aad-core/src/deriv-causal-ib-exploration.md`](01-aad-core/src/deriv-causal-ib-exploration.md)
+  [`01-aat-core/src/deriv-causal-ib-exploration.md`](01-aat-core/src/deriv-causal-ib-exploration.md)
 - **`#deriv-causal-ib-lmi`** *(status: conditional)* — *Matrix Lift of the Survival-Imperative Constraint via Fisher-Information LMI* — *Claim differentiation* on the directional discrimination of the survival-imperative exploration drive.  
-  [`01-aad-core/src/deriv-causal-ib-lmi.md`](01-aad-core/src/deriv-causal-ib-lmi.md)
+  [`01-aat-core/src/deriv-causal-ib-lmi.md`](01-aat-core/src/deriv-causal-ib-lmi.md)
 
 ### Temporal Software Theory (TST)
 
-- **`#scope-developer-agent`** *(status: axiomatic)* — *Developer-Agent as AAD Instantiation* — *Claim transfer* of AAD's adaptive-agent formalism into developer-agent software economics.  
+- **`#scope-developer-agent`** *(status: axiomatic)* — *Developer-Agent as AAT Instantiation* — *Claim transfer* of AAT's adaptive-agent formalism into developer-agent software economics.  
   [`02-tst-core/src/scope-developer-agent.md`](02-tst-core/src/scope-developer-agent.md)
 - **`#der-dual-optimization`** *(status: conditional)* — *Comprehension Time Dominates Under Turnover* — *Claim novelty* on the comprehension-dominates result for AI-maintained code, provisional pending deeper search.  
   [`02-tst-core/src/der-dual-optimization.md`](02-tst-core/src/der-dual-optimization.md)
@@ -73,7 +73,7 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 ### Logogenic Agents
 
 - **`#scope-observation-ambiguity-modulation`** *(status: conditional)* — *Ambiguity-Bounded Architectural Bias Law for Coupled Agents* — *Claim novelty* on the formal product-form bias law $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$ for coupled-architecture agents, where $\kappa$ is an architectural property of the processor and $I$ measures the goal-resolvable residual uncertainty left by the observation.  
-  [`03-logogenic-agents/src/scope-observation-ambiguity-modulation.md`](03-logogenic-agents/src/scope-observation-ambiguity-modulation.md)
+  [`03-llm-core/src/scope-observation-ambiguity-modulation.md`](03-llm-core/src/scope-observation-ambiguity-modulation.md)
 - **`#der-logogenic-as-wrapping`** *(status: conditional)* — *Logogenic Substrate Specialization of Class Coercion* — *Claim integration* of the class-coercion theorem with the scaffolded-logogenic regime.  
-  [`03-logogenic-agents/src/der-logogenic-as-wrapping.md`](03-logogenic-agents/src/der-logogenic-as-wrapping.md)
+  [`03-llm-core/src/der-logogenic-as-wrapping.md`](03-llm-core/src/der-logogenic-as-wrapping.md)
 

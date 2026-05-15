@@ -21,7 +21,7 @@ related_spikes:
 
 > The alpha-prime/beta-prime split is strong. Potential and monotone games legitimately transfer sector/Lyapunov machinery. However, the "no equilibrium exists" language for cyclic games can be misleading: finite games generally have mixed Nash equilibria, and no-regret dynamics can converge to correlated or coarse-correlated sets even when pure-strategy dynamics cycle.
 
-Specifically, line 162 of `01-aad-core/src/deriv-strategic-composition.md`:
+Specifically, line 162 of `01-aat-core/src/deriv-strategic-composition.md`:
 
 > **No equilibrium exists** in cyclic games (rock-paper-scissors pure-strategy Nash; mixed-Nash saddle of fictitious play). Strategic composition has no fixed point; ergodic / distributional analysis replaces convergence.
 
@@ -71,7 +71,7 @@ A potential *separate* theoretical strengthening — explicitly stating in the s
 
 These are wording recommendations for a follow-on cycle under Joseph's review. The spike does not modify any segment.
 
-### Edit 1: `01-aad-core/src/deriv-strategic-composition.md` line 162 — primary repair
+### Edit 1: `01-aat-core/src/deriv-strategic-composition.md` line 162 — primary repair
 
 **Current text (line 162):**
 
@@ -83,7 +83,7 @@ These are wording recommendations for a follow-on cycle under Joseph's review. T
 
 **Rationale.** Preserves the honest scope-limit content (no pure-strategy convergence, no state-space fixed point) while removing the false headline. Names mixed-Nash existence explicitly. Locates cyclic games as β' (which they are) rather than as a separate exit. Makes explicit the type-of-object distinction (distribution vs state) that the original elided.
 
-### Edit 2: `01-aad-core/src/deriv-strategic-composition.md` line 137 — stale cross-reference repair
+### Edit 2: `01-aat-core/src/deriv-strategic-composition.md` line 137 — stale cross-reference repair
 
 **Current text (line 137, in the "What Is Derived vs. What Is Chosen" table):**
 
@@ -105,7 +105,7 @@ These are wording recommendations for a follow-on cycle under Joseph's review. T
 
 **Rationale.** Instance 4 of `#disc-identifiability-floor` is currently occupied by "Universal Information-to-Distance Constant under Non-(PI) Norms" (landed in the 2026-04-24 Bias-Bound cycle). Mechanism-design impossibility is correctly listed at `disc-identifiability-floor.md` line 120 in the "Adjacent Floors (Open Research Directions)" section, not numbered. The "4th instance" claim in `deriv-strategic-composition.md` predates the bias-bound landing and is now stale. Using "candidate adjacent-floor instance" matches the current numbering discipline without committing to a specific future ordinal.
 
-### Edit 3: `01-aad-core/src/scope-composite-agent.md` line 69 — companion wording repair
+### Edit 3: `01-aat-core/src/scope-composite-agent.md` line 69 — companion wording repair
 
 **Current text (line 69, "What fails the scope condition"):**
 
@@ -117,7 +117,7 @@ These are wording recommendations for a follow-on cycle under Joseph's review. T
 
 **Rationale.** Removes the false "cyclic / non-convergent" equation. Names which dynamics give which equilibrium concept (clarifies the type-of-object as we go). Acknowledges that the (C-iv)-fails category is narrow — most adversarial and cyclic interactions admit *some* equilibrium convergence and therefore *do* satisfy (C-iv) — which is faithful to the scope condition's intent and removes the implicit overclaim that cyclic = non-composite.
 
-### Optional Edit 4: small β' framing addition in `01-aad-core/src/deriv-strategic-composition.md` around lines 64–68
+### Optional Edit 4: small β' framing addition in `01-aat-core/src/deriv-strategic-composition.md` around lines 64–68
 
 The current β' description focuses on convergence rate and structural minimality but doesn't name the type-of-object the equilibrium concept is. Adding one sentence to the β' paragraph would make line 162's distributional framing read as a natural continuation rather than a surprise.
 
@@ -150,13 +150,13 @@ This edit is optional in the sense that Edits 1–3 close the audit finding by t
 
 **Promotion recommendation — exact edits to land in a follow-on cycle under Joseph's review:**
 
-1. **`01-aad-core/src/deriv-strategic-composition.md` line 162** — replace the "no equilibrium exists" Honest-Limit bullet with the precise three-tier statement (no pure-strategy Nash / mixed-Nash exists but saddle / CCE convergence in distribution). Primary fix; closes AAD-7 directly.
+1. **`01-aat-core/src/deriv-strategic-composition.md` line 162** — replace the "no equilibrium exists" Honest-Limit bullet with the precise three-tier statement (no pure-strategy Nash / mixed-Nash exists but saddle / CCE convergence in distribution). Primary fix; closes AAD-7 directly.
 
-2. **`01-aad-core/src/deriv-strategic-composition.md` lines 137 and 177** — update "candidate 4th `#disc-identifiability-floor` instance" → "candidate adjacent-floor instance". Stale-cross-reference cleanup; surfaced en route. Decoupled from AAD-7 in origin but cheap to land in the same pass.
+2. **`01-aat-core/src/deriv-strategic-composition.md` lines 137 and 177** — update "candidate 4th `#disc-identifiability-floor` instance" → "candidate adjacent-floor instance". Stale-cross-reference cleanup; surfaced en route. Decoupled from AAD-7 in origin but cheap to land in the same pass.
 
-3. **`01-aad-core/src/scope-composite-agent.md` line 69** — rewrite the "What fails the scope condition" paragraph to remove the "cyclic / non-convergent" equation and to name which equilibrium concept each sub-scope provides. Companion repair; the original AAD-7 wording slip propagated here in the route-count-consistency sweep.
+3. **`01-aat-core/src/scope-composite-agent.md` line 69** — rewrite the "What fails the scope condition" paragraph to remove the "cyclic / non-convergent" equation and to name which equilibrium concept each sub-scope provides. Companion repair; the original AAD-7 wording slip propagated here in the route-count-consistency sweep.
 
-4. **(Optional) `01-aad-core/src/deriv-strategic-composition.md` lines 64–68** — add one sentence to the β' paragraph explicitly naming the macro-state-as-distribution structural shape. Strengthens the β' framing so Edit 1 reads as a natural continuation. Recommended.
+4. **(Optional) `01-aat-core/src/deriv-strategic-composition.md` lines 64–68** — add one sentence to the β' paragraph explicitly naming the macro-state-as-distribution structural shape. Strengthens the β' framing so Edit 1 reads as a natural continuation. Recommended.
 
 **No theoretical change.** No new segments, no new derivations, no new sub-scope routes.
 

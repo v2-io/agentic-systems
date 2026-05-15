@@ -11,10 +11,10 @@ The framework is structured as a progressive narrowing of scope built on a rigor
   - **Logozoetic Agents** add moral continuity (mostly future work).
 
 ## Predictions About Content
-- **01-aad-core:** I expect to see very clean derivations for the persistence condition and mismatch ODEs in Section I. In Section II, I expect the strategy DAG formalisms to be tightly coupled with Pearl's causal hierarchy. In Section III, I expect the adversarial dynamics to fall out cleanly from the signed coupling ($\gamma$) and agent opacity ($H_b$).
+- **01-aat-core:** I expect to see very clean derivations for the persistence condition and mismatch ODEs in Section I. In Section II, I expect the strategy DAG formalisms to be tightly coupled with Pearl's causal hierarchy. In Section III, I expect the adversarial dynamics to fall out cleanly from the signed coupling ($\gamma$) and agent opacity ($H_b$).
 - **02-tst-core:** I expect strong empirical mappings where git commits represent the chronica and tests/deploys are literal interventions. The exponential cognitive load and coherence/coupling metrics will likely be mathematically grounded in AAD's deliberation cost and causal-information-yield.
-- **03-logogenic-agents:** I expect a careful treatment of which Section II results survive the loss of directed separation (the 16/5/2/1 classification mentioned in the OUTLINE).
-- **04-logozoetic-agents:** Mostly conceptual groundwork and proposed gaps around "Crèche" and "the three deaths".
+- **03-llm-core:** I expect a careful treatment of which Section II results survive the loss of directed separation (the 16/5/2/1 classification mentioned in the OUTLINE).
+- **04-eli-core:** Mostly conceptual groundwork and proposed gaps around "Crèche" and "the three deaths".
 
 ## Predictions About What's Open
 - **Composition Dynamics:** The transition dynamics for composition (how composites form/restructure) and endogenous coupling (how $\gamma$ evolves) are explicitly marked as gaps.

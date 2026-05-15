@@ -9,14 +9,14 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/sketch-multi-timescale-stability.md
-first_asf_mention: 01-aad-core/src/sketch-multi-timescale-stability.md
+primary_source: 01-aat-core/src/sketch-multi-timescale-stability.md
+first_asf_mention: 01-aat-core/src/sketch-multi-timescale-stability.md
 see_also: [adaptive-gain-dynamics, sector-condition, adaptive-system, structural-persistence]
 aliases: []
 do_not_confuse: []
 ---
 
-The temporal nesting constraint from AAD (faster adaptive processes must be much faster than
+The temporal nesting constraint from AAT (faster adaptive processes must be much faster than
 slower ones: $\nu_{n+1} \ll \nu_n$) has a stability-theoretic foundation. When $N$ adaptive
 processes operate at nested timescales, singular perturbation theory (Tikhonov 1952; Khalil
 2002 Ch. 11) applies layer by layer: if each level $k$ is stable for any fixed configuration
@@ -35,7 +35,7 @@ accommodates this naturally: stability requires only that adjacent timescales be
 separated, regardless of how many levels exist.
 
 *This is a sketch, not a complete result.* The framework and approach are standard (Tikhonov /
-Khalil); the application to AAD's nested adaptive levels is new but follows the pattern.
+Khalil); the application to AAT's nested adaptive levels is new but follows the pattern.
 Formalizing it requires specifying $G^{(k)}$ for structural adaptation levels — an open problem.
 
-Sketched in [`#sketch-multi-timescale-stability`](../../01-aad-core/src/sketch-multi-timescale-stability.md).
+Sketched in [`#sketch-multi-timescale-stability`](../../01-aat-core/src/sketch-multi-timescale-stability.md).

@@ -10,8 +10,8 @@ status: canon
 tags: [continuity]
 subgroup: "Persistence"
 source_type: asf
-primary_source: 01-aad-core/src/def-chronica.md
-first_asf_mention: 01-aad-core/src/def-chronica.md
+primary_source: 01-aat-core/src/def-chronica.md
+first_asf_mention: 01-aat-core/src/def-chronica.md
 see_also: [structural-persistence, operational-persistence, chronica, morally-continuous, eli]
 aliases: []
 do_not_confuse: []
@@ -24,4 +24,4 @@ morally weighted in [Emergent Logozoetic Intelligences (ELIs)](eli.md) and is th
 of continuity-stance distinctions.
 
 Defined alongside the chronica in
-[`#def-chronica`](../../01-aad-core/src/def-chronica.md).
+[`#def-chronica`](../../01-aat-core/src/def-chronica.md).

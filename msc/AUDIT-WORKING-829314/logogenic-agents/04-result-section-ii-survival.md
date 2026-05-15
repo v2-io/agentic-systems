@@ -2,15 +2,15 @@
 
 **1. Predictions vs evidence:** I predicted this would list which Section II theorems still hold, expecting Lyapunov persistence to hold while the Orient Cascade and Satisfaction/Regret separation degraded into approximations. It perfectly delivers this scorecard (15.5 Exact, 5.5 Approximate, 2 Modified, 1 Fails). The Orient Cascade is indeed modified into a "post-hoc diagnostic decomposition," and the Credence update mechanism is modified to condition on the full state $X_t$ rather than just $M_t$.
 
-**2. Cross-segment consistency:** This file acts as a massive topological hub, referencing 26 other segments across the framework. It perfectly integrates the new $\kappa$ bounds from `#scope-observation-ambiguity-modulation` and heavily forward/backward references `#01-aad-core` derivations.
+**2. Cross-segment consistency:** This file acts as a massive topological hub, referencing 26 other segments across the framework. It perfectly integrates the new $\kappa$ bounds from `#scope-observation-ambiguity-modulation` and heavily forward/backward references `#01-aat-core` derivations.
 
 **3. Math verification:** The expression $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$ is a spectacular piece of information theory. It formally bounds the "hallucination" or "sycophancy" of an LLM. The bias is zero if the observation $e_\tau$ is completely unambiguous ($I=0$), or if the agent is objective ($\kappa=0$). 
 The note that strategy persistence degrades as $O(\kappa^2)$ rather than $O(\kappa)$ (because the bias must both enter the signal and survive sector-condition averaging) is an incredibly deep, correct observation about nonlinear control systems.
 
-**4. What direction will the theory take next?** The next segment in `03-logogenic-agents/OUTLINE.md` is `result-coupled-diagnostic-framework.md`.
+**4. What direction will the theory take next?** The next segment in `03-llm-core/OUTLINE.md` is `result-coupled-diagnostic-framework.md`.
 
 **5. What errors should I watch for?** 
-- **Finding (Severe Editorial Bloat / Narrative Tangling):** The "Epistemic Status" and "Working Notes" sections contain massive, dense paragraphs detailing the exact derivation of the constant $C$ (Track 1 Wasserstein vs Track 2 Fisher-Rao). This is fascinating math, but it explicitly references files in `01-aad-core` (`deriv-bias-bound.md` and `disc-additive-coordinate-forcing.md`) that *were not present in the 01-aad-core OUTLINE* and that I therefore didn't read. This implies the repository is heavily fragmented and the OUTLINEs are out of sync with the actual file tree. This is a major structural defect.
+- **Finding (Severe Editorial Bloat / Narrative Tangling):** The "Epistemic Status" and "Working Notes" sections contain massive, dense paragraphs detailing the exact derivation of the constant $C$ (Track 1 Wasserstein vs Track 2 Fisher-Rao). This is fascinating math, but it explicitly references files in `01-aat-core` (`deriv-bias-bound.md` and `disc-additive-coordinate-forcing.md`) that *were not present in the 01-aat-core OUTLINE* and that I therefore didn't read. This implies the repository is heavily fragmented and the OUTLINEs are out of sync with the actual file tree. This is a major structural defect.
 
 **6. Predictions for next segment:** `result-coupled-diagnostic-framework.md` will explain how a system designer can look at the unstructured text output of an LLM ($r_\tau$) and post-hoc calculate the Satisfaction Gap ($\delta_{\text{sat}}$) and Control Regret ($\delta_{\text{regret}}$) that the agent *implicitly* used during its forward pass.
 

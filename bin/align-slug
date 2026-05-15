@@ -58,10 +58,10 @@ require 'pathname'
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path.freeze
 
 COMPONENT_SRCS = %w[
-  01-aad-core/src
+  01-aat-core/src
   02-tst-core/src
-  03-logogenic-agents/src
-  04-logozoetic-agents/src
+  03-llm-core/src
+  04-eli-core/src
 ].map { |p| REPO_ROOT / p }.freeze
 
 RENAME_SLUG = (REPO_ROOT / 'bin' / 'rename-slug').freeze
@@ -242,7 +242,7 @@ def every_segment_slug
   # — they are prior-work staging awaiting absorption (see MIGRATION-MAP.md),
   # often carry stale-vocabulary `type:` tokens (`Definition` with capital D,
   # `Theorem`, etc.), and are not eligible for the role-prefix discipline
-  # until their content is converted to AAD format.
+  # until their content is converted to AAT format.
   COMPONENT_SRCS.flat_map do |dir|
     next [] unless dir.exist?
     dir.glob('*.md').reject { |p| p.basename.to_s.start_with?('old-') }

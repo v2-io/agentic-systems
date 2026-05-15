@@ -60,7 +60,7 @@ Both are M1-shaped at paper-scale. The difference is whether the alternative is 
 
 Without the no-go, the load-bearing axiom looks aesthetic — a stylistic preference among equally defensible alternatives. With the no-go, the axiom is the *unique route to the theorem*. The (PI) commitment, the matrix LMI lift, the reverse-KL direction — none of these is a free choice once the no-go is in hand.
 
-This is structurally what makes M1 work at framework scale (`#disc-identifiability-floor`). M1's pattern is "external information-theoretic theorem produces a structural impossibility; AAD machinery is the unique broadly-available escape." Each paper inherits this pattern at paper-scale: an internal constructive limit produces a structural impossibility for the weaker form; the AAD axiom is the unique broadly-available escape *for the paper's specific result*.
+This is structurally what makes M1 work at framework scale (`#disc-identifiability-floor`). M1's pattern is "external information-theoretic theorem produces a structural impossibility; AAT machinery is the unique broadly-available escape." Each paper inherits this pattern at paper-scale: an internal constructive limit produces a structural impossibility for the weaker form; the AAT axiom is the unique broadly-available escape *for the paper's specific result*.
 
 **Connection to ASF.**
 
@@ -129,7 +129,7 @@ The corollary observation is interesting for the strategic picture: **the three-
 
 The three moves map onto the meta-architectural patterns at the paper-extraction layer, but not all three patterns map equally:
 
-- **Move 2 (no-go-forces-axiom)** is **M1 at paper scale.** Each paper's no-go is an internal constructive identifiability-floor instance: the limit of the weaker form is shown structurally; the AAD axiom is the unique broadly-available escape. This is exactly M1's catalog-scale pattern.
+- **Move 2 (no-go-forces-axiom)** is **M1 at paper scale.** Each paper's no-go is an internal constructive identifiability-floor instance: the limit of the weaker form is shown structurally; the AAT axiom is the unique broadly-available escape. This is exactly M1's catalog-scale pattern.
 
 - **Move 3 (two named regimes/tracks)** is **M2 at paper scale.** Each paper's regime decomposition is a separability instance at result-scale: the result has a separable core (each track's tight regime), structured-repair zone (the Best-of-Both-Worlds wrapping or globally-valid backstop), and general open (cases outside both tracks). This is exactly M2's catalog-scale pattern.
 
@@ -192,7 +192,7 @@ The three-move shape is a *NeurIPS / JAIR / IEEE TAC* extraction discipline. Oth
 Three structural moves appear consistently across the three NeurIPS 2026 ASF extractions:
 
 1. **Structural backbone separated from operational corollary** — the central theorem is unconditional in the operational reading; the operational interpretation is a corollary under named hypothesis.
-2. **A no-go forces the load-bearing axiom** — an internal constructive limit (or direction-forcing-by-triviality) shows what fails without the axiom; the AAD axiom is the unique broadly-available escape.
+2. **A no-go forces the load-bearing axiom** — an internal constructive limit (or direction-forcing-by-triviality) shows what fails without the axiom; the AAT axiom is the unique broadly-available escape.
 3. **Two named regimes / tracks rather than one monolithic claim** — the result decomposes into complementary regimes, each carrying its own theorem with its own tightness.
 
 The three moves are not stylistic; they are what NeurIPS-grade adversarial certification *forces* on extractions from ASF's substrate. Each move responds to a specific class of reviewer attack; the three together exhaust the structural attack surfaces; their consistent co-occurrence is structurally predicted by the certification gradient.

@@ -385,15 +385,15 @@ where $F$ is the joint best-response field and $\nabla F$ is its Jacobian. This 
 
 ### 8.1 The question
 
-Class 2 (fully merged) architectures fail `#der-directed-separation` by construction — LLM-based agents in particular have $f_M$ and $f_G$ entangled. The current scope exit directs Class 2 agents to `03-logogenic-agents/`. But strategic composition naturally involves Class 2-like coupling: each agent's model $M_t^{(i)}$ includes *the other agent's policy*, so $M_t$ is entangled with $G_t$ in a different sense — not internally within one agent, but across agents.
+Class 2 (fully merged) architectures fail `#der-directed-separation` by construction — LLM-based agents in particular have $f_M$ and $f_G$ entangled. The current scope exit directs Class 2 agents to `03-llm-core/`. But strategic composition naturally involves Class 2-like coupling: each agent's model $M_t^{(i)}$ includes *the other agent's policy*, so $M_t$ is entangled with $G_t$ in a different sense — not internally within one agent, but across agents.
 
-Does this push strategic composites out of Section II's scope and into `03-logogenic-agents/` territory? Or does strategic composition have a principled place in **Class 3 (partially modular)** — where the entanglement is across-agent rather than within-agent?
+Does this push strategic composites out of Section II's scope and into `03-llm-core/` territory? Or does strategic composition have a principled place in **Class 3 (partially modular)** — where the entanglement is across-agent rather than within-agent?
 
 ### 8.2 The distinction
 
 Let us distinguish two kinds of coupling:
 
-1. **Within-agent coupling** (Class 2): agent $i$'s own $f_M^{(i)}$ depends on $G_t^{(i)}$. This violates `#der-directed-separation`'s scope condition for *agent $i$*. Hands off to `03-logogenic-agents/`.
+1. **Within-agent coupling** (Class 2): agent $i$'s own $f_M^{(i)}$ depends on $G_t^{(i)}$. This violates `#der-directed-separation`'s scope condition for *agent $i$*. Hands off to `03-llm-core/`.
 2. **Across-agent coupling** (strategic): agent $i$'s $M_t^{(i)}$ depends on agent $j$'s state, but agent $i$'s own $f_M^{(i)}$ is still goal-blind — it updates $M_t^{(i)}$ based on whatever events arrive, without reference to $G_t^{(i)}$. The across-agent coupling is through the environment and through agent $i$'s observations of agent $j$'s actions.
 
 *[Derived — strategic-composition-class-preservation]* Strategic composition does **not** force Class 2 status. Each agent individually can be Class 1 (modular within itself), yet the composite dynamics exhibits strategic coupling. The across-agent coupling is *through the environment and the event stream*, not through internal entanglement. Hence strategic composites of Class 1 sub-agents are Class 3 composites: the sub-agents' internal processing is modular, but the composite-level observable state $(M_c, G_c)$ — if we try to define it — has intrinsic coupling because the sub-agents' observations include each other's actions.
@@ -404,7 +404,7 @@ Let us distinguish two kinds of coupling:
 
 - Composite of Class 1 sub-agents with *aligned* objectives (scope route C-i, C-ii, or C-iii): Class 1 composite. Standard `#form-composition-closure` applies.
 - Composite of Class 1 sub-agents with *partially-opposing* objectives (strategic composition): Class 3 composite. `#der-directed-separation` fails at the composite level because the composite's $M_c$ (the joint model of the shared environment, plus each agent's model of the others) includes goal-dependent content from each sub-agent, which enters the composite via the coarse-graining. Strategic composition is the *canonical Class 3 composite case*.
-- Composite of Class 2 sub-agents: Class 2 composite. Inherits logogenic-agent status; `03-logogenic-agents/` territory.
+- Composite of Class 2 sub-agents: Class 2 composite. Inherits logogenic-agent status; `03-llm-core/` territory.
 
 The key point: **strategic composition gives AAD a clean Class 3 composite type that the current framework does not explicitly cover.** It is not Class 2 (the sub-agents are modular), and it is not Class 1 (the composite's directed separation fails). It is Class 3 *at the composite level* even when all sub-agents are Class 1.
 

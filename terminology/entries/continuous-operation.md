@@ -30,7 +30,7 @@ minimizing development time — it is part of the same optimization.
 This explains why fault-tolerance patterns (supervision trees, circuit breakers, bulkheads,
 health checks) are time-optimal under the right conditions: when recovery time $T_{\text{recovery}}$
 is much smaller than the defensive programming overhead $T_{\text{defensive}}$, accepting and
-quickly recovering from failures beats building deeply defensive systems. In AAD terms: system
+quickly recovering from failures beats building deeply defensive systems. In AAT terms: system
 perturbations are environmental disturbances ($\rho$) in the operational domain; a team that
 cannot recover faster than failures accumulate is in the unmaintainability regime.
 

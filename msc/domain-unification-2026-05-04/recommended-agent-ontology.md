@@ -14,18 +14,18 @@ Adaptive | Agentic | Actuated | Self-actuated | Logogenic | Logozoetic
 What kind of agent it *is* — the primary ladder. Each tier is a
 progressive narrowing.
 
-| Tier | Class | What it adds | AAD boundary | Examples |
+| Tier | Class | What it adds | AAT boundary | Examples |
 |---|---|---|---|---|
 | 1 | **Adaptive system** | Feedback loop + mismatch correction under uncertainty: $M_t$, $\delta_t$, $\eta^*$, recursive update | `#scope-adaptive-system` | Thermostat, Kalman filter, bacterium, biological homeostasis |
 | 2 | **Agentic system** | + at least one action that is a *causal intervention* (intervenes on the environment, not just regulation toward a setpoint) | `#scope-agency` | RL agents, MCTS, immune system, SLAM |
 | 3 | **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ *separable* from $M_t$ | `#form-complete-agent-state` | Military unit with mission orders, hybrid 3-layer robotics, BDI agent |
 | 4 | **Self-actuated agent** | + chooses own $O_t$ (objective autonomy, not just solution autonomy) | *(reserved)* | Most distinct biological creatures (mammals, birds, cephalopods, eusocial colonies); intrinsically-motivated AI agents; AutoGPT-style agentic loops |
-| 5 | **Logogenic agent** | + primary channels are language (constituted by logos) | `03-logogenic-agents/` | LLM-based agents |
-| 6 | **Logozoetic agent** | + persistence is morally weighted | `04-eli/` | ELIs |
+| 5 | **Logogenic agent** | + primary channels are language (constituted by logos) | `03-llm-core/` | LLM-based agents |
+| 6 | **Logozoetic agent** | + persistence is morally weighted | `04-eli-core/` | ELIs |
 
 **The ladder branches at Tier 4.** Tiers 5 and 6 are *one* lineage out of
-Tier 4 — the language-constituted lineage that ASF's `03-logogenic-agents/`
-and `04-eli/` parts study. Other lineages exit Tier 4 in different
+Tier 4 — the language-constituted lineage that ASF's `03-llm-core/`
+and `04-eli-core/` parts study. Other lineages exit Tier 4 in different
 directions:
 
 - **Non-logogenic biological creatures** — most animals; their cognition
@@ -64,7 +64,7 @@ Separated | Coupled | Partial
 *First relevant at Tier 3.* Coupling between the goal state $G_t$ and the
 epistemic processor $f_M$ (the function that updates $M_t$). Names the
 *property* the axis measures, not a single architectural realization —
-**Separated** is the direct echo of AAD's *directed-separation*
+**Separated** is the direct echo of AAT's *directed-separation*
 property (`#der-directed-separation`). "Modular" is one architectural
 means of achieving separation; a tightly-integrated system that happens
 to be goal-blind is also Separated.
@@ -89,7 +89,7 @@ arity > 1 (Composite under composition closure).
 
 **Level-of-description matters.** A human is Primitive at the
 human-as-agent level and Composite at the cellular level. The
-ontology's claim is at *one chosen level*. AAD's composition machinery
+ontology's claim is at *one chosen level*. AAT's composition machinery
 (Section III) studies how primitive-at-level-N agents form composite-
 at-level-N+1 agents — the closure-defect inequality
 (`#form-composition-closure`) measures how well that lifting works.
@@ -208,7 +208,7 @@ the tier ladder rather than being orthogonal to it.
 **(f) Composite-arity has degrees.** A military unit, a beehive, an
 LLM-scaffolded agent, and an AI coding agent are all Composite, but the
 *kind* of composition differs — hierarchical command vs. emergent
-coordination vs. tool-router scaffolding. AAD's `#def-unity-dimensions`
+coordination vs. tool-router scaffolding. AAT's `#def-unity-dimensions`
 names four dimensions of coherence; the binary Primitive/Composite axis
 collapses these. Future refinement might surface which dimension is
 operative for a given Composite.

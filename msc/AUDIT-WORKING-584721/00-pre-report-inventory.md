@@ -12,8 +12,8 @@ State at transition to §6.1 Phase-2 (per Joseph's redirection 2026-04-25). 51 r
 - **AAD Appendix A remaining: NOT read** (~20 segments including deriv-strategic-dynamics, deriv-graph-structure-uniqueness, deriv-discrete-sector-condition (F-V1 territory), result-contraction-template, the meta-segments disc-additive-coordinate-forcing / disc-identifiability-floor / disc-separability-pattern, deriv-bias-bound, etc.).
 - **AAD Appendix B (worked examples): NOT read** (detail-operationalization, example-kalman, example-bandit, example-strategy, example-L1, worked-example-cam).
 - **TST: NOT read** (~20 segments).
-- **03-logogenic-agents: NOT read** (7 segments).
-- **04-logozoetic-agents: NOT read** (no segments).
+- **03-llm-core: NOT read** (7 segments).
+- **04-eli-core: NOT read** (no segments).
 
 Coverage gaps to surface in report's "what I didn't read" section.
 

@@ -44,17 +44,17 @@ require 'set'
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path.freeze
 
 COMPONENT_SRCS = %w[
-  01-aad-core/src
+  01-aat-core/src
   02-tst-core/src
-  03-logogenic-agents/src
-  04-eli/src
+  03-llm-core/src
+  04-eli-core/src
 ].map { |p| REPO_ROOT / p }.freeze
 
 COMPONENT_OUTLINES = %w[
-  01-aad-core/OUTLINE.md
+  01-aat-core/OUTLINE.md
   02-tst-core/OUTLINE.md
-  03-logogenic-agents/OUTLINE.md
-  04-eli/OUTLINE.md
+  03-llm-core/OUTLINE.md
+  04-eli-core/OUTLINE.md
 ].map { |p| REPO_ROOT / p }.freeze
 
 EXCLUDED_DIR_PREFIXES = %w[
@@ -366,15 +366,15 @@ def residual_counts(slug)
   [body, deps, paths]
 end
 
-# Only 01-aad-core is self-contained; the other component outlines have known
+# Only 01-aat-core is self-contained; the other component outlines have known
 # cross-component dependencies (e.g., `section-ii-survival` in logogenic-agents
 # depends on `directed-separation` in aad-core) that bin/lint-outline cannot
 # resolve because it only sees one component's src/ at a time. Linting the
-# non-AAD outlines would produce noisy false-positive "missing dependency"
+# non-AAT outlines would produce noisy false-positive "missing dependency"
 # reports that are pre-existing and unrelated to any rename. Left as a known
 # gap; address by extending lint-outline to accept cross-component roots.
 def run_lint_outline
-  aad_outline = REPO_ROOT / '01-aad-core' / 'OUTLINE.md'
+  aad_outline = REPO_ROOT / '01-aat-core' / 'OUTLINE.md'
   return true unless aad_outline.exist?
   Dir.chdir(REPO_ROOT) do
     system(LINT_OUTLINE.to_s, '--quiet', aad_outline.to_s)

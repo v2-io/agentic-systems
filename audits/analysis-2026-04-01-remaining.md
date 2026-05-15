@@ -35,7 +35,7 @@ For the record, the following were identified and resolved:
 
 ### Coupled Formulation for Class 2 Agents
 
-**The central open problem for 03-logogenic-agents/.** The directed-separation analysis identifies what survives (diagnostic vocabulary, cascade ordering, Section I quantities) and what fails (sequential update, G_t complexity bound, clean M_t persistence analysis). What's needed:
+**The central open problem for 03-llm-core/.** The directed-separation analysis identifies what survives (diagnostic vocabulary, cascade ordering, Section I quantities) and what fails (sequential update, G_t complexity bound, clean M_t persistence analysis). What's needed:
 
 - What new phenomena emerge when separation fails (motivated reasoning, confirmation bias as coupling terms in f_M)
 - What the persistence condition becomes for coupled systems (state-dependent α?)
@@ -118,7 +118,7 @@ The git → Lyapunov operationalization remains analogical, not formal. The chai
 1. **Strategy loop completion** — OR-node sector condition, continuous signal function. Extends the verified cases toward the general result. High value, moderate effort.
 2. **Three-way presentation split** — editorial restructuring of how the theory is presented. High leverage for reception, no new math.
 3. **Prior art positioning** — active inference and POMDP comparisons. Important for credibility, small effort per comparison.
-4. **Coupled formulation spike** — simplest Class 2 case. Opens 03-logogenic-agents/ with concrete content. High value, uncertain effort.
+4. **Coupled formulation spike** — simplest Class 2 case. Opens 03-llm-core/ with concrete content. High value, uncertain effort.
 5. **External validation design** — first real-world test. Important but depends on the theory being stable enough to predict from.
 6. **Composition remaining pieces** — N-agent scaling, discrete-time bridge lemma. Important for Section III but lower priority than Section II completion.
 7. **TST bridge formalization** — critical for the operationalization story but somewhat independent of core AAD work.

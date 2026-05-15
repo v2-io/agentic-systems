@@ -2,7 +2,7 @@
 
 The framework's power is that the same formal objects appear with concrete instantiations across domains. Results proved in one domain automatically have consequences in the others.
 
-| AAD concept | Control theory | RL / bandits | Organizations | Software |
+| AAT concept | Control theory | RL / bandits | Organizations | Software |
 |-------------|---------------|--------------|---------------|----------|
 | Adaptive tempo $\mathcal{T}$ | Bandwidth × gain | Learning rate × coverage | Decision speed × information quality | Iteration frequency × feedback quality |
 | Persistence condition | Stability margin | Convergence condition | Organizational viability | Maintainability threshold |

@@ -28,7 +28,7 @@ algebra, Cramér-Rao floor calculations, and similar material. They often carry 
 table (`### What Is Derived vs. What Is Chosen`) near the end of the Formal Expression section.
 
 The label "derivation" (rather than "proof") avoids overclaiming mathematical inevitability where
-AAD is applying or adapting existing mathematics to a new domain.
+AAT is applying or adapting existing mathematics to a new domain.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`type` — what kind of claim (see also the "Why these
 labels" note) and §Derivation-audit table.

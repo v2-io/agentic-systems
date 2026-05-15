@@ -8,8 +8,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/der-directed-separation.md
-first_asf_mention: 01-aad-core/src/der-directed-separation.md
+primary_source: 01-aat-core/src/der-directed-separation.md
+first_asf_mention: 01-aat-core/src/der-directed-separation.md
 see_also: [actuated-agent, orient-cascade, sector-condition, class-coercion, wrapping-regime, goal-update-coupling-class, separated, partial, coupled]
 aliases: []
 do_not_confuse: []
@@ -29,7 +29,7 @@ The three-value [Goal-Update Coupling Class](goal-update-coupling-class.md) axis
 rather than positional labels.
 
 Derived in
-[`#der-directed-separation`](../../01-aad-core/src/der-directed-separation.md);
+[`#der-directed-separation`](../../01-aat-core/src/der-directed-separation.md);
 the meta-architectural status (separation-by-construction vs. as-approximation)
 lives at
-[`#disc-separability-pattern`](../../01-aad-core/src/disc-separability-pattern.md).
+[`#disc-separability-pattern`](../../01-aat-core/src/disc-separability-pattern.md).

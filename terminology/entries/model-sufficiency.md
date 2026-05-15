@@ -9,8 +9,8 @@ layer: prose-symbol
 status: canon
 tags: [core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/def-model-sufficiency.md
-first_asf_mention: 01-aad-core/src/def-model-sufficiency.md
+primary_source: 01-aat-core/src/def-model-sufficiency.md
+first_asf_mention: 01-aat-core/src/def-model-sufficiency.md
 see_also: [model-class-fitness, mismatch, update-gain]
 aliases: []
 do_not_confuse: []
@@ -23,4 +23,4 @@ exact prediction; $S = 0$ is no better than chance. Bounded above by the
 fit within the class cannot exceed the class's expressive ceiling.
 
 Defined in
-[`#def-model-sufficiency`](../../01-aad-core/src/def-model-sufficiency.md).
+[`#def-model-sufficiency`](../../01-aat-core/src/def-model-sufficiency.md).

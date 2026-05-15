@@ -1,7 +1,7 @@
 # Final De Novo Audit Report: Logogenic Agents (Part 3)
 
 ## 1. Introduction & Audit Posture
-Following the completion of AAD (Sections I-III) and TST (Part 2), I conducted a strict, chronological, segment-by-segment de novo audit of `03-logogenic-agents/src/`. This directory constitutes the framework's application to LLM-based agents, where language forms the core representation, observation, and action channels.
+Following the completion of AAD (Sections I-III) and TST (Part 2), I conducted a strict, chronological, segment-by-segment de novo audit of `03-llm-core/src/`. This directory constitutes the framework's application to LLM-based agents, where language forms the core representation, observation, and action channels.
 
 At each step, I made predictions before reading the text, verified dependencies, checked the mathematical claims against standard machine learning and information theory principles, and watched for logical leakage. This report covers all 7 segments of Part 3.
 

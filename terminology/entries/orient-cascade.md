@@ -8,8 +8,8 @@ layer: prose-symbol
 status: canon
 tags: [structural_concepts]
 source_type: asf
-primary_source: 01-aad-core/src/der-orient-cascade.md
-first_asf_mention: 01-aad-core/src/der-orient-cascade.md
+primary_source: 01-aat-core/src/der-orient-cascade.md
+first_asf_mention: 01-aat-core/src/der-orient-cascade.md
 see_also: [directed-separation, actuated-agent, mismatch, satisfaction-gap, control-regret]
 aliases: []
 do_not_confuse: []
@@ -24,4 +24,4 @@ ordering is *forced by information dependency* — each step's input depends on
 the output of prior steps — not chosen as a design convenience.
 
 Derived in
-[`#der-orient-cascade`](../../01-aad-core/src/der-orient-cascade.md).
+[`#der-orient-cascade`](../../01-aat-core/src/der-orient-cascade.md).

@@ -9,8 +9,8 @@ layer: framing-vocabulary
 status: canon
 tags: [structural_concepts, core_quantities]
 source_type: asf
-primary_source: 01-aad-core/src/form-event-driven-dynamics.md
-first_asf_mention: 01-aad-core/src/form-event-driven-dynamics.md
+primary_source: 01-aat-core/src/form-event-driven-dynamics.md
+first_asf_mention: 01-aat-core/src/form-event-driven-dynamics.md
 see_also: [adaptive-tempo, adaptive-system, chronica, developer-agent]
 aliases: []
 do_not_confuse: []
@@ -35,4 +35,4 @@ a fixed rate. The event-driven formulation is needed when multi-rate or asynchro
 matter — e.g., a developer with compiler output at per-save rates, CI at per-push rates, and
 production telemetry continuously.
 
-Defined in [`#form-event-driven-dynamics`](../../01-aad-core/src/form-event-driven-dynamics.md).
+Defined in [`#form-event-driven-dynamics`](../../01-aat-core/src/form-event-driven-dynamics.md).
