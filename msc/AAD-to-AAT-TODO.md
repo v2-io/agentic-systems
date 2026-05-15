@@ -289,11 +289,26 @@ source that still says AAD. For each, edit the *source* and *regenerate*:
 | auto-partials `_findings-summary.md`, `_recent-progress.md`, `_known-issues.md` | segment `## Findings` / OUTLINE / Known-Fragilities | `bin/refresh-all` |
 | `LEXICON.md` | `terminology/entries/<slug>.md` (+ `decisions/`) | `bin/term render` |
 | `FINDINGS.md` | segment-level `## Findings` sections | `bin/extract-findings` |
-| `aad-v0.2.0.md`, `aad-v0.2.0s.pdf`, `01-aad-core/aad.aux` | `01-aat-core/` segments + `OUTLINE.md` + `mono-meta.yaml` | `bin/build-monograph aat` (after Stage 2 slug change) — and `git rm` the old `aad-v0.2.0.*` / `aad.aux` |
+| Monograph builds (`aad-v0.2.0.{md,s.pdf}`) **and ALL per-volume `.aux`** (`01-*/aad.aux`, `02-tst-core/tst.aux`, `03-llm-core/loga.aux`, `04-eli-core/eli.aux`) | volume segments + `OUTLINE.md` + `mono-meta.yaml` | **`bin/build-monograph --all`** (after Stage 2 slug change) — and `git rm` the stale ones first |
 | dependency-graph SVGs (`01-aat-core/src/img/*` if present) | OUTLINE + `bin/lint-outline` | `bin/lint-outline` (regen) |
 
 Rule: in any stage that *would* touch a generated file, instead touch its
 source and add the regenerate command to that stage's actions.
+
+> **`.aux` files — purpose and why `--all` (Joseph, 2026-05-15).** The
+> per-volume `<slug>.aux` are committed deliberately: they carry the
+> LaTeX label table that enables **cross-monograph linking** (one
+> volume's PDF referencing another's theorems/sections via `xr`). They
+> are *generated* and "super easy to regenerate via
+> `bin/build-monograph --all`" — but the regen **must be `--all`**, not
+> a single volume: cross-volume xr resolves only when every volume's
+> `.aux` is rebuilt together, so a one-volume build would leave stale /
+> missing sibling `.aux` and broken cross-references. *Stage-2 plan gap
+> (corrected):* Stage 2a only named `01-*/aad.aux`; the siblings
+> (`tst.aux`, `loga.aux`→`llm.aux`, `eli.aux`) were `git rm`'d in
+> Stage 4 when the residual surfaced. `_obs/act-core-test.aux` stays
+> frozen. (Whether `.aux` should be git-tracked at all vs gitignored is
+> a separate question, out of this rename's scope.)
 
 ---
 
@@ -489,10 +504,12 @@ Two coherent, independently-revertible commits within the branch
 - Regenerate, in order:
   - `bin/refresh-all` → `README.md`, `README-auditor.md`,
     auto-partials, `FINDINGS.md`
-  - `bin/build-monograph aat` (both targets if desired) →
-    `aat-v0.2.0.{md,s.pdf}`, `01-aat-core/aat.aux`; visually confirm the
-    **PDF title page shows the styled "Adaptation & Actuation Theory"**
-    and the renamed cover renders.
+  - **`bin/build-monograph --all`** (regenerates every volume so all
+    `.aux` rebuild together for cross-monograph xr — see §3 note) →
+    `aat-v0.2.0.{md,s.pdf}` + `01-aat-core/aat.aux`,
+    `02-tst-core/tst.aux`, `03-llm-core/llm.aux`, `04-eli-core/eli.aux`;
+    visually confirm the **PDF title page shows the styled "Adaptation &
+    Actuation Theory"** and the renamed cover renders.
   - dependency-graph SVGs if the build emits them.
 - Verify: `bin/lint-md` and `bin/lint-outline` pass; built `aat-v0.2.0.md`
   has no `\bAAD\b` (except none expected).
@@ -542,8 +559,10 @@ Two coherent, independently-revertible commits within the branch
      → empty (no stale dir tokens; `-E` is fine here, no `\b`).
    - `bin/build-monograph aat` / `llm` / `eli` all resolve;
      `git grep -n 'build-monograph aad'` → no stale invocations.
-2. `bin/build-monograph aat` end-to-end; PDF title page shows styled
-   "Adaptation & Actuation Theory"; cover renders.
+2. `bin/build-monograph --all` end-to-end (all volumes, so every `.aux`
+   regenerates for cross-monograph xr); AAT PDF title page shows styled
+   "Adaptation & Actuation Theory"; cover renders; sibling volumes still
+   build and cross-reference AAT correctly.
 3. `bin/lint-md`, `bin/lint-outline`, `bin/term lint` pass.
 4. Segment-count / structural parity vs the Stage 0 baseline (nothing
    deleted, ordering intact).
