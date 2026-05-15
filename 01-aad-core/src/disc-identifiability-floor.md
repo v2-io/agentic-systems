@@ -203,7 +203,7 @@ The four instances import distinct external theorems; per-instance prior-art lan
 
 ## Working Notes
 
-- **Sylvester-recognition provenance.** The rank-collapse-floor-as-Sylvester finding and the certificate-cone framing it sits in were worked out in `spikes/.integrated/spike-operator-family-unification/` (02-L3, 03-L4, 99-verdict); the spike also carries the broader (not-yet-landed) "spine segment" question — whether M1/M2/M3 should be reorganized as facets of a single certificate-cone object. Pointer retained for the follow-on; remove at `candidate` stage if the spine question is resolved or the spike archived.
+- **Sylvester-recognition provenance.** The rank-collapse-floor-as-Sylvester finding and the certificate-cone framing it sits in were worked out in the 2026-05-14 operator-family-unification cycle; see CHANGELOG 2026-05-14. The broader spine question (reorganizing M1/M2/M3 as facets of one certificate-cone object) is *resolved* — landed as #disc-stability-certificate + #result-certificate-existence, with this segment as the boundary facet (see the Discussion cross-ref above). Originating spike is absorbed archaeology, not a live reference.
 - **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Removed at `candidate` stage per FORMAT.md Gate 4.
 - **Naming convention.** "Identifiability floor" frames the pattern positively: the floor is what the agent cannot go below given limited information, but the boundary characterization tells the agent exactly how to climb above it. An alternative name "no-go theorems" would emphasize the negative form. Recommend retaining "floor" — it captures the asymmetry.
 
