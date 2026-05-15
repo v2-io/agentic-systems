@@ -97,7 +97,7 @@ Each pair $(i, j)$ interacts through a coupling of bounded strength. Motivates: 
 
 *Intuition.* Number of pairwise couplings is $O(N^2)$, number of triangles $O(N^3)$, etc. Every sub-agent's state enters every other's update (directly or with small lag). The projection must either (i) preserve enough pairwise state to capture all couplings — forcing $\dim \mathcal X_c \geq O(N^2)$ and violating (P3) in any useful sense — or (ii) compress pairwise coupling into a mean-field summary statistic, accepting defect. Mean-field compression in interacting-particle systems incurs defect $\sim 1/\sqrt N$ when the system is close to a Gaussian fluctuation regime (law-of-large-numbers plus central-limit scaling), but $\sim O(1)$ away from it. So the intuition is: fully-connected $\varepsilon^\ast(N)$ might be bounded independently of $N$ in a mean-field regime (favorable) or grow like $O(1)$ forever (unfavorable), with a phase transition somewhere.
 
-*Why this intuition might be wrong.* The interacting-particle-system analogy relies on exchangeability (de Finetti) or mean-field decoupling (propagation of chaos). AAD sub-agents are not exchangeable in general — heterogeneity of $K_i$ is exactly the driver identified in #result-unity-closure-mapping. Without exchangeability, mean-field intuitions may not apply.
+*Why this intuition might be wrong.* The interacting-particle-system analogy relies on exchangeability (de Finetti) or mean-field decoupling (propagation of chaos). AAT sub-agents are not exchangeable in general — heterogeneity of $K_i$ is exactly the driver identified in #result-unity-closure-mapping. Without exchangeability, mean-field intuitions may not apply.
 
 ### 4.3 Sparse / $k$-regular coupling
 
@@ -105,7 +105,7 @@ Each agent couples to $k$ neighbors, $k$ fixed as $N$ grows. Motivates: distribu
 
 *Intuition.* $k$-regular gives $O(N)$ edges rather than $O(N^2)$; local-neighborhood projections should give $\varepsilon^\ast(N)$ bounded or growing sublinearly if the coupling is local and contracting. Close in spirit to Mori–Zwanzig projection on lattice systems — the zero-lag kernel bound ( #form-composition-closure Working Notes, Mori-Zwanzig partial note) is the candidate quantitative estimate.
 
-*Why this intuition might be wrong.* Long-range correlations can propagate through short-range couplings (critical phenomena, percolation). Even with $k$ fixed, correlation lengths can diverge and the mean-field approximation fails near criticality — the SOC speculation (`spikes/spike-soc-composition.md`) is exactly the claim that AAD composites may sit near such a critical point.
+*Why this intuition might be wrong.* Long-range correlations can propagate through short-range couplings (critical phenomena, percolation). Even with $k$ fixed, correlation lengths can diverge and the mean-field approximation fails near criticality — the SOC speculation (`spikes/spike-soc-composition.md`) is exactly the claim that AAT composites may sit near such a critical point.
 
 ### 4.4 Small-world coupling
 
@@ -170,7 +170,7 @@ Effort: low (direct generalization of the $N = 2$ algebra). Payoff: a clean "bas
 
 ### 6.2 Hierarchical tree case (balanced, $K_c = 1$)
 
-Balanced binary tree of depth $d = \log_2 N$. Each internal node is itself an AAD agent receiving aggregated state from its children. Natural projection: recursive means-only, propagating upward.
+Balanced binary tree of depth $d = \log_2 N$. Each internal node is itself an AAT agent receiving aggregated state from its children. Natural projection: recursive means-only, propagating upward.
 
 Ask: does the bridge lemma instantiate cleanly at each level? If yes, is the per-level defect additive in $d$? This tests whether the sector-persistence template's recursive-application in the holonic framework is consistent.
 

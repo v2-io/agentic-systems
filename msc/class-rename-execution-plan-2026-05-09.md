@@ -18,7 +18,7 @@
 | Class 2 — Fully merged *(was: worst case)*       | **Class 3 — Coupled** *(swapped + renamed)*  | Directed separation fails by construction (LLMs)            |
 | Class 3 — Partially modular *(was: middle case)* | **Class 2 — Partial** *(swapped + renamed)*  | Coupling present but bounded; $\kappa_\text{processing} \in (0, \kappa_\text{max})$ |
 
-Two operations bundled because every touched file gets both: **rename** (descriptive labels replacing numerals at the property level) and **swap** (numbering aligns Architecture with the six other AAD ladders that all run cleanest → middle → worst as 1 → 2 → 3). Doing them separately would touch every file twice.
+Two operations bundled because every touched file gets both: **rename** (descriptive labels replacing numerals at the property level) and **swap** (numbering aligns Architecture with the six other AAT ladders that all run cleanest → middle → worst as 1 → 2 → 3). Doing them separately would touch every file twice.
 
 ### Axis name
 
@@ -135,7 +135,7 @@ The rename moves from positional labels (Class 1/2/3) to property labels (Separa
 
 **Register-mixed default.** Use the form whose readability is highest in the local context:
 
-- **GUC-prefix forms** (`GUC-Separated`, `GUC-Coupled`, `GUC-Partial`) — best for headers, tables, cross-references between segments, and any context where the term needs to stand alone without surrounding context to anchor it. Citable, unambiguous, follows the project's compound-acronym discipline (matches AAD, TST, ELI, PROPRIUM).
+- **GUC-prefix forms** (`GUC-Separated`, `GUC-Coupled`, `GUC-Partial`) — best for headers, tables, cross-references between segments, and any context where the term needs to stand alone without surrounding context to anchor it. Citable, unambiguous, follows the project's compound-acronym discipline (matches AAT, TST, ELI, PROPRIUM).
 - **`Class N: Property` form** (`Class 1: Separated`, `Class 3: Coupled`) — best in tables, formal definitions, and first-mention-in-segment slots where preserving the numeric handle aids readers familiar with the prior vocabulary.
 - **Bare property word** (`Separated`, `Coupled`, `Partial`) — cleanest in mid-segment running prose where the segment has already established the GUC taxonomy and ambiguity with adjacent coupling/partial concepts is low. *Especially watch* segments that touch composition coupling, strategic self-coupling, adversarial coupling pressure, partial wrapping (W₂), or partial information — bare "Coupled" / "Partial" can collide with the segment's own central content there.
 - **`property class`** (`the Coupled class`, `Separated agents`) — natural for categorical reference ("the Coupled class includes transformer LLMs") or modifier use where the noun anchors the term.
@@ -183,7 +183,7 @@ Per the decisions in §4. The phase ordering follows Joseph's batched-commits di
 3. Record decisions:
    ```bash
    bin/term decide goal-update-coupling-class canonicalize --by joseph \
-     --note "Class 1/2/3 → Separated/Coupled/Partial rename + Class 2↔3 swap, 2026-05-09. Aligns Architecture ladder with the six other AAD ladders per #disc-separability-pattern meta-pattern audit. Source rationale: msc/naming/naming-rename-plan.md lines 92–116."
+     --note "Class 1/2/3 → Separated/Coupled/Partial rename + Class 2↔3 swap, 2026-05-09. Aligns Architecture ladder with the six other AAT ladders per #disc-separability-pattern meta-pattern audit. Source rationale: msc/naming/naming-rename-plan.md lines 92–116."
    bin/term decide separated rename --by joseph --from class-1 --to separated \
      --note "Class 1 number unchanged; rename only. See goal-update-coupling-class entry for the full rename + swap context."
    bin/term decide partial rename --by joseph --from class-3 --to class-2-partial \

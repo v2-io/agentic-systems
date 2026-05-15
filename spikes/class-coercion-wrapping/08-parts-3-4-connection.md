@@ -73,7 +73,7 @@ Currently the project treats Parts III/IV as a "different problem domain requiri
 
 The wrapping theorem refines this:
 
-- **Parts I/II (AAD core)** apply to Class-1 systems by construction *or* to Class-1 systems built via the wrapping construction.
+- **Parts I/II (AAT core)** apply to Class-1 systems by construction *or* to Class-1 systems built via the wrapping construction.
 - **Wrapping construction** (this spike's theorem) is the bridge — how to construct Class-1 systems from Class-3 components.
 - **Parts III/IV** are *domain instantiations* of Class-1-by-wrapping. PROPRIUM is the canonical wrapper; ELI-specific content is added structure beyond bare class coercion.
 

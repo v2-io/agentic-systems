@@ -14,11 +14,11 @@ $$\log \rho \;=\; \log \rho_{\text{external}} + \log f(\mathcal M) + \log g(\pi)
 
 The parent spike explicitly flags this as the weakest link (§3.2, §10, §12.4 item 1). Its status determines whether the internal-external decomposition can be promoted to conditional or robust-qualitative or must remain heuristic.
 
-**The task.** Attack the factorization rigorously. Derive it from AAD primitives if possible; otherwise characterize the obstruction precisely and propose an honest reframe. The investigation must:
+**The task.** Attack the factorization rigorously. Derive it from AAT primitives if possible; otherwise characterize the obstruction precisely and propose an honest reframe. The investigation must:
 
 1. Pin down what $\rho$ actually is (operationally and mathematically).
 2. Ask whether $\rho_{\text{external}}$ is a well-defined limit.
-3. Ask whether $f(\mathcal M)$ and $g(\pi)$ are derivable from named AAD quantities.
+3. Ask whether $f(\mathcal M)$ and $g(\pi)$ are derivable from named AAT quantities.
 4. Ask whether the multiplicative form (equivalently, log-additive form) is forced or chosen.
 5. Work at least two structured cases (linear-Gaussian; Beta-Bernoulli; OU with LQR) end-to-end.
 6. Report outcome as (A) full derivation, (B) partial, or (C) obstruction with honest reframe.
@@ -47,11 +47,11 @@ which depends on $M_t$ (what the model predicts), $\pi$ (what actions the agent 
 **Four candidates for what $\rho$ *is*:**
 
 1. **(a) Agent-conditional innovation rate.** $\rho = \rho(\mathcal M, \pi, \text{env}) = $ rate at which $\delta$ is driven by un-modeled dynamics given agent's specific $(\mathcal M, \pi)$. This is what the equations actually use.
-2. **(b) Environment-only disturbance rate.** Intrinsic to the environment, not agent-dependent. This is the intuition behind $\rho_{\text{external}}$ but is *not* what the AAD equations define.
+2. **(b) Environment-only disturbance rate.** Intrinsic to the environment, not agent-dependent. This is the intuition behind $\rho_{\text{external}}$ but is *not* what the AAT equations define.
 3. **(c) Joint agent-environment property.** Something between (a) and (b) that does not cleanly factor.
 4. **(d) Regime-dependent.** Different things in different regimes (deterministic drift vs stochastic noise; Model D vs Model S).
 
-The AAD literal-reading is (a). The parent spike needs (b) for the leading term $\rho_{\text{external}}$ to be well-posed. The translation from (a) to (b) — if possible — is exactly what the factorization is trying to accomplish.
+The AAT literal-reading is (a). The parent spike needs (b) for the leading term $\rho_{\text{external}}$ to be well-posed. The translation from (a) to (b) — if possible — is exactly what the factorization is trying to accomplish.
 
 **Pinning down $\rho_{\text{external}}$.** For $\rho_{\text{external}}$ to be well-defined requires choosing a reference agent: a maximally-naive predictor. Three candidates:
 
@@ -77,11 +77,11 @@ $$y_k = x_{t_k} + \varepsilon_k, \qquad \varepsilon_k \sim \mathcal N(0, r)$$
 
 Agent is a Kalman filter with possibly misspecified parameters $(\hat\lambda, \hat\sigma, \hat r)$. Policy: passive observer (no control yet; controlled case in §5).
 
-Predictor state $\hat x_{k|k-1}$; innovation (AAD's mismatch)
+Predictor state $\hat x_{k|k-1}$; innovation (AAT's mismatch)
 
 $$\delta_k = y_k - \hat x_{k|k-1}$$
 
-Steady-state innovation variance $\sigma_\nu^2 = \mathbb E[\delta_k^2]$ is the object. In AAD's Model S reading, $\rho^2 \equiv \nu \cdot \sigma_\nu^2$ (the innovation-driven disturbance power per unit time).
+Steady-state innovation variance $\sigma_\nu^2 = \mathbb E[\delta_k^2]$ is the object. In AAT's Model S reading, $\rho^2 \equiv \nu \cdot \sigma_\nu^2$ (the innovation-driven disturbance power per unit time).
 
 ### 3.2 Innovation variance: the closed-form answer
 
@@ -216,7 +216,7 @@ Candidates:
 
 **The Beta-Bernoulli case factors (R-F) successfully *for the single edge*.** With two factors; no $f(\mathcal M)$ appears because, at the per-observation level, the Bernoulli innovation is model-free (it depends only on the true $p^\ast$ and the log-likelihood ratio).
 
-**But this is just the per-observation variance times the per-observation rate.** Any stochastic disturbance in exponential-family form will factor as (rate per observation) × (intrinsic variance per observation). The "factorization" in this case is structural to any additive-Poisson-driven innovation — it's not specific to AAD, and it's *multiplicative in rate because the Poisson structure already makes it so*.
+**But this is just the per-observation variance times the per-observation rate.** Any stochastic disturbance in exponential-family form will factor as (rate per observation) × (intrinsic variance per observation). The "factorization" in this case is structural to any additive-Poisson-driven innovation — it's not specific to AAT, and it's *multiplicative in rate because the Poisson structure already makes it so*.
 
 ### 4.4 The multi-edge case
 
@@ -236,7 +236,7 @@ which is **additive in edges, multiplicative in (rate × variance) per edge**. T
 
 The per-edge form is multiplicative (two factors: rate × variance), but no $f(\mathcal M)$ appears. The aggregate form is additive across edges. The "three-factor product (R-F)" form is not visible in this setting.
 
-**If anything, this is evidence that the cleanest AAD-native decomposition of disturbance is *additive* rather than *multiplicative*.** A pattern emerging from both §3 and §4: variance / second-moment / rate-squared quantities decompose *additively* across their structural components, not multiplicatively.
+**If anything, this is evidence that the cleanest AAT-native decomposition of disturbance is *additive* rather than *multiplicative*.** A pattern emerging from both §3 and §4: variance / second-moment / rate-squared quantities decompose *additively* across their structural components, not multiplicatively.
 
 ## 5. Structured derivation 3 — Controlled OU with LQR policy
 
@@ -274,7 +274,7 @@ Policy reduces $\rho$ only when the environment's stochastic structure depends o
 
 ### 5.4 A stronger observation: policy-benignity is not a reduction of $\rho$; it's a change of the *reference region*
 
-When we say "the agent's policy keeps the environment benign," we often mean: the agent avoids state-space regions where the environment is volatile. But within the AAD framework, if the environment is Markov in $(x, u)$ and the agent correctly models both, then innovation is predictable away up to process noise, which is state-dependent only via explicit nonlinearities.
+When we say "the agent's policy keeps the environment benign," we often mean: the agent avoids state-space regions where the environment is volatile. But within the AAT framework, if the environment is Markov in $(x, u)$ and the agent correctly models both, then innovation is predictable away up to process noise, which is state-dependent only via explicit nonlinearities.
 
 **The usual intuition about "policy benignity" corresponds to the agent's model class breaking down in some regions** — e.g., the LQR controller correctly models linear dynamics near the origin but not far-field nonlinearities. Policy keeps the agent near the origin, where the linear model is valid. This is policy-mediated $f(\mathcal M)$, not policy-mediated $\rho$-reduction.
 
@@ -294,7 +294,7 @@ This is a deep observation. The parent spike treats $f$ and $g$ as independent f
 | **Beta-Bernoulli (4)** | $\rho_\Sigma^2 = \sum_e \nu_{\pi,e} \cdot \sigma_e^2$ | No | Disturbance is *additive across edges*; only per-edge form is multiplicative |
 | **Controlled OU + LQR (5)** | $\sigma_\nu^2 = P^\ast + r$, independent of policy | Trivially but vacuously: $g(\pi) = 1$ | Policy-benignity conflates with model-class adequacy when the model is correctly specified |
 
-**Common thread:** variance / second-moment / $\rho^2$ quantities decompose *additively* in AAD's natural settings. The multiplicative form (R-F) is imposed from outside; it is not emerging from the structure.
+**Common thread:** variance / second-moment / $\rho^2$ quantities decompose *additively* in AAT's natural settings. The multiplicative form (R-F) is imposed from outside; it is not emerging from the structure.
 
 ### 6.2 Where (R-F) comes from
 
@@ -324,22 +324,22 @@ by the information-geometric Pythagorean theorem (Amari & Nagaoka 2000 §3.4; `r
 
 ## 7. Does the `#additive-coordinate-forcing` pattern apply?
 
-The meta-segment `#additive-coordinate-forcing` catalogs three instances where an AAD-internal additivity axiom forces a logarithmic coordinate via Cauchy's functional equation. Does (R-F) fit?
+The meta-segment `#additive-coordinate-forcing` catalogs three instances where an AAT-internal additivity axiom forces a logarithmic coordinate via Cauchy's functional equation. Does (R-F) fit?
 
 **The diagnostic from the meta-segment:**
 > (a) is the decomposition multiplicative across independent factors?
-> (b) is there an AAD-internal commitment that the decomposition should be additive?
+> (b) is there an AAT-internal commitment that the decomposition should be additive?
 
 **For (R-F):**
 - (a) *claims* yes but §§3–5 show this claim fails generically (the natural structure is additive in variance, not multiplicative in rate);
-- (b) there is no AAD-internal commitment that forces $\log \rho$ to be additive. The chain layer (probabilities along a chain) is a mathematical identity via the chain rule; the divergence layer (KL over DAG factorizations) has a chain-rule-additivity axiom; the update layer (log-odds) has an evidential-additivity axiom. The disturbance layer has no such axiom.
+- (b) there is no AAT-internal commitment that forces $\log \rho$ to be additive. The chain layer (probabilities along a chain) is a mathematical identity via the chain rule; the divergence layer (KL over DAG factorizations) has a chain-rule-additivity axiom; the update layer (log-odds) has an evidential-additivity axiom. The disturbance layer has no such axiom.
 
 **Attempting to construct the axiom.** An "independence-of-attenuations axiom" would say: *if the environment, model, and policy act on independent aspects of the disturbance signal, then $\log \rho$ decomposes additively.* The Cauchy-FE argument would then force $\log \rho$ to be the unique additive coordinate on which this independence is respected. But:
 
-1. The premise "act on independent aspects" is exactly what §§3–5 show *fails* in the natural AAD settings. It would be a stipulation, not a derived property.
+1. The premise "act on independent aspects" is exactly what §§3–5 show *fails* in the natural AAT settings. It would be a stipulation, not a derived property.
 2. Even granted the premise, the Cauchy-FE doesn't give a unique logarithmic coordinate for $\rho$; it gives a unique additive coordinate *on which the stipulation holds by construction*. That's a circular derivation.
 
-**Conclusion: (R-F) is not a primary instance of `#additive-coordinate-forcing`.** It lacks the AAD-internal additivity axiom that makes the three primary instances load-bearing. The logarithmic coordinate here is *chosen* (to make the decomposition look log-additive), not *forced* by an independently-motivated axiom — exactly the "adjacent family member" pattern, not the "primary instance" pattern, in `#additive-coordinate-forcing`'s taxonomy.
+**Conclusion: (R-F) is not a primary instance of `#additive-coordinate-forcing`.** It lacks the AAT-internal additivity axiom that makes the three primary instances load-bearing. The logarithmic coordinate here is *chosen* (to make the decomposition look log-additive), not *forced* by an independently-motivated axiom — exactly the "adjacent family member" pattern, not the "primary instance" pattern, in `#additive-coordinate-forcing`'s taxonomy.
 
 ## 8. The honest reframe
 
@@ -372,7 +372,7 @@ Replace (R-F) with a **KL-divergence decomposition**:
 
 $$D_\text{KL}(p^\ast \| q_{\mathcal M, \pi}) = D_\text{KL}(p^\ast \| q_{\mathcal M_\text{opt}}) + D_\text{KL}(q_{\mathcal M_\text{opt}} \| q_{\mathcal M}) + D_\text{KL}(q_{\mathcal M} \| q_{\mathcal M, \pi}) + \text{cross} \qquad (\text{R-KL})$$
 
-This is a three-way Pythagorean decomposition (modulo cross-terms from non-nested projections). Each term has a clean AAD interpretation:
+This is a three-way Pythagorean decomposition (modulo cross-terms from non-nested projections). Each term has a clean AAT interpretation:
 
 - First: **intrinsic-limit gap** (how much the best model in the class falls short of the true distribution — an identifiability lower bound for the class).
 - Second: **model-class-attributable gap** (how far the current model is from the class optimum).
@@ -390,7 +390,7 @@ Agent-controllable part subsumes both model-class and policy contributions witho
 
 ### 8.4 Comparison of reframes
 
-| Form | Structural coordinate | Cross terms | AAD-internal motivation | Preserves parent spike's internal vs external narrative? |
+| Form | Structural coordinate | Cross terms | AAT-internal motivation | Preserves parent spike's internal vs external narrative? |
 |---|---|---|---|---|
 | (R-F) *(original)* | log-rate | absent by assumption (generically wrong) | none (no additivity axiom) | Yes, cleanly — but misleadingly |
 | (R-V) *(additive variance)* | variance | present, honest | bias-variance identity | Yes, with cross terms |
@@ -399,9 +399,9 @@ Agent-controllable part subsumes both model-class and policy contributions witho
 
 **My recommendation:** (R-V) with cross terms is the honest technical statement; (R-2T) is the honest presentational form if the fine $f$-vs-$g$ split is not needed; (R-KL) is the strongest result if the agent has a Bayesian / exponential-family structure where the Pythagorean theorem applies cleanly (sub-scope $\alpha$).
 
-## 9. Connection map to existing AAD quantities
+## 9. Connection map to existing AAT quantities
 
-| AAD quantity | How (R-F) wanted it | How the honest reframe uses it |
+| AAT quantity | How (R-F) wanted it | How the honest reframe uses it |
 |---|---|---|
 | `#result-mismatch-decomposition` | (not directly used) | Central — the per-instant bias-variance identity is exactly the starting point for (R-V). Cross-sectional; (R-V) integrates it over time |
 | `#def-model-class-fitness` ($\mathcal F(\mathcal M)$) | supplied $f(\mathcal M)$ as a direct multiplicative factor | supplies a *ceiling* for the reducible-model-error term $\Delta_{\mathcal M}^2$; not a factor but an upper bound on one term |
@@ -425,11 +425,11 @@ The brief asks for strengthen-first: before concluding obstruction, try hard to 
 
 3. **Controlled OU + LQR (§5).** Attempted to separate policy-benignity from model-class expressiveness. Found that in the correctly-specified sub-scope-$\alpha$ regime, $g(\pi) \equiv 1$; policy only matters when the model is misspecified in some regions, which makes $g$ and $f$ entangled.
 
-4. **Cauchy-FE forcing argument (§7).** Attempted to manufacture an AAD-internal additivity axiom (independence-of-attenuations) that would force $\log \rho$ additive. Failed: the axiom's premise (independent aspects) is what §§3–5 show fails generically.
+4. **Cauchy-FE forcing argument (§7).** Attempted to manufacture an AAT-internal additivity axiom (independence-of-attenuations) that would force $\log \rho$ additive. Failed: the axiom's premise (independent aspects) is what §§3–5 show fails generically.
 
 5. **Sub-scope $\alpha$ restriction.** Attempted to hold the factorization to the narrower regime. Under sub-scope $\alpha$, (R-F) is strictly *vacuous* (policy doesn't enter) or *degenerate* (model is correctly specified, so $f = 1$). Outside sub-scope $\alpha$ — where (R-F) might be empirically useful — the structure isn't there.
 
-**All paths fail cleanly under close examination.** The obstruction is not a technical gap; it's a structural mismatch between the multiplicative form (R-F) and the additive-in-variance natural structure of AAD disturbance.
+**All paths fail cleanly under close examination.** The obstruction is not a technical gap; it's a structural mismatch between the multiplicative form (R-F) and the additive-in-variance natural structure of AAT disturbance.
 
 ## 11. Assumption exercise: when does (R-F) nevertheless hold approximately?
 
@@ -503,21 +503,21 @@ The seventh ladder (internal-external attribution) stands. The "separable core" 
 
 ## 14. Outcome: (C) — honest obstruction + reframe
 
-**The research question was:** Can (R-F) be derived from more primitive AAD quantities, or is it a modeling choice?
+**The research question was:** Can (R-F) be derived from more primitive AAT quantities, or is it a modeling choice?
 
-**Answer:** It is a modeling choice, and the structural cases show it is an *incorrect* choice. AAD's natural disturbance-decomposition structure is additive-in-variance (§3, §4) and additive-in-KL (§12), not multiplicative-in-rate. The factorization (R-F) works only in a small-$\Delta$ first-order regime where $\log(1+x) \approx x$, and even there the decomposition is *variance-additive* rather than *rate-multiplicative*; the log-factor presentation of the parent spike hides this.
+**Answer:** It is a modeling choice, and the structural cases show it is an *incorrect* choice. AAT's natural disturbance-decomposition structure is additive-in-variance (§3, §4) and additive-in-KL (§12), not multiplicative-in-rate. The factorization (R-F) works only in a small-$\Delta$ first-order regime where $\log(1+x) \approx x$, and even there the decomposition is *variance-additive* rather than *rate-multiplicative*; the log-factor presentation of the parent spike hides this.
 
 **The honest reframe is (R-V) — the variance-additive decomposition with explicit cross terms** — or its strengthened cousin (R-KL) — the KL-additive information-geometric form — either of which recovers the fine internal-external attribution without the invented multiplicative structure.
 
 **Specific findings:**
 
-1. **$\rho$ is agent-conditional.** The AAD equations define $\rho$ as the innovation the agent's predictor fails to absorb — not an environment-intrinsic quantity. $\rho_\text{external}$ is not well-defined without choosing a reference agent, and different reference choices yield different numerical $\rho_\text{external}$.
+1. **$\rho$ is agent-conditional.** The AAT equations define $\rho$ as the innovation the agent's predictor fails to absorb — not an environment-intrinsic quantity. $\rho_\text{external}$ is not well-defined without choosing a reference agent, and different reference choices yield different numerical $\rho_\text{external}$.
 
-2. **Variance-additivity is the natural structure.** Kalman innovation is $P^\ast + r$, not $P^\ast \cdot r$. Beta-Bernoulli aggregate is a sum over edges, not a product. This is a consequence of how independent noise sources combine (variance-additivity), which is structural to stochastic processes, not a contingent AAD modeling choice.
+2. **Variance-additivity is the natural structure.** Kalman innovation is $P^\ast + r$, not $P^\ast \cdot r$. Beta-Bernoulli aggregate is a sum over edges, not a product. This is a consequence of how independent noise sources combine (variance-additivity), which is structural to stochastic processes, not a contingent AAT modeling choice.
 
 3. **$g(\pi)$ and $f(\mathcal M)$ are not independent.** In the clean sub-scope-$\alpha$ case (Kalman + LQR, correctly specified), $g(\pi) \equiv 1$. When $g(\pi) \lt 1$ appears, it is because the model class is state-dependent: policy selects the region where the model is adequate. This is not two independent factors; it is one factor (model-class adequacy) modulated by another (policy-induced state distribution).
 
-4. **No AAD-internal additivity axiom motivates $\log \rho$ decomposition.** The `#additive-coordinate-forcing` pattern needs an axiom like "this should decompose additively under AAD-internal conditions X"; no such X is on offer for $\log \rho$. The three primary instances (chain / divergence / update) each have such an axiom; the disturbance layer does not.
+4. **No AAT-internal additivity axiom motivates $\log \rho$ decomposition.** The `#additive-coordinate-forcing` pattern needs an axiom like "this should decompose additively under AAT-internal conditions X"; no such X is on offer for $\log \rho$. The three primary instances (chain / divergence / update) each have such an axiom; the disturbance layer does not.
 
 5. **The small-$\Delta$ Taylor expansion is where (R-F) is approximately correct.** In the regime where the model is near-optimal and the policy is near-benign, the variance-additive decomposition linearizes to a log-additive form. This is an approximation, not a derivation, and has to be flagged as such.
 
@@ -536,9 +536,9 @@ The seventh ladder (internal-external attribution) stands. The "separable core" 
 
 1. **Can the cross terms be characterized under sub-scope $\alpha$?** The Pythagorean theorem of information geometry gives clean conditions under which the KL decomposition is exactly orthogonal (zero cross terms). For exponential-family models with e-flat model class and m-flat policy-induced measure change, this could deliver a clean (R-KL) result. Worth a separate spike.
 
-2. **What is the natural additive coordinate for disturbance?** The evidence from §§3–4 and §12 is that it is *variance* (for Gaussian-like families) or *information-divergence* (for exponential-family generalization), not *log-rate*. Is there a unifying principle that names which coordinate a given AAD quantity should decompose in? This might strengthen `#additive-coordinate-forcing`'s typology.
+2. **What is the natural additive coordinate for disturbance?** The evidence from §§3–4 and §12 is that it is *variance* (for Gaussian-like families) or *information-divergence* (for exponential-family generalization), not *log-rate*. Is there a unifying principle that names which coordinate a given AAT quantity should decompose in? This might strengthen `#additive-coordinate-forcing`'s typology.
 
-3. **Is there a non-trivial factorization in rate under any AAD sub-scope?** The three structured cases and the Cauchy-FE argument suggest no, but I have not checked heavy-tailed, discrete-time, or non-stationary cases exhaustively. A negative result (proven impossibility of multiplicative factorization under stationarity + Markov + exponential-family) would close this question definitively.
+3. **Is there a non-trivial factorization in rate under any AAT sub-scope?** The three structured cases and the Cauchy-FE argument suggest no, but I have not checked heavy-tailed, discrete-time, or non-stationary cases exhaustively. A negative result (proven impossibility of multiplicative factorization under stationarity + Markov + exponential-family) would close this question definitively.
 
 4. **Does the (R-V) cross-term structure compose under agent composition (Section III)?** The parent spike's §12.5 notes composition as out-of-scope. (R-V) composes additively in variance, so the cross-term composition question is whether the inter-agent cross terms are cleanly bounded. This bears on the `#form-composition-closure` machinery.
 
@@ -547,9 +547,9 @@ The seventh ladder (internal-external attribution) stands. The "separable core" 
 ## 16. Summary
 
 - **Problem.** The $\rho = \rho_\text{ext} \cdot f(\mathcal M) \cdot g(\pi)$ factorization is a working hypothesis in the internal-external-decomposition spike; its status determines whether the fine decomposition can be promoted.
-- **Approach.** Three structured derivations (scalar linear-Gaussian Kalman; Beta-Bernoulli edge; controlled OU with LQR) + Cauchy-FE forcing argument + AAD-internal axiom search.
+- **Approach.** Three structured derivations (scalar linear-Gaussian Kalman; Beta-Bernoulli edge; controlled OU with LQR) + Cauchy-FE forcing argument + AAT-internal axiom search.
 - **Outcome.** (C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms.
-- **Four specific findings.** (1) $\rho$ is agent-conditional, not environmental. (2) Variance-additivity is the native structure. (3) $f$ and $g$ are not independent — they entangle at source. (4) No AAD-internal additivity axiom motivates $\log\rho$ decomposition.
+- **Four specific findings.** (1) $\rho$ is agent-conditional, not environmental. (2) Variance-additivity is the native structure. (3) $f$ and $g$ are not independent — they entangle at source. (4) No AAT-internal additivity axiom motivates $\log\rho$ decomposition.
 - **Honest reframe.** (R-V): $\rho^2 = \rho^2_\text{irr} + \Delta_{\mathcal M}^2 + \Delta_\pi^2 + \text{cross}$, variance-additive with explicit cross terms. (R-2T): agent-controllable vs environment-irreducible two-term split if the fine decomposition is not essential. (R-KL): information-geometric Pythagorean decomposition, strongest under sub-scope $\alpha$.
 - **Impact on parent spike.** Coarse decomposition survives at *exact*; fine decomposition is *conditional* under (R-V) first-order approximation or *heuristic* in general. `#disc-identifiability-floor` Instance 3 status survives; `#disc-separability-pattern` seventh-ladder status survives. `#additive-coordinate-forcing` is *not* a primary instance; the logarithmic coordinate here is *matched rather than forced*, like the Lyapunov and IB adjacent-family members.
 - **Small-$\Delta$ regime.** (R-F) is approximately correct as a first-order Taylor expansion around near-optimal model + near-benign policy. This is an honest special case, not a derivation.

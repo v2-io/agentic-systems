@@ -48,7 +48,7 @@ This bound is loose. A wrapper that aggressively coerces $A$ into Class-1 shape 
 
 ## 5. Which quantity to use where
 
-For AAD's existing machinery:
+For AAT's existing machinery:
 - The **persistence template** (`#result-sector-persistence-template`) at wrapper level uses $\varepsilon^*_\text{track}$. The bridge-lemma bound $\lim\|e_m\| \le \varepsilon^*_\text{track} \nu_W / \alpha_W$ governs the wrapper's tracking accuracy of the projected micro-system.
 - The **wrapping cost analysis** uses $\varepsilon^*_\text{coerce}$. This is a measure of how much the wrapper changes the system; high coercion may be the design intent (forcing Class-1 status).
 - The **leakage analysis** (sub-spike C) uses neither — leakage is bounded by mutual-information / KL-divergence in the response distribution, not by trajectory error.

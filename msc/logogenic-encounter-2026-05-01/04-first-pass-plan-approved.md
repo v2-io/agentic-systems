@@ -47,7 +47,7 @@
 
 ## What this plan deliberately does NOT do (yet)
 
-- Touch Section I or II AAD core (those are Joseph-driven priority elsewhere)
+- Touch Section I or II AAT core (those are Joseph-driven priority elsewhere)
 - Begin the renaming-cycle naming work (separate cycle, in flight)
 - Touch TST (02) preamble or segments
 - Add Findings-section catalog entries (those happen after segment content stabilizes)

@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# AAD Agent Simulation: The Value of Causal Information Yield (CIY)
+# AAT Agent Simulation: The Value of Causal Information Yield (CIY)
 # Testing different exploration heuristics (lambda functions)
 
-class AAD_Agent:
+class AAT_Agent:
     def __init__(self, R_capacity, rho_env, lambda_type="constant", k=1.0):
         self.R = R_capacity # Structural capacity
         self.rho = rho_env # Environmental drift rate
@@ -128,7 +128,7 @@ def run_simulations():
         rewards = []
         
         for _ in range(N_EPISODES):
-            agent = AAD_Agent(R_capacity, rho_env, lambda_type, k)
+            agent = AAT_Agent(R_capacity, rho_env, lambda_type, k)
             Omega_t = 0.0
             
             for _ in range(N_STEPS):

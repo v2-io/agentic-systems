@@ -2,7 +2,7 @@
 
 **Date:** brainstorm captured in WORKBENCH.md pre-2026-04-22; extracted here when WORKBENCH was retired.
 
-**Status:** Brainstorm, not even hypothesis. Structural intuition connecting several AAD segments; needs spike-grade investigation before any claim is made.
+**Status:** Brainstorm, not even hypothesis. Structural intuition connecting several AAT segments; needs spike-grade investigation before any claim is made.
 
 ## The conjecture
 

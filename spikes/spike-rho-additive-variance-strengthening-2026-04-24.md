@@ -12,7 +12,7 @@
 
 ### 1.1 What the prior spike established
 
-`spikes/spike-rho-factorization.md` showed — across three structured cases (Kalman, Beta-Bernoulli, controlled OU+LQR) plus a Cauchy-FE forcing attempt plus sub-scope-$\alpha$ restriction — that no derivation route produces the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ under AAD-native structure. The prior spike's own verdict: *"(C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms."*
+`spikes/spike-rho-factorization.md` showed — across three structured cases (Kalman, Beta-Bernoulli, controlled OU+LQR) plus a Cauchy-FE forcing attempt plus sub-scope-$\alpha$ restriction — that no derivation route produces the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ under AAT-native structure. The prior spike's own verdict: *"(C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms."*
 
 ### 1.2 Was the failure inherent or method-dependent?
 
@@ -22,7 +22,7 @@ A strengthening-first posture requires asking: did the prior spike fail because 
 
 **(A.2) Were the three structured cases representative?** The three cases (linear-Gaussian Kalman; Beta-Bernoulli edge; controlled OU+LQR) cover the sub-scope-$\alpha$ workhorses. They do *not* cover: (i) heavy-tailed noise; (ii) multiplicative-noise processes (geometric Brownian motion, stochastic volatility); (iii) large-deviation / rare-event regimes; (iv) strictly passive channels with cascaded attenuation. The prior spike's §11.3 flagged multi-stage cascade as a possible escape route and concluded it doesn't help under sub-scope-$\alpha$ Gaussian channels. Worth re-probing: the cascade argument might have been dismissed too quickly — see §3 below.
 
-**(A.3) Was the Cauchy-FE forcing argument exhaustive?** The prior spike's §7 attempted to manufacture an "independence-of-attenuations" axiom and correctly identified the premise as the same thing §§3–5 had shown to fail. But it did not systematically enumerate alternative axioms: a *cumulant-additivity* axiom, a *large-deviation-rate-additivity* axiom, a *PID-decomposition* axiom, or a *log-probability-over-tails* axiom. Each of these has a different mathematical support and a different AAD-internal motivation. The Cauchy-FE forcing attempt was narrow.
+**(A.3) Was the Cauchy-FE forcing argument exhaustive?** The prior spike's §7 attempted to manufacture an "independence-of-attenuations" axiom and correctly identified the premise as the same thing §§3–5 had shown to fail. But it did not systematically enumerate alternative axioms: a *cumulant-additivity* axiom, a *large-deviation-rate-additivity* axiom, a *PID-decomposition* axiom, or a *log-probability-over-tails* axiom. Each of these has a different mathematical support and a different AAT-internal motivation. The Cauchy-FE forcing attempt was narrow.
 
 **(A.4) Was the variance-additive reframe given its full derivation?** The prior spike's §8.1 named the (R-V) form but presented it as obvious ("supported by bias-variance decomposition"). The actual theorem — under what exact sub-scope is the cross-term structure identifiable? is the decomposition unique up to orthogonal rotation? does it compose under agent-agent coupling? — was not developed. The reframe was a sketch, not a derivation.
 
@@ -38,7 +38,7 @@ A strengthening-first posture requires asking: did the prior spike fail because 
 
 ### 2.1 Setup and the target theorem
 
-The claim to derive: the effective disturbance rate $\rho$ (in rate-squared / variance units) decomposes additively into named components with explicit cross terms, in a derivation that composes with existing AAD machinery.
+The claim to derive: the effective disturbance rate $\rho$ (in rate-squared / variance units) decomposes additively into named components with explicit cross terms, in a derivation that composes with existing AAT machinery.
 
 **Setup (sub-scope $\alpha$).** Agent in the Kalman / exponential-family / strongly-convex / linear-PD regime (per `#der-gain-sector-bridge`). Environment generates observations $o_t$; the agent's one-step predictor is $\hat o_t(M_{t-1}, a_{t-1})$; mismatch $\delta_t = o_t - \hat o_t$. The Model S disturbance power per unit time is
 
@@ -101,9 +101,9 @@ measures how much the policy $\pi$ shifts the state distribution into regions wh
 
 **Comparison to the prior spike's (R-V).** The prior spike stated (R-V) qualitatively. (AV) is (R-V) promoted to a theorem with named sub-scope conditions, a structural derivation, an explicit cross-term, and an exact statement of what each term is. This is the strengthening the prior spike should have attempted but didn't.
 
-### 2.6 Composition with AAD machinery
+### 2.6 Composition with AAT machinery
 
-(AV) slots into AAD's existing architecture cleanly:
+(AV) slots into AAT's existing architecture cleanly:
 
 - **`#result-sector-persistence-template` (T3).** The template's Model-S disturbance statistic is $\sigma_\xi^2 = \rho^2/\nu$. (AV) decomposes this into four named sub-contributions; the template is undisturbed but each instantiation now carries a finer-grained $\rho_\xi$ attribution.
 - **`#deriv-persistence-cost`.** The information-rate floor $\dot R \geq n\alpha/2$ is insensitive to how $\rho^2$ decomposes — the RDF sees only the composite disturbance statistic. But (AV) predicts that *agent-controllable* reductions in $\Delta^2_{\mathcal M} + \Delta^2_\pi + 2\chi$ translate directly into channel-capacity slack: if $\rho^2$ drops via model/policy improvement, so does the required $\dot R$.
@@ -139,7 +139,7 @@ $$\rho = \lambda \cdot p_{\text{env}} \cdot p_{\mathcal M} \cdot p_\pi \cdot \ma
 
 **This factorizes exactly.** Each gate is a multiplicative thinning of an independent event stream. The structure is a **cascaded Poisson-thinning** (Kingman 1993, *Poisson Processes*, Ch. 2): thinning a Poisson process by independent Bernoulli filters preserves the Poisson structure with the product of retention probabilities. The factorization is mathematically forced, not chosen.
 
-**When does this apply to AAD?** Three conditions:
+**When does this apply to AAT?** Three conditions:
 
 - **(MC-1) Event-stream structure.** Disturbances arrive as discrete, independent events at Poisson rate, not as continuous-time innovation noise. This matches *rare-event* regimes: safety incidents, market crashes, upstream dep breaks, catastrophic failures. It does *not* match continuous-time tracking regimes (Kalman over OU).
 - **(MC-2) Independent gating.** Environmental emission, model-class unpredictability, and policy-induced irrelevance are independent Bernoulli filters on the same event. This is the key assumption — and often wrong, because model and policy are coupled (§5 of the prior spike). But in rare-event / catastrophic-event settings, the gates *can* be independent when model-class adequacy is domain-level (did we think of this hazard class?) while policy-benignity is operational (are we in a region where this hazard manifests?).
@@ -149,7 +149,7 @@ $$\rho = \lambda \cdot p_{\text{env}} \cdot p_{\mathcal M} \cdot p_\pi \cdot \ma
 
 **This is a real sub-regime, not a degenerate one.** Rare-event / tail-risk settings are exactly where operational intuition reaches for the multiplicative form. A nuclear plant's safety envelope, a hospital's incident rate, an autonomous vehicle's fatality rate — these live in Poisson-rare-event regimes where each incident is an independent filtering of (environment generates hazard) × (system fails to detect/predict) × (operational context permits harm). The multiplicative form is *native* here.
 
-**AAD integration.** Under (MC-1)–(MC-3), the multiplicative form is an exact special case. It should be labeled as a *regime instance* within (AV) (the fourth term $2\chi$ vanishes and the first three terms collapse to a single multiplicative product in the rare-event limit where $p_{\text{env}}, p_{\mathcal M}, p_\pi$ are each close to 1 or each close to 0). This is the *first-order cascade limit* of the general theory.
+**AAT integration.** Under (MC-1)–(MC-3), the multiplicative form is an exact special case. It should be labeled as a *regime instance* within (AV) (the fourth term $2\chi$ vanishes and the first three terms collapse to a single multiplicative product in the rare-event limit where $p_{\text{env}}, p_{\mathcal M}, p_\pi$ are each close to 1 or each close to 0). This is the *first-order cascade limit* of the general theory.
 
 ### 3.2 The large-deviation / tail-asymptotic regime
 
@@ -167,11 +167,11 @@ $$I(\rho; x) \;=\; \inf_{x_1 + x_2 + x_3 = x} \big[I_{\text{env}}(x_1) + I_{\mat
 
 **Candidate Cauchy-FE axiom.** Posit: *if $\rho_\text{env}, \rho_{\mathcal M}, \rho_\pi$ are independent contributions to $\rho$, then their large-deviation rate functions are additive under infimum-convolution.* This is the Cramér-style independence axiom of large-deviation theory (Dembo & Zeitouni 2010, *Large Deviations Techniques and Applications*, 2nd ed., §4.5); it is derived, not posited, for independent random variables.
 
-**So the axiom is not AAD-internal — it's classical probability.** But the *application* to AAD is distinctive: the claim would be that the independence premise holds for AAD's three attribution sources in some regime. Under (S1)–(S2) this approaches true; under generic coupling it does not.
+**So the axiom is not AAT-internal — it's classical probability.** But the *application* to AAT is distinctive: the claim would be that the independence premise holds for AAT's three attribution sources in some regime. Under (S1)–(S2) this approaches true; under generic coupling it does not.
 
 **Verdict.** (LD) gives a genuine multiplicative structure at the tail, under additive rate functions. It is *not a strengthening of (R-F) in the rate coordinate* — the rate coordinate remains additive in variance. It is a complementary decomposition that says: *tail probabilities factor multiplicatively when contributions are additive-in-variance and independent*. This is the structural answer to why the multiplicative intuition is stubborn: it is correct in a different coordinate than the rate one.
 
-**AAD integration.** Under (AV)'s separability conditions + large-deviation regularity, tail probabilities of excursion events factor multiplicatively. This gives a Section-III / tail-risk diagnostic distinct from the variance-level (AV) decomposition. Worth a Discussion paragraph in `#result-persistence-condition` or `#hyp-mismatch-dynamics`; not worth a new segment on its own.
+**AAT integration.** Under (AV)'s separability conditions + large-deviation regularity, tail probabilities of excursion events factor multiplicatively. This gives a Section-III / tail-risk diagnostic distinct from the variance-level (AV) decomposition. Worth a Discussion paragraph in `#result-persistence-condition` or `#hyp-mismatch-dynamics`; not worth a new segment on its own.
 
 ### 3.3 Partial Information Decomposition (PID)
 
@@ -196,7 +196,7 @@ where $R^2_\rho$ = redundant-reduction (both model and policy could individually
 
 **Verdict.** PID decomposition is a legitimate refinement of (AV). It does *not* recover the multiplicative form but it does recover the *three-factor* narrative of (R-F) in a technically correct framework: "model contribution," "policy contribution," and "joint contribution" become distinct identifiable components rather than independent factors. The narrative is saved; the multiplicative coordinate is not.
 
-**AAD integration.** Too technically heavy for a first promotion. Land (AV) first; mention PID as a structural refinement with an open follow-on. If AAD develops a serious multi-source information-decomposition need (likely in Section III coupled-agent analysis), PID becomes the natural tool.
+**AAT integration.** Too technically heavy for a first promotion. Land (AV) first; mention PID as a structural refinement with an open follow-on. If AAT develops a serious multi-source information-decomposition need (likely in Section III coupled-agent analysis), PID becomes the natural tool.
 
 ### 3.4 Multiplicative-noise processes
 
@@ -210,7 +210,7 @@ where $\sigma$ scales with $x_t$ (geometric Brownian motion: $\sigma(x) = \sigma
 
 **Does this give a multiplicative $\rho$ factorization?** Partially: if the true process is multiplicative-noise and the agent models on the natural log coordinate, then $\rho^2$ in the log coordinate has the additive structure of (AV). If the agent models in the *original* coordinate, $\rho^2$ is state-dependent and no clean decomposition exists at the rate level — only a state-conditional variance map. The multiplicative structure is in the *level*-coordinate process, not in the rate-level attribution.
 
-**Verdict.** Multiplicative-noise processes are not a strengthening route for (R-F). They are a reason the log-coordinate is sometimes natural (and (AV) applies there cleanly). This is consistent with AAD's additive-coordinate-forcing pattern: natural coordinate choices map multiplicative structure into additive.
+**Verdict.** Multiplicative-noise processes are not a strengthening route for (R-F). They are a reason the log-coordinate is sometimes natural (and (AV) applies there cleanly). This is consistent with AAT's additive-coordinate-forcing pattern: natural coordinate choices map multiplicative structure into additive.
 
 ### 3.5 Summary of multiplicative sub-structure analysis
 
@@ -233,7 +233,7 @@ The strengthening posture has a dual: if no derivation produces (R-F), perhaps a
 
 *[Candidate no-go theorem (rho-multiplicative-impossibility, conditional on (N1)–(N3))]*
 
-**Claim.** Under (N1) finite second moments, (N2) non-degenerate environment noise, and (N3) non-trivial model class (with $\Delta^2_{\mathcal M} \in (0, \infty)$), the effective disturbance rate $\rho^2$ cannot be expressed as a product of three independent non-degenerate factors $\rho^2_\text{env} \cdot f(\mathcal M) \cdot g(\pi)$ with $f, g \in (0, 1]$ for generic AAD agents under sub-scope $\alpha$.
+**Claim.** Under (N1) finite second moments, (N2) non-degenerate environment noise, and (N3) non-trivial model class (with $\Delta^2_{\mathcal M} \in (0, \infty)$), the effective disturbance rate $\rho^2$ cannot be expressed as a product of three independent non-degenerate factors $\rho^2_\text{env} \cdot f(\mathcal M) \cdot g(\pi)$ with $f, g \in (0, 1]$ for generic AAT agents under sub-scope $\alpha$.
 
 **Derivation sketch (by contradiction).** Assume (R-F) holds: $\rho^2 = \rho^2_\text{env} \cdot f(\mathcal M) \cdot g(\pi)$. Compare two scenarios:
 
@@ -256,7 +256,7 @@ Under (R-F), $\rho^2_\text{env}$ is *a single scalar* and must take the same val
 
 ### 4.3 Integration with `#disc-identifiability-floor`
 
-The no-go has the canonical shape of `#disc-identifiability-floor`'s pattern: *external mathematical obstruction, AAD machinery provides the escape*. Here:
+The no-go has the canonical shape of `#disc-identifiability-floor`'s pattern: *external mathematical obstruction, AAT machinery provides the escape*. Here:
 
 - **Obstruction:** generic disturbance has multi-dimensional environment-side structure (process / observation / exogenous events) that cannot be collapsed to a single scalar multiplicative factor without losing the interaction with model misspecification.
 - **Escape:** (AV)'s variance-additive form, supplemented by PID if finer decomposition is needed.
@@ -269,11 +269,11 @@ This would be Instance 4 of `#disc-identifiability-floor`: alongside on-policy L
 
 The brief calls out: *is there an axiom on disturbance decomposition that forces a specific coordinate via Cauchy's functional equation?* If yes, the rate-domain decomposition becomes a fifth primary instance of `#additive-coordinate-forcing`. If no, it's an adjacent family member.
 
-### 5.1 Candidate AAD-internal axiom
+### 5.1 Candidate AAT-internal axiom
 
 **Axiom candidate (disturbance-additivity-under-independent-contributions).** *If the environment, model class, and policy contribute to the effective disturbance rate through statistically independent channels (no mediation, no cross-coupling), then the disturbance rate's second moment decomposes additively across these three sources.*
 
-**AAD-internal motivation.** Adjacent to `#der-chain-confidence-decay`'s structure: the chain layer's additivity is forced by the probability chain rule applied to the product form $P(\text{chain}) = \prod P(E_i \mid E_{<i})$. The disturbance-additivity candidate would be motivated by the *variance-additivity of independent noise sources* — a mathematical identity in probability (Bienaymé 1853) that does not require AAD-internal structure.
+**AAT-internal motivation.** Adjacent to `#der-chain-confidence-decay`'s structure: the chain layer's additivity is forced by the probability chain rule applied to the product form $P(\text{chain}) = \prod P(E_i \mid E_{<i})$. The disturbance-additivity candidate would be motivated by the *variance-additivity of independent noise sources* — a mathematical identity in probability (Bienaymé 1853) that does not require AAT-internal structure.
 
 ### 5.2 What this axiom forces
 
@@ -285,9 +285,9 @@ Under independence + finite second moments (the axiom's conditions + (N1)), vari
 
 **Not a fourth/fifth primary instance of `#additive-coordinate-forcing`.** The additive coordinate (variance) is forced by a direct algebraic identity, not by a Cauchy-FE uniqueness argument. This places (AV) in the same structural family as the **Lyapunov quadratic** (adjacent family member, coordinate matched by identity rather than forced by uniqueness theorem) rather than as a primary instance.
 
-**This is honest news.** The prior spike's §7 speculated that (R-F) might fit `#additive-coordinate-forcing`. The cleaner position: **(R-F) does not, but (AV) also does not** — (AV) sits alongside Lyapunov quadratic as an adjacent family member. The additive-coordinate pattern is narrower than "any additive structure in AAD"; it specifically covers cases where Cauchy-FE operates on smooth monotone axioms to force a logarithmic coordinate.
+**This is honest news.** The prior spike's §7 speculated that (R-F) might fit `#additive-coordinate-forcing`. The cleaner position: **(R-F) does not, but (AV) also does not** — (AV) sits alongside Lyapunov quadratic as an adjacent family member. The additive-coordinate pattern is narrower than "any additive structure in AAT"; it specifically covers cases where Cauchy-FE operates on smooth monotone axioms to force a logarithmic coordinate.
 
-**The meta-pattern's integrity is preserved.** (AV)'s coordinate is variance, forced by Bienaymé's identity under independence. No AAD-internal axiom beyond the classical one is needed. This is actually cleaner than the prior spike's attempt — it places (AV) in its proper structural home without over-promoting.
+**The meta-pattern's integrity is preserved.** (AV)'s coordinate is variance, forced by Bienaymé's identity under independence. No AAT-internal axiom beyond the classical one is needed. This is actually cleaner than the prior spike's attempt — it places (AV) in its proper structural home without over-promoting.
 
 ---
 
@@ -351,9 +351,9 @@ Attempt: use the fact that cumulants are additive under independence ($\kappa_n(
 
 Attempt: replace KL with Rényi $\alpha$-divergence, which has a multiplicative structure in some parameter regimes.
 
-**Failure.** Rényi divergences satisfy $D_\alpha(P \Vert \prod Q_i)$-style factorization for specific $\alpha$ values under independence, but the AAD-native divergence is KL (the $\alpha \to 1$ limit), which has *additive* factorization. Moving to a non-KL divergence to get multiplicativity sacrifices AAD's chain-rule-additivity axiom (which is the motivation for the divergence-layer Cauchy-FE instance in `#deriv-strategy-cost-regret-bound`). Not a coherent move.
+**Failure.** Rényi divergences satisfy $D_\alpha(P \Vert \prod Q_i)$-style factorization for specific $\alpha$ values under independence, but the AAT-native divergence is KL (the $\alpha \to 1$ limit), which has *additive* factorization. Moving to a non-KL divergence to get multiplicativity sacrifices AAT's chain-rule-additivity axiom (which is the motivation for the divergence-layer Cauchy-FE instance in `#deriv-strategy-cost-regret-bound`). Not a coherent move.
 
-**Lesson.** The divergence coordinate is already fixed by AAD's broader commitment to KL. Changing the divergence to get multiplicativity in $\rho$ would fight the existing `#additive-coordinate-forcing` structure.
+**Lesson.** The divergence coordinate is already fixed by AAT's broader commitment to KL. Changing the divergence to get multiplicativity in $\rho$ would fight the existing `#additive-coordinate-forcing` structure.
 
 ---
 
@@ -438,25 +438,25 @@ The parent spike's value is preserved; the weakest-link factorization is replace
 
 4. **Regime-I negative contribution in `#der-interaction-channel-classification` and (AV).** The recipient-side classification has a *negative* Regime-I term that reduces $\rho$. Under (AV), where does the cooperative-signal contribution land? Candidate: it reduces $\rho_\star^2$ via augmenting the effective environment with informative signals. Worth a cross-reference note when `#rho-decomposition` lands.
 
-5. **Is there a Section III composition axis for $\rho$-attribution that mirrors the positive / negative / constructive meta-architecture?** (AV) is positive-half (separable core + structured repair + general open ladder). The no-go is negative-half (identifiability floor instance). Is there a constructive-half (coordinate-forcing) move? §5 answered no — (AV) is coordinate-matched, not coordinate-forced. This is itself a load-bearing structural observation: the three meta-patterns cover AAD's architecture, but each individual structural move doesn't need to appear in all three. $\rho$-decomposition participates in positive and negative halves; not in constructive.
+5. **Is there a Section III composition axis for $\rho$-attribution that mirrors the positive / negative / constructive meta-architecture?** (AV) is positive-half (separable core + structured repair + general open ladder). The no-go is negative-half (identifiability floor instance). Is there a constructive-half (coordinate-forcing) move? §5 answered no — (AV) is coordinate-matched, not coordinate-forced. This is itself a load-bearing structural observation: the three meta-patterns cover AAT's architecture, but each individual structural move doesn't need to appear in all three. $\rho$-decomposition participates in positive and negative halves; not in constructive.
 
-6. **Multiplicative cascade as a possibly-distinctive AAD contribution.** The (MC) regime is the cleanest place where (R-F) is native. Is the Poisson-rare-event-cascade structure intrinsic to any AAD sub-problem, or is it simply a classical rare-event regime AAD inherits from probability theory? Candidate locations: safety-critical system viability under `#result-persistence-condition`; incident-rate analysis in TST's $\mathcal C_t^{\text{commit}}$; composition-level catastrophic-failure regimes in `#deriv-critical-mass-composition` and `#hyp-symbiogenic-composition`. Worth a TST/Section III audit.
+6. **Multiplicative cascade as a possibly-distinctive AAT contribution.** The (MC) regime is the cleanest place where (R-F) is native. Is the Poisson-rare-event-cascade structure intrinsic to any AAT sub-problem, or is it simply a classical rare-event regime AAT inherits from probability theory? Candidate locations: safety-critical system viability under `#result-persistence-condition`; incident-rate analysis in TST's $\mathcal C_t^{\text{commit}}$; composition-level catastrophic-failure regimes in `#deriv-critical-mass-composition` and `#hyp-symbiogenic-composition`. Worth a TST/Section III audit.
 
 ---
 
 ## 10. Summary of strengthening-first outcomes
 
-- **Strengthening 1 — (AV) theorem.** Derived. Promoted the prior spike's qualitative (R-V) reframe to a theorem with named sub-scope conditions (S1)–(S4), an information-geometric derivation via Pythagorean projection, and explicit composition with AAD's existing machinery. Status: *exact* in sub-scope $\alpha$ under (S1)–(S4); *robust qualitative* outside. **Lands in new segment `#rho-decomposition`.**
+- **Strengthening 1 — (AV) theorem.** Derived. Promoted the prior spike's qualitative (R-V) reframe to a theorem with named sub-scope conditions (S1)–(S4), an information-geometric derivation via Pythagorean projection, and explicit composition with AAT's existing machinery. Status: *exact* in sub-scope $\alpha$ under (S1)–(S4); *robust qualitative* outside. **Lands in new segment `#rho-decomposition`.**
 
 - **Strengthening 2 — multiplicative sub-structure.** Located. The multiplicative form is native in the Poisson-rare-event-cascade regime (MC) and in the large-deviation tail (LD) regime. Both are sub-regimes within (AV), not alternatives. PID refines the cross-term structure. Multiplicative-noise processes are a coordinate-choice issue, not a strengthening route. **Lands as sub-regime catalog in `#rho-decomposition`.**
 
 - **Strengthening 3 — no-go theorem.** Derived at discussion-grade; clear path to exact. Under mild regularity, no single-scalar "environmental volatility" can capture multi-dimensional environment noise while admitting a model-class multiplicative factor. **Lands as §4 of `#rho-decomposition` and as Instance 4 of `#disc-identifiability-floor`.**
 
-- **Strengthening 4 — `#additive-coordinate-forcing` connection.** Honest negative. (AV)'s coordinate (variance) is forced by Bienaymé's identity, not by Cauchy-FE under an AAD-internal axiom. Places (AV) as an adjacent family member (like Lyapunov quadratic), not a fourth/fifth primary instance. **Lands as subsection in the adjacent-cases section of `#additive-coordinate-forcing`.**
+- **Strengthening 4 — `#additive-coordinate-forcing` connection.** Honest negative. (AV)'s coordinate (variance) is forced by Bienaymé's identity, not by Cauchy-FE under an AAT-internal axiom. Places (AV) as an adjacent family member (like Lyapunov quadratic), not a fourth/fifth primary instance. **Lands as subsection in the adjacent-cases section of `#additive-coordinate-forcing`.**
 
 - **Strengthening 5 — conditional sub-regime recipe.** Named. Four sub-regime labels ($\alpha_1^{MC}$, $\alpha_1^{\text{TAIL}}$, $\alpha_1^{\text{small-}\Delta}$, $\alpha_1^{\text{indep}}$) refine A2' sub-scope $\alpha$ for when multiplicative (R-F) intuitions are exact or tight. **Lands as sub-regime catalog in `#rho-decomposition`.**
 
-**Net.** The prior spike's heuristic fallback is replaced by a derived theorem with named conditions, three regime-typed sub-cases where multiplicative intuitions are native, a sharp no-go theorem ruling out naive multiplicative factorization, and honest placement in AAD's meta-architecture. This is the strengthening the prior spike flagged (*"reframe"*) but did not deliver.
+**Net.** The prior spike's heuristic fallback is replaced by a derived theorem with named conditions, three regime-typed sub-cases where multiplicative intuitions are native, a sharp no-go theorem ruling out naive multiplicative factorization, and honest placement in AAT's meta-architecture. This is the strengthening the prior spike flagged (*"reframe"*) but did not deliver.
 
 **What the prior spike got right.** The obstruction diagnosis. $\rho$ *is* agent-conditional; $\rho_\text{external}$ is not well-posed without a reference class; the natural structure *is* variance-additive. Those observations are correct and stable under this spike's work.
 
@@ -466,4 +466,4 @@ The parent spike's value is preserved; the weakest-link factorization is replace
 
 ---
 
-*End of spike. The multiplicative form (R-F) is dead as a derived result but alive as three well-characterized sub-regimes. The variance-additive form (AV) is the new structural anchor, promoted from qualitative reframe to derived theorem. A no-go theorem sharpens the negative result into AAD's `#disc-identifiability-floor` pattern. Net: strengthen-first delivered; the heuristic fallback is no longer needed.*
+*End of spike. The multiplicative form (R-F) is dead as a derived result but alive as three well-characterized sub-regimes. The variance-additive form (AV) is the new structural anchor, promoted from qualitative reframe to derived theorem. A no-go theorem sharpens the negative result into AAT's `#disc-identifiability-floor` pattern. Net: strengthen-first delivered; the heuristic fallback is no longer needed.*

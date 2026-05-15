@@ -2,9 +2,9 @@
 
 **Status.** Exploratory research spike.
 **Date.** 2026-04-25.
-**Pressure Point.** `#disc-credit-assignment-boundary` establishes that exactly assigning blame for a failed plan across an AND/OR strategy DAG is computationally #P-hard. To cope, AAD currently proposes a heuristic $L^2$ gradient update on the log-odds coordinates (`#hyp-edge-update-via-gain`). While the gradient provides "directional fidelity," it is an approximation that ignores the joint probability structure of the DAG.
+**Pressure Point.** `#disc-credit-assignment-boundary` establishes that exactly assigning blame for a failed plan across an AND/OR strategy DAG is computationally #P-hard. To cope, AAT currently proposes a heuristic $L^2$ gradient update on the log-odds coordinates (`#hyp-edge-update-via-gain`). While the gradient provides "directional fidelity," it is an approximation that ignores the joint probability structure of the DAG.
 
-This spike attempts to map the AAD Strategy DAG to a Factor Graph and apply Variational Message Passing (VMP) to derive a bounded, principled approximation algorithm for $\delta_{\text{strategic}}$ that respects the DAG's topological constraints.
+This spike attempts to map the AAT Strategy DAG to a Factor Graph and apply Variational Message Passing (VMP) to derive a bounded, principled approximation algorithm for $\delta_{\text{strategic}}$ that respects the DAG's topological constraints.
 
 ## 1. Factor Graph Formulation of $\Sigma_t$
 
@@ -56,11 +56,11 @@ Therefore, VMP is only a valid credit-assignment mechanism for L0 DAGs. If the D
 
 ## 5. Conclusion and Theoretical Impact
 
-By framing strategy updating as Variational Inference on a Factor Graph, we mathematically bridge AAD's planning module with modern approximate Bayesian inference. 
+By framing strategy updating as Variational Inference on a Factor Graph, we mathematically bridge AAT's planning module with modern approximate Bayesian inference. 
 
 1. **Replaces Heuristics:** It replaces the $L^2$ gradient heuristic with a principled local message-passing algorithm that naturally handles the non-linear blame gating of AND/OR nodes.
 2. **Computational Tractability:** VMP runs in linear time $O(|V| + |E|)$ per iteration, resolving the #P-hard bottleneck while providing bounded approximation guarantees.
-3. **Explicit Limits:** It explicitly reveals its own failure mode (mean-field approximations break on L1 correlated structures), perfectly aligning with AAD's epistemic honesty.
+3. **Explicit Limits:** It explicitly reveals its own failure mode (mean-field approximations break on L1 correlated structures), perfectly aligning with AAT's epistemic honesty.
 
 ## 6. Adversarial Critique & Structural Repair (2026-04-25)
 

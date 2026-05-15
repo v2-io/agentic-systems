@@ -117,7 +117,7 @@ The wrapper is *almost-Class-1* with leakage rate bounded by $\kappa$. The KL-di
 
 The argument has four parts: verifying each of (A1), (A2), (A3), (A4), and then the directed-separation claim (T1.3).
 
-### 4.1 (A1) — AAD agent structure
+### 4.1 (A1) — AAT agent structure
 
 By construction. The wrapper state is $X_W = (M_W, G_W)$, the update is recursive (each step takes $X_{W,m}$, $o_W$, and produces $X_{W,m+1}$), and the macro-policy is state-dependent ($\pi_W : \mathcal{X}_W \to \mathcal{A}_W$). All components of (A1) are present.
 
@@ -242,7 +242,7 @@ $$D_\text{KL}\big(P(M_{W,m+1} \mid M_{W,m}, o_{W,m+1}, G_{W,m})\, \big\Vert\, P(
 
 The wrapper is *almost-Class-1* — directed separation holds with KL-divergence bound $\kappa$. This is the analog of "approximate Class 1" in the existing classification, with an explicit bound.
 
-## 6. Connections to existing AAD machinery
+## 6. Connections to existing AAT machinery
 
 ### 6.1 Strengthening of `#hyp-directed-separation-under-composition`
 
@@ -272,13 +272,13 @@ where $C_\text{coord}^\text{wrap}$ is the coordination overhead specific to the 
 
 ### 6.4 Form-preservation framing
 
-The form-preservation framing from `spikes/temporal-nesting-rg/99-verdict.md` reads (A1)–(A4) as form-preservation conditions: macro must itself be AAD. The class-coercion theorem says this form-preservation can be *constructed* even when the underlying component fails directed separation. In form-preservation language: the AAD form is preserved at the wrapper level, even when the underlying $A$ does not satisfy form-preservation on its own.
+The form-preservation framing from `spikes/temporal-nesting-rg/99-verdict.md` reads (A1)–(A4) as form-preservation conditions: macro must itself be AAT. The class-coercion theorem says this form-preservation can be *constructed* even when the underlying component fails directed separation. In form-preservation language: the AAT form is preserved at the wrapper level, even when the underlying $A$ does not satisfy form-preservation on its own.
 
 ## 7. Honest scope statement
 
 What the theorem does:
 - Provides a *constructive* route to Class-1 status given an admissible component and a Tier-1-class belief-update map.
-- Inherits AAD's existing persistence and tempo machinery at the wrapper level.
+- Inherits AAT's existing persistence and tempo machinery at the wrapper level.
 - Identifies precisely which conditions are theorem content vs. wrapper-design constraint.
 
 What the theorem does *not* do:
@@ -287,7 +287,7 @@ What the theorem does *not* do:
 - Address components that fail (C1) — i.e., components whose query interface intrinsically requires goal-conditioning. These are scope-out for the basic theorem; sub-spike B characterizes them and asks whether any partial result is available.
 - Resolve the question of whether the wrapping construction is the "same" agent as the underlying component "in some meaningful sense." It produces a *different* agent — specifically, a Class-1 agent built around the component as oracle. The relationship is that of the wrapper to the wrapped, not identity.
 
-## 8. What changes in AAD if this lands
+## 8. What changes in AAT if this lands
 
 The theorem promotes `#hyp-directed-separation-under-composition` from hypothesis to derived (in the wrapper-around-component special case). It also resolves the "Class 2 exit" framing in CLAUDE.md ("Directed separation violated by goal-conditioned agents (LLMs) — handled as architectural scope (Class 2 exit), not approximation") into a "constructive route through" — the LLMs are scope-in *for the wrapper construction*, not scope-out.
 
@@ -301,10 +301,10 @@ Recommended segment-level landings (subject to sub-spike I prior-art results, wh
 
 ## 9. Self-review
 
-**Tier**: derived (theorem) under (C1)–(C3) + D-A2/3/4. The proof is honest at the level of conditional-independence reasoning + data-processing inequality; both are standard. No Lyapunov work was invented here — everything inherits from existing AAD machinery.
+**Tier**: derived (theorem) under (C1)–(C3) + D-A2/3/4. The proof is honest at the level of conditional-independence reasoning + data-processing inequality; both are standard. No Lyapunov work was invented here — everything inherits from existing AAT machinery.
 
 **Three lenses**:
-- *Wisdom*: Does this solve the real problem? Yes — it gives a constructive route from Class-3 components to Class-1 systems, which is what Parts III/IV need. The conditions are precise enough to be checkable; the costs are tied to existing AAD machinery (Brooks's-Law, persistence template).
+- *Wisdom*: Does this solve the real problem? Yes — it gives a constructive route from Class-3 components to Class-1 systems, which is what Parts III/IV need. The conditions are precise enough to be checkable; the costs are tied to existing AAT machinery (Brooks's-Law, persistence template).
 - *Strength*: Is the proof rigorous? Steps 1–3 of §4.5 are clean conditional-independence reasoning. The approximate version uses standard data-processing inequality. The wrapper-design constraints are flagged honestly. Edge cases — failure of (C1), failure of D-A4 — are identified, not glossed.
 - *Beauty*: Is this pleasant to read? The type signatures of §1.2 carry the structural commitment cleanly. The proof in §4.5 is short and the structure (4 paths, 3 closed by structure, 1 closed by (C3)) is easy to grasp. The "what's theorem vs. what's design constraint" separation in §4.6 makes the load-bearing parts visible.
 

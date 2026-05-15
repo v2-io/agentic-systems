@@ -21,13 +21,13 @@ depends-on:
 
 **Date:** 2026-04-22.
 
-**Motivation.** AAD's persistence machinery is continuous-time ODE / Lyapunov, with the discrete-time bridge in `#deriv-discrete-sector-condition` (DA2'/DA.1/DA.1S) covering the mismatch ODE only. The log-odds edge update in `#disc-credit-assignment-boundary` is a discrete iteration on $\lambda_k$ whose contraction toward $\lambda_k^\ast$ is neither stated as a sector problem nor covered by the existing discrete apparatus. We write the update as a one-step operator $T$ and ask whether a sector condition of the form
+**Motivation.** AAT's persistence machinery is continuous-time ODE / Lyapunov, with the discrete-time bridge in `#deriv-discrete-sector-condition` (DA2'/DA.1/DA.1S) covering the mismatch ODE only. The log-odds edge update in `#disc-credit-assignment-boundary` is a discrete iteration on $\lambda_k$ whose contraction toward $\lambda_k^\ast$ is neither stated as a sector problem nor covered by the existing discrete apparatus. We write the update as a one-step operator $T$ and ask whether a sector condition of the form
 
 $$(T\lambda - \lambda^\ast)^\top (\cdot)(\lambda - \lambda^\ast) \leq \gamma \lVert\lambda - \lambda^\ast\rVert^2, \qquad \gamma \lt 1$$
 
 can be derived from structural properties of the gradient Jacobian $J$, the identifiability coefficient $\iota$, and the gain schedule $\eta_k$.
 
-**Headline outcome (summary, then derivations).** Under log-odds presentation with linear-in-log-odds dynamics and a step-size floor, the credit-assignment iteration admits an A2'-analog `(O-A2')` contraction condition whose sector constant is the Fisher-weighted product $\iota \cdot \eta_k \cdot \lambda_{\min}(J^\top J / \lVert J\rVert^2)$ on the log-odds coordinate. The stochastic-approximation analog (Robbins-Monro under unbiased gradient estimator) inherits the same contraction in mean-square under a standard step-size schedule. Sub-scope α of `#der-gain-sector-bridge` transfers structurally: Bayesian and exponential-family updates satisfy `(O-A2')` by construction. Sub-scope β fails structurally: non-Bayesian, non-exponential-family updates generally fail `(O-A2')` — and AAD's `#disc-identifiability-floor` machinery already accounts for the failure mode via `#scope-edge-update-causal-validity` (regime-C edges have $\iota \approx 0$, hence $\alpha_{\text{op}} \approx 0$, hence frozen credence per `#der-observability-dominance`). The discrete step-size condition of `#deriv-discrete-sector-condition` lifts: under `O-DA2'` (additive Lipschitz bound on $J$) the operator iterates as a Banach contraction with contraction factor derived from `(O-A2')` via Cauchy-Schwarz.
+**Headline outcome (summary, then derivations).** Under log-odds presentation with linear-in-log-odds dynamics and a step-size floor, the credit-assignment iteration admits an A2'-analog `(O-A2')` contraction condition whose sector constant is the Fisher-weighted product $\iota \cdot \eta_k \cdot \lambda_{\min}(J^\top J / \lVert J\rVert^2)$ on the log-odds coordinate. The stochastic-approximation analog (Robbins-Monro under unbiased gradient estimator) inherits the same contraction in mean-square under a standard step-size schedule. Sub-scope α of `#der-gain-sector-bridge` transfers structurally: Bayesian and exponential-family updates satisfy `(O-A2')` by construction. Sub-scope β fails structurally: non-Bayesian, non-exponential-family updates generally fail `(O-A2')` — and AAT's `#disc-identifiability-floor` machinery already accounts for the failure mode via `#scope-edge-update-causal-validity` (regime-C edges have $\iota \approx 0$, hence $\alpha_{\text{op}} \approx 0$, hence frozen credence per `#der-observability-dominance`). The discrete step-size condition of `#deriv-discrete-sector-condition` lifts: under `O-DA2'` (additive Lipschitz bound on $J$) the operator iterates as a Banach contraction with contraction factor derived from `(O-A2')` via Cauchy-Schwarz.
 
 The honest break-test is where Gaps A and B differ: the Fisher metric is in general *non-diagonal under L1' correlation*, so the sector condition transforms rather than breaks — whitening inverts the off-diagonal via `(O-A2'-whit)`. But L1' with unobservable common cause hits `#disc-identifiability-floor`'s Cramér-Rao refutation (rank-1 Fisher per `#deriv-edge-credence-dynamics` Prop B.7 refutation): no sector-positive operator exists, so `(O-A2')` fails structurally rather than gracefully. This gives the composition argument a first non-trivial obstruction to absorb.
 
@@ -55,7 +55,7 @@ The question — is $T$ a contraction toward $\boldsymbol\lambda^\ast$?
 
 ### 1.2 Expected-value operator
 
-Define the expected-value operator $\overline T(\boldsymbol\lambda) = \mathbb{E}_{o \sim P(\cdot \mid \boldsymbol\theta^\ast)}[T(\boldsymbol\lambda; o)]$. Under the AAD edge-update model (each observation is one Bernoulli draw from the true outcome distribution at the plan level), $\mathbb{E}[y_G] = \Phi(\boldsymbol\theta^\ast) \geq \hat P_\Sigma(\boldsymbol\lambda)$ holds iff $\boldsymbol\theta^\ast \succeq \sigma(\boldsymbol\lambda)$ for monotone-AND DAGs. So:
+Define the expected-value operator $\overline T(\boldsymbol\lambda) = \mathbb{E}_{o \sim P(\cdot \mid \boldsymbol\theta^\ast)}[T(\boldsymbol\lambda; o)]$. Under the AAT edge-update model (each observation is one Bernoulli draw from the true outcome distribution at the plan level), $\mathbb{E}[y_G] = \Phi(\boldsymbol\theta^\ast) \geq \hat P_\Sigma(\boldsymbol\lambda)$ holds iff $\boldsymbol\theta^\ast \succeq \sigma(\boldsymbol\lambda)$ for monotone-AND DAGs. So:
 
 *[Derived (expected-value operator, from default signal function + monotone Jacobian)]*
 
@@ -142,7 +142,7 @@ Reading off the ingredients:
 | $J_k^2 / \lVert \mathbf{J}\rVert^2 \in [0,1]$ | Jacobian attribution fraction | Path-dominated DAG: one $J_k$ large, others near zero |
 | $\sigma'(\lambda_k^\ast) \in (0, 1/4]$ | Log-odds-to-probability sensitivity | Saturated edges ($\lambda_k^\ast \to \pm\infty$) |
 
-Each factor is bounded, positive, and structurally tied to AAD quantities. The sector constant degrades gracefully when any one factor shrinks; it vanishes only when a structural identifiability obstruction applies (ι=0 or $J_k=0$).
+Each factor is bounded, positive, and structurally tied to AAT quantities. The sector constant degrades gracefully when any one factor shrinks; it vanishes only when a structural identifiability obstruction applies (ι=0 or $J_k=0$).
 
 ---
 
@@ -383,7 +383,7 @@ If Gap B / C1 becomes concrete, a unification segment would state the shared Ban
 
 ### 8.4 Integration with the three meta-segments
 
-`#update-operator-sector` composes cleanly with AAD's three meta-patterns:
+`#update-operator-sector` composes cleanly with AAT's three meta-patterns:
 
 - **`#disc-separability-pattern`.** Adds a seventh ladder (update-operator sector scope): sub-scope α-op (separable-core, Bayesian/exp-family), β-op conservative (structured-repair, bounded-rotation variational), β-op breaking (general-open, unbounded-rotation or severely misspecified).
 - **`#disc-identifiability-floor`.** Adds an instance: rank-deficient Fisher under unobservable L1' is a Cramér-Rao-floor no-go at the operator level (§4.3 here). This is the fourth `#disc-identifiability-floor` instance, complementing on-policy CHT no-go, L1' mixture-identifiability obstruction, and misspecification-cost extension.
@@ -432,7 +432,7 @@ The break-test (§7) is sharp: the three structural failure modes (non-monotone 
 
 The spike attempts the strong form — a universal sector condition on the update operator — and finds it holds structurally in sub-scope α, degrades gracefully in one family of sub-scope β cases (variational with bounded rotation), breaks structurally in two others (unobservable L1' Cramér-Rao, severely misspecified $J$). The α / β partition inherited from `#der-gain-sector-bridge` is the right landing: `(O-A2')` is derived where A2' is derived, assumed where A2' is assumed, and breaks where Cramér-Rao floors the identifiability of the update direction itself.
 
-This is genuine strengthening — before the spike, the log-odds update's contraction toward truth was implicit; now it has an operator-level sector condition with closed-form sector constant factoring into $\eta$, $\iota$, $J^2/\lVert\mathbf J\rVert^2$, $\sigma'(\lambda^\ast)$ (§2.3), each term structurally tied to AAD quantities that already carry their own scope and epistemic status.
+This is genuine strengthening — before the spike, the log-odds update's contraction toward truth was implicit; now it has an operator-level sector condition with closed-form sector constant factoring into $\eta$, $\iota$, $J^2/\lVert\mathbf J\rVert^2$, $\sigma'(\lambda^\ast)$ (§2.3), each term structurally tied to AAT quantities that already carry their own scope and epistemic status.
 
 ---
 

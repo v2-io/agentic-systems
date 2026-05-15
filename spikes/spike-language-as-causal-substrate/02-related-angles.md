@@ -1,6 +1,6 @@
 # Related Angles — Reichenbachian Inheritance, ICM Time-Asymmetry, and Causal-IB
 
-*Three additional angles surveyed alongside the main derivation in `01-derivation.md`. Each gives a different kind of leverage on Joseph's hypothesis. C2 is rigorous but weaker than it sounds; C3 yields directional asymmetry but not the quantitative lower bound; C4 was already AAD-internal but unsurfaced and connects the result to existing machinery.*
+*Three additional angles surveyed alongside the main derivation in `01-derivation.md`. Each gives a different kind of leverage on Joseph's hypothesis. C2 is rigorous but weaker than it sounds; C3 yields directional asymmetry but not the quantitative lower bound; C4 was already AAT-internal but unsurfaced and connects the result to existing machinery.*
 
 ---
 
@@ -77,7 +77,7 @@ The **lower bound by causal information content** ($I_{\text{causal}}$ appearing
 
 (ii) A theorem connecting directed information of the discourse-DAG to the algorithmic-complexity-asymmetry of forward vs reverse compression. This theorem would have to do real work — it requires linking the structural causal content (C1's $\mathcal{E}_2$ edges) to a quantity that appears in the compression bound.
 
-This is **not** a no-go in the strong sense. It is a **work-not-yet-done**, and the work has a natural home: extending the existing AAD machinery on causal-IB ([`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md), which uses directed information / mutual-information-rate machinery) to the discourse-DAG case.
+This is **not** a no-go in the strong sense. It is a **work-not-yet-done**, and the work has a natural home: extending the existing AAT machinery on causal-IB ([`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md), which uses directed information / mutual-information-rate machinery) to the discourse-DAG case.
 
 **Honest summary of C3**: directional asymmetry is derived; quantitative-causal-lower-bound is a follow-on. The empirical signature (reversed-language is harder for LLMs) is consistent with the postulate but does not pin down the constant.
 
@@ -85,9 +85,9 @@ This is **not** a no-go in the strong sense. It is a **work-not-yet-done**, and 
 
 ## C4 — Causal-IB Consequence: IB-optimal compressors of natural language preserve discourse-DAG structure to the extent it has predictive value
 
-This angle was **already AAD-internal** but unsurfaced — it follows directly from existing AAD machinery applied to linguistic data. The contribution of this spike is to make the connection explicit and route it back to the logogenic-agents OUTLINE.
+This angle was **already AAT-internal** but unsurfaced — it follows directly from existing AAT machinery applied to linguistic data. The contribution of this spike is to make the connection explicit and route it back to the logogenic-agents OUTLINE.
 
-**Setup**. The AAD segment [`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md) establishes that under information-bottleneck compression of causally-structured data, the bottleneck-optimal representation preserves the causal structure proportional to its predictive contribution. The setup is general — it applies to any data source with underlying causal structure and any IB-optimal compressor.
+**Setup**. The AAT segment [`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md) establishes that under information-bottleneck compression of causally-structured data, the bottleneck-optimal representation preserves the causal structure proportional to its predictive contribution. The setup is general — it applies to any data source with underlying causal structure and any IB-optimal compressor.
 
 **Instantiation on natural-language data**. Take the data source to be a natural-language corpus and the compressor to be any sequence model trained with a next-token-prediction objective (transformer LLM, RNN-LM, etc.). The IB-optimality of next-token-prediction-trained models is approximate but well-studied (Tishby-Zaslavsky 2015; Saxe et al. 2019; Goldfeld et al. 2019, with caveats).
 
@@ -100,7 +100,7 @@ This is a *non-trivial* claim because:
 
 1. **It gives a quantitative target.** The amount of causal structure preserved is bounded below by the predictive value, which is empirically measurable (ablation studies on causal-marker content, controlled discourse-DAG perturbations).
 
-2. **It connects the spike result to existing AAD machinery.** The result is not a new theorem — it is the existing `#deriv-causal-ib-lmi` instantiated on a particular data domain. The AAD framework already established this; the spike work is to surface the instantiation.
+2. **It connects the spike result to existing AAT machinery.** The result is not a new theorem — it is the existing `#deriv-causal-ib-lmi` instantiated on a particular data domain. The AAT framework already established this; the spike work is to surface the instantiation.
 
 3. **It has empirical support.** The embeddings paper (`~/src/embeddings/paper.md`) demonstrates that an analogous prediction holds for *epistemic* content: a calibrated verbal-probability axis emerges in frozen pretrained pooled sentence embeddings, with cross-architecture and cross-linguistic robustness. The same paradigm should work for causal-marker content; the relevant experiments are (i) probing for cause/condition/counterfactual axes analogous to the modal axis; (ii) concept-erasure validation analogous to the predicative↔modal erasure already done.
 
@@ -123,7 +123,7 @@ This is a *non-trivial* claim because:
 | **C1** (discourse-act encoding) | Pearl Level 2 content is in the text, recoverable structurally, not Level-1-reducible | Implicit-relation recovery; speaker-commitment faithfulness in training distribution | **strongest** — conditional theorem under three named postulates |
 | **C2** (Reichenbachian inheritance) | Statistical structure in corpora reflects causal structure in source-cognitive-processes | Quantitative lower bound; uniform faithfulness | **plausibility-strong**, foundational for distributional methods |
 | **C3** (ICM time-asymmetry) | Forward-language compresses better than reversed-language | The lower bound by causal-information content remains a postulate | **partial** — directional asymmetry yields; quantitative link is work-not-yet-done |
-| **C4** (causal-IB consequence) | LLM embeddings preserve discourse-DAG structure proportional to predictive value | Specific quantitative bound; deployment-faithfulness | **already AAD-internal**, this spike surfaces the instantiation |
+| **C4** (causal-IB consequence) | LLM embeddings preserve discourse-DAG structure proportional to predictive value | Specific quantitative bound; deployment-faithfulness | **already AAT-internal**, this spike surfaces the instantiation |
 
 The four together establish a richer picture than any one alone:
 

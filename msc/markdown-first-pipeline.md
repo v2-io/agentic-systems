@@ -149,13 +149,13 @@ Non-segment chunks (volume preface, part preface, chapter-rationale) carry only 
 ```markdown
 ---
 # Sourced from <component>/mono-meta.yaml
-title:        "AAD: Adaptation and Actuation Dynamics"
-short_title:  AAD
+title:        "AAT: Adaptation and Actuation Theory"
+short_title:  AAT
 slug:         aad
 major:        0
 minor:        1
 patch:        0
-cover_svg:    AAD-cover.svg
+cover_svg:    AAT-cover.svg
 
 # Computed at build time
 generated_at: 2026-05-12T15:00:00Z
@@ -173,7 +173,7 @@ numbering:
   B:  { count: 6 }
 ---
 
-# AAD Build Index
+# AAT Build Index
 
 Generated assembly manifest. Build script regenerates only chunks whose
 source-hash differs from the recorded value below.

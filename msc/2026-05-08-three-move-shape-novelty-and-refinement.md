@@ -179,7 +179,7 @@ Currently the document gestures at "Move N absent costs X" but doesn't articulat
 
 **Move 2 failure modes:**
 - *Aesthetic axiom*: presenting the load-bearing axiom without the no-go that forces it. Cost: the axiom looks like a free choice; reviewers ask "why this axiom and not [alternative]?".
-- *External rather than internal no-go*: the no-go is an importation from external literature (e.g., "Bareinboim CHT forbids this") rather than a constructive internal witness. Cost: reviewer can engage the external literature and bypass the internal force; the AAD axiom looks contingent rather than necessary.
+- *External rather than internal no-go*: the no-go is an importation from external literature (e.g., "Bareinboim CHT forbids this") rather than a constructive internal witness. Cost: reviewer can engage the external literature and bypass the internal force; the AAT axiom looks contingent rather than necessary.
 - *Direction-forcing without naming*: when the alternative is structurally vacuous (Paper 2's reverse-KL case), failing to state explicitly *that the alternative is vacuous* leaves the direction looking like a free choice. Cost: reviewer pushes for the alternative; paper's defense requires re-discovering the triviality.
 
 **Move 3 failure modes:**

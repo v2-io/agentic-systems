@@ -131,7 +131,7 @@ The CHT step is the strongest part of Theorem 1. After this audit, my confidence
 
 ---
 
-## Connection to AAD's broader identifiability machinery
+## Connection to AAT's broader identifiability machinery
 
 The CHT application here is a specific instance of the project's broader [`#disc-identifiability-floor`](../../01-aat-core/src/disc-identifiability-floor.md) machinery — non-reduction at a particular causal-information layer. The audit's general principle (distinguish the variable-set at which non-reduction is claimed) is exactly the same discipline that operates in the identifiability-floor instance triage.
 

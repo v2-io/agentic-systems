@@ -23,7 +23,7 @@ The framework currently has no machinery for this. Coupling appears only as the 
 
 **Spike scope.** This spike does three things:
 1. Specifies the structural extension required (coupling-dependent action space $\mathcal{A}(\kappa_{\text{processing}})$, with strategy-DAG edges that include "couple to enable $a^\ast$" as a strategic move).
-2. Surveys prior art for direct adoption per AAD's prior-art-integration discipline (no orphaned positioning documents; concepts adopted as first-class theory components with original names and citations).
+2. Surveys prior art for direct adoption per AAT's prior-art-integration discipline (no orphaned positioning documents; concepts adopted as first-class theory components with original names and citations).
 3. Names candidate segment products and the dependency-DAG additions they require.
 
 ---
@@ -56,7 +56,7 @@ These three moves are interdependent. (M1) without (M2) gives coupling-dependent
 
 ## 2. Prior Art Landscape
 
-The phenomenon is rich in prior literature. AAD's contribution would be *integration* (per the prior-art-integration discipline): adopt the concepts directly with citations and original names, and surface what AAD adds.
+The phenomenon is rich in prior literature. AAT's contribution would be *integration* (per the prior-art-integration discipline): adopt the concepts directly with citations and original names, and surface what AAT adds.
 
 ### 2.1 Direct adoption candidates
 
@@ -81,7 +81,7 @@ The phenomenon is rich in prior literature. AAD's contribution would be *integra
 
 ### 2.3 Anticipated novelty positioning
 
-The phenomena are well-documented; the contribution is structural placement in AAD's machinery. Specifically: (i) recognizing self-coupling as a third operation on modularity state distinct from both adversarial pressure and architectural class; (ii) the formalization $\mathcal{A}(\kappa_{\text{processing}})$ as a coupling-dependent action space; (iii) the relationship between self-coupling and adversarial-coupling-pressure as opposite-valence operations on the same architectural state. Novelty is *recognition* + *integration* per the FORMAT.md schema, not invention.
+The phenomena are well-documented; the contribution is structural placement in AAT's machinery. Specifically: (i) recognizing self-coupling as a third operation on modularity state distinct from both adversarial pressure and architectural class; (ii) the formalization $\mathcal{A}(\kappa_{\text{processing}})$ as a coupling-dependent action space; (iii) the relationship between self-coupling and adversarial-coupling-pressure as opposite-valence operations on the same architectural state. Novelty is *recognition* + *integration* per the FORMAT.md schema, not invention.
 
 A targeted prior-art search before promotion should query: (a) whether any prior synthesis names commitment-device / identity-coupling / willpower as instances of the *same structural operation* under formal nomenclature; (b) whether the action-space-as-coupling-state-dependent formalization $\mathcal{A}(\kappa)$ has been written down (active-inference and bounded-rationality literatures are the most likely homes); (c) whether the three-operation modularity-state framing has appeared as a meta-pattern.
 

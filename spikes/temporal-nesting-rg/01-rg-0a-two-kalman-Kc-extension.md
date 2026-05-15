@@ -4,7 +4,7 @@
 **Date opened**: 2026-05-09
 **Depends on**: `00-brief.md`, `spikes/spike-composition-correlated-kalman.md`, `#form-composition-closure`, `#example-kalman`, `#der-temporal-nesting`.
 
-**Goal**. Test the load-bearing prediction of the RG framing (`00-brief.md` §4): that under coarse-graining flow $K_c \to \infty$, AAD's closure defect $\varepsilon^*$ behaves as RG-flow distance from a fixed point. Specifically, that homogeneous (fixed-point-respecting) sub-agent collections sit at $\varepsilon^* = 0$ for all $K_c$, and that heterogeneity perturbs away from the fixed point in a way whose $K_c$-dependence is structurally informative.
+**Goal**. Test the load-bearing prediction of the RG framing (`00-brief.md` §4): that under coarse-graining flow $K_c \to \infty$, AAT's closure defect $\varepsilon^*$ behaves as RG-flow distance from a fixed point. Specifically, that homogeneous (fixed-point-respecting) sub-agent collections sit at $\varepsilon^* = 0$ for all $K_c$, and that heterogeneity perturbs away from the fixed point in a way whose $K_c$-dependence is structurally informative.
 
 ---
 
@@ -54,13 +54,13 @@ i.e., aggregations that respect the $1 \leftrightarrow 2$ symmetry of the projec
 
 ### 1.4 Admissible macro-dynamics
 
-The macro-update has the AAD-shape required by (A1)–(A4) of `#form-composition-closure`. For Kalman-style linear correction:
+The macro-update has the AAT-shape required by (A1)–(A4) of `#form-composition-closure`. For Kalman-style linear correction:
 
 $$f_c(X_{c, m-1}, o_{c, m}) = \mu_c X_{c, m-1} + (1 - \mu_c) o_{c, m}$$
 
 where $\mu_c \in [0, 1)$ is the macro-persistence factor, $1 - \mu_c$ is the macro-gain on the aggregated observation, and $o_{c, m} = \Lambda_o(\cdot)$. The macro-state space is one-dimensional, the macro-update is linear-Gaussian, and the macro-mismatch $\delta_c = o_c - X_c$ is well-defined.
 
-This is admissible: linear correction with positive gain satisfies (A4) (sector-bounded with $\alpha_c = 1 - \mu_c$); the mismatch is well-defined per (A2); the macro-tempo is $\mathcal T_c = 1 \cdot (1 - \mu_c) = 1 - \mu_c$ per (A3); the AAD-form is preserved per (A1).
+This is admissible: linear correction with positive gain satisfies (A4) (sector-bounded with $\alpha_c = 1 - \mu_c$); the mismatch is well-defined per (A2); the macro-tempo is $\mathcal T_c = 1 \cdot (1 - \mu_c) = 1 - \mu_c$ per (A3); the AAT-form is preserved per (A1).
 
 ### 1.5 The closure defect (per-macro-step)
 
@@ -163,7 +163,7 @@ $$\varepsilon_x^*(K_c) = O\big( (1 - K_\text{min}^*)^{K_c} \big) \to 0 \text{ as
 
 with leading coefficient set by the per-agent gain difference and the orthogonal-direction variance.
 
-**This is the central RG-0a result.** Heterogeneity *does* flow to zero under coarse-graining, contrary to the brief's first-cut prediction that heterogeneity would be a relevant operator. The structural mismatch is **irrelevant** in the strict RG sense — the AAD fixed point is attractive even from heterogeneous starts.
+**This is the central RG-0a result.** Heterogeneity *does* flow to zero under coarse-graining, contrary to the brief's first-cut prediction that heterogeneity would be a relevant operator. The structural mismatch is **irrelevant** in the strict RG sense — the AAT fixed point is attractive even from heterogeneous starts.
 
 ---
 
@@ -171,7 +171,7 @@ with leading coefficient set by the per-agent gain difference and the orthogonal
 
 ### 3.1 What this confirms
 
-- The AAD fixed point ($\varepsilon^* = 0$, perfect closure) is a **stable attractor** under $K_c$-flow on this case. Sufficient timescale separation absorbs structural heterogeneity (within this admissibility-and-symmetry class).
+- The AAT fixed point ($\varepsilon^* = 0$, perfect closure) is a **stable attractor** under $K_c$-flow on this case. Sufficient timescale separation absorbs structural heterogeneity (within this admissibility-and-symmetry class).
 - The flow has a definite **rate**: $(1 - K_\text{min}^*)^{K_c}$, set by the *slower* sub-agent's persistence factor. This is a non-trivial structural prediction. It says: composition closure is rate-limited by the slowest sub-agent's adaptation, not by the average. (Connects naturally to weakest-link composition results; cf. `#form-composition-closure` weakest-link bound and `#deriv-critical-mass-composition`.)
 - The **mechanism of the residual** is structural: the leftover error lives in the projection's null space ($X_-$), which the symmetric macro-update cannot access. This is recognizably the *information-discarded-by-projection* picture.
 
@@ -180,7 +180,7 @@ with leading coefficient set by the per-agent gain difference and the orthogonal
 The brief's first-cut prediction was a sharp irrelevant/relevant separation: transient defects flow to zero (irrelevant), structural defects persist (relevant). **That sharp dichotomy is wrong, at least for this case.** Both transient and structural defects flow to zero under sufficient $K_c$.
 
 This forces a refinement of what "RG fixed point" means here:
-- It is a fixed point in the form-preservation sense (AAD shape preserved under $\Lambda$).
+- It is a fixed point in the form-preservation sense (AAT shape preserved under $\Lambda$).
 - It is not yet shown to admit relevant operators in the classical RG sense (perturbations that grow under flow).
 - The flow may be *globally attracting* on the cases tested so far, which is a stronger statement than classical RG (where one expects a critical surface separating basins).
 
@@ -217,9 +217,9 @@ The single-step calculation in §2 establishes that *one* coarse-graining step b
 3. Take two such composites and form the meta-composite at level 2.
 4. Iterate. Does $K_c^{*(n)}$ converge as $n \to \infty$? To what?
 
-This is the substantive RG test — checks whether AAD-shape is preserved under *repeated* coarse-graining and whether parameters reach a fixed point. The single-step result is necessary but not sufficient.
+This is the substantive RG test — checks whether AAT-shape is preserved under *repeated* coarse-graining and whether parameters reach a fixed point. The single-step result is necessary but not sufficient.
 
-If parameters flow to a fixed point: AAD is RG-fixed-point in the strong sense. If they flow to a degenerate point (e.g., $K_c^{*(n)} \to 0$, all sub-agents become passive): AAD-shape is preserved but the *content* degenerates under flow — useful for the framing but with caveats.
+If parameters flow to a fixed point: AAT is RG-fixed-point in the strong sense. If they flow to a degenerate point (e.g., $K_c^{*(n)} \to 0$, all sub-agents become passive): AAT-shape is preserved but the *content* degenerates under flow — useful for the framing but with caveats.
 
 **Decision**: spike this as `01b-rg-0a-iterated-coarse-graining.md` once Case B's interpretation is settled. This may be the most informative test; possibly worth promoting ahead of Case A.
 
@@ -229,7 +229,7 @@ If parameters flow to a fixed point: AAD is RG-fixed-point in the strong sense. 
 
 §1.3 restricted $\Lambda_o$ to symmetric aggregations. An asymmetric aggregation could include $X_-$-direction information and reduce $\varepsilon^*$ further at $K_c = 1$ (the formula in `#form-composition-closure` Working Notes includes a $C_{+-}^2/S_+$ term from this optimization). Two questions:
 
-1. Is the asymmetric optimum still AAD-shaped at the macro level? (May break some required symmetry of the macro-form.)
+1. Is the asymmetric optimum still AAT-shaped at the macro level? (May break some required symmetry of the macro-form.)
 2. Does the asymmetric form's $K_c$-dependence differ from the symmetric form's? Both should still vanish as $K_c \to \infty$, but the rates may differ.
 
 This is not central to the RG-0 verdict and can be deferred.
@@ -241,17 +241,17 @@ This is not central to the RG-0 verdict and can be deferred.
 **Tier**: Derived (Case B closed form, conditional on the Gaussian / linear / steady-state setup and the symmetric-$\Lambda_o$ restriction).
 
 **Self-check, three lenses**:
-- *Wisdom*: The result resolves the original "stranded at zero-timescale-separation" audit gap, at least for this case. The mechanism (information lost to the projection's null space) is the right one. The framing's first-cut prediction was wrong but the corrected reading (globally attractive AAD fixed point) is more interesting.
+- *Wisdom*: The result resolves the original "stranded at zero-timescale-separation" audit gap, at least for this case. The mechanism (information lost to the projection's null space) is the right one. The framing's first-cut prediction was wrong but the corrected reading (globally attractive AAT fixed point) is more interesting.
 - *Strength*: The derivation uses standard linear-Gaussian Kalman algebra. Edge cases handled: $K_c = 1$ recovers the existing Working-Notes formula; $K_c \to \infty$ limit is clean. The symmetric-$\Lambda_o$ restriction is documented as a scope constraint, not glossed.
 - *Beauty*: The decomposition into symmetric (accessible) + anti-symmetric (orthogonal-direction-only) makes the closure mechanism visible: the residual lives in the projection's null space, which the macro-update structurally cannot access.
 
 **What I'm uncertain about**:
 - Whether the global attractor reading actually holds beyond linear-Gaussian. Non-Gaussian / non-linear sub-agents (Beta-Bernoulli strategy edges, gradient-based learners on non-convex losses) may exhibit different flow behavior.
 - Whether the iterated-coarse-graining test (§5) gives a non-trivial fixed point or degenerate flow.
-- Whether the symmetric-$\Lambda_o$ restriction is structurally required by AAD-shape preservation or merely a convenient scope choice.
+- Whether the symmetric-$\Lambda_o$ restriction is structurally required by AAT-shape preservation or merely a convenient scope choice.
 
 **Next moves** (in order of expected information value):
-1. **Iterated coarse-graining (§5)**. Most directly tests "AAD as RG fixed point." Tractable in this setup.
+1. **Iterated coarse-graining (§5)**. Most directly tests "AAT as RG fixed point." Tractable in this setup.
 2. **Beta-Bernoulli strategy variant** (extending Part 2 of `spikes/spike-composition-correlated-kalman.md`). Tests whether $G_t$-side heterogeneity exhibits the same global-attractor behavior, or whether goal-direction structural mismatches resist $K_c$-flow.
 3. **Case A (transient)** as supporting evidence for the singular-perturbation reading.
 

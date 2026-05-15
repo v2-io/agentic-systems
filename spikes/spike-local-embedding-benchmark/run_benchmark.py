@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Benchmark candidate ollama embedding models on AAD-specific retrieval queries.
+"""Benchmark candidate ollama embedding models on AAT-specific retrieval queries.
 
 For each model:
-  1. Embed each AAD segment (whole-segment level — single embedding per file).
+  1. Embed each AAT segment (whole-segment level — single embedding per file).
      Two variants are tested:
        - 'body' — title + summary + formal-expression + first ~1500 chars.
        - 'frontmatter+title' — slug + title + summary only (terse).

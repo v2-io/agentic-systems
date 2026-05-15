@@ -11,7 +11,7 @@ date: 2026-04-24
 
 **Posture.** Strengthen-first, not soften-first. "Adopt Path 7's reframe" and "keep the current framing" are both easy defaults. The harder question is what the *accurate* structural description is once Path 7's observation is on the table.
 
-**Outcome in one sentence.** Path 7's Fenchel-duality observation is **verified, mathematically correct, and incomplete in a specific way**: the divergence ↔ update duality it names is real, but the Čencov/metric layer is *also* inside the same Legendre-Fenchel geometry (Fisher = Hessian of log-partition = Bregman-Riemannian limit of reverse-KL), *and* the chain-layer anchor is the restriction of the same geometry to product exponential families. The honest structural description is therefore **not** "1-anchor + 1-Fenchel-pair + 1-Čencov-instance" (the naive Path-7 reframe, under-unified) nor "1-anchor + 3-theorem" (the current framing, over-separated) — it is **one geometric commitment (the exponential-family / Legendre-Fenchel structure on categorical distributions) manifesting at four operational layers under independently-motivated AAD axioms that all happen to be simultaneously satisfied by that geometry**. Reframe (A) — the unified exponential-family reframe — is the accurate description; reframes (B) and (C) either under-unify (keep separations that are illusory) or over-separate (erect boundaries the geometry does not respect). The recommendation is **reframe (A) with sharp preservation of the axiom-independence story** — the axioms are not redundant; they are *independently-motivated constraints that all happen to be simultaneously satisfied by the exponential-family geometry*, and *that convergence is itself the meta-pattern's substance*.
+**Outcome in one sentence.** Path 7's Fenchel-duality observation is **verified, mathematically correct, and incomplete in a specific way**: the divergence ↔ update duality it names is real, but the Čencov/metric layer is *also* inside the same Legendre-Fenchel geometry (Fisher = Hessian of log-partition = Bregman-Riemannian limit of reverse-KL), *and* the chain-layer anchor is the restriction of the same geometry to product exponential families. The honest structural description is therefore **not** "1-anchor + 1-Fenchel-pair + 1-Čencov-instance" (the naive Path-7 reframe, under-unified) nor "1-anchor + 3-theorem" (the current framing, over-separated) — it is **one geometric commitment (the exponential-family / Legendre-Fenchel structure on categorical distributions) manifesting at four operational layers under independently-motivated AAT axioms that all happen to be simultaneously satisfied by that geometry**. Reframe (A) — the unified exponential-family reframe — is the accurate description; reframes (B) and (C) either under-unify (keep separations that are illusory) or over-separate (erect boundaries the geometry does not respect). The recommendation is **reframe (A) with sharp preservation of the axiom-independence story** — the axioms are not redundant; they are *independently-motivated constraints that all happen to be simultaneously satisfied by the exponential-family geometry*, and *that convergence is itself the meta-pattern's substance*.
 
 ---
 
@@ -114,22 +114,22 @@ On exponential-family statistical manifolds, these two routes produce the *same*
 
 ### §2.3 Does the Čencov layer sit inside the Fenchel structure?
 
-**For the AAD-specific use case — where the Fisher-metric instance is applied to `#der-gain-sector-bridge` exponential-family-in-natural-parameters and matrix-Kalman cases (see `#der-gain-sector-bridge` "Fisher-metric cases under parameterization-invariance") — yes**. Both of those instances live on exponential families (Kalman is the Gaussian exponential family; Kalman-natural-parameters lives in precision coordinates, which are exponential-family natural parameters). On those manifolds, the Fisher metric is $\nabla^2 \phi^*$, and the Čencov axiom's conclusion coincides with the Fenchel-Bregman derivation's conclusion.
+**For the AAT-specific use case — where the Fisher-metric instance is applied to `#der-gain-sector-bridge` exponential-family-in-natural-parameters and matrix-Kalman cases (see `#der-gain-sector-bridge` "Fisher-metric cases under parameterization-invariance") — yes**. Both of those instances live on exponential families (Kalman is the Gaussian exponential family; Kalman-natural-parameters lives in precision coordinates, which are exponential-family natural parameters). On those manifolds, the Fisher metric is $\nabla^2 \phi^*$, and the Čencov axiom's conclusion coincides with the Fenchel-Bregman derivation's conclusion.
 
-**For general statistical manifolds — no, not necessarily.** If AAD were to invoke the Fisher metric on a *curved* statistical family (one not representable as an exponential family), Čencov's theorem still gives the Fisher metric, but it does not arise as the Hessian of a single convex dual potential. The Legendre-Fenchel picture decomposes — it applies only to *exponential-family sub-manifolds* in general.
+**For general statistical manifolds — no, not necessarily.** If AAT were to invoke the Fisher metric on a *curved* statistical family (one not representable as an exponential family), Čencov's theorem still gives the Fisher metric, but it does not arise as the Hessian of a single convex dual potential. The Legendre-Fenchel picture decomposes — it applies only to *exponential-family sub-manifolds* in general.
 
-**AAD-specific scope observation.** The AAD commitment to the Fisher-metric instance is currently scoped to exponential-family-in-natural-parameters and matrix-Kalman cases (per `#der-gain-sector-bridge`). On this scope, the Fenchel-Bregman and Čencov derivations agree. **So within AAD's current Fisher-metric scope, Čencov sits inside the Fenchel structure**; but this fact is partly a consequence of AAD having chosen to apply the Fisher-metric instance only where exponential-family structure is present. A future generalization (e.g., applying (PI) to a non-exponential statistical family) would break the coincidence.
+**AAT-specific scope observation.** The AAT commitment to the Fisher-metric instance is currently scoped to exponential-family-in-natural-parameters and matrix-Kalman cases (per `#der-gain-sector-bridge`). On this scope, the Fenchel-Bregman and Čencov derivations agree. **So within AAT's current Fisher-metric scope, Čencov sits inside the Fenchel structure**; but this fact is partly a consequence of AAT having chosen to apply the Fisher-metric instance only where exponential-family structure is present. A future generalization (e.g., applying (PI) to a non-exponential statistical family) would break the coincidence.
 
-*[Claim, status: robust-qualitative]* **The Čencov layer's coincidence with the Fenchel structure on AAD's current scope is not accidental, but it is also not forced by the AAD axiomatic system alone.** It is forced by the conjunction of (a) the (PI) parameterization-invariance axiom, (b) Čencov's theorem, AND (c) AAD's independent commitment to exponential-family scope in `#der-gain-sector-bridge`. Remove any of the three and the coincidence weakens — in particular, if (PI) were adopted but the Fisher-metric instance applied to curved non-exponential families, Čencov's derivation would still apply, but the Fenchel-Bregman derivation would not.
+*[Claim, status: robust-qualitative]* **The Čencov layer's coincidence with the Fenchel structure on AAT's current scope is not accidental, but it is also not forced by the AAT axiomatic system alone.** It is forced by the conjunction of (a) the (PI) parameterization-invariance axiom, (b) Čencov's theorem, AND (c) AAT's independent commitment to exponential-family scope in `#der-gain-sector-bridge`. Remove any of the three and the coincidence weakens — in particular, if (PI) were adopted but the Fisher-metric instance applied to curved non-exponential families, Čencov's derivation would still apply, but the Fenchel-Bregman derivation would not.
 
 ### §2.4 What this implies for the meta-pattern
 
-The Fenchel-Bregman reframe encompasses the Čencov/metric layer **on AAD's current scope**, but it does so via a *scope coincidence*, not a structural identity at the axiomatic level. The clean statement:
+The Fenchel-Bregman reframe encompasses the Čencov/metric layer **on AAT's current scope**, but it does so via a *scope coincidence*, not a structural identity at the axiomatic level. The clean statement:
 
-- **On exponential-family statistical manifolds** (AAD's current Fisher-metric scope): Čencov's Fisher metric = $\nabla^2 \phi^*$ = the infinitesimal form of reverse-KL. The metric layer is inside the Fenchel-Bregman geometry.
-- **In full generality**: Čencov's Fisher metric is forced by Markov-morphism invariance regardless of whether a convex dual potential exists. The metric layer is *structurally broader* than the Fenchel-Bregman geometry, even if they coincide on the sub-scope AAD cares about.
+- **On exponential-family statistical manifolds** (AAT's current Fisher-metric scope): Čencov's Fisher metric = $\nabla^2 \phi^*$ = the infinitesimal form of reverse-KL. The metric layer is inside the Fenchel-Bregman geometry.
+- **In full generality**: Čencov's Fisher metric is forced by Markov-morphism invariance regardless of whether a convex dual potential exists. The metric layer is *structurally broader* than the Fenchel-Bregman geometry, even if they coincide on the sub-scope AAT cares about.
 
-This is load-bearing for the reframe question: whether the Čencov layer is "inside" or "outside" the Fenchel structure depends on whether AAD ever intends to apply the Fisher-metric instance beyond its current exponential-family scope. If not (the pragmatic stance), Čencov sits inside. If yes (the structurally-permissive stance), Čencov sits partially outside.
+This is load-bearing for the reframe question: whether the Čencov layer is "inside" or "outside" the Fenchel structure depends on whether AAT ever intends to apply the Fisher-metric instance beyond its current exponential-family scope. If not (the pragmatic stance), Čencov sits inside. If yes (the structurally-permissive stance), Čencov sits partially outside.
 
 ---
 
@@ -138,7 +138,7 @@ This is load-bearing for the reframe question: whether the Čencov layer is "ins
 ### §3.1 What the chain-layer anchor does
 
 `#der-chain-confidence-decay` states the log-of-product identity $\log P(E_1, \ldots, E_n) = \sum_i \log P(E_i \mid E_{\lt i})$, which is a mathematical identity obtained by applying log to the probability chain rule. The segment positions this as:
-- A mathematical identity, not an AAD axiom.
+- A mathematical identity, not an AAT axiom.
 - The anchor for the divergence- and update-layer uniqueness theorems, because both theorems' axioms are positioned as "the divergence-level analog" and "the update-level analog" of the chain-layer identity's additive log-confidence decomposition.
 - A Section II structural-pressure result (long plans are fragile because log-confidence accumulates negative terms).
 
@@ -164,17 +164,17 @@ The probability chain rule $\log P(E_1, \ldots, E_n) = \sum_i \log P(E_i \mid E_
 
 ### §3.4 The anchor's role under the reframe
 
-Under the current `#additive-coordinate-forcing` framing, the chain-layer identity is the *motivational anchor* for the divergence and update layers — their AAD-internal additivity axioms are stated as analogs of the chain-layer identity. Under the Fenchel-reframe, there are two possible readings:
+Under the current `#additive-coordinate-forcing` framing, the chain-layer identity is the *motivational anchor* for the divergence and update layers — their AAT-internal additivity axioms are stated as analogs of the chain-layer identity. Under the Fenchel-reframe, there are two possible readings:
 
-1. **Anchor preserved as motivation.** The chain-layer identity still motivates the divergence-layer and update-layer axioms as "analogs of a commitment AAD already relies on"; the Fenchel-Bregman duality is a *separate* observation about how the resulting coordinates relate geometrically. The anchor and the geometric unification are orthogonal observations.
+1. **Anchor preserved as motivation.** The chain-layer identity still motivates the divergence-layer and update-layer axioms as "analogs of a commitment AAT already relies on"; the Fenchel-Bregman duality is a *separate* observation about how the resulting coordinates relate geometrically. The anchor and the geometric unification are orthogonal observations.
 
-2. **Anchor absorbed into the geometry.** The chain-layer identity, the divergence-layer axiom, and the update-layer axiom are all independently-motivated ways of saying "the surrounding apparatus lives on the exponential-family geometry." The chain layer's logarithmic coordinate is forced by the probability chain rule; the divergence layer's reverse-KL coordinate is forced by chain-rule-additivity + Cauchy-FE; the update layer's log-odds coordinate is forced by evidential-additivity + Cauchy-FE. All three axioms are independently motivated and all three converge on the exponential-family structure because that is the geometric object AAD's architecture has already committed to.
+2. **Anchor absorbed into the geometry.** The chain-layer identity, the divergence-layer axiom, and the update-layer axiom are all independently-motivated ways of saying "the surrounding apparatus lives on the exponential-family geometry." The chain layer's logarithmic coordinate is forced by the probability chain rule; the divergence layer's reverse-KL coordinate is forced by chain-rule-additivity + Cauchy-FE; the update layer's log-odds coordinate is forced by evidential-additivity + Cauchy-FE. All three axioms are independently motivated and all three converge on the exponential-family structure because that is the geometric object AAT's architecture has already committed to.
 
 **Reading (1) preserves the motivational story intact; reading (2) dissolves it into a geometric convergence.** The question is whether the *motivational cross-cites* among the three axioms are load-bearing or merely rhetorical.
 
 *[Claim, status: robust-qualitative]* **Reading (1) is structurally more honest.** The three axioms have different logical forms (§1.4) and are independently-justifiable: chain-rule-additivity in divergence (Hobson 1969 axiom on bivariate objects) and evidential-additivity in update (Aczél 1966 axiom on univariate functions) are distinct formal constraints. Their common structural content — "additivity along a factorization" — is real but abstract; the *specific* axioms are independently-motivated. Pretending the axioms are redundant because they have geometric convergence collapses the motivation-structure in a way that loses information.
 
-**The correct statement**: the chain-layer identity is the motivational anchor *under AAD's axiom-structure*; the Fenchel-Bregman geometry is what emerges when the three axioms all land on the same underlying object. Both readings of the anchor are correct from different vantage points, but the reframe should preserve the motivational anchor structure while naming the geometric convergence as an additional observation.
+**The correct statement**: the chain-layer identity is the motivational anchor *under AAT's axiom-structure*; the Fenchel-Bregman geometry is what emerges when the three axioms all land on the same underlying object. Both readings of the anchor are correct from different vantage points, but the reframe should preserve the motivational anchor structure while naming the geometric convergence as an additional observation.
 
 ---
 
@@ -182,7 +182,7 @@ Under the current `#additive-coordinate-forcing` framing, the chain-layer identi
 
 ### §4.1 The question sharpened
 
-The current `#additive-coordinate-forcing` treats each of the four instances as an independent application of Cauchy-FE / Čencov-invariance on an AAD-internally-motivated axiom. Path 7's observation asks: if the divergence-layer and update-layer coordinates are Fenchel-dual (i.e., two sides of one Legendre transform), is the current framing *overcounting* independent instances?
+The current `#additive-coordinate-forcing` treats each of the four instances as an independent application of Cauchy-FE / Čencov-invariance on an AAT-internally-motivated axiom. Path 7's observation asks: if the divergence-layer and update-layer coordinates are Fenchel-dual (i.e., two sides of one Legendre transform), is the current framing *overcounting* independent instances?
 
 *[Observation, status: robust-qualitative]* There are two senses of "independent" to disambiguate:
 
@@ -200,11 +200,11 @@ A common pattern in mathematics: multiple independently-motivated axiomatic syst
 
 In each case, the *convergence* is load-bearing: that multiple independently-motivated routes pick out the same object is stronger evidence that the object is structurally right than any single route would be.
 
-*[Claim, status: robust-qualitative]* **AAD's situation is of this kind.** Chain-rule-additivity + Cauchy-FE, evidential-additivity + Cauchy-FE, and parameterization-invariance + Čencov are three independently-motivated axiomatic routes that all converge on (sub-surfaces of) the exponential-family geometry on categorical distributions. The convergence is the meta-pattern's substance, not a byproduct to be compressed away.
+*[Claim, status: robust-qualitative]* **AAT's situation is of this kind.** Chain-rule-additivity + Cauchy-FE, evidential-additivity + Cauchy-FE, and parameterization-invariance + Čencov are three independently-motivated axiomatic routes that all converge on (sub-surfaces of) the exponential-family geometry on categorical distributions. The convergence is the meta-pattern's substance, not a byproduct to be compressed away.
 
 The meta-pattern's value is therefore not "we independently force the same coordinate four times" (overcounted — there are not four independent coordinates; there are four independently-motivated axiomatic routes to one geometric object). The meta-pattern's value is also not "we have one exponential-family commitment that shows up in four places" (undercounted — the axioms are logically independent, not re-statements of a single commitment).
 
-The meta-pattern's value is: **a cluster of independently-motivated AAD-internal axioms all converge on a single geometric object (the exponential-family structure on categorical distributions and its Legendre-Fenchel geometry), and this convergence is itself the meta-pattern — it shows that AAD's architecture has quietly committed to this geometry via multiple independent surface constraints**.
+The meta-pattern's value is: **a cluster of independently-motivated AAT-internal axioms all converge on a single geometric object (the exponential-family structure on categorical distributions and its Legendre-Fenchel geometry), and this convergence is itself the meta-pattern — it shows that AAT's architecture has quietly committed to this geometry via multiple independent surface constraints**.
 
 ### §4.3 Implications for counting
 
@@ -212,9 +212,9 @@ Under this reading, the questions "how many instances are there?" and "how many 
 
 - **Number of independent axioms: 3 (plus 1 anchor).** Chain-rule-additivity, evidential-additivity, parameterization-invariance (+ the chain-layer mathematical identity as the motivational anchor).
 - **Number of geometrically distinct coordinates: 1 family of related coordinates on one space.** The exponential-family geometry on categorical distributions, manifesting as (primal) softmax / $Q$, (dual) log-odds / $\eta$, (quadratic form) Fisher metric, and (integrated) reverse-KL Bregman divergence. These are not four separate coordinates; they are four aspects of one geometric object.
-- **Number of AAD-segment instances that fall under the pattern: 4.** `#der-chain-confidence-decay`, `#deriv-strategy-cost-regret-bound` §6.1, `#deriv-edge-update-natural-parameter`, and the `#der-gain-sector-bridge` Fisher-metric cases.
+- **Number of AAT-segment instances that fall under the pattern: 4.** `#der-chain-confidence-decay`, `#deriv-strategy-cost-regret-bound` §6.1, `#deriv-edge-update-natural-parameter`, and the `#der-gain-sector-bridge` Fisher-metric cases.
 
-The current framing conflates these three counts. The reframe disambiguates them: **3 axioms + 1 anchor → converging on 1 geometric object → expressed across 4 AAD-segment instances.**
+The current framing conflates these three counts. The reframe disambiguates them: **3 axioms + 1 anchor → converging on 1 geometric object → expressed across 4 AAT-segment instances.**
 
 ---
 
@@ -229,7 +229,7 @@ which is Fenchel-**self-dual** (the Euclidean potential is its own Fenchel conju
 
 *[Observation, status: exact]* **Under the Fenchel-Bregman reframe, the Lyapunov quadratic is a Bregman divergence with a different convex potential (Euclidean $\lVert\cdot\rVert^2$ instead of negative-entropy).** It is structurally in the same family — both are Bregman divergences on finite-dimensional convex domains — but it lives on a different convex potential.
 
-**Is this a primary instance?** The Lyapunov potential is *chosen* (the sector condition A2' is matched to this coordinate; the converse-Lyapunov theorem guarantees existence but not equality to the Euclidean norm — see `#additive-coordinate-forcing`'s Lyapunov adjacent-family discussion). So under AAD's current commitments, the Lyapunov quadratic is an adjacent-family Bregman divergence, not a *forced* coordinate.
+**Is this a primary instance?** The Lyapunov potential is *chosen* (the sector condition A2' is matched to this coordinate; the converse-Lyapunov theorem guarantees existence but not equality to the Euclidean norm — see `#additive-coordinate-forcing`'s Lyapunov adjacent-family discussion). So under AAT's current commitments, the Lyapunov quadratic is an adjacent-family Bregman divergence, not a *forced* coordinate.
 
 **Under (PI) + the Fisher-metric instance of `#der-gain-sector-bridge`, the matrix-Kalman case's natural Lyapunov $V(\delta) = \tfrac{1}{2}\delta^T P^{-1} \delta$ becomes the Bregman divergence of the Fisher potential.** On this scope, the Lyapunov potential is forced (by (PI) + Čencov) to be the Fisher metric, and the Bregman structure aligns with the divergence-layer geometry. Outside of this scope (scalar sector conditions in non-statistical-manifold contexts), the Lyapunov potential remains chosen.
 
@@ -241,15 +241,15 @@ The IB Lagrangian $I(X;T) - \beta I(T;Y)$ is an additive Lagrangian form using m
 
 *[Observation, status: robust-qualitative]* **Under the reframe, IB is an application of the Fenchel-Bregman geometry (since mutual information is expectation-of-reverse-KL, and reverse-KL is the Bregman divergence of negative-entropy).** The IB Lagrangian sits inside the same geometric family as the primary instances.
 
-**Is IB promoted to a primary instance under the reframe?** The current segment's reason for adjacency is that IB is *adopted* from Tishby-Pereira-Bialek 1999 as an applied external theorem, not *re-derived* under AAD-internal motivation. The Fenchel-Bregman reframe does not change that — the geometric structure IB operates on is now known to coincide with the structure underlying the divergence / update / metric primary instances, but the AAD commitment to IB is still "adopt" rather than "internally-force."
+**Is IB promoted to a primary instance under the reframe?** The current segment's reason for adjacency is that IB is *adopted* from Tishby-Pereira-Bialek 1999 as an applied external theorem, not *re-derived* under AAT-internal motivation. The Fenchel-Bregman reframe does not change that — the geometric structure IB operates on is now known to coincide with the structure underlying the divergence / update / metric primary instances, but the AAT commitment to IB is still "adopt" rather than "internally-force."
 
-*[Claim, status: robust-qualitative]* **Under the reframe, IB is still an adjacent family member, but its adjacency is now visible as "same geometric object, different axiomatic route (Tishby-Pereira-Bialek 1999's information-theoretic capacity axiom rather than AAD-internal motivation)."** The reframe sharpens the classification: all adjacent family members (Lyapunov, IB) are on the same Bregman-geometry family as the primary instances; they differ from the primary instances in their axiomatic provenance (chosen / imported), not in their geometric structure.
+*[Claim, status: robust-qualitative]* **Under the reframe, IB is still an adjacent family member, but its adjacency is now visible as "same geometric object, different axiomatic route (Tishby-Pereira-Bialek 1999's information-theoretic capacity axiom rather than AAT-internal motivation)."** The reframe sharpens the classification: all adjacent family members (Lyapunov, IB) are on the same Bregman-geometry family as the primary instances; they differ from the primary instances in their axiomatic provenance (chosen / imported), not in their geometric structure.
 
 ### §5.3 The (AV) variance-additive case
 
 The variance-additive candidate (from `spikes/spike-fenchel-bregman-reframe-additive-coordinate-forcing-2026-04-24.md` precursor — the ρ-factorization spike in the 2026-04-23 brainstorm cycle) is a candidate fourth instance that was *not* promoted because the ρ-factorization is natively variance-additive, not log-multiplicative. Under the Fenchel-Bregman lens: variance-additive structure corresponds to Bregman divergence on **squared-norm potentials** (Euclidean or Mahalanobis), not negative-entropy potentials. So the variance-additive case would be a Bregman-type instance, but on a *different* potential family than the exponential-family / negative-entropy geometry underlying the primary instances.
 
-*[Observation, status: robust-qualitative]* **The (AV) variance-additive case is Bregman-type but geometrically distinct.** The reframe clarifies that there is not one universal Bregman-divergence structure in AAD; there is the exponential-family / negative-entropy sub-family (which the four primary instances share) and the Euclidean / squared-norm sub-family (which Lyapunov and (AV) share). Whether (AV) qualifies as a primary instance would depend on whether AAD has an internally-motivated axiom that forces the squared-norm potential (the variance-additive precondition, if internally justified). This was the obstruction the 2026-04-23 brainstorm cycle identified — ρ-factorization is natively variance-additive in `#der-team-persistence`'s structure, which is *Euclidean*-Bregman rather than *entropic*-Bregman. The reframe gives a principled language for why (AV) is a different *kind* of potential than the primary four.
+*[Observation, status: robust-qualitative]* **The (AV) variance-additive case is Bregman-type but geometrically distinct.** The reframe clarifies that there is not one universal Bregman-divergence structure in AAT; there is the exponential-family / negative-entropy sub-family (which the four primary instances share) and the Euclidean / squared-norm sub-family (which Lyapunov and (AV) share). Whether (AV) qualifies as a primary instance would depend on whether AAT has an internally-motivated axiom that forces the squared-norm potential (the variance-additive precondition, if internally justified). This was the obstruction the 2026-04-23 brainstorm cycle identified — ρ-factorization is natively variance-additive in `#der-team-persistence`'s structure, which is *Euclidean*-Bregman rather than *entropic*-Bregman. The reframe gives a principled language for why (AV) is a different *kind* of potential than the primary four.
 
 ---
 
@@ -257,25 +257,25 @@ The variance-additive candidate (from `spikes/spike-fenchel-bregman-reframe-addi
 
 ### §6.1 Reframe (A): Full exponential-family-geometry unification
 
-**Thesis.** Restate the meta-pattern as: *AAD has committed to the exponential-family geometry on categorical distributions (with negative-entropy potential and log-partition dual) as its underlying geometric object, via a cluster of four independently-motivated AAD-internal axioms/identities that all happen to be simultaneously satisfied by that geometry*. The four manifestations — logarithmic chain coordinate (anchor); reverse-KL divergence; log-odds update coordinate; Fisher metric — are the four layer-specific surfaces of one geometric commitment.
+**Thesis.** Restate the meta-pattern as: *AAT has committed to the exponential-family geometry on categorical distributions (with negative-entropy potential and log-partition dual) as its underlying geometric object, via a cluster of four independently-motivated AAT-internal axioms/identities that all happen to be simultaneously satisfied by that geometry*. The four manifestations — logarithmic chain coordinate (anchor); reverse-KL divergence; log-odds update coordinate; Fisher metric — are the four layer-specific surfaces of one geometric commitment.
 
 **Structure.**
 - 1 geometric object (exponential-family structure on categorical distributions)
-- 3 AAD-internal axioms (chain-rule additivity, evidential additivity, parameterization-invariance) + 1 mathematical-identity anchor (probability chain rule + log)
-- 4 AAD-segment manifestations at chain / divergence / update / metric layers
+- 3 AAT-internal axioms (chain-rule additivity, evidential additivity, parameterization-invariance) + 1 mathematical-identity anchor (probability chain rule + log)
+- 4 AAT-segment manifestations at chain / divergence / update / metric layers
 
-**Presentation flavor.** "When AAD needs a coordinate at a particular layer, its surrounding apparatus forces an axiom that picks the exponential-family coordinate at that layer. The four layers are different operational aspects of one geometric object; the four axioms are independently-motivated constraints that the geometric object satisfies simultaneously."
+**Presentation flavor.** "When AAT needs a coordinate at a particular layer, its surrounding apparatus forces an axiom that picks the exponential-family coordinate at that layer. The four layers are different operational aspects of one geometric object; the four axioms are independently-motivated constraints that the geometric object satisfies simultaneously."
 
 **Merits.**
 - **Unification.** Names a structural convergence that is mathematically real (Fenchel-Bregman, Fisher-as-Hessian, Bregman-additivity under factorization are textbook identities).
 - **Clarifies adjacent cases.** Lyapunov quadratic sits on Euclidean-Bregman, different potential family; IB sits on same geometric family, different axiomatic provenance; (AV) sits on a third potential family. Clean typology.
 - **Strengthens the "beauty / concision / fundamentality" virtues** CLAUDE.md treats as first-class. One geometric object with multiple manifestations is a stronger and more beautiful description than four parallel theorem-level instances.
-- **Aligns with Amari-Nagaoka 2000's standard information-geometry framing.** The reframe brings AAD into line with the standard mathematical framework that already treats divergence / natural parameter / Fisher metric as three aspects of one exponential-family structure.
+- **Aligns with Amari-Nagaoka 2000's standard information-geometry framing.** The reframe brings AAT into line with the standard mathematical framework that already treats divergence / natural parameter / Fisher metric as three aspects of one exponential-family structure.
 
 **Risks / costs.**
 - **Risk of appearing to over-unify.** The axioms *are* logically independent; the reframe must not suggest they are reducible to one axiom. The "convergence of independent axioms" framing (§4.2) is the correct form, not "one underlying axiom in disguise."
 - **Risk of losing the motivational anchor structure.** The three theorem-level axioms are positioned as "analogs of the chain-layer identity." Under the unification reframe, the motivational cross-cites might be read as decorative rather than load-bearing. Guarding against this: the reframe must preserve the axiom-independence story — the axioms are motivated by being analogs of the chain anchor *and* they converge on the exponential-family geometry; both observations are true.
-- **Risk of re-scoping the meta-pattern.** The current framing covers *any* AAD layer where a coordinate is forced by a uniqueness-theorem argument on an AAD-internal axiom. The exponential-family reframe narrows the meta-pattern to *the specific exponential-family geometry*. If a future AAD segment forces a coordinate via a different uniqueness-theorem on a different geometry (e.g., Dempster-Shafer belief functions; min-plus semiring; non-commutative probability), the reframe would not straightforwardly accommodate it. This is a real cost — the current framing's breadth would narrow.
+- **Risk of re-scoping the meta-pattern.** The current framing covers *any* AAT layer where a coordinate is forced by a uniqueness-theorem argument on an AAT-internal axiom. The exponential-family reframe narrows the meta-pattern to *the specific exponential-family geometry*. If a future AAT segment forces a coordinate via a different uniqueness-theorem on a different geometry (e.g., Dempster-Shafer belief functions; min-plus semiring; non-commutative probability), the reframe would not straightforwardly accommodate it. This is a real cost — the current framing's breadth would narrow.
 - **Reader-approachability cost.** Exponential-family geometry is more technical than Cauchy-FE. Readers who understand "functional equation forces a coordinate" will have to learn Legendre-Fenchel duality to understand the reframe.
 
 ### §6.2 Reframe (B): Separation-is-real (keep current framing + add Fenchel-duality as Discussion observation)
@@ -287,7 +287,7 @@ The variance-additive candidate (from `spikes/spike-fenchel-bregman-reframe-addi
 **Addition.** A Discussion paragraph in `#additive-coordinate-forcing` noting that the divergence-layer and update-layer coordinates are Fenchel-dual via the negative-entropy potential; that the metric-layer Fisher metric is the infinitesimal form of the dual Bregman divergence; and that the chain-layer identity restricts cleanly to the exponential-family product structure. Framed as "additional structural observation," not as a replacement of the primary-instances count.
 
 **Merits.**
-- **Preserves the axiom-independence story cleanly.** Each axiom stands alone; the meta-pattern is "AAD's architecture quietly forces four structurally-distinct axioms that each force a coordinate via a uniqueness theorem." The independence of the axioms is the substance.
+- **Preserves the axiom-independence story cleanly.** Each axiom stands alone; the meta-pattern is "AAT's architecture quietly forces four structurally-distinct axioms that each force a coordinate via a uniqueness theorem." The independence of the axioms is the substance.
 - **Preserves breadth.** The meta-pattern remains flexible for future instances that might use different uniqueness-theorem machineries on different geometries (Dempster-Shafer, min-plus, etc.).
 - **Minimal segment churn.** Current framing is retained; one Discussion paragraph is added.
 
@@ -298,12 +298,12 @@ The variance-additive candidate (from `spikes/spike-fenchel-bregman-reframe-addi
 
 ### §6.3 Reframe (C): Hybrid (anchor + Fenchel-dual pair + Čencov as three structurally distinct)
 
-**Thesis.** The chain-layer anchor, the Fenchel-dual divergence ↔ update pair, and the Čencov metric layer are three structurally distinct things. The anchor is a probability identity; the Fenchel-pair is a geometric duality on exponential families; the Čencov instance is a statistical-manifold invariance commitment that coincides with the Fenchel geometry on AAD's current scope but is not reducible to it in general.
+**Thesis.** The chain-layer anchor, the Fenchel-dual divergence ↔ update pair, and the Čencov metric layer are three structurally distinct things. The anchor is a probability identity; the Fenchel-pair is a geometric duality on exponential families; the Čencov instance is a statistical-manifold invariance commitment that coincides with the Fenchel geometry on AAT's current scope but is not reducible to it in general.
 
 **Structure.**
 - Chain-layer anchor: 1 (probability identity, not geometric)
 - Fenchel-dual pair (divergence + update): 1 (two aspects of exponential-family Legendre-Fenchel structure)
-- Čencov metric layer: 1 (statistical-manifold invariance, broader in general; coincides with Fenchel-pair on AAD's current scope)
+- Čencov metric layer: 1 (statistical-manifold invariance, broader in general; coincides with Fenchel-pair on AAT's current scope)
 
 Total: 3 structurally distinct instances (not 4 parallel ones; not 1 unified geometric object).
 
@@ -318,20 +318,20 @@ Total: 3 structurally distinct instances (not 4 parallel ones; not 1 unified geo
 **Risks / costs.**
 - **Slightly more complex than (A) or (B).** The three-category typology is less clean than either "one geometric object" (A) or "four parallel instances" (B).
 - **Invites a quibble about the chain-layer.** §3 showed that the chain-layer identity *can* be read as a Bregman-divergence statement on product exponential families. Reframe (C) treats it as geometrically separate; a reader could argue it should be folded into the Fenchel category. The defense is §3.3: the chain-layer identity holds for any joint distribution, not just exponential families; its relationship to Fenchel is one-way (restriction, not identity).
-- **Requires justifying the Čencov-as-separate-from-Fenchel claim.** On AAD's current scope the two coincide; (C) preserves the separation based on Čencov's applicability outside exponential families. This is honest but requires careful explanation of the scope distinction.
+- **Requires justifying the Čencov-as-separate-from-Fenchel claim.** On AAT's current scope the two coincide; (C) preserves the separation based on Čencov's applicability outside exponential families. This is honest but requires careful explanation of the scope distinction.
 
 ### §6.4 Comparison table
 
 | Criterion | (A) Full unification | (B) Separation-is-real | (C) Hybrid |
 |---|---|---|---|
-| Geometric accuracy on AAD's current scope | High (correctly names the convergence) | Low-medium (acknowledges but doesn't structure the convergence) | High (explicit about the Fenchel-pair + the Čencov-scope coincidence) |
+| Geometric accuracy on AAT's current scope | High (correctly names the convergence) | Low-medium (acknowledges but doesn't structure the convergence) | High (explicit about the Fenchel-pair + the Čencov-scope coincidence) |
 | Preserves axiom-independence story | High if carefully stated; risk of compression | High (primary virtue) | High |
 | Preserves motivational anchor structure | Medium-high (anchor role preserved in the convergence framing, but diluted) | High | High |
 | Flexibility for future non-exponential-family instances | Low (the reframe is specific to exponential-family geometry) | High | Medium-high (explicit that Čencov is broader than Fenchel in general) |
 | Reader approachability | Lower (requires Legendre-Fenchel) | Higher (Cauchy-FE is more familiar) | Medium |
 | Clarity on adjacent-family structure | High (Bregman-divergence sub-families clearly distinguished) | Low (adjacent-family classification is axiomatic-provenance-based only) | Medium-high (Fenchel-pair + Lyapunov-as-different-potential explicit) |
 | Segment churn to implement | High (rewrite meta-segment) | Low (one Discussion paragraph) | Medium (re-partition the primary-instance table) |
-| Match to standard information geometry | High (Amari-Nagaoka 2000 standard) | Low (AAD-specific framing) | Medium (Amari-Nagaoka on Fenchel-pair; Čencov-distinct on metric layer) |
+| Match to standard information geometry | High (Amari-Nagaoka 2000 standard) | Low (AAT-specific framing) | Medium (Amari-Nagaoka on Fenchel-pair; Čencov-distinct on metric layer) |
 
 ---
 
@@ -343,14 +343,14 @@ The accurate structural description is **reframe (A) with explicit preservation 
 
 ### §7.1 The reframe statement
 
-> AAD's architecture has quietly committed to the **exponential-family geometry on categorical distributions** — the Legendre-Fenchel structure where the primal potential is negative entropy, the dual potential is log-partition, the primal coordinate is $Q$ (softmax image), the dual coordinate is log-odds / natural parameters, the associated Bregman divergence is reverse-KL, and the infinitesimal form of the Bregman divergence is the Fisher metric.
+> AAT's architecture has quietly committed to the **exponential-family geometry on categorical distributions** — the Legendre-Fenchel structure where the primal potential is negative entropy, the dual potential is log-partition, the primal coordinate is $Q$ (softmax image), the dual coordinate is log-odds / natural parameters, the associated Bregman divergence is reverse-KL, and the infinitesimal form of the Bregman divergence is the Fisher metric.
 >
-> This commitment manifests at four operational layers of the theory — chain, divergence, update, and metric — via **independently-motivated AAD-internal axioms** (the probability chain rule / chain-rule additivity / evidential additivity / parameterization-invariance) that all happen to be simultaneously satisfied by the exponential-family geometry. The convergence is not coincidence: it reflects that AAD's surrounding apparatus (DAG factorization, Bayesian coherence, regret-bound decision theory, and the singular-trajectory scope) has committed to this geometry through multiple independent surface constraints.
+> This commitment manifests at four operational layers of the theory — chain, divergence, update, and metric — via **independently-motivated AAT-internal axioms** (the probability chain rule / chain-rule additivity / evidential additivity / parameterization-invariance) that all happen to be simultaneously satisfied by the exponential-family geometry. The convergence is not coincidence: it reflects that AAT's surrounding apparatus (DAG factorization, Bayesian coherence, regret-bound decision theory, and the singular-trajectory scope) has committed to this geometry through multiple independent surface constraints.
 >
 > The meta-pattern's structure is therefore:
 > - **One geometric object**: the exponential-family Legendre-Fenchel structure on categorical distributions.
-> - **Four independently-motivated AAD-internal axioms / identities** (chain-rule identity anchor + three theorem-level axioms).
-> - **Four AAD-segment manifestations** at chain / divergence / update / metric layers — where the forced coordinate is the layer-specific surface of the one geometric object (logarithmic; reverse-KL; log-odds; Fisher).
+> - **Four independently-motivated AAT-internal axioms / identities** (chain-rule identity anchor + three theorem-level axioms).
+> - **Four AAT-segment manifestations** at chain / divergence / update / metric layers — where the forced coordinate is the layer-specific surface of the one geometric object (logarithmic; reverse-KL; log-odds; Fisher).
 >
 > The convergence across independent axioms is itself the meta-pattern's substance — not a byproduct to be compressed into a single axiom.
 
@@ -360,7 +360,7 @@ The accurate structural description is **reframe (A) with explicit preservation 
 
 **Against under-structuring.** The geometric convergence is real and mathematically tight (§1-§3 verifications). Treating it as a Discussion-level aside misses the architecture's self-consistency. A reader familiar with Amari-Nagaoka information geometry will immediately see the Legendre-Fenchel structure; the meta-segment should make that visibility load-bearing.
 
-**On reader approachability.** Reframe (A) requires introducing the Legendre-Fenchel structure. The current segment already cites Aczél 1966 and Čencov 1982; adding Amari-Nagaoka 2000 and Bregman 1967 is a small additional bibliographic commitment. The upside — a structurally unified description that connects AAD's four layer-specific instances to standard information geometry — is worth the technical cost.
+**On reader approachability.** Reframe (A) requires introducing the Legendre-Fenchel structure. The current segment already cites Aczél 1966 and Čencov 1982; adding Amari-Nagaoka 2000 and Bregman 1967 is a small additional bibliographic commitment. The upside — a structurally unified description that connects AAT's four layer-specific instances to standard information geometry — is worth the technical cost.
 
 **On preserving motivational anchor structure.** The chain-layer identity remains the motivational anchor for the three theorem-level axioms (each axiom is still stated as "the $X$-level analog of the chain-layer additive-decomposition"). The Fenchel-Bregman reframe does not erase this; it adds an additional observation: the *reason* the three analog axioms all succeed is that they all probe the same underlying exponential-family geometry.
 
@@ -372,13 +372,13 @@ If this reframe is adopted, the concrete changes to `#additive-coordinate-forcin
 
 2. **Add a new section: "The underlying geometric object."** State the Legendre-Fenchel structure directly: negative-entropy potential on $\Delta^{n-1}$, log-partition Fenchel conjugate on natural-parameter space, softmax primal-dual correspondence, reverse-KL Bregman divergence, Fisher metric as Hessian of dual potential. Cite Amari-Nagaoka 2000 §3.5, Bregman 1967, Rockafellar 1970, Bauschke-Combettes 2017.
 
-3. **Recast the four-instance table.** Replace "four parallel Cauchy-FE / Čencov instances" with "four layer-specific manifestations of the same geometry." Columns: Layer / AAD-internal axiom / Uniqueness mechanism (Cauchy-FE or Čencov-invariance) / Forced coordinate / Relation to the exponential-family geometry (e.g., "primal point"; "Bregman divergence on primal"; "natural coordinate on dual"; "Hessian of dual potential").
+3. **Recast the four-instance table.** Replace "four parallel Cauchy-FE / Čencov instances" with "four layer-specific manifestations of the same geometry." Columns: Layer / AAT-internal axiom / Uniqueness mechanism (Cauchy-FE or Čencov-invariance) / Forced coordinate / Relation to the exponential-family geometry (e.g., "primal point"; "Bregman divergence on primal"; "natural coordinate on dual"; "Hessian of dual potential").
 
-4. **Revise the adjacent-family discussion.** Reclassify Lyapunov quadratic as "Bregman divergence on Euclidean potential" (different convex potential, not different family). Reclassify IB as "application of the negative-entropy / reverse-KL Bregman geometry, imported axiomatic provenance rather than AAD-internally-motivated axiom." Note the (AV) variance-additive case as "Bregman-type but on a squared-norm potential" — a distinct potential sub-family.
+4. **Revise the adjacent-family discussion.** Reclassify Lyapunov quadratic as "Bregman divergence on Euclidean potential" (different convex potential, not different family). Reclassify IB as "application of the negative-entropy / reverse-KL Bregman geometry, imported axiomatic provenance rather than AAT-internally-motivated axiom." Note the (AV) variance-additive case as "Bregman-type but on a squared-norm potential" — a distinct potential sub-family.
 
-5. **Update the Čencov-Fenchel relationship.** Explicitly state that on AAD's current Fisher-metric scope (exponential-family-in-natural-parameters and matrix-Kalman cases), the Čencov-derived Fisher metric coincides with the Hessian of the dual potential. Note the scope dependency: outside exponential families, Čencov applies but Fenchel-Bregman does not straightforwardly.
+5. **Update the Čencov-Fenchel relationship.** Explicitly state that on AAT's current Fisher-metric scope (exponential-family-in-natural-parameters and matrix-Kalman cases), the Čencov-derived Fisher metric coincides with the Hessian of the dual potential. Note the scope dependency: outside exponential families, Čencov applies but Fenchel-Bregman does not straightforwardly.
 
-6. **Update the complementarity-with-#identifiability-floor-and-#disc-separability-pattern section.** The three meta-segments retain their cross-sectional roles. The exponential-family reframe sharpens #additive-coordinate-forcing's "constructive" role: when AAD forces a coordinate, it forces a surface of the exponential-family geometry — not a generic logarithmic coordinate, but the specific log-coordinate-of-exponential-family.
+6. **Update the complementarity-with-#identifiability-floor-and-#disc-separability-pattern section.** The three meta-segments retain their cross-sectional roles. The exponential-family reframe sharpens #additive-coordinate-forcing's "constructive" role: when AAT forces a coordinate, it forces a surface of the exponential-family geometry — not a generic logarithmic coordinate, but the specific log-coordinate-of-exponential-family.
 
 7. **Preserve the motivational anchor.** Keep the paragraphs where the theorem-level axioms are stated as analogs of the chain-layer identity — these are still correct and still load-bearing. Add: "The reason the three analog axioms all succeed is that they all probe one geometric object; the chain-layer identity is the motivational anchor *and* the geometric object is the structural target." Both observations are true.
 
@@ -396,13 +396,13 @@ The task briefing flagged a "4-candidate 'Instance 4' traffic jam": multiple can
 
 **Čencov / Fisher-metric (current resident).**
 - Under current framing: fourth primary instance via (PI) + Čencov 1982.
-- Under reframe (A): the metric-layer manifestation of the exponential-family geometry; already inside the unified geometric structure on AAD's current scope.
+- Under reframe (A): the metric-layer manifestation of the exponential-family geometry; already inside the unified geometric structure on AAT's current scope.
 - **Verdict under reframe:** stays as a manifestation of the single geometric object. The "four primary instances" count becomes "four layer-specific manifestations of one geometry."
 
 **ρ-factorization / variance-additive (AV).**
 - Current status: not a primary instance (ρ-factorization's native additive structure is variance-additive, not log-additive).
 - Under reframe (A): Bregman-type on a *different* convex potential family (squared-norm / Euclidean-Mahalanobis), not on negative-entropy. Geometrically distinct from the four manifestations.
-- **Verdict under reframe:** (AV) would need to be understood as a *separate* meta-pattern candidate on a different geometric object (squared-norm Bregman rather than negative-entropy Bregman). It does not qualify as a fifth manifestation of the same geometry; it would be the first manifestation of a second, potentially-parallel meta-pattern. If pursued, it opens a structural comparison: "AAD has committed to two distinct Bregman geometries — entropic (categorical distributions) and Euclidean-like (variance-additive statistics)." Whether this second geometry warrants its own meta-segment or sits as a distinct structural observation is a separate scoping question.
+- **Verdict under reframe:** (AV) would need to be understood as a *separate* meta-pattern candidate on a different geometric object (squared-norm Bregman rather than negative-entropy Bregman). It does not qualify as a fifth manifestation of the same geometry; it would be the first manifestation of a second, potentially-parallel meta-pattern. If pursued, it opens a structural comparison: "AAT has committed to two distinct Bregman geometries — entropic (categorical distributions) and Euclidean-like (variance-additive statistics)." Whether this second geometry warrants its own meta-segment or sits as a distinct structural observation is a separate scoping question.
 
 **Architecture / coupling (Gemini's "coupling-as-primary-geometric-variable" thesis).**
 - Current status: not a formal primary-instance candidate. Hypothesized in Gemini's 2026-04-23 audit as a deeper unification.
@@ -429,23 +429,23 @@ Under reframe (A), the meta-pattern's primary-instance count is stable at **four
 ### §9.1 What this spike establishes (with epistemic labels)
 
 - *[Derived, status: exact]* **Path 7's Fenchel-duality computation is correct** (§1). Reverse-KL is the Bregman divergence of negative-entropy on the simplex; log-odds is the Fenchel-dual natural coordinate; the correspondence is textbook Legendre-Fenchel.
-- *[Derived, status: exact]* **Fisher metric = Hessian of log-partition** on exponential families (§2.1). The Čencov-derived Fisher metric coincides with $\nabla^2 \phi^*$ on AAD's current Fisher-metric scope.
+- *[Derived, status: exact]* **Fisher metric = Hessian of log-partition** on exponential families (§2.1). The Čencov-derived Fisher metric coincides with $\nabla^2 \phi^*$ on AAT's current Fisher-metric scope.
 - *[Derived, status: robust-qualitative]* **The divergence-layer and update-layer axioms are logically independent** despite producing Fenchel-dual coordinates (§1.4).
 - *[Derived, status: robust-qualitative]* **The Čencov-axiom and the Fenchel-Bregman derivation give the same Fisher metric on exponential-family manifolds but are independent in full generality** (§2.3).
 - *[Derived, status: robust-qualitative]* **The chain-layer identity holds broadly (any probability distribution), not just on exponential families** (§3.3); its Fenchel-Bregman reading is a restriction, not an equivalence.
-- *[Observation, status: robust-qualitative]* **The meta-pattern's honest description is "multiple independently-motivated AAD-internal axioms converge on one exponential-family geometric object"** — this is neither full unification (axioms are independent) nor full separation (geometric object is shared) (§4.2).
+- *[Observation, status: robust-qualitative]* **The meta-pattern's honest description is "multiple independently-motivated AAT-internal axioms converge on one exponential-family geometric object"** — this is neither full unification (axioms are independent) nor full separation (geometric object is shared) (§4.2).
 
 ### §9.2 What this spike does not establish
 
 - **Whether the reframe (A) is worth the segment-churn cost.** I have recommended it on structural-honesty grounds, but the final call is Joseph's — this is a framing decision with architectural-proposal weight, not a bug-fix.
 - **Whether all citations are correctly attributed at the granularity needed for segment promotion.** I relied on Amari-Nagaoka 2000 §3.5 for several specific claims (primal-dual Bregman, Fisher-as-Hessian, Proposition 3.10 on product-structure additivity). If the reframe is adopted, a PDF-verification pass on these attributions would be needed before segment-level landing. The reference is in `ref/` as `amari-cichocki-2010-info-geom-divergence.pdf` and related materials, but the specific theorem-number claims above should be checked against Amari-Nagaoka 2000 directly, not against the 2010 Amari-Cichocki paper (which is a different text).
 - **Whether the (AV) variance-additive candidate warrants a second, parallel meta-pattern.** Flagged in §8.1 as a separate scoping question for a future cycle.
-- **Whether the reframe dilutes the distinctiveness of AAD's contribution.** The reframe brings AAD closer to standard information geometry; a reader might read it as "AAD is just rediscovering Amari-Nagaoka's framework." The correct defense: AAD's contribution is showing that *its independently-motivated axioms, each grounded in its own AAD-internal architectural commitment, all converge on this geometry*. The geometry itself is standard; the convergence of axioms is AAD-specific. This defense is coherent but requires the meta-segment to state it clearly.
+- **Whether the reframe dilutes the distinctiveness of AAT's contribution.** The reframe brings AAT closer to standard information geometry; a reader might read it as "AAT is just rediscovering Amari-Nagaoka's framework." The correct defense: AAT's contribution is showing that *its independently-motivated axioms, each grounded in its own AAT-internal architectural commitment, all converge on this geometry*. The geometry itself is standard; the convergence of axioms is AAT-specific. This defense is coherent but requires the meta-segment to state it clearly.
 - **Full scope analysis outside categorical distributions.** The reframe is stated for categorical exponential families. For Gaussian families (Kalman), the Fenchel-Bregman picture also applies (with Mahalanobis-norm Bregman on the mean-covariance manifold); this spike has not worked through the Gaussian case in detail. The `#der-gain-sector-bridge` matrix-Kalman row is expected to fit but has not been explicitly verified here.
 
 ### §9.3 What I did not attempt
 
-- **Deriving the three axioms from a single deeper commitment.** If such a derivation existed, the reframe would move from "axioms converge on one object" to "one axiom forces one object with multiple surface expressions." This would be a strictly stronger claim and I did not pursue it. The candidate deeper commitment would be something like "AAD's probabilistic architecture commits to exponential-family representability"; whether this is derivable from existing AAD commitments or would need to be added as a new axiom is a separate spike. The conservative reading — axioms are independent and happen to converge — is the one defended here.
+- **Deriving the three axioms from a single deeper commitment.** If such a derivation existed, the reframe would move from "axioms converge on one object" to "one axiom forces one object with multiple surface expressions." This would be a strictly stronger claim and I did not pursue it. The candidate deeper commitment would be something like "AAT's probabilistic architecture commits to exponential-family representability"; whether this is derivable from existing AAT commitments or would need to be added as a new axiom is a separate spike. The conservative reading — axioms are independent and happen to converge — is the one defended here.
 - **Connecting to the monotone-operator-theory lineage** (Rockafellar / Bauschke-Combettes) invoked in `#result-sector-persistence-template`. Bregman divergences sit inside monotone-operator theory (convex-analytic duality is a special case of monotone-operator duality); the three meta-segments (`#additive-coordinate-forcing`, `#disc-identifiability-floor`, `#disc-separability-pattern`) plus `#result-sector-persistence-template` might all share a deeper convex-analytic common substrate. This is speculative and not pursued in this spike.
 
 ---
@@ -467,14 +467,14 @@ Under reframe (A), the meta-pattern's primary-instance count is stable at **four
 - Čencov, N. N. 1982. *Statistical Decision Rules and Optimal Inference.* Translations of Mathematical Monographs 53. AMS.
 - Morozova, E. & Chentsov, N. 1991. "Markov invariant geometry on state manifolds." *Itogi Nauki i Tekhniki* (trans. in *J. Sov. Math.* 56(5):2648–2669).
 
-**Cauchy functional equation / axiomatic uniqueness (existing AAD references):**
+**Cauchy functional equation / axiomatic uniqueness (existing AAT references):**
 - Aczél, J. 1966. *Lectures on Functional Equations and Their Applications.* Academic Press (§2.1 on the Cauchy functional equation).
 - Aczél, J. & Daróczy, Z. 1975. *On Measures of Information and Their Characterizations.* Academic Press.
 - Hobson, A. 1969. "A new theorem of information theory." *J. Stat. Phys.* 1(3):383–391.
 - Csiszár, I. 1991. "Why least squares and maximum entropy? An axiomatic approach to inference for linear inverse problems." *Annals of Statistics* 19(4):2032–2066.
 - Shore, J. E. & Johnson, R. W. 1980. "Axiomatic derivation of the principle of maximum entropy and the principle of minimum cross-entropy." *IEEE Trans. Info. Theory* 26(1):26–37.
 
-**Direct AAD segment dependencies:**
+**Direct AAT segment dependencies:**
 - `#additive-coordinate-forcing` (the meta-segment under reframe)
 - `#der-chain-confidence-decay` (anchor)
 - `#deriv-strategy-cost-regret-bound` (divergence-layer instance)
@@ -490,21 +490,21 @@ Under reframe (A), the meta-pattern's primary-instance count is stable at **four
 
 ## Working Notes
 
-- **On the conservative vs. aggressive unification framings.** The spike lands on a modified (A) framing that preserves axiom independence while naming the geometric convergence. A more aggressive framing would attempt to derive the three axioms from a single deeper AAD commitment (e.g., "exponential-family representability of the surrounding apparatus"). I judged that move to be speculative — whether such a deeper commitment can be identified from existing AAD segments is not clear from the current state. If a future spike does find such a derivation, the reframe would strengthen further to "one axiom → one object → four layer-surfaces."
+- **On the conservative vs. aggressive unification framings.** The spike lands on a modified (A) framing that preserves axiom independence while naming the geometric convergence. A more aggressive framing would attempt to derive the three axioms from a single deeper AAT commitment (e.g., "exponential-family representability of the surrounding apparatus"). I judged that move to be speculative — whether such a deeper commitment can be identified from existing AAT segments is not clear from the current state. If a future spike does find such a derivation, the reframe would strengthen further to "one axiom → one object → four layer-surfaces."
 
 - **On the Gaussian case.** The `#der-gain-sector-bridge` Fisher-metric row includes both exponential-family-in-natural-parameters (which is clearly the exponential-family Fenchel-Bregman structure) and matrix-Kalman (Gaussian). The Gaussian case also fits: on the Gaussian exponential family, the Fenchel-dual potential is the log-partition of the Gaussian family, the Bregman divergence is Gaussian KL, and the Fisher metric is the Hessian of the log-partition. A short Gaussian-case walkthrough would strengthen §2's scope analysis. Not done in this spike; flagged for potential follow-up.
 
-- **On non-categorical, non-Gaussian statistical manifolds.** The reframe's strongest form applies to exponential-family manifolds. For curved families or non-parametric models, the Čencov route still produces a Fisher metric, but the Legendre-Fenchel structure does not apply in the same way. If AAD ever extends to curved families (e.g., for non-exponential-family logogenic-agent applications), the reframe would need a "curved-family extension" treatment. Out of scope here.
+- **On non-categorical, non-Gaussian statistical manifolds.** The reframe's strongest form applies to exponential-family manifolds. For curved families or non-parametric models, the Čencov route still produces a Fisher metric, but the Legendre-Fenchel structure does not apply in the same way. If AAT ever extends to curved families (e.g., for non-exponential-family logogenic-agent applications), the reframe would need a "curved-family extension" treatment. Out of scope here.
 
-- **On the "independently-motivated" language.** The phrase "independently-motivated AAD-internal axioms" is load-bearing in the reframe. "Independently-motivated" means each axiom has its own AAD-internal justification (chain-rule additivity is motivated by `#der-chain-confidence-decay`-analog reasoning, etc.); it does NOT mean the axioms are orthogonal or uncorrelated. They are independent as logical statements but they co-vary: each is motivated by adjacent AAD commitments, which in turn are reinforced by one another across the architecture. The reframe should preserve this double meaning — axiomatically independent, architecturally correlated.
+- **On the "independently-motivated" language.** The phrase "independently-motivated AAT-internal axioms" is load-bearing in the reframe. "Independently-motivated" means each axiom has its own AAT-internal justification (chain-rule additivity is motivated by `#der-chain-confidence-decay`-analog reasoning, etc.); it does NOT mean the axioms are orthogonal or uncorrelated. They are independent as logical statements but they co-vary: each is motivated by adjacent AAT commitments, which in turn are reinforced by one another across the architecture. The reframe should preserve this double meaning — axiomatically independent, architecturally correlated.
 
 - **On the effort question.** Per CLAUDE.md strengthen-before-soften, effort/time is not an input to the recommendation. If the reframe is structurally more honest, the work to land it is the right work. This spike does not attempt to estimate the effort; it attempts to name the honest structure.
 
 - **On the 4-candidate Instance-4 traffic jam.** §8 argues that the reframe resolves the jam by geometric typing — different candidates live on different Bregman geometries (exponential-family / Euclidean-squared-norm / coupling-architecture / not-Bregman) and so belong to different meta-patterns or no meta-pattern. The Čencov/Fisher-metric candidate (currently resident) stays, but as a layer-specific manifestation of the unified geometric object rather than a parallel fourth instance. The ρ-factorization / (AV) candidate, if pursued, opens a second parallel meta-pattern on squared-norm Bregman rather than fitting as an extension of this one.
 
-- **On the second parallel meta-pattern possibility.** If (AV) is promoted (requires resolving the 2026-04-23 brainstorm cycle's obstruction), AAD would carry *two* Bregman-geometry meta-patterns: entropic (on categorical distributions, this segment's topic) and squared-norm (on variance-additive statistics, including Lyapunov quadratic and variance-additive composition). Whether these should be unified as "AAD's architecture commits to Bregman geometries with axiom-appropriate convex potentials" or kept separate is another scoping question for a future cycle. I have not pursued it.
+- **On the second parallel meta-pattern possibility.** If (AV) is promoted (requires resolving the 2026-04-23 brainstorm cycle's obstruction), AAT would carry *two* Bregman-geometry meta-patterns: entropic (on categorical distributions, this segment's topic) and squared-norm (on variance-additive statistics, including Lyapunov quadratic and variance-additive composition). Whether these should be unified as "AAT's architecture commits to Bregman geometries with axiom-appropriate convex potentials" or kept separate is another scoping question for a future cycle. I have not pursued it.
 
-- **On the convex-potentials-in-AAD-overall observation.** The reframe surfaces a broader observation: AAD uses three distinct convex potentials across its architecture — negative-entropy on categorical distributions (this meta-pattern), squared-norm on state-space (Lyapunov sector), and log-partition on exponential-family natural parameters (the dual of negative-entropy, which is the same potential pair as the first). A unified picture might emerge if AAD explicitly categorizes its Bregman-type structures. Speculative; not pursued.
+- **On the convex-potentials-in-AAT-overall observation.** The reframe surfaces a broader observation: AAT uses three distinct convex potentials across its architecture — negative-entropy on categorical distributions (this meta-pattern), squared-norm on state-space (Lyapunov sector), and log-partition on exponential-family natural parameters (the dual of negative-entropy, which is the same potential pair as the first). A unified picture might emerge if AAT explicitly categorizes its Bregman-type structures. Speculative; not pursued.
 
 - **On reviewing the axioms for redundancy one more time.** The axiom-independence claim (§1.4, §2.2) is important. I verified: chain-rule additivity operates on bivariate objects $D(P \Vert Q)$; evidential additivity operates on univariate coordinates $\psi(p)$; parameterization-invariance operates on the theory's predictions under coordinate change. These have different logical types (bivariate vs. univariate vs. meta-theoretic). I did not find a way to reduce them to a single axiom — each specifies a different structural requirement. The convergence on exponential-family geometry is therefore genuine structural convergence across independent constraints, not redundancy.
 

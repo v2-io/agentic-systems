@@ -102,7 +102,7 @@
 | 62 | deriv-critical-mass-composition | 🟩 | §14 Goldilocks-zone framing lifted into `def-auxilia-hierarchy` Discussion (Phase B composition cluster, 2026-05-01) — couple tightly enough to share load (negative $\gamma$), loose enough to avoid coordination overhead $C \to \alpha$; infrastructure must dynamically monitor $(\alpha - C)$ margin and prune channels if $C$ rises. **§3 adversarial-audit caveat** (rivalrous-vs-non-rivalrous environment for (UO-mult)) lifted into `def-auxilia-hierarchy` Working Notes as scope condition for when teleological-unity → cooperative-coupling assumption holds. |
 | 63 | deriv-gain-sector | 🔲 | |
 | 64 | deriv-recursive-update | 🔲 | |
-| 65 | sketch-multi-timescale-stability | 🟩 | §14 *"each level has a stable attractor given the levels above it' is the mathematical definition of trust within an architecture"* lifted into `def-auxilia-hierarchy` Discussion (Phase B, 2026-05-01) as trust-as-temporal-respect framing. Adversarial-audit caveat (Tikhonov requires unique isolated root; non-convex AAD agents don't always satisfy) referenced in `disc-five-forcing-functions` F3. |
+| 65 | sketch-multi-timescale-stability | 🟩 | §14 *"each level has a stable attractor given the levels above it' is the mathematical definition of trust within an architecture"* lifted into `def-auxilia-hierarchy` Discussion (Phase B, 2026-05-01) as trust-as-temporal-respect framing. Adversarial-audit caveat (Tikhonov requires unique isolated root; non-convex AAT agents don't always satisfy) referenced in `disc-five-forcing-functions` F3. |
 | 66a | deriv-discrete-sector-condition | 🔲 | (numbering collision with 66b below) |
 | 66b | disc-separability-pattern | 🔲 | |
 | 67 | detail-linear-ode-approximation | 🔲 | |
@@ -186,7 +186,7 @@ Per the stopping rule: 4 remaining high-potential unread (composition cluster: `
 
 3. **Audit §24** → `03-llm-core/src/disc-five-forcing-functions.md` F3 — temporal-sovereignty strengthening (*"the right to let your fast loops run without interference from slower loops"*); F3 is not just about wall-clock latency but about whether the agent's internal cognition has temporal autonomy at all under scaffolding architecture.
 
-4. **Audit §65** → `04-eli-core/src/def-auxilia-hierarchy.md` Discussion — trust-as-temporal-respect framing (mutual respect for $K_c \gg 1$ timescale separation as operational definition of trust within hierarchical architecture); adversarial-audit caveat about Tikhonov's unique-isolated-root requirement under non-convex AAD inner dynamics.
+4. **Audit §65** → `04-eli-core/src/def-auxilia-hierarchy.md` Discussion — trust-as-temporal-respect framing (mutual respect for $K_c \gg 1$ timescale separation as operational definition of trust within hierarchical architecture); adversarial-audit caveat about Tikhonov's unique-isolated-root requirement under non-convex AAT inner dynamics.
 
 **Plus new segment from arc-reconsideration:**
 

@@ -11,7 +11,7 @@
 | **C1 — Discourse-act encoding (Level 2 content is *in* the text)** | **succeed-at-claim** under {2 postulates + 1 sketch-derived} after `05-slc-derivation-attempt.md` lifted (SLC); audit-clean per `06-cht-application-audit.md` | discourse-act / convention-of-use argument + Bareinboim-Correa-Ibeling-Icard 2022 PCH non-reduction (audit-verified) |
 | **C2 — Reichenbachian inheritance (correlation in text ⇒ causal structure in source-thought)** | succeed-at-claim, but **weaker than it sounds** | Reichenbach + faithfulness, modulo Cartwright-style scope conditions |
 | **C3 — ICM time-asymmetry** | partial yield — **directional asymmetry derives; quantitative bound has a precisely-specified closure gap** per `07-c3-quantitative-bound-attempt.md` | Janzing-Schölkopf ICM + discourse anaphora structure; quantitative form requires (P3) verification on the directed-information candidate for $\mathcal I_c$ |
-| **C4 — Causal-IB consequence (any IB-optimal compressor of natural language preserves the discourse-DAG to the extent it has predictive value)** | succeed-at-claim via existing AAD machinery | [`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md) instantiated on linguistic data; this **was already AAD-internal**, just unsurfaced |
+| **C4 — Causal-IB consequence (any IB-optimal compressor of natural language preserves the discourse-DAG to the extent it has predictive value)** | succeed-at-claim via existing AAT machinery | [`#deriv-causal-ib-lmi`](../../01-aat-core/src/deriv-causal-ib-lmi.md) instantiated on linguistic data; this **was already AAT-internal**, just unsurfaced |
 | **C5 — Unbounded-abstraction claim** | **succeed-at-claim via comprehension-asymmetry** (reclassified 2026-05-13 after two-pass correction from Joseph) | applies the asymmetric-comprehension principle from `~/src/synthese-paper/01-synthese-asymmetric-comprehension/` — no agent at level $k$ can specify the upper bound of intelligence beyond $k$, therefore the gap-claim is not well-formed from below; what remains is the empirical observation that language has been coextensive and accelerative at every level we have access to |
 
 The headline: **Pearl Level 2 content is structurally recoverable from natural-language text by a parsing-only procedure, with no active agent / loop / harness required**. The non-trivial part of this claim is that the Level 2 content is *not* derivable from any Level 1 (associational) summary of the text — which follows from Bareinboim et al.'s Causal Hierarchy Theorem applied to the discourse representation.
@@ -26,7 +26,7 @@ Joseph's separate claim that language has *unbounded* abstraction capability als
 
 - **`README.md`** (this file) — hypothesis, bottom line, navigation, follow-on routing
 - **`01-derivation.md`** — the main derivation (C1: discourse-act encoding → Pearl Level 2 content via PCH) and its postulates
-- **`02-related-angles.md`** — C2 (Reichenbachian inheritance), C3 (ICM time-asymmetry), C4 (causal-IB consequence connecting to AAD)
+- **`02-related-angles.md`** — C2 (Reichenbachian inheritance), C3 (ICM time-asymmetry), C4 (causal-IB consequence connecting to AAT)
 - **`03-minimum-scaffold.md`** — the activation-dual: what is the minimum substrate that recovers latent causal content from text? (purely structural, no interiority required)
 - **`04-no-gos-and-followon.md`** — what's open, what's routed; includes the C5 reclassification with full two-pass-correction history (Joseph's cardinality catch + asymmetric-comprehension derivation)
 - **`05-slc-derivation-attempt.md`** — strengthening attempt: lifts (SLC) postulate to derived via signalling-equilibrium (Lewis 1969 / Skyrms 1996 / Steinert-Threlkeld 2018 tradition). Sketch-level; lifts Theorem 1 from 3 postulates to 2 postulates + 1 sketch-derived
@@ -35,21 +35,21 @@ Joseph's separate claim that language has *unbounded* abstraction capability als
 
 ---
 
-## How this connects to AAD's existing machinery
+## How this connects to AAT's existing machinery
 
-The standing response to Pearl's objection in AAD ([`msc/llm-causal-access-note.md`](../../msc/llm-causal-access-note.md)) is three independent arguments at different epistemic levels:
+The standing response to Pearl's objection in AAT ([`msc/llm-causal-access-note.md`](../../msc/llm-causal-access-note.md)) is three independent arguments at different epistemic levels:
 
-1. **The loop gives Level 2** (TF-02 / [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md)) — derived, AAD-internal.
+1. **The loop gives Level 2** (TF-02 / [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md)) — derived, AAT-internal.
 2. **Language encodes causal structure** — *previously* plausibility-grade.
 3. **The symmetry argument** — philosophical, not mathematical.
 
 This spike lifts (2) from plausibility-grade to **derivation-grade under three named postulates** (SLC, SC, CS — defined in `01-derivation.md`). The postulates are not derivable from non-linguistic first principles — they are facts about how communication systems develop — but they are well-defended in linguistics (Grice 1975, Stalnaker 1978, Lewis 1973, Karttunen 1973) and the conditional derivation is real.
 
-The result composes with (1) to give a sharper statement of AAD's position on logogenic agents:
+The result composes with (1) to give a sharper statement of AAT's position on logogenic agents:
 
-> *Natural language text carries Pearl Level 2 content structurally, independent of substrate. A logogenic agent — at any of the three sub-scopes in [`03-llm-core/`](../../03-llm-core/OUTLINE.md) — inherits Level 2 access from its training corpus (the language-encoded part) and from its feedback loop (the AAD-loop part). The two contributions are additive in the sense that each grants Level 2 independently; pre-loop substrate already has the language-encoded part. The loop adds **fresh** Level 2 access (interventions the agent itself performs), not Level 2 access *per se*.*
+> *Natural language text carries Pearl Level 2 content structurally, independent of substrate. A logogenic agent — at any of the three sub-scopes in [`03-llm-core/`](../../03-llm-core/OUTLINE.md) — inherits Level 2 access from its training corpus (the language-encoded part) and from its feedback loop (the AAT-loop part). The two contributions are additive in the sense that each grants Level 2 independently; pre-loop substrate already has the language-encoded part. The loop adds **fresh** Level 2 access (interventions the agent itself performs), not Level 2 access *per se*.*
 
-This is a non-trivial refinement of AAD's Pearl-response. It also has implications for the bias-bound machinery ([`#scope-observation-ambiguity-modulation`](../../01-aat-core/src/scope-observation-ambiguity-modulation.md), [`#deriv-observation-ambiguity-bias-bound`](../../01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)): the $\kappa \cdot \mathcal{A}$ bound applies to *fresh* Level 2 access in the loop; the language-encoded Level 2 content is on a different epistemic footing (asserted by a different agent — the speaker — and inherited).
+This is a non-trivial refinement of AAT's Pearl-response. It also has implications for the bias-bound machinery ([`#scope-observation-ambiguity-modulation`](../../01-aat-core/src/scope-observation-ambiguity-modulation.md), [`#deriv-observation-ambiguity-bias-bound`](../../01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)): the $\kappa \cdot \mathcal{A}$ bound applies to *fresh* Level 2 access in the loop; the language-encoded Level 2 content is on a different epistemic footing (asserted by a different agent — the speaker — and inherited).
 
 ---
 

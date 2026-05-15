@@ -1,5 +1,5 @@
 {
-  "_comment": "Ground-truth retrieval queries for AAD-specific benchmark. Each query has 1-3 'right answer' segments (slugs without .md). 'primary' = the canonical anchor; 'also' = strongly relevant adjacents. Scoring uses primary for hit/MRR; 'also' counted as supplementary credit.",
+  "_comment": "Ground-truth retrieval queries for AAT-specific benchmark. Each query has 1-3 'right answer' segments (slugs without .md). 'primary' = the canonical anchor; 'also' = strongly relevant adjacents. Scoring uses primary for hit/MRR; 'also' counted as supplementary credit.",
   "queries": [
     {
       "id": "q01-update-gain-eta",
@@ -33,7 +33,7 @@
     },
     {
       "id": "q06-pearl-causal-hierarchy",
-      "query": "Pearl causal hierarchy — association, intervention, counterfactual rungs — as it appears in AAD",
+      "query": "Pearl causal hierarchy — association, intervention, counterfactual rungs — as it appears in AAT",
       "primary": ["def-pearl-causal-hierarchy"],
       "also": ["der-causal-hierarchy-requirement", "der-loop-interventional-access"]
     },

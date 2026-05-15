@@ -35,7 +35,7 @@ The recommended single-model-schema posture in the original §4 still stands (on
 1. **Lift memorata's data layer wholesale.** Schema, mtime-upsert, hybrid search, ollama wrapper. Add three things on top: multi-level chunking, source-class tagging, and a frontmatter-aware markdown chunker. ~1 evening of careful porting + ~1 day of new chunking logic.
 2. **Pick `nomic-embed-text-v2-moe` as the default model.** Tied for top retrieval (MRR=1.000, R@5=1.00, R@10=1.00) at 94 ms/segment, 768-dim, 957 MB. Already memorata's production default — zero migration friction.
 3. **Hold `bge-m3` as high-stakes alternative.** Same MRR=1.000, ~40% slower (131 ms/seg), 1024-dim, 1.2 GB. Use only if v2-moe shows specific failures on heterogeneous corpora.
-4. **Avoid `snowflake-arctic-embed`** (MRR=0.555). Its 512-token context truncates AAD segment bodies; it ends up matching boilerplate frontmatter rather than substantive claims.
+4. **Avoid `snowflake-arctic-embed`** (MRR=0.555). Its 512-token context truncates AAT segment bodies; it ends up matching boilerplate frontmatter rather than substantive claims.
 5. **Embedding quality is not the binding constraint.** Three models hit MRR=1.000. The Phase-2 quality risk is in chunking + source-class tagging, not in model selection.
 
 ## 1. Memorata Inventory
@@ -130,7 +130,7 @@ Items 1-5 are load-bearing. Items 6-8 are project-tooling on top.
 
 - **Corpus**: 122 segments from `01-aat-core/src/` and `03-llm-core/src/` (excluding `old-*`).
 - **Granularity**: one embedding per segment. Body variant = title + summary + first ~2500 chars. Terse variant = title + first paragraph (~200-400 chars).
-- **Queries**: 12 hand-curated AAD-specific queries in `queries.json`, each with 1-2 "primary" ground-truth segments + "also" supplementary list.
+- **Queries**: 12 hand-curated AAT-specific queries in `queries.json`, each with 1-2 "primary" ground-truth segments + "also" supplementary list.
 - **Metric**: cosine similarity; rank of best primary; MRR; R@5; R@10; median rank.
 - **Models**: 8 ollama embedding models (all available locally).
 - **Ablation**: top-2 also tested on terse variant.

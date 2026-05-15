@@ -4,7 +4,7 @@
 **Purpose**: durable, executable plan for interning class-coercion spike results into the theory so that the spike directory is no longer load-bearing. Designed for handoff: any agent (or future-me) reading this should be able to pick up at the next unchecked step.
 **Authoritative inputs**: `99-verdict.md` (especially §4 segment-landing recommendations) and the empirical/theoretical content in `01`–`08` and `09`.
 
-**Posture** (per Joseph's framing during the spike): integration content within ASF's prior-art-integration discipline. AAD's contribution is the *synthesis* with sector-Lyapunov / Brooks's-Law / class-taxonomy machinery, plus the W₀/W₂/W₁ leakage-regime hierarchy. The wrapping move itself is rediscovery of POMDP / cognitive-architecture moves, cited generously.
+**Posture** (per Joseph's framing during the spike): integration content within ASF's prior-art-integration discipline. AAT's contribution is the *synthesis* with sector-Lyapunov / Brooks's-Law / class-taxonomy machinery, plus the W₀/W₂/W₁ leakage-regime hierarchy. The wrapping move itself is rediscovery of POMDP / cognitive-architecture moves, cited generously.
 
 ---
 
@@ -36,7 +36,7 @@ Verifies the integration's specifics. No writes yet.
 
 ### B1. `01-aat-core/src/der-class-coercion-via-wrapping.md` (NEW)
 
-Load-bearing AAD-core segment. Slug per CLAUDE.md role-prefix mapping: `derived` → `der`, subject-noun = `class-coercion-via-wrapping`. Final slug: `der-class-coercion-via-wrapping`.
+Load-bearing AAT-core segment. Slug per CLAUDE.md role-prefix mapping: `derived` → `der`, subject-noun = `class-coercion-via-wrapping`. Final slug: `der-class-coercion-via-wrapping`.
 
 - [ ] frontmatter:
   ```yaml
@@ -71,13 +71,13 @@ Load-bearing AAD-core segment. Slug per CLAUDE.md role-prefix mapping: `derived`
 - [ ] Findings section per FORMAT.md:
   - **Brief** (Feynman-criterion plain-language): A Class-3 component (one whose belief and goal updates are entangled) can be wrapped in an external scaffold that maintains explicit belief and goal stores separately, with the structural rule that belief updates only see goal-blind queries to the component. Under stated conditions this gives directed separation at the wrapper level — the wrapped system is Class-1 by construction, even though the underlying component isn't. The cost shows up as more component calls per cycle and a residual leakage bound from the component's pretraining.
   - **Impact**: promotes `#hyp-directed-separation-under-composition` to derived (special case); refines `#der-directed-separation` Class-1 with structural-vs-behavioral sub-distinction; resolves CLAUDE.md "Class 2 exit" framing into a constructive route through; clarifies Parts I/II ↔ III/IV relationship; gives the LLM-substrate scope a clean theoretical handle.
-  - **Novelty Claim**: *Claim integration*. The wrapping move is rediscovery of POMDP / cognitive-architecture patterns; AAD's contribution is the integration with sector-Lyapunov persistence machinery, Brooks's-Law tempo accounting, the Class-1/2/3 directed-separation classification, and the LLM-specific (C1)–(C3) admissibility + leakage conditions. Cite generously per the prior-art-integration discipline.
+  - **Novelty Claim**: *Claim integration*. The wrapping move is rediscovery of POMDP / cognitive-architecture patterns; AAT's contribution is the integration with sector-Lyapunov persistence machinery, Brooks's-Law tempo accounting, the Class-1/2/3 directed-separation classification, and the LLM-specific (C1)–(C3) admissibility + leakage conditions. Cite generously per the prior-art-integration discipline.
   - **Related Work table**:
     - POMDP / Bayesian decision theory (Astrom 1965; Kaelbling, Littman, Cassandra 1998 *Artificial Intelligence* 101) — *closest formal prior art*; Bayesian belief-update is goal-blind by construction.
     - Cognitive architectures (Newell 1990 *Unified Theories of Cognition*; Laird 2012 *The Soar Cognitive Architecture*; Anderson 2007 *How Can the Human Mind Occur in the Physical Universe*; Sun 2016 CLARION; Baars 1988 / Dehaene 2014 Global Workspace) — *architectural prior art* for modular agent design with separated belief/goal/action state.
-    - MDP-homomorphism / state abstraction (Ravindran-Barto 2004; Taylor-Precup-Panangaden 2008; Abel et al. 2016/2020; Subramanian-Mahajan 2020; Congeduti-Mey-Oliehoek 2020) — *adjacent* control-theoretic predictive-loss bounds; AAD connects via the bridge lemma.
-    - Categorical / structured systems theory (Smithe 2024 *Structured Active Inference* arXiv:2406.07577; Capucci, Gavranović, Hedges et al. 2022) — *adjacent compositional algebra*; AAD's wrapping construction is consistent with the lens framing.
-    - FEP-RG / scale-free active inference (Friston 2019 *J. Theor. Biol.*; Friston et al. 2025 *Front. Network Physiology*) — *adjacent form-preservation literature*; AAD's wrapper inherits form-preservation under coarse-graining.
+    - MDP-homomorphism / state abstraction (Ravindran-Barto 2004; Taylor-Precup-Panangaden 2008; Abel et al. 2016/2020; Subramanian-Mahajan 2020; Congeduti-Mey-Oliehoek 2020) — *adjacent* control-theoretic predictive-loss bounds; AAT connects via the bridge lemma.
+    - Categorical / structured systems theory (Smithe 2024 *Structured Active Inference* arXiv:2406.07577; Capucci, Gavranović, Hedges et al. 2022) — *adjacent compositional algebra*; AAT's wrapping construction is consistent with the lens framing.
+    - FEP-RG / scale-free active inference (Friston 2019 *J. Theor. Biol.*; Friston et al. 2025 *Front. Network Physiology*) — *adjacent form-preservation literature*; AAT's wrapper inherits form-preservation under coarse-graining.
     - IB-as-RG (Mehta-Schwab 2014 arXiv:1410.3831; Kline-Palmer 2022 PMC8967309) — *adjacent IB-Lagrangian preservation*; (P1) of `#form-composition-closure` is IB-shaped.
     - Singular-perturbation–RG (Chen-Goldenfeld-Oono 1996 *Phys. Rev. E* 54:376) — *adjacent timescale-separation* tools; the K_c≫1 regime invokes this.
     - Tool-using LLM frameworks (Yao et al. 2022 ReAct; Shinn et al. 2023 Reflexion; Park et al. 2023 Generative Agents; Packer et al. 2023 MemGPT; Schick et al. 2023 Toolformer) — *engineering instances*; W₂ in the regime hierarchy.
@@ -121,7 +121,7 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 - [ ] Findings (per FORMAT.md):
   - **Brief**: When the underlying component is a language model, the class-coercion theorem specializes: LLMs admit goal-blind queries (extracting facts from observations without supplying the agent's goal as input) so they're wrappable, but their pretraining produces residual goal-content correlations that bound how clean the separation can be. Two design choices show up in practice: strict wrapping with separate goal-blind and goal-conditioned LLM calls (rare; theoretically clean), or partial wrapping with one goal-conditioned call whose response is parsed into typed update fields (common; PROPRIUM works this way; relies on the model's instruction-following).
   - **Impact**: refines the Parts III/IV approach by making explicit which design moves give which guarantees; identifies PROPRIUM's auxilia hierarchy as the candidate constructive realization of strict wrapping; clarifies that ELI-specific structure is independent of class coercion.
-  - **Novelty Claim**: *Claim integration* — the W₂ / W₁ design distinction surfaces what existing scaffolded-LLM frameworks already do (or could do) in the AAD vocabulary.
+  - **Novelty Claim**: *Claim integration* — the W₂ / W₁ design distinction surfaces what existing scaffolded-LLM frameworks already do (or could do) in the AAT vocabulary.
   - **Related Work**: cite tool-using LLM frameworks; cite Park et al. 2023 Generative Agents as the closest empirical instance of W₁; cite cognitive architectures for the substrate-independent design pattern.
 - [ ] Working Notes:
   - shoshin's current implementation is W₂ (one goal-conditioned LLM call per cycle); strengthening to W₁ via auxilia is engineering follow-on, not theory.
@@ -181,7 +181,7 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 - [ ] Add cycle entry for 2026-05-09. Sections to cover (per recent CHANGELOG style):
   - **What landed**: class-coercion-via-wrapping segment in `01-aat-core/`; logogenic-as-wrapping segment in `03-llm-core/`; Class-1 structural-vs-behavioral sub-distinction in `#der-directed-separation`; updates to `#hyp-directed-separation-under-composition`, `#form-composition-closure`, `#der-tempo-composition`, `#def-auxilia-hierarchy`.
   - **Conceptual shift**: Parts I/II ↔ III/IV relationship reframes from parallel-tracks ("Class 2 exit") to constructive-bridge ("class coercion via wrapping"). PROPRIUM is now positioned as the canonical W₂ wrapping instance with auxilia as the W₁ candidate realization.
-  - **Prior art**: substantial integration of POMDP, cognitive architectures, MDP-homomorphism, FEP-RG / IB-RG / singular-perturbation-RG, categorical structured systems theory, tool-using LLM frameworks. Verdict was V1 (substantial overlap) — AAD's contribution is the integration synthesis.
+  - **Prior art**: substantial integration of POMDP, cognitive architectures, MDP-homomorphism, FEP-RG / IB-RG / singular-perturbation-RG, categorical structured systems theory, tool-using LLM frameworks. Verdict was V1 (substantial overlap) — AAT's contribution is the integration synthesis.
   - **Discipline reinforcements**: confirmed by the cycle — write segments in current-theory voice (segment-voice rule); spike citations only in Working Notes; math lives in segments (the wrapping construction's substantive content is in segments, not the spike).
   - **Pointers**: spike directories `spikes/class-coercion-wrapping/` and `spikes/temporal-nesting-rg/` retained as reasoning trails. The class-coercion spike's `INTEGRATION-PLAN.md` records what was integrated.
 

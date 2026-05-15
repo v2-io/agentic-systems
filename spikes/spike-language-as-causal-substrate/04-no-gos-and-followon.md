@@ -108,7 +108,7 @@ Neither is in the standard literature. The closest existing machinery is directe
 
 ### C4 — causal-IB consequence
 
-**Did close**: the IB-preservation claim follows by direct instantiation of existing AAD machinery on linguistic data.
+**Did close**: the IB-preservation claim follows by direct instantiation of existing AAT machinery on linguistic data.
 
 **Did not close**:
 - A specific quantitative bound. Same gap as C3 — requires a specific causal-information measure.
@@ -144,7 +144,7 @@ Neither is in the standard literature. The closest existing machinery is directe
 
 ### Longer-term theoretical
 
-10. **C5 sharpening.** The unbounded-abstraction claim is not derivable from this spike's machinery, but it points at a real cluster of questions: what is the formal relationship between expressive capacity (compositional infinity), causal capacity (Pearl-hierarchy levels), and intelligence-borne-on-the-substrate? Hauser-Chomsky-Fitch on Merge; Chomsky's Universal Grammar; Pylyshyn on classical-vs-connectionist architectures; the literature on systematicity (Fodor-Pylyshyn 1988). **Long-horizon work**, more philosophy-and-formal-linguistics than AAD-internal. Not immediate priority unless Synthese-paper-positioning calls for it.
+10. **C5 sharpening.** The unbounded-abstraction claim is not derivable from this spike's machinery, but it points at a real cluster of questions: what is the formal relationship between expressive capacity (compositional infinity), causal capacity (Pearl-hierarchy levels), and intelligence-borne-on-the-substrate? Hauser-Chomsky-Fitch on Merge; Chomsky's Universal Grammar; Pylyshyn on classical-vs-connectionist architectures; the literature on systematicity (Fodor-Pylyshyn 1988). **Long-horizon work**, more philosophy-and-formal-linguistics than AAT-internal. Not immediate priority unless Synthese-paper-positioning calls for it.
 
 ---
 

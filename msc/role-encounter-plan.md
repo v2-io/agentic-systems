@@ -74,7 +74,7 @@ Optional v1 omissions: timestamp/commit-hash tracking for concept evolution. Def
 - Are there Ruby/Python helpers that can be lifted as libraries?
 - What did memorata's author (you) NOT do that would be load-bearing here? (e.g., role-aware encounter-order indexing is project-specific and likely not in memorata)
 
-The explorer agent should produce a spike doc at `spikes/spike-local-embedding-benchmark/` recommending what to lift, what to build fresh, and a small benchmark on representative AAD-specific queries.
+The explorer agent should produce a spike doc at `spikes/spike-local-embedding-benchmark/` recommending what to lift, what to build fresh, and a small benchmark on representative AAT-specific queries.
 
 ## Open questions surfaced during planning
 
@@ -136,7 +136,7 @@ The thinking still has to happen, but the *artifact* is the config + script, not
 
 The Phase-2 spike (2026-05-01, at `spikes/spike-local-embedding-benchmark/FINDINGS.md`) settled the model-selection and lift-vs-build questions:
 
-- **Default embedding model:** `nomic-embed-text-v2-moe` (768-dim, MRR=1.000 on AAD-specific queries, lowest cost-per-quality among top-tier models, already memorata's production default).
+- **Default embedding model:** `nomic-embed-text-v2-moe` (768-dim, MRR=1.000 on AAT-specific queries, lowest cost-per-quality among top-tier models, already memorata's production default).
 - **Lift, don't rebuild:** memorata's `db.py`, `embed.py`, `parse.py:chunk_text`, `search.py:hybrid_search` lift verbatim; the markdown chunker rewrite + ingestion driver adaptation are the bulk of new work (~1 day combined).
 
 Phase-2 design commitments folded back from the spike:

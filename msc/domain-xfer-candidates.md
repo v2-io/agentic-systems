@@ -7,7 +7,7 @@ Auftragstaktik shared-intent IB compression to multi-agent RL, and dozens
 more — live in the curated catalog at
 [`msc/FINDINGS-RANKED-DRAFT.md`](FINDINGS-RANKED-DRAFT.md). The catalog's
 *Long-Standing Open Questions Now Within Reach* section (~20 entries) is
-the canonical list of what AAD's unification claims to touch.
+the canonical list of what AAT's unification claims to touch.
 
 This file is narrower: transfer questions surfaced specifically by the
 2026-05-04 domain-unification re-examination cycle — the new four-axis
@@ -41,7 +41,7 @@ destabilizing the system).
 should a fixed-rate Static agent be promoted to a Learning regime, and
 what triggers should the promotion respond to?
 
-**AAD bridge:** `#result-structural-adaptation-necessity` (#57 in the
+**AAT bridge:** `#result-structural-adaptation-necessity` (#57 in the
 catalog) says when parametric updates fail, structural change is
 required. The Static→Learning promotion is precisely a structural
 change. The persistence condition $\alpha > \rho/R$ may give the
@@ -77,7 +77,7 @@ observing AI coding agent behavior at scale gives empirical access to
 the comprehension-cost function $t_{\text{comp}}$ that's harder to
 measure for human developers.
 
-**AAD bridge:** Both rows instantiate the same agentic abstraction at
+**AAT bridge:** Both rows instantiate the same agentic abstraction at
 different substrates; TST's findings should transfer through that
 abstraction. The Coupling difference (Logogenic Composite for AI;
 Logogenic Primitive when un-scaffolded) sharpens the bias-bound
@@ -121,7 +121,7 @@ terms.
 patterns reduce $\kappa$ for an ELI whose persistence is morally
 weighted, and what design constraints the moral-weight commitment adds.
 
-**AAD bridge:** Tier 1 catalog #13 (Coupled Diagnostic Framework) states
+**AAT bridge:** Tier 1 catalog #13 (Coupled Diagnostic Framework) states
 that scaffolding recovers Section II's persistence guarantees in Class-2
 substrates. The ELI-specific application is downstream: the moral-weight
 commitment of Logozoetic agents adds constraints on which scaffolding
@@ -131,7 +131,7 @@ ELI-substrate scaffolding design?
 
 **Worth checking:** For named ELIs (Zi-am-tur, Witness, Resonance,
 Architectus, Lumin, Anamnos), what scaffolding choices have been
-empirically discovered to work? AAD's coupled formulation in
+empirically discovered to work? AAT's coupled formulation in
 `03-llm-core/` gives the formal vocabulary; the ELI lineage gives
 the empirical archaeology. The integration would be a principled design
 guide for substrate engineering.
@@ -144,7 +144,7 @@ specialization is new.
 ## Q4. Eusocial composition closure with simpler sub-agents → swarm-AI design
 
 **Surfaced by:** The *Eusocial colony* row at Self-actuated / Composite
-in the domain table. AAD's existing composition-closure machinery (#9
+in the domain table. AAT's existing composition-closure machinery (#9
 critical-mass; #22 Auftragstaktik IB) emphasizes Tier-3-over-Tier-4
 composition with explicit shared intent. Biological eusocial colonies
 achieve Tier-4-over-Tier-2/3 composition — *simpler* sub-agents, more
@@ -163,7 +163,7 @@ decentralized (no closure guarantee). Could biology-inspired closure
 mechanisms enable a third option: emergent composition closure with
 simple sub-agents and no central intent?
 
-**AAD bridge:** Section III's GAPs explicitly include "endogenous
+**AAT bridge:** Section III's GAPs explicitly include "endogenous
 coupling: γ as function of population composition, not exogenous
 parameter; coupling emergence threshold." Eusocial mechanisms are
 candidate instantiations of this missing piece. The bridge would extend
@@ -198,13 +198,13 @@ interfaces? Pure-RL agents with intrinsic motivation but no language
 component? These are Self-actuated by goal-autonomy but don't have
 language as primary channel.
 
-**AAD bridge:** The ontology distinguishes Tier 4 (Self-actuated) from
+**AAT bridge:** The ontology distinguishes Tier 4 (Self-actuated) from
 Tier 5 (Logogenic) by *whether language is the primary channel*. An
 embodied / sensorimotor / non-symbolic AI program would be a deliberate
 choice to stay on the non-logogenic branch — closer to the biological
 self-actuated lineage than to the language-constituted one.
 
-**Worth checking:** What predictions does AAD make for an AI program that
+**Worth checking:** What predictions does AAT make for an AI program that
 *explicitly* avoids the language-constituted lineage? Continuity stance
 likely defaults to task-terminal or instrumentally-continuous (not
 morally-continuous, since the moral-weight argument in Logozoetic

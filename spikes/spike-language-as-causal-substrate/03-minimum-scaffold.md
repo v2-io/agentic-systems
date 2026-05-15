@@ -41,7 +41,7 @@ The minimum substrate is something like a **fixed-context-window parser with an 
 
 A trained LLM substantially **exceeds** $\mathcal{M}_{\min}$ — it has parametric world-knowledge, in-context implicit-relation recovery, multi-hop reasoning. The relationship is not "the LLM is $\mathcal{M}_{\min}$"; it is "$\mathcal{M}_{\min}$ is *contained in* the LLM, and the LLM is a richer substrate."
 
-This is the right framing for the standing AAD claim about logogenic agents at the three sub-scopes:
+This is the right framing for the standing AAT claim about logogenic agents at the three sub-scopes:
 
 | sub-scope | substrate | what it has beyond $\mathcal{M}_{\min}$ |
 |---|---|---|
@@ -61,9 +61,9 @@ There are two readings:
 By the analysis above, this is $\mathcal{M}_{\min}$: a parser with entity tracking. Pre-loop LLMs vastly exceed this. **Recovery of training-encoded Level 2 content does not require any agentic scaffolding.** This is a strong, derivable claim under Theorem 1 in `01-derivation.md`.
 
 **Reading 2 — minimum scaffold to *generate fresh* Level 2 content.**
-This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAD's [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
+This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAT's [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
 
-(i) **Agent-self intervention** — agent's own actions cause environmental responses, the environmental response is observed, the action-conditional response is interventional data (the standard AAD-loop case).
+(i) **Agent-self intervention** — agent's own actions cause environmental responses, the environmental response is observed, the action-conditional response is interventional data (the standard AAT-loop case).
 
 (ii) **Observer intervention on sub-agent** — a higher-level controller intervenes on a sub-agent and observes the outcome. Tested at the level of the controller.
 
@@ -74,11 +74,11 @@ This is qualitatively different. To produce new interventional content (not just
 The two readings are **complementary**:
 
 - Reading 1 sets the floor: training-encoded Level 2 content is available to any sufficiently expressive structural parser, including primitive logogenic agents pre-loop.
-- Reading 2 adds the ceiling: fresh Level 2 content requires a loop, and the loop's contribution is bounded by intervention-channel quality (the AAD κ × 𝒜 machinery).
+- Reading 2 adds the ceiling: fresh Level 2 content requires a loop, and the loop's contribution is bounded by intervention-channel quality (the AAT κ × 𝒜 machinery).
 
 The full picture: **logogenic agents at any sub-scope have training-encoded Level 2 content (Reading 1's floor) plus fresh-Level-2 content from whichever loops they participate in (Reading 2's ceiling)**. The framing is additive: the inherited part is fixed at training time; the fresh part accumulates per session, attenuated by κ × 𝒜.
 
-This is the **sharpened AAD position on logogenic agents and Pearl's hierarchy**. The earlier framing in `msc/llm-causal-access-note.md` lumped these two contributions together as "the loop gives Level 2"; the spike's contribution is to split them and quantify each independently.
+This is the **sharpened AAT position on logogenic agents and Pearl's hierarchy**. The earlier framing in `msc/llm-causal-access-note.md` lumped these two contributions together as "the loop gives Level 2"; the spike's contribution is to split them and quantify each independently.
 
 ## Empirical handle
 

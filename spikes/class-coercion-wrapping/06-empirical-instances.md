@@ -93,9 +93,9 @@ If the bare-minimum wrapping move per the brief is "explicit external $(M_W, G_W
 
 ### 1.4 PROPRIUM in the agentic-tft framing
 
-The agentic-tft cognitive-loop spec (`ref/agentic-tft/agentic-tft-cognitive-loop-spec.md`) describes the per-event cycle as PERCEIVE → CONTEXTUALIZE → CHOOSE → EFFECT. The CONTEXTUALIZE phase explicitly has five sub-operations: predict / detect-surprise / assess-weight / draw-context / update — and the brief's "Update" (sub-op 5) is a $M_W$-side update ($M_t = M_{t-1} + \eta \cdot g(\delta_t)$ in the spec). The CHOOSE phase is then where strategy ($G_W$) updates happen. **This is the brief's $f_M$/$f_G$ split written in TFT/AAD terms.** The cognitive-loop-spec is structurally closer to the brief's wrapping move than the canonical PROPRIUM ontology is — it explicitly puts belief update before strategy update, with the prediction and surprise computed against the current $M_W$ before $G_W$ enters consideration.
+The agentic-tft cognitive-loop spec (`ref/agentic-tft/agentic-tft-cognitive-loop-spec.md`) describes the per-event cycle as PERCEIVE → CONTEXTUALIZE → CHOOSE → EFFECT. The CONTEXTUALIZE phase explicitly has five sub-operations: predict / detect-surprise / assess-weight / draw-context / update — and the brief's "Update" (sub-op 5) is a $M_W$-side update ($M_t = M_{t-1} + \eta \cdot g(\delta_t)$ in the spec). The CHOOSE phase is then where strategy ($G_W$) updates happen. **This is the brief's $f_M$/$f_G$ split written in TFT/AAT terms.** The cognitive-loop-spec is structurally closer to the brief's wrapping move than the canonical PROPRIUM ontology is — it explicitly puts belief update before strategy update, with the prediction and surprise computed against the current $M_W$ before $G_W$ enters consideration.
 
-If the spike's wrapping construction lands as a derived AAD result, the cognitive-loop-spec's CONTEXTUALIZE-then-CHOOSE structure is the natural integration target — it's already laid out in the spec, just not formally type-checked.
+If the spike's wrapping construction lands as a derived AAT result, the cognitive-loop-spec's CONTEXTUALIZE-then-CHOOSE structure is the natural integration target — it's already laid out in the spec, just not formally type-checked.
 
 ---
 
@@ -238,7 +238,7 @@ CAI: train a model to follow a constitution by RLAIF — model critiques its own
 
 The brief's wrapping construction is specifically the second move. CAI/RLHF are the first move. The survey should differentiate these clearly — this is the brief's request in §F to characterize the difference.
 
-**One subtle interaction**: a CAI/RLHF-shaped model is *still a Class-3 component* in AAD's classification (its internal $M$/$G$ are still mixed). Shaping can move the leakage rate (a CAI-aligned model may have different goal-inference patterns than a base model), but it doesn't structurally separate $M$ and $G$ at the model level. So a wrapper around a CAI-aligned model is still doing class coercion; the shaping has changed the leakage characteristics (sub-spike C) but not the class.
+**One subtle interaction**: a CAI/RLHF-shaped model is *still a Class-3 component* in AAT's classification (its internal $M$/$G$ are still mixed). Shaping can move the leakage rate (a CAI-aligned model may have different goal-inference patterns than a base model), but it doesn't structurally separate $M$ and $G$ at the model level. So a wrapper around a CAI-aligned model is still doing class coercion; the shaping has changed the leakage characteristics (sub-spike C) but not the class.
 
 ---
 
@@ -302,7 +302,7 @@ Move 3 is the brief's wrapping move. It is **not the most common design choice**
 This has implications for the theorem's universality claim:
 - The theorem is **not** "every agentic LLM scaffold instantiates this move." (False in the wild.)
 - The theorem **is** "if a system instantiates this move, it is Class-1 by construction with cost $C_\text{coord}^\text{wrap}$." (Conditional, defensible.)
-- The "effective universality" claim in §4 of the brief should read: *AAD applies to all components admitting the wrapping move*, where "admitting" = (C1)–(C3) hold. **It does not claim the wrapping move is the only sensible design** — only that it's a constructive route to Class-1 compliance, when it's available and worth the tempo cost.
+- The "effective universality" claim in §4 of the brief should read: *AAT applies to all components admitting the wrapping move*, where "admitting" = (C1)–(C3) hold. **It does not claim the wrapping move is the only sensible design** — only that it's a constructive route to Class-1 compliance, when it's available and worth the tempo cost.
 
 This matches the brief's §7 caveat that "the construction may be expensive in tempo" and the §3 discussion of coercion-$\varepsilon^*$ as a quantity that can be small (wrapper changes little) or large (wrapper aggressively coerces). Many practitioners may rationally choose smaller coercion (output-structuring, one-sided scaffolding) over full wrapping, paying a different cost (Class-3-residual leakage) instead of full tempo overhead.
 
@@ -310,9 +310,9 @@ This matches the brief's §7 caveat that "the construction may be expensive in t
 
 Suggested phrasing for the theorem's scope statement based on this survey:
 
-> AAD applies *exactly* to wrappers instantiating the goal-blind / goal-conditioned query split (full Class-1). It applies *approximately* to one-sided wrappers and to wrappers that structurally separate writes but not reads (almost-Class-1, with leakage rate $\kappa_W$ depending on the missing structural separation). It does *not* apply directly to output-structuring frameworks (ReAct-style) — these are Class-3 components with shaped output, and require the leakage analysis of sub-spike C to bring them under AAD's scope.
+> AAT applies *exactly* to wrappers instantiating the goal-blind / goal-conditioned query split (full Class-1). It applies *approximately* to one-sided wrappers and to wrappers that structurally separate writes but not reads (almost-Class-1, with leakage rate $\kappa_W$ depending on the missing structural separation). It does *not* apply directly to output-structuring frameworks (ReAct-style) — these are Class-3 components with shaped output, and require the leakage analysis of sub-spike C to bring them under AAT's scope.
 
-This is more honest than a flat "AAD applies to all admissible components."
+This is more honest than a flat "AAT applies to all admissible components."
 
 ---
 
@@ -336,7 +336,7 @@ This is more honest than a flat "AAD applies to all admissible components."
 - ReAct / Reflexion / Voyager / BabyAGI / AutoGPT / MemGPT / ToT / Generative Agents / LangChain / Inspect / CAI/RLHF / ReST: **inferred from typical usage**, moderate confidence; would benefit from primary-source verification for any specific point used in segment-level work.
 - The pattern claims in §3.1 and the universality statement in §3.5: **synthesis**, confident in direction, less confident in exact wording.
 
-**Honest observation about my own limits.** I haven't read every cited paper line-by-line — the characterizations rely on training-data familiarity for most non-PROPRIUM systems. For any claim in this document that becomes load-bearing in the AAD theorem statement, primary-source verification (the paper, the repo, the actual prompts) is warranted before promoting to segment-level content. This is consistent with the project's primary-source-verification discipline.
+**Honest observation about my own limits.** I haven't read every cited paper line-by-line — the characterizations rely on training-data familiarity for most non-PROPRIUM systems. For any claim in this document that becomes load-bearing in the AAT theorem statement, primary-source verification (the paper, the repo, the actual prompts) is warranted before promoting to segment-level content. This is consistent with the project's primary-source-verification discipline.
 
 ---
 

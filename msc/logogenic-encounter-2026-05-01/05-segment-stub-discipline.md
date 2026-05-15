@@ -42,7 +42,7 @@ This is the discipline that prevents "Where did this claim come from?" investiga
 
 **Internal references:**
 - `msc/AUDIT-WORKING-193847/28-der-directed-separation.md` — Gemini auditor's logogenic-bridging notes
-- `msc/reflections/18-emergence-conditions-and-acts-blind-spots.md` — what AAD doesn't yet formalize
+- `msc/reflections/18-emergence-conditions-and-acts-blind-spots.md` — what AAT doesn't yet formalize
 
 **Open questions for verification:**
 - [specific things a future agent would need to confirm or extend]
