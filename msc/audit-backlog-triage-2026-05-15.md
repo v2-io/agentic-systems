@@ -672,3 +672,28 @@ confirmed micro-fixes, write consolidated ledger, write grouped MANIFEST,
 `git mv` graduations, commit). 451729 stays **open** (D.1, TODO §2026-05-10).
 The four `pending-findings-*` ledgers + the 19 de-novo `AUDIT-WORKING-*`
 gold dirs are **not** touched.
+
+## 2026-05-16 (cont. 3) — S30 adjudicated up; graduation proceeding (Joseph)
+
+- **Joseph directed the graduation forward this session** (overriding the
+  recommended fresh-focus-instance boundary — accepted: the wording-failure
+  class is already confirmer-cleared + committed, so the remainder is
+  mechanical application of verified specs, robust to session length).
+- **S30 adjudicated up, not buried.** Joseph: surface it as an `explore`
+  segment in the OUTLINE ("it will get its day in the light"), *unless*
+  spike-shaped. Judgment: recognized open territory between two landed
+  results with **no attempt yet** → segment-shaped, not spike-shaped (the
+  spike is the eventual *work*). Landed `01-aat-core/src/sketch-structural-adaptation-genericity.md`
+  (`type: sketch`, `status: sketch`, deps resolve) + surfaced in
+  `01-aat-core/OUTLINE.md` as an `exploratory` row in the Appendix sketch
+  cluster (the Vol-3/4 convention Joseph recalled). lint-outline unchanged
+  (still the pre-existing 3-ordering/1-missing standing-hygiene state — not
+  degraded). The consolidated-ledger S30 row is correspondingly **demoted
+  to a closure-pointer** at the live ledger (graduated → segment, analogous
+  to the `→ SP-NN` mechanism); the committed draft artifact's S30
+  research-seed text is superseded on that one row by the segment.
+- **Pre-existing standing-hygiene** (separate, not this cycle): lint-outline
+  carries 3 ordering violations + 1 missing dep
+  (`impl-orient-cascade` → `scope-observation-ambiguity-modulation`,
+  forward-ref-vs-dangling judgment) → standing-hygiene TODO; blocks no
+  graduation.
