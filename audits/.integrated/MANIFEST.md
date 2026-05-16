@@ -67,6 +67,42 @@ audits are *routed* even though follow-on work continues.
 to `audits/.integrated/…` in commit `c1c80a9` — they had been moved here
 but the live pointer still aimed at the old `msc/` path.)*
 
+### 2026-05-15 — audit-471203 de-novo cycle (2026-04-28)
+
+Adjudicated via pilot 583046; both consequential claims primary-source-
+verified by the parent. Ledger note: 471203 has **no `pending-findings`
+file** — its durable resolution record is its own SUPPLEMENT (§K
+triangulation + §L). FINAL + SUPPLEMENT graduate together (one cycle).
+
+| Finding | Disposition |
+|---|---|
+| §B F1 — stale xref to demoted `#deriv-directional-survival-exploration` | **resolved**, spot-checked: slug absent from `src/`; `disc-ciy-unified-objective.md:44` now cites `#deriv-causal-ib-lmi` |
+| §B F2, F3 — disc-ciy status-label / implicit-Markov-of-Ω | resolved per SUPPLEMENT §K; pilot first-hand-confirmed against `src/` |
+| §B F4 | resolved per SUPPLEMENT §K (pilot-verified) |
+| §B F5 — `post-composition-consistency` depends/stage | already routed: PROPOSALS SP-6 + TODO:149 + F-A cluster (584721/742613). Not a graduation blocker |
+| §B F6 — `scope-agency.md:19` Pearl `$do(a)$` before declaration | ≡ `audit-742613-FINAL:254`. Recorded under FORMAT-TODO **C12** (its existing general home) 2026-05-15 |
+| §B F7 — Tishby-Zaslavsky 2015 miscites the IB↔VFE bridge | **resolved by strengthening** (SUPPLEMENT §L option b): kept T-Z for the deep-learning IB instantiation, added web-verified **Alemi, Fischer, Dillon & Murphy 2017 (arXiv:1612.00410)** for the variational bridge. `form-information-bottleneck.md:50` |
+| §F1 — propose `#disc-theorem-import-architecture` 4th meta-segment | **PROPOSALS SP-23** (new, full schema) |
+| §F7 — commitment-state $C_t$ extension to $G_t$ | ≡ **PROPOSALS SP-12** (§D.4) — exact pre-existing match |
+| §F5 — Class-2 LLM engineering-guidance reach | subsumed by the class-coercion-via-wrapping cycle (CLAUDE.md / PROPOSALS) |
+| §F6 — 04-eli-core OUTLINE-vs-present / README over-impression | → TODO:386 (preface/README-honesty discipline) |
+| §F2, F3, F4, F8 — (PI)-uniqueness seed / composed-obstruction theorem / persistence hysteresis / CIY-naming | → polish-and-sentiment ledger S4–S7 (research-seed / naming-seed) |
+
+Files moved: `audit-471203-FINAL-2026-04-28.md`,
+`audit-471203-SUPPLEMENT-phase-2.md`.
+
+### 2026-05-15 — extracted-gemini-feedback-2026-04-26-27
+
+Self-disposed extract (carries its own `## Disposition`). Dispositions
+verified closure-direction-correct against current `src/` (math-
+strengthening spikes landed; opacity-gain → `deriv-adaptive-gain-dynamics`;
+findings-schema split adopted; README items addressed then superseded by
+the auto-gen pipeline). Soft/sentiment mirrored to the ledger: **S1**
+(Domain-transfer kind — considered-declined-with-reason), **S2** (Gemini
+schema enthusiasm — sentiment/calibration), **S3** (README 1–3 —
+superseded-by the README v2 pipeline). File moved:
+`extracted-gemini-feedback-2026-04-26-27.md`.
+
 ---
 
 *New entries are appended by the parent agent as files graduate, each with

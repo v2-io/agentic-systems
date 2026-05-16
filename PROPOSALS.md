@@ -388,6 +388,26 @@ This is non-trivial cross-segment rework — call it 4–6 sessions if pursued a
 
 **Independence.** **Low.** Touches the foundational scope segment plus eight downstream load-bearing segments; cannot parallelize with most Section III work; conflicts with Bundle 2's current sequencing.
 
+### SP-23 — `#disc-theorem-import-architecture` fourth meta-segment
+
+Surfaced in the audit-471203 de-novo cycle (FINAL §F1, 2026-04-28; Hypothesis-confidence, self-flagged *"suggested for PROPOSALS.md consideration"*). Routed here 2026-05-15 during the audit-backlog triage.
+
+**Thesis.** The three meta-segments name what AAT covers (`#disc-separability-pattern`), what it cannot reach (`#disc-identifiability-floor`), and how it constructs coordinates (`#disc-additive-coordinate-forcing`). A fourth axis is implicit: AAT is heavily *theorem-importing* (Pearl 2009 / Bareinboim 2022, Khalil 2002, Cramér 1946, Liberzon 2003, Čencov 1982, Aczél 1966, Tishby et al. 1999, Lohmiller-Slotine 1998, Nesterov 2004, Friston et al. 2017 + Bruineberg et al. 2022, Bretagnolle-Huber 1978, Otto-Villani 2000, Stuart 2010, Mitter-Newton 2005, Hafez 2026, Miller 2022, …). A `#disc-theorem-import-architecture` meta-segment would catalog the imports, their load-bearing roles, and each one's citation quality — making the import discipline first-class and completing the meta-architecture.
+
+**Merits by dimension.** *Fundamentality / beauty:* gives the integration thesis (AAT's contribution is integration, not invention) a structural home rather than only framing-prose assertion. *Approachability:* adopted-vs-derived legible at one surface. *Correctness:* institutionalizes citation-quality discipline — pairs directly with the Finding-7-class miscitation risk (Tishby-Zaslavsky-vs-Alemi, resolved 2026-05-15). The `#deriv-persistence-cost` "positive-dual of identifiability-floor" framing is already an instance of the framework recognizing the import-pattern.
+
+**Scope.** One new `disc-*` meta-segment in `01-aat-core/src/` + an OUTLINE row; cross-refs from the existing three meta-segments for symmetry. No rewrites (the catalog references existing segments).
+
+**Findings subsumed.** audit-471203 §F1 (origin). Adjacent to the prior-art-integration discipline (CLAUDE.md) and the Finding-7 citation-precision class — would give both a segment-level home.
+
+**Interactions.** Composes with Bundle 1 (epistemic-architecture foregrounding) — the import architecture is part of what makes the integration distinctive rather than reducible to its parts. Independent of Section II/III content work.
+
+**Effort.** 1–2 sessions — the imports are already enumerated across segment Findings / Epistemic-Status blocks and `ref/Novelty_defense_and_integration.md`; the work is assembly + load-bearing-role annotation.
+
+**Risks.** Catalog maintenance burden as imports evolve (the source's own stated cost). Mitigation: generate/lint the catalog from segment-level prior-art blocks rather than hand-maintain.
+
+**Status: Open — Hypothesis-grade; suggested for consideration.** **Value:** +4 framework / +3 paper (structural transparency; completes the meta-quartet). **Independence: high** (new file, additive).
+
 ---
 
 ## §H. Conventions for future audits

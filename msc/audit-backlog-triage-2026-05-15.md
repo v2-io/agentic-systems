@@ -43,9 +43,14 @@ heavy schema (thesis/merits/scope/…) is right for architectural moves but
 would lose lightweight polish nudges and sentiment; a curated ledger keeps
 the 5%-polish signal recoverable so an audit can be retired as *fully
 accounted for*. Genuinely-architectural soft findings still graduate to
-PROPOSALS; tiny high-confidence ones may just be fixed. **Provisional** —
-the pilot agent's encounter with real soft-finding volume/shape will
-stress-test this before the ledger is created for real.
+PROPOSALS; tiny high-confidence ones may just be fixed. **Created
+2026-05-15** as [`audits/polish-and-sentiment-ledger.md`](../audits/polish-and-sentiment-ledger.md)
+after pilot 583046 validated the design and surfaced the schema: bands
+`polish` / `sentiment` / `considered-declined` (the reason is the
+payload — declined ideas must not be silently re-dropped) / `research-seed`
+(graduates to PROPOSALS if it matures); status vocab includes
+`superseded-by` — the closed-then-iterated-past status the pilot flagged
+would otherwise mis-read as still-open — and `→ SP-NN` for graduation.
 
 ## Evidence hierarchy
 
@@ -60,9 +65,20 @@ first-hand re-read vs current `src/`. **`git`-recency is poisoned** by the
 51 top-level files in `audits/`. Grouped by *what evidence is expected to
 govern them*, not by presumed status. Status starts `unexamined` for all.
 
-- **Group L — ledgered cycles (2026-04-21 → 25 intakes).** Disposition
-  should be readable from `pending-findings-2026-04-2{1,2,3,5}.md` +
-  CHANGELOG, then spot-checked. Files: the four `pending-findings-*` (the
+> **Corrected 2026-05-15 (pilot 583046, primary-source-verified).** The
+> audit-id→ledger-date mapping is NOT reliable and must not be assumed.
+> No `pending-findings-*.md` references audit-id 471203 (nor, by the same
+> structure, the other 2026-04-28 FINALs 829314 / 849201). The four
+> ledgers cover the **2026-04-22 and 2026-04-23 de-novo intakes and the
+> 2026-04-24 fresh-pass triad only**. The 2026-04-28 de-novo FINALs carry
+> their **own SUPPLEMENT / §K–§L as their ledger**. Confirm each file's
+> actual ledger first-hand; never infer it from the audit-id.
+
+- **Group L — ledgered cycles (2026-04-22 → 25 intakes).** Disposition
+  readable from the cycle's *actual* ledger (a `pending-findings-*.md`
+  for the 04-22/23/24-fresh-pass intakes; the cycle's own SUPPLEMENT for
+  the 04-28 FINALs) + CHANGELOG, then spot-checked first-hand. Files: the
+  four `pending-findings-*` (the
   ledgers themselves — these *stay*, they are the durable record),
   `audit-471203-FINAL` + `-SUPPLEMENT-phase-2`, `audit-584721-FINAL`,
   `audit-613842-FINAL`, `audit-742613-FINAL` + `-SUPPLEMENT-PHASE-2-TRIAGE`,
@@ -92,10 +108,43 @@ govern them*, not by presumed status. Status starts `unexamined` for all.
 ## State machine (per top-level file)
 
 `unexamined → adjudicated (per-finding dispositions written) → routed
-(soft→ledger, arch→PROPOSALS, actionable→TODO/direct-fix, rejected/closed
-recorded) → integrated (MANIFEST entry written, git mv) | open (stays,
-backlink live)`. An *independent* pass verifies `adjudicated → routed`
-before `integrated`. Reversible via `git mv`.
+→ integrated (MANIFEST entry written, git mv) | open (stays, backlink
+live)`. An *independent* pass verifies `adjudicated → routed` before
+`integrated`. Reversible via `git mv`.
+
+**Per-finding disposition enum** (expanded 2026-05-15 from pilot 583046 —
+the original three were under-dimensioned):
+
+- `resolved` — addressed in current `src/`, verified first-hand
+  (especially: by *strengthening*, the discharge direction this project
+  prefers).
+- `correctly-rejected` — finding asked us to weaken a claim the theory
+  was instead strengthened to defend; closed *because we strengthened*,
+  not open. Concentrates in the math-heavy ledgered cycles (584721 F-A
+  cluster, 742613, the 2026-04-25 P-V1/2/3 triad) — *not* in
+  hygiene/process/soft-feedback slices. Fan-out agents told where to
+  expect these so they neither over-hunt nor under-trust clean
+  defect-resolutions.
+- `architectural` → `PROPOSALS.md` (first-class entry, full schema — not
+  a TODO one-liner).
+- `subsumed-by-later-work` — the project moved past it; *distinct from*
+  `duplicate` (a verbatim peer-audit repeat). Name the subsumer.
+- `duplicate` — verbatim/near-verbatim repeat of another audit's finding;
+  defer to that one's disposition; don't double-track.
+- `soft-polish` / `sentiment` / `considered-declined` / `research-seed`
+  → polish-and-sentiment ledger.
+- `process/instruction-feedback` — not about the framework (audit-process
+  or instruction-set feedback); themed separately so it doesn't pollute
+  framework tracking.
+- `actionable-open` → TODO (only genuinely actionable, non-duplicate) or
+  a co-owner direct-fix (high-confidence isolated).
+
+**Self-disposed-extract fast-path.** Several `extracted-*` files carry
+their own `## Disposition`. There the job is *verify-and-mirror*, not
+generate: confirm the dispositions are closure-direction-correct against
+current `src/`, mirror any soft/sentiment to the ledger, graduate. A
+cheap pre-scan (`grep -l '## Disposition' audits/extracted-*.md`) routes
+this whole sub-class fast.
 
 ## Delegation design
 
@@ -151,8 +200,37 @@ commits per batch.
 
 ## Log
 
-- **2026-05-15** — Housekeeping committed (`c1c80a9`, branch
-  `audit-backlog-cleanup`): audit working dirs consolidated `msc/`→
-  `audits/`; de-novo instructions + ripple repointed. Recon done:
-  git-recency poisoned by rename sweep; ledgers are decisive. Spine +
-  MANIFEST seeded. Pilot launching next.
+- **2026-05-15 (a)** — Housekeeping committed (`c1c80a9`): audit working
+  dirs consolidated `msc/`→`audits/`; de-novo instructions + ripple
+  repointed. Spine + MANIFEST seeded (`e303034`). Recon: git-recency
+  poisoned by rename sweep; ledgers decisive.
+- **2026-05-15 (b)** — Pilot 583046 (two-shot diagnostic) on the 471203
+  cycle + extracted-gemini-2026-04-26-27. Caught a real frame defect
+  (audit-id→ledger mapping wrong — corrected above) and under-dimensioned
+  enum (expanded above). Both consequential claims primary-source-verified
+  by parent (no-ledger fact; F1 stale-xref genuinely resolved in `src/`).
+  Adjudication: `audits/AUDIT-WORKING-583046/adjudication.md`.
+  - **471203 §B F1–F4 resolved** (F1 spot-checked: `deriv-directional-
+    survival-exploration` absent from `src/`; segment now cites
+    `#deriv-causal-ib-lmi`). **F7 (Tishby-Zaslavsky→Alemi miscitation)**
+    was the SUPPLEMENT's one open item — applied as a *strengthening*
+    (option b: kept T-Z for the DL instantiation, added the
+    web-verified Alemi et al. 2017 / arXiv:1612.00410 for the IB↔VFE
+    variational bridge). F5→post-composition-consistency already routed
+    (SP-6 / TODO:149 / F-A cluster). F6 (Pearl-`do` before declaration)
+    ≡ 742613:254 → recorded under FORMAT-TODO **C12** (its existing home;
+    not homeless as the pilot thought, not a new item).
+  - **471203 §F:** F1→**PROPOSALS SP-23** (new, full-schema,
+    theorem-import meta-segment); F7≡**SP-12** (already in PROPOSALS
+    §D.4 — exact match); F5→class-coercion-via-wrapping subsumed;
+    F6→TODO:386 (preface/README-honesty discipline); F2/F3/F4/F8→ledger
+    (S4–S7).
+  - **extracted-gemini-2026-04-26-27**: self-disposed; dispositions
+    verified closure-direction-correct against `src/`; soft/sentiment
+    mirrored to ledger (S1–S3).
+  - **Graduated** to `audits/.integrated/` (per-finding-justified in
+    MANIFEST): `audit-471203-FINAL-2026-04-28.md`,
+    `audit-471203-SUPPLEMENT-phase-2.md`,
+    `extracted-gemini-feedback-2026-04-26-27.md`.
+  - **Not yet fanned out** — frame just corrected; deliberate parallel
+    fan-out on the corrected frame is the next action.
