@@ -36,6 +36,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 - **`#deriv-sector-condition`** *(status: exact)* — *The disturbance-model containment dichotomy: $P(\tau_R \lt \infty)$ is exactly $\{0,1\}$, $\alpha$-invariant* — *Synthesis* — an exact result built from classical components.  
   [`01-aat-core/src/deriv-sector-condition.md`](01-aat-core/src/deriv-sector-condition.md)
+- **`#deriv-stochastic-non-exit`** *(status: exact)* — *The natural maximal-inequality route to infinite-horizon containment provably cannot exist under additive stochastic forcing* — *Recognition*.  
+  [`01-aat-core/src/deriv-stochastic-non-exit.md`](01-aat-core/src/deriv-stochastic-non-exit.md)
 - **`#result-certificate-existence`** *(status: exact)* — *The Contraction-Over-Drift Principle, Grounded* — *Claim recognition* that AAT's one-point sector condition under a free choice of inner product is exactly the converse-Lyapunov certificate, making the framework's contraction-over-drift organizing principle the Lyapunov-theorem equivalence rather than a heuristic.  
   [`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
 - **`#deriv-critical-mass-composition`** *(status: conditional)* — *Strong Monotonicity as the Hinge for Legitimate Macro-Agent Coarse-Graining* — *Claim novelty* on strong monotonicity as the criterion separating legitimate macro-agent coarse-graining from coexistence-only multi-agent description.  
