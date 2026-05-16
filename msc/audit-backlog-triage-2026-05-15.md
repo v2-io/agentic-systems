@@ -67,12 +67,20 @@ govern them*, not by presumed status. Status starts `unexamined` for all.
 
 > **Corrected 2026-05-15 (pilot 583046, primary-source-verified).** The
 > audit-id→ledger-date mapping is NOT reliable and must not be assumed.
-> No `pending-findings-*.md` references audit-id 471203 (nor, by the same
-> structure, the other 2026-04-28 FINALs 829314 / 849201). The four
+> No `pending-findings-*.md` references audit-id 471203. The four
 > ledgers cover the **2026-04-22 and 2026-04-23 de-novo intakes and the
-> 2026-04-24 fresh-pass triad only**. The 2026-04-28 de-novo FINALs carry
-> their **own SUPPLEMENT / §K–§L as their ledger**. Confirm each file's
-> actual ledger first-hand; never infer it from the audit-id.
+> 2026-04-24 fresh-pass triad only**.
+>
+> **Re-corrected 2026-05-16 (fan-out cluster D, primary-source-verified).**
+> "2026-04-28 FINALs carry their own SUPPLEMENT as ledger" held **only
+> for 471203**. `829314` and `849201` have **no SUPPLEMENT and no
+> `pending-findings` file** — durable evidence is the FINAL's own inline
+> Phase-2 / §K notes + first-hand re-read of current `src/`. Confirm each
+> file's actual ledger first-hand; never infer it from the audit-id, and
+> never assume a SUPPLEMENT exists. Also: the encounter tracker
+> `msc/logogenic-encounter-2026-05-01/07-audit-integration-tracker.md`
+> tracks audit-id **193847**, not 829314 (coincidental digit overlap) —
+> not a 829314 integration record.
 
 - **Group L — ledgered cycles (2026-04-22 → 25 intakes).** Disposition
   readable from the cycle's *actual* ledger (a `pending-findings-*.md`
@@ -269,3 +277,114 @@ commits per batch.
     `audit-451729-FINAL-2026-05-10`.
   - The four `pending-findings-2026-04-2X.md` are durable
     ledgers/infrastructure — read as evidence, never graduated.
+- **2026-05-16 (fan-out returned).** All 5 clusters returned deep,
+  cross-corroborating first-hand adjudications (token spend 158k–287k
+  each; convergence across clusters is itself coherence-evidence — the
+  opacity-gain strengthening independently verified in A/D/B; "strengthen-
+  before-soften passed loudly" in B/C/D/E; the corpus-redundancy net held
+  completely in E). Adjudications:
+  `audits/AUDIT-WORKING-{704218(A),628401(B),704182(C),714206(D),472914(E)}/adjudication.md`.
+  - **A** — 13 self-disposed extracts, all closure-direction-correct,
+    graduation-eligible. Catches: `extracted-codex-feedback-2026-04-28`
+    disposition is stale ("Pending" → actually resolved in
+    `bin/naming-aggregate.rb`; MANIFEST writes the *corrected*
+    disposition, not "Pending"); `bf945f78` ≡ the Opus section of
+    another file (note non-independence in MANIFEST); two files are
+    primary sources for *live* CLAUDE.md conventions (provenance value);
+    proposed ledger rows S8–S15 incl. **S8 POMDP-collapse family**
+    (4 declined Gemini big-picture, `considered-declined` with the full
+    reason as payload — recurs as an attractive simplification).
+  - **B** — 7 math-heavy; ~25/30 resolved, the majority *by
+    strengthening*, several beyond what the audit asked. All
+    graduation-eligible **except** `742613-FINAL` + `-SUPPLEMENT` which
+    carry the **Model-S non-exit defect** forward as the open
+    strengthening item → spike launched (see below). Frame surfacings
+    folded into the enum/fast-path refinements above.
+  - **C** — 4 files graduation-eligible. Two parent actions: **SN-3** —
+    upstream `def-pearl-causal-hierarchy.md:53` (+ table row) still
+    carries the bald `git checkout` Level-3 overclaim while the
+    downstream TST segment `obs-software-epistemic-properties.md` P2
+    already strengthened it (the correct language exists verbatim to
+    mirror; ~15 min co-owner direct-fix). **F-V3/F8** is correctly
+    *open* (Joseph-call Path A vs PROPOSALS SP-21, already triple-tracked
+    — graduate with it living there; do not double-track). Byproduct
+    (not a Cluster-C finding): fresh `bin/lint-outline` state — 3
+    `impl-*` ordering violations + a missing dep
+    (`impl-orient-cascade` → nonexistent
+    `scope-observation-ambiguity-modulation`: dangling vs. documented
+    forward-ref — needs judgment). → standing-hygiene TODO; blocks no
+    graduation.
+  - **D** — 8 files (829314 ×4, 849201 ×4) graduation-eligible; one tiny
+    OUTLINE table-cell fix (`829314-core-F7`, co-owner-direct). Forced
+    the spine corrections above (no SUPPLEMENT for 829314/849201; the
+    193847-not-829314 tracker fact). Opacity-gain resolved-by-
+    strengthening, converging across three independent cycles — the
+    cluster's strengthen-first exemplar for the MANIFEST.
+  - **E** — 12 graduate-ready; `audit-451729-FINAL-2026-05-10` stays
+    *open* on its single residual (D.1, already first-class in TODO
+    §2026-05-10 — routed, not homeless). The March + April-01/02 review
+    files → `subsumed-by-later-work` (the April-01/02 chain supersedes
+    itself in a documented nested-revision lineage); both `extracted-*`
+    → `retain-as-history`. **Cross-cluster:** the
+    `…-6da0db68-…-audit-instructions-lineage` doc embeds a full audit
+    whose findings belong to **Cluster C / `pending-findings-2026-04-25`**
+    — de-dup at routing so the same findings aren't double-tracked;
+    `analysis-2026-04-02-synthesis` is a curated/raw pair with the
+    deep-reviews extract (same content, *not* `diff`-duplicates).
+
+**Enum refinements (from fan-out, fold into the enum above when next
+edited):** (1) `duplicate` — *the more precise characterization governs*;
+a "harmless summary-compression" framing of a real defect is itself a
+methodology-flagged soften and must not win the dedup. (2) A ledger's
+recorded *recommended-repair* is an auditor suggestion, **not a binding**
+— strengthen-before-soften overrides a ledger-recorded soften regardless
+of the ledger's tier-1 evidence status. (3) Widen the self-disposed-
+extract fast-path to transcript files that declare their downstream
+ledger targets in a purpose header (`audits-2026-04-22-evening` is one).
+(4) **Fan-out brief defect (root-caused):** my cluster briefs omitted
+"pick a *fresh* six-digit `AUDIT-WORKING-` dir; if it exists pick other
+digits" — cluster E collided into the pre-existing tracked `472913`
+archaeology (contained: only the new `adjudication.md` was untracked, no
+prior file disturbed; relocated to `472914`). Future fan-out briefs must
+carry that line.
+
+- **2026-05-16 — Model-S non-exit strengthening spike launched
+  (background, Opus, three-completion-states).** Locus
+  primary-source-verified by parent (NOT taken from B's summary, which
+  was directionally right but imprecise): `deriv-sector-condition.md`
+  Prop A.1S (iii) — the Prop statement (~L194) and Epistemic Status
+  (~L282) justify the infinite-horizon `P(τ_R<∞)` bound via "the Markov
+  tail bound" (the fixed-time-vs-ever-exit conflation), while the proof
+  (~L242) gestures at the correct supermartingale/Doob tool. 742613-
+  SUPPLEMENT + 613842 recommend the *wrong* (soften) direction. Spike
+  brief built from the parent read. Do not edit
+  `deriv-sector-condition.md` / `spikes/INDEX.md` until it returns.
+
+## Next actions (gated; the cycle is not the taxonomy)
+
+The independent-verify gate I named to Joseph as load-bearing
+(adjudicator ≠ grad-confirmer) means graduations are **not yet done** —
+they are gated on a focused parent primary-source spot-check of each
+cluster's graduation-gating claims (the gate already caught: B's Model-S
+summary imprecision; the spine's wrong 04-28-SUPPLEMENT generalization;
+the 193847/829314 tracker confusion; the A-stale-disposition). Next
+focused turn, as **one consolidated pass** (the agents explicitly warned
+that per-cluster ledger fragments re-bury the soft signal):
+
+1. Per-cluster independent spot-check of the load-bearing graduation
+   claims (cheap given cross-corroboration; A self-disposed, E
+   redundancy-traced, D opacity-gain triangulated).
+2. Co-owner direct-fixes (high-confidence isolated): SN-3 upstream
+   Pearl-`do`/`git checkout` language; `829314-core-F7` OUTLINE cell;
+   the `hyp-mismatch-dynamics.md:54` F-V1 micro-residual.
+3. One consolidated ledger pass: S8–S15+ from A, plus D/E soft items,
+   with the recurring "epistemic honesty is extraordinary" sentiment as
+   *one attributed row* (not per-file) and the considered-declined
+   reasons as payload.
+4. Grouped MANIFEST graduation (E's routing-economy: the April-01/02
+   consolidation chain as one entry with a shared redundancy table, not
+   13 near-identical justifications), with the A-stale-disposition
+   *corrected* (not mirrored), the bf945f78 non-independence noted, and
+   742613/613842 held until the Model-S spike returns.
+5. Lint-state + F-V3/F8-routing-confirmation → standing-hygiene TODO
+   (single entries, not duplicates of existing tracking).
