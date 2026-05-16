@@ -344,6 +344,18 @@ commits per batch.
   two classes were name-indistinguishable after the msc/→audits/
   consolidation; this prefix split restores the distinction the de-novo
   "special handling" depends on.)*
+- **⚠️ Standing gate (not part of this backlog pass).** The de-novo
+  `AUDIT-WORKING-*` dirs are *"the gold"* — first-encounter cognition /
+  §14 "Wandering Thoughts," value largely orthogonal to theory-fix
+  triage. **Before any processing, mining, summarization, cleanup,
+  `.integrated/` move, or deletion of them, the responsible agent MUST
+  consult Joseph and decide _with him_; the gold must not be discarded
+  as "irrelevant" or black-holed.** Joseph does not yet know the full
+  intended disposition — only that constraint. Full statement:
+  [`audits/README.md`](../audits/README.md) (also in `CLAUDE.md` File
+  Organization → `audits/`). This gate is *separate from* the
+  consolidated graduation pass and does **not** cover the
+  `ADJUDICATION-WORKING-*` dirs.
   - **A** — 13 self-disposed extracts, all closure-direction-correct,
     graduation-eligible. Catches: `extracted-codex-feedback-2026-04-28`
     disposition is stale ("Pending" → actually resolved in
