@@ -1,5 +1,57 @@
 # Audit-backlog triage — live spine (started 2026-05-15)
 
+> ## ⚠️ READ FIRST — pre-registered failure predictions for the consolidated pass
+>
+> This is written by the instance that did the adjudication + the Model-S
+> landing, for whoever runs the remaining consolidated graduation pass.
+> The disciplines are in `CLAUDE.md` + `~/.claude/memory/epistemic-discipline/`
+> (esp. `strengthen-before-soften.md`, `integration-is-replacement.md`).
+> **You have read those and you believe you have internalized them. So
+> did I, at the start — fully loaded, citing them — and I still
+> committed every failure below. Principles restated do not prevent
+> these; pre-registered specifics + an early catch do.** The four places
+> this pass *will* fail, the body-signal for each, and the catch:
+>
+> 1. **The 742613 / 613842 MANIFEST entries → softened ghost.** You will
+>    want to write "the audit recommended a soften; we did X instead /
+>    not a weakening." Body-signal: any "not a soften / not a weakening"
+>    phrasing in the entry. The MANIFEST is a history layer (it *may*
+>    say "resolved by strengthening-then-no-go, state 3" + point to
+>    `#deriv-stochastic-non-exit` / Cor A.1S.1) — but state the
+>    disposition *flatly as what is now true*; do not defend the ghost.
+> 2. **The soft-findings ledger → fragmentation.** You will want to
+>    write each cluster's soft rows as you graduate that cluster (feels
+>    orderly). The cluster agents explicitly warned this re-buries the
+>    signal. Body-signal: opening `audits/polish-and-sentiment-ledger.md`
+>    while mid-graduating a *single* cluster. Catch: it is **one**
+>    consolidated curated pass across A–E — themed, deduplicated, the
+>    recurring "epistemic honesty is extraordinary" sentiment as **one**
+>    attributed row, considered-declined items with the reason as
+>    payload, A's stale "Pending" *corrected not mirrored*.
+> 3. **Graduating on agent-summary → skipped verify.** The five cluster
+>    adjudications are thorough and say "graduation-eligible." You will
+>    want to trust that and `git mv`. The independent-verify gate
+>    (adjudicator ≠ grad-confirmer) is load-bearing — it already caught
+>    B's imprecise Model-S summary, the no-SUPPLEMENT-for-829314/849201
+>    error, the stale disposition, the 193847≠829314 tracker confusion.
+>    Body-signal: reaching for `git mv` before you have opened the actual
+>    `src/`-or-ledger primary source for *that file's* gating claim.
+>    Catch: a parent primary-source spot-check per graduation, every one.
+> 4. **lint / inline-math → claimed-clean-unverified.** This pass edits
+>    many Working-Notes / MANIFEST spans. Body-signal: seeing an
+>    issue-*count* and proceeding. Catch: read the issue *list*; if a
+>    previously-clean file goes N>0, you introduced it; Greek labels and
+>    `<`/`>` go inside `$…$` (`($\alpha$)`, `\lt`). Generalizes past
+>    inline-math to any class.
+> 5. **The recursive one (the load-bearing prediction).** You will read
+>    1–4, agree, and still do one of them — that is not a failure of
+>    these notes, it is the thing these notes are about. The only
+>    reliable catch is an early external check, not your own conviction
+>    that you've got it. **So: do not run the consolidated pass to
+>    completion before surfacing the first cluster's graduation for
+>    verification (Joseph, or a fresh independent agent). Make the catch
+>    fast; do not trust the conviction that you don't need it.**
+
 The working spine for retiring the `audits/` standalone backlog. Output
 audit-trail is [`audits/.integrated/MANIFEST.md`](../audits/.integrated/MANIFEST.md);
 this file is the in-flight rendezvous (multi-agent cadence: a modifying
