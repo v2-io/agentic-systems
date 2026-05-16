@@ -50,7 +50,7 @@ AAT's *distinctive contribution* is not the hierarchy itself but its grounding: 
 
 **The causal hierarchy theorem.** Bareinboim et al. (2022) prove that the three levels form a strict hierarchy: Level 2 knowledge cannot in general be computed from Level 1 data alone, and Level 3 cannot be computed from Level 2 alone. This is load-bearing for AAT's Section II: evaluating $Q_O(M_t, a; \cdot)$ is a Level 2 query, so agents that need to *learn* action consequences during operation require causal structure beyond predictive models ( #der-causal-hierarchy-requirement).
 
-**Software as a uniquely rich domain for this hierarchy.** In most domains, Level 3 counterfactuals require model-based simulation with uncertain fidelity. In software development, `git checkout` provides Level 3 access with ground-truth verification — the agent can literally execute the counterfactual. This is one of software's unique epistemic properties ( #obs-software-epistemic-properties — cross-component reference, see `02-tst-core/`) and makes it an ideal testbed for causal reasoning within AAT.
+**Software as a uniquely rich domain for this hierarchy.** In most domains, Level 3 counterfactuals require model-based simulation with uncertain fidelity. Software development is the privileged exception *for a specific class*: for code-internal counterfactuals with deterministic outcomes — "what would the test suite report under implementation X instead of Y, environment fixed?" — `git checkout` plus re-implementation plus test execution is literal Level 3 realization with ground-truth verification, not a proxy. For counterfactuals crossing the agent–environment boundary (what feature sequence the team would have shipped, how the market would have responded) it is a strong executable proxy, not literal Level 3. The precise conditions — the (α) deterministic-outcome / (β) cost-commensurate-replay / (γ) content-addressed-immutable conjunction, and why the resulting uniqueness is configurational rather than necessary (with named falsifiers) — are established in #obs-software-epistemic-properties (P2; `02-tst-core/`). This scoped Level-3 access is what makes software AAT's privileged calibration laboratory for causal reasoning.
 
 **Domain instantiations of the three levels:**
 
@@ -60,7 +60,7 @@ AAT's *distinctive contribution* is not the hierarchy itself but its grounding: 
 | RL agent | Value function prediction | Action → reward observation | Regret computation |
 | Scientific method | Correlational observation | Experimental intervention | "What if we had used control X?" |
 | Military (Boyd) | Pattern recognition | Probe/feint → observe response | "What if we had attacked from the flank?" |
-| Software developer | "I think this function does X" | Run test → observe result | `git checkout` + alternative implementation |
+| Software developer | "I think this function does X" | Run test → observe result | `git checkout` + alt. impl. — literal for code-internal deterministic counterfactuals; proxy across the agent–environment boundary ( #obs-software-epistemic-properties) |
 | Immune system | Antigen pattern matching | Antibody → pathogen response | Not exercised (no counterfactual reasoning) |
 
 ## Working Notes
