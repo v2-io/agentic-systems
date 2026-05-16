@@ -1,15 +1,6 @@
 # *Volume* Adaptation & Actuation Theory (AAT)
 ## *Preface*
 
-**TODO**:
-
-- [ ] Initial Chapter layouts
-- [ ] Frontmatter
-- [ ] Convention for text that won't go into the pdf build / source markdown comments
-- [ ] "Missing" convention for pdf builds
-- [ ] Worry about pdf2text legibility in rendered output
-
-
 The mathematical core of the [Agentic Systems](../OUTLINE.md) research framework. AAT formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis for adaptive, purposeful agents under uncertainty.
 
 **Working draft.** The argument laid out claim by claim. The ordering is the current best linearization of the dependency DAG; it will change as the theory develops. Slugs are the stable identities. Treat this as a living proof sketch, not a specification.
