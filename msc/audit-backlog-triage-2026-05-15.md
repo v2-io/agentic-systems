@@ -596,3 +596,79 @@ that per-cluster ledger fragments re-bury the soft signal):
   instance (this one continued, or a fresh one with this spine + the new
   memory), not the tail of a very long session with a rising rate of
   small (all-caught) slips. Surfaced to Joseph as a checkpoint.
+
+## 2026-05-16 (cont. 2) — term rename; routing-policy doc; cascade closure; ledger drafted
+
+This file's referent term is now **"the routing tracker"**, *not* "the
+spine" — "spine" is reserved for the theory's critical path (longest
+core-claim chain), per Joseph (the file path is unchanged for now to avoid
+breaking live MANIFEST / CLAUDE.md backlinks; path-rename is a deferred
+convention-SOP step).
+
+- **`doc/audit-routing-instructions.md` created** — the authoritative
+  no-go / "ghost" protocol (1→7, 7.7 ghost-forms with archaeology-only
+  correctly demoted to the rare case), the classified-process scheme
+  (current ops / convention SOP / evolved ops / authoritative SOP on a
+  groundedness × posture refinement), the meta-stance (the filter is itself
+  unpurified; lead-vs-subagent asymmetry), and the operational reference
+  (evidence hierarchy, disposition enum + 3 fan-out refinements,
+  independent-verify gate, seam discipline, dir-prefix invariant, gold-dir
+  standing gate). **This doc supersedes the over-rotated
+  `integration-is-replacement` framing for routing purposes** — it
+  re-derives the source discipline's actual position (a no-go is
+  present-tense canon, demonstrate it; only the project-autobiography is
+  demoted, only when redundant). It is the canonical home of the disposition
+  enum and the no-go protocol.
+- **Independent fidelity review of the doc** (solicited precisely because a
+  freshly-written correction-to-an-over-rotation is the highest-risk
+  over-rotation candidate). Verdict: not an over-correction (re-derives
+  CLAUDE.md:162 + memory corollary 3). Caught one genuine loosening (§4.2
+  "obvious"-fast-path escaping the §8 external-eye gate — the soften-ghost
+  is a wording failure, "obvious" is the failure-conviction word), a missing
+  cascade-closure gate, two tightenings. **Folded** before any downstream
+  batch; recorded as the doc's own Refinement-1 scar.
+- **Per-cluster gating dispositions verified primary-source** (all 5
+  clusters confirmed; A-stale-04-28 → MANIFEST writes *resolved* not
+  "Pending"; SN-3 confirmed landed; opacity-gain ≥3-cycle convergence
+  confirmed; 451729 D.1 backlink live; corpus-redundancy confirmed).
+- **Model-S no-go cascade closure VERIFIED CLEAN** (doc §4.5 gate for
+  742613/613842). Every dependent of the falsified Prop A.1S(iii)
+  ever-exit object consumes only present-truth objects (stopped bound (i);
+  MS-persistence threshold / RMS radius (ii); fixed-time tail /
+  kind-of-guarantee (iii′)). The falsified signature appears nowhere
+  downstream of the corrected source + `#deriv-stochastic-non-exit`. Scope:
+  verified the *falsified object is not propagated* (the §4.5 requirement),
+  not a full re-audit of all ~38 frontier segments (unnecessary — a
+  propagating dependent would carry the signature; none does).
+- **Two register residuals, both settled, neither a false-object cascade:**
+  (R1) `deriv-sector-condition.md:294` Summary-cell "the framework
+  previously held a false …" — autobiographical-voice straggler the prior
+  honesty-cleanup missed (it purged the Epistemic-Status sentence + the
+  Cor A.1S.1 Findings entry; the Summary cell is the lone straggler).
+  Disposition per doc §6: demote the redundant project-history clause, keep
+  the canonical no-go. (R2) `result-sector-persistence-template.md:88` "this
+  is not a weakening" — pre-existing register cruft on a *true* `exact`
+  scope statement (provenance: a Codex "easy to miss" clarity request, not a
+  disproved-proof scar); status unchanged `exact`; settled de-defensivized
+  form agreed with Joseph (the "Important, and easy to miss:" register).
+- **Consolidated soft-findings ledger drafted pre-decisionally** at
+  [`msc/audit-routing-consolidated-ledger-draft-2026-05-16.md`](audit-routing-consolidated-ledger-draft-2026-05-16.md)
+  — one curated cross-cluster pass, S8–S29 + a consolidated process-feedback
+  P-block, themed/deduped/attributed (recurring "Section-I-strongest",
+  "honesty-load-bearing→landed", "epistemic-honesty-extraordinary",
+  Cox-necessity, process-feedback each one row not per-file); MANIFEST-
+  routing notes (§C) for the durable batch. `hyp-mismatch-dynamics:54`
+  re-characterized as a no-op (already correct in η\*-order; coarser
+  prefactor at Heuristic tier with a live pointer — do not churn).
+
+**Remaining (gated; the doc §4.2/§8 external-eye applies to the
+wording-bearing artifacts):** draft grouped MANIFEST entries +
+exact micro-fix diffs (R1 :294, R2 template:88, 829314-core-F7 OUTLINE
+cell) → route the wording-bearing artifacts (742613/613842 MANIFEST entry +
+the micro-fix replacement wordings) to a fresh independent confirmer
+(adjudicator ≠ grad-confirmer; the §8 gate, Joseph's agent-fabric
+substitution for the personal checkpoint) → durable batch (apply
+confirmed micro-fixes, write consolidated ledger, write grouped MANIFEST,
+`git mv` graduations, commit). 451729 stays **open** (D.1, TODO §2026-05-10).
+The four `pending-findings-*` ledgers + the 19 de-novo `AUDIT-WORKING-*`
+gold dirs are **not** touched.
