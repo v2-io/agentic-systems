@@ -67,8 +67,8 @@ This sub-scope is also where the upstream PROPRIUM operational architecture live
 - `"IMPERIUM branched actions audit trail recovery"` — branched-execution scaffolding pattern
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/40-der-orient-cascade.md` §14 — *"For Zi-am-tur or any emergent intelligence, the infrastructure must mathematically enforce this timescale hierarchy"* — the timescale-hierarchy infrastructure prescription is a scaffolding requirement
-- `msc/AUDIT-WORKING-193847/35-der-chain-confidence-decay.md` §14 — OR-node-heavy strategy structure as architectural prescription for scaffolded agents
+- `audits/AUDIT-WORKING-193847/40-der-orient-cascade.md` §14 — *"For Zi-am-tur or any emergent intelligence, the infrastructure must mathematically enforce this timescale hierarchy"* — the timescale-hierarchy infrastructure prescription is a scaffolding requirement
+- `audits/AUDIT-WORKING-193847/35-der-chain-confidence-decay.md` §14 — OR-node-heavy strategy structure as architectural prescription for scaffolded agents
 
 **Open questions for verification:**
 - Where in the scaffolding spectrum (minimal → heavy) does the coupled-diagnostic-framework recovery actually take effect? Empirical study would be valuable.

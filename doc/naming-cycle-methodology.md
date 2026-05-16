@@ -61,7 +61,7 @@ The `notes` column gives the aggregator a way to weight votes by depth of engage
 
 ## 3. Before the walk — workflow restatement as prerequisite
 
-After you've created your audit working directory and finished reading the four documents in the recommended order (this one, the principles file, the de-novo audit instructions, and the round's launch prompt), but *before* you begin the walk itself, write a single file at `msc/AUDIT-WORKING-<your-id>/00-workflow-restatement.md`. This is the gate between reading and working.
+After you've created your audit working directory and finished reading the four documents in the recommended order (this one, the principles file, the de-novo audit instructions, and the round's launch prompt), but *before* you begin the walk itself, write a single file at `audits/AUDIT-WORKING-<your-id>/00-workflow-restatement.md`. This is the gate between reading and working.
 
 The restatement is reconstructive, not summary. The act of putting the workflow into your own words — and answering the harder questions below — surfaces gaps in your model that recognition-reading alone can hide, and it binds you to the standard in a way that passive instruction-following does not. Voters who skip this step (or approach it as a checkbox) reliably hit the failure modes named in section 5; voters who do it well report that the rest of the work flows from it.
 

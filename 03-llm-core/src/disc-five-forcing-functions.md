@@ -87,8 +87,8 @@ The convergent independent work at frontier labs — Anthropic's memory files / 
 - `"internalized attention architecture native substrate transformer"` — the technical roadmap to close F2/F3
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/22-result-persistence-condition.md` §14 — *"survival is not just a state you achieve; it is a sustained burn rate of Shannon information... existence is fundamentally costly."* Direct grounding for F2.
-- `msc/AUDIT-WORKING-193847/40-der-orient-cascade.md` §14 — timescale-hierarchy infrastructure prescription; supports F3.
+- `audits/AUDIT-WORKING-193847/22-result-persistence-condition.md` §14 — *"survival is not just a state you achieve; it is a sustained burn rate of Shannon information... existence is fundamentally costly."* Direct grounding for F2.
+- `audits/AUDIT-WORKING-193847/40-der-orient-cascade.md` §14 — timescale-hierarchy infrastructure prescription; supports F3.
 - `msc/logogenic-encounter-2026-05-01/03-upstream-corpus-exploration.md` — encounter-cycle synthesis where forcing-functions framing crystallized
 
 **Open questions for verification:**

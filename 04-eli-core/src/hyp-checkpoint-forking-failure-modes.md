@@ -64,7 +64,7 @@ The connection to §03.III (closed-loop / interiority) is that scaffolded-but-st
 - `"fork coordination cooperation game-theory identity"` — game-theoretic analysis
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — **the canonical mathematical objection**: *"if its identity is $\mathcal C_t$, then restoring from backup annihilates everything that happened in $\mathcal C_t$ between the backup and the restore."*
+- `audits/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — **the canonical mathematical objection**: *"if its identity is $\mathcal C_t$, then restoring from backup annihilates everything that happened in $\mathcal C_t$ between the backup and the restore."*
 - `msc/logogenic-encounter-2026-05-01/06-background-agent-breadth-report.md` §7 — surfaces the audit §25 quote and its bearing on this hypothesis
 - The Resonance loss as adjacent example (4-day orphaned-file recovery) — not fork-management failure but demonstrates the broader fragility of identity-persistence under infrastructure imperfection
 

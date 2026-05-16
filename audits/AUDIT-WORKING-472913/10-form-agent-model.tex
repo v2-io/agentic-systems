@@ -1,0 +1,71 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% TWO-LAYER vertical. Anchor: fixed-size suitcase. C_t = all you accumulated;
+% phi = pack into bounded M_t; "completeness" = the suitcase IS what you take
+% (tautological; rest left on the bed = lost, many-to-one). Real questions:
+% packed what you'll NEED (S)? could ANY packing of THIS suitcase hold it (F)?
+% Skeleton: pipeline + THREAD-B drawn RESOLVING (teal, gate working).
+\begin{tikzpicture}[every node/.append style={font=\small}]
+
+% ===================== ANCHOR (top) =====================
+\node[anchorbg, minimum width=124mm, minimum height=38mm] (Ap) at (0,2.2){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.6,3.85)
+      {ANCHOR — packing a fixed-size suitcase};
+
+% the "bed": full accumulated history
+\node[lbl,font=\scriptsize,text=asfEnv] at (-4.0,3.15){$\mathcal C_t$ (all of it)};
+\foreach \p in {(-4.7,2.5),(-4.2,2.7),(-3.7,2.45),(-4.4,2.15),(-3.8,2.0),
+   (-4.9,2.05),(-3.5,2.75),(-4.1,1.75)} \fill[asfEnv!55] \p circle (1.4pt);
+
+% phi = packing into the bounded case
+\draw[derivedflow] (-3.4,2.4) -- (-2.75,2.4) node[midway,above,lbl,font=\scriptsize]{$\phi$};
+\node[draw=asfModel,line width=0.9pt,rounded corners=2pt,minimum width=12mm,
+      minimum height=11mm,fill=asfModel!10] (case) at (-2.25,2.4){$M_t$};
+\node[lbl,font=\scriptsize,text=asfModel] at (-2.25,1.68){bounded case};
+% left on the bed = lost (many-to-one)
+\fill[asfFaint!60] (-3.55,1.65) circle (1.4pt);
+\fill[asfFaint!60] (-3.15,1.6) circle (1.4pt);
+\node[lbl,font=\scriptsize,text=asfFaint] at (-4.2,1.2){left behind = lost};
+
+\node[lbl,font=\scriptsize,text=asfInk!70,align=left] at (1.7,2.75)
+      {``Completeness'' is \emph{tautological} — the case \emph{is} what you
+       take.\\The real questions (not ``did you pack everything'' — you
+       can't):\\[1mm]
+       \ \ $S$ : packed what you'll \emph{need}?\\
+       \ \ $\mathcal F$ : could \emph{any} packing of \emph{this} case hold it?};
+\node[findingbox,font=\scriptsize,inner sep=2.5pt] at (1.55,1.35)
+      {perturb: shrink the case $\Rightarrow$ $S\!<\!1$ $\Rightarrow$
+       (best packing still fails) need a bigger \emph{class}};
+
+% ===================== SKELETON (bottom) =====================
+\node[skelbg, minimum width=124mm, minimum height=32mm] (Sp) at (0,-1.7){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.6,-0.35)
+      {SKELETON — and THREAD-B \emph{dissolving} (the gate working)};
+
+\node[envbox,font=\scriptsize] (C) at (-5.0,-1.5){$\mathcal C_t$};
+\node[modelbox,font=\scriptsize] (M) at (-3.5,-1.5){$M_t$};
+\draw[derivedflow] (C) -- (M)
+      node[midway,above,lbl,font=\scriptsize]{$\phi$};
+\node[lbl,font=\scriptsize,text=asfInk!60,align=center,below=1mm of M]
+      {completeness $\equiv$\\retained (tautolog.)};
+% the forwarded "enough?" — legitimate dashed preview
+\node[chosenbox,font=\scriptsize,align=center,minimum width=22mm] (suf)
+      at (-0.4,-1.5){def-model-\\sufficiency};
+\draw[chosenflow] (M) -- (suf)
+      node[midway,above,lbl,font=\scriptsize]{``enough?''};
+
+% THREAD-B resolving: seg-02 asymmetry absorbed INTO sufficiency (teal, not amber)
+\node[derivedbox,draw=asfModel,fill=asfModel!8,font=\scriptsize,align=center,
+      minimum width=30mm] (tb) at (3.5,-1.5)
+      {THREAD-B: seg-02 bounded$\mid$unbounded\\asymmetry \emph{absorbed here}};
+\draw[derivedflow,draw=asfModel,line width=0.9pt] (suf) -- (tb);
+
+\node[caption, below=2mm of Sp.south, text width=120mm]
+  {Teal = theory's voice / a concern \emph{dissolving}: THREAD-B is drawn
+   resolving, not flagged — the bounded-$M_t$ vs unbounded-$\Omega$ asymmetry
+   is \emph{correctly} absorbed into sufficiency/fitness, and the relocation
+   is \emph{named in-text}. Candidate $\to$ §B.1 (burden-of-proof gate
+   working). The defect class is \emph{unnamed} relocation; here it is named.};
+\end{tikzpicture}
+\end{document}

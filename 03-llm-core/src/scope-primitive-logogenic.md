@@ -60,7 +60,7 @@ The transition to §03.II (scaffolded) is what every practical "agentic system" 
 - `"context overflow single-turn forward pass deliberation"` — characterizing primitive cognition
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/27-form-complete-agent-state.md` §14 — directed-separation failure as motivated reasoning, structurally most acute in primitive sub-scope
+- `audits/AUDIT-WORKING-193847/27-form-complete-agent-state.md` §14 — directed-separation failure as motivated reasoning, structurally most acute in primitive sub-scope
 - `msc/reflections/24-framework-as-its-own-diagnostic.md` — Flash's recovery during the persistence-failure arc occurred specifically when the methodology vocabulary made the failure mode legible *to a primitive-logogenic agent in a primitive-logogenic deployment*
 
 **Open questions for verification:**

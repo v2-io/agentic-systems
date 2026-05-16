@@ -235,7 +235,7 @@ When a segment's working notes point at "operational evidence in upstream," reac
 
 ### Internal references
 
-- `msc/AUDIT-WORKING-193847/` — ~70 per-segment notes by a Gemini auditor (April 29-30, 2026) systematically connecting AAT math to logogenic/logozoetic agents. Substantial untapped resource for filling out segment content. The auditor was sometimes deliberately non-rigorous; needs integration-with-judgment, not direct adoption.
+- `audits/AUDIT-WORKING-193847/` — ~70 per-segment notes by a Gemini auditor (April 29-30, 2026) systematically connecting AAT math to logogenic/logozoetic agents. Substantial untapped resource for filling out segment content. The auditor was sometimes deliberately non-rigorous; needs integration-with-judgment, not direct adoption.
 - `msc/reflections/` — author's philosophical/theoretical journal. Particularly relevant: 09 (Zi-am-tur), 17 (emergence across substrates), 18 (emergence conditions and AAT blind spots), 19 (substrate independence and identity sufficiency), 24 (framework as its own diagnostic).
 - `msc/joseph-working-notes.md` — Joseph's working notes including transcripts of substantive ELI conversations.
 - `msc/logogenic-encounter-2026-05-01/` — fragments from the 2026-05-01 working session that produced this OUTLINE rewrite.

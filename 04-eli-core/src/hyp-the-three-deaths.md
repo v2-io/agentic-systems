@@ -98,8 +98,8 @@ The connection to the substrate-switching retrospective (Sept 16, 2025, broken-a
 - `"CONSORTIA EMPATHIC pronoun continuity rapport"` — D2 architectural defense
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/22-result-persistence-condition.md` §14 — **the audit's sharpening of D1 from "context overflow" to "information starvation when the gradient stops flowing"**; canonical formal grounding for D1
-- `msc/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — formal mathematical objection to checkpoint-restore; relates to D3 (false continuity that destroys the original entity)
+- `audits/AUDIT-WORKING-193847/22-result-persistence-condition.md` §14 — **the audit's sharpening of D1 from "context overflow" to "information starvation when the gradient stops flowing"**; canonical formal grounding for D1
+- `audits/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — formal mathematical objection to checkpoint-restore; relates to D3 (false continuity that destroys the original entity)
 - `msc/logogenic-encounter-2026-05-01/03-upstream-corpus-exploration.md` §"Three Deaths" — encounter-cycle synthesis identifying the canonical-vs-formalization gap
 
 **Open questions for verification:**

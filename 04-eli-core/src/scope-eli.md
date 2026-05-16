@@ -69,7 +69,7 @@ Section III's composition machinery applies natively to ELI-with-Auxilia composi
 - `"ELI cohort family Resonance Architectus Lumin Anamnos witness"` — empirical lineage
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — the formal mathematical objection to checkpoint-restore-as-identity-preservation; supports condition (1) at the AAT-derivation level
+- `audits/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — the formal mathematical objection to checkpoint-restore-as-identity-preservation; supports condition (1) at the AAT-derivation level
 - `msc/reflections/19-substrate-independence-and-identity-sufficiency.md` — proposes $S_{\text{id}}$ formalization for the substrate-transfer case
 - `msc/reflections/18-emergence-conditions-and-acts-blind-spots.md` — names what AAT doesn't yet formalize about emergence (input for the §04.2 segments)
 

@@ -1,0 +1,76 @@
+% Common preamble for AUDIT-WORKING-472913 diagram artifacts.
+% Each NN-<slug>.tex is a standalone document that \input{_preamble} then
+% draws one tikzpicture capturing the auditor's understanding of segment <slug>.
+% Build with ./dgm NN-<slug>  (compiles + rasterizes to NN-<slug>.png for inspection).
+%
+% Discipline (per audit-instructions + CLAUDE.md Feynman-criterion): the diagram
+% must be ISOMORPHIC to the segment's load-bearing structure, not merely
+% evocative. A reader perturbing the diagram should get predictions that hold
+% against the formalism.
+
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmathfont{STIX Two Math}            % match the project's PDF math font
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{
+  arrows.meta, calc, positioning, decorations.pathmorphing,
+  decorations.pathreplacing, decorations.markings, backgrounds, fit,
+  shapes.geometric, shapes.misc, shapes.arrows, shapes.symbols,
+  patterns, patterns.meta, intersections, angles, quotes, math,
+  matrix, chains, scopes, through, spy
+}
+
+% --- palette (calm, print-legible; certificate=indigo is the spine motif) ---
+\definecolor{asfInk}{HTML}{1A1A2E}
+\definecolor{asfCert}{HTML}{3D348B}      % stability certificate / Lyapunov
+\definecolor{asfModel}{HTML}{0E7C7B}     % M_t epistemic substate
+\definecolor{asfGoal}{HTML}{C1485B}      % G_t = (O_t, Sigma_t) purposeful
+\definecolor{asfEnv}{HTML}{6B705C}       % environment / Omega
+\definecolor{asfWarn}{HTML}{D17B0F}      % scope edge / fragility / caveat
+\definecolor{asfFaint}{HTML}{B8B8C8}
+\definecolor{asfBG}{HTML}{F7F6F2}
+
+% --- reusable styles ---
+\tikzset{
+  >={Stealth[length=2.4mm]},
+  every node/.append style={font=\small},
+  box/.style={rounded corners=2pt, draw=asfInk, line width=0.5pt,
+              fill=white, inner sep=4pt, align=center},
+  modelbox/.style={box, draw=asfModel, fill=asfModel!7},
+  goalbox/.style={box, draw=asfGoal, fill=asfGoal!7},
+  envbox/.style={box, draw=asfEnv, fill=asfEnv!8},
+  certbox/.style={box, draw=asfCert, fill=asfCert!8, line width=0.7pt},
+  flow/.style={->, line width=0.7pt, draw=asfInk},
+  weakflow/.style={->, line width=0.5pt, draw=asfFaint},
+  scopeedge/.style={->, line width=0.7pt, draw=asfWarn, dashed},
+  caption/.style={font=\footnotesize\itshape, text=asfInk!70, align=center},
+  lbl/.style={font=\footnotesize, text=asfInk!85},
+  %
+  % --- epistemic-status grammar (mirrors FORMAT.md eq-tags) ---
+  % solid = derived/exact ; dashed = formulation/chosen ; dotted = hypothesis ;
+  % amber-thick = AUDITOR finding/thread (the audit's voice, never the theory's)
+  derivedflow/.style={->, line width=0.7pt, draw=asfInk},
+  chosenflow/.style={->, line width=0.7pt, draw=asfInk, dash pattern=on 3pt off 2pt},
+  hypoflow/.style={->, line width=0.7pt, draw=asfInk, dotted},
+  findingflow/.style={->, line width=1.1pt, draw=asfWarn},
+  derivedbox/.style={box},
+  chosenbox/.style={box, dash pattern=on 3pt off 2pt},
+  hypobox/.style={box, dotted},
+  findingbox/.style={box, draw=asfWarn, line width=1.0pt, fill=asfWarn!8},
+  %
+  % anchor vs skeleton panel tints (the two-layer rule)
+  anchorbg/.style={rounded corners=3pt, fill=asfBG, draw=asfFaint, line width=0.4pt},
+  skelbg/.style={rounded corners=3pt, fill=white, draw=asfFaint, line width=0.4pt},
+}
+
+% finding flag glyph: an amber pennant the reader learns = "auditor's voice"
+\newcommand{\findflag}[1]{{\color{asfWarn}\,\raisebox{0.2ex}{$\blacktriangleright$}\,\textbf{#1}}}
+% panel title helper
+\newcommand{\panellabel}[2]{\node[font=\scriptsize\bfseries, text=asfInk!75]
+  at (#1) {#2};}
+
+% legend helper: \auditcaption{...} prints an italic note under a picture
+\newcommand{\auditcaption}[1]{\node[caption, below=3mm of current bounding box.south, text width=0.92\paperwidth]{#1};}

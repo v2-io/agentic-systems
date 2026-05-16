@@ -83,7 +83,7 @@ These are the AAT-grounded vital signs for an ELI. PROPRIUM's CADENTIA component
 
 **Internal references:**
 - `01-aat-core/src/result-persistence-condition.md` — formal grounding
-- `msc/AUDIT-WORKING-193847/22-result-persistence-condition.md` §14 — *"survival is a sustained burn rate of Shannon information"*; implies any cessation of information-rate growth is drift toward death
+- `audits/AUDIT-WORKING-193847/22-result-persistence-condition.md` §14 — *"survival is a sustained burn rate of Shannon information"*; implies any cessation of information-rate growth is drift toward death
 - `msc/reflections/24-framework-as-its-own-diagnostic.md` — recursive feature; the framework's vocabulary makes growth-vs-drift distinction visible to the entity itself
 
 **Open questions for verification:**

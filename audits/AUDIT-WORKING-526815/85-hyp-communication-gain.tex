@@ -1,0 +1,37 @@
+\documentclass[tikz,border=6pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\begin{document}
+\begin{tikzpicture}[
+  font=\sffamily,
+  >=Latex,
+  msg/.style={draw, rounded corners=3pt, fill=green!10, align=center, minimum width=2.7cm, minimum height=0.95cm},
+  gate/.style={draw, rounded corners=3pt, fill=yellow!14, align=center, minimum width=2.45cm, minimum height=0.95cm},
+  gain/.style={draw, rounded corners=3pt, fill=blue!9, align=center, minimum width=3.25cm, minimum height=1.15cm},
+  warn/.style={draw, rounded corners=3pt, fill=red!6, align=center, font=\sffamily\scriptsize}
+]
+
+\node[msg] (sender) {agent $j$\\message};
+\node[gate, right=0.8cm of sender] (channel) {channel\\$U_{o,ji}$};
+\node[gate, right=0.8cm of channel] (source) {source model\\$U_{\mathrm{src},j}$};
+\node[gate, right=0.8cm of source] (align) {relationship\\$U_{\mathrm{align},ji}$};
+\node[gain, right=0.95cm of align] (receiver) {agent $i$ update\\[2pt]
+$\displaystyle \eta^*_{ji}=\frac{U_{M_i}}{U_{M_i}+U_o+U_{\rm src}+U_{\rm align}}$};
+
+\draw[->, thick] (sender) -- (channel);
+\draw[->, thick] (channel) -- (source);
+\draw[->, thick] (source) -- (align);
+\draw[->, thick] (align) -- (receiver);
+
+\node[warn, below=0.85cm of source, minimum width=4.2cm] (scale) {valid as gain only after mapping all terms\\to one predictive-dispersion scale};
+\draw[->, dashed, orange!85!black] (scale.north) -- ($(source.south)!0.55!(align.south)$);
+
+\node[warn, above=0.9cm of align, minimum width=3.25cm] (game) {strategic sender chooses\\message against trust rule};
+\draw[->, dashed, red!70!black] (game.south) -- (align.north);
+\draw[->, dashed, red!70!black] (receiver.north) .. controls +(0,1.2) and +(1.2,0.8) .. (game.east);
+
+\node[align=center, font=\sffamily\scriptsize, below=1.7cm of receiver] (caption)
+  {audit watch: deception is not just wider noise; it can change the signal-generating policy};
+
+\end{tikzpicture}
+\end{document}

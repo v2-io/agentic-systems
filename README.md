@@ -361,9 +361,9 @@ terminology/          Source-of-truth for prose vocabulary (LEXICON.md is render
 spikes/               Research spikes (reasoning trails)
   INDEX.md            Spike index with per-spike status
   PROPOSED.md         High-risk research-direction proposals
-audits/               Audit-cycle FINAL outputs + pending-findings tables
-msc/                  Other working artifacts (brainstorms, working notes)
+audits/               Audit-cycle FINAL outputs + pending-findings + per-cycle working dirs
   AUDIT-WORKING-*/    Per-cycle audit intermediate workspaces
+msc/                  Other working artifacts (brainstorms, working notes)
   naming/             Current naming-cycle votes + aggregates + rename plan
   reflections/        Author's philosophical/theoretical journal
 ref/                  Reference papers + internal references

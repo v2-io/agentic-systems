@@ -1,0 +1,80 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% TWO-LAYER vertical. Anchor: finite travel journal. Stable trip -> old
+% entries still predict tomorrow -> keep many. Chaotic trip -> the WORLD
+% makes old pages worthless -> optimal journal shortens AUTOMATICALLY at
+% fixed bag-size. Bag-size = beta = internal budget, NOT "how chaotic".
+% Skeleton: IB curve, TWO independent levers; the "lower beta because
+% volatile" error struck through (theory's own correction).
+\begin{tikzpicture}[every node/.append style={font=\small}]
+
+% ===================== ANCHOR (top) =====================
+\node[anchorbg, minimum width=124mm, minimum height=38mm] (Ap) at (0,2.2){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.5,3.85)
+      {ANCHOR — a finite travel journal};
+
+% stable trip
+\node[lbl,font=\scriptsize,text=asfModel] at (-3.5,3.25){\textbf{stable trip}};
+\foreach \i in {0,...,5}\fill[asfModel!30,draw=asfModel,line width=0.3pt]
+   (-4.5+\i*0.32,2.3) rectangle ++(0.24,0.95);
+\node[lbl,font=\scriptsize,align=center,text=asfInk!65] at (-3.5,1.75)
+      {old pages still\\predict tomorrow\\$\Rightarrow$ keep many};
+
+% chaotic trip
+\node[lbl,font=\scriptsize,text=asfGoal] at (-0.2,3.25){\textbf{chaotic trip}};
+\foreach \i in {0,1}\fill[asfModel!30,draw=asfModel,line width=0.3pt]
+   (-0.9+\i*0.32,2.3) rectangle ++(0.24,0.95);
+\foreach \i in {2,...,5}\draw[asfFaint,line width=0.3pt,dash pattern=on 1pt off 1pt]
+   (-0.9+\i*0.32,2.3) rectangle ++(0.24,0.95);
+\node[lbl,font=\scriptsize,align=center,text=asfInk!65] at (-0.2,1.75)
+      {the \emph{world} makes old\\pages worthless $\Rightarrow$\\journal
+       shortens \textbf{by itself}};
+
+\node[lbl,font=\scriptsize,text=asfInk!70,align=left] at (3.0,2.6)
+      {Bag-size $=\beta=$ \emph{internal}\\budget — \textbf{not} ``how
+       chaotic''.\\Double-count: shrink the bag\\\emph{because} chaotic
+       (chaos already\\emptied the old pages — cut twice).};
+
+% ===================== SKELETON (bottom) =====================
+\node[skelbg, minimum width=124mm, minimum height=34mm] (Sp) at (0,-1.85){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.0,-0.35)
+      {SKELETON — IB curve: \emph{two independent levers}};
+
+% axes + IB curve (two: high-rho shifted down)
+\draw[->,line width=0.6pt,draw=asfInk!70] (-4.6,-3.0) -- (-4.6,-0.7)
+      node[above,lbl,font=\scriptsize]{$I(M;Y)$ predictive};
+\draw[->,line width=0.6pt,draw=asfInk!70] (-4.6,-3.0) -- (-1.0,-3.0)
+      node[right,lbl,font=\scriptsize]{$I(M;\mathcal C)$ cost};
+\draw[derivedflow,draw=asfModel,line width=1.0pt]
+      (-4.55,-3.0) .. controls (-3.6,-1.2) and (-2.4,-1.05) .. (-1.2,-1.0)
+      node[right,lbl,font=\scriptsize,text=asfModel]{low $\rho$};
+\draw[chosenflow,draw=asfGoal,line width=1.0pt]
+      (-4.55,-3.0) .. controls (-3.9,-2.1) and (-3.0,-2.0) .. (-1.2,-1.95)
+      node[right,lbl,font=\scriptsize,text=asfGoal]{high $\rho$ (curve drops)};
+\node[lbl,font=\scriptsize,text=asfInk!60,align=center] at (-3.0,-3.35)
+      {lever 1: $\rho$ moves the \emph{curve} (via joint $p(\mathcal C,Y)$)};
+\fill[asfInk] (-2.6,-1.55) circle (1.6pt);
+\node[lbl,font=\scriptsize] at (-2.0,-1.4){$\beta$ point};
+\node[lbl,font=\scriptsize,text=asfInk!60,align=center] at (-2.2,-0.75)
+      {lever 2: $\beta$ slides the \emph{point} (internal cost)};
+
+% the tempting error: move BOTH for one cause -> struck through (theory's fix)
+\node[font=\scriptsize,align=center,text=asfWarn] (err) at (2.3,-1.5)
+      {tempting error:\\``lower $\beta$ because\\volatile'' $=$
+       double-count};
+\draw[asfWarn,line width=1.3pt] (0.95,-1.05) -- (3.65,-1.95);
+\draw[asfWarn,line width=1.3pt] (0.95,-1.95) -- (3.65,-1.05);
+\node[derivedbox,draw=asfModel,fill=asfModel!8,font=\scriptsize,align=center,
+      minimum width=30mm] at (2.3,-2.75)
+      {theory's own correction: $\rho\!\to$ curve, $\beta\!\to$ point —
+       \emph{separate} (a strength, not a finding)};
+
+\node[caption, below=2mm of Sp.south, text width=120mm]
+  {Solid teal = `exact` IB-as-applied-theorem core; dashed crimson =
+   robust-qualitative $\beta(\rho,\pi)$ direction; the struck-through amber is
+   an error the \emph{segment itself} refutes (theory's voice, not the
+   audit's). No audit finding here — seg 11 is an §E exemplar and the
+   anti-F2.};
+\end{tikzpicture}
+\end{document}

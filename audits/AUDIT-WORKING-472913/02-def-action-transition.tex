@@ -1,0 +1,72 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% My new understanding = the closed loop (seg 02's stated content) PLUS the
+% bounded/unbounded asymmetry in the dual-Markov move (the audit insight,
+% THREAD-B). The inset is isomorphic: perturb by "demand Markov-by-breadth"
+% and the two objects respond differently — Omega absorbs it for free, M_t
+% hits a wall. That differential response is the load-bearing content.
+\begin{tikzpicture}
+
+% ---------------- left: the fundamental loop with two opacity lenses --------
+\begin{scope}
+  \node[envbox, minimum width=17mm, minimum height=11mm] (om) at (0,0)
+        {$\Omega_t$};
+  \node[modelbox, right=34mm of om, minimum width=17mm, minimum height=11mm]
+        (ag) {agent};
+
+  % observation path through opacity lens h
+  \draw[flow] (om.north) .. controls +(up:8mm) and +(up:8mm) ..
+        node[name=hlens, pos=0.5] {} (ag.north);
+  \node[circle, draw=asfWarn, fill=asfWarn!12, line width=0.6pt,
+        minimum size=6mm, font=\scriptsize] at (hlens) {$h$};
+  \node[lbl, font=\scriptsize, above=6.5mm of hlens, text=asfWarn]
+        {unknown · lossy};
+  \node[lbl, font=\scriptsize] at ($(om.north east)!0.5!(ag.north west)+(0,1mm)$)
+        {$o_t$};
+
+  % action path through opacity "lens" T
+  \draw[flow] (ag.south) .. controls +(down:8mm) and +(down:8mm) ..
+        node[name=tlens, pos=0.5] {} (om.south);
+  \node[circle, draw=asfWarn, fill=asfWarn!12, line width=0.6pt,
+        minimum size=6mm, font=\scriptsize] at (tlens) {$T$};
+  \node[lbl, font=\scriptsize, below=6.5mm of tlens, text=asfWarn]
+        {unknown · stochastic};
+  \node[lbl, font=\scriptsize] at ($(om.south east)!0.5!(ag.south west)+(0,-1mm)$)
+        {$a_t$};
+
+  \node[caption, below=15mm of om.south east, text width=46mm]
+    {The loop closes only through two opaque maps. Knowing either trivializes
+     adaptation.};
+\end{scope}
+
+% ---------------- right: the dual-Markov asymmetry (audit insight) ----------
+\begin{scope}[shift={(7.4,0)}]
+  \node[lbl, font=\small\bfseries, text=asfInk] at (1.4,2.05)
+        {“Markov-by-breadth’’ — same move, asymmetric cost};
+
+  % Omega side: extensible, augmentation free (dashed = unbounded growth)
+  \node[envbox, minimum width=13mm, minimum height=9mm] (o0) at (0,0.9)
+        {$\Omega$};
+  \draw[asfEnv, dashed, line width=0.5pt] (o0.north east) -- ++(1.0,0.35);
+  \draw[asfEnv, dashed, line width=0.5pt] (o0.south east) -- ++(1.0,-0.35);
+  \node[lbl, font=\scriptsize, text=asfEnv, align=left] at (3.05,0.9)
+        {unbounded:\\augment freely\\\textbf{(WLOG)}};
+
+  % M_t side: fixed capacity, augmentation hits the wall
+  \node[modelbox, minimum width=13mm, minimum height=9mm] (m0) at (0,-1.0)
+        {$M_t$};
+  \draw[asfModel, line width=0.6pt, ->] (m0.east) -- (1.05,-1.0);
+  % the capacity wall the augmentation arrow slams into
+  \draw[asfGoal, line width=1.2pt] (1.15,-1.62) -- (1.15,-0.38);
+  \node[lbl, font=\scriptsize, text=asfGoal] at (1.15,-1.82) {capacity $R$};
+  \node[lbl, font=\scriptsize, text=asfModel, align=left] at (3.05,-1.0)
+        {bounded $\phi(\mathcal C_t)$:\\augment $\to$ wall\\\textbf{(has teeth)}};
+
+  \node[caption, below=10mm of m0.south west, text width=50mm]
+    {THREAD-B: segment frames both as cost-free ``commitments about breadth’’;
+     only the $\Omega$ side actually is.};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

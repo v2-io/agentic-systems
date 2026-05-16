@@ -1,0 +1,65 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% TWO-LAYER vertical. Anchor: image compression — within a representation
+% CLASS the quality slider (parametric) hits a ceiling F<1; only switching
+% class raises it. Isomorphic to S (survived) vs F (class ceiling) and the
+% "low ceiling => change class not parameters" seed. Skeleton: the pipeline +
+% the LEGITIMATE dashed forward-preview arrow (F2 calibration contrast).
+\begin{tikzpicture}[every node/.append style={font=\small}]
+
+% ===================== ANCHOR (top) =====================
+\node[anchorbg, minimum width=124mm, minimum height=40mm] (Ap) at (0,2.3){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.4,4.05)
+      {ANCHOR — a slider has a ceiling the \emph{format} sets};
+
+% class A: coarse palette — slider improves but ceiling is low
+\node[lbl,font=\scriptsize,text=asfModel] at (-3.6,3.55){class A (8-colour)};
+\draw[derivedflow] (-4.5,1.45) -- (-4.5,3.15) node[above,lbl,font=\scriptsize]{$S$};
+\draw[derivedflow] (-4.55,1.5) -- (-2.0,1.5) node[right,lbl,font=\scriptsize]{tune (parametric)};
+\draw[chosenflow,draw=asfGoal,line width=0.9pt] (-4.5,2.45) -- (-2.2,2.45);
+\node[lbl,font=\scriptsize,text=asfGoal] at (-3.3,2.68){ceiling $\mathcal F_A<1$};
+\draw[derivedflow,draw=asfModel] (-4.5,1.6) .. controls (-3.6,2.2) and (-3.0,2.4) .. (-2.2,2.42);
+
+% class switch (the remedy): truecolor — ceiling rises
+\node[lbl,font=\scriptsize,text=asfModel] at (1.0,3.55){class B (truecolor)};
+\draw[derivedflow] (-0.3,1.45) -- (-0.3,3.15) node[above,lbl,font=\scriptsize]{$S$};
+\draw[derivedflow] (-0.35,1.5) -- (2.4,1.5) node[right,lbl,font=\scriptsize]{tune};
+\draw[chosenflow,draw=asfGoal,line width=0.9pt] (-0.3,3.0) -- (2.2,3.0);
+\node[lbl,font=\scriptsize,text=asfGoal] at (1.0,3.22){ceiling $\mathcal F_B\!\approx\!1$};
+\draw[derivedflow,draw=asfModel] (-0.3,1.6) .. controls (0.8,2.6) and (1.4,2.9) .. (2.1,2.97);
+\draw[findingflow,draw=asfModel,line width=1.0pt] (-2.0,2.45) .. controls +(right:7mm) and +(left:7mm) .. (-0.35,2.3);
+\node[lbl,font=\scriptsize,text=asfModel,align=center] at (-1.15,1.95)
+      {switch \emph{class}\\not slider};
+
+\node[lbl,font=\scriptsize,text=asfInk!65,align=left] at (4.0,2.3)
+      {Perturb: lower the\\format ceiling $\Rightarrow$\\no slider setting\\
+       reaches $S{=}1$ $\Rightarrow$\\must change class.};
+
+% ===================== SKELETON (bottom) =====================
+\node[skelbg, minimum width=124mm, minimum height=30mm] (Sp) at (0,-1.55){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.4,-0.35)
+      {SKELETON — the chapter pipeline + a \emph{legitimate} forward-preview};
+
+\node[envbox,font=\scriptsize] (C) at (-4.2,-1.55){$\mathcal C_t$};
+\node[modelbox,font=\scriptsize] (M) at (-2.4,-1.55){$M_t$};
+\draw[derivedflow] (C) -- (M) node[midway,above,lbl,font=\scriptsize]{$\phi$};
+\node[lbl,font=\scriptsize,text=asfInk!60,below=0.5mm of M]{$S(M_t)$ survived};
+\node[draw=asfGoal,line width=0.7pt,rounded corners=2pt,fill=asfGoal!8,
+      font=\scriptsize] (F) at (-0.2,-1.55){$\mathcal F(\mathcal M)$ ceiling};
+\draw[derivedflow] (M) -- (F);
+
+% the LEGITIMATE dashed preview arrow to Ch.4 (F2 calibration contrast)
+\node[chosenbox,font=\scriptsize,align=center,minimum width=24mm] (ch4)
+      at (3.0,-1.55){Ch.4: structural-\\adaptation-necessity};
+\draw[chosenflow] (F.east) -- (ch4.west)
+      node[midway,above,lbl,font=\scriptsize]{previewed};
+
+\node[caption, below=2mm of Sp.south, text width=120mm]
+  {\textbf{Dashed} = previewed-here / derived-later — the \emph{legitimate}
+   forward-reference (prose preview, no derivation tag). \emph{Compare F2:}
+   this is exactly how a Ch.\,$n$ segment should point at a downstream
+   result; F2's segment instead carried a `*[Derived]*` tag for the
+   downstream result. This intro is the in-corpus standard F2 fails.};
+\end{tikzpicture}
+\end{document}

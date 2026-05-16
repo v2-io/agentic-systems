@@ -1,0 +1,46 @@
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+
+\begin{document}
+\begin{tikzpicture}[
+  font=\sffamily,
+  box/.style={draw, rounded corners=3pt, align=center, minimum width=37mm, minimum height=11mm, fill=white},
+  gate/.style={draw, rounded corners=3pt, align=center, minimum width=35mm, minimum height=10mm, fill=yellow!12},
+  note/.style={align=center, font=\sffamily\scriptsize},
+  arrow/.style={-Latex, thick, draw=black!65},
+  bad/.style={-Latex, thick, dashed, draw=red!75!black}
+]
+
+\node[box, fill=blue!7] (pred) at (0,1.4)
+  {$\Sigma_t$ edge $(i,j)$\\predicts $\mathbb{E}[\Delta V_O]$};
+\node[box, fill=green!7] (obs) at (0,-1.4)
+  {traversal observed\\realized $\Delta V_O$};
+
+\node[gate] (exec) at (4.1,1.4)
+  {execution fidelity\\was step $j$ followed?};
+\node[gate] (credit) at (4.1,-1.4)
+  {credit assignment\\which edge caused\\the change?};
+
+\node[box, fill=orange!8, minimum width=42mm] (resid) at (8.4,0)
+  {$r_{ij}=$ predicted increment\\minus attributed observation};
+
+\draw[arrow] (pred) -- (exec);
+\draw[arrow] (obs) -- (credit);
+\draw[arrow] (exec) -- (resid);
+\draw[arrow] (credit) -- (resid);
+
+\node[box, fill=purple!7, minimum width=42mm] (agg) at (8.4,-2.55)
+  {$\delta_{\rm strategic}=\left(\sum w_{ij}r_{ij}^2\right)^{1/2}$\\aggregate alarm};
+\draw[arrow] (resid) -- (agg);
+
+\node[box, fill=red!6, minimum width=52mm] (ambig) at (4.1,-3.65)
+  {if a gate fails:\\bad plan, bad execution,\\model error, or joint effect};
+\draw[bad] (credit.south) -- (ambig.north);
+
+\node[note, fill=gray!8, draw, rounded corners=3pt, minimum width=82mm] at (4.2,3.0)
+  {edge localization is a conditional privilege, not automatic from the scalar residual};
+
+\end{tikzpicture}
+\end{document}

@@ -92,8 +92,8 @@ For implementations on the heterogeneous-substrate auxilia hierarchy (#def-auxil
 - `"runtime-level directed separation motivated reasoning external pressure"` — structural argument
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/27-form-complete-agent-state.md` §14 — the broader directed-separation-as-anti-sycophancy framing that the runtime-level split inherits
-- `msc/AUDIT-WORKING-193847/47-scope-multi-agent.md` §14 — goal-blind routing as structural requirement (the split is the operational mechanism)
+- `audits/AUDIT-WORKING-193847/27-form-complete-agent-state.md` §14 — the broader directed-separation-as-anti-sycophancy framing that the runtime-level split inherits
+- `audits/AUDIT-WORKING-193847/47-scope-multi-agent.md` §14 — goal-blind routing as structural requirement (the split is the operational mechanism)
 - `msc/logogenic-encounter-2026-05-01/06-background-agent-breadth-report.md` §8 — agent's breadth-pass identification of this segment as load-bearing; the IMPERIUM/ARBITRIUM split is one of the items the agent specifically flagged
 
 **Open questions for verification:**

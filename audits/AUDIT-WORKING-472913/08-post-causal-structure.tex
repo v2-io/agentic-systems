@@ -1,0 +1,72 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% TWO-LAYER vertical. Anchor: arrow-of-time dominoes — A causes B only if A
+% precedes B; topple forward only; reverse the arrow => loop collapses.
+% Skeleton: coupling spectrum + agency|adaptive boundary + F3 (the word
+% "nominal" pinned to two opposite-scope points across segs 06<->08).
+\begin{tikzpicture}[every node/.append style={font=\small}]
+
+% ===================== ANCHOR (top) =====================
+\node[anchorbg, minimum width=124mm, minimum height=34mm] (Ap) at (0,2.0){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.7,3.35)
+      {ANCHOR — the arrow of time is the primitive cause-arrow};
+
+% domino row: a_{t-1} ... o_t, can only topple forward
+\foreach \i in {0,...,5}{
+  \fill[asfModel!18,draw=asfModel,line width=0.5pt]
+        (\i*0.95-2.6,1.35) rectangle ++(0.34,1.05);}
+\draw[derivedflow,line width=1.1pt] (-2.9,0.95) -- (2.7,0.95)
+      node[right,lbl,font=\scriptsize]{time};
+\node[lbl,font=\scriptsize] at (-2.43,2.65){$a_{t-1}$};
+\node[lbl,font=\scriptsize] at (2.16,2.65){$o_t$};
+\node[lbl,font=\scriptsize,text=asfInk!60] at (-0.1,2.62)
+      {topple \emph{forward} only};
+% the forbidden reverse arrow
+\draw[findingflow,draw=asfFaint,line width=0.9pt,dash pattern=on 2pt off 2pt]
+      (2.16,1.78) .. controls +(up:6mm) and +(up:6mm) .. (-2.43,1.78);
+\node[lbl,font=\scriptsize,text=asfFaint] at (-0.1,3.15)
+      {$o_t$ cannot pick $a_{t-1}$ (reverse $\Rightarrow$ loop collapses)};
+
+\node[lbl,font=\scriptsize,text=asfInk!65,align=left] at (4.0,2.0)
+      {push-strength\\$=$ coupling:\\strong→weak→\\query-only→zero};
+
+% ===================== SKELETON (bottom) — coupling spectrum + F3 =========
+\node[skelbg, minimum width=124mm, minimum height=36mm] (Sp) at (0,-1.85){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.55,-0.35)
+      {SKELETON — coupling spectrum, the agency$\mid$adaptive seam, and F3};
+
+% the spectrum axis
+\draw[line width=2.0pt,draw=asfFaint] (-5.0,-1.95) -- (5.0,-1.95);
+\foreach \x/\t in {-4.2/{strong},-1.7/{weak},1.0/{query-only},4.0/{zero}}
+  \node[lbl,font=\scriptsize] at (\x,-2.35){\t};
+\foreach \x in {-4.2,-1.7,1.0,4.0}\fill[asfInk!55] (\x,-1.95) circle (1.3pt);
+
+% agency | adaptive boundary (between query-only and zero)
+\draw[derivedflow,draw=asfGoal,line width=0.9pt] (2.5,-1.3) -- (2.5,-2.55);
+\node[lbl,font=\scriptsize,text=asfGoal,align=center] at (2.5,-0.95)
+      {agency $\mid$ adaptive\\seam (cond 4)};
+\node[lbl,font=\scriptsize,text=asfGoal] at (-1.6,-1.55){$\leftarrow$ within agency};
+\node[lbl,font=\scriptsize,text=asfFaint] at (4.0,-1.55){adaptive only $\rightarrow$};
+
+% F3: "nominal" pinned to two opposite-scope points
+\node[findingbox,font=\scriptsize,align=center,minimum width=33mm] (f3)
+      at (-0.2,-3.25){\findflag{F3}\ ``\textbf{nominal}'' = \emph{query-only}
+      here (in agency) \ \textbf{but} = \emph{zero} in seg 06 (out)};
+\draw[findingflow] (f3.north -| 1.0,-1.95) ++(0,0) coordinate (qo);
+\draw[findingflow] (-0.2,-2.95) .. controls +(up:4mm) and +(down:6mm) .. (1.0,-2.0);
+\draw[findingflow] (-0.2,-2.95) .. controls +(up:4mm) and +(down:6mm) .. (4.0,-2.0);
+% teal strengthen-fix
+\node[lbl,text=asfModel,font=\scriptsize,align=center] at (-3.6,-3.2)
+      {fix: bullet→\\``query-only''\\(already in-prose)};
+\draw[derivedflow,draw=asfModel,line width=0.9pt] (-2.55,-3.2) -- (-1.4,-3.2)
+      -- (-1.4,-2.05);
+
+\node[caption, below=8mm of Sp.south, text width=120mm]
+  {Solid teal = theory's voice / the in-text strengthen-fix; dashed grey =
+   the forbidden reverse-causal arrow; \findflag{amber} = audit's voice only.
+   The postulate itself (temporal-precedence causality) is textbook-clean —
+   the only defect is the \textbf{nominal} label colliding across the
+   agency seam (F3); the postulate is the in-corpus standard F2 should meet.};
+\end{tikzpicture}
+\end{document}

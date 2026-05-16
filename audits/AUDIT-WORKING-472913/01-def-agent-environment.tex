@@ -1,0 +1,82 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% Isomorphic claim: AAT's observation channel is a LOSSY APERTURE. Scope = the
+% region where the aperture is not fully open. Perturb (open it fully) and the
+% adaptive apparatus degenerates to a ghost: "no model, no mismatch, no
+% adaptation" (segment Discussion). Two panels make the boundary-case
+% prediction visible.
+\begin{tikzpicture}[node distance=6mm]
+
+% ---------- helper: an aperture drawn as a converging funnel ----------
+% width of the throat encodes information loss: narrow throat = high loss.
+\newcommand{\aperture}[4]{% (#1)=anchor x, (#2)=y, (#3)=throat half-height, (#4)=color
+  \fill[#4!18] (#1,#2+0.9) -- (#1+0.9,#2+#3) -- (#1+0.9,#2-#3) -- (#1,#2-0.9) -- cycle;
+  \draw[#4, line width=0.6pt] (#1,#2+0.9) -- (#1+0.9,#2+#3);
+  \draw[#4, line width=0.6pt] (#1,#2-0.9) -- (#1+0.9,#2-#3);
+}
+
+% ===================== PANEL A — IN SCOPE =====================
+\begin{scope}[shift={(0,0)}]
+  % environment cloud
+  \node[cloud, cloud puffs=13, cloud ignores aspect, draw=asfEnv,
+        fill=asfEnv!12, line width=0.6pt, minimum width=26mm,
+        minimum height=20mm] (envA) at (0,0) {$\Omega$};
+  \node[lbl, text=asfEnv, align=center, font=\scriptsize] at (0,-1.55)
+        {totality external\\to the agent};
+
+  % lossy aperture (narrow throat)
+  \aperture{1.55}{0}{0.16}{asfWarn}
+  \node[lbl, font=\scriptsize, text=asfWarn] at (2.05,1.15) {loss $>0$};
+
+  % agent with internal state (the recursive coil) + alive machinery
+  \node[modelbox, right=20mm of envA, minimum width=22mm,
+        minimum height=15mm] (agA) {};
+  \node at (agA.north) [above=0.5mm, lbl, text=asfModel] {\textbf{agent}};
+  \node[circle, draw=asfModel, line width=0.6pt, minimum size=7mm]
+        (stA) at (agA) {};
+  \draw[asfModel, line width=0.6pt, ->] (stA.east) arc (0:300:3.5mm);
+  \node[lbl, font=\scriptsize, text=asfModel, below=0.5mm of stA]
+        {internal state};
+
+  % observation (through aperture) and action (return)
+  \draw[flow] (1.55,0.55) -- (agA.west|-stA) node[midway,above,lbl,
+        font=\scriptsize] {$o_t$};
+  \draw[flow] (agA.south) .. controls +(down:7mm) and +(down:9mm) ..
+        node[midway,below,lbl,font=\scriptsize] {$a_t$} (envA.south);
+
+  \node[caption, below=11mm of envA.south, text width=52mm]
+    {\textbf{In scope.} Aperture partly closed $\Rightarrow$ genuine
+     uncertainty $\Rightarrow$ model, mismatch, adaptation are all
+     non-vacuous.};
+\end{scope}
+
+% ===================== PANEL B — OUT OF SCOPE =====================
+\begin{scope}[shift={(8.4,0)}]
+  \node[cloud, cloud puffs=13, cloud ignores aspect, draw=asfEnv,
+        fill=asfEnv!12, line width=0.6pt, minimum width=26mm,
+        minimum height=20mm] (envB) at (0,0) {$\Omega$};
+
+  % aperture fully open (throat = full height): lossless
+  \fill[asfFaint!25] (1.55,0.9) rectangle (2.45,-0.9);
+  \draw[asfFaint, line width=0.6pt] (1.55,0.9) -- (2.45,0.9);
+  \draw[asfFaint, line width=0.6pt] (1.55,-0.9) -- (2.45,-0.9);
+  \node[lbl, font=\scriptsize, text=asfFaint] at (2.0,1.15) {loss $=0$};
+
+  % agent collapsed to a ghost
+  \node[box, dashed, draw=asfFaint, text=asfFaint, right=20mm of envB,
+        minimum width=22mm, minimum height=15mm, align=center]
+        (agB) {\itshape no model\\\itshape no mismatch\\\itshape no adaptation};
+  \node at (agB.north) [above=0.5mm, lbl, text=asfFaint] {(agent vacuous)};
+
+  \draw[weakflow] (1.55,0) -- (agB.west) node[midway,above,lbl,
+        font=\scriptsize, text=asfFaint] {$\Omega_t$ direct};
+
+  \node[caption, below=11mm of envB.south, text width=52mm]
+    {\textbf{Out of scope.} Direct full access $\Rightarrow$ the entire
+     Section\,I apparatus degenerates. Excluded \emph{by the founding
+     definition}, not by an assumption.};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# dgm — compile one audit diagram artifact and rasterize it for inspection.
+#
+# Usage:  ./dgm NN-slug            (compiles NN-slug.tex -> NN-slug.pdf -> NN-slug.png)
+#         ./dgm NN-slug.tex        (extension optional)
+#
+# Each NN-slug.tex is a \documentclass{standalone} doc that \input{_preamble}.
+# We compile in this directory (so \input{_preamble} resolves), keep the PDF as
+# the citable artifact, and emit a PNG so the auditor can visually inspect the
+# result with the Read tool and iterate.
+#
+# Rationale for the harness (audit-instructions §1 / Joseph's modification):
+# the diagram is a comprehension instrument; fast compile+look+iterate is the
+# point. Latex aux files are scratch and are cleaned.
+
+set -euo pipefail
+cd "$(dirname "$0")"
+
+base="${1:?usage: ./dgm NN-slug}"
+base="${base%.tex}"
+
+if [[ ! -f "$base.tex" ]]; then
+  echo "dgm: $base.tex not found" >&2
+  exit 1
+fi
+
+# Compile (twice is unnecessary for standalone single-picture docs; once is
+# enough unless \ref/positioning needs settling — rerun manually if so).
+if ! lualatex -interaction=nonstopmode -halt-on-error "$base.tex" >"$base.log" 2>&1; then
+  echo "dgm: lualatex FAILED for $base — tail of log:" >&2
+  tail -n 30 "$base.log" >&2
+  exit 1
+fi
+
+# Rasterize at a resolution that keeps small math labels legible on inspection.
+pdftoppm -png -r 300 "$base.pdf" "$base" >/dev/null 2>&1
+# pdftoppm appends -1 for single-page; normalize to NN-slug.png
+if [[ -f "$base-1.png" ]]; then mv -f "$base-1.png" "$base.png"; fi
+
+# Clean latex scratch; keep .tex (source), .pdf (artifact), .png (inspection).
+rm -f "$base.aux" "$base.log" "$base.out"
+
+echo "dgm: ok -> $base.pdf  $base.png"

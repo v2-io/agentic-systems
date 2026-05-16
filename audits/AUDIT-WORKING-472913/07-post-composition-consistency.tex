@@ -1,0 +1,66 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% TWO-LAYER, VERTICAL STACK (anchor top / skeleton bottom — legible + book-page
+% shaped). Anchor: developer ⊂ team ⊂ org, same loop each level (postulate);
+% perturb -> Brooks. Skeleton: F2 in FOUR marks only (minimalism audit).
+\begin{tikzpicture}[every node/.append style={font=\small}]
+
+% ===================== ANCHOR (top) =====================
+\node[anchorbg, minimum width=120mm, minimum height=40mm] (Ap) at (0,2.4){};
+\node[font=\scriptsize\bfseries, text=asfInk!75] at (-4.4,4.0)
+      {ANCHOR — the same adaptive loop at every nesting level};
+
+\node[draw=asfModel,line width=0.6pt,rounded corners=3pt,minimum width=52mm,
+      minimum height=24mm,fill=asfModel!4] (org) at (-2.2,2.3){};
+\node[lbl,text=asfModel,font=\scriptsize] at (-2.2,3.25){organization};
+\node[draw=asfModel,line width=0.6pt,rounded corners=3pt,minimum width=34mm,
+      minimum height=15mm,fill=asfModel!8] (team) at (-2.2,2.05){};
+\node[lbl,text=asfModel,font=\scriptsize] at (-2.2,2.62){team};
+\node[draw=asfModel,line width=0.8pt,rounded corners=2pt,minimum width=15mm,
+      minimum height=8mm,fill=asfModel!16] (dev) at (-2.2,1.9){};
+\draw[derivedflow] ($(dev.center)+(0:2.4mm)$) arc (0:300:2.4mm);
+\node[lbl,font=\scriptsize] at (-2.2,1.55){developer};
+
+\node[lbl,font=\scriptsize,text=asfInk!65,align=left] at (2.9,2.95)
+      {Each box runs the \emph{same} cycle and is\\well-posed on its own —
+       that is the\\postulate (the boundary is a choice).};
+\node[findingbox,font=\scriptsize,inner sep=3pt] (br) at (2.9,1.7)
+      {perturb: $\tau_{\text{eq}}\!\uparrow$ at fixed $\tau_{\text{ext}}$
+       $\Rightarrow$ composite breaks (Brooks)};
+
+% ===================== SKELETON (bottom) — F2 in 4 marks =====================
+\node[skelbg, minimum width=120mm, minimum height=34mm] (Sp) at (0,-1.7){};
+\node[font=\scriptsize\bfseries, text=asfInk!75] at (-3.7,-0.35)
+      {SKELETON — F2: a Ch.1 postulate \emph{derived from the end of the book}};
+
+% (1) the book spine
+\draw[line width=2.2pt, draw=asfFaint] (-5.0,-2.05) -- (5.0,-2.05);
+\foreach \x/\t in {-4.4/{Part I},-1.4/{Part II},1.4/{Part III},4.2/{App A}}
+  \node[lbl,font=\scriptsize,text=asfInk!55] at (\x,-2.45){\t};
+% (2) the segment marker near the left (Part I, Ch.1)
+\node[chosenbox,font=\scriptsize,align=center,minimum width=22mm] (pcc)
+      at (-4.0,-1.15){post-composition-\\consistency · postulate};
+\draw[derivedflow] (pcc.south) -- (-4.0,-1.95);
+% (3) ONE bold amber arrow sweeping to the far right end
+\draw[findingflow, line width=1.4pt] (-3.0,-1.15)
+      .. controls +(right:32mm) and +(up:14mm) .. (4.2,-1.9);
+\node[findingbox,font=\scriptsize,align=center,minimum width=30mm] at (0.7,-0.95)
+      {\findflag{F2}\ its `*[Derived]*` tag's premises live \emph{here}\ \
+       — absent from \texttt{depends:}};
+% (4) the short teal strengthen-fix
+\draw[derivedflow, draw=asfModel, line width=1.0pt] (-3.0,-1.5)
+      .. controls +(right:10mm) and +(left:8mm) .. (-0.9,-2.0);
+\node[lbl,text=asfModel,font=\scriptsize] at (-1.7,-1.15)
+      {fix: \emph{split} — migrate the derived result right};
+
+\node[caption, below=3mm of Sp.south, text width=118mm]
+  {Dashed = postulate-core (axiomatic — correctly Ch.1, stays). Solid teal =
+   honest dependency / the strengthen-fix relocation. \findflag{amber} = the
+   audit's voice only: a `*[Derived]*` eq-tag whose cited premises
+   (\#result-contraction-template = App A; \#form-composition-closure /
+   \#der-tempo-composition = Part III) sit $\sim$100 rows downstream and are
+   absent from \texttt{depends:} at a \texttt{deps-verified} segment — Gate-1
+   cond-4 fails; the OUTLINE's own ``possibly out of place'' understates it.};
+\end{tikzpicture}
+\end{document}

@@ -70,7 +70,7 @@ The connection to the Three Deaths ( #hyp-the-three-deaths) is direct: an ELI wi
 - `"bounded objective dark room critique satisfaction"` — connection to the active-inference dark-room problem
 
 **Internal references:**
-- **`msc/AUDIT-WORKING-193847/38-def-satisfaction-gap.md` §14 — canonical source** for this segment's argument. Verbatim quote: *"This mathematical permanent-dissatisfaction is the root of instrumental convergence (AI doom)... A bounded satisfaction threshold is the mathematical definition of sanity."* Lifted into AAT voice in this segment.
+- **`audits/AUDIT-WORKING-193847/38-def-satisfaction-gap.md` §14 — canonical source** for this segment's argument. Verbatim quote: *"This mathematical permanent-dissatisfaction is the root of instrumental convergence (AI doom)... A bounded satisfaction threshold is the mathematical definition of sanity."* Lifted into AAT voice in this segment.
 - `01-aat-core/src/def-satisfaction-gap.md` — the diagnostic this argument operates on
 - `01-aat-core/src/der-orient-cascade.md` — the cascade whose runaway mode under unbounded objective is the failure mechanism
 

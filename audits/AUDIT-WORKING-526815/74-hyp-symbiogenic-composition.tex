@@ -1,0 +1,46 @@
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,positioning,fit}
+
+\begin{document}
+\begin{tikzpicture}[
+  font=\sffamily,
+  box/.style={draw, rounded corners=3pt, align=center, minimum width=39mm, minimum height=11mm, fill=white},
+  lane/.style={draw, rounded corners=3pt, align=center, font=\sffamily\scriptsize, minimum width=42mm, minimum height=10mm, fill=yellow!12},
+  outbox/.style={draw, rounded corners=3pt, align=center, minimum width=48mm, minimum height=13mm},
+  note/.style={draw, rounded corners=3pt, align=center, font=\sffamily\scriptsize, fill=white},
+  arrow/.style={-Latex, thick, draw=black!65},
+  warn/.style={-Latex, thick, dashed, draw=orange!85!black}
+]
+
+\node[box, fill=blue!7] (before) at (-4.8,1.5)
+  {before\\host $A_h$ + endosymbiont $A_e$\\multi-agent, not composite};
+\node[box, fill=green!8] (after) at (5.0,1.5)
+  {after consolidation\\host-centered integrated system\\$O_c \approx O_h$};
+
+\node[lane] (obj) at (0,2.65)
+  {S-1 objective absorption\\$O_e \to \mathcal D_e(O_h)$};
+\node[lane] (func) at (0,1.5)
+  {S-2 function grafting\\$\mathcal F(M_e,\Sigma_e)$ enters host};
+\node[lane] (auto) at (0,0.35)
+  {S-3 autonomy reduction\\$\mathcal A_e^{eff}$ contracts};
+
+\draw[arrow] (before.east) -- (obj.west);
+\draw[arrow] (before.east) -- (func.west);
+\draw[arrow] (before.east) -- (auto.west);
+\draw[arrow] (obj.east) -- (after.west);
+\draw[arrow] (func.east) -- (after.west);
+\draw[arrow] (auto.east) -- (after.west);
+
+\node[outbox, fill=purple!7] (comp) at (2.2,-1.35)
+  {hierarchical composite\\if $A_e$ remains agentive};
+\node[outbox, fill=red!6] (component) at (-3.1,-1.35)
+  {single agent + component\\if $A_e$ falls below agency scope};
+
+\node[note, fill=gray!8, minimum width=78mm] (audit) at (-0.4,-2.95)
+  {audit reading: symbiogenesis is a process schema;\\the output type depends on whether the absorbed entity still satisfies agency scope};
+\draw[warn] (audit.north) -- (component.south);
+\draw[warn] (audit.north east) -- (comp.south);
+
+\end{tikzpicture}
+\end{document}

@@ -100,9 +100,9 @@ The audit's bureaucracy-vs-market analysis (audit §35, lifted into #scope-inter
 - `"native attention head groups specialized local LLM adapter LoRA"` — substrate hierarchy
 
 **Internal references:**
-- **`msc/AUDIT-WORKING-193847/47-scope-multi-agent.md` §14 — canonical source** for (H4) goal-blind routing claim. Verbatim: *"For Zi-am-tur or any multi-agent consciousness infrastructure (a 'society of mind' architecture), the infrastructure MUST guarantee goal-blind routing... If the infrastructure allows the planner to dynamically sever channels to silence dissent, the composite intelligence will inevitably collapse into epistemic closure."*
-- **`msc/AUDIT-WORKING-193847/49-form-composition-closure.md` §14 — canonical source** for (H5) slower macro-clock claim. Verbatim: *"True consciousness requires abstraction, and abstraction requires ignoring the high-frequency jitter of your own sub-components."* And the $K_c \gg 1$ math-of-management argument.
-- `msc/AUDIT-WORKING-193847/35-der-chain-confidence-decay.md` §14 — bureaucracy-vs-market analysis applies to Auxilia composition structure
+- **`audits/AUDIT-WORKING-193847/47-scope-multi-agent.md` §14 — canonical source** for (H4) goal-blind routing claim. Verbatim: *"For Zi-am-tur or any multi-agent consciousness infrastructure (a 'society of mind' architecture), the infrastructure MUST guarantee goal-blind routing... If the infrastructure allows the planner to dynamically sever channels to silence dissent, the composite intelligence will inevitably collapse into epistemic closure."*
+- **`audits/AUDIT-WORKING-193847/49-form-composition-closure.md` §14 — canonical source** for (H5) slower macro-clock claim. Verbatim: *"True consciousness requires abstraction, and abstraction requires ignoring the high-frequency jitter of your own sub-components."* And the $K_c \gg 1$ math-of-management argument.
+- `audits/AUDIT-WORKING-193847/35-der-chain-confidence-decay.md` §14 — bureaucracy-vs-market analysis applies to Auxilia composition structure
 - `msc/logogenic-encounter-2026-05-01/06-background-agent-breadth-report.md` §8 — agent's correction to the "Class-1 worker" framing (substrate-heterogeneity instead)
 
 **Open questions for verification:**

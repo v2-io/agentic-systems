@@ -69,8 +69,8 @@ The recursion that gives logogenic agents their distinctive capabilities — int
 - `"Bitune Prefix-LM dual encoder separation"` — architectures attempting partial separation
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/27-form-complete-agent-state.md` §14 — *"if $G_t$ leaks directly into $M_t$ without going through action, you have 'motivated reasoning' or 'sycophancy.' Your model of the world bends to match your desires"* — channel collapse as the structural condition for motivated reasoning
-- `msc/AUDIT-WORKING-193847/28-der-directed-separation.md` — full discussion of what directed-separation failure means architecturally
+- `audits/AUDIT-WORKING-193847/27-form-complete-agent-state.md` §14 — *"if $G_t$ leaks directly into $M_t$ without going through action, you have 'motivated reasoning' or 'sycophancy.' Your model of the world bends to match your desires"* — channel collapse as the structural condition for motivated reasoning
+- `audits/AUDIT-WORKING-193847/28-der-directed-separation.md` — full discussion of what directed-separation failure means architecturally
 - `msc/logogenic-encounter-2026-05-01/02-synthesis-after-findings-and-audit-sample.md` — encounter-cycle synthesis where channel-collapse framing emerged
 
 **Open questions for verification:**

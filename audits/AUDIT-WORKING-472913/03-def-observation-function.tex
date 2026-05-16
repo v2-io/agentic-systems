@@ -1,0 +1,51 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% Isomorphic content: h is a MANY-TO-ONE collapse (lossiness) of Omega onto O,
+% the partition STEERED by a_{t-1} (active perception) and the landing JITTERED
+% by epsilon_t. Perturb: make h injective -> no collapse -> seg-01 degeneracy.
+\begin{tikzpicture}
+
+% --- left: a cloud of Omega micro-states, grouped into h-fibers ---
+\node[lbl, text=asfEnv, font=\small\bfseries] at (-0.2,2.45) {$\Omega_t$ (inaccessible)};
+\foreach \y in {1.9,1.5,1.1} \fill[asfEnv!55] (0,\y) circle (1.4pt);
+\foreach \y in {0.4,0.0,-0.4,-0.8} \fill[asfEnv!55] (0,\y) circle (1.4pt);
+\foreach \y in {-1.3,-1.7} \fill[asfEnv!55] (0,\y) circle (1.4pt);
+% fiber brackets (each bracket = a set of world states h maps together)
+\draw[asfEnv, decorate, decoration={brace, amplitude=4pt}] (-0.25,1.95) -- (-0.25,1.05);
+\draw[asfEnv, decorate, decoration={brace, amplitude=4pt}] (-0.25,0.45) -- (-0.25,-0.85);
+\draw[asfEnv, decorate, decoration={brace, amplitude=4pt}] (-0.25,-1.25) -- (-0.25,-1.75);
+
+% --- the map h (a converging lens) ---
+\node[circle, draw=asfWarn, fill=asfWarn!12, line width=0.7pt,
+      minimum size=10mm] (h) at (3.0,0.05) {$h$};
+\node[lbl, font=\scriptsize, text=asfWarn, align=center] at (3.0,1.25)
+      {unknown\\many-to-one};
+
+\foreach \y in {1.5,0.0,-1.5} \draw[weakflow, draw=asfEnv]
+      (0.55,\y) -- (h.west);
+
+% steering input a_{t-1}: rotates which partition is resolvable (active perception)
+\node[lbl, font=\scriptsize, text=asfWarn, align=center] (alab) at (4.55,-1.55)
+      {$a_{t-1}$\\steers the\\partition};
+\draw[scopeedge] (alab.north west) .. controls +(left:6mm) and +(down:7mm) ..
+      (h.south);
+% noise epsilon_t: jitters the landing
+\draw[->, line width=0.5pt, decorate, decoration={snake, amplitude=0.6pt,
+      segment length=4pt}, draw=asfFaint] (3.0,2.05) -- (h.north)
+      node[pos=0.0, above, lbl, font=\scriptsize, text=asfFaint]
+      {$\varepsilon_t$ jitter};
+
+% --- right: the few observations actually received ---
+\node[modelbox, right=20mm of h, minimum width=15mm] (o) {$o_t\in\mathcal O$};
+\draw[flow] (h.east) -- (o.west);
+\node[lbl, font=\scriptsize, text=asfModel, below=1mm of o]
+      {agent's only contact};
+
+\node[caption, below=26mm of h.south, text width=0.86\paperwidth]
+  {Three world-fibers collapse to one $o$: information destroyed (segment’s
+   ``lossiness is the key property’’). $a_{t-1}$ re-draws the fibers
+   (active perception); $\varepsilon_t$ blurs the landing. Make $h$ injective
+   $\Rightarrow$ no collapse $\Rightarrow$ the seg-01 vacuity case.};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% My new understanding: chronica = append-only irreversible ORDINAL ratchet
+% (events as teeth, no going back) PLUS the audit synthesis (03 lossiness +
+% 04 non-forkability): a fork spawns two divergent chronicae that the LOSSY
+% phi can crush onto the SAME M_t -> the agent cannot introspect the fork.
+\begin{tikzpicture}
+
+% ---------- the ratchet: ordinal, append-only, irreversible ----------
+\node[lbl, font=\small\bfseries, text=asfInk] at (0.2,2.2)
+      {$\mathcal C_t$: ordinal ratchet — append-only, irreversible};
+\foreach \x/\e in {0/{o_1},1/{a_1},2/{o_2},3/{a_2},4/{\cdots},5/{o_t}}{
+  \fill[asfEnv!18, draw=asfEnv, line width=0.4pt]
+        (\x*0.95,1.35) rectangle ++(0.8,0.55);
+  \node[font=\scriptsize] at (\x*0.95+0.4,1.62) {$\e$};
+}
+% pawl just below the strip: blocks reverse motion (irreversibility)
+\draw[asfGoal, line width=0.9pt] (4.55,1.05) -- (4.85,1.30) -- (4.85,1.05);
+\node[lbl, font=\scriptsize, text=asfGoal] at (3.95,0.92) {pawl: no rewind};
+\node[lbl, font=\scriptsize] at (2.0,0.55) {$a_{t-1}$ chosen \emph{before} $o_t$ — ordering is physical};
+
+% ---------- fork point (right end of the strip) ----------
+\node[circle, fill=asfWarn, inner sep=1.6pt] (fk) at (5.75,1.62) {};
+\node[lbl, font=\scriptsize, text=asfWarn] at (5.95,2.25)
+      {fork: duplicate the agent};
+
+% two divergent chronica branches
+\draw[flow, draw=asfModel] (fk) .. controls +(right:8mm) and +(left:8mm) ..
+      (8.0,0.55) node[right, font=\scriptsize] {$\mathcal C^{A}$ (suffix $\alpha$)};
+\draw[flow, draw=asfGoal] (fk) .. controls +(right:8mm) and +(left:8mm) ..
+      (8.0,-0.45) node[right, font=\scriptsize] {$\mathcal C^{B}$ (suffix $\beta$)};
+
+% ---------- lossy phi collapses both onto the SAME M ----------
+\node[modelbox, minimum width=15mm] (M) at (6.5,-1.85) {$M_t$};
+\draw[->, line width=0.6pt, draw=asfFaint] (8.05,0.45)
+      .. controls +(down:6mm) and +(right:8mm) ..
+      node[pos=0.5, sloped, above, lbl, font=\scriptsize, text=asfFaint] {$\phi$ (lossy)} (M.east);
+\draw[->, line width=0.6pt, draw=asfFaint] (8.05,-0.5)
+      .. controls +(down:5mm) and +(right:5mm) .. (M.south east);
+\node[lbl, font=\scriptsize, text=asfGoal, align=center, below=1mm of M]
+      {same $M_t$ for both branches\\$\Rightarrow$ \textbf{fork not introspectable}};
+
+\node[caption, below=15mm of M.south, text width=0.82\paperwidth]
+  {Synthesis of seg-03 (lossy $\phi$) ⊕ seg-04 (non-forkable $\mathcal C$):
+   the record cannot fork, but the agent's only access ($M_t$) can — and
+   collapses divergent records together. Make $\phi$ injective $\Rightarrow$
+   branches separate at $M$ (forks detectable); heavier loss $\Rightarrow$
+   more branch-pairs indistinguishable. [THREAD-E; defer to
+   \#scope-agent-identity]};
+\end{tikzpicture}
+\end{document}

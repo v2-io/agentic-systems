@@ -1,9 +1,19 @@
 # audits/ — orientation note
 
-This tree is the audit-cycle output corpus (final reports + integrated
-reasoning trails). It is a **historical backlog**: many reports have
-been processed into the live theory but not all have been moved to
-`audits/.integrated/`, and the corpus is large.
+This tree is the audit-cycle output corpus. It holds three kinds of
+thing: **top-level ALL-CAPS FINAL reports** (`audit-*.md`,
+`analysis-*.md`, etc.) and **`pending-findings-*.md` resolution
+trails** — both consumable deliverables — plus **per-cycle
+`AUDIT-WORKING-NNNNNN/` subdirectories**, the lowercase intermediate
+workspaces (predictions, per-segment reflections, scratch math,
+running outlines) the FINALs were distilled from. The subdirectory
+naming makes the split scannable: anything at the top level is a
+deliverable; anything inside an `AUDIT-WORKING-*/` dir is an
+archaeology trail. (Working dirs were consolidated here from `msc/`
+on 2026-05-15; before that the intermediates lived in `msc/`.) It is
+a **historical backlog**: many reports have been processed into the
+live theory but not all have been moved to `audits/.integrated/`, and
+the corpus is large.
 
 ## Naming: read "AAD" here as "AAT"
 

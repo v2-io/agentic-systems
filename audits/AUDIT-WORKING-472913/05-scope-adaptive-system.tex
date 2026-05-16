@@ -1,0 +1,56 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% Isomorphic content: S_adaptive is the OPEN region cut out by two excised
+% degenerate walls. Axes: perceptual channel (O) and residual uncertainty
+% H(Omega|C). Agency = adaptive INTERSECT Pearl-L2 contrast (a true nested
+% sub-region, not a relabel). Perturb toward either wall -> fall out of scope
+% into the named degenerate case. Establishes the scope-onion vocabulary.
+\begin{tikzpicture}
+
+% axes
+\draw[->, line width=0.6pt, draw=asfInk!70] (0,0) -- (8.4,0)
+      node[right, lbl, font=\scriptsize] {residual uncertainty $H(\Omega_t\mid\mathcal C_t)$};
+\draw[->, line width=0.6pt, draw=asfInk!70] (0,0) -- (0,5.0)
+      node[above, lbl, font=\scriptsize, align=left] {perceptual\\channel $\mathcal O$};
+
+% excised wall 1: O = empty (no perceptual channel) -> pure computation
+\fill[asfFaint!22] (0,0) rectangle (8.2,0.62);
+\node[lbl, font=\scriptsize, text=asfInk!60] at (4.1,0.31)
+      {$\mathcal O=\emptyset$ — pure computation (excluded)};
+
+% excised wall 2: H = 0 (no residual uncertainty) -> closed-form
+\fill[asfFaint!22] (0,0) rectangle (0.62,4.8);
+\node[lbl, font=\scriptsize, text=asfInk!60, rotate=90] at (0.31,2.7)
+      {$H=0$ — closed-form (excluded)};
+
+% the open adaptive region
+\fill[asfModel!12, rounded corners=3pt] (0.62,0.62) rectangle (8.0,4.7);
+\node[lbl, text=asfModel, font=\small\bfseries] at (5.4,4.25)
+      {$\mathcal S_{\text{adaptive}}$};
+\node[lbl, text=asfModel, font=\scriptsize, align=center] at (5.7,3.55)
+      {observe under uncertainty\\(Section\,I machinery non-vacuous)\\[1mm]
+       \emph{Kalman · passive Bayesian · sensory}};
+
+% nested agency sub-region: adaptive INTERSECT Pearl-L2 action contrast
+\begin{scope}
+  \clip (0.62,0.62) rectangle (8.0,4.7);
+  \fill[asfGoal!16] (2.65,2.05) ellipse (1.95 and 1.45);
+\end{scope}
+\draw[asfGoal, line width=0.6pt, dashed] (2.65,2.05) ellipse (1.95 and 1.45);
+\node[lbl, text=asfGoal, font=\scriptsize\bfseries, align=center] at (2.65,2.35)
+      {$\mathcal S_{\text{agency}}$};
+\node[lbl, text=asfGoal, font=\scriptsize, align=center] at (2.65,1.78)
+      {$=\mathcal S_{\text{adaptive}}\cap$\\Pearl-L2 contrast};
+
+% perturbation arrows: pushing toward a wall = leaving scope
+\draw[scopeedge] (3.0,3.55) -- (1.05,3.55);
+\node[lbl, font=\scriptsize, text=asfWarn] at (2.0,3.78) {learn it all $\to$ exit};
+
+\node[caption, below=4mm of current bounding box.south, text width=0.84\paperwidth]
+  {Both degenerate boundaries are \emph{excised and named}, not absorbed as
+   limits — the honesty geometry. Agency is a genuine intersection inside.
+   [THREAD-F: the $H>0$ membership has no temporal quantifier — the inner
+   wall may be a \emph{running} boundary, not a one-time one.]};
+\end{tikzpicture}
+\end{document}

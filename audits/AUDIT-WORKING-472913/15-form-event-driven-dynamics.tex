@@ -1,0 +1,75 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% TWO-LAYER vertical. Anchor: a sleeper. Subjective ordinal narrative
+% (...X, Y, woke) has NO gap; wall-clock has a 3-month gap; the sleeper only
+% learns it through the shock on waking (delta). Skeleton: E (metric tau)
+% -> drop tau -> C_t (ordinal) -> phi -> M_t (tau-blind); tempo T metric;
+% F4 = the C_t<->E relationship + consequence lives only in def-chronica WN.
+\begin{tikzpicture}[every node/.append style={font=\small}]
+
+% ===================== ANCHOR (top) =====================
+\node[anchorbg, minimum width=124mm, minimum height=36mm] (Ap) at (0,2.1){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.6,3.55)
+      {ANCHOR — the sleeper's two times};
+
+% subjective ordinal ribbon (no gap)
+\node[lbl,font=\scriptsize,text=asfModel] at (-4.4,2.95){subjective (ordinal)};
+\foreach \i/\t in {0/{$o$},1/{$a$},2/{$o$},3/{\scriptsize sleep},4/{$o$!}}{
+  \fill[asfModel!16,draw=asfModel,line width=0.4pt]
+    (-3.2+\i*0.62,2.55) rectangle ++(0.5,0.5);
+  \node[font=\scriptsize] at (-3.2+\i*0.62+0.25,2.8){\t};}
+\node[lbl,font=\scriptsize,text=asfInk!60] at (-1.7,2.3){no gap in the story};
+
+% wall-clock metric (has the gap)
+\node[lbl,font=\scriptsize,text=asfEnv] at (-4.4,1.75){wall-clock (metric)};
+\draw[derivedflow,draw=asfEnv,line width=0.9pt] (-3.2,1.45) -- (0.5,1.45);
+\fill[asfEnv] (-3.05,1.45) circle (1pt) (-2.55,1.45) circle (1pt)
+              (-2.05,1.45) circle (1pt);
+\draw[asfGoal,line width=1.2pt] (-1.95,1.3) -- (0.0,1.6);
+\node[lbl,font=\scriptsize,text=asfGoal] at (-0.95,1.15){3 months — real, unobserved};
+\fill[asfEnv] (0.1,1.45) circle (1pt);
+
+\node[lbl,font=\scriptsize,text=asfInk!70,align=left] at (3.0,2.1)
+      {The sleeper's $\mathcal C_t$ has\\\textbf{no gap}; the calendar does.\\
+       The gap is felt only as\\\textbf{shock in $\delta$} on waking —\\
+       $M_t=\phi(\mathcal C_t)$ is time-blind.};
+
+% ===================== SKELETON (bottom) =====================
+\node[skelbg, minimum width=124mm, minimum height=36mm] (Sp) at (0,-1.95){};
+\node[font=\scriptsize\bfseries,text=asfInk!75] at (-4.3,-0.4)
+      {SKELETON — metric $\mathcal E$ \,$\to$\, ordinal $\mathcal C_t$ \,$\to$\, $M_t$  ·  F4 seam};
+
+\node[envbox,font=\scriptsize,align=center] (E) at (-4.3,-1.7)
+      {$\mathcal E=\{(e_i,\tau_i)\}$\\\scriptsize metric $\tau$};
+\node[envbox,font=\scriptsize,align=center] (C) at (-1.9,-1.7)
+      {$\mathcal C_t=(o_1,a_1,\dots)$\\\scriptsize ordinal};
+\node[modelbox,font=\scriptsize] (M) at (0.4,-1.7){$M_t$};
+\draw[derivedflow] (E) -- (C) node[midway,above,lbl,font=\scriptsize]{drop $\tau$};
+\draw[derivedflow] (C) -- (M) node[midway,above,lbl,font=\scriptsize]{$\phi$};
+\node[lbl,font=\scriptsize,text=asfInk!55,below=0.5mm of M]{$\tau$-blind};
+
+% tempo on the metric side
+\node[draw=asfGoal,line width=0.6pt,rounded corners=2pt,fill=asfGoal!8,
+      font=\scriptsize,align=center] (T) at (3.3,-1.1)
+      {$\mathcal T=\sum\nu^{(k)}\eta^{(k)\ast}$\\\scriptsize metric (inverse-time)};
+\draw[derivedflow,draw=asfGoal] (E.north) .. controls +(up:7mm) and +(left:8mm) .. (T.west);
+
+% F4: the relationship/consequence lives only in def-chronica WN
+\node[findingbox,font=\scriptsize,align=center,minimum width=42mm] (f4)
+      at (0.8,-3.05)
+      {\findflag{F4} the $\mathcal C_t\!\leftrightarrow\!\mathcal E$ relation
+       \& ``$M_t$ $\tau$-blind; persistence metric on ordinal state''
+       live ONLY in `def-chronica` Working Notes — published \emph{nowhere}};
+\draw[findingflow] (f4.north) -- (M.south);
+\draw[findingflow,dash pattern=on 2pt off 2pt] (f4.west) -- ($(T.south)+(-0.3,0)$);
+
+\node[caption, below=7mm of Sp.south, text width=120mm]
+  {Solid = theory's voice (each piece individually correct). \findflag{amber}
+   = the audit's voice: the \emph{relationship} between the ordinal agent and
+   the metric inequality, and its sleeping-agent consequence, are WN-only +
+   partial NOTATION $t/\tau$. Low-severity integration debt; strengthen-fix =
+   lift one paragraph WN$\to$published. Also a §F candidate (first-class
+   ordinal/metric duality sharpens persistence + chronica + Three-Deaths).};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,positioning,fit}
+
+\begin{document}
+\begin{tikzpicture}[
+  font=\sffamily,
+  stepbox/.style={draw, rounded corners=3pt, align=center, minimum width=38mm, minimum height=10mm, fill=white},
+  note/.style={align=center, font=\sffamily\scriptsize},
+  arrow/.style={-Latex, thick, draw=black!65},
+  warn/.style={-Latex, thick, dashed, draw=orange!85!black}
+]
+
+\node[stepbox, fill=blue!7] (m) at (0,3) {1. update $M_t$\\epistemic mismatch};
+\node[stepbox, fill=blue!7] (sat) at (2.4,1.7) {2. attainability\\$\delta_{\rm sat}$};
+\node[stepbox, fill=blue!7] (reg) at (4.8,0.4) {3. regret\\$\delta_{\rm regret}$};
+\node[stepbox, fill=yellow!12] (strat) at (7.2,-0.9) {4. strategy checks\\$\delta_s$, edges, L0$\to$L1};
+\node[stepbox, fill=red!6] (obj) at (9.6,-2.2) {5. revise $O_t$\\last resort};
+
+\draw[arrow] (m) -- (sat);
+\draw[arrow] (sat) -- (reg);
+\draw[arrow] (reg) -- (strat);
+\draw[arrow] (strat) -- (obj);
+
+\node[stepbox, fill=green!8, minimum width=37mm] (exact) at (12.2,2.4)
+  {spine:\\dependency order\\mostly exact};
+\node[stepbox, fill=orange!8, minimum width=43mm] (cond) at (12.2,0.9)
+  {step 4 content:\\proof targets, estimators,\\observability preconditions};
+\node[stepbox, fill=orange!8, minimum width=43mm] (conv) at (12.2,-0.55)
+  {inferential force:\\depends on C1/C2/C3\\continuation convention};
+
+\draw[arrow] (exact.west) -- (m.east);
+\draw[warn] (cond.west) -- (strat.north);
+\draw[warn] (conv.west) -- (sat.east);
+
+\node[note, fill=gray!8, draw, rounded corners=3pt, minimum width=92mm] at (6.2,-3.75)
+  {audit reading: exact ordering is valuable; operational diagnostics still need estimator and threshold discipline};
+
+\end{tikzpicture}
+\end{document}

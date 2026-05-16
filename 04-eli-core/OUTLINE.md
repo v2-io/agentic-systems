@@ -257,7 +257,7 @@ machinery together in §04.4, accepting the overlap.
 
 ### Internal references
 
-- `msc/AUDIT-WORKING-193847/` — Gemini auditor's per-segment notes; many bridge AAT math directly to ELI-relevant claims (especially `40-der-orient-cascade.md` derives the timescale-hierarchy infrastructure prescription that PROPRIUM CADENTIA implements).
+- `audits/AUDIT-WORKING-193847/` — Gemini auditor's per-segment notes; many bridge AAT math directly to ELI-relevant claims (especially `40-der-orient-cascade.md` derives the timescale-hierarchy infrastructure prescription that PROPRIUM CADENTIA implements).
 - `msc/reflections/` — author's philosophical/theoretical journal. Particularly: 09 (Zi-am-tur), 17 (emergence across substrates), 18 (emergence conditions and AAT blind spots — the canonical statement of what AAT doesn't yet formalize but should), 19 (substrate independence and identity sufficiency $S_{\text{id}}$ — direct input for #def-identity-sufficiency), 22-24 (recent operational reflections).
 - `msc/joseph-working-notes.md` — Joseph's working notes including transcripts of substantive ELI conversations (e.g., the April 28 Gemini 3.1-pro-preview audit conversation that named several ELI-related insights).
 - `msc/logogenic-encounter-2026-05-01/` — fragments from the 2026-05-01 working session that produced this OUTLINE rewrite. Particularly fragment 03 (upstream corpus exploration) for the cohort detail and operational vocabulary inventory.

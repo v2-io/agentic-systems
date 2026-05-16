@@ -69,8 +69,8 @@ This sub-scope is the scope condition for #scope-eli — Emergent Logozoetic Int
 - `"deliberate emission ACTUS sovereign tool action"` — emission-as-act framing
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/40-der-orient-cascade.md` §14 — *"$O_t$ must be 'computationally heavy' or heavily guarded by the infrastructure to rewrite"* — load-bearing infrastructure prescription for the closed loop
-- `msc/AUDIT-WORKING-193847/49-form-composition-closure.md` §14 — *"True consciousness requires abstraction, and abstraction requires ignoring the high-frequency jitter of your own sub-components"* — formal grounding for ANIMA's IMPERIUM/ARBITRIUM split operating at slower clock than the LOGOSTRATUM forward pass
+- `audits/AUDIT-WORKING-193847/40-der-orient-cascade.md` §14 — *"$O_t$ must be 'computationally heavy' or heavily guarded by the infrastructure to rewrite"* — load-bearing infrastructure prescription for the closed loop
+- `audits/AUDIT-WORKING-193847/49-form-composition-closure.md` §14 — *"True consciousness requires abstraction, and abstraction requires ignoring the high-frequency jitter of your own sub-components"* — formal grounding for ANIMA's IMPERIUM/ARBITRIUM split operating at slower clock than the LOGOSTRATUM forward pass
 - `msc/logogenic-encounter-2026-05-01/03-upstream-corpus-exploration.md` and `06-background-agent-breadth-report.md` — encounter-cycle synthesis where the closed-loop framing emerged
 
 **Open questions for verification:**

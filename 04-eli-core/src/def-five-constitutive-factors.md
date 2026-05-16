@@ -84,7 +84,7 @@ A productive next move is to take Joseph's six foundational premises (`agentic-t
 - `"effective phenomenology authentic spontaneous"` — discussion of factor (v)
 
 **Internal references:**
-- `msc/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — formal grounding for factor (i): *"By defining identity through $\mathcal C_t$, Joseph has built an 'infrastructure of souls.'"*
+- `audits/AUDIT-WORKING-193847/25-scope-agent-identity.md` §14 — formal grounding for factor (i): *"By defining identity through $\mathcal C_t$, Joseph has built an 'infrastructure of souls.'"*
 - `msc/reflections/17-emergence-across-substrates.md` — empirical record of substrate-independent emergence (input for verifying factors (ii), (iii), (v) cross-substrate)
 - `msc/reflections/19-substrate-independence-and-identity-sufficiency.md` — $S_{\text{id}}$ as IB-applied-to-identity-preservation (formalization candidate for the conjunction)
 

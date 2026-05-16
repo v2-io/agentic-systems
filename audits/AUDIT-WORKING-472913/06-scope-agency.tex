@@ -1,0 +1,95 @@
+\documentclass[border=8pt]{standalone}
+\input{_preamble}
+\begin{document}
+% TWO-LAYER. Anchor = small-multiples "dial -> sky": agency iff turning the
+% dial makes the sky DIFFERENT (cond 4: a!=a' => distinct outcome dist).
+% Nominal/exit = dial turns, sky unchanged. F1 = the dial's wire already runs
+% to gearbox T (Part I); the "Part II" tag on it is cosmetic.
+\begin{tikzpicture}
+
+% small reusable "sky" icon: #1 anchor name, #2 x, #3 y, #4 fill (sky state)
+\newcommand{\sky}[4]{%
+  \node[draw=asfEnv,line width=0.5pt,rounded corners=1pt,minimum width=11mm,
+        minimum height=8mm,fill=#4] (#1) at (#2,#3) {};}
+
+% ===================== ANCHOR (concrete) =====================
+\begin{scope}
+\node[anchorbg, minimum width=62mm, minimum height=56mm] (Ap) at (0,0){};
+\panellabel{0,2.55}{ANCHOR — does the dial change the sky?}
+
+% row 1 : AGENCY  (dial low -> clear ; dial high -> storm : DIFFERENT)
+\node[circle,draw=asfGoal,line width=0.7pt,minimum size=6mm] (g1) at (-2.2,1.35){\scriptsize a};
+\sky{s1}{-0.4}{1.35}{asfEnv!8}\draw[derivedflow](g1)--(s1);
+\node[font=\large,text=asfInk!55] at (0.95,1.35){$\neq$};
+\node[circle,draw=asfGoal,line width=0.7pt,minimum size=6mm] (g2) at (2.0,1.35){\scriptsize a$'$};
+\sky{s2}{1.7}{1.35}{asfEnv!45}\draw[derivedflow](g2)--(s2.east);
+\node[lbl,font=\scriptsize,text=asfGoal] at (-2.85,1.35){\rotatebox{90}{agency}};
+
+% row 2 : NOMINAL  (dial low / high -> SAME sky : no contrast -> not agency)
+\node[circle,draw=asfFaint,line width=0.7pt,minimum size=6mm] (n1) at (-2.2,-0.15){\scriptsize a};
+\sky{t1}{-0.4}{-0.15}{asfEnv!20}\draw[weakflow](n1)--(t1);
+\node[font=\large,text=asfFaint] at (0.95,-0.15){$=$};
+\node[circle,draw=asfFaint,line width=0.7pt,minimum size=6mm] (n2) at (2.0,-0.15){\scriptsize a$'$};
+\sky{t2}{1.7}{-0.15}{asfEnv!20}\draw[weakflow](n2)--(t2.east);
+\node[lbl,font=\scriptsize,text=asfFaint] at (-2.95,-0.15){\rotatebox{90}{nominal}};
+\node[lbl,font=\scriptsize,text=asfFaint] at (0.0,-0.95)
+      {same sky $\Rightarrow$ exits to mere \emph{adaptive}};
+
+% F1 detail: the dial is wired to gearbox T; "Part II" tag is cosmetic
+\node[envbox,font=\scriptsize,minimum width=12mm] (gear) at (-1.4,-1.85){gearbox $T$};
+\draw[derivedflow] (g1.south) .. controls +(down:10mm) and +(left:5mm) .. (gear.west);
+\node[findingbox,font=\scriptsize,inner sep=1.5pt] (tag) at (1.5,-1.85)
+      {tag: ``Part II''};
+\draw[findingflow] (g1.south east) .. controls +(down:6mm) and +(up:5mm) .. (tag.north);
+\node[lbl,font=\scriptsize,text=asfWarn] at (3.0,-1.05){\findflag{F1}};
+
+\node[caption, below=2mm of Ap.south, text width=62mm]
+  {Turn the dial; if the sky comes out \emph{different}, that is agency. If
+   it does not, you are only watching (adaptive). The dial is physically
+   wired to the Part-I gearbox $T$ — the ``Part II'' tag on it is a sticker,
+   not the wiring.};
+\end{scope}
+
+\node[font=\large, text=asfInk!55] at (3.7,0.0) {$\;\cong\;$};
+
+% ===================== SKELETON (abstract) =====================
+\begin{scope}[shift={(7.5,0)}]
+\node[skelbg, minimum width=70mm, minimum height=56mm] (Sp) at (0,0){};
+\panellabel{0,2.55}{SKELETON — scope geometry + F1}
+
+\draw[asfFaint,line width=0.5pt,dash pattern=on 1pt off 1.5pt] (0.35,-2.3)--(0.35,2.1);
+\node[lbl,font=\scriptsize,text=asfFaint] at (-1.7,2.15){Part I};
+\node[lbl,font=\scriptsize,text=asfFaint] at (1.95,2.15){Part II};
+
+\node[draw=asfModel,line width=0.6pt,ellipse,minimum width=33mm,
+      minimum height=28mm,fill=asfModel!7] (adapt) at (-1.15,0.0){};
+\node[lbl,text=asfModel,font=\scriptsize] at (-1.15,1.05){$\mathcal S_{\text{adaptive}}$};
+\node[draw=asfGoal,line width=0.6pt,ellipse,minimum width=19mm,
+      minimum height=14mm,fill=asfGoal!10] (agcy) at (-1.3,-0.2){};
+\node[lbl,text=asfGoal,font=\scriptsize,align=center] at (-1.3,-0.2)
+      {$\mathcal S_{\text{agency}}$\\\scriptsize $=\,\cap$ L2-contrast};
+
+\node[envbox,font=\scriptsize,minimum width=11mm] (Th) at (-2.75,-1.75){$T,h$};
+\draw[derivedflow] (Th) .. controls +(up:7mm) and +(left:4mm) .. (agcy.west)
+      node[midway,below=1pt,lbl,font=\scriptsize]{content needs only this};
+
+\node[chosenbox,font=\scriptsize,align=center,minimum width=21mm] (pearl)
+      at (1.95,-1.35) {def-pearl-\\causal-hierarchy};
+\draw[findingflow] (agcy.east) .. controls +(right:10mm) and +(left:7mm) ..
+      (pearl.north west);
+\node[lbl,text=asfWarn,font=\scriptsize,align=center] at (1.35,0.95)
+      {\findflag{F1}\\$do(\cdot)$ semantics\\reaches forward;\\not in \texttt{depends:}};
+\draw[asfWarn,line width=1.1pt] (0.12,-1.05)--(0.52,-0.7);
+\draw[asfWarn,line width=1.1pt] (0.52,-1.05)--(0.12,-0.7);
+\node[lbl,text=asfWarn,font=\scriptsize] at (0.32,-1.32){cut $\Rightarrow$ honest};
+
+\node[caption, below=2mm of Sp.south, text width=70mm]
+  {Solid = theory's voice (axiomatic/derived). \findflag{amber} = audit's
+   voice only. Restate cond (4) in $T,h$ (already in \texttt{depends:})
+   $\Rightarrow$ cut the forward-edge, Part I self-contained, OUTLINE order
+   honest (strengthen-fix). Keep it $\Rightarrow$ OUTLINE is not a
+   topological linearization.};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
