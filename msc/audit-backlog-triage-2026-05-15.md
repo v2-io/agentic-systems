@@ -269,7 +269,7 @@ commits per batch.
   (audit-id→ledger mapping wrong — corrected above) and under-dimensioned
   enum (expanded above). Both consequential claims primary-source-verified
   by parent (no-ledger fact; F1 stale-xref genuinely resolved in `src/`).
-  Adjudication: `audits/AUDIT-WORKING-583046/adjudication.md`.
+  Adjudication: `audits/ADJUDICATION-WORKING-583046/adjudication.md`.
   - **471203 §B F1–F4 resolved** (F1 spot-checked: `deriv-directional-
     survival-exploration` absent from `src/`; segment now cites
     `#deriv-causal-ib-lmi`). **F7 (Tishby-Zaslavsky→Alemi miscitation)**
@@ -335,7 +335,15 @@ commits per batch.
   opacity-gain strengthening independently verified in A/D/B; "strengthen-
   before-soften passed loudly" in B/C/D/E; the corpus-redundancy net held
   completely in E). Adjudications:
-  `audits/AUDIT-WORKING-{704218(A),628401(B),704182(C),714206(D),472914(E)}/adjudication.md`.
+  `audits/ADJUDICATION-WORKING-{704218(A),628401(B),704182(C),714206(D),472914(E)}/adjudication.md`.
+  *(Prefix note: this-session adjudication workspaces use the
+  `ADJUDICATION-WORKING-` prefix; the de-novo auditors' first-encounter
+  cognition traces keep `AUDIT-WORKING-`. The six-digit ID is the stable
+  identity — narrative "pilot 583046" / "the 628401 adjudication" still
+  refer to these dirs, now under the `ADJUDICATION-WORKING-` prefix. The
+  two classes were name-indistinguishable after the msc/→audits/
+  consolidation; this prefix split restores the distinction the de-novo
+  "special handling" depends on.)*
   - **A** — 13 self-disposed extracts, all closure-direction-correct,
     graduation-eligible. Catches: `extracted-codex-feedback-2026-04-28`
     disposition is stale ("Pending" → actually resolved in
