@@ -490,3 +490,37 @@ that per-cluster ledger fragments re-bury the soft signal):
    742613/613842 held until the Model-S spike returns.
 5. Lint-state + F-V3/F8-routing-confirmation → standing-hygiene TODO
    (single entries, not duplicates of existing tracking).
+
+## 2026-05-16 (cont.) — SN-3 landed; consolidated pass set up; honest checkpoint
+
+- **Model-S no-go LANDED** (Cor A.1S.1 exact + `#deriv-stochastic-non-exit`
+  appendix + integration-is-replacement memory curation, commits through
+  `153c41e`). This **unblocks Cluster B**: 742613-F2 / 613842-F2 are now
+  resolved by strengthening-then-no-go (state 3) — they graduate in the
+  consolidated pass with the MANIFEST recording that disposition.
+- **SN-3 RESOLVED** (`3072667` + follow-up `2666eca`): Cluster-C's one
+  live defect, primary-source-verified. `def-pearl-causal-hierarchy`
+  carried a bald unscoped "git checkout → literal Level 3" in both the
+  prose and the comparison-table "Software developer" L3 cell, while
+  downstream `#obs-software-epistemic-properties` P2 had the scoped
+  truth; both corrected to present-truth, deferring the α/β/γ conjunction
+  to its canonical downstream home (not duplicated). Cluster C now
+  graduation-ready (F-V3/F8 correctly-open + triple-tracked — don't
+  double-track; lint-state → standing-hygiene TODO).
+- **Discipline slip, named:** the SN-3 commit briefly introduced 3 lint
+  issues into a clean segment because I committed on the lint *count*
+  without inspecting the *list*. Caught post-commit by the inspection
+  habit, fixed in follow-up `2666eca` (recorded in history, not amended),
+  memory sharpened (forcing function = inspect the issues; generalizes
+  past inline-math).
+- **Honest checkpoint (per the continuation commitment).** Remaining is
+  the one *consolidated* graduation pass: A–E + now-unblocked B
+  (742613/613842) + the soft-finding ledger (S8–S15+, consolidated to
+  avoid re-burying) + grouped MANIFEST + `git mv`. It is the largest,
+  most fragmentation- and integration-is-replacement-sensitive unit of
+  the program, fully set up and resumable from this spine. Per the
+  commitment "checkpoint rather than push past good work," this is the
+  natural fresh-focus boundary — the consolidated pass wants a focused
+  instance (this one continued, or a fresh one with this spine + the new
+  memory), not the tail of a very long session with a rising rate of
+  small (all-caught) slips. Surfaced to Joseph as a checkpoint.
