@@ -234,3 +234,38 @@ commits per batch.
     `extracted-gemini-feedback-2026-04-26-27.md`.
   - **Not yet fanned out** — frame just corrected; deliberate parallel
     fan-out on the corrected frame is the next action.
+- **2026-05-16** — Cycle 1 merged to `main` (Joseph). Branch-vs-main
+  decided: `main` (the verification-cadence branch discipline is
+  calibrated for whole-corpus refactors; this is independent, additive,
+  per-file-reversible work — the real safeguard is the independent-verify
+  gate, baked into the state machine, not branch isolation). Fan-out
+  launched on the corrected frame — 5 parallel adjudication agents,
+  adjudication-only (parent + Joseph route/graduate/commit; the
+  independent-verify gate = adjudicator ≠ grad-confirmer holds):
+  - **A — self-disposed extracts (verify-and-mirror, 13):**
+    `extracted-audits-2026-04-{21,22-morning,25}`,
+    `extracted-claude-feedback-2026-04-22-{6d858f28,3546217a,bf945f78}`,
+    `extracted-codex-feedback-2026-04-{01,02,03,06,22-r2,26-bridge-spike,28}`.
+  - **B — math-heavy ledgered (strengthen-before-soften bite):**
+    `audit-584721-FINAL`, `audit-613842-FINAL`, `audit-742613-FINAL` +
+    `-SUPPLEMENT-PHASE-2-TRIAGE`, `opus-audit-2026-04-21`,
+    `audits-2026-04-22-evening`, `audit-738192-FINAL`
+    (ledgers: `pending-findings-2026-04-21/22/23`).
+  - **C — 2026-04-24/25 + hygiene + portfolio:**
+    `audit-2026-04-24-fresh-pass`,
+    `audit-final-reports-candidate-extraction-2026-04-25`,
+    `link-and-file-hygiene-findings`,
+    `extracted-claude-feedback-2026-04-22-25-portfolio-reviews`
+    (ledger: `pending-findings-2026-04-25`).
+  - **D — 2026-04-28 FINALs (own-SUPPLEMENT-as-ledger; encounter-linked):**
+    `audit-829314-FINAL-2026-04-28{,-LOGO,-LOGOZOETIC,-TST}`,
+    `audit-849201-FINAL{,-LOGOGENIC,-SEC-III,-TST}`.
+  - **E — pre-ledger old + 451729 + lineage doc:**
+    `2026-03-13-feedback`, `2026-03-14-fresh-eyes-assessment`,
+    `feedback-2026-03`, `opus-analysis-2026-03-09`,
+    `analysis-2026-04-0{1,1-remaining,2-comprehensive,2-round2,2-synthesis,6}`,
+    `extracted-claude-feedback-2026-04-02-deep-reviews`,
+    `extracted-claude-session-…-audit-instructions-lineage`,
+    `audit-451729-FINAL-2026-05-10`.
+  - The four `pending-findings-2026-04-2X.md` are durable
+    ledgers/infrastructure — read as evidence, never graduated.
