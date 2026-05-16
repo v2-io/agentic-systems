@@ -357,8 +357,53 @@ carry that line.
   tail bound" (the fixed-time-vs-ever-exit conflation), while the proof
   (~L242) gestures at the correct supermartingale/Doob tool. 742613-
   SUPPLEMENT + 613842 recommend the *wrong* (soften) direction. Spike
-  brief built from the parent read. Do not edit
-  `deriv-sector-condition.md` / `spikes/INDEX.md` until it returns.
+  brief built from the parent read.
+- **2026-05-16 — Model-S spike RETURNED. Completion-state (3): a sharp
+  no-go + a corrected-true dichotomy. Strengthening honestly exhausted,
+  NOT a soften.** Spike: `spikes/spike-stochastic-non-exit-strengthening-2026-05-16.md`.
+  Parent independently verified the core math from theory (not relayed):
+  under the SDE, `LV ≤ −2αV + ½nσ²` is *positive* for `V < nσ²/4α`, so
+  `V(δ_{t∧τ_R})·𝟙` is a submartingale near the origin — **not** the
+  supermartingale lines 242/282 invoke; and the process is OU-ergodic so
+  `P(sup_{t<∞}‖δ‖>R)=1`. Findings:
+  - The Doob/Ville strengthening **genuinely fails for a precise
+    structural reason** (no nonnegative supermartingale; additive-noise
+    generator has no bounded non-constant harmonic function). The
+    audits' core observation `P(τ_R<∞)=1` is **correct**; no
+    horizon-independent non-exit bound `<1` exists (proven + EM-sim, not
+    asserted).
+  - The constant `nσ_w²/(2αR²)` is **right as the fixed-time/stationary
+    tail** (exactly what `spike-disturbance-model-split.md:159`
+    established). The defect is the probabilistic *object*
+    (ever-exit vs fixed-time), not the constant.
+  - The corrected statement is **itself a result**: Model-D →
+    pathwise/forever containment (positive invariance); Model-S
+    structurally cannot — additive forcing changes the *kind* of
+    guarantee (pathwise→distributional), not just the rate. Sharpens
+    the hand-off into `#result-structural-adaptation-necessity`;
+    candidate `## Findings` entry.
+  - **Calibration:** Cluster B's confident substantive prediction (the
+    sup-over-all-time object "is bounded ... and *stronger*") was
+    **mathematically disconfirmed**. Peer-agent optimism that a
+    strengthening *will succeed* is as unreliable as pessimism that it
+    will fail; the hard spike was necessary. Recorded in the spike so
+    the optimism isn't inherited.
+  - **Recommended disposition (spike §6) — NOT landed; gated on
+    Joseph.** Restate (iii)→(iii′) fixed-time tail (keep constant); add
+    (iv) finite-horizon Khasminskii sup-bound (the honest sample-path
+    companion that *does* survive — a genuine strengthening over a bare
+    fixed-time tail, flagged horizon-growing); fix proof + Epistemic
+    Status (Prop A.1S "exact" claim on (iii) is currently false as
+    stated); add the Model-D/Model-S kind-of-guarantee dichotomy to
+    Discussion + a `## Findings` entry; propagate the one-object
+    correction downstream (closes 613842-F2 integration debt).
+    742613-SUPPLEMENT §2 + 613842-F2 are **valid and resolved by this
+    spike** (resolution reached *after* strengthening exhausted). This
+    is a core-proposition epistemic-status change **plus a new
+    no-go/dichotomy result entering the canonical surface** → surfaced
+    to Joseph for greenlight (land-the-package vs review-the-new-result-
+    framing first) rather than landed unilaterally. `deriv-sector-
+    condition.md` / `spikes/INDEX.md` untouched pending that call.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 
