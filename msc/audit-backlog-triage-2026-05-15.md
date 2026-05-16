@@ -435,6 +435,32 @@ carry that line.
   consolidated pass. Cluster B's prediction that the strengthening
   would *succeed* is recorded (segment Working Notes + spike) as
   disconfirmed.
+- **2026-05-16 — honesty-cleanup of the landing (Joseph's three
+  principles).** Joseph named three: (1) spike-integration *replaces*
+  the truth-state — the false claim disappears or survives only as a
+  genuinely-different narrower true statement, never as a softened
+  ghost-with-pointer; (2) the epistemic label tracks *current
+  truth-status*, not provenance/continuity — labelling a known-exact
+  result less-than-exact because it's new/different is a category
+  error *and* false ("exact" already means *defeasible-if-someone-
+  finds-a-mistake*, so defeasibility is no reason to pre-downgrade);
+  (3) a softening of a claim *after* it's shown to be a no-go is
+  dishonest unless softened all the way to "false" — in which case it
+  has no place in the spine at all. Self-audit against these caught
+  real residue in my own just-committed work: the Summary-table cell
+  "both halves exact in the linear case" (mis-scoped exactness →
+  fixed: states linear-case *recovery*, exactness general); a
+  retrospective "previously carried a false bound / not weakened"
+  clause in Epistemic Status and the Findings catalog
+  lead/Impact/Novelty (provenance-defense-against-the-ghost in
+  body+external-catalog → removed; the false-past narrative lives
+  *only* in the history layers — Working Notes, this spine, CHANGELOG).
+  Honest spine sweep (all live `src/`): **no softened-false residue of
+  the old infinite-horizon non-exit claim survives** — the phrase
+  exists only in the corrected source segment, stating the no-go as
+  present truth. Discipline going forward: segment body + FINDINGS
+  catalog = present-truth only; CHANGELOG/spine/Working-Notes = the
+  history layer that carries "this replaced a false claim."
 
 ## Next actions (gated; the cycle is not the taxonomy)
 
