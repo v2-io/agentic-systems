@@ -407,10 +407,17 @@ carry that line.
   + new (iv) finite-horizon sup-bound; proof "Stopping-time
   localization" + summary table + "What Is Derived" row + Epistemic
   Status corrected (the false "exact" on the infinite-horizon non-exit
-  removed; (i)/(ii)/(iii′)/(iv) each exact; the no-go stated as a
-  result); Discussion gained the "Kind of guarantee, not just rate"
-  Model-D/Model-S dichotomy; new `## Findings` entry (Recognition +
-  Adopted-and-extended, honest novelty); Working Notes carry the
+  removed; (i)/(ii)/(iii′)/(iv) each exact). **New exact result
+  landed as labeled `Corollary A.1S.1` (Disturbance-Model Containment
+  Dichotomy):** $P(\tau_R<\infty)$ is exactly $\{0,1\}$ — 0 under
+  Model D, 1 under Model S — categorical and $\alpha$-invariant
+  (Joseph's probe: "do we not have an exact result that is new?" —
+  yes; it had been under-framed as "a no-go," the
+  strengthen-the-characterization correction). Discussion's "Kind of
+  guarantee" para now points at the Corollary; `## Findings` entry
+  re-led on it (novelty: *Synthesis* of classical components into an
+  exact $\alpha$-invariant framework dichotomy — honest that the SDE
+  math is classical); Working Notes carry the
   landing-provenance + four flagged low-confidence flashes (the
   dichotomy likely generalizes to other bounded/stochastic pairs →
   candidate SP-23 / identifiability-floor instance; sharper
