@@ -25,6 +25,18 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+## 2026-05-16
+
+**Audit-backlog triage — fan-out + a strengthen-first worked example (Model-S non-exit).** The audit-backlog cleanup (`msc/audit-backlog-triage-2026-05-15.md`) consolidated audit working dirs into `audits/`, ran a pilot + 5-cluster parallel adjudication of the standalone backlog, and produced the cycle's crown-jewel: a textbook **strengthen-before-soften, completion-state-3** outcome.
+
+Three independent audit clusters (B/C/D) converged on `#deriv-sector-condition` Prop A.1S(iii): it asserted an *infinite-horizon* non-exit bound `P(τ_R<∞) ≤ nσ²/(2αR²)` justified by a *fixed-time* "Markov tail on the supermartingale" — a conflation of two different probabilistic objects. Two prior audit records (742613-SUPPLEMENT §2, 613842-F2) had recommended *softening* (restate as a fixed-time tail). Per the discipline, the strengthening (Doob/Ville maximal inequality on the Itô-Lyapunov supermartingale — a route a peer adjudication confidently predicted would succeed) was worked in full *first*, in a dedicated background spike (`spikes/spike-stochastic-non-exit-strengthening-2026-05-16.md`).
+
+It **genuinely fails, for a precise structural reason**: no nonnegative supermartingale dominates `V` (the compensated `e^{2αt}V` loses nonnegativity), the additive-noise generator has no bounded non-constant harmonic function, and the recurrent OU diffusion exits any bounded set a.s. (`P(τ_R<∞)=1`) — proven analytically and Euler–Maruyama-corroborated. The failure *is* the result. Prop A.1S now carries (iii′) the true fixed-time tail (constant unchanged — only the probabilistic object it governs) plus a new (iv) finite-horizon Khasminskii sup-bound (the honest sample-path companion that survives, flagged horizon-growing); the false "exact" on the infinite-horizon claim is removed; and the Discussion + a new `## Findings` entry carry the **Model-D-pathwise vs Model-S-distributional kind-of-guarantee dichotomy**: additive stochastic forcing removes the *kind* of containment guarantee available (pathwise/forever → distributional/fixed-time), not merely its rate — which sharpens (not caveats) the hand-off into `#result-structural-adaptation-necessity`: in genuinely stochastic environments, region-exit is a *certain eventual event*, so the trigger for structural adaptation is generic, not exceptional. Downstream one-object correction (613842-F2) landed at `#result-sector-persistence-template`. Documented dead-end: a Doob/Ville infinite-horizon non-exit bound for additive-Brownian Model S provably does not exist — do not re-attempt.
+
+The peer adjudication's *process* call (route to a strengthening spike) was right; its *substantive* prediction (the strengthening succeeds) was mathematically disconfirmed and recorded as such so it is not inherited. The independent-verify gate (adjudicator ≠ grad-confirmer) caught, before propagation, a wrong spine generalization (only 471203 of the 2026-04-28 FINALs has a SUPPLEMENT), a stale "Pending" disposition, and the peer's imprecise summary. Cycle 1 graduations (471203 + extracted-gemini-2026-04-26-27, with F7 Tishby-Zaslavsky→Alemi citation resolved by strengthening) and the consolidated graduation of clusters A–E remain in progress under the same gate.
+
+---
+
 ## 2026-05-15
 
 ### Rename: Adaptation and Actuation Dynamics (AAD) → Adaptation and Actuation Theory (AAT); four-volume directory harmonization

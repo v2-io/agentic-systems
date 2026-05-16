@@ -401,9 +401,33 @@ carry that line.
     spike** (resolution reached *after* strengthening exhausted). This
     is a core-proposition epistemic-status change **plus a new
     no-go/dichotomy result entering the canonical surface** → surfaced
-    to Joseph for greenlight (land-the-package vs review-the-new-result-
-    framing first) rather than landed unilaterally. `deriv-sector-
-    condition.md` / `spikes/INDEX.md` untouched pending that call.
+    to Joseph, who greenlit the full package while fresh.
+- **2026-05-16 — Model-S package LANDED (Joseph greenlit the whole
+  package).** `deriv-sector-condition.md`: (iii)→(iii′) fixed-time tail
+  + new (iv) finite-horizon sup-bound; proof "Stopping-time
+  localization" + summary table + "What Is Derived" row + Epistemic
+  Status corrected (the false "exact" on the infinite-horizon non-exit
+  removed; (i)/(ii)/(iii′)/(iv) each exact; the no-go stated as a
+  result); Discussion gained the "Kind of guarantee, not just rate"
+  Model-D/Model-S dichotomy; new `## Findings` entry (Recognition +
+  Adopted-and-extended, honest novelty); Working Notes carry the
+  landing-provenance + four flagged low-confidence flashes (the
+  dichotomy likely generalizes to other bounded/stochastic pairs →
+  candidate SP-23 / identifiability-floor instance; sharper
+  ELI/LLM-persistence consequence; the no-go signature as a reusable
+  diagnostic; a downstream b=3/2 check to confirm-not-assume).
+  Downstream 613842-F2 one-object correction landed at
+  `result-sector-persistence-template.md:90` (the other two named
+  targets carried no wrong-object phrasing). Lint: the 2 raw-math
+  issues I introduced fixed; remaining α/β hits are pre-existing
+  (FORMAT-sweep C18), not mine. Spike registered in `spikes/INDEX.md`;
+  CHANGELOG strengthen-first worked-example entry added.
+  **Audit-finding disposition:** 742613-SUPPLEMENT §2 and 613842-F2 are
+  **resolved by strengthening-then-no-go** (state 3), not by soften —
+  to be recorded in the MANIFEST when 742613/613842 graduate in the
+  consolidated pass. Cluster B's prediction that the strengthening
+  would *succeed* is recorded (segment Working Notes + spike) as
+  disconfirmed.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 

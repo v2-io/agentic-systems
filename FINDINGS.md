@@ -246,6 +246,28 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ## *Appendices* Details
 
+### `#deriv-sector-condition` *(Derivation, status: exact)*
+
+[`01-aat-core/src/deriv-sector-condition.md`](01-aat-core/src/deriv-sector-condition.md)
+
+#### Stochastic disturbance removes the kind of containment guarantee, not just its rate
+
+**Brief:** Against a *bounded* disturbance — a steady wind you can lean into — a sector-stable corrector holds the mismatch inside a fixed region *forever and with certainty*: once in, never out. Against *stochastic* disturbance — random gusts — no correction strength buys that. The agent stays near target on average and almost all of the time, but over an unbounded horizon some fluctuation eventually pushes it past any fixed boundary, with probability one. Stronger correction tightens the *typical* scatter (the RMS radius shrinks as $1/\sqrt\alpha$); it does not erect a wall. So moving from bounded to stochastic environments is not "the same guarantee with a weaker constant" — it is a change in the *kind* of guarantee available: pathwise-and-forever (Model D) versus distributional-and-fixed-time (Model S). Practical consequence: in any genuinely stochastic environment, leaving the parametric-correction region is not a rare pathology to assume away — it is a certain eventual event, so the trigger for *structural* adaptation is generic, not exceptional.
+
+**Impact:** Sharpens the Model-D/Model-S architecture and the hand-off into #result-structural-adaptation-necessity (structural adaptation is a generic eventual necessity for long-lived agents in stochastic environments, not an edge case). Corrects Prop A.1S(iii) from an unprovable — and in fact false — infinite-horizon non-exit bound to the true fixed-time tail (iii′) plus the honest finite-horizon sample-path companion (iv); the constant $n\sigma_w^2/(2\alpha R^2)$ is unchanged, only the probabilistic object it governs. Establishes a reusable no-go signature — *additive-noise generator has no bounded non-constant harmonic function ⇒ no "stays-in-region-forever w.h.p." statement is available* — that future stochastic-containment claims in the corpus can be checked against rather than re-attempted.
+
+**Novelty Claim:** *Recognition* + *Adopted-and-extended*. The underlying mathematics is classical: recurrence of additive-noise diffusions and the non-existence of bounded non-constant harmonic functions for their generators (Khasminskii 2012 ch. 3–4) is textbook, and the failure of the Doob/Ville maximal-inequality route here is a consequence of it. AAT's contribution is the *structural recognition* that the bounded-vs-stochastic partition the framework already carries is a kind-of-guarantee distinction (pathwise/forever vs distributional/fixed-time), and that this makes the structural-adaptation trigger generic in stochastic environments. No novelty is claimed on the SDE mathematics.
+
+**Related Work:** | ASF concern | Prior-art language | Relationship / Positioning |
+|---|---|---|
+| No infinite-horizon non-exit bound for additive-noise diffusions | Khasminskii 2012, *Stochastic Stability of Differential Equations* (2nd ed.) ch. 3–4 (recurrence; scale function; no bounded non-constant harmonic function) | *formal antecedent* — supplies the classical recurrence fact; AAT recognizes it as the structural reason Model S admits no pathwise-forever containment in contrast to Model D |
+| Fixed-time second-moment tail | Markov's inequality on the stopped Itô-Lyapunov second moment (Khasminskii 2012 ch. 5) | *standard machinery* — (iii′) is Markov on (i); the AAT-specific content is the Model-D/S kind-of-guarantee contrast it forces |
+| Pathwise positive invariance under bounded disturbance | Khalil 2002 ch. 4 (ultimate boundedness; boundary-inward invariance) | *formal antecedent* — Model D's pathwise-forever guarantee (Prop A.1) is the contrast term that makes the Model-S no-go a *kind* distinction, not a rate one |
+
+**Search Log:** - 2026-05-16 (*targeted, derivation-driven*): the question was internal — does Prop A.1S(iii)'s infinite-horizon non-exit bound hold? The strengthening attempt (Doob/Ville maximal inequality on the Itô-Lyapunov supermartingale) was worked in full and shown to fail structurally; the classical recurrence fact (Khasminskii ch. 3–4) is the obstruction and is well-known. No prior-art search beyond the standard SDE references was needed — no novelty is claimed on the mathematics, only on the framework-level kind-of-guarantee recognition. Reasoning trail: `spikes/spike-stochastic-non-exit-strengthening-2026-05-16.md`.
+
+---
+
 ### `#result-certificate-existence` *(Result, status: exact)*
 
 [`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
