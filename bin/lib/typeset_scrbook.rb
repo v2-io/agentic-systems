@@ -250,9 +250,9 @@ class Kramdown::Converter::AsfScrbookLatex < Kramdown::Converter::AsfLatex
     role = role_marker(el)
     prefix = close_open_wrappers(current_level: 2)
     case role
-    when 'Preface'
+    when 'Preface', 'Introduction'
       info = heading_title_after_role(el, opts)
-      "#{prefix}" + (info.empty? ? "\\addchap{Preface}\n\n" : "\\addchap{#{info}}\n\n")
+      "#{prefix}" + (info.empty? ? "\\addchap{#{role}}\n\n" : "\\addchap{#{info}}\n\n")
     when 'Appendices'
       out = +prefix
       out << mainmatter_marker
@@ -287,7 +287,7 @@ class Kramdown::Converter::AsfScrbookLatex < Kramdown::Converter::AsfLatex
     when 'Chapter'
       @just_chaptered = true
       "#{close_open_wrappers(current_level: 3)}\\chapter{#{heading_title_after_role(el, opts)}}\n\n"
-    when 'Preface'
+    when 'Preface', 'Introduction'
       close_open_wrappers(current_level: 3)
     else
       # No role marker; might be an appendix-segment header (with .segment IAL).

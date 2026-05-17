@@ -325,9 +325,9 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     role = role_marker(el)
     prefix = close_open_wrappers(current_level: 2)
     case role
-    when 'Preface'
+    when 'Preface', 'Introduction'
       info = heading_title_after_role(el, opts)
-      "#{prefix}" + (info.empty? ? "\\addchap{Preface}\n\n" : "\\addchap{#{info}}\n\n")
+      "#{prefix}" + (info.empty? ? "\\addchap{#{role}}\n\n" : "\\addchap{#{info}}\n\n")
     when 'Appendices'
       out = +prefix
       out << mainmatter_marker
@@ -372,8 +372,8 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     when 'Chapter'
       @just_chaptered = true
       "#{close_open_wrappers(current_level: 3)}\\chapter{#{heading_title_after_role(el, opts)}}\n\n"
-    when 'Preface'
-      close_open_wrappers(current_level: 3)   # part-level preface — prose flows after
+    when 'Preface', 'Introduction'
+      close_open_wrappers(current_level: 3)   # part-level preface/introduction — prose flows after
     else
       # No role marker; might be an appendix-segment header (with .segment
       # IAL) — in-part appendix segments are H3 because they're chapter-

@@ -1,45 +1,30 @@
 # *Volume* Adaptation & Actuation Theory (AAT)
-## *Preface*
+## *Introduction*: Inescapable Foundations of Agency
 
-The mathematical core of the [Agentic Systems](../OUTLINE.md) research framework. AAT formalizes the adaptive cycle — one complete traversal of the agent-environment feedback loop — as the fundamental unit of analysis for adaptive, purposeful agents under uncertainty.
-
-**Working draft.** The argument laid out claim by claim. The ordering is the current best linearization of the dependency DAG; it will change as the theory develops. Slugs are the stable identities. Treat this as a living proof sketch, not a specification.
-
-**Reading AAT — the mental model first.** The math in this volume is, in places, thick: Lyapunov inequalities, congruence invariants, projection memory kernels. The findings are important and portable even where the proofs are not easy, so it is worth carrying one picture into every segment. Think of an adaptive agent as something trying to stay close to a target that will not hold still — reality drifts, and the agent must keep correcting. The single question that decides whether it can keep up is this: *is there a way to measure "how far off am I" — a measuring-stick — such that every correction the agent makes provably shrinks that measure faster than the world widens it?* That measuring-stick is the agent's **stability certificate**. The reason this is a foundation and not a metaphor: "such a stick exists" is *the same fact* as "the agent is exponentially stable" — this is a classical theorem (Lyapunov), made explicit in #result-certificate-existence. That equivalence is why the framework's organizing slogan, *an adaptive system is one whose contraction outpaces its target's drift*, is a theorem and not a vibe. Once the picture is held, almost everything the theory says structurally is one of four questions about that one stick: **does a stick exist here at all?** (the framework's reach); **when it exists, is the agent forced to one specific stick or free to choose its units?** (forced only in the statistical case); **is there a direction the stick cannot measure — a blind spot where it goes flat?** (and no re-graduation of the stick ever un-flattens a flat direction — only genuinely new information does); and **if you step back and view the agent coarsely, as a team or composite, does the stick survive the coarsening?** (its shape survives; its guarantee leaks by exactly a memory term). A reader who carries the measuring-stick away has the cross-section in hand before meeting a single inequality.
-
-**Reading AAT — the precise structure.** At the integration level AAT connects control theory, causal inference, information theory, and agent architecture under a common formalism. At the distinctive level AAT is an *epistemic architecture for bounded correction under decomposed disturbance*. Its cross-sectional structure is one object — the equilibrium **stability certificate** ( #disc-stability-certificate), whose existence-equals-stability anchor is #result-certificate-existence. The three meta-patterns are its facets: its **scope of existence** is the separability pattern ( #disc-separability-pattern, positive half — separable core / structured repair / general open across the ladders of increasing difficulty); its **forced identity** is additive-coordinate-forcing ( #disc-additive-coordinate-forcing, constructive half — Cauchy-functional-equation arguments on AAT-internally-motivated axioms force the coordinate, uniquely only in the statistical/Čencov case); its **boundary** is the identifiability floor ( #disc-identifiability-floor, negative half — structural no-go results from external information-theoretic theorems, the rank-collapse subclass irreducible by Sylvester's law, each naming a unique escape via genuinely-new-information rather than re-coordinatization); and its **interior** is the operator-sector contraction machinery (the persistence and contraction templates), with its **behaviour under coarse-graining** the composition-closure defect. The three failure modes are provably *distinct* (a non-gradient field still has a certificate; congruence is invertible while projection is not), so the cross-section is genuinely several meta-patterns and not one — the plurality is a stated structural fact, not a loose intuition. Reading any segment through the certificate and its facets surfaces what makes it load-bearing: whether a certificate exists for it, which one (if any) is forced, what boundary it abuts, and whether it survives projection.
-
-**On mathematical precision.** The theory's relationship to formalism varies by section and is expected to. Part I (adaptive systems) is the most mathematically locked down — the persistence machinery, mismatch dynamics, and gain structure have clean derivations and Lyapunov proofs. Part II (purposeful agents) has an exact diagnostic core whose inferential force scales with the continuation convention hierarchy ( #def-value-object): from local heuristics (C1/one-step) through moderate-horizon diagnostics (C2/receding-horizon) to global conclusions (C3/Bellman). The strategy layer now has a proved DAG structure (acyclicity from temporal ordering, Markov property from the CMC theorem under causal sufficiency) and a first-class treatment of correlated failure via the Correlation Hierarchy ( #def-strategy-dag). Both the diagnostic core and the strategy layer depend on the directed-separation scope condition ( #der-directed-separation): **Part II's exact results apply to Class 1 (Separated) agents.** The scope restriction to Separated agents is detailed in the Part II preamble below. Part III (composition) has promising structure built on the Part I Lyapunov machinery but depends on admissibility choices that are formulated, not derived, and a bridge lemma that requires a contraction assumption beyond the stated admissibility constraints. This gradient — from exact core through conditionally exact architecture to open formulation — is the expected arc. The goal is to describe agentic systems, not to produce a purely mathematical artifact. We pursue mathematical precision when it yields genuine insight (the persistence condition, the CMC-based Markov proof, the convention hierarchy monotonicity) and settle for principled sketches when the insight is structural rather than quantitative (the strategy-revision loop, the composition admissibility). The boundaries between these regimes are fluid and still being discovered.
-
-**Scope:** AAT covers the general theory of adaptive systems (Part I), actuated/purposeful agents (Part II), and agent composition (Part III). Domain instantiations (software: [`02-tst-core/`](../02-tst-core/OUTLINE.md)), logogenic agents ([`03-llm-core/`](../03-llm-core/OUTLINE.md)), and Emergent Logozoetic Intelligences ([`04-eli-core/`](../04-eli-core/OUTLINE.md)) are part of the broader Agentic Systems framework, grounded by AAT but developed independently.
-
-See [`FORMAT.md`](../FORMAT.md) for segment file conventions. See [`NOTATION.md`](../NOTATION.md) for symbols, conventions, and units.
-
-Every slug is linked to its intended `src/{slug}.md` file, even when that file doesn't exist yet (`missing` or `old` stage). This is deliberate — the links serve as stable intent markers so the only ongoing maintenance is updating the Stage column. A `missing` link means no file exists; an `old` link means the content lives in a corresponding `src/old-*` source file awaiting conversion. Segments may also contain forward references (`#slug-name`) to not-yet-written segments; these are intentional dependency markers, not broken links.
-
-![Full dependency graph](src/img/dep-graph-full.svg)
-
-
+![[INTRODUCTION]]
 
 ## *Part* Adaptive Systems Under Uncertainty
-### *Preface*
+### *Introduction*: First Principles for Persisting in Time
 
+<!-- remove -- yeah, our entire introduction to Adaptive Systems Under Uncertainty describing the first third of Volume 1 is two sentences, the first being an incomplete sentence and the second one being a mislead. -->
 *Scope: Any system consisting of an agent coupled to an environment through observation and action channels, where the environment is not fully observable. This is the general case — thermostats through commanders.*
+
+<!-- salvageable -- this dependency diagram might actually be useful if it's automatically kept up-to-date and broken into chapters and if the nodes were actually clickable and sent you to that segment and if these got rendered into the markdown / pdf as they should which they don't yet... -->
 
 ![Dependency Graph](src/img/dep-graph-section-I.svg)
 
 ### *Chapter*  The Coupled Loop: Ontology and Scope
 
-| §   | Type        | N   | Tag                                                                                      | Claim                                          | Stage           |
-| --- | ----------- | --- | ---------------------------------------------------------------------------------------- | ---------------------------------------------- | --------------- |
-| I   | Definition  |     | [#def-agent-environment](src/def-agent-environment.md)                                   | Agent-environment boundary                     | deps-verified   |
-| I   | Definition  |     | [#def-action-transition](src/def-action-transition.md)                                   | Actions affect environment                     | deps-verified   |
-| I   | Definition  |     | [#def-observation-function](src/def-observation-function.md)                             | Lossy, noisy observations                      | deps-verified   |
-| I   | Definition  |     | [#def-chronica](src/def-chronica.md)                                                     | Complete interaction history                   | deps-verified   |
-| I   | Scope       |     | [#scope-adaptive-system](src/scope-adaptive-system.md)                                   | Broadest AAT scope: observe under uncertainty  | claims-verified |
-| I   | Scope       |     | [#scope-agency](src/scope-agency.md)                                                     | Narrows to action with Pearl-level-2 contrast  | claims-verified |
-| I   | Postulate   |     | [#post-composition-consistency](src/post-composition-consistency.md)                     | Agent/subagent scale invariance *(possibly out of place)* | deps-verified   |
-| I   | Postulate   |     | [#post-causal-structure](src/post-causal-structure.md)                                   | Irreducible causal structure                   | deps-verified   |
+| §   | Type       | N   | Tag                                                                  | Claim                                                     | Stage           |
+| --- | ---------- | --- | -------------------------------------------------------------------- | --------------------------------------------------------- | --------------- |
+| I   | Definition |     | [#def-agent-environment](src/def-agent-environment.md)               | Agent-environment boundary                                | deps-verified   |
+| I   | Definition |     | [#def-action-transition](src/def-action-transition.md)               | Actions affect environment                                | deps-verified   |
+| I   | Definition |     | [#def-observation-function](src/def-observation-function.md)         | Lossy, noisy observations                                 | deps-verified   |
+| I   | Definition |     | [#def-chronica](src/def-chronica.md)                                 | Complete interaction history                              | deps-verified   |
+| I   | Scope      |     | [#scope-adaptive-system](src/scope-adaptive-system.md)               | Broadest AAT scope: observe under uncertainty             | claims-verified |
+| I   | Scope      |     | [#scope-agency](src/scope-agency.md)                                 | Narrows to action with Pearl-level-2 contrast             | claims-verified |
+| I   | Postulate  |     | [#post-composition-consistency](src/post-composition-consistency.md) | Agent/subagent scale invariance *(possibly out of place)* | deps-verified   |
+| I   | Postulate  |     | [#post-causal-structure](src/post-causal-structure.md)               | Irreducible causal structure                              | deps-verified   |
 
 ### *Chapter* The Reality Model
 
@@ -53,18 +38,18 @@ Every slug is linked to its intended `src/{slug}.md` file, even when that file d
 
 ### *Chapter* The Cycle in Motion: Mismatch, Gain, & Tempo
 
-| §   | Type        | N   | Tag                                                                    | Claim                           | Stage           |
-| --- | ----------- | --- | ---------------------------------------------------------------------- | ------------------------------- | --------------- |
+| §   | Type        | N   | Tag                                                                    | Claim                                                                                                                                                 | Stage           |
+| --- | ----------- | --- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | I   | Discussion  |     | [#the-cycle-in-motion-intro](src/the-cycle-in-motion-intro.md)         | Chapter intro: from static representation to dynamic cycle; completeness-derived recursion + action, mismatch/gain/tempo triad, linear ODE as preview | draft           |
-| I   | Formulation |     | [#form-event-driven-dynamics](src/form-event-driven-dynamics.md)       | Events in continuous time       | deps-verified   |
-| I   | Derived     |     | [#der-recursive-update](src/der-recursive-update.md)                   | State updates must be recursive | claims-verified |
-| I   | Derived     |     | [#der-action-selection](src/der-action-selection.md)                   | Action as function of model     | deps-verified   |
-| I   | Definition  |     | [#def-mismatch-signal](src/def-mismatch-signal.md)                     | Prediction error signal         | deps-verified   |
-| I   | Result      |     | [#result-mismatch-decomposition](src/result-mismatch-decomposition.md) | Model error + obs noise         | claims-verified |
-| I   | Empirical   |     | [#emp-update-gain](src/emp-update-gain.md)                             | Optimal update weighting        | claims-verified |
-| I   | Definition  |     | [#def-causal-information-yield](src/def-causal-information-yield.md)   | Information from interventions  | deps-verified   |
-| I   | Definition  |     | [#def-adaptive-tempo](src/def-adaptive-tempo.md)                       | Rate of useful info acquisition | claims-verified |
-| I   | Hypothesis  |     | [#hyp-mismatch-dynamics](src/hyp-mismatch-dynamics.md)                 | Mismatch evolution ODE          | deps-verified   |
+| I   | Formulation |     | [#form-event-driven-dynamics](src/form-event-driven-dynamics.md)       | Events in continuous time                                                                                                                             | deps-verified   |
+| I   | Derived     |     | [#der-recursive-update](src/der-recursive-update.md)                   | State updates must be recursive                                                                                                                       | claims-verified |
+| I   | Derived     |     | [#der-action-selection](src/der-action-selection.md)                   | Action as function of model                                                                                                                           | deps-verified   |
+| I   | Definition  |     | [#def-mismatch-signal](src/def-mismatch-signal.md)                     | Prediction error signal                                                                                                                               | deps-verified   |
+| I   | Result      |     | [#result-mismatch-decomposition](src/result-mismatch-decomposition.md) | Model error + obs noise                                                                                                                               | claims-verified |
+| I   | Empirical   |     | [#emp-update-gain](src/emp-update-gain.md)                             | Optimal update weighting                                                                                                                              | claims-verified |
+| I   | Definition  |     | [#def-causal-information-yield](src/def-causal-information-yield.md)   | Information from interventions                                                                                                                        | deps-verified   |
+| I   | Definition  |     | [#def-adaptive-tempo](src/def-adaptive-tempo.md)                       | Rate of useful info acquisition                                                                                                                       | claims-verified |
+| I   | Hypothesis  |     | [#hyp-mismatch-dynamics](src/hyp-mismatch-dynamics.md)                 | Mismatch evolution ODE                                                                                                                                | deps-verified   |
 
 ### *Chapter* Persistence and Structural Limits
 

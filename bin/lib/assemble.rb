@@ -149,8 +149,9 @@ module Mono
         # chunk's Title metadata is absent — emit just `## *Preface*`
         # without a trailing duplicate. Stage 3's converter defaults the
         # \addchap title to "Preface" in that case.
-        title = parsed[:metadata]['Title']
-        header = title ? "## *Preface* #{title}" : '## *Preface*'
+        title   = parsed[:metadata]['Title']
+        section = parsed[:metadata]['Section'] || 'Preface'
+        header  = title ? "## *#{section}* #{title}" : "## *#{section}*"
         "#{header}\n\n#{body.rstrip}\n"
       else
         "#{body.rstrip}\n"

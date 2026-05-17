@@ -65,8 +65,8 @@ module Mono
     # so downstream code can decide whether to bail or render generically.
     ROLES_BY_LEVEL = {
       1 => %w[Volume].freeze,
-      2 => %w[Preface Part Appendices].freeze,
-      3 => %w[Preface Chapter].freeze,
+      2 => %w[Preface Introduction Part Appendices].freeze,
+      3 => %w[Preface Introduction Chapter].freeze,
     }.freeze
 
     HEADER_LINE_RE   = /\A(\#{1,6})\s+(.+?)\s*\z/
@@ -261,14 +261,16 @@ module Mono
 
       def handle_h2(role, title)
         case role
-        when 'Preface'
-          # Volume-level preface (replaces the older Frontmatter role).
-          # Renders as an unnumbered chapter (\addchap) with its own ToC
-          # entry and page break. Optional info-suffix becomes the
-          # chapter title; default is "Preface" if blank.
+        when 'Preface', 'Introduction'
+          # Volume-level preface/introduction (replaces the older
+          # Frontmatter role). Renders as an unnumbered chapter
+          # (\addchap) in \frontmatter with its own ToC entry and page
+          # break. Optional info-suffix becomes the chapter title. The
+          # literal section word ("Preface" | "Introduction") is carried
+          # as :word so the build does not force the name "Preface".
           @current_h2 = :preface
           @current_h3 = nil
-          @items << { kind: :preface, level: 2, title: title }
+          @items << { kind: :preface, level: 2, title: title, word: role }
         when 'Part'
           @current_h2 = :part
           @current_h3 = nil
@@ -291,10 +293,10 @@ module Mono
 
       def handle_h3(role, title)
         case role
-        when 'Preface'
+        when 'Preface', 'Introduction'
           @current_h3 = :preface
           @preface_seen_in_current_part = true
-          @items << { kind: :preface, level: 3, implicit: false }
+          @items << { kind: :preface, level: 3, implicit: false, word: role }
         when 'Chapter'
           @current_h3 = :chapter
           @chapter_seen_in_current_part = true

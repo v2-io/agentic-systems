@@ -321,7 +321,7 @@ module Mono
         kind = item[:level] == 2 ? :volume_preface : :part_preface
         title = item[:title].to_s.strip
         title = nil if title.empty?
-        @buffer = { kind: kind, lines: [], title: title }
+        @buffer = { kind: kind, lines: [], title: title, word: item[:word] }
       end
 
       def handle_part(item)
@@ -485,7 +485,10 @@ module Mono
         buf = @buffer
         @buffer = nil
         md = buf[:lines].join("\n\n").strip
+        md = resolve_preface_transclusion(md)
         return if md.empty?
+
+        section_word = buf[:word]
 
         # `explicit_title` is the H2/H3 info-suffix the author wrote (or
         # nil when the heading is bare `## *Preface*`); the chunk's
@@ -515,7 +518,7 @@ module Mono
         end
 
         chunk_text = build_preface_chunk(
-          body: md, role: role,
+          body: md, role: role, section_word: section_word,
           display_title: display_title, explicit_title: explicit_title,
         )
         chunk_path = @chunks_dir / chunk_name
@@ -555,9 +558,35 @@ module Mono
         body_with_meta
       end
 
-      def build_preface_chunk(body:, role:, display_title:, explicit_title:)
+      # If the preface body is a single Obsidian-style transclusion
+      # `![[NAME]]`, inline NAME.md (resolved relative to the OUTLINE
+      # directory): drop HTML comments, the file's own leading section
+      # heading (the pipeline supplies the structural header), and its
+      # `## Working Notes` section onward (the monograph drops Working
+      # Notes, exactly as for segments). Anything that is not a lone
+      # embed is returned unchanged; a missing target is left as the
+      # literal embed text so the failure is loud, not a silent empty.
+      def resolve_preface_transclusion(md)
+        m = md.match(/\A!\[\[\s*([^\]|#]+?)(?:\.md)?\s*\]\]\z/)
+        return md unless m
+
+        path = Pathname.new(@spec[:outline]).dirname / "#{m[1].strip}.md"
+        return md unless path.exist?
+
+        raw = path.read
+        raw = raw.gsub(/<!--.*?-->/m, '')
+        raw = raw.split(/^\#{2,6}[ \t]+Working Notes\b.*$/m, 2).first.to_s
+        lines = raw.split("\n", -1)
+        i = 0
+        i += 1 while i < lines.size && lines[i].strip.empty?
+        i += 1 if i < lines.size && lines[i].match?(/\A\#{1,6}[ \t]+/)
+        lines[i..].join("\n").strip
+      end
+
+      def build_preface_chunk(body:, role:, display_title:, explicit_title:, section_word: nil)
         meta = ["**Role**: #{role}"]
         meta << "**Title**: #{explicit_title}" if explicit_title
+        meta << "**Section**: #{section_word}" if section_word
 
         if display_title && role == 'volume-preface'
           "# #{display_title}\n\n#{meta.join("\n")}\n\n#{body}\n"
