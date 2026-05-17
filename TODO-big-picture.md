@@ -3,6 +3,49 @@
 *A bounded, pre-preprint correction plus the census that sizes the rest.
 Parent navigator: PRACTICA. Priming-heavy: not for de-novo audits.*
 
+> [!note]
+> **2026-05-16 session correction — read this first.**
+>
+> - **W4 — DONE** (`6653de6`). The field-facing contribution sentence
+>   (`doc/readme/src/_position-and-lineage.md` → README.md /
+>   README-auditor.md) is de-flinched and regenerated. This was the
+>   urgent item: organic repo clones (~400/day) are reading that surface
+>   now.
+> - **W1 / W2 — WRONG AS FRAMED; do not execute.** The "missing posture
+>   word for the forcing-bound kind" diagnosis, and the elaborated
+>   provenance-axis-vs-result-shape-axis argument built on top of it,
+>   rested on reading FORMAT.md as a canonical taxonomy (it is stale
+>   working instructions) and on having read essentially no theory
+>   segments. It does not survive contact with the actual mathematics.
+>   The deflation is not a missing word — it is *register drift*: the
+>   anti-inflation discipline, accurate when this was a meta-spike, has
+>   gone stale against results that are now exact and load-bearing. The
+>   fix is per-result voice recalibration, not a vocabulary addition.
+> - **W3 — still valid**, reframed: a per-result *read* (not a grep
+>   tally) of which segments hold the calibrated register (Cor A.1S.1's
+>   Novelty Claim is the internal exemplar) vs. which have drifted to the
+>   flattened one (e.g. `result-certificate-existence`: its Brief says "a
+>   theorem and not a vibe" while its Novelty Claim line retreats to bare
+>   "recognition, classical"). Collaborative strengthen-first pass, not
+>   solo-while-AFK.
+>
+> **Converged cleanup principle (Joseph, 2026-05-16):** remove redundant,
+> unnecessarily defensive hedges; classical machinery is stated plainly,
+> not apologized for; the contribution is the *bounds*, never "the
+> methodology / honest labels"; do not self-rank-then-self-deflate
+> magnitude ("same kind as Gödel/Shannon but not the same magnitude" —
+> drop the disclaimer, state the kind, full stop); genuine epistemic
+> qualifications (tier / scope / maturity) stand where they actually
+> apply. This is `integration-is-replacement` applied to *register*, not
+> just to *tier*.
+>
+> **On this plan's own Guards:** the "*In kind, not magnitude. Same kind
+> as Gödel/Rice/Bell, not the same magnitude*" guard below is itself an
+> instance of the magnitude-disclaimer hedge Joseph identified
+> 2026-05-16. Left verbatim pending his hand (this is his working doc);
+> flagged so the next agent treats "state the kind, full stop" as the
+> operative rule.
+
 ## The defect (verified primary-source)
 
 The framework's load-bearing spine and its sharpest *proven* results are
