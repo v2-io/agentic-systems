@@ -497,6 +497,22 @@ blanket-rewrite one to the other**; recover class from the routing-tracker
 partition / git history, never by string substitution. The frozen
 `adjudication.md` deliverables' stale internal paths are not edited.
 
+**Working-directory lifecycle** *(authoritative SOP — Joseph-attested
+2026-05-16, with rationale)*: a working directory, **once it has served its
+purpose (fully integrated — nothing of value lives only there), is cleared
+out of the live tree**, into `.integrated/` (or `.archive` / `_obs`). It is
+*not* "retained in place." Leaving served-purpose working dirs in `audits/`
+or `src/` or anywhere live is not cost-neutral: it taxes discoverability on
+every `ls` / `rg`, is a decision point and cognitive load on every
+encounter, and — worst — breeds the "it's not done, but I'll leave it here
+because that's what we do, someone will get to it later" rot. The disposition
+of a served-purpose working dir is therefore *clear it*, not catalogue an
+(a)/(b) location framework. **Boundary:** this covers dirs whose purpose is
+*spent*; it does **not** override the gold standing gate below — a directory
+whose disposition is *itself* an open decision (the de-novo
+`AUDIT-WORKING-*`) has not "served its purpose" in this sense and is
+governed by that gate, not by this line.
+
 **The de-novo `AUDIT-WORKING-*` "gold" standing gate** *(authoritative
 SOP)*: those dirs are first-encounter cognition / "Wandering Thoughts" —
 value largely orthogonal to theory-fix triage. **Before any processing,

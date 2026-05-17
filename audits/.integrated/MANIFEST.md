@@ -210,9 +210,13 @@ Files moved: `2026-03-13-feedback.md`, `2026-03-14-fresh-eyes-assessment.md`, `f
 > D.1), the four `pending-findings-2026-04-2{1,2,3,5}.md` ledgers (durable
 > read-as-evidence infrastructure), `audits/README.md` (directory
 > infrastructure + the gold-dir standing-gate pointer), the 19 de-novo
-> `AUDIT-WORKING-*` "gold" dirs (separate standing gate — consult Joseph),
-> and the 6 `ADJUDICATION-WORKING-*` workspaces (the adjudication
-> deliverables; the audit trail this MANIFEST cites). Soft signal lives in
+> `AUDIT-WORKING-*` "gold" dirs (separate standing gate — consult Joseph).
+> The 6 `ADJUDICATION-WORKING-*` workspaces — confirmed fully integrated
+> (every disposition/soft-row/observation routed; nothing lives only there)
+> — were **cleared into `.integrated/ADJUDICATION-WORKING-<id>/`** per the
+> working-directory-lifecycle policy (a served-purpose working dir does not
+> stay in the live tree); they remain the cited un-flattened provenance,
+> now co-located with this MANIFEST. Soft signal lives in
 > [`../polish-and-sentiment-ledger.md`](../polish-and-sentiment-ledger.md)
 > S8–S30 (one consolidated curated pass). S30 was adjudicated up by Joseph
 > to the `#sketch-structural-adaptation-genericity` exploratory OUTLINE
