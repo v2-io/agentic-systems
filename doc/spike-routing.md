@@ -21,7 +21,48 @@ doc.*
 
 ---
 
-## 0. Why a companion and not a fork
+## 0. The core principle — truth is the arbiter; everything else is a proxy (Joseph 2026-05-18)
+
+**This governs every section below it.** The job is to get the
+*theory's truth* right. Provenance, git history, CHANGELOG, the INDEX
+label, `NOTATION.md`, the spike's own framing, the segment's own
+assertion, audit findings, agent consensus, even the convergence of
+multiple independent agents — **all of these are mild proxies for truth,
+and every one of them drifts.** They are useful for *locating* a question
+and *cheap-screening* it; they never *settle* it. A question is settled
+only by the mathematics, re-derived independently far enough to stand on
+constitutive structure (definitions that make the core cohere) +
+forced identities + elementary steps — *not* on what any artifact says.
+
+Two concrete, recurring traps this names:
+
+- **`NOTATION.md` is a lagging index.** Spike findings and new segments
+  routinely fail to update it; the live theory drifts away from it. "The
+  notation defines X as Y" is *not* evidence that X *is* Y — it is at
+  most evidence about a document that may be stale. Never cite it as
+  authority; at most as corroboration explicitly marked non-load-bearing.
+- **"Verified against \<artifact\>" is proxy in verification's clothes.**
+  Tagging a step `[Verified]` because a document *says* it does not make
+  it verified — it verifies the document, not the truth. The tell: a
+  `[Verified]` whose object is "what file F asserts" rather than "the
+  derivation holds." (Worked instance, 2026-05-18: a ρ-factorization
+  judgment leaned on "NOTATION defines ρ as a single primitive" tagged
+  *verified*; the real argument rested on the constitutive meaning of
+  mismatch + the Kalman innovation identity + algebra, and was *stronger*
+  once the NOTATION proxy was deleted. Joseph: *"you have to care about
+  the theory's TRUTH more than anything else — provenance and things like
+  that are only mild proxies."*)
+
+The decisive-test (§2), the regression axis (§2a), the
+independent-verify gate, strengthen-before-soften — all of these are
+**proxy-discipline**: machinery for not fooling ourselves with the
+cheaper proxies. They serve §0; when any of them is in tension with
+re-derived truth, truth wins and the proxy-rule is the thing that gets
+re-truthified.
+
+---
+
+## 0b. Why a companion and not a fork
 
 `audit-routing-instructions.md` §0 — *"the job is not to do what the audit
 said — the job is to take each finding, decide what is and is not valid …

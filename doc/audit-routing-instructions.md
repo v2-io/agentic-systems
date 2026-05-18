@@ -452,7 +452,22 @@ Three enum refinements the fan-out surfaced, folded here *(evolved ops)*:
 3. The self-disposed-extract fast-path extends to transcript files that
    declare their downstream ledger targets in a purpose header.
 
-**Evidence hierarchy** *(evolved ops)*, decreasing reliability:
+**The whole evidence hierarchy is proxy; truth is the arbiter**
+*(authoritative SOP — Joseph 2026-05-18; full statement
+`doc/spike-routing.md` §0).* Every entry in the hierarchy below — and
+the ledgers, CHANGELOG, INDEX, `NOTATION.md`, the segment's own
+assertion, the auditor's framing, and even multi-agent convergence — is
+a **mild proxy** that *drifts*. It locates and cheap-screens a question;
+it never settles it. Settle by the mathematics re-derived independently
+(constitutive structure + forced identities + elementary steps), not by
+what any artifact says. Two named traps: `NOTATION.md` is a *lagging*
+index — the live theory drifts from it; never cite it as authority. And
+a `[Verified]` whose object is "what file F says" rather than "the
+derivation holds" is proxy in verification's clothes. The hierarchy is
+for *screening order*, not for *deciding truth*.
+
+**Evidence hierarchy** *(evolved ops — screening order only, never the
+arbiter; see above)*, decreasing reliability:
 `pending-findings-*.md` resolution ledgers ≻ CHANGELOG cycle narratives ≻
 open-`[ ]` backlinks in TODO/PROPOSALS/PRACTICA (sufficient for
 NOT-integrated; *absence is not* sufficient for integrated) ≻ first-hand
@@ -606,3 +621,18 @@ better than canon" — because the corrected truth is usually messier.
 Full worked treatment + the disposition `correctly-superseded` in
 `doc/spike-routing.md` §2a / its Refinement 5. Same §7-meta-stance
 landing: surfaced in the spike corpus, folded into the shared core.*
+
+*Refinement 4 (2026-05-18, Joseph-directed — the foundational stance,
+made explicit and supreme over all the proxy-mechanics in this doc).
+Care about the theory's **truth** above everything; provenance,
+ledgers, CHANGELOG, INDEX, `NOTATION.md`, segment/spike assertions,
+audit findings, and multi-agent convergence are *mild proxies that
+drift* — screening, never settling. Settle by re-derived mathematics.
+Two named traps folded into the evidence-hierarchy preamble above:
+`NOTATION.md` lags the live theory (never authority); a `[Verified]`
+tag whose object is "what a file says" is proxy wearing verification's
+clothes. Caught on a live lead-agent slip (a ρ-factorization judgment
+that cited NOTATION as a verified pillar — the real argument was
+*stronger* without it). Canonical statement: `doc/spike-routing.md`
+§0. This Refinement sits above Refinements 1–3: they are proxy-
+discipline; §0 is what proxy-discipline is *for*.*
