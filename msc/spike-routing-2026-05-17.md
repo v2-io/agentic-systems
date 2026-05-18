@@ -287,15 +287,22 @@ first-hand read of segment + spike). Action taken, per audit-routing
 ## Joseph batch (reserved-decision items — assemble, do not auto-file)
 
 Per `spike-routing.md` §6 (decision-type gate, ratified). Surface
-together; each is a present-truth call Joseph reserved:
+together; each is a present-truth call Joseph reserved. **This is the
+working pointer; the durable queue home is the standing navigator —
+do not treat this `msc/` file as the home (it is the dependency-inverted
+failure Joseph caught 2026-05-18).**
 
-- **CL-2 Instance-5** — the rho-decomposition replacement landing
-  (above); the §4.1 mark is done, the *replacement* is his.
-- **identifiability-floor 4th-instance** (S1: `spike-identifiability-floor-instance-triage-2026-04-24`
-  + `spike-neutral-drift §8/§10.1`) — a triage spike whose recommendation
-  canon *partially inverted*: is `disc-identifiability-floor` Instance 4 a
-  category error the triage caught, or is the triage the soften-shaped
-  move? Present-truth call, laid side-by-side in SPIKE-WORKING-417303.
+- **The Instance-4 / Object-B / CL-2-heavy unification — ONE reserved
+  decision. Durable home: [`PROPOSALS.md`](../PROPOSALS.md) §D.9
+  "RESERVED DECISION (2026-05-18)"** (self-contained there; superseded
+  the earlier stale "CL-2 Instance-5" + "identifiability-floor
+  4th-instance / triage-contradiction" framings, which were resolved by
+  `spikes/spike-identifiability-floor-instance4-resolution-2026-05-18.md`
+  and the recheck). Gated on the running Object-B independent-verify.
+- **Other Joseph-batch items (unchanged, own calls):**
+  `spike-language-as-causal-substrate/` Theorem-1 + the C2★ gap;
+  `spike-attention-governance` archived-vs-research-seed;
+  `temporal-nesting-rg/` Moves B/C/D.
 - **`spike-language-as-causal-substrate/` theoretical orphan** (S6) —
   Theorem-1 (discourse-act → Pearl L2, derivation-grade) lives only in
   the spike; landing is a reserved promotion call (new AAT appendix grade
@@ -667,6 +674,25 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
   Joseph-reserved disposition (relabel Instance 4 / install Object B /
   CL-2 heavy refinement / the unified neutral-drift+Instance-4 decision)
   carry the remainder. **Not escalating further.**
+- **2026-05-18 (n)** — Joseph asked "where is #2 queued exactly?" and the
+  honest answer was: **it wasn't cleanly queued — my "honestly queued"
+  was an overclaim.** It lived in this `msc/` working file (the
+  dependency-inverted failure) with stale/scattered fragments in
+  PROPOSALS/TODO and nothing in PRACTICA. §2-bis navigator-reconciliation
+  failure on my own claim; caught by his question, not by me. **Fixed
+  (the §0c "release-to-the-standing-cycle" leg made actually true, not
+  asserted):** single self-contained durable home created at
+  `PROPOSALS.md` §D.9 "RESERVED DECISION (2026-05-18)"; TODO 143/144
+  de-staled (resolved-by-spike) + 147 repointed; this section inverted to
+  point *out* to the durable home; PRACTICA cycle-priority item 7 added
+  (top-navigator discoverability). Object-B verify
+  (`SPIKE-VERIFY-471802`) returned in parallel: **no refutation; math
+  gate CLEARED** with named repairs (overclaimed ‖δ‖-moment clause;
+  Lyapunov sign slip; tier-honesty pass) — true tier
+  exact-in-LG-sub-scope/robust-qualitative-general; folded into the
+  durable home. The reserved decision is now genuinely queued, current,
+  and discoverable from the top navigator. Per §0c: discharged; not
+  escalating.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 
