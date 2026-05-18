@@ -210,9 +210,19 @@ Decreasing reliability:
    sufficient for not-integrated; *absence is not* sufficient for
    integrated).
 
-`git`-recency is **poisoned** for this corpus — the AAD→AAT sweep
-(2026-05-15), the role-prefix sweep (2026-04-24), and the 2026-05-12
-bulk move all rewrote large swaths. Use verdicts and `src/`, not the log.
+**On git (Joseph 2026-05-17 — refinement 2): separate *recency* from
+*provenance*.** Raw `git`-recency as a proxy for *integrated-status* is
+**poisoned** for this corpus — the AAD→AAT sweep (2026-05-15), the
+role-prefix sweep (2026-04-24), and the 2026-05-12 bulk move all rewrote
+large swaths, so "recently touched" says nothing about whether content
+landed in canon. But **git *provenance* investigation is a valid,
+encouraged, non-destructive technique here** — often the sharpest
+instrument for the decisive test: `git log -S'<result name / equation /
+slug>' -- '*/src/'` (pickaxe — when, and whether, a spike's load-bearing
+string actually entered a segment), `git blame` on the segment locus,
+`git log --follow` across the renames, and dates *read in context*
+(spike-written vs. content-added-to-`src/`). Use it freely; just don't
+let a sweep-poisoned *recency ordering* stand in for the content check.
 The INDEX label is the *convenience record*, not ground truth — exactly
 as the audit cycle learned its audit-id→ledger mapping was unreliable and
 had to be primary-source-verified.
@@ -263,3 +273,16 @@ for spike 1, accurate only by encoding an external block for spike 2).
 The transferable scar: the convenience-label is unreliable in both
 directions, not only the optimistic one; the first-hand read is budgeted
 as mandatory every fan-out slice, not as a spot-check.*
+
+*Refinement 2 (2026-05-17, Joseph-directed). The "git is poisoned"
+framing inherited from audit-routing §8 was too blunt and risked
+suppressing a powerful investigative technique. Corrected in §7:
+sweep-poisoned **recency-as-status-proxy** is the only poisoned thing;
+**git provenance investigation** — pickaxe `-S` for when/whether a
+result-string entered `src/`, `blame`, `log --follow` across the
+renames, dates read in context — is valid, encouraged, and
+non-destructive, and is frequently the sharpest decisive-test
+instrument. The shared core carries the same correction (audit-routing
+§8, Joseph-directed). Transferable: a blanket "don't trust X" inherited
+from another corpus can over-suppress; check whether the real defect is
+narrower (here it is *recency ordering*, not *git*).*

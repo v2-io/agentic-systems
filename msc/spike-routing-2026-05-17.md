@@ -220,7 +220,16 @@ dir-spikes batched for Joseph.
     flag-don't-route until adjudicated in that slice.
 - **2026-05-17 (c)** — Joseph ratified the gold-gate axis evolution
   (decision-type, not file/dir). `spike-routing.md` §6 now settled.
-  Checkpoint committed; fan-out next.
+  Checkpoint committed (`971d127`).
+- **2026-05-17 (d)** — Joseph-directed SOP refinement: separate git
+  *recency* (sweep-poisoned) from git *provenance* (valid, encouraged,
+  non-destructive — pickaxe `-S`, `blame`, `log --follow`, dates in
+  context; often the sharpest decisive-test instrument). Folded into
+  `spike-routing.md` §7 + Refinement 2 **and** the shared core
+  `audit-routing-instructions.md` §8 + its Refinement 2 (the shared
+  core's first re-truthification from its second corpus — §7 meta-stance
+  working as intended). Fan-out briefs to foreground git-provenance as a
+  decisive-test tool (agents default to grep; pickaxe is sharper).
 
 ## Next actions (gated; the cycle is not the taxonomy)
 

@@ -456,8 +456,14 @@ Three enum refinements the fan-out surfaced, folded here *(evolved ops)*:
 `pending-findings-*.md` resolution ledgers ≻ CHANGELOG cycle narratives ≻
 open-`[ ]` backlinks in TODO/PROPOSALS/PRACTICA (sufficient for
 NOT-integrated; *absence is not* sufficient for integrated) ≻ first-hand
-re-read vs current `src/`. **`git`-recency is poisoned** by rename sweeps
-(AAD→AAT 2026-05-15, role-prefix 2026-04-24) — use ledgers, not the log.
+re-read vs current `src/`. **`git`-*recency* is poisoned** by rename
+sweeps (AAD→AAT 2026-05-15, role-prefix 2026-04-24) — recency ordering
+cannot stand in for the content check. But **git *provenance* is a valid,
+encouraged, non-destructive investigative technique** (Joseph 2026-05-17,
+directed into both SOPs): pickaxe `git log -S'<string>' -- '*/src/'` for
+when/whether content entered a segment, `git blame`, `git log --follow`
+across the renames, and dates read in context. Don't infer status from
+the log's *recency*; do use the log's *provenance*.
 
 **Independent-verify gate** *(authoritative SOP)*: **adjudicator ≠
 grad-confirmer.** Before any `git mv` into `.integrated/`, the load-bearing
@@ -559,3 +565,15 @@ earn "redundant"). Folded before any downstream batch was built on the doc.
 The transferable scar: check the new filter externally before building on
 it — the conviction that the correction is clean is the same conviction the
 doc says fails.*
+
+*Refinement 2 (2026-05-17, Joseph-directed via the spike-routing cycle —
+the shared core's first refinement from its second corpus). §8's
+"`git`-recency is poisoned … use ledgers, not the log" was too blunt: it
+correctly killed *recency-as-status-proxy* but, read literally, suppressed
+*provenance investigation* (pickaxe `-S`, `blame`, `log --follow`, dates
+in context) — a valid, non-destructive, often-sharpest decisive-test
+instrument. Split the two explicitly. Surfaced from spike-routing
+(`doc/spike-routing.md` §7 / Refinement 2) and folded into the shared
+core because the evidence-hierarchy is corpus-agnostic. This is the §7
+meta-stance working as intended: a second corpus exercising the shared
+core re-truthified it; the refinement landed here, not in a fork.*
