@@ -9,6 +9,9 @@
 <!-- remove -- yeah, our entire introduction to Adaptive Systems Under Uncertainty describing the first third of Volume 1 is two sentences, the first being an incomplete sentence and the second one being a mislead. -->
 *Scope: Any system consisting of an agent coupled to an environment through observation and action channels, where the environment is not fully observable. This is the general case — thermostats through commanders.*
 
+![[src/img/driver-snow-foundation.pdf]]
+{#fig-driver-snow-foundation caption="Driving in snow as a literal adaptive agent — the worked AAT instance recurring across Part I and beyond. Every visible element has a formal counterpart: windshield occlusion is the mismatch, precipitation modulated by vehicle speed is the drift, the wiper sweep is the correction, the wiper-speed dial is the adaptive tempo, and the still-see-the-road threshold is the model capacity. Persistence fails exactly when drift outpaces gain times capacity."}
+
 <!-- salvageable -- this dependency diagram might actually be useful if it's automatically kept up-to-date and broken into chapters and if the nodes were actually clickable and sent you to that segment and if these got rendered into the markdown / pdf as they should which they don't yet... -->
 
 ![Dependency Graph](src/img/dep-graph-section-I.svg)

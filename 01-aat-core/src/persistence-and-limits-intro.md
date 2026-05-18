@@ -33,6 +33,9 @@ A scope coda closes the chapter and Part I. AAT applies to agents on singular ca
 
 The flow of the chapter: deliberation cost ( #der-deliberation-cost) → gain-to-sector bridge ( #der-gain-sector-bridge) → sector-condition stability and the persistence inequality ( #result-sector-condition-stability, #result-persistence-condition) → structural adaptation when parametric update fails ( #result-structural-adaptation-necessity) → temporal nesting ( #der-temporal-nesting) → identity scope ( #scope-agent-identity). The chapter is where Part I's machinery resolves into operational results.
 
+![[src/img/bathtub-scaffold.pdf]]
+{#fig-bathtub-scaffold caption="Persistence as a bathtub. The belief–reality mismatch is the water level, drift is the inflow, correction is the drain, and model capacity is the rim. The same picture is drawn three times — literal water vocabulary, plain-English AAT terms, then formal symbols — in identical spatial positions, so the analogy is one-to-one. Overflow is persistence failure: inflow outpacing the drain at full."}
+
 ## Working Notes
 
 - This is a chapter-introduction segment; it bridges Chapter 3's preview of the central inequality to Chapter 4's rigorous treatment and its consequences. It carries no formal claim of its own.

@@ -193,7 +193,7 @@
     precip.\ $\times$ speed & drift\_rate = precip * speed     & drift rate & $\rho$ \\
     wiper sweep & correction = rate * eff(mismatch)            & correction & $-F(\mathcal{T},\delta)$ \\
     wiper-speed dial & wiper\_rate                              & adaptive tempo & $\mathcal{T}$ \\
-    blade in visual field & cost(wiper\_rate)                   & deliberation cost & \#der-delib \\
+    blade in visual field & cost(wiper\_rate)                   & deliberation cost & \#der-deliberation-cost \\
     can't see road & capacity                                   & model capacity & $R$ \\
     crash & if mismatch > capacity: fail                        & persistence fails & $\rho > \alpha R$ \\
     vehicle speed & outer\_loop                                  & outer-loop control & $O_t$-adjacent \\

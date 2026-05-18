@@ -39,6 +39,9 @@ The identity is elementary; the consequence is not. Deep strategies are exponent
 
 The flow of the chapter: chain-rule identity ( #der-chain-confidence-decay) → AND/OR scope restriction ( #scope-and-or) → formal DAG with Correlation Hierarchy ( #def-strategy-dag) → orthogonal diagnostic split ( #def-satisfaction-gap, #def-control-regret). The chapter leaves us with a formal strategy representation, an honest treatment of causal insufficiency, and the diagnostic signals that tell whether the problem is the goal, the strategy, the model, or some combination.
 
+![[src/img/strategy-dag-example.pdf]]
+{#fig-strategy-dag-example caption="A worked strategy DAG. Leaf base credences and single-parameter edge credences propagate through AND/OR combination to a strategy-plan-confidence score at the root. The numerics are shown so the propagation can be checked by hand; the single-parameter edge is the chosen parameterization (noisy-OR and weighted variants were rejected)."}
+
 ## Working Notes
 
 - This is a chapter-introduction segment; it bridges Chapter 2's planning-decision arc to Chapter 3's formal strategy structure and diagnostic split. It carries no formal claim of its own.
