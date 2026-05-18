@@ -50,29 +50,47 @@ arc. Don't.
 
 ## Remaining (ordered)
 
-1. **P3′** — edit `#disc-continuity-stance`: land the derived correction
-   (negotiated = bare persistence floor; morally-continuous = floor + an
-   architecturally-non-revisable continuity clause; stance = choice of
-   *terminal non-objective* invariant). Content is already derived and
-   stated in P1′ Discussion; this turns that segment's orthogonality claim
-   from asserted to *derived*, citing P1′. Do **not** reintroduce the
-   refuted "objective-tower" picture.
-2. **P2′** — fill the reserved `#self-actuated-agent` class boundary: a
-   definition segment defining the self-actuated class via the endogenous
-   𝔄 operator, citing P1′. The terminology entry
-   `terminology/entries/self-actuated-agent.md` currently says "no segment
-   yet formalizes the self-actuation operator" — that becomes false; update
-   its pointer (P4′).
-3. **P4′** — cross-ref pointers: `#der-orient-cascade` step 5d (𝔄 is its
+- [x] **P3′ — DONE** (lint-clean; committed). `#disc-continuity-stance`
+  corrected to the derived form: stance = choice of *terminal non-objective
+  invariant* (negotiated = bare persistence floor; morally-continuous =
+  floor + an architecturally-non-revisable continuity clause); the
+  orthogonality claim is now *derived* via #deriv-self-actuation-grounding,
+  not asserted; the "intuitive" objective-tower mechanism is explicitly
+  flagged as the inverse of the structure; the 2026-05-04 demote-to-
+  deployment-level reconsideration is *resolved against* (orthogonality is
+  derived-structural; tier-correlation is an empirical overlay). 6 surgical
+  edits incl. summary + Formal-Expression "$O_t$-property" reframe + depends
+  (+deriv-self-actuation-grounding, +result-persistence-condition). Status
+  kept `discussion-grade` (not over-claimed; structural core derived-by-ref).
+
+- [~] **P2′ — folded into P4′ + a deferred naming flag (scope judgment;
+  surfaced to Joseph).** The reserved boundary is *already formalized by
+  P1′* — `#deriv-self-actuation-grounding` Formal Expression defines the
+  𝔄 operator and the actuated/self-actuated cut. A separate dedicated
+  class-definition segment would (a) substantially restate P1′'s setup
+  (redundant), and (b) require minting a canonical role-prefixed slug
+  (`scope-` vs `def-`; vs the existing prefix-less `#self-actuated-agent`
+  forward-ref token) — a naming decision the live naming cycle governs;
+  unilaterally minting it mid-concurrent-naming-work is overreach. So:
+  the boundary is filled via P1′; P4′ updates the terminology entry +
+  forward-refs to point at P1′; a dedicated standalone segment under a
+  canonical slug is deferred to the naming cycle (flag in TERMINOLOGY-TODO
+  / here). If Joseph wants a standalone segment, create under his chosen slug.
+
+1. **P4′** — cross-ref pointers: `#der-orient-cascade` step 5d (𝔄 is its
    internalization, well-formed only under the grounding condition);
    `#form-objective-functional` (single-interface is what makes the no-go
-   bite); `#def-agent-spectrum` (the self-actuated boundary); the
-   `self-actuated-agent` terminology entry → point at P1′/P2′.
-4. **Independent review** of the full drafted bundle (P1′+P2′+P3′+P4′)
-   before any of it enters assembled canon. Standing discipline — a new
-   conditional no-go entering the framework is independently reviewed, not
-   self-certified. (This arc is the reason that discipline exists; honor it.)
-5. On review-clean: wire into `01-aat-core/OUTLINE.md` (→ canon) →
+   bite — Working-Note pointer); `#def-agent-spectrum` (the self-actuated
+   boundary); and update `terminology/entries/self-actuated-agent.md`
+   ("no segment yet formalizes" → formalized in
+   #deriv-self-actuation-grounding; grounded on a non-objective terminal
+   invariant). Pointers only; math stays in P1′.
+2. **Independent review** of the drafted bundle (P1′ + P3′ + the P4′
+   pointers) before any of it enters assembled canon. Standing discipline
+   — a new conditional no-go entering the framework is independently
+   reviewed, not self-certified. (This arc is the reason that discipline
+   exists; honor it.)
+3. On review-clean: wire P1′ into `01-aat-core/OUTLINE.md` (→ canon) →
    **verify the math is fully present in segments** (verify-before-archive)
    → `git mv` these 3 spike files to `spikes/.integrated/` + add a MANIFEST
    note there. Then this integration is complete.

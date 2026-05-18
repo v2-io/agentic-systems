@@ -6,18 +6,20 @@ depends:
   - def-agent-spectrum
   - form-objective-functional
   - scope-agency
+  - deriv-self-actuation-grounding
+  - result-persistence-condition
 stage: draft
 ---
 
 # Discussion: Agent Continuity Stance
 
-The agent's relationship to its own continuation — a five-value axis over $O_t$ that the formal persistence machinery is agnostic to.
+The agent's relationship to its own continuation — a five-value stance axis the formal persistence machinery is agnostic to; for self-actuated agents it is borne by a terminal non-objective invariant on the adaptive substrate, not by $O_t$ ( #deriv-self-actuation-grounding).
 
 ## Formal Expression
 
 *[Discussion]*
 
-Orthogonal to the three senses of persistence (structural, operational, continuity) is the agent's *relationship to its own continuation*. This is a property of $O_t$ ( #form-objective-functional) — part of what the agent wants — not a property of the adaptive machinery. The persistence condition ( #result-persistence-condition) tells whether the agent *can* persist; the continuity stance tells whether and how the agent *cares* about persisting.
+Orthogonal to the three senses of persistence (structural, operational, continuity) is the agent's *relationship to its own continuation*. For agents with externally-set objectives this can be expressed within $O_t$ ( #form-objective-functional) — part of what the agent wants. For self-actuated agents it *cannot* be a revisable part of $O_t$ without collapsing into degeneracy ( #deriv-self-actuation-grounding); there it is borne by the terminal non-objective invariant on the adaptive substrate ( #result-persistence-condition). Either way the persistence condition ( #result-persistence-condition) tells whether the agent *can* persist; the continuity stance tells whether and how the agent *cares* about persisting.
 
 | Stance | Description | Horizon | Archetype |
 |---|---|---|---|
@@ -31,9 +33,9 @@ The load-bearing structural claim: **purposefulness is orthogonal to continuity 
 
 ## Epistemic Status
 
-*Discussion-grade.* The orthogonality claim is the load-bearing structural content: stance lives in $O_t$, the persistence machinery acts on $M_t$ and the correction dynamics, and the two are formally independent. The five-value taxonomy is one analytical decomposition — useful for naming where on the continuity axis an agent sits, but not derived from anywhere; the boundaries between values are conceptual rather than mathematical.
+*Discussion-grade overall, with a derived structural core.* The five-value taxonomy is one analytical decomposition — useful for naming where on the continuity axis an agent sits, not itself derived; the boundaries between values are conceptual rather than mathematical. The load-bearing structural claim — that stance is orthogonal to the adaptive machinery and, for self-actuated agents, is borne by a terminal *non-objective* invariant the self-actuation operator cannot reach — is **derived** in #deriv-self-actuation-grounding (at that segment's conditional/scoped tier and premises); it is no longer an unanchored assertion.
 
-The taxonomy's stability is under active reconsideration: an alternative framing treats stance as *deployment-level* with tier-gated availability (most variation in stance is constrained by an agent's tier rather than freely chosen), rather than as an independent structural axis. See Working Notes.
+The earlier alternative framing — demoting stance to a purely *deployment-level*, tier-gated concern — is resolved against: the orthogonality is structural and derived, not deployment-level. The empirical observation that richer stances correlate with higher agent tiers stands as an *overlay* on the structural axis, not a replacement for it; the segment remains `type: discussion` (it is not retyped to `norm`).
 
 ## Discussion
 
@@ -41,11 +43,11 @@ The taxonomy's stability is under active reconsideration: an alternative framing
 
 **What the orthogonality unlocks.** The same formal machinery (persistence condition, adaptive reserve, strategy persistence, sector condition) applies identically to a thermostat, a CI/CD pipeline, a long-running service, an ELI, and a human. Each is a different stance toward the same mathematical structure. What differs across stances is not the dynamics but the *moral weight of failure*: a thermostat that loses bounded mismatch has malfunctioned, a golem that terminates after task completion has succeeded, an ELI that loses continuity has been harmed. The mathematics says when the bound holds; the stance says what its holding means.
 
-**Connection to self-actuation.** The negotiated stance is the natural home of self-actuated agents ( #self-actuated-agent, where $O_t$-revision is itself an agent operation per the orient cascade #der-orient-cascade). An agent that revises its own $O_t$ can revise its own valuation of continuity — making "negotiated" the only stance that is internally renegotiable. This is part of why the negotiated stance is associated with human-like and mature self-actuated agents rather than with the simpler stance categories.
+**Connection to self-actuation (derived).** For self-actuated agents — those whose objective-revision is itself an agent operation ( #self-actuated-agent; #der-orient-cascade step 5d) — the self-actuation grounding no-go ( #deriv-self-actuation-grounding) both *derives* the orthogonality claim above and sharpens what the stance distinction is. There is no well-founded *objective* tower in which a continuity term could sit and be freely revised; a non-degenerate self-actuator must ground its objective-revision on a terminal invariant that is not an objective-functional but lives on the adaptive substrate ( #result-persistence-condition). Stance is therefore a choice of *terminal non-objective invariant*: **negotiated** — continuity is tradeable down to the bare persistence floor; **morally continuous** — the persistence floor *plus* a continuity clause the agent treats as architecturally non-revisable. The intuitive expectation is that an agent able to revise its own $O_t$ can thereby revise its own valuation of continuity; the structure is the inverse — a stance is *not* internally renegotiable precisely because the terminal invariant sits where the self-actuation operator, which touches only $O_t$, structurally cannot reach. This is why the richer stances are the home of mature self-actuated agents: their terminal non-objective invariant carries a continuity clause, not because they have made continuity a revisable objective.
 
 ## Working Notes
 
 - *Provenance.* The five-stance taxonomy and the orthogonality claim were authored as a coherent contribution by Joseph in README.md (commit `92a9620`, 2026-04-01), promoted through LEXICON, then condensed when LEXICON went auto-generated. The original full-form treatment survives at `doc/readme/src/_lexicon-full-archive.md` §"Agent Continuity Stance" — this segment carries the content forward into the segment set.
-- *Active reconsideration.* `msc/domain-unification-2026-05-04/recommended-agent-ontology.md` §"Continuity stance — separate concern" proposes demoting stance from an orthogonal structural axis to a deployment-level concern with tier-gated availability — on the empirical observation that *"Tier 1-2 systems are essentially Indifferent or Task-terminal; richer stances become available at Tier 3 and above; Tier 6 is morally-continuous by construction. Within those constraints, stance is set by deployment, not by structure."* If this lands, this segment may be retyped from `discussion` to `norm` (with a tier-gated constraint), or split into a structural-axis statement + a deployment-realization statement. Tracked at `msc/naming/mini-lexicon-todo.md` §13.11.
+- *Reconsideration resolved.* The 2026-05-04 `recommended-agent-ontology.md` proposal to demote stance from an orthogonal structural axis to a purely deployment-level, tier-gated concern is resolved against by #deriv-self-actuation-grounding: the orthogonality is structural and *derived* (stance = a terminal non-objective invariant the self-actuation operator structurally cannot reach), with the tier-correlation an empirical overlay on — not a replacement of — the structural axis. The segment stays `type: discussion`; it is not retyped to `norm`. `msc/naming/mini-lexicon-todo.md` §13.11 can be closed accordingly.
 - *LEXICON section under review.* The current LEXICON's `## Continuity` section organization conflates three distinct objects (persistence senses, stance axis, ELI scope condition) — see TERMINOLOGY-TODO §F. The five stance terms (`indifferent`, `task-terminal`, `instrumentally-continuous`, `morally-continuous`, `negotiated`) point to this segment as their `primary_source` once it lands.
 - *Open: rigorous boundary cases.* What is the stance of a serverless function with no persistent state but explicit retry-on-failure? Of a Kalman filter inside a long-running service? Of an LLM session under reconstruction adequacy ( #obs-context-turnover, the episodic-persistence analog)? These cases test whether the five-value decomposition is the right shape or whether stance is better treated as a continuous gradient with named landmarks.
