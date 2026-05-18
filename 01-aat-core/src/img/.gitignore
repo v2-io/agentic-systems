@@ -1,2 +1,6 @@
 *.log
 *.aux
+# monograph render cache: figure .tex recompiled from source by the
+# build (segment_renderer convert_img) so the .tex stays source of
+# truth without the build mutating the committed *.pdf preview.
+*.mono.pdf

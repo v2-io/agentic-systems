@@ -148,6 +148,63 @@ module Mono
       end
     end
 
+    FIGURE_EXTS = %w[.tex .pdf .svg .png].freeze
+
+    # Resolve Obsidian figure embeds into a normalized kramdown image the
+    # AsfLatex converter's convert_img turns into an in-flow, numbered,
+    # \cref-able figure. Authoring convention (mirrors tables' caption
+    # IAL):
+    #
+    #     ![[src/img/scope-of-work.pdf]]
+    #     {#fig-scope-of-work caption="The scope cascade …"}
+    #
+    # The second line (a kramdown-style IAL) is optional: bare `![[…]]`
+    # renders centered, numbered, uncaptioned, unlabeled. Only embeds
+    # whose target carries a graphic extension are touched — a lone
+    # `![[NAME]]` text transclusion (resolved elsewhere) is left alone.
+    # The src is resolved to an ABSOLUTE path against base_dir (the
+    # component dir, as resolve_preface_transclusion already does) so
+    # the regenerated body.tex needs no figure staging. A `fig-`-
+    # prefixed id flows through the existing #slug cross-ref machinery
+    # (segment_renderer maps `fig-…` → \cref{fig:…}).
+    def resolve_figure_embeds(text, base_dir)
+      base = Pathname.new(base_dir)
+      lines = text.split("\n", -1)
+      out = []
+      i = 0
+      while i < lines.size
+        m = lines[i].strip.match(/\A!\[\[\s*([^\]|]+?)\s*\]\]\z/)
+        unless m && FIGURE_EXTS.include?(File.extname(m[1].strip).downcase)
+          out << lines[i]
+          i += 1
+          next
+        end
+        target = m[1].strip
+        slug = nil
+        caption = nil
+        consumed = 1
+        nxt = lines[i + 1]&.strip
+        if nxt && (ial = nxt.match(/\A\{:?\s*(.+?)\s*\}\z/))
+          spec = ial[1]
+          slug = spec[/#([A-Za-z][\w-]*)/, 1]
+          caption = spec[/caption\s*=\s*"([^"]*)"/, 1] ||
+                    spec[/caption\s*=\s*'([^']*)'/, 1]
+          consumed = 2
+        end
+        abs = (base / target).expand_path.to_s
+        attrs = +'.asf-figure'
+        attrs = "##{slug} #{attrs}" if slug && !slug.empty?
+        if caption && !caption.empty?
+          attrs << %( caption="#{caption.gsub('"', "'")}")
+        end
+        out << '' unless out.empty? || out.last.strip.empty?
+        out << "![](#{abs}){: #{attrs}}"
+        out << ''
+        i += consumed
+      end
+      out.join("\n")
+    end
+
     # ── IngestState: the state machine that processes walker events ──────
 
     class IngestState
@@ -416,6 +473,9 @@ module Mono
         # someone reading chunks complains, or if a downstream renderer
         # other than LaTeX wants the original pipe form.
         body = Mono::SegmentRenderer.preprocess_math_pipes(body)
+        body = Mono::Ingest.resolve_figure_embeds(
+          body, Pathname.new(@spec[:outline]).dirname
+        )
 
         # Pull title out of the (bumped) first heading so the chunk's
         # metadata block can sit right under it. The kramdown converter
@@ -486,6 +546,9 @@ module Mono
         @buffer = nil
         md = buf[:lines].join("\n\n").strip
         md = resolve_preface_transclusion(md)
+        md = Mono::Ingest.resolve_figure_embeds(
+          md, Pathname.new(@spec[:outline]).dirname
+        )
         return if md.empty?
 
         section_word = buf[:word]

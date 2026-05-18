@@ -262,12 +262,36 @@
 % first line of xltabular content, so the caption appears ABOVE the table
 % header — consistent with the kaobook target's \captionof{table}{...} above.
 
+% Figure embeds (segment_renderer.rb convert_img). Markdown figure
+% embeds resolve to an in-flow \captionof{figure} atom whose graphic
+% is a PDF: a TikZ figure's `.tex` (source of truth) is recompiled to
+% a gitignored `.mono.pdf` by the resolver when it changes, then
+% \includegraphics'd. Only graphicx is needed host-side (no
+% \includestandalone — structurally incompatible with this pipeline;
+% see msc/figure-pipeline-buildout-2026-05-18.md).
+\usepackage{graphicx}
+
 %----------------------------------------------------------------------------
 % Equation + table numbering reset per chapter — same convention as the
 % kaobook target (3.5, 3.6, …, then 4.1 in next chapter).
 %----------------------------------------------------------------------------
 \numberwithin{equation}{chapter}
 \numberwithin{table}{chapter}
+% Figures: FLAT volume-wide numbering (Figure 1, 2, …), deliberately
+% NOT per-chapter like equations/tables. The Introduction is an
+% unnumbered \addchap, so a \thechapter-prefixed figure number
+% collapses to "Figure :" there; figures are also far sparser than
+% equations/tables, so a flat scheme reads cleanly and is front-
+% matter-safe. This is the figure-numbering spec decision Joseph
+% delegated ("decide + build it in") — flagged in
+% msc/figure-pipeline-buildout-2026-05-18.md for his review; trivially
+% switchable to \numberwithin{figure}{chapter} if he prefers per-chapter
+% and accepts special-casing the Introduction. \counterwithout removes
+% the book-class per-chapter RESET (else each chapter restarts at
+% "Figure 1"); the renew drops the \thechapter prefix.
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\renewcommand{\thefigure}{\arabic{figure}}
 
 %----------------------------------------------------------------------------
 % Hyperlinks + cross-references. hyperref must load late (it patches many

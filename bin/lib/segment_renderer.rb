@@ -534,7 +534,16 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   # routes through the same rewriting.
   def process_prose(str)
     escape_text(str)
-      .gsub(CROSS_REF_RE) { "\\cref{seg:#{Regexp.last_match(1)}}" }
+      .gsub(CROSS_REF_RE) do
+        slug = Regexp.last_match(1)
+        # Figures are first-class atoms in the SAME #slug machinery, not
+        # a parallel one: a `fig-`-prefixed slug resolves to the figure
+        # label namespace (cleveref says "Figure N"), every other slug
+        # to the segment namespace, exactly as before. postprocess_latex
+        # only rewrites \cref{seg:…}→\externalref, so fig: refs pass clean.
+        ns = slug.start_with?('fig-') ? 'fig' : 'seg'
+        "\\cref{#{ns}:#{slug}}"
+      end
       .gsub(COLLAPSE_INNER_SPACE_RE) { "#{Regexp.last_match(1)}#{Regexp.last_match(2)}" }
       .gsub(/(?<!\\)#/, '\\#')
   end
@@ -640,6 +649,75 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
   # \begingroup/\endgroup scopes \arraystretch and \small — wrapping in
   # `{ ... }` around \begin{xltabular} collides with xltabular's own
   # grouping (the original "Extra endgroup" cascade).
+  # Figure embed. Modelled on convert_table: an in-flow (NOT floating)
+  # numbered atom with \captionof{figure} + \label{fig:<slug>} so it
+  # joins cleveref / the #slug cross-ref machinery, kept whole by
+  # \needspace. The src is an absolute path baked by ingest's
+  # resolve_figure_embeds.
+  #
+  # TikZ source-of-truth (Joseph's intent), via a robust mechanism:
+  # \includestandalone is structurally incompatible with this pipeline
+  # (it does not run the subfile preamble — where the figure's
+  # \scopeclass/\rail engine lives — and needs subfiles known at
+  # main-preamble time, but figures are discovered mid-body; it
+  # collapsed a 637pp build to 8pp). Instead, when a sibling `.tex`
+  # exists and is newer than the render cache, recompile it with
+  # lualatex to `<base>.mono.pdf` (gitignored — the build never
+  # mutates the committed `<base>.pdf` preview) and \includegraphics
+  # that. So the `.tex` stays canonical and vector, regenerated from
+  # source, without the structural break. Priority: fresh .mono.pdf →
+  # committed .pdf → src .pdf/.png → .svg via cached rsvg-convert →
+  # LOUD visible placeholder (never a silent gap). Full rationale:
+  # msc/figure-pipeline-buildout-2026-05-18.md.
+  def convert_img(el, _opts)
+    src = (el.attr['src'] || '').to_s
+    return '' if src.empty?
+    slug    = (el.attr['id'] || '').to_s
+    caption = (el.attr['caption'] || el.attr['alt'] || '').to_s
+    base    = src.sub(/\.[A-Za-z0-9]+\z/, '')
+    tex     = "#{base}.tex"
+    cache   = "#{base}.mono.pdf"
+
+    if File.exist?(tex) &&
+       (!File.exist?(cache) || File.mtime(tex) > File.mtime(cache))
+      dir = File.dirname(tex)
+      job = "#{File.basename(base)}.mono"
+      ok = system('lualatex', '-interaction=nonstopmode', '-halt-on-error',
+                  '-output-directory', dir, '-jobname', job, tex,
+                  chdir: dir, out: File::NULL, err: File::NULL)
+      warn "warn: figure recompile failed for #{tex} (using fallback)" unless ok
+    end
+
+    inc =
+      if File.exist?(cache)
+        "\\includegraphics[width=\\linewidth]{#{cache}}"
+      elsif File.exist?("#{base}.pdf")
+        "\\includegraphics[width=\\linewidth]{#{base}.pdf}"
+      elsif File.exist?(src) && src =~ /\.(pdf|png)\z/i
+        "\\includegraphics[width=\\linewidth]{#{src}}"
+      elsif File.exist?("#{base}.svg")
+        svgpdf = "#{base}.svg.pdf"
+        unless File.exist?(svgpdf)
+          system('rsvg-convert', '-f', 'pdf', '-o', svgpdf, "#{base}.svg")
+        end
+        File.exist?(svgpdf) ? "\\includegraphics[width=\\linewidth]{#{svgpdf}}" : nil
+      end
+    if inc.nil?
+      warn "warn: figure source not found for embed: #{src}"
+      inc = "\\fbox{\\parbox{0.9\\linewidth}{\\centering\\ttfamily " \
+            "MISSING FIGURE\\\\#{File.basename(src)}}}"
+    end
+
+    cap   = caption.empty? ? '{}' : "{#{process_prose(caption)}}"
+    label = slug.empty? ? '' : "\\label{fig:#{slug}}"
+    "\\par\\medskip\n" \
+      "\\needspace{8\\baselineskip}\n" \
+      "\\begingroup\\centering\n" \
+      "#{inc}\\par\\smallskip\n" \
+      "\\captionof{figure}#{cap}#{label}\\par\n" \
+      "\\endgroup\n\\par\\medskip\n\n"
+  end
+
   def convert_table(el, opts)
     aligns  = el.options[:alignment] || []
     weights = table_column_weights(el, aligns.size)
