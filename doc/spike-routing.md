@@ -107,6 +107,17 @@ The hard ones are `orphaned` (where the actual theory work is) and the
 *needs* — when an agent cannot settle it from the material, it is a
 Joseph-adjudicated call, not a guess).
 
+**Cross-repo / externally-blocked decision rule (pilot 023198,
+2026-05-17 — scarred below).** A spike can be *complete as a
+scoping/derivation doc with a real result* whose **source-of-truth lives
+in another repo's unsettled artifact** (e.g. a paper in review). That is
+**not** `orphaned` — landing it would import an unsettled cross-repo
+result, the exact inverse of primary-source discipline. Rule: *if the
+result's source-of-truth is another repo's unsettled artifact, the spike
+is `live-or-open` regardless of how complete the local scoping looks;
+surface the canon-gap for the owner, do not land.* This recurs —
+cross-pollination spikes from the paper portfolio are a known category.
+
 ---
 
 ## 4. Landing-scope policy (Joseph 2026-05-17 — hybrid)
@@ -170,6 +181,17 @@ insurance. This is **lighter** than the `AUDIT-WORKING-*` standing gate
 (`audits/README.md`), which forbids any processing before consult; here
 agents may read and recommend, and Joseph adjudicates the batch.
 
+**The axis that actually gates the Joseph batch is decision-type, not
+artifact-shape (pilot 023198 — ratified by Joseph 2026-05-17).** The
+dir-spike gate above is preserved. But a *file*-spike can also carry a
+Joseph-reserved decision — a framework-identity / cross-repo /
+promotion-level call (structurally the M4 §5.1 / operator-family-spine
+kind). The operative criterion: *route to the Joseph batch anything whose
+resolution requires a decision Joseph reserved, file or dir.* This only
+ever routes **more** to Joseph (never auto-files something that needed
+him); it sharpens, not weakens, the intent behind the "lighter gate"
+decision (don't let agents auto-file reserved-judgment calls).
+
 ---
 
 ## 7. Evidence hierarchy, and the un-trusted label
@@ -212,3 +234,32 @@ lifecycle, the directory-prefix invariant (§8); and the
 phenomenology-is-load-bearing voice discipline (§9).
 
 Read that document. This one only says what is *different* about spikes.
+
+---
+
+*Living document. Started 2026-05-17. Iterate as the process is
+exercised; record each refinement's scar so the next reader inherits the
+reason, not just the rule — this file inherits audit-routing §9's stance
+about itself.*
+
+*Refinement 1 (2026-05-17, diagnostic pilot 023198 —
+`spike-operator-sector-unification` + `spike-c2-star-to-integrate`).
+Three frame defects caught before any fan-out, folded above: (1) no clean
+cell for cross-repo / externally-blocked spikes → §3 decision rule
+(`spike-c2-star` is `live-or-open` because its proof's source-of-truth is
+`~/src/behavioral-floor/`'s in-review paper, not because it is
+incomplete); (2) the Joseph-batch gate keyed on file-vs-dir when the
+load-bearing axis is reserved-decision-type → §6 criterion
+(safe-direction, pending ratification); (3) tightly-coupled sibling
+spikes are mis-routable when split across fan-out slices — adjudicating
+`spike-operator-sector-unification` forced a check of
+`spike-update-operator-sector` (a genuine `orphaned`-suspect, not in
+slice), which an agent trusting "the operator family is done" would
+mis-route → partition keeps sibling clusters in one slice, siblings
+surfaced from outside a slice are flag-don't-route. Confirmed, no change:
+the first-hand decisive-test read is non-optional — the INDEX label was
+wrong in **both** pilot cases, in **opposite** directions (understated
+for spike 1, accurate only by encoding an external block for spike 2).
+The transferable scar: the convenience-label is unreliable in both
+directions, not only the optimistic one; the first-hand read is budgeted
+as mandatory every fan-out slice, not as a spot-check.*

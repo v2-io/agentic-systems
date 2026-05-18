@@ -87,6 +87,16 @@ source, not the verdict.
   its parent spike's), `neurips-back-integration-2026-05-08.md` (see
   ORPHAN-SUSPECT).
 
+**Sibling-coupling (pilot 023198 refinement).** Tightly-coupled spike
+clusters go in **one fan-out slice**, not split — split slices mis-route
+a sibling an agent assumes is "done with the family." Known cluster: the
+operator-family — `spike-operator-sector-unification` (pilot:
+`integrated-misfiled`), `spike-update-operator-sector` (pilot-flagged:
+`orphaned`-suspect, no `#update-operator` segment), and the archived
+`spike-operator-family-unification/` (the strengthener that landed
+`result-certificate-existence`). A sibling surfaced from *outside* a
+slice is **flag-don't-route**.
+
 ## State machine (per spike)
 
 `unexamined → adjudicated (state + recommended home, reasoning written)
@@ -174,14 +184,60 @@ dir-spikes batched for Joseph.
   `spike-operator-sector-unification`. Flagged for Joseph: recommended
   reciprocal head-note in `audit-routing-instructions.md` (authoritative
   SOP — §7, not rescoped unilaterally); `SPIKE-WORKING-*` prefix coinage.
+- **2026-05-17 (b)** — Pilot 023198 returned.
+  Adjudication: `audits/SPIKE-WORKING-023198/adjudication.md` (all
+  content-in-canon claims first-hand-verified with named loci for a
+  confirmer ≠ pilot).
+  - **`spike-operator-sector-unification` → `integrated-misfiled`.**
+    Completion-state (B) strengthened-past: the successor
+    `spike-operator-family-unification/` [already archived] took its
+    O-BP10 gate as a strengthening target → `result-certificate-existence.md`
+    (`status: exact`) + `disc-stability-certificate.md`; the plural no-go
+    is canonized. Every load-bearing claim verified present in `src/`;
+    nothing spike-only. INDEX entry stale/self-contradictory (calls a
+    top-level file its own `.integrated/` "predecessor") — reconcile to
+    `integrated-filed` at cycle close. *Pending independent-verify
+    (confirmer ≠ pilot) before `git mv`.*
+  - **`spike-c2-star-to-integrate` → `live-or-open` (cross-repo,
+    externally-blocked).** Source-of-truth proof in
+    `~/src/behavioral-floor/` (AIES paper, in review). Stays put; no
+    landing this cycle. Real canon gap **surfaced for Joseph, not
+    actioned**: `der-loop-interventional-access:76` still only *asserts*
+    the (C2) violation the external paper *derives* as (C2★); promotion
+    level is a reserved call and the strengthening is already running
+    externally.
+  - Frame defects folded into `doc/spike-routing.md` (Refinement 1,
+    scarred): cross-repo decision rule (§3); Joseph-batch axis =
+    reserved-decision-type, not file/dir (§6, safe-direction pending
+    Joseph ratification); sibling-cluster slicing (partition, below).
+    Confirmed, no change: the first-hand decisive-test read is
+    non-optional — the INDEX label was wrong in **both** pilot cases, in
+    opposite directions.
+  - **`spike-update-operator-sector.md`** flagged by the pilot
+    (sibling-spillover, outside slice): genuine `orphaned`-suspect — no
+    `#update-operator` segment exists; 2026-05-14 CHANGELOG decoupled it
+    as live "(γ)-hybrid triage". Captured for the operator-family slice;
+    flag-don't-route until adjudicated in that slice.
+- **2026-05-17 (c)** — Joseph ratified the gold-gate axis evolution
+  (decision-type, not file/dir). `spike-routing.md` §6 now settled.
+  Checkpoint committed; fan-out next.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 
-1. Pilot returns → fold its frame-defect findings into this tracker
-   (partition / state machine / enum) → launch fresh fan-out.
-2. Fan-out by group → independent-verify pass (adjudicator ≠ confirmer).
-3. Parent executes the safe subset **this cycle**: `integrated-misfiled`
+1. ~~Pilot returns → fold frame defects~~ **done (2026-05-17 b)** —
+   Refinement 1 scarred into `doc/spike-routing.md`.
+2. *Surfaced for Joseph:* (a) gold-gate axis evolution — **ratified
+   2026-05-17**, now settled in `spike-routing.md` §6 (route any
+   reserved-decision spike, file or dir, to the Joseph batch);
+   (b) the C2★ canon gap at `der-loop-interventional-access:76` — his
+   reserved promotion-level call, externally blocked; non-blocking,
+   awaits the paper settling.
+3. Launch fresh fan-out by partition group (operator-family as one
+   coupled slice) → independent-verify pass (confirmer ≠ adjudicator;
+   first pending item: the pilot's `spike-operator-sector-unification`
+   `integrated-misfiled` claim).
+4. Parent executes the safe subset **this cycle**: `integrated-misfiled`
    `git mv`s, tractable landings, `.archived/` moves with recorded reasons.
-4. Heavy landings → integration-plan + PRACTICA surfacing.
-5. Dir-spikes → one batch for Joseph.
-6. MANIFEST updated; `spikes/INDEX.md` reconciled to post-cycle truth.
+5. Heavy landings → integration-plan + PRACTICA surfacing.
+6. Dir-spikes (+ reserved-decision file-spikes) → one batch for Joseph.
+7. MANIFEST updated; `spikes/INDEX.md` reconciled to post-cycle truth.
