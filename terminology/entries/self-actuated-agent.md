@@ -17,6 +17,9 @@ do_not_confuse: []
 
 An [actuated agent](actuated-agent.md) that revises its own objective $O_t$,
 not only its strategy $\Sigma_t$ for reaching a given objective — goal autonomy
-on top of solution autonomy. Reserved as a class boundary: no segment yet
-formalizes the self-actuation operator, though the orient cascade includes a
-possible-$O_t$-revision branch as its terminal step.
+on top of solution autonomy. The self-actuation operator — the internalization
+of the orient cascade's terminal $O_t$-revision branch — is formalized in
+`#deriv-self-actuation-grounding`, which also establishes (as a conditional,
+scoped no-go) that a non-degenerate self-actuator cannot ground its
+objective-revision on an agent-internal objective and must instead ground on a
+non-objective terminal invariant — canonically, the persistence bound.

@@ -77,20 +77,25 @@ arc. Don't.
   canonical slug is deferred to the naming cycle (flag in TERMINOLOGY-TODO
   / here). If Joseph wants a standalone segment, create under his chosen slug.
 
-1. **P4′** — cross-ref pointers: `#der-orient-cascade` step 5d (𝔄 is its
-   internalization, well-formed only under the grounding condition);
-   `#form-objective-functional` (single-interface is what makes the no-go
-   bite — Working-Note pointer); `#def-agent-spectrum` (the self-actuated
-   boundary); and update `terminology/entries/self-actuated-agent.md`
-   ("no segment yet formalizes" → formalized in
-   #deriv-self-actuation-grounding; grounded on a non-objective terminal
-   invariant). Pointers only; math stays in P1′.
-2. **Independent review** of the drafted bundle (P1′ + P3′ + the P4′
-   pointers) before any of it enters assembled canon. Standing discipline
-   — a new conditional no-go entering the framework is independently
-   reviewed, not self-certified. (This arc is the reason that discipline
-   exists; honor it.)
-3. On review-clean: wire P1′ into `01-aat-core/OUTLINE.md` (→ canon) →
+- [x] **P4′ — DONE** (lint-clean; committed). Pointers landed:
+  `#der-orient-cascade` step-5d para (internalized 5d = the self-actuation
+  operator, well-formed only under the grounding condition);
+  `#form-objective-functional` Discussion (the single-interface commitment
+  is what drives the no-go); `#def-agent-spectrum` line 48 ("reserved" →
+  "formalized in #deriv-self-actuation-grounding");
+  `terminology/entries/self-actuated-agent.md` body rewritten ("no segment
+  yet formalizes" removed → points at the segment + the no-go).
+  `primary_source`/`first_asf_mention` frontmatter left at
+  `der-orient-cascade.md` (changing it is a `bin/term decide` naming-system
+  action — deferred to the naming cycle, flagged here).
+
+**Drafted bundle = P1′ + P3′ + P4′ (P2′ folded). Next:**
+
+1. **Independent review** of the drafted bundle before any of it enters
+   assembled canon (running). Standing discipline — a new conditional no-go
+   entering the framework is independently reviewed, not self-certified.
+   (This arc is the reason that discipline exists; honor it.)
+2. On review-clean: wire P1′ into `01-aat-core/OUTLINE.md` (→ canon) →
    **verify the math is fully present in segments** (verify-before-archive)
    → `git mv` these 3 spike files to `spikes/.integrated/` + add a MANIFEST
    note there. Then this integration is complete.

@@ -57,6 +57,8 @@ Organizations or AI agents with true Pareto structure — where no scalarization
 
 **What $O_t$ is NOT.** $O_t$ does not encode how to achieve the objective (that's $\Sigma_t$), what the agent believes about the world (that's $M_t$), or the agent's commitment or resource state (open questions — see #def-strategy-dimension Working Notes). $O_t$ is purely an evaluation criterion.
 
+**The single-interface commitment is load-bearing downstream.** That $V_{O_t}$ is the *sole* handle on $O_t$ is what forces any objective-side grounding invariant for a self-actuated agent through the satisfaction-gap interface — and is therefore the commitment that drives the self-actuation grounding no-go ( #deriv-self-actuation-grounding): there is nowhere else for such an invariant to live.
+
 ## Working Notes
 
 - Compound objectives (multiple simultaneous criteria) might be modeled as terminal AND-nodes in $\Sigma_t$, keeping $O_t$ always simple (one evaluation per terminal). Whether this works for genuinely incommensurable objectives (safety vs. speed) is open — a vector-valued $V_{O_t}$ or Pareto formulation might be needed.
