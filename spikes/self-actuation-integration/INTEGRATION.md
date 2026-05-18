@@ -95,10 +95,26 @@ arc. Don't.
    assembled canon (running). Standing discipline — a new conditional no-go
    entering the framework is independently reviewed, not self-certified.
    (This arc is the reason that discipline exists; honor it.)
-2. On review-clean: wire P1′ into `01-aat-core/OUTLINE.md` (→ canon) →
-   **verify the math is fully present in segments** (verify-before-archive)
-   → `git mv` these 3 spike files to `spikes/.integrated/` + add a MANIFEST
-   note there. Then this integration is complete.
+2. On review-clean **and** git-coordination-clear: do #18 —
+   - **(a) Add the P1′ row** to the `## *Appendices* Details` group in
+     `01-aat-core/OUTLINE.md`. Precedent/format: the `#deriv-stochastic-non-exit`
+     row (the Model-S no-go) — `| A | Derivation | | [#deriv-self-actuation-grounding](src/deriv-self-actuation-grounding.md) | <claim> | conditional |`,
+     placed among the other `deriv-*` rows (near `#deriv-sector-condition` /
+     `#deriv-stochastic-non-exit`).
+   - **(b) Re-sync the stale `#disc-continuity-stance` OUTLINE row**
+     (currently OUTLINE.md ~line 106): it still reads "stance axis *over
+     $O_t$* … stance lives *in $O_t$* … deployment-level demotion under
+     active review" — all overturned by P3′. Update it to: terminal
+     *non-objective* invariant; orthogonality *derived* (via
+     #deriv-self-actuation-grounding); demotion *resolved against*. (This is
+     a required consistency fix, not optional — leaving it makes the index
+     contradict the segment.)
+   - **(c)** advance P1′ `stage: draft → deps-verified` only if appropriate
+     after the review; otherwise it stays `draft` in-canon (a `draft`-stage
+     OUTLINE row is legitimate).
+   - **(d) Verify the math is fully present in segments** (verify-before-archive)
+     → `git mv` these 3 spike files to `spikes/.integrated/` + add a MANIFEST
+     note there. Then this integration is complete.
 
 ## Provenance / commit map
 
