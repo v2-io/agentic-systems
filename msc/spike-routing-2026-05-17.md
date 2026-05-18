@@ -592,6 +592,32 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
   `deriv-fisher-whitened-update-rule`, `result-contraction-template`) —
   reduce-not-repoint to the CHANGELOG cycle entry; none overlap active
   authors' files.
+- **2026-05-18 (j)** — Independent ρ-structure recheck returned
+  (`spikes/spike-rho-structure-recheck-2026-05-18.md`; commissioned by
+  Joseph under §0 "truth is the arbiter"). Verdict: **§4.1 mark
+  vindicated on truth and *strengthened*** — the no-go is a one-line
+  constitutive category error (δ≡o−ô ⟹ ρ_external type-incorrect),
+  strictly stronger than the prior three-case survey; parent
+  independently re-verified the one-liner. **Not a regression** (it
+  removed the only multiplicative assertion; rest of canon never
+  committed the error). **Caught a second proxy-trust in the parent's
+  CL-2 recommendation:** the (AV) (S1)–(S4) "exact theorem" is vacuous
+  (cross-term defined to balance — the §0 failure one level up). CL-2
+  re-scoped: **(a) light exact core** — the two-term identity already
+  forced by canon (`#result-mismatch-decomposition` GA-1 + Prop A.1S
+  Itô generator) + the one-line no-go; gated only by an independent-verify
+  of the canon-forcing, then a light landing; **(b) heavy Joseph-reserved
+  refinement** — the conditional 𝓜/π/cross split (Regime-C confound),
+  **provably the same object as the identifiability-floor 4th-instance
+  question** (independent re-derivation converges with the triage spike's
+  prior unproven robust-qualitative claim). Second navigator §4.1-shaped
+  lie corrected at four loci (INDEX:102, TODO:147, TODO:438,
+  PROPOSALS:258 — "(AV) exact theorem" → present truth at honest tier).
+  Identifiability-floor spike now scoped *as* the unified
+  conditional-refinement/Regime-C/4th-instance question (the sequencing
+  question resolved: the rho spike did reshape it). **Gated, Joseph's:**
+  the independent-verify of the GA-1/Itô canon-forcing (then the light
+  core lands); the unified identifiability-floor/conditional spike launch.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 
