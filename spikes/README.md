@@ -69,9 +69,19 @@ Liveness signals and the standing carve-outs are in
   — the **shared integration-routing core** (strengthen-first, the no-go
   protocol, the ghost discipline, the meta-stance). The spike doc defers
   into it; it is corpus-agnostic and already written about spikes.
-- The current cycle's live tracker is named
-  `msc/spike-routing-<date>.md` (the in-flight rendezvous: partition,
-  state machine, log).
+- [`ROUTING.md`](ROUTING.md) — the live spike-routing tracker /
+  rendezvous (partition, disposition ledger, log, the honest remaining
+  state). Durable and **undated** — the routing *process* is ongoing,
+  not a one-shot; it lives here in `spikes/`, **not** in `msc/`
+  (delete-at-any-time scratch) and **not** in `audits/` (a different
+  corpus). See `../doc/spike-routing.md` §5a for the full directory
+  layout.
+- [`.routing-trail/`](.routing-trail/) — frozen archaeology of the
+  process: per-cycle adjudication / independent-verify / regression
+  trails (`SPIKE-{WORKING,VERIFY,REGRESSION}-<id>/`). Preserved as
+  written (its `README.md` carries the rosetta for pre-relocation
+  paths); load-bearing conclusions are extracted to `ROUTING.md` +
+  `.integrated/MANIFEST-*` + `CHANGELOG.md` + canon.
 
 ## Naming: read "AAD" here as "AAT"
 

@@ -118,7 +118,7 @@ adjudication + recommended disposition + tractable-vs-heavy assessment —
 framing since Bash can't be withheld from a reasoning agent; verify state
 after — audit-routing §8, `feedback_subagent_destructive_action`).
 
-Adjudications write to `audits/SPIKE-WORKING-<six digits>/` — a new
+Adjudications write to `spikes/.routing-trail/SPIKE-WORKING-<six digits>/` — a new
 working-dir class alongside `AUDIT-WORKING-*` (de-novo cognition) and
 `ADJUDICATION-WORKING-*` (audit-backlog triage). *Directory-prefix
 invariant (convention SOP, silent-corruption risk): the six-digit ID is
@@ -148,7 +148,7 @@ dir-spikes batched for Joseph.
 > completion-states §3, the no-go protocol §4, the ghost discipline §5/§6
 > — already written about spikes); `doc/spike-routing.md` (the
 > spike-specific delta — the five-state disposition, directory-label
-> honesty, the live-work exclusion); and `msc/spike-routing-2026-05-17.md`
+> honesty, the live-work exclusion); and `spikes/ROUTING.md`
 > (this tracker — the partition hypotheses, and the one piece of hard-won
 > project context worth foregrounding: the decisive test for "integrated"
 > is the content verified first-hand in `src/`, *not* the INDEX status
@@ -160,7 +160,7 @@ dir-spikes batched for Joseph.
 >
 > Slice for you: `spikes/spike-c2-star-to-integrate.md` and
 > `spikes/spike-operator-sector-unification.md`. Write your adjudication
-> and reasoning to `audits/SPIKE-WORKING-<your six digits>/`. The routing
+> and reasoning to `spikes/.routing-trail/SPIKE-WORKING-<your six digits>/`. The routing
 > actions — moves, edits, commits, canon landings — are the parent's;
 > your deliverable is the adjudication and your judgment about where each
 > belongs and why.
@@ -176,7 +176,7 @@ dir-spikes batched for Joseph.
 ## Fan-out slices (launched 2026-05-17 e)
 
 Sliced to keep coupled siblings together and reads deep (one agent per
-slice, read/report-only → `audits/SPIKE-WORKING-<id>/`). LIVE excluded
+slice, read/report-only → `spikes/.routing-trail/SPIKE-WORKING-<id>/`). LIVE excluded
 entirely: `spike-self-actuation-grounding`, `spike-wf-strengthening`,
 `spike-wf-class-scoping`, `visual/`.
 
@@ -190,7 +190,7 @@ entirely: `spike-self-actuation-grounding`, `spike-wf-strengthening`,
 - **S2 — operator-family + pilot independent-verify** (confirmer ≠
   pilot): `spike-operator-sector-unification` (confirm/refute the pilot's
   `integrated-misfiled` against the named loci in
-  `audits/SPIKE-WORKING-023198/`), `spike-update-operator-sector`
+  `spikes/.routing-trail/SPIKE-WORKING-023198/`), `spike-update-operator-sector`
   (pilot-flagged `orphaned`-suspect).
 - **S3 — composition / strategy / passivity**: `composition-gaps`,
   `composition-scaling-N`, `passivity-composition`,
@@ -491,7 +491,7 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
   reciprocal head-note in `audit-routing-instructions.md` (authoritative
   SOP — §7, not rescoped unilaterally); `SPIKE-WORKING-*` prefix coinage.
 - **2026-05-17 (b)** — Pilot 023198 returned.
-  Adjudication: `audits/SPIKE-WORKING-023198/adjudication.md` (all
+  Adjudication: `spikes/.routing-trail/SPIKE-WORKING-023198/adjudication.md` (all
   content-in-canon claims first-hand-verified with named loci for a
   confirmer ≠ pilot).
   - **`spike-operator-sector-unification` → `integrated-misfiled`.**
@@ -694,22 +694,51 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
   and discoverable from the top navigator. Per §0c: discharged; not
   escalating.
 
-## Next actions (gated; the cycle is not the taxonomy)
+- **2026-05-18 (o)** — Relocation + process-fix (Joseph-directed).
+  `msc/` is delete-at-any-time scratch; `audits/` is the audit corpus,
+  not the spike corpus — both were misplacements. Fixed: this tracker
+  `msc/spike-routing-2026-05-17.md` → **`spikes/ROUTING.md`** (de-dated:
+  the routing *process* is ongoing); 13 trail dirs `audits/SPIKE-*` →
+  **`spikes/.routing-trail/`** (frozen, `README.md` rosetta, not
+  back-edited); the moves committed `90c1230` (R100). Every live pointer
+  re-homed via the Edit tool and **verified zero-stranded repo-wide**
+  (`sed -i`/`perl -pi` silently no-op on the repo here — Bash-editor
+  gotcha, scarred in SOP Refinement 9; only Edit/Write/`git mv`
+  persist). Process made explicit: `doc/spike-routing.md` §5a (Directory
+  layout) + Refinement 9. `spikes/README.md` updated.
 
-1. ~~Pilot returns → fold frame defects~~ **done (2026-05-17 b)** —
-   Refinement 1 scarred into `doc/spike-routing.md`.
-2. *Surfaced for Joseph:* (a) gold-gate axis evolution — **ratified
-   2026-05-17**, now settled in `spike-routing.md` §6 (route any
-   reserved-decision spike, file or dir, to the Joseph batch);
-   (b) the C2★ canon gap at `der-loop-interventional-access:76` — his
-   reserved promotion-level call, externally blocked; non-blocking,
-   awaits the paper settling.
-3. Launch fresh fan-out by partition group (operator-family as one
-   coupled slice) → independent-verify pass (confirmer ≠ adjudicator;
-   first pending item: the pilot's `spike-operator-sector-unification`
-   `integrated-misfiled` claim).
-4. Parent executes the safe subset **this cycle**: `integrated-misfiled`
-   `git mv`s, tractable landings, `.archived/` moves with recorded reasons.
-5. Heavy landings → integration-plan + PRACTICA surfacing.
-6. Dir-spikes (+ reserved-decision file-spikes) → one batch for Joseph.
-7. MANIFEST updated; `spikes/INDEX.md` reconciled to post-cycle truth.
+## Next actions (the honest remaining state)
+
+*Relocation + process-fix: done above. The cycle's mine-to-do hygiene is
+discharged; what remains is honestly tiered and queued in durable homes
+(per §0c — not escalating).*
+
+1. **Reserved (Joseph's; durable home = [`../PROPOSALS.md`](../PROPOSALS.md)
+   §D.9 "RESERVED DECISION (2026-05-18)" + [`../PRACTICA.md`](../PRACTICA.md)
+   item 7).** The Instance-4 / Object-B / CL-2-heavy unification — *one*
+   decision; math gate CLEARED (`SPIKE-VERIFY-471802`) modulo its named
+   repairs; canon carries the §4.1 marks + honest tiers. Not mine to land.
+2. **CL-1** (`#dissipativity-template`: passivity-composition + pid-a2prime
+   + bridge §7.2) — heavy coupled landing; integration-plan owed; queued
+   in PROPOSALS §D.9 / TODO.
+3. **`spike-update-operator-sector` tractable landing** — regression-cleared;
+   honestly *pending, not done* (the deep rho/identifiability arc pulled
+   away). Clean part = α-op/β-op refresh into `#deriv-sector-condition`;
+   the `#disc-identifiability-floor` operator-layer part is
+   reserved-adjacent (rides with item 1). Verify state before finishing.
+4. **`spikes/INDEX.md` row-by-row reconciliation** — **PENDING, not
+   started** (honest: not "in progress"). Interim honesty mark *is*
+   done: a banner at INDEX top flags the cycle-touched rows as
+   known-stale and points to this file as authoritative, so the index
+   does not silently mislead while it waits. The full pass (the
+   integrated-10 → `.integrated/` + correct status; rho/identifiability
+   → current §4.1/landed/reserved; `update-operator-sector` →
+   regression-cleared/landing-pending) is the next focused task —
+   ~12–15 judgment-bearing rows, deliberately not crammed at the tail of
+   the relocation turn (rushed-error risk).
+5. **Joseph-batch items** (own calls, queued): `spike-language-as-causal-substrate/`
+   Theorem-1 + the C2★ gap (`der-loop-interventional-access:76`);
+   `spike-attention-governance`; `temporal-nesting-rg/` Moves B/C/D.
+6. **Cycle-close (when item 1 lands):** move the now-spent reserved-feed
+   spikes to `.integrated/`; the trail dirs already in their durable
+   `.routing-trail/` home are retained as archaeology (not deleted).

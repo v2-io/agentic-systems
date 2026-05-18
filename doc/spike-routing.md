@@ -310,6 +310,27 @@ have been swept to `.integrated/`, and teasing them back out is not worth
 the effort. So: *do not retroactively re-audit `.integrated/`*; verify
 forward, and let the README carry the caveat.
 
+### 5a. Directory layout — where everything lives (Joseph-directed, 2026-05-18)
+
+Spike-routing artifacts live under `spikes/` (the corpus they act on) —
+**never** under `audits/` (a different corpus) and **never** under
+`msc/` (delete-at-any-time scratch). Canonical homes:
+
+| Artifact | Home | Notes |
+|---|---|---|
+| Governing SOP (this file) | `doc/spike-routing.md` | long-lived process doc; parallels `doc/audit-routing-instructions.md` |
+| Live cycle tracker / rendezvous | **`spikes/ROUTING.md`** | **undated** — the routing *process* is ongoing, not a one-shot; durable, *not* `msc/`; parallels `spikes/INDEX.md` |
+| Per-cycle move manifest | `spikes/.integrated/MANIFEST-<date>.md` | dated is correct here — it records one specific batch move |
+| Adjudication / verify / regression trails | **`spikes/.routing-trail/SPIKE-{WORKING,VERIFY,REGRESSION}-<id>/`** | dot-prefixed (keeps `ls spikes/` scannable); six-digit ID = identity, prefix = class — never blanket-rewrite a prefix; frozen-as-written, not back-edited; preserved (not deleted/summarized) once conclusions are in the durable layer |
+| Integrated / archived spikes | `spikes/.integrated/` · `spikes/.archived/` | the two terminal homes (§5) |
+
+The trail dirs and the tracker are **not** "audit" artifacts even
+though spike-routing *defers into* `audit-routing-instructions.md` for
+the shared protocol — sharing the protocol is not sharing the corpus.
+`spikes/.routing-trail/README.md` carries the rosetta for any trail
+written before this layout was fixed (read old `audits/SPIKE-…` /
+`msc/spike-routing-<date>.md` mentions as the homes above).
+
 ---
 
 ## 6. The dir-spike gold gate (lighter — Joseph 2026-05-17)
@@ -552,3 +573,23 @@ The self-check is in §0c (am I launching a gate because canon would
 *lie*, or because an honest lower tier feels insufficient?). The
 remaining live Object-B gate is legitimate by that test — it feeds a
 canon landing / status elevation, not merely my own closure-comfort.*
+
+*Refinement 9 (2026-05-18, Joseph-directed — a placement scar, caught
+late). The original (never-written) convention put the trail dirs in
+`audits/` (extended by "spike-routing is the same problem as
+audit-routing" — but sharing a *protocol* is not sharing a *corpus*;
+the artifacts of routing the spike corpus are not audits) and the live
+tracker in dated `msc/` (`msc/spike-routing-2026-05-17.md`) — and
+`msc/` is delete-at-any-time scratch, no place for the cycle's durable
+rendezvous. Both were misplacements, and worse, the convention was only
+*implicit* (in the tracker + my practice), so the SOP couldn't catch
+it. Corrected: §5a now states the layout explicitly; tracker →
+`spikes/ROUTING.md` (de-dated — the process is ongoing); 13 trail dirs
+→ `spikes/.routing-trail/` (frozen, rosetta'd, not back-edited); every
+live pointer re-homed and verified zero-stranded. Transferable: an
+*implicit* convention is one the SOP cannot defend — write the layout
+down, in the governing doc, the first time, not after a tree fills with
+misplaced dirs. Also the environmental gotcha that masked this for two
+attempts: Bash in-place stream editors (`sed -i`, `perl -pi`) silently
+no-op on the repo here; only the Edit/Write tools and `git mv` persist
+— verify file edits by re-reading, never by the editor's exit status.*
