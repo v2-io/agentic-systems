@@ -465,6 +465,25 @@ when/whether content entered a segment, `git blame`, `git log --follow`
 across the renames, and dates read in context. Don't infer status from
 the log's *recency*; do use the log's *provenance*.
 
+**The regression check is central, not optional** (Joseph 2026-05-17,
+directed into both SOPs; full treatment `doc/spike-routing.md` §2a).
+Before re-introducing *any* result, and before confirming any "already
+integrated" claim, the provenance investigation must distinguish
+*never-landed-and-valid* / *current-corrected-truth* from
+*landed-then-deliberately-corrected-away* / *regression-restoration over
+a later fix*. The scenario: a result was integrated, an audit found a
+flaw, the theory was fixed — and the now-clean-looking prior result gets
+restored *because it looks better*. The corrected theory is usually
+**messier** than the claim it replaced, so "it looks better" is the
+body-signal (the reverse-direction sibling of strengthen-before-soften;
+the enforcement teeth of integration-is-replacement). Instruments:
+pickaxe `-S` for an *add-then-delete* of the result-string (find the
+deleting commit, read *why*), `blame`/`log` on the locus against the
+CHANGELOG/LOG correction timeline, and the `pending-findings-*` /
+audit trail. If corrected-away: `correctly-superseded`, never reopened.
+A prior integration that was itself a regression-restoration is a §4.1
+canon-lie to mark.
+
 **Independent-verify gate** *(authoritative SOP)*: **adjudicator ≠
 grad-confirmer.** Before any `git mv` into `.integrated/`, the load-bearing
 graduation-gating claims are primary-source spot-checked by an agent *other
@@ -577,3 +596,13 @@ instrument. Split the two explicitly. Surfaced from spike-routing
 core because the evidence-hierarchy is corpus-agnostic. This is the §7
 meta-stance working as intended: a second corpus exercising the shared
 core re-truthified it; the refinement landed here, not in a fork.*
+
+*Refinement 3 (2026-05-17, Joseph-directed — pre-emptive). The
+regression check (don't re-land a corrected-away result; don't confirm
+an integration that is a regression-restoration over a fix) is elevated
+to a **central** investigation element, not a side gate, on every
+disposition including already-integrated ones. Body-signal: "it looks
+better than canon" — because the corrected truth is usually messier.
+Full worked treatment + the disposition `correctly-superseded` in
+`doc/spike-routing.md` §2a / its Refinement 5. Same §7-meta-stance
+landing: surfaced in the spike corpus, folded into the shared core.*

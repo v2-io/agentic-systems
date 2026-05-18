@@ -61,7 +61,7 @@ The $\alpha'$-membership depends on the specific variational scheme:
 
 **Diffusion-posterior / energy-based with uncontrolled MCMC.** No controlled $\varepsilon$ bound; $\varepsilon$ grows with mixing time. Stays firmly in sub-scope $\beta$.
 
-**Active inference (variational free energy).** Conditional α' under exponential-family $q$ + natural-gradient; ε-degraded α' otherwise. This does **not** force V-strong G-BP2 (presentation of AAT as control-theoretic specialization of active inference) — V-medium (KL-divergence-based cognitive cost) remains the appropriate scope commitment per `spikes/spike-active-inference-vs-aad.md`.
+**Active inference (variational free energy).** Conditional α' under exponential-family $q$ + natural-gradient; ε-degraded α' otherwise. This does **not** force V-strong G-BP2 (presentation of AAT as control-theoretic specialization of active inference) — V-medium (KL-divergence-based cognitive cost) remains the appropriate scope commitment; the comparison trail is in the spike-routing cycle (CHANGELOG 2026-05-17).
 
 ### Sub-scope $\alpha'$ in the A2' partition
 

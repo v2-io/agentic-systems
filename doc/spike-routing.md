@@ -86,6 +86,81 @@ present-tense canonical truth (audit-routing §6), not archaeology.
 in a `src/` segment or appendix, **verified first-hand** — not the INDEX
 label, not a Working-Notes pointer from a segment, not an agent summary.
 
+### 2-bis. "Fully integrated" is a three-part completion criterion (Joseph 2026-05-18)
+
+A spike is not `integrated` (and must not be filed to `.integrated/`)
+until **all three** hold — partial satisfaction is the
+looks-done-but-isn't trap:
+
+1. **Content present in canon**, verified first-hand (the decisive test
+   above) — and provenance-clean (§2a regression axis: it is the
+   post-correction truth, not a regressed restoration).
+2. **Nothing *needs* to reference the spike anywhere.** No segment /
+   OUTLINE / `depends:` sends a reader to the spike to understand canon.
+   A *non-needed* breadcrumb in CHANGELOG / a tracker is fine — the test
+   is *need*, not *mention* (Joseph 2026-05-18: "references in changelog
+   are fine — as long as nothing **needs** to reference it"). After any
+   archive batch: `grep -rl 'spike-<slug>'` across `*/src/` + OUTLINE;
+   **reduce-not-repoint** every hit to the live canonical home (the
+   CHANGELOG cycle entry, or the segment where the math now lives);
+   surface any genuine open content the pointer was hiding into the
+   segment's own Working Notes. (CHANGELOG:79 / `feedback_spike_references_only_in_working_notes` pt 5.)
+3. **The navigator is reconciled.** `TODO.md` / `PROPOSALS.md` /
+   `PRACTICA.md` items that the integration resolves are **closed at
+   cycle-commit time, not deferred** (triage-is-the-answer); items it
+   *advances but doesn't close* are updated with the new disposition +
+   spike-routing cross-ref; a navigator entry that still says "partially
+   landed in #X" when #X is now `status: false`/superseded is a
+   navigator-level §4.1 lie and is corrected with the same urgency as a
+   segment one. "Find more info" cuts both ways — a navigator item may
+   *resolve* the spike or *reopen* it.
+
+The archive batch (the `git mv` + MANIFEST) is the *start* of completion,
+not the end; (2) and (3) are not "next housekeeping," they are part of
+the same cycle that moved the file.
+
+### 2a. The regression axis — central to every disposition (Joseph 2026-05-17)
+
+There is a **second canonical failure**, co-equal with the first and
+just as much the reason this cycle exists: **re-introducing a
+deliberately-corrected-away result because it "looks better."** Joseph's
+scenario: *a spike is fully integrated → an audit finds a flaw → the
+theory is fixed → and then we put the spike result back because it looks
+cleaner.* The corrected theory is **usually messier** than the
+clean-but-wrong claim it replaced (it carries a no-go, a scope-narrowing,
+a caveat — truth is uglier than the aspiration), so the spike *will* look
+better. **"It looks better" is the body-signal**, exactly as in
+strengthen-before-soften — this is its reverse-direction sibling, and the
+enforcement teeth of integration-is-replacement (a refuted claim is
+*deleted*; a spike carrying it must never be re-landed, and canon must
+not silently drift back to it).
+
+"Absent from canon" and "present in canon" each have **two
+provenance-distinct causes that look identical from the spike's side**,
+and the regression investigation is the **mandatory, central** step that
+tells them apart — run on *every* disposition, not just orphans:
+
+- **Orphan side (before landing):** *never-landed-and-valid* (true
+  orphan → land) **vs.** *landed-then-deliberately-corrected-away*
+  (`correctly-superseded` → it goes to `.integrated/`/`.archived/` with
+  the supersession recorded; **re-landing is a forbidden regression**).
+- **Integrated side (when confirming `integrated-*`):** the in-canon
+  content is the *current corrected truth* **vs.** a *regression-
+  restoration* of a superseded spike form sitting on top of a later fix.
+  Verifying *presence* is not enough — verify the present version's
+  **provenance is post-correction and consistent with it.**
+
+**The investigation (non-optional, on every spike):** pickaxe
+`git log -S'<result-string>' -- '*/src/*'` (an add-*then-delete* is the
+red flag — find the deleting commit and read *why*); `git log`/`blame`
+on the candidate/landed locus against the **CHANGELOG.md / LOG.md**
+correction timeline; **audits/** + `pending-findings-*.md` for a finding
+that flawed it. The question is never "is it in canon?" alone — it is
+"is canon's current state, here, the *post-correction* truth, and would
+this spike's content *regress* it?" If corrected-away: disposition is
+`correctly-superseded`, never `orphaned`; if a prior integration *was* a
+regression-restoration, that is a §4.1-class canon-lie to honesty-mark.
+
 ---
 
 ## 3. The five-state disposition
@@ -98,7 +173,8 @@ cut it back if it has over-built.)
 |---|---|---|
 | `integrated-filed` | content in canon **and** already under `.integrated/` | none — but **sample-verify** (the 2026-05-12 bulk move of 64 was not per-spike content-verified; the label is a hypothesis, see §5) |
 | `integrated-misfiled` | content in canon, spike still in `spikes/` top level | spot-check content-in-`src/`, then parent `git mv` → `.integrated/` (safe-mechanical; independent-verified per audit-routing §8) |
-| `orphaned` | completed, result real (**success or no-go**), **not in canon, or only referenced** | the primary work — strengthen-first then the §4 landing protocol; landing-scope per §4 below |
+| `orphaned` | completed, result real (**success or no-go**), **not in canon, or only referenced** | **run the §2a regression investigation first** (never-landed vs. corrected-away); only then strengthen-first + the §4 landing protocol; landing-scope per §4 |
+| `correctly-superseded` | result *was* effectively in canon then deliberately corrected/no-go'd away (§2a regression investigation positive) | **do not re-land** — `.integrated/` (or `.archived/`) with the superseding correction recorded; re-landing is a regression |
 | `archived` | incomplete **and** not needed | parent `git mv` → `.archived/` with a one-line recorded reason (why set down; whether anything is worth salvaging first) |
 | `live-or-open` | incomplete and still needed, or step-zero live work | stays in `spikes/`; INDEX status reflects open/blocked; not moved |
 
@@ -334,3 +410,57 @@ canon, done") is soften-as-routing. Handled as a **recognition rule under
 spike's distinctive payload; route on the payload, not the core.* A triage
 spike whose recommendation canon contradicted is a present-truth signal →
 Joseph batch, never a filing op.*
+
+*Refinement 5 (2026-05-17, Joseph-directed — a **pre-emptive** scar:
+articulated from foresight, before it bit, which is the cheapest kind to
+inherit). The regression failure — re-landing a corrected-away result
+because it "looks better," or confirming an `integrated-*` that is
+actually a regression-restoration over a fix — is elevated from a side
+note to a **central investigative axis** (§2a), co-equal with
+math-stranded-in-spike, run on **every** disposition including the
+already-integrated. First worked application passed cleanly:
+`spike-update-operator-sector` regression-checked CLEAR — pickaxe shows
+`(O-A2')`/`α_op`/`O-DA.1` never in `src/`; CHANGELOG:73's 2026-05-14
+SP-22 decoupling names the `PID/update-operator α-list` explicitly in the
+"(γ)-hybrid … straight authoring, no longer gated" set (deferred, **not**
+flawed-and-corrected); no audit flags it. Genuine orphan, cleared. The
+shared core carries the same elevation (audit-routing §8 + its Refinement
+3, Joseph-directed). Transferable: when an integration "looks better"
+than canon, that aesthetic pull *is* the trigger to run the provenance
+investigation — canon is probably the corrected-uglier-truer version.*
+
+*Refinement 6 (2026-05-18, regression-recheck agent SPIKE-REGRESSION-014997
+— all 10 already-integrated cleared, no regression). The sharpest §2a
+instrument is the **exclusion pickaxe**, not the add-then-delete one:
+`git log -S'<the refuted/superseded form>' -- '*/src/*'` returning
+**empty** proves the wrong form *never entered canon at all* ⇒
+regression-impossible, replacement-was-honored-at-landing. §2a's
+"add-then-delete is the red flag" implicitly assumes the wrong form
+landed once and was later cleaned up; but for the common case where a
+spike's *own body* carried the later-refuted form, "no add-commit for the
+refuted string, ever" is a **stronger** clean signal than "added then
+correctly deleted" (it proves replacement-at-landing, not after-the-fact
+cleanup) **and** it is **sweep-immune** — an empty result cannot be
+poisoned by the AAD→AAT / role-prefix rename sweeps, where add-then-delete
+recency can. Operative order for the regression axis: run the exclusion
+pickaxe on the refuted form first; empty ⇒ clean (regression-impossible);
+only non-empty escalates to the add-then-delete / CHANGELOG-timeline
+investigation. This is a first-class clean disposition, not a fallback.*
+
+*Refinement 7 (2026-05-18, Joseph-directed — a near-miss caught, not a
+post-mortem). "Fully integrated" was being treated as
+content-in-canon + no-needed-references; the **navigator reconciliation**
+(`TODO.md` / `PROPOSALS.md` / `PRACTICA.md` items the integration
+resolves or advances) was not an explicit completion part and was about
+to be left to "next housekeeping" — the exact triage-is-the-answer
+failure. Elevated to part (3) of the §2-bis three-part criterion. The
+sharp tell this surfaced: a navigator entry still asserting
+*"`spike-rho-factorization` partially landed in
+`#internal-external-decomposition`"* (PROPOSALS §D.9, TODO Group I) when
+that segment is now `status: false` — a **navigator-level §4.1 lie**,
+corrected with segment-level urgency. Transferable: the `git mv` +
+MANIFEST *feels* like completion (a durable artifact shipped); it is the
+*start*. Run the navigator grep (`grep -niE '<spike-slugs>|SP-<ids>'
+TODO.md PROPOSALS.md PRACTICA.md`) as a mandatory cycle-close step, and
+close/correct in the same commit — closed items are closed at
+cycle-commit time, not catalogued for later.*

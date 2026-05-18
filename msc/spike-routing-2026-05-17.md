@@ -568,6 +568,30 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
   reconciliation deferred (independence; rows recorded above).
   Remaining this cycle: the tractable `update-operator-sector` landing
   (next, careful — no-go-bearing, parent-owned §266(iii)/§8.2 placement).
+- **2026-05-17 (i)** — Joseph: regression check is **central**, applies to
+  already-integrated too. SOPs updated: `spike-routing.md` §2a (regression
+  axis, co-equal with math-stranded; new `correctly-superseded` state;
+  every disposition runs it) + Refinement 5; `audit-routing-instructions.md`
+  §8 + Refinement 3 (Joseph-directed mirror). Worked first application:
+  **`spike-update-operator-sector` regression-checked CLEAR** — pickaxe:
+  `(O-A2')`/`α_op`/`O-DA.1` never in `src/`; CHANGELOG:73 (2026-05-14
+  SP-22 decoupling) names `PID/update-operator α-list` in the "(γ)-hybrid
+  … straight authoring, no longer gated" set = deferred, **not**
+  flawed-and-corrected; no audit flag. Genuine orphan, cleared to land.
+  Regression-recheck of the **10 already-integrated** launched
+  (`SPIKE-REGRESSION-<id>/`, read-only forensics; new prefix class). **Not
+  yet regression-cleared (gate before landing):** CL-1, CL-2 (special
+  care — `spike-rho-factorization:45` notes the multiplicative ρ-split was
+  *"a useful simplification"*; must confirm the additive form wasn't
+  deliberately simplified *away* — exactly the trap), `alignment-impossibility §7`,
+  `language-as-causal-substrate` (Joseph batch). **CHANGELOG:79
+  obligation (in-cycle):** 7 segments still point readers into the 10
+  newly-archived paths (`deriv-strategy-cost-regret-bound`,
+  `deriv-sector-condition`, `deriv-stochastic-non-exit`,
+  `deriv-variational-sector-condition`, `der-interaction-channel-classification`,
+  `deriv-fisher-whitened-update-rule`, `result-contraction-template`) —
+  reduce-not-repoint to the CHANGELOG cycle entry; none overlap active
+  authors' files.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 
