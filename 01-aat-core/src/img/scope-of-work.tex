@@ -1,293 +1,215 @@
-% ============================================================
-% VARIANT -A : C+A (nested containment frames). COMPARISON COPY.
-% The committed canonical figure is fig-scope-of-work-draft.tex
-% (minimal C form). This file explores (A): drawing the spine as
-% telescoping nested subsets so the population/subpopulation
-% relationship is visible. Not the source of truth --- a draft
-% for side-by-side judgment vs the committed C version.
-% ============================================================
-% Scope-of-Work figure — DRAFT / first cut for direction (2026-05-17).
-% Design substrate: msc/scope-of-work-ontology-and-figure-2026-05-17.md
-% Vol-1 trim: spectrum 2x2 inset removed; Logogenic + Logozoetic cut
-% (those are 03-llm-core / 04-eli-core, not Vol-1). Two zones: the
-% definitional-narrowing spine, and the ORTHOGONAL rails that switch on.
-% Self-actuated: in THIS -A variant, treated as established, not
-% hypothetical (see Status note below) --- styled like the other
-% classes. (Committed-C still carries the reserved/dashed form.)
-% Palette sampled from 01-aat-core/AAT-cover.svg.
+% ======================================================================
+%  Scope-of-Work figure  —  AAT Vol-1 Introduction
+%  01-aat-core/src/img/scope-of-work.tex
+% ======================================================================
 %
-% Layout note (2026-05-17): station spacing widened so the inter-node
-% "+refinement" labels clear the boxes. Rail rules are now single clean
-% continuous lines; each rail's discrete choices sit just BELOW its rule
-% (smaller, dimmed) rather than masked into it, and the switch-on dot
-% alone marks activation (the "(on at ...)" parentheticals removed).
+%  WHAT THIS IS
+%  ------------
+%  A "map" of the systems AAT covers. Two zones:
 %
-% Trim note (2026-05-17, Joseph): three elements cut for a cleaner draft
-% surface --- (a) the Arity rail's "(sub-agents under composition closure
-% --- not atomic)" parenthetical; (b) the bottom draft/scope footnote;
-% (c) the mid-figure "orthogonal properties --- not further steps on the
-% spine" label (the Layer-0 scaffold sentence still carries that point).
-% Re (a): the design doc's section 6(F) had introduced that parenthetical
-% as the figure's non-atomicity guard for the Primitive|Composite
-% simplification --- with it gone, the not-atomic clarification is now
-% owed to the surrounding prose, not the figure. Flagged, not silently
-% dropped, so the figure/section-6(F) mismatch is a known trade, not drift.
+%    Upper  — the definitional-narrowing SPINE drawn as nested
+%             containment frames: each agent class is a proper SUBSET
+%             of the one enclosing it (Self-Actuated < Actuated <
+%             Agentic < Adaptive). Frame area shrinks inward = the
+%             population shrinks to the rare, capability-rich core.
+%             Nesting *is* the canonical superset relation (design doc
+%             section 2), drawn rather than glyph'd --- it is
+%             containment, not a left-to-right pipeline/process.
+%    Lower  — ORTHOGONAL property rails that "switch on" (a dot) at
+%             the class where the property first becomes meaningful.
 %
-% Fix note (2026-05-17, Joseph): the Continuity-stance rail was factually
-% wrong --- it showed 3 values, dropped Task-terminal, and conflated
-% Negotiated with Morally-continuous (canon keeps them distinct; the
-% self-actuation-gating split in the design doc section 5 hangs on
-% exactly that distinction). Corrected to the canonical FIVE-value axis
-% from 01-aat-core/src/disc-continuity-stance.md (segment table), in
-% table order: Indifferent / Task-terminal / Instrumentally-continuous /
-% Morally-continuous / Negotiated. Separator: pipes "|" on all four
-% rails, by Joseph's explicit presentational decision (consistency across
-% rails). Recorded trade, NOT drift --- do not "restore" a gradient
-% marker here thinking it is a regression: canon frames continuity as a
-% "five-value axis" with conceptual (not mathematical) boundaries, so a
-% pipe reads slightly more discrete-exclusive than canon strictly is;
-% Joseph weighed that against rail-consistency for this scaffold figure
-% and chose pipes. The left-to-right order is the canonical table order,
-% so the axis sense is still carried by position. The two long stances
-% are \shortstack'd ("Instrumentally-" / "continuous", likewise Morally-)
-% so the row fits the cream band without overflow. GUC likewise moved
-% arrows -> pipes per Joseph; the dropped arrows had encoded the kappa
-% ordering (Separated kappa=0 -> Partial 0<kappa<1 -> Coupled kappa->1,
-% design doc section 6(D)) --- left-to-right position still preserves
-% that order, so it is a soft loss, flagged not silent.
+%  HOW TO EDIT  (this file is built to be refined and extended)
+%  -----------
+%    * Add / change an agent class:  edit the \scopeclass calls in the
+%      "SCOPE DATA" block. One call = one class (outer->inner order).
+%      Geometry is derived from the level index, so a new innermost
+%      class just needs a new call (check it still fits the canvas).
+%    * Add / change a rail:  edit the \rail calls in the "RAIL DATA"
+%      block. One call = one rail; its y is derived from the row
+%      index, its x-start from the class level it switches on.
+%    * Tune geometry/spacing:  the CONFIG block --- every magic number
+%      is a named \def with a one-line reason. Nothing is hard-coded
+%      twice.
+%    * Margins are automatic:  the cream ground is sized to the actual
+%      content bounding box + \gM on every side, so edits never
+%      reintroduce lopsided margins.
 %
-% Relation note (2026-05-18, Joseph): the spine connectors changed from
-% directed arrows to "\supset" glyphs. This is a fidelity fix, not a
-% style tweak --- a left->right arrow read the spine as a pipeline /
-% temporal process, but the true (and canonical, design doc section 2)
-% relation is proper containment: Adaptive \supset Agentic \supset
-% Actuated \supset Self-actuated. The header scaffold sentence and the
-% broader/narrower side-labels were also removed this pass. Population/
-% subpopulation visual treatments (telescoping containment frames, a
-% funnel/stipple) are being explored as separate -A / -B variant copies
-% alongside this file; this file keeps the minimal, committed (C) form.
+%  DESIGN PROVENANCE  (load-bearing "why" --- do not silently revert)
+%  -----------------
+%    * Containment, not a pipeline. Earlier drafts used arrows; that
+%      mis-encoded the relation as a temporal process. Nesting is the
+%      canonical proper-subset relation (design doc section 2). Keep
+%      it a containment picture.
+%    * Continuity-stance rail = the canonical FIVE-value axis from
+%      01-aat-core/src/disc-continuity-stance.md (Indifferent /
+%      Task-terminal / Instrumentally-continuous / Morally-continuous /
+%      Negotiated, in table order). Canon frames it as an *axis* with
+%      conceptual (not mathematical) boundaries; the "|" separator
+%      reads a touch more discrete than that. That is Joseph's
+%      deliberate presentational choice for rail-consistency --- a
+%      recorded trade, NOT drift. Do not "restore" a gradient marker
+%      thinking it is a regression.
+%    * Self-Actuated is treated as established (not hypothetical).
+%      This is Joseph's epistemic call, not a result verified in this
+%      file; it is why this class is styled like the others rather
+%      than reserved/dashed, and why no self-actuation gate is drawn.
+%    * Vol-1 scope: Logogenic / Logozoetic agents (03-llm-core /
+%      04-eli-core) and the model x objective 2x2 inset are out of
+%      scope here by design.
+%    Fuller verification/design trail (and per-iteration history, now
+%    also in git): msc/scope-of-work-ontology-and-figure-2026-05-17.md
+%    Palette sampled from 01-aat-core/AAT-cover.svg.
 %
-% Status note (2026-05-18, Joseph): Self-actuated is no longer treated
-% as hypothetical. Recorded as Joseph's epistemic call (not a result
-% verified here): the self-actuation grounding is taken as established
-% for this figure. Cascade applied to -A: (1) Self-actuated frame now
-% styled like the others (spineDeep!18 fill + solid border, name in
-% spineDeep, capability in ink) instead of dashed/cool-gray; (2) its
-% capability trimmed to just "goal autonomy" --- that bullet plus the
-% now-reachable "Negotiated" continuity stance ARE its capabilities,
-% so ": revises what counts as success" was redundant; (3) the dashed
-% self-actuation gate line + "availability gated at self-actuation"
-% label removed (nothing is gated now); (4) freeing the band above the
-% rails, the rail choices moved from below to ABOVE each rule (helps
-% the tall two-line Continuity-stance row most). Committed-C is
-% untouched and still carries the reserved/dashed form.
-%
-% Build:  lualatex fig-scope-of-work-draft-A.tex   (or pdflatex)
+%  Build:  lualatex scope-of-work.tex     (or pdflatex)
+% ======================================================================
+
 \documentclass[border=12pt]{standalone}
 \usepackage{lmodern}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,backgrounds,calc}
 
-\definecolor{spineDeep}{HTML}{235A7D}
-\definecolor{spineA}{HTML}{79919E}
-\definecolor{spineB}{HTML}{587C91}
-\definecolor{spineC}{HTML}{426176}
-\definecolor{railPeri}{HTML}{68749F}
-\definecolor{railPeri2}{HTML}{8992AD}
-\definecolor{coolgray}{HTML}{A5AFB3}
-\definecolor{midgray}{HTML}{8E8E8E}
-\definecolor{ground}{HTML}{FDFDF6}
-\definecolor{ink}{HTML}{1A1A1A}
+% A middle "frames" layer holds the nested fills+borders so they stay
+% behind every label regardless of the order classes are declared in
+% (background = cream ground, main = all text/rails).
+\pgfdeclarelayer{frames}
+\pgfsetlayers{background,frames,main}
+
+% ---- palette (sampled from AAT-cover.svg) ----------------------------
+\definecolor{spineDeep}{HTML}{235A7D} % frames: fills (tinted) + borders
+\definecolor{railPeri} {HTML}{68749F} % rail accent (default)
+\definecolor{railPeri2}{HTML}{8992AD} % rail accent (Arity / full span)
+\definecolor{midgray}  {HTML}{8E8E8E} % rail choices, zone divider
+\definecolor{ground}   {HTML}{FDFDF6} % cream background
+\definecolor{ink}      {HTML}{1A1A1A} % capability text
+% Sampled but currently unused --- kept available for extension
+% (e.g. more agent classes wanting distinct spine tints):
+\definecolor{spineA}   {HTML}{79919E}
+\definecolor{spineB}   {HTML}{587C91}
+\definecolor{spineC}   {HTML}{426176}
+\definecolor{coolgray} {HTML}{A5AFB3}
+
+% ======================================================================
+%  CONFIG  --  every tunable number, named, with its reason
+% ======================================================================
+
+% -- Scope nesting geometry. Frame for class level i (i = 0 is outer):
+%      x : [ \zL + i*\zIL , \zR - i*\zIR ]
+%      y : [ \zB + i*\zIB , \zT - i*\zIT ]
+%    i.e. an exact arithmetic inset per level. Left/top insets carry
+%    the nesting read; the bottom inset is smaller than the top so the
+%    interior text stack clears the innermost border.
+\def\zL{0.3}    \def\zR{16.8}   % level-0 (outer) left / right
+\def\zT{11.0}   \def\zB{5.95}   % level-0 (outer) top  / bottom
+\def\zIL{3.4}   \def\zIR{0.25}  % per-level left  / right inset
+\def\zIT{0.52}  \def\zIB{0.40}  % per-level top   / bottom inset
+
+% -- Interior text stack, offset down from each frame's top edge.
+\def\lpad{0.5}   % left pad inside the frame border (whole stack)
+\def\oD{0.22}    % delta      row top below frame top
+\def\oN{0.64}    % class-name row top below frame top (gap after delta)
+\def\oC{1.06}    % capability row top below frame top
+\def\capw{2.7cm} % default capability text width (inner-strip width)
+
+% -- Rails. Row r sits at y = \railTop - r*\railPitch; the rule runs
+%    from the switch-on class's left edge to \railR; labels are right-
+%    aligned at \rlx; choices ride \rsub above the rule.
+\def\railTop{5.0}   \def\railPitch{0.85}
+\def\railR{16.4}    % rails' right end
+\def\rlx{0.0}       % rail-label right edge (a few ems left of x=\zL)
+\def\rsub{0.12}     % choice-text rise above the rule (railsub: SW anchor)
+\def\dividerY{5.55} % dotted zone divider between spine and rails
+
+\def\gM{0.45}       % uniform cream margin around the content bbox
+
+% ======================================================================
+%  ENGINE  --  one definition each for "a class" and "a rail"
+% ======================================================================
+
+\tikzset{
+  delta/.style  ={font=\scriptsize\itshape, text=spineDeep,
+                  anchor=north west},
+  raillab/.style={font=\scriptsize\bfseries, text=railPeri,
+                  anchor=east},
+  railsub/.style={font=\tiny, text=midgray, anchor=south west,
+                  inner sep=1pt},
+}
+
+% \scopeclass{level}{tint%}{name}{delta (empty = none)}{capability}{capw}
+%   Draws the nested frame (fill+border on the "frames" layer) and the
+%   interior [delta]/[name]/[capability] stack (on "main", left-aligned
+%   at \lpad inside the border). Level 0 passes an empty delta --- it
+%   is the base population, nothing is added to reach it.
+\newcommand{\scopeclass}[6]{%
+  \pgfmathsetmacro{\fL}{\zL+#1*\zIL}%
+  \pgfmathsetmacro{\fR}{\zR-#1*\zIR}%
+  \pgfmathsetmacro{\fT}{\zT-#1*\zIT}%
+  \pgfmathsetmacro{\fB}{\zB+#1*\zIB}%
+  \begin{pgfonlayer}{frames}%
+    \fill[spineDeep!#2] (\fL,\fB) rectangle (\fR,\fT);%
+    \draw[spineDeep!55, rounded corners=3pt, line width=0.9pt]
+      (\fL,\fB) rectangle (\fR,\fT);%
+  \end{pgfonlayer}%
+  \def\tmpdelta{#4}%
+  \ifx\tmpdelta\empty\else
+    \node[delta] at (\fL+\lpad,\fT-\oD) {#4};%
+  \fi
+  \node[font=\footnotesize\bfseries, text=spineDeep, anchor=north west]
+    at (\fL+\lpad,\fT-\oN) {#3};%
+  \node[align=left, text=ink, font=\scriptsize, text width=#6,
+    anchor=north west] at (\fL+\lpad,\fT-\oC) {#5};%
+}
+
+% \rail{row}{switch-on class level}{accent color}{label}{choices}
+%   Draws the rule (from that class's left edge to \railR), the
+%   switch-on dot, the right-aligned label, and the choices above.
+\newcommand{\rail}[5]{%
+  \pgfmathsetmacro{\ry}{\railTop-#1*\railPitch}%
+  \pgfmathsetmacro{\rx}{\zL+#2*\zIL}%
+  \draw[#3, line width=1.1pt] (\rx,\ry) -- (\railR,\ry);%
+  \fill[#3] (\rx,\ry) circle (2.4pt);%
+  \node[raillab, text=#3] at (\rlx,\ry) {#4};%
+  \node[railsub] at ($(\rx,\ry)+(0.16,\rsub)$) {#5};%
+}
+
+% ======================================================================
 
 \begin{document}\sffamily
-\begin{tikzpicture}[
-  font=\small,
-  every node/.style={inner sep=2pt},
-  station/.style={rectangle, rounded corners=2pt, minimum width=2.3cm,
-                  minimum height=1.0cm, align=center, text=white,
-                  font=\footnotesize\bfseries},
-  reserved/.style={rectangle, rounded corners=2pt, minimum width=2.3cm,
-                  minimum height=1.0cm, align=center, text=ink,
-                  draw=midgray, dashed, very thick, fill=coolgray!30,
-                  font=\footnotesize\bfseries},
-  capbox/.style={align=center, text=ink, font=\scriptsize,
-                  text width=3.1cm, anchor=north},
-  delta/.style={align=center, anchor=south,
-                  font=\scriptsize\itshape, text=spineDeep},
-  rail/.style={railPeri, line width=1.1pt},
-  raillab/.style={text=railPeri, font=\scriptsize\bfseries, anchor=east},
-  % discrete choices: small, dimmed, set just ABOVE the rule so the
-  % rule itself stays clean and continuous (no ground-fill masking).
-  % Above (was below) since the self-actuation gate apparatus that
-  % used to occupy the space above the rails is gone --- and it gives
-  % the tall two-line Continuity-stance row the room it needs.
-  railsub/.style={text=midgray, font=\tiny, anchor=south west,
-                  inner sep=1pt},
-]
+\begin{tikzpicture}[font=\small, every node/.style={inner sep=2pt}]
 
-% Cream ground is drawn LAST (end of picture), sized to the actual
-% content bounding box plus a uniform margin \gM on every side ---
-% so top = right = bottom = left margin automatically, including the
-% left where the right-justified rail labels make a hand-set value
-% awkward (Joseph 2026-05-18). standalone's border=12pt then wraps
-% that uniform cream band.
-\def\gM{0.45}  % uniform cream margin around the content bounding box
+% ---- SCOPE DATA : one \scopeclass per agent class, outer -> inner ----
+%  {level}{tint%}{name}{delta}{capability}{capw}
+\scopeclass{0}{4} {Adaptive System}     {}                         {mismatch $\cdot$ gain\\ tempo $\cdot$ persistence}{\capw}
+\scopeclass{1}{8} {Agentic System}      {+ causal intervention}    {causal intervention}{\capw}
+\scopeclass{2}{13}{Actuated Agent}      {+ explicit $O_t,\Sigma_t$}{orient cascade}{\capw}
+\scopeclass{3}{18}{Self-Actuated Agent} {+ revises own $O_t$}      {goal autonomy $\cdot$ negotiated continuity}{4.4cm}
 
-% ===== ZONE 1: nested containment frames (C+A variant) =====
-% (A) Population/subpopulation made VISUAL. Each class is a proper
-% subset of the one enclosing it: Self-actuated < Actuated < Agentic
-% < Adaptive (canonical, design doc section 2). Adaptive is the
-% broadest population; frame area shrinks inward = population shrinks
-% to the rare, capability-rich core (innermost = reserved, dashed).
-% (C) is folded in conceptually --- nesting *is* the supset relation,
-% drawn rather than glyph'd. Each class's earned capability sits in
-% its own exclusive LEFT STRIP; the "+delta" annotates the membrane
-% you cross to ENTER the inner population, so it sits just OUTSIDE the
-% inner frame's top edge (in the parent region). Rails below key their
-% switch-on x to each frame's LEFT EDGE = where that subpopulation
-% begins (S_i.x = Lz_i).
-
-% Frame i: (Lz,By)--(Rz,Ty). i=0 Adaptive (outer) ... i=3 Self-actuated.
-\def\LzA{0.3} \def\LzB{3.7}  \def\LzC{7.1}  \def\LzD{10.5}
-\def\RzA{16.8}\def\RzB{16.55}\def\RzC{16.3} \def\RzD{16.05}
-\def\TyA{11.0}\def\TyB{10.48}\def\TyC{9.96} \def\TyD{9.44}
-% bottom insets smaller than the top inset (0.40 vs 0.52) so the now-
-% interior 4-line stack clears the innermost dashed border; nesting is
-% still carried unambiguously by the uniform left (3.4) + top insets.
-\def\ByA{5.95}\def\ByB{6.35} \def\ByC{6.75} \def\ByD{7.15}
-% rails key off S_i.x = frame-left (y is irrelevant; rails use |-0)
-\coordinate (S0) at (\LzA,8); \coordinate (S1) at (\LzB,8);
-\coordinate (S2) at (\LzC,8); \coordinate (S3) at (\LzD,8);
-
-% nested frames, outer -> inner (inner paints over outer); tint
-% deepens inward so the eye is drawn to the rare valuable core
-\fill[spineDeep!4]  (\LzA,\ByA) rectangle (\RzA,\TyA);
-\fill[spineDeep!8]  (\LzB,\ByB) rectangle (\RzB,\TyB);
-\fill[spineDeep!13] (\LzC,\ByC) rectangle (\RzC,\TyC);
-\fill[spineDeep!18] (\LzD,\ByD) rectangle (\RzD,\TyD);
-\draw[spineDeep!55, rounded corners=3pt, line width=0.9pt]
-  (\LzA,\ByA) rectangle (\RzA,\TyA);
-\draw[spineDeep!55, rounded corners=3pt, line width=0.9pt]
-  (\LzB,\ByB) rectangle (\RzB,\TyB);
-\draw[spineDeep!55, rounded corners=3pt, line width=0.9pt]
-  (\LzC,\ByC) rectangle (\RzC,\TyC);
-\draw[spineDeep!55, rounded corners=3pt, line width=0.9pt]
-  (\LzD,\ByD) rectangle (\RzD,\TyD);
-
-% Per-frame stack: [delta] / [class name] / [capability], held
-% INTERIOR to the frame, left-aligned with a uniform left pad (Joseph
-% 2026-05-18: more breathing room from the frame's left border, a
-% clear gap between the "+" row and the name, no plaque behind the
-% names). Offsets are from each frame top T_i; \lpad is the left
-% margin inside each frame's left border (one anchor for the whole
-% column, so the stack reads as a tidy left-aligned block). Adaptive
-% has no delta --- it is the base population, nothing is added to
-% reach it, so its delta slot is simply left empty.
-\def\lpad{0.5}  % left margin inside each frame's left border
-\def\oD{0.22}   % delta      top, below frame top
-\def\oN{0.64}   % class name top, below frame top (gap after delta)
-\def\oC{1.06}   % capability top, below frame top
-
-% class names (plain bold over the tint --- no background plaque)
-\node[font=\footnotesize\bfseries, text=spineDeep, anchor=north west]
-  at (\LzA+\lpad,\TyA-\oN) {Adaptive System};
-\node[font=\footnotesize\bfseries, text=spineDeep, anchor=north west]
-  at (\LzB+\lpad,\TyB-\oN) {Agentic System};
-\node[font=\footnotesize\bfseries, text=spineDeep, anchor=north west]
-  at (\LzC+\lpad,\TyC-\oN) {Actuated Agent};
-\node[font=\footnotesize\bfseries, text=spineDeep, anchor=north west]
-  at (\LzD+\lpad,\TyD-\oN) {Self-Actuated Agent};
-
-% zone title for the nesting section --- the upper-section analogue of
-% the rail labels below; centered in the left gutter, vertically
-% centered against the outer frame ((TyA+ByA)/2).
+% Zone title for the spine section (the upper-section analogue of the
+% rail labels), centered in the left gutter, vertically centered on
+% the outer frame.
 \node[font=\scriptsize\bfseries, text=spineDeep, anchor=center]
-  at (-1.15,{(\TyA+\ByA)/2}) {Scope};
+  at (-1.15,{(\zT+\zB)/2}) {Scope};
 
-% the increment each inner population adds --- inside its own frame,
-% above the name with a clear gap between the two rows.
-\node[delta, anchor=north west] at (\LzB+\lpad,\TyB-\oD) {+ causal intervention};
-\node[delta, anchor=north west] at (\LzC+\lpad,\TyC-\oD) {+ explicit $O_t,\Sigma_t$};
-\node[delta, anchor=north west] at (\LzD+\lpad,\TyD-\oD) {+ revises own $O_t$};
+% ---- dotted divider between the spine and the rails -----------------
+\draw[midgray!55, dash pattern=on 1pt off 2pt]
+  (-3.2,\dividerY) -- (17.3,\dividerY);
 
-% capability earned, in each class's own exclusive left strip
-\def\capw{2.7cm}
-\node[align=left, text=ink, font=\scriptsize, text width=\capw,
-  anchor=north west] at (\LzA+\lpad,\TyA-\oC)
-  {mismatch $\cdot$ gain\\ tempo $\cdot$ persistence};
-\node[align=left, text=ink, font=\scriptsize, text width=\capw,
-  anchor=north west] at (\LzB+\lpad,\TyB-\oC) {causal intervention};
-\node[align=left, text=ink, font=\scriptsize, text width=\capw,
-  anchor=north west] at (\LzC+\lpad,\TyC-\oC) {orient cascade};
-% Self-actuated has two earned capabilities: goal autonomy and the
-% now-reachable negotiated continuity stance (·-separated, like
-% Adaptive's list). Wider text box (F3 interior is roomy) keeps it
-% to one line.
-\node[align=left, text=ink, font=\scriptsize, text width=4.4cm,
-  anchor=north west] at (\LzD+\lpad,\TyD-\oC)
-  {goal autonomy $\cdot$ negotiated continuity};
-
-% ===== ZONE 2: orthogonal property rails =====
-\draw[midgray!55, dash pattern=on 1pt off 2pt] (-3.2,5.55) -- (17.3,5.55);
-
-\def\railR{16.4}
-% rail-label right edge: a few ems left of where the Arity rail starts
-% (S0.x = \LzA = 0.3), so the names sit just before the rail rather
-% than far out in the left margin. anchor=east is set by raillab.
-\def\rlx{0.0}
-% Each rail: a single clean continuous rule; the switch-on dot marks
-% where it activates; the discrete choices sit just BELOW the rule,
-% smaller and dimmed (no ground-fill masking the line). The drop is a
-% snug ~half-line so each choice group visually binds to its OWN rule
-% (the rail directly above it), not to the next rail down.
-\def\rsub{0.12}  % vertical RISE of the choice text above each rule
-                 % (positive now; railsub anchors south west)
-
-% Rail order (top -> bottom): Arity, Knowledge Type, Continuity
-% stance, Goal-Update Coupling. Each rail's switch-on dot sits at the
-% tier where the property first becomes meaningful.
-
-% Arity — all tiers (spans full width, on from Adaptive's left edge)
-\draw[railPeri2, line width=1.1pt] (S0|-0,5.0) -- (\railR,5.0);
-\fill[railPeri2] (S0|-0,5.0) circle (2.4pt);
-\node[raillab, text=railPeri2] at (\rlx,5.0) {Arity};
-\node[railsub] at ($(S0|-0,5.0)+(0.16,\rsub)$) {Primitive $\;\vert\;$
-  Composite};
-
-% Knowledge Type — switches on at Agentic
-\draw[rail] (S1|-0,4.15) -- (\railR,4.15);
-\fill[railPeri] (S1|-0,4.15) circle (2.4pt);
-\node[raillab] at (\rlx,4.15) {Knowledge Type};
-\node[railsub] at ($(S1|-0,4.15)+(0.16,\rsub)$) {Static $\;\vert\;$
-  Learning};
-
-% Continuity stance — orthogonal property (no self-actuation gating
-% drawn: Self-actuated is no longer hypothetical, so the dashed gate
-% line + "availability gated" label were removed, Joseph 2026-05-18)
-\draw[rail] (S2|-0,3.3) -- (\railR,3.3);
-\fill[railPeri] (S2|-0,3.3) circle (2.4pt);
-\node[raillab] at (\rlx,3.3) {Continuity stance};
-\node[railsub] at ($(S2|-0,3.3)+(0.16,\rsub)$) {Indifferent $\;\vert\;$
+% ---- RAIL DATA : one \rail per orthogonal property ------------------
+%  {row}{switch-on class level}{accent}{label}{choices}
+\rail{0}{0}{railPeri2}{Arity}{Primitive $\;\vert\;$ Composite}
+\rail{1}{1}{railPeri}{Knowledge Type}{Static $\;\vert\;$ Learning}
+\rail{2}{2}{railPeri}{Continuity stance}{Indifferent $\;\vert\;$
   Task-terminal $\;\vert\;$ \shortstack{Instrumentally-\\[-2.4pt]continuous}
   $\;\vert\;$ \shortstack{Morally-\\[-2.4pt]continuous} $\;\vert\;$
-  Negotiated};
+  Negotiated}
+\rail{3}{2}{railPeri}{Goal-Update Coupling}{Separated $\;\vert\;$
+  Partial $\;\vert\;$ Coupled}
 
-% Goal-Update Coupling — switches on at Actuated
-\draw[rail] (S2|-0,2.45) -- (\railR,2.45);
-\fill[railPeri] (S2|-0,2.45) circle (2.4pt);
-\node[raillab] at (\rlx,2.45) {Goal-Update Coupling};
-\node[railsub] at ($(S2|-0,2.45)+(0.16,\rsub)$) {Separated $\;\vert\;$
-  Partial $\;\vert\;$ Coupled};
-
-% cream ground, drawn last on the background layer so it sits behind
-% everything; sized to the content bounding box + \gM on every side,
-% giving a uniform margin all around (standalone's border=12pt then
-% adds an equal white frame outside that).
+% ---- cream ground : sized to the content bbox + uniform \gM ---------
 \begin{scope}[on background layer]
   \fill[ground]
     ([shift={(-\gM,-\gM)}]current bounding box.south west)
     rectangle
-    ([shift={(\gM,\gM)}]current bounding box.north east);
+    ([shift={( \gM, \gM)}]current bounding box.north east);
 \end{scope}
 
 \end{tikzpicture}
