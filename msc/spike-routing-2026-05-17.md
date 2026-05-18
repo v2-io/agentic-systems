@@ -618,6 +618,28 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
   question resolved: the rho spike did reshape it). **Gated, Joseph's:**
   the independent-verify of the GA-1/Itô canon-forcing (then the light
   core lands); the unified identifiability-floor/conditional spike launch.
+- **2026-05-18 (k)** — Independent-verify gate (`SPIKE-VERIFY-087154`,
+  confirmer ≠ recheck spike) **CONFIRMED** the two-term identity is
+  canon-forced (`#result-mismatch-decomposition` GA-1 + Prop A.1S Itô
+  step; exclusion-pickaxe empty across both `src/` trees) **and caught
+  two pedigree over-claims in the recheck spike** (ν rate-lift not a
+  pre-existing `#hyp-mismatch-dynamics` identity; general-Σ exceeds Prop
+  A.1S constant-isotropic). Joseph's conditional greenlight active (no
+  objection to the load-bearing result). **CL-2 light exact core LANDED:**
+  `#internal-external-decomposition` rewritten *true* (integration-is-
+  replacement) on the additive two-term GA-1 decomposition + the
+  constitutive no-go; honest tiers per the gate (`status: conditional`;
+  ν rate-lift tagged a stated convention; general-Σ an elementary
+  extension; no-go exact-by-constitution); finer 𝓜/π/cross split **not
+  asserted** (reserved). Lint-clean; OUTLINE row de-flagged; CHANGELOG
+  2026-05-18 written; second navigator §4.1-lie corrected (INDEX:102,
+  TODO:147/438, PROPOSALS §D.9); `NOTATION.md` given a standing
+  drift-caveat + self-description de-escalated; TODO item queued to
+  auto-derive NOTATION from segments (the structural §0 fix). Two spikes
+  in flight: `a096cedcba5be75b3` (unified identifiability-floor /
+  CL-2-conditional-refinement). **Remaining:** that spike's verdict →
+  the heavy reserved refinement; otherwise the cycle's mine-to-do
+  non-reserved work is complete.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 

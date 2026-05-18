@@ -5,7 +5,24 @@ type: reference
 
 # AAT Notation and Conventions
 
-All symbols used in Adaptation and Actuation Theory, serving as a single authoritative reference. When a symbol appears in any AAT document, its meaning is as defined here unless explicitly noted otherwise.
+Symbols used in Adaptation and Actuation Theory, collected as a convenience index.
+
+> [!warning]
+> **This file is a lagging index, not the arbiter (drift caveat).** It is
+> hand-maintained, and the live theory drifts away from it: spike
+> findings and new/rewritten segments routinely change a quantity's
+> structure without updating this file. **It is not authoritative.** When
+> this index and a segment's own definition/derivation disagree, the
+> segment is ground truth and this file is the thing that is stale. Use
+> it to *locate* a symbol, never to *settle* what it means or how it
+> decomposes — settle that from the segment, re-derived. (Worked
+> instance: this file glosses ρ as a single "mismatch injection rate"; an
+> independent recheck established ρ² decomposes additively via the exact
+> `#result-mismatch-decomposition`, and that a multiplicative
+> `ρ = ρ_external·f(𝓜)·g(π)` is type-incorrect — the segment, not this
+> gloss, is the truth. See `doc/spike-routing.md` §0 and CHANGELOG
+> 2026-05-18.) A structural fix — auto-deriving this file from segment
+> definitions so it cannot drift — is queued in `TODO.md`.
 
 Notation conventions are adopted from TFT (`_obs/old-tf-00-notation-conventions.md`) with extensions for AAT's purposeful-agent machinery.
 
