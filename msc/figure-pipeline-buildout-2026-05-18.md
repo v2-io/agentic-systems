@@ -221,3 +221,54 @@ Ship the mechanism + scope-of-work. The other `src/img` figures are a
 fast follow-up *with Joseph's editorial eye* (which figure lands in
 which segment is a voice/placement call), now that embedding is one
 two-line convention and the build renders it correctly.
+
+## Scattering wired (2026-05-18, Joseph-sanctioned autonomous)
+
+Joseph asked for "a scattering of figures to compare and contrast" —
+one or more per chapter, verified not-stale, driver-snow-foundation
+into the Part-1 preface specifically. Source = `01-aat-core/src/img/`
+only. **Deliberately did NOT touch `audits/AUDIT-*`** (standing
+consult-Joseph gate; he was asleep, could not decide-with-me) nor
+`spikes/visual/` (ideation, not figures). Each figure was
+**verified against current canon before wiring** (the load-bearing
+part — a theory-contradicting figure is worse than none):
+
+| Figure | Home | Staleness verification |
+|---|---|---|
+| `scope-of-work` | Volume Introduction | (earlier) |
+| `driver-snow-foundation` | **Part I Introduction** (OUTLINE.md inline part-preface — Joseph's named want) | v2 2026-05-15 Joseph-revised; uses current AAT notation (δ, ρ, 𝒯, R, α, `#scope-adaptive-system`); **persistence-fail `ρ>αR` matches canon exactly** (`der-team-persistence.md`). Cruft fixed: dangling `#der-delib` → live `#der-deliberation-cost`. |
+| `bathtub-scaffold` | `persistence-and-limits-intro.md` (Part I) | Matches the canonical Alan-Walton bathtub gloss (water=mismatch, inflow=drift, drain=correction, rim=capacity); companion slugs `#result-persistence-condition`/`#disc-stability-certificate` live; compiles via the .tex→.mono.pdf path. |
+| `strategy-dag-example` | `strategy-structure-intro.md` (Part II) | Single-parameter AND/OR edge credences — matches the canonical model; noisy-OR / WEIGHTED (rejected variants) absent. `#def-strategy-dag` live. |
+| `orient-cascade` | `impl-orient-cascade.md` (Part II) | Five-step cascade + 2×2 diagnostic matches `#der-orient-cascade` (live; its derivation prose in the same chapter describes exactly this ordering). |
+
+`sector-cone` (and the `.svg` set) left **catalogued, not wired** —
+five is a good scattering for design intuition; over-splicing the
+monograph unilaterally is not wise. They are one two-line embed away
+whenever Joseph wants them.
+
+Editorial placement: all into discussion-grade chapter-intro / impl
+segments or prefaces (low-risk boundaries), self-captioned, plain-prose
+captions, no insertion into dense derivations, no voice-contract prose
+altered.
+
+**Scattering build verified:** `bin/build-monograph aat` exit 0,
+**651 pp** (≈637 baseline + 14 = the 5 figures + reflow — an
+addition, not the 8-pp collapse class), all 5 `\includegraphics`
+from freshly-recompiled `.mono.pdf` + all 5 `\label{fig:…}` present,
+no LaTeX trouble, committed `src/img/*.pdf` unmutated. driver-snow
+visually confirmed rendering correctly in the Part I Introduction
+(schematic + translation table + the cruft-fixed
+`#der-deliberation-cost` cell + `ρ>αR`).
+
+**Honest caption note (corrected a misread):** the caption renders
+"Figure : <text>" — *bare, no inline number* — which is **exactly
+how every TABLE in the monograph already renders ("Table .")**. The
+number is delivered at `\cref` sites (`.aux`:
+`\newlabel{fig:…}{{1}…}` etc., one per figure). So numbering +
+cross-ref WORK; the in-caption number is suppressed by the project's
+pre-existing caption convention that affects tables identically. I
+briefly misread a low-res render as "Figure 2:"; raw `pdftotext`
+("Figure :") is authoritative and is reported here. Whether captions
+should carry inline "Figure N:/Table N:" is a **monograph-wide
+caption-format decision for Joseph** (it would change tables too) —
+explicitly NOT made unilaterally.
