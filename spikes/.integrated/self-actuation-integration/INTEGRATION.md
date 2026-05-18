@@ -89,13 +89,47 @@ arc. Don't.
   `der-orient-cascade.md` (changing it is a `bin/term decide` naming-system
   action — deferred to the naming cycle, flagged here).
 
-**Drafted bundle = P1′ + P3′ + P4′ (P2′ folded). Next:**
+## STATUS: COMPLETE (2026-05-18)
 
-1. **Independent review** of the drafted bundle before any of it enters
-   assembled canon (running). Standing discipline — a new conditional no-go
-   entering the framework is independently reviewed, not self-certified.
-   (This arc is the reason that discipline exists; honor it.)
-2. On review-clean **and** git-coordination-clear: do #18 —
+The self-actuation integration is finished and in canon.
+
+- **Independent review (#17): clean affirm.** A fresh reviewer read the
+  drafted segments + all primary dependencies directly and verified the
+  external prior-art against the primary source: derivation sound, tier
+  honestly stated (the recurring `exact`/universal overclaim resisted —
+  confirmed in the landed segment), scoped-not-universal honest,
+  `disc-continuity-stance` internally consistent, pointers accurate, body
+  voice FORMAT-clean. It independently re-surfaced the line-106 OUTLINE
+  staleness (good convergence) as a required in-bundle fix, plus two trivial
+  polish items — all applied.
+- **#18 done:** P1′ wired into `01-aat-core/OUTLINE.md` *Appendices Details*
+  (Derivation row, precedent = `#deriv-stochastic-non-exit`); the stale
+  `#disc-continuity-stance` OUTLINE row (line ~106) re-synced to the
+  P3′-corrected truth; the two review polish items applied (der-orient-cascade
+  pointer conditional/scoped qualifier; P1′ Related-Work stray date dropped).
+  `bin/lint-md` clean; `bin/lint-outline` introduced **zero** new
+  violations (the 3 ordering / 1 missing are exactly pre-existing and
+  unrelated; the `disc-continuity-stance → deriv-self-actuation-grounding`
+  line is the tolerated main-references-appendix-proof informational
+  pattern). Math verified fully present in `#deriv-self-actuation-grounding`
+  (verify-before-archive satisfied via the independent review).
+- This trail dir is archived to `spikes/.integrated/self-actuation-integration/`.
+- **Open follow-ups (outside this integration's scope, still tracked):**
+  #12 vocabulary sweep ("witness" → "independent review / attested",
+  two-tier) across these now-archived spike files; #13 CHANGELOG provenance
+  (commit-1 entangled in `31e54e7`); the deferred dedicated
+  `self-actuated-agent` segment-under-a-canonical-slug (naming-cycle);
+  `terminology/entries/self-actuated-agent.md` `primary_source` metadata
+  (a `bin/term decide` change, naming-cycle).
+
+---
+
+### Historical: the integration plan (now all done)
+
+**Drafted bundle = P1′ + P3′ + P4′ (P2′ folded). Steps (all complete):**
+
+1. **Independent review** of the drafted bundle before canon — DONE, clean.
+2. On review-clean **and** git-coordination-clear: #18 — DONE —
    - **(a) Add the P1′ row** to the `## *Appendices* Details` group in
      `01-aat-core/OUTLINE.md`. Precedent/format: the `#deriv-stochastic-non-exit`
      row (the Model-S no-go) — `| A | Derivation | | [#deriv-self-actuation-grounding](src/deriv-self-actuation-grounding.md) | <claim> | conditional |`,
