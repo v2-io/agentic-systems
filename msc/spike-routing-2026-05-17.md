@@ -640,6 +640,33 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
   CL-2-conditional-refinement). **Remaining:** that spike's verdict →
   the heavy reserved refinement; otherwise the cycle's mine-to-do
   non-reserved work is complete.
+- **2026-05-18 (l)** — Unified identifiability-floor spike returned
+  (`spikes/spike-identifiability-floor-instance4-resolution-2026-05-18.md`).
+  Verdict: canon's "Instance 4" conflated **Object A** (universal-C /
+  non-(PI) — a category error, *not* a floor; the triage spike was right)
+  and **Object B** (architecturally-distinct/behaviorally-identical — a
+  *genuine* floor, = the rho Regime-C confound / CL-2's reserved
+  refinement; one decision). Object-A half **verified first-hand from
+  canon's own self-contradiction** (`#deriv-observation-ambiguity-bias-bound:127`
+  already states "not a new floor instance"; Instance 4's single-escape
+  fails the segment's own ≥2 test; Sylvester Discussion taxonomizes 3,
+  Findings says 4) → **§4.1 honesty-mark applied** to
+  `disc-identifiability-floor` Instance 4 (KNOWN-DEFECTIVE, localized,
+  lint-clean; positive relabel/install reserved, not done). Object-B
+  substantive math (Kalman-Ho no-go; Instance-2-mechanism reduction;
+  CL-2 §7 projection) → **independent-verify gate launched**
+  (`a9441d4be02a5fb0c`, confirmer ≠ spike) — legitimate per §0c (it
+  feeds a Joseph-reserved canon landing, not closure-comfort).
+- **2026-05-18 (m)** — Joseph: §0c counterweight folded
+  (`spike-routing.md` §0c + Refinement 8; audit-routing Refinement 5).
+  **Duty-state per §0c: the cycle's mine-to-do, non-reserved work is
+  discharged.** Everything is honestly tiered (`#internal-external-decomposition`
+  `conditional` + open Working Notes; `disc-identifiability-floor`
+  Instance 4 KNOWN-DEFECTIVE + what's-open flagged); open/reserved items
+  are in the standing queue; the running Object-B gate + the
+  Joseph-reserved disposition (relabel Instance 4 / install Object B /
+  CL-2 heavy refinement / the unified neutral-drift+Instance-4 decision)
+  carry the remainder. **Not escalating further.**
 
 ## Next actions (gated; the cycle is not the taxonomy)
 

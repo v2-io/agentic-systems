@@ -636,3 +636,16 @@ that cited NOTATION as a verified pillar — the real argument was
 *stronger* without it). Canonical statement: `doc/spike-routing.md`
 §0. This Refinement sits above Refinements 1–3: they are proxy-
 discipline; §0 is what proxy-discipline is *for*.*
+
+*Refinement 5 (2026-05-18, Joseph-directed — the counterweight to
+Refinement 4). §0 + the gates, without this, drive a
+**verification-regress** where honest incompleteness reads as unfinished
+duty. They prevent *false confidence*, never forbid honest "not yet."
+Duty is fully discharged when, at current understanding, the artifact
+carries its **honest tier** + Working Notes state **what is open and what
+would close it** + the remainder is **released to the standing cycle**;
+then stop. A live gate is legitimate only when the artifact would
+*assert false confidence* without it (a canon landing, a status
+elevation), not as a precondition for *releasing an honestly
+lower-tiered* item. Canonical statement + the self-check:
+`doc/spike-routing.md` §0c / its Refinement 8.*

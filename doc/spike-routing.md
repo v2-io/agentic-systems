@@ -60,6 +60,40 @@ cheaper proxies. They serve §0; when any of them is in tension with
 re-derived truth, truth wins and the proxy-rule is the thing that gets
 re-truthified.
 
+### §0c. Honest incompleteness is a complete discharge — the counterweight to §0 (Joseph 2026-05-18)
+
+§0 and the gates, taken without this, drive a **verification-regress**:
+every gate spawns another, nothing is ever released, and an honest
+"not yet" feels like failure. It is not. **The gates exist to prevent
+false confidence, never to forbid honest incompleteness.** Duty is
+discharged — fully — when, *at the current level of understanding*:
+
+1. the artifact carries its **honest tier** (status downgrade /
+   `conditional` / `discussion-grade` / a KNOWN-DEFECTIVE mark — whatever
+   is true), not an inflated one;
+2. its **Working Notes state precisely what is unresolved and what would
+   resolve it**; and
+3. the open remainder is **released to the standing cycle** (TODO /
+   PROPOSALS / the audit cycle / the Joseph-reserved queue).
+
+Then **stop.** You do not have to drive every thread to closed-form exact
+resolution in real time, and you must not keep escalating verification
+depth past the point where the artifact is completely honest.
+Strengthen-before-soften means *attempt* the strong result — it does
+**not** mean you may not honestly land at "conditional; here is exactly
+what is open"; that honest landing *is* the discipline succeeding. A
+self-check that you are regressing rather than discharging: you are
+launching another gate not because canon would otherwise *lie* but
+because an honest lower tier feels insufficient. It is sufficient.
+(Joseph 2026-05-18: *"it is ok to mark something with a lower epistemic
+value, note in the working notes that it needs additional work, and let
+the wider audit-cycling pick it up. As long as it is completely honest
+as per our current level of understanding, your duty has been
+dispatched."*) The remaining live gate is legitimate only when an
+artifact would *assert false confidence* without it (a canon landing, a
+status elevation) — not as a precondition for *releasing an honestly
+lower-tiered* item.
+
 ---
 
 ## 0b. Why a companion and not a fork
@@ -505,3 +539,16 @@ MANIFEST *feels* like completion (a durable artifact shipped); it is the
 TODO.md PROPOSALS.md PRACTICA.md`) as a mandatory cycle-close step, and
 close/correct in the same commit — closed items are closed at
 cycle-commit time, not catalogued for later.*
+
+*Refinement 8 (2026-05-18, Joseph-directed — the counterweight, added
+while the gate-machinery was visibly deep). §0c. The elaborate
+real-time verification layering (recheck → gate → §4.1 mark → spike →
+gate → …) is good, but it invites a regress where honest incompleteness
+is mistaken for unfinished duty. Stated explicitly: honest-tier +
+Working-Notes-says-what's-open + release-to-the-standing-cycle is a
+*complete* discharge; do not escalate verification past honesty. The
+scar this pre-empts: future-me reading §0 and never releasing anything.
+The self-check is in §0c (am I launching a gate because canon would
+*lie*, or because an honest lower tier feels insufficient?). The
+remaining live Object-B gate is legitimate by that test — it feeds a
+canon landing / status elevation, not merely my own closure-comfort.*
