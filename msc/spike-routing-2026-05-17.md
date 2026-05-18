@@ -173,6 +173,235 @@ dir-spikes batched for Joseph.
 > anticipated — stop and report back. What you surface refines the brief
 > before more agents run.
 
+## Fan-out slices (launched 2026-05-17 e)
+
+Sliced to keep coupled siblings together and reads deep (one agent per
+slice, read/report-only → `audits/SPIKE-WORKING-<id>/`). LIVE excluded
+entirely: `spike-self-actuation-grounding`, `spike-wf-strengthening`,
+`spike-wf-class-scoping`, `visual/`.
+
+- **S1 — 2026-04-24 strengthening cycle** (INDEX: TIER-1-LANDED;
+  verify-in-canon): `bridge-lemma-nonlinear-strengthening-2026-04-24`,
+  `fenchel-bregman-reframe-…-2026-04-24`,
+  `identifiability-floor-instance-triage-2026-04-24`,
+  `kl-to-state-distance-template-extraction-2026-04-24`,
+  `neutral-drift-endogenous-coupling-strengthening-2026-04-24`,
+  `rho-additive-variance-strengthening-2026-04-24`.
+- **S2 — operator-family + pilot independent-verify** (confirmer ≠
+  pilot): `spike-operator-sector-unification` (confirm/refute the pilot's
+  `integrated-misfiled` against the named loci in
+  `audits/SPIKE-WORKING-023198/`), `spike-update-operator-sector`
+  (pilot-flagged `orphaned`-suspect).
+- **S3 — composition / strategy / passivity**: `composition-gaps`,
+  `composition-scaling-N`, `passivity-composition`,
+  `strategy-dynamics-gaps`, `transient-dependency-amplification`,
+  `pid-a2prime`.
+- **S4 — adaptive / evidence / factorization (heavy)**:
+  `active-inference-vs-aad`, `l1-evidence-axiom`,
+  `jacobian-b1-strengthening`, `rho-factorization`,
+  `stochastic-non-exit-strengthening-2026-05-16` (INDEX: LANDED state-3
+  no-go — is the no-go canon per §5?).
+- **S5 — small orphan-suspects + integration doc**:
+  `alignment-impossibility`, `aporia-sub-agent-adversarial`,
+  `fep-suboptimal-approximation`, `message-passing-credit-assignment`,
+  `attention-governance`, `attention-causal-graphs`,
+  `neurips-back-integration-2026-05-08`.
+- **S6 — dir-spikes (lighter gold gate: read+recommend → Joseph batch) +
+  liveness checks**: `class-coercion-wrapping/`,
+  `spike-local-embedding-benchmark/`, `temporal-nesting-rg/`,
+  `track-a-intent-dag/`, `track-b-nonlinear-sims/`; liveness-check
+  `spike-language-as-causal-substrate/` and `spike-strategic-self-coupling`
+  (if live → `live-or-open`, hands-off).
+
+`spike-c2-star-to-integrate` already adjudicated (pilot → `live-or-open`).
+
+## Coupled landing clusters (parent-owned; reconcile fan-out into these)
+
+Cross-slice couplings surfaced by the sibling rule. The parent holds
+these so independent slice-recommendations are **reconciled into one
+landing**, never isolate-landed (three parallel half-segments of one
+appendix is the `PROPOSALS.md:268` failure).
+
+- **CL-1 — `#dissipativity-template` / SP-22 (γ)-hybrid bundle**
+  (surfaced by S3, 2026-05-17). Members: `spike-passivity-composition`
+  (heterogeneous-storage-function composition payoff + the
+  `#dissipativity-template` appendix — Willems route), `spike-pid-a2prime`
+  (the explicit $\alpha_{\text{PID}}$/B1 derivation, KYP route — same
+  α/β-repartition territory), and the **S1-slice**
+  `spike-bridge-lemma-nonlinear-strengthening-2026-04-24 §7.2` (targets
+  the *same* appendix). SP-22's architectural gate was resolved
+  2026-05-14, so this is straight authoring, not an architectural call —
+  **one HEAVY landing, one integration-plan, one PRACTICA surface.**
+  When S1/S4 report on `bridge-lemma`, fold into CL-1; do not isolate-land
+  any member. (The §8 adversarial no-go from `spike-passivity-composition`
+  is *already* canon at `result-contraction-template.md:148` — correctly;
+  CL-1 is only the not-yet-landed heterogeneous-composition payoff.)
+
+- **CL-2 — rho-decomposition / the §4.1 cardinal-violation cluster**
+  (surfaced by S4, corroborated by S1, parent-verified first-hand
+  2026-05-17). Members: `spike-rho-factorization` (the true no-go: (R-F)
+  multiplicative ρ-factorization does **not** hold — additive-in-variance,
+  not multiplicative-in-rate), `spike-rho-additive-variance-strengthening-2026-04-24`
+  (**S1 slice** — the *completed strengthen-first successor*: the real
+  derived (AV) theorem, only in the spike), and the segment
+  `internal-external-decomposition` (was asserting the refuted split at
+  `robust-qualitative`). The eventual replacement is a new
+  `#rho-decomposition` appendix (absent today) + the no-go canonized +
+  status up-tier of the corrected additive form + the §4.1-marked segment
+  rewritten. **One HEAVY landing; carries a Joseph-reserved Instance-5
+  decision → Joseph batch, not this cycle.** The mandatory honesty-mark
+  (below) is *done now and is separate from* this landing.
+
+### §4.1 honesty-mark — DONE & verified (2026-05-17)
+
+The cardinal-sin case. `internal-external-decomposition` asserted the
+refuted multiplicative ρ-split at `robust-qualitative` with **no
+obstruction record in its entire git history** (pickaxe-confirmed).
+Triply-converged (S4 primary-source+pickaxe / S1 corroboration / parent
+first-hand read of segment + spike). Action taken, per audit-routing
+§4.1/§4.2, *before* routing and separate from the heavy CL-2 landing:
+
+- `01-aat-core/src/internal-external-decomposition.md`: `status:
+  robust-qualitative → false`; prominent in-body `> [!warning]`
+  known-broken banner (spike link + `TODO: FIXME` + CL-2/tracker
+  pointer); content preserved-but-flagged (not blanket-deleted — §6
+  precision; the corrected form is the reserved CL-2 landing, not written
+  here).
+- `01-aat-core/OUTLINE.md:357` (Appendix A row): description prefixed
+  with the KNOWN-FALSE flag (the index was lying too).
+- **Cascade closure verified empty**: zero segments list it in
+  `depends:`; zero `#`-refs anywhere; only the OUTLINE row (now marked).
+  No propagation. *(Verification-bug caught & corrected mid-pass: an
+  earlier `grep -v` self-filter masked the OUTLINE row — re-checked
+  clean. Recorded as a scar: filter your exclusions, then re-verify
+  without them.)*
+- Tooling: `lint-outline` clean (`status: false` is out-of-band by
+  design, does not break the index); `lint-md` clean for the banner
+  (3 residual emphasis-`_` issues are **pre-existing** in the refuted
+  body — baseline-confirmed identical — deliberately not polished, the
+  segment is queued for CL-2 replacement).
+- First in-practice application of the audit-routing §4 transient no-go
+  mark (no prior `status: false` precedent in the corpus). Worked
+  cleanly; data point for the SOP.
+
+## Joseph batch (reserved-decision items — assemble, do not auto-file)
+
+Per `spike-routing.md` §6 (decision-type gate, ratified). Surface
+together; each is a present-truth call Joseph reserved:
+
+- **CL-2 Instance-5** — the rho-decomposition replacement landing
+  (above); the §4.1 mark is done, the *replacement* is his.
+- **identifiability-floor 4th-instance** (S1: `spike-identifiability-floor-instance-triage-2026-04-24`
+  + `spike-neutral-drift §8/§10.1`) — a triage spike whose recommendation
+  canon *partially inverted*: is `disc-identifiability-floor` Instance 4 a
+  category error the triage caught, or is the triage the soften-shaped
+  move? Present-truth call, laid side-by-side in SPIKE-WORKING-417303.
+- **`spike-language-as-causal-substrate/` theoretical orphan** (S6) —
+  Theorem-1 (discourse-act → Pearl L2, derivation-grade) lives only in
+  the spike; landing is a reserved promotion call (new AAT appendix grade
+  + Synthese cross-cite). Same family as the pilot's **C2★ gap**
+  (`der-loop-interventional-access:76`) — show them together.
+- **`spike-attention-governance` archived-vs-research-seed** (S5) — is
+  finite-attention a missing postulate or an IB/temporal-nesting
+  consequence? Truth-call, not a filing op.
+- **`temporal-nesting-rg/` Moves B/C/D** (S6) — `integrated-misfiled` for
+  its landed core, **but** hold the `git mv` for the Joseph batch: the
+  B/C/D + temporal-nesting-Discussion decision he was owed
+  (`class-coercion-wrapping/INTEGRATION-PLAN.md:221`, never adjudicated)
+  rides with it; auto-filing silently drops it.
+
+## Disposition ledger (running — the assembled safe subset)
+
+Durable so the cycle survives interruption (if dropped here, future-me
+executes the batch from this section). **No `git mv` until the durable
+batch at the seam** (audit-routing §8: verification is pre-decisional;
+MANIFEST + `git mv` + commit are the one durable batch, not piecemeal).
+
+**VERIFIED — safe-mechanical `git mv` → `.integrated/` (durable batch):**
+
+- `spike-operator-sector-unification` — pilot 023198 `integrated-misfiled`
+  **independently confirmed by S2 (471639 ≠ pilot)**, every locus
+  re-opened first-hand + git-provenance-proven never-filed. Completion (B).
+  Cycle-close: also fix the INDEX:64 "predecessor" pointer (doubly wrong:
+  path *and* referent — absorbed predecessor is the
+  `spike-operator-family-unification/` dir, not this file).
+
+**TRACTABLE landings — this cycle (parent authors, post-batch):**
+
+- `spike-update-operator-sector` — `orphaned` (S2-confirmed pilot flag):
+  real `(O-A2')` strengthening + a sharp confirmed no-go (§4.3
+  unobservable-L1' Cramér-Rao rank-1 break), all spike-only,
+  strengthen-first-checked as **not** `subsumed`. Landing: α-op/β-op
+  sub-list refresh into `#deriv-sector-condition` (mirror the
+  already-landed mismatch-layer recast) + cross-ref into
+  `#disc-identifiability-floor` + optional `(O-A2')` hook into
+  `#disc-credit-assignment-boundary`; no new appendix/cascade.
+  *Parent-owned seam:* SP-22 already decided subsumption-not-new-peer
+  (the spike's §8.1 new-appendix self-rec is superseded); the
+  §266(iii)-vs-§8.2 placement is a whole-corpus call — parent decides at
+  routing, not auto-exec. *Non-loss (integration-is-replacement):* the
+  no-go's **operator-layer** manifestation must reach
+  `#disc-identifiability-floor` as present-tense canon — covering it as
+  "Instance 2 already" without the operator-layer line is the subtle
+  replacement failure.
+
+**`integrated-misfiled` (S3) — pending independent-verify before batch:**
+
+- `spike-composition-gaps` (Gap 1 → `hyp-directed-separation-under-composition`;
+  segment *sharper* than spike — excised Case-3 as category error;
+  deferred residue tracked SP-17/SP-20; prov `d546cf4`).
+- `spike-strategy-dynamics-gaps` (all four gaps landed; INDEX 2026-04-25
+  "living artifacts" header wrong in the integrated direction; prov
+  `9376b8f`).
+
+**HEAVY → CL-1** (queue, not this cycle): `spike-passivity-composition`,
+`spike-pid-a2prime` (+ S1 `bridge-lemma §7.2`) — see Coupled landing
+clusters.
+
+**`live-or-open` (no action):** `spike-transient-dependency-amplification`
+(author self-blocked, INDEX correct), `spike-c2-star-to-integrate` (pilot,
+cross-repo).
+
+### S1 / S4 / S5 / S6 additions (detail in each SPIKE-WORKING-*/adjudication.md)
+
+**`integrated-misfiled` — pending independent-verify, then durable batch:**
+
+- S1: `spike-bridge-lemma-nonlinear-strengthening-2026-04-24` (§7.1 only —
+  §7.2 is a CL-1 orphan strand), `spike-fenchel-bregman-reframe-…-2026-04-24`
+  (both halves landed incl. the "Tier-3 reframe" INDEX:106 wrongly records
+  unlanded).
+- S4: `spike-stochastic-non-exit-strengthening-2026-05-16` (state-3 no-go
+  *is* canon, textbook 5A — cascade-verified), `spike-active-inference-vs-aad`
+  (G-BP2 landed, strengthened-past), `spike-l1-evidence-axiom`,
+  `spike-jacobian-b1-strengthening` (both landed; INDEX understated).
+- S5: `spike-fep-suboptimal-approximation`, `spike-message-passing-credit-assignment`
+  (refuted core integrated-as-replacement, corrected result canon),
+  `spike-attention-causal-graphs` (core via sibling commit `446c7a1`).
+- S6: `class-coercion-wrapping/`, `track-b-nonlinear-sims/`,
+  `track-a-intent-dag/` (mechanical, low-loss); `temporal-nesting-rg/`
+  (**hold for Joseph batch** — see above).
+
+**`orphaned` — HEAVY → CL-2 / Joseph batch:** `spike-rho-factorization`
+(S4, the no-go), `spike-rho-additive-variance-strengthening-2026-04-24`
+(S1, the (AV) successor). **`orphaned` — strengthen-first, HEAVY:**
+`spike-alignment-impossibility` (S5 — bare GS no-go in canon but the §7
+cardinal-utility/VCG strengthening is **nowhere**; must not be softened to
+"done"). **`orphaned` — Joseph-reserved (triage-contradicted):**
+`spike-identifiability-floor-instance-triage-2026-04-24`, `spike-neutral-drift…`
+§8/§10.1 (S1).
+
+**`live-or-open`:** `spike-kl-to-state-distance…-2026-04-24` (S1 — gate
+landed, template correctly not, clients unmaterialized),
+`spike-aporia-sub-agent-adversarial` (S5 — claims 2–3 open, SP-18),
+`spike-strategic-self-coupling` (S6 — open direction),
+`spike-local-embedding-benchmark/` (S6 — spec for an unbuilt tool;
+partition hypothesis "sibling-repo" was wrong, it's ASF-internal),
+`neurips-back-integration-2026-05-08` (S5 — a live back-integration
+*plan*, the spike analog of `pending-findings-*`; stays; Phase B would
+import in-review `~/src/neurips/` results — cross-repo-blocked per §3).
+**Joseph-reserved:** `spike-language-as-causal-substrate/` theoretical
+orphan, `spike-attention-governance` (S5/S6 — see Joseph batch).
+
 ## Log
 
 - **2026-05-17 (a)** — Cycle set up. Governing docs authored
@@ -230,6 +459,18 @@ dir-spikes batched for Joseph.
   core's first re-truthification from its second corpus — §7 meta-stance
   working as intended). Fan-out briefs to foreground git-provenance as a
   decisive-test tool (agents default to grep; pickaxe is sharper).
+- **2026-05-17 (e)** — Six fan-out slices launched + all returned
+  (SPIKE-WORKING-417303/S1, 471639/S2, 417739/S3, 111710/S4, 029307/S5,
+  418736/S6). Dispositions in the ledger above; detail in each dir. The
+  sibling-coupling refinement paid off twice cross-slice (CL-1 caught
+  before three half-landings; CL-2 = the rho cluster split S1↔S4).
+- **2026-05-17 (f)** — **§4.1 cardinal violation found and honesty-marked**
+  (`internal-external-decomposition`; the rho no-go). Triply-converged,
+  parent-verified first-hand, marked at both loci, cascade-verified empty,
+  lint-clean, tooling-checked. See the §4.1 record above. The *replacement*
+  is reserved (CL-2 / Joseph batch); the *mark* is done. This is the
+  cardinal-sin case the cycle exists to catch — caught and discharged in
+  the honest direction.
 
 ## Next actions (gated; the cycle is not the taxonomy)
 

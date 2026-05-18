@@ -1,7 +1,7 @@
 ---
 slug: internal-external-decomposition
 type: derivation
-status: robust-qualitative
+status: false
 depends:
   - result-persistence-condition
   - hyp-mismatch-dynamics
@@ -11,6 +11,28 @@ stage: draft
 ---
 
 # Derivation: Internal-External Decomposition of Agent Viability
+
+> [!warning]
+> **KNOWN-FALSE in current form — TODO: FIXME. Do not rely on the
+> environmental/internal viability split below.**
+>
+> The *Full Decomposition* section rests on factoring the disturbance
+> rate multiplicatively as $\rho = \rho_{\text{external}} \cdot f(\mathcal{M}) \cdot g(\pi)$
+> (the "volatility × policy-benignity × model-expressiveness"
+> parenthetical below). The worked no-go in
+> [`spikes/spike-rho-factorization.md`](../../spikes/spike-rho-factorization.md)
+> establishes that this factorization **does not hold**: the natural
+> structure is *additive in variance*, not multiplicative in rate, and it
+> does not survive conversion to rate units because $\sqrt{A+B} \neq \sqrt{A}\,\sqrt{B}$.
+> The *Log-Viability* algebra is unaffected; what is refuted is the clean
+> environmental-vs-internal separation that follows it.
+>
+> The corrected additive-in-variance replacement (plus canonization of
+> the no-go) is the queued heavy landing **CL-2**, tracked in
+> [`msc/spike-routing-2026-05-17.md`](../../msc/spike-routing-2026-05-17.md);
+> it carries a Joseph-reserved Instance-5 decision and is deliberately
+> *not* written here. Content is preserved below, flagged, until that
+> landing.
 
 The persistence condition ($\alpha R \gt \rho$) provides a binary survival threshold. However, diagnosing *why* an agent persists requires decomposing its margin of survival (viability) into internal agent capacity versus external environmental affordance.
 

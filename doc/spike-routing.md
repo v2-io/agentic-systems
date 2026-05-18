@@ -286,3 +286,51 @@ instrument. The shared core carries the same correction (audit-routing
 §8, Joseph-directed). Transferable: a blanket "don't trust X" inherited
 from another corpus can over-suppress; check whether the real defect is
 narrower (here it is *recency ordering*, not *git*).*
+
+*Refinement 3 (2026-05-17, fan-out S2 — worked example
+`spike-update-operator-sector`). The strengthen-first reflex has a
+spike-specific **dual** worth foregrounding. Audit-routing §2/§4 frames
+strengthen-first as "an auditor proposes a soften → try to strengthen
+first." But a spike commonly **already did its own honest strengthen-first
+internally and landed at `conditional`** (a legitimate terminal state, not
+a soften to undo). When such a spike never reached canon, the live
+question is **not** "should we soften / re-strengthen?" — it is the
+`subsumed-by-later-work` **vs** `orphaned` discriminator: did a successor
+genuinely absorb the result, or is it stranded? Run that check explicitly
+(grep the successor for the spike's load-bearing object; confirm
+absorption, don't assume it). Calling a self-conditional spike "done"
+because "its honesty is intact" is the spike-corpus form of the
+soften-as-routing the protocol exists to catch.*
+
+*Refinement 4 (2026-05-17, fan-out S1 + S5 + S6 — independent triple
+convergence, which per the convergence-as-coherence discipline is strong
+signal the gap is in the frame, not one agent's head). Two linked
+defects:*
+
+*(a) `live-or-open` is **overloaded**. It is silently carrying at least
+five dispositions that route very differently: **live-author** (stays
+silently, hands-off), **open-direction** (stays silently), **spec-for-
+queued-work** (stays, is a durable tracker), **cross-repo-blocked** (stays;
+surface the canon-gap to the owner — §3), and **reserved-decision** (must
+go to the Joseph batch **loudly**, §6). A future agent reading
+"live-or-open" as uniformly "ignore" will silently drop a reserved-decision
+orphan. Tag the sub-disposition explicitly: `live-or-open
+{live-author | open-direction | spec-for-queued | cross-repo-blocked |
+reserved-decision}`. The reserved-decision and cross-repo-blocked cases
+**can co-fire on one spike** (e.g. an empirical half correctly cross-repo-
+homed while the theoretical half is a reserved orphan — `spike-language-as-causal-substrate`):
+the orphan loss-signal must not be muted by the "blocked on Joseph"
+framing.*
+
+*(b) The **parallel-path-landed-but-payload-orphaned** shape. A spike's
+core can be in canon via an **independent/parallel** derivation (a sibling
+overnight commit; a same-day co-author) while the spike's **distinctive
+payload** — a strengthening it alone carries, or a triage recommendation
+canon *contradicted* — never landed. This is neither plain `integrated`
+nor plain `orphaned`; the reflex to file it `integrated` ("the core's in
+canon, done") is soften-as-routing. Handled as a **recognition rule under
+`orphaned`** (not a sixth state — taxonomy bloat is the §1 anti-pattern):
+*if the spike's core is in canon via a parallel path, the orphan is the
+spike's distinctive payload; route on the payload, not the core.* A triage
+spike whose recommendation canon contradicted is a present-truth signal →
+Joseph batch, never a filing op.*
