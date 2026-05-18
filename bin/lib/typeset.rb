@@ -327,7 +327,17 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     case role
     when 'Preface', 'Introduction'
       info = heading_title_after_role(el, opts)
-      "#{prefix}" + (info.empty? ? "\\addchap{#{role}}\n\n" : "\\addchap{#{info}}\n\n")
+      # `\addchap` (unlike `\part`/`\chapter`) supplies no automatic
+      # structural label, so the role word must be carried through
+      # explicitly or it vanishes from both the printed header and the
+      # ToC. With no info-suffix the role *is* the title ("Preface").
+      # With a suffix, the OUTLINE's `*Role*: Subtitle` convention is
+      # preserved as an emphasized label plus subtitle
+      # ("*Introduction*: Inescapable Foundations of Agency"),
+      # unnumbered. Without this, a suffixed role silently lost its
+      # label while a bare role kept it — an inconsistency.
+      body = info.empty? ? role : "\\emph{#{role}}: #{info}"
+      "#{prefix}\\addchap{#{body}}\n\n"
     when 'Appendices'
       out = +prefix
       out << mainmatter_marker

@@ -192,6 +192,33 @@
 \usepackage{xstring}
 
 %----------------------------------------------------------------------------
+% \AlphAlph — \Alph with overflow protection. Standard \Alph errors at
+% values > 26 (Latin alphabet only). \AlphAlph gives A–Z for 1–26, then
+% AA–AZ, BA–BZ, … for 27 onward. Used by appendix-chapter numbering, where
+% AAT's Details appendix alone has more than 26 chapter-level entries — so
+% the native scrbook \appendix \Alph numbering hits "Counter too large" at
+% the 27th appendix and corrupts every appendix and ToC entry past Z.
+%
+% Deliberately byte-identical to the kaobook target's definition
+% (mono/kaobook/preamble/setup.tex). The two preamble trees are separate by
+% design; if you change one, change both — they encode the same scheme so
+% the target-agnostic assembled markdown renders the same appendix labels
+% under either target.
+%
+% Formula: for n in [27, 26+26²], chunk = (n-1) ÷ 26, rem = ((n-1) mod 26)+1,
+% emitted as \@Alph{chunk}\@Alph{rem}. \numexpr handles the integer math.
+%----------------------------------------------------------------------------
+\makeatletter
+\newcommand{\AlphAlph}[1]{%
+  \ifnum#1<27%
+    \@Alph{#1}%
+  \else
+    \@Alph{\numexpr(#1-1)/26\relax}\@Alph{\numexpr#1-26*((#1-1)/26)\relax}%
+  \fi
+}
+\makeatother
+
+%----------------------------------------------------------------------------
 % Color palette. Modest by design — link/cross-ref navy, a quiet rule-gray,
 % a muted sand for the working-notes register. No status-tier colors:
 % scrbook target drops the status badges entirely.

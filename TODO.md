@@ -492,3 +492,61 @@ dependency** (0 orphans):
 
 - [ ] **`impl-*` chapter-end ordering (3)** — `impl-persistence-and-limits` (§I) ordered before its cross-section dep `result-per-dimension-persistence` (§III); `impl-strategy-structure` (§II) before `der-causal-insufficiency-detection` (§II); `impl-cooperative-adversarial` (§III) before `deriv-strategic-composition` (§III). The `impl-*` segments post-date the 2026-04-28 hygiene snapshot; OUTLINE linear order is editorial (slug is the stable identity), so the fix is OUTLINE re-sequencing or a `depends:` correction. Mechanical once decided.
 - [ ] **`impl-orient-cascade` → `scope-observation-ambiguity-modulation` missing dep — needs a forward-ref-vs-dangling judgment** — no such file in `src/`. `#scope-observation-ambiguity-modulation` is *referenced* by the observation-ambiguity bias-bound finding and by `audit-849201-FINAL-LOGOGENIC` F2 (a recognized-but-unlanded segment), which rhymes with CLAUDE.md's documented not-yet-landed forward-reference convention for `#disc-modularity-state-dynamics`. But `impl-orient-cascade` carries it as a hard `depends:` (not a prose forward-ref), which is what trips lint. Decide: land the stub, demote the `depends:` to a prose forward-ref, or accept it as a documented intentional forward-ref the linter should be taught to tolerate. (Provenance: `audits/ADJUDICATION-WORKING-704182/adjudication.md` "Surfaced" section.)
+
+## 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)
+
+Surfaced by Joseph (recurring, has been forgotten several times). scrbook's
+native `\appendix` numbers appendix chapters `\Alph` (A..Z) and hard-errors
+*"Counter too large"* at the 27th — vol-1 has ~45 appendix chapter-level
+segments across **two** `## *Appendices*` H2 groups (Part IV "Details",
+Part V "Operational Domains"). kaobook already solved this
+(`bin/lib/typeset.rb:344-348`: `\AlphAlph` + a kaobook-only
+`\asfAppendixToCremap` ToC down-shift); scrbook had simply never applied the
+project's chosen scheme.
+
+- [x] **Landed this session (partial fix):** `\AlphAlph` (A..Z, then AA, AB, …)
+  defined in `mono/scrbook/preamble/setup.tex` (byte-identical to kaobook's,
+  with a cross-sync comment); emitted as
+  `\renewcommand{\thechapter}{\AlphAlph{\value{chapter}}}` after `\appendix`
+  in `bin/lib/typeset_scrbook.rb` `when 'Appendices'` (guarded by
+  `@appendix_emitted`, so emitted **once**, on the first group). **Group 1
+  ("Details", Part IV) now renders correctly A…AM.** No regression to other
+  volumes (their `*Preface*` path is untouched).
+- [ ] **Open bug — second `*Appendices*` group collapses.** Part V
+  ("Operational Domains") entries all render the overflowed native `\Alph`
+  form. `.toc` evidence (decisive): `\numberline {B\GenericError{ }{LaTeX
+  Error: Counter too large}…}` with hyperref anchors `appendix.Alph40…45`
+  — i.e. the real chapter counter *does* advance (40–45) but `\thechapter`
+  is back to native `\Alph` there, **not** `\AlphAlph`. Root-cause
+  hypothesis: the `\renewcommand{\thechapter}` is emitted only on the first
+  `*Appendices*` group (`@appendix_emitted` guard); KOMA's appendix
+  machinery and/or the second `\part` re-establishes
+  `\thechapter=\Alph{chapter}`, clobbering the override for group 2. Fix
+  candidates: (i) re-emit the `\renewcommand` on **every** `*Appendices*`
+  group, not just the first; or (ii) hoist a permanent rebind into the
+  preamble (after `\appendix` semantics are known) so nothing can clobber
+  it. Verify KOMA `\appendix`+`\part` interaction before choosing.
+- [ ] **Also requested (Joseph 2026-05-17), parked with this:** appendices
+  in the ToC should read *as if they were segments* (section-register
+  indent/weight) while staying `\chapter` in the body. Mechanism already
+  exists in kaobook: `\asfAppendixToCremap`
+  (`mono/kaobook/preamble/environments.tex:318-328`) — a one-time
+  `\addcontentsline` chapter→section redirect fired at `\appendix` time.
+  Port the identical macro to scrbook (define in
+  `mono/scrbook/preamble/environments.tex`, emit right after the
+  `\thechapter` rebind in `typeset_scrbook.rb`). Non-intrusive, proven.
+- [ ] **Design decision Joseph flagged — pick before finishing.** Either
+  **(1)** continue the single established `\AlphAlph` counter across both
+  groups (group 2 → AN, AO, …); or **(2)** restructure appendices into
+  per-group numbering — e.g. `A.1`–`A.10`, `B.1`–`B.10` (group letter +
+  within-group number, counter resets per `*Appendices*` group). Option (2)
+  also addresses the legibility smell of ~45 flat appendices and would make
+  the second-group collapse moot (per-group reset sidesteps the >26
+  overflow entirely). Monograph-convention call, not mechanical — Joseph's
+  decision gates the final implementation.
+- Cross-refs for whoever picks this up: kaobook reference impl
+  `bin/lib/typeset.rb:344-348`; the `when 'Appendices'` branch in
+  `bin/lib/typeset_scrbook.rb` (~lines 266-280) carries an inline comment
+  explaining why `\asfAppendixToCremap` was *initially* excluded (separate
+  concern) — that comment needs updating once the ToC-as-segments port
+  lands, since Joseph has now requested it.

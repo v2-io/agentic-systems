@@ -252,12 +252,33 @@ class Kramdown::Converter::AsfScrbookLatex < Kramdown::Converter::AsfLatex
     case role
     when 'Preface', 'Introduction'
       info = heading_title_after_role(el, opts)
-      "#{prefix}" + (info.empty? ? "\\addchap{#{role}}\n\n" : "\\addchap{#{info}}\n\n")
+      # `\addchap` (unlike `\part`/`\chapter`) supplies no automatic
+      # structural label, so the role word must be carried through
+      # explicitly or it vanishes from both the printed header and the
+      # ToC. With no info-suffix the role *is* the title ("Preface").
+      # With a suffix, the OUTLINE's `*Role*: Subtitle` convention is
+      # preserved as an emphasized label plus subtitle
+      # ("*Introduction*: Inescapable Foundations of Agency"),
+      # unnumbered. Without this, a suffixed role silently lost its
+      # label while a bare role kept it — an inconsistency.
+      body = info.empty? ? role : "\\emph{#{role}}: #{info}"
+      "#{prefix}\\addchap{#{body}}\n\n"
     when 'Appendices'
       out = +prefix
       out << mainmatter_marker
       unless @appendix_emitted
         out << "\\appendix\n"
+        # Native scrbook \appendix numbers chapters \Alph (A..Z) and hard-
+        # errors "Counter too large" at the 27th — AAT's Details appendix
+        # alone exceeds 26 chapter-level entries, which corrupts every
+        # appendix and ToC entry past Z. Rebind to \AlphAlph (A..Z, then
+        # AA, AB, …; defined in preamble/setup.tex) — the same scheme the
+        # kaobook target already applies (typeset.rb). NOTE: kaobook also
+        # emits \asfAppendixToCremap here; that is a kaobook-only ToC
+        # *demotion* (appendix chapters → section-level entries in the
+        # Tufte ToC). scrbook keeps appendices as lettered chapter-level
+        # ToC entries, so the remap is deliberately NOT ported.
+        out << "\\renewcommand{\\thechapter}{\\AlphAlph{\\value{chapter}}}\n"
         @appendix_emitted = true
       end
       out << "\\part{Appendices: #{heading_title_after_role(el, opts)}}\n\n"

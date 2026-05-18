@@ -402,6 +402,76 @@ import in-review `~/src/neurips/` results — cross-repo-blocked per §3).
 **Joseph-reserved:** `spike-language-as-causal-substrate/` theoretical
 orphan, `spike-attention-governance` (S5/S6 — see Joseph batch).
 
+## Verify results (running — drives the durable `git mv` batch)
+
+If dropped here, future-me executes the batch from this list (the
+confirmed set → `git mv` to `spikes/.integrated/` + MANIFEST). One batch
+after V1+V2+V3 all in (anti-fragmentation §8), not per-return.
+
+- **V1 (SPIKE-VERIFY-624813) — DONE, both CONFIRMED, no refute:**
+  `spike-bridge-lemma-nonlinear-strengthening-2026-04-24` (§7.1; §7.2
+  independently re-confirmed absent → stays CL-1, do not merge),
+  `spike-fenchel-bregman-reframe-additive-coordinate-forcing-2026-04-24`
+  (both halves; the §7.1 meta-reframe landed verbatim incl. the
+  axiom-independence guard). Cycle-close: `INDEX:106` records landed
+  canon as an unlanded "Tier-3 proposal" — dangerous-direction error,
+  reconcile (not a `git mv` blocker).
+- **V2 (SPIKE-VERIFY-504612) — DONE, 6/6 CONFIRMED, no refute:**
+  `spike-composition-gaps` (Gap 1 sharper — Case-3 excised; residue
+  SP-17/SP-20), `spike-strategy-dynamics-gaps` (4 segments substantive),
+  `spike-stochastic-non-exit-strengthening-2026-05-16` (no-go is its own
+  `exact` appendix; **cascade closure verified first-hand** at
+  `result-sector-persistence-template.md:90`), `spike-active-inference-vs-aad`,
+  `spike-l1-evidence-axiom` (dual-obstruction → Instance 2, not new),
+  `spike-jacobian-b1-strengthening`. Corroboration for the Joseph batch:
+  `disc-identifiability-floor` has **exactly 4** instances first-hand →
+  the rho no-go is genuinely Instance **5** (CL-2 framing confirmed). 4/6
+  landed *stronger* than the spike, honestly labeled.
+- **V3 (SPIKE-VERIFY-738041) — DONE, 6/6 CONFIRMED, no refute:**
+  `spike-fep-suboptimal-approximation`, `spike-message-passing-credit-assignment`
+  (both halves: corrected result canon; refuted mean-field-VMP core
+  excluded-not-ghosted, grep-confirmed across all `src/`),
+  `spike-attention-causal-graphs` (core canon) **+ 2 batching caveats**:
+  (i) `attention-causal-graphs` `git mv` is **coupled** to the
+  Joseph-reserved `attention-governance` (same `446c7a1` cluster) — do
+  not fire alone; (ii) `class-coercion-wrapping/`, `track-a-intent-dag/`,
+  `track-b-nonlinear-sims/` are **directory spikes** → §6 lighter
+  gold-gate = Joseph dir-batch, not parent auto-file (recommendation:
+  `integrated-misfiled`, content verified, no reserved theory decision —
+  a clean/fast Joseph yes expected, but his per the gate he set).
+- Pre-gated (skip verify): `spike-operator-sector-unification` (S2 was
+  the independent confirm of pilot 023198).
+
+### Final verified partition → what executes this cycle
+
+**Parent auto-`git mv` → `spikes/.integrated/` (10 file-spikes, fully in
+canon, no orphan strand, no reserved coupling):**
+`operator-sector-unification`, `fenchel-bregman-reframe-…-2026-04-24`,
+`composition-gaps`, `strategy-dynamics-gaps`,
+`stochastic-non-exit-strengthening-2026-05-16`, `active-inference-vs-aad`,
+`l1-evidence-axiom`, `jacobian-b1-strengthening`,
+`fep-suboptimal-approximation`, `message-passing-credit-assignment`.
+
+**Held (verified integrated, but NOT parent-auto-moved — reason):**
+- `bridge-lemma-…-2026-04-24` → its file carries the §7.2 CL-1 orphan
+  strand; moving it would make `.integrated/` lie. Stays until CL-1 lands.
+- `attention-causal-graphs` → `git mv`-coupled to Joseph-reserved
+  `attention-governance` (V3 caveat i). Joseph batch.
+- `class-coercion-wrapping/`, `track-a-intent-dag/`,
+  `track-b-nonlinear-sims/` → §6 dir-spike Joseph batch (V3 caveat ii).
+
+**INDEX reconciliation — DEFERRED to cycle-close (independence
+constraint).** `spikes/INDEX.md` is dirty with the active authors'
+uncommitted edits; editing it now co-mingles (file-level `git add`).
+Record of rows to fix when independent: `:64` operator-sector
+"predecessor" pointer doubly-wrong (path + referent — absorbed
+predecessor is the `spike-operator-family-unification/` dir);
+`:106` fenchel-bregman meta-reframe recorded as unlanded "Tier-3
+proposal" — **dangerous-direction** (landed canon shown as open);
+2026-04-25 "living artifacts" header wrong (strategy-dynamics landed);
+`l1`/`jacobian` understated; `fep` `:58` stale "OPEN" (causal-IB
+settled); plus the 10 moved spikes' rows → `.integrated/`.
+
 ## Log
 
 - **2026-05-17 (a)** — Cycle set up. Governing docs authored
@@ -471,6 +541,33 @@ orphan, `spike-attention-governance` (S5/S6 — see Joseph batch).
   is reserved (CL-2 / Joseph batch); the *mark* is done. This is the
   cardinal-sin case the cycle exists to catch — caught and discharged in
   the honest direction.
+- **2026-05-17 (g)** — Joseph: "Proceed; batch waits for you." Independent-
+  verify pass launched (3 agents, `SPIKE-VERIFY-<id>/` — new prefix class
+  alongside SPIKE-WORKING / ADJUDICATION-WORKING / AUDIT-WORKING; six-digit
+  ID is identity, prefix is class, never blanket-rewrite). Confirmer ≠
+  adjudicator by construction (fresh instances). Slices: V1 ⊃ S1 (417303);
+  V2 ⊃ S3+S4 (417739, 111710); V3 ⊃ S5+S6-misfiled (029307, 418736).
+  `operator-sector-unification` skips verify — S2 *was* the independent
+  confirm of pilot 023198, already gated. `temporal-nesting-rg/` excluded
+  (held for Joseph batch). On return: one durable batch — `git mv` verified
+  set + single MANIFEST pass + the tractable `update-operator-sector`
+  landing + INDEX reconciliation (anti-fragmentation §8: not
+  per-verifier-return). Joseph-reserved batch untouched.
+- **2026-05-17 (h)** — Verify pass complete (V1 2/2, V2 6/6, V3 6/6;
+  14/14 confirmed + S2-pregated; **zero refutes**). Durable batch
+  executed: 10 verified file-spikes `git mv` → `spikes/.integrated/` +
+  `MANIFEST-2026-05-17.md`. **Provenance:** the 10 renames were swept
+  into the concurrent pipeline commit **`0834649`** (co-mingle
+  Joseph-pre-authorized; 100%-similarity, reversibility intact, nothing
+  lost; history deliberately *not* rewritten — see MANIFEST provenance
+  note). MANIFEST + this tracker are the durable spike-routing record;
+  `0834649` is only where the rename bytes landed. Clean artifacts
+  (MANIFEST, tracker, 3 `SPIKE-VERIFY-*`) committed separately. **Held
+  (not moved):** `bridge-lemma` (§7.2→CL-1), `attention-causal-graphs`
+  (Joseph-coupled), 3 dir-spikes (§6 Joseph dir-batch). INDEX
+  reconciliation deferred (independence; rows recorded above).
+  Remaining this cycle: the tractable `update-operator-sector` landing
+  (next, careful — no-go-bearing, parent-owned §266(iii)/§8.2 placement).
 
 ## Next actions (gated; the cycle is not the taxonomy)
 
