@@ -53,6 +53,11 @@
 %      This is Joseph's epistemic call, not a result verified in this
 %      file; it is why this class is styled like the others rather
 %      than reserved/dashed, and why no self-actuation gate is drawn.
+%    * All rails share one accent (blue) and all labels are black, by
+%      Joseph's call. Arity once used a lighter accent to mark it as
+%      the full-span/always-on rail; that distinction was dropped
+%      deliberately --- the uniformity is intentional, not an
+%      oversight to "fix" by re-distinguishing Arity.
 %    * Vol-1 scope: Logogenic / Logozoetic agents (03-llm-core /
 %      04-eli-core) and the model x objective 2x2 inset are out of
 %      scope here by design.
@@ -75,14 +80,14 @@
 \pgfsetlayers{background,frames,main}
 
 % ---- palette (sampled from AAT-cover.svg) ----------------------------
-\definecolor{spineDeep}{HTML}{235A7D} % frames: fills (tinted) + borders
-\definecolor{railPeri} {HTML}{68749F} % rail accent (default)
-\definecolor{railPeri2}{HTML}{8992AD} % rail accent (Arity / full span)
+\definecolor{spineDeep}{HTML}{235A7D} % frame fills/borders, names, deltas
+\definecolor{railPeri} {HTML}{68749F} % rail accent: every rule + dot
 \definecolor{midgray}  {HTML}{8E8E8E} % rail choices, zone divider
 \definecolor{ground}   {HTML}{FDFDF6} % cream background
-\definecolor{ink}      {HTML}{1A1A1A} % capability text
+\definecolor{ink}      {HTML}{1A1A1A} % capability text + every label
 % Sampled but currently unused --- kept available for extension
-% (e.g. more agent classes wanting distinct spine tints):
+% (railPeri2: a second rail accent; spineA/B/C: more spine tints):
+\definecolor{railPeri2}{HTML}{8992AD}
 \definecolor{spineA}   {HTML}{79919E}
 \definecolor{spineB}   {HTML}{587C91}
 \definecolor{spineC}   {HTML}{426176}
@@ -128,7 +133,7 @@
 \tikzset{
   delta/.style  ={font=\scriptsize\itshape, text=spineDeep,
                   anchor=north west},
-  raillab/.style={font=\scriptsize\bfseries, text=railPeri,
+  raillab/.style={font=\scriptsize\bfseries, text=ink,
                   anchor=east},
   railsub/.style={font=\tiny, text=midgray, anchor=south west,
                   inner sep=1pt},
@@ -160,14 +165,15 @@
 }
 
 % \rail{row}{switch-on class level}{accent color}{label}{choices}
-%   Draws the rule (from that class's left edge to \railR), the
-%   switch-on dot, the right-aligned label, and the choices above.
+%   Draws the rule (from that class's left edge to \railR) and the
+%   switch-on dot in {accent color}, plus the right-aligned label
+%   (always ink/black, via the raillab style) and the choices above.
 \newcommand{\rail}[5]{%
   \pgfmathsetmacro{\ry}{\railTop-#1*\railPitch}%
   \pgfmathsetmacro{\rx}{\zL+#2*\zIL}%
   \draw[#3, line width=1.1pt] (\rx,\ry) -- (\railR,\ry);%
   \fill[#3] (\rx,\ry) circle (2.4pt);%
-  \node[raillab, text=#3] at (\rlx,\ry) {#4};%
+  \node[raillab] at (\rlx,\ry) {#4};%
   \node[railsub] at ($(\rx,\ry)+(0.16,\rsub)$) {#5};%
 }
 
@@ -186,7 +192,7 @@
 % Zone title for the spine section (the upper-section analogue of the
 % rail labels), centered in the left gutter, vertically centered on
 % the outer frame.
-\node[font=\scriptsize\bfseries, text=spineDeep, anchor=center]
+\node[font=\scriptsize\bfseries, text=ink, anchor=center]
   at (-1.15,{(\zT+\zB)/2}) {Scope};
 
 % ---- dotted divider between the spine and the rails -----------------
@@ -195,7 +201,7 @@
 
 % ---- RAIL DATA : one \rail per orthogonal property ------------------
 %  {row}{switch-on class level}{accent}{label}{choices}
-\rail{0}{0}{railPeri2}{Arity}{Primitive $\;\vert\;$ Composite}
+\rail{0}{0}{railPeri}{Arity}{Primitive $\;\vert\;$ Composite}
 \rail{1}{1}{railPeri}{Knowledge Type}{Static $\;\vert\;$ Learning}
 \rail{2}{2}{railPeri}{Continuity stance}{Indifferent $\;\vert\;$
   Task-terminal $\;\vert\;$ \shortstack{Instrumentally-\\[-2.4pt]continuous}
