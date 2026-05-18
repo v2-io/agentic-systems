@@ -187,6 +187,42 @@ Listed here as a pointer, not as actions — these are pre-execution decisions t
 
 ---
 
+## E. Deferred — agent-spectrum quadrant-name parallelism (2026-05-17)
+
+**Interim fix executed 2026-05-17 (done, not queued):** `blind pursuer →
+blind seeker` swept across both occurrences-bearing segments
+(`#def-agent-spectrum` 5×, `#form-agent-model` 1×). This **overrides** the
+R2 naming-cycle decision #132 (`blind pursuer` _(keep)_, net **+6**,
+canonicalize ×3 — `msc/naming/master-list-full.md` §132) on **new arguments
+the R2 cohort did not engage**, raised by Joseph 2026-05-17 and authorized
+for immediate landing:
+
+1. *"Pursuer" lexically narrows the objective axis.* It connotes chasing a
+   single target (predator→prey) — a monomaniacal fixation — which reads as
+   the **low/narrow** end of objective-richness, exactly backwards for the
+   cell it marks (objective-structured), and sharpest in the figure where
+   the axis is drawn as a richness continuum. "Seek" admits structured /
+   plural goals and is not predatory; it preserves the +6 rationale's
+   virtue (the `seeker`/`tracker` parallel -er role-pair; `blind`/`adaptive`
+   parallel model-status adjectives).
+2. *The four quadrant names are not a grammatically parallel set:* `Reactive
+   system` / `Blind pursuer` / `Adaptive tracker` / `Actuated agent` mixes
+   two category-nouns (system, agent) with two role-nouns
+   (pursuer/seeker, tracker).
+
+**Deferred (this is the TERMINOLOGY-TODO entry per Joseph's instruction):**
+the *full* `#def-agent-spectrum` tetrad parallelism redesign — choosing the
+four quadrant names as one deliberately-parallel set — is **not** resolved
+by the interim lexical swap and is deferred. Joseph has a separate agent
+brainstorming option-sets; this should land as a deliberate tetrad decision
+(through the `bin/term` machinery, with the two new arguments above on the
+record), not another one-cell drive-by. Until then `blind seeker` is the
+interim canonical term and the other three names stand. Decision-record
+note: the #132 override is recorded here (per the "for now" scoping); fold
+into `naming-rename-plan.md` when the full tetrad decision lands.
+
+---
+
 ## How this file relates to other naming-cycle files
 
 - [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) — **Decisions and rationale.** The decision record: what was decided, when, why, with full operational-landing notes. This file (TERMINOLOGY-TODO.md) extracts the *executable summary*; rename-plan retains the *full reasoning*. Each row above links back.
