@@ -42,17 +42,21 @@
 \def\wxTR{2.7}  \def\wyTR{2.6}
 
 % Wiper pivot (below the visible windshield, in the dashboard cowl;
-% slightly right of center as in most LHD vehicles)
-\def\px{0.6}  \def\py{-0.45}
+% centered for symmetry)
+\def\px{0}  \def\py{-0.45}
 \def\armL{3.15}     % wiper arm length
 
 % Sweep angles (fan opens upward; corners remain unswept)
 \def\sweepFrom{38}  % rest position (right side)
 \def\sweepTo{142}   % extreme position (left side)
-\def\armAt{82}      % current arm angle (just past vertical, mid-sweep)
+\def\armAt{45}      % current arm angle (just shy of far right)
 
 % Windshield path (for re-use)
-\def\windshield{(\wxBL,\wyBL) -- (\wxTL,\wyTL) -- (\wxTR,\wyTR) -- (\wxBR,\wyBR) -- cycle}
+\def\windshield{[rounded corners=10pt] (\wxBL,\wyBL) 
+    .. controls (-3.3, 1.3) .. (\wxTL,\wyTL) 
+    .. controls (0, 2.75) .. (\wxTR,\wyTR) 
+    .. controls (3.3, 1.3) .. (\wxBR,\wyBR) 
+    -- cycle}
 
 % Wiper-swept sector path (for re-use)
 \def\sweptsector{(\px,\py) -- ($(\px,\py) + (\sweepFrom:\armL)$)
@@ -88,16 +92,16 @@
   \begin{scope}
     \clip \sweptsector;
 
-    % Lane edges (perspective lines toward horizon)
-    \draw[road] (-1.2, 0.05) -- (-0.32, 2.25);
-    \draw[road] ( 1.2, 0.05) -- ( 0.32, 2.25);
+    % Lane edges (perspective lines curving right toward horizon)
+    \draw[road, line width=1.2pt] (-1.8, 0.05) .. controls (-0.8, 1.3) and (-0.2, 2.0) .. (0.2, 2.32);
+    \draw[road, line width=1.2pt] ( 1.8, 0.05) .. controls ( 1.0, 1.3) and ( 0.5, 2.0) .. (0.6, 2.32);
     % Dashed center lane
-    \draw[lane] (-0.55, 0.55) -- (-0.30, 1.85);
-    \draw[lane] ( 0.55, 0.55) -- ( 0.30, 1.85);
-    % Horizon
-    \draw[black!55, thick] (-0.32, 2.25) -- (0.32, 2.25);
-    % A faint distant vehicle suggestion
-    \draw[thick, black!55] (-0.18, 2.10) -- (0.18, 2.10) -- (0.16, 2.20) -- (-0.16, 2.20) -- cycle;
+    \draw[lane, line width=1.0pt, dash pattern=on 8pt off 6pt] 
+        ( 0.0, 0.05) .. controls ( 0.1, 1.3) and ( 0.15, 2.0) .. (0.4, 2.32);
+    % Horizon (curved hill to avoid flat horizontal line competing with affordances)
+    \draw[black!55, thick] (-4, 1.9) .. controls (-2, 2.4) and (2, 2.5) .. (4, 1.8);
+    % A faint distant vehicle suggestion (shifted right for curve, up for hill)
+    \draw[thick, black!55] (0.3, 2.22) -- (0.45, 2.22) -- (0.43, 2.29) -- (0.32, 2.29) -- cycle;
   \end{scope}
 
   % Trace the leading-edge arc lightly so the eye perceives the sweep boundary
@@ -110,9 +114,7 @@
 % ====================================================
 \draw[frame] \windshield;
 
-% Cabin context: roof line above, dashboard below (with cowl where pivot lives)
-\draw[frame, thick] (-3.7, 2.5) -- (-2.7, 2.75) -- (2.7, 2.75) -- (3.7, 2.5);
-\draw[frame, thick] (-3.4, 0) -- (-3.6, -0.65) -- (3.6, -0.65) -- (3.4, 0);
+% Cabin context: removed roof line and lower dashboard cowl frame per request
 % Pivot pin visible on the dashboard
 \fill[black!75] (\px,\py) circle (2.4pt);
 
@@ -122,9 +124,9 @@
 \begin{scope}
   \clip \windshield;
   \draw[wiper] (\px,\py) -- ($(\px,\py) + (\armAt:\armL)$);
-  % Blade tip emphasis (slight thickening at the end)
-  \draw[wiper, line width=4pt, line cap=round]
-     ($(\px,\py) + ({\armAt}:{\armL-0.55})$) -- ($(\px,\py) + (\armAt:\armL)$);
+  % Arm base emphasis (thickening at the bottom)
+  \draw[wiper, line width=4.5pt, line cap=round]
+     (\px,\py) -- ($(\px,\py) + ({\armAt}:{1.4})$);
 \end{scope}
 % Pivot pin (outside the clip so it's clearly anchored to the dashboard)
 \fill[black!75] (\px,\py) circle (2.0pt);
@@ -132,7 +134,7 @@
 % ====================================================
 % Wiper-speed dial (inset on dashboard)
 % ====================================================
-\begin{scope}[shift={(0, -0.32)}, scale=0.30]
+\begin{scope}[shift={(2.8, -0.32)}, scale=0.30]
   \draw[thick, fill=black!4] (0,0) circle (0.95);
   \foreach \ang/\lbl in {200/off, 150/int, 100/lo, 50/hi, 0/max} {
     \draw[thick] (\ang:0.78) -- (\ang:0.95);
@@ -166,8 +168,8 @@
    {\textit{cleared arc}: \\ road visible through};
 
 % wiper dial
-\draw[callout] (1.7, -0.32) -- (0.55, -0.32);
-\node[callout-lbl, anchor=west] at (1.75, -0.32)
+\draw[callout] (1.3, -0.32) -- (2.4, -0.32);
+\node[callout-lbl, anchor=east] at (1.25, -0.32)
    {\textit{wiper dial}: adaptive tempo $\mathcal{T}$};
 
 % ====================================================
