@@ -1,5 +1,22 @@
 # 99 — Verdict: continuity-persistence
 
+> [!warning]
+> **SUPERSEDED 2026-05-19 — history layer.** This verdict and `00`–`04`,
+> `98` are the **single-branch additive-approximation exploration**: they
+> silently committed (C1)=additive/Lindley, (C2)=$S_{\text{id}}$-state,
+> (C4)=stationary-ergodic, and were mis-framed as a Volume IV identity
+> result. The authoritative present truth is **`FRAMING.md`** (the peer
+> frame, practica-authored) + **`RESULT.md`** (the contraction–reinjection
+> SDPI **no-go**: the sector template provably does *not* transfer; the
+> isolated destroy-reconstruct walk decays geometrically; persistence is
+> wholly imported through a non-vanishing reinjection channel) +
+> **`INTEGRATION.md`**. Per *integration-is-replacement*, these files are
+> **retained as the reasoning trail only** (the Lindley/Loynes content is
+> the small-contraction *linearization* of the affine recursion; the
+> QSD/absorbing-barrier structure survives as `RESULT.md` §4.2's open
+> second-no-go). Read `RESULT.md` for what is true; read on here only for
+> the history of how the framing was corrected.
+
 **Status**: derivation complete for this cycle; **independently reviewed and truthified** (see `98-review-and-convergence.md` for the review verdict, the accumulation-type meta-spike convergence, and exactly what changed). Outcome: **no-go-with-illumination *and* breakthrough findings *and* a sharply-isolated residual hard problem** — all three completion states the brief allowed, regime-separated. Not promoted; math owed to segments per *math-lives-in-segments*; landing recommended below, **gated on Joseph, not executed here**. Tiers below are the *post-review* tiers; two draft over-tierings were corrected (Theorem 2.3 boundary; the bounded denominator).
 
 ---
