@@ -23,13 +23,13 @@ The 100% context turnover at session boundaries ( #obs-context-turnover) means t
 
 Let $M_k^-$ denote the epistemic state at the end of session $k$, and $M_{k+1}^+$ denote the reconstructed state at the start of session $k+1$. The **externalization-reconstruction cycle** is:
 
-$$M_k^- \xrightarrow{\text{externalize}} \mathcal{E}_{\text{ext}} \xrightarrow{\text{reconstruct}} M_{k+1}^+$$
+$$M_k^- \xrightarrow{\text{externalize}} \mathcal E_{\text{ext}} \xrightarrow{\text{reconstruct}} M_{k+1}^+$$
 
 The **reconstruction error**:
 
 $$\epsilon_{\text{recon}} = d(M_k^-, M_{k+1}^+)$$
 
-where $d$ is a distance on $\mathcal{M}$ (e.g., $\lVert M_k^- - M_{k+1}^+\rVert$ in a suitable norm, or the KL divergence if $M_t$ is a probability distribution).
+where $d$ is a distance on $\mathcal M$ (e.g., $\lVert M_k^- - M_{k+1}^+\rVert$ in a suitable norm, or the KL divergence if $M_t$ is a probability distribution).
 
 The inter-session persistence condition:
 
@@ -45,7 +45,7 @@ where $\epsilon_{\text{max}}$ is the maximum tolerable reconstruction error — 
 
 *[Discussion (externalization-strategies)]*
 
-The externalization function $\text{ext}: \mathcal{M} \to \mathcal{E}_{\text{ext}}$ maps the end-of-session state to a persistent store. Several mechanisms exist, with different information-preservation properties:
+The externalization function $\text{ext}: \mathcal M \to \mathcal E_{\text{ext}}$ maps the end-of-session state to a persistent store. Several mechanisms exist, with different information-preservation properties:
 
 | Mechanism | What it preserves | Information loss | AAT interpretation |
 |---|---|---|---|
@@ -59,9 +59,9 @@ The externalization function $\text{ext}: \mathcal{M} \to \mathcal{E}_{\text{ext
 
 *[Discussion (reconstruction-information)]*
 
-The reconstruction function $\text{recon}: (\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}}) \to M_{k+1}^+$ combines three information sources:
+The reconstruction function $\text{recon}: (\mathcal E_{\text{ext}}, p_{k+1}, M_0^{\text{weights}}) \to M_{k+1}^+$ combines three information sources:
 
-1. **External memory** $\mathcal{E}_{\text{ext}}$: what was explicitly preserved
+1. **External memory** $\mathcal E_{\text{ext}}$: what was explicitly preserved
 2. **New prompt** $p_{k+1}$: what the user or system provides at session start
 3. **Pretrained prior** $M_0^{\text{weights}}$: what the LLM already knows from training
 
@@ -71,27 +71,19 @@ $$S(M_{k+1}^+) \leq \min\left(1,\; S_{\text{ext}} + S_{\text{prompt}} + S_{\text
 
 where $S_{\text{ext}}$ is the sufficiency recoverable from external memory alone, $S_{\text{prompt}}$ from the prompt, $S_{\text{prior}}$ from the pretrained weights, and $S_{\text{overlap}}$ corrects for redundancy between sources. This is an informal bound — the interaction between information sources is not additive in general — but it captures the structure: reconstruction quality depends on complementary information from multiple sources.
 
-### The accumulation problem
+### Accumulation across sessions
 
-*[Discussion (accumulation-across-sessions)]*
+The per-boundary adequacy condition, iterated across the sequence of session boundaries, has a definite dynamical form. The reconstruction map is a lossy stochastic channel, so the relevant epistemic content contracts *multiplicatively* at each boundary while fresh information is reinjected *additively* — an affine information recursion $I_{k+1} \leq \eta_k I_k + a_k$ on the relevant mutual information $I_k = I(M_k^+;Y)$ ( #der-turnover-information-recursion). The accumulation is not an additive error sum with a break-even threshold; the loss is multiplicative.
 
-Over many sessions, reconstruction error can accumulate:
+The consequence is sharp. With no reinjection the walk decays geometrically to zero — there is no inter-session analog of the rate-condition $\alpha \gt \rho/R$, and #result-sector-persistence-template does not transfer to the destroy-and-reconstruct regime. Persistence across sessions holds *iff* the reinjection channel is non-vanishing ($\liminf_k a_k \gt 0$), at level $\bar a/(1-\bar\eta)$ — reinjection over the contraction gap. Persistence is therefore not a property the composite possesses intrinsically: it is wholly imported through a non-vanishing reinjection channel, which structurally is the externalization layer this segment describes. An agent whose reinjection eventually vanishes experiences geometric model degradation regardless of how faithful any single reconstruction is. The full derivation, the argued modeling commitments, and the honest scope (the no-go is about *uniformly* lossy turnover) are in #der-turnover-information-recursion.
 
-$$\epsilon_{\text{recon}}^{(n)} = \sum_{k=1}^{n} \Delta\epsilon_k$$
-
-where $\Delta\epsilon_k$ is the net information loss at session boundary $k$. If the agent systematically loses information at each boundary ($\Delta\epsilon_k \gt 0$ on average), the effective $M_t$ degrades over time — a long-timescale drift in model quality that is invisible within any single session.
-
-This is the inter-session analog of the persistence failure described in #result-persistence-condition: not $\alpha \lt \rho / R$ (correction rate inadequate) but cumulative information loss exceeding the rate at which new sessions provide useful information. The agent persists across sessions when:
-
-$$\mathbb{E}[\Delta\epsilon_k] \leq \mathbb{E}[\Delta I_k]$$
-
-where $\Delta I_k$ is the new information acquired in session $k$ that compensates for the reconstruction loss. An agent that learns less each session than it forgets at each boundary will experience long-timescale model degradation.
+This is the accumulation question for *predictive sufficiency* — the survival of the working reality model toward future-observation adequacy ( #def-model-sufficiency), the target this segment is about. The parallel question for *identity continuity* — whether an entity's identity-relevant state survives turnover toward the identity-relevance vector of #def-identity-sufficiency — is a structurally distinct operator on a distinct target: a reflected, relationally-compensated walk on the identity gap with a load-bearing driftless ($\mu=0$) boundary, treated in #der-identity-continuity-threshold. The two operators sit at opposite ends of the same singular contraction parameter and neither supersedes the other; the predictive regime here is not a normalization of the identity regime, nor the converse.
 
 ## Epistemic Status
 
-*Discussion-grade.* The framing — inter-session persistence as reconstruction adequacy — is well-motivated and structurally sound, but the formal content is limited: the bounds are informal, the sufficiency decomposition is not additive in general, and the accumulation analysis is a qualitative sketch. The specific mechanisms (summaries, retrieval, file-backed state) are engineering descriptions, not theory. The connection to Section I's persistence condition is by analogy, not by derivation.
+*Discussion-grade, except the accumulation dynamics.* The framing — inter-session persistence as reconstruction adequacy — is well-motivated and structurally sound; the per-source sufficiency bounds and the externalization-mechanism table are engineering descriptions, not theory, and the single-boundary reconstruction-adequacy condition is by analogy to Section I, not by derivation. The *accumulation across boundaries*, by contrast, is resolved exactly: it is the affine information recursion of #der-turnover-information-recursion, which derives the geometric no-go, the non-transfer of #result-sector-persistence-template, and the conditional-positive characterization (persistence iff non-vanishing reinjection). That dynamical core is *exact* within an argued structural commitment and is no longer discussion-grade.
 
-Max attainable: conditional. With a formal model of the externalization-reconstruction cycle (e.g., specifying the information geometry of the compression), the reconstruction adequacy condition could be made exact. The accumulation analysis could be formalized as a random walk on sufficiency, with conditions for convergence. Currently discussion-grade because the formalization is absent.
+Max attainable: the accumulation dynamics are at ceiling (exact, in #der-turnover-information-recursion). The remaining discussion-grade content — the multi-source sufficiency decomposition and the per-mechanism information-preservation descriptions — could be made conditional with a formal model of each externalization channel's information geometry; it is discussion-grade because that per-channel formalization is absent, not because the cross-boundary dynamics are.
 
 ## Discussion
 
@@ -115,6 +107,6 @@ An agent can satisfy one without the other: excellent intra-session dynamics wit
 
 ## Working Notes
 
-- The accumulation analysis ($\mathbb{E}[\Delta\epsilon_k] \leq \mathbb{E}[\Delta I_k]$) is the most theoretically interesting claim here but the least developed. Formalizing it requires: (a) a model of how reconstruction error accumulates (is it additive? multiplicative? does it have absorbing states?), (b) a model of how new information in each session compensates for loss, and (c) conditions under which the sufficiency process is stationary, ergodic, or divergent.
+- The predictive-sufficiency accumulation across boundaries is resolved in #der-turnover-information-recursion: the operator is multiplicative (SDPI contraction), the break-even additive form is the wrong shape for it, and persistence is imported iff reinjection is non-vanishing. The identity-continuity accumulation is the distinct reflected operator of #der-identity-continuity-threshold — not this regime under a normalization. *History (not present truth): this section previously carried a discussion-grade additive accumulation $\epsilon^{(n)}=\sum_k\Delta\epsilon_k$ with a break-even inequality $\mathbb{E}[\Delta\epsilon_k]\leq\mathbb{E}[\Delta I_k]$; that presumed the wrong (additive) operator for the predictive-sufficiency regime and was deleted and replaced when the contraction–reinjection no-go landed, 2026-05-19 — see CHANGELOG.* The genuinely-open follow-ons are named in that segment's Working Notes: the SDPI coefficient $\eta_k$ for the concrete $f_{\text{init}}$ kernel is uncomputed, and the adversarially-correlated-reinjection second no-go (re-grounding vanishing exactly as $I_k$ falls) is the named next spike (`spikes/continuity-persistence/` §4.2).
 - The treatment omits fine-tuning as a persistence mechanism. If the agent's weights are updated between sessions, information can persist in the weights rather than (or in addition to) external memory. This creates a third information source for reconstruction — but it is slow (requires training), coarse (cannot preserve specific contextual details), and introduces its own degradation risks (catastrophic forgetting). Worth a separate treatment if logogenic agent theory develops further.
 - The retrieval-augmented memory mechanism deserves deeper analysis: the query-dependence of reconstruction means that $S(M_{k+1}^+)$ is not a single number but a function of the task. An agent starting a session on "fix the auth bug" retrieves different context than one starting on "add logging" — even if the external memory is identical. This is a form of goal-conditioned reconstruction, connecting back to the $\kappa_{\text{processing}}$ characterization.

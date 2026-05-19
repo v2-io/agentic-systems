@@ -119,7 +119,8 @@ $\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
 | L2  | Scope       | [#scope-scaffolded-logogenic](src/scope-scaffolded-logogenic.md)                                             | Scaffolded sub-scope: multi-step loops, external state, tool use; cascade ordering recovered at loop level | missing |
 | L2  | Derived     | [#der-logogenic-as-wrapping](src/der-logogenic-as-wrapping.md)                                              | Class-coercion-via-wrapping specialized to logogenic substrate; W₁ (strict) and W₂ (partial) wrapping regimes; PROPRIUM-as-W₂ with auxilia hierarchy as W₁ realization | draft |
 | L2  | Result      | [#result-coupled-diagnostic-framework](src/result-coupled-diagnostic-framework.md)                           | Post-hoc diagnostic decomposition; scaffolding recovers Section II diagnostics with bias bounded by $\kappa \cdot \mathcal{A}$ | draft |
-| L2  | Discussion  | [#disc-m-preservation](src/disc-m-preservation.md)                                                           | External memory as persistent $M_t$ across session boundaries                                         | draft       |
+| L2  | Derived     | [#der-turnover-information-recursion](src/der-turnover-information-recursion.md)                              | Across-turnover *predictive*-sufficiency dynamics are an affine information recursion (multiplicative SDPI contraction + additive reinjection): isolated walk decays geometrically, #result-sector-persistence-template provably does not transfer, persistence is wholly imported through a non-vanishing reinjection channel (the scaffold) — not intrinsic, not a rate condition. Identity continuity is a distinct operator (#der-identity-continuity-threshold, Vol. IV) | draft |
+| L2  | Discussion  | [#disc-m-preservation](src/disc-m-preservation.md)                                                           | External memory as persistent $M_t$ across session boundaries; *predictive*-sufficiency accumulation resolved by #der-turnover-information-recursion; identity-continuity accumulation is the distinct operator #der-identity-continuity-threshold | draft       |
 | L2  | Formulation | [#form-structured-rich-context](src/form-structured-rich-context.md)                                         | SRC / GCM as the IB-optimal solution to context preservation across session boundaries                | exploratory |
 | L2  | Derived     | [#der-active-salience-management](src/der-active-salience-management.md)                                     | Singular Perturbation Theory for token generation — necessity of high-$\nu$ triage models vs low-$\nu$ structural models | exploratory |
 | L2  | Observation | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md)                                                     | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in scaffolded AI agents (validated by epistemic-hedging linear-structure result; see Source Material) | exploratory |
@@ -133,8 +134,21 @@ AAT's class-coercion-via-wrapping construction to this substrate, with
 W₁/W₂ wrapping regimes and the PROPRIUM-as-W₂ instance; coupled-diagnostic-
 framework is the load-bearing result that scaffolding recovers Section II's
 diagnostic cascade at the loop level with the bias bounded by $\kappa
-\cdot \mathcal A$; the remaining segments fill in operational machinery —
-external memory as persistent $M_t$ (disc-m-preservation), structured rich
+\cdot \mathcal A$; turnover-information-recursion is the second load-bearing
+result — the across-boundary *predictive*-sufficiency dynamics are an
+affine information recursion,
+the isolated walk decays geometrically, the sector-persistence template
+provably does not transfer, and persistence is wholly imported through a
+non-vanishing reinjection channel (the scaffold itself), which is the
+structural argument that scaffolding is provably necessary rather than
+optional (the *identity*-continuity counterpart is a structurally
+distinct reflected operator, Volume IV
+`#der-identity-continuity-threshold`); the remaining segments fill in
+operational machinery —
+external memory as persistent $M_t$ (disc-m-preservation, whose
+across-boundary predictive-sufficiency accumulation is resolved by
+turnover-information-recursion),
+structured rich
 context as IB-optimal preservation (form-structured-rich-context), active
 salience management for token-generation triage (der-active-salience-
 management), and evaluation metrics for measuring AAT quantities in
