@@ -19,10 +19,10 @@ This tree is the **research-spike corpus**: reasoning trails. A spike attacks on
 **The cardinal rule for any canon integration** — the one thing we really care about here:
 
 1. The math **lands in the segment**, self-contained and in present-tense segment-voice.
-2. **No canon segment ever *needs* the spike** to be understood (a non-needed breadcrumb in CHANGELOG / Working Notes is fine — the test is *need*, not *mention*).
+2. **Canon proper carries zero references to any spike** (or audit, or `msc/`, or tracker) — *not* "none needed," *none*. Canon proper = a segment's Formal Expression, Epistemic Status, Discussion, `## Findings`, frontmatter (`depends:`/`status:`), and the OUTLINE; it cites only canon. **Working Notes are, by definition, not canon** — a free working attachment to the segment; that (and CHANGELOG / trackers / the history layer) is the *only* place a spike breadcrumb belongs, and it belongs there freely. (The separate "*need*, not *mention*" test is for deciding spike-*archivability* — can the spike be moved without canon breaking — not for the canon boundary, which is this clean line.)
 3. **A no-go is valid math** and lands as present-tense canon, not as nothing.
 
-In short: *we don't throw valid math away (a no-go included), and we don't make canon depend on spikes.*
+In short: *we don't throw valid math away (a no-go included); canon cites only canon; spike breadcrumbs live in Working Notes, which by definition aren't canon.*
 
 **Optional, never required — the recovery team.** There is an agent (with help) that works the backlog of spikes sitting here but not yet integrated. You can make their job easier if you like: add your spike to [`INDEX.md`](INDEX.md), keep its row updated there (and in the [`PROPOSED*`](PROPOSED.md) files if it's listed there) while in progress, and list it in `.integrated/MANIFEST-<date>.md` once it's cleaned up. **None of this is required to spike** — it's a courtesy to the cleanup crew, not a tax on you. How that team thinks (no-go integration, the ghost discipline, strengthen-before-soften, the disposition states) lives in [`../doc/spike-routing.md`](../doc/spike-routing.md) + [`../doc/audit-routing-instructions.md`](../doc/audit-routing-instructions.md) — read it only for a heavy self-integration or out of curiosity.
 

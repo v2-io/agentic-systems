@@ -172,7 +172,20 @@ looks-done-but-isn't trap:
    OUTLINE / `depends:` sends a reader to the spike to understand canon.
    A *non-needed* breadcrumb in CHANGELOG / a tracker is fine — the test
    is *need*, not *mention* (Joseph 2026-05-18: "references in changelog
-   are fine — as long as nothing **needs** to reference it"). After any
+   are fine — as long as nothing **needs** to reference it"). **The
+   grounding (Joseph 2026-05-19, clears up the conflation): the *need*
+   test is the spike-*archivability* test (can the spike be moved without
+   canon breaking) — it is *not* the canon boundary. The canon boundary
+   is cleaner and stronger: canon proper — a segment's Formal Expression,
+   Epistemic Status, Discussion, `## Findings`, frontmatter, and OUTLINE —
+   carries *zero* references to any spike / audit / `msc/` / tracker, not
+   "none needed," none; it cites only canon. Working Notes are *by
+   definition not canon* — a free attachment to the segment; that (and
+   CHANGELOG / the history layer) is *why* a breadcrumb there is fine —
+   not because it is "non-needed" but because it is not canon in the first
+   place. So the grep below targets canon proper; a WN/CHANGELOG hit is a
+   non-issue by construction, a Formal-Expression/Discussion/Findings hit
+   is a category error regardless of whether it is "needed."** After any
    archive batch: `grep -rl 'spike-<slug>'` across `*/src/` + OUTLINE;
    **reduce-not-repoint** every hit to the live canonical home (the
    CHANGELOG cycle entry, or the segment where the math now lives);
