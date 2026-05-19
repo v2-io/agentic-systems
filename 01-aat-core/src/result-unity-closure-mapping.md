@@ -79,16 +79,23 @@ This exhibits two independent drivers of $\varepsilon_x$, one along each unity a
 
 The four content unities measure shared information (goals, policies, observations, model state); $U_f$ measures whether sub-agents implement the same correction rule. The two axes contribute to the closure-defect rate-distortion surface independently — content unity controls compressibility of what the agents agree on; structural unity controls whether projection induces memory by mixing the discarded subspace into the retained one.
 
+**Strategy-layer instance (credence composition).** The same structural-unity axis has an exact closed form one level up, at the strategy layer. For $N$ agents reasoning over a shared plan skeleton $(V,E)$ and disagreeing only on edge-credences, work in the log-odds coordinate $\lambda_{ij}=\log\tfrac{p_{ij}}{1-p_{ij}}$ — the unique additive-evidence coordinate ( #def-strategy-dag; forced by #deriv-edge-update-natural-parameter) in which edge updates are additive and the natural macro-projection is the log-odds centroid. The per-step closure defect is then driven by update-rule heterogeneity exactly as the Kalman case is, with the per-agent edge gains $\eta_{\Sigma,i}$ playing the role of the Kalman gains:
+
+$$\varepsilon_\Sigma^{\ast 2} \;=\; \lvert E\rvert\cdot\overline{\mathrm{Var}_i[\eta_{\Sigma,i}]}\cdot\mathrm{Var}[r],$$
+
+where $r$ is the per-edge evidence residual. This is the structural-unity ($U_f$) axis lifted from state to strategy: homogeneous gains ($\overline{\mathrm{Var}_i[\eta_{\Sigma,i}]}=0$, $U_f=1$) give $\varepsilon_\Sigma=0$; gain dispersion across agents drives the defect, scaled by plan size $\lvert E\rvert$ and evidence-residual variance. It is *dimension-free in $N$* — a population variance is estimated more precisely, not enlarged, by adding agents from the same gain-distribution — the strategy-layer twin of the dimension-free state-composition regime. The complementary heterogeneous-*topology* case (incompatible shared sub-orders, an order-theoretic non-existence rather than a magnitude) is the SCC-condensation defect landed in #def-strategy-dag's causal-abstraction composition subsection; the two together exhaust strategy-layer composition (credence axis here, topology axis there).
+
 ## Epistemic Status
 
 *Conditional.* Max attainable: *exact* (linear-Gaussian scalar cases) to *robust qualitative* (general).
 
 - The observation and action closed forms are *exact* in the linear-Gaussian scalar case with stated projection choices.
 - The state closure form $\varepsilon_x^2 = (\Delta K/2)^2 [S_- - C_{+-}^2/S_+]$ is *exact* in the two-Kalman heterogeneous case.
+- The strategy-layer credence-composition form $\varepsilon_\Sigma^{\ast 2} = \lvert E\rvert\cdot\overline{\mathrm{Var}_i[\eta_{\Sigma,i}]}\cdot\mathrm{Var}[r]$ is *exact* in the fixed-topology heterogeneous-credence case (log-odds additivity is forced by #deriv-edge-update-natural-parameter) and dimension-free in $N$.
 - The rate-distortion framing (unity as compressibility parameter rather than direct predictor) is *robust qualitative* — it survives beyond linear-Gaussian, but concrete rate-distortion curves require case-by-case derivation.
 - The joint $(U_O, U_\Sigma) \to \varepsilon_a$ formula is a *sketch* — the leading structure is derived; the precise forms of $f_1$ and $g$ are mechanical extensions not fully computed here.
 
-Ceiling-limiting factors: non-Gaussian cases require information-theoretic bounds (Gaussian IB is fully tractable; general IB is not), and the structural-unity axis $U_f$ has a worked closed form only in the linear-Gaussian Kalman gain-mismatch case — a general theory of $f_M$ structural variation across arbitrary update operators is open.
+Ceiling-limiting factors: non-Gaussian cases require information-theoretic bounds (Gaussian IB is fully tractable; general IB is not), and the structural-unity axis $U_f$ has worked closed forms in two cases — the linear-Gaussian Kalman gain-mismatch case (state layer) and the fixed-topology credence-composition case (strategy layer, via log-odds additivity) — while a general theory of $f_M$ structural variation across arbitrary update operators is open.
 
 ## Discussion
 
