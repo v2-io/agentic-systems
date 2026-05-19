@@ -14,8 +14,7 @@ What lives here:
 - **`INDEX.md`** — the spike index: every spike, its location, current
   status. The status labels are a **convenience record, not ground
   truth** (see the routing docs' evidence hierarchy) — durable; it stays.
-- **`PROPOSED.md`** — high-risk research-direction *proposals* (not active
-  spikes). Durable; it stays.
+- **`PROPOSED.md`** — the **3-perspective spike-proposal index**: the single discoverable register of every known un-started (or in-flight, or terminally-resolved) spike effort. Detail lives in one of three homes — [`PROPOSED-ADVANCED.md`](PROPOSED-ADVANCED.md) (moonshot/theory-edge), the relevant segment's Working Notes (segment-perspective strengthenings — linked, not duplicated), or [`PROPOSED-MISC.md`](PROPOSED-MISC.md) (residual; often near-empty by design). Durable — *placement* (not routed/moved like a spike), **not** content-currency: a standing navigator-reconciliation target with completeness + reciprocal-link + bidirectional disciplines per [`../doc/spike-routing.md`](../doc/spike-routing.md) §2-bis(3) + Refinement 10. Durable ≠ frozen.
 - **`.integrated/`** and **`.archived/`** — the two terminal homes for a
   spike whose purpose is spent (below).
 - Working subdirs (`track-a-intent-dag/`, `track-b-nonlinear-sims/`, …),

@@ -211,7 +211,9 @@ terminology/          Source-of-truth for prose vocabulary (LEXICON.md is render
   README.md           Schema and tooling guide for the terminology system
 spikes/               Research spikes (reasoning trails)
   INDEX.md            Spike index with per-spike status
-  PROPOSED.md         High-risk research-direction proposals
+  PROPOSED.md         Spike-proposal index (3-perspective; all un-started efforts)
+  PROPOSED-ADVANCED.md  Moonshot / theory-edge proposal detail
+  PROPOSED-MISC.md    Residual proposal detail (often near-empty)
 audits/               Audit-cycle FINAL outputs + pending-findings + per-cycle working dirs
   AUDIT-WORKING-*/    Per-cycle audit intermediate workspaces
 msc/                  Other working artifacts (brainstorms, working notes)

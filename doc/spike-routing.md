@@ -139,9 +139,7 @@ the cost of disturbing a live one is real):
 Seed exclusion for the 2026-05-17 cycle (Joseph-affirmed): the
 self-actuation / WF-strengthening pair (`spike-self-actuation-grounding.md`,
 `spike-wf-strengthening.md`) and `spikes/visual/` (INDEX: ACTIVE).
-`spikes/INDEX.md` and `spikes/PROPOSED.md` are durable index/proposal
-catalogs — they **stay** (the spike analog of the `pending-findings-*.md`
-ledgers staying), they are not routed.
+`spikes/INDEX.md` and the `spikes/PROPOSED.md` family (`PROPOSED.md` index + `PROPOSED-ADVANCED.md` + `PROPOSED-MISC.md`) are durable index/proposal navigators — they **stay** (the spike analog of the `pending-findings-*.md` ledgers staying), they are not routed (placement only — §2-bis(3) governs their content-currency).
 
 ---
 
@@ -181,14 +179,17 @@ looks-done-but-isn't trap:
    surface any genuine open content the pointer was hiding into the
    segment's own Working Notes. (CHANGELOG:79 / `feedback_spike_references_only_in_working_notes` pt 5.)
 3. **The navigator is reconciled.** `TODO.md` / `PROPOSALS.md` /
-   `PRACTICA.md` items that the integration resolves are **closed at
-   cycle-commit time, not deferred** (triage-is-the-answer); items it
-   *advances but doesn't close* are updated with the new disposition +
-   spike-routing cross-ref; a navigator entry that still says "partially
-   landed in #X" when #X is now `status: false`/superseded is a
-   navigator-level §4.1 lie and is corrected with the same urgency as a
-   segment one. "Find more info" cuts both ways — a navigator item may
+   `PRACTICA.md` **and the spike-corpus navigators `spikes/INDEX.md` and
+   `spikes/PROPOSED.md`** — items that the integration resolves are
+   **closed at cycle-commit time, not deferred** (triage-is-the-answer);
+   items it *advances but doesn't close* are updated with the new
+   disposition + spike-routing cross-ref; a navigator entry that still
+   says "partially landed in #X" when #X is now `status: false`/superseded
+   is a navigator-level §4.1 lie and is corrected with the same urgency as
+   a segment one. "Find more info" cuts both ways — a navigator item may
    *resolve* the spike or *reopen* it.
+
+   `spikes/PROPOSED.md` is the **3-perspective spike-proposal index** (moonshot/theory-edge detail in `PROPOSED-ADVANCED.md`; segment-perspective strengthenings keep their detail in the segment's Working Note; residual in `PROPOSED-MISC.md`), governed by three disciplines: **(completeness)** every known un-started spike effort has an index row — efforts owned elsewhere (the §D.9 reserved portfolio, ROUTING "Next actions", a live spike) are *cross-referenced, not duplicated*; **(reciprocal links)** every segment Working-Note strengthening/spike-proposal comment links to its index tier and every index row links to its detail home — a WN strengthening comment with no back-link is the violation the `sw-reciprocal-link-check` grep (PROPOSED-MISC, to build) is the teeth for; **(bidirectional reconciliation)** *down* a resolving spike sets its row to a terminal status + canon link at cycle-commit time (a stale "open" row for a landed direction is a navigator-level §4.1 lie), *up* the corpus is periodically re-scanned for newly-surfaced directions, landed rows kept-not-retired as the audit trail. "Durable; it stays" governs *placement* (these files are not routed/moved like spikes) — **not** content-currency. Scar: Refinement 10.
 
 The archive batch (the `git mv` + MANIFEST) is the *start* of completion,
 not the end; (2) and (3) are not "next housekeeping," they are part of
@@ -593,3 +594,5 @@ misplaced dirs. Also the environmental gotcha that masked this for two
 attempts: Bash in-place stream editors (`sed -i`, `perl -pi`) silently
 no-op on the repo here; only the Edit/Write tools and `git mv` persist
 — verify file edits by re-reading, never by the editor's exit status.*
+
+*Refinement 10 (2026-05-19, Joseph-caught — a navigator that drifted because the SOP did not name it). `spikes/PROPOSED.md` (the spike-proposals catalog) had silently drifted: last content-curated 2026-04-25, with at least four entries (Causal-IB LMI, message-passing credit-assignment, FEP-as-suboptimal, Landauer/thermodynamic-cost) still presented as open candidates "requiring repair" when their repairs had landed in canon — the exact navigator-level §4.1 lie §2-bis(3) exists to catch, but §2-bis(3) named only `TODO.md`/`PROPOSALS.md`/`PRACTICA.md`, not the spike-corpus navigators, so the obligation never attached to it. Caught not by the SOP but by Joseph's question "are we still tracking a suggested-spikes / proposed or something?" — and his follow-up directive: "be sure, and add a constant update to it in your SOPs." Corrected: §2-bis(3) now names `spikes/INDEX.md` and `spikes/PROPOSED.md` explicitly and states the bidirectional reconciliation (down on spike-resolution, up via periodic corpus scan). The 2026-05-19 one-time reconciliation discharged the accumulated drift (10 entries dispositioned; a Phase 3 of 4 scan-surfaced candidates added; one borderline candidate deliberately not double-listed because it was already homed in PRACTICA/TODO). Transferable scar: "durable; it stays" said of a catalog means it is not *routed/moved*, never that it is *frozen* — a durable navigator still accrues drift in both directions, and the completion criterion must name every navigator it governs or the governance silently exempts the unnamed ones. The shared core's §2-bis is not forked; this spike-specific delta (PROPOSED.md is a spike-corpus artifact) lands here, per §0b. **Resolution shipped 2026-05-19 (Joseph's 3-perspective proposal, taken with refinements):** the interim "name PROPOSED.md in §2-bis(3)" was elevated to a restructure — `PROPOSED.md` became the unified *index* (priority-tiered tables; added/name/source/description/status/updated/details columns), the original catalog `git mv`'d to `PROPOSED-ADVANCED.md` (moonshot detail home, down-reconciliation dispositions preserved), `PROPOSED-MISC.md` created (residual; allowed-empty); segment-perspective strengthenings keep detail in the Working Note with a reciprocal back-link; completeness made real by cross-referencing (not duplicating) efforts owned in §D.9/ROUTING; the enforcement-grep itself indexed as a MISC dogfood entry. Refinement transferable beyond this instance: when a navigator drifts because the SOP under-named it, the durable fix is usually structural (split index from detail so the index *can* be kept complete and the detail has an unambiguous home), not just adding the name to a list.*
