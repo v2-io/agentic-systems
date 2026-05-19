@@ -187,6 +187,20 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $C_{\text{coord}}$ | Rate ($t^{-1}$) | Coordination overhead (tempo-equivalent) |
 
 
+## Resource Budget (exploratory branch — #form-resource-budget)
+
+*Exploratory off-spine axis; no Section I/II/III result depends on these. See #form-resource-budget (ground truth) and #der-resource-bounded-destabilization.*
+
+| Symbol | Type | Meaning |
+|--------|------|---------|
+| $\mathcal B_t$ | Scalar $\geq 0$ | Resource budget (depletable reservoir). Calligraphic-scalar by the exception convention (as $\mathcal T$, $\mathcal I$); distinct from agent label $B$ and strategy-edge set $E$ |
+| $c(\lVert\delta\rVert)$ | Rate $\geq 0$ | Correction-cost rate; non-decreasing in mismatch (A-cost) |
+| $r_{\mathcal B}$ | Rate $\geq 0$ | Resource replenishment rate ($r_{\mathcal B}=0$ hard regime; $\gt 0$ regenerative) |
+| $\psi(\mathcal B)$ | $\in[0,1]$ | Resource-gating of the sector parameter, $\alpha(\mathcal B)=\alpha^{\max}\psi(\mathcal B)$, $\psi(0)=0$ (A-gate) |
+| $\mathcal B_{\text{crit}}$ | Scalar $\geq 0$ | Critical budget: $\alpha(\mathcal B_{\text{crit}})=\rho^{\text{eff}}/R$ (persistence boundary) |
+| $\tau$ | Time $\geq 0$ | Destabilization hitting time $\inf\{t:\mathcal B_t=\mathcal B_{\text{crit}}\}$ (local to #der-resource-bounded-destabilization; distinct from the event-timestamp $\tau$) |
+
+
 ## Conventions
 
 **Subscript $t$**: Discrete time index or macroscopic continuous time. Context disambiguates: $M_t = f(M_{t-1}, o_t, a_{t-1})$ is discrete; $d\lVert\delta\rVert/dt$ is continuous.
