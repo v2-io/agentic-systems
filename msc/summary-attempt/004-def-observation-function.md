@@ -1,0 +1,5 @@
+# Observation Function (definition — axiomatic)
+
+The perception channel is formalized as an **observation function** $h$ that produces each observation as a (possibly noisy) function of the current environment state, the agent's prior action, and a perceptual-noise term. The action-dependence in the conditioning is optional — when absent, observations are pure functions of environment state plus noise — but allowing it captures *active perception*: what the agent sees can depend on where it looked or what it did.
+
+Two epistemic commitments are constitutive. First, the function $h$ is *lossy* — it maps from the high-dimensional, inaccessible environment state to a strictly lower-information observation. This loss is what forces the agent to maintain an internal model later in the theory rather than simply reading off the world. Second, the agent knows neither $h$ nor the noise distribution exactly. These are not empirical assertions about real-world observation channels but scope-defining choices that delineate the partial-observability setting AAT operates within.

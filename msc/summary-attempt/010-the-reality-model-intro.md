@@ -1,0 +1,11 @@
+# Chapter Introduction: The Reality Model (discussion — framing prose)
+
+Having named the objects of the agent-environment coupling and bounded what AAT applies to, the volume now turns inward: to what the agent itself carries — a compressed internal model of the world, with measurable adequacy against the chronica it was built from.
+
+The framing is direct. An agent under uncertainty cannot see the world directly; whatever it knows of reality, it built from a history of partial observations. Carrying that raw history is infeasible at any meaningful scale, so finite agents compress. The framework commits notation: $M_t = \phi(\mathcal{C}_t)$ — the model is a function of the chronica, condensed into something workable. Every downstream result of AAT — gain, tempo, persistence, structural adaptation — operates on this $M_t$.
+
+The first natural question of any compression is how good it is. **Sufficiency** measures the fraction of the chronica's predictive content that survives compression: a value of 1 means nothing predictive was lost; less than 1 means information the agent might have used has been discarded. The optimal compression — keep what predicts the future, discard what doesn't — is precisely what Tishby's information bottleneck formalizes, and the framework adopts it directly.
+
+The deeper question is what the agent *could* hold in the best case. There is a ceiling: the highest sufficiency any model in the agent's current *representational class* can attain. This ceiling is called **model-class fitness**. When fitness is high, the agent can keep improving by tuning within the class; when it is low, no amount of better tuning helps — the agent is using the *wrong kind of model* for its world, and the remedy is not a better instance of the same model but a different class altogether.
+
+This last point seeds one of the framework's central results. Class fitness is named statically here, while the model is treated as a frozen object. Chapter 4 will use it to derive *structural adaptation necessity*: when the class is inadequate, the agent must change classes, not parameters, because there is a residual mismatch floor that parametric updates cannot get below — and that floor is set by exactly this ceiling. The trigger lives in this chapter; the consequence unfolds in Chapter 4.

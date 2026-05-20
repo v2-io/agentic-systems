@@ -1,0 +1,15 @@
+# Contraction Template (appendix result — conditional)
+
+A *strict generalization* of the sector-persistence template, lifting from a Euclidean sector condition to a **contraction-metric condition** (Lohmiller-Slotine 1998). The generalization preserves the template's ultimate-bound results while extending its coverage in three directions.
+
+**(a) Natural non-Euclidean metrics for sub-scope α**: under the contraction-metric framing, the matrix-Kalman and exponential-family-natural-parameter sub-cases of the gain-sector bridge gain natural non-Euclidean metrics (the inverse-prior-covariance, the Fisher information metric) that *remove the condition-number penalties* currently visible when transferring the sector condition to Euclidean form. Under the parameterization-invariance commitment, the Fisher-metric statement is *AAT-internally forced* rather than preferred.
+
+**(b) Sub-scope β promotions**: two items previously in sub-scope β (PID-bounded-plant; non-convex-within-basin) *promote to derived sub-scope under explicit conditions* (named *metric-α₂*). The contraction-metric framework gives the sector condition for these cases by selecting the metric to absorb the non-convexity or the plant dynamics.
+
+**(c) Topology-indexed compositional closures**: the contraction-metric framework provides *closed-form composition results indexed by topology* (parallel composition, cascade/hierarchical composition, small-gain feedback composition) from Slotine 2003. These generalize the closed-form critical-mass derivation's matched-symmetric-Tier-1 dyad to *heterogeneous sub-agents under specified composition topologies*. The framework's posture: the critical-mass result was a special case; the contraction-template framework gives the full topology-indexed family.
+
+The framework names this as an *exploratory expansion* of the persistence template: the *machinery is standard* (Lohmiller-Slotine 1998 contraction-metric theory; well-established in nonlinear control); the *application to AAT* lifts five agent classes from sub-scope β to derived sub-scope α, removes condition-number penalties from the matrix-Kalman and exponential-family cases, and provides topology-indexed compositional closure forms.
+
+The contraction-template lift composes with the **identifiability-floor pattern**. Under the contraction-metric framework, the *common-Lyapunov-nonexistence no-go* (Liberzon 2003) that drives the composition-layer identifiability-floor Instance 3 acquires its full structural form: composite contraction cannot in general be certified from component-marginal data because *no common contraction metric exists across the components' Lyapunov functions in general*. The escape via interventional access at the composite layer (Mode 2 of the loop-Level-2 pattern) recovers the contraction certification by directly identifying the coupling sign that component marginals leave unidentifiable.
+
+The framework treats the contraction template as the *natural extension target* for the sector-persistence template — and one of the framework's bridges into the broader monotone-operator / contraction-analysis literature.

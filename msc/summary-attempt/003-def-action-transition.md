@@ -1,0 +1,7 @@
+# Action and Transition (definition — axiomatic)
+
+The action channel is formalized. The agent has an **action space** 𝒜, and actions affect the environment through a possibly-stochastic **transition function** $T$: the next environment state is drawn from $T(\cdot \mid \Omega_t, a_t)$. Deterministic transitions are the special case where $T$ concentrates all mass on a single successor; stochasticity is permitted but not required. Crucially, the agent does *not* know $T$ exactly. Together with the lossy observation channel introduced in the previous segment, this completes the agent-environment loop: environment → observation → agent → action → next environment.
+
+What makes action non-trivial is the combination of unknown observation function and unknown transition function. If $T$ were known, action selection would collapse to plain optimization over a known function; the joint opacity is what creates the need for adaptive behavior.
+
+One subtle modeling commitment is surfaced: by writing the transition as Markov in $\Omega$ (only $\Omega_t$ and $a_t$ appear in the conditioning), the framework implicitly takes $\Omega$ to be the *sufficient state* for its own evolution — any non-Markov environment is absorbed by extending $\Omega$ to include enough history. This is the world-side analog of a parallel move the framework will make later for the agent's internal model: Markov properties here are commitments about the breadth of the named object, not structural claims about underlying dynamics.
