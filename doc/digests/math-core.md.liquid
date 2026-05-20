@@ -1,0 +1,38 @@
+---
+# Recipe for math-core.md — a structural digest of AAT's mathematical content.
+# Frontmatter is the build spec; body below is the Liquid template.
+# See msc/build-markdown-design.md for the design.
+
+sources:
+  - outline: 01-aat-core/OUTLINE.md
+
+filter:
+  # Inclusive by default — every segment that has a Formal Expression section
+  # is in scope, regardless of type or status. The reasoning: this digest is
+  # for surveying the mathematical content as it stands, not for projecting
+  # a curated subset. Tighten with type / status / stage predicates later if
+  # a more selective math-core view becomes useful.
+  include:
+    has_sections: [formal_expression]
+
+output: math-core.md
+---
+# AAT Math Core
+
+*A structural digest of AAT's mathematical content — postulates, definitions, derivations, and results, in OUTLINE order. Each segment shows its frontmatter status, declared dependencies, brief, and formal expression; epistemic-status, discussion, and working-notes prose are omitted. Cross-references appear as bare `#slug-name` markers — the digest is not the full monograph and does not carry a numbered label map.*
+
+{% for seg in segments %}
+## {{ seg.title.raw }}
+
+- **Slug**: `{{ seg.frontmatter.slug }}`
+- **Type**: {{ seg.frontmatter.type }}
+- **Status**: {{ seg.frontmatter.status }}{% if seg.frontmatter.stage %}
+- **Stage**: {{ seg.frontmatter.stage }}{% endif %}{% if seg.frontmatter.depends %}
+- **Depends**: {% for dep in seg.frontmatter.depends %}`{{ dep }}`{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}
+
+{{ seg.brief }}
+
+{{ seg.sections.formal_expression.raw }}
+
+---
+{% endfor %}
