@@ -1,0 +1,240 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# bin/build-markdown — render a digest from segments via a Liquid recipe.
+#
+# Usage:
+#   bin/build-markdown <recipe-path>
+#
+# A recipe is a single file whose frontmatter is the build spec
+# (sources, filter, output) and whose body is the Liquid template that
+# projects per-segment fields into the output markdown. Each digest is
+# fully described by its recipe; this script is a small driver.
+#
+# Pipeline:
+#   1. Parse recipe frontmatter (build spec) + body (Liquid template).
+#   2. Walk each `sources[].outline` via Mono::OutlineWalker, parse each
+#      segment via Mono::Extract, attach outline-context.
+#   3. Apply filter (`include` / `exclude` predicates over frontmatter
+#      fields + section presence).
+#   4. Render the Liquid template body with `{ segments, recipe, volume }`.
+#   5. Write the result to the path declared in the recipe frontmatter.
+#
+# Design and data-model contract: msc/build-markdown-design.md.
+# Related: bin/build-readme (the README's Liquid pipeline; this script
+# matches its patterns for arg parsing and Liquid setup).
+
+require 'liquid'
+require 'pathname'
+require 'yaml'
+require 'optparse'
+
+REPO_ROOT = Pathname.new(__dir__).parent.expand_path
+LIB_DIR   = REPO_ROOT.join('bin/lib')
+
+$LOAD_PATH.unshift(LIB_DIR.to_s)
+require 'outline_walker'
+require 'extract'
+
+# ── recipe parsing ────────────────────────────────────────────────────────
+
+# Split a recipe file into { spec: <parsed-yaml-hash>, body: <liquid-source> }.
+# Mirrors the FORMAT.md segment shape (frontmatter + body) the project already
+# uses, so authoring a recipe feels like authoring a segment.
+def parse_recipe(path)
+  text = path.read
+  raise "Recipe must start with YAML frontmatter (`---` on line 1): #{path}" \
+    unless text.start_with?("---\n")
+
+  end_idx = text.index(/^---\s*$/, 4)
+  raise "Recipe frontmatter not terminated: #{path}" unless end_idx
+
+  yaml_text = text[4...end_idx]
+  body      = text[(end_idx + 3)..].sub(/\A\s*\n/, '')
+  spec      = YAML.safe_load(yaml_text, permitted_classes: [Symbol]) || {}
+  { spec: spec, body: body }
+end
+
+# ── segment collection ────────────────────────────────────────────────────
+#
+# Walk every `sources[].outline`, accumulate :segment items in OUTLINE
+# order, attach outline-context (volume / part / chapter / container) and
+# source_path from the walker's structural state. Non-:segment items
+# (parts, chapters, prefaces, prose, scope) update the running context
+# but don't contribute output rows themselves — templates that want
+# part/chapter chrome can reach for `seg.outline_context.part` etc.
+
+# TODO(build-markdown): expose `parts` / `chapters` / `appendices` as
+# grouped collections for templates that want hierarchical output. Math-
+# core is flat-list-friendly so this isn't pressing.
+def collect_segments(spec)
+  results = []
+  sources = spec['sources'] || []
+  raise 'Recipe `sources:` must be a list of `{ outline: <path> }` entries' \
+    unless sources.is_a?(Array)
+
+  sources.each do |source|
+    outline_rel = source['outline'] or raise 'Each source needs `outline:`'
+    outline_path = REPO_ROOT.join(outline_rel)
+    raise "Outline not found: #{outline_path}" unless outline_path.exist?
+
+    volume_slug = outline_path.parent.basename.to_s
+    context = {
+      'volume'    => volume_slug,
+      'part'      => nil,
+      'chapter'   => nil,
+      'container' => nil,
+    }
+
+    Mono::OutlineWalker.walk(outline_path).each do |item|
+      case item[:kind]
+      when :part
+        context = context.merge('part' => item[:title], 'chapter' => nil, 'container' => 'part')
+      when :appendices
+        context = context.merge('part' => item[:title], 'chapter' => nil, 'container' => 'appendices')
+      when :chapter
+        context = context.merge('chapter' => item[:title])
+      when :segment
+        parsed = Mono::Extract.parse(item[:path])
+        parsed['outline_context'] = context.dup
+        parsed['source_path'] = item[:path].relative_path_from(REPO_ROOT).to_s
+        results << parsed
+        # :missing / :gap / :prose / :scope / :image / :volume / :preface
+        # update no context here. Missing-slug items are out of scope for
+        # digest output (no segment file to parse).
+      end
+    end
+  end
+  results
+end
+
+# ── filtering ─────────────────────────────────────────────────────────────
+#
+# Predicates from spec[:filter][:include] / [:exclude] applied per segment.
+# Empty filter ⇒ all segments pass.
+# `include` keys AND together; `exclude` keys OR together. List-valued
+# filter values match if any value matches the segment's field; for
+# list-valued segment fields (e.g. `depends`), intersection semantics.
+# `has_sections` is the special predicate over normalized section keys.
+
+# TODO(build-markdown): more predicate types (`depends_on: <slug>` with
+# transitive resolution; `stage_at_least: <stage>`; regex on slug). Add
+# as concrete digests need them — don't pre-design.
+
+def filter_segments(segments, filter)
+  return segments if filter.nil? || filter.empty?
+
+  include_preds = filter['include'] || {}
+  exclude_preds = filter['exclude'] || {}
+
+  segments.select do |seg|
+    include_preds.all? { |k, v| predicate_matches?(seg, k, v) } &&
+      exclude_preds.none? { |k, v| predicate_matches?(seg, k, v) }
+  end
+end
+
+def predicate_matches?(seg, key, value)
+  case key
+  when 'has_sections'
+    Array(value).all? { |s| seg['sections'].key?(s.to_s) }
+  when 'volume'
+    Array(value).include?(seg['outline_context']['volume'])
+  when 'container'
+    Array(value).include?(seg['outline_context']['container'])
+  else
+    field_value = seg['frontmatter'][key]
+    return false if field_value.nil?
+
+    if field_value.is_a?(Array)
+      # Intersection semantics: any element of the segment field in the filter list.
+      (Array(value) & field_value).any?
+    else
+      Array(value).include?(field_value)
+    end
+  end
+end
+
+# ── rendering ─────────────────────────────────────────────────────────────
+
+# Liquid file system for partials, parallel to bin/build-readme. Looks up
+# `{% include "X" %}` under doc/digests/_partials/X.md. Not used yet (no
+# math-core partials), but wired in so the first multi-template digest
+# doesn't need a re-plumb.
+#
+# TODO(build-markdown): if a second digest emerges that shares chrome
+# with math-core, factor the shared bits into doc/digests/_partials/.
+class PartialFileSystem
+  def initialize(root)
+    @root = Pathname.new(root)
+  end
+
+  def read_template_file(template_name)
+    path = @root.join("#{template_name}.md")
+    unless path.exist?
+      raise Liquid::FileSystemError,
+            "Partial not found: #{path} (looked up as `#{template_name}`)"
+    end
+    path.read
+  end
+end
+
+def render(template_body, segments, spec)
+  Liquid::Template.file_system = PartialFileSystem.new(REPO_ROOT.join('doc/digests/_partials'))
+  template = Liquid::Template.parse(template_body)
+  template.render!(
+    'segments' => segments,
+    'recipe'   => spec,
+    'volume'   => {
+      'sources' => spec['sources'],
+      'count'   => segments.size,
+    },
+  )
+end
+
+# ── main ──────────────────────────────────────────────────────────────────
+
+def main
+  options = { check: false }
+  OptionParser.new do |opts|
+    opts.banner = 'Usage: bin/build-markdown <recipe-path> [--check]'
+    opts.on('--check', 'Verify on-disk output matches regenerated; exit non-zero on drift') do
+      options[:check] = true
+    end
+  end.parse!
+
+  recipe_arg = ARGV[0] or abort 'Usage: bin/build-markdown <recipe-path> [--check]'
+  recipe_path = Pathname.new(recipe_arg).expand_path
+  abort "Recipe not found: #{recipe_path}" unless recipe_path.exist?
+
+  recipe = parse_recipe(recipe_path)
+  segments = collect_segments(recipe[:spec])
+  filtered = filter_segments(segments, recipe[:spec]['filter'])
+  warn "[build-markdown] #{recipe_path.relative_path_from(REPO_ROOT)}: " \
+       "#{segments.size} segments collected, #{filtered.size} after filter"
+
+  rendered = render(recipe[:body], filtered, recipe[:spec])
+
+  output_rel = recipe[:spec]['output'] or
+    abort "Recipe missing `output:` field: #{recipe_path}"
+  output_path = REPO_ROOT.join(output_rel)
+
+  if options[:check]
+    on_disk = output_path.exist? ? output_path.read : ''
+    if on_disk == rendered
+      puts "OK: #{output_rel} matches regenerated output"
+      exit 0
+    else
+      warn "DRIFT in #{output_rel}: on-disk content does not match regenerated output."
+      warn "  on-disk:     #{on_disk.lines.size} lines, #{on_disk.bytesize} bytes"
+      warn "  regenerated: #{rendered.lines.size} lines, #{rendered.bytesize} bytes"
+      warn "  Run `bin/build-markdown #{recipe_arg}` (without --check) to regenerate."
+      exit 1
+    end
+  else
+    output_path.parent.mkpath
+    output_path.write(rendered)
+    puts "Wrote #{output_rel} (#{rendered.lines.size} lines, #{rendered.bytesize} bytes)"
+  end
+end
+
+main if $PROGRAM_NAME == __FILE__

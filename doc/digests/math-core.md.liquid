@@ -27,8 +27,8 @@ output: math-core.md
 - **Slug**: `{{ seg.frontmatter.slug }}`
 - **Type**: {{ seg.frontmatter.type }}
 - **Status**: {{ seg.frontmatter.status }}{% if seg.frontmatter.stage %}
-- **Stage**: {{ seg.frontmatter.stage }}{% endif %}{% if seg.frontmatter.depends %}
-- **Depends**: {% for dep in seg.frontmatter.depends %}`{{ dep }}`{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}
+- **Stage**: {{ seg.frontmatter.stage }}{% endif %}{% unless seg.frontmatter.depends == empty %}
+- **Depends**: {% for dep in seg.frontmatter.depends %}`{{ dep }}`{% unless forloop.last %}, {% endunless %}{% endfor %}{% endunless %}
 
 {{ seg.brief }}
 
