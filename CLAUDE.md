@@ -1,5 +1,8 @@
 # CLAUDE.md — Context for AI Agents Working on the Agentic Systems Framework
 
+> [!important]
+> **Some content in this file is under active reconsideration (2026-05-19→20).** A spike-recovery cycle surfaced inconsistencies — at least one internal contradiction (the `ref/`-as-source-of-truth file-organization sanction was found to contradict the prior-art-integration discipline stated elsewhere in this same file) and some inherited rationalizations in the wider SOP set — that are being worked through. The full trail, the (provisional) corrected principles, the held decisions awaiting Joseph, and the scoped follow-on work live in [`INTEGRATION-CLEANUP-TODO.md`](INTEGRATION-CLEANUP-TODO.md) at the project root. **Read that file before treating any specific guideline here as binding for the items it names** — and apply the strictest canon-cites-only-canon / honest-about-uncertainty discipline reflexively to *this* file, exactly because every agent loads it and treats it as authoritative.
+
 ## What This Project Is
 
 **Agentic Systems Framework (ASF)** is a research framework for adaptive, purposeful agents — integrating control theory, causal inference, information theory, and agent architecture under a common formalism.
