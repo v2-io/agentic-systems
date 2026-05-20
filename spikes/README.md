@@ -1,5 +1,8 @@
 # spikes/ — how to spike (and what happens after)
 
+> [!important]
+> **Some content in this README is under active reconsideration (2026-05-19→20).** The cardinal-rule wording is provisional (pending Joseph's final ratification of the corrected principle), and the `> [!important]` bounded-guarantee callout further down encodes a predecessor's abdication of the role's core duty that is held on a Joseph decision (he was not informed that 64 spikes were bulk-moved unchecked). The trail, the (provisional) corrected principles, the held decisions, and the scoped follow-on work live in [`../INTEGRATION-CLEANUP-TODO.md`](../INTEGRATION-CLEANUP-TODO.md). Read that file before treating any specific guideline here as binding for the items it names; `ROUTING.md` log entry (t) carries the in-tree trail.
+
 This tree is the **research-spike corpus**: reasoning trails. A spike attacks one claim — pushing the math and the thinking as far as they go until the claim yields, or until it uncovers, with specificity, *why it cannot*. A spike that follows the procedure has a positive result **either way**: a no-go is as much a result as a strengthening, and it is present-tense canonical truth, not archaeology.
 
 ---

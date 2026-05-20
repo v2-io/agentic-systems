@@ -1,5 +1,8 @@
 # Spike-Routing — the spike-specific companion
 
+> [!important]
+> **Some content in this SOP is under active reconsideration (2026-05-19→20).** Two items in particular were rejected/flagged in a late-session spike-recovery cycle: §2-bis(2)'s "*need* vs *mention*" test (Joseph rejected the distinction at root — there is no such distinction; canon→spike references are integration failures, not non-needed-breadcrumbs to permit) and §5's bounded-guarantee / "do not re-audit `.integrated/`; verify forward" (encodes a predecessor's documented abdication of the role's core duty, attributed to Joseph who says he was not informed of the unchecked bulk-64 move it papers over). The trail, the (provisional) corrected principle (canon cites only canon and the published external world; Working Notes are by definition not canon; canon→artifact ref = integration failure → land-as-appendix-or-discussion OR delete-as-vanity), and the held decisions live in [`../INTEGRATION-CLEANUP-TODO.md`](../INTEGRATION-CLEANUP-TODO.md). Refinement 10's meta-scar applies to this file reflexively. Read the TODO before treating §2-bis(2) or §5 as binding.
+
 *The durable governing content for routing the `spikes/` corpus. This is
 deliberately **thin**: spike-routing and audit-routing are the **same
 problem** — take a unit of investigation, decide what is and is not true
