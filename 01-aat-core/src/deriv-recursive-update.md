@@ -8,7 +8,7 @@ depends:
   - post-causal-structure
   - scope-adaptive-system
   - def-observation-function
-stage: draft
+stage: claims-verified
 ---
 
 # Derivation: Recursive Update — Uniqueness Derivation
