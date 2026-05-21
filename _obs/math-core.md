@@ -647,15 +647,61 @@ where $\Vert\delta_{\text{post}}\Vert$ is treated as a parameter estimated by th
 
 ---
 
+## Formulation: Sector Condition (A2')
+
+- **Slug**: `form-sector-condition`
+- **Type**: formulation
+- **Status**: conditional
+- **Stage**: claims-verified
+- **Depends**: `def-mismatch-signal`, `def-adaptive-tempo`, `emp-update-gain`
+
+The sector condition (A2') is the structural shape AAT chooses for the correction-function geometry: the correction points roughly inward, with magnitude bounded below relative to the mismatch, on a local region of validity. Together with the companion structural properties (A1) zero-correction-at-zero-mismatch and (A3) tempo-monotonicity, A2' is the formal expression of "the agent's adaptation tracks reality with at least baseline efficiency" — the form on which the persistence and adaptive-reserve results of #deriv-sector-condition rest, and the form which downstream consumers (`#deriv-discrete-sector-condition`, `#deriv-variational-sector-condition`, `#deriv-adaptive-gain-dynamics`, `#der-gain-sector-bridge`) extend, weaken, or ground.
+
+### Setup objects (carried into the form)
+
+Let $\delta(t) \in \mathbb{R}^n$ be the mismatch vector ( #def-mismatch-signal — the difference between the model's predictions and reality across $n$ observable dimensions). Let $F(\mathcal{T}, \delta) \colon \mathbb R_+ \times \mathbb{R}^n \to \mathbb{R}^n$ be the **correction function** — how the agent's adaptive process reduces mismatch — mapping into the same space as $\delta$ so that the inner product $\delta^T F$ is well-defined. This subsumes the update gain $\eta^\ast$ ( #emp-update-gain), event rate $\nu$, and the structure of the update rule. The adaptive tempo $\mathcal{T}$ ( #def-adaptive-tempo) is the rate parameter.
+
+### (A1) Zero Correction at Zero Mismatch
+
+*[Assumption A1]*
+
+$$F(\mathcal{T}, 0) = 0$$
+
+No correction is applied when the model perfectly matches reality. Uncontroversial by construction.
+
+### (A2') Local Sector Condition
+
+There exists a region $\mathcal B_R = \{\delta : \lVert\delta\rVert \leq R\}$ and $\alpha \gt 0$ such that (following the sector-condition framework of Lur'e[^lure1957]):
+
+*[Formulation A2' (sector-condition) — derived in sub-scope $\alpha$, assumed in sub-scope $\beta$ (see Grounding below)]*
+
+$$\delta^T F(\mathcal{T}, \delta) \geq \alpha \lVert\delta\rVert^2 \quad \forall \delta \in \mathcal{B}_R$$
+
+The correction function always points "inward" (reducing mismatch), and its magnitude is bounded below relative to $\lVert\delta\rVert^2$. The linear case has $\alpha = \mathcal{T}$. A saturating correction has $\alpha$ decreasing for large $\lVert\delta\rVert$. A threshold correction has $\alpha = 0$ for small $\lVert\delta\rVert$.
+
+The local form allows the correction to break down outside $\mathcal B_R$ — the structural adaptation regime of #result-structural-adaptation-necessity.
+
+### (A3) Tempo Monotonicity
+
+*[Assumption A3]*
+
+For fixed $\delta$, $\delta^T F(\mathcal{T}, \delta)$ is monotone increasing in $\mathcal{T}$. Higher tempo means faster correction.
+
+### Parameter interpretation
+
+The sector parameter $\alpha$ is determined by the adaptive tempo $\mathcal{T}$ and the structure of the correction function. In the linear case, $\alpha = \mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$. In nonlinear cases, $\alpha$ represents the *worst-case* correction efficiency within the valid region — the minimum ratio of correction power to mismatch magnitude. The radius $R$ represents the model class capacity: how large a mismatch can grow before the correction mechanism fails (i.e., before the sector condition ceases to hold), at which point structural adaptation ( #result-structural-adaptation-necessity) becomes necessary.
+
+---
+
 ## Derived: Gain–Sector Bridge
 
 - **Slug**: `der-gain-sector-bridge`
 - **Type**: derived
 - **Status**: conditional
-- **Stage**: draft
-- **Depends**: `emp-update-gain`, `def-mismatch-signal`, `deriv-sector-condition`, `deriv-gain-sector`
+- **Stage**: claims-verified
+- **Depends**: `emp-update-gain`, `def-mismatch-signal`, `form-sector-condition`, `deriv-gain-sector`
 
-The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at least roughly toward reality. For gradient-based agents, local strong convexity of the loss is sufficient for the one-point sector condition (A2' as stated in #deriv-sector-condition) and bidirectionally equivalent to the two-point / incremental sector condition (DA2'-inc). The sector parameter $\alpha$ is not a free parameter but is determined by the gain and the correction geometry.
+The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at least roughly toward reality. For gradient-based agents, local strong convexity of the loss is sufficient for the one-point sector condition (A2' as stated in #form-sector-condition) and bidirectionally equivalent to the two-point / incremental sector condition (DA2'-inc). The sector parameter $\alpha$ is not a free parameter but is determined by the gain and the correction geometry.
 
 ### The Bridge Theorem
 
@@ -687,7 +733,7 @@ is the strong convexity modulus. The basin radius $R$ is the largest ball around
 
 - **Two-point / incremental sector ⇔ strong convexity (full equivalence).** Under the incremental sector bound $(F(\delta_1) - F(\delta_2))^T(\delta_1 - \delta_2) \geq \alpha\lVert\delta_1 - \delta_2\rVert^2$ on $\mathcal B_R(M^\ast)$ — DA2'-inc in #deriv-discrete-sector-condition, the bridge-lemma precondition in #form-composition-closure — the iff holds via Nesterov 2004 Theorem 2.1.10:
   $$\text{Two-point sector with } (\alpha, R) \iff L \text{ is locally } (\alpha/\eta)\text{-strongly convex on } \mathcal B_R(M^\ast).$$
-- **One-point sector ⇐ strong convexity (one direction only).** AAT's GA-3 / A2' as stated in #deriv-sector-condition is the one-point form $\delta^T F(\delta) \geq \alpha\lVert\delta\rVert^2$ at $\delta^\ast = 0$. Strong convexity implies the one-point sector ($\alpha = \eta\mu$); the converse fails. Counterexample: $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies $x \cdot L'(x) \geq \tfrac{1}{2} x^2$ globally yet has $L''(\pi/10) \lt 0$, so it is not convex on any neighborhood of $x^\ast = 0$. The one-point sector at the equilibrium is genuinely weaker than full local strong convexity (cf. #result-sector-persistence-template's one-point/two-point distinction). Full proofs and the counterexample analysis in #deriv-gain-sector Prop B.4.
+- **One-point sector ⇐ strong convexity (one direction only).** AAT's GA-3 / A2' as stated in #form-sector-condition is the one-point form $\delta^T F(\delta) \geq \alpha\lVert\delta\rVert^2$ at $\delta^\ast = 0$. Strong convexity implies the one-point sector ($\alpha = \eta\mu$); the converse fails. Counterexample: $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies $x \cdot L'(x) \geq \tfrac{1}{2} x^2$ globally yet has $L''(\pi/10) \lt 0$, so it is not convex on any neighborhood of $x^\ast = 0$. The one-point sector at the equilibrium is genuinely weaker than full local strong convexity (cf. #result-sector-persistence-template's one-point/two-point distinction). Full proofs and the counterexample analysis in #deriv-gain-sector Prop B.4.
 
 ### Verified Instances
 
@@ -2267,9 +2313,9 @@ $$\alpha_\Sigma \leq \frac{\mathcal T_\Sigma}{\lvert E\rvert} \leq \mathcal T_\S
 
 - **Slug**: `form-strategy-complexity-cost`
 - **Type**: formulation
-- **Status**: discussion-grade
+- **Status**: robust-qualitative
 - **Stage**: draft
-- **Depends**: `def-strategic-tempo`, `form-information-bottleneck`, `norm-explicit-strategy-condition`, `der-chain-confidence-decay`, `form-structural-change-as-parametric-limit`, `def-value-object`, `form-objective-functional`
+- **Depends**: `def-strategic-tempo`, `form-information-bottleneck`, `norm-explicit-strategy-condition`, `der-chain-confidence-decay`, `deriv-strategy-cost-regret-bound`, `form-structural-change-as-parametric-limit`, `def-value-object`, `form-objective-functional`
 
 The complexity cost of maintaining an explicit strategy $\Sigma_t$, formulated via minimum description length and the information bottleneck principle --- connecting DAG structure to the maintenance term $C_{\text{maintain}}$ in the explicit strategy condition ( #norm-explicit-strategy-condition).
 
@@ -2392,7 +2438,7 @@ The IB objective suggests three compression operations, corresponding to structu
 
 - **Slug**: `schema-strategy-persistence`
 - **Type**: proposed-schema
-- **Status**: sketch
+- **Status**: conditional
 - **Stage**: draft
 - **Depends**: `result-sector-condition-stability`, `result-sector-persistence-template`, `def-strategic-calibration`, `def-strategy-dag`
 
@@ -2437,7 +2483,7 @@ For slow forgetting ($\lambda \to 1$, the regime where the prerequisite is most 
 
 $$\frac{1-\lambda}{2-\lambda} \;\gt\; \frac{\rho_\Sigma}{R_\Sigma} \quad\Longleftrightarrow\quad \lambda \;\lt\; \frac{R_\Sigma - 2\rho_\Sigma}{R_\Sigma - \rho_\Sigma}$$
 
-(valid when $\rho_\Sigma \lt R_\Sigma/2$; for $\rho_\Sigma \ge R_\Sigma/2$ no $\lambda$ satisfies the prerequisite and the schema's trajectory guarantee fails for any forgetting rate).
+(valid when $\rho_\Sigma \lt R_\Sigma/2$; for $\rho_\Sigma \ge R_\Sigma/2$ no $\lambda$ satisfies the prerequisite and the schema's trajectory guarantee fails for any forgetting rate). The hard ceiling at $\rho_\Sigma = R_\Sigma/2$ and the algebraic content of the steady-state form are derived self-contained in #deriv-strategic-persistence-hard-ceiling — a $\lambda$-independent structural cap on the schema's reachable persistence region under any exponential-forgetting design.
 
 This is a **prerequisite of the schema's trajectory guarantee, not a tunable heuristic**. An agent without forgetting has no long-run strategic persistence regardless of its initial $\alpha_\Sigma$. The steady-state sector parameter must exceed the disturbance-to-reserve ratio, or the instantaneous persistence check — no matter how comfortably it holds at any given time — eventually fails as experience accumulates.
 
@@ -2506,7 +2552,7 @@ When (N1) *or* (N2) fails, consolidation is a *luxury*: online update with suffi
 
 #schema-strategy-persistence derives the *plasticity lower bound* on forgetting rate $\lambda$:
 
-$$(1 - \lambda) \;\gt\; \rho_\Sigma / R_\Sigma \qquad \text{(plasticity lower bound, from #schema-strategy-persistence)}$$
+$$(1 - \lambda) \;\gt\; \rho_\Sigma / R_\Sigma \qquad \text{(plasticity lower bound, from \#schema-strategy-persistence)}$$
 
 — forgetting fast enough to track non-stationarity. This segment's complement is a *stability upper bound*:
 
@@ -2914,9 +2960,9 @@ $$ \varepsilon^\ast = \inf_{\Lambda \in \mathcal P_{\text{adm}},\, (\pi_c, E_c, 
 
 where the expected component errors evaluated over true micro-trajectories $\tau \sim \mathcal D_{\text{micro}}$, measured **per macro-step**, are:
 
-- $\varepsilon_x = \mathbb E_\tau \Big[ \frac{1}{M_H} \sum_{m=1}^{M_H} \big\lVert \Lambda_x\big(X_{\text{micro},\, m K_c}\big) - f_c\big(\Lambda_x(X_{\text{micro},\, (m-1)K_c}),\; \Lambda_o(o_{\text{micro},\, (m-1)K_c : m K_c})\big) \big\rVert_\mathcal{X} \Big]$
-- $\varepsilon_a = \mathbb E_\tau \Big[ \frac{1}{M_H} \sum_{m=1}^{M_H} \big\lVert \Lambda_a\big(a_{\text{micro},\, (m-1)K_c : m K_c}\big) - \pi_c\big(\Lambda_x(X_{\text{micro},\, (m-1)K_c})\big) \big\rVert_\mathcal{A} \Big]$
-- $\varepsilon_o = \mathbb E_\tau \Big[ \frac{1}{M_H} \sum_{m=1}^{M_H} \big\lVert \Lambda_o\big(E_{\text{obs}}(\Omega,\, a_{\text{micro}})\big\vert_{(m-1)K_c : m K_c}\big) - E_{c,\text{obs}}\big(\Lambda_\Omega(\Omega_{(m-1)K_c}),\; \pi_c(\Lambda_x(X_{\text{micro},\, (m-1)K_c}))\big) \big\rVert_\mathcal{O} \Big]$
+- $\varepsilon_x = \mathbb E_\tau \Big[ \frac{1}{M_H} \sum_{m=1}^{M_H} \big\lVert \Lambda_x\big(X_{\text{micro},\, m K_c}\big) - f_c\big(\Lambda_x(X_{\text{micro},\, (m-1)K_c}),\; \Lambda_o(o_{\text{micro},\, (m-1)K_c : m K_c})\big) \big\rVert_{\mathcal{X}} \Big]$
+- $\varepsilon_a = \mathbb E_\tau \Big[ \frac{1}{M_H} \sum_{m=1}^{M_H} \big\lVert \Lambda_a\big(a_{\text{micro},\, (m-1)K_c : m K_c}\big) - \pi_c\big(\Lambda_x(X_{\text{micro},\, (m-1)K_c})\big) \big\rVert_{\mathcal{A}} \Big]$
+- $\varepsilon_o = \mathbb E_\tau \Big[ \frac{1}{M_H} \sum_{m=1}^{M_H} \big\lVert \Lambda_o\big(E_{\text{obs}}(\Omega,\, a_{\text{micro}})\big\vert_{(m-1)K_c : m K_c}\big) - E_{c,\text{obs}}\big(\Lambda_\Omega(\Omega_{(m-1)K_c}),\; \pi_c(\Lambda_x(X_{\text{micro},\, (m-1)K_c}))\big) \big\rVert_{\mathcal{O}} \Big]$
 
 where $M_H = \lfloor H/K_c \rfloor$ is the number of macro-steps in horizon $H$, and $E_{\text{obs}}(\Omega, a_{\text{micro}})\big\vert_{(m-1)K_c : m K_c}$ denotes the window of micro-observations the environment produces across the macro-step.
 
@@ -4569,7 +4615,7 @@ $$\kappa_c(U_O) \;=\; (\alpha - C)R \;-\; \rho \;+\; \gamma_{\max}\,U_O\,\mathca
 
 (CM3) is necessary but not sufficient for composite existence. Under #scope-composite-agent, a composite exists as an AAT agent only when one of the three disjunctive alignment routes (shared objective, hierarchical derivation, mutual benefit) is satisfied. Below this threshold, no coherent $O_c$ is definable and composite-level quantities — including $R_c$ on the right of (CM2) — are ill-typed. The honest statement of composite persistence is therefore the conjunction:
 
-$$\boxed{\;\kappa_c(U_O) \gt 0 \;\wedge\; \text{#scope-composite-agent satisfied} \;\Leftrightarrow\; \text{composite persists as AAT agent}\;} \tag{CM4}$$
+$$\boxed{\;\kappa_c(U_O) \gt 0 \;\wedge\; \text{\#scope-composite-agent satisfied} \;\Leftrightarrow\; \text{composite persists as AAT agent}\;} \tag{CM4}$$
 
 $U_O$ enters (CM4) in two independent ways: multiplicatively within (CM3), and as scope-gate via #scope-composite-agent. It does **not** enter purely additively as a separate reserve term — there is no free-floating "$U_O$ contribution" detached from the coupling it modulates.
 
@@ -4694,7 +4740,7 @@ $$\delta^T F_d(\delta) \geq c_{\min} \lVert\delta\rVert^2$$
 
 $$\lVert F_d(\delta)\rVert \leq c_{\max} \lVert\delta\rVert$$
 
-The **lower bound** (DA2'a) is directional fidelity — the correction points inward, identical to the continuous sector condition (A2') from #deriv-sector-condition via #der-gain-sector-bridge.
+The **lower bound** (DA2'a) is directional fidelity — the correction points inward, identical to the continuous sector condition (A2') from #form-sector-condition via #der-gain-sector-bridge.
 
 The **Lipschitz bound** (DA2'b) controls the *magnitude* of the correction, not merely its projection onto the mismatch direction. The combined constraint $c_{\max} < 2/\eta^\ast$ is the **no-overshoot condition**: each correction step must not reverse the mismatch. This is the classical step-size condition $\eta^\ast < 2/L$ for gradient descent (where $L$ is the Lipschitz constant of the gradient). For Bayesian updates, this is satisfied by construction — the posterior lies between prior and data.
 
@@ -5178,6 +5224,74 @@ The correct claim is narrow: for a given factorized distribution, DAG and factor
 
 ---
 
+## Derivation: Hard Ceiling on Strategic-Persistence Reachability under Exponential Forgetting
+
+- **Slug**: `deriv-strategic-persistence-hard-ceiling`
+- **Type**: derivation
+- **Status**: exact
+- **Stage**: draft
+- **Depends**: `schema-strategy-persistence`, `deriv-edge-credence-dynamics`, `result-sector-persistence-template`
+
+The strategic-persistence schema's instantaneous persistence form $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ ( #schema-strategy-persistence), instantiated under Beta-Bernoulli edge dynamics with exponential forgetting at rate $\lambda \in (0,1)$, has a sharp structural cap at $\rho_\Sigma/R_\Sigma = 1/2$: no $\lambda$ satisfies the prerequisite when strategic disturbance reaches half the strategic reserve. The schema's reachable persistence region is exactly the open half-plane $\rho_\Sigma \lt R_\Sigma/2$.
+
+### Setup
+
+Per #deriv-edge-credence-dynamics Prop B.1, the Beta-Bernoulli edge update with $n$ accumulated pseudo-counts gives sector parameter $\alpha_\Sigma = 1/(n+1)$. Without forgetting, $n \to \infty$ and $\alpha_\Sigma \to 0$ for every edge asymptotically — so the schema's instantaneous persistence form eventually fails under any positive disturbance rate. *Exponential forgetting* with discount $\lambda \in (0,1)$ replaces the raw update with the discounted recurrence:
+
+*[Definition (Discounted Beta-Bernoulli Update)]*
+
+$$\alpha_k \mapsto \lambda\,\alpha_k + y_k, \qquad \beta_k \mapsto \lambda\,\beta_k + (1 - y_k)$$
+
+following the standard adaptive-control / online-learning treatment (Ljung 1987).
+
+### Proposition C.1 (Steady-State Sector Parameter)
+
+*[Derived (Conditional on Beta-Bernoulli edges + exponential forgetting)]*
+
+Under the discounted Beta-Bernoulli recurrence, the steady-state sector parameter at the fixed point $\hat p = \theta$ is:
+
+$$\alpha_\Sigma^{\text{ss}} = \frac{1-\lambda}{2-\lambda}$$
+
+*Proof.* At a fixed point in expectation, the discounted recurrence stabilizes when each pseudo-count equals its own contribution rate divided by the dissipation:
+
+$$\alpha^\ast = \lambda\,\alpha^\ast + \theta \implies \alpha^\ast = \frac{\theta}{1-\lambda}, \qquad \beta^\ast = \lambda\,\beta^\ast + (1-\theta) \implies \beta^\ast = \frac{1-\theta}{1-\lambda}$$
+
+The effective sample size is the sum:
+
+$$n_{\text{eff}} = \alpha^\ast + \beta^\ast = \frac{1}{1-\lambda}$$
+
+Substituting into Prop B.1's $\alpha_\Sigma = 1/(n+1)$ at $n = n_{\text{eff}}$:
+
+$$\alpha_\Sigma^{\text{ss}} = \frac{1}{n_{\text{eff}}+1} = \frac{1}{1/(1-\lambda) + 1} = \frac{1-\lambda}{1 + (1-\lambda)} = \frac{1-\lambda}{2-\lambda} \qquad \square$$
+
+The slow-forgetting linear form $\alpha_\Sigma^{\text{ss}} \approx 1-\lambda$ is the asymptotic expansion as $\lambda \to 1$ (the regime where the $1/(2-\lambda)$ damping factor approaches unity). Outside the slow-forgetting limit the linear form overstates the steady-state $\alpha_\Sigma^{\text{ss}}$ — at $\lambda = 0.5$ by $50\%$ ($1/3$ exact vs $1/2$ linear); at $\lambda = 0.9$ by $10\%$ ($1/11$ exact vs $1/10$ linear). The exact form is operationally the threshold to check against; the linear form is unsafe outside its asymptotic regime.
+
+### Proposition C.2 (Hard-Ceiling No-Go)
+
+*[Derived (Conditional on Prop C.1 + the schema's persistence form)]*
+
+The forgetting prerequisite for the schema's trajectory guarantee under exponential forgetting is:
+
+$$\frac{1-\lambda}{2-\lambda} \;\gt\; \frac{\rho_\Sigma}{R_\Sigma}$$
+
+This inequality is unsatisfiable for any $\lambda \in [0,1]$ when $\rho_\Sigma \geq R_\Sigma/2$. The supremum is sharp:
+
+$$\sup_{\lambda \in [0,1]} \alpha_\Sigma^{\text{ss}}(\lambda) = \frac{1}{2}$$
+
+achieved as $\lambda \to 0^+$ (maximally aggressive forgetting — no memory). The schema's reachable persistence region in $(\rho_\Sigma, R_\Sigma)$-space is exactly the open half-plane $\rho_\Sigma \lt R_\Sigma/2$.
+
+*Proof.* Let $x = \rho_\Sigma/R_\Sigma$ with $x \in [0,1)$. Solving for the threshold $\lambda$ at which the inequality becomes equality:
+
+$$(1-\lambda) = x(2-\lambda) \implies \lambda(x-1) = 2x-1 \implies \lambda = \frac{2x-1}{x-1} = \frac{1-2x}{1-x}$$
+
+For $\lambda \in (0,1)$ to admit a strict solution to the inequality, we need $\lambda \gt 0$ at the threshold. With $x \lt 1$ (denominator positive), this requires $1 - 2x \gt 0$, i.e., $x \lt 1/2$.
+
+At $x = 1/2$ exactly: the threshold $\lambda = 0$, giving $\alpha_\Sigma^{\text{ss}}(0) = (1-0)/(2-0) = 1/2 = x$ — equality, not strict satisfaction. For $x \gt 1/2$: no $\lambda \in [0,1]$ satisfies the strict inequality, since even maximally aggressive forgetting ($\lambda \to 0^+$) only achieves $\alpha_\Sigma^{\text{ss}} \to 1/2$. The supremum is exactly $1/2$ at $\lambda = 0$. $\square$
+
+Equivalently: the schema's reachable set under any exponential-forgetting design is exactly $\{(\rho_\Sigma, R_\Sigma) : \rho_\Sigma \lt R_\Sigma/2\}$. The boundary $\rho_\Sigma = R_\Sigma/2$ is not in the reachable region (strict satisfaction required), and the half-plane above the boundary is entirely outside.
+
+---
+
 ## Derivation: Regret-Bound Derivation of the Strategy-Cost KL Direction
 
 - **Slug**: `deriv-strategy-cost-regret-bound`
@@ -5624,7 +5738,7 @@ Standard Lyapunov ultimate-boundedness (Khalil 2002 Thm 4.18) applied to the aug
 
 *[Formulation (sub-scope-refinement)]*
 
-The adaptive-gain analysis refines #deriv-sector-condition's A2' sub-scope partition into three tiers:
+The adaptive-gain analysis refines #form-sector-condition's A2' sub-scope partition into three tiers:
 
 **Sub-scope $\alpha_1$ — fixed-gain, A2' derived.** #der-gain-sector-bridge Prop B.3's current scope: the gain $K$ is treated as a static function of fixed noise model parameters. A2' is derived from B1 directional fidelity. Covers Kalman with known $(Q, R)$, conjugate-Bayesian updates, exponential-family MLE, linear correction with PD $KH$, strongly-convex-gradient fixed-step-size.
 
@@ -6450,7 +6564,7 @@ Specializing further to the matched-symmetric case ($\lambda_1 = \lambda_2 = \la
 - **Stage**: draft
 - **Depends**: `deriv-sector-condition`, `result-sector-persistence-template`, `der-gain-sector-bridge`, `form-strategy-complexity-cost`, `disc-compression-operations`
 
-Variational / approximate-posterior agents (VI, amortized VI, active-inference-style variational free energy) currently sit in A2' sub-scope $\beta$ per `#deriv-sector-condition`: their correction functions target the *best-in-class* variational posterior $q^\ast$ rather than the true posterior $p$, and the approximation gap can rotate the correction direction enough to break B1 directional fidelity ( #der-gain-sector-bridge). Under a KL bound $\mathrm{KL}(q_\phi \Vert p) \leq \varepsilon$ on the variational approximation, directional fidelity recovers in a quantifiable form: **ε-fidelity B1**, with sector-constant degradation scaling as $O(\sqrt\varepsilon)$ (Pinsker-tight). The sector-persistence template applies under a Regime-A / Regime-B decomposition — clean sector bound on an annulus away from the projection-error floor, approximation-dominated on a ball of radius $\delta_0 = O(\sqrt\varepsilon)$ around the target. This promotes controlled-KL VI from sub-scope $\beta$ to a new intermediate tier $\alpha'$ within the A2' partition (cf. the α / α₁ / α₂ / β refinements from `#deriv-adaptive-gain-dynamics` and `#deriv-fisher-whitened-update-rule`).
+Variational / approximate-posterior agents (VI, amortized VI, active-inference-style variational free energy) currently sit in A2' sub-scope $\beta$ per `#form-sector-condition`: their correction functions target the *best-in-class* variational posterior $q^\ast$ rather than the true posterior $p$, and the approximation gap can rotate the correction direction enough to break B1 directional fidelity ( #der-gain-sector-bridge). Under a KL bound $\mathrm{KL}(q_\phi \Vert p) \leq \varepsilon$ on the variational approximation, directional fidelity recovers in a quantifiable form: **ε-fidelity B1**, with sector-constant degradation scaling as $O(\sqrt\varepsilon)$ (Pinsker-tight). The sector-persistence template applies under a Regime-A / Regime-B decomposition — clean sector bound on an annulus away from the projection-error floor, approximation-dominated on a ball of radius $\delta_0 = O(\sqrt\varepsilon)$ around the target. This promotes controlled-KL VI from sub-scope $\beta$ to a new intermediate tier $\alpha'$ within the A2' partition (cf. the α / α₁ / α₂ / β refinements from `#deriv-adaptive-gain-dynamics` and `#deriv-fisher-whitened-update-rule`).
 
 ### ε-fidelity B1
 
