@@ -91,9 +91,9 @@ $$\kappa_c(U_O) \;=\; (\alpha - C)R \;-\; \rho \;+\; \gamma_{\max}\,U_O\,\mathca
 
 *[Scope (scope-gate-from-composition-scope-condition)]*
 
-(CM3) is necessary but not sufficient for composite existence. Under #scope-composite-agent, a composite exists as an AAT agent only when one of the three disjunctive alignment routes (shared objective, hierarchical derivation, mutual benefit) is satisfied. Below this threshold, no coherent $O_c$ is definable and composite-level quantities — including $R_c$ on the right of (CM2) — are ill-typed. The honest statement of composite persistence is therefore the conjunction:
+(CM3) is necessary but not sufficient for composite existence. Under #scope-composite-agent, a composite exists as an AAT agent only when one of the three disjunctive alignment routes (shared objective, hierarchical derivation, mutual benefit) is satisfied. Below this threshold, no coherent $O_c$ is definable and composite-level quantities — including $R_c$ on the right of (CM2) — are ill-typed. The honest statement of composite persistence is therefore the conjunction of $\kappa_c(U_O) \gt 0$ with the scope conditions of #scope-composite-agent — abbreviated $\mathcal{S}_c$:
 
-$$\boxed{\;\kappa_c(U_O) \gt 0 \;\wedge\; \text{#scope-composite-agent satisfied} \;\Leftrightarrow\; \text{composite persists as AAT agent}\;} \tag{CM4}$$
+$$\boxed{\;\kappa_c(U_O) \gt 0 \;\wedge\; \mathcal{S}_c \;\Leftrightarrow\; \text{composite persists as AAT agent}\;} \tag{CM4}$$
 
 $U_O$ enters (CM4) in two independent ways: multiplicatively within (CM3), and as scope-gate via #scope-composite-agent. It does **not** enter purely additively as a separate reserve term — there is no free-floating "$U_O$ contribution" detached from the coupling it modulates.
 

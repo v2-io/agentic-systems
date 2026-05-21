@@ -87,7 +87,7 @@ Let $\mu := \mathbb{E}[\xi_k] = \mathbb{E}[\rho_k] - \mathbb{E}[\varrho_{\text{r
 
 The thresholds above are not analogies to #result-persistence-condition; they are the **same template** with the substitution made literal:
 
-$$\underbrace{\alpha R \;\gt\; \rho}_{\text{#result-persistence-condition}} \qquad\rightsquigarrow\qquad \underbrace{\mathbb{E}[\varrho_{\text{rg},k}] \;\gt\; \mathbb{E}[\rho_k]}_{\text{continuity-persistence}}, \qquad R^\ast = \rho/\alpha \;\rightsquigarrow\; R^\ast_{\text{id}} = \bar\rho/\alpha_{\text{id}}.$$
+$$\underbrace{\alpha R \;\gt\; \rho}_{\text{structural persistence}} \qquad\rightsquigarrow\qquad \underbrace{\mathbb{E}[\varrho_{\text{rg},k}] \;\gt\; \mathbb{E}[\rho_k]}_{\text{continuity-persistence}}, \qquad R^\ast = \rho/\alpha \;\rightsquigarrow\; R^\ast_{\text{id}} = \bar\rho/\alpha_{\text{id}}.$$
 
 The disturbance $\rho_k$ *is* #deriv-identity-sufficiency-rate-bound's static floor, evaluated at boundary $k$ at fidelity $\Delta$ and read as a rate — the dynamic theorem is what you get when the floor is the per-tick forcing of the canonical AAT recursion rather than a single snapshot.
 

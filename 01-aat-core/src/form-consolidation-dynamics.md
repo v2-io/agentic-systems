@@ -61,7 +61,7 @@ When (N1) *or* (N2) fails, consolidation is a *luxury*: online update with suffi
 
 #schema-strategy-persistence derives the *plasticity lower bound* on forgetting rate $\lambda$:
 
-$$(1 - \lambda) \;\gt\; \rho_\Sigma / R_\Sigma \qquad \text{(plasticity lower bound, from #schema-strategy-persistence)}$$
+$$(1 - \lambda) \;\gt\; \rho_\Sigma / R_\Sigma \tag{plasticity lower bound}$$
 
 — forgetting fast enough to track non-stationarity. This segment's complement is a *stability upper bound*:
 
