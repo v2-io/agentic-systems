@@ -44,5 +44,8 @@ The prior art for "Class Coercion"—wrapping an entangled system in a separated
 
 AAT's "Directed Separation" taxonomy is highly grounded, serving as a unifying nomenclature for a dichotomy that has existed in disparate fields for 50 years. 
 
-**What is Novel:** 
-While control theorists know about the Separation Principle, and cognitive scientists know about Active Inference, AAT's novelty lies in formalizing this as an *architectural class continuum* (Class 1 to Class 3) and introducing the formal dynamics of **Class Coercion**. Framing the orchestration of modern AI models (like LLMs) as coercing a Class 3 component into a Class 1 composite—and formally deriving the resulting tempo/bandwidth penalty as a cognitive analog to Brooks's Law—is a highly novel synthesis of control theory, systems architecture, and modern AI engineering.
+**AAT's Novel Contribution:** 
+AAT provides both synthetic architectural novelty and **pure mathematical novelty**. 
+While control theorists know about the Separation Principle, and cognitive scientists know about Active Inference, AAT formalizes this as an *architectural class continuum* (Class 1 to Class 3). 
+
+Crucially, in the domain of "Class Coercion" (wrapping an entangled Class 3 system like an LLM in a separated scaffold), AAT moves beyond architectural metaphor and proves **formal KL-divergence leakage bounds**. By applying the data-processing inequality, AAT mathematically bounds the leakage of goal-information into the belief-update based on the mutual information in the component's pre-training distribution ($D_{KL} \le \kappa$). Deriving this structural boundary—and formally partitioning "Class-1-by-structure" from "Class-1-by-behavior"—is a novel mathematical formalization of modern AI scaffolding limits.
