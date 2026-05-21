@@ -10,7 +10,9 @@ stage: draft
 
 # Scope: AND/OR Combination Scope
 
-We restrict to environments where the causal combination of strategy steps is approximately conjunctive (AND: all parents required) or disjunctive (OR: any parent sufficient), without strong interaction effects between parents.
+We restrict to environments where the causal combination of strategy steps is approximately conjunctive (AND: all parents required) or disjunctive (OR: any parent sufficient), without strong interaction effects between parents. Each node is assigned a combination type by answering the causal question: "if I remove one parent, can this node still be achieved?" Yes → OR. No → AND. With single-parameter edges (one number per edge rather than a $2^k$ conditional probability table), this gives $k$ parameters per node instead of an exponential explosion.
+
+The scope is honest about being a *restriction*, not a derivation, though it converged independently across three different formalism attempts ( #def-strategy-dag). The excluded case — complementarity, substitutability, and interaction effects between parents (synergistic drug interactions where combined effect exceeds the sum; complementary goods where neither is useful alone; strategic surprise where action combinations matter more than individual actions) — requires richer combination rules and is named as a legitimate divergence point for future work. The parsimony argument is that for binary-outcome nodes, AND and OR form a complete Boolean basis (DNF/CNF normal forms), and under bounded cognition ( #form-information-bottleneck) the agent needs the most expressive low-parameter representation. AND/OR is the natural candidate; for continuous or multi-valued outcomes the same completeness properties do not necessarily hold (min/max or additive/multiplicative are natural analogs but their completeness is open).
 
 ## Formal Expression
 

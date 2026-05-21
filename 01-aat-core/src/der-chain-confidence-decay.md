@@ -9,7 +9,9 @@ stage: claims-verified
 
 # Derived: Chain Confidence Decay
 
-Confidence in a multi-step strategy decays monotonically with depth. The rate depends on the conditional dependence structure, but the qualitative result — longer chains are less confident than shorter ones — is robust.
+A simple but load-bearing identity: for a chain of uncertain steps in a strategy, the log-probability of the whole chain is the sum of conditional log-probabilities of each step given the steps before it. Since each conditional log-probability is non-positive, chain confidence *decays monotonically with depth*. This is the chain rule of probability lifted to log-space — a mathematical identity, true under no assumptions beyond the probability axioms. The rate depends on the conditional dependence structure (independent steps give $p^n$ decay; positively correlated steps decay more slowly; negatively correlated steps decay faster), but the qualitative result — longer chains are less confident than shorter ones — is robust.
+
+The framework foregrounds two structural roles for this elementary identity that the algebraic form understates. First, chain depth carries a **triple penalty** — confidence decay (here), evidence starvation ( #deriv-edge-credence-dynamics), and cognitive cost ( #form-strategy-complexity-cost) — compounding independently to set the maximum useful chain depth. Second, this identity is the **anchor of the additive-coordinate-forcing meta-pattern**: three further AAT uniqueness theorems at the divergence, update, and metric layers cite the log-additive structure of the chain rule as the motivation for their respective additivity axioms ( #disc-additive-coordinate-forcing). An identity at the head of this chapter does load-bearing work three layers deep across the framework.
 
 ## Formal Expression
 

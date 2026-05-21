@@ -10,7 +10,11 @@ stage: draft
 
 # Definition: Satisfaction Gap
 
-The satisfaction gap measures the distance between what the objective requires and what the best available one-step policy improvement can deliver, under the current model and horizon. Under the canonical continuation convention ( #def-value-object), this is a *local* diagnostic — it answers "can I improve toward the goal from here?" not "is the goal globally feasible?" A multi-step recoverable objective may show positive $\delta_{\text{sat}}$ because continuation is frozen at $\pi_{\text{current}}$. Different continuation conventions yield different gap values; see Epistemic Status.
+The first of two orthogonal diagnostic quantities that together separate "the goal is too hard" from "the strategy is too weak" ( #def-control-regret is the second). The framework first defines **objective attainability** $A_O$ as the best achievable value given the agent's current beliefs $M_t$, available policy class $\Pi$, and planning horizon $N_h$ — the supremum of the value object over policies. The **satisfaction gap** $\delta_{\text{sat}}$ is then the distance between the objective's satisfaction threshold $V_{O_t}^{\min}$ and this attainability: positive when the objective is *unmet* under the best available policy given the current model and horizon; non-positive when the objective is attainable in principle.
+
+A positive $\delta_{\text{sat}}$ does not automatically mean the goal is wrong. The signal has multiple possible causes — genuinely infeasible objective, too-narrow policy class, too-short horizon, model wrong about feasibility, or jointly-infeasible compound terminals — each with a different remedy. **Objective revision is the last resort, not the first response to unmet goals.** The orient cascade ( #der-orient-cascade) formalizes this ordering, and the disambiguation table below encodes the diagnostic procedure.
+
+Under the canonical continuation convention ( #def-value-object), $\delta_{\text{sat}}$ is a *local* diagnostic — it answers "can I improve toward the goal from here?" not "is the goal globally feasible?" The gap value is **convention-relative**: the C1 / C2 / C3 hierarchy on continuation conventions induces a monotonicity hierarchy on the gap (C1 most conservative, C3 strongest), so analyses using different conventions cannot be directly compared. See Epistemic Status.
 
 ## Formal Expression
 
