@@ -45,9 +45,46 @@ The AI Trust literature explicitly separates competence from alignment/sincerity
 
 The core components of AAT's shared intent and trust model are highly precedented. The application of IB to multi-agent communication is standard in recent MARL (Wang 2019). The separation of trust into competence and integrity is standard in Multi-Agent Systems (Smith 2005). The economic logic of Auftragstaktik is established (Dessein 2002).
 
-**AAT's Novel Contribution:**
-AAT's contribution here is almost entirely **Architectural Synthesis**, explicitly linking communication limits directly to the agent's internal control-theoretic variables.
+**Where AAT actually contributes:**
 
-1. **Unified Capacity Allocation:** While MARL researchers use IB to optimize neural network messages, and economists use game theory to model delegation, AAT unifies them by placing them on the same physical cybernetic metric: **Adaptive Tempo**. AAT frames Auftragstaktik not just as an economic choice, but as a mathematically required bandwidth allocation that minimizes the "closure defect" of a composite agent.
-2. **The Communication Gain Operator:** AAT takes the Kalman/Fisher gain operator derived in its core tracking loop and structurally expands its denominator to include the trust terms ($\eta_{ji}^* = U_M / (U_M + U_o + U_{\text{src}} + U_{\text{align}})$). This elegantly unifies pure sensor noise with game-theoretic deception into a single, computable geometric update scalar. 
-3. **Triggering the Effects Spiral:** By mandating a risk-asymmetric (CVaR) trust model, AAT explicitly links multi-agent trust directly back to its "Effects Spiral" No-Go theorem (Topic 08). It frames risk-asymmetric trust not merely as a preference, but as a structural requirement to prevent the adversary's $\gamma$-coupling term from collapsing the agent's Lyapunov persistence bound.
+1. **Shared intent as the third of four AAT compression operations (architectural-synthetic novelty; cross-row 19).** The IB compression of $G_t^{\text{full}} = (O_t, \Sigma_t)$ to $G_t^{\text{shared}}$ for relevance variable $a_t^{\text{coordinated}}$ is the *third* of AAT's four compression operations (epistemic model / strategy DAG / shared intent / composition projection). Placing inter-agent communication in the same compression family as belief construction, strategy formation, and macro-projection is an AAT-native architectural move. The U-medium honest distinction (shared shape, NOT single optimization problem) applies here just as for the other instances.
+
+2. **The Auftragstaktik Principle as a *derived* prediction (theorem-grade content).** From the IB compression structure of shared intent: under limited bandwidth, prioritize **objectives** (compact, slow-changing) over **strategies** (moderate size, moderate change rate) over **strategic details** (large, fast-changing, low coordination value). This is not an economic choice or managerial convention — it follows structurally from the rate-distortion form: objectives give long shelf-life per bit transmitted when $\nu_O \ll \nu_\Sigma$. Dessein 2002 / Segal 2001 give economic ancestry; AAT's derivation route is information-bottleneck rather than incentive-compatibility.
+
+3. **The Communication Gain Operator (theorem-grade math; AAT-native methodological invention).** Extends the Kalman/Fisher gain $\eta^* = U_M / (U_M + U_o)$ to a four-component form:
+$$\eta_{ji}^* = \frac{U_M}{U_M + U_o + U_{\text{src}} + U_{\text{align}}}$$
+where $U_{\text{src}}$ is source epistemic uncertainty and $U_{\text{align}}$ is source teleological uncertainty. This unifies pure sensor noise (rows 02/03) with game-theoretic deception (multi-agent trust) into a single computable geometric update scalar. Nash-style derivation: extension of Fisher-gain machinery to communication-with-trust setting in an AAT-internal axiomatic setting.
+
+4. **Risk-asymmetric (CVaR) trust as structural requirement (synthetic novelty + theorem-grade content; cross-row 10).** AAT mandates a CVaR-quantile trust meta-model rather than mean-expected Bayesian trust. The reason is structural: misplaced trust in an adversarial setting triggers the row-10 Effects Spiral (the adversary's coupling term $\gamma_A$ amplifies once $B$ is past reserve). Mean-expected trust is incompatible with the spiral's positive-feedback structure; CVaR is necessary to bound the tail-event-driven destabilization. This makes risk-asymmetric trust a *structural requirement* rather than a preference. Chow et al. 2015 give the CVaR-optimization-in-MDPs ancestor; AAT's contribution is the structural-necessity linkage to the effects spiral.
+
+5. **Multi-dimensional trust unified with the IB compression and Fisher-gain machinery (synthetic novelty).** Villata et al. 2012, Smith & desJardins 2005/2009 separate competence from sincerity. AAT places this in the same Fisher-gain coordinate system as observation quality, with $U_{\text{src}}$ and $U_{\text{align}}$ as named entries in the gain denominator. The two-axis trust framework is *integrated* into the cybernetic tracking machinery rather than treated as a separate management overlay.
+
+6. **Connection to context-window discipline for AAT-internal agents (applied novelty).** The shared-intent compression is also useful for an agent preserving its own state across context boundaries — the language-model 100% context turnover problem. Store the IB-compressed purposeful state, not the full state. This is a concrete bridge to the `04-eli-core/` continuity-infrastructure work (where context-window resets are a primary substrate concern).
+
+**AAT-native methodological inventions on this row:**
+- The four-component Communication Gain $\eta_{ji}^* = U_M / (U_M + U_o + U_{\text{src}} + U_{\text{align}})$ unifying sensor noise and trust into the Fisher-gain framework.
+- The CVaR-trust-as-structural-requirement linkage to the row-10 effects spiral.
+- The placement of shared intent as the third of four compression operations (cross-row 19).
+- The Auftragstaktik Principle as derived from rate-distortion structure (not economic theory).
+- The Brave/conservative trust prior options and the dynamic-tightening update rule (cf. `hyp-communication-gain` Working Notes).
+
+**Where AAT does *not* claim novelty:**
+- IB compression for MARL communication (Wang et al. 2019, Mostaani 2020).
+- The economic formalization of delegation / commander's intent (Dessein 2002, Segal 2001).
+- The competence-vs-sincerity trust decomposition (Villata 2012, Smith & desJardins 2005/2009).
+- CVaR optimization in MDPs (Chow et al. 2015).
+- The Auftragstaktik concept itself (military doctrine from at least Moltke the Elder, 19th c.).
+- The Fisher gain itself (Amari, classical adaptive filtering).
+
+**Epistemic status of the load-bearing segments.**
+- `#def-shared-intent` is `status: discussion-grade` (the IB formulation makes strong assumptions: sender knows jointly optimal action, lossless compression, fixed $\beta$).
+- `#hyp-communication-gain` is `status: hypothesis-grade` (the four-component gain extension is structurally motivated but not yet validated empirically).
+- `#hyp-auftragstaktik-principle` is `status: hypothesis-grade` (the bandwidth-prioritization prediction follows from the IB structure under the stated rate assumptions).
+- `#impl-unity-communication` is `status: discussion-grade` (placement of shared intent inside the chapter-end implications).
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **Some.** The communication-gain extension is theorem-grade derivation (Fisher-gain machinery extended to trust-augmented setting). The CVaR-trust-as-structural-requirement linkage to the spiral is derived from row 10's persistence machinery. Discussion-grade at the IB-formulation level; theorem-grade at the gain and persistence levels.
+- *Arch Novelty:* **High.** Communication Gain with four-component trust expansion; CVaR-trust-as-structural-requirement; placement of shared intent in the compression-operations family; the brave-vs-conservative trust prior dynamics.
+- *Synth Novelty:* **Medium.** Brings together IB-for-MARL-communication, multi-dimensional trust, CVaR risk-sensitive control, and Auftragstaktik economic theory under one Fisher-gain framework.
+- *Appl Novelty:* **Some.** Direct application to multi-agent coordination + context-window discipline for AAT-internal agents (the LLM 100% context turnover bridge to 04-eli-core).
+- *Impact:* **Medium.** Memo: "high impact if the IB-Auftragstaktik bandwidth-optimal claim becomes standard language for organizational communication design." The CVaR-trust-as-structural-requirement linkage is sharp enough to be useful, but the impact ceiling is bounded by the segments being discussion-grade and hypothesis-grade rather than derived.
