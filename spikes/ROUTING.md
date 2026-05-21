@@ -722,11 +722,7 @@ settled); plus the 10 moved spikes' rows → `.integrated/`.
 
 *Relocation + process-fix + the 2026-05-19 INDEX reconciliation: done (log (p) — including the 2026-05-19 integration cycles' own rows and `.integrated/MANIFEST-2026-05-19.md`). The cycle's mine-to-do hygiene is discharged; what remains is honestly tiered and queued in durable homes (per §0c — not escalating).*
 
-1. **Reserved (Joseph's; durable home = [`../PROPOSALS.md`](../PROPOSALS.md)
-   §D.9 "RESERVED DECISION (2026-05-18)" + [`../PRACTICA.md`](../PRACTICA.md)
-   item 7).** The Instance-4 / Object-B / CL-2-heavy unification — *one*
-   decision; math gate CLEARED (`SPIKE-VERIFY-471802`) modulo its named
-   repairs; canon carries the §4.1 marks + honest tiers. Not mine to land.
+1. **Reserved decision INTEGRATED 2026-05-21** (durable home was [`../PROPOSALS.md`](../PROPOSALS.md) §D.9, now CLOSED; tracking item retired from [`../PRACTICA.md`](../PRACTICA.md)). The Instance-4 / Object-B / CL-2-heavy unification landed as a single integration per `spikes/identifiability-floor-integration-plan.md`: Object B as `#der-architecture-noidentifiability` (Kalman-Ho similarity-orbit no-go, exact in linear-Gaussian sub-scope; CHT-at-agent-as-SCM, robust qualitative general; mechanism = Instance-2 Fisher-null on a $GL(n)$ Lie-group fiber, Sylvester at one remove); Instance 4 installed in `#disc-identifiability-floor` with the Sylvester-mechanism taxonomy repaired to three rank-collapse members $\{$Instance 1, Instance 2, Instance 4$\}$; Object A explicitly absorbed in `#disc-additive-coordinate-forcing` §"Downstream consequences of the (PI) commitment" with the floor-vs-coordinate-forcing distinction articulated; CL-2 heavy refinement discharged as the same object projected onto the disturbance-statistic coordinate (resolution spike §7). Math-gate repairs applied. CHANGELOG 2026-05-21. The relevant spikes (resolution / triage / neutral-drift / rho-recheck) move to `.integrated/` once a re-verify confirms no orphan content remains in each; the discharged spikes' integration-trail notes are added by the same cycle.
 2. **CL-1** (`#dissipativity-template`: passivity-composition + pid-a2prime
    + bridge §7.2) — heavy coupled landing; integration-plan owed; queued
    in PROPOSALS §D.9 / TODO.

@@ -1,5 +1,8 @@
 # Spike: Triaging the Four Candidate `#disc-identifiability-floor` Instances
 
+> [!note]
+> **Integration trail (2026-05-21):** triage verdicts integrated into canon. Candidate-2 (architecturally-distinct, behaviorally-identical agents — Object B) upgraded from triage's robust-qualitative judgment to a derived result, landed as `#der-architecture-noidentifiability` (Kalman-Ho similarity-orbit no-go in the linear-Gaussian sub-scope, exact; CHT-at-agent-as-SCM general, robust qualitative; mechanism reduction to Instance-2 Fisher-null on a $GL(n)$ Lie-group fiber, Sylvester at one remove). Candidate-3 (universal-$C$ under non-(PI) norms — Object A) confirmed not-a-floor and re-homed: explicitly absorbed in `#disc-additive-coordinate-forcing` §"Downstream consequences of the (PI) commitment" with the floor-vs-coordinate-forcing distinction articulated (external-theorem role inverted: Čencov *forces* the escape's uniqueness rather than *forbids* the task; single forced escape logically incompatible with floor's $\geq 2$-distinct-escapes structure). Triage's direction was correct; the 2026-05-18 resolution spike supplied the derivations underneath it. CHANGELOG 2026-05-21.
+
 *Started 2026-04-24. Research / analytic spike. Not canon. No segment files modified.*
 
 **Status.** Triage spike for the gating decision on which (if any) of four candidate instances should promote to `#disc-identifiability-floor`, in what order, with what subsumption structure, and with what effect on the meta-segment's growth.

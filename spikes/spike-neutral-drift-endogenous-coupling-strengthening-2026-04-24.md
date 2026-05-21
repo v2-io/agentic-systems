@@ -1,5 +1,8 @@
 # Spike: Neutral Drift & Endogenous Coupling — Strengthening Attempt
 
+> [!note]
+> **Integration trail (2026-05-21):** §8 / §10.1 architecture-noidentifiability candidate (the "Object B" thread of the contested Instance 4) upgraded from sketch to derived, landed as `#der-architecture-noidentifiability` per the 2026-05-18 resolution spike's independent re-derivation. Kalman-Ho closed-form construction now supplied (mathematical content the §8 sketch said it "does NOT yet have"); mechanism reduction to Instance-2 Fisher-null on a $GL(n)$ Lie-group fiber supplied (the spike reached "Jordan-form-preserving manifold" but did not name the mechanism); proposed Fano anchor retracted (Fano degenerates to vacuous at $I = 0$; Kalman-Ho is the exact anchor and Fano is honestly open as the finite-sample refinement). CHANGELOG 2026-05-21. **Spike retains other content beyond the §8 / §10.1 thread; not moved to `.integrated/` until the rest is verified discharged.**
+
 **Date**: 2026-04-24
 **Status**: Exploratory strengthening spike. Prompted by Gemini's reiteration of the "neutral drift / endogenous $\gamma$" gap (after reading `spikes/spike-neutral-drift-lyapunov.md` and prior snapshot of Section III).
 **Prior art in-project**: `spikes/spike-neutral-drift-lyapunov.md` (the original framing of the gap); `spikes/spike-miller-act-bridge.md`; `spikes/spike-kappa-hb-operationalization.md`; `spikes/spike-kappa-topology-insight.md`.

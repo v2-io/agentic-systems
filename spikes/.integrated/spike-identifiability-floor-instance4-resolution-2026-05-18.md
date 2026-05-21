@@ -1,5 +1,8 @@
 # Spike: Resolving the Contested Instance 4 of `#disc-identifiability-floor` — Independent Re-derivation
 
+> [!note]
+> **Integration trail (2026-05-21):** verdict integrated into canon per `spikes/identifiability-floor-integration-plan.md`. Object B landed as new appendix segment `#der-architecture-noidentifiability` (Kalman-Ho similarity-orbit no-go with the math-gate repairs applied: moment-claim restricted to similarity-invariant summaries; Lyapunov sign matched to canon convention $F\Pi + \Pi F^\top = \sigma_w\sigma_w^\top$; exact / robust-qualitative tier boundary carried consistently). `#disc-identifiability-floor` Instance 4 reinstalled as architecture-noidentifiability with the Sylvester-mechanism taxonomy repaired (rank-collapse trio {I1, I2, I4}, projection {I3}). Object A explicitly absorbed in `#disc-additive-coordinate-forcing` §"Downstream consequences of the (PI) commitment" with the floor-vs-coordinate-forcing distinction articulated. The CL-2 heavy refinement (Regime-C confound) discharged as the same object projected onto the disturbance-statistic coordinate (§7 of this spike). PROPOSALS §D.9 CLOSED. CHANGELOG 2026-05-21. The Fano finite-sample refinement remains honestly open as a separate follow-on direction (§4).
+
 *Started 2026-05-18. Research spike. Not canon. Truth-establishing only;
 routing / `.integrated` moves / segment edits are a separate parent call
 (this spike does not move or edit segments). Per `doc/spike-routing.md` §0:

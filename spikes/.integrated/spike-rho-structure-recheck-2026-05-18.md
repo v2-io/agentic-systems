@@ -1,5 +1,8 @@
 # Spike: The True Structure of the Effective Disturbance Rate $\rho$ — Independent Re-derivation
 
+> [!note]
+> **Integration trail (2026-05-21):** §3 Regime-C confound now derived in canon as `#der-architecture-noidentifiability`'s no-go projected onto the disturbance-statistic coordinate — the §7 CL-2 linkage in the 2026-05-18 resolution spike supplied the projection proof (`#result-mismatch-decomposition` C3, $\Delta_{\text{agent}}^2$ as a functional of the agent's architecture; on-policy summary-only data confounds the model-class/policy split for exactly the similarity-orbit reason). The LIGHT exact core (two-term identity already forced by canon; one-line constitutive no-go) was previously landed in `#internal-external-decomposition` (CHANGELOG 2026-05-18); the HEAVY conditional 𝓜/π/cross refinement is now also discharged — same no-go, same escapes (Regime A interventional = `#der-architecture-noidentifiability` escape (a); Regime B functional-form = orbit-quotient, family (b)/(c)). PROPOSALS §D.9 CLOSED. CHANGELOG 2026-05-21. **Both LIGHT and HEAVY parts now discharged; spike eligible for `.integrated/` move once a re-verify confirms no orphan content remains in other sections.**
+
 *Started 2026-05-18. Research spike. Not canon. Truth-establishing only;
 routing/landing is a separate parent call (this spike does not move or edit
 segments).*
