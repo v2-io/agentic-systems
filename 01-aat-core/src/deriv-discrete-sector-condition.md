@@ -118,7 +118,7 @@ The structure is identical to the continuous adaptive reserve $\Delta\rho^\ast =
 
 $$\mathbb{E}[\lVert\delta_k\rVert^2] \leq \lambda^{2k}_{\text{eff}} \lVert\delta_0\rVert^2 + \frac{\sigma^2_{\text{step}}}{1 - \lambda^2_{\text{eff}}}$$
 
-where $\lambda^2_{\text{eff}} = 1 - 2\eta^\ast c_{\min} + (\eta^\ast)^2 c^2_{\max}$.
+where $\lambda_{\text{eff}}^2 = 1 - 2\eta^\ast c_{\min} + (\eta^\ast)^2 c_{\max}^2$.
 
 **Proof.** Define $V_k = \lVert\delta_k\rVert^2$. Taking expectations of the squared update:
 
@@ -140,11 +140,11 @@ The condition $\eta^\ast \lt 2c_{\min}/c_{\max}^2$ ensures $\lambda^2_{\text{eff
 
 $$\mathbb{E}[V_k] \leq \lambda^{2k}_{\text{eff}} V_0 + \frac{\sigma^2_{\text{step}}}{1 - \lambda^2_{\text{eff}}}$$
 
-The steady-state mean-square mismatch is $\sigma^2_{\text{step}} / (1 - \lambda^2_{\text{eff}})$. $\square$
+The steady-state mean-square mismatch is $\sigma_{\text{step}}^2 / (1 - \lambda_{\text{eff}}^2)$. $\square$
 
-**Recovery of continuous result.** In the fluid limit: $\sigma^2_{\text{step}} \to n\sigma^2_w / \nu$, $\lambda^2_{\text{eff}} \to 1 - 2\eta^\ast c_{\min}$, and $(1 - \lambda^2_{\text{eff}}) \to 2\eta^\ast c_{\min}$. The steady-state becomes $n\sigma^2_w / (2\nu \eta^\ast c_{\min}) = n\sigma^2_w / (2\alpha)$, recovering Prop A.1S exactly.
+**Recovery of continuous result.** In the fluid limit: $\sigma_{\text{step}}^2 \to n\sigma_w^2 / \nu$, $\lambda_{\text{eff}}^2 \to 1 - 2\eta^\ast c_{\min}$, and $(1 - \lambda_{\text{eff}}^2) \to 2\eta^\ast c_{\min}$. The steady-state becomes $n\sigma_w^2 / (2\nu \eta^\ast c_{\min}) = n\sigma_w^2 / (2\alpha)$, recovering Prop A.1S exactly.
 
-The discrete-to-continuous gap for Model S variance is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$, dominated by the conditioning ratio $c_{\max}^2/c_{\min}^2$. Substituting $\sigma^2_{\text{step}} = n\sigma_w^2/\nu$ and $\eta^\ast = \mathcal{T}/\nu$ into $V_{ss} = \sigma^2_{\text{step}}/(1 - \lambda^2_{\text{eff}})$ and Taylor-expanding at small $\eta^\ast$:
+The discrete-to-continuous gap for Model S variance is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$, dominated by the conditioning ratio $c_{\max}^2/c_{\min}^2$. Substituting $\sigma_{\text{step}}^2 = n\sigma_w^2/\nu$ and $\eta^\ast = \mathcal{T}/\nu$ into $V_{ss} = \sigma_{\text{step}}^2/(1 - \lambda_{\text{eff}}^2)$ and Taylor-expanding at small $\eta^\ast$:
 
 $$\frac{V_{ss}}{V_c} = \frac{1}{1 - \eta^\ast c_{\max}^2/(2 c_{\min})} = 1 + \frac{\eta^\ast c_{\max}^2}{2 c_{\min}} + O((\eta^\ast)^2)$$
 
@@ -152,7 +152,7 @@ so
 
 $$V_{ss} - V_c \approx \frac{n\sigma_w^2\, c_{\max}^2}{4 c_{\min}^2\, \nu}$$
 
-— a leading correction that scales as $1/\nu$. The $(\eta^\ast)^2 \lVert F_d\rVert^2$ term in the per-step recurrence enters $1 - \lambda^2_{\text{eff}}$ at order $(\eta^\ast)^2$, but the steady-state ratio $\sigma^2_{\text{step}}/(1 - \lambda^2_{\text{eff}})$ inverts the leading $2\eta^\ast c_{\min}$ contraction, yielding $O(\eta^\ast)$ asymptotic gap rather than $O((\eta^\ast)^2)$. This quantifies the error introduced by GA-5 and confirms it is small whenever $c_{\max}^2/(c_{\min}^2 \nu) \ll 1$.
+— a leading correction that scales as $1/\nu$. The $(\eta^\ast)^2 \lVert F_d\rVert^2$ term in the per-step recurrence enters $1 - \lambda_{\text{eff}}^2$ at order $(\eta^\ast)^2$, but the steady-state ratio $\sigma_{\text{step}}^2/(1 - \lambda_{\text{eff}}^2)$ inverts the leading $2\eta^\ast c_{\min}$ contraction, yielding $O(\eta^\ast)$ asymptotic gap rather than $O((\eta^\ast)^2)$. This quantifies the error introduced by GA-5 and confirms it is small whenever $c_{\max}^2/(c_{\min}^2 \nu) \ll 1$.
 
 ### Fluid Limit Theorem
 
@@ -168,7 +168,7 @@ for a constant $C$ depending on $T$, $L_F$, and $R$.
 
 For Model D (deterministic): the steady-state gap is exactly zero (both discrete and continuous converge to the same fixed point). The fluid-limit error affects only transients.
 
-For Model S (stochastic): the steady-state variance gap is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$, dominated by the conditioning ratio $c_{\max}^2/c_{\min}^2$. The $(\eta^\ast)^2 \lVert F_d\rVert^2$ term in the per-step recurrence enters $1 - \lambda^2_{\text{eff}}$ at order $(\eta^\ast)^2$, but inverting the leading $2\eta^\ast c_{\min}$ in $V_{ss} = \sigma^2_{\text{step}}/(1 - \lambda^2_{\text{eff}})$ produces an $O(\eta^\ast)$ asymptotic gap, not $O((\eta^\ast)^2)$ — see the recovery calculation in Prop DA.1S above.
+For Model S (stochastic): the steady-state variance gap is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$, dominated by the conditioning ratio $c_{\max}^2/c_{\min}^2$. The $(\eta^\ast)^2 \lVert F_d\rVert^2$ term in the per-step recurrence enters $1 - \lambda_{\text{eff}}^2$ at order $(\eta^\ast)^2$, but inverting the leading $2\eta^\ast c_{\min}$ in $V_{ss} = \sigma_{\text{step}}^2/(1 - \lambda_{\text{eff}}^2)$ produces an $O(\eta^\ast)$ asymptotic gap, not $O((\eta^\ast)^2)$ — see the recovery calculation in Prop DA.1S above.
 
 ## Epistemic Status
 

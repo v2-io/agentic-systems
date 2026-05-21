@@ -77,7 +77,9 @@ $$\hat{\sigma}_w^2 = \text{Var}\left[\frac{s_{t+\Delta t} - (1 - \hat{\eta}^\ast
 
 i.e., the variance of the mismatch innovations (residuals after subtracting the expected correction). For AR(1) processes, this is the innovation variance $\hat{\rho}^2$ directly.
 
-**Note on estimation sequencing.** Both estimators require $\hat{\mathcal T}_t$ (or $\hat{\eta}^\ast$), estimated from $\hat{\nu}$ and $\hat{\eta}^\ast$. Estimate the gain and event rate first (from the agent's internal statistics and observation timing), then use these to extract the disturbance parameters from the mismatch trajectory. This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal T}$ propagate into $\hat{\rho}_{\det}$ and $\hat{\sigma}_w$.
+**Note on estimation sequencing.** Both estimators require $\hat{\mathcal T}_t$ (or $\hat{\eta}^\ast$), estimated from $\hat{\nu}$ and $\hat{\eta}^\ast$.
+Estimate the gain and event rate first (from the agent's internal statistics and observation timing), then use these to extract the disturbance parameters from the mismatch trajectory.
+This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal T}$ propagate into $\hat\rho_{\det}$ and $\hat\sigma_w$.
 
 **Local pause-window drift for #der-deliberation-cost ($\hat{\rho}_{\text{delib}}$):**
 
@@ -126,10 +128,10 @@ This anchors #result-persistence-condition to real task outcomes.
 6. Estimate $\Vert\delta_{\text{critical}}\Vert$ from task-performance degradation.
 7. Compute derived diagnostics:
 
-   - Tempo margin (Model D): $\hat{\mathcal T} - \hat{\rho}_{\det}/\lVert\hat{\delta}_{\text{critical}}\rVert$
-   - Tempo margin (Model S): $\hat{\mathcal T} - n\hat{\sigma}_w^2/(2\lVert\hat{\delta}_{\text{critical}}\rVert^2)$
-   - Reserve: $\widehat{\Delta \rho^\ast} = \hat{\alpha}\hat{R} - \hat{\rho}_{\det}$
-   - Deliberation feasibility: $\Delta\eta^\ast(\Delta\tau)\Vert\delta_{\text{post}}\Vert - \hat{\rho}_{\text{delib}}\Delta\tau$
+   - Tempo margin (Model D): $\hat{\mathcal T} - \hat\rho_{\det}/\lVert\hat\delta_{\text{critical}}\rVert$
+   - Tempo margin (Model S): $\hat{\mathcal T} - n\hat\sigma_w^2/(2\lVert\hat\delta_{\text{critical}}\rVert^2)$
+   - Reserve: $\widehat{\Delta \rho^\ast} = \hat\alpha\hat R - \hat\rho_{\det}$
+   - Deliberation feasibility: $\Delta\eta^\ast(\Delta\tau)\Vert\delta_{\text{post}}\Vert - \hat\rho_{\text{delib}}\Delta\tau$
 
 ## Decision-Theoretic Procedures
 

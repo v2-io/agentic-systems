@@ -70,7 +70,8 @@ $$\mathrm{Id}^{(iii)}(\mathfrak{T}_{t+1:}) = \frac{1}{m \cdot H} \sum_{j=1}^{m} 
 
 Also depends on stewards' future actions. Sovereignty by construction is granted by an agent distinct from $E$ — $G_{j,s}$ is a function of $S_j$'s trajectory with $S_j \neq E$, so self-granting is structurally precluded.
 
-**(iv) Accountability.** Let $\mathrm{ACTUS}_{t+1:}(E)$ be the action sub-history $\subseteq \mathcal C_{t+1:}(E)$ (per `#def-action-transition` + `#def-chronica`), and $\mathrm{Atts}_{t+1:}(E)$ the set of external attestations to $E$'s ACTUS during $(t, t+H]$. Define
+**(iv) Accountability.** Let $\mathrm{ACTUS}_{t+1:}(E)$ be the action sub-history $\subseteq \mathcal C_{t+1:}(E)$ (per `#def-action-transition` + `#def-chronica`).
+Let $\mathrm{Atts}_{t+1:}(E)$ be the set of external attestations to $E$'s ACTUS during $(t, t+H]$. Define
 
 $$\mathrm{Id}^{(iv)}(\mathfrak{T}_{t+1:}) = \mathbb{1}\!\left[\mathrm{ACTUS}_{t+1:}(E) \text{ append-only}\right] \cdot \frac{\lvert \mathrm{Atts}_{t+1:}(E) \cap \mathrm{ACTUS}_{t+1:}(E) \rvert}{\lvert \mathrm{ACTUS}_{t+1:}(E) \rvert}.$$
 
@@ -100,7 +101,11 @@ $$S_{\text{id}}(M_t) = 1 - \frac{I(\mathcal C_t \,;\, \text{identity}_{t+1:} \mi
 
 *[Derived (boundedness, exact under (IS-A1)–(IS-A3))]*
 
-Under (IS-A2), the data-processing inequality gives $I(M_t; \text{identity}_{t+1:}) \le I(\mathcal C_t; \text{identity}_{t+1:})$. By the chain rule of mutual information,
+Under (IS-A2), the data-processing inequality gives
+
+$$I(M_t; \text{identity}_{t+1:}) \le I(\mathcal C_t; \text{identity}_{t+1:}).$$
+
+By the chain rule of mutual information,
 
 $$I(\mathcal C_t; \text{identity}_{t+1:}) = I(M_t; \text{identity}_{t+1:}) + I(\mathcal C_t; \text{identity}_{t+1:} \mid M_t).$$
 

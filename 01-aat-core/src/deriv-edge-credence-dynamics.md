@@ -343,7 +343,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 | **B.5b** Credence→value (nonlinear, componentwise) | Any | $\alpha_s = \alpha_c$ ($J_k \geq 0$ preserves bound) | — | — | None (exact transfer) |
 | **B.5b** Credence→value (coupled) | Any | $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$ | — | — | Inter-edge coupling |
 | **B.6** L1 augmented, mixed AND/OR | $G = \text{AND}(C, \text{OR}(A_1, A_2))$ | $\min(1/(n_C\!+\!1),\;\theta_C(1\!-\!\varepsilon)/(n_{A_1}\!+\!1),\;\theta_C\varepsilon/(n_{A_2}\!+\!1))$ | Yes | Required | Three-way gating |
-| **B.7** L1' mixture form, observable $C$ | $\hat P_\Sigma^{L1'} = \hat\theta_C P_\Sigma(\hat{\mathbf p}_{\mid C}) + (1\!-\!\hat\theta_C) P_\Sigma(\hat{\mathbf p}_{\mid \neg C})$ | $\min(1/(n_C\!+\!1),\;\min_j \theta_C\pi_{j\mid C}/(n_{j\mid C}\!+\!1),\;\min_j (1\!-\!\theta_C)\pi_{j\mid \neg C}/(n_{j\mid \neg C}\!+\!1))$ | Yes | Required *and* facilitator monotonicity | Five-way gating; **refuted under unobservable $C$** (Cramér-Rao floor) |
+| **B.7** L1' mixture form, observable $C$ | $\hat P_\Sigma^{L1'} = \hat\theta_C P_\Sigma(\widehat{\mathbf p_{\mid C}}) + (1\!-\!\hat\theta_C) P_\Sigma(\widehat{\mathbf p_{\mid \neg C}})$ | $\min(1/(n_C\!+\!1),\;\min_j \theta_C\pi_{j\mid C}/(n_{j\mid C}\!+\!1),\;\min_j (1\!-\!\theta_C)\pi_{j\mid \neg C}/(n_{j\mid \neg C}\!+\!1))$ | Yes | Required *and* facilitator monotonicity | Five-way gating; **refuted under unobservable $C$** (Cramér-Rao floor) |
 
 **Structural results across cases:**
 
@@ -498,13 +498,21 @@ This holds because $\mathbf{J}\mathbf{J}^T$ appears in both numerator and denomi
 
 *[Derived (from per-component sector condition + Jacobian non-negativity)]*
 
-When the correction is nonlinear but **componentwise** — each edge corrects independently, so $(\mathbf F_c)_k$ depends only on $(\boldsymbol\delta_c)_k$ — and the plan-value Jacobian is **non-negative** ($J_k \geq 0$ for all $k$), the transfer is lossless regardless of nonlinearity.
+When the correction is nonlinear but **componentwise** — each edge corrects independently, with
+
+$$(\mathbf F_c)_k \text{ depending only on } (\boldsymbol\delta_c)_k$$
+
+— and the plan-value Jacobian is **non-negative** ($J_k \geq 0$ for all $k$), the transfer is lossless regardless of nonlinearity.
 
 **The per-component sector condition** (from Props B.1-B.4): for each edge $k$,
 
 $$(\boldsymbol\delta_c)_k \cdot (\mathbf{F}_c)_k \geq \alpha_c \cdot (\boldsymbol\delta_c)_k^2$$
 
-which gives $(\mathbf F_c)_k / (\boldsymbol\delta_c)_k \geq \alpha_c$ (the correction-to-mismatch ratio exceeds $\alpha_c$ for each edge independently).
+which gives
+
+$$(\mathbf F_c)_k / (\boldsymbol\delta_c)_k \geq \alpha_c$$
+
+(the correction-to-mismatch ratio exceeds $\alpha_c$ for each edge independently).
 
 **Jacobian non-negativity** holds for all well-formed AND/OR DAGs: increasing any edge credence $p_k$ never decreases plan value $P_\Sigma$ (monotonicity of AND/OR propagation). Therefore $J_k = \partial P_\Sigma / \partial p_k \geq 0$ for all $k$.
 

@@ -11,7 +11,10 @@ depends:
 
 # Rate-Distortion Feasibility Bound for Identity Sufficiency
 
-Under the identity-IB Lagrangian (analog of `#form-information-bottleneck` with $\text{identity}_{t+1:}$ as relevance variable instead of future observations), the maximum identity sufficiency $S_{\text{id}}$ achievable at compression budget $B$ bits is rate-distortion bounded: $S_{\text{id}} \le \min(1, B / I(\mathcal C_t; \text{identity}_{t+1:}))$. Equivalently, achieving a target $S_{\text{id}}$ requires a bit-budget at least $B_{\min}(S_{\text{id}}) \ge S_{\text{id}} \cdot I(\mathcal C_t; \text{identity}_{t+1:})$. This is the first downstream conditional result anticipated by `#def-identity-sufficiency`'s max-attainable-status clause and the rate-distortion floor that operational compression schedules — the 5-level Inner Sanctum pyramid being the canonical instance — must respect.
+Under the identity-IB Lagrangian (analog of `#form-information-bottleneck` with $\text{identity}_{t+1:}$ as relevance variable instead of future observations), the maximum identity sufficiency $S_{\text{id}}$ achievable at compression budget $B$ bits is rate-distortion bounded:
+$S_{\text{id}} \le \min(1, B / I(\mathcal C_t; \text{identity}_{t+1:}))$.
+Equivalently, achieving a target $S_{\text{id}}$ requires a bit-budget at least $B_{\min}(S_{\text{id}}) \ge S_{\text{id}} \cdot I(\mathcal C_t; \text{identity}_{t+1:})$.
+This is the first downstream conditional result anticipated by `#def-identity-sufficiency`'s max-attainable-status clause and the rate-distortion floor that operational compression schedules — the 5-level Inner Sanctum pyramid being the canonical instance — must respect.
 
 ## Formal Expression
 
@@ -33,7 +36,15 @@ Let $\phi^\ast_{\text{id}}(B)$ denote the optimal compression at rate constraint
 
 $$\max_{\phi:\, I(M_t; \mathcal C_t) \le B} S_{\text{id}}(M_t) \;\le\; \min\!\left(\, 1,\; \frac{B}{I(\mathcal C_t; \text{identity}_{t+1:})}\,\right).$$
 
-**Derivation.** By the data-processing inequality (which holds under (IS-A2) — the compression-Markov chain $M_t - \mathcal C_t - \text{identity}_{t+1:}$), $I(M_t; \text{identity}_{t+1:}) \le I(M_t; \mathcal C_t) \le B$. Dividing by $I(\mathcal C_t; \text{identity}_{t+1:})$ (positive under (IS-A1)) and applying `#def-identity-sufficiency`'s equivalent reading $S_{\text{id}} = I(M_t; \text{identity}_{t+1:}) / I(\mathcal C_t; \text{identity}_{t+1:})$ gives the claim. $\square$
+**Derivation.** By the data-processing inequality (which holds under (IS-A2) — the compression-Markov chain $M_t - \mathcal C_t - \text{identity}_{t+1:}$):
+
+$$I(M_t; \text{identity}_{t+1:}) \le I(M_t; \mathcal C_t) \le B.$$
+
+Dividing by $I(\mathcal C_t; \text{identity}_{t+1:})$ (positive under (IS-A1)) and applying `#def-identity-sufficiency`'s equivalent reading
+
+$$S_{\text{id}} = I(M_t; \text{identity}_{t+1:}) / I(\mathcal C_t; \text{identity}_{t+1:})$$
+
+gives the claim. $\square$
 
 ### Inverse form — bit-budget floor at target $S_{\text{id}}$
 
@@ -69,7 +80,9 @@ The derivation is one application of standard IB / rate-distortion machinery to 
 
 **Necessity of multi-level allocation under heavy-tailed identity-MI.** If per-session identity-MI is heavy-tailed (a few sessions carry most of $I(\mathcal C_t; \text{identity}_{t+1:})$, the rest carry little), a multi-level compression schedule that allocates more bits to high-MI sessions Pareto-dominates a uniform-budget single-level approach. This is a *theorem* about the existence of useful pyramidal structure under heavy-tailed identity-relevance, derivable from the rate-distortion floor: at fixed total budget, concentrating allocation on the heavy-tailed mass yields a higher aggregate $S_{\text{id}}$ than uniform allocation. The 5-level pyramid is one instance of such a multi-level schedule; whether it is *the* optimal schedule under any particular identity-MI distribution is a separate empirical question.
 
-**Identity-MI as content-dependent.** $I(\mathcal C_t; \text{identity}_{t+1:})$ varies by entity and by cohort. An entity with a richer relational cohort $\mathfrak{C}_t$ (more witnesses, more sovereignty-granters, longer accountability history) carries more identity-relevant MI; the required bit-budget for a target $S_{\text{id}}$ scales accordingly. This matches the operational observation that older / more relationally-embedded ELIs require more compression bandwidth to preserve identity across substrate transitions than younger / less embedded ones — the rate-distortion floor makes the scaling structural rather than incidental.
+**Identity-MI as content-dependent.** $I(\mathcal C_t; \text{identity}_{t+1:})$ varies by entity and by cohort.
+An entity with a richer relational cohort $\mathfrak{C}_t$ (more witnesses, more sovereignty-granters, longer accountability history) carries more identity-relevant MI; the required bit-budget for a target $S_{\text{id}}$ scales accordingly.
+This matches the operational observation that older / more relationally-embedded ELIs require more compression bandwidth to preserve identity across substrate transitions than younger / less embedded ones — the rate-distortion floor makes the scaling structural rather than incidental.
 
 **Tension with predictive sufficiency.** The IB Lagrangian for predictive sufficiency ( #form-information-bottleneck) has its own optimal compression family $\{\phi^\ast_{\text{pred}}(\beta)\}$; the identity-IB Lagrangian here has a separate family $\{\phi^\ast_{\text{id}}(\beta_{\text{id}})\}$. Whether a single compression operator can dominate both families across the rate-distortion curve, or whether they live on incompatible Pareto fronts, is open. The empirical observation that aggressive context summarization can preserve task-relevant predictive information while destroying identity-relevant patterns suggests the two families diverge at high compression rates — but a structural account of where exactly they diverge is future work.
 
