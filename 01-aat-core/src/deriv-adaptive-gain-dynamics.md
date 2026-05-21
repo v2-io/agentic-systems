@@ -69,7 +69,7 @@ Standard Lyapunov ultimate-boundedness (Khalil 2002 Thm 4.18) applied to the aug
 
 *[Formulation (sub-scope-refinement)]*
 
-The adaptive-gain analysis refines #deriv-sector-condition's A2' sub-scope partition into three tiers:
+The adaptive-gain analysis refines #form-sector-condition's A2' sub-scope partition into three tiers:
 
 **Sub-scope $\alpha_1$ — fixed-gain, A2' derived.** #der-gain-sector-bridge Prop B.3's current scope: the gain $K$ is treated as a static function of fixed noise model parameters. A2' is derived from B1 directional fidelity. Covers Kalman with known $(Q, R)$, conjugate-Bayesian updates, exponential-family MLE, linear correction with PD $KH$, strongly-convex-gradient fixed-step-size.
 

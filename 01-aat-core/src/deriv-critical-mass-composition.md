@@ -150,7 +150,7 @@ What this segment does **not** establish:
 - Nonlinear or state-dependent coupling: (C1) assumes $\gamma$ independent of $\delta$. State-dependent $\gamma$ produces a nonlinear inequality in $\delta$; this is the effects-spiral corollary territory of #der-adversarial-destabilization, still open.
 - $N \gt 2$ scaling: the matched-symmetric pairwise result generalizes by conjunction, but the Cauchy–Schwarz step degrades with team size; the closed form does not survive cleanly. See `spikes/spike-composition-scaling-N.md`.
 
-**On (T2) and sub-scoping.** The joint quadratic Lyapunov candidate presumes each sub-agent's correction is in sub-scope $\alpha$ of #deriv-sector-condition (Bayesian / exponential-family / strongly-convex-gradient / linear-PD) under directional fidelity per #der-gain-sector-bridge. Composites with sub-scope $\beta$ sub-agents (PID, rule-based, human-judgment) require (T2) verification per sub-agent at the composite level — the template's A2'-sub-scope label is inherited pairwise.
+**On (T2) and sub-scoping.** The joint quadratic Lyapunov candidate presumes each sub-agent's correction is in sub-scope $\alpha$ of #form-sector-condition (Bayesian / exponential-family / strongly-convex-gradient / linear-PD) under directional fidelity per #der-gain-sector-bridge. Composites with sub-scope $\beta$ sub-agents (PID, rule-based, human-judgment) require (T2) verification per sub-agent at the composite level — the template's A2'-sub-scope label is inherited pairwise.
 
 ## Discussion
 

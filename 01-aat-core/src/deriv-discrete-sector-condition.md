@@ -40,7 +40,7 @@ $$\delta^T F_d(\delta) \geq c_{\min} \lVert\delta\rVert^2$$
 
 $$\lVert F_d(\delta)\rVert \leq c_{\max} \lVert\delta\rVert$$
 
-The **lower bound** (DA2'a) is directional fidelity — the correction points inward, identical to the continuous sector condition (A2') from #deriv-sector-condition via #der-gain-sector-bridge.
+The **lower bound** (DA2'a) is directional fidelity — the correction points inward, identical to the continuous sector condition (A2') from #form-sector-condition via #der-gain-sector-bridge.
 
 The **Lipschitz bound** (DA2'b) controls the *magnitude* of the correction, not merely its projection onto the mismatch direction. The combined constraint $c_{\max} < 2/\eta^\ast$ is the **no-overshoot condition**: each correction step must not reverse the mismatch. This is the classical step-size condition $\eta^\ast < 2/L$ for gradient descent (where $L$ is the Lipschitz constant of the gradient). For Bayesian updates, this is satisfied by construction — the posterior lies between prior and data.
 

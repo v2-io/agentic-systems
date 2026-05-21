@@ -32,7 +32,7 @@ So there is a gap between what Cor A.1S.1 proves and what the hand-off prose cla
 
 Per strengthen-before-soften, the preferred resolution is **derive the bridge**, not tighten the prose. Candidate conditions under which certain region-exit *would* imply structural-adaptation necessity, to be attempted:
 
-1. **A2' genuinely fails outside $\mathcal B_R$** (not merely "not posited"): if the correction function provably ceases to point inward beyond $R$ for the agent's model class, then a.s. exit composes with non-recovery, and recurrent exit *does* force the structural regime. This connects to the sub-scope $\beta$ / model-class-capacity reading of $R$ in `#deriv-sector-condition`.
+1. **A2' genuinely fails outside $\mathcal B_R$** (not merely "not posited"): if the correction function provably ceases to point inward beyond $R$ for the agent's model class, then a.s. exit composes with non-recovery, and recurrent exit *does* force the structural regime. This connects to the sub-scope $\beta$ / model-class-capacity reading of $R$ in `#form-sector-condition`.
 2. **Excursion statistics interact with $\mathcal F(\mathcal M)$:** if recurrent large excursions degrade *effective* model-class fitness (the model fitted within $\mathcal M$ becomes systematically wrong during excursions faster than it re-converges between them), the noise-driven and fitness-driven triggers couple, and genericity follows from the coupling rather than from exit alone.
 3. **Timescale-separation argument:** if structural adaptation operates so much slower than parametric correction that the *fraction of time* spent out-of-region (positive under recurrence, however small) accumulates an unbounded structural-adaptation debt over an unbounded horizon.
 
