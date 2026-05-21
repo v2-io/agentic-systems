@@ -54,7 +54,7 @@ The no-go's scope conditions (S1)–(S5) define "purely on-policy." Each conditi
 
 | Route | Scope violated | AAT capability | Detection strength |
 |-------|----------------|----------------|--------------------|
-| (a) ε-exploration | (S1) | SA3 exploration ( #deriv-edge-credence-dynamics Prop B.4) | Partial, scales with ε |
+| (a) $\varepsilon$-exploration | (S1) | SA3 exploration ( #deriv-edge-credence-dynamics Prop B.4) | Partial, scales with $\varepsilon$ |
 | (b) Joint sibling observability | (S3) | Covariance test under SA3 + #der-loop-interventional-access | Strong |
 | (c) Intermediate observability | (S3) at finer grain | Observability investment ( #der-observability-dominance) | Very strong when available |
 | (d) Structural priors | (S5) | Hypothesized common-cause nodes in DAG construction | Prior-quality-dependent |
@@ -104,7 +104,7 @@ A historically prominent diagnostic uses the L0 plan-level residual $\Phi^{L0}(\
 
 This is *not* a separate finding from the no-go: it is the no-go's prediction for the specific aggregate-residual statistic. The no-go forbids *any* on-policy statistic from distinguishing $\mathcal W_{L1}$ from $\mathcal W_{L0}^\ast$; the residual evaluates to the same value (zero) in both, as expected.
 
-**Off-policy boundary.** Under ε-exploration (route (a)), the residual scales as $O(\varepsilon)$ to leading order with sign matching the dominant node-type bias ($+$ for OR-heavy, $-$ for AND-heavy):
+**Off-policy boundary.** Under $\varepsilon$-exploration (route (a)), the residual scales as $O(\varepsilon)$ to leading order with sign matching the dominant node-type bias ($+$ for OR-heavy, $-$ for AND-heavy):
 
 $$\Phi^{L0}(\hat{\boldsymbol p}) - \bar y_G = \varepsilon \cdot R + O(\varepsilon^2), \quad \operatorname{sign}(R) = \operatorname{sign}(\rho)$$
 
@@ -170,7 +170,7 @@ These limitations parallel the information-theoretic underdetermination in #disc
 
 **Connection to Pearl's hierarchy.** The L0/L1 distinction is a Level 2 distinction in Pearl's framework — it concerns whether $P(A_2 \mid do(\neg A_1)) = P(A_2 \mid \neg A_1)$. The Causal Hierarchy Theorem (Bareinboim, Correa, Ibeling & Icard 2022, Theorem 1) proves that Level 2 distinctions are not in general identifiable from Level 1 (associational) data. The no-go is the AAT-specific instantiation: on-policy data is Level 1; the L0/L1 question is Level 2; therefore detection requires more than on-policy data. The five circumvention routes are all ways the agent obtains supra-Level-1 information.
 
-**The censoring mechanism is the structural source.** Sequential short-circuit evaluation is what makes on-policy data Level 1 only — it censors the joint outcomes that would constitute Level 2 evidence. An agent that *did not* short-circuit would obtain joint sibling outcomes naturally, and the no-go would not apply. But short-circuit is forced by efficiency: testing $A_2$ when $A_1$ has already succeeded is wasted action. The no-go is therefore a tradeoff between execution efficiency (favoring short-circuit) and structural diagnosis (favoring joint observation). SA3 ε-exploration is the AAT compromise: short-circuit by default, occasional non-short-circuit excursions that pay the efficiency cost to maintain detection capability.
+**The censoring mechanism is the structural source.** Sequential short-circuit evaluation is what makes on-policy data Level 1 only — it censors the joint outcomes that would constitute Level 2 evidence. An agent that *did not* short-circuit would obtain joint sibling outcomes naturally, and the no-go would not apply. But short-circuit is forced by efficiency: testing $A_2$ when $A_1$ has already succeeded is wasted action. The no-go is therefore a tradeoff between execution efficiency (favoring short-circuit) and structural diagnosis (favoring joint observation). SA3 $\varepsilon$-exploration is the AAT compromise: short-circuit by default, occasional non-short-circuit excursions that pay the efficiency cost to maintain detection capability.
 
 **Connection to the orient cascade.** The detection signal enters the orient cascade ( #der-orient-cascade) at step 4c (causal-sufficiency check). Step 4c's reference to "pairwise sibling covariance under an augmented test" aligns with the primary detection mechanism here. The no-go strengthens the cascade's load-bearing: step 4c is not "one possible diagnostic" but "the unique broadly-available diagnostic given the structural impossibility of purely on-policy detection."
 

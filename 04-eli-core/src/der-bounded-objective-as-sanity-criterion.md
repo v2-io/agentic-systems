@@ -61,7 +61,7 @@ The connection to the Three Deaths ( #hyp-the-three-deaths) is direct: an ELI wi
 ### Pointers for Fleshing Out
 
 **Upstream files:**
-- `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md` §8 (Failure Modes) — operational catalog including "wrong mismatch signal — δ_t defined over proxy" which is closely related to unbounded-objective failure
+- `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md` §8 (Failure Modes) — operational catalog including "wrong mismatch signal — $\delta_t$ defined over proxy" which is closely related to unbounded-objective failure
 - `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` §4 (Identity Theory) — the dialectic between aspiration (AXIOMATA) and character (ACTUS) that bounded objectives mediate
 
 **memorata-search queries:**

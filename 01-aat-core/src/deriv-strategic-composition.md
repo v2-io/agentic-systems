@@ -130,7 +130,7 @@ Strategic composition with partially-opposing $\{O_t^{(i)}\}$ admits a joint equ
 | A2'-analog under monotone-game condition | Rosen 1965 transcribed with weighted-norm Lyapunov | Derived (exact under diagonal strict concavity) |
 | Equilibrium existence via VI | Facchinei-Pang 2003 (Hartman-Stampacchia) | Derived (external theorem, applied to strategic composition setting) |
 | Regret-minimization CCE convergence | Hart-Mas-Colell 2000 | Derived (external theorem applied) |
-| Sub-scope $\alpha'$ / $\beta'$ partition | Parallel to `#deriv-sector-condition` α/β | Formulation choice |
+| Sub-scope $\alpha'$ / $\beta'$ partition | Parallel to `#deriv-sector-condition` $\alpha$/$\beta$ | Formulation choice |
 | Zero-sum scalar instantiation (corner-NE conceptual lesson) | Direct substitution into potential-game framework | Exact (within stated setup) |
 | Cournot-style sector-template instantiation (interior-NE quadratic) | Monderer-Shapley 1996 §3 + sector-persistence-template; demand-side curvature $b$ supplies $\alpha_{\text{joint}}$ | Exact (within stated setup) |
 | (C-iv) scope route | Extension to `#scope-composite-agent` disjunction | Formulation choice (scope extension) |
@@ -146,7 +146,7 @@ Strategic composition with partially-opposing $\{O_t^{(i)}\}$ admits a joint equ
 
 *Conditional.* Max attainable: *exact* under potential-game + B1 (sub-scope $\alpha'$); *derived* under monotone-game + diagonal strict concavity; *discussion-grade* for the framing and sub-scope $\beta'$ set-convergence-only claim.
 
-The A2'-analog results under Monderer-Shapley 1996 and Rosen 1965 are transcriptions of established game-theoretic theorems into AAT notation. AAT's contribution is not the mathematics but the recognition that the sector-persistence template transfers cleanly when these conditions hold, and that the composite-level sector constant $\alpha_{\text{joint}}$ lives at the *joint potential gradient* or *joint Jacobian's symmetric part*, not at any individual sub-agent's α. The framing move (contraction → equilibrium convergence) is a structural positioning move.
+The A2'-analog results under Monderer-Shapley 1996 and Rosen 1965 are transcriptions of established game-theoretic theorems into AAT notation. AAT's contribution is not the mathematics but the recognition that the sector-persistence template transfers cleanly when these conditions hold, and that the composite-level sector constant $\alpha_{\text{joint}}$ lives at the *joint potential gradient* or *joint Jacobian's symmetric part*, not at any individual sub-agent's $\alpha$. The framing move (contraction → equilibrium convergence) is a structural positioning move.
 
 Sub-scope $\beta'$ gives AAT substantially weaker predictive power than sub-scope $\alpha'$: *set-convergence to CCE only*, not trajectory convergence or per-agent mismatch convergence. This is an honest scope limit, not a defect — it mirrors game theory's own scope at the no-potential-no-monotonicity regime. AAT does not claim to predict equilibrium selection under multiple Nash, short-run dynamics in cyclic games (rock-paper-scissors), or convergence rates better than $O(1/\sqrt T)$ in $\beta'$.
 
