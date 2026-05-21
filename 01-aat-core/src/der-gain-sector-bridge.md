@@ -5,14 +5,14 @@ status: conditional
 depends:
   - emp-update-gain
   - def-mismatch-signal
-  - deriv-sector-condition
+  - form-sector-condition
   - deriv-gain-sector
 stage: draft
 ---
 
 # Derived: Gain–Sector Bridge
 
-The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at least roughly toward reality. For gradient-based agents, local strong convexity of the loss is sufficient for the one-point sector condition (A2' as stated in #deriv-sector-condition) and bidirectionally equivalent to the two-point / incremental sector condition (DA2'-inc). The sector parameter $\alpha$ is not a free parameter but is determined by the gain and the correction geometry.
+The gain-based update principle ( #emp-update-gain) produces correction dynamics satisfying the sector condition (GA-3) whenever the update rule has *directional fidelity* — the correction points at least roughly toward reality. For gradient-based agents, local strong convexity of the loss is sufficient for the one-point sector condition (A2' as stated in #form-sector-condition) and bidirectionally equivalent to the two-point / incremental sector condition (DA2'-inc). The sector parameter $\alpha$ is not a free parameter but is determined by the gain and the correction geometry.
 
 ## Formal Expression
 
@@ -46,7 +46,7 @@ is the strong convexity modulus. The basin radius $R$ is the largest ball around
 
 - **Two-point / incremental sector ⇔ strong convexity (full equivalence).** Under the incremental sector bound $(F(\delta_1) - F(\delta_2))^T(\delta_1 - \delta_2) \geq \alpha\lVert\delta_1 - \delta_2\rVert^2$ on $\mathcal B_R(M^\ast)$ — DA2'-inc in #deriv-discrete-sector-condition, the bridge-lemma precondition in #form-composition-closure — the iff holds via Nesterov 2004 Theorem 2.1.10:
   $$\text{Two-point sector with } (\alpha, R) \iff L \text{ is locally } (\alpha/\eta)\text{-strongly convex on } \mathcal B_R(M^\ast).$$
-- **One-point sector ⇐ strong convexity (one direction only).** AAT's GA-3 / A2' as stated in #deriv-sector-condition is the one-point form $\delta^T F(\delta) \geq \alpha\lVert\delta\rVert^2$ at $\delta^\ast = 0$. Strong convexity implies the one-point sector ($\alpha = \eta\mu$); the converse fails. Counterexample: $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies $x \cdot L'(x) \geq \tfrac{1}{2} x^2$ globally yet has $L''(\pi/10) \lt 0$, so it is not convex on any neighborhood of $x^\ast = 0$. The one-point sector at the equilibrium is genuinely weaker than full local strong convexity (cf. #result-sector-persistence-template's one-point/two-point distinction). Full proofs and the counterexample analysis in #deriv-gain-sector Prop B.4.
+- **One-point sector ⇐ strong convexity (one direction only).** AAT's GA-3 / A2' as stated in #form-sector-condition is the one-point form $\delta^T F(\delta) \geq \alpha\lVert\delta\rVert^2$ at $\delta^\ast = 0$. Strong convexity implies the one-point sector ($\alpha = \eta\mu$); the converse fails. Counterexample: $L'(x) = x(1 + \tfrac{1}{2}\sin(10x))$ satisfies $x \cdot L'(x) \geq \tfrac{1}{2} x^2$ globally yet has $L''(\pi/10) \lt 0$, so it is not convex on any neighborhood of $x^\ast = 0$. The one-point sector at the equilibrium is genuinely weaker than full local strong convexity (cf. #result-sector-persistence-template's one-point/two-point distinction). Full proofs and the counterexample analysis in #deriv-gain-sector Prop B.4.
 
 ### Verified Instances
 
@@ -77,7 +77,7 @@ The bridge fails precisely in five cases:
 
 ## Epistemic Status
 
-*Conditional derivation.* The bridge theorem is exact for all cases where B1 (directional fidelity) holds. The resulting sub-scope structure of A2' in #deriv-sector-condition is:
+*Conditional derivation.* The bridge theorem is exact for all cases where B1 (directional fidelity) holds. The resulting sub-scope structure of A2' in #form-sector-condition is:
 
 **Sub-scope $\alpha$ (B1 structural, A2' derived):**
 
@@ -87,7 +87,7 @@ The bridge fails precisely in five cases:
 - **Exponential families in natural parameters, on a bounded interior scope**: Fisher information matrix is PD on the interior, and uniformly bounded below on any compact $\Theta_0 \subset \operatorname{int}(\Theta)$; $\alpha = \eta \cdot \mu_0$ with $\mu_0 = \inf_{\theta \in \Theta_0} \lambda_{\min}(\mathbf I(\theta))$. The bound is global only when the family has a uniform Fisher lower bound on $\Theta$ — true for Gaussian-mean and Beta-Bernoulli, false for Poisson natural parameter ($\mathbf I(\theta) = e^\theta$, infimum zero).
 - **Linear corrections with PD gain–observation product**: $\alpha = \lambda_{\min}^+(KH)$.
 
-Within sub-scope $\alpha$, A2' is written down by inspection of the update rule — no independent posit is required. This is what `#deriv-sector-condition` "Grounding of GA-3 — sub-scope $\alpha$" names.
+Within sub-scope $\alpha$, A2' is written down by inspection of the update rule — no independent posit is required. This is what `#form-sector-condition` "Sub-scope $\alpha$ (A2' derived)" names.
 
 **Sub-scope $\beta$ (B1 not structural, A2' assumed per-agent):**
 

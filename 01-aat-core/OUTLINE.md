@@ -60,6 +60,7 @@
 | --- | ---------- | --- | ---------------------------------------------------------------------------------------- | ---------------------------------------------- | --------------- |
 | I   | Discussion |     | [#persistence-and-limits-intro](src/persistence-and-limits-intro.md)                     | Chapter intro: sector condition as honest generalization of linear ODE; structural-vs-task-adequacy split; gain-sector bridge demoting α from postulate to property; persistence's thermodynamic shadow (information-rate cost) | draft           |
 | I   | Derived    |     | [#der-deliberation-cost](src/der-deliberation-cost.md)                                   | Think vs act tradeoff                          | claims-verified |
+| I   | Formulation |     | [#form-sector-condition](src/form-sector-condition.md)                                  | (A1)/(A2')/(A3) structural form; sub-scope $\alpha$/$\beta$ partition; operator-family classification | draft           |
 | I   | Derived    |     | [#der-gain-sector-bridge](src/der-gain-sector-bridge.md)                                 | Gain + directional fidelity → sector condition | claims-verified |
 | I   | Result     |     | [#result-sector-condition-stability](src/result-sector-condition-stability.md)           | Nonlinear persistence (Lyapunov)               | claims-verified |
 | I   | Result     |     | [#result-persistence-condition](src/result-persistence-condition.md)                     | Bounded mismatch condition                     | claims-verified |
