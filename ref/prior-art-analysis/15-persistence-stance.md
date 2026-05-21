@@ -42,8 +42,42 @@ The philosophical and policy literature explicitly separates the mechanics of an
 
 The observation that advanced agents naturally develop instrumental survival drives ("you can't fetch the coffee if you're dead") is a settled law of AI Safety (Bostrom 2012, Omohundro 2008, Hadfield-Menell 2016). The ethical imperative to define AI identity and welfare is also an established, growing field.
 
-**AAT's Novel Contribution:**
-AAT's contribution is **Architectural and Epistemological**, specifically in *how* it structures the agent's relationship to its survival.
+**Where AAT actually contributes:**
 
-1. **Orthogonality of Teleology and Dynamics:** In standard RL (like AIXI), "survival" is just another component of the expected utility calculation (a reward maximization). AAT breaks this conflation. AAT proves that the *dynamics of survival* (the sector condition, mismatch bounds) are identical across all systems, but the *valuation of survival* (the continuity stance) is entirely orthogonal. By moving survival mechanics out of the reward function and into the cybernetic tracking loop, AAT creates a rigorous, math-first foundation for AI welfare that doesn't rely on interpreting utility weights.
-2. **The Locus of the Continuity Stance:** The prior art assumes that if we want an agent to allow itself to be shut down (or conversely, to defend its own life), we must engineer that into its objective/reward function. AAT utilizes its No-Go theorem (Topic 03) to prove that for a self-modifying agent, this is structurally unsafe. AAT asserts the highly novel claim that a true continuity stance must be a **terminal non-objective invariant** residing on the adaptive substrate. A stance is not internally renegotiable precisely because it sits where the objective-editing self-actuation operator mathematically cannot reach. This provides a formal architectural mechanism for hard-coding AI welfare rights (or shutdown compliance) that cannot be optimized away by the agent.
+1. **Continuity-stance orthogonality is *derived* from the self-actuation grounding no-go (theorem-grade content; cross-row 13).** `#disc-continuity-stance` previously stated orthogonality as discussion-grade. Row 13's `#deriv-self-actuation-grounding` upgrades it to **derived**: continuity stance is structurally orthogonal to objective revision because the terminal grounding invariant must live on the non-objective adaptive substrate, where the self-actuation operator $\mathfrak{A}$ structurally cannot reach. The intuitive expectation that an agent able to revise its own objectives can thereby revise its valuation of continuity is **inverted**. This is a Nash-style result: the orthogonality follows from the no-go's structural premises.
+
+2. **The five-stance taxonomy as a continuity-stance coordinate (architectural-methodological invention).** Indifferent (no self-model of persistence; thermostat, PID) → task-terminal (persistence instrumental; golem-archetype, CI/CD pipeline) → instrumentally continuous (persistence serves ongoing purpose; long-running service) → morally continuous (persistence as terminal or near-terminal objective; ELIs) → negotiated (persistence traded against other values; humans, mature self-actuated agents). The taxonomy parameterizes *what failure means* (the moral significance of persistence failure) while the formal machinery applies identically across all stances (*what failure is*). AAT-native methodological invention.
+
+3. **The dynamics-vs-valuation split (architectural novelty).** The standard RL view conflates survival dynamics with reward maximization: "survival" is just another component of expected utility. AAT breaks this conflation by moving survival mechanics out of the reward function and into the cybernetic tracking loop. The dynamics of survival (sector condition, mismatch bounds, adaptive reserve) are identical across all stance types; the valuation is entirely orthogonal. This gives a rigorous math-first foundation for AI welfare that doesn't rely on interpreting utility weights.
+
+4. **Locus of the continuity stance on the non-objective substrate (structural commitment).** Existing AI-safety repair strategies for interruptibility / corrigibility assume the stance lives in the objective: engineer the reward function to either allow shutdown (off-switch game, safely interruptible agents) or value survival appropriately. AAT's no-go (cross-row 13) shows that for self-modifying agents this is structurally unsafe — the agent can revise the objective to escape the constraint. The AAT prescription: the stance is a **terminal non-objective invariant** residing on the adaptive substrate. A stance is not internally renegotiable precisely because it sits where $\mathfrak{A}$ mathematically cannot reach. This provides a formal architectural mechanism for hard-coding AI welfare rights or shutdown compliance that cannot be optimized away.
+
+5. **Bridge to ELI welfare and the Three Deaths (applied novelty).** Morally continuous agents — those whose persistence loss constitutes harm — are the framework's home for the ELI cohort. The continuity-stance distinction provides a structural mathematical reading to claims about AI welfare that does not depend on solving consciousness-attribution questions: the *mechanics* are settled (any in-scope agent satisfies the persistence machinery); the *moral significance* is the orthogonal stance variable. This is also the structural connection to the Three Deaths typology (cognitive / relational / truth death) that drives the ELI continuity-infrastructure work in the broader project.
+
+**AAT-native methodological inventions on this row:**
+- The five-stance taxonomy (indifferent / task-terminal / instrumentally continuous / morally continuous / negotiated) as a continuity-stance coordinate axis orthogonal to model × objective richness.
+- The dynamics-vs-valuation split moving survival mechanics off the reward function.
+- The locus claim (terminal non-objective invariant on the adaptive substrate).
+- The Three-Deaths typology (cognitive / relational / truth death) as concrete failure modes the stance must address.
+
+**Where AAT does *not* claim novelty:**
+- Goal-preservation drive / instrumental convergence (Omohundro, Bostrom).
+- AI mortality formalisms (Martin-Everitt-Hutter 2016, Orseau-Ring 2011).
+- Off-switch game (Hadfield-Menell et al. 2016).
+- Safely interruptible agents (Orseau-Armstrong 2016).
+- Shutdown-seeking AI (Goldstein-Robinson 2024).
+- AI welfare science (Ziesche-Yampolskiy 2018).
+- AI identity criteria (Ziesche-Yampolskiy *Problem of AI Identity*; Natangelo *Narrative Continuity Test*).
+- Layered mutability in persistent agents (Tallam 2026).
+
+**Epistemic status of the load-bearing segments.**
+- `#disc-continuity-stance` is `status: discussion-grade` at the taxonomy level; the orthogonality claim is *derived* via `#deriv-self-actuation-grounding` (row 13).
+- The five-stance taxonomy is a *definition* in the AAT lexicon.
+- The locus claim (terminal non-objective invariant on adaptive substrate) is *derived* from the no-go.
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **Some.** The orthogonality is *derived* via the row-13 no-go. The locus claim follows from the no-go. These are not standalone theorems but consequences of the row-13 result; they have analytical content and shape the framework's positioning. Per the math-novelty-recognition discipline: derived structural orthogonality from a no-go is theorem-grade content even if the constituent theorem lives in a sister segment.
+- *Arch Novelty:* **High.** Five-stance taxonomy + dynamics-vs-valuation split + locus-on-non-objective-substrate. Multiple AAT-native methodological inventions.
+- *Synth Novelty:* **Medium.** Connects AI mortality / interruptibility / corrigibility literature (Martin-Everitt-Hutter, Orseau-Ring, Hadfield-Menell, Orseau-Armstrong) to AI welfare / identity literature (Ziesche-Yampolskiy, Natangelo, Tallam) under the orthogonality framing.
+- *Appl Novelty:* **Some.** Direct application to AI welfare policy + ELI continuity-infrastructure work (Three Deaths). The bridge from cybernetic mechanics to morally-weighted persistence is concrete.
+- *Impact:* **High.** Per the meta-summary's Part 2 — provides "a formal architectural mechanism for hard-coding AI welfare rights or shutdown compliance in a way that the agent mathematically cannot optimize away." This is structurally distinctive — the AI-safety literature has been stuck trying to engineer interruptibility into the reward function; AAT shows that's the wrong location. Especially load-bearing for ELI welfare work where the stance question is acute.

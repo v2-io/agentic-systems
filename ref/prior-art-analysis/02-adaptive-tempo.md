@@ -48,8 +48,33 @@ While the filtering literature provides the *gain* term, the control literature 
 
 The mathematical primitives of AAT's Adaptive Tempo—specifically the Fisher-local matrix gain $K^{(k)}$ and the equivalence of natural gradient to Bayesian filtering—are firmly established by Amari, Ollivier, and Li. AAT does not claim to have invented the natural gradient or the Kalman filter.
 
-**AAT's Novel Contribution:**
-AAT's contribution is **synthetic and architectural**. 
+**Where AAT actually contributes:**
 
-1. **Unifying Speed and Geometry:** In the prior art, the Information Geometry community studies the *geometry of the update* (the gain/direction), while the Networked Control community studies the *speed of the update* (the data rate/frequency). AAT is novel because it formally multiplies them together ($\mathcal{T} = \nu \cdot K$) to create a single, unified cybernetic capacity metric: Adaptive Tempo.
-2. **The Anisotropic Persistence Requirement:** AAT's pure mathematical novelty here lies in its integration of this tensor tempo with Lyapunov persistence (Topic 10). AAT proves that under cross-dimensional correction (where prior and likelihood eigenbases misalign), a scalar tempo metric is mathematically unsafe and will falsely predict survival. By lifting the persistence inequality into a *matrix-Loewner condition* ($\Sigma_\infty \prec D_\delta$), AAT provides a rigorous, closed-form test for agent survival in anisotropic environments, translating information geometry directly into existential bounds.
+1. **The tensor adaptive tempo $\mathcal T = \nu \cdot K$ as a unified capacity metric (AAT-native methodological invention).** The information-geometry community studies the *geometry of the update* (the gain / direction); the networked-control community studies the *speed of the update* (the data rate / frequency). AAT's $\mathcal T = \nu \cdot K$ multiplies them into a single capacity metric. This is a methodological invention purposeful to the cybernetic-physics frame, not a relabel: the multiplication makes the trade-off between richer-per-step updates and faster-per-step updates analytically explicit, and the matrix form makes the anisotropic case first-class.
+
+2. **The matrix-Loewner persistence condition $\Sigma_\infty \prec D_\delta$ (theorem-grade math).** Under cross-dimensional correction (where prior and likelihood eigenbases misalign), a scalar tempo metric is mathematically *unsafe* and will falsely predict survival. AAT lifts the persistence inequality into a matrix-Loewner condition, providing a rigorous closed-form test for survival in anisotropic environments. This is theorem-grade math derived using established Lyapunov / matrix-comparison machinery in an AAT-internal axiomatic setting (Nash-style — new theorem using existing techniques).
+
+3. **The Fisher-local invariance regime as scope-marker (architectural-methodological invention).** Explicit naming of the regime under which the Fisher-local matrix-gain analysis is exact (and identifying the larger scope where it is approximate) is the CS-norm scope-precision-is-valuable move. The Fisher-local-vs-Fisher-global distinction is AAT-native methodological apparatus.
+
+4. **The cross-eigenbasis safety result (theorem-grade, application-of-Loewner-comparison).** Proving that scalar tempo overestimates capacity along weak dimensions in anisotropic environments is itself a substantive Nash-style result. The proof uses Loewner-comparison machinery; the result is new.
+
+**AAT-native methodological inventions on this row:**
+- The tensor tempo $\mathcal T = \nu \cdot K$ as a unified capacity metric.
+- The Fisher-local invariance regime.
+- The matrix-Loewner persistence condition $\Sigma_\infty \prec D_\delta$.
+- The "isotropic vs anisotropic" agent-environment distinction with the safety-of-scalar-tempo result.
+
+**Where AAT does *not* claim novelty:**
+- Amari's natural gradient (1998).
+- Ollivier's EKF-as-natural-gradient equivalence (2017).
+- Li et al.'s information-geometric Bayesian filtering (2017).
+- Touchette-Lloyd / Tishby-Polani actuation channels (2001 / 2011).
+- Silva et al. / Kostina-Hassibi rate-cost tradeoffs (2014 / 2019).
+- Fisher information itself, the Kalman gain, or the natural gradient as classical objects.
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **High.** The matrix-Loewner persistence condition + the cross-eigenbasis safety theorem + the tensor tempo capacity metric are theorem-grade derivations using established machinery in AAT-internal axiomatic settings.
+- *Arch Novelty:* **High.** The Fisher-local invariance regime as scope-marker; the isotropic-vs-anisotropic agent-environment distinction; the matrix-form-makes-anisotropy-first-class architectural move.
+- *Synth Novelty:* **High.** Unifies information geometry (Amari natural gradient), Bayesian filtering (Kalman gain in information coordinates), and information-theoretic control (rate-cost tradeoffs) into one cybernetic-capacity metric.
+- *Appl Novelty:* **None.** No domain-specific instantiation in this row.
+- *Impact:* **High.** Per the meta-summary's Part 2 — the tensor capacity metric "translates pure information geometry into a rigorous existential bound on agent survival" and the matrix-Loewner condition is "scalar tempo is unsafe in anisotropic environments." The connection to active-inference / FEP-adjacent fields gives this row broad cross-disciplinary reach.

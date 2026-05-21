@@ -46,8 +46,34 @@ The claim that maintaining tracking bounds requires a strict minimum Shannon inf
 
 Every mathematical component of AAT's persistence bounds—sector conditions, the $1/\alpha$ vs $1/\sqrt{\alpha}$ scaling dichotomy, and the Shannon rate floor—is a canonical, heavily-cited result in adaptive filtering and nonlinear control. 
 
-**AAT's Novel Contribution:**
-AAT achieves **architectural novelty** by elevating these physical control theorems into a universal template for epistemic and teleological agency. 
+**Where AAT actually contributes:**
 
-1. **Unifying the Substrate:** AAT's "Sector-Persistence Template" mathematically unifies disparate agentic phenomena—epistemic belief updating, strategic plan validation, multi-agent coordination, and adversarial destabilization—by proving they are all instances of the exact same Lur'e/Monotone-Operator problem. It proves that the same $1/\sqrt{\alpha}$ scaling law that governs a hardware LMS filter tracking a radio signal also governs a general intelligence tracking an adversary's strategy.
-2. **Broader Validity than Active Inference:** AAT explicitly contrasts its Lyapunov sector approach with the Free Energy Principle (FEP). While FEP relies on the assumption that agents flow toward the minimum of a variational free energy landscape on a non-equilibrium-steady-state (NESS) density—an assumption mathematically narrow for nonlinear systems (Aguilera 2022)—AAT proves that the standard Lyapunov sector condition provides strict bounds without requiring NESS or a free energy gradient. AAT achieves the universal stability claims of Active Inference using a much broader, more rigorously established control-theoretic foundation.
+1. **The Sector-Persistence Template as a universal agency machinery (architectural-synthetic novelty + theorem-grade content).** AAT proves that disparate agentic phenomena — epistemic belief updating, strategic plan validation, multi-agent coordination, adversarial destabilization, composite tempo accounting, wrapper-induced class coercion, resource-bounded depletion — are all instances of the *same* sector-persistence template. The template itself is `#result-sector-persistence-template` with state variable $\xi$, correction function $F$, sector parameter $\alpha$, basin radius $R$, and disturbance rate $\rho$, and the per-instance derivations transcribe the template with instance-specific bindings. Each transcription is a Nash-style theorem: new derivation using established Lur'e / Lyapunov / sector-bound machinery in an AAT-internal axiomatic setting.
+
+2. **The Model D / Model S scaling dichotomy ($1/\alpha$ vs $1/\sqrt{\alpha}$) as AAT-derived theorem (theorem-grade math).** Widrow's LMS-filter dichotomy and Ljung-Priouret's tracking bounds give the established ancestor. AAT's specific contribution is the *exact* statement of the dichotomy inside the persistence template under named conditions (Models D and S), with the propagation through composite tempo, adversarial destabilization (giving $b = 2$ / $b = 3/2$ adversarial advantage exponents), and resource-bounded depletion. The dichotomy *as stated in the template* is AAT-internal; the propagation to multiple consequence rows is the synthesis.
+
+3. **The information-rate floor for stochastic persistence (theorem-grade math).** Maintaining persistence against noise requires a strict minimum Shannon information acquisition rate. The Sahai-Mitter / Nair-Evans / Tatikonda-Mitter anytime-capacity result is the closest external ancestor; AAT's contribution is the application to *agent persistence* (rather than channel-rate-for-stabilization) and the link to the Model S $1/\sqrt{\alpha}$ scaling. Nash-style derivation.
+
+4. **The Lyapunov-vs-NESS critical contrast (architectural-synthetic novelty).** AAT proves that the standard Lyapunov sector condition provides strict bounds without requiring NESS density assumptions, which Aguilera (2022) and others have shown are mathematically narrow for nonlinear systems. The same universal stability claims as Active Inference are obtained via much broader, classically established Lyapunov-control-theoretic foundations. This is structurally why AAT can apply across a wider range of agent types than FEP can — a structural contribution, not just a notational variant.
+
+**AAT-native methodological inventions on this row:**
+- The Sector-Persistence Template as a one-stop instantiation form for diverse agentic dynamics.
+- The named Model D / Model S regime split with the $1/\alpha$ / $1/\sqrt{\alpha}$ scaling dichotomy.
+- The adaptive-reserve quantity $\Delta \rho^\ast = \alpha R - \rho$ as a finite per-step agent-available read.
+- The information-rate floor as a structural condition on agent persistence (not just stabilization of a plant).
+- The Lyapunov-without-NESS positioning relative to FEP.
+
+**Where AAT does *not* claim novelty:**
+- Sector conditions / Lur'e problem (Zames 1966).
+- $1/\mu$ vs $1/\sqrt{\mu}$ adaptive-filter scaling (Widrow et al. 1976, 1984; Ljung-Priouret 1991).
+- Data Rate Theorem (Nair-Evans 2004, Tatikonda-Mitter 2004).
+- Anytime Capacity (Sahai-Mitter 2006).
+- Lestas-Vinnicombe-Paulsson fluctuation suppression limits (2010).
+- Lyapunov stability / monotone-operator theory itself.
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **High.** The Sector-Persistence Template plus the Model D / Model S dichotomy plus the information-rate floor plus the adaptive-reserve construct plus the multiple per-instance template transcriptions = multiple substantive theorem-grade derivations. Per the math-novelty-recognition discipline: Nash-style applications of established machinery (Zames, Widrow, Sahai-Mitter) to AAT-internal axiomatic settings are math content.
+- *Arch Novelty:* **High.** Universal template + Model D / Model S split + adaptive reserve + Lyapunov-without-NESS positioning.
+- *Synth Novelty:* **High.** Unifies adaptive filtering, networked control, biological persistence (Lestas), and Lyapunov stability under one agency-applicable template.
+- *Appl Novelty:* **None.** No domain-specific instantiation in this row.
+- *Impact:* **High.** Per the meta-summary's Part 2 — AAT provides a structurally superior alternative to FEP's NESS assumption, achieving the same universal stability claims via "mathematically unassailable control-theoretic Lyapunov bounds, entirely bypassing the fragile NESS density requirement." This is one of AAT's strongest cross-disciplinary contributions because it gives Active Inference a cleaner foundation.
