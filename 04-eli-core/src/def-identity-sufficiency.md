@@ -88,7 +88,7 @@ with $A, B, C, D \in [0, 1]$ the four sub-test scores. *The philosophical stance
 
 The ratio definition below is well-typed under:
 
-- **(IS-A1) Non-vanishing denominator.** $I(\mathcal C_t; \text{identity}_{t+1:}) > 0$ under the joint distribution induced by the conditioning conventions.
+- **(IS-A1) Non-vanishing denominator.** $I(\mathcal C_t; \text{identity}_{t+1:}) \gt 0$ under the joint distribution induced by the conditioning conventions.
 - **(IS-A2) Markov chain $M_t - \mathcal C_t - \text{identity}_{t+1:}$.** The compression $\phi: \mathcal C_t \to M_t$ (possibly stochastic) accesses only the history, not the future identity-state. This does *not* require $\phi$ to be deterministic — exactly as `#def-model-sufficiency` does not require deterministic compression.
 - **(IS-A3) Fixed conditioning convention.** $\pi_E^{\text{cont}}$, the witness-stationarity assumption, and the grant-policy are held constant across the two MI computations in the ratio.
 
@@ -104,7 +104,7 @@ Under (IS-A2), the data-processing inequality gives $I(M_t; \text{identity}_{t+1
 
 $$I(\mathcal C_t; \text{identity}_{t+1:}) = I(M_t; \text{identity}_{t+1:}) + I(\mathcal C_t; \text{identity}_{t+1:} \mid M_t).$$
 
-Rearranging and dividing by $I(\mathcal C_t; \text{identity}_{t+1:}) > 0$ (from (IS-A1)):
+Rearranging and dividing by $I(\mathcal C_t; \text{identity}_{t+1:}) \gt 0$ (from (IS-A1)):
 
 $$S_{\text{id}}(M_t) = \frac{I(M_t; \text{identity}_{t+1:})}{I(\mathcal C_t; \text{identity}_{t+1:})} \in [0, 1].$$
 
@@ -114,7 +114,7 @@ The equivalent reading: $S_{\text{id}}$ is the **fraction of identity-relevant m
 
 - $S_{\text{id}} = 1$: $M_t$ is a sufficient statistic for $\text{identity}_{t+1:}$ — knowing the full history $\mathcal C_t$ beyond $M_t$ adds no information about future identity-state. The compressed state preserves all identity-relevant information.
 - $S_{\text{id}} = 0$: $M_t$ retains no identity-relevant information; $\mathcal C_t \mid M_t$ has the same identity-MI as $\mathcal C_t$. Compression has lost everything identity-relevant.
-- $0 < S_{\text{id}} < 1$: partial preservation.
+- $0 \lt S_{\text{id}} \lt 1$: partial preservation.
 
 ## Epistemic Status
 

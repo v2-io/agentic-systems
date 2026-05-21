@@ -48,7 +48,7 @@ When $\mathcal{T}$ is symmetric and commutes with $\Sigma_w$, the solution simpl
 
 The agent persists operationally iff:
 
-**(MP-1) Structural persistence.** $\mathcal{T}$ is Hurwitz — equivalently, $\Sigma_\infty$ exists as the unique positive-definite solution of the Lyapunov equation. This is the matrix analog of `#result-persistence-condition`'s structural condition $\alpha > 0$ (Hurwitz reduces to $\mathcal{T}_0 > 0$ in the scalar case).
+**(MP-1) Structural persistence.** $\mathcal{T}$ is Hurwitz — equivalently, $\Sigma_\infty$ exists as the unique positive-definite solution of the Lyapunov equation. This is the matrix analog of `#result-persistence-condition`'s structural condition $\alpha \gt 0$ (Hurwitz reduces to $\mathcal T_0 \gt 0$ in the scalar case).
 
 **(MP-2) Matrix-Loewner task adequacy.**
 
@@ -64,13 +64,13 @@ The Loewner condition (MP-2) admits three equivalent forms:
 
 **(MP-2a) Per-direction.** For every unit direction $\hat v \in \mathbb{R}^d$:
 
-$$\hat v^T \Sigma_\infty \hat v \;<\; \hat v^T D_\delta \hat v \;=\; \sum_k v_k^2\, \delta_{\text{critical},k}^2.$$
+$$\hat v^T \Sigma_\infty \hat v \;\lt\; \hat v^T D_\delta \hat v \;=\; \sum_k v_k^2\, \delta_{\text{critical},k}^2.$$
 
 The projected stationary variance along $\hat v$ must be less than the direction-projected squared threshold along the same direction.
 
-**(MP-2b) Spectral.** The generalized eigenvalue problem $\Sigma_\infty x = \lambda D_\delta x$ satisfies $\lambda_{\max} < 1$, equivalently
+**(MP-2b) Spectral.** The generalized eigenvalue problem $\Sigma_\infty x = \lambda D_\delta x$ satisfies $\lambda_{\max} \lt 1$, equivalently
 
-$$\lambda_{\max}\!\big(D_\delta^{-1/2}\Sigma_\infty D_\delta^{-1/2}\big) \;<\; 1.$$
+$$\lambda_{\max}\!\big(D_\delta^{-1/2}\Sigma_\infty D_\delta^{-1/2}\big) \;\lt\; 1.$$
 
 The principal eigenvector identifies the *worst direction*; the eigenvalue's distance from $1$ is the worst-direction safety margin.
 
@@ -82,8 +82,8 @@ The three are mathematically equivalent under standard matrix-analysis (Horn & J
 
 | Special case | (MP-2) reduces to | Matches |
 |---|---|---|
-| Isotropic ($\mathcal{T} = \mathcal{T}_0 I$, $\Sigma_w = \sigma_w^2 I$, $\delta_{\text{critical}} = \delta_0 \mathbf{1}$) | $\sigma_w^2 / (2\mathcal{T}_0) < \delta_0^2$, i.e., $\mathcal{T}_0 > \sigma_w^2 / (2\delta_0^2)$ | Scalar Model S form, `#result-persistence-condition` |
-| Diagonal $\mathcal{T}, \Sigma_w$ in the coordinate basis of $D_\delta$ | $\sigma_{w,k}^2 / (2\mathcal{T}_{kk}) < \delta_{\text{critical},k}^2$ per coordinate $k$ | Per-coordinate Model S RMS, `#result-per-dimension-persistence` |
+| Isotropic ($\mathcal{T} = \mathcal T_0 I$, $\Sigma_w = \sigma_w^2 I$, $\delta_{\text{critical}} = \delta_0 \mathbf{1}$) | $\sigma_w^2 / (2\mathcal T_0) \lt \delta_0^2$, i.e., $\mathcal T_0 \gt \sigma_w^2 / (2\delta_0^2)$ | Scalar Model S form, `#result-persistence-condition` |
+| Diagonal $\mathcal{T}, \Sigma_w$ in the coordinate basis of $D_\delta$ | $\sigma_{w,k}^2 / (2\mathcal T_{kk}) \lt \delta_{\text{critical},k}^2$ per coordinate $k$ | Per-coordinate Model S RMS, `#result-per-dimension-persistence` |
 | Symmetric $\mathcal{T}$ commuting with $\Sigma_w$, general $D_\delta$ | Per-eigendirection inequality in $\mathcal{T}$'s eigenbasis, with direction-projected thresholds | New content recovered from the matrix form — extends per-coordinate to non-axis-aligned $\mathcal{T}$ |
 
 The third row is the content `#result-per-dimension-persistence` does not currently carry: when $\mathcal{T}$ and $\Sigma_w$ share an eigenbasis that is *not* the coordinate basis of $D_\delta$, the per-coordinate form misses the right direction-projected thresholds and the matrix-Loewner form handles them correctly.
@@ -96,7 +96,7 @@ The deeper structural question: is the matrix-Loewner form merely a generalizati
 
 $$\mathcal{T} \;=\; \begin{pmatrix} 1 & -0.9 \\ -0.9 & 1 \end{pmatrix}.$$
 
-This $\mathcal{T}$ is symmetric positive-definite with eigenvalues $1.9$ (along $(1, -1)/\sqrt{2}$) and $0.1$ (along $(1, 1)/\sqrt{2}$) — strongly anisotropic correction, with the $(1, 1)$ direction the weak axis. Per-coordinate naive reading of "diagonal of $\mathcal{T}$" sees uniform $\mathcal{T}_{11} = \mathcal{T}_{22} = 1$ and concludes correction is uniform at rate $1$ on each coordinate.
+This $\mathcal{T}$ is symmetric positive-definite with eigenvalues $1.9$ (along $(1, -1)/\sqrt{2}$) and $0.1$ (along $(1, 1)/\sqrt{2}$) — strongly anisotropic correction, with the $(1, 1)$ direction the weak axis. Per-coordinate naive reading of "diagonal of $\mathcal{T}$" sees uniform $\mathcal T_{11} = \mathcal T_{22} = 1$ and concludes correction is uniform at rate $1$ on each coordinate.
 
 **Stationary covariance.** Since $\mathcal{T}$ is symmetric, $\Sigma_\infty = \tfrac{1}{2}\mathcal{T}^{-1}\Sigma_w = \tfrac{1}{2}\mathcal{T}^{-1}$. Direct computation:
 
@@ -106,8 +106,8 @@ with eigenvalues $5.00$ along $(1, 1)/\sqrt{2}$ and $0.26$ along $(1, -1)/\sqrt{
 
 **Set $\delta_{\text{critical}} = (1.7, 1.7)$**, so $D_\delta = 2.89\, I$.
 
-- *Per-coordinate check (`#result-per-dimension-persistence` form):* per-coordinate stationary variance is $\Sigma_{\infty,kk} = 2.63 < 2.89 = \delta_{\text{critical},k}^2$ for each $k$. **Per-coordinate says PASS.** ✓
-- *Matrix-Loewner check (MP-2 here):* worst-direction projected variance is $\lambda_{\max}(\Sigma_\infty) = 5.00$ along $(1, 1)/\sqrt{2}$. Direction-projected squared threshold along the same direction is $\hat v^T D_\delta \hat v = 2.89$. The condition $5.00 < 2.89$ fails. Equivalently, $\lambda_{\max}(D_\delta^{-1/2}\Sigma_\infty D_\delta^{-1/2}) = 5.00 / 2.89 \approx 1.73 > 1$. **Matrix-Loewner says FAIL.** ✗
+- *Per-coordinate check (`#result-per-dimension-persistence` form):* per-coordinate stationary variance is $\Sigma_{\infty,kk} = 2.63 \lt 2.89 = \delta_{\text{critical},k}^2$ for each $k$. **Per-coordinate says PASS.** ✓
+- *Matrix-Loewner check (MP-2 here):* worst-direction projected variance is $\lambda_{\max}(\Sigma_\infty) = 5.00$ along $(1, 1)/\sqrt{2}$. Direction-projected squared threshold along the same direction is $\hat v^T D_\delta \hat v = 2.89$. The condition $5.00 \lt 2.89$ fails. Equivalently, $\lambda_{\max}(D_\delta^{-1/2}\Sigma_\infty D_\delta^{-1/2}) = 5.00 / 2.89 \approx 1.73 \gt 1$. **Matrix-Loewner says FAIL.** ✗
 
 **Conclusion.** Per-coordinate gives a false-pass. The agent will routinely produce mismatch vectors with RMS magnitude $\sqrt{5.00} = 2.24$ along the $(1, 1)/\sqrt{2}$ direction, exceeding the direction-projected threshold of $\sqrt{2.89} = 1.70$ on that direction. The per-coordinate analysis missed the diagonal direction because each coordinate alone stays within $\delta_{\text{critical},k} = 1.7$ — the failure is *only* visible at the matrix-Loewner level. Cross-dimensional correction (the off-diagonal entries of $\mathcal{T}$) is what creates the diagonal-direction concentration that per-coordinate cannot detect.
 
@@ -125,9 +125,9 @@ with eigenvalues $5.00$ along $(1, 1)/\sqrt{2}$ and $0.26$ along $(1, -1)/\sqrt{
 **What is not established here:**
 
 - The nonlinear matrix-sector extension. Under sector-bounded $F(\mathcal{T}, \delta)$ with $\delta^T F \succeq \alpha I$ in matrix-Loewner form, the matrix-Lyapunov machinery extends to give an ultimate-bound matrix; the linear case here is the template instantiation. Full matrix-sector treatment is follow-on work in `#deriv-sector-condition`.
-- The Model D matrix lift. Under deterministic bounded disturbance $\|w_t\|_M \le \rho$ in a quadratic norm, the ultimate-bound becomes an ellipsoid containment problem (a linear matrix inequality). Mechanical lift; not derived here.
-- The non-Hurwitz boundary behaviour (eigenvalue exactly on the imaginary axis). Outside Hurwitz, the linear analysis fails — no stationary distribution. This matches the scalar case's $\alpha > 0$ requirement.
-- The promotion of `#result-adversarial-tempo-advantage` to matrix form. The matrix-Loewner form sharpens the adversarial result via worst-direction targeting (an adversary controlling $\Sigma_w^{\text{adv}}$ maximizes $\lambda_{\max}(D_\delta^{-1/2}\Sigma_w^{\text{adv}} \mathcal{T}_{\text{eff}}^{-1} D_\delta^{-1/2})$), but the full adversarial promotion is a separate cycle.
+- The Model D matrix lift. Under deterministic bounded disturbance $\Vertw_t\Vert_M \le \rho$ in a quadratic norm, the ultimate-bound becomes an ellipsoid containment problem (a linear matrix inequality). Mechanical lift; not derived here.
+- The non-Hurwitz boundary behaviour (eigenvalue exactly on the imaginary axis). Outside Hurwitz, the linear analysis fails — no stationary distribution. This matches the scalar case's $\alpha \gt 0$ requirement.
+- The promotion of `#result-adversarial-tempo-advantage` to matrix form. The matrix-Loewner form sharpens the adversarial result via worst-direction targeting (an adversary controlling $\Sigma_w^{\text{adv}}$ maximizes $\lambda_{\max}(D_\delta^{-1/2}\Sigma_w^{\text{adv}} \mathcal T_{\text{eff}}^{-1} D_\delta^{-1/2})$), but the full adversarial promotion is a separate cycle.
 - The matrix extension of `#deriv-persistence-cost`'s information-rate floor. The natural lift is $\dot R \ge \tfrac{1}{2}\mathrm{Tr}(\mathcal{T})$ — per-eigendirection application of the scalar derivation. Worth a cross-reference Working Note in that segment if it becomes load-bearing; not derived here.
 
 ## Discussion
@@ -150,9 +150,9 @@ with eigenvalues $5.00$ along $(1, 1)/\sqrt{2}$ and $0.26$ along $(1, -1)/\sqrt{
 
 ## Working Notes
 
-- **Counterexample as load-bearing content.** Section 4's $\mathcal{T} = \begin{pmatrix}1 & -0.9 \\ -0.9 & 1\end{pmatrix}$ example is the segment's strongest content — it shifts the matrix-Loewner form from "interesting generalization" to "the safe condition; per-coordinate is unsafe under cross-dimensional correction." The example uses the smallest nontrivial dimension ($d = 2$), the simplest non-diagonal symmetric $\mathcal{T}$ structure, and isotropic disturbance / threshold parameters. Generalizations to $d > 2$, asymmetric $\mathcal{T}$, and anisotropic $\Sigma_w / D_\delta$ are mechanical; the qualitative phenomenon (off-diagonal correction → diagonal-direction variance concentration → per-coordinate false-pass) is robust.
+- **Counterexample as load-bearing content.** Section 4's $\mathcal{T} = \begin{pmatrix}1 & -0.9 \\ -0.9 & 1\end{pmatrix}$ example is the segment's strongest content — it shifts the matrix-Loewner form from "interesting generalization" to "the safe condition; per-coordinate is unsafe under cross-dimensional correction." The example uses the smallest nontrivial dimension ($d = 2$), the simplest non-diagonal symmetric $\mathcal{T}$ structure, and isotropic disturbance / threshold parameters. Generalizations to $d \gt 2$, asymmetric $\mathcal{T}$, and anisotropic $\Sigma_w / D_\delta$ are mechanical; the qualitative phenomenon (off-diagonal correction → diagonal-direction variance concentration → per-coordinate false-pass) is robust.
 - **Empirical validation.** A 2D simulation matching the §4 parameters would confirm the predicted false-pass behaviour of per-coordinate: run the linear SDE with $\mathcal{T}, \Sigma_w$ from §4 for $N$ steps; observe that the per-coordinate marginals stay within $\pm 1.7$ most of the time (per-coordinate "passes") while the diagonal-direction projection routinely exceeds $\pm 1.7$ (matrix-Loewner "fails"). Mechanical simulation; would land cleanly under `obs-section-i-validation-simulations` as a new variant.
-- **Open work — nonlinear matrix-sector.** The matrix-Loewner form is derived for linear correction. The nonlinear matrix-sector lift would replace the Lyapunov equation with the matrix-sector inequality $F(\delta) + F(\delta)^T \succeq 2\alpha \delta\delta^T / \|\delta\|^2$ (or a matrix-sector form derived from a quadratic Lyapunov function). Composes with `#deriv-sector-condition`'s nonlinear scalar machinery via the matrix template; not derived here.
+- **Open work — nonlinear matrix-sector.** The matrix-Loewner form is derived for linear correction. The nonlinear matrix-sector lift would replace the Lyapunov equation with the matrix-sector inequality $F(\delta) + F(\delta)^T \succeq 2\alpha \delta\delta^T / \Vert\delta\Vert^2$ (or a matrix-sector form derived from a quadratic Lyapunov function). Composes with `#deriv-sector-condition`'s nonlinear scalar machinery via the matrix template; not derived here.
 - **Open work — adversarial extension.** The adversarial advantage exponent in `#result-adversarial-tempo-advantage` lifts to a matrix-eigenvalue-ratio exponent: an adversary controlling $\Sigma_w^{\text{adv}}$ maximizes the bad-direction stationary variance via the matrix-Loewner form. Worth a follow-on derivation if `#result-adversarial-tempo-advantage` is promoted to matrix form.
 - **Open work — composition lift.** Composite stationary covariance $\Sigma_\infty^c$ solves the Lyapunov equation with composite $\mathcal{T}^c$ and $\Sigma_w^c$ (aggregated from sub-agents); composite Loewner condition $\Sigma_\infty^c \prec D_\delta^c$ governs composite persistence. Promoting `#form-composition-closure`, `#der-team-persistence`, and `#deriv-critical-mass-composition` to invoke the matrix form is the natural next AAT-1 follow-on cycle.
 - **Landing context.** Landed in the 2026-05-12 AAT-1 follow-on cycle (matrix-Loewner persistence, succeed-beyond-claim); see CHANGELOG 2026-05-12 (late). The load-bearing derivation and counterexample are above; the follow-on extensions (Model D matrix lift, adaptive-gain matrix dynamics, variational matrix form) are flagged in the "Open work" notes here and in TODO. Originating spike is absorbed archaeology, not a live reference.

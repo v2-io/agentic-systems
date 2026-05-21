@@ -30,7 +30,7 @@ so $f_M$ depends on $G$ by construction. The directed-separation condition ( #de
 
 $$\kappa_{\text{processing}} = \frac{I(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})}{H(G_t \mid e_\tau, M_{\tau^-})} \approx 1$$
 
-This is structural, not parametric — no choice of $\eta^*$ or model size restores directed separation while channel collapse holds.
+This is structural, not parametric — no choice of $\eta^\ast$ or model size restores directed separation while channel collapse holds.
 
 ## Epistemic Status
 
@@ -40,7 +40,7 @@ This is structural, not parametric — no choice of $\eta^*$ or model size resto
 
 **What would strengthen this:** explicit derivation of $\kappa_{\text{processing}} = 1$ in the limit of pure channel collapse (currently asserted as $\approx 1$); precise characterization of the recovery moves that reduce $\kappa$ effectively at the loop level; empirical measurement of $\kappa$ for representative LLM architectures.
 
-**What would soften this:** evidence that some LLM architectures separate observation and action substrates internally (e.g., via attention-head specialization that effectively gives $\kappa < 1$); evidence that the $\kappa$ definition itself doesn't apply cleanly to the coupled-pass case.
+**What would soften this:** evidence that some LLM architectures separate observation and action substrates internally (e.g., via attention-head specialization that effectively gives $\kappa \lt 1$); evidence that the $\kappa$ definition itself doesn't apply cleanly to the coupled-pass case.
 
 ## Discussion
 

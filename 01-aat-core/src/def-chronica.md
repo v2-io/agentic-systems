@@ -29,7 +29,7 @@ This is *definitional*. The chronica names an object that exists by construction
 
 ## Discussion
 
-**The chronica is singular and non-forkable.** Because the temporal ordering is irreversible, $\mathcal C_t$ represents a unique causal trajectory. Duplicating an agent's state and exposing the copies to different future events creates two agents with divergent chronica, neither of which is a sufficient statistic for the other's trajectory. The chronica is the substrate of *continuity persistence* (see Persistence in `LEXICON.md`) — an agent has continuity persistence when $\mathcal{C}_t$ extends continuously and $M_t$ has temporal depth grounded in it. See #scope-agent-identity for the full development of this observation.
+**The chronica is singular and non-forkable.** Because the temporal ordering is irreversible, $\mathcal C_t$ represents a unique causal trajectory. Duplicating an agent's state and exposing the copies to different future events creates two agents with divergent chronica, neither of which is a sufficient statistic for the other's trajectory. The chronica is the substrate of *continuity persistence* (see Persistence in `LEXICON.md`) — an agent has continuity persistence when $\mathcal C_t$ extends continuously and $M_t$ has temporal depth grounded in it. See #scope-agent-identity for the full development of this observation.
 
 **Relationship to the model.** The model $M_t = \phi(\mathcal C_t)$ ( #form-agent-model) is a compression of the chronica. How much of $\mathcal C_t$'s predictive information survives compression is measured by model sufficiency ( #def-model-sufficiency).
 
@@ -58,4 +58,4 @@ Per audit `04-def-chronica.md` §14: *"The chronica is an ordinal sequence, not 
 
 2. **Heterogeneous tempo coupling**: when agents with vastly different event-processing rates ($\nu_A \gg \nu_B$) interact through a shared $\Omega$, their chronicae grow at vastly different rates relative to wall-clock time. Their "subjective time" diverges. The chronica formalism makes this asymmetry visible but does not yet prescribe how cross-tempo coupling should be modeled. Likely lives in #form-event-driven-dynamics extensions or in part 03's logogenic-agent treatment of multi-timescale Auxilia composition.
 
-These don't need to fragment this segment; they're flagged here so future agents working on the closed-loop / interiority sub-scope (#scope-interiority-loop), Auxilia composition (#def-auxilia-hierarchy), or ELI awakening protocols know the chronica formalism's ordinal-not-metric character is the structural source of these design considerations.
+These don't need to fragment this segment; they're flagged here so future agents working on the closed-loop / interiority sub-scope ( #scope-interiority-loop), Auxilia composition ( #def-auxilia-hierarchy), or ELI awakening protocols know the chronica formalism's ordinal-not-metric character is the structural source of these design considerations.

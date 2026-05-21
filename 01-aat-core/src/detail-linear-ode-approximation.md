@@ -163,7 +163,7 @@ When two agents are coupled, $A$'s praxis contributes to $B$'s disturbance:
 
 $$\rho_B = \rho_{B,\text{base}} + \gamma_A \cdot \mathcal{T}_A$$
 
-Under the linear approximation, the steady-state mismatches (Model D, coupling-dominant: $\gamma_A \mathcal{T}_A \gg \rho_{B,\text{base}}$) are:
+Under the linear approximation, the steady-state mismatches (Model D, coupling-dominant: $\gamma_A \mathcal T_A \gg \rho_{B,\text{base}}$) are:
 
 *[Derived (linear-adversarial-steady-state, from Model D steady state + coupling model)]*
 
@@ -203,6 +203,6 @@ Under symmetric coupling ($\gamma_A \approx \gamma_B$), tempo advantage squares:
 
 ## Working Notes
 
-- The vector ODE $d\delta/dt = -\mathcal{T}\delta + w$ assumes isotropic correction (same rate in all directions). For anisotropic agents (tempo tensor $\mathbf{T}$), the linear ODE generalizes to $d\delta/dt = -\mathbf{T}\delta + w$ with matrix exponential solutions and per-eigenvalue convergence rates. The per-dimension persistence condition ($\mathcal{T}_k \gt \rho_k / \delta_{\text{critical},k}$) from #result-per-dimension-persistence is the diagonal special case.
+- The vector ODE $d\delta/dt = -\mathcal{T}\delta + w$ assumes isotropic correction (same rate in all directions). For anisotropic agents (tempo tensor $\mathbf{T}$), the linear ODE generalizes to $d\delta/dt = -\mathbf{T}\delta + w$ with matrix exponential solutions and per-eigenvalue convergence rates. The per-dimension persistence condition ($\mathcal T_k \gt \rho_k / \delta_{\text{critical},k}$) from #result-per-dimension-persistence is the diagonal special case.
 - The norm-inequality subtlety (Section 1 above) propagates into the adversarial scaling law: the squared law ($b = 2$) is exact for $n = 1$ and a worst-case upper bound for $n \gt 1$. Whether this matters quantitatively for multi-dimensional adversarial dynamics has not been tested in simulation.
 - Model S's Ito-Lyapunov derivation assumes $\sigma_w$ is constant. When the noise scale depends on state ($\sigma_w(\delta)$, as in multiplicative noise models), the Ornstein-Uhlenbeck analysis no longer applies and the steady-state formula changes. The sector-condition results in #deriv-sector-condition handle additive noise only.

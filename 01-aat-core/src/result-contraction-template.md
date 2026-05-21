@@ -24,15 +24,15 @@ stage: draft
 
 *[Template preconditions (contraction-template)]*
 
-Let $\xi(t) \in \mathbb{R}^n$ evolve under $\dot\xi = -F(\xi, t) + w(t)$ where $F$ is $C^1$ in $\xi$ and continuous in $t$. Let $M: \mathbb{R}^n \times \mathbb{R}_+ \to \mathbb{S}_{++}^n$ be a smooth symmetric positive-definite matrix-valued function with uniform conditioning:
+Let $\xi(t) \in \mathbb{R}^n$ evolve under $\dot\xi = -F(\xi, t) + w(t)$ where $F$ is $C^1$ in $\xi$ and continuous in $t$. Let $M: \mathbb{R}^n \times \mathbb R_+ \to \mathbb S_{++}^n$ be a smooth symmetric positive-definite matrix-valued function with uniform conditioning:
 
 $$m_1 I \preceq M(\xi, t) \preceq m_2 I \quad \text{for all } \xi \in \mathcal{B}_R,\, t \geq 0 \tag{M0}$$
 
-with constants $0 < m_1 \leq m_2 < \infty$.
+with constants $0 \lt m_1 \leq m_2 \lt \infty$.
 
 **(CT1) Zero correction at zero state.** $F(0, t) = 0$ for all $t$.
 
-**(CT2) Local differential-contraction condition.** There exist $\lambda > 0$ and $R > 0$ such that for all $\xi \in \mathcal{B}_R$, $t \geq 0$:
+**(CT2) Local differential-contraction condition.** There exist $\lambda \gt 0$ and $R \gt 0$ such that for all $\xi \in \mathcal B_R$, $t \geq 0$:
 
 $$\dot M(\xi, t) + M(\xi, t) \frac{\partial F}{\partial \xi}(\xi, t) + \Big(\frac{\partial F}{\partial \xi}(\xi, t)\Big)^T M(\xi, t) \succeq 2\lambda\, M(\xi, t). \tag{CT2}$$
 
@@ -48,7 +48,7 @@ $$\limsup_{t \to \infty} \lVert \xi(t) \rVert \leq \frac{\rho_\xi}{\lambda} \sqr
 
 Structural persistence (the ultimate bound fits within the contraction region $\mathcal B_R$) requires
 
-$$\lambda R \sqrt{m_1/m_2} > \rho_\xi. \tag{CT-D-persist}$$
+$$\lambda R \sqrt{m_1/m_2} \gt \rho_\xi. \tag{CT-D-persist}$$
 
 *Proof sketch.* Compute $\dot V = \xi^T \dot M \xi - 2 \xi^T M F + 2 \xi^T M w$. Integrate (CT2) along the ray $s\xi$, $s \in [0,1]$, using $F(0) = 0$: $2 \xi^T M F(\xi, t) \geq 2\lambda\, \xi^T M \xi - \xi^T \dot M \xi$. Substituting: $\dot V \leq -2\lambda V + 2 \xi^T M w$. Cauchy-Schwarz in $M$-inner product + (M0) gives the affine-contraction bound on $W = \sqrt V$; conversion to Euclidean norm via (M0) yields (CT-D). $\square$
 
@@ -60,9 +60,9 @@ Under stochastic disturbance $d\xi = -F(\xi, t)\,dt + \sigma_\xi\,dW_t$ and a me
 
 $$\mathbb E[V(\xi(t \wedge \tau_R), t \wedge \tau_R)] \leq V(\xi(0), 0)\,e^{-2\lambda t} + \frac{n\sigma_\xi^2 c_{\text{Itô}} m_2}{2\lambda},$$
 
-where $\tau_R = \inf\{t: \lVert\xi(t)\rVert > R\}$. Mean-square structural persistence requires
+where $\tau_R = \inf\{t: \lVert\xi(t)\rVert \gt R\}$. Mean-square structural persistence requires
 
-$$\lambda R^2 > \frac{n \sigma_\xi^2 c_{\text{Itô}}\, m_2^2}{2 m_1}. \tag{CT-S-persist}$$
+$$\lambda R^2 \gt \frac{n \sigma_\xi^2 c_{\text{Itô}}\, m_2^2}{2 m_1}. \tag{CT-S-persist}$$
 
 This is the natural extension of `#deriv-sector-condition`'s Prop A.1S region condition (Khasminskii 2012 ch. 5) to weighted metrics. When $M = I$ (Euclidean), $c_{\text{Itô}} = 1$, and the result reduces to Prop A.1S.
 
@@ -88,11 +88,11 @@ The contraction formulation refines `#deriv-sector-condition`'s A2' sub-scope pa
 - *Exponential-family natural parameters under Fisher metric* $M = \mathbf I(\theta)$: contraction rate $\lambda = \eta$ globally on the interior of the natural-parameter domain (Fisher-conditioning degradation removed). Also AAT-internally forced under (PI)/Čencov.
 - *Hessian-metric strongly-convex* $M = \nabla^2 L$: contraction rate $\lambda = \eta$ under bounded metric-derivative in the drift direction. Theorem-imported (Hessian metric chosen to match loss curvature; no AAT-internal axiom forces the specific coordinate).
 - *Linear-Hurwitz-non-symmetric under Lyapunov metric*: $M$ solves $M A + A^T M = -Q$ for $Q \succ 0$. Contraction rate $\lambda = \lambda_{\min}(Q)/(2\lambda_{\max}(M))$ in the $M$-metric. **New coverage:** asymmetric-stable linear corrections where Euclidean A2' fails. Theorem-imported (Lyapunov equation construction is standard; no AAT-internal axiom forces $Q$).
-- *PID with bounded plant nonlinearity under Lyapunov metric*: derived under plant-Lipschitz bound $L_p < \lambda_{\min}(Q)/(2\lambda_{\max}(M))$. **Promotion from sub-scope β.** Theorem-imported for the Lyapunov-metric construction; specializations include SPR-tuned PID (phase margin as sector constant; see `#der-gain-sector-bridge` Verified Instances).
+- *PID with bounded plant nonlinearity under Lyapunov metric*: derived under plant-Lipschitz bound $L_p \lt \lambda_{\min}(Q)/(2\lambda_{\max}(M))$. **Promotion from sub-scope β.** Theorem-imported for the Lyapunov-metric construction; specializations include SPR-tuned PID (phase margin as sector constant; see `#der-gain-sector-bridge` Verified Instances).
 
 **Sub-scope metric-β (contraction-metric formulation fails).** Four cases:
 
-- *Variational / amortized / approximate posteriors*: contraction to the *projected* target (best-in-class $q^\ast$) is derivable, but the projection error $\mathrm{KL}[q^\ast \| p_t]$ to the true posterior is a residual disturbance that contraction machinery cannot address.
+- *Variational / amortized / approximate posteriors*: contraction to the *projected* target (best-in-class $q^\ast$) is derivable, but the projection error $\mathrm{KL}[q^\ast \Vert p_t]$ to the true posterior is a residual disturbance that contraction machinery cannot address.
 - *Rule-based / symbolic / discontinuous updates*: non-smooth $F$; (CT2) requires $C^1$. Piecewise-smooth extensions (Di Bernardo et al. 2014) cover switched systems but not general rule-based reasoning.
 - *Severely misspecified agents*: contraction to a wrong target is still wrong. Metric choice is silent on target validity.
 - *Per-step SGD / human judgment*: noise-is-disturbance treatment identical to the Euclidean formulation; no improvement from metric choice.
@@ -111,7 +111,7 @@ When sub-agents individually satisfy the preconditions with metrics $M_i$ and ra
 
 **(CC-feedback) Negative feedback with bounded loop gain (Slotine 2003 Thm 3).** Two systems with rates $\lambda_1, \lambda_2$ connected by negative feedback with loop gains $k_{12}, k_{21}$ — the closed loop contracts iff
 
-$$k_{12} k_{21} < 4\lambda_1 \lambda_2. \tag{CC-feedback}$$
+$$k_{12} k_{21} \lt 4\lambda_1 \lambda_2. \tag{CC-feedback}$$
 
 ### Heterogeneous critical-mass — (CM2-M)
 
@@ -119,9 +119,9 @@ $$k_{12} k_{21} < 4\lambda_1 \lambda_2. \tag{CC-feedback}$$
 
 Specializing (CC-feedback) to the signed-coupling structure of `#deriv-critical-mass-composition` for heterogeneous Tier-1M sub-agents with metric-contraction rates $\lambda_1, \lambda_2$, coordination costs $C_1, C_2$, and feedback loop gains $k_{12}, k_{21}$:
 
-$$(\lambda_1 - C_1)(\lambda_2 - C_2) > k_{12} k_{21}/4. \tag{CM2-M}$$
+$$(\lambda_1 - C_1)(\lambda_2 - C_2) \gt k_{12} k_{21}/4. \tag{CM2-M}$$
 
-Specializing further to the matched-symmetric case ($\lambda_1 = \lambda_2 = \lambda$, $C_1 = C_2 = C$, $k_{12} = k_{21} = k$): $(\lambda - C)^2 > k^2/4 \iff \lambda - C > k/2$, which matches `#deriv-critical-mass-composition`'s (CM2) with $k = 2\gamma\mathcal T/R$ (up to normalization). **Heterogeneous-architecture composites now have a closed-form critical-mass inequality** where the matched-symmetric case was the only closed form previously available; `#deriv-critical-mass-composition`'s §6.1 obstruction on heterogeneous composites is thereby closed for the Tier-1M case.
+Specializing further to the matched-symmetric case ($\lambda_1 = \lambda_2 = \lambda$, $C_1 = C_2 = C$, $k_{12} = k_{21} = k$): $(\lambda - C)^2 \gt k^2/4 \iff \lambda - C \gt k/2$, which matches `#deriv-critical-mass-composition`'s (CM2) with $k = 2\gamma\mathcal T/R$ (up to normalization). **Heterogeneous-architecture composites now have a closed-form critical-mass inequality** where the matched-symmetric case was the only closed form previously available; `#deriv-critical-mass-composition`'s §6.1 obstruction on heterogeneous composites is thereby closed for the Tier-1M case.
 
 ## Epistemic Status
 

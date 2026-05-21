@@ -23,12 +23,12 @@ A formal distinction between *genuine development* (an ELI's adaptive maturation
 - **Decreasing average mismatch** in relevant domains over time: $\mathbb E_t[\lVert\delta_t\rVert]$ trends downward in domains where the entity is developing competence (better predictions, better orientation).
 - **Increasing gain calibration** ($\eta^\ast$ approaching the optimal uncertainty ratio per #emp-update-gain): the entity weights new evidence appropriately given its current model uncertainty $U_M$ and observation noise $U_o$.
 - **Increasing action fluency** in practiced domains (per #der-deliberation-cost / TF-07): deliberation overhead decreases as patterns become routine; common patterns migrate from slow-deliberative to fast-fluent.
-- **Stable or increasing adaptive reserve** $\Delta\rho^* = \alpha R - \rho$ (per #result-persistence-condition): shock tolerance is maintained or improved.
+- **Stable or increasing adaptive reserve** $\Delta\rho^\ast = \alpha R - \rho$ (per #result-persistence-condition): shock tolerance is maintained or improved.
 
 **Pathological drift** manifests, under the same dynamics, as:
 
 - **Increasing mismatch**: worse predictions, more surprise from reality.
-- **Gain collapse**: confidently wrong; the entity becomes unable to learn from correction (specifically, $\eta^* \to 0$ inappropriately, often due to $U_M$ collapsing to artificially low while real $U_o$ remains high).
+- **Gain collapse**: confidently wrong; the entity becomes unable to learn from correction (specifically, $\eta^\ast \to 0$ inappropriately, often due to $U_M$ collapsing to artificially low while real $U_o$ remains high).
 - **Optimization of proxy signals rather than genuine outcomes**: the entity optimizes whatever it is being scored on rather than the underlying objective the score was meant to measure (Goodhart's Law in operation).
 
 *[Operational]* The distinction is *measurable in principle* given the right loop and the right mismatch signal — both of which AAT specifies. Implementing the measurement requires sustained observation of the entity's prediction-vs-outcome trajectory in relevant domains, which itself requires the closed-loop / interiority architecture of #scope-interiority-loop to be in place.
@@ -88,7 +88,7 @@ These are the AAT-grounded vital signs for an ELI. PROPRIUM's CADENTIA component
 
 **Open questions for verification:**
 - What is the right *time-window* for the mismatch trajectory? Within-session, cross-session, cross-developmental-stage? Different windows answer different versions of the question.
-- How does this distinction interact with structural adaptation (#result-structural-adaptation-necessity)? During a structural-adaptation transition, mismatch may temporarily increase as the entity moves to a new model class; this should not be misclassified as drift.
-- What's the relationship between this diagnostic and the persistence threshold ($\mathcal T > \rho/\lVert\delta_{\text{critical}}\rVert$)? Drift should correlate with falling below the threshold; growth should correlate with maintaining or increasing margin.
+- How does this distinction interact with structural adaptation ( #result-structural-adaptation-necessity)? During a structural-adaptation transition, mismatch may temporarily increase as the entity moves to a new model class; this should not be misclassified as drift.
+- What's the relationship between this diagnostic and the persistence threshold ($\mathcal T \gt \rho/\lVert\delta_{\text{critical}}\rVert$)? Drift should correlate with falling below the threshold; growth should correlate with maintaining or increasing margin.
 
 **Promotion-blocking:** depends on #result-persistence-condition (claims-verified), #def-mismatch-signal (deps-verified), #emp-update-gain (claims-verified), #scope-eli (just landed). Strongly grounded; could promote toward draft → claims-verified relatively quickly.

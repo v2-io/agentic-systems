@@ -32,7 +32,7 @@ ties exploration and exploitation together: when model uncertainty is high, $\la
 
 The chapter closes with a normative move: when is explicit strategy worth maintaining at all? Planning has costs (construct, evaluate, maintain) and benefits (avoid expensive exploration, lower repair costs from mistakes); the threshold form
 
-$$C_{\text{plan}} + C_{\text{maintain}} < C_{\text{explore}} + C_{\text{repair}}$$
+$$C_{\text{plan}} + C_{\text{maintain}} \lt C_{\text{explore}} + C_{\text{repair}}$$
 
 says when the trade favors plans over pure loop-based learning. This isn't a derivation — it's a design criterion grounded in the persistence condition's preference for adaptive margin. Agents that pay tempo for plans they don't need are wasting margin; agents that explore expensively for plans that would have helped are wasting it differently. The strategy machinery that follows in Chapter 3 is justified by this calculus, not assumed.
 

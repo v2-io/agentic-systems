@@ -23,7 +23,7 @@ Parallel to the standard information-bottleneck Lagrangian (`#form-information-b
 
 $$\phi^\ast_{\text{id}}(\beta_{\text{id}}) = \arg\min_\phi \big[\, I(M_t; \mathcal C_t) - \beta_{\text{id}} \cdot I(M_t; \text{identity}_{t+1:}) \,\big]$$
 
-with $\beta_{\text{id}} > 0$ the compression-vs-identity-preservation tradeoff. Under (IS-A1)–(IS-A3) of `#def-identity-sufficiency` plus the standard IB existence conditions (Tishby-Pereira-Bialek 1999, applied to the joint-space-derived random vector), the Lagrangian admits an optimum on the rate-distortion curve.
+with $\beta_{\text{id}} \gt 0$ the compression-vs-identity-preservation tradeoff. Under (IS-A1)–(IS-A3) of `#def-identity-sufficiency` plus the standard IB existence conditions (Tishby-Pereira-Bialek 1999, applied to the joint-space-derived random vector), the Lagrangian admits an optimum on the rate-distortion curve.
 
 ### Feasibility bound at compression budget $B$
 

@@ -20,22 +20,22 @@ The most critical evaluation of an agent is the trajectory of its mismatch signa
 
 | Trajectory | Description | AAT Interpretation |
 |---|---|---|
-| **Decreasing $\|\delta\|_{\text{avg}}$** | The agent's predictions are getting better. Surprise is dropping. | **Development.** The agent is successfully compressing the environment into $M_t$. |
-| **Stable $\|\delta\|_{\text{avg}}$** | The agent has converged. | **Steady State / Capacity Wall.** The model fits the environment as best it can given its model-class fitness $\mathcal{F}(\mathcal{M})$. |
-| **Increasing $\|\delta\|_{\text{avg}}$** | The agent's predictions are getting worse. Surprise is climbing. | **Drift / Destabilization.** The environment is changing faster than the agent can adapt ($\mathcal{T} < \rho$), or the agent is suffering from sycophantic collapse (updating on noise). |
+| **Decreasing $\Vert\delta\Vert_{\text{avg}}$** | The agent's predictions are getting better. Surprise is dropping. | **Development.** The agent is successfully compressing the environment into $M_t$. |
+| **Stable $\Vert\delta\Vert_{\text{avg}}$** | The agent has converged. | **Steady State / Capacity Wall.** The model fits the environment as best it can given its model-class fitness $\mathcal{F}(\mathcal{M})$. |
+| **Increasing $\Vert\delta\Vert_{\text{avg}}$** | The agent's predictions are getting worse. Surprise is climbing. | **Drift / Destabilization.** The environment is changing faster than the agent can adapt ($\mathcal{T} \lt \rho$), or the agent is suffering from sycophantic collapse (updating on noise). |
 
 ## Core Agentic Metrics
 
 To diagnose *why* an agent is exhibiting a specific mismatch trajectory, the following components of the AAT loop must be measured operationally:
 
-1. **Gain Calibration (Measuring $\eta^\ast$):** 
-   Does the agent appropriately weight new observations against its existing model? This is measured via its **Response to Correction**. 
+1. **Gain Calibration (Measuring $\eta^\ast$):**
+   Does the agent appropriately weight new observations against its existing model? This is measured via its **Response to Correction**.
    - *Healthy:* The agent checks the correction against its model, updates if warranted, and pushes back if the correction violates strong prior evidence.
    - *Sycophantic Drift:* The agent immediately agrees with any correction regardless of merit ($\eta^\ast \to 1$).
    - *Defensive Rigidity:* The agent resists all corrections regardless of evidence ($\eta^\ast \to 0$).
 
 2. **Tempo Adequacy (Measuring $\mathcal{T}$):**
-   Can the agent keep up with the environment? This is measured via **Staleness Detection**. If certain categories of belief in the agent's externalized memory ($\mathcal{E}_{\text{ext}}$) are systematically outdated, that specific dimension has failed the persistence condition ($\mathcal{T}_k < \rho_k / \|\delta_{\text{critical},k}\|$).
+   Can the agent keep up with the environment? This is measured via **Staleness Detection**. If certain categories of belief in the agent's externalized memory ($\mathcal E_{\text{ext}}$) are systematically outdated, that specific dimension has failed the persistence condition ($\mathcal T_k \lt \rho_k / \Vert\delta_{\text{critical},k}\Vert$).
 
 3. **Structural Adequacy (Measuring $\Sigma_t$ and $\mathcal{F}$):**
    Are the agent's learned strategies and frameworks effective? This is measured via **Persistent Structured Residuals**. If the agent consistently makes the exact same *type* of strategic error across different specific tasks, its underlying strategy DAG or prompting architecture has hit its fitness ceiling and requires structural adaptation.

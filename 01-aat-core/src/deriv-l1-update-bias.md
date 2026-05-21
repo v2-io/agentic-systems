@@ -29,7 +29,7 @@ $$B_k(\rho) = -\frac{\iota_k \cdot (1 - \mu_{\bar k}) \cdot \rho}{(n_k + 1) \cdo
 
 where $\bar k \in \{1, 2\} \setminus \{k\}$ is the sibling edge. The bias is linear in $\rho$, decays as $1/(n_k+1)$ with experience, topologically asymmetric via the Jacobian factor $(1 - \mu_{\bar k})/\lVert\mathbf J\rVert^2$.
 
-**Admissible region (precise).** The denominator is the squared OR-aggregation Jacobian norm $\lVert\mathbf J\rVert^2 = (1 - \mu_1)^2 + (1 - \mu_2)^2$. The first-order perturbation is well-posed precisely when $\lVert\mathbf J\rVert$ is bounded below by some fixed $\epsilon_J > 0$ — equivalently, when at least one edge probability is bounded away from $1$. This is the **Jacobian-norm admissibility condition** $\lVert\mathbf J\rVert \ge \epsilon_J$; it is *weaker* than requiring both $\mu_1, \mu_2$ to be bounded away from $1$, and it is *sharper* than the qualitative "bounded away from determinism" reading: only the joint deterministic-success corner $\mu_1, \mu_2 \to 1$ together is excluded. As either edge alone approaches deterministic success the bias formula remains valid (the surviving sibling edge carries the Jacobian norm); only the diagonal corner where both edges saturate is excluded, and there the per-cycle update itself vanishes (observations carry no residual information), so "no learning, no bias" is the operationally correct behaviour and the formula's apparent singularity is degenerate rather than physical. Inside the admissible region $\lVert\mathbf J\rVert \ge \epsilon_J$, the closed-form predictions are quantitatively verified by Monte Carlo; at the diagonal corner the segment defers to `#deriv-edge-credence-dynamics`'s degenerate-update analysis. The Jacobian-norm condition is the natural admissibility statement because the bias formula is the projection of the update onto $\mathbf J / \lVert\mathbf J\rVert^2$, so well-posedness requires only that this projection be defined.
+**Admissible region (precise).** The denominator is the squared OR-aggregation Jacobian norm $\lVert\mathbf J\rVert^2 = (1 - \mu_1)^2 + (1 - \mu_2)^2$. The first-order perturbation is well-posed precisely when $\lVert\mathbf J\rVert$ is bounded below by some fixed $\epsilon_J \gt 0$ — equivalently, when at least one edge probability is bounded away from $1$. This is the **Jacobian-norm admissibility condition** $\lVert\mathbf J\rVert \ge \epsilon_J$; it is *weaker* than requiring both $\mu_1, \mu_2$ to be bounded away from $1$, and it is *sharper* than the qualitative "bounded away from determinism" reading: only the joint deterministic-success corner $\mu_1, \mu_2 \to 1$ together is excluded. As either edge alone approaches deterministic success the bias formula remains valid (the surviving sibling edge carries the Jacobian norm); only the diagonal corner where both edges saturate is excluded, and there the per-cycle update itself vanishes (observations carry no residual information), so "no learning, no bias" is the operationally correct behaviour and the formula's apparent singularity is degenerate rather than physical. Inside the admissible region $\lVert\mathbf J\rVert \ge \epsilon_J$, the closed-form predictions are quantitatively verified by Monte Carlo; at the diagonal corner the segment defers to `#deriv-edge-credence-dynamics`'s degenerate-update analysis. The Jacobian-norm condition is the natural admissibility statement because the bias formula is the projection of the update onto $\mathbf J / \lVert\mathbf J\rVert^2$, so well-posedness requires only that this projection be defined.
 
 For AND-root aggregation, the bias has the same structural form with opposite sign. For mixed OR-AND sub-plans, the bias decomposes sub-plan-wise.
 
@@ -53,7 +53,7 @@ Under Prop B.7's five-way-gating with $C$ observable, conditioning on $C$ decomp
 
 $$B_k(\rho \mid C = c) = 0 \quad \text{in expectation at conditional truth, for each } c \in \{0, 1\}.$$
 
-Prop B.7's decomposition *exactly eliminates the bias* — the five gating conditions (facilitator monotonicity; $C$-observability; $\iota > 0$ for common-cause edge; marginal sector condition; identifiability of per-component rates) are precisely the conditions under which conditional-on-$C$ updates restore exactness. This makes Prop B.7's derivation the quantitative escape from the L1' bias.
+Prop B.7's decomposition *exactly eliminates the bias* — the five gating conditions (facilitator monotonicity; $C$-observability; $\iota \gt 0$ for common-cause edge; marginal sector condition; identifiability of per-component rates) are precisely the conditions under which conditional-on-$C$ updates restore exactness. This makes Prop B.7's derivation the quantitative escape from the L1' bias.
 
 ### Unobservable-$C$ Cramér-Rao bias floor under forgetting
 
@@ -69,13 +69,13 @@ The Cramér-Rao floor from `#disc-identifiability-floor` Instance 2's rank-1 Fis
 
 *[Derived (dual-forgetting-requirement)]*
 
-`#schema-strategy-persistence` requires forgetting rate $(1 - \lambda) > \rho_\Sigma / R_\Sigma$ for asymptotic sector-persistence. The L1' bias floor above imposes a **second** constraint: to keep the bias bounded relative to the sector reserve,
+`#schema-strategy-persistence` requires forgetting rate $(1 - \lambda) \gt \rho_\Sigma / R_\Sigma$ for asymptotic sector-persistence. The L1' bias floor above imposes a **second** constraint: to keep the bias bounded relative to the sector reserve,
 
-$$(1 - \lambda) > c_B \cdot \rho / R_\Sigma^{\text{bias}}$$
+$$(1 - \lambda) \gt c_B \cdot \rho / R_\Sigma^{\text{bias}}$$
 
 where $c_B$ is a topology-dependent constant from the Jacobian factor and $R_\Sigma^{\text{bias}}$ is the tolerable bias-reserve within the sector region. The forgetting rate must satisfy **both**:
 
-$$(1 - \lambda) > \max\left(\frac{\rho_\Sigma}{R_\Sigma},\; \frac{c_B \cdot \rho}{R_\Sigma^{\text{bias}}}\right).$$
+$$(1 - \lambda) \gt \max\left(\frac{\rho_\Sigma}{R_\Sigma},\; \frac{c_B \cdot \rho}{R_\Sigma^{\text{bias}}}\right).$$
 
 **When the admissibility window is empty** (no forgetting rate satisfies both constraints simultaneously), no standard persistence regime works — the agent must augment (observable-$C$ via instrumented regime indicators; multi-child joint observation; plan-level fallback) or accept biased-fixed-point operation.
 
@@ -85,7 +85,7 @@ $$(1 - \lambda) > \max\left(\frac{\rho_\Sigma}{R_\Sigma},\; \frac{c_B \cdot \rho
 
 Numerical simulation (400 trials × 5000 cycles, four scenarios: OR-cooperative, OR-adversarial, AND-cooperative, AND-adversarial) confirms the closed-form predictions:
 - Sign of bias matches theoretical prediction in all scenarios.
-- Magnitude matches closed form within $< 5\%$ at $\rho \in \{0.1, 0.3, 0.5, 0.7, 0.9\}$.
+- Magnitude matches closed form within $\lt 5\%$ at $\rho \in \{0.1, 0.3, 0.5, 0.7, 0.9\}$.
 - Vanishing at $\rho = 0$ verified.
 - Jacobian-induced topological asymmetry verified: OR and AND roots produce opposite-sign biases of matching magnitude.
 - Initial-cycle rate $dB_k/dt \mid_{t=0}$ matches closed form quantitatively.

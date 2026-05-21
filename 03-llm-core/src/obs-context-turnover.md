@@ -22,12 +22,12 @@ Let $\tau_k$ and $\tau_{k+1}$ denote the start times of consecutive sessions. At
 
 $$X_{\tau_{k+1}}^{\text{context}} = \emptyset$$
 
-The agent's effective state at the start of session $k+1$ is reconstructed from external memory $\mathcal{E}_{\text{ext}}$ and the new prompt $p_{k+1}$:
+The agent's effective state at the start of session $k+1$ is reconstructed from external memory $\mathcal E_{\text{ext}}$ and the new prompt $p_{k+1}$:
 
 $$X_{\tau_{k+1}} = f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}})$$
 
 where:
-- $\mathcal{E}_{\text{ext}}$ is the externally persisted information (files, databases, prior conversation summaries, structured memory stores)
+- $\mathcal E_{\text{ext}}$ is the externally persisted information (files, databases, prior conversation summaries, structured memory stores)
 - $p_{k+1}$ is the session-initiating prompt (user instruction, system prompt, retrieved context)
 - $M_0^{\text{weights}}$ is the frozen pretrained prior (the LLM's weights)
 
@@ -37,7 +37,7 @@ The chronica ( #def-chronica) is severed at every session boundary. Within a ses
 
 $$\mathcal C_{\tau_{k+1}} \neq \mathcal C_{\tau_k} \cup \{e_{\tau_k}, \ldots\}$$
 
-The new session's chronica starts fresh. Any information from the prior session's chronica that is needed must have been *externalized* — written to $\mathcal{E}_{\text{ext}}$ — before the session boundary.
+The new session's chronica starts fresh. Any information from the prior session's chronica that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary.
 
 *[Observation (sufficiency-discontinuity)]*
 
@@ -57,7 +57,7 @@ The numerator is the mutual information between the end-of-session state and the
 
 ## Epistemic Status
 
-*Exact as an observation.* The 100% context reset at session boundaries is a structural fact of current LLM architectures, not an approximation. The sufficiency-discontinuity bound follows from information-theoretic definitions. What is *not* exact is the characterization of how much information is lost — that depends on the quality of $\mathcal{E}_{\text{ext}}$ and $f_{\text{init}}$, which are engineering choices.
+*Exact as an observation.* The 100% context reset at session boundaries is a structural fact of current LLM architectures, not an approximation. The sufficiency-discontinuity bound follows from information-theoretic definitions. What is *not* exact is the characterization of how much information is lost — that depends on the quality of $\mathcal E_{\text{ext}}$ and $f_{\text{init}}$, which are engineering choices.
 
 Max attainable: exact. This is an observation about a structural property of the architecture.
 
@@ -77,7 +77,7 @@ where $S_{\text{min}}$ is the minimum model sufficiency required for the agent t
 
 **Context window as joint capacity for $M_t$, $\Sigma_t$, and task.** The context-window capacity $C_{\text{context}}$ (measured in tokens or bits) is shared across the agent's reality model, strategy, and task description. Per `#form-strategy-complexity-cost`'s description-length apparatus, the strategy carries its own DL cost $\text{DL}(\Sigma_t)$ that competes for context-window space with $\text{DL}(M_t)$ (the agent's current beliefs) and $\text{DL}(\text{task})$ (the prompt, goal description, tool definitions). The capacity constraint at any moment is
 
-$$\text{DL}(\Sigma_t) \;+\; \text{DL}(M_t) \;+\; \text{DL}(\text{task}) \;<\; C_{\text{context}}.$$
+$$\text{DL}(\Sigma_t) \;+\; \text{DL}(M_t) \;+\; \text{DL}(\text{task}) \;\lt\; C_{\text{context}}.$$
 
 The IB tradeoff $\beta_\Sigma$ from `#form-strategy-complexity-cost` is therefore *directly calibrated by what fits in the window*: stricter context-window limits force smaller $\text{DL}(\Sigma_t)$, which forces shallower or sparser DAGs (per the depth-bound $d^\ast$ in `#form-strategy-complexity-cost`), which trades off against decision-relevant information $I(\Sigma_t; \pi^\ast \mid M_t)$. The window length $L$ is therefore not just a turnover-rate parameter; it is also a structural ceiling on the strategy complexity an agent can sustain *within* a session. Operationally: when context-window pressure rises (long sessions, large $M_t$, complex tasks), the agent must drop strategy-DAG depth or detail before it loses model state — or accept that older chronica entries get compressed away from $\mathcal C_t$, degrading $M_t$ sufficiency. The four-way pressure ($\mathcal C_t$ recency / $M_t$ detail / $\Sigma_t$ depth / task specification) under a fixed $C_{\text{context}}$ is the LLM-specific instantiation of the general capacity-vs-complexity tradeoff.
 

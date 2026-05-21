@@ -49,7 +49,7 @@ The realignment corollary is *derived* from #der-change-investment — it is sim
 
 **Merge conflicts as alignment diagnostic.** *[Discussion — operationalizable but unmeasured.]* Unnecessary merge conflicts — conflicts between changes to conceptually independent features — are a signal of misalignment. If two features are conceptually independent but their implementations collide in the same files, the code structure doesn't match the domain structure. This suggests a measurable diagnostic:
 
-$$\text{alignment\_quality} = 1 - \frac{\text{conflicts between conceptually independent features}}{\text{total conflicts}}$$
+$$\text{alignment\-quality} = 1 - \frac{\text{conflicts between conceptually independent features}}{\text{total conflicts}}$$
 
 An alignment quality near 1 means the code structure successfully isolates independent concepts; near 0 means conceptual independence doesn't translate to implementation independence. This is measurable from git history (identify feature branches, classify which touch independent domain areas, count spurious conflicts) but requires a ground-truth classification of feature independence — which is itself a judgment call. An approximation: features assigned to different domain areas by the team that nonetheless produce merge conflicts when developed in parallel.
 
@@ -59,13 +59,13 @@ But this is not unconditional. Technical concerns that genuinely cross domain bo
 
 **Domain tracking: refactoring priority.** *[Discussion — practical ordering derived from alignment + change-investment.]* When the domain model has drifted from the code model, alignment work should be prioritized by impact on future comprehension time:
 
-1. *Terminology mismatches in high-traffic code* — renaming where $\hat{n}_{\text{future}}$ is highest has the largest ROI
-2. *Scattered concepts now understood as one* — merging reduces comprehension discontinuities (#hyp-exponential-cognitive-load)
-3. *Conflated concepts now understood as distinct* — splitting prevents future changes from tangling independent concerns (#def-system-coupling)
+1. *Terminology mismatches in high-traffic code* — renaming where $\hat n_{\text{future}}$ is highest has the largest ROI
+2. *Scattered concepts now understood as one* — merging reduces comprehension discontinuities ( #hyp-exponential-cognitive-load)
+3. *Conflated concepts now understood as distinct* — splitting prevents future changes from tangling independent concerns ( #def-system-coupling)
 4. *Boundary shifts* — updating module boundaries to match new domain boundaries
 5. *Technical improvements* — only after domain alignment, since misaligned technical improvements compound the translation cost
 
-This ordering follows from the investment threshold applied per-item: each level addresses a comprehension cost multiplied by the usage frequency of the affected code. The ordering is a heuristic recommendation, not a derived result — the actual priority depends on specific $\hat{n}_{\text{future}}$ and $\Delta t_{\text{comp}}$ per item.
+This ordering follows from the investment threshold applied per-item: each level addresses a comprehension cost multiplied by the usage frequency of the affected code. The ordering is a heuristic recommendation, not a derived result — the actual priority depends on specific $\hat n_{\text{future}}$ and $\Delta t_{\text{comp}}$ per item.
 
 **The learning loop.** *[Discussion.]* Domain alignment is not a one-time activity. As the team's understanding of the domain evolves through use, feedback, and market learning, the code must track that evolution:
 
