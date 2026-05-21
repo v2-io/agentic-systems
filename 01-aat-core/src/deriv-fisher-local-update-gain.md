@@ -25,7 +25,7 @@ Under the **Fisher-local invariance regime** — smooth log-likelihood admitting
 
 Let $\theta \in \mathbb R^d$ parameterize the agent's model and $\theta_t$ be the current point estimate (mode of the prior $\pi_0$, or center of expansion). Three regime conditions:
 
-- **(R1) Smooth log-likelihood admitting non-degenerate local quadratic expansion.** $\log \pi_0$ and $\log p(o \mid \cdot)$ are $C^3$ in a neighborhood of $\theta_t$, with prior precision $H_M := -\nabla^2 \log \pi_0(\theta_t)$ and observed information $H_L := -\nabla^2 \log p(o \mid \theta) \big|_{\theta_t}$ satisfying $H_M + H_L \succ 0$ (joint positive-definiteness; see §"Boundary admissibility" for why this is weaker than $H_M \succ 0$ and $H_L \succ 0$ both).
+- **(R1) Smooth log-likelihood admitting non-degenerate local quadratic expansion.** $\log \pi_0$ and $\log p(o \mid \cdot)$ are $C^3$ in a neighborhood of $\theta_t$, with prior precision $H_M := -\nabla^2 \log \pi_0(\theta_t)$ and observed information $H_L := -\nabla^2 \log p(o \mid \theta) \big\vert_{\theta_t}$ satisfying $H_M + H_L \succ 0$ (joint positive-definiteness; see §"Boundary admissibility" for why this is weaker than $H_M \succ 0$ and $H_L \succ 0$ both).
 - **(R2) First-order-in-step-size regime.** The posterior update $\Delta\theta = \theta_{t+1} - \theta_t$ is small enough that $O(\lVert\Delta\theta\rVert^3)$ terms in the quadratic expansion are negligible compared to the quadratic terms.
 - **(R3) Bayesian-coherent update.** $\theta_{t+1}$ is taken to be a coordinate of the posterior $p(\theta \mid o) \propto \pi_0(\theta) \cdot p(o \mid \theta)$ — mean, mode, or natural-parameter (they coincide for Gaussian posteriors, which is what the quadratic expansion produces).
 
@@ -33,7 +33,7 @@ Under (R1)–(R3), the local log-posterior is
 
 $$\log p(\theta \mid o) = \mathrm{const} + s^T(\theta - \theta_t) - \tfrac{1}{2}(\theta - \theta_t)^T (H_M + H_L)(\theta - \theta_t) + O(\lVert\theta - \theta_t\rVert^3),$$
 
-where $s := \nabla_\theta \log p(o \mid \theta) \big|_{\theta_t}$ is the score. The posterior is approximately $\mathcal N(\theta^\star, (H_M + H_L)^{-1})$ with mean shift
+where $s := \nabla_\theta \log p(o \mid \theta) \big\vert_{\theta_t}$ is the score. The posterior is approximately $\mathcal N(\theta^\star, (H_M + H_L)^{-1})$ with mean shift
 
 *[Derived (posterior-mean-shift)]*
 

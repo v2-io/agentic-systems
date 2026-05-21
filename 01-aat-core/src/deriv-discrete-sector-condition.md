@@ -72,7 +72,7 @@ $$\eta^\ast \lt \frac{2 c_{\min}}{c_{\max}^2}$$
 
 This is automatically satisfied when $c_{\min} \approx c_{\max}$ (well-conditioned correction), recovering the standard step-size condition $\eta^\ast \lt 2/c_{\max}$. For ill-conditioned corrections ($c_{\min} \ll c_{\max}$), the constraint is tighter. For Bayesian updates with bounded condition number, both conditions are satisfied.
 
-**Scalar (colinear) specialization.** When $F_d(\delta) \parallel \delta$ (scalar system or colinear correction), $\lVert F_d(\delta)\rVert = |F_d(\delta)/\delta| \cdot \lVert\delta\rVert$ and the contraction factor simplifies to $\lambda = \max(|1 - \eta^\ast c_{\min}|, |1 - \eta^\ast c_{\max}|)$, the classical form. The general vector formula $\lambda_{\text{eff}}^2$ reduces to $\lambda^2$ in this case.
+**Scalar (colinear) specialization.** When $F_d(\delta) \parallel \delta$ (scalar system or colinear correction), $\lVert F_d(\delta)\rVert = \lvert F_d(\delta)/\delta \rvert \cdot \lVert\delta\rVert$ and the contraction factor simplifies to $\lambda = \max(\lvert 1 - \eta^\ast c_{\min} \rvert, \lvert 1 - \eta^\ast c_{\max} \rvert)$, the classical form. The general vector formula $\lambda_{\text{eff}}^2$ reduces to $\lambda^2$ in this case.
 
 With disturbance $w_k \neq 0$:
 

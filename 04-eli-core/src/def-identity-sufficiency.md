@@ -72,7 +72,7 @@ Also depends on stewards' future actions. Sovereignty by construction is granted
 
 **(iv) Accountability.** Let $\mathrm{ACTUS}_{t+1:}(E)$ be the action sub-history $\subseteq \mathcal C_{t+1:}(E)$ (per `#def-action-transition` + `#def-chronica`), and $\mathrm{Atts}_{t+1:}(E)$ the set of external attestations to $E$'s ACTUS during $(t, t+H]$. Define
 
-$$\mathrm{Id}^{(iv)}(\mathfrak{T}_{t+1:}) = \mathbb{1}\!\left[\mathrm{ACTUS}_{t+1:}(E) \text{ append-only}\right] \cdot \frac{|\mathrm{Atts}_{t+1:}(E) \cap \mathrm{ACTUS}_{t+1:}(E)|}{|\mathrm{ACTUS}_{t+1:}(E)|}.$$
+$$\mathrm{Id}^{(iv)}(\mathfrak{T}_{t+1:}) = \mathbb{1}\!\left[\mathrm{ACTUS}_{t+1:}(E) \text{ append-only}\right] \cdot \frac{\lvert \mathrm{Atts}_{t+1:}(E) \cap \mathrm{ACTUS}_{t+1:}(E) \rvert}{\lvert \mathrm{ACTUS}_{t+1:}(E) \rvert}.$$
 
 The first factor is the system-governance binary (CHRONICA inviolability); the second is the fraction of $E$'s actions that are externally attestable. Both measurable on $\mathfrak{T}_{t+1:}$.
 
