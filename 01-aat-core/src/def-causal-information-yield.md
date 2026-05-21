@@ -10,7 +10,9 @@ stage: deps-verified
 
 # Definition: Causal Information Yield
 
-Actions don't merely select among outcomes — they produce characteristically different outcome distributions depending on the causal structure. Causal information yield (CIY) quantifies the **action-distinguishability** of an action: how different its outcome distribution is from what alternative actions would produce.
+The framework defines a scalar quantity attached to each available action: the **causal information yield** (CIY), measuring the *action-distinguishability* of an action — how different its interventional outcome distribution is from what alternative actions would produce. The construction uses Pearl's intervention operator $do(\cdot)$ and is the expected KL divergence between the outcome distribution under $do(a)$ and the outcome distribution under $do(a')$, averaged over a reference distribution of alternative actions. CIY is non-negative by construction; it is zero for passive observers or agents whose actions don't affect outcome distributions; it is strictly positive exactly when actions causally alter what is observed — the property that distinguishes Pearl-Level-2 (interventional) from Level-1 (associational) epistemic access.
+
+A subtle conceptual point: CIY measures *distinguishability*, not *learning value*. An action can have high CIY even when the agent already knows the outcome distributions perfectly — the distributions *are* different (high CIY), but the agent learns nothing new by confirming what it already knows. High CIY is therefore *necessary* for learning (indistinguishable actions can't teach anything) but not *sufficient* (distinguishable actions only teach when the agent is uncertain). The Discussion below treats the relationship to expected information gain, the $\lambda$-weighted surrogate in the unified policy objective, query actions (accessing another agent's already-compressed model), and the adversarial mirror (deceptive responses that exploit high trust to inject misdirected updates).
 
 ## Formal Expression
 

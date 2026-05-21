@@ -11,7 +11,13 @@ stage: deps-verified
 
 # Definition: Mismatch Signal
 
-The discrepancy between the model's prediction and the actual observation — the formal expression of *aporia* (productive perplexity). This is the signal that drives all adaptation: the agent discovers that reality and model have diverged, and this discovery is generative.
+Names the signal that drives every adaptive update — the formal expression of *aporia* (productive perplexity). The **mismatch signal** is $\delta_t = o_t - \hat{o}_t$, the difference between the actual observation and the model's prediction conditioned on the prior state and prior action. A more general version for probabilistic models is the **score-function mismatch** $\tilde\delta_t = \nabla_M \log P(o_t \mid M_{t-1}, a_{t-1})$, which points in the direction the model should move to increase the likelihood of what actually occurred. The prediction-error form lives in observation space $\mathcal{O}$; the score-function form lives in the tangent space $T_M\mathcal{M}$. Under Gaussian models the two coincide up to scaling.
+
+This is *definitional* rather than substantive: given any model that predicts (see #form-agent-model) and any observation that arrives (see #def-observation-function), their difference exists. The mismatch signal is not an additional assumption but a consequence of having a predictive model in an uncertain world.
+
+A genuinely important conceptual point is surfaced in Discussion: **zero mismatch does not necessarily indicate model adequacy**. A near-zero $\delta_t$ can mean (a) the model genuinely reflects reality — desirable; (b) the agent is only observing aspects its model already explains while remaining ignorant of aspects where the model is wrong — confirmation bias; or (c) the observation channel is too noisy to detect model errors — an architectural limitation. Only (a) is desirable. An agent without aporia has stopped adapting — but silence can mean peace, or it can mean deafness. This ambiguity is what motivates active testing later in the framework: deliberately choosing actions that generate informative mismatch, the basis of #def-causal-information-yield.
+
+A scaling note is preserved for the dynamics that come later: when $\delta_t$ is in physical units, its magnitude entering the mismatch dynamics should be understood as a Mahalanobis distance $\Vert\delta_t\Vert_\Sigma$ against the observation noise covariance — mapping physical prediction error to dimensionless surprise-equivalent units.
 
 ## Formal Expression
 

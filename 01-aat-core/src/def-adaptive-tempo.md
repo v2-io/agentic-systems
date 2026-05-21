@@ -10,7 +10,9 @@ stage: claims-verified
 
 # Definition: Adaptive Tempo
 
-The effective rate at which an agent acquires useful information from its environment — the product of observation frequency and update quality across all channels.
+The framework's central capacity quantity: **adaptive tempo** $\mathcal{T}$, the effective rate at which an agent acquires useful information from its environment, given as the sum across all observation channels of *channel event rate times optimal update gain* on that channel. In the single-channel case, tempo is simply event-rate times gain. A tensor extension is defined: in the Fisher-local regime where gains are matrix-valued, tempo becomes a matrix sum whose eigenvalues give per-direction adaptation rates; the scalar form is recovered in the shared-eigenbasis collapse (always in 1-D; under (PI)/Čencov along the natural-gradient direction in higher dimensions).
+
+Tempo combines two factors that are *both* load-bearing and *substitutable*: loop **speed** (event rate, how fast the agent cycles) and update **quality** (gain, how well it extracts information per event). An agent can achieve a given tempo via a fast noisy loop or a slower calibrated one; improvements to both factors compound multiplicatively. Tempo is the load-bearing capacity variable for the rest of the framework — it appears on the left-hand side of the persistence condition ( #result-persistence-condition), determines adversarial advantage ( #result-adversarial-tempo-advantage), and connects to code quality as observation infrastructure in the software-domain instantiation. The Discussion below treats the speed-quality substitutability, the observation-noise gating that grounds Boyd's emphasis on Orient quality over raw OODA speed, and the two scope caveats (independent-channel assumption, isotropy) that the tensor form and the per-dimension persistence result address.
 
 ## Formal Expression
 

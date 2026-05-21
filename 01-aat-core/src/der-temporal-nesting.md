@@ -10,7 +10,17 @@ stage: deps-verified
 
 # Derived: Temporal Nesting
 
-An agent's adaptive processes stratify naturally by timescale, with each level operating on the quasi-steady-state output of the level below. Faster processes must approximately converge before slower ones act on their output.
+Adaptive processes stratify naturally by timescale, with each level operating on the *quasi-steady-state output* of the level below. The formal statement is a chain of inequalities — each level's event rate must be much smaller than the level below it — derived from standard singular-perturbation reasoning. The structural consequence: if a slower process acts before the faster process beneath it has converged, the slower process is adjusting based on transient behavior rather than settled dynamics, and the system oscillates.
+
+The hierarchy the framework identifies (illustrative; real systems may have additional intermediate levels): **reactive response** (action given current model, fastest) → **parametric update** (model parameters within the class) → **consolidation** (offline redistribution of information within the model's sub-state factorization toward an information-bottleneck optimum) → **structural adaptation** (model class) → **architectural change** (the agent's fundamental structure, slowest). What matters is not the number of distinguishable levels but the structural relationship between adjacent ones: faster must converge before slower acts.
+
+A direct consequence: the rational *conservatism* toward structural change identified by #result-structural-adaptation-necessity is a derived consequence of temporal nesting. Structural adaptation operates at a much slower timescale than parametric adaptation, so the mismatch cost of the "pause" (disturbance times pause duration) is enormous. The agent rationally resists structural change until the parametric mismatch floor exceeds this cost. The same logic gives the formal deliberation tradeoff ( #der-deliberation-cost) its dynamical grounding.
+
+The framework names symptoms of nesting *violation*: oscillation, instability, degraded performance. In organizations, micromanagement is strategic decisions made at operational tempo. In reinforcement learning, policy updates before the value function converges produce policy oscillation. In biology, premature developmental transitions are the same failure mode at a different timescale.
+
+A multi-timescale stability sketch is offered: under sufficient timescale separation, if each level is stable given the levels above it (each level has a stable attractor for fixed slower-level parameters), the composite $N$-level system is stable. Making this rigorous for AAT requires specifying dynamics at deeper adaptive levels — flagged as an open problem (see #sketch-multi-timescale-stability).
+
+The result is rooted in classical singular-perturbation theory (Tikhonov 1952; Khalil 2002 textbook treatment) — the framework adopts the machinery directly. The specific timescale ratios needed for adequate separation are domain-dependent and not derived within AAT.
 
 ## Formal Expression
 

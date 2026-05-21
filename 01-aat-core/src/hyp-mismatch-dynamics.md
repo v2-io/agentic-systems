@@ -11,7 +11,9 @@ stage: deps-verified
 
 # Hypothesis: Mismatch Dynamics
 
-The evolution of model-reality mismatch over time is governed by the balance between the agent's corrective capacity (tempo) and the rate of environmental change (disturbance). The linear ODE is a first-order approximation; the general nonlinear case is handled by the sector-condition framework ( #result-sector-condition-stability).
+Mismatch is given dynamics. The linear first-order ODE proposes that mismatch magnitude decays at rate proportional to tempo times mismatch (the correction term) and grows at the rate of new mismatch injection from environmental change (the disturbance term $\rho$). The framework is explicit that this is heuristic — a first-order linear approximation — and the general nonlinear case is what the sector-condition framework handles in the next chapter ( #result-sector-condition-stability).
+
+Two steady-state forms appear and are individually load-bearing. Under **Model D** (deterministic bounded disturbance), the steady-state mismatch is $\rho/\mathcal{T}$ — the ratio of how fast the environment changes to how fast the agent adapts. Under **Model S** (stochastic zero-mean disturbance, Itô SDE), the steady-state root-mean-square mismatch scales as $\sigma_w/\sqrt{2\mathcal{T}}$ — the *square root* of the disturbance-to-correction ratio. The $1/\sqrt{\mathcal{T}}$ scaling (vs. $1/\mathcal{T}$ for Model D) is one of the volume's more interesting consequences: correction is less effective against stochastic noise than against deterministic drift. The ODE is honestly a fluid-limit approximation of the underlying discrete event-driven dynamics; the Epistemic Status treats the bridging assumption and where transient error is largest. The Discussion below treats the persistence threshold, the nonlinear shapes the linear ODE smooths over (saturation, threshold dead zones, structural breakdown), and the adversarial-coupling consequences that scale as the square (Model D) and 3/2 power (Model S) of the inter-agent tempo ratio — the formal core of "getting inside the opponent's loop" as a categorical rather than marginal advantage.
 
 ## Formal Expression
 

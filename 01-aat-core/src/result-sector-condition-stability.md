@@ -12,7 +12,13 @@ stage: claims-verified
 
 # Result: Sector Condition Stability
 
-An agent's mismatch remains bounded if its correction function satisfies a sector condition (points inward with at least baseline efficiency) and the effective correction strength exceeds the environmental disturbance rate.
+The framework's first major *Lyapunov result*, stated as a specific instantiation of a more general sector-persistence template ( #result-sector-persistence-template) whose abstract form lives in the appendices. The mismatch dynamics are taken in their general nonlinear form: mismatch changes at rate (correction function applied to mismatch) plus (environmental disturbance). The correction function is required only to satisfy the **local sector condition** — that its inner product with the mismatch is at least $\alpha$ times the mismatch's squared magnitude, within a radius-$R$ region where it remains valid. The sector condition is what generalizes the linear ODE: it captures the qualitative essence of correction (the function points inward with at least baseline efficiency) without committing to a specific functional form like linear, saturating, sigmoid, threshold, or PID. Saturation, thresholding, and basin boundaries all live under one Lyapunov argument.
+
+Under this sector condition plus bounded disturbance, the chapter's headline persistence inequality is *derived*: the agent persists if and only if $\alpha \gt \rho/R$. When the inequality holds, the mismatch is ultimately bounded by $R^\ast = \rho/\alpha$, and the "adaptive reserve" — the additional disturbance the agent can absorb before mismatch reaches the edge of the valid region — is $\alpha R - \rho$.
+
+Under **Model S** (stochastic disturbance), the analog is sharper and qualitatively different: the steady-state root-mean-square mismatch scales as $\sigma_w\sqrt{n/(2\alpha)}$ — the square root of the disturbance-to-correction ratio. Model D scales as $1/\alpha$, Model S as $1/\sqrt{\alpha}$: **correction is less effective against noise than against drift**. This is one of the volume's striking results, separating two genuinely different physics of adaptation under deterministic vs stochastic environments.
+
+The linear ODE from Chapter 3 ( #hyp-mismatch-dynamics) is recovered as the special case where the sector condition holds globally with $\alpha = \mathcal{T}$. The general sector-condition framework proves the persistence threshold is a *structural necessity of any bounded-correction system* — not an artifact of the linear approximation. The result is also where the structural-adaptation-necessity result will be anchored: when disturbance exceeds the model class's capacity (i.e., $\rho/\alpha \gt R$), the sector condition fails. This *is* the dynamical trigger for needing a new model class with larger valid radius or better efficiency — which #result-structural-adaptation-necessity treats formally a few segments later.
 
 ## Formal Expression
 

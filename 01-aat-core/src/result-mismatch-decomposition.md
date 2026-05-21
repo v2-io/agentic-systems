@@ -13,7 +13,11 @@ stage: claims-verified
 
 # Result: Mismatch Decomposition
 
-Expected squared mismatch decomposes into reducible model error and irreducible observation noise. The model can improve the first term; the second is a property of the channel.
+The first named *result* of the volume. The expected squared mismatch $\mathbb{E}[\Vert\delta_t\Vert^2]$ decomposes cleanly into two additive parts: a **reducible model-error term** (the difference between the model's predictive mean $\hat o_t$ and the true conditional mean $\bar o_t = \mathbb{E}[o_t \mid \Omega_t, a_{t-1}]$) and an **irreducible observation-noise term** (the conditional variance of the observation channel itself, given environment state and action). The result is the bias-variance decomposition applied to the prediction problem; the cross-term vanishes under the fresh-noise global assumption GA-1 (observation noise conditionally independent of the past chronica given current environment state and action), which is the standard assumption in state-space models. The model can improve the first term; the second is a property of the channel.
+
+The conceptual stakes of this seemingly mechanical decomposition are large. The result establishes that prediction error is *structurally persistent* in any realistic adaptive regime — there is a floor below which mismatch cannot be driven by any amount of better modeling, because that floor is set by the observation channel itself. Deterministic, noiseless, perfectly-specified systems are limiting edge cases, not the typical adaptive regime. The total expected squared mismatch is therefore strictly positive whenever either observation noise is non-degenerate or the model's predictive mean is misspecified — and both typically hold.
+
+The decomposition has direct operational consequences picked up downstream. An agent that tries to eliminate *all* mismatch — including the irreducible noise floor — will overfit, adjusting its model to explain noise and degrading future predictions. The update-gain construct #emp-update-gain implicitly separates signal from noise by weighting observations in proportion to their informativeness, but the irreducible-floor fact is what makes the gain question meaningful at all. The decomposition also clarifies the relationship to #def-model-sufficiency: when $S(M_t) \lt 1$, the model has lost predictive information relative to the full history; under an alignment assumption (the lost information affects the one-step conditional mean) this implies positive model error in the decomposition.
 
 ## Formal Expression
 
