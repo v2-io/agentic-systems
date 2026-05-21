@@ -1,12 +1,13 @@
 ---
 slug: form-strategy-complexity-cost
 type: formulation
-status: discussion-grade
+status: robust-qualitative
 depends:
   - def-strategic-tempo
   - form-information-bottleneck
   - norm-explicit-strategy-condition
   - der-chain-confidence-decay
+  - deriv-strategy-cost-regret-bound
   - form-structural-change-as-parametric-limit
   - def-value-object
   - form-objective-functional
