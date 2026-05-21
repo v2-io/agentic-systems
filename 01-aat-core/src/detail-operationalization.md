@@ -17,6 +17,8 @@ stage: draft
 
 Estimation recipes for core AAT quantities, bridging the measurement gap between formal objects and practical deployment.
 
+The segment is **domain-honest** about which quantities are easily measured and which are operationally challenging: model uncertainty admits predictive-posterior / ensemble-spread / Bayesian-NN estimators; observation uncertainty admits channel calibration or residual variance; mismatch magnitude is directly measurable from prediction-versus-observation residuals; tempo from event rate times effective gain; the sector parameter via either the gain-sector bridge (where applicable — Bayesian on exponential families; gradient on strongly convex) or empirical correction-rate-vs-mismatch regression; disturbance parameters split per Model D ($\hat\rho_{\det}$) versus Model S ($\hat\sigma_w$) with sequential dependence on $\hat{\mathcal T}$; critical-mismatch tolerance is a *domain parameter* not an estimated quantity (it encodes "how wrong can the model be before actions become harmful or ineffective?"). Model-class fitness is named as particularly challenging — not directly computable, requiring search across the model class; the observable signature is persistent mismatch despite adequate learning. Satisfaction gap and control regret require evaluating attainability, generally intractable in exact form. AAT's commitment is that the abstract machinery is operationalizable with stated quality trade-offs at each estimation step, not analytical idealization with no path to practice.
+
 ## Measurement Targets
 
 | Quantity | Role in AAT | Typical unit | Minimum data needed |

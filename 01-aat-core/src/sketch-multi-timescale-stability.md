@@ -10,7 +10,9 @@ stage: draft
 
 # Sketch: Multi-Timescale Stability
 
-When adaptive processes operate at $N$ nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs.
+When adaptive processes operate at $N$ nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs. The singular-perturbation reasoning is classical (Tikhonov 1952 / Khalil 2002 Ch. 11); the result is stated as a sketch rather than a fully derived AAT result because making it rigorous requires specifying the dynamics $G^{(k)}$ at deeper adaptive levels — what counts as "stability of structural adaptation given fixed architectural state" requires structural-adaptation dynamics formalized in a way #result-structural-adaptation-necessity gives a trigger condition for but not yet a dynamics for.
+
+The sketch supplies the qualitative consequence the chapter prose carries as load-bearing: a slower process must not act before the faster process beneath it has converged. If it does, the slower process is adjusting based on transient behavior rather than settled dynamics, and the composite oscillates. The convergence constraints between adjacent timescales ( #der-temporal-nesting's $\nu_{n+1} \ll \nu_n$) are what license the framework's abstraction across levels — without them, the clean separation between parametric, consolidation, structural, and architectural adaptation would be a verbal convenience rather than a structural property.
 
 ## Formal Expression
 

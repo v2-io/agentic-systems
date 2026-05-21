@@ -16,7 +16,7 @@ stage: draft
 
 # Discussion: The Separability Pattern — Separable Core, Structured Repair, General Open
 
-AAT consistently runs a three-part epistemic posture across state spaces that admit no tractable exact treatment in general: name the **separable core** where identification is clean, name the **structured repair** that recovers identification under explicitly-added machinery, and name the **general open** case where the problem is either intractable or structurally unidentifiable. Six ladders in the current theory share this shape. This segment names the pattern as an organizing principle, catalogs the instances, and makes the complementarity with `#disc-identifiability-floor` (which names the *negative half* of AAT's scope) explicit.
+AAT consistently runs a three-part epistemic posture across state spaces that admit no tractable exact treatment in general: name the **separable core** where identification is clean, name the **structured repair** that recovers identification under explicitly-added machinery, and name the **general open** case where the problem is either intractable or structurally unidentifiable. Seven ladders in the current theory share this shape (Correlation, Convention, Architecture, Contraction, Identification regime, Scope hierarchy, A2'-scope — enumerated in the table below). This segment names the pattern as an organizing principle, catalogs the instances, and makes the complementarity with `#disc-identifiability-floor` (which names the *negative half* of AAT's scope) explicit.
 
 ## The pattern
 

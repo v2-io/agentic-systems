@@ -11,7 +11,9 @@ stage: draft
 
 # Observation: Gated Tempo Advantage
 
-Observation noise collapses the adversarial tempo advantage. When agents observe their mismatch through a noisy channel, the faster agent's additional corrections become noisy, partially offsetting its tempo advantage. The optimal gain ( #emp-update-gain) partially restores the advantage but cannot fully recover it.
+Observation noise *gates* the adversarial tempo advantage from the prior result. When agents observe their mismatch through a noisy channel, the faster agent's additional corrections become noisy, partially offsetting its tempo advantage. The mechanism is direct: a faster attacker makes more corrections per unit time, each noisy because of observation noise; the *additional* corrections add proportional noise, partially canceling the additional speed. Simulation confirms this — at observation noise comparable to or larger than process noise, the steady-state mismatch-ratio exponent drops dramatically (fixed-gain agents lose nearly all of the squared scaling; optimal-gain agents matched to the noise level recover *some* but not all of it).
+
+The framework's prescription: the optimal-gain principle ( #emp-update-gain) partially restores the advantage but cannot fully recover the noise-free level. The Riccati gain mitigates the loss by *reducing the gain to match the noise level* — correcting less aggressively but more accurately. *Gated* names the regime structure: the squared scaling that defines `#result-adversarial-tempo-advantage` applies cleanly only in the low-noise regime, while higher noise pushes the system into the non-coupling-dominant regime of `#result-adversarial-exponent-regimes` where the exponent collapses to linear or sub-linear. The defender-side payoff is concrete: noise on the defender's observation channel reduces the attacker's superlinear advantage without altering tempo or gain, which is the structural reason cheap noise injection into the defender's channel is a viable defense against a high-tempo attacker.
 
 ## Formal Expression
 

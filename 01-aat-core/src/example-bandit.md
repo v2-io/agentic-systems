@@ -19,6 +19,8 @@ stage: draft
 
 AAT's conceptual architecture applies beyond the conjugate-Bayesian regime. The mapping here is *approximate* — it shows that AAT's concepts organize RL phenomena, but the quantitative relationships are structural analogies, not derivations. Where the mapping is exact versus approximate is marked explicitly.
 
+This is the framework's bridge to RL theory. AAT does not subsume RL theory; it claims that typical RL methods ($\varepsilon$-greedy, UCB, Thompson sampling) are *operational approximations* of AAT primitives under regime-specific scope conditions — none exactly implements the optimal-gain principle, but their gains are *related to* the uncertainty-ratio gain and the methods converge in steady state toward optimal-gain behaviour. The worked example concentrates on the nonstationary case where AAT's machinery is most distinctive from classical RL: the forgetting prerequisite becomes operational (effective sample size per arm must be bounded or the agent's gain converges to zero); the per-arm tempo decomposition surfaces persistence as the binding constraint when uniform exploration is mismatched to drift.
+
 ## System
 
 A $k$-armed bandit ($k = 4$) with slowly drifting reward means:

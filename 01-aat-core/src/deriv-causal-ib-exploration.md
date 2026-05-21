@@ -17,6 +17,8 @@ The unified policy objective in `#disc-ciy-unified-objective` combines pragmatic
 
 However, AAT's underlying Lyapunov dynamics ( `#result-persistence-condition`) force a *second, structurally distinct* exploration drive: the **Survival Imperative**. This segment derives that an agent must actively seek low-noise (high CIY) observations not just to learn, but to physically survive environmental drift when its model is *confident*.
 
+AAT therefore carries **two parallel exploration drives at opposite ends of the uncertainty spectrum**: the standard epistemic drive scaling as $\lambda_{\text{info}} \propto U_M$ (explore when uncertain — dominant when model uncertainty is high), and the survival drive scaling as $\lambda_{\text{surv}} \propto 1/U_M$ (explore when confident in a drifting world — dominant when model uncertainty is low). The result *bypasses the dark-room critique of active inference* structurally rather than parametrically: an AAT agent in a drifting world physically cannot stop exploring because exploration is forced by the same Lyapunov machinery that grounds the rest of Part II, not by a tunable preference parameter. The operational prescription — *confident agents are not safe agents in drifting environments* — is the formal grounding for the "productive paranoia" heuristic about not resting on past success. The scalar form here admits a "blank-wall" attack resolved in #deriv-causal-ib-lmi by lifting to a Linear Matrix Inequality on the Fisher Information Matrix with a positive-semidefinite matrix Lagrange multiplier; the dual-drive picture survives the lift in matrix form.
+
 ## The Persistence-Bounded Objective
 
 The agent's primary goal is to maximize pragmatic value:

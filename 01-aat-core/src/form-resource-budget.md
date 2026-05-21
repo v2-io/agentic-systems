@@ -12,6 +12,10 @@ stage: draft
 
 A depletable scalar reservoir whose drain rate rises with mismatch and whose level gates correction capacity — the minimal structure that makes "a degrading model is more expensive to run" a dynamical statement rather than an informal one.
 
+The construction is minimal: a scalar resource budget $\mathcal B_t$ evolving under drain-versus-replenishment, with two introduced structural posits — **(A-cost)** the drain rate $c(\lVert\delta\rVert)$ is non-decreasing in mismatch (degrading models cost more to run), and **(A-gate)** the sector parameter is resource-gated via $\alpha(\mathcal B) = \alpha^{\max}\psi(\mathcal B)$ with $\psi(0)=0$ (the depleted agent loses corrective capacity entirely). Hard-budget regime has zero replenishment ($r_{\mathcal B}=0$, a finite pool that only depletes); regenerative regime has $r_{\mathcal B}\gt 0$.
+
+This segment is *exploratory off-spine*: no Section I/II/III result depends on it; it opens a resource-structure axis #def-strategy-dimension explicitly records as an open scope item. The formulation is *conditional by nature* — (A-cost) and (A-gate) are modeling assertions about an agent's physical realization, not derivations from core machinery, so the formulation's epistemic ceiling stays at `conditional` regardless of downstream development. The companion derivation #der-resource-bounded-destabilization uses this formulation to close #der-adversarial-destabilization's Effects-Spiral by an alternative mechanism (agent's own correction-rate decay rather than adversary coupling growth).
+
 ## Formal Expression
 
 AAT's core machinery is resource-blind: the policy $\pi(M_t, G_t)$ acts at no modeled cost, and correction capacity (tempo $\mathcal T$, #def-adaptive-tempo) does not deplete. #def-strategy-dimension records this as an explicit open scope item — for resource-constrained agents (embodied controllers under torque/battery/episode-length limits; teams under headcount; any agent whose every corrective action spends an exhaustible pool) the formalism carries no state for the pool and no coupling from model quality to its drain. This formulation introduces the minimal such structure.

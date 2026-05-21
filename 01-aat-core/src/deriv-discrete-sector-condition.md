@@ -12,7 +12,9 @@ stage: draft
 
 # Derivation: Discrete-Time Sector Condition
 
-Discrete-time analogs of Props A.1, A.1S, and A.2 via contraction mapping, closing the fluid-limit gap (GA-5) between the event-driven dynamics ( #form-event-driven-dynamics) and the continuous-time Lyapunov results in #deriv-sector-condition.
+Discrete-time analogs of Props A.1, A.1S, and A.2 via contraction mapping, closing the fluid-limit gap (GA-5) between the event-driven dynamics ( #form-event-driven-dynamics) and the continuous-time Lyapunov results in #deriv-sector-condition. Three results land. **Prop DA.1 (Model D):** under deterministic bounded disturbance, the discrete steady-state mismatch equals the continuous steady-state exactly — zero fluid-limit gap. **Prop DA.1S (Model S):** under stochastic disturbance, the discrete and continuous steady-state variances differ by an additive correction of order $\eta^\ast c_{\max}^2/c_{\min}^2$ — quantitatively small when this conditioning-ratio-over-event-rate product is small. **Prop DA.2 (adaptive reserve):** the discrete adaptive reserve matches the continuous form modulo the same correction.
+
+A critical structural observation underwrites all three: the discrete sector condition (DA2') needs a *strictly stronger Lipschitz upper bound* on the correction function — strictly stronger than an inner-product upper bound — because the discrete recurrence's quadratic term $(\eta^\ast)^2\lVert F_d\rVert^2$ requires the norm bound, not merely the projection. This is satisfied for Bayesian updates (the posterior lies between prior and data) and for gradient descent on smooth losses (where the Lipschitz constant is the smoothness parameter); pathological correction functions with large transverse components can satisfy the inner-product bound while violating the norm bound. Together with the no-overshoot step-size condition $\eta^\ast \lt 2c_{\min}/c_{\max}^2$, the fluid limit is formally justified — the continuous-time analysis of #deriv-sector-condition is the limit of the discrete results here, not an idealization.
 
 ## Formal Expression
 

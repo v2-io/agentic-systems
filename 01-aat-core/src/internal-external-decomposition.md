@@ -12,7 +12,9 @@ stage: draft
 
 # Derivation: Internal-External Decomposition of Agent Viability
 
-Agent viability decomposes **additively** into a reducible agent-internal term and an irreducible environmental floor — inherited from the exact mismatch decomposition — and provably does **not** factor multiplicatively into an agent-independent environmental rate times agent factors.
+Agent viability decomposes **additively** into a reducible agent-internal term and an irreducible environmental floor — inherited from the exact mismatch decomposition — and provably does **not** factor multiplicatively into an agent-independent environmental rate times agent factors. The construction takes log-viability as the log-margin between steady-state mismatch and the critical task boundary, and inherits the additive split (reducible model error + irreducible observation noise) from #result-mismatch-decomposition; the agent can move the internal term, the environmental floor it cannot.
+
+The constitutive no-go is that multiplicative $\rho$-factorization of the form "$\rho = \rho_{\text{external}} \cdot f(\text{model-class}) \cdot g(\text{policy})$" is type-incorrect: mismatch is constitutively agent-relative, so $\rho^2$ carries a model-error term that *vanishes* as the agent's model improves — a contribution that subtracts to zero cannot be represented by attenuating a fixed agent-independent scalar by agent factors. Established exactly is the additive env/agent split with the environmental floor; the finer decomposition of the internal component into model, policy, and cross-term contributions is *conditional* and deliberately reserved — separating it requires Level-2 interventional access ( #disc-identifiability-floor) and is under separate investigation.
 
 ## Log-Viability
 

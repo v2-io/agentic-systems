@@ -22,6 +22,8 @@ stage: draft
 
 Every AAT quantity has an exact Kalman-filter counterpart. This is a *validation* of the formal chain — all quantities are computable in closed form.
 
+This is AAT's **calibration on a problem with known exact answers**. AAT's contribution in the Kalman instance is not adding new results to Kalman theory; it is *embedding Kalman in a more general framework that handles the same primitives across non-linear, non-Gaussian, and non-fully-observable agent classes*, with the Kalman case as the special case where everything reduces to closed-form. The mismatch is the innovation; the optimal gain coincides with the Kalman gain (the uncertainty-ratio formula equals the Kalman gain in the linear-Gaussian case); the sector parameter equals tempo via #der-gain-sector-bridge; the persistence condition reduces to observability plus detectability. Where AAT predicts what Kalman theory says, the framework is minimally correct; where AAT predicts beyond Kalman scope (non-linear, non-Gaussian, partial observability, multi-agent), the framework's reach extends past Kalman's. The Kalman instance is the anchor point that grounds the abstract machinery in a familiar concrete case.
+
 ## System
 
 The agent tracks scalar state $x_t$ and chooses sensor mode $a_t \in \{L, H\}$:
