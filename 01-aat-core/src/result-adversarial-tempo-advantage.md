@@ -11,7 +11,11 @@ stage: draft
 
 # Result: Adversarial Tempo Advantage
 
-Under adversarial coupling where one agent's actions contribute to the other's disturbance rate, the steady-state mismatch ratio scales superlinearly with the tempo ratio.
+Under adversarial coupling where one agent's actions contribute to the other's disturbance rate, the steady-state mismatch ratio scales superlinearly with the tempo ratio. The construction applies the sector-persistence template's steady-state formula to both agents and ratios them; in the *coupling-dominant limit* with symmetric coupling, the result reduces to a clean power law.
+
+**Under Model D (deterministic drift coupling), the exponent is $b = 2$** — the squared tempo advantage. A 2:1 tempo ratio yields a 4:1 mismatch ratio; 3:1 yields 9:1; 10:1 yields 100:1. The faster agent both corrects its own mismatch faster *and* generates disturbance for the opponent faster — the two effects compound multiplicatively rather than add. **Under Model S (stochastic noise coupling) the exponent drops to $b = 3/2$**, inheriting the $1/\sqrt{\alpha}$ steady-state scaling from #deriv-sector-condition Prop A.1S. **Under a non-coupling-dominant regime** (where base disturbance dominates coupling-induced disturbance) the exponent approaches 1 (Model D) or $1/2$ (Model S). The regime where the squared scaling is sharpest is also where it matters most.
+
+The central methodological framing is that this is **the formal analog of Boyd's "getting inside the opponent's OODA loop"** — military intuition becomes physics. The math itself is not mysterious; it is the steady-state formula applied to both sides and ratioed. The consequence is sharp: at 100:1 mismatch ratio the slower agent is almost certainly past its operating reserve $R$, which means **structural collapse rather than degraded performance**. Speed advantage in a coupled regime *compounds*, and the consequence is qualitatively different from what additive intuition predicts. The result is conditional on stated scope: the linear-correction case ($\alpha = \mathcal T$); the coupling-dominant limit; and the disturbance model. Paired with the scope-honest counterpoint from #der-adversarial-destabilization — **speed without coupling is useless**: infinite tempo with zero coupling effectiveness destabilizes no one. Speed and coupling are *jointly required*; the squared scaling only kicks in when both are present in the coupling-dominant regime.
 
 ## Formal Expression
 
