@@ -49,3 +49,17 @@ The core intuition that deliberation takes time, that the environment changes wh
 AAT explicitly marks its overarching 3-way allocation (Exploit/Explore/Deliberate) as *discussion-grade* (synthetic/formulation-choice) and acknowledges its parallels to Active Inference and EVC.
 
 However, AAT provides **pure mathematical novelty** in how it derives the *Deliberation Threshold*. Unlike neuroeconomic models that define the cost of time as "forgone average reward," AAT derives the threshold entirely from internal structural dynamics: **mismatch drift ($\rho_{\text{delib}}$) and epistemic gain ($\Delta\eta^\ast$)**. AAT proves that deliberation must stop when the marginal improvement in *update gain* drops below the *mismatch drift rate*. By formulating the cost of time not as an economic opportunity cost, but as an entropic accumulation of "aporia" (model-reality divergence) during inaction, AAT anchors the System 1 / System 2 transition directly to the physics of its core tracking loop.
+
+**AAT-native methodological inventions on this row:**
+- The **Deliberation Threshold** derivation from internal structural dynamics (mismatch drift + epistemic gain) rather than economic opportunity cost.
+- The **fluency-vs-sufficiency** distinction: model sufficiency (can the model in principle produce the right action?) is *separate* from action fluency (does the action flow without expensive deliberation?). A chess engine with a perfect rule model still requires expensive search (high sufficiency, low fluency); a trained reflex has moderate sufficiency but high fluency in narrow domains. What expertise and reflexes share is that the *action-generating capacity has been absorbed into the model's structure*.
+- The **structural pressure toward implicit action** in high-tempo environments: as drift → ∞ or optimal deliberation duration → 0, the optimal strategy converges to pure fluent action.
+- The **Three-Way Resource Allocation** (Exploit / Explore / Deliberate) explicitly framing deliberation as *internal exploration* in model-space with diminishing returns from finite model fidelity.
+- The **Boyd IG&C → Kahneman System 1/2 → model-free vs model-based RL arbitration** bridging via the threshold derivation.
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **High.** The Deliberation Threshold derivation is a theorem-grade closed-form result tying optimal deliberation duration to mismatch-drift rate and epistemic-gain marginal. The structural-pressure-toward-implicit-action consequence is a derived limit. The fluency-vs-sufficiency distinction has analytical content separating these as orthogonal axes. Nash-style derivations using established adaptive-filter / control-theory machinery in AAT-internal tracking-loop settings.
+- *Arch Novelty:* **Medium.** Three-way allocation; fluency-vs-sufficiency partition; the Deliberation-Threshold-from-internal-dynamics framing. AAT-native methodological apparatus.
+- *Synth Novelty:* **Medium.** Connects Boyd's IG&C, Kahneman's S1/S2, EVC (Horvitz), anytime algorithms (Boddy-Dean), model-based vs model-free arbitration (Daw, Keramati) under one cybernetic-tracking-loop derivation.
+- *Appl Novelty:* **None at the row level.**
+- *Impact:* **Medium.** The deliberation-threshold-from-internal-dynamics is the kind of structurally clean result that has appeal in cognitive science and adaptive control beyond the AI-safety-and-alignment community.

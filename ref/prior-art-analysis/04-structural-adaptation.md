@@ -49,3 +49,17 @@ AAT exhibits strong **architectural synthesis** and **formal integration** of th
 While control theorists apply singular perturbations to physical plants (like electric motors) and RL theorists apply it to actor-critic learning rates, AAT elevates singular perturbation into a universal cognitive axiom: **Temporal Nesting**. By formally linking the mismatch floor ($\mathcal{F}(\mathcal{M})$) to the timescale hierarchy, AAT proves that *structural adaptation* (paradigm shifts, architecture expansion) must operate at a fundamentally slower timescale than *parametric adaptation*. If structural adaptation triggers before parametric convergence, the agent oscillates destructively. 
 
 AAT's pure mathematical novelty here lies in its derivation of the trigger: it formally proves that when $\mathcal{F}(\mathcal{M}) < 1 - \varepsilon$, the agent's internal geometric correction function loses its sector-condition effectiveness (the "persistence" mechanism degrades structurally, not just operationally). AAT integrates the machine-learning necessity of architecture search, the statistical rigors of MDL, and the control-theoretic bounds of singular perturbations into a single, cohesive cybernetic tracking loop.
+
+**AAT-native methodological inventions on this row:**
+- The **parametric / structural adaptation** distinction as a first-class architectural variable.
+- The **Model Class Fitness** $\mathcal{F}(\mathcal{M})$ as a measurable internal quantity.
+- The **mismatch floor** as the structural trigger forcing class change.
+- The **Temporal Nesting** principle elevating singular-perturbation timescale separation from a control-theory engineering choice to a cognitive axiom.
+- The **consolidation-as-IB-objective** framing for offline-replay during the intermediate timescale (episodic→semantic transfer).
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **Some.** The mismatch-floor trigger derivation (sector-condition effectiveness degradation) + the timescale-nesting derivation from singular perturbation theory + the IB-formulation of consolidation are Nash-style derivations using established machinery (singular perturbation, sector condition, IB) in AAT-internal axiomatic settings.
+- *Arch Novelty:* **High.** Parametric / structural distinction + Model Class Fitness + Temporal Nesting + consolidation-as-IB. Multiple AAT-native methodological inventions.
+- *Synth Novelty:* **Medium.** Unifies machine-learning architecture search, MDL, singular perturbation, and continual-learning capacity limits.
+- *Appl Novelty:* **None.**
+- *Impact:* **Medium.** The Temporal Nesting principle has cross-disciplinary reach into cognitive architecture and neuroscience.

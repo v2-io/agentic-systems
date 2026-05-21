@@ -48,3 +48,18 @@ AAT's primary contribution here is **Architectural Synthesis and Dependency-Forc
 
 1. **The Orient Cascade as a Dependency Proof:** In standard AI, diagnostic steps (like evaluating goal feasibility or updating a model) are usually scheduled by human-designed loops. AAT provides a formal *information-dependency proof* (the Orient Cascade) that dictates exactly why the update order MUST be: Epistemic $\to$ Satisfaction $\to$ Regret $\to$ Strategy $\to$ Objective. AAT proves that because the evaluation of the Satisfaction Gap requires the updated model ($M_t$), and the evaluation of Control Regret requires the output of the Satisfaction Gap to disambiguate the cause of failure, the cognitive sequence is logically forced, not heuristically chosen.
 2. **Avoiding the EFE "Dark Room" Collapse:** AAT explicitly contrasts its 2x2 diagnostic split with Active Inference. AAT points out that by treating preferences as log-priors ($C(o) = \log P_{\text{pref}}(o)$), Active Inference collapses the diagnostic distinction between "wanting" and "expecting", turning both "goal is too hard" and "strategy is too weak" into the exact same scalar EFE penalty. AAT's novel architectural move is to strictly partition value functional evaluation from epistemic prediction, preserving the orthogonal diagnostic power required to trigger the correct structural adaptation.
+
+**AAT-native methodological inventions on this row:**
+- The **Satisfaction Gap** ($\delta_{\text{sat}} = V_{O_t}^{\min} - A_O$) as a first-class diagnostic quantity orthogonal to Control Regret.
+- The **Control Regret** ($\delta_{\text{regret}}$) as the path-quality diagnostic separate from feasibility.
+- The **Orient Cascade** ordering as an information-dependency-derived sequence (not a designer choice).
+- The **exploration-as-survival-drive** linkage: in drifting environments, exploration is structurally required to refresh observations enough to satisfy the persistence sector condition — not just for epistemic value, but for Lyapunov survival.
+- The **exponential-forgetting requirement** placed inside the orient-cascade machinery as a structural condition for sustained diagnosis (without it, confidence calcifies and diagnosis fails).
+- The **EFE-dark-room-avoidance** structural argument distinguishing AAT's partition from Active Inference's collapsed-scalar-EFE.
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **Some.** The orient-cascade information-dependency proof is theorem-grade derivation; the satisfaction-gap / control-regret orthogonality is theorem-grade (via the convention-monotonicity content in `#def-value-object`); the exponential-forgetting requirement is theorem-grade in the adaptive-filtering tradition applied to AAT-internal settings.
+- *Arch Novelty:* **High.** Satisfaction-gap / control-regret split + Orient Cascade as information-dependency-forced + exploration-as-survival-drive linkage + the EFE-collapse avoidance argument. Multiple AAT-native methodological inventions.
+- *Synth Novelty:* **Medium.** Bridges AI planning (goal-feasibility), adaptive control (exponential forgetting), curiosity-as-exploration, and EFE-style diagnostic architectures.
+- *Appl Novelty:* **None at this row's lead** (TST and `04-eli-core/` work uses the cascade extensively).
+- *Impact:* **Medium.** The cascade ordering is one of AAT's distinctive constructive moves and is heavily reused across the framework. Avoiding the EFE dark-room collapse via the partition is a structural contribution to the active-inference debate.

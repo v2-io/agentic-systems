@@ -46,4 +46,18 @@ To verify the state of the field, the following highly relevant anchor papers ha
 
 The foundational premises of AAT are not novel in isolation; they are deeply grounded in established, rigorous literature. The specific phrasing of the "chronica" aligns perfectly with the "irreversible observation history" in computational mechanics. The "Information Bottleneck compression of history" is mathematically identical to Predictive Rate-Distortion theory. The necessity of "recursive Markovian updates" is the definition of an Information State in stochastic control.
 
-**AAT's contribution at this layer is synthetic.** It takes the epistemological purity of PSRs, the structural optimality of computational mechanics, the objective function of the Information Bottleneck, and the recursive necessity of control theory, and weaves them into a single, cohesive axiom set for agency. 
+**AAT's contribution at this layer is synthetic and architectural.** It takes the epistemological purity of PSRs, the structural optimality of computational mechanics, the objective function of the Information Bottleneck, and the recursive necessity of control theory, and weaves them into a single, cohesive axiom set for agency.
+
+**AAT-native methodological inventions on this row:**
+- The **chronica $\mathcal{C}_t$** as a first-class object (the strictly irreversible, non-forkable observation history).
+- The **singular-trajectory scope** (per `#scope-agent-identity`) tying the agent's identity to its own non-replicable event stream.
+- The placement of IB-style history compression as the **first of four AAT compression operations** (cross-row 19).
+- The partial-observability + computational-bounds axiom combination that *forces* recursive Markovian updates (rather than treating them as a design choice).
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **None at this row** — foundational axiom-setting; the math machinery (IB, predictive-state representations, recursive Bayesian inference) is adopted from established sources. Per the math-novelty-recognition discipline: this row is genuinely foundational rather than theorem-derivation, so Math = None is honest, not deflation.
+- *Arch Novelty:* **Medium.** The chronica + singular-trajectory + IB-as-compression axiom triple is AAT-native methodological apparatus, though components are well-established.
+- *Synth Novelty:* **Medium.** Synthesizes PSRs, computational mechanics, IB, and recursive control under one axiom set.
+- *Appl Novelty:* **None.**
+- *Impact:* **Medium.** Foundational layer rather than results-bearing.
+
