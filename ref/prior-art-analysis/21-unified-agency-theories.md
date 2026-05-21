@@ -51,4 +51,43 @@ AAT's overarching novelty lies in its **Epistemological Foundation** and its **C
 
 1. **Rejecting "Preferences as Priors":** Active Inference achieves unification by assuming that an agent encodes its goals as prior beliefs about the world, and that action is just "fulfilling expectations." AAT explicitly rejects this (Topic 13/14), proving that collapsing "wanting" and "expecting" destroys the agent's ability to orthogonally diagnose failure (the Satisfaction vs. Regret split). AAT achieves the same elegant variational unification without committing this epistemological category error.
 2. **Rejecting NESS for Sector-Lyapunov Bounds:** FEP relies mathematically on the assumption that a system settles onto a Non-Equilibrium Steady State (NESS) density to define its survival boundaries. AAT notes (echoing critiques by Aguilera et al. 2022) that this assumption is mathematically fragile for non-linear, non-stationary systems. AAT provides **pure mathematical novelty** by replacing the NESS requirement entirely with the classical Lur'e/Zames **Sector Condition** (Topic 10). It proves that universal agency bounds can be derived directly from standard Lyapunov persistence, which is mathematically vastly more robust than FEP's density assumptions.
-3. **Separating Agency from Identity:** While Enactivism and FEP tie the *mechanics of tracking* directly to the *drive for biological survival*, AAT formally separates them. By decoupling teleology from the continuity stance (Topic 16), AAT proves that the mechanics of agency apply equally to an indifferent thermostat and a self-preserving AI, creating a framework uniquely suited for modern Artificial Intelligence safety and alignment, domains where biological survival theories struggle to map cleanly.
+3. **Separating Agency from Identity:** While Enactivism and FEP tie the *mechanics of tracking* directly to the *drive for biological survival*, AAT formally separates them. By decoupling teleology from the continuity stance (per `#disc-continuity-stance`, row 15), AAT proves that the mechanics of agency apply equally to an indifferent thermostat and a self-preserving AI. Per row 13's self-actuation grounding no-go, this orthogonality is *derived*, not merely posited — the terminal grounding invariant must live on the adaptive substrate, where the self-actuation operator structurally cannot reach. This creates a framework uniquely suited for modern AI safety and alignment, domains where biological-survival theories struggle to map cleanly.
+
+**Four-pillar framework-level novelty defense (from `ref/Novelty_defense_and_integration.md`).**
+
+The Undermind defense memo identifies four AAT-distinctive contributions at the framework level, each with its own prior-art landscape:
+
+| Pillar | Verdict | Main prior-art locus | Confidence |
+|---|---|---|---|
+| **Causal insufficiency and forced exploration** | Conceptual Precursor | Causal bandits / causal MDPs under hidden confounding (Bareinboim, Zhang, Forré, Lee 2018/2020) | High |
+| **Composition closure defect and Bridge Lemma** | Conceptual Precursor | Approximate information states, state abstraction, decentralized control (Subramanian, Abel, Taylor, Nayyar, Congeduti) | High |
+| **Logogenic bias bound for LLMs** | Wholly Novel | Empirical ambiguity / action-belief gap work + loose bounded-rationality analogies (Wang, Yan, Tan, Pal, Liu, Genewein) | Medium |
+| **TST in agentic environments** | Wholly Novel | Developer-agent systems-and-benchmark papers, not formal economic theory (Yan, Pan, Vij, Xia, Gol) | Low |
+
+The framework-level posture is **selective rather than maximalist**: several ASF claims position as sharpened syntheses over strong precursor mathematics; others appear genuinely new. Pillar 4 (TST) has the thinnest precedent search at this snapshot.
+
+**Cross-cutting integration (per the top-level defense).** AAT bridges four signature pillars under one machine: the loop's interventional access (row 06) makes Pearl-Level-2 evidence available; the closure-defect / bridge lemma (row 08) supplies the composition machinery; the logogenic bias bound (rows 05 + 03-llm-core specialization) gives LLM-agent architectures a structural reading; and the TST-in-agentic-environments work extends the framework to developer-agent software economics (`02-tst-core`).
+
+**Convergent meta-finding across the 12 per-topic Undermind memos.** The memos consistently identify AAT's novelty at the **package-integration level** rather than at any single component, **AND** at AAT-native methodological inventions (the GUC class typology, the W₀/W₁/W₂ wrapping hierarchy, the strategy DAG with regime-indexed identification, the closure defect $\varepsilon^\ast$, the Sector-Persistence Template, the constructive-impossibility five-step shape, the four-layer coordinate-forcing pattern, the stability-certificate spine, the Hafez bridge, the Sylvester recognition for rank-collapse floors, the auxilia hierarchy, and the directional-fidelity B1 condition for credit assignment). This is consistent with the math-novelty-recognition discipline (see project CLAUDE.md): AAT is not only Nash-style application of established machinery but also *purposeful invention* of new tools, methodologies, and notation in service of the theory.
+
+**AAT-native methodological inventions at the framework level:**
+- The agent spectrum (model × objective richness) with migration across regions (row 20).
+- The GUC class typology (1 / 2 / 3 = Separated / Partial / Coupled) (rows 05, 14).
+- The Sector-Persistence Template as a one-stop instantiation form (row 03).
+- The closure defect $\varepsilon^\ast$ as composition-validity parameter (row 08).
+- The stability-certificate spine with three facets (rows 11 / 12 / 18 / `#disc-separability-pattern`).
+- The constructive-impossibility five-step pattern (row 11).
+- The four-layer coordinate-forcing pattern (row 12).
+- The four-instance compression-operations family with U-medium honest scope (row 19).
+- The five-stance continuity-stance taxonomy with terminal-non-objective-invariant locus (rows 13, 15).
+- The W₀ / W₁ / W₂ wrapping-regime hierarchy with Class-1-by-structure vs Class-1-by-behavior distinction (row 05).
+- The directional-fidelity B1 condition + observability-by-design discipline (row 17).
+- The four-regime recipient-side classification (row 10).
+- The Hafez-bridge architecture-vs-performance distinction (row 20).
+
+**Novelty profile (per the meta-summary's four-axis rubric):**
+- *Math Novelty:* **Some at the synthesis level**, with the constituent theorems living in their per-row segments (the row-21 contribution is framework-coherence, not theorem-derivation).
+- *Arch Novelty:* **High.** The framework-level integration is itself architectural — placing AAT as a structurally-rigorous alternative to FEP + AIXI + bounded-rationality lineages, with explicit corrections to "preferences as priors" + NESS density assumptions.
+- *Synth Novelty:* **High.** The four-pillar synthesis (causal insufficiency + closure defect + logogenic bias + TST) under one framework with consistent vocabulary across the agent spectrum.
+- *Appl Novelty:* **None at this row's lead** (the four pillars have their own applied-novelty content).
+- *Impact:* **High.** Per the meta-summary's Part 2 — AAT positions as a credible Grand Unification attempt with the distinctive epistemic-honesty discipline (no-gos as load-bearing apparatus) that FEP and AIXI lack. The reception will depend on how cleanly the framework's adoption-vs-extension distinction is communicated — the strongest defensive posture, per Gemini's anecdotal opinion in the meta-summary, is **radical transparency about priors** combined with the **architectural synthesis** framing.
