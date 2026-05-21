@@ -520,6 +520,20 @@ it is **routing the specific drafted artifact, verbatim, to an external
 eye** (Joseph, or a fresh independent confirmer per the gate) before the
 durable write.
 
+**Pre-spike commit hygiene for canon-modifying agents** *(evolved ops —
+Joseph 2026-05-20)*: before launching any agent or spike that will
+directly modify canon segments (`*/src/*.md`, OUTLINE rows, FORMAT,
+`bin/`, governing docs), **commit all prior canon-touching work first**.
+This isolates the spike's contribution as a discrete diff — easy to
+inspect, easy to revert, easy to attribute. A spike whose edits mingle
+with this-session uncommitted canon work creates an attribution mess:
+reviewing what the spike actually did requires manual reconstruction
+(which lines were mine, which theirs?), and a revert of "what the spike
+did" becomes per-line judgment instead of a clean `git revert <hash>`.
+The rule applies even when the prior work is obviously-fine-to-commit
+on its own — commit it first; launch the spike second. The commit *is*
+the seam — it locks attribution.
+
 **Consolidated-ledger anti-fragmentation** *(evolved ops)*: soft findings
 are mirrored in **one curated pass across all clusters**, themed and
 deduplicated — *not* per-cluster as each graduates (that re-buries the
