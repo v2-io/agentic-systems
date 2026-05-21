@@ -8,7 +8,9 @@ stage: deps-verified
 
 # Definition: Agent-Environment Coupling
 
-An agent is an entity that receives observations from an environment, maintains internal state, and produces actions that affect the environment. The agent cannot access the environment directly — observations are necessarily lossy. This boundary condition is constitutive: the theory applies where the agent-environment boundary entails information loss.
+The framework begins by drawing the agent/environment boundary that the rest of the theory will be defined over. The **environment** is denoted $\Omega$ — the totality of state external to the agent — and is left deliberately underspecified: it may be continuous or discrete, stationary or non-stationary, deterministic or stochastic, benign or adversarial; it may itself contain other agents, physical systems, or software artifacts. An **agent** is anything that satisfies three conditions: it receives observations from $\Omega$ (a perception channel), it maintains internal state (memory or model), and it produces actions that affect $\Omega$ (an action channel).
+
+The constitutive commitment is the *information-loss boundary*: the agent cannot access $\Omega$ directly. All contact with the environment is mediated through lossy observation. This is not a simplifying assumption but a scope condition — systems with direct full-state access fall outside AAT's purview, because for them the entire adaptive machinery (mismatch signal, model maintenance, correction) becomes vacuous. The agent-environment decomposition is therefore not a truth-claim about the world but a modeling choice that delineates *what AAT analyzes*: systems facing genuine uncertainty about their environment.
 
 ## Formal Expression
 
