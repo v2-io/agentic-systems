@@ -134,6 +134,8 @@ Under the mechanism-design framing of strategic composition ( #deriv-strategic-c
 
 **Connects AAT to information-theoretic foundations.** The external theorems (Pearl/Bareinboim hierarchy; Cramér-Rao bound; rate-distortion / IB) are the mature literature AAT inherits. Each instance positions AAT as a domain-specific application of an established theorem — not a re-derivation, but a consequential application that shapes downstream segment structure.
 
+**Cross-instance recognition as framework style.** Read together, the M1 instances + the analogous boundary-facet results elsewhere (Cor A.1S.1 disturbance-dichotomy in #deriv-sector-condition; the strategic hard ceiling in #deriv-strategic-persistence-hard-ceiling) share a distinctive posture — *name the floor, name the unique broadly-available escape via specific machinery, treat the no-go as load-bearing apparatus*. #disc-constructive-impossibility-posture names this style with five cleanly-fitting instances. M1 is the cross-sectional meta-pattern *content*; the posture is the cross-instance *style recognition* atop the boundary facet of the stability-certificate spine ( #disc-stability-certificate).
+
 ## Epistemic Status
 
 *Discussion-grade* at the meta-pattern level. The segment is a presentational organizing principle — it names a shared shape across separately-derived results, not a theorem in its own right. What is derivative here is the recognition that two independent AAT findings share the pattern (setting → external theorem → no-go → boundary characterization → strengthened consequence); the pattern itself is not derived and has no identification claim of its own.
