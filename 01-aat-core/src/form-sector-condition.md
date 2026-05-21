@@ -6,7 +6,7 @@ depends:
   - def-mismatch-signal
   - def-adaptive-tempo
   - emp-update-gain
-stage: draft
+stage: claims-verified
 ---
 
 # Formulation: Sector Condition (A2')
