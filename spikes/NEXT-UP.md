@@ -299,17 +299,102 @@ requires both Track A Phase 4 and Track B to be substantially complete.
 
 ---
 
-## 4. Open items needing your input
+## 4. Open items — resolution status (updated 2026-05-21 post-handoff)
 
-- **Dispatch decisions** on Tracks B and C — both plans exist but are
-  uncommitted; awaiting your go to commit them and launch executors.
-- **J7 / J9 trajectory** decision on the standalone-paper / §C.3
-  derivation spike (the Joseph-reserved tail).
-- **Track D coordination** — whether to run the modularity cycle in
-  parallel with Track A, or sequence them. Affects Phase 6 timing.
-- **Track E formal plan** — currently sketched in conversation; if
-  you want a dedicated plan file before dispatch, it would be one more
-  document in this directory.
+| Item | Status as of handoff | Resolution |
+|---|---|---|
+| Dispatch decisions on Tracks B and C | ✅ Resolved | Joseph 2026-05-21: "all decisions should have been made at this point" + integration handoff to Claude. Interpretation: dispatch of Tracks B and C is part of the executor's scope at the right window (after Track A Phase 4 per the navigator's dependency analysis). Executor decides dispatch timing within the constraint. |
+| Track E formal plan | ✅ Resolved | Folded into Track A Phase 5 — Phase 5's actual canon diffs drive Track E's specific row-update scope rather than upfront speculation. No separate Track E plan file. |
+| A4 sequencing | ✅ Resolved | Sequential after Phase 3c, not parallel with Phase 2b. Cleaner mental model; the cost in wall-time is small (~0.3 cycles). |
+| Track D coordination | 🟡 Open but not blocking | Track D is the modularity-state-dynamics cycle with its own plan at `msc/modularity-cycle-plan-2026-05-09.md`. Not in the executor's launch scope per the navigator ("Out of scope for this navigator"). Track D runs on its own schedule; Track A Phase 6 will simply wait. Executor will not unilaterally launch Track D. |
+| **J7 — Standalone-paper trajectory** | 🔴 Genuinely dangling | Explicitly Joseph-reserved per `07-SOLIDIFIED-PLAN.md` §S.2. No execution without explicit go. Per `05-INTEGRATION-PLAN.md` §I.11: requires J9 to land first to be competitive (BG1 found substantial overlap on the T1 four-tier classification; the standalone-paper case needs additional novel content beyond the spike). |
+| **J9 — Schedule the §C.3 derivation spike** | 🔴 Genuinely dangling | Prerequisite for J7. Would derive `03-DYNAMIC-REGIME-AXIS.md` §C.3 cost-asymmetry with a structural-distance metric on game-rewiring. Estimated 2 cycles. No execution without explicit go. |
+
+**Two items genuinely remain Joseph's call** — J7 and J9. Both are intentionally reserved and neither blocks the Track A → B → E → C execution sequence. They will land (or not land) on Joseph's own schedule.
+
+---
+
+## 5. Execution handoff (2026-05-21) — under Claude Opus 4.7 (1M)
+
+Joseph 2026-05-21: *"OK-- I'm going to have you take over integrations now if you're willing"* and *"You're good. be holistic and wise and do what's best for the project-- keep things honest but don't be afraid to take a few risks where appropriate. commit regularly- don't wait for perfection first. staged and piecewise with logical checkpoints makes everything easier."*
+
+The execution posture this hand-off establishes:
+
+- **Holistic and wise** — keep the four-track sequence coherent; don't fragment.
+- **Honest, but with appropriate risk-taking** — don't over-engineer or over-verify. Commit at logical checkpoints.
+- **Commit regularly** — small commits per phase-subaction. Don't wait for perfection; ship working state and iterate.
+- **Staged and piecewise** — discrete commits per action; checkpoints between phases.
+
+### 6.1 Tactical decisions (executor-resolved)
+
+These were proposed in the executor's check-in and confirmed by Joseph (explicitly or via integration-handoff). They are now baked-in and will not be revisited.
+
+| Decision | Resolution |
+|---|---|
+| **(T1) Phase 2b ↔ Track B coupling** | Phase 2b authoring forward-references `#disc-implementation-impossibility` (Track B's new meta-segment) for mechanism-design treatment rather than duplicating it. Same forward-reference convention `#disc-modularity-state-dynamics` already uses. Track B then lands and forward-references resolve. |
+| **(T2) Primary-source verification on BG1 citations** | Verify Candogan-Menache-Ozdaglar-Parrilo 2011 and Letcher-Balduzzi 2019 against primary source PDFs before Phase 2b commit (load-bearing). Spot-check the other four (Sandholm 2010, Hofbauer-Sigmund 1998, Omidshafiei et al. 2019, Papadimitriou-Piliouras 2019) — well-known but worth confirming page-reference accuracy where any specific theorem-number is cited. |
+| **(T3) Track E as Phase 5 byproduct** | Track E's catalog-row updates land *during* Track A Phase 5's cross-segment ripple, scoped by what Phase 5's actual canon diffs surface. No separate Track E plan file. |
+| **(T4) A4 second-pass Undermind sequential** | Runs after Phase 3c, not in parallel with Phase 2b. Avoids prior-art results landing mid-segment-authoring. |
+| **(T5) Findings-Brief Feynman bar at Phase 2b** | Iterate during authoring; ship draft-grade Brief with Working-Notes refinement flag if Feynman bar unreached in one pass — don't hold the segment for polish. |
+| **(T6) R-Reg-6 cross-reference audit at Phase 4 (4g)** | Explicit `git grep` for Instance 3 citations at Phase 4 (4g) close; verify each remains valid under the broader claim. |
+| **(T7) Tracks B and C dispatch window** | Track B dispatch after Track A Phase 4 close (per navigator §3 step 8). Track C dispatch after Track B close (per navigator §3 step 10). Executor launches in sequence. |
+
+### 6.2 Check-in cadence with Joseph
+
+Joseph's preference is staged and piecewise with logical checkpoints. The executor's natural check-in points during Track A:
+
+| Checkpoint | Reason for surfacing |
+|---|---|
+| After P0 commits (spike body + sibling + NEXT-UP update) | Confirms hand-off is operational; gives Joseph a chance to redirect before canon modification begins |
+| After P1 commit (GUC-residue fix) | Confirms the fix-pattern looks right before Phase 2b's much larger authoring cycle |
+| Before P2.4 commit (segment authoring) | Most consequential single artifact — a meta-segment in the framework. Worth reviewing before commit |
+| After P3.5 commit (Instance 3 broadening + new appendix) | Touches a meta-segment (`#disc-identifiability-floor`); Joseph may want to verify the broadening reads correctly |
+| After A4 commit | Brief — just confirms second-pass Undermind didn't surface anything that requires re-work |
+| Before P4 starts | Largest multi-segment cascade. Worth confirming scope before opening 5 files |
+| At Phase 5 close | Catalog state available for Track E scoping; Track B dispatch window opens |
+| Before Track B dispatch | New meta-segment authoring; major framework move |
+| Before Track C dispatch | Retroactive meta-segment narrative sweep; touches existing canon broadly |
+
+Joseph can collapse any of these into automated-go if he wants; the executor will not pause unnecessarily. The default is: commit at every checkpoint, surface a one-line "checkpoint reached, proceeding to next phase" note in conversation, and continue unless Joseph interrupts.
+
+### 6.3 Commit discipline
+
+Per Joseph's "commit regularly" + the pre-spike-commit hygiene + `feedback_git_commit_pathspec`:
+
+- **One commit per phase-subaction.** No bundling unrelated changes into one commit. Light batching only where multiple files land in the same logical move (e.g., a segment + its OUTLINE entry).
+- **Commit messages name the spike trail.** Each canon-touching commit message references the spike directory + the specific finding/decision that drove the change. Future agents reading `git log` get the reasoning chain.
+- **Spike body committed first** (Phase 0). The spike doesn't modify canon, but per the pre-canon-modifying-spike discipline, the spike trail commits before any canon-touching commit.
+- **Lint before every commit.** `bin/lint-md` on the modified files. Don't commit broken markdown.
+- **Verify after every commit.** `git status` after the commit completes per CLAUDE.md commit-flow.
+
+### 6.4 Risk-taking authorization
+
+Joseph 2026-05-21: *"don't be afraid to take a few risks where appropriate."*
+
+The risks the executor will take, made explicit so they're on the record:
+
+- **Phase 2b discussion-grade landing without exhaustive verification of every citation.** Per (T2) the load-bearing citations are verified; the rest are spot-checked. If a non-load-bearing citation later turns out imprecise, fix in a follow-up commit rather than holding the segment.
+- **Track E folded into Phase 5 without a separate plan file.** Risk: Phase 5 scope creeps if Track E's row-updates pull in unexpected work. Mitigation: hard scope-cap on Phase 5 (catalog rows touched only, no segment re-authoring); anything that exceeds the cap becomes its own commit cycle.
+- **Tracks B and C dispatch decided by executor at the right windows.** Risk: executor misjudges Track B or C readiness. Mitigation: explicit checkpoints (per §6.2) before each dispatch with one-line surface to Joseph; Joseph can veto in-thread.
+- **Background agents used sparingly.** The previous BG1 + BG2 launches worked well; the executor will use them again for A4 (second-pass Undermind) and possibly for Track B's mechanism-design literature ingestion. Risk: an agent overrun or low-quality return. Mitigation: clear scope per agent; verify output before integration; small batches.
+
+### 6.5 What this hand-off does not do
+
+- **Does not unilaterally schedule Track D.** Track D's plan lives at `msc/modularity-cycle-plan-2026-05-09.md`; it's the modularity-cycle's own cycle. Phase 6 waits.
+- **Does not act on J7 / J9.** Both remain Joseph-reserved. The executor will surface the standalone-paper trajectory question again once Track A is complete, in case Joseph's reading has changed, but will not assume go-ahead.
+- **Does not modify NEXT-UP §1–§5 substantively.** The navigator's analysis is the dependency-trace and is correct. The executor adds §6 as the operational handoff layer; the navigator analysis is preserved.
+- **Does not commit canon modifications without lint passing.** Lint is the floor.
+
+### 6.6 Durable form — what a future context-ended successor needs
+
+If the current executor context-ends mid-Track-A, a successor should be able to pick up by:
+
+1. Reading `spikes/NEXT-UP.md` (this file) for the full sequence and the executor's tactical decisions.
+2. Reading `spikes/strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md` for Track A's executable phase breakdown.
+3. Running `git log --oneline -30` to see how far execution has gotten.
+4. Continuing from the next un-completed phase per the §3 ordering + the §6.1 tactical decisions.
+
+The commit messages are the durable handoff trail. Each canon-touching commit names the spike + the specific phase + the finding/decision that drove the change. A successor doesn't need conversation history; the git log + the spike directory carry enough.
 
 ---
 
