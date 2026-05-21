@@ -11,7 +11,13 @@ stage: claims-verified
 
 # Scope: Adaptive System
 
-AAT's broadest scope: any system that observes an uncertain environment supports Section I's adaptive machinery. Adding causal action narrows to the agency scope ( #scope-agency); this segment names the outer scope from which agency is a restriction.
+This segment names AAT's broadest scope — the set of systems to which all of Section I's machinery applies. A system is in the **adaptive scope** if it satisfies two minimal conditions: it has some perceptual channel to its environment (a non-empty observation space, $\mathcal{O} \neq \emptyset$), and there is residual uncertainty about the environment given the full interaction history so far (the conditional entropy $H(\Omega_t \mid \mathcal{C}_t)$ is strictly positive).
+
+These two conditions are the minimal requirements for the framework's adaptive machinery to be non-vacuous. They are sufficient to support the mismatch signal ( #def-mismatch-signal), the update-gain analysis ( #emp-update-gain), the adaptive-tempo construct ( #def-adaptive-tempo), the persistence condition ( #result-persistence-condition), and all of Section I's dynamics. Concrete inhabitants include Kalman filters estimating passive signals, passive Bayesian learners, and biological sensory systems — none of which need to *act* on their environment for Section I's results to apply to them.
+
+What is excluded clarifies what the scope is doing. A system with full knowledge of the environment ($H(\Omega_t \mid \mathcal{C}_t) = 0$) is a closed-form optimal-control problem outside AAT's concerns. A system with no observation channel at all ($\mathcal{O} = \emptyset$ — e.g., a pure mathematical-proof engine working from axioms) has no agent-environment boundary in AAT's sense. Both edge cases sit *outside* the framework.
+
+The scope is the broadest member of a cascade. Narrowing it by adding the requirement that the agent's actions carry Pearl-level-2 causal contrast — distinct actions yield distinct interventional distributions — produces the agency scope ( #scope-agency) and unlocks the interventional and purposeful results of Sections II and III. Adaptive-scope systems that fail the contrast condition are *passive observers* (no choice) or *nominal agents* (choices with no causal effect); for them, Section I's machinery applies but the later causal and purposeful results do not.
 
 ## Formal Expression
 

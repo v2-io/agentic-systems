@@ -11,7 +11,9 @@ stage: deps-verified
 
 # Definition: Model Sufficiency
 
-The fraction of predictive information the model retains relative to the full interaction history; $S = 1$ means the model is a sufficient statistic for prediction, $S \lt 1$ means predictive information has been lost.
+Having committed to a compressed model $M_t$ ( #form-agent-model) and to information-bottleneck pressure ( #form-information-bottleneck) shaping it, the framework needs a measurable handle on *how much* of the chronica's predictive content the compression actually retains. **Model sufficiency** $S(M_t)$ is that handle: an information-theoretic ratio built from conditional mutual information that takes the value $1$ when the model is a sufficient statistic for prediction (knowing the full history beyond the model adds nothing), $0$ when the model retains no predictive information at all, and intermediate values for partial sufficiency.
+
+Two scope considerations are surfaced at the definition rather than buried downstream. Sufficiency is *well-defined only when there is something to be sufficient for* — the chronica must carry non-zero predictive information about the future beyond what the action sequence alone supplies. In saturated-noise environments or prediction-vacuous regimes (fully iid observations independent of history), the denominator vanishes and $S(M_t)$ is undefined; the downstream constructs that build on it ( #def-model-class-fitness, #result-structural-adaptation-necessity) inherit that scope. And sufficiency is *predictive, not causal* — it measures Level 1 (associational) information; it does not by itself guarantee that $M_t$ supports Level 2 (interventional) queries (that requires the additional backdoor condition formalized when value objects arrive in #def-value-object). The Discussion section draws three further relativities — to the prediction task / horizon, to the generating policy, and to the singular causal trajectory the agent is instantiated on — that the framework will lean on later.
 
 ## Formal Expression
 

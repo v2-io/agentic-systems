@@ -9,7 +9,9 @@ stage: deps-verified
 
 # Definition: Model Class Fitness
 
-The best achievable sufficiency within a model class. When no model in the class can adequately represent reality, the agent faces a structural limitation that no amount of parameter tuning can resolve.
+Where model sufficiency ( #def-model-sufficiency) measures how well a *specific* model retains the chronica's predictive information, **model class fitness** $\mathcal{F}(\mathcal{M})$ measures the *ceiling* — the supremum of sufficiency over every model in the agent's representational class $\mathcal{M}$. The pair formalizes a distinction the framework will soon make load-bearing: a low instance sufficiency might mean the agent needs more learning (parameter update); a low class fitness means no amount of better parameter estimation, more data, or longer training within the current class will close the gap — the agent needs a different *kind* of model entirely. The parallel to bias vs. variance in statistical learning is exact: class fitness is about bias (what the class can in principle represent); instance sufficiency reflects both bias and estimation quality.
+
+The structural-inadequacy condition $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ is the trigger this definition sets up for use later. When it holds, the gap from full predictive sufficiency cannot be closed parametrically. That is the precise hypothesis under which #result-structural-adaptation-necessity arrives in Chapter 4 — when class fitness is too low, the agent must change *what kind of model* it is. An important operational point: the agent cannot directly compute its class fitness (that would require searching over all models in $\mathcal{M}$). What it can observe is the *signature* — persistent mismatch despite adequate learning (high gain, sufficient data, converged parameters). When the floor doesn't go down with more work, the floor is structural.
 
 ## Formal Expression
 

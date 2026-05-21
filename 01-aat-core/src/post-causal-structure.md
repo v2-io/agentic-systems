@@ -10,7 +10,9 @@ stage: deps-verified
 
 # Postulate: Causal Structure
 
-The agent-environment interaction has irreducible causal structure grounded in the temporal ordering of events. Actions precede their consequences; observations follow from the state they observe. This ordering is constitutive of the feedback loop and holds independent of the magnitude of the agent's influence on the environment.
+The framework adopts as a primitive postulate the irreducible causal structure that grounds the agent-environment loop: actions precede their consequences, observations follow from the state they observe, and the temporal ordering of events is constitutive of what can cause what. The notion of causality adopted here is the most primitive available — *event $A$ can be a cause of event $B$ only if $A$ temporally precedes $B$* — and is weaker than (and logically prior to) statistical notions of causal influence. It is a statement about the structure of *possible* influence, not about actual influence; the Pearl-style causal hierarchy ( #def-pearl-causal-hierarchy) builds on this foundation but is not identical to it.
+
+The postulate is not derived from the second law of thermodynamics, the light-cone structure of relativity, or the arrow of psychological time, though each enforces it. It is simply noted as a precondition: the theory applies to agents embedded in a universe where time has a direction. A subtle but important consequence — developed in the Discussion below — is that the loop's causal structure is preserved *independent of the magnitude of coupling*: the skeletal structure is the same whether the agent's actions strongly determine the environment, weakly affect it, or only choose what to observe. The Pearl-style causal *hierarchy* requires action-contingent observation to be accessible at Levels 2–3; the temporal-ordering postulate stated here is what holds even when statistical influence is negligible.
 
 ## Formal Expression
 

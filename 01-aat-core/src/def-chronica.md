@@ -11,7 +11,11 @@ stage: deps-verified
 
 # Definition: Chronica
 
-The interaction history $\mathcal C_t$ is the complete, singular causal record of the agent's observations and actions. Everything the agent can ever know must be constructed from this sequence.
+The agent's complete record of its interaction with the environment is named the **chronica** — the interleaved sequence $\mathcal{C}_t = (o_1, a_1, o_2, a_2, \ldots, a_{t-1}, o_t)$. The ordering is not a notational convenience: it reflects the irreversible physical fact that each action was committed before the observation that followed could be received. The agent could not have used $o_t$ to select $a_{t-1}$. The chronica is monotonically growing — events are added, never removed — and it is the *only* raw material from which the agent can ever construct a model ( #form-agent-model). The term itself (from Greek χρονικά, "records of time") is chosen to avoid notational collision with Shannon entropy $\mathcal{H}$.
+
+A consequence the framework will lean on heavily: because temporal ordering is irreversible, the chronica is *singular and non-forkable*. Duplicating an agent's state and exposing the copies to different futures produces two agents with divergent chronicae, neither of which is a sufficient statistic for the other's trajectory. This is the substrate of what the lexicon calls *continuity persistence* — the condition under which an agent's identity tracks a single irreversible trajectory rather than a copyable snapshot. The full development of this observation lives in #scope-agent-identity.
+
+A second subtle property: $\mathcal{C}_t$ is an *ordinal* sequence indexed by events, not a *metric* timeline indexed by wall-clock time. The agent's time is measured entirely in event ticks. Implications of this ordinal-not-metric character are tracked in the Working Notes below for downstream segments that need them.
 
 ## Formal Expression
 

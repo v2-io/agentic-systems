@@ -10,7 +10,9 @@ stage: deps-verified
 
 # Definition: Observation Function
 
-Observations (aisthesis — raw contact with reality) are lossy, possibly noisy functions of environment state, prior action, and perceptual noise. The agent knows neither the observation function nor the noise distribution exactly.
+The perception channel is formalized as an **observation function** $h$ that produces each observation as a (possibly noisy) function of the current environment state, the agent's prior action, and a perceptual-noise term $\varepsilon_t$. Observations live in an observation space $\mathcal{O}$ — the raw contact with reality, the *aisthesis* the agent has to work with. The action-dependence in the conditioning is optional — when absent, observations reduce to pure functions of environment state plus noise — but allowing it captures *active perception*: what the agent sees can depend on where it looked or what it just did.
+
+Two epistemic commitments are constitutive. First, $h$ is *lossy* — it maps from the high-dimensional, inaccessible environment state $\Omega_t$ to a strictly lower-information observation. This information loss is what later forces the agent to maintain an internal model ( #form-agent-model) rather than simply reading off the world. Second, the agent knows neither $h$ nor the noise distribution exactly. These are not empirical assertions about real-world observation channels but scope-defining choices that delineate the partial-observability setting AAT operates within ( #def-agent-environment).
 
 ## Formal Expression
 
