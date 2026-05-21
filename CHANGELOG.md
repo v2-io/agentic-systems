@@ -25,6 +25,30 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 
 ---
 
+
+## 2026-05-20 → 2026-05-21 (pre-print prep session)
+
+Sweeping pre-pre-print cleanup arcs. Commits between `07aaeff` (audit-extraction sweep, session start) and `87dd9dc` (meta-segment cross-refs). One-liner summary of what landed; commits inline.
+
+**451729 D.1 promotion sweep.** Class B+C narrowing (`6e4cd79`); Phase 1+2 stage advances on `#deriv-recursive-update` + `#deriv-sector-condition` (`1ec89d8`); A2' formulation extracted into new `#form-sector-condition` segment with corpus-wide cross-ref sweep (`aed98a4`+`843c178`); Phase 2.5+3 on `#form-sector-condition` + `#der-gain-sector-bridge` (`b3ec29e`); Phase 4a sketch→conditional on `#schema-strategy-persistence` + new exact-tier appendix `#deriv-strategic-persistence-hard-ceiling` carrying the $\rho_\Sigma = R_\Sigma/2$ structural cap (`9054e9f`); Phase 4b discussion-grade→robust-qualitative on `#form-strategy-complexity-cost` + depends fix (`351ed95`).
+
+**Math verifications.** Independent re-derivation passes on the strengthening landings: Cor A.1S.1 Model-S half + (1-λ)/(2-λ) exact form + Prop C.1/C.2 hard-ceiling algebra all CONFIRMED exact (`9674081`); BH-identity + Csiszár chain-rule axiom uniqueness CONFIRMED exact via direct PDF verification (`e4f747b`). Hobson 1969 PDF was wrong-file (HTML-scrape of unrelated 1991 finance paper) — deleted + INDEX row removed (`b4ce7bb`); citation itself remains correct, uniqueness sustained by Csiszár alone.
+
+**Constructive-impossibility posture.** New `#disc-constructive-impossibility-posture` segment + AAT OUTLINE Layer-0 preamble (`8aeddfa`) naming the framework's *style at the boundary facet*: name the floor, name the unique broadly-available escape, treat the no-go as load-bearing apparatus. 5 cleanly-fitting instances (CHT / Cramér-Rao / Liberzon / Cor A.1S.1 / Prop C.2). Cross-refs added in `#disc-stability-certificate` Discussion + `#disc-identifiability-floor` §"Why This Pattern Matters" (`87dd9dc`). Convergence-source: 7-cycle Theme-B across audit-extraction + 144-walker observation #1.
+
+**4th-identifiability-floor candidates cleared.** Fano + Gibbard-Satterthwaite both Outcome C (no-go on M1-fit); Working-Notes cross-refs added in `#der-agent-opacity:156` + `#deriv-strategic-composition:197` recording the cleared routes (`74beaf9`). Genuine 4th candidate (Object B from `spike-identifiability-floor-instance4-resolution-2026-05-18.md`) remains Joseph-reserved in PROPOSALS §D.9; not touched.
+
+**Audit-findings extraction sweep.** 19 AUDIT-WORKING-* dirs (the gold standing-gate per `audits/README.md`) mined into per-dir consolidated findings files (`07aaeff`). 14 de-novo theory audits at `audits/audit-findings-NNNNNN.md`; 5 R2 naming-vote sessions auto-detected and routed to `msc/naming/step-through-cycles/`. 4-cycle convergence on PROPRIUM-architecture-as-consciousness-infrastructure (193847+829314-LOGOZOETIC+471203+584721) surfaced as substrate. Pilot adjudication on 471203 at `audits/ADJUDICATION-WORKING-218564/adjudication.md` (`ca53c76`). 4 of 17 Fresh items resolved-by-strengthening between audit-FINAL (2026-04-28) and adjudication (2026-05-20) — strengthen-before-soften operating at project-cadence scale. Fan-out adjudication on remaining 13 deferred per Joseph's pre-print-first framing.
+
+**Lint cleanup sweep.** 362 active-segment lint issues → 0 across all four `src/` trees. Auto-fix swept 185 issues (`300a66c`); manual passes resolved 17 bare-`|`-in-math (`129c8ac`), 18 emphasis-vulnerable `_` (`5120a18`), 142 bare-Greek-in-prose (`349e3a1`). Plus 3 slug-ref-in-math rewrites per the new FORMAT discipline (`d2add68`). Build-pipeline blockers cleared.
+
+**Summary-attempt sweep (the 144-walker's per-segment prose).** 107 description-prose upgrades + 36 conservative skips across ~143 segments (`1b07dbd` pilot, `b1f599d 13ac20c 25c298c f02e7e3 0d83e99` for batches 1-5). Walker's mental-model-scaffolding prose integrated where it strictly improves first-encounter readability; chapter-intros / chapter-end implications / canon-already-superior cases skipped. Truth-discipline preserved throughout: agents rejected walker over-claims (effects-spiral discussion-grade preservation, Instance-4 KNOWN-DEFECTIVE preservation, GS-as-floor-instance rejection). Walker-pre-dates-recent-rewrites handled per file (schema-strategy-persistence post-Phase-4a, form-strategy-complexity-cost post-Phase-4b, deriv-sector-condition post-split, etc.). `#disc-separability-pattern` body-wide "six → seven" sync (`96ef267`) after agent surfaced the count had been updated in description but not in body protected zones.
+
+**New SOPs.** Pre-spike commit hygiene for canon-modifying agents codified in `doc/audit-routing-instructions.md` §8 (`7e4c649`): commit prior canon-touching work first so the spike's diff is isolated. Slug-refs-stay-at-prose-layer codified in `FORMAT.md` §Math Formatting (`8df2729`): no `#slug-name` inside math-mode `\text{}`/`\boxed{}`/`\underbrace{}_{}`/`\tag{}` constructs.
+
+**Spike trails.** 6 spikes this session: schema-strategy-persistence-strengthening (Outcome A+B), form-strategy-complexity-cost-strengthening (Outcome A), constructive-impossibility-posture synthesis (Form (a)+(b.1) landed), 4th-identifiability-floor-instance (Fano+GS both C), plus the two verification substrates at `msc/verify-*-cluster-2026-05-20.md`. All discharged; per spike-routing §3, the four substantive spikes move to `.integrated/`.
+
+**State at end-of-session.** 4 src/ trees lint-clean (0 issues each); 18 segments at `claims-verified`, 23 at `deps-verified`, 103 at `draft`, 3 `unknown`; OUTLINEs current; FORMAT/audit-routing-instructions current. Pre-print math gate cleared on Phase 4a+4b; remaining residuals (D.1 Phase 5 blocked on lower-level deps; strict-form independent-verify items queued in TODO §2026-05-10; full audit-findings fan-out deferred) recorded as open.
 ## 2026-05-19
 
 ### Strategy-DAG composition math landed (A1); compensation-channel uniqueness extracted as a standalone segment (B6)
