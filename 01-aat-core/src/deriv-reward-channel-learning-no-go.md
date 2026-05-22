@@ -5,14 +5,11 @@ status: conditional
 depends:
   - form-objective-functional
   - def-value-object
-  - def-satisfaction-gap
   - def-strategy-dag
   - der-orient-cascade
   - der-directed-separation
-  - deriv-self-actuation-grounding
-  - disc-identifiability-floor
   - der-loop-interventional-access
-  - disc-constructive-impossibility-posture
+  - deriv-self-actuation-grounding
 stage: draft
 ---
 
