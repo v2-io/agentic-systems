@@ -338,7 +338,105 @@ Ordered by expected leverage:
 
 ---
 
-## §8 — What is NOT in this file (intentionally)
+## §9 — Spike cycle resolution (2026-05-21)
+
+*The 7 spikes recommended in §7 ran in parallel as a single batch. All seven returned lint-clean (2089 lines total in `spikes/spike-*.md`). This section captures the cycle's resolution — what landed, where the spikes converged on the same structural picture, where they diverged, and what is now segment-ready vs. still spike-grade. The spike files themselves carry the worked detail; this synthesis is the navigator.*
+
+### The headline result
+
+**The wrapper-level persistence inequality** — derived theorem-grade in spike 2 (OTP supervision), used by spike 1 (runtime-agent), modified by spike 3 (actuated $\rho$):
+
+$$\mathcal T_\text{wrapper} \;:=\; \frac{1}{T_\text{restart}} \;\gt\; \frac{\rho_\text{child} \cdot \lVert\delta_\text{failure}\rVert}{\lVert\delta_\text{critical}^\text{wrapper}\rVert}$$
+
+with `max_restarts/max_seconds` as its empirical-estimator corollary. This is the Nash-style specialization of `#result-persistence-condition` to the wrapping construction at the wrapper layer — established machinery applied to an AAT-internal setting to yield a new theorem-grade result. It directly answers Joseph's named question *"what is $\rho$ for a microservice?"* — $\rho_\text{child}$ is the child failure rate; the wrapper-level inequality is the bridge from AAT persistence to running-service availability. The restart-intensity envelope is the operational form: when the empirical failure count exceeds the design point in the window, the wrapper's $W_1$ commitment can no longer be honestly maintained and escalation is the structurally correct response.
+
+### Convergence — where spikes arrived at the same picture independently
+
+Four pieces of machinery surfaced across multiple spikes from different starting points:
+
+1. **The wrapper-level persistence inequality** (spikes 1, 2, 3). Spike 2 derives it; spike 1 uses it for the runtime service; spike 3 modifies the RHS via the actuated $\rho_\text{effective} \le \rho_\text{offered}$ extension. The three spikes use consistent notation and depend cleanly on each other.
+2. **Matrix-Loewner weakest-channel bottleneck** (spikes 1, 4, 5). Spike 5 is the canonical home for the developer-channel decomposition (sense/explore/probe sibling); spike 1 carries the runtime-channel sibling (sense/decide/actuate); spike 4 uses the per-channel form to refine the unmaintainability bifurcation from scalar to channel-resolved.
+3. **W₁/W₂ regime hierarchy as type-of-bound, not heap-disjointness** (spikes 2, 6, 7). Spike 7 resolved the structural question (no W₁.5 needed; ETS handled as Class-A component); spike 6 used this to land macro-hygiene as language-layer W₁ wrapping; spike 2 adopted the reading throughout its OTP treatment. The resolution is *carried forward* — future segment work inherits it.
+4. **Crash-early as structural commitment, not philosophical preference** (spikes 1, 2, 3). Spike 2 §7 carries the *derivation* — absorb-and-recover-inside-the-component requires goal-conditioned recovery code, which structurally breaks the directed-separation commitment (C3) and breaks the $W_1$ guarantee at the component level. Spikes 1 and 3 cite this rather than re-deriving.
+
+### Genuinely new theoretical structure surfaced
+
+Two results meet Joseph's *math-novelty-recognition* discipline as new theorem-grade or hypothesis-strengthened content, not "just synthesis":
+
+- **Spike 2 §3 — wrapper-level persistence inequality.** Stated above. Theorem-grade under named hypotheses ($T_\text{restart}$, $\rho_\text{child}$, $\delta_\text{failure}$, $\delta_\text{critical}^\text{wrapper}$ named explicitly), with `max_restarts/max_seconds` as the empirical-estimator corollary. Landing target: demonstration-appendix segment under `#der-class-coercion-via-wrapping`, or a new theorem in the segment body.
+- **Spike 3 — actuated $\rho$-regulation.** Action-space partition $\mathcal A = \mathcal A_\text{adaptive} \sqcup \mathcal A_\text{admission}$ with modulation function $m: \mathcal A_\text{admission} \to [0, 1]$. Cost reduces to existing sat-gap diagnostic at the "Capability limit" cell — *no new diagnostic quantity needed*. The Honesty Call disciplined a sign-condition: admission-control net-helps persistence on channel $k$ iff $\rho^{(k)}/(\nu^{(k)} \cdot \lVert\delta_\text{critical}\rVert) \gt \eta^{(k)\ast}$ — *admission-control is NOT universally net-positive*, which is itself an AAT-internal result. Landing target: new AAT segment `#disc-rho-actuation` + companion `#deriv-actuated-disturbance-rate`.
+
+Spike 4's bifurcation derivation moves the unmaintainability hypothesis from gesture-form to *conditional* tier under named monotonicities; spike 1's adaptive-dispatch/fixed-strategy scope cut sharpens what the runtime-agent chapter is even about. These are strengthenings, not new theorems.
+
+### Where spikes diverged or refused the brief
+
+Two spikes pushed back against the original framing in TST-IDEAS, in ways the synthesis should preserve:
+
+- **Spike 5 refused the W₁/W₂ analogy for probe disposability.** TST-IDEAS §A4 flagged this as needing care; the spike worked through three structural disanalogies (different separated quantities — information vs. artifacts; different temporal scope — per-cycle vs. cross-cycle; different leakage measure — KL-divergence vs. time-comparison) and recognized that disposability is the developer-side analog of `#scope-agent-identity`'s singular-trajectory commitment, *not* of the wrapping leakage discipline. The spike applied *integration-is-replacement* to the analogy itself — deletes the W₁/W₂ vocabulary rather than carrying it as a metaphor. The candidate segment should follow.
+- **Spike 6's framing question dissolved rather than resolved.** Substrate-modification is structurally a class-4 action ($\Omega$-modifying), but its distinguishing content is that it lowers *cost-to-express* on a region of the agent's effective action space $\mathcal A^\text{eff}_t$. The proposed landing is a *sub-classification within class 4* (4a environment modification proper / 4b observation-infrastructure investments / 4c substrate-modifying actions), not a peer fifth class. Macro-hygiene maps onto W₁ wrapping at the language layer as a *structural analogy, not a derivation*.
+
+These pushbacks are themselves load-bearing — they prevent the synthesis from locking in framings the spike work earned the right to reject.
+
+### Honesty calls preserved across the cycle
+
+Each spike named honesty calls in its body. Surfacing them here so they don't get lost when the work lands:
+
+- **Generative-citation risk** for $\alpha \approx 0.31$ tech-debt-contagion (spike 4): the "2024 research with 29 developers" cited in Pragmatic analysis 004 has no primary source. Flagged as Working-Notes-only landing; not load-bearing for the bifurcation derivation. Track down primary source or downgrade.
+- **Ebbinghaus $\tau \approx 20$ days transfer** to code-comprehension is plausible-but-unvalidated for code specifically (spike 4). $\tau$ treated as free positive constant; the 20-day value is decorative, not load-bearing.
+- **Vanilla GenServers are closer to Tier-1 reflex** than Tier-3 agent (spike 1). The runtime-agent chapter applies only to *adaptive-dispatch* services (rate limiters that adjust throttling, circuit breakers that change state, autoscalers, sidecars routing on observed health); fixed-strategy services fall under AAT Section I only. The chapter is scoped sharply, not papered over.
+- **Most current AI-augmented workflows are W₂ as built** (spike 2 Addition 5); $W_1$ is accessible under three named structural commitments (goal-blind belief-side queries, typed completion with parse-rejection, no system-prompt contamination). The classification is structural; the engineering recommendation is domain-specific.
+- **Admission-control is NOT universally net-positive** (spike 3 §4). The sign-condition disciplines the naive queueing-theory reading and is itself an AAT-internal result.
+- **G1 maintainability is NOT automatic** (spike 4 §6). Even with saturated knowledge, the persistence inequality requires $\nu^\text{(read)}$ well-matched to $\rho$. A burning-hot region under a slow developer fails persistence from above, just as a forgotten G2 region fails it from the side. The bifurcation gives the qualitative shape of the maintainable set; specific-region maintainability depends on parameter match.
+- **$\mathcal T_\text{obs}$ is out-of-chronicle** (spike 5 §4.3). The chronicle gives evidence of *what* developers committed, not *how long they spent reading*. Reconstructing $\nu_\text{obs}$ requires instrumentation the chronicle alone does not provide; this is consistent with P5's conditional-maximality, not evidence against it.
+- **Bursty failure distributions** require a windowed form of the wrapper-persistence inequality (spike 2 §3). The pointwise form is what the spike derives; tightening to the windowed form (which is what `max_restarts/max_seconds` operationally encodes) is straightforward but not yet executed. Candidate strengthening pass once the stationary form lands.
+
+### Cross-spike seams — what segment-landing will reconcile
+
+The spikes name their dependencies on each other explicitly. The synthesis pass after landing has to reconcile:
+
+- **Spike 1's `#der-runtime-persistence-condition` cites spike 2's theorem.** Clean seam — the runtime-agent segment uses the wrapper-level inequality as a prerequisite rather than re-deriving it. Both spikes agree on notation.
+- **Spike 1's runtime persistence interacts with spike 3's actuated $\rho$.** The runtime service's $\rho_\text{env}$ partition (spike 1 §4) includes channels where admission-control is feasible (`$\rho_\text{traffic}$` via load-shedding) and channels where it is not (`$\rho_\text{infrastructure}$` is exogenous). Spike 3 §3.3 names this agent-internal-vs-boundary feasibility gap as the cleanest interface. Segment-landing will need to spell out the per-channel admission-control capability.
+- **Spike 4's bifurcation consumes spike 5's $\mathcal T_\text{dev}$ decomposition.** Spike 5 lifts $\mathcal T_\text{dev}$ to per-channel form; spike 4 should adopt the per-channel reading (so the bifurcation acts on the matrix-Loewner weakest channel, not the scalar). Spike 4 §8 names this; spike 5 §6.2 confirms.
+- **Spike 2's Addition 6 (Conway's Law) depends on spike 5's developer-tempo work.** Hypothesis-grade in spike 2 pending spike 5 segment-landing; the per-developer $\Sigma_t$-over-architecture machinery is what spike 5 provides.
+- **Spike 6's macro-hygiene analogy depends on spike 2's $W_1$ refinement.** Spike 6 §5.2 maps macro-hygiene onto `#der-class-coercion-via-wrapping`; spike 2 carries the refined wrapping construction the analogy lands against.
+- **All wrapping-related spikes adopt spike 7's resolution.** *The W axis is type-of-bound (structural-by-type-signature vs behavioral-by-compliance), not heap-disjointness vs shared-region.* Spikes 2, 6 reference this explicitly; spike 1 inherits it through the wrapping construction.
+
+### What is now segment-ready
+
+Five candidate segments are tight enough that segment-grade drafting is the next move (after Joseph's go-ahead on placement):
+
+1. **`#der-wrapper-persistence-condition`** (spike 2 §3) — theorem-grade. Place either as appendix segment under `#der-class-coercion-via-wrapping`, or as a new theorem in the segment body. The named theorem statement and argument are in the spike; the worked example showing `max_restarts/max_seconds` as the empirical-estimator form is direct.
+2. **`#def-developer-tempo-channels`** (spike 5) — closes the OUTLINE Ch.2 gap. The principled axis (Pearl-level × commitment-status) gives a structural decomposition; the three failure modes (F-obs / F-explore / F-probe starvation) make it testable; the chronicle-derivability table is honest about what's reconstructible.
+3. **`#scope-running-software-agent`** and three sibling segments (spike 1) — the runtime-agent chapter slot. Substate mapping mirrors `#scope-developer-agent` term-by-term; the persistence-condition specialization cites spike 2; the tempo decomposition is the runtime sibling of spike 5. Need Joseph's call on whether this is a new Ch.5 or a chapter extension to Ch.4.
+4. **`#hyp-software-unmaintainability-bifurcation`** (spike 4) — closes OUTLINE Ch.4 gap at *conditional* tier. The 2-state $(K, W)$ model under named monotonicities yields the bifurcation; the boxed sufficient condition $(\star)$ is the formal landing.
+5. **`#disc-rho-actuation`** + **`#deriv-actuated-disturbance-rate`** (spike 3) — new AAT segments. Action-space partition + modulation function + sat-gap cost attribution + sign-condition. Needs the composite-agent sat-gap aggregation rule (§3.3 of the spike names it as the cleanest seam to runtime-agent spike).
+
+### Still spike-grade — needs another cycle
+
+Three findings need follow-on work before landing:
+
+- **Conway's Law as GUC-class bound** (spike 2 Addition 6). Hypothesis-grade pending spike 5 segment-landing; per-developer $\Sigma_t$-over-architecture machinery is the gap.
+- **Substrate-modifying actions as class 4c** (spike 6). Sub-classification within class 4, plus macro-hygiene as W₁ wrapping at language layer as a *structural analogy not derivation*. The bridge to `03-llm-core/` is the natural follow-on placement.
+- **Composite-agent sat-gap aggregation rule under admission-control** (spike 3 §3.3). Named as required for segment landing; cleanest plausible derivation runs through the wrapping-construction's $W_1$/$W_2$ regime. Either spike 1 or spike 3 segment-landing can close this; if neither, a third pass is needed.
+
+### Recommended OUTLINE updates following the cycle
+
+Strong-confidence candidates for `02-tst-core/OUTLINE.md` now that the spikes have resolved:
+
+- **Ch.2 tempo-decomposition gap row** (already named `#def-developer-tempo-channels` in the previous OUTLINE edit) → mark status as `draft` (or `deps-verified` depending on Joseph's tier convention) since the spike resolved it to segment-ready.
+- **Ch.4 unmaintainability gap row** (already named `#hyp-software-unmaintainability-bifurcation` in the previous OUTLINE edit) → same: mark status reflecting spike resolution.
+- **New chapter or chapter-section** for runtime-agent — Joseph's call. The four candidate segments from spike 1 deserve named rows: `#scope-running-software-agent`, `#def-runtime-observation-channels`, `#der-runtime-persistence-condition`, `#der-runtime-tempo-decomposition`.
+
+For `01-aat-core/OUTLINE.md`:
+
+- **New theorem placement** for `#der-wrapper-persistence-condition` — Joseph's call on whether this is a demonstration-appendix segment under `#der-class-coercion-via-wrapping` or a named theorem in that segment's body. The spike's recommendation is demonstration-appendix.
+- **New segment placement** for `#disc-rho-actuation` + `#deriv-actuated-disturbance-rate` — spike 3's recommendation is to land after `#result-per-dimension-persistence` in the persistence-and-limits chapter.
+
+These edits are not made in this cycle — they wait for Joseph's structural choices on placement.
+
+---
+
+## §10 — What is NOT in this file (intentionally)
 
 The mining corpus has substantial volume that did not survive translation into AAT and was honestly skipped:
 
