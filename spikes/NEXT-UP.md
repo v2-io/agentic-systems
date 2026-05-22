@@ -32,10 +32,59 @@ sequence and where the dependencies are.*
 - ✅ **Strategic-composition-class-3 spike** — math complete, decisions
   resolved, solidified plan in place
   ([`strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md`](strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md)).
-  Spike bodies not yet committed (Phase 0 below).
+  Spike body committed at `47ffe76` 2026-05-21.
 - ✅ **Instance-6 sibling spike** — derived no-go for regime-
   identification-from-marginals; verdict is *scope-extension of
-  Instance 3*, not a new instance (`spike-identifiability-floor-instance-6-2026-05-21.md`).
+  Instance 3*, not a new instance. Spike archived to
+  `spikes/.integrated/spike-identifiability-floor-instance-6-2026-05-21.md`
+  at Phase 3c landing (commit `5760694`).
+- ✅ **Track A execution (Phases 0 → 5 + A4) — landed 2026-05-21/22.**
+  Eight commits across two days:
+  - `3e81a33` Phase 0 — executor handoff in NEXT-UP §5 + INDEX entry.
+  - `0884e12` Phase 1 — GUC-rename residue fix in `#impl-strategic-composition`.
+  - `a492739` Phase 2b — new `#disc-dynamic-regime-axis` discussion-grade
+    meta-segment with 6 BG1 prior-art citations + 3 AAT-specific
+    contributions (§C.1 / §C.3 / §H.5).
+  - `5760694` Phase 3c — `#disc-identifiability-floor` Instance 3
+    broadened (coupling-topology bit + escape (e) + new strengthened
+    consequence on $\alpha'/\beta'$); new appendix
+    `#deriv-regime-marginal-indistinguishability` carrying §3.3 witness
+    math; sibling BG2 spike archived to `.integrated/`.
+  - `6a21669` Phase 4 — truthful-fix cascade across 7 segments
+    (`#deriv-strategic-composition`, `#der-directed-separation`,
+    `#impl-strategic-composition`, `#disc-separability-pattern` 8th
+    ladder, `#scope-composite-agent` Working Notes resolution,
+    `#disc-identifiability-floor` 7→8 ladder ref,
+    `#der-loop-interventional-access` Composite-layer broadening).
+    Withdraws the Class 2 composite claim; axis-decomposed
+    composite-class-inheritance table lands in `#der-directed-separation`.
+  - `085c246` A4 — BG2 second-pass Undermind report at
+    `ref/Unidentifiability_and_rate_class_prior_art.md` lands with
+    verification-deferred footnotes + queued verification spike across
+    three segments.
+  - `05f2654` + `ffda862` + `3e67a5e` Phase 5 + Track E surface-back —
+    8-segment cross-segment ripple; Row 14 catalog rewrite; 6-segment
+    catalog prior-art surface-back into Related Work / Working Notes
+    with `[^cat-2026-05-22]` verification-deferred footnotes (Wonham
+    1968, Witsenhausen 1971, Bar-Shalom-Tse 1974, Baltieri-Buckley 2018,
+    Gat 1992, Simmons 1994, Pappas-Simic 2002, Rungger-Zamani 2015,
+    Buchholz 1994, Janow 2009, Gurvich-Van Mieghem 2015, Bamieh et al.
+    2011, Szathmáry 2015, Hart-Mas-Colell 2003, Milionis et al. 2023,
+    Fox-Shamma 2012, Arcak-Martins 2020, Gadjov-Pavel 2019/2023,
+    Belgioioso-Grammatico 2018).
+  - Phase 6 (meta-segment promotion of `#disc-dynamic-regime-axis`)
+    is GATED on Track D (`#disc-modularity-state-dynamics`) — not in
+    executor's launch scope per (T7) tactical decision.
+- ✅ **Primary-source verification spike queued** across `#disc-identifiability-floor`,
+  `#deriv-regime-marginal-indistinguishability`, `#disc-dynamic-regime-axis`,
+  `#der-directed-separation`, `#der-class-coercion-via-wrapping`,
+  `#form-composition-closure`, `#der-tempo-composition`,
+  `#hyp-symbiogenic-composition`, `#deriv-strategic-composition`. Two
+  footnote classes: `[^bg2-2026-05-21]` (BG2 Undermind raw synthesis,
+  weaker verification support) and `[^cat-2026-05-22]` (Track E catalog,
+  prior Pillar-style search support but executor-unverified). Verification
+  targets in load-bearing order specified in each segment's Working
+  Notes. Spike unscheduled — needs Joseph's go.
 
 ---
 
