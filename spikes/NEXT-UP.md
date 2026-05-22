@@ -117,6 +117,45 @@ sequence and where the dependencies are.*
   prior Pillar-style search support but executor-unverified). Verification
   targets in load-bearing order specified in each segment's Working
   Notes. Spike unscheduled — needs Joseph's go.
+- ✅ **Track CR Phases 3-8 LANDED (2026-05-22).** Eight further commits closing the
+  cluster-reconciliation cycle: `0d64f4d` (Phase 3 R0-loss rung in
+  `#result-certificate-existence` + R0→R0-strict cross-canon rename; Helmholtz
+  (i ⟺ ii) → (ii ⟹ i) sufficiency-only correction caught pre-commit, counter-
+  example $J = \begin{pmatrix}1 & -2 \\ 2 & -1\end{pmatrix}$ landed in body),
+  `4cd8da5` (Phase 4 Interior-facet Helmholtz $S/A$ refinement in
+  `#disc-stability-certificate`; parallel-to-line-84 Discussion paragraph), `52f72e3`
+  (Phase 4b/1 land new sister segment `#deriv-reward-channel-learning-no-go` +
+  OUTLINE placement alongside `#deriv-self-actuation-grounding`), `fcfb7a1`
+  (Phase 4b/2 cross-segment ripple to four segments —
+  `#deriv-self-actuation-grounding` REQUIRED, `#disc-identifiability-floor`
+  REQUIRED, `#disc-constructive-impossibility-posture` RECOMMENDED,
+  `#form-objective-functional` RECOMMENDED — surfacing the three-cluster
+  constructive-impossibility-posture taxonomy: agent-side data-inference /
+  designer-side mechanism-design / agent-side value-functional-grounding),
+  `28f307e` (Phase 5 tertiary cross-refs + cross-layer naming-clarity sentences
+  — Mertikopoulos 2017 + Conley 1978 direct citations to `#disc-dynamic-regime-axis`
+  Related Work; β' linearization-fingerprint paragraph in
+  `#deriv-strategic-composition`; row-14 Helmholtz cross-reference; mutually-
+  citing R-letter naming-clarity sentences across the certificate-ladder and
+  dynamic-regime-axis layers — Phase 6 P6.1/P6.2 folded in here), `38ed5cc`
+  (cycle-close OUTLINE coherence audit caught two self-introduced ordering
+  violations — new segment's `depends:` listed `#disc-identifiability-floor`
+  and `#disc-constructive-impossibility-posture` which are cross-references
+  in Discussion not dependencies per FORMAT.md Gate-1; removed + the unused
+  `def-satisfaction-gap`; ordering violations down from 6 to 4 pre-existing),
+  `8507fad` (Phase 7 PROPOSED.md + PROPOSED-ADVANCED.md updates — Friston 2025
+  RGM as Tier 1 supplier for PRACTICA priority #3 multi-timescale stability
+  promotion; categorical-cybernetics first fit-check as Tier 2 + PROPOSED-
+  ADVANCED Phase 3 #15 long-horizon 3-5-spike sequence; reciprocal Working-Note
+  backlinks in `#sketch-multi-timescale-stability` + `#form-composition-closure`),
+  `bd59106` (Phase 8 archive — both cluster spike directories `git mv`'d to
+  `spikes/.integrated/`; `MANIFEST-2026-05-22.md` written; INDEX.md entry added
+  at top), `1d4aa0a` (CHANGELOG narrative entry close-of-cycle). Track CR cycle
+  is **complete**. The integration-reconciliation spike
+  (`spikes/spike-integration-reconciliation-2026-05-22/`) and the Cohen-2022
+  strengthening spike (`spikes/spike-cohen-2022-strengthening-2026-05-22/`) are
+  deliberately retained in `spikes/` as active wrappers per the MANIFEST's
+  "Deliberately NOT archived" section; their own archival is a later disposition.
 
 ---
 
@@ -634,6 +673,65 @@ The second executor (Claude Opus 4.7 1M) executed CR Phases 0-2 in one session 2
 4. `git log --oneline --since=2026-05-22` — current commit cursor.
 5. `spikes/spike-enrichment-cluster1-2026-05-21/02-r0-loss-derivation.md` — the math for Phase 3 (the R0-loss derivation).
 6. Continue from CR Phase 3 per the §5 plan + the §6.2 checkpoint cadence.
+
+> [!important]
+> **§6.7 above is the pre-Phase-3 handoff state and is SUPERSEDED by §6.8 below as of cycle-close 2026-05-22.** §6.7's "Next un-completed phase: CR Phase 3" pointer and "Phases remaining ~5 cycles" estimate are *historical artifacts* of the moment the second executor handed off to the third. The third executor (Claude Opus 4.7 1M) executed Phases 3-8 and closed the cycle. Item 5 of §6.7's first-read order points at `spikes/spike-enrichment-cluster1-2026-05-21/02-r0-loss-derivation.md` which has since been `git mv`'d to `spikes/.integrated/spike-enrichment-cluster1-2026-05-21/02-r0-loss-derivation.md` per Phase 8. §6.7 is retained as the cycle's mid-execution handoff trail; **read §6.8 below for the cycle-close state** and Track B handoff.
+
+### 6.8 Cycle-close state for hand-off (2026-05-22, third-executor cycle completion)
+
+Joseph 2026-05-22 confirmed Track CR cycle entry by the third executor (Claude Opus 4.7 1M), with explicit "commit and proceed as you see fit" authorization mid-cycle. Track CR Phases 3-8 executed and committed across nine substantive commits (plus the CHANGELOG narrative close); the cycle is **complete**. **Next un-completed cycle: Track B dispatch** ( `spikes/implementation-impossibility-meta-segment-plan.md` ).
+
+**Phase status (final):**
+
+| Phase | Status | Commit(s) |
+|---|---|---|
+| CR Phase 0 | ✅ Landed | `6f81bde` (second-executor) |
+| Cohen-2022 strengthening | ✅ Landed (succeed-beyond-claim) | `2cc6372` (second-executor) |
+| CR Phase 1 | ✅ Landed | `dfb70e8` (second-executor) |
+| CR Phase 2 | ✅ Landed | `0bc3d0f` (second-executor) |
+| §6.7 second-executor handoff | ✅ Recorded | `317484c` |
+| CR Phase 3 (R0-loss rung + rename) | ✅ Landed; Helmholtz (i⟺ii)→(ii⟹i) correction caught pre-commit | `0d64f4d` |
+| CR Phase 4 (Interior-facet refinement) | ✅ Landed | `4cd8da5` |
+| CR Phase 4b (1/2) (new sister segment) | ✅ Landed | `52f72e3` |
+| CR Phase 4b (2/2) (cross-segment ripple) | ✅ Landed | `fcfb7a1` |
+| CR Phase 5 (tertiary cross-refs + cross-layer naming) | ✅ Landed (Phase 6 folded in) | `28f307e` |
+| Cycle-close OUTLINE coherence audit + depends fix | ✅ Audit-surfaced + fixed | `38ed5cc` |
+| CR Phase 7 (PROPOSED + PROPOSED-ADVANCED updates) | ✅ Landed | `8507fad` |
+| CR Phase 8 (spike archive + MANIFEST + INDEX) | ✅ Landed | `bd59106` |
+| CHANGELOG narrative close | ✅ Landed | `1d4aa0a` |
+
+**Headline landings (one-line summary; full narrative in CHANGELOG 2026-05-22 Track CR entry):**
+
+- `#result-certificate-existence` certificate-strength ladder extended from R0/R1/R2 to four rungs R0-loss ⟸ R0-strict ⟸ R1 ⟸ R2 (Letcher 2019 Helmholtz pure-case + Conley 1978 mixed-case; non-antisymmetric case-(iii) counterexample in body).
+- `#disc-stability-certificate` Interior facet refined with Helmholtz $S_\mathcal M$-split; four-facet structure stays four.
+- New canon segment `#deriv-reward-channel-learning-no-go` lands as sister to `#deriv-self-actuation-grounding` carrying the Cohen-2022 strengthening — conditional-derived under (R1)-(R5); floor at *exact* via CHT-at-reward-channel.
+- **Three-cluster constructive-impossibility-posture taxonomy** surfaced: agent-side data-inference (`#disc-identifiability-floor`) / designer-side mechanism-design (`#disc-implementation-impossibility`, **queued — Track B**) / agent-side value-functional-grounding (Result G′ + the new segment).
+- Cross-canon R0→R0-strict rename (layer-discriminated; dynamic-regime axis R0 stays). Cross-segment ripple to 4 segments per the strengthening verdict §4. Mertikopoulos 2017 + Conley 1978 direct citations to `#disc-dynamic-regime-axis`. PROPOSED Tier 1 entry for Friston 2025 RGM; PROPOSED Tier 2 + PROPOSED-ADVANCED Phase 3 #15 for categorical cybernetics.
+
+**Next executor's first-read order for Track B dispatch:**
+
+1. `spikes/NEXT-UP.md` §0 + §2 (Track B per-track summary) + §3 (sequence, step 9) + §6.1 (T9, T10 — Cohen-2022 disposition) + §6.8 (this section) — current state.
+2. `spikes/implementation-impossibility-meta-segment-plan.md` — Track B's executable plan.
+3. `01-aat-core/src/deriv-reward-channel-learning-no-go.md` — the new sister segment (Track B's meta-segment Discussion will reference this as the agent-side value-functional-grounding cluster's second instance + name the three-cluster taxonomy).
+4. `01-aat-core/src/disc-constructive-impossibility-posture.md` Current Instances catalog table (rows F and G surfaced this cycle; Track B's GS/MS/Arrow instances will land alongside them).
+5. `01-aat-core/src/disc-identifiability-floor.md` §"Adjacent Floors (Open Research Directions)" — the existing "Mechanism-Design Impossibility (candidate 4th instance)" entry positions Track B's three-instance route as the disposition-resolved successor to that flag.
+6. `CHANGELOG.md` 2026-05-22 Track CR entry — narrative on the three-cluster taxonomy + the cycle's methodology lessons (pre-commit pair-review on substantive landings; FORMAT Gate-1 audit at cycle-close).
+7. `git log --oneline --since=2026-05-22` — current commit cursor.
+
+**Held items / open decisions for the next executor:**
+
+- **Track B scope is fixed at three instances** (GS / MS / Arrow) per `(T9)` + the Cohen-2022 strengthening verdict §2. Track B's meta-segment Discussion gains a "Relationship to other meta-patterns" section naming the three-cluster constructive-impossibility-posture taxonomy (per (T10)); Skalse-Howe-Krasheninnikov-Krueger 2022 *Defining and characterizing reward hacking* is flagged in `#deriv-reward-channel-learning-no-go` Working Notes as a candidate *fifth* Track B charter instance — the next executor may consider whether to expand to four after authoring the three.
+- **The new sister segment's open edges** (per `spike-cohen-2022-strengthening-2026-05-22/99-verdict.md` §9) are the gating items for `#deriv-reward-channel-learning-no-go` to advance past `draft` stage — not Track B's responsibility, but track-aware so the Track B meta-segment's cross-references don't depend on un-advanced segments.
+- **Two PROPOSED-registered items queued** (independent of Track B): Friston 2025 RGM substantive spike (PROPOSED.md Tier 1, supplier for PRACTICA priority #3 `#sketch-multi-timescale-stability` promotion); categorical-cybernetics first fit-check (PROPOSED.md Tier 2, first of a 3-5-spike sequence under PROPOSED-ADVANCED Phase 3 #15).
+- **Pre-existing OUTLINE debt surfaced by the cycle-close audit** (not in Track CR scope, flagged for a dedicated cleanup cycle): 4 ordering violations (`impl-persistence-and-limits` cross-section; `impl-strategy-structure`, `impl-cooperative-adversarial`, `disc-identifiability-floor` intra-section); 1 missing dependency (`impl-orient-cascade` → `scope-observation-ambiguity-modulation`); 3 intentional missing-stage outline entries with no file in `src/` (`disc-modularity-state-dynamics` per CLAUDE.md §7; `disc-strategic-self-coupling`; `worked-example-cam`).
+- **NEXT-UP lint debt** (queued per §6.4): the file carries ~110 hard-wrap warnings + a handful of bare-Greek-in-prose. Plus the additions in this §6.8 follow the file's de-facto one-sentence-per-paragraph convention. The dewrap pass is still a separate cleanup cycle, not Track B work.
+
+**Active wrappers retained in `spikes/`** (deliberately not archived per the Phase-8 MANIFEST § "Deliberately NOT archived"):
+
+- `spikes/spike-integration-reconciliation-2026-05-22/` — the cycle's verdict + executable plan.
+- `spikes/spike-cohen-2022-strengthening-2026-05-22/` — the strengthening trail for `#deriv-reward-channel-learning-no-go` (open edges in its §9 gate the segment's `draft` → past-draft promotion).
+
+`spikes/INDEX.md` top entry (the 2026-05-22 Track CR entry) and `spikes/.integrated/MANIFEST-2026-05-22.md` together carry the durable cycle-close trail; `CHANGELOG.md` carries the narrative. A new agent who reads §6.8 + the CHANGELOG + the Track B plan has everything needed to dispatch Track B.
 
 ---
 
