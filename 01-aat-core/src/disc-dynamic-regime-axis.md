@@ -1,0 +1,197 @@
+---
+slug: disc-dynamic-regime-axis
+type: discussion
+status: discussion-grade
+depends:
+  - scope-composite-agent
+  - deriv-strategic-composition
+  - form-composition-closure
+  - result-sector-persistence-template
+  - hyp-symbiogenic-composition
+  - disc-separability-pattern
+stage: draft
+---
+
+# Discussion: The Dynamic-Regime Axis — Contraction / Equilibrium / Cyclic-Distributional / Mean-Field
+
+AAT composites differ on at least three independent structural axes: their *architectural class* (Class 1 Separated / Class 2 Partial / Class 3 Coupled, per `#der-directed-separation`) — about processing topology; their *dynamic regime* (this segment) — about the structural type of the joint-dynamics fixed point and the Lyapunov certificate available; and their *macro-state type* (state-variable / fixed-point object / distributional) — about what kind of object the composite's $G_t^c$ is. This segment names the dynamic-regime axis as a first-class structural classifier, in vocabulary the framework already runs implicitly across `#deriv-strategic-composition`'s $\alpha'/\beta'$ partition, `#form-composition-closure`'s contraction presupposition, `#disc-separability-pattern`'s Contraction ladder, `#scope-composite-agent`'s scope-route disjunction, and `#impl-strategic-composition`'s "contraction-to-equilibrium hand-off" framing.
+
+**The four-tier ladder is recognized prior art.** This is integration, not invention. The partition AAT names — contraction-regime / equilibrium-regime / cyclic-distributional-regime / mean-field-equilibrium-regime — appears (under different vocabulary, with isomorphic structural content) across at least five neighboring literatures. Candogan, Menache, Ozdaglar & Parrilo's 2011 Hodge-style decomposition of finite games into potential + harmonic + nonstrategic components supplies a coordinate-free organizing structure for the equilibrium-regime / cyclic-regime boundary cleaner than any tier-wise enumeration; Letcher, Balduzzi et al.'s 2019 *Differentiable Game Mechanics* lifts the same potential/Hamiltonian decomposition to the dynamics side; Sandholm's 2010 *Population Games and Evolutionary Dynamics* organizes the potential/stable/cyclic taxonomy at the population level; Hofbauer & Sigmund's 1998 *Evolutionary Games and Population Dynamics* names the phase-portrait classification (equilibrium vs cycle vs heteroclinic) directly; Omidshafiei et al.'s 2019 $\alpha$-Rank construction uses cyclic-dynamics-as-meaning as a solution concept; and Papadimitriou-Piliouras's 2018 *From Nash Equilibria to Chain Recurrent Sets* establishes the chain-recurrent set as the natural object when dynamics fail to converge. AAT's contribution is *not* the classification itself; it is (a) the consolidation of the partition into AAT-internal vocabulary that travels with `#scope-composite-agent`'s scope-route disjunction and `#disc-separability-pattern`'s separable-core / structured-repair / general-open shape, (b) three derivable structural identities that name what the axis carries within an integrated agent theory, and (c) cross-axis observations about how the axis composes with architectural class and macro-state type.
+
+This segment is the *positive-half companion* to the broadened `#disc-identifiability-floor` Instance 3, which names the negative half — regime identification from component marginals is structurally impossible without composite-level coupling-topology observation. The two together mark AAT's scope on the axis at both extremes, parallel to how `#disc-separability-pattern` and `#disc-identifiability-floor` jointly mark scope on the identification axis.
+
+## The pattern
+
+Each composite agent satisfying `#scope-composite-agent` admits a dynamic regime — a structural property of its joint best-response dynamics that is *determined by the game structure* (the sub-agent objectives, the strategy spaces, the payoff curvatures) rather than by any particular trajectory the dynamics realize. The regime determines the strongest Lyapunov-class certificate the dynamics admit relative to their fixed-point set, and that certificate determines the operational machinery available — exponential convergence near a unique attractor, exponential convergence near an equilibrium set, polynomial convergence in distribution, or measure-space dynamics at the population-scale limit.
+
+The classification is *not behavioral* (it does not depend on observing trajectories) and it is *not parametric* (it does not depend on a continuous tuning parameter). It is structural and discrete, the same shape `#der-directed-separation`'s architectural classification has — a partition determined by the game structure, with sub-tier classifications within each regime.
+
+## The four tiers
+
+Following the order of progressively weakening Lyapunov certificate:
+
+| Tier | Fixed-point structure | Lyapunov certificate | Macro-state type | Convergence rate | Scope route entry |
+|---|---|---|---|---|---|
+| **R0 Contraction** | Unique attracting $X^\ast \in \mathcal X^c$ | Joint Lyapunov $V$, global or basin-restricted | State-variable $X^\ast$ | Exponential at $\alpha_{\text{joint}}$ | C-i / C-ii / C-iii |
+| **R1 Equilibrium ($\alpha'$)** | Fixed-point set $\mathcal E \subset \mathcal X^c$, locally attracting | Potential $\Phi$ (Monderer-Shapley) or weighted-norm (Rosen) | Fixed-point object $\mathcal E$ | Exponential near $\mathcal E$ at $\alpha_{\text{joint}}^{(j)}$ | C-iv + potential/monotone |
+| **R2 Cyclic-distributional ($\beta'$)** | No pure-strategy fixed point, or saddle-only | None on $\mathcal X^c$; doubling-trick CCE on $\Delta(\mathcal X^c)$ | Distributional object $\mu \in \Delta(\mathcal X^c)$ | Polynomial $O(1/\sqrt T)$ | C-iv without potential/monotone |
+| **R3 Mean-field equilibrium** | Distributional fixed point in measure space | MFG-specific (Lasry-Lions monotonicity) | Distribution-on-population $\rho \in \mathcal P(\mathcal A)$ | MFG-specific, often exponential | Population-scope gap |
+
+Each tier inherits the tier-internal classification of its closest existing AAT machinery — R0's Tier 1 / Tier 2 / Tier 3 sub-classification from `#disc-separability-pattern`'s Contraction ladder; R1's potential / monotone / general sub-tier per `#deriv-strategic-composition`'s sub-scope $\alpha'$; R2's regret-bound sub-classification per Hart-Mas-Colell 2000; R3's MFG-uniqueness sub-classification per Lasry-Lions 2007.
+
+### R0 — Contraction-regime
+
+The joint dynamics admit a unique attracting fixed point $X^\ast \in \mathcal X^c$ and a Lyapunov function $V: \mathcal X^c \to \mathbb R_{\geq 0}$ with $V(X^\ast) = 0$, $V(X) \gt 0$ for $X \neq X^\ast$, such that
+
+$$\frac{d}{dt}\, V(X_t^c - X^\ast) \;\leq\; -\alpha_{\text{joint}} \cdot d(X_t^c,\, X^\ast)^2 \qquad \forall\, X_t^c \in \mathcal B(X^\ast)$$
+
+for some basin $\mathcal B(X^\ast)$ and contraction rate $\alpha_{\text{joint}} \gt 0$. Macro-state $X^\ast \in \mathcal X^c$ is a state-variable. Composites satisfying scope routes C-i (shared composite objective), C-ii (hierarchical derivation), or C-iii (mutual-benefit alignment) under matched-Tier sub-agents per `#deriv-critical-mass-composition` land here. The classical AAT machinery applies: `#result-sector-persistence-template`, `#form-composition-closure` bridge lemma, `#der-team-persistence`, `#der-tempo-composition`.
+
+### R1 — Equilibrium-regime ($\alpha'$)
+
+The joint dynamics admit a fixed-point set $\mathcal E = \{X^\ast_j\}_{j \in J}$ with $\lvert J \rvert \geq 1$ where each $X^\ast_j$ is a Nash equilibrium. Lyapunov-on-deviation holds locally near each equilibrium under either potential-game structure (Monderer-Shapley 1996) or monotone-game structure (Rosen 1965 diagonal strict concavity). The macro-state is a fixed-point object — either a single Nash $X^\ast$ if unique, or the equilibrium set if multiple. Composites satisfying scope route C-iv with potential/monotone structure land here; `#deriv-strategic-composition`'s Cournot worked example is the canonical instantiation. The sector-persistence template transfers with the joint potential's curvature (potential case) or the joint Jacobian's symmetric part (monotone case) supplying $\alpha_{\text{joint}}^{(j)}$ at each equilibrium.
+
+### R2 — Cyclic-distributional-regime ($\beta'$)
+
+The joint dynamics admit no fixed point in pure-strategy space, or fixed points that are not local attractors (saddle-Nash in zero-sum games where best-response orbits without approaching). No-regret dynamics drive the empirical joint distribution to the coarse correlated equilibrium set (Hart-Mas-Colell 2000):
+
+$$\frac{1}{T} \sum_{t=1}^T \mathbb{1}\{\pi^c_t \in \mathrm{CCE}\} \;\to\; 1 \qquad \text{at rate } O(1/\sqrt T).$$
+
+The macro-state is a distributional object — a measure $\mu \in \Delta(\mathcal X^c)$ supported on the CCE set. Composites satisfying scope route C-iv without potential or monotone structure land here. AAT in R2 predicts only set-convergence of empirical play to CCE; it cannot predict short-run trajectory, per-sub-agent mismatch convergence, or equilibrium selection. This is the framework's honest $\beta'$ scope limit — a regime limit, not an architectural limit, distinct from any architectural-class restriction.
+
+### R3 — Mean-field-equilibrium-regime
+
+For $N \to \infty$, each agent interacts with the *distribution* of other agents' strategies rather than with named others. The macro-state becomes a distributional fixed point in measure space; the dynamics may contract to this fixed point under explicit conditions (Lasry-Lions 2007; Huang-Malhamé-Caines 2006). R3 is distinct from R2: R2's macro-state is a distribution-on-strategies arising as the empirical play of finite-$N$ dynamics with saddle-or-cyclic fixed-point structure on the pure-strategy space; R3's macro-state is a distribution-on-population-strategies arising as the thermodynamic limit with genuine attractor on the measure space. R3 is the only tier where macro-state type genuinely diverges from dynamic regime in a way the framework's existing $\alpha'/\beta'$ does not capture. R3 is the population-scope gap that Section III currently flags.
+
+## AAT-specific derivable content
+
+The axis is not only consolidation. Three derivable contents fall out once it is stated formally; one is the candidate floor instance landing concurrently in `#disc-identifiability-floor` Instance 3 (broadened).
+
+### Identity: macro-state-type and dynamic regime coincide for finite $N$
+
+For finite-$N$ composites (tiers R0/R1/R2), the macro-state type is structurally identified by the dynamic regime:
+
+- $\mathcal R(X^c) = \text{R0} \;\Leftrightarrow\; G^c_\ast \in \mathcal X^c$ (state-variable).
+- $\mathcal R(X^c) = \text{R1} \;\Leftrightarrow\; G^c_\ast = \mathcal E \subset \mathcal X^c$ (fixed-point object).
+- $\mathcal R(X^c) = \text{R2} \;\Leftrightarrow\; G^c_\ast = \mu \in \Delta(\mathcal X^c)$ (distributional object).
+
+Each direction follows from the entry conditions in §"The four tiers." R0 demands unique attracting fixed point in $\mathcal X^c$, which gives a state-variable. R1 demands a fixed-point set under Lyapunov-on-deviation, which is a fixed-point object. R2 demands no pure-strategy fixed point plus no-regret CCE convergence, which gives a distributional object. The converse direction follows from the macro-state type forcing the available Lyapunov machinery: state-variable admits scalar Lyapunov (R0); fixed-point set admits potential or weighted-norm Lyapunov (R1); distributional macro-state admits only doubling-trick CCE convergence (R2).
+
+R3 breaks the identity. Mean-field-equilibrium has distributional macro-state with contracting dynamics, distinct from R2's polynomial CCE convergence. The two axes (dynamic regime, macro-state type) are genuinely distinct and the breaking case is exactly the population-scope frontier the framework currently flags as gap. The identity is the cleanest formal content the axis carries: it is the axis that unifies fixed-point structure, Lyapunov certificate, and macro-state type into a single classification for finite-$N$ composites, with the mean-field limit as the explicit boundary case.
+
+### Transition asymmetry: descent is the default, ascent costs more
+
+Five non-trivial transitions exist between adjacent tiers, with a structural asymmetry between descent (R0 → R1; R1 → R2) and ascent (R1 → R0; R2 → R1). Descent under generic perturbation of the objective structure is the default — alignment is fragile, potential-structure is fragile, both can be destroyed by local perturbations. Ascent requires explicit structural commitment that costs more than the descent did to acquire. Symbiogenic absorption (`#hyp-symbiogenic-composition`) is the structural mechanism for R1 → R0 ascent; mechanism design under explicit potential-game constraints is the mechanism for R2 → R1 ascent — both impose structural commitments that out-of-band negotiation, designer intervention, or institutional shaping must supply.
+
+This is an energy-asymmetry on the dynamic-regime axis — descent is downhill, ascent is uphill, and the asymmetry is structural rather than parametric. Adversaries exploit it as the modularity-state version exploits the modularity descent (see `#disc-adversarial-coupling-pressure` for the modularity analog).
+
+The transition asymmetry is currently argumentation-grade; a fully-derived statement tied to a structural-distance metric on game-rewiring space would upgrade it to derived. That derivation lives in a separate spike under J9 of `spikes/strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md`; this segment names the shape and cites the spike for the durable open question. The mechanism-design impossibility theorems (Gibbard-Satterthwaite 1973–75, Myerson-Satterthwaite 1983, Arrow 1951) are *floors on regime-ascent* under stated designer constraints; the queued `#disc-implementation-impossibility` meta-segment carries the formal treatment of mechanism-design impossibility as designer-side constructive-impossibility.
+
+### Lyapunov-machinery transfer R0 → R1
+
+The persistence template `#result-sector-persistence-template` lifts cleanly across R0 → R1, with the Lyapunov function changing form at each tier:
+
+$$\text{R0: } V_{\text{R0}}(X^c) = \lVert X^c - X^\ast \rVert^2 \qquad \dot V_{\text{R0}} \leq -\alpha_{\text{joint}} V_{\text{R0}}$$
+
+$$\text{R1 potential: } V_{\text{R1},\Phi}(\pi^c) = \Phi(\pi^c) - \Phi(\pi_\ast^c) \qquad \dot V_{\text{R1},\Phi} \geq \alpha_{\text{joint}} \lVert \nabla \Phi \rVert^2$$
+
+$$\text{R1 monotone: } V_{\text{R1},F}(\pi^c) = \tfrac{1}{2}(\pi^c - \pi_\ast^c)^\top P\, (\pi^c - \pi_\ast^c) \qquad \dot V_{\text{R1},F} \leq -\alpha_{\text{joint}} V_{\text{R1},F}$$
+
+with $P$ the weighted-norm matrix solving the Lyapunov equation for the linearized $\nabla F$ at $\pi_\ast^c$. At R2 the Lyapunov form fails — no state-space Lyapunov exists; the dynamics orbit equilibria rather than converge to them. The doubling-trick (Hart-Mas-Colell 2000) gives a regret bound, which translates to empirical-distribution convergence to CCE at $O(1/\sqrt T)$ rate. The transfer makes the framework's existing $\alpha'/\beta'$ partition explicitly a regime-axis property rather than scattered across `#deriv-strategic-composition`.
+
+## What the axis lets the framework consolidate
+
+The axis already lives across ten-plus existing segments under different names. Surfacing it as a formal classifier consolidates these implicit usages into one explicit definition:
+
+| Existing segment / construct | Axis-vocabulary content |
+|---|---|
+| `#scope-composite-agent` routes C-i/ii/iii | Entry conditions for R0 |
+| `#scope-composite-agent` route C-iv | Entry condition for R1 + R2 (potential/monotone → R1; without → R2) |
+| `#form-composition-closure` contraction presupposition | R0 machinery |
+| `#result-sector-persistence-template` | R0 sector constant + persistence |
+| `#deriv-critical-mass-composition` matched-Tier closed form | R0 sub-tier specialization |
+| `#der-team-persistence` cooperative limit | R0 limiting case |
+| `#deriv-strategic-composition` sub-scope $\alpha'$ | R1 with potential/monotone Lyapunov transfer |
+| `#deriv-strategic-composition` sub-scope $\beta'$ | R2 with CCE convergence only |
+| `#impl-strategic-composition` "contraction-to-equilibrium hand-off" | R0 → R1 transition |
+| `#disc-separability-pattern` Contraction ladder (row 4) | R0 sub-tier classification |
+| `#hyp-symbiogenic-composition` | R1 → R0 transition mechanism (structural absorption) |
+| `#der-adversarial-destabilization` | R0 or R1 target under exogenous adversarial parameter; per-target regime distinction |
+
+The consolidation has two operational consequences. First, the cross-segment consistency check becomes mechanical — any segment using regime-axis vocabulary can be cross-referenced against this segment's four-tier specification. Second, the meta-segment cross-references to `#disc-separability-pattern` (Contraction ladder as R0 sub-tier classifier) and to broadened `#disc-identifiability-floor` Instance 3 (regime-identification floor) form the integration backbone of how the axis sits inside the wider meta-pattern landscape.
+
+## Cross-axis interactions
+
+Three structural axes coexist in the framework after the dynamic-regime axis surfaces:
+
+- **Axis A — Architectural class.** Processing topology — Class 1 / 2 / 3 per `#der-directed-separation`. Determined by sub-agent class plus routing structure plus shared-substrate-with-$G^c$-allocation.
+- **Axis B — Dynamic regime.** Joint-dynamics fixed-point structure plus Lyapunov certificate — R0 / R1 / R2 / R3. Determined by objective alignment plus game structure plus population scale.
+- **Axis C — Macro-state type.** Type-theoretic shape of $G_\ast^c$ — state-variable / fixed-point object / distributional. For finite $N$, identified by Axis B per §"Identity"; for $N \to \infty$ (R3) the identity can break.
+
+**Axes A and B are independent.** The full cross-product is meaningful:
+
+| | R0 contraction | R1 equilibrium | R2 cyclic-distributional |
+|---|---|---|---|
+| **Class 1 Separated** | Kalman + LQR team, shared target | Cournot duopoly (distinct hardware) | Rock-paper-scissors players on distinct hardware |
+| **Class 2 Partial** | Biological cortex in coordinated task | Hybrid AI–biological with partial coupling, strategic interaction | Hybrid in cyclic game |
+| **Class 3 Coupled** | Multi-LLM shared substrate, aligned objective (wrapping construction available) | Multi-LLM shared substrate, strategic interaction (wrapping available) | Multi-LLM shared substrate, cyclic interaction |
+
+The cells are operationally distinct. The wrapping construction (`#der-class-coercion-via-wrapping`) operates *only* on Axis A — it converts Class 3 → Class 1 architecturally at the wrapper level, at structural-leakage cost. It does *not* change Axis B regime. A wrapped strategic composite remains in R1; the wrapping recovers Class 1 architecturally but the dynamics still admit equilibrium-shaped failure modes (multi-equilibria, saddle-Nash, equilibrium selection ambiguity). Symmetrically, alignment work operates only on Axis B — re-aligning objectives moves the composite from R1 to R0, without changing architectural class. Symbiogenic absorption is the structural mechanism for the R1 → R0 transition (`#hyp-symbiogenic-composition`).
+
+**Two distinct adversarial pressures act on the two axes.** `#disc-adversarial-coupling-pressure` names the adversarial pressure on Axis A — adversaries strategically drive a target's modularity downward because coupling expands attack surface. A separate adversarial pressure — call it *strategic divergence pressure* — drives a target's Axis B regime downward (introduces objective divergence into a previously-aligned team, moving R0 → R1; introduces cyclic structure by mechanism manipulation, moving R1 → R2). The two are structurally distinct adversarial moves with distinct defenses (architectural scaffolding for Axis A; mechanism-design commitment for Axis B). The queued `#disc-modularity-state-dynamics` meta-segment covers the three-operation modularity-state picture on Axis A; the dynamic-regime axis here covers the parallel three-operation picture on Axis B (alignment-strengthening self-driven-ascending; strategic-divergence-acquisition self-driven-descending; adversarial-divergence-pressure externally-driven-descending).
+
+## Epistemic Status
+
+*Discussion-grade* at the meta-pattern level. The segment articulates an axis-vocabulary consolidation rather than a derivation of new machinery. The four-tier partition itself is integration of recognized prior art — Candogan-Menache-Ozdaglar-Parrilo 2011 (Hodge decomposition), Letcher-Balduzzi et al. 2019 (Hamiltonian dynamics decomposition), Sandholm 2010 (population-games taxonomy), Hofbauer-Sigmund 1998 (phase-portrait classification), Omidshafiei et al. 2019 ($\alpha$-Rank), Papadimitriou-Piliouras 2018 (chain-recurrent sets as natural object).
+
+The AAT-specific derivable contents (§"AAT-specific derivable content") are at distinct tiers: the macro-state-type / regime identity is *exact* for finite $N$ given the entry conditions; the transition asymmetry is *argumentation-grade* pending the J9 derivation spike with a structural-distance metric; the Lyapunov-machinery transfer R0 → R1 is *exact* by direct construction (the algebra is inherited from `#deriv-strategic-composition` sub-scope $\alpha'$).
+
+Max attainable: *discussion-grade* for the meta-pattern (it is an organizing principle, not a derivation); *exact* for the macro-state-type / regime identity; *exact* for the Lyapunov transfer; *argumentation-grade* for the transition asymmetry pending the J9 derivation.
+
+## Discussion
+
+**The cross-segment integration consequence.** Once the axis is named, `#impl-strategic-composition`'s §"Modular safety architectures fail under goal divergence" implication has a cleaner derivation than the original architectural-class-change framing. The failure mechanism is *regime change* (R0 → R1 under goal divergence) rather than *architectural-class change* (which does not happen — strategic composition with goal-blind routing leaves the composite architecturally Class 1; see `spikes/strategic-composition-class-3-attempt-2026-05-21/02-REFRAME-INSIGHT.md` §6 for the conflation diagnosis). Modular safety guarantees designed for contraction-regime composites depend on the unique-attracting fixed point and the global Lyapunov contraction; under R0 → R1 transition the unique attractor becomes a set of equilibria, saddle-point Nash breaks Lyapunov contraction, and multi-equilibria break uniqueness. Constitutional AI red-teaming and mesa-optimizer formation are the empirical instantiations. The dynamic-regime axis re-derivation gives the same conclusion on stronger ground.
+
+**Mechanism design as regime-shaping.** An external designer who can shape the sub-agent objectives can target a regime — bring R2 down to R1 by adding potential structure, or R1 down to R0 by adding alignment. The mechanism-design impossibility theorems (Gibbard-Satterthwaite, Myerson-Satterthwaite, Arrow) are floors on what *external designers* can achieve in the regime-ascent direction under stated incentive-compatibility and welfare constraints. The queued `#disc-implementation-impossibility` meta-segment (per `spikes/implementation-impossibility-meta-segment-plan.md`) carries the formal treatment of designer-side constructive-impossibility; this segment's transition-asymmetry argument cross-references it as the structural complement.
+
+**The dynamic-regime axis and the queued `#disc-modularity-state-dynamics`.** Both axes admit a parallel three-operation modularity-like dynamics: alignment-strengthening / strategic-divergence-acquisition / adversarial-divergence-pressure on Axis B parallel to truthification / strategic-self-coupling / adversarial-coupling-pressure on Axis A. The parallel-pattern observation is itself meta-architectural content — the framework has *two* independently-shaped axes with parallel three-operation dynamics on each. Whether this parallel structure warrants a *higher-order* meta-segment (covering both Axes A and B at once) is open; the current proposal is to keep the two axis-segments separate (this one for Axis B; `#disc-modularity-state-dynamics` for Axis A) and surface the parallel observation as a Working Note in each until both have landed and the cross-pattern is stable.
+
+**Sub-tier structure within each regime.** Each regime has its own internal classification — R0 inherits the Contraction ladder Tier 1 / Tier 2 / Tier 3 from `#disc-separability-pattern`; R1 has potential / monotone / general sub-tier per `#deriv-strategic-composition`; R2 has CCE-convergence-rate sub-classification; R3 has MFG-uniqueness sub-classification. Whether these sub-classifications unify across regimes under a single meta-classification (e.g., "Lyapunov-certificate-strength" as one axis across R0/R1/R2/R3) is a candidate for follow-on work — see Working Notes.
+
+## Findings
+
+### The Dynamic-Regime Axis as Cross-Cutting Classifier
+
+**Brief:** Composites differ in how their joint dynamics behave even when their components are individually clean. Think of a team rowing a boat — everyone wants the same destination, the dynamics contract to a shared target, the team is in the *contraction-regime* (R0). Now think of firms in a market — each wants to maximize their own profit, the prices settle into a stable joint equilibrium where no firm wants to deviate, the system is in the *equilibrium-regime* (R1). Now think of rock-paper-scissors players — no stable joint move exists in pure strategies, but the long-run frequencies of moves settle into a stable distribution, the system is in the *cyclic-distributional-regime* (R2). At population scale, where the natural object is the distribution of strategies across the whole population rather than named individuals, you get the *mean-field-equilibrium-regime* (R3). The regime is structural — you can read it off the game definition without running the dynamics — and it determines what kind of guarantee the framework can give you: exponential convergence in R0/R1, polynomial-in-distribution in R2, measure-space machinery in R3. The axis is independent of the architectural class (whether the agent's processing is goal-blind or not); both axes interact, and a strategic composite of architecturally-clean agents is still R1 in dynamic regime even though it remains Class 1 in architectural class.
+
+**Impact:** Names a structural classifier the framework had been running implicitly across ten-plus existing segments under different vocabulary, consolidating them into one explicit axis with a clear sub-tier structure inherited from existing tiered ladders. Provides a cleaner derivation of `#impl-strategic-composition`'s "modular safety architectures fail under goal divergence" implication — the mechanism is regime change (R0 → R1), not architectural-class change (which does not happen under goal-blind routing). Resolves the long-standing tension in `#scope-composite-agent`'s Working Notes between the alignment routes (C-i/ii/iii) and the strategic-equilibrium route (C-iv): they correspond to regime-tier entry conditions on the dynamic-regime axis, not to a continuous spectrum on a single scalar. Surfaces the structural-distance metric on regime-transition cost as a derivable open question (J9 spike candidate). Provides the positive-half complementarity for the broadened `#disc-identifiability-floor` Instance 3 (regime identification from component marginals is structurally impossible).
+
+**Novelty Claim:** *Claim integration* of multi-agent dynamics classifications from at least five neighboring literatures (game-theoretic decomposition; multi-agent learning convergence taxonomy; population games; evolutionary games; mean-field games) into an AAT-internal regime-axis vocabulary that travels with the framework's existing scope-route disjunction (`#scope-composite-agent`), separable-core / structured-repair / general-open shape (`#disc-separability-pattern`), and persistence machinery (`#result-sector-persistence-template`). The four-tier partition is recognized prior art; the AAT-specific contributions are (a) the macro-state-type / regime structural identity for finite $N$ with R3 as the explicit boundary case where the identity breaks (*claim recognition* + *claim integration*); (b) the regime-transition cost-asymmetry framing (descent default / ascent costly) tied to mechanism-design impossibility (*claim recognition* — full derivation deferred to J9); (c) the Lyapunov-machinery transfer R0 → R1 made explicit as a cross-tier consolidation of `#deriv-strategic-composition` sub-scope $\alpha'$ (*claim integration*).
+
+**Related Work:**
+
+| ASF concern | Prior-art language | Relationship / Positioning |
+|---|---|---|
+| Game decomposition (potential / harmonic / nonstrategic) | Candogan, Menache, Ozdaglar & Parrilo 2011, "Flows and Decompositions of Games: Harmonic and Potential Games," *Math. of OR* 36(3):474–503 (found 2026-05-21) | *formal antecedent* — Hodge-style decomposition of finite normal-form games into three orthogonal components; gives a coordinate-free organizing structure for the R1-vs-R2 boundary cleaner than tier-wise enumeration. AAT adopts the decomposition as the canonical structural reading of the R1/R2 partition; the four-tier ladder is the AAT-internal consolidation across the decomposition plus the contraction-regime (R0) extension plus the mean-field-regime (R3) limit |
+| Differentiable game dynamics with potential / Hamiltonian decomposition | Letcher, Balduzzi, Racanière, Martens, Foerster, Tuyls & Graepel 2019, "Differentiable Game Mechanics," *JMLR* 20:1–40 (found 2026-05-21) | *formal antecedent* — lifts the Hodge-style decomposition from games to *dynamics on games* (potential component → convergent gradient flow; Hamiltonian component → cyclic flow). The R1/R2 partition is exactly the potential-vs-Hamiltonian dynamics distinction at the joint-best-response field level |
+| Population-games taxonomy (potential / stable / cyclic) | Sandholm 2010, *Population Games and Evolutionary Dynamics*, MIT Press (textbook; found 2026-05-21) | *formal antecedent* — population-level classification of strategic interaction by dynamic regime. The R0/R1/R2 partition tracks Sandholm's "stable" / "potential" / "non-stable cyclic" taxonomy at the finite-$N$ scale; the R3 tier is exactly Sandholm's population-distribution limit |
+| Evolutionary phase-portrait classification | Hofbauer & Sigmund 1998, *Evolutionary Games and Population Dynamics*, Cambridge University Press (textbook; found 2026-05-21) | *formal antecedent* — phase-portrait analysis of replicator dynamics distinguishing fixed-point convergence (R0/R1) from heteroclinic/cyclic structure (R2). The AAT regime axis adopts the phase-portrait reading as the structural shape of the R0/R1/R2 distinction |
+| Cyclic dynamics as solution concept | Omidshafiei, Papadimitriou, Piliouras, Tuyls, Rowland, Lespiau, Czarnecki, Lanctot, Perolat & Munos 2019, "$\alpha$-Rank: Multi-Agent Evaluation by Evolution," *Scientific Reports* 9:9937 (found 2026-05-21) | *formal antecedent* — Markov-Conley-chain (MCC) solution concept treats cyclic dynamics as the natural object when Nash equilibria are absent or non-attracting. AAT adopts MCC as a sub-tier within R2's distributional macro-state |
+| Chain-recurrent set as outcome of non-converging dynamics | Papadimitriou & Piliouras 2018, "From Nash Equilibria to Chain Recurrent Sets," *ACM Trans. on Economics and Computation* (found 2026-05-21 — local PDF `ref/papadimitriou-piliouras-2018-nash-chain-recurrent.pdf`) | *formal antecedent* — chain-recurrent set as the natural macro-state when fixed-point convergence fails. Provides the formal substrate for R2's distributional macro-state on the dynamics side, complementing Hart-Mas-Colell's CCE on the no-regret-learning side |
+| Coarse correlated equilibrium convergence | Hart & Mas-Colell 2000, "A Simple Adaptive Procedure Leading to Correlated Equilibrium," *Econometrica* 68:1127–1150 (found pre-2026; cited in `#deriv-strategic-composition`) | *formal antecedent* — supplies the doubling-trick CCE convergence rate $O(1/\sqrt T)$ that defines the R2 tier's Lyapunov-equivalent guarantee |
+| Mean-field games (MFG) | Lasry & Lions 2007, *Japanese J. Math.* 2:229–260; Huang, Malhamé & Caines 2006, *Comm. Info. Sys.* 6:221–252 (found 2026-05-21 by reference) | *formal antecedent* — supplies the R3 tier's measure-space machinery. AAT does not currently have R3 machinery; the tier is named as the population-scope frontier per `#deriv-strategic-composition` Working Notes mean-field extension |
+| Mechanism-design impossibility (designer-side regime-ascent floor) | Gibbard 1973, *Econometrica* 41:587–601; Satterthwaite 1975, *J. Econ. Theory* 10:187–217; Myerson & Satterthwaite 1983, *J. Econ. Theory* 29:265–281; Arrow 1951, *Social Choice and Individual Values* (found pre-2026; flagged in `#deriv-strategic-composition` Discussion) | *formal antecedent (designer-side floors)* — floor on what external designers can achieve in the R2 → R1 or R1 → R0 regime-ascent direction. Forward-references the queued `#disc-implementation-impossibility` meta-segment for the formal treatment |
+
+**Search Log:**
+
+- 2026-05-21 (*targeted*, BG1 Pillar prior-art search): Conducted as the non-discretionary maturity-gate per `spikes/strategic-composition-class-3-attempt-2026-05-21/04-MATURITY-CHECK.md` §M.1. Verdict on T1 (four-tier classification as unifying construct): *Substantial Overlap with Named Prior Art* (High confidence). Verdict on T2 (macro-state-type / regime identity §C.1): *Substantial Novelty with Adjacent Literature* (Medium-High). Verdict on T3 (transition asymmetry §C.3): *Substantial Novelty with Adjacent Literature* (Medium). Verdict on T4 (identifiability floor §H.5): *Substantial Novelty with Adjacent Literature* (Medium). Most consequential finding: Candogan-Menache-Ozdaglar-Parrilo 2011 Hodge decomposition as the recognized prior art for the R1/R2 boundary. Full report at `spikes/strategic-composition-class-3-attempt-2026-05-21/06-PILLAR-PRIOR-ART.md`.
+- 2026-05-21 (*planned*): Second-pass Undermind search for the broadened-Instance-3 + escape (e) per `spikes/strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md` A4. Will refine the R1-vs-R2 classifier-under-rate-class-observation claim if prior art surfaces.
+
+## Working Notes
+
+- **Sub-tier unification candidate.** Each regime has its own internal sub-classification (R0 Contraction ladder Tier 1/2/3; R1 potential/monotone/general; R2 CCE-convergence-rate; R3 MFG-uniqueness). Whether these unify across regimes under a single meta-axis — *Lyapunov-certificate-strength* (full-state Lyapunov / local-on-deviation Lyapunov / distributional-on-empirical Lyapunov / no Lyapunov) — is open. Candidate for a follow-on spike if the cross-regime meta-classification turns out to compose cleanly with existing tier machinery.
+- **J7 / J9 — standalone-paper trajectory.** Joseph-reserved per `spikes/strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md` §S.2. The standalone-paper trajectory on the dynamic-regime axis (J7) requires the §C.3 transition cost-asymmetry derivation (J9) to land first to be publication-competitive — BG1's T1 Substantial Overlap verdict means the four-tier classification itself is not the publishable contribution; the AAT-specific identities (§"AAT-specific derivable content") are. A focused spike to derive the cost-asymmetry with a structural-distance metric on game-rewiring space is the prerequisite; landing such a derivation would also upgrade §"Transition asymmetry: descent is the default" from argumentation-grade to derived in this segment.
+- **`#disc-modularity-state-dynamics` parallel-pattern.** The parallel-three-operation observation in §"Cross-axis interactions" awaits the `#disc-modularity-state-dynamics` queued landing (per CLAUDE.md Key Architectural Decisions §7 and `msc/modularity-cycle-plan-2026-05-09.md`). Once both meta-segments are stable, a higher-order meta-segment covering both Axes A and B at the parallel-pattern level may be warranted. Defer until both land; surface the parallel-pattern observation as a Working Note in each of the two until then.
+- **A4 second-pass Undermind on broadened Instance 3.** Pending per `07-SOLIDIFIED-PLAN.md` A4. The R1-vs-R2 classifier strengthened-consequence — that sub-scope $\alpha'/\beta'$ is the *unique* broadly-available regime classifier under escape (e) (composite-level convergence-rate-class observation) — depends on whether the second-pass Undermind surfaces alternative classifiers in switched-system identifiability or convergence-rate-classification literature. If alternatives surface, the "unique" qualifier softens to "primary."
+- **Mechanism reduction question.** Whether the regime-axis transition asymmetry reduces to a special case of the modularity-state-dynamics three-operation pattern (Axis A) under a structural translation, or whether the two patterns are genuinely independent at the meta-architectural level, is open. The current §"Cross-axis interactions" reading treats them as parallel-but-independent; a unification attempt would be a separate spike.
+- **R3 machinery.** AAT does not currently carry mean-field-equilibrium-regime machinery. R3 is named as the population-scope frontier; per `#deriv-strategic-composition` Working Notes, the mean-field-extension awaits Section III population-dynamics machinery (latent structural diversity; endogenous coupling; composition-transition dynamics). When R3 lands properly, this segment will be revisited to verify the four-tier ladder remains the right granularity (vs collapsing R2 + R3 into a unified distributional tier, or splitting R3 further by MFG sub-class).
