@@ -105,14 +105,7 @@ sequence and where the dependencies are.*
   new (Richens / Virgo / Cohen 2022 / Friston RGM); Track B coupling
   flagged on Cohen 2022 specifically. Phased plan §5 has 9 phases
   (Phase 0-8) for cluster reconciliation; estimated ~3.7 cycles.
-- 🟡 **Cohen-2022 strengthening spike dispatched (2026-05-22, in flight)** —
-  parallel background spike attempting to lift Cohen-Hutter-Osborne 2022
-  from "we argue" to conditional-derived AAT-internal impossibility
-  theorem under named premises. Three legitimate completion states
-  (succeed-at / unify-with-Result-G′ / fundamental-no-go-with-precise-
-  obstruction). Result feeds Track B Cohen-instance epistemic-tier
-  finalization. Spike directory: `spikes/spike-cohen-2022-strengthening-2026-05-22/`
-  (created by the spike agent).
+- ✅ **Cohen-2022 strengthening spike returned (2026-05-22) — succeed-beyond-claim.** Cohen 2022 lifts to conditional-derived AAT-internal impossibility result under five named premises (R1)–(R5): floor is *exact* (Pearl-Bareinboim 2022 CHT applied to reward-provision protocol — $\mu_{\text{dist}}$ / $\mu_{\text{prox}}$ L1-equivalent on protocol-honoring histories, L2-distinct on $do(\pi^{\text{rp}})$); behavioral corollary is *conditional-derived* (EU-max under (R1)–(R5) selects $\pi^{\text{tamper}}$ with positive measure). **The strengthening unifies Cohen 2022 with Result G′** ( `#deriv-self-actuation-grounding` ) — both reduce to the same structural fact: the value-functional interface $V_{O_t}$ ( `#form-objective-functional` ) is information-narrow in a load-bearing way, with two complementary failure modes (within-model convention-invariance / Result G′; across-model reward-data identifiability / Cohen 2022) producing two complementary terminal grounding routes (adaptive-substrate invariant agent-side / principal-side protocol-commitment). Verdict at `spikes/spike-cohen-2022-strengthening-2026-05-22/99-verdict.md` (242 lines, lint-clean). **Track B disposition: Cohen 2022 is NOT a fourth charter instance**; it lands separately as a sister segment to `#deriv-self-actuation-grounding` (recommended slug per verdict §3.b: `deriv-reward-channel-learning-no-go` or `deriv-goal-learning-grounding` — naming-curation decision pending). The constructive-impossibility-posture taxonomy now has three known clusters: identifiability-floor / implementation-impossibility / **agent-side value-functional-grounding** (the third cluster surfaces because the Cohen 2022 strengthening makes the cluster's second instance explicit alongside Result G′).
 - ✅ **Primary-source verification spike queued** across `#disc-identifiability-floor`,
   `#deriv-regime-marginal-indistinguishability`, `#disc-dynamic-regime-axis`,
   `#der-directed-separation`, `#der-class-coercion-via-wrapping`,
@@ -373,12 +366,8 @@ breakdown in the verdict §5):
   ladder (single-agent linearized; tier `exact` at the linearized level;
   Helmholtz $S/A$ via Letcher 2019 + Conley anchoring); Conley 1978 as
   direct citation (currently only indirect via Papadimitriou-Piliouras 2018).
-- **CR Phase 4** — `#disc-stability-certificate` Interior-facet
-  refinement: row updated from "$\mathcal M\succ0$ on the scope ball:
-  the contraction holds" to the Helmholtz $S/A$ two-sub-region form
-  (R0-strict / R0-loss); Discussion paragraph parallel to the existing
-  line-84 accumulation-typing paragraph; four-facet structure stays
-  four (R0-loss is a refinement of the Interior facet, not a peer 5th).
+- **CR Phase 4** — `#disc-stability-certificate` Interior-facet refinement: row updated from "$\mathcal M\succ0$ on the scope ball: the contraction holds" to the Helmholtz $S/A$ two-sub-region form (R0-strict / R0-loss); Discussion paragraph parallel to the existing line-84 accumulation-typing paragraph; four-facet structure stays four (R0-loss is a refinement of the Interior facet, not a peer 5th).
+- **CR Phase 4b** (added 2026-05-22 post-strengthening-spike) — **Cohen 2022 sister-segment landing.** Author the new sister segment to `#deriv-self-actuation-grounding` carrying the strengthened Cohen 2022 result (slug TBD via naming-curation; recommended `deriv-reward-channel-learning-no-go` or `deriv-goal-learning-grounding`). Cross-segment ripple: `#deriv-self-actuation-grounding` (REQUIRED Working Note + Discussion + Related Work + "two-sided resolution" gains third-side statement), `#disc-identifiability-floor` (REQUIRED Adjacent Floors entry), `#disc-constructive-impossibility-posture` (RECOMMENDED catalog F+G), `#form-objective-functional` (RECOMMENDED single-interface narrowness sister sentence), OUTLINE.md placement alongside `#deriv-self-actuation-grounding`. Per the 2026-05-22 CLAUDE.md principle (*working-theory at honest tier belongs in canon*), the strengthening result lands in canon now. Detail in `spike-cohen-2022-strengthening-2026-05-22/99-verdict.md` §3.b + §4. Estimated ~1.5 cycles.
 - **CR Phase 5** — cross-segment tertiary cross-references: Mertikopoulos
   2017 surface-back to `#disc-dynamic-regime-axis`'s R2 sub-section
   (precedent for the Piliouras-lab MCC line); cross-layer naming clarity
@@ -391,24 +380,11 @@ breakdown in the verdict §5):
   rows; per-row reciprocal Working-Note backlinks).
 - **CR Phase 8** — spike directory archive.
 
-**Track B coupling (TB1 from the verdict):** Cohen-Hutter-Osborne 2022
-will land as a *fourth charter instance* of Track B's
-`#disc-implementation-impossibility` meta-segment (alongside Gibbard-
-Satterthwaite, Myerson-Satterthwaite, Arrow) with the *agent-side /
-designer-side* organizing axis articulated as the meta-segment's
-structuring principle. The Cohen-instance epistemic tier (theorem-grade
-parity with GS/MS/Arrow vs honestly-marked discussion-grade) is pending
-the Cohen-2022 strengthening spike's result. **Two-placement strategy:**
-Cohen 2022 has its canonical home in `#disc-implementation-impossibility`
-as the charter instance; `#deriv-self-actuation-grounding` cites it back
-as an adjacent agent-side no-go from a different angle, paired with
-Result G′.
+**Track B disposition (post-strengthening-spike, 2026-05-22):** The Cohen-2022 strengthening verdict (succeed-beyond-claim) established that Cohen 2022 is a *sister meta-cluster* (agent-side, CHT-anchored, substrate-level remedies) to Track B's `#disc-implementation-impossibility` (designer-side, mechanism-design-anchored, constraint-relaxation remedies) — not a fourth charter instance. Track B's three-instance charter (GS/MS/Arrow) stays as originally scoped. Cohen 2022 lands separately in CR Phase 4b as a sister segment to `#deriv-self-actuation-grounding`, unified with Result G′ under the shared structural fact that the value-functional interface $V_{O_t}$ is information-narrow. The constructive-impossibility-posture taxonomy now has three known clusters (identifiability-floor / implementation-impossibility / agent-side value-functional-grounding); Track B's meta-segment Discussion will name this taxonomy in a "Relationship to other meta-patterns" section. Verdict at `spike-cohen-2022-strengthening-2026-05-22/99-verdict.md` §2 + §3.b.
 
-**Dependencies:** None to start (CR Phase 0 immediate). Phase 3 + 4 are
-the larger touches; the rest are recognition-tier and run in batched
-commits.
+**Dependencies:** None to start (CR Phase 0 immediate). Phase 3, 4, and 4b are the larger canon-touching phases; Phases 1/2/5/6/7/8 are recognition-tier or lighter and run in batched commits.
 
-**Estimated cycles:** ~3.7 total per verdict §5.
+**Estimated cycles:** ~5.2 total (CR Phase 0-4 + 4b + 5-8; Phase 4b adds ~1.5 to the verdict's original ~3.7).
 
 ---
 
@@ -436,19 +412,8 @@ Assuming sequential execution (no parallel agents):
 5. **Track A A4** — second-pass Undermind for broadened Instance 3.
 6. **Track A Phase 4** — truthful-fix cascade.
 7. **Track A Phase 5** — cross-segment ripple. *(Canon now stable.)*
-8. **Track CR Phases 0-7** — cluster-reconciliation, inserted 2026-05-22
-   per integration-reconciliation verdict. Phase 0 = NEXT-UP/spike-dir
-   commit; Phase 1 = recognition-tier §2 landings (Richens, Virgo,
-   Friston RGM); Phase 2 = §1 recognition-tier cross-refs (CPT Th 8
-   diagnostic, no-spiral converse); Phase 3 = R0-loss rung +
-   Conley citation; Phase 4 = Interior-facet refinement; Phase 5 =
-   tertiary cross-refs + cross-layer naming clarity; Phase 6 = optional
-   cleanup; Phase 7 = PROPOSED.md updates; Phase 8 = archive. Cohen 2022
-   strengthening spike runs parallel in background; result feeds Track B.
-9. **Track B** — implementation-impossibility meta-segment + 4 charter
-   instances (GS/MS/Arrow + Cohen 2022 as agent-side counterpart per
-   TB1; epistemic tier of Cohen-instance pending strengthening-spike
-   result). ([`implementation-impossibility-meta-segment-plan.md`](implementation-impossibility-meta-segment-plan.md))
+8. **Track CR Phases 0-8** — cluster-reconciliation, inserted 2026-05-22 per integration-reconciliation verdict + extended 2026-05-22 with Phase 4b post-strengthening-spike. Phase 0 = NEXT-UP/spike-dir commit; Phase 1 = recognition-tier §2 landings (Richens, Virgo, Friston RGM); Phase 2 = §1 recognition-tier cross-refs (CPT Th 8 diagnostic, no-spiral converse); Phase 3 = R0-loss rung + Conley citation; Phase 4 = Interior-facet refinement; **Phase 4b = Cohen 2022 sister-segment landing + cross-segment ripple to 4 segments** (post-strengthening-spike, succeed-beyond-claim with Result-G′ unification); Phase 5 = tertiary cross-refs + cross-layer naming clarity; Phase 6 = optional cleanup; Phase 7 = PROPOSED.md updates; Phase 8 = archive.
+9. **Track B** — implementation-impossibility meta-segment + 3 charter instances (GS/MS/Arrow). Per (T9) the Cohen-2022 strengthening verdict established Cohen 2022 as a *sister meta-cluster* (agent-side, CHT-anchored) to Track B's `#disc-implementation-impossibility` (designer-side, mechanism-design-anchored), not a fourth charter instance; Track B's three-instance charter stays as originally scoped, with a "Relationship to other meta-patterns" Discussion section naming the three-cluster posture-taxonomy. ([`implementation-impossibility-meta-segment-plan.md`](implementation-impossibility-meta-segment-plan.md))
 10. **Track E** — novelty-analysis re-pass for rows 05, 08, 11, 14, 21
     + meta-summary update. (Plan needed; ~1 cycle.)
 11. **Track C** — meta-segment narrative ordering sweep for existing
@@ -581,8 +546,9 @@ These were established in the conversation that led to this handoff and are now 
 | Decision | Resolution |
 |---|---|
 | **(T8) Track CR insertion point** | Track CR Phases 0-7 run sequentially between Track A Phase 5 and Track B dispatch, per integration-reconciliation verdict §5 ordering. Phase 0 = NEXT-UP edit + spike-directory commit (this commit). |
-| **(T9) Track B fourth charter instance (Cohen 2022)** | Cohen-Hutter-Osborne 2022 lands as a fourth charter instance of `#disc-implementation-impossibility` (alongside GS/MS/Arrow). Two-placement strategy: canonical home in the new meta-segment; back-citation in `#deriv-self-actuation-grounding` paired with Result G′ as adjacent agent-side no-go. The Cohen-instance epistemic tier is *pending* the Cohen-2022 strengthening spike's result. |
-| **(T10) Agent-side / designer-side as Track B organizing axis** | Track B's authoring articulates the *agent-side / designer-side* split (GS/MS/Arrow are designer-side floors on regime-ascent; Cohen 2022 is agent-side impossibility on goal-grounding) as the meta-segment's explicit organizing structure, not as a free-floating observation justifying the 4th instance. The meta-segment exposition runs this axis. |
+| **(T9) Cohen 2022 lands separately, NOT in Track B** | The Cohen-2022 strengthening spike's verdict (2026-05-22, succeed-beyond-claim) established that Cohen 2022 is a *sister meta-cluster* to `#disc-implementation-impossibility`, not a member. The actor under Cohen 2022's no-go is the *agent* (under EU-maximization); under GS/MS/Arrow the actor is the *designer*. The remedies differ structurally — Cohen 2022 maps to substrate-level commitments (adaptive-substrate invariant per Result G′ Corollary 2, or principal-side protocol-commitment); GS/MS/Arrow map to constraint-relaxation. The external theorem differs — Cohen 2022 rests on Pearl-Bareinboim CHT (same as `#disc-identifiability-floor` Instance 1, distinct AAT-side wiring); GS/MS/Arrow rest on mechanism-design / social-choice theorems. The five-row actor/regime/remedy/theorem/consequence comparison (verdict §2) is sharp. Track B's three-instance charter (GS/MS/Arrow) stays as originally scoped. Cohen 2022 lands separately as a sister segment to `#deriv-self-actuation-grounding` (verdict §3.b Option ii — recommended slug `deriv-reward-channel-learning-no-go` or `deriv-goal-learning-grounding`, decision via naming-curation). |
+| **(T10) Agent-side / designer-side as posture-taxonomy axis, NOT Track B internal organization** | The agent-side / designer-side split applies at the *constructive-impossibility-posture* taxonomy level — there are now three known clusters: (a) identifiability-floor (agent-side data-inference, `#disc-identifiability-floor`); (b) implementation-impossibility (designer-side mechanism-design, Track B's new `#disc-implementation-impossibility`); (c) agent-side value-functional-grounding (Result G′ + the new Cohen-2022 sister segment, both anchored on $V_{O_t}$ single-interface narrowness per `#form-objective-functional`). Track B's meta-segment Discussion will name the three-cluster taxonomy in a "Relationship to other meta-patterns" section but does NOT expand Track B's own scope to cover the agent-side cluster. Track B's exposition is internally about designer-side mechanism-design impossibility specifically. |
+| **(T14) Cohen 2022 sister-segment landing as new CR Phase 4b** | The Cohen-2022 strengthening's recommended canonical landing (verdict §3.b + §4) becomes a new Track CR phase inserted after CR Phase 4 (Interior-facet refinement). New CR Phase 4b authors the new sister segment + cross-segment ripple to `#deriv-self-actuation-grounding` (REQUIRED — Working Note + Discussion + Related Work + the "two-sided resolution" gains a third-side statement), `#disc-identifiability-floor` (REQUIRED — Adjacent Floors entry), `#disc-constructive-impossibility-posture` (RECOMMENDED — catalog extension F+G), `#form-objective-functional` (RECOMMENDED — single-interface narrowness sister sentence), and OUTLINE.md (placement alongside `#deriv-self-actuation-grounding`). Naming-curation needs a slug decision before commit. Estimated ~1.5 cycles (new segment authoring + 4 cross-segment touches + OUTLINE placement). Per the 2026-05-22 CLAUDE.md principle, the strengthening result belongs in canon now, not held in the spike. |
 | **(T11) Epistemic-status parity discipline** | The four charter instances will be tagged at their honest tiers. GS/MS/Arrow are exact theorems; Cohen 2022's tier is finalized by the strengthening spike result. The meta-segment honestly handles tier difference (per the 2026-05-22 CLAUDE.md principle that *"working-theory at honest tier belongs in canon, not held in spikes"* — applies symmetrically: don't inflate Cohen 2022 to look-like-a-theorem if it doesn't lift; don't hold it out of canon if it lands at conditional-derived or honest discussion-grade either). |
 | **(T12) Cohen-2022 strengthening spike — background, parallel** | Dispatched 2026-05-22 in background; spike directory at `spikes/spike-cohen-2022-strengthening-2026-05-22/`. Runs in parallel with Track CR Phases 1-7. Three completion states: succeed-at (Cohen 2022 → conditional-derived theorem); succeed-beyond (unifies with Result G′); fundamental-no-go (precise structural obstruction). All three are legitimate; verdict feeds Track B Cohen-instance landing. |
 | **(T13) Reconciliation cycle commit cadence** | One commit per CR phase. Phase 3 + 4 are larger touches and check-in to Joseph before commit per §6.2 cadence. The recognition-tier phases (1, 2, 5, 6, 7) batch one commit each but proceed without per-phase pause. |
@@ -598,8 +564,9 @@ Adds to §5.2's existing check-in cadence:
 | After CR Phase 2 (§1 cross-segment recognition-tier notes) | Two cross-segment notes; brief surface only |
 | Before CR Phase 3 (R0-loss rung in `#result-certificate-existence`) | Most consequential single artifact — extends a ladder in a core canon segment. Worth review before commit. |
 | Before CR Phase 4 (Interior-facet refinement in `#disc-stability-certificate`) | Touches the framework spine; worth review before commit. |
+| Before CR Phase 4b (Cohen 2022 sister segment + cross-segment ripple) | New canon segment authoring + 4-segment ripple; substantial framework move. Slug-decision via naming-curation before commit. Worth review before authoring. |
 | After Cohen 2022 strengthening spike returns | Determines Cohen-instance tier for Track B; brief surface of verdict |
-| Before Track B dispatch | New meta-segment authoring + 4 charter instances; major framework move |
+| Before Track B dispatch | New meta-segment authoring + 3 charter instances (GS/MS/Arrow); major framework move |
 
 ### 6.3 Tracking-file discipline (Joseph's 2026-05-22 reminder)
 
