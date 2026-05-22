@@ -4,3 +4,13 @@
 # The PDFs remain locally for audit and derivation-trace purposes;
 # they are re-acquired per agent/user when needed.
 *.pdf
+
+# Marker (PDF→markdown) output directories — one per paper PDF.
+# These contain extracted markdown + per-page images from third-party
+# papers; same redistribution-rights concern as the PDFs themselves.
+# Stopgap convention until Marker conversion becomes an official
+# relata workflow verb: all such conversions land under converted/.
+# Tracked subdirectories with internally-generated or
+# permission-cleared content (agentic-tft/, prior-art-analysis/,
+# arXiv-2503.00237v1/ LaTeX source) remain at this level and tracked.
+converted/
