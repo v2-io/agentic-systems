@@ -1,16 +1,27 @@
-# INTEGRATION — Recommendation for Canon Integration
+# INTEGRATION — Canon Landing Record + Follow-On Plan
 
-This file is a recommendation, not an execution plan. Joseph decides what (if anything) gets promoted, what pointers get added, and which follow-on sub-spikes get launched. The plan below is structured so that each piece can be executed independently — partial adoption is fine.
+**Status (2026-05-22):** typology landed in canon at `draft` stage. Two new segments:
 
-## 0. The honest top-level verdict
+- `#disc-partial-coupling-pathways` (type: `discussion`, status: `discussion-grade`) — the (stage × source × form) parameterization, form-determines-wrappability, stage-cascade propagation, composition with leakage locus, wrapping-regime correspondence.
+- `#der-belief-strategy-attractor` (type: `derived`, status: `conditional`) — the source-asymmetry result with linearized stability analysis of belief-strategy attractors under $\Sigma_t$-source coupling.
 
-The typology is **substantive enough to warrant canon pointers, but not yet ready for direct segment promotion.** Two gaps prevent immediate promotion:
+OUTLINE.md updated with both rows in the Section A meta-segment region (adjacent to `#disc-modularity-state-dynamics`). Working-Notes pointers added to four upstream segments (`#der-directed-separation`, `#disc-adversarial-coupling-pressure`, `#der-class-coercion-via-wrapping`, `#def-agent-spectrum`).
 
-(a) **Result 4's posited $K(\Sigma)$ form.** The multiplicative-gain shape of sunk-cost coupling is plausible and matches operational practice, but is not derived from a more primitive AAT mechanism. A sub-spike that derives $K(\Sigma)$ from utility-cost analysis of belief-revision-under-strategic-commitment would close this gap. Without it, Result 4 stands at *robust qualitative* tier — useful but not theorem-grade.
+This file remains as the *landing record* and the *follow-on plan*; the section labels below reflect both the original pre-landing recommendation structure (preserved for traceability) and the post-landing state.
 
-(b) **Pillar-style prior-art search is incomplete on the cognitive-psychology side.** The active-inference / Friston / Pearl-blanket territory has been searched (`ref/Prior_art_for_AAT_directed_separation.md`); the motivated-reasoning / identity-economics / dual-process / self-deception literatures have not. The typology's novelty claims (especially Result 4 as a structural theorem about belief-strategy attractors) cannot be promoted past *intuition-only* novelty status until that search completes.
+---
 
-Both gaps are *closeable*. A two-cycle plan: this cycle lands the canon pointers and Working Notes; a follow-on cycle (estimated 2-3 sessions of focused work) lands the sub-spikes and promotes the typology to a `disc-` segment if the sub-spikes succeed.
+## 0. The honest top-level verdict (revised post-correction)
+
+**Original verdict (2026-05-22 first pass).** "The typology is substantive enough to warrant canon pointers, but not yet ready for direct segment promotion." This deferred-promotion stance was too conservative — Joseph's methodology correction 2026-05-22: *"Our epistemology allows for more than just derivation and high proof standard parts. Expository narratives that help feel out the landscape for some of the more 'fuzzy' areas like this are absolutely possible as segments — just with the epistemology properly grounded. We really don't like working theory living in spikes instead of the main body."*
+
+**Revised landing.** The typology has landed in canon at `draft` stage with properly-marked epistemic tier (discussion-grade for the framing segment; conditional for the derived attractor segment). Two follow-on sub-spikes are queued to upgrade tier:
+
+(a) **Result 4's posited $K(\Sigma)$ form.** The multiplicative-gain shape of sunk-cost coupling is plausible and matches operational practice, but is not derived from a more primitive AAT mechanism. A sub-spike that derives $K(\Sigma)$ from utility-cost analysis of belief-revision-under-strategic-commitment would close this gap and upgrade `#der-belief-strategy-attractor` from `conditional` toward `exact` under the linearization.
+
+(b) **Pillar-style prior-art search is incomplete on the cognitive-psychology side.** The active-inference / Friston / Pearl-blanket territory has been searched (`ref/Prior_art_for_AAT_directed_separation.md`); the motivated-reasoning / identity-economics / dual-process / self-deception literatures have not. The typology's novelty claims (especially Result 4 as a structural theorem about belief-strategy attractors) cannot be promoted past *intuition-only* novelty status until that search completes. Each landed segment's Findings block carries an honest `intuition-only` Search Log entry — these will be appended with the Pillar verdict when the search lands.
+
+Both gaps are *closeable*. The segments are in canon at `draft` with honest tiers; sub-spike work advances them toward higher stages.
 
 ## 1. Recommended canon touches (this cycle)
 

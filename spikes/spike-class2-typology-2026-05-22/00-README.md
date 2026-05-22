@@ -1,7 +1,7 @@
 # Spike: Regimes Within Class 2 (Partial Coupling) — A Sub-Typology by Stage × Source × Form
 
 **Date.** 2026-05-22.
-**Status.** Active exploratory spike. Not promoted. The math reaches *exact* on the two load-bearing structural results (content/process identifiability; source asymmetry) under stated linear-Gaussian + smooth-tilt assumptions; *robust qualitative* on the broader picture; *intuition-only* on prior-art coverage of the specific decomposition (recommended sub-spike scoped in `07-prior-art-followon.md`).
+**Status.** Landed in canon 2026-05-22 — `#disc-partial-coupling-pathways` (discussion-grade) + `#der-belief-strategy-attractor` (conditional), both at `draft` stage. Working-Notes pointers added to `#der-directed-separation`, `#disc-adversarial-coupling-pressure`, `#der-class-coercion-via-wrapping`, `#def-agent-spectrum`. OUTLINE.md updated. Two follow-on sub-spikes queued for tier-upgrade — see `INTEGRATION.md`. The math reaches *exact* on the two load-bearing structural results (content/process identifiability; source asymmetry) under stated linear-Gaussian + smooth-tilt assumptions; *robust qualitative* on the broader picture; *intuition-only* on prior-art coverage of the specific decomposition.
 
 **Pressure point.** Joseph 2026-05-21: *"does AAT have an intuition yet of potential regimes within Class 2 partially coupled agents? I.e., exactly what constitutes fully-entangled should give some clues as to what can be partially detangled (I would think it might require a more thorough pondering of exactly what kinds of information are being used where in the processing...)"*
 
