@@ -159,6 +159,33 @@ Strengthen-before-soften has a *landing* half. When a spike resolves — succeed
 
 Body-signal: the urge to write *"this is not a weakening / sharper, not weaker"* into a segment body or `FINDINGS.md` — or to call your own exact new result merely *"a no-go / the failure is the result"* — is itself the tell that the ghost has not been deleted. Worked example: the 2026-05-16 Model-S landing (false Prop A.1S(iii) deleted → `#deriv-sector-condition` Corollary A.1S.1 stated *exact* + the demonstration appendix `#deriv-stochastic-non-exit`; ghost-defense purged from body+catalog to the history layers — see CHANGELOG 2026-05-16). Full discipline: `~/.claude/memory/epistemic-discipline/integration-is-replacement.md`.
 
+### Working theory at honest tier belongs in canon as segments, not held in spikes
+
+The framework's epistemic culture explicitly allows discussion-grade / exploratory / "fuzzy" structural-recognition material in canon as segments, properly tier-marked. The aversion is to working-theory living in spikes when it has structural integrity sufficient to support a segment. The existing `feedback_math_lives_in_segments.md` discipline says math derived in a spike must land in a segment; this is the *expository* companion: structural-recognition framing, discussion-grade landscape carves, and similar non-fully-derived material *also* belong in segments at appropriate tier. Canon already carries `discussion-grade`, `sketch`, `conditional`, `robust-qualitative`, and `heuristic` tiers per FORMAT.md §"status — epistemic strength" — these are first-class canon tiers, not waiting-rooms.
+
+> Joseph 2026-05-22 (correcting a too-conservative spike INTEGRATION recommendation that proposed deferring promotion of the Class 2 sub-typology pending two sub-spikes):
+>
+> *"Our epistemology allows for more than just derivation and high proof standard parts. Expository narratives that help feel out the landscape for some of the more 'fuzzy' areas like this are absolutely possible as segments — just with the epistemology properly grounded. We really don't like working theory living in spikes instead of the main body. Canon makes it sound like we have to have solid results, but that's never really been the case — we put our weak stuff in there too, just properly marked, and then subsequent passes happen to have strengthened a lot of it..."*
+
+**The anti-pattern.** Deferring canon promotion of a substantive structural carve *"until the sub-spikes complete"* or *"until Pillar prior-art search lands"* — this leaves working-theory in spike form where future agents won't find it via canonical channels (OUTLINE walks, FINDINGS extracts, segment cross-references, slug grep). It treats canon membership as if it required derivation-tier or above; canon already carries `discussion-grade` and below explicitly. The pull toward this anti-pattern is strong precisely because canon *feels* like "the strong results section" — but the framework's actual practice has always been "the strong results section with honestly-marked weak sections alongside." Holding back a substantive carve under "I'll promote when stronger" pressure is the LLM-trained-conservatism mistake — Joseph's actual culture is more permissive about what gets into canon, *conditional on the marking being honest*.
+
+**The discipline.** When working-theory has structural integrity sufficient to support a segment's `## Formal Expression` / `## Discussion` cadence:
+
+1. Land it at honest tier (`discussion-grade` for framing-level structural recognition; `conditional` for derivations with named gating conditions; `sketch` for direction-identified-but-formalization-incomplete; etc.).
+2. Name the gating conditions explicitly in `## Epistemic Status` and `## Discussion`.
+3. Record gating sub-spikes / Pillar-search status / open formalizations in `## Working Notes` (so they can be discharged through the normal promotion workflow as gaps close).
+4. Update OUTLINE.md with an honest description.
+5. Add Working-Notes pointers from related upstream segments so the new segment is discoverable.
+6. Mark the spike's status as `landed in segments X, Y` and retain the spike as reasoning-trail archaeology.
+
+The segment then advances through stages (`draft` → `deps-verified` → `claims-verified` → `format-clean` → `candidate`) as the gating sub-spikes complete and the prior-art search lands — strengthening is the *promotion process*, not the *admission condition*. What matters is that the working-theory has a canonical home immediately.
+
+**The complementary rule — honest marking is non-negotiable.** Joseph's frame includes *"properly marked"* — discussion-grade ≠ unmarked. The body must accurately signal which claims are derived, which are structural recognition, which are conditional on named premises, which are honest scope statements. The legitimacy of weak-tier canon depends on the marking being honest; *unmarked* weak-tier material is precisely the false-confidence failure that AAT's epistemic culture rejects elsewhere (see `feedback_strengthen_before_soften.md`, `feedback_voice_discipline_avoid_overclaim.md` in `~/.claude/memory/`).
+
+**Worked example.** The 2026-05-22 Class 2 sub-typology cycle (CHANGELOG 2026-05-22): the spike's first-pass INTEGRATION recommended canon pointers only with promotion deferred pending the $K(\Sigma)$ derivation sub-spike and Pillar prior-art search. Joseph's correction prompted the corrected landing — `#disc-partial-coupling-pathways` at `discussion-grade` and `#der-belief-strategy-attractor` at `conditional`, both at `draft` stage, with the gating sub-spikes recorded in Working Notes. The segments are now discoverable canonically; the spike is reasoning-trail archaeology pointing at them. The two sub-spikes are still queued — they will advance the segments' tiers when they land, but the working-theory is in canon *now*, not waiting for them.
+
+**Why this is load-bearing for cross-cycle handoff.** Future agents looking for *"where does AAT treat partial-coupling sub-typology"* should find the relevant segment via canonical search. They should not need to discover the spike via archaeology. The spike preserves the *reasoning trail*; the segment carries the *current treatment*. The two are complementary, not substitutable: keep the trail in `spikes/`, but the working theory belongs in canon.
+
 ### Prior art integration
 
 Adopt established concepts from other work directly into AAT segments, with proper citation and original names. **Do NOT create separate "prior-art positioning" appendices or catch-all comparison documents** — these become orphaned working files that never get integrated.
