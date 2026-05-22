@@ -71,6 +71,8 @@ Under $\beta'$, the macro-state of a strategic composite is a *distribution* on 
 
 **Sub-scope $\beta'$** scope-honesty: AAT can predict that long-run joint play lies in the CCE support; it cannot predict short-run trajectory, per-sub-agent mismatch convergence, or selection among multiple equilibria. The sector-persistence template does *not* apply in $\beta'$. This is a genuine scope limit shared with game theory as a whole, not a defect of AAT.
 
+**Cross-layer linearization fingerprint.** The joint Jacobian of $F$ at saddle-only Nash equilibria in $\beta'$ has imaginary-axis (semisimple) spectrum — the linearization fingerprint of the R0-loss rung in the single-agent certificate-strength ladder of `#result-certificate-existence`. FTRL × graphical-constant-sum-with-fully-mixed Nash (Cheung-Piliouras-Tao 2021 Theorem 19: lossless DGS + Poincaré recurrence on bounded level sets) is the worked composite instance of R0-loss; the connection is between layers (single-agent linearized error space $\mathbb R^n$ vs composite joint-strategy space $\mathcal X^c$), not a collision of R-letter ladders.
+
 ### Zero-sum scalar worked example
 
 *[Derived (zero-sum-scalar-instantiation)]*
