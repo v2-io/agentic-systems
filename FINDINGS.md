@@ -663,6 +663,29 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ---
 
+### `#deriv-regime-marginal-indistinguishability` *(Derivation, status: conditional)*
+
+[`01-aat-core/src/deriv-regime-marginal-indistinguishability.md`](01-aat-core/src/deriv-regime-marginal-indistinguishability.md)
+
+#### Cross-Regime Marginal Indistinguishability (Witness Backing for Broadened Instance 3)
+
+**Brief:** When you watch only one player at a time in a multi-agent system, you cannot tell what game they are playing — and "what game they are playing" determines whether the system as a whole will settle to a target, settle to a strategic equilibrium, or cycle in distribution forever. Two concrete worked constructions show this: two firms in Cournot competition that produce identical per-firm production-quantity distributions to a rowing team optimizing for a shared target (different game, same marginal); two players in matching pennies whose mixed strategy produces identical per-player action distributions to the same rowing team (different *kind* of equilibrium, same marginal). The mechanism is the same as for the simpler coupling-sign-bit case: the topology bit lives in a direction the marginal projection annihilates, and Sylvester's law of inertia says you cannot recover an annihilated direction by changing the units on the ruler — only by looking from a new vantage point (intervening on the topology, or observing the joint trajectory's convergence-rate class).
+
+**Impact:** Backs `#disc-identifiability-floor` Instance 3's 2026-05-21 broadening from coupling-sign-bit to coupling-topology-bit with explicit parameter-by-parameter witness constructions. Preserves the math-lives-in-segments discipline (the derivation lives in canon, not only in the spike). Provides the canonical worked instantiation for the broadened no-go, parallel to how `#deriv-critical-mass-composition`'s asymmetric-limit treatment carries Instance 3's original coupling-sign-bit witness. Operationalizes the "regime is unidentifiable from per-sub-agent marginals" claim that the dynamic-regime axis meta-segment (`#disc-dynamic-regime-axis`) references as the negative-half of its complementarity structure.
+
+**Novelty Claim:** *Claim integration* — the witness constructions extend Instance 3's coupling-sign-bit construction to broader topology coordinates (R0 vs R1; R0 vs R2) using the same Liberzon 2003 / Dayawansa-Martin 1999 / Shorten et al. 2007 anchor and the same Sylvester-at-one-remove mechanism. The Cournot construction (Composite B in §"Witness 1") is standard Monderer-Shapley 1996 potential-game-as-Cournot; the matching-pennies construction (Composite C in §"Witness 2") is standard rock-paper-scissors-style cyclic-game smoothing. The contribution is the parameter-matching against R0 shared-target dynamics that produces marginal-indistinguishability across regimes — and the mechanism reduction to Instance 3's rank-collapse-on-topology-coordinate framework.
+
+**Related Work:** | ASF concern | Prior-art language | Relationship / Positioning |
+|---|---|---|
+| Common-Lyapunov nonexistence for switched systems | Liberzon 2003 *Switching in Systems and Control* §2.1; Dayawansa-Martin 1999 *IEEE TAC* 44:751; Shorten et al. 2007 *SIAM Review* 49:545 | *formal antecedent* — same anchor `#disc-identifiability-floor` Instance 3 invokes; this segment extends the application from coupling-sign-bit to coupling-topology-bit |
+| Cournot duopoly as potential game | Cournot 1838 *Recherches*; Monderer-Shapley 1996 *Games and Economic Behavior* 14:124 §3 | *formal antecedent* — standard potential-game instantiation used as Composite B in Witness 1 |
+| Matching pennies / cyclic-game smoothing | Standard textbook (Fudenberg-Tirole 1991 *Game Theory* §1; Hart-Mas-Colell 2000 *Econometrica* 68:1127) | *formal antecedent* — standard cyclic-game template used as Composite C in Witness 2 |
+| Sylvester's law of inertia as escape-irreducibility | Sylvester 1852 *Phil. Mag.* 4(23):138; cf. `#disc-identifiability-floor` Sylvester-recognition Finding | *formal antecedent* — same congruence-invariance machinery the rank-collapse subclass relies on |
+
+**Search Log:** - 2026-05-21 (*targeted*, BG2 derivation spike at `spikes/spike-identifiability-floor-instance-6-2026-05-21.md`): Re-read `#disc-identifiability-floor` (full segment), Instance 3 in detail, the 2026-05-20 spike's M1 five-element-test discipline, `#disc-stability-certificate` mechanism taxonomy, `#deriv-critical-mass-composition` for Instance-3 escape-(b) operationalization. All citations in this segment's §"Witness 1" / §"Witness 2" (Liberzon 2003, Dayawansa-Martin 1999, Shorten et al. 2007, Monderer-Shapley 1996, Hart-Mas-Colell 2000) are inherited from existing AAT machinery's citation set; no new external citations are introduced. The witness construction is a parameter-matched application of standard game-theoretic templates against the R0 shared-objective dynamics — the constructions are not novel in themselves; the contribution is the cross-regime marginal-indistinguishability *recognition* and the mechanism-reduction to Instance 3's rank-collapse framework.
+
+---
+
 ### `#deriv-causal-ib-exploration` *(Derivation, status: conditional)*
 
 [`01-aat-core/src/deriv-causal-ib-exploration.md`](01-aat-core/src/deriv-causal-ib-exploration.md)
