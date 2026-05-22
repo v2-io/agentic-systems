@@ -75,6 +75,44 @@ sequence and where the dependencies are.*
   - Phase 6 (meta-segment promotion of `#disc-dynamic-regime-axis`)
     is GATED on Track D (`#disc-modularity-state-dynamics`) — not in
     executor's launch scope per (T7) tactical decision.
+- ✅ **Class 2 sub-typology landing (2026-05-22)** — full Track A
+  continuation spike at `spikes/spike-class2-typology-2026-05-22/` plus
+  two new canon segments `#disc-partial-coupling-pathways` +
+  `#der-belief-strategy-attractor` (commit `ff02872`), CHANGELOG entry
+  (`6930822`), ref-gitignore fix (`a6397a6`), CLAUDE.md methodology
+  principle landing (`c72316a` — *"working-theory at honest tier
+  belongs in canon, not held in spikes"*).
+- ✅ **Enrichment cluster spikes committed (2026-05-22, commit `b6c4b32`)** —
+  the §1 + §2 cluster work + the original enrichment-candidates source
+  file. Spike directories at `spikes/spike-enrichment-cluster1-2026-05-21/`
+  (Conley + Candogan + Letcher + Omidshafiei + Papadimitriou-Piliouras +
+  Balduzzi + CPT 2021; verdict via the L4/L5 spike at `99-verdict.md` —
+  R0-loss as exact rung; Effects-Spiral promotion refuted) and
+  `spikes/spike-enrichment-cluster2-2026-05-21/` (Mertikopoulos cycles,
+  Richens world-models, Virgo embodied good-regulator, Cohen 2022,
+  Smithe + Capucci categorical cybernetics, Friston RGM; synthesis only,
+  no spike-agent verification cycle). Original source at
+  `ref/enrichment-candidates-2026-05-21.md`.
+- ✅ **Integration-reconciliation verdict landed (2026-05-22)** —
+  `spikes/spike-integration-reconciliation-2026-05-22/99-verdict.md`.
+  Reconciles the §1/§2 cluster verdicts with the post-Track-A canon
+  state. Headline: most §1 cluster verdict landings survive (R0-loss,
+  Interior-facet Helmholtz $S/A$, CPT Theorem 8 contrapositive, no-spiral
+  converse, Conley direct citation); R-letter naming collision resolves
+  cleanly (single-agent ladder on $\mathbb R^n$ vs composite axis on
+  $\mathcal X^c$ — different layers, no rename); one §1 framing partially
+  collapsed into Track A canon (L4 Row 14); four §2 items genuinely
+  new (Richens / Virgo / Cohen 2022 / Friston RGM); Track B coupling
+  flagged on Cohen 2022 specifically. Phased plan §5 has 9 phases
+  (Phase 0-8) for cluster reconciliation; estimated ~3.7 cycles.
+- 🟡 **Cohen-2022 strengthening spike dispatched (2026-05-22, in flight)** —
+  parallel background spike attempting to lift Cohen-Hutter-Osborne 2022
+  from "we argue" to conditional-derived AAT-internal impossibility
+  theorem under named premises. Three legitimate completion states
+  (succeed-at / unify-with-Result-G′ / fundamental-no-go-with-precise-
+  obstruction). Result feeds Track B Cohen-instance epistemic-tier
+  finalization. Spike directory: `spikes/spike-cohen-2022-strengthening-2026-05-22/`
+  (created by the spike agent).
 - ✅ **Primary-source verification spike queued** across `#disc-identifiability-floor`,
   `#deriv-regime-marginal-indistinguishability`, `#disc-dynamic-regime-axis`,
   `#der-directed-separation`, `#der-class-coercion-via-wrapping`,
@@ -305,6 +343,75 @@ citations).
 
 ---
 
+### Track CR — cluster-reconciliation phases (inserted 2026-05-22)
+
+**Plan / verdict:** [`spike-integration-reconciliation-2026-05-22/99-verdict.md`](spike-integration-reconciliation-2026-05-22/99-verdict.md)
+
+**Authoring executor:** Claude Opus 4.7 (1M context), 2026-05-22 — second
+executor handoff (the first executor stopped pre-Track-B; this hand-off
+inserts the reconciliation work between Track A and Track B at the
+explicit checkpoint per §6.2). Details in new §7 below.
+
+**What it lands** (8 phases, ~3.7 cycles estimated; full per-phase
+breakdown in the verdict §5):
+
+- **CR Phase 0** — spike directory commit + this NEXT-UP update.
+- **CR Phase 1** — Track-A-independent recognition-tier §2 landings:
+  Richens 2025 grounding in `#def-agent-spectrum` (+model side as
+  structurally forced by goal-depth competence); Virgo 2025 observer-
+  relative model interpretation in `04-eli-core/` Working Notes (dual
+  framing to Richens); Friston 2025 RGM as Tier-1 row in
+  `spikes/PROPOSED.md` (supplier for PRACTICA priority #3 multi-
+  timescale stability promotion).
+- **CR Phase 2** — §1 cross-segment recognition-tier notes: CPT
+  Theorem 8 contrapositive as bounded-regret diagnostic in
+  `#def-control-regret`; no-spiral converse in `#der-adversarial-
+  destabilization` (CPT Th 19 + Prop 17 rule out Effects-Spiral in the
+  FTRL+graphical-constant-sum sub-scope, the dual of the prior
+  L3-refuted promotion).
+- **CR Phase 3** — §1 R0-loss row extension in `#result-certificate-existence`
+  ladder (single-agent linearized; tier `exact` at the linearized level;
+  Helmholtz $S/A$ via Letcher 2019 + Conley anchoring); Conley 1978 as
+  direct citation (currently only indirect via Papadimitriou-Piliouras 2018).
+- **CR Phase 4** — `#disc-stability-certificate` Interior-facet
+  refinement: row updated from "$\mathcal M\succ0$ on the scope ball:
+  the contraction holds" to the Helmholtz $S/A$ two-sub-region form
+  (R0-strict / R0-loss); Discussion paragraph parallel to the existing
+  line-84 accumulation-typing paragraph; four-facet structure stays
+  four (R0-loss is a refinement of the Interior facet, not a peer 5th).
+- **CR Phase 5** — cross-segment tertiary cross-references: Mertikopoulos
+  2017 surface-back to `#disc-dynamic-regime-axis`'s R2 sub-section
+  (precedent for the Piliouras-lab MCC line); cross-layer naming clarity
+  (single-agent ladder R0/R1/R2 vs composite axis R0/R1/R2/R3 — one
+  sentence each in `#result-certificate-existence` + `#disc-dynamic-regime-axis`
+  to prevent future R-letter confusion).
+- **CR Phase 6** (optional) — small naming-clarification cleanup.
+- **CR Phase 7** — `spikes/PROPOSED.md` + `spikes/PROPOSED-ADVANCED.md`
+  updates (Friston RGM as Tier-1; other §2 candidates as Tier-2/Tier-3
+  rows; per-row reciprocal Working-Note backlinks).
+- **CR Phase 8** — spike directory archive.
+
+**Track B coupling (TB1 from the verdict):** Cohen-Hutter-Osborne 2022
+will land as a *fourth charter instance* of Track B's
+`#disc-implementation-impossibility` meta-segment (alongside Gibbard-
+Satterthwaite, Myerson-Satterthwaite, Arrow) with the *agent-side /
+designer-side* organizing axis articulated as the meta-segment's
+structuring principle. The Cohen-instance epistemic tier (theorem-grade
+parity with GS/MS/Arrow vs honestly-marked discussion-grade) is pending
+the Cohen-2022 strengthening spike's result. **Two-placement strategy:**
+Cohen 2022 has its canonical home in `#disc-implementation-impossibility`
+as the charter instance; `#deriv-self-actuation-grounding` cites it back
+as an adjacent agent-side no-go from a different angle, paired with
+Result G′.
+
+**Dependencies:** None to start (CR Phase 0 immediate). Phase 3 + 4 are
+the larger touches; the rest are recognition-tier and run in batched
+commits.
+
+**Estimated cycles:** ~3.7 total per verdict §5.
+
+---
+
 ### Joseph-reserved tail
 
 - **J7** Standalone-paper trajectory on the dynamic-regime axis.
@@ -329,22 +436,36 @@ Assuming sequential execution (no parallel agents):
 5. **Track A A4** — second-pass Undermind for broadened Instance 3.
 6. **Track A Phase 4** — truthful-fix cascade.
 7. **Track A Phase 5** — cross-segment ripple. *(Canon now stable.)*
-8. **Track B** — implementation-impossibility meta-segment + 3 charter
-   instances. ([`implementation-impossibility-meta-segment-plan.md`](implementation-impossibility-meta-segment-plan.md))
-9. **Track E** — novelty-analysis re-pass for rows 05, 08, 11, 14, 21
-   + meta-summary update. (Plan needed; ~1 cycle.)
-10. **Track C** — meta-segment narrative ordering sweep for existing
+8. **Track CR Phases 0-7** — cluster-reconciliation, inserted 2026-05-22
+   per integration-reconciliation verdict. Phase 0 = NEXT-UP/spike-dir
+   commit; Phase 1 = recognition-tier §2 landings (Richens, Virgo,
+   Friston RGM); Phase 2 = §1 recognition-tier cross-refs (CPT Th 8
+   diagnostic, no-spiral converse); Phase 3 = R0-loss rung +
+   Conley citation; Phase 4 = Interior-facet refinement; Phase 5 =
+   tertiary cross-refs + cross-layer naming clarity; Phase 6 = optional
+   cleanup; Phase 7 = PROPOSED.md updates; Phase 8 = archive. Cohen 2022
+   strengthening spike runs parallel in background; result feeds Track B.
+9. **Track B** — implementation-impossibility meta-segment + 4 charter
+   instances (GS/MS/Arrow + Cohen 2022 as agent-side counterpart per
+   TB1; epistemic tier of Cohen-instance pending strengthening-spike
+   result). ([`implementation-impossibility-meta-segment-plan.md`](implementation-impossibility-meta-segment-plan.md))
+10. **Track E** — novelty-analysis re-pass for rows 05, 08, 11, 14, 21
+    + meta-summary update. (Plan needed; ~1 cycle.)
+11. **Track C** — meta-segment narrative ordering sweep for existing
     meta-segments. ([`meta-segment-narrative-ordering-sweep-plan.md`](meta-segment-narrative-ordering-sweep-plan.md))
-11. **Track D** — `#disc-modularity-state-dynamics` (independent cycle;
+12. **Track D** — `#disc-modularity-state-dynamics` (independent cycle;
     can interleave anywhere from step 1 onward).
-12. **Track A Phase 6** — meta-segment promotion of
+13. **Track A Phase 6** — meta-segment promotion of
     `#disc-dynamic-regime-axis`. Gated on Track D.
-13. **Joseph-reserved tail** — J9 then J7 if greenlit.
+14. **Joseph-reserved tail** — J9 then J7 if greenlit.
 
 If you want parallel execution: Track A is fully linear (Phase 0 → 5
-sequential). Track D can run in parallel with A throughout. Track B and
-Track C can run in parallel after Track A Phase 4 lands. Track E
-requires both Track A Phase 4 and Track B to be substantially complete.
+sequential). Track D can run in parallel with A throughout. Track CR
+runs sequentially after Track A Phase 5 (the cluster-reconciliation
+phases are short and benefit from canon stability); the Cohen 2022
+strengthening spike runs in parallel with Track CR in the background.
+Track B and Track C can run in parallel after Track CR substantially
+completes. Track E was folded into Track A Phase 5 per (T3).
 
 ---
 
@@ -447,7 +568,70 @@ The commit messages are the durable handoff trail. Each canon-touching commit na
 
 ---
 
-## 5. Quick links
+## 6. Execution handoff (2026-05-22) — second executor (Claude Opus 4.7 1M)
+
+Joseph 2026-05-22, after the integration-reconciliation verdict landed and the previous executor stopped pre-Track-B: *"You'll be taking over as the executor for track B if you are willing. If you are, you can modify the NEXT-UP with any of these nuances as you go or before you begin, including, generally, inserting a pointer to the current verdict as the next main set of actions before 'track B.'"*
+
+Confirmed willing 2026-05-22. The new executor (Claude Opus 4.7 1M) inherits the §5 hand-off context unchanged — same disposition (holistic and wise; honest with appropriate risk-taking; commit regularly; staged-and-piecewise) — and adds the following nuances + tracking discipline for the inserted Track CR + the modified Track B.
+
+### 6.1 Tactical decisions (second-executor-resolved)
+
+These were established in the conversation that led to this handoff and are now baked-in.
+
+| Decision | Resolution |
+|---|---|
+| **(T8) Track CR insertion point** | Track CR Phases 0-7 run sequentially between Track A Phase 5 and Track B dispatch, per integration-reconciliation verdict §5 ordering. Phase 0 = NEXT-UP edit + spike-directory commit (this commit). |
+| **(T9) Track B fourth charter instance (Cohen 2022)** | Cohen-Hutter-Osborne 2022 lands as a fourth charter instance of `#disc-implementation-impossibility` (alongside GS/MS/Arrow). Two-placement strategy: canonical home in the new meta-segment; back-citation in `#deriv-self-actuation-grounding` paired with Result G′ as adjacent agent-side no-go. The Cohen-instance epistemic tier is *pending* the Cohen-2022 strengthening spike's result. |
+| **(T10) Agent-side / designer-side as Track B organizing axis** | Track B's authoring articulates the *agent-side / designer-side* split (GS/MS/Arrow are designer-side floors on regime-ascent; Cohen 2022 is agent-side impossibility on goal-grounding) as the meta-segment's explicit organizing structure, not as a free-floating observation justifying the 4th instance. The meta-segment exposition runs this axis. |
+| **(T11) Epistemic-status parity discipline** | The four charter instances will be tagged at their honest tiers. GS/MS/Arrow are exact theorems; Cohen 2022's tier is finalized by the strengthening spike result. The meta-segment honestly handles tier difference (per the 2026-05-22 CLAUDE.md principle that *"working-theory at honest tier belongs in canon, not held in spikes"* — applies symmetrically: don't inflate Cohen 2022 to look-like-a-theorem if it doesn't lift; don't hold it out of canon if it lands at conditional-derived or honest discussion-grade either). |
+| **(T12) Cohen-2022 strengthening spike — background, parallel** | Dispatched 2026-05-22 in background; spike directory at `spikes/spike-cohen-2022-strengthening-2026-05-22/`. Runs in parallel with Track CR Phases 1-7. Three completion states: succeed-at (Cohen 2022 → conditional-derived theorem); succeed-beyond (unifies with Result G′); fundamental-no-go (precise structural obstruction). All three are legitimate; verdict feeds Track B Cohen-instance landing. |
+| **(T13) Reconciliation cycle commit cadence** | One commit per CR phase. Phase 3 + 4 are larger touches and check-in to Joseph before commit per §6.2 cadence. The recognition-tier phases (1, 2, 5, 6, 7) batch one commit each but proceed without per-phase pause. |
+
+### 6.2 Updated check-in cadence
+
+Adds to §5.2's existing check-in cadence:
+
+| Checkpoint | Reason for surfacing |
+|---|---|
+| After CR Phase 0 (NEXT-UP edit + spike directory commit) | Confirms the new executor handoff is operational |
+| After CR Phase 1 (recognition-tier §2 landings) | Three small touches across `#def-agent-spectrum`, `04-eli-core/`, and `spikes/PROPOSED.md`; brief surface only |
+| After CR Phase 2 (§1 cross-segment recognition-tier notes) | Two cross-segment notes; brief surface only |
+| Before CR Phase 3 (R0-loss rung in `#result-certificate-existence`) | Most consequential single artifact — extends a ladder in a core canon segment. Worth review before commit. |
+| Before CR Phase 4 (Interior-facet refinement in `#disc-stability-certificate`) | Touches the framework spine; worth review before commit. |
+| After Cohen 2022 strengthening spike returns | Determines Cohen-instance tier for Track B; brief surface of verdict |
+| Before Track B dispatch | New meta-segment authoring + 4 charter instances; major framework move |
+
+### 6.3 Tracking-file discipline (Joseph's 2026-05-22 reminder)
+
+Joseph 2026-05-22: *"just keep your tracking-file discipline high so no assumptions and nuance are irrecoverable if you suddenly compact — a wise disposition regardless."*
+
+This §6 is the durable form. Plus, every commit message names the spike-trail + the specific phase + the finding/decision that drove the change. Plus, the integration-reconciliation verdict + the Cohen-2022 strengthening spike + the §1/§2 cluster spikes carry the substantive content with their own self-contained verdicts.
+
+If the second executor's context compacts mid-Track-CR or mid-Track-B:
+
+1. Read `spikes/NEXT-UP.md` §0 (current state) + §3 (ordering) + §6 (this section).
+2. Read `spikes/spike-integration-reconciliation-2026-05-22/99-verdict.md` §5 (the executable phased plan for CR) + §4 (Track B coupling).
+3. Read `spikes/spike-cohen-2022-strengthening-2026-05-22/99-verdict.md` if it has returned.
+4. Run `git log --oneline -30` for current progress.
+5. Continue from the next un-completed CR phase or Track B phase.
+
+The commit messages + this NEXT-UP + the three verdicts carry the durable trail. No conversation history required.
+
+### 6.4 Held items / open decisions
+
+- **The Cohen-2022 strengthening spike result** — in flight; feeds Track B's Cohen-instance epistemic tier. The Track B executor (this one) will adopt whichever of the three completion states the spike returns; no pre-decision.
+- **The L4 cross-row check** — verdict §3 noted three of four flagged rows (03/10/14) share the Helmholtz $S/A$ structure on the Interior facet; row 17 (credit assignment) connects via the M1 boundary (Sylvester) instead. Track A Phase 5 already did Row 14's catalog rewrite. Phase 5 of Track CR should audit whether the other three rows want a Helmholtz cross-reference at their catalog entries (Joseph-judgment item — surface at the right moment).
+- **PROPOSED.md / PROPOSED-ADVANCED.md naming-cycle interaction** — Track CR Phase 7 will add rows; the broader naming-cycle work (per PRACTICA "Current naming conventions refactor") is independent and runs on its own schedule.
+
+### 6.5 What this hand-off does not do (additions to §5.5)
+
+- **Does not modify Track A's already-committed work.** Phase 0-5 + A4 + the Class 2 sub-typology are landed canon; no retrofit.
+- **Does not modify the prior executor's §5 handoff content.** Adds §6 as a parallel hand-off layer; §5 stays exactly as the prior executor wrote it.
+- **Does not auto-dispatch Track B** before the Cohen-2022 strengthening spike returns. Track B can still be authored *up to* the fourth-charter-instance authoring even before the spike returns; the spike result finalizes only the Cohen-instance tier.
+
+---
+
+## 7. Quick links
 
 **Plans in this navigator:**
 - [`identifiability-floor-integration-plan.md`](identifiability-floor-integration-plan.md) — Track A precursor (already executed; commit `83a8e9b`)
@@ -466,8 +650,16 @@ The commit messages are the durable handoff trail. Each canon-touching commit na
 - [`strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md`](strategic-composition-class-3-attempt-2026-05-21/07-SOLIDIFIED-PLAN.md)
 - [`strategic-composition-class-3-attempt-2026-05-21/99-VERDICT.md`](strategic-composition-class-3-attempt-2026-05-21/99-VERDICT.md)
 
-**Related sibling spike:**
+**Related sibling spikes:**
 - [`spike-identifiability-floor-instance-6-2026-05-21.md`](spike-identifiability-floor-instance-6-2026-05-21.md) — scope extension of Instance 3, content for Track A Phase 3c
+- [`spike-class2-typology-2026-05-22/`](spike-class2-typology-2026-05-22/) — Track A continuation; Class 2 sub-typology landed 2026-05-22
+
+**Track CR (cluster reconciliation, 2026-05-22):**
+- [`spike-integration-reconciliation-2026-05-22/99-verdict.md`](spike-integration-reconciliation-2026-05-22/99-verdict.md) — Track CR plan; phased execution detail in §5
+- [`spike-enrichment-cluster1-2026-05-21/`](spike-enrichment-cluster1-2026-05-21/) — §1 cluster (Conley + Candogan + Letcher + Omidshafiei + Papadimitriou-Piliouras + Balduzzi + CPT 2021) source verdict + L4/L5 spike result
+- [`spike-enrichment-cluster2-2026-05-21/`](spike-enrichment-cluster2-2026-05-21/) — §2 cluster (Mertikopoulos, Richens, Virgo, Cohen 2022, Smithe + Capucci, Friston RGM) synthesis
+- [`spike-cohen-2022-strengthening-2026-05-22/`](spike-cohen-2022-strengthening-2026-05-22/) — Cohen 2022 strengthening spike (in flight; feeds Track B Cohen-instance epistemic tier)
+- Originating source: [`../ref/enrichment-candidates-2026-05-21.md`](../ref/enrichment-candidates-2026-05-21.md)
 
 ---
 
