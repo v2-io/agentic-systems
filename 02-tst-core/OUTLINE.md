@@ -56,7 +56,7 @@ the dual optimization.
 | S | Derived | | [#der-dual-optimization](src/der-dual-optimization.md) | Min comprehension + impl time | draft |
 | S | Derived | | [#der-change-investment](src/der-change-investment.md) | When extra time now pays off | draft |
 | S | Discussion + Hypothesis | | [#der-code-quality-as-observation-infrastructure](src/der-code-quality-as-observation-infrastructure.md) | Code quality $\to U_o \to \eta^\ast \to \mathcal{T}$ | draft |
-| | --GAP-- | | | Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$ | |
+| S | Definition | | --GAP-- (candidate: `#def-developer-tempo-channels`) | Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$ — chronicle-derivable channel separation + probe-class typology + matrix-Loewner weakest-channel bottleneck (see [`TST-IDEAS.md`](../TST-IDEAS.md) §A4) | missing |
 | S | Discussion | | [#impl-developer-agent](src/impl-developer-agent.md) | Chapter additional implications & discussion: AI-maintained-code regime as normal-case for comprehension dominance (#16), persistence-threshold bifurcation from $Q \to U_o \to \eta^\ast \to \mathcal T$ chain (#17), multi-channel developer tempo decomposition | draft |
 
 <!--
@@ -113,7 +113,7 @@ this chapter develops the structural *mechanics* that determine the times.
 | S | Definition | | [#def-system-availability](src/def-system-availability.md) | $\text{MTTF}/(\text{MTTF}+\text{MTTR})$ | draft |
 | S | Scope | | [#scope-continuous-operation](src/scope-continuous-operation.md) | Include $P(\text{fail}) \times T_{\text{recovery}}$ | draft |
 | S | Hypothesis | | [#hyp-causal-discovery-from-git](src/hyp-causal-discovery-from-git.md) | Git as interventional data | draft |
-| | --GAP-- | | | Software persistence: the unmaintainability threshold formalized | |
+| S | Hypothesis | | --GAP-- (candidate: `#hyp-software-unmaintainability-bifurcation`) | Software persistence: the unmaintainability threshold formalized as a bifurcation in $Q \to U_o \to \eta^\ast \to \mathcal T$ chain — G1/G2/G3 code-age bimodality with Ebbinghaus $\tau \approx 20$ days as $U_o$-decay anchor (see [`TST-IDEAS.md`](../TST-IDEAS.md) §A3) | missing |
 | S | Discussion | | [#impl-system-measures](src/impl-system-measures.md) | Chapter additional implications & discussion: coupling/coherence as system-level diagnostic infrastructure, OKR-as-observability-engineering generalization across multi-agent systems (#42), interventional vs associational reading of git (#49), operational availability as persistence-bandwidth-floor analog, domain-generalization transfer theorem candidate (#41), TST volume closes here | draft |
 
 <!--
