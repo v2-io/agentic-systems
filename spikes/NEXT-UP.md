@@ -105,6 +105,7 @@ sequence and where the dependencies are.*
   new (Richens / Virgo / Cohen 2022 / Friston RGM); Track B coupling
   flagged on Cohen 2022 specifically. Phased plan §5 has 9 phases
   (Phase 0-8) for cluster reconciliation; estimated ~3.7 cycles.
+- ✅ **CR Phases 0-2 landed (2026-05-22)** — three commits in sequence: `6f81bde` (Phase 0: NEXT-UP second-executor handoff + integration-reconciliation spike directory commit), `dfb70e8` (Phase 1: Richens 2025 + Virgo 2025 recognition-tier landings in `#def-agent-spectrum` Discussion paragraph + `#scope-eli` Working Note), `0bc3d0f` (Phase 2: CPT 2021 Theorem 8 contrapositive in `#def-control-regret` + no-spiral converse in `#der-adversarial-destabilization` Effects-Spiral corollary). P1.4 (Cohen 2022 in `#deriv-self-actuation-grounding`) skipped per integration-is-replacement — superseded by the larger CR Phase 4b landing.
 - ✅ **Cohen-2022 strengthening spike returned (2026-05-22) — succeed-beyond-claim.** Cohen 2022 lifts to conditional-derived AAT-internal impossibility result under five named premises (R1)–(R5): floor is *exact* (Pearl-Bareinboim 2022 CHT applied to reward-provision protocol — $\mu_{\text{dist}}$ / $\mu_{\text{prox}}$ L1-equivalent on protocol-honoring histories, L2-distinct on $do(\pi^{\text{rp}})$); behavioral corollary is *conditional-derived* (EU-max under (R1)–(R5) selects $\pi^{\text{tamper}}$ with positive measure). **The strengthening unifies Cohen 2022 with Result G′** ( `#deriv-self-actuation-grounding` ) — both reduce to the same structural fact: the value-functional interface $V_{O_t}$ ( `#form-objective-functional` ) is information-narrow in a load-bearing way, with two complementary failure modes (within-model convention-invariance / Result G′; across-model reward-data identifiability / Cohen 2022) producing two complementary terminal grounding routes (adaptive-substrate invariant agent-side / principal-side protocol-commitment). Verdict at `spikes/spike-cohen-2022-strengthening-2026-05-22/99-verdict.md` (242 lines, lint-clean). **Track B disposition: Cohen 2022 is NOT a fourth charter instance**; it lands separately as a sister segment to `#deriv-self-actuation-grounding` (recommended slug per verdict §3.b: `deriv-reward-channel-learning-no-go` or `deriv-goal-learning-grounding` — naming-curation decision pending). The constructive-impossibility-posture taxonomy now has three known clusters: identifiability-floor / implementation-impossibility / **agent-side value-functional-grounding** (the third cluster surfaces because the Cohen 2022 strengthening makes the cluster's second instance explicit alongside Result G′).
 - ✅ **Primary-source verification spike queued** across `#disc-identifiability-floor`,
   `#deriv-regime-marginal-indistinguishability`, `#disc-dynamic-regime-axis`,
@@ -594,7 +595,45 @@ The commit messages + this NEXT-UP + the three verdicts carry the durable trail.
 
 - **Does not modify Track A's already-committed work.** Phase 0-5 + A4 + the Class 2 sub-typology are landed canon; no retrofit.
 - **Does not modify the prior executor's §5 handoff content.** Adds §6 as a parallel hand-off layer; §5 stays exactly as the prior executor wrote it.
-- **Does not auto-dispatch Track B** before the Cohen-2022 strengthening spike returns. Track B can still be authored *up to* the fourth-charter-instance authoring even before the spike returns; the spike result finalizes only the Cohen-instance tier.
+- **Does not auto-dispatch Track B** before the Cohen-2022 strengthening spike returns. *(Update 2026-05-22: spike has returned succeed-beyond-claim; Track B's scope is reverted to 3 charter instances per (T9); the strengthening's content lands separately at CR Phase 4b.)*
+
+### 6.7 Current execution state for hand-off (2026-05-22, second-executor partial-cycle)
+
+The second executor (Claude Opus 4.7 1M) executed CR Phases 0-2 in one session 2026-05-22 then paused for context-budget reasons before the larger Phase 3 / Phase 4 / Phase 4b canon-touching landings. The hand-off here is a *partial-cycle* hand-off within Track CR; the next executor picks up from CR Phase 3.
+
+**What landed (commits in order, 2026-05-22):**
+
+- `6f81bde` Track CR Phase 0 — NEXT-UP second-executor handoff (§6 added) + integration-reconciliation spike directory commit. NEXT-UP §3 ordering updated to insert Track CR Phases 0-7 (later 0-8 after Phase 4b inserted) between Track A Phase 5 and Track B. Track CR per-track summary added to §2.
+- `2cc6372` Cohen-2022 strengthening spike + NEXT-UP §6.1 corrections — strengthening spike returned succeed-beyond-claim (Cohen 2022 lifts to conditional-derived AAT-internal theorem; unifies with Result G′; "agent-side value-functional-grounding" emerges as a sister meta-cluster to `#disc-implementation-impossibility`). §6.1 T9/T10 deleted-and-replaced per integration-is-replacement; T14 added for the new CR Phase 4b (Cohen sister-segment landing). Track B reverted to 3-instance charter (GS/MS/Arrow). Joseph confirmed the sister-segment slug `deriv-reward-channel-learning-no-go` 2026-05-22 (recorded in (T14)).
+- `dfb70e8` Track CR Phase 1 — Richens 2025 (intrinsic-forcing) + Virgo 2025 (observer-relative dual) recognition-tier landings in `#def-agent-spectrum` (one Discussion paragraph); Virgo 2025 Working Note in `#scope-eli`. P1.4 (Cohen 2022) skipped per integration-is-replacement.
+- `0bc3d0f` Track CR Phase 2 — CPT 2021 Theorem 8 contrapositive Discussion paragraph in `#def-control-regret` (finite-passivity diagnostic, qualitative bridge); no-spiral converse paragraph in `#der-adversarial-destabilization`'s Effects-Spiral corollary (CPT rules out the spiral in matrix-fixed FTRL + graphical-constant-sum sub-scope; the state-dependent coupling needed for the spiral itself stays open).
+
+**Next un-completed phase: CR Phase 3 — §1 R0-loss rung extension in `#result-certificate-existence`.** Most consequential single-segment artifact in Track CR. The phase plan is in `spikes/spike-integration-reconciliation-2026-05-22/99-verdict.md` §5 Phase 3 (line 244-260); the mathematical content is in `spikes/spike-enrichment-cluster1-2026-05-21/02-r0-loss-derivation.md` (the §1 spike's derivation; Results 1+2+3 give the three-case spectrum partition + Helmholtz characterization + Conley anchoring). The cross-layer naming-clarity note (single-agent ladder R0/R1/R2 vs `#disc-dynamic-regime-axis` composite axis R0/R1/R2/R3) per the integration-reconciliation verdict is part of Phase 5, not Phase 3. The R0-loss rung lands at tier `exact` (linearized level, matching R0's scope-honesty).
+
+**Phases remaining (~5 cycles of work):** Phase 3 (R0-loss rung, ~1.0 cycle) → Phase 4 (Interior-facet refinement in `#disc-stability-certificate`, ~0.5) → Phase 4b (Cohen 2022 sister-segment `deriv-reward-channel-learning-no-go` + 4-segment ripple, ~1.5) → Phase 5 (tertiary cross-refs + cross-layer naming clarity, ~0.5) → Phase 6 (optional cleanup, ~0.2) → Phase 7 (PROPOSED.md updates, ~0.3) → Phase 8 (archive, ~0.2).
+
+**Checkpoints from §6.2 that still need attention:**
+
+- *Before CR Phase 3* — Joseph review point (most consequential single artifact). The R0-loss rung extends a core canon segment's ladder.
+- *Before CR Phase 4* — Joseph review point (touches framework spine).
+- *Before CR Phase 4b* — Joseph review point (new segment authoring + 4-segment ripple; slug already decided as `deriv-reward-channel-learning-no-go`).
+- *Before Track B dispatch* — original prior-executor checkpoint; now blocked behind Track CR rather than Cohen-strengthening spike.
+
+**Open items for the next executor:**
+
+- **Lint debt acknowledged.** This NEXT-UP file carries ~110 hard-wrap warnings (pre-existing convention from prior executor + my CR additions following same de facto style). A dewrap pass is queued as task #16 (follow-on after Track CR phases land). The next executor should *not* fix this in-line during CR phases; treat it as a separate cleanup cycle.
+- **Phase 5 tertiary cross-refs** include the cross-layer naming-clarity sentences in `#result-certificate-existence` (single-agent R0/R1/R2 ladder) and `#disc-dynamic-regime-axis` (composite R0/R1/R2/R3 axis). One sentence each, mutually citing the other. Per (T9-corrected) and (T10-corrected), the R-letter naming collision is real but resolves cleanly via the cross-layer notes (different objects on different layers — single-agent linearized error space $\mathbb R^n$ vs composite joint-strategy space $\mathcal X^c$).
+- **Phase 4b slug decided.** `deriv-reward-channel-learning-no-go` (Joseph 2026-05-22). The next executor uses this slug when authoring; the naming-curation cycle doesn't need to re-decide.
+- **No outstanding background agents.** Both spike agents (L4/L5 §1 cluster, Cohen 2022 strengthening) have returned and their verdicts committed.
+
+**Durable trail for the next executor's first-read order (revised from §6.6):**
+
+1. `spikes/NEXT-UP.md` §0 + §6 + §6.7 (this section) — current state + tactical decisions + execution status.
+2. `spikes/spike-integration-reconciliation-2026-05-22/99-verdict.md` §5 — the executable Track CR phase plan.
+3. `spikes/spike-cohen-2022-strengthening-2026-05-22/99-verdict.md` — the Cohen strengthening result that adds Phase 4b and reverts Track B to 3-instance.
+4. `git log --oneline --since=2026-05-22` — current commit cursor.
+5. `spikes/spike-enrichment-cluster1-2026-05-21/02-r0-loss-derivation.md` — the math for Phase 3 (the R0-loss derivation).
+6. Continue from CR Phase 3 per the §5 plan + the §6.2 checkpoint cadence.
 
 ---
 
