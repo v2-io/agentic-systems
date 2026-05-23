@@ -6,6 +6,7 @@ depends:
   - deriv-strategic-composition
   - deriv-strategy-proofness-impossibility
   - deriv-bilateral-trade-impossibility
+  - deriv-social-welfare-aggregation-impossibility
 stage: draft
 ---
 
