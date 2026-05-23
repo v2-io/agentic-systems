@@ -4,6 +4,7 @@ type: discussion
 status: discussion-grade
 depends:
   - deriv-strategic-composition
+  - deriv-strategy-proofness-impossibility
 stage: draft
 ---
 
