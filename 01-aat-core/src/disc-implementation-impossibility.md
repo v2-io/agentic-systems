@@ -5,6 +5,7 @@ status: discussion-grade
 depends:
   - deriv-strategic-composition
   - deriv-strategy-proofness-impossibility
+  - deriv-bilateral-trade-impossibility
 stage: draft
 ---
 
