@@ -339,6 +339,8 @@ end
 def run_lualatex(stage, stem, vendor_extra: nil)
   texinputs = vendor_extra ? "#{stage}:#{vendor_extra}:" : "#{stage}:"
   env = { 'TEXINPUTS' => texinputs }
+  pdf_path = stage / "#{stem}.pdf"
+  log_path = stage / "#{stem}.log"
   cmd = [
     'lualatex',
     '-interaction=nonstopmode',
@@ -349,13 +351,66 @@ def run_lualatex(stage, stem, vendor_extra: nil)
   # Two passes so \cref / \ref / \tableofcontents resolve. Run with CWD =
   # repo root so fontspec's `Path = ./mono/<target>/fonts/...` relative
   # paths resolve to repo-vendored font files (Garamond Premier Pro, etc.).
+  #
+  # Failure detection is strict and runs on every pass — three independent
+  # signals, any one trips:
+  #   1. process exit status non-zero (TeX `!` errors + LuaTeX Lua-side
+  #      aborts both produce this);
+  #   2. " ==> Fatal error" / "no output PDF file produced" in the .log
+  #      (canonical LuaTeX last-words signature — caught even when log-line
+  #      wrapping defeats the simple :line: regex elsewhere);
+  #   3. PDF absent.
+  # Stale PDFs from prior successful builds are deleted before each pass
+  # so signal (3) means "this run produced nothing," not "a previous run
+  # left something behind."
   2.times do |pass|
+    FileUtils.rm_f(pdf_path)
     _out, status = Open3.capture2e(env, *cmd, chdir: ROOT_DIR.to_s)
-    next if (stage / "#{stem}.pdf").exist?
+    fatal_excerpt = lualatex_fatal_excerpt(log_path)
+    next if status.success? && pdf_path.exist? && fatal_excerpt.nil?
 
-    abort "lualatex (pass #{pass + 1}) produced no PDF for #{stem}. " \
-          "See #{stage}/#{stem}.log for the trace."
+    abort_lualatex_failure(stem, pass, status, pdf_path, log_path, fatal_excerpt)
   end
+end
+
+# Scan the .log for LuaTeX's canonical fatal-error signature. Returns the
+# matching log excerpt (a window of context around the marker) or nil if
+# absent. Catches the case where LuaTeX exits non-zero AND the rarer case
+# where the log names a fatal error even though the process happens to
+# exit zero — both should abort the build.
+def lualatex_fatal_excerpt(log_path)
+  return nil unless log_path.exist?
+  lines = log_path.readlines
+  idx = lines.index do |l|
+    l.include?('==> Fatal error occurred') ||
+      l.include?('no output PDF file produced')
+  end
+  return nil unless idx
+  lo = [idx - 10, 0].max
+  hi = [idx + 2, lines.size - 1].min
+  lines[lo..hi].join
+end
+
+def abort_lualatex_failure(stem, pass, status, pdf_path, log_path, fatal_excerpt)
+  pdf_state =
+    if pdf_path.exist?
+      "partial (#{pdf_path.size} bytes — pages flushed before the abort)"
+    else
+      'none'
+    end
+  msg = +"lualatex (pass #{pass + 1}) failed for #{stem}.\n"
+  msg << "  exit:  #{status.exitstatus.inspect}\n"
+  msg << "  pdf:   #{pdf_state}\n"
+  msg << "  log:   #{log_path.relative_path_from(ROOT_DIR)}\n"
+  if fatal_excerpt
+    msg << "\nLuaTeX fatal-error excerpt:\n"
+    msg << fatal_excerpt.lines.map { |l| "  #{l}" }.join
+  else
+    msg << "\nNo `==> Fatal error` marker in the log — the failure is a TeX-side\n"
+    msg << "error (likely `!` line) that nonstopmode swallowed. Search the log for\n"
+    msg << "`^! ` / `:\\d+: ! ` to find it.\n"
+  end
+  abort msg
 end
 
 def copy_outputs(spec, target_spec, stage, stem)
