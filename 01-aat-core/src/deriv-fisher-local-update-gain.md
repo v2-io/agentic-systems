@@ -25,7 +25,7 @@ The same scalar $\eta^\ast = U_M/(U_M + U_o)$ falls out of three independent str
 
 *[Definition (Fisher-local regime, conditions (R1)–(R3))]*
 
-Let $\theta \in \mathbb R^d$ parameterize the agent's model and $\theta_t$ be the current point estimate (mode of the prior $\pi_0$, or center of expansion). Three regime conditions:
+Let $\theta \in \mathbb{R}^d$ parameterize the agent's model and $\theta_t$ be the current point estimate (mode of the prior $\pi_0$, or center of expansion). Three regime conditions:
 
 - **(R1) Smooth log-likelihood admitting non-degenerate local quadratic expansion.** $\log \pi_0$ and $\log p(o \mid \cdot)$ are $C^3$ in a neighborhood of $\theta_t$, with prior precision $H_M := -\nabla^2 \log \pi_0(\theta_t)$ and observed information $H_L := -\nabla^2 \log p(o \mid \theta) \big\vert_{\theta_t}$ satisfying $H_M + H_L \succ 0$ (joint positive-definiteness; see §"Boundary admissibility" for why this is weaker than $H_M \succ 0$ and $H_L \succ 0$ both).
 - **(R2) First-order-in-step-size regime.** The posterior update $\Delta\theta = \theta_{t+1} - \theta_t$ is small enough that $O(\lVert\Delta\theta\rVert^3)$ terms in the quadratic expansion are negligible compared to the quadratic terms.
@@ -35,7 +35,7 @@ Under (R1)–(R3), the local log-posterior is
 
 $$\log p(\theta \mid o) = \mathrm{const} + s^T(\theta - \theta_t) - \tfrac{1}{2}(\theta - \theta_t)^T (H_M + H_L)(\theta - \theta_t) + O(\lVert\theta - \theta_t\rVert^3),$$
 
-where $s := \nabla_\theta \log p(o \mid \theta) \big\vert_{\theta_t}$ is the score. The posterior is approximately $\mathcal N(\theta^\star, (H_M + H_L)^{-1})$ with mean shift
+where $s := \nabla_\theta \log p(o \mid \theta) \big\vert_{\theta_t}$ is the score. The posterior is approximately $\mathcal{N}(\theta^\star, (H_M + H_L)^{-1})$ with mean shift
 
 *[Derived (posterior-mean-shift)]*
 
@@ -53,9 +53,9 @@ $$U_M := H_M^{-1}, \qquad U_o := H_L^{-1}$$
 
 The **natural gradient** of the log-likelihood at $\theta_t$ in the Fisher metric is
 
-$$\tilde\nabla \log p(o \mid \theta_t) := \mathcal I(\theta_t)^{-1} s.$$
+$$\tilde\nabla \log p(o \mid \theta_t) := \mathcal{I}(\theta_t)^{-1} s.$$
 
-For a single observation in the Fisher-local regime, $\mathcal I(\theta_t) = H_L$ up to the observed-vs-expected information distinction (standard under (R1)+regularity); the derivations below use $H_L$ directly as the Fisher.
+For a single observation in the Fisher-local regime, $\mathcal{I}(\theta_t) = H_L$ up to the observed-vs-expected information distinction (standard under (R1)+regularity); the derivations below use $H_L$ directly as the Fisher.
 
 *[Derived (gain-decomposition)]*
 
@@ -91,7 +91,7 @@ The minimal regime condition is $H_M + H_L \succ 0$, with $U_M/(U_M + U_o)$ defi
 
 When the quadratic expansion in (R1) holds *globally* — not just locally — the derivation gives $\eta^\ast$ without any expansion error. Two canonical cases:
 
-- **Linear-Gaussian (Kalman).** Prior $\mathcal N(\theta_t, U_M)$, likelihood $\mathcal N(o; H \theta, U_o)$ with linear observation operator $H$: the log-posterior is exactly quadratic. The scalar Kalman gain $K = U_M H^T (H U_M H^T + U_o)^{-1}$ collapses to $\eta^\ast = U_M/(U_M + U_o)$ in the scalar case (Kalman 1960; Bishop 2006 §3.3). Exact globally.
+- **Linear-Gaussian (Kalman).** Prior $\mathcal{N}(\theta_t, U_M)$, likelihood $\mathcal{N}(o; H \theta, U_o)$ with linear observation operator $H$: the log-posterior is exactly quadratic. The scalar Kalman gain $K = U_M H^T (H U_M H^T + U_o)^{-1}$ collapses to $\eta^\ast = U_M/(U_M + U_o)$ in the scalar case (Kalman 1960; Bishop 2006 §3.3). Exact globally.
 - **Conjugate Bayesian (Beta-Bernoulli, Dirichlet-multinomial, Gaussian-Gaussian, exponential-family natural-parameter conjugacy).** Natural-gradient VI is the exact posterior update at step size $1$ for conjugate families (Khan-Lin 2017 conjugate-computation variational inference). The Fisher-local expansion is globally exact in natural-parameter coordinates; $\eta^\ast = U_M/(U_M + U_o)$ holds exactly with $U_M, U_o$ read from the conjugate sufficient-statistic precision counts.
 
 For general smooth models, the natural-gradient invariance theorem of Amari 1998 guarantees that the natural gradient is parameterization-invariant; the Fisher-local quadratic expansion is the order at which the natural gradient and the exact posterior agree to first order in step size.
@@ -129,9 +129,9 @@ The agreement is not coincidence: the Fisher-local regime *is* the regime where 
 
 **Special case of `#deriv-adaptive-gain-dynamics`' meta-gain framework.** The gain operator $K = (H_M + H_L)^{-1} H_L$ is a *deterministic function of the current state* — it depends on the prior covariance $H_M^{-1}$ (part of the agent's $M_t$ state) and on the observation Fisher $H_L$ (depends on $\theta_t$ and $o$). It is therefore the **deterministic-meta-gain** special case of `#deriv-adaptive-gain-dynamics`' (MG-1)–(MG-4) machinery: the meta-gain is determined by the primary state rather than independently learned. All four meta-gain conditions are satisfied trivially (symmetric-positive-definite $K$ on the interior; smoothness for exponential families; bounded primary-meta coupling). Resolving the epistemic-opacity question that `#def-observation-function` axiomatizes — i.e., the agent does not know $U_o$ a priori and must estimate it from its own mismatch sequence — is one level up: it adds the Mehra-style meta-channel that `#deriv-adaptive-gain-dynamics` treats as its primary instance.
 
-**Downstream tempo and persistence machinery.** `#emp-update-gain`'s Discussion §"Connection to adaptive tempo" names $\mathcal T = \nu \cdot \eta^\ast$. The derivation here promotes $\eta^\ast$'s tier from `empirical / robust-qualitative` (over the cross-domain validity tail — RL, PID, software-developer) to `derived (conditional on Fisher-local regime)` for the Kalman / conjugate / natural-gradient core. The tempo product $\mathcal T = \nu \cdot \eta^\ast$ inherits the regime distinction directly; the persistence-condition machinery (`#result-persistence-condition`, `#result-sector-condition-stability`) and the adaptive-tempo / aporia diagnostics (`#def-adaptive-tempo`, `#def-aporia`) all gain the tighter $\eta^\ast$ exactness statement in their Fisher-local instances. The qualitative direction claim and the failure-mode framing (gain-collapse → epistrophe failure) survive unchanged outside the Fisher-local regime.
+**Downstream tempo and persistence machinery.** `#emp-update-gain`'s Discussion §"Connection to adaptive tempo" names $\mathcal{T} = \nu \cdot \eta^\ast$. The derivation here promotes $\eta^\ast$'s tier from `empirical / robust-qualitative` (over the cross-domain validity tail — RL, PID, software-developer) to `derived (conditional on Fisher-local regime)` for the Kalman / conjugate / natural-gradient core. The tempo product $\mathcal{T} = \nu \cdot \eta^\ast$ inherits the regime distinction directly; the persistence-condition machinery (`#result-persistence-condition`, `#result-sector-condition-stability`) and the adaptive-tempo / aporia diagnostics (`#def-adaptive-tempo`, `#def-aporia`) all gain the tighter $\eta^\ast$ exactness statement in their Fisher-local instances. The qualitative direction claim and the failure-mode framing (gain-collapse → epistrophe failure) survive unchanged outside the Fisher-local regime.
 
-**Tensor adaptive tempo connection.** The matrix gain operator $K$ is the per-coordinate primitive for tensor-valued adaptive tempo: $\mathcal T = \nu \cdot K$ as a matrix product, with the existing scalar $\mathcal T = \nu \cdot \eta^\ast$ recovered in the shared-eigenbasis limit. See `#def-adaptive-tempo`'s Tensor extension.
+**Tensor adaptive tempo connection.** The matrix gain operator $K$ is the per-coordinate primitive for tensor-valued adaptive tempo: $\mathcal{T} = \nu \cdot K$ as a matrix product, with the existing scalar $\mathcal{T} = \nu \cdot \eta^\ast$ recovered in the shared-eigenbasis limit. See `#def-adaptive-tempo`'s Tensor extension.
 
 ## Working Notes
 

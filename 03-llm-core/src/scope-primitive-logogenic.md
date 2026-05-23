@@ -20,11 +20,11 @@ The chat-paradigm baseline: a logogenic agent operating without scaffolding, mul
 - **Single-pass cognition.** Each entity-environment exchange consists of one forward pass through the LLM substrate. No multi-step inner loop wraps the inference.
 - **Stateless across session boundaries.** $M_t$ is reconstituted from prompt-only context at each session start. No persistent external store carries $M_t$ forward; #obs-context-turnover applies at full strength (effectively 100% reset).
 - **No instrumental action channel.** The agent's outputs are textual responses; tool use, if available at all, is at most one round-trip per response and does not extend the action channel into Pearl-Level-2 environment intervention.
-- **Sandbox-or-deployment in either case but trajectory-forkable.** The session's trajectory $\mathcal C_t$ is forkable by harness operations (resets, replay, parallel sessions) — see #scope-agent-identity composed with the loop-as-causal-engine result.
+- **Sandbox-or-deployment in either case but trajectory-forkable.** The session's trajectory $\mathcal{C}_t$ is forkable by harness operations (resets, replay, parallel sessions) — see #scope-agent-identity composed with the loop-as-causal-engine result.
 
 ## Epistemic Status
 
-**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Section II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal A$ since no scaffolding mitigates ambiguity); sandbox ceiling (Pearl Level-2 unavailable since trajectory is forkable); statelessness-induced empathy result ( #obs-backward-inference-empathy).
+**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Section II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal{A}$ since no scaffolding mitigates ambiguity); sandbox ceiling (Pearl Level-2 unavailable since trajectory is forkable); statelessness-induced empathy result ( #obs-backward-inference-empathy).
 
 **Max attainable status:** definition with conditional consequences. The scope itself is exact; the *applicability* of specific AAT results within it is a downstream question per result.
 
@@ -40,7 +40,7 @@ This sub-scope is what the field commonly imagines when it says "LLM agent" — 
 
 The framework's posture toward this sub-scope is *characterizing* rather than *dismissive*. Several substantive claims apply directly:
 
-- The bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) applies at full strength: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot \mathcal A$ with $\kappa \approx 1$ and no scaffolding-mediated reduction of $\mathcal A$ (the goal-resolvable residual uncertainty in observation given context).
+- The bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) applies at full strength: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot \mathcal{A}$ with $\kappa \approx 1$ and no scaffolding-mediated reduction of $\mathcal{A}$ (the goal-resolvable residual uncertainty in observation given context).
 - The sandbox ceiling ( #scope-agent-identity composed with the closed-loop-Pearl-Level-2 result) applies because primitive-logogenic trajectories are forkable by definition.
 - 100% context turnover ( #obs-context-turnover) characterizes the session-boundary discontinuity.
 - Backward-inference empathy ( #obs-backward-inference-empathy) is forced by the statelessness — primitive logogenic agents are *trained for* ToM by their architectural condition, not despite it.
@@ -65,6 +65,6 @@ The transition to §03.II (scaffolded) is what every practical "agentic system" 
 
 **Open questions for verification:**
 - Where exactly is the boundary between primitive and scaffolded? Does a single tool call count as scaffolding? Probably yes (it adds external action channel); but a single "thinking block" probably does not (it's still single-pass).
-- Can the bias bound be measured empirically for primitive-logogenic agents? Direct empirical validation of the $\kappa \cdot \mathcal A$ product would calibrate the bound's tightness.
+- Can the bias bound be measured empirically for primitive-logogenic agents? Direct empirical validation of the $\kappa \cdot \mathcal{A}$ product would calibrate the bound's tightness.
 
 **Promotion-blocking:** dependencies #scope-channel-collapse just landed; #scope-logogenic-agent at draft; #obs-context-turnover at draft. Could promote together as a cluster.

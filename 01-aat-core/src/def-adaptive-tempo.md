@@ -35,7 +35,7 @@ Under the Fisher-local invariance regime ( #deriv-fisher-local-update-gain), the
 
 $$\mathcal{T} = \sum_k \nu^{(k)} \cdot K^{(k)}$$
 
-— matrix-valued, with per-direction rates given by the eigenvalues of $\sum_k \nu^{(k)} K^{(k)}$ in the appropriate basis. The scalar form $\mathcal T = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$ is recovered in the **shared-eigenbasis collapse**: when all $H_M, \{H_L^{(k)}\}$ commute (always in 1-D; under (PI)/Čencov along the natural-gradient direction in higher dimensions), each $K^{(k)}$ acts as the eigenvalue $\eta^{(k)\ast} = U_M/(U_M + U_o^{(k)})$ on the shared natural-gradient direction and the matrix sum collapses to a scalar.
+— matrix-valued, with per-direction rates given by the eigenvalues of $\sum_k \nu^{(k)} K^{(k)}$ in the appropriate basis. The scalar form $\mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$ is recovered in the **shared-eigenbasis collapse**: when all $H_M, \{H_L^{(k)}\}$ commute (always in 1-D; under (PI)/Čencov along the natural-gradient direction in higher dimensions), each $K^{(k)}$ acts as the eigenvalue $\eta^{(k)\ast} = U_M/(U_M + U_o^{(k)})$ on the shared natural-gradient direction and the matrix sum collapses to a scalar.
 
 The matrix gain operator $K^{(k)}$ is the per-coordinate primitive: in anisotropic regimes where the prior and likelihoods do not share an eigenbasis (or where different channels pin down different directions), the tensor form preserves the per-direction information that the scalar form averages away.
 
@@ -43,7 +43,7 @@ The matrix gain operator $K^{(k)}$ is the per-coordinate primitive: in anisotrop
 
 This is a *definition*. It names the quantity that characterizes an agent's total corrective capacity, combining loop speed ($\nu$) and epistemic quality ($\eta^\ast$). The definition itself is not a truth-claim; the substantive claims are in the results that use it ( #result-persistence-condition, #result-adversarial-tempo-advantage).
 
-**Scope of scalar vs. tensor forms.** The scalar form is exact in the isotropic / shared-eigenbasis / nonredundant-channel case and is what downstream results currently invoke. The tensor form is the natural object under anisotropic gains, Fisher-whitened updates ( #deriv-fisher-whitened-update-rule), LMI causal-IB ( #deriv-causal-ib-lmi), and per-dimension persistence ( #result-per-dimension-persistence) — regimes where scalar tempo overestimates effective adaptation along weak dimensions. Downstream results that invoke scalar $\mathcal T$ implicitly assume scalar / isotropic / nonredundant-channel scope; promoting them to the tensor form under the appropriate anisotropic regime is a follow-on cycle item flagged in `TODO.md`.
+**Scope of scalar vs. tensor forms.** The scalar form is exact in the isotropic / shared-eigenbasis / nonredundant-channel case and is what downstream results currently invoke. The tensor form is the natural object under anisotropic gains, Fisher-whitened updates ( #deriv-fisher-whitened-update-rule), LMI causal-IB ( #deriv-causal-ib-lmi), and per-dimension persistence ( #result-per-dimension-persistence) — regimes where scalar tempo overestimates effective adaptation along weak dimensions. Downstream results that invoke scalar $\mathcal{T}$ implicitly assume scalar / isotropic / nonredundant-channel scope; promoting them to the tensor form under the appropriate anisotropic regime is a follow-on cycle item flagged in `TODO.md`.
 
 ## Discussion
 

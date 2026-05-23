@@ -27,13 +27,13 @@ $$\eta^\ast = \frac{U_M}{U_M + U_o}$$
 
 Multiply gain by the rate at which observations arrive ($\nu$, the event rate), sum across the agent's channels, and you have adaptive tempo:
 
-$$\mathcal T = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$$
+$$\mathcal{T} = \sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$$
 
 Tempo is the rate at which the agent turns observations into useful corrections — speed times quality. It is the chapter's central object and the load-bearing capacity variable for the rest of the framework. Every persistence threshold in Chapter 4 will have tempo on the left-hand side, and every adversarial-coupling result in Part III will depend on tempo ratios.
 
 The chapter closes with the linear-correction ODE as a heuristic preview. Under linear correction and bounded environmental disturbance, the steady-state mismatch is
 
-$$\Vert\delta\Vert_{ss} = \rho / \mathcal T$$
+$$\Vert\delta\Vert_{ss} = \rho / \mathcal{T}$$
 
 a ratio: how fast the world is changing, divided by how fast the agent corrects. Mismatch stays bounded when the agent corrects faster than reality drifts. This is the persistence condition in its simplest form; Chapter 4 generalizes it to nonlinear correction under the sector condition, where the result has the same shape.
 

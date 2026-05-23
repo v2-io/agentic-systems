@@ -33,7 +33,7 @@ For (A2)–(A4) of `#form-composition-closure` to hold at the wrapper level, the
 
 *[Conditions (wrapper-design)]*
 
-**(D-A2)** The wrapper commits to a prediction map $\hat o_W : \mathcal X_M \times \mathcal A_W \to \mathcal O_W$ so that macro-mismatch $\delta_W = o_W - \hat o_W$ is well-defined.
+**(D-A2)** The wrapper commits to a prediction map $\hat o_W : \mathcal{X}_M \times \mathcal{A}_W \to \mathcal{O}_W$ so that macro-mismatch $\delta_W = o_W - \hat o_W$ is well-defined.
 
 **(D-A3)** $f_M$ supports a gain interpretation per `#def-adaptive-tempo`. Holds for Tier-1 belief-update maps — Bayesian on exponential families, gradient on strongly convex losses, linear-PD with bounded gain. Tier-2/3 cases inherit the corresponding tier-restricted scope from `#deriv-sector-condition`.
 
@@ -57,7 +57,7 @@ Under (D-A4), the wrapper inherits `#result-sector-persistence-template` at the 
 
 The wrapper makes $K \geq 2$ component calls per macro-step (more in richer wrapper designs). If the component's nominal call rate is $\nu_A$, the wrapper-level macro-update rate is $\nu_W = \nu_A / K$. By `#der-tempo-composition`,
 
-$$\mathcal T_W \leq \mathcal T_A^\text{nominal} - C_\text{coord}^\text{wrap}$$
+$$\mathcal{T}_W \leq \mathcal{T}_A^\text{nominal} - C_\text{coord}^\text{wrap}$$
 
 where $C_\text{coord}^\text{wrap}$ is the coordination overhead specific to the wrapping construction — the tempo consumed by maintaining the wrapper's $(M_W, G_W)$ state separately from the component's internal state. This is the cost of class coercion paid in tempo: the same Brooks's-Law form whose general statement is in `#der-tempo-composition`. Adding state-management infrastructure reduces realized external tempo even when the underlying component's compute rate is unchanged.
 

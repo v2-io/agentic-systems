@@ -35,7 +35,7 @@ In both readings, $\sum_i \lambda(F_i) = \hat n_{\text{future}}$ (an expectation
 
 This is the general form of #der-dual-optimization. Where dual-optimization uses a single "typical future feature" $F_{\text{typical}}$ with count $\hat n_{\text{future}}$, this decomposes that count across feature types:
 
-$$\sum_i \lambda(F_i) \cdot t(F_i \mid C) \;=\; \hat n_{\text{future}} \cdot \mathbb E_{F \sim \lambda/\hat n_{\text{future}}}\big[\,t(F \mid C)\,\big]$$
+$$\sum_i \lambda(F_i) \cdot t(F_i \mid C) \;=\; \hat n_{\text{future}} \cdot \mathbb{E}_{F \sim \lambda/\hat n_{\text{future}}}\big[\,t(F \mid C)\,\big]$$
 
 Dual-optimization is recovered in the single-type limit where $\lambda$ concentrates on $F_{\text{typical}}$ with mass $\hat n_{\text{future}}$. The integration gains information whenever feature types have heterogeneous cost profiles: heavy-tailed costs on rare feature types, different alignment sensitivities per type, or regime-dependent proximity structure.
 

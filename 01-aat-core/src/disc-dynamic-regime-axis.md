@@ -32,24 +32,24 @@ Following the order of progressively weakening Lyapunov certificate:
 
 | Tier | Fixed-point structure | Lyapunov certificate | Macro-state type | Convergence rate | Scope route entry |
 |---|---|---|---|---|---|
-| **R0 Contraction** | Unique attracting $X^\ast \in \mathcal X^c$ | Joint Lyapunov $V$, global or basin-restricted | State-variable $X^\ast$ | Exponential at $\alpha_{\text{joint}}$ | C-i / C-ii / C-iii |
-| **R1 Equilibrium ($\alpha'$)** | Fixed-point set $\mathcal E \subset \mathcal X^c$, locally attracting | Potential $\Phi$ (Monderer-Shapley) or weighted-norm (Rosen) | Fixed-point object $\mathcal E$ | Exponential near $\mathcal E$ at $\alpha_{\text{joint}}^{(j)}$ | C-iv + potential/monotone |
-| **R2 Cyclic-distributional ($\beta'$)** | No pure-strategy fixed point, or saddle-only | None on $\mathcal X^c$; doubling-trick CCE on $\Delta(\mathcal X^c)$ | Distributional object $\mu \in \Delta(\mathcal X^c)$ | Polynomial $O(1/\sqrt T)$ | C-iv without potential/monotone |
-| **R3 Mean-field equilibrium** | Distributional fixed point in measure space | MFG-specific (Lasry-Lions monotonicity) | Distribution-on-population $\rho \in \mathcal P(\mathcal A)$ | MFG-specific, often exponential | Population-scope gap |
+| **R0 Contraction** | Unique attracting $X^\ast \in \mathcal{X}^c$ | Joint Lyapunov $V$, global or basin-restricted | State-variable $X^\ast$ | Exponential at $\alpha_{\text{joint}}$ | C-i / C-ii / C-iii |
+| **R1 Equilibrium ($\alpha'$)** | Fixed-point set $\mathcal{E} \subset \mathcal{X}^c$, locally attracting | Potential $\Phi$ (Monderer-Shapley) or weighted-norm (Rosen) | Fixed-point object $\mathcal{E}$ | Exponential near $\mathcal{E}$ at $\alpha_{\text{joint}}^{(j)}$ | C-iv + potential/monotone |
+| **R2 Cyclic-distributional ($\beta'$)** | No pure-strategy fixed point, or saddle-only | None on $\mathcal{X}^c$; doubling-trick CCE on $\Delta(\mathcal{X}^c)$ | Distributional object $\mu \in \Delta(\mathcal{X}^c)$ | Polynomial $O(1/\sqrt T)$ | C-iv without potential/monotone |
+| **R3 Mean-field equilibrium** | Distributional fixed point in measure space | MFG-specific (Lasry-Lions monotonicity) | Distribution-on-population $\rho \in \mathcal{P}(\mathcal{A})$ | MFG-specific, often exponential | Population-scope gap |
 
 Each tier inherits the tier-internal classification of its closest existing AAT machinery — R0's Tier 1 / Tier 2 / Tier 3 sub-classification from `#disc-separability-pattern`'s Contraction ladder; R1's potential / monotone / general sub-tier per `#deriv-strategic-composition`'s sub-scope $\alpha'$; R2's regret-bound sub-classification per Hart-Mas-Colell 2000; R3's MFG-uniqueness sub-classification per Lasry-Lions 2007.
 
 ### R0 — Contraction-regime
 
-The joint dynamics admit a unique attracting fixed point $X^\ast \in \mathcal X^c$ and a Lyapunov function $V: \mathcal X^c \to \mathbb R_{\geq 0}$ with $V(X^\ast) = 0$, $V(X) \gt 0$ for $X \neq X^\ast$, such that
+The joint dynamics admit a unique attracting fixed point $X^\ast \in \mathcal{X}^c$ and a Lyapunov function $V: \mathcal{X}^c \to \mathbb{R}_{\geq 0}$ with $V(X^\ast) = 0$, $V(X) \gt 0$ for $X \neq X^\ast$, such that
 
-$$\frac{d}{dt}\, V(X_t^c - X^\ast) \;\leq\; -\alpha_{\text{joint}} \cdot d(X_t^c,\, X^\ast)^2 \qquad \forall\, X_t^c \in \mathcal B(X^\ast)$$
+$$\frac{d}{dt}\, V(X_t^c - X^\ast) \;\leq\; -\alpha_{\text{joint}} \cdot d(X_t^c,\, X^\ast)^2 \qquad \forall\, X_t^c \in \mathcal{B}(X^\ast)$$
 
-for some basin $\mathcal B(X^\ast)$ and contraction rate $\alpha_{\text{joint}} \gt 0$. Macro-state $X^\ast \in \mathcal X^c$ is a state-variable. Composites satisfying scope routes C-i (shared composite objective), C-ii (hierarchical derivation), or C-iii (mutual-benefit alignment) under matched-Tier sub-agents per `#deriv-critical-mass-composition` land here. The classical AAT machinery applies: `#result-sector-persistence-template`, `#form-composition-closure` bridge lemma, `#der-team-persistence`, `#der-tempo-composition`.
+for some basin $\mathcal{B}(X^\ast)$ and contraction rate $\alpha_{\text{joint}} \gt 0$. Macro-state $X^\ast \in \mathcal{X}^c$ is a state-variable. Composites satisfying scope routes C-i (shared composite objective), C-ii (hierarchical derivation), or C-iii (mutual-benefit alignment) under matched-Tier sub-agents per `#deriv-critical-mass-composition` land here. The classical AAT machinery applies: `#result-sector-persistence-template`, `#form-composition-closure` bridge lemma, `#der-team-persistence`, `#der-tempo-composition`.
 
 ### R1 — Equilibrium-regime ($\alpha'$)
 
-The joint dynamics admit a fixed-point set $\mathcal E = \{X^\ast_j\}_{j \in J}$ with $\lvert J \rvert \geq 1$ where each $X^\ast_j$ is a Nash equilibrium. Lyapunov-on-deviation holds locally near each equilibrium under either potential-game structure (Monderer-Shapley 1996) or monotone-game structure (Rosen 1965 diagonal strict concavity). The macro-state is a fixed-point object — either a single Nash $X^\ast$ if unique, or the equilibrium set if multiple. Composites satisfying scope route C-iv with potential/monotone structure land here; `#deriv-strategic-composition`'s Cournot worked example is the canonical instantiation. The sector-persistence template transfers with the joint potential's curvature (potential case) or the joint Jacobian's symmetric part (monotone case) supplying $\alpha_{\text{joint}}^{(j)}$ at each equilibrium.
+The joint dynamics admit a fixed-point set $\mathcal{E} = \{X^\ast_j\}_{j \in J}$ with $\lvert J \rvert \geq 1$ where each $X^\ast_j$ is a Nash equilibrium. Lyapunov-on-deviation holds locally near each equilibrium under either potential-game structure (Monderer-Shapley 1996) or monotone-game structure (Rosen 1965 diagonal strict concavity). The macro-state is a fixed-point object — either a single Nash $X^\ast$ if unique, or the equilibrium set if multiple. Composites satisfying scope route C-iv with potential/monotone structure land here; `#deriv-strategic-composition`'s Cournot worked example is the canonical instantiation. The sector-persistence template transfers with the joint potential's curvature (potential case) or the joint Jacobian's symmetric part (monotone case) supplying $\alpha_{\text{joint}}^{(j)}$ at each equilibrium.
 
 ### R2 — Cyclic-distributional-regime ($\beta'$)
 
@@ -57,9 +57,9 @@ The joint dynamics admit no fixed point in pure-strategy space, or fixed points 
 
 $$\frac{1}{T} \sum_{t=1}^T \mathbb{1}\{\pi^c_t \in \mathrm{CCE}\} \;\to\; 1 \qquad \text{at rate } O(1/\sqrt T).$$
 
-The macro-state is a distributional object — a measure $\mu \in \Delta(\mathcal X^c)$ supported on the CCE set. Composites satisfying scope route C-iv without potential or monotone structure land here. AAT in R2 predicts only set-convergence of empirical play to CCE; it cannot predict short-run trajectory, per-sub-agent mismatch convergence, or equilibrium selection. This is the framework's honest $\beta'$ scope limit — a regime limit, not an architectural limit, distinct from any architectural-class restriction.
+The macro-state is a distributional object — a measure $\mu \in \Delta(\mathcal{X}^c)$ supported on the CCE set. Composites satisfying scope route C-iv without potential or monotone structure land here. AAT in R2 predicts only set-convergence of empirical play to CCE; it cannot predict short-run trajectory, per-sub-agent mismatch convergence, or equilibrium selection. This is the framework's honest $\beta'$ scope limit — a regime limit, not an architectural limit, distinct from any architectural-class restriction.
 
-**Cross-layer linearization fingerprint at saddle-only Nash.** R2's saddle-only Nash equilibria have a single-agent linearization-spectrum fingerprint of imaginary-axis-semisimple — the *R0-loss* rung of `#result-certificate-existence`'s single-agent certificate-strength ladder. The two R-letter ladders are layered, not collided: this segment's R0/R1/R2/R3 classifies composite joint-dynamics on $\mathcal X^c$, while `#result-certificate-existence`'s R0-loss/R0-strict/R1/R2 classifies single-agent certificate-strength on the linearized error space $\mathbb R^n$. The bridge is via composition (the joint Jacobian at R2's saddle-Nash linearizes to the antisymmetric R0-loss-at-$\mathcal M = I$ sub-case); the letters are deliberately reused to mark the bridge, not by collision.
+**Cross-layer linearization fingerprint at saddle-only Nash.** R2's saddle-only Nash equilibria have a single-agent linearization-spectrum fingerprint of imaginary-axis-semisimple — the *R0-loss* rung of `#result-certificate-existence`'s single-agent certificate-strength ladder. The two R-letter ladders are layered, not collided: this segment's R0/R1/R2/R3 classifies composite joint-dynamics on $\mathcal{X}^c$, while `#result-certificate-existence`'s R0-loss/R0-strict/R1/R2 classifies single-agent certificate-strength on the linearized error space $\mathbb{R}^n$. The bridge is via composition (the joint Jacobian at R2's saddle-Nash linearizes to the antisymmetric R0-loss-at-$\mathcal{M} = I$ sub-case); the letters are deliberately reused to mark the bridge, not by collision.
 
 ### R3 — Mean-field-equilibrium-regime
 
@@ -73,11 +73,11 @@ The axis is not only consolidation. Three derivable contents fall out once it is
 
 For finite-$N$ composites (tiers R0/R1/R2), the macro-state type is structurally identified by the dynamic regime:
 
-- $\mathcal R(X^c) = \text{R0} \;\Leftrightarrow\; G^c_\ast \in \mathcal X^c$ (state-variable).
-- $\mathcal R(X^c) = \text{R1} \;\Leftrightarrow\; G^c_\ast = \mathcal E \subset \mathcal X^c$ (fixed-point object).
-- $\mathcal R(X^c) = \text{R2} \;\Leftrightarrow\; G^c_\ast = \mu \in \Delta(\mathcal X^c)$ (distributional object).
+- $\mathcal{R}(X^c) = \text{R0} \;\Leftrightarrow\; G^c_\ast \in \mathcal{X}^c$ (state-variable).
+- $\mathcal{R}(X^c) = \text{R1} \;\Leftrightarrow\; G^c_\ast = \mathcal{E} \subset \mathcal{X}^c$ (fixed-point object).
+- $\mathcal{R}(X^c) = \text{R2} \;\Leftrightarrow\; G^c_\ast = \mu \in \Delta(\mathcal{X}^c)$ (distributional object).
 
-Each direction follows from the entry conditions in §"The four tiers." R0 demands unique attracting fixed point in $\mathcal X^c$, which gives a state-variable. R1 demands a fixed-point set under Lyapunov-on-deviation, which is a fixed-point object. R2 demands no pure-strategy fixed point plus no-regret CCE convergence, which gives a distributional object. The converse direction follows from the macro-state type forcing the available Lyapunov machinery: state-variable admits scalar Lyapunov (R0); fixed-point set admits potential or weighted-norm Lyapunov (R1); distributional macro-state admits only doubling-trick CCE convergence (R2).
+Each direction follows from the entry conditions in §"The four tiers." R0 demands unique attracting fixed point in $\mathcal{X}^c$, which gives a state-variable. R1 demands a fixed-point set under Lyapunov-on-deviation, which is a fixed-point object. R2 demands no pure-strategy fixed point plus no-regret CCE convergence, which gives a distributional object. The converse direction follows from the macro-state type forcing the available Lyapunov machinery: state-variable admits scalar Lyapunov (R0); fixed-point set admits potential or weighted-norm Lyapunov (R1); distributional macro-state admits only doubling-trick CCE convergence (R2).
 
 R3 breaks the identity. Mean-field-equilibrium has distributional macro-state with contracting dynamics, distinct from R2's polynomial CCE convergence. The two axes (dynamic regime, macro-state type) are genuinely distinct and the breaking case is exactly the population-scope frontier the framework currently flags as gap. The identity is the cleanest formal content the axis carries: it is the axis that unifies fixed-point structure, Lyapunov certificate, and macro-state type into a single classification for finite-$N$ composites, with the mean-field limit as the explicit boundary case.
 

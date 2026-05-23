@@ -49,7 +49,7 @@ with $\alpha_K \gt 0$. This is a sector condition in the gain-error state — th
 
 **(MG-4) Coupling boundedness.** The gain-channel disturbance $v(t)$ has bounded contribution from the primary state:
 
-$$\mathbb E[\lVert v(t)\rVert^2 \mid \delta] \leq \sigma_{K,0}^2 + c_v \lVert\delta\rVert^2$$
+$$\mathbb{E}[\lVert v(t)\rVert^2 \mid \delta] \leq \sigma_{K,0}^2 + c_v \lVert\delta\rVert^2$$
 
 for some $c_v \geq 0$. (MG-4) with $c_v = 0$ is clean two-timescale decoupling; $c_v \gt 0$ is $\delta$-coupled meta-gain disturbance (RMSProp near minimizer), requiring fixed-point closure.
 
@@ -112,11 +112,11 @@ Under Mehra non-identifiability (rank-deficient transform matrix; see Zagrobelny
 
 *[Derivation (case-rmsprop-alpha2-conditional)]*
 
-**Case B — RMSProp on strongly-convex loss.** The per-step effective step is $\eta_t^{\text{eff}} = \eta_t/(\sqrt{v_t} + \varepsilon)$ where $v_t = \beta v_{t-1} + (1-\beta)\hat g_t^2$ tracks the second moment. Near the minimizer, $\mathbb E[\hat g_t^2] \to \lVert\nabla L\rVert^2 + \sigma_g^2$. Writing $\tilde v_t = v_t - \mathbb E[\hat g_t^2]$:
+**Case B — RMSProp on strongly-convex loss.** The per-step effective step is $\eta_t^{\text{eff}} = \eta_t/(\sqrt{v_t} + \varepsilon)$ where $v_t = \beta v_{t-1} + (1-\beta)\hat g_t^2$ tracks the second moment. Near the minimizer, $\mathbb{E}[\hat g_t^2] \to \lVert\nabla L\rVert^2 + \sigma_g^2$. Writing $\tilde v_t = v_t - \mathbb{E}[\hat g_t^2]$:
 
-$$\tilde v_{t+1} = \beta \tilde v_t + (1-\beta)(\hat g_t^2 - \mathbb E[\hat g_t^2]) + \beta(\mathbb E[\hat g_{t-1}^2] - \mathbb E[\hat g_t^2])$$
+$$\tilde v_{t+1} = \beta \tilde v_t + (1-\beta)(\hat g_t^2 - \mathbb{E}[\hat g_t^2]) + \beta(\mathbb{E}[\hat g_{t-1}^2] - \mathbb{E}[\hat g_t^2])$$
 
-The first two terms give (MG-2) with $\alpha_v = 1 - \beta$ and $\sigma_v^2 \asymp (1-\beta)^2 \text{Var}(\hat g_t^2)$. The third is $\delta$-coupled: $\mathbb E[\hat g_t^2]$ depends on $\delta$ through $\lVert\nabla L\rVert^2$, giving $c_v \gt 0$ in (MG-4).
+The first two terms give (MG-2) with $\alpha_v = 1 - \beta$ and $\sigma_v^2 \asymp (1-\beta)^2 \text{Var}(\hat g_t^2)$. The third is $\delta$-coupled: $\mathbb{E}[\hat g_t^2]$ depends on $\delta$ through $\lVert\nabla L\rVert^2$, giving $c_v \gt 0$ in (MG-4).
 
 Composed persistence under design conditions $\beta$ close to 1 (slow EMA) and $\lambda_{\max}(H) \cdot R^\ast_S \ll \sqrt{\sigma_g^2}$ (coupling smallness): fixed-point closure between primary $R^\ast_S$ and meta-gain $R_v$ yields existence of a stable equilibrium. Sub-scope $\alpha_2$ under design conditions.
 
@@ -165,7 +165,7 @@ The core claim — that (MG-1)–(MG-4) together give an augmented-state sector-
 
 ## Discussion
 
-**Resolving Epistemic Opacity.** In `#def-observation-function`, the agent is structurally forbidden from knowing the true noise distribution $\varepsilon_t$. Yet the optimal gain `#emp-update-gain` requires knowing $U_o$. The adaptive Kalman filter with an innovation-based estimator (e.g., Mehra 1970) resolves this. The agent computes the autocorrelation of its observable mismatch sequence (innovations): $\iota_t = o_t - \hat o_t$. Because the innovation statistics are observable, the agent can estimate $U_o$ (and $U_M$) purely from its own history $\mathcal C_t$, satisfying both the opacity axiom and the optimality requirement. The error in this estimation ($\tilde K$) is exactly what the meta-gain sector condition (MG-2) bounds.
+**Resolving Epistemic Opacity.** In `#def-observation-function`, the agent is structurally forbidden from knowing the true noise distribution $\varepsilon_t$. Yet the optimal gain `#emp-update-gain` requires knowing $U_o$. The adaptive Kalman filter with an innovation-based estimator (e.g., Mehra 1970) resolves this. The agent computes the autocorrelation of its observable mismatch sequence (innovations): $\iota_t = o_t - \hat o_t$. Because the innovation statistics are observable, the agent can estimate $U_o$ (and $U_M$) purely from its own history $\mathcal{C}_t$, satisfying both the opacity axiom and the optimality requirement. The error in this estimation ($\tilde K$) is exactly what the meta-gain sector condition (MG-2) bounds.
 
 **Why this is not a singular-perturbation reduction.** Singular perturbation theory (Tikhonov 1952; Khalil 2002 Ch. 11) replaces fast dynamics with their quasi-steady-state manifold — the fast variable is *eliminated* in the slow reduction. The augmented-state analysis here does something different: it *keeps both states* and bounds their joint persistence via a weighted Lyapunov. Tikhonov gives "the fast variable tracks its slow manifold up to $O(\epsilon)$"; template-composition gives "each level's state is ultimately bounded with coupling-amplified disturbance" — the persistence-flavored statement aligned with AAT's other persistence results. They answer different questions; both are useful; neither replaces the other. #sketch-multi-timescale-stability's current sketch leans toward the Tikhonov framing; this segment adds the template-composition framing as an alternative.
 
@@ -190,4 +190,4 @@ The core claim — that (MG-1)–(MG-4) together give an augmented-state sector-
 - **Template-composition as general technique.** The augmented-state weighted-Lyapunov argument is a general two-timescale composition technique for #result-sector-persistence-template. It composes two template instances with a cross-coupling bound. A generalization to three or more timescales (inner loop + outer loop + meta-meta-loop, or fast + gain + slow + structural) would give a chain-composition form; not derived here but structurally available.
 - **AMSGrad as $\alpha_2$-preserving meta-gain repair.** Characterizing AMSGrad as "enforce (MG-1) by construction" is a clean AAT-framing of a pragmatically-motivated algorithm. Worth noting as an example of adaptive-gain schemes being AAT-classifiable by which of (MG-1)–(MG-4) they structurally ensure vs leave to luck.
 
-- **Deterministic-meta-gain special cases.** When the meta-gain is a deterministic function of the primary state rather than an independently learned variable — $K_t = \mathbf I^{-1}(\lambda_t)$ for Fisher whitening at the edge-update layer ( #deriv-fisher-whitened-update-rule), or $K = (H_M + H_L)^{-1} H_L$ for the Fisher-local model-parameter update ( #deriv-fisher-local-update-gain) — all four meta-gain conditions are satisfied trivially under the regularity conditions of those segments. The non-degenerate adaptive-Kalman-with-Mehra case is this segment's primary instance and adds a Mehra-style meta-channel with its own (MG-1)–(MG-4); the Fisher-local cases are degenerate special cases where the meta-gain is read off the primary state directly.
+- **Deterministic-meta-gain special cases.** When the meta-gain is a deterministic function of the primary state rather than an independently learned variable — $K_t = \mathbf{I}^{-1}(\lambda_t)$ for Fisher whitening at the edge-update layer ( #deriv-fisher-whitened-update-rule), or $K = (H_M + H_L)^{-1} H_L$ for the Fisher-local model-parameter update ( #deriv-fisher-local-update-gain) — all four meta-gain conditions are satisfied trivially under the regularity conditions of those segments. The non-degenerate adaptive-Kalman-with-Mehra case is this segment's primary instance and adds a Mehra-style meta-channel with its own (MG-1)–(MG-4); the Fisher-local cases are degenerate special cases where the meta-gain is read off the primary state directly.

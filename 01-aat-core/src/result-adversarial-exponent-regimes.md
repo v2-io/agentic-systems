@@ -13,7 +13,7 @@ stage: draft
 
 # Result: Adversarial Exponent Regimes
 
-The adversarial tempo advantage exponent — the power $b$ in $\lVert\delta_B\rVert / \lVert\delta_A\rVert \sim (\mathcal T_A / \mathcal T_B)^b$ — is not a single number. It depends on two structural features of the disturbance: whether the adversarial coupling enters as deterministic drift (Model D) or stochastic noise (Model S), and whether the coupling dominates the base disturbance rate. Three regimes, with the coupling-dominant exponents now derived analytically from the respective disturbance models: $b = 2$ under Model D coupling-dominant (the framework's headline squared scaling); $b = 3/2$ under Model S coupling-dominant (the $1/\sqrt{\mathcal T}$ steady-state removes one half-power); $b \to 1$ (Model D) or $\to 1/2$ (Model S) when base disturbance dominates the coupling.
+The adversarial tempo advantage exponent — the power $b$ in $\lVert\delta_B\rVert / \lVert\delta_A\rVert \sim (\mathcal{T}_A / \mathcal{T}_B)^b$ — is not a single number. It depends on two structural features of the disturbance: whether the adversarial coupling enters as deterministic drift (Model D) or stochastic noise (Model S), and whether the coupling dominates the base disturbance rate. Three regimes, with the coupling-dominant exponents now derived analytically from the respective disturbance models: $b = 2$ under Model D coupling-dominant (the framework's headline squared scaling); $b = 3/2$ under Model S coupling-dominant (the $1/\sqrt{\mathcal{T}}$ steady-state removes one half-power); $b \to 1$ (Model D) or $\to 1/2$ (Model S) when base disturbance dominates the coupling.
 
 The exponent thus *degrades smoothly through intermediate values as base disturbance grows*, and the qualitative regime change that separates superlinear adversarial dynamics from cooperative-like dynamics is gated by the coupling-dominance condition rather than the presence of adversarial coupling per se. The defensive-design implication is concrete: noise injection into the defender's observation channel — which pushes the regime away from coupling-dominant deterministic drift toward the non-coupling-dominant exponent collapse — can *reduce* the attacker's superlinear advantage without changing tempo or gain. The framework's machinery for "where the squared law applies" is therefore the same machinery for "where the squared law does not apply"; the disturbance-model + coupling-dominance taxonomy carries both directions.
 
@@ -21,25 +21,25 @@ The exponent thus *degrades smoothly through intermediate values as base disturb
 
 *[Derived (adversarial-exponent-regimes, from Model D/S steady states + coupling model; validated by simulation)]*
 
-**Regime 1: Model D (deterministic drift), coupling-dominant.** When adversarial coupling enters as a persistent directional disturbance ($\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal T_A$, GA-2) and coupling dominates ($\gamma \cdot \mathcal T_B \gg \rho_{\text{base}}$):
+**Regime 1: Model D (deterministic drift), coupling-dominant.** When adversarial coupling enters as a persistent directional disturbance ($\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal{T}_A$, GA-2) and coupling dominates ($\gamma \cdot \mathcal{T}_B \gg \rho_{\text{base}}$):
 
 $$b = 2 \qquad \text{(simulation: 1.999)}$$
 
 Derived from the Model D steady state $\lVert\delta\rVert_{ss} = \rho/\mathcal{T}$ (Prop A.1). See #result-adversarial-tempo-advantage.
 
-**Regime 2: Model S (stochastic noise), coupling-dominant.** When adversarial coupling enters through the noise scale of zero-mean perturbations ($\sigma_B = \sigma_{\text{base}} + \gamma \cdot \mathcal T_A$, GA-2S) and coupling dominates:
+**Regime 2: Model S (stochastic noise), coupling-dominant.** When adversarial coupling enters through the noise scale of zero-mean perturbations ($\sigma_B = \sigma_{\text{base}} + \gamma \cdot \mathcal{T}_A$, GA-2S) and coupling dominates:
 
 $$b = \frac{3}{2} \qquad \text{(simulation: 1.481)}$$
 
 Derived from the Model S steady state $\lVert\delta\rVert_{\text{rms}} = \sigma_w/\sqrt{2\mathcal{T}}$ (Prop A.1S). The $1/\sqrt{\mathcal{T}}$ scaling (vs. $1/\mathcal{T}$ for Model D) removes one half-power from the denominator, reducing the exponent from 2 to 3/2. See #result-adversarial-tempo-advantage.
 
-**Regime 3: Non-coupling-dominant.** When base disturbance is comparable to or exceeds the adversarial coupling ($\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal T_B$):
+**Regime 3: Non-coupling-dominant.** When base disturbance is comparable to or exceeds the adversarial coupling ($\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}_B$):
 
 $$b \to 1.0 \text{ (Model D)} \quad \text{or} \quad b \to 0.5 \text{ (Model S)}$$
 
 The exponent degrades smoothly as the base-to-coupling ratio increases. The asymptotic limits are derived (they reflect the $1/\mathcal{T}$ or $1/\sqrt{\mathcal{T}}$ scaling without the coupling numerator); the smooth interpolation is empirical.
 
-| $\rho_{\text{base}} / (\gamma \cdot \mathcal T_B)$ | Exponent (deterministic) | Exponent (stochastic) |
+| $\rho_{\text{base}} / (\gamma \cdot \mathcal{T}_B)$ | Exponent (deterministic) | Exponent (stochastic) |
 |:---:|:---:|:---:|
 | 0.002 | 1.999 | 1.481 |
 | 0.20 | 1.877 | 1.101 |
@@ -54,7 +54,7 @@ The exponent degrades smoothly as the base-to-coupling ratio increases. The asym
 
 **The disturbance model determines the exponent.** The mismatch dynamics ( #hyp-mismatch-dynamics) now distinguish two disturbance models: Model D (bounded deterministic, GA-2) with steady-state $\rho/\mathcal{T}$, and Model S (stochastic zero-mean, GA-2S) with steady-state $\sigma_w/\sqrt{2\mathcal{T}}$. The different steady-state scaling is the root cause of the different exponents. This resolves the ambiguity that previously existed in the single-$\rho$ formulation.
 
-**Why the squared law held for the coupling-dominance sweep.** In Variant A, the coupling enters as deterministic drift: $\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal T_A$, and the steady state is $\Vert\delta_B\Vert = \rho_B / \mathcal T_B$. The ratio $\Vert\delta_B\Vert / \Vert\delta_A\Vert$ in the coupling-dominant limit gives $(\mathcal T_A / \mathcal T_B)^2$ directly.
+**Why the squared law held for the coupling-dominance sweep.** In Variant A, the coupling enters as deterministic drift: $\rho_B = \rho_{\text{base}} + \gamma \cdot \mathcal{T}_A$, and the steady state is $\Vert\delta_B\Vert = \rho_B / \mathcal{T}_B$. The ratio $\Vert\delta_B\Vert / \Vert\delta_A\Vert$ in the coupling-dominant limit gives $(\mathcal{T}_A / \mathcal{T}_B)^2$ directly.
 
 **Nonlinear correction creates thresholds, not lower exponents.** For saturating, sigmoid, and breakdown correction functions under deterministic drift, the issue is not a reduced exponent but a catastrophic divergence when $\rho$ exceeds the correction capacity ($\rho \gt \mathcal{T} \cdot R$). This is exactly the persistence threshold failure ( #result-persistence-condition), observed directly in simulation.
 

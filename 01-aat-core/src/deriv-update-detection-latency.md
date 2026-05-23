@@ -18,7 +18,7 @@ For a Beta-Bernoulli strategy-edge agent without forgetting, the expected number
 
 ### Setup
 
-An agent with a Beta-Bernoulli strategy DAG per #schema-strategy-persistence / #deriv-edge-credence-dynamics, credit assignment via the log-odds signal of #disc-credit-assignment-boundary (forced by #deriv-edge-update-natural-parameter), and no forgetting ( $\lambda = 1$, pseudo-counts $n_k$ accumulate monotonically). Let $E_{\text{load}}$ denote the load-bearing edges on the current active plan; $n_{\min} = \min_{k \in E_{\text{load}}} n_k$. The agent has been operating with model-class fitness $\mathcal F(\mathcal M)$ near $1$, adaptive reserve $\Delta\rho^\ast \gt 0$, control regret $\delta_{\text{regret}}$ small — a high-operating-point configuration.
+An agent with a Beta-Bernoulli strategy DAG per #schema-strategy-persistence / #deriv-edge-credence-dynamics, credit assignment via the log-odds signal of #disc-credit-assignment-boundary (forced by #deriv-edge-update-natural-parameter), and no forgetting ( $\lambda = 1$, pseudo-counts $n_k$ accumulate monotonically). Let $E_{\text{load}}$ denote the load-bearing edges on the current active plan; $n_{\min} = \min_{k \in E_{\text{load}}} n_k$. The agent has been operating with model-class fitness $\mathcal{F}(\mathcal{M})$ near $1$, adaptive reserve $\Delta\rho^\ast \gt 0$, control regret $\delta_{\text{regret}}$ small — a high-operating-point configuration.
 
 At cycle $t_0$, a regime change occurs within the current model class (a true edge probability shifts by $\varepsilon$; the L0 graph remains correct; the agent's model class still suffices). This is case R1 in the spike taxonomy — a within-class drift change. Other regime-change cases (R2 model-class inadequacy; R3 L0→L1 structural transition) are deferred to Working Notes and #disc-identifiability-floor respectively.
 
@@ -28,17 +28,17 @@ At cycle $t_0$, a regime change occurs within the current model class (a true ed
 
 **Proposition.** Under the setup, the expected number of cycles $T_{\text{detect}}$ required for the log-odds coordinate on any load-bearing edge $k \in E_{\text{load}}$ to cross a fixed detection threshold $\Delta\lambda_{\text{detect}}$ in response to the regime change satisfies
 
-$$\boxed{\;\mathbb E[T_{\text{detect}}] \;=\; \Omega\!\left(\Delta\lambda_{\text{detect}} \cdot (n_{\min} + 1) / \varepsilon\right)\;}$$
+$$\boxed{\;\mathbb{E}[T_{\text{detect}}] \;=\; \Omega\!\left(\Delta\lambda_{\text{detect}} \cdot (n_{\min} + 1) / \varepsilon\right)\;}$$
 
 **Derivation.** The default signal function of #disc-credit-assignment-boundary (under the log-odds coordinate forced by #deriv-edge-update-natural-parameter) updates an edge's log-odds credence by
 
-$$\lambda_k^{\text{new}} = \lambda_k + \eta_{\text{edge}} \cdot \iota_k \cdot J_k \cdot (y_G - \hat P_\Sigma) / \lVert\mathbf J\rVert^2$$
+$$\lambda_k^{\text{new}} = \lambda_k + \eta_{\text{edge}} \cdot \iota_k \cdot J_k \cdot (y_G - \hat P_\Sigma) / \lVert\mathbf{J}\rVert^2$$
 
 with $\eta_{\text{edge}} = 1/(n_k + 1)$ for Beta-Bernoulli (Prop B.4 of #deriv-edge-credence-dynamics). Per-cycle the expected log-odds update magnitude is bounded:
 
-$$\mathbb E\lvert\Delta\lambda_k\rvert \;\leq\; \frac{\lvert J_k\rvert \cdot \mathbb E\lvert y_G - \hat P_\Sigma\rvert}{\lVert\mathbf J\rVert^2 \cdot (n_k + 1)}$$
+$$\mathbb{E}\lvert\Delta\lambda_k\rvert \;\leq\; \frac{\lvert J_k\rvert \cdot \mathbb{E}\lvert y_G - \hat P_\Sigma\rvert}{\lVert\mathbf{J}\rVert^2 \cdot (n_k + 1)}$$
 
-Under regime change R1 with observable footprint $\varepsilon$, the expected systematic residual $\mathbb E\lvert y_G - \hat P_\Sigma\rvert = \Theta(\varepsilon)$ as $\varepsilon \to 0$ (the misspecified-edge residual is proportional to the edge's probability shift, via the linearization of the Bernoulli likelihood in a neighborhood of the pre-change parameter). Combining: the per-cycle expected log-odds increment on load-bearing edges is $O(\varepsilon/(n_{\min}+1))$.
+Under regime change R1 with observable footprint $\varepsilon$, the expected systematic residual $\mathbb{E}\lvert y_G - \hat P_\Sigma\rvert = \Theta(\varepsilon)$ as $\varepsilon \to 0$ (the misspecified-edge residual is proportional to the edge's probability shift, via the linearization of the Bernoulli likelihood in a neighborhood of the pre-change parameter). Combining: the per-cycle expected log-odds increment on load-bearing edges is $O(\varepsilon/(n_{\min}+1))$.
 
 For the agent to cross $\Delta\lambda_{\text{detect}}$, expected cycles required is at least $\Delta\lambda_{\text{detect}} / (O(\varepsilon/(n_{\min}+1)))$ = $\Omega(\Delta\lambda_{\text{detect}} \cdot (n_{\min}+1) / \varepsilon)$. $\square$
 
@@ -62,7 +62,7 @@ This is the specific link between AAT's constructive meta-pattern ( #disc-additi
 
 #schema-strategy-persistence derives the forgetting prerequisite $(1-\lambda) \gt \rho_\Sigma/R_\Sigma$ as required for *asymptotic persistence* — without forgetting, $\alpha_\Sigma = 1/(n+1) \to 0$ and persistence eventually fails. The detection-latency theorem sharpens this to a **load-bearing claim about detection latency on the way to asymptotic failure**:
 
-**Forgetting is required not only for asymptotic persistence, but also for detection latency to be bounded independently of operating point.** Without forgetting, $n_{\min}$ grows monotonically, and $\mathbb E[T_{\text{detect}}]$ grows linearly with $n_{\min}$. With forgetting at rate $\lambda \lt 1$, the effective pseudo-count $n_{\text{eff}} = 1/(1-\lambda)$ is bounded, and the detection latency caps at $\Omega(1/((1-\lambda)\varepsilon))$ regardless of how long the agent has been operating.
+**Forgetting is required not only for asymptotic persistence, but also for detection latency to be bounded independently of operating point.** Without forgetting, $n_{\min}$ grows monotonically, and $\mathbb{E}[T_{\text{detect}}]$ grows linearly with $n_{\min}$. With forgetting at rate $\lambda \lt 1$, the effective pseudo-count $n_{\text{eff}} = 1/(1-\lambda)$ is bounded, and the detection latency caps at $\Omega(1/((1-\lambda)\varepsilon))$ regardless of how long the agent has been operating.
 
 This dualizes #schema-strategy-persistence's asymptotic claim: forgetting is operationally load-bearing at every step, not only in the limit. An agent with the right $\lambda$ has bounded detection latency throughout its lifetime; an agent with $\lambda = 1$ has detection latency that grows unboundedly with experience, producing the phenomenon of stability-induced myopia in practice.
 
@@ -70,7 +70,7 @@ This dualizes #schema-strategy-persistence's asymptotic claim: forgetting is ope
 
 | Property | Source | Strength |
 |---|---|---|
-| R1 detection-latency theorem $\mathbb E[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$ | #deriv-edge-update-natural-parameter log-odds coordinate + #deriv-edge-credence-dynamics Prop B.4 $\eta_{\text{edge}} = 1/(n+1)$ + Pinsker-type linearization | Derived (conditional on Beta-Bernoulli + log-odds + no forgetting) |
+| R1 detection-latency theorem $\mathbb{E}[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$ | #deriv-edge-update-natural-parameter log-odds coordinate + #deriv-edge-credence-dynamics Prop B.4 $\eta_{\text{edge}} = 1/(n+1)$ + Pinsker-type linearization | Derived (conditional on Beta-Bernoulli + log-odds + no forgetting) |
 | $1/(n+1)$ rate structurally forced | Composition of #deriv-edge-update-natural-parameter's Aczél-Cauchy-FE theorem with Beta-Bernoulli accumulation | Proved (conditional on evidential-additivity axiom) |
 | Sharpening of forgetting prerequisite from asymptotic persistence to bounded detection latency | #schema-strategy-persistence + this theorem | Derived |
 | R2 model-class inadequacy sub-case (C1-diagnostic blindness under misspecification) | Common-mode-bias argument on $A_O^{(1)}$ vs $V_O(\pi_{\text{current}})$ | Discussion (sketch; see Working Notes) |
@@ -117,7 +117,7 @@ The forgetting-prerequisite sharpening follows by direct substitution — replac
 - **R2 sharpening (model-class inadequacy).** The argument: under C1 convention, $\delta_{\text{regret}}^{(1)} = A_O^{(1)} - V_O(\pi_{\text{current}})$ where both terms are computed under the current (now misspecified) $M_t$. Both terms bias in the same direction when the model class is structurally wrong; the gap stays small under common-mode bias. A clean version would compute the common-mode bias as a function of #result-mismatch-decomposition's model-error component, show it is $O(1)$ (not $O(\varepsilon)$) when the misspecification is directional, and derive a convention-dependent detection latency. Candidate one-evening spike. *(Indexed: `spikes/PROPOSED.md` Tier 3 — "R2 detection-latency sharpening under model-class inadequacy".)*
 - **R3 reference, not extension.** The L0→L1 structural-transition case is #disc-identifiability-floor Instance 1 — on-policy detection is forbidden by Bareinboim CHT, not merely slow. The detection-latency theorem here is about within-class drift (R1), which does not hit that no-go. When the regime change *does* involve an L0→L1 transition, the theorem does not apply and the no-go does; the two coexist at different regime-change types.
 - **Extension beyond Beta-Bernoulli.** Gaussian edges: $\eta \propto 1/(n+c)$ for the Gaussian-mean update. Exponential-family edges in natural-parameter form: $\eta$ follows sufficient-statistic accumulation. The *qualitative* form (detection time monotone in accumulated sufficient statistic) is general; the *quantitative* $1/(n+1)$ is specific to Beta-Bernoulli. A parametric version of the theorem covering general exponential-family edges would be a clean follow-up.
-- **Probability bound.** The expected-time bound implies a probability bound via Markov: $\Pr[\text{detect within } T] \leq T / \mathbb E[T_{\text{detect}}]$. Tighter concentration requires specifying the residual distribution's shape; candidate one-paragraph extension.
+- **Probability bound.** The expected-time bound implies a probability bound via Markov: $\Pr[\text{detect within } T] \leq T / \mathbb{E}[T_{\text{detect}}]$. Tighter concentration requires specifying the residual distribution's shape; candidate one-paragraph extension.
 - **Testable prediction.** In agents with controlled accumulated experience $n$, detection latency for regime change with fixed observable footprint $\varepsilon$ should scale linearly in $n$. Directly testable in multi-arm bandits with drifting reward distributions, in simulated organizations with commit-log-mediated task environments, in human-subjects studies on noisy-signal regime detection. Each would confirm or refute the $1/(n+1)$ scaling in its native setting.
 - **Multi-timescale connection.** The theorem adds empirical content to #der-temporal-nesting: the slow (structural-adaptation) timescale slows with accumulated fast-timescale state — the two timescales are not independent. The fast one's accumulated state feeds back into the slow one's responsiveness. This is the formal version of the institutional-inertia observation and is adjacent to, but not subsumed by, #sketch-multi-timescale-stability's current formulation.
 - **Section III analog.** Do larger teams / organizations face proportionally longer detection latency via analogous accumulation? Candidate: team effective detection latency is bounded below by the slowest member's latency (the weakest-dimension version of #result-per-dimension-persistence). Connects to #der-team-persistence. Not derived here.

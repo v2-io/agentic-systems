@@ -19,31 +19,31 @@ The framework treats this as a *constructive use of impossibility*. The downstre
 
 ## Formal Expression
 
-**Setup.** Mismatch dynamics under additive stochastic disturbance, started inside the sector-condition region $\mathcal B_R$:
+**Setup.** Mismatch dynamics under additive stochastic disturbance, started inside the sector-condition region $\mathcal{B}_R$:
 
-$$d\delta = -F(\mathcal T, \delta)\,dt + \sigma_w\,dW_t, \qquad \delta(0) \in \mathcal B_R,\quad \sigma_w \gt 0,$$
+$$d\delta = -F(\mathcal{T}, \delta)\,dt + \sigma_w\,dW_t, \qquad \delta(0) \in \mathcal{B}_R,\quad \sigma_w \gt 0,$$
 
-with $W_t$ a standard $n$-dimensional Wiener process, (A2') $\delta^\top F \geq \alpha\lVert\delta\rVert^2$ on $\mathcal B_R$, and $\tau_R = \inf\{t : \lVert\delta(t)\rVert \gt R\}$ the first-exit time. Let $V = \tfrac12\lVert\delta\rVert^2$.
+with $W_t$ a standard $n$-dimensional Wiener process, (A2') $\delta^\top F \geq \alpha\lVert\delta\rVert^2$ on $\mathcal{B}_R$, and $\tau_R = \inf\{t : \lVert\delta(t)\rVert \gt R\}$ the first-exit time. Let $V = \tfrac12\lVert\delta\rVert^2$.
 
 **Theorem (Model-S no-go).** *[Derived]* For every $\alpha \gt 0$, every $\sigma_w \gt 0$, and every correction function $F$ satisfying (A2'),
 
 $$P(\tau_R \lt \infty) = 1,$$
 
-and there exists no nonnegative supermartingale dominating $V$ that certifies a horizon-independent bound $P(\tau_R \lt \infty) \leq c \lt 1$. Pathwise containment of $\mathcal B_R$ is unattainable under additive stochastic forcing at any correction strength.
+and there exists no nonnegative supermartingale dominating $V$ that certifies a horizon-independent bound $P(\tau_R \lt \infty) \leq c \lt 1$. Pathwise containment of $\mathcal{B}_R$ is unattainable under additive stochastic forcing at any correction strength.
 
 **Why the natural route cannot work.** The route a careful reader reaches for first is a time-uniform maximal inequality (Ville / Doob) on an Itô–Lyapunov supermartingale — the same instinct that makes the fixed-time mean-square bound (Prop A.1S(i)) succeed. It fails, and the failure is structural, not a matter of a missing trick.
 
 Define $G(t) = e^{2\alpha t} V(\delta(t))$. On $[0, \tau_R]$, by Itô and (A2'),
 
-$$dG = e^{2\alpha t}\big[\underbrace{(2\alpha V - \delta^\top F)}_{\leq\, 0 \text{ on } \mathcal B_R}\,dt + \tfrac n2\sigma_w^2\,dt + \delta^\top\sigma_w\,dW_t\big] \;\leq\; e^{2\alpha t}\tfrac n2\sigma_w^2\,dt + e^{2\alpha t}\delta^\top\sigma_w\,dW_t.$$
+$$dG = e^{2\alpha t}\big[\underbrace{(2\alpha V - \delta^\top F)}_{\leq\, 0 \text{ on } \mathcal{B}_R}\,dt + \tfrac n2\sigma_w^2\,dt + \delta^\top\sigma_w\,dW_t\big] \;\leq\; e^{2\alpha t}\tfrac n2\sigma_w^2\,dt + e^{2\alpha t}\delta^\top\sigma_w\,dW_t.$$
 
 $G$ is **not** a supermartingale: the $+\,e^{2\alpha t}\tfrac n2\sigma_w^2\,dt$ term has strictly positive drift growing exponentially. Removing it by compensation gives
 
 $$S(t) = e^{2\alpha(t\wedge\tau_R)}V(\delta_{t\wedge\tau_R}) - \frac{n\sigma_w^2}{4\alpha}\big(e^{2\alpha(t\wedge\tau_R)} - 1\big),$$
 
-and $dS \leq e^{2\alpha t}\delta^\top\sigma_w\,dW_t$ on $[0,\tau_R]$ — so $S$ *is* a supermartingale. **But $S$ is not nonnegative.** The subtracted $\tfrac{n\sigma_w^2}{4\alpha}(e^{2\alpha t}-1)$ dominates $e^{2\alpha t}V$ whenever $V(\delta(t)) \lt \tfrac{n\sigma_w^2}{4\alpha}$ — i.e. exactly inside the persistence basin, which under the mean-square persistence condition is *most of the time* (that condition places the RMS radius $R^\ast_S = \sigma_w\sqrt{n/2\alpha}$ well inside $\mathcal B_R$, so $V \ll \tfrac{n\sigma_w^2}{4\alpha}$ typically). Ville's inequality requires a nonnegative supermartingale; Doob's maximal inequality a nonnegative sub/supermartingale. Both are inapplicable to a sign-indefinite $S$, and the obstruction is not removable: for additive non-degenerate Brownian forcing the diffusion's scale function is unbounded (the OU scale density $\propto e^{\alpha u^2/\sigma_w^2}$), so the only bounded harmonic functions of the generator are constants — the gambler's-ruin / Lyapunov-exit machinery cannot certify "stays inside forever with positive probability." There is no nonnegative supermartingale dominating $V$ with finite expected initial value that yields a horizon-independent exit bound.
+and $dS \leq e^{2\alpha t}\delta^\top\sigma_w\,dW_t$ on $[0,\tau_R]$ — so $S$ *is* a supermartingale. **But $S$ is not nonnegative.** The subtracted $\tfrac{n\sigma_w^2}{4\alpha}(e^{2\alpha t}-1)$ dominates $e^{2\alpha t}V$ whenever $V(\delta(t)) \lt \tfrac{n\sigma_w^2}{4\alpha}$ — i.e. exactly inside the persistence basin, which under the mean-square persistence condition is *most of the time* (that condition places the RMS radius $R^\ast_S = \sigma_w\sqrt{n/2\alpha}$ well inside $\mathcal{B}_R$, so $V \ll \tfrac{n\sigma_w^2}{4\alpha}$ typically). Ville's inequality requires a nonnegative supermartingale; Doob's maximal inequality a nonnegative sub/supermartingale. Both are inapplicable to a sign-indefinite $S$, and the obstruction is not removable: for additive non-degenerate Brownian forcing the diffusion's scale function is unbounded (the OU scale density $\propto e^{\alpha u^2/\sigma_w^2}$), so the only bounded harmonic functions of the generator are constants — the gambler's-ruin / Lyapunov-exit machinery cannot certify "stays inside forever with positive probability." There is no nonnegative supermartingale dominating $V$ with finite expected initial value that yields a horizon-independent exit bound.
 
-**Why $P(\tau_R \lt \infty)=1$, generally.** The conclusion does not depend on the linear structure. A non-degenerate diffusion (additive forcing $\sigma_w\,dW_t$, $\sigma_w \gt 0$) exits any bounded region in finite time almost surely, for *any* locally bounded drift: near $\partial\mathcal B_R$ the Brownian increment has positive probability of crossing in any time interval, and no finite inward correction satisfying (A2') can suppress this (A2' bounds $\delta^\top F$ from below by $\alpha\lVert\delta\rVert^2$, a finite inward push, not an impassable wall). Hence $\tau_R \lt \infty$ a.s. for every $F$ under (A2'), every $\alpha$, every $\sigma_w$. The Ornstein–Uhlenbeck case is the explicit instance (positively recurrent on $\mathbb R^n$, unbounded stationary support, exits any finite ball a.s.), not the basis.
+**Why $P(\tau_R \lt \infty)=1$, generally.** The conclusion does not depend on the linear structure. A non-degenerate diffusion (additive forcing $\sigma_w\,dW_t$, $\sigma_w \gt 0$) exits any bounded region in finite time almost surely, for *any* locally bounded drift: near $\partial\mathcal{B}_R$ the Brownian increment has positive probability of crossing in any time interval, and no finite inward correction satisfying (A2') can suppress this (A2' bounds $\delta^\top F$ from below by $\alpha\lVert\delta\rVert^2$, a finite inward push, not an impassable wall). Hence $\tau_R \lt \infty$ a.s. for every $F$ under (A2'), every $\alpha$, every $\sigma_w$. The Ornstein–Uhlenbeck case is the explicit instance (positively recurrent on $\mathbb{R}^n$, unbounded stationary support, exits any finite ball a.s.), not the basis.
 
 ## Epistemic Status
 
@@ -53,7 +53,7 @@ This derivation is load-bearing for the critical path: it is the proof step that
 
 ## Discussion
 
-The structural reading: additive stochastic forcing does not weaken the *rate* of containment, it removes a *kind* of guarantee. Bounded disturbance (Model D) gives deterministic positive invariance of $\mathcal B_R$ ($P(\tau_R \lt \infty)=0$); additive stochastic disturbance gives almost-sure eventual exit ($P(\tau_R \lt \infty)=1$); the achievable value is the two-point set $\{0,1\}$, selected by the disturbance's support structure, not by correction strength — Corollary A.1S.1 in `#deriv-sector-condition`. What survives under Model S is distributional and instantaneous: the fixed-time / stationary Markov tail (Prop A.1S(iii′)) and the finite-horizon sample-path bound (Prop A.1S(iv), which grows linearly in the horizon and is vacuous for $T \gtrsim R^2/(n\sigma_w^2)$).
+The structural reading: additive stochastic forcing does not weaken the *rate* of containment, it removes a *kind* of guarantee. Bounded disturbance (Model D) gives deterministic positive invariance of $\mathcal{B}_R$ ($P(\tau_R \lt \infty)=0$); additive stochastic disturbance gives almost-sure eventual exit ($P(\tau_R \lt \infty)=1$); the achievable value is the two-point set $\{0,1\}$, selected by the disturbance's support structure, not by correction strength — Corollary A.1S.1 in `#deriv-sector-condition`. What survives under Model S is distributional and instantaneous: the fixed-time / stationary Markov tail (Prop A.1S(iii′)) and the finite-horizon sample-path bound (Prop A.1S(iv), which grows linearly in the horizon and is vacuous for $T \gtrsim R^2/(n\sigma_w^2)$).
 
 Direct simulation confirms the obstruction is real rather than an artifact of the proof technique. Exact 1-D OU benchmark $dX = -\alpha X\,dt + \sigma\,dW$ (the segment's own linear case; (A2') global and sharp), Monte-Carlo started *at the origin* (the most favorable initial condition), under the mean-square persistence condition (ii) holding:
 

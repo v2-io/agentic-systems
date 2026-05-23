@@ -21,9 +21,9 @@ The segment exists because the witness math has to live in canon per the math-li
 
 ### Setup
 
-Consider $N = 2$ scalar sub-agents indexed $i \in \{1, 2\}$, each with state $q_i \in \mathbb R$, base correction rate $\alpha \gt 0$, observation noise $w_i \sim \mathcal N(0, \sigma^2)$, base disturbance bound $\rho$, tempo $\mathcal T$. The composite state is $X^c = (q_1, q_2) \in \mathbb R^2$. An external observer $B$ accesses *only* per-sub-agent marginal data: for each $i$, the marginal stationary distribution $\mu_\infty^{(i)}$, the local mismatch process, and the per-sub-agent update rule $f_M^{(i)}$ as a structural object (white-box on each sub-agent, observed in isolation). The observer does *not* see: the composite-level coupling topology (sign + structure of cross-agent influence), the joint trajectory $\{X_t^c\}$ (only the projection onto per-sub-agent marginals), the game-structure object $\{O^{(j)}\}_{j \neq i}$ from sub-agent $i$'s frame, or composite-level convergence-rate-class diagnostics.
+Consider $N = 2$ scalar sub-agents indexed $i \in \{1, 2\}$, each with state $q_i \in \mathbb{R}$, base correction rate $\alpha \gt 0$, observation noise $w_i \sim \mathcal{N}(0, \sigma^2)$, base disturbance bound $\rho$, tempo $\mathcal{T}$. The composite state is $X^c = (q_1, q_2) \in \mathbb{R}^2$. An external observer $B$ accesses *only* per-sub-agent marginal data: for each $i$, the marginal stationary distribution $\mu_\infty^{(i)}$, the local mismatch process, and the per-sub-agent update rule $f_M^{(i)}$ as a structural object (white-box on each sub-agent, observed in isolation). The observer does *not* see: the composite-level coupling topology (sign + structure of cross-agent influence), the joint trajectory $\{X_t^c\}$ (only the projection onto per-sub-agent marginals), the game-structure object $\{O^{(j)}\}_{j \neq i}$ from sub-agent $i$'s frame, or composite-level convergence-rate-class diagnostics.
 
-The inferential question: from per-sub-agent marginal data alone, can $B$ identify the composite's dynamic regime $\mathcal R(X^c) \in \{\text{R0}, \text{R1}, \text{R2}\}$ per `#disc-dynamic-regime-axis` §B?
+The inferential question: from per-sub-agent marginal data alone, can $B$ identify the composite's dynamic regime $\mathcal{R}(X^c) \in \{\text{R0}, \text{R1}, \text{R2}\}$ per `#disc-dynamic-regime-axis` §B?
 
 ### Witness 1: R0 vs R1 indistinguishability
 
@@ -35,20 +35,20 @@ $$\dot q_i \;=\; -\alpha\,(q_i + q_j - T) + w_i.$$
 
 The composite is R0 per `#disc-dynamic-regime-axis` §B.0: unique attracting fixed point at $(T/2, T/2)$, joint Lyapunov $V = \tfrac{1}{2}\lVert q - (T/2, T/2) \rVert^2$, exponential convergence at rate $\alpha$. The stationary marginal distribution of each sub-agent's state, computed from the linearized Ornstein-Uhlenbeck dynamics, is
 
-$$\mu_{\infty, A}^{(i)} \;=\; \mathcal N\!\left(\,T/2,\; \sigma^2/(2\alpha)\,\right).$$
+$$\mu_{\infty, A}^{(i)} \;=\; \mathcal{N}\!\left(\,T/2,\; \sigma^2/(2\alpha)\,\right).$$
 
 **Composite B — R1 strategic potential-game equilibrium (Cournot).** Sub-agent objective $O_B^{(i)} = q_i\,(a_0 - b(q_1 + q_2) - c)$ — quadratic-profit Cournot in canonical form. The game is a potential game (Monderer-Shapley 1996) with potential $\Phi_B$ satisfying $\partial \Phi_B / \partial q_i = \partial O_B^{(i)} / \partial q_i$ for each $i$. The unique Nash equilibrium $q_{B, \text{Nash}}^\ast$ is locally attracting under gradient flow, with local-curvature parameter $\lambda_{\min}(\nabla^2 \Phi_B(q_{B, \text{Nash}}^\ast))$ controlling the rate. Linearizing the best-response gradient flow around the Nash and adding the same observation noise, the stationary marginal distribution of each sub-agent's state is
 
-$$\mu_{\infty, B}^{(i)} \;=\; \mathcal N\!\left(\,q_{B, \text{Nash}}^\ast,\; \sigma^2 / (2 \lambda_{\min}(\nabla^2 \Phi_B))\,\right).$$
+$$\mu_{\infty, B}^{(i)} \;=\; \mathcal{N}\!\left(\,q_{B, \text{Nash}}^\ast,\; \sigma^2 / (2 \lambda_{\min}(\nabla^2 \Phi_B))\,\right).$$
 
 **Parameter-matching.** Two free parameters on each side: $(T, \alpha)$ for Composite A, $(a_0, b, c)$ for Composite B (with $\alpha$ implicit in the gradient-flow rate). Two matching conditions:
 
 - **Mean-matching:** $T_A / 2 = q_{B, \text{Nash}}^\ast$. Choose $T_A = 2\, q_{B, \text{Nash}}^\ast$.
 - **Variance-matching:** $\sigma^2 / (2\alpha) = \sigma^2 / (2\,\lambda_{\min}(\nabla^2 \Phi_B))$. Choose $b$ in Composite B such that $\lambda_{\min}(\nabla^2 \Phi_B) = \alpha$.
 
-Under both conditions: $\mu_{\infty, A}^{(i)} = \mu_{\infty, B}^{(i)} = \mathcal N(q^\ast, \sigma^2/(2\alpha))$ for both $i$, where $q^\ast = T_A/2 = q_{B, \text{Nash}}^\ast$. The marginal *transient* second moments also match under the matched local-curvature condition — both are exponentially-converging Ornstein-Uhlenbeck-type processes per sub-agent in the linearization.
+Under both conditions: $\mu_{\infty, A}^{(i)} = \mu_{\infty, B}^{(i)} = \mathcal{N}(q^\ast, \sigma^2/(2\alpha))$ for both $i$, where $q^\ast = T_A/2 = q_{B, \text{Nash}}^\ast$. The marginal *transient* second moments also match under the matched local-curvature condition — both are exponentially-converging Ornstein-Uhlenbeck-type processes per sub-agent in the linearization.
 
-**The R0/R1 witness.** Composite A satisfies $\mathcal R(\Sigma_A) = \text{R0}$ (unique global attractor + global Lyapunov); Composite B satisfies $\mathcal R(\Sigma_B) = \text{R1}$ (unique-Nash equilibrium with local Lyapunov-on-deviation, but Nash structure rather than shared-target structure). The marginal-data observer sees identical $\mu^{(i)}$ in both; cannot distinguish $\mathcal R = \text{R0}$ from $\mathcal R = \text{R1}$. ∎
+**The R0/R1 witness.** Composite A satisfies $\mathcal{R}(\Sigma_A) = \text{R0}$ (unique global attractor + global Lyapunov); Composite B satisfies $\mathcal{R}(\Sigma_B) = \text{R1}$ (unique-Nash equilibrium with local Lyapunov-on-deviation, but Nash structure rather than shared-target structure). The marginal-data observer sees identical $\mu^{(i)}$ in both; cannot distinguish $\mathcal{R} = \text{R0}$ from $\mathcal{R} = \text{R1}$. ∎
 
 ### Witness 2: R0 vs R2 indistinguishability
 
@@ -58,7 +58,7 @@ Under both conditions: $\mu_{\infty, A}^{(i)} = \mu_{\infty, B}^{(i)} = \mathcal
 
 **Parameter-matching to Composite A.** Choose Composite A's parameters $(T_A, \alpha_A)$ to align with Composite C's per-sub-agent marginal mean ($T_A / 2 = 1/2 \Rightarrow T_A = 1$) and variance (choose $\alpha_A$ such that $\sigma^2 / (2 \alpha_A)$ equals Composite C's marginal variance — solvable for appropriate $\tau$).
 
-**The R0/R2 witness.** Composite A is R0 (state-variable macro-state, joint Lyapunov). Composite C is R2 (distributional macro-state, no joint Lyapunov on $\mathcal X^c$; CCE convergence only). The marginal-data observer sees identical $\mu^{(i)}$ in both; cannot distinguish $\mathcal R = \text{R0}$ from $\mathcal R = \text{R2}$. This sharpening is qualitatively cleaner than the R0/R1 witness because the *joint* dynamic regimes differ qualitatively — convergent vs cyclic-in-joint-distribution — while the per-sub-agent marginals can be made stationary in both cases by appropriate observation-aggregation: cyclic in the *joint* distribution projects to *stationary* in the marginal distribution when the cycle is over the joint coordinate that the marginal averages out. ∎
+**The R0/R2 witness.** Composite A is R0 (state-variable macro-state, joint Lyapunov). Composite C is R2 (distributional macro-state, no joint Lyapunov on $\mathcal{X}^c$; CCE convergence only). The marginal-data observer sees identical $\mu^{(i)}$ in both; cannot distinguish $\mathcal{R} = \text{R0}$ from $\mathcal{R} = \text{R2}$. This sharpening is qualitatively cleaner than the R0/R1 witness because the *joint* dynamic regimes differ qualitatively — convergent vs cyclic-in-joint-distribution — while the per-sub-agent marginals can be made stationary in both cases by appropriate observation-aggregation: cyclic in the *joint* distribution projects to *stationary* in the marginal distribution when the cycle is over the joint coordinate that the marginal averages out. ∎
 
 ### Mechanism (Sylvester at one remove, same as Instances 1 / 2 / 4)
 

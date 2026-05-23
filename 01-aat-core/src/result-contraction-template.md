@@ -24,7 +24,7 @@ stage: draft
 
 *[Template preconditions (contraction-template)]*
 
-Let $\xi(t) \in \mathbb{R}^n$ evolve under $\dot\xi = -F(\xi, t) + w(t)$ where $F$ is $C^1$ in $\xi$ and continuous in $t$. Let $M: \mathbb{R}^n \times \mathbb R_+ \to \mathbb S_{++}^n$ be a smooth symmetric positive-definite matrix-valued function with uniform conditioning:
+Let $\xi(t) \in \mathbb{R}^n$ evolve under $\dot\xi = -F(\xi, t) + w(t)$ where $F$ is $C^1$ in $\xi$ and continuous in $t$. Let $M: \mathbb{R}^n \times \mathbb{R}_+ \to \mathbb{S}_{++}^n$ be a smooth symmetric positive-definite matrix-valued function with uniform conditioning:
 
 $$m_1 I \preceq M(\xi, t) \preceq m_2 I \quad \text{for all } \xi \in \mathcal{B}_R,\, t \geq 0 \tag{M0}$$
 
@@ -32,11 +32,11 @@ with constants $0 \lt m_1 \leq m_2 \lt \infty$.
 
 **(CT1) Zero correction at zero state.** $F(0, t) = 0$ for all $t$.
 
-**(CT2) Local differential-contraction condition.** There exist $\lambda \gt 0$ and $R \gt 0$ such that for all $\xi \in \mathcal B_R$, $t \geq 0$:
+**(CT2) Local differential-contraction condition.** There exist $\lambda \gt 0$ and $R \gt 0$ such that for all $\xi \in \mathcal{B}_R$, $t \geq 0$:
 
 $$\dot M(\xi, t) + M(\xi, t) \frac{\partial F}{\partial \xi}(\xi, t) + \Big(\frac{\partial F}{\partial \xi}(\xi, t)\Big)^T M(\xi, t) \succeq 2\lambda\, M(\xi, t). \tag{CT2}$$
 
-**(CT3) Bounded disturbance.** Either Model D ($\lVert w(t)\rVert \leq \rho_\xi$) or Model S ($w(t)$ Wiener-process increment with $\mathbb E[\lVert w(t)\rVert^2] = \sigma_\xi^2$).
+**(CT3) Bounded disturbance.** Either Model D ($\lVert w(t)\rVert \leq \rho_\xi$) or Model S ($w(t)$ Wiener-process increment with $\mathbb{E}[\lVert w(t)\rVert^2] = \sigma_\xi^2$).
 
 ### Ultimate bound — Model D
 
@@ -46,7 +46,7 @@ Under the preconditions with $V(\xi, t) = \xi^T M(\xi, t) \xi$, the state is ult
 
 $$\limsup_{t \to \infty} \lVert \xi(t) \rVert \leq \frac{\rho_\xi}{\lambda} \sqrt{\frac{m_2}{m_1}}. \tag{CT-D}$$
 
-Structural persistence (the ultimate bound fits within the contraction region $\mathcal B_R$) requires
+Structural persistence (the ultimate bound fits within the contraction region $\mathcal{B}_R$) requires
 
 $$\lambda R \sqrt{m_1/m_2} \gt \rho_\xi. \tag{CT-D-persist}$$
 
@@ -58,7 +58,7 @@ $$\lambda R \sqrt{m_1/m_2} \gt \rho_\xi. \tag{CT-D-persist}$$
 
 Under stochastic disturbance $d\xi = -F(\xi, t)\,dt + \sigma_\xi\,dW_t$ and a metric $M$ satisfying the Itô-correction bound $\tfrac{1}{2}\sigma_\xi^2\,\mathrm{tr}(M + \text{Hessian correction in drift direction}) \leq c_{\text{Itô}}\,m_2$ locally (automatic for state-independent $M$; bounded by $M$'s Hessian otherwise), the stopped process satisfies
 
-$$\mathbb E[V(\xi(t \wedge \tau_R), t \wedge \tau_R)] \leq V(\xi(0), 0)\,e^{-2\lambda t} + \frac{n\sigma_\xi^2 c_{\text{Itô}} m_2}{2\lambda},$$
+$$\mathbb{E}[V(\xi(t \wedge \tau_R), t \wedge \tau_R)] \leq V(\xi(0), 0)\,e^{-2\lambda t} + \frac{n\sigma_\xi^2 c_{\text{Itô}} m_2}{2\lambda},$$
 
 where $\tau_R = \inf\{t: \lVert\xi(t)\rVert \gt R\}$. Mean-square structural persistence requires
 
@@ -85,7 +85,7 @@ The contraction formulation refines `#deriv-sector-condition`'s A2' sub-scope pa
 **Sub-scope metric-$\alpha_2$ (non-Euclidean metric, derived under explicit conditions).** Five cases lift here:
 
 - *Matrix Kalman under information metric* $M = (P^-)^{-1}$: contraction rate $\lambda = \lambda_{\min}(H^T R^{-1} H)/2$ on the observable subspace; Euclidean $\kappa(P^-)$ degradation removed. Under (PI)/Čencov (see `#der-gain-sector-bridge` "Fisher-metric cases under parameterization-invariance"), the information-metric form is *uniquely forced* — AAT-internally derived rather than theorem-imported.
-- *Exponential-family natural parameters under Fisher metric* $M = \mathbf I(\theta)$: contraction rate $\lambda = \eta$ globally on the interior of the natural-parameter domain (Fisher-conditioning degradation removed). Also AAT-internally forced under (PI)/Čencov.
+- *Exponential-family natural parameters under Fisher metric* $M = \mathbf{I}(\theta)$: contraction rate $\lambda = \eta$ globally on the interior of the natural-parameter domain (Fisher-conditioning degradation removed). Also AAT-internally forced under (PI)/Čencov.
 - *Hessian-metric strongly-convex* $M = \nabla^2 L$: contraction rate $\lambda = \eta$ under bounded metric-derivative in the drift direction. Theorem-imported (Hessian metric chosen to match loss curvature; no AAT-internal axiom forces the specific coordinate).
 - *Linear-Hurwitz-non-symmetric under Lyapunov metric*: $M$ solves $M A + A^T M = -Q$ for $Q \succ 0$. Contraction rate $\lambda = \lambda_{\min}(Q)/(2\lambda_{\max}(M))$ in the $M$-metric. **New coverage:** asymmetric-stable linear corrections where Euclidean A2' fails. Theorem-imported (Lyapunov equation construction is standard; no AAT-internal axiom forces $Q$).
 - *PID with bounded plant nonlinearity under Lyapunov metric*: derived under plant-Lipschitz bound $L_p \lt \lambda_{\min}(Q)/(2\lambda_{\max}(M))$. **Promotion from sub-scope $\beta$.** Theorem-imported for the Lyapunov-metric construction; specializations include SPR-tuned PID (phase margin as sector constant; see `#der-gain-sector-bridge` Verified Instances).
@@ -121,7 +121,7 @@ Specializing (CC-feedback) to the signed-coupling structure of `#deriv-critical-
 
 $$(\lambda_1 - C_1)(\lambda_2 - C_2) \gt k_{12} k_{21}/4. \tag{CM2-M}$$
 
-Specializing further to the matched-symmetric case ($\lambda_1 = \lambda_2 = \lambda$, $C_1 = C_2 = C$, $k_{12} = k_{21} = k$): $(\lambda - C)^2 \gt k^2/4 \iff \lambda - C \gt k/2$, which matches `#deriv-critical-mass-composition`'s (CM2) with $k = 2\gamma\mathcal T/R$ (up to normalization). **Heterogeneous-architecture composites now have a closed-form critical-mass inequality** where the matched-symmetric case was the only closed form previously available; `#deriv-critical-mass-composition`'s §6.1 obstruction on heterogeneous composites is thereby closed for the Tier-1M case.
+Specializing further to the matched-symmetric case ($\lambda_1 = \lambda_2 = \lambda$, $C_1 = C_2 = C$, $k_{12} = k_{21} = k$): $(\lambda - C)^2 \gt k^2/4 \iff \lambda - C \gt k/2$, which matches `#deriv-critical-mass-composition`'s (CM2) with $k = 2\gamma\mathcal{T}/R$ (up to normalization). **Heterogeneous-architecture composites now have a closed-form critical-mass inequality** where the matched-symmetric case was the only closed form previously available; `#deriv-critical-mass-composition`'s §6.1 obstruction on heterogeneous composites is thereby closed for the Tier-1M case.
 
 ## Epistemic Status
 
@@ -219,4 +219,4 @@ This is the *interior facet* of the stability certificate ( #disc-stability-cert
 
 - **Finsler metrics.** Forni & Sepulchre 2014 extends the differential Lyapunov framework to Finsler (direction-dependent) metrics. Likely useful only for highly anisotropic corrections (coordinate-asymmetric agents); not priority.
 
-- **The (T2) / (CT2) structural observation matters for Section I too.** `#result-persistence-condition`'s linear special case ($F = \mathcal T \delta$, $\alpha = \mathcal T$, (T2) global) is trivially contraction-metric with $M = I$ and $\lambda = \alpha$. But non-linear `#result-persistence-condition` instances (nonlinear mismatch dynamics, gradient on strongly convex losses) would benefit from contraction-metric framing to remove the Euclidean-norm-specific condition-number penalty in the persistence constant. A cross-reference from `#result-persistence-condition` back to this segment may be warranted after the next promotion pass.
+- **The (T2) / (CT2) structural observation matters for Section I too.** `#result-persistence-condition`'s linear special case ($F = \mathcal{T} \delta$, $\alpha = \mathcal{T}$, (T2) global) is trivially contraction-metric with $M = I$ and $\lambda = \alpha$. But non-linear `#result-persistence-condition` instances (nonlinear mismatch dynamics, gradient on strongly convex losses) would benefit from contraction-metric framing to remove the Euclidean-norm-specific condition-number penalty in the persistence constant. A cross-reference from `#result-persistence-condition` back to this segment may be warranted after the next promotion pass.

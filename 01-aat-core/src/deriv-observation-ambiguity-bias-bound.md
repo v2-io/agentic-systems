@@ -19,13 +19,13 @@ The observation-ambiguity bias bound carried by Class 3 (Coupled) agents in the 
 
 ### §1 — Setup and the audit before strengthening
 
-Let $M_{\tau^-} \in \mathcal M$ be the pre-update epistemic substate. Let $e_\tau$ be the event triggering update, $G_t$ the goal substate, and $\Omega_\tau$ the latent world-state. In Class 1 (Separated) scope, [#der-directed-separation](der-directed-separation.md) guarantees the update $f_M(M_{\tau^-}, e_\tau)$ is goal-blind: $M_{\tau^+}^{\text{decoupled}} = f_M(M_{\tau^-}, e_\tau)$. In Class 3 (Coupled) scope, the coupled update $f_X^M(X_{\tau^-}, e_\tau)$ carries goal-conditional reweighting; the bias is
+Let $M_{\tau^-} \in \mathcal{M}$ be the pre-update epistemic substate. Let $e_\tau$ be the event triggering update, $G_t$ the goal substate, and $\Omega_\tau$ the latent world-state. In Class 1 (Separated) scope, [#der-directed-separation](der-directed-separation.md) guarantees the update $f_M(M_{\tau^-}, e_\tau)$ is goal-blind: $M_{\tau^+}^{\text{decoupled}} = f_M(M_{\tau^-}, e_\tau)$. In Class 3 (Coupled) scope, the coupled update $f_X^M(X_{\tau^-}, e_\tau)$ carries goal-conditional reweighting; the bias is
 
 $$\Delta M_{\text{bias}} := f_X^M(X_{\tau^-}, e_\tau) - f_M(M_{\tau^-}, e_\tau)$$
 
 **Pre-strengthening type audit.** For the bound "$\lVert \Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot I$" to be well-typed:
 
-1. **Norm on $\mathcal M$.** The LHS is a norm on model-space. $\mathcal M$ is the model space of [#form-agent-model](form-agent-model.md). Three candidate norms: Euclidean on parameters, total variation on induced measures, Fisher-Rao geodesic distance. **Under the (PI) parameterization-invariance axiom in [#scope-agent-identity](scope-agent-identity.md)** (fourth primary instance of [#disc-additive-coordinate-forcing](disc-additive-coordinate-forcing.md)), Euclidean-on-parameters is a coordinate artifact and Fisher-Rao is the canonical AAT-invariant choice on statistical-manifold sub-cases of $\mathcal M$ (Čencov 1982 uniqueness).
+1. **Norm on $\mathcal{M}$.** The LHS is a norm on model-space. $\mathcal{M}$ is the model space of [#form-agent-model](form-agent-model.md). Three candidate norms: Euclidean on parameters, total variation on induced measures, Fisher-Rao geodesic distance. **Under the (PI) parameterization-invariance axiom in [#scope-agent-identity](scope-agent-identity.md)** (fourth primary instance of [#disc-additive-coordinate-forcing](disc-additive-coordinate-forcing.md)), Euclidean-on-parameters is a coordinate artifact and Fisher-Rao is the canonical AAT-invariant choice on statistical-manifold sub-cases of $\mathcal{M}$ (Čencov 1982 uniqueness).
 
 2. **Regularity of $f_X^M$.** For the bound to be a theorem, $f_X^M$ must satisfy some regularity. The Bayesian-posterior model (prior + likelihood reweighting) is the canonical working class; it covers the attention-reweighting mechanism typical of Class 3 (Coupled) architectures to leading order.
 
@@ -39,7 +39,7 @@ The bound is well-typed under (a) named norm, (b) bounded $f_X^M$ regularity, (c
 
 **Named sub-scope (H1-H3).**
 
-- **(H1) Statistical-manifold sub-case.** Each $M_t \in \mathcal M$ corresponds to a probability distribution $P_{M_t}$ over world-states. $\mathcal M$ is (locally) a statistical manifold.
+- **(H1) Statistical-manifold sub-case.** Each $M_t \in \mathcal{M}$ corresponds to a probability distribution $P_{M_t}$ over world-states. $\mathcal{M}$ is (locally) a statistical manifold.
 - **(H2) Log-Sobolev inequality.** The observation distribution $P_{\Omega \mid e, M}$ satisfies a log-Sobolev inequality (LSI) with constant $\rho_{\text{LSI}} \gt 0$. Sufficient condition: $P_{\Omega \mid e, M}$ is strongly log-concave with constant $K$ (Bakry-Émery 1985 curvature-dimension condition gives $\rho_{\text{LSI}} \geq K$). For Gaussian observation models, $\rho_{\text{LSI}} = 1/\sigma^2$ explicitly.
 - **(H3) Lipschitz-posterior stability.** The Bayesian-posterior pushforward from observation to state is $L_{\text{post}}$-Lipschitz in $W_2$:
 
@@ -49,7 +49,7 @@ The bound is well-typed under (a) named norm, (b) bounded $f_X^M$ regularity, (c
 
 **Step 1 — KL from mutual information.** By the chain rule of relative entropy (Cover & Thomas 2006 Theorem 2.5.3):
 
-$$\mathbb E_G\bigl[\mathrm{KL}\bigl(P_{\Omega \mid e, M, G} \,\Vert\, P_{\Omega \mid e, M}\bigr)\bigr] = I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$$
+$$\mathbb{E}_G\bigl[\mathrm{KL}\bigl(P_{\Omega \mid e, M, G} \,\Vert\, P_{\Omega \mid e, M}\bigr)\bigr] = I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$$
 
 *Exact identity.*
 
@@ -59,17 +59,17 @@ $$W_2^2\bigl(P_{\Omega \mid e, M, G}, P_{\Omega \mid e, M}\bigr) \leq \tfrac{2}{
 
 Taking expectation over $G$ and substituting Step 1:
 
-$$\mathbb E_G\bigl[W_2^2(P_{\Omega \mid e, M, G}, P_{\Omega \mid e, M})\bigr] \leq \tfrac{2}{\rho_{\text{LSI}}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$$
+$$\mathbb{E}_G\bigl[W_2^2(P_{\Omega \mid e, M, G}, P_{\Omega \mid e, M})\bigr] \leq \tfrac{2}{\rho_{\text{LSI}}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$$
 
 **Step 3 — Lipschitz-posterior pushforward.** From (H3):
 
-$$\mathbb E_G\bigl[W_2^2(P_{M \mid e, G}, P_{M \mid e})\bigr] \leq L_{\text{post}}^2 \cdot \mathbb E_G\bigl[W_2^2(P_{\Omega \mid e, G}, P_{\Omega \mid e})\bigr]$$
+$$\mathbb{E}_G\bigl[W_2^2(P_{M \mid e, G}, P_{M \mid e})\bigr] \leq L_{\text{post}}^2 \cdot \mathbb{E}_G\bigl[W_2^2(P_{\Omega \mid e, G}, P_{\Omega \mid e})\bigr]$$
 
 **Step 4 — $\kappa_{\text{processing}}$ factor.** The $\kappa_{\text{processing}}$ coefficient from [#der-directed-separation](der-directed-separation.md)'s Class 1/2/3 (Separated/Partial/Coupled) taxonomy multiplies the goal-conditional reweighting strength by the modularity coefficient. For Class 3 (Coupled), $\kappa_{\text{processing}} \approx 1$; for Class 2 (Partial) with modularity $\kappa$, the effective bound carries a factor $\kappa$ multiplicatively on the information term.
 
 **Result (Track 1).** *[Derived, conditional on (H1)-(H3)]*
 
-$$\boxed{\;\mathbb E\bigl[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}})\bigr] \;\leq\; \frac{2 L_{\text{post}}^2}{\rho_{\text{LSI}}} \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})\;}$$
+$$\boxed{\;\mathbb{E}\bigl[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}})\bigr] \;\leq\; \frac{2 L_{\text{post}}^2}{\rho_{\text{LSI}}} \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})\;}$$
 
 **The constant is explicit:** $C_{W_2}^2 = 2 L_{\text{post}}^2 / \rho_{\text{LSI}}$, linear in $I$, with geometric interpretation:
 
@@ -83,10 +83,10 @@ $$\boxed{\;\mathbb E\bigl[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{d
 
 **Named sub-scope (H1 + H4).**
 
-- **(H1) Statistical-manifold sub-case** — as in §2. Under the (PI) parameterization-invariance axiom of [#scope-agent-identity](scope-agent-identity.md), Čencov's 1982 uniqueness theorem (*Statistical Decision Rules and Optimal Inference*, AMS) forces the Fisher information metric as the canonical Riemannian metric on $\mathcal M$ up to global scale (Ay, Jost, Lê & Schwachhöfer 2017 *Information Geometry*, Theorem 5.1).
+- **(H1) Statistical-manifold sub-case** — as in §2. Under the (PI) parameterization-invariance axiom of [#scope-agent-identity](scope-agent-identity.md), Čencov's 1982 uniqueness theorem (*Statistical Decision Rules and Optimal Inference*, AMS) forces the Fisher information metric as the canonical Riemannian metric on $\mathcal{M}$ up to global scale (Ay, Jost, Lê & Schwachhöfer 2017 *Information Geometry*, Theorem 5.1).
 - **(H4) Small-information regime.** $I(G; \Omega_\tau \mid e_\tau, M_{\tau^-}) \ll 1$ nat. The second-order Taylor expansion of KL at coincident distributions is sharp.
 
-**Step 1 — KL-to-Fisher-squared-distance identity.** For nearby distributions $P$, $Q$ on a statistical manifold with Fisher metric $\mathbf I$, the KL divergence admits the second-order expansion
+**Step 1 — KL-to-Fisher-squared-distance identity.** For nearby distributions $P$, $Q$ on a statistical manifold with Fisher metric $\mathbf{I}$, the KL divergence admits the second-order expansion
 
 $$\mathrm{KL}(P \Vert Q) \;=\; \tfrac{1}{2} \cdot d_{FR}^2(P, Q) + O(d_{FR}^3)$$
 
@@ -96,15 +96,15 @@ where $d_{FR}$ is the Fisher-Rao geodesic distance (Cover & Thomas 2006 §12.5; 
 
 $$d_{FR}^2\bigl(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}}\bigr) \;\leq\; 2 \cdot \mathrm{KL}\bigl(P_{M \mid e, G} \,\Vert\, P_{M \mid e}\bigr) + O(d_{FR}^3)$$
 
-Using the data-processing inequality $\mathrm{KL}(P_{M \mid e, G} \Vert P_{M \mid e}) \leq \mathrm{KL}(P_{\Omega \mid e, G} \Vert P_{\Omega \mid e})$ (Bayesian posterior is a pushforward), and Step 1 of §2 ($\mathbb E_G[\mathrm{KL}(P_{\Omega \mid e, M, G} \Vert P_{\Omega \mid e, M})] = I$):
+Using the data-processing inequality $\mathrm{KL}(P_{M \mid e, G} \Vert P_{M \mid e}) \leq \mathrm{KL}(P_{\Omega \mid e, G} \Vert P_{\Omega \mid e})$ (Bayesian posterior is a pushforward), and Step 1 of §2 ($\mathbb{E}_G[\mathrm{KL}(P_{\Omega \mid e, M, G} \Vert P_{\Omega \mid e, M})] = I$):
 
-$$\mathbb E\bigl[d_{FR}^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}})\bigr] \;\leq\; 2 \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-}) \cdot (1 + o(1))$$
+$$\mathbb{E}\bigl[d_{FR}^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{decoupled}})\bigr] \;\leq\; 2 \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-}) \cdot (1 + o(1))$$
 
 **Step 3 — Taking square roots (with $\kappa$ factor).** Under Class 2 (Partial) modularity, $\kappa_{\text{processing}}$ enters multiplicatively on the goal-conditional reweighting strength, hence on the KL and Fisher-Rao distance:
 
 **Result (Track 2).** *[Derived, conditional on (H1)+(H4), small-information regime]*
 
-$$\boxed{\;\mathbb E\,\lVert\Delta M_{\text{bias}}\rVert_{FR} \;\leq\; \sqrt{2} \cdot \sqrt{\kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})} \cdot (1 + o(1))\;}$$
+$$\boxed{\;\mathbb{E}\,\lVert\Delta M_{\text{bias}}\rVert_{FR} \;\leq\; \sqrt{2} \cdot \sqrt{\kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})} \cdot (1 + o(1))\;}$$
 
 **The constant is universal and dimension-free:** $C_{FR} = \sqrt{2}$ (nats) or $\sqrt{2 \ln 2}$ (bits). **No domain-specific parameters.** The (PI) commitment eliminates the coordinate-dependence that made $C$ ambiguous under Euclidean-parameter norms.
 
@@ -114,13 +114,13 @@ $$\boxed{\;\mathbb E\,\lVert\Delta M_{\text{bias}}\rVert_{FR} \;\leq\; \sqrt{2} 
 
 *[Proved (no-universal-C-euclidean, counterexample-grade)]*
 
-**Claim.** No universal constant $C$ — independent of $\mathcal M$'s geometry, parameterization, and coupled-update structure — exists such that $\lVert\Delta M_{\text{bias}}\rVert_{\text{Euclidean}} \leq C \cdot \kappa \cdot I$ under the Euclidean norm on an arbitrary parameter vector.
+**Claim.** No universal constant $C$ — independent of $\mathcal{M}$'s geometry, parameterization, and coupled-update structure — exists such that $\lVert\Delta M_{\text{bias}}\rVert_{\text{Euclidean}} \leq C \cdot \kappa \cdot I$ under the Euclidean norm on an arbitrary parameter vector.
 
-**Counterexample.** Let $\mathcal M = \{N(0, \sigma^2) : \sigma \gt 0\}$ parameterized by $\sigma$. The Fisher information in $\sigma$ scales as $\mathbf I(\sigma) = 2/\sigma^2$ — small near large $\sigma$, large near small $\sigma$. For any $C_0 \lt \infty$, choose $\sigma_0$ large enough that the Fisher-Rao displacement corresponding to $I(G; \Omega) = 1$ nat of goal-conditional reweighting translates to Euclidean-$\sigma$ displacement $\sigma_0 / \sqrt{2} \gt C_0$. Specifically, by Track 2's $\sqrt 2$ bound:
+**Counterexample.** Let $\mathcal{M} = \{N(0, \sigma^2) : \sigma \gt 0\}$ parameterized by $\sigma$. The Fisher information in $\sigma$ scales as $\mathbf{I}(\sigma) = 2/\sigma^2$ — small near large $\sigma$, large near small $\sigma$. For any $C_0 \lt \infty$, choose $\sigma_0$ large enough that the Fisher-Rao displacement corresponding to $I(G; \Omega) = 1$ nat of goal-conditional reweighting translates to Euclidean-$\sigma$ displacement $\sigma_0 / \sqrt{2} \gt C_0$. Specifically, by Track 2's $\sqrt 2$ bound:
 
 $$d_{FR}(M^{\text{coupled}}, M^{\text{decoupled}}) \leq \sqrt 2 \cdot 1 = \sqrt 2$$
 
-Under the Fisher metric $\mathbf I(\sigma) = 2/\sigma^2$, the Fisher-Rao line element is $ds^2 = 2 d\sigma^2/\sigma^2$, so $\Delta\sigma \approx \sigma \cdot d_{FR}/\sqrt 2 = \sigma$ (Euclidean displacement scales linearly in $\sigma$). Taking $\sigma \to \infty$ gives arbitrarily large Euclidean-$\sigma$ displacement for fixed $I = 1$ nat. No universal $C$ in Euclidean-parameter norm exists.
+Under the Fisher metric $\mathbf{I}(\sigma) = 2/\sigma^2$, the Fisher-Rao line element is $ds^2 = 2 d\sigma^2/\sigma^2$, so $\Delta\sigma \approx \sigma \cdot d_{FR}/\sqrt 2 = \sigma$ (Euclidean displacement scales linearly in $\sigma$). Taking $\sigma \to \infty$ gives arbitrarily large Euclidean-$\sigma$ displacement for fixed $I = 1$ nat. No universal $C$ in Euclidean-parameter norm exists.
 
 **Implication.** The no-go strengthens the (PI) commitment rather than weakening the bound: **under (PI), Fisher-Rao is the canonical norm and $C = \sqrt 2$ is universal; without (PI), $C$ does not exist as a universal constant.** The (PI) axiom is *load-bearing* for this derivation, not coincidental.
 
@@ -130,7 +130,7 @@ Under the Fisher metric $\mathbf I(\sigma) = 2/\sigma^2$, the Fisher-Rao line el
 
 Two derivation routes were attempted and failed at a structural level. Documented here so future agents do not re-attempt them without new evidence.
 
-**(F1) Cramér-Rao inversion — wrong direction.** Attempt: treat $G$ as a parameter estimated from $\Omega$ given $(e, M)$; use the Cramér-Rao lower bound $\mathrm{Var}(\hat G) \geq \mathbf I_G^{-1}$ inverted to bound $\lVert\Delta M_{\text{bias}}\rVert \leq L_M \cdot \sqrt{\mathbf I_G^{-1}}$ via a posterior-sensitivity factor. Failure: Cramér-Rao bounds estimator error *below*, not above; the bound goes in the opposite direction to what the bias bound needs. Inverting Cramér-Rao for an upper bound on bias propagation requires a fixed-estimator-class assumption that is not available for a Class 3 (Coupled) agent's attention-reweighting mechanism. The transport-inequality route of §2 is the correct machinery.
+**(F1) Cramér-Rao inversion — wrong direction.** Attempt: treat $G$ as a parameter estimated from $\Omega$ given $(e, M)$; use the Cramér-Rao lower bound $\mathrm{Var}(\hat G) \geq \mathbf{I}_G^{-1}$ inverted to bound $\lVert\Delta M_{\text{bias}}\rVert \leq L_M \cdot \sqrt{\mathbf{I}_G^{-1}}$ via a posterior-sensitivity factor. Failure: Cramér-Rao bounds estimator error *below*, not above; the bound goes in the opposite direction to what the bias bound needs. Inverting Cramér-Rao for an upper bound on bias propagation requires a fixed-estimator-class assumption that is not available for a Class 3 (Coupled) agent's attention-reweighting mechanism. The transport-inequality route of §2 is the correct machinery.
 
 **(F2) Rate-distortion inversion — wrong problem structure.** Attempt: apply Shannon's rate-distortion inequality $R(D) \geq h(X) - \tfrac{1}{2}\log(2\pi e D)$ (Gaussian source), invert to $D \leq \sigma^2 \cdot 2^{-2(R - h(X))}$ with "bits in" = $I(G; \Omega \mid e, M)$. Failure: rate-distortion theory describes the minimum bits-per-symbol required to represent a source within distortion $D$; it does **not** describe the maximum distortion induced by injecting side-information into an update. Source-coding theorems are about optimal representations of a source, not spatial displacement induced by side-information injection. The direction is again wrong. Transport inequalities (Attempt B) are the correct machinery.
 
@@ -148,21 +148,21 @@ The pattern shared across (F1) and (F2): **information-theoretic source-coding t
 
 **Track 1 bound (numerical).** $C_{W_2}^2 = 2 L_{\text{post}}^2 / \rho_{\text{LSI}} = 2 \sigma^2 \cdot \tau^4/(\tau^2 + \sigma^2)^2$. In the prior-dominant limit ($\tau^2 \ll \sigma^2$): $C_{W_2}^2 \approx 2 \tau^4/\sigma^2$ (tight prior amplifies bias). In the likelihood-dominant limit ($\sigma^2 \ll \tau^2$): $C_{W_2}^2 \approx 2 \sigma^2$ (sharp observations limit bias).
 
-**Track 2 bound (numerical).** Under (PI) + Fisher-Rao on the Gaussian mean-manifold with metric $\mathbf I(\mu) = I/\sigma^2$: $d_{FR}(\mu_1, \mu_2) = \lVert\mu_1 - \mu_2\rVert/\sigma$. Under small-$I$: $\mathbb E\,d_{FR}(\Delta M_{\text{bias}}) \leq \sqrt{2 \cdot \kappa \cdot I}$. In Euclidean-on-$\mu$ norm: $\lVert\Delta\mu_{\text{bias}}\rVert \leq \sigma \cdot \sqrt{2 \kappa I}$ — the $\sigma$ prefactor is the Fisher-Rao-to-Euclidean conversion. The Euclidean form is coordinate-dependent (per Attempt E §4); Fisher-Rao form is universal.
+**Track 2 bound (numerical).** Under (PI) + Fisher-Rao on the Gaussian mean-manifold with metric $\mathbf{I}(\mu) = I/\sigma^2$: $d_{FR}(\mu_1, \mu_2) = \lVert\mu_1 - \mu_2\rVert/\sigma$. Under small-$I$: $\mathbb{E}\,d_{FR}(\Delta M_{\text{bias}}) \leq \sqrt{2 \cdot \kappa \cdot I}$. In Euclidean-on-$\mu$ norm: $\lVert\Delta\mu_{\text{bias}}\rVert \leq \sigma \cdot \sqrt{2 \kappa I}$ — the $\sigma$ prefactor is the Fisher-Rao-to-Euclidean conversion. The Euclidean form is coordinate-dependent (per Attempt E §4); Fisher-Rao form is universal.
 
-**Comparison at operating point.** For $\tau = \sigma = 1$ (balanced): Track 1 gives $C_{W_2}^2 = 2 \cdot (1/4) = 1/2$, so $\mathbb E\,W_2 \leq \sqrt{I/2}$. Track 2 gives $\mathbb E\,d_{FR} \leq \sqrt{2I}$. The two are within a factor of 2 of each other at balanced scale; they diverge in the ill-conditioned limits where Track 1's $L_{\text{post}}$ or $\rho_{\text{LSI}}$ blows up while Track 2 remains dimension-free.
+**Comparison at operating point.** For $\tau = \sigma = 1$ (balanced): Track 1 gives $C_{W_2}^2 = 2 \cdot (1/4) = 1/2$, so $\mathbb{E}\,W_2 \leq \sqrt{I/2}$. Track 2 gives $\mathbb{E}\,d_{FR} \leq \sqrt{2I}$. The two are within a factor of 2 of each other at balanced scale; they diverge in the ill-conditioned limits where Track 1's $L_{\text{post}}$ or $\rho_{\text{LSI}}$ blows up while Track 2 remains dimension-free.
 
 ### What Is Derived vs. What Is Chosen
 
 | Property | Source | Strength |
 |---|---|---|
-| Chain-rule identity $\mathbb E_G[\mathrm{KL}(P_{\Omega\mid G}\Vert P_\Omega)] = I(G;\Omega\mid \cdot)$ | Cover & Thomas 2006 Theorem 2.5.3 | Exact |
+| Chain-rule identity $\mathbb{E}_G[\mathrm{KL}(P_{\Omega\mid G}\Vert P_\Omega)] = I(G;\Omega\mid \cdot)$ | Cover & Thomas 2006 Theorem 2.5.3 | Exact |
 | Pinsker's inequality $\lVert P-Q\rVert_{TV} \leq \sqrt{\tfrac{1}{2}\mathrm{KL}}$ | Standard (Csiszár-Körner) | Exact |
 | Otto-Villani $W_2^2 \leq (2/\rho_{\text{LSI}})\mathrm{KL}$ under LSI | Otto & Villani 2000 Theorem 1; Bakry-Émery 1985 curvature-dimension for LSI | Exact |
 | KL-to-Fisher-squared-distance $\mathrm{KL}(P\Vert Q) = \tfrac{1}{2}d_{FR}^2 + O(d_{FR}^3)$ | Cover-Thomas 2006 §12.5; Amari-Nagaoka 2000 §3.7 Theorem 3.1 | Exact (standard information geometry) |
 | Bayesian-posterior $W_2$-Lipschitz stability $L_{\text{post}}$ | Stuart 2010 Theorem 4.6 under well-posed inverse problem | Conditional on (H3) |
-| **Track 1 bound** $\mathbb E[W_2^2(M^{\text{coupled}}, M^{\text{decoupled}})] \leq (2L_{\text{post}}^2/\rho_{\text{LSI}}) \cdot \kappa \cdot I$ | Composition of §2 Steps 1–4 | **Derived (conditional on H1-H3)** |
-| **Track 2 bound** $\mathbb E\,\lVert\Delta M_{\text{bias}}\rVert_{FR} \leq \sqrt{2} \cdot \sqrt{\kappa I}(1+o(1))$ | Composition of §3 Steps 1–3 under (PI) + Čencov | **Derived (conditional on H1+H4, small-$I$ regime)** |
+| **Track 1 bound** $\mathbb{E}[W_2^2(M^{\text{coupled}}, M^{\text{decoupled}})] \leq (2L_{\text{post}}^2/\rho_{\text{LSI}}) \cdot \kappa \cdot I$ | Composition of §2 Steps 1–4 | **Derived (conditional on H1-H3)** |
+| **Track 2 bound** $\mathbb{E}\,\lVert\Delta M_{\text{bias}}\rVert_{FR} \leq \sqrt{2} \cdot \sqrt{\kappa I}(1+o(1))$ | Composition of §3 Steps 1–3 under (PI) + Čencov | **Derived (conditional on H1+H4, small-$I$ regime)** |
 | $C_{FR} = \sqrt{2}$ is universal, dimension-free, no domain constants | §3 Result | Exact under (H1)+(H4) |
 | $C_{W_2}^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$ with explicit geometric interpretation | §2 Result | Exact under (H1)-(H3) |
 | Attempt E no-go: no universal $C$ in Euclidean-parameter norm | Heteroscedastic-normal counterexample §4 | Proved (counterexample-grade) |
@@ -190,7 +190,7 @@ Max attainable: *exact* for the composition of the three textbook inequalities (
 
 The appendix does **not** cover:
 
-1. **Non-statistical-manifold sub-cases of $\mathcal M$.** If $\mathcal M$ carries structured state-space geometry (mixed continuous/discrete components, graphical-model structure, non-parametric models without sufficient statistics), (H1) is weakened and Čencov's uniqueness does not straightforwardly apply. The Fisher-Rao track degrades; Track 1 may still apply under suitable alternative regularity.
+1. **Non-statistical-manifold sub-cases of $\mathcal{M}$.** If $\mathcal{M}$ carries structured state-space geometry (mixed continuous/discrete components, graphical-model structure, non-parametric models without sufficient statistics), (H1) is weakened and Čencov's uniqueness does not straightforwardly apply. The Fisher-Rao track degrades; Track 1 may still apply under suitable alternative regularity.
 
 2. **Unbounded KL / structural-failure limit.** If $P_{\Omega \mid e, M, G}$ has support disjoint from $P_{\Omega \mid e, M}$ at $G$-values carrying non-trivial prior probability, the KL (and thus $I$) diverges. The bound is vacuous in this regime. This is a structural failure of the coupled-update model, not a bound weakness.
 
@@ -202,7 +202,7 @@ The appendix does **not** cover:
 
 ## Discussion
 
-**Position in the [#disc-additive-coordinate-forcing](disc-additive-coordinate-forcing.md) meta-pattern.** Track 2's $C_{FR} = \sqrt 2$ result is a **downstream theorem of the fourth primary instance** (Čencov-invariance at the metric layer, under (PI)). Once (PI) adoption forces Fisher-Rao as the canonical metric on statistical-manifold sub-cases of $\mathcal M$, the KL-to-Fisher-squared-distance identity supplies the universal constant "for free" in the small-$I$ regime. The no-go §4 tightens the connection: the (PI) commitment is not just "useful axiom" but load-bearing for the bound's theorem-level status — without (PI), $C$ does not exist as a universal constant.
+**Position in the [#disc-additive-coordinate-forcing](disc-additive-coordinate-forcing.md) meta-pattern.** Track 2's $C_{FR} = \sqrt 2$ result is a **downstream theorem of the fourth primary instance** (Čencov-invariance at the metric layer, under (PI)). Once (PI) adoption forces Fisher-Rao as the canonical metric on statistical-manifold sub-cases of $\mathcal{M}$, the KL-to-Fisher-squared-distance identity supplies the universal constant "for free" in the small-$I$ regime. The no-go §4 tightens the connection: the (PI) commitment is not just "useful axiom" but load-bearing for the bound's theorem-level status — without (PI), $C$ does not exist as a universal constant.
 
 **Connection to [#deriv-variational-sector-condition](deriv-variational-sector-condition.md).** Both segments use Pinsker's inequality as a first step in propagating a KL bound. After Pinsker, the two segments diverge: this segment's cascade (Pinsker → Otto-Villani → Lipschitz-posterior → $W_2$ on pushforward) is a KL-to-state-distance machinery; `#deriv-variational-sector-condition`'s use (Pinsker + Cauchy-Schwarz → scalar sector-constant degradation) is a KL-to-scalar-constant machinery. The shared first step is Pinsker; the post-Pinsker cascade is not shared. Candidate shared-lemma extraction is flagged in `spikes/spike-kl-to-state-distance-template-extraction-2026-04-24.md` (Option B, `#posterior-displacement-template`); `#deriv-variational-sector-condition` is positioned there as an adjacent family member (Pinsker shared; cascade not).
 
@@ -246,7 +246,7 @@ The appendix does **not** cover:
 
 - **Large-$I$ Fisher-Rao refinement.** Track 2's $\sqrt I$ scaling is the small-$I$ Taylor expansion. Extending to large $I$ requires either compact-manifold assumption or staged composition; flagged for future work.
 
-- **Interaction with the $\mathcal A$ factor from `#scope-observation-ambiguity-modulation`.** The product form $\kappa_{\text{eff}} = \kappa \cdot \mathcal A$ interacts with the transport-inequality constants in ways not fully worked out here. If $\mathcal A$ is itself an information-theoretic ratio, the $\mathcal A$ factor may be absorbable into the $I$ term rather than appearing as a separate multiplicative factor. Flagged for a clarification pass when the logogenic-agents segments are next revised.
+- **Interaction with the $\mathcal{A}$ factor from `#scope-observation-ambiguity-modulation`.** The product form $\kappa_{\text{eff}} = \kappa \cdot \mathcal{A}$ interacts with the transport-inequality constants in ways not fully worked out here. If $\mathcal{A}$ is itself an information-theoretic ratio, the $\mathcal{A}$ factor may be absorbable into the $I$ term rather than appearing as a separate multiplicative factor. Flagged for a clarification pass when the logogenic-agents segments are next revised.
 
 - **Non-Bayesian pushforwards.** The Track 1 (T3) posterior-Lipschitz step is stated for Bayesian-posterior pushforwards. Non-Bayesian pushforwards (e.g., post-intervention transformations in the causal-IB candidate) would use the general $W_2$-Lipschitz form; the machinery generalizes, though the concrete constants are client-specific.
 
@@ -255,4 +255,4 @@ The appendix does **not** cover:
 - **Class 2 (Partial) bias-bound analog — open derivation.** This segment derives the bound $C$ for the Class 3 (Coupled) extreme at $\kappa_{\text{processing}} \to 1$. The corresponding bound for Class 2 (Partial) agents at $\kappa_{\text{processing}} \in (0, 1)$ is open. Both Track 1 (transport-inequality under LSI + Lipschitz-posterior) and Track 2 (Fisher-Rao under (PI) + Čencov + small-$I$) derive the worst-case envelope; specializing either track to the bounded-coupling regime is the natural starting point. Whether the Class 2 case admits a clean closed-form bound or requires architectural specifics (e.g., per-stage modularity decomposition) is not yet known. Surfaced 2026-05-09 by the GUC rename audit; flagged in `TODO.md` §"Open theory items (MEDIUM)" for cross-referencing.
 
 - **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged / fully coupled, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. The segment's canonical claim previously known as the "Class-2 ambiguity bias bound" (fully-coupled case) is now the "Class 3 (Coupled) ambiguity bias bound." Every "Class-2 (fully-coupled)" reference renamed to "Class 3 (Coupled)"; "Class 3 partially-modular" → "Class 2 (Partial)"; "Class-1 (modular)" → "Class 1 (Separated)." Downstream segments citing the old "Class-2 bias bound" name: see external-citation list in the parent Phase 2 commit report — those segments are scope for later Phase 2/3 work. Removed at `candidate` stage per FORMAT.md Gate 4.
-- **Cross-reference to NeurIPS Paper 3.** This segment's two-tracks framework is materially sharpened in NeurIPS 2026 Paper 3 ("How Much Can LLMs Hallucinate? An Upper Bound on Goal-Coupling Displacement", `~/src/neurips/03-llm-hallucinate-bound/`). The paper carries: (i) **Two named tracks with explicit hypothesis sets** at §4 Theorem 4.1 / `#thm-umbrella` — Track 1 (transport-inequality, $W_2$ metric) recovers the canonical Stuart-school cascade form $C_{T_2} \propto L_{\text{post}}^2/\rho_{\text{LSI}}$ under (H2'); Track 2 (Fisher-Rao Čencov uniqueness) gives **$C = 2$ globally on the ambient spherical-arc pseudometric** — the operating constant for adversarial / rare-high-KL prompts including jailbreaks and persona injection (via Rényi-1/2 monotonicity + chord-arc on the unit $L^2$-sphere; sharp via symmetric $N$-point witness) — tightening to **$C = \sqrt{2}$ locally** under (R) + (K) + (H4') uniform-locality on goal-conditional slices (first-moment sharp via symmetric two-point witness). (ii) **Chain-rule on post-update law as bridging lemma** at §5 Lemma 5.1 / `#lem-chain-rule`: $\mathbb E_G[\mathrm{KL}(P_{M_{\tau^+}\mid e,M_{\tau^-},G} \,\Vert\, P_{M_{\tau^+}\mid e,M_{\tau^-}})] = I(G;\, M_{\tau^+}\mid e_\tau, M_{\tau^-})$ — the structural identity connecting Bayesian inverse-problems with architectural classification. (iii) **No-go theorem on Euclidean chart norms** at §4 Theorem 4.2 / `#thm-no-go`: chart-rescaling argument $\phi \mapsto a\phi$ scales chart-Euclidean $W_2$ linearly while leaving KL/MI/$d_{FR}$/Hellinger chart-invariant; taking $a \to \infty$ contradicts any candidate fixed $C_0\sqrt{I}$. *Forces (PI) as load-bearing for theorem-level status* and supplies the explicit witness construction for what this segment's Attempt E flagged structurally. The fourth instance of M1 identifiability-floor (named F4 in Paper 3 §4 Lemma 4.2). (iv) **Čencov-uniqueness-and-sharpness** at §4 Theorem 4.3 / `#thm-fr-uniqueness`: under (H1)+(PI)+(R)+(K)+(H4'), $d_{\mathcal{M}}$ is uniquely the ambient Amari-Nagaoka Fisher-Rao spherical-arc distance and $C = \sqrt 2$ is the unique sharp upper-bound constant. (v) **Class 1 reduction theorem to Stuart-school setup** at §App-D — the Class 1 (Separated) specialization of Track 1's hypothesis space *is* the Stuart-school Lipschitz-posterior cascade (the strict-strengthening from spike A7). The paper's (PI)+(R)+(K) axiom triple — chart-invariance + Riemannian structure + KL second-order matching — is the load-bearing structural commitment for the universal-constant route. See `msc/neurips-back-integration-2026-05-08.md` §1 Paper 3 entries 1, 2, 3, 4, 5, 7. Standalone-segment proposals under back-integration §3: `#deriv-post-update-chain-rule`, `#deriv-chart-rescaling-no-go`.
+- **Cross-reference to NeurIPS Paper 3.** This segment's two-tracks framework is materially sharpened in NeurIPS 2026 Paper 3 ("How Much Can LLMs Hallucinate? An Upper Bound on Goal-Coupling Displacement", `~/src/neurips/03-llm-hallucinate-bound/`). The paper carries: (i) **Two named tracks with explicit hypothesis sets** at §4 Theorem 4.1 / `#thm-umbrella` — Track 1 (transport-inequality, $W_2$ metric) recovers the canonical Stuart-school cascade form $C_{T_2} \propto L_{\text{post}}^2/\rho_{\text{LSI}}$ under (H2'); Track 2 (Fisher-Rao Čencov uniqueness) gives **$C = 2$ globally on the ambient spherical-arc pseudometric** — the operating constant for adversarial / rare-high-KL prompts including jailbreaks and persona injection (via Rényi-1/2 monotonicity + chord-arc on the unit $L^2$-sphere; sharp via symmetric $N$-point witness) — tightening to **$C = \sqrt{2}$ locally** under (R) + (K) + (H4') uniform-locality on goal-conditional slices (first-moment sharp via symmetric two-point witness). (ii) **Chain-rule on post-update law as bridging lemma** at §5 Lemma 5.1 / `#lem-chain-rule`: $\mathbb{E}_G[\mathrm{KL}(P_{M_{\tau^+}\mid e,M_{\tau^-},G} \,\Vert\, P_{M_{\tau^+}\mid e,M_{\tau^-}})] = I(G;\, M_{\tau^+}\mid e_\tau, M_{\tau^-})$ — the structural identity connecting Bayesian inverse-problems with architectural classification. (iii) **No-go theorem on Euclidean chart norms** at §4 Theorem 4.2 / `#thm-no-go`: chart-rescaling argument $\phi \mapsto a\phi$ scales chart-Euclidean $W_2$ linearly while leaving KL/MI/$d_{FR}$/Hellinger chart-invariant; taking $a \to \infty$ contradicts any candidate fixed $C_0\sqrt{I}$. *Forces (PI) as load-bearing for theorem-level status* and supplies the explicit witness construction for what this segment's Attempt E flagged structurally. The fourth instance of M1 identifiability-floor (named F4 in Paper 3 §4 Lemma 4.2). (iv) **Čencov-uniqueness-and-sharpness** at §4 Theorem 4.3 / `#thm-fr-uniqueness`: under (H1)+(PI)+(R)+(K)+(H4'), $d_{\mathcal{M}}$ is uniquely the ambient Amari-Nagaoka Fisher-Rao spherical-arc distance and $C = \sqrt 2$ is the unique sharp upper-bound constant. (v) **Class 1 reduction theorem to Stuart-school setup** at §App-D — the Class 1 (Separated) specialization of Track 1's hypothesis space *is* the Stuart-school Lipschitz-posterior cascade (the strict-strengthening from spike A7). The paper's (PI)+(R)+(K) axiom triple — chart-invariance + Riemannian structure + KL second-order matching — is the load-bearing structural commitment for the universal-constant route. See `msc/neurips-back-integration-2026-05-08.md` §1 Paper 3 entries 1, 2, 3, 4, 5, 7. Standalone-segment proposals under back-integration §3: `#deriv-post-update-chain-rule`, `#deriv-chart-rescaling-no-go`.

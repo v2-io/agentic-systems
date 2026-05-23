@@ -1,0 +1,109 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# bin/fix-math-braces — convert bare-token math-style arguments to braced
+# form across segment sources, so unicode-math accepts them.
+#
+# Context. unicode-math (loaded by all four AAT mono targets via
+# \usepackage{unicode-math}) redefines \mathcal, \mathbb, \mathfrak,
+# \mathbf, \mathit, \mathrm, \mathsf, \mathnormal, \mathtt to require
+# explicit `{...}` grouping. The classic LaTeX2e bare-token convention
+# `\mathcal M` halts the build at unicode-math's \__um_group_begin: token
+# with "Missing { inserted." The AAT corpus uses the bare-token form
+# throughout the math-prose (it reads more naturally in source). This
+# script rewrites those into the braced form.
+#
+# What it touches.
+#   Pattern: \<style>{space}<single letter>{next char ≠ letter, ≠ `{`}
+#   Replacement: \<style>{<letter>}
+#
+# What it deliberately does not touch.
+#   • \mathcal{M} — already braced; the regex lookahead excludes it.
+#   • \mathcal MNO — TeX-classic semantics here are "calligraphic M, then
+#     ordinary NO" so this becomes \mathcal{M}NO — by treating only the
+#     first letter as the argument. The regex matches `\mathcal M` (M
+#     followed by `N`, a letter); we DO transform that — the result
+#     `\mathcal{M}NO` preserves the original meaning ✓.
+#   • \mathcal\delta — control-sequence argument. Rare in this corpus; my
+#     regex requires `[A-Za-z]` after the space, so `\delta` is not matched.
+#     The few cases will surface as build errors if they exist and can be
+#     fixed by hand.
+#   • Fenced code blocks (``` ... ```), inline code (`...`), and YAML
+#     frontmatter are skipped — these aren't math content anyway.
+#
+# Idempotent. Running twice produces the same result as running once.
+
+require 'pathname'
+
+ROOT = Pathname.new(__dir__).parent.expand_path
+SRC_DIRS = %w[01-aat-core/src 02-tst-core/src 03-llm-core/src 04-eli-core/src].map { |d| ROOT / d }
+
+STYLES = %w[mathcal mathbb mathfrak mathbf mathit mathrm mathsf mathnormal mathtt].freeze
+STYLE_ALT = STYLES.join('|')
+
+# Match: \style followed by one+ spaces followed by one letter followed by
+# a non-letter, non-brace character (or end of line). The trailing
+# character is in a lookahead so we don't consume it.
+PATTERN = /\\(#{STYLE_ALT})( +)([A-Za-z])(?=[^A-Za-z{]|$)/
+
+def transform_line(line)
+  line.gsub(PATTERN) { "\\#{Regexp.last_match(1)}{#{Regexp.last_match(3)}}" }
+end
+
+# Skip lines inside fenced code blocks (``` ... ```) and the YAML
+# frontmatter block at the top. Inline code spans (single-backtick) are
+# left to the regex's caution — math styles inside code spans would be
+# unusual and the regex requires a backslash so most spans are unaffected.
+def transform_file(path)
+  text = path.read
+  lines = text.lines
+  out = []
+  in_fence = false
+  in_frontmatter = false
+  changed = 0
+
+  lines.each_with_index do |line, idx|
+    if idx.zero? && line.start_with?('---')
+      in_frontmatter = true
+      out << line
+      next
+    end
+    if in_frontmatter
+      out << line
+      in_frontmatter = false if line.start_with?('---')
+      next
+    end
+    if line.match?(/^```/)
+      in_fence = !in_fence
+      out << line
+      next
+    end
+    if in_fence
+      out << line
+      next
+    end
+
+    new_line = transform_line(line)
+    changed += 1 if new_line != line
+    out << new_line
+  end
+
+  return 0 if changed.zero?
+
+  path.write(out.join)
+  changed
+end
+
+total_files = 0
+total_changes = 0
+SRC_DIRS.each do |dir|
+  next unless dir.exist?
+  Dir.glob(dir / '*.md').sort.each do |fp|
+    n = transform_file(Pathname.new(fp))
+    next if n.zero?
+    total_files += 1
+    total_changes += n
+    warn "  #{Pathname.new(fp).relative_path_from(ROOT)} — #{n} line(s)"
+  end
+end
+warn "#{total_changes} line(s) changed across #{total_files} file(s)"

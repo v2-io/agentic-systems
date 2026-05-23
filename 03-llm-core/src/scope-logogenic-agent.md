@@ -29,7 +29,7 @@ An **LLM-based agent** is an actuated agent ( #def-agent-spectrum) with the foll
 | $e_\tau$ | A new event entering the context: tool result, user message, file content, error output |
 | $a_t$ | The agent's response: tool invocation, message, code edit, or explicit reasoning step |
 | $h$ | The observation function that maps environment state to text (tool output formatting, error messages, file rendering) |
-| $\mathcal C_t$ | The conversation history (chronica), subject to context-window truncation |
+| $\mathcal{C}_t$ | The conversation history (chronica), subject to context-window truncation |
 | $\pi$ | The policy implemented by the forward pass conditioned on the full context |
 
 *[Scope (logogenic-agent-class)]*
@@ -43,7 +43,7 @@ The transformer attention mechanism processes all tokens in the context window j
 **Scope verification.** The agent satisfies the agency scope ( #scope-agency):
 
 1. **Observations exist**: $\mathcal{O} \neq \emptyset$ — the agent receives tool outputs, user messages, and file contents
-2. **Residual uncertainty persists**: $H(\Omega_t \mid \mathcal C_t) \gt 0$ — the agent cannot fully determine the environment from its context (code has unseen dependencies, tests have unobserved failure modes, user intent is partially ambiguous)
+2. **Residual uncertainty persists**: $H(\Omega_t \mid \mathcal{C}_t) \gt 0$ — the agent cannot fully determine the environment from its context (code has unseen dependencies, tests have unobserved failure modes, user intent is partially ambiguous)
 3. **At least binary choice**: $\lvert\mathcal{A}\rvert \geq 2$ — the agent can choose among multiple tool calls, messages, or reasoning strategies
 4. **Causal effect**: different actions produce different observations — running a test versus reading a file yields different $P(o \mid do(a))$
 

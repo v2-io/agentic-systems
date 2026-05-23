@@ -17,7 +17,7 @@ stage: draft
 
 Estimation recipes for core AAT quantities, bridging the measurement gap between formal objects and practical deployment.
 
-The segment is **domain-honest** about which quantities are easily measured and which are operationally challenging: model uncertainty admits predictive-posterior / ensemble-spread / Bayesian-NN estimators; observation uncertainty admits channel calibration or residual variance; mismatch magnitude is directly measurable from prediction-versus-observation residuals; tempo from event rate times effective gain; the sector parameter via either the gain-sector bridge (where applicable — Bayesian on exponential families; gradient on strongly convex) or empirical correction-rate-vs-mismatch regression; disturbance parameters split per Model D ($\hat\rho_{\det}$) versus Model S ($\hat\sigma_w$) with sequential dependence on $\hat{\mathcal T}$; critical-mismatch tolerance is a *domain parameter* not an estimated quantity (it encodes "how wrong can the model be before actions become harmful or ineffective?"). Model-class fitness is named as particularly challenging — not directly computable, requiring search across the model class; the observable signature is persistent mismatch despite adequate learning. Satisfaction gap and control regret require evaluating attainability, generally intractable in exact form. AAT's commitment is that the abstract machinery is operationalizable with stated quality trade-offs at each estimation step, not analytical idealization with no path to practice.
+The segment is **domain-honest** about which quantities are easily measured and which are operationally challenging: model uncertainty admits predictive-posterior / ensemble-spread / Bayesian-NN estimators; observation uncertainty admits channel calibration or residual variance; mismatch magnitude is directly measurable from prediction-versus-observation residuals; tempo from event rate times effective gain; the sector parameter via either the gain-sector bridge (where applicable — Bayesian on exponential families; gradient on strongly convex) or empirical correction-rate-vs-mismatch regression; disturbance parameters split per Model D ($\hat\rho_{\det}$) versus Model S ($\hat\sigma_w$) with sequential dependence on $\hat{\mathcal{T}}$; critical-mismatch tolerance is a *domain parameter* not an estimated quantity (it encodes "how wrong can the model be before actions become harmful or ineffective?"). Model-class fitness is named as particularly challenging — not directly computable, requiring search across the model class; the observable signature is persistent mismatch despite adequate learning. Satisfaction gap and control regret require evaluating attainability, generally intractable in exact form. AAT's commitment is that the abstract machinery is operationalizable with stated quality trade-offs at each estimation step, not analytical idealization with no path to practice.
 
 ## Measurement Targets
 
@@ -67,9 +67,9 @@ Let $s_t = \lVert\delta_t\rVert$ in surprise units (e.g., negative log-likelihoo
 
 *[Operational Definition]*
 
-$$\hat{\rho}_{\det}(t) = \left[\frac{s_{t+\Delta t} - s_t}{\Delta t} + \hat{\mathcal T}_t \, s_t\right]_+$$
+$$\hat{\rho}_{\det}(t) = \left[\frac{s_{t+\Delta t} - s_t}{\Delta t} + \hat{\mathcal{T}}_t \, s_t\right]_+$$
 
-where $[x]_+ = \max(x, 0)$ and $\hat{\mathcal T}$ evaluated at time $t$ is estimated adaptive tempo. Take the supremum (or a high quantile) over the estimation window.
+where $[x]_+ = \max(x, 0)$ and $\hat{\mathcal{T}}$ evaluated at time $t$ is estimated adaptive tempo. Take the supremum (or a high quantile) over the estimation window.
 
 **Model S: Noise scale ($\hat{\sigma}_w$):**
 
@@ -79,9 +79,9 @@ $$\hat{\sigma}_w^2 = \text{Var}\left[\frac{s_{t+\Delta t} - (1 - \hat{\eta}^\ast
 
 i.e., the variance of the mismatch innovations (residuals after subtracting the expected correction). For AR(1) processes, this is the innovation variance $\hat{\rho}^2$ directly.
 
-**Note on estimation sequencing.** Both estimators require $\hat{\mathcal T}_t$ (or $\hat{\eta}^\ast$), estimated from $\hat{\nu}$ and $\hat{\eta}^\ast$.
+**Note on estimation sequencing.** Both estimators require $\hat{\mathcal{T}}_t$ (or $\hat{\eta}^\ast$), estimated from $\hat{\nu}$ and $\hat{\eta}^\ast$.
 Estimate the gain and event rate first (from the agent's internal statistics and observation timing), then use these to extract the disturbance parameters from the mismatch trajectory.
-This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal T}$ propagate into $\hat\rho_{\det}$ and $\hat\sigma_w$.
+This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal{T}}$ propagate into $\hat\rho_{\det}$ and $\hat\sigma_w$.
 
 **Local pause-window drift for #der-deliberation-cost ($\hat{\rho}_{\text{delib}}$):**
 
@@ -130,8 +130,8 @@ This anchors #result-persistence-condition to real task outcomes.
 6. Estimate $\Vert\delta_{\text{critical}}\Vert$ from task-performance degradation.
 7. Compute derived diagnostics:
 
-   - Tempo margin (Model D): $\hat{\mathcal T} - \hat\rho_{\det}/\lVert\hat\delta_{\text{critical}}\rVert$
-   - Tempo margin (Model S): $\hat{\mathcal T} - n\hat\sigma_w^2/(2\lVert\hat\delta_{\text{critical}}\rVert^2)$
+   - Tempo margin (Model D): $\hat{\mathcal{T}} - \hat\rho_{\det}/\lVert\hat\delta_{\text{critical}}\rVert$
+   - Tempo margin (Model S): $\hat{\mathcal{T}} - n\hat\sigma_w^2/(2\lVert\hat\delta_{\text{critical}}\rVert^2)$
    - Reserve: $\widehat{\Delta \rho^\ast} = \hat\alpha\hat R - \hat\rho_{\det}$
    - Deliberation feasibility: $\Delta\eta^\ast(\Delta\tau)\Vert\delta_{\text{post}}\Vert - \hat\rho_{\text{delib}}\Delta\tau$
 

@@ -16,7 +16,7 @@ stage: draft
 
 # Derivation: Persistence Cost — Information Rate to Maintain Bounded Mismatch
 
-AAT's persistence machinery establishes that under the sector condition, mismatch stays bounded. It does not quantify the *sustained rate of effort* an agent must expend to hold that bound. Two agents with identical persistence guarantees can face wildly different demands — a Kalman filter tracking a stationary process vs one tracking a rapidly non-stationary process are both persistent; one is dormant, the other running hot. Under Model S with Gaussian-OU signal, the sustained Shannon information rate the agent must acquire from observations to maintain the sector-persistence ultimate bound is $\dot R_{\min} \geq n\alpha/2$ nats per unit time — a Landauer-analog lower bound that depends only on the signal's second-order statistics and the sector constant $\alpha$, and that Kalman-Bucy saturates in steady state. The bound promotes channel capacity $C \geq \mathcal T/2$ into a first-class persistence prerequisite that the current theory does not name.
+AAT's persistence machinery establishes that under the sector condition, mismatch stays bounded. It does not quantify the *sustained rate of effort* an agent must expend to hold that bound. Two agents with identical persistence guarantees can face wildly different demands — a Kalman filter tracking a stationary process vs one tracking a rapidly non-stationary process are both persistent; one is dormant, the other running hot. Under Model S with Gaussian-OU signal, the sustained Shannon information rate the agent must acquire from observations to maintain the sector-persistence ultimate bound is $\dot R_{\min} \geq n\alpha/2$ nats per unit time — a Landauer-analog lower bound that depends only on the signal's second-order statistics and the sector constant $\alpha$, and that Kalman-Bucy saturates in steady state. The bound promotes channel capacity $C \geq \mathcal{T}/2$ into a first-class persistence prerequisite that the current theory does not name.
 
 The bound is *filter-agnostic*: it holds for any correction mechanism achieving the ultimate bound under the stated scope. It is also *substrate-agnostic*: Landauer's principle converts it to a thermodynamic dissipation floor in any physical realization (Still et al. 2012). The corollary the framework lifts — a channel-capacity floor as first-class persistence prerequisite — has bite in three regimes where observation bandwidth is non-abundant: biological systems with finite neural channel capacity, bandwidth-constrained distributed systems over noisy or low-bandwidth links, and context-window-limited language models where effective information rate per unit of cognition is bounded by context size and token throughput. Survival, in this framework, is not a state achieved once — it is a *sustained burn rate* of information, and the channel that supports it is part of what keeps the agent in scope.
 
@@ -25,7 +25,7 @@ The bound is *filter-agnostic*: it holds for any correction mechanism achieving 
 ### Setup
 
 The agent is in scope of #result-sector-condition-stability Model S (GA-2S, stochastic disturbance).
-Per Prop A.1S the state satisfies $\mathbb E[\lVert\delta\rVert^2]_{ss} = n\sigma_w^2/(2\alpha)$.
+Per Prop A.1S the state satisfies $\mathbb{E}[\lVert\delta\rVert^2]_{ss} = n\sigma_w^2/(2\alpha)$.
 The RMS bound is $R^\ast_S = \sigma_w\sqrt{n/(2\alpha)}$.
 The environmental signal is $n$-dimensional independent-component Ornstein-Uhlenbeck with per-component intrinsic drift $\lambda_s$ and diffusion coefficient $\sigma_w^2$.
 The mean-square persistence condition $\alpha \gt n\sigma_w^2/(2R^2)$ holds.
@@ -35,7 +35,7 @@ Sector-persistence is achieved at the tight bound $D^2 = R^{\ast 2}_S$.
 
 *[Proved (persistence-information-rate, from Shannon RDF + Prop A.1S)]*
 
-**Proposition.** Any adaptive process achieving the tight Model-S ultimate bound $\mathbb E[\lVert\delta\rVert^2]_{ss} = n\sigma_w^2/(2\alpha)$ under the stated setup must acquire information from observations at sustained rate
+**Proposition.** Any adaptive process achieving the tight Model-S ultimate bound $\mathbb{E}[\lVert\delta\rVert^2]_{ss} = n\sigma_w^2/(2\alpha)$ under the stated setup must acquire information from observations at sustained rate
 
 $$\boxed{\;\dot R \;\geq\; \dot R_{\min} \;=\; \frac{n\alpha}{2} \text{ nats per unit time}\;}$$
 
@@ -71,9 +71,9 @@ By Shannon's channel coding theorem (Cover & Thomas 2006 §7.7), an observation 
 
 $$C_{\text{channel}} \;\geq\; \dot R_{\min} \;=\; \frac{n\alpha}{2}$$
 
-Under the linear-correction identification $\alpha = \mathcal T$ (from #def-adaptive-tempo + #der-gain-sector-bridge scalar Kalman):
+Under the linear-correction identification $\alpha = \mathcal{T}$ (from #def-adaptive-tempo + #der-gain-sector-bridge scalar Kalman):
 
-$$\boxed{\;C_{\text{channel}} \;\geq\; \mathcal T / 2 \text{ nats/time per dimension}\;}$$
+$$\boxed{\;C_{\text{channel}} \;\geq\; \mathcal{T} / 2 \text{ nats/time per dimension}\;}$$
 
 **Persistence demands observation-channel capacity at least half the adaptive tempo.** This is a *new first-class persistence diagnostic* not present in the current theory. Its binding matters most in capacity-constrained settings — bandwidth-limited distributed systems, biological neurons, context-window-limited LLMs — where the tempo framework alone underestimates the difficulty of maintaining bounded mismatch.
 
@@ -81,12 +81,12 @@ $$\boxed{\;C_{\text{channel}} \;\geq\; \mathcal T / 2 \text{ nats/time per dimen
 
 The information-rate bound is not the only candidate for a cost-of-persistence quantity. Three alternatives fail structurally. Recording them here keeps the scope-honesty visible.
 
-*[Observation (gain-magnitude-tautological)]* $\mathbb E[\lVert K(t)\rVert]$ as a cost metric: in the linear Kalman case $K_{ss} = \alpha$ (sub-scope $\alpha$ per #der-gain-sector-bridge), so "gain magnitude" equals the sector constant itself. Any bound of shape $\mathbb E[\lVert K\rVert] \geq f(\alpha, \ldots)$ becomes tautological. Rejected as fundamental cost metric — it recapitulates $\alpha$.
+*[Observation (gain-magnitude-tautological)]* $\mathbb{E}[\lVert K(t)\rVert]$ as a cost metric: in the linear Kalman case $K_{ss} = \alpha$ (sub-scope $\alpha$ per #der-gain-sector-bridge), so "gain magnitude" equals the sector constant itself. Any bound of shape $\mathbb{E}[\lVert K\rVert] \geq f(\alpha, \ldots)$ becomes tautological. Rejected as fundamental cost metric — it recapitulates $\alpha$.
 
-*[Observation (control-effort-filter-specific)]* $\mathbb E[\lVert u(t)\rVert^2]$ (per-unit-time control-effort integral): filter-specific. Different filters achieving the same steady-state variance $P_{ss}$ have different control-effort integrals. The Kalman filter is minimum-effort among linear filters (optimal-control interpretation of the Riccati equation); nonlinear filters can trade effort vs variance differently. A filter-agnostic bound cannot be stated in this quantity — it is not invariant under the equivalence class of filters meeting the persistence condition.
+*[Observation (control-effort-filter-specific)]* $\mathbb{E}[\lVert u(t)\rVert^2]$ (per-unit-time control-effort integral): filter-specific. Different filters achieving the same steady-state variance $P_{ss}$ have different control-effort integrals. The Kalman filter is minimum-effort among linear filters (optimal-control interpretation of the Riccati equation); nonlinear filters can trade effort vs variance differently. A filter-agnostic bound cannot be stated in this quantity — it is not invariant under the equivalence class of filters meeting the persistence condition.
 
 *[Observation (Lyapunov-dissipation-conservation)]*
-$\mathbb E[\alpha\lVert\delta\rVert^2]_{ss}$ (Lyapunov dissipation rate) at steady state equals $n\sigma_w^2/2$ regardless of $\alpha$ — a non-equilibrium-steady-state conservation law (dissipation balances disturbance-power injection).
+$\mathbb{E}[\alpha\lVert\delta\rVert^2]_{ss}$ (Lyapunov dissipation rate) at steady state equals $n\sigma_w^2/2$ regardless of $\alpha$ — a non-equilibrium-steady-state conservation law (dissipation balances disturbance-power injection).
 The quantity is *structurally invariant*: it does not depend on the quality of adaptation, only on the disturbance statistics.
 This is what makes the RDF bound tight at the Model-S ultimate bound (the steady state is active, not slack), but it cannot itself serve as a cost metric because it does not distinguish well-adapted from poorly-adapted agents at a given $\alpha$.
 
@@ -98,8 +98,8 @@ Candidate 4 — the Shannon information rate above — is the one that closes. T
 |---|---|---|
 | Persistence information rate $\dot R_{\min} \geq n\alpha/2$ | Shannon RDF (Berger 1971; Gray 1972; Ihara 1993 Thm 4.6.4) composed with Prop A.1S | Derived (conditional on Model S + Gaussian-OU + high-resolution regime) |
 | Kalman-Bucy saturates bound | Mitter-Newton 2005 Theorem (information-supply identity); linear-correction identification $\alpha = K_{ss}$ per #der-gain-sector-bridge | Derived (linear-Gaussian; exact when A2' is derived in sub-scope $\alpha$) |
-| Channel-capacity prerequisite $C \geq \mathcal T/2$ | Main theorem + Shannon channel-capacity theorem (Cover-Thomas 2006 §7.7) + $\alpha = \mathcal T$ identification | Derived |
-| Gain-magnitude as cost metric | $\mathbb E[\lVert K\rVert] \approx \alpha$ in sub-scope $\alpha$ | Rejected as fundamental (tautological) |
+| Channel-capacity prerequisite $C \geq \mathcal{T}/2$ | Main theorem + Shannon channel-capacity theorem (Cover-Thomas 2006 §7.7) + $\alpha = \mathcal{T}$ identification | Derived |
+| Gain-magnitude as cost metric | $\mathbb{E}[\lVert K\rVert] \approx \alpha$ in sub-scope $\alpha$ | Rejected as fundamental (tautological) |
 | Control-effort integral as cost metric | Filter-specific; depends on optimality class | Rejected as universal (filter-dependent) |
 | Lyapunov dissipation rate | Conservation law $= n\sigma_w^2/2$ at steady state | Not a cost metric — structural observation enabling tightness of main theorem |
 | Non-Gaussian signal extension | Different RDF form (Berger 1971 Ch. 4) | Open — qualitative scaling $\dot R \propto$ innovation-rate/$D^2$ likely preserved; exact prefactor changes |
@@ -130,13 +130,13 @@ The theorem rests on three named conditions: (i) Model S stochastic disturbance 
 
 **The $\alpha/2$ per-dimension Landauer analog.** The theorem has a clean thermodynamic reading per Still et al. 2012: each nat of information about the signal costs at least $k_BT$ of dissipation (Landauer 1961). Combined, persistence at sector constant $\alpha$ in $n$ dimensions costs at least $n\alpha/2$ nats/time of information acquisition and at least $n\alpha k_BT/(2\ln 2) \approx 0.35 n\alpha k_BT$ of thermodynamic dissipation per unit time in any physical substrate. AAT does not commit to a specific substrate, but the bound is substrate-agnostic: it constrains any filter implementation via the RDF (information-theoretic) and, when physical, any computational realization via Landauer (thermodynamic).
 
-**Why channel capacity matters as a first-class quantity.** AAT's #result-persistence-condition and #def-adaptive-tempo currently frame persistence as a correction-rate vs disturbance-rate inequality. This theorem adds a *lower* constraint: observation channels must jointly supply Shannon capacity $\geq \mathcal T/2$ nats/time per dimension, else persistence fails regardless of correction-function design. The constraint is binding in any setting where observation bandwidth is non-abundant — most real systems. Three domains where the capacity floor is more binding than the tempo bound:
+**Why channel capacity matters as a first-class quantity.** AAT's #result-persistence-condition and #def-adaptive-tempo currently frame persistence as a correction-rate vs disturbance-rate inequality. This theorem adds a *lower* constraint: observation channels must jointly supply Shannon capacity $\geq \mathcal{T}/2$ nats/time per dimension, else persistence fails regardless of correction-function design. The constraint is binding in any setting where observation bandwidth is non-abundant — most real systems. Three domains where the capacity floor is more binding than the tempo bound:
 
 - *Biological systems*: neural channel capacity is finite; this bound gives a quantitative minimum on sensory bandwidth for a given adaptive rate.
 - *Bandwidth-constrained distributed systems*: agents operating over noisy or low-bandwidth links face channel capacity directly as a hard constraint.
 - *Context-window-limited LLMs*: the effective information rate per unit of cognition is bounded by context size and token-throughput; this theorem predicts a minimum tempo achievable at a given context budget.
 
-In each, knowing that $\mathcal T/2$ is the floor converts an opaque "just needs more capacity" observation into a specific dimensional requirement.
+In each, knowing that $\mathcal{T}/2$ is the floor converts an opaque "just needs more capacity" observation into a specific dimensional requirement.
 
 **Connection to AAT's meta-architecture.** The result composes with AAT's three meta-segments.
 
@@ -153,7 +153,7 @@ In each, knowing that $\mathcal T/2$ is the floor converts an opaque "just needs
 - **Template-cost subsection.** A compact parametric statement — "under (T1)–(T3) with Model S and Gaussian-OU disturbance at per-component parameters $(\lambda_\xi, \sigma_\xi^2)$, sustained information rate to maintain steady-state mean-square $\xi$ at ultimate bound $D^2 = n\sigma_\xi^2/(2\alpha)$ satisfies $\dot R \geq n\alpha/2$ nats/time" — would let each of #result-sector-persistence-template's six instances inherit the cost bound by substitution. Worth considering on next template revision; would consolidate this segment's core result into the template.
 - **Model D adversarial analog.** Rate-distortion is inherently stochastic; Model D's bounded-disturbance version of the theorem requires minimax / worst-case channel capacity (Csiszár-Körner 2011 Ch. 11). Candidate follow-up spike. Expected form: similar $\propto \alpha$ scaling, different prefactor.
 - **Non-Gaussian signals.** For heavy-tailed or power-law signals the RDF has a different exact form (Berger 1971 Ch. 4). The qualitative scaling $\dot R_{\min} \propto \sigma_w^2/D^2$ is expected to persist; quantitative extensions are per-family.
-- **Misspecification cost.** When $\mathcal F(\mathcal M) \lt 1 - \varepsilon$ per #def-model-class-fitness, achievable distortion is bounded away from zero by an additional floor.
+- **Misspecification cost.** When $\mathcal{F}(\mathcal{M}) \lt 1 - \varepsilon$ per #def-model-class-fitness, achievable distortion is bounded away from zero by an additional floor.
   Natural extension has the sustained information rate lower-bounded by $n\sigma_w^2$ divided by $4$ times the larger of the Model-S ultimate bound and $D^2_{\text{floor}}$.
   Connects to #disc-identifiability-floor's "Misspecification-cost quantification" open extension.
 - **Composite persistence cost.** For a composite agent, the information-rate bound's scaling under composition is not trivial. Candidate: $\dot R_{c,\min} \leq \sum_i \dot R_{i,\min}$ due to coordination overhead eating capacity. Cost-analog of #der-tempo-composition's sub-additivity + #der-team-persistence's cooperative-coupling reduction. Open.

@@ -33,7 +33,7 @@ Note: sub-agents' goal-driven actions shape the environment, which other sub-age
 
 *[Hypothesis (Case 1)]*
 
-If the routing structure satisfies $R_t \perp G_t^c$ ( #scope-multi-agent, goal-blind routing) — neither the communication topology $\mathcal N_t$ nor the protocol $c_t^{(j \to i)}$ depends on the composite's goals — then:
+If the routing structure satisfies $R_t \perp G_t^c$ ( #scope-multi-agent, goal-blind routing) — neither the communication topology $\mathcal{N}_t$ nor the protocol $c_t^{(j \to i)}$ depends on the composite's goals — then:
 
 - Each sub-agent processes observations goal-blindly (individual directed separation)
 - The routing is goal-blind (by construction)
@@ -45,7 +45,7 @@ Directed separation **survives** at the composite level. Examples: military comm
 
 *[Hypothesis (Case 2)]*
 
-If $R_t$ depends on $G_t^c$ — either the topology $\mathcal N_t$ changes (different reporting chains activated depending on the mission) or the protocol $c_t^{(j \to i)}$ changes (different intelligence products shared depending on the objective) — then the composite's effective observation function has a goal argument:
+If $R_t$ depends on $G_t^c$ — either the topology $\mathcal{N}_t$ changes (different reporting chains activated depending on the mission) or the protocol $c_t^{(j \to i)}$ changes (different intelligence products shared depending on the objective) — then the composite's effective observation function has a goal argument:
 
 $$o_c = h^c(\Omega, a_{\text{micro}}, G_t^c, \xi)$$
 

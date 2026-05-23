@@ -17,7 +17,7 @@ The sector condition (A2') is the structural shape AAT chooses for the correctio
 
 ### Setup objects (carried into the form)
 
-Let $\delta(t) \in \mathbb{R}^n$ be the mismatch vector ( #def-mismatch-signal — the difference between the model's predictions and reality across $n$ observable dimensions). Let $F(\mathcal{T}, \delta) \colon \mathbb R_+ \times \mathbb{R}^n \to \mathbb{R}^n$ be the **correction function** — how the agent's adaptive process reduces mismatch — mapping into the same space as $\delta$ so that the inner product $\delta^T F$ is well-defined. This subsumes the update gain $\eta^\ast$ ( #emp-update-gain), event rate $\nu$, and the structure of the update rule. The adaptive tempo $\mathcal{T}$ ( #def-adaptive-tempo) is the rate parameter.
+Let $\delta(t) \in \mathbb{R}^n$ be the mismatch vector ( #def-mismatch-signal — the difference between the model's predictions and reality across $n$ observable dimensions). Let $F(\mathcal{T}, \delta) \colon \mathbb{R}_+ \times \mathbb{R}^n \to \mathbb{R}^n$ be the **correction function** — how the agent's adaptive process reduces mismatch — mapping into the same space as $\delta$ so that the inner product $\delta^T F$ is well-defined. This subsumes the update gain $\eta^\ast$ ( #emp-update-gain), event rate $\nu$, and the structure of the update rule. The adaptive tempo $\mathcal{T}$ ( #def-adaptive-tempo) is the rate parameter.
 
 ### (A1) Zero Correction at Zero Mismatch
 
@@ -29,7 +29,7 @@ No correction is applied when the model perfectly matches reality. Uncontroversi
 
 ### (A2') Local Sector Condition
 
-There exists a region $\mathcal B_R = \{\delta : \lVert\delta\rVert \leq R\}$ and $\alpha \gt 0$ such that (following the sector-condition framework of Lur'e[^lure1957]):
+There exists a region $\mathcal{B}_R = \{\delta : \lVert\delta\rVert \leq R\}$ and $\alpha \gt 0$ such that (following the sector-condition framework of Lur'e[^lure1957]):
 
 *[Formulation A2' (sector-condition) — derived in sub-scope $\alpha$, assumed in sub-scope $\beta$ (see Grounding below)]*
 
@@ -37,7 +37,7 @@ $$\delta^T F(\mathcal{T}, \delta) \geq \alpha \lVert\delta\rVert^2 \quad \forall
 
 The correction function always points "inward" (reducing mismatch), and its magnitude is bounded below relative to $\lVert\delta\rVert^2$. The linear case has $\alpha = \mathcal{T}$. A saturating correction has $\alpha$ decreasing for large $\lVert\delta\rVert$. A threshold correction has $\alpha = 0$ for small $\lVert\delta\rVert$.
 
-The local form allows the correction to break down outside $\mathcal B_R$ — the structural adaptation regime of #result-structural-adaptation-necessity.
+The local form allows the correction to break down outside $\mathcal{B}_R$ — the structural adaptation regime of #result-structural-adaptation-necessity.
 
 ### (A3) Tempo Monotonicity
 
@@ -57,10 +57,10 @@ The status is *conditional* because A2' is **derived** for one explicitly named 
 
 ### Sub-scope $\alpha$ (A2' derived)
 
-For a characterized class of AAT-in-scope agents, A2' is a *derived* consequence of the update rule, not a primitive assumption. #der-gain-sector-bridge (Prop B.3) shows that the gain-based update $M_t = M_{t-1} + \eta^\ast g(\delta_t)$ ( #emp-update-gain) induces a correction function satisfying A2' whenever the update rule has **directional fidelity (B1)** — $\delta^T H g(\delta) \geq c_{\min} \lVert\delta\rVert^2$ on $\mathcal B_R$. Sub-scope $\alpha$ — the agent classes where B1 holds structurally — includes:
+For a characterized class of AAT-in-scope agents, A2' is a *derived* consequence of the update rule, not a primitive assumption. #der-gain-sector-bridge (Prop B.3) shows that the gain-based update $M_t = M_{t-1} + \eta^\ast g(\delta_t)$ ( #emp-update-gain) induces a correction function satisfying A2' whenever the update rule has **directional fidelity (B1)** — $\delta^T H g(\delta) \geq c_{\min} \lVert\delta\rVert^2$ on $\mathcal{B}_R$. Sub-scope $\alpha$ — the agent classes where B1 holds structurally — includes:
 
 - *Optimal Bayesian updates* (Kalman, conjugate families): B1 holds by Bayes-risk minimization. $\alpha = \eta^\ast \cdot c_{\min}$, reducing to $\alpha = \eta^\ast$ in the scalar case.
-- *Exponential families in natural parameters*, on a bounded interior scope $\Theta_0 \subset \operatorname{int}(\Theta)$: the Hessian is the Fisher information matrix, PD on the interior. $\alpha = \eta \cdot \mu_0$ where $\mu_0 = \inf_{\theta \in \Theta_0} \lambda_{\min}(\mathbf I(\theta)) \gt 0$. Pointwise PD does not imply a uniform global lower bound: $\inf_{\theta \in \Theta} \lambda_{\min}(\mathbf I(\theta))$ can be zero (Poisson: $\mathbf I(\theta) = e^\theta$, $\inf_{\theta \in \mathbb R} e^\theta = 0$), so $\Theta_0$ supplies the local-region scope $R$ that A2' requires. Families with a uniform Fisher floor on $\Theta$ (Gaussian-mean, Beta-Bernoulli) extend to global $\alpha$.
+- *Exponential families in natural parameters*, on a bounded interior scope $\Theta_0 \subset \operatorname{int}(\Theta)$: the Hessian is the Fisher information matrix, PD on the interior. $\alpha = \eta \cdot \mu_0$ where $\mu_0 = \inf_{\theta \in \Theta_0} \lambda_{\min}(\mathbf{I}(\theta)) \gt 0$. Pointwise PD does not imply a uniform global lower bound: $\inf_{\theta \in \Theta} \lambda_{\min}(\mathbf{I}(\theta))$ can be zero (Poisson: $\mathbf{I}(\theta) = e^\theta$, $\inf_{\theta \in \mathbb{R}} e^\theta = 0$), so $\Theta_0$ supplies the local-region scope $R$ that A2' requires. Families with a uniform Fisher floor on $\Theta$ (Gaussian-mean, Beta-Bernoulli) extend to global $\alpha$.
 - *Gradient descent on locally strongly convex losses* (Prop B.4): B1 is *equivalent* to strong convexity via the gradient-monotonicity characterization (Nesterov 2004[^nesterov2004], Thm 2.1.10). $\alpha = \eta \cdot \mu$ where $\mu$ is the strong convexity modulus.
 - *L2-regularized convex losses*: regularization provides a floor $\mu \geq \lambda$, so $\alpha \geq \eta \lambda$ globally.
 - *Linear corrections with positive-definite gain–observation product*: $\alpha = \lambda_{\min}^+(KH)$ (matrix Kalman, restricted to the observable subspace).
@@ -103,12 +103,12 @@ This recognition positions AAT's sector-condition framework as a specialization 
 
 ### Why Euclidean A2' specifically
 
-The A2' form $\delta^T F \geq \alpha \lVert\delta\rVert^2$ is the sector condition *matched to the quadratic Lyapunov candidate* $V = \tfrac{1}{2}\lVert\delta\rVert^2$ used by #deriv-sector-condition. A converse-Lyapunov argument (Khalil 2002[^khalil2002], Thm 4.17) gives: if persistence holds under the dynamics $\dot\delta = -F(\delta)$ on $\mathcal B_R$, then there exists a quadratic-equivalent Lyapunov function $V_\ast(\delta)$ with $c_1\lVert\delta\rVert^2 \leq V_\ast \leq c_2\lVert\delta\rVert^2$ — but $V_\ast$ may not be the Euclidean norm itself. Under a weighted Lyapunov candidate $V(\delta) = \tfrac{1}{2}\delta^T P \delta$, the natural sector condition is $\delta^T P F(\delta) \geq \alpha\, \delta^T P \delta$; the matrix-Kalman case of #der-gain-sector-bridge is exactly this in the $(P^-)^{-1}$-weighted inner product, with a norm-equivalence transfer to Euclidean A2' degraded by the condition number $\kappa(P^-)$. Euclidean A2' is therefore not the unique sector form — it is the canonical one matched to the canonical $V$. An agent that persists under a non-Euclidean metric satisfies a weighted-sector A2' that transfers to Euclidean A2' only up to norm equivalence. #disc-additive-coordinate-forcing classifies the Lyapunov case as an *adjacent family member* to AAT's three primary additive-coordinate-forcing instances (chain / divergence / update, where a logarithmic coordinate is uniquely forced via Cauchy's functional equation under an AAT-internal additivity axiom): here the quadratic coordinate is matched to the sector form rather than forced by one.
+The A2' form $\delta^T F \geq \alpha \lVert\delta\rVert^2$ is the sector condition *matched to the quadratic Lyapunov candidate* $V = \tfrac{1}{2}\lVert\delta\rVert^2$ used by #deriv-sector-condition. A converse-Lyapunov argument (Khalil 2002[^khalil2002], Thm 4.17) gives: if persistence holds under the dynamics $\dot\delta = -F(\delta)$ on $\mathcal{B}_R$, then there exists a quadratic-equivalent Lyapunov function $V_\ast(\delta)$ with $c_1\lVert\delta\rVert^2 \leq V_\ast \leq c_2\lVert\delta\rVert^2$ — but $V_\ast$ may not be the Euclidean norm itself. Under a weighted Lyapunov candidate $V(\delta) = \tfrac{1}{2}\delta^T P \delta$, the natural sector condition is $\delta^T P F(\delta) \geq \alpha\, \delta^T P \delta$; the matrix-Kalman case of #der-gain-sector-bridge is exactly this in the $(P^-)^{-1}$-weighted inner product, with a norm-equivalence transfer to Euclidean A2' degraded by the condition number $\kappa(P^-)$. Euclidean A2' is therefore not the unique sector form — it is the canonical one matched to the canonical $V$. An agent that persists under a non-Euclidean metric satisfies a weighted-sector A2' that transfers to Euclidean A2' only up to norm equivalence. #disc-additive-coordinate-forcing classifies the Lyapunov case as an *adjacent family member* to AAT's three primary additive-coordinate-forcing instances (chain / divergence / update, where a logarithmic coordinate is uniquely forced via Cauchy's functional equation under an AAT-internal additivity axiom): here the quadratic coordinate is matched to the sector form rather than forced by one.
 
 ### How downstream segments use this form
 
 - #deriv-sector-condition consumes A2' as the Lyapunov-derivation input: Props A.1 / A.1S / A.2 prove ultimate boundedness, mean-square persistence, and adaptive reserve under (A1), (A2'), (A3); Corollary A.1S.1 establishes the disturbance-model containment dichotomy $P(\tau_R \lt \infty) \in \{0,1\}$.
-- #deriv-stochastic-non-exit demonstrates the load-bearing Model-S half of Cor A.1S.1 — that no horizon-independent non-exit bound exists under additive stochastic forcing — using A2' on $\mathcal B_R$ as the Itô-Lyapunov input.
+- #deriv-stochastic-non-exit demonstrates the load-bearing Model-S half of Cor A.1S.1 — that no horizon-independent non-exit bound exists under additive stochastic forcing — using A2' on $\mathcal{B}_R$ as the Itô-Lyapunov input.
 - #der-gain-sector-bridge derives A2' for sub-scope $\alpha$ under directional fidelity (B1), making the sub-scope-$\alpha$ partition above structural rather than postulated.
 - #deriv-discrete-sector-condition states the discrete-time analog (DA2'), strengthening A2' with an additional Lipschitz bound on $\lVert F_d\rVert$ to control the quadratic term that arises in discrete contraction.
 - #deriv-variational-sector-condition states $\varepsilon$-fidelity A2' under controlled-KL variational approximation, with $O(\sqrt\varepsilon)$ sector-constant degradation — recovering an intermediate sub-scope $\alpha'$ within the partition above.

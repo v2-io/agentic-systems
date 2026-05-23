@@ -24,23 +24,23 @@ Given two purposeful agents $A_h$ (host) and $A_e$ (endosymbiont), each satisfyi
 
 The endosymbiont's objective $O_e$ transforms toward alignment with or derivation from the host's objective $O_h$:
 
-$$O_e(\tau) \;\xrightarrow{\tau \to \tau_{\text{consolidated}}}\; \mathcal D_e(O_h)$$
+$$O_e(\tau) \;\xrightarrow{\tau \to \tau_{\text{consolidated}}}\; \mathcal{D}_e(O_h)$$
 
-where $\mathcal D_e$ is a derivation functional (in the sense of route (C-ii) in #scope-composite-agent): $O_e$ becomes a sub-objective derived from $O_h$. Before: $O_h$ and $O_e$ are independent objectives, no route of #scope-composite-agent applies, and the pair is a multi-agent system ( #scope-multi-agent) rather than a composite. After: $O_e$ is a role within $O_h$; route (C-ii) applies; the composite $(A_h, A_e)$ satisfies the composition scope condition.
+where $\mathcal{D}_e$ is a derivation functional (in the sense of route (C-ii) in #scope-composite-agent): $O_e$ becomes a sub-objective derived from $O_h$. Before: $O_h$ and $O_e$ are independent objectives, no route of #scope-composite-agent applies, and the pair is a multi-agent system ( #scope-multi-agent) rather than a composite. After: $O_e$ is a role within $O_h$; route (C-ii) applies; the composite $(A_h, A_e)$ satisfies the composition scope condition.
 
 ### (S-2) Function transfer
 
 Structural content from the endosymbiont's state (elements of $M_e$ or $\Sigma_e$) transfers to or becomes accessible by the host:
 
-$$\{M_h, \Sigma_h\}(\tau) \;\xrightarrow{\tau \to \tau_{\text{consolidated}}}\; \{M_h, \Sigma_h\} \cup \mathcal F(M_e, \Sigma_e)$$
+$$\{M_h, \Sigma_h\}(\tau) \;\xrightarrow{\tau \to \tau_{\text{consolidated}}}\; \{M_h, \Sigma_h\} \cup \mathcal{F}(M_e, \Sigma_e)$$
 
-where $\mathcal F$ is a transfer mapping (structure-preserving integration of endosymbiont functions into host state). In biological symbiogenesis: gene transfer. In organizational symbiogenesis: acquired firm's processes, patents, know-how integrated into acquirer's operations. This is the grafting operation of #form-structural-change-as-parametric-limit in its cross-agent form — the host grafts structure originating in the endosymbiont.
+where $\mathcal{F}$ is a transfer mapping (structure-preserving integration of endosymbiont functions into host state). In biological symbiogenesis: gene transfer. In organizational symbiogenesis: acquired firm's processes, patents, know-how integrated into acquirer's operations. This is the grafting operation of #form-structural-change-as-parametric-limit in its cross-agent form — the host grafts structure originating in the endosymbiont.
 
 ### (S-3) Autonomy reduction
 
 The endosymbiont's effective action space contracts; many of its choices become fixed by the host's coordination:
 
-$$\mathcal A_e^{\text{effective}}(\tau) \;\xrightarrow{\tau \to \tau_{\text{consolidated}}}\; \mathcal A_e^{\text{restricted}} \subsetneq \mathcal A_e^{\text{initial}}$$
+$$\mathcal{A}_e^{\text{effective}}(\tau) \;\xrightarrow{\tau \to \tau_{\text{consolidated}}}\; \mathcal{A}_e^{\text{restricted}} \subsetneq \mathcal{A}_e^{\text{initial}}$$
 
 The endosymbiont retains enough autonomy to avoid catastrophic transfers (e.g., mitochondria retain some genome to handle local fast-timescale responses that would be hazardous to route through the host nucleus) but loses most independent decision-making.
 
@@ -48,7 +48,7 @@ The endosymbiont retains enough autonomy to avoid catastrophic transfers (e.g., 
 
 At consolidation, the joint system is a single composite agent $A_c$ whose substate contains the integrated structure:
 
-$$X_c = \big(M_c, G_c\big) = \big(M_h \cup \mathcal F(M_e, \Sigma_e),\; (O_c, \Sigma_c)\big) \quad \text{with } O_c \approx O_h$$
+$$X_c = \big(M_c, G_c\big) = \big(M_h \cup \mathcal{F}(M_e, \Sigma_e),\; (O_c, \Sigma_c)\big) \quad \text{with } O_c \approx O_h$$
 
 The endosymbiont persists as a specialized sub-component of the host, not as an independent agent. The #scope-composite-agent is now satisfied; the peer-coupling machinery of #form-composition-closure applies to the resulting composite.
 
@@ -64,8 +64,8 @@ What is well-established (externally):
 
 What is *not* derived within AAT:
 
-- A formal model of the objective-transfer dynamics (S-1). What evolutionary or optimization process drives $O_e \to \mathcal D_e(O_h)$?
-- A formal specification of the transfer functional $\mathcal F$ in (S-2). What structure is preserved, what is lost, what is transformed?
+- A formal model of the objective-transfer dynamics (S-1). What evolutionary or optimization process drives $O_e \to \mathcal{D}_e(O_h)$?
+- A formal specification of the transfer functional $\mathcal{F}$ in (S-2). What structure is preserved, what is lost, what is transformed?
 - A precise characterization of autonomy reduction (S-3). Why does the endosymbiont retain some autonomy rather than becoming fully deterministic?
 - Quantitative predictions — e.g., when symbiogenesis is favored over peer coupling, what governs the timescale of consolidation, under what conditions it reverses.
 
@@ -105,8 +105,8 @@ In each case: asymmetric integration, autonomy reduction of the absorbed entity,
 
 ## Working Notes
 
-- **Objective-transfer dynamics (S-1).** The most load-bearing open formalization. What process drives $O_e \to \mathcal D_e(O_h)$? Candidates: evolutionary selection (endosymbionts whose objectives align with host survival are selected for, since the alternative is extinction); bounded-rationality constraint (coordinating two divergent objectives exceeds the endosymbiont's capacity, forcing simplification); explicit design (firm mergers where acquired objectives are deliberately restructured). Each gives a different dynamical equation.
-- **Function transfer $\mathcal F$ (S-2).** Needs to respect the structure of the host's $M_h$ and $\Sigma_h$. In biology, gene transfer preserves molecular functions but changes regulatory context. In social analogs, the analog is: functions are preserved, but their triggers and dependencies change. A general specification is open.
+- **Objective-transfer dynamics (S-1).** The most load-bearing open formalization. What process drives $O_e \to \mathcal{D}_e(O_h)$? Candidates: evolutionary selection (endosymbionts whose objectives align with host survival are selected for, since the alternative is extinction); bounded-rationality constraint (coordinating two divergent objectives exceeds the endosymbiont's capacity, forcing simplification); explicit design (firm mergers where acquired objectives are deliberately restructured). Each gives a different dynamical equation.
+- **Function transfer $\mathcal{F}$ (S-2).** Needs to respect the structure of the host's $M_h$ and $\Sigma_h$. In biology, gene transfer preserves molecular functions but changes regulatory context. In social analogs, the analog is: functions are preserved, but their triggers and dependencies change. A general specification is open.
 - **Autonomy reduction (S-3).** Why not complete? The endosymbiont retains some autonomy because complete integration would eliminate the fast local response capacity that made symbiogenesis advantageous in the first place. A cost-benefit analysis on autonomy retention (in the style of #form-strategy-complexity-cost) would make this quantitative.
 - **(S-3) as weighted-Lyapunov limit (sketch-level).** #deriv-critical-mass-composition's asymmetric limit $\alpha_2 \to 0$ under weighted Lyapunov $V_\mu(\xi) = \tfrac12(\lVert\delta_1\rVert^2 + \mu\lVert\delta_2\rVert^2)$ with $\mu \to 0$ formalizes (S-3): the endosymbiont's autonomous correction dynamics are weighted out of the joint stability argument, leaving the host's sector condition as the composite's persistence condition. This is a smooth deformation of the peer-coupling (CM4) inequality, not a discontinuous regime change — symbiogenesis and peer coupling are parameter-limits of the same weighted-Lyapunov analysis. The sketch is promotable to derived once (S-2) function transfer is formalized in this segment (the weighted Lyapunov limit does not address what happens to $M_h$ when structure from $M_e$ is inherited).
 - **Reverse symbiogenesis.** Endosymbionts occasionally regain autonomy (biological examples: some organelle-hosted genes return to the nucleus; organizational examples: acquired divisions spun off). Theoretically: the scope condition can be crossed in either direction. A composite that loses $U_O$ dissolves back into a multi-agent system. The triggering conditions and typical dynamics are open.

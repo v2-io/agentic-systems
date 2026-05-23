@@ -32,10 +32,10 @@ with the four stages mapping to AAT machinery already in canon:
 
 | Stage | Operation | AAT correspondent |
 |---|---|---|
-| **P1 — Featurization** | $\phi: \mathcal E \times \mathcal M \to \mathcal X$, $x = \phi(e_\tau, M_{\tau^-})$ | Extracts features from the realized event given current model; in a Kalman tracker, the innovation $\delta = o - \hat o$ per `#def-mismatch-signal` |
-| **P2 — Likelihood evaluation** | $\lambda: \mathcal X \times \mathcal M \to \mathcal L$, $\ell = \lambda(x, M_{\tau^-})$ | Evaluates the likelihood of features under representable hypotheses; in a Kalman tracker, the Gaussian likelihood on $\delta$ with innovation covariance $S$ |
-| **P3 — Aggregation** | $\alpha: \mathcal L \times \mathcal M \to \mathcal M^+$, $M' = \alpha(\ell, M_{\tau^-})$ | Combines likelihood with prior to produce new belief; in a Kalman tracker, the gain-weighted update with $\eta^\ast = U_M / (U_M + U_o)$ per `#emp-update-gain` |
-| **P4 — Consolidation** | $\tau: \mathcal M^+ \to \mathcal M$, $M_{\tau^+} = \tau(M')$ | Post-update transformation: storage, normalization, regularization, memory consolidation |
+| **P1 — Featurization** | $\phi: \mathcal{E} \times \mathcal{M} \to \mathcal{X}$, $x = \phi(e_\tau, M_{\tau^-})$ | Extracts features from the realized event given current model; in a Kalman tracker, the innovation $\delta = o - \hat o$ per `#def-mismatch-signal` |
+| **P2 — Likelihood evaluation** | $\lambda: \mathcal{X} \times \mathcal{M} \to \mathcal{L}$, $\ell = \lambda(x, M_{\tau^-})$ | Evaluates the likelihood of features under representable hypotheses; in a Kalman tracker, the Gaussian likelihood on $\delta$ with innovation covariance $S$ |
+| **P3 — Aggregation** | $\alpha: \mathcal{L} \times \mathcal{M} \to \mathcal{M}^+$, $M' = \alpha(\ell, M_{\tau^-})$ | Combines likelihood with prior to produce new belief; in a Kalman tracker, the gain-weighted update with $\eta^\ast = U_M / (U_M + U_o)$ per `#emp-update-gain` |
+| **P4 — Consolidation** | $\tau: \mathcal{M}^+ \to \mathcal{M}$, $M_{\tau^+} = \tau(M')$ | Post-update transformation: storage, normalization, regularization, memory consolidation |
 
 Each of (P1)–(P4) can independently take or omit a $G_t$ argument. The Class 1 case has none; the Class 3 case has all; Class 2 is everything between.
 
@@ -45,13 +45,13 @@ The decomposition is posited rather than derived. It is canonical for Bayesian-s
 
 *[Definition (class-2-sub-type)]*
 
-A Class 2 partial-coupling sub-type is a triple $\mathcal C_2 = (S, R, F)$ with:
+A Class 2 partial-coupling sub-type is a triple $\mathcal{C}_2 = (S, R, F)$ with:
 
 - $S \subseteq \{P1, P2, P3, P4\}$, $S \neq \emptyset$ and $S \neq \{P1, P2, P3, P4\}$ — the **stage set** at which goals enter $f_M$. Empty $S$ recovers Class 1; full $S$ (with all-process form) recovers Class 3.
 - $R \subseteq \{O, \Sigma\}$, $R \neq \emptyset$ — the **source set** within $G_t = (O_t, \Sigma_t)$ that acts as the coupling input.
 - $F: S \to \{\text{content}, \text{process}\}$ — the **form** at each coupled stage.
 
-The endpoints recover canon: $S = \emptyset$ is Class 1; $(S, R, F) = (\{P1, P2, P3, P4\}, \{O, \Sigma\}, \text{process})$ is Class 3 (fully Coupled). The scalar $\kappa_{\text{processing}}$ is the projection of $\mathcal C_2$ onto the magnitude axis.
+The endpoints recover canon: $S = \emptyset$ is Class 1; $(S, R, F) = (\{P1, P2, P3, P4\}, \{O, \Sigma\}, \text{process})$ is Class 3 (fully Coupled). The scalar $\kappa_{\text{processing}}$ is the projection of $\mathcal{C}_2$ onto the magnitude axis.
 
 ### Form classification — content vs process
 
@@ -95,7 +95,7 @@ For monolithic architectures without pipeline access, only full-agent wrapping (
 
 ### Composition with the leakage locus
 
-Goal contamination's *effect on belief* is confined to the Fisher null space $\ker\mathcal I_\tau$ of the observation given the current latent state (the leakage-locus result, when promoted to its own segment, will be the formal statement). This locus is *universal across Class 2 sub-types* — it does not depend on which pipeline stage the coupling enters. The sub-type determines the *functional form* of the displacement within the locus:
+Goal contamination's *effect on belief* is confined to the Fisher null space $\ker\mathcal{I}_\tau$ of the observation given the current latent state (the leakage-locus result, when promoted to its own segment, will be the formal statement). This locus is *universal across Class 2 sub-types* — it does not depend on which pipeline stage the coupling enters. The sub-type determines the *functional form* of the displacement within the locus:
 
 - Content-form sub-types produce displacement linear in $G$ (the $\Delta\mu = \Lambda_0^{-1} g(G)$ shape in the linear-Gaussian instantiation, with $g(G)$ a linear function of the goal-tilt parameter).
 - Process-form sub-types produce displacement with a $G$-dependent gain matrix or a $G$-dependent covariance structure — non-linear in $G$.
@@ -160,7 +160,7 @@ The transformer-LLM case lands at the corner $(S = \{P1, P2, P3\} \text{ or } \{
 - *Source*: probing under $O$ varied at fixed $\Sigma$ vs $\Sigma$ varied at fixed $O$ separates the source set.
 - *Form*: probing distinguishes mean shifts (content signature) from covariance shifts or functional-form changes (process signature) in the agent's responses across goal-variants.
 
-The refinement targets *which sub-type* the agent inhabits, not just the aggregate magnitude. Per the composition with the leakage locus, all such probing should be confined to $\ker\mathcal I_\tau$ — the directions the observation does not identify — which is where the displacement lives.
+The refinement targets *which sub-type* the agent inhabits, not just the aggregate magnitude. Per the composition with the leakage locus, all such probing should be confined to $\ker\mathcal{I}_\tau$ — the directions the observation does not identify — which is where the displacement lives.
 
 **Honest scope.** The typology is most precise for *modular* Class 2 architectures (biological cortex per the canonical example; hybrid AI systems with separable preprocessing / inference / aggregation modules). For monolithic architectures (transformer LLMs, end-to-end-trained policies), the stage decomposition is *interpretive* — the stages are not architecturally distinct in the forward pass; the typology serves as a lens for mechanistic-interpretability investigations rather than as a structural classification. The form classification is *probing-protocol-dependent*; analysts should specify which probes were available. Content-form wrapping gives *Class-1-by-behavior*, not honesty: under gauge freedom in the identifiability, the wrapper produces a $G$-invariant version of the agent's belief, up to an unknowable additive constant.
 
@@ -172,7 +172,7 @@ The refinement targets *which sub-type* the agent inhabits, not just the aggrega
 
 **Impact:** Refines the operational meaning of the Class 2 label from "uncomfortable middle category" to "structured sub-space with specific repair regimes per cell." Unifies the *Class-1-by-structure* vs *Class-1-by-behavior* refinement (currently sitting at the Class 1 cell of `#der-directed-separation`) with the form-axis of the Class 2 sub-typology — they are the same distinction read at different architectural levels. Sharpens wrapping-regime selection (W₁ vs W₂) by sub-type rather than by Class label alone. Maps the three adversarial mechanisms named in `#disc-adversarial-coupling-pressure` (identity-binding / affect-urgency / sunk-cost-engineering) onto specific cells of the typology, with the affect/urgency case recognized as outside the static (stage × source × form) parameterization (it is a cascade-bypass, a separate failure mode). Provides the static-structural complement to the unlanded M4 meta-segment `#disc-modularity-state-dynamics`'s three operations on modularity state — the operations describe transitions through the parameterization the typology names.
 
-**Novelty Claim:** *Claim recognition* of the (stage × source × form) sub-typology as the structural complement to Class 1's structure-vs-behavior refinement. *Claim differentiation* on the wrapping-regime correspondence: which wrapping regime suffices for Class 2 → Class 1 coercion is determined by the sub-type's form, not just by the Class label. The integration with the leakage-locus result (locus universal in $\ker\mathcal I_\tau$; typology determines functional form within the locus) and the source-asymmetry implication (`#der-belief-strategy-attractor`) are the load-bearing structural consequences.
+**Novelty Claim:** *Claim recognition* of the (stage × source × form) sub-typology as the structural complement to Class 1's structure-vs-behavior refinement. *Claim differentiation* on the wrapping-regime correspondence: which wrapping regime suffices for Class 2 → Class 1 coercion is determined by the sub-type's form, not just by the Class label. The integration with the leakage-locus result (locus universal in $\ker\mathcal{I}_\tau$; typology determines functional form within the locus) and the source-asymmetry implication (`#der-belief-strategy-attractor`) are the load-bearing structural consequences.
 
 **Related Work:**
 
@@ -197,7 +197,7 @@ The refinement targets *which sub-type* the agent inhabits, not just the aggrega
 
 - **Trajectory coupling as separate axis.** The per-step (stage × source × form) parameterization does not cover *trajectory* coupling — cumulative goal-content accumulating in $M_t$'s prior across history through repeated small Class 2 couplings, then amplified by goal-blind processing of new evidence. This is a real failure mode (and arguably the operational route to confirmation-bias cascades) but lives in a per-trajectory dynamics layer rather than the per-step structural typology. A separate spike treating trajectory coupling would parallel this segment's per-step analysis; not pursued here.
 
-- **Refined behavioral estimator — construction.** §Discussion sketches a refined estimator that probes along $\ker\mathcal I_\tau$ and distinguishes mean (content) from covariance/functional-form (process) signatures. Actual estimator construction is a separate work item; the segment names the targets but does not construct the estimator.
+- **Refined behavioral estimator — construction.** §Discussion sketches a refined estimator that probes along $\ker\mathcal{I}_\tau$ and distinguishes mean (content) from covariance/functional-form (process) signatures. Actual estimator construction is a separate work item; the segment names the targets but does not construct the estimator.
 
 - **Brief is not yet at Feynman criterion.** The current Brief reaches for the structural-recognition framing rather than an everyday physical analog. A candidate analog under consideration: the difference between (a) an engineer reading instruments and writing a goal-blind report, then a separate engineer reading the report and deciding what to do, versus (b) a single engineer reading instruments with the decision already in mind, where what they notice depends on what they're trying to accomplish — the first is Class 1, the second Class 3, and Class 2 is the messy middle where the typology says *which* part of the data-reading process is being shaped by the goal, *whether* the shaping is what-the-engineer-wants or what-plan-they're-committed-to, and *whether* the shaping is a measurable bias (subtractable) or a wholesale reframing (not subtractable). The bathtub-equivalent has not been written; the engineer-and-report analog is a working candidate but its isomorphism to the load-bearing structure (especially the source-asymmetry attractor and the form-determines-wrappability cut) needs verification.
 

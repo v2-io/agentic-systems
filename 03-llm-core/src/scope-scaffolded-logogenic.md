@@ -31,13 +31,13 @@ The cascade ordering happens at the loop level rather than the model's forward-p
 
 ## Epistemic Status
 
-**Sketch (with derived components).** The scope condition is definitional; the *recovery* claims are derived under #result-coupled-diagnostic-framework with its current epistemic-conditional status. The interaction-channel extension via tool use is derived from #der-loop-interventional-access (a Tier-1 result in AAT). The reduction of $\mathcal A$ via prompt engineering is empirical / operational rather than formally derived — there's no theorem that says "good prompts reduce $\mathcal A$ by factor $\beta$"; only the empirical observation that ambiguity-reduction interventions reduce the goal-resolvable residual uncertainty.
+**Sketch (with derived components).** The scope condition is definitional; the *recovery* claims are derived under #result-coupled-diagnostic-framework with its current epistemic-conditional status. The interaction-channel extension via tool use is derived from #der-loop-interventional-access (a Tier-1 result in AAT). The reduction of $\mathcal{A}$ via prompt engineering is empirical / operational rather than formally derived — there's no theorem that says "good prompts reduce $\mathcal{A}$ by factor $\beta$"; only the empirical observation that ambiguity-reduction interventions reduce the goal-resolvable residual uncertainty.
 
 **Max attainable status:** definition + conditional theorem (for the recovery claims). The full strengthening would derive the loop-level cascade ordering from the underlying coupled-formulation primitives plus the loop's compositional structure.
 
 **What this scope is for.** Naming the regime where the field's substantial agentic-systems engineering effort lives, and giving that effort the structural argument for why it's not optional engineering convenience but a load-bearing recovery move. Tier-1 #13 (Coupled Diagnostic Framework) is the framework's most directly-actionable claim for any production agentic-systems practitioner.
 
-**What would strengthen this:** explicit derivation of the $\mathcal A$-reduction from prompt-engineering interventions (currently an empirical heuristic); compositional theorem for cascade-recovery across multi-step loops as a function of loop structure (sequential vs branching vs cyclic); empirical measurement protocol for $L_A$ in #result-coupled-diagnostic-framework.
+**What would strengthen this:** explicit derivation of the $\mathcal{A}$-reduction from prompt-engineering interventions (currently an empirical heuristic); compositional theorem for cascade-recovery across multi-step loops as a function of loop structure (sequential vs branching vs cyclic); empirical measurement protocol for $L_A$ in #result-coupled-diagnostic-framework.
 
 **What would soften this:** evidence that scaffolding doesn't actually recover cascade ordering reliably (e.g., emergent failure modes specific to multi-step loops); evidence that the recovery is too partial to be useful in regimes where primitive-logogenic already fails.
 

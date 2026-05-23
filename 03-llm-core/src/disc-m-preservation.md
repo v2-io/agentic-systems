@@ -23,13 +23,13 @@ The 100% context turnover at session boundaries ( #obs-context-turnover) means t
 
 Let $M_k^-$ denote the epistemic state at the end of session $k$, and $M_{k+1}^+$ denote the reconstructed state at the start of session $k+1$. The **externalization-reconstruction cycle** is:
 
-$$M_k^- \xrightarrow{\text{externalize}} \mathcal E_{\text{ext}} \xrightarrow{\text{reconstruct}} M_{k+1}^+$$
+$$M_k^- \xrightarrow{\text{externalize}} \mathcal{E}_{\text{ext}} \xrightarrow{\text{reconstruct}} M_{k+1}^+$$
 
 The **reconstruction error**:
 
 $$\epsilon_{\text{recon}} = d(M_k^-, M_{k+1}^+)$$
 
-where $d$ is a distance on $\mathcal M$ (e.g., $\lVert M_k^- - M_{k+1}^+\rVert$ in a suitable norm, or the KL divergence if $M_t$ is a probability distribution).
+where $d$ is a distance on $\mathcal{M}$ (e.g., $\lVert M_k^- - M_{k+1}^+\rVert$ in a suitable norm, or the KL divergence if $M_t$ is a probability distribution).
 
 The inter-session persistence condition:
 
@@ -45,11 +45,11 @@ where $\epsilon_{\text{max}}$ is the maximum tolerable reconstruction error — 
 
 *[Discussion (externalization-strategies)]*
 
-The externalization function $\text{ext}: \mathcal M \to \mathcal E_{\text{ext}}$ maps the end-of-session state to a persistent store. Several mechanisms exist, with different information-preservation properties:
+The externalization function $\text{ext}: \mathcal{M} \to \mathcal{E}_{\text{ext}}$ maps the end-of-session state to a persistent store. Several mechanisms exist, with different information-preservation properties:
 
 | Mechanism | What it preserves | Information loss | AAT interpretation |
 |---|---|---|---|
-| **Raw conversation logs** | Full $\mathcal C_t$ (chronica) | None (if complete), but reconstruction requires re-processing | Preserves the input to $\phi$ ( #form-agent-model); sufficiency depends on reconstruction fidelity |
+| **Raw conversation logs** | Full $\mathcal{C}_t$ (chronica) | None (if complete), but reconstruction requires re-processing | Preserves the input to $\phi$ ( #form-agent-model); sufficiency depends on reconstruction fidelity |
 | **Structured summaries** | Compressed $M_t$: key beliefs, decisions, open questions | Lossy — detail, context, uncertainty estimates | Approximate $M_t$ with bounded error; quality depends on compression |
 | **File-backed state** | Explicit state registers: current plan, known facts, unresolved issues | Lossy but structured — the agent chooses what to externalize | Designed compression; the agent acts as its own $\phi$ |
 | **Retrieval-augmented memory** | Indexed chunks retrievable by semantic similarity | Reconstruction is query-dependent — different prompts retrieve different subsets | Sufficiency varies per query; $S(M_{k+1}^+)$ depends on the alignment between the retrieval query and the needed information |
@@ -59,9 +59,9 @@ The externalization function $\text{ext}: \mathcal M \to \mathcal E_{\text{ext}}
 
 *[Discussion (reconstruction-information)]*
 
-The reconstruction function $\text{recon}: (\mathcal E_{\text{ext}}, p_{k+1}, M_0^{\text{weights}}) \to M_{k+1}^+$ combines three information sources:
+The reconstruction function $\text{recon}: (\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}}) \to M_{k+1}^+$ combines three information sources:
 
-1. **External memory** $\mathcal E_{\text{ext}}$: what was explicitly preserved
+1. **External memory** $\mathcal{E}_{\text{ext}}$: what was explicitly preserved
 2. **New prompt** $p_{k+1}$: what the user or system provides at session start
 3. **Pretrained prior** $M_0^{\text{weights}}$: what the LLM already knows from training
 

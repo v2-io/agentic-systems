@@ -45,7 +45,7 @@ The simulations were theory-shaping, not merely confirmatory. In particular:
 
 **Parameter sweeps.** Each variant swept its key parameter(s) across 7--20 values. Monte Carlo: 200 independent trials per parameter point, 10,000--20,000 timesteps per trial, with 2,000--5,000 step burn-in for steady-state convergence. Fixed random seeds for reproducibility.
 
-**Exponent fitting.** Adversarial exponents were estimated by fitting $\log(\Vert\delta_B\Vert / \Vert\delta_A\Vert) = a + b \cdot \log(\mathcal T_A / \mathcal T_B)$ via weighted least squares, with weights inversely proportional to variance of each point's log-estimate. 95% confidence intervals via bootstrap (1,000 samples).
+**Exponent fitting.** Adversarial exponents were estimated by fitting $\log(\Vert\delta_B\Vert / \Vert\delta_A\Vert) = a + b \cdot \log(\mathcal{T}_A / \mathcal{T}_B)$ via weighted least squares, with weights inversely proportional to variance of each point's log-estimate. 95% confidence intervals via bootstrap (1,000 samples).
 
 **Correction functions.** Five functions $g: \mathbb{R} \to \mathbb{R}$ were tested, all satisfying $g(0) = 0$ and $g'(0) = 1$: linear ($g(\delta) = \delta$), saturating ($g(\delta) = \delta / (1 + \lvert\delta\rvert/R)$), threshold ($g(\delta) = \delta \cdot \mathbf{1}[\lvert\delta\rvert \gt \epsilon]$), sigmoid ($g(\delta) = R \cdot \tanh(\delta/R)$), and structural breakdown ($g(\delta) = \delta \cdot \mathbf{1}[\lvert\delta\rvert \lt R_\text{max}]$).
 

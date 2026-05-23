@@ -28,7 +28,7 @@ A Class 2 agent has $\Sigma_t$-source coupling at stage P3 (aggregation) per `#d
 
 $$M_{\tau^+} \;=\; M_{\tau^-} \;+\; K(\Sigma_{\tau^-}) \cdot \ell_\tau$$
 
-where $\ell_\tau$ is the likelihood signal from upstream stages (goal-blind by assumption — only P3 couples; if upstream stages also couple, the cascade-propagation result of `#disc-partial-coupling-pathways` applies and the analysis localizes at the upstream-most coupled stage), and $K: \mathcal S \to \mathbb R^{+}$ is a $\Sigma$-dependent positive gain.
+where $\ell_\tau$ is the likelihood signal from upstream stages (goal-blind by assumption — only P3 couples; if upstream stages also couple, the cascade-propagation result of `#disc-partial-coupling-pathways` applies and the analysis localizes at the upstream-most coupled stage), and $K: \mathcal{S} \to \mathbb{R}^{+}$ is a $\Sigma$-dependent positive gain.
 
 *Sunk-cost is the canonical instantiation:* $K(\Sigma)$ decreases as $\Sigma$ commits more heavily to specific beliefs about reality. Formally — as the projection of $\Sigma$ onto strategies presuming $M = m^\ast$ grows, $K$ falls for evidence challenging $m^\ast$. The mechanism is utility-cost driven: the cost of revising $M_t$ is bundled with the cost of abandoning $\Sigma_t$ (the agent would lose the sunk strategic investment if it abandons the strategy), and the agent's belief-update gain effectively reflects this bundled cost. A derivation of $K(\Sigma)$ from a utility-cost analysis of belief-revision-under-strategic-commitment is a recommended sub-spike (see Working Notes).
 

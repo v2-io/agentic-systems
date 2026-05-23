@@ -42,12 +42,12 @@ where:
 
 The prompt-assembly function $\text{prompt}(X_{\tau^-}, e_\tau)$ constructs the input token sequence. Its structure determines which information is available to the forward pass:
 
-$$\text{prompt}(X_{\tau^-}, e_\tau) = [\text{sys}(O_t), \; \text{mem}(\mathcal{E}_{\text{ext}}), \; \text{hist}(\mathcal C_{\tau^-}), \; \text{event}(e_\tau)]$$
+$$\text{prompt}(X_{\tau^-}, e_\tau) = [\text{sys}(O_t), \; \text{mem}(\mathcal{E}_{\text{ext}}), \; \text{hist}(\mathcal{C}_{\tau^-}), \; \text{event}(e_\tau)]$$
 
 where:
 - $\text{sys}(O_t)$ encodes the objective (system prompt, task description) — places $G_t$ causally upstream of all subsequent processing
 - $\text{mem}(\mathcal{E}_{\text{ext}})$ provides retrieved context from external memory
-- $\text{hist}(\mathcal C_{\tau^-})$ is the conversation history (chronica) within the current session
+- $\text{hist}(\mathcal{C}_{\tau^-})$ is the conversation history (chronica) within the current session
 - $\text{event}(e_\tau)$ is the new observation (tool result, user message, etc.)
 
 The ordering within the prompt matters: tokens placed earlier are causally upstream in the attention pattern. The system prompt (carrying $O_t$) appearing first is the *mechanism* by which goal-conditioning enters every subsequent computation — it is why $\kappa_{\text{processing}} \approx 1$ for transformer architectures.

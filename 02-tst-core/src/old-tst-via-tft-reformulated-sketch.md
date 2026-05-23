@@ -37,7 +37,7 @@ This is a specialization of TFT's scope (TF-01): the agent-environment pair is (
 
 **Formal scope condition (specializing TF-01):**
 
-$$S_{\mathrm{TST}} = \{(\text{Developer}, \text{Codebase}) \mid O \ne \emptyset, \lvert A \rvert \ge 2, H(\Omega_t \mid \mathcal C_t) \gt 0, P(\text{change-future}) \gt \varepsilon \}$$
+$$S_{\mathrm{TST}} = \{(\text{Developer}, \text{Codebase}) \mid O \ne \emptyset, \lvert A \rvert \ge 2, H(\Omega_t \mid \mathcal{C}_t) \gt 0, P(\text{change-future}) \gt \varepsilon \}$$
 
 The last condition (from TST's T-03) restricts to evolving systems — static artifacts are outside scope.
 
@@ -87,9 +87,9 @@ $G'$ may differ from $G$ (see causal-extensions.md §1.3). The divergence $G' \s
 
 The developer maintains a model $M_t$ — a compressed representation of their understanding of the codebase, requirements, and runtime behavior:
 
-$$M_t = \phi(\mathcal C_t)$$
+$$M_t = \phi(\mathcal{C}_t)$$
 
-where $\mathcal C_t$ is the developer's interaction history (files read, tests run, changes made, feedback received).
+where $\mathcal{C}_t$ is the developer's interaction history (files read, tests run, changes made, feedback received).
 
 **Model space M varies by agent type:**
 
@@ -102,7 +102,7 @@ where $\mathcal C_t$ is the developer's interaction history (files read, tests r
 
 **Model quality as compression efficiency (TF-03's IB objective, specialized):**
 
-$$\phi^\ast = \arg\min_\phi \left[I(M_t; \mathcal C_t) - \beta \cdot I(M_t; \text{future-observations} \mid \text{future-actions})\right]$$
+$$\phi^\ast = \arg\min_\phi \left[I(M_t; \mathcal{C}_t) - \beta \cdot I(M_t; \text{future-observations} \mid \text{future-actions})\right]$$
 
 - High beta (retain detail): Appropriate for stable codebases where historical detail predicts the future well.
 - Low beta (compress aggressively): Appropriate for volatile codebases where historical detail quickly becomes stale. (This is TF-03's connection to environmental volatility, directly applicable.)

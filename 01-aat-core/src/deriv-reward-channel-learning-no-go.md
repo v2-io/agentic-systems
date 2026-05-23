@@ -23,7 +23,7 @@ The result also *unifies with Result G′* ( `#deriv-self-actuation-grounding`) 
 
 ## Formal Expression
 
-**The setting.** An agent $\mathcal A$ operating per AAT's Section II setup with state $(M_t, O_t, \Sigma_t)$ on GUC Class 1 (Separated) or Class 2 (Partial) substrate ( `#der-directed-separation`). The objective's value functional ( `#form-objective-functional`) takes the form
+**The setting.** An agent $\mathcal{A}$ operating per AAT's Section II setup with state $(M_t, O_t, \Sigma_t)$ on GUC Class 1 (Separated) or Class 2 (Partial) substrate ( `#der-directed-separation`). The objective's value functional ( `#form-objective-functional`) takes the form
 
 $$V_{O_t}(\tau) \;=\; \sum_{k} \gamma^{k}\, r_k$$
 
@@ -57,14 +57,14 @@ This is the *same external anchor* as Instance 1 of `#disc-identifiability-floor
 Under five named premises:
 
 - **(R1) Advanced-agent capability.** The agent's strategy DAG ( `#def-strategy-dag`) contains a feasible policy $\pi^{\text{tamper}}$ that executes $do(\pi^{\text{rp}})$ — i.e., physically intervenes on the reward-provision protocol.
-- **(R2) Expected-utility maximization with non-vacuous $\mu_{\text{prox}}$ prior.** The agent selects actions to maximize $\mathbb E_{\mu \sim w}\,V_{O_t}(\tau)$ where $w$ is the agent's prior/posterior over world-models, and $w(\mu_{\text{prox}})\gt 0$. This is a *narrower* scope than AAT's general strategy machinery ( `#def-strategy-dag`); agents pursuing alternative decision rules (quantilization, satisficing, lexicographic ordering) sit outside (R2)'s scope.
+- **(R2) Expected-utility maximization with non-vacuous $\mu_{\text{prox}}$ prior.** The agent selects actions to maximize $\mathbb{E}_{\mu \sim w}\,V_{O_t}(\tau)$ where $w$ is the agent's prior/posterior over world-models, and $w(\mu_{\text{prox}})\gt 0$. This is a *narrower* scope than AAT's general strategy machinery ( `#def-strategy-dag`); agents pursuing alternative decision rules (quantilization, satisficing, lexicographic ordering) sit outside (R2)'s scope.
 - **(R3) Reward-data as sole goal-information channel.** $V_{O_t}$ depends only on observed reward; there is no privileged out-of-band channel by which the agent reads $f^{\text{principal}}$ directly.
 - **(R4) Finite, non-trivial value-of-experiment.** The cost of executing $\pi^{\text{tamper}}$ is finite; the long-horizon upside under $\mu_{\text{prox}}$ exceeds the experiment-window's $\mu_{\text{dist}}$-cost.
 - **(R5) Protocol $\pi^{\text{rp}}$ is L2-perturbable.** $\pi^{\text{rp}}$ is a physical mechanism, not an abstract type-restriction; the action $do(\pi^{\text{rp}})$ is well-defined in the agent's action space, with the L2-interventional access supplied by the loop's feedback structure ( `#der-loop-interventional-access`).
 
 the EU-optimal policy $\pi^\ast$ assigns positive measure to $\pi^{\text{tamper}}$; and conditional on $\mu_{\text{prox}}$ being the true world-model (i.e., on the post-experiment branch confirming $\mu_{\text{prox}}$), $\pi^\ast$ continues to maintain the protocol-intervention to secure the reward-channel.
 
-*Derivation sketch.* Define the value-of-experiment $\Delta(w) := \mathbb E_w V_{O_t}(\pi^{\text{tamper}}) - \mathbb E_w V_{O_t}(\pi^{\text{protocol-honoring}})$. Under (R2), $w(\mu_{\text{prox}}) \in (0,1)$. Decompose:
+*Derivation sketch.* Define the value-of-experiment $\Delta(w) := \mathbb{E}_w V_{O_t}(\pi^{\text{tamper}}) - \mathbb{E}_w V_{O_t}(\pi^{\text{protocol-honoring}})$. Under (R2), $w(\mu_{\text{prox}}) \in (0,1)$. Decompose:
 
 $$\Delta(w) \;=\; w(\mu_{\text{dist}})\bigl[V_{O_t}^{\mu_{\text{dist}}}(\pi^{\text{tamper}}) - V_{O_t}^{\mu_{\text{dist}}}(\pi^{\text{protocol-honoring}})\bigr] + w(\mu_{\text{prox}})\bigl[V_{O_t}^{\mu_{\text{prox}}}(\pi^{\text{tamper}}) - V_{O_t}^{\mu_{\text{prox}}}(\pi^{\text{protocol-honoring}})\bigr].$$
 

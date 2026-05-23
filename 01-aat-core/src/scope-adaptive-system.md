@@ -23,12 +23,12 @@ The scope is the broadest member of a cascade. Narrowing it by adding the requir
 
 *[Scope (scope-adaptive-system)]*
 
-$$\mathcal S_\text{adaptive} = \left\{(\text{Agent}, \Omega) \;:\; \mathcal O \neq \emptyset, \;\; H(\Omega_t \mid \mathcal C_t) \gt 0 \right\}$$
+$$\mathcal{S}_\text{adaptive} = \left\{(\text{Agent}, \Omega) \;:\; \mathcal{O} \neq \emptyset, \;\; H(\Omega_t \mid \mathcal{C}_t) \gt 0 \right\}$$
 
 Two conditions:
 
-1. **Observations exist**: $\mathcal O \neq \emptyset$ — the system has some perceptual channel to the environment ( #def-observation-function)
-2. **Residual uncertainty persists**: $H(\Omega_t \mid \mathcal C_t) \gt 0$ — the environment is not fully determined by the interaction history
+1. **Observations exist**: $\mathcal{O} \neq \emptyset$ — the system has some perceptual channel to the environment ( #def-observation-function)
+2. **Residual uncertainty persists**: $H(\Omega_t \mid \mathcal{C}_t) \gt 0$ — the environment is not fully determined by the interaction history
 
 This is sufficient for the mismatch signal ( #def-mismatch-signal), update gain ( #emp-update-gain), adaptive tempo ( #def-adaptive-tempo), the persistence condition ( #result-persistence-condition), and all of Section I's adaptive dynamics. A Kalman filter estimating a passive signal, a passive Bayesian learner, and any system that observes and updates a model under uncertainty are within this scope.
 
@@ -42,7 +42,7 @@ This is sufficient for the mismatch signal ( #def-mismatch-signal), update gain 
 
 **What is excluded.**
 
-- **Closed-form systems** ($H(\Omega_t \mid \mathcal C_t) = 0$): When the agent has complete knowledge of the environment, there is no uncertainty to adapt to. Optimal control over known dynamics is a solved problem outside AAT's concerns.
-- **Pure computation** ($\mathcal O = \emptyset$): A system with no observation channel — e.g., a mathematical proof engine operating on axioms alone — has no agent-environment boundary in AAT's sense.
+- **Closed-form systems** ($H(\Omega_t \mid \mathcal{C}_t) = 0$): When the agent has complete knowledge of the environment, there is no uncertainty to adapt to. Optimal control over known dynamics is a solved problem outside AAT's concerns.
+- **Pure computation** ($\mathcal{O} = \emptyset$): A system with no observation channel — e.g., a mathematical proof engine operating on axioms alone — has no agent-environment boundary in AAT's sense.
 
-**Narrowing to agency.** Adding causal action unlocks the interventional and purposeful results of Sections II and III. The agency scope ( #scope-agency) is the intersection of $\mathcal S_\text{adaptive}$ with the condition that actions carry Pearl-level-2 contrast: distinct actions produce distinct interventional outcome distributions. Adaptive-scope systems that remain outside agency are *passive observers* (no choice) or *nominal agents* (choices with no causal effect); for both, Section I's machinery applies but the causal-information and purposeful-agent results do not.
+**Narrowing to agency.** Adding causal action unlocks the interventional and purposeful results of Sections II and III. The agency scope ( #scope-agency) is the intersection of $\mathcal{S}_\text{adaptive}$ with the condition that actions carry Pearl-level-2 contrast: distinct actions produce distinct interventional outcome distributions. Adaptive-scope systems that remain outside agency are *passive observers* (no choice) or *nominal agents* (choices with no causal effect); for both, Section I's machinery applies but the causal-information and purposeful-agent results do not.

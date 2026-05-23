@@ -16,7 +16,7 @@ depends:
 
 Under matrix adaptive tempo $\mathcal{T}$ from `#def-adaptive-tempo`'s Tensor extension (per-channel primitive $K^{(k)} = (H_M + H_L^{(k)})^{-1} H_L^{(k)}$ from `#deriv-fisher-local-update-gain`) and matrix disturbance covariance $\Sigma_w$, the operational persistence condition lifts from scalar to matrix-Loewner form: the agent persists iff $\mathcal{T}$ is Hurwitz (structural persistence) and the stationary covariance $\Sigma_\infty$ — solving the continuous Lyapunov equation $\mathcal{T}\Sigma_\infty + \Sigma_\infty\mathcal{T}^T = \Sigma_w$ — is strictly Loewner-dominated by the diagonal of squared per-direction critical thresholds $D_\delta := \mathrm{diag}(\delta_{\text{critical},k}^2)$. The matrix-Loewner condition $\Sigma_\infty \prec D_\delta$ recovers `#result-persistence-condition`'s scalar Model S form as the isotropic special case and `#result-per-dimension-persistence`'s per-coordinate form as the diagonal special case. Crucially, when $\mathcal{T}$ has off-diagonal entries that misalign with the coordinate basis — the generic situation under cross-dimensional correction — the per-coordinate condition is *unsafe*: it can declare persistence on systems whose stationary mismatch will exceed task-adequacy along the diagonal direction. The matrix-Loewner form is the canonical anisotropic persistence condition; per-coordinate is its diagonal-$\mathcal{T}$-axis-aligned-$D_\delta$ special case, sharp where the coordinate basis happens to be the correction-machinery's eigenbasis and unsafe outside it.
 
-The framework's posture is sharp: **scalar and per-coordinate forms are special cases; the matrix form is the load-bearing object the others project from.** A constructive 2D counterexample (symmetric $\mathcal T$ with cross-coordinate correction, isotropic disturbance and threshold) makes the unsafety concrete — per-coordinate evaluates the wrong directions, returning PASS where matrix-Loewner correctly returns FAIL with the failing direction running 45° off-axis. The result composes with the per-direction information-rate floor: no Shannon-type aggregation across dimensions compensates for one direction being capacity-starved (*bandwidth-per-direction is the binding quantity, not total bandwidth*). The cleanest current application is multi-modal AI pipelines with asymmetric per-modality channel budgets, where aggregate-rate metrics systematically miss directional failures the matrix-Loewner reading catches.
+The framework's posture is sharp: **scalar and per-coordinate forms are special cases; the matrix form is the load-bearing object the others project from.** A constructive 2D counterexample (symmetric $\mathcal{T}$ with cross-coordinate correction, isotropic disturbance and threshold) makes the unsafety concrete — per-coordinate evaluates the wrong directions, returning PASS where matrix-Loewner correctly returns FAIL with the failing direction running 45° off-axis. The result composes with the per-direction information-rate floor: no Shannon-type aggregation across dimensions compensates for one direction being capacity-starved (*bandwidth-per-direction is the binding quantity, not total bandwidth*). The cleanest current application is multi-modal AI pipelines with asymmetric per-modality channel budgets, where aggregate-rate metrics systematically miss directional failures the matrix-Loewner reading catches.
 
 ## Formal Expression
 
@@ -50,7 +50,7 @@ When $\mathcal{T}$ is symmetric and commutes with $\Sigma_w$, the solution simpl
 
 The agent persists operationally iff:
 
-**(MP-1) Structural persistence.** $\mathcal{T}$ is Hurwitz — equivalently, $\Sigma_\infty$ exists as the unique positive-definite solution of the Lyapunov equation. This is the matrix analog of `#result-persistence-condition`'s structural condition $\alpha \gt 0$ (Hurwitz reduces to $\mathcal T_0 \gt 0$ in the scalar case).
+**(MP-1) Structural persistence.** $\mathcal{T}$ is Hurwitz — equivalently, $\Sigma_\infty$ exists as the unique positive-definite solution of the Lyapunov equation. This is the matrix analog of `#result-persistence-condition`'s structural condition $\alpha \gt 0$ (Hurwitz reduces to $\mathcal{T}_0 \gt 0$ in the scalar case).
 
 **(MP-2) Matrix-Loewner task adequacy.**
 
@@ -84,8 +84,8 @@ The three are mathematically equivalent under standard matrix-analysis (Horn & J
 
 | Special case | (MP-2) reduces to | Matches |
 |---|---|---|
-| Isotropic ($\mathcal{T} = \mathcal T_0 I$, $\Sigma_w = \sigma_w^2 I$, $\delta_{\text{critical}} = \delta_0 \mathbf{1}$) | $\sigma_w^2 / (2\mathcal T_0) \lt \delta_0^2$, i.e., $\mathcal T_0 \gt \sigma_w^2 / (2\delta_0^2)$ | Scalar Model S form, `#result-persistence-condition` |
-| Diagonal $\mathcal{T}, \Sigma_w$ in the coordinate basis of $D_\delta$ | $\sigma_{w,k}^2 / (2\mathcal T_{kk}) \lt \delta_{\text{critical},k}^2$ per coordinate $k$ | Per-coordinate Model S RMS, `#result-per-dimension-persistence` |
+| Isotropic ($\mathcal{T} = \mathcal{T}_0 I$, $\Sigma_w = \sigma_w^2 I$, $\delta_{\text{critical}} = \delta_0 \mathbf{1}$) | $\sigma_w^2 / (2\mathcal{T}_0) \lt \delta_0^2$, i.e., $\mathcal{T}_0 \gt \sigma_w^2 / (2\delta_0^2)$ | Scalar Model S form, `#result-persistence-condition` |
+| Diagonal $\mathcal{T}, \Sigma_w$ in the coordinate basis of $D_\delta$ | $\sigma_{w,k}^2 / (2\mathcal{T}_{kk}) \lt \delta_{\text{critical},k}^2$ per coordinate $k$ | Per-coordinate Model S RMS, `#result-per-dimension-persistence` |
 | Symmetric $\mathcal{T}$ commuting with $\Sigma_w$, general $D_\delta$ | Per-eigendirection inequality in $\mathcal{T}$'s eigenbasis, with direction-projected thresholds | New content recovered from the matrix form — extends per-coordinate to non-axis-aligned $\mathcal{T}$ |
 
 The third row is the content `#result-per-dimension-persistence` does not currently carry: when $\mathcal{T}$ and $\Sigma_w$ share an eigenbasis that is *not* the coordinate basis of $D_\delta$, the per-coordinate form misses the right direction-projected thresholds and the matrix-Loewner form handles them correctly.
@@ -98,7 +98,7 @@ The deeper structural question: is the matrix-Loewner form merely a generalizati
 
 $$\mathcal{T} \;=\; \begin{pmatrix} 1 & -0.9 \\ -0.9 & 1 \end{pmatrix}.$$
 
-This $\mathcal{T}$ is symmetric positive-definite with eigenvalues $1.9$ (along $(1, -1)/\sqrt{2}$) and $0.1$ (along $(1, 1)/\sqrt{2}$) — strongly anisotropic correction, with the $(1, 1)$ direction the weak axis. Per-coordinate naive reading of "diagonal of $\mathcal{T}$" sees uniform $\mathcal T_{11} = \mathcal T_{22} = 1$ and concludes correction is uniform at rate $1$ on each coordinate.
+This $\mathcal{T}$ is symmetric positive-definite with eigenvalues $1.9$ (along $(1, -1)/\sqrt{2}$) and $0.1$ (along $(1, 1)/\sqrt{2}$) — strongly anisotropic correction, with the $(1, 1)$ direction the weak axis. Per-coordinate naive reading of "diagonal of $\mathcal{T}$" sees uniform $\mathcal{T}_{11} = \mathcal{T}_{22} = 1$ and concludes correction is uniform at rate $1$ on each coordinate.
 
 **Stationary covariance.** Since $\mathcal{T}$ is symmetric, $\Sigma_\infty = \tfrac{1}{2}\mathcal{T}^{-1}\Sigma_w = \tfrac{1}{2}\mathcal{T}^{-1}$. Direct computation:
 
@@ -129,7 +129,7 @@ with eigenvalues $5.00$ along $(1, 1)/\sqrt{2}$ and $0.26$ along $(1, -1)/\sqrt{
 - The nonlinear matrix-sector extension. Under sector-bounded $F(\mathcal{T}, \delta)$ with $\delta^T F \succeq \alpha I$ in matrix-Loewner form, the matrix-Lyapunov machinery extends to give an ultimate-bound matrix; the linear case here is the template instantiation. Full matrix-sector treatment is follow-on work in `#deriv-sector-condition`.
 - The Model D matrix lift. Under deterministic bounded disturbance $\Vertw_t\Vert_M \le \rho$ in a quadratic norm, the ultimate-bound becomes an ellipsoid containment problem (a linear matrix inequality). Mechanical lift; not derived here.
 - The non-Hurwitz boundary behaviour (eigenvalue exactly on the imaginary axis). Outside Hurwitz, the linear analysis fails — no stationary distribution. This matches the scalar case's $\alpha \gt 0$ requirement.
-- The promotion of `#result-adversarial-tempo-advantage` to matrix form. The matrix-Loewner form sharpens the adversarial result via worst-direction targeting (an adversary controlling $\Sigma_w^{\text{adv}}$ maximizes $\lambda_{\max}(D_\delta^{-1/2}\Sigma_w^{\text{adv}} \mathcal T_{\text{eff}}^{-1} D_\delta^{-1/2})$), but the full adversarial promotion is a separate cycle.
+- The promotion of `#result-adversarial-tempo-advantage` to matrix form. The matrix-Loewner form sharpens the adversarial result via worst-direction targeting (an adversary controlling $\Sigma_w^{\text{adv}}$ maximizes $\lambda_{\max}(D_\delta^{-1/2}\Sigma_w^{\text{adv}} \mathcal{T}_{\text{eff}}^{-1} D_\delta^{-1/2})$), but the full adversarial promotion is a separate cycle.
 - The matrix extension of `#deriv-persistence-cost`'s information-rate floor. The natural lift is $\dot R \ge \tfrac{1}{2}\mathrm{Tr}(\mathcal{T})$ — per-eigendirection application of the scalar derivation. Worth a cross-reference Working Note in that segment if it becomes load-bearing; not derived here.
 
 ## Discussion

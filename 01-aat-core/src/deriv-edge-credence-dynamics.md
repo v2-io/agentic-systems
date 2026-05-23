@@ -35,7 +35,7 @@ The single-step update matches the gain-based form from #hyp-edge-update-via-gai
 
 **Parameterization note.** Propositions B.1–B.7 below are stated in the *moment-parameter* (probability-space) coordinate $\hat p_k \in [0, 1]$, consistent with the Beta-Bernoulli conjugate presentation. The log-odds coordinate $\lambda_k = \log(\hat p_k / (1 - \hat p_k)) \in \mathbb{R}$ is the unique additive-evidence presentation forced by the evidential-additivity axiom ( #deriv-edge-update-natural-parameter); the sector-parameter content of each proposition is Fisher-equivalent in either coordinate, so the derivations are retained in moment-parameter form for algebraic tightness ($\eta_k = 1/(n_k + 1)$ is exact in probability space). The log-odds coordinate becomes load-bearing in #disc-credit-assignment-boundary for the continuous-gradient signal function, where the probability-space presentation would exhibit a mechanical domain break.
 
-Strategic mismatch per edge is $\delta_k = \hat p_k - \theta_k$. The sector-condition framework ( #form-sector-condition) requires: (SA1) $F(\mathbf{0}) = \mathbf{0}$, (SA2') $\boldsymbol{\delta}^T \mathbf{F}(\boldsymbol{\delta}) \geq \alpha_\Sigma \lVert\boldsymbol{\delta}\rVert^2$ within a region $\mathcal B_R$.
+Strategic mismatch per edge is $\delta_k = \hat p_k - \theta_k$. The sector-condition framework ( #form-sector-condition) requires: (SA1) $F(\mathbf{0}) = \mathbf{0}$, (SA2') $\boldsymbol{\delta}^T \mathbf{F}(\boldsymbol{\delta}) \geq \alpha_\Sigma \lVert\boldsymbol{\delta}\rVert^2$ within a region $\mathcal{B}_R$.
 
 ### Regime-adjustment convention
 
@@ -347,7 +347,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 | **B.5b** Credence→value (nonlinear, componentwise) | Any | $\alpha_s = \alpha_c$ ($J_k \geq 0$ preserves bound) | — | — | None (exact transfer) |
 | **B.5b** Credence→value (coupled) | Any | $\alpha_s \geq \alpha_c / \kappa(\mathbf{J})^2$ | — | — | Inter-edge coupling |
 | **B.6** L1 augmented, mixed AND/OR | $G = \text{AND}(C, \text{OR}(A_1, A_2))$ | $\min(1/(n_C\!+\!1),\;\theta_C(1\!-\!\varepsilon)/(n_{A_1}\!+\!1),\;\theta_C\varepsilon/(n_{A_2}\!+\!1))$ | Yes | Required | Three-way gating |
-| **B.7** L1' mixture form, observable $C$ | $\hat P_\Sigma^{L1'} = \hat\theta_C P_\Sigma(\widehat{\mathbf p_{\mid C}}) + (1\!-\!\hat\theta_C) P_\Sigma(\widehat{\mathbf p_{\mid \neg C}})$ | $\min(1/(n_C\!+\!1),\;\min_j \theta_C\pi_{j\mid C}/(n_{j\mid C}\!+\!1),\;\min_j (1\!-\!\theta_C)\pi_{j\mid \neg C}/(n_{j\mid \neg C}\!+\!1))$ | Yes | Required *and* facilitator monotonicity | Five-way gating; **refuted under unobservable $C$** (Cramér-Rao floor) |
+| **B.7** L1' mixture form, observable $C$ | $\hat P_\Sigma^{L1'} = \hat\theta_C P_\Sigma(\widehat{\mathbf{p}_{\mid C}}) + (1\!-\!\hat\theta_C) P_\Sigma(\widehat{\mathbf{p}_{\mid \neg C}})$ | $\min(1/(n_C\!+\!1),\;\min_j \theta_C\pi_{j\mid C}/(n_{j\mid C}\!+\!1),\;\min_j (1\!-\!\theta_C)\pi_{j\mid \neg C}/(n_{j\mid \neg C}\!+\!1))$ | Yes | Required *and* facilitator monotonicity | Five-way gating; **refuted under unobservable $C$** (Cramér-Rao floor) |
 
 **Structural results across cases:**
 
@@ -382,7 +382,7 @@ Under Beta-Bernoulli updating with observable common cause, componentwise update
 
 $$\alpha_{L1'} = \min\!\left(\frac{1}{n_C+1},\; \min_{j \in \mathcal{J}_C}\frac{\theta_C \pi_{j\mid C}}{n_{j\mid C}+1},\; \min_{j \in \mathcal{J}_{\neg C}}\frac{(1-\theta_C)\pi_{j\mid \neg C}}{n_{j\mid \neg C}+1}\right)$$
 
-where $\mathcal J_s$ is the set of children tested on the $C=s$ branch and $\pi_{j\mid s}$ is the action-selection probability for child $j$ on that branch.
+where $\mathcal{J}_s$ is the set of children tested on the $C=s$ branch and $\pi_{j\mid s}$ is the action-selection probability for child $j$ on that branch.
 
 ### Proof
 
@@ -404,19 +404,19 @@ $$F_{j\mid \neg C}(\boldsymbol\xi) = \frac{(1-\theta_C)\pi_{j\mid \neg C} \xi_{j
 
 *Sector product.* The correction function is diagonal in $\boldsymbol\xi$ with positive entries:
 
-$$\boldsymbol\xi^T \mathbf F(\boldsymbol\xi) = \frac{\xi_C^2}{n_C+1} + \sum_{j \in \mathcal{J}_C}\frac{\theta_C \pi_{j\mid C} \xi_{j\mid C}^2}{n_{j\mid C}+1} + \sum_{j \in \mathcal{J}_{\neg C}}\frac{(1-\theta_C)\pi_{j\mid \neg C} \xi_{j\mid \neg C}^2}{n_{j\mid \neg C}+1} \;\geq\; \alpha_{L1'} \cdot \lVert\boldsymbol\xi\rVert^2$$
+$$\boldsymbol\xi^T \mathbf{F}(\boldsymbol\xi) = \frac{\xi_C^2}{n_C+1} + \sum_{j \in \mathcal{J}_C}\frac{\theta_C \pi_{j\mid C} \xi_{j\mid C}^2}{n_{j\mid C}+1} + \sum_{j \in \mathcal{J}_{\neg C}}\frac{(1-\theta_C)\pi_{j\mid \neg C} \xi_{j\mid \neg C}^2}{n_{j\mid \neg C}+1} \;\geq\; \alpha_{L1'} \cdot \lVert\boldsymbol\xi\rVert^2$$
 
 with $\alpha_{L1'}$ as stated.
 
-*SA1 check.* $\mathbf F(\mathbf 0) = \mathbf 0$ at truth ($\boldsymbol\xi = 0$). ✓
+*SA1 check.* $\mathbf{F}(\mathbf 0) = \mathbf 0$ at truth ($\boldsymbol\xi = 0$). ✓
 
-*Globality.* The Beta-Bernoulli updates are linear in $\boldsymbol\xi$ on $[-1, 1]^{2K+1}$, so the diagonal Jacobian computed at truth is the exact $\mathbf J_{\mathbf F}$ throughout. The sector inequality holds globally with the same $\alpha_{L1'}$.
+*Globality.* The Beta-Bernoulli updates are linear in $\boldsymbol\xi$ on $[-1, 1]^{2K+1}$, so the diagonal Jacobian computed at truth is the exact $\mathbf{J}_{\mathbf{F}}$ throughout. The sector inequality holds globally with the same $\alpha_{L1'}$.
 
 *B.5b bridge to plan value.* Jacobian of $\hat P_\Sigma^{L1'}$ with respect to the joint state:
 
 $$\mathbf{J}_{P_\Sigma} = \begin{pmatrix} P_\Sigma(\hat{\mathbf{p}}_{\mid C}) - P_\Sigma(\hat{\mathbf{p}}_{\mid \neg C}) \\ \hat\theta_C \cdot \nabla_{\hat{\mathbf{p}}_{\mid C}} P_\Sigma(\hat{\mathbf{p}}_{\mid C}) \\ (1-\hat\theta_C) \cdot \nabla_{\hat{\mathbf{p}}_{\mid \neg C}} P_\Sigma(\hat{\mathbf{p}}_{\mid \neg C}) \end{pmatrix}$$
 
-By facilitator monotonicity, the first entry is $\geq 0$. The other entries are $\geq 0$ by AND/OR monotonicity on each conditional sub-DAG. So $\mathbf J_{P_\Sigma} \geq 0$ componentwise. By the componentwise nonlinear case of B.5b, the sector condition transfers losslessly: $\alpha_s = \alpha_c = \alpha_{L1'}$. $\square$
+By facilitator monotonicity, the first entry is $\geq 0$. The other entries are $\geq 0$ by AND/OR monotonicity on each conditional sub-DAG. So $\mathbf{J}_{P_\Sigma} \geq 0$ componentwise. By the componentwise nonlinear case of B.5b, the sector condition transfers losslessly: $\alpha_s = \alpha_c = \alpha_{L1'}$. $\square$
 
 ### Five-Way Gating
 
@@ -444,12 +444,12 @@ $$\mathcal{F}(\phi) = \frac{1}{\mu_j(1-\mu_j)}\, u u^T, \qquad u = (\Delta_j,\; 
 
 where $\Delta_j = p_{j\mid C} - p_{j\mid \neg C}$ is the *separability gap*. The matrix is rank 1 for any non-degenerate mixture; the two-dimensional null space corresponds to perturbations along the indeterminacy manifold $\{\hat\phi : \hat\theta_C \hat p_{\mid C} + (1-\hat\theta_C) \hat p_{\mid \neg C} = \mu_j\}$ — directions unobservable from a single binary signal.
 
-Since the soft-EM step at truth equals (up to the $1/(n+1)$ scaling) the natural-gradient ascent on the expected log-likelihood, the Jacobian of the correction function equals $\mathcal F / (n+1)$, also rank 1. Therefore $\lambda_{\min}(\mathbf J_F) = 0$, and **no SA1-preserving update on the joint conditional vector admits a sector parameter $\alpha \gt 0$ under SUB-B.** This is a Cramér-Rao bound, not a defect of any particular update rule: any unbiased online estimator must respect the bound, which is infinite in the unidentifiable directions.
+Since the soft-EM step at truth equals (up to the $1/(n+1)$ scaling) the natural-gradient ascent on the expected log-likelihood, the Jacobian of the correction function equals $\mathcal{F} / (n+1)$, also rank 1. Therefore $\lambda_{\min}(\mathbf{J}_F) = 0$, and **no SA1-preserving update on the joint conditional vector admits a sector parameter $\alpha \gt 0$ under SUB-B.** This is a Cramér-Rao bound, not a defect of any particular update rule: any unbiased online estimator must respect the bound, which is infinite in the unidentifiable directions.
 
 **Repair routes.** When $C$ is unobservable, the agent must:
 
 (i) **Augment $C$-observability** (recover B.7 above) — instrument secondary signals that identify $C$ per trial, transforming the problem from refuted to globally derived.
-(ii) **Run $K \geq 2$ children jointly under the same $C$-realization** — when the joint Fisher matrix reaches rank $2K+1$, the mixture is identifiable; local sector condition holds with $\alpha \geq \sigma_{\min}(\mathcal F_{\text{joint}})/\max_k(n_k+1)$. Strong structural requirement (joint observation typically unavailable in standard sequential strategy execution).
+(ii) **Run $K \geq 2$ children jointly under the same $C$-realization** — when the joint Fisher matrix reaches rank $2K+1$, the mixture is identifiable; local sector condition holds with $\alpha \geq \sigma_{\min}(\mathcal{F}_{\text{joint}})/\max_k(n_k+1)$. Strong structural requirement (joint observation typically unavailable in standard sequential strategy execution).
 (iii) **Fall back to plan-level tracking on the marginal $\hat\mu_j$** — recovers B.1's $\alpha = 1/(n_\mu+1)$ on the scalar marginal but loses the per-conditional decomposition (equivalent to L0-on-marginals).
 
 ### Connection to the Identifiability-Floor Pattern
@@ -478,11 +478,11 @@ $$\delta_s \approx \mathbf{J}^T \boldsymbol\delta_c$$
 
 *[Derived (value-residual sector condition, linear case)]*
 
-When the correction in credence space is linear — $\mathbf F_c(\boldsymbol\delta_c) = \boldsymbol\eta \odot \boldsymbol\delta_c$ where $\eta_k = 1/(n_k+1)$ and $\odot$ is elementwise product — consider the sector ratio directly. Since $\delta_s = \mathbf{J}^T \boldsymbol\delta_c$ and $F_s = \mathbf{J}^T \mathbf F_c$:
+When the correction in credence space is linear — $\mathbf{F}_c(\boldsymbol\delta_c) = \boldsymbol\eta \odot \boldsymbol\delta_c$ where $\eta_k = 1/(n_k+1)$ and $\odot$ is elementwise product — consider the sector ratio directly. Since $\delta_s = \mathbf{J}^T \boldsymbol\delta_c$ and $F_s = \mathbf{J}^T \mathbf{F}_c$:
 
 $$\delta_s \cdot F_s = (\mathbf{J}^T \boldsymbol\delta_c)^T (\mathbf{J}^T \mathbf{F}_c) = \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \mathbf{F}_c$$
 
-For the linear case $\mathbf F_c = \eta_{\min} \boldsymbol\delta_c$ (using the worst-case uniform gain for the bound):
+For the linear case $\mathbf{F}_c = \eta_{\min} \boldsymbol\delta_c$ (using the worst-case uniform gain for the bound):
 
 $$\delta_s \cdot F_s = \eta_{\min} \cdot \boldsymbol\delta_c^T \mathbf{J} \mathbf{J}^T \boldsymbol\delta_c = \eta_{\min} \cdot \lVert\mathbf{J}^T \boldsymbol\delta_c\rVert^2 = \eta_{\min} \cdot \delta_s^2$$
 
@@ -504,7 +504,7 @@ This holds because $\mathbf{J}\mathbf{J}^T$ appears in both numerator and denomi
 
 When the correction is nonlinear but **componentwise** — each edge corrects independently, with
 
-$$(\mathbf F_c)_k \text{ depending only on } (\boldsymbol\delta_c)_k$$
+$$(\mathbf{F}_c)_k \text{ depending only on } (\boldsymbol\delta_c)_k$$
 
 — and the plan-value Jacobian is **non-negative** ($J_k \geq 0$ for all $k$), the transfer is lossless regardless of nonlinearity.
 
@@ -514,7 +514,7 @@ $$(\boldsymbol\delta_c)_k \cdot (\mathbf{F}_c)_k \geq \alpha_c \cdot (\boldsymbo
 
 which gives
 
-$$(\mathbf F_c)_k / (\boldsymbol\delta_c)_k \geq \alpha_c$$
+$$(\mathbf{F}_c)_k / (\boldsymbol\delta_c)_k \geq \alpha_c$$
 
 (the correction-to-mismatch ratio exceeds $\alpha_c$ for each edge independently).
 
@@ -550,7 +550,7 @@ $$\alpha_s = \alpha_c$$
 
 ### Proposition B.5d: Gradient-Based Attribution Restores SA1 on Coupled Edges
 
-**Setup.** Same two-edge AND topology as B.3: edges with true probabilities $\theta_1, \theta_2$, credences $\hat p_1, \hat p_2$, plan probability $\hat P_\Sigma = \hat p_1 \hat p_2$, observable plan outcome $y_G \in \{0, 1\}$ with $\mathbb E[y_G] = \Phi = \theta_1 \theta_2$. Intermediate is unobservable.
+**Setup.** Same two-edge AND topology as B.3: edges with true probabilities $\theta_1, \theta_2$, credences $\hat p_1, \hat p_2$, plan probability $\hat P_\Sigma = \hat p_1 \hat p_2$, observable plan outcome $y_G \in \{0, 1\}$ with $\mathbb{E}[y_G] = \Phi = \theta_1 \theta_2$. Intermediate is unobservable.
 
 **Gradient-based per-edge update.** Distribute plan-level surprise proportionally to the Jacobian component:
 
@@ -562,31 +562,31 @@ For the two-edge AND case, $J_1 = \hat p_2$, $J_2 = \hat p_1$.
 
 **Verification of SA1.** At truth ($\hat p_k = \theta_k$):
 
-$$\mathbb E[\Delta \hat p_k]\big\rvert_{\hat{\mathbf p} = \boldsymbol\theta} \;=\; \frac{J_k}{n_k + 1} \cdot \mathbb E[y_G - \hat P_\Sigma]\big\rvert_{\hat{\mathbf p} = \boldsymbol\theta}$$
+$$\mathbb{E}[\Delta \hat p_k]\big\rvert_{\hat{\mathbf{p}} = \boldsymbol\theta} \;=\; \frac{J_k}{n_k + 1} \cdot \mathbb{E}[y_G - \hat P_\Sigma]\big\rvert_{\hat{\mathbf{p}} = \boldsymbol\theta}$$
 
-The bracket evaluates as: $\mathbb E[y_G] = \Phi$ by definition of $y_G$ as a Bernoulli outcome with mean $\Phi$; and $\hat P_\Sigma\big\rvert_{\hat{\mathbf p} = \boldsymbol\theta} = \theta_1 \theta_2 = \Phi$. Therefore $\mathbb E[y_G - \hat P_\Sigma]\big\rvert_{\hat{\mathbf p} = \boldsymbol\theta} = 0$, and:
+The bracket evaluates as: $\mathbb{E}[y_G] = \Phi$ by definition of $y_G$ as a Bernoulli outcome with mean $\Phi$; and $\hat P_\Sigma\big\rvert_{\hat{\mathbf{p}} = \boldsymbol\theta} = \theta_1 \theta_2 = \Phi$. Therefore $\mathbb{E}[y_G - \hat P_\Sigma]\big\rvert_{\hat{\mathbf{p}} = \boldsymbol\theta} = 0$, and:
 
-$$\mathbb E[\Delta \hat p_k]\big\rvert_{\hat{\mathbf p} = \boldsymbol\theta} \;=\; 0 \quad \text{for all } k. \qquad \text{(SA1 satisfied)}$$
+$$\mathbb{E}[\Delta \hat p_k]\big\rvert_{\hat{\mathbf{p}} = \boldsymbol\theta} \;=\; 0 \quad \text{for all } k. \qquad \text{(SA1 satisfied)}$$
 
 The contrast with marginal Bayesian is precise: the marginal scheme suffers from a $\Phi$-vs-$\theta_k$ mismatch (the update treats each edge's marginal likelihood rather than the joint), producing the $O(1/n)$ bias derived in Prop B.3(a). The gradient scheme distributes surprise via the Jacobian, which aligns the per-edge update direction with the plan-level gradient — and this gradient is zero at truth by construction.
 
 **Sector parameter (SA2').** With the gradient-based scheme, the per-edge correction is:
 
-$$F_k(\boldsymbol\delta) \;=\; \frac{J_k}{n_k + 1} \cdot (\Phi - \hat P_\Sigma) \;\approx\; \frac{J_k}{n_k + 1} \cdot \mathbf J^T \boldsymbol\delta$$
+$$F_k(\boldsymbol\delta) \;=\; \frac{J_k}{n_k + 1} \cdot (\Phi - \hat P_\Sigma) \;\approx\; \frac{J_k}{n_k + 1} \cdot \mathbf{J}^T \boldsymbol\delta$$
 
-where the approximation uses the first-order expansion $\hat P_\Sigma - \Phi \approx \mathbf J^T \boldsymbol\delta$ valid near truth. The per-edge sector bound is:
+where the approximation uses the first-order expansion $\hat P_\Sigma - \Phi \approx \mathbf{J}^T \boldsymbol\delta$ valid near truth. The per-edge sector bound is:
 
-$$\boldsymbol\delta^T \mathbf F(\boldsymbol\delta) \;\approx\; \sum_k \frac{J_k^2}{n_k + 1} \cdot (\mathbf J^T \boldsymbol\delta)^2 / \lVert\boldsymbol\delta\rVert \;\geq\; \frac{\sigma_{\min}(\mathbf J)^2}{\max_k(n_k + 1)} \lVert\boldsymbol\delta\rVert^2$$
+$$\boldsymbol\delta^T \mathbf{F}(\boldsymbol\delta) \;\approx\; \sum_k \frac{J_k^2}{n_k + 1} \cdot (\mathbf{J}^T \boldsymbol\delta)^2 / \lVert\boldsymbol\delta\rVert \;\geq\; \frac{\sigma_{\min}(\mathbf{J})^2}{\max_k(n_k + 1)} \lVert\boldsymbol\delta\rVert^2$$
 
 giving:
 
-$$\alpha_c^{\text{grad}} \;\geq\; \frac{\sigma_{\min}(\mathbf J)^2}{\max_k(n_k + 1)}$$
+$$\alpha_c^{\text{grad}} \;\geq\; \frac{\sigma_{\min}(\mathbf{J})^2}{\max_k(n_k + 1)}$$
 
 **Transfer through B.5c.** Applying the coupled-case Cauchy-Schwarz bound:
 
-$$\alpha_s \;\geq\; \frac{\alpha_c^{\text{grad}}}{\kappa(\mathbf J)^2} \;=\; \frac{\sigma_{\min}(\mathbf J)^2 / \max_k(n_k+1)}{\sigma_{\max}(\mathbf J)^2 / \sigma_{\min}(\mathbf J)^2} \;=\; \frac{\sigma_{\min}(\mathbf J)^4}{\sigma_{\max}(\mathbf J)^2 \cdot \max_k(n_k+1)}$$
+$$\alpha_s \;\geq\; \frac{\alpha_c^{\text{grad}}}{\kappa(\mathbf{J})^2} \;=\; \frac{\sigma_{\min}(\mathbf{J})^2 / \max_k(n_k+1)}{\sigma_{\max}(\mathbf{J})^2 / \sigma_{\min}(\mathbf{J})^2} \;=\; \frac{\sigma_{\min}(\mathbf{J})^4}{\sigma_{\max}(\mathbf{J})^2 \cdot \max_k(n_k+1)}$$
 
-The $\sigma_{\min}(\mathbf J)^4 / \sigma_{\max}(\mathbf J)^2$ factor is the full cost of coupled per-edge attribution — a steep penalty compared to the componentwise case. The plan-level route (B.3(b)) avoids this penalty entirely by tracking $\Phi$ as a single quantity with $\alpha_\Sigma = 1/(n_\Phi + 1)$, at the cost of losing per-edge diagnostics.
+The $\sigma_{\min}(\mathbf{J})^4 / \sigma_{\max}(\mathbf{J})^2$ factor is the full cost of coupled per-edge attribution — a steep penalty compared to the componentwise case. The plan-level route (B.3(b)) avoids this penalty entirely by tracking $\Phi$ as a single quantity with $\alpha_\Sigma = 1/(n_\Phi + 1)$, at the cost of losing per-edge diagnostics.
 
 **Why not proportional-blame or other schemes?** Proportional-blame distributes surprise proportionally to current credences: $\Delta \hat p_k \propto \hat p_k \cdot (y_G - \hat P_\Sigma) / \sum_j \hat p_j$. This violates SA1 because the proportionality factor $\hat p_k / \sum_j \hat p_j$ is not the gradient direction, so the distribution over edges does not align with the plan-level surprise's actual attribution. Only schemes whose per-edge update aligns with the Jacobian direction preserve SA1 for coupled edges; gradient-based is the canonical such scheme.
 
@@ -631,7 +631,7 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 | **B.4** Minimum exploration rate (SA3 requirement) $\varepsilon \gt \rho_\Sigma(n_{\max}+1)/R_\Sigma$ | Substitution into persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ | Derived |
 | **B.5a** Linear credence-to-value transfer $\alpha_s = \alpha_c$ (Jacobian cancels) | Algebraic cancellation of $\mathbf{J}\mathbf{J}^T$ | Proved (exact, DAG-structure independent) |
 | **B.5b** Componentwise nonlinear transfer $\alpha_s = \alpha_c$ | Per-component sector bound + monotone AND/OR ($\mathbf{J}\geq 0$) | Proved (conditional on componentwise update + non-negative Jacobian) |
-| **B.5b** Coupled-edge Cauchy-Schwarz bound $\alpha_s \geq \alpha_c/\kappa(\mathbf{J})^2$ | Cauchy-Schwarz on $\mathbf{J}^T\mathbf F_c$ and $\mathbf{J}^T\boldsymbol\delta_c$ | Derived (conditional on Jacobian regularity *and* an SA1-preserving attribution scheme) |
+| **B.5b** Coupled-edge Cauchy-Schwarz bound $\alpha_s \geq \alpha_c/\kappa(\mathbf{J})^2$ | Cauchy-Schwarz on $\mathbf{J}^T\mathbf{F}_c$ and $\mathbf{J}^T\boldsymbol\delta_c$ | Derived (conditional on Jacobian regularity *and* an SA1-preserving attribution scheme) |
 | **B.5c** Four-regime classification of credence-to-value transfer | Combination of linear/nonlinear × componentwise/coupled × attribution type | Derived |
 | **B.5d** Gradient-based attribution restores SA1 on coupled edges | Jacobian-weighted surprise distribution; $\mathbb{E}[y_G - \hat P_\Sigma]\rvert_{\boldsymbol\theta} = 0$ | Derived |
 | **B.5d** Sector parameter under gradient attribution $\alpha_c^{\text{grad}} \geq \sigma_{\min}(\mathbf{J})^2/\max_k(n_k+1)$ | First-order expansion near truth + singular-value analysis | Derived |

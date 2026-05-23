@@ -134,7 +134,7 @@ $$\delta^T F(\delta) \geq \eta^\ast \cdot c_{\min} \lVert\delta\rVert^2 = \alpha
 
 $$\delta^T F(\delta) \geq \alpha \lVert\delta\rVert^2 \quad \text{for } \lVert\delta\rVert \leq R$$
 
-evaluated at fixed equilibrium $M^\ast$. Local $(\alpha/\eta)$-strong convexity of $L$ on $\mathcal B_R(M^\ast)$ implies this one-point sector condition with $\alpha = \eta \mu$, but the converse fails: there exist losses satisfying the one-point sector condition that are *not* strongly convex on any neighborhood of $M^\ast$ (counterexample below).
+evaluated at fixed equilibrium $M^\ast$. Local $(\alpha/\eta)$-strong convexity of $L$ on $\mathcal{B}_R(M^\ast)$ implies this one-point sector condition with $\alpha = \eta \mu$, but the converse fails: there exist losses satisfying the one-point sector condition that are *not* strongly convex on any neighborhood of $M^\ast$ (counterexample below).
 
 **(B.4-ii) Two-point sector ⇔ strong convexity (full equivalence).** The two-point / incremental sector condition — DA2'-inc in #deriv-discrete-sector-condition and the bridge-lemma precondition in #form-composition-closure — is
 
@@ -146,13 +146,13 @@ Under this strengthened condition the iff holds:
 
 $$\text{Two-point sector with }(\alpha, R) \iff L \text{ is }(\alpha/\eta)\text{-strongly convex on }\mathcal{B}_R(M^\ast)$$
 
-with $\alpha = \eta \mu$ and $\mu = \inf_{\delta \in \mathcal B_R(M^\ast)} \lambda_{\min}(\nabla^2 L(M^\ast + \delta))$. The basin radius $R$ is the largest ball around $M^\ast$ where $\nabla^2 L$ remains positive definite.
+with $\alpha = \eta \mu$ and $\mu = \inf_{\delta \in \mathcal{B}_R(M^\ast)} \lambda_{\min}(\nabla^2 L(M^\ast + \delta))$. The basin radius $R$ is the largest ball around $M^\ast$ where $\nabla^2 L$ remains positive definite.
 
 **Proof of (B.4-ii).** The correction function for gradient descent is $F(\delta) = \eta \cdot \nabla L(M^\ast + \delta)$ (continuous-time form absorbing event rate $\nu$ into $\mathcal{T} = \nu \cdot \eta$). The two-point sector condition becomes:
 
 $$\eta \cdot (\nabla L(M^\ast + \delta_1) - \nabla L(M^\ast + \delta_2))^T (\delta_1 - \delta_2) \geq \alpha \lVert\delta_1 - \delta_2\rVert^2$$
 
-Dividing by $\eta \gt 0$ gives gradient monotonicity with modulus $\mu = \alpha/\eta$. By Nesterov 2004, Theorem 2.1.10, $L$ is $\mu$-strongly convex on $\mathcal B_R(M^\ast)$ iff this gradient monotonicity holds for all $x, y \in \mathcal B_R(M^\ast)$. The equivalence is bidirectional:
+Dividing by $\eta \gt 0$ gives gradient monotonicity with modulus $\mu = \alpha/\eta$. By Nesterov 2004, Theorem 2.1.10, $L$ is $\mu$-strongly convex on $\mathcal{B}_R(M^\ast)$ iff this gradient monotonicity holds for all $x, y \in \mathcal{B}_R(M^\ast)$. The equivalence is bidirectional:
 
 ($\Rightarrow$) Two-point sector with $(\alpha, R)$ yields gradient monotonicity with $\mu = \alpha/\eta$, hence strong convexity.
 

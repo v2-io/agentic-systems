@@ -13,7 +13,7 @@ stage: draft
 
 # Derivation: Fisher-Whitened Edge Update Under Correlated Evidence
 
-Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#deriv-edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural gradient never exceeds $45°$ at finite correlation $\rho$, so B1 directional fidelity ( #der-gain-sector-bridge) is never actively violated — but its *magnitude alignment* degrades by a factor $\sqrt{1-r^2}$ in the sector constant. The Fisher-whitened correction restores sharp B1 on the Fisher-weighted inner product. Under the (PI) parameterization-invariance axiom named in `#scope-agent-identity` and promoted to a primary instance of `#disc-additive-coordinate-forcing` via Čencov 1982, Fisher whitening is **AAT-internally derivable** rather than externally imported. The result adds sub-scope $\alpha_3$ (correlated evidence + Fisher-whitened update + Bayesian coherence → A2' derived) to the A2' partition and composes cleanly with the meta-gain machinery of `#deriv-adaptive-gain-dynamics` (Fisher whitening is a special case of meta-gain with $K_t = \mathbf I^{-1}(\lambda_t)$).
+Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#deriv-edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural gradient never exceeds $45°$ at finite correlation $\rho$, so B1 directional fidelity ( #der-gain-sector-bridge) is never actively violated — but its *magnitude alignment* degrades by a factor $\sqrt{1-r^2}$ in the sector constant. The Fisher-whitened correction restores sharp B1 on the Fisher-weighted inner product. Under the (PI) parameterization-invariance axiom named in `#scope-agent-identity` and promoted to a primary instance of `#disc-additive-coordinate-forcing` via Čencov 1982, Fisher whitening is **AAT-internally derivable** rather than externally imported. The result adds sub-scope $\alpha_3$ (correlated evidence + Fisher-whitened update + Bayesian coherence → A2' derived) to the A2' partition and composes cleanly with the meta-gain machinery of `#deriv-adaptive-gain-dynamics` (Fisher whitening is a special case of meta-gain with $K_t = \mathbf{I}^{-1}(\lambda_t)$).
 
 The framework's posture splits cleanly. *Without* the (PI) commitment, the Fisher-whitened correction is an externally imported choice from information geometry. *With* (PI), Čencov 1982's uniqueness theorem *forces* the Fisher metric as the unique Markov-invariant metric on the statistical manifold, and the whitened-update form is then the AAT-internally canonical correction for directional-fidelity preservation across reparameterizations. Operational prescription: where correlated evidence is the dominant regime, Fisher whitening recovers sharp persistence guarantees at the cost of meta-gain machinery; where it is mild or rare, the default log-odds update with $\sqrt{1-r^2}$ magnitude-alignment degradation suffices. Sibling at the model-parameter-update layer is #deriv-fisher-local-update-gain (update *magnitude* under Fisher-local regime); together they make the Fisher-local invariance regime AAT-internally complete.
 
@@ -37,11 +37,11 @@ The log-odds update **never flips sign** under any finite correlation — B1 is 
 
 *[Definition (Fisher-whitened-update)]*
 
-In log-odds coordinates $\lambda \in \mathbb R^{\lvert E\rvert}$ with Fisher information $\mathbf I(\lambda)$, the Fisher-whitened edge update is
+In log-odds coordinates $\lambda \in \mathbb{R}^{\lvert E\rvert}$ with Fisher information $\mathbf{I}(\lambda)$, the Fisher-whitened edge update is
 
-$$T_{\text{FW}}(\lambda) = \lambda - \eta_{\text{edge}} \cdot \mathbf I^{-1}(\lambda) \cdot \mathbf J \cdot (\hat P_\Sigma(\sigma(\lambda)) - y_G)$$
+$$T_{\text{FW}}(\lambda) = \lambda - \eta_{\text{edge}} \cdot \mathbf{I}^{-1}(\lambda) \cdot \mathbf{J} \cdot (\hat P_\Sigma(\sigma(\lambda)) - y_G)$$
 
-(compared to the Euclidean log-odds update $T_{\text{edge}}(\lambda) = \lambda + \eta_{\text{edge}} \cdot \text{diag}(\iota) \cdot \mathbf J(y_G - \hat P_\Sigma)/\lVert\mathbf J\rVert^2$). The Fisher-weighted inner product $\langle a, b\rangle_\mathbf I = a^T \mathbf I^{-1} b$ makes the update's directional fidelity invariant under reparameterization of the natural-parameter coordinate.
+(compared to the Euclidean log-odds update $T_{\text{edge}}(\lambda) = \lambda + \eta_{\text{edge}} \cdot \text{diag}(\iota) \cdot \mathbf{J}(y_G - \hat P_\Sigma)/\lVert\mathbf{J}\rVert^2$). The Fisher-weighted inner product $\langle a, b\rangle_\mathbf{I} = a^T \mathbf{I}^{-1} b$ makes the update's directional fidelity invariant under reparameterization of the natural-parameter coordinate.
 
 ### Two AAT-internal axiom paths
 
@@ -51,7 +51,7 @@ $$T_{\text{FW}}(\lambda) = \lambda - \eta_{\text{edge}} \cdot \mathbf I^{-1}(\la
 
 **Path B (Lyapunov-coordinate-matching via adjacent-family classification).** In the adjacent-family framing of `#disc-additive-coordinate-forcing`, the Lyapunov coordinate is *matched* (not forced) to the sector condition. For natural-gradient updates, the canonical Lyapunov is Fisher-weighted (Amari 1998, "Natural gradient works efficiently in learning," *Neural Computation* 10); this matches the geometry of the update operator. The two paths converge on the same Fisher-weighted result; Path A forces it via axiomatics, Path B confirms it via adjacent-family coordinate-matching.
 
-Under L0 (no correlation), $r = 0$ and $\mathbf I$ is diagonal — Fisher whitening is vacuous (reduces to the existing Euclidean log-odds update). The axioms pick out Fisher whitening *uniquely* only under L1'/L2 (correlated evidence) regimes; they are vacuously satisfied under L0.
+Under L0 (no correlation), $r = 0$ and $\mathbf{I}$ is diagonal — Fisher whitening is vacuous (reduces to the existing Euclidean log-odds update). The axioms pick out Fisher whitening *uniquely* only under L1'/L2 (correlated evidence) regimes; they are vacuously satisfied under L0.
 
 ### New sub-scope $\alpha_3$
 
@@ -59,9 +59,9 @@ Under L0 (no correlation), $r = 0$ and $\mathbf I$ is diagonal — Fisher whiten
 
 Correlated-evidence + Fisher-whitened update + Bayesian coherence yields A2' *derived*:
 
-$$(T_{\text{FW}}(\lambda) - \lambda^\ast)^T \mathbf I(\lambda^\ast)^{-1}(\lambda - \lambda^\ast) \geq \beta \lVert\lambda - \lambda^\ast\rVert_\mathbf{I}^2 \quad \text{with } \beta = \eta_{\text{edge}} \mu$$
+$$(T_{\text{FW}}(\lambda) - \lambda^\ast)^T \mathbf{I}(\lambda^\ast)^{-1}(\lambda - \lambda^\ast) \geq \beta \lVert\lambda - \lambda^\ast\rVert_\mathbf{I}^2 \quad \text{with } \beta = \eta_{\text{edge}} \mu$$
 
-on the Fisher-metric sector region around the fixed point $\lambda^\ast = \text{logit}(\theta^\ast)$. The directional-fidelity proof of `#der-gain-sector-bridge` carries over with $\kappa(\mathbf I)$ as Euclidean-transfer penalty — structurally identical to the Kalman case's $(P^-)^{-1}$-norm weighted-norm treatment. The Kalman case in `#der-gain-sector-bridge`'s Verified Instances is a special case of Fisher-weighted sector.
+on the Fisher-metric sector region around the fixed point $\lambda^\ast = \text{logit}(\theta^\ast)$. The directional-fidelity proof of `#der-gain-sector-bridge` carries over with $\kappa(\mathbf{I})$ as Euclidean-transfer penalty — structurally identical to the Kalman case's $(P^-)^{-1}$-norm weighted-norm treatment. The Kalman case in `#der-gain-sector-bridge`'s Verified Instances is a special case of Fisher-weighted sector.
 
 Sub-scope $\alpha_3$ extends the refinement introduced by `#deriv-adaptive-gain-dynamics`:
 - **Sub-scope $\alpha_1$**: fixed-gain, independent evidence (Euclidean B1 applies; the existing A2' partition).
@@ -74,11 +74,11 @@ Additional composition: adaptive-gain + correlated-evidence (sub-scope $\alpha_4
 
 *[Derived (Fisher-whitening-as-special-meta-gain)]*
 
-The Fisher-whitened update is a meta-gain law in the sense of `#deriv-adaptive-gain-dynamics` with $K_t = \mathbf I^{-1}(\lambda_t)$ — a *degenerate* special case where the meta-gain is a deterministic function of the primary state rather than an independently learned variable. All four meta-gain conditions (MG-1)–(MG-4) are satisfied trivially:
-- (MG-1) Meta-gain sector: $\mathbf I^{-1}$ is symmetric-positive-definite on the interior of the natural-parameter domain.
-- (MG-2) Meta-gain bounded: $\lVert\mathbf I^{-1}\rVert$ bounded on compact natural-parameter subsets.
-- (MG-3) Smoothness: $\mathbf I^{-1}$ depends smoothly on $\lambda$ for exponential families.
-- (MG-4) Primary-meta coupling bounded: $\mathbf I^{-1}$'s state-derivative in the drift direction is bounded for exponential families.
+The Fisher-whitened update is a meta-gain law in the sense of `#deriv-adaptive-gain-dynamics` with $K_t = \mathbf{I}^{-1}(\lambda_t)$ — a *degenerate* special case where the meta-gain is a deterministic function of the primary state rather than an independently learned variable. All four meta-gain conditions (MG-1)–(MG-4) are satisfied trivially:
+- (MG-1) Meta-gain sector: $\mathbf{I}^{-1}$ is symmetric-positive-definite on the interior of the natural-parameter domain.
+- (MG-2) Meta-gain bounded: $\lVert\mathbf{I}^{-1}\rVert$ bounded on compact natural-parameter subsets.
+- (MG-3) Smoothness: $\mathbf{I}^{-1}$ depends smoothly on $\lambda$ for exponential families.
+- (MG-4) Primary-meta coupling bounded: $\mathbf{I}^{-1}$'s state-derivative in the drift direction is bounded for exponential families.
 
 This hands `#deriv-adaptive-gain-dynamics` a **concrete second instance** of derivable meta-gain alongside adaptive-Kalman-with-Mehra-estimator (its primary instance). The machinery of meta-gain composition via `#result-sector-persistence-template` (augmented-state Lyapunov) applies directly.
 

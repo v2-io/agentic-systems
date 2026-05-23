@@ -65,7 +65,7 @@ $$\eta_k^\ast = \frac{1}{\alpha_k + \beta_k + 1}$$
 
 For a well-observed arm with $\alpha_k + \beta_k \approx W = 20$: $\eta_k^\ast \approx 0.048$. *Exact for the pulled arm; zero for unpulled arms.*
 
-**Tempo** ( #def-adaptive-tempo). Per-arm tempo: $\mathcal T_k = \nu_k \cdot \eta_k^\ast$ where $\nu_k$ is the pull rate for arm $k$. Under uniform exploration: $\nu_k = 1/3$, so $\mathcal T_k \approx 0.016$ per step. *Approximate.*
+**Tempo** ( #def-adaptive-tempo). Per-arm tempo: $\mathcal{T}_k = \nu_k \cdot \eta_k^\ast$ where $\nu_k$ is the pull rate for arm $k$. Under uniform exploration: $\nu_k = 1/3$, so $\mathcal{T}_k \approx 0.016$ per step. *Approximate.*
 
 ## Section II Chain Instantiation
 
@@ -142,7 +142,7 @@ The agent is leaving $0.06$ reward-rate points on the table with its current exp
 | $\delta_\text{regret} \approx 0$ | Success | Capability limit |
 | $\delta_\text{regret} \gg 0$ | **Strategy problem** | Both |
 
-Our agent is in the **Strategy problem** cell: the goal is achievable, but the current policy is suboptimal. Section I alone (which reports $\hat\theta_k$, $\eta^\ast_k$, and $\mathcal T_k$) cannot distinguish "good strategy, hard goal" from "bad strategy, easy goal." The 2x2 diagnostic is Section II's value-add.
+Our agent is in the **Strategy problem** cell: the goal is achievable, but the current policy is suboptimal. Section I alone (which reports $\hat\theta_k$, $\eta^\ast_k$, and $\mathcal{T}_k$) cannot distinguish "good strategy, hard goal" from "bad strategy, easy goal." The 2x2 diagnostic is Section II's value-add.
 
 ### Strategy DAG ( #def-strategy-dag, #scope-and-or)
 
@@ -348,7 +348,7 @@ The purpose of this worked example is to demonstrate that Section II adds genuin
 
 **Scenario at $t = 40$: arm 1 failing, arm 2 actually best, agent pulling arm 1.**
 
-*Section I diagnosis.* The mismatch signal $\delta_t$ is large. The posterior $\hat\theta_1$ has dropped. Per-arm tempo $\mathcal T_1 \approx 0.016$ is adequate for tracking arm 1's drift. The agent knows arm 1 looks bad. Section I prescribes: update $M_t$ faster (increase $\eta^\ast$) or observe more (increase $\nu$).
+*Section I diagnosis.* The mismatch signal $\delta_t$ is large. The posterior $\hat\theta_1$ has dropped. Per-arm tempo $\mathcal{T}_1 \approx 0.016$ is adequate for tracking arm 1's drift. The agent knows arm 1 looks bad. Section I prescribes: update $M_t$ faster (increase $\eta^\ast$) or observe more (increase $\nu$).
 
 *Section II diagnosis.* The orient cascade runs:
 1. $M_t$ updates correctly — arm 1's posterior drops to $0.38$. (Directed separation: this happens goal-blindly.)

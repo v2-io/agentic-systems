@@ -24,18 +24,18 @@ The result is *load-bearing* for the framework's treatment of LLM agents: an LLM
 
 ### Setup
 
-Let $A : \mathcal I_A \to \mathcal O_A$ be a primitive component, treated by the wrapper as a black-box oracle: the wrapper issues queries (inputs) and consumes responses (outputs), without access to $A$'s internal state. $\mathcal Q_A \subseteq \mathcal I_A$ is the set of admissible queries.
+Let $A : \mathcal{I}_A \to \mathcal{O}_A$ be a primitive component, treated by the wrapper as a black-box oracle: the wrapper issues queries (inputs) and consumes responses (outputs), without access to $A$'s internal state. $\mathcal{Q}_A \subseteq \mathcal{I}_A$ is the set of admissible queries.
 
-A **wrapper** $W$ over $A$ has state $X_W = (M_W, G_W) \in \mathcal X_M \times \mathcal X_G$ with $\mathcal X_G = \mathcal X_O \times \mathcal X_\Sigma$ per `#def-strategy-dimension`. The wrapper interacts with an environment via observations $o_W \in \mathcal O_W$ and actions $a_W \in \mathcal A_W$.
+A **wrapper** $W$ over $A$ has state $X_W = (M_W, G_W) \in \mathcal{X}_M \times \mathcal{X}_G$ with $\mathcal{X}_G = \mathcal{X}_O \times \mathcal{X}_\Sigma$ per `#def-strategy-dimension`. The wrapper interacts with an environment via observations $o_W \in \mathcal{O}_W$ and actions $a_W \in \mathcal{A}_W$.
 
 *[Definition (wrapper-update-maps)]* The wrapper's update at macro-step $m$ uses four type-signed components:
 
-- **Belief-side query selector:** $q_M : \mathcal X_M \times \mathcal O_W \to \mathcal Q_A$. The wrapper chooses the query for $M_W$ updates from belief and observation only — *no $G_W$ argument*.
-- **Strategy-side query selector:** $q_G : \mathcal X_M \times \mathcal X_G \to \mathcal Q_A$. May depend on $G_W$.
-- **Belief-update map:** $f_M : \mathcal X_M \times \mathcal O_W \times \mathcal Q_A \times \mathcal O_A \to \mathcal X_M$. Updates $M_W$ from prior belief, observation, the query made, and the component's response. *No $G_W$ argument.*
-- **Strategy-update map:** $f_G : \mathcal X_G \times \mathcal X_M \times \mathcal Q_A \times \mathcal O_A \to \mathcal X_G$. May depend on $G_W$.
+- **Belief-side query selector:** $q_M : \mathcal{X}_M \times \mathcal{O}_W \to \mathcal{Q}_A$. The wrapper chooses the query for $M_W$ updates from belief and observation only — *no $G_W$ argument*.
+- **Strategy-side query selector:** $q_G : \mathcal{X}_M \times \mathcal{X}_G \to \mathcal{Q}_A$. May depend on $G_W$.
+- **Belief-update map:** $f_M : \mathcal{X}_M \times \mathcal{O}_W \times \mathcal{Q}_A \times \mathcal{O}_A \to \mathcal{X}_M$. Updates $M_W$ from prior belief, observation, the query made, and the component's response. *No $G_W$ argument.*
+- **Strategy-update map:** $f_G : \mathcal{X}_G \times \mathcal{X}_M \times \mathcal{Q}_A \times \mathcal{O}_A \to \mathcal{X}_G$. May depend on $G_W$.
 
-The external policy $\pi_W : \mathcal X_W \to \mathcal A_W$ selects the wrapper's external action.
+The external policy $\pi_W : \mathcal{X}_W \to \mathcal{A}_W$ selects the wrapper's external action.
 
 A macro-step proceeds: construct $q_M(M_W, o_W)$ → query $A$ → apply $f_M$; construct $q_G(M_W', G_W)$ → query $A$ → apply $f_G$; emit $\pi_W(X_W')$. The wrapper makes $K \geq 2$ component calls per macro-step in this minimal form (more in richer wrapper designs).
 
@@ -43,7 +43,7 @@ A macro-step proceeds: construct $q_M(M_W, o_W)$ → query $A$ → apply $f_M$; 
 
 *[Conditions (component-admissibility)]* The theorem applies under three conditions on the component $A$:
 
-**(C1) Goal-blind admissibility.** $\mathcal Q_A$ contains queries whose specification can be constructed from $(M_W, o_W)$ alone — i.e., a non-trivial $q_M$ exists. Components partition into three classes:
+**(C1) Goal-blind admissibility.** $\mathcal{Q}_A$ contains queries whose specification can be constructed from $(M_W, o_W)$ alone — i.e., a non-trivial $q_M$ exists. Components partition into three classes:
 - **Class A (goal-blind by design).** $A$'s interface is goal-blind by construction — POMDP belief-state filters, world models, sensory pipelines, retrieval systems, calculators. (C1) holds trivially.
 - **Class B (admit a goal-blind query mode).** $A$ supports goal-conditioned queries but also goal-blind ones. Large language models in summarization or fact-extraction modes; hybrid RL agents with separable value/policy; multi-modal models. (C1) holds operationally — the wrapper *chooses* to use the goal-blind mode.
 - **Class C (fundamentally goal-conditioned).** $A$'s only operating mode requires goal-conditioning. Pure end-to-end goal-conditioned policy networks. (C1) fails; the construction does not apply.

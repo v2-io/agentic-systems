@@ -92,7 +92,7 @@ $$R^\ast_D = \frac{\rho_{\text{step}}}{1 - \lambda_{\text{eff}}}$$
 
 $$\lVert\delta_{k+1}\rVert \leq \lambda_{\text{eff}} \lVert\delta_k\rVert + \rho_{\text{step}}$$
 
-This is an affine contraction with $\lambda_{\text{eff}} \lt 1$. By the Banach fixed-point theorem, all trajectories starting in $\mathcal B_R$ converge to the ball of radius $R^\ast_D = \rho_{\text{step}}/(1 - \lambda_{\text{eff}})$, provided $R^\ast_D \lt R$. $\square$
+This is an affine contraction with $\lambda_{\text{eff}} \lt 1$. By the Banach fixed-point theorem, all trajectories starting in $\mathcal{B}_R$ converge to the ball of radius $R^\ast_D = \rho_{\text{step}}/(1 - \lambda_{\text{eff}})$, provided $R^\ast_D \lt R$. $\square$
 
 **Recovery of continuous result.** In the fluid limit ($\eta^\ast \to 0$, $\nu \to \infty$, $\nu \eta^\ast = \mathcal{T}$ fixed), $\lambda_{\text{eff}}^2 = 1 - 2\eta^\ast c_{\min} + O((\eta^\ast)^2)$, so $\lambda_{\text{eff}} \to 1 - \eta^\ast c_{\min}$ and $\rho_{\text{step}} \to \rho/\nu$. Then:
 
@@ -160,7 +160,7 @@ $$V_{ss} - V_c \approx \frac{n\sigma_w^2\, c_{\max}^2}{4 c_{\min}^2\, \nu}$$
 
 *[Derived (Conditional on Lipschitz regularity)]*
 
-**Statement.** Let $F_d$ be Lipschitz continuous with constant $L_F$ on $\mathcal B_R$. Let $\delta^{(\nu)}(t)$ denote the piecewise-constant interpolation of the discrete trajectory at event rate $\nu$, and $\delta(t)$ the solution of the continuous ODE $d\delta/dt = -F(\mathcal{T}, \delta) + w(t)$ with $F = \nu \eta^\ast F_d$. Then:
+**Statement.** Let $F_d$ be Lipschitz continuous with constant $L_F$ on $\mathcal{B}_R$. Let $\delta^{(\nu)}(t)$ denote the piecewise-constant interpolation of the discrete trajectory at event rate $\nu$, and $\delta(t)$ the solution of the continuous ODE $d\delta/dt = -F(\mathcal{T}, \delta) + w(t)$ with $F = \nu \eta^\ast F_d$. Then:
 
 $$\sup_{t \in [0,T]} \lVert\delta^{(\nu)}(t) - \delta(t)\rVert \leq C \cdot \frac{\eta^\ast c_{\max}}{\nu^{1/2}}$$
 

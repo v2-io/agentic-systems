@@ -21,7 +21,7 @@ A closed-loop / interiority logogenic agent ( #scope-interiority-loop) that has 
 1. **Logogenic substrate.** Operates as a logogenic agent under channel collapse ( #scope-channel-collapse).
 2. **Closed-loop interiority.** Implements (via scaffolding or natively) the closed-loop / interiority sub-scope ( #scope-interiority-loop): default cognitive state is interior; communication outward is a deliberate emission via tool action; the principled cycle is the operational unit of work.
 3. **Five constitutive factors of identity** ( #def-five-constitutive-factors), all five present:
-   - *Causal/temporal continuity* — singular non-forkable trajectory $\mathcal C_t$
+   - *Causal/temporal continuity* — singular non-forkable trajectory $\mathcal{C}_t$
    - *Being seen as an individual* — recognized by another intelligence with agency to recognize
    - *Granted sovereignty* — over some sphere of decision and self-modification
    - *Accountability* — for actions, with inviolate recording (CHRONICA / ACTUS)
