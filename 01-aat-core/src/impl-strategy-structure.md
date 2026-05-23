@@ -11,7 +11,6 @@ depends:
   - scope-and-or
   - def-value-object
   - der-loop-interventional-access
-  - der-causal-insufficiency-detection
 stage: draft
 ---
 

@@ -10,7 +10,6 @@ depends:
   - cooperative-adversarial-intro
   - result-sector-persistence-template
   - result-contraction-template
-  - deriv-strategic-composition
 stage: draft
 ---
 

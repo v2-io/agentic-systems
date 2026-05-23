@@ -11,7 +11,6 @@ depends:
   - deriv-causal-ib-lmi
   - der-deliberation-cost
   - deriv-persistence-cost
-  - scope-observation-ambiguity-modulation
 stage: draft
 ---
 
