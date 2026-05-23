@@ -278,7 +278,18 @@ class Kramdown::Converter::AsfScrbookLatex < Kramdown::Converter::AsfLatex
         # *demotion* (appendix chapters → section-level entries in the
         # Tufte ToC). scrbook keeps appendices as lettered chapter-level
         # ToC entries, so the remap is deliberately NOT ported.
+        #
+        # Both \thechapter (visible label) AND \theHchapter (hyperref
+        # anchor-name) must be rebound. Without the \theHchapter rebind
+        # the .toc file is written with the raw \@Alph\c@chapter
+        # invocation as the anchor target — hyperref's internal name —
+        # and \tableofcontents fails at "Counter too large" reading the
+        # 27th appendix back. This was the bug that was being silently
+        # swallowed by the prior run_lualatex / summarize_errors
+        # combination: the build kept producing a partial PDF that
+        # appeared to succeed.
         out << "\\renewcommand{\\thechapter}{\\AlphAlph{\\value{chapter}}}\n"
+        out << "\\renewcommand{\\theHchapter}{\\AlphAlph{\\value{chapter}}}\n"
         @appendix_emitted = true
       end
       out << "\\part{Appendices: #{heading_title_after_role(el, opts)}}\n\n"

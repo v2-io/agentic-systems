@@ -21,6 +21,17 @@
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{unicode-math}
+% Note. unicode-math's \mathcal / \mathbb / \mathfrak / etc. require
+% explicit `{...}` grouping — bare-token form like `\mathcal M` halts
+% the build at \__um_group_begin: with "Missing { inserted". The fix
+% lives at the source-segment level: segments use the braced form
+% `\mathcal{M}` everywhere. A preamble-side compatibility shim was
+% tried and abandoned — the \DeclareRobustCommand-around-original-mathcal
+% interaction with unicode-math's robust wrapping did not behave as
+% expected and the diagnostic cost on a long build was high. If a
+% future segment slips in a bare-token form the build will fail at
+% that segment with a clear unicode-math error pointing at the bad
+% line; the fix is in the segment, not here.
 
 %----------------------------------------------------------------------------
 % Fonts.
@@ -66,9 +77,9 @@
 \directlua{
   if luaotfload and luaotfload.add_fallback then
     luaotfload.add_fallback('serif-fallback', {
-      'NotoSerif:mode=harf;script=latn;language=dflt;',
-      'FreeSerif:mode=harf;script=latn;language=dflt;',
-      'DejaVuSans:mode=harf;script=latn;language=dflt;',
+      'NotoSerif:mode=node;script=latn;language=dflt;',
+      'FreeSerif:mode=node;script=latn;language=dflt;',
+      'DejaVuSans:mode=node;script=latn;language=dflt;',
     })
   end
 }
@@ -76,7 +87,16 @@
 \setmainfont{GaramondPremrProAlt}[
   Path               = ./mono/scrbook/fonts/garamond/,
   Extension          = .otf,
-  Renderer           = HarfBuzz,
+  % Renderer = HarfBuzz was active until the page-63 LuaTeX node-attribute
+  % fatal ("node N has an attribute list that is free already") forced the
+  % switch to luaotfload's default node-mode renderer. HarfBuzz's shaping
+  % subtlety is real but the failure mode was a hard build break, not a
+  % subtle quality regression; node-mode preserves OpenType ligatures,
+  % kerning, optical-size dispatch, and the fallback chain. The fallback
+  % chain above was simultaneously moved from mode=harf to mode=node so
+  % its glyph nodes carry the same attribute-machinery signature as the
+  % primary font (mixed-mode shaping is a second known HarfBuzz fault
+  % line).
   Ligatures          = {TeX, Common},
   Numbers            = {Proportional, Lining},  % uppercase / all same height —
                                                  % more authoritative for
@@ -174,8 +194,25 @@
 
 %----------------------------------------------------------------------------
 % Microtypography
+%
+% Font expansion is disabled here because microtype's expansion machinery
+% creates virtual font variants whose node attributes collide with the
+% HarfBuzz renderer's shaping nodes. The collision manifests as the
+% LuaTeX-side fatal error "node N has an attribute list that is free
+% already" / "trying to delete an attribute reference of a non attribute
+% node", typically triggered partway through a long document by a
+% particular fallback-chain lookup. Protrusion is preserved — it modifies
+% glyph penalties rather than glyph nodes, and does not interact with
+% HarfBuzz the same way. Tradeoff: we lose microtype's automatic font
+% expansion (subtle column-width-aware glyph stretching, typically ≤2%);
+% we keep protrusion (margin-kerning of punctuation, the more visually
+% impactful of the two features for body text). If expansion is ever
+% needed back, drop the HarfBuzz renderer for the main font (use
+% luaotfload's `mode=node` instead of `mode=harf`) so microtype's
+% attribute machinery has a compatible substrate.
 %----------------------------------------------------------------------------
 \usepackage{microtype}
+\microtypesetup{expansion=false}
 
 %----------------------------------------------------------------------------
 % Widow / orphan suppression. Same discipline as the kaobook target — a
@@ -209,11 +246,44 @@
 % emitted as \@Alph{chunk}\@Alph{rem}. \numexpr handles the integer math.
 %----------------------------------------------------------------------------
 \makeatletter
+% Implementation note. \thechapter MUST be fully \edef-expandable: hyperref
+% and the .toc/.aux writers \edef-expand it when serializing destination
+% strings and contentsline entries, and any non-expandable token (counter
+% assignments via \divide / \advance / \multiply, etc.) gets written
+% LITERALLY to the .aux file rather than executed, then re-read later with
+% the wrong context — producing the spectacular "Counter too large"
+% cascade we hit on the first build that reached chapter 27+.
+%
+% Earlier attempts that failed this constraint, recorded so the trap is
+% legible:
+%
+% (1) \numexpr (the original). Edef-safe but ROUNDS to nearest:
+%     \numexpr(40-1)/26\relax = round(1.5) = 2, then \@Alph{40 - 26*2} =
+%     \@Alph{-12} → "Counter too large".
+%
+% (2) \divide / \multiply on \@tempcnta / \@tempcntb. Truncates correctly
+%     but is NOT edef-safe — the counter assignments get written verbatim
+%     to .aux as literal token sequences, then re-executed on read-back
+%     against whatever \c@chapter happens to be at that later point.
+%
+% (3) \inteval. Edef-safe, but the underlying expl3 `/` operator ROUNDS
+%     (\int_div_truncate:nn is the truncating one — not what \inteval
+%     dispatches to). Same numerical failure as (1).
+%
+% The correct route is the \numexpr arithmetic-shift trick:
+%   floor((N-1)/26)  ≡  round( (2N-27) / 52 ).
+% Algebraically the two are equal everywhere on the positive integers
+% (the shift biases the half-point exactly off the rounding boundary).
+% It uses the rounding primitive we have, is fully \edef-expandable, and
+% is independent of expl3 / LaTeX kernel version. Verified end-to-end on
+% chapters 27 (AA) through 52 (AZ), 53 (BA), 78 (BZ), 79 (CA). Coverage
+% to chapter 26+26² = 702 (ZZ); AAT will never approach that.
 \newcommand{\AlphAlph}[1]{%
   \ifnum#1<27%
     \@Alph{#1}%
   \else
-    \@Alph{\numexpr(#1-1)/26\relax}\@Alph{\numexpr#1-26*((#1-1)/26)\relax}%
+    \@Alph{\numexpr(2*#1-27)/52\relax}%
+    \@Alph{\numexpr#1-26*((2*#1-27)/52)\relax}%
   \fi
 }
 \makeatother
@@ -306,6 +376,86 @@
   filecolor  = link-navy,
   pdfborder  = {0 0 0},
 ]{hyperref}
+
+%----------------------------------------------------------------------------
+% PDF-string compatibility for unicode-math symbols in headings.
+%
+% hyperref converts chapter / section titles to PDF strings for bookmarks
+% and the document outline. Math inside titles ($\Sigma$-Source Coupling,
+% $M_t$-update, etc.) is fine for typesetting but causes a fatal cascade
+% in bookmark conversion: hyperref strips the math-shift `$`, leaves the
+% bare command (e.g. \mitSigma — unicode-math's name for math-italic
+% capital Sigma), then fails to render it as a PDF text character with
+% "Improper alphabetic constant" / "Missing = inserted for \ifnum" /
+% "Missing number, treated as zero" cascading until LuaTeX runs out of
+% recovery budget and exits fatally. Without this block, the build dies
+% mid-page at the first segment heading with a math-italic Greek letter.
+%
+% \pdfstringdefDisableCommands is hyperref's official hook: its contents
+% run only while a PDF-string is being constructed, so the regular
+% in-document typesetting of \mitSigma et al. is unaffected. We define
+% text equivalents for the unicode-math Greek capitals and lowercase
+% (covering both `\Sigma`-style classic names and `\mitSigma`-style
+% unicode-math names), plus the alphabetic math-style commands which
+% otherwise reach the bookmark routine still un-grouped.
+%
+% Coverage policy: cover every Greek letter once, both the upright and
+% italic unicode-math variant. If a less-common math command (e.g.
+% \mathfrak) appears in a future heading and triggers the same cascade,
+% add it here rather than wrapping the source title in
+% \texorpdfstring{...}{...}.
+%----------------------------------------------------------------------------
+% Helper: identity macro used by \pdfstringdefDisableCommands to render
+% \mathcal{X}, \mathbb{X}, etc. as plain `X` in PDF bookmarks. Defined
+% outside the disable-commands block because the block's body is
+% re-expanded (via \edef) when collected — embedding `#1` parameter
+% references inside it would require `####1`-level escaping that is more
+% fragile than the present `\let`-based pattern.
+\makeatletter
+\def\ASF@pdfargid#1{#1}
+\makeatother
+\pdfstringdefDisableCommands{%
+  % Greek capitals — both classic (\Sigma) and unicode-math math-italic
+  % (\mitSigma) names map to the same Latinized text token.
+  \def\Alpha{Alpha}\def\Beta{Beta}\def\Gamma{Gamma}\def\Delta{Delta}%
+  \def\Epsilon{Epsilon}\def\Zeta{Zeta}\def\Eta{Eta}\def\Theta{Theta}%
+  \def\Iota{Iota}\def\Kappa{Kappa}\def\Lambda{Lambda}\def\Mu{Mu}%
+  \def\Nu{Nu}\def\Xi{Xi}\def\Omicron{Omicron}\def\Pi{Pi}%
+  \def\Rho{Rho}\def\Sigma{Sigma}\def\Tau{Tau}\def\Upsilon{Upsilon}%
+  \def\Phi{Phi}\def\Chi{Chi}\def\Psi{Psi}\def\Omega{Omega}%
+  \def\mitAlpha{Alpha}\def\mitBeta{Beta}\def\mitGamma{Gamma}\def\mitDelta{Delta}%
+  \def\mitEpsilon{Epsilon}\def\mitZeta{Zeta}\def\mitEta{Eta}\def\mitTheta{Theta}%
+  \def\mitIota{Iota}\def\mitKappa{Kappa}\def\mitLambda{Lambda}\def\mitMu{Mu}%
+  \def\mitNu{Nu}\def\mitXi{Xi}\def\mitOmicron{Omicron}\def\mitPi{Pi}%
+  \def\mitRho{Rho}\def\mitSigma{Sigma}\def\mitTau{Tau}\def\mitUpsilon{Upsilon}%
+  \def\mitPhi{Phi}\def\mitChi{Chi}\def\mitPsi{Psi}\def\mitOmega{Omega}%
+  % Greek lowercase.
+  \def\alpha{alpha}\def\beta{beta}\def\gamma{gamma}\def\delta{delta}%
+  \def\epsilon{epsilon}\def\varepsilon{epsilon}\def\zeta{zeta}\def\eta{eta}%
+  \def\theta{theta}\def\vartheta{theta}\def\iota{iota}\def\kappa{kappa}%
+  \def\lambda{lambda}\def\mu{mu}\def\nu{nu}\def\xi{xi}%
+  \def\omicron{omicron}\def\pi{pi}\def\varpi{pi}\def\rho{rho}\def\varrho{rho}%
+  \def\sigma{sigma}\def\varsigma{sigma}\def\tau{tau}\def\upsilon{upsilon}%
+  \def\phi{phi}\def\varphi{phi}\def\chi{chi}\def\psi{psi}\def\omega{omega}%
+  \def\mitalpha{alpha}\def\mitbeta{beta}\def\mitgamma{gamma}\def\mitdelta{delta}%
+  \def\mitepsilon{epsilon}\def\mitzeta{zeta}\def\miteta{eta}\def\mittheta{theta}%
+  \def\mitiota{iota}\def\mitkappa{kappa}\def\mitlambda{lambda}\def\mitmu{mu}%
+  \def\mitnu{nu}\def\mitxi{xi}\def\mitomicron{omicron}\def\mitpi{pi}%
+  \def\mitrho{rho}\def\mitsigma{sigma}\def\mittau{tau}\def\mitupsilon{upsilon}%
+  \def\mitphi{phi}\def\mitchi{chi}\def\mitpsi{psi}\def\mitomega{omega}%
+  % Common math-style alphabetics — \let to the pre-defined identity macro
+  % so the argument passes through to the PDF string unchanged
+  % (e.g. \mathcal{M} → `M` in bookmarks).
+  \let\mathcal\ASF@pdfargid \let\mathbb\ASF@pdfargid
+  \let\mathbf\ASF@pdfargid \let\mathfrak\ASF@pdfargid
+  \let\mathit\ASF@pdfargid \let\mathrm\ASF@pdfargid
+  \let\mathsf\ASF@pdfargid \let\mathtt\ASF@pdfargid
+  \let\mathnormal\ASF@pdfargid
+  % Common math operators / structural symbols that might appear in a
+  % heading (extend as needed).
+  \def\infty{infinity}\def\partial{d}\def\nabla{nabla}%
+  \def\to{->}\def\rightarrow{->}\def\leftarrow{<-}\def\Rightarrow{=>}%
+}
 
 \usepackage[capitalize,noabbrev]{cleveref}
 

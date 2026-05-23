@@ -165,14 +165,20 @@
 % AAT's Details appendix alone has more than 26 chapter-level entries.
 %
 % Formula: for n in [27, 26+26²], chunk = (n-1) ÷ 26, rem = ((n-1) mod 26)+1,
-% emitted as \@Alph{chunk}\@Alph{rem}. \numexpr handles the integer math.
+% emitted as \@Alph{chunk}\@Alph{rem}. Implementation uses the \numexpr
+% arithmetic-shift trick: floor((N-1)/26) ≡ round((2N-27)/52). Fully
+% \edef-expandable AND truncating. \numexpr (rounds), \divide/\multiply
+% (not edef-safe), and \inteval (also rounds, despite the name) all fail
+% one or the other constraint — see sibling scrbook preamble for the full
+% failure-mode write-up from the 2026-05-22 build-break diagnosis.
 %----------------------------------------------------------------------------
 \makeatletter
 \newcommand{\AlphAlph}[1]{%
   \ifnum#1<27%
     \@Alph{#1}%
   \else
-    \@Alph{\numexpr(#1-1)/26\relax}\@Alph{\numexpr#1-26*((#1-1)/26)\relax}%
+    \@Alph{\numexpr(2*#1-27)/52\relax}%
+    \@Alph{\numexpr#1-26*((2*#1-27)/52)\relax}%
   \fi
 }
 \makeatother
