@@ -53,8 +53,8 @@ This section surfaces what the framework currently acknowledges as open at the o
 
 **`02-tst-core`:**
 - Discussion
-- Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$
+- Developer tempo as $\mathcal T_{\text{obs}}$ + $\mathcal T_{\text{explore}}$ + $\mathcal T_{\text{probe}}$ — chronicle-derivable channel separation + probe-class typology + matrix-Loewner weakest-channel bottleneck (see [`TST-IDEAS.md`](../TST-IDEAS.md) §A4)
 - Discussion
 - Discussion
-- Software persistence: the unmaintainability threshold formalized
+- Software persistence: the unmaintainability threshold formalized as a bifurcation in $Q \to U_o \to \eta^\ast \to \mathcal T$ chain — G1/G2/G3 code-age bimodality with Ebbinghaus $\tau \approx 20$ days as $U_o$-decay anchor (see [`TST-IDEAS.md`](../TST-IDEAS.md) §A3)
 

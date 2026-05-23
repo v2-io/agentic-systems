@@ -5,21 +5,21 @@
 
 The 3 most recent cycle narratives. Full record at [`CHANGELOG.md`](CHANGELOG.md); pre-2026-04-24 archaeology at [`LOG.md`](LOG.md).
 
-### Operator-family unification — the certificate spine: two segments, a sharp plural no-go, and a respectful-pedagogy preamble
+### Strategy-DAG composition math landed (A1); compensation-channel uniqueness extracted as a standalone segment (B6)
 
-*2026-05-14*
+*2026-05-19*
 
-The deep "real-deal" push of the long-standing C1 question (does an operator-sector abstraction unify AAT's cross-sectional machinery?). The predecessor `spikes/.integrated/spike-operator-sector-unification.md` had returned an honest "2-instance-plus-1-consequence / do not elevate to a fourth meta-pattern" verdict; Joseph asked for the question to be pushed until either a revealing no-go or the unifying mechanism. Prior work was gathered first via scoped `memorata-search` (the jacobian-b1 (SOC) curvature-axiom verdict, the Mori–Zwanzig composition spike, the O-BP10 naming-cycle history). The push ran as a directory spike `spikes/spike-operator-family-unification/` (00-brief → 01-L1 → 02-L3 → 03-L4 → 99-verdict → 04-spine-authoring-brief).
+Two landings from the practica `01-theory`-dive remainder (`spikes/ROUTING.md` log (q)/(r)), both elected by Joseph after the remainder was routed.
 
-### Spike-INDEX refresh + verification-and-archive cleanup pass
+### Resource-structure axis opened as an exploratory off-spine branch (Φ(fight)-prompted)
 
-*2026-05-14*
+*2026-05-19*
 
-A small but high-leverage hygiene cycle picking up after the 2026-05-12 (late) spike-audit triage. The triage left `spikes/INDEX.md` with significant drift: 71 path references still wrote `spikes/spike-X.md` for spikes moved to `.integrated/` in the bulk-archive event, and several spikes never got INDEX rows in the first place. The cycle ran in three phases.
+An external-stimulus exercise — the Φ(fight) collective's adversarial-multi-agent-embodied research *agenda* (no published output exists; verified empty repos and a funding proposal), used strictly as an ideation prompt — pressure-tested AAT's adversarial chapter and produced one landed branch plus methodology worth recording.
 
-### Partial-cycle landing of the modularity-state-dynamics cycle (Moves 2 and 5 only)
+### Accumulation-typing notation convention adopted (D1); the math and register landings since completed (see Update 2026-05-19)
 
-*2026-05-14*
+*2026-05-19*
 
-Joseph's pushback on the deferral framing ("any reason *not* to add Miller's Table or M4?") triggered an honest re-look at both questions. Two findings.
+The accumulation-type-confound thread (originating from the $\varepsilon^\ast(N)$ poly-vs-exponential whole-space pass on `spike-composition-scaling-N`) reached a **decided notation convention**, now landed in `NOTATION.md` §Conventions ("Accumulation typing"): per-step vs accumulated quantities marked the way online-learning marks per-round vs cumulative regret; the accumulation operator written explicitly carrying its existence condition as a subscript ($\mathcal A_{[\text{cond}]}$, not bare $\mathcal A$, because its boundedness is a theorem not a constant); every asymptotic claim carrying an explicit, scoped regime marker (`[contraction]/[critical]/[absorbing]`, hardest-bound at the marginal/non-contraction regime, lightweight in the proven-contraction interior, framed as auditable-not-guaranteed). Joseph's decision 2026-05-19: C/online-learning + the N3 ledger form for the per-step/accumulated layer; the scoped N4 regime badge for the regime layer.
 
