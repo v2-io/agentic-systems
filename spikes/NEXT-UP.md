@@ -156,6 +156,33 @@ sequence and where the dependencies are.*
   strengthening spike (`spikes/spike-cohen-2022-strengthening-2026-05-22/`) are
   deliberately retained in `spikes/` as active wrappers per the MANIFEST's
   "Deliberately NOT archived" section; their own archival is a later disposition.
+- ✅ **Track D (M4 cycle close) LANDED 2026-05-24.** PRACTICA priority #2
+  modularity-as-contested-property cycle completed across four commits
+  (`2c8ab8d` Move 3 strategic-self-coupling lands; `4905e29` Move 4 M4
+  meta-segment lands; `dfdcf2e` cross-segment ripple forward-refs → landed-refs
+  across 6 segments; `4a2937a` CHANGELOG + auto-derived refresh). The
+  framework's analytical surface now carries four meta-patterns canonically
+  (M1/M2/M3/M4). **Track A Phase 6 (meta-segment promotion of
+  `#disc-dynamic-regime-axis`) is now UNBLOCKED** — its dependency on Track
+  D's landing is satisfied; not yet executed and remains queued. Sketch spike
+  for M4 worked-example candidate landed at
+  `spikes/spike-m4-worked-example-soviet-2026-05-24.md` (the Soviet
+  directed-separation failure + institutional-checks-and-balances comparison;
+  flagged for worked-example landing pass when that cycles).
+- ✅ **Track C (Meta-Architecture relocation) LANDED 2026-05-25.** Ten
+  meta-segments relocated from Appendices §A into a new top-level
+  *Meta-Architecture* section between Part I and Part II in
+  `01-aat-core/OUTLINE.md` per Joseph's *introduced-before-used* directive
+  responding to de-novo-read feedback. Commits: `8e26b4e` (the OUTLINE
+  relocation + CLAUDE.md "Settled architectural detail" update). The
+  centralized Meta-Architecture section opens with scope + four headline
+  paragraphs naming the four meta-patterns and their spine + sister-cluster
+  and operation-leg framing, then the table of ten meta-segment rows.
+  Ordering violations rose 5 → 22, all Gate-1-GENUINE-by-design from the
+  meta-segments-before-instances discipline working as intended. Body
+  re-authoring per Track C plan §2.b (lead with methodology rather than
+  synthesis-after-convergence) deferred to a follow-on cycle; the de-novo-read
+  complaint about *placement* is closed by this commit.
 
 ---
 
