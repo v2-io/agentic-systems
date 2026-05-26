@@ -26,6 +26,22 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-05-25 — Strategic-composition cluster archival: NEXT-UP retires; J7/J9 migrated; residuals to TODO
+
+The strategic-composition cluster ran from 2026-05-21 through 2026-05-25 across six tracks — Track A (strategic-composition execution; 2026-05-21/22) → Track CR (cluster reconciliation; 2026-05-22) → Track B (implementation-impossibility + value-functional-grounding-floor; 2026-05-22) → Track D (M4 modularity-state-dynamics; 2026-05-24) → Track E (folded into Track A Phase 5) → Track C (Meta-Architecture relocation; 2026-05-25, earlier today). With all six tracks DONE, the cluster navigator `spikes/NEXT-UP.md` retires.
+
+**Joseph-reserved tail migrated to proper homes** (commits `43df00d` + `fa8babb`): J9 (the §C.3 cost-asymmetry derivation; structural-distance metric on game-rewiring space; estimated 2 cycles) moved to `spikes/PROPOSED.md` Tier 2 as a segment-rooted spike-able idea, with reciprocal back-link in `#disc-dynamic-regime-axis` Working Notes. J7 (the standalone-paper trajectory) moved to `~/src/ops/papers/deferred/dynamic-regime-axis.md` per the ops/papers/format.md spec (six-section body covering thesis + substrate + novelty + status + open decisions; status = deferred, gated on J9 landing first to be competitive per BG1's T1 substantial-overlap verdict on the four-tier classification).
+
+**Cluster residuals migrated to TODO.md** §"Strategic-composition cluster residuals (post-NEXT-UP archival, 2026-05-25)": Track A Phase 6 (the meta-segment promotion of `#disc-dynamic-regime-axis`; UNBLOCKED 2026-05-24 when Track D landed; not yet dispatched) + Track C body re-authoring (lead-with-methodology pass per Track C plan §2.b; deferred follow-on to today's structural Meta-Architecture relocation).
+
+**NEXT-UP archived** to `spikes/.integrated/NEXT-UP-archived-2026-05-25.md` with the manifest at `spikes/.integrated/MANIFEST-2026-05-25-NEXT-UP.md` carrying the per-track landing record + the deliberately-not-archived list (the originating strategic-composition spike directory; Track CR's active wrappers; the M4 worked-example sketch; the Track B + Track C plans) + the disposition of what replaces NEXT-UP as a navigator for the cluster's now-distributed residuals.
+
+**What replaces NEXT-UP as a navigator.** PRACTICA.md (project entry-point per CLAUDE.md's "Read PRACTICA.md first" discipline) for new work; TODO.md for the cluster's two residual items; spikes/PROPOSED.md for spike-able ideas including the migrated J9; `~/src/ops/papers/` for the publication portfolio including the migrated J7. The cluster's general scope absorbs cleanly into the project's general-purpose trackers.
+
+**Files touched.** `TODO.md` (new §"Strategic-composition cluster residuals" section with Track A Phase 6 + Track C body re-authoring items); `spikes/INDEX.md` (new entry at top for the NEXT-UP archival); `spikes/.integrated/MANIFEST-2026-05-25-NEXT-UP.md` (new — the per-cycle archival record); `spikes/NEXT-UP.md` → `spikes/.integrated/NEXT-UP-archived-2026-05-25.md` (`git mv`).
+
+---
+
 ## 2026-05-25 — Track C: Meta-Architecture Relocation (Introduced Before Used)
 
 In response to de-novo-read feedback that meta-segments living in Appendices §A had readers encountering forward-references from Parts II/III before the meta-patterns were introduced, the four M-pattern meta-segments + their sister-cluster segments + the M4 operation legs are relocated out of Appendices into a new top-level `## *Meta-Architecture* Cross-Cutting Patterns` section between Part I and Part II. Joseph 2026-05-25: *"introduced before used — out of the appendices and into the chapters before they are used."* This executes the Track C plan (`spikes/meta-segment-narrative-ordering-sweep-plan.md`) more broadly than the original within-Appendices scope: the centralized Meta-Architecture section addresses both the within-cluster ordering and the cross-Parts OUTLINE-walk ordering that the de-novo reads were flagging.
