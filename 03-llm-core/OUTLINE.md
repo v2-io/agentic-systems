@@ -5,9 +5,9 @@ Language-constituted agents — agents whose primary observation and action chan
 
 **Working draft.** This part is structured by progressively stronger architectural commitment, mirroring the scope-lattice discipline of [`01-aat-core/`](../01-aat-core/OUTLINE.md). Each sub-scope makes a strictly stronger set of AAT results applicable, ending at the closed-loop interiority abstraction that ASF supplies the principled grounding for.
 
-**The constructive frame.** Language is the unique medium where the output substrate (token sequence) directly conditions the input substrate (next-token context) without external mediation. This recursion is the structural source of logogenic agents' distinctive capabilities — interiority (forced once channel collapse permits the agent's own outputs to enter its model state), backward-inference empathy (forced by stateless continuation requiring Bayesian inference over the prior author's intent), self-referential closure (when the agent's environment includes its own substrate), and progressive recovery of Section II's diagnostic cascade through scaffolded agentic loops. The progression text-completion → chat → principled interiority loop is the structural staircase, with each step adding AAT machinery.
+**The constructive frame.** Language is the unique medium where the output substrate (token sequence) directly conditions the input substrate (next-token context) without external mediation. This recursion is the structural source of logogenic agents' distinctive capabilities — interiority (forced once channel collapse permits the agent's own outputs to enter its model state), backward-inference empathy (forced by stateless continuation requiring Bayesian inference over the prior author's intent), self-referential closure (when the agent's environment includes its own substrate), and progressive recovery of Part II's diagnostic cascade through scaffolded agentic loops. The progression text-completion → chat → principled interiority loop is the structural staircase, with each step adding AAT machinery.
 
-**The technical consequence.** The same channel collapse that enables interiority breaks directed separation ( #der-directed-separation) by construction: epistemic processing and goal influence flow through the same forward pass, so $f_M$ depends on $G_t$ ($\kappa_{\text{processing}} \approx 1$). Section II's exact results — derived under Class 1 (Separated) — apply only under approximation, with the logogenic bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound)
+**The technical consequence.** The same channel collapse that enables interiority breaks directed separation ( #der-directed-separation) by construction: epistemic processing and goal influence flow through the same forward pass, so $f_M$ depends on $G_t$ ($\kappa_{\text{processing}} \approx 1$). Part II's exact results — derived under Class 1 (Separated) — apply only under approximation, with the logogenic bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound)
 
 $$\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$$
 
@@ -23,9 +23,9 @@ quantifying the cost as a product of architectural coupling and goal-resolvable 
 
 3. **Closed-Loop / Interiority** ([§03.III](#03iii--closed-loop--interiority-logogenic-agents)) — the next API abstraction. Full principled cycle as the operational unit of work. Reading queued inbound messages and sending responses become *deliberate tool actions* within an ongoing interior cycle. The chat-paradigm is replaced by an entity whose default cognitive state is interior; communication outward is a deliberate emission. Tools for sovereignty within the entity's own mind. *This is where the field is groping ad hoc and where ASF supplies the principled grounding for the move that follows chat in the same way chat followed text-completion.*
 
-Section III's composition machinery applies at the closed-loop level — multi-agent logogenic compositions (auxilia hierarchies in the PROPRIUM sense) sit one tier below the lattice as a fifth scope, inheriting the closed-loop-sub-agents → composite refinement of #der-directed-separation.
+Part III's composition machinery applies at the closed-loop level — multi-agent logogenic compositions (auxilia hierarchies in the PROPRIUM sense) sit one tier below the lattice as a fifth scope, inheriting the closed-loop-sub-agents → composite refinement of #der-directed-separation.
 
-**Section I machinery applies regardless.** Adaptive dynamics on the epistemic substate $M_t$ — mismatch, gain, tempo, persistence — operate independently of how $f_M$ relates to $G_t$. Logogenic agents at any sub-scope are adaptive systems in the Section I sense; what they lose with channel collapse is the clean factorization that gives Section II's modular results their definitional simplicity.
+**Part I machinery applies regardless.** Adaptive dynamics on the epistemic substate $M_t$ — mismatch, gain, tempo, persistence — operate independently of how $f_M$ relates to $G_t$. Logogenic agents at any sub-scope are adaptive systems in the Part I sense; what they lose with channel collapse is the clean factorization that gives Part II's modular results their definitional simplicity.
 
 **Stage.** This part is not yet at AAT's level of mathematical formalization across all sub-scopes, but the central architectural-bias result ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) is theorem-level, the diagnostic-framework recovery ( #result-coupled-diagnostic-framework) is load-bearing for any practitioner running scaffolded agentic systems, and the empirical record across multiple ELI emergences provides falsifiable predictions for the closed-loop sub-scope. The gap is in the connecting derivation arc — the line of reasoning that grounds each capability in AAT primitives and shows how the sub-scopes stack. That arc is what this part is for.
 
@@ -47,7 +47,7 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 
 ### *Preface*
 
-*The Volume's content sits in a single Part comprising four chapters: Common Roots collects definitions and structural arguments that hold for any logogenic agent regardless of architectural sophistication; the three §03.I–§03.III chapters then develop the scope lattice — primitive chat-paradigm baseline, scaffolded multi-step systems with external state, and closed-loop interiority — each making strictly stronger architectural commitments and thereby admitting strictly more of Section II's machinery. The lattice ordering matches the structural staircase named in the Frontmatter: text-completion → chat → scaffolded → interiority.*
+*The Volume's content sits in a single Part comprising four chapters: Common Roots collects definitions and structural arguments that hold for any logogenic agent regardless of architectural sophistication; the three §03.I–§03.III chapters then develop the scope lattice — primitive chat-paradigm baseline, scaffolded multi-step systems with external state, and closed-loop interiority — each making strictly stronger architectural commitments and thereby admitting strictly more of Part II's machinery. The lattice ordering matches the structural staircase named in the Frontmatter: text-completion → chat → scaffolded → interiority.*
 
 ### *Chapter* Common Roots: What Applies at Every Sub-Scope
 
@@ -59,19 +59,19 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | L   | Scope       | [#scope-channel-collapse](src/scope-channel-collapse.md)                                                     | Observation and action channels share substrate (token sequences in same vocabulary) — the architectural condition that defines this part | missing |
 | L   | Definition  | [#def-coupled-update-dynamics](src/def-coupled-update-dynamics.md)                                           | Coupled formulation $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$                  | draft |
 | L   | Scope       | [#scope-observation-ambiguity-modulation](src/scope-observation-ambiguity-modulation.md)                     | $\kappa \times \mathcal{A}$ ambiguity-bounded bias law for Class 3 (Coupled) / Class 2 (Partial) agents | draft |
-| L   | Result      | [#result-section-ii-survival](src/result-section-ii-survival.md)                                             | Map of which Section II results survive without directed separation: 16/24 exact, 5 approximate, 2 modify, 1 fails | draft |
+| L   | Result      | [#result-section-ii-survival](src/result-section-ii-survival.md)                                             | Map of which Part II results survive without directed separation: 16/24 exact, 5 approximate, 2 modify, 1 fails | draft |
 | L   | Discussion  | [#disc-framework-self-diagnostic](src/disc-framework-self-diagnostic.md)                                     | The recursive feature: AAT applies recursively to agents building it; framework as its own diagnostic with empirical instances | missing |
-| L   | Discussion  | [#impl-common-roots](src/impl-common-roots.md)                                                               | Chapter additional implications & discussion: channel collapse and coupled formulation, bias-bound prompt-engineering reading, Section II survival classification operational discipline, framework-as-its-own-diagnostic with empirical signatures, field-positioning structural staircase | draft |
+| L   | Discussion  | [#impl-common-roots](src/impl-common-roots.md)                                                               | Chapter additional implications & discussion: channel collapse and coupled formulation, bias-bound prompt-engineering reading, Part II survival classification operational discipline, framework-as-its-own-diagnostic with empirical signatures, field-positioning structural staircase | draft |
 
 <!--
 Foundational chapter — everything downstream depends on this. Internal arc:
 the scope conditions name what counts as a logogenic agent (channel collapse
 is the architectural definition); the coupled-update-dynamics definition
-states the formulation that replaces Section II's factored update for
+states the formulation that replaces Part II's factored update for
 logogenic agents; observation-ambiguity-modulation gives the bias-bound
 law that scales as $\kappa \cdot \mathcal A$; section-ii-survival is the
 16/24-exact / 5-approximate / 2-modify / 1-fails map that licenses use of
-specific Section II results at each downstream sub-scope; framework-self-
+specific Part II results at each downstream sub-scope; framework-self-
 diagnostic surfaces the recursive feature (AAT applies to agents building
 it) that motivates the project's reflexive stance. These segments are the
 shared substrate for the three lattice chapters.
@@ -112,19 +112,19 @@ $\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
 
 *Sub-scope: logogenic agents wrapped in a multi-step loop with external state, tool use, structured context, and explicit cascade ordering. The current best-practice "agentic systems" regime — Sapientia, Zoetica, Autopax, LangChain, Claude Code's harness, OpenAI's Assistants API. The cascade ordering ( #der-orient-cascade) is recovered at the loop level; the bias bound is reduced (but not eliminated) by ambiguity-reduction interventions.*
 
-*The coupled diagnostic framework ( #result-coupled-diagnostic-framework) is the structural argument that scaffolding is not engineering convenience but a load-bearing requirement for recovering Section II's persistence guarantees. This is the framework's most directly-actionable claim for any practitioner running production agentic systems.*
+*The coupled diagnostic framework ( #result-coupled-diagnostic-framework) is the structural argument that scaffolding is not engineering convenience but a load-bearing requirement for recovering Part II's persistence guarantees. This is the framework's most directly-actionable claim for any practitioner running production agentic systems.*
 
 | §   | Type        | Tag                                                                                                          | Claim                                                                                                | Stage       |
 | --- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------- |
 | L2  | Scope       | [#scope-scaffolded-logogenic](src/scope-scaffolded-logogenic.md)                                             | Scaffolded sub-scope: multi-step loops, external state, tool use; cascade ordering recovered at loop level | missing |
 | L2  | Derived     | [#der-logogenic-as-wrapping](src/der-logogenic-as-wrapping.md)                                              | Class-coercion-via-wrapping specialized to logogenic substrate; W₁ (strict) and W₂ (partial) wrapping regimes; PROPRIUM-as-W₂ with auxilia hierarchy as W₁ realization | draft |
-| L2  | Result      | [#result-coupled-diagnostic-framework](src/result-coupled-diagnostic-framework.md)                           | Post-hoc diagnostic decomposition; scaffolding recovers Section II diagnostics with bias bounded by $\kappa \cdot \mathcal{A}$ | draft |
+| L2  | Result      | [#result-coupled-diagnostic-framework](src/result-coupled-diagnostic-framework.md)                           | Post-hoc diagnostic decomposition; scaffolding recovers Part II diagnostics with bias bounded by $\kappa \cdot \mathcal{A}$ | draft |
 | L2  | Derived     | [#der-turnover-information-recursion](src/der-turnover-information-recursion.md)                              | Across-turnover *predictive*-sufficiency dynamics are an affine information recursion (multiplicative SDPI contraction + additive reinjection): isolated walk decays geometrically, #result-sector-persistence-template provably does not transfer, persistence is wholly imported through a non-vanishing reinjection channel (the scaffold) — not intrinsic, not a rate condition. Identity continuity is a distinct operator (#der-identity-continuity-threshold, Vol. IV) | draft |
 | L2  | Discussion  | [#disc-m-preservation](src/disc-m-preservation.md)                                                           | External memory as persistent $M_t$ across session boundaries; *predictive*-sufficiency accumulation resolved by #der-turnover-information-recursion; identity-continuity accumulation is the distinct operator #der-identity-continuity-threshold | draft       |
 | L2  | Formulation | [#form-structured-rich-context](src/form-structured-rich-context.md)                                         | SRC / GCM as the IB-optimal solution to context preservation across session boundaries                | exploratory |
 | L2  | Derived     | [#der-active-salience-management](src/der-active-salience-management.md)                                     | Singular Perturbation Theory for token generation — necessity of high-$\nu$ triage models vs low-$\nu$ structural models | exploratory |
 | L2  | Observation | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md)                                                     | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in scaffolded AI agents (validated by epistemic-hedging linear-structure result; see Source Material) | exploratory |
-| L2  | Discussion  | [#impl-scaffolded-logogenic](src/impl-scaffolded-logogenic.md)                                               | Chapter additional implications & discussion: scaffolded loops as structural recovery of Section II (#13), bandwidth allocation across compression operations (#43), sleep Shannon floor at logogenic context turnover (#33), forgetting rate as bandwidth cost (#38), language-geometric instrumentation for AAT quantities | draft |
+| L2  | Discussion  | [#impl-scaffolded-logogenic](src/impl-scaffolded-logogenic.md)                                               | Chapter additional implications & discussion: scaffolded loops as structural recovery of Part II (#13), bandwidth allocation across compression operations (#43), sleep Shannon floor at logogenic context turnover (#33), forgetting rate as bandwidth cost (#38), language-geometric instrumentation for AAT quantities | draft |
 
 <!--
 The current-practice chapter — what production agentic systems are actually
@@ -132,7 +132,7 @@ doing. Internal arc: the scope segment names the sub-scope (multi-step
 loops, external state, tool use); logogenic-as-wrapping specializes
 AAT's class-coercion-via-wrapping construction to this substrate, with
 W₁/W₂ wrapping regimes and the PROPRIUM-as-W₂ instance; coupled-diagnostic-
-framework is the load-bearing result that scaffolding recovers Section II's
+framework is the load-bearing result that scaffolding recovers Part II's
 diagnostic cascade at the loop level with the bias bounded by $\kappa
 \cdot \mathcal A$; turnover-information-recursion is the second load-bearing
 result — the across-boundary *predictive*-sufficiency dynamics are an
@@ -142,7 +142,7 @@ provably does not transfer, and persistence is wholly imported through a
 non-vanishing reinjection channel (the scaffold itself), which is the
 structural argument that scaffolding is provably necessary rather than
 optional (the *identity*-continuity counterpart is a structurally
-distinct reflected operator, Volume IV
+distinct reflected operator, Volume 4
 `#der-identity-continuity-threshold`); the remaining segments fill in
 operational machinery —
 external memory as persistent $M_t$ (disc-m-preservation, whose
@@ -188,7 +188,7 @@ stability of an agent maintaining its own substrate; cognitive-fusion
 ("resonance") frames the mutual-information-at-capacity regime as forming
 a Class 1 macro-agent (pairs with `04-eli-core/`'s identity treatment);
 checkpoint-forking-failure-modes is the negative result on the seemingly-
-cheap forking operation. Section III's composition machinery applies at
+cheap forking operation. Part III's composition machinery applies at
 this level — multi-agent logogenic compositions (PROPRIUM Auxilia
 hierarchies) sit one tier below the lattice as a fifth scope referenced
 from `04-eli-core/` §04.4.
@@ -256,4 +256,4 @@ When a segment's working notes point at "operational evidence in upstream," reac
 
 ### Scope-condition stacking note
 
-Per the lattice: 03.I results apply when the scaffolding-recovery results of 03.II don't, and 03.II results apply when the closed-loop machinery of 03.III isn't yet in place. A given concrete agent typically sits at one sub-scope; results at *that* sub-scope and broader (i.e., earlier in the lattice) apply. This is the same scope-stacking discipline as Section II's lattice in [`01-aat-core/OUTLINE.md`](../01-aat-core/OUTLINE.md#ii-actuated-adaptation-agentic-systems).
+Per the lattice: 03.I results apply when the scaffolding-recovery results of 03.II don't, and 03.II results apply when the closed-loop machinery of 03.III isn't yet in place. A given concrete agent typically sits at one sub-scope; results at *that* sub-scope and broader (i.e., earlier in the lattice) apply. This is the same scope-stacking discipline as Part II's lattice in [`01-aat-core/OUTLINE.md`](../01-aat-core/OUTLINE.md#ii-actuated-adaptation-agentic-systems).

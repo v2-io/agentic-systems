@@ -15,7 +15,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The structural backbone of Section II: the epistemic update $f_M$ is
+The structural backbone of Part II: the epistemic update $f_M$ is
 *goal-blind* (does not take $G_t$ as an argument), the purposeful update $f_G$
 *depends on* the updated $M_t$, and only the policy couples all substates. The
 asymmetry is not a parametric quantity to be tuned — it is an architectural

@@ -24,7 +24,7 @@ $$\mathcal{S}_\text{agency} = \mathcal{S}_\text{adaptive} \cap \left\{ |\mathcal
 Binary choice ($|\mathcal{A}| \geq 2$) is necessary but not sufficient: two actions with
 identical outcome distributions provide no interventional contrast. The causal-effect condition
 ensures at least one meaningful contrast exists — the condition that permits the adaptive loop
-to generate interventional data and unlocks the purposeful-agent machinery of Sections II and III.
+to generate interventional data and unlocks the purposeful-agent machinery of Parts II and III.
 
 **What is included**: thermostats, Kalman filters with control inputs, RL agents, military
 commanders, software developers, AI agents with tool use. **What is in adaptive scope but

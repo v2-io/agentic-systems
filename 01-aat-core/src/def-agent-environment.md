@@ -34,6 +34,6 @@ This is *definitional* — it establishes the conceptual framework, not a truth-
 
 ## Discussion
 
-**Why information loss is constitutive.** An agent with perfect access to $\Omega_t$ has no need for a model, no mismatch signal, no adaptation. The entire adaptive machinery of Section I becomes vacuous. The information-loss boundary is what makes the theory non-trivial.
+**Why information loss is constitutive.** An agent with perfect access to $\Omega_t$ has no need for a model, no mismatch signal, no adaptation. The entire adaptive machinery of Part I becomes vacuous. The information-loss boundary is what makes the theory non-trivial.
 
 **Generality of $\Omega$.** The environment is deliberately underspecified. $\Omega$ may include other agents, physical systems, software artifacts, or any combination. The only structural commitment is that $\Omega$ is external to the agent and not fully accessible.

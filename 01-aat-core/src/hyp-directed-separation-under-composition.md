@@ -67,7 +67,7 @@ The claim that the architectural classification lifts to composition is **struct
 
 ## Discussion
 
-**What this is and what it isn't.** This segment provides a two-case taxonomy for directed separation under composition. It is not yet a derivation — the remaining caveat (admissibility placeholders) prevents that. It IS a useful classification that identifies which composites fall within Section III's scope (Case 1) and which require a coupled formulation (Case 2).
+**What this is and what it isn't.** This segment provides a two-case taxonomy for directed separation under composition. It is not yet a derivation — the remaining caveat (admissibility placeholders) prevents that. It IS a useful classification that identifies which composites fall within Part III's scope (Case 1) and which require a coupled formulation (Case 2).
 
 **Constructive special case: wrapper-around-component.** For the special case of a single-component composite — one underlying primitive component embedded inside an external scaffold — the question of when directed separation holds is *derived* by `#der-class-coercion-via-wrapping`. Under explicit conditions on the component (admissibility of goal-blind queries, stationary conditional, no implicit goal-inference) and on the wrapper's update maps (type signatures that exclude $G_W$ from the belief-update path), directed separation holds at the wrapper level by structural commitment. The construction promotes the wrapper-around-component case from hypothesis to derived; the general $N$-agent composition case (Case 1 vs. Case 2 above) remains a hypothesis pending further work.
 

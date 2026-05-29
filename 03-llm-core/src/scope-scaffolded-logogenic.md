@@ -12,7 +12,7 @@ depends:
 
 # Scaffolded Logogenic Scope
 
-A logogenic agent wrapped in a multi-step loop with external state, tool use, structured context, and explicit cascade ordering at the loop level. The current best-practice "agentic system" regime — Sapientia, Zoetica, Autopax, LangChain, Claude Code's harness, OpenAI's Assistants API. Section II's cascade ordering is recovered at the loop level; the bias bound is reduced (but not eliminated) by ambiguity-reduction interventions.
+A logogenic agent wrapped in a multi-step loop with external state, tool use, structured context, and explicit cascade ordering at the loop level. The current best-practice "agentic system" regime — Sapientia, Zoetica, Autopax, LangChain, Claude Code's harness, OpenAI's Assistants API. Part II's cascade ordering is recovered at the loop level; the bias bound is reduced (but not eliminated) by ambiguity-reduction interventions.
 
 ## Formal Expression
 
@@ -23,11 +23,11 @@ A logogenic agent wrapped in a multi-step loop with external state, tool use, st
 - **Tool use as Pearl Level-2 channel** ( #der-loop-interventional-access): action tokens that the harness interprets as $do(\cdot)$ interventions on the environment, restoring interventional access that pure-text output lacks.
 - **Structured context assembly** explicitly curating the prompt across cognitive cycles ( #form-structured-rich-context).
 
-*[Derived (under scaffolded scope)]* The coupled diagnostic framework ( #result-coupled-diagnostic-framework) applies: Section II's $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ remain definable on post-update state, with diagnostic error bounded by the bias bound:
+*[Derived (under scaffolded scope)]* The coupled diagnostic framework ( #result-coupled-diagnostic-framework) applies: Part II's $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ remain definable on post-update state, with diagnostic error bounded by the bias bound:
 
 $$\lvert \delta_{\text{sat}}^{(\text{coupled})} - \delta_{\text{sat}}^{(\text{clean})}\rvert \leq L_A \cdot \lVert\Delta M_{\text{bias}}\rVert$$
 
-The cascade ordering happens at the loop level rather than the model's forward-pass level; agentic-systems wrapping is not engineering convenience but a *structural* requirement for recovering Section II persistence guarantees in Class 3 (Coupled) architectures.
+The cascade ordering happens at the loop level rather than the model's forward-pass level; agentic-systems wrapping is not engineering convenience but a *structural* requirement for recovering Part II persistence guarantees in Class 3 (Coupled) architectures.
 
 ## Epistemic Status
 
@@ -72,7 +72,7 @@ This sub-scope is also where the upstream PROPRIUM operational architecture live
 
 **Open questions for verification:**
 - Where in the scaffolding spectrum (minimal → heavy) does the coupled-diagnostic-framework recovery actually take effect? Empirical study would be valuable.
-- Can scaffolded-logogenic systems ever reach Section II's *exact* results (vs approximate)? Current claim is approximate-with-bounded-error; whether *exact* is achievable in principle under sufficient scaffolding is open.
+- Can scaffolded-logogenic systems ever reach Part II's *exact* results (vs approximate)? Current claim is approximate-with-bounded-error; whether *exact* is achievable in principle under sufficient scaffolding is open.
 
 **Promotion-blocking:** depends on #scope-primitive-logogenic (just landed), #result-coupled-diagnostic-framework (draft), #der-orient-cascade (draft), #der-loop-interventional-access (draft). All available; this scope can advance through Gate 1 once those are dependency-verified.
 - **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. Logogenic agents are now Class 3 (Coupled), not Class 2. "Class-2 architectures" here referred to logogenic/fully-merged agents and now reads Class 3 (Coupled). Removed at `candidate` stage per FORMAT.md Gate 4.

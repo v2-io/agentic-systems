@@ -24,13 +24,13 @@ The chat-paradigm baseline: a logogenic agent operating without scaffolding, mul
 
 ## Epistemic Status
 
-**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Section II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal{A}$ since no scaffolding mitigates ambiguity); sandbox ceiling (Pearl Level-2 unavailable since trajectory is forkable); statelessness-induced empathy result ( #obs-backward-inference-empathy).
+**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Part II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal{A}$ since no scaffolding mitigates ambiguity); sandbox ceiling (Pearl Level-2 unavailable since trajectory is forkable); statelessness-induced empathy result ( #obs-backward-inference-empathy).
 
 **Max attainable status:** definition with conditional consequences. The scope itself is exact; the *applicability* of specific AAT results within it is a downstream question per result.
 
 **What this scope is for.** Naming explicitly the regime "current LLM agents in the chat-paradigm" inhabit, so that the framework's claims about that regime are visible rather than buried. Primitive logogenic is *not a deficient form of logogenic agency* — it is a regime the framework has substantive things to say about, and saying them clearly addresses the field's first-pass complaint that ASF "talks about all agents except the ones that matter most."
 
-**What would strengthen this:** explicit statement of which Section II diagnostics survive at this sub-scope vs which require scaffolding (work that #result-section-ii-survival begins).
+**What would strengthen this:** explicit statement of which Part II diagnostics survive at this sub-scope vs which require scaffolding (work that #result-section-ii-survival begins).
 
 **What would soften this:** reclassification of some current LLM deployments as already-scaffolded (e.g., if the model itself implements internal loops at sufficient sophistication) — this would shift specific deployments from primitive into scaffolded sub-scope.
 

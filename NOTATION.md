@@ -159,7 +159,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $\rho_{\text{delib}}$ | Rate | Local mismatch drift rate during deliberation pauses |
 
 
-## Purposeful Agent State (Section II)
+## Purposeful Agent State (Part II)
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
@@ -176,7 +176,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $\gamma(v)$ | $\in \{\text{AND}, \text{OR}\}$ | Node combination rule in strategy DAG |
 
 
-## Multi-Agent (Section III)
+## Multi-Agent (Part III)
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
@@ -189,7 +189,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 
 ## Resource Budget (exploratory branch — #form-resource-budget)
 
-*Exploratory off-spine axis; no Section I/II/III result depends on these. See #form-resource-budget (ground truth) and #der-resource-bounded-destabilization.*
+*Exploratory off-spine axis; no Part I/II/III result depends on these. See #form-resource-budget (ground truth) and #der-resource-bounded-destabilization.*
 
 | Symbol | Type | Meaning |
 |--------|------|---------|

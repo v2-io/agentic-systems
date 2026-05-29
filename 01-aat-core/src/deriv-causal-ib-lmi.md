@@ -117,7 +117,7 @@ The matrix-CIY mapping ($\mathcal{I}_o(a)$ as multidimensional CIY) is more rigo
 
 - `#deriv-fisher-whitened-update-rule` derives Fisher-information-based credit assignment as AAT-internal under the (PI) parameterization-invariance axiom + Čencov 1982 uniqueness. The FIM appearing in the LMI is the same Fisher metric, used here for survival rather than for credit assignment — two roles for one geometric object.
 - `#disc-additive-coordinate-forcing` lists Čencov-invariance as the 4th primary instance of the meta-pattern. The LMI's reliance on the FIM sits cleanly within that meta-pattern: the Fisher metric is forced by AAT-internal axioms, not adopted ad hoc.
-- `#result-contraction-template` carries matrix-form sector machinery (Lohmiller-Slotine metric formulation) for Section III composition. The LMI's discrete-time Riccati is the control-theoretic analog of the contraction-metric framework — both are matrix-form sector conditions on multivariate dynamics.
+- `#result-contraction-template` carries matrix-form sector machinery (Lohmiller-Slotine metric formulation) for Part III composition. The LMI's discrete-time Riccati is the control-theoretic analog of the contraction-metric framework — both are matrix-form sector conditions on multivariate dynamics.
 - `#def-adaptive-tempo` will need a tensor extension to $\mathcal{T}$ for full alignment with this segment's directional structure; the LMI gives an explicit demand for tensor-valued adaptive rates.
 
 **Two parallel exploration drives — matrix lift.** The scalar dual-drive distinction in `#disc-ciy-unified-objective` ($\lambda_{\text{info}} \propto U_M$ epistemic vs $\lambda_{\text{surv}} \propto 1/U_M$ Lyapunov-survival) generalizes to two matrix-valued drives that compose additively:

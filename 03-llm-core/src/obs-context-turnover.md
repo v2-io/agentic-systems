@@ -63,7 +63,7 @@ Max attainable: exact. This is an observation about a structural property of the
 
 ## Discussion
 
-**Qualitative difference from Section I persistence.** The persistence condition ( #result-persistence-condition) asks: "can the correction rate outpace the disturbance rate?" This assumes the state evolves continuously (or at least persists between events). For LLM agents, the intra-session dynamics follow this pattern — within a session, each tool result or message is an event that updates $X_t$ via the coupled dynamics. But the inter-session dynamics are qualitatively different: the state is not perturbed, it is *destroyed and reconstructed*. The relevant question is not $\alpha \gt \rho / R$ but whether the reconstruction is adequate:
+**Qualitative difference from Part I persistence.** The persistence condition ( #result-persistence-condition) asks: "can the correction rate outpace the disturbance rate?" This assumes the state evolves continuously (or at least persists between events). For LLM agents, the intra-session dynamics follow this pattern — within a session, each tool result or message is an event that updates $X_t$ via the coupled dynamics. But the inter-session dynamics are qualitatively different: the state is not perturbed, it is *destroyed and reconstructed*. The relevant question is not $\alpha \gt \rho / R$ but whether the reconstruction is adequate:
 
 $$S(f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}})) \geq S_{\text{min}}$$
 

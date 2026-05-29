@@ -50,7 +50,7 @@ construction: a scaffold with explicit external state enforces directed separati
 even though the underlying component remains Class 3. The cost is paid in tempo overhead and a residual
 leakage rate.
 
-Section II results from `#der-directed-separation` that depend on directed separation hold exactly for
+Part II results from `#der-directed-separation` that depend on directed separation hold exactly for
 Class 1 (Separated), hold approximately for Class 2 (Partial) with explicit bounds, and do not hold
 in general for Class 3 (Coupled). The survival-classification table in `#result-section-ii-survival`
 documents which results extend and which are blocked by Class-3 status.

@@ -26,7 +26,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Statement:** $f_M(M_{\tau^-}, e_\tau)$ has no $G_t$ argument — the epistemic update is goal-blind.
 
-**Where it appears:** #der-directed-separation, the structural backbone of Section II. Feeds the orient cascade's sequential resolution ( #der-orient-cascade), the causal validity of $Q_O$ ( #def-value-object), and the scope of all Section II results to Class 1 (Separated) agents.
+**Where it appears:** #der-directed-separation, the structural backbone of Part II. Feeds the orient cascade's sequential resolution ( #der-orient-cascade), the causal validity of $Q_O$ ( #def-value-object), and the scope of all Part II results to Class 1 (Separated) agents.
 
 **Failure regime:** Class 3 (Coupled) architectures — transformer LLMs where attention processes goals and observations together. Motivated reasoning, confirmation bias, prompt-conditioned perception. Partially also Class 2 (Partial) agents.
 
@@ -38,7 +38,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Statement:** Every common cause of two or more nodes in $\Sigma_t$ is itself a node in $\Sigma_t$.
 
-**Where it appears:** #deriv-graph-structure-uniqueness (precondition for the CMC-based Markov proof); #def-strategy-dag edge-independence in status propagation; all of Section II's strategy-layer formal results (Props B.1–B.6, the sector condition transfer of B.5, persistence of $\delta_s$).
+**Where it appears:** #deriv-graph-structure-uniqueness (precondition for the CMC-based Markov proof); #def-strategy-dag edge-independence in status propagation; all of Part II's strategy-layer formal results (Props B.1–B.6, the sector condition transfer of B.5, persistence of $\delta_s$).
 
 **Failure regime:** The dominant real-world case in complex, multi-stakeholder, or adversarial environments — shared infrastructure, market conditions, correlated adversary actions, common-mode risks, supply-chain dependencies.
 
@@ -86,7 +86,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Statement:** $\mathcal{T}$ as a scalar captures the agent's correction capacity.
 
-**Where it appears:** #result-persistence-condition linear operational form; most Section I results stated in scalar $(\mathcal{T}, \rho, \lVert\delta_{\text{critical}}\rVert)$ form; #def-strategic-tempo aggregate.
+**Where it appears:** #result-persistence-condition linear operational form; most Part I results stated in scalar $(\mathcal{T}, \rho, \lVert\delta_{\text{critical}}\rVert)$ form; #def-strategic-tempo aggregate.
 
 **Failure regime:** Any real multi-dimensional system with non-uniform correction capacity across dimensions. Simulation confirms scalar $\rho/\mathcal{T}$ overestimates by up to 72% in anisotropic systems, with the weak dimension accounting for 84% of total mismatch.
 

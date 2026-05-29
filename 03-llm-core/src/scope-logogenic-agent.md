@@ -69,7 +69,7 @@ The prompt-assembly function and the forward pass together implement $f_X$. The 
 
 **The weight-context boundary.** The LLM's weights encode a vast prior $M_0$ — pretrained knowledge about language, code, reasoning patterns. The context window encodes the session-specific $X_t$. The agent's effective state is the combination: $X_t^{\text{eff}} = (M_0^{\text{weights}}, X_t^{\text{context}})$, where the weights are fixed within a session and the context evolves. AAT's $M_t$ corresponds to the *effective beliefs at time $t$* — what the agent would predict given both its weights and its context. The weights provide the prior; the context provides the update.
 
-**The 100% turnover problem.** Between sessions, the context window is cleared — the entire $X_t^{\text{context}}$ is lost. This is a qualitatively different persistence challenge than what Section I addresses, where $M_t$ evolves continuously. See #obs-context-turnover.
+**The 100% turnover problem.** Between sessions, the context window is cleared — the entire $X_t^{\text{context}}$ is lost. This is a qualitatively different persistence challenge than what Part I addresses, where $M_t$ evolves continuously. See #obs-context-turnover.
 
 ## Working Notes
 

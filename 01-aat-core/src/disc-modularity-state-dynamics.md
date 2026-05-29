@@ -27,7 +27,7 @@ Each operation has the form: a structural mechanism acts on the agent's coupling
 
 | Operation | Driver | Direction on $\kappa_{\text{processing}}$ | Strategic valence | Primary segment(s) |
 |---|---|---|---|---|
-| **Truthification** | self-driven (agent's own deliberate commitment or institutional design) | coupling-*decreasing* — restores directed separation | restorative (recovers reality-tracking, reopens Section II results, closes adversarial attack surface) | `#der-class-coercion-via-wrapping` (component-level wrapping) + `#disc-adversarial-coupling-pressure` §"Defensive scaffolding" (composite-level institutional scaffolding) |
+| **Truthification** | self-driven (agent's own deliberate commitment or institutional design) | coupling-*decreasing* — restores directed separation | restorative (recovers reality-tracking, reopens Part II results, closes adversarial attack surface) | `#der-class-coercion-via-wrapping` (component-level wrapping) + `#disc-adversarial-coupling-pressure` §"Defensive scaffolding" (composite-level institutional scaffolding) |
 | **Strategic self-coupling** | self-driven (agent's own deliberate commitment) | coupling-*increasing* | offensive enabling (acquires credibility-dependent actions otherwise unavailable) | `#disc-strategic-self-coupling` |
 | **Adversarial coupling pressure** | externally-driven (adversary's strategic action on the target) | coupling-*increasing* | vulnerability-creating (expands attack surface for the externally-acting adversary) | `#disc-adversarial-coupling-pressure` |
 
@@ -128,7 +128,7 @@ Max attainable: *discussion-grade* for the meta-pattern recognition (it is a pre
 | ASF concern | Prior-art language | Relationship / Positioning |
 |---|---|---|
 | Truthification — component-level wrapping | `#der-class-coercion-via-wrapping` (this framework) | *internal antecedent* — operational mechanism for truthification at the component level; W₀ / W₁ / W₂ regime hierarchy |
-| Truthification — composite-level institutional scaffolding | `#disc-adversarial-coupling-pressure` §"Defensive scaffolding as composition" (this framework) | *internal antecedent* — operational mechanism for truthification at the composite level; peer review, prediction registers, double-entry bookkeeping, adversarial procedure, structured red-teaming as Section III composition moves |
+| Truthification — composite-level institutional scaffolding | `#disc-adversarial-coupling-pressure` §"Defensive scaffolding as composition" (this framework) | *internal antecedent* — operational mechanism for truthification at the composite level; peer review, prediction registers, double-entry bookkeeping, adversarial procedure, structured red-teaming as Part III composition moves |
 | Strategic self-coupling — operation home | `#disc-strategic-self-coupling` (this framework) | *internal antecedent* — sister leg of M4; four-mechanism table adopting Schelling 1960, Ainslie 1992/2001, Akerlof-Kranton 2000/2010, Frank 1988 as first-class theory components |
 | Adversarial coupling pressure — operation home | `#disc-adversarial-coupling-pressure` (this framework) | *internal antecedent* — sister leg of M4; mechanism table on identity-binding / affect-urgency / sunk-cost engineering; population-expansion claim for coupled formulation; cascade-inversion result |
 | Static architectural classification (state space) | `#der-directed-separation` (this framework) | *internal antecedent* — Class 1 / 2 / 3 partition under $\kappa_{\text{processing}}$ measure; the state space on which M4's operations act |

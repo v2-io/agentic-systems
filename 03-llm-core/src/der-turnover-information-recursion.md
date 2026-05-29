@@ -15,7 +15,7 @@ Across session boundaries the scaffolded logogenic agent's relevant epistemic co
 
 ## Formal Expression
 
-The intra-session regime is governed by the rate-condition persistence machinery of Section I, applied to the coupled update. The inter-session regime is qualitatively different: per #obs-context-turnover the state is not perturbed but *destroyed and reconstructed* through the lossy stochastic kernel $f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{w}})$. This segment derives the dynamics of that regime under modeling commitments argued from the structure of the turnover boundary itself.
+The intra-session regime is governed by the rate-condition persistence machinery of Part I, applied to the coupled update. The inter-session regime is qualitatively different: per #obs-context-turnover the state is not perturbed but *destroyed and reconstructed* through the lossy stochastic kernel $f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{w}})$. This segment derives the dynamics of that regime under modeling commitments argued from the structure of the turnover boundary itself.
 
 ### Setup: the state variable and the boundary channel
 

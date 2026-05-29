@@ -15,7 +15,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The Section II class: an agent whose state factors as $(M_t, G_t)$ with $G_t =
+The Part II class: an agent whose state factors as $(M_t, G_t)$ with $G_t =
 (O_t, \Sigma_t)$ — an explicit objective and strategy distinct from the model
 of reality. The factoring is what makes the [orient cascade](orient-cascade.md)
 and [directed separation](directed-separation.md) results applicable.

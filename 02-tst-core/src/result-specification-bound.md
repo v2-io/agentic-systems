@@ -69,5 +69,5 @@ The bound's *existence* is *derived* from information theory: you cannot impleme
 ## Working Notes
 
 - The strongest next tightening would be to define "sufficient" more formally: e.g. the channel must reduce the implementer's posterior uncertainty over acceptable implementations below some task-dependent threshold. Right now sufficiency is intuitive rather than operationalized.
-- This segment was written by an earlier agent with less context (noted in WORKBENCH). Needs a review pass during Section I/IV tightening — particularly to connect to the AAT communication framework ( #hyp-communication-gain) and to make the information-theoretic derivation more explicit.
+- This segment was written by an earlier agent with less context (noted in WORKBENCH). Needs a review pass during Part I/IV tightening — particularly to connect to the AAT communication framework ( #hyp-communication-gain) and to make the information-theoretic derivation more explicit.
 - The $H_{\text{req}} / R_{\text{spec}}$ expression is still a first-order approximation. A tighter version would separate encoding efficiency, channel noise, and interactive back-and-forth — but that may be over-engineering for a bound that is primarily conceptual.

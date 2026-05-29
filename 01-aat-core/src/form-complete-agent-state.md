@@ -22,10 +22,10 @@ The lift is a *formulation choice*, not a derived structural fact — one could 
 $$X_t = (M_t, G_t)$$
 
 where:
-- $M_t \in \mathcal{M}$: **epistemic substate** — the agent's compressed beliefs about reality. All Section I machinery (mismatch, gain, tempo, persistence) applies to $M_t$ unchanged.
+- $M_t \in \mathcal{M}$: **epistemic substate** — the agent's compressed beliefs about reality. All Part I machinery (mismatch, gain, tempo, persistence) applies to $M_t$ unchanged.
 - $G_t \in \mathcal{G}$: **purposeful substate** — what the agent wants and how it plans to get it. Decomposed further in #def-strategy-dimension.
 
-Section I is the special case $X_t = (M_t, \emptyset)$: adaptive systems without purpose.
+Part I is the special case $X_t = (M_t, \emptyset)$: adaptive systems without purpose.
 
 **Update dynamics.** By #der-recursive-update applied to $X_t$:
 
@@ -43,7 +43,7 @@ Action is the single point where epistemic and purposeful states interact. The p
 
 *Formulation.* The lift from $M_t$ to $X_t = (M_t, G_t)$ is a representational choice. One could alternatively extend $M_t$ to carry purposeful content implicitly (e.g., by treating goals as part of the model's predictive structure). The separation is motivated by three properties:
 
-1. **Backward compatibility**: Section I's results apply to $M_t$ unchanged — no existing machinery needs modification
+1. **Backward compatibility**: Part I's results apply to $M_t$ unchanged — no existing machinery needs modification
 2. **Different dynamics**: epistemic and purposeful components have distinct update sources, timescales, and information dependencies
 3. **Directed separation**: the claim that $f_M$ is $G_t$-independent ( #der-directed-separation) is only statable when the components are separated
 
@@ -51,7 +51,7 @@ We conjecture that any alternative decomposition of the complete agent state int
 
 ## Discussion
 
-**Backward compatibility with Section I — what survives the lift.** #form-agent-model defines $M_t$ as the agent's complete internal state within Section I scope. Under the lift, $M_t$ is the epistemic substate — complete within the epistemic domain but no longer the whole story. All epistemic machinery (mismatch signal, gain, tempo, persistence condition, sector-condition stability, mismatch decomposition) applies to $M_t$ without modification. The action-selection result ( #der-action-selection) extends naturally: the same completeness argument that gives $a_t = \pi(M_t)$ within Section I scope gives $a_t = \pi(M_t, G_t)$ when applied to the lifted complete state $X_t$. For Section I agents ($G_t = \emptyset$), the two forms coincide. The lift adds structure *alongside* $M_t$, not within it; the one Section I result that depended on $M_t$ being *all there is* (action selection) is explicitly extended to the lifted state.
+**Backward compatibility with Part I — what survives the lift.** #form-agent-model defines $M_t$ as the agent's complete internal state within Part I scope. Under the lift, $M_t$ is the epistemic substate — complete within the epistemic domain but no longer the whole story. All epistemic machinery (mismatch signal, gain, tempo, persistence condition, sector-condition stability, mismatch decomposition) applies to $M_t$ without modification. The action-selection result ( #der-action-selection) extends naturally: the same completeness argument that gives $a_t = \pi(M_t)$ within Part I scope gives $a_t = \pi(M_t, G_t)$ when applied to the lifted complete state $X_t$. For Part I agents ($G_t = \emptyset$), the two forms coincide. The lift adds structure *alongside* $M_t$, not within it; the one Part I result that depended on $M_t$ being *all there is* (action selection) is explicitly extended to the lifted state.
 
 **What $G_t$ contains.** At this level, $G_t$ is opaque — it could be a scalar setpoint, a utility function, a strategy graph, or nothing. The decomposition into $O_t$ (objective) and $\Sigma_t$ (strategy) is a separate step ( #def-strategy-dimension), not implied by this formulation.
 
@@ -61,4 +61,4 @@ We conjecture that any alternative decomposition of the complete agent state int
 
 - The between-event dynamics $\dot{G} = g_G(G, M)$ allow autonomous purposeful evolution: strategy revision during deliberation, objective adjustment, commitment strengthening. Whether these are practically important depends on agent architecture — for LLM agents with discrete sessions, between-event dynamics may be negligible compared to event-driven updates.
 - The formulation doesn't constrain the dimensionality or structure of $\mathcal{G}$. For a thermostat, $\mathcal{G}$ is a single scalar. For a military commander, $\mathcal{G}$ is a complex structured object. The theory must work across this range — the type-stable interface is $V_{O_t}: \text{trajectories} \to \mathbb{R}$ ( #form-objective-functional).
-- $G_t = \emptyset$ is not just a degenerate case. Adaptive trackers (Section I agents) are an important class. The lift should feel like a natural extension, not a replacement.
+- $G_t = \emptyset$ is not just a degenerate case. Adaptive trackers (Part I agents) are an important class. The lift should feel like a natural extension, not a replacement.

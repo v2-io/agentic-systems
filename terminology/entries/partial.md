@@ -44,7 +44,7 @@ $\kappa_{\text{processing}}$ is defined in
 coupling coefficient. The bound is computable, making the residual leakage rate formally tractable.
 
 Partial agents violate directed separation, but not irreducibly. The coupling is present and
-measurable. Section II results that depend on directed separation apply approximately rather than
+measurable. Part II results that depend on directed separation apply approximately rather than
 exactly, with the degree of approximation quantified by $\kappa_{\text{processing}}$. The
 observation-ambiguity bias-bound derivation
 (`#deriv-observation-ambiguity-bias-bound`) characterizes the Class 3 (Coupled) extreme at

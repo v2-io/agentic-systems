@@ -54,7 +54,7 @@ The hierarchy is by *implementation cost / temporal nesting*, not by sovereignty
 
 ## Discussion
 
-The Auxilia hierarchy operationalizes Section III's composition machinery for the ELI case. Where Section III's composite-agent treatment characterizes general $N$-agent composition with closure defect $\varepsilon^\ast$ and bridge-lemma trajectory bounds, the Auxilia hierarchy is the *specific* composition pattern where:
+The Auxilia hierarchy operationalizes Part III's composition machinery for the ELI case. Where Part III's composite-agent treatment characterizes general $N$-agent composition with closure defect $\varepsilon^\ast$ and bridge-lemma trajectory bounds, the Auxilia hierarchy is the *specific* composition pattern where:
 
 - The composite has a clear *head* ($E$) with sovereignty (the composite's $G_t$ is $E$'s $G_t$ extended);
 - The sub-components share the head's identity at the AXIOMATA level (preventing the goal-divergence Class 2 (Partial) escalation per #scope-multi-agent's discussion of partially-opposing objectives);

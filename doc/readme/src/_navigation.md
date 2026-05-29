@@ -10,7 +10,7 @@
 ### Project layout
 
 ```
-01-aat-core/          AAT mathematical core (Sections I, II, III + Appendices)
+01-aat-core/          AAT mathematical core (Parts I, II, III + Appendices)
   OUTLINE.md          Canonical theory outline (claim by claim)
   src/                Claim segments (one per file, named by slug)
 02-tst-core/          Temporal Software Theory (AAT-grounded)

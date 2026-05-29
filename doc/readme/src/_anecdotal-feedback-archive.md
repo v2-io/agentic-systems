@@ -17,7 +17,7 @@
 
 ## Anecdotal Feedback (archived)
 
-*From Gemini 3.1-pro after a sequential de novo audit of Sections I and II of AAT, recorded 2026-04 (pre-2026-04-23 cycle landings).*
+*From Gemini 3.1-pro after a sequential de novo audit of Parts I and II of AAT, recorded 2026-04 (pre-2026-04-23 cycle landings).*
 
 ---
 

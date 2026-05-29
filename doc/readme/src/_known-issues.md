@@ -16,7 +16,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 
 **§B — Ready now.**
 - B.1 Framework-face reframe bundle (see §Cross-cutting view, Bundle 1)
-- B.2 Section III completion — entry points (see §Cross-cutting view, Bundle 2)
+- B.2 Part III completion — entry points (see §Cross-cutting view, Bundle 2)
 - B.3 C-BP1 + C-BP4 bundle — epistemic separation framework + claim-level statuses
 
 **§C — Soon.**
@@ -27,7 +27,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 
 **§D — Later.**
 - D.1 O-BP11 — Observability as master variable across the theory
-- D.2 Section III completion — upstream pieces (see Bundle 2)
+- D.2 Part III completion — upstream pieces (see Bundle 2)
 - D.3 G-BP3 — Fisher-information unification of tempo and gain
 - D.4 SP-12 — Commitment / resource / temporal DAG extensions
 - D.5 SP-13 — Emergence conditions as formal primitive

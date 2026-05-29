@@ -14,9 +14,9 @@ This is the first explicit narrowing in the volume's cascade of scope conditions
 
 Why the contrast condition matters and binary choice alone is insufficient: if two available actions yield identical outcome distributions, an agent gains no interventional contrast from preferring one over the other — it cannot learn which action produces which effect, because the effects coincide. The Pearl-level-2 contrast condition ( #def-pearl-causal-hierarchy) guarantees at least one meaningful interventional difference, which is precisely what #der-loop-interventional-access needs to convert the feedback loop into a source of causal data.
 
-The agency scope is the minimum required for Sections II (purposeful agents) and III (composition). Everything that relies on the agent acting-with-effect — the objective $O_t$, the strategy $\Sigma_t$, the orient cascade, the composition machinery — descends from this scope. Inhabitants include thermostats, Kalman filters with control inputs, reinforcement-learning agents, military commanders, software developers, and AI agents with tool use; all are instances of the same formal framework distinguished only by where they sit on the agent spectrum ( #def-agent-spectrum).
+The agency scope is the minimum required for Parts II (purposeful agents) and III (composition). Everything that relies on the agent acting-with-effect — the objective $O_t$, the strategy $\Sigma_t$, the orient cascade, the composition machinery — descends from this scope. Inhabitants include thermostats, Kalman filters with control inputs, reinforcement-learning agents, military commanders, software developers, and AI agents with tool use; all are instances of the same formal framework distinguished only by where they sit on the agent spectrum ( #def-agent-spectrum).
 
-Two failure modes are explicitly outside agency but inside the adaptive scope: *passive observers* (action space too small to matter, $\lvert\mathcal{A}\rvert \lt 2$) and *nominal agents* (choices exist but produce no measurable interventional difference). For these, all of Section I's machinery applies, but Sections II and III do not — they can model, but they cannot learn causal structure or rationally plan against it.
+Two failure modes are explicitly outside agency but inside the adaptive scope: *passive observers* (action space too small to matter, $\lvert\mathcal{A}\rvert \lt 2$) and *nominal agents* (choices exist but produce no measurable interventional difference). For these, all of Part I's machinery applies, but Parts II and III do not — they can model, but they cannot learn causal structure or rationally plan against it.
 
 ## Formal Expression
 
@@ -27,13 +27,13 @@ $$\mathcal{S}_\text{agency} = \mathcal{S}_\text{adaptive} \;\cap\; \left\{(\text
 Two conditions added to those of #scope-adaptive-system:
 
 3. **At least binary choice**: $\lvert\mathcal{A}\rvert \geq 2$ — the agent can choose between at least two actions ( #def-action-transition)
-4. **At least one action has causal effect**: there exist distinct actions $a, a'$ whose interventional outcome distributions differ (where $do(\cdot)$ is Pearl's intervention operator; see #def-pearl-causal-hierarchy) — the agent's choices make a difference to what it can observe
+4. **At least one action has causal effect**: there exist distinct actions $a, a'$ whose interventional outcome distributions differ (where $do(\cdot)$ is Pearl's intervention operator — an external import per Pearl 2009 and Bareinboim, Correa, Ibeling & Icard 2022; AAT's recapitulation lives at #def-pearl-causal-hierarchy in Part II Ch.2, where the framework deploys the hierarchy as machinery rather than referencing it as vocabulary) — the agent's choices make a difference to what it can observe
 
-These are required for the adaptive loop to generate interventional data ( #der-loop-interventional-access), for the causal hierarchy requirement ( #der-causal-hierarchy-requirement) to be well-posed, and for the purposeful-agent machinery of Section II ($O_t$, $\Sigma_t$, the orient cascade) to be non-vacuous. Section III's composition theory inherits this requirement.
+These are required for the adaptive loop to generate interventional data ( #der-loop-interventional-access), for the causal hierarchy requirement ( #der-causal-hierarchy-requirement) to be well-posed, and for the purposeful-agent machinery of Part II ($O_t$, $\Sigma_t$, the orient cascade) to be non-vacuous. Part III's composition theory inherits this requirement.
 
 ## Epistemic Status
 
-*Axiomatic.* This is a scope definition — it names the boundary around systems whose behavior can be analyzed with Section II/III machinery. The conditions are not derived; they are the minimal additions to $\mathcal{S}_\text{adaptive}$ under which interventional data exist at all.
+*Axiomatic.* This is a scope definition — it names the boundary around systems whose behavior can be analyzed with Part II/III machinery. The conditions are not derived; they are the minimal additions to $\mathcal{S}_\text{adaptive}$ under which interventional data exist at all.
 
 ## Discussion
 
@@ -46,4 +46,4 @@ These are required for the adaptive loop to generate interventional data ( #der-
 
 **Why causal effect matters.** Binary choice ($\lvert\mathcal{A}\rvert \geq 2$) is necessary but not sufficient. Two actions that produce identical outcome distributions provide no interventional contrast — the agent cannot learn which action produces which effect because the effects are the same. The causal-effect condition ensures at least one meaningful contrast exists, which is what #der-loop-interventional-access needs to generate Level 2 data.
 
-**Relationship to downstream segments.** Every segment that relies on the agent acting-with-effect depends on this scope: purposeful-agent machinery ($O_t$, $\Sigma_t$, orient cascade) in Section II; composition machinery (sub-agents acting jointly) in Section III. Downstream segments reference `#scope-agency` when they assert "the agent can act" as a prerequisite.
+**Relationship to downstream segments.** Every segment that relies on the agent acting-with-effect depends on this scope: purposeful-agent machinery ($O_t$, $\Sigma_t$, orient cascade) in Part II; composition machinery (sub-agents acting jointly) in Part III. Downstream segments reference `#scope-agency` when they assert "the agent can act" as a prerequisite.

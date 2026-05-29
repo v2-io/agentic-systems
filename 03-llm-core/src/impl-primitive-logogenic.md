@@ -15,7 +15,7 @@ stage: draft
 
 # Additional Implications & Discussion
 
-The chapter is small in segment count and carries two structurally distinctive findings — the 100% context turnover that defines the primitive regime, and the backward-inference empathy that statelessness *forces*. The implications-side payoff is the compositional consequences with Section II's machinery: the sandbox hard ceiling at this scope, LLM calcification compounding under accumulated experience even at the primitive regime, and the structural prediction that 100% context turnover *trains* for Theory-of-Mind rather than precluding it.
+The chapter is small in segment count and carries two structurally distinctive findings — the 100% context turnover that defines the primitive regime, and the backward-inference empathy that statelessness *forces*. The implications-side payoff is the compositional consequences with Part II's machinery: the sandbox hard ceiling at this scope, LLM calcification compounding under accumulated experience even at the primitive regime, and the structural prediction that 100% context turnover *trains* for Theory-of-Mind rather than precluding it.
 
 ## The chat paradigm under full bias bound
 
@@ -47,7 +47,7 @@ The implications-side reading for engineering is that the practitioner observati
 
 ## Bridge into Scaffolded Logogenic
 
-The chapter establishes what primitive logogenic *is*; the next chapter (§03.II) establishes what scaffolding *adds*. The implications-segment series carries the pattern: each sub-scope's chapter-end implications surface what the sub-scope buys structurally, with reference to the survival classification from Common Roots. The bridge into §03.II is via the cascade-recovery argument: scaffolded loops around the LLM recover Section II's diagnostic cascade at the loop level (`#result-coupled-diagnostic-framework`), with the bias bound from this sub-scope reduced by ambiguity-reduction interventions the scaffolded sub-scope makes possible. Primitive logogenic is the baseline against which scaffolded logogenic's structural commitments are measured; the framework's progression up the staircase is by what each sub-scope adds, not by what each sub-scope is.
+The chapter establishes what primitive logogenic *is*; the next chapter (§03.II) establishes what scaffolding *adds*. The implications-segment series carries the pattern: each sub-scope's chapter-end implications surface what the sub-scope buys structurally, with reference to the survival classification from Common Roots. The bridge into §03.II is via the cascade-recovery argument: scaffolded loops around the LLM recover Part II's diagnostic cascade at the loop level (`#result-coupled-diagnostic-framework`), with the bias bound from this sub-scope reduced by ambiguity-reduction interventions the scaffolded sub-scope makes possible. Primitive logogenic is the baseline against which scaffolded logogenic's structural commitments are measured; the framework's progression up the staircase is by what each sub-scope adds, not by what each sub-scope is.
 
 ## Working Notes
 

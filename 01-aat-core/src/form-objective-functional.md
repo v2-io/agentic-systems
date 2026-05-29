@@ -55,7 +55,7 @@ The trajectory functional is the most general; the others are special cases.
 
 Agents with hard non-compensatory constraints (safety AND profitability as independent thresholds) can be modeled via the AND-node workaround: each constraint becomes a terminal node in $\Sigma_t$ with its own scalar satisfaction test, and the AND combination enforces joint feasibility. This handles constraint satisfaction cleanly but does not resolve cross-objective tradeoffs within the feasible region.
 
-Organizations or AI agents with true Pareto structure — where no scalarization is accepted and tradeoffs are genuinely unresolved — require a vector-valued extension. The structural results of Section II (orient cascade ordering, strategy DAG, directed separation) survive such an extension; the diagnostic results (satisfaction gap, control regret, 2×2 table) degrade from quantitative scalar magnitudes to qualitative set-theoretic tests. See `spikes/spike-scalar-objective-scope.md` for the full analysis.
+Organizations or AI agents with true Pareto structure — where no scalarization is accepted and tradeoffs are genuinely unresolved — require a vector-valued extension. The structural results of Part II (orient cascade ordering, strategy DAG, directed separation) survive such an extension; the diagnostic results (satisfaction gap, control regret, 2×2 table) degrade from quantitative scalar magnitudes to qualitative set-theoretic tests. See `spikes/spike-scalar-objective-scope.md` for the full analysis.
 
 ## Discussion
 

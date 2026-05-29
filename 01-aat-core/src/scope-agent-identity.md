@@ -36,7 +36,7 @@ What the scope excludes: agents conceived as *types* (equivalence classes — "t
 
 **What the scope excludes (or requires additional machinery for):**
 
-- Agents conceived as type/equivalence-class entities (e.g., "the GPT-4 model") rather than token/trajectory entities (e.g., "this particular session with state $M_t$ on trajectory $\mathcal{C}_t$"). AAT's formal results apply to tokens, not types. Aggregated claims across tokens of the same type require additional machinery (e.g., population-level dynamics; see Section III gaps on latent structural diversity).
+- Agents conceived as type/equivalence-class entities (e.g., "the GPT-4 model") rather than token/trajectory entities (e.g., "this particular session with state $M_t$ on trajectory $\mathcal{C}_t$"). AAT's formal results apply to tokens, not types. Aggregated claims across tokens of the same type require additional machinery (e.g., population-level dynamics; see Part III gaps on latent structural diversity).
 - "Clone problem" scenarios where multiple copies of an agent are formally the same until divergence — each copy becomes its own AAT agent at the moment it acquires a distinct event (Discussion below).
 - Formal treatment of reincarnation, restoration from backup, or other operations that attempt to transplant $M_t$ across trajectories. AAT's sufficiency machinery does not apply across trajectory discontinuities; such operations are out-of-scope events whose epistemic consequences require separate treatment.
 

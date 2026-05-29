@@ -23,7 +23,7 @@ The result also *unifies with Result G′* ( `#deriv-self-actuation-grounding`) 
 
 ## Formal Expression
 
-**The setting.** An agent $\mathcal{A}$ operating per AAT's Section II setup with state $(M_t, O_t, \Sigma_t)$ on GUC Class 1 (Separated) or Class 2 (Partial) substrate ( `#der-directed-separation`). The objective's value functional ( `#form-objective-functional`) takes the form
+**The setting.** An agent $\mathcal{A}$ operating per AAT's Part II setup with state $(M_t, O_t, \Sigma_t)$ on GUC Class 1 (Separated) or Class 2 (Partial) substrate ( `#der-directed-separation`). The objective's value functional ( `#form-objective-functional`) takes the form
 
 $$V_{O_t}(\tau) \;=\; \sum_{k} \gamma^{k}\, r_k$$
 

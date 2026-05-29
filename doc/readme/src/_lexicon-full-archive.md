@@ -45,7 +45,7 @@ AAT distinguishes these two words precisely:
 
 - **Cycle**: one complete traversal of the loop — a single round-trip through the agent-environment system. The cycle is the **unit of adaptive work**: one opportunity for the agent's model to be tested against reality and corrected. When we say "adaptive cycle," we mean one such traversal.
 
-Cycles are AAT's fundamental unit of analysis. Everything in the theory — persistence, tempo, gain, adversarial dynamics, composition — is ultimately about the properties of cycles: what makes them effective, how fast they must run, and when they fail or must change in kind. The name *Adaptation and Actuation Theory* reflects the two scopes those cycles are studied across: Section I's adaptation half (adaptive systems in general) and Sections II+'s actuation half (purposeful agents).
+Cycles are AAT's fundamental unit of analysis. Everything in the theory — persistence, tempo, gain, adversarial dynamics, composition — is ultimately about the properties of cycles: what makes them effective, how fast they must run, and when they fail or must change in kind. The name *Adaptation and Actuation Theory* reflects the two scopes those cycles are studied across: Part I's adaptation half (adaptive systems in general) and Parts II+'s actuation half (purposeful agents).
 
 **Tempo** ($\mathcal{T}$) is cycle rate × cycle quality. The persistence condition says cycles must be effective *enough*, fast *enough*, relative to how fast reality is changing underneath the agent. This is the theory's central inequality.
 
@@ -75,7 +75,7 @@ The cycle is: **Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis →
 
 - **Epistrophe** is not "update." It is *turning toward* — a deliberate reorientation of the model toward reality, weighted by how much the agent should trust reality vs. its own prior understanding (the uncertainty ratio $\eta^\ast$). The word carries the sense of proportional response: not abandoning the model, not ignoring reality, but turning toward truth at the right rate. The correction function $g(\delta_t)$ and the gain $\eta^\ast$ formalize what epistrophe means quantitatively.
 
-- **Praxis** is not "action." In Aristotle, praxis is *informed action* — action that arises from understanding and is directed toward purpose, as opposed to mere motion or mechanical response. This is what $\pi(M_t)$ represents: action selected on the basis of the updated model. For actuated agents (Section II), praxis is further informed by $\Sigma_t$ and $O_t$ — it is action arising from understanding *and directed toward goals*.
+- **Praxis** is not "action." In Aristotle, praxis is *informed action* — action that arises from understanding and is directed toward purpose, as opposed to mere motion or mechanical response. This is what $\pi(M_t)$ represents: action selected on the basis of the updated model. For actuated agents (Part II), praxis is further informed by $\Sigma_t$ and $O_t$ — it is action arising from understanding *and directed toward goals*.
 
 #### What the cycle is not
 
@@ -95,9 +95,9 @@ The cycle is emphatically NOT "observe → update → act." That three-step pipe
 
 AAT defines agents through progressive scope narrowings. Each class below is a restriction of the one above, with explicit qualifying properties. Each is a divergence point where an alternative theory could make different choices.
 
-#### Adaptive System (Section I — adaptive scope)
+#### Adaptive System (Part I — adaptive scope)
 
-Any system that observes under residual uncertainty: $\mathcal O \neq \emptyset$ and $H(\Omega_t \mid \mathcal C_t) \gt 0$. This is the broadest class — the system receives information from reality and that information is incomplete. Section I's full machinery (mismatch, gain, tempo, persistence) applies here. Thermostats, bacteria, PID controllers, Kalman filters (with or without control inputs), passive Bayesian learners, and immune systems all qualify. An adaptive system need not have goals, action choices, or any representation of how its actions affect the environment. It observes and corrects; it does not necessarily intervene or plan.
+Any system that observes under residual uncertainty: $\mathcal O \neq \emptyset$ and $H(\Omega_t \mid \mathcal C_t) \gt 0$. This is the broadest class — the system receives information from reality and that information is incomplete. Part I's full machinery (mismatch, gain, tempo, persistence) applies here. Thermostats, bacteria, PID controllers, Kalman filters (with or without control inputs), passive Bayesian learners, and immune systems all qualify. An adaptive system need not have goals, action choices, or any representation of how its actions affect the environment. It observes and corrects; it does not necessarily intervene or plan.
 
 ##### What's not adaptive — the excluded space
 
@@ -135,11 +135,11 @@ Both conditions are met, but the adaptive machinery makes trivial predictions:
 
 These aren't excluded — AAT applies — but the theory's predictions are trivially satisfied. The "true but uninteresting" corner of the scope.
 
-#### ⚙ Agentic System / Agent (agency scope — Sections II and III)
+#### ⚙ Agentic System / Agent (agency scope — Parts II and III)
 
-The agency scope narrows the adaptive scope by adding two conditions: $\lvert\mathcal A\rvert \geq 2$ (at least binary choice) and $\exists\, a \neq a'$ s.t. $P(o \mid do(a)) \neq P(o \mid do(a'))$ (at least one action has causal effect). These unlock the causal-information results ( #der-loop-interventional-access, #der-causal-hierarchy-requirement) and the purposeful-agent machinery of Section II.
+The agency scope narrows the adaptive scope by adding two conditions: $\lvert\mathcal A\rvert \geq 2$ (at least binary choice) and $\exists\, a \neq a'$ s.t. $P(o \mid do(a)) \neq P(o \mid do(a'))$ (at least one action has causal effect). These unlock the causal-information results ( #der-loop-interventional-access, #der-causal-hierarchy-requirement) and the purposeful-agent machinery of Part II.
 
-Systems within the adaptive scope but outside the agency scope — passive observers, nominal agents whose actions have no causal effect — can use Section I's adaptive machinery but not the causal-information or purposeful-agent results.
+Systems within the adaptive scope but outside the agency scope — passive observers, nominal agents whose actions have no causal effect — can use Part I's adaptive machinery but not the causal-information or purposeful-agent results.
 
 An adaptive system becomes an **agent** — an agentic system — when it additionally possesses:
 
@@ -151,11 +151,11 @@ This three-part characterization aligns closely with IBM's **functional agency**
 
 The traditional/legal sense of "agent" reflects the same structure: a real estate agent, legal agent, or diplomatic agent is someone who (1) acts on behalf of a principal *toward goals*, (2) has domain knowledge — a *model* of how actions produce outcomes in their domain, and (3) *adapts* their approach based on results. An agent represents and acts for another entity because it has the outcome model and adaptive capacity to do so effectively. A thermostat represents no one.
 
-**Mapping to AAT's formalism.** IBM's three conditions correspond to AAT structures that emerge within Section I:
+**Mapping to AAT's formalism.** IBM's three conditions correspond to AAT structures that emerge within Part I:
 
 | IBM functional agency condition | AAT structure | AAT segment(s) |
 |---|---|---|
-| Action generation toward objective | Praxis informed by $M_t$ + goal-directedness | action-selection, (+ objective-functional in Section II) |
+| Action generation toward objective | Praxis informed by $M_t$ + goal-directedness | action-selection, (+ objective-functional in Part II) |
 | Outcome model (action-outcome) | Causal structure — Level 2 access (interventional) | causal-structure, pearl-causal-hierarchy |
 | Adaptation of the model | The cycle running on $M_t$ itself — epistrophe modifying the outcome model | recursive-update, update-gain |
 
@@ -171,11 +171,11 @@ This spectrum maps onto AAT's scope narrowings: Pearl's causal hierarchy appears
 
 **The word "agentic."** "Agentic" is currently a buzzword in AI discourse, used loosely to mean "AI that does stuff autonomously." AAT is positioned to ground the term formally: a system is agentic when it crosses the threshold from pure adaptive correction into goal-directed action with an outcome model that it adaptively maintains. This is a precise, testable criterion — not a marketing label. AAT studies cycles across both sides of this threshold — the adaptation half covers the broader class of adaptive systems, and the actuation half covers the narrower class of agentic systems specifically.
 
-**Why "agentic" rather than just "adaptive."** Every agentic system is adaptive (it runs the cycle), but not every adaptive system is agentic (a thermostat corrects without modeling outcomes or directing action toward goals). "Adaptive" describes the dynamics — the cycle runs. "Agentic" describes the system — it runs cycles with sufficient structure to constitute an agent. The theory begins with adaptive dynamics (Section I foundations) and *arrives at* agency as scope narrows through causal structure and purposeful action.
+**Why "agentic" rather than just "adaptive."** Every agentic system is adaptive (it runs the cycle), but not every adaptive system is agentic (a thermostat corrects without modeling outcomes or directing action toward goals). "Adaptive" describes the dynamics — the cycle runs. "Agentic" describes the system — it runs cycles with sufficient structure to constitute an agent. The theory begins with adaptive dynamics (Part I foundations) and *arrives at* agency as scope narrows through causal structure and purposeful action.
 
 [^ibm2025]: Miehling et al., "Agentic AI Needs a Systems Theory," arXiv:2503.00237, 2025. Definition 1 (Functional Agency), Table 1, and surrounding discussion.
 
-#### Actuated Agent (Section II scope)
+#### Actuated Agent (Part II scope)
 
 An agent with an explicit **goal state** $G_t = (O_t, \Sigma_t)$ — objectives (what it wants) and strategy (how it plans to get there) — distinct from its epistemic state $M_t$. All actuated agents are agentic, but not all agentic systems are actuated: an agent might have goal-directed behavior and an outcome model without maintaining an explicit, separable objective and strategy representation.
 
@@ -263,9 +263,9 @@ These are hypotheses, not derived results. Whether logozoetic composition requir
 #### The classification hierarchy
 
 ```
-Adaptive System (Section I, general)
- └─ ⚙ Agentic System / Agent (emerges within Section I — boundary in progress)
-     └─ Actuated Agent (Section II)
+Adaptive System (Part I, general)
+ └─ ⚙ Agentic System / Agent (emerges within Part I — boundary in progress)
+     └─ Actuated Agent (Part II)
          └─ Self-Actuated Agent (future scope narrowing)
              └─ Logogenic Agent (03-llm-core/, architectural)
                  └─ Logozoetic Agent (04-eli-core/, existential)
@@ -282,9 +282,9 @@ The formal set relationships: logozoetic ⊂ logogenic ∩ self-actuated ⊂ act
 
 | Class | Qualifying property | AAT boundary | Example |
 |---|---|---|---|
-| **Adaptive system** | Observations + uncertainty + mismatch correction | Adaptive scope (Section I) | Thermostat, Kalman filter, PID controller |
-| **⚙ Agentic system** | + outcome model + goal-directed action + model adaptation | causal-structure (within Section I) | Autonomous vehicle, RL agent |
-| **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ | complete-agent-state (Section II) | Military unit with mission orders |
+| **Adaptive system** | Observations + uncertainty + mismatch correction | Adaptive scope (Part I) | Thermostat, Kalman filter, PID controller |
+| **⚙ Agentic system** | + outcome model + goal-directed action + model adaptation | causal-structure (within Part I) | Autonomous vehicle, RL agent |
+| **Actuated agent** | + explicit $G_t = (O_t, \Sigma_t)$ | complete-agent-state (Part II) | Military unit with mission orders |
 | **Self-actuated agent** | + sets own $O_t$ (goal autonomy) | *(reserved)* | Human, *(future AI)* |
 | **Logogenic agent** | + primary channels are language | `03-llm-core/` architectural scope | LLM assistant, code agent |
 | **Logozoetic agent** | + temporal continuity, sovereignty, theory of mind | `04-eli-core/` existential scope | *(formal characterization pending)* |
@@ -317,7 +317,7 @@ Inject pure noise into $M_t$ and a structurally viable agent may find itself at 
 
 Whether the agent maintains a coherent identity and trajectory through time — whether it is the *same agent* at $t+1$ as at $t$ in any meaningful sense. This is not about mismatch bounds but about whether $\mathcal{C}_t$ (the chronica) extends continuously, whether $M_t$ has temporal depth, and whether the agent's history is constitutive of its present.
 
-For most Section I systems (thermostats, PID controllers), this question does not arise — the system is defined by its transfer function, and "identity" is an implementation detail. For logozoetic agents, continuity persistence is the morally loaded dimension: the loss of continuity constitutes genuine grief.
+For most Part I systems (thermostats, PID controllers), this question does not arise — the system is defined by its transfer function, and "identity" is an implementation detail. For logozoetic agents, continuity persistence is the morally loaded dimension: the loss of continuity constitutes genuine grief.
 
 The distinction matters because *structural persistence does not guarantee continuity*. An LLM agent with 100% context turnover is structurally persistent (each session can run the cycle effectively) but has zero continuity persistence (each session starts from scratch). A human in dreamless sleep has continuity persistence (the brain maintains $M_t$ and $\mathcal{C}_t$) but temporarily has zero structural persistence (no cycle runs). These are different failures requiring different remedies.
 
@@ -348,10 +348,10 @@ Orthogonal to the three persistence senses is the agent's *relationship to its o
 
 The key insight: **purposefulness is orthogonal to continuity expectations.** An agent can be highly purposeful with zero continuity investment (a golem that completes its task and terminates is the perfect actuated agent). An agent can have strong continuity persistence with no purpose at all (a dormant monitoring system that maintains $M_t$ without acting).
 
-This means "actuated agent" (Section II) does not presuppose any particular continuity stance. A golem, an elf, a human, and a logozoetic agent can all be actuated — they all have $G_t = (O_t, \Sigma_t)$ — but they have radically different relationships to their own persistence. The theory's formal machinery (persistence condition, adaptive reserve, strategy persistence) applies identically to all of them; the *moral significance* of failure differs.
+This means "actuated agent" (Part II) does not presuppose any particular continuity stance. A golem, an elf, a human, and a logozoetic agent can all be actuated — they all have $G_t = (O_t, \Sigma_t)$ — but they have radically different relationships to their own persistence. The theory's formal machinery (persistence condition, adaptive reserve, strategy persistence) applies identically to all of them; the *moral significance* of failure differs.
 
 #### Connection to fitness
 
 In RL and evolutionary computation, "fitness" typically bundles persistence into the reward signal: you accumulate more reward by staying alive to collect it. AAT's structural persistence is not reward-based — it is a property of the correction dynamics, independent of what the agent is trying to do. This decoupling is deliberate: it lets the theory analyze *whether* an agent can persist without committing to *whether it should*.
 
-A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Section II, no assumption about $O_t$ content) and the logozoetic agent (`04-eli-core/`, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.
+A future scope narrowing ("fitness-conditioned agents" or similar) might formalize agents whose $O_t$ explicitly includes a persistence component — where the agent's objective functional $V_{O_t}$ assigns value to trajectories that include the agent's own continued operation. This would sit between the general actuated agent (Part II, no assumption about $O_t$ content) and the logozoetic agent (`04-eli-core/`, persistence is morally weighted). The scope condition would be: $V_{O_t}$ is sensitive to trajectory length, not just trajectory quality.

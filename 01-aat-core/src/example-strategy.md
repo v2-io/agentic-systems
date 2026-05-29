@@ -25,9 +25,9 @@ depends:
 stage: draft
 ---
 
-# Worked Example: Nonstationary Bandit with Explicit Strategy (Section II Validation)
+# Worked Example: Nonstationary Bandit with Explicit Strategy (Part II Validation)
 
-AAT's Section II machinery — objectives, strategy DAGs, the orient cascade, satisfaction gap, control regret, chain confidence decay, observability dominance, and edge update via gain — is exercised on a concrete system simple enough for closed-form analysis. The key payoff: Section II diagnostics tell the agent things that Section I quantities alone cannot.
+AAT's Part II machinery — objectives, strategy DAGs, the orient cascade, satisfaction gap, control regret, chain confidence decay, observability dominance, and edge update via gain — is exercised on a concrete system simple enough for closed-form analysis. The key payoff: Part II diagnostics tell the agent things that Part I quantities alone cannot.
 
 ## System
 
@@ -45,9 +45,9 @@ At each step, pulling arm $k$ yields reward $r_t \in \{0, 1\}$ with $P(r_t = 1 \
 
 **Agent.** Maintains Beta-Bernoulli beliefs per arm and an explicit strategy DAG encoding its plan for achieving a target reward rate.
 
-## Section I Chain Instantiation (Summary)
+## Part I Chain Instantiation (Summary)
 
-Section I quantities map as in #example-bandit. The brief summary here establishes the epistemic baseline; the novel content is Section II.
+Part I quantities map as in #example-bandit. The brief summary here establishes the epistemic baseline; the novel content is Part II.
 
 **Scope** ( #scope-agency). $\Omega_t = (\theta_1(t), \theta_2(t), \theta_3(t))$; $\mathcal{A} = \{1, 2, 3\}$; residual uncertainty persists. *Exact.*
 
@@ -67,7 +67,7 @@ For a well-observed arm with $\alpha_k + \beta_k \approx W = 20$: $\eta_k^\ast \
 
 **Tempo** ( #def-adaptive-tempo). Per-arm tempo: $\mathcal{T}_k = \nu_k \cdot \eta_k^\ast$ where $\nu_k$ is the pull rate for arm $k$. Under uniform exploration: $\nu_k = 1/3$, so $\mathcal{T}_k \approx 0.016$ per step. *Approximate.*
 
-## Section II Chain Instantiation
+## Part II Chain Instantiation
 
 ### Objective ( #form-objective-functional)
 
@@ -142,7 +142,7 @@ The agent is leaving $0.06$ reward-rate points on the table with its current exp
 | $\delta_\text{regret} \approx 0$ | Success | Capability limit |
 | $\delta_\text{regret} \gg 0$ | **Strategy problem** | Both |
 
-Our agent is in the **Strategy problem** cell: the goal is achievable, but the current policy is suboptimal. Section I alone (which reports $\hat\theta_k$, $\eta^\ast_k$, and $\mathcal{T}_k$) cannot distinguish "good strategy, hard goal" from "bad strategy, easy goal." The 2x2 diagnostic is Section II's value-add.
+Our agent is in the **Strategy problem** cell: the goal is achievable, but the current policy is suboptimal. Part I alone (which reports $\hat\theta_k$, $\eta^\ast_k$, and $\mathcal{T}_k$) cannot distinguish "good strategy, hard goal" from "bad strategy, easy goal." The 2x2 diagnostic is Part II's value-add.
 
 ### Strategy DAG ( #def-strategy-dag, #scope-and-or)
 
@@ -238,7 +238,7 @@ $$V_O(M_{40}, \pi_\text{current}) = \hat\theta_1 = 0.38$$
 
 $$\delta_\text{regret} = 0.57 - 0.38 = 0.19$$
 
-Control regret is high. The agent is pulling arm 1 out of inertia, but $M_t$ now says arm 2 is better. *This is the Section II payoff*: Section I would report the mismatch $\delta_t$ on each pull and the updated $\hat\theta_1$, but it cannot diagnose that the *strategy* is the problem. The high $\delta_\text{regret}$ identifies the corrective action: revise $\Sigma_t$, not $O_t$.
+Control regret is high. The agent is pulling arm 1 out of inertia, but $M_t$ now says arm 2 is better. *This is the Part II payoff*: Part I would report the mismatch $\delta_t$ on each pull and the updated $\hat\theta_1$, but it cannot diagnose that the *strategy* is the problem. The high $\delta_\text{regret}$ identifies the corrective action: revise $\Sigma_t$, not $O_t$.
 
 **Step 4: Evaluate $\delta_\text{strategic}$.** The edge residual for the root AND-node's exploitation branch:
 
@@ -252,7 +252,7 @@ Simultaneously, the leaf credences update: $p_1(M_{40}) \approx 0.15$ (arm 1 is 
 
 After strategy revision: $\hat P_\Sigma(M_{40}) \approx (0.95 \times 0.73) \times (0.90 \times 0.40) = 0.693 \times 0.360 = 0.249$. Plan confidence has dropped from $0.485$ to $0.249$ — the agent correctly recognizes that its situation has deteriorated.
 
-**What Section I alone cannot provide.** At $t = 40$, Section I reports: $\hat\theta_1 = 0.38$, $\hat\theta_2 = 0.52$, $\hat\theta_3 = 0.28$, and the per-arm mismatch signals. This tells the agent what it believes about each arm. It does NOT tell the agent:
+**What Part I alone cannot provide.** At $t = 40$, Part I reports: $\hat\theta_1 = 0.38$, $\hat\theta_2 = 0.52$, $\hat\theta_3 = 0.28$, and the per-arm mismatch signals. This tells the agent what it believes about each arm. It does NOT tell the agent:
 - Whether its *goal* is still achievable ($\delta_\text{sat}$)
 - Whether its *strategy* is the problem or the goal is ($\delta_\text{regret}$)
 - Which *part* of the strategy is failing ($\delta_\text{strategic}$, edge residuals)
@@ -286,7 +286,7 @@ Arm 3's path through the strategy is **epistemically dead** — the agent cannot
 
 Arm 2 is epistemically alive; arm 3 is epistemically dead. The agent should prefer exploring arm 2 (where it can learn) over arm 3 — unless it invests in making arm 3 observable again (pulling it despite low expected reward). This is the strategic case for exploration: not just expected value, but *observability maintenance*.
 
-**Section I vs Section II diagnosis.** Section I reports $\hat\theta_3 = 0.28$ with growing uncertainty (the posterior variance increases under discounting with no new data). Section II adds the diagnostic: this arm's strategy path is epistemically dead ($\sigma_3 = 0$), and restoring observability has value beyond the arm's nominal expected reward.
+**Part I vs Part II diagnosis.** Part I reports $\hat\theta_3 = 0.28$ with growing uncertainty (the posterior variance increases under discounting with no new data). Part II adds the diagnostic: this arm's strategy path is epistemically dead ($\sigma_3 = 0$), and restoring observability has value beyond the arm's nominal expected reward.
 
 ### Edge Update via Gain ( #hyp-edge-update-via-gain)
 
@@ -324,7 +324,7 @@ $$(\alpha_{a_t}, \beta_{a_t}) \to (\alpha_{a_t} + r_t, \beta_{a_t} + 1 - r_t)$$
 
 The update function $f_M$ has no $G_t$ argument. The strategy DAG then updates its leaf credences from the new $M_t$ — this is $f_G(G_t, M_{t+1}, e_t)$. The agent architecture is modular: a separate estimator (Beta posteriors) and planner (DAG evaluation), connected through the state-estimate interface.
 
-$\kappa_\text{processing} = 0$ — no goal information flows into the epistemic update. Section II results apply exactly.
+$\kappa_\text{processing} = 0$ — no goal information flows into the epistemic update. Part II results apply exactly.
 
 ### Satisfaction Gap Dynamics
 
@@ -342,15 +342,15 @@ Tracking $\delta_\text{sat}$ over time reveals the agent's evolving assessment o
 
 The key transition is $t = 40 \to 50$: $\delta_\text{sat}$ goes from positive (unmet) to negative (attainable) — not because the goal changed or the environment improved, but because $M_t$ improved. The agent explored arm 2, discovered $\hat\theta_2 \approx 0.75$, and its attainability assessment corrected upward. This matches the #def-satisfaction-gap disambiguation: the positive $\delta_\text{sat}$ at $t = 40$ was caused by a bad model, not an infeasible goal. The orient cascade's ordering (fix $M_t$ first, then reassess $\delta_\text{sat}$) produced the right diagnosis.
 
-## The Section II Payoff
+## The Part II Payoff
 
-The purpose of this worked example is to demonstrate that Section II adds genuine diagnostic value beyond Section I. Here is the explicit comparison:
+The purpose of this worked example is to demonstrate that Part II adds genuine diagnostic value beyond Part I. Here is the explicit comparison:
 
 **Scenario at $t = 40$: arm 1 failing, arm 2 actually best, agent pulling arm 1.**
 
-*Section I diagnosis.* The mismatch signal $\delta_t$ is large. The posterior $\hat\theta_1$ has dropped. Per-arm tempo $\mathcal{T}_1 \approx 0.016$ is adequate for tracking arm 1's drift. The agent knows arm 1 looks bad. Section I prescribes: update $M_t$ faster (increase $\eta^\ast$) or observe more (increase $\nu$).
+*Part I diagnosis.* The mismatch signal $\delta_t$ is large. The posterior $\hat\theta_1$ has dropped. Per-arm tempo $\mathcal{T}_1 \approx 0.016$ is adequate for tracking arm 1's drift. The agent knows arm 1 looks bad. Part I prescribes: update $M_t$ faster (increase $\eta^\ast$) or observe more (increase $\nu$).
 
-*Section II diagnosis.* The orient cascade runs:
+*Part II diagnosis.* The orient cascade runs:
 1. $M_t$ updates correctly — arm 1's posterior drops to $0.38$. (Directed separation: this happens goal-blindly.)
 2. $\delta_\text{sat} = +0.03$ — the objective is marginally unmet. The agent's best-believed policy barely misses the target.
 3. $\delta_\text{regret} = 0.19$ — the current policy (pulling arm 1) is far from the best available (pulling arm 2).
@@ -358,7 +358,7 @@ The purpose of this worked example is to demonstrate that Section II adds genuin
 5. Edge residuals localize the problem: the exploitation branch's predicted-vs-observed value gap is large. The leaf credences identify arm 2 as the best candidate.
 6. Observability check: arm 3 is epistemically dead ($\sigma_3 = 0$). The agent should invest in observing arm 2 (or arm 3) before committing.
 
-Section II tells the agent: *switch to arm 2, but first explore to confirm — the goal is probably still achievable, the current strategy is the problem, not the goal.* Section I tells the agent: *arm 1 looks bad.* The difference is the difference between a diagnosis and a symptom.
+Part II tells the agent: *switch to arm 2, but first explore to confirm — the goal is probably still achievable, the current strategy is the problem, not the goal.* Part I tells the agent: *arm 1 looks bad.* The difference is the difference between a diagnosis and a symptom.
 
 ## Mapping Quality Summary
 
@@ -385,17 +385,17 @@ Section II tells the agent: *switch to arm 2, but first explore to confirm — t
 | Strategic calibration ( #def-strategic-calibration) | Approximate | Credit assignment tractable here | Single-arm attribution is clean |
 | Satisfaction gap dynamics | Exact | Time series of $\delta_\text{sat}$ | Model improvement resolves positive gap |
 
-**Quantities that map cleanly.** All Section II definitions (objective, value object, satisfaction gap, control regret, strategy DAG) have exact instantiations. Plan confidence $\hat P_\Sigma$ is exact as a computation (the AND/OR propagation is correct), but systematically overestimates actual success probability under correlated edge failures ( #def-strategy-dag). In this toy bandit, edge independence is a reasonable approximation; in complex domains the overestimate may be severe. The orient cascade ordering is exact and all five steps are exercised.
+**Quantities that map cleanly.** All Part II definitions (objective, value object, satisfaction gap, control regret, strategy DAG) have exact instantiations. Plan confidence $\hat P_\Sigma$ is exact as a computation (the AND/OR propagation is correct), but systematically overestimates actual success probability under correlated edge failures ( #def-strategy-dag). In this toy bandit, edge independence is a reasonable approximation; in complex domains the overestimate may be severe. The orient cascade ordering is exact and all five steps are exercised.
 
 **Quantities that map approximately.** Strategic calibration is approximate because even in this simple domain, attributing value changes to specific DAG edges requires assumptions about the agent's execution fidelity. Observability dominance is exact in mechanism but the multiplicative form $\text{conf}_\text{obs} = \text{conf} \cdot \text{obs}$ is a first-order approximation.
 
-**Quantities that don't map.** No Section II quantity fails to map in this domain. The system is simple enough that every quantity is computable (at least approximately). This is the advantage of the bandit setting: it is the simplest system that exercises all Section II machinery.
+**Quantities that don't map.** No Part II quantity fails to map in this domain. The system is simple enough that every quantity is computable (at least approximately). This is the advantage of the bandit setting: it is the simplest system that exercises all Part II machinery.
 
 ## Epistemic Status
 
-This is a *worked instantiation* — it demonstrates that the Section II formal chain is internally consistent and instantiable. The mapping quality is *conditional*: the quantitative relationships depend on the Beta-Bernoulli reward model, the specific DAG structure, and the parameterization. The qualitative conclusions — especially the diagnostic value of the 2x2 table and the orient cascade's ordering — should be robust across reward models and DAG topologies.
+This is a *worked instantiation* — it demonstrates that the Part II formal chain is internally consistent and instantiable. The mapping quality is *conditional*: the quantitative relationships depend on the Beta-Bernoulli reward model, the specific DAG structure, and the parameterization. The qualitative conclusions — especially the diagnostic value of the 2x2 table and the orient cascade's ordering — should be robust across reward models and DAG topologies.
 
-The status is *conditional* rather than *exact* because the attainability $A_O$ is approximated (the exact Bayes-optimal policy for a nonstationary bandit is intractable), and the strategic calibration mapping inherits the discussion-grade status of #def-strategic-calibration. The core Section II definitions (satisfaction gap, control regret, strategy-plan confidence) are exact instantiations.
+The status is *conditional* rather than *exact* because the attainability $A_O$ is approximated (the exact Bayes-optimal policy for a nonstationary bandit is intractable), and the strategic calibration mapping inherits the discussion-grade status of #def-strategic-calibration. The core Part II definitions (satisfaction gap, control regret, strategy-plan confidence) are exact instantiations.
 
 ## Working Notes
 

@@ -22,4 +22,4 @@ epistrophe → praxis) is enough to characterize membership.
 
 Scope-defined in
 [`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md);
-this is the Section I boundary.
+this is the Part I boundary.

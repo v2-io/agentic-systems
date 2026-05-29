@@ -14,7 +14,7 @@ A depletable scalar reservoir whose drain rate rises with mismatch and whose lev
 
 The construction is minimal: a scalar resource budget $\mathcal{B}_t$ evolving under drain-versus-replenishment, with two introduced structural posits — **(A-cost)** the drain rate $c(\lVert\delta\rVert)$ is non-decreasing in mismatch (degrading models cost more to run), and **(A-gate)** the sector parameter is resource-gated via $\alpha(\mathcal{B}) = \alpha^{\max}\psi(\mathcal{B})$ with $\psi(0)=0$ (the depleted agent loses corrective capacity entirely). Hard-budget regime has zero replenishment ($r_{\mathcal{B}}=0$, a finite pool that only depletes); regenerative regime has $r_{\mathcal{B}}\gt 0$.
 
-This segment is *exploratory off-spine*: no Section I/II/III result depends on it; it opens a resource-structure axis #def-strategy-dimension explicitly records as an open scope item. The formulation is *conditional by nature* — (A-cost) and (A-gate) are modeling assertions about an agent's physical realization, not derivations from core machinery, so the formulation's epistemic ceiling stays at `conditional` regardless of downstream development. The companion derivation #der-resource-bounded-destabilization uses this formulation to close #der-adversarial-destabilization's Effects-Spiral by an alternative mechanism (agent's own correction-rate decay rather than adversary coupling growth).
+This segment is *exploratory off-spine*: no Part I/II/III result depends on it; it opens a resource-structure axis #def-strategy-dimension explicitly records as an open scope item. The formulation is *conditional by nature* — (A-cost) and (A-gate) are modeling assertions about an agent's physical realization, not derivations from core machinery, so the formulation's epistemic ceiling stays at `conditional` regardless of downstream development. The companion derivation #der-resource-bounded-destabilization uses this formulation to close #der-adversarial-destabilization's Effects-Spiral by an alternative mechanism (agent's own correction-rate decay rather than adversary coupling growth).
 
 ## Formal Expression
 
@@ -54,7 +54,7 @@ Together: $\mathcal{B}_t$ is the new state; (A-cost) couples model quality *into
 
 **Max attainable: `conditional`.** This ceiling is intrinsic: (A-cost) and (A-gate) are claims about a particular agent's physical realization, not about the formalism, so no amount of derivation promotes the formulation itself beyond conditional. A *specific* agent class can satisfy them by construction (e.g. a controller whose actuation energy is measured and whose control-loop frequency is power-throttled), at which point downstream results inherit that class's tighter status — but the formulation as stated stays conditional by nature, the same way #def-strategy-dimension's other scope items do.
 
-This segment is an exploratory branch: it opens a resource-structure axis AAT has deliberately lacked. No spine segment depends on it; it is not a prerequisite of any Section I/II/III result.
+This segment is an exploratory branch: it opens a resource-structure axis AAT has deliberately lacked. No spine segment depends on it; it is not a prerequisite of any Part I/II/III result.
 
 ## Discussion
 

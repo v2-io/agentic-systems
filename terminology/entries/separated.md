@@ -38,7 +38,7 @@ argument, and the directed-separation condition of
 The "by construction" qualifier matters. A Separated agent may be tightly integrated at the system
 level — what distinguishes it is that the belief-update computation is architecturally forbidden from
 reading the goal state, not merely that it happens to be well-behaved. This is the property that makes
-Section II's theoretical results applicable without further qualification.
+Part II's theoretical results applicable without further qualification.
 
 Separation can be implemented natively (the component is inherently goal-blind) or via W₁ wrapping
 (the scaffold enforces the query boundary). W₂ wrapping achieves separation *behaviorally* — the

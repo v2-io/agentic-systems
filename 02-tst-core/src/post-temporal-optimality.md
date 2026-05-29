@@ -61,4 +61,4 @@ Time can break ties only when all six are demonstrably equivalent. If any one di
 ## Working Notes
 
 - This postulate reads externally as a conditional preference principle, not a deep first principle — and that's fine. Its real role is as a **normative selection rule that later claims instantiate**: tempo, gain, persistence, and adversarial dynamics are consequences of optimizing under this criterion. Lean into this framing. The postulate is the source of *structure* (it gives the theory its optimization target), not the source of *explanatory power* (which comes from the machinery that follows).
-- During Section I review: consider making this normative-selection-rule character more explicit in the Discussion, rather than leaving it implicit in "The connections are developed in their respective claims."
+- During Part I review: consider making this normative-selection-rule character more explicit in the Discussion, rather than leaving it implicit in "The connections are developed in their respective claims."

@@ -1,7 +1,7 @@
 ---
 slug: der-recursive-update
 type: derived
-status: conditional
+status: exact
 depends:
   - form-agent-model
   - form-event-driven-dynamics

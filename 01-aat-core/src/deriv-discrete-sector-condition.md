@@ -192,7 +192,7 @@ The proofs themselves are standard contraction-mapping (DA.1/DA.2) and supermart
 
 **No downstream results change qualitatively.** The persistence condition, adaptive reserve, and adversarial scaling laws derived in #deriv-sector-condition and #der-adversarial-destabilization hold as stated. The discrete framework provides sharper constants (replacing $\alpha$ with $\nu(1 - \lambda_{\text{eff}})$) and a quantitative transient error bound, but the qualitative structure is unchanged.
 
-**Section I's formal chain is now complete.** The prediction chain:
+**Part I's formal chain is now complete.** The prediction chain:
 
 $$\text{gain principle} + \text{B1} \;\xrightarrow{\text{derived}}\; \text{sector condition} \;\xrightarrow{\text{Lyapunov/contraction}}\; \text{persistence, reserve, scaling}$$
 

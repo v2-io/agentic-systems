@@ -64,7 +64,7 @@ This means the communication infrastructure does not change based on what the co
 
 ## Epistemic Status
 
-*Axiomatic.* This is a scope definition — it describes the class of systems Section III addresses. The only substantive choice is that coupling goes through the shared environment rather than through direct state modification. This follows from the agent boundary assumption ( #def-agent-environment): agents affect each other by affecting the environment, not by directly altering each other's internal states.
+*Axiomatic.* This is a scope definition — it describes the class of systems Part III addresses. The only substantive choice is that coupling goes through the shared environment rather than through direct state modification. This follows from the agent boundary assumption ( #def-agent-environment): agents affect each other by affecting the environment, not by directly altering each other's internal states.
 
 ## Discussion
 
@@ -74,7 +74,7 @@ This means the communication infrastructure does not change based on what the co
 
 Two distinct classes of machinery apply across this spectrum:
 
-- **Agent-level machinery** (individual persistence, agent tempo, per-agent mismatch, sector-condition stability) applies to *every* agent in *every* multi-agent configuration — cooperative, adversarial, or indifferent — because each agent individually satisfies #scope-agency and Section I/II results apply directly. The adversarial tempo advantage ( #result-adversarial-tempo-advantage) and adversarial destabilization ( #der-adversarial-destabilization) results are applications of this agent-level machinery to the case where one agent's actions are a disturbance source for another.
+- **Agent-level machinery** (individual persistence, agent tempo, per-agent mismatch, sector-condition stability) applies to *every* agent in *every* multi-agent configuration — cooperative, adversarial, or indifferent — because each agent individually satisfies #scope-agency and Part I/II results apply directly. The adversarial tempo advantage ( #result-adversarial-tempo-advantage) and adversarial destabilization ( #der-adversarial-destabilization) results are applications of this agent-level machinery to the case where one agent's actions are a disturbance source for another.
 
 - **Composite-level machinery** applies *only* when #scope-composite-agent is satisfied via at least one of (C-i)–(C-iv). The (C-i)–(C-iii) alignment routes give composites with a shared objective $O_c$ and admit closure-defect / team-persistence / composite-tempo / unity-closure machinery via #form-composition-closure. The (C-iv) strategic route gives composites with an equilibrium-based macro-state and admits the equilibrium-convergence / sector-template / closure-defect machinery in #deriv-strategic-composition; the alignment-route and strategic-route forms are structurally distinct (an equilibrium-convergent adversarial composite has no shared $O_c$, only a shared $\mathcal{E}$).
 
