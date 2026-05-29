@@ -26,6 +26,14 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-05-29 — Agency scope: the contrast channel that grounds causal-structure learning (SP-28)
+
+Gem-hunt wave 2 surfaced a convergent finding (audits 742613 + 193847, independently): `#scope-agency`'s causal-effect condition $\exists\,a\neq a': P(o\mid do(a))\neq P(o\mid do(a'))$ has a subtlety, because $o_t = h(\Omega_t, a_{t-1}, \varepsilon_t)$ depends on the action directly — so the contrast can come from the action changing the *environment's* response (surfacing through $h$) or from the action changing only *what is observed of an unchanged $\Omega$* (active perception). Verified first-hand.
+
+Landed as a `#scope-agency` Discussion clarification (not a formal-condition change): the channel distinction, with the $\Omega$-routed contrast identified as the substrate the purposeful machinery learns over (`#der-loop-interventional-access`'s Level-2 claim, the strategy DAG), and the boundary noted as observation-mediated in both directions (an $\Omega$-effect that never surfaces through $h$ is equally outside). Deliberately *not* a formal tightening: `#def-observation-function` intentionally admits active perception, so excluding active-perception-only contrast from the agency *set* would over-reach. The stronger formal-set move remains a Joseph-directable foundational call (PROPOSALS SP-28). This captures both convergent gems (the proprioceptive over-inclusion and the observation-mediation under-inclusion) conservatively.
+
+---
+
 ## 2026-05-28 — Sandbox Hard Ceiling promoted to its own segment (SP-25)
 
 The Sandbox Hard Ceiling — sandbox trajectories are forkable (Pearl Level-1), deployment is singular (Level-2), so the Causal Hierarchy Theorem structurally forbids inferring deployment intervention-response from sandbox evidence regardless of thoroughness — lived only as a subsection inside the chapter-end discussion `#impl-causal-access` (`discussion-grade`). audit-773921 Finding 4 (Gemini) flagged it as a buried high-impact result, converging with the segment author's own Working-Notes promotion candidate (independent auditor + author agreement).
