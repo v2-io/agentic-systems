@@ -75,7 +75,7 @@ The achievable component closure defect $\varepsilon_d^{\min}(k_d)$ under a proj
 
 $$\varepsilon_d^{\min}(k_d) = f_d\!\left(k_d;\; U_d,\; U_f\right)$$
 
-monotone decreasing in each unity argument and monotone increasing in compression aggressiveness (smaller $k_d$). The form is derived in #result-unity-closure-mapping; in linear-Gaussian scalar cases it admits closed-form expressions for $d \in \{x, o, a\}$. $U_O$ and $U_\Sigma$ enter $\varepsilon_a$ jointly rather than separately.
+monotone decreasing in each unity argument and monotone increasing in compression aggressiveness (smaller $k_d$). The form is derived in #result-unity-closure-mapping; in linear-Gaussian scalar cases it admits closed-form expressions for $d \in \{x, o, a\}$. $U_O$ and $U_\Sigma$ enter $\varepsilon_a$ jointly rather than separately — collapsing alignment to a single scalar ($U_O$ alone) would mis-route the repair, since execution-path divergence ($U_\Sigma$) cannot be fixed by re-aligning targets. This is the **anti-collapse** discipline ( #disc-anti-collapse) at the composite layer: two distinct quantities a naive reading merges, routing to different corrections.
 
 ## Epistemic Status
 
