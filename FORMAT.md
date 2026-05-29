@@ -85,6 +85,13 @@ ASF segments carry several kinds of references: internal cross-references betwee
 
 **Intermediate form — uniform resolution.** The intermediate format (the assembled per-volume markdown at `mono/<slug>-v<sem>.md` consumed by agent investigators) resolves all cross-references and external citations to their inline rendered form aggressively, so an agent reading the assembled markdown sees fully-resolved links and citations rather than unresolved markers. Implementation specifics (which kinds resolve at which stage, what the rendered inline form looks like) live in FORMAT-TODO.
 
+**Imported external machinery with internal recapitulation — convention.** When AAT imports an external framework (Pearl's causal hierarchy and $do(\cdot)$ operator; Tishby's information bottleneck; Cramér-Rao; Sylvester's law of inertia; Lur'e's sector-condition framework; etc.) AND the framework also carries an AAT-internal segment recapitulating that framework at AAT's level of deployment, two distinct uses of the imported machinery arise:
+
+- *Primitive-import use* — the segment uses an operator or quantity from the external framework (e.g., $do(a)$) as a primitive of the technical reader's prior. No segment-level `depends:` declaration on the AAT recapitulation segment is required, because the AAT segment is not consumed; the external machinery is.
+- *AAT-deployment use* — the segment relies on the AAT-internal recapitulation's specific deployment (a definition, a sub-scope partition, a derived consequence within AAT). `depends:` on the recapitulation segment is required, per Gate-1 criterion 4.
+
+The convention applies to Pearl's hierarchy specifically ($do$-operator imported as primitive throughout; `#def-pearl-causal-hierarchy` is the AAT recapitulation, depended-on only when its specific AAT-side deployment is consumed) and to other imported-with-internal-recapitulation cases as they arise. Articulated also at `#scope-agency` line 30 (do-operator's first use) and `#the-cycle-in-motion-intro` line 40 (first declarative articulation in Volume 1 Part I).
+
 
 ## Line Wrapping
 
