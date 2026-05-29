@@ -26,6 +26,14 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-05-29 — The anti-collapse discipline, named and landed (SP-26)
+
+A recurring AAT move — *refusing to merge two things a naive model would treat as one, because the collapse hides a difference that routes to a different repair* — is named **anti-collapse** and given a canonical home. Gem-hunt origin: independently surfaced as a "which-parameter-responds-to-which-cause" pattern by two audits (472913, 963715) plus the 471203-cycle recognition (three-cycle convergence); a corpus instance sweep found 7 clean instances spanning all three Parts and reframed it from "which-knob" to *anti-collapse / individuation at the repair-relevant grain* (which absorbs the two-quantities sub-shape and the inverse same-knob case, `#scope-edge-update-causal-validity`).
+
+Landed as `#disc-anti-collapse` in Meta-Architecture I — sibling-register to `#disc-constructive-impossibility-posture`, an epistemic-architectural *style* claim, explicitly **not** a fifth cross-sectional facet (it carries no theorem of its own). It leads with the $\beta$-vs-$\rho$ example for grounding, then the general shape + an instance table anchored on the strongest three ($\beta$-vs-$\rho$ `#form-information-bottleneck`; emitter-scalar-vs-recipient-regime `#der-interaction-channel-classification`; $\kappa$-vs-$\mathcal{A}$ `#scope-observation-ambiguity-modulation`), plus the inverse dual. Pedagogical placement (Joseph's design): a **plant** at the first instance ($\beta$-vs-$\rho$, Part I) forward-flagging the pattern; the full treatment here as cross-cutting vocabulary; an **earned recall** at the satisfaction-gap/control-regret split (`#def-satisfaction-gap`). The Meta-Architecture I preface introduces it as a second style claim alongside the constructive-impossibility posture. Intent: a reading lens that anchors a segment-by-segment read, grounded in a concrete instance rather than asserted abstractly. This is genuine clarifying novelty the "integration not invention" framing undersells (per `math-novelty-recognition`). Name and go-ahead: Joseph 2026-05-29.
+
+---
+
 ## 2026-05-29 — Agency scope: the contrast channel that grounds causal-structure learning (SP-28)
 
 Gem-hunt wave 2 surfaced a convergent finding (audits 742613 + 193847, independently): `#scope-agency`'s causal-effect condition $\exists\,a\neq a': P(o\mid do(a))\neq P(o\mid do(a'))$ has a subtlety, because $o_t = h(\Omega_t, a_{t-1}, \varepsilon_t)$ depends on the action directly — so the contrast can come from the action changing the *environment's* response (surfacing through $h$) or from the action changing only *what is observed of an unchanged $\Omega$* (active perception). Verified first-hand.
