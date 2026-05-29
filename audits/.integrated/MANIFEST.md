@@ -11,10 +11,7 @@ The unit that earns a move is the **finding**, not the file, and the test
 is "closed *in the right direction*," not merely "closed." Moving a file
 here asserts that. `git mv` is reversible if any classification was wrong.
 
-This manifest is the per-file justification audit trail. The in-flight
-triage spine (state machine, evidence hierarchy, per-file partition, agent
-briefs) lives at [`msc/audit-backlog-triage-2026-05-15.md`](../../msc/audit-backlog-triage-2026-05-15.md);
-entries graduate here only once justified.
+This manifest is the per-file justification audit trail. The live routing tracker — where each audit currently stands (routed vs. graduated) — is [`../STATUS.md`](../STATUS.md); entries graduate here only once justified. The 2026-05-15/16 cleanup cycle's working spine (state machine, evidence hierarchy, per-file partition, agent briefs) is archived alongside this manifest at [`audit-backlog-triage-2026-05-15.md`](audit-backlog-triage-2026-05-15.md).
 
 ## Evidence hierarchy (what counts as "verified disposition")
 

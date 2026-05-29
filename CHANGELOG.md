@@ -336,7 +336,7 @@ History per integration-is-replacement: the prior false "$S_{\text{id}}$ is one 
 
 ## 2026-05-16
 
-**Audit-backlog triage — fan-out + a strengthen-first worked example (Model-S non-exit).** The audit-backlog cleanup (`msc/audit-backlog-triage-2026-05-15.md`) consolidated audit working dirs into `audits/`, ran a pilot + 5-cluster parallel adjudication of the standalone backlog, and produced the cycle's crown-jewel: a textbook **strengthen-before-soften, completion-state-3** outcome.
+**Audit-backlog triage — fan-out + a strengthen-first worked example (Model-S non-exit).** The audit-backlog cleanup (`audits/.integrated/audit-backlog-triage-2026-05-15.md`; retired there from `msc/` on 2026-05-28) consolidated audit working dirs into `audits/`, ran a pilot + 5-cluster parallel adjudication of the standalone backlog, and produced the cycle's crown-jewel: a textbook **strengthen-before-soften, completion-state-3** outcome.
 
 Three independent audit clusters (B/C/D) converged on `#deriv-sector-condition` Prop A.1S(iii): it asserted an *infinite-horizon* non-exit bound `P(τ_R<∞) ≤ nσ²/(2αR²)` justified by a *fixed-time* "Markov tail on the supermartingale" — a conflation of two different probabilistic objects. Two prior audit records (742613-SUPPLEMENT §2, 613842-F2) had recommended *softening* (restate as a fixed-time tail). Per the discipline, the strengthening (Doob/Ville maximal inequality on the Itô-Lyapunov supermartingale — a route a peer adjudication confidently predicted would succeed) was worked in full *first*, in a dedicated background spike (`spikes/spike-stochastic-non-exit-strengthening-2026-05-16.md`).
 

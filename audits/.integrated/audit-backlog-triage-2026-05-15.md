@@ -1,3 +1,6 @@
+> [!note]
+> **Retired 2026-05-28 — archaeology, not live.** This was the one-cycle working spine for the 2026-05-15/16 standalone-backlog cleanup; that pass is complete. The live routing tracker is now [`../STATUS.md`](../STATUS.md), and the evergreen process content this file pioneered lives in [`../../doc/audit-routing-instructions.md`](../../doc/audit-routing-instructions.md). Kept here as the reasoning trail of that cleanup (state machine, evidence hierarchy, per-file partition, agent briefs, the Model-S strengthen-first worked example).
+
 # Audit-backlog triage — live spine (started 2026-05-15)
 
 > ## ⚠️ READ FIRST — pre-registered failure predictions for the consolidated pass

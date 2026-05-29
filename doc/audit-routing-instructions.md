@@ -409,12 +409,7 @@ about itself.
 The mechanics below are the working procedure for an audit-routing cycle.
 Tags mark groundedness; treat untagged items as **current ops**.
 
-**Naming** *(convention SOP)*. The working rendezvous file
-`msc/audit-backlog-triage-2026-05-15.md` is the **routing tracker**, *not*
-"the spine" — "spine" is reserved for the theory's critical path (the
-longest core-claim dependency chain). Path-rename of the file is deferred
-to avoid breaking live MANIFEST / CLAUDE.md backlinks mid-cycle; the *term*
-is corrected now.
+**Naming** *(convention SOP)*. The **routing tracker** is the evergreen [`audits/STATUS.md`](../audits/STATUS.md) — the live index of where each audit stands (routed vs. graduated, what remains open). It is *not* "the spine" — "spine" is reserved for the theory's critical path (the longest core-claim dependency chain). (History: the routing-tracker role was first carried by the one-cycle working file `msc/audit-backlog-triage-2026-05-15.md`; that file completed its 2026-05-15/16 cleanup pass and was retired to [`audits/.integrated/audit-backlog-triage-2026-05-15.md`](../audits/.integrated/audit-backlog-triage-2026-05-15.md) as reasoning-trail archaeology on 2026-05-28, with the live role moved to `STATUS.md`. The deferred path-rename it flagged is thereby discharged.)
 
 **Route, don't execute** *(authoritative SOP)*. A finding's disposition is
 *where it belongs*, not *whether we did what it asked*. Strengthen-before-

@@ -39,7 +39,12 @@ oblivion, or dropped into a black hole where it is never noticed again
 *just because it was "irrelevant" to theory fixes.* This is a standing,
 non-optional gate. It does **not** apply to the `ADJUDICATION-WORKING-*`
 dirs — those are ordinary backlog-triage working trails, dispositioned
-by the spine [`msc/audit-backlog-triage-2026-05-15.md`](../msc/audit-backlog-triage-2026-05-15.md).
+during the 2026-05-15/16 cleanup cycle (working spine archived at
+[`.integrated/audit-backlog-triage-2026-05-15.md`](.integrated/audit-backlog-triage-2026-05-15.md)).
+
+The **live routing status** — where each audit currently stands — is
+[`STATUS.md`](STATUS.md); the **process** for routing findings is
+[`../doc/audit-routing-instructions.md`](../doc/audit-routing-instructions.md).
 
 ## Naming: read "AAD" here as "AAT"
 
