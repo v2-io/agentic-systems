@@ -458,7 +458,7 @@ The `00-initial-predictions.md` file makes ~50 falsifiable predictions across §
 ### Predictions confirmed in less-strong form (negative calibration)
 
 - **`#form-information-bottleneck` overclaim** — predicted possible status mismatch if labeled too strongly. **Direction-right but editorial-not-foundational**: the segment's prose Epistemic Status disambiguates tiers honestly, the auditor explicitly *didn't* promote (BP3 above). Cross-cycle convergence with 613842 Fresh-1.
-- **`#post-composition-consistency` axiomatic / scale-invariance with overclaim vulnerability** — predicted. *Partially confirmed*: the segment was found to be doing more than the audit instructions warranted for a postulate (importing Section III machinery), but the core scale-invariance claim itself was not overclaimed; the issue was canonicalization (F6) not over-claim.
+- **`#disc-composition-consistency` axiomatic / scale-invariance with overclaim vulnerability** — predicted. *Partially confirmed*: the segment was found to be doing more than the audit instructions warranted for a postulate (importing Section III machinery), but the core scale-invariance claim itself was not overclaimed; the issue was canonicalization (F6) not over-claim.
 - **`#emp-update-gain` "any optimal adaptation process must approximate this functional dependence" overclaim** — predicted (segment 20 `20-emp-update-gain.md:20-23`). **Direction-right at the prose level**: the auditor flagged the "Any optimal adaptation process must approximate this functional dependence" sentence as overclaim, but didn't promote because the robust-qualitative status + open-questions framing soften it enough. Watch item.
 
 ### Predictions that proved correct but mid-process repositioned

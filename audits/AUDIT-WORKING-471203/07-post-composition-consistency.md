@@ -1,4 +1,4 @@
-# Reflection: #post-composition-consistency
+# Reflection: #disc-composition-consistency
 
 **Stage:** deps-verified. **Status:** axiomatic. **Type:** postulate. **Depends:** [scope-agency].
 

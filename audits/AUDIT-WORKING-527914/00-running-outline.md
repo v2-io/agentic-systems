@@ -10,7 +10,7 @@ Segments read:
 4. `#def-chronica`
 5. `#scope-adaptive-system`
 6. `#scope-agency`
-7. `#post-composition-consistency`
+7. `#disc-composition-consistency`
 8. `#post-causal-structure`
 9. `#def-pearl-causal-hierarchy`
 10. `#form-agent-model`

@@ -259,7 +259,7 @@ Under standard Shannon information theory, $\pi^\ast$ is a deterministic functio
 
 **Source:** Codex audit 2026-04-22, Finding 3. **Confidence:** high.
 
-**Problematic passage** (`01-aat-core/src/post-composition-consistency.md` line 38 and following):
+**Problematic passage** (`01-aat-core/src/disc-composition-consistency.md` line 38 and following):
 
 > [$\tau_{\text{eq}} \ll \tau_{\text{ext}}$ is] a reliable practical test ... the gap between passing that heuristic and meeting Tier 1 conditions is small in common settings.
 

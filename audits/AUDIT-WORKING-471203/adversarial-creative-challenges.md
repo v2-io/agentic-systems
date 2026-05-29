@@ -157,7 +157,7 @@ The chain-rule corollary applied to nested sub-agents gives $\prod_\ell \kappa_\
 
 **Strengthening attempt:** redundancy at each level effectively raises $\kappa_\ell$ (multiple parallel pathways → higher composite contraction). The biological example fits if we estimate $\kappa$ correctly with redundancy in mind. The model isn't wrong; it's just that redundancy is a structural feature the simple chain-rule application doesn't capture.
 
-**Verdict: ★★ scope-narrowing.** The composition-tower telescoping result needs a redundancy correction for systems with parallel sub-agents at each level. The framework probably already has this via the (CC-parallel) parallel-composition formula (`#post-composition-consistency`). *Action:* could be made more explicit. Phase-2 verify whether the parallel-composition machinery is consistently applied to biological-style nested redundant systems.
+**Verdict: ★★ scope-narrowing.** The composition-tower telescoping result needs a redundancy correction for systems with parallel sub-agents at each level. The framework probably already has this via the (CC-parallel) parallel-composition formula (`#disc-composition-consistency`). *Action:* could be made more explicit. Phase-2 verify whether the parallel-composition machinery is consistently applied to biological-style nested redundant systems.
 
 ### Challenge 13: Class 2 logogenic agents and the coupled-formulation hand-off
 

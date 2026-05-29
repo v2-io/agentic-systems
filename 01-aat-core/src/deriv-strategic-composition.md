@@ -3,7 +3,7 @@ slug: deriv-strategic-composition
 type: derivation
 status: conditional
 depends:
-  - post-composition-consistency
+  - disc-composition-consistency
   - scope-composite-agent
   - result-sector-persistence-template
   - form-objective-functional

@@ -6,7 +6,7 @@
 
 Both deps upstream. ✓
 
-This segment retroactively confirms that the Pearl-$do$ uses in `#scope-agency` and `#post-composition-consistency` are *defensible* under the "Pearl's $do$ is standard math notation" reading of FORMAT.md Gate 1. But the depends-list-incompleteness candidate finding stands: if AAD wants the depends-graph to be a strict verification target, those segments should declare the dep; if AAD wants to treat $do$ as standard, FORMAT.md should name the policy.
+This segment retroactively confirms that the Pearl-$do$ uses in `#scope-agency` and `#disc-composition-consistency` are *defensible* under the "Pearl's $do$ is standard math notation" reading of FORMAT.md Gate 1. But the depends-list-incompleteness candidate finding stands: if AAD wants the depends-graph to be a strict verification target, those segments should declare the dep; if AAD wants to treat $do$ as standard, FORMAT.md should name the policy.
 
 ## Predictions vs evidence
 

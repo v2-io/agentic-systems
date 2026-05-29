@@ -1,7 +1,7 @@
-# Reflection: #post-composition-consistency
+# Reflection: #disc-composition-consistency
 
 **1. Predictions vs evidence.**
-I predicted a segment defining the internal state ($M_t$), but the OUTLINE placed `#post-composition-consistency` next instead. This makes structural sense: before defining *how* an agent works internally, the theory postulates that *whatever* the internal machinery is, it must be scale-invariant. A team of agents must be analyzable under the same AAD math as a single agent. The evidence confirms this, but it introduces a much heavier reliance on Section III (Composition) and Tiered admissibility than I expected this early.
+I predicted a segment defining the internal state ($M_t$), but the OUTLINE placed `#disc-composition-consistency` next instead. This makes structural sense: before defining *how* an agent works internally, the theory postulates that *whatever* the internal machinery is, it must be scale-invariant. A team of agents must be analyzable under the same AAD math as a single agent. The evidence confirms this, but it introduces a much heavier reliance on Section III (Composition) and Tiered admissibility than I expected this early.
 
 **2. Cross-segment consistency.**
 It correctly depends on `#scope-agency`. However, this segment is structurally strange. It is placed in Section I, but it heavily forward-references `#scope-composite-agent`, `#form-composition-closure`, `#result-contraction-template`, and `#der-tempo-composition` which all live in Section III. This is a `depends` violation in spirit, if not in YAML frontmatter, because the text relies entirely on concepts not yet introduced. The "Derivation Hierarchy" explicitly states that the consequences are derived in Section III. This segment is acting more like a forward-pointer or a bridge than a self-contained Section I postulate.
@@ -31,7 +31,7 @@ It enables the application of AAD to organizations, software teams, and multi-ag
 I need to officially log the `depends` / forward-reference bloat of this segment as a finding in my scratchpad. It's a prime example of "Integration Drift" where later Section III formalisms have bled back into a foundational Section I postulate, making it unreadable without Section III context.
 
 **11. What changes in my outline for the final report?**
-I will add a specific finding: "Integration Drift: `#post-composition-consistency` is overloaded with Section III formalisms, breaking the progressive disclosure of Section I."
+I will add a specific finding: "Integration Drift: `#disc-composition-consistency` is overloaded with Section III formalisms, breaking the progressive disclosure of Section I."
 
 **12. How valuable does this segment *feel* to me?**
 Conceptually, very valuable. Structurally, it feels like it's in the wrong place or has been over-edited by a later pass.

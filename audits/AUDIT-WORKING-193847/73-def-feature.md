@@ -19,7 +19,7 @@ I must watch for claims that treat "features" and "refactoring" as separate cate
 `#result-specification-bound` will derive the implementation speed limit based on the information bottleneck between the stakeholder and the developer. It will show that "infinite speed" is impossible even for perfect AI if the specification is finite.
 
 **7. What would I change?**
-I would like to see a formal "Feature Decomposition Rule" in the future—perhaps a corollary to `#post-composition-consistency`—that explains how to resolve disagreements between stakeholders about feature boundaries. (e.g., "The relevant decomposition is the one used by the agent whose tempo $\mathcal{T}$ is being measured").
+I would like to see a formal "Feature Decomposition Rule" in the future—perhaps a corollary to `#disc-composition-consistency`—that explains how to resolve disagreements between stakeholders about feature boundaries. (e.g., "The relevant decomposition is the one used by the agent whose tempo $\mathcal{T}$ is being measured").
 
 **8. What am I now curious about?**
 I'm curious how "bug fixes" fit in. Are they features? By this definition, yes: they coherently change behavior and (usually) reduce future $U_M$. The framework treats "building" and "fixing" as the same adaptive act.

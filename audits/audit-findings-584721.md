@@ -1320,7 +1320,7 @@ which the auditor wrote as state-snapshots before the FINAL.
   BH-identity verification)
 - `01-aat-core/src/form-strategy-complexity-cost.md:141` (F-D2
   BH-identity verification)
-- `01-aat-core/src/post-composition-consistency.md` frontmatter
+- `01-aat-core/src/disc-composition-consistency.md` frontmatter
   (stage: deps-verified; confirms not graduated, per F-A cluster
   routing through SP-6)
 - `01-aat-core/src/def-mismatch-signal.md:34` (742613-F1 score-function

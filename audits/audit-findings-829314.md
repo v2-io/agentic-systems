@@ -468,7 +468,7 @@ Per the brief: for each finding above, name which segments in `01-aat-core/src/`
 
 | Trail ID | Disposition | First-hand verification |
 |---|---|---|
-| Core-F1-trail (`post-composition-consistency` postulate+derived) | `subsumed-by-FINAL — duplicate of 471203 §B F5 (correctly-rejected on merits)` | Did not read `01-aat-core/src/post-composition-consistency.md` first-hand for this extraction. Accepting MANIFEST disposition + 471203's prior trail. The class-level decision (PROPOSALS SP-6 / F-A cluster) governs. |
+| Core-F1-trail (`post-composition-consistency` postulate+derived) | `subsumed-by-FINAL — duplicate of 471203 §B F5 (correctly-rejected on merits)` | Did not read `01-aat-core/src/disc-composition-consistency.md` first-hand for this extraction. Accepting MANIFEST disposition + 471203's prior trail. The class-level decision (PROPOSALS SP-6 / F-A cluster) governs. |
 | Core-F2-trail (forward-ref in `def-action-transition`) | `subsumed-by-FINAL → ledger S27` | Verified `01-aat-core/src/def-action-transition.md:41` carries the Markov-of-Ω paragraph (the 471203 F3 fix landed); did not specifically check whether the forward-pointer prose to "epistemic opacity" was tightened. Accepting MANIFEST disposition as honest forward-pointer by design. |
 | Core-F3-trail (`der-agent-opacity` before `der-interaction-channel-classification`) | `subsumed-by-FINAL → ledger S26 (OUTLINE-order pass)` | Did not first-hand check whether OUTLINE order has been adjusted. Accepting MANIFEST/S26 disposition (one consolidated nudge; `bin/lint-outline` is the mechanism). |
 | Core-F4-trail (`scope-ciy-observational-proxy` before `def-causal-information-yield`) | `subsumed-by-FINAL → ledger S26` | Same as F3; accepting MANIFEST/S26 disposition. |

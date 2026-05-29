@@ -6,11 +6,11 @@
 
 **3. Math verification:** The formal statement $\exists\, a \neq a' \text{ s.t. } P(o \mid do(a)) \neq P(o \mid do(a'))$ is the standard and robust way to define causal efficacy. If the interventional distributions are identical, the action is a "nominal agent" action (a disconnected steering wheel).
 
-**4. What direction will the theory take next?** The OUTLINE says the next segment is `#post-composition-consistency` (Agent/subagent scale invariance). This is a fascinating leap from basic definitions directly to scale invariance!
+**4. What direction will the theory take next?** The OUTLINE says the next segment is `#disc-composition-consistency` (Agent/subagent scale invariance). This is a fascinating leap from basic definitions directly to scale invariance!
 
 **5. What errors should I watch for?** In domain instantiations like TST, it's easy to assume an action has causal effect. But what about a code refactoring that doesn't change test outcomes or user behavior? Does that violate agency? No, because $\Omega$ includes the codebase structure itself, and the observation function $h$ includes the developer looking at the code. But if $h$ were strictly defined as *only* "test output," then refactoring might fail the causal contrast test! I need to watch how TST defines the observation space $\mathcal{O}$ to ensure "internal" codebase changes register as causal effects.
 
-**6. Predictions for next segment:** `#post-composition-consistency` will likely postulate that if a system meets the definition of an agent, its internal components might also be agents, and the math of AAD applies recursively at all scales where the scope conditions hold.
+**6. Predictions for next segment:** `#disc-composition-consistency` will likely postulate that if a system meets the definition of an agent, its internal components might also be agents, and the math of AAD applies recursively at all scales where the scope conditions hold.
 
 **7. What would I change?** Nothing. The distinction between a nominal agent and a true agent via the $do()$ operator is exact and necessary.
 

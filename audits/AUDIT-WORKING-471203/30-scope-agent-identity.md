@@ -54,7 +54,7 @@ A naming-brainstorm seed: "scope-agent-identity" is precise but doesn't surface 
 - TF-XX diff-voice pattern (16 instances now).
 - Implicit-Markov-of-$\Omega$ never named (segment 2).
 - Under-quantified residual-uncertainty in `#scope-adaptive-system`.
-- Depends-list incompleteness in `#post-composition-consistency` (downstream-derived enrichment without depends).
+- Depends-list incompleteness in `#disc-composition-consistency` (downstream-derived enrichment without depends).
 - Depends-list incompleteness in `#der-gain-sector-bridge` (uses (PI) without depending on `#scope-agent-identity`).
 - Pearl-do notation use in `#scope-agency` before `#def-pearl-causal-hierarchy` (mild).
 - Citation-verification candidates: Tishby-Zaslavsky 2015, Nesterov 2004 Thm 2.1.10, Čencov 1982, Bareinboim et al. 2022 CHT precise form.

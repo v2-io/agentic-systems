@@ -88,7 +88,7 @@ Several existing pieces become legibly *one structure* under the framing:
 
 | Existing piece | Reading under structural-RG framing |
 |---|---|
-| `#post-composition-consistency` | Form-preservation postulate: AAT shape is invariant under $\Lambda$. |
+| `#disc-composition-consistency` | Form-preservation postulate: AAT shape is invariant under $\Lambda$. |
 | (A1)–(A4) of `#form-composition-closure` | Form-preservation conditions: macro must itself be AAT. |
 | `#result-sector-persistence-template` | The per-scale form-preservation invariant — same Lyapunov inequality at every level. |
 | `#der-temporal-nesting` | Time-axis projection of structural-RG depth; the 5-level table is the depth hierarchy. |
@@ -107,14 +107,14 @@ This table itself is the clean-theory-and-unification payoff of the framing. Non
 Use structural-RG / form-preservation as the unifying organizational lens for AAT's composition + nesting material. Cite Friston 2019/2025 + IB-RG (Mehta-Schwab, Kline-Palmer) + singular-perturbation-RG (Chen-Goldenfeld-Oono) + recursive-blankets (Kirchhoff 2018) as the substrate; position AAT's content as integration (closure-defect bridge bound, graded directed-separation, (O, Σ) recursion) within that frame.
 
 The framing should appear in:
-- Discussion sections of `#post-composition-consistency` and `#form-composition-closure` — name the form-preservation reading explicitly, cite the substrate work.
+- Discussion sections of `#disc-composition-consistency` and `#form-composition-closure` — name the form-preservation reading explicitly, cite the substrate work.
 - A new meta-segment or appendix that makes the unification table (§3.3) explicit. This is the structural payoff.
 - Discussion section of `#result-sector-persistence-template` — name "applies at every level" as the per-scale form-preservation invariant.
 - Discussion section of `#der-temporal-nesting` — name the 5-level table as the time-axis projection of structural-RG depth.
 
 ### 4.2 Specific moves
 
-**Move A — Adopt-and-cite Friston 2019/2025 in `#post-composition-consistency` and `#form-composition-closure` Discussion.** Make the form-preservation reading of (A1)–(A4) explicit. Cite the substrate works. **Effort: small. High value.**
+**Move A — Adopt-and-cite Friston 2019/2025 in `#disc-composition-consistency` and `#form-composition-closure` Discussion.** Make the form-preservation reading of (A1)–(A4) explicit. Cite the substrate works. **Effort: small. High value.**
 
 **Move B — Promote `#sketch-multi-timescale-stability` via template-stacking + Tikhonov + Chen-Goldenfeld-Oono.** Stand the N-level stability result on the per-scale form-preservation. The template instantiates at every level; sufficient $K_c$-separation between adjacent levels gives composite stability. **Effort: medium. Closes a known gap.**
 

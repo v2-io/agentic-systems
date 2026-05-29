@@ -6,7 +6,7 @@ This is a substantial bridge segment doing real structural-unification work. Lon
 
 ## Dependency check
 
-All upstream — including two Appendix A derivations (`deriv-sector-condition`, `deriv-gain-sector`) declared properly in depends. Good appendix-back-pointer practice (contrast with `#post-composition-consistency`'s undeclared appendix uses).
+All upstream — including two Appendix A derivations (`deriv-sector-condition`, `deriv-gain-sector`) declared properly in depends. Good appendix-back-pointer practice (contrast with `#disc-composition-consistency`'s undeclared appendix uses).
 
 ## Predictions vs evidence
 

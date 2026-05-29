@@ -1,17 +1,19 @@
 ---
-slug: post-composition-consistency
-type: postulate
-status: axiomatic
+slug: disc-composition-consistency
+type: discussion
+status: discussion-grade
 depends:
   - scope-agency
-stage: deps-verified
+stage: draft
 ---
 
-# Postulate: Composition Consistency
+# Discussion: Composition Consistency — Cross-Level Compatibility as Framework Commitment
 
-This segment installs a structural *meta-requirement*: AAT's predictions must be compatible across levels of description. If a system $S$ and any decomposition $\{S_1, \ldots, S_n\}$ both satisfy the scope condition, the theory's claims at the $S$-level cannot contradict its claims at the $\{S_i\}$-level. The scope condition does not restrict which level the theory applies to, so the theory itself must be level-invariant — otherwise the same observable could receive contradictory answers depending on where the analyst draws the modeling boundary. The postulate is axiomatic at the meta-requirement layer; its consequences are tiered.
+This is a *meta-recognition* about how AAT applies, not a fact about how any individual agent works: AAT's predictions must be compatible across levels of description. If a system $S$ and any decomposition $\{S_1, \ldots, S_n\}$ both satisfy the scope condition, the theory's claims at the $S$-level cannot contradict its claims at the $\{S_i\}$-level. The scope condition does not restrict which level the theory applies to, so the theory itself must be level-invariant — otherwise the same observable could receive contradictory answers depending on where the analyst draws the modeling boundary. The commitment is methodological at the meta-requirement layer (a framework choice about applicability, not a physical fact about agents); its operational consequences are tiered.
 
-The postulate has formal teeth: three composition laws must exist. *Tempo* at the composite level must be expressible as a function of sub-agent tempos plus their coordination structure; *persistence* of the composite must be derivable from the sub-agents' individual persistence plus that coordination structure; *mismatch* must compose consistently. The laws themselves — what tempo and persistence look like at the composite level, and when they transfer cleanly — are *derived* from this postulate in Part III under specific conditions, organized into three successively more specific layers:
+This commitment is the cross-level companion to the four certificate-spine facets ( #disc-stability-certificate). Where the spine's facets describe the geometry of a *single* equilibrium-stability certificate (interior / scope-of-existence / forced-identity / boundary / projection), composition consistency describes the relationship *across* certificates at different levels — the same persistence argument must apply at every level where the scope condition is met, and the operational unpacking below is how that "applies at every level" claim cashes out. It sits alongside #disc-modularity-state-dynamics as the second cross-level meta-recognition: M4 names how architectural class *changes* under operations; composition consistency names how the framework *applies across levels* regardless of architectural class. Together they organize the Part III meta-architecture.
+
+The commitment has formal teeth: three composition laws must exist. *Tempo* at the composite level must be expressible as a function of sub-agent tempos plus their coordination structure; *persistence* of the composite must be derivable from the sub-agents' individual persistence plus that coordination structure; *mismatch* must compose consistently. The laws themselves — what tempo and persistence look like at the composite level, and when they transfer cleanly — are *derived* from this postulate in Part III under specific conditions, organized into three successively more specific layers:
 
 - a *scope-selection* layer ( #scope-composite-agent, teleological-alignment threshold) — *which* decompositions qualify as composites at all;
 - an *admissibility* layer ( #form-composition-closure, conditions (A1)–(A4) and the bridge lemma) — *when* composite macro-dynamics are well-posed under those scope conditions;
@@ -23,7 +25,7 @@ The boundary an analyst draws is itself a modeling choice. A development team is
 
 ## Formal Expression
 
-*[Postulate (postulate-composition-consistency)]*
+*[Commitment (composition-consistency)]*
 
 For any system $S$ satisfying the scope condition ( #scope-agency), and any decomposition of $S$ into subsystems $\{S_1, \ldots, S_n\}$ where each $S_i$ also satisfies the scope condition, AAT's predictions at the system level must be compatible with its predictions at the subsystem level. Specifically, composition laws must exist such that:
 
@@ -99,3 +101,4 @@ This is the formal analog of Brooks's Law: adding people to a late project incre
 - Composition of directed separation: if each sub-agent's $f_M$ is $G_t$-independent, does the composite's $f_M^c$ remain $G_t^c$-independent? Hypothesis: goal-blindness composes, BUT coordination routing may break it — if which observations reach the composite depends on the shared objective, the composite's effective observation function is goal-dependent. This is the organizational analog of the LLM scope restriction in #der-directed-separation.
 - The "atomic agent" question: if every agent is decomposable, where does it bottom out? At agents whose internal dynamics are not usefully described by AAT — below the level where observations, actions, and uncertainty exist, the scope condition fails and the recursion terminates.
 - The relationship to holons (Koestler 1967): an AAT agent satisfying composition consistency is a holon — simultaneously a whole (analyzable as a single agent) and a part (decomposable into sub-agents). The term is occasionally useful but carries significant mystical baggage from later appropriations. Use sparingly.
+- **Provenance — retype from postulate to discussion-grade meta-recognition (2026-05-28).** Originally landed in Volume 1 Part I Ch.1 as a `type: postulate` / `status: axiomatic` segment with the slug `post-composition-consistency`. The OUTLINE annotation `(possibly out of place)` recorded the placement question through multiple cycles. Audit 384279 (Claude Opus 4.7, 2026-05-27) recommended hybrid relocation — strip operational unpacking back to Part III, keep postulate proper in Ch.1. Joseph 2026-05-28 reframed: meta-segments add machinery and cognitive weight that's *only realized* when given pedagogical work to do, not buried as footnotes; composition consistency is itself a meta-segment in the making, structurally peer to #disc-modularity-state-dynamics as a cross-level meta-recognition (M4 names how architectural class *changes*; composition consistency names how the framework *applies across levels*). Recognized as Meta-Architecture II member; retyped to `discussion` / `discussion-grade`; slug renamed `post-composition-consistency` → `disc-composition-consistency`. Operational content (Tier 1M closed-form derived block, screening test, Brooks's-Law instantiation) retained intact — now local rather than forward-referenced, since the segment's home is Part III where its dependencies live. The eq-tag `*[Commitment (composition-consistency)]*` replaces the prior `*[Postulate ...]*` to reflect the methodological-commitment character (a framework choice about applicability, not a physical-fact axiom). Strengthening cycle — Findings block + prior-art landscape (Simon's near-decomposability, Koestler's holons, multi-level selection, renormalization-group, actor-systems, the Friston-Heins-Verbelen-Da Costa 2025 scale-free active inference machinery already queued for #sketch-multi-timescale-stability) + paper-extraction candidacy — queued separately in `spikes/PROPOSED.md`.

@@ -6,7 +6,7 @@
 
 `depends: [scope-adaptive-system, def-action-transition]`. Both upstream.
 
-**HOWEVER:** the Formal Expression uses Pearl's $do(\cdot)$ operator, which is defined in `#def-pearl-causal-hierarchy`. That slug is **not in the depends list**, and per OUTLINE ordering, `#def-pearl-causal-hierarchy` lies *3 segments downstream* of this one (after `#post-composition-consistency` and `#post-causal-structure`). The segment includes a parenthetical "(where $do(\cdot)$ is Pearl's intervention operator; see #def-pearl-causal-hierarchy)" — which acknowledges the forward reference in prose without declaring it in YAML.
+**HOWEVER:** the Formal Expression uses Pearl's $do(\cdot)$ operator, which is defined in `#def-pearl-causal-hierarchy`. That slug is **not in the depends list**, and per OUTLINE ordering, `#def-pearl-causal-hierarchy` lies *3 segments downstream* of this one (after `#disc-composition-consistency` and `#post-causal-structure`). The segment includes a parenthetical "(where $do(\cdot)$ is Pearl's intervention operator; see #def-pearl-causal-hierarchy)" — which acknowledges the forward reference in prose without declaring it in YAML.
 
 This is a **candidate finding under burden of proof**. See §B-candidate below.
 
@@ -28,7 +28,7 @@ The set-difference characterization is well-formed. The "passive observers" excl
 
 ## What direction next
 
-`#post-composition-consistency` — the agent-subagent scale invariance postulate.
+`#disc-composition-consistency` — the agent-subagent scale invariance postulate.
 
 ## Errors to watch for
 
@@ -37,7 +37,7 @@ The set-difference characterization is well-formed. The "passive observers" excl
 
 ## Predictions for next segments
 
-`#post-composition-consistency`: a postulate (axiomatic) of the form "if a system satisfies the scope condition at one level of description, it satisfies it at every level." Probably with a sentence about why: composition consistency makes composite-agent scope claims well-posed.
+`#disc-composition-consistency`: a postulate (axiomatic) of the form "if a system satisfies the scope condition at one level of description, it satisfies it at every level." Probably with a sentence about why: composition consistency makes composite-agent scope claims well-posed.
 
 ## What would I change
 
@@ -45,7 +45,7 @@ The depends-list omission noted above. The cleanest fix is to add `def-pearl-cau
 
 ## Curious about
 
-Whether `#post-composition-consistency` (next) and `#post-causal-structure` (after that) are *also* invoking forward-defined objects. The Pearl-causal-hierarchy might be needed by all three before it's defined. If so, the cleanest move is to reorder Pearl-causal-hierarchy to before the scope segments. I'll find out as I read.
+Whether `#disc-composition-consistency` (next) and `#post-causal-structure` (after that) are *also* invoking forward-defined objects. The Pearl-causal-hierarchy might be needed by all three before it's defined. If so, the cleanest move is to reorder Pearl-causal-hierarchy to before the scope segments. I'll find out as I read.
 
 ## What new knowledge does this enable
 

@@ -1,6 +1,6 @@
 # 07 - post-composition-consistency
 
-Segment: `01-aat-core/src/post-composition-consistency.md`
+Segment: `01-aat-core/src/disc-composition-consistency.md`
 Dependencies: `scope-agency` - declared dependency satisfied.
 Status observed: `type: postulate`, `status: axiomatic`, `stage: deps-verified`.
 

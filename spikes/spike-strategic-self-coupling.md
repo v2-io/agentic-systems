@@ -8,7 +8,7 @@ related_segments:
   - def-strategy-dag
   - norm-explicit-strategy-condition
   - der-deliberation-cost
-  - post-composition-consistency
+  - disc-composition-consistency
 related_gaps:
   - fixed-action-set assumption (surfaced in #disc-adversarial-coupling-pressure §"Scope: implicit assumptions")
 ---
@@ -120,7 +120,7 @@ with the asymmetry's magnitude as the parameter that determines coupling's credi
 - **`#der-directed-separation`** — supplies $\kappa_{\text{processing}}$ as the coupling-state variable. The (M1) extension uses this directly.
 - **`#def-strategy-dag`** — supplies the DAG that the (M2) enabling-edge extension modifies. Strategy DAG already has confidence-weighted edges (`#deriv-edge-credence-dynamics`); enabling edges are a new edge-type, not a new graph.
 - **`#disc-adversarial-coupling-pressure`** — the *opposite-valence* operation. Naming the symmetry between the two segments (self-driven vs externally-driven; enabling vs vulnerability) is the load-bearing recognition.
-- **`#post-composition-consistency`** — self-coupling at the individual level may be analyzed as a composition move (couple sub-self to other sub-self, where Ainslie's intertemporal-bargaining picture applies). The connection is real but oblique; do not over-promise it before the formalization is in hand.
+- **`#disc-composition-consistency`** — self-coupling at the individual level may be analyzed as a composition move (couple sub-self to other sub-self, where Ainslie's intertemporal-bargaining picture applies). The connection is real but oblique; do not over-promise it before the formalization is in hand.
 - **`#der-deliberation-cost`** — supplies the think-vs-act cost framework that the (M3) reversibility-cost extension may build on.
 
 ---

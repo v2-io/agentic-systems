@@ -4,7 +4,7 @@
 I predicted the segment would abstract the Lyapunov math from `#result-sector-condition-stability` into a parameter-free meta-template using a generic state variable $\xi$. The segment delivered exactly this, providing a rigorous table of how six different parts of the framework instantiate the $(\xi, F, \rho_\xi, R)$ tuple.
 
 **2. Cross-segment consistency:**
-This is the central nervous system of the framework's mathematics. It connects the epistemic loop back to the `#post-composition-consistency` postulate by defining exactly what "scale invariance" means: it means the Lyapunov template holds at that scale. The forward references to adversarial destabilization, team persistence, and strategic persistence are extremely promising.
+This is the central nervous system of the framework's mathematics. It connects the epistemic loop back to the `#disc-composition-consistency` postulate by defining exactly what "scale invariance" means: it means the Lyapunov template holds at that scale. The forward references to adversarial destabilization, team persistence, and strategic persistence are extremely promising.
 
 **3. Math verification:**
 The math remains the standard Lyapunov proof. However, the "External mathematical lineage" section is a tour de force. It correctly links the sector condition (T2) to strong monotonicity in monotone-operator theory (Bauschke-Combettes). Furthermore, its critique of the Active Inference (Friston) stability argument—pointing out that AI relies on fragile Non-Equilibrium Steady-State (NESS) density assumptions while AAD relies on robust, standard nonlinear control theory—is devastatingly accurate and mathematically grounded.

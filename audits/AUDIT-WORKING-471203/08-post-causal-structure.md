@@ -6,11 +6,11 @@
 
 Both deps upstream. ✓
 
-The Formal Expression depends only on `#def-chronica` content (the ordered-sequence claim). The Discussion references downstream segments (`#def-pearl-causal-hierarchy`, `#def-causal-information-yield`, `#def-mismatch-signal`) for orientation — these are *Discussion-section* forward references, which are permissible per FORMAT.md. **This segment is depends-clean** in a way `#post-composition-consistency` was not.
+The Formal Expression depends only on `#def-chronica` content (the ordered-sequence claim). The Discussion references downstream segments (`#def-pearl-causal-hierarchy`, `#def-causal-information-yield`, `#def-mismatch-signal`) for orientation — these are *Discussion-section* forward references, which are permissible per FORMAT.md. **This segment is depends-clean** in a way `#disc-composition-consistency` was not.
 
 This **softens my pattern claim from segment 7**. Two distinct shapes of depends-incompleteness exist:
 - `#scope-agency`: uses Pearl's $do$ notation in Formal Expression without declaring `#def-pearl-causal-hierarchy` as dep. Mild — arguably standard math notation.
-- `#post-composition-consistency`: uses downstream-derived results (`#result-contraction-template`'s closed-form composite-rate inequalities) in Formal Expression without declaring deps. More serious.
+- `#disc-composition-consistency`: uses downstream-derived results (`#result-contraction-template`'s closed-form composite-rate inequalities) in Formal Expression without declaring deps. More serious.
 
 `#post-causal-structure` does *neither* of these. So the pattern is currently 2 of 3 postulate/scope segments showing depends-incompleteness, but the *kinds* differ. I'll keep counting; the pattern strength depends on what the rest of §I does.
 
@@ -34,7 +34,7 @@ The condition for zero coupling ($T(\Omega_{t+1} \mid \Omega_t, a_t) = T(\Omega_
 
 ## What direction next
 
-`#def-pearl-causal-hierarchy` — finally the Pearl machinery. I expect: Level 1 (associational), Level 2 (interventional via $do(\cdot)$), Level 3 (counterfactual). The segment will retroactively legitimize the Pearl-do uses in `#scope-agency` and `#post-composition-consistency`'s machinery — but not retroactively fix the missing depends.
+`#def-pearl-causal-hierarchy` — finally the Pearl machinery. I expect: Level 1 (associational), Level 2 (interventional via $do(\cdot)$), Level 3 (counterfactual). The segment will retroactively legitimize the Pearl-do uses in `#scope-agency` and `#disc-composition-consistency`'s machinery — but not retroactively fix the missing depends.
 
 ## Errors to watch for
 

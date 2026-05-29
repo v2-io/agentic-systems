@@ -95,7 +95,7 @@ Seven proposals landed as one coordinated pass. Value **+9 framework / +10 paper
 Three of the five bundle members are ready now; two need upstream scoping. Ready-now entries:
 
 - **SP-11 Composition-monotonicity meta-segment** — from existing C2 spike (`spikes/spike-compositional-coordinate.md`); would give Section III its fourth meta-segment parallel to `#additive-coordinate-forcing` / `#disc-identifiability-floor` / `#disc-separability-pattern`. Newly surfaced in 2026-04-24 audit. **1–2 sessions.**
-- **SP-6 composition-closure consolidation (residue)** — majority absorbed by 2026-04-24 Tier 1 DA2'-inc ≡ (CT2) equivalence. Remaining: scope-statement-level consolidation in `#form-composition-closure` + scope adjustments in `#der-team-persistence` / `#post-composition-consistency` / `#der-tempo-composition`. **~1 session.**
+- **SP-6 composition-closure consolidation (residue)** — majority absorbed by 2026-04-24 Tier 1 DA2'-inc ≡ (CT2) equivalence. Remaining: scope-statement-level consolidation in `#form-composition-closure` + scope adjustments in `#der-team-persistence` / `#disc-composition-consistency` / `#der-tempo-composition`. **~1 session.**
 - **O-BP9 typed admissibility for composition** — well-defined, clear Section-III-completion-via-F8 target. 1–2 session scoping spike then 2–3 session execution. **Total 3–5 sessions.**
 
 ### B.3 C-BP1 + C-BP4 bundle — epistemic separation framework + claim-level statuses
@@ -381,7 +381,7 @@ If SP-21 lands, the framework loses the "one scope gate, multiple qualitative ro
 3. `#der-team-persistence` — derived assuming "one of (C-i)–(C-iii)"; C-iv excluded; would need explicit route-conditioning.
 4. `#deriv-critical-mass-composition` — (CM4) makes scope-satisfaction a conjunct in composite persistence; would need route enumeration.
 5. `#deriv-strategic-composition` — explicitly references "(C-iv)" as a route within the disjunction; would need rewrite to "strategic-composition scope condition" parallel.
-6. `#post-composition-consistency` — foundational postulate uses unified gate; would fracture into "which groups satisfy C-i? C-ii? C-iii? C-iv?"
+6. `#disc-composition-consistency` — foundational postulate uses unified gate; would fracture into "which groups satisfy C-i? C-ii? C-iii? C-iv?"
 7. `#hyp-symbiogenic-composition` — explicitly states symbiogenesis "crosses the #scope-composite-agent from below" via route (C-ii); would become route-specific.
 8. `#def-unity-dimensions` — scope note presumes disjunction; would need per-route operationalization story.
 

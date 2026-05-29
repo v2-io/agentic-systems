@@ -26,7 +26,7 @@ $|\mathcal{A}|\geq 2$ and $\exists a\neq a':P(o\mid do(a))\neq P(o\mid do(a'))$ 
 - Pattern: cross-Part forward-refs are used liberally but inconsistently declared in `depends:`. The dep-graph linter probably reads this correctly (only direct uses), but for OUTLINE-order verification it matters whether downstream concepts are "primitive imports" or "real dependencies."
 
 ## Next-segment predictions
-`#post-composition-consistency`. Postulate about composition consistency across scales. The OUTLINE marks it "(possibly out of place)" in italics — interesting. The "possibly out of place" annotation suggests the project knows this is a structural-position question, which is honest curation. Will probably formalize that AAT scope conditions apply at any level of agent description.
+`#disc-composition-consistency`. Postulate about composition consistency across scales. The OUTLINE marks it "(possibly out of place)" in italics — interesting. The "possibly out of place" annotation suggests the project knows this is a structural-position question, which is honest curation. Will probably formalize that AAT scope conditions apply at any level of agent description.
 
 ## What I'd change
 Add `def-pearl-causal-hierarchy` to depends if reading (2) is correct — and reading (2) seems indicated by the FORMAT.md gate criterion. Alternatively, the framework could canonicalize the read that "external concepts have an AAT segment but are also treated as primitives" — but that should be stated as a convention somewhere.

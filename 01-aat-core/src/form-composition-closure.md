@@ -3,7 +3,7 @@ slug: form-composition-closure
 type: formulation
 status: conditional
 depends:
-  - post-composition-consistency
+  - disc-composition-consistency
   - scope-composite-agent
   - scope-multi-agent
   - def-agent-environment
@@ -211,7 +211,7 @@ The norm choices ($\lVert\cdot\rVert_\mathcal{X}$, $\lVert\cdot\rVert_\mathcal{A
 
 This criterion replaces intuitive questions about "where the boundary of an agent is" with a functional test: does a macroscopic AAT description preserve the underlying micro-dynamics well enough to remain predictive and capable? The core requirement is an **approximate dynamical homomorphism** — the macro-dynamics approximately commute with the projection.
 
-**Relationship to #post-composition-consistency.** The Part I postulate requires that AAT's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." The admissibility constraints ensure the macro-description is genuinely AAT-shaped, so the same persistence condition, the same tempo framework, and the same mismatch dynamics apply at the macro level with macro-level parameters.
+**Relationship to #disc-composition-consistency.** The Part I postulate requires that AAT's machinery be scale-invariant — predictions at different levels of description must be compatible. This segment operationalizes "compatible" as "bounded closure defect under admissible coarse-graining." The admissibility constraints ensure the macro-description is genuinely AAT-shaped, so the same persistence condition, the same tempo framework, and the same mismatch dynamics apply at the macro level with macro-level parameters.
 
 **Projection-behaviour facet of the stability certificate ( #disc-stability-certificate).** Coarse-graining is a non-invertible projection of the certificate ( #result-certificate-existence): the certificate-as-metric survives (the Schur complement of a positive-definite form is positive-definite) but the *dynamic* guarantee does not — the closure defect $\varepsilon^\ast$ is the certificate's projection-residue, equal to the Mori–Zwanzig zero-lag memory-commitator norm (derivation table above), zero exactly when the resolved subspace is invariant. Read through the spine, this is the question "does the agent's measuring-stick survive being viewed coarsely": its shape survives, its guarantee leaks by exactly the memory term. The composition-level identifiability floor (no common certificate across sub-agents; Liberzon, #disc-identifiability-floor Instance 3) is this same residue read as a boundary event — a *distinct* obstruction from the rank-collapse floors (a non-invertible projection, not a congruence), which is why the cross-sectional structure is several meta-patterns and not one.
 

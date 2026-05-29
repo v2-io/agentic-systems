@@ -506,12 +506,12 @@ The current inevitability-core members, with why inevitability is plausible:
 | #der-loop-interventional-access | Feedback loop generates interventional data by construction. |
 | #der-directed-separation | $f_M$ independence from $G_t$ follows from the update structure, given scope condition. |
 | #der-deliberation-cost | Think-vs-act threshold from information-theoretic argument. |
-| #post-composition-consistency | If scope condition doesn't restrict level, predictions at different levels must be compatible. |
+| #disc-composition-consistency | If scope condition doesn't restrict level, predictions at different levels must be compatible. |
 | #deriv-graph-structure-uniqueness | Four operational postulates + causal sufficiency force a Markov-factorized DAG (Cox-analog). |
 
 **Canonical formulations (second ring).** Good representational choices that are motivated but not forced. Triage question 2 ("what competing formulation would also fit?") answers "at least one alternative exists." Review focus: explaining the choice, noting alternatives, and guarding against drift toward inevitability claims that aren't there.
 
-Current members include: #form-complete-agent-state, #form-objective-functional, #def-value-object, #def-strategy-dimension, #def-strategy-dag, #scope-and-or, #form-agent-model, #form-information-bottleneck, #form-event-driven-dynamics, #def-adaptive-tempo, #form-structural-change-as-parametric-limit, #norm-explicit-strategy-condition (normative, not derived), #form-composition-closure (operationalizes #post-composition-consistency but is one formulation among several possible ones), most definitions.
+Current members include: #form-complete-agent-state, #form-objective-functional, #def-value-object, #def-strategy-dimension, #def-strategy-dag, #scope-and-or, #form-agent-model, #form-information-bottleneck, #form-event-driven-dynamics, #def-adaptive-tempo, #form-structural-change-as-parametric-limit, #norm-explicit-strategy-condition (normative, not derived), #form-composition-closure (operationalizes #disc-composition-consistency but is one formulation among several possible ones), most definitions.
 
 **Empirical, heuristic, discussion (third ring).** Claims whose ceiling is empirical or heuristic — testable against the world but not derivable from the formalism. This is *not* a demotion: these are where AAT becomes falsifiable and useful. Review focus: stating falsifiable predictions, connecting to validation, resisting the temptation to dress empirical claims as derivations.
 

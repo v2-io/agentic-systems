@@ -4,7 +4,7 @@
 **Date opened**: 2026-05-09
 **Conversation provenance**: Joseph asked whether ASF explores nested adaptive cycles operating at different levels of abstraction simultaneously (inner fast loop advances slower outer loop). Survey found three load-bearing segments (`#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`) plus the unifying machinery (`#result-sector-persistence-template`, `#sketch-multi-timescale-stability`). Discussion then surfaced a candidate elegance: AAT as a renormalization-group structure with itself as fixed point — making temporal nesting and composite formation two projections of one operation. This brief sets up that test.
 
-**Depends on / cites**: `#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`, `#result-sector-persistence-template`, `#sketch-multi-timescale-stability`, `#def-strategy-dag`, `#def-adaptive-tempo`, `#post-composition-consistency`, `#hyp-directed-separation-under-composition`, `spikes/spike-composition-correlated-kalman.md`, `spikes/spike-bridge-lemma-contraction.md`, `spikes/spike-projection-admissibility.md`.
+**Depends on / cites**: `#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`, `#result-sector-persistence-template`, `#sketch-multi-timescale-stability`, `#def-strategy-dag`, `#def-adaptive-tempo`, `#disc-composition-consistency`, `#hyp-directed-separation-under-composition`, `spikes/spike-composition-correlated-kalman.md`, `spikes/spike-bridge-lemma-contraction.md`, `spikes/spike-projection-admissibility.md`.
 
 ---
 
@@ -101,7 +101,7 @@ Document at `03-rg-0c-strategy-recursion.md`.
 
 ### RG-1..4 (downstream, gated on RG-0 verdict)
 
-- **RG-1**: State (A1)–(A4) explicitly as RG fixed-point conditions. Promote `#post-composition-consistency` from postulate-level to derived under the fixed-point framing.
+- **RG-1**: State (A1)–(A4) explicitly as RG fixed-point conditions. Promote `#disc-composition-consistency` from postulate-level to derived under the fixed-point framing.
 - **RG-2**: (O, Σ) recursion as the formal expression of self-similarity. New segment `#deriv-strategy-recursion` or appendix in `#def-strategy-dag`. Connects to `#der-temporal-nesting` via the depth-rate hierarchy.
 - **RG-3**: Directed-separation classes as RG fixed-point types. Strengthens `#hyp-directed-separation-under-composition` by giving it the RG framing.
 - **RG-4**: RG flow of the persistence condition. Subsumes original Spike B (N-level stability) by deriving `#sketch-multi-timescale-stability` as RG-flow stability.

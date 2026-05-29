@@ -101,7 +101,7 @@ Each Fresh-N gets a disposition and a routing target. Where current `src/` verif
 
 **Disposition:** `research-seed` / FORMAT-policy material — but **partially subsumed by FORMAT-TODO C12**, which already names exactly this distinction under the "standard-imported-notation-used-before-declaration case" framing.
 
-**Discussion:** The extraction is correct that the FINAL didn't surface the *carving rationale* — only the two findings. The carving (`Kind A = standard-notation gate-hygiene`; `Kind B = downstream-derived enrichment of a postulate`) is structurally real and useful. C12 already routes Kind A; the F-A cluster (584721/742613) routes Kind B. The rationale's durable home is either an addendum to C12 or a Working Notes line on `#post-composition-consistency` — light-touch.
+**Discussion:** The extraction is correct that the FINAL didn't surface the *carving rationale* — only the two findings. The carving (`Kind A = standard-notation gate-hygiene`; `Kind B = downstream-derived enrichment of a postulate`) is structurally real and useful. C12 already routes Kind A; the F-A cluster (584721/742613) routes Kind B. The rationale's durable home is either an addendum to C12 or a Working Notes line on `#disc-composition-consistency` — light-touch.
 
 **Routing recommendation:** **co-owner direct-fix / one-line note** at either FORMAT-TODO C12 or in PROPOSALS SP-6 referencing the Kind A / Kind B distinction as the structural rationale for splitting the two findings. Not a ledger row; the structural disambiguation is canonically named and just needs the rationale-pointer.
 

@@ -98,7 +98,7 @@ OUTLINE rows downstream.
   deps reconciliation) — but the *content* needs no new math (strengthening
   already done by the segment).
 - **Disposition.** `Known-unintegrated` (provisional — OUTLINE self-flag
-  exists; pending Phase-2). Anchor: `01-aat-core/src/post-composition-consistency.md`
+  exists; pending Phase-2). Anchor: `01-aat-core/src/disc-composition-consistency.md`
   Formal Expression, the `*[Derived (Conditional on Tier 1M … from
   #result-contraction-template …)]*` tag + `depends:` frontmatter; cross:
   OUTLINE rows for `#result-contraction-template` (Appendix A) and

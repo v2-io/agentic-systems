@@ -33,7 +33,7 @@ where $\pi^{O_c}_i$ is sub-agent $i$'s optimal policy under the shared objective
 
 ### (C-ii) Hierarchical derivation
 
-There exists a parent objective $O_c$ from which sub-objectives $\{O_i\}$ are derivable by decomposition consistent with #post-composition-consistency:
+There exists a parent objective $O_c$ from which sub-objectives $\{O_i\}$ are derivable by decomposition consistent with #disc-composition-consistency:
 
 $$\{O_i\} = \mathcal{D}(O_c)$$
 

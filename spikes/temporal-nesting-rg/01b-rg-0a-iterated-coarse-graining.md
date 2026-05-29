@@ -86,7 +86,7 @@ For example: a strategy-DAG agent with strategic-tempo $\mathcal{T}_\Sigma$ and 
 
 The brief's first-cut hypothesis (relevant/irrelevant operator separation, classical-RG-style critical points) is **not supported** in the linear-Kalman case. Two possible conclusions:
 
-- **Drop the strong RG framing.** Replace with the weaker but still useful "AAT as form-preserving structure across scales." This is essentially what `#post-composition-consistency` already says; the value-add is naming it explicitly and connecting it to the persistence template's "applies at every level."
+- **Drop the strong RG framing.** Replace with the weaker but still useful "AAT as form-preserving structure across scales." This is essentially what `#disc-composition-consistency` already says; the value-add is naming it explicitly and connecting it to the persistence template's "applies at every level."
 - **Preserve the framing as a research direction.** Test richer agent classes (strategy-DAG, multi-channel) for non-trivial flow structure. The linear-Kalman case is too simple to expose RG-relevant operators if they exist.
 
 I lean toward the first — the structural framing is strong and useful even without critical points, and overclaiming RG content that we haven't demonstrated would violate the project's epistemic discipline. The richer-agent-class question becomes a separate research thread, *not* a load-bearing claim about AAT-as-RG.

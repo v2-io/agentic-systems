@@ -1,6 +1,6 @@
 # 07 - post-composition-consistency
 
-Segment: `01-aat-core/src/post-composition-consistency.md` (`#post-composition-consistency`)
+Segment: `01-aat-core/src/disc-composition-consistency.md` (`#disc-composition-consistency`)
 
 Dependencies: `scope-agency`, already read. Dependency-order check passes narrowly: the postulate itself depends on agency. The segment contains many forward references to Section III machinery, but those are presented as downstream operational consequences rather than premises for the postulate.
 

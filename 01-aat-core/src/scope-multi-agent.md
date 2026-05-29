@@ -4,7 +4,7 @@ type: scope
 status: axiomatic
 depends:
   - scope-agency
-  - post-composition-consistency
+  - disc-composition-consistency
 stage: draft
 ---
 
