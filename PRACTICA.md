@@ -1,6 +1,8 @@
 # PRACTICA
 *Current active areas of work with 🌟 (primary) and ⭐ (secondary) indicating most immediate priorities. In AAT terms, this is the top levels of the strategy DAG.*
 
+> **Live handoff (transient):** resuming the 2026-05-28/29 audit-gem-hunt + SP-landing momentum? Read [`NEXT-UP.md`](NEXT-UP.md) first — it points at what is hot and who-decides-what. Priming-heavy; skip during de-novo audits, and delete it once its queue drains.
+
 *This file names the **areas** of active work. The systematic project workflow each area implies — audit cycles, segment refinement and promotion, citation checks, prior-art searches, the named workflow steps below — is mostly not enumerated piece-by-piece. For specific items that don't fit a more systematic home: [`TODO.md`](TODO.md) is the misc-and-details layer (open audit-finding routing decisions, queued spike follow-ups, deferred items, lower-priority specifics). For architectural moves under review: [`PROPOSALS.md`](PROPOSALS.md). Sister-files: [`README.md`](README.md) external-facing snapshot, [`CLAUDE.md`](CLAUDE.md) agent-onboarding, [`CHANGELOG.md`](CHANGELOG.md) historical record. PRACTICA itself is **auditor-safe** — readable during de-novo audits — but linked entries into TODO / PROPOSALS / CHANGELOG are priming-heavy and should be skipped until the initial stages of audits are complete.*
 
 ## ⭐Theory
