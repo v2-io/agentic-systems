@@ -31,9 +31,9 @@ For a composite agent $A_c$ composed of sub-agents $\{A_1, \ldots, A_n\}$, the u
 
 **Epistemic unity** $U_M$ — how much of the reality model is shared:
 
-$$U_M = \frac{I(M_t^{(1)}; \ldots; M_t^{(n)})}{H(M_t^{(1)}, \ldots, M_t^{(n)})}$$
+$$U_M = \frac{I(M_t^{(1)}; \ldots; M_t^{(n)})}{(n-1)\,H(M_t^{(1)}, \ldots, M_t^{(n)})}$$
 
-The fraction of total model information that is shared (multi-information / total-correlation ratio). $U_M = 1$ for identical models; $U_M = 0$ for independent models.
+The fraction of total model information that is shared (total-correlation ratio, normalized to $[0,1]$). The numerator is the total correlation $I = \sum_i H(M_t^{(i)}) - H(M_t^{(1)}, \ldots, M_t^{(n)})$; the $(n-1)$ factor in the denominator is its normalizer, since each marginal entropy is at most the joint entropy and hence $I \leq (n-1)\,H(M_t^{(1)}, \ldots, M_t^{(n)})$, with equality iff each model determines all the others. So $U_M = 1$ for identical models and $U_M = 0$ for independent models, for every $n$. (Without the $(n-1)$ factor the ratio reaches $n-1$ at identity — the bare multi-information/joint-entropy form is normalized correctly only at $n = 2$.)
 
 **Teleological unity** $U_O$ — how aligned are the objectives:
 

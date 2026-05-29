@@ -99,7 +99,7 @@ When $\nu / ((n+1)\rho_\Sigma / R_\Sigma) \leq 1$, even $d = 1$ fails --- the ag
 |-----|--------------------------|----------|
 | 10 | 0.01 | 10 |
 | 10 | 0.1 | 0 |
-| 100 | 0.01 | 5 |
+| 100 | 0.01 | 0 |
 | 100 | 0.1 | 0 |
 
 High evidence requirements ($n$ large) and volatile environments ($\rho_\Sigma / R_\Sigma$ large) severely limit useful chain depth.
