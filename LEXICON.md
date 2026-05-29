@@ -16,6 +16,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Actuated agent](terminology/entries/actuated-agent.md)** |  | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$. |
 | **[Adaptive system](terminology/entries/adaptive-system.md)** |  | Feedback loop + mismatch correction under uncertainty. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
+| **[Agent](terminology/entries/agent.md)** |  | Umbrella technical term for the thing on the agent side of the agent-environment coupling; the scope-cascade tiers (Adaptive System, Agentic System, Actuated Agent, Self-Actuated Agent) are its specific inhabitants. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
 | **[Developer Agent](terminology/entries/developer-agent.md)** |  | A human or AI software developer instantiated as an AAT actuated adaptive agent — codebase plus surrounding artifacts are the environment, developer's understanding is M_t, current feature is O_t, and implementation plan is Σ_t. |
@@ -325,4 +326,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-05-29 from 140 entries._
+_Last rendered 2026-05-29 from 141 entries._
