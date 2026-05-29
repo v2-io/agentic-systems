@@ -26,6 +26,14 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-05-28 — Sandbox Hard Ceiling promoted to its own segment (SP-25)
+
+The Sandbox Hard Ceiling — sandbox trajectories are forkable (Pearl Level-1), deployment is singular (Level-2), so the Causal Hierarchy Theorem structurally forbids inferring deployment intervention-response from sandbox evidence regardless of thoroughness — lived only as a subsection inside the chapter-end discussion `#impl-causal-access` (`discussion-grade`). audit-773921 Finding 4 (Gemini) flagged it as a buried high-impact result, converging with the segment author's own Working-Notes promotion candidate (independent auditor + author agreement).
+
+Promoted to `#disc-sandbox-evaluation-ceiling` (Appendix A, `discussion-grade`) with a full `## Findings` section (now rolled into `FINDINGS.md`), placed alongside the other constructive-impossibility no-gos and cross-referenced from `#disc-constructive-impossibility-posture`. `#impl-causal-access` reduced to a brief chapter-mention + pointer (integration-is-replacement — no duplication). The in-review NeurIPS Paper 2 cross-reference was kept in Working Notes (not canon), so the promotion added no canon→internal-artifact reference. Closes audit-773921 Finding 4; the cycle now graduates once the gold-dir gate settles.
+
+---
+
 ## 2026-05-28 — Root definition reframed: agent-environment *coupling*, not agent-*object* (SP-24)
 
 `#def-agent-environment` carried a latent contradiction surfaced by audit-773921 (Gemini, Finding 1): it defined an *agent* as an entity satisfying three constitutive conditions — the third being *"produces actions that affect $\Omega$"* — yet `#scope-adaptive-system` quantifies over $(\text{Agent}, \Omega)$ pairs whose canonical inhabitants (passive Bayesian learners, Kalman filters on passive signals) explicitly do not act, and `#scope-agency` names these *passive observers* squarely inside the adaptive scope. The root definition made action-with-effect constitutive too early.

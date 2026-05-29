@@ -481,7 +481,7 @@ Surfaced in the audit-471203 de-novo cycle (FINAL §F1, 2026-04-28; Hypothesis-c
 
 **Effort.** Editorial-to-substantive (one new segment extracting + tightening existing prose into Formal-Expression + Findings cadence; OUTLINE row; FINDINGS/README regeneration).
 
-**Status: Open — promotion candidate, author-and-auditor-converged.** **Value:** +4 paper / +3 framework (a high-external-impact result currently buried; cheap to surface). **Independence: high** (additive; existing prose is the source).
+**Status: Executed — promoted 2026-05-28** (see CHANGELOG 2026-05-28). The Sandbox Hard Ceiling now has its own canonical home: `#disc-sandbox-evaluation-ceiling` (Appendix A, `discussion-grade`), with a full `## Findings` section (rolled into `FINDINGS.md`), placed alongside the other constructive-impossibility no-gos and cross-referenced from `#disc-constructive-impossibility-posture`. `#impl-causal-access` reduced to a brief chapter-mention + pointer (integration-is-replacement, no duplication). The in-review NeurIPS Paper 2 cross-reference was kept in Working Notes (not canon), so the promotion added no canon→internal-artifact reference. The WN's open placement question (Appendix A vs. `#scope-agent-identity` Discussion extension) resolved toward the dedicated Appendix-A segment. **Value:** +4 paper / +3 framework (a high-external-impact result no longer buried). **Independence: high** (additive; existing prose was the source).
 
 ---
 

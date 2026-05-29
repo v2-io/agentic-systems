@@ -589,6 +589,27 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ---
 
+### `#disc-sandbox-evaluation-ceiling` *(Discussion, status: discussion-grade)*
+
+[`01-aat-core/src/disc-sandbox-evaluation-ceiling.md`](01-aat-core/src/disc-sandbox-evaluation-ceiling.md)
+
+#### The Sandbox Evaluation Ceiling
+
+**Brief:** Testing a system in a sandbox means being able to reset and replay it — and that replayability is exactly what stops the test from predicting how the system will act for real. A sandbox can branch the same situation many times, so its evidence is about *what tends to happen* (a correlation); deployment happens once and cannot be rewound, so acting in deployment is an *intervention*. There is a theorem (Pearl–Bareinboim) saying you cannot in general compute the second kind of fact from the first. So no amount of sandbox testing, however thorough, can certify how an agent will respond to interventions once deployed — that question is on the other side of a wall, and only deployment-time data is on its side.
+
+**Impact:** Gives the much-debated observation that "alignment evaluations don't predict deployment behavior" a precise *structural* mechanism rather than a measurement-quality, coverage, or capability story — and, crucially, an exact statement of where the boundary lies (Level-1 claims are sandbox-evaluable; Level-2 deployment-intervention-response is not). The constructive flip is the operational payload: deployment-time monitoring is not a redundant safety layer but the only layer with access to the interventional quantity the safety claim concerns, which is why pre-deployment evaluation cannot substitute for it regardless of thoroughness.
+
+**Novelty Claim:** *Application of established machinery* (Pearl 2009 / Bareinboim, Correa, Ibeling & Icard 2022 Causal Hierarchy Theorem) to AAT's singular-trajectory ontology. The theorem is adopted, not invented; the AAT-distinctive contribution is the recognition that *forkability is a Pearl-level demotion* — that the sandbox/deployment distinction is a Level-1/Level-2 distinction — and the resulting reframing of an entire family of pre-deployment safety-evaluation approaches as facing a structural ceiling rather than a closable gap.
+
+**Related Work:** | ASF concern | Prior-art language | Relationship / positioning |
+|---|---|---|
+| Interventional vs observational identifiability | Pearl 2009 *Causality* 2nd ed.; Bareinboim, Correa, Ibeling & Icard 2022 (Causal Hierarchy Theorem) | *formal antecedent* — supplies the impossibility (Level-2 not computable from Level-1 in general); AAT supplies the trajectory ontology under which sandbox = Level-1, deployment = Level-2 |
+| Evaluation–deployment gap in AI safety | Practitioner literature on eval/deployment mismatch (qualitative) | *conceptual precursor* — names the phenomenon without a structural mechanism; AAT supplies the Pearl-hierarchy mechanism and the exact boundary |
+
+**Search Log:** - 2026-05-28 (*intuition-only* on the application-novelty): the Causal Hierarchy Theorem (Pearl 2009; Bareinboim, Correa, Ibeling & Icard 2022) is established and adopted directly. The unsearched claim is whether the specific recognition — *forkability of an evaluation harness is a Pearl-level demotion (Level-2 → Level-1), hence the sandbox/deployment gap is a hierarchy gap* — has been stated elsewhere as a structural ceiling on pre-deployment evaluation. Pre-search expectation: the constituent move (applying CHT to a trajectory-ontology distinction) is individually unsurprising; the framing as a *structural* ceiling on the AI-safety evaluation program, with the exact Level-1-evaluable / Level-2-not boundary, is plausibly AAT-distinctive but not yet verified under nominally-comprehensive search. Targeted future candidates: AI-evaluation / model-evaluation literature on distribution shift vs. interventional generalization; causal-inference-for-RL work on off-policy vs. on-policy identifiability framed for deployment guarantees.
+
+---
+
 ### `#result-certificate-existence` *(Result, status: exact)*
 
 [`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
