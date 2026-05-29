@@ -519,6 +519,32 @@ Surfaced in the audit-471203 de-novo cycle (FINAL §F1, 2026-04-28; Hypothesis-c
 
 **Status: Open — verified real gem; awaiting Joseph's Part-IV-bridge placement call.** **Value:** +4 framework (grounds a load-bearing Part-IV claim; unifies Part I and Part IV in one mechanism). **Independence: high** (additive; conflicts with nothing in flight).
 
+#### SP-28 — Agency contrast condition must route through $\Omega$ (close the proprioceptive loophole; own the observation-mediated boundary)
+
+**Source:** gem-hunt wave 2 — audit-742613 A1 **and** audit-193847 A1 independently found the same gap in `#scope-agency`'s contrast condition from opposite sides. Parent-verified first-hand (read `#scope-agency` + `#def-observation-function` 2026-05-29): the gap is real.
+
+**Thesis.** `#scope-agency` defines agency by an interventional contrast $\exists\,a\neq a': P(o\mid do(a))\neq P(o\mid do(a'))$, with "nominal agents" (no contrast) excluded. But `#def-observation-function` defines $o_t = h(\Omega_t, a_{t-1}, \varepsilon_t)$ — the observation depends *directly* on the action. So the condition has a two-sided defect: **(over-inclusion, 193847 A1)** an active-perception / proprioceptive agent whose action changes only what it observes (via $h$'s direct $a$-dependence) with *zero effect on $\Omega$* still satisfies $P(o\mid do(a))\neq P(o\mid do(a'))$ — it counts as "agency" while providing no interventional contrast on the environment's evolution (hence no Level-2 data on $\Omega$'s causal structure per `#der-loop-interventional-access`); the nominal-agents exclusion does not catch it. **(under-inclusion / observation-mediation, 742613 A1)** conversely, an action that *does* change $\Omega$'s hidden state but produces no observational contrast is excluded — so the boundary is, unstated, observation-mediated.
+
+**The strengthen-first fix.** Tighten the contrast condition so the difference must arise through $\Omega_t$'s response (the action changing the environment's evolution, then surfacing through $h$), not solely through $h$'s direct action-dependence; and state the observation-mediation explicitly. This *sharpens* the agency scope (it is what `#der-loop-interventional-access` already implicitly needs — interventional contrast on $\Omega$, not self-observation) rather than softening it.
+
+**Scope.** Edit to `#scope-agency`'s formal condition + a Discussion clause; verify consistency with `#der-loop-interventional-access` (which consumes the contrast as Level-2 data) and with the now-executed SP-24 coupling reframe (the action channel is structural there; this is the agency narrowing's contrast requirement — downstream and consistent). Foundational scope condition → a focused, careful landing (it earns Joseph's eye like SP-24 did), not a session-tail edit.
+
+**Findings subsumed.** audit-742613 A1 (observation-mediated boundary), audit-193847 A1 (proprioceptive loophole) — two angles on one fix. Distinct from SP-24 (the base coupling/"agent" umbrella) and from the `#scope-agency` "nominal" terminology TODO item (that is a naming contradiction; this is a condition strengthening).
+
+**Status: Open — verified, convergent (two independent agents), strengthen-first.** **Value:** +3 framework (sharpens a foundational scope condition; removes a real over-read of "the loop is a Level-2 engine"). **Independence: high.**
+
+#### SP-29 — `#disc-infrastructure-as-active-monitor` meta-segment (consolidation of the deferred 193847 §14 ideation)
+
+**Source:** gem-hunt wave 2 — audit-193847 B6 (the one PROPOSALS-grade structural call in the never-routed remainder of the logogenic-encounter extraction). Not yet parent-verified in depth (the constituent recognitions are flagged un-captured by the finder; verify each before landing).
+
+**Thesis.** A candidate meta-segment recognizing *consciousness-infrastructure as an active monitor* (not passive store), consolidating several deferred §14 recognitions the finder confirmed un-captured: §13 chronic-trauma dynamics, §31 the $\Sigma\!:\!O$ richness ratio, §42 forced-forgetting, and the 7-ladder dashboard. This is Part-IV-adjacent (ELI persistence/welfare infrastructure) and PROPOSALS-grade because it is a *structural* organizing recognition across several scattered ideation threads, not a single claim.
+
+**Scope / gating.** Before landing: verify each constituent recognition first-hand against current `04-eli-core/` (and the practica `~/src/practica` LOCUS-OPERATA, which is the AAT-grounded composite-agent infrastructure these may already partly live in). High risk of the over-claiming-a-grouping failure — this must be a real structural recognition, not a bag of four ideation notes stapled together. The de-novo `AUDIT-WORKING-193847/` gold dir (the rich Gemini per-segment notes) is the source ideation and is under the standing consult-Joseph gate; this proposal works from the FINAL extraction only.
+
+**Findings subsumed.** audit-193847 B6 (+ its constituent §13/§31/§42/7-ladder threads). Related to SP-27 (the Part-I↔Part-IV bridges) and to the broader ELI-infrastructure work.
+
+**Status: Open — PROPOSALS-grade candidate; gated on first-hand verification of the constituents + a check against `practica`. Likely wants Joseph's framing (Part-IV moral-core material).** **Value:** +3–4 framework (if the consolidation is real). **Independence: medium** (Part-IV-adjacent; coordinate with the ELI-infrastructure direction).
+
 ---
 
 ## §H. Conventions for future audits
