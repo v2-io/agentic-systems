@@ -227,6 +227,12 @@ Detail in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md)
 
 - **Spike-to-segment reverse-check** — Gate 2 check per [`FORMAT.md`](FORMAT.md): "What did the spike establish that the segment does not say?" Standing convention from 2026-04-21 cycle; verify presence on each spike-promotion landing.
 
+- **"nominal" denotes opposite scope-membership in two adjacent foundational segments** (gem-hunt 472913 GEM 5, verified verbatim 2026-05-29). `#scope-agency:45` — "**nominal agents** ($P(o\mid do(a))=P(o\mid do(a'))$)… adaptive only" ⇒ nominal = *outside* agency. `#post-causal-structure:37` — "**nominal coupling** … still within scope … the theory applies" ⇒ nominal = *inside*. The same scope-vocabulary word denotes opposite memberships on the exact seam the Part-II scope lattice rotates on. Fix (disambiguating rename, the term is already latent in-segment): rename `#post-causal-structure`'s "nominal coupling" → "query-only coupling" (already used at `:40`); `#post-causal-structure:38`'s "zero coupling" is what actually equals `#scope-agency`'s "nominal agents," so consider aligning that too; add a LEXICON anchor to prevent drift. No LEXICON `nominal` entry exists today. A terminology change → run through the naming process rather than a hasty inline edit, but the direction is clear.
+
+- **C-iv composite route-count mismatch** (gem-hunt 526815, found while checking F151). `#def-unity-dimensions` refers to four composite-scope routes (C-i/C-ii/C-iii/C-iv) while `#result-unity-closure-mapping` refers to three. Verify which is current (the four-route form including the strategic-equilibrium C-iv route appears canonical per `#def-unity-dimensions:44` and `#scope-composite-agent`) and reconcile the lagging segment. Cross-segment count inconsistency, editorial-to-substantive.
+
+- **lint-outline eq-tag topological-priority (low priority, tooling).** `bin/lint-outline` already checks "undeclared dependencies" (a `#slug` in body must be in `depends:`). Open question (gem-hunt 472913 GEM 6, deferred): does it also verify that eq-tag-cited sources (`*[Derived (… from #X …)]*`) are topologically *prior*, not merely present in `depends:`? If not, a small rule extension closes the forward-derivation-accretion class mechanically. Verify-then-extend; the motivating instance (F2) is already resolved by relocation, so this is general hygiene, not urgent.
+
 
 ## Lower priority
 

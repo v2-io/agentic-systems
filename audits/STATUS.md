@@ -22,6 +22,18 @@ Audits whose disposition is not yet fully closed. Each row names what *remains* 
 | `audit-384279-FINAL-2026-05-27` | 2026-05-27 | Claude Opus 4.7 | **resolved, not graduated** | Both structural findings landed in canon (scrbook hierarchy sweep; composition-consistency reframe — CHANGELOG 2026-05-28); three residual spike proposals in `spikes/PROPOSED.md`. Remaining: graduate to `.integrated/` once the residual proposals are dispositioned, and settle the gold dir `AUDIT-WORKING-384279/`. |
 | `audit-451729-FINAL-2026-05-10` | 2026-05-10 | — | **open** | Single residual D.1 (first-class in `TODO.md` §2026-05-10). Soft items → ledger S25/S28. Does not graduate until D.1 closes. (Per MANIFEST.) |
 
+## Gem-hunt cycle (2026-05-29) — five under-mined audits mined for un-captured gems
+
+A qualitative pass (Joseph 2026-05-29: audit findings as stale hints, mined for meat/gems improving the theory in strength/wisdom/beauty; non-loss is the hard constraint — see `feedback-audit-findings-as-gem-hints` in project memory). Five audit-findings files with zero ledger / zero-or-near-zero MANIFEST hits (never mined, never dispositioned) were each read first-hand against current canon by a general-purpose agent (pilot 472913 + background 526815/963715/542891/184930); the parent verified each gem first-hand before landing/routing. Trails: `.gem-hunt-trail/GEM-WORKING-<id>/` (committed).
+
+Outcomes (all routed; nothing buried):
+- **Two real math errors fixed** (CHANGELOG/commit `f8d9151`): `#form-strategy-complexity-cost` $d^\ast$ table cell (5→0); `#def-unity-dimensions` epistemic-unity normalization ($(n{-}1)$ factor — strengthen-first, not soften).
+- **Two headline gems → PROPOSALS** (both wanting Joseph's call): SP-26 (the cross-cycle-triangulated which-parameter-disambiguation novelty signature, gated on an instance sweep); SP-27 (introspective-fork-undetectability — the Part-I↔Part-IV bridge grounding "the Three Deaths are *experienced*", verified real gap).
+- **Research-seeds → ledger** S34–S38; **actionable items → TODO** (nominal-terminology contradiction; C-iv route-count mismatch; lint eq-tag-priority); **audit-methodology → ledger P-block**.
+- **Confirmed non-losses** with loci across all five; **drift correction**: every audit's flagship finding had already been resolved by a later cycle (the central confirmation that audit dispositions are drifted proxies).
+
+These five audits are now *gem-mined and routed*. They do **not** graduate to `.integrated/` yet — the de-novo `AUDIT-WORKING-<id>/` "gold" dirs remain under the standing consult-Joseph gate, and the FINAL files' full burden-of-proof rows were not exhaustively re-verified (the gem-hunt targeted gem-bearing sections + dispositioned-away findings, not every §B row — 526815's ~200 F-rows explicitly flagged stale-until-re-grepped).
+
 ## Historical backlog (graduated or trail-tracked elsewhere)
 
 The 2026-03 / 2026-04 audit intake and the standalone-audit backlog were dispositioned during the 2026-05-15/16 cleanup cycle. Their per-finding records live in the durable trails, not here:

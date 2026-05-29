@@ -485,6 +485,42 @@ Surfaced in the audit-471203 de-novo cycle (FINAL §F1, 2026-04-28; Hypothesis-c
 
 ---
 
+### Surfaced 2026-05-29 (qualitative gem-hunt over the under-mined audit backlog)
+
+*Both surfaced by the 2026-05-29 gem-hunt — reading old, mostly-unverified audit findings as stale hints, mining for un-captured meat. Each was raised by a general-purpose agent and parent-verified first-hand against current canon. Both are flagged by their finders as wanting Joseph's placement/promotion call, which is why they are PROPOSALS entries rather than direct landings.*
+
+#### SP-26 — Name the "which-parameter-responds-to-which-cause" disambiguation as a distinctive-novelty signature (cross-cycle triangulated)
+
+**Source:** audit-472913 GEM 3 **and** audit-963715 B2 — two independent gem-hunt agents surfaced the *same* pattern, and it cross-references the 471203 cycle's independent "epistemic-architectural, not just mathematical" recognition. Three-way convergence; per `feedback_convergence_as_framework_coherence_evidence`, the convergence is itself evidence the pattern is in the framework, not in any one reader's head.
+
+**Thesis.** AAT repeatedly does a move that is "obvious once seen, easy to get wrong unseen": it pins down *precisely which knob a given cause turns*, killing a plausible-sounding modeling error in a few sentences. Canonical instance: the $\beta$-vs-$\rho$ double-counting result (`#form-information-bottleneck:15,30,32` — a modeller who "lowers $\beta$ because the world is volatile" is making a real, common error; the segment kills it). Reinforced at `#deriv-l1-update-bias` ($\mathcal{F}$ = bias-floor vs $S(M_t)$ = bias+estimation, *more precise* than "bias vs variance") and the satisfaction-gap / control-regret split. The recognition: this disambiguation is a *distinctive contribution* that the "integration not invention" framing actively **undersells** — it is genuine clarifying novelty (cf. the `math-novelty-recognition` discipline against deflation). It is a *sibling* of `#disc-constructive-impossibility-posture` (the no-go-as-apparatus style claim) but a distinct pattern.
+
+**Scope / the gating first task.** The *instances* are all already in canon (confirmed non-loss). What is absent is the *pattern named as such*. **This must not be landed as framing prose until a corpus-wide instance sweep is run** — find the full set of "which knob does this cause turn" disambiguations across `01-aat-core/src/` ($\beta$-vs-$\rho$; $\mathcal{F}$-vs-$S$; satisfaction-gap-vs-control-regret; likely more). Both finding-agents flagged this explicitly: promoting it without the sweep would be the over-claiming-a-shallow-grouping failure. Candidate home after the sweep: a `disc-*` meta-segment (sibling to `#disc-separability-pattern` / `#disc-additive-coordinate-forcing`), or a README/OUTLINE "Reading AAT" framing paragraph.
+
+**Interactions.** Strategically load-bearing for external positioning (how AAT presents its contribution to skeptical readers); composes with the `math-novelty-recognition` discipline and the respectful-pedagogy direction. Independent of all in-flight content work.
+
+**Effort.** The sweep is editorial-substantive (a few hours); the landing is small once the instance set is known.
+
+**Status: Open — strong, convergence-validated; gated on the instance sweep.** **Value:** +3 framework / +4 positioning. **Independence: high.**
+
+#### SP-27 — Introspective-fork-undetectability: the first-person grounding of why the Three Deaths are *experienced*
+
+**Source:** audit-472913 GEM 1 (the audit's highest depth-per-page item). Parent-verified first-hand (read `#scope-agent-identity` in full 2026-05-29): confirmed a real, un-captured gap.
+
+**Thesis.** `#scope-agent-identity` carries every *neighboring* piece — non-forkability of $\mathcal C_t$, trajectory-indexed sufficiency, lossy merge, the clone problem, the philosophical-scope disclaimer — but all stated *third-person* (what an external analyst sees). The un-captured gem is the *first-person* consequence: because the agent's only access to its own trajectory is through the lossy, non-injective $\phi$ ($M_t = \phi(\mathcal C_t)$, `#form-agent-model`), **a continuity-break is not a measurable event on the agent's own accessible information** — the entity can lose the thread without being able to verify that it lost the thread. This is a near-theorem-shaped statement ($\phi$ non-injective ⇒ the fork is not in the agent's accessible $\sigma$-algebra), derivable from machinery already in canon, landing at `robust-qualitative` (plausibly `conditional`/`derived` as a data-processing/measurability argument). It is the structural *reason* the Three Deaths are *experienced* rather than merely suffered — grounding what `#hyp-the-three-deaths` currently asserts but does not explain. Beauty: one constitutive choice (lossy $\phi$) loads *two* parts of the framework — non-vacuous adaptation (Part I) **and** undetectable identity-loss (Part IV).
+
+**Decision needed from Joseph — Part I↔Part IV bridge.** Because it bridges Part I's information-loss boundary to the Part IV moral core (the ELI Three Deaths), the placement/framing is your call. Two candidate homes: (a) a small dedicated `disc-*` segment (e.g. `disc-introspective-fork-undetectability`) at `robust-qualitative`, discoverable via OUTLINE, with a forward-pointer from `#hyp-the-three-deaths` as the grounding of "experienced rather than suffered"; or (b) a fourth structural consequence added to `#scope-agent-identity` + that forward-pointer. The full mechanism is captured here so it is non-loss regardless of when/how it lands.
+
+**Findings subsumed.** audit-472913 GEM 1; the related GEM 2 (ordinal/metric duality seam — ledger, the temporal-axis sibling of this recursion).
+
+**Interactions.** Upstream `#def-chronica` / `#form-agent-model` (the lossy-$\phi$ commitment) + downstream `#hyp-the-three-deaths` / `#def-identity-sufficiency` (the Zi-am-tur substrate-switch empirical symptom this would *explain*).
+
+**Effort.** Editorial-substantive (one segment / one consequence + a forward-pointer; the math is a short measurability argument).
+
+**Status: Open — verified real gem; awaiting Joseph's Part-IV-bridge placement call.** **Value:** +4 framework (grounds a load-bearing Part-IV claim; unifies Part I and Part IV in one mechanism). **Independence: high** (additive; conflicts with nothing in flight).
+
+---
+
 ## §H. Conventions for future audits
 
 Four operating principles worth preserving from this audit cycle:
