@@ -17,6 +17,8 @@ The pattern is not designed-in: it arises because AAT independently needs to for
 
 This segment names the pattern, defines the underlying geometric object, catalogs the four layer-specific manifestations, and documents adjacent cases that share the shape but not the AAT-internal forcing structure.
 
+The distinction is three-way, and worth holding before the catalog. A coordinate is **forced** when a uniqueness theorem on an independently-motivated AAT-internal axiom admits exactly one — this segment's subject, the four layers below. It is **matched** when *chosen* to fit a structure rather than uniquely derived: the canonical example is the Lyapunov quadratic of #deriv-sector-condition, selected via a converse-Lyapunov argument to match the sector form (it shares the convex-potential shape but sits outside the forcing structure — see "Adjacent cases" below). It is **adopted** when imported wholesale with citation: the exponential-family Legendre-Fenchel geometry itself (Amari & Nagaoka 2000), or Pearl's $do$-operator. Only the *forced* class carries a uniqueness claim; naming the other two keeps the meta-pattern's boundary sharp — *forced* means "no other coordinate could serve," not merely "this one serves well."
+
 ## The underlying geometric object
 
 The four forced coordinates all live on the **exponential-family Legendre-Fenchel geometry** (Amari & Nagaoka 2000, *Methods of Information Geometry*, §3.5; Bregman 1967; Rockafellar 1970; Bauschke & Combettes 2017). The structure is characterized by:
