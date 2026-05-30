@@ -304,15 +304,7 @@ interchangeable** — collapsing them is the directory-level form of the
 label-lies-about-status error that audit-routing §5/§6 spends pages
 preventing.
 
-**Bounded guarantee (Joseph 2026-05-17), stated in `spikes/README.md` so
-the claim is honestly scoped rather than silently overclaimed:** the
-guarantee is **forward and per-cycle**. Spikes a spike-routing cycle files
-to `.integrated/` have had their content verified in canon. Pre-policy
-residents have **not** — before `.archived/` existed (notably the
-2026-05-12 bulk move of 64), some incomplete-and-not-needed spikes may
-have been swept to `.integrated/`, and teasing them back out is not worth
-the effort. So: *do not retroactively re-audit `.integrated/`*; verify
-forward, and let the README carry the caveat.
+**Bounded guarantee, stated in `spikes/README.md` so the claim is honestly scoped rather than silently overclaimed:** the guarantee is **forward and per-cycle**. Spikes a spike-routing cycle files to `.integrated/` have had their content verified in canon. Pre-policy residents have **not** — before `.archived/` existed (notably the 2026-05-12 bulk move of 64), some were swept to `.integrated/` *without per-spike verification*. That is **known, un-discharged integration debt** (`../INTEGRATION-CLEANUP-TODO.md` G2/F3), **not** a "do not re-audit" license: the bulk-64 must be checked — or consciously, explicitly set down — before `.integrated/` is ever wiped (the D-2 wipe question turns on exactly this). Until then, treat pre-policy `.integrated/` membership as an *unverified* record; verify forward, and discharge the bulk-64 through the recovery pass.
 
 ### 5a. Directory layout — where everything lives (Joseph-directed, 2026-05-18)
 
