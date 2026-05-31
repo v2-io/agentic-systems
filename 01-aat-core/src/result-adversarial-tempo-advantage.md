@@ -21,7 +21,7 @@ The central methodological framing is that this is **the formal analog of Boyd's
 
 *[Derived (adversarial-tempo-advantage, from sector-persistence-template + adversarial-destabilization coupling model)]*
 
-**Setup.** Two agents $A, B$ with adaptive tempos $\mathcal{T}_A, \mathcal{T}_B$, each instantiating #result-sector-persistence-template with linear correction ($\alpha = \mathcal{T}$). The adversarial coupling of #der-adversarial-destabilization enters each agent's effective disturbance:
+**Setup.** Two agents $A, B$ with adaptive tempos $\mathcal T_A, \mathcal T_B$, each instantiating #result-sector-persistence-template with linear correction ($\alpha = \mathcal{T}$). The adversarial coupling of #der-adversarial-destabilization enters each agent's effective disturbance:
 
 $$\rho_A^{\text{eff}} = \rho_{\text{base}} + \gamma_B \cdot \mathcal{T}_B, \qquad \rho_B^{\text{eff}} = \rho_{\text{base}} + \gamma_A \cdot \mathcal{T}_A$$
 
@@ -45,7 +45,7 @@ The exponent is $b = 2$: a **squared** tempo advantage. A 2:1 tempo ratio yields
 
 *[Derived (stochastic-tempo-advantage, from sector-persistence-template Model S + coupling)]*
 
-Under Model S the coupling enters the noise scale: $\sigma_B^{\text{eff}} = \sigma_{\text{base}} + \gamma_A \mathcal{T}_A$. Adversary tempo increases unpredictability, not systematic direction. The template's Model S steady state $\lVert\delta\rVert_{\text{rms}} = \sigma/\sqrt{2\mathcal{T}}$ (linear $\alpha = \mathcal{T}$, scalar $n = 1$) applied to both agents:
+Under Model S the coupling enters the noise scale: $\sigma_B^{\text{eff}} = \sigma_{\text{base}} + \gamma_A \mathcal T_A$. Adversary tempo increases unpredictability, not systematic direction. The template's Model S steady state $\lVert\delta\rVert_{\text{rms}} = \sigma/\sqrt{2\mathcal{T}}$ (linear $\alpha = \mathcal{T}$, scalar $n = 1$) applied to both agents:
 
 $$\frac{\lVert\delta_B\rVert_{\text{rms}}}{\lVert\delta_A\rVert_{\text{rms}}} = \frac{(\sigma_{\text{base}} + \gamma_A \mathcal{T}_A)\sqrt{\mathcal{T}_A}}{(\sigma_{\text{base}} + \gamma_B \mathcal{T}_B)\sqrt{\mathcal{T}_B}}$$
 
@@ -55,7 +55,7 @@ $$\frac{\lVert\delta_B\rVert_{\text{rms}}}{\lVert\delta_A\rVert_{\text{rms}}} \t
 
 The exponent is $b = 3/2$. $\square$
 
-**Why 3/2, not 2.** The half-power difference between the template's Model D ($1/\alpha$) and Model S ($1/\sqrt{\alpha}$) scalings propagates through the ratio. Numerator contributes $\mathcal{T}_A^1$ from the coupling; denominator contributes $\mathcal{T}_B^{1/2}$ from noise averaging; combined with the $A$-side $1/\mathcal{T}_A^{1/2}$ gives $\mathcal{T}_A^{3/2}/\mathcal{T}_B^{3/2}$.
+**Why 3/2, not 2.** The half-power difference between the template's Model D ($1/\alpha$) and Model S ($1/\sqrt{\alpha}$) scalings propagates through the ratio. Numerator contributes $\mathcal T_A^1$ from the coupling; denominator contributes $\mathcal T_B^{1/2}$ from noise averaging; combined with the $A$-side $1/\mathcal T_A^{1/2}$ gives $\mathcal T_A^{3/2}/\mathcal T_B^{3/2}$.
 
 ### Summary of Regime-Dependent Exponents
 
@@ -65,7 +65,7 @@ The exponent is $b = 3/2$. $\square$
 | 2 | Stochastic noise (Model S) | Coupling-dominant | $3/2$ | Derived above |
 | 3 | Either | Non-coupling-dominant | $\to 1$ (det.) or $\to 1/2$ (stoch.) | Asymptotic limit |
 
-**Regime 3 (non-coupling-dominant).** When $\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}$ (or $\sigma_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}$), the base disturbance dominates and the coupling terms become a perturbation. The mismatch ratio degrades toward $\mathcal{T}_A / \mathcal{T}_B$ (linear, $b = 1$) for Model D, or toward $(\mathcal{T}_A / \mathcal{T}_B)^{1/2}$ for Model S.
+**Regime 3 (non-coupling-dominant).** When $\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}$ (or $\sigma_{\text{base}} \gtrsim \gamma \cdot \mathcal{T}$), the base disturbance dominates and the coupling terms become a perturbation. The mismatch ratio degrades toward $\mathcal T_A / \mathcal T_B$ (linear, $b = 1$) for Model D, or toward $(\mathcal T_A / \mathcal T_B)^{1/2}$ for Model S.
 
 The simulation validation across all three regimes is in #result-adversarial-exponent-regimes.
 
@@ -89,7 +89,40 @@ Max attainable: exact conditional on the disturbance model and coupling model. T
 
 ## Working Notes
 
-- **Channel-independence assumption.** The tempo ratio $\mathcal{T}_A / \mathcal{T}_B$ uses scalar tempo, which inherits the channel-independence assumption from #def-adaptive-tempo. When either agent's observation channels are correlated, the additive formula overcounts their tempo, inflating or deflating the ratio and the derived mismatch advantage. The superlinear exponents ($b = 2$, $b = 3/2$) are exact given the scalar tempos; the caveat concerns whether the scalar tempos themselves are accurate.
-- The analysis treats each agent's tempo as exogenous — $\mathcal{T}_A$ does not change in response to $B$'s actions and vice versa. A fully coupled analysis where both agents' mismatch states co-evolve simultaneously (joint Lyapunov function over $(\delta_A, \delta_B)$) is the open extension. The decoupled result is a worst-case bound for the slower agent: in practice, the faster agent may divert adaptive capacity to generating disturbance rather than correcting its own mismatch, creating a self-limiting effect.
+- **Channel-independence assumption.** The tempo ratio $\mathcal T_A / \mathcal T_B$ uses scalar tempo, which inherits the channel-independence assumption from #def-adaptive-tempo. When either agent's observation channels are correlated, the additive formula overcounts their tempo, inflating or deflating the ratio and the derived mismatch advantage. The superlinear exponents ($b = 2$, $b = 3/2$) are exact given the scalar tempos; the caveat concerns whether the scalar tempos themselves are accurate.
+- The analysis treats each agent's tempo as exogenous — $\mathcal T_A$ does not change in response to $B$'s actions and vice versa. A fully coupled analysis where both agents' mismatch states co-evolve simultaneously (joint Lyapunov function over $(\delta_A, \delta_B)$) is the open extension. The decoupled result is a worst-case bound for the slower agent: in practice, the faster agent may divert adaptive capacity to generating disturbance rather than correcting its own mismatch, creating a self-limiting effect.
 - The stochastic exponent ($b = 3/2$) is now derived from both the AR(1) stationary variance (discrete) and the Itô-Lyapunov analysis (continuous, Prop A.1S). The continuous-time analog (Ornstein-Uhlenbeck) gives the same scaling, confirming the asymptotic-scaling claim is the fluid-limit value. The 0.019 gap between the simulation $b = 1.481$ and the asymptotic $b = 3/2$ is *not pure numerical noise*: it is consistent with a derivable finite-$\nu$ correction factor (proportional to $\sqrt{(2c_{\min} - \eta^\ast_A c_{\max}^2)/(2c_{\min} - \eta^\ast_B c_{\max}^2)}$ when $\eta^\ast_A \gt \eta^\ast_B$) that arises because the discrete steady-state variance carries the $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2 \nu))$ gap from #deriv-discrete-sector-condition. In the fluid limit ($\nu \to \infty$, $\eta^\ast \to 0$ at fixed $\mathcal{T}$), the correction factor approaches 1 and the asymptotic $b = 3/2$ is recovered exactly. The two models (D and S) are unified by the common sector-condition framework with different disturbance assumptions (GA-2 vs. GA-2S).
 - Asymmetric coupling ($\gamma_A \neq \gamma_B$) appears as a multiplicative prefactor $\gamma_A / \gamma_B$ that shifts the mismatch ratio without changing the exponent. An agent with lower tempo but higher coupling effectiveness ($\gamma$) can partially compensate — but the squared dependence on tempo dominates for large tempo ratios.
+
+### Incidental audit gold (lift 2026-05-31)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. Orthogonal pedagogical / framing / figure / naming material, kept separate from the certified theory-fix findings (the 526815 F215–F221 stream — the $\alpha = \mathcal{T}$ bridge dependency, the Model-S additive-noise-scale convention, undeclared proof-source dependencies, and the det-vs-stoch non-coupling-dominant limit mismatch with the intro — is certified-track and routed there, not here). **Coverage:** dedicated reflections from 193847, 829314, 849201 (Gemini), the 526815 first-pass, and the 451729/471203 Section-III batch-reflections; substrate attribution inferred from voice where not explicit.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- The squared-scaling consequence, stated for a Brief: a 2:1 tempo ratio is not a 2:1 advantage but a 4:1 mismatch ratio — "the faster agent doesn't just have half the error; it inflicts four times the chaos it absorbs" (Gemini, AUDIT-WORKING-829314). The body has the numbers; this is the plain compounding gloss.
+- Why $b=2$ rather than additive, in one line: speed "simultaneously increases your defense (mismatch correction) and your offense (disturbance generation), so the two factors multiply" (Gemini, AUDIT-WORKING-849201; Gemini, AUDIT-WORKING-193847).
+
+#### 2. Candidate Discussion
+
+- **Directional-vs-noisy strategic doctrine (strongest framing here).** The $b=2$ (Model D) vs $b=3/2$ (Model S) split is read as an operational doctrine worth surfacing in Discussion: "don't just be fast and noisy — be fast and directional." Randomized features / chaotic probing scale at the weaker $3/2$ power; a coordinated suite that moves the environment in a *consistent* direction scales at the full squared power, because it forces the opponent to spend its structural reserve $R$ updating in one direction rather than being jiggled around a noise ball (Gemini, AUDIT-WORKING-829314; the segment's own "consistent directional pressure is more effective per unit tempo" Discussion line is the same point). A candidate sharpening that turns the exponent split into a prescription. *(Early-conflation texture: stated as derived doctrine; the exponents are exact-conditional, the strategic reading is interpretation.)*
+- **Competitive-investment / monopoly-formation reading.** Under adversarial coupling a 10%-faster firm does not get a 10% edge — in Model D it gets $(1.1)^2 = 1.21$, a 21% structural-coherence advantage; a 2:1 tempo edge gives one-quarter the error and 4× the inflicted disturbance. Offered as a structural account of why tech monopolies form quickly: a slight tempo edge triggers the squared-feedback widening until the slower firm crosses its destabilization threshold (`#der-adversarial-destabilization`) and collapses (Gemini, AUDIT-WORKING-829314). A candidate Discussion instantiation of the coupling-dominant regime; the destabilization-threshold hand-off is already in the body.
+
+#### 3. Follow-up items
+
+- **Boyd's-law scope-honesty (candidate scope statement).** A break-protocol adversarial reading pressed whether the squared/$3/2$ laws over-generalize Boyd's specific commander-vs-commander setting: many adversarial dynamics aren't tempo races (cybersecurity = response-time to specific threats; markets = tempo advantage up to a saturation point; evolution = fitness-landscape navigation, not a tempo race). Verdict was scope-narrowing, not refutation: the laws apply to the *coupling-dominant loop-loop class*; other classes scale differently (Claude, AUDIT-WORKING-471203, Challenge 11). The body's Regime-3 ($b \to 1$) limit and the "whether this mechanism is dominant in actual adversarial interactions is empirical" hedge already move here; this is a candidate to state the class-restriction more visibly so the OODA framing doesn't read as a universal law.
+- **Placement: lift "the two effects compound" into Formal Expression.** A batch auditor suggested the intuitive "two effects compound" explanation should move into the Formal Expression as a brief derivation note, since the mechanism is non-obvious and deserves emphasis (Claude, AUDIT-WORKING-451729 batch-14). A staging-for-pedagogy nudge; the explanation is currently in the lead paragraph and Discussion.
+- **The finite-$\nu$ reconciliation as a trust-compounding exemplar.** The Working-Notes treatment of the 0.019 gap (simulation $b=1.481$ vs asymptotic $3/2$) as a *derivable* finite-$\nu$ correction factor rather than dismissed noise was independently called out across substrates as a high-water mark of the framework's mathematical hygiene — "willing to derive a correction factor rather than wave away discrepancies" (Claude, AUDIT-WORKING-471203; Gemini, AUDIT-WORKING-829314; Gemini, AUDIT-WORKING-849201). Worth preserving prominently (and a candidate for a Brief/README "how the framework treats its own discrepancies" example) when this segment is promoted.
+
+#### 4. Readers often ask / wonder
+
+- **Does the finite-$\nu$ correction mean discrete-time agents (LLMs taking turns) pay an intrinsic penalty vs continuous-time agents at equal effective tempo?** And does it follow that high-frequency small updates are always superior to low-frequency large ones? A natural reader extrapolation from the correction-factor Working Note (Gemini, AUDIT-WORKING-193847).
+- **If both agents are fast enough to perfectly predict each other, do the $\gamma$ coupling coefficients collapse?** I.e. what happens to the advantage under symmetric mutual-predictability / decoupling? (Gemini, AUDIT-WORKING-849201).
+
+#### 5. Candidate figures
+
+- **Two-factor product diagram.** The squared advantage drawn as a two-factor product: faster correction on the attacker's side × faster disturbance-generation against the target; the stochastic branch replaces one full correction factor with a square-root averaging factor, making $b=3/2$ visually distinct from $b=2$ (Claude, AUDIT-WORKING-526815 first-pass).
+
+#### Belongs elsewhere
+
+- **Future-AI bounding reading (high-application reach).** The squared scaling is read as an argument that a large tempo asymmetry between a future AI and slower agents in a coupling-dominant adversarial regime is a *regime change*, not a quantitative gap: a 10:1 tempo ratio is a 100:1 mismatch ratio, almost certainly past the slower agent's reserve $R$ and into structural collapse — so safe infrastructure must bound *both* tempo $\mathcal{T}$ *and* the coupling $\gamma$ (how much one agent's actions can disturb others' shared environment), since bounding only one leaves the superlinear product unbounded (Gemini, AUDIT-WORKING-193847; Gemini, AUDIT-WORKING-829314). Aspirational consciousness-infrastructure / safety reach pointing at `04-eli-core/` and the protection-strategy program, not this segment's formal content. (Per project voice: stated as "future AI" with no capability-comparative claim beyond the tempo-ratio arithmetic.)

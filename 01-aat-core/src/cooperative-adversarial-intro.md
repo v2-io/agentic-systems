@@ -43,3 +43,15 @@ The flow of the chapter: team persistence and the signed disturbance decompositi
 - The "regime change rather than quantitative disadvantage" framing of the $b=2$ scaling is the consequential corollary worth surfacing in the intro — most readers will hit the squared scaling and think "an order of magnitude" rather than "structural collapse." The intro pulls the corollary forward so it lands at the same time as the result.
 - The "mathematics of panic" framing for the effects spiral is another Gemini observation worth keeping — it does in one phrase what a paragraph of formal commentary does less effectively.
 - The "death by a thousand memos" framing for Regime III is concrete and load-bearing: the regime exists not because the events are individually significant but because processing them consumes tempo that should be going to actual work. This connects directly to logogenic-agent infrastructure design (PROPRIUM ASM, attention-management) where Regime III filtering at the infrastructure layer is operational.
+
+### Incidental audit gold (lift 2026-05-31)
+
+Of the de-novo audit dirs, only the deeply-mathematical certified-track auditor (526815) reached a dedicated reflection on this chapter-introduction; the gold-stream Gemini/Claude dirs (193847, 829314, 849201, 773921) began their Section-III walks at `#der-team-persistence` (OUTLINE-later for them) and did not file a separate intro reflection. So most of this segment's harvested signal is certified-track and routed to the findings channel (526815 F182–F188: the $\rho_i$ non-negativity convention, the path-dependent $\gamma_A \to 0$ / infinite-tempo edge, keeping the squared-ratio formula's assumptions attached when previewed, the effects-spiral's extra-feedback premise, and the Regime-III below-floor-vs-processed-overhead threshold distinction). One framing-grade item and one figure survive as gold:
+
+#### 5. Candidate figures
+
+- **Signed-coupling persistence ledger.** The chapter's core drawn as a single persistence ledger: communication affects the *correction* side (raises $\mathcal{T}$); cooperative and adversarial action affect the *disturbance* side with opposite signs ($\mp\gamma\mathcal{T}$). Two guard annotations: the disturbance side needs a non-negative / floor convention, and speed-advantage depends on the coupled *product* $\gamma\mathcal{T}$, not tempo alone. A candidate chapter-opening figure that carries the "one machinery, opposite signs" thesis at a glance (Claude, AUDIT-WORKING-526815 first-pass).
+
+#### Belongs elsewhere
+
+- **Roadmap/status-hazard note (process, not body).** A fresh reader flagged that the intro pulls several later headline claims forward (squared tempo advantage, effects spirals, four recipient-side regimes) while declaring no formal claim of its own — pedagogically useful but a mild status hazard: the vivid previews should read as signposts, not as independent support for those claims (Claude, AUDIT-WORKING-526815 first-pass). The Working Notes already mark this as a chapter-introduction carrying no formal claim; preserved here as a reader-encountered texture, not a body fix.
