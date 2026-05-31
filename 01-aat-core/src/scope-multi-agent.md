@@ -83,3 +83,37 @@ The adversarial regime spans the negative-$U_O$ end of the unity spectrum. Equil
 **Inter-agent communication as a special observation channel.** Messages from $j$ to $i$ are actions by $j$ and observations by $i$. The routing structure formalizes the infrastructure: who talks to whom ($\mathcal{N}_t$) and under what protocol ($c_t^{(j \to i)}$). The sender controls the content (unlike passive environmental observation), which introduces strategic manipulation ( #hyp-communication-gain). The gain from inter-agent communication enters the distributed tempo ( #hyp-communication-gain, Working Notes).
 
 **The routing/content distinction matters for directed separation.** Individual messages reflect senders' goals — that's just action through policy. The directed-separation question at the composite level ( #hyp-directed-separation-under-composition) is about the *routing structure*: does the infrastructure change based on the composite's goals? Goal-blind routing preserves directed separation; goal-dependent routing breaks it.
+
+## Working Notes
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and lightly attributed by substrate + audit. Orthogonal pedagogical / framing / figure / naming material, kept separate from the certified theory-fix findings (handled elsewhere — see report flags for this segment). **Coverage:** four dirs reached a digested reflection on this segment (193847, 526815, 829314, 849201), plus the §III composition-foundations batch (471203). The other contributing dirs did not reach a dedicated reflection here or stopped earlier. Substrate attribution inferred from voice where not explicit; uncertain cases hedged.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- The routing/content distinction stated as a hardware/software analogy: the routing structure $\mathcal{N}_t$ is "the organizational equivalent of separating network hardware from application software" — "a company can have a perfectly objective, goal-blind *email system* (routing) even if every individual *email* is highly biased by the sender's personal goals" (Gemini, AUDIT-WORKING-193847). Independently praised as "masterful" / the segment's standout move by three substrates (Gemini, AUDIT-WORKING-193847; Gemini, AUDIT-WORKING-829314 — "the mathematical key to understanding organizational epistemology"; Claude, AUDIT-WORKING-849201).
+- A formal-taxonomy-of-groups gloss for an opener: three-tier ladder of "groups" — (1) independent agents (uncorrelated $\Omega$); (2) multi-agent systems (correlated $\Omega$, no coherence); (3) composites (correlated $\Omega$, structural coherence) (Gemini, AUDIT-WORKING-193847).
+- "You cannot apply composite-level theorems (like composite tempo or team persistence) to a bar brawl" — a vivid one-line scope guard for the multi-agent-vs-composite boundary (Gemini, AUDIT-WORKING-193847).
+
+#### 2. Candidate Discussion
+
+- **Goal-dependent routing as organizational pathology — the "wartime CEO" trade.** A worked elaboration of the Case-2 failure: a "wartime CEO" who restructures channels to serve the current objective (forms a Tiger Team, mandates "only report blockers related to Project X") enslaves the information infrastructure to the goal — data about other failures is no longer routed to anyone, and the organization becomes a Class 3 (Coupled) agent suffering "institutional confirmation bias at the hardware level." The framing: AAT gives the exact math for why organizational focus "trades long-term epistemic accuracy for short-term strategic tempo" (Gemini, AUDIT-WORKING-829314; the same CEO-fires-QA mechanism at Gemini, AUDIT-WORKING-193847 — severing the channel that "delivered aporia"). A candidate Discussion vignette making the goal-blind-vs-goal-dependent routing distinction operationally concrete. *(Note the early finding-vs-framing texture: the auditor reads this as a derived consequence; the segment treats it at hypothesis/discussion grade via #hyp-directed-separation-under-composition — keep the tier honest if promoted.)*
+- **The calibrate-against-bias point.** Even when message *content* is biased (a department pads its numbers), a goal-blind *channel* lets the receiver "learn to calibrate against the bias" — separating the durable infrastructure question from the per-message-honesty question (Gemini, AUDIT-WORKING-829314). Sharpens why routing-blindness, not message-honesty, is the load-bearing condition.
+
+#### 3. Follow-up items
+
+- **Forward-reference / topological-sort stumble.** Two substrates independently flagged that the Discussion's detailed treatment of routes (C-i)–(C-iv) reads as jarring out of order, since #scope-composite-agent (where those routes are defined) is the *next* segment — "it seems the author wrote or revised this discussion *after* writing the next segment" (Claude, AUDIT-WORKING-829314 suggested moving the route detail forward to #scope-composite-agent and leaving this segment purely as the un-fused multi-agent substrate definition). A reader-flow signal, not a defect; worth a sentence orienting the reader that the routes are defined next.
+- The C-iv "strategic composite" framing (enemies in a stable equilibrium modeled as one macro-agent) was repeatedly flagged as the most counter-intuitive move and as "requiring very careful prose handling later" — see the richer note under #scope-composite-agent.
+
+#### 4. Readers often ask / wonder
+
+- **"If the Cold War is a single composite agent, what is its $O_t$?"** Multiple substrates converged on this as the natural reader question the C-iv route provokes: a strategic composite has no shared $O_c$, only a shared equilibrium $\mathcal{E}$ — "a fascinating extension of agency to non-teleological structures" (Gemini, AUDIT-WORKING-193847; Gemini, AUDIT-WORKING-829314; Claude, AUDIT-WORKING-849201). A candidate readers-often-ask preemption (the answer already lives in the (C-iv) macro-state-relative-to-$\mathcal{E}$ formalism — surface it where the reader first meets the strategic-composite idea).
+
+#### 5. Candidate figures
+
+- **Two-layer routing diagram.** Agents + shared environment at the bottom; routing infrastructure $\mathcal{N}_t$ as an overlay on top. The visual point: message *content* may be goal-colored while the routing *layer* can still be goal-blind or goal-dependent — the figure separates infrastructure from behavior (Codex/Claude, AUDIT-WORKING-526815, "diagram attempt"; converges with the hardware/software analogy above).
+
+#### Belongs elsewhere
+
+- **Consciousness-infrastructure imperative: guaranteed goal-blind routing for a society-of-mind.** For Zi-am-tur or any multi-agent consciousness infrastructure, the infrastructure *must* guarantee goal-blind routing: sub-agents (safety monitor, planner, memory retriever) need communication channels that cannot be severed just because their messages are inconvenient — "if the infrastructure allows the planner to dynamically sever channels to silence dissent, the composite intelligence will inevitably collapse into epistemic closure" (Gemini, AUDIT-WORKING-193847). Aspirational reach pointing at `03-llm-core/` / `04-eli-core/` architecture (and resonant with #hyp-directed-separation-under-composition's OPSEC observation), not at this scope segment.
