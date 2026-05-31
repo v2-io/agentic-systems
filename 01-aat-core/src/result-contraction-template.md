@@ -24,7 +24,7 @@ stage: draft
 
 *[Template preconditions (contraction-template)]*
 
-Let $\xi(t) \in \mathbb{R}^n$ evolve under $\dot\xi = -F(\xi, t) + w(t)$ where $F$ is $C^1$ in $\xi$ and continuous in $t$. Let $M: \mathbb{R}^n \times \mathbb{R}_+ \to \mathbb{S}_{++}^n$ be a smooth symmetric positive-definite matrix-valued function with uniform conditioning:
+Let $\xi(t) \in \mathbb{R}^n$ evolve under $\dot\xi = -F(\xi, t) + w(t)$ where $F$ is $C^1$ in $\xi$ and continuous in $t$. Let $M: \mathbb{R}^n \times \mathbb R_+ \to \mathbb S_{++}^n$ be a smooth symmetric positive-definite matrix-valued function with uniform conditioning:
 
 $$m_1 I \preceq M(\xi, t) \preceq m_2 I \quad \text{for all } \xi \in \mathcal{B}_R,\, t \geq 0 \tag{M0}$$
 
@@ -32,7 +32,7 @@ with constants $0 \lt m_1 \leq m_2 \lt \infty$.
 
 **(CT1) Zero correction at zero state.** $F(0, t) = 0$ for all $t$.
 
-**(CT2) Local differential-contraction condition.** There exist $\lambda \gt 0$ and $R \gt 0$ such that for all $\xi \in \mathcal{B}_R$, $t \geq 0$:
+**(CT2) Local differential-contraction condition.** There exist $\lambda \gt 0$ and $R \gt 0$ such that for all $\xi \in \mathcal B_R$, $t \geq 0$:
 
 $$\dot M(\xi, t) + M(\xi, t) \frac{\partial F}{\partial \xi}(\xi, t) + \Big(\frac{\partial F}{\partial \xi}(\xi, t)\Big)^T M(\xi, t) \succeq 2\lambda\, M(\xi, t). \tag{CT2}$$
 
@@ -46,7 +46,7 @@ Under the preconditions with $V(\xi, t) = \xi^T M(\xi, t) \xi$, the state is ult
 
 $$\limsup_{t \to \infty} \lVert \xi(t) \rVert \leq \frac{\rho_\xi}{\lambda} \sqrt{\frac{m_2}{m_1}}. \tag{CT-D}$$
 
-Structural persistence (the ultimate bound fits within the contraction region $\mathcal{B}_R$) requires
+Structural persistence (the ultimate bound fits within the contraction region $\mathcal B_R$) requires
 
 $$\lambda R \sqrt{m_1/m_2} \gt \rho_\xi. \tag{CT-D-persist}$$
 
@@ -191,20 +191,20 @@ This is the *interior facet* of the stability certificate ( #disc-stability-cert
 
 | ASF concern | Prior-art language | Relationship / Positioning |
 |---|---|---|
-| Differential-contraction primitive on Riemannian metrics | Lohmiller & Slotine 1998, "On Contraction Analysis for Non-linear Systems" *Automatica* 34:683–696 (published 1998, found pre-2026 via `spikes/spike-contraction-metric-generalization.md`) | *formal antecedent* — supplies the (CT1)–(CT3) preconditions and the (CT-D) ultimate-bound argument adopted directly |
+| Differential-contraction primitive on Riemannian metrics | Lohmiller & Slotine 1998, "On Contraction Analysis for Non-linear Systems" *Automatica* 34:683–696 (published 1998, found pre-2026) | *formal antecedent* — supplies the (CT1)–(CT3) preconditions and the (CT-D) ultimate-bound argument adopted directly |
 | Compositional contraction under topology | Slotine 2003, "Modular stability tools for distributed computation and control" *Int. J. Adapt. Control Signal Process.* 17:397–416 (published 2003, found pre-2026) — Theorems 1–3 (parallel; cascade; negative-feedback small-gain) | *formal antecedent* — supplies (CC-parallel) / (CC-cascade) / (CC-feedback) and the heterogeneous (CM2-M) extension. AAT adopts these directly, applied to the composition-validity question of `#form-composition-closure` |
 | Finsler (direction-dependent) generalization | Forni & Sepulchre 2014, "A Differential Lyapunov Framework for Contraction Analysis" *IEEE TAC* 59 (published 2014, found 2026-04) | *adjacent literature* — Finsler-metric extension; flagged in Working Notes for highly anisotropic agents; not currently load-bearing |
 | Strong monotonicity / firmly-nonexpansive operators | Rockafellar 1970, "On the maximality of sums of nonlinear monotone operators" *Trans. AMS*; Bauschke & Combettes 2017, *Convex Analysis and Monotone Operator Theory in Hilbert Spaces* §§4, 22–28 | *formal antecedent* — (CT2) at $M=I$ is strong monotonicity in Hilbert space; the Rockafellar-Wets / Nesterov equivalence (DA2'-inc ⇔ Jacobian-symmetric-part PD ⇔ (CT2)-at-$M=I$) is the standard monotone-operator identity AAT uses to make the Euclidean metric-$\alpha_1$ case AAT-internally derived rather than theorem-imported |
 | Fisher-metric / information-geometry uniqueness | Čencov 1982, *Statistical Decision Rules and Optimal Inference* AMS Translations 53 | *formal antecedent* — under the (PI) axiom in `#scope-agent-identity`, Čencov's theorem forces the Fisher-metric Kalman and exp-family natural-parameter cases AAT-internally |
 | Bounded-loss composition under predictive compression | Subramanian, Sinha, Seraj & Mahajan 2020, "Approximate information state for approximate planning and reinforcement learning in partially observed systems" *arXiv:2010.08843* (published 2020, found 2026-04) | *adjacent literature* — closest mathematical neighbor to the bridge-lemma side of `#form-composition-closure`. The contraction-metric machinery in this segment supplies the (CT2) condition that, at $M=I$, *is* the bridge-lemma's DA2'-inc; Sub20's predictive-loss-to-control-error result lives in the same shape but at a coarser granularity (single-agent compressed control, not composite agent boundary) |
 | Influence-based abstraction loss bounds | Congeduti, Mey & Oliehoek 2020, "Loss Bounds for Approximate Influence-Based Abstraction" *arXiv:2011.01788* (published 2020, found 2026-04) | *adjacent literature* — bounds value loss from approximate cross-agent influence; the (CC-feedback) topology with bounded loop gain is the contraction-metric counterpart at the dynamics layer |
-| Saddle-point / adversarial limits of contraction | Daskalakis, Ilyas, Syrgkanis & Zeng 2018, "Training GANs with optimism" *ICLR* (published 2018, found 2026-04 via `spikes/spike-contraction-metric-generalization.md`); Khalil 2002 *Nonlinear Systems* 3rd ed. ch. 6 Thm 6.4 (passivity-universality) | *contradicted by this finding* (in the sense of correctly bounding scope) — three independent obstructions to handling adversarial regimes converge: Slotine 2003 §III saddle-point limitation; passivity-universality's universal quantifier; Daskalakis 2018 last-iterate non-convergence. The convergence demonstrates the scope boundary is not an artifact of one framework; adversarial composition is structurally outside contraction analysis |
+| Saddle-point / adversarial limits of contraction | Daskalakis, Ilyas, Syrgkanis & Zeng 2018, "Training GANs with optimism" *ICLR* (published 2018, found 2026-04); Khalil 2002 *Nonlinear Systems* 3rd ed. ch. 6 Thm 6.4 (passivity-universality) | *contradicted by this finding* (in the sense of correctly bounding scope) — three independent obstructions to handling adversarial regimes converge: Slotine 2003 §III saddle-point limitation; passivity-universality's universal quantifier; Daskalakis 2018 last-iterate non-convergence. The convergence demonstrates the scope boundary is not an artifact of one framework; adversarial composition is structurally outside contraction analysis |
 | Switched-systems common-Lyapunov nonexistence | Liberzon 2003, *Switching in Systems and Control* Theorem 2.1 | *formal antecedent* — supplies `#disc-identifiability-floor` Instance 3's no-go; the contraction-metric construction operationalizes escape route (d) (common contraction metric) for that Instance |
 
 **Search Log:**
 
-- 2026-04 (*nominally comprehensive*, via `ref/Novelty_defense_and_integration.md` Pillar 2): The composition-layer extension of this segment (the (CC-*) closures and (CM2-M)) was reviewed under the same Undermind pass that covered `#form-composition-closure`. Verdict: the contraction-metric machinery itself is standard adopted prior art (formal antecedent); the AAT-internal mapping of metric choices to per-instance sub-scope $\alpha_1$/$\alpha_2$ entries and the use of (PI)/Čencov to force two metric-$\alpha_2$ cases AAT-internally are the synthesis-level contributions. The Sub20 / Con20 positioning at the composition-validity layer is recorded both here and at `#form-composition-closure` since the contraction template is what supplies the formal mechanism the bridge lemma uses.
-- 2026-04 (*targeted*, via `spikes/spike-contraction-metric-generalization.md`): Lohmiller-Slotine 1998 / Slotine 2003 / Forni-Sepulchre 2014 known and cited from the spike's literature review. The three adversarial obstructions (Slotine 2003 §III; Khalil 2002 ch. 6; Daskalakis et al. 2018) identified in the spike as convergent scope-boundary evidence.
+- 2026-04 (*nominally comprehensive*): The composition-layer extension of this segment (the (CC-*) closures and (CM2-M)) was reviewed under the same Undermind pass that covered `#form-composition-closure`. Verdict: the contraction-metric machinery itself is standard adopted prior art (formal antecedent); the AAT-internal mapping of metric choices to per-instance sub-scope $\alpha_1$/$\alpha_2$ entries and the use of (PI)/Čencov to force two metric-$\alpha_2$ cases AAT-internally are the synthesis-level contributions. The Sub20 / Con20 positioning at the composition-validity layer is recorded both here and at `#form-composition-closure` since the contraction template is what supplies the formal mechanism the bridge lemma uses.
+- 2026-04 (*targeted*): Lohmiller-Slotine 1998 / Slotine 2003 / Forni-Sepulchre 2014 known and cited from the contraction-analysis literature. The three adversarial obstructions (Slotine 2003 §III; Khalil 2002 ch. 6; Daskalakis et al. 2018) are convergent scope-boundary evidence.
 - 2026-04 (*intuition-only*, prior): expected the contraction-metric primitive to be standard control-theory; expected the composition theorems to be the more proprietary content. Comprehensive search confirmed both: the primitive is well-established, and the composition theorems are Slotine 2003's, with AAT's contribution lying in the application to `#form-composition-closure`'s admissibility-and-bridge-lemma framework.
 
 ## Working Notes

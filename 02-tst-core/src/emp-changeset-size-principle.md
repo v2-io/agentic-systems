@@ -54,7 +54,7 @@ Patterns that tend to increase changeset size:
 
 *[Discussion — these patterns are well-established in software engineering practice. The contribution of the changeset-size principle is not identifying them but explaining *why* they matter: they determine the proportionality constant between features and implementation time. Whether a pattern is "good" reduces to whether it shrinks future changesets for probable features.]*
 
-**Historical validation via git.** *[Discussion — empirical approach, partially operationalized.]* The proportionality is testable from git history: for a given codebase, measure changeset size (lines, files, or modules) and correlate with implementation time (commit-to-merge duration, or gap between first and last commit in a feature branch). The `empirical-discontinuity/` toolkit demonstrates this approach for discontinuity counting; extending it to changeset size would test the proportionality directly. Prior work on change-impact analysis (MacCormack et al. 2006, "Propagation Cost") provides related empirical methodology.
+**Historical validation via git.** *[Discussion — empirical approach, partially operationalized.]* The proportionality is testable from git history: for a given codebase, measure changeset size (lines, files, or modules) and correlate with implementation time (commit-to-merge duration, or gap between first and last commit in a feature branch). A git-history operationalization of the related discontinuity-counting approach is reported in #hyp-exponential-cognitive-load; extending it to changeset size would test this proportionality directly. Prior work on change-impact analysis (MacCormack et al. 2006, "Propagation Cost") provides related empirical methodology.
 
 ## Working Notes
 

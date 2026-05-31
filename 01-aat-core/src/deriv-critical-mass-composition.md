@@ -26,11 +26,11 @@ Two sub-agents $A_1, A_2$, each a **Tier 1 agent** in the sense of #form-composi
 
 *[Formulation (coupling-model-C1, from #der-team-persistence + #der-adversarial-destabilization)]*
 
-Inter-agent coupling enters additively to the disturbance at rate $\gamma \mathcal{T}_j$:
+Inter-agent coupling enters additively to the disturbance at rate $\gamma \mathcal T_j$:
 
 $$\rho_i^{\text{eff}} = \rho + \gamma \mathcal{T}_j \tag{C1}$$
 
-with sign convention $\gamma \lt 0$ cooperative (ally's tempo-contribution reduces disturbance, recovering #der-team-persistence's $-\gamma^{\text{coop}}\mathcal{T}_j$ term), $\gamma \gt 0$ adversarial (ally's tempo-contribution amplifies disturbance, recovering #der-adversarial-destabilization's $+\gamma_A\mathcal{T}_A$ term). Symmetric case: $\gamma_{1 \to 2} = \gamma_{2 \to 1} = \gamma$.
+with sign convention $\gamma \lt 0$ cooperative (ally's tempo-contribution reduces disturbance, recovering #der-team-persistence's $-\gamma^{\text{coop}}\mathcal T_j$ term), $\gamma \gt 0$ adversarial (ally's tempo-contribution amplifies disturbance, recovering #der-adversarial-destabilization's $+\gamma_A\mathcal T_A$ term). Symmetric case: $\gamma_{1 \to 2} = \gamma_{2 \to 1} = \gamma$.
 
 *[Formulation (coordination-cost-C2)]*
 
@@ -38,7 +38,7 @@ Coordination overhead reduces each agent's effective correction rate symmetrical
 
 $$\alpha_i^{\text{eff}} = \alpha - C \tag{C2}$$
 
-with $C \geq 0$ the $\Delta \mathcal{T}_i^{\text{cost}}$ from #der-team-persistence's coordination-overhead threshold.
+with $C \geq 0$ the $\Delta \mathcal T_i^{\text{cost}}$ from #der-team-persistence's coordination-overhead threshold.
 
 ### Critical-mass inequality (symmetric-matched-Tier-1 case)
 
@@ -75,7 +75,7 @@ Under matched symmetry, (CM2) reduces correctly in four limits:
 
 *[Derived (weakest-link-subsumption)]*
 
-The weakest-link bound $\alpha_c \geq \min_i(\alpha_i - \Delta\mathcal{T}_i^{\text{cost}})$ from #form-composition-closure's derivation table specializes under matched symmetry to $\alpha_c \geq \alpha - C$. (KC) refines this by making the composite's effective disturbance explicit as $\rho + \gamma\mathcal{T}$, turning a correction-rate bound into a full persistence inequality. Critically, (KC) can yield $\kappa_c \gt 0$ even when the weakest-link bound alone fails — when cooperative coupling ($\gamma\mathcal{T} \lt 0$) reduces the effective disturbance below what the raw $\alpha - C$ margin would permit. The weakest-link bound cannot see this because it does not account for $\gamma$'s sign.
+The weakest-link bound $\alpha_c \geq \min_i(\alpha_i - \Delta\mathcal T_i^{\text{cost}})$ from #form-composition-closure's derivation table specializes under matched symmetry to $\alpha_c \geq \alpha - C$. (KC) refines this by making the composite's effective disturbance explicit as $\rho + \gamma\mathcal{T}$, turning a correction-rate bound into a full persistence inequality. Critically, (KC) can yield $\kappa_c \gt 0$ even when the weakest-link bound alone fails — when cooperative coupling ($\gamma\mathcal{T} \lt 0$) reduces the effective disturbance below what the raw $\alpha - C$ margin would permit. The weakest-link bound cannot see this because it does not account for $\gamma$'s sign.
 
 ### $U_O$ entry: multiplicative-on-$\gamma$ plus scope-gate
 
@@ -91,7 +91,7 @@ $$\kappa_c(U_O) \;=\; (\alpha - C)R \;-\; \rho \;+\; \gamma_{\max}\,U_O\,\mathca
 
 *[Scope (scope-gate-from-composition-scope-condition)]*
 
-(CM3) is necessary but not sufficient for composite existence. Under #scope-composite-agent, a composite exists as an AAT agent only when one of the three disjunctive alignment routes (shared objective, hierarchical derivation, mutual benefit) is satisfied. Below this threshold, no coherent $O_c$ is definable and composite-level quantities — including $R_c$ on the right of (CM2) — are ill-typed. The honest statement of composite persistence is therefore the conjunction of $\kappa_c(U_O) \gt 0$ with the scope conditions of #scope-composite-agent — abbreviated $\mathcal{S}_c$:
+(CM3) is necessary but not sufficient for composite existence. Under #scope-composite-agent, a composite exists as an AAT agent only when one of the three disjunctive alignment routes (shared objective, hierarchical derivation, mutual benefit) is satisfied. Below this threshold, no coherent $O_c$ is definable and composite-level quantities — including $R_c$ on the right of (CM2) — are ill-typed. The honest statement of composite persistence is therefore the conjunction of $\kappa_c(U_O) \gt 0$ with the scope conditions of #scope-composite-agent — abbreviated $\mathcal S_c$:
 
 $$\boxed{\;\kappa_c(U_O) \gt 0 \;\wedge\; \mathcal{S}_c \;\Leftrightarrow\; \text{composite persists as AAT agent}\;} \tag{CM4}$$
 
@@ -107,13 +107,13 @@ $$\dot V_\mu \leq -\alpha_1\lVert\delta_1\rVert^2 + \rho_1\lVert\delta_1\rVert \
 
 so in the limit the composite's stability is controlled **entirely by agent 1**; agent 2's autonomous correction dynamics are weighted out of the stability accounting.
 
-This provides a Lyapunov-weighted formalization of #hyp-symbiogenic-composition's **(S-3) autonomy reduction**: the endosymbiont's effective action space contracts ($\mathcal{A}_e^{\text{effective}} \to \mathcal{A}_e^{\text{restricted}}$) and its autonomous dynamics fall out of the joint Lyapunov argument. The asymmetric limit is a smooth deformation of (CM4), not a discontinuous regime change — symbiogenesis and peer coupling are parameter-limits of the same weighted-Lyapunov analysis. The result does **not** close #hyp-symbiogenic-composition's (S-1) objective absorption or (S-2) function transfer: what happens to agent 1's state space when it inherits structure from agent 2 is a separate question the weighting argument does not address.
+This provides a Lyapunov-weighted formalization of #hyp-symbiogenic-composition's **(S-3) autonomy reduction**: the endosymbiont's effective action space contracts ($\mathcal A_e^{\text{effective}} \to \mathcal A_e^{\text{restricted}}$) and its autonomous dynamics fall out of the joint Lyapunov argument. The asymmetric limit is a smooth deformation of (CM4), not a discontinuous regime change — symbiogenesis and peer coupling are parameter-limits of the same weighted-Lyapunov analysis. The result does **not** close #hyp-symbiogenic-composition's (S-1) objective absorption or (S-2) function transfer: what happens to agent 1's state space when it inherits structure from agent 2 is a separate question the weighting argument does not address.
 
 ### What Is Derived vs. What Is Chosen
 
 | Property | Source | Strength |
 |---|---|---|
-| Coupling model (C1): $\rho_i^{\text{eff}} = \rho + \gamma\mathcal{T}_j$ | Import from #der-team-persistence and #der-adversarial-destabilization | Formulation choice (requirement for the derivation) |
+| Coupling model (C1): $\rho_i^{\text{eff}} = \rho + \gamma\mathcal T_j$ | Import from #der-team-persistence and #der-adversarial-destabilization | Formulation choice (requirement for the derivation) |
 | Coordination-cost model (C2): $\alpha_i^{\text{eff}} = \alpha - C$ | Import from #der-team-persistence's coordination-overhead threshold | Formulation choice |
 | Joint quadratic Lyapunov $V = \tfrac{1}{2}(\lVert\delta_1\rVert^2 + \lVert\delta_2\rVert^2)$ | Standard vector-Lyapunov construction (Matrosov 1962; Bellman 1962) | Formulation choice (canonical for matched-symmetric dyads) |
 | Ultimate bound $R_c^\ast \leq (\rho + \gamma\mathcal{T})/(\alpha - C)$ | Lyapunov dissipation + Cauchy–Schwarz | Derived |
@@ -128,8 +128,8 @@ This provides a Lyapunov-weighted formalization of #hyp-symbiogenic-composition'
 | Heterogeneous-metric Tier-1M dyad ($\lambda_1 \neq \lambda_2$, $C_1 \neq C_2$, $k_{12} \neq k_{21}$) | #result-contraction-template (CM2-M) via Slotine 2003 negative-feedback small-gain: $(\lambda_1 - C_1)(\lambda_2 - C_2) \gt k_{12} k_{21}/4$ | Derived (conditional on #result-contraction-template (CT2) preconditions + Slotine 2003) |
 | Nonlinear coupling $\gamma = \gamma(\delta_j)$ | Requires full joint-Lyapunov machinery from #der-adversarial-destabilization (effects-spiral corollary) | Open |
 | Dynamic coordination cost $C = C_0 + C_1\lVert\delta_j\rVert$ | Quadratic inequality; admits closed form, loses interpretive cleanliness | Open |
-| Fully-coupled tempo dynamics ($\mathcal{T}_i$ responsive to $\delta_j$) | Requires joint tempo analysis from #der-adversarial-destabilization Working Notes | Open |
-| $N \gt 2$ scaling of (CM4) | Conjunction over pairwise terms generalizes but loses closed form; see `spikes/spike-composition-scaling-N.md` | Open |
+| Fully-coupled tempo dynamics ($\mathcal T_i$ responsive to $\delta_j$) | Requires joint tempo analysis from #der-adversarial-destabilization Working Notes | Open |
+| $N \gt 2$ scaling of (CM4) | Conjunction over pairwise terms generalizes but loses closed form | Open |
 
 The dividing line: (C1), (C2), and the quadratic Lyapunov candidate are **formulation choices** imported from adjacent segments or from standard Lyapunov practice. The *consequences* under these choices — (L4), (CM2), (KC), the specialization checks, the weakest-link subsumption, and (CM4) with its scope-gate conjunct — are **derived**. The $U_O$-multiplicative modulator (UO-mult) is discussion-grade: it uses an LQR-compatibility argument whose rigor depends on an action-space inner-product analysis deferred to #result-unity-closure-mapping. The asymmetric-limit identification with #hyp-symbiogenic-composition (S-3) is sketch-level — the weighted-Lyapunov argument is standard but the semantic identification with autonomy reduction is structural, not proved.
 
@@ -145,10 +145,10 @@ The asymmetric limit (§asymmetric-limit) is **sketch-level**. The weighted-Lyap
 
 What this segment does **not** establish:
 
-- Composite **incremental** sector bound (DA2'-inc) — still the domain of #form-composition-closure's bridge lemma and `spikes/spike-bridge-lemma-contraction.md`. (CM4) gives composite (T2) at the macro level; the bridge lemma's contraction is a separate, stronger condition.
+- Composite **incremental** sector bound (DA2'-inc) — still the domain of #form-composition-closure's bridge lemma. (CM4) gives composite (T2) at the macro level; the bridge lemma's contraction is a separate, stronger condition.
 - Heterogeneous-architecture composites (Kalman + PID, Tier 1 + Tier 3): the joint Lyapunov construction requires agent-by-agent tiering; closed form is not available.
 - Nonlinear or state-dependent coupling: (C1) assumes $\gamma$ independent of $\delta$. State-dependent $\gamma$ produces a nonlinear inequality in $\delta$; this is the effects-spiral corollary territory of #der-adversarial-destabilization, still open.
-- $N \gt 2$ scaling: the matched-symmetric pairwise result generalizes by conjunction, but the Cauchy–Schwarz step degrades with team size; the closed form does not survive cleanly. See `spikes/spike-composition-scaling-N.md`.
+- $N \gt 2$ scaling: the matched-symmetric pairwise result generalizes by conjunction, but the Cauchy–Schwarz step degrades with team size; the closed form does not survive cleanly.
 
 **On (T2) and sub-scoping.** The joint quadratic Lyapunov candidate presumes each sub-agent's correction is in sub-scope $\alpha$ of #form-sector-condition (Bayesian / exponential-family / strongly-convex-gradient / linear-PD) under directional fidelity per #der-gain-sector-bridge. Composites with sub-scope $\beta$ sub-agents (PID, rule-based, human-judgment) require (T2) verification per sub-agent at the composite level — the template's A2'-sub-scope label is inherited pairwise.
 
@@ -158,9 +158,9 @@ What this segment does **not** establish:
 
 **Pattern across the signed-coupling instances.** (CM4) has the same shape as several persistence-flavored results already in AAT:
 
-- #der-team-persistence: per-sub-agent inequality $\alpha_i R_i \gt \rho_{i,\text{env}} + \sum_j\gamma_{j \to i}^{\text{adv}}\mathcal{T}_j - \sum_j\gamma_{j \to i}^{\text{coop}}\mathcal{T}_j$
+- #der-team-persistence: per-sub-agent inequality $\alpha_i R_i \gt \rho_{i,\text{env}} + \sum_j\gamma_{j \to i}^{\text{adv}}\mathcal T_j - \sum_j\gamma_{j \to i}^{\text{coop}}\mathcal T_j$
 - #der-tempo-composition: composite inequality with effective disturbance $\rho_{\text{ext}} + \varepsilon^\ast\nu_c$
-- #der-adversarial-destabilization: failure condition $\gamma_A\mathcal{T}_A \gt \alpha_B R_B - \rho_B$ (negation of persistence)
+- #der-adversarial-destabilization: failure condition $\gamma_A\mathcal T_A \gt \alpha_B R_B - \rho_B$ (negation of persistence)
 - this segment: matched-symmetric dyad with signed $\gamma$ and scope-gate
 
 All four are instances of #result-sector-persistence-template's pattern with signed coupling controlling the sign of the cross-agent contribution to $\rho_\xi$. The template already names this pattern at the meta level; the present segment is the dyadic closed-form instance that the other three segments reference pairwise. A dedicated meta-segment for "signed-coupling critical-mass" was considered during spike work and judged redundant with #result-sector-persistence-template — the cross-instance structure is already visible in that segment's instantiation table.
@@ -206,7 +206,7 @@ All four are instances of #result-sector-persistence-template's pattern with sig
 
 **Search Log:**
 
-- 2026-04 (*nominally comprehensive*, via `ref/Novelty_defense_and_integration.md` Pillar 2): Per Pillar-2 defense strategy, the strong-monotonicity hinge is foregrounded as the criterion not visible in retrieved prior art. Subramanian / Congeduti provide the closest math (bounded-loss composition) without isolating a single condition whose failure flips composite legitimacy; Markov-blanket line provides nested-agency intuition without monotonicity machinery.
+- 2026-04 (*nominally comprehensive*): the strong-monotonicity hinge is foregrounded as the criterion not visible in retrieved prior art. Subramanian / Congeduti provide the closest math (bounded-loss composition) without isolating a single condition whose failure flips composite legitimacy; Markov-blanket line provides nested-agency intuition without monotonicity machinery.
 - 2026-04 (*targeted*, prior to comprehensive search): the small-gain-theorem line (Jiang-Teel-Praly 1994; Sontag 1989) and consensus-dynamics line (Olfati-Saber & Murray 2004) were known and cited in the segment's existing Discussion as adjacent literature. The comprehensive search added the Sub20 / Con20 closest-neighbor positioning and confirmed no surfaced paper foregrounds the strong-monotonicity hinge.
 - 2026-04 (*intuition-only*, prior): expected adjacent literature was switched-systems stability (Liberzon 2003) and game-theoretic equilibrium analysis. Switched-systems hit confirmed via `#disc-identifiability-floor` Instance 3; game-theoretic side is properly the territory of `#deriv-strategic-composition`, scope-separated.
 

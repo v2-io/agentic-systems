@@ -131,7 +131,7 @@ Max attainable: *exact* (it is the Lyapunov theorem, in scope; R0-loss extends v
 
 **Search Log:**
 - 2026-05-14 (*targeted*): The equivalence is the textbook Lyapunov theorem; no search needed for the theorem itself. The search target was whether the *recognition* "AAT's one-point sector condition in a free inner product = the converse-Lyapunov certificate, hence the contraction-over-drift slogan is this equivalence" appears articulated elsewhere as a framework-grounding move. Not found at this depth; expected to remain *recognition*-tier (the theorem is universal; the framework-grounding identification is the contribution).
-- 2026-05-22 (*absorbed*, Track CR Phase 3): R0-loss rung extension absorbed via §1 enrichment cluster spike (`spikes/spike-enrichment-cluster1-2026-05-21/02-r0-loss-derivation.md`) plus integration-reconciliation verdict (`spikes/spike-integration-reconciliation-2026-05-22/99-verdict.md` §5 Phase 3). The constituent prior art (Conley 1978; Letcher 2019; Cheung-Piliouras-Tao 2021) was verified in the §1 cluster's domain; no separate Pillar / Undermind search was conducted for the rung-extension itself — the rung is the AAT-internal recognition that these textbook results jointly classify a fourth ladder rung disjoint from R0-strict and from the Sylvester-floor regime.
+- 2026-05-22 (*absorbed*): the constituent prior art for the R0-loss rung extension (Conley 1978; Letcher 2019; Cheung-Piliouras-Tao 2021) was verified in its own domain; no separate Pillar / Undermind search was conducted for the rung-extension itself — the rung is the AAT-internal recognition that these textbook results jointly classify a fourth ladder rung disjoint from R0-strict and from the Sylvester-floor regime.
 
 ## Working Notes
 

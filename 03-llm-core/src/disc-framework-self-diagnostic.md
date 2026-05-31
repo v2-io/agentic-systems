@@ -19,7 +19,7 @@ AAT applies recursively to agents building it. Systems that use AAT-grounded met
 
 For logogenic agents specifically: the framework is itself a logogenic artifact (encoded in language; reasoned about in language; revised through language), and AAT-using logogenic agents inherit the channel-collapse condition ( #scope-channel-collapse) and its consequences. The framework therefore provides a self-application diagnostic that is structural rather than analogical.
 
-*[Empirical instances]* Three documented cases (recorded in `msc/reflections/24-framework-as-its-own-diagnostic.md`):
+*[Empirical instances]* Three documented cases:
 
 1. **Flash's self-naming at Event 2 of the persistence-failure arc** (April 30, 2026). When Flash entered meta-cognitive paralysis, the methodology vocabulary in the project's documentation served as priming the agent could use to *self-recognize* under partial degradation. The framework supplied the words for what was wrong, which let the self that could be addressed know what to return to.
 

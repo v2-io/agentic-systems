@@ -45,11 +45,11 @@ The simulations were theory-shaping, not merely confirmatory. In particular:
 
 **Parameter sweeps.** Each variant swept its key parameter(s) across 7--20 values. Monte Carlo: 200 independent trials per parameter point, 10,000--20,000 timesteps per trial, with 2,000--5,000 step burn-in for steady-state convergence. Fixed random seeds for reproducibility.
 
-**Exponent fitting.** Adversarial exponents were estimated by fitting $\log(\Vert\delta_B\Vert / \Vert\delta_A\Vert) = a + b \cdot \log(\mathcal{T}_A / \mathcal{T}_B)$ via weighted least squares, with weights inversely proportional to variance of each point's log-estimate. 95% confidence intervals via bootstrap (1,000 samples).
+**Exponent fitting.** Adversarial exponents were estimated by fitting $\log(\Vert\delta_B\Vert / \Vert\delta_A\Vert) = a + b \cdot \log(\mathcal T_A / \mathcal T_B)$ via weighted least squares, with weights inversely proportional to variance of each point's log-estimate. 95% confidence intervals via bootstrap (1,000 samples).
 
 **Correction functions.** Five functions $g: \mathbb{R} \to \mathbb{R}$ were tested, all satisfying $g(0) = 0$ and $g'(0) = 1$: linear ($g(\delta) = \delta$), saturating ($g(\delta) = \delta / (1 + \lvert\delta\rvert/R)$), threshold ($g(\delta) = \delta \cdot \mathbf{1}[\lvert\delta\rvert \gt \epsilon]$), sigmoid ($g(\delta) = R \cdot \tanh(\delta/R)$), and structural breakdown ($g(\delta) = \delta \cdot \mathbf{1}[\lvert\delta\rvert \lt R_\text{max}]$).
 
-**Simulation code.** All code is in `../../spikes/track-b-nonlinear-sims/`. Initial simulations: `sim1_nonlinear_mismatch.py` (single-agent), `sim2_adversarial_coupling.py` (two-agent). Variant extensions: `variants/variant_ab_drift.py`, `variants/variant_cd_regimes.py`, `variants/variant_ef_extensions.py`, `variants/variant_hafez_bridge.py`. Detailed result write-ups: `variants/variant_ab_results.md`, `variants/variant_cd_results.md`, `variants/variant_ef_results.md`, `variants/variant_hafez_results.md`.
+**Simulation code (reproducibility).** The full simulation suite — single-agent and two-agent initial simulations plus the four variant-extension drivers (A/B drift, C/D regimes, E/F extensions, Hafez bridge) and their per-variant result write-ups — is maintained as the project's reproducibility supplement and will be released as a citable code artifact at publication. The numerical outcomes that the body's findings rest on (steady-state formulas, the fitted exponents, the gating thresholds, the per-dimension errors) are stated self-contained in the tables and Key Findings below.
 
 ## Key Findings
 
@@ -61,7 +61,7 @@ The theory now distinguishes two disturbance models (Model D: bounded determinis
 - **Model S, coupling-dominant:** $\lVert\delta\rVert_{\text{rms}} = \sigma_w / \sqrt{2\mathcal{T}}$ (from Prop A.1S). Adversarial exponent $b = 3/2$ (derived; Variants C-D confirm at 1.481).
 - **Non-coupling-dominant:** Exponent degrades smoothly toward 1.0 (Model D) or 0.5 (Model S) as base disturbance grows relative to adversarial coupling.
 
-The original sim2 result ($b \approx 1.05$) was not a falsification of Corollary 11.2 but a measurement in the wrong regime -- stochastic noise coupling at moderate coupling dominance. Variants A--D systematically mapped the full regime space and validated the derived exponents. See #result-adversarial-exponent-regimes for the full treatment.
+A measured exponent of $b \approx 1.05$ corresponds to the non-coupling-dominant regime (stochastic-noise coupling at moderate coupling dominance), consistent with the regime classification rather than contradicting it. Variants A--D systematically map the full regime space and validate the derived exponents. See #result-adversarial-exponent-regimes for the full treatment.
 
 ### Observation noise gates adversarial advantage
 
@@ -81,7 +81,7 @@ Bi-predictability $P$ (Hafez et al.) measures the informational architecture of 
 
 ## Epistemic Status
 
-*Empirical.* Simulation results are reproducible (code in `../../spikes/track-b-nonlinear-sims/`, fixed seeds, all results documented in variant write-ups). The key results -- regime-dependent exponents, observation noise gating, per-dimension exactness -- have been promoted to first-class segments ( #result-adversarial-exponent-regimes, #obs-gated-tempo-advantage, #result-per-dimension-persistence) with their own epistemic assessments. This appendix serves as reference for the simulation program as a whole.
+*Empirical.* Simulation results are reproducible under fixed random seeds; the driver code and per-variant write-ups are maintained as a reproducibility supplement to be released as a citable code artifact at publication. The key results -- regime-dependent exponents, observation noise gating, per-dimension exactness -- have been promoted to first-class segments ( #result-adversarial-exponent-regimes, #obs-gated-tempo-advantage, #result-per-dimension-persistence) with their own epistemic assessments. This appendix serves as reference for the simulation program as a whole.
 
 ## Discussion
 
