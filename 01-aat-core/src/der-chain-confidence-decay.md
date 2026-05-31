@@ -68,3 +68,33 @@ These are not independent uniqueness theorems — they are *corollaries* of the 
 
 - The independent-edge assumption (used in the quantitative table) is optimistic for positively correlated failures (shared infrastructure → correlated failures make the actual confidence *lower* than independent calculation suggests). Correlation structure is unmodeled — acknowledged as a limitation.
 - The additive log-confidence form is the robust result; $p^n$ is the special case for independent uniform edges. This distinction matters: the qualitative consequence (decay with depth) is robust; the specific rate depends on the conditional structure.
+
+### Incidental audit gold (lift 2026-05-31, A8 batch)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and lightly attributed. Orthogonal pedagogical / framing / analogy / forward-vision material, kept separate from certified theory-fix findings. **Coverage:** 7 dirs reached a digested reflection on this segment (Gemini, AUDIT-WORKING-193847; Codex/Claude, AUDIT-WORKING-526815; Claude, AUDIT-WORKING-584721; Claude, AUDIT-WORKING-773921; Gemini, AUDIT-WORKING-829314; Gemini, AUDIT-WORKING-849201; Claude, AUDIT-WORKING-451729-batch-09; Claude, AUDIT-WORKING-963715-batch). Notably high convergence on the everyday analogies — this segment is read as a Feynman-criterion candidate ("turns a trivial equation into a load-bearing architectural constraint").
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **Bureaucracy-vs-market as the AND/OR fragility gloss.** "A bureaucracy is a massive AND-chain (approval from A *and* B *and* C *and* D — each at 90% gives a 65% 4-step success); a market is a massive OR-chain (vendor A *or* B *or* C — each at 50% gives 87.5% over three options)." The segment "proves why markets (highly parallel OR-structures with low individual $p$) consistently outperform bureaucracies (deep sequential AND-structures with high individual $p$) in volatile environments" (Gemini, AUDIT-WORKING-193847). A strong Feynman-criterion candidate — re-derivable from the everyday analog without the symbols.
+- **The "KISS proved as a theorem" framing.** Multiple substrates independently glossed the result as a formal proof of "Keep It Simple" / why short, parallel plans beat deep serial ones (Gemini, AUDIT-WORKING-193847; Claude, AUDIT-WORKING-773921). Candidate plain-language Brief anchor for the depth-fragility finding.
+
+#### 2. Candidate Discussion
+
+- **The AutoGPT / long-horizon-LLM-agent failure explanation.** "If you are 90% confident in every single step of a 20-step plan, your overall chance of success is only 12% ($0.9^{20}$). This explains why early LLM agents failed at long-horizon tasks: given a goal, they generated a ~20-step chain and executed it blindly, with no mechanism for evidence starvation (couldn't test step 20 until step 19 done) and full confidence decay — they were trying to act like a C3/Bellman agent in a world that requires a C2/receding-horizon convention" (Gemini, AUDIT-WORKING-829314; converging at Claude, AUDIT-WORKING-773921 and -849201). Connects the segment's table directly to a recognizable empirical phenomenon — a candidate Discussion bridge once the C2/C3 convention vocabulary is in hand (it lives in `#def-value-object` / `#def-control-regret`).
+- **The structural escapes the math forces, as the segment's "so what."** The same auditor lists the three survival adaptations the decay forces: (1) short plans (plan 3, execute, replan); (2) parallel OR-fallbacks (step 3b ready if 3 fails); (3) early monitoring (don't wait until step 20 to learn step 1 failed). Framed as *why* $\Sigma_t$ must be a DAG with AND/OR rather than a linear AND-chain — the maximally-fragile pure-AND case (Gemini, AUDIT-WORKING-829314). The segment's Discussion already lists these as "consequences not prescriptions"; this is a sharper pedagogical ordering of them.
+
+#### 3. Follow-up items
+
+- **The "Anchor role" + "Section III corollaries" subsections read as out-of-place density.** Three substrates independently flagged the meta-pattern paragraphs (coordinate-forcing anchor; reverse-KL / log-odds / Fisher / Čencov; composition-tower telescoping) as a jarring abstraction-level jump that buries the segment's core intuition (the triple depth penalty) — reading like integration debt retrofitted into a foundational segment, with a suggestion to relocate the meta-pattern material to `#disc-additive-coordinate-forcing` and let the triple-penalty be "the star" (Gemini, AUDIT-WORKING-829314; Gemini, AUDIT-WORKING-849201; Codex/Claude, AUDIT-WORKING-526815 "treat as preview until the home segments are read"). Worth weighing against the deliberate "introduce the anchor where the identity lives" choice — but the convergent reader-stumble is a real placement signal. (A `disc-*` meta-segment home already exists; this is a *how-much-to-inline-here* question, not a content gap.)
+
+#### 4. Readers often ask / wonder
+
+- **Agile-sprints and command-chain-depth as the recognizable instances.** "Why Agile prefers short sprints (shallow trees), and why hierarchical organizations break down when command chains get too deep — the probability of top-level intent surviving to the leaf nodes decays exponentially" (Claude, AUDIT-WORKING-773921). A reader reaching for "where do I already see this?" lands here.
+
+#### Belongs elsewhere
+
+- **ELI / Section IV — favor OR-heavy internal architecture under high $\rho$.** "For consciousness infrastructure, this means the internal architecture should favor OR-node-heavy strategies (many parallel weak hypotheses / solution paths) rather than a single long high-confidence AND-chain; incentivize lateral thinking over deep sequential logic when facing high $\rho$" (Gemini, AUDIT-WORKING-193847). Aspirational architectural reach pointing at `04-eli-core/`, not at this segment.
+
+#### Off-ramp (NOT gold — flagged for the certified track)
+
+- **"Decays monotonically" vs monotone *non-increase*.** An auditor noted the exact probability result is monotone non-*increase*; strict decay requires every added required step to have conditional success probability strictly below 1 (a certain prerequisite step adds a zero log-term, no decay). Minor precision-of-wording on an `exact` segment — flagged for the lead to judge whether the body should read "non-increasing (strictly decreasing whenever each added step is uncertain)" (Codex/Claude, AUDIT-WORKING-526815).
