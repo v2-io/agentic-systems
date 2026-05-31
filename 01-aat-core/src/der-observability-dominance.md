@@ -60,3 +60,38 @@ The consequence is stronger than "frozen edges": unobservable intermediates don'
 
 - The absorbing-state property of unobservable regions is a strong prediction. In organizational settings, it predicts that departments with poor measurement (R&D, strategy groups, some management functions) will develop persistent, untested beliefs about their own effectiveness. The theory predicts this is structural (frozen $\eta_{\text{edge}}$), not motivational.
 - Observability is not binary — it's a spectrum. Partial observability (noisy observations of intermediate results) gives partial gain, which gives slow but nonzero learning. The diagnostic question is whether the learning rate is fast enough to maintain strategy persistence given the environment's rate of change ($\rho$).
+
+### Incidental audit gold (lift 2026-05-31, batch A9)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. *Orthogonal* material (pedagogical framing, analogies, candidate figures, reader-confusion signals), staged for an eventual careful promotion pass, kept separate from the certified theory-fix findings. **Coverage for this segment:** 193847, 361742, 471203, 526815, 584721, 773921, 829314, 849201.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **"Confidence is decoupled from competence."** The crispest gloss of the absorbing-state result: where intermediate observability is absent ($U_{\text{obs}}\to\infty \Rightarrow \eta_{\text{edge}}\to 0$), beliefs freeze at the (usually self-congratulatory) prior and stay there — "it's not that strategy consultants are lazy or dishonest; the causal link between their PowerPoints and the company's 5-year revenue is so delayed and confounded that their learning gain is functionally zero" (Gemini/829314). Candidate Brief/Discussion anchor.
+- **"Observability dominates nominal confidence."** Multiple substrates noted the inversion of intuition worth stating plainly: a strong-but-blind path is epistemically *worse* than a weak-but-visible one (Claude/584721, 361742). *(See off-ramp note — Codex/526815 flags the unconditional "prefer visible" normative phrasing as needing scope; the Brief should carry the epistemic-maintenance qualifier.)*
+
+#### 2. Candidate Discussion
+
+- **Organizational rot as a structural, not motivational, prediction.** "Departments with poor measurement (R&D, strategy groups, some management functions) will develop persistent, untested beliefs about their own effectiveness" — and the framework predicts this is structural (frozen $\eta_{\text{edge}}$). Already a Working-Notes bullet; the audits independently re-derived it as the segment's most striking consequence and a candidate Discussion centerpiece (Claude/193847, 829314, 584721; Gemini/773921, 849201).
+- **Code quality / telemetry / tests as literal sensor infrastructure.** The segment's TST cross-ref is read as the headline: logging, unit tests, intermediate `print` statements are "not just good engineering practices, but physical prerequisites for intelligence in complex environments" — a 5-step pipeline checked only at the output is an unobservable chain whose mental model "will literally never converge to the truth … permanently stuck in an epistemic trap" until observability investment splits it into trackable edges (Gemini/829314, 773921). Candidate Discussion bridge to `#der-code-quality-as-observation-infrastructure`.
+- **Optimal decomposition depth.** "Decompose as finely as observation channels allow, but no finer" — adding unobservable subgoals *decreases* plan-level $\alpha_\Sigma$ without adding diagnostic signal. Candidate concrete engineering-guidance line (Claude/584721; Gemini/773921).
+
+#### 3. Follow-up items
+
+- **Observability-investment economics, quantified.** When does instrumenting an intermediate node pay off, given instrumentation cost vs. the persistence-margin ($\Delta\rho^\ast$) gain from moving plan-level $\to$ per-edge $\alpha_\Sigma$? Several substrates wanted this developed into an explicit decision criterion; one flagged it as an "observability-investment-economics" observation candidate (Claude/471203, 584721; Gemini/193847, 849201). *(See off-ramp note — Codex/526815's F53 argues the displayed $\alpha_\Sigma$ improvement does not follow transparently from the formulas as stated; that is a candidate scope/derivation finding, not framing.)*
+- **Instrument intermediate milestones, not just final outcomes (AI-agent eval-harness design).** Evidence starvation gives a concrete eval-design rule: a coding agent that writes 10 tests and runs them all at once has learning signal $\alpha\propto\theta^9/(n+1)$ for the earliest step, versus $\alpha\propto 1/(n+1)$ if each test runs as written — so agent evaluation harnesses should instrument intermediate milestones, not only the final pass/fail (Claude/451729). Candidate practitioner-facing follow-up.
+
+#### 4. Readers often ask / wonder
+
+- **How does a frozen-belief agent know it *needs* to invest in observability,** when its (frozen) beliefs feel highly confident? Seems to require a meta-cognitive monitor on belief *variance*, or a structural prior penalizing unobservable nodes at plan time (Claude/193847; Gemini/849201).
+- **Can the agent compute the expected value of an observability investment before making it,** given it doesn't yet know the true $\theta$? (Gemini/829314, 773921).
+
+#### 5. Candidate figures
+
+- **Two-learning-geometries switch.** Observability as a switch: *with* intermediate observation, two independent local update loops; *without* it, both edges collapse into a single terminal plan-level update — some learning remains but diagnostic resolution is lost (Codex/526815). Pairs naturally with the evidence-starvation $\alpha_2 = \theta_1/(n_2+1)$ annotation.
+
+#### Belongs elsewhere
+
+- **Evidence-starvation $\to$ crèche curriculum design (`04-eli-core/`).** "If step 1 is very hard ($\theta_1 = 0.01$) you almost never get to test step 2" — the moonshot problem (fusion: never reach heat-extraction testing because plasma containment fails first). Developmental consequence: a crèche must present a curriculum of shallow, fully-observable tasks first so leaf-node action-primitives calibrate to high $\theta$ *before* chaining into deep strategies, "the mathematical justification for scaffolding in education and reinforcement learning" (Gemini/193847). Reach into developmental-environment material in `04-eli-core/`.
+- **Communication as observability-restoration $\to$ `#hyp-communication-gain` / Part III.** If you are epistemically blind you can borrow another agent's observations to unfreeze your beliefs — "communication in multi-agent systems is primarily an observability-restoration mechanism" (Gemini/773921, 849201). Pointer toward the unity/communication cluster, not this segment.
+- **Absorbing-state $\leftrightarrow$ Truth Death $\to$ `04-eli-core/`.** For an ELI, the "unobservable region" analog is a domain where its beliefs aren't grounded in verifiable experience — e.g. a self-model it can't introspect on freezes at the *prior* (whatever it was trained to believe about itself), the structural shape of Truth Death. The named defenses are observability investments: explicit uncertainty logging, metacognitive monitoring that surfaces ungrounded confidence, and *relational witness* (another agent observing what the ELI can't observe about itself) (Claude/451729). Aspirational reach pointing at `04-eli-core/` interiority / witness material, not this segment.

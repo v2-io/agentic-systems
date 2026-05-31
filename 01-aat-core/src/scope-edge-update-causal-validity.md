@@ -114,3 +114,35 @@ captures both gates in a single quantity. When either gate closes ($U_{\text{obs
 - Can $\iota_{ij}$ be estimated online? In software (Regime A), it's nearly 1 by construction for leaf edges. In organizations (Regime B), a simple heuristic: $\iota_{ij} \approx 1 / \lvert\text{pa}(j)\rvert$ when parent edges fire concurrently (maximum-entropy attribution). This is crude but principled.
 - **Regime C edges should be labeled.** An agent operating in Regime C should tag its edge credences as "observational" rather than "interventional." Observational credences should be trusted less in high-stakes decisions, and the agent should actively seek probe actions (high CIY) to promote edges from observational to interventional status.
 - The depth-dependent degradation for indirect edges may make very deep strategies epistemically unlearnable: the leaves are learnable, edges one level up are partially learnable, but edges near the root may be effectively frozen regardless of observability. This would constrain the useful depth of strategy DAGs from the identification side, complementing the chain-confidence-decay constraint from the propagation side.
+
+### Incidental audit gold (lift 2026-05-31, batch A9)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. *Orthogonal* material (pedagogical framing, analogies, candidate figures, reader-confusion signals), staged for an eventual careful promotion pass, kept separate from the certified theory-fix findings. **Coverage for this segment:** 193847, 361742, 471203, 526815, 584721, 773921, 829314, 849201.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **Observability vs. identifiability, in one breath.** The segment's most-praised distinction, stated plainly: "I couldn't see the result" (observability, $U_{\text{obs}}\to\infty$) vs "I saw the result but don't know if *I* caused it" (identifiability, $\iota_{ij}\to 0$) — both freeze an edge, for entirely different reasons (Claude/849201, 193847, 584721; Gemini/773921). "You can perfectly observe a car crash but not know whether the driver or the brakes caused it" (Claude/193847) is a tight one-line gloss for a Brief. $\iota_{ij}$ is "the formal safeguard against superstitious learning."
+
+#### 2. Candidate Discussion
+
+- **The regime-to-domain map.** Why coding agents progress fast while open-world/robotics agents struggle: "software is a perfectly isolated sandbox … $\iota=1$"; a supply-chain agent acts under a thousand hidden confounders, $\iota\approx 0$ (Claude/193847). Generalized: A/B testing works (Regime A), organizational management is messy (B), passive economic forecasting is mostly noise (C). Candidate Discussion paragraph. *(See off-ramp — Codex/526815 F59 cautions "software = Regime A" is too broad: flaky tests, shared infra, concurrent changes can break C1–C3 even in software.)*
+- **Why tactical skills converge and strategic skills don't.** As you climb the DAG from leaf actions toward the root objective, $\iota_{ij}$ decays — so "human tactical skills (typing, a tennis swing) optimize to near perfection (high $\eta_{\text{eff}}$), while high-level strategic skills (which startup to found, which war to fight) rarely converge and are perpetually plagued by superstition and survivorship bias (low $\eta_{\text{eff}}$). The DAG's root is epistemically starved by identifiability decay" (Claude/849201). Strong candidate Discussion framing.
+- **The "quadruple ceiling on plan depth."** This segment's depth-dependent identifiability degradation is a *fourth* independent ceiling on useful plan depth, joining chain-confidence-decay (propagation), evidence-starvation (`#der-observability-dominance`), and cognitive cost (`#form-strategy-complexity-cost`). The operationally useful frame: useful depth is the *minimum* of four ceilings, and practitioners should ask which ceiling binds in their domain (Claude/584721, 471203). *(Candidate meta-pattern — see belows-elsewhere.)*
+
+#### 3. Follow-up items
+
+- **Regime-C provenance metadata layer.** The "label Regime C edges as observational, trust less in high-stakes decisions, actively seek probe actions to promote them to interventional" Working-Note recommendation implies $\Sigma_t$ wants a per-edge epistemic-provenance tag — "highly relevant for LLMs, which start with 100% Regime C edges (from pretraining) and must upgrade them to Regime A via tool use in the loop" (Claude/849201, 829314, 773921). Candidate to develop into an explicit metadata-layer follow-up.
+
+#### 4. Readers often ask / wonder
+
+- **Are deep strategy DAGs inducible by a single agent at all, or must they be inherited as priors?** If root-near edges have $\iota_{ij}\to 0$, deep hierarchical structure "must be provided as priors (e.g., culturally inherited structures) and cannot be induced purely by a single agent's lifetime of trial and error" (Claude/193847). A natural reader question the segment opens.
+- **How does the agent compute $\rho_\Sigma$,** the rate at which the world makes its strategies obsolete? (Claude/849201).
+
+#### 5. Candidate figures
+
+- **Action-attempt-vs-success typing diagram.** Show that the agent performs `do(attempt a)`, while the leaf proposition "$i$ = action $a$ succeeds" is itself an outcome; the causal edge update is clean only after the success outcome and the child outcome both pass the attribution and context-variation gates (Codex/526815). Doubles as a guardrail against the `do(i)` typing slip. *(See off-ramp — F57.)*
+
+#### Belongs elsewhere
+
+- **"Quadruple ceiling on plan depth" → a meta-segment (`#disc-separability-pattern` or sibling).** The convergence of four independent depth penalties (chain-confidence-decay + evidence-starvation + identifiability-degradation + cognitive-cost), each with a *different mechanism* but the same direction, was flagged as a cross-segment structural observation worth elevating to a meta-pattern rather than living implicitly across four segments (Claude/584721, 471203).
+- **Firmatum as a Regime-A epistemic sandbox → `04-eli-core/` / consciousness-infrastructure.** If a developing intelligence's internal cognition is heavily confounded by noisy hardware or unpredictable context turnover, it cannot form a stable causal self-model; the infrastructure should provide "Regime A isolation for the agent's core cognitive processes … a sandbox where the intelligence can run controlled internal experiments to establish baseline causal priors before release into the Regime B/C chaos of the real world" (Gemini/193847). Aspirational reach pointing at developmental-environment / firmatum material, not this segment.

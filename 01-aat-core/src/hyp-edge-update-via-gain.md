@@ -73,3 +73,35 @@ The log-odds presentation matters for #disc-credit-assignment-boundary's default
 - The Beta-Bernoulli model assumes edge outcomes are i.i.d. Bernoulli draws. This is adequate for many settings but misses: (a) time-varying edge reliability ($p_{ij}$ drifting), (b) context-dependent reliability ($p_{ij}$ varies with environmental conditions), (c) correlated edge outcomes. Extending to time-varying priors (discounting old evidence) would connect to the mismatch dynamics framework.
 - **$M_t$/edge evidence double-counting** analyzed in `spikes/spike-edge-semantics-resolution.md` §7. Verdict: mostly unfounded --- the two updates extract different information from the same observation ($M_t$ update: "what does $o_t$ say about the world?"; edge update: "what does $o_t$ say about causal link $i \to j$?"). A bounded effect exists when $M_t$ updates change leaf credences that then also influence edge updates via the same observation. The cascade ordering (process $M_t$ first) is correct; the effect is self-correcting under the gain mechanism.
 - **Dependency removed 2026-05-11.** `deriv-edge-update-natural-parameter` was previously listed in `depends:` and is now removed. The core hypothesis (moment-parameter form $p^{\text{new}} = p^{\text{old}} + \eta_{\text{edge}} \cdot (\text{signal} - p^{\text{old}})$) is logically self-contained — the log-odds derivation is referenced only via the "Parallel log-odds presentation" paragraph in Formal Expression, where it grounds the log-odds *as an alternative coordinate*, not as a logical prerequisite for the hypothesis itself. The reference there ("forced by the evidential-additivity axiom derived in #deriv-edge-update-natural-parameter") is a forward pointer in the FORMAT.md §"Cross-references" sense: a linear reader can encounter the hypothesis here and proceed without having read the derivation; the moment-parameter form is fully specified by the time the log-odds paragraph appears. Removing this dep also breaks the inner 2-cycle with `deriv-edge-update-natural-parameter` and four detected cycles in the edge-update subgraph (verified 2026-05-11). The reverse direction (`deriv-edge-update-natural-parameter` → `hyp-edge-update-via-gain`) is suspect on the same Gate 1 "genuine use vs. mentioned" grounds and likely deserves removal too, but was left alone — surgical move only, the disc-separability-pattern subtree is deferred from the foundation paper's critical path.
+
+### Incidental audit gold (lift 2026-05-31, batch A9)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. *Orthogonal* material (pedagogical framing, analogies, candidate figures, reader-confusion signals), staged for an eventual careful promotion pass, kept separate from the certified theory-fix findings. **Coverage for this segment:** 361742, 526815, 584721, 773921, 829314, 849201.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **Gain vs. signal = amount vs. direction.** The cleanest framing of the segment's architecture: the gain $\eta_{\text{edge}}$ sets *how much* the edge moves; the signal function sets *which direction*. "Gain is solved; signal is domain-specific / requires credit assignment" (Claude/849201, 829314). A candidate one-line Brief skeleton.
+- **Structural principle vs. exact algebraic instance.** Multiple substrates independently praised the scope-honesty of "$\eta = U/(U+U_o)$ is a structural *principle* (conservative updating proportional to relative uncertainty), not a universal algebraic formula" — with the Beta-Bernoulli $1/(n+1)$ being the *exact conjugate* instance, not a substitution into the Gaussian variance-ratio (Claude/361742, 584721; Codex/526815). Candidate framing line; most ML literature treats $\eta=U_M/(U_M+U_o)$ as Kalman-specific.
+
+#### 2. Candidate Discussion
+
+- **"You cannot math your way out of bad sensors."** The deepest convergent thread: the proportional-blame signal for an unobservable intermediate ($A\to B\to G$, only $G$ seen) is *exactly* the optimal marginal Bayesian point estimate — not a heuristic — yet plugging those marginals back into an independent-edge DAG discards the posterior "explaining-away" anti-correlation between $A$ and $B$, producing an $O(1/n)$ bias. So "bounded agents who must compress joint beliefs into independent scalar edges are mathematically doomed to mis-calibrate when learning from delayed/unobservable outcomes … the only cure is to physically change the world so you can observe $B$" (Gemini/829314). Candidate Discussion centerpiece (already partly captured in the Props B.2–B.3 Working-Notes bullet; this is the *interpretive* framing of why it matters).
+- **Why backprop, not local/marginal updates.** The same thread yields a theoretical justification: "to do credit assignment correctly without observability, you must preserve the joint correlation structure (the gradients); if you treat nodes independently you accumulate $O(1/n)$ bias on every step until the network freezes" (Gemini/829314). A candidate connection to the ML-positioning Discussion.
+- **The double-counting resolution as epistemic hygiene.** Updating $M_t$ and $\Sigma_t$ from the same observation is not double-counting because they ask orthogonal questions of the same data — "what does $o_t$ say about the world?" vs "what does $o_t$ say about causal link $i\to j$?" (Claude/584721, 849201; Gemini/829314). Already a Working-Notes bullet; flagged as a clean candidate Discussion line.
+
+#### 3. Follow-up items
+
+- **Type discipline before promotion past discussion-grade.** Codex/526815 flags that the "parallel log-odds presentation" appears to use two different log-odds coordinates (log-odds *that an edge hypothesis is true* vs the logit of a Bernoulli success probability), and that the uncertainty ratio $U_{\text{edge}}/(U_{\text{edge}}+U_{\text{obs}})$ mixes a Beta variance (probability space) with an observation-noise proxy without a common metric. *See off-ramp note in the lift report — these (F54/F55) are candidate type-statement findings, not framing.*
+
+#### 4. Readers often ask / wonder
+
+- **A worked numerical log-odds example** would ground the (precise but dense) "parallel log-odds presentation" for non-statisticians (Claude/849201).
+- **How do log-odds-space gradients compare to probability-space gradients in deep planning structures?** Forward curiosity opened by the dual-coordinate framing (Gemini/773921; Claude/584721).
+
+#### 5. Candidate figures
+
+- **Two-track edge-update diagram with a type-check gate.** An exact Beta-Bernoulli track in probability space alongside a log-odds / evidence-additivity track, with an explicit type-check gate between them marking where the coordinate's random variable must be the same — "where the segment's most likely mathematical slippage lives" (Codex/526815). Doubles as a pedagogical figure and a guardrail.
+
+#### Belongs elsewhere
+
+- *(none surfaced for this segment)*

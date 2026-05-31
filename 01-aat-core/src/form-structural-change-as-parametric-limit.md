@@ -53,3 +53,34 @@ The key insight is that this extreme case is the *limit* of the continuous proce
 
 - The timescale ordering (reweight ≫ reclassify ≫ prune/graft ≫ revise $O_t$ ≫ full restructure) is an empirical observation that should be testable. In software development: edge reweighting ≈ updating confidence after a test passes/fails; $\gamma$ reclassification ≈ realizing two tasks are both required (not alternatives); pruning ≈ abandoning an approach that isn't working; grafting ≈ discovering a new approach; objective revision ≈ changing the feature scope; full restructure ≈ starting the project over.
 - Grafting (adding new edges) is qualitatively different from other operations because it requires the agent to hypothesize a causal relationship that isn't in its current $\Sigma_t$. Where do new causal hypotheses come from? From $M_t$ (the model suggests a possible path), from external sources ( #hyp-communication-gain — another agent suggests an approach), or from exploration ( #def-causal-information-yield — the agent discovers an unexpected effect). This is the creative step in strategic revision.
+
+### Incidental audit gold (lift 2026-05-31, batch A9)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. *Orthogonal* material (pedagogical framing, analogies, candidate figures, reader-confusion signals), staged for an eventual careful promotion pass, kept separate from the certified theory-fix findings. **Coverage for this segment:** 361742, 471203, 526815, 584721, 773921, 829314.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **"Perfect efficiency is perfect brittleness."** The convergent one-liner for the latent-diversity result: an agent that prunes *every* low-credence edge to save representation cost becomes optimally fitted to the current environment and helpless under a regime shift, forced into a fatal full-restructure rather than a cheap reweight (Gemini/829314, 773921; Claude/584721, 361742). Strong candidate Brief/Discussion hook.
+- **The six-operation maintenance spectrum, ordered by frequency and cost** (reweight ≫ $\gamma$-reclassify ≫ prune/graft ≫ revise $O_t$ ≫ full restructure) was praised as the segment's clean organizing skeleton; the software-engineer mapping (test-pass reweight … rewrite-from-scratch) grounds it (Claude/584721, 829314).
+
+#### 2. Candidate Discussion
+
+- **Neutral variation as the constructive bridge, sharpened.** The Miller-2022 connection converts "radical restructuring is the *limit* of continuous operations" from a claim into a precise mechanism: near-zero-credence edges ≡ inaccessible/latent states; incremental updates ≡ neutral mutations; a previously-near-zero edge becoming load-bearing under regime change ≡ the parametric-limit event with discontinuous *behavioral* effect (Claude/361742, 584721). Candidate Discussion elaboration — "AAT does not need new discontinuous update math to handle paradigm shifts" (Gemini/829314).
+- **The evolutionary-biology analog for latent diversity.** Most mutations are neutral and unselected in the current environment, but the dormant pool is what lets a population survive an ice age / new predator — applied to one agent's $\Sigma_t$, this gives "a strict mathematical justification for why organizations should tolerate 'inefficiency,' 'skunkworks,' 'weird side projects,' and 'technical debt that isn't hurting anyone' … the latent structural diversity required to survive a paradigm shift." The MDL penalty (`#form-strategy-complexity-cost`) vs. neutral-variation necessity is named as "the central architectural tradeoff of an agent's life" (Gemini/829314). Candidate Discussion centerpiece.
+
+#### 3. Follow-up items
+
+- *(Framing-grade follow-ups are captured above; the Codex/526815 items F63/F64/F65 route to the off-ramp — see lift report — as candidate findings: the continuity claim needs an explicit ambient supergraph / zero-weight-edge embedding to be literal; AND↔OR $\gamma$-reclassification is discrete absent a soft-gate parameterization; the "low-credence edges cost almost nothing" claim needs a credence-weighted cost model to be consistent with the pruning-threshold discussion.)*
+- **Resolved process note:** an earlier audit (849201) flagged a stale "TF-10 destruction-creation" lineage reference in this segment's discussion header; it is no longer present in canon (verified 2026-05-31).
+
+#### 4. Readers often ask / wonder
+
+- **Where do new edges come from — does AAT have a model of creativity / hypothesis generation?** The "creative step" of grafting (positing a causal edge not in $\Sigma_t$) is the natural reader question; the segment points to $M_t$ / communication / CIY, but *generation* from $M_t$'s latent space "is still somewhat magical" — and is precisely where LLMs excel as proposal generators (Gemini/829314; Claude/849201-via-batch). Worth an explicit Discussion sentence.
+
+#### 5. Candidate figures
+
+- **Ambient-supergraph two-view diagram.** In a fixed ambient supergraph an edge weight slides continuously from $0$ to active (and back); *outside* that ambient graph, adding a node or flipping a gate is a discrete lift into a larger representational space. The figure makes visible exactly the scope the continuity claim needs (Codex/526815) — pedagogy + guardrail in one.
+
+#### Belongs elsewhere
+
+- **Cross-agent grafting → `#hyp-symbiogenic-composition` (Part III).** Within-agent grafting is the host-side component of full (bilateral, objective-absorbing) symbiogenesis; the type distinction was praised but the symbiogenesis side belongs in the composition-machinery cluster, not this Part II segment (Claude/584721, 361742; Gemini/829314).

@@ -220,3 +220,37 @@ In each, what makes detection feasible is the agent's ability to occasionally ob
 - The boundary characterization's routes (c) and (e) depend on domain capability and are not formalized in AAT beyond cross-references to `#der-observability-dominance` and `#der-loop-interventional-access`. A future refinement could quantify "detection power" per route as a function of domain parameters (e.g., observability cost, intervention availability, prior strength).
 - The no-go is asymmetric: it forbids on-policy *detection* of L1 from L0, but it does *not* forbid on-policy *parameter learning within L0*. The agent can learn its L0 conditionals to arbitrary precision on-policy; it just cannot determine whether those conditionals hide a latent. This distinction sharpens the diagnosis-vs-calibration split that #result-structural-adaptation-necessity makes at the parametric/structural boundary.
 - The CHT (Bareinboim et al. 2022) is invoked as an external theorem. AAT inherits its conditions (well-defined SCMs over compatible variable sets); these are satisfied for the strategy-DAG setting by construction.
+
+### Incidental audit gold (lift 2026-05-31, batch A9)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. *Orthogonal* material (pedagogical framing, analogies, candidate figures, reader-confusion signals), staged for an eventual careful promotion pass, kept separate from the certified theory-fix findings. **Coverage for this segment:** 193847, 361742, 471203, 526815, 584721, 773921, 829314, 849201. (Two of the substrates rated this segment top-decile / "one of the framework's strongest pieces.")
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **The one-line stake.** Several substrates converged on the same plain-language hook: an agent operating strictly on-policy in a confounded world "will develop perfectly calibrated, completely wrong causal beliefs, and the math proves it cannot detect its own error without breaking policy" (Claude/193847) — i.e. "making mistakes is a structural prerequisite for maintaining a causal grip on reality" (Gemini/773921). Strong candidate Brief opener.
+- **The asymmetry as the precise statement of the no-go:** "on-policy parameter learning is fine; on-policy *structural* detection is forbidden" — an L0 agent can converge to perfect L0 conditionals and still be in an L1 world without ever knowing (Claude/584721). Already in Working Notes; flagged for surfacing more prominently because it *is* the sharp content.
+
+#### 2. Candidate Discussion
+
+- **"Efficiency destroys diagnostic observability."** The censoring mechanism (sequential short-circuit AND/OR evaluation) is the structural source of the no-go: "if I want to do A AND B, and A fails, I don't bother trying B … I never observe the joint outcome (A fails, B fails), which is exactly the data I need" (Claude/193847). Multiple substrates independently named short-circuit-efficiency and self-diagnosis as in *direct mathematical opposition* (Claude/193847, 526815, 584721; Gemini/773921, 829314). A candidate Discussion framing of *why* the censoring condition (S2) is load-bearing rather than incidental.
+- **Diagnostic CIY as a fourth action axis.** This segment introduces "diagnose" alongside explore / exploit / deliberate — testing *structural* assumptions (joint outcomes), distinct from testing edge *values*. Candidate to develop as a four-axis framework and to reconcile with the three-way `#disc-exploit-explore-deliberate` (Claude/584721, 361742; Gemini/829314).
+
+#### 3. Follow-up items
+
+- **Negatively-correlating latents.** The covariance detector targets *positive* sibling correlation (shared enabling cause). Two siblings failing together because they compete for a shared scarce resource produce *negative* correlation — how does the agent restructure its DAG for that? (Claude/193847; Codex/526815 raises the same as a precision concern about the $H_1\!: \mathrm{Cov}\gt 0$ statement). *See off-ramp note in the lift report — the Codex framing of this is a candidate scope-precision finding, not just a curiosity.*
+- **One non-shallow construction wanted.** The no-go is exact for shallow strict-prerequisite cases and robust-qualitative for general topology; the audit suggests at least one mixed-AND/OR + multiple-latent construction to back the general claim (Claude/471203). Tracks the existing Working-Notes general-topology item.
+
+#### 4. Readers often ask / wonder
+
+- **How is the tempo budget split across explore / exploit / diagnose?** Once "diagnose" is named as its own axis, allocation across the (now) four drives is the natural next question (Gemini/829314; Claude/584721).
+- **How does the agent set $\varepsilon$** (the exploration / redundant-test rate) to balance the efficiency cost of joint observation against the value of detecting latents? (Claude/849201, 193847).
+
+#### 5. Candidate figures
+
+- **Two-worlds-funnel diagram.** Draw $\mathcal{W}_{L1}$ (latent common cause) and the matched $\mathcal{W}_{L0}^\ast$ both funneling into the *same* censored on-policy trace; the five escape routes are "side doors" that add the missing joint or structural information. Proposed as clearer than another covariance-test table (Codex/526815).
+
+#### Belongs elsewhere
+
+- **Chaos engineering / red-teaming / drills → TST + general systems.** The data-center worked instance: a primary-DB-then-backup-DB OR with short-circuit fallback "never queries the Backup when the Primary is healthy", so it cannot compute the failure covariance and is blind to a shared-power-supply latent until simultaneous failure. This gives "a rigorous mathematical foundation for Chaos Engineering, red-teaming, and military drills … a system that optimizes purely for on-policy efficiency is mathematically guaranteed to harbor undetectable structural fragilities" (Gemini/829314); "testing in production is mathematically necessary — staging environments (L0 models) structurally cannot predict latent common causes (L1 reality)" (Gemini/773921). Domain reach into `02-tst-core/` and systems engineering, not this segment.
+- **The mathematical root of *play* → `04-eli-core/`.** "Play is action stripped of its immediate purposeful efficiency … it generates the uncensored joint-outcome data required to build a valid L1 causal model." An infrastructure that forbids "wasting time" forces the intelligence into a brittle, superstitious L0 understanding — so a developmental crèche must *budget* for non-efficient joint exploration (Gemini/193847). Aspirational reach pointing at developmental-environment material in `04-eli-core/`.
+- **Christensen's innovator's dilemma as a corollary → strategy/organizational-positioning material.** The no-go is "a formal version of Christensen's innovator's dilemma: incumbents doing the rational thing (optimizing on the on-policy distribution) systematically fail to detect disruptive structural changes that only become visible through off-policy exploration … predicted as a *structural impossibility, not a motivational failure*" (Claude/451729). Candidate cross-domain instantiation; lands more naturally in adversarial/competitive or positioning material than in this segment.

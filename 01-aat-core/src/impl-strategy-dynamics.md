@@ -77,3 +77,24 @@ What Part II Ch.4 closes on, then, is the substrate Strategy Dynamics needed: ed
 - **Identifiability-floor pattern coverage so far.** The pattern's first two formal instances are now in view: Instance 1 (on-policy L0-insufficiency detection, this chapter) and Instance 2 (L1' mixture identifiability under unobservable common cause, Ch.3's Correlation Hierarchy). Instance 4 (architecture-noidentifiability from on-policy summary data via Kalman-Ho similarity-orbit non-uniqueness dual-anchored with CHT-at-agent-as-SCM — `#der-architecture-noidentifiability`) lives downstream in Part II Ch.5 / Appendix A. Instance 3 (composite contraction certification from component data, via Liberzon common-Lyapunov-nonexistence) lives in Part III. Instance 5 (Mehra non-identifiability in adaptive Kalman regime-switching, flagged in `#deriv-adaptive-gain-dynamics`) is a candidate awaiting formal promotion. The chapter-by-chapter implications work surfaces the pattern instance-by-instance as the formal prerequisites land.
 - **Connection to NeurIPS submissions.** CS1's composition is the structural argument behind NeurIPS Paper 2's Theorem 4.1; the chapter's BH identity result is §6.2 of that paper. Paper 3's hallucination bias bound depends on the (PI)+Čencov axiom from `#scope-agent-identity` and lifts the chapter's variational sector framing to Class 3 (Coupled) agents — that bridge is the subject of Part II Ch.5's implications. AMSGrad / MAML / IMM connections (via `#deriv-adaptive-gain-dynamics`) are not currently formalized in any submission and remain in the framework's empirical-RL-explanation register.
 - **Density flag and check-in.** This is the densest chapter-end implications segment in the planned series — five findings synthesized via two cross-segment compositions, drawing on Part I Ch.4, Part II Ch.2, and Ch.3 in addition to this chapter's own. The chapter-by-chapter pace through Part II Ch.5 and Part III Ch.2–5 will run lighter on per-segment density now that the heaviest cross-segment composition has landed.
+
+### Incidental audit gold (lift 2026-05-31, batch A9)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs. *Orthogonal* material, staged for an eventual careful promotion pass, kept separate from the certified theory-fix findings. **Coverage for this segment:** 773921 (sole digested reflection to reach this chapter-end segment; other A9 audits stopped at the strategy-dynamics content segments).
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **The identifiability-floor pattern as a *posture*, not just a result family.** "Name the impossibility theorem, then name the unique AAT machinery that provides the escape" turns "mathematical despair (no-go theorems) into constructive architecture design" (Gemini/773921). A candidate one-line gloss for what the floor pattern *does* for a reader.
+
+#### 2. Candidate Discussion
+
+- **Triple-pressure routing stated prescriptively (CS2).** The most operationally useful framing: failure-mode routing must match the *bound* being hit — "if an agent is Fragmented (hitting the *upper* bound of the stability-plasticity window), you don't give it more exploration data; you give it better consolidation / sleep mechanisms. Fixing the wrong bound makes the agent worse" (Gemini/773921). Candidate Discussion sentence sharpening the §1 routing payoff into an explicit "diagnose-the-bound-first" rule.
+- **MF-VI is structurally unfit for non-stationarity.** The variational-sector result reads, in plain terms, as: Mean-Field Variational Inference is $O(\sqrt{\varepsilon})$ suboptimal vs Natural-Gradient VI because its geometry doesn't match the Fisher metric the sector condition requires — "if you care about tracking a moving target (persistence), you cannot use Mean-Field approximations" (Gemini/773921). Candidate Discussion line that gives CS1 a memorable Bayesian-deep-learning hook.
+
+#### 4. Readers often ask / wonder
+
+- *(none beyond what the provenance Working Notes already address)*
+
+#### Belongs elsewhere
+
+- **Instance 4 (architecture-noidentifiability) → mechanistic interpretability.** The teased Ch.5 floor instance — an agent/observer cannot reverse-engineer its own true internal causal architecture from on-policy summary data because infinite Kalman-Ho similarity transforms yield identical I/O behavior — was read as having "massive implications for Mechanistic Interpretability" (Gemini/773921). Forward/aspirational reach pointing at `#der-architecture-noidentifiability` (Part II Ch.5) and the interpretability literature, recorded here only because it surfaced in this chapter-end reflection.

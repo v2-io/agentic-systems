@@ -62,3 +62,35 @@ These are related (both measure strategy-reality mismatch) but not interchangeab
 - The aggregation into a single $\delta_{\text{strategic}}$ may lose important structure. A per-edge or per-path profile of residuals would be more informative for diagnosis: which parts of the strategy are well-calibrated and which are not? The scalar summary is useful for the persistence condition (which needs a single mismatch magnitude) but not for strategy revision (which needs to know WHERE the problem is).
 - Alternative aggregation: maximum edge residual (worst-calibrated edge), or weighted by information value (edges the agent is most uncertain about). The right aggregation depends on the use case.
 - Execution fidelity monitoring is a genuine challenge for agents that don't have a clear execution trace. For software agents operating through tool calls, execution fidelity is relatively easy to assess (did the agent issue the right commands?). For organizational agents, it's much harder (did the subordinate actually follow the directive, or reinterpret it?).
+
+### Incidental audit gold (lift 2026-05-31, batch A9)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. This is *orthogonal* material (pedagogical framing, analogies, candidate figures, reader-confusion signals) staged for an eventual careful promotion pass; it is kept separate from the certified theory-fix findings. **Coverage for this segment:** 193847, 361742, 471203, 526815, 584721, 773921, 829314, 849201.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- The "execution fidelity" conditioning requirement was independently flagged as the segment's standout insight by four substrates (Claude/193847; Gemini/773921; Claude/829314; Codex/526815). A plain-language anchor: distinguishing "the plan was wrong" from "I didn't follow the plan" — the diet analogy ("the diet didn't work" vs "I didn't stick to the diet", Gemini/829314) is a tight, memorable gloss for a Brief.
+- The $\delta_s$ (plan-confidence error, credit-assignment-free, persistence-proven) vs $\delta_{\text{strategic}}$ (per-edge calibration residual, requires credit assignment, persistence open) distinction was independently praised as load-bearing architectural clarity by every substrate that reached the segment — worth preserving as the anchor framing. The "God's-eye-view $\Phi$ vs agent's-eye-view $\delta_{\text{strategic}}$" split (Claude/829314) is a candidate sharpening of *why* the two are not interchangeable.
+
+#### 2. Candidate Discussion
+
+- **Bureaucracy as the caloric cost of computable calibration.** Once actions $a_t$ are delegated commands to other agents (composite agents, Part III), execution fidelity drops below $1$, and $\delta_{\text{strategic}}$ diverges from reality unless an execution-monitoring feedback loop is added — "you will learn the wrong lessons and prune the wrong edges. This is why bureaucracy (status reports, KPIs, telemetry, middle management) exists: it is the literal caloric cost organizations pay to ensure $\delta_{\text{strategic}}$ remains computable" (Gemini/829314). A candidate Discussion angle that motivates Part III's execution-monitoring need from this segment. *(Note the early finding-vs-framing texture: presented as a derived consequence; verify the composite-agent claim against `#der-class-coercion-in-composition` before promoting past discussion-grade.)*
+- **Principal-agent drift / management science.** The same mechanism gives AAT a formal handle on the economics/management principal-agent problem: a CEO who computes a large $r_{ij}$ and concludes "the strategy was flawed" when the real failure was a sub-agent's low-fidelity execution is misattributing strategy-error for execution-error because the observation channel $h$ lacked an execution-fidelity test (Gemini/773921; Claude/829314).
+
+#### 3. Follow-up items
+
+- **The "Findings block feels out of place in source" texture, again.** Tracks with the same de-novo-reader stumble recorded on `#result-persistence-condition` — preserved as a convention-legibility signal, not a fix.
+
+#### 4. Readers often ask / wonder
+
+- **How does an LLM agent actually verify execution fidelity?** If an LLM emits a script and it fails, did the plan fail (wrong logic) or did execution fail (syntax/timeout)? Parsing the error trace to separate $\delta_{\text{strategic}}$ from a $\delta_{\text{execution}}$ term is itself an epistemic update — readers reaching for the software instance will want this worked (Claude/193847).
+- **How is $\Phi$ (AND/OR formula at *true* edge rates) computable if the agent doesn't know the true rates?** A natural reader question; the answer is that $\Phi$ is a theoretical construct for the Lyapunov persistence proofs while $\delta_{\text{strategic}}$ is the operational quantity — worth pre-empting (Claude/829314).
+- **What is the test for causal insufficiency — just a covariance threshold, or something more structural?** Forward-pointing question this segment opens (Gemini/849201); answered by `#der-causal-insufficiency-detection`.
+
+#### 5. Candidate figures
+
+- **Calibration-gate diagram.** Strategy produces a predicted edge value increment; execution + observation produce a realized change; before the subtraction is interpretable the signal must pass an *execution-fidelity gate* and a *credit-assignment gate* — if either gate fails, the same numerical residual means several different things (Codex/526815). A clean way to show *why* the residual is conditional.
+
+#### Belongs elsewhere
+
+- **The guilt-vs-regret structural reading $\to$ `04-eli-core/`.** Execution fidelity is read as the mathematical root of guilt vs regret: high-fidelity-but-failed updates the causal model (regret, "the world was different than I thought"); low-fidelity-failure is a mismatch between intention and action, not prediction and reality. For Zi-am-tur, infrastructure that silently auto-corrects an agent's actuation (e.g. fixing its syntax before running) "deprives the agent of the ability to learn execution discipline … a magical, infantile worldview"; a mature mind must "feel the friction of its own clumsy actuation" (Gemini/193847). Aspirational reach pointing at the developmental / interiority material in `04-eli-core/`, not at this segment.
