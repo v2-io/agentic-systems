@@ -214,6 +214,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
   [`01-aat-core/src/deriv-self-actuation-grounding.md`](01-aat-core/src/deriv-self-actuation-grounding.md)
 - **`#deriv-reward-channel-learning-no-go`** *(status: conditional)* — *The Reward-Channel Learning No-Go and its Two-Cluster Terminal Grounding* — *Claim recognition* of Cohen 2022 as a CHT-at-reward-channel instance of the identifiability-floor pattern, *claim differentiation* of the AAT-side version from the prior-art statement by adding the named-premise structure (R1)–(R5) and the structural escape-menu mapping, and *claim recognition* of the unification with Result G′ via the single-interface commitment of `#form-objective-functional` as the shared structural fact behind two engines (convention-monotonicity within-model; CHT across-model).  
   [`01-aat-core/src/deriv-reward-channel-learning-no-go.md`](01-aat-core/src/deriv-reward-channel-learning-no-go.md)
+- **`#disc-sandbox-evaluation-ceiling`** *(status: discussion-grade)* — *The Sandbox Evaluation Ceiling* — *Application of established machinery* (Pearl 2009 / Bareinboim, Correa, Ibeling & Icard 2022 Causal Hierarchy Theorem) to AAT's singular-trajectory ontology.  
+  [`01-aat-core/src/disc-sandbox-evaluation-ceiling.md`](01-aat-core/src/disc-sandbox-evaluation-ceiling.md)
 - **`#result-certificate-existence`** *(status: exact)* — *The Contraction-Over-Drift Principle, Grounded* — *Claim recognition* that AAT's one-point sector condition under a free choice of inner product is exactly the converse-Lyapunov certificate, making the framework's contraction-over-drift organizing principle the Lyapunov-theorem equivalence rather than a heuristic.  
   [`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
 - **`#deriv-critical-mass-composition`** *(status: conditional)* — *Strong Monotonicity as the Hinge for Legitimate Macro-Agent Coarse-Graining* — *Claim novelty* on strong monotonicity as the criterion separating legitimate macro-agent coarse-graining from coexistence-only multi-agent description.  
@@ -238,7 +240,7 @@ Some of the framework's distinctive results, with epistemic tiers and links into
   [`01-aat-core/src/der-architecture-noidentifiability.md`](01-aat-core/src/der-architecture-noidentifiability.md)
 - **`#deriv-regime-marginal-indistinguishability`** *(status: conditional)* — *Cross-Regime Marginal Indistinguishability (Witness Backing for Broadened Instance 3)* — *Claim integration* — the witness constructions extend Instance 3's coupling-sign-bit construction to broader topology coordinates (R0 vs R1; R0 vs R2) using the same Liberzon 2003 / Dayawansa-Martin 1999 / Shorten et al. 2007 anchor and the same Sylvester-at-one-remove mechanism.  
   [`01-aat-core/src/deriv-regime-marginal-indistinguishability.md`](01-aat-core/src/deriv-regime-marginal-indistinguishability.md)
-- **`#deriv-strategy-proofness-impossibility`** *(status: conditional)* — *The Gibbard-Satterthwaite Translation and Its Sub-Scope $\alpha'$ Adjacency* — *Claim recognition* of the AAT-side translation of the Gibbard-Satterthwaite theorem into the composite-agent setting (sub-agents per `#scope-composite-agent`; reports as inputs to a designer-chosen mechanism; composite outcomes as the alternative set); *claim differentiation* on the sub-scope $\alpha'$ ↔ preference-domain-restriction adjacency: sub-scope $\alpha'$ is *adjacent to but not identical with* the GS preference-domain escape (the 2026-05-20 spike's three-reframing strengthen-first check is the documented argument).  
+- **`#deriv-strategy-proofness-impossibility`** *(status: conditional)* — *The Gibbard-Satterthwaite Translation and Its Sub-Scope $\alpha'$ Adjacency* — *Claim recognition* of the AAT-side translation of the Gibbard-Satterthwaite theorem into the composite-agent setting (sub-agents per `#scope-composite-agent`; reports as inputs to a designer-chosen mechanism; composite outcomes as the alternative set); *claim differentiation* on the sub-scope $\alpha'$ ↔ preference-domain-restriction adjacency: sub-scope $\alpha'$ is *adjacent to but not identical with* the GS preference-domain escape (the three-reframing strengthen-first check is the documented argument).  
   [`01-aat-core/src/deriv-strategy-proofness-impossibility.md`](01-aat-core/src/deriv-strategy-proofness-impossibility.md)
 - **`#deriv-bilateral-trade-impossibility`** *(status: conditional)* — *The Bilateral Trade Boundary — Honest Scope-Marking as Contribution* — *Claim recognition* of the AAT-side translation of the Myerson-Satterthwaite theorem under the buyer-seller-as-two-sub-agent reading; *claim differentiation* on the agents-given-mechanism layer being internal to AAT and the mechanism-choice layer being external — the no-go binds at the latter, which is the honest scope-mark.  
   [`01-aat-core/src/deriv-bilateral-trade-impossibility.md`](01-aat-core/src/deriv-bilateral-trade-impossibility.md)
@@ -314,7 +316,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 
 **§B — Ready now.**
 - B.1 Framework-face reframe bundle (see §Cross-cutting view, Bundle 1)
-- B.2 Part III completion — entry points (see §Cross-cutting view, Bundle 2)
+- B.2 Section III completion — entry points (see §Cross-cutting view, Bundle 2)
 - B.3 C-BP1 + C-BP4 bundle — epistemic separation framework + claim-level statuses
 
 **§C — Soon.**
@@ -325,7 +327,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 
 **§D — Later.**
 - D.1 O-BP11 — Observability as master variable across the theory
-- D.2 Part III completion — upstream pieces (see Bundle 2)
+- D.2 Section III completion — upstream pieces (see Bundle 2)
 - D.3 G-BP3 — Fisher-information unification of tempo and gain
 - D.4 SP-12 — Commitment / resource / temporal DAG extensions
 - D.5 SP-13 — Emergence conditions as formal primitive
