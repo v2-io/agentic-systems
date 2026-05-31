@@ -14,6 +14,31 @@ This file holds the *miscellaneous* layer of project work — open routing decis
 **Terminology note.** "Audit-findings" are the F#/F-V# items surfaced by audit cycles. "Findings" without the prefix means the catalog of ASF discoveries (see [`FINDINGS.md`](FINDINGS.md) and segment-level `## Findings` sections).
 
 
+## Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
+
+The de-novo audit-gold sweep surfaced a second stream alongside the pedagogical gold: **certified-track / strengthen-first findings** (mostly from the deeply-mathematical AUDIT-WORKING-526815). They are durable per-segment in each segment's labeled `#### Off-ramp (NOT gold)` Working-Notes block; this is the consolidated adjudication queue.
+
+> [!warning]
+> **These are stale gem-hints, not a to-do list — verify against *current* canon first.** Two of the first "ready fixes" turned out **already-resolved** when checked first-hand: the Landauer coefficient (re-confirmed correct 2026-05-31) and `#deriv-edge-credence-dynamics` Prop B.4 (fixed 2026-05-12, commit `9270aec`; the sweep had re-derived a stale audit note). Re-derive / re-read before working any item. Discipline: `feedback_audit_findings_as_gem_hints`.
+
+**Tier 1 — load-bearing (spiked or spike-worthy):**
+- **W₁ leakage-bound vacuity** (`#der-class-coercion-via-wrapping`) — **SPIKED** (`spikes/spike-w1-leakage-vacuity-2026-05-31.md`, committed `f063133`), verdict (B)+no-go: the stated bound is circular (a locus error conflating the processing-side register with the selection-side operator goal $G^{op}$); corrected to the design-controllable selection-channel bound $\kappa_{W_1}^{\text{sel}} = I(A(q_M); G^{op}) \le I(q_M; G^{op})$ (DPI), plus a component-forced W₁/W₂ no-go (cross-call goal-correlated state, e.g. a frozen LLM + KV-cache, leaves only a behavioral W₂ bound). Drafted integration — a new $(C2')$ condition, the bound replacement, and a candidate no-go appendix — **RESERVED for the external-eye gate.**
+- **`#schema-strategy-persistence` hard-ceiling convention** (A9 F72) — the hard ceiling $\rho_\Sigma \ge R_\Sigma/2$ depends on the steady-state gain being $(1-\lambda)/(2-\lambda)$; under the alternative update-ordering convention $1-\lambda$ the ceiling **dissolves**. Spike-worthy convention-audit on a load-bearing result (its own appendix `#deriv-strategic-persistence-hard-ceiling`).
+
+**Tier 2 — structural (verify → strengthen-or-scope):**
+- `#der-class-coercion-in-composition` (A12 F132-134) — "valid AAT composite agent" under-gated (needs the full `#form-composition-closure` criterion + projection admissibility, not (A1)–(A4) alone); reconcile with the W₁ spike's $(C2')$.
+- `#der-tempo-composition` (A12 F116-119) — closure-defect $C_{\text{coord}}$ double-counted (subtracted once as tempo-overhead, once as added disturbance); needs a single accounting ledger.
+- `#def-unity-dimensions` (A13 F146) — $U_M = I/H$ not normalized to $[0,1]$ as the label implies; `#result-unity-closure-mapping` (A13 F154) — the $\varepsilon_x = 0$ claim needs projection-range invariance, not just consistent projections.
+- `#disc-composition-consistency` — "does directed separation compose?" (4-substrate convergence, ripe to promote from its existing hypothesis to a derivation); the boundary-choice rationality principle (471203 Challenge 14).
+- `#form-consolidation-dynamics` — topological mis-positioning (Part-I-positioned, but declares a downstream-appendix dependency and uses Part II machinery in its Formal Expression): a relocate/split canonicalization item (may belong in PROPOSALS / an OUTLINE move).
+- `#der-orient-cascade` (A10 F83/F84 — step-4a $\delta_s$ proof-target vs computable proxy); `#disc-exploit-explore-deliberate` (A10 F85 — the FOC may drop a term unless $\lVert\delta_{\text{post}}\rVert$ is held fixed).
+- **613842 C-iv idiom-drift (integration-debt)** — the scope layer accepts C-iv strategic composites (no shared $O_c$, equilibrium-relative macro-state), but `#form-composition-closure` / `#def-unity-dimensions` / `#deriv-strategic-composition` still partly reason in the older alignment-only / shared-$O_c$ idiom. Cross-segment drift.
+
+**Tier 3 — soft scope/register tightenings:** the remainder of A13 F147–F181, A9 Codex F47–F77, A10 F88–F91 ("deliberation is Pearl-`do`" over-strong), A8 `#impl-strategy-structure` deferred-proof-credit labelling + "unique broadly-available escape" over-strong for the identifiability floors. Each lives in its segment's `#### Off-ramp` WN block.
+
+**Resolved (struck — do not re-work):** the A7 causal-access challenge + the A6 four overclaims (integrated 2026-05-30/31; commits `52d85b2` / `3da7e32` / `9fb7c12` / `0d57da2`); A4-2 $\nu$/time-normalization (fixed `9d227e6`); Landauer + Prop B.4 (already-resolved — see warning above).
+
+
 ## Strategic-composition cluster residuals (post-NEXT-UP archival, 2026-05-25)
 
 The strategic-composition cluster ran from 2026-05-21 through 2026-05-25 across Tracks A / B / CR / D / E / C, all DONE by 2026-05-25. The cluster navigator `spikes/NEXT-UP.md` was archived 2026-05-25 to `spikes/.integrated/NEXT-UP-archived-2026-05-25.md` (with the manifest at `spikes/.integrated/MANIFEST-2026-05-25-NEXT-UP.md`); J7 + J9 migrated to their proper homes (J7 → `~/src/ops/papers/deferred/dynamic-regime-axis.md`; J9 → `spikes/PROPOSED.md` Tier 2). Two residuals remain in this misc-and-details layer:
