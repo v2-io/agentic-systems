@@ -62,4 +62,6 @@
 
 ## Progress log
 
-- **2026-05-30 — wave 1 launched (lift-agents):** A1, A2, A3 (Part I Ch.1–3). *In-flight.* Commit hashes + filed source-notes recorded here as each lands.
+- **2026-05-30 — Part I Ch.1–3 swept** — one commit per batch: **A1 `598631e`** (Coupled Loop, 7 segs), **A2 `c931bcc`** (Reality Model, 5), **A3 `b46c07a`** (Cycle in Motion, 10). 22 segments lifted; **313 dedicated source-notes filed** into `.integrated/` across the 14 contributing dirs; batch-reflection files (451729/613842 themed, 963715/471203 batch-tails, 849201 pairs) **held** per the deferral rule; emphasis-vuln auto-fixed in touched segments. **Gem:** `def-chronica` fork-undetectability = Part-I formal seed of **SP-27** — feed to SP-27's promotion as its Part-I anchor.
+- *Commit cadence (corrected 2026-05-30):* **one commit per batch (A-N) as each lands** — not one commit per multi-batch wave. (The Ch.1–3 set was first committed as a single 335-file blob, then split into the three per-batch commits above to preserve per-segment `git blame`.)
+- **Next — wave 2 not yet launched.** Candidates: A4 (Part I Ch.4), A5 (Meta-Arch I), A6 (Part II Lift to Purposeful State), A7 (Causal Access).
