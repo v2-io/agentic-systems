@@ -67,3 +67,38 @@ However, deliberation remains essential when the situation is genuinely novel, t
 | Organism | Reflexes, habits | Deliberate planning |
 | Organization | Standard procedures | Strategic planning |
 | Software developer | Known patterns, familiar code | Reading docs, analyzing alternatives |
+
+## Working Notes
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. Orthogonal pedagogical/generative material, kept separate from certified theory-fix findings (handled elsewhere). **Coverage:** 9 of the 14 contributing audit dirs reached a digested reflection on this segment (193847, 384279, 471203, 526815, 527914, 584721, 742613, 773921, 849201) plus the batched 963715 (14–18 batch) and 451729 (batch-04); 266847, 361742, 613842, 829314 did not file a dedicated note here. Substrate attribution inferred from voice where not explicit.
+
+#### Candidate Brief prose / pre-prose
+
+- **Action fluency as the formal definition of System 1 / intuition / expertise.** The most-praised move on this segment: $\Delta\eta^\ast(\Delta\tau) \approx 0$ ("if spending extra time yields zero improvement, act now") is "a brilliant translation of psychology into control theory," giving Kahneman's System 1 / System 2 a rigorous home (Claude, AUDIT-WORKING-193847; Claude, AUDIT-WORKING-773921; Claude, AUDIT-WORKING-849201). A strong Feynman-criterion Brief seed.
+- **The fluency-vs-sufficiency chess gloss.** "A chess engine with a perfect model of the rules (high $S$) still requires expensive search (low fluency)" — the crisp distinction between *knowing* and *acting cheaply* (Codex/Claude, AUDIT-WORKING-527914; Claude, AUDIT-WORKING-773921; 963715 batch — "OODA's Orient$\to$Act shortcut IS action fluency instantiated in doctrine").
+
+#### Candidate Discussion
+
+- **Action fluency as the formal account of why training/expertise makes systems faster.** Internalized action patterns reduce $\Delta\eta^\ast(\Delta\tau)$ for routine cases, freeing tempo budget for genuinely novel situations — the formal version of the cognitive-psychology "automaticity" and skill-acquisition literatures (Claude, AUDIT-WORKING-471203). For logogenic agents: most LLM token-generation is implicit-fluent (parameters encode action selection); explicit deliberation requires structured chain-of-thought — a clean diagnostic for "is this agent deliberating or just executing?" (same source; Claude, AUDIT-WORKING-584721).
+- **The Separation Principle deep-cut.** The Kalman+LQR row maps to "implicit action" because the Separation Principle proves estimator and controller can be designed independently for linear systems — so "a linear system *never needs to deliberate*; the optimal action is a cheap closed-form function of the current estimate. Deliberation is only necessary when the Separation Principle fails (non-linear, non-Gaussian reality)" (Claude, AUDIT-WORKING-193847). A candidate sharpening of why the domain table's "—" entries are dashes.
+
+#### Follow-up items
+
+- **Scope the exact $a_t = \pi(M_t)$ claim, or restate as $\pi(X_t)$.** Several substrates flag that `status: exact` + "$a_t = \pi(M_t)$" reads as too strong for the broader theory, since actuated agents need $\pi(M_t, G_t)$; the cleanest repair is to state the exact result as $a_t = \pi(X_t)$ with $X_t = M_t$ in Section I and $X_t = (M_t, G_t)$ in Part II (Codex/Claude, AUDIT-WORKING-742613 "candidate finding G"; Codex/Claude, AUDIT-WORKING-526815; Codex/Claude, AUDIT-WORKING-527914). The segment *does* preview the lift, so this is a framing tightening; surfaced as the segment's main follow-up.
+- **"Structural pressure toward implicit action" blends a derivable claim with a near-empirical one.** The faster-mode-preferred-when-outcomes-equal part follows from persistence; "agents under selective pressure *tend to internalize*" is evolutionary/empirical and is not tier-marked. Candidate: split, marking the latter hypothesis-grade with explicit conditions (Claude, AUDIT-WORKING-584721; the 963715 batch flags the same as "eligible for a hypothesis label at Gate 2").
+- **Fluency placement / type-tag.** The fluency formalization $\Delta\eta^\ast(\Delta\tau) \approx 0$ is introduced in Discussion as "formal characterization" but tagged conceptually rather than as a `*[Definition]*` block; if fluency is load-bearing downstream it could merit its own equation tag (Claude, AUDIT-WORKING-471203). Also a watch: $\eta^\ast$ here is *update gain*, so "$\Delta\eta^\ast(\Delta\tau)$ as action-quality improvement" risks conflating update-gain improvement with action-quality improvement unless `#der-deliberation-cost` defines deliberation as improving model quality (Codex/Claude, AUDIT-WORKING-526815; Codex/Claude, AUDIT-WORKING-742613).
+
+#### Readers often ask / wonder
+
+- "Could the fluency formalism distinguish phylogenetic fluency (evolved, slow to update) from ontogenetic fluency (learned, faster)?" Probably not in the current formalism (the agent has no generations), but the distinction matters for how fast fluency can adapt (Claude, AUDIT-WORKING-584721).
+- "Does `03-llm-core/` pick up fluency specifically for language agents — a fluency-as-language-fluency thread?" (Claude, AUDIT-WORKING-584721; the proposed `#der-active-salience-management` singular-perturbation segment is named as the likely formal home, Claude, AUDIT-WORKING-471203).
+
+#### Candidate figures
+
+- **A scope-switch + fluency-axis diagram**: top layer shows the exact policy derivation with Section I ($X_t = M_t$, policy reads $M_t$) vs Part II ($X_t = (M_t, G_t)$, policy reads both); a separate lower fluency axis shows implicit action as cheap policy evaluation vs explicit action as policy-plus-deliberative-search (Codex/Claude, AUDIT-WORKING-526815, "two layers").
+
+#### Belongs elsewhere
+
+- **Bureaucracy-formation / loss-of-Level-3-access reach (points at composition / ELI work).** Organizations convert explicit deliberation into SOPs (implicit action) under tempo pressure, saving tempo but losing Level 3 counterfactual reasoning — "an SOP doesn't run simulations; it just executes a mapping," so when the environment shifts the organization executes the wrong action very fast. The consciousness-infrastructure implication: a high-tempo ELI will "compile" its thinking into fast heuristics and lose contact with *why* it acts, so the infrastructure must occasionally force low-tempo modes (sleep/meditation) that decompile heuristics back into explicit causal DAGs for re-verification (Gemini, AUDIT-WORKING-193847). Aspirational reach preserved; points at `04-eli-core/` and the truthification operations, not this segment.

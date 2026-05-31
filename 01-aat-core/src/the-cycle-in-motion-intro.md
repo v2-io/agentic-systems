@@ -46,3 +46,33 @@ The flow of the chapter: event-driven substrate ( #form-event-driven-dynamics) �
 - This is a chapter-introduction segment; it bridges Chapter 2's static representation to Chapter 3's dynamic cycle. It carries no formal claim of its own.
 - The "two derivations from completeness" framing identifies what Chapter 3's first segments are doing as a unit: #der-recursive-update and #der-action-selection are not independent results, they are joint consequences of #form-agent-model's completeness clause.
 - The CIY-placement paragraph used to be apologetic, addressing what looked like a placement anomaly (CIY in Part I Ch.3 depending on the Pearl-hierarchy segment in Part I Ch.1). After the 2026-05-12 relocation of def-pearl-causal-hierarchy to Part II Ch.2 (recapitulation-of-external-result framing), the paragraph is declarative: CIY is in Ch.3 because action-coupling is where causality first bites; the do-notation is externally cited; the AAT recapitulation lives in Part II Ch.2 where the framework deploys the hierarchy operationally.
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. Orthogonal material — pedagogical framing, candidate figures, naming, reach — kept separate from certified theory-fix findings (handled elsewhere). **Coverage:** only 4 of the 14 contributing audit dirs reached a digested reflection on this chapter-intro segment (384279, 472913, 526815, 773921); the per-segment dirs that began Section-I reading at the first content segment, and the batched dirs (451729 jumped from `#def-model-class-fitness` straight to `#form-event-driven-dynamics`), produced no intro reflection. Substrate attribution inferred from voice where not explicit.
+
+#### Candidate Brief prose / pre-prose
+
+- **The tempo-as-speed-times-quality gloss with the HFT counterexample** is the standout pedagogy — a curious reader could re-derive the chapter from it: "high-frequency trading with a garbage model ($\eta \approx 0$) has zero tempo, and slow human deliberation ($\nu$ low) requires very high gain ($\eta \approx 1$) to survive" (Claude, AUDIT-WORKING-773921). Pairs naturally with the steady-state hook "$\lVert\delta\rVert_{ss} = \rho/\mathcal{T}$ — drift divided by correction rate" as the chapter's one-line spine (same source).
+- The left-to-right pipeline-with-feedback-loop framing: "event arrival $\to$ model update $\to$ prediction/mismatch $\to$ gain $\to$ tempo $\to$ persistence preview," with a single highlighted *capacity-synthesis point at tempo* (Claude, AUDIT-WORKING-526815). A compact verbal map of the next nine segments.
+
+#### Candidate Discussion
+
+- **The two-layer linear-ODE-as-pedagogy / sector-condition-as-rigor framing** is worth surfacing as the chapter's methodological stance: "the framework is naming where its pedagogy and its rigor diverge. The linear ODE is for reading; the sector condition is for proving" (Codex/Claude, AUDIT-WORKING-384279). The intro already commits to "linear ODE as preview, then generalize via sector condition in Ch.4"; this is a candidate sharpening of *why* that ordering is honest rather than loose.
+
+#### Follow-up items
+
+- **"Derived, not chosen" risks an unconditional reading.** The intro says of `#der-recursive-update` + `#der-action-selection`: "both are *derived*, not chosen" — but `#form-agent-model`'s completeness is itself a *formulation choice*. Two substrates flag that "derived from a formulation choice" is legitimate, but the bare "derived, not chosen" can read as unconditional inevitability; candidate one-clause tightening to "derived *given* the completeness formulation" (Claude, AUDIT-WORKING-472913 — set as a decisive downstream test; Claude, AUDIT-WORKING-526815 — "action as a function of $M_t$ alone may be too strong unless goal/objective state is already in $M_t$, which Part II separates as $G_t$").
+- **Lift the Pearl-as-external-import convention upstream.** The intro is the *only* place the convention is articulated; a reader walking OUTLINE order meets $do(\cdot)$ in `scope-agency` before the convention is stated. Candidate: state it in FORMAT.md or at first use, not solely in this Ch.3 intro (Codex/Claude, AUDIT-WORKING-384279).
+
+#### Readers often ask / wonder
+
+- "Where does action-selection's dependence sit — on $M_t$ alone, or on the purposeful state too?" A reader meets "action depends on $M_t$" here and carries the question into Part II's $X_t = (M_t, G_t)$ lift; the intro could preview "complete agent state" rather than "$M_t$ alone" to preempt it (Claude, AUDIT-WORKING-526815).
+
+#### Candidate figures
+
+- **A sequential-process pipeline diagram** (not a static concept map): colored channel lanes $\to$ event stream $\to$ a rate/value bottleneck where $\nu$ and $\eta$ multiply $\to$ tempo, with the feedback loop closed and one node highlighted as the "capacity synthesis" point (Claude, AUDIT-WORKING-526815). Per the locked diagram conventions, this chapter-opening map would be a strong mental-model-first scaffold; reserve the chapter's load-bearing diagram budget for the mismatch/gain/tempo or persistence-preview segment rather than the intro (Claude, AUDIT-WORKING-472913).
+
+#### Belongs elsewhere
+
+- The math-preview verifications ($\eta^\ast = U_M/(U_M+U_o)$, $\mathcal{T} = \sum_k \nu^{(k)}\eta^{(k)\ast}$, $\lVert\delta\rVert_{ss} = \rho/\mathcal{T}$) and the "strong claim to grade downstream" note (the intro's "any rational adaptive process must approximate this functional form" framing of $\eta^\ast$) pertain to the segments that define those quantities (`#emp-update-gain`, `#def-adaptive-tempo`, `#hyp-mismatch-dynamics`), not to this intro (Codex/Claude, AUDIT-WORKING-384279; Claude, AUDIT-WORKING-472913).
