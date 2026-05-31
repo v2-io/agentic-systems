@@ -55,7 +55,7 @@ Objective revision is the **last resort**, not the first response to unmet goals
 - **C2** (receding-horizon): $\delta_{\text{sat}}^{\text{RH}} = V_{O_t}^{\min} - A_O^{\text{RH}}$. Tests whether the agent can reach the goal with $N_r$-step replanning. Captures recovery paths invisible to C1.
 - **C3** (Bellman): $\delta_{\text{sat}}^{\text{B}} = V_{O_t}^{\min} - A_O^{\text{B}}$. Tests whether the goal is genuinely infeasible given $(M_t, \Pi, N_h)$. Strongest diagnostic — $\delta_{\text{sat}}^{\text{B}} \gt 0$ means no policy in $\Pi$ can achieve the objective.
 
-The monotonicity result ( #def-value-object): $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$. C1 gives the most false "unattainable" diagnoses; C3 gives none (modulo model error in $M_t$). Analyses using different conventions should not be compared directly — the convention is part of the measurement.
+The monotonicity result ( #def-value-object): $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$. The $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}}$ half is unconditional; the $\delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$ half holds under the order-consistency condition on C2's replanning objective (RH-1/2/3 in #def-value-object), and can fail for unguarded short-horizon replanning. C1 gives the most false "unattainable" diagnoses; C3 gives none (modulo model error in $M_t$). Analyses using different conventions should not be compared directly — the convention is part of the measurement.
 
 ## Discussion
 
