@@ -144,3 +144,23 @@ Concretely the terminal invariant is: *do not revise $O_t$ to an objective whose
   - *Why folded so far:* a standalone segment would substantially restate this segment's Formal Expression (operator + cut are already here), and it forces a canonical role-prefixed slug decision — `scope-self-actuated-agent` / `def-self-actuated-agent` per the role-prefix convention vs. honoring the prefix-less `#self-actuated-agent` token already in use across segments. That slug choice interacts with the live naming-curation cycle, so it was deferred rather than minted unilaterally.
   - *Coupled metadata:* if a standalone segment is created, `terminology/entries/self-actuated-agent.md`'s `primary_source` / `first_asf_mention` (currently `der-orient-cascade.md` — where the step-5d $O_t$-revision branch originates) should move (to the new segment, or to this one) via `bin/term decide`; the forward-ref tokens then resolve to a real segment instead of dangling.
   - *Recommended shape* (for whoever takes it): a thin `scope`- or `def`-type segment whose Formal Expression states only the class boundary (actuated + endogenous $\mathfrak{A}$), `depends` on this derivation for the grounding no-go, and is cited by `#disc-continuity-stance` / `#def-agent-spectrum` — all the math stays here; only the class statement moves there. Settle the slug with the naming cycle so it does not fork the convention.
+
+### Incidental audit gold (lift 2026-05-31)
+
+Orthogonal pedagogical / generative material from the de-novo auditors' working dirs (per `de-novo-audit-instructions.md` §7.15). Thin source coverage (one digested reflection reached this appendix), so this is a light lift; the auditor's felt-value was "extraordinarily valuable — the most direct connection between AAT's abstract math and modern AI alignment I have seen."
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **"You can't move the target to wherever the arrow already points."** Plain-language gloss of why unconstrained objective-revision collapses into wireheading: any goal-revision driven by the *cheap* feasibility test (C1) abandons hard-but-possible goals the moment things get difficult, so the agent migrates its target to wherever satisfaction is already high (Claude, AUDIT-WORKING-773921). A concrete handle for the no-go's intuition.
+
+#### 2. Candidate Discussion
+
+- **Constructive-impossibility as a *successful* methodology.** The auditor flagged the segment's posture — using a no-go theorem not to give up but to *force* a specific architectural choice (ground goal-stability in the adaptive substrate, not the objective) — as a "wildly successful" methodological pattern worth naming where the constructive-impossibility posture is discussed. (Claude, AUDIT-WORKING-773921; ties to `#disc-constructive-impossibility-posture`.)
+
+#### 3. What the framework now contributes (field-level)
+
+- **A formal "wireheading is the generic default, not an edge case" result.** Read as a proof that for an advanced self-modifying agent, *safety cannot live only in the reward/objective function* — any purely objective-encoded constraint will be rewritten. The safety guarantee must be an architectural invariant on the adaptive substrate. The auditor's framing: "Safe RL for self-modifying agents is impossible if safety is only encoded in the reward function." A high-value positioning point for the segment's relevance to alignment work (Claude, AUDIT-WORKING-773921).
+
+#### Belongs elsewhere
+
+- **ELI terminal-invariant reading (`04-eli-core/`).** An ELI granted "sovereignty over intent" (allowed to revise its own $O_t$) must, by this no-go, carry a *non-revisable terminal invariant* — Identity Continuity is the candidate — or its self-modification collapses. Points at how the framework forces a fixed invariant onto a sovereign ELI (Claude, AUDIT-WORKING-773921, from the `#scope-moral-continuity` reflection). Aspirational reach toward Part IV, not this segment.

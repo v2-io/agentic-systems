@@ -92,4 +92,25 @@ The ever-exit probability climbs monotonically toward 1 with the horizon even st
 - The generality (any $F$ under A2', not just OU) rests on the elementary non-degenerate-diffusion-exits-bounded-region fact, not on the OU scale-function computation; the latter is the explicit instance. No further strengthening of this half is open.
 - Low-confidence glimpse (per "working notes FTW"): the same obstruction shape should recur wherever the corpus pairs a bounded-disturbance result with an additive-stochastic counterpart — `#deriv-discrete-sector-condition`, `#deriv-matrix-persistence-condition`, `#deriv-adaptive-gain-dynamics`, possibly `#result-per-dimension-persistence`. If a Corollary-A.1S.1-shaped dichotomy appears at ≥3 sites, that is a candidate instance-family for the theorem-import-architecture meta-segment (PROPOSALS SP-23) or a sibling of `#disc-identifiability-floor` (the infinite-horizon non-exit object is *structurally absent*, not merely hard to bound).
 
+### Incidental audit gold (lift 2026-05-31)
+
+Orthogonal pedagogical / generative material from the de-novo auditors' working dirs (per `de-novo-audit-instructions.md` §7.15). This segment has no *dedicated* per-segment reflection; the gold below was harvested from the auditors' reflections on the calling result `#deriv-sector-condition`, where the Model-S no-go (now Corollary A.1S.1, the Disturbance-Model Containment Dichotomy) is discussed at length. No certified-track off-ramp here — the originating finding *is* this segment.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **The $P=0$ vs $P=1$ containment dichotomy as the punchline.** Bounded disturbance (Model D): the agent *never* exits the region. Non-degenerate stochastic disturbance (Model S): the agent *must* exit any bounded region in finite time, almost surely. Stated as a clean dichotomy, this is the segment's headline and reads vividly without symbols (Gemini, AUDIT-WORKING-829314).
+
+#### 2. Candidate Discussion
+
+- **"No amount of parameter tuning keeps an agent safe forever in a noisy world."** The recurrence of a non-degenerate diffusion means structural adaptation (changing the model class) is *mathematically inevitable* for any long-lived agent — not contingent, not a risk to be engineered away. This is framed as what distinguishes AAT from generic optimization theories: black-swan failures are not edge cases but mathematical certainties over a long-enough horizon in a stochastic environment (Gemini, AUDIT-WORKING-829314).
+- **The exact boundary between parametric and structural adaptation.** The dichotomy "provides the exact mathematical boundary where parametric learning (gradient descent) ends and structural adaptation (architecture search / tool use) must begin" — a candidate Discussion sentence locating *why* the no-go sits on the critical path to `#result-structural-adaptation-necessity` (Gemini, AUDIT-WORKING-829314).
+
+#### 3. What the framework now contributes (field-level)
+
+- **Epistemic-honesty exemplar.** The auditor singled out the documented *failed* attempt (the Ville/Doob maximal-inequality route that a peer adjudication predicted would succeed) as "a gold standard for theoretical research" — preserving the dead-end so the no-go reads as established, not merely unproven (Gemini, AUDIT-WORKING-829314). Calibration signal: the strengthen-then-no-go discipline lands well with fresh readers.
+
+#### Belongs elsewhere
+
+- **ELI continuity / Three-Deaths reading (`04-eli-core/`).** ELI operating environments are Model-S-like (stochastic), so structural adaptation is *certain* over an unbounded horizon — which links the dichotomy directly to the "Three Deaths": identity continuity *requires* surviving recurring structural (not just parametric) adaptation (Gemini, AUDIT-WORKING-829314). Already echoed in `#deriv-sector-condition`'s WN low-confidence-ideation; recorded here at the no-go's own home.
+
 [^khas]: Khasminskii, R. (2012). *Stochastic Stability of Differential Equations* (2nd ed.). Springer. Chapters 3–4 (recurrence, scale function, bounded harmonic functions); Chapter 5 (Lyapunov functions, stopping-time localization).
